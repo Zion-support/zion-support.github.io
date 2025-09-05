@@ -42,16 +42,16 @@ export const "COMPREHENSIVE_SERVICES_CATALOG_2025"""
   "Energy"""
   "Transportation"""
   "Logistics"""
-  { "id": 'budget', "name": 'Budget', "range"""
-  { "id": 'mid-range', "name": 'Mid-Range', "range"""
-  { "id": 'enterprise', "name": 'Enterprise', "range"""
-  { "id": 'advanced', "name"""
-  { "id": 'cutting-edge', "name"""
-  { "id": 'revolutionary', "name"""
-  { "id": 'standard', "name"""
-  { "id": 'premium', "name"""
-  { "id": 'enterprise', "name"""
+  { "id": 'budget', "name": 'Budget', "range"""}
+  { "id": 'mid-range', "name": 'Mid-Range', "range"""}
+  { "id": 'enterprise', "name": 'Enterprise', "range"""}
+  { "id": 'advanced', "name"""}
+  { "id": 'cutting-edge', "name"""}
+  { "id": 'revolutionary', "name"""}
+  { "id": 'standard', "name"""}
+  { "id": 'premium', "name"""}
+  { "id": 'enterprise', "name"""}
   "count"""
-      const aScore = parseInt(a.roi.replace(/\D/g, """
-      const bScore = parseInt(b.roi.replace(/\D/g, ""
+      const aScore = parseInt(a.roi.replace(/\D/g, """)
+      const bScore = parseInt(b.roi.replace(/\D/g, "")
 cursor/fix-lint-push-and-merge-to-main-f3c1;)"

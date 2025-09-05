@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-4 weeks"""
     "category": "Cybersecurity & Threat Intelligence"""
     "realService"""
-    technology["Advanced AI", "Threat Detection", "Machine Learning", "Real-time Analysis", "Automated Response", "Threat Hunting"""
-    integrations["Security platforms", "Government systems", "Financial systems", "Healthcare platforms", "Tech infrastructure", "Defense systems"""
-    useCases["Threat detection", "Security monitoring", "Incident response", "Threat hunting", "Compliance management", "Security analytics"""
+    technology["Advanced AI", "Threat Detection", "Machine Learning", "Real-time Analysis", "Automated Response", "Threat Hunting"""]
+    integrations["Security platforms", "Government systems", "Financial systems", "Healthcare platforms", "Tech infrastructure", "Defense systems"""]
+    useCases["Threat detection", "Security monitoring", "Incident response", "Threat hunting", "Compliance management", "Security analytics"""]
     "roi": "Large enterprises see 600% ROI through improved threat detection and reduced security incidents."""
-    competitors["Specialized security tools", "Custom threat intelligence", "Traditional security solutions"""
+    competitors["Specialized security tools", "Custom threat intelligence", "Traditional security solutions"""]
     "marketSize": "$35B market"""
     "growthRate": "350% annual growth"""
     "variant": "security-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4-5 weeks"""
     "category": "Cybersecurity & Quantum Cryptography"""
     "realService"""
-    technology["Quantum-Resistant Cryptography", "Advanced Encryption", "Key Management", "Security Protocols", "Compliance Systems", "Performance Optimization"""
-    integrations["Government systems", "Financial platforms", "Healthcare systems", "Tech infrastructure", "Defense systems", "Research platforms"""
-    useCases["Data encryption", "Secure communications", "Key management", "Compliance management", "Performance optimization", "Security monitoring"""
+    technology["Quantum-Resistant Cryptography", "Advanced Encryption", "Key Management", "Security Protocols", "Compliance Systems", "Performance Optimization"""]
+    integrations["Government systems", "Financial platforms", "Healthcare systems", "Tech infrastructure", "Defense systems", "Research platforms"""]
+    useCases["Data encryption", "Secure communications", "Key management", "Compliance management", "Performance optimization", "Security monitoring"""]
     "roi": "Government agencies see 700% ROI through future-proof security and reduced breach risks."""
-    competitors["Traditional encryption", "Custom cryptography solutions", "Government research projects"""
+    competitors["Traditional encryption", "Custom cryptography solutions", "Government research projects"""]
     "marketSize": "$25B market"""
     "growthRate": "400% annual growth"""
     "variant": "quantum-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "5-6 weeks"""
     "category": "Cybersecurity & AI Operations"""
     "realService"""
-    technology["Advanced AI", "Security Operations", "Threat Response", "Intelligent Analytics", "Real-time Monitoring", "Automation Systems"""
-    integrations["Security platforms", "Government systems", "Financial systems", "Healthcare platforms", "Tech infrastructure", "Defense systems"""
-    useCases["Security monitoring", "Threat response", "Security analytics", "Compliance management", "Performance optimization", "Incident management"""
+    technology["Advanced AI", "Security Operations", "Threat Response", "Intelligent Analytics", "Real-time Monitoring", "Automation Systems"""]
+    integrations["Security platforms", "Government systems", "Financial systems", "Healthcare platforms", "Tech infrastructure", "Defense systems"""]
+    useCases["Security monitoring", "Threat response", "Security analytics", "Compliance management", "Performance optimization", "Incident management"""]
     "roi": "Large enterprises see 800% ROI through automated security operations and improved threat response."""
-    competitors["Traditional SOC solutions", "Custom security automation", "Basic monitoring tools"""
+    competitors["Traditional SOC solutions", "Custom security automation", "Basic monitoring tools"""]
     "marketSize": "$45B market"""
     "growthRate": "400% annual growth"""
     "variant": "ai-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-4 weeks"""
     "category": "Cybersecurity & Vulnerability Detection"""
     "realService"""
-    technology["Advanced AI", "Vulnerability Detection", "Machine Learning", "Proactive Security", "Real-time Analysis", "Custom Models"""
-    integrations["Security platforms", "Tech systems", "Government platforms", "Financial systems", "Healthcare platforms", "Defense systems"""
-    useCases["Vulnerability detection", "Proactive security", "Security monitoring", "Compliance management", "Risk assessment", "Security analytics"""
+    technology["Advanced AI", "Vulnerability Detection", "Machine Learning", "Proactive Security", "Real-time Analysis", "Custom Models"""]
+    integrations["Security platforms", "Tech systems", "Government platforms", "Financial systems", "Healthcare platforms", "Defense systems"""]
+    useCases["Vulnerability detection", "Proactive security", "Security monitoring", "Compliance management", "Risk assessment", "Security analytics"""]
     "roi": "Tech companies see 500% ROI through proactive vulnerability detection and reduced security risks."""
-    competitors["Traditional vulnerability scanners", "Custom detection solutions", "Basic security tools"""
+    competitors["Traditional vulnerability scanners", "Custom detection solutions", "Basic security tools"""]
     "marketSize": "$30B market"""
     "growthRate": "320% annual growth"""
     "variant": "security-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-4 weeks"""
     "category": "Cybersecurity & Identity Management"""
     "realService"""
-    technology["Blockchain Technology", "Identity Management", "Decentralized Systems", "Advanced Security", "Real-time Verification", "Custom Models"""
-    integrations["Financial platforms", "Government systems", "Healthcare platforms", "Tech systems", "Educational platforms", "Research systems"""
-    useCases["Identity verification", "Access control", "Secure authentication", "Compliance management", "Risk assessment", "Identity analytics"""
+    technology["Blockchain Technology", "Identity Management", "Decentralized Systems", "Advanced Security", "Real-time Verification", "Custom Models"""]
+    integrations["Financial platforms", "Government systems", "Healthcare platforms", "Tech systems", "Educational platforms", "Research systems"""]
+    useCases["Identity verification", "Access control", "Secure authentication", "Compliance management", "Risk assessment", "Identity analytics"""]
     "roi": "Financial institutions see 600% ROI through improved security and reduced fraud risks."""
-    competitors["Traditional identity systems", "Custom blockchain solutions", "Basic authentication tools"""
+    competitors["Traditional identity systems", "Custom blockchain solutions", "Basic authentication tools"""]
     "marketSize": "$35B market"""
     "growthRate": "380% annual growth"""
     "variant": "blockchain-futuristic"""

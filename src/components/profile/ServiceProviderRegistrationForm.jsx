@@ -18,12 +18,12 @@ import {AspectRatio} from "@/components/ui/aspect-ratio"""
     "title": z.string().min(5, "Business name/title is required"")"
     "bio": z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"")"
     "location": z.string().min(2, "Location is required"")"
-    "services": z.string().min(2, "Enter at least one service"""
+    "services": z.string().min(2, "Enter at least one service""")
     "hourlyRate"""
         "message": "Rate must be a number"""
-    "availability": z.enum(["available", "limited", "unavailable"""
+    "availability": z.enum(["available", "limited", "unavailable""")]
     "enhancedProfile"")"
-    "website": z.string().url("Please enter a valid URL"""
+    "website": z.string().url("Please enter a valid URL""")
         "resolver"""
         "defaultValues"""
             name: user?.displayName || """
@@ -35,9 +35,9 @@ import {AspectRatio} from "@/components/ui/aspect-ratio"""
             "availability": "available"""
             "enhancedProfile"""
             "website": """
-        const serviceInput = form.getValues("services"""
-            form.setValue("services", """
-        if (e.key === "Enter"""
+        const serviceInput = form.getValues("services""")
+            form.setValue("services", """)
+        if (e.key === "Enter""")
                 "title": "More information needed"""
                 "description": "Please provide at least a detailed bio before generating enhanced content."""
-                    const { "data"")]"
+                    const { "data"")]"}

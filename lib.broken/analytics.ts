@@ -1,5 +1,5 @@
 // Analytics and performance monitoring utilities;
-export const trackEvent = (;
+export const trackEvent = (;)
   "eventName": string,"
   properties?: Record<string, any>;
 </string>

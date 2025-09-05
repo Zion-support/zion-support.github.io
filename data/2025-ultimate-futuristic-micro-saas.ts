@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2-4 weeks"""
     "category": "AI Business Automation"""
     "realService"""
-    technology["Advanced AI/ML, Neural Networks, Quantum Computing, Blockchain, IoT Integration"""
-    integrations["SAP, Oracle, Salesforce, Microsoft Dynamics, QuickBooks Enterprise, HubSpot"""
-    useCases["Complete business automation, Process optimization, Cost reduction, Efficiency maximization, Strategic planning"""
+    technology["Advanced AI/ML, Neural Networks, Quantum Computing, Blockchain, IoT Integration"""]
+    integrations["SAP, Oracle, Salesforce, Microsoft Dynamics, QuickBooks Enterprise, HubSpot"""]
+    useCases["Complete business automation, Process optimization, Cost reduction, Efficiency maximization, Strategic planning"""]
     "roi": "Companies report 500% ROI through complete operational automation and cost elimination."""
-    competitors["SAP, Oracle, Microsoft Dynamics, NetSuite"""
+    competitors["SAP, Oracle, Microsoft Dynamics, NetSuite"""]
     "marketSize": "$45B ERP market"""
     "growthRate": "25% annual growth"""
     "variant": "ai-autonomous-enterprise"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-2 days"""
     "category": "Quantum Security"""
     "realService"""
-    technology["Quantum Cryptography, QKD, Post-Quantum Algorithms, Quantum Networks"""
-    integrations["Slack, Microsoft Teams, Zoom, Webex, Discord, WhatsApp Business"""
-    useCases["Secure government communications, Financial transactions, Healthcare data sharing, Military communications, Corporate espionage prevention"""
+    technology["Quantum Cryptography, QKD, Post-Quantum Algorithms, Quantum Networks"""]
+    integrations["Slack, Microsoft Teams, Zoom, Webex, Discord, WhatsApp Business"""]
+    useCases["Secure government communications, Financial transactions, Healthcare data sharing, Military communications, Corporate espionage prevention"""]
     "roi": "Organizations report 400% ROI through enhanced security and compliance benefits."""
-    competitors["Signal, Telegram, WhatsApp, Microsoft Teams"""
+    competitors["Signal, Telegram, WhatsApp, Microsoft Teams"""]
     "marketSize": "$15B secure communication market"""
     "growthRate": "30% annual growth"""
     "variant": "quantum-communication-enterprise"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-3 weeks"""
     "category": "AI Healthcare"""
     "realService"""
-    technology["AI/ML, Deep Learning, Natural Language Processing, IoT Health Devices"""
-    integrations["Epic, Cerner, Allscripts, Athenahealth, Practice Fusion, DrChrono"""
-    useCases["Disease prevention, Treatment optimization, Patient monitoring, Healthcare analytics, Preventive care"""
+    technology["AI/ML, Deep Learning, Natural Language Processing, IoT Health Devices"""]
+    integrations["Epic, Cerner, Allscripts, Athenahealth, Practice Fusion, DrChrono"""]
+    useCases["Disease prevention, Treatment optimization, Patient monitoring, Healthcare analytics, Preventive care"""]
     "roi": "Healthcare providers report 350% ROI through improved patient outcomes and reduced costs."""
-    competitors["Epic, Cerner, Allscripts, Athenahealth"""
+    competitors["Epic, Cerner, Allscripts, Athenahealth"""]
     "marketSize": "$28B healthcare AI market"""
     "growthRate": "40% annual growth"""
     "variant": "ai-healthcare-enterprise"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-2 weeks"""
     "category": "AI Financial Trading"""
     "realService"""
-    technology["AI/ML, Deep Learning, Neural Networks, Quantum Computing, Blockchain"""
-    integrations["Bloomberg Terminal, Reuters, Interactive Brokers, TD Ameritrade, E*TRADE, Robinhood"""
-    useCases["Automated trading, Portfolio management, Risk management, Market analysis, Investment optimization"""
+    technology["AI/ML, Deep Learning, Neural Networks, Quantum Computing, Blockchain"""]
+    integrations["Bloomberg Terminal, Reuters, Interactive Brokers, TD Ameritrade, E*TRADE, Robinhood"""]
+    useCases["Automated trading, Portfolio management, Risk management, Market analysis, Investment optimization"""]
     "roi": "Trading firms report 600% ROI through automated trading and improved performance."""
-    competitors["Bloomberg Terminal, Reuters, Interactive Brokers"""
+    competitors["Bloomberg Terminal, Reuters, Interactive Brokers"""]
     "marketSize": "$35B algorithmic trading market"""
     "growthRate": "35% annual growth"""
     "variant": "ai-trading-enterprise"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-3 days"""
     "category": "Quantum Computing"""
     "realService"""
-    technology["Quantum Processors, Quantum Algorithms, Quantum Error Correction, Quantum Networks"""
-    integrations["AWS, Google Cloud, Microsoft Azure, IBM Cloud, Research APIs"""
-    useCases["Scientific research, Drug discovery, Financial modeling, AI training, Optimization problems"""
+    technology["Quantum Processors, Quantum Algorithms, Quantum Error Correction, Quantum Networks"""]
+    integrations["AWS, Google Cloud, Microsoft Azure, IBM Cloud, Research APIs"""]
+    useCases["Scientific research, Drug discovery, Financial modeling, AI training, Optimization problems"""]
     "roi": "Research institutions report 800% ROI through accelerated research and development."""
-    competitors["IBM Quantum, AWS Braket, Google Quantum AI, Microsoft Azure Quantum"""
+    competitors["IBM Quantum, AWS Braket, Google Quantum AI, Microsoft Azure Quantum"""]
     "marketSize": "$8B quantum computing market"""
     "growthRate": "50% annual growth"""
     "variant": "quantum-computing-enterprise"""
@@ -258,11 +258,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-2 hours"""
     "category": "AI Content Creation"""
     "realService"""
-    technology["GPT-4, DALL-E, Stable Diffusion, Natural Language Processing, Computer Vision"""
-    integrations["WordPress, Shopify, HubSpot, Mailchimp, Canva, Adobe Creative Suite"""
-    useCases["Marketing content, Blog writing, Social media posts, Video creation, Image generation"""
+    technology["GPT-4, DALL-E, Stable Diffusion, Natural Language Processing, Computer Vision"""]
+    integrations["WordPress, Shopify, HubSpot, Mailchimp, Canva, Adobe Creative Suite"""]
+    useCases["Marketing content, Blog writing, Social media posts, Video creation, Image generation"""]
     "roi": "Content creators report 400% ROI through increased content production and engagement."""
-    competitors["Jasper, Copy.ai, ChatGPT Plus, Grammarly"""
+    competitors["Jasper, Copy.ai, ChatGPT Plus, Grammarly"""]
     "marketSize": "$12B AI content creation market"""
     "growthRate": "45% annual growth"""
     "variant": "ai-content-enterprise"""
@@ -304,11 +304,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-2 weeks"""
     "category": "AI Customer Service"""
     "realService"""
-    technology["Natural Language Processing, Machine Learning, Sentiment Analysis, Conversational AI"""
-    integrations["Shopify, WooCommerce, Salesforce, HubSpot, Slack, Microsoft Teams"""
-    useCases["Customer support, Sales assistance, Technical support, Order tracking, FAQ handling"""
+    technology["Natural Language Processing, Machine Learning, Sentiment Analysis, Conversational AI"""]
+    integrations["Shopify, WooCommerce, Salesforce, HubSpot, Slack, Microsoft Teams"""]
+    useCases["Customer support, Sales assistance, Technical support, Order tracking, FAQ handling"""]
     "roi": "Companies report 300% ROI through reduced support costs and improved customer satisfaction."""
-    competitors["Intercom, Zendesk, Freshdesk, Help Scout"""
+    competitors["Intercom, Zendesk, Freshdesk, Help Scout"""]
     "marketSize": "$18B customer service software market"""
     "growthRate": "20% annual growth"""
     "variant": "ai-customer-service-enterprise"""
@@ -350,11 +350,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-2 weeks"""
     "category": "Quantum Cloud Security"""
     "realService"""
-    technology["Quantum Cryptography, Post-Quantum Algorithms, Zero-Trust Security, Advanced Threat Detection"""
-    integrations["AWS, Azure, Google Cloud, Kubernetes, Docker, Terraform"""
-    useCases["Secure cloud hosting, Government applications, Financial systems, Healthcare platforms, Defense applications"""
+    technology["Quantum Cryptography, Post-Quantum Algorithms, Zero-Trust Security, Advanced Threat Detection"""]
+    integrations["AWS, Azure, Google Cloud, Kubernetes, Docker, Terraform"""]
+    useCases["Secure cloud hosting, Government applications, Financial systems, Healthcare platforms, Defense applications"""]
     "roi": "Organizations report 500% ROI through enhanced security and compliance benefits."""
-    competitors["AWS, Microsoft Azure, Google Cloud, IBM Cloud"""
+    competitors["AWS, Microsoft Azure, Google Cloud, IBM Cloud"""]
     "marketSize": "$480B cloud computing market"""
     "growthRate": "25% annual growth"""
     "variant": "quantum-cloud-enterprise"""
@@ -396,11 +396,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-2 weeks"""
     "category": "AI Marketing Automation"""
     "realService"""
-    technology["AI/ML, Natural Language Processing, Predictive Analytics, Computer Vision"""
-    integrations["Google Ads, Facebook Ads, LinkedIn Ads, HubSpot, Salesforce, Mailchimp"""
-    useCases["Digital advertising, Email marketing, Social media marketing, Content marketing, Lead generation"""
+    technology["AI/ML, Natural Language Processing, Predictive Analytics, Computer Vision"""]
+    integrations["Google Ads, Facebook Ads, LinkedIn Ads, HubSpot, Salesforce, Mailchimp"""]
+    useCases["Digital advertising, Email marketing, Social media marketing, Content marketing, Lead generation"""]
     "roi": "Marketing teams report 400% ROI through automated optimization and improved performance."""
-    competitors["HubSpot, Marketo, Pardot, ActiveCampaign"""
+    competitors["HubSpot, Marketo, Pardot, ActiveCampaign"""]
     "marketSize": "$25B marketing automation market"""
     "growthRate": "30% annual growth"""
     "variant": "ai-marketing-enterprise"""
@@ -442,11 +442,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-2 weeks"""
     "category": "Quantum AI Research"""
     "realService"""
-    technology["Quantum Computing, AI/ML, Machine Learning, Quantum Algorithms, Research Tools"""
-    integrations["Research databases, Academic platforms, Collaboration tools, Publication platforms"""
-    useCases["Scientific research, AI development, Drug discovery, Technology innovation, Academic research"""
+    technology["Quantum Computing, AI/ML, Machine Learning, Quantum Algorithms, Research Tools"""]
+    integrations["Research databases, Academic platforms, Collaboration tools, Publication platforms"""]
+    useCases["Scientific research, AI development, Drug discovery, Technology innovation, Academic research"""]
     "roi": "Research institutions report 700% ROI through accelerated discoveries and breakthroughs."""
-    competitors["Traditional research tools, Academic platforms, Research databases"""
+    competitors["Traditional research tools, Academic platforms, Research databases"""]
     "marketSize": "$15B research tools market"""
     "growthRate": "35% annual growth"""
     "variant": "quantum-ai-research-enterprise"""

@@ -1,6 +1,6 @@
-"export": interface Listing {"
-  // TODO: Implement
-}
+"export": interface Listing {"}
+  // TODO: Implement;
+};
    id: string;,
   title: string;
    description: string;,
@@ -10,7 +10,7 @@
    subcategory?: string;
    tags: string[];,
   images: string[];
-   seller: { id: string;,
+   seller: { id: string;,}
   name: string;
    rating: number;,"
   reviews: numbe,r} "location": string ,"

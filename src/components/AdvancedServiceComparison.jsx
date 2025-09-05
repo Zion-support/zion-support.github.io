@@ -1,13 +1,13 @@
 import React, {useState, useMemo} from 'react'''
 import {motion} from 'framer-motion'''
 import {Check, X, Star, TrendingUp, Zap, Shield, Clock, DollarSign, BarChart3, Target, Users, Globe, Mail, Phone} from 'lucide-react'''
-const COMPLEXITY_LEVELS = ['Basic', 'Intermediate', 'Advanced', 'Enterprise'''
-const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'''
+const COMPLEXITY_LEVELS = ['Basic', 'Intermediate', 'Advanced', 'Enterprise''']
+const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+''']
         "category"""
         "complexity"""
         "priceRange"""
         "technology"""
-    const mockServices = [{"id"""
+    const mockServices = [{"id"""}]
             "name"""
             "category"""
             "price"""
@@ -17,7 +17,7 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'''
             "contactInfo"""
             "email"""
             "link"""
-        {"id"""
+        {"id"""}
             "name"""
             "category"""
             "price"""
@@ -27,7 +27,7 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'''
             "contactInfo"""
             "email"""
             "link"""
-        {"id"""
+        {"id"""}
             "name"""
             "category"""
             "price"""
@@ -37,7 +37,7 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'''
             "contactInfo"""
             "email"""
             "link"""
-        {"id"""
+        {"id"""}
             "name"""
             "category"""
             "price"""
@@ -52,8 +52,8 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'''
               <Button variant={viewMode === 'grid' ? 'default' : 'outline'} size="sm"""
               <Button variant={viewMode === 'table' ? 'default' : 'outline'} size="sm"""
               <Button variant={viewMode === 'detailed' ? 'default' : 'outline'} size="sm"""
-}} transition={{ "delay"""
-            <Card className={`h-full transition-all duration-300 "hover"""
+}} transition={{ "delay"""}
+            <Card className={`h-full transition-all duration-300 "hover"""`}
                   <Button variant="ghost" size="sm"""
               <divclassName="text-2xl font-bold text-zion-green"""
           <divclassName="mt-6 text-center"""

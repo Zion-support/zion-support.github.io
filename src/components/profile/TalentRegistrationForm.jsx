@@ -18,10 +18,10 @@ import {useAuth} from "@/hooks/useAuth"""
     "title": z.string().min(5, "Professional title is required"")"
     "bio": z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"")"
     "location": z.string().min(2, "Location is required"")"
-    "skills": z.string().min(2, "Enter at least one skill"""
+    "skills": z.string().min(2, "Enter at least one skill""")
     "hourlyRate"""
         "message": "Hourly rate must be a number"""
-    "availability": z.enum(["available", "limited", "unavailable"""
+    "availability": z.enum(["available", "limited", "unavailable""")]
     "enhancedProfile"""
             <h2 style="color: #6D28D9;"""
-                    const { "data"")]"
+                    const { "data"")]"}

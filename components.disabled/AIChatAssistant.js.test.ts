@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';''
 import { describe, it, expect } from 'vitest';''
 import Page from './AIChatAssistant.js';''
-describe('Page', () => {;''
-  it('renders without crashing', () => {;'
+describe('Page', () => {;''}
+  it('renders without crashing', () => {;'}
     render(<Page />);
 </Page>
     render(<Page />);

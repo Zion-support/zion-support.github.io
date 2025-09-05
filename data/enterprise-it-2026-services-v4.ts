@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 month"""
     "category": "Enterprise Security"""
     "realService"""
-    technology["Zero-Trust Architecture", "AI/ML", "Microservices", "React", "Python", "PostgreSQL", "AWS", "Kubernetes"""
-    integrations["Active Directory", "SAML", "OAuth", "SIEM systems", "Firewalls", "VPNs"""
-    useCases["Network security", "Access control", "Threat prevention", "Compliance", "Cloud security"""
+    technology["Zero-Trust Architecture", "AI/ML", "Microservices", "React", "Python", "PostgreSQL", "AWS", "Kubernetes"""]
+    integrations["Active Directory", "SAML", "OAuth", "SIEM systems", "Firewalls", "VPNs"""]
+    useCases["Network security", "Access control", "Threat prevention", "Compliance", "Cloud security"""]
     "roi": "Reduce security incidents by 90%, improve compliance by 95%, lower security costs by 40%"""
-    competitors["Cisco", "Palo Alto Networks", "VMware"""
+    competitors["Cisco", "Palo Alto Networks", "VMware"""]
     "marketSize": "$60B cybersecurity market"""
     "growthRate": "50% annual growth"""
     "variant": "enterprise-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "AI IT Operations"""
     "realService"""
-    technology["AI/ML", "Machine Learning", "Automation", "React", "Python", "PostgreSQL", "AWS", "Kubernetes"""
-    integrations["ServiceNow", "Jira", "Slack", "Teams", "Monitoring tools", "Ticketing systems"""
-    useCases["IT operations automation", "Incident management", "Performance monitoring", "Cost optimization", "Compliance"""
+    technology["AI/ML", "Machine Learning", "Automation", "React", "Python", "PostgreSQL", "AWS", "Kubernetes"""]
+    integrations["ServiceNow", "Jira", "Slack", "Teams", "Monitoring tools", "Ticketing systems"""]
+    useCases["IT operations automation", "Incident management", "Performance monitoring", "Cost optimization", "Compliance"""]
     "roi": "Reduce incident response time by 80%, improve system uptime by 99.9%, lower IT costs by 30%"""
-    competitors["ServiceNow", "BMC", "BMC Helix"""
+    competitors["ServiceNow", "BMC", "BMC Helix"""]
     "marketSize": "$35B IT operations market"""
     "growthRate": "40% annual growth"""
     "variant": "ai-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 month"""
     "category": "Quantum Security"""
     "realService"""
-    technology["Post-Quantum Cryptography", "Hybrid Encryption", "React", "Python", "PostgreSQL", "AWS", "Cryptography"""
-    integrations["PKI systems", "HSMs", "Cloud platforms", "Security tools", "Compliance systems"""
-    useCases["Data protection", "Secure communications", "Compliance", "Future-proofing", "Migration"""
+    technology["Post-Quantum Cryptography", "Hybrid Encryption", "React", "Python", "PostgreSQL", "AWS", "Cryptography"""]
+    integrations["PKI systems", "HSMs", "Cloud platforms", "Security tools", "Compliance systems"""]
+    useCases["Data protection", "Secure communications", "Compliance", "Future-proofing", "Migration"""]
     "roi": "Ensure long-term security, maintain compliance, protect against future threats"""
-    competitors["Entrust", "DigiCert", "GlobalSign"""
+    competitors["Entrust", "DigiCert", "GlobalSign"""]
     "marketSize": "$15B cryptography market"""
     "growthRate": "70% annual growth"""
     "variant": "quantum-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 month"""
     "category": "Cloud Migration"""
     "realService"""
-    technology["AI/ML", "Cloud Computing", "Automation", "React", "Python", "PostgreSQL", "AWS", "Multi-cloud"""
-    integrations["AWS", "Azure", "GCP", "On-premise systems", "Monitoring tools", "CI/CD pipelines"""
-    useCases["Cloud migration", "Multi-cloud management", "Cost optimization", "Performance improvement", "Compliance"""
+    technology["AI/ML", "Cloud Computing", "Automation", "React", "Python", "PostgreSQL", "AWS", "Multi-cloud"""]
+    integrations["AWS", "Azure", "GCP", "On-premise systems", "Monitoring tools", "CI/CD pipelines"""]
+    useCases["Cloud migration", "Multi-cloud management", "Cost optimization", "Performance improvement", "Compliance"""]
     "roi": "Reduce migration time by 70%, eliminate downtime, optimize cloud costs by 40%"""
-    competitors["AWS Migration Hub", "Azure Migrate", "Google Cloud Migrate"""
+    competitors["AWS Migration Hub", "Azure Migrate", "Google Cloud Migrate"""]
     "marketSize": "$50B cloud migration market"""
     "growthRate": "60% annual growth"""
     "variant": "ai-autonomous"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Edge Computing"""
     "realService"""
-    technology["Edge Computing", "IoT", "AI/ML", "React", "Python", "PostgreSQL", "AWS", "Kubernetes"""
-    integrations["IoT devices", "Cloud platforms", "AI models", "Monitoring tools", "Security systems"""
-    useCases["IoT management", "Real-time processing", "AI deployment", "Edge analytics", "Low-latency applications"""
+    technology["Edge Computing", "IoT", "AI/ML", "React", "Python", "PostgreSQL", "AWS", "Kubernetes"""]
+    integrations["IoT devices", "Cloud platforms", "AI models", "Monitoring tools", "Security systems"""]
+    useCases["IoT management", "Real-time processing", "AI deployment", "Edge analytics", "Low-latency applications"""]
     "roi": "Reduce latency by 90%, improve performance by 300%, lower bandwidth costs by 60%"""
-    competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT"""
+    competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT"""]
     "marketSize": "$40B edge computing market"""
     "growthRate": "80% annual growth"""
     "variant": "edge-futuristic"""
@@ -258,11 +258,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Data Governance"""
     "realService"""
-    technology["AI/ML", "Data Governance", "Privacy", "React", "Python", "PostgreSQL", "AWS", "Big Data"""
-    integrations["Data warehouses", "Databases", "Cloud platforms", "BI tools", "Compliance systems"""
-    useCases["Data governance", "Privacy compliance", "Data quality", "Audit trails", "Regulatory compliance"""
+    technology["AI/ML", "Data Governance", "Privacy", "React", "Python", "PostgreSQL", "AWS", "Big Data"""]
+    integrations["Data warehouses", "Databases", "Cloud platforms", "BI tools", "Compliance systems"""]
+    useCases["Data governance", "Privacy compliance", "Data quality", "Audit trails", "Regulatory compliance"""]
     "roi": "Improve data quality by 80%, reduce compliance risks by 90%, automate governance by 70%"""
-    competitors["Collibra", "Informatica", "Alation"""
+    competitors["Collibra", "Informatica", "Alation"""]
     "marketSize": "$25B data governance market"""
     "growthRate": "45% annual growth"""
     "variant": "ai-futuristic"""
@@ -304,11 +304,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "Autonomous DevOps"""
     "realService"""
-    technology["AI/ML", "DevOps", "Automation", "React", "Python", "PostgreSQL", "AWS", "Kubernetes"""
-    integrations["GitHub", "GitLab", "Jenkins", "Docker", "Kubernetes", "Cloud platforms"""
-    useCases["CI/CD automation", "Infrastructure management", "Testing automation", "Deployment automation", "Monitoring"""
+    technology["AI/ML", "DevOps", "Automation", "React", "Python", "PostgreSQL", "AWS", "Kubernetes"""]
+    integrations["GitHub", "GitLab", "Jenkins", "Docker", "Kubernetes", "Cloud platforms"""]
+    useCases["CI/CD automation", "Infrastructure management", "Testing automation", "Deployment automation", "Monitoring"""]
     "roi": "Reduce deployment time by 90%, eliminate human errors, improve reliability by 99.9%"""
-    competitors["GitLab", "Jenkins", "CircleCI"""
+    competitors["GitLab", "Jenkins", "CircleCI"""]
     "marketSize": "$20B DevOps market"""
     "growthRate": "55% annual growth"""
     "variant": "ai-autonomous"""
@@ -350,11 +350,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Quantum Storage"""
     "realService"""
-    technology["Quantum-Resistant Encryption", "Distributed Storage", "AI/ML", "React", "Python", "PostgreSQL", "AWS"""
-    integrations["Cloud platforms", "Storage systems", "Security tools", "Compliance systems", "Backup solutions"""
-    useCases["Secure data storage", "Compliance", "Disaster recovery", "Data sovereignty", "Future-proofing"""
+    technology["Quantum-Resistant Encryption", "Distributed Storage", "AI/ML", "React", "Python", "PostgreSQL", "AWS"""]
+    integrations["Cloud platforms", "Storage systems", "Security tools", "Compliance systems", "Backup solutions"""]
+    useCases["Secure data storage", "Compliance", "Disaster recovery", "Data sovereignty", "Future-proofing"""]
     "roi": "Ensure long-term data security, maintain compliance, protect against quantum threats"""
-    competitors["AWS S3", "Azure Blob", "Google Cloud Storage"""
+    competitors["AWS S3", "Azure Blob", "Google Cloud Storage"""]
     "marketSize": "$80B cloud storage market"""
     "growthRate": "65% annual growth"""
     "variant": "quantum-futuristic"""

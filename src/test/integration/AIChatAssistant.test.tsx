@@ -2,11 +2,11 @@ import React from 'react';''
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';''
 import { renderWithProviders } from '../test/testUtils';''
 import AIChatAssistant from '../components/AIChatAssistant';''
-describe('AIChatAssistant Integration Tests', () => {'
-  beforeEach(() => {
+describe('AIChatAssistant Integration Tests', () => {'}
+  beforeEach(() => {}
     // Clear any previous state;
     jest.clearAllMocks()});'
-  it('should render the AI assistant interface', () => {'
+  it('should render the AI assistant interface', () => {'}
     renderWithProviders(<AIChatAssistant />);
 </AIChatAssistant>
     renderWithProviders(<AIChatAssistant />);

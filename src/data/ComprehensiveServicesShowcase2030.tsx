@@ -1,6 +1,6 @@
 import React from 'react'''
-  const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas'''
-  const [selectedCategory, setSelectedCategory] = useState<any>('all''
+  const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas''')
+  const [selectedCategory, setSelectedCategory] = useState<any>('all'')
 </any>'
           </div>;'''
         </div>;';'''
@@ -9,6 +9,6 @@ import React from 'react'''
                     : 'bg-white text-gray-700 "hover"""
                     : 'bg-white text-gray-700 "hover"""
                     : 'bg-white text-gray-700 "hover"""
-                  setSearchTerm("""
+                  setSearchTerm(""")
 export default ComprehensiveServicesShowcase2030}}}}}""
 cursor/fix-lint-push-and-merge-to-main-f3c1;)"

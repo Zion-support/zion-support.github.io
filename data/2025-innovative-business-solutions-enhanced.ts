@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-5 hours"""
     "category": "AI Marketing & Automation"""
     "realService"""
-    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis"""
-    integrations["Salesforce, HubSpot, Mailchimp, Facebook Ads, Google Ads, LinkedIn"""
-    useCases["Lead generation, Customer segmentation, Campaign automation, Content personalization, Performance optimization"""
+    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis"""]
+    integrations["Salesforce, HubSpot, Mailchimp, Facebook Ads, Google Ads, LinkedIn"""]
+    useCases["Lead generation, Customer segmentation, Campaign automation, Content personalization, Performance optimization"""]
     "roi": "Marketing teams report 400% ROI through improved conversion rates and reduced acquisition costs."""
-    competitors["HubSpot, Marketo, Pardot, ActiveCampaign"""
+    competitors["HubSpot, Marketo, Pardot, ActiveCampaign"""]
     "marketSize": "$25.6B marketing automation market"""
     "growthRate": "19% annual growth"""
     "variant": "ai-marketing-enterprise"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2-4 hours"""
     "category": "AI Sales & Intelligence"""
     "realService"""
-    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis"""
-    integrations["Salesforce, HubSpot, Pipedrive, Zoho CRM, Microsoft Dynamics"""
-    useCases["Lead qualification, Sales forecasting, Pipeline management, Performance tracking, Customer insights"""
+    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis"""]
+    integrations["Salesforce, HubSpot, Pipedrive, Zoho CRM, Microsoft Dynamics"""]
+    useCases["Lead qualification, Sales forecasting, Pipeline management, Performance tracking, Customer insights"""]
     "roi": "Sales teams report 350% ROI through improved conversion rates and reduced sales cycles."""
-    competitors["Salesforce, Pipedrive, HubSpot Sales, Zoho CRM"""
+    competitors["Salesforce, Pipedrive, HubSpot Sales, Zoho CRM"""]
     "marketSize": "$18.9B sales intelligence market"""
     "growthRate": "21% annual growth"""
     "variant": "ai-sales-enterprise"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4-6 hours"""
     "category": "AI HR & Talent Management"""
     "realService"""
-    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis"""
-    integrations["Workday, BambooHR, ADP, Greenhouse, Lever, BambooHR"""
-    useCases["Recruitment automation, Performance management, Employee engagement, Compliance monitoring, Talent analytics"""
+    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis"""]
+    integrations["Workday, BambooHR, ADP, Greenhouse, Lever, BambooHR"""]
+    useCases["Recruitment automation, Performance management, Employee engagement, Compliance monitoring, Talent analytics"""]
     "roi": "HR teams report 300% ROI through improved hiring efficiency and employee retention."""
-    competitors["BambooHR, Workday, ADP, Gusto"""
+    competitors["BambooHR, Workday, ADP, Gusto"""]
     "marketSize": "$22.4B HR management market"""
     "growthRate": "18% annual growth"""
     "variant": "ai-hr-enterprise"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "5-7 hours"""
     "category": "AI Finance & Analytics"""
     "realService"""
-    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis"""
-    integrations["QuickBooks, Xero, FreshBooks, Stripe, PayPal, Bank APIs"""
-    useCases["Financial planning, Risk management, Expense tracking, Cash flow management, Investment analysis"""
+    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis"""]
+    integrations["QuickBooks, Xero, FreshBooks, Stripe, PayPal, Bank APIs"""]
+    useCases["Financial planning, Risk management, Expense tracking, Cash flow management, Investment analysis"""]
     "roi": "Finance teams report 450% ROI through improved forecasting accuracy and risk management."""
-    competitors["QuickBooks, Xero, FreshBooks, Sage"""
+    competitors["QuickBooks, Xero, FreshBooks, Sage"""]
     "marketSize": "$28.7B financial software market"""
     "growthRate": "16% annual growth"""
     "variant": "ai-finance-enterprise"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "6-8 hours"""
     "category": "AI Supply Chain & Logistics"""
     "realService"""
-    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis"""
-    integrations["SAP, Oracle, Infor, Shopify, WooCommerce, ERP systems"""
-    useCases["Demand forecasting, Inventory management, Supplier optimization, Logistics planning, Cost reduction"""
+    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis"""]
+    integrations["SAP, Oracle, Infor, Shopify, WooCommerce, ERP systems"""]
+    useCases["Demand forecasting, Inventory management, Supplier optimization, Logistics planning, Cost reduction"""]
     "roi": "Supply chain teams report 500% ROI through reduced costs and improved efficiency."""
-    competitors["SAP, Oracle, Infor, Manhattan Associates"""
+    competitors["SAP, Oracle, Infor, Manhattan Associates"""]
     "marketSize": "$31.2B supply chain management market"""
     "growthRate": "17% annual growth"""
     "variant": "ai-supply-chain-enterprise"""

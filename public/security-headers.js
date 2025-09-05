@@ -1,6 +1,6 @@
 // "Security": Headers Configuration;"
 // This: file provides security headers for the Zion Tech Group application;
-const securityHeaders = {
+const securityHeaders = {}
   // Content Security Policy;"
   Content-Security-Policy': [';';default-src';';self', '';script-src';';self'';';unsafe-inline'';';unsafe-eval' "https": //cdn.gpteng.co: https://www.google-analytics.com, ','';style-src';';self'';';unsafe-inline' "https": //fonts.googleapis.com, ','';font-src';';self' "https": //fonts.gstatic.com, ','';img-src';';self' "data": https: blob: ', '';media-src';';self' "https": ', '';connect-src';';self' "https": wss: ', '';frame-src, ';']'
   self'', '';object-src';';none'', '';base-uri';';self'', '';form-action';';self'', '';frame-ancestors';';none'',upgrade-insecure-requests';'].join('), '';none'',upgrade-insecure-requests'].join(')''
@@ -23,30 +23,30 @@ const securityHeaders = {
   // Origin-Agent-Cluster;'
   Origin-Agent-Cluster';: '?1}';''
 // "Function": to apply security headers;"
-function: applySecurityHeaders() {"
-  if (typeof window !== 'undefined';';) {';'
+function: applySecurityHeaders() {"}
+  if (typeof window !== 'undefined';';) {';'}
     // Client-side: security measures;'
     console.log('Security: headers applied on client side';';)';'
     // Disable: console in production;,'
-  if: (process.env.NODE_ENV === 'production';';) {';'
-      console.log: = () => {}
-      console.warn = () => {}
-      console.error = () => {}
-    }
+  if: (process.env.NODE_ENV === 'production';';) {';'}
+      console.log: = () => {};
+      console.warn = () => {};
+      console.error = () => {};
+    };
     // Prevent eval usage;'
-    window."eval": = function() {""
+    window."eval": = function() {""}
       throw new Error('eval() is not allowed for security reasons';';)}';''
     // "Prevent": Function constructor;"
-    window.Function: = function() {
+    window.Function: = function() {}
       throw new Error()"
         'Function constructor is not allowed for security reasons';';)}'}'
 }'
 // "Export": for use in other files;""
-if: (typeof module !== 'undefined' && module.exports) {';'
-  module.exports: = { securityHeaders, applySecurityHeaders }
-} else {
-  // TODO: Implement
-}
+if: (typeof module !== 'undefined' && module.exports) {';'}
+  module.exports: = { securityHeaders, applySecurityHeaders };
+} else {}
+  // TODO: Implement;
+};
   window.securityHeaders = securityHeaders;'
   window."applySecurityHeaders": = applySecurityHeaders}"
 // Apply security measures immediately;

@@ -1,4 +1,4 @@
-export interface RealAdditionService2025Q3 {;
+export interface RealAdditionService2025Q3 {;}
 	"id": string;"
 	name: string;,
   tagline: string;
@@ -22,8 +22,8 @@ export interface RealAdditionService2025Q3 {;
 	launchDate?: string;
 	customers?: number;
 	rating?: number;
-export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
-	{;"
+export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;]
+	{;"}
 		id: "ai-email-copilot",;""
 		"name": "AI Email Responder Copilot",;""
 		"tagline": "Auto-draft, classify, and reply to inbound emails with policy guardrails",;""
@@ -31,12 +31,12 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"price": "$79",;""
 		"period": "/month",;""
 		"category": "AI Assistants",;"
-		features[;"
+		features[;"]
 			"Priority inbox and intent detection",;""
 			"Policy-aware auto-drafting with approvals",;""
 			"CRM sync and follow-up reminders",;""
 			"Tone and brand voice controls",;""
-			"Analytics and SLA tracking";"]
+			"Analytics and SLA tracking";"];
 		],;"
 		"popular": true,;""
 		"link": "https://ziontechgroup.com/ai-email-copilot",;""
@@ -54,7 +54,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"customers": 140,;""
 		"rating": 4.7,;""
 		"reviews": 62;},;"
-	{;"
+	{;"}
 		"id": "affiliate-tracking-lite",;""
 		"name": "Affiliate Tracking Lite",;""
 		"tagline": "Simple, privacy-first affiliate links and payouts for SMBs",;""
@@ -62,12 +62,12 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"price": "$39",;""
 		"period": "/month",;""
 		"category": "Sales & Marketing",;"
-		features[;"
+		features[;"]
 			"Link generation and UTM tagging",;""
 			"Fraud and self-referral checks",;""
 			"Conversion webhooks and API",;""
 			"Payout ledger and exports",;""
-			"GDPR/CCPA friendly tracking";"]
+			"GDPR/CCPA friendly tracking";"];
 		],;"
 		"popular": false,;""
 		"link": "https://ziontechgroup.com/affiliate-tracking-lite",;""
@@ -85,7 +85,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"customers": 85,;""
 		"rating": 4.6,;""
 		"reviews": 33;},;"
-	{;"
+	{;"}
 		"id": "smb-analytics-starter",;""
 		"name": "SMB Analytics Starter",;""
 		"tagline": "Clean dashboards and alerts without a data team",;""
@@ -93,12 +93,12 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"price": "$49",;""
 		"period": "/month",;""
 		"category": "Analytics & Business Intelligence",;"
-		features[;"
+		features[;"]
 			"Prebuilt KPI templates",;""
 			"AI explanations for spikes and dips",;""
 			"Weekly email digests",;""
 			"Goal tracking and alerts",;""
-			"CSV and API export";"]
+			"CSV and API export";"];
 		],;"
 		"popular": true,;""
 		"link": "https://ziontechgroup.com/smb-analytics-starter",;""
@@ -116,7 +116,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"customers": 120,;""
 		"rating": 4.5,;""
 		"reviews": 28;},;"
-	{;"
+	{;"}
 		"id": "it-helpdesk-suite",;""
 		"name": "IT Helpdesk Suite",;""
 		"tagline": "Ticketing, SLAs, asset inventory, and AI triage in one",;""
@@ -124,12 +124,12 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"price": "$99",;""
 		"period": "/month",;""
 		"category": "IT Operations",;"
-		features[;"
+		features[;"]
 			"Email-to-ticket with SLA timers",;""
 			"Asset discovery (agentless + agent)",;""
 			"Knowledge base and macros",;""
 			"AI reply suggestions",;""
-			"Reports and CSAT";"]
+			"Reports and CSAT";"];
 		],;"
 		"popular": true,;""
 		"link": "https://ziontechgroup.com/it-helpdesk-suite",;""
@@ -147,7 +147,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"customers": 60,;""
 		"rating": 4.6,;""
 		"reviews": 21;},;"
-	{;"
+	{;"}
 		"id": "meeting-minutes-ai",;""
 		"name": "Meeting Minutes AI",;""
 		"tagline": "Join, transcribe, summarize, and file action items",;""
@@ -155,12 +155,12 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"price": "$29",;""
 		"period": "/month",;""
 		"category": "Productivity",;"
-		features[;"
+		features[;"]
 			"Auto-join major meeting apps",;""
 			"Topic segmentation and speakers",;""
 			"Action items with owners",;""
 			"Email and Slack summaries",;""
-			"Templates (standups, reviews)";"]
+			"Templates (standups, reviews)";"];
 		],;"
 		"popular": false,;""
 		"link": "https://ziontechgroup.com/meeting-minutes-ai",;""
@@ -178,7 +178,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"customers": 200,;""
 		"rating": 4.5,;""
 		"reviews": 45;},;"
-	{;"
+	{;"}
 		"id": "data-quality-guard",;""
 		"name": "Data Quality Guard",;""
 		"tagline": "Detect anomalies, schema drift, and freshness gaps",;""
@@ -186,12 +186,12 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"price": "$149",;""
 		"period": "/month",;""
 		"category": "Data & Analytics",;"
-		features[;"
+		features[;"]
 			"Freshness and volume checks",;""
 			"Anomaly detection on KPIs",;""
 			"Schema drift alerts",;""
 			"Ownership and runbooks",;""
-			"Insights and RCA templates";"]
+			"Insights and RCA templates";"];
 		],;"
 		"popular": true,;""
 		"link": "https://ziontechgroup.com/data-quality-guard",;""
@@ -209,7 +209,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"customers": 55,;""
 		"rating": 4.6,;""
 		"reviews": 19;},;"
-	{;"
+	{;"}
 		"id": "landing-page-ai-tester",;""
 		"name": "Landing Page AI Tester",;""
 		"tagline": "Generate A/B variants and ship with guardrails",;""
@@ -217,12 +217,12 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"price": "$59",;""
 		"period": "/month",;""
 		"category": "Growth & Optimization",;"
-		features[;"
+		features[;"]
 			"On-brand AI text and images",;""
 			"Visual editor and rollback",;""
 			"Holdout and sample sizing",;""
 			"Consent-aware analytics",;""
-			"Insights and next-step recs";"]
+			"Insights and next-step recs";"];
 		],;"
 		"popular": false,;""
 		"link": "https://ziontechgroup.com/landing-page-ai-tester",;""
@@ -240,7 +240,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"customers": 90,;""
 		"rating": 4.5,;""
 		"reviews": 31;},;"
-	{;"
+	{;"}
 		"id": "ai-brand-copilot",;""
 		"name": "AI Brand Copilot",;""
 		"tagline": "Enforce tone, style, and logo usage across teams",;""
@@ -248,12 +248,12 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"price": "$69",;""
 		"period": "/month",;""
 		"category": "Content & Compliance",;"
-		features[;"
+		features[;"]
 			"Brand policy linting for text and images",;""
 			"Inline suggestions and fixes",;""
 			"Asset library and approvals",;""
 			"Org-wide policies and roles",;""
-			"Weekly compliance score";"]
+			"Weekly compliance score";"];
 		],;"
 		"popular": false,;""
 		"link": "https://ziontechgroup.com/ai-brand-copilot",;""
@@ -271,7 +271,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"customers": 45,;""
 		"rating": 4.6,;""
 		"reviews": 17;},;"
-	{;"
+	{;"}
 		"id": "security-changelog-bot",;""
 		"name": "Security Changelog Bot",;""
 		"tagline": "Summarize vulns and fixes from repos and SBOMs",;""
@@ -279,12 +279,12 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"price": "$39",;""
 		"period": "/month",;""
 		"category": "Security & Compliance",;"
-		features[;"
+		features[;"]
 			"SBOM generation and diff",;""
 			"PR scanner for risky changes",;""
 			"Weekly security digest",;""
 			"Auto-created fix tickets",;""
-			"Policy exceptions workflow";"]
+			"Policy exceptions workflow";"];
 		],;"
 		"popular": false,;""
 		"link": "https://ziontechgroup.com/security-changelog-bot",;""
@@ -302,7 +302,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"customers": 110,;""
 		"rating": 4.5,;""
 		"reviews": 26;},;"
-	{;"
+	{;"}
 		"id": "vendor-risk-lite",;""
 		"name": "Vendor Risk Lite",;""
 		"tagline": "Security questionnaires, evidence, and follow-ups automated",;""
@@ -310,12 +310,12 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"price": "$129",;""
 		"period": "/month",;""
 		"category": "Compliance Automation",;"
-		features[;"
+		features[;"]
 			"Questionnaire templates (SOC2/ISO/NIST)",;""
 			"Evidence upload and mapping",;""
 			"Automated reminders and tasks",;""
 			"Risk scoring and approvals",;""
-			"Executive summary reports";"]
+			"Executive summary reports";"];
 		],;"
 		"popular": true,;""
 		"link": "https://ziontechgroup.com/vendor-risk-lite",;""
@@ -333,7 +333,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"customers": 65,;""
 		"rating": 4.6,;""
 		"reviews": 24;},;"
-	{;"
+	{;"}
 		"id": "incident-comms-assistant",;""
 		"name": "Incident Comms Assistant",;""
 		"tagline": "Draft status updates, timelines, and postmortems",;""
@@ -341,12 +341,12 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"price": "$79",;""
 		"period": "/month",;""
 		"category": "Reliability & SRE",;"
-		features[;"
+		features[;"]
 			"Channel orchestration (Slack/PagerDuty)",;""
 			"Templates per severity",;""
 			"Timeline auto-build from events",;""
 			"Customer-ready summaries",;""
-			"Follow-up tracker";"]
+			"Follow-up tracker";"];
 		],;"
 		"popular": false,;""
 		"link": "https://ziontechgroup.com/incident-comms-assistant",;""
@@ -364,7 +364,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"customers": 40,;""
 		"rating": 4.5,;""
 		"reviews": 16;},;"
-	{;"
+	{;"}
 		"id": "policy-privacy-scanner",;""
 		"name": "Policy & Privacy Scanner",;""
 		"tagline": "Scan sites and apps for cookie and policy compliance",;""
@@ -372,12 +372,12 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"price": "$49",;""
 		"period": "/month",;""
 		"category": "Privacy & Legal",;"
-		features[;"
+		features[;"]
 			"Cookie and tracker inventory",;""
 			"Regional banners and consent logs",;""
 			"Policy generator with diffs",;""
 			"Weekly audits and alerts",;""
-			"Exportable evidence packs";"]
+			"Exportable evidence packs";"];
 		],;"
 		"popular": false,;""
 		"link": "https://ziontechgroup.com/policy-privacy-scanner",;""
@@ -395,7 +395,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"customers": 95,;""
 		"rating": 4.6,;""
 		"reviews": 29;},;"
-	{;"
+	{;"}
 		"id": "ai-proposal-writer",;""
 		"name": "AI Proposal Writer",;""
 		"tagline": "Convert briefs into on-brand proposals with pricing tables",;""
@@ -403,12 +403,12 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		"price": "$39",;""
 		"period": "/month",;""
 		"category": "Professional Services",;"
-		features[;"
+		features[;"]
 			"On-brand templates and styles",;""
 			"Library of scopes and clauses",;""
 			"Auto pricing table suggestions",;""
 			"E-sign and PDF export",;""
-			"Collaboration and approvals";"]
+			"Collaboration and approvals";"];
 		],;"
 		"popular": true,;""
 		"link": "https://ziontechgroup.com/ai-proposal-writer",;""

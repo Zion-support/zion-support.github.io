@@ -1,6 +1,6 @@
-export interface BiotechAIService {
-  // TODO: Implement
-}
+export interface BiotechAIService {}
+  // TODO: Implement;
+};
   "id"""
   "realImplementation"""
     "name"""

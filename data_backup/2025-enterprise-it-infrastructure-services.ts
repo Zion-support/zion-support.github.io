@@ -1,6 +1,6 @@
-export interface EnterpriseITInfrastructureService {
-  // TODO: Implement
-}
+export interface EnterpriseITInfrastructureService {}
+  // TODO: Implement;
+};
   "id"""
   "realImplementation"""
   "mobile"""

@@ -4,8 +4,8 @@ import Head from 'next/head'''
 import { motion } from 'framer-motion'''
 } from 'lucide-react'''
 const SEO = dynamic(() => import('../src/components/SEO'')'
-const PageTransition = dynamic(() => import('../src/components/PageTransition'''
-  const [activeTab, setActiveTab] = useState('overview'''
+const PageTransition = dynamic(() => import('../src/components/PageTransition''')
+  const [activeTab, setActiveTab] = useState('overview''')
       "title"""
       "value"""
       "change"""

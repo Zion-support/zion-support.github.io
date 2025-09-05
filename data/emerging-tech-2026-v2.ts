@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "6 hours"""
     "category": "Emerging Technology & Computing"""
     "realService"""
-    technology["Photonic computing", "Quantum photonics", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Custom photonic APIs"""
-    integrations["TensorFlow", "PyTorch", "CUDA", "OpenCL", "MATLAB", "Python", "Julia", "Research platforms"""
-    useCases["AI model training", "Scientific simulations", "Climate modeling", "Drug discovery", "Financial modeling", "Cryptography"""
+    technology["Photonic computing", "Quantum photonics", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Custom photonic APIs"""]
+    integrations["TensorFlow", "PyTorch", "CUDA", "OpenCL", "MATLAB", "Python", "Julia", "Research platforms"""]
+    useCases["AI model training", "Scientific simulations", "Climate modeling", "Drug discovery", "Financial modeling", "Cryptography"""]
     "roi": "Research institutions see 900% ROI through accelerated scientific discoveries and breakthrough research."""
-    competitors["Specialized photonic platforms", "Academic computing tools", "Research computing systems"""
+    competitors["Specialized photonic platforms", "Academic computing tools", "Research computing systems"""]
     "marketSize": "$3B market"""
     "growthRate": "600% annual growth"""
     "variant": "emerging-tech"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3 hours"""
     "category": "Emerging Technology & Visualization"""
     "realService"""
-    technology["Holographic projection", "3D rendering", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "WebGL", "WebXR"""
-    integrations["Unity", "Unreal Engine", "Blender", "Maya", "3ds Max", "SketchUp", "Revit", "AutoCAD"""
-    useCases["Virtual presentations", "Training simulations", "Medical visualization", "Architectural walkthroughs", "Entertainment experiences", "Educational content"""
+    technology["Holographic projection", "3D rendering", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "WebGL", "WebXR"""]
+    integrations["Unity", "Unreal Engine", "Blender", "Maya", "3ds Max", "SketchUp", "Revit", "AutoCAD"""]
+    useCases["Virtual presentations", "Training simulations", "Medical visualization", "Architectural walkthroughs", "Entertainment experiences", "Educational content"""]
     "roi": "Training organizations see 400% ROI through improved engagement and retention rates."""
-    competitors["Magic Leap", "Microsoft HoloLens", "Vuzix", "RealWear", "Nreal"""
+    competitors["Magic Leap", "Microsoft HoloLens", "Vuzix", "RealWear", "Nreal"""]
     "marketSize": "$12B market"""
     "growthRate": "350% annual growth"""
     "variant": "emerging-tech"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4 hours"""
     "category": "Quantum & Internet Security"""
     "realService"""
-    technology["Post-quantum cryptography", "Quantum key distribution", "React", "Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes"""
-    integrations["Cloudflare", "AWS", "Azure", "Google Cloud", "CDN services", "Load balancers", "Firewalls", "VPN services"""
-    useCases["Secure web traffic", "API protection", "Data transmission", "Cloud security", "IoT security", "Financial transactions"""
+    technology["Post-quantum cryptography", "Quantum key distribution", "React", "Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes"""]
+    integrations["Cloudflare", "AWS", "Azure", "Google Cloud", "CDN services", "Load balancers", "Firewalls", "VPN services"""]
+    useCases["Secure web traffic", "API protection", "Data transmission", "Cloud security", "IoT security", "Financial transactions"""]
     "roi": "Internet companies see 500% ROI through improved security and customer trust."""
-    competitors["Specialized quantum platforms", "Advanced security solutions", "Government tools"""
+    competitors["Specialized quantum platforms", "Advanced security solutions", "Government tools"""]
     "marketSize": "$20B market"""
     "growthRate": "400% annual growth"""
     "variant": "quantum-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "AI & Business Automation"""
     "realService"""
-    technology["Advanced AI", "Machine learning", "React", "Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes", "Cloud native"""
-    integrations["ERP systems", "CRM platforms", "Financial software", "HR systems", "Supply chain tools", "Analytics platforms"""
-    useCases["Business process automation", "Strategic decision making", "Resource optimization", "Risk management", "Performance optimization", "Customer experience"""
+    technology["Advanced AI", "Machine learning", "React", "Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes", "Cloud native"""]
+    integrations["ERP systems", "CRM platforms", "Financial software", "HR systems", "Supply chain tools", "Analytics platforms"""]
+    useCases["Business process automation", "Strategic decision making", "Resource optimization", "Risk management", "Performance optimization", "Customer experience"""]
     "roi": "Enterprise customers see 800% ROI through improved efficiency and strategic advantage."""
-    competitors["Enterprise AI platforms", "Business automation tools", "Strategic planning software"""
+    competitors["Enterprise AI platforms", "Business automation tools", "Strategic planning software"""]
     "marketSize": "$50B market"""
     "growthRate": "300% annual growth"""
     "variant": "ai-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "8 hours"""
     "category": "AI & Biotechnology"""
     "realService"""
-    technology["AI/ML", "Bioinformatics", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Molecular modeling"""
-    integrations["NCBI", "Ensembl", "PDB", "ChEMBL", "PubChem", "Clinical trial databases", "Research platforms"""
-    useCases["Drug discovery", "Protein analysis", "Genetic research", "Clinical trials", "Drug repurposing", "Biomarker research"""
+    technology["AI/ML", "Bioinformatics", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Molecular modeling"""]
+    integrations["NCBI", "Ensembl", "PDB", "ChEMBL", "PubChem", "Clinical trial databases", "Research platforms"""]
+    useCases["Drug discovery", "Protein analysis", "Genetic research", "Clinical trials", "Drug repurposing", "Biomarker research"""]
     "roi": "Pharmaceutical companies see 1000% ROI through accelerated drug discovery and development."""
-    competitors["Specialized biotech platforms", "Academic tools", "Pharmaceutical software"""
+    competitors["Specialized biotech platforms", "Academic tools", "Pharmaceutical software"""]
     "marketSize": "$15B market"""
     "growthRate": "450% annual growth"""
     "variant": "ai-futuristic"""
@@ -258,11 +258,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "Edge Computing & Infrastructure"""
     "realService"""
-    technology["Edge computing", "AI orchestration", "React", "Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes", "Edge APIs"""
-    integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "Kubernetes", "Docker Swarm", "IoT platforms", "5G networks"""
-    useCases["IoT device management", "5G network optimization", "Smart city operations", "Manufacturing automation", "Edge AI deployment", "Content delivery"""
+    technology["Edge computing", "AI orchestration", "React", "Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes", "Edge APIs"""]
+    integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "Kubernetes", "Docker Swarm", "IoT platforms", "5G networks"""]
+    useCases["IoT device management", "5G network optimization", "Smart city operations", "Manufacturing automation", "Edge AI deployment", "Content delivery"""]
     "roi": "Telecom companies see 600% ROI through improved network performance and reduced operational costs."""
-    competitors["Edge computing platforms", "IoT management tools", "Network orchestration systems"""
+    competitors["Edge computing platforms", "IoT management tools", "Network orchestration systems"""]
     "marketSize": "$18B market"""
     "growthRate": "380% annual growth"""
     "variant": "emerging-tech"""
@@ -304,11 +304,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "5G & Telecommunications"""
     "realService"""
-    technology["5G technology", "Network management", "React", "Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes", "5G APIs"""
-    integrations["Industrial IoT platforms", "Manufacturing systems", "Healthcare systems", "Educational platforms", "Government systems"""
-    useCases["Industrial automation", "Smart manufacturing", "Healthcare connectivity", "Educational connectivity", "Government communications", "Transportation systems"""
+    technology["5G technology", "Network management", "React", "Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes", "5G APIs"""]
+    integrations["Industrial IoT platforms", "Manufacturing systems", "Healthcare systems", "Educational platforms", "Government systems"""]
+    useCases["Industrial automation", "Smart manufacturing", "Healthcare connectivity", "Educational connectivity", "Government communications", "Transportation systems"""]
     "roi": "Manufacturing companies see 700% ROI through improved connectivity and operational efficiency."""
-    competitors["5G private network providers", "Telecommunications companies", "Industrial network solutions"""
+    competitors["5G private network providers", "Telecommunications companies", "Industrial network solutions"""]
     "marketSize": "$22B market"""
     "growthRate": "420% annual growth"""
     "variant": "emerging-tech"""

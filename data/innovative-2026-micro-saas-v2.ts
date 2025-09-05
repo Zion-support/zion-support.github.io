@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "15 minutes"""
     "category": "AI & Business Intelligence"""
     "realService"""
-    technology["OpenAI GPT-4", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "D3.js"""
-    integrations["Salesforce", "HubSpot", "Google Analytics", "Shopify", "QuickBooks", "Slack", "Zapier"""
-    useCases["Sales performance analysis", "Marketing campaign optimization", "Customer behavior insights", "Financial forecasting", "Operational efficiency tracking", "Competitive analysis"""
+    technology["OpenAI GPT-4", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "D3.js"""]
+    integrations["Salesforce", "HubSpot", "Google Analytics", "Shopify", "QuickBooks", "Slack", "Zapier"""]
+    useCases["Sales performance analysis", "Marketing campaign optimization", "Customer behavior insights", "Financial forecasting", "Operational efficiency tracking", "Competitive analysis"""]
     "roi": "Average customer sees 400% ROI within 6 months through improved decision-making and operational efficiency."""
-    competitors["Tableau", "Power BI", "Looker", "Qlik", "Domo"""
+    competitors["Tableau", "Power BI", "Looker", "Qlik", "Domo"""]
     "marketSize": "$25B market"""
     "growthRate": "220% annual growth"""
     "variant": "ai-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "30 minutes"""
     "category": "AI & Automation"""
     "realService"""
-    technology["OpenAI GPT-4", "LangChain", "React", "Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes"""
-    integrations["Slack", "Microsoft Teams", "Salesforce", "HubSpot", "Zendesk", "Shopify", "QuickBooks", "Gmail"""
-    useCases["Customer service automation", "Order processing automation", "Data entry automation", "Report generation", "Social media management", "Inventory management"""
+    technology["OpenAI GPT-4", "LangChain", "React", "Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes"""]
+    integrations["Slack", "Microsoft Teams", "Salesforce", "HubSpot", "Zendesk", "Shopify", "QuickBooks", "Gmail"""]
+    useCases["Customer service automation", "Order processing automation", "Data entry automation", "Report generation", "Social media management", "Inventory management"""]
     "roi": "Average customer sees 350% ROI within 4 months through reduced manual work and improved efficiency."""
-    competitors["Zapier", "Make", "n8n", "Automate.io", "IFTTT"""
+    competitors["Zapier", "Make", "n8n", "Automate.io", "IFTTT"""]
     "marketSize": "$15B market"""
     "growthRate": "280% annual growth"""
     "variant": "ai-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "45 minutes"""
     "category": "AI & Healthcare"""
     "realService"""
-    technology["OpenAI GPT-4", "TensorFlow", "React Native", "Node.js", "PostgreSQL", "Redis", "AWS", "HIPAA-compliant infrastructure"""
-    integrations["Apple Health", "Google Fit", "Fitbit", "MyFitnessPal", "Epic EHR", "Cerner", "Practice Fusion", "Zocdoc"""
-    useCases["Remote patient monitoring", "Chronic disease management", "Medication adherence", "Preventive care", "Mental health support", "Health coaching"""
+    technology["OpenAI GPT-4", "TensorFlow", "React Native", "Node.js", "PostgreSQL", "Redis", "AWS", "HIPAA-compliant infrastructure"""]
+    integrations["Apple Health", "Google Fit", "Fitbit", "MyFitnessPal", "Epic EHR", "Cerner", "Practice Fusion", "Zocdoc"""]
+    useCases["Remote patient monitoring", "Chronic disease management", "Medication adherence", "Preventive care", "Mental health support", "Health coaching"""]
     "roi": "Healthcare providers see 500% ROI through improved patient outcomes and reduced readmissions."""
-    competitors["HealthTap", "Zocdoc", "Teladoc", "Amwell", "MDLive"""
+    competitors["HealthTap", "Zocdoc", "Teladoc", "Amwell", "MDLive"""]
     "marketSize": "$45B market"""
     "growthRate": "320% annual growth"""
     "variant": "ai-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 hours"""
     "category": "Quantum & Cybersecurity"""
     "realService"""
-    technology["Post-quantum cryptography", "Machine learning", "React", "Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes"""
-    integrations["Active Directory", "Okta", "Duo", "CrowdStrike", "SentinelOne", "Splunk", "Jira", "Slack"""
-    useCases["Endpoint protection", "Network security", "Data encryption", "Threat hunting", "Incident response", "Compliance reporting"""
+    technology["Post-quantum cryptography", "Machine learning", "React", "Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes"""]
+    integrations["Active Directory", "Okta", "Duo", "CrowdStrike", "SentinelOne", "Splunk", "Jira", "Slack"""]
+    useCases["Endpoint protection", "Network security", "Data encryption", "Threat hunting", "Incident response", "Compliance reporting"""]
     "roi": "Average customer sees 600% ROI through reduced security incidents and compliance cost savings."""
-    competitors["CrowdStrike", "SentinelOne", "Palo Alto Networks", "Cisco", "Fortinet"""
+    competitors["CrowdStrike", "SentinelOne", "Palo Alto Networks", "Cisco", "Fortinet"""]
     "marketSize": "$180B market"""
     "growthRate": "250% annual growth"""
     "variant": "quantum-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4 hours"""
     "category": "Emerging Technology & AI"""
     "realService"""
-    technology["Neuromorphic algorithms", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Edge computing"""
-    integrations["TensorFlow", "PyTorch", "ONNX", "ROS", "Arduino", "Raspberry Pi", "NVIDIA Jetson", "Intel NCS"""
-    useCases["Autonomous vehicles", "Smart cities", "Industrial IoT", "Robotics", "Edge AI", "Real-time analytics"""
+    technology["Neuromorphic algorithms", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Edge computing"""]
+    integrations["TensorFlow", "PyTorch", "ONNX", "ROS", "Arduino", "Raspberry Pi", "NVIDIA Jetson", "Intel NCS"""]
+    useCases["Autonomous vehicles", "Smart cities", "Industrial IoT", "Robotics", "Edge AI", "Real-time analytics"""]
     "roi": "Research institutions see 800% ROI through accelerated AI research and development."""
-    competitors["Intel Loihi", "IBM TrueNorth", "BrainChip", "Qualcomm", "Samsung"""
+    competitors["Intel Loihi", "IBM TrueNorth", "BrainChip", "Qualcomm", "Samsung"""]
     "marketSize": "$8B market"""
     "growthRate": "400% annual growth"""
     "variant": "emerging-tech"""
@@ -258,11 +258,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "8 hours"""
     "category": "Emerging Technology & Research"""
     "realService"""
-    technology["DNA computing algorithms", "Bioinformatics tools", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Molecular simulation"""
-    integrations["NCBI", "Ensembl", "UCSC Genome Browser", "BLAST", "R", "Python", "MATLAB", "Jupyter"""
-    useCases["Drug discovery", "Protein folding", "Genetic optimization", "Cryptography", "Climate modeling", "Complex optimization"""
+    technology["DNA computing algorithms", "Bioinformatics tools", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Molecular simulation"""]
+    integrations["NCBI", "Ensembl", "UCSC Genome Browser", "BLAST", "R", "Python", "MATLAB", "Jupyter"""]
+    useCases["Drug discovery", "Protein folding", "Genetic optimization", "Cryptography", "Climate modeling", "Complex optimization"""]
     "roi": "Research institutions see 1000% ROI through accelerated scientific discoveries and breakthrough research."""
-    competitors["Specialized research platforms", "Academic tools", "Biotech software"""
+    competitors["Specialized research platforms", "Academic tools", "Biotech software"""]
     "marketSize": "$2B market"""
     "growthRate": "500% annual growth"""
     "variant": "emerging-tech"""
@@ -304,11 +304,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "6 hours"""
     "category": "Autonomous Systems & Robotics"""
     "realService"""
-    technology["Swarm algorithms", "ROS", "Machine learning", "React", "Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes"""
-    integrations["ROS", "Gazebo", "Unity", "Unreal Engine", "MATLAB", "Python", "C++", "Arduino"""
-    useCases["Warehouse automation", "Manufacturing assembly", "Logistics optimization", "Search and rescue", "Agricultural automation", "Construction automation"""
+    technology["Swarm algorithms", "ROS", "Machine learning", "React", "Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes"""]
+    integrations["ROS", "Gazebo", "Unity", "Unreal Engine", "MATLAB", "Python", "C++", "Arduino"""]
+    useCases["Warehouse automation", "Manufacturing assembly", "Logistics optimization", "Search and rescue", "Agricultural automation", "Construction automation"""]
     "roi": "Manufacturing companies see 700% ROI through improved efficiency and reduced operational costs."""
-    competitors["Specialized robotics platforms", "ROS-based solutions", "Custom automation systems"""
+    competitors["Specialized robotics platforms", "ROS-based solutions", "Custom automation systems"""]
     "marketSize": "$12B market"""
     "growthRate": "350% annual growth"""
     "variant": "autonomous-systems"""
@@ -350,11 +350,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "12 hours"""
     "category": "Space Technology & Innovation"""
     "realService"""
-    technology["Space algorithms", "AI/ML", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Satellite APIs"""
-    integrations["NASA APIs", "ESA APIs", "SpaceX APIs", "Satellite tracking APIs", "Weather APIs", "GIS systems"""
-    useCases["Satellite operations", "Space debris monitoring", "Mission planning", "Launch optimization", "Space research", "Earth observation"""
+    technology["Space algorithms", "AI/ML", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Satellite APIs"""]
+    integrations["NASA APIs", "ESA APIs", "SpaceX APIs", "Satellite tracking APIs", "Weather APIs", "GIS systems"""]
+    useCases["Satellite operations", "Space debris monitoring", "Mission planning", "Launch optimization", "Space research", "Earth observation"""]
     "roi": "Space companies see 900% ROI through improved operational efficiency and mission success rates."""
-    competitors["Specialized space platforms", "Government tools", "Academic software"""
+    competitors["Specialized space platforms", "Government tools", "Academic software"""]
     "marketSize": "$5B market"""
     "growthRate": "450% annual growth"""
     "variant": "space-tech"""

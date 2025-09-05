@@ -14,8 +14,8 @@ import {motion} from 'framer-motion'''
             "md"""
             "lg"""
             "xl"""
-        ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer "hover"""
-      <motion .div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent" initial={{ "x": '-100%' }} animate={{ "x"""
+        ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer "hover"""}
+      <motion .div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent" initial={{ "x": '-100%' }} animate={{ "x"""}
             "ease"""
       <divclassName="relative flex items-center justify-center gap-2"""
-        {loading && (<motion .div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full" animate={{ "rotate": 360 }} transition={{ "duration": 1, "repeat": Infinity, "ease"")"
+        {loading && (<motion .div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full" animate={{ "rotate": 360 }} transition={{ "duration": 1, "repeat": Infinity, "ease"")"}

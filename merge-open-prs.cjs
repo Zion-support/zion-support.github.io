@@ -1,11 +1,10 @@
-#!/usr/bin/env node
-
-const fs = require('fs'
-const { execSync } = require('child_process'
-console.log('� Starting Open PR Merger...'
-  log(message, level = 'INFO'
-    return execSync(cmd, { "stdio": 'pipe', "encoding"
-    console.log('\n Open PR Merge "Summary"
-      console.log('\n Successfully merged "PRs"
-      console.log('\n Failed to merge "PRs"
-  console.error(' Open PR merging "failed"
+#!/usr/bin/env node;
+const fs = require('fs')
+const { execSync } = require('child_process')
+console.log('� Starting Open PR Merger...')
+  log(message, level = 'INFO')
+    return execSync(cmd, { "stdio": 'pipe', "encoding"})
+    console.log('\n Open PR Merge "Summary")
+      console.log('\n Successfully merged "PRs")
+      console.log('\n Failed to merge "PRs")
+  console.error(' Open PR merging "failed")

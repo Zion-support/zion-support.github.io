@@ -1,6 +1,6 @@
 import AIChatbot from './AIChatbot;''
-describe('AIChatbot', () => {;''
-  it('renders without crashing', () => {;'
+describe('AIChatbot', () => {;''}
+  it('renders without crashing', () => {;'}
     render(<AIChatbot />);
 </AIChatbot>
     render(<AIChatbot />);

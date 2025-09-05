@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 month"""
     "category": "Neuromorphic Computing"""
     "realService"""
-    technology["Neuromorphic Chips", "Spiking Neural Networks", "Python", "C++", "CUDA", "AWS", "Custom Hardware"""
-    integrations["TensorFlow", "PyTorch", "AI frameworks", "IoT devices", "Edge computing platforms"""
-    useCases["AI acceleration", "Edge computing", "Autonomous systems", "Healthcare AI", "Robotics"""
+    technology["Neuromorphic Chips", "Spiking Neural Networks", "Python", "C++", "CUDA", "AWS", "Custom Hardware"""]
+    integrations["TensorFlow", "PyTorch", "AI frameworks", "IoT devices", "Edge computing platforms"""]
+    useCases["AI acceleration", "Edge computing", "Autonomous systems", "Healthcare AI", "Robotics"""]
     "roi": "Reduce AI processing costs by 80%, improve energy efficiency by 90%, accelerate AI training by 10x"""
-    competitors["Intel Loihi", "IBM TrueNorth", "BrainChip"""
+    competitors["Intel Loihi", "IBM TrueNorth", "BrainChip"""]
     "marketSize": "$8B neuromorphic computing market by 2030"""
     "growthRate": "150% annual growth"""
     "variant": "quantum-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Quantum Cybersecurity"""
     "realService"""
-    technology["Quantum Computing", "Quantum Key Distribution", "Post-Quantum Cryptography", "React", "Python", "PostgreSQL", "AWS"""
-    integrations["Firewalls", "VPNs", "SD-WAN", "Cloud platforms", "Security tools"""
-    useCases["Secure communications", "Data protection", "Network security", "Compliance", "Government security"""
+    technology["Quantum Computing", "Quantum Key Distribution", "Post-Quantum Cryptography", "React", "Python", "PostgreSQL", "AWS"""]
+    integrations["Firewalls", "VPNs", "SD-WAN", "Cloud platforms", "Security tools"""]
+    useCases["Secure communications", "Data protection", "Network security", "Compliance", "Government security"""]
     "roi": "Eliminate encryption vulnerabilities, ensure future-proof security, reduce security incidents by 99%"""
-    competitors["Cisco", "Palo Alto Networks", "Fortinet"""
+    competitors["Cisco", "Palo Alto Networks", "Fortinet"""]
     "marketSize": "$45B cybersecurity market"""
     "growthRate": "60% annual growth"""
     "variant": "quantum-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 month"""
     "category": "Synthetic Biology"""
     "realService"""
-    technology["AI/ML", "Genetic Engineering", "CRISPR", "Python", "React", "PostgreSQL", "AWS", "Lab Automation"""
-    integrations["Lab equipment", "DNA synthesizers", "Sequencing platforms", "Bioinformatics tools"""
-    useCases["Drug discovery", "Agricultural improvement", "Industrial enzymes", "Biomaterials", "Biofuels"""
+    technology["AI/ML", "Genetic Engineering", "CRISPR", "Python", "React", "PostgreSQL", "AWS", "Lab Automation"""]
+    integrations["Lab equipment", "DNA synthesizers", "Sequencing platforms", "Bioinformatics tools"""]
+    useCases["Drug discovery", "Agricultural improvement", "Industrial enzymes", "Biomaterials", "Biofuels"""]
     "roi": "Accelerate research by 10x, reduce development costs by 70%, increase success rates by 300%"""
-    competitors["Ginkgo Bioworks", "Twist Bioscience", "Benchling"""
+    competitors["Ginkgo Bioworks", "Twist Bioscience", "Benchling"""]
     "marketSize": "$15B synthetic biology market"""
     "growthRate": "80% annual growth"""
     "variant": "ai-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Autonomous Drones"""
     "realService"""
-    technology["Computer Vision", "AI/ML", "Autonomous Navigation", "React", "Python", "PostgreSQL", "AWS", "IoT"""
-    integrations["Drone manufacturers", "Weather APIs", "Mapping services", "Regulatory systems"""
-    useCases["Autonomous delivery", "Agricultural monitoring", "Infrastructure inspection", "Security surveillance", "Surveying"""
+    technology["Computer Vision", "AI/ML", "Autonomous Navigation", "React", "Python", "PostgreSQL", "AWS", "IoT"""]
+    integrations["Drone manufacturers", "Weather APIs", "Mapping services", "Regulatory systems"""]
+    useCases["Autonomous delivery", "Agricultural monitoring", "Infrastructure inspection", "Security surveillance", "Surveying"""]
     "roi": "Reduce operational costs by 60%, increase coverage by 300%, eliminate human error"""
-    competitors["DroneDeploy", "PrecisionHawk", "AirMap"""
+    competitors["DroneDeploy", "PrecisionHawk", "AirMap"""]
     "marketSize": "$50B drone services market"""
     "growthRate": "70% annual growth"""
     "variant": "ai-autonomous"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 month"""
     "category": "Brain-Computer Interface"""
     "realService"""
-    technology["EEG Processing", "Neural Networks", "Machine Learning", "Python", "React", "PostgreSQL", "AWS", "Hardware"""
-    integrations["EEG headsets", "Medical devices", "Gaming platforms", "Accessibility tools"""
-    useCases["Medical research", "Gaming interfaces", "Accessibility tools", "Prosthetic control", "Communication aids"""
+    technology["EEG Processing", "Neural Networks", "Machine Learning", "Python", "React", "PostgreSQL", "AWS", "Hardware"""]
+    integrations["EEG headsets", "Medical devices", "Gaming platforms", "Accessibility tools"""]
+    useCases["Medical research", "Gaming interfaces", "Accessibility tools", "Prosthetic control", "Communication aids"""]
     "roi": "Accelerate BCI research by 5x, reduce development costs by 80%, enable new applications"""
-    competitors["Neuralink", "Kernel", "CTRL-labs"""
+    competitors["Neuralink", "Kernel", "CTRL-labs"""]
     "marketSize": "$3B BCI market by 2030"""
     "growthRate": "200% annual growth"""
     "variant": "ai-futuristic"""
@@ -258,11 +258,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Quantum Machine Learning"""
     "realService"""
-    technology["Quantum Computing", "Machine Learning", "Python", "Qiskit", "React", "PostgreSQL", "AWS"""
-    integrations["TensorFlow", "PyTorch", "Scikit-learn", "Quantum hardware", "Cloud platforms"""
-    useCases["Optimization problems", "Pattern recognition", "Financial modeling", "Drug discovery", "Logistics"""
+    technology["Quantum Computing", "Machine Learning", "Python", "Qiskit", "React", "PostgreSQL", "AWS"""]
+    integrations["TensorFlow", "PyTorch", "Scikit-learn", "Quantum hardware", "Cloud platforms"""]
+    useCases["Optimization problems", "Pattern recognition", "Financial modeling", "Drug discovery", "Logistics"""]
     "roi": "Solve previously intractable problems, accelerate ML training by 100x, achieve quantum advantage"""
-    competitors["IBM Qiskit", "Google Cirq", "Rigetti"""
+    competitors["IBM Qiskit", "Google Cirq", "Rigetti"""]
     "marketSize": "$20B quantum computing market"""
     "growthRate": "120% annual growth"""
     "variant": "quantum-futuristic"""
@@ -304,11 +304,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3 months"""
     "category": "Autonomous Vehicles"""
     "realService"""
-    technology["Computer Vision", "AI/ML", "Autonomous Navigation", "React", "Python", "PostgreSQL", "AWS", "IoT"""
-    integrations["Vehicle systems", "Sensor arrays", "Mapping services", "Traffic systems"""
-    useCases["Self-driving cars", "Autonomous trucks", "Delivery robots", "Industrial automation", "Mobility services"""
+    technology["Computer Vision", "AI/ML", "Autonomous Navigation", "React", "Python", "PostgreSQL", "AWS", "IoT"""]
+    integrations["Vehicle systems", "Sensor arrays", "Mapping services", "Traffic systems"""]
+    useCases["Self-driving cars", "Autonomous trucks", "Delivery robots", "Industrial automation", "Mobility services"""]
     "roi": "Eliminate driver costs, improve safety by 99%, increase efficiency by 300%"""
-    competitors["Waymo", "Tesla", "Cruise"""
+    competitors["Waymo", "Tesla", "Cruise"""]
     "marketSize": "$2T autonomous vehicle market by 2030"""
     "growthRate": "150% annual growth"""
     "variant": "ai-autonomous"""
@@ -350,11 +350,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 months"""
     "category": "Digital Twin"""
     "realService"""
-    technology["3D Modeling", "IoT", "AI/ML", "React", "Python", "PostgreSQL", "AWS", "GIS"""
-    integrations["IoT sensors", "Traffic systems", "Utility networks", "Government databases"""
-    useCases["Urban planning", "Traffic management", "Infrastructure monitoring", "Citizen services", "Emergency response"""
+    technology["3D Modeling", "IoT", "AI/ML", "React", "Python", "PostgreSQL", "AWS", "GIS"""]
+    integrations["IoT sensors", "Traffic systems", "Utility networks", "Government databases"""]
+    useCases["Urban planning", "Traffic management", "Infrastructure monitoring", "Citizen services", "Emergency response"""]
     "roi": "Reduce infrastructure costs by 30%, improve traffic flow by 40%, enhance citizen satisfaction by 60%"""
-    competitors["Bentley Systems", "Autodesk", "Siemens"""
+    competitors["Bentley Systems", "Autodesk", "Siemens"""]
     "marketSize": "$30B smart city market"""
     "growthRate": "90% annual growth"""
     "variant": "ai-futuristic"""

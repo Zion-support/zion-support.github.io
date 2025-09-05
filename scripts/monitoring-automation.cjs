@@ -1,13 +1,12 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 /**
- * Monitoring Automation
- * Sets up comprehensive monitoring for the application
+ * Monitoring Automation;
+ * Sets up comprehensive monitoring for the application;
  */
 
-const fs = require('fs'
-const path = require('path'
-  log(message, type = 'INFO'
+const fs = require('fs')
+const path = require('path')
+  log(message, type = 'INFO')
       'INFO': 'ℹ'
       'SUCCESS': ''
       'ERROR': ''
@@ -19,7 +18,7 @@ const path = require('path'
     const metrics = "
     const alerting = "
       "service"
-      console.error('Failed to send "alert"
+      console.error('Failed to send "alert")
         "type"
         "severity"
         "type"
@@ -32,5 +31,5 @@ const path = require('path'
         "severity"
         "type"
         "severity"
-                console.error('Failed to load "metrics"
-    console.error('Monitoring automation "failed"
+                console.error('Failed to load "metrics")
+    console.error('Monitoring automation "failed")

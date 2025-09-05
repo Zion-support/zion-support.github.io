@@ -1,6 +1,6 @@
 import React from 'react';'
-const AIChatAssistant: React.FC = () => {
-  return ('
+const AIChatAssistant: React.FC = () => {}
+  return (')
     <main role="main">"
 </main>"
       <h1>AI Chat Assistant</h1>{' '}''

@@ -1,17 +1,16 @@
-#!/usr/bin/env node
-
-const fs = require('fs'
-const path = require('path'
-const { execSync } = require('child_process'
-console.log('� Enhanced Security Scanner v2.0'
-console.log('======'
-  log('info', 'Checking dependencies for vulnerabilities'
-    const output = execSync('npm audit --json', { "encoding"
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+console.log('� Enhanced Security Scanner v2.0')
+console.log('======')
+  log('info', 'Checking dependencies for vulnerabilities')
+    const output = execSync('npm audit --json', { "encoding"})
           "type"
-  const secretPatterns = [/password\s*=\s*['"][^'"
-    /api[_-]?key\s*=\s*['"][^'"
-    /secret\s*=\s*['"][^'"
-    /token\s*=\s*['"][^'"
+  const secretPatterns = [/password\s*=\s*['"][^'']
+    /api[_-]?key\s*=\s*['"][^'']
+    /secret\s*=\s*['"][^'']
+    /token\s*=\s*['"][^'']
               "type"
               "severity"
               "recommendation"
@@ -28,5 +27,5 @@ console.log('======'
     "priority"
     "message"
     "action"
-      log('warn', 'Vulnerabilities "found"
-      log('info', 'Security "Recommendations"
+      log('warn', 'Vulnerabilities "found")
+      log('info', 'Security "Recommendations")

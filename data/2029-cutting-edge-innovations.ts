@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2-4 weeks"""
     "category": "AI Consciousness & Innovation"""
     "realService"""
-    technology["Quantum Computing", "Neural Networks", "Python", "TensorFlow", "Quantum ML", "AWS Quantum", "IBM Q"""
-    integrations["OpenAI API", "Anthropic Claude", "Google Cloud AI", "Azure Quantum", "Research databases", "Academic platforms"""
-    useCases["AI consciousness research", "Neural interface development", "Cognitive AI training", "Ethical AI development", "Consciousness studies", "AI personality creation"""
+    technology["Quantum Computing", "Neural Networks", "Python", "TensorFlow", "Quantum ML", "AWS Quantum", "IBM Q"""]
+    integrations["OpenAI API", "Anthropic Claude", "Google Cloud AI", "Azure Quantum", "Research databases", "Academic platforms"""]
+    useCases["AI consciousness research", "Neural interface development", "Cognitive AI training", "Ethical AI development", "Consciousness studies", "AI personality creation"""]
     "roi": "Research institutions report 500% ROI through breakthrough discoveries and grant funding. Commercial applications show 300% ROI in AI product development."""
-    competitors["OpenAI Research Platform", "Anthropic Research Tools", "Google DeepMind", "Academic research platforms"""
+    competitors["OpenAI Research Platform", "Anthropic Research Tools", "Google DeepMind", "Academic research platforms"""]
     "marketSize": "$15B AI research market"""
     "growthRate": "250% annual growth"""
     "variant": "ai-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-6 months"""
     "category": "AI Consciousness & Innovation"""
     "realService"""
-    technology["Advanced AI", "Machine Learning", "Natural Language Processing", "Predictive Analytics", "Blockchain", "Cloud Computing"""
-    integrations["ERP systems", "CRM platforms", "Financial systems", "HR platforms", "Communication tools", "Analytics platforms"""
-    useCases["Corporate automation", "Strategic planning", "Operational management", "Financial optimization", "Risk management", "Market expansion"""
+    technology["Advanced AI", "Machine Learning", "Natural Language Processing", "Predictive Analytics", "Blockchain", "Cloud Computing"""]
+    integrations["ERP systems", "CRM platforms", "Financial systems", "HR platforms", "Communication tools", "Analytics platforms"""]
+    useCases["Corporate automation", "Strategic planning", "Operational management", "Financial optimization", "Risk management", "Market expansion"""]
     "roi": "Large corporations report 800% ROI through operational efficiency and strategic optimization. Investment firms see 1200% ROI in portfolio management."""
-    competitors["IBM Watson", "Microsoft Azure AI", "Google Cloud AI", "Enterprise AI platforms"""
+    competitors["IBM Watson", "Microsoft Azure AI", "Google Cloud AI", "Enterprise AI platforms"""]
     "marketSize": "$50B enterprise AI market"""
     "growthRate": "300% annual growth"""
     "variant": "ai-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-2 months"""
     "category": "AI Consciousness & Innovation"""
     "realService"""
-    technology["Computer Vision", "Neural Networks", "AR/VR", "Brain-Computer Interface", "AI", "Edge Computing"""
-    integrations["AR headsets", "Neural implants", "Medical devices", "Entertainment systems", "Educational platforms", "Healthcare systems"""
-    useCases["Medical therapy", "Military training", "Entertainment enhancement", "Educational augmentation", "Therapeutic applications", "Performance enhancement"""
+    technology["Computer Vision", "Neural Networks", "AR/VR", "Brain-Computer Interface", "AI", "Edge Computing"""]
+    integrations["AR headsets", "Neural implants", "Medical devices", "Entertainment systems", "Educational platforms", "Healthcare systems"""]
+    useCases["Medical therapy", "Military training", "Entertainment enhancement", "Educational augmentation", "Therapeutic applications", "Performance enhancement"""]
     "roi": "Medical facilities report 400% ROI through improved patient outcomes. Military organizations see 600% ROI in training effectiveness."""
-    competitors["Magic Leap", "Microsoft HoloLens", "Oculus Research", "Neural interface companies"""
+    competitors["Magic Leap", "Microsoft HoloLens", "Oculus Research", "Neural interface companies"""]
     "marketSize": "$25B AR/VR market"""
     "growthRate": "200% annual growth"""
     "variant": "ai-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4-8 weeks"""
     "category": "Quantum & Neuroscience"""
     "realService"""
-    technology["Quantum Computing", "Brain-Computer Interface", "Neural Networks", "Quantum Encryption", "Signal Processing", "AI"""
-    integrations["Medical devices", "Research platforms", "Neural implants", "Healthcare systems", "Research databases", "Analytics platforms"""
-    useCases["Medical research", "Cognitive enhancement", "Communication assistance", "Neural rehabilitation", "Research studies", "Therapeutic applications"""
+    technology["Quantum Computing", "Brain-Computer Interface", "Neural Networks", "Quantum Encryption", "Signal Processing", "AI"""]
+    integrations["Medical devices", "Research platforms", "Neural implants", "Healthcare systems", "Research databases", "Analytics platforms"""]
+    useCases["Medical research", "Cognitive enhancement", "Communication assistance", "Neural rehabilitation", "Research studies", "Therapeutic applications"""]
     "roi": "Medical institutions report 600% ROI through breakthrough research and improved patient care. Research labs see 800% ROI in grant funding."""
-    competitors["Neuralink", "Kernel", "Paradromics", "Advanced BCI companies"""
+    competitors["Neuralink", "Kernel", "Paradromics", "Advanced BCI companies"""]
     "marketSize": "$8B BCI market"""
     "growthRate": "350% annual growth"""
     "variant": "quantum-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "6-12 months"""
     "category": "Quantum & Neuroscience"""
     "realService"""
-    technology["Quantum Computing", "Temporal Physics", "Neural Networks", "Quantum Mechanics", "AI", "Advanced Mathematics"""
-    integrations["Research platforms", "Quantum computers", "Neural interfaces", "Analytics systems", "Research databases", "Simulation platforms"""
-    useCases["Research studies", "Military applications", "Space exploration", "Academic research", "Temporal studies", "Advanced physics research"""
+    technology["Quantum Computing", "Temporal Physics", "Neural Networks", "Quantum Mechanics", "AI", "Advanced Mathematics"""]
+    integrations["Research platforms", "Quantum computers", "Neural interfaces", "Analytics systems", "Research databases", "Simulation platforms"""]
+    useCases["Research studies", "Military applications", "Space exploration", "Academic research", "Temporal studies", "Advanced physics research"""]
     "roi": "Research institutions report 1000% ROI through breakthrough discoveries. Government agencies see 800% ROI in strategic applications."""
-    competitors["Advanced quantum research platforms", "Temporal physics research", "Government research labs"""
+    competitors["Advanced quantum research platforms", "Temporal physics research", "Government research labs"""]
     "marketSize": "$12B quantum research market"""
     "growthRate": "400% annual growth"""
     "variant": "quantum-futuristic"""

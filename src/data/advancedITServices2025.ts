@@ -1,6 +1,6 @@
 import React from 'react';'
-export interface AdvancedITService {
-  // TODO: Implement
+export interface AdvancedITService {}
+  // TODO: Implement;
 }'
   "id": string;"
   title: string; ,

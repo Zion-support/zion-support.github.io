@@ -1,6 +1,6 @@
-export interface AdditionalEnhancedService {
-  // TODO: Implement
-}
+export interface AdditionalEnhancedService {}
+  // TODO: Implement;
+};
   "id"""
 export const "additionalEnhancedServices"""
     "name"""

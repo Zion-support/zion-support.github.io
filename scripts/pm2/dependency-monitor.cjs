@@ -3,8 +3,8 @@
 const fs = require(,"}),"
         "stdio"
         "stdio"
-        return { "exists": false, "message"
-        return { "exists": false, "message"
+        return { "exists": false, "message"}
+        return { "exists": false, "message"}
         "priority"
         "action"
         "message"
@@ -15,11 +15,11 @@ const fs = require(,"}),"
   '\n Dependency Monitor "Summary"
   '\n "Recommendations"
   '\n� "CRITICAL"
-        return { "exists": false, "message"
+        return { "exists": false, "message"}
         "encoding"
-        return { exists: fals,e, "message"
+        return { exists: fals,e, "message"}
         "return"
-        return { "exists": false, "message"
+        return { "exists": false, "message"}
         "message"
         "action"
         "priority"

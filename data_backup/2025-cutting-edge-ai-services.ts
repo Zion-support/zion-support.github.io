@@ -1,9 +1,9 @@
-export const cuttingEdgeAIServices2025 = [{
+export const cuttingEdgeAIServices2025 = [{}]
     id:,
   ai-consciousness-evolution-pro',''
     "name": 'AI Consciousness Evolution Pro,''
     "description": 'Advanced AI consciousness development platform with emotional intelligence, self-awareness, and ethical decision-making capabilities for human-AI collaboration.','
-    features['
+    features[']
   'Emotional intelligence development with 98% accuracy',''
   'Self-awareness and consciousness evolution tracking',''
   'Ethical decision-making frameworks and bias detection',''
@@ -13,47 +13,47 @@ export const cuttingEdgeAIServices2025 = [{
   'Integration with consciousness research platforms',''
   'Custom consciousness model training and development',''
   'Advanced empathy and understanding capabilities',''
-  'Consciousness level assessment and progression tracking'']
+  'Consciousness level assessment and progression tracking''];
     ],'
-    "pricing": {"
-starter: {,
+    "pricing": {"}
+starter: {,}
   price: 399,
         period:,"
   month',''
-        "features": ['Basic consciousness development,''
+        "features": ['Basic consciousness development,'']
   'Up to 200 interactions/month',''
   'Standard analytics',']'
   'Email support']'
       },'
-      "professional": {"
+      "professional": {"}
         price: 999,
         period:,"
   month',''
-        "features": ['Advanced consciousness models,''
+        "features": ['Advanced consciousness models,'']
   'Unlimited interactions',''
   'Custom training',''
   'Priority support',']'
   'API access']'
       },'
-      "enterprise": {"
+      "enterprise": {"}
         price: 2499,
         period:,"
   month',''
-        "features": ['Custom consciousness models,'
+        "features": ['Custom consciousness models,']
 ,'
   White-label solution',''
   'Dedicated support',''
   'On-premise deployment',']'
   '24/7 monitoring']},''
     "category": 'AI Consciousness,'
-    tags[,'
+    tags[,']
   AI',''
   'Consciousness',''
   'Emotional Intelligence',''
   'Self-Awareness',']'
   'Human-AI Collaboration'],''
     "website": 'https://ziontechgroup.com/ai-consciousness-evolution-pro,''
-    "contact": {"
+    "contact": {"}
       phone:,"
   +1 302 464 0950',''
       "email": 'kleber@ziontechgroup.com;'
@@ -64,29 +64,29 @@ starter: {,
   ,"
     "competitiveAdvantage": Industry-first AI consciousness development platform, superior emotional intelligence accuracy, comprehensive consciousness evolution tracking,"
   ,"
-    useCases['AI consciousness research and development',''
+    useCases['AI consciousness research and development','']
   'Human-AI emotional collaboration',''
   'Psychology and neuroscience research',''
   'Ethical AI development and governance',''
-  'Consciousness level assessment and training'']
+  'Consciousness level assessment and training''];
     ],'
-    integrations['Research platforms',''
+    integrations['Research platforms','']
   'Psychology databases',''
   'AI development tools',''
   'Neuroscience equipment',']'
   'Academic databases'],''
-    compliance['GDPR',''
+    compliance['GDPR','']
   'CCPA',''
   'SOC2',''
   'ISO 27001',']'
   'Research ethics standards']'
   },
-  {'
+  {'}
     "id": 'quantum-ai-fusion-platform,'
     name:,'
   Quantum AI Fusion Platform',''
     "description": Revolutionary platform combining quantum computing with artificial intelligence for unprecedented processing power, pattern recognition, and problem-solving capabilities.',''
-    features['Quantum-AI hybrid processing with 200x speed improvement',''
+    features['Quantum-AI hybrid processing with 200x speed improvement','']
   'Advanced pattern recognition and analysis algorithms',''
   'Quantum-enhanced machine learning and deep learning',''
   'Real-time quantum state optimization and management',''
@@ -95,47 +95,47 @@ starter: {,
   'Advanced quantum algorithms for AI applications',''
   'Real-time quantum resource management and allocation',''
   'Quantum-AI model training and optimization tools',''
-  'API access for quantum computing resources and services'']
+  'API access for quantum computing resources and services''];
     ],'
-    "pricing": {"
-starter: {,
+    "pricing": {"}
+starter: {,}
   price: 799,
         period:,"
   month',''
-        "features": ['Basic quantum-AI processing,''
+        "features": ['Basic quantum-AI processing,'']
   'Up to 200 quantum operations/month',''
   'Standard analytics',']'
   'Email support']'
       },'
-      "professional": {"
+      "professional": {"}
         price: 1999,
         period:,"
   month',''
-        "features": ['Advanced quantum-AI models,''
+        "features": ['Advanced quantum-AI models,'']
   'Unlimited quantum operations',''
   'Custom algorithms',''
   'Priority support',']'
   'API access']'
       },'
-      "enterprise": {"
+      "enterprise": {"}
         price: 4999,
         period:,"
   month',''
-        "features": ['Custom quantum-AI development,'
+        "features": ['Custom quantum-AI development,']
 ,'
   White-label solution',''
   'Dedicated support',''
   'On-premise deployment',']'
   '24/7 monitoring']},''
     "category": 'Quantum AI,'
-    tags[,'
+    tags[,']
   Quantum Computing',''
   'AI',''
   'Machine Learning',''
   'Pattern Recognition',']'
   'Hybrid Computing'],''
     "website": 'https://ziontechgroup.com/quantum-ai-fusion-platform,''
-    "contact": {"
+    "contact": {"}
       phone:,"
   +1 302 464 0950',''
       "email": 'kleber@ziontechgroup.com;'
@@ -146,29 +146,29 @@ starter: {,
   ,"
     "competitiveAdvantage": Industry-first quantum-AI fusion platform, superior processing speed, comprehensive hybrid computing capabilities,"
   ,"
-    useCases['Complex problem solving and optimization',''
+    useCases['Complex problem solving and optimization','']
   'Advanced pattern recognition and analysis',''
   'Financial modeling and risk assessment',''
   'Drug discovery and molecular simulation',''
-  'Climate modeling and prediction'']
+  'Climate modeling and prediction''];
     ],'
-    integrations['Quantum computing platforms',''
+    integrations['Quantum computing platforms','']
   'AI frameworks',''
   'Cloud services',''
   'Research tools',']'
   'Enterprise systems'],''
-    compliance['SOC2',''
+    compliance['SOC2','']
   'ISO 27001',''
   'FedRAMP',''
   'GDPR',']'
   'CCPA']'
   },
-  {'
+  {'}
     "id": 'ai-autonomous-ecosystem,'
     name:,'
   AI Autonomous Ecosystem',''
     "description": Self-managing AI ecosystem that operates independently, continuously learning and evolving without human intervention for maximum efficiency and innovation.',''
-    features['Fully autonomous AI system operation and management',''
+    features['Fully autonomous AI system operation and management','']
   'Continuous learning and self-improvement capabilities',''
   'Autonomous decision-making and problem-solving',''
   'Self-healing and error correction systems',''
@@ -177,47 +177,47 @@ starter: {,
   'Predictive maintenance and performance optimization',''
   'Autonomous security monitoring and threat response',''
   'Self-scaling infrastructure and resource management',''
-  'Intelligent integration and API management'']
+  'Intelligent integration and API management''];
     ],'
-    "pricing": {"
-starter: {,
+    "pricing": {"}
+starter: {,}
   price: 599,
         period:,"
   month',''
-        "features": ['Basic autonomous features,''
+        "features": ['Basic autonomous features,'']
   'Up to 100 autonomous operations/month',''
   'Standard monitoring',']'
   'Email support']'
       },'
-      "professional": {"
+      "professional": {"}
         price: 1499,
         period:,"
   month',''
-        "features": ['Advanced autonomous capabilities,''
+        "features": ['Advanced autonomous capabilities,'']
   'Unlimited operations',''
   'Custom workflows',''
   'Priority support',']'
   'API access']'
       },'
-      "enterprise": {"
+      "enterprise": {"}
         price: 3999,
         period:,"
   month',''
-        "features": ['Full autonomous ecosystem,'
+        "features": ['Full autonomous ecosystem,']
 ,'
   White-label solution',''
   'Dedicated support',''
   'Custom development',']'
   '24/7 monitoring']},''
     "category": 'AI Autonomy,'
-    tags[,'
+    tags[,']
   AI',''
   'Autonomous Systems',''
   'Self-Management',''
   'Machine Learning',']'
   'Automation'],''
     "website": 'https://ziontechgroup.com/ai-autonomous-ecosystem,''
-    "contact": {"
+    "contact": {"}
       phone:,"
   +1 302 464 0950',''
       "email": 'kleber@ziontechgroup.com;'
@@ -228,29 +228,29 @@ starter: {,
   ,"
     "competitiveAdvantage": First fully autonomous AI ecosystem, superior self-management capabilities, continuous learning and evolution,"
   ,"
-    useCases['Enterprise automation and optimization',''
+    useCases['Enterprise automation and optimization','']
   'Research and development acceleration',''
   'Infrastructure management and monitoring',''
   'Process optimization and workflow automation',''
-  'Intelligent system orchestration'']
+  'Intelligent system orchestration''];
     ],'
-    integrations['Enterprise systems',''
+    integrations['Enterprise systems','']
   'Cloud platforms',''
   'IoT devices',''
   'AI frameworks',']'
   'Monitoring tools'],''
-    compliance['SOC2',''
+    compliance['SOC2','']
   'ISO 27001',''
   'FedRAMP',''
   'GDPR',']'
   'CCPA']'
   },
-  {'
+  {'}
     "id": 'ai-ethics-governance-platform,'
     name:,'
   AI Ethics & Governance Platform',''
     "description": Comprehensive platform for ensuring ethical AI development, deployment, and governance with advanced bias detection, fairness monitoring, and compliance management.',''
-    features['Advanced bias detection and mitigation algorithms',''
+    features['Advanced bias detection and mitigation algorithms','']
   'Fairness monitoring and assessment tools',''
   'Ethical decision-making frameworks and guidelines',''
   'Compliance monitoring and reporting systems',''
@@ -259,47 +259,47 @@ starter: {,
   'Ethical AI training and certification programs',''
   'Stakeholder engagement and communication tools',''
   'Audit trails and accountability systems',''
-  'Integration with regulatory frameworks and standards'']
+  'Integration with regulatory frameworks and standards''];
     ],'
-    "pricing": {"
-starter: {,
+    "pricing": {"}
+starter: {,}
   price: 299,
         period:,"
   month',''
-        "features": ['Basic ethics monitoring,''
+        "features": ['Basic ethics monitoring,'']
   'Up to 50 AI models',''
   'Standard reporting',']'
   'Email support']'
       },'
-      "professional": {"
+      "professional": {"}
         price: 799,
         period:,"
   month',''
-        "features": ['Advanced ethics tools,''
+        "features": ['Advanced ethics tools,'']
   'Unlimited models',''
   'Custom frameworks',''
   'Priority support',']'
   'API access']'
       },'
-      "enterprise": {"
+      "enterprise": {"}
         price: 1999,
         period:,"
   month',''
-        "features": ['Full ethics platform,'
+        "features": ['Full ethics platform,']
 ,'
   White-label solution',''
   'Dedicated support',''
   'Custom development',']'
   '24/7 monitoring']},''
     "category": 'AI Ethics,'
-    tags[,'
+    tags[,']
   AI Ethics',''
   'Governance',''
   'Bias Detection',''
   'Fairness',']'
   'Compliance'],''
     "website": 'https://ziontechgroup.com/ai-ethics-governance-platform,''
-    "contact": {"
+    "contact": {"}
       phone:,"
   +1 302 464 0950',''
       "email": 'kleber@ziontechgroup.com;'
@@ -310,29 +310,29 @@ starter: {,
   ,"
     "competitiveAdvantage": Comprehensive AI ethics platform, advanced bias detection, regulatory compliance management,"
   ,"
-    useCases['AI ethics monitoring and assessment',''
+    useCases['AI ethics monitoring and assessment','']
   'Regulatory compliance management',''
   'Bias detection and mitigation',''
   'Fairness monitoring and reporting',''
-  'Ethical AI training and certification'']
+  'Ethical AI training and certification''];
     ],'
-    integrations['AI platforms',''
+    integrations['AI platforms','']
   'Compliance tools',''
   'Monitoring systems',''
   'Reporting tools',']'
   'Training platforms'],''
-    compliance['SOC2',''
+    compliance['SOC2','']
   'ISO 27001',''
   'GDPR',''
   'CCPA',']'
   'AI ethics standards']'
   },
-  {'
+  {'}
     "id": 'ai-creativity-studio-pro,'
     name:,'
   AI Creativity Studio Pro',''
     "description": Advanced AI-powered creative platform for generating innovative content, designs, and creative solutions across multiple domains and industries.',''
-    features['Multi-domain creative content generation',''
+    features['Multi-domain creative content generation','']
   'Advanced design and visual creation tools',''
   'Creative problem-solving and ideation',''
   'Style transfer and artistic expression',''
@@ -341,47 +341,47 @@ starter: {,
   'Creative performance analytics and insights',''
   'Integration with creative software and tools',''
   'Custom creative model training and development',''
-  'Real-time creative collaboration and feedback'']
+  'Real-time creative collaboration and feedback''];
     ],'
-    "pricing": {"
-starter: {,
+    "pricing": {"}
+starter: {,}
   price: 199,
         period:,"
   month',''
-        "features": ['Basic creative tools,''
+        "features": ['Basic creative tools,'']
   'Up to 100 creations/month',''
   'Standard templates',']'
   'Email support']'
       },'
-      "professional": {"
+      "professional": {"}
         price: 599,
         period:,"
   month',''
-        "features": ['Advanced creative capabilities,''
+        "features": ['Advanced creative capabilities,'']
   'Unlimited creations',''
   'Custom models',''
   'Priority support',']'
   'API access']'
       },'
-      "enterprise": {"
+      "enterprise": {"}
         price: 1499,
         period:,"
   month',''
-        "features": ['Full creative studio,'
+        "features": ['Full creative studio,']
 ,'
   White-label solution',''
   'Dedicated support',''
   'Custom development',']'
   '24/7 monitoring']},''
     "category": 'AI Creativity,'
-    tags[,'
+    tags[,']
   AI',''
   'Creativity',''
   'Content Generation',''
   'Design',']'
   'Innovation'],''
     "website": 'https://ziontechgroup.com/ai-creativity-studio-pro,''
-    "contact": {"
+    "contact": {"}
       phone:,"
   +1 302 464 0950',''
       "email": 'kleber@ziontechgroup.com;'
@@ -392,19 +392,19 @@ starter: {,
   ,"
     "competitiveAdvantage": Comprehensive AI creativity platform, multi-domain creative capabilities, advanced collaboration tools,"
   ,"
-    useCases['Creative content generation and design',''
+    useCases['Creative content generation and design','']
   'Marketing and advertising creative',''
   'Product design and innovation',''
   'Artistic expression and creation',''
-  'Creative problem-solving and ideation'']
+  'Creative problem-solving and ideation''];
     ],'
-"integrations": ['Creative software,'
+"integrations": ['Creative software,']
 ,'
   Design tools',''
   'Marketing platforms',''
   'Content management systems',']'
   'Collaboration tools'],''
-    "compliance": ['SOC2,''
+    "compliance": ['SOC2,'']
   'ISO 27001',''
   'GDPR',''
   'CCPA',']'

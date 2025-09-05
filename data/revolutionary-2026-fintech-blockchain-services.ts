@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Supply Chain & AI"""
     "realService"""
-    technology["Machine Learning", "Predictive Analytics", "IoT Integration", "Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""
-    integrations["ERP systems", "WMS platforms", "TMS systems", "IoT sensors", "Supplier platforms", "Logistics systems"""
-    useCases["Supply chain optimization", "Cost reduction", "Disruption prevention", "Inventory optimization", "Route optimization", "Performance improvement"""
+    technology["Machine Learning", "Predictive Analytics", "IoT Integration", "Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""]
+    integrations["ERP systems", "WMS platforms", "TMS systems", "IoT sensors", "Supplier platforms", "Logistics systems"""]
+    useCases["Supply chain optimization", "Cost reduction", "Disruption prevention", "Inventory optimization", "Route optimization", "Performance improvement"""]
     "roi": "Average customer sees 500% ROI within 8 months through supply chain optimization and cost reduction."""
-    competitors["SAP", "Oracle", "Manhattan Associates", "JDA Software", "Blue Yonder"""
+    competitors["SAP", "Oracle", "Manhattan Associates", "JDA Software", "Blue Yonder"""]
     "marketSize": "$45.2B market"""
     "growthRate": "21.7% annual growth"""
     "variant": "quantum-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Marketing & AI"""
     "realService"""
-    technology["Natural Language Processing", "Machine Learning", "Content Generation", "Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""
-    integrations["CRM systems", "Social media platforms", "Email marketing tools", "Analytics platforms", "Advertising platforms", "Content management systems"""
-    useCases["Campaign management", "Content creation", "Performance optimization", "Audience targeting", "ROI improvement", "Multi-channel marketing"""
+    technology["Natural Language Processing", "Machine Learning", "Content Generation", "Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""]
+    integrations["CRM systems", "Social media platforms", "Email marketing tools", "Analytics platforms", "Advertising platforms", "Content management systems"""]
+    useCases["Campaign management", "Content creation", "Performance optimization", "Audience targeting", "ROI improvement", "Multi-channel marketing"""]
     "roi": "Average customer sees 600% ROI within 10 months through marketing automation and optimization."""
-    competitors["HubSpot", "Marketo", "Salesforce Marketing Cloud", "Adobe Marketing Cloud", "Pardot"""
+    competitors["HubSpot", "Marketo", "Salesforce Marketing Cloud", "Adobe Marketing Cloud", "Pardot"""]
     "marketSize": "$56.8B market"""
     "growthRate": "24.3% annual growth"""
     "variant": "quantum-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Cybersecurity & AI"""
     "realService"""
-    technology["Machine Learning", "Behavioral Analysis", "Threat Intelligence", "Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""
-    integrations["SIEM systems", "EDR platforms", "Firewall systems", "Identity management", "Compliance platforms", "Security tools"""
-    useCases["Threat detection", "Incident response", "Compliance monitoring", "Security analytics", "Risk assessment", "Security automation"""
+    technology["Machine Learning", "Behavioral Analysis", "Threat Intelligence", "Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""]
+    integrations["SIEM systems", "EDR platforms", "Firewall systems", "Identity management", "Compliance platforms", "Security tools"""]
+    useCases["Threat detection", "Incident response", "Compliance monitoring", "Security analytics", "Risk assessment", "Security automation"""]
     "roi": "Average customer sees 700% ROI within 12 months through threat prevention and security automation."""
-    competitors["CrowdStrike", "SentinelOne", "Carbon Black", "Cylance", "Darktrace"""
+    competitors["CrowdStrike", "SentinelOne", "Carbon Black", "Cylance", "Darktrace"""]
     "marketSize": "$78.9B market"""
     "growthRate": "28.7% annual growth"""
     "variant": "quantum-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Business Intelligence & AI"""
     "realService"""
-    technology["Machine Learning", "Predictive Analytics", "Natural Language Processing", "Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""
-    integrations["Data warehouses", "CRM systems", "ERP platforms", "Marketing tools", "Financial systems", "Analytics platforms"""
-    useCases["Data analysis", "Performance tracking", "Trend analysis", "Decision support", "Reporting automation", "Business insights"""
+    technology["Machine Learning", "Predictive Analytics", "Natural Language Processing", "Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""]
+    integrations["Data warehouses", "CRM systems", "ERP platforms", "Marketing tools", "Financial systems", "Analytics platforms"""]
+    useCases["Data analysis", "Performance tracking", "Trend analysis", "Decision support", "Reporting automation", "Business insights"""]
     "roi": "Average customer sees 500% ROI within 10 months through improved insights and decision support."""
-    competitors["Tableau", "Power BI", "QlikView", "Looker", "Domo"""
+    competitors["Tableau", "Power BI", "QlikView", "Looker", "Domo"""]
     "marketSize": "$67.3B market"""
     "growthRate": "22.8% annual growth"""
     "variant": "quantum-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3 weeks"""
     "category": "Blockchain & Quantum Tech"""
     "realService"""
-    technology["Quantum Computing", "Blockchain", "Smart Contracts", "Python", "Qiskit", "Solidity", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""
-    integrations["Financial systems", "Government databases", "Healthcare platforms", "Supply chain systems", "Identity platforms", "DeFi protocols"""
-    useCases["Secure transactions", "Identity verification", "Supply chain tracking", "Healthcare records", "Government services", "DeFi applications"""
+    technology["Quantum Computing", "Blockchain", "Smart Contracts", "Python", "Qiskit", "Solidity", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""]
+    integrations["Financial systems", "Government databases", "Healthcare platforms", "Supply chain systems", "Identity platforms", "DeFi protocols"""]
+    useCases["Secure transactions", "Identity verification", "Supply chain tracking", "Healthcare records", "Government services", "DeFi applications"""]
     "roi": "Average customer sees 1200% ROI within 18 months through quantum security and blockchain innovation."""
-    competitors["Ethereum", "Solana", "Cardano", "Polkadot", "Cosmos"""
+    competitors["Ethereum", "Solana", "Cardano", "Polkadot", "Cosmos"""]
     "marketSize": "$89.4B market"""
     "growthRate": "42.1% annual growth"""
     "variant": "quantum-futuristic"""

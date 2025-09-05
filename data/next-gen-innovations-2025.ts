@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-6 weeks"""
     "category": "Autonomous AI & Robotics"""
     "realService"""
-    technology["AI/ML", "Autonomous systems", "IoT sensors", "Real-time analytics", "Predictive modeling"""
-    integrations["Vehicle systems", "GPS platforms", "Traffic data", "Weather services", "Logistics platforms"""
-    useCases["Autonomous delivery", "Logistics optimization", "Fleet management", "Route planning", "Safety monitoring"""
+    technology["AI/ML", "Autonomous systems", "IoT sensors", "Real-time analytics", "Predictive modeling"""]
+    integrations["Vehicle systems", "GPS platforms", "Traffic data", "Weather services", "Logistics platforms"""]
+    useCases["Autonomous delivery", "Logistics optimization", "Fleet management", "Route planning", "Safety monitoring"""]
     "roi": "Logistics companies achieve 600% ROI through reduced operational costs and improved efficiency."""
-    competitors["Traditional fleet management", "Autonomous vehicle platforms", "Logistics software"""
+    competitors["Traditional fleet management", "Autonomous vehicle platforms", "Logistics software"""]
     "marketSize": "$6.8B market"""
     "growthRate": "280% annual growth"""
     "variant": "ai-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4-8 weeks"""
     "category": "Quantum Bioinformatics & Healthcare"""
     "realService"""
-    technology["Quantum computing", "Bioinformatics algorithms", "Machine learning", "Genomic analysis", "Molecular modeling"""
-    integrations["Research databases", "Clinical systems", "Laboratory equipment", "Analytics platforms", "Collaboration tools"""
-    useCases["Drug discovery", "Genomic research", "Clinical trials", "Personalized medicine", "Disease research"""
+    technology["Quantum computing", "Bioinformatics algorithms", "Machine learning", "Genomic analysis", "Molecular modeling"""]
+    integrations["Research databases", "Clinical systems", "Laboratory equipment", "Analytics platforms", "Collaboration tools"""]
+    useCases["Drug discovery", "Genomic research", "Clinical trials", "Personalized medicine", "Disease research"""]
     "roi": "Pharmaceutical companies achieve 800% ROI through accelerated drug discovery and research efficiency."""
-    competitors["Traditional bioinformatics", "Research platforms", "Laboratory software"""
+    competitors["Traditional bioinformatics", "Research platforms", "Laboratory software"""]
     "marketSize": "$9.2B market"""
     "growthRate": "320% annual growth"""
     "variant": "quantum-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-6 weeks"""
     "category": "Quantum AI & Privacy"""
     "realService"""
-    technology["Quantum encryption", "Federated learning", "Homomorphic encryption", "Privacy-preserving AI", "Secure computation"""
-    integrations["Healthcare systems", "Financial platforms", "Government databases", "Research tools", "Analytics platforms"""
-    useCases["Healthcare analytics", "Financial modeling", "Government research", "Academic research", "Privacy-sensitive AI"""
+    technology["Quantum encryption", "Federated learning", "Homomorphic encryption", "Privacy-preserving AI", "Secure computation"""]
+    integrations["Healthcare systems", "Financial platforms", "Government databases", "Research tools", "Analytics platforms"""]
+    useCases["Healthcare analytics", "Financial modeling", "Government research", "Academic research", "Privacy-sensitive AI"""]
     "roi": "Healthcare organizations achieve 500% ROI through secure data analysis while maintaining privacy compliance."""
-    competitors["Traditional AI platforms", "Privacy tools", "Encryption solutions"""
+    competitors["Traditional AI platforms", "Privacy tools", "Encryption solutions"""]
     "marketSize": "$7.5B market"""
     "growthRate": "250% annual growth"""
     "variant": "quantum-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4-8 weeks"""
     "category": "Quantum Energy & Sustainability"""
     "realService"""
-    technology["Quantum computing", "Energy optimization", "Grid management", "Predictive modeling", "Real-time analytics"""
-    integrations["Energy grids", "Smart meters", "Renewable systems", "Industrial equipment", "Monitoring systems"""
-    useCases["Grid optimization", "Renewable integration", "Industrial efficiency", "Smart city energy", "Sustainability optimization"""
+    technology["Quantum computing", "Energy optimization", "Grid management", "Predictive modeling", "Real-time analytics"""]
+    integrations["Energy grids", "Smart meters", "Renewable systems", "Industrial equipment", "Monitoring systems"""]
+    useCases["Grid optimization", "Renewable integration", "Industrial efficiency", "Smart city energy", "Sustainability optimization"""]
     "roi": "Utility companies achieve 700% ROI through improved grid efficiency and reduced energy costs."""
-    competitors["Traditional energy management", "Grid optimization tools", "Sustainability platforms"""
+    competitors["Traditional energy management", "Grid optimization tools", "Sustainability platforms"""]
     "marketSize": "$12.8B market"""
     "growthRate": "300% annual growth"""
     "variant": "quantum-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "6-12 weeks"""
     "category": "AI Manufacturing & Industry 4.0"""
     "realService"""
-    technology["AI/ML", "IoT sensors", "Robotics", "Predictive analytics", "Real-time monitoring"""
-    integrations["Manufacturing equipment", "ERP systems", "Supply chain platforms", "Quality control systems", "Safety systems"""
-    useCases["Manufacturing automation", "Quality control", "Predictive maintenance", "Supply chain optimization", "Safety monitoring"""
+    technology["AI/ML", "IoT sensors", "Robotics", "Predictive analytics", "Real-time monitoring"""]
+    integrations["Manufacturing equipment", "ERP systems", "Supply chain platforms", "Quality control systems", "Safety systems"""]
+    useCases["Manufacturing automation", "Quality control", "Predictive maintenance", "Supply chain optimization", "Safety monitoring"""]
     "roi": "Manufacturing companies achieve 800% ROI through improved efficiency and reduced operational costs."""
-    competitors["Traditional automation", "Manufacturing software", "Industrial IoT platforms"""
+    competitors["Traditional automation", "Manufacturing software", "Industrial IoT platforms"""]
     "marketSize": "$18.5B market"""
     "growthRate": "280% annual growth"""
     "variant": "ai-futuristic"""
@@ -258,11 +258,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-2 weeks"""
     "category": "Quantum Education & Training"""
     "realService"""
-    technology["AI/ML", "Quantum computing", "Educational technology", "Interactive simulations", "Personalized learning"""
-    integrations["Learning management systems", "Video platforms", "Assessment tools", "Collaboration tools", "Analytics platforms"""
-    useCases["Quantum education", "Advanced mathematics", "Technology training", "Corporate learning", "Academic research"""
+    technology["AI/ML", "Quantum computing", "Educational technology", "Interactive simulations", "Personalized learning"""]
+    integrations["Learning management systems", "Video platforms", "Assessment tools", "Collaboration tools", "Analytics platforms"""]
+    useCases["Quantum education", "Advanced mathematics", "Technology training", "Corporate learning", "Academic research"""]
     "roi": "Educational institutions achieve 400% ROI through improved learning outcomes and student engagement."""
-    competitors["Traditional education platforms", "Online learning tools", "Technology training platforms"""
+    competitors["Traditional education platforms", "Online learning tools", "Technology training platforms"""]
     "marketSize": "$5.2B market"""
     "growthRate": "220% annual growth"""
     "variant": "quantum-futuristic"""
@@ -304,11 +304,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-2 weeks"""
     "category": "AI Content & Entertainment"""
     "realService"""
-    technology["AI/ML", "Quantum computing", "Video generation", "Audio synthesis", "Creative algorithms"""
-    integrations["Video platforms", "Social media", "Marketing tools", "Analytics platforms", "Content management systems"""
-    useCases["Video creation", "Audio production", "Marketing content", "Educational materials", "Entertainment content"""
+    technology["AI/ML", "Quantum computing", "Video generation", "Audio synthesis", "Creative algorithms"""]
+    integrations["Video platforms", "Social media", "Marketing tools", "Analytics platforms", "Content management systems"""]
+    useCases["Video creation", "Audio production", "Marketing content", "Educational materials", "Entertainment content"""]
     "roi": "Content creators achieve 500% ROI through automated content generation and improved engagement."""
-    competitors["Traditional content tools", "Video editing software", "Content creation platforms"""
+    competitors["Traditional content tools", "Video editing software", "Content creation platforms"""]
     "marketSize": "$8.5B market"""
     "growthRate": "260% annual growth"""
     "variant": "ai-futuristic"""

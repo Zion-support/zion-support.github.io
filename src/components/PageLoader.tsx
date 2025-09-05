@@ -1,6 +1,6 @@
 import React from 'react';''
-export const "PageLoader": React.FC = (props) => {"
-  return ("
+export const "PageLoader": React.FC = (props) => {"}
+  return (")
     <div className="min-h-screen bg-white">"
 </div>"
       <div className="text-center">"

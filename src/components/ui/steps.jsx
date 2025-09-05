@@ -1,12 +1,12 @@
 import {cn} from '@/lib/utils';'
-export const Steps = (props) => {
-    return ('
+export const Steps = (props) => {}
+    return (')
     <div className="min-h-screen bg-white">"
 </div>)"
                     "isCompleted": index < currentStep};);"
-            }
+            };
             return child;
-        })}
+        })};
     </div>);"
     <div className="min-h-screen bg-white">"
 </div>"

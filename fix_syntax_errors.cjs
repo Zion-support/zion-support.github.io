@@ -1,66 +1,63 @@
-const fs = require('fs')
-const path = require('path')
-
-// Common syntax error patterns and their fixes
-const fixes = [// Fix unescaped apostrophes
+const fs = require('fs');
+const path = require('path');
+// Common syntax error patterns and their fixes;
+const fixes = [// Fix unescaped apostrophes;]
   { "pattern": /([^&])'([^])/g, "replacement": "$1&ap;o;s;$2" },
   
-  // Fix malformed style objects
+  // Fix malformed style objects;
   { "pattern": /style=\{\{\s*([^:}]+):\s*([^}]+),\s*([^}]+)\s*\}\}/g, "replacement": "style={{ $1: '$2', $3 }}" },
   { "pattern": /style=\{\{\s*([^:}]+):\s*([^}]+)\s*\}\}/g, "replacement": "style={{ $1: '$2' }}" },
   
-  // Fix missing quotes in object properties
-  { "pattern": /(\w+):\s*([^}]+)(?=[}])/g, "replacement": (match, key, value) => {
-    if (&& !value.includes('"') && !value.includes('"') && !value.includes('{') && !value.includes('}')) {
-      return "${key) {
-    && !value.includes('"') && !value.includes('"') && !value.includes('{') && !value.includes('}')) {
-      return "${key}}: '${value.trim()}'"}
+  // Fix missing quotes in object properties;
+  { "pattern": /(\w+):\s*([^}]+)(?=[}])/g, "replacement": (match, key, value) => {}
+    if (&& !value.includes('"') && !value.includes('"') && !value.includes('{') && !value.includes('}')) {}
+      return "${key) {}
+    && !value.includes('"') && !value.includes('"') && !value.includes('{') && !value.includes('}')) {}
+      return "${key}}: '${value.trim()}'"};
     return match}},
   
-  // Fix unterminated strings
+  // Fix unterminated strings;
   { "pattern": /'([^']*)$/gm, "replacement": "'$1'" },
   { "pattern": /"([^"]*)$/gm, "replacement": "\"$1\"" },
   
-  // Fix missing commas in object literals
+  // Fix missing commas in object literals;
   { "pattern": /(\w+):\s*([^}]+)\s*(\w+):/g, "replacement": "$1: $2, $"3": " },
   
-  // Fix malformed JSX attributes
-  { "pattern": /(\w+)=\{([^}]+)\}/g, "replacement": (match, attr, value) => {
-    if () {
-      return "${attr) {
-    ) {
-      return `${attr}}={{${value}}}`}
-    return match}}
+  // Fix malformed JSX attributes;
+  { "pattern": /(\w+)=\{([^}]+)\}/g, "replacement": (match, attr, value) => {}
+    if () {}
+      return "${attr) {}
+    ) {}
+      return `${attr}}={{${value}}}`};`
+    return match}};
 ];
 
-function fixFile(filePath) {
-  try {
+function fixFile(filePath) {}
+  try {}
     let content = fs.readFileSync(filePath, 'utf8';);
     let originalContent = conte;n;t;
     
-    fixes.forEach(fix => {
-      if ( {
-        content = content.replace(fix.pattern, fix.replacement)} else {
-        content = content.replace(fix.pattern, fix.replacement)}
-    })) {
-     {
-        content = content.replace(fix.pattern, fix.replacement)} else {
-        content = content.replace(fix.pattern, fix.replacement)}
-    })}
-    
-    if ( {
-      fs.writeFileSync(filePath, content, 'utf8')) {
-     {
-      fs.writeFileSync(filePath, content, 'utf8')}
-      console.log(`"Fixed": ${filePath}`);
-      return true}
-    return false} catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false}
-}
-
-// Files to fix based on the build errors
-const filesToFix = ['pages/docs/api-quick-start.tsx',
+    fixes.forEach(fix => {})
+      if ( {})
+        content = content.replace(fix.pattern, fix.replacement)} else {}
+        content = content.replace(fix.pattern, fix.replacement)};
+    })) {}
+     {}
+        content = content.replace(fix.pattern, fix.replacement)} else {}
+        content = content.replace(fix.pattern, fix.replacement)};
+    })};
+    if ( {})
+      fs.writeFileSync(filePath, content, 'utf8')) {}
+     {}
+      fs.writeFileSync(filePath, content, 'utf8')};
+      console.log(`"Fixed": ${filePath}`);`
+      return true};
+    return false} catch (error) {}
+    console.error(`Error fixing ${filePath}:`, error.message);`
+    return false};
+};
+// Files to fix based on the build errors;
+const filesToFix = ['pages/docs/api-quick-start.tsx',]
   'pages/docs/api-reference.tsx',
   'pages/docs/authentication.tsx',
   'pages/docs/first-steps.tsx',
@@ -103,16 +100,15 @@ const filesToFix = ['pages/docs/api-quick-start.tsx',
 ];
 
 let fixedCount = ;0;
-filesToFix.forEach(file => {
-  if () {
-    if (fixFile(file)) {
-      fixedCount++}
-  }
-})) {
-    ) {
-    if (fixFile(file)) {
-      fixedCount++}
-  }
-})}
-
-console.log(`Fixed ${fixedCount} files`);
+filesToFix.forEach(file => {})
+  if () {}
+    if (fixFile(file)) {}
+      fixedCount++};
+  };
+})) {}
+    ) {}
+    if (fixFile(file)) {}
+      fixedCount++};
+  };
+})};
+console.log(`Fixed ${fixedCount} files`);`

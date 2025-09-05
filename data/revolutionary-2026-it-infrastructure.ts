@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "6 weeks"""
     "category": "Quantum IT Infrastructure & Cloud"""
     "realService"""
-    technology["Quantum Computing", "Cloud Infrastructure", "Advanced Security", "Machine Learning", "Real-time Processing", "Quantum Networking"""
-    integrations["AWS", "Google Cloud", "Microsoft Azure", "Enterprise systems", "Research platforms", "Government systems"""
-    useCases["High-performance computing", "Advanced research", "Government applications", "Financial modeling", "Healthcare computing", "Tech development"""
+    technology["Quantum Computing", "Cloud Infrastructure", "Advanced Security", "Machine Learning", "Real-time Processing", "Quantum Networking"""]
+    integrations["AWS", "Google Cloud", "Microsoft Azure", "Enterprise systems", "Research platforms", "Government systems"""]
+    useCases["High-performance computing", "Advanced research", "Government applications", "Financial modeling", "Healthcare computing", "Tech development"""]
     "roi": "Enterprises report 600% ROI through improved performance and advanced capabilities."""
-    competitors["AWS", "Google Cloud", "Microsoft Azure", "IBM Cloud", "Oracle Cloud"""
+    competitors["AWS", "Google Cloud", "Microsoft Azure", "IBM Cloud", "Oracle Cloud"""]
     "marketSize": "$45B market"""
     "growthRate": "280% annual growth"""
     "variant": "quantum-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4 weeks"""
     "category": "Neuromorphic Computing & AI"""
     "realService"""
-    technology["Neuromorphic Computing", "Advanced AI", "Neural Networks", "Robotics", "Machine Learning", "Real-time Processing"""
-    integrations["AI platforms", "Robotics systems", "Research tools", "Government platforms", "Academic systems", "Defense platforms"""
-    useCases["AI research", "Robotics development", "Intelligent systems", "Government AI", "Academic research", "Defense AI"""
+    technology["Neuromorphic Computing", "Advanced AI", "Neural Networks", "Robotics", "Machine Learning", "Real-time Processing"""]
+    integrations["AI platforms", "Robotics systems", "Research tools", "Government platforms", "Academic systems", "Defense platforms"""]
+    useCases["AI research", "Robotics development", "Intelligent systems", "Government AI", "Academic research", "Defense AI"""]
     "roi": "Research institutions report 500% ROI through breakthrough discoveries and funding opportunities."""
-    competitors["Intel Loihi", "IBM TrueNorth", "BrainChip", "SpiNNaker", "Neurogrid"""
+    competitors["Intel Loihi", "IBM TrueNorth", "BrainChip", "SpiNNaker", "Neurogrid"""]
     "marketSize": "$8B market"""
     "growthRate": "250% annual growth"""
     "variant": "ai-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "5 weeks"""
     "category": "Photonic Computing & High Performance"""
     "realService"""
-    technology["Photonic Computing", "Optical Processing", "Advanced Networking", "High Performance Computing", "Real-time Processing", "Optical Security"""
-    integrations["Computing platforms", "Telecommunications systems", "Research tools", "Government platforms", "Academic systems", "Tech platforms"""
-    useCases["High-performance computing", "Telecommunications", "Research computing", "Government computing", "Academic research", "Tech development"""
+    technology["Photonic Computing", "Optical Processing", "Advanced Networking", "High Performance Computing", "Real-time Processing", "Optical Security"""]
+    integrations["Computing platforms", "Telecommunications systems", "Research tools", "Government platforms", "Academic systems", "Tech platforms"""]
+    useCases["High-performance computing", "Telecommunications", "Research computing", "Government computing", "Academic research", "Tech development"""]
     "roi": "Telecommunications companies report 400% ROI through improved performance and speed."""
-    competitors["Intel", "AMD", "NVIDIA", "IBM", "Hewlett Packard Enterprise"""
+    competitors["Intel", "AMD", "NVIDIA", "IBM", "Hewlett Packard Enterprise"""]
     "marketSize": "$12B market"""
     "growthRate": "220% annual growth"""
     "variant": "it-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "8 weeks"""
     "category": "DNA Computing & Molecular Biology"""
     "realService"""
-    technology["DNA Computing", "Molecular Biology", "Biological Algorithms", "Advanced Research", "Molecular Processing", "Biological Security"""
-    integrations["Research platforms", "Pharmaceutical systems", "Biotech platforms", "Government databases", "Academic systems", "Medical platforms"""
-    useCases["Complex problem solving", "Drug discovery", "Biological research", "Government research", "Academic research", "Medical research"""
+    technology["DNA Computing", "Molecular Biology", "Biological Algorithms", "Advanced Research", "Molecular Processing", "Biological Security"""]
+    integrations["Research platforms", "Pharmaceutical systems", "Biotech platforms", "Government databases", "Academic systems", "Medical platforms"""]
+    useCases["Complex problem solving", "Drug discovery", "Biological research", "Government research", "Academic research", "Medical research"""]
     "roi": "Pharmaceutical companies report 800% ROI through breakthrough discoveries and drug development."""
-    competitors["No direct competitors", "Research institutions developing similar concepts"""
+    competitors["No direct competitors", "Research institutions developing similar concepts"""]
     "marketSize": "$35B emerging market"""
     "growthRate": "400% annual growth"""
     "variant": "healthcare-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3 weeks"""
     "category": "Holographic Computing & Immersive Technology"""
     "realService"""
-    technology["Holographic Computing", "3D Processing", "Immersive Technology", "Advanced Visualization", "Real-time Rendering", "3D Security"""
-    integrations["Gaming platforms", "Entertainment systems", "Tech platforms", "Educational systems", "Government platforms", "Research platforms"""
-    useCases["Gaming experiences", "Entertainment content", "Educational content", "Government visualization", "Research visualization", "Tech development"""
+    technology["Holographic Computing", "3D Processing", "Immersive Technology", "Advanced Visualization", "Real-time Rendering", "3D Security"""]
+    integrations["Gaming platforms", "Entertainment systems", "Tech platforms", "Educational systems", "Government platforms", "Research platforms"""]
+    useCases["Gaming experiences", "Entertainment content", "Educational content", "Government visualization", "Research visualization", "Tech development"""]
     "roi": "Gaming companies report 350% ROI through improved user experiences and engagement."""
-    competitors["Microsoft HoloLens", "Magic Leap", "Meta", "Google Glass", "Apple Vision Pro"""
+    competitors["Microsoft HoloLens", "Magic Leap", "Meta", "Google Glass", "Apple Vision Pro"""]
     "marketSize": "$18B market"""
     "growthRate": "280% annual growth"""
     "variant": "holographic-futuristic"""
@@ -258,11 +258,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "6 weeks"""
     "category": "Quantum Internet & Communication"""
     "realService"""
-    technology["Quantum Internet", "Quantum Communication", "Advanced Encryption", "Quantum Networking", "Real-time Processing", "Quantum Security"""
-    integrations["Government systems", "Financial platforms", "Healthcare systems", "Defense platforms", "Tech platforms", "Research systems"""
-    useCases["Government communication", "Financial transactions", "Healthcare data", "Defense communications", "Tech development", "Research communication"""
+    technology["Quantum Internet", "Quantum Communication", "Advanced Encryption", "Quantum Networking", "Real-time Processing", "Quantum Security"""]
+    integrations["Government systems", "Financial platforms", "Healthcare systems", "Defense platforms", "Tech platforms", "Research systems"""]
+    useCases["Government communication", "Financial transactions", "Healthcare data", "Defense communications", "Tech development", "Research communication"""]
     "roi": "Government agencies report 600% ROI through enhanced security and communication."""
-    competitors["Traditional ISPs", "Emerging quantum networks", "Government quantum initiatives"""
+    competitors["Traditional ISPs", "Emerging quantum networks", "Government quantum initiatives"""]
     "marketSize": "$28B market"""
     "growthRate": "320% annual growth"""
     "variant": "quantum-futuristic"""
@@ -304,11 +304,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4 weeks"""
     "category": "Edge Computing & Quantum Technology"""
     "realService"""
-    technology["Edge Computing", "Quantum Computing", "Real-time Processing", "IoT Technology", "Mobile Technology", "Edge Security"""
-    integrations["IoT platforms", "Mobile systems", "Tech platforms", "Automotive systems", "Healthcare platforms", "Government systems"""
-    useCases["IoT processing", "Mobile computing", "Tech development", "Automotive computing", "Healthcare monitoring", "Government edge computing"""
+    technology["Edge Computing", "Quantum Computing", "Real-time Processing", "IoT Technology", "Mobile Technology", "Edge Security"""]
+    integrations["IoT platforms", "Mobile systems", "Tech platforms", "Automotive systems", "Healthcare platforms", "Government systems"""]
+    useCases["IoT processing", "Mobile computing", "Tech development", "Automotive computing", "Healthcare monitoring", "Government edge computing"""]
     "roi": "IoT companies report 450% ROI through improved processing and real-time capabilities."""
-    competitors["No direct competitors", "Traditional edge computing providers"""
+    competitors["No direct competitors", "Traditional edge computing providers"""]
     "marketSize": "$22B emerging market"""
     "growthRate": "350% annual growth"""
     "variant": "edge-futuristic"""
@@ -350,11 +350,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "5 weeks"""
     "category": "Quantum Robotics & Automation"""
     "realService"""
-    technology["Quantum Computing", "Robotics", "Advanced Automation", "Machine Learning", "Real-time Control", "Robotic Security"""
-    integrations["Manufacturing systems", "Logistics platforms", "Healthcare systems", "Government platforms", "Research platforms", "Tech platforms"""
-    useCases["Manufacturing automation", "Logistics automation", "Healthcare robotics", "Government automation", "Research robotics", "Tech development"""
+    technology["Quantum Computing", "Robotics", "Advanced Automation", "Machine Learning", "Real-time Control", "Robotic Security"""]
+    integrations["Manufacturing systems", "Logistics platforms", "Healthcare systems", "Government platforms", "Research platforms", "Tech platforms"""]
+    useCases["Manufacturing automation", "Logistics automation", "Healthcare robotics", "Government automation", "Research robotics", "Tech development"""]
     "roi": "Manufacturing companies report 500% ROI through improved automation and efficiency."""
-    competitors["Traditional robotics companies", "Emerging AI robotics", "Industrial automation companies"""
+    competitors["Traditional robotics companies", "Emerging AI robotics", "Industrial automation companies"""]
     "marketSize": "$32B market"""
     "growthRate": "280% annual growth"""
     "variant": "autonomous-futuristic"""

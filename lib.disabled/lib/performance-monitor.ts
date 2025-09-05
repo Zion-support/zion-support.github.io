@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'''
-  res.on('finish'''
+  res.on('finish''')
       "responseTime"""
       "endpoint"""
       "method""

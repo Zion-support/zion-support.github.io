@@ -1,4 +1,4 @@
-export const INNOVATIVE_REAL_MICRO_SAAS_SERVICES_2025 = [{
+export const INNOVATIVE_REAL_MICRO_SAAS_SERVICES_2025 = [{}]
     "id"""
     "name"""
     "category"""

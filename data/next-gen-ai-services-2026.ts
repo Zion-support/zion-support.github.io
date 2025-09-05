@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "AI & Creative"""
     "realService"""
-    technology["OpenAI DALL-E 3", "Stable Diffusion", "Midjourney API", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""
-    integrations["Adobe Creative Suite", "Canva", "Figma", "Slack", "Microsoft Teams", "Zapier", "Shopify", "WordPress"""
-    useCases["Marketing content creation", "Social media graphics", "Product photography", "Video production", "Music composition", "Copywriting"""
+    technology["OpenAI DALL-E 3", "Stable Diffusion", "Midjourney API", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""]
+    integrations["Adobe Creative Suite", "Canva", "Figma", "Slack", "Microsoft Teams", "Zapier", "Shopify", "WordPress"""]
+    useCases["Marketing content creation", "Social media graphics", "Product photography", "Video production", "Music composition", "Copywriting"""]
     "roi": "Marketing agencies see 600% ROI within 3 months through reduced content creation costs and faster delivery."""
-    competitors["Midjourney", "DALL-E 2", "Runway ML", "Stable Diffusion", "Canva AI", "Adobe Firefly"""
+    competitors["Midjourney", "DALL-E 2", "Runway ML", "Stable Diffusion", "Canva AI", "Adobe Firefly"""]
     "marketSize": "$15.3B market"""
     "growthRate": "350% annual growth"""
     "variant": "ai-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 month"""
     "category": "AI & Business Automation"""
     "realService"""
-    technology["OpenAI GPT-4", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Machine Learning"""
-    integrations["Salesforce", "HubSpot", "Microsoft Dynamics", "SAP", "Oracle", "Slack", "Microsoft Teams", "Zapier"""
-    useCases["Customer service automation", "Sales process optimization", "Marketing campaign management", "Operational efficiency", "Financial planning", "Strategic decision making"""
+    technology["OpenAI GPT-4", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Machine Learning"""]
+    integrations["Salesforce", "HubSpot", "Microsoft Dynamics", "SAP", "Oracle", "Slack", "Microsoft Teams", "Zapier"""]
+    useCases["Customer service automation", "Sales process optimization", "Marketing campaign management", "Operational efficiency", "Financial planning", "Strategic decision making"""]
     "roi": "Enterprise customers see 800% ROI within 18 months through complete business automation and improved efficiency."""
-    competitors["Salesforce Einstein", "HubSpot AI", "Microsoft Dynamics 365", "SAP Leonardo", "Oracle AI", "IBM Watson"""
+    competitors["Salesforce Einstein", "HubSpot AI", "Microsoft Dynamics 365", "SAP Leonardo", "Oracle AI", "IBM Watson"""]
     "marketSize": "$67.8B market"""
     "growthRate": "280% annual growth"""
     "variant": "ai-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "AI & Psychology"""
     "realService"""
-    technology["Computer vision", "Natural language processing", "Machine learning", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""
-    integrations["Zendesk", "Intercom", "Slack", "Microsoft Teams", "Zoom", "WebRTC", "Mobile apps", "Web applications"""
-    useCases["Customer service enhancement", "Mental health monitoring", "Educational assessment", "Marketing research", "HR screening", "Therapeutic support"""
+    technology["Computer vision", "Natural language processing", "Machine learning", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""]
+    integrations["Zendesk", "Intercom", "Slack", "Microsoft Teams", "Zoom", "WebRTC", "Mobile apps", "Web applications"""]
+    useCases["Customer service enhancement", "Mental health monitoring", "Educational assessment", "Marketing research", "HR screening", "Therapeutic support"""]
     "roi": "Customer service companies see 400% ROI within 6 months through improved customer satisfaction and emotional intelligence."""
-    competitors["Affectiva", "Realeyes", "Emotient", "Noldus", "iMotions", "Tobii"""
+    competitors["Affectiva", "Realeyes", "Emotient", "Noldus", "iMotions", "Tobii"""]
     "marketSize": "$3.2B market"""
     "growthRate": "180% annual growth"""
     "variant": "ai-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "AI & Research"""
     "realService"""
-    technology["OpenAI GPT-4V", "Google Gemini", "Anthropic Claude", "Custom multimodal models", "React", "Node.js", "PostgreSQL", "Redis"""
-    integrations["TensorFlow", "PyTorch", "Jupyter", "GitHub", "Slack", "Microsoft Teams", "Research tools", "Cloud platforms"""
-    useCases["Research & development", "Autonomous systems", "Robotics control", "Content analysis", "Security monitoring", "Medical diagnosis"""
+    technology["OpenAI GPT-4V", "Google Gemini", "Anthropic Claude", "Custom multimodal models", "React", "Node.js", "PostgreSQL", "Redis"""]
+    integrations["TensorFlow", "PyTorch", "Jupyter", "GitHub", "Slack", "Microsoft Teams", "Research tools", "Cloud platforms"""]
+    useCases["Research & development", "Autonomous systems", "Robotics control", "Content analysis", "Security monitoring", "Medical diagnosis"""]
     "roi": "Research institutions see 600% ROI through accelerated research and breakthrough discoveries."""
-    competitors["OpenAI GPT-4V", "Google Gemini", "Anthropic Claude", "Microsoft Azure AI", "AWS AI services"""
+    competitors["OpenAI GPT-4V", "Google Gemini", "Anthropic Claude", "Microsoft Azure AI", "AWS AI services"""]
     "marketSize": "$12.5B market"""
     "growthRate": "320% annual growth"""
     "variant": "ai-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "AI & Quantum Computing"""
     "realService"""
-    technology["IBM Quantum", "Google Quantum AI", "Amazon Braket", "Custom hybrid algorithms", "Python", "Qiskit", "Cirq", "AWS"""
-    integrations["TensorFlow", "PyTorch", "Jupyter", "GitHub", "Slack", "Microsoft Teams", "Research tools", "Cloud platforms"""
-    useCases["Drug discovery", "Financial modeling", "Optimization problems", "Cryptography", "Machine learning", "Scientific research"""
+    technology["IBM Quantum", "Google Quantum AI", "Amazon Braket", "Custom hybrid algorithms", "Python", "Qiskit", "Cirq", "AWS"""]
+    integrations["TensorFlow", "PyTorch", "Jupyter", "GitHub", "Slack", "Microsoft Teams", "Research tools", "Cloud platforms"""]
+    useCases["Drug discovery", "Financial modeling", "Optimization problems", "Cryptography", "Machine learning", "Scientific research"""]
     "roi": "Research institutions see 1000% ROI through breakthrough discoveries and accelerated research."""
-    competitors["IBM Quantum", "Google Quantum AI", "Amazon Braket", "Microsoft Azure Quantum", "Rigetti Computing"""
+    competitors["IBM Quantum", "Google Quantum AI", "Amazon Braket", "Microsoft Azure Quantum", "Rigetti Computing"""]
     "marketSize": "$6.8B market"""
     "growthRate": "400% annual growth"""
     "variant": "quantum-futuristic"""

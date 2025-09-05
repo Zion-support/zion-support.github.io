@@ -1,2 +1,2 @@
-interface CacheItem<T> {
+interface CacheItem<T> {}
 </T>

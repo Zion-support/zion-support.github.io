@@ -1,14 +1,13 @@
-#!/usr/bin/env node
-
-const fs = require('fs'
-const path = require('path'
-const { execSync } = require('child_process'
-console.log('� Security Audit Starting...\n'
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+console.log('� Security Audit Starting...\n')
     "name"
-        execSync('npm audit --audit-level=moderate', { "stdio"
+        execSync('npm audit --audit-level=moderate', { "stdio"})
     "name"
     "name"
-            !content.includes('// "Security"
+            !content.includes('// "Security")
     "name"
     "name"
     "status"

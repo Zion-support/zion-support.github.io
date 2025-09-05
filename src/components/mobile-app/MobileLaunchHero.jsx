@@ -1,4 +1,4 @@
-export const MobileLaunchHero = (props) => {return (
+export const MobileLaunchHero = (props) => {return (})
     <div className="min-h-screen bg-white">"
 </div>"
       <div className="container mx-auto px-4 text-center">"

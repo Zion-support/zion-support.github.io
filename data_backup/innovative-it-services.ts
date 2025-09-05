@@ -1,6 +1,6 @@
-export interface InnovativeITService {
-  // TODO: Implement
-}
+export interface InnovativeITService {}
+  // TODO: Implement;
+};
   "id"""
   "realImplementation"""
     "name"""

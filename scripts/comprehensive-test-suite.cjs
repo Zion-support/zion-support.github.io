@@ -1,22 +1,21 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 /**
- * Comprehensive Test Suite
- * Runs all tests, checks, and validations for the application
+ * Comprehensive Test Suite;
+ * Runs all tests, checks, and validations for the application;
  */
 
-const { execSync } = require('child_process'
-const fs = require('fs'
-const path = require('path'
-    this.logDir = path.join(this.projectRoot, 'automation', 'logs'
-  log(message, level = 'INFO'
-  log(message, level = 'INFO'
-    const logFile = path.join(this.logDir, 'comprehensive-test-suite.log'
-    fs.appendFileSync(logFile, logMessage + '\n'
+const { execSync } = require('child_process')
+const fs = require('fs')
+const path = require('path')
+    this.logDir = path.join(this.projectRoot, 'automation', 'logs')
+  log(message, level = 'INFO')
+  log(message, level = 'INFO')
+    const logFile = path.join(this.logDir, 'comprehensive-test-suite.log')
+    fs.appendFileSync(logFile, logMessage + '\n')
         "encoding"
         "stdio"
-      this.log(` ${description} "failed"
-      return { "success": false, "error": error.message, "output"
+      this.log(` ${description} "failed"`)
+      return { "success": false, "error": error.message, "output"}
         "name"
         "command"
         "name"
@@ -49,4 +48,4 @@ const path = require('path'
         "name"
         "command": 'grep -r "aria-" --include="*.tsx" --include="*.jsx"
         "description"
-      this.log(` Test suite "failed"
+      this.log(` Test suite "failed"`)

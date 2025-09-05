@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback } from 'react'; // Added useCallback;'
 import { useAuth } from '@/hooks/useAuth';''
 import { supabase } from '@/integrations/supabase/client';''
  from '@/types/tokens';'
-export function useWallet() {;
+export function useWallet() {;}
   const { user } = useAuth();
   const [wallet, setWallet] = useState<Wallet | null>(null);
 </Wallet>

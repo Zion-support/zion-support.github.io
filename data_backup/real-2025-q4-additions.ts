@@ -1,6 +1,6 @@
-export interface Q4Service {
-  // TODO: Implement
-}
+export interface Q4Service {}
+  // TODO: Implement;
+};
   "id"""
   "realImplementation"""
   "email"""

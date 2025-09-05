@@ -1,6 +1,6 @@
-export interface InnovativeMicroSaas2034 {
-  // TODO: Implement
-}
+export interface InnovativeMicroSaas2034 {}
+  // TODO: Implement;
+};
   "id"""
   "features"""
 export const "innovativeMicroSaasSolutions"""
@@ -8,7 +8,7 @@ export const "innovativeMicroSaasSolutions"""
     "tagline"""
     "description"""
     "category"""
-    "price": { monthly: 29, "yearly": 290, "currency"""
+    "price": { monthly: 29, "yearly": 290, "currency"""}
     "link"""
     "icon"""
     "color"""
@@ -18,7 +18,7 @@ export const "innovativeMicroSaasSolutions"""
     "tagline"""
     "description"""
     "category"""
-    "price": { monthly: 49, "yearly": 490, "currency"""
+    "price": { monthly: 49, "yearly": 490, "currency"""}
     "features"""
     "link"""
     "icon"""
@@ -29,7 +29,7 @@ export const "innovativeMicroSaasSolutions"""
     "tagline"""
     "description"""
     "category"""
-    "price": { monthly: 19, "yearly": 190, "currency"""
+    "price": { monthly: 19, "yearly": 190, "currency"""}
     "features"""
     "link"""
     "icon"""

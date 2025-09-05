@@ -1,8 +1,8 @@
 // Comprehensive IT Services 2030 - Zion Tech Group;
 // Enterprise-grade IT infrastructure, consulting, and managed services;
-export interface ServiceContact {
-  // TODO: Implement
-}
+export interface ServiceContact {}
+  // TODO: Implement;
+};
   "phone"""
   "id"""
 const "zionContact"""
@@ -30,18 +30,18 @@ export const "comprehensiveITServices2030"""
       "Cost optimization through resource management"""
       "Enhanced security and compliance"""
       "Faster time to market"""
-    targetAudience["Startups", "Mid-size companies", "Enterprises", "E-commerce platforms"""
-    tags["Cloud Computing", "DevOps", "AWS", "Azure", "Kubernetes", "Automation"""
+    targetAudience["Startups", "Mid-size companies", "Enterprises", "E-commerce platforms"""]
+    tags["Cloud Computing", "DevOps", "AWS", "Azure", "Kubernetes", "Automation"""]
     "contactInfo"""
     "marketPrice": "$120 - $200/hour, $20,000 - $50,000 per project"""
     "responseTime": "2-4 hours"""
     "sla": "99.9% uptime, 4-hour response time"""
-    certifications["AWS Solutions Architect", "Azure Solutions Architect", "Kubernetes Administrator", "Terraform Certified"""
+    certifications["AWS Solutions Architect", "Azure Solutions Architect", "Kubernetes Administrator", "Terraform Certified"""]
     "deliveryTime": "2-8 weeks depending on complexity"""
     "support": "24/7 monitoring and support"""
     "innovationLevel": "Advanced"""
     "marketSize": "$89.4 billion"""
-    compliance["SOC 2", "ISO 27001", "GDPR", "HIPAA", "PCI DSS"""
+    compliance["SOC 2", "ISO 27001", "GDPR", "HIPAA", "PCI DSS"""]
       "AWS/Azure/GCP"""
       "Kubernetes"""
       "Docker"""
@@ -77,18 +77,18 @@ export const "comprehensiveITServices2030"""
       "Enhanced employee security awareness"""
       "Proactive threat prevention"""
       "Cost-effective security operations"""
-    targetAudience["Financial institutions", "Healthcare organizations", "Government agencies", "Technology companies"""
-    tags["Cybersecurity", "Zero Trust", "Threat Detection", "Compliance", "Incident Response"""
+    targetAudience["Financial institutions", "Healthcare organizations", "Government agencies", "Technology companies"""]
+    tags["Cybersecurity", "Zero Trust", "Threat Detection", "Compliance", "Incident Response"""]
     "contactInfo"""
     "marketPrice": "$140 - $250/hour, $30,000 - $75,000 per project"""
     "responseTime": "1-2 hours for critical issues"""
     "sla": "99.9% security monitoring, 1-hour critical response"""
-    certifications["CISSP", "CISM", "CEH", "CompTIA Security+", "SANS GIAC"""
+    certifications["CISSP", "CISM", "CEH", "CompTIA Security+", "SANS GIAC"""]
     "deliveryTime": "4-12 weeks depending on scope"""
     "support": "24/7 security operations center"""
     "innovationLevel": "Cutting-edge"""
     "marketSize": "$156.5 billion"""
-    compliance["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"""
+    compliance["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"""]
       "SIEM systems"""
       "EDR platforms"""
       "Identity management"""
@@ -124,18 +124,18 @@ export const "comprehensiveITServices2030"""
       "Enhanced customer understanding"""
       "Predictive capabilities"""
       "Data-driven culture"""
-    targetAudience["Retail companies", "Manufacturing firms", "Healthcare organizations", "Financial services"""
-    tags["Data Analytics", "Business Intelligence", "Machine Learning", "Data Warehousing", "Predictive Analytics"""
+    targetAudience["Retail companies", "Manufacturing firms", "Healthcare organizations", "Financial services"""]
+    tags["Data Analytics", "Business Intelligence", "Machine Learning", "Data Warehousing", "Predictive Analytics"""]
     "contactInfo"""
     "marketPrice": "$110 - $180/hour, $25,000 - $60,000 per project"""
     "responseTime": "4-8 hours"""
     "sla": "99.5% system availability, 8-hour response time"""
-    certifications["AWS Data Analytics", "Azure Data Engineer", "Google Cloud Data Engineer", "Tableau Certified"""
+    certifications["AWS Data Analytics", "Azure Data Engineer", "Google Cloud Data Engineer", "Tableau Certified"""]
     "deliveryTime": "3-10 weeks depending on complexity"""
     "support": "Business hours + emergency support"""
     "innovationLevel": "Advanced"""
     "marketSize": "$67.8 billion"""
-    compliance["GDPR", "CCPA", "SOC 2", "ISO 27001"""
+    compliance["GDPR", "CCPA", "SOC 2", "ISO 27001"""]
       "Snowflake"""
       "AWS Redshift"""
       "Azure Synapse"""
@@ -171,18 +171,18 @@ export const "comprehensiveITServices2030"""
       "Improved employee productivity"""
       "Competitive advantage"""
       "Future-ready infrastructure"""
-    targetAudience["Manufacturing companies", "Financial institutions", "Healthcare organizations", "Government agencies"""
-    tags["Digital Transformation", "Legacy Modernization", "Process Reengineering", "Change Management", "Technology Implementation"""
+    targetAudience["Manufacturing companies", "Financial institutions", "Healthcare organizations", "Government agencies"""]
+    tags["Digital Transformation", "Legacy Modernization", "Process Reengineering", "Change Management", "Technology Implementation"""]
     "contactInfo"""
     "marketPrice": "$130 - $220/hour, $35,000 - $100,000 per project"""
     "responseTime": "4-6 hours"""
     "sla": "99.5% project delivery, 6-hour response time"""
-    certifications["PMP", "Agile Certified Practitioner", "Change Management", "ITIL", "TOGAF"""
+    certifications["PMP", "Agile Certified Practitioner", "Change Management", "ITIL", "TOGAF"""]
     "deliveryTime": "6-24 weeks depending on scope"""
     "support": "Project-based + ongoing support"""
     "innovationLevel": "Advanced"""
     "marketSize": "$469.8 billion"""
-    compliance["ISO 27001", "SOC 2", "GDPR", "Industry-specific regulations"""
+    compliance["ISO 27001", "SOC 2", "GDPR", "Industry-specific regulations"""]
       "Cloud platforms"""
       "Microservices"""
       "API management"""
@@ -218,18 +218,18 @@ export const "comprehensiveITServices2030"""
       "Enhanced customer insights"""
       "Predictive capabilities"""
       "Competitive differentiation"""
-    targetAudience["Technology companies", "Financial services", "Healthcare organizations", "Manufacturing firms"""
-    tags["Artificial Intelligence", "Machine Learning", "Deep Learning", "Predictive Analytics", "AI Strategy"""
+    targetAudience["Technology companies", "Financial services", "Healthcare organizations", "Manufacturing firms"""]
+    tags["Artificial Intelligence", "Machine Learning", "Deep Learning", "Predictive Analytics", "AI Strategy"""]
     "contactInfo"""
     "marketPrice": "$150 - $300/hour, $40,000 - $120,000 per project"""
     "responseTime": "4-8 hours"""
     "sla": "99.5% model accuracy, 8-hour response time"""
-    certifications["AWS Machine Learning", "Azure AI Engineer", "Google Cloud AI", "TensorFlow Developer"""
+    certifications["AWS Machine Learning", "Azure AI Engineer", "Google Cloud AI", "TensorFlow Developer"""]
     "deliveryTime": "8-20 weeks depending on complexity"""
     "support": "Model monitoring + ongoing optimization"""
     "innovationLevel": "Cutting-edge"""
     "marketSize": "$190.6 billion"""
-    compliance["GDPR", "AI ethics guidelines", "Industry-specific regulations", "Data privacy"""
+    compliance["GDPR", "AI ethics guidelines", "Industry-specific regulations", "Data privacy"""]
       "TensorFlow"""
       "PyTorch"""
       "Scikit-learn"""
@@ -265,18 +265,18 @@ export const "comprehensiveITServices2030"""
       "Simplified network management"""
       "Better user experience"""
       "Scalable infrastructure"""
-    targetAudience["Enterprises", "Educational institutions", "Healthcare organizations", "Financial services"""
-    tags["Networking", "SD-WAN", "Network Security", "Performance Optimization", "Infrastructure"""
+    targetAudience["Enterprises", "Educational institutions", "Healthcare organizations", "Financial services"""]
+    tags["Networking", "SD-WAN", "Network Security", "Performance Optimization", "Infrastructure"""]
     "contactInfo"""
     "marketPrice": "$100 - $180/hour, $25,000 - $70,000 per project"""
     "responseTime": "2-4 hours"""
     "sla": "99.9% network uptime, 4-hour response time"""
-    certifications["Cisco CCNP", "Juniper JNCIP", "VMware NSX", "Fortinet NSE", "CompTIA Network+"""
+    certifications["Cisco CCNP", "Juniper JNCIP", "VMware NSX", "Fortinet NSE", "CompTIA Network+"""]
     "deliveryTime": "3-8 weeks depending on scope"""
     "support": "24/7 network monitoring"""
     "innovationLevel": "Advanced"""
     "marketSize": "$45.2 billion"""
-    compliance["SOC 2", "ISO 27001", "PCI DSS", "Industry-specific regulations"""
+    compliance["SOC 2", "ISO 27001", "PCI DSS", "Industry-specific regulations"""]
       "Cisco SD-WAN"""
       "VMware SD-WAN"""
       "Fortinet FortiGate"""
@@ -312,18 +312,18 @@ export const "comprehensiveITServices2030"""
       "Faster issue resolution"""
       "Predictable IT costs"""
       "Focus on core business"""
-    targetAudience["Small businesses", "Mid-size companies", "Healthcare organizations", "Professional services"""
-    tags["Managed Services", "IT Support", "Infrastructure Management", "24/7 Monitoring", "Proactive Maintenance"""
+    targetAudience["Small businesses", "Mid-size companies", "Healthcare organizations", "Professional services"""]
+    tags["Managed Services", "IT Support", "Infrastructure Management", "24/7 Monitoring", "Proactive Maintenance"""]
     "contactInfo"""
     "marketPrice": "$90 - $160/hour, $15,000 - $50,000 per month"""
     "responseTime": "1-4 hours depending on priority"""
     "sla": "99.9% uptime, 1-4 hour response time"""
-    certifications["ITIL", "CompTIA A+", "Microsoft 365", "AWS Solutions Architect", "Cisco CCNA"""
+    certifications["ITIL", "CompTIA A+", "Microsoft 365", "AWS Solutions Architect", "Cisco CCNA"""]
     "deliveryTime": "1-2 weeks for setup"""
     "support": "24/7 monitoring and support"""
     "innovationLevel": "Professional"""
     "marketSize": "$274.2 billion"""
-    compliance["SOC 2", "ISO 27001", "GDPR", "Industry-specific regulations"""
+    compliance["SOC 2", "ISO 27001", "GDPR", "Industry-specific regulations"""]
       "Monitoring tools"""
       "Help desk systems"""
       "Backup solutions"""
@@ -359,18 +359,18 @@ export const "comprehensiveITServices2030"""
       "Competitive advantage"""
       "Scalable architecture"""
       "Long-term cost savings"""
-    targetAudience["Enterprises", "Startups", "Healthcare organizations", "Financial services"""
-    tags["Software Development", "Custom Applications", "Web Development", "Mobile Apps", "API Development"""
+    targetAudience["Enterprises", "Startups", "Healthcare organizations", "Financial services"""]
+    tags["Software Development", "Custom Applications", "Web Development", "Mobile Apps", "API Development"""]
     "contactInfo"""
     "marketPrice": "$110 - $200/hour, $30,000 - $100,000 per project"""
     "responseTime": "4-8 hours"""
     "sla": "99.5% application uptime, 8-hour response time"""
-    certifications["AWS Developer", "Azure Developer", "Google Cloud Developer", "Scrum Master", "Agile Certified"""
+    certifications["AWS Developer", "Azure Developer", "Google Cloud Developer", "Scrum Master", "Agile Certified"""]
     "deliveryTime": "8-24 weeks depending on complexity"""
     "support": "Development + ongoing maintenance"""
     "innovationLevel": "Advanced"""
     "marketSize": "$507.2 billion"""
-    compliance["SOC 2", "ISO 27001", "GDPR", "Industry-specific regulations"""
+    compliance["SOC 2", "ISO 27001", "GDPR", "Industry-specific regulations"""]
       "React"""
       "Angular"""
       "Vue.js"""
@@ -406,18 +406,18 @@ export const "comprehensiveITServices2030"""
       "Scalable solutions"""
       "Expert management"""
       "24/7 support"""
-    targetAudience["Enterprises", "Financial institutions", "Healthcare organizations", "Government agencies"""
-    tags["Data Center", "Colocation", "Infrastructure", "Disaster Recovery", "Cloud Connectivity"""
+    targetAudience["Enterprises", "Financial institutions", "Healthcare organizations", "Government agencies"""]
+    tags["Data Center", "Colocation", "Infrastructure", "Disaster Recovery", "Cloud Connectivity"""]
     "contactInfo"""
     "marketPrice": "$100 - $180/hour, $20,000 - $80,000 per project"""
     "responseTime": "2-4 hours"""
     "sla": "99.99% uptime, 4-hour response time"""
-    certifications["Uptime Institute", "ISO 27001", "SOC 2", "TIA-942", "LEED"""
+    certifications["Uptime Institute", "ISO 27001", "SOC 2", "TIA-942", "LEED"""]
     "deliveryTime": "4-12 weeks depending on scope"""
     "support": "24/7 infrastructure support"""
     "innovationLevel": "Professional"""
     "marketSize": "$59.7 billion"""
-    compliance["SOC 2", "ISO 27001", "PCI DSS", "HIPAA", "Industry-specific regulations"""
+    compliance["SOC 2", "ISO 27001", "PCI DSS", "HIPAA", "Industry-specific regulations"""]
       "Server hardware"""
       "Storage systems"""
       "Networking equipment"""
@@ -453,18 +453,18 @@ export const "comprehensiveITServices2030"""
       "Improved operational efficiency"""
       "Competitive advantage"""
       "Future-ready technology"""
-    targetAudience["C-level executives", "IT leaders", "Business leaders", "Board members"""
-    tags["IT Strategy", "Digital Consulting", "Technology Assessment", "Digital Transformation", "Strategic Planning"""
+    targetAudience["C-level executives", "IT leaders", "Business leaders", "Board members"""]
+    tags["IT Strategy", "Digital Consulting", "Technology Assessment", "Digital Transformation", "Strategic Planning"""]
     "contactInfo"""
     "marketPrice": "$150 - $300/hour, $40,000 - $150,000 per project"""
     "responseTime": "24-48 hours"""
     "sla": "Project-based delivery, 48-hour response time"""
-    certifications["TOGAF", "ITIL", "PMP", "Agile Certified", "Digital Transformation"""
+    certifications["TOGAF", "ITIL", "PMP", "Agile Certified", "Digital Transformation"""]
     "deliveryTime": "4-16 weeks depending on scope"""
     "support": "Project-based + ongoing advisory"""
     "innovationLevel": "Strategic"""
     "marketSize": "$48.9 billion"""
-    compliance["Industry best practices", "Regulatory guidance", "Standards compliance"""
+    compliance["Industry best practices", "Regulatory guidance", "Standards compliance"""]
       "Strategy frameworks"""
       "Assessment tools"""
       "Planning methodologies"""

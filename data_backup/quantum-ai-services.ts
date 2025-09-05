@@ -1,6 +1,6 @@
-export interface QuantumAIService {
-  // TODO: Implement
-}
+export interface QuantumAIService {}
+  // TODO: Implement;
+};
   "id"""
   "realImplementation"""
     "name"""

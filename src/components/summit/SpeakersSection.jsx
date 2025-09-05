@@ -1,4 +1,4 @@
-const speakers = [{"name"""
+const speakers = [{"name"""}]
         "title"""
         "avatar"""
         "twitter"""

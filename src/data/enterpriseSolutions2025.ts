@@ -1,4 +1,4 @@
-export const ENTERPRISE_SOLUTIONS_2025 = [{
+export const ENTERPRISE_SOLUTIONS_2025 = [{}]
     "id"""
     "name"""
     "category"""
@@ -12,7 +12,7 @@ export const ENTERPRISE_SOLUTIONS_2025 = [{
       "email"""
       "website"""
       "address"""
-    "marketPrice": '$15,000 per project (Industry "average"""
+    "marketPrice": '$15,000 per project (Industry "average""")
     "competitors"""
     "roi"""
     "setupTime"""

@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';'
-interface User {
-  // TODO: Implement
+interface User {}
+  // TODO: Implement;
 }'
   "id": string;"
   email: string;
@@ -9,14 +9,14 @@ interface User {
   role?: string;
   isEmailVerified?: boolean;
   createdAt?: string;
-  updatedAt?: string}
-interface AuthTokens {
-  // TODO: Implement
+  updatedAt?: string};
+interface AuthTokens {}
+  // TODO: Implement;
 }"
   "accessToken": string | null;"
-  refreshToken: string | null}
-interface AuthContextType {
-  // TODO: Implement
+  refreshToken: string | null};
+interface AuthContextType {}
+  // TODO: Implement;
 }"
   "user": Use r | null;"
   isLoading: boolean;,
@@ -40,7 +40,7 @@ interface AuthContextType {
 </any>
   loginWithTwitter: ()  => Promise<any>;
 </any>
-  loginWithWeb3: ()  => Promise<any>}
+  loginWithWeb3: ()  => Promise<any>};
 </any>
 const AuthContext = createContext<AuthContextType | null>(null);
 </AuthContextType>

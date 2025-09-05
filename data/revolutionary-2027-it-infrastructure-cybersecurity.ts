@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Cybersecurity"""
     "realService"""
-    technology["Machine Learning", "AI Security", "Zero-Trust Architecture", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["Active Directory", "Okta", "Azure AD", "AWS IAM", "Google Workspace", "Slack", "Microsoft Teams"""
-    useCases["Enterprise security", "Government compliance", "Financial security", "Healthcare compliance", "Cloud security", "Remote work security"""
+    technology["Machine Learning", "AI Security", "Zero-Trust Architecture", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["Active Directory", "Okta", "Azure AD", "AWS IAM", "Google Workspace", "Slack", "Microsoft Teams"""]
+    useCases["Enterprise security", "Government compliance", "Financial security", "Healthcare compliance", "Cloud security", "Remote work security"""]
     "roi": "Organizations report 450% ROI through reduced security incidents and improved compliance."""
-    competitors["Palo Alto Networks", "CrowdStrike", "Zscaler", "Cisco", "Fortinet"""
+    competitors["Palo Alto Networks", "CrowdStrike", "Zscaler", "Cisco", "Fortinet"""]
     "marketSize": "$45.2B market"""
     "growthRate": "235% annual growth"""
     "variant": "cybersecurity"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 month"""
     "category": "Quantum Security"""
     "realService"""
-    technology["Post-Quantum Cryptography", "Quantum Key Distribution", "Hybrid Encryption", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["PKI systems", "Hardware security modules", "Cloud platforms", "Enterprise systems", "IoT devices", "Blockchain networks"""
-    useCases["Financial transactions", "Government communications", "Healthcare data", "IoT security", "Blockchain security", "Cloud security"""
+    technology["Post-Quantum Cryptography", "Quantum Key Distribution", "Hybrid Encryption", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["PKI systems", "Hardware security modules", "Cloud platforms", "Enterprise systems", "IoT devices", "Blockchain networks"""]
+    useCases["Financial transactions", "Government communications", "Healthcare data", "IoT security", "Blockchain security", "Cloud security"""]
     "roi": "Organizations report 380% ROI through future-proofed security and reduced compliance risks."""
-    competitors["ID Quantique", "Qrypt", "Quantum Xchange", "Post-Quantum", "ISARA"""
+    competitors["ID Quantique", "Qrypt", "Quantum Xchange", "Post-Quantum", "ISARA"""]
     "marketSize": "$8.7B market"""
     "growthRate": "280% annual growth"""
     "variant": "quantum-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "Network Operations"""
     "realService"""
-    technology["Machine Learning", "AI Automation", "Network Monitoring", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["Cisco", "Juniper", "Aruba", "VMware", "AWS", "Azure", "Google Cloud", "Slack", "Microsoft Teams"""
-    useCases["Network monitoring", "Incident response", "Performance optimization", "Capacity planning", "Compliance monitoring", "Predictive maintenance"""
+    technology["Machine Learning", "AI Automation", "Network Monitoring", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["Cisco", "Juniper", "Aruba", "VMware", "AWS", "Azure", "Google Cloud", "Slack", "Microsoft Teams"""]
+    useCases["Network monitoring", "Incident response", "Performance optimization", "Capacity planning", "Compliance monitoring", "Predictive maintenance"""]
     "roi": "Companies report 420% ROI through reduced downtime and improved network performance."""
-    competitors["SolarWinds", "Datadog", "New Relic", "Splunk", "LogicMonitor"""
+    competitors["SolarWinds", "Datadog", "New Relic", "Splunk", "LogicMonitor"""]
     "marketSize": "$28.5B market"""
     "growthRate": "195% annual growth"""
     "variant": "ai-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Edge Computing"""
     "realService"""
-    technology["Edge Computing", "Kubernetes", "Docker", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "IoT platforms", "Edge devices"""
-    useCases["IoT applications", "Manufacturing automation", "Retail analytics", "Healthcare monitoring", "Real-time processing", "Edge AI"""
+    technology["Edge Computing", "Kubernetes", "Docker", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "IoT platforms", "Edge devices"""]
+    useCases["IoT applications", "Manufacturing automation", "Retail analytics", "Healthcare monitoring", "Real-time processing", "Edge AI"""]
     "roi": "Organizations report 380% ROI through improved performance and reduced latency."""
-    competitors["AWS Outposts", "Azure Stack", "Google Anthos", "VMware", "Red Hat"""
+    competitors["AWS Outposts", "Azure Stack", "Google Anthos", "VMware", "Red Hat"""]
     "marketSize": "$18.9B market"""
     "growthRate": "225% annual growth"""
     "variant": "edge-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "DevOps Automation"""
     "realService"""
-    technology["Machine Learning", "AI Automation", "DevOps Tools", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["GitHub", "GitLab", "Bitbucket", "AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Slack"""
-    useCases["Code review automation", "Testing automation", "Deployment automation", "Performance monitoring", "Security scanning", "Team collaboration"""
+    technology["Machine Learning", "AI Automation", "DevOps Tools", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["GitHub", "GitLab", "Bitbucket", "AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Slack"""]
+    useCases["Code review automation", "Testing automation", "Deployment automation", "Performance monitoring", "Security scanning", "Team collaboration"""]
     "roi": "Teams report 350% ROI through improved development velocity and reduced deployment issues."""
-    competitors["GitLab", "Jenkins", "CircleCI", "Travis CI", "GitHub Actions"""
+    competitors["GitLab", "Jenkins", "CircleCI", "Travis CI", "GitHub Actions"""]
     "marketSize": "$25.3B market"""
     "growthRate": "185% annual growth"""
     "variant": "ai-futuristic"""

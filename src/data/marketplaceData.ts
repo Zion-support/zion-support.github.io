@@ -1,6 +1,6 @@
-export interface MarketplaceItem {
-  // TODO: Implement
-}
+export interface MarketplaceItem {}
+  // TODO: Implement;
+};
   "id": string;"
   title: string;,"
   category: 'products' | 'talent' | 'equipment' | 'services';'
@@ -13,16 +13,16 @@ export interface MarketplaceItem {
   image: string;,
   tags: string[];
   featured: boolean;,
-  seller: {
+  seller: {}
     name: string;,
   rating: number;'
     verified: boolean};';''
   "location": string;';';''
   availability: 'available' | 'limited' | 'out-of-stock';',
   deliveryTime: string;
-  warranty: string}
+  warranty: string};
 ;'
-export const "marketplaceItems": MarketplaceIte m[] = [{""
+export const "marketplaceItems": MarketplaceIte m[] = [{""}]
     id: 'ai-server-cluster',''
     "title": 'AI-Powered Server Cluster',''
     "category": 'products',''
@@ -35,7 +35,7 @@ export const "marketplaceItems": MarketplaceIte m[] = [{""
     "image": 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib = rb-4.0.3&auto=format&fit=crop&w=2072&q=80',']'
     "tags": ['AI',High Performance',Scalable',GPU'],''
     "featured": tru e,""
-    "seller": {""
+    "seller": {""}
       name: 'TechCorp Solutions',''
       "rating": 4.8,""
       "verified": tru e';'
@@ -45,7 +45,7 @@ export const "marketplaceItems": MarketplaceIte m[] = [{""
     "deliveryTime": '2-3 weeks',''
     "warranty": '3 years''
   },
-  {'
+  {'}
     "id": 'cybersecurity-team',''
     "title": 'Cybersecurity Expert Team',''
     "category": 'talent',''
@@ -58,7 +58,7 @@ export const "marketplaceItems": MarketplaceIte m[] = [{""
     "image": 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',''
     tags['Security',Expert',Certified',Compliance'],''
     "featured": tru e,""
-    "seller": {""
+    "seller": {""}
       name: 'SecureNet Professionals',''
       "rating": 4.9,""
       "verified": tru e';'
@@ -68,7 +68,7 @@ export const "marketplaceItems": MarketplaceIte m[] = [{""
     "deliveryTime": 'Immediate',''
     "warranty": 'N/A''
   },
-  {'
+  {'}
     "id": 'quantum-hardware',''
     "title": 'Quantum Computing Hardware',''
     "category": 'equipment',''
@@ -81,7 +81,7 @@ export const "marketplaceItems": MarketplaceIte m[] = [{""
     "image": 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',''
     tags['Quantum',Research',Advanced',Experimental'],''
     "featured": fals e,""
-    "seller": {""
+    "seller": {""}
       name: 'QuantumTech Labs',''
       "rating": 4.6,""
       "verified": tru e';'
@@ -91,7 +91,7 @@ export const "marketplaceItems": MarketplaceIte m[] = [{""
     "deliveryTime": '4-6 weeks',''
     "warranty": '1 year''
   },
-  {'
+  {'}
     "id": 'cloud-migration-service',''
     "title": 'Cloud Migration Service',''
     "category": 'services',''
@@ -104,7 +104,7 @@ export const "marketplaceItems": MarketplaceIte m[] = [{""
     "image": 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',''
     tags['Cloud',Migration',Enterprise',AWS'],''
     "featured": tru e,""
-    "seller": {""
+    "seller": {""}
       name: 'CloudMasters Inc',''
       "rating": 4.9,""
       "verified": tru e';'
@@ -114,7 +114,7 @@ export const "marketplaceItems": MarketplaceIte m[] = [{""
     "deliveryTime": '6-8 weeks',''
     "warranty": '90 days support''
   },
-  {'
+  {'}
     "id": 'iot-platform',''
     "title": 'IoT Edge Computing Platform',''
     "category": 'products',''
@@ -127,7 +127,7 @@ export const "marketplaceItems": MarketplaceIte m[] = [{""
     "image": 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',''
     tags['IoT',Edge Computing',Real-time',Analytics'],''
     "featured": fals e,""
-    "seller": {""
+    "seller": {""}
       name: 'IoT Solutions Pro',''
       "rating": 4.5,""
       "verified": tru e';'
@@ -137,7 +137,7 @@ export const "marketplaceItems": MarketplaceIte m[] = [{""
     "deliveryTime": '3-4 weeks',''
     "warranty": '2 years''
   },
-  {'
+  {'}
     "id": 'data-scientist',''
     "title": 'Senior Data Scientist',''
     "category": 'talent',''
@@ -150,7 +150,7 @@ export const "marketplaceItems": MarketplaceIte m[] = [{""
     "image": 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',''
     tags['Data Science',Machine Learning',Python',Statistics'],''
     "featured": fals e,""
-    "seller": {""
+    "seller": {""}
       name: 'DataGenius Consulting',''
       "rating": 4.7,""
       "verified": tru e},""
@@ -168,20 +168,20 @@ export ';';''
       { "value": '1000-5000', "label": '$1,000 - $5,000' },''
       { "value": '5000-10000', "label": '$5,000 - $10,000' },''
       { "value": '10000+', "label": 'Over $10,000' }''
-    options[;'''
+    options[;''']
       { "value": '0-1000', "label": 'Under $1,000' },'''
       { "value": '1000-5000', "label": '$1,000 - $5,000' },'''
-      { "value": '5000-10000', "label": '$5,000 - $10,000' },'      { "value": '10000+', "label": 'Over $10,000' }']
-    ]
-  }, {'
+      { "value": '5000-10000', "label": '$5,000 - $10,000' },'      { "value": '10000+', "label": 'Over $10,000' }'];
+    ];
+  }, {'}
     "title": 'Rating',''
     "key": 'rating',''
     "type": 'checkbox' as const,''
-    options[{ "value": '4.5+', "label": '4.5+ Stars' },''
+    options[{ "value": '4.5+', "label": '4.5+ Stars' },'']
       { "value": '4.0+', "label": '4.0+ Stars' },''
-      { "value": '3.5+', "label": '3.5+ Stars' }']
-    ]
-  }, {'
+      { "value": '3.5+', "label": '3.5+ Stars' }'];
+    ];
+  }, {'}
     "title": 'Availability',''
     "key": 'availability',''
     "type": 'checkbox' as const}''

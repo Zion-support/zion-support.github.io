@@ -1,5 +1,5 @@
-;export const "COMPREHENSIVE_PRICING_GUIDE_2027": ProductListin g[] = [// AI-Powered Micro SAAS Services;"
-  {"
+;export const "COMPREHENSIVE_PRICING_GUIDE_2027": ProductListin g[] = [// AI-Powered Micro SAAS Services;"]
+  {"}
 """
     id: "ai-autonomous-code-reviewer","""
     "title": "AI Autonomous Code Reviewer & Quality Assurance Platform","""
@@ -18,7 +18,7 @@
     "location": "Global","""
     "availability": "2-3 Weeks",""
     "aiScore": 9 8,""
-    "contactInfo": {""
+    "contactInfo": {""}
 """
       phone: "+1 302 464 0950","""
       "email": "kleber@ziontechgroup.com","""
@@ -31,7 +31,7 @@
     "setupTime": "2-3 weeks","""
     "integrations": ["GitHub", "GitLab", "Bitbucket", "Azure DevOps", "Jira", "Slack"]"
   },
-  {"
+  {"}
 """
     "id": "ai-powered-seo-optimization","""
     "title": "AI-Powered SEO Optimization & Content Strategy Platform","""
@@ -50,7 +50,7 @@
     "location": "Global","""
     "availability": "1-2 Weeks",""
     "aiScore": 9 5,""
-    "contactInfo": {""
+    "contactInfo": {""}
 """
       phone: "+1 302 464 0950","""
       "email": "kleber@ziontechgroup.com","""
@@ -63,7 +63,7 @@
     "setupTime": "1-2 weeks","""
     "integrations": ["Google Analytics", "Google Search Console", "WordPress", "Shopify", "HubSpot"]"
   },
-  {"
+  {"}
 """
     "id": "ai-customer-support-automation","""
     "title": "AI Customer Support Automation & Chatbot Platform","""
@@ -82,7 +82,7 @@
     "location": "Global","""
     "availability": "2-3 Weeks",""
     "aiScore": 9 4,""
-    "contactInfo": {""
+    "contactInfo": {""}
 """
       phone: "+1 302 464 0950","""
       "email": "kleber@ziontechgroup.com","""
@@ -95,7 +95,7 @@
     "setupTime": "2-3 weeks","""
     "integrations": ["Slack", "Microsoft Teams", "Zapier", "Salesforce", "HubSpot", "Shopify"]"
   },
-  {"
+  {"}
 """
     "id": "ai-financial-analytics-platform","""
     "title": "AI Financial Analytics & Predictive Modeling Platform","""
@@ -114,7 +114,7 @@
     "location": "Global","""
     "availability": "4-5 Weeks",""
     "aiScore": 9 7,""
-    "contactInfo": {""
+    "contactInfo": {""}
 """
       phone: "+1 302 464 0950","""
       "email": "kleber@ziontechgroup.com","""
@@ -127,7 +127,7 @@
     "setupTime": "4-5 weeks","""
     "integrations": ["Bloomberg API", "Reuters API", "Excel", "Tableau", "Power BI", "Salesforce"]"
   },
-  {"
+  {"}
 """
     "id": "ai-marketing-automation-suite","""
     "title": "AI Marketing Automation & Campaign Optimization Suite","""
@@ -146,7 +146,7 @@
     "location": "Global","""
     "availability": "3-4 Weeks",""
     "aiScore": 9 6,""
-    "contactInfo": {""
+    "contactInfo": {""}
 """
       phone: "+1 302 464 0950","""
       "email": "kleber@ziontechgroup.com","""
@@ -159,7 +159,7 @@
     "setupTime": "3-4 weeks","""
     "integrations": ["Salesforce", "HubSpot", "Mailchimp", "Facebook Ads", "Google Ads", "LinkedIn Ads"]"
   },
-  {"
+  {"}
 """
     "id": "ai-project-management-intelligence","""
     "title": "AI Project Management Intelligence & Resource Optimization Platform","""
@@ -178,7 +178,7 @@
     "location": "Global","""
     "availability": "2-3 Weeks",""
     "aiScore": 9 3,""
-    "contactInfo": {""
+    "contactInfo": {""}
 """
       phone: "+1 302 464 0950","""
       "email": "kleber@ziontechgroup.com","""
@@ -191,7 +191,7 @@
     "setupTime": "2-3 weeks","""
     "integrations": ["Slack", "Microsoft Teams", "Jira", "Trello", "Notion", "Google Workspace"]"
   },
-  {"
+  {"}
 """
     "id": "ai-supply-chain-optimization","""
     "title": "AI Supply Chain Optimization & Demand Forecasting Platform","""
@@ -210,7 +210,7 @@
     "location": "Global","""
     "availability": "5-6 Weeks",""
     "aiScore": 9 6,""
-    "contactInfo": {""
+    "contactInfo": {""}
 """
       phone: "+1 302 464 0950","""
       "email": "kleber@ziontechgroup.com","""
@@ -223,7 +223,7 @@
     "setupTime": "5-6 weeks","""
     "integrations": ["SAP", "Oracle", "NetSuite", "QuickBooks", "Shopify", "WooCommerce"]"
   },
-  {"
+  {"}
 """
     "id": "ai-content-marketing-suite","""
     "title": "AI Content Marketing Suite & Creative Intelligence Platform","""
@@ -242,7 +242,7 @@
     "location": "Global","""
     "availability": "1-2 Weeks",""
     "aiScore": 9 5,""
-    "contactInfo": {""
+    "contactInfo": {""}
 """
       phone: "+1 302 464 0950","""
       "email": "kleber@ziontechgroup.com","""
@@ -255,7 +255,7 @@
     "setupTime": "1-2 weeks","""
     "integrations": ["WordPress", "Medium", "LinkedIn", "Facebook", "Twitter", "Google Docs"]"
   },
-  {"
+  {"}
 """
     "id": "ai-quantum-hybrid-platform","""
     "title": "AI-Quantum Hybrid Computing & Optimization Platform","""
@@ -274,7 +274,7 @@
     "location": "Global","""
     "availability": "8-10 Weeks",""
     "aiScore": 9 9,""
-    "contactInfo": {""
+    "contactInfo": {""}
 """
       phone: "+1 302 464 0950","""
       "email": "kleber@ziontechgroup.com","""
@@ -287,7 +287,7 @@
     "setupTime": "8-10 weeks","""
     "integrations": ["IBM Quantum", "Google Quantum", "Microsoft Azure", "AWS", "Python", "Jupyter"]"
   },
-  {"
+  {"}
 """
     "id": "ai-cybersecurity-intelligence","""
     "title": "AI Cybersecurity Intelligence & Threat Prevention Platform","""
@@ -306,7 +306,7 @@
     "location": "Global","""
     "availability": "6-7 Weeks",""
     "aiScore": 9 7,""
-    "contactInfo": {""
+    "contactInfo": {""}
 """
       phone: "+1 302 464 0950","""
       "email": "kleber@ziontechgroup.com","""
@@ -319,7 +319,7 @@
     "setupTime": "6-7 weeks","""
     "integrations": ["SIEM Systems", "EDR Solutions", "Firewall Management", "Cloud Security", "Identity Management"]"
   },
-  {"
+  {"}
 """
     "id": "ai-healthcare-diagnostics","""
     "title": "AI Healthcare Diagnostics & Medical Imaging Analysis Platform","""
@@ -338,7 +338,7 @@
     "location": "Global","""
     "availability": "7-8 Weeks",""
     "aiScore": 9 8,""
-    "contactInfo": {""
+    "contactInfo": {""}
 """
       phone: "+1 302 464 0950","""
       "email": "kleber@ziontechgroup.com","""
@@ -351,7 +351,7 @@
     "setupTime": "7-8 weeks","""
     "integrations": ["PACS Systems", "EHR Systems", "DICOM", "HL7", "Medical Devices", "Telemedicine Platforms"]"
   },
-  {"
+  {"}
 """
     "id": "ai-business-intelligence","""
     "title": "AI Business Intelligence & Predictive Analytics Platform","""
@@ -370,7 +370,7 @@
     "location": "Global","""
     "availability": "4-5 Weeks",""
     "aiScore": 9 6,""
-    "contactInfo": {""
+    "contactInfo": {""}
 """
       phone: "+1 302 464 0950","""
       "email": "kleber@ziontechgroup.com","""
@@ -383,7 +383,7 @@
     "setupTime": "4-5 weeks","""
     "integrations": ["Salesforce", "HubSpot", "QuickBooks", "Excel", "Google Analytics", "SQL Databases"]"
   },
-  {"
+  {"}
 """
     "id": "ai-autonomous-research-assistant","""
     "title": "AI Autonomous Research Assistant & Knowledge Discovery Platform","""
@@ -402,7 +402,7 @@
     "location": "Global","""
     "availability": "3-4 Weeks",""
     "aiScore": 9 5,""
-    "contactInfo": {""
+    "contactInfo": {""}
 """
       phone: "+1 302 464 0950","""
       "email": "kleber@ziontechgroup.com","""
@@ -416,7 +416,7 @@
     "integrations": ["PubMed", "arXiv", "IEEE", "ACM", "Research Databases", "Citation Managers"]"
   },
   // Emerging Technology Services 2030;
-  {"
+  {"}
 """
     "id": "quantum-ai-hybrid-computing","""
     "title": "Quantum-AI Hybrid Computing & Optimization Platform","""
@@ -435,7 +435,7 @@
     "location": "Global","""
     "availability": "10-12 Weeks",""
     "aiScore": 9 9,""
-    "contactInfo": {""
+    "contactInfo": {""}
 """
       phone: "+1 302 464 0950","""
       "email": "kleber@ziontechgroup.com","""
@@ -448,7 +448,7 @@
     "setupTime": "10-12 weeks","""
     "integrations": ["IBM Quantum", "Google Quantum", "Microsoft Azure", "AWS", "Python", "Jupyter"]"
   },
-  {"
+  {"}
 """
     "id": "neuromorphic-computing-platform","""
     "title": "Neuromorphic Computing & Brain-Inspired AI Platform","""
@@ -467,7 +467,7 @@
     "location": "Global","""
     "availability": "8-10 Weeks",""
     "aiScore": 9 8,""
-    "contactInfo": {""
+    "contactInfo": {""}
 """
       phone: "+1 302 464 0950","""
       "email": "kleber@ziontechgroup.com","""
@@ -480,7 +480,7 @@
     "setupTime": "8-10 weeks","""
     "integrations": ["Intel Loihi", "IBM TrueNorth", "BrainChip", "Python", "TensorFlow", "PyTorch"]"
   },
-  {"
+  {"}
 """
     "id": "edge-ai-computing-platform","""
     "title": "Edge AI Computing & Distributed Intelligence Platform","""
@@ -499,7 +499,7 @@
     "location": "Global","""
     "availability": "6-8 Weeks",""
     "aiScore": 9 6,""
-    "contactInfo": {""
+    "contactInfo": {""}
 """
       phone: "+1 302 464 0950","""
       "email": "kleber@ziontechgroup.com","""
@@ -513,7 +513,7 @@
     "integrations": ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Docker", "Kubernetes", "MQTT"]"
   },
   // IT Infrastructure Services;
-  {"
+  {"}
 """
     "id": "cloud-migration-automation","""
     "title": "Enterprise Cloud Migration & Automation Suite","""
@@ -532,7 +532,7 @@
     "location": "Global","""
     "availability": "8-10 Weeks",""
     "aiScore": 9 4,""
-    "contactInfo": {""
+    "contactInfo": {""}
 """
       phone: "+1 302 464 0950","""
       "email": "kleber@ziontechgroup.com","""
@@ -545,7 +545,7 @@
     "setupTime": "8-10 weeks","""
     "integrations": ["AWS Services", "Azure Services", "Google Cloud", "Monitoring Tools", "CI/CD Pipelines"]"
   },
-  {"
+  {"}
 """
     "id": "devops-automation-platform","""
     "title": "DevOps Automation & CI/CD Platform","""
@@ -564,7 +564,7 @@
     "location": "Global","""
     "availability": "4-6 Weeks",""
     "aiScore": 9 3,""
-    "contactInfo": {""
+    "contactInfo": {""}
 """
       phone: "+1 302 464 0950","""
       "email": "kleber@ziontechgroup.com","""
@@ -577,7 +577,7 @@
     "setupTime": "4-6 weeks","""
     "integrations": ["GitHub", "GitLab", "Bitbucket", "Docker", "Kubernetes", "AWS", "Azure"]"
   },
-  {"
+  {"}
 """
     "id": "cybersecurity-threat-intelligence","""
     "title": "Advanced Cybersecurity & Threat Intelligence Platform","""
@@ -596,7 +596,7 @@
     "location": "Global","""
     "availability": "6-8 Weeks",""
     "aiScore": 9 6,""
-    "contactInfo": {""
+    "contactInfo": {""}
 """
       phone: "+1 302 464 0950","""
       "email": "kleber@ziontechgroup.com","""
@@ -609,7 +609,7 @@
     "setupTime": "6-8 weeks","""
     "integrations": ["SIEM Systems", "EDR Solutions", "Firewall Management", "Cloud Security", "Identity Management"]"
   },
-  {"
+  {"}
 """
     "id": "data-analytics-platform","""
     "title": "Enterprise Data Analytics & Business Intelligence Platform","""
@@ -628,7 +628,7 @@
     "location": "Global","""
     "availability": "5-7 Weeks",""
     "aiScore": 9 5,""
-    "contactInfo": {""
+    "contactInfo": {""}
 """
       phone: "+1 302 464 0950","""
       "email": "kleber@ziontechgroup.com","""
@@ -645,7 +645,7 @@
 export;';''
 export;';';''
 export '''
-export const "pricingCategories2027": unknow n = [;"""
+export const "pricingCategories2027": unknow n = [;"""]
   'Metaverse Solutions',"""
   'Web3 Solutions',"""
   'Sustainable Tech',""]"

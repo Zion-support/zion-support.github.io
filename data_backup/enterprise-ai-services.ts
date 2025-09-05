@@ -1,6 +1,6 @@
-export interface EnterpriseAIService {
-  // TODO: Implement
-}
+export interface EnterpriseAIService {}
+  // TODO: Implement;
+};
   "id"""
   "realImplementation"""
     "name"""

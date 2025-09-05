@@ -1,6 +1,6 @@
 import React from 'react';'
-export interface AdvancedAIService {
-  // TODO: Implement
+export interface AdvancedAIService {}
+  // TODO: Implement;
 }'
   "id": string;"
   title: string; ,

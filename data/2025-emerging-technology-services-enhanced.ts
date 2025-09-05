@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "8-12 hours"""
     "category": "Quantum Computing & Technology"""
     "realService"""
-    technology["Qiskit, Cirq, PennyLane, Python, React, Node.js"""
-    integrations["IBM Quantum, Google Quantum, Amazon Braket, Azure Quantum"""
-    useCases["Drug discovery, Financial modeling, Cryptography, Machine learning, Optimization problems"""
+    technology["Qiskit, Cirq, PennyLane, Python, React, Node.js"""]
+    integrations["IBM Quantum, Google Quantum, Amazon Braket, Azure Quantum"""]
+    useCases["Drug discovery, Financial modeling, Cryptography, Machine learning, Optimization problems"""]
     "roi": "Research teams report 1000% ROI through accelerated research and breakthrough discoveries."""
-    competitors["IBM Quantum, Amazon Braket, Google Quantum, Azure Quantum"""
+    competitors["IBM Quantum, Amazon Braket, Google Quantum, Azure Quantum"""]
     "marketSize": "$1.8B quantum computing market"""
     "growthRate": "45% annual growth"""
     "variant": "quantum-computing-enterprise"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4-6 hours"""
     "category": "Blockchain & Web3"""
     "realService"""
-    technology["Ethereum, Polygon, Solana, Rust, TypeScript, React, Node.js"""
-    integrations["MetaMask, WalletConnect, OpenZeppelin, Hardhat, Truffle"""
-    useCases["DeFi applications, NFT marketplaces, Supply chain tracking, Digital identity, Cross-border payments"""
+    technology["Ethereum, Polygon, Solana, Rust, TypeScript, React, Node.js"""]
+    integrations["MetaMask, WalletConnect, OpenZeppelin, Hardhat, Truffle"""]
+    useCases["DeFi applications, NFT marketplaces, Supply chain tracking, Digital identity, Cross-border payments"""]
     "roi": "Blockchain projects report 600% ROI through reduced development time and improved security."""
-    competitors["Alchemy, Infura, QuickNode, AWS Blockchain"""
+    competitors["Alchemy, Infura, QuickNode, AWS Blockchain"""]
     "marketSize": "$19.9B blockchain market"""
     "growthRate": "87% annual growth"""
     "variant": "blockchain-enterprise"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "6-8 hours"""
     "category": "Edge Computing & IoT"""
     "realService"""
-    technology["Kubernetes, Docker, Python, Go, React, Node.js, Redis"""
-    integrations["AWS, Azure, GCP, Kubernetes, Docker, MQTT, CoAP"""
-    useCases["IoT data processing, Real-time analytics, Edge AI, Content delivery, Industrial automation"""
+    technology["Kubernetes, Docker, Python, Go, React, Node.js, Redis"""]
+    integrations["AWS, Azure, GCP, Kubernetes, Docker, MQTT, CoAP"""]
+    useCases["IoT data processing, Real-time analytics, Edge AI, Content delivery, Industrial automation"""]
     "roi": "Edge computing projects report 400% ROI through reduced latency and improved performance."""
-    competitors["AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry"""
+    competitors["AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry"""]
     "marketSize": "$11.2B edge computing market"""
     "growthRate": "37% annual growth"""
     "variant": "edge-computing-enterprise"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "8-10 hours"""
     "category": "Metaverse & Virtual Reality"""
     "realService"""
-    technology["Unity, Unreal Engine, WebGL, Three.js, React, Node.js, WebRTC"""
-    integrations["Meta Quest, HTC Vive, SteamVR, Blockchain wallets, Payment gateways"""
-    useCases["Virtual events, Gaming platforms, Virtual real estate, Educational experiences, Social networking"""
+    technology["Unity, Unreal Engine, WebGL, Three.js, React, Node.js, WebRTC"""]
+    integrations["Meta Quest, HTC Vive, SteamVR, Blockchain wallets, Payment gateways"""]
+    useCases["Virtual events, Gaming platforms, Virtual real estate, Educational experiences, Social networking"""]
     "roi": "Metaverse projects report 800% ROI through new revenue streams and user engagement."""
-    competitors["Unity, Unreal Engine, Roblox Studio, Decentraland"""
+    competitors["Unity, Unreal Engine, Roblox Studio, Decentraland"""]
     "marketSize": "$47.5B metaverse market"""
     "growthRate": "42% annual growth"""
     "variant": "metaverse-enterprise"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "10-12 hours"""
     "category": "Space Technology & Satellites"""
     "realService"""
-    technology["Python, C++, React, Node.js, PostgreSQL, Redis, Kubernetes"""
-    integrations["Satellite APIs, Ground station networks, Weather APIs, GIS systems"""
-    useCases["Earth observation, Communications, Navigation, Weather monitoring, Environmental tracking"""
+    technology["Python, C++, React, Node.js, PostgreSQL, Redis, Kubernetes"""]
+    integrations["Satellite APIs, Ground station networks, Weather APIs, GIS systems"""]
+    useCases["Earth observation, Communications, Navigation, Weather monitoring, Environmental tracking"""]
     "roi": "Space technology projects report 1200% ROI through new data services and infrastructure optimization."""
-    competitors["Maxar, Planet, Airbus, SpaceX"""
+    competitors["Maxar, Planet, Airbus, SpaceX"""]
     "marketSize": "$469B space economy"""
     "growthRate": "8% annual growth"""
     "variant": "space-technology-enterprise"""

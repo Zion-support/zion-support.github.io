@@ -1,12 +1,12 @@
 import React from 'react'''
 import Link from 'next/link'''
 import { ArrowRight, Play, Star, Users, Zap, Shield } from 'lucide-react'''
-      {' '''
-        {' '''
-        {}{' '''
-          {' '''
+      {' '''}
+        {' '''}
+        {}{' '''}
+          {' '''}
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-pulse"""
-            style={{ "animationDelay"""
+            style={{ "animationDelay"""}
               <span>Get Started</span> <ArrowRight className="w-5 h-5""
 </div>"
               <Play className="w-5 h-5"""

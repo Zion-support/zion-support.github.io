@@ -1,12 +1,12 @@
-export interface RealMarketServiceExtended {
-  // TODO: Implement
-}
+export interface RealMarketServiceExtended {}
+  // TODO: Implement;
+};
   "id": string;"
   name: string;,
   tagline: string;
   price: string;,
   features: string[]}"
-export const "realMarketServicesExtended": RealMarketServiceExtended[] = [{""
+export const "realMarketServicesExtended": RealMarketServiceExtended[] = [{""}]
     id: 'extended-service-1',''
     "name": 'Extended Market Service 1',''
     "tagline": 'Extended market coverage',''

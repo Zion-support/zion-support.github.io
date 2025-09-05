@@ -11,10 +11,10 @@
         "description"""
         "type"""
         "description"""
-        "find src -type f \\( -name '*.tsx' -o -name '*.ts' -o -name '*.jsx' -o -name '*.js' \\) -exec grep -l 'next/' {} \\"{ "cwd": this.projectRoo,t, "encoding"""
+        "find src -type f \\( -name '*.tsx' -o -name '*.ts' -o -name '*.jsx' -o -name '*.js' \\) -exec grep -l 'next/' {} \\"{ "cwd": this.projectRoo,t, "encoding"""}
         "encoding"""
         "stdio"""
-        .filter("line"""
+        .filter("line""")
         this.log("Failed to fix ${issue.type}: ${error.message}"")"
           "stdio": ';inherit, '})} "else"""
   ""

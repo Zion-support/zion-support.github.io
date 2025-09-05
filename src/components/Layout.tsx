@@ -2,13 +2,12 @@ import React from 'react';''
 import Head from 'next/head';''
 import { AppHeader } from '../layout/AppHeader';''
 import { FuturisticFooter } from './FuturisticFooter';'
-interface LayoutProps {
-  // TODO: Implement
-}
+interface LayoutProps {}
+  // TODO: Implement;
+};
   children: React.ReactNode;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+};
+const Layout: React.FC<LayoutProps> = ({ children }) => {}
 </LayoutProps>
     <>
       <Head>

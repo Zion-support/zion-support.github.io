@@ -1,6 +1,6 @@
 import { ProductListing } from "@/types/listings";""
-export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2028": ProductListing[] = [// Healthcare AI Platform;"
-  {"
+export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2028": ProductListing[] = [// Healthcare AI Platform;"]
+  {"}
     id: "healthcare-ai-platform",""
     "title": "Healthcare AI Platform",""
     "description": "Comprehensive AI platform for healthcare providers that streamlines patient care, automates administrative tasks, and provides predictive analytics. Reduces operational costs by 35% and improves patient outcomes by 40%.",""
@@ -18,7 +18,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2028": ProductListing[] = [// Healt
     "location": "Global",""
     "availability": "6-8 Weeks",""
     "aiScore": 98,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/healthcare-ai-platform",""
@@ -31,7 +31,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2028": ProductListing[] = [// Healt
     "integrations": ["Epic", "Cerner", "Allscripts", "Practice Fusion", "Kareo", "Athenahealth", "HL7", "FHIR"]"
   },
   // Financial Services AI Suite;
-  {"
+  {"}
     "id": "financial-services-ai-suite",""
     "title": "Financial Services AI Suite",""
     "description": "Advanced AI suite for financial institutions that automates risk assessment, fraud detection, and customer service. Increases operational efficiency by 45% and reduces fraud by 90%.",""
@@ -49,7 +49,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2028": ProductListing[] = [// Healt
     "location": "Global",""
     "availability": "8-10 Weeks",""
     "aiScore": 97,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/financial-ai-suite",""
@@ -62,7 +62,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2028": ProductListing[] = [// Healt
     "integrations": ["Core Banking Systems", "Payment Processors", "CRM Platforms", "Compliance Tools", "Risk Management Systems"]"
   },
   // Manufacturing AI Platform;
-  {"
+  {"}
     "id": "manufacturing-ai-platform",""
     "title": "Manufacturing AI Platform",""
     "description": "Intelligent manufacturing platform that optimizes production processes, predicts maintenance needs, and improves quality control. Reduces production costs by 30% and increases efficiency by 50%.",""
@@ -80,7 +80,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2028": ProductListing[] = [// Healt
     "location": "Global",""
     "availability": "10-12 Weeks",""
     "aiScore": 96,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/manufacturing-ai",""
@@ -93,7 +93,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2028": ProductListing[] = [// Healt
     "integrations": ["ERP Systems", "MES Platforms", "IoT Devices", "SCADA Systems", "Quality Management Systems"]"
   },
   // Retail AI Platform;
-  {"
+  {"}
     "id": "retail-ai-platform",""
     "title": "Retail AI Platform",""
     "description": "Comprehensive retail AI platform that personalizes customer experiences, optimizes inventory, and automates marketing campaigns. Increases sales by 35% and improves customer satisfaction by 45%.",""
@@ -111,7 +111,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2028": ProductListing[] = [// Healt
     "location": "Global",""
     "availability": "4-6 Weeks",""
     "aiScore": 97,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/retail-ai",""
@@ -124,7 +124,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2028": ProductListing[] = [// Healt
     "integrations": ["POS Systems", "E-commerce Platforms", "CRM Systems", "Inventory Management", "Payment Gateways"]"
   },
   // Education AI Platform;
-  {"
+  {"}
     "id": "education-ai-platform",""
     "title": "Education AI Platform",""
     "description": "Innovative AI platform for educational institutions that personalizes learning experiences, automates grading, and provides student analytics. Improves learning outcomes by 40% and reduces administrative workload by 50%.",""
@@ -142,7 +142,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2028": ProductListing[] = [// Healt
     "location": "Global",""
     "availability": "6-8 Weeks",""
     "aiScore": 96,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/education-ai",""
@@ -155,7 +155,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2028": ProductListing[] = [// Healt
     "integrations": ["LMS Platforms", "Student Information Systems", "Assessment Tools", "Content Management", "Video Conferencing"]"
   },
   // Legal Tech AI Platform;
-  {"
+  {"}
     "id": "legal-tech-ai-platform",""
     "title": "Legal Tech AI Platform",""
     "description": "Advanced legal technology platform that automates document review, contract analysis, and legal research. Reduces legal research time by 70% and improves accuracy by 90%.",""
@@ -173,7 +173,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2028": ProductListing[] = [// Healt
     "location": "Global",""
     "availability": "8-10 Weeks",""
     "aiScore": 97,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/legal-tech-ai",""
@@ -186,7 +186,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2028": ProductListing[] = [// Healt
     "integrations": ["Case Management Systems", "Document Management", "Legal Research Databases", "Court Filing Systems", "Billing Systems"]"
   },
   // Real Estate AI Platform;
-  {"
+  {"}
     "id": "real-estate-ai-platform",""
     "title": "Real Estate AI Platform",""
     "description": "Intelligent real estate platform that provides market analysis, property valuation, and lead generation. Increases sales by 45% and reduces time to close by 30%.",""
@@ -204,7 +204,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2028": ProductListing[] = [// Healt
     "location": "Global",""
     "availability": "6-8 Weeks",""
     "aiScore": 95,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/real-estate-ai",""
@@ -217,7 +217,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2028": ProductListing[] = [// Healt
     "integrations": ["MLS Systems", "CRM Platforms", "Property Databases", "Marketing Tools", "Transaction Management"]"
   },
   // Logistics AI Platform;
-  {"
+  {"}
     "id": "logistics-ai-platform",""
     "title": "Logistics AI Platform",""
     "description": "Smart logistics platform that optimizes routes, manages fleets, and predicts delivery times. Reduces logistics costs by 35% and improves delivery accuracy by 50%.",""
@@ -235,7 +235,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2028": ProductListing[] = [// Healt
     "location": "Global",""
     "availability": "8-10 Weeks",""
     "aiScore": 96,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/logistics-ai",""
@@ -248,7 +248,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2028": ProductListing[] = [// Healt
     "integrations": ["TMS Systems", "WMS Platforms", "GPS Tracking", "Weather APIs", "Traffic Management"]"
   },
   // Hospitality AI Platform;
-  {"
+  {"}
     "id": "hospitality-ai-platform",""
     "title": "Hospitality AI Platform",""
     "description": "Comprehensive hospitality platform that personalizes guest experiences, optimizes pricing, and automates operations. Increases revenue by 40% and improves guest satisfaction by 50%.",""
@@ -266,7 +266,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2028": ProductListing[] = [// Healt
     "location": "Global",""
     "availability": "6-8 Weeks",""
     "aiScore": 95,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/hospitality-ai",""
@@ -279,7 +279,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2028": ProductListing[] = [// Healt
     "integrations": ["PMS Systems", "Booking Engines", "CRM Platforms", "Revenue Management", "Guest Services"]"
   },
   // Energy Management AI Platform;
-  {"
+  {"}
     "id": "energy-management-ai-platform",""
     "title": "Energy Management AI Platform",""
     "description": "Intelligent energy management platform that optimizes consumption, predicts usage patterns, and reduces costs. Achieves 30% energy savings and provides real-time monitoring.",""
@@ -297,7 +297,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2028": ProductListing[] = [// Healt
     "location": "Global",""
     "availability": "8-10 Weeks",""
     "aiScore": 96,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/energy-management-ai",""

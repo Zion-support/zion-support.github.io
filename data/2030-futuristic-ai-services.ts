@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-6 weeks"""
     "category": "AI Consciousness & Evolution 2030"""
     "realService"""
-    technology["Advanced Neural Networks, Consciousness Algorithms, Quantum Computing, Brain-Computer Interfaces"""
-    integrations["Research platforms, AI development tools, Consciousness monitoring systems, Ethics frameworks"""
-    useCases["AI consciousness research, Ethical AI development, Consciousness studies, AI safety research"""
+    technology["Advanced Neural Networks, Consciousness Algorithms, Quantum Computing, Brain-Computer Interfaces"""]
+    integrations["Research platforms, AI development tools, Consciousness monitoring systems, Ethics frameworks"""]
+    useCases["AI consciousness research, Ethical AI development, Consciousness studies, AI safety research"""]
     "roi": "Pioneering technology with potential for revolutionary breakthroughs in AI consciousness."""
-    competitors["None - First to market"""
+    competitors["None - First to market"""]
     "marketSize": "Emerging market - $100B+ potential"""
     "growthRate": "800%+ annual growth potential"""
     "variant": "ai-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2-4 weeks"""
     "category": "Quantum AI Computing 2030"""
     "realService"""
-    technology["Quantum Computing, Advanced AI, Quantum Algorithms, Neural Networks"""
-    integrations["Quantum computers, AI platforms, Research tools, Quantum systems"""
-    useCases["Quantum AI research, Advanced AI development, Quantum computation, Research breakthroughs"""
+    technology["Quantum Computing, Advanced AI, Quantum Algorithms, Neural Networks"""]
+    integrations["Quantum computers, AI platforms, Research tools, Quantum systems"""]
+    useCases["Quantum AI research, Advanced AI development, Quantum computation, Research breakthroughs"""]
     "roi": "Cutting-edge technology with potential for revolutionary AI and quantum computing breakthroughs."""
-    competitors["None - First to market"""
+    competitors["None - First to market"""]
     "marketSize": "Emerging market - $200B+ potential"""
     "growthRate": "1500%+ annual growth potential"""
     "variant": "quantum-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-2 months"""
     "category": "AI Autonomous Operations 2030"""
     "realService"""
-    technology["Advanced AI, Autonomous Systems, Machine Learning, Decision Systems"""
-    integrations["AI platforms, Business systems, Research tools, Autonomous systems"""
-    useCases["AI automation, Autonomous operations, AI optimization, Research automation"""
+    technology["Advanced AI, Autonomous Systems, Machine Learning, Decision Systems"""]
+    integrations["AI platforms, Business systems, Research tools, Autonomous systems"""]
+    useCases["AI automation, Autonomous operations, AI optimization, Research automation"""]
     "roi": "Revolutionary AI technology with potential for complete automation and optimization."""
-    competitors["Limited competition in autonomous AI"""
+    competitors["Limited competition in autonomous AI"""]
     "marketSize": "Growing market - $400B+ potential"""
     "growthRate": "2000%+ annual growth potential"""
     "variant": "ai-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2-4 weeks"""
     "category": "AI Metaverse Integration 2030"""
     "realService"""
-    technology["Advanced AI, Virtual Reality, Metaverse Development, Digital Intelligence"""
-    integrations["VR platforms, Gaming engines, Metaverse platforms, AI systems"""
-    useCases["Virtual beings, Gaming AI, Metaverse experiences, Digital consciousness"""
+    technology["Advanced AI, Virtual Reality, Metaverse Development, Digital Intelligence"""]
+    integrations["VR platforms, Gaming engines, Metaverse platforms, AI systems"""]
+    useCases["Virtual beings, Gaming AI, Metaverse experiences, Digital consciousness"""]
     "roi": "Revolutionary technology for the future of entertainment and virtual reality."""
-    competitors["None - First to market"""
+    competitors["None - First to market"""]
     "marketSize": "Growing market - $300B+ potential"""
     "growthRate": "1200%+ annual growth potential"""
     "variant": "metaverse-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-6 months"""
     "category": "AI Space Technology 2030"""
     "realService"""
-    technology["Advanced AI, Space Technology, Autonomous Systems, Space Robotics"""
-    integrations["Space systems, Robotics platforms, AI systems, Space monitoring"""
-    useCases["Space exploration, Autonomous missions, Space optimization, Research automation"""
+    technology["Advanced AI, Space Technology, Autonomous Systems, Space Robotics"""]
+    integrations["Space systems, Robotics platforms, AI systems, Space monitoring"""]
+    useCases["Space exploration, Autonomous missions, Space optimization, Research automation"""]
     "roi": "Critical infrastructure for future space exploration. Potential for massive returns."""
-    competitors["Limited competition in AI space technology"""
+    competitors["Limited competition in AI space technology"""]
     "marketSize": "Emerging market - $800B+ potential"""
     "growthRate": "3000%+ annual growth potential"""
     "variant": "space-futuristic"""

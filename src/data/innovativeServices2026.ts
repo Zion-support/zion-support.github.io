@@ -1,4 +1,4 @@
-export type InnovativeService = {;
+export type InnovativeService = {;}
   "id"""
     "title"""
     "description"""

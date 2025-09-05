@@ -1,6 +1,6 @@
-export interface InnovativeMicroSaasService {
-  // TODO: Implement
-}
+export interface InnovativeMicroSaasService {}
+  // TODO: Implement;
+};
   "id"""
   "realImplementation"""
   "email"""

@@ -5,7 +5,7 @@ import Link from 'next/link'''
 import { motion } from 'framer-motion'''
 } from 'lucide-react'''
 const SEO = dynamic(() => import('../src/components/SEO'')'
-const PageTransition = dynamic(() => import('../src/components/PageTransition'''
+const PageTransition = dynamic(() => import('../src/components/PageTransition''')
       "title"""
       "description"""
       "title"""

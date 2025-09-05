@@ -1,6 +1,6 @@
-export interface AddedService {
-  // TODO: Implement
-}
+export interface AddedService {}
+  // TODO: Implement;
+};
   "id"""
     "name"""
     "price"""

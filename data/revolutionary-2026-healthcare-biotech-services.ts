@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3 weeks"""
     "category": "Healthcare & AI"""
     "realService"""
-    technology["Machine Learning", "Molecular Modeling", "Bioinformatics", "Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""
-    integrations["Laboratory systems", "Clinical databases", "Regulatory platforms", "Research databases", "Healthcare systems", "Academic platforms"""
-    useCases["Drug discovery", "Clinical trials", "Personalized medicine", "Drug repurposing", "Target identification", "Toxicity testing"""
+    technology["Machine Learning", "Molecular Modeling", "Bioinformatics", "Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""]
+    integrations["Laboratory systems", "Clinical databases", "Regulatory platforms", "Research databases", "Healthcare systems", "Academic platforms"""]
+    useCases["Drug discovery", "Clinical trials", "Personalized medicine", "Drug repurposing", "Target identification", "Toxicity testing"""]
     "roi": "Average customer sees 800% ROI within 18 months through accelerated drug discovery and development."""
-    competitors["Atomwise", "Insilico Medicine", "BenevolentAI", "Exscientia", "Recursion Pharmaceuticals"""
+    competitors["Atomwise", "Insilico Medicine", "BenevolentAI", "Exscientia", "Recursion Pharmaceuticals"""]
     "marketSize": "$45.6B market"""
     "growthRate": "28.9% annual growth"""
     "variant": "quantum-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Healthcare & AI"""
     "realService"""
-    technology["Machine Learning", "Natural Language Processing", "Predictive Analytics", "Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""
-    integrations["Electronic health records", "Medical devices", "Laboratory systems", "Imaging systems", "Insurance platforms", "Government databases"""
-    useCases["Diagnosis assistance", "Treatment planning", "Patient monitoring", "Risk assessment", "Quality improvement", "Clinical research"""
+    technology["Machine Learning", "Natural Language Processing", "Predictive Analytics", "Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""]
+    integrations["Electronic health records", "Medical devices", "Laboratory systems", "Imaging systems", "Insurance platforms", "Government databases"""]
+    useCases["Diagnosis assistance", "Treatment planning", "Patient monitoring", "Risk assessment", "Quality improvement", "Clinical research"""]
     "roi": "Average customer sees 600% ROI within 12 months through improved patient outcomes and operational efficiency."""
-    competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Amazon Comprehend Medical", "Cerner"""
+    competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Amazon Comprehend Medical", "Cerner"""]
     "marketSize": "$67.4B market"""
     "growthRate": "25.3% annual growth"""
     "variant": "quantum-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Quantum AI & Research"""
     "realService"""
-    technology["Quantum Computing", "Machine Learning", "AI Algorithms", "Python", "Qiskit", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""
-    integrations["Research databases", "Academic platforms", "Government systems", "Defense platforms", "Space systems", "AI frameworks"""
-    useCases["Scientific research", "AI model optimization", "Complex problem solving", "Cross-domain research", "Breakthrough discoveries", "Research automation"""
+    technology["Quantum Computing", "Machine Learning", "AI Algorithms", "Python", "Qiskit", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""]
+    integrations["Research databases", "Academic platforms", "Government systems", "Defense platforms", "Space systems", "AI frameworks"""]
+    useCases["Scientific research", "AI model optimization", "Complex problem solving", "Cross-domain research", "Breakthrough discoveries", "Research automation"""]
     "roi": "Average customer sees 1000% ROI within 15 months through research acceleration and breakthrough discoveries."""
-    competitors["IBM Quantum", "Google Quantum", "Microsoft Quantum", "Amazon Braket", "Rigetti"""
+    competitors["IBM Quantum", "Google Quantum", "Microsoft Quantum", "Amazon Braket", "Rigetti"""]
     "marketSize": "$78.9B market"""
     "growthRate": "31.2% annual growth"""
     "variant": "quantum-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "Legal Tech & AI"""
     "realService"""
-    technology["Natural Language Processing", "Machine Learning", "Legal Analytics", "Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""
-    integrations["Legal databases", "Case management systems", "Document management", "Compliance platforms", "Government databases", "Academic platforms"""
-    useCases["Legal research", "Case analysis", "Risk assessment", "Compliance monitoring", "Contract review", "Legal education"""
+    technology["Natural Language Processing", "Machine Learning", "Legal Analytics", "Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""]
+    integrations["Legal databases", "Case management systems", "Document management", "Compliance platforms", "Government databases", "Academic platforms"""]
+    useCases["Legal research", "Case analysis", "Risk assessment", "Compliance monitoring", "Contract review", "Legal education"""]
     "roi": "Average customer sees 400% ROI within 8 months through research automation and outcome prediction."""
-    competitors["Westlaw", "LexisNexis", "Bloomberg Law", "Casetext", "Ravel Law"""
+    competitors["Westlaw", "LexisNexis", "Bloomberg Law", "Casetext", "Ravel Law"""]
     "marketSize": "$23.7B market"""
     "growthRate": "19.8% annual growth"""
     "variant": "quantum-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Biotech & AI"""
     "realService"""
-    technology["Machine Learning", "Bioinformatics", "Genomics", "Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""
-    integrations["Laboratory systems", "Sequencing platforms", "Research databases", "Healthcare systems", "Academic platforms", "Government databases"""
-    useCases["Genetic research", "Drug discovery", "Personalized medicine", "Clinical trials", "Biomarker research", "Disease modeling"""
+    technology["Machine Learning", "Bioinformatics", "Genomics", "Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""]
+    integrations["Laboratory systems", "Sequencing platforms", "Research databases", "Healthcare systems", "Academic platforms", "Government databases"""]
+    useCases["Genetic research", "Drug discovery", "Personalized medicine", "Clinical trials", "Biomarker research", "Disease modeling"""]
     "roi": "Average customer sees 700% ROI within 14 months through research acceleration and breakthrough discoveries."""
-    competitors["Benchling", "LabArchives", "Labguru", "Quartzy", "LabCollector"""
+    competitors["Benchling", "LabArchives", "Labguru", "Quartzy", "LabCollector"""]
     "marketSize": "$34.8B market"""
     "growthRate": "26.4% annual growth"""
     "variant": "quantum-futuristic"""

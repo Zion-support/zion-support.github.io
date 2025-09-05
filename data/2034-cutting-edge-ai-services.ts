@@ -1,6 +1,6 @@
-export interface CuttingEdgeAIService2034 {
-  // TODO: Implement
-}
+export interface CuttingEdgeAIService2034 {}
+  // TODO: Implement;
+};
   "id"""
   "features"""
 export const "cuttingEdgeAIServices"""
@@ -8,7 +8,7 @@ export const "cuttingEdgeAIServices"""
     "tagline"""
     "description"""
     "category"""
-    "price": { monthly: 99, "yearly": 990, "currency"""
+    "price": { monthly: 99, "yearly": 990, "currency"""}
     "link"""
     "icon"""
     "color"""
@@ -18,7 +18,7 @@ export const "cuttingEdgeAIServices"""
     "tagline"""
     "description"""
     "category"""
-    "price": { monthly: 79, "yearly": 790, "currency"""
+    "price": { monthly: 79, "yearly": 790, "currency"""}
     "features"""
     "link"""
     "icon"""

@@ -1,11 +1,10 @@
-#!/usr/bin/env node
-
-const fs = require('fs'
-const path = require('path'
-const { execSync } = require('child_process'
-    this.reportsDir = path.join(this.projectRoot, 'security-reports'
-    this.log(' Running npm audit...'
-      const result = execSync('npm audit --audit-level=moderate --json'
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+    this.reportsDir = path.join(this.projectRoot, 'security-reports')
+    this.log(' Running npm audit...')
+      const result = execSync('npm audit --audit-level=moderate --json')
         "encoding"
         "status"
         "status"
@@ -17,7 +16,7 @@ const { execSync } = require('child_process'
           "name"
           "severity"
           "name"
-          "pattern": /console\.log\s*\(\s*['""
+          "pattern": /console\.log\s*\(\s*['"")]
           "severity"
         "status"
         "type"
@@ -36,4 +35,4 @@ const { execSync } = require('child_process'
         "priority"
         "message"
         "impact"
-      console.error('\n� Security Auditor "failed"
+      console.error('\n� Security Auditor "failed")

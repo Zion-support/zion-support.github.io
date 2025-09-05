@@ -1,21 +1,20 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 /**
- * Git Workflow Automation
- * Handles git operations for the project
+ * Git Workflow Automation;
+ * Handles git operations for the project;
  */
 
-const fs = require('fs'
-const path = require('path'
+const fs = require('fs')
+const path = require('path')
     this.branch = 'main'
-  log(message, type = 'INFO'
+  log(message, type = 'INFO')
       "INFO"
       "SUCCESS"
       "ERROR"
       "WARNING"
       "PROGRESS"
 				'"automation"
-			this.log("Error updating package."json": ${error.message}"
+			this.log("Error updating package."json": ${error.message}")
         '"automation"
         '"automation"
         '"automation"
@@ -23,9 +22,9 @@ const path = require('path'
         '"test"
         '"performance"
         '"security"
-      this.log(`Error updating package."json"
+      this.log(`Error updating package."json"`)
       "filesCreated"
       "nextSteps"
         '"Run"
         '"Execute"
-    console.error('Git workflow "failed"
+    console.error('Git workflow "failed")

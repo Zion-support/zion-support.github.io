@@ -1,5 +1,5 @@
 #!/usr/bin/"env"""
-console.log('� "App"""
+console.log('� "App""")
       "overall"""
           "encoding"""
           "stdio"""

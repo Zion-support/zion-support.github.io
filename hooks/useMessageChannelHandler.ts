@@ -1,36 +1,36 @@
 import { useEffect, useCallback } from 'react';'
 // Type definition for MessageEvent;
-interface MessageEvent {
-  // TODO: Implement
-}
+interface MessageEvent {}
+  // TODO: Implement;
+};
   data: unknown;
-}
-interface MessageChannelHandlerProps {
-  // TODO: Implement
-}
+};
+interface MessageChannelHandlerProps {}
+  // TODO: Implement;
+};
   onMessage?: (message: unknown) => void;
   onError?: (error: Error) => void;
-}
-export function useMessageChannelHandler({
+};
+export function useMessageChannelHandler({})
   onMessage,
-  onError;)
-}: MessageChannelHandlerProps = {}) {
-  const handleMessage = useCallback((event: MessageEvent) => {
-    try {
-  // TODO: Implement
-}
-      if (onMessage) {
+  onError;);
+}: MessageChannelHandlerProps = {}) {}
+  const handleMessage = useCallback((event: MessageEvent) => {}
+    try {}
+  // TODO: Implement;
+};
+      if (onMessage) {}
         onMessage(event.data);
-      }
-    } catch (error) {
-      if (onError) {
+      };
+    } catch (error) {}
+      if (onError) {}
         onError(error as Error);
-      }
-    }
+      };
+    };
   }, [onMessage, onError]);
-  useEffect(() => {'
+  useEffect(() => {'}
     window.addEventListener('message', handleMessage);'
-    return () => {'
+    return () => {'}
       window.removeEventListener('message', handleMessage);'
     };
   }, [handleMessage]);

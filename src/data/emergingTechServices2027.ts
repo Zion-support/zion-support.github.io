@@ -1,6 +1,6 @@
-export interface EmergingTechService2027 {
-  // TODO: Implement
-}
+export interface EmergingTechService2027 {}
+  // TODO: Implement;
+};
   "id": string;"
   title: string;,
   description: string;

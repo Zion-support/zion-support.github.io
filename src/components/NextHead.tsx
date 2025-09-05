@@ -5,6 +5,6 @@ import Head from 'next/head'''
   keywords = 'technology, AI, software, consulting, enterprise, solutions, innovation'''
   ogImage = '/og-image.jpg'''
   children'''
-  const fullTitle = title.includes('Zion Tech Group'''
+  const fullTitle = title.includes('Zion Tech Group''')
   const fullOgUrl = ogUrl || canonical || '"https""
 cursor/fix-lint-push-and-merge-to-main-f3c1;)"

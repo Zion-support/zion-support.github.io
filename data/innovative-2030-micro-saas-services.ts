@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "15 minutes"""
     "category": "AI & Business Intelligence"""
     "realService"""
-    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Docker"""
-    integrations["Salesforce, HubSpot, Google Analytics, Shopify, QuickBooks, Slack, Microsoft Teams"""
-    useCases["Sales performance analysis, Customer behavior insights, Operational efficiency optimization, Financial forecasting, Marketing campaign ROI analysis"""
+    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Docker"""]
+    integrations["Salesforce, HubSpot, Google Analytics, Shopify, QuickBooks, Slack, Microsoft Teams"""]
+    useCases["Sales performance analysis, Customer behavior insights, Operational efficiency optimization, Financial forecasting, Marketing campaign ROI analysis"""]
     "roi": "Average customer sees 450% ROI within 6 months through improved decision-making and operational efficiency."""
-    competitors["Tableau, Power BI, Looker, QlikView, Sisense"""
+    competitors["Tableau, Power BI, Looker, QlikView, Sisense"""]
     "marketSize": "$29.5B market"""
     "growthRate": "220% annual growth"""
     "variant": "ai-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 hours"""
     "category": "Cybersecurity & Compliance"""
     "realService"""
-    technology["Rust, Go, Python, React, Kubernetes, AWS, Azure, GCP"""
-    integrations["Active Directory, Okta, CrowdStrike, Splunk, Jira, ServiceNow, Slack"""
-    useCases["Endpoint protection, Network security, Cloud security, Compliance management, Incident response, Security training"""
+    technology["Rust, Go, Python, React, Kubernetes, AWS, Azure, GCP"""]
+    integrations["Active Directory, Okta, CrowdStrike, Splunk, Jira, ServiceNow, Slack"""]
+    useCases["Endpoint protection, Network security, Cloud security, Compliance management, Incident response, Security training"""]
     "roi": "Average customer sees 600% ROI within 12 months through reduced security incidents and compliance automation."""
-    competitors["CrowdStrike, SentinelOne, Carbon Black, Cylance, Symantec"""
+    competitors["CrowdStrike, SentinelOne, Carbon Black, Cylance, Symantec"""]
     "marketSize": "$45.2B market"""
     "growthRate": "280% annual growth"""
     "variant": "quantum-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 hour"""
     "category": "Customer Experience & Marketing"""
     "realService"""
-    technology["Python, TensorFlow, React, Node.js, MongoDB, Redis, AWS, Kafka"""
-    integrations["Shopify, WooCommerce, HubSpot, Salesforce, Mailchimp, Facebook, Google Ads"""
-    useCases["Customer personalization, Journey optimization, Customer retention, Conversion optimization, Customer feedback analysis"""
+    technology["Python, TensorFlow, React, Node.js, MongoDB, Redis, AWS, Kafka"""]
+    integrations["Shopify, WooCommerce, HubSpot, Salesforce, Mailchimp, Facebook, Google Ads"""]
+    useCases["Customer personalization, Journey optimization, Customer retention, Conversion optimization, Customer feedback analysis"""]
     "roi": "Average customer sees 380% ROI within 4 months through improved customer engagement and retention."""
-    competitors["Segment, Amplitude, Mixpanel, Hotjar, FullStory"""
+    competitors["Segment, Amplitude, Mixpanel, Hotjar, FullStory"""]
     "marketSize": "$15.8B market"""
     "growthRate": "190% annual growth"""
     "variant": "ai-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "Blockchain & Supply Chain"""
     "realService"""
-    technology["Hyperledger Fabric, Ethereum, React, Node.js, PostgreSQL, AWS, Docker, Kubernetes"""
-    integrations["SAP, Oracle, Salesforce, QuickBooks, Shopify, Slack, Microsoft Teams"""
-    useCases["Product traceability, Supplier management, Compliance automation, Quality control, Sustainability tracking, Risk management"""
+    technology["Hyperledger Fabric, Ethereum, React, Node.js, PostgreSQL, AWS, Docker, Kubernetes"""]
+    integrations["SAP, Oracle, Salesforce, QuickBooks, Shopify, Slack, Microsoft Teams"""]
+    useCases["Product traceability, Supplier management, Compliance automation, Quality control, Sustainability tracking, Risk management"""]
     "roi": "Average customer sees 520% ROI within 8 months through improved efficiency and compliance automation."""
-    competitors["IBM Blockchain, SAP, Oracle, Microsoft Azure Blockchain, Amazon Managed Blockchain"""
+    competitors["IBM Blockchain, SAP, Oracle, Microsoft Azure Blockchain, Amazon Managed Blockchain"""]
     "marketSize": "$12.3B market"""
     "growthRate": "250% annual growth"""
     "variant": "blockchain-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 hours"""
     "category": "HR & People Management"""
     "realService"""
-    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Twilio"""
-    integrations["Slack, Microsoft Teams, Zoom, Google Workspace, Office 365, QuickBooks, ADP"""
-    useCases["Recruitment automation, Employee onboarding, Performance management, Compliance management, Payroll processing"""
+    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Twilio"""]
+    integrations["Slack, Microsoft Teams, Zoom, Google Workspace, Office 365, QuickBooks, ADP"""]
+    useCases["Recruitment automation, Employee onboarding, Performance management, Compliance management, Payroll processing"""]
     "roi": "Average customer sees 420% ROI within 6 months through improved efficiency and reduced administrative overhead."""
-    competitors["Workday, BambooHR, Gusto, Zenefits, Rippling"""
+    competitors["Workday, BambooHR, Gusto, Zenefits, Rippling"""]
     "marketSize": "$18.7B market"""
     "growthRate": "210% annual growth"""
     "variant": "ai-futuristic"""
@@ -258,11 +258,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Quantum Computing & AI"""
     "realService"""
-    technology["Qiskit, Cirq, Python, TensorFlow, PyTorch, AWS, Azure, GCP"""
-    integrations["Jupyter Notebooks, TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, Matplotlib"""
-    useCases["Financial modeling, Drug discovery, Climate modeling, Logistics optimization, Cryptography, Machine learning acceleration"""
+    technology["Qiskit, Cirq, Python, TensorFlow, PyTorch, AWS, Azure, GCP"""]
+    integrations["Jupyter Notebooks, TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, Matplotlib"""]
+    useCases["Financial modeling, Drug discovery, Climate modeling, Logistics optimization, Cryptography, Machine learning acceleration"""]
     "roi": "Average customer sees 800% ROI within 12 months through accelerated research and development."""
-    competitors["IBM Quantum, Google Quantum, Amazon Braket, Microsoft Azure Quantum, D-Wave"""
+    competitors["IBM Quantum, Google Quantum, Amazon Braket, Microsoft Azure Quantum, D-Wave"""]
     "marketSize": "$8.9B market"""
     "growthRate": "350% annual growth"""
     "variant": "quantum-futuristic"""
@@ -304,11 +304,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "Edge Computing & IoT"""
     "realService"""
-    technology["Kubernetes, Docker, Go, Python, React, Node.js, AWS, Azure, GCP"""
-    integrations["AWS IoT, Azure IoT, Google Cloud IoT, Docker Hub, GitHub, GitLab, Jenkins"""
-    useCases["IoT application deployment, Edge analytics, Real-time processing, Content delivery, Industrial automation, Smart cities"""
+    technology["Kubernetes, Docker, Go, Python, React, Node.js, AWS, Azure, GCP"""]
+    integrations["AWS IoT, Azure IoT, Google Cloud IoT, Docker Hub, GitHub, GitLab, Jenkins"""]
+    useCases["IoT application deployment, Edge analytics, Real-time processing, Content delivery, Industrial automation, Smart cities"""]
     "roi": "Average customer sees 450% ROI within 8 months through improved performance and reduced latency."""
-    competitors["AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry, KubeEdge"""
+    competitors["AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry, KubeEdge"""]
     "marketSize": "$11.2B market"""
     "growthRate": "240% annual growth"""
     "variant": "edge-futuristic"""

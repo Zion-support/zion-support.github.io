@@ -1,4 +1,4 @@
-export async function rewardOnboarding(..."args"""
+export async function rewardOnboarding(..."args""")
   "action"""
   "amount"""
     "method"""
