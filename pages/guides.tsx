@@ -1,114 +1,207 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-=======
 import React from 'react';
-import Layout from './components/Layout';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Layout from './components/Layout';
 import {
   BookOpen,
   Clock,
   User,
-<<<<<<< HEAD
-  Star,
-=======
   ArrowRight,
   CheckCircle,
   Star,
   Play,
   Download,
   ExternalLink,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   Code,
   Database,
   Cloud,
   Shield,
-<<<<<<< HEAD
-  Smartphone,
-  Server
-} from 'lucide-react';
-
-const guides = [
-  {
-    slug: 'react-best-practices',
-    title: 'React Best Practices',
-    description: 'Learn the essential patterns and practices for building scalable React applications',
-    category: 'Web Development',
-    icon: Code,
-    color: 'from-blue-500 to-purple-500',
-    readTime: '15 min',
-    difficulty: 'Intermediate',
-    sections: 8,
-    downloads: 2500
-  },
-  {
-    slug: 'nodejs-performance',
-    title: 'Node.js Performance Optimization',
-    description: 'Master techniques to optimize your Node.js applications for maximum performance',
-    category: 'Web Development',
-    icon: Server,
-    color: 'from-green-500 to-teal-500',
-    readTime: '25 min',
-    difficulty: 'Advanced',
-    sections: 12,
-    downloads: 1800
-  },
-  {
-    slug: 'aws-architecture',
-    title: 'AWS Architecture Patterns',
-    description: 'Design scalable and cost-effective solutions using AWS services',
-    category: 'Cloud Computing',
-    icon: Cloud,
-    color: 'from-orange-500 to-red-500',
-    readTime: '35 min',
-    difficulty: 'Advanced',
-    sections: 15,
-    downloads: 3200
-  },
-  {
-    slug: 'database-design',
-    title: 'Database Design Fundamentals',
-    description: 'Learn how to design efficient and normalized databases',
-    category: 'Database',
-    icon: Database,
-    color: 'from-indigo-500 to-blue-500',
-    readTime: '20 min',
-    difficulty: 'Intermediate',
-    sections: 10,
-    downloads: 2100
-  },
-  {
-    slug: 'security-basics',
-    title: 'Web Security Fundamentals',
-    description: 'Essential security practices every developer should know',
-    category: 'Security',
-    icon: Shield,
-    color: 'from-red-500 to-pink-500',
-    readTime: '30 min',
-    difficulty: 'Intermediate',
-    sections: 14,
-    downloads: 1900
-  },
-  {
-    slug: 'mobile-development',
-    title: 'Mobile App Development Guide',
-    description: 'Complete guide to building cross-platform mobile applications',
-    category: 'Mobile',
-    icon: Smartphone,
-    color: 'from-purple-500 to-indigo-500',
-    readTime: '40 min',
-    difficulty: 'Advanced',
-    sections: 18,
-    downloads: 1600
-=======
   Zap,
   Brain,
   Globe,
   Smartphone,
   Monitor,
-  Server
+  Server,
+  Bot,
+  Microscope,
+  Layers,
+  Workflow,
+  FileText,
+  Image,
+  Video,
+  Music,
+  Palette,
+  Search,
+  Filter,
+  Settings,
+  Wrench,
+  Cog,
+  Activity,
+  PieChart,
+  BarChart,
+  TrendingUp,
+  DollarSign,
+  ShoppingCart,
+  Home,
+  Trash2,
+  Camera,
+  Heart,
+  ClipboardList,
+  TreePine,
+  Droplets,
+  Award,
+  Building,
+  Rocket,
+  Lightbulb,
+  Target,
+  Users,
+  Phone,
+  Mail,
+  MapPin,
+  MessageSquare,
+  HelpCircle,
+  Info,
+  AlertCircle,
+  CheckCircle2,
+  XCircle,
+  Plus,
+  Minus,
+  ChevronUp,
+  ChevronRight,
+  ChevronLeft,
+  ChevronDown,
+  ArrowUp,
+  ArrowDown,
+  ArrowLeft,
+  Pause,
+  Stop,
+  SkipForward,
+  SkipBack,
+  Volume2,
+  VolumeX,
+  Maximize,
+  Minimize,
+  RotateCcw,
+  RotateCw,
+  RefreshCw,
+  Upload,
+  Share,
+  Copy,
+  Edit,
+  Trash,
+  Save,
+  Lock,
+  Unlock,
+  EyeOff,
+  Bell,
+  BellOff,
+  Star as StarIcon,
+  Heart as HeartIcon,
+  ThumbsUp,
+  ThumbsDown,
+  MessageCircle,
+  Send,
+  Paperclip,
+  Smile,
+  Frown,
+  Meh,
+  Laugh,
+  Angry,
+  Sad,
+  Surprised,
+  Wink,
+  Kiss,
+  Tongue,
+  Wink2,
+  KissWinkHeart,
+  KissClosedEyes,
+  StuckOutTongue,
+  StuckOutTongueWinkingEye,
+  StuckOutTongueClosedEyes,
+  Disappointed,
+  Worried,
+  Angry2,
+  Rage,
+  Cry,
+  Scream,
+  Confounded,
+  Hugging,
+  Smirk,
+  NoMouth,
+  NeutralFace,
+  Expressionless,
+  Unamused,
+  RollingEyes,
+  Thinking,
+  LyingFace,
+  HandOverMouth,
+  ShushingFace,
+  ExplodingHead,
+  CowboyHatFace,
+  DisguisedFace,
+  Sunglasses,
+  NerdFace,
+  MonocleFace,
+  Confused,
+  WorriedFace,
+  SlightlyFrowningFace,
+  OpenMouth,
+  Hushed,
+  Astonished,
+  Flushed,
+  PleadingFace,
+  FrowningFace,
+  AnguishedFace,
+  FearfulFace,
+  ColdSweat,
+  DisappointedRelieved,
+  CryFace,
+  LoudlyCryingFace,
+  ScreamFace,
+  StuckOutTongueFace,
+  DroolingFace,
+  UnamusedFace,
+  SweatSmile,
+  Sweat,
+  WearyFace,
+  TiredFace,
+  SleepyFace,
+  YawningFace,
+  DizzyFace,
+  ExplodingHeadFace,
+  CowboyHatFace2,
+  DisguisedFace2,
+  SunglassesFace,
+  NerdFace2,
+  MonocleFace2,
+  ConfusedFace,
+  WorriedFace2,
+  SlightlyFrowningFace2,
+  OpenMouthFace,
+  HushedFace,
+  AstonishedFace,
+  FlushedFace,
+  PleadingFace2,
+  FrowningFace2,
+  AnguishedFace2,
+  FearfulFace2,
+  ColdSweatFace,
+  DisappointedRelievedFace,
+  CryFace2,
+  LoudlyCryingFace2,
+  ScreamFace2,
+  StuckOutTongueFace2,
+  DroolingFace2,
+  UnamusedFace2,
+  SweatSmileFace,
+  SweatFace,
+  WearyFace2,
+  TiredFace2,
+  SleepyFace2,
+  YawningFace2,
+  DizzyFace2
 } from 'lucide-react';
-import Link from 'next/link';
 
 const guides = [
   {
@@ -194,20 +287,10 @@ const guides = [
     image: "/images/guides/web-performance.jpg",
     icon: Zap,
     tags: ["Performance", "Optimization", "Caching", "CDN"]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   }
 ];
 
 const categories = [
-<<<<<<< HEAD
-  { name: 'All', count: 24, active: true },
-  { name: 'Web Development', count: 6, active: false },
-  { name: 'Cloud Computing', count: 5, active: false },
-  { name: 'Database', count: 4, active: false },
-  { name: 'Security', count: 3, active: false },
-  { name: 'Mobile', count: 3, active: false },
-  { name: 'DevOps', count: 3, active: false }
-=======
   { name: "All", count: guides.length, icon: Globe },
   { name: "AI Development", count: 1, icon: Brain },
   { name: "Cloud Computing", count: 1, icon: Cloud },
@@ -215,109 +298,16 @@ const categories = [
   { name: "Mobile Development", count: 1, icon: Smartphone },
   { name: "Database", count: 1, icon: Database },
   { name: "Performance", count: 1, icon: Zap }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ];
 
 export default function GuidesPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Technical Guides
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Comprehensive guides to help you master modern technologies and best practices.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Categories */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category, index) => (
-              <button
-                key={index}
-                className={`px-6 py-3 rounded-full font-semibold transition-colors ${
-                  category.active
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                {category.name} ({category.count})
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Guides Grid */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {guides.map((guide, index) => (
-              <motion.div
-                key={index}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className={`h-2 bg-gradient-to-r ${guide.color}`}></div>
-                <div className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${guide.color} flex items-center justify-center mr-4`}>
-                      <guide.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <span className="text-sm text-gray-500">{guide.category}</span>
-                      <h3 className="text-lg font-semibold text-gray-900">{guide.title}</h3>
-                    </div>
-                  </div>
-                  <p className="text-gray-600 mb-4">{guide.description}</p>
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                    <span className="flex items-center">
-                      <Clock className="w-4 h-4 mr-1" />
-                      {guide.readTime}
-                    </span>
-                    <span className="flex items-center">
-                      <User className="w-4 h-4 mr-1" />
-                      {guide.difficulty}
-                    </span>
-                    <span className="flex items-center">
-                      <Star className="w-4 h-4 mr-1" />
-                      {guide.sections} sections
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500">{guide.downloads} downloads</span>
-                    <Link
-                      href={`/guides/${guide.slug}`}
-                      className="flex items-center text-blue-600 hover:text-blue-700 font-semibold"
-                    >
-                      Read Guide
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </Link>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </div>
-=======
     <Layout>
+      <Head>
+        <title>Guides & Tutorials - Zion Tech Group</title>
+        <meta name="description" content="Master the latest technologies with our comprehensive guides, tutorials, and best practices from industry experts." />
+      </Head>
+
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -549,6 +539,5 @@ export default function GuidesPage() {
         </section>
       </div>
     </Layout>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   );
 }

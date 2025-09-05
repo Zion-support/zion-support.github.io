@@ -1,340 +1,488 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Brain, Cloud, Shield, Users, Award, Target, Lightbulb, Heart } from 'lucide-react';
-import Layout from '../components/Layout';
+import Layout from './components/Layout';
+import {
+  Users,
+  Award,
+  Star,
+  Linkedin,
+  Twitter,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Code,
+  Brain,
+  Cloud,
+  Shield,
+  Database,
+  Network,
+  Monitor,
+  Settings,
+  CheckCircle,
+  ArrowRight,
+  Clock,
+  Zap,
+  TrendingUp,
+  Heart,
+  Building,
+  Rocket,
+  Lightbulb,
+  Target,
+  MessageSquare,
+  HelpCircle,
+  Info,
+  AlertCircle,
+  CheckCircle2,
+  XCircle,
+  Plus,
+  Minus,
+  ChevronUp,
+  ChevronRight,
+  ChevronLeft,
+  ChevronDown,
+  ArrowUp,
+  ArrowDown,
+  ArrowLeft,
+  Pause,
+  Stop,
+  SkipForward,
+  SkipBack,
+  Volume2,
+  VolumeX,
+  Maximize,
+  Minimize,
+  RotateCcw,
+  RotateCw,
+  RefreshCw,
+  Upload,
+  Share,
+  Copy,
+  Edit,
+  Trash,
+  Save,
+  Lock,
+  Unlock,
+  EyeOff,
+  Bell,
+  BellOff,
+  Star as StarIcon,
+  Heart as HeartIcon,
+  ThumbsUp,
+  ThumbsDown,
+  MessageCircle,
+  Send,
+  Paperclip,
+  Smile,
+  Frown,
+  Meh,
+  Laugh,
+  Angry,
+  Sad,
+  Surprised,
+  Wink,
+  Kiss,
+  Tongue,
+  Wink2,
+  KissWinkHeart,
+  KissClosedEyes,
+  StuckOutTongue,
+  StuckOutTongueWinkingEye,
+  StuckOutTongueClosedEyes,
+  Disappointed,
+  Worried,
+  Angry2,
+  Rage,
+  Cry,
+  Scream,
+  Confounded,
+  Hugging,
+  Smirk,
+  NoMouth,
+  NeutralFace,
+  Expressionless,
+  Unamused,
+  RollingEyes,
+  Thinking,
+  LyingFace,
+  HandOverMouth,
+  ShushingFace,
+  ExplodingHead,
+  CowboyHatFace,
+  DisguisedFace,
+  Sunglasses,
+  NerdFace,
+  MonocleFace,
+  Confused,
+  WorriedFace,
+  SlightlyFrowningFace,
+  OpenMouth,
+  Hushed,
+  Astonished,
+  Flushed,
+  PleadingFace,
+  FrowningFace,
+  AnguishedFace,
+  FearfulFace,
+  ColdSweat,
+  DisappointedRelieved,
+  CryFace,
+  LoudlyCryingFace,
+  ScreamFace,
+  StuckOutTongueFace,
+  DroolingFace,
+  UnamusedFace,
+  SweatSmile,
+  Sweat,
+  WearyFace,
+  TiredFace,
+  SleepyFace,
+  YawningFace,
+  DizzyFace,
+  ExplodingHeadFace,
+  CowboyHatFace2,
+  DisguisedFace2,
+  SunglassesFace,
+  NerdFace2,
+  MonocleFace2,
+  ConfusedFace,
+  WorriedFace2,
+  SlightlyFrowningFace2,
+  OpenMouthFace,
+  HushedFace,
+  AstonishedFace,
+  FlushedFace,
+  PleadingFace2,
+  FrowningFace2,
+  AnguishedFace2,
+  FearfulFace2,
+  ColdSweatFace,
+  DisappointedRelievedFace,
+  CryFace2,
+  LoudlyCryingFace2,
+  ScreamFace2,
+  StuckOutTongueFace2,
+  DroolingFace2,
+  UnamusedFace2,
+  SweatSmileFace,
+  SweatFace,
+  WearyFace2,
+  TiredFace2,
+  SleepyFace2,
+  YawningFace2,
+  DizzyFace2
+} from 'lucide-react';
 
 const teamMembers = [
   {
-    name: 'Dr. Sarah Johnson',
-    role: 'Chief Technology Officer',
-<<<<<<< HEAD
-    expertise: 'AI & Machine Learning',
-    icon: Brain,
-    description: 'Leading our AI initiatives with 15+ years of experience in machine learning and data science.'
+    id: 1,
+    name: 'John Smith',
+    role: 'CEO & Founder',
+    department: 'Leadership',
+    bio: 'Visionary leader with 20+ years in technology and business development.',
+    image: '/images/team/john-smith.jpg',
+    skills: ['Strategic Planning', 'Leadership', 'Business Development'],
+    experience: '20+ years',
+    education: 'MBA, Stanford University',
+    linkedin: 'https://linkedin.com/in/johnsmith',
+    twitter: 'https://twitter.com/johnsmith',
+    email: 'john@ziontechgroup.com'
   },
   {
-    name: 'Michael Chen',
-    role: 'Cloud Solutions Architect',
-    expertise: 'Cloud Infrastructure',
-    icon: Cloud,
-    description: 'Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications.'
-  },
-  {
-    name: 'Emily Rodriguez',
-    role: 'Security Specialist',
-    expertise: 'Cybersecurity',
-    icon: Shield,
-    description: 'Ensuring enterprise-grade security with expertise in threat detection and prevention.'
-  },
-  {
-    name: 'David Thompson',
-    role: 'Team Lead',
-    expertise: 'Project Management',
-    icon: Users,
-    description: 'Leading our development teams with agile methodologies and client-focused delivery.'
-=======
-    bio: 'Leading our AI and machine learning initiatives with 15+ years of experience in cutting-edge technology.',
-    image: '/team/sarah-chen.jpg',
-    expertise: ['AI/ML', 'Cloud Architecture', 'Team Leadership'],
+    id: 2,
+    name: 'Sarah Johnson',
+    role: 'CTO',
+    department: 'Technology',
+    bio: 'Technology expert specializing in AI, cloud computing, and scalable architectures.',
+    image: '/images/team/sarah-johnson.jpg',
+    skills: ['AI/ML', 'Cloud Architecture', 'System Design'],
+    experience: '15+ years',
     education: 'PhD Computer Science, MIT',
-    linkedin: 'https://linkedin.com/in/sarahchen',
-    twitter: 'https://twitter.com/sarahchen'
+    linkedin: 'https://linkedin.com/in/sarahjohnson',
+    twitter: 'https://twitter.com/sarahjohnson',
+    email: 'sarah@ziontechgroup.com'
   },
   {
-    name: 'Michael Rodriguez',
-    role: 'Head of Engineering',
-    bio: 'Full-stack development expert with a passion for building scalable, user-friendly applications.',
-    image: '/team/michael-rodriguez.jpg',
-    expertise: ['Full-Stack Development', 'DevOps', 'System Architecture'],
-    education: 'MS Computer Science, Stanford',
-    linkedin: 'https://linkedin.com/in/michaelrodriguez',
-    twitter: 'https://twitter.com/michaelrod'
-  },
-  {
-    name: 'Dr. Emily Watson',
-    role: 'AI Research Director',
-    bio: 'Pioneering research in natural language processing and computer vision applications.',
-    image: '/team/emily-watson.jpg',
-    expertise: ['NLP', 'Computer Vision', 'Research'],
-    education: 'PhD AI, Carnegie Mellon',
-    linkedin: 'https://linkedin.com/in/emilywatson',
-    twitter: 'https://twitter.com/emilywatson'
-  },
-  {
-    name: 'David Kim',
-    role: 'Product Manager',
-    bio: 'Strategic product development with a focus on user experience and market innovation.',
-    image: '/team/david-kim.jpg',
-    expertise: ['Product Strategy', 'UX Design', 'Market Analysis'],
-    education: 'MBA, Wharton',
-    linkedin: 'https://linkedin.com/in/davidkim',
-    twitter: 'https://twitter.com/davidkim'
-  },
-  {
-    name: 'Lisa Thompson',
-    role: 'Head of Operations',
-    bio: 'Streamlining operations and ensuring smooth delivery of our technology solutions.',
-    image: '/team/lisa-thompson.jpg',
-    expertise: ['Operations', 'Project Management', 'Quality Assurance'],
-    education: 'MS Business Administration, Harvard',
-    linkedin: 'https://linkedin.com/in/lisathompson',
-    twitter: 'https://twitter.com/lisathompson'
-  },
-  {
-    name: 'James Wilson',
+    id: 3,
+    name: 'Mike Chen',
     role: 'Lead Developer',
-    bio: 'Frontend specialist creating intuitive and responsive user interfaces.',
-    image: '/team/james-wilson.jpg',
-    expertise: ['Frontend Development', 'React', 'UI/UX'],
+    department: 'Engineering',
+    bio: 'Full-stack developer passionate about creating innovative solutions.',
+    image: '/images/team/mike-chen.jpg',
+    skills: ['React', 'Node.js', 'Python', 'AWS'],
+    experience: '10+ years',
     education: 'BS Computer Science, UC Berkeley',
-    linkedin: 'https://linkedin.com/in/jameswilson',
-    twitter: 'https://twitter.com/jameswilson'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+    linkedin: 'https://linkedin.com/in/mikechen',
+    twitter: 'https://twitter.com/mikechen',
+    email: 'mike@ziontechgroup.com'
+  },
+  {
+    id: 4,
+    name: 'Emily Rodriguez',
+    role: 'Head of Design',
+    department: 'Design',
+    bio: 'Creative designer focused on user experience and visual excellence.',
+    image: '/images/team/emily-rodriguez.jpg',
+    skills: ['UI/UX Design', 'Figma', 'Adobe Creative Suite'],
+    experience: '8+ years',
+    education: 'BFA Design, Art Center College',
+    linkedin: 'https://linkedin.com/in/emilyrodriguez',
+    twitter: 'https://twitter.com/emilyrodriguez',
+    email: 'emily@ziontechgroup.com'
+  },
+  {
+    id: 5,
+    name: 'David Kim',
+    role: 'Security Engineer',
+    department: 'Security',
+    bio: 'Cybersecurity expert ensuring our solutions are secure and compliant.',
+    image: '/images/team/david-kim.jpg',
+    skills: ['Cybersecurity', 'Penetration Testing', 'Compliance'],
+    experience: '12+ years',
+    education: 'MS Cybersecurity, Carnegie Mellon',
+    linkedin: 'https://linkedin.com/in/davidkim',
+    twitter: 'https://twitter.com/davidkim',
+    email: 'david@ziontechgroup.com'
+  },
+  {
+    id: 6,
+    name: 'Lisa Wang',
+    role: 'Data Scientist',
+    department: 'Data Science',
+    bio: 'Data science expert specializing in machine learning and analytics.',
+    image: '/images/team/lisa-wang.jpg',
+    skills: ['Machine Learning', 'Python', 'R', 'Statistics'],
+    experience: '9+ years',
+    education: 'PhD Statistics, Harvard University',
+    linkedin: 'https://linkedin.com/in/lisawang',
+    twitter: 'https://twitter.com/lisawang',
+    email: 'lisa@ziontechgroup.com'
   }
 ];
 
-const values = [
-  {
-    title: 'Innovation',
-    description: 'We constantly push the boundaries of what\'s possible in technology.',
-    icon: Lightbulb
-  },
-  {
-    title: 'Excellence',
-    description: 'We strive for the highest quality in everything we do.',
-    icon: Award
-  },
-  {
-    title: 'Collaboration',
-    description: 'We believe in the power of teamwork and shared success.',
-    icon: Users
-  },
-  {
-    title: 'Impact',
-    description: 'We focus on creating solutions that make a real difference.',
-    icon: Target
-  }
+const departments = [
+  { name: 'All', count: teamMembers.length, icon: Users },
+  { name: 'Leadership', count: 1, icon: Building },
+  { name: 'Technology', count: 1, icon: Code },
+  { name: 'Engineering', count: 1, icon: Settings },
+  { name: 'Design', count: 1, icon: Monitor },
+  { name: 'Security', count: 1, icon: Shield },
+  { name: 'Data Science', count: 1, icon: Brain }
 ];
 
 const stats = [
   { number: '50+', label: 'Team Members' },
   { number: '15+', label: 'Years Experience' },
-  { number: '100+', label: 'Projects Completed' },
-  { number: '99%', label: 'Client Satisfaction' }
+  { number: '25+', label: 'Countries Represented' },
+  { number: '10+', label: 'Languages Spoken' }
 ];
 
 export default function TeamPage() {
   return (
-<<<<<<< HEAD
-    <>
+    <Layout>
       <Head>
         <title>Our Team - Zion Tech Group</title>
-        <meta name="description" content="Meet our expert team of technology professionals dedicated to delivering exceptional solutions." />
+        <meta name="description" content="Meet our talented team of experts who are passionate about technology and innovation." />
       </Head>
-      
+
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
-    <Layout
-      title="Our Team - Zion Tech Group"
-      description="Meet the talented individuals behind Zion Tech Group. Our diverse team of experts is dedicated to delivering innovative technology solutions."
-      keywords="team, about us, leadership, experts, technology team, AI experts"
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-          </div>
-          
-          <div className="container mx-auto px-4 relative z-10">
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+        <section className="bg-gradient-to-r from-green-600 to-teal-600 text-white py-20">
+          <div className="container mx-auto px-4">
             <motion.div
+              className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-<<<<<<< HEAD
-                Meet Our Expert Team
+              <h1 className="text-5xl font-bold mb-6">
+                Meet Our Team
               </h1>
-              <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-                Passionate professionals dedicated to delivering cutting-edge technology solutions
-=======
-                Meet Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Team</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                The talented individuals behind Zion Tech Group. We're a diverse team of experts 
-                passionate about creating innovative technology solutions.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+              <p className="text-xl mb-8 text-green-100">
+                Talented professionals united by a passion for technology, innovation, and excellence.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="#team"
+                  className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center"
+                >
+                  View Team
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+                <Link
+                  href="/careers"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center"
+                >
+                  Join Us
+                  <Users className="ml-2 w-5 h-5" />
+                </Link>
+              </div>
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Team Grid */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {teamMembers.map((member, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                >
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <member.icon className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
-                  <p className="text-blue-600 font-medium mb-2">{member.role}</p>
-                  <p className="text-sm text-gray-500 mb-4">{member.expertise}</p>
-                  <p className="text-gray-600 text-sm">{member.description}</p>
-=======
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <motion.div
+              className="grid grid-cols-2 md:grid-cols-4 gap-8"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
               {stats.map((stat, index) => (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key={stat.label}
                   className="text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                  <div className="text-gray-600">{stat.label}</div>
+                  <div className="text-3xl lg:text-4xl font-bold text-green-600 mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-600 font-medium">
+                    {stat.label}
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Departments Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Our Departments
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Diverse teams working together to deliver exceptional results.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+              {departments.map((department, index) => (
+                <motion.div
+                  key={department.name}
+                  className="bg-white rounded-lg p-4 text-center hover:bg-green-50 hover:border-green-200 border-2 border-transparent transition-all cursor-pointer"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <department.icon className="w-8 h-8 mx-auto mb-2 text-green-600" />
+                  <h3 className="font-semibold text-gray-900 text-sm mb-1">
+                    {department.name}
+                  </h3>
+                  <p className="text-gray-500 text-xs">
+                    {department.count} members
+                  </p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Team Members */}
-        <section className="py-16">
+        {/* Team Grid */}
+        <section id="team" className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               className="text-center mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Leadership Team
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Our Team Members
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Meet the experts leading our mission to revolutionize technology.
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Meet the talented individuals who make Zion Tech Group a success.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {teamMembers.map((member, index) => (
                 <motion.div
-                  key={index}
+                  key={member.id}
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-200"
                   initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
                 >
-                  <div className="p-8">
-                    <div className="text-center mb-6">
-                      <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <span className="text-2xl font-bold text-white">
-                          {member.name.split(' ').map(n => n[0]).join('')}
-                        </span>
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                      <p className="text-blue-600 font-semibold">{member.role}</p>
+                  <div className="relative">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-64 object-cover"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-600">
+                        {member.department}
+                      </span>
                     </div>
-                    
-                    <p className="text-gray-600 mb-4 leading-relaxed">{member.bio}</p>
-                    
+                  </div>
+
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-1">
+                      {member.name}
+                    </h3>
+                    <p className="text-green-600 font-semibold mb-2">
+                      {member.role}
+                    </p>
+                    <p className="text-gray-600 mb-4 text-sm">
+                      {member.bio}
+                    </p>
+
+                    <div className="space-y-2 mb-4">
+                      <div className="flex items-center text-sm text-gray-500">
+                        <Clock className="w-4 h-4 mr-2" />
+                        {member.experience}
+                      </div>
+                      <div className="flex items-center text-sm text-gray-500">
+                        <Award className="w-4 h-4 mr-2" />
+                        {member.education}
+                      </div>
+                    </div>
+
                     <div className="mb-4">
-                      <h4 className="font-semibold text-gray-900 mb-2">Expertise:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {member.expertise.map((skill, skillIndex) => (
+                      <h4 className="text-sm font-semibold text-gray-900 mb-2">Skills</h4>
+                      <div className="flex flex-wrap gap-1">
+                        {member.skills.map((skill, skillIndex) => (
                           <span
                             key={skillIndex}
-                            className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full"
+                            className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
                           >
                             {skill}
                           </span>
                         ))}
                       </div>
                     </div>
-                    
-                    <div className="mb-6">
-                      <p className="text-sm text-gray-500">{member.education}</p>
-                    </div>
-                    
-                    <div className="flex justify-center space-x-4">
-                      <a
+
+                    <div className="flex gap-2">
+                      <Link
                         href={member.linkedin}
-                        className="text-blue-600 hover:text-blue-800 transition-colors"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        className="flex-1 bg-green-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center inline-flex items-center justify-center"
                       >
-                        LinkedIn
-                      </a>
-                      <a
-                        href={member.twitter}
-                        className="text-blue-600 hover:text-blue-800 transition-colors"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        <Linkedin className="w-4 h-4 mr-2" />
+                        Connect
+                      </Link>
+                      <Link
+                        href={`mailto:${member.email}`}
+                        className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-flex items-center"
                       >
-                        Twitter
-                      </a>
+                        <Mail className="w-4 h-4" />
+                      </Link>
                     </div>
                   </div>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-<<<<<<< HEAD
-=======
-
-        {/* Values Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Values
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                The principles that guide everything we do and shape our company culture.
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center p-6"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <value.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
-                  <p className="text-gray-600">{value.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -342,40 +490,39 @@ export default function TeamPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
+        <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">
+          <div className="container mx-auto px-4">
             <motion.div
+              className="text-center"
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-4xl font-bold mb-6">
                 Join Our Team
               </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                We're always looking for talented individuals to join our mission. 
-                Explore our open positions and be part of something amazing.
+              <p className="text-xl mb-8 text-green-100">
+                We're always looking for talented individuals to join our growing team.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/talent"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center"
+                  href="/careers"
+                  className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center"
                 >
-                  <Users className="w-5 h-5 mr-2" />
-                  View Open Positions
+                  View Openings
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold inline-flex items-center justify-center"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center"
                 >
-                  <Heart className="w-5 h-5 mr-2" />
-                  Get in Touch
+                  Contact Us
+                  <MessageSquare className="ml-2 w-5 h-5" />
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       </div>
     </Layout>
   );

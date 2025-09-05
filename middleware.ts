@@ -6,30 +6,25 @@ const publicRoutes = [
   "/about",
   "/contact",
   "/services",
-<<<<<<< HEAD
   "/ai-services",
-  "/blog",
-  "/docs",
-=======
   "/micro-saas",
   "/it-services",
-  "/ai-services",
   "/pricing",
   "/team",
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   "/careers",
   "/blog",
   "/news",
   "/support",
   "/faq",
   "/privacy",
-<<<<<<< HEAD
-  "/terms"
-=======
   "/terms",
   "/login",
-  "/register"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+  "/register",
+  "/guides",
+  "/help",
+  "/case-studies",
+  "/sitemap",
+  "/search"
 ];
 
 export function middleware(request: NextRequest) {
@@ -53,6 +48,13 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     */
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
 };
