@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-env node, es6 */
 import { mkdirSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import sharp from 'sharp';

@@ -472,3 +472,4 @@ function getFeatureDescription(key: string) {
     default: return "Core platform feature";
   }
 }
+}

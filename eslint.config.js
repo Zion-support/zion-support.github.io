@@ -6,7 +6,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import next from '@next/eslint-plugin-next';
 
 export default [
-  js.configs.recommended;
+  js.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     ignores: [
@@ -15,6 +15,7 @@ export default [
       'dist/**',
       'build/**',
       'node_modules/**',
+      '.eslintrc.js',
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
@@ -226,7 +227,14 @@ export default [
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       ...next.configs.recommended.rules,
-      'no-unused-vars': 'warnno-console': 'warnprefer-const': 'errorno-var': 'errorreact/prop-types': 'offreact/react-in-jsx-scope': 'off@typescript-eslint/no-unused-vars': 'warn@typescript-eslint/no-explicit-any': 'warn'
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'error',
+      'no-var': 'error',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn'
     },
     settings: {
       react: {
@@ -235,7 +243,7 @@ export default [
     }
   },
   {
-    files: ['**/*.cjs'],
+    files: ['**/*.cjs', '.eslintrc.js', 'app-optimizer.js', '**/next.config.js', '**/tailwind.config.js'],
     languageOptions: {
       sourceType: 'commonjs',
       globals: {
@@ -259,15 +267,47 @@ export default [
     }
   },
   {
+    files: ['apps.backup/extension/**/*.js'],
+    languageOptions: {
+      sourceType: 'module',
+      globals: {
+        // Browser globals
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        fetch: 'readonly',
+        // Chrome extension globals
+        chrome: 'readonly',
+        // Web APIs
+        URL: 'readonly',
+        crypto: 'readonly'
+      }
+    }
+  },
+  {
     ignores: [
       // Node/build outputs
-
+      '.next/**',
+      'out/**',
+      'dist/**',
+      'build/**',
+      'node_modules/**',
 
       // Public assets/scripts
       'public/**',
 
       // Root-level noisy files
-
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'scripts/**',
+      'automation/**'
     ]
   }
 ];

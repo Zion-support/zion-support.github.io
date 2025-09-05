@@ -504,3 +504,4 @@ function getTokenSystemLabel(type: string) {
     default: return type;
   }
 }
+}

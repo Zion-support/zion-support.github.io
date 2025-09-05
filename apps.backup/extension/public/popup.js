@@ -1,3 +1,4 @@
+/* eslint-env browser, webextensions, es6 */
 const API_BASE = 'http://localhost:4000';
 
 function getUserId(cb) {

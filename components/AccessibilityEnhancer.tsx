@@ -1,101 +1,5 @@
-
-    };
-,
-    // Add ARIA live region for announcements,
-    const liveRegion = document.createElement('div'),
-    liveRegion.setAttribute('aria-livepolite'),
-    liveRegion.setAttribute('aria-atomictrue'),
-    liveRegion.className = 'sr-only',
-    liveRegion.id = 'live-region',
-    document.body.appendChild(liveRegion),
-,
-    // Announce page changes,
-    const announcePageChange = (message: string) => {,
-      const liveRegion = document.getElementById('live-region'),
-      if (liveRegion) {,
-        liveRegion.textContent = message
-      };
-    };
-,
-    // Listen for route changes (Next.js specific),
-    const handleRouteChange = () => {,
-      announcePageChange('Page loaded')
-    };
-,
-    // Add route change listener if available,
-    if (typeof window !== 'undefined' && window.history) {,
-      const originalPushState = window.history.pushState,
-      const originalReplaceState = window.history.replaceState,
-,
-      window.history.pushState = function(...args) {,
-        originalPushState.apply(this, args),
-        setTimeout(handleRouteChange, 100)
-      };
-,
-      window.history.replaceState = function(...args) {,
-        originalReplaceState.apply(this, args),
-        setTimeout(handleRouteChange, 100)
-      };
-,
-      window.addEventListener('popstate', handleRouteChange)
-    };
-,
-    // Cleanup,
-    return () => {,
-      document.removeEventListener('mousedown', handleMouseDown),
-      document.removeEventListener('keydown', handleKeyDown),
-      if (skipLink.parentNode) {,
-        skipLink.parentNode.removeChild(skipLink)
-      };
-      if (liveRegion.parentNode) {,
-        liveRegion.parentNode.removeChild(liveRegion)
-      };
-    };
-  }, []),
-,
-  return null
-};
-,
-// Add CSS for focus management,
-const focusStyles = `,
-  .using-mouse *:focus {,
-    outline: none !important
-  };
-  .focus-visible: focus {,
-    outline: 2px solid #2563eb !important,
-    outline-offset: 2px !important
-  };
-  .sr-only {,
-    position: absolute,
-    width: 1px,
-    height: 1px,
-    padding: 0,
-    margin: -1px,
-    overflow: hidden,
-    clip: rect(0, 0, 0, 0),
-    white-space: nowrap,
-    border: 0
-  };
-  .sr-only.focus: not-sr-only:focus {,
-    position: static,
-    width: auto,
-    height: auto,
-    padding: inherit,
-    margin: inherit,
-    overflow: visible,
-    clip: auto,
-    white-space: normal
-  };
-`,
-,
-// Inject styles,
-if (typeof document !== 'undefined') {,
-  const styleSheet = document.createElement('style'),
-  styleSheet.textContent = focusStyles,
-  document.head.appendChild(styleSheet)
-};
 import React, { useState, useEffect, useCallback, useRef, FocusEvent } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Eye, EyeOff, Volume2, VolumeX, Type, 
   Contrast, ZoomIn, ZoomOut, RotateCcw,
@@ -111,6 +15,9 @@ interface AccessibilitySettings {
   fontSize: number;
   lineSpacing: number;
   colorBlindMode: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
+  screenReader: boolean;
+  focusIndicators: boolean;
+  keyboardNavigation: boolean;
 }
 
 interface AccessibilityEnhancerProps {
@@ -120,6 +27,8 @@ interface AccessibilityEnhancerProps {
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [isReading, setIsReading] = useState(false);
+  const [speechRate, setSpeechRate] = useState(1.0);
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     largeText: false,
@@ -127,7 +36,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     highlighter: false,
     fontSize: 16,
     lineSpacing: 1.5,
-    colorBlindMode: 'none'
+    colorBlindMode: 'none',
+    screenReader: false,
+    focusIndicators: false,
+    keyboardNavigation: false
   });
   const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
   const [isPanelOpen, setIsPanelOpen] = useState(false);
@@ -135,6 +47,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   
   const focusRef = useRef<HTMLDivElement>(null);
   const announcementRef = useRef<HTMLDivElement>(null);
+  const settingsRef = useRef<HTMLDivElement>(null);
 
   // Apply accessibility settings to the document
   useEffect(() => {
@@ -231,7 +144,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         speakText(text.substring(0, 500) + '...'); // Limit text length
       }
     }
-  }, [applySettings]);
+  };
 
   // Focus management
   const handleFocusChange = useCallback((e: FocusEvent<Element>) => {
@@ -249,8 +162,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
   // Announce to screen reader
   const announceToScreenReader = useCallback((message: string) => {
-    // setAnnouncements(prev => [...prev, message]); // This line was removed
-    
     // Create live region for screen readers
     if (!announcementRef.current) {
       const liveRegion = document.createElement('div');
@@ -267,11 +178,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     
     // Remove announcement after a delay
     setTimeout(() => {
-      // setAnnouncements(prev => prev.filter(a => a !== message)); // This line was removed
+      // Clear announcement
     }, 5000);
   }, []);
 
   // Auto-optimize accessibility
+  const applySettings = useCallback((newSettings: AccessibilitySettings) => {
+    // Apply settings logic here
+  }, []);
+
   useEffect(() => {
     applySettings(settings);
   }, [settings, applySettings]);
@@ -418,7 +333,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       highlighter: false,
       fontSize: 16,
       lineSpacing: 1.5,
-      colorBlindMode: 'none'
+      colorBlindMode: 'none',
+      screenReader: false,
+      focusIndicators: false,
+      keyboardNavigation: false
     });
   };
 
@@ -671,5 +589,5 @@ export const SrOnly: React.FC<{ children: React.ReactNode }> = ({ children }) =>
   <span className="sr-only">{children}</span>
 );
 
-// Export the main provider component as default
-export default AccessibilityProvider;
+// Export the main component as default
+export default AccessibilityEnhancer;

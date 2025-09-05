@@ -1,6 +1,10 @@
 
 module.exports = {
   extends: ['next/core-web-vitals'],
+  env: {
+    node: true,
+    commonjs: true
+  },
   rules: {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
@@ -27,4 +31,3 @@ module.exports = {
     'apps/'
   ]
 };
-,

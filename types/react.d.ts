@@ -12,7 +12,7 @@
 
 declare module "react" {
   // Basic ReactElement stub (JSX trees ultimately compile into this).
-  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
+   
   export interface ReactElement<P = any, T extends string | React.JSXElementConstructor<any> = any> {
     type: T;
     props: P;
@@ -20,7 +20,7 @@ declare module "react" {
   }
 
   // Function Component (very trimmed-down).
-  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
+   
   export interface FC<P = Record<string, unknown>> {
     (props: P): ReactElement | null;
   }
@@ -42,7 +42,7 @@ declare module "react" {
 declare namespace React {
   // Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements"
   // errors when `@types/react` is not present.
-  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
+   
   export interface IntrinsicElements {
     [elemName: string]: any;
   }
