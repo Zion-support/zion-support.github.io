@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
-import SearchBar from '../components/SearchBar';
 import '../styles/globals.css';
 
 function Header(): React.ReactElement {
@@ -27,21 +26,6 @@ function Header(): React.ReactElement {
           textDecoration: 'none'
         }}>Zion Tech Group</Link>
         
-<<<<<<< HEAD
-        <div className="header-nav-links">
-          <Link href="/" className="header-nav-link">Home</Link>
-          <Link href="/services" className="header-nav-link">All Services</Link>
-          <Link href="/services-catalog" className="header-nav-link">Catalog</Link>
-          <Link href="/cloud-devops" className="header-nav-link">Cloud DevOps</Link>
-          <Link href="/cybersecurity" className="header-nav-link">Cybersecurity</Link>
-          <Link href="/quantum-computing" className="header-nav-link">Quantum</Link>
-          <Link href="/docs" className="header-nav-link">Docs</Link>
-          <Link href="/pricing" className="header-nav-link">Pricing</Link>
-          <div className="hidden md:block">
-            <SearchBar />
-          </div>
-          <Link href="/contact" className="header-nav-cta">Contact</Link>
-=======
         {/* Desktop Navigation */}
         <div style={{ 
           display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center'
@@ -83,7 +67,6 @@ function Header(): React.ReactElement {
             color: 'white', padding: '8px 16px', borderRadius: 8,
             transition: 'all 0.2s ease', textDecoration: 'none'
           }}>Contact</Link>
->>>>>>> ce2f1c888fb90dd5d7d297f621bf29128aa0e6a6
         </div>
 
         {/* Mobile Navigation */}
@@ -109,22 +92,6 @@ function Header(): React.ReactElement {
         </div>
       </nav>
       
-<<<<<<< HEAD
-      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
-        <div className="md:hidden mb-4">
-          <SearchBar />
-        </div>
-        <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-        <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
-        <Link href="/services-catalog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
-        <Link href="/cloud-devops" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Cloud DevOps</Link>
-        <Link href="/cybersecurity" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Cybersecurity</Link>
-        <Link href="/quantum-computing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Quantum</Link>
-        <Link href="/docs" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Docs</Link>
-        <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
-        <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
-      </div>
-=======
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div style={{
@@ -167,7 +134,6 @@ function Header(): React.ReactElement {
           }} onClick={() => setMobileMenuOpen(false)}>About</Link>
         </div>
       )}
->>>>>>> ce2f1c888fb90dd5d7d297f621bf29128aa0e6a6
     </header>
   );
 }
@@ -206,21 +172,6 @@ function Footer(): React.ReactElement {
         </div>
 
         {/* Services */}
-<<<<<<< HEAD
-        <div className="footer-section">
-          <h3>Services</h3>
-          <Link href="/services">All Services</Link>
-          <Link href="/micro-saas">Micro SaaS Products</Link>
-          <Link href="/ai-services">AI Services</Link>
-          <Link href="/it-services">IT Services</Link>
-          <Link href="/services-catalog">Services Catalog</Link>
-          <Link href="/docs">Documentation</Link>
-          <Link href="/pricing">Pricing</Link>
-          <div className="text-sm mt-2 space-y-1">
-            <div>• 130+ Micro SaaS Products</div>
-            <div>• 90+ AI Services</div>
-            <div>• 90+ IT Solutions</div>
-=======
         <div style={{ display: 'grid', gap: 12 }}>
           <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Our Services</h3>
           <div style={{ display: 'grid', gap: 8 }}>
@@ -235,7 +186,6 @@ function Footer(): React.ReactElement {
               <div>• 100+ AI Services</div>
               <div>• 100+ IT Solutions</div>
             </div>
->>>>>>> ce2f1c888fb90dd5d7d297f621bf29128aa0e6a6
           </div>
         </div>
 
@@ -300,12 +250,7 @@ function Footer(): React.ReactElement {
       }}>
         <small style={{ opacity: 0.7 }}>
           © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
-<<<<<<< HEAD
-          <Link href="/privacy" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Privacy Policy</Link> | 
-          <Link href="/terms" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Terms of Service</Link>
-=======
           <Link href="/privacy">Privacy Policy</Link>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-b684
         </small>
       </div>
     </footer>
@@ -317,9 +262,11 @@ export default function App({ Component, pageProps }: AppProps) {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
+          // eslint-disable-next-line no-console
           console.log('SW registered: ', registration);
         })
         .catch((registrationError) => {
+          // eslint-disable-next-line no-console
           console.log('SW registration failed: ', registrationError);
         });
     }

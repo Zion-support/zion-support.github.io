@@ -140,7 +140,7 @@ export default function Contact(): React.ReactElement {
                 Send Us a Message
               </h2>
               <p className="text-lg text-slate-300">
-                Fill out the form below and we'll get back to you within 24 hours
+                Fill out the form below and we&apos;ll get back to you within 24 hours
               </p>
             </div>
             <ContactForm />
