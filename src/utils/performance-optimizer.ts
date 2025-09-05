@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // Performance optimization utilities;
 export const optimizeImages = () => {;
@@ -30,6 +31,23 @@ export const optimizeBundleSize = () => {;
     return import(`./components/${componentName}`);
   };
 ;
+=======
+// Performance optimizer utilities
+export const optimizeImages = () => {
+  console.log('Optimizing images...');
+};
+
+export const lazyLoadComponents = () => {
+  console.log('Lazy loading components...');
+};
+
+export const optimizeBundleSize = () => {
+  // Dynamic imports for non-critical components
+  const loadComponent = componentName => {
+    return import(`./components/${componentName}`),
+  },
+
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   return { loadComponent };
 };
 ;

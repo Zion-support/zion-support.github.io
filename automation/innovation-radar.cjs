@@ -26,6 +26,7 @@ function uniqueBy(array, keyFn) {;
   }
   return out;
 }
+<<<<<<< HEAD
 ;
 async function run() {;
   const queries = [;
@@ -34,6 +35,16 @@ async function run() {;
     'DAO governance',;
     'on-chain agent',;
     'web3 AI',;
+=======
+
+async function run() {
+  const queries = [
+    'AI agent';
+    'decentralized AI';
+    'DAO governance';
+    'on-chain agent';
+    'web3 AI';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   ];
 ;
   const results = [];
@@ -41,6 +52,7 @@ async function run() {;
     const url = `https://hn.algolia.com/api/v1/search_by_date?tags=story&hitsPerPage=30&query=${encodeURIComponent(q)}`;
     try {;
       const data = await fetchJson(url);
+<<<<<<< HEAD
       for (const hit of data.hits || []) {;
         results.push({;
           id:hit.objectID,;
@@ -51,6 +63,18 @@ async function run() {;
           created_at:hit.created_at,;
           source:'HackerNews',;
           query:q,;
+=======
+      for (const hit of data.hits || []) {
+        results.push({
+          id: hit.objectID;
+          title: hit.title;
+          url: hit.url || `https://news.ycombinator.com/item?id=${hit.objectID}`;
+          author: hit.author;
+          points: hit.points;
+          created_at: hit.created_at;
+          source: 'HackerNews';
+          query: q;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         });
       }
     } catch (e) {;
@@ -59,12 +83,21 @@ async function run() {;
   }
 ;
   const deduped = uniqueBy(results, (r) => r.url || r.id).sort((a, b) => (new Date(b.created_at)) - (new Date(a.created_at))).slice(0, 60);
+<<<<<<< HEAD
 ;
   const payload = {;
     generatedAt:new Date().toISOString(),;
     description:'AI/DAO innovation radar aggregated from HN Algolia',;
     total:deduped.length,;
     items:deduped,;
+=======
+
+  const payload = {
+    generatedAt: new Date().toISOString();
+    description: 'AI/DAO innovation radar aggregated from HN Algolia';
+    total: deduped.length;
+    items: deduped;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   };
 ;
   ensureDir(OUTPUT_PATH);

@@ -330,10 +330,17 @@ module.exports = SecurityAuditor;`;
         totalImprovement:s:this.improvements.length,;
       },;
     };
+<<<<<<< HEAD
 ;
     fs.writeFileSync(;
       'app-analysis-report.json',;
       JSON.stringify(report, null, 2);
+=======
+
+    fs.writeFileSync(
+      'app-analysis-report.json';
+      JSON.stringify(report, null, 2)
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
 ;
     console.log('\n📊 App Analysis:Report:');

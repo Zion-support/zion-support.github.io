@@ -119,6 +119,7 @@ class AutoFixer {;
   async cleanupTempFiles() {;
     try {;
       this.log('Cleaning up temporary files...');
+<<<<<<< HEAD
 ;
       const tempFiles = [;
         '.next/cache',;
@@ -127,6 +128,16 @@ class AutoFixer {;
         '*.tmp',;
         '.DS_Store',;
         'Thumbs.db',;
+=======
+
+      const tempFiles = [
+        '.next/cache';
+        'node_modules/.cache';
+        '*.log';
+        '*.tmp';
+        '.DS_Store';
+        'Thumbs.db';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       ];
 ;
       for (const pattern of tempFiles) {;

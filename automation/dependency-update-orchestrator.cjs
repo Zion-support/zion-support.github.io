@@ -7,6 +7,7 @@
 ;
 const fs = require('fs');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 ;
 class DependencyUpdateOrchestrator {;
   constructor() {;
@@ -15,6 +16,16 @@ class DependencyUpdateOrchestrator {;
       checkInterval:24 * 60 * 60 * 1000, // 24 hours;
       maxConcurrentUpdates:3,;
       updateStrategy:'conservative' // conservative, aggressive, manual;
+=======
+
+class DependencyUpdateOrchestrator {
+  constructor() {
+    this.config = {
+      autoUpdate: true;
+      checkInterval: 24 * 60 * 60 * 1000, // 24 hours
+      maxConcurrentUpdates: 3;
+      updateStrategy: 'conservative' // conservative, aggressive, manual
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
   }
 ;
@@ -51,6 +62,7 @@ class DependencyUpdateOrchestrator {;
     try {;
       const output = execSync('npm outdated --json', { encoding:'utf8', stdio:'pipe' });
       const outdated = JSON.parse(output);
+<<<<<<< HEAD
       ;
       return Object.entries(outdated).map(([name, info]) => ({;
         name,;
@@ -58,6 +70,15 @@ class DependencyUpdateOrchestrator {;
         wanted:info.wanted,;
         latest:info.latest,;
         location:info.location;
+=======
+      
+      return Object.entries(outdated).map(([name, info]) => ({
+        name;
+        current: info.current;
+        wanted: info.wanted;
+        latest: info.latest;
+        location: info.location
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       }));
     } catch (error) {;
       // npm outdated returns non-zero exit code when there are outdated packages;
@@ -65,12 +86,21 @@ class DependencyUpdateOrchestrator {;
       return [];
     }
   }
+<<<<<<< HEAD
 ;
   async analyzeUpdateImpact(packages) {;
     const updatePlan = {;
       safe:[],;
       risky:[],;
       blocked:[];
+=======
+
+  async analyzeUpdateImpact(packages) {
+    const updatePlan = {
+      safe: [];
+      risky: [];
+      blocked: []
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
     ;
     for (const pkg of packages) {;
@@ -162,11 +192,19 @@ class DependencyUpdateOrchestrator {;
   async updatePackage(packageName, version) {;
     try {;
       console.log(`  📦 Updating ${packageName} to ${version}...`);
+<<<<<<< HEAD
       ;
       // Update the specific package;
       execSync(`npm install ${packageName}@${version}`, { ;
         stdio:'pipe',;
         encoding:'utf8';
+=======
+      
+      // Update the specific package
+      execSync(`npm install ${packageName}@${version}`, { 
+        stdio: 'pipe';
+        encoding: 'utf8'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
       ;
       console.log(`  ✅ ${packageName} updated successfully`);

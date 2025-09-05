@@ -18,6 +18,7 @@ export interface IntegrationProviderMeta {;
   oauthScopes?:string[],;
   icon?:string;
 }
+<<<<<<< HEAD
 ;
 export type SyncStatus = 'connected' | 'warning' | 'disconnected',;
 ;
@@ -28,6 +29,17 @@ export interface SyncRules {;
   // ATS rules;
   autoSyncApplicants?:boolean,;
   autoUploadResumes?:boolean,;
+=======
+export type SyncStatus = 'connected' | 'warning' | 'disconnected',
+
+export interface SyncRules {
+  // CRM rules
+  autoCreateContacts?: boolean,
+  pushNotesMode?: 'auto' | 'manual',
+  // ATS rules
+  autoSyncApplicants?: boolean,
+  autoUploadResumes?: boolean
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 export interface ProviderConnection {;

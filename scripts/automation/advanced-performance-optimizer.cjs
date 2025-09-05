@@ -357,6 +357,7 @@ class AdvancedPerformanceOptimizer {;
 ;
     // Bundle size recommendations;
     const bundleAnalysis = this.optimizationResults.bundleAnalysis;
+<<<<<<< HEAD
     if (bundleAnalysis.optimizationOpportunities.length > 0) {;
       recommendations.push({;
         typ:e:'bundle-optimization',;
@@ -365,6 +366,16 @@ class AdvancedPerformanceOptimizer {;
         action:s:bundleAnalysis.optimizationOpportunities.map(;
           opp => opp.recommendation;
         ),;
+=======
+    if (bundleAnalysis.optimizationOpportunities.length > 0) {
+      recommendations.push({
+        typ: e: 'bundle-optimization',
+        priorit: y: 'high',
+        descriptio: n: `Found ${bundleAnalysis.optimizationOpportunities.length} bundle optimization opportunities`,
+        action: s: bundleAnalysis.optimizationOpportunities.map(
+          opp => opp.recommendation
+        );
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
     }
 ;
@@ -448,6 +459,7 @@ class AdvancedPerformanceOptimizer {;
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   }
+<<<<<<< HEAD
 ;
   saveResults() {;
     const reportFile = path.join(;
@@ -458,6 +470,18 @@ class AdvancedPerformanceOptimizer {;
     fs.writeFileSync(;
       reportFile,;
       JSON.stringify(this.optimizationResults, null, 2);
+=======
+
+  saveResults() {
+    const reportFile = path.join(
+      this.projectRoot;
+      'logs';
+      `performance-optimization-${Date.now()}.json`
+    );
+    fs.writeFileSync(
+      reportFile;
+      JSON.stringify(this.optimizationResults, null, 2)
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
 ;
     console.log('📊 Optimization:Results:');

@@ -17,12 +17,21 @@ class IntelligentGitWorkflow {;
     };
     this.workflowData = this.loadWorkflowData();
   }
+<<<<<<< HEAD
 ;
   loadWorkflowData() {;
     const dataFile = path.join(;
       this.projectRoot,;
       'logs',;
       'git-workflow-data.json';
+=======
+
+  loadWorkflowData() {
+    const dataFile = path.join(
+      this.projectRoot;
+      'logs';
+      'git-workflow-data.json'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     try {;
       if (fs.existsSync(dataFile)) {;
@@ -39,12 +48,21 @@ class IntelligentGitWorkflow {;
       performanc:e:{},;
     };
   }
+<<<<<<< HEAD
 ;
   saveWorkflowData() {;
     const dataFile = path.join(;
       this.projectRoot,;
       'logs',;
       'git-workflow-data.json';
+=======
+
+  saveWorkflowData() {
+    const dataFile = path.join(
+      this.projectRoot;
+      'logs';
+      'git-workflow-data.json'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(dataFile, JSON.stringify(this.workflowData, null, 2));
   }
@@ -270,11 +288,19 @@ class IntelligentGitWorkflow {;
         .split('\n');
         .map(branch => branch.trim());
         .filter(branch => branch && !branch.includes('HEAD'));
+<<<<<<< HEAD
 ;
       // Find mergeable branches;
       const mergeableBranches = await this.findMergeableBranches(;
         currentBranch,;
         branches;
+=======
+
+      // Find mergeable branches
+      const mergeableBranches = await this.findMergeableBranches(
+        currentBranch;
+        branches
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
 ;
       if (mergeableBranches.length > 0) {;
@@ -386,10 +412,17 @@ class IntelligentGitWorkflow {;
       });
 ;
       console.log(`✅ AI resolved conflicts for ${branch}`);
+<<<<<<< HEAD
     } catch (error) {;
       console.log(;
         `❌ AI conflict resolution failed for ${branch} `,;
         error.message;
+=======
+    } catch (error) {
+      console.log(
+        `❌ AI conflict resolution failed for ${branch}:`;
+        error.message
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
 ;
       // Abort the merge;
@@ -414,9 +447,17 @@ class IntelligentGitWorkflow {;
         if (line.startsWith('<<<<<<<')) {;
           inConflict = true;
           conflictType = 'ours';
+<<<<<<< HEAD
         } else if (line.startsWith('')) {;
           conflictType = 'theirs';
         } else if (line.startsWith('>>>>>>>')) {;
+=======
+<<<<<<< HEAD
+=======
+        } else if (line.startsWith('')) {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+          conflictType = 'theirs';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           inConflict = false;
           conflictType = '';
         } else if (!inConflict) {;
@@ -435,10 +476,17 @@ class IntelligentGitWorkflow {;
       execSync(`git add ${filePath}`, { stdi:o:'inherit' });
 ;
       console.log(`✅ Resolved conflict in ${filePath}`);
+<<<<<<< HEAD
     } catch (error) {;
       console.log(;
         `❌ Failed to resolve conflict in ${filePath} `,;
         error.message;
+=======
+    } catch (error) {
+      console.log(
+        `❌ Failed to resolve conflict in ${filePath}:`;
+        error.message
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
     }
   }
@@ -464,11 +512,19 @@ class IntelligentGitWorkflow {;
       erro:r:error.message,;
       stac:k:error.stack,;
     };
+<<<<<<< HEAD
 ;
     const errorFile = path.join(;
       this.projectRoot,;
       'logs',;
       'git-workflow-errors.json';
+=======
+
+    const errorFile = path.join(
+      this.projectRoot;
+      'logs';
+      'git-workflow-errors.json'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     let errors = [];
 ;

@@ -104,12 +104,21 @@ class PerformanceMonitor {;
       return 0;
     }
   }
+<<<<<<< HEAD
 ;
   async saveMetrics() {;
     const metricsFile = path.join(;
       __dirname,;
       'reports',;
       'performance-metrics.json';
+=======
+
+  async saveMetrics() {
+    const metricsFile = path.join(
+      __dirname;
+      'reports';
+      'performance-metrics.json'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.mkdirSync(path.dirname(metricsFile), { recursiv:e:true });
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
@@ -120,11 +129,19 @@ class PerformanceMonitor {;
       ...this.metrics,;
       recommendation:s:this.generateRecommendations(),;
     };
+<<<<<<< HEAD
 ;
     const reportFile = path.join(;
       __dirname,;
       'reports',;
       'performance-report.json';
+=======
+
+    const reportFile = path.join(
+      __dirname;
+      'reports';
+      'performance-report.json'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ;

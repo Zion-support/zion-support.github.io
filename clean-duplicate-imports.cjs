@@ -55,11 +55,19 @@ class ImportCleaner {;
       const newImportStatement = `import { ;
   ${uniqueImports.join(',\n  ')}
 } from 'lucide-react';`;
+<<<<<<< HEAD
 ;
       // Replace the old import;
       content = content.replace(;
         /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/,;
         newImportStatement;
+=======
+
+      // Replace the old import
+      content = content.replace(
+        /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/;
+        newImportStatement
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
 ;
       fs.writeFileSync(filePath, content);
@@ -74,11 +82,19 @@ class ImportCleaner {;
 ;
   async cleanAllFiles() {;
     this.log('🚀 Starting import cleaning...');
+<<<<<<< HEAD
 ;
     const filesToClean = [;
       'pages/components/Navigation.tsx',;
       'pages/it-services.tsx',;
       'pages/components/Footer.tsx',;
+=======
+
+    const filesToClean = [
+      'pages/components/Navigation.tsx';
+      'pages/it-services.tsx';
+      'pages/components/Footer.tsx';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     ];
 ;
     for (const file of filesToClean) {;

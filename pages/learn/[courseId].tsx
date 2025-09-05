@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react',;
 import { useRouter } from 'next/router',;
 import ProgressBar from '../../components/learn/ProgressBar',;
@@ -49,6 +50,54 @@ export default function CourseView() {;
   function onModuleQuizComplete(score:number) {;
     // For demo, simply mark as completed when quiz attempted;
     if (currentLessonId) markLessonComplete(currentLessonId),;
+=======
+import { useEffect, useMemo, useState } from 'react',
+import { useRouter } from 'next/router',
+import ProgressBar from '../../components/learn/ProgressBar',
+import Quiz from '../../components/learn/Quiz',
+import CertificatePreview from '../../components/learn/CertificatePreview',
+import CoachWidget from '../../components/learn/CoachWidget',
+export default function CourseView() {
+  const router = useRouter(),
+  const { courseId } = router.query as { courseId: string },
+  const [course, setCourse] = useState<any>(null),
+  const [progress, setProgress] = useState<any>({ percent: 0, completedLessons: [] }),
+  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null),
+  const [finalPassed, setFinalPassed] = useState(false),
+
+  useEffect(() => {
+    if (!courseId) return,    async function load() {
+      const [courseResp, _progResp] = await Promise.all([
+        fetch(`/api/learn/courses/${courseId}`),
+        fetch(`/api/learn/progress?userId=demo-user`)
+      ]),
+      const courseData = await courseResp.json(),
+      const progData = await progResp.json(),
+      setCourse(courseData.course),
+      const cp = (progData.progress && progData.progress[courseId]) || { percent: 0, completedLessons: [] },
+      setProgress(cp),
+      setCurrentLessonId(courseData?.course?.lessons?.[0]?.id || null)    }
+    load()
+  }, [courseId]),
+
+  const currentLesson = useMemo(() => course?.lessons?.find((l: any) => l.id === currentLessonId), [course, currentLessonId]),
+  async function markLessonComplete(_lessonId: string) {_const _completedCount = (progress.completedLessons || []).includes(lessonId)
+      ? (progress.completedLessons || []).length
+      : (progress.completedLessons || []).length + 1,
+    const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100),
+    const resp = await fetch('/api/learn/progress', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId: 'demo-user', courseId, lessonId, percent })
+    }),
+    const data = await resp.json(),
+    setProgress(data.progress)
+  }
+
+  function onModuleQuizComplete(score: number) {
+    // For demo, simply mark as completed when quiz attempted
+    if (currentLessonId) markLessonComplete(currentLessonId)
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   }
 ;
   async function onFinalQuizComplete(score:number) {;
@@ -56,6 +105,7 @@ export default function CourseView() {;
     const passed = score >= needed,;
     setFinalPassed(passed);
   }
+<<<<<<< HEAD
 ;
   if (!course) return <div>Loading...</div>,;
 ;
@@ -129,4 +179,74 @@ export default function CourseView() {;
       </div>;
     </div>;
   ),;
+=======
+  if (!course) return <div>Loading...</div>,
+
+  return (
+    <div className=&quot;grid lg:grid-cols-3 gap-6&quot;>
+      <div className=&quot;lg:col-span-2 space-y-4&quot;>
+        <div>
+          <h1 className=&quot;text-2xl font-semibold&quot;>{course.title}</h1>
+          <div className=&quot;text-gray-500 text-sm&quot;>{course.category} • {course.level}</div>
+          <div className=&quot;mt-3&quot;>
+            <ProgressBar value={progress.percent || 0} />
+            <div className=&quot;text-xs text-gray-500 mt-1&quot;>Progress: {progress.percent || 0}%</div>
+          </div>
+        </div>
+
+        <div className=&quot;grid lg:grid-cols-5 gap-4&quot;>
+          <aside className=&quot;lg:col-span-2 border rounded p-3 h-max&quot;>
+            <div className=&quot;font-medium mb-2&quot;>Lessons</div>
+            <ul className=&quot;space-y-2&quot;>
+              {course.lessons?.map((l: any) => (
+                <li key={l.id}>
+                  <button className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`} onClick={() => setCurrentLessonId(l.id)}>
+                    {l.title}                  </button>
+                </li>
+              ))}
+            </ul>
+          </aside>
+
+          <section className=&quot;lg:col-span-3 space-y-4&quot;>
+            {currentLesson ? (
+              <div className=&quot;border rounded p-4&quot;>
+                <div className=&quot;font-medium&quot;>{currentLesson.title}</div>
+                <div className=&quot;mt-2 text-sm whitespace-pre-line&quot;>{currentLesson.content}</div>
+                {currentLesson.quiz?.questions?.length ? (
+                  <div className=&quot;mt-4&quot;>
+                    <Quiz questions={currentLesson.quiz.questions} onComplete={onModuleQuizComplete} />
+                  </div>
+                ) : (
+                  <button className=&quot;mt-3 px-4 py-2 bg-green-600 text-white rounded&quot; onClick={() => markLessonComplete(currentLesson.id)}>Mark Complete</button>                )}
+              </div>
+            ) : (
+              <div className=&quot;text-sm text-gray-500&quot;>Select a lesson</div>
+            )}
+
+            {course.finalQuiz?.questions?.length ? (
+              <div className=&quot;border rounded p-4&quot;>
+                <div className=&quot;font-medium mb-2&quot;>Final Certification Quiz</div>
+                <Quiz questions={course.finalQuiz.questions} onComplete={onFinalQuizComplete} />
+                {finalPassed && (
+                  <div className=&quot;mt-3 text-green-700&quot;>Passed! You can download your certificate below.</div>                )}
+              </div>
+            ) : null}
+
+            {_finalPassed && (
+              <CertificatePreview courseId={courseId} />
+            )}
+          </section>
+        </div>
+      </div>
+
+      <div className=&quot;space-y-4&quot;>
+        <CoachWidget />
+        <div className=&quot;border rounded p-3&quot;>
+          <div className=&quot;font-medium&quot;>Profile Boost</div>
+          <div className=&quot;text-sm text-gray-600 mt-1&quot;>Opt-in to boost your visibility in matches when certified skills apply.</div>
+          <button className=&quot;mt-2 px-3 py-2 bg-indigo-600 text-white rounded&quot; onClick={() => alert('Preference saved (demo)')}>Enable Boost</button>        </div>
+      </div>
+    </div>
+  )
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

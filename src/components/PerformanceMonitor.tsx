@@ -1,4 +1,6 @@
+import React from 'react';
 
+<<<<<<< HEAD
         };
       };
 ;
@@ -56,3 +58,11 @@
 ;
             onClick={() => setIsVisible(false)};
 ;
+=======
+export default function PerformanceMonitor() {_return (
+    <div className="performance-monitor">
+      <p>Performance Monitor</p>
+    </div>
+  );
+}  );}
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

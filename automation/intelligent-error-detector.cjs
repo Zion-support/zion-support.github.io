@@ -43,10 +43,17 @@ class IntelligentErrorDetector {;
       buil:d:await this.detectBuildErrors(),;
       runtim:e:await this.detectRuntimeErrors(),;
     };
+<<<<<<< HEAD
 ;
     const totalErrors = Object.values(errors).reduce(;
       (sum, arr) => sum + arr.length,;
       0;
+=======
+
+    const totalErrors = Object.values(errors).reduce(
+      (sum, arr) => sum + arr.length;
+      0
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     this.log(`Found ${totalErrors} total errors across all categories`);
 ;
@@ -137,6 +144,7 @@ class IntelligentErrorDetector {;
     files.forEach(file => {;
       try {;
         const content = fs.readFileSync(file, 'utf8');
+<<<<<<< HEAD
         if (this.errorPatterns.runtime.test(content)) {;
           runtimeErrors.push({;
             file,;
@@ -144,6 +152,15 @@ class IntelligentErrorDetector {;
               content;
                 .split('\n');
                 .findIndex(line => this.errorPatterns.runtime.test(line)) + 1,;
+=======
+        if (this.errorPatterns.runtime.test(content)) {
+          runtimeErrors.push({
+            file,
+            lin: e:
+              content
+                .split('\n')
+                .findIndex(line => this.errorPatterns.runtime.test(line)) + 1;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           });
         }
       } catch (error) {;
@@ -198,16 +215,28 @@ class IntelligentErrorDetector {;
         (acc, [category, errorList]) => {;
           acc[category] = errorList.length;
           return acc;
+<<<<<<< HEAD
         },;
+=======
+        };
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         {}
       ),;
       detail:s:errors,;
     };
+<<<<<<< HEAD
 ;
     const reportFile = path.join(;
       __dirname,;
       'reports',;
       'error-detection-report.json';
+=======
+
+    const reportFile = path.join(
+      __dirname;
+      'reports';
+      'error-detection-report.json'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.mkdirSync(path.dirname(reportFile), { recursiv:e:true });
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));

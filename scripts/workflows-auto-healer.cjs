@@ -10,6 +10,7 @@ const path = require('path');
 const yaml = require('js-yaml');
 ;
 const WORKFLOWS_DIR = path.join(__dirname, '..', '.github', 'workflows');
+<<<<<<< HEAD
 ;
 // Common workflow issues and fixes;
 const WORKFLOW_FIXES = {;
@@ -37,6 +38,35 @@ const WORKFLOW_FIXES = {;
     pattern:/actions\/setup-node@v3/g,;
     replacement:'actions/setup-node@v4',;
     description:'Update setup-node action to v4';
+=======
+
+// Common workflow issues and fixes
+const WORKFLOW_FIXES = {
+  'node-version': {
+    pattern: /node-version:\s*['"]?(\d+)['"]?/g;
+    replacement: 'node-version: \'20.18.1\'';
+    description: 'Update Node.js version to 20.18.1'
+  };
+  'npm-version': {
+    pattern: /npm-version:\s*['"]?(\d+)['"]?/g;
+    replacement: 'npm-version: \'10.0.0\'';
+    description: 'Update npm version to 10.0.0'
+  };
+  'runs-on': {
+    pattern: /runs-on:\s*ubuntu-latest/g;
+    replacement: 'runs-on: ubuntu-22.04';
+    description: 'Update Ubuntu runner to 22.04'
+  };
+  'actions-checkout': {
+    pattern: /actions\/checkout@v3/g;
+    replacement: 'actions/checkout@v4';
+    description: 'Update checkout action to v4'
+  };
+  'actions-setup-node': {
+    pattern: /actions\/setup-node@v3/g;
+    replacement: 'actions/setup-node@v4';
+    description: 'Update setup-node action to v4'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   }
 };
 ;
@@ -49,6 +79,7 @@ function loadWorkflowFile(filePath) {;
     return null;
   }
 }
+<<<<<<< HEAD
 ;
 function saveWorkflowFile(filePath, content) {;
   try {;
@@ -56,6 +87,15 @@ function saveWorkflowFile(filePath, content) {;
       lineWidth:120, ;
       noRefs:true,;
       sortKeys:false;
+=======
+
+function saveWorkflowFile(filePath, content) {
+  try {
+    const yamlContent = yaml.dump(content, { 
+      lineWidth: 120;
+      noRefs: true;
+      sortKeys: false
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     });
     fs.writeFileSync(filePath, yamlContent);
     return true;
@@ -106,6 +146,7 @@ function validateWorkflow(workflowPath) {;
     if (workflow.runs_on === 'ubuntu-latest') {;
       issues.push('Using deprecated ubuntu-latest runner');
     }
+<<<<<<< HEAD
     ;
     return {;
       valid:issues.length === 0,;
@@ -117,6 +158,19 @@ function validateWorkflow(workflowPath) {;
       valid:false,;
       issues:[error.message],;
       workflow:null;
+=======
+    
+    return {
+      valid: issues.length === 0;
+      issues;
+      workflow
+    };
+  } catch (error) {
+    return {
+      valid: false;
+      issues: [error.message];
+      workflow: null
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
   }
 }
@@ -152,11 +206,19 @@ function healAllWorkflows() {;
       totalErrors++;
     }
   });
+<<<<<<< HEAD
   ;
   return {;
     total:workflowFiles.length,;
     fixed:totalFixes,;
     errors:totalErrors;
+=======
+  
+  return {
+    total: workflowFiles.length;
+    fixed: totalFixes;
+    errors: totalErrors
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   };
 }
 ;
@@ -214,9 +276,17 @@ function main() {;
 if (require.main === module) {;
   main();
 }
+<<<<<<< HEAD
 ;
 module.exports = {;
   healAllWorkflows,;
   validateWorkflow,;
   fixWorkflowIssues;
+=======
+
+module.exports = {
+  healAllWorkflows;
+  validateWorkflow;
+  fixWorkflowIssues
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 };

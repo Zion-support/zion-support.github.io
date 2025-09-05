@@ -5,6 +5,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 ;
 console.log('🤖 Starting AI Code Quality Analyzer...');
+<<<<<<< HEAD
 ;
 class AICodeQualityAnalyzer {;
   constructor() {;
@@ -14,6 +15,17 @@ class AICodeQualityAnalyzer {;
       '..',;
       'automation-reports',;
       'ai-code-quality.log';
+=======
+
+class AICodeQualityAnalyzer {
+  constructor() {
+    this.logFile = path.join(
+      __dirname;
+      '..';
+      '..';
+      'automation-reports';
+      'ai-code-quality.log'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     this.ensureLogDir();
   }
@@ -137,6 +149,7 @@ class AICodeQualityAnalyzer {;
 ;
   generateRecommendations() {;
     this.log('💡 Generating recommendations...');
+<<<<<<< HEAD
 ;
     return [;
       'Implement automated code quality checks in CI/CD',;
@@ -146,6 +159,17 @@ class AICodeQualityAnalyzer {;
       'Implement automated security scanning',;
       'Set up code coverage reporting',;
       'Add dependency vulnerability scanning',;
+=======
+
+    return [
+      'Implement automated code quality checks in CI/CD';
+      'Set up pre-commit hooks for linting and formatting';
+      'Add code review guidelines and templates';
+      'Create performance monitoring dashboard';
+      'Implement automated security scanning';
+      'Set up code coverage reporting';
+      'Add dependency vulnerability scanning';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     ];
   }
 ;
@@ -160,6 +184,7 @@ class AICodeQualityAnalyzer {;
         priorit:y:this.getPriority(analysis.metrics),;
       },;
     };
+<<<<<<< HEAD
 ;
     const reportPath = path.join(;
       __dirname,;
@@ -167,6 +192,15 @@ class AICodeQualityAnalyzer {;
       '..',;
       'automation-reports',;
       'ai-code-quality-report.json';
+=======
+
+    const reportPath = path.join(
+      __dirname;
+      '..';
+      '..';
+      'automation-reports';
+      'ai-code-quality-report.json'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved:to:${reportPath}`);

@@ -32,11 +32,19 @@ function extractTitleFromFile(filePath) {;
   } catch {}
   return null;
 }
+<<<<<<< HEAD
 ;
 function writeFileIfChanged(targetPath, newContent) {;
   const prev = fs.existsSync(targetPath) ? fs.readFileSync(targetPath, 'utf8') :'';
   if (prev.trim() !== newContent.trim()) {;
     fs.mkdirSync(path.dirname(targetPath), { recursive:true });
+=======
+
+function writeFileIfChanged(targetPath, newContent) {
+  const prev = fs.existsSync(targetPath) ? fs.readFileSync(targetPath, 'utf8') : '';
+  if (prev.trim() !== newContent.trim()) {
+    fs.mkdirSync(path.dirname(targetPath) { recursive: true });
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     fs.writeFileSync(targetPath, newContent);
     console.log(`Updated ${path.relative(process.cwd(), targetPath)}`);
   } else {;
@@ -85,6 +93,7 @@ function buildBlogIndex() {;
       return { href:href.replace(/^\/pages/, ''), text:title };
     });
     .sort((a, b) => a.text.localeCompare(b.text));
+<<<<<<< HEAD
 ;
   const content = generateIndexPage({;
     title:'Blog',;
@@ -92,6 +101,15 @@ function buildBlogIndex() {;
     items,;
     baseHref:'/blog',;
     extraIntro:'Browse our latest posts:';
+=======
+
+  const content = generateIndexPage({
+    title: 'Blog';
+    description: 'Latest articles and insights from Zion Tech Solutions';
+    items;
+    baseHref: '/blog';
+    extraIntro: 'Browse our latest posts:'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   });
   writeFileIfChanged(path.join(blogDir, 'index.tsx'), content);
 }
@@ -107,6 +125,7 @@ function buildServicesIndex() {;
       return { href, text:title };
     });
     .sort((a, b) => a.text.localeCompare(b.text));
+<<<<<<< HEAD
 ;
   const content = generateIndexPage({;
     title:'Services',;
@@ -114,6 +133,15 @@ function buildServicesIndex() {;
     items,;
     baseHref:'/services',;
     extraIntro:'Our service offerings:';
+=======
+
+  const content = generateIndexPage({
+    title: 'Services';
+    description: 'Explore the services we offer';
+    items;
+    baseHref: '/services';
+    extraIntro: 'Our service offerings:'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   });
   writeFileIfChanged(path.join(servicesDir, 'index.tsx'), content);
 }

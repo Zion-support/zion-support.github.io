@@ -49,6 +49,7 @@ function buildReport(images, publicDir) {;
   const items = images.map(abs => {;
     const relFromRoot = path.relative(process.cwd(), abs).replace(/\\/g, '/');
     const relFromPublic = path.relative(publicDir, abs).replace(/\\/g, '/');
+<<<<<<< HEAD
     return {;
       file:relFromRoot,;
       publicPath:`/${relFromPublic}`.replace(/\\/g, '/'),;
@@ -61,6 +62,20 @@ function buildReport(images, publicDir) {;
     generatedAt:new Date().toISOString(),;
     total:items.length,;
     images:items,;
+=======
+    return {
+      file: relFromRoot;
+      publicPath: `/${relFromPublic}`.replace(/\\/g, '/');
+      suggestion: suggestAltFromFilename(abs);
+      bytes: fs.statSync(abs).size;
+      updatedAt: new Date().toISOString();
+    };
+  });
+  return {
+    generatedAt: new Date().toISOString();
+    total: items.length;
+    images: items;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   };
 }
 ;

@@ -24,6 +24,7 @@ async function run() {;
   for (const rel of files) {;
     const filePath = path.join(base, rel);
     const before = fs.statSync(filePath).size;
+<<<<<<< HEAD
     const out = await imagemin([filePath], {;
       destination:path.dirname(filePath),;
       plugins:[;
@@ -31,6 +32,15 @@ async function run() {;
         pngquant({ quality:[0.65, 0.8] }),;
         svgo({ multipass:true });
       ];
+=======
+    const out = await imagemin([filePath], {
+      destination: path.dirname(filePath);
+      plugins: [
+        mozjpeg({ quality: 78 });
+        pngquant({ quality: [0.65, 0.8] });
+        svgo({ multipass: true })
+      ]
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     });
     const after = fs.statSync(filePath).size;
     const saved = before - after;

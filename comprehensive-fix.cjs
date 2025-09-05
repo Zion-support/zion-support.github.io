@@ -32,6 +32,7 @@ function fixFile(filePath) {;
           return match + ';';
         }
         return match;
+<<<<<<< HEAD
       });
       // Fix malformed function calls;
       .replace(/(\w+)\s*\(\s*\)\s*}/g, '$1();');
@@ -41,6 +42,17 @@ function fixFile(filePath) {;
         /useEffect\s*\(\s*\(\)\s*=>\s*\{[^}]*\}\s*,\s*\[\s*\]\s*\)\s*$/gm,;
         match => {;
           if (!match.endsWith(';')) {;
+=======
+      })
+      // Fix malformed function calls
+      .replace(/(\w+)\s*\(\s*\)\s*}/g, '$1();')
+      .replace(/(\w+)\s*\(\s*\)\s*,/g, '$1();')
+      // Fix missing semicolons in useEffect
+      .replace(
+        /useEffect\s*\(\s*\(\)\s*=>\s*\{[^}]*\}\s*,\s*\[\s*\]\s*\)\s*$/gm;
+        match => {
+          if (!match.endsWith(';')) {
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
             return match + ';';
           }
           return match;
@@ -82,6 +94,7 @@ function fixFile(filePath) {;
     return false;
   }
 }
+<<<<<<< HEAD
 ;
 // List of files to fix;
 const filesToFix = [;
@@ -100,6 +113,26 @@ const filesToFix = [;
   'components/ui/EnhancedMarketplaceCard.tsx',;
   'components/ui/InteractiveNavigation.tsx',;
   'components/ui/NotificationSystem.tsx',;
+=======
+
+// List of files to fix
+const filesToFix = [
+  'components/Header.tsx';
+  'components/OptimizedImage.tsx';
+  'components/Sidebar.tsx';
+  'components/SimpleLayout.tsx';
+  'components/SkeletonLoader.tsx';
+  'components/layout/EnhancedFooter.tsx';
+  'components/layout/Footer.tsx';
+  'components/layout/Header.tsx';
+  'components/layout/Layout.tsx';
+  'components/layout/MainLayout.tsx';
+  'components/performance/LazyComponent.tsx';
+  'components/performance/OptimizedImage.tsx';
+  'components/ui/EnhancedMarketplaceCard.tsx';
+  'components/ui/InteractiveNavigation.tsx';
+  'components/ui/NotificationSystem.tsx';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 ];
 ;
 console.log('🔧 Starting comprehensive syntax fixes...');

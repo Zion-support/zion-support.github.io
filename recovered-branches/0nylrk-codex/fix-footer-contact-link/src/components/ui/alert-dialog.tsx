@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from "react";
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog";
 ;
@@ -136,3 +137,98 @@ export {;
   AlertDialogDescription,;
   AlertDialogAction,;
   AlertDialogCancel}
+=======
+import * as React from &quot;react&quot;
+import * as AlertDialogPrimitive from &quot;@radix-ui/react-alert-dialog&quot;
+
+import { cn } from &quot;@/lib/utils&quot;
+import { buttonVariants } from &quot;@/components/ui/button&quot;    )}
+    {_...props}
+    ref={ref}
+  />
+))
+AlertDialogOverlay.displayName = AlertDialogPrimitive.Overlay.displayName,
+const AlertDialogContent = React.forwardRef<
+  React.ElementRef<typeof AlertDialogPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Content>
+>(_({className, _...props}, ref) => (
+  <AlertDialogPortal>
+    <AlertDialogOverlay />
+    <AlertDialogPrimitive.Content,
+ref={ref}
+      className={cn(
+        &quot;fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg&quot;,
+        className      )}
+      {_...props}
+    />
+  </AlertDialogPortal>
+))
+AlertDialogContent.displayName = AlertDialogPrimitive.Content.displayName,
+const AlertDialogHeader = (_{className, _...props}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div,
+className={cn(
+      &quot;flex flex-col space-y-2 text-center sm:text-left&quot;,
+      className    )}
+    {_...props}
+  />
+)
+AlertDialogHeader.displayName = &quot;AlertDialogHeader&quot;
+
+const AlertDialogFooter = (_{className, _...props}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div,
+className={cn(
+      &quot;flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2&quot;,
+      className    )}
+    {_...props}
+  />
+)
+AlertDialogFooter.displayName = &quot;AlertDialogFooter&quot;
+
+const AlertDialogTitle = React.forwardRef<
+  React.ElementRef<typeof AlertDialogPrimitive.Title>,
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Title>
+>(_({className, _...props}, ref) => (
+  <AlertDialogPrimitive.Title,
+ref={ref}
+    className={cn(&quot;text-lg font-semibold&quot;, className)}
+    {...props}  />
+))
+AlertDialogTitle.displayName = AlertDialogPrimitive.Title.displayName,
+const AlertDialogDescription = React.forwardRef<
+  React.ElementRef<typeof AlertDialogPrimitive.Description>,
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Description>
+>(_({className, _...props}, ref) => (
+  <AlertDialogPrimitive.Description,
+ref={ref}
+    className={cn(&quot;text-sm text-muted-foreground&quot;, className)}
+    {...props}  />
+))
+AlertDialogDescription.displayName =
+  AlertDialogPrimitive.Description.displayName,
+const AlertDialogAction = React.forwardRef<
+  React.ElementRef<typeof AlertDialogPrimitive.Action>,
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Action>
+>(_({className, _...props}, ref) => (
+  <AlertDialogPrimitive.Action,
+ref={ref}
+    className={cn(buttonVariants(), className)}
+    {_...props}
+  />
+))
+AlertDialogAction.displayName = AlertDialogPrimitive.Action.displayName,
+const AlertDialogCancel = React.forwardRef<
+  React.ElementRef<typeof AlertDialogPrimitive.Cancel>,
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Cancel>
+>(_({className, _...props}, ref) => (
+  <AlertDialogPrimitive.Cancel,
+ref={ref}
+    className={cn(
+      buttonVariants({ variant: &quot;outline&quot }),
+      &quot;mt-2 sm:mt-0&quot;,      className
+    )}
+    {_...props}
+  />
+))
+AlertDialogCancel.displayName = AlertDialogPrimitive.Cancel.displayName,
+export {AlertDialog, AlertDialogPortal, AlertDialogOverlay, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogFooter, AlertDialogTitle, AlertDialogDescription, AlertDialogAction, AlertDialogCancel}
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

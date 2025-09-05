@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { Copy, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -34,4 +35,40 @@ export function PromptCard({ prompt } PromptCardProps) {;
       </div>;
     </div>;
   ),;
+=======
+import { useState } from 'react',
+import { Copy, Send } from 'lucide-react'
+import { Button } from '@/components/ui/button',
+import type { Prompt } from '@/types/prompts',
+interface PromptCardProps {
+  prompt: Prompt
+}
+
+export function PromptCard({ prompt }: PromptCardProps) {
+  const [copied, setCopied] = useState(false),
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(prompt.text),
+    setCopied(true),
+    setTimeout(() => setCopied(false), 2000)
+  },
+
+  const handleSend = () => {
+    const encoded = encodeURIComponent(prompt.text),
+    window.open(`/zion-gpt?prompt=${encoded}`, '_blank')
+  },
+
+  return (
+    <div className=&quot;p-4 border rounded-md bg-background flex flex-col justify-between&quot;>
+      <p className=&quot;mb-4 text-sm&quot;>{prompt.text}</p>
+      <div className=&quot;flex gap-2 mt-auto&quot;>
+        <Button variant=&quot;outline&quot; size=&quot;sm&quot; onClick={handleCopy} aria-label=&quot;Copy prompt&quot;>
+          {copied ? 'Copied' : <Copy className=&quot;w-4 h-4&quot; />}
+        </Button>
+        <Button variant=&quot;secondary&quot; size=&quot;sm&quot; onClick={handleSend} aria-label=&quot;Send to ZionGPT&quot;>
+          <Send className=&quot;w-4 h-4&quot; />        </Button>
+      </div>
+    </div>
+  )
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

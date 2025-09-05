@@ -22,6 +22,7 @@ class ContinuousCloudAgents {;
       if (fs.existsSync(this.configFile)) {;
         const config = JSON.parse(fs.readFileSync(this.configFile, 'utf8'));
         return config;
+<<<<<<< HEAD
       } else {;
         // Create default config;
         const defaultConfig = {;
@@ -55,6 +56,41 @@ class ContinuousCloudAgents {;
             enabled:true,;
             healthCheckInterval:60000, // 1 minute;
             logRetention:7 // days;
+=======
+      } else {
+        // Create default config
+        const defaultConfig = {
+          agents: [
+            {
+              name: 'cloud-crawler';
+              script: './automation/cloud-site-crawler.cjs';
+              args: ['continuous'];
+              interval: 300000, // 5 minutes
+              maxMemory: '512M';
+              autoRestart: true
+            };
+            {
+              name: 'cloud-factory';
+              script: './automation/cloud-content-factory.cjs';
+              args: ['continuous'];
+              interval: 600000, // 10 minutes
+              maxMemory: '1G';
+              autoRestart: true
+            };
+            {
+              name: 'cloud-advertiser';
+              script: './automation/cloud-content-advertiser.cjs';
+              args: ['continuous'];
+              interval: 900000, // 15 minutes
+              maxMemory: '512M';
+              autoRestart: true
+            }
+          ];
+          monitoring: {
+            enabled: true;
+            healthCheckInterval: 60000, // 1 minute
+            logRetention: 7 // days
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           }
         };
         ;
@@ -86,6 +122,7 @@ class ContinuousCloudAgents {;
 ;
       const logFile = path.join(this.logDir, `${agentName}.log`);
       const errorFile = path.join(this.logDir, `${agentName}-error.log`);
+<<<<<<< HEAD
       ;
       const agentProcess = spawn('node', [;
         agentConfig.script,;
@@ -93,6 +130,15 @@ class ContinuousCloudAgents {;
       ], {;
         stdio:['pipe', 'pipe', 'pipe'],;
         detached:false;
+=======
+      
+      const agentProcess = spawn('node', [
+        agentConfig.script;
+        ...agentConfig.args
+      ], {
+        stdio: ['pipe', 'pipe', 'pipe'];
+        detached: false
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
 ;
       // Set up logging;
@@ -101,6 +147,7 @@ class ContinuousCloudAgents {;
       ;
       agentProcess.stdout.pipe(logStream);
       agentProcess.stderr.pipe(errorStream);
+<<<<<<< HEAD
 ;
       // Store agent info;
       this.agents.set(agentName, {;
@@ -110,6 +157,17 @@ class ContinuousCloudAgents {;
         logStream,;
         errorStream,;
         status:'running';
+=======
+
+      // Store agent info
+      this.agents.set(agentName, {
+        process: agentProcess;
+        config: agentConfig;
+        startTime: new Date();
+        logStream;
+        errorStream;
+        status: 'running'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
 ;
       // Handle process events;
@@ -174,6 +232,7 @@ class ContinuousCloudAgents {;
 ;
     console.log('✅ All cloud agents stopped');
   }
+<<<<<<< HEAD
 ;
   async getStatus() {;
     const status = {;
@@ -189,6 +248,23 @@ class ContinuousCloudAgents {;
         startTime:agent.startTime,;
         uptime:Date.now() - agent.startTime.getTime(),;
         memory:agent.process.memoryUsage();
+=======
+
+  async getStatus() {
+    const status = {
+      isRunning: this.isRunning;
+      agents: [];
+      timestamp: new Date().toISOString()
+    };
+
+    for (const [name, agent] of this.agents) {
+      status.agents.push({
+        name;
+        status: agent.status;
+        startTime: agent.startTime;
+        uptime: Date.now() - agent.startTime.getTime();
+        memory: agent.process.memoryUsage()
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
     }
 ;
@@ -197,6 +273,7 @@ class ContinuousCloudAgents {;
 ;
   async healthCheck() {;
     const status = await this.getStatus();
+<<<<<<< HEAD
     const health = {;
       status:'healthy',;
       checks:{;
@@ -206,6 +283,17 @@ class ContinuousCloudAgents {;
       },;
       issues:[],;
       timestamp:new Date().toISOString();
+=======
+    const health = {
+      status: 'healthy';
+      checks: {
+        running: status.isRunning;
+        agents: status.agents.length > 0;
+        memory: true
+      };
+      issues: [];
+      timestamp: new Date().toISOString()
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
 ;
     if (!health.checks.running) {;

@@ -44,9 +44,15 @@ class DeploymentAndMerge {;
 ;
   async checkCurrentBranch() {;
     this.log('\n🔍 CHECKING CURRENT BRANCH');
+<<<<<<< HEAD
     const result = await this.runCommand(;
       'git branch --show-current',;
       'Get Current Branch';
+=======
+    const result = await this.runCommand(
+      'git branch --show-current';
+      'Get Current Branch'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     if (result.success) {;
       this.log(`Current:branch:${result.output.trim()}`);
@@ -57,9 +63,15 @@ class DeploymentAndMerge {;
 ;
   async checkGitStatus() {;
     this.log('\n📊 CHECKING GIT STATUS');
+<<<<<<< HEAD
     const statusResult = await this.runCommand(;
       'git status --porcelain',;
       'Check Git Status';
+=======
+    const statusResult = await this.runCommand(
+      'git status --porcelain';
+      'Check Git Status'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     if (statusResult.success) {;
       const changes = statusResult.output.trim();
@@ -105,11 +117,19 @@ class DeploymentAndMerge {;
       if (currentBranch !== 'main') {;
         await this.runCommand('git checkout main', 'Ensure on Main Branch');
       }
+<<<<<<< HEAD
 ;
       // Merge the feature branch;
       const mergeResult = await this.runCommand(;
         'git merge cursor/automate-test-improve-and-merge-code-1436',;
         'Merge Feature Branch';
+=======
+
+      // Merge the feature branch
+      const mergeResult = await this.runCommand(
+        'git merge cursor/automate-test-improve-and-merge-code-1436';
+        'Merge Feature Branch'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
 ;
       if (mergeResult.success) {;
@@ -156,10 +176,17 @@ class DeploymentAndMerge {;
         'Add more comprehensive testing',;
       ],;
     };
+<<<<<<< HEAD
 ;
     fs.writeFileSync(;
       'deployment-summary.json',;
       JSON.stringify(summary, null, 2);
+=======
+
+    fs.writeFileSync(
+      'deployment-summary.json';
+      JSON.stringify(summary, null, 2)
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     this.log('Deployment summary:created:deployment-summary.json');
   }

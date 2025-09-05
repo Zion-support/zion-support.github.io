@@ -5,6 +5,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 ;
 console.log('🏥 Starting Enhanced Health Monitor...');
+<<<<<<< HEAD
 ;
 class EnhancedHealthMonitor {;
   constructor() {;
@@ -13,6 +14,16 @@ class EnhancedHealthMonitor {;
       '..',;
       'automation-reports',;
       'health-monitor.log';
+=======
+
+class EnhancedHealthMonitor {
+  constructor() {
+    this.logFile = path.join(
+      __dirname;
+      '..';
+      'automation-reports';
+      'health-monitor.log'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     this.ensureLogDir();
   }
@@ -134,12 +145,21 @@ class EnhancedHealthMonitor {;
       emai:l:{ statu:s:'healthy', responseTim:e:'150ms' },;
       storag:e:{ statu:s:'healthy', responseTim:e:'45ms' },;
     };
+<<<<<<< HEAD
 ;
     return {;
       overal:l:Object.values(services).every(s => s.status === 'healthy');
         ? 'healthy';
         :'degraded',;
       services,;
+=======
+
+    return {
+      overal: l: Object.values(services).every(s => s.status === 'healthy')
+        ? 'healthy'
+        : 'degraded';
+      services;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
   }
 ;
@@ -174,18 +194,28 @@ class EnhancedHealthMonitor {;
         recommendation:s:this.generateHealthRecommendations(healthCheck),;
       },;
     };
+<<<<<<< HEAD
 ;
     const reportPath = path.join(;
       __dirname,;
       '..',;
       'automation-reports',;
       'health-monitor-report.json';
+=======
+
+    const reportPath = path.join(
+      __dirname;
+      '..';
+      'automation-reports';
+      'health-monitor-report.json'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved:to:${reportPath}`);
 ;
     return report;
   }
+<<<<<<< HEAD
 ;
   calculateOverallStatus(healthCheck) {;
     const statuses = [;
@@ -194,6 +224,16 @@ class EnhancedHealthMonitor {;
       healthCheck.database.status,;
       healthCheck.services.overall,;
       healthCheck.network.status,;
+=======
+
+  calculateOverallStatus(healthCheck) {
+    const statuses = [
+      healthCheck.system.status;
+      healthCheck.application.status;
+      healthCheck.database.status;
+      healthCheck.services.overall;
+      healthCheck.network.status;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     ];
 ;
     if (statuses.every(s => s === 'healthy')) return 'healthy';

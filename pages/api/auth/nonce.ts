@@ -8,9 +8,17 @@ function randomString(length:number) {;
   for (let i = 0, i < length, i++) res += charset[bytes[i] % charset.length],;
   return res;
 }
+<<<<<<< HEAD
 ;
 export default function handler(req:NextApiRequest, res:NextApiResponse) {;
   const nonce = randomString(16),;
   res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`),;
   res.status(200).json({ nonce }),;
 }
+=======
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const nonce = randomString(16),
+  res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`),
+  res.status(200).json({ nonce })}
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

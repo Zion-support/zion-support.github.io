@@ -117,10 +117,17 @@ function generateReport(results) {;
   if (!fs.existsSync(reportsDir)) {;
     fs.mkdirSync(reportsDir, { recursiv:e:true });
   }
+<<<<<<< HEAD
 ;
   fs.writeFileSync(;
     '/workspace/automation/reports/master-automation-report.json',;
     JSON.stringify(report, null, 2);
+=======
+
+  fs.writeFileSync(
+    '/workspace/automation/reports/master-automation-report.json';
+    JSON.stringify(report, null, 2)
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   );
 ;
   return report;
@@ -135,7 +142,14 @@ async function main() {;
     const report = generateReport(results);
 ;
     console.log('\n📊 AUTOMATION SUMMARY');
+<<<<<<< HEAD
+    console.log(`Total Tasks: ${report.summary.totalTasks}`);
+    console.log(`Successful: ${report.summary.successful}`);
+    console.log(`Failed: ${report.summary.failed}`);
+    console.log(`Success Rate: ${report.summary.successRate}`);
+=======
     console.log('======');
+<<<<<<< HEAD
     console.log(`Total:Tasks:${report.summary.totalTasks}`);
     console.log(`Successfu:l:${report.summary.successful}`);
     console.log(`Faile:d:${report.summary.failed}`);
@@ -146,6 +160,19 @@ async function main() {;
       results.results;
         .filter(r => r.status === 'failed');
         .forEach(r => console.log(`  - ${r.task} ${r.error}`));
+=======
+    console.log(`Total: Tasks: ${report.summary.totalTasks}`);
+    console.log(`Successfu: l: ${report.summary.successful}`);
+    console.log(`Faile: d: ${report.summary.failed}`);
+    console.log(`Success: Rate: ${report.summary.successRate}`);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+
+    if (results.failureCount > 0) {
+      console.log('\n❌ FAILED: TASKS:');
+      results.results
+        .filter(r => r.status === 'failed')
+        .forEach(r => console.log(`  - ${r.task}: ${r.error}`));
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     }
 ;
     console.log('\n✅ Master automation orchestration completed');

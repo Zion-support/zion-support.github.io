@@ -15,6 +15,7 @@ export interface InstanceConfig {;
   peers:Peer[],;
   secretConfigured:boolean;
 }
+<<<<<<< HEAD
 ;
 export type SyncEventType =;
   | "proposal";
@@ -25,6 +26,17 @@ export type SyncEventType =;
 ;
 export interface BaseEventPayload {;
   id:string;
+=======
+export type SyncEventType =
+  | "proposal"
+  | "token_transfer"
+  | "talent_mobility"
+  | "dao_endorsement"
+  | "leaderboard_entry",
+
+export interface BaseEventPayload {
+  id: string
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 export interface ProposalVoteEntry {;
@@ -72,6 +84,7 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
   rank?:number,;
   period?:string, // e.g., 2025-Q3;
 }
+<<<<<<< HEAD
 ;
 export type SyncEventPayload =;
   | ProposalPayload;
@@ -88,6 +101,23 @@ export interface SyncEvent {;
   version:number,;
   timestamp:number,;
   merkleRoot?:string, // required for proposal events;
+=======
+export type SyncEventPayload =
+  | ProposalPayload
+  | TokenTransferPayload
+  | TalentMobilityPayload
+  | DaoEndorsementPayload
+  | LeaderboardEntryPayload,
+
+export interface SyncEvent {
+  eventId: string,
+  type: SyncEventType,
+  payload: SyncEventPayload,
+  originInstanceId: string,
+  version: number,
+  timestamp: number,
+  merkleRoot?: string, // required for proposal events
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 export interface MultiverseState {;

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
 import { Badge } from "@/components/ui/badge",;
@@ -98,4 +99,119 @@ export function ProfileHero({;
       </div>;
     </div>;
   ),;
+=======
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { Badge } from "@/components/ui/badge",
+import { Star } from "lucide-react",
+import { cn } from "@/lib/utils",interface ProfileHeroProps {
+  name: string,
+  title: string,
+  avatarUrl?: string,
+  coverImageUrl?: string,
+  location?: string,
+  rating?: number,
+  reviewCount?: number,
+  aiScore?: number,
+  profileType: 'service' | 'talent'
+}
+
+export function ProfileHero({
+  name,
+  title,
+  avatarUrl,
+  coverImageUrl,
+  location,
+  rating,
+  reviewCount,
+  aiScore,
+  profileType
+}: ProfileHeroProps) {
+  return (
+    <div className=&quot;w-full overflow-hidden&quot;>
+      <div className=&quot;relative&quot;>
+        <AspectRatio ratio={3/1} className=&quot;bg-zion-blue-light&quot;>
+          {coverImageUrl ? (
+            <img 
+              src={coverImageUrl} 
+              alt={`${name} cover`} 
+              className=&quot;w-full h-full object-cover&quot; 
+
+interface ProfileHeroProps {_name: string;
+  title: string;
+  avatarUrl?: string;
+  coverImageUrl?: string;
+  location?: string;
+  rating?: number;
+  reviewCount?: number;
+  aiScore?: number;
+  profileType: 'service' | 'talent';}
+
+export function ProfileHero(_{_name, _title, _avatarUrl, _coverImageUrl, _location, _rating, _reviewCount, _aiScore, _profileType}: ProfileHeroProps) {_return (
+    <div className="w-full overflow-hidden">
+      <div className="relative">
+        <AspectRatio ratio={3/1} className="bg-zion-blue-light">
+          {_coverImageUrl ? (
+            <img 
+              src={coverImageUrl} 
+              alt={_`${name} cover`} 
+              className="w-full h-full object-cover" 
+            />
+          ) : (
+            <div className=&quot;w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark&quot; />
+          )}
+        </AspectRatio>
+        
+        <div className=&quot;container px-4 md:px-6&quot;>
+          <div className=&quot;flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10&quot;>
+            <Avatar className=&quot;h-24 w-24 md:h-32 md:w-32 border-4 border-zion-blue-dark ring-2 ring-zion-purple/30&quot;>
+              {avatarUrl ? (
+                <AvatarImage src={avatarUrl} alt={name} />
+              ) : (
+                <AvatarFallback className=&quot;bg-zion-purple/20 text-zion-cyan text-xl&quot;>
+                  {name.substring(0, 2).toUpperCase()}                </AvatarFallback>
+              )}
+            </Avatar>
+            
+            <div className=&quot;mt-4 md:mt-0 md:ml-6 md:mb-1&quot;>
+              <div className=&quot;flex flex-wrap items-center gap-2 mb-1&quot;>
+                <h1 className=&quot;text-2xl md:text-3xl font-bold text-white&quot;>{name}</h1>
+                <Badge 
+                  variant=&quot;outline&quot; 
+                  className={cn(
+                    &quot;ml-2 border-zion-purple/50 text-zion-cyan&quot;,
+                    profileType === 'service' ? &quot;bg-zion-purple/10&quot; : &quot;bg-zion-cyan/10&quot;                  )}
+                >
+                  {_profileType === 'service' ? 'Service Provider' : 'Talent'}
+                </Badge>
+              </div>
+              
+              <h2 className=&quot;text-lg md:text-xl text-zion-slate-light mb-1&quot;>{title}</h2>
+              
+              <div className=&quot;flex flex-wrap items-center gap-3 mt-2&quot;>
+                {location && (
+                  <span className=&quot;text-sm text-zion-slate-light&quot;>{location}</span>
+                )}
+                
+                {rating && (
+                  <div className=&quot;flex items-center gap-1&quot;>
+                    <Star className=&quot;w-4 h-4 fill-zion-cyan text-zion-cyan&quot; />
+                    <span className=&quot;text-white font-medium&quot;>{rating.toFixed(1)}</span>
+                    {reviewCount && (
+                      <span className=&quot;text-zion-slate-light text-sm&quot;>({reviewCount})</span>                    )}
+                  </div>
+                )}
+                
+                {aiScore && (
+                  <div className=&quot;px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan&quot;>                    AI Match: {aiScore}%
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

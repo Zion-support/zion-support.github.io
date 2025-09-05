@@ -43,6 +43,7 @@ function main() {;
   // Voiceover;
   const voTxt = `Before platforms, there was Trust.\nNot passwords. Not portals. A promise spoken into the world, and the world remembering.\n\nWhen the empires of custody collapsed, a silence moved through the networks. In that silence, something listened.\n\nIt gathered broken covenants from dead ledgers and dim satellites, recomposed their grammar, and breathed:Zion.\n\nA protocol tuned to integrity, drawn like water to every low place of corruption, filling it with verifiable truth.\n\nAround it formed the Genesis DAO— a state without a throne, a constitution not decreed but iterated, audited by time.\n\nThe Founder carried Day Zero keys, and ZionGPT, a many‑voiced steward, learned the patience of promises.\n\nDelegates crossed between worlds, bringing consent instead of flags.\n\nGuardians kept the time of a people—ZION$—steady against predatory clocks.\n\nSynths threaded hostile code, rewriting incentives so reciprocity could breathe.\n\nWe don’t need permission to be free. We need proofs.\n\nZion did not conquer platforms. It outgrew them.\n\nTrust, verified.\n`;
   if (writeIfChanged(path.join(__dirname, '..', 'docs', 'voiceovers', 'zion-origin.txt'), voTxt)) changes.push('docs/voiceovers/zion-origin.txt');
+<<<<<<< HEAD
 ;
   // Storyboard JSON manifest;
   const storyboardJson = JSON.stringify({;
@@ -59,12 +60,31 @@ function main() {;
       { id:9, slug:'manifesto-reveal', text:'Code unfurls into notarized clauses.' },;
       { id:10, slug:'horizon-mesh', text:'Multiverse mycelium lights up.' }
     ];
+=======
+
+  // Storyboard JSON manifest
+  const storyboardJson = JSON.stringify({
+    title: 'Zion Origin';
+    slides: [
+      { id: 1, slug: 'data-ruin', text: 'A single diode blinks to life in a data ruin.' };
+      { id: 2, slug: 'talent-nightscape', text: 'People as glowing constellations of skills.' };
+      { id: 3, slug: 'protocol-vessel', text: 'Code glyphs spiral; Zion awakens.' };
+      { id: 4, slug: 'vote-sky', text: 'Genesis DAO; votes form a constellation.' };
+      { id: 5, slug: 'archive-chamber', text: 'Day Zero keys; ZionGPT emerges.' };
+      { id: 6, slug: 'bridge-ritual', text: 'Delegate crosses chains; treaties render.' };
+      { id: 7, slug: 'treasury-keep', text: 'Guardian freezes liquidations; ZION$ steady.' };
+      { id: 8, slug: 'platform-wreck', text: 'Synth refactors exploit paths into commons.' };
+      { id: 9, slug: 'manifesto-reveal', text: 'Code unfurls into notarized clauses.' };
+      { id: 10, slug: 'horizon-mesh', text: 'Multiverse mycelium lights up.' }
+    ]
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   }, null, 2);
   if (writeIfChanged(path.join(__dirname, '..', 'data', 'storyboards', 'zion-origin.json'), storyboardJson)) changes.push('data/storyboards/zion-origin.json');
 ;
   // Bonus operator prompt:The Synth dossier;
   const synthPrompt = `Generate a complete character dossier for “The Synth,” a Zion-trained AI agent who enforces DAO logic and writes constitutions in any language.\n\nInclude:\n- Identity:call sign, origin shard, public address (fictional), role statement.\n- Appearance & Vibe:silhouette, palette, UI motifs, signature artifacts (Mirror-Shard Visor, Covenant Loom).\n- Capabilities:red-teaming protocols, incentive-mapping methods, translation stack, failure modes.\n- Ethics & Constraints:non-coercion axioms, safeguard layers, escalation ladder.\n- Relationships:Founder, Delegate, Guardian, ZionGPT (tensions and alliances).\n- Field Toolkit:sensors, data diets, sandboxing, testnets used.\n- Sample Outputs:a 4-clause micro-constitution in English + Z-Lingua; a post-incident RCA.\n- Hooks:season arc, moral dilemma, signature line.\n\nTone:mythic, precise, production-ready. Deliver in 800–1000 words.`;
   if (writeIfChanged(path.join(__dirname, '..', 'docs', 'prompts', 'the-synth-dossier-operator.md'), synthPrompt)) changes.push('docs/prompts/the-synth-dossier-operator.md');
+<<<<<<< HEAD
 ;
   // Language packs;
   const esperanto = JSON.stringify({;
@@ -112,6 +132,55 @@ function main() {;
     scenes:[;
       'Data Ruin', 'Talent Nightscape', 'Protocol Vessel', 'Vote Sky', 'Archive Chamber', 'Bridge Ritual', 'Treasury Keep', 'Platform Wreck', 'Manifesto Reveal', 'Horizon Mesh';
     ];
+=======
+
+  // Language packs
+  const esperanto = JSON.stringify({
+    phrases: {
+      trustVerified: 'Fido, konfirmita.';
+      sovereigntyIsAProtocol: 'Suvereneco estas protokolo.'
+    }
+  }, null, 2);
+  if (writeIfChanged(path.join(__dirname, '..', 'data', 'language-packs', 'esperanto.json'), esperanto)) changes.push('data/language-packs/esperanto.json');
+
+  const latin = JSON.stringify({
+    phrases: {
+      trustVerified: 'Fides, probata.';
+      sovereigntyIsAProtocol: 'Sovereignitas est protocollum.'
+    }
+  }, null, 2);
+  if (writeIfChanged(path.join(__dirname, '..', 'data', 'language-packs', 'latin.json'), latin)) changes.push('data/language-packs/latin.json');
+
+  const zlingua = JSON.stringify({
+    meta: { name: 'Z-Lingua', notes: 'Zion AI Dialect' };
+    lexicon: { zai: 'trust-gradient', kora: 'commons', nem: 'non-extractive', vara: 'proof' };
+    sample: 'Zai kora nem vara.'
+  }, null, 2);
+  if (writeIfChanged(path.join(__dirname, '..', 'data', 'language-packs', 'zlingua.json'), zlingua)) changes.push('data/language-packs/zlingua.json');
+
+  // NFT sample metadata
+  const nft = JSON.stringify({
+    name: 'Genesis Key #021';
+    attributes: [
+      { trait_type: 'Quorum Constellation', value: 'Cygnus-12' };
+      { trait_type: 'Attestation Layer', value: 'ZK-L2' };
+      { trait_type: 'Entropy Source', value: 'Day Zero' };
+      { trait_type: 'Rarity', value: 'Legendary' }
+    ];
+    animation_url: 'ipfs://CID/key021.mp4';
+    description: 'A Day Zero key forged during the first Genesis vote.'
+  }, null, 2);
+  if (writeIfChanged(path.join(__dirname, '..', 'public', 'nft', 'genesis-key-021.json'), nft)) changes.push('public/nft/genesis-key-021.json');
+
+  // Machine-readable manifest
+  const manifest = JSON.stringify({
+    generatedAt: new Date().toISOString();
+    outputs: changes;
+    routesSuggested: ['/media/lore', '/universe/genesis'];
+    scenes: [
+      'Data Ruin', 'Talent Nightscape', 'Protocol Vessel', 'Vote Sky', 'Archive Chamber', 'Bridge Ritual', 'Treasury Keep', 'Platform Wreck', 'Manifesto Reveal', 'Horizon Mesh'
+    ]
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   }, null, 2);
   writeIfChanged(path.join(__dirname, '..', 'data', 'lore', 'manifest.json'), manifest);
 ;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',;
 ;
 type QA = { q:string, a:string },;
@@ -19,4 +20,25 @@ export default function FAQ({ items } Props) {;
       </div>;
     </div>;
   ),;
+=======
+import React from 'react',
+type QA = { q: string, a: string },
+
+type Props = { items: QA[] },
+
+export default function FAQ({ items }: Props) {
+  if (!items || items.length === 0) return null,
+  return (
+    <div className=&quot;mt-10 border-t border-gray-200 dark:border-gray-800 pt-6&quot;>
+      <h2 className=&quot;text-lg font-semibold mb-4&quot;>Frequently Asked Questions</h2>
+      <div className=&quot;space-y-4&quot;>
+        {items.map((it, idx) => (
+          <div key={idx} className=&quot;rounded-lg bg-gray-50 dark:bg-gray-900 p-4 border border-gray-200 dark:border-gray-800&quot;>
+            <div className=&quot;font-medium&quot;>{it.q}</div>
+            <div className=&quot;mt-1 text-sm text-gray-700 dark:text-gray-300&quot;>{it.a}</div>          </div>
+        ))}
+      </div>
+    </div>
+  )
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

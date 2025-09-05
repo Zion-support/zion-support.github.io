@@ -21,11 +21,19 @@ function fixSyntaxErrors(filePath) {;
 ;
     // Fix missing semicolons at end of statements;
     content = content.replace(/([^;}])\s*$/gm, '$1;');
+<<<<<<< HEAD
 ;
     // Fix missing commas in objects;
     content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1:$2,}');
 ;
     // Fix missing closing braces;
+=======
+
+    // Fix missing commas in objects
+    content = content.replace(/(\w+):\s*([^}]+)\s*}/g, '$1: $2}');
+
+    // Fix missing closing braces
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;
 ;
@@ -73,6 +81,7 @@ function fixSyntaxErrors(filePath) {;
       content = "import React from 'react';\n" + content;
       modified = true;
     }
+<<<<<<< HEAD
 ;
     // Fix semicolons in object properties;
     content = content.replace(/(\w+):\s*([^,}]+);/g, '$1:$2,');
@@ -81,6 +90,16 @@ function fixSyntaxErrors(filePath) {;
     content = content.replace(/([^,}]);/g, '$1,');
 ;
     // Fix semicolons in function parameters;
+=======
+
+    // Fix semicolons in object properties
+    content = content.replace(/(\w+):\s*([^}]+);/g, '$1: $2,');
+
+    // Fix semicolons in array elements
+    content = content.replace(/([^}]);/g, '$1,');
+
+    // Fix semicolons in function parameters
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     content = content.replace(/(\w+)\s*;\s*\)/g, '$1)');
 ;
     // Fix semicolons in JSX;

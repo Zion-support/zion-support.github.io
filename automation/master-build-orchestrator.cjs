@@ -61,6 +61,7 @@ class MasterBuildOrchestrator {;
   ;
   async initializeSystems() {;
     log('🔧 Initializing build automation systems...');
+<<<<<<< HEAD
     ;
     // Initialize page validator;
     this.systems.set('pageValidator', {;
@@ -92,6 +93,39 @@ class MasterBuildOrchestrator {;
       status:'initializing',;
       lastRun:null,;
       errorCount:0;
+=======
+    
+    // Initialize page validator
+    this.systems.set('pageValidator', {
+      name: 'Page Structure Validator';
+      status: 'initializing';
+      lastRun: null;
+      errorCount: 0
+    });
+    
+    // Initialize health checker
+    this.systems.set('healthChecker', {
+      name: 'Pre-Build Health Checker';
+      status: 'initializing';
+      lastRun: null;
+      errorCount: 0
+    });
+    
+    // Initialize build recovery
+    this.systems.set('buildRecovery', {
+      name: 'Build Failure Recovery';
+      status: 'initializing';
+      lastRun: null;
+      errorCount: 0
+    });
+    
+    // Initialize continuous monitor
+    this.systems.set('continuousMonitor', {
+      name: 'Continuous Build Monitor';
+      status: 'initializing';
+      lastRun: null;
+      errorCount: 0
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     });
     ;
     // Test each system;
@@ -108,10 +142,17 @@ class MasterBuildOrchestrator {;
     // Test page validator;
     try {;
       log('  Testing page validator...');
+<<<<<<< HEAD
       execSync('npm run build:validate', { ;
         stdio:'pipe', ;
         cwd:this.workspace,;
         timeout:30000;
+=======
+      execSync('npm run build:validate', { 
+        stdio: 'pipe';
+        cwd: this.workspace;
+        timeout: 30000
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
       this.systems.get('pageValidator').status = 'ready';
       this.systems.get('pageValidator').lastRun = new Date().toISOString();
@@ -125,10 +166,17 @@ class MasterBuildOrchestrator {;
     // Test health checker;
     try {;
       log('  Testing health checker...');
+<<<<<<< HEAD
       execSync('npm run build:health-check', { ;
         stdio:'pipe', ;
         cwd:this.workspace,;
         timeout:30000;
+=======
+      execSync('npm run build:health-check', { 
+        stdio: 'pipe';
+        cwd: this.workspace;
+        timeout: 30000
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
       this.systems.get('healthChecker').status = 'ready';
       this.systems.get('healthChecker').lastRun = new Date().toISOString();
@@ -146,11 +194,19 @@ class MasterBuildOrchestrator {;
       const testErrorLog = 'Test error:page without a React Component as default export in pages/';
       const testErrorFile = path.join(this.workspace, 'test-error.log');
       fs.writeFileSync(testErrorFile, testErrorLog);
+<<<<<<< HEAD
       ;
       execSync(`node automation/build-failure-recovery.cjs ${testErrorFile}`, { ;
         stdio:'pipe', ;
         cwd:this.workspace,;
         timeout:30000;
+=======
+      
+      execSync(`node automation/build-failure-recovery.cjs ${testErrorFile}`, { 
+        stdio: 'pipe';
+        cwd: this.workspace;
+        timeout: 30000
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
       ;
       // Clean up test file;
@@ -264,6 +320,7 @@ class MasterBuildOrchestrator {;
     log('🧠 Running smart build process...');
     ;
     const buildStart = Date.now();
+<<<<<<< HEAD
     ;
     try {;
       // Step 1:Pre-build health check;
@@ -288,9 +345,36 @@ class MasterBuildOrchestrator {;
         stdio:'inherit', ;
         cwd:this.workspace,;
         timeout:300000 // 5 minutes;
+=======
+    
+    try {
+      // Step 1: Pre-build health check
+      log('  Step 1: Pre-build health check');
+      execSync('npm run build:health-check', { 
+        stdio: 'inherit';
+        cwd: this.workspace;
+        timeout: 60000
+      });
+      
+      // Step 2: Page structure validation
+      log('  Step 2: Page structure validation');
+      execSync('npm run build:validate', { 
+        stdio: 'inherit';
+        cwd: this.workspace;
+        timeout: 60000
+      });
+      
+      // Step 3: Run the actual build
+      log('  Step 3: Building project');
+      execSync('npm run build', { 
+        stdio: 'inherit';
+        cwd: this.workspace;
+        timeout: 300000 // 5 minutes
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
       ;
       const buildDuration = Date.now() - buildStart;
+<<<<<<< HEAD
       ;
       // Record successful build;
       this.recordBuildResult({;
@@ -298,6 +382,15 @@ class MasterBuildOrchestrator {;
         success:true,;
         duration:buildDuration,;
         timestamp:new Date().toISOString();
+=======
+      
+      // Record successful build
+      this.recordBuildResult({
+        type: 'smart_build';
+        success: true;
+        duration: buildDuration;
+        timestamp: new Date().toISOString()
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
       ;
       log(`✅ Smart build completed successfully in ${buildDuration}ms`);
@@ -305,6 +398,7 @@ class MasterBuildOrchestrator {;
       ;
     } catch (error) {;
       const buildDuration = Date.now() - buildStart;
+<<<<<<< HEAD
       ;
       // Record failed build;
       this.recordBuildResult({;
@@ -313,6 +407,16 @@ class MasterBuildOrchestrator {;
         duration:buildDuration,;
         error:error.message,;
         timestamp:new Date().toISOString();
+=======
+      
+      // Record failed build
+      this.recordBuildResult({
+        type: 'smart_build';
+        success: false;
+        duration: buildDuration;
+        error: error.message;
+        timestamp: new Date().toISOString()
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
       ;
       log(`❌ Smart build failed after ${buildDuration}ms:${error.message}`);
@@ -331,6 +435,7 @@ class MasterBuildOrchestrator {;
   ;
   async autoRecoverBuild() {;
     log('🚑 Initiating automatic build recovery...');
+<<<<<<< HEAD
     ;
     try {;
       // Run build failure recovery;
@@ -345,6 +450,22 @@ class MasterBuildOrchestrator {;
         stdio:'inherit', ;
         cwd:this.workspace,;
         timeout:300000;
+=======
+    
+    try {
+      // Run build failure recovery
+      execSync('npm run build:recovery', { 
+        stdio: 'inherit';
+        cwd: this.workspace;
+        timeout: 120000
+      });
+      
+      // Try building again
+      execSync('npm run build', { 
+        stdio: 'inherit';
+        cwd: this.workspace;
+        timeout: 300000
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
       ;
       log('✅ Build recovered successfully');
@@ -369,11 +490,19 @@ class MasterBuildOrchestrator {;
     ;
     const outJson = path.join(outDir, 'system-status.json');
     const outHtml = path.join(outDir, 'index.html');
+<<<<<<< HEAD
     ;
     const report = {;
       systems:Object.fromEntries(this.systems),;
       buildHistory:this.buildHistory.slice(-20), // Last 20 builds;
       generatedAt:new Date().toISOString();
+=======
+    
+    const report = {
+      systems: Object.fromEntries(this.systems);
+      buildHistory: this.buildHistory.slice(-20), // Last 20 builds
+      generatedAt: new Date().toISOString()
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
     ;
     // Save JSON report;
@@ -458,12 +587,21 @@ class MasterBuildOrchestrator {;
     ;
     return html.join('\n');
   }
+<<<<<<< HEAD
   ;
   getStatus() {;
     return {;
       systems:Object.fromEntries(this.systems),;
       buildHistory:this.buildHistory.length,;
       isRunning:true;
+=======
+  
+  getStatus() {
+    return {
+      systems: Object.fromEntries(this.systems);
+      buildHistory: this.buildHistory.length;
+      isRunning: true
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
   }
   ;

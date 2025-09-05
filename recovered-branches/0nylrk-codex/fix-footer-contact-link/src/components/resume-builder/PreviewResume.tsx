@@ -13,6 +13,7 @@ interface PreviewResumeProps {;
   resume:Resume,;
   onBack:() => void;
 }
+<<<<<<< HEAD
 ;
 export function PreviewResume({ resume, onBack } PreviewResumeProps) {;
   return (;
@@ -29,4 +30,21 @@ export function PreviewResume({ resume, onBack } PreviewResumeProps) {;
       </div>;
     </div>;
   ),;
+=======
+
+export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
+  return (
+    <div className=&quot;space-y-6&quot;>
+      <PreviewHeader resume={resume} onBack={onBack} />
+      
+      {/* Resume Preview */}
+      <div className=&quot;bg-white text-black p-8 rounded-lg shadow-lg print-section&quot;>
+        <ResumeBasicInfoSection basicInfo={resume.basic_info} />
+        <WorkExperienceSection workExperience={resume.work_experience} />
+        <EducationSection education={resume.education} />
+        <SkillsSection skills={resume.skills} />
+        <CertificationsSection certifications={resume.certifications} />      </div>
+    </div>
+  )
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

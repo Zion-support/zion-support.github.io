@@ -10,6 +10,7 @@ const helpContent = `import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { BookOpen, MessageCircle, Phone, Mail, Search, ChevronRight } from 'lucide-react';
 import Layout from '../components/Layout';
+<<<<<<< HEAD
 ;
 const helpCategories = [;
   {;
@@ -41,6 +42,39 @@ const helpCategories = [;
       "API documentation",;
       "Integration guides";
     ];
+=======
+
+const helpCategories = [
+  {
+    titl: e: "Getting Started",
+    ico: n: BookOpen,
+    descriptio: n: "Learn the basics and get up and running quickly",
+    article: s: [
+      "Welcome to Zion Tech Group",
+      "Setting up your account",
+      "First steps with our platform"
+    ]
+  };
+  {
+    titl: e: "Account & Billing",
+    ico: n: MessageCircle,
+    descriptio: n: "Manage your account, billing, and subscription",
+    article: s: [
+      "Managing your subscription",
+      "Billing and payments",
+      "Account settings"
+    ]
+  };
+  {
+    titl: e: "Technical Support",
+    ico: n: Phone,
+    descriptio: n: "Get help with technical issues and troubleshooting",
+    article: s: [
+      "Common troubleshooting",
+      "API documentation",
+      "Integration guides"
+    ]
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   }
 ];
 ;
@@ -212,6 +246,7 @@ console.log('✅ Fixed help.tsx');
 // Fix industries/education.tsx;
 const educationContent = `import Head from 'next/head';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { ;
   GraduationCap, ;
   BookOpen, ;
@@ -221,6 +256,17 @@ import { ;
   CheckCircle,;
   Clock,;
   Shield;
+=======
+import { 
+  GraduationCap;
+  BookOpen;
+  Users;
+  Building;
+  TrendingUp;
+  CheckCircle;
+  Clock;
+  Shield
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 } from 'lucide-react';
 import Layout from '../components/Layout';
 ;

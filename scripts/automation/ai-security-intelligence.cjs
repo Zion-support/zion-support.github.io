@@ -5,6 +5,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 ;
 console.log('🔒 Starting AI Security Intelligence...');
+<<<<<<< HEAD
 ;
 class AISecurityIntelligence {;
   constructor() {;
@@ -14,6 +15,17 @@ class AISecurityIntelligence {;
       '..',;
       'automation-reports',;
       'ai-security.log';
+=======
+
+class AISecurityIntelligence {
+  constructor() {
+    this.logFile = path.join(
+      __dirname;
+      '..';
+      '..';
+      'automation-reports';
+      'ai-security.log'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     this.ensureLogDir();
   }
@@ -143,6 +155,7 @@ class AISecurityIntelligence {;
 ;
   generateSecurityRecommendations() {;
     this.log('💡 Generating security recommendations...');
+<<<<<<< HEAD
 ;
     return [;
       'Implement automated security scanning in CI/CD',;
@@ -155,6 +168,20 @@ class AISecurityIntelligence {;
       'Add security logging and monitoring',;
       'Regular security audits and penetration testing',;
       'Implement secure coding practices',;
+=======
+
+    return [
+      'Implement automated security scanning in CI/CD';
+      'Set up dependency vulnerability monitoring';
+      'Add security headers middleware';
+      'Implement rate limiting';
+      'Add input validation and sanitization';
+      'Use HTTPS everywhere';
+      'Implement proper authentication and authorization';
+      'Add security logging and monitoring';
+      'Regular security audits and penetration testing';
+      'Implement secure coding practices';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     ];
   }
 ;
@@ -169,6 +196,7 @@ class AISecurityIntelligence {;
         priorit:y:this.getPriority(analysis),;
       },;
     };
+<<<<<<< HEAD
 ;
     const reportPath = path.join(;
       __dirname,;
@@ -176,6 +204,15 @@ class AISecurityIntelligence {;
       '..',;
       'automation-reports',;
       'ai-security-report.json';
+=======
+
+    const reportPath = path.join(
+      __dirname;
+      '..';
+      '..';
+      'automation-reports';
+      'ai-security-report.json'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved:to:${reportPath}`);

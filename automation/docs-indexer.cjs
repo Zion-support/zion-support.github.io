@@ -25,10 +25,17 @@ function main() {;
   const publicFiles = list(path.join(process.cwd(), 'public'));
 ;
   let md = '# Repository Docs & Data Index\n\n';
+<<<<<<< HEAD
   const sections = [;
     { title:'Docs', files:docs },;
     { title:'Data', files:data },;
     { title:'Public', files:publicFiles }
+=======
+  const sections = [
+    { title: 'Docs', files: docs };
+    { title: 'Data', files: data };
+    { title: 'Public', files: publicFiles }
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   ];
 ;
   for (const s of sections) {;
@@ -41,7 +48,11 @@ function main() {;
   }
 ;
   const out = path.join(process.cwd(), 'docs', 'INDEX.md');
+<<<<<<< HEAD
   fs.mkdirSync(path.dirname(out), { recursive:true });
+=======
+  fs.mkdirSync(path.dirname(out) { recursive: true });
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   fs.writeFileSync(out, md, 'utf8');
   console.log('Wrote docs/INDEX.md with', docs.length + data.length + publicFiles.length, 'entries');
 }

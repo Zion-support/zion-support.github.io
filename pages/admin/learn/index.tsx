@@ -15,6 +15,7 @@ export default function AdminLearn() {;
     if (data.ok) setMessage('Saved'),;
     else setMessage('Error:' + (data.error || 'unknown'));
   }
+<<<<<<< HEAD
 ;
   return (;
     <div className="space-y-4">;
@@ -41,4 +42,29 @@ export default function AdminLearn() {;
       {message && <div className="text-sm">{message}</div>}
     </div>;
   ),;
+=======
+
+  return (
+    <div className=&quot;space-y-4&quot;>
+      <h1 className=&quot;text-2xl font-semibold&quot;>Learning Admin</h1>
+      <div className=&quot;grid gap-3 sm:grid-cols-2&quot;>
+        <input className=&quot;border rounded px-3 py-2&quot; placeholder=&quot;Course ID&quot; value={form.id} onChange={(e) => setForm({ ...form, id: e.target.value })} />
+        <input className=&quot;border rounded px-3 py-2&quot; placeholder=&quot;Title&quot; value={form.title} onChange={(e) => setForm({ ...form, title: e.target.value })} />
+        <select className=&quot;border rounded px-3 py-2&quot; value={form.category} onChange={(e) => setForm({ ...form, category: e.target.value })}>          <option>AI Development</option>
+          <option>Freelancing</option>
+          <option>Remote Hiring</option>
+          <option>Cloud Architecture</option>
+        </select>
+        <select className=&quot;border rounded px-3 py-2&quot; value={form.level} onChange={(e) => setForm({ ...form, level: e.target.value })}>          <option>Beginner</option>
+          <option>Intermediate</option>
+          <option>Advanced</option>
+        </select>
+        <input type=&quot;number&quot; className=&quot;border rounded px-3 py-2&quot; placeholder=&quot;Duration (minutes)&quot; value={form.durationMinutes} onChange={(e) => setForm({ ...form, durationMinutes: Number(e.target.value) })} />
+        <input className=&quot;border rounded px-3 py-2&quot; placeholder=&quot;Certification Badge&quot; value={form.certificationBadge} onChange={(e) => setForm({ ...form, certificationBadge: e.target.value })} />
+        <label className=&quot;flex items-center gap-2 text-sm&quot;><input type=&quot;checkbox&quot; checked={form.isFree} onChange={(e) => setForm({ ...form, isFree: e.target.checked })} /> Free</label>
+      </div>
+      <button onClick={saveCourse} className=&quot;px-4 py-2 bg-blue-600 text-white rounded&quot;>Save Course</button>
+      {message && <div className=&quot;text-sm&quot;>{message}</div>}    </div>
+  )
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

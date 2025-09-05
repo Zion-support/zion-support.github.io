@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 ;
 export async function rewardOnboarding(userId:string) {;
   await fetch('/functions/v1/token-manager/earn', {;
@@ -20,3 +21,25 @@ export async function rewardFiveStarReview(userId:string) {;
     headers:{ 'Content-Type':'application/json' },;
     body:JSON.stringify({ userId, amount:10, reason:'5-star review' })}),;
 }
+=======
+
+export async function rewardOnboarding(userId: string) {
+  await fetch('/functions/v1/token-manager/earn', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' })})
+}
+
+export async function rewardReferral(userId: string) {
+  await fetch('/functions/v1/token-manager/earn', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ userId, amount: 20, reason: 'Referral' })})
+}
+
+export async function rewardFiveStarReview(userId: string) {
+  await fetch('/functions/v1/token-manager/earn', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })})}
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

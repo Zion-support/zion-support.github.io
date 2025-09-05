@@ -35,6 +35,7 @@ export interface Conversation {;
   context_id?:string,;
   context_data?:ConversationContextData;
 }
+<<<<<<< HEAD
 ;
 // Context data for creating a conversation;
 export interface ConversationContextData {;
@@ -68,3 +69,37 @@ export interface MessagingContextType {;
   fetchConversations:() => Promise<void>,;
   loadMessages:(conversationId:string) => Promise<void>;
 }
+=======
+
+// Context data for creating a conversation
+export interface ConversationContextData {
+  title?: string,
+  description?: string,
+  image_url?: string
+}
+
+// Define the shape of the messaging context
+export interface MessagingContextType {
+  messages: Message[],
+  conversations: Conversation[],
+  unreadCount: number,
+  activeConversation: Conversation | null,
+  activeMessages: Message[],
+  isLoading: boolean,
+  sendMessage: (conversationId: string, content: string) => Promise<void>,
+  createConversation: (
+    recipientId: string, 
+    initialMessage: string, 
+    contextType?: 'job' | 'talent' | 'general',
+    contextId?: string,
+    contextData?: ConversationContextData
+  ) => Promise<void>,
+  markAsRead: (conversationId: string) => Promise<void>,  /**
+   * Set the currently active conversation. Passing `null` will clear the
+   * selection.
+   */
+  setActiveConversation: (value: Conversation | null) => void,
+  fetchConversations: () => Promise<void>,
+  loadMessages: (conversationId: string) => Promise<void>
+}
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

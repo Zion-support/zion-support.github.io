@@ -6,6 +6,7 @@ export interface UserSummary {;
   role:UserRole,;
   avatarUrl?:string;
 }
+<<<<<<< HEAD
 ;
 export type ConversationContextType = 'job' | 'talent' | 'general' | 'application' | 'invite',;
 ;
@@ -16,6 +17,17 @@ export interface ConversationContext {;
   talentId?:string,;
   talentName?:string,;
   proposalLink?:string;
+=======
+export type ConversationContextType = 'job' | 'talent' | 'general' | 'application' | 'invite',
+
+export interface ConversationContext {
+  type: ConversationContextType,
+  jobId?: string,
+  jobTitle?: string,
+  talentId?: string,
+  talentName?: string,
+  proposalLink?: string
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 export interface Conversation {;
@@ -25,6 +37,7 @@ export interface Conversation {;
   lastMessageAt:string, // ISO;
   unreadBy:string[], // userIds who have unread messages;
 }
+<<<<<<< HEAD
 ;
 export type MessageStatus = 'sent' | 'delivered' | 'read',;
 ;
@@ -38,6 +51,20 @@ export interface Message {;
   linkUrl?:string,;
   createdAt:string, // ISO;
   status:MessageStatus;
+=======
+export type MessageStatus = 'sent' | 'delivered' | 'read',
+
+export interface Message {
+  id: string,
+  conversationId: string,
+  senderId: string,
+  recipientId: string,
+  body: string,
+  attachmentUrl?: string, // saved under /public/uploads
+  linkUrl?: string,
+  createdAt: string, // ISO
+  status: MessageStatus
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 export interface InboxItem {;

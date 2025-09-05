@@ -78,10 +78,17 @@ class ImportFixer {;
         const importStatement = `import { ;
   ${allIcons.join(',\n  ')}
 } from 'lucide-react';`;
+<<<<<<< HEAD
 ;
         content = content.replace(;
           /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/,;
           importStatement;
+=======
+
+        content = content.replace(
+          /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/;
+          importStatement
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         );
       } else {;
         // Create new import statement;
@@ -114,12 +121,21 @@ class ImportFixer {;
 ;
   async fixAllFiles() {;
     this.log('🚀 Starting import fixing...');
+<<<<<<< HEAD
 ;
     // Find all React component files;
     const filesToCheck = [;
       'pages/components/Footer.tsx',;
       'pages/components/Navigation.tsx',;
       'pages/components/Layout.tsx',;
+=======
+
+    // Find all React component files
+    const filesToCheck = [
+      'pages/components/Footer.tsx';
+      'pages/components/Navigation.tsx';
+      'pages/components/Layout.tsx';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     ];
 ;
     for (const file of filesToCheck) {;

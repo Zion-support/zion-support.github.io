@@ -94,10 +94,17 @@ class AdvancedMonitoringAlerting {;
       console.log('⚠️  System health monitoring:failed:', error.message);
     }
   }
+<<<<<<< HEAD
 ;
   parseUptime(uptimeString) {;
     const match = uptimeString.match(/up\s+([^,]+)/);
     return match ? match[1].trim() :'Unknown';
+=======
+
+  parseUptime(uptimeString) {
+    const match = uptimeString.match(/up\s+([^]+)/);
+    return match ? match[1].trim() : 'Unknown';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   }
 ;
   parseMemoryUsage(memoryString) {;
@@ -331,12 +338,21 @@ class AdvancedMonitoringAlerting {;
     if (historicalData.length > 0) {;
       const recentData = historicalData.slice(-5); // Last 5 data points;
       const currentData = this.monitoringData;
+<<<<<<< HEAD
 ;
       // Performance trend;
       const avgBuildTime =;
         recentData.reduce(;
           (sum, data) => sum + (data.performanceMetrics?.buildTime || 0),;
           0;
+=======
+
+      // Performance trend
+      const avgBuildTime =
+        recentData.reduce(
+          (sum, data) => sum + (data.performanceMetrics?.buildTime || 0);
+          0
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         ) / recentData.length;
       if (currentData.performanceMetrics.buildTime > avgBuildTime * 1.2) {;
         trends.performanceTrend = 'degrading';
@@ -349,12 +365,21 @@ class AdvancedMonitoringAlerting {;
       ) {;
         trends.performanceTrend = 'improving';
       }
+<<<<<<< HEAD
 ;
       // System health trend;
       const avgMemory =;
         recentData.reduce(;
           (sum, data) => sum + (data.systemHealth?.memory || 0),;
           0;
+=======
+
+      // System health trend
+      const avgMemory =
+        recentData.reduce(
+          (sum, data) => sum + (data.systemHealth?.memory || 0);
+          0
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         ) / recentData.length;
       if (currentData.systemHealth.memory > avgMemory * 1.1) {;
         trends.systemHealthTrend = 'degrading';
@@ -371,12 +396,21 @@ class AdvancedMonitoringAlerting {;
     console.log(`  - System health:trend:${trends.systemHealthTrend}`);
     console.log(`  - Recommendation:s:${trends.recommendations.length}`);
   }
+<<<<<<< HEAD
 ;
   loadHistoricalData() {;
     const dataFile = path.join(;
       this.projectRoot,;
       'logs',;
       'monitoring-history.json';
+=======
+
+  loadHistoricalData() {
+    const dataFile = path.join(
+      this.projectRoot;
+      'logs';
+      'monitoring-history.json'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     try {;
       if (fs.existsSync(dataFile)) {;
@@ -387,12 +421,21 @@ class AdvancedMonitoringAlerting {;
     }
     return [];
   }
+<<<<<<< HEAD
 ;
   saveHistoricalData() {;
     const dataFile = path.join(;
       this.projectRoot,;
       'logs',;
       'monitoring-history.json';
+=======
+
+  saveHistoricalData() {
+    const dataFile = path.join(
+      this.projectRoot;
+      'logs';
+      'monitoring-history.json'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     let historicalData = this.loadHistoricalData();
 ;
@@ -492,6 +535,7 @@ class AdvancedMonitoringAlerting {;
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   }
+<<<<<<< HEAD
 ;
   saveMonitoringData() {;
     // Save current monitoring data;
@@ -499,6 +543,15 @@ class AdvancedMonitoringAlerting {;
       this.projectRoot,;
       'logs',;
       `monitoring-${Date.now()}.json`;
+=======
+
+  saveMonitoringData() {
+    // Save current monitoring data
+    const reportFile = path.join(
+      this.projectRoot;
+      'logs';
+      `monitoring-${Date.now()}.json`
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(reportFile, JSON.stringify(this.monitoringData, null, 2));
 ;

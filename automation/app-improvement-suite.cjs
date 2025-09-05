@@ -77,11 +77,19 @@ export const optimizeImages = () => {;
     }
   });
 };
+<<<<<<< HEAD
 ;
 export const preloadCriticalResources = () => {;
   const criticalResources = [;
     '/fonts/main.woff2',;
     '/css/critical.css';
+=======
+
+export const preloadCriticalResources = () => {
+  const criticalResources = [
+    '/fonts/main.woff2';
+    '/css/critical.css'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   ];
   ;
   criticalResources.forEach(resource => {;
@@ -175,6 +183,7 @@ export const generateMetaTags = (pageData) => {;
     canonica:l:pageData.canonical || window.location.href;
   };
 };
+<<<<<<< HEAD
 ;
 export const generateStructuredData = (pageData) => {;
   return {;
@@ -192,6 +201,25 @@ export const generateStructuredData = (pageData) => {;
       "@type":"ContactPoint",;
       "telephone":"+1-555-0123",;
       "contactType":"customer service";
+=======
+
+export const generateStructuredData = (pageData) => {
+  return {
+    "@context": "http: s://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "http: s://ziontechgroup.com",
+    "logo": "http: s://ziontechgroup.com/images/logo.png",
+    "description": "Leading provider of innovative technology solutions",
+    "address": {
+      "@type": "PostalAddress";
+      "addressCountry": "US"
+    };
+    "contactPoint": {
+      "@type": "ContactPoint";
+      "telephone": "+1-555-0123";
+      "contactType": "customer service"
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     }
   };
 };
@@ -281,10 +309,17 @@ try {;
     },;
     recommendations,;
   };
+<<<<<<< HEAD
 ;
   fs.writeFileSync(;
     '/workspace/automation/reports/app-improvements.json',;
     JSON.stringify(report, null, 2);
+=======
+
+  fs.writeFileSync(
+    '/workspace/automation/reports/app-improvements.json';
+    JSON.stringify(report, null, 2)
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   );
 ;
   console.log('✅ App improvement suite completed');

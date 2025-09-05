@@ -64,6 +64,7 @@ export interface UserBadge {;
   badgeId:string,;
   awardedAt:string;
 }
+<<<<<<< HEAD
 ;
 export interface CommunityUser {;
   id:string,;
@@ -77,3 +78,18 @@ export interface CommunityUser {;
   isVerified:boolean,;
   isModerator:boolean;
 }
+=======
+
+export interface CommunityUser {
+  id: string,
+  name: string,
+  avatar?: string,
+  role: string,
+  reputation: number,
+  postCount: number,
+  replyCount: number,
+  badges: Badge[],
+  isVerified: boolean,
+  isModerator: boolean
+}
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

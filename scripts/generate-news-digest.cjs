@@ -5,9 +5,15 @@ const fetch = global.fetch || ((...args) => import('node-fetch').then(({default:
 ;
 const OUT_DIR = path.join(process.cwd(), 'content', 'digests');
 const PUBLIC_DIR = path.join(process.cwd(), 'public', 'digests');
+<<<<<<< HEAD
 const SOURCES = [;
   { name:'Hacker News', url:'https://hnrss.org/frontpage' },;
   { name:'Dev.to', url:'https://dev.to/feed' }
+=======
+const SOURCES = [
+  { name: 'Hacker News', url: 'https://hnrss.org/frontpage' };
+  { name: 'Dev.to', url: 'https://dev.to/feed' }
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 ];
 ;
 function extractItems(xml, max=10) {;

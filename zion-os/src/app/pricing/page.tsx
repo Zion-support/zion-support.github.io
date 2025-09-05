@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client",;
 ;
 import { useState } from "react",;
@@ -11,6 +12,20 @@ interface PricingTier {;
   popular?:boolean,;
   cta:string,;
   ctaLink:string;
+=======
+"use client",
+
+import { useState } from "react",
+interface PricingTier {
+  name: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular?: boolean,
+  cta: string,
+  ctaLink: string
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 interface ServicePricing {;
@@ -21,6 +36,7 @@ interface ServicePricing {;
   features:string[],;
   benefits:string[];
 }
+<<<<<<< HEAD
 ;
 const servicePricing:ServicePricing[] = [;
   {;
@@ -273,9 +289,85 @@ export default function PricingPage() {;
                   :'text-gray-300 hover:text-white hover:bg-zinc-700';
               }`}
             >;
+=======
+const servicePricing: ServicePricing[] = [
+  {serviceName: "Zion OS Platform", category: "Core Platform", description: "Unified deployment protocol for sovereign AI-powered digital economies", features: ["Instance deployment", _"Feature toggles", _"Multi-vertical support", _"Governance systems", _"API management", _"Multi-region support"], benefits: ["Reduce deployment time from months to minutes", _"Built-in compliance and governance", _"Scalable architecture"], tiers: [
+      {
+        name: "Starter", price: "$99", period: "/month", description: "Perfect for small businesses and startups", features: ["Up to 3 instances", _"Basic feature set", _"Community support", _"Standard deployment", _"Basic analytics"], cta: "Start Free Trial", ctaLink: "/multiverse/launch"},
+      {name: "Professional", price: "$299", period: "/month", description: "Ideal for growing businesses", features: ["Up to 10 instances", _"Advanced features", _"Priority support", _"Custom domains", _"Advanced analytics", _"API access"], popular: true, cta: "Get Started", ctaLink: "/multiverse/launch"},
+      {name: "Enterprise", price: "$999", period: "/month", description: "For large organizations with complex needs", features: ["Unlimited instances", _"All features", _"24/7 support", _"Custom integrations", _"White-label options", _"Dedicated account manager"], cta: "Contact Sales", ctaLink: "mailto:kleber@ziontechgroup.com"}
+    ]
+  },
+  {serviceName: "ZionGPT Core", category: "AI Services", description: "Advanced AI language model optimized for business applications", features: ["Custom fine-tuning", _"Multi-language support", _"Industry-specific models", _"API access", _"Enterprise security", _"Real-time processing"], benefits: ["Improve customer service efficiency by 60%", _"Reduce content creation time", _"Ensure compliance accuracy"], tiers: [
+      {
+        name: "Starter", price: "$49", period: "/month", description: "For small teams and individual users", features: ["100 API calls/day", _"Basic models", _"Email support", _"Standard response time", _"Basic documentation"], cta: "Start Free Trial", ctaLink: "/services/zion-gpt"},
+      {name: "Professional", price: "$149", period: "/month", description: "For growing businesses", features: ["1, 000 API calls/day", _"Advanced models", _"Priority support", _"Custom fine-tuning", _"Multi-language support", _"Analytics dashboard"], cta: "Get Started", ctaLink: "/services/zion-gpt"},
+      {name: "Enterprise", price: "$499", period: "/month", description: "For large organizations", features: ["Unlimited API calls", _"Custom models", _"24/7 support", _"Dedicated infrastructure", _"SLA guarantee", _"Custom integrations"], cta: "Contact Sales", ctaLink: "mailto:kleber@ziontechgroup.com"}
+    ]
+  },
+  {serviceName: "AI Content Hub", category: "AI Services", description: "Comprehensive content creation and management platform powered by AI", features: ["AI content generation", _"SEO optimization", _"Multi-platform publishing", _"Content calendar", _"Performance analytics", _"Team collaboration"], benefits: ["Generate 10x more content", _"Improve SEO rankings", _"Save 20+ hours per week"], tiers: [
+      {
+        name: "Starter", price: "$39", period: "/month", description: "For content creators and small teams", features: ["50 AI-generated articles/month", _"Basic SEO tools", _"Social media integration", _"Content calendar", _"Basic analytics"], cta: "Start Free Trial", ctaLink: "/services/ai-content-hub"},
+      {name: "Professional", price: "$99", period: "/month", description: "For growing content teams", features: ["200 AI-generated articles/month", _"Advanced SEO optimization", _"Multi-platform publishing", _"Team collaboration", _"Advanced analytics", _"API access"], cta: "Get Started", ctaLink: "/services/ai-content-hub"},
+      {name: "Enterprise", price: "$299", period: "/month", description: "For large content operations", features: ["Unlimited content generation", _"Custom AI models", _"White-label options", _"Advanced integrations", _"Dedicated support", _"Custom workflows"], cta: "Contact Sales", ctaLink: "mailto:kleber@ziontechgroup.com"}
+    ]
+  },
+  {serviceName: "Digital Marketplace Platform", category: "E-commerce & Services", description: "Complete marketplace solution for jobs, talent, projects, and services", features: ["Job posting & matching", _"Talent marketplace", _"Project management", _"Payment processing", _"Rating system", _"Analytics dashboard"], benefits: ["Launch marketplace in 24 hours", _"Reduce operational costs by 30%", _"Increase revenue through commissions"], tiers: [
+      {
+        name: "Starter", price: "$79", period: "/month", description: "For small marketplaces", features: ["Up to 100 users", _"Basic marketplace features", _"Payment processing", _"Basic analytics", _"Email support"], cta: "Start Free Trial", ctaLink: "/services/marketplace"},
+      {name: "Professional", price: "$199", period: "/month", description: "For growing marketplaces", features: ["Up to 1, 000 users", _"Advanced features", _"Custom branding", _"Advanced analytics", _"API access", _"Priority support"], cta: "Get Started", ctaLink: "/services/marketplace"},
+      {name: "Enterprise", price: "$599", period: "/month", description: "For large marketplaces", features: ["Unlimited users", _"Custom development", _"White-label options", _"Advanced integrations", _"Dedicated support", _"Custom workflows"], cta: "Contact Sales", ctaLink: "mailto:kleber@ziontechgroup.com"}
+    ]
+  },
+  {serviceName: "Cloud Migration Services", category: "IT Services", description: "Professional cloud migration and optimization services", features: ["Infrastructure assessment", _"Migration planning", _"Data migration", _"Performance optimization", _"24/7 support", _"Post-migration support"], benefits: ["Reduce infrastructure costs by 40%", _"Improve scalability", _"Enhanced security"], tiers: [
+      {
+        name: "Basic Migration", price: "$2, 500", period: "one-time", description: "Simple infrastructure migration", features: ["Infrastructure assessment", _"Basic migration plan", _"Data migration", _"Basic testing", _"Documentation"], cta: "Get Quote", ctaLink: "mailto:kleber@ziontechgroup.com"},
+      {name: "Standard Migration", price: "$7, 500", period: "one-time", description: "Comprehensive migration with optimization", features: ["Detailed assessment", _"Comprehensive plan", _"Data migration", _"Performance optimization", _"Testing & validation", _"Training"], cta: "Get Quote", ctaLink: "mailto:kleber@ziontechgroup.com"},
+      {name: "Enterprise Migration", price: "$15, 000+", period: "one-time", description: "Complex enterprise migration", features: ["Full assessment", _"Custom migration strategy", _"Advanced optimization", _"Custom integrations", _"Ongoing support", _"SLA guarantee"], cta: "Contact Sales", ctaLink: "mailto:kleber@ziontechgroup.com"}
+    ]
+  },
+  {serviceName: "Cybersecurity Audit & Compliance", category: "IT Services", description: "Comprehensive security assessments and compliance consulting", features: ["Security assessment", _"Penetration testing", _"Compliance audit", _"Security training", _"Incident response planning", _"Ongoing monitoring"], benefits: ["Protect against cyber threats", _"Meet compliance requirements", _"Reduce security risks"], tiers: [
+      {
+        name: "Basic Audit", price: "$1, 500", period: "one-time", description: "Essential security assessment", features: ["Basic security scan", _"Vulnerability assessment", _"Compliance checklist", _"Basic report", _"Email support"], cta: "Get Quote", ctaLink: "mailto:kleber@ziontechgroup.com"},
+      {name: "Standard Audit", price: "$4, 500", period: "one-time", description: "Comprehensive security assessment", features: ["Full security audit", _"Penetration testing", _"Compliance audit", _"Detailed report", _"Remediation guidance", _"Phone support"], cta: "Get Quote", ctaLink: "mailto:kleber@ziontechgroup.com"},
+      {name: "Enterprise Audit", price: "$9, 000+", period: "one-time", description: "Advanced security assessment", features: ["Advanced testing", _"Custom compliance", _"Ongoing monitoring", _"Security training", _"Incident response", _"Dedicated support"], cta: "Contact Sales", ctaLink: "mailto:kleber@ziontechgroup.com"}
+    ]
+  }
+],
+
+const categories = ["All", "Core Platform", "AI Services", "IT Services", "E-commerce & Services"],
+
+export default function PricingPage() {
+  const [selectedCategory, setSelectedCategory] = useState("All"),
+  const filteredServices = selectedCategory === "All" 
+    ? servicePricing 
+    : servicePricing.filter(service => service.category === selectedCategory),
+
+  return (_<div className="space-y-8">
+      <div className="text-center space-y-4">
+        <h1 className="text-4xl font-bold">Pricing & Plans</h1>
+        <p className="text-xl opacity-80 max-w-3xl mx-auto">
+          Choose the perfect plan for your business needs. All plans include our core features with transparent pricing and no hidden fees.
+        </p>
+      </div>
+
+      {/* Category Filter */}
+      <div className="flex justify-center">
+        <div className="flex flex-wrap gap-2 bg-zinc-800 rounded-lg p-1">
+          {categories.map(category => (
+            <button,
+key={category}
+              onClick={_() => setSelectedCategory(category)}
+              className={_`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                selectedCategory === category
+                  ? 'bg-blue-600 text-white'
+                  : 'text-gray-300 hover:text-white hover:bg-zinc-700'}`}
+            >
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
               {category}
             </button>;
           ))}
+<<<<<<< HEAD
         </div>;
       </div>;
 ;
@@ -296,9 +388,31 @@ export default function PricingPage() {;
                   {service.features.map((feature, index) => (;
                     <li key={index} className="flex items-center gap-2">;
                       <span className="w-2 h-2 bg-blue-500 rounded-full"></span>;
+=======
+        </div>
+      </div>
+
+      {_/* Services Pricing */}
+      <div className="space-y-12">
+        {filteredServices.map(_(service, serviceIndex) => (_<div key={serviceIndex} className="space-y-6">
+            <div className="text-center space-y-2">
+              <h2 className="text-2xl font-bold">{service.serviceName}</h2>
+              <p className="text-lg opacity-80">{service.description}</p>
+            </div>
+
+            {_/* Features & Benefits */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="text-lg font-semibold mb-3">Key Features</h3>
+                <ul className="space-y-2">
+                  {service.features.map((feature, index) => (
+                    <li key={index} className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
                       {feature}
                     </li>;
                   ))}
+<<<<<<< HEAD
                 </ul>;
               </div>;
               <div>;
@@ -307,9 +421,20 @@ export default function PricingPage() {;
                   {service.benefits.map((benefit, index) => (;
                     <li key={index} className="flex items-center gap-2">;
                       <span className="w-2 h-2 bg-green-500 rounded-full"></span>;
+=======
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-3">Benefits</h3>
+                <ul className="space-y-2">
+                  {service.benefits.map(_(benefit, index) => (
+                    <li key={index} className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
                       {benefit}
                     </li>;
                   ))}
+<<<<<<< HEAD
                 </ul>;
               </div>;
             </div>;
@@ -346,9 +471,47 @@ export default function PricingPage() {;
                     {tier.features.map((feature, index) => (;
                       <li key={index} className="flex items-center gap-2 text-sm">;
                         <span className="w-2 h-2 bg-green-500 rounded-full"></span>;
+=======
+                </ul>
+              </div>
+            </div>
+
+            {_/* Pricing Tiers */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {service.tiers.map(_(tier, tierIndex) => (
+                <div,
+key={tierIndex}
+                  className={_`relative border rounded-lg p-6 ${
+                    tier.popular
+                      ? 'border-blue-500 bg-blue-500/10'
+                      : 'border-white/10'}`}
+                >
+                  {tier.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+
+                  <div className="text-center space-y-4">
+                    <h3 className="text-xl font-semibold">{tier.name}</h3>
+                    <div>
+                      <span className="text-3xl font-bold">{tier.price}</span>
+                      <span className="text-lg opacity-80">{tier.period}</span>
+                    </div>
+                    <p className="text-sm opacity-80">{tier.description}</p>
+                  </div>
+
+                  <ul className="space-y-3 mt-6">
+                    {tier.features.map(_(feature, index) => (
+                      <li key={index} className="flex items-center gap-2 text-sm">
+                        <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
                         {feature}
                       </li>;
                     ))}
+<<<<<<< HEAD
                   </ul>;
 ;
                   <div className="mt-6">;
@@ -360,6 +523,18 @@ export default function PricingPage() {;
                           :'bg-zinc-700 hover:bg-zinc-600 text-white';
                       }`}
                     >;
+=======
+                  </ul>
+
+                  <div className="mt-6">
+                    <a,
+href={tier.ctaLink}
+                      className={_`block w-full text-center py-3 px-4 rounded-lg font-medium transition-colors ${
+                        tier.popular
+                          ? 'bg-blue-600 hover:bg-blue-700 text-white'
+                          : 'bg-zinc-700 hover:bg-zinc-600 text-white'}`}
+                    >
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
                       {tier.cta}
                     </a>;
                   </div>;
@@ -368,6 +543,7 @@ export default function PricingPage() {;
             </div>;
           </div>;
         ))}
+<<<<<<< HEAD
       </div>;
 ;
       {/* Additional Services */}
@@ -423,4 +599,61 @@ export default function PricingPage() {;
       </div>;
     </div>;
   );
+=======
+      </div>
+
+      {_/* Additional Services */}
+      <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 text-white">
+        <div className="text-center space-y-4">
+          <h2 className="text-2xl font-bold">Need Custom Solutions?</h2>
+          <p className="opacity-90">
+            We offer custom development, enterprise solutions, and specialized services tailored to your specific needs.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+            <div>
+              <h3 className="font-semibold">Custom Development</h3>
+              <p className="text-sm opacity-90">Tailored solutions from $5,000+</p>
+            </div>
+            <div>
+              <h3 className="font-semibold">Enterprise Solutions</h3>
+              <p className="text-sm opacity-90">Custom pricing for large organizations</p>
+            </div>
+            <div>
+              <h3 className="font-semibold">Consulting Services</h3>
+              <p className="text-sm opacity-90">Strategic guidance from $150/hour</p>
+            </div>
+          </div>
+          <a,
+href="mailto:kleber@ziontechgroup.com"
+            className="inline-block px-6 py-3 bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
+            Get Custom Quote
+          </a>
+        </div>
+      </div>
+
+      {_/* Contact Information */}
+      <div className="text-center space-y-4">
+        <h2 className="text-2xl font-bold">Questions About Pricing?</h2>
+        <p className="opacity-80">
+          Our team is here to help you choose the right plan for your business.
+        </p>
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-4">
+          <div>
+            <h3 className="font-semibold">Phone</h3>
+            <p className="opacity-80">+1 302 464 0950</p>
+          </div>
+          <div>
+            <h3 className="font-semibold">Email</h3>
+            <p className="opacity-80">kleber@ziontechgroup.com</p>
+          </div>
+          <div>
+            <h3 className="font-semibold">Address</h3>
+            <p className="opacity-80">364 E Main St STE 1008<br />Middletown DE 19709</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

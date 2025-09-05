@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -41,5 +42,46 @@ export default function BlogIndexPage() {;
       </div>;
     </UltraFuturisticBackground>;
   ),;
+=======
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
+import Card from '../../components/ui/Card',
+const posts = [
+  { slug: 'ai-automation-trends-2025', title: 'AI Automation Trends 2025', excerpt: 'What forward-leaning teams ship next with agents, RAG, and guardrails.' },
+  { slug: 'cloud-native-automation', title: 'Cloud-Native Automation', excerpt: 'GitOps, SLOs, and platform engineering patterns that scale.' },
+  { slug: 'future-of-work', title: 'Future of Work', excerpt: 'Autonomous agents, copilots, and the new operating model.' },
+  { slug: 'performance-optimization', title: 'Performance Optimization', excerpt: 'Web vitals, RUM, and release health for conversion lifts.' },
+  { slug: 'ai-ethics-automation', title: 'AI Ethics & Automation', excerpt: 'Responsible AI with evaluations, safety baselines, and governance.' },
+  { slug: 'autonomous-content-generation', title: 'Autonomous Content Generation', excerpt: 'Ship content faster with quality and factuality checks.' }],
+
+export default function BlogIndexPage() {
+  return (
+    <UltraFuturisticBackground  intensity=&quot;medium&quot;>
+      <Head>
+        <title>Blog | Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Insights on AI, cloud, automation, and platform engineering.&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/blog&quot; />      </Head>
+
+      <div className=&quot;container mx-auto px-4 py-16&quot;>
+        <div className=&quot;text-center mb-10&quot;>
+          <h1 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4&quot;>
+            Insights & Guides
+          </h1>
+          <p className=&quot;text-gray-300 text-lg max-w-2xl mx-auto&quot;>Practical playbooks and deep dives on AI, cloud, and modern software delivery.</p>        </div>
+
+        <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
+          {posts.map((p) => (
+            <div key={p.slug} className=&quot;p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm&quot;>
+              <h2 className=&quot;text-white text-xl font-semibold mb-2&quot;>{p.title}</h2>
+              <p className=&quot;text-gray-400 mb-4&quot;>{p.excerpt}</p>
+              <Link href={`/blog/${p.slug}`} className=&quot;text-cyan-400 hover:text-white font-medium&quot;>Read →</Link>            </div>
+          ))}
+        </div>
+      </div>
+    </UltraFuturisticBackground>
+  )
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;

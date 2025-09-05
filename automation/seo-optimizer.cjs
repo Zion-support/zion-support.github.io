@@ -172,10 +172,17 @@ class SEOOptimizer {;
     if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursiv:e:true });
     }
+<<<<<<< HEAD
 ;
     const reportPath = path.join(;
       logsDir,;
       `seo-optimization-${Date.now()}.json`;
+=======
+
+    const reportPath = path.join(
+      logsDir;
+      `seo-optimization-${Date.now()}.json`
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
     console.log(`📊 Report saved:to:${reportPath}`);

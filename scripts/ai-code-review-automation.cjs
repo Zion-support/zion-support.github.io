@@ -1,5 +1,6 @@
 
 const winston = require('winston');
+<<<<<<< HEAD
 ;
 const logger = winston.createLogger({;
   level:'info',;
@@ -13,6 +14,21 @@ const logger = winston.createLogger({;
     new winston.transports.File({ filename:'logs/error.log', level:'error' }),;
     new winston.transports.File({ filename:'logs/combined.log' });
   ];
+=======
+
+const logger = winston.createLogger({
+  level: 'info';
+  format: winston.format.combine(
+    winston.format.timestamp();
+    winston.format.errors({ stack: true });
+    winston.format.json()
+  );
+  defaultMeta: { service: 'automation-script' };
+  transports: [
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/combined.log' })
+  ]
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 });
 ;
 if (process.env.NODE_ENV !== 'production') {;
@@ -37,6 +53,7 @@ const EventEmitter = require('events');
 class AICodeReviewAgent extends EventEmitter {;
   constructor() {;
     super();
+<<<<<<< HEAD
     ;
     this.config = {;
       name:'AI Code Review Agent',;
@@ -87,6 +104,54 @@ class AICodeReviewAgent extends EventEmitter {;
       improvementsApplied:0,;
       issuesFound:0,;
       filesAnalyzed:0;
+=======
+    
+    this.config = {
+      name: 'AI Code Review Agent';
+      version: '1.0.0';
+      // Analysis configuration
+      analysis: {
+        maxFileSize: 1024 * 1024, // 1MB
+        excludedPatterns: [
+          'node_modules/**';
+          '.git/**';
+          'dist/**';
+          'build/**';
+          'coverage/**';
+          '*.min.js';
+          '*.bundle.js'
+        ];
+        includedExtensions: ['.js', '.jsx', '.ts', '.tsx', '.vue', '.py', '.java', '.cpp', '.c'];
+        // Quality thresholds
+        thresholds: {
+          complexity: 10;
+          maintainability: 65;
+          testCoverage: 80;
+          securityScore: 90
+        }
+      };
+      // AI configuration
+      ai: {
+        providers: ['cursor', 'openai', 'claude'];
+        maxSuggestions: 5;
+        confidenceThreshold: 0.8
+      };
+      // Improvement configuration
+      improvements: {
+        autoApply: true;
+        maxChangesPerRun: 10;
+        requireTests: true;
+        backupChanges: true
+      }
+    };
+    
+    this.state = {
+      isRunning: false;
+      lastAnalysis: null;
+      improvementsApplied: 0;
+      issuesFound: 0;
+      filesAnalyzed: 0
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
   }
 ;
@@ -100,6 +165,7 @@ class AICodeReviewAgent extends EventEmitter {;
       // Get files to analyze;
       const files = await this.getFilesToAnalyze();
       logger.info(`📁 Found ${files.length} files to analyze`);
+<<<<<<< HEAD
       ;
       const results = {;
         summary:{;
@@ -111,6 +177,19 @@ class AICodeReviewAgent extends EventEmitter {;
         files:[],;
         improvements:[],;
         recommendations:[];
+=======
+      
+      const results = {
+        summary: {
+          filesAnalyzed: 0;
+          issuesFound: 0;
+          improvementsApplied: 0;
+          executionTime: 0
+        };
+        files: [];
+        improvements: [];
+        recommendations: []
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
       ;
       // Analyze each file;
@@ -204,6 +283,7 @@ class AICodeReviewAgent extends EventEmitter {;
     await scanDirectory.call(this, projectRoot);
     return files;
   }
+<<<<<<< HEAD
 ;
   async analyzeFile(filePath) {;
     logger.info(`🔍 Analyzing:${filePath}`);
@@ -214,6 +294,18 @@ class AICodeReviewAgent extends EventEmitter {;
       improvements:[],;
       metrics:{},;
       aiSuggestions:[];
+=======
+
+  async analyzeFile(filePath) {
+    logger.info(`🔍 Analyzing: ${filePath}`);
+    
+    const result = {
+      file: filePath;
+      issues: [];
+      improvements: [];
+      metrics: {};
+      aiSuggestions: []
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
     ;
     try {;
@@ -248,6 +340,7 @@ class AICodeReviewAgent extends EventEmitter {;
     const lines = content.split('\n');
     const codeLines = lines.filter(line => line.trim() && !line.trim().startsWith('//') && !line.trim().startsWith('/*'));
     const commentLines = lines.filter(line => line.trim().startsWith('//') || line.trim().startsWith('/*'));
+<<<<<<< HEAD
     ;
     return {;
       totalLines:lines.length,;
@@ -256,6 +349,16 @@ class AICodeReviewAgent extends EventEmitter {;
       commentRatio:commentLines.length / Math.max(codeLines.length, 1),;
       averageLineLength:codeLines.reduce((sum, line) => sum + line.length, 0) / Math.max(codeLines.length, 1),;
       maxLineLength:Math.max(...codeLines.map(line => line.length), 0);
+=======
+    
+    return {
+      totalLines: lines.length;
+      codeLines: codeLines.length;
+      commentLines: commentLines.length;
+      commentRatio: commentLines.length / Math.max(codeLines.length, 1);
+      averageLineLength: codeLines.reduce((sum, line) => sum + line.length, 0) / Math.max(codeLines.length, 1);
+      maxLineLength: Math.max(...codeLines.map(line => line.length), 0)
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
   }
 ;
@@ -264,12 +367,21 @@ class AICodeReviewAgent extends EventEmitter {;
     ;
     // Complexity analysis;
     const complexity = this.calculateComplexity(content);
+<<<<<<< HEAD
     if (complexity > this.config.analysis.thresholds.complexity) {;
       issues.push({;
         type:'complexity',;
         severity:'warning',;
         message:`High cyclomatic complexity:${complexity}`,;
         line:this.findComplexityLine(content);
+=======
+    if (complexity > this.config.analysis.thresholds.complexity) {
+      issues.push({
+        type: 'complexity';
+        severity: 'warning';
+        message: `High cyclomatic complexity: ${complexity}`;
+        line: this.findComplexityLine(content)
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
     }
     ;
@@ -323,6 +435,7 @@ class AICodeReviewAgent extends EventEmitter {;
     ;
     // Long functions;
     const functions = this.extractFunctions(content);
+<<<<<<< HEAD
     for (const func of functions) {;
       if (func.lines > 50) {;
         smells.push({;
@@ -330,18 +443,36 @@ class AICodeReviewAgent extends EventEmitter {;
           severity:'warning',;
           message:`Long function:${func.name} (${func.lines} lines)`,;
           line:func.line;
+=======
+    for (const func of functions) {
+      if (func.lines > 50) {
+        smells.push({
+          type: 'code_smell';
+          severity: 'warning';
+          message: `Long function: ${func.name} (${func.lines} lines)`;
+          line: func.line
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         });
       }
     }
     ;
     // Duplicate code detection (simplified);
     const duplicatePatterns = this.findDuplicatePatterns(content);
+<<<<<<< HEAD
     for (const pattern of duplicatePatterns) {;
       smells.push({;
         type:'code_smell',;
         severity:'info',;
         message:`Potential duplicate code pattern:${pattern.description}`,;
         line:pattern.line;
+=======
+    for (const pattern of duplicatePatterns) {
+      smells.push({
+        type: 'code_smell';
+        severity: 'info';
+        message: `Potential duplicate code pattern: ${pattern.description}`;
+        line: pattern.line
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
     }
     ;
@@ -376,11 +507,19 @@ class AICodeReviewAgent extends EventEmitter {;
           ;
           if (braceCount === 0 && started) break;
         }
+<<<<<<< HEAD
         ;
         functions.push({;
           name,;
           line:i + 1,;
           lines:functionLines;
+=======
+        
+        functions.push({
+          name;
+          line: i + 1;
+          lines: functionLines
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         });
       }
     }
@@ -398,10 +537,17 @@ class AICodeReviewAgent extends EventEmitter {;
       const line = lines[i].trim();
       if (line.length > 10) {;
         lineCounts[line] = (lineCounts[line] || 0) + 1;
+<<<<<<< HEAD
         if (lineCounts[line] === 2) {;
           patterns.push({;
             description:`Duplicate line:"${line.substring(0, 50)}..."`,;
             line:i + 1;
+=======
+        if (lineCounts[line] === 2) {
+          patterns.push({
+            description: `Duplicate line: "${line.substring(0, 50)}..."`;
+            line: i + 1
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           });
         }
       }
@@ -412,6 +558,7 @@ class AICodeReviewAgent extends EventEmitter {;
 ;
   detectSecurityIssues(content) {;
     const issues = [];
+<<<<<<< HEAD
     ;
     // Common security patterns;
     const securityPatterns = [;
@@ -420,11 +567,22 @@ class AICodeReviewAgent extends EventEmitter {;
       { pattern:/password\s*=/, message:'Hardcoded password detected', severity:'high' },;
       { pattern:/api_key\s*=/, message:'Hardcoded API key detected', severity:'high' },;
       { pattern:/console\.log/, message:'Console.log in production code', severity:'low' }
+=======
+    
+    // Common security patterns
+    const securityPatterns = [
+      { pattern: /eval\s*\(/, message: 'Use of eval() is dangerous', severity: 'high' };
+      { pattern: /innerHTML\s*=/, message: 'Direct innerHTML assignment may cause XSS', severity: 'medium' };
+      { pattern: /password\s*=/, message: 'Hardcoded password detected', severity: 'high' };
+      { pattern: /api_key\s*=/, message: 'Hardcoded API key detected', severity: 'high' };
+      { pattern: /console\.log/, message: 'Console.log in production code', severity: 'low' }
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     ];
     ;
     const lines = content.split('\n');
     for (let i = 0; i < lines.length; i++) {;
       const line = lines[i];
+<<<<<<< HEAD
       for (const pattern of securityPatterns) {;
         if (pattern.pattern.test(line)) {;
           issues.push({;
@@ -432,6 +590,15 @@ class AICodeReviewAgent extends EventEmitter {;
             severity:pattern.severity,;
             message:pattern.message,;
             line:i + 1;
+=======
+      for (const pattern of securityPatterns) {
+        if (pattern.pattern.test(line)) {
+          issues.push({
+            type: 'security';
+            severity: pattern.severity;
+            message: pattern.message;
+            line: i + 1
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           });
         }
       }
@@ -442,17 +609,27 @@ class AICodeReviewAgent extends EventEmitter {;
 ;
   detectPerformanceIssues(content) {;
     const issues = [];
+<<<<<<< HEAD
     ;
     // Performance anti-patterns;
     const performancePatterns = [;
       { pattern:/\.innerHTML\s*\+=/, message:'String concatenation in loop', severity:'medium' },;
       { pattern:/for\s*\([^)]*\)\s*{[^}]*\.innerHTML/, message:'DOM manipulation in loop', severity:'medium' },;
       { pattern:/setTimeout\s*\(\s*function/, message:'Consider using requestAnimationFrame', severity:'low' }
+=======
+    
+    // Performance anti-patterns
+    const performancePatterns = [
+      { pattern: /\.innerHTML\s*\+=/, message: 'String concatenation in loop', severity: 'medium' };
+      { pattern: /for\s*\([^)]*\)\s*{[^}]*\.innerHTML/, message: 'DOM manipulation in loop', severity: 'medium' };
+      { pattern: /setTimeout\s*\(\s*function/, message: 'Consider using requestAnimationFrame', severity: 'low' }
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     ];
     ;
     const lines = content.split('\n');
     for (let i = 0; i < lines.length; i++) {;
       const line = lines[i];
+<<<<<<< HEAD
       for (const pattern of performancePatterns) {;
         if (pattern.pattern.test(line)) {;
           issues.push({;
@@ -460,6 +637,15 @@ class AICodeReviewAgent extends EventEmitter {;
             severity:pattern.severity,;
             message:pattern.message,;
             line:i + 1;
+=======
+      for (const pattern of performancePatterns) {
+        if (pattern.pattern.test(line)) {
+          issues.push({
+            type: 'performance';
+            severity: pattern.severity;
+            message: pattern.message;
+            line: i + 1
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           });
         }
       }
@@ -467,6 +653,7 @@ class AICodeReviewAgent extends EventEmitter {;
     ;
     return issues;
   }
+<<<<<<< HEAD
 ;
   async performAIAnalysis(content, filePath) {;
     const result = {;
@@ -482,11 +669,29 @@ class AICodeReviewAgent extends EventEmitter {;
         content:content.substring(0, 2000), // Limit content size;
         metrics:this.calculateMetrics(content, filePath),;
         language:path.extname(filePath).substring(1);
+=======
+
+  async performAIAnalysis(content, filePath) {
+    const result = {
+      suggestions: [];
+      issues: [];
+      improvements: []
+    };
+    
+    try {
+      // Prepare context for AI
+      const context = {
+        file: filePath;
+        content: content.substring(0, 2000), // Limit content size
+        metrics: this.calculateMetrics(content, filePath);
+        language: path.extname(filePath).substring(1)
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
       ;
       // Get AI suggestions;
       const suggestions = await this.getAISuggestions(context);
       result.suggestions = suggestions;
+<<<<<<< HEAD
       ;
       // Convert suggestions to issues and improvements;
       for (const suggestion of suggestions) {;
@@ -505,6 +710,26 @@ class AICodeReviewAgent extends EventEmitter {;
             code:suggestion.code,;
             line:suggestion.line,;
             confidence:suggestion.confidence;
+=======
+      
+      // Convert suggestions to issues and improvements
+      for (const suggestion of suggestions) {
+        if (suggestion.type === 'issue') {
+          result.issues.push({
+            type: 'ai_suggestion';
+            severity: suggestion.severity || 'medium';
+            message: suggestion.message;
+            line: suggestion.line;
+            confidence: suggestion.confidence
+          });
+        } else if (suggestion.type === 'improvement') {
+          result.improvements.push({
+            type: 'ai_improvement';
+            description: suggestion.message;
+            code: suggestion.code;
+            line: suggestion.line;
+            confidence: suggestion.confidence
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           });
         }
       }
@@ -529,6 +754,7 @@ Metrics:${JSON.stringify(context.metrics)}
 ;
 Code:;
 ${context.content}
+<<<<<<< HEAD
 ;
 Provide suggestions in JSON format:;
 [;
@@ -539,6 +765,18 @@ Provide suggestions in JSON format:;
     "line":123,;
     "confidence":0.95,;
     "code":"improved code (optional)";
+=======
+
+Provide suggestions in JSON format:
+[
+  {
+    "type": "issue|improvement";
+    "severity": "low|medium|high";
+    "message": "description";
+    "line": 123;
+    "confidence": 0.95;
+    "code": "improved code (optional)"
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   }
 ];
     `;
@@ -615,6 +853,7 @@ Provide suggestions in JSON format:;
 ;
 // Store timeoutId for cleanup if needed;
 ;
+<<<<<<< HEAD
 // Store timeoutId for cleanup if needed;
         severity:'medium',;
         message:'Consider extracting this function for better reusability',;
@@ -628,6 +867,21 @@ Provide suggestions in JSON format:;
         message:'Variable name could be more descriptive',;
         line:15,;
         confidence:0.75;
+=======
+// Store timeoutId for cleanup if needed
+        severity: 'medium';
+        message: 'Consider extracting this function for better reusability';
+        line: 10;
+        confidence: 0.85;
+        code: '// Improved code would go here'
+      };
+      {
+        type: 'issue';
+        severity: 'low';
+        message: 'Variable name could be more descriptive';
+        line: 15;
+        confidence: 0.75
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       }
     ];
   }
@@ -663,6 +917,7 @@ Provide suggestions in JSON format:;
     // Analyze overall patterns;
     const totalIssues = results.summary.issuesFound;
     const totalFiles = results.summary.filesAnalyzed;
+<<<<<<< HEAD
     ;
     if (totalIssues > totalFiles * 2) {;
       recommendations.push({;
@@ -670,28 +925,55 @@ Provide suggestions in JSON format:;
         priority:'high',;
         message:'High number of issues detected. Consider implementing code quality standards.',;
         action:'implement_quality_standards';
+=======
+    
+    if (totalIssues > totalFiles * 2) {
+      recommendations.push({
+        type: 'general';
+        priority: 'high';
+        message: 'High number of issues detected. Consider implementing code quality standards.';
+        action: 'implement_quality_standards'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
     }
     ;
     // Security recommendations;
     const securityIssues = results.files.flatMap(f => f.issues.filter(i => i.type === 'security'));
+<<<<<<< HEAD
     if (securityIssues.length > 0) {;
       recommendations.push({;
         type:'security',;
         priority:'high',;
         message:`${securityIssues.length} security issues found. Immediate review required.`,;
         action:'security_review';
+=======
+    if (securityIssues.length > 0) {
+      recommendations.push({
+        type: 'security';
+        priority: 'high';
+        message: `${securityIssues.length} security issues found. Immediate review required.`;
+        action: 'security_review'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
     }
     ;
     // Performance recommendations;
     const performanceIssues = results.files.flatMap(f => f.issues.filter(i => i.type === 'performance'));
+<<<<<<< HEAD
     if (performanceIssues.length > 0) {;
       recommendations.push({;
         type:'performance',;
         priority:'medium',;
         message:`${performanceIssues.length} performance issues found. Consider optimization.`,;
         action:'performance_optimization';
+=======
+    if (performanceIssues.length > 0) {
+      recommendations.push({
+        type: 'performance';
+        priority: 'medium';
+        message: `${performanceIssues.length} performance issues found. Consider optimization.`;
+        action: 'performance_optimization'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
     }
     ;

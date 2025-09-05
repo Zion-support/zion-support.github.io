@@ -81,6 +81,7 @@ class ComprehensiveAutomationSuite {;
   async fixDependencies() {;
     const startTime = Date.now();
     this.log('\n🔧 FIXING DEPENDENCIES');
+<<<<<<< HEAD
 ;
     try {;
       // Install missing dependencies;
@@ -105,6 +106,32 @@ class ComprehensiveAutomationSuite {;
       const perfResult = await this.runCommand(;
         'npm install lighthouse --save-dev',;
         'Install Lighthouse';
+=======
+
+    try {
+      // Install missing dependencies
+      const installResult = await this.runCommand(
+        'npm install';
+        'Install Dependencies'
+      );
+
+      // Install ESLint dependencies
+      const eslintResult = await this.runCommand(
+        'npm install @eslint/js --save-dev';
+        'Install ESLint JS'
+      );
+
+      // Install accessibility plugins
+      const a11yResult = await this.runCommand(
+        'npm install eslint-plugin-jsx-a11y --save-dev';
+        'Install Accessibility Plugin'
+      );
+
+      // Install performance tools
+      const perfResult = await this.runCommand(
+        'npm install lighthouse --save-dev';
+        'Install Lighthouse'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
 ;
       this.results.dependencyFix = {;
@@ -129,6 +156,7 @@ class ComprehensiveAutomationSuite {;
   async improveCodeQuality() {;
     const startTime = Date.now();
     this.log('\n🔍 IMPROVING CODE QUALITY');
+<<<<<<< HEAD
 ;
     try {;
       // Run TypeScript check;
@@ -147,6 +175,26 @@ class ComprehensiveAutomationSuite {;
       const fixResult = await this.runCommand(;
         'npx eslint . --fix --max-warnings 1000',;
         'ESLint Fix';
+=======
+
+    try {
+      // Run TypeScript check
+      const typeCheckResult = await this.runCommand(
+        'npx tsc --noEmit --skipLibCheck';
+        'TypeScript Check'
+      );
+
+      // Run ESLint with basic rules
+      const lintResult = await this.runCommand(
+        'npx eslint . --max-warnings 1000';
+        'ESLint Check'
+      );
+
+      // Fix common issues
+      const fixResult = await this.runCommand(
+        'npx eslint . --fix --max-warnings 1000';
+        'ESLint Fix'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
 ;
       this.results.codeQuality = {;
@@ -171,6 +219,7 @@ class ComprehensiveAutomationSuite {;
   async performSecurityAudit() {;
     const startTime = Date.now();
     this.log('\n🔒 PERFORMING SECURITY AUDIT');
+<<<<<<< HEAD
 ;
     try {;
       // Run npm audit;
@@ -183,6 +232,20 @@ class ComprehensiveAutomationSuite {;
       const vulnerabilityCheck = await this.runCommand(;
         'npm audit --json',;
         'Vulnerability Check';
+=======
+
+    try {
+      // Run npm audit
+      const auditResult = await this.runCommand(
+        'npm audit --audit-level moderate';
+        'Security Audit'
+      );
+
+      // Check for vulnerabilities
+      const vulnerabilityCheck = await this.runCommand(
+        'npm audit --json';
+        'Vulnerability Check'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
 ;
       this.results.securityAudit = {;
@@ -208,6 +271,7 @@ class ComprehensiveAutomationSuite {;
     try {;
       // Clean build;
       const cleanBuild = await this.runCommand('npm run clean', 'Clean Build');
+<<<<<<< HEAD
 ;
       // Production build;
       const productionBuild = await this.runCommand(;
@@ -219,6 +283,19 @@ class ComprehensiveAutomationSuite {;
       const buildCheck = await this.runCommand(;
         'ls -la .next',;
         'Build Output Check';
+=======
+
+      // Production build
+      const productionBuild = await this.runCommand(
+        'npm run build';
+        'Production Build'
+      );
+
+      // Check build output
+      const buildCheck = await this.runCommand(
+        'ls -la .next';
+        'Build Output Check'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
 ;
       this.results.buildOptimization = {;
@@ -243,6 +320,7 @@ class ComprehensiveAutomationSuite {;
   async optimizeSEO() {;
     const startTime = Date.now();
     this.log('\n🔍 OPTIMIZING SEO');
+<<<<<<< HEAD
 ;
     try {;
       // Generate sitemap;
@@ -255,6 +333,20 @@ class ComprehensiveAutomationSuite {;
       const searchIndexResult = await this.runCommand(;
         'node scripts/generate-search-index.cjs',;
         'Generate Search Index';
+=======
+
+    try {
+      // Generate sitemap
+      const sitemapResult = await this.runCommand(
+        'node scripts/generate-sitemap.cjs';
+        'Generate Sitemap'
+      );
+
+      // Generate search index
+      const searchIndexResult = await this.runCommand(
+        'node scripts/generate-search-index.cjs';
+        'Generate Search Index'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
 ;
       this.results.seoOptimization = {;
@@ -321,11 +413,19 @@ class ComprehensiveAutomationSuite {;
         'npm run:build:analyze',;
         'Bundle Analysis';
       );
+<<<<<<< HEAD
 ;
       // Check for performance issues;
       const performanceCheck = await this.runCommand(;
         'npm run build',;
         'Performance Build Check';
+=======
+
+      // Check for performance issues
+      const performanceCheck = await this.runCommand(
+        'npm run build';
+        'Performance Build Check'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
 ;
       this.results.performanceOptimization = {;
@@ -410,10 +510,17 @@ class ComprehensiveAutomationSuite {;
       result:s:this.results,;
       recommendation:s:this.generateRecommendations(),;
     };
+<<<<<<< HEAD
 ;
     fs.writeFileSync(;
       'comprehensive-automation-report.json',;
       JSON.stringify(report, null, 2);
+=======
+
+    fs.writeFileSync(
+      'comprehensive-automation-report.json';
+      JSON.stringify(report, null, 2)
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     this.log(;
       '\n📄 Detailed report saved to comprehensive-automation-report.json';

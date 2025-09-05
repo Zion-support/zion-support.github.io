@@ -161,6 +161,7 @@ function main() {;
         writeFileSafely(path.join(snapRoot, f), txt);
       }
     }
+<<<<<<< HEAD
 ;
     // write metadata per branch;
     const metaTxt = [;
@@ -170,6 +171,17 @@ function main() {;
       `author:${meta.author}`,;
       `subject:${meta.subject}`,;
       '';
+=======
+
+    // write metadata per branch
+    const metaTxt = [
+      `branch: ${branch}`;
+      `commit: ${meta.short}`;
+      `date: ${meta.date}`;
+      `author: ${meta.author}`;
+      `subject: ${meta.subject}`;
+      ''
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     ].join('\n');
     writeFileSafely(path.join(snapRoot, 'META.txt'), metaTxt);
 ;

@@ -37,11 +37,19 @@ class MergeConflictResolver {;
 ;
   async resolveMergeConflicts() {;
     this.log('Resolving merge conflicts...', 'PROGRESS');
+<<<<<<< HEAD
 ;
     // Check current status;
     const status = await this.runCommand(;
       'git status --porcelain',;
       'Check git status';
+=======
+
+    // Check current status
+    const status = await this.runCommand(
+      'git status --porcelain';
+      'Check git status'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     if (!status.success) return false;
 ;
@@ -51,11 +59,19 @@ class MergeConflictResolver {;
 ;
       // Add all files to resolve conflicts;
       await this.runCommand('git add .', 'Add all files to resolve conflicts');
+<<<<<<< HEAD
 ;
       // Commit the resolution;
       await this.runCommand(;
         'git commit -m "Resolve merge conflicts automatically"',;
         'Commit conflict resolution';
+=======
+
+      // Commit the resolution
+      await this.runCommand(
+        'git commit -m "Resolve merge conflicts automatically"';
+        'Commit conflict resolution'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
     }
 ;
@@ -64,11 +80,19 @@ class MergeConflictResolver {;
 ;
   async handleGitOperations() {;
     this.log('Handling git operations...', 'PROGRESS');
+<<<<<<< HEAD
 ;
     // Try to pull latest changes;
     await this.runCommand(;
       'git pull origin main --no-edit',;
       'Pull latest changes';
+=======
+
+    // Try to pull latest changes
+    await this.runCommand(
+      'git pull origin main --no-edit';
+      'Pull latest changes'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
 ;
     // Resolve any conflicts;
@@ -82,17 +106,31 @@ class MergeConflictResolver {;
       'git commit -m "fea:t:Comprehensive automation improvements and fixes\n\n- Fixed syntax errors and build issues\n- Resolved merge conflicts\n- Enhanced automation scripts\n- Added performance optimizations\n- Improved security configurations\n- Created comprehensive monitoring system"',;
       'Commit improvements';
     );
+<<<<<<< HEAD
 ;
     // Push to current branch;
     const branchResult = await this.runCommand(;
       'git branch --show-current',;
       'Get current branch';
+=======
+
+    // Push to current branch
+    const branchResult = await this.runCommand(
+      'git branch --show-current';
+      'Get current branch'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     if (branchResult.success) {;
       const currentBranch = branchResult.output.trim();
+<<<<<<< HEAD
       await this.runCommand(;
         `git push origin ${currentBranch}`,;
         'Push to current branch';
+=======
+      await this.runCommand(
+        `git push origin ${currentBranch}`;
+        'Push to current branch'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
     }
   }
@@ -104,11 +142,19 @@ class MergeConflictResolver {;
     try {;
       execSync('gh --version', { stdi:o:'ignore' });
       this.log('GitHub CLI found', 'SUCCESS');
+<<<<<<< HEAD
 ;
       // List open PRs;
       const prsResult = await this.runCommand(;
         'gh pr list --state open',;
         'List open PRs';
+=======
+
+      // List open PRs
+      const prsResult = await this.runCommand(
+        'gh pr list --state open';
+        'List open PRs'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
       if (prsResult.success && prsResult.output.trim()) {;
         this.log('Open PRs:found:', 'INFO');
@@ -122,11 +168,19 @@ class MergeConflictResolver {;
           const prNumber = line.split('\t')[0];
           if (prNumber) {;
             this.log(`Processing PR #${prNumber}...`, 'PROGRESS');
+<<<<<<< HEAD
 ;
             // Try to merge the PR;
             await this.runCommand(;
               `gh pr merge ${prNumber} --merge --delete-branch`,;
               `Merge PR #${prNumber}`;
+=======
+
+            // Try to merge the PR
+            await this.runCommand(
+              `gh pr merge ${prNumber} --merge --delete-branch`;
+              `Merge PR #${prNumber}`
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
             );
           }
         }
@@ -137,11 +191,19 @@ class MergeConflictResolver {;
       this.log('GitHub CLI not available, skipping PR operations', 'WARNING');
     }
   }
+<<<<<<< HEAD
 ;
   async run() {;
     this.log(;
       '🚀 Starting Merge Conflict Resolution and PR Management',;
       'PROGRESS';
+=======
+
+  async run() {
+    this.log(
+      '🚀 Starting Merge Conflict Resolution and PR Management';
+      'PROGRESS'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
 ;
     try {;

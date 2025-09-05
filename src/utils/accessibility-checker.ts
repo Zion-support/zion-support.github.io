@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // Accessibility checker utilities;
 export const checkAccessibility = () => {;
@@ -41,5 +42,13 @@ export const fixAccessibilityIssues = issues => {;
       issue.element.alt = 'Image description';
     }
   });
+=======
+// Accessibility checker utilities
+export const checkAccessibility = () => {
+  console.log('Checking accessibility...');};
+
+export const validateAriaLabels = () => {
+  console.log('Validating ARIA labels...');
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 };
 ;

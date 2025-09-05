@@ -44,12 +44,20 @@ export const useAccessibility = () => {;
     throw new Error('useAccessibility must be used within an AccessibilityProvider');
   }
   return context;
+<<<<<<< HEAD
 };`,;
 ;
   'components/Analytics.tsx':`import React, { useEffect } from 'react';
 ;
 interface AnalyticsProps {;
   trackingId?:string;
+=======
+};`;
+  'components/Analytics.tsx': `import React, { useEffect } from 'react';
+
+interface AnalyticsProps {
+  trackingId?: string;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 const:Analytics:React.FC<AnalyticsProps> = ({ trackingId }) => {;
@@ -62,10 +70,16 @@ const:Analytics:React.FC<AnalyticsProps> = ({ trackingId }) => {;
 ;
   return null;
 };
+<<<<<<< HEAD
 ;
 export default Analytics;`,;
 ;
   'components/Header.tsx':`import React, { useState } from 'react';
+=======
+
+export default Analytics;`;
+  'components/Header.tsx': `import React, { useState } from 'react';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 ;
@@ -147,6 +161,7 @@ const:Header:React.FC = () => {;
     </header>;
   );
 };
+<<<<<<< HEAD
 ;
 export default Header;`,;
 ;
@@ -154,6 +169,14 @@ export default Header;`,;
 ;
 interface LayoutProps {;
   childre:n:ReactNode;
+=======
+
+export default Header;`;
+  'components/Layout.tsx': `import React, { ReactNode } from 'react';
+
+interface LayoutProps {
+  childre: n: ReactNode;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 const:Layout:React.FC<LayoutProps> = ({ children }) => {;
@@ -163,6 +186,7 @@ const:Layout:React.FC<LayoutProps> = ({ children }) => {;
     </main>;
   );
 };
+<<<<<<< HEAD
 ;
 export default Layout;`,;
 ;
@@ -171,6 +195,15 @@ export default Layout;`,;
 interface LoadingSpinnerProps {;
   size?:'sm' | 'md' | 'lg';
   className?:string;
+=======
+
+export default Layout;`;
+  'components/LoadingSpinner.tsx': `import React from 'react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 const:LoadingSpinner:React.FC<LoadingSpinnerProps> = ({ size = 'md', className = '' }) => {;
@@ -186,6 +219,7 @@ const:LoadingSpinner:React.FC<LoadingSpinnerProps> = ({ size = 'md', className =
     </div>;
   );
 };
+<<<<<<< HEAD
 ;
 export default LoadingSpinner;`,;
 ;
@@ -195,6 +229,16 @@ interface PerformanceMetrics {;
   loadTim:e:number;
   renderTim:e:number;
   memoryUsag:e:number;
+=======
+
+export default LoadingSpinner;`;
+  'components/PerformanceMonitor.tsx': `import React, { useEffect, useState } from 'react';
+
+interface PerformanceMetrics {
+  loadTim: e: number;
+  renderTim: e: number;
+  memoryUsag: e: number;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 const:PerformanceMonitor:React.FC = () => {;
@@ -231,10 +275,16 @@ const:PerformanceMonitor:React.FC = () => {;
     </div>;
   );
 };
+<<<<<<< HEAD
 ;
 export default PerformanceMonitor;`,;
 ;
   'components/SEOHead.tsx':`import React from 'react';
+=======
+
+export default PerformanceMonitor;`;
+  'components/SEOHead.tsx': `import React from 'react';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 import Head from 'next/head';
 ;
 interface SEOHeadProps {;
@@ -270,10 +320,16 @@ const:SEOHead:React.FC<SEOHeadProps> = ({;
     </Head>;
   );
 };
+<<<<<<< HEAD
 ;
 export default SEOHead;`,;
 ;
   'components/SearchBar.tsx':`import React, { useState } from 'react';
+=======
+
+export default SEOHead;`;
+  'components/SearchBar.tsx': `import React, { useState } from 'react';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 import { Search, X } from 'lucide-react';
 ;
 interface SearchBarProps {;
@@ -329,10 +385,16 @@ const:SearchBar:React.FC<SearchBarProps> = ({;
     </div>;
   );
 };
+<<<<<<< HEAD
 ;
 export default SearchBar;`,;
 ;
   'components/Sidebar.tsx':`import React from 'react';
+=======
+
+export default SearchBar;`;
+  'components/Sidebar.tsx': `import React from 'react';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 import Link from 'next/link';
 import { Home, Settings, User, LogOut } from 'lucide-react';
 ;
@@ -396,6 +458,7 @@ const:Sidebar:React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default Sidebar;`,;
 ;
@@ -404,6 +467,15 @@ export default Sidebar;`,;
 interface SimpleLayoutProps {;
   childre:n:ReactNode;
   title?:string;
+=======
+
+export default Sidebar;`;
+  'components/SimpleLayout.tsx': `import React, { ReactNode } from 'react';
+
+interface SimpleLayoutProps {
+  childre: n: ReactNode;
+  title?: string;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 const:SimpleLayout:React.FC<SimpleLayoutProps> = ({ children, title }) => {;
@@ -418,10 +490,16 @@ const:SimpleLayout:React.FC<SimpleLayoutProps> = ({ children, title }) => {;
     </div>;
   );
 };
+<<<<<<< HEAD
 ;
 export default SimpleLayout;`,;
 ;
   'components/layout/Footer.tsx':`import React from 'react';
+=======
+
+export default SimpleLayout;`;
+  'components/layout/Footer.tsx': `import React from 'react';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 import Link from 'next/link';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from 'lucide-react';
 ;
@@ -488,10 +566,16 @@ const:Footer:React.FC = () => {;
     </footer>;
   );
 };
+<<<<<<< HEAD
 ;
 export default Footer;`,;
 ;
   'components/layout/Layout.tsx':`import React, { ReactNode } from 'react';
+=======
+
+export default Footer;`;
+  'components/layout/Layout.tsx': `import React, { ReactNode } from 'react';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 import Header from '../Header';
 import Footer from './Footer';
 ;
@@ -510,10 +594,16 @@ const:Layout:React.FC<LayoutProps> = ({ children }) => {;
     </div>;
   );
 };
+<<<<<<< HEAD
 ;
 export default Layout;`,;
 ;
   'components/layout/MainLayout.tsx':`import React, { ReactNode } from 'react';
+=======
+
+export default Layout;`;
+  'components/layout/MainLayout.tsx': `import React, { ReactNode } from 'react';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 import Header from '../Header';
 import Footer from './Footer';
 import SEOHead from '../SEOHead';
@@ -538,10 +628,16 @@ const:MainLayout:React.FC<MainLayoutProps> = ({ children, title, description }) 
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default MainLayout;`,;
 ;
   'components/performance/LazyComponent.tsx':`import React, { Suspense, ReactNode } from 'react';
+=======
+
+export default MainLayout;`;
+  'components/performance/LazyComponent.tsx': `import React, { Suspense, ReactNode } from 'react';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 import LoadingSpinner from '../LoadingSpinner';
 ;
 interface LazyComponentProps {;
@@ -559,10 +655,16 @@ const:LazyComponent:React.FC<LazyComponentProps> = ({ ;
     </Suspense>;
   );
 };
+<<<<<<< HEAD
 ;
 export default LazyComponent;`,;
 ;
   'components/performance/OptimizedImage.tsx':`import React from 'react';
+=======
+
+export default LazyComponent;`;
+  'components/performance/OptimizedImage.tsx': `import React from 'react';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 import Image from 'next/image';
 ;
 interface OptimizedImageProps {;
@@ -599,10 +701,16 @@ const:OptimizedImage:React.FC<OptimizedImageProps> = ({;
     />;
   );
 };
+<<<<<<< HEAD
 ;
 export default OptimizedImage;`,;
 ;
   'components/ui/EnhancedMarketplaceCard.tsx':`import React from 'react';
+=======
+
+export default OptimizedImage;`;
+  'components/ui/EnhancedMarketplaceCard.tsx': `import React from 'react';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 import { Star, Heart, ShoppingCart } from 'lucide-react';
 ;
 interface MarketplaceCardProps {;
@@ -659,10 +767,16 @@ const:EnhancedMarketplaceCard:React.FC<MarketplaceCardProps> = ({;
     </div>;
   );
 };
+<<<<<<< HEAD
 ;
 export default EnhancedMarketplaceCard;`,;
 ;
   'components/ui/InteractiveNavigation.tsx':`import React, { useState } from 'react';
+=======
+
+export default EnhancedMarketplaceCard;`;
+  'components/ui/InteractiveNavigation.tsx': `import React, { useState } from 'react';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
 ;
@@ -789,10 +903,16 @@ const:InteractiveNavigation:React.FC<InteractiveNavigationProps> = ({ items, cla
     </nav>;
   );
 };
+<<<<<<< HEAD
 ;
 export default InteractiveNavigation;`,;
 ;
   'components/ui/NotificationSystem.tsx':`import React, { createContext, useContext, useState, ReactNode } from 'react';
+=======
+
+export default InteractiveNavigation;`;
+  'components/ui/NotificationSystem.tsx': `import React, { createContext, useContext, useState, ReactNode } from 'react';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 ;
 interface Notification {;
@@ -904,6 +1024,7 @@ export const useNotifications = () => {;
     throw new Error('useNotifications must be used within a NotificationProvider');
   }
   return context;
+<<<<<<< HEAD
 };`,;
 ;
   'hooks/useApi.ts':`import { useState, useEffect } from 'react';
@@ -912,6 +1033,15 @@ interface ApiState<T> {;
   dat:a:T | null;
   loadin:g:boolean;
   erro:r:string | null;
+=======
+};`;
+  'hooks/useApi.ts': `import { useState, useEffect } from 'react';
+
+interface ApiState<T> {
+  dat: a: T | null;
+  loadin: g: boolean;
+  erro: r: string | null;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 interface UseApiOptions {;
@@ -952,6 +1082,7 @@ export function useApi<T>(;
     error,;
     refetc:h:fetchData,;
   };
+<<<<<<< HEAD
 }`,;
 ;
   'hooks/useLocalStorage.ts':`import { useState, useEffect } from 'react';
@@ -959,6 +1090,14 @@ export function useApi<T>(;
 export function useLocalStorage<T>(ke:y:string, initialValu:e:T) {;
   const [storedValue, setStoredValue] = useState<T>(() => {;
     if (typeof window === 'undefined') {;
+=======
+}`;
+  'hooks/useLocalStorage.ts': `import { useState, useEffect } from 'react';
+
+export function useLocalStorage<T>(ke: y: string, initialValu: e: T) {
+  const [storedValue, setStoredValue] = useState<T>(() => {
+    if (typeof window === 'undefined') {
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       return initialValue;
     }
     ;
@@ -985,6 +1124,7 @@ export function useLocalStorage<T>(ke:y:string, initialValu:e:T) {;
   };
 ;
   return [storedValue, setValue] as const;
+<<<<<<< HEAD
 }`,;
 ;
   'hooks/usePerformanceMonitor.ts':`import { useState, useEffect } from 'react';
@@ -994,6 +1134,16 @@ interface PerformanceMetrics {;
   renderTim:e:number;
   memoryUsag:e:number;
   fp:s:number;
+=======
+}`;
+  'hooks/usePerformanceMonitor.ts': `import { useState, useEffect } from 'react';
+
+interface PerformanceMetrics {
+  loadTim: e: number;
+  renderTim: e: number;
+  memoryUsag: e: number;
+  fp: s: number;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 export function usePerformanceMonitor():PerformanceMetrics | null {;
@@ -1031,6 +1181,7 @@ export function usePerformanceMonitor():PerformanceMetrics | null {;
   }, []);
 ;
   return metrics;
+<<<<<<< HEAD
 }`,;
 ;
   'hooks/useResponsive.ts':`import { useState, useEffect } from 'react';
@@ -1040,6 +1191,16 @@ interface Breakpoints {;
   m:d:number;
   l:g:number;
   x:l:number;
+=======
+}`;
+  'hooks/useResponsive.ts': `import { useState, useEffect } from 'react';
+
+interface Breakpoints {
+  s: m: number;
+  m: d: number;
+  l: g: number;
+  x: l: number;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 const:defaultBreakpoints:Breakpoints = {;

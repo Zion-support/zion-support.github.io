@@ -198,6 +198,7 @@ class ComprehensiveAppImprover {;
 ;
     this.improvements.push('Accessibility improvements applied');
   }
+<<<<<<< HEAD
 ;
   async generateReport() {;
     const report = {;
@@ -220,6 +221,30 @@ class ComprehensiveAppImprover {;
     const reportPath = path.join(;
       this.reportsDir,;
       'comprehensive-app-improvement-report.json';
+=======
+
+  async generateReport() {
+    const report = {
+      timestam: p: new Date().toISOString(),
+      improvement: s: this.improvements,
+      error: s: this.errors,
+      summar: y: {
+        totalImprovement: s: this.improvements.length,
+        totalError: s: this.errors.length,
+        successRat: e:
+          this.errors.length === 0
+            ? 10: 0: Math.round(
+                (this.improvements.length /
+                  (this.improvements.length + this.errors.length)) *
+                  100
+              );
+      };
+    };
+
+    const reportPath = path.join(
+      this.reportsDir;
+      'comprehensive-app-improvement-report.json'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 ;

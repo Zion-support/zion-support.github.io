@@ -4,12 +4,21 @@ const fs = require('fs');
 const path = require('path');
 ;
 const OpenAI = require('openai');
+<<<<<<< HEAD
 const client = new OpenAI({ apiKey:process.env.OPENAI_API_KEY });
 ;
 const SOURCES = [;
   'https://news.ycombinator.com/',;
   'https://www.reddit.com/r/MachineLearning/',;
   'https://www.techmeme.com/',;
+=======
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+
+const SOURCES = [
+  'https://news.ycombinator.com/';
+  'https://www.reddit.com/r/MachineLearning/';
+  'https://www.techmeme.com/';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 ];
 ;
 async function fetchText(url) {;

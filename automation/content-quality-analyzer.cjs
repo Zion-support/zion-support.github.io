@@ -7,6 +7,7 @@
 ;
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 ;
 class ContentQualityAnalyzer {;
   constructor() {;
@@ -15,6 +16,16 @@ class ContentQualityAnalyzer {;
       issues:[],;
       recommendations:[],;
       scores:{}
+=======
+
+class ContentQualityAnalyzer {
+  constructor() {
+    this.analysis = {
+      totalFiles: 0;
+      issues: [];
+      recommendations: [];
+      scores: {}
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
   }
 ;
@@ -106,9 +117,15 @@ class ContentQualityAnalyzer {;
       issues.push(`${filename} Multiple consecutive spaces detected`);
       score -= 5;
     }
+<<<<<<< HEAD
     ;
     if (content.match(/\n{3,}/)) {;
       issues.push(`${filename} Excessive line breaks detected`);
+=======
+    
+    if (content.match(/\n{3}/)) {
+      issues.push(`${filename}: Excessive line breaks detected`);
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       score -= 3;
     }
     ;
@@ -157,9 +174,15 @@ class ContentQualityAnalyzer {;
       issues.push(`${filename} Multiple consecutive spaces detected`);
       score -= 5;
     }
+<<<<<<< HEAD
     ;
     if (content.match(/\n{3,}/)) {;
       issues.push(`${filename} Excessive line breaks detected`);
+=======
+    
+    if (content.match(/\n{3}/)) {
+      issues.push(`${filename}: Excessive line breaks detected`);
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       score -= 3;
     }
     ;

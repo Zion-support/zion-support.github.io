@@ -23,6 +23,7 @@ export interface GptClassification {;
   reason:string,;
   confidence:number, // 0..1;
 }
+<<<<<<< HEAD
 ;
 export type FraudReviewStatus = 'PENDING' | 'WARNED' | 'SUSPENDED' | 'IGNORED',;
 ;
@@ -42,6 +43,25 @@ export interface AdminActionRecord {;
   adminId:string | null,;
   reason:string | null,;
   createdAt:string, // ISO;
+=======
+export type FraudReviewStatus = 'PENDING' | 'WARNED' | 'SUSPENDED' | 'IGNORED',
+
+export interface StoredFraudRecord extends FraudEvent {
+  heuristic: HeuristicEvaluation,
+  gpt?: GptClassification,
+  autoHidden: boolean,
+  status: FraudReviewStatus
+}
+export type AdminActionType = 'SUSPEND' | 'WARN' | 'IGNORE',
+
+export interface AdminActionRecord {
+  id: string,
+  fraudId: string,
+  action: AdminActionType,
+  adminId: string | null,
+  reason: string | null,
+  createdAt: string, // ISO
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 export interface PrivacySettings {;
@@ -49,6 +69,7 @@ export interface PrivacySettings {;
   monitoringContentAnalysisOptOut:boolean,;
   updatedAt:string, // ISO;
 }
+<<<<<<< HEAD
 ;
 export interface ListFilters {;
   source?:MonitoredSource,;
@@ -69,3 +90,24 @@ export interface MonthlyReport {;
   falsePositives:number, // count of IGNORED actions;
   topReasons:Array<{ reason:string, count:number }>,;
 }
+=======
+
+export interface ListFilters {
+  source?: MonitoredSource,
+  userId?: string,
+  label?: GptClassificationLabel,
+  status?: FraudReviewStatus
+}
+
+export interface MonthlyReport {
+  month: string, // YYYY-MM
+  totals: {
+    all: number,
+    safe: number,
+    suspicious: number,
+    dangerous: number
+  },
+  bySource: Record<MonitoredSource number>,
+  falsePositives: number, // count of IGNORED actions
+  topReasons: Array<{ reason: string, count: number }>}
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // Monitoring and analytics setup;
 export const setupAnalytics = () => {;
@@ -47,3 +48,11 @@ export const trackErrors = () => {;
   });
 };
 ;
+=======
+// Monitoring utilities
+export const _logEvent = (_event: string) => {};
+
+export const trackPerformance = () => {
+  console.log('Tracking performance...');
+};export const _trackPerformance = () => {};
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

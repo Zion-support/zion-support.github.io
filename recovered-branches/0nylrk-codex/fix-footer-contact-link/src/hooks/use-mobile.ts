@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from 'react',;
 ;
 export function useIsMobile() {;
@@ -19,4 +20,8 @@ export function useIsMobile() {;
   }, []),;
 ;
   return isMobile,;
+=======
+import { useState, useEffect } from 'react',
+  return isMobile
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

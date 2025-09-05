@@ -62,10 +62,17 @@ async function main() {;
   const index = buildIndex(files);
   const compUnused = detectUnusedComponents(index);
   const pageUnused = detectUnusedPages(index);
+<<<<<<< HEAD
   const report = {;
     generatedAt:new Date().toISOString(),;
     unusedComponents:compUnused,;
     unusedPages:pageUnused,;
+=======
+  const report = {
+    generatedAt: new Date().toISOString();
+    unusedComponents: compUnused;
+    unusedPages: pageUnused;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   };
   const outDir = path.join(process.cwd(), 'public', 'automation-reports');
   await fs.promises.mkdir(outDir, { recursive:true });

@@ -7,6 +7,7 @@ function fixMergeConflicts(filePath) {;
 ;
 =======;
     const content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
     ;
 >>>>>>> cursor/automate-test-improve-and-merge-code-85f4;
     // Check if file has merge conflict markers;
@@ -18,6 +19,25 @@ function fixMergeConflicts(filePath) {;
       console.log(`Fixing merge conflicts:in:${filePath}`);
 ;
       // Remove merge conflict markers and keep the content after ;
+=======
+    
+>>>>>>> cursor/automate-test-improve-and-merge-code-85f4
+    // Check if file has merge conflict markers
+    if (
+<<<<<<< HEAD
+=======
+      content.includes('
+      content.includes('') ||
+      content.includes('>>>>>>>')
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+    ) {
+      console.log(`Fixing merge conflicts: in: ${filePath}`);
+
+<<<<<<< HEAD
+=======
+      // Remove merge conflict markers and keep the content after 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       const lines = content.split('\n');
       const fixedLines = [];
       let inConflict = false;
@@ -25,12 +45,21 @@ function fixMergeConflicts(filePath) {;
 ;
       for (let i = 0; i < lines.length; i++) {;
         const line = lines[i];
+<<<<<<< HEAD
 ;
         if (line.includes(';
+=======
+
+<<<<<<< HEAD
+=======
+        if (line.includes('
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           inConflict = true;
           keepContent = false;
           continue;
         }
+<<<<<<< HEAD
 ;
         if (line.includes('')) {;
           keepContent = true;
@@ -38,6 +67,18 @@ function fixMergeConflicts(filePath) {;
         }
 ;
         if (line.includes('>>>>>>>')) {;
+=======
+
+<<<<<<< HEAD
+=======
+        if (line.includes('')) {
+          keepContent = true;
+          continue;
+        }
+
+        if (line.includes('>>>>>>>')) {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           inConflict = false;
           keepContent = false;
           continue;

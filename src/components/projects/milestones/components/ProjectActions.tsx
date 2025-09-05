@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import Link from 'next/link',;
@@ -42,4 +43,46 @@ export function ProjectActions({;
       )}
     </div>;
   ),;
+=======
+import React from 'react',
+import { Button } from '@/components/ui/button',
+import Link from 'next/link',
+import { ShieldAlert } from 'lucide-react'
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
+interface ProjectActionsProps {
+  projectId: string,
+  isUnderDispute: boolean,
+  disputeId?: string,
+  isTalent: boolean,
+  onAddMilestone: () => void
+}
+
+export function ProjectActions({
+  projectId,
+  isUnderDispute,
+  disputeId,
+  isTalent,
+  onAddMilestone
+}: ProjectActionsProps) {
+  return (
+    <div className=&quot;flex gap-2&quot;>      {isUnderDispute && disputeId ? (
+        <Button variant=&quot;outline&quot; asChild>
+          <Link href={`/dashboard/disputes/${disputeId}`}>
+            <ShieldAlert className=&quot;h-4 w-4 mr-2&quot; />
+            View Active Dispute
+          </Link>
+        </Button>
+      ) : (
+        <RaiseDisputeButton 
+          projectId={projectId}
+          variant=&quot;outline&quot;        />
+      )}
+      {_isTalent && !isUnderDispute && (
+        <Button onClick={onAddMilestone}>
+          Add Milestone
+        </Button>
+      )}
+    </div>
+  )
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

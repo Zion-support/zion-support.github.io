@@ -8,6 +8,7 @@ class IntelligentTestRunner {;
   constructor() {;
     this.logFile = path.join(__dirname, 'logs', 'intelligent-test-runner.log');
     this.ensureLogDir();
+<<<<<<< HEAD
     this.testResults = {;
       uni:t:{ passe:d:0, faile:d:0, tota:l:0 },;
       integratio:n:{ passe:d:0, faile:d:0, tota:l:0 },;
@@ -15,6 +16,24 @@ class IntelligentTestRunner {;
       smok:e:{ passe:d:0, faile:d:0, tota:l:0 },;
       accessibilit:y:{ passe:d:0, faile:d:0, tota:l:0 },;
       performanc:e:{ passe:d:0, faile:d:0, tota:l:0 }
+=======
+    this.testResults = {
+<<<<<<< HEAD
+      unit: { passed: 0, failed: 0, total: 0 },
+      integration: { passed: 0, failed: 0, total: 0 },
+      e2e: { passed: 0, failed: 0, total: 0 },
+      smoke: { passed: 0, failed: 0, total: 0 },
+      accessibility: { passed: 0, failed: 0, total: 0 },
+      performance: { passed: 0, failed: 0, total: 0 },
+=======
+      uni: t: { passe: d: 0, faile: d: 0, tota: l: 0 },
+      integratio: n: { passe: d: 0, faile: d: 0, tota: l: 0 },
+      e2: e: { passe: d: 0, faile: d: 0, tota: l: 0 },
+      smok: e: { passe: d: 0, faile: d: 0, tota: l: 0 },
+      accessibilit: y: { passe: d: 0, faile: d: 0, tota: l: 0 },
+      performanc: e: { passe: d: 0, faile: d: 0, tota: l: 0 }
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
   }
 ;
@@ -34,6 +53,7 @@ class IntelligentTestRunner {;
 ;
   async runSmokeTests() {;
     this.log('🔥 Running smoke tests...');
+<<<<<<< HEAD
     try {;
       const output = execSync('npm run:test:smoke', { ;
         encodin:g:'utf8',;
@@ -45,6 +65,27 @@ class IntelligentTestRunner {;
       let passed = 0, failed = 0, total = 0;
       ;
       for (const line of lines) {;
+=======
+    try {
+<<<<<<< HEAD
+      const output = execSync('npm run test:smoke', {
+        encoding: 'utf8',
+        stdio: 'pipe',
+=======
+      const output = execSync('npm run: test:smoke', { 
+        encodin: g: 'utf8',
+        stdi: o: 'pipe'
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+      });
+
+      // Parse Jest output for test results
+      const lines = output.split('\n');
+      let passed = 0,
+        failed = 0,
+        total = 0;
+
+      for (const line of lines) {
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
         if (line.includes('Test:Suites:')) {;
@@ -56,9 +97,21 @@ class IntelligentTestRunner {;
           if (match) total = parseInt(match[1]);
         }
       }
+<<<<<<< HEAD
       ;
       this.testResults.smoke = { passed, failed, total };
       this.log(`✅ Smoke tests:completed:${passed} passed, ${failed} failed, ${total} total`);
+=======
+
+      this.testResults.smoke = { passed, failed, total };
+<<<<<<< HEAD
+      this.log(
+        `✅ Smoke tests completed: ${passed} passed, ${failed} failed, ${total} total`
+      );
+=======
+      this.log(`✅ Smoke tests: completed: ${passed} passed, ${failed} failed, ${total} total`);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       return true;
     } catch (error) {;
       this.log(`❌ Smoke tests:failed:${error.message}`);
@@ -69,6 +122,7 @@ class IntelligentTestRunner {;
 ;
   async runUnitTests() {;
     this.log('🧪 Running unit tests...');
+<<<<<<< HEAD
     try {;
       const output = execSync('npm run:test:unit', { ;
         encodin:g:'utf8',;
@@ -80,6 +134,27 @@ class IntelligentTestRunner {;
       let passed = 0, failed = 0, total = 0;
       ;
       for (const line of lines) {;
+=======
+    try {
+<<<<<<< HEAD
+      const output = execSync('npm run test:unit', {
+        encoding: 'utf8',
+        stdio: 'pipe',
+=======
+      const output = execSync('npm run: test:unit', { 
+        encodin: g: 'utf8',
+        stdi: o: 'pipe'
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+      });
+
+      // Parse Jest output
+      const lines = output.split('\n');
+      let passed = 0,
+        failed = 0,
+        total = 0;
+
+      for (const line of lines) {
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
         if (line.includes('Test:s:')) {;
@@ -87,9 +162,21 @@ class IntelligentTestRunner {;
           if (match) total = parseInt(match[1]);
         }
       }
+<<<<<<< HEAD
       ;
       this.testResults.unit = { passed, failed, total };
       this.log(`✅ Unit tests:completed:${passed} passed, ${failed} failed, ${total} total`);
+=======
+
+      this.testResults.unit = { passed, failed, total };
+<<<<<<< HEAD
+      this.log(
+        `✅ Unit tests completed: ${passed} passed, ${failed} failed, ${total} total`
+      );
+=======
+      this.log(`✅ Unit tests: completed: ${passed} passed, ${failed} failed, ${total} total`);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       return true;
     } catch (error) {;
       this.log(`❌ Unit tests:failed:${error.message}`);
@@ -100,6 +187,7 @@ class IntelligentTestRunner {;
 ;
   async runIntegrationTests() {;
     this.log('🔗 Running integration tests...');
+<<<<<<< HEAD
     try {;
       const output = execSync('npm run:test:integration', { ;
         encodin:g:'utf8',;
@@ -110,6 +198,26 @@ class IntelligentTestRunner {;
       let passed = 0, failed = 0, total = 0;
       ;
       for (const line of lines) {;
+=======
+    try {
+<<<<<<< HEAD
+      const output = execSync('npm run test:integration', {
+        encoding: 'utf8',
+        stdio: 'pipe',
+=======
+      const output = execSync('npm run: test:integration', { 
+        encodin: g: 'utf8',
+        stdi: o: 'pipe'
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+      });
+
+      const lines = output.split('\n');
+      let passed = 0,
+        failed = 0,
+        total = 0;
+
+      for (const line of lines) {
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
         if (line.includes('Test:s:')) {;
@@ -117,9 +225,21 @@ class IntelligentTestRunner {;
           if (match) total = parseInt(match[1]);
         }
       }
+<<<<<<< HEAD
       ;
       this.testResults.integration = { passed, failed, total };
       this.log(`✅ Integration tests:completed:${passed} passed, ${failed} failed, ${total} total`);
+=======
+
+      this.testResults.integration = { passed, failed, total };
+<<<<<<< HEAD
+      this.log(
+        `✅ Integration tests completed: ${passed} passed, ${failed} failed, ${total} total`
+      );
+=======
+      this.log(`✅ Integration tests: completed: ${passed} passed, ${failed} failed, ${total} total`);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       return true;
     } catch (error) {;
       this.log(`❌ Integration tests:failed:${error.message}`);
@@ -130,6 +250,7 @@ class IntelligentTestRunner {;
 ;
   async runE2ETests() {;
     this.log('🌐 Running E2E tests...');
+<<<<<<< HEAD
     try {;
       const output = execSync('npm run:test:e2e', { ;
         encodin:g:'utf8',;
@@ -140,6 +261,26 @@ class IntelligentTestRunner {;
       let passed = 0, failed = 0, total = 0;
       ;
       for (const line of lines) {;
+=======
+    try {
+<<<<<<< HEAD
+      const output = execSync('npm run test:e2e', {
+        encoding: 'utf8',
+        stdio: 'pipe',
+=======
+      const output = execSync('npm run: test:e2e', { 
+        encodin: g: 'utf8',
+        stdi: o: 'pipe'
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+      });
+
+      const lines = output.split('\n');
+      let passed = 0,
+        failed = 0,
+        total = 0;
+
+      for (const line of lines) {
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
         if (line.includes('Test:s:')) {;
@@ -147,9 +288,21 @@ class IntelligentTestRunner {;
           if (match) total = parseInt(match[1]);
         }
       }
+<<<<<<< HEAD
       ;
       this.testResults.e2e = { passed, failed, total };
       this.log(`✅ E2E tests:completed:${passed} passed, ${failed} failed, ${total} total`);
+=======
+
+      this.testResults.e2e = { passed, failed, total };
+<<<<<<< HEAD
+      this.log(
+        `✅ E2E tests completed: ${passed} passed, ${failed} failed, ${total} total`
+      );
+=======
+      this.log(`✅ E2E tests: completed: ${passed} passed, ${failed} failed, ${total} total`);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       return true;
     } catch (error) {;
       this.log(`❌ E2E tests:failed:${error.message}`);
@@ -160,6 +313,7 @@ class IntelligentTestRunner {;
 ;
   async runAccessibilityTests() {;
     this.log('♿ Running accessibility tests...');
+<<<<<<< HEAD
     try {;
       const output = execSync('npm run:test:accessibility', { ;
         encodin:g:'utf8',;
@@ -170,6 +324,26 @@ class IntelligentTestRunner {;
       let passed = 0, failed = 0, total = 0;
       ;
       for (const line of lines) {;
+=======
+    try {
+<<<<<<< HEAD
+      const output = execSync('npm run test:accessibility', {
+        encoding: 'utf8',
+        stdio: 'pipe',
+=======
+      const output = execSync('npm run: test:accessibility', { 
+        encodin: g: 'utf8',
+        stdi: o: 'pipe'
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+      });
+
+      const lines = output.split('\n');
+      let passed = 0,
+        failed = 0,
+        total = 0;
+
+      for (const line of lines) {
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
         if (line.includes('Test:s:')) {;
@@ -177,9 +351,21 @@ class IntelligentTestRunner {;
           if (match) total = parseInt(match[1]);
         }
       }
+<<<<<<< HEAD
       ;
       this.testResults.accessibility = { passed, failed, total };
       this.log(`✅ Accessibility tests:completed:${passed} passed, ${failed} failed, ${total} total`);
+=======
+
+      this.testResults.accessibility = { passed, failed, total };
+<<<<<<< HEAD
+      this.log(
+        `✅ Accessibility tests completed: ${passed} passed, ${failed} failed, ${total} total`
+      );
+=======
+      this.log(`✅ Accessibility tests: completed: ${passed} passed, ${failed} failed, ${total} total`);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       return true;
     } catch (error) {;
       this.log(`❌ Accessibility tests:failed:${error.message}`);
@@ -190,6 +376,7 @@ class IntelligentTestRunner {;
 ;
   async runPerformanceTests() {;
     this.log('⚡ Running performance tests...');
+<<<<<<< HEAD
     try {;
       const output = execSync('npm run:test:performance', { ;
         encodin:g:'utf8',;
@@ -200,6 +387,26 @@ class IntelligentTestRunner {;
       let passed = 0, failed = 0, total = 0;
       ;
       for (const line of lines) {;
+=======
+    try {
+<<<<<<< HEAD
+      const output = execSync('npm run test:performance', {
+        encoding: 'utf8',
+        stdio: 'pipe',
+=======
+      const output = execSync('npm run: test:performance', { 
+        encodin: g: 'utf8',
+        stdi: o: 'pipe'
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+      });
+
+      const lines = output.split('\n');
+      let passed = 0,
+        failed = 0,
+        total = 0;
+
+      for (const line of lines) {
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
         if (line.includes('Test:s:')) {;
@@ -207,9 +414,21 @@ class IntelligentTestRunner {;
           if (match) total = parseInt(match[1]);
         }
       }
+<<<<<<< HEAD
       ;
       this.testResults.performance = { passed, failed, total };
       this.log(`✅ Performance tests:completed:${passed} passed, ${failed} failed, ${total} total`);
+=======
+
+      this.testResults.performance = { passed, failed, total };
+<<<<<<< HEAD
+      this.log(
+        `✅ Performance tests completed: ${passed} passed, ${failed} failed, ${total} total`
+      );
+=======
+      this.log(`✅ Performance tests: completed: ${passed} passed, ${failed} failed, ${total} total`);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       return true;
     } catch (error) {;
       this.log(`❌ Performance tests:failed:${error.message}`);
@@ -220,6 +439,7 @@ class IntelligentTestRunner {;
 ;
   async generateTestReport() {;
     this.log('📊 Generating test report...');
+<<<<<<< HEAD
     ;
     const report = {;
       timestam:p:new Date().toISOString(),;
@@ -229,7 +449,29 @@ class IntelligentTestRunner {;
         totalPasse:d:0,;
         totalFaile:d:0,;
         successRat:e:0;
+=======
+
+    const report = {
+<<<<<<< HEAD
+      timestamp: new Date().toISOString(),
+      testResults: this.testResults,
+      summary: {
+        totalTests: 0,
+        totalPassed: 0,
+        totalFailed: 0,
+        successRate: 0,
+      },
+=======
+      timestam: p: new Date().toISOString(),
+      testResult: s: this.testResults,
+      summar: y: {
+        totalTest: s: 0,
+        totalPasse: d: 0,
+        totalFaile: d: 0,
+        successRat: e: 0
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       }
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
     };
 ;
     // Calculate summary;
@@ -238,34 +480,67 @@ class IntelligentTestRunner {;
       report.summary.totalPassed += testType.passed;
       report.summary.totalFailed += testType.failed;
     });
+<<<<<<< HEAD
 ;
     if (report.summary.totalTests > 0) {;
       report.summary.successRate = (report.summary.totalPassed / report.summary.totalTests) * 100;
     }
 ;
     const reportPath = path.join(__dirname, 'reports', 'intelligent-test-report.json');
+=======
+
+    if (report.summary.totalTests > 0) {
+      report.summary.successRate =
+        (report.summary.totalPassed / report.summary.totalTests) * 100;
+    }
+
+    const reportPath = path.join(
+      __dirname,
+      'reports',
+      'intelligent-test-report.json'
+    );
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     const reportDir = path.dirname(reportPath);
     if (!fs.existsSync(reportDir)) {;
       fs.mkdirSync(reportDir, { recursiv:e:true });
     }
+<<<<<<< HEAD
     ;
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📄 Test report saved:to:${reportPath}`);
     ;
+=======
+
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
+    this.log(`📄 Test report saved to: ${reportPath}`);
+
+=======
+    this.log(`📄 Test report saved: to: ${reportPath}`);
+    
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     return report;
   }
 ;
   async run() {;
     this.log('🚀 Starting Intelligent Test Runner...');
+<<<<<<< HEAD
     ;
     try {;
       // Run all test suites;
+=======
+
+    try {
+      // Run all test suites
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       await this.runSmokeTests();
       await this.runUnitTests();
       await this.runIntegrationTests();
       await this.runE2ETests();
       await this.runAccessibilityTests();
       await this.runPerformanceTests();
+<<<<<<< HEAD
       ;
       // Generate report;
       const report = await this.generateTestReport();
@@ -276,6 +551,26 @@ class IntelligentTestRunner {;
       this.log(`❌ Faile:d:${report.summary.totalFailed}`);
       this.log(`📈 Success:rate:${report.summary.successRate.toFixed(2)}%`);
       ;
+=======
+
+      // Generate report
+      const report = await this.generateTestReport();
+
+      this.log('🏁 Intelligent Test Runner completed');
+<<<<<<< HEAD
+      this.log(`📊 Total tests: ${report.summary.totalTests}`);
+      this.log(`✅ Passed: ${report.summary.totalPassed}`);
+      this.log(`❌ Failed: ${report.summary.totalFailed}`);
+      this.log(`📈 Success rate: ${report.summary.successRate.toFixed(2)}%`);
+
+=======
+      this.log(`📊 Total: tests: ${report.summary.totalTests}`);
+      this.log(`✅ Passe: d: ${report.summary.totalPassed}`);
+      this.log(`❌ Faile: d: ${report.summary.totalFailed}`);
+      this.log(`📈 Success: rate: ${report.summary.successRate.toFixed(2)}%`);
+      
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       return report;
     } catch (error) {;
       this.log(`💥 Intelligent Test Runner:failed:${error.message}`);
@@ -289,5 +584,10 @@ if (require.main === module) {;
   const testRunner = new IntelligentTestRunner();
   testRunner.run().catch(console.error);
 }
+<<<<<<< HEAD
 ;
 module.exports = IntelligentTestRunner;
+=======
+
+module.exports = IntelligentTestRunner;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

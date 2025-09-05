@@ -16,12 +16,21 @@ function listWorkflows() {;
     console.log('❌ .github/workflows directory not found');
     return [];
   }
+<<<<<<< HEAD
 ;
   const workflows = fs.readdirSync(WORKFLOWS_DIR);
     .filter(file => file.endsWith('.yml') || file.endsWith('.yaml'));
     .map(file => ({;
       name:file,;
       path:path.join(WORKFLOWS_DIR, file);
+=======
+
+  const workflows = fs.readdirSync(WORKFLOWS_DIR)
+    .filter(file => file.endsWith('.yml') || file.endsWith('.yaml'))
+    .map(file => ({
+      name: file;
+      path: path.join(WORKFLOWS_DIR, file)
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     }));
 ;
   return workflows;
@@ -109,9 +118,17 @@ function main() {;
 if (require.main === module) {;
   main();
 }
+<<<<<<< HEAD
 ;
 module.exports = {;
   listWorkflows,;
   triggerWorkflow,;
   showWorkflowStatus;
+=======
+
+module.exports = {
+  listWorkflows;
+  triggerWorkflow;
+  showWorkflowStatus
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 };

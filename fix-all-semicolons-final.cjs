@@ -5,12 +5,21 @@ function fixAllSemicolonsFinal(filePath) {;
   try {;
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
+<<<<<<< HEAD
 ;
     // Fix semicolons in object properties;
     content = content.replace(/(\w+):\s*([^,}]+);/g, '$1:$2,');
     content = content.replace(/(\w+):\s*([^,}]+);/g, '$1:$2');
 ;
     // Fix semicolons in array elements;
+=======
+
+    // Fix semicolons in object properties
+    content = content.replace(/(\w+):\s*([^}]+);/g, '$1: $2,');
+    content = content.replace(/(\w+):\s*([^}]+);/g, '$1: $2');
+
+    // Fix semicolons in array elements
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     content = content.replace(/"([^"]*)";/g, '"$1",');
     content = content.replace(/"([^"]*)";/g, '"$1"');
 ;

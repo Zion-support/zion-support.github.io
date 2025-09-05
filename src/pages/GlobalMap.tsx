@@ -52,6 +52,7 @@ interface FeedItem {;
   id:number,;
   text:string;
 }
+<<<<<<< HEAD
 ;
 export default function GlobalMapPage() {;
   const [feed, setFeed] = useState<FeedItem[]>([]),;
@@ -140,5 +141,90 @@ export default function GlobalMapPage() {;
       </main>;
     </div>;
   ),;
+=======
+
+export default function GlobalMapPage() {
+  const [feed, setFeed] = useState<FeedItem[]>([]),
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const messages = [
+        'ZionGPT upgraded to v1.7 in EgyptProposal #121 passed in Zion DevOpsNew franchise deployed: Zion Indonesia'],
+      const id = Date.now(),
+      const text = messages[Math.floor(Math.random() * messages.length)] || 'System update in progress',
+      setFeed((f) => [{ id, text }, ...f].slice(0, 5))
+    }, 5000),
+    return () => clearInterval(interval)
+  }, []),
+
+  const width = 800,
+  const height = 400,
+  function project(lat: number, lng: number) {
+    const x = ((lng + 180) / 360) * width,
+    const y = ((90 - lat) / 180) * height,
+    return { x, y }
+  }
+
+  const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5),
+
+  return (
+    <div className=&quot;min-h-screen bg-background&quot;>
+      <NextSeo title=&quot;Global Zion Map&quot; description=&quot;Overview of Zion deployments&quot; />
+      <Header />
+      <main className=&quot;py-10 container mx-auto space-y-8&quot;>
+        <h1 className=&quot;text-3xl font-bold&quot;>Global Instances</h1>
+        <div className=&quot;flex flex-col lg:flex-row gap-8&quot;>
+          <div className=&quot;relative&quot; style={{ width, height }}>
+            <Globe className=&quot;w-full h-full text-secondary&quot; />
+            {INSTANCES.map((i) => {
+              const { x, y } = project(i.lat, i.lng),
+              const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',              return (
+                <TooltipProvider key={_i.id}>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <div
+                        className={_`absolute ${color} rounded-full p-1`}
+                        style={_{ left: x, _top: y}}
+                      >
+                        <MapPin className=&quot;w-4 h-4 text-white&quot; />
+                      </div>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <div className=&quot;text-sm space-y-1&quot;>
+                        <div className=&quot;font-semibold&quot;>{i.name}</div>
+                        <div>Talent: {i.talent}</div>
+                        <div>Governance: {i.governance}</div>
+                        <div>Passed Votes: {i.votesPassed}</div>
+                        <div>Pending Votes: {i.votesPending}</div>                      </div>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              )
+            })}
+          </div>
+          <div className=&quot;flex-1 space-y-6&quot;>
+            <section>
+              <h2 className=&quot;text-xl font-semibold mb-2&quot;>Top Regions by Talent</h2>
+              <ul className=&quot;space-y-1&quot;>
+                {topRegions.map((r) => (
+                  <li key={r.id} className=&quot;flex justify-between border-b pb-1&quot;>
+                    <span>{r.region}</span>
+                    <span>{r.talent}</span>                  </li>
+                ))}
+              </ul>
+            </section>
+            <section>
+              <h2 className=&quot;text-xl font-semibold mb-2&quot;>Live Feed</h2>
+              <ul className=&quot;space-y-1&quot;>
+                {feed.map((f) => (
+                  <li key={f.id} className=&quot;text-sm&quot;>{f.text}</li>                ))}
+              </ul>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+  )
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;

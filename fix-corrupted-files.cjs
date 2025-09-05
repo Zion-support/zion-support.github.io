@@ -66,10 +66,16 @@ const:AccessibilityEnhancer:React.FC = () => {;
 ;
   return null;
 };
+<<<<<<< HEAD
 ;
 export default AccessibilityEnhancer;`,;
 ;
   'components/OptimizedImage.tsx':`import React from 'react';
+=======
+
+export default AccessibilityEnhancer;`;
+  'components/OptimizedImage.tsx': `import React from 'react';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 import Image from 'next/image';
 ;
 interface OptimizedImageProps {;
@@ -103,10 +109,16 @@ const:OptimizedImage:React.FC<OptimizedImageProps> = ({;
     />;
   );
 };
+<<<<<<< HEAD
 ;
 export default OptimizedImage;`,;
 ;
   'components/ContactForm.tsx':`import React, { useState } from 'react';
+=======
+
+export default OptimizedImage;`;
+  'components/ContactForm.tsx': `import React, { useState } from 'react';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 import LoadingSpinner from './LoadingSpinner';
 ;
 interface FormData {;
@@ -133,9 +145,15 @@ const:ContactForm:React.FC = () => {;
 ;
   const handleInputChange = (e:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     const { name, value } = e.target;
+<<<<<<< HEAD
     setFormData(prev => ({;
       ...prev,;
       [name]:value,;
+=======
+    setFormData(prev => ({
+      ...prev;
+      [name]: value;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     }));
   };
 ;
@@ -282,8 +300,13 @@ const:ContactForm:React.FC = () => {;
     </form>;
   );
 };
+<<<<<<< HEAD
 ;
 export default ContactForm;`;
+=======
+
+export default ContactForm;`,
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 };
 ;
 // Write the fixed files;
@@ -295,5 +318,10 @@ Object.entries(corruptedFiles).forEach(([filePath, content]) => {;
     console.error(`Error fixing ${filePath} `, error.message);
   }
 });
+<<<<<<< HEAD
 ;
 console.log('Fixed corrupted files');
+=======
+
+console.log('Fixed corrupted files');
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

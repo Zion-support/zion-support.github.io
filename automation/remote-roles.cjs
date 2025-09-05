@@ -30,6 +30,7 @@ async function run() {;
     .filter((j) => {;
       const hay = `${j.position} ${j.company} ${(j.tags || []).join(' ')}`.toLowerCase();
       return keywords.some((k) => hay.includes(k.toLowerCase()));
+<<<<<<< HEAD
     });
     .slice(0, 100);
     .map((j) => ({;
@@ -48,6 +49,26 @@ async function run() {;
     description:'Remote roles relevant to AI/Agents/Web3 from RemoteOK',;
     total:items.length,;
     items,;
+=======
+    })
+    .slice(0, 100)
+    .map((j) => ({
+      id: j.id;
+      date: j.date;
+      company: j.company;
+      position: j.position;
+      tags: j.tags || [];
+      location: j.location || 'Remote';
+      url: j.url || j.original || j.apply_url;
+      logo: j.logo || null;
+    }));
+
+  const payload = {
+    generatedAt: new Date().toISOString();
+    description: 'Remote roles relevant to AI/Agents/Web3 from RemoteOK';
+    total: items.length;
+    items;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   };
 ;
   ensureDir(OUTPUT_PATH);

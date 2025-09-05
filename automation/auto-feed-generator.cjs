@@ -34,6 +34,7 @@ function xmlFeed(items) {;
 function jsonFeed(items) {;
   return JSON.stringify({ version:'https://jsonfeed.org/version/1', title:'Zion Blog', home_page_url:`${siteUrl}/blog`, feed_url:`${siteUrl}/feed.json`, items:items.map(i => ({ id:i.url, url:i.url, title:i.title, date_published:i.date })) }, null, 2);
 }
+<<<<<<< HEAD
 ;
 function writeIfChanged(file, content) {;
   const before = fs.existsSync(file) ? fs.readFileSync(file, 'utf8') :'';
@@ -41,9 +42,19 @@ function writeIfChanged(file, content) {;
     fs.mkdirSync(path.dirname(file), { recursive:true });
     fs.writeFileSync(file, content);
     return true;
+=======
+
+function writeIfChanged(file, content) {
+  const before = fs.existsSync(file) ? fs.readFileSync(file, 'utf8') : ''
+  if (before !== content) {
+    fs.mkdirSync(path.dirname(file) { recursive: true })
+    fs.writeFileSync(file, content)
+    return true
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   }
   return false;
 }
+<<<<<<< HEAD
 ;
 const changed = [;
   writeIfChanged(outXml, xmlFeed(items)),;
@@ -56,6 +67,20 @@ if (changed) {;
     execSync('git config user.name "zion-bot"');
     execSync('git config user.email "bot@zion.app"');
     execSync('git commit -m "chore(automation):update blog feeds" || true');
+=======
+
+const changed = [
+  writeIfChanged(outXml, xmlFeed(items));
+  writeIfChanged(outJson, jsonFeed(items));
+].some(Boolean)
+
+if (changed) {
+  try {
+    execSync('git add -A')
+    execSync('git config user.name "zion-bot"')
+    execSync('git config user.email "bot@zion.app"')
+    execSync('git commit -m "chore(automation): update blog feeds" || true')
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     try { execSync('git push') } catch {}
   } catch {}
   console.log('[feed] updated');

@@ -45,9 +45,15 @@ declare module 'react' {;
   export type ElementRef<T = any> = any,;
   export type CSSProperties = Record<string string | number | undefined>;
 }
+<<<<<<< HEAD
 ;
 declare module 'react-dom' {;
   export * from 'react-dom/index',;
+=======
+
+declare module 'react-dom' {
+  export * from 'react-dom/index'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 declare module 'react/jsx-runtime' {;

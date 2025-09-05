@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client",;
 ;
 import { useTheme } from "@/components/theme-provider",;
@@ -49,4 +50,52 @@ export function ThemeToggle() {;
       </div>;
     </div>;
   ),;
+=======
+"use client",
+
+import { useTheme } from "@/components/theme-provider",
+import { Moon, Sun, Monitor } from "lucide-react",
+
+export function ThemeToggle() {
+  const { theme, setTheme } = useTheme(),
+  return (_<div className="flex items-center gap-2">
+      <span className="sr-only">Theme</span>
+      <div className="flex rounded-lg border border-white/10 bg-zinc-900/50 p-1">
+        <button,
+onClick={_() => setTheme("light")}
+          className={_`rounded px-2 py-1 text-sm transition-colors ${
+            theme === "light"
+              ? "bg-zion-blue text-white"
+              : "text-zinc-400 hover:text-zinc-100"}`}
+          aria-label="Switch to light theme"
+          aria-pressed={theme === "light"}
+        >
+          <Sun className="h-4 w-4" />
+        </button>
+        <button,
+onClick={_() => setTheme("system")}
+          className={_`rounded px-2 py-1 text-sm transition-colors ${
+            theme === "system"
+              ? "bg-zion-blue text-white"
+              : "text-zinc-400 hover:text-zinc-100"}`}
+          aria-label="Switch to system theme"
+          aria-pressed={theme === "system"}
+        >
+          <Monitor className="h-4 w-4" />
+        </button>
+        <button,
+onClick={_() => setTheme("dark")}
+          className={_`rounded px-2 py-1 text-sm transition-colors ${
+            theme === "dark"
+              ? "bg-zion-blue text-white"
+              : "text-zinc-400 hover:text-zinc-100"}`}
+          aria-label="Switch to dark theme"
+          aria-pressed={theme === "dark"}
+        >
+          <Moon className="h-4 w-4" />
+        </button>
+      </div>
+    </div>
+  )
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useRef } from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -75,3 +76,90 @@ export const AppScreenshots:React.FC = () => {;
     </section>;
   ),;
 },;
+=======
+import React, { useRef } from "react",
+import { ChevronLeft, ChevronRight } from "lucide-react",
+import { Button } from "@/components/ui/button",
+// These would be replaced with actual screenshots,
+const mockScreenshots = [
+  { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },
+  { id: 2, alt: "Talent matching screen", src: "/placeholder.svg" },
+  { id: 3, alt: "Resume builder screen", src: "/placeholder.svg" },
+  { id: 4, alt: "Messaging screen", src: "/placeholder.svg" },
+  { id: 5, alt: "Profile screen", src: "/placeholder.svg" }],
+export const AppScreenshots: React.FC = () => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null),
+
+  const scroll = (direction: &quot;left&quot; | &quot;right&quot;) => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 300,
+      scrollContainerRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth"})import React, {useRef} from "react";
+
+// These would be replaced with actual screenshots,
+const mockScreenshots = [
+  {id: 1, alt: "Dashboard screen", src: "/placeholder.svg"},
+  {id: 2, alt: "Talent matching screen", src: "/placeholder.svg"},
+  {id: 3, alt: "Resume builder screen", src: "/placeholder.svg"},
+  {id: 4, alt: "Messaging screen", src: "/placeholder.svg"},
+  {id: 5, alt: "Profile screen", src: "/placeholder.svg"}];
+
+export const AppScreenshots: React.FC = () => {const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 300;
+      scrollContainerRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount, behavior: "smooth"})
+    }
+  },
+
+  return (
+    <section className=&quot;py-16 bg-zion-blue-dark&quot;>
+      <div className=&quot;container mx-auto px-4&quot;>
+        <div className=&quot;text-center mb-12&quot;>
+          <h2 className=&quot;text-3xl md:text-4xl font-bold mb-4&quot;>App Screenshots</h2>
+          <p className=&quot;text-lg text-gray-300 max-w-2xl mx-auto&quot;>            Take a visual tour through the Zion app's intuitive interface.
+          </p>
+        </div>
+        
+        <div className=&quot;relative&quot;>
+          <Button,
+variant=&quot;ghost&quot; 
+            size=&quot;icon&quot; 
+            className=&quot;absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white&quot; 
+            onClick={() => scroll(&quot;left&quot;)}          >
+            <ChevronLeft className=&quot;h-6 w-6&quot; />
+          </Button>
+          
+          <div,
+ref={scrollContainerRef}
+            className=&quot;flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory&quot;
+            style={{ scrollbarWidth: &quot;none&quot;, msOverflowStyle: &quot;none&quot }}          >
+            {mockScreenshots.map(_(screenshot) => (
+              <div,
+key={screenshot.id} 
+                className=&quot;flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30&quot;
+              >
+                <img,
+src={screenshot.src} 
+                  alt={screenshot.alt}
+                  className=&quot;w-full h-full object-cover&quot;                />
+              </div>
+            ))}
+          </div>
+          
+          <Button,
+variant=&quot;ghost&quot; 
+            size=&quot;icon&quot; 
+            className=&quot;absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white&quot; 
+            onClick={() => scroll(&quot;right&quot;)}          >
+            <ChevronRight className=&quot;h-6 w-6&quot; />
+          </Button>
+        </div>
+      </div>
+    </section>
+  )
+},
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

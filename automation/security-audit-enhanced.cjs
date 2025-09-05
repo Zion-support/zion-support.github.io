@@ -18,15 +18,24 @@ class SecurityAuditEnhanced {;
 ;
   async runNpmAudit() {;
     this.log('🔍 Running npm security audit...');
+<<<<<<< HEAD
     ;
     try {;
       const auditResult = execSync('npm audit --json', { ;
         stdio:'pipe',;
         encoding:'utf8';
+=======
+    
+    try {
+      const auditResult = execSync('npm audit --json', { 
+        stdio: 'pipe';
+        encoding: 'utf8'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
       ;
       const audit = JSON.parse(auditResult);
       const vulnerabilities = audit.vulnerabilities || {};
+<<<<<<< HEAD
       ;
       Object.entries(vulnerabilities).forEach(([pkg, vuln]) => {;
         this.vulnerabilities.push({;
@@ -35,6 +44,16 @@ class SecurityAuditEnhanced {;
           title:vuln.title,;
           description:vuln.description,;
           recommendation:vuln.recommendation;
+=======
+      
+      Object.entries(vulnerabilities).forEach(([pkg, vuln]) => {
+        this.vulnerabilities.push({
+          package: pkg;
+          severity: vuln.severity;
+          title: vuln.title;
+          description: vuln.description;
+          recommendation: vuln.recommendation
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         });
       });
       ;
@@ -52,10 +71,17 @@ class SecurityAuditEnhanced {;
       const packageJson = JSON.parse(;
         fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8');
       );
+<<<<<<< HEAD
       ;
       const allDeps = {;
         ...packageJson.dependencies,;
         ...packageJson.devDependencies;
+=======
+      
+      const allDeps = {
+        ...packageJson.dependencies;
+        ...packageJson.devDependencies
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
       ;
       // Check for suspicious packages;
@@ -65,12 +91,21 @@ class SecurityAuditEnhanced {;
         pkg.includes('shell') ||;
         pkg.includes('system');
       );
+<<<<<<< HEAD
       ;
       if (suspiciousPackages.length > 0) {;
         this.recommendations.push({;
           type:'suspicious_packages',;
           message:`Review suspicious packages:${suspiciousPackages.join(', ')}`,;
           severity:'medium';
+=======
+      
+      if (suspiciousPackages.length > 0) {
+        this.recommendations.push({
+          type: 'suspicious_packages';
+          message: `Review suspicious packages: ${suspiciousPackages.join(', ')}`;
+          severity: 'medium'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         });
       }
       ;
@@ -89,6 +124,7 @@ class SecurityAuditEnhanced {;
         const envPath = path.join(this.projectRoot, envFile);
         if (fs.existsSync(envPath)) {;
           const content = fs.readFileSync(envPath, 'utf8');
+<<<<<<< HEAD
           ;
           // Check for hardcoded secrets;
           const secretPatterns = [;
@@ -104,6 +140,23 @@ class SecurityAuditEnhanced {;
                 type:'hardcoded_secrets',;
                 message:`Potential hardcoded secrets found in ${envFile}`,;
                 severity:'high';
+=======
+          
+          // Check for hardcoded secrets
+          const secretPatterns = [
+            /password\s*=\s*['"][^'"]+['"]/gi;
+            /secret\s*=\s*['"][^'"]+['"]/gi;
+            /key\s*=\s*['"][^'"]+['"]/gi;
+            /token\s*=\s*['"][^'"]+['"]/gi
+          ];
+          
+          secretPatterns.forEach(pattern => {
+            if (pattern.test(content)) {
+              this.recommendations.push({
+                type: 'hardcoded_secrets';
+                message: `Potential hardcoded secrets found in ${envFile}`;
+                severity: 'high'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
               });
             }
           });
@@ -116,6 +169,7 @@ class SecurityAuditEnhanced {;
 ;
   async checkFilePermissions() {;
     this.log('📁 Checking file permissions...');
+<<<<<<< HEAD
     ;
     try {;
       const sensitiveFiles = [;
@@ -123,6 +177,15 @@ class SecurityAuditEnhanced {;
         'package-lock.json',;
         '.env',;
         '.env.local';
+=======
+    
+    try {
+      const sensitiveFiles = [
+        'package.json';
+        'package-lock.json';
+        '.env';
+        '.env.local'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       ];
       ;
       for (const file of sensitiveFiles) {;
@@ -130,6 +193,7 @@ class SecurityAuditEnhanced {;
         if (fs.existsSync(filePath)) {;
           const stats = fs.statSync(filePath);
           const mode = stats.mode;
+<<<<<<< HEAD
           ;
           // Check if file is world-readable (should not be);
           if (mode & 0o004) {;
@@ -137,6 +201,15 @@ class SecurityAuditEnhanced {;
               type:'file_permissions',;
               message:`${file} is world-readable`,;
               severity:'medium';
+=======
+          
+          // Check if file is world-readable (should not be)
+          if (mode & 0o004) {
+            this.recommendations.push({
+              type: 'file_permissions';
+              message: `${file} is world-readable`;
+              severity: 'medium'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
             });
           }
         }
@@ -154,6 +227,7 @@ class SecurityAuditEnhanced {;
       ;
       for (const file of codeFiles) {;
         const content = fs.readFileSync(file, 'utf8');
+<<<<<<< HEAD
         ;
         // Check for dangerous patterns;
         const dangerousPatterns = [;
@@ -169,6 +243,23 @@ class SecurityAuditEnhanced {;
               type:'code_security',;
               message:`${message} in ${path.relative(this.projectRoot, file)}`,;
               severity:'medium';
+=======
+        
+        // Check for dangerous patterns
+        const dangerousPatterns = [
+          { pattern: /eval\s*\(/g, message: 'eval() usage detected' };
+          { pattern: /innerHTML\s*=/g, message: 'innerHTML usage detected' };
+          { pattern: /document\.write/g, message: 'document.write usage detected' };
+          { pattern: /setTimeout\s*\(\s*['"][^'"]*['"]/g, message: 'String-based setTimeout detected' }
+        ];
+        
+        dangerousPatterns.forEach(({ pattern, message }) => {
+          if (pattern.test(content)) {
+            this.recommendations.push({
+              type: 'code_security';
+              message: `${message} in ${path.relative(this.projectRoot, file)}`;
+              severity: 'medium'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
             });
           }
         });
@@ -242,6 +333,7 @@ class SecurityAuditEnhanced {;
 ;
   generateReport() {;
     this.calculateSecurityScore();
+<<<<<<< HEAD
     ;
     const report = {;
       timestamp:new Date().toISOString(),;
@@ -254,6 +346,20 @@ class SecurityAuditEnhanced {;
         securityScore:this.securityScore,;
         status:this.securityScore >= 80 ? 'good' :;
                 this.securityScore >= 60 ? 'fair' :'poor';
+=======
+    
+    const report = {
+      timestamp: new Date().toISOString();
+      securityScore: this.securityScore;
+      vulnerabilities: this.vulnerabilities;
+      recommendations: this.recommendations;
+      summary: {
+        totalVulnerabilities: this.vulnerabilities.length;
+        totalRecommendations: this.recommendations.length;
+        securityScore: this.securityScore;
+        status: this.securityScore >= 80 ? 'good' : 
+                this.securityScore >= 60 ? 'fair' : 'poor'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       }
     };
 ;

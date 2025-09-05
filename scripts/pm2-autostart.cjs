@@ -64,6 +64,7 @@ class PM2Autostart {;
       return false;
     }
   }
+<<<<<<< HEAD
 ;
   async getAutostartStatus() {;
     try {;
@@ -76,6 +77,20 @@ class PM2Autostart {;
       return {;
         enabled:false,;
         error:error.message;
+=======
+
+  async getAutostartStatus() {
+    try {
+      const output = execSync('pm2 startup', { encoding: 'utf8' });
+      return {
+        enabled: !output.includes('You have to run this command as root');
+        output: output
+      };
+    } catch (error) {
+      return {
+        enabled: false;
+        error: error.message
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
     }
   }

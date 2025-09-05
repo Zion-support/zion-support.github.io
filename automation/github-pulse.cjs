@@ -10,6 +10,7 @@ function ensureDir(filePath) {;
   const dir = path.dirname(filePath);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive:true });
 }
+<<<<<<< HEAD
 ;
 async function fetchJson(url) {;
   const res = await fetch(url, {;
@@ -19,6 +20,17 @@ async function fetchJson(url) {;
       'X-GitHub-Api-Version':'2022-11-28',;
       'User-Agent':'Zion-Automation/1.0',;
     },;
+=======
+
+async function fetchJson(url) {
+  const res = await fetch(url, {
+    headers: {
+      'Accept': 'application/vnd.github+json';
+      ...(GITHUB_TOKEN ? { Authorization: `Bearer ${GITHUB_TOKEN}` } : {});
+      'X-GitHub-Api-Version': '2022-11-28';
+      'User-Agent': 'Zion-Automation/1.0';
+    };
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   });
   if (!res.ok) throw new Error(`GitHub API failed ${res.status} ${url}`);
   return res.json();
@@ -41,6 +53,7 @@ async function run() {;
   try {;
     stars = await fetchJson(starsUrl);
   } catch (e) { console.warn('Stars fetch failed', e.message); }
+<<<<<<< HEAD
 ;
   const payload = {;
     generatedAt:new Date().toISOString(),;
@@ -56,6 +69,23 @@ async function run() {;
       issues_updated:issues.total_count || 0,;
       prs_updated:prs.total_count || 0,;
     },;
+=======
+
+  const payload = {
+    generatedAt: new Date().toISOString();
+    description: 'GitHub repo pulse (last 24h activity)';
+    repo: {
+      full_name: repo.full_name;
+      open_issues: repo.open_issues_count;
+      forks: repo.forks_count;
+      watchers: repo.subscribers_count;
+      stargazers_count: repo.stargazers_count;
+    };
+    last24h: {
+      issues_updated: issues.total_count || 0;
+      prs_updated: prs.total_count || 0;
+    };
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   };
 ;
   ensureDir(OUTPUT_PATH);

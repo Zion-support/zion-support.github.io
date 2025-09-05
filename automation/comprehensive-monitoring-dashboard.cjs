@@ -11,6 +11,7 @@ class ComprehensiveMonitoringDashboard {;
     this.workspace = process.cwd();
     this.logDir = path.join(this.workspace, "automation/logs");
     this.ensureLogDirectory();
+<<<<<<< HEAD
     ;
     this.config = {;
       refreshInterval:5000, // 5 seconds;
@@ -45,6 +46,42 @@ class ComprehensiveMonitoringDashboard {;
     this.rl = readline.createInterface({;
       input:process.stdin,;
       output:process.stdout;
+=======
+    
+    this.config = {
+      refreshInterval: 5000, // 5 seconds
+      maxLogLines: 50;
+      services: {
+        pm2: {
+          name: "PM2 Process Management";
+          processes: ["zion-auto-sync", "zion-auto-sync-cron", "redundancy-automation-system", "redundancy-health-monitor", "redundancy-git-sync", "redundancy-build-monitor", "comprehensive-redundancy-orchestrator"];
+          status: "unknown"
+        };
+        githubActions: {
+          name: "GitHub Actions Workflows";
+          workflows: [".github/workflows/marketing-sync.yml", ".github/workflows/sync-health.yml"];
+          status: "unknown"
+        };
+        netlifyFunctions: {
+          name: "Netlify Functions";
+          manifestFile: "netlify/functions/functions-manifest.json";
+          status: "unknown"
+        };
+        git: {
+          name: "Git Synchronization";
+          status: "unknown"
+        };
+        build: {
+          name: "Build Health";
+          status: "unknown"
+        }
+      }
+    };
+    
+    this.rl = readline.createInterface({
+      input: process.stdin;
+      output: process.stdout
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     });
     ;
     this.monitoring = false;
@@ -69,6 +106,7 @@ class ComprehensiveMonitoringDashboard {;
       console.error(`Failed to write to log file:${error.message}`);
     }
   }
+<<<<<<< HEAD
 ;
   async runCommand(command, args = [], options = {}) {;
     return new Promise((resolve) => {;
@@ -87,6 +125,26 @@ class ComprehensiveMonitoringDashboard {;
         stdout:result.stdout || "",;
         stderr:result.stderr || "",;
         error:result.error;
+=======
+
+  async runCommand(command, args = [], options = {}) {
+    return new Promise((resolve) => {
+      const result = spawnSync(command, args, {
+        cwd: this.workspace;
+        env: process.env;
+        shell: false;
+        encoding: "utf8";
+        maxBuffer: 1024 * 1024 * 10;
+        timeout: options.timeout || 10000;
+        ...options
+      });
+      
+      resolve({
+        status: result.status;
+        stdout: result.stdout || "";
+        stderr: result.stderr || "";
+        error: result.error
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
     });
   }
@@ -117,16 +175,26 @@ class ComprehensiveMonitoringDashboard {;
       const result = await this.runCommand("pm2", ["jlist"]);
       if (result.status === 0) {;
         const processes = JSON.parse(result.stdout);
+<<<<<<< HEAD
         const status = {;
           total:processes.length,;
           online:processes.filter(p => p.pm2_env.status === "online").length,;
           stopped:processes.filter(p => p.pm2_env.status === "stopped").length,;
           errored:processes.filter(p => p.pm2_env.status === "errored").length,;
           processes:[];
+=======
+        const status = {
+          total: processes.length;
+          online: processes.filter(p => p.pm2_env.status === "online").length;
+          stopped: processes.filter(p => p.pm2_env.status === "stopped").length;
+          errored: processes.filter(p => p.pm2_env.status === "errored").length;
+          processes: []
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         };
 ;
         for (const processName of this.config.services.pm2.processes) {;
           const process = processes.find(p => p.name === processName);
+<<<<<<< HEAD
           if (process) {;
             status.processes.push({;
               name:process.name,;
@@ -142,6 +210,23 @@ class ComprehensiveMonitoringDashboard {;
               uptime:0,;
               memory:0,;
               cpu:0;
+=======
+          if (process) {
+            status.processes.push({
+              name: process.name;
+              status: process.pm2_env.status;
+              uptime: process.pm2_env.pm_uptime;
+              memory: process.monit.memory;
+              cpu: process.monit.cpu
+            });
+          } else {
+            status.processes.push({
+              name: processName;
+              status: "not_found";
+              uptime: 0;
+              memory: 0;
+              cpu: 0
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
             });
           }
         }
@@ -167,6 +252,7 @@ class ComprehensiveMonitoringDashboard {;
         if (fs.existsSync(workflow)) {;
           const content = fs.readFileSync(workflow, 'utf8');
           const isValid = content.includes('name:') && content.includes('on:');
+<<<<<<< HEAD
           workflows.push({;
             name:path.basename(workflow),;
             exists:true,;
@@ -179,6 +265,20 @@ class ComprehensiveMonitoringDashboard {;
             exists:false,;
             valid:false,;
             size:0;
+=======
+          workflows.push({
+            name: path.basename(workflow);
+            exists: true;
+            valid: isValid;
+            size: fs.statSync(workflow).size
+          });
+        } else {
+          workflows.push({
+            name: path.basename(workflow);
+            exists: false;
+            valid: false;
+            size: 0
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           });
         }
       }
@@ -200,6 +300,7 @@ class ComprehensiveMonitoringDashboard {;
       const manifest = JSON.parse(fs.readFileSync(manifestFile, 'utf8'));
       const lastGenerated = new Date(manifest.generatedAt);
       const age = Date.now() - lastGenerated.getTime();
+<<<<<<< HEAD
       const isStale = age > 3600000; // 1 hour;
 ;
       return {;
@@ -208,6 +309,16 @@ class ComprehensiveMonitoringDashboard {;
         lastGenerated:lastGenerated,;
         isStale:isStale,;
         totalFunctions:(manifest.functions || []).length;
+=======
+      const isStale = age > 3600000; // 1 hour
+
+      return {
+        status: "found";
+        functions: manifest.functions || [];
+        lastGenerated: lastGenerated;
+        isStale: isStale;
+        totalFunctions: (manifest.functions || []).length
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
     } catch (error) {;
       this.log(`Error getting Netlify functions status:${error.message}`, "ERROR");
@@ -247,12 +358,21 @@ class ComprehensiveMonitoringDashboard {;
           syncStatus = "up_to_date";
         }
       }
+<<<<<<< HEAD
 ;
       return {;
         status:gitStatus,;
         changes:changes,;
         branch:currentBranch,;
         syncStatus:syncStatus;
+=======
+
+      return {
+        status: gitStatus;
+        changes: changes;
+        branch: currentBranch;
+        syncStatus: syncStatus
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
     } catch (error) {;
       this.log(`Error getting Git status:${error.message}`, "ERROR");
@@ -272,6 +392,7 @@ class ComprehensiveMonitoringDashboard {;
       const hasHealthCheck = !!scripts["build:health-check"];
       const hasTestScript = !!scripts.test;
       const hasDependencies = fs.existsSync("node_modules");
+<<<<<<< HEAD
 ;
       return {;
         status:"found",;
@@ -282,6 +403,18 @@ class ComprehensiveMonitoringDashboard {;
         },;
         dependencies:hasDependencies,;
         totalScripts:Object.keys(scripts).length;
+=======
+
+      return {
+        status: "found";
+        scripts: {
+          build: hasBuildScript;
+          healthCheck: hasHealthCheck;
+          test: hasTestScript
+        };
+        dependencies: hasDependencies;
+        totalScripts: Object.keys(scripts).length
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
     } catch (error) {;
       this.log(`Error getting build status:${error.message}`, "ERROR");
@@ -409,6 +542,7 @@ class ComprehensiveMonitoringDashboard {;
   printRecentLogs() {;
     console.log("📝 Recent System Logs");
     console.log("─".repeat(80));
+<<<<<<< HEAD
     ;
     try {;
       const logFiles = fs.readdirSync(this.logDir);
@@ -418,6 +552,17 @@ class ComprehensiveMonitoringDashboard {;
           path:path.join(this.logDir, file),;
           stats:fs.statSync(path.join(this.logDir, file));
         }));
+=======
+    
+    try {
+      const logFiles = fs.readdirSync(this.logDir)
+        .filter(file => file.endsWith('.log'))
+        .map(file => ({
+          name: file;
+          path: path.join(this.logDir, file);
+          stats: fs.statSync(path.join(this.logDir, file))
+        }))
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         .sort((a, b) => b.stats.mtime.getTime() - a.stats.mtime.getTime());
 ;
       if (logFiles.length === 0) {;
@@ -456,6 +601,7 @@ class ComprehensiveMonitoringDashboard {;
     this.clearScreen();
     this.printHeader();
     this.printStatusBar();
+<<<<<<< HEAD
 ;
     try {;
       // Get all statuses in parallel;
@@ -465,6 +611,17 @@ class ComprehensiveMonitoringDashboard {;
         this.getNetlifyFunctionsStatus(),;
         this.getGitStatus(),;
         this.getBuildStatus();
+=======
+
+    try {
+      // Get all statuses in parallel
+      const [pm2Status, ghStatus, netlifyStatus, gitStatus, buildStatus] = await Promise.all([
+        this.getPM2Status();
+        this.getGitHubActionsStatus();
+        this.getNetlifyFunctionsStatus();
+        this.getGitStatus();
+        this.getBuildStatus()
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       ]);
 ;
       // Print all statuses;

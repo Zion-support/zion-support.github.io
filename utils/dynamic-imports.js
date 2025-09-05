@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 };
 };
@@ -7,3 +8,9 @@ export const dynamicImport = (importFn) => { return React.lazy(importFn)}; expor
 ;
 ,;
 ;
+=======
+}};
+export const _dynamicImport = (importFn) = > {_return React.lazy(importFn)}; export const _createLazyComponent = (componentPath) = > {_return dynamicImport(() = > import(componentPath))}; export const _preloadComponent = (importFn) = > {_if (typeof window ! = = 'undefined') { importFn()} };
+export const _dynamicImport = (importFn) = > {_return React.lazy(importFn)}; export const _createLazyComponent = (componentPath) = > {_return dynamicImport(() = > import(componentPath))}; export const _preloadComponent = (importFn) = > {_if (typeof window ! = = 'undefined') { importFn()} };
+export const _dynamicImport = (importFn) = > {_return React.lazy(importFn)}; export const _createLazyComponent = (componentPath) = > {_return dynamicImport(() = > import(componentPath))}; export const _preloadComponent = (importFn) = > {_if (typeof window ! = = 'undefined') { importFn()} };
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

@@ -71,6 +71,7 @@ class SecurityScanner {;
       console.error(`Error scanning file ${filePath} `, error.message);
     }
   }
+<<<<<<< HEAD
 ;
   checkForHardcodedSecrets(content, filePath) {;
     const secretPatterns = [;
@@ -78,6 +79,15 @@ class SecurityScanner {;
       /api[_-]?key\s*=\s*['"][^'"]+['"]/gi,;
       /secret\s*=\s*['"][^'"]+['"]/gi,;
       /token\s*=\s*['"][^'"]+['"]/gi,;
+=======
+
+  checkForHardcodedSecrets(content, filePath) {
+    const secretPatterns = [
+      /password\s*=\s*['"][^'"]+['"]/gi;
+      /api[_-]?key\s*=\s*['"][^'"]+['"]/gi;
+      /secret\s*=\s*['"][^'"]+['"]/gi;
+      /token\s*=\s*['"][^'"]+['"]/gi;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     ];
 ;
     secretPatterns.forEach(pattern => {;
@@ -93,11 +103,19 @@ class SecurityScanner {;
       }
     });
   }
+<<<<<<< HEAD
 ;
   checkForSQLInjection(content, filePath) {;
     const sqlPatterns = [;
       /query\s*\(\s*['"][^'"]*\+[^'"]*['"]/gi,;
       /execute\s*\(\s*['"][^'"]*\+[^'"]*['"]/gi,;
+=======
+
+  checkForSQLInjection(content, filePath) {
+    const sqlPatterns = [
+      /query\s*\(\s*['"][^'"]*\+[^'"]*['"]/gi;
+      /execute\s*\(\s*['"][^'"]*\+[^'"]*['"]/gi;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     ];
 ;
     sqlPatterns.forEach(pattern => {;
@@ -113,12 +131,21 @@ class SecurityScanner {;
       }
     });
   }
+<<<<<<< HEAD
 ;
   checkForXSS(content, filePath) {;
     const xssPatterns = [;
       /dangerouslySetInnerHTML/gi,;
       /innerHTML\s*=/gi,;
       /document\.write/gi,;
+=======
+
+  checkForXSS(content, filePath) {
+    const xssPatterns = [
+      /dangerouslySetInnerHTML/gi;
+      /innerHTML\s*=/gi;
+      /document\.write/gi;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     ];
 ;
     xssPatterns.forEach(pattern => {;
@@ -138,9 +165,15 @@ class SecurityScanner {;
   checkForInsecureDependencies(content, filePath) {;
     if (filePath.endsWith('package.json')) {;
       const packageJson = JSON.parse(content);
+<<<<<<< HEAD
       const dependencies = {;
         ...packageJson.dependencies,;
         ...packageJson.devDependencies,;
+=======
+      const dependencies = {
+        ...packageJson.dependencies;
+        ...packageJson.devDependencies;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
 ;
       // Check for known vulnerable packages;

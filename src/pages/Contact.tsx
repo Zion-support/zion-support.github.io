@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { SEO } from '@/components/SEO',;
@@ -426,6 +427,429 @@ export default function Contact() {;
       {isChatOpen && (;
         <ChatAssistant;
           isOpen={isChatOpen}
+=======
+import { useState } from 'react',
+import { Header } from '@/components/Header',
+import { SEO } from '@/components/SEO',
+import { GradientHeading } from '@/components/GradientHeading',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Textarea } from '@/components/ui/textarea',
+import { Card } from '@/components/ui/card',
+import { toast } from '@/components/ui/use-toast',
+import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger',
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger} from '@/components/ui/tooltip',
+import z from 'zod',
+import { ChatAssistant } from '@/components/ChatAssistant',
+import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react'
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
+
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''}),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [errors, setErrors] = useState<{
+    name?: string,
+    email?: string,
+    message?: string
+  }>({}),
+  const [isChatOpen, setIsChatOpen] = useState(false),
+  const [submitted, setSubmitted] = useState(false),
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target,
+    setFormData((prev) => ({ ...prev, [name]: value })),
+    setErrors((prev) => ({ ...prev, [name]: undefined }))
+  },
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(),
+    logInfo('[ContactForm] handleSubmit triggered.'),
+    logInfo('[ContactForm] formData:', { data: formData }),
+
+    const schema = z.object({
+      name: z.string().min(2, 'Name must be at least 2 characters'),
+      email: z.string().email('Invalid email address'),
+      message: z.string().min(10, 'Message must be at least 10 characters')}),
+
+    const result = schema.safeParse(formData),
+    logInfo('[ContactForm] Zod validation result:', { data: result }),
+
+    if (!result.success) {
+      const fieldErrors: Record<string string> = {},
+      for (const err of result.error.errors) {
+        if (err.path[0]) {
+          fieldErrors[err.path[0] as string] = err.message
+        }
+      }
+      setErrors(fieldErrors),
+      const validationErrorMsg = result.error.errors[0]?.message || 'Please check your form and try again',
+      logWarn('[ContactForm] Validation failed:', { data: { validationErrorMsg, fieldErrors: result.error.flatten().fieldErrors } }),
+      toast({
+        title: 'Form Validation Error',
+        description: validationErrorMsg,
+        variant: 'destructive'}),
+      return    }
+
+    setErrors({}),
+    setIsSubmitting(true),
+    logInfo('[ContactForm] Starting form submission (fetch to /api/contact).'),
+
+    try {fetch('/api/contact', _{
+        method: 'POST', headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify(formData)})
+        .then(async (res) => {
+          logInfo('[ContactForm] API response status:', { data: res.status }),
+          const responseBody = await res.text(), // Read as text first to avoid JSON parse error if not JSON,
+logInfo('[ContactForm] API response body:', { data: responseBody }),
+          // Note: setIsSubmitting(false) is called within then/catch of the promise.
+          // If fetch itself or .then/.catch structure has a synchronous error,
+          // the outer try/catch will handle it.
+
+          if (!res.ok) {
+            let errorData = { error: `Request failed with status ${res.status}` },
+            try {
+              errorData = JSON.parse(responseBody)
+            } catch (parseError) {
+              logWarn('[ContactForm] Could not parse error response as JSON.', { data: parseError })
+            }
+            logErrorToProduction('[ContactForm] API error response:', { data: errorData }),            // This throw will be caught by the .catch block below,
+throw new Error(errorData.error || 'Failed to send message')
+          }
+
+          setIsSubmitting(false), // Moved here for success path,
+logInfo('[ContactForm] Message submission successful.'),
+          toast({
+            title: 'Message Sent',
+            description:
+              "We've received your message and will get back to you soon."}),
+          setSubmitted(true),
+          setTimeout(() => setSubmitted(false), 2000),
+          setFormData({ name: '', email: '', message: '' })        })
+        .catch((err) => {
+          // This catches errors from the fetch promise (network, res.ok is false, or manual throw)
+          logErrorToProduction('[ContactForm] Fetch promise chain error:', { data: err }),
+          setIsSubmitting(false),
+          toast({
+            title: 'Submission Error',
+            description: err.message || 'An unexpected error occurred during submission.',
+            variant: 'destructive'})
+        })
+    } catch (error) {
+      // This catches synchronous errors that might occur when initiating fetch or in its direct vicinity
+      // if not caught by the promise's .catch (less common for typical fetch issues but good for safety)
+      logErrorToProduction('[ContactForm] Synchronous error during fetch initiation or processing:', { data: error }),
+      setIsSubmitting(false),
+      toast({
+        title: 'Critical Submission Error',
+        description: error instanceof Error ? error.message : 'An unexpected critical error occurred.',
+        variant: 'destructive'})
+          setIsSubmitting(false); // Moved here for success path,
+logInfo('[ContactForm] Message submission successful.');
+          toast({title: 'Message Sent', description:
+              "We've received your message and will get back to you soon."});
+          setSubmitted(true);
+          setTimeout_(() => setSubmitted(false), 2000);
+          setFormData({name: '', email: '', message: ''})
+        })
+        .catch(_(err) => {_// This catches errors from the fetch promise (network, res.ok is false, or manual throw)
+          logErrorToProduction('[ContactForm] Fetch promise chain error:', _{ data: err});
+          setIsSubmitting(false);
+          toast({title: 'Submission Error', description: err.message || 'An unexpected error occurred during submission.', variant: 'destructive'})
+        })
+    } catch (error) {_// This catches synchronous errors that might occur when initiating fetch or in its direct vicinity
+      // if not caught by the promise's .catch (less common for typical fetch issues but good for safety)
+      logErrorToProduction('[ContactForm] Synchronous error during fetch initiation or processing:', _{ data: error});
+      setIsSubmitting(false);
+      toast({title: 'Critical Submission Error', description: error instanceof Error ? error.message : 'An unexpected critical error occurred.', variant: 'destructive'})
+    }
+  },
+
+  // Handle sending messages to the AI chat assistant,
+const handleSendMessage = async (message: string): Promise<void> => {try {
+      const response = await fetch(
+        'https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat', _{
+          method: 'POST', headers: {
+            'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            messages: [{ role: 'user', content: message }]})}),
+
+      if (!response.ok) {
+        throw new Error('Failed to get response from AI assistant')
+      }
+
+      return Promise.resolve()
+    } catch (error) {
+      logErrorToProduction('Error in AI chat', error),
+      toast({
+        title: 'Chat Error',
+        description:
+          'There was an error communicating with our AI assistant. Please try again.',
+        variant: 'destructive'}),
+      return Promise.resolve()    }
+  },
+
+  const offices = [
+    {
+      name: 'Headquarters',
+      address: '123 Tech Avenue, San Francisco, CA 94105',
+      phone: '+1 302 464 0950',
+      email: 'commercial@ziontechgroup.com'},
+    {
+      name: 'East Coast Office',
+      address: '456 Innovation Street, New York, NY 10001',
+      phone: '+1 302 464 0950',
+      email: 'commercial@ziontechgroup.com'}],
+  return (
+    <>
+      <SEO,
+title=&quot;Contact Us - Get Help from Zion Tech Marketplace&quot;
+        description=&quot;Reach out to Zion Tech Marketplace for personalized support. Ask questions, get guidance, and connect with our tech-savvy team today. We’re eager to assist—drop us a line anytime.&quot;
+        keywords=&quot;contact Zion, AI marketplace support, tech platform contact&quot;
+        canonical=&quot;https://app.ziontechgroup.com/contact&quot;
+      />
+      <main className=&quot;min-h-screen bg-zion-blue pt-24 pb-20&quot;>
+        <div className=&quot;container mx-auto px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;text-center mb-16&quot;>
+            <GradientHeading>Contact Us</GradientHeading>
+            <p className=&quot;mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto&quot;>
+              Have questions or want to learn more? We'd love to hear from you.
+            </p>
+          </div>
+
+          <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24&quot;>
+            <div>
+              <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>
+                Get in Touch
+              </h2>
+              <p className=&quot;text-zion-slate-light text-lg mb-8&quot;>
+                Whether you have a question about our platform, pricing, or,
+anything else, our team is ready to answer all your questions.
+              </p>
+
+              <form onSubmit={handleSubmit} className=&quot;space-y-6&quot;>
+                <div className=&quot;grid grid-cols-1 sm:grid-cols-2 gap-4&quot;>                  <div>
+                    <label htmlFor=&quot;name&quot; className=&quot;block text-white mb-2&quot;>
+                      Your Name
+                    </label>
+                    <Input,
+id=&quot;name&quot;
+                      name=&quot;name&quot;
+                      value={formData.name}
+                      onChange={handleChange}
+                      className={`bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                      placeholder=&quot;John Doe&quot;
+                      required
+                    />
+                    {errors.name && (
+                      <p className=&quot;mt-1 text-sm text-red-500&quot;>{errors.name}</p>                    )}
+                  </div>
+                  <div>
+                    <label htmlFor=&quot;email&quot; className=&quot;block text-white mb-2&quot;>
+                      Email Address
+                    </label>
+                    <Input,
+id=&quot;email&quot;
+                      name=&quot;email&quot;
+                      type=&quot;email&quot;
+                      value={formData.email}
+                      onChange={handleChange}
+                      className={`bg-zion-blue-dark border-zion-blue-light text-white ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                      placeholder=&quot;john@example.com&quot;
+                      required
+                    />
+                    {errors.email && (
+                      <p className=&quot;mt-1 text-sm text-red-500&quot;>                        {errors.email}
+                      </p>
+                    )}
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor=&quot;message&quot; className=&quot;block text-white mb-2&quot;>
+                    Message
+                  </label>
+                  <Textarea,
+id=&quot;message&quot;
+                    name=&quot;message&quot;
+                    value={formData.message}
+                    onChange={handleChange}
+                    className={`bg-zion-blue-dark border-zion-blue-light text-white min-h-[150px] ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                    placeholder=&quot;Tell us what you'd like to know...&quot;
+                    required
+                  />
+                  {errors.message && (
+                    <p className=&quot;mt-1 text-sm text-red-500&quot;>                      {errors.message}
+                    </p>
+                  )}
+                </div>
+
+                <Button,
+type=&quot;submit&quot;
+                  className=&quot;w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple&quot;
+                  disabled={isSubmitting}                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </Button>
+                <AnimatePresence>
+                  {submitted && (
+                    <motion.div,
+initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      className=&quot;mt-4 text-center space-y-1&quot;                    >
+                      <h3 className=&quot;text-green-500 text-lg font-bold&quot;>
+                        Message Sent!
+                      </h3>
+                      <p className=&quot;text-zion-slate-light&quot;>
+                        Thanks for reaching out. Our team received your message,
+and will respond with helpful info as soon as possible,
+shortly.
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </form>
+            </div>
+
+            <div>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>
+                      Our Offices
+                    </h2>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    We list several offices so you can connect with the team,
+closest to your region for faster support.
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              <div className=&quot;grid grid-cols-1 gap-6&quot;>
+                {offices.map((office, index) => (                  <Card,
+key={index}
+                    className=&quot;bg-zion-blue-dark border border-zion-blue-light p-6&quot;
+                  >
+                    <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>
+                      {office.name}
+                    </h3>
+                    <div className=&quot;space-y-3&quot;>
+                      <div className=&quot;flex items-start&quot;>
+                        <MapPin className=&quot;w-5 h-5 text-zion-cyan mr-3 mt-1 flex-shrink-0&quot; />
+                        <span className=&quot;text-zion-slate-light&quot;>
+                          {office.address}
+                        </span>
+                      </div>
+                      <div className=&quot;flex items-center&quot;>
+                        <Phone className=&quot;w-5 h-5 text-zion-cyan mr-3 flex-shrink-0&quot; />
+                        <span className=&quot;text-zion-slate-light&quot;>
+                          {office.phone}                        </span>
+                      </div>
+                      <div className=&quot;flex items-center&quot;>
+                        <Mail className=&quot;w-5 h-5 text-zion-cyan mr-3 flex-shrink-0&quot; />
+                        <a,
+href={`mailto:${office.email}`}
+                          className=&quot;text-zion-cyan hover:underline&quot;
+                        >
+                          {office.email}
+                        </Link>                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+
+              <div className=&quot;mt-8 bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden&quot;>
+                <iframe,
+src=&quot;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12615.297199052566!2d-122.41941455!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080b9b0a169%3A0x1ac94fe0532d9e81!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1651234567890!5m2!1sen!2suk&quot;
+                  width=&quot;100%&quot;
+                  height=&quot;300&quot;
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading=&quot;lazy&quot;
+                  referrerPolicy=&quot;no-referrer-when-downgrade&quot;
+                  title=&quot;Zion Office Locations&quot;                ></iframe>
+              </div>
+
+              <div className=&quot;mt-8&quot;>
+                <Card className=&quot;bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 p-6&quot;>
+                  <div className=&quot;flex items-center&quot;>
+                    <div className=&quot;bg-zion-purple/20 p-3 rounded-full mr-4&quot;>
+                      <MessageSquare className=&quot;h-6 w-6 text-zion-purple&quot; />
+                    </div>
+                    <div>
+                      <h3 className=&quot;text-white text-lg font-bold&quot;>
+                        Live AI Support
+                      </h3>
+                      <p className=&quot;text-zion-slate-light&quot;>
+                        Get instant answers to your questions
+                      </p>
+                    </div>
+                  </div>
+                  <Button,
+onClick={() => setIsChatOpen(true)}
+                    className=&quot;w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple&quot;                  >
+                    Chat With Our AI Assistant
+                  </Button>
+                </Card>
+              </div>
+            </div>
+          </div>
+
+          <div className=&quot;bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center&quot;>
+            <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>
+              Need immediate assistance?
+            </h2>
+            <p className=&quot;text-zion-slate-light text-lg mb-8 max-w-3xl mx-auto&quot;>
+              Our customer support team is available 24/7 to help you with any,
+questions.
+            </p>
+            <div className=&quot;flex flex-col sm:flex-row justify-center gap-4&quot;>
+              <Button,
+onClick={() => setIsChatOpen(true)}
+                className=&quot;bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple&quot;              >
+                <MessageSquare className=&quot;mr-2 h-5 w-5&quot; />
+                Chat With AI
+              </Button>
+              <Button,
+variant=&quot;outline&quot;
+                className=&quot;border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10&quot;
+                asChild
+              >
+                <a href=&quot;mailto:support@ziontechgroup.com&quot;>
+                  <Mail className=&quot;mr-2 h-5 w-5&quot; />
+                  Email Support
+                </Link>
+              </Button>
+            </div>
+          </div>
+
+          <div className=&quot;mt-12 text-center&quot;>
+            <p className=&quot;text-zion-slate-light text-lg&quot;>
+              Looking for more details about our platform? Visit our{' '}
+              <Link href=&quot;/services&quot; className=&quot;text-zion-cyan underline&quot;>
+                services page
+              </Link>{' '}
+              or explore the{' '}
+              <Link href=&quot;/blog&quot; className=&quot;text-zion-cyan underline&quot;>                Zion blog
+              </Link>{_' '}
+              for additional insights.
+            </p>
+          </div>
+        </div>
+      </main>
+
+      {_/* Chat Assistant Modal */}
+      {isChatOpen && (_<ChatAssistant,
+isOpen={isChatOpen}
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           onClose={() => setIsChatOpen(false)}
           recipient={{;
             id:'ai-assistant',;
@@ -433,6 +857,7 @@ export default function Contact() {;
             avatarUrl:'https://placehold.co/64x64?text=AI',;
             role:'Support Bot'}}
           onSendMessage={handleSendMessage}
+<<<<<<< HEAD
           starterQuestions={[;
             'How do I list a product?What services does Zion offer?',;
             'Where can I view pricing plans?How do I create an account?',;
@@ -441,4 +866,11 @@ export default function Contact() {;
       )}
     </>;
   ),;
+=======
+          starterQuestions={[
+            'How do I list a product?What services does Zion offer?Where can I view pricing plans?How do I create an account?Can I talk to a human representative?']}        />
+      )}
+    </>
+  )
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

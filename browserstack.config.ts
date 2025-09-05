@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { defineConfig, devices } from '@playwright/test',;
 ;
 export default defineConfig({;
@@ -39,3 +40,6 @@ export default defineConfig({;
     ['list'],;
     ['html', { outputFolder:'playwright-logs/html-report', open:'never' }]];
 }),;
+=======
+import { defineConfig, devices } from '@playwright/test',
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

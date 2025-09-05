@@ -90,11 +90,19 @@ class PerformanceOptimizer {;
         'Use React.memo for expensive components',;
       ],;
     };
+<<<<<<< HEAD
 ;
     const reportFile = path.join(;
       __dirname,;
       'reports',;
       'performance-report.json';
+=======
+
+    const reportFile = path.join(
+      __dirname;
+      'reports';
+      'performance-report.json'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`Performance report saved:to:${reportFile}`);

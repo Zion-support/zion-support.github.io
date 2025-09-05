@@ -18,10 +18,17 @@ class IntelligentTestOrchestrator {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
     console.log(logMessage);
+<<<<<<< HEAD
 ;
     const logFile = path.join(;
       this.logsDir,;
       'intelligent-test-orchestrator.log';
+=======
+
+    const logFile = path.join(
+      this.logsDir;
+      'intelligent-test-orchestrator.log'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.appendFileSync(logFile, logMessage + '\n');
   }
@@ -83,11 +90,19 @@ class IntelligentTestOrchestrator {;
         report.summary.failedTests++;
       }
     });
+<<<<<<< HEAD
 ;
     // Save report;
     const reportFile = path.join(;
       this.logsDir,;
       `intelligent-test-report-${Date.now()}.json`;
+=======
+
+    // Save report
+    const reportFile = path.join(
+      this.logsDir;
+      `intelligent-test-report-${Date.now()}.json`
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ;

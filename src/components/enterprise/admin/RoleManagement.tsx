@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react",;
 import {;
   Table,;
@@ -253,4 +254,251 @@ export function RoleManagement() {;
       </div>;
     </div>;
   ),;
+=======
+import React from "react",import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Switch } from "@/components/ui/switch",
+import { toast } from "@/hooks/use-toast",import { InfoIcon } from 'lucide-react'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger} from "@/components/ui/tooltip",import React from "react";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
+
+export function RoleManagement() {_// Mock team members data,
+const teamMembers = [
+    {
+      id: 1,
+      name: &quot;Alex Johnson&quot;,
+      email: &quot;alex@example.com&quot;,
+      role: &quot;Admin&quot;,
+      permissions: {
+        viewCandidates: true,
+        editCandidates: true,
+        createJobs: true,
+        manageTeam: true,
+        viewBilling: true,
+        manageBilling: true}},
+    {
+      id: 2,
+      name: &quot;Jamie Smith&quot;,
+      email: &quot;jamie@example.com&quot;,
+      role: &quot;Recruiter&quot;,
+      permissions: {
+        viewCandidates: true,
+        editCandidates: true,
+        createJobs: true,
+        manageTeam: false,
+        viewBilling: false,
+        manageBilling: false}},
+    {
+      id: 3,
+      name: &quot;Sam Williams&quot;,
+      email: &quot;sam@example.com&quot;,
+      role: &quot;Manager&quot;,
+      permissions: {
+        viewCandidates: true,
+        editCandidates: false,
+        createJobs: true,
+        manageTeam: false,
+        viewBilling: true,
+        manageBilling: false}},
+    {
+      id: 4,
+      name: &quot;Taylor Brown&quot;,
+      email: &quot;taylor@example.com&quot;,
+      role: &quot;Viewer&quot;,
+      permissions: {
+        viewCandidates: true,
+        editCandidates: false,
+        createJobs: false,
+        manageTeam: false,
+        viewBilling: false,
+        manageBilling: false}}],
+  const handlePermissionChange = (memberId: number, permission: string, value: boolean) => {_// In a real app, this would make an API call to update permissions,
+toast({
+      title: "Permission updated",
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
+  },
+
+  const roleDescriptions: Record<string string> = {
+    "Admin": "Full access to all features and settings",
+    "Recruiter": "Can manage candidates and job postings",
+    "Manager": "Can view candidates and create jobs",
+    "Viewer": "Read-only access to candidates"},      title: "Permission updated", description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
+  };
+
+  const roleDescriptions: Record<string, string> = {_"Admin": "Full access to all features and settings", _"Recruiter": "Can manage candidates and job postings", _"Manager": "Can view candidates and create jobs", _"Viewer": "Read-only access to candidates"};
+
+  return (
+    <div className=&quot;space-y-6&quot;>
+      <div>
+        <h3 className=&quot;text-xl font-medium mb-4&quot;>Role Permissions</h3>
+        <div className=&quot;grid grid-cols-1 md:grid-cols-4 gap-4 mb-6&quot;>
+          {Object.entries(roleDescriptions).map(([role, description]) => (
+            <div key={role} className=&quot;bg-card rounded-lg p-4 border border-border&quot;>
+              <div className=&quot;flex items-center gap-2 mb-2&quot;>
+                <Badge variant={role === &quot;Admin&quot; ? &quot;default&quot; : &quot;outline&quot}>{role}</Badge>
+              </div>
+              <p className=&quot;text-sm text-muted-foreground&quot;>{description}</p>            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className=&quot;rounded-md border&quot;>
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>Team Member</TableHead>
+              <TableHead>Role</TableHead>
+              <TableHead className=&quot;text-center&quot;>
+                <div className=&quot;flex items-center justify-center gap-1&quot;>
+                  View Candidates
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <InfoIcon className=&quot;h-4 w-4 text-muted-foreground&quot; />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        Can view candidate profiles and applications
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </div>
+              </TableHead>
+              <TableHead className=&quot;text-center&quot;>
+                <div className=&quot;flex items-center justify-center gap-1&quot;>
+                  Edit Candidates
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <InfoIcon className=&quot;h-4 w-4 text-muted-foreground&quot; />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        Can edit candidate information and status
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </div>
+              </TableHead>
+              <TableHead className=&quot;text-center&quot;>
+                <div className=&quot;flex items-center justify-center gap-1&quot;>
+                  Create Jobs
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <InfoIcon className=&quot;h-4 w-4 text-muted-foreground&quot; />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        Can create and publish job listings
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </div>
+              </TableHead>
+              <TableHead className=&quot;text-center&quot;>
+                <div className=&quot;flex items-center justify-center gap-1&quot;>
+                  Manage Team
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <InfoIcon className=&quot;h-4 w-4 text-muted-foreground&quot; />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        Can add, edit, and remove team members
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </div>
+              </TableHead>
+              <TableHead className=&quot;text-center&quot;>
+                <div className=&quot;flex items-center justify-center gap-1&quot;>
+                  Billing Access
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <InfoIcon className=&quot;h-4 w-4 text-muted-foreground&quot; />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        Can view and manage billing information
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </div>
+              </TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {teamMembers.map(_(member) => (_<TableRow key={member.id}>
+                <TableCell>
+                  <div className=&quot;font-medium&quot;>{member.name}</div>
+                  <div className=&quot;text-sm text-muted-foreground&quot;>
+                    {member.email}                  </div>
+                </TableCell>
+                <TableCell>
+                  <select,
+className=&quot;w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring&quot;
+                    defaultValue={member.role}                  >
+                    <option value=&quot;Admin&quot;>Admin</option>
+                    <option value=&quot;Recruiter&quot;>Recruiter</option>
+                    <option value=&quot;Manager&quot;>Manager</option>
+                    <option value=&quot;Viewer&quot;>Viewer</option>
+                  </select>
+                </TableCell>
+                <TableCell className=&quot;text-center&quot;>
+                  <Switch,
+aria-label=&quot;View candidates&quot;
+                    checked={member.permissions.viewCandidates}
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, &quot;viewCandidates&quot;, checked)
+                    }                  />
+                </TableCell>
+                <TableCell className=&quot;text-center&quot;>
+                  <Switch,
+aria-label=&quot;Edit candidates&quot;
+                    checked={member.permissions.editCandidates}
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, &quot;editCandidates&quot;, checked)
+                    }                  />
+                </TableCell>
+                <TableCell className=&quot;text-center&quot;>
+                  <Switch,
+aria-label=&quot;Create jobs&quot;
+                    checked={member.permissions.createJobs}
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, &quot;createJobs&quot;, checked)
+                    }                  />
+                </TableCell>
+                <TableCell className=&quot;text-center&quot;>
+                  <Switch,
+aria-label=&quot;Manage team&quot;
+                    checked={member.permissions.manageTeam}
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, &quot;manageTeam&quot;, checked)
+                    }                  />
+                </TableCell>
+                <TableCell className=&quot;text-center&quot;>
+                  <Switch,
+aria-label=&quot;View billing&quot;
+                    checked={member.permissions.viewBilling}
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, &quot;viewBilling&quot;, checked)
+                    }                  />
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+    </div>
+  )
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

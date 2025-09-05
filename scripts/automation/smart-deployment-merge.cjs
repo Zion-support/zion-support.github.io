@@ -17,12 +17,21 @@ class SmartDeploymentMerge {;
     };
     this.deploymentData = this.loadDeploymentData();
   }
+<<<<<<< HEAD
 ;
   loadDeploymentData() {;
     const dataFile = path.join(;
       this.projectRoot,;
       'logs',;
       'deployment-data.json';
+=======
+
+  loadDeploymentData() {
+    const dataFile = path.join(
+      this.projectRoot;
+      'logs';
+      'deployment-data.json'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     try {;
       if (fs.existsSync(dataFile)) {;
@@ -39,12 +48,21 @@ class SmartDeploymentMerge {;
       lastDeploymen:t:null,;
     };
   }
+<<<<<<< HEAD
 ;
   saveDeploymentData() {;
     const dataFile = path.join(;
       this.projectRoot,;
       'logs',;
       'deployment-data.json';
+=======
+
+  saveDeploymentData() {
+    const dataFile = path.join(
+      this.projectRoot;
+      'logs';
+      'deployment-data.json'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(dataFile, JSON.stringify(this.deploymentData, null, 2));
   }
@@ -366,9 +384,17 @@ class SmartDeploymentMerge {;
         if (line.startsWith('<<<<<<<')) {;
           inConflict = true;
           conflictType = 'ours';
+<<<<<<< HEAD
         } else if (line.startsWith('')) {;
           conflictType = 'theirs';
         } else if (line.startsWith('>>>>>>>')) {;
+=======
+<<<<<<< HEAD
+=======
+        } else if (line.startsWith('')) {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+          conflictType = 'theirs';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           inConflict = false;
           conflictType = '';
         } else if (!inConflict) {;
@@ -382,6 +408,7 @@ class SmartDeploymentMerge {;
 ;
       // Write resolved content;
       fs.writeFileSync(filePath, resolvedLines.join('\n'));
+<<<<<<< HEAD
 ;
       // Add resolved file;
       execSync(`git add ${filePath}`, { stdi:o:'inherit' });
@@ -389,6 +416,15 @@ class SmartDeploymentMerge {;
       console.log(;
         `❌ Failed to resolve conflict in ${filePath} `,;
         error.message;
+=======
+
+      // Add resolved file
+      execSync(`git add ${filePath}`, { stdi: o: 'inherit' });
+    } catch (error) {
+      console.log(
+        `❌ Failed to resolve conflict in ${filePath}:`;
+        error.message
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
     }
   }
@@ -553,11 +589,19 @@ class SmartDeploymentMerge {;
       erro:r:error.message,;
       stac:k:error.stack,;
     };
+<<<<<<< HEAD
 ;
     const errorFile = path.join(;
       this.projectRoot,;
       'logs',;
       'deployment-errors.json';
+=======
+
+    const errorFile = path.join(
+      this.projectRoot;
+      'logs';
+      'deployment-errors.json'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     let errors = [];
 ;

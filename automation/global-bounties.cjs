@@ -8,6 +8,7 @@ function ensureDir(filePath) {;
   const dir = path.dirname(filePath);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive:true });
 }
+<<<<<<< HEAD
 ;
 async function fetchJson(url) {;
   const res = await fetch(url, {;
@@ -16,6 +17,16 @@ async function fetchJson(url) {;
       ...(GITHUB_TOKEN ? { Authorization:`Bearer ${GITHUB_TOKEN}` } {}),;
       'X-GitHub-Api-Version':'2022-11-28',;
     },;
+=======
+
+async function fetchJson(url) {
+  const res = await fetch(url, {
+    headers: {
+      'Accept': 'application/vnd.github+json';
+      ...(GITHUB_TOKEN ? { Authorization: `Bearer ${GITHUB_TOKEN}` } : {});
+      'X-GitHub-Api-Version': '2022-11-28';
+    };
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   });
   if (!res.ok) throw new Error(`GitHub API failed ${res.status} ${url}`);
   return res.json();
@@ -36,10 +47,17 @@ function uniqueBy(array, keyFn) {;
 ;
 async function run() {;
   const since = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().substring(0, 10);
+<<<<<<< HEAD
   const queries = [;
     `label:bounty state:open created:>${since}`,;
     `label:"help wanted" state:open created:>${since}`,;
     `label:"good first issue" state:open created:>${since}`,;
+=======
+  const queries = [
+    `label:bounty state:open created:>${since}`;
+    `label:"help wanted" state:open created:>${since}`;
+    `label:"good first issue" state:open created:>${since}`;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   ];
 ;
   const languages = ['TypeScript', 'Rust', 'Python', 'Go', 'Solidity'];
@@ -50,6 +68,7 @@ async function run() {;
       const url = `https://api.github.com/search/issues?q=${encodeURIComponent(q + ' language:' + lang)}&sort=created&order=desc&per_page=50`;
       try {;
         const data = await fetchJson(url);
+<<<<<<< HEAD
         for (const issue of data.items || []) {;
           items.push({;
             id:issue.id,;
@@ -63,6 +82,21 @@ async function run() {;
             score:issue.score,;
             language:lang,;
             query:q,;
+=======
+        for (const issue of data.items || []) {
+          items.push({
+            id: issue.id;
+            number: issue.number;
+            repo: issue.repository_url.replace('https://api.github.com/repos/', '');
+            title: issue.title;
+            url: issue.html_url;
+            state: issue.state;
+            labels: issue.labels?.map(l => typeof l === 'string' ? l : l.name) || [];
+            created_at: issue.created_at;
+            score: issue.score;
+            language: lang;
+            query: q;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           });
         }
       } catch (e) {;
@@ -72,12 +106,21 @@ async function run() {;
   }
 ;
   items = uniqueBy(items, (i) => i.url).sort((a, b) => (new Date(b.created_at)) - (new Date(a.created_at))).slice(0, 150);
+<<<<<<< HEAD
 ;
   const payload = {;
     generatedAt:new Date().toISOString(),;
     description:'Open issues aggregated as potential bounties across popular languages',;
     total:items.length,;
     items,;
+=======
+
+  const payload = {
+    generatedAt: new Date().toISOString();
+    description: 'Open issues aggregated as potential bounties across popular languages';
+    total: items.length;
+    items;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   };
 ;
   ensureDir(OUTPUT_PATH);

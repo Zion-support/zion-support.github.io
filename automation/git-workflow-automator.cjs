@@ -55,22 +55,39 @@ class GitWorkflowAutomator {;
 ;
       // Add all changes;
       await this.runCommand('git add .', 'Add all changes');
+<<<<<<< HEAD
 ;
       // Check if there are changes to commit;
       const statusResult = await this.runCommand(;
         'git status --porcelain',;
         'Check git status';
+=======
+
+      // Check if there are changes to commit
+      const statusResult = await this.runCommand(
+        'git status --porcelain';
+        'Check git status'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
       if (!statusResult.success || !statusResult.output.trim()) {;
         this.log('No changes to commit');
         return;
       }
+<<<<<<< HEAD
 ;
       // Commit changes;
       const commitMessage = `fea:t:Automated improvements and fixes - ${new Date().toISOString()}`;
       await this.runCommand(;
         `git commit -m "${commitMessage}"`,;
         'Commit changes';
+=======
+
+      // Commit changes
+      const commitMessage = `fea: t: Automated improvements and fixes - ${new Date().toISOString()}`;
+      await this.runCommand(
+        `git commit -m "${commitMessage}"`;
+        'Commit changes'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
 ;
       // Push changes;
@@ -95,7 +112,11 @@ class GitWorkflowAutomator {;
         encodin:g:'utf8',;
       });
       return result.trim();
+<<<<<<< HEAD
     } catch (error) {;
+=======
+    } catch (_error) {
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       return 'unknown';
     }
   }
@@ -122,10 +143,17 @@ class GitWorkflowAutomator {;
 ;
       // Merge current branch;
       const currentBranch = await this.getCurrentBranch();
+<<<<<<< HEAD
       if (currentBranch !== 'main') {;
         await this.runCommand(;
           `git merge ${currentBranch}`,;
           `Merge ${currentBranch} into main`;
+=======
+      if (currentBranch !== 'main') {
+        await this.runCommand(
+          `git merge ${currentBranch}`;
+          `Merge ${currentBranch} into main`
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         );
       }
 ;

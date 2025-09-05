@@ -29,6 +29,7 @@ async function main() {;
 ;
     for (const key of missing) {;
       const text = en[key];
+<<<<<<< HEAD
       const langName = lng === 'pt' ? 'Portuguese' :lng === 'es' ? 'Spanish' :'Arabic';
       const completion = await openai.chat.completions.create({;
         model:'gpt-4o-mini',;
@@ -37,6 +38,16 @@ async function main() {;
           { role:'user', content:`Translate into ${langName} ${text}` },;
         ],;
         temperature:0.1,;
+=======
+      const langName = lng === 'pt' ? 'Portuguese' : lng === 'es' ? 'Spanish' : 'Arabic';
+      const completion = await openai.chat.completions.create({
+        model: 'gpt-4o-mini';
+        messages: [
+          { role: 'system', content: 'Translate UI labels precisely. Output only the translated text.' };
+          { role: 'user', content: `Translate into ${langName}: ${text}` };
+        ];
+        temperature: 0.1;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
       const translated = completion.choices?.[0]?.message?.content?.trim();
       if (translated) cur[key] = translated;

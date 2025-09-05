@@ -28,12 +28,21 @@ async function run() {;
     const rd = await fetchJson(redditUrl);
     items.push(...(rd.data?.children || []).map((p) => ({ source:'Reddit', title:p.data.title, url:`https://reddit.com${p.data.permalink}`, score:p.data.score, created_utc:p.data.created_utc })));
   } catch (e) { console.warn('Reddit fetch failed:', e.message); }
+<<<<<<< HEAD
 ;
   const payload = {;
     generatedAt:new Date().toISOString(),;
     description:'Agent/AI governance news from HN and Reddit',;
     total:items.length,;
     items,;
+=======
+
+  const payload = {
+    generatedAt: new Date().toISOString();
+    description: 'Agent/AI governance news from HN and Reddit';
+    total: items.length;
+    items;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   };
 ;
   ensureDir(OUTPUT_PATH);

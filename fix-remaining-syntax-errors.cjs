@@ -21,11 +21,19 @@ function fixSyntaxErrors(filePath) {;
 ;
     // Fix missing semicolons;
     content = content.replace(/([^;])\s*$/gm, '$1;');
+<<<<<<< HEAD
 ;
     // Fix missing commas in objects;
     content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1:$2,}');
 ;
     // Fix missing closing braces;
+=======
+
+    // Fix missing commas in objects
+    content = content.replace(/(\w+):\s*([^}]+)\s*}/g, '$1: $2}');
+
+    // Fix missing closing braces
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;
 ;

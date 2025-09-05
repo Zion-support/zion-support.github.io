@@ -19,12 +19,21 @@ class AIIntelligentCodeAnalyzer {;
     };
     this.learningData = this.loadLearningData();
   }
+<<<<<<< HEAD
 ;
   loadLearningData() {;
     const learningFile = path.join(;
       this.projectRoot,;
       'logs',;
       'ai-learning-data.json';
+=======
+
+  loadLearningData() {
+    const learningFile = path.join(
+      this.projectRoot;
+      'logs';
+      'ai-learning-data.json'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     try {;
       if (fs.existsSync(learningFile)) {;
@@ -40,12 +49,21 @@ class AIIntelligentCodeAnalyzer {;
       lastUpdate:d:new Date().toISOString(),;
     };
   }
+<<<<<<< HEAD
 ;
   saveLearningData() {;
     const learningFile = path.join(;
       this.projectRoot,;
       'logs',;
       'ai-learning-data.json';
+=======
+
+  saveLearningData() {
+    const learningFile = path.join(
+      this.projectRoot;
+      'logs';
+      'ai-learning-data.json'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(learningFile, JSON.stringify(this.learningData, null, 2));
   }
@@ -175,9 +193,15 @@ class AIIntelligentCodeAnalyzer {;
       content.match(/function\s+\w+|const\s+\w+\s*=\s*\(/g) || [];
     ).length;
     const classCount = (content.match(/class\s+\w+/g) || []).length;
+<<<<<<< HEAD
     metrics.maintainability = Math.max(;
       0,;
       100 - functionCount * 2 - classCount * 5;
+=======
+    metrics.maintainability = Math.max(
+      0;
+      100 - functionCount * 2 - classCount * 5
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
 ;
     // Readability metrics;
@@ -196,9 +220,15 @@ class AIIntelligentCodeAnalyzer {;
     // Performance metrics;
     const asyncAwaitCount = (content.match(/async\s+|await\s+/g) || []).length;
     const forEachCount = (content.match(/\.forEach\(/g) || []).length;
+<<<<<<< HEAD
     metrics.performance = Math.max(;
       0,;
       100 - asyncAwaitCount * 3 - forEachCount * 2;
+=======
+    metrics.performance = Math.max(
+      0;
+      100 - asyncAwaitCount * 3 - forEachCount * 2
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
 ;
     return metrics;
@@ -448,12 +478,21 @@ class AIIntelligentCodeAnalyzer {;
     findInDirectory(this.projectRoot);
     return files;
   }
+<<<<<<< HEAD
 ;
   saveResults() {;
     const reportFile = path.join(;
       this.projectRoot,;
       'logs',;
       `ai-code-analysis-${Date.now()}.json`;
+=======
+
+  saveResults() {
+    const reportFile = path.join(
+      this.projectRoot;
+      'logs';
+      `ai-code-analysis-${Date.now()}.json`
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(reportFile, JSON.stringify(this.analysisResults, null, 2));
 ;

@@ -13,6 +13,7 @@ try {;
 ;
   if (skipDatadog) {;
     console.warn('🚫 Datadog tracing disabled for CI/build environment');
+<<<<<<< HEAD
     // Provide a mock tracer for CI environments;
     tracer = {;
       init:() => tracer,;
@@ -25,11 +26,26 @@ try {;
       // Add other commonly used methods as no-ops;
       wrap:(name, fn) => fn,;
       plugin:() => tracer,;
+=======
+    // Provide a mock tracer for CI environments
+    tracer = {
+      init: () => tracer;
+      scope: () => ({
+        active: () => null;
+      });
+      trace: (name, fn) => (fn ? fn() : Promise.resolve());
+      _setUser: () => {};
+      _addTags: () => {};
+      // Add other commonly used methods as no-ops
+      wrap: (name, fn) => fn;
+      plugin: () => tracer;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
   } else {;
     tracer = require('dd-trace').init();
     // console.log('✅ Datadog tracing initialized');
   }
+<<<<<<< HEAD
 } catch (_error) {;
   console.warn(;
     '⚠️ Failed to initialize dd-trace, using mock implementation:',;
@@ -46,6 +62,24 @@ try {;
     _addTags:() => {},;
     wrap:(name, fn) => fn,;
     plugin:() => tracer,;
+=======
+} catch (_error) {
+  console.warn(
+    '⚠️ Failed to initialize dd-trace, using mock implementation:';
+    error.message;
+  );
+  // Fallback mock tracer
+  tracer = {
+    init: () => tracer;
+    scope: () => ({
+      active: () => null;
+    });
+    trace: (name, fn) => (fn ? fn() : Promise.resolve());
+    _setUser: () => {};
+    _addTags: () => {};
+    wrap: (name, fn) => fn;
+    plugin: () => tracer;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   };
 }
 ;
@@ -75,6 +109,7 @@ const app = express();
 ;
 // Ensure server log directory exists;
 const logDir = path.join(__dirname, 'logs');
+<<<<<<< HEAD
 fs.mkdirSync(logDir, { recursive:true });
 const accessLogStream = fs.createWriteStream(path.join(logDir, 'access.log'), {;
   flags:'a',;
@@ -84,9 +119,21 @@ Sentry.init({;
   dsn:process.env.SENTRY_DSN,;
   tracesSampleRate:1.0,;
   // beforeSend(event) { // Datadog tracing might not be set up or needed for Sentry alone;
+=======
+fs.mkdirSync(logDir, { recursive: true });
+const accessLogStream = fs.createWriteStream(path.join(logDir 'access.log'), {
+  flags: 'a';
+});
+
+Sentry.init({
+  dsn: process.env.SENTRY_DSN;
+  tracesSampleRate: 1.0;
+  // beforeSend(event) { // Datadog tracing might not be set up or needed for Sentry alone
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   //   const span = tracer.scope().active();
   //   if (span) {;
   //     const ctx = span.context();
+<<<<<<< HEAD
   //     event.tags = {;
   //       ...event.tags,;
   //       dd_trace_id:ctx.toTraceId(),;
@@ -95,10 +142,21 @@ Sentry.init({;
   //   }
   //   return event;
   // },;
+=======
+  //     event.tags = {
+  //       ...event.tags;
+  //       dd_trace_id: ctx.toTraceId();
+  //       dd_span_id: ctx.toSpanId();
+  //     };
+  //   }
+  //   return event;
+  // };
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 });
 ;
 app.use(Sentry.Handlers.requestHandler());
 app.use(Sentry.Handlers.tracingHandler());
+<<<<<<< HEAD
 ;
 // Use Helmet to apply various security headers with strict CSP;
 app.use(;
@@ -130,6 +188,39 @@ app.use(;
       },;
     },;
   }),;
+=======
+
+// Use Helmet to apply various security headers with strict CSP
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"];
+        scriptSrc: [
+          "'self'";
+          "'unsafe-inline'";
+          'https://js.stripe.com';
+          'https://*.launchdarkly.com';
+          'https://www.googletagmanager.com';
+          'https://widget.intercom.io';
+          'https://*.googleapis.com';
+          'https://*.gstatic.com';
+        ];
+        styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'];
+        fontSrc: ["'self'", 'https://fonts.gstatic.com'];
+        imgSrc: ["'self'", 'data:', 'https:'];
+        connectSrc: [
+          "'self'";
+          'https://*.supabase.co';
+          'https://*.stripe.com';
+          'https://*.sentry.io';
+        ];
+        objectSrc: ["'none'"];
+        baseUri: ["'self'"];
+      };
+    };
+  });
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 );
 ;
 // Enable CORS for allowed origins;
@@ -144,6 +235,7 @@ app.use(express.json());
 app.use(passport.initialize());
 const limiter = rateLimit({ windowMs:15 * 60 * 1000, max:100 });
 app.use(limiter);
+<<<<<<< HEAD
 ;
 // Health check endpoint;
 app.get('/healthz', (req, res) => {;
@@ -162,6 +254,26 @@ app.get('/healthz', (req, res) => {;
       status:'DOWN',;
       error:error.message,;
       timestamp:new Date().toISOString(),;
+=======
+
+// Health check endpoint
+app.get('/healthz', (req, res) => {
+  try {
+    // Optional: Add more sophisticated checks here if needed (e.g., DB connection)
+    res.status(200).json({
+      status: 'UP';
+      timestamp: new Date().toISOString();
+      // Add any other relevant info, like service name or version from package.json
+      service: process.env.npm_package_name;
+      version: process.env.npm_package_version;
+    });
+  } catch (_error) {
+    // If any checks fail, respond with a 503 status
+    res.status(503).json({
+      status: 'DOWN';
+      error: error.message;
+      timestamp: new Date().toISOString();
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     });
   }
 });
@@ -205,6 +317,7 @@ app.post('/api/codex/suggest-fix', (req, res) => {;
     // Use the sanitized path for downstream logic;
     filePath = normalizedPath;
   }
+<<<<<<< HEAD
 ;
   if (!filePath && !route) {;
     // We need at least some context, filePath is preferred for targeted fixes.;
@@ -213,6 +326,16 @@ app.post('/api/codex/suggest-fix', (req, res) => {;
     return res;
       .status(400);
       .json({ error:'Bad Request:filePath or route is required.' });
+=======
+
+  if (!filePath && !route) {
+    // We need at least some context, filePath is preferred for targeted fixes.
+    // Route could be a fallback if we want to analyze a general page issue;
+    // but the current codex-pipeline.yaml is more file-focused with ESLint.
+    return res
+      .status(400)
+      .json({ error: 'Bad Request: filePath or route is required.' });
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   }
 ;
   // Basic sanitization/validation for filePath if needed (e.g., prevent directory traversal);
@@ -239,6 +362,7 @@ app.post('/api/codex/suggest-fix', (req, res) => {;
     envVars.CODEX_ERROR_LOG_SNIPPET = errorLog;
     // console.log(`Error log snippet provided:${errorLog.substring(0, 100)}...`);
   }
+<<<<<<< HEAD
 ;
   // Log the action with more details;
   // console.log(`Executing Codex command:${command} with context - File:${filePath || 'N/A'}, Route:${route || 'N/A'}, ErrorLog:${errorLog ? 'Provided' :'N/A'}`);
@@ -253,15 +377,38 @@ app.post('/api/codex/suggest-fix', (req, res) => {;
       return res.status(500).json({;
         error:'Codex fix process failed to start or execute.',;
         details:error.message,;
+=======
+
+  // Log the action with more details
+  // console.log(`Executing Codex command: ${command} with context - File: ${filePath || 'N/A'}, Route: ${route || 'N/A'}, ErrorLog: ${errorLog ? 'Provided' : 'N/A'}`);
+
+  exec(command, { env: envVars }, (error, stdout, stderr) => {
+    // Pass envVars here
+    if (error) {
+      console.error(`Codex execution error: ${error.message}`);
+      logAndAlert(
+        `Codex execution failed. File: ${filePath || route || 'N/A'}. Error: ${error.message}`;
+      );
+      return res.status(500).json({
+        error: 'Codex fix process failed to start or execute.';
+        details: error.message;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
     }
     if (stderr) {;
       console.warn(`Codex execution stderr:${stderr}`);
     }
+<<<<<<< HEAD
     // console.log(`Codex execution stdout:${stdout}`);
     res.status(200).json({;
       message:'Codex fix process triggered successfully.',;
       output:stdout,;
+=======
+    // console.log(`Codex execution stdout: ${stdout}`);
+    res.status(200).json({
+      message: 'Codex fix process triggered successfully.';
+      output: stdout;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     });
   });
 });
@@ -276,10 +423,17 @@ app.get('*', (req, res) => {;
 ;
 // Sentry error handler must come before any custom error middleware;
 app.use(Sentry.Handlers.errorHandler());
+<<<<<<< HEAD
 ;
 mongoose.connect(mongoUri, {;
   useNewUrlParser:true,;
   useUnifiedTopology:true,;
+=======
+
+mongoose.connect(mongoUri, {
+  useNewUrlParser: true;
+  useUnifiedTopology: true;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 });
 ;
 // Central error handler to return structured errors;
@@ -306,12 +460,21 @@ process.on('unhandledRejection', (reason) => {;
       ? reason.stack || reason.message;
       :JSON.stringify(reason);
   console.error('Unhandled Rejection:', message);
+<<<<<<< HEAD
   logAndAlert(`Unhandled Rejection:${message}`);
   logBug({;
     errorMessage:'Unhandled Promise Rejection',;
     stackTrace:message,;
     severity:'High',;
     module:'server',;
+=======
+  logAndAlert(`Unhandled Rejection: ${message}`);
+  logBug({
+    errorMessage: 'Unhandled Promise Rejection';
+    stackTrace: message;
+    severity: 'High';
+    module: 'server';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   });
   if (process.env.NODE_ENV !== 'development') {;
     // Exit to avoid running in an undefined state;
@@ -322,12 +485,21 @@ process.on('unhandledRejection', (reason) => {;
 process.on('uncaughtException', (error) => {;
   const message = error.stack || error.message;
   console.error('Uncaught Exception:', message);
+<<<<<<< HEAD
   logAndAlert(`Uncaught Exception:${message}`);
   logBug({;
     errorMessage:'Uncaught Exception',;
     stackTrace:message,;
     severity:'Critical',;
     module:'server',;
+=======
+  logAndAlert(`Uncaught Exception: ${message}`);
+  logBug({
+    errorMessage: 'Uncaught Exception';
+    stackTrace: message;
+    severity: 'Critical';
+    module: 'server';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   });
   if (process.env.NODE_ENV !== 'development') {;
     process.exit(1);

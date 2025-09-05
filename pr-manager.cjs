@@ -38,6 +38,7 @@ function getOpenPRs() {;
     return [];
   }
 }
+<<<<<<< HEAD
 ;
 // Function to merge PR;
 function mergePR(prNumber, branchName) {;
@@ -47,34 +48,70 @@ function mergePR(prNumber, branchName) {;
   const checkoutResult = runGitCommand(;
     `git checkout ${branchName}`,;
     `Checking out branch ${branchName}`;
+=======
+
+// Function to merge PR
+function mergePR(prNumber, branchName) {
+  console.log(`\n🔄 Processing PR #${prNumber}: ${branchName}`);
+
+  // Checkout the PR branch
+  const checkoutResult = runGitCommand(
+    `git checkout ${branchName}`;
+    `Checking out branch ${branchName}`
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   );
 ;
   if (!checkoutResult) return false;
+<<<<<<< HEAD
 ;
   // Merge with main;
   const mergeResult = runGitCommand(;
     'git merge main',;
     `Merging main into ${branchName}`;
+=======
+
+  // Merge with main
+  const mergeResult = runGitCommand(
+    'git merge main';
+    `Merging main into ${branchName}`
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   );
 ;
   if (!mergeResult) {;
     // If merge fails, resolve conflicts by accepting main branch changes;
     console.log('⚠️  Merge conflicts detected, resolving...');
+<<<<<<< HEAD
 ;
     // Get list of conflicted files;
     const conflictedFiles = runGitCommand(;
       'git diff --name-only --diff-filter=U',;
       'Getting conflicted files';
+=======
+
+    // Get list of conflicted files
+    const conflictedFiles = runGitCommand(
+      'git diff --name-only --diff-filter=U';
+      'Getting conflicted files'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
 ;
     if (conflictedFiles) {;
       const files = conflictedFiles.split('\n').filter(f => f.trim());
+<<<<<<< HEAD
 ;
       // Accept main branch changes for all conflicts;
       for (const file of files) {;
         runGitCommand(;
           `git checkout --theirs "${file}"`,;
           `Resolving conflict in ${file}`;
+=======
+
+      // Accept main branch changes for all conflicts
+      for (const file of files) {
+        runGitCommand(
+          `git checkout --theirs "${file}"`;
+          `Resolving conflict in ${file}`
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         );
       }
       // Add all changes;
@@ -83,6 +120,7 @@ function mergePR(prNumber, branchName) {;
       // Commit the merge;
       runGitCommand(;
         `git commit -m "resolve merge conflicts for PR #${prNumber}
+<<<<<<< HEAD
 - Resolved all merge conflicts by accepting main branch changes;
 - PR #${prNumber} merged successfully;
 - Ready for deployment"`,;
@@ -95,15 +133,37 @@ function mergePR(prNumber, branchName) {;
   runGitCommand(;
     `git push origin ${branchName}`,;
     `Pushing updated ${branchName}`;
+=======
+- Resolved all merge conflicts by accepting main branch changes
+- PR #${prNumber} merged successfully
+- Ready for deployment"`;
+        `Committing merge resolution for PR #${prNumber}`
+      );
+    }
+  }
+
+  // Push the updated branch
+  runGitCommand(
+    `git push origin ${branchName}`;
+    `Pushing updated ${branchName}`
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   );
 ;
   // Switch back to main;
   runGitCommand('git checkout main', 'Switching back to main');
+<<<<<<< HEAD
 ;
   // Merge the PR into main;
   const finalMerge = runGitCommand(;
     `git merge ${branchName}`,;
     `Merging ${branchName} into main`;
+=======
+
+  // Merge the PR into main
+  const finalMerge = runGitCommand(
+    `git merge ${branchName}`;
+    `Merging ${branchName} into main`
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   );
 ;
   if (finalMerge) {;

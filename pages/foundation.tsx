@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head',;
 import Link from 'next/link',;
 import CharterGenerator from '../components/foundation/CharterGenerator',;
@@ -58,4 +59,63 @@ export default function FoundationPage() {;
       </div>;
     </>;
   );
+=======
+import Head from 'next/head',
+import Link from 'next/link',
+import CharterGenerator from '../components/foundation/CharterGenerator',
+export default function FoundationPage() {
+  return (
+    <>
+      <Head>
+        <title>Zion Foundation</title>
+        <meta name=&quot;description&quot; content=&quot;Public-facing Zion Foundation: neutrality, transparency, grants, and governance.&quot; />
+      </Head>
+      <div className=&quot;space-y-12&quot;>
+        <section className=&quot;space-y-3&quot;>
+          <h1 className=&quot;text-3xl font-bold&quot;>Zion Foundation</h1>
+          <p className=&quot;text-gray-600 dark:text-gray-300 max-w-3xl&quot;>Stewarding the protocol’s vision, maintaining global neutrality, and operating outside of any one jurisdiction. This portal provides the charter, transparency reports, grants, and partnership MOUs.</p>
+          <div className=&quot;flex flex-wrap gap-3 text-sm&quot;>
+            <Link href=&quot;/governance/trust&quot;><a className=&quot;underline&quot;>Governance & Trust</Link></Link>
+            <a className=&quot;underline&quot; href=&quot;#reports&quot;>Transparency Reports</Link>
+            <a className=&quot;underline&quot; href=&quot;#grants&quot;>Grants</Link>
+            <a className=&quot;underline&quot; href=&quot;#mou&quot;>Partnership MOUs</Link>
+          </div>
+        </section>
+
+        <section className=&quot;space-y-4&quot; id=&quot;charter&quot;>
+          <h2 className=&quot;text-2xl font-semibold&quot;>Foundation Charter</h2>
+          <p className=&quot;text-gray-600 dark:text-gray-300&quot;>Legal-neutral charter for a decentralized AI protocol committed to sovereignty, open knowledge, and trust.</p>
+          <CharterGenerator />
+        </section>
+
+        <section className=&quot;space-y-4&quot; id=&quot;reports&quot;>
+          <h2 className=&quot;text-2xl font-semibold&quot;>Transparency Reports</h2>
+          <p className=&quot;text-gray-600 dark:text-gray-300&quot;>Quarterly financials, grants, and impact metrics. Initial placeholders shown until reports are published.</p>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4&quot;>
+            {[1,2,3].map((q) => (
+              <div key={q} className=&quot;rounded-lg border border-gray-200 dark:border-gray-800 p-4&quot;>
+                <div className=&quot;font-medium&quot;>Report Q{q} 2025</div>
+                <div className=&quot;text-sm text-gray-600 dark:text-gray-400&quot;>Status: Draft</div>              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className=&quot;space-y-4&quot; id=&quot;grants&quot;>
+          <h2 className=&quot;text-2xl font-semibold&quot;>Grants Issued</h2>
+          <p className=&quot;text-gray-600 dark:text-gray-300&quot;>Cross-multiverse grants across chains, rollups, and alternate compute realms.</p>
+          <ul className=&quot;list-disc list-inside space-y-2 text-sm&quot;>
+            <li>Seed safety tooling and evals R&D — Milestone 1 (Pending)</li>
+            <li>Open dataset creation for multilingual benchmarks — Milestone 0 (Planned)</li>
+            <li>Agent interoperability standards and sandbox — RFP (Open)</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4" id="mou">
+          <h2 className="text-2xl font-semibold">Partnership MOU Archive</h2>
+          <p className="text-gray-600 dark: text-gray-300">Public archive of Memoranda of Understanding (MOUs). Redactions may apply where legally required.</p>
+          <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 text-sm text-gray-600 dark:text-gray-400">No MOUs published yet.</div>        </section>
+      </div>
+    </>
+  )
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

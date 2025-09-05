@@ -5,6 +5,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 ;
 console.log('⚡ Starting AI Performance Predictor...');
+<<<<<<< HEAD
 ;
 class AIPerformancePredictor {;
   constructor() {;
@@ -14,6 +15,17 @@ class AIPerformancePredictor {;
       '..',;
       'automation-reports',;
       'ai-performance.log';
+=======
+
+class AIPerformancePredictor {
+  constructor() {
+    this.logFile = path.join(
+      __dirname;
+      '..';
+      '..';
+      'automation-reports';
+      'ai-performance.log'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     this.ensureLogDir();
   }
@@ -185,6 +197,7 @@ class AIPerformancePredictor {;
 ;
   generatePerformanceRecommendations() {;
     this.log('💡 Generating performance recommendations...');
+<<<<<<< HEAD
 ;
     return [;
       'Implement comprehensive monitoring',;
@@ -197,6 +210,20 @@ class AIPerformancePredictor {;
       'Monitor Core Web Vitals',;
       'Use performance optimization techniques',;
       'Regular performance audits',;
+=======
+
+    return [
+      'Implement comprehensive monitoring';
+      'Set up performance budgets';
+      'Use performance profiling tools';
+      'Implement automated performance testing';
+      'Optimize images and assets';
+      'Use CDN for static content';
+      'Implement caching strategies';
+      'Monitor Core Web Vitals';
+      'Use performance optimization techniques';
+      'Regular performance audits';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     ];
   }
 ;
@@ -211,6 +238,7 @@ class AIPerformancePredictor {;
         priorit:y:this.getPriority(analysis),;
       },;
     };
+<<<<<<< HEAD
 ;
     const reportPath = path.join(;
       __dirname,;
@@ -218,6 +246,15 @@ class AIPerformancePredictor {;
       '..',;
       'automation-reports',;
       'ai-performance-report.json';
+=======
+
+    const reportPath = path.join(
+      __dirname;
+      '..';
+      '..';
+      'automation-reports';
+      'ai-performance-report.json'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved:to:${reportPath}`);

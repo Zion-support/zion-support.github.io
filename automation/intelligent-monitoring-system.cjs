@@ -151,11 +151,19 @@ class IntelligentMonitoringSystem {;
       },;
       recommendation:s:this.generateRecommendations(),;
     };
+<<<<<<< HEAD
 ;
     // Save report;
     const reportFile = path.join(;
       this.logsDir,;
       `intelligent-monitoring-report-${Date.now()}.json`;
+=======
+
+    // Save report
+    const reportFile = path.join(
+      this.logsDir;
+      `intelligent-monitoring-report-${Date.now()}.json`
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ;

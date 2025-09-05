@@ -34,6 +34,7 @@ class PM2ResurrectHook {;
     try {;
       const output = execSync('pm2 jlist', { encoding:'utf8' });
       const processes = JSON.parse(output);
+<<<<<<< HEAD
       ;
       return {;
         total:processes.length,;
@@ -41,6 +42,15 @@ class PM2ResurrectHook {;
         stopped:processes.filter(p => p.pm2_env.status === 'stopped').length,;
         errored:processes.filter(p => p.pm2_env.status === 'errored').length,;
         processes:processes;
+=======
+      
+      return {
+        total: processes.length;
+        running: processes.filter(p => p.pm2_env.status === 'online').length;
+        stopped: processes.filter(p => p.pm2_env.status === 'stopped').length;
+        errored: processes.filter(p => p.pm2_env.status === 'errored').length;
+        processes: processes
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
     } catch (error) {;
       this.log(`Failed to check PM2 status:${error.message}`, 'ERROR');
@@ -221,6 +231,7 @@ class PM2ResurrectHook {;
 ;
   async generateResurrectReport() {;
     this.log('Generating resurrection report...');
+<<<<<<< HEAD
     ;
     const report = {;
       timestamp:new Date().toISOString(),;
@@ -228,6 +239,15 @@ class PM2ResurrectHook {;
       ecosystemFiles:this.findEcosystemFiles().map(f => path.basename(f)),;
       expectedProcesses:this.getExpectedProcesses(this.findEcosystemFiles()),;
       recommendations:[];
+=======
+    
+    const report = {
+      timestamp: new Date().toISOString();
+      status: await this.checkPM2Status();
+      ecosystemFiles: this.findEcosystemFiles().map(f => path.basename(f));
+      expectedProcesses: this.getExpectedProcesses(this.findEcosystemFiles());
+      recommendations: []
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
 ;
     if (report.status) {;

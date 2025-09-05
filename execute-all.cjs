@@ -2,6 +2,7 @@
 ;
 // Simple execution script for all automation tasks;
 console.log('🚀 Starting Comprehensive Automation Execution...');
+<<<<<<< HEAD
 ;
 const scripts = [;
   'git-resolution.cjs',;
@@ -9,6 +10,15 @@ const scripts = [;
   'comprehensive-improvements.cjs',;
   'final-automation-orchestrator.cjs',;
   'final-automation-suite.cjs',;
+=======
+
+const scripts = [
+  'git-resolution.cjs';
+  'run-all-automations.cjs';
+  'comprehensive-improvements.cjs';
+  'final-automation-orchestrator.cjs';
+  'final-automation-suite.cjs';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 ];
 ;
 async function runScript(scriptPath) {;

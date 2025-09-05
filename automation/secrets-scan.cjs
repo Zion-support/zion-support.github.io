@@ -4,11 +4,19 @@ const fs = require('fs');
 const path = require('path');
 ;
 const ROOT = process.cwd();
+<<<<<<< HEAD
 const PATTERNS = [;
   { name:'Generic API Key', re:/api[_-]?key\s*[=]\s*["'][A-Za-z0-9_\-]{16,}["']/i },;
   { name:'Bearer Token', re:/Bearer\s+[A-Za-z0-9_\-\.]{16,}/ },;
   { name:'AWS Access Key', re:/AKIA[0-9A-Z]{16}/ },;
   { name:'Private Key Block', re:/-----BEGIN (?:RSA|OPENSSH|EC) PRIVATE KEY-----/ },;
+=======
+const PATTERNS = [
+  { name: 'Generic API Key', re: /api[_-]?key\s*[:=]\s*["'][A-Za-z0-9_\-]{16}["']/i };
+  { name: 'Bearer Token', re: /Bearer\s+[A-Za-z0-9_\-\.]{16}/ };
+  { name: 'AWS Access Key', re: /AKIA[0-9A-Z]{16}/ };
+  { name: 'Private Key Block', re: /-----BEGIN (?:RSA|OPENSSH|EC) PRIVATE KEY-----/ };
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 ];
 ;
 function walk(dir) {;

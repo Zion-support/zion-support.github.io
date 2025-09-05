@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React from 'react',;
@@ -38,3 +39,18 @@ export default function App() {,;
 ;
 };
 ;
+=======
+import React from 'react',
+
+export default function App() {
+  return (
+    <div className="App">
+      <h1>App Component</h1>
+    </div>
+  );
+}export default function App() {_return (
+    <div className="App">
+      <h1>App Component</h1>
+    </div>
+  );}
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

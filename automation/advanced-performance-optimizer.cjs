@@ -8,10 +8,17 @@ class AdvancedPerformanceOptimizer {;
   constructor() {;
     this.projectRoot = process.cwd();
     this.optimizations = [];
+<<<<<<< HEAD
     this.metrics = {;
       bundleSize:0,;
       loadTime:0,;
       performanceScore:0;
+=======
+    this.metrics = {
+      bundleSize: 0;
+      loadTime: 0;
+      performanceScore: 0
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
   }
 ;
@@ -80,12 +87,21 @@ class AdvancedPerformanceOptimizer {;
 ;
   async optimizeDependencies() {;
     this.log('📚 Optimizing dependencies...');
+<<<<<<< HEAD
     ;
     try {;
       // Check for outdated dependencies;
       const outdated = execSync('npm outdated --json', { ;
         stdio:'pipe',;
         encoding:'utf8';
+=======
+    
+    try {
+      // Check for outdated dependencies
+      const outdated = execSync('npm outdated --json', { 
+        stdio: 'pipe';
+        encoding: 'utf8'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
       ;
       const outdatedDeps = JSON.parse(outdated);
@@ -154,6 +170,7 @@ class AdvancedPerformanceOptimizer {;
     // This is a simplified version - in practice, you'd use a tool like ts-unused-exports;
     return [];
   }
+<<<<<<< HEAD
 ;
   generateReport() {;
     const report = {;
@@ -164,6 +181,18 @@ class AdvancedPerformanceOptimizer {;
         totalOptimizations:this.optimizations.length,;
         bundleSize:this.metrics.bundleSize,;
         performanceScore:this.metrics.performanceScore;
+=======
+
+  generateReport() {
+    const report = {
+      timestamp: new Date().toISOString();
+      metrics: this.metrics;
+      optimizations: this.optimizations;
+      summary: {
+        totalOptimizations: this.optimizations.length;
+        bundleSize: this.metrics.bundleSize;
+        performanceScore: this.metrics.performanceScore
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       }
     };
 ;

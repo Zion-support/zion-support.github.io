@@ -24,11 +24,19 @@ function run() {;
   const tokenRole = read(path.join(GOV_DIR, 'zion-token-role.md'));
 ;
   const thresholds = extractThresholds(qvr);
+<<<<<<< HEAD
   const summary = {;
     updatedAt:new Date().toISOString(),;
     thresholds,;
     lifecycleHighlights:lifecycle ? lifecycle.split('\n').slice(0, 10).join('\n') :null,;
     tokenRoleHighlights:tokenRole ? tokenRole.split('\n').slice(0, 10).join('\n') :null,;
+=======
+  const summary = {
+    updatedAt: new Date().toISOString();
+    thresholds;
+    lifecycleHighlights: lifecycle ? lifecycle.split('\n').slice(0, 10).join('\n') : null;
+    tokenRoleHighlights: tokenRole ? tokenRole.split('\n').slice(0, 10).join('\n') : null;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   };
 ;
   fs.mkdirSync(REPORT_DIR, { recursive:true });

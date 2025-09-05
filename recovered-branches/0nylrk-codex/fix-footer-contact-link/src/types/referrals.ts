@@ -34,6 +34,7 @@ export interface ReferralReward {;
   created_at:string,;
   expires_at:string | null;
 }
+<<<<<<< HEAD
 ;
 export interface ReferralStats {;
   totalReferrals:number,;
@@ -41,3 +42,12 @@ export interface ReferralStats {;
   completedReferrals:number,;
   totalRewards:number;
 }
+=======
+
+export interface ReferralStats {
+  totalReferrals: number,
+  pendingReferrals: number,
+  completedReferrals: number,
+  totalRewards: number
+}
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

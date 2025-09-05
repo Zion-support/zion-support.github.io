@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react",;
 import { MessageCircle } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -85,9 +86,98 @@ export const CommunityDiscussion:React.FC = () => {;
             <Textarea;
               placeholder="What's on your mind?";
               className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]";
+=======
+import React, { useState } from "react",
+import { MessageCircle } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Avatar, AvatarFallback } from "@/components/ui/avatar",
+import { Card, CardContent } from "@/components/ui/card",
+import { Separator } from "@/components/ui/separator",interface DiscussionPost {
+  id: number,
+  author: string,
+  avatar?: string,
+  time: string,
+  title: string,
+  body: string
+}
+
+const initialPosts: DiscussionPost[] = [
+  {
+    id: 1,
+    author: &quot;Anna Zhou&quot;,
+    time: &quot;2h ago&quot;,
+    title: &quot;What AI trends are you most excited for in 2025?&quot;,
+    body: &quot;Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?&quot},
+  {
+    id: 2,
+    author: "David Kim",
+    time: "50m ago",
+    title: "Quick tip: How to rank your Zion listing higher",
+    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],
+
+export const CommunityDiscussion: React.FC = () => {
+  const [posts, setPosts] = useState(initialPosts),
+  const [showNew, setShowNew] = useState(false),
+  const [newTitle, setNewTitle] = useState(""),
+  const [newBody, setNewBody] = useState(""),
+  const handleAddPost = () => {
+    if (!newTitle.trim() || !newBody.trim()) return,
+    setPosts([
+      {
+        id: Date.now(),
+        author: &quot;You&quot;,
+        time: &quot;Now&quot;,
+        title: newTitle,
+        body: newBody},
+      ...posts]),
+    setNewTitle(""),
+    setNewBody(""),
+    setShowNew(false)
+  },      ...posts]);
+    setNewTitle("&quot;);
+    setNewBody("&quot;);
+    setShowNew(false)
+  };
+
+  return (
+    <div className=&quot;w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in&quot;>
+      <div className=&quot;flex items-center gap-3 mb-4&quot;>
+        <MessageCircle size={28} className=&quot;text-zion-cyan&quot; />
+        <span className=&quot;font-bold text-2xl text-white tracking-tight&quot;>
+          Community Discussion
+        </span>
+        <span className=&quot;ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0.5&quot;>
+          {posts.length} posts        </span>
+      </div>
+      <Separator className=&quot;mb-6&quot; />
+      <div className=&quot;mb-4 flex justify-end&quot;>
+        <Button,
+className=&quot;bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale&quot;
+          size=&quot;sm&quot;
+          onClick={() => setShowNew((v) => !v)}
+        >
+          {showNew ? &quot;Cancel&quot; : &quot;New Post&quot}
+        </Button>
+      </div>
+      {showNew && (
+        <Card className=&quot;mb-6 animate-scale-in&quot;>
+          <CardContent className=&quot;py-5&quot;>
+            <Input,
+placeholder=&quot;Title (e.g., Share an AI tool, Ask for help...)&quot;
+              className=&quot;mb-3 bg-zion-blue-light text-white placeholder:text-zion-slate&quot;              value={newTitle}
+              onChange={_(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
+              maxLength={80}
+            />
+            <Textarea,
+placeholder=&quot;What's on your mind?&quot;
+              className=&quot;mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]&quot;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
               value={newBody}
               onChange={(e:React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
               maxLength={400}
+<<<<<<< HEAD
               rows={3}
             />;
             <div className="flex gap-3 justify-end">;
@@ -122,6 +212,38 @@ export const CommunityDiscussion:React.FC = () => {;
                     .map((s) => s[0]);
                     .join("");
                     .toUpperCase();
+=======
+              rows={3}            />
+            <div className=&quot;flex gap-3 justify-end&quot;>
+              <Button,
+variant=&quot;secondary&quot;
+                size=&quot;sm&quot;
+                className=&quot;bg-zion-blue text-white hover:bg-zion-blue-dark&quot;
+                onClick={() => setShowNew(false)}              >
+                Cancel
+              </Button>
+              <Button,
+size=&quot;sm&quot;
+                className=&quot;bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale&quot;
+                onClick={handleAddPost}
+                disabled={!newTitle.trim() || !newBody.trim()}              >
+                Post
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      )}
+      <div className=&quot;flex flex-col gap-6&quot;>
+        {posts.map((post) => (
+          <Card key={post.id} className=&quot;bg-zion-blue border-zion-slate-dark shadow-lg&quot;>
+            <CardContent className=&quot;py-4 flex gap-4&quot;>
+              <Avatar>
+                <AvatarFallback>
+                  {post.author
+                    .split(&quot; &quot;)
+                    .map((s) => s[0])                    .join("")
+                    .toUpperCase()
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
                     .slice(0, 2)}
                 </AvatarFallback>;
               </Avatar>;
@@ -136,10 +258,19 @@ export const CommunityDiscussion:React.FC = () => {;
             </CardContent>;
           </Card>;
         ))}
+<<<<<<< HEAD
       </div>;
       <div className="mt-8 text-xs text-zion-slate-dark text-center">;
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
       </div>;
     </div>;
   ),;
+=======
+      </div>
+      <div className="mt-8 text-xs text-zion-slate-dark text-center">
+        🚀 Stay engaged! Top contributors are regularly featured on the homepage.
+      </div>
+    </div>
+  )
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 },

@@ -53,6 +53,7 @@ class HealthChecker {;
 ;
       // Check application build;
       const buildStatus = this.checkBuildStatus();
+<<<<<<< HEAD
 ;
       // Generate health report;
       const healthReport = {;
@@ -75,6 +76,30 @@ class HealthChecker {;
       fs.writeFileSync(;
         this.healthReport,;
         JSON.stringify(healthReport, null, 2);
+=======
+
+      // Generate health report
+      const healthReport = {
+        timestam: p: new Date().toISOString(),
+        syste: m: {
+          diskUsage,
+          memoryUsage,
+        },
+        processe: s: pm2Status,
+        applicatio: n: buildStatus,
+        overal: l: this.calculateOverallHealth(
+          diskUsage,
+          memoryUsage,
+          pm2Status,
+          buildStatus
+        );
+      };
+
+      // Save health report
+      fs.writeFileSync(
+        this.healthReport;
+        JSON.stringify(healthReport, null, 2)
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
 ;
       this.log(;

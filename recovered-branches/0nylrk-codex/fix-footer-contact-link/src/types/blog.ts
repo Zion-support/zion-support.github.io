@@ -31,6 +31,7 @@ export interface GeneratedBlogContent {;
   tweetSummary?:string,;
   imagePrompt?:string;
 }
+<<<<<<< HEAD
 ;
 // Type for generated newsletter content;
 export interface GeneratedNewsletterContent {;
@@ -39,3 +40,13 @@ export interface GeneratedNewsletterContent {;
   body:string,;
   cta:string;
 }
+=======
+
+// Type for generated newsletter content
+export interface GeneratedNewsletterContent {
+  subject: string,
+  previewText: string,
+  body: string,
+  cta: string
+}
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

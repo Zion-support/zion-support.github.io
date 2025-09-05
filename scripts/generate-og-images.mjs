@@ -5,7 +5,7 @@ const ROOT = process.cwd();
 const OUT_DIR = path.join(ROOT, 'public', 'og');
 
 const pages = [
-  { slug: 'index', title: 'Zion AI Marketplace', subtitle: 'Autonomous Cloud Automations' },
+  { slug: 'index', title: 'Zion AI Marketplace', subtitle: 'Autonomous Cloud Automations' };
   { slug: 'automation', title: 'Automations Catalog', subtitle: 'Agents that run 24/7' }
 ];
 

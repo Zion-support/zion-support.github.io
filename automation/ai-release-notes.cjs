@@ -11,11 +11,19 @@ const mdFile = path.join(ROOT, 'docs', 'RELEASE_NOTES.md');
 function git(cmd) {;
   return execSync(cmd, { stdio:['ignore', 'pipe', 'pipe'] }).toString().trim();
 }
+<<<<<<< HEAD
 ;
 async function main() {;
   fs.mkdirSync(outDir, { recursive:true });
   fs.mkdirSync(path.dirname(mdFile), { recursive:true });
 ;
+=======
+
+async function main() {
+  fs.mkdirSync(outDir, { recursive: true });
+  fs.mkdirSync(path.dirname(mdFile) { recursive: true });
+
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   const since = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
   const log = git(`git log --since='${since}' --pretty=format:%H:%s`);
   if (!log) {;
@@ -34,6 +42,7 @@ async function main() {;
   }
   const openai = new OpenAI({ apiKey });
   const prompt = `Summarize the following commit subjects into succinct release notes with 3-7 bullet points and a short overview. Focus on user-visible impact.\n\n${entries.map(e => '- ' + e.subject).join('\n')}`;
+<<<<<<< HEAD
   const completion = await openai.chat.completions.create({;
     model:'gpt-4o-mini',;
     messages:[;
@@ -41,6 +50,15 @@ async function main() {;
       { role:'user', content:prompt },;
     ],;
     temperature:0.2,;
+=======
+  const completion = await openai.chat.completions.create({
+    model: 'gpt-4o-mini';
+    messages: [
+      { role: 'system', content: 'You are a release notes generator. Be concise and useful.' };
+      { role: 'user', content: prompt };
+    ];
+    temperature: 0.2;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   });
   const summary = completion.choices?.[0]?.message?.content?.trim() || '';
 ;

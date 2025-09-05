@@ -134,11 +134,19 @@ class MasterAutomation {;
 ;
     if (report.automation.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
+<<<<<<< HEAD
 ;
     // Save report;
     const reportFile = path.join(;
       this.logsDir,;
       `automation-report-${Date.now()}.json`;
+=======
+
+    // Save report
+    const reportFile = path.join(
+      this.logsDir;
+      `automation-report-${Date.now()}.json`
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ;
@@ -166,6 +174,7 @@ class MasterAutomation {;
     // Check build status;
     try {;
       const buildResult = await this.runCommand('npm run build', 'Build check');
+<<<<<<< HEAD
       status.buildStatus = buildResult.success ? 'healthy' :'failed';
     } catch (error) {;
       status.buildStatus = 'error';
@@ -190,6 +199,32 @@ class MasterAutomation {;
       );
       status.dependenciesStatus = depsResult.success ? 'installed' :'missing';
     } catch (error) {;
+=======
+      status.buildStatus = buildResult.success ? 'healthy' : 'failed';
+    } catch (_error) {
+      status.buildStatus = 'error';
+    }
+
+    // Check git status
+    try {
+      const gitResult = await this.runCommand(
+        'git status --porcelain';
+        'Git status check'
+      );
+      status.gitStatus = gitResult.success ? 'clean' : 'dirty';
+    } catch (_error) {
+      status.gitStatus = 'error';
+    }
+
+    // Check dependencies
+    try {
+      const depsResult = await this.runCommand(
+        'npm list --depth=0';
+        'Dependencies check'
+      );
+      status.dependenciesStatus = depsResult.success ? 'installed' : 'missing';
+    } catch (_error) {
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       status.dependenciesStatus = 'error';
     }
 ;

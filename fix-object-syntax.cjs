@@ -13,11 +13,19 @@ function fixObjectSyntax(filePath) {;
     // Fix semicolons in array elements;
     content = content.replace(/"([^"]*)"\s*;/g, '"$1",');
     content = content.replace(/"([^"]*)"\s*;/g, '"$1"');
+<<<<<<< HEAD
 ;
     // Fix semicolons in function declarations;
     content = content.replace(;
       /function\s+(\w+)\s*\(\s*\)\s*{\s*;/g,;
       'function $1() {';
+=======
+
+    // Fix semicolons in function declarations
+    content = content.replace(
+      /function\s+(\w+)\s*\(\s*\)\s*{\s*;/g;
+      'function $1() {'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
 ;
     // Fix semicolons in const/let declarations;

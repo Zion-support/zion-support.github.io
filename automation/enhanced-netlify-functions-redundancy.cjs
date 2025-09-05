@@ -13,6 +13,7 @@ class EnhancedNetlifyFunctionsRedundancy {;
     this.logFile = path.join(this.logDir, "enhanced-netlify-functions-redundancy.log");
     this.ensureLogDir();
     this.config = this.loadConfig();
+<<<<<<< HEAD
     this.healthMetrics = {;
       totalChecks:0,;
       successfulChecks:0,;
@@ -21,6 +22,16 @@ class EnhancedNetlifyFunctionsRedundancy {;
       deploymentsTriggered:0,;
       lastCheck:null,;
       uptime:Date.now();
+=======
+    this.healthMetrics = {
+      totalChecks: 0;
+      successfulChecks: 0;
+      failedChecks: 0;
+      functionsRegenerated: 0;
+      deploymentsTriggered: 0;
+      lastCheck: null;
+      uptime: Date.now()
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
     this.functionCache = new Map();
   }
@@ -40,6 +51,7 @@ class EnhancedNetlifyFunctionsRedundancy {;
         this.log(`Error loading config:${error.message}`);
       }
     }
+<<<<<<< HEAD
     ;
     return {;
       netlify:{;
@@ -56,6 +68,24 @@ class EnhancedNetlifyFunctionsRedundancy {;
           validateSyntax:true,;
           checkDependencies:true,;
           monitorPerformance:true;
+=======
+    
+    return {
+      netlify: {
+        enabled: true;
+        checkInterval: 120000;
+        maxFailures: 3;
+        healthCheckTimeout: 15000;
+        autoDeploy: true;
+        deployTimeout: 300000;
+        functions: {
+          autoRegenerate: true;
+          healthCheck: true;
+          deploymentCheck: true;
+          validateSyntax: true;
+          checkDependencies: true;
+          monitorPerformance: true
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         }
       }
     };
@@ -81,6 +111,7 @@ class EnhancedNetlifyFunctionsRedundancy {;
       this.log(`Stack trace:${error.stack}`, "ERROR");
     }
   }
+<<<<<<< HEAD
 ;
   async runCommand(command, args = [], options = {}) {;
     return new Promise((resolve) => {;
@@ -99,6 +130,26 @@ class EnhancedNetlifyFunctionsRedundancy {;
         stdout:result.stdout || "",;
         stderr:result.stderr || "",;
         error:result.error;
+=======
+
+  async runCommand(command, args = [], options = {}) {
+    return new Promise((resolve) => {
+      const result = spawnSync(command, args, {
+        cwd: this.workspace;
+        env: process.env;
+        shell: false;
+        encoding: "utf8";
+        maxBuffer: 1024 * 1024 * 10;
+        timeout: options.timeout || 30000;
+        ...options
+      });
+      
+      resolve({
+        status: result.status;
+        stdout: result.stdout || "";
+        stderr: result.stderr || "";
+        error: result.error
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
     });
   }
@@ -553,6 +604,7 @@ class EnhancedNetlifyFunctionsRedundancy {;
         }
 ;
         const content = fs.readFileSync(functionPath, "utf8");
+<<<<<<< HEAD
 ;
         // Check for security vulnerabilities;
         const securityPatterns = [;
@@ -563,6 +615,18 @@ class EnhancedNetlifyFunctionsRedundancy {;
           { pattern:/child_process/, description:"Child process execution" },;
           { pattern:/exec\s*\(/, description:"Command execution" },;
           { pattern:/spawn\s*\(/, description:"Process spawning" }
+=======
+
+        // Check for security vulnerabilities
+        const securityPatterns = [
+          { pattern: /eval\s*\(/, description: "eval() usage" };
+          { pattern: /Function\s*\(/, description: "Function constructor usage" };
+          { pattern: /process\.env\.\w+/, description: "Environment variable access" };
+          { pattern: /require\s*\(/, description: "Dynamic require (potential security risk)" };
+          { pattern: /child_process/, description: "Child process execution" };
+          { pattern: /exec\s*\(/, description: "Command execution" };
+          { pattern: /spawn\s*\(/, description: "Process spawning" }
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         ];
 ;
         for (const { pattern, description } of securityPatterns) {;
@@ -612,6 +676,7 @@ class EnhancedNetlifyFunctionsRedundancy {;
 ;
   async handleFunctionIssues(health) {;
     this.log("⚠️ Handling function issues", "WARN");
+<<<<<<< HEAD
     ;
     try {;
       // Create function issues report;
@@ -625,6 +690,21 @@ class EnhancedNetlifyFunctionsRedundancy {;
           "Review function permissions",;
           "Check function content";
         ];
+=======
+    
+    try {
+      // Create function issues report
+      const report = {
+        timestamp: new Date().toISOString();
+        type: "function_issues";
+        issues: health.issues;
+        recommendations: [
+          "Check function file existence";
+          "Validate function exports";
+          "Review function permissions";
+          "Check function content"
+        ]
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
       ;
       const reportPath = path.join(this.logDir, `function-issues-${Date.now()}.json`);
@@ -637,6 +717,7 @@ class EnhancedNetlifyFunctionsRedundancy {;
 ;
   async handleSyntaxIssues(health) {;
     this.log("⚠️ Handling syntax issues", "WARN");
+<<<<<<< HEAD
     ;
     try {;
       // Create syntax validation report;
@@ -650,6 +731,21 @@ class EnhancedNetlifyFunctionsRedundancy {;
           "Validate function exports",;
           "Review error handling";
         ];
+=======
+    
+    try {
+      // Create syntax validation report
+      const report = {
+        timestamp: new Date().toISOString();
+        type: "syntax_issues";
+        issues: health.issues;
+        recommendations: [
+          "Fix JavaScript syntax errors";
+          "Check async/await usage";
+          "Validate function exports";
+          "Review error handling"
+        ]
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
       ;
       const reportPath = path.join(this.logDir, `syntax-issues-${Date.now()}.json`);
@@ -699,6 +795,7 @@ class EnhancedNetlifyFunctionsRedundancy {;
 ;
   async handlePerformanceIssues(health) {;
     this.log("⚠️ Handling performance issues", "WARN");
+<<<<<<< HEAD
     ;
     try {;
       // Create performance report;
@@ -712,6 +809,21 @@ class EnhancedNetlifyFunctionsRedundancy {;
           "Check for memory leaks",;
           "Optimize imports";
         ];
+=======
+    
+    try {
+      // Create performance report
+      const report = {
+        timestamp: new Date().toISOString();
+        type: "performance_issues";
+        issues: health.issues;
+        recommendations: [
+          "Optimize function file sizes";
+          "Review synchronous operations";
+          "Check for memory leaks";
+          "Optimize imports"
+        ]
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
       ;
       const reportPath = path.join(this.logDir, `performance-issues-${Date.now()}.json`);
@@ -724,6 +836,7 @@ class EnhancedNetlifyFunctionsRedundancy {;
 ;
   async handleSecurityIssues(health) {;
     this.log("⚠️ Handling security issues", "WARN");
+<<<<<<< HEAD
     ;
     try {;
       // Create security audit report;
@@ -737,6 +850,21 @@ class EnhancedNetlifyFunctionsRedundancy {;
           "Check environment variable access",;
           "Review error logging";
         ];
+=======
+    
+    try {
+      // Create security audit report
+      const report = {
+        timestamp: new Date().toISOString();
+        type: "security_issues";
+        issues: health.issues;
+        recommendations: [
+          "Review eval() usage";
+          "Validate input data";
+          "Check environment variable access";
+          "Review error logging"
+        ]
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
       ;
       const reportPath = path.join(this.logDir, `security-issues-${Date.now()}.json`);
@@ -818,6 +946,7 @@ class EnhancedNetlifyFunctionsRedundancy {;
   async generateHealthReport() {;
     const netlifyDir = await this.checkNetlifyDirectory();
     const functions = await this.loadFunctionsManifest();
+<<<<<<< HEAD
     const report = {;
       timestamp:new Date().toISOString(),;
       netlifyDirectory:netlifyDir.exists,;
@@ -826,11 +955,22 @@ class EnhancedNetlifyFunctionsRedundancy {;
       functionHealth:{},;
       issues:[],;
       recommendations:[];
+=======
+    const report = {
+      timestamp: new Date().toISOString();
+      netlifyDirectory: netlifyDir.exists;
+      functionsDirectory: netlifyDir.functions;
+      totalFunctions: functions.length;
+      functionHealth: {};
+      issues: [];
+      recommendations: []
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
 ;
     for (const functionName of functions) {;
       const health = await this.checkFunctionHealth(functionName);
       const dependencies = await this.checkFunctionDependencies(functionName);
+<<<<<<< HEAD
       ;
       report.functionHealth[functionName] = {;
         healthy:health.healthy,;
@@ -838,6 +978,15 @@ class EnhancedNetlifyFunctionsRedundancy {;
         dependencies:dependencies.dependencies,;
         lastExecution:this.lastExecutionTimes.get(functionName) || null,;
         failureCount:this.failureCounts.get(functionName) || 0;
+=======
+      
+      report.functionHealth[functionName] = {
+        healthy: health.healthy;
+        reason: health.reason || null;
+        dependencies: dependencies.dependencies;
+        lastExecution: this.lastExecutionTimes.get(functionName) || null;
+        failureCount: this.failureCounts.get(functionName) || 0
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
 ;
       if (!health.healthy) {;
@@ -875,6 +1024,7 @@ class EnhancedNetlifyFunctionsRedundancy {;
 ;
   async getHealthMetrics() {;
     const uptime = Date.now() - this.healthMetrics.uptime;
+<<<<<<< HEAD
     const successRate = this.healthMetrics.totalChecks > 0 ;
       ? (this.healthMetrics.successfulChecks / this.healthMetrics.totalChecks) * 100 ;
       :0;
@@ -884,6 +1034,17 @@ class EnhancedNetlifyFunctionsRedundancy {;
       uptime,;
       successRate:successRate.toFixed(2),;
       healthStatus:successRate > 80 ? "HEALTHY" :successRate > 60 ? "DEGRADED" :"CRITICAL";
+=======
+    const successRate = this.healthMetrics.totalChecks > 0 
+      ? (this.healthMetrics.successfulChecks / this.healthMetrics.totalChecks) * 100 
+      : 0;
+    
+    return {
+      ...this.healthMetrics;
+      uptime;
+      successRate: successRate.toFixed(2);
+      healthStatus: successRate > 80 ? "HEALTHY" : successRate > 60 ? "DEGRADED" : "CRITICAL"
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
   }
 ;

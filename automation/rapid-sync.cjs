@@ -21,11 +21,19 @@ function main() {;
   const lines = [];
 ;
   lines.push(`[rapid-sync] start ${new Date().toISOString()}`);
+<<<<<<< HEAD
 ;
   const steps = [;
     { name:'sitemap', cmd:'npm run sitemap' },;
     { name:'sync-health-fix', cmd:'npm run sync-health:run' },;
     { name:'git-fast', cmd:'npm run git:health' }
+=======
+
+  const steps = [
+    { name: 'sitemap', cmd: 'npm run sitemap' };
+    { name: 'sync-health-fix', cmd: 'npm run sync-health:run' };
+    { name: 'git-fast', cmd: 'npm run git:health' }
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   ];
 ;
   for (const step of steps) {;

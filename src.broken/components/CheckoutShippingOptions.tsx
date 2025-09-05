@@ -22,6 +22,7 @@ interface Props {;
   toAddress:Address | null,;
   onSelect?:(rate:ShippingRate) => void;
 }
+<<<<<<< HEAD
 ;
 const fromAddress = {;
   name:'Store',;
@@ -93,11 +94,88 @@ export function CheckoutShippingOptions({ toAddress, onSelect } Props) {;
                 <span className="ml-1 text-sm">(+{rate.tax} taxes)</span>;
               )}
             </label>;
+=======
+
+const fromAddress = {
+  name: 'Store',
+  street1: '123 Market St',
+  city: 'San Francisco',
+  state: 'CA',
+  zip: '94103',
+  country: 'US'},
+
+const parcel = { weight: 1, length: 10, width: 10, height: 10 },
+
+export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
+  const [rates, setRates] = useState<ShippingRate[]>([]),
+  const [loading, setLoading] = useState(false),
+  const [selected, setSelected] = useState<string>(''),
+  useEffect__(() => {
+    if (
+      !toAddress ||
+      !toAddress.address ||
+      !toAddress.city ||
+      !toAddress.country
+    )
+      return,
+    const fetchRates = async () => {
+      setLoading(true),
+      try {
+        const res = await fetch('/api/shipping-rates', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ fromAddress, toAddress, parcel })}),
+        const data = await res.json(),
+        if (res.ok) {
+          setRates(data.rates || [])
+        } else {
+          console.error('Rates error', data)
+        }
+      } catch (err) {
+        console.error('Rates error', err)
+      } finally {
+        setLoading(false)
+      }
+    },
+    fetchRates()
+  }, [toAddress]),
+
+  const handleChange = (value: string) => {
+    setSelected(value),
+    const rate = rates.find(r => r.id === value),
+    if (rate && onSelect) onSelect(rate)
+  },
+  if (!toAddress) return null,
+
+  return (
+    <div className=&quot;my-4&quot;>
+      <h2 className=&quot;font-semibold mb-2&quot;>Shipping Options</h2>
+      {loading && <p>Loading...</p>}
+      {!loading && (
+        <RadioGroup value={selected} onValueChange={handleChange} className=&quot;space-y-2&quot;>
+          {rates.map(rate => (
+            <label key={rate.id} className=&quot;flex items-center gap-2&quot;>
+              <RadioGroupItem value={rate.id} />              <span>
+                {_`${rate.carrier} ${_rate.service} - ${_rate.rate} ${_rate.currency}`}
+                {_rate.delivery_days && ` (${rate.delivery_days}d)`}
+              </span>
+              {rate.tax && (
+                <span className=&quot;ml-1 text-sm&quot;>(+{rate.tax} taxes)</span>              )}
+            </label>
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           ))}
         </RadioGroup>;
       )}
+<<<<<<< HEAD
     </div>;
   ),;
 }
 ;
 export type { ShippingRate },;
+=======
+    </div>
+  )
+}
+
+export type { ShippingRate },
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

@@ -49,9 +49,15 @@ function catalogFor(files) {;
   ensureDir(outDir);
   const componentsDir = path.resolve(process.cwd(), 'components');
   const pagesDir = path.resolve(process.cwd(), 'pages');
+<<<<<<< HEAD
   const files = [;
     ...listFilesRecursively(componentsDir, ['.tsx', '.ts', '.jsx', '.js']),;
     ...listFilesRecursively(pagesDir, ['.tsx', '.ts', '.jsx', '.js']);
+=======
+  const files = [
+    ...listFilesRecursively(componentsDir, ['.tsx', '.ts', '.jsx', '.js']);
+    ...listFilesRecursively(pagesDir, ['.tsx', '.ts', '.jsx', '.js'])
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   ];
   const items = catalogFor(files);
   const report = { generatedAt:new Date().toISOString(), total:items.length, items };

@@ -39,6 +39,7 @@ export interface JobFormData {;
   budgetMax:number,;
   deadline:Date;
 }
+<<<<<<< HEAD
 ;
 // Add JobMatch interface to be shared across components;
 export interface JobMatch {;
@@ -66,6 +67,35 @@ export interface JobMatch {;
     category?:string,;
     company_name?:string;
   },;
+=======
+
+// Add JobMatch interface to be shared across components
+export interface JobMatch {
+  id: string,
+  job_id: string,
+  talent_id: string,
+  match_score: number,
+  matched_skills: string[],
+  status?: 'new' | 'viewed' | 'applied' | 'declined',
+  created_at: string,
+  viewed_at?: string,
+  job?: Job,
+  talent_profile?: {
+    id?: string,
+    user_id: string,
+    full_name: string,
+    professional_title: string,
+    profile_picture_url?: string,
+    hourly_rate?: number,
+    bio: string,
+    years_experience: number,
+    key_projects: any[],
+    skills: string[],
+    location?: string,
+    category?: string,
+    company_name?: string
+  }
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 export interface ResumeAttachment {;
@@ -77,6 +107,7 @@ export interface ResumeAttachment {;
   summary?:string,;
   skills?:string[];
 }
+<<<<<<< HEAD
 ;
 export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected',;
 ;
@@ -123,3 +154,49 @@ export interface JobApplication {;
   scored_at?:string,;
   notes?:string,  // New field for client notes;
 }
+=======
+export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected',
+
+export interface JobApplication {
+  id: string,
+  job_id: string,
+  talent_id: string,
+  resume_id?: string,
+  status: ApplicationStatus,
+  cover_letter?: string,
+  is_shortlisted: boolean,
+  created_at: string,
+  updated_at?: string,
+  viewed_at?: string,
+  job?: Job,
+  talent_profile?: {
+    id?: string,
+    full_name: string,
+    professional_title: string,
+    profile_picture_url?: string,
+    bio: string,
+    skills: string[]
+  },
+  resume?: ResumeAttachment,
+  // New fields for resume scoring
+  match_score?: number,
+  match_summary?: string,
+  match_breakdown?: {
+    skills_match?: {
+      score: number,
+      matching: string[],
+      missing: string[]
+    },
+    experience_match?: {
+      score: number,
+      analysis: string
+    },
+    education_match?: {
+      score: number,
+      analysis: string
+    }
+  },
+  match_suggestion?: string,
+  scored_at?: string,
+  notes?: string,  // New field for client notes}
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

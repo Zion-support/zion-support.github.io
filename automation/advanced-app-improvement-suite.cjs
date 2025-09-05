@@ -183,6 +183,7 @@ class AdvancedAppImprover {;
   async generateReport() {;
     const endTime = Date.now();
     const duration = endTime - this.startTime;
+<<<<<<< HEAD
 ;
     const report = {;
       timestam:p:new Date().toISOString(),;
@@ -208,6 +209,33 @@ class AdvancedAppImprover {;
           i => i.category === 'Documentation';
         ).length,;
       },;
+=======
+
+    const report = {
+      timestam: p: new Date().toISOString(),
+      duratio: n: `${duration}ms`,
+      totalImprovement: s: this.improvements.length,
+      improvement: s: this.improvements,
+      summar: y: {
+        codeQualit: y: this.improvements.filter(
+          i => i.category === 'Code Quality'
+        ).length,
+        performanc: e: this.improvements.filter(i => i.category === 'Performance')
+          .length,
+        securit: y: this.improvements.filter(i => i.category === 'Security')
+          .length,
+        se: o: this.improvements.filter(i => i.category === 'SEO').length,
+        accessibilit: y: this.improvements.filter(
+          i => i.category === 'Accessibility'
+        ).length,
+        userExperienc: e: this.improvements.filter(
+          i => i.category === 'User Experience'
+        ).length,
+        documentatio: n: this.improvements.filter(
+          i => i.category === 'Documentation'
+        ).length;
+      };
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
 ;
     // Ensure logs directory exists;
@@ -215,10 +243,17 @@ class AdvancedAppImprover {;
     if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursiv:e:true });
     }
+<<<<<<< HEAD
 ;
     const reportPath = path.join(;
       logsDir,;
       `advanced-app-improvement-${Date.now()}.json`;
+=======
+
+    const reportPath = path.join(
+      logsDir;
+      `advanced-app-improvement-${Date.now()}.json`
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 ;

@@ -16,6 +16,7 @@ export interface ServiceProvider {;
   verified:boolean,;
   specialties:string[];
 }
+<<<<<<< HEAD
 ;
 export interface ServicePricing {;
   basic:{;
@@ -39,6 +40,31 @@ export interface ServicePricing {;
     features:string[],;
     popular?:boolean;
   },;
+=======
+
+export interface ServicePricing {
+  basic: {
+    price: number,
+    currency: string,
+    period: string,
+    features: string[],
+    popular?: boolean
+  },
+  professional: {
+    price: number,
+    currency: string,
+    period: string,
+    features: string[],
+    popular?: boolean
+  },
+  enterprise: {
+    price: number,
+    currency: string,
+    period: string,
+    features: string[],
+    popular?: boolean
+  }
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 export interface ServiceSolution {;

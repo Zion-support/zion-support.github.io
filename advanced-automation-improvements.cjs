@@ -27,6 +27,7 @@ class AdvancedAutomationImprovements {;
             :'ℹ️';
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
+<<<<<<< HEAD
 ;
   async runCommand(command, description, options = {}) {;
     this.log(`Running:${description}`);
@@ -45,6 +46,26 @@ class AdvancedAutomationImprovements {;
         success:false,;
         error:error.message,;
         output:error.stdout || error.stderr,;
+=======
+
+  async runCommand(command, description, options = {}) {
+    this.log(`Running: ${description}`);
+    try {
+      const result = execSync(command, {
+        cwd: this.projectRoot;
+        stdio: 'pipe';
+        encoding: 'utf8';
+        ...options;
+      });
+      this.log(`✅ ${description} completed successfully`);
+      return { success: true, output: result };
+    } catch (error) {
+      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
+      return {
+        success: false;
+        error: error.message;
+        output: error.stdout || error.stderr;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
     }
   }
@@ -284,11 +305,19 @@ if (require.main === module) {;
 }
 ;
 module.exports = IntelligentErrorDetector;`;
+<<<<<<< HEAD
 ;
     const scriptPath = path.join(;
       this.projectRoot,;
       'automation',;
       'intelligent-error-detector.cjs';
+=======
+
+    const scriptPath = path.join(
+      this.projectRoot;
+      'automation';
+      'intelligent-error-detector.cjs'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(scriptPath, script);
     this.improvements.push('Created intelligent error detector');
@@ -447,11 +476,19 @@ if (require.main === module) {;
 }
 ;
 module.exports = PerformanceMonitor;`;
+<<<<<<< HEAD
 ;
     const scriptPath = path.join(;
       this.projectRoot,;
       'automation',;
       'performance-monitor.cjs';
+=======
+
+    const scriptPath = path.join(
+      this.projectRoot;
+      'automation';
+      'performance-monitor.cjs'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(scriptPath, script);
     this.improvements.push('Created performance monitor');
@@ -649,11 +686,19 @@ if (require.main === module) {;
 }
 ;
 module.exports = SecurityScanner;`;
+<<<<<<< HEAD
 ;
     const scriptPath = path.join(;
       this.projectRoot,;
       'automation',;
       'security-scanner.cjs';
+=======
+
+    const scriptPath = path.join(
+      this.projectRoot;
+      'automation';
+      'security-scanner.cjs'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(scriptPath, script);
     this.improvements.push('Created security scanner');
@@ -802,11 +847,19 @@ if (require.main === module) {;
 }
 ;
 module.exports = GitWorkflowAutomator;`;
+<<<<<<< HEAD
 ;
     const scriptPath = path.join(;
       this.projectRoot,;
       'automation',;
       'git-workflow-automator.cjs';
+=======
+
+    const scriptPath = path.join(
+      this.projectRoot;
+      'automation';
+      'git-workflow-automator.cjs'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(scriptPath, script);
     this.improvements.push('Created Git workflow automator');
@@ -823,6 +876,7 @@ module.exports = GitWorkflowAutomator;`;
       this.createPerformanceMonitor();
       this.createSecurityScanner();
       this.createGitWorkflowAutomator();
+<<<<<<< HEAD
 ;
       // Run the new scripts;
       await this.runCommand(;
@@ -836,6 +890,21 @@ module.exports = GitWorkflowAutomator;`;
       await this.runCommand(;
         'node automation/security-scanner.cjs',;
         'Run security scanner';
+=======
+
+      // Run the new scripts
+      await this.runCommand(
+        'node automation/intelligent-error-detector.cjs';
+        'Run error detector'
+      );
+      await this.runCommand(
+        'node automation/performance-monitor.cjs';
+        'Run performance monitor'
+      );
+      await this.runCommand(
+        'node automation/security-scanner.cjs';
+        'Run security scanner'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
 ;
       this.log('\\n📊 ADVANCED AUTOMATION IMPROVEMENTS COMPLETED');

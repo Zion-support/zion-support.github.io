@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',;
 import Head from 'next/head',;
 ;
@@ -19,3 +20,32 @@ export default function AICustomerService() {;
   );
 }
 ;
+=======
+import React from 'react',
+import Head from 'next/head',
+export default function AICustomerService() {
+  return (
+    <>
+      <Head>
+        <title>AI Customer Service | Zion Tech Group</title>
+        <meta name="description" content="AI-powered customer service automation: chat, voice, support workflows, and analytics." />
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-customer-service" />import React from 'react';
+import Head from 'next/head';
+
+export default function AICustomerService() {_return (
+    <>
+      <Head>
+        <title>AI Customer Service | Zion Tech Group</title>
+        <meta name="description" content="AI-powered customer service automation: chat, _voice, _support workflows, _and analytics." />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-customer-service" />
+      </Head>
+      <div className=&quot;min-h-screen bg-black text-white&quot;>
+        <section className=&quot;container mx-auto px-4 py-20&quot;>
+          <h1 className=&quot;text-4xl font-bold mb-6&quot;>AI Customer Service</h1>
+          <p className=&quot;text-gray-300&quot;>Automate and augment customer support experiences with AI agents and analytics.</p>
+        </section>
+      </div>
+    </>
+  )
+}
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

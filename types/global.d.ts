@@ -66,6 +66,7 @@ declare global {;
     __NEXT_WEBPACK_CHUNKS__:string[],;
     __NEXT_WEBPACK_RUNTIME__:Record<string unknown>;
   }
+<<<<<<< HEAD
 ;
   namespace NodeJS {;
     interface ProcessEnv {;
@@ -73,6 +74,14 @@ declare global {;
       [key:string]:string | undefined;
     }
   }
+=======
+
+  namespace NodeJS {
+    interface ProcessEnv {
+      NODE_ENV: 'development' | 'production' | 'test',
+      [key: string]: string | undefined
+    }  }
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 export {},

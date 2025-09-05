@@ -45,6 +45,7 @@ export const useAccessibility = () => {;
     throw new Error('useAccessibility must be used within an AccessibilityProvider');
   }
   return context;
+<<<<<<< HEAD
 };`;
   },;
   {;
@@ -53,6 +54,16 @@ export const useAccessibility = () => {;
 ;
 interface AnalyticsProps {;
   trackingId?:string;
+=======
+};`,
+  },
+  {
+    pat: h: 'components/Analytics.tsx',
+    conten: t: `import React, { useEffect } from 'react';
+
+interface AnalyticsProps {
+  trackingId?: string;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 const:Analytics:React.FC<AnalyticsProps> = ({ trackingId }) => {;
@@ -64,6 +75,7 @@ const:Analytics:React.FC<AnalyticsProps> = ({ trackingId }) => {;
 ;
   return null;
 };
+<<<<<<< HEAD
 ;
 export default Analytics;`;
   },;
@@ -74,6 +86,18 @@ export default Analytics;`;
 interface LoadingSpinnerProps {;
   size?:'sm' | 'md' | 'lg';
   className?:string;
+=======
+
+export default Analytics;`,
+  },
+  {
+    pat: h: 'components/LoadingSpinner.tsx',
+    conten: t: `import React from 'react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 const:LoadingSpinner:React.FC<LoadingSpinnerProps> = ({ size = 'md', className = '' }) => {;
@@ -89,6 +113,7 @@ const:LoadingSpinner:React.FC<LoadingSpinnerProps> = ({ size = 'md', className =
     </div>;
   );
 };
+<<<<<<< HEAD
 ;
 export default LoadingSpinner;`;
   },;
@@ -100,6 +125,19 @@ interface PerformanceMetrics {;
   loadTim:e:number;
   renderTim:e:number;
   memoryUsag:e:number;
+=======
+
+export default LoadingSpinner;`,
+  },
+  {
+    pat: h: 'components/PerformanceMonitor.tsx',
+    conten: t: `import React, { useEffect, useState } from 'react';
+
+interface PerformanceMetrics {
+  loadTim: e: number;
+  renderTim: e: number;
+  memoryUsag: e: number;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
 ;
 const:PerformanceMonitor:React.FC = () => {;
@@ -136,12 +174,21 @@ const:PerformanceMonitor:React.FC = () => {;
     </div>;
   );
 };
+<<<<<<< HEAD
 ;
 export default PerformanceMonitor;`;
   },;
   {;
     pat:h:'components/SEOHead.tsx',;
     conten:t:`import React from 'react';
+=======
+
+export default PerformanceMonitor;`,
+  },
+  {
+    pat: h: 'components/SEOHead.tsx',
+    conten: t: `import React from 'react';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 import Head from 'next/head';
 ;
 interface SEOHeadProps {;
@@ -177,9 +224,15 @@ const:SEOHead:React.FC<SEOHeadProps> = ({;
     </Head>;
   );
 };
+<<<<<<< HEAD
 ;
 export default SEOHead;`;
   }
+=======
+
+export default SEOHead;`,
+  },
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 ];
 ;
 files.forEach(file => {;
@@ -190,5 +243,10 @@ files.forEach(file => {;
     console.error('Error fixing', file.path, ':', error.message);
   }
 });
+<<<<<<< HEAD
 ;
 console.log('Fixed individual components');
+=======
+
+console.log('Fixed individual components');
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

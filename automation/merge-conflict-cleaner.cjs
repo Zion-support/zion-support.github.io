@@ -133,11 +133,19 @@ class MergeConflictCleaner {;
     ;
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
+<<<<<<< HEAD
     ;
     // Remove merge conflict markers and keep HEAD version;
     content = content.replace(;
       /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n/g,;
       '$1';
+=======
+    
+    // Remove merge conflict markers and keep HEAD version
+    content = content.replace(
+      /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n/g;
+      '$1'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     ;
     // Clean up any remaining markers;
@@ -240,6 +248,7 @@ class MergeConflictCleaner {;
 ;
   async generateReport() {;
     this.log('📊 Generating cleanup report...');
+<<<<<<< HEAD
     ;
     const report = {;
       timestamp:new Date().toISOString(),;
@@ -249,6 +258,17 @@ class MergeConflictCleaner {;
         totalFilesCleaned:this.cleanedFiles.length,;
         totalErrors:this.errors.length,;
         successRate:this.cleanedFiles.length / (this.cleanedFiles.length + this.errors.length) * 100;
+=======
+    
+    const report = {
+      timestamp: new Date().toISOString();
+      cleanedFiles: this.cleanedFiles;
+      errors: this.errors;
+      summary: {
+        totalFilesCleaned: this.cleanedFiles.length;
+        totalErrors: this.errors.length;
+        successRate: this.cleanedFiles.length / (this.cleanedFiles.length + this.errors.length) * 100
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       }
     };
 ;

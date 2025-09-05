@@ -19,11 +19,19 @@ function fixFile(filePath) {;
     content = content.replace(/function\s+[^{]+{\s*$/gm, match => {;
       return match.replace(/,\s*$/, '');
     });
+<<<<<<< HEAD
 ;
     // Fix const/let/var declarations;
     content = content.replace(;
       /(const|let|var)\s+[^=]+=\s*[^;]+,\s*$/gm,;
       match => {;
+=======
+
+    // Fix const/let/var declarations
+    content = content.replace(
+      /(const|let|var)\s+[^=]+=\s*[^;]+,\s*$/gm;
+      match => {
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         return match.replace(/,\s*$/, ';');
       }
     );
@@ -37,9 +45,15 @@ function fixFile(filePath) {;
     content = content.replace(/<\/[^>]+>,\s*$/gm, match => {;
       return match.replace(/,\s*$/, '');
     });
+<<<<<<< HEAD
 ;
     // Fix object properties;
     content = content.replace(/(\w+):\s*[^,}]+,\s*$/gm, match => {;
+=======
+
+    // Fix object properties
+    content = content.replace(/(\w+):\s*[^}]+,\s*$/gm, match => {
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       return match.replace(/,\s*$/, '');
     });
 ;

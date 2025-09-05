@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Google Analytics utilities;
 export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || '';
 ;
@@ -56,3 +57,15 @@ declare global {;
   }
 }
 ;
+=======
+// Analytics utilities
+export const _trackEvent = (_event: string, _data?: unknown) => {_if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', _event, _data);}
+};
+
+export const _trackPageView = (_url: string) => {_if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('config', _'GA_MEASUREMENT_ID', _{
+      page_path: url, });
+  }
+};
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

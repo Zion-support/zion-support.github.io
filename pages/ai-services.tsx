@@ -1,8 +1,7 @@
-import Link from 'next/link';
+import React from 'react';
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import { ContactInfo } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
+<<<<<<< HEAD
 ;
 export default function AIServices() {;
   const [isLoaded, setIsLoaded] = useState(false);
@@ -387,3 +386,29 @@ export default function AIServicesPage() {;
     </UltraAdvancedFuturisticBackground>;
   );
 }
+=======
+
+export default function AIServices() {_return (
+    <>
+      <Head>
+        <title>AI Services - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Advanced AI services including autonomous AI agents, _financial trading systems, _legal document analysis, _and more."
+        />
+        <meta name="viewport" content="width=device-width, _initial-scale=1.0" />
+      </Head>
+      <ErrorBoundary level="page">
+        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+          <div className="container mx-auto px-4 py-16">
+            <h1 className="text-4xl font-bold text-center mb-8">AI Services</h1>
+            <p className="text-xl text-slate-300 text-center">
+              Advanced artificial intelligence solutions for your business.
+            </p>
+          </div>        </main>
+      </ErrorBoundary>
+    </>
+  );
+}
+  );}
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

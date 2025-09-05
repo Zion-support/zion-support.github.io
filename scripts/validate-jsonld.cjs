@@ -2,11 +2,19 @@
 const fetch = global.fetch || ((...args) => import('node-fetch').then(({default:f}) => f(...args)));
 ;
 const SITE_URL = process.env.SITE_URL || 'https://ziontechgroup.netlify.app';
+<<<<<<< HEAD
 const REQUIRED = [;
   { path:'/jobs', anyOf:['JobPosting'] },;
   { path:'/products', anyOf:['Product'] },;
   { path:'/services/ai-seo-auditor', anyOf:['FAQPage'] },;
   { path:'/talent/ava-chen', anyOf:['Person','Organization','SocialProfile'] }
+=======
+const REQUIRED = [
+  { path: '/jobs', anyOf: ['JobPosting'] };
+  { path: '/products', anyOf: ['Product'] };
+  { path: '/services/ai-seo-auditor', anyOf: ['FAQPage'] };
+  { path: '/talent/ava-chen', anyOf: ['Person','Organization','SocialProfile'] }
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 ];
 ;
 async function getJsonLd(url) {;

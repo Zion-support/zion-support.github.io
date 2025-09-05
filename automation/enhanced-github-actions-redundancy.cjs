@@ -13,6 +13,7 @@ class EnhancedGitHubActionsRedundancy {;
     this.logFile = path.join(this.logDir, "enhanced-github-actions-redundancy.log");
     this.ensureLogDir();
     this.config = this.loadConfig();
+<<<<<<< HEAD
     this.healthMetrics = {;
       totalChecks:0,;
       successfulChecks:0,;
@@ -20,6 +21,15 @@ class EnhancedGitHubActionsRedundancy {;
       workflowsTriggered:0,;
       lastCheck:null,;
       uptime:Date.now();
+=======
+    this.healthMetrics = {
+      totalChecks: 0;
+      successfulChecks: 0;
+      failedChecks: 0;
+      workflowsTriggered: 0;
+      lastCheck: null;
+      uptime: Date.now()
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
     this.workflowCache = new Map();
   }
@@ -39,6 +49,7 @@ class EnhancedGitHubActionsRedundancy {;
         this.log(`Error loading config:${error.message}`);
       }
     }
+<<<<<<< HEAD
     ;
     return {;
       githubActions:{;
@@ -55,6 +66,24 @@ class EnhancedGitHubActionsRedundancy {;
         validateSyntax:true,;
         checkDependencies:true,;
         monitorRuns:true;
+=======
+    
+    return {
+      githubActions: {
+        enabled: true;
+        checkInterval: 60000;
+        maxFailures: 3;
+        retryDelay: 30000;
+        workflows: [
+          "marketing-sync.yml";
+          "sync-health.yml"
+        ];
+        autoTrigger: true;
+        healthCheckWorkflow: "sync-health.yml";
+        validateSyntax: true;
+        checkDependencies: true;
+        monitorRuns: true
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       }
     };
   }
@@ -79,6 +108,7 @@ class EnhancedGitHubActionsRedundancy {;
       this.log(`Stack trace:${error.stack}`, "ERROR");
     }
   }
+<<<<<<< HEAD
 ;
   async runCommand(command, args = [], options = {}) {;
     return new Promise((resolve) => {;
@@ -97,6 +127,26 @@ class EnhancedGitHubActionsRedundancy {;
         stdout:result.stdout || "",;
         stderr:result.stderr || "",;
         error:result.error;
+=======
+
+  async runCommand(command, args = [], options = {}) {
+    return new Promise((resolve) => {
+      const result = spawnSync(command, args, {
+        cwd: this.workspace;
+        env: process.env;
+        shell: false;
+        encoding: "utf8";
+        maxBuffer: 1024 * 1024 * 10;
+        timeout: options.timeout || 30000;
+        ...options
+      });
+      
+      resolve({
+        status: result.status;
+        stdout: result.stdout || "";
+        stderr: result.stderr || "";
+        error: result.error
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
     });
   }
@@ -296,6 +346,7 @@ class EnhancedGitHubActionsRedundancy {;
 ;
   async generateHealthReport() {;
     const workflowsDir = await this.checkWorkflowsDirectory();
+<<<<<<< HEAD
     const report = {;
       timestamp:new Date().toISOString(),;
       workflowsDirectory:workflowsDir.exists,;
@@ -304,6 +355,16 @@ class EnhancedGitHubActionsRedundancy {;
       workflowHealth:{},;
       issues:[],;
       recommendations:[];
+=======
+    const report = {
+      timestamp: new Date().toISOString();
+      workflowsDirectory: workflowsDir.exists;
+      totalWorkflows: workflowsDir.workflows.length;
+      configuredWorkflows: this.config.workflows;
+      workflowHealth: {};
+      issues: [];
+      recommendations: []
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
 ;
     for (const workflowName of this.config.workflows) {;
@@ -311,6 +372,7 @@ class EnhancedGitHubActionsRedundancy {;
       const dependencies = await this.checkWorkflowDependencies(;
         path.join(this.workspace, ".github/workflows", workflowName);
       );
+<<<<<<< HEAD
       ;
       report.workflowHealth[workflowName] = {;
         healthy:health.healthy,;
@@ -318,6 +380,15 @@ class EnhancedGitHubActionsRedundancy {;
         dependencies:dependencies.dependencies,;
         lastRun:this.lastRunTimes.get(workflowName) || null,;
         failureCount:this.failureCounts.get(workflowName) || 0;
+=======
+      
+      report.workflowHealth[workflowName] = {
+        healthy: health.healthy;
+        reason: health.reason || null;
+        dependencies: dependencies.dependencies;
+        lastRun: this.lastRunTimes.get(workflowName) || null;
+        failureCount: this.failureCounts.get(workflowName) || 0
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
 ;
       if (!health.healthy) {;
@@ -376,6 +447,7 @@ class EnhancedGitHubActionsRedundancy {;
       if (content.includes("GITHUB_TOKEN") && !content.includes("contents:write")) {;
         issues.push("Missing write permissions for GITHUB_TOKEN");
       }
+<<<<<<< HEAD
 ;
       // Check for deprecated actions;
       const deprecatedActions = [;
@@ -385,6 +457,17 @@ class EnhancedGitHubActionsRedundancy {;
         "actions/setup-node@v1",;
         "actions/setup-node@v2",;
         "actions/setup-node@v3";
+=======
+
+      // Check for deprecated actions
+      const deprecatedActions = [
+        "actions/checkout@v1";
+        "actions/checkout@v2";
+        "actions/checkout@v3";
+        "actions/setup-node@v1";
+        "actions/setup-node@v2";
+        "actions/setup-node@v3"
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       ];
 ;
       for (const deprecated of deprecatedActions) {;
@@ -411,11 +494,19 @@ class EnhancedGitHubActionsRedundancy {;
       issues.push(`File read error:${error.message}`);
       critical = true;
     }
+<<<<<<< HEAD
 ;
     return {;
       healthy:issues.length === 0,;
       critical,;
       issues;
+=======
+
+    return {
+      healthy: issues.length === 0;
+      critical;
+      issues
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
   }
 ;
@@ -474,6 +565,7 @@ class EnhancedGitHubActionsRedundancy {;
           healthy = false;
         }
       }
+<<<<<<< HEAD
 ;
       // Check for required environment variables;
       const requiredEnvVars = [;
@@ -481,6 +573,15 @@ class EnhancedGitHubActionsRedundancy {;
         "LINKEDIN_URN",;
         "IG_USER_ID",;
         "IG_ACCESS_TOKEN";
+=======
+
+      // Check for required environment variables
+      const requiredEnvVars = [
+        "LINKEDIN_ACCESS_TOKEN";
+        "LINKEDIN_URN";
+        "IG_USER_ID";
+        "IG_ACCESS_TOKEN"
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       ];
 ;
       for (const envVar of requiredEnvVars) {;
@@ -657,6 +758,7 @@ class EnhancedGitHubActionsRedundancy {;
       await this.escalateWorkflowIssue(workflow, health);
     }
   }
+<<<<<<< HEAD
 ;
   async handleNonCriticalWorkflow(workflow, health) {;
     this.log(`⚠️ Handling non-critical workflow:${workflow}`, "WARN");
@@ -671,6 +773,22 @@ class EnhancedGitHubActionsRedundancy {;
         workflow,;
         issues:health.issues,;
         severity:"non-critical";
+=======
+
+  async handleNonCriticalWorkflow(workflow, health) {
+    this.log(`⚠️ Handling non-critical workflow: ${workflow}`, "WARN");
+    
+    try {
+      // Log the issues for review
+      this.log(`📝 Workflow ${workflow} issues logged for review: ${health.issues.join(", ")}`);
+      
+      // Create a report
+      const report = {
+        timestamp: new Date().toISOString();
+        workflow;
+        issues: health.issues;
+        severity: "non-critical"
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
       ;
       const reportPath = path.join(this.logDir, `workflow-issue-${workflow}-${Date.now()}.json`);
@@ -739,6 +857,7 @@ permissions:;
 ;
   async handleSyntaxIssues(health) {;
     this.log("⚠️ Handling syntax issues", "WARN");
+<<<<<<< HEAD
     ;
     try {;
       // Create syntax validation report;
@@ -752,6 +871,21 @@ permissions:;
           "Validate step structure",;
           "Ensure proper quoting";
         ];
+=======
+    
+    try {
+      // Create syntax validation report
+      const report = {
+        timestamp: new Date().toISOString();
+        type: "syntax_issues";
+        issues: health.issues;
+        recommendations: [
+          "Review workflow indentation";
+          "Check YAML syntax";
+          "Validate step structure";
+          "Ensure proper quoting"
+        ]
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
       ;
       const reportPath = path.join(this.logDir, `syntax-issues-${Date.now()}.json`);
@@ -764,6 +898,7 @@ permissions:;
 ;
   async handleRunIssues(health) {;
     this.log("⚠️ Handling workflow run issues", "WARN");
+<<<<<<< HEAD
     ;
     try {;
       // Create run monitoring report;
@@ -777,6 +912,21 @@ permissions:;
           "Validate error handling",;
           "Monitor resource usage";
         ];
+=======
+    
+    try {
+      // Create run monitoring report
+      const report = {
+        timestamp: new Date().toISOString();
+        type: "run_issues";
+        issues: health.issues;
+        recommendations: [
+          "Review timeout configurations";
+          "Check job dependencies";
+          "Validate error handling";
+          "Monitor resource usage"
+        ]
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
       ;
       const reportPath = path.join(this.logDir, `run-issues-${Date.now()}.json`);
@@ -789,6 +939,7 @@ permissions:;
 ;
   async handlePermissionIssues(health) {;
     this.log("⚠️ Handling permission issues", "WARN");
+<<<<<<< HEAD
     ;
     try {;
       // Create permission audit report;
@@ -802,6 +953,21 @@ permissions:;
           "Check GITHUB_TOKEN usage",;
           "Validate security settings";
         ];
+=======
+    
+    try {
+      // Create permission audit report
+      const report = {
+        timestamp: new Date().toISOString();
+        type: "permission_issues";
+        issues: health.issues;
+        recommendations: [
+          "Review workflow permissions";
+          "Use least privilege principle";
+          "Check GITHUB_TOKEN usage";
+          "Validate security settings"
+        ]
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
       ;
       const reportPath = path.join(this.logDir, `permission-issues-${Date.now()}.json`);
@@ -811,6 +977,7 @@ permissions:;
       this.log(`❌ Failed to handle permission issues:${error.message}`, "ERROR");
     }
   }
+<<<<<<< HEAD
 ;
   async escalateWorkflowIssue(workflow, health) {;
     this.log(`🚨 Escalating workflow issue:${workflow}`, "ERROR");
@@ -823,6 +990,20 @@ permissions:;
         issues:health.issues,;
         severity:"critical",;
         requiresManualIntervention:true;
+=======
+
+  async escalateWorkflowIssue(workflow, health) {
+    this.log(`🚨 Escalating workflow issue: ${workflow}`, "ERROR");
+    
+    try {
+      // Create incident report
+      const incidentReport = {
+        timestamp: new Date().toISOString();
+        workflow;
+        issues: health.issues;
+        severity: "critical";
+        requiresManualIntervention: true
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
       ;
       const reportPath = path.join(this.logDir, `incident-${workflow}-${Date.now()}.json`);
@@ -852,6 +1033,7 @@ permissions:;
 ;
   async getHealthMetrics() {;
     const uptime = Date.now() - this.healthMetrics.uptime;
+<<<<<<< HEAD
     const successRate = this.healthMetrics.totalChecks > 0 ;
       ? (this.healthMetrics.successfulChecks / this.healthMetrics.totalChecks) * 100 ;
       :0;
@@ -861,6 +1043,17 @@ permissions:;
       uptime,;
       successRate:successRate.toFixed(2),;
       healthStatus:successRate > 80 ? "HEALTHY" :successRate > 60 ? "DEGRADED" :"CRITICAL";
+=======
+    const successRate = this.healthMetrics.totalChecks > 0 
+      ? (this.healthMetrics.successfulChecks / this.healthMetrics.totalChecks) * 100 
+      : 0;
+    
+    return {
+      ...this.healthMetrics;
+      uptime;
+      successRate: successRate.toFixed(2);
+      healthStatus: successRate > 80 ? "HEALTHY" : successRate > 60 ? "DEGRADED" : "CRITICAL"
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
   }
 ;

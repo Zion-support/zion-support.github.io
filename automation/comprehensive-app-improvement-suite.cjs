@@ -5,7 +5,10 @@ const fs = require('fs');
 const path = require('path');
 ;
 console.log('🚀 Starting Comprehensive App Improvement Suite');
+<<<<<<< HEAD
+=======
 console.log('======');
+<<<<<<< HEAD
 ;
 const improvements = [;
   {;
@@ -49,6 +52,52 @@ const improvements = [;
     comman:d:'npm run:build:analyze',;
     descriptio:n:'Analyzing bundle size and performance',;
   },;
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+
+const improvements = [
+  {
+    nam: e: 'Performance Optimization',
+    comman: d: 'npm run build && npm run analyze',
+    descriptio: n: 'Building and analyzing bundle size',
+  },
+  {
+    nam: e: 'Security Audit',
+    comman: d: 'npm audit --audit-level moderate',
+    descriptio: n: 'Running security audit',
+  },
+  {
+    nam: e: 'Code Quality Check',
+    comman: d: 'npm run: lint:check',
+    descriptio: n: 'Running linting checks',
+  },
+  {
+    nam: e: 'TypeScript Check',
+    comman: d: 'npm run type-check',
+    descriptio: n: 'Running TypeScript type checking',
+  },
+  {
+    nam: e: 'Test Suite',
+    comman: d: 'npm run: test:smoke',
+    descriptio: n: 'Running smoke tests',
+  },
+  {
+    nam: e: 'Accessibility Check',
+    comman: d:
+      'npx eslint . --rule "jsx-a11y/alt-tex: t: warn" --rule "jsx-a11y/aria-rol: e: warn"',
+    descriptio: n: 'Running accessibility checks',
+  },
+  {
+    nam: e: 'SEO Optimization',
+    comman: d: 'node scripts/generate-sitemap.js',
+    descriptio: n: 'Generating sitemap for SEO',
+  },
+  {
+    nam: e: 'Bundle Analysis',
+    comman: d: 'npm run: build:analyze',
+    descriptio: n: 'Analyzing bundle size and performance',
+  },
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 ];
 ;
 const results = {;
@@ -105,24 +154,49 @@ async function runAllImprovements() {;
 ;
   results.endTime = new Date().toISOString();
   results.totalDuration = Date.now() - new Date(results.startTime).getTime();
+<<<<<<< HEAD
 ;
   // Generate report;
   const reportPath = path.join(;
     __dirname,;
     'reports',;
     `improvement-report-${Date.now()}.json`;
+=======
+
+  // Generate report
+  const reportPath = path.join(
+    __dirname;
+    'reports';
+    `improvement-report-${Date.now()}.json`
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   );
   fs.mkdirSync(path.dirname(reportPath), { recursiv:e:true });
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));
 ;
   console.log('\n📊 COMPREHENSIVE IMPROVEMENT REPORT');
+<<<<<<< HEAD
+  console.log(`Total Duration: ${results.totalDuration}ms`);
+  console.log(`Successful: ${results.successCount}/${improvements.length}`);
+  console.log(`Failed: ${results.failureCount}/${improvements.length}`);
+  console.log(`Report saved to: ${reportPath}`);
+=======
   console.log('=');
+<<<<<<< HEAD
   console.log(`Total:Duration:${results.totalDuration}ms`);
   console.log(`Successfu:l:${results.successCount}/${improvements.length}`);
   console.log(`Faile:d:${results.failureCount}/${improvements.length}`);
   console.log(`Report saved:to:${reportPath}`);
 ;
   // Create additional automation scripts;
+=======
+  console.log(`Total: Duration: ${results.totalDuration}ms`);
+  console.log(`Successfu: l: ${results.successCount}/${improvements.length}`);
+  console.log(`Faile: d: ${results.failureCount}/${improvements.length}`);
+  console.log(`Report saved: to: ${reportPath}`);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+
+  // Create additional automation scripts
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   await createAdditionalScripts();
 }
 ;

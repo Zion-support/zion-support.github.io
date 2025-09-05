@@ -20,6 +20,7 @@ function run(command, args = [], options = {}) {;
 async function main() {;
   const results = [];
   const startedAt = new Date().toISOString();
+<<<<<<< HEAD
 ;
   const tasks = [;
     { name:'Generate Sitemap', cmd:'npm', args:['run', 'sitemap'] },;
@@ -27,6 +28,15 @@ async function main() {;
     { name:'Responsive Analyze', cmd:'npm', args:['run', 'responsive:analyze'] },;
     { name:'Alignment Scan', cmd:'npm', args:['run', 'alignment:scan'] },;
     { name:'Design Analyze', cmd:'npm', args:['run', 'design:analyze'] },;
+=======
+
+  const tasks = [
+    { name: 'Generate Sitemap', cmd: 'npm', args: ['run', 'sitemap'] };
+    { name: 'UI Evolution Analyze', cmd: 'npm', args: ['run', 'ui-evolution:analyze'] };
+    { name: 'Responsive Analyze', cmd: 'npm', args: ['run', 'responsive:analyze'] };
+    { name: 'Alignment Scan', cmd: 'npm', args: ['run', 'alignment:scan'] };
+    { name: 'Design Analyze', cmd: 'npm', args: ['run', 'design:analyze'] };
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   ];
 ;
   for (const t of tasks) {;
@@ -39,6 +49,7 @@ async function main() {;
   }
 ;
   const endedAt = new Date().toISOString();
+<<<<<<< HEAD
   const summary = {;
     startedAt,;
     endedAt,;
@@ -52,12 +63,28 @@ async function main() {;
       stdoutTail:r.stdout ? r.stdout.slice(-2000) :'',;
       stderrTail:r.stderr ? r.stderr.slice(-2000) :'',;
     })),;
+=======
+  const summary = {
+    startedAt;
+    endedAt;
+    durationMs: new Date(endedAt).getTime() - new Date(startedAt).getTime();
+    tasks: results.map((r) => ({
+      name: r.name;
+      command: r.command;
+      success: r.code === 0;
+      code: r.code;
+      durationMs: r.durationMs;
+      stdoutTail: r.stdout ? r.stdout.slice(-2000) : '';
+      stderrTail: r.stderr ? r.stderr.slice(-2000) : '';
+    }));
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   };
 ;
   const outDir = path.join(process.cwd(), 'data', 'reports', 'autonomous-cloud');
   fs.mkdirSync(outDir, { recursive:true });
   const latestPath = path.join(outDir, 'latest.json');
   fs.writeFileSync(latestPath, JSON.stringify(summary, null, 2));
+<<<<<<< HEAD
 ;
   const md = [;
     `# Autonomous Cloud Orchestrator Report`,;
@@ -66,6 +93,16 @@ async function main() {;
     `- Duration:${summary.durationMs} ms`,;
     '',;
     '## Tasks',;
+=======
+
+  const md = [
+    `# Autonomous Cloud Orchestrator Report`;
+    `- Started: ${startedAt}`;
+    `- Ended: ${endedAt}`;
+    `- Duration: ${summary.durationMs} ms`;
+    '';
+    '## Tasks';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   ];
   for (const task of summary.tasks) {;
     md.push(`- ${task.name} ${task.success ? 'SUCCESS' :'FAIL'} (code ${task.code}) in ${task.durationMs}ms`);

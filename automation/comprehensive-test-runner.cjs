@@ -80,11 +80,19 @@ class ComprehensiveTestRunner {;
         report.summary.failedTests++;
       }
     });
+<<<<<<< HEAD
 ;
     // Save report;
     const reportFile = path.join(;
       this.logsDir,;
       `comprehensive-test-report-${Date.now()}.json`;
+=======
+
+    // Save report
+    const reportFile = path.join(
+      this.logsDir;
+      `comprehensive-test-report-${Date.now()}.json`
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ;
