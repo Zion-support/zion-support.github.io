@@ -1,7 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-import Header from '../Header';
-import Footer from '../Footer';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -10,12 +8,16 @@ interface MainLayoutProps {
   keywords?: string;
 }
 
+<<<<<<< HEAD
 const MainLayout: React.FC<MainLayoutProps> = ({ 
+=======
+export default function MainLayout({ 
+>>>>>>> cursor/add-new-services-and-deploy-updates-1b90
   children, 
-  title = "Zion Tech Group - Leading AI & Technology Solutions",
-  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results.",
-  keywords = "AI solutions, cloud services, technology consulting, digital transformation, IT services"
-}) => {
+  title = "Zion Tech Group", 
+  description = "Leading technology solutions provider",
+  keywords = "technology, AI, cloud, micro SaaS"
+}: MainLayoutProps) {
   return (
     <>
       <Head>
@@ -25,16 +27,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer />
-      </div>
+      {children}
     </>
   );
-};
-
-export default MainLayout;
+}

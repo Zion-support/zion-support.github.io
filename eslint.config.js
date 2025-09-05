@@ -1,18 +1,5 @@
-import js from '@eslint/js';
 <<<<<<< HEAD
-
-export default [js.configs.recommended,
-  {
-    "files": ['**/*.{js,jsx,ts,tsx}'],
-    "rules": {
-      'no-unused-vars': ['warn',
-        { "argsIgnorePattern": '^_' }
-      ],
-      'no-console': 'warn',
-      'prefer-const': 'warn',
-      'no-var': 'error'
-    },
-=======
+import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import tseslint from '@typescript-eslint/eslint-plugin';
@@ -194,19 +181,13 @@ export default [{
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off'
     }
->>>>>>> 86e2a4cca918c6ff376b51aa8638f7a375ebfe57
   },
   {
     "ignores": ['node_modules/**',
       '.next/**',
-<<<<<<< HEAD
       'out/**',
       'build/**',
-      'dist/**'
-=======
       'dist/**',
-      'build/**',
-      'out/**',
       'coverage/**',
       'src.corrupted/**',
       'src.disabled/**',
@@ -412,50 +393,10 @@ export default [{
       '*.war',
       '*.ear',
       '*.sar',
-      '*.nar',
-      '*.zip',
-      '*.rar',
-      '*.7z',
-      '*.tar',
-      '*.gz',
-      '*.bz2',
-      '*.xz',
-      '*.lzma',
-      '*.zst',
-      '*.lz4',
-      '*.lzop',
-      '*.lrz',
-      '*.lha',
-      '*.lzh',
-      '*.ace',
-      '*.arj',
-      '*.cab',
-      '*.deb',
-      '*.rpm',
-      '*.msi',
-      '*.dmg',
-      '*.iso',
-      '*.img',
-      '*.bin',
-      '*.exe',
-      '*.app',
-      '*.dll',
-      '*.so',
-      '*.dylib',
-      '*.a',
-      '*.lib',
-      '*.o',
-      '*.obj',
-      '*.pyc',
-      '*.pyo',
-      '*.pyd',
-      '*.class',
-      '*.jar',
-      '*.war',
-      '*.ear',
-      '*.sar',
       '*.nar'
->>>>>>> 86e2a4cca918c6ff376b51aa8638f7a375ebfe57
     ]
   }
 ];
+=======
+import js from '@eslint/js'; <<<<<<< HEAD export default [ js.configs.recommended,{ files: ['**','pages.broken/','pages.bak/','pages.blog.disabled/','pages._archive_corrupted/','pages._quarantine/','pages-disabled/','pages-quarantine/','pages.__backup/','pages-backup/','*.test.js','*.test.ts','*.test.tsx','*.spec.js','*.spec.ts','*.spec.tsx' ] },{ files: ['***.{ts,tsx}'],languageOptions: { parser: tsparser,ecmaVersion: 2021,sourceType: 'module',globals: { window: 'readonly',document: 'readonly',navigator: 'readonly',localStorage: 'readonly',sessionStorage: 'readonly',console: 'readonly',setTimeout: 'readonly',setInterval: 'readonly',clearTimeout: 'readonly',clearInterval: 'readonly',requestAnimationFrame: 'readonly',cancelAnimationFrame: 'readonly',fetch: 'readonly',URL: 'readonly',URLSearchParams: 'readonly',Blob: 'readonly',CustomEvent: 'readonly',Intl: 'readonly',performance: 'readonly',caches: 'readonly',Notification: 'readonly',ServiceWorker: 'readonly',ServiceWorkerRegistration: 'readonly',PushSubscription: 'readonly',NotificationPermission: 'readonly',process: 'readonly',global: 'readonly',jest: 'readonly',describe: 'readonly',it: 'readonly',test: 'readonly',expect: 'readonly',vi: 'readonly',Deno: 'readonly',React: 'readonly',KeyboardEvent: 'readonly',HTMLElement: 'readonly',HTMLButtonElement: 'readonly',HTMLAnchorElement: 'readonly',MutationObserver: 'readonly',RequestInit: 'readonly',AbortController: 'readonly',fs: 'readonly',CodeQualityChecker: 'readonly' } },plugins: { '@typescript-eslint': tseslint,react,'react-hooks': reactHooks },rules: { ...js.configs.recommended.rules,...tseslint.configs.recommended.rules,...react.configs.recommended.rules,...reactHooks.configs.recommended.rules,'no-unused-vars': 'off','@typescript-eslint/no-unused-vars': 'warn','no-console': 'warn','react/prop-types': 'off','react/react-in-jsx-scope': 'off' } >>>>>>> 86e2a4cca918c6ff376b51aa8638f7a375ebfe57 },{ ignores: [ 'node_modules**','pages._quarantine*.cjs','next.config.*','playwright.config.ts','vite.config-backup.ts','public/**','.venv/**','api/**','jest.config.*','fix-*.js','fix-*.jsx','deployments/**','pages.__backup/**','pages-disabled/**','src/**','automation/**','automation_backup/**','data_backup/**','pm2-automation/**','scripts/**','tests/**','test-results/**','test-reports/**','*.test.js','*.test.jsx','*.test.ts','*.test.tsx','*.spec.js','*.spec.jsx','*.spec.ts','*.spec.tsx','*.backup.js','*.backup.jsx','*.backup.ts','*.backup.tsx','*.broken.js','*.broken.jsx','*.broken.ts','*.broken.tsx','*.corrupted.js','*.corrupted.jsx','*.corrupted.ts','*.corrupted.tsx','*.disabled.js','*.disabled.jsx','*.disabled.ts','*.disabled.tsx','*.old.js','*.old.jsx','*.old.ts','*.old.tsx','*.temp.js','*.temp.jsx','*.temp.ts','*.temp.tsx','*.tmp.js','*.tmp.jsx','*.tmp.ts','*.tmp.tsx','*.bak.js','*.bak.jsx','*.bak.ts','*.bak.tsx','*.orig.js','*.orig.jsx','*.orig.ts','*.orig.tsx','*.rej.js','*.rej.jsx','*.rej.ts','*.rej.tsx','*.swp.js','*.swp.jsx','*.swp.ts','*.swp.tsx','*.swo.js','*.swo.jsx','*.swo.ts','*.swo.tsx','*.log','*.pid','*.seed','*.pid.lock','comprehensive-*.js','critical-fix.js','execute-automation.js','final-*.js','fix_*.js','health-endpoint.js','improve-app.js','maintenance-scheduler.js','merge-*.js','monitoring-system.js','optimized-*.js','performance-*.js','resolve-*.js','run-*.js','seo-*.js','services-broken.tsx','simple-*.js','test-*.js','*.tgz','*.tar.gz','*.zip','*.rar','*.7z','*.tar','*.gz','*.bz2','*.xz','*.lzma','*.zst','*.lz4','*.lzop','*.lrz','*.lha','*.lzh','*.ace','*.arj','*.cab','*.deb','*.rpm','*.msi','*.dmg','*.iso','*.img','*.bin','*.exe','*.app','*.dll','*.so','*.dylib','*.a','*.lib','*.o','*.obj','*.pyc','*.pyo','*.pyd','*.class','*.jar','*.war','*.ear','*.sar','*.nar','*.zip','*.rar','*.7z','*.tar','*.gz','*.bz2','*.xz','*.lzma','*.zst','*.lz4','*.lzop','*.lrz','*.lha','*.lzh','*.ace','*.arj','*.cab','*.deb','*.rpm','*.msi','*.dmg','*.iso','*.img','*.bin','*.exe','*.app','*.dll','*.so','*.dylib','*.a','*.lib','*.o','*.obj','*.pyc','*.pyo','*.pyd','*.class','*.jar','*.war','*.ear','*.sar','*.nar' >>>>>>> 86e2a4cca918c6ff376b51aa8638f7a375ebfe57 ] } ];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe

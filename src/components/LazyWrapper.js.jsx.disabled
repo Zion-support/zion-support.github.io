@@ -1,0 +1,7 @@
+<<<<<<< HEAD:src/components/LazyWrapper.js.jsx.disabled
+import React from 'react'; const LazyWrapper = (props) => { const [isLoaded, setIsLoaded] = useState(false); const [isInView, setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref, { "amount": threshold };); useEffect(() => { if(inView && !isInView) { setIsInView(true);',';
+    ';';';';';
+import React from 'react'; const LazyWrapper = (props) => { const [isLoaded, setIsLoaded] = useState(false); const [isInView, setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref, { "amount": threshold };); useEffect(() => { if(inView && !isInView) { setIsInView(true);';';';
+=======
+import React from 'react'; const LazyWrapper = (props) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ amount: threshold };); useEffect(() => { if(inView && !isInView) { setIsInView(true);','; ';';';';'; import React from 'react'; const LazyWrapper = (props) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ amount: threshold };); useEffect(() => { if(inView && !isInView) { setIsInView(true);'; ;';';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe:src/components/LazyWrapper.js.jsx

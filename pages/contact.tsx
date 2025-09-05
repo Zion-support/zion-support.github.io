@@ -1,23 +1,23 @@
 import React from 'react';
+import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
 
 export default function ContactPage() {
   return (
-    <MainLayout 
-      title="Contact Us - Zion Tech Group"
-      description="Get in touch with our expert team for technology solutions and consulting."
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>Contact Us - Zion Tech Group</title>
+        <meta name="description" content="Get in touch with our expert team for technology solutions and consulting." />
+        <meta name="keywords" content="contact, support, consultation, technology services" />
+      </Head>
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
           <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
         </div>
-
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -40,8 +40,12 @@ export default function ContactPage() {
 
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-6xl mx-auto">
+<<<<<<< HEAD
           
           {/* Contact Information Cards */}
+=======
+          {/* Contact Information */}
+>>>>>>> cursor/add-new-services-and-deploy-updates-1b90
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <motion.div
               className="bg-white rounded-lg shadow-lg p-6 text-center"
@@ -97,10 +101,7 @@ export default function ContactPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-                Send us a Message
-              </h2>
-              
+              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a Message</h2>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
@@ -116,7 +117,6 @@ export default function ContactPage() {
                       required
                     />
                   </div>
-                  
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                       Email Address
@@ -131,7 +131,6 @@ export default function ContactPage() {
                     />
                   </div>
                 </div>
-
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                     Company
@@ -144,7 +143,6 @@ export default function ContactPage() {
                     placeholder="Your company name"
                   />
                 </div>
-
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                     Service Interest
@@ -162,7 +160,6 @@ export default function ContactPage() {
                     <option value="other">Other</option>
                   </select>
                 </div>
-                
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                     Message
@@ -176,7 +173,6 @@ export default function ContactPage() {
                     required
                   ></textarea>
                 </div>
-                
                 <button
                   type="submit"
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
@@ -195,10 +191,7 @@ export default function ContactPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-                Why Choose Zion Tech Group?
-              </h2>
-              
+              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Why Choose Zion Tech Group?</h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
@@ -209,7 +202,6 @@ export default function ContactPage() {
                     <p className="text-gray-600 text-sm">Round-the-clock technical support and assistance</p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
                     <MessageSquare className="w-5 h-5 text-green-600" />
@@ -219,7 +211,6 @@ export default function ContactPage() {
                     <p className="text-gray-600 text-sm">Free consultation with our technology experts</p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="bg-purple-100 w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
                     <ArrowRight className="w-5 h-5 text-purple-600" />
@@ -230,10 +221,9 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-
               <div className="mt-8 p-6 bg-gray-50 rounded-lg">
                 <h3 className="font-semibold text-gray-900 mb-2">Business Hours</h3>
-                <p className="text-gray-600 text-sm mb-2">Monday - "Friday": 9:00 AM - 6:00 PM EST</p>
+                <p className="text-gray-600 text-sm mb-2">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
                 <p className="text-gray-600 text-sm">Saturday: 10:00 AM - 4:00 PM EST</p>
                 <p className="text-gray-600 text-sm">Sunday: Emergency support only</p>
               </div>
@@ -241,7 +231,6 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-      </div>
-    </MainLayout>
+    </div>
   );
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // comment;
 export class authService {}}
 ;
@@ -15,3 +16,6 @@ export { API_BASE_URL };
 export { API_BASE_URL };
 export { API_BASE_URL };
 export { API_BASE_URL };
+=======
+export class authService {}} ; async get() {}; const response = await fetch("${this.baseUrl}/auth"),} return await response.json(),} } catch (error) {}} throw error,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
