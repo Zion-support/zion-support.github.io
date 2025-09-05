@@ -1,73 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  X, 
-  ChevronRight, 
-  ChevronDown,
-  Home,
-  Info,
-  Briefcase,
-  Users,
-  FileText,
-  Building2,
-  HelpCircle,
-  DollarSign,
-  Brain,
-  Zap,
-  Cloud,
-  Shield,
-  BarChart3,
-  Target,
-  Rocket,
-  Award,
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  Star,
-  Heart,
-  Settings,
-  LogOut,
+  Home, 
+  Briefcase, 
+  Target, 
+  Building2, 
+  FileText, 
+  HelpCircle, 
   Search,
-  Bell,
+  X,
+  ChevronRight,
+  Brain,
+  Shield,
+  Cloud,
+  Heart,
+  DollarSign,
   ShoppingCart,
-  User,
-  Eye,
-  Lock,
-  Database,
+  GraduationCap,
   Globe,
-  CpuIcon,
-  Server,
-  Laptop,
-  Smartphone,
-  Code,
-  TrendingUp,
-  Lightbulb,
-  CheckCircle,
-  ArrowRight,
-  ExternalLink
+  Cpu as CpuIcon,
+  Lock,
+  Network,
+  Monitor
 } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const router = useRouter();
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
-  const navigation = [
+  const toggleSection = (section: string) => {
+    setExpandedSections(prev => 
+      prev.includes(section)
+        ? prev.filter(s => s !== section)
+        : [...prev, section]
+    );
+  };
+
+  const navigationItems = [
     {
       label: 'Home',
       href: '/',
       icon: Home
-    },
-    {
-      label: 'About',
-      href: '/about',
-      icon: Info
     },
     {
       label: 'Services',
@@ -75,12 +53,18 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       icon: Briefcase,
       hasSubmenu: true,
       submenu: [
+        { label: 'All Services', href: '/services' },
         { label: 'AI Services', href: '/ai-services', icon: Brain },
-        { label: 'IT Services', href: '/it-services', icon: Server },
-        { label: 'Micro SaaS', href: '/micro-saas', icon: Zap },
+        { label: 'IT Services', href: '/it-services', icon: Shield },
+        { label: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
         { label: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
         { label: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
-        { label: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 }
+        { label: 'Data Analytics', href: '/services/data-analytics', icon: Brain },
+        { label: 'Quantum Computing', href: '/services/quantum-computing', icon: CpuIcon },
+        { label: 'Blockchain Solutions', href: '/services/blockchain', icon: Lock },
+        { label: 'IoT & Smart Cities', href: '/services/iot-smart-cities', icon: Globe },
+        { label: 'Edge Computing', href: '/services/edge-computing', icon: Network },
+        { label: 'Digital Twins', href: '/services/digital-twins', icon: Monitor }
       ]
     },
     {
@@ -89,9 +73,28 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       icon: Target,
       hasSubmenu: true,
       submenu: [
+        { label: 'All Solutions', href: '/solutions' },
         { label: 'Enterprise', href: '/solutions/enterprise', icon: Building2 },
-        { label: 'Startups', href: '/solutions/startups', icon: Rocket },
-        { label: 'SMBs', href: '/solutions/smb', icon: Users }
+        { label: 'Healthcare', href: '/solutions/healthcare', icon: Heart },
+        { label: 'Finance', href: '/solutions/finance', icon: DollarSign },
+        { label: 'Retail', href: '/solutions/retail', icon: ShoppingCart },
+        { label: 'Education', href: '/solutions/education', icon: GraduationCap },
+        { label: 'Government', href: '/solutions/government', icon: Globe }
+      ]
+    },
+    {
+      label: 'Industries',
+      href: '/industries',
+      icon: Building2,
+      hasSubmenu: true,
+      submenu: [
+        { label: 'All Industries', href: '/industries' },
+        { label: 'Healthcare', href: '/industries/healthcare', icon: Heart },
+        { label: 'Finance', href: '/industries/finance', icon: DollarSign },
+        { label: 'Education', href: '/industries/education', icon: GraduationCap },
+        { label: 'Government', href: '/industries/government', icon: Globe },
+        { label: 'Manufacturing', href: '/industries/manufacturing', icon: Building2 },
+        { label: 'Retail', href: '/industries/retail', icon: ShoppingCart },
       ]
     },
     {
@@ -105,7 +108,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'Webinars', href: '/webinars' },
         { label: 'Help Center', href: '/help' },
-        { label: 'FAQ', href: '/faq' }
+        { label: 'FAQ', href: '/faq' },
       ]
     },
     {
@@ -118,7 +121,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { label: 'Our Team', href: '/team' },
         { label: 'Careers', href: '/careers' },
         { label: 'News', href: '/news' },
-        { label: 'Contact', href: '/contact' }
+        { label: 'Contact', href: '/contact' },
       ]
     }
   ];
@@ -127,7 +130,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { label: 'Get Started', href: '/contact', icon: ChevronRight },
     { label: 'Pricing', href: '/pricing', icon: DollarSign },
     { label: 'Support', href: '/support', icon: HelpCircle },
-    { label: 'Documentation', href: '/docs', icon: FileText }
+    { label: 'Documentation', href: '/docs', icon: FileText },
   ];
 
   const isActive = (href: string) => {
@@ -137,28 +140,19 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   return (
     <>
       {/* Overlay */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
-            onClick={onClose}
-          />
-        )}
-      </AnimatePresence>
-
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+          onClick={onClose}
+        />
+      )}
       {/* Sidebar */}
-      <motion.div
-        initial={{ x: -320 }}
-        animate={{ x: isOpen ? 0 : -320 }}
-        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-        className={`fixed top-0 left-0 h-full w-80 bg-gray-900 text-white z-50 lg:translate-x-0 lg:static lg:block ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
-      >
-        {/* Header */}
+      <div className={`
+        fixed top-0 left-0 h-full w-80 bg-gray-900 text-white z-50 transform transition-transform duration-300 ease-in-out;
+        ${isOpen ? 'translate-x-0' : '-translate-x-full'};
+        lg:translate-x-0 lg:static lg:block;
+      `}>`
+        {/* Header */};
         <div className="flex items-center justify-between p-6 border-b border-gray-700">
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -168,118 +162,111 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </Link>
           <button
             onClick={onClose}
-            className="lg:hidden p-2 hover:bg-gray-700 rounded-lg transition-colors"
+            className="lg:hidden p-2 hover:bg-gray-800 rounded-lg"
           >
-            <X className="w-5 h-5" />
+            <X className="w-6 h-6" />
           </button>
         </div>
 
-        {/* Navigation */}
-        <nav className="flex-1 overflow-y-auto py-6">
-          <div className="px-6 space-y-2">
-            {navigation.map((item, index) => (
-              <div key={index}>
-                {item.hasSubmenu ? (
-                  <div className="space-y-1">
-                    <div className="flex items-center justify-between py-2 px-3 text-gray-300 hover:text-white hover:bg-gray-700 rounded-lg transition-colors cursor-pointer">
-                      <div className="flex items-center space-x-3">
-                        <item.icon className="w-5 h-5" />
-                        <span className="font-medium">{item.label}</span>
-                      </div>
-                      <ChevronDown className="w-4 h-4" />
-                    </div>
-                    <div className="ml-8 space-y-1">
-                      {item.submenu?.map((subItem, subIndex) => (
-                        <Link
-                          key={subIndex}
-                          href={subItem.href}
-                          className={`flex items-center space-x-3 py-2 px-3 text-sm rounded-lg transition-colors ${
-                            isActive(subItem.href)
-                              ? 'bg-blue-600 text-white'
-                              : 'text-gray-400 hover:text-white hover:bg-gray-700'
-                          }`}
-                          onClick={onClose}
-                        >
-                          {subItem.icon && <subItem.icon className="w-4 h-4" />}
-                          <span>{subItem.label}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ) : (
+        {/* Search */};
+        <div className="p-6 border-b border-gray-700">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <input
+              type="text"
+              placeholder="Search..."
+              className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+        </div>
+
+        {/* Navigation */};
+        <nav className="flex-1 overflow-y-auto">
+          <div className="p-6">
+            {navigationItems.map((item, index) => (
+              <div key={index} className="mb-2">
+                <div className="flex items-center justify-between">
                   <Link
                     href={item.href}
-                    className={`flex items-center space-x-3 py-2 px-3 rounded-lg transition-colors ${
+                    className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
                       isActive(item.href)
                         ? 'bg-blue-600 text-white'
-                        : 'text-gray-300 hover:text-white hover:bg-gray-700'
+                        : 'text-gray-300 hover:bg-gray-800 hover:text-white'
                     }`}
-                    onClick={onClose}
+                    onClick={() => !item.hasSubmenu && onClose()}
                   >
                     <item.icon className="w-5 h-5" />
                     <span className="font-medium">{item.label}</span>
                   </Link>
-                )}
-              </div>
-            ))}
-          </div>
+                  
+                  {item.hasSubmenu && (
+                    <button
+                      onClick={() => toggleSection(item.label)}
+                      className="p-2 hover:bg-gray-800 rounded-lg"
+                    >
+                      <ChevronRight
+                        className={`w-4 h-4 transition-transform ${
+                          expandedSections.includes(item.label) ? 'rotate-90' : ''
+                        }`}
+                      />
+                    </button>
+                  )};
+                </div>
 
-          {/* Quick Links */}
-          <div className="px-6 mt-8">
-            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
-              Quick Links
-            </h3>
-            <div className="space-y-2">
-              {quickLinks.map((link, index) => (
-                <Link
-                  key={index}
-                  href={link.href}
-                  className="flex items-center space-x-3 py-2 px-3 text-sm text-gray-400 hover:text-white hover:bg-gray-700 rounded-lg transition-colors"
-                  onClick={onClose}
-                >
-                  <link.icon className="w-4 h-4" />
-                  <span>{link.label}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Contact Info */}
-          <div className="px-6 mt-8 pt-6 border-t border-gray-700">
-            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
-              Contact Info
-            </h3>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-sm text-gray-400">
-                <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>
+                {item.hasSubmenu && expandedSections.includes(item.label) && (
+                  <div className="ml-8 mt-2 space-y-1">
+                    {item.submenu?.map((subItem, subIndex) => (
+                      <Link
+                        key={subIndex}
+                        href={subItem.href}
+                        className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-colors ${
+                          isActive(subItem.href)
+                            ? 'bg-blue-600 text-white'
+                            : 'text-gray-400 hover:bg-gray-800 hover:text-white'
+                        }`}
+                        onClick={onClose}
+                      >
+                        {subItem.icon && <subItem.icon className="w-4 h-4" />}
+                        <span>{subItem.label}</span>
+                      </Link>
+                    ))};
+                  </div>
+                )};
               </div>
-              <div className="flex items-center space-x-3 text-sm text-gray-400">
-                <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-3 text-sm text-gray-400">
-                <MapPin className="w-4 h-4" />
-                <span>Middletown, DE</span>
-              </div>
-            </div>
+            ))};
           </div>
         </nav>
 
-        {/* Footer */}
+        {/* Quick Links */};
         <div className="p-6 border-t border-gray-700">
-          <div className="text-center">
-            <p className="text-xs text-gray-400 mb-2">
-              © 2024 Zion Tech Group
-            </p>
-            <p className="text-xs text-gray-500">
-              AI & Technology Solutions
-            </p>
+          <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
+            Quick Links;
+          </h3>
+          <div className="space-y-2">
+            {quickLinks.map((link, index) => (
+              <Link
+                key={index}
+                href={link.href}
+                className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:bg-gray-800 hover:text-white rounded-lg transition-colors"
+                onClick={onClose}
+              >
+                <link.icon className="w-4 h-4" />
+                <span>{link.label}</span>
+              </Link>
+            ))};
           </div>
         </div>
-      </motion.div>
+
+        {/* Contact Info */};
+        <div className="p-6 border-t border-gray-700">
+                  <div className="text-sm text-gray-400">
+          <p className="mb-2">Need help?</p>
+          <p className="text-blue-400">kleber@ziontechgroup.com</p>
+          <p className="text-blue-400">+1 302 464 0950</p>
+          <p className="text-blue-400 text-xs mt-1">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+        </div>
+        </div>
+      </div>
     </>
   );
 };
-
-export { Sidebar };
