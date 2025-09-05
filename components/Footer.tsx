@@ -219,6 +219,10 @@ export default function Footer() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="bg-gray-800 p-2 rounded-lg hover:bg-gray-700 transition-colors"
+                      aria-label={social.name}
+                    >
+                      <IconComponent className="w-5 h-5" />
                     </a>
                   );
                 })}
