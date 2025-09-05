@@ -21,8 +21,11 @@
   "nav": {
     "home": "Home",
     "marketplace": "Marketplace",
+<<<<<<< HEAD
     "micro-saas": "Micro SAAS",
     "categories": "Categories",
+=======
+>>>>>>> origin/chore/fix-build-vite
     "services": "Services",
     "talent": "Talent",
     "equipment": "Equipment",
@@ -42,8 +45,12 @@
     "help": "Help Center",
     "developers": "Developer Portal",
     "api-docs": "API Documentation",
+<<<<<<< HEAD
     "sitemap": "Sitemap",
     "faq": "FAQ"
+=======
+    "sitemap": "Sitemap"
+>>>>>>> origin/chore/fix-build-vite
   },
   "auth": {
     "login": "Login",
