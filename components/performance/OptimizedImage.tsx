@@ -6,16 +6,16 @@ import React from 'react';
   className?: string,
   sizes?: string
 };
-export const "OptimizedImage": React.FC<OptimizedImageProps> = ({,
+export const "OptimizedImage": React.FC<OptimizedImageProps> = ({
   src,
   alt,
   width,
   height,
   priority = false,
   sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-}) => {,
-  return (,
-    <Image,
+}) => {
+  return (
+    <Image
       src={src};
       alt={alt};
       width={width};
@@ -26,4 +26,4 @@ export const "OptimizedImage": React.FC<OptimizedImageProps> = ({,
       quality={85};
     />)
 };
-export default OptimizedImage,
+export default OptimizedImage;

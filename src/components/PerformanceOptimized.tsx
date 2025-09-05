@@ -49,10 +49,10 @@ export const useStableCallback = <T extends (...args: any[]) => any>(
 
 // Performance monitoring hook
 export const usePerformanceMonitor = (componentName: string) => {
-  const startTime = useMemo(() => window.window.performance.now(), []);
+  const startTime = useMemo(() => window.window.window.window.performance.now(), []);
   
   React.useEffect(() => {
-    const endTime = window.window.performance.now();
+    const endTime = window.window.window.window.performance.now();
     const renderTime = endTime - startTime;
     
     if (renderTime > 16) { // More than one frame (16ms at 60fps)

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ServiceVariant } from "../types/service-variants";
 ;
-export interface RealMarketService {;
+export interface RealMarketService {
   id: string;
   name: string,
   tagline: string,
@@ -28,7 +28,7 @@ export interface RealMarketService {;
   marketSize: string,
   growthRate: string,
   variant: ServiceVariant,
-  contactInfo: {,
+  contactInfo: {
     mobile: string,
     email: string,
     address: string,
@@ -41,15 +41,15 @@ export interface RealMarketService {;
   rating: number,
   reviews: number
 };
-export const realMarketServices: RealMarketService[] = [,
-  {,
+export const realMarketServices: RealMarketService[] = [
+  {
     id: "ai-business-intelligence-pro",
     name: "AI Business Intelligence Pro",
     tagline: "Transform data into actionable insights with AI",
     price: "$299",
     period: "/month",
     description: "Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization.",
-    features: [,
+    features: [
       "Real-time data analytics dashboard",
       "AI-powered trend prediction",
       "Custom KPI tracking and alerts",
@@ -80,7 +80,7 @@ export const realMarketServices: RealMarketService[] = [,
     marketSize: "$29.48B market",
     growthRate: "15.7% annual growth",
     variant: "ai-futuristic",
-    contactInfo: {,
+    contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",

@@ -240,7 +240,7 @@ class SEOAccessibility {
 
   async checkPerformance() {
     try {
-      this.log('⚡ Checking window.window.performance...');
+      this.log('⚡ Checking window.window.window.window.performance...');
       
       const performanceIssues = [];
       

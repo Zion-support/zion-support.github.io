@@ -10,15 +10,15 @@ const STATIC_FILES = [
 
 // Install event - cache static files
 self.addEventListener('install', (event) => {
-  // // console.log('Service Worker installing...');
+  // // // // console.log('Service Worker installing...');
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        // // console.log('Caching static files');
+        // // // // console.log('Caching static files');
         return cache.addAll(STATIC_FILES);
       })
       .then(() => {
-        // // console.log('Service Worker installed');
+        // // // // console.log('Service Worker installed');
         return self.skipWaiting();
       })
   );
@@ -26,21 +26,21 @@ self.addEventListener('install', (event) => {
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-  // // console.log('Service Worker activating...');
+  // // // // console.log('Service Worker activating...');
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              // // console.log('Deleting old cache:', cacheName);
+              // // // // console.log('Deleting old cache:', cacheName);
               return caches.delete(cacheName);
             }
           })
         );
       })
       .then(() => {
-        // // console.log('Service Worker activated');
+        // // // // console.log('Service Worker activated');
         return self.clients.claim();
       })
   );
@@ -66,7 +66,7 @@ self.addEventListener('fetch', (event) => {
       .then((cachedResponse) => {
         // Return cached version if available
         if (cachedResponse) {
-          // // console.log('Serving from cache:', request.url);
+          // // // // console.log('Serving from cache:', request.url);
           return cachedResponse;
         }
 
@@ -92,7 +92,7 @@ self.addEventListener('fetch', (event) => {
             return response;
           })
           .catch((error) => {
-            // // console.log('Fetch failed:', error);
+            // // // // console.log('Fetch failed:', error);
             
             // Return offline page for navigation requests
             if (request.mode === 'navigate') {
@@ -107,7 +107,7 @@ self.addEventListener('fetch', (event) => {
 
 // Background sync for offline actions
 self.addEventListener('sync', (event) => {
-  // // console.log('Background sync triggered:', event.tag);
+  // // // // console.log('Background sync triggered:', event.tag);
   
   if (event.tag === 'background-sync') {
     event.waitUntil(doBackgroundSync());
@@ -116,7 +116,7 @@ self.addEventListener('sync', (event) => {
 
 // Push notifications
 self.addEventListener('push', (event) => {
-  // // console.log('Push message received');
+  // // // // console.log('Push message received');
   
   const options = {
     body: event.data ? event.data.text() : 'New update available',
@@ -148,7 +148,7 @@ self.addEventListener('push', (event) => {
 
 // Notification click handler
 self.addEventListener('notificationclick', (event) => {
-  // // console.log('Notification clicked:', event.action);
+  // // // // console.log('Notification clicked:', event.action);
   
   event.notification.close();
   
@@ -178,7 +178,7 @@ function shouldCache(url) {
 async function doBackgroundSync() {
   try {
     // Perform background sync operations
-    // // console.log('Performing background sync...');
+    // // // // console.log('Performing background sync...');
     
     // Example: Sync offline data
     const offlineData = await getOfflineData();
@@ -186,7 +186,7 @@ async function doBackgroundSync() {
       await syncOfflineData(offlineData);
     }
     
-    // // console.log('Background sync completed');
+    // // // // console.log('Background sync completed');
   } catch (error) {
     console.error('Background sync failed:', error);
   }
@@ -199,7 +199,7 @@ async function getOfflineData() {
 
 async function syncOfflineData(data) {
   // Sync offline data with server
-  // // console.log('Syncing offline data:', data);
+  // // // // console.log('Syncing offline data:', data);
 }
 
 // Cache management

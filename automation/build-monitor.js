@@ -22,7 +22,7 @@ class BuildMonitor {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-    // // console.log(logMessage.trim());
+    // // // // console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage)}
 
   async checkBuildHealth() {

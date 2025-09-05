@@ -55,7 +55,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
   }, [trackingId]);
 
   // Track custom events
-  const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
+  const trackEvent = (eventName: string, parameters?: Record<string unknown>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, parameters);
     }
@@ -88,10 +88,10 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
 
   // Expose tracking functions globally for use in other components
   if (typeof window !== 'undefined') {
-    (window as unknown as Record<string, unknown>).trackEvent = trackEvent;
-    (window as unknown as Record<string, unknown>).trackButtonClick = trackButtonClick;
-    (window as unknown as Record<string, unknown>).trackFormSubmission = trackFormSubmission;
-    (window as unknown as Record<string, unknown>).trackExternalLink = trackExternalLink;
+    (window as unknown as Record<string unknown>).trackEvent = trackEvent;
+    (window as unknown as Record<string unknown>).trackButtonClick = trackButtonClick;
+    (window as unknown as Record<string unknown>).trackFormSubmission = trackFormSubmission;
+    (window as unknown as Record<string unknown>).trackExternalLink = trackExternalLink;
   }
 
   return (
@@ -103,7 +103,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
             if ('performance' in window) {
               window.addEventListener('load', function() {
                 setTimeout(function() {
-                  const perfData = performance.getEntriesByType('navigation')[0];
+                  const perfData = window.window.performance.getEntriesByType('navigation')[0];
                   if (perfData) {
                     const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
                     if (window.gtag) {

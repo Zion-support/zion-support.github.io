@@ -1,4 +1,4 @@
-export interface Service {,
+export interface Service {
   id: string,
   name: string,
   description: string,
@@ -6,27 +6,23 @@ export interface Service {,
   price?: number,
   features: string[]
 };
-export const findService = (query: string, services: Service[]): Service[] => {,
+export const findService = (query: string, services: Service[]): Service[] => {
   const searchTerm = query.toLowerCase(),
   return services.filter(service =>,
     service.name.toLowerCase().includes(searchTerm) ||,
     service.description.toLowerCase().includes(searchTerm) ||,
-    service.category.toLowerCase().includes(searchTerm),
-  )
+    service.category.toLowerCase().includes(searchTerm))
 };
-,
-export const getServicesByCategory = (category: string, services: Service[]): Service[] => {,
+export const getServicesByCategory = (category: string, services: Service[]): Service[] => {
   return services.filter(service =>,
-    service.category.toLowerCase() === category.toLowerCase(),
-  )
+    service.category.toLowerCase() === category.toLowerCase())
 };
-,
-export default {,
+export default {
   findService,
   getServicesByCategory
 };
 // Service finder utility,
-export const findService = ("_serviceName": string) => {,
+export const findService = ("_serviceName": string) => {
   // Implementation placeholder,
   return null
 };
@@ -34,4 +30,3 @@ export const findService = (_serviceName: string) => { return null};
 export const findService = (_serviceName: string) => { return null};
 export const findService = (_serviceName: string) => { return null};
 export const findService = (_serviceName: string) => { return null};
-,

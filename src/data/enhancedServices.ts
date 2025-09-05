@@ -1,4 +1,4 @@
-export interface ProductListing {,
+export interface ProductListing {
   &quot,id&quot,: string,
   title: string,
   description: string,
@@ -6,7 +6,7 @@ export interface ProductListing {,
   price: number,
   currency: string,
   tags: string[],
-  author: {,
+  author: {
     name: string,
     id: string
   };
@@ -27,7 +27,7 @@ export interface ProductListing {,
       &quot,Multi-platform support&quot
     ]
   },
-  {,
+  {
     &quot,id&quot,: &quot,micro-saas-platform,
     &quot,title&quot,: &quot,Micro SaaS Platform,
     &quot,description&quot,: &quot,Complete micro SaaS platform with user management, billing, analytics, and deployment. Perfect for launching your SaaS product quickly.,
@@ -35,7 +35,7 @@ export interface ProductListing {,
     &quot,price&quot,: 4999,
     &quot,currency&quot,: &quot,$,
     &quot,tags&quot,: [&quot,SaaS &quot,Platform &quot,Billing &quot,Analytics&quot],
-    &quot,author&quot,: {,
+    &quot,author&quot,: {
       name: &quot,Zion Tech Group,
       &quot,id&quot,: &quot,zion-tech-group&quot
     },
@@ -50,4 +50,3 @@ export interface ProductListing {,
     ]
   };
 ],
-,

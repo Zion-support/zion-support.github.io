@@ -1,7 +1,7 @@
 import React from 'react';
 import { ServiceVariant } from "../types/service-variants";
 ;
-export interface AIEmergingTechService {;
+export interface AIEmergingTechService {
   id: string;
   name: string,
   tagline: string,
@@ -28,7 +28,7 @@ export interface AIEmergingTechService {;
   marketSize: string,
   growthRate: string,
   variant: ServiceVariant,
-  contactInfo: {,
+  contactInfo: {
     mobile: string,
     email: string,
     address: string,
@@ -41,15 +41,15 @@ export interface AIEmergingTechService {;
   rating: number,
   reviews: number
 };
-export const aiEmergingTechServices: AIEmergingTechService[] = [,
-  {,
+export const aiEmergingTechServices: AIEmergingTechService[] = [
+  {
     id: "ai-video-generation-platform",
     name: "AI Video Generation Platform",
     tagline: "Create professional videos with AI in minutes",
     price: "$499",
     period: "/month",
     description: "Advanced AI-powered video generation platform that creates professional-quality videos from text, images, and audio inputs. Perfect for marketers, content creators, and businesses.",
-    features: [,
+    features: [
       "Text-to-video generation",
       "Image-to-video conversion",
       "AI voice synthesis",
@@ -80,7 +80,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [,
     marketSize: "$3.2B market",
     growthRate: "45% annual growth",
     variant: "ai-futuristic",
-    contactInfo: {,
+    contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",

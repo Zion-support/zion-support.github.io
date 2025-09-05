@@ -1,4 +1,4 @@
-const nextConfig = {,
+const nextConfig = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
@@ -7,11 +7,11 @@ const nextConfig = {,
   pageExtensions: ['tsxtsjsxjs'],
   trailingSlash: true,
   // Disable experimental features that might cause issues,
-  experimental: {,
+  experimental: {
     // Remove problematic features
   },
   // Image optimization,
-  images: {,
+  images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webpimage/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -19,20 +19,20 @@ const nextConfig = {,
     minimumCacheTTL: 31536000, // 1 year
   },
   // Headers for security and performance,
-  async headers() {,
-    return [,
-      {,
+  async headers() {
+    return [
+      {
         source: '/(.*)',
-        headers: [,
-          {,
+        headers: [
+          {
             key: 'X-Frame-Options',
             value: 'DENY'
           },
-          {,
+          {
             key: 'X-Content-Type-Options',
             value: 'nosniff'
           },
-          {,
+          {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin'
           }
@@ -41,9 +41,9 @@ const nextConfig = {,
     ]
   },
   // Redirects for SEO,
-  async redirects() {,
-    return [,
-      {,
+  async redirects() {
+    return [
+      {
         source: '/home',
         destination: '/',
         permanent: true
@@ -51,5 +51,4 @@ const nextConfig = {,
     ]
   };
 };
-,
-export default nextConfig,
+export default nextConfig;

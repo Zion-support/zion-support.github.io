@@ -4,23 +4,22 @@ import Header from './Header';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
 ;
-interface LayoutProps {;
+interface LayoutProps {
   children: React.ReactNode;
   title?: string,
   description?: string,
   keywords?: string,
   showSidebar?: boolean
 };
-export default function MainLayout({,
+export default function MainLayout({
   children,
   title = "Zion Tech Group - Leading AI & Technology Solutions",
   description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",
   keywords = "AI solutions, cloud services, technology consulting, digital transformation",
   showSidebar = false
-}: LayoutProps) {,
+}: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false),
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>{title}</title>,
@@ -41,21 +40,19 @@ export default function MainLayout({,
       <div className="min-h-screen flex flex-col">,
         <Header />,
         <main className="flex-1 pt-20">,
-          {showSidebar && (,
+          {showSidebar && (
             <div className="flex">,
-              <Sidebar,
+              <Sidebar
                 isOpen={sidebarOpen};
                 onClose={() => setSidebarOpen(false)};
               />,
               <div className="flex-1 ml-80">,
                 {children};
               </div>,
-            </div>,
-          )};
+            </div>)};
           {!showSidebar && children};
         </main>,
         <Footer />,
       </div>,
-    </>,
-  )
+    </>)
 };

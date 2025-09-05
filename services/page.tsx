@@ -51,9 +51,8 @@ import {;
   Zap,
   Users
 } from 'lucide-react',
-,
-const allServices = [,
-  {,
+const allServices = [
+  {
     id: 1,
     title: 'AI Services',
     description: 'Cutting-edge artificial intelligence solutions including machine learning, computer vision, and NLP.',
@@ -63,7 +62,7 @@ const allServices = [,
     color: 'purple',
     services: ['Machine LearningComputer VisionNLPPredictive AnalyticsAI Chatbots']
   },
-  {,
+  {
     id: 2,
     title: 'IT Services',
     description: 'Comprehensive IT solutions including cloud infrastructure, cybersecurity, and DevOps.',
@@ -73,7 +72,7 @@ const allServices = [,
     color: 'green',
     services: ['Cloud MigrationCybersecurityDevOpsDatabase ManagementIT Support']
   },
-  {,
+  {
     id: 3,
     title: 'Micro SaaS',
     description: 'Innovative micro SaaS solutions designed to solve specific business challenges.',
@@ -84,14 +83,12 @@ const allServices = [,
     services: ['Analytics DashboardDocument ProcessingCustomer ExperienceInventory ManagementProject Management']
   };
 ],
-,
-export default function ServicesPage() {,
-  return (,
-    <Layout,
+export default function ServicesPage() {
+  return (
+    <Layout
       title="Our Services - Zion Tech Group",
       description="Comprehensive technology services including AI solutions, IT services, and micro SaaS platforms. Expert solutions for modern businesses.",
-      keywords="services, AI services, IT services, micro SaaS, technology solutions, business automation",
-    >,
+      keywords="services, AI services, IT services, micro SaaS, technology solutions, business automation">,
       <div className="min-h-screen bg-gray-50">,
         {/* Hero Section */};
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">,
@@ -165,7 +162,7 @@ export default function ServicesPage() {,
               </p>,
             </div>,
             <div className="grid md: grid-cols-3 gap-8">,
-              {allServices.map((service, index) => (,
+              {allServices.map((service, index) => (
                 <motion.div,
                   key={service.id};
                   className="bg-white rounded-lg shadow-lg hover: shadow-xl transition-shadow duration-300 border border-gray-200",
@@ -190,7 +187,7 @@ export default function ServicesPage() {,
                     <div className="mb-6">,
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Services: </h4>,
                       <ul className="space-y-2">,
-                        {service.services.map((item, idx) => (,
+                        {service.services.map((item, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-600">,
                             <CheckCircle className={`w-4 h-4 text-${service.color}-500 mr-2 flex-shrink-0`} />,
                             {item};
@@ -198,7 +195,7 @@ export default function ServicesPage() {,
                       </ul>,
                     </div>,
                     {/* CTA */};
-                    <Link,
+                    <Link
                       href={service.href};
                       className={`w-full bg-${service.color}-600 hover: bg-${service.color}-700 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors flex items-center justify-center`};
                     >,
@@ -206,8 +203,7 @@ export default function ServicesPage() {,
                       <ArrowRight className="w-4 h-4 ml-2" />,
                     </Link>,
                   </div>,
-                </motion.div>,
-              ))};
+                </motion.div>))};
             </div>,
           </div>,
         </section>,
@@ -290,6 +286,5 @@ export default function ServicesPage() {,
           </div>,
         </section>,
       </div>,
-    </Layout>,
-  )
+    </Layout>)
 };

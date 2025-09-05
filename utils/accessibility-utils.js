@@ -1,7 +1,7 @@
 
 // Accessibility utilities,
-export const addSkipLinks = () => {,
-  if (typeof document !== 'undefined') {,
+export const addSkipLinks = () => {
+  if (typeof document !== 'undefined') {
     const skipLink = document.createElement('a'),
     skipLink.href = '#main-content',
     skipLink.textContent = 'Skip to main content',
@@ -9,9 +9,8 @@ export const addSkipLinks = () => {,
     document.body.insertBefore(skipLink, document.body.firstChild)
   };
 };
-,
-export const announceToScreenReader = (message) => {,
-  if (typeof document !== 'undefined') {,
+export const announceToScreenReader = (message) => {
+  if (typeof document !== 'undefined') {
     const announcement = document.createElement('div'),
     announcement.setAttribute('aria-livepolite'),
     announcement.setAttribute('aria-atomictrue'),
@@ -21,4 +20,3 @@ export const announceToScreenReader = (message) => {,
     setTimeout(() => document.body.removeChild(announcement), 1000)
   };
 };
-,

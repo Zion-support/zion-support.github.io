@@ -1,34 +1,33 @@
-const withBundleAnalyzer = require('@next/bundle-analyzer')({,
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true'
 }),
-,
-module.exports = withBundleAnalyzer({,
+module.exports = withBundleAnalyzer({
 /** @type {import('next').NextConfig} */,
-const nextConfig = {,
+const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
-  images: {,
+  images: {
     domains: ['images.unsplash.comvia.placeholder.com'],
     formats: ['image/webpimage/avif']
   },
-  experimental: {,
+  experimental: {
     optimizeCss: true,
     optimizePackageImports: ['@mui/material@mui/icons-material']
   },
-  webpack: (config, { dev, isServer }) => {,
-    if (!dev && !isServer) {,
-      config.optimization.splitChunks = {,
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
         chunks: 'all',
-        cacheGroups: {,
-          vendor: {,
+        cacheGroups: {
+          vendor: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
             chunks: 'all'
           },
-          common: {,
+          common: {
             name: 'common',
             minChunks: 2,
             chunks: 'all',
@@ -47,4 +46,3 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.e
     return config
   }
 }),
-,

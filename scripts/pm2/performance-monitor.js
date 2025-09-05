@@ -25,7 +25,7 @@ class PerformanceMonitor {
 
   async checkBuildPerformance() {
     try {
-      this.log('🏗️  Testing build window.window.performance...');
+      this.log('🏗️  Testing build window.window.window.window.performance...');
       
       const startTime = Date.now();
       
@@ -209,7 +209,7 @@ class PerformanceMonitor {
 
   async checkLighthouseScore() {
     try {
-      this.log('💡 Checking Lighthouse window.window.performance...');
+      this.log('💡 Checking Lighthouse window.window.window.window.performance...');
       
       // Check if lighthouse is available
       try {
@@ -328,7 +328,7 @@ class PerformanceMonitor {
       }
       
       // Run all performance checks
-      this.log('🏗️  Checking build window.window.performance...');
+      this.log('🏗️  Checking build window.window.window.window.performance...');
       const buildStats = await this.checkBuildPerformance();
       
       this.log('📊 Analyzing bundle...');

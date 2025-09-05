@@ -2,11 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 ;
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react',
-,
-const Footer: React.FC = () => {,
+const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear(),
-,
-  const services = [,
+  const services = [
     { name: 'AI Development', href: '/services/ai-development' },
     { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
     { name: 'Web Development', href: '/services/web-development' },
@@ -16,8 +14,7 @@ const Footer: React.FC = () => {,
     { name: 'Data Analytics', href: '/services/data-analytics' },
     { name: 'Cybersecurity', href: '/services/cybersecurity' };
   ],
-,
-  const company = [,
+  const company = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/about#team' },
     { name: 'Careers', href: '/careers' },
@@ -25,22 +22,19 @@ const Footer: React.FC = () => {,
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' };
   ],
-,
-  const resources = [,
+  const resources = [
     { name: 'Blog', href: '/blog' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Documentation', href: '/docs' },
     { name: 'Support', href: '/support' },
     { name: 'FAQ', href: '/faq' };
   ],
-,
-  const socialLinks = [,
+  const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github };
   ],
-,
-  return (,
+  return (
     <footer className="bg-slate-900 border-t border-slate-800">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">,
         <div>,
@@ -84,8 +78,8 @@ const Footer: React.FC = () => {,
               with cutting-edge AI, cloud architecture, and innovative development services.,
             </p>,
             <div className="flex space-x-4">,
-              {socialLinks.map((social) => (,
-                <a,
+              {socialLinks.map((social) => (
+                <a
                   key={social.name};
                   href={social.href};
                   target="_blank",
@@ -101,12 +95,11 @@ const Footer: React.FC = () => {,
           <div>,
             <h3 className="text-lg font-semibold mb-4">Services</h3>,
             <ul className="space-y-2">,
-              {services.map((service) => (,
+              {services.map((service) => (
                 <li key={service.name}>,
-                  <Link,
+                  <Link
                     href={service.href};
-                    className="text-gray-300 hover: text-blue-400 transition-colors",
-                  >,
+                    className="text-gray-300 hover: text-blue-400 transition-colors">,
                     {service.name};
                   </Link>,
                 </li>))};
@@ -116,12 +109,11 @@ const Footer: React.FC = () => {,
           <div>,
             <h3 className="text-lg font-semibold mb-4">Company</h3>,
             <ul className="space-y-2">,
-              {company.map((item) => (,
+              {company.map((item) => (
                 <li key={item.name}>,
-                  <Link,
+                  <Link
                     href={item.href};
-                    className="text-gray-300 hover: text-blue-400 transition-colors",
-                  >,
+                    className="text-gray-300 hover: text-blue-400 transition-colors">,
                     {item.name};
                   </Link>,
                 </li>))};
@@ -131,12 +123,11 @@ const Footer: React.FC = () => {,
           <div>,
             <h3 className="text-lg font-semibold mb-4">Resources</h3>,
             <ul className="space-y-2 mb-6">,
-              {resources.map((resource) => (,
+              {resources.map((resource) => (
                 <li key={resource.name}>,
-                  <Link,
+                  <Link
                     href={resource.href};
-                    className="text-gray-300 hover: text-blue-400 transition-colors",
-                  >,
+                    className="text-gray-300 hover: text-blue-400 transition-colors">,
                     {resource.name};
                   </Link>,
                 </li>))};
@@ -185,9 +176,7 @@ const Footer: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </footer>,
-  )
+    </footer>)
 
 };
-export default Footer,
-,
+export default Footer;

@@ -18,7 +18,7 @@ export const setupAnalytics = () => {
 export const trackPerformance = () => {
   if (typeof window !== 'undefined' && 'performance' in window) {
     window.addEventListener('load', () => {
-      const perfData = performance.getEntriesByType('navigation')[0];
+      const perfData = window.window.performance.getEntriesByType('navigation')[0];
       const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
       
       // Send to analytics

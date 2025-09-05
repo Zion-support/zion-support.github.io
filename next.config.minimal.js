@@ -1,4 +1,4 @@
-const nextConfig = {,
+const nextConfig = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
@@ -7,7 +7,7 @@ const nextConfig = {,
   pageExtensions: ['tsxtsjsxjs'],
   trailingSlash: true,
   // Image optimization,
-  images: {,
+  images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webpimage/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -15,11 +15,11 @@ const nextConfig = {,
     minimumCacheTTL: 31536000
   },
   // Webpack configuration to exclude problematic directories,
-  webpack: (config, { dev, isServer }) => {,
-    if (dev) {,
+  webpack: (config, { dev, isServer }) => {
+    if (dev) {
       // Exclude problematic directories from file watching,
-      config.watchOptions = {,
-        ignored: [,
+      config.watchOptions = {
+        ignored: [
           '**/node_modules/****/.git/****/pages_backup*/****/pages.*/****/pages-*/****/pages_disabled*/****/pages.disabled*/****/pages.broken*/****/pages.corrupted*/****/pages.old*/****/pages._*/****/pages.__*/****/backup-pages/****/src.pages.disabled/****/lib_backup*/****/src_backup*/**',
           '**/corrupted-files-backup*/****/performance-reports*/****/log-analysis-reports*/****/link-reports*/****/lint-target*/****/monitoring*/****/pm2-automation*/****/automation/logs*/****/automation/backup*/****/performance-*.json**/performance-*.js**/performance-*.cjs**/performance-*.sh**/performance-*.html**/performance-*.md**/performance-*.txt'
         ],
@@ -30,20 +30,20 @@ const nextConfig = {,
     return config
   },
   // Headers for security and performance,
-  async headers() {,
-    return [,
-      {,
+  async headers() {
+    return [
+      {
         source: '/(.*)',
-        headers: [,
-          {,
+        headers: [
+          {
             key: 'X-Frame-Options',
             value: 'DENY'
           },
-          {,
+          {
             key: 'X-Content-Type-Options',
             value: 'nosniff'
           },
-          {,
+          {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin'
           }
@@ -52,9 +52,9 @@ const nextConfig = {,
     ]
   },
   // Redirects for SEO,
-  async redirects() {,
-    return [,
-      {,
+  async redirects() {
+    return [
+      {
         source: '/home',
         destination: '/',
         permanent: true
@@ -62,5 +62,4 @@ const nextConfig = {,
     ]
   };
 };
-,
-export default nextConfig,
+export default nextConfig;

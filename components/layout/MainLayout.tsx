@@ -3,7 +3,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
-interface MainLayoutProps {;
+interface MainLayoutProps {
   title: string;
   description: string;
   children: React.ReactNode,
@@ -15,13 +15,13 @@ interface MainLayoutProps {;
   nofollow?: boolean,
   canonical?: string
 };
-const MainLayout: React.FC<MainLayoutProps> = ({,
+const MainLayout: React.FC<MainLayoutProps> = ({
   children,
   title = "Zion Tech Group - Leading Technology Solutions Provider",
   description = "Transform your business with cutting-edge AI, IT services, and micro SaaS solutions. Expert technology consulting and implementation services.",
   keywords = "technology solutions, AI services, IT consulting, micro SaaS, cloud computing, digital transformation, cybersecurity, software development"
-}) => {,
-const MainLayout: React.FC<MainLayoutProps> = ({,
+}) => {
+const MainLayout: React.FC<MainLayoutProps> = ({
   children,
   title,
   description,
@@ -32,8 +32,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({,
   noindex = false,
   nofollow = false,
   canonical
-}) => {,
-  return (,
+}) => {
+  return (
     <>,
       <Head>,
         <title>{title || 'Zion Tech Group'}</title>,
@@ -84,9 +84,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({,
         </main>,
         <Footer />,
       </div>,
-    </>,
-  )
+    </>)
 };
-,
-export default MainLayout,
-,
+export default MainLayout;

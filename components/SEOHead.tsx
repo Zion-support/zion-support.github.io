@@ -8,7 +8,7 @@ interface SEOHeadProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: Record<string, unknown>;
+  structuredData?: Record<string unknown>;
   noindex?: boolean;
   nofollow?: boolean;
 }

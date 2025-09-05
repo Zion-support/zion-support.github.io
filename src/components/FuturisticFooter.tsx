@@ -16,7 +16,6 @@ import {};
 } from 'lucide-react,
 const FuturisticFooter: React.FC = () => {};
   const currentYear = new Date().getFullYear(),
-,
   const footerSections = [],
     {'};
       title: 'Services,
@@ -73,13 +72,11 @@ const FuturisticFooter: React.FC = () => {};
       ]
     };
   ],
-,
   const socialLinks = ['],
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },'',
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },'',
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }']
   ],
-,
   return ('),
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">",
 </footer>",
@@ -128,8 +125,7 @@ const FuturisticFooter: React.FC = () => {};
                 initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }};
                 transition={{ duration: 0.6 }}",
-                className="flex items-center space-x-3 mb-6"",
-              >,
+                className="flex items-center space-x-3 mb-6"">,
 </motion>",
                 <div className="relative">",
 </div>",
@@ -187,10 +183,9 @@ const FuturisticFooter: React.FC = () => {};
 </ul>,
                     <li key={link.name}>,
 </li>,
-                      <Link,
+                      <Link
                         href={link.href}",
-                        className="flex items-center text-slate-400 hover: text-cyan-400 transition-colors duration-200 group"",
-                      >,
+                        className="flex items-center text-slate-400 hover: text-cyan-400 transition-colors duration-200 group"">,
 </Link>",
                         <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hover:bg-cyan-400 transition-colors duration-200"></div>"",
                         <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />",

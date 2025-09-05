@@ -17,7 +17,7 @@ class UltimateAutomationFactory {
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logMessage);
+    // // console.log(logMessage);
     
     const logFile = path.join(this.logsDir, 'ultimate-automation.log');
     fs.appendFileSync(logFile, logMessage + '\n');
@@ -103,7 +103,7 @@ class UltimateAutomationFactory {
 if (import.meta.url === `file://${process.argv[1]}`) {
   const factory = new UltimateAutomationFactory();
   factory.start().then(report => {
-    console.log('Ultimate Automation Factory completed:', report.summary);
+    // // console.log('Ultimate Automation Factory completed:', report.summary);
     process.exit(0);
   }).catch(error => {
     console.error('Ultimate Automation Factory failed:', error);
