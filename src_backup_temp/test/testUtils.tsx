@@ -1,7 +1,3 @@
-<<<<<<< HEAD:src/test/testUtils.tsx
-=======
-<<<<<<< HEAD
-=======
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 <<<<<<< HEAD
@@ -46,6 +42,7 @@ export default {;
   waitForElementToBeRemoved,;
   waitForElementToAppear;
 =======
+>>>>>>> origin/main
 // Test wrapper with providers
 export const "TestWrapper": React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -59,12 +56,10 @@ export const renderWithProviders = (props: any) => {
   return render(ui, { wrapper: TestWrapper }
     );
 };
-
 =======
+>>>>>>> origin/main
 export const renderWithProviders = ("ui": React.ReactElement) => {
   return render(ui, { "wrapper": TestWrapper })};
->>>>>>> main
->>>>>>> main:src_backup_temp/test/testUtils.tsx
 // Mock data generators
 export const mockUser = {
   "id": '1',
@@ -87,7 +82,9 @@ export default {
   mockMessage,
   waitForElementToBeRemoved,
   waitForElementToAppear
->>>>>>> main
 };
+<<<<<<< HEAD
 import { render,screen,fireEvent,waitFor } from '@testing-library/react'; import { BrowserRouter } from 'react-router-dom'; export const TestWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => { return ( <BrowserRouter> {children} </BrowserRouter> )};; export const renderWithProviders = (ui: React.ReactElement) => { return render(ui,{ wrapper: TestWrapper })};; export const mockUser = { id: '1',name: 'Test User',email: 'test@example.com',role: 'user' };; export const mockMessage = { id: '1',text: 'Test message',sender: 'user' as const,timestamp: new Date() };; export const waitForElementToBeRemoved = waitFor; export const waitForElementToAppear = waitFor; export default { renderWithProviders,mockUser,mockMessage,waitForElementToBeRemoved,waitForElementToAppear };
->>>>>>> main
+=======
+import { render,screen,fireEvent,waitFor } from '@testing-library/react'; import { BrowserRouter } from 'react-router-dom'; export const TestWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => { return ( <BrowserRouter> {children} </BrowserRouter> )};; export const renderWithProviders = (ui: React.ReactElement) => { return render(ui,{ wrapper: TestWrapper })};; export const mockUser = { id: '1',name: 'Test User',email: 'test@example.com',role: 'user' };; export const mockMessage = { id: '1',text: 'Test message',sender: 'user' as const,timestamp: new Date() };; export const waitForElementToBeRemoved = waitFor; export const waitForElementToAppear = waitFor; export default { renderWithProviders,mockUser,mockMessage,waitForElementToBeRemoved,waitForElementToAppear };
+>>>>>>> origin/main

@@ -1,13 +1,11 @@
 import React, { useState } from "react";
   Crown, Rocket,;
   Building} from "lucide-react";
-
  * PricingSection function;
  * @param {*} params - Function parameters;
  * @returns {*} Function return value;
  */;
 function PricingSection("props": "any) {;
-
       "icon": Shiel d;
     "};  ];
 const pricingTiers = [{;
@@ -27,16 +25,12 @@ return (<section className="py-20 bg-gradient - to - br from - slate - 900 via -
       <div className="max - w-7xl mx - auto px-6">;
         <motion.div;
           className="text-center mb-16"          initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition={{ "duration": "0.6 "}}
@@ -84,7 +78,6 @@ initial="{{" "opacity": "0", "scale": "0.8 "}}";
 ;
           </div>;
         </motion.div>;
-
         {/* comment */}";
         <div className="{"grid" grid-cols-1 "md": "gri d-cols-3 gap-8">",;
           {plans.map((plan, index) => {;
@@ -134,6 +127,7 @@ key = "{plan.name}"";
                         {plan.originalPrice && (";
                           <span className="{"text-lg" text-zion-slate-light line-through">;
 =======
+>>>>>>> origin/main
                   </div> {/* comment */}"
                 <div className="{"relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: borde r-zion-cyan/50 hover: b g-zion-blue-light/20 transition-all duration-300 hover: shado w-2xl hover: shado w-zion-cyan/20 ${">
                   plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}"}>
@@ -152,7 +146,6 @@ key = "{plan.name}"";
                         <span className=""text-zion-slate-light"}">/month</span>
                         {plan.originalPrice && ("
                           <span className="{"text-lg" text-zion-slate-light line-through">
->>>>>>> main
                             ${plan.originalPrice}
 ;
                           </span>;
@@ -202,23 +195,17 @@ whileHover="{{" "scale": "1.02 "}}";
 ;
 <motion.div;
           className="mt-16 text-center"          initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition = {;
-
   { "duration": "0.6",;
   "delay": "0.4;
-
 "}}
 >";
           <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">";
@@ -260,7 +247,6 @@ export default function PricingSection("props": "any) {return (";
         </p>;
       </div>;
   );""}";
-
 <<<<<<< HEAD
 </div>;
 </motion>;
@@ -274,6 +260,8 @@ export default function PricingSection("props": "any) {return (";
 </div>;
 </div>;
 =======
+
+>>>>>>> origin/main
 }}
 >"
           <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">"
@@ -315,7 +303,6 @@ export default function PricingSection(props: any) {return ("
         </p>
       </div>
     );"}"
-
 </div>
 </motion>
 </motion>
@@ -327,5 +314,4 @@ export default function PricingSection(props: any) {return ("
 </motion>
 </div>
 </div>
->>>>>>> main
 </section>

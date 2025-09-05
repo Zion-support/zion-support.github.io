@@ -68,14 +68,6 @@ const {applications, isLoading, updateApplicationStatus} =;
     const sourceColumn = [...columns[source.droppableId]];
     const destColumn = [...columns[destination.droppableId]];
     const [removed] = sourceColumn.splice(source.index, 1);
-<<<<<<< HEAD
-    destColumn.splice(destination.index, 0, {...removed, "status": "newStatus"});
-    setColumns({...columns,;
-      [source.droppableId]: "sourceColumn",;
-      [destination.droppableId]: "destColumn"});
-    // Update status in the database;
-    try {;
-=======
     destColumn.splice(destination.index, 0, {...removed, status: newStatus}
     );
     setColumns({...columns,
@@ -84,21 +76,9 @@ const {applications, isLoading, updateApplicationStatus} =;
     );
     // Update status in the database
     try {
->>>>>>> main
       await updateApplicationStatus(draggableId, newStatus);
       toast({;
 
-<<<<<<< HEAD
-        "title": 'Status updated',;
-        "description": "`Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title"}`});
-    } catch(error) {;
-      // Revert the UI changes if the database update fails;
-      toast({;
-
-        "title": 'Failed to update status',;
-        "description": 'Please try again',;
-        "variant": 'destructive'});
-=======
         title: 'Status updated',
         description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`}
     );
@@ -110,7 +90,6 @@ const {applications, isLoading, updateApplicationStatus} =;
         description: 'Please try again',
         variant: 'destructive'}
     );
->>>>>>> main
     }
   };
   if(isLoading) {;
@@ -132,16 +111,6 @@ const {applications, isLoading, updateApplicationStatus} =;
       </div>;
     );
   }
-<<<<<<< HEAD
-  if(!applications || applications.length === 0) {return (";
-      <Card className="text-center py-16">;
-        <CardContent>";
-          <h3 className="text-lg font-semibold mb-2">No applications yet</h3>";
-          <p className="text-muted-foreground mb-6">;
-            You haven't received applications for this job yet.</p>;
-        </CardContent>;
-      </Card>;
-=======
   if(!applications || applications.length === 0) {return ("
       <Card className="text-center py-16">
         <CardContent>"
@@ -150,7 +119,6 @@ const {applications, isLoading, updateApplicationStatus} =;
             You haven't received applications for this job yet.</p>
         </CardContent>
       </Card>
->>>>>>> main
     );}
   return ();
     <DragDropContext onDragEnd={handleDragEnd}>;

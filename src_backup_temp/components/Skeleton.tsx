@@ -18,9 +18,9 @@ export default function Skeleton("props": "any) {;
     return (;
     <div className="min-h-screen bg-white">;
 =======
+>>>>>>> origin/main
     return (
         <div className="min-h-screen bg-white">
->>>>>>> main
   );
 "}
       />;
@@ -30,9 +30,9 @@ export default function Skeleton("props": "any) {;
     </div>;
   );
 =======
+>>>>>>> origin/main
     </div>
     );
->>>>>>> main
 }
 ;
   return (';
@@ -53,6 +53,7 @@ export default function Skeleton("props": "any) {if (lines === 1) {;
     </div>;
   );
 =======
+>>>>>>> origin/main
 interface SkeletonProps {
 className?: string;
   lines?: number
@@ -64,7 +65,6 @@ export default function Skeleton(props: any) {if (lines === 1) {
       )}
     </div>
     );
->>>>>>> main
 }
 "';
   return (""';';
@@ -90,9 +90,9 @@ export default function Skeleton("props": "any) {;
     </div>;
   );
 =======
+>>>>>>> origin/main
     </div>
     );
->>>>>>> main
 }
       />;
     );
@@ -105,13 +105,13 @@ export default function Skeleton("props": "any) {;
     <div className="min-h-screen bg-white">;
       {Array.from({ "length": "line s   "}).map((_, i) => (;
 =======
+>>>>>>> origin/main
     </div>
     );
 }
   return (
         <div className="min-h-screen bg-white">
       {Array.from({ length: line s   }).map((_, i) => (
->>>>>>> main
   return (&apos;
     <div className=&quot;space-y-2&quot;>;
       {Array.from({ "length": "line s "}).map((_, i) => (&quot;';
@@ -127,6 +127,7 @@ export default function Skeleton("props": "any) {;
     </div>;
   );
 =======
+>>>>>>> origin/main
     'animate-pulse bg-gray-200 rounded h-4', i === lines - 1 ? 'w-3/4' : 'w-full'
           className={cn(
             &apos;animate-pulse bg-gray-200 rounded h-4&apos,
@@ -134,7 +135,6 @@ export default function Skeleton("props": "any) {;
       )}
     </div>
     );
->>>>>>> main
 }
         />;
       ))}&apos;
@@ -152,6 +152,7 @@ export default function Skeleton("props": "any) {;
     </div>;
   );
 =======
+>>>>>>> origin/main
     </div>
     );
 }
@@ -161,7 +162,6 @@ export default function Skeleton("props": "any) {;
       )}
     </div>
     );
->>>>>>> main
 }
 "";
   return ("";
@@ -177,9 +177,9 @@ export default function Skeleton("props": "any) {;
     </div>;
   );
 =======
+>>>>>>> origin/main
     </div>
     );
->>>>>>> main
 }
     </div>""';
   )}""';';
@@ -193,9 +193,9 @@ export default function Skeleton("props": "any) {;
     </div>;
   );
 =======
+>>>>>>> origin/main
     </div>
     );
->>>>>>> main
 }
       />;
     );
@@ -204,9 +204,9 @@ export default function Skeleton("props": "any) {;
     </div>;
   );';
 =======
+>>>>>>> origin/main
     </div>
     );';
->>>>>>> main
 }';';
   return (';';';
     <div className="min-h-screen bg-white">',';';
@@ -230,9 +230,9 @@ export default function Skeleton("props": "any) {;
     </div>;
   );
 =======
+>>>>>>> origin/main
     </div>
     );
->>>>>>> main
 }
         />;
       ));
@@ -244,12 +244,12 @@ export default function Skeleton("props": "any) {;
     </div>;
   );
 =======
+>>>>>>> origin/main
     </div>
     );
 }
     </div>
     );
->>>>>>> main
 }
   );
       )}
@@ -257,9 +257,9 @@ export default function Skeleton("props": "any) {;
     </div>;
   );
 =======
+>>>>>>> origin/main
     </div>
     );
->>>>>>> main
 }
         />;
       ));
@@ -268,9 +268,9 @@ export default function Skeleton("props": "any) {;
     </div>;
   );
 =======
+>>>>>>> origin/main
     </div>
     );
->>>>>>> main
 }
     </div>";
   )}"";

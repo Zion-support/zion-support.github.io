@@ -69,6 +69,7 @@ useEffect(() => {;
 "}
       const isTabletDevice = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(userAgent);
 =======
+>>>>>>> origin/main
 import React from "react"
 ;,"}
     );,"})framer-motion";react
@@ -91,7 +92,6 @@ import React from "react"
   ArrowDown,
   ArrowLeft,"
   ArrowRight} from "lucide-react"
-
 import { Smartphone, Tablet, Monitor, 
 export default function Page(props: any) {
  | null>(null);
@@ -124,7 +124,6 @@ useEffect(() => {
     const checkDevice = (props: any) => {
       const userAgent = navigator.userAgent
       const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)
->>>>>>> main
 }
       setIsMobile(isMobileDevice);
 }
@@ -148,6 +147,7 @@ export const "MobileExperienceEnhancer": "Reac t.FC<MobileExperienceEnhancerProp
 }
   const [touchStart, setTouchStart] = useState<{ "x": "number", "y": "number", "time": "number   "} | null>(null);
 =======
+>>>>>>> origin/main
       // comment
 if (window.innerHeight > window.innerWidth) {"
         setDeviceOrientation("portrait"),"} else: {",
@@ -162,7 +162,6 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   const [isTablet, setIsTablet] = useState<any>(false);""
   const [isTablet, setIsTablet] = useState<any>(false)"
   const [deviceOrientation, setDeviceOrientation] = useState<"portrait" | "landscape">("portrait")
->>>>>>> main
 }
   const [touchEnd, setTouchEnd] = useState<{ "x": "number", "y": "number", "time": "number   "} | null>(null);
 }
@@ -273,7 +272,6 @@ window.removeEventListener('resize', handleResize);
   // Touch gesture handling;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -367,19 +365,15 @@ gesture.direction = deltaX > 0 ? "right" : "left";
           ;
 // Handle horizontal navigation';
           if(gesture.direction === 'left') {;
-
             // Swipe left - go forward;
             if(window.history.length > 1) {;
-
               window.history.forward();
             }
           } else if(gesture.direction === 'right') {;
             // Swipe right - go back;
             if(window.history.length > 1) {;
-
               window.history.back()}          }
         } else {;
-
           // Vertical swipe';
           gesture.direction = deltaY > 0 ? 'down' : 'up';
 // comment;
@@ -421,11 +415,8 @@ window.scrollTo({ "top": "documen t.body.scrollHeight", "behavior": "&apos",smoo
 setGestureHistory(prev => [gesture, ...prev.slice(0, 9)]);
 }
         // comment;
-
         // comment;
-
         // comment;
-
       setTouchStart(null);
 }
       setTouchEnd(null)}
@@ -507,6 +498,7 @@ const searchInput = document.querySelector("input[type="search"]") as HTMLInputE
       document.removeEventListener("touchmove", handleTouchMove);"";
       document.removeEventListener("touchend", handleTouchEnd)}}, [enabled, enableSwipeNavigation, touchStart]);
 =======
+>>>>>>> origin/main
   // comment
       setTouchEnd(null)};"""
     document.addEventListener("touchstart", handleTouchStart { passive: fals e }
@@ -516,7 +508,6 @@ const searchInput = document.querySelector("input[type="search"]") as HTMLInputE
       document.removeEventListener("touchstart", handleTouchStart);"""
       document.removeEventListener("touchmove", handleTouchMove);""
       document.removeEventListener("touchend", handleTouchEnd)}}, [enabled, enableSwipeNavigation, touchStart])
->>>>>>> main
 }
   // comment;
 const handleMobileNavigation = useCallback(("action": "string) => {switch (action) {;
@@ -580,19 +571,16 @@ searchInput.focus()}
         break;
       case 'back':;
         if(window.history.length > 1) {;
-
           window.history.back()"}
         break;
       case 'forward': ";
         if(window.history.length > 1) {;
-
           window.history.forward()"}
         break}  }, [showMobileMenu]);
 ;
   // Mobile - specific optimizations;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -605,7 +593,6 @@ searchInput.focus()}
     // Optimize viewport for mobile'";
     ;
     if(viewport) {;
-
     // Add touch-action CSS for better touch handling;
     const style = document.createElement('style') ;
     style.textContent = `;
@@ -628,7 +615,6 @@ searchInput.focus()}
     `;    document.head.appendChild(style) ;
 ;
     return () => {;
-
       document.documentElement.classList.remove('mobile-device');
       if(style.parentNode) {;
 style.parentNode.removeChild(style)}
@@ -766,6 +752,7 @@ initial = "{{" "y": "-100 "}}";
                 aria-label=""Close": "men u""",",",",;
                 <"X": "classNam e="w-5 h-5" />"",",",;
 =======
+>>>>>>> origin/main
             initial = "{{" opacity:  ,0, x: "100%"}}",";
             animate = "{{" opacity:  ,1, x: 0}}";
             exit = "{{" opacity:  ,0, x: "100%"}}",";
@@ -776,7 +763,6 @@ initial = "{{" "y": "-100 "}}";
                 className="p-2 rounded-lg bg-slate-100 dark: b g-slate-700: hove r:bg-slate-200: dar k:hover: b g-slate-600: transitio n-colors"",";";";
                 aria-label="Close: men u"",",",",;
                 <X: classNam e="w-5 h-5" />",",",;
->>>>>>> main
       )} {/*   */}" {showMobileMenu && isMobile && ("";
           <motion .div""";
             initial = "{{" "opacity": "0", "x": "100%" }}";
@@ -804,6 +790,7 @@ initial = "{{" "y": "-100 "}}";
             <div className="&quot;flex" items-center justify-between p-4 border-b border-slate-200 "dark": "borde r-slate-700&quot",>&quot,"";
               <h3 className = "&quot,text-lg" font-semibold text-slate-900 dar,"k": "tex t-white&quot",>Menu&quot,</h3>";
 =======
+>>>>>>> origin/main
     k: tex t-white">Menu",;
                 onClick="{()" => setShowMobileMenu(false)}"";
                 className="p-2 rounded-lg bg-slate-100 dark: b g-slate-700 hover: b g-slate-200 dark: hove r:bg-slate-600 transition-colors""";
@@ -820,7 +807,6 @@ initial = "{{" "y": "-100 "}}";
             className="&quot;fixed" top-0 right-0 bottom-0 w-80 bg-white dark: b g-slate-800 border-l border-slate-200 dark: borde r-slate-700 shadow-xl z-50&quot,",;
             <div className="&quot;flex" items-center justify-between p-4 border-b border-slate-200 dark: borde r-slate-700&quot,>&quot,"";
               <h3 className = "&quot,text-lg" font-semibold text-slate-900 dar,k: tex t-white&quot,>Menu&quot,";
->>>>>>> main
                 onClick="{()" => setShowMobileMenu(false)}";
                 className="&quot;p-2" rounded-lg bg-slate-100 "dark": "b g-slate-700 "hover": b g-slate-200 "dark": hove "r":bg-slate-600 transition-colors&quot;";
                 aria-label="&quot;Close" menu&quot;";
@@ -1016,6 +1002,7 @@ initial="{{" "opacity": ",0", "scale": "0.8"}}";
 ",;
 =======
 
+>>>>>>> origin/main
       <AnimatePresence>
         {showMobileMenu && isMobile && ("
             initial = "{{" opacity:  ,0, x: "100%"}}","
@@ -1126,7 +1113,6 @@ initial="{{" "opacity": ",0", "scale": "0.8"}}";
                   <span className="text-slate-900 dark: tex t-white">Contact</span>
       </AnimatePresence>
 ,
->>>>>>> main
       {/* comment */}
 ;
 {/* Device Info Indicator(Development Only) */}
@@ -1295,6 +1281,7 @@ initial="{{" "opacity": "0", "scale": "0.8 "}}";
                 Got it!&quot,;
 =======
 
+>>>>>>> origin/main
         {showGestureGuide && isMobile && (}"
             initial="{{" opacity:  ,0, scale: 0.9}}"
             exit="{{" opacity:  ,0, scale: 0.9}}"
@@ -1413,7 +1400,6 @@ initial="{{" "opacity": "0", "scale": "0.8 "}}";
               <button onClick = "{()" =" > setShowGestureGuide(false)}""
                 className="w-full mt-6 px-4 py-2 bg-blue-600 text-white rounded-lg hover: b g-blue-700 transition-colors",
                 Got it!&quot,
->>>>>>> main
       {/* comment */}
 ;
       {process.env.NODE_ENV === "development" && (isMobile || isTablet) && (",";
@@ -1454,7 +1440,6 @@ initial="{{" "opacity": "0", "scale": "0.8 "}}";
             {gestureHistory.slice(0, 5).map((gesture, index) => (""";
               <div key="{index}" className="flex items-center space-x-2">""";
                 <Touch className="w-3 h-3" /" >;
-
       {/* comment */}
 ;
       {process.env.NODE_ENV === "development" && showGestures && gestureHistory.length > 0 && (",";
@@ -1508,7 +1493,6 @@ export default MobileExperienceEnhancer;""";
 export default MobileExperienceEnhancer,";
 export default MobileExperienceEnhancer;"";
 export default MobileExperienceEnhancer,"""";
-
 </Touch>;
 </div>;
 </div>;

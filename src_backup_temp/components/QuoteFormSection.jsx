@@ -1,15 +1,4 @@
 import React, {useState} from 'react';
-<<<<<<< HEAD
-import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = ("props": "any) => {;
-  const [formData", setFormData] = useState({;
-    "name": '',;
-    "email": '',;
-    "phone": '',;
-    "comp": '',;
-    "service": '',;
-    "message": '';
-  });
-=======
 import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = (props: any) => {
   const [formData, setFormData] = useState({
     name: '',
@@ -20,7 +9,6 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
     message: ''
   }
     );
->>>>>>> main
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 ;
@@ -32,15 +20,6 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
     'Cloud Migration',;
     'Custom Solution';
   ];
-<<<<<<< HEAD
-;
-  const handleChange = ("props": "any) => {;
-    const { name", value } = e.target;
-    setFormData(prev => ({...prev,;
-      [name]: "value"}))};
-;
-  const handleSubmit = async (e) => {;
-=======
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -48,7 +27,6 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
       [name]: value}))};
 
   const handleSubmit = async (e) => {
->>>>>>> main
     e.preventDefault();
     setIsSubmitting(true);
 ;
@@ -111,19 +89,6 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
               no-obligation quote tailored to your business requirements.;
             </p>;
 
-<<<<<<< HEAD
-            <div className="space-y-6">;
-              <div className="flex items-start space-x-4">;
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">;
-                  <Mail className="w-6 h-6 text-blue-600"  />;
-                </div>;
-                <div>;
-                  <h3 className="font-semibold text-gray-900">Email Us</h3>;
-                  <p className="text-gray-600">quotes@zion.com</p>;
-                  <p className="text-sm text-gray-500">We respond within 24 hours</p>;
-                </div>;
-              </div>;
-=======
   if (isSubmitted) {return (
       <section className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -150,7 +115,6 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
         </div>
       </section>
     )}
->>>>>>> main
 
               <div className="flex items-start space-x-4">;
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">;
@@ -163,37 +127,6 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                 </div>;
               </div>;
 
-<<<<<<< HEAD
-              <div className="flex items-start space-x-4">;
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">;
-                  <MapPin className="w-6 h-6 text-purple-600"  />;
-                </div>;
-                <div>;
-                  <h3 className="font-semibold text-gray-900">Visit Us</h3>;
-                  <p className="text-gray-600">123 Tech Street, Suite 100</p>;
-                  <p className="text-sm text-gray-500">New York, NY 10001</p>;
-                </div>;
-              </div>;
-            </div>;
-
-            <div className="mt-8 bg-blue-50 rounded-2xl p-6">;
-              <h3 className="font-semibold text-gray-900 mb-3">Why Choose Zion?</h3>;
-              <ul className="space-y-2 text-sm text-gray-600">;
-                <li>• 15+ years of IT service experience</li>;
-                <li>• Certified technicians and engineers</li>;
-                <li>• 24/7 emergency support available</li>;
-                <li>• Competitive pricing with no hidden fees</li>;
-                <li>• Satisfaction guaranteed or your money back</li>;
-              </ul>;
-            </div>;
-          </div>;
-
-          {/* Quote Form */}
-          <div className="bg-white rounded-3xl p-8 shadow-2xl">;
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">;
-              Request Your Quote;
-            </h3>;
-=======
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -246,7 +179,6 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
               Request Your Quote
             
->>>>>>> main
 
             <form onSubmit={handleSubmit} className="space-y-6">;
               <div className="grid grid-cols-1 "sm": "grid-cols-2 gap-4">;

@@ -36,7 +36,7 @@ export default function Footer({ className = '' }: FooterProps) {
     { name: 'AI Services', href: '/ai-services', icon: Brain },
     { name: 'IT Services', href: '/it-services', icon: Code },
     { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
-    { name: 'Cybersecurity', href: '/security', icon: Shield },
+    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
     { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
     { name: 'Database Solutions', href: '/database-solutions', icon: Database }
   ];
@@ -61,18 +61,20 @@ export default function Footer({ className = '' }: FooterProps) {
 
   const resources = [
     { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'White Papers', href: '/white-papers' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Tutorials', href: '/tutorials' },
     { name: 'Documentation', href: '/docs' },
     { name: 'API Reference', href: '/api-docs' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'White Papers', href: '/white-papers' },
-    { name: 'Webinars', href: '/webinars' }
+    { name: 'Request Demo', href: '/demo' }
   ];
 
   const legal = [
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
     { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'Security', href: '/security' },
+    { name: 'Security', href: '/cybersecurity' },
     { name: 'Compliance', href: '/compliance' },
     { name: 'Accessibility', href: '/accessibility' }
   ];

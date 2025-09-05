@@ -15,6 +15,7 @@ export default function Wishlistslice("props": "any) {;
 "}
 =======
 
+>>>>>>> origin/main
 export default function Wishlistslice(props: any) {
   return (
         <div className="min-h-screen bg-white">
@@ -26,5 +27,8 @@ export default function Wishlistslice(props: any) {
       </div>
     </div>
     );
+<<<<<<< HEAD
 }
->>>>>>> main
+=======
+}
+>>>>>>> origin/main

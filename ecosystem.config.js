@@ -177,6 +177,7 @@ export default {
     }
   ],
 =======
+>>>>>>> origin/main
 module.exports = {
   apps: [{
     name: "ziontechgroup-site",
@@ -199,5 +200,4 @@ module.exports = {
     log_file: "./logs/combined.log",
     time: true
   }]
->>>>>>> main
 };

@@ -1,7 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
-
 const MicroSaaS: React.FC = () => {
   const microSaaSServices = [
     {
@@ -293,9 +292,7 @@ const MicroSaaS: React.FC = () => {
       category: "Document Management"
     }
   ];
-
   const categories = [...new Set(microSaaSServices.map(service => service.category))];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       <title>Micro SAAS Services - Zion Tech Group</title>
@@ -325,7 +322,6 @@ const MicroSaaS: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Contact Info Banner */}
         <div className="bg-gray-900 text-white py-4">
           <div className="container mx-auto px-4 text-center">
@@ -336,7 +332,6 @@ const MicroSaaS: React.FC = () => {
             </p>
           </div>
         </div>
-
         {/* Services Grid */}
         <div className="container mx-auto px-4 py-16">
           {/* Category Filter */}
@@ -356,7 +351,6 @@ const MicroSaaS: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaaSServices.map((service, index) => (
@@ -368,10 +362,8 @@ const MicroSaaS: React.FC = () => {
                     </span>
                     <span className="text-2xl font-bold text-cyan-600">{service.price}</span>
                   </div>
-                  
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{service.name}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
-                  
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                     <ul className="text-sm text-gray-600 space-y-1">
@@ -388,7 +380,6 @@ const MicroSaaS: React.FC = () => {
                       )}
                     </ul>
                   </div>
-
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
                     <ul className="text-sm text-gray-600 space-y-1">
@@ -400,7 +391,6 @@ const MicroSaaS: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-
                   <div className="bg-gray-50 p-4 rounded-lg mb-4">
                     <div className="flex justify-between items-center text-sm">
                       <span className="text-gray-600">Market Price:</span>
@@ -411,7 +401,6 @@ const MicroSaaS: React.FC = () => {
                       <span className="text-green-600 font-bold">{service.savings}</span>
                     </div>
                   </div>
-
                   <div className="flex flex-col sm:flex-row gap-2">
                     <a 
                       href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.name}`}
@@ -431,7 +420,6 @@ const MicroSaaS: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="bg-gray-900 text-white py-16">
           <div className="container mx-auto px-4 text-center">
@@ -457,6 +445,7 @@ const MicroSaaS: React.FC = () => {
         </div>
       </div>
 =======
+>>>>>>> origin/main
 ;
 const "MicroSaaS": "React.FC = () => {;
   return (;
@@ -468,7 +457,6 @@ const "MicroSaaS": "React.FC = () => {;
         <p className="text-xl text-gray-600 text-center">Coming soon...</p>;
       </div>;
     </div>;
->>>>>>> main
   );
 "};
 ;

@@ -1,5 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD:src/pages/Solutions.tsx
+<<<<<<< HEAD
+:src/pages/Solutions.tsx
 import { Link } from 'react-router-dom';
 import { 
   Building2, 
@@ -15,7 +16,6 @@ import {
   Brain,
   Cloud
 } from 'lucide-react';
-
 export function Solutions() {
   const solutions = [
     {
@@ -83,7 +83,6 @@ export function Solutions() {
       href: '/solutions/retail'
     }
   ];
-
   const technologies = [
     {
       name: 'Artificial Intelligence',
@@ -110,7 +109,6 @@ export function Solutions() {
       color: 'from-red-600 to-orange-600'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
@@ -127,7 +125,6 @@ export function Solutions() {
           </div>
         </div>
       </section>
-
       {/* Industry Solutions */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -137,7 +134,6 @@ export function Solutions() {
               We understand that each industry has unique requirements and challenges
             </p>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {solutions.map((solution) => (
               <div key={solution.id} className="bg-gray-800/50 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 group">
@@ -166,7 +162,6 @@ export function Solutions() {
           </div>
         </div>
       </section>
-
       {/* Technology Stack */}
       <section className="py-20 bg-gray-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -176,7 +171,6 @@ export function Solutions() {
               Cutting-edge technologies powering our solutions
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {technologies.map((tech, index) => (
               <div key={index} className="text-center group">
@@ -190,7 +184,6 @@ export function Solutions() {
           </div>
         </div>
       </section>
-
       {/* Process Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -200,7 +193,6 @@ export function Solutions() {
               A proven methodology for delivering successful solutions
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -211,7 +203,6 @@ export function Solutions() {
                 We analyze your business requirements, challenges, and goals to understand your needs.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-white">2</span>
@@ -221,7 +212,6 @@ export function Solutions() {
                 We create a comprehensive solution architecture tailored to your specific requirements.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-white">3</span>
@@ -231,7 +221,6 @@ export function Solutions() {
                 Our expert team builds and implements the solution using agile methodologies.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-white">4</span>
@@ -244,7 +233,6 @@ export function Solutions() {
           </div>
         </div>
       </section>
-
       {/* Case Studies Preview */}
       <section className="py-20 bg-gray-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -254,7 +242,6 @@ export function Solutions() {
               See how we've helped businesses transform with our solutions
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
@@ -268,7 +255,6 @@ export function Solutions() {
                 Read Case Study →
               </Link>
             </div>
-
             <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
               <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
                 <DollarSign className="w-6 h-6 text-white" />
@@ -281,7 +267,6 @@ export function Solutions() {
                 Read Case Study →
               </Link>
             </div>
-
             <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
               <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
                 <Target className="w-6 h-6 text-white" />
@@ -297,7 +282,6 @@ export function Solutions() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -327,6 +311,7 @@ export function Solutions() {
   );
 }
 =======
+>>>>>>> origin/main
 ;
 const "Solutions": "React.FC = () => {;
   return (;
@@ -341,5 +326,8 @@ const "Solutions": "React.FC = () => {;
   );
 "};
 ;
+<<<<<<< HEAD
 export default Solutions;
->>>>>>> main:src_backup_temp/pages/Solutions.tsx
+=======
+export default Solutions;
+>>>>>>> origin/main

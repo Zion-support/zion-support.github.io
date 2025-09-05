@@ -12,6 +12,7 @@ export default function ProjectDetailsFields("props": "any) {return (;
       </div>;
   );""}";
 =======
+>>>>>>> origin/main
 import React from "react"
 import { SEO } from "@/components/SEO"
 export default function ProjectDetailsFields(props: any) {return (
@@ -24,6 +25,8 @@ export default function ProjectDetailsFields(props: any) {return (
         </p>
       </div>
     );"}"
->>>>>>> main
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/main
 </div>

@@ -2,16 +2,10 @@ import {Star, StarHalf} from 'lucide-react';
 export function RatingStars("props": "any) {;
     const filled = Math.floor(value);
     const half = value - filled >= 0.5;
-<<<<<<< HEAD
-    return (<div className="flex items-center" data-testid="rating-stars">;
-      {[0", 1, 2, 3, 4].map((i) => {;
-            if (i < filled) {;
-=======
     return (
         <div className="flex items-center" data-testid="rating-stars">
       {[0, 1, 2, 3, 4].map((i) => {
             if (i < filled) {
->>>>>>> main
                 return <Star key={i} data-testid="star-filled" className="h-4 w-4 text-yellow-400 fill-yellow-400" />;
             }
             if (i === filled && half) {;
@@ -19,11 +13,6 @@ export function RatingStars("props": "any) {;
             }
             return <Star key={i} data-testid="star-outline" className="h-4 w-4 text-gray-300" />;
         })}
-<<<<<<< HEAD
-    </div>);
-}
-=======
     </div>
     );
 }
->>>>>>> main

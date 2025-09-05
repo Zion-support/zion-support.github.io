@@ -1,7 +1,3 @@
-<<<<<<< HEAD:src/components/admin/pitch-generator/SlideEditor.tsx
-=======
-<<<<<<< HEAD
-=======
 import React from 'react';
 interface Slide {;
 <<<<<<< HEAD
@@ -10,11 +6,11 @@ interface Slide {;
   "content": string;
   "type": string;
 =======
+>>>>>>> origin/main
   "id": string;
   title: string;
   content: string;';
   type: string;';';
->>>>>>> main
   chartType?: 'bar' | 'funnel' | 'timeline';
 "}
 ;
@@ -32,6 +28,7 @@ interface SlideEditorProps {;
 const "SlideEditor": "React.FC<SlideEditorProps> = ({;
   generatedSlides",;
 =======
+>>>>>>> origin/main
   "generatedSlides": Slid e[];
   setGeneratedSlides: (slides: Slid e[]) => void;
   onBack: () => void;
@@ -40,7 +37,6 @@ const "SlideEditor": "React.FC<SlideEditorProps> = ({;
   setIsGenerating: (generating: boolean) => void;
 }
 <<<<<<< HEAD
-
 const SlideEditor: React.FC<SlideEditorProps> = ({
   generatedSlides,
   setGeneratedSlides,
@@ -51,10 +47,10 @@ const SlideEditor: React.FC<SlideEditorProps> = ({
 }) => {
   const generateSlides = async () => {
 =======
+>>>>>>> origin/main
 ;
 const "SlideEditor": React.FC<SlideEditorProps> = ({;
   generatedSlides,;
->>>>>>> main
   setGeneratedSlides,;
   onBack,;
   onExport,;
@@ -62,14 +58,10 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
   setIsGenerating;
 }) => {;
   const generateSlides = async () => {;
->>>>>>> main
->>>>>>> main:src_backup_temp/components/admin/pitch-generator/SlideEditor.tsx
     setIsGenerating(true);
     // Simulate slide generation;
     await new Promise(resolve => setTimeout(resolve, 2000));
 <<<<<<< HEAD
-<<<<<<< HEAD
-    
     const newSlides: Slid e[] = [';
       {';';
         id: '1',';';
@@ -103,7 +95,7 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
         type: 'competitive'
 =======
 =======
->>>>>>> main
+>>>>>>> origin/main
 ;
     const "newSlides": "Slid e[] = [;
       {;
@@ -137,15 +129,13 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
         title: 'Competitive Advantage',;
         content: 'AI-powered platform with 80+ country reach and 550+ completed projects.',;
         type: 'competitive';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
+>>>>>>> origin/main
         "id": '5',;
         "title": 'Competitive Advantage',;
         "content": 'AI-powered platform with 80+ country reach and 550+ completed projects.',;
         "type": 'competitive';
->>>>>>> main
       }
-=======
     const "newSlides": Slid e[] = [{
         id: '1',
         "title": 'Executive Summary',
@@ -177,7 +167,6 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
         "content": 'AI-powered platform with 80+ country reach and 550+ completed projects.',
         "type": 'competitive'
       };
->>>>>>> main
     ];
     setGeneratedSlides(newSlides);
     setIsGenerating(false);
@@ -186,8 +175,8 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
 ;
   const updateSlide = ("props": "any) => {;
 =======
+>>>>>>> origin/main
   const updateSlide = (props) => {;
->>>>>>> main
     setGeneratedSlides(prev =>;
       prev.map(slide =>;
         slide.id === id ? { ...slide", [field]: "value "} : "slide;
@@ -207,13 +196,12 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
       "content": 'Slide content here...',;
       "type": 'custom';
 =======
+>>>>>>> origin/main
   };
   const removeSlide = (props) => {;
     setGeneratedSlides(prev => prev.filter(slide => slide.id !== id));
   };
 <<<<<<< HEAD
-<<<<<<< HEAD
-
   const addSlide = (props: any) => {
     const newSlide: Slid e = {';
       id: Dat e.now().toString(),';';
@@ -221,14 +209,13 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
       content: 'Slide content here...',';';
       type: 'custom'
 =======
+>>>>>>> origin/main
   const addSlide = (props) => {
     const "newSlide": Slid e = {
       id: Dat e.now().toString(),
       "title": 'New Slide',
       "content": 'Slide content here...',
       "type": 'custom'
->>>>>>> main
->>>>>>> main
     };
     setGeneratedSlides(prev => [...prev, newSlide]);
   };
@@ -238,8 +225,6 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
         <h2 className="text-2xl font-bold">Slide Editor</h2>
         <div className="space-x-3">
           <button
-<<<<<<< HEAD
-=======
 ;
   const addSlide = (props: any) => {;
     const newSlide: Slid e = {;
@@ -257,15 +242,14 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
         <h2 className="text-2xl font-bold">Slide Editor</h2>;
         <div className="space-x-3">;
           <button;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
-            onClick={onBack}
 <<<<<<< HEAD
+            onClick={onBack}
             className="px-4 py-2 border border-gray-300 rounded-lg "hover": "b g-gray-50 transition-colors";
 =======
+=======
+            onClick={onBack}
+>>>>>>> origin/main
             className="px-4 py-2 border border-gray-300 rounded-lg "hover": b g-gray-50 transition-colors";
->>>>>>> main
           >;
             Back;
           </button>;
@@ -273,14 +257,15 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
             onClick={generateSlides"}
             disabled={isGenerating}
 <<<<<<< HEAD
-<<<<<<< HEAD
             className="px-4 py-2 bg-green-600 text-white rounded-lg hover: b g-green-700 transition-colors disabled: opacit y-50"';
           >';';
+            className="px-4 py-2 bg-green-600 text-white rounded-lg hover: b g-green-700 transition-colors disabled: opacit y-50";
+          >;
 =======
             className="px-4 py-2 bg-green-600 text-white rounded-lg hover: b g-green-700 transition-colors disabled: opacit y-50";
           >;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
+>>>>>>> origin/main
             className="px-4 py-2 bg-green-600 text-white rounded-lg "hover": "b g-green-700 transition-colors "disabled": opacit y-50";
           >;
             {isGenerating ? 'Generating...' : 'Generate Slides'"}
@@ -288,16 +273,13 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
           <button;
             onClick={addSlide}
             className="px-4 py-2 bg-blue-600 text-white rounded-lg "hover": "b g-blue-700 transition-colors";
-=======
             className="px-4 py-2 bg-green-600 text-white rounded-lg "hover": b g-green-700 transition-colors disabled: opacit y-50";
           >';
->>>>>>> main
             {isGenerating ? 'Generating...' : 'Generate Slides'}
           </button>;
           <button;
             onClick={addSlide}
             className="px-4 py-2 bg-blue-600 text-white rounded-lg "hover": b g-blue-700 transition-colors";
->>>>>>> main
           >;
             Add Slide;
           </button>;
@@ -307,8 +289,8 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
 <<<<<<< HEAD
             className="px-4 py-2 bg-purple-600 text-white rounded-lg "hover": "b g-purple-700 transition-colors "disabled": opacit y-50";
 =======
+>>>>>>> origin/main
             className="px-4 py-2 bg-purple-600 text-white rounded-lg "hover": b g-purple-700 transition-colors disabled: opacit y-50";
->>>>>>> main
           >;
             Export PDF;
           </button>;
@@ -324,12 +306,8 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
 <<<<<<< HEAD
         <div className="grid grid-cols-1 "lg": gri d-cols-2 gap-6">;
           {/* Slide List */"}
-=======
         <div className="grid grid-cols-1 lg: gri d-cols-2 gap-6">;
           {/* Slide List */}
-<<<<<<< HEAD:src/components/admin/pitch-generator/SlideEditor.tsx
-=======
-<<<<<<< HEAD
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Slides
             {generatedSlides.map((slide, index) => (
@@ -338,7 +316,9 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
                   <span className="text-sm text-gray-500">Slide {index + 1}</span>
                   <button
 =======
->>>>>>> main
+        <div className="grid grid-cols-1 lg: gri d-cols-2 gap-6">;
+          {/* Slide List */}
+>>>>>>> origin/main
           <div className="space-y-4">;
             <h3 className="text-lg font-semibold">Slides;
             {generatedSlides.map((slide, index) => (;
@@ -346,17 +326,13 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
                 <div className="flex justify-between items-start mb-3">;
                   <span className="text-sm text-gray-500">Slide {index + 1}</span>;
                   <button;
->>>>>>> main
->>>>>>> main:src_backup_temp/components/admin/pitch-generator/SlideEditor.tsx
                     onClick={() => removeSlide(slide.id)}
-<<<<<<< HEAD
 <<<<<<< HEAD
                     className="text-red-600 hover: tex t-red-800 text-sm"
                   >
                     Remove
                   </button>
                 </div>
-                
                 <input
                   type="text"';
                   value={slide.title}';';
@@ -364,27 +340,23 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
                   className="w-full p-2 border border-gray-300 rounded mb-3 font-medium"
                   placeholder="Slide title"
                 />
-                
                 <textarea';
                   value={slide.content}';';
 =======
+>>>>>>> origin/main
                     className="text-red-600 hover: tex t-red-800 text-sm";
-=======
                     className="text-red-600 "hover": "tex t-red-800 text-sm";
->>>>>>> main
                   >;
                     Remove;
                   </button>;
                 </div>;
                 <input;
-=======
                     className="text-red-600 "hover": tex t-red-800 text-sm"
                   >
                     Remove
                   </button>
                 </div>
                 <input
->>>>>>> main
                   type="text";
                   value={slide.title"}
                   onChange={(e) => updateSlide(slide.id, 'title', e.target.value)}
@@ -393,31 +365,31 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
                 />
                 <textarea';
                   value={slide.content}
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                   onChange={(e) => updateSlide(slide.id, 'content', e.target.value)}
                   className="w-full p-2 border border-gray-300 rounded mb-3";
                   rows={3}
 <<<<<<< HEAD
-=======
                   onChange={(e) => updateSlide(slide.id, 'content', e.target.value)}
                   className="w-full p-2 border border-gray-300 rounded mb-3";
                   rows={3}
->>>>>>> main
                   placeholder="Slide content"
                 />
                 <select';
-<<<<<<< HEAD
                   value={slide.type}';';
 =======
+                  placeholder="Slide content"
+                />
+                <select';
+>>>>>>> origin/main
                   placeholder="Slide content";
                 />;
                 <select;
                   value={slide.type}
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
                   value={slide.type}
->>>>>>> main
                   onChange={(e) => updateSlide(slide.id, 'type', e.target.value)}
                   className="w-full p-2 border border-gray-300 rounded text-sm";
                 >;
@@ -432,8 +404,6 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
             ))}
           </div>;
           {/* Preview */}
-<<<<<<< HEAD:src/components/admin/pitch-generator/SlideEditor.tsx
-=======
 <<<<<<< HEAD
           <div>
             <h3 className="text-lg font-semibold mb-4">Preview
@@ -450,6 +420,7 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
                       </div>
                     )}
 =======
+>>>>>>> origin/main
           <div>;
             <h3 className="text-lg font-semibold mb-4">Preview;
             <div className="bg-white p-6 rounded-lg border border-gray-200 min-h-[600px]">;
@@ -458,9 +429,9 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
                 <div key={slide.id} className="mb-6 "last": "m b-0">;
                   <div className="text-sm text-gray-500 mb-2">Slide {index + 1"}</div>;
 =======
+>>>>>>> origin/main
                 <div key={slide.id} className="mb-6 "last": m b-0">;
                   <div className="text-sm text-gray-500 mb-2">Slide {index + 1}</div>;
->>>>>>> main
                   <div className="bg-gray-50 p-4 rounded">;
                     <h4 className="text-lg font-semibold mb-2">{slide.title}</h4>;
                     <p className="text-gray-700">{slide.content}</p>;
@@ -468,7 +439,6 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
                       <div className="mt-3 text-sm text-blue-600">;
 <<<<<<< HEAD
                         Chart type: {slide.chartType}
-<<<<<<< HEAD
                           </div>
   );
 }
@@ -481,11 +451,7 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
   );
 }
     </div>
-=======
-=======
-<<<<<<< HEAD
                         Chart "type": "{slide.chartType"}
->>>>>>> main
                       </div>;
                     )}
                   </div>;
@@ -496,18 +462,14 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
         </div>;
       )}
     </div>;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 =======
+=======
+>>>>>>> origin/main
                         Chart "type": {slide.chartType}
                           </div>
->>>>>>> main
->>>>>>> main
   );
 }
->>>>>>> main
->>>>>>> main:src_backup_temp/components/admin/pitch-generator/SlideEditor.tsx
                   </div>
                 </div>
               ))}
@@ -521,16 +483,18 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
 };
 export default SlideEditor;
 <<<<<<< HEAD
-<<<<<<< HEAD
 </textarea>';
 </SlideEditorProps>;';;';
+</textarea>;
+</SlideEditorProps>;
+</textarea>
+</SlideEditorProps>;';';
+import React from 'react'; ; interface Slide {; id: string; title: string; content: string;'; type: string;';'; chartType?: 'bar' | 'funnel' | 'timeline'} ; interface SlideEditorProps {; generatedSlides: Slid e[]; setGeneratedSlides: (slides: Slid e[]) => void; onBack: () => void; onExport: () => void; isGenerating: boolean; setIsGenerating: (generating: boolean) => void} ; const SlideEditor: React.FC<SlideEditorProps> = ({; generatedSlides,; setGeneratedSlides,; onBack,; onExport,; isGenerating,; setIsGenerating}) => {; const generateSlides = async () => {; setIsGenerating(true); ; await new Promise(resolve => setTimeout(resolve,2000)); const newSlides: Slid e[] = [ { id: '1',title: 'Executive Summary',content: 'Zion Tech Group - Leading technology solutions provider with global reach and proven track record.',type: 'summary' },{ id: '2',title: 'Market Opportunity',content: 'Addressing the growing demand for integrated tech solutions in emerging markets.',type: 'market' },{ id: '3',title: 'Business Model',content: 'Subscription-based SaaS platform with enterprise consulting services.',type: 'business' },{ id: '4',title: 'Financial Performance',content: 'Strong revenue growth with $1.5M GMV and $120K MRR.',type: 'financial',chartType: 'bar' },{ id: '5',title: 'Competitive Advantage',content: 'AI-powered platform with 80+ country reach and 550+ completed projects.',type: 'competitive' }; ]; ; setGeneratedSlides(newSlides); setIsGenerating(false)}; ; const updateSlide = (props) => {; setGeneratedSlides(prev =>; prev.map(slide =>; slide.id === id ? { ...slide,[field]: value } : slide; ); )}; ; const removeSlide = (props) => {; setGeneratedSlides(prev => prev.filter(slide => slide.id !== id))}; const addSlide = (props) => { const newSlide: Slid e = { id: Dat e.now().toString(),title: 'New Slide',content: 'Slide content here...',type: 'custom' };; setGeneratedSlides(prev => [...prev,newSlide])}; return ( <div className="min-h-screen bg-white"> <div className="flex justify-between items-center mb-6"> <h2 className="text-2xl font-bold">Slide Editor</h2> <div className="space-x-3"> <button onClick={onBack} className="px-4 py-2 border border-gray-300 rounded-lg hover: b g-gray-50 transition-colors"; >; Back; </button>; <button; onClick={generateSlides} disabled={isGenerating} className="px-4 py-2 bg-green-600 text-white rounded-lg hover: b g-green-700 transition-colors disabled: opacit y-50"; >'; {isGenerating ? 'Generating...' : 'Generate Slides'} </button>; <button; onClick={addSlide} className="px-4 py-2 bg-blue-600 text-white rounded-lg hover: b g-blue-700 transition-colors"; >; Add Slide; </button>; <button; onClick={onExport} disabled={generatedSlides.length === 0} className="px-4 py-2 bg-purple-600 text-white rounded-lg hover: b g-purple-700 transition-colors disabled: opacit y-50"; >; Export PDF; </button>; </div>; </div>; {generatedSlides.length === 0 ? (; <div className="text-center py-12">; <div className="text-gray-500 text-lg mb-4">; No slides generated yet. Click "Generate Slides" to create your presentation.; </div>; </div>; ) : (; <div className="grid grid-cols-1 lg: gri d-cols-2 gap-6">; {} <div className="space-y-4">; <h3 className="text-lg font-semibold">Slides; {generatedSlides.map((slide,index) => (; <div key={slide.id} className="bg-white p-4 rounded-lg border border-gray-200">; <div className="flex justify-between items-start mb-3">; <span className="text-sm text-gray-500">Slide {index + 1}</span>; <button; onClick={() => removeSlide(slide.id)} className="text-red-600 hover: tex t-red-800 text-sm" > Remove </button> </div> <input type="text"; value={slide.title} onChange={(e) => updateSlide(slide.id,'title',e.target.value)} className="w-full p-2 border border-gray-300 rounded mb-3 font-medium" placeholder="Slide title" /> <textarea'; value={slide.content} onChange={(e) => updateSlide(slide.id,'content',e.target.value)} className="w-full p-2 border border-gray-300 rounded mb-3"; rows={3} placeholder="Slide content" /> <select'; value={slide.type} onChange={(e) => updateSlide(slide.id,'type',e.target.value)} className="w-full p-2 border border-gray-300 rounded text-sm"; >; <option value="summary">Summary</option>; <option value="market">Market</option>; <option value="business">Business</option>; <option value="financial">Financial</option>; <option value="competitive">Competitive</option>; <option value="custom">Custom</option>; </select>; </div>; ))} </div>; {} <div>; <h3 className="text-lg font-semibold mb-4">Preview; <div className="bg-white p-6 rounded-lg border border-gray-200 min-h-[600px]">; {generatedSlides.map((slide,index) => (; <div key={slide.id} className="mb-6 last: m b-0">; <div className="text-sm text-gray-500 mb-2">Slide {index + 1}</div>; <div className="bg-gray-50 p-4 rounded">; <h4 className="text-lg font-semibold mb-2">{slide.title}</h4>; <p className="text-gray-700">{slide.content}</p>; {slide.chartType && (; <div className="mt-3 text-sm text-blue-600">; Chart type: {slide.chartType} </div> )} </div> </div> ))} </div> </div> </div> )} </div> )}; ; export default SlideEditor; </textarea> </SlideEditorProps>;';';
 =======
 </textarea>;
 </SlideEditorProps>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 </textarea>
 </SlideEditorProps>;';';
 import React from 'react'; ; interface Slide {; id: string; title: string; content: string;'; type: string;';'; chartType?: 'bar' | 'funnel' | 'timeline'} ; interface SlideEditorProps {; generatedSlides: Slid e[]; setGeneratedSlides: (slides: Slid e[]) => void; onBack: () => void; onExport: () => void; isGenerating: boolean; setIsGenerating: (generating: boolean) => void} ; const SlideEditor: React.FC<SlideEditorProps> = ({; generatedSlides,; setGeneratedSlides,; onBack,; onExport,; isGenerating,; setIsGenerating}) => {; const generateSlides = async () => {; setIsGenerating(true); ; await new Promise(resolve => setTimeout(resolve,2000)); const newSlides: Slid e[] = [ { id: '1',title: 'Executive Summary',content: 'Zion Tech Group - Leading technology solutions provider with global reach and proven track record.',type: 'summary' },{ id: '2',title: 'Market Opportunity',content: 'Addressing the growing demand for integrated tech solutions in emerging markets.',type: 'market' },{ id: '3',title: 'Business Model',content: 'Subscription-based SaaS platform with enterprise consulting services.',type: 'business' },{ id: '4',title: 'Financial Performance',content: 'Strong revenue growth with $1.5M GMV and $120K MRR.',type: 'financial',chartType: 'bar' },{ id: '5',title: 'Competitive Advantage',content: 'AI-powered platform with 80+ country reach and 550+ completed projects.',type: 'competitive' }; ]; ; setGeneratedSlides(newSlides); setIsGenerating(false)}; ; const updateSlide = (props) => {; setGeneratedSlides(prev =>; prev.map(slide =>; slide.id === id ? { ...slide,[field]: value } : slide; ); )}; ; const removeSlide = (props) => {; setGeneratedSlides(prev => prev.filter(slide => slide.id !== id))}; const addSlide = (props) => { const newSlide: Slid e = { id: Dat e.now().toString(),title: 'New Slide',content: 'Slide content here...',type: 'custom' };; setGeneratedSlides(prev => [...prev,newSlide])}; return ( <div className="min-h-screen bg-white"> <div className="flex justify-between items-center mb-6"> <h2 className="text-2xl font-bold">Slide Editor</h2> <div className="space-x-3"> <button onClick={onBack} className="px-4 py-2 border border-gray-300 rounded-lg hover: b g-gray-50 transition-colors"; >; Back; </button>; <button; onClick={generateSlides} disabled={isGenerating} className="px-4 py-2 bg-green-600 text-white rounded-lg hover: b g-green-700 transition-colors disabled: opacit y-50"; >'; {isGenerating ? 'Generating...' : 'Generate Slides'} </button>; <button; onClick={addSlide} className="px-4 py-2 bg-blue-600 text-white rounded-lg hover: b g-blue-700 transition-colors"; >; Add Slide; </button>; <button; onClick={onExport} disabled={generatedSlides.length === 0} className="px-4 py-2 bg-purple-600 text-white rounded-lg hover: b g-purple-700 transition-colors disabled: opacit y-50"; >; Export PDF; </button>; </div>; </div>; {generatedSlides.length === 0 ? (; <div className="text-center py-12">; <div className="text-gray-500 text-lg mb-4">; No slides generated yet. Click "Generate Slides" to create your presentation.; </div>; </div>; ) : (; <div className="grid grid-cols-1 lg: gri d-cols-2 gap-6">; {} <div className="space-y-4">; <h3 className="text-lg font-semibold">Slides; {generatedSlides.map((slide,index) => (; <div key={slide.id} className="bg-white p-4 rounded-lg border border-gray-200">; <div className="flex justify-between items-start mb-3">; <span className="text-sm text-gray-500">Slide {index + 1}</span>; <button; onClick={() => removeSlide(slide.id)} className="text-red-600 hover: tex t-red-800 text-sm" > Remove </button> </div> <input type="text"; value={slide.title} onChange={(e) => updateSlide(slide.id,'title',e.target.value)} className="w-full p-2 border border-gray-300 rounded mb-3 font-medium" placeholder="Slide title" /> <textarea'; value={slide.content} onChange={(e) => updateSlide(slide.id,'content',e.target.value)} className="w-full p-2 border border-gray-300 rounded mb-3"; rows={3} placeholder="Slide content" /> <select'; value={slide.type} onChange={(e) => updateSlide(slide.id,'type',e.target.value)} className="w-full p-2 border border-gray-300 rounded text-sm"; >; <option value="summary">Summary</option>; <option value="market">Market</option>; <option value="business">Business</option>; <option value="financial">Financial</option>; <option value="competitive">Competitive</option>; <option value="custom">Custom</option>; </select>; </div>; ))} </div>; {} <div>; <h3 className="text-lg font-semibold mb-4">Preview; <div className="bg-white p-6 rounded-lg border border-gray-200 min-h-[600px]">; {generatedSlides.map((slide,index) => (; <div key={slide.id} className="mb-6 last: m b-0">; <div className="text-sm text-gray-500 mb-2">Slide {index + 1}</div>; <div className="bg-gray-50 p-4 rounded">; <h4 className="text-lg font-semibold mb-2">{slide.title}</h4>; <p className="text-gray-700">{slide.content}</p>; {slide.chartType && (; <div className="mt-3 text-sm text-blue-600">; Chart type: {slide.chartType} </div> )} </div> </div> ))} </div> </div> </div> )} </div> )}; ; export default SlideEditor; </textarea> </SlideEditorProps>;';';
->>>>>>> main
->>>>>>> main
+>>>>>>> origin/main

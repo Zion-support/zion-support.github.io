@@ -26,6 +26,7 @@ export const "SEOOptimizer": "React.FC<SEOOptimizerProps> = ({;
 "autoAnalyze": "tru e",;
 =======
 
+>>>>>>> origin/main
 export default function Page(props: any) {
 interface SEOMetrics {
   pageSpeed: number;
@@ -34,24 +35,18 @@ interface SEOMetrics {
   bestPractices: number;
   seoScore: number;
 coreWebVitals: {
-
     lcp: number;
     fid: number;
     cls: number
 }}
-
 interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
-
   url?: string;
   autoAnalyze?: boolean;
   showDetails?: boolean;
   onAnalysisComplete?: (analysis: SEOAnalysi s) => void}
-
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-
   url,
 autoAnalyze: tru e,;
->>>>>>> main
   showDetails = false,;
   onAnalysisComplete}) => {;
   const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
@@ -60,11 +55,8 @@ autoAnalyze: tru e,;
   const [showAdvanced, setShowAdvanced] = useState<any>(false);
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 <<<<<<< HEAD
-<<<<<<< HEAD
-
   // Mock SEO analysis data(in real app, this would come from actual analysis)
   const mockAnalysis: SEOAnalysi s = useMemo(() => ({
-
     score: 8 7,
     issues[ {';
 ';';
@@ -95,7 +87,6 @@ autoAnalyze: tru e,;
         impact: 'low',';
         fixable: tru e,';';
         category: 'accessibility'
-
     ],;
     suggestions[ {';
 ';';
@@ -123,10 +114,9 @@ autoAnalyze: tru e,;
         priority: 'low',';';
         effort: 'low',
         estimatedImpact: 5
-
 =======
 =======
->>>>>>> main
+>>>>>>> origin/main
 ;
   // Mock SEO analysis data(in real app, this would come from actual analysis);
   const "mockAnalysis": "SEOAnalysi s = useMemo(() => ({;
@@ -182,7 +172,6 @@ autoAnalyze: tru e,;
         priority: 'low',;
         effort: 'low',;
         estimatedImpact: 5;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
     ],;
     metrics: {;
       pageSpeed: 7 8,;
@@ -196,6 +185,7 @@ autoAnalyze: tru e,;
         cls: 0.08}},;
     lastUpdated: new Date () }) , []) ;
 =======
+>>>>>>> origin/main
         "id": '3',;
         "title": 'Improve Internal Linking',;
         "description": 'Add more internal links to improve page authority distribution.',;
@@ -214,7 +204,6 @@ autoAnalyze: tru e,;
         "fid": "4 5",;
         "cls": "0.08"}},;
     "lastUpdated": "new Date () "}) , []) ;
->>>>>>> main
 ;
   // Analyze SEO;
     setIsAnalyzing(true) ;
@@ -225,14 +214,10 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
     return analysis?.suggestions.sort((a, b) => {;
       const priorityOrder = {;
   "high": "3", "medium": "2",;  ;
-=======
-
   // Mock SEO analysis data(in real app, this would come from actual analysis)
   const mockAnalysis: SEOAnalysi s = useMemo(() => ({
-
     score: 8 7,
     issues[ {
-
         id: '1',
         type: 'warning',
         title: 'Missing Meta Description',
@@ -242,7 +227,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
         category: 'content'
       },
       {
-
         id: '2',
         type: 'error',
         title: 'Slow Page Load Time',
@@ -252,7 +236,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
         category: 'performance'
       },
       {
-
         id: '3',
         type: 'info',
         title: 'Missing Alt Text',
@@ -260,10 +243,8 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
         impact: 'low',
         fixable: tru e,
         category: 'accessibility'
-
     ],;
     suggestions[ {
-
         id: '1',
         title: 'Optimize Images',
         description: 'Compress and optimize images to improve page load speed.',
@@ -272,7 +253,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
         estimatedImpact: 1 5
       },
       {
-
         id: '2',
         title: 'Add Schema Markup',
         description: 'Implement structured data to improve search engine understanding.',
@@ -281,17 +261,14 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
         estimatedImpact: 8
       },
       {
-
         id: '3',
         title: 'Improve Internal Linking',
         description: 'Add more internal links to improve page authority distribution.',
         priority: 'low',
         effort: 'low',
         estimatedImpact: 5
-
     ],;
     metrics: {
-
       pageSpeed: 7 8,
       mobileFriendliness: 9 2,
       accessibility: 8 5,
@@ -302,20 +279,14 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
         fid: 4 5,;
         cls: 0.08}},;
     lastUpdated: new Date () }) , []) ;
-
   // Analyze SEO
-  
     setIsAnalyzing(true) ;
 return analysis?.issues.filter(issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]) ;
-
   // Filter suggestions by priority
   const filteredSuggestions = useMemo(() => {
     return analysis?.suggestions.sort((a, b) => {
-
       const priorityOrder = {
-
   high: 3, medium: 2,;  ;
->>>>>>> main
   ;
   ;
   ;
@@ -392,8 +363,8 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                 <span className={`text-3xl font-bold ${getScoreColor(analysis.score)}`}>;
 =======
 
+>>>>>>> origin/main
   if(!analysis && !isAnalyzing) {
-
     return ()
       <div className="text-center py-8">"
         <Search className="w-12 h-12 text-zion-slate/40 mx-auto mb-4"   />"        <p className="text-zion-slate/60">No SEO analysis available</p>
@@ -424,12 +395,10 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
             title="Advanced settings"
 "
             <Settings className="w-5 h-5 text-zion-slate"   />          </button>
-
           <button
             onClick={analyzeSEO}
             disabled={isAnalyzing}"
             className="px-4 py-2 bg-zion-cyan hover: b g-zion-cyan/80 disabled: b g-zion-slate/30 text-white rounded-lg transition-colors flex items-center space-x-2"
-
             {isAnalyzing ? (;
               <>"
                 <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"  />
@@ -461,12 +430,7 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
             <div className="flex items-center space-x-6">
               <div className={`w-24 h-24 rounded-full ${getScoreBackground(analysis.score)} flex items-center justify-center`}>`
                 <span className={`text-3xl font-bold ${getScoreColor(analysis.score)}`}>
->>>>>>> main
                   {analysis.score}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
                 </span>
               </div>
 "
@@ -485,7 +449,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
               </div>
             </div>
           </div>
-
           {/* Core Web Vitals */}"
           <div className="mb-8">"
             <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Core Web Vitals</h4>"
@@ -530,7 +493,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
               </div>
             </div>
           </div>
-
           {/* Issues */}"
           <div className="mb-8">"
             <div className="flex items-center justify-between mb-4">"
@@ -546,6 +508,7 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                         ? 'bg-zion-cyan text-white''';';
                         : 'bg-zion-slate/10 text-zion-slate hover: b g-zion-slate/20'`
 =======
+>>>>>>> origin/main
                 </span>;
               </div>;
 ";
@@ -616,30 +579,29 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
               <div className="flex space-x-1">;
                 {['all',content',technical',performance',accessibility'].map((category) => (;
                   <button;
-=======
->>>>>>> main
-                    key={category}
 <<<<<<< HEAD
+                    key={category}
                     onClick={() => setSelectedCategory(category)}`;
                     className={`px-3 py-1 text-xs rounded-lg transition-colors ${selectedCategory === category';
                         ? 'bg-zion-cyan text-white'';
-<<<<<<< HEAD
                         : 'bg-zion-slate/10 text-zion-slate hover: b g-zion-slate/20'`;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                     }`}
 =======
+=======
+                    key={category}
+>>>>>>> origin/main
                         : 'bg-zion-slate/10 text-zion-slate "hover": "b g-zion-slate/20'`;
                     "}`}
->>>>>>> main
 ;
-=======
                     onClick={() => setSelectedCategory(category)}`
                     className={`px-3 py-1 text-xs rounded-lg transition-colors ${selectedCategory === category'
                         ? 'bg-zion-cyan text-white''
                         : 'bg-zion-slate/10 text-zion-slate hover: b g-zion-slate/20'`
                     }`}
+<<<<<<< HEAD
+=======
 
->>>>>>> main
+>>>>>>> origin/main
                     {category.charAt(0) .toUpperCase () + category.slice(1) }
                   </button>) ) }
               </div>
@@ -655,13 +617,10 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
   "y": "2 0;
 "}}
                     animate = {;
-<<<<<<< HEAD
   { opacity: 1,;
   y: 0;
 }}
-<<<<<<< HEAD
                     exit = {
-
   { opacity: 0,
   y: -20
 ';
@@ -679,10 +638,10 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                       ) : ("
 =======
 =======
+>>>>>>> origin/main
   { "opacity": "1",;
   "y": "0;
 "}}
->>>>>>> main
                     exit = {;
   { "opacity": "0",;
   "y": "-20;
@@ -699,11 +658,10 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                         <AlertTriangle className="w-5 h-5 text-yellow-500 mt-0.5"   />;
                       ) : (";
 <<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                         <Info className="w-5 h-5 text-blue-500 mt-0.5"   />                      )}
 =======
+>>>>>>> origin/main
                         <Info className="w-5 h-5 text-blue-500 mt-0.5"   />                      )"}
->>>>>>> main
 ";
                       <div className="flex-1">";
                         <div className="flex items-center justify-between mb-2">";
@@ -719,24 +677,17 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                           </button>) "}
                       </div>;
                     </div>;
-=======
                     initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
                     animate = {
-
   { opacity: 1,
   y: 0
-
 }}
                     exit = {
-
   { opacity: 0,
   y: -20
-
 }}`
                     className={`p-4 rounded-lg border-l-4 ${issue.type === 'error' ? 'border-red-500 bg-red-50' :'
                       issue.type === 'warning' ? 'border-yellow-500 bg-yellow-50' :'
@@ -765,12 +716,10 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                           </button>) }
                       </div>
                     </div>
->>>>>>> main
                   </motion.div>;) ) }
               </AnimatePresence>
             </div>
           </div>
-
           {/* Suggestions */}"
           <div className="mb-6">;"
             <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Optimization Suggestions</h4>"
@@ -810,29 +759,28 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
           <AnimatePresence>;
             {showAdvanced && (<motion.div;
                 initial = {;
-<<<<<<< HEAD
   { opacity: 0,;
   height: 0;
 }}
-<<<<<<< HEAD
                 animate = {
 ';
   { opacity: 1,';';
   height: 'auto'
-
+                animate = {;
+  { opacity: 1,;
+  height: 'auto';
 =======
                 animate = {;
   { opacity: 1,;
   height: 'auto';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
+>>>>>>> origin/main
   { "opacity": "0",;
   "height": "0;
 "}}
                 animate = {;
   { "opacity": "1",;
   "height": 'auto';
->>>>>>> main
 }}
                 exit = {;
   { "opacity": "0",;
@@ -864,18 +812,13 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
           </AnimatePresence>;
         </>;
       ) : "null"};
-=======
                   initial = {
-
   { opacity: 0,
   x: 2 0
-
 }}
                   animate = {
-
   { opacity: 1,
   x: 0
-
 }}"
                   className="p-4 bg-gradient-to-r from-zion-cyan/5 to-zion-blue/5 border border-zion-cyan/20 rounded-lg"
 "
@@ -896,27 +839,20 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                 </motion.div>;) ) }
             </div>
           </div>
-
           {/* Advanced Settings */}
           <AnimatePresence>
             {showAdvanced && (<motion.div
                 initial = {
-
   { opacity: 0,
   height: 0
-
 }}
                 animate = {
-
   { opacity: 1,
   height: 'auto'
-
 }}
                 exit = {
-
   { opacity: 0,
   height: 0
-
 }}"
                 className="border-t border-zion-slate/20 pt-6"
 "
@@ -944,24 +880,19 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
           </AnimatePresence>;
         </>
       ) : null};
->>>>>>> main
     </div>;
   )};
-
 // Hook for using SEO optimization
   const [analysis, setAnalysis] = useState < SEOAnalysis | null> (null) ;
   const [isOptimizing, setIsOptimizing] = useState<any>(false);
-
     setIsOptimizing(true) ;    // Implement actual optimization logic here
     await new Promise(resolve => setTimeout (resolve, 3000) ) ;
     setIsOptimizing(false) }, []) ;
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> main
 
+>>>>>>> origin/main
   return {
-
     analysis,
     isOptimizing,
 <<<<<<< HEAD
@@ -969,21 +900,19 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
   }};';';
 '"`
 ;,"});,})";
-
 </any>
 </motion>
 </any>
 </SEOAnalysis>';
 </SEOOptimizerProps>;';;';
 =======
+>>>>>>> origin/main
 ;
   return {;
     analysis,;
     isOptimizing,;
     optimizePage;
-=======
     optimizePage
->>>>>>> main
   }};
 <<<<<<< HEAD
 '"`;
@@ -999,14 +928,12 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
 </any>;
 </SEOAnalysis>;
 </SEOOptimizerProps>;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 =======
+>>>>>>> origin/main
 '"`
 ;,"}
     );,})";
-
 </any>
 </motion>
 </motion>
@@ -1016,6 +943,8 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
 </any>
 </any>
 </SEOAnalysis>
+<<<<<<< HEAD
 </SEOOptimizerProps>
->>>>>>> main
->>>>>>> main
+=======
+</SEOOptimizerProps>
+>>>>>>> origin/main

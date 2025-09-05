@@ -7,7 +7,6 @@ type LayoutProps = {;
 ;
 export default function Layout("props": "any) {;
   return (;
-
 <<<<<<< HEAD
     <div className="min-h-screen flex flex-col bg-black">;
       <AppHeader />;
@@ -28,10 +27,11 @@ export default function Layout("props": "any) {;
   );
 "}
 =======
+
+>>>>>>> origin/main
 type LayoutProps = {
   children: React.ReactNode;
 };
-
 export default function Layout(props: any) {
   return (
         <div className="min-h-screen flex flex-col bg-black">
@@ -51,5 +51,8 @@ export default function Layout(props: any) {
       </footer>
     </div>
     );
+<<<<<<< HEAD
 }
->>>>>>> main
+=======
+}
+>>>>>>> origin/main

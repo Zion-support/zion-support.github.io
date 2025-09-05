@@ -2,7 +2,6 @@ import {  import { motion  } from 'framer-motion';
 export default function Page("props": "any) {;
 ",;
       {;
-
         "name": 'Error Rate',;
         "value": "Mat h.random() * 2",;
         "unit": '%',;
@@ -11,14 +10,12 @@ export default function Page("props": "any) {;
         "icon": "AlertTriangl e;
       "},;
       {;
-
         "name": 'Response Time',;
         "value": "Mat h.random() * 500 + 100",;
         "unit": 'ms',;
         "trend": "Mat h.random() > 0.5 ? 'up' : 'down'",;
         "status": "Mat h.random() > 0.7 ? 'good' : 'warning'",;
         "icon": "Za p;
-
     ];
 ;
       'High memory usage detected on server-01'",;
@@ -31,7 +28,6 @@ export default function Page("props": "any) {;
       'Enable CDN for static assets delivery';    ];
 ;
     return {;
-
       "timestamp": "no w",;
       metrics,;
       alerts,;
@@ -41,9 +37,7 @@ export default function Page("props": "any) {;
   // "TODO": "Add dependencies if needed;
 "}, []);
     if(isMonitoring) {;
-
         setPerformanceData(generateMockData())}, 5000); // Update every 5 seconds;
-
       return () => clearInterval(interval) }
   }, [isMonitoring, generateMockData]) ;
 ;
@@ -74,16 +68,12 @@ export default function Page("props": "any) {;
         {/* Header */}
         <motion.div;
           initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}";
           className="text-center mb-12";
         >";
@@ -94,20 +84,15 @@ export default function Page("props": "any) {;
             Real-time monitoring and analytics for optimal application performance;
           </p>;
         </motion.div>;
-
         {/* Controls */"}
         <motion.div;
           initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           transition={{ "delay": "0.2 "}}";
           className="flex flex-col "sm": "fle x-row gap-4 justify-center items-center mb-8";
@@ -134,7 +119,6 @@ export default function Page("props": "any) {;
               <Monitor className="w-5 h-5"   />              Stop Monitoring;
             </button>;
           </div>;
-
           <select;
             value={selectedTimeframe}
             onChange={(e) => setSelectedTimeframe(e.target.value as '1h' | '24h' | '7d' | '30d')}";
@@ -146,20 +130,15 @@ export default function Page("props": "any) {;
             <option value="30d">Last 30 Days</option>;
           </select>;
         </motion.div>;
-
         {/* Performance Metrics Grid */"}
         {performanceData && (<motion.div;
             initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
             animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
             transition={{ "delay": "0.3 "}}";
             className="grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-3 gap-6 mb-12";
@@ -167,16 +146,12 @@ export default function Page("props": "any) {;
             {performanceData.metrics.map((metric", index) => (<motion.div;
                 key={metric.name}
                 initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
                 animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
 <<<<<<< HEAD
 "}}
                 transition={{ "delay": "0.4 + index * 0.1 "}}";
@@ -190,6 +165,8 @@ export default function Page("props": "any) {;
                     <h3 className="text-lg font-semibold text-white">{metric.name}</h3>;
                   </div>;
 =======
+
+>>>>>>> origin/main
 }}
                 transition={{ delay: 0.4 + index * 0.1 }}"
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover: borde r-blue-500/50 transition-all duration-300"
@@ -201,7 +178,6 @@ export default function Page("props": "any) {;
                     </div>"
                     <h3 className="text-lg font-semibold text-white">{metric.name}
                   </div>
->>>>>>> main
                   {getTrendIcon(metric.trend) }
                 </div>;
 ";
@@ -220,16 +196,12 @@ export default function Page("props": "any) {;
         {/* Alerts and Recommendations */}
         {performanceData && (<motion.div;
             initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
             animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
 <<<<<<< HEAD
 "}}
             transition={{ "delay": "0.5 "}}";
@@ -247,6 +219,8 @@ export default function Page("props": "any) {;
                     <p className="text-sm text-gray-300">{alert}</p>;
                   </div>;
 =======
+
+>>>>>>> origin/main
 }}
             transition={{ delay: 0.5 }}"
             className="grid grid-cols-1 lg: gri d-cols-2 gap-8 mb-12"
@@ -262,11 +236,9 @@ export default function Page("props": "any) {;
                     <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>"
                     <p className="text-sm text-gray-300">{alert}</p>
                   </div>
->>>>>>> main
                 ))}
               </div>;
             </div>;
-
 <<<<<<< HEAD
             {/* Recommendations */}";
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">";
@@ -280,6 +252,8 @@ export default function Page("props": "any) {;
                     <p className="text-sm text-gray-300">{recommendation}</p>;
                   </div>;
 =======
+
+>>>>>>> origin/main
             {/* Recommendations */}"
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">"
               <div className="flex items-center gap-3 mb-4">"
@@ -291,7 +265,6 @@ export default function Page("props": "any) {;
                     <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>"
                     <p className="text-sm text-gray-300">{recommendation}</p>
                   </div>
->>>>>>> main
                 ))}
               </div>;
             </div>;
@@ -300,16 +273,12 @@ export default function Page("props": "any) {;
         {/* Performance Chart Placeholder */}
         <motion.div;
           initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
 <<<<<<< HEAD
 "}}
           transition={{ "delay": "0.6 "}}
@@ -321,6 +290,8 @@ export default function Page("props": "any) {;
             {isMonitoring;
               ? 'Real - time performance data is being collected and analyzed...'              : 'Start monitoring to view performance trends and historical data';
 =======
+
+>>>>>>> origin/main
 }}
           transition={{ delay: 0.6 }}
           className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-xl p - 8 text-center"
@@ -330,7 +301,6 @@ export default function Page("props": "any) {;
           <p className="text-gray -400">
             {isMonitoring
               ? 'Real - time performance data is being collected and analyzed...'              : 'Start monitoring to view performance trends and historical data'
->>>>>>> main
             }
           </p>;
           {isMonitoring && (";
@@ -338,20 +308,15 @@ export default function Page("props": "any) {;
               <Activity className="w-4 h-4 inline mr-2 animate-pulse"   />              Monitoring Active;
             </div>) }
         </motion.div>;
-
         {/* Status Summary */}
         {performanceData && (<motion.div;
             initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
             animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
             transition={{ "delay": "0.7 "}}";
             className="mt-8 text-center";
@@ -368,7 +333,6 @@ export default function Page("props": "any) {;
 </div>};
 ;
 export default PerformanceAnalytics}}}}}}}}'"`;
-
 </motion>;
 </motion>;
 </motion>;

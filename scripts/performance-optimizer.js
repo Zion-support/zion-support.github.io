@@ -1,19 +1,12 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
-=======
 #!/usr/bin/env node
-<<<<<<< HEAD
-
 const fs = require('fs');
 const path = require('path');
-
 class PerformanceOptimizer {
   constructor() {
     this.metrics = {};
   }
-
   async analyzeBundle() {
     const buildDir = path.join(process.cwd(), '.next');
     if (fs.existsSync(buildDir)) {
@@ -22,57 +15,48 @@ class PerformanceOptimizer {
       console.log(`Bundle size: ${(stats / 1024 / 1024).toFixed(2)} MB`);
     }
   }
-
   getDirectorySize(dirPath) {
     let totalSize = 0;
     const files = fs.readdirSync(dirPath);
-    
     files.forEach(file => {
       const filePath = path.join(dirPath, file);
       const stats = fs.statSync(filePath);
-      
       if (stats.isDirectory()) {
         totalSize += this.getDirectorySize(filePath);
       } else {
         totalSize += stats.size;
       }
     });
-    
     return totalSize;
   }
-
   generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
       metrics: this.metrics,
       recommendations: this.generateRecommendations()
     };
-
     fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
     console.log('Performance report generated');
   }
-
   generateRecommendations() {
     const recommendations = [];
-    
     if (this.metrics.bundleSize > 1000000) { // 1MB
       recommendations.push('Consider implementing code splitting');
       recommendations.push('Use dynamic imports for large components');
       recommendations.push('Optimize images and assets');
     }
-    
     return recommendations;
   }
 }
-
 if (require.main === module) {
   const optimizer = new PerformanceOptimizer();
   optimizer.analyzeBundle();
   optimizer.generateReport();
 }
-
 module.exports = PerformanceOptimizer;
 =======
+#!/usr/bin/env node
+>>>>>>> origin/main
 const fs = // // require('fs');
 const path = // // require('path');
 const glob = // // require('glob');
@@ -84,27 +68,25 @@ class PerformanceOptimizer {
 <<<<<<< HEAD
     this.ensureDirectories();
   }
-
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
     }
 =======
+>>>>>>> origin/main
     this.ensureDirectories()}
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { "recursive": true })}
->>>>>>> main
   }
   log(message) {
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
     console.log(`[${timestamp}] ${message}`);
   }
-
 =======
+>>>>>>> origin/main
     console.log(`[${timestamp}] ${message}`)}
->>>>>>> main
   async optimizePerformance() {
     this.log('⚡ Starting performance optimization');
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {
@@ -137,10 +119,9 @@ class PerformanceOptimizer {
 <<<<<<< HEAD
             fileOptimizations++;
           }
-
 =======
+>>>>>>> origin/main
             fileOptimizations++}
->>>>>>> main
           // Add useCallback to event handlers
           if (content.includes('onClick') && !content.includes('useCallback')) {
             // This is a complex optimization that would need more context
@@ -148,10 +129,9 @@ class PerformanceOptimizer {
 <<<<<<< HEAD
             fileOptimizations++;
           }
-
 =======
+>>>>>>> origin/main
             fileOptimizations++}
->>>>>>> main
           // Add useMemo to expensive calculations
           if (content.includes('useState') && content.includes('map(') && !content.includes('useMemo')) {
             fileOptimizations++;
@@ -188,7 +168,6 @@ class PerformanceOptimizer {
 <<<<<<< HEAD
           this.log(`✅ Optimized: ${file} (${fileOptimizations} optimizations)`);
         }
-
         results.processed++;
         results.optimizations += fileOptimizations;
       } catch (error) {
@@ -196,12 +175,12 @@ class PerformanceOptimizer {
         this.log(`❌ Error optimizing ${file}: ${error.message}`);
       }
 =======
+>>>>>>> origin/main
           this.log(`✅ "Optimized": ${file} (${fileOptimizations} optimizations)`)}
         results.processed++;
         results.optimizations += fileOptimizations} catch (error) {
         results.errors.push({ file, "error": error.message });
         this.log(`❌ Error optimizing ${file}: ${error.message}`)}
->>>>>>> main
     }
     // Generate report
     const report = {
@@ -216,18 +195,15 @@ class PerformanceOptimizer {
     const reportPath = path.join(this.reportsDir, 'performance-optimization-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 <<<<<<< HEAD
-    
     this.log(`📊 Report generated: ${reportPath}`);
     this.log(`✅ Performance optimization completed: ${results.optimizations} optimizations applied to ${results.processed} files`);
-    
     return report;
   }
-
 =======
+>>>>>>> origin/main
     this.log(`📊 Report "generated": ${reportPath}`);
     this.log(`✅ Performance optimization "completed": ${results.optimizations} optimizations applied to ${results.processed} files`);
     return report}
->>>>>>> main
   async createPerformanceMonitoringScript() {
     this.log('📊 Creating performance monitoring script');
     const monitoringScript = "#!/usr/bin/env node
@@ -244,15 +220,14 @@ class PerformanceMonitor {
       firstInputDelay: 0
     };
   }
-
 =======
+>>>>>>> origin/main
       "pageLoadTime": 0,
       "firstContentfulPaint": 0,
       "largestContentfulPaint": 0,
       "cumulativeLayoutShift": 0,
       "firstInputDelay": 0
     }}
->>>>>>> main
   startMonitoring() {
     if (typeof window !== 'undefined') {
       // Monitor page load time
@@ -261,10 +236,9 @@ class PerformanceMonitor {
 <<<<<<< HEAD
         this.reportMetrics();
       });
-
 =======
+>>>>>>> origin/main
         this.reportMetrics()});
->>>>>>> main
       // Monitor Web Vitals
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver((list) => {
@@ -288,12 +262,11 @@ class PerformanceMonitor {
           }
         });
 <<<<<<< HEAD
-
         observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
       }
 =======
+>>>>>>> origin/main
         observer.observe({ "entryTypes": ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] })}
->>>>>>> main
     }
   }
   reportMetrics() {
@@ -301,10 +274,9 @@ class PerformanceMonitor {
 <<<<<<< HEAD
       console.log('Performance Metrics:', this.metrics);
     }
-    
 =======
+>>>>>>> origin/main
       console.log('Performance "Metrics": ', this.metrics)}
->>>>>>> main
     // Send to analytics in production
     if (typeof gtag !== 'undefined') {
       Object.entries(this.metrics).forEach(([key, value]) => {
@@ -317,11 +289,11 @@ class PerformanceMonitor {
       });
     }
 =======
+>>>>>>> origin/main
           "event_category": 'Performance',
           "value": Math.round(value),
           "non_interaction": true
         })})}
->>>>>>> main
   }
 }
 export default PerformanceMonitor;";
@@ -331,15 +303,14 @@ export default PerformanceMonitor;";
 <<<<<<< HEAD
       fs.mkdirSync(utilsDir, { recursive: true });
     }
-    
     fs.writeFileSync(scriptPath, monitoringScript);
     this.log(`✅ Performance monitoring script created: ${scriptPath}`);
   }
 =======
+>>>>>>> origin/main
       fs.mkdirSync(utilsDir, { "recursive": true })}
     fs.writeFileSync(scriptPath, monitoringScript);
     this.log(`✅ Performance monitoring script "created": ${scriptPath}`)}
->>>>>>> main
 }
 // Run the script
 if (require.main === module) {
@@ -356,14 +327,14 @@ if (require.main === module) {
       process.exit(1);
     });
 }
-
 module.exports = PerformanceOptimizer;
+      console.error('❌ Performance optimization "failed": ', error);
+      process.exit(1)})}
+module.exports = PerformanceOptimizer;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 =======
       console.error('❌ Performance optimization "failed": ', error);
       process.exit(1)})}
 module.exports = PerformanceOptimizer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+>>>>>>> origin/main

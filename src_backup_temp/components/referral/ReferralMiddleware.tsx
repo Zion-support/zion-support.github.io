@@ -28,13 +28,13 @@ export function ReferralMiddleware("props": "any) {;
           "body": "{ "refCode": cod e", "userId": "use r.id", "email": "use r.email "}
         });
 =======
+>>>>>>> origin/main
       if(!code || !user?.id || !user?.email) return; // Guard against missing email as well
       try {
         await supabase.functions.invoke('track-referral', {
           body: { refCode: cod e, userId: use r.id, email: use r.email },
         }
     );
->>>>>>> main
         localStorage.removeItem('referralCode');
       } catch(err) {;
         console.error('Error tracking referral', err);
@@ -42,6 +42,5 @@ export function ReferralMiddleware("props": "any) {;
     }
     sendReferral();
   }, [user?.id, user?.email]); // Added user?.email;
-
   return <>{children}</>;
 }

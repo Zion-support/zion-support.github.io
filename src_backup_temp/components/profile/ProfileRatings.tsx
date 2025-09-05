@@ -26,26 +26,27 @@ export function ProfileRatings("props": "any) {;
       ;
 =======
 
+>>>>>>> origin/main
 export function ProfileRatings(props: any) {
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
   const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({}
     );
-  
   // Calculate rating distribution
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
     if(reviews.length > 0) {
       const distribution: Recor d<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
-      
       reviews.forEach((review) => {
         if(review.rating >= 1 && review.rating <= 5) {
           distribution[review.rating] = (distribution[review.rating] || 0) + 1;
         }
       }
     );
+<<<<<<< HEAD
+=======
       
->>>>>>> main
+>>>>>>> origin/main
       setRatingDistribution(distribution);
     }
   }, [reviews]);
@@ -63,14 +64,13 @@ export function ProfileRatings(props: any) {
         <div className=""md":w-1/3">;
           <ReviewStats averageRating={averageRating"}
 =======
+>>>>>>> origin/main
   }, [userId, fetchUserReviews]); // Added fetchUserReviews
-  
   return (
         <div className="space-y-6">
       <div className="flex flex-col md: fle x-row gap-6">
         <div className="md:w-1/3">
           <ReviewStats averageRating={averageRating}
->>>>>>> main
             totalReviews={ratingCount}
             ratingDistribution={ratingDistribution}
            />;
@@ -113,6 +113,7 @@ export function ProfileRatings(props: any) {
     </div>;
   );
 =======
+>>>>>>> origin/main
               />
             </TabsContent>
           </Tabs>
@@ -120,7 +121,6 @@ export function ProfileRatings(props: any) {
       </div>
     </div>
     );
->>>>>>> main
 }
 ;
 </ReviewsList>;

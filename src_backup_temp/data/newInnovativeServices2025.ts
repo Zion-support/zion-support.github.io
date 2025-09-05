@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export type ServiceItem = { id: string; title: string; description: string; category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Transformation' | 'Enterprise Solutions'; price: string;
-';
-';';
-=======
 export interface NewInnovativeService {
   id: string;
   title: string;
@@ -29,7 +23,6 @@ export interface NewInnovativeService {
     website: string;
     address: string;
   };
-=======
 export interface NewInnovativeService {;
   "id": "string;
   "title": string;
@@ -55,7 +48,6 @@ export interface NewInnovativeService {;
     "website": string;
     "address": string;
   "};
->>>>>>> main
 }
 ;
 export const "NEW_INNOVATIVE_SERVICES_2025": "NewInnovativeService[] = [;
@@ -337,15 +329,5 @@ export const "NEW_INNOVATIVE_SERVICES_2025": "NewInnovativeService[] = [;
 ];
 ;
 export default NEW_INNOVATIVE_SERVICES_2025;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-=======
-<<<<<<< HEAD
-export type ServiceItem = { id: string; title: string; description: string; category: &apos;Micro SaaS&apos; | &apos;IT Services&apos; | &apos;AI Solutions&apos; | &apos;Cybersecurity&apos; | &apos;Data & Analytics&apos; | &apos;Cloud & DevOps&apos; | &apos;Quantum Computing&apos; | &apos;Blockchain & Web3&apos; | &apos;IoT & Edge&apos; | &apos;Green Tech&apos; | &apos;Space Tech&apos; | &apos;BioTech & Health&apos; | &apos;FinTech & DeFi&apos; | &apos;Metaverse & AR/VR&apos; | &apos;Autonomous Systems&apos; | &apos;Sustainability&apos; | &apos;Digital Transformation&apos; | &apos;Enterprise Solutions&apos;; price: string;
-=======
 export type ServiceItem = { "id": string; title: string; description: string; category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Transformation' | 'Enterprise Solutions'; price: string;
 export type ServiceItem = { id: string; title: string; description: string; category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Transformation' | 'Enterprise Solutions'; price: string;
->>>>>>> main
->>>>>>> main
->>>>>>> main

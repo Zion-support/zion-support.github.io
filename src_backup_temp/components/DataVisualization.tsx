@@ -12,26 +12,21 @@ export const "DataVisualization": "React.FC<DataVisualizationProps> = ({;
 "title":  "Data Analytics Dashboard"",;
 =======
 
+>>>>>>> origin/main
 export default function Page(props: any) {
 interface DataVisualizationProps extends React.PropsWithChildren<{}> {
-
   title?: string;
   showMetrics?: boolean;
   showCharts?: boolean;
   showActions?: boolean}
-
 export const DataVisualization: React.FC<DataVisualizationProps> = ({
-
 title:  "Data Analytics Dashboard",;
->>>>>>> main
   showMetrics = true,;
   showCharts = true,;
   showActions = true}) => {;
   const [selectedTimeRange, setSelectedTimeRange] = useState<any>('7d');
   const [isLoading, setIsLoading] = useState<any>(false);  const [activeChart, setActiveChart] = useState<any>('bar');
 <<<<<<< HEAD
-<<<<<<< HEAD
-
   // Sample data - in a real app, this would come from an API
   const [chartData, setChartData] = useState<any>({';
 ';';
@@ -42,32 +37,27 @@ title:  "Data Analytics Dashboard",;
       data[65, 59, 80, 81, 56, 55],;';';
       backgroundColor['rgba(34, 221, 210, 0.2)],;';';
 =======
+>>>>>>> origin/main
 ;
   // Sample data - in a real app, this would come from an API;
   const [chartData, setChartData] = useState<any>({;
-=======
-
   // Sample data - in a real app, this would come from an API
   const [chartData, setChartData] = useState<any>({
-
->>>>>>> main
-    labels['Jan',Feb',Mar',Apr',May',Jun'],;
 <<<<<<< HEAD
+    labels['Jan',Feb',Mar',Apr',May',Jun'],;
     datasets[{;
       "label": 'Revenue',;
       data[65, 59, 80, 81, 56, 55],;
       backgroundColor['rgba(34, 221, 210, 0.2)],;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
->>>>>>> main
+
+    labels['Jan',Feb',Mar',Apr',May',Jun'],;
+>>>>>>> origin/main
       borderColor['rgba(34, 221, 210, 1)],;
       "borderWidth": "2;
     "}];
   }) ;
 <<<<<<< HEAD
-<<<<<<< HEAD
-
   const [metrics, setMetrics] = useState<any> ([{';
 ';';
       title: 'Total Revenue',';';
@@ -101,7 +91,7 @@ title:  "Data Analytics Dashboard",;
       icon: <Activity className="w-5 h-5"   />,;';';
 =======
 =======
->>>>>>> main
+>>>>>>> origin/main
 ;
   const [metrics, setMetrics] = useState<any> ([{;
       "title": 'Total Revenue',;
@@ -131,9 +121,7 @@ title:  "Data Analytics Dashboard",;
       "changeType": 'neutral',;";
       "icon": "<Activity className="w-5 h-5"   />",;
       "color": 'text-purple-400'};
-=======
     datasets[{
-
       label: 'Revenue',
       data[65, 59, 80, 81, 56, 55],;
       backgroundColor['rgba(34, 221, 210, 0.2)],;
@@ -142,9 +130,7 @@ title:  "Data Analytics Dashboard",;
     }]
   }
     );
-
   const [metrics, setMetrics] = useState<any> ([{
-
       title: 'Total Revenue',
       value: '$2.4M',
       change: 1 2.5,
@@ -152,7 +138,6 @@ title:  "Data Analytics Dashboard",;
       icon: <DollarSign className="w-5 h-5"   />,
       color: 'text-green-400'    },
     {
-
       title: 'Active Users',
       value: '45.2K',
       change: 8.1,
@@ -160,7 +145,6 @@ title:  "Data Analytics Dashboard",;
       icon: <Users className="w-5 h-5"   />,
       color: 'text-blue-400'    },
     {
-
       title: 'Conversion Rate',
       value: '3.24%',
       change: -2.4,
@@ -168,22 +152,14 @@ title:  "Data Analytics Dashboard",;
       icon: <Target className="w-5 h-5"   />,
       color: 'text-yellow-400'    },
     {
-
       title: 'Avg Session',;
       value: '2m 47s',;
       change: 0.0,;
       changeType: 'neutral',;"
       icon: <Activity className="w-5 h-5"   />,;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
       color: 'text-purple-400'};
->>>>>>> main
   ]) ;
-
   // Simulate data refresh
-  
     setIsLoading(true) ;    // Simulate API call
     await new Promise(resolve => setTimeout (resolve, 1000) ) ;
 <<<<<<< HEAD
@@ -215,19 +191,15 @@ setChartData("prev": "> ({;
       ],;
 =======
 
+>>>>>>> origin/main
     // Update chart data with new random values
 setChartData(prev:  > ({;
       ...prev,;
       datasets: [{;
         ...prev.datasets[0],;
         data: pre v.datasets[0].data.map ( () => Math.floor(Math.random () * 100) + 20) }]}) ) ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
     // Update metrics with new random values
     setMetrics(prev => prev.map(metric => ({
-
       ...metric,
       change: Mat h.random() > 0.5 ?
         (Math.random() * 20 - 10) :
@@ -235,13 +207,10 @@ setChartData(prev:  > ({;
       changeType: Mat h.random() > 0.6 ? 'increase' :'
                  Math.random() > 0.3 ? 'decrease' : 'neutral'
     })));
-
     setIsLoading(false) };
-
   // Get change icon and color'
   labels: ['AI Services',Cloud Solutions',Security',Consulting',Development'],
     datasets: [{
-
       data: [35, 25, 20, 15, 5],
       backgroundColor: ['
         'rgba(34, 221, 210, 0.8),rgba(140, 21, 233, 0.8),rgba(239, 68, 68, 0.8),rgba(16, 185, 129, 0.8),rgba(245, 158, 11, 0.8)
@@ -250,6 +219,7 @@ setChartData(prev:  > ({;
       borderColor[;';';
         'rgba(34, 221, 210, 1),rgba(140, 21, 233, 1),rgba(239, 68, 68, 1),rgba(16, 185, 129, 1),rgba(245, 158, 11, 1)
 =======
+>>>>>>> origin/main
     // Update metrics with new random values;
     setMetrics(prev => prev.map(metric => ({;
       ...metric,;
@@ -271,13 +241,13 @@ setChartData(prev:  > ({;
       ],;
       borderColor[;
         'rgba(34, 221, 210, 1),rgba(140, 21, 233, 1),rgba(239, 68, 68, 1),rgba(16, 185, 129, 1),rgba(245, 158, 11, 1);
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
       ],
->>>>>>> main
       borderColor[;
         'rgba(34, 221, 210, 1),rgba(140, 21, 233, 1),rgba(239, 68, 68, 1),rgba(16, 185, 129, 1),rgba(245, 158, 11, 1)
->>>>>>> main
       ],;
   ;
   ;
@@ -285,19 +255,13 @@ setChartData(prev:  > ({;
     ;
 <<<<<<< HEAD
 }]};
-<<<<<<< HEAD
   // Generate line chart data';
   const lineChartData = {';';
 '"
-
 </any>
 </any>';
 </DataVisualizationProps>;';;';
-=======
-=======
-<<<<<<< HEAD
 "}]};
->>>>>>> main
   // Generate line chart data;
   const lineChartData = {;
 '";
@@ -307,20 +271,21 @@ setChartData(prev:  > ({;
 </any>;
 </any>;
 </DataVisualizationProps>;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 =======
+=======
+>>>>>>> origin/main
 }]};
   // Generate line chart data
   const lineChartData = {
 '"
-
 </any>
 </any>
 </any>
 </any>
 </any>
+<<<<<<< HEAD
 </DataVisualizationProps>
->>>>>>> main
->>>>>>> main
+=======
+</DataVisualizationProps>
+>>>>>>> origin/main

@@ -1,19 +1,17 @@
-<<<<<<< HEAD:src/api/community.js
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 "export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug}/posts`).then(r => r.data.posts)` "`
 export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug}/posts`).then(r => r.data.posts)` '`;'';
 ';';
+"export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug}/posts`).then(r => r.data.posts)` "` export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug}/posts`).then(r => r.data.posts)` '`;'
 =======
 "export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug}/posts`).then(r => r.data.posts)` "` export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug}/posts`).then(r => r.data.posts)` '`;'
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
+>>>>>>> origin/main
 "export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug}/posts`).then(r => r.data.posts)` &quot;` export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug};/posts`).then(r => r.data.posts)` &apos;`;&apos;
-=======
 "export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug}/posts`).then(r => r.data.posts)" ""
 export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug};/posts`).then(r => r.data.posts)" '";'
+<<<<<<< HEAD
 "export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug}/posts`).then(r => r.data.posts)` "` export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug};/posts`).then(r => r.data.posts)` '`;'
->>>>>>> main
->>>>>>> main
->>>>>>> main:src_backup_temp/api/community.js
+=======
+"export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug}/posts`).then(r => r.data.posts)` "` export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug};/posts`).then(r => r.data.posts)` '`;'
+>>>>>>> origin/main

@@ -1,163 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, {useState} from 'react';'''';';
-import {motion, AnimatePresence} from 'framer-motion';'''';';
-import {Link} from 'react-router-dom';';
-const InteractiveServiceShowcase = (props: any) => {}';';
-'';';
-''';';
-'''';';
-    const [activeCategory, setActiveCategory] = useState('all');''';';
-    const [hoveredService, setHoveredService] = useState(null);'''';';
-    const categories = [''''';';
-        {id: 'all', name: 'All Services', icon: '🚀', count: 35},'''';';
-        {id: 'ai', name: 'AI & ML', icon: '🤖', count: 13},'''';';
-        {id: 'quantum', name: 'Quantum', icon: '🔮', count: 5},'''';';
-        {id: 'cloud', name: 'Cloud', icon: '☁️', count: 8},'''';';
-        {id: 'security', name: 'Security', icon: '🛡️', count: 6},'''';';
-        {id: 'automation', name: 'Automation', icon: '⚡', count: 3}
-    ];
-    const services = []';
-        {}';';
-'';';
-''';';
-'''';';
-            id: 'ai-strategy','''';';
-            title: 'AI Strategy Consulting','''';';
-            description: 'Comprehensive AI strategy development and implementation consulting for enterprises','''';';
-            icon: '🤖','''';';
-            price: 'From $2,500','''';';
-            category: 'ai','''';';
-            features['Strategic Planning',Implementation Roadmap',ROI Analysis',Team Training'],;''';';
-            isPopular: true,'''';';
-            color: 'from-zion-cyan to-zion-blue','''';';
-            href: '/services/ai'
-        },';
-        {}';';
-'';';
-''';';
-'''';';
-            id: 'quantum-ai','''';';
-            title: 'Quantum AI Fusion Platform','''';';
-            description: 'Revolutionary platform combining quantum computing with artificial intelligence','''';';
-            icon: '🔮','''';';
-            price: 'From $25,000','''';';
-            category: 'quantum','''';';
-            features['Quantum Algorithms',AI Integration',Performance Optimization',Scalable Architecture'],;''';';
-            isNew: true,'''';';
-            color: 'from-zion-purple to-zion-cyan','''';';
-            href: '/services/quantum'
-        },';
-        {}';';
-'';';
-''';';
-'''';';
-            id: 'neuromorphic','''';';
-            title: 'Neuromorphic Computing Platform','''';';
-            description: 'Brain-inspired computing architecture for ultra-efficient AI processing','''';';
-            icon: '🧠','''';';
-            price: 'From $35,000','''';';
-            category: 'ai','''';';
-            features['Neural Networks',Efficient Processing',Scalable Architecture',Low Power Consumption'],;'''';';
-            color: 'from-zion-blue to-zion-cyan','''';';
-            href: '/services/ai'
-        },';
-        {}';';
-'';';
-''';';
-'''';';
-            id: 'edge-ai','''';';
-            title: 'Edge AI Orchestration Platform','''';';
-            description: 'Intelligent orchestration of AI workloads across distributed edge computing','''';';
-            icon: '🌐','''';';
-            price: 'From $15,000','''';';
-            category: 'cloud','''';';
-            features['Edge Deployment',Load Balancing',Real-time Processing',IoT Integration'],;'''';';
-            color: 'from-zion-cyan to-zion-green','''';';
-            href: '/services/cloud'
-        },';
-        {}';';
-'';';
-''';';
-'''';';
-            id: 'federated-learning','''';';
-            title: 'Federated Learning Platform','''';';
-            description: 'Privacy-preserving AI training across distributed data sources','''';';
-            icon: '🔒','''';';
-            price: 'From $20,000','''';';
-            category: 'security','''';';
-            features['Data Privacy',Distributed Training',Secure Communication',Compliance Ready'],;'''';';
-            color: 'from-zion-green to-zion-cyan','''';';
-            href: '/services/security'
-        },';
-        {}';';
-'';';
-''';';
-'''';';
-            id: 'ai-ethics','''';';
-            title: 'AI Ethics & Governance Platform','''';';
-            description: 'Comprehensive framework for ethical AI development and governance','''';';
-            icon: '⚖️','''';';
-            price: 'From $18,000','''';';
-            category: 'ai','''';';
-            features['Ethical Guidelines',Compliance Tools',Audit Trails',Risk Assessment'],;'''';';
-            color: 'from-zion-yellow to-zion-orange','''';';
-            href: '/services/ai'
-        },';
-        {}';';
-'';';
-''';';
-'''';';
-            id: 'quantum-security','''';';
-            title: 'Quantum-Safe Security Suite','''';';
-            description: 'Next-generation security solutions resistant to quantum attacks','''';';
-            icon: '🔐','''';';
-            price: 'From $30,000','''';';
-            category: 'security','''';';
-            features['Post-Quantum Cryptography',Quantum Key Distribution',Threat Detection',Zero Trust'],;''';';
-            isNew: true,'''';';
-            color: 'from-zion-purple to-zion-red','''';';
-            href: '/services/security'
-        },';
-        {}';';
-'';';
-''';';
-'''';';
-            id: 'cloud-automation','''';';
-            title: 'Cloud Infrastructure Automation','''';';
-            description: 'Intelligent automation of cloud infrastructure deployment and management','''';';
-            icon: '⚙️','''';';
-            price: 'From $12,000','''';';
-            category: 'automation','''';';
-            features['Infrastructure as Code',Auto-scaling',Cost Optimization',Monitoring'],;'''';';
-            color: 'from-zion-orange to-zion-yellow','''';';
-            href: '/services/automation''';';
-        }''';';
-    ];'''';';
-    const filteredServices = activeCategory === 'all'
-=======
 import React, {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
-=======
 import React, {useState} from 'react';'''
 import {motion, AnimatePresence} from 'framer-motion';'''
->>>>>>> main
 import {Link} from 'react-router-dom';
-<<<<<<< HEAD
-const InteractiveServiceShowcase = ("props": "any) => {"}
-';
-'';
-''';
-    const [activeCategory, setActiveCategory] = useState('all');'';
-    const [hoveredService, setHoveredService] = useState(null);''';
-    const categories = ['''';
-        {"id": 'all', "name": 'All Services', "icon": '🚀', "count": "35"},''';
-        {"id": 'ai', "name": 'AI & ML', "icon": '🤖', "count": "13"},''';
-        {"id": 'quantum', "name": 'Quantum', "icon": '🔮', "count": "5"},''';
-        {"id": 'cloud', "name": 'Cloud', "icon": '☁️', "count": "8"},''';
-        {"id": 'security', "name": 'Security', "icon": '🛡️', "count": "6"},''';
-        {"id": 'automation', "name": 'Automation', "icon": '⚡', "count": "3"}
-=======
 const InteractiveServiceShowcase = (props: any) => {}
 '
 ''
@@ -171,130 +16,9 @@ const InteractiveServiceShowcase = (props: any) => {}
         {id: 'cloud', name: 'Cloud', icon: '☁️', count: 8},'''
         {id: 'security', name: 'Security', icon: '🛡️', count: 6},'''
         {id: 'automation', name: 'Automation', icon: '⚡', count: 3}
->>>>>>> main
     ];
     const services = []
         {}
-<<<<<<< HEAD
-';
-'';
-''';
-            "id": 'ai-strategy',''';
-            "title": 'AI Strategy Consulting',''';
-            "description": 'Comprehensive AI strategy development and implementation consulting for enterprises',''';
-            "icon": '🤖',''';
-            "price": 'From $2,500',''';
-            "category": 'ai',''';
-            features['Strategic Planning',Implementation Roadmap',ROI Analysis',Team Training'],;'';
-            "isPopular": "true",''';
-            "color": 'from-zion-cyan to-zion-blue',''';
-            "href": '/services/ai';
-        },;
-        {}
-';
-'';
-''';
-            "id": 'quantum-ai',''';
-            "title": 'Quantum AI Fusion Platform',''';
-            "description": 'Revolutionary platform combining quantum computing with artificial intelligence',''';
-            "icon": '🔮',''';
-            "price": 'From $25,000',''';
-            "category": 'quantum',''';
-            features['Quantum Algorithms',AI Integration',Performance Optimization',Scalable Architecture'],;'';
-            "isNew": "true",''';
-            "color": 'from-zion-purple to-zion-cyan',''';
-            "href": '/services/quantum';
-        },;
-        {}
-';
-'';
-''';
-            "id": 'neuromorphic',''';
-            "title": 'Neuromorphic Computing Platform',''';
-            "description": 'Brain-inspired computing architecture for ultra-efficient AI processing',''';
-            "icon": '🧠',''';
-            "price": 'From $35,000',''';
-            "category": 'ai',''';
-            features['Neural Networks',Efficient Processing',Scalable Architecture',Low Power Consumption'],;''';
-            "color": 'from-zion-blue to-zion-cyan',''';
-            "href": '/services/ai';
-        },;
-        {}
-';
-'';
-''';
-            "id": 'edge-ai',''';
-            "title": 'Edge AI Orchestration Platform',''';
-            "description": 'Intelligent orchestration of AI workloads across distributed edge computing',''';
-            "icon": '🌐',''';
-            "price": 'From $15,000',''';
-            "category": 'cloud',''';
-            features['Edge Deployment',Load Balancing',Real-time Processing',IoT Integration'],;''';
-            "color": 'from-zion-cyan to-zion-green',''';
-            "href": '/services/cloud';
-        },;
-        {}
-';
-'';
-''';
-            "id": 'federated-learning',''';
-            "title": 'Federated Learning Platform',''';
-            "description": 'Privacy-preserving AI training across distributed data sources',''';
-            "icon": '🔒',''';
-            "price": 'From $20,000',''';
-            "category": 'security',''';
-            features['Data Privacy',Distributed Training',Secure Communication',Compliance Ready'],;''';
-            "color": 'from-zion-green to-zion-cyan',''';
-            "href": '/services/security';
-        },;
-        {}
-';
-'';
-''';
-            "id": 'ai-ethics',''';
-            "title": 'AI Ethics & Governance Platform',''';
-            "description": 'Comprehensive framework for ethical AI development and governance',''';
-            "icon": '⚖️',''';
-            "price": 'From $18,000',''';
-            "category": 'ai',''';
-            features['Ethical Guidelines',Compliance Tools',Audit Trails',Risk Assessment'],;''';
-            "color": 'from-zion-yellow to-zion-orange',''';
-            "href": '/services/ai';
-        },;
-        {}
-';
-'';
-''';
-            "id": 'quantum-security',''';
-            "title": 'Quantum-Safe Security Suite',''';
-            "description": 'Next-generation security solutions resistant to quantum attacks',''';
-            "icon": '🔐',''';
-            "price": 'From $30,000',''';
-            "category": 'security',''';
-            features['Post-Quantum Cryptography',Quantum Key Distribution',Threat Detection',Zero Trust'],;'';
-            "isNew": "true",''';
-            "color": 'from-zion-purple to-zion-red',''';
-            "href": '/services/security';
-        },;
-        {}
-';
-'';
-''';
-            "id": 'cloud-automation',''';
-            "title": 'Cloud Infrastructure Automation',''';
-            "description": 'Intelligent automation of cloud infrastructure deployment and management',''';
-            "icon": '⚙️',''';
-            "price": 'From $12,000',''';
-            "category": 'automation',''';
-            features['Infrastructure as Code',Auto-scaling',Cost Optimization',Monitoring'],;''';
-            "color": 'from-zion-orange to-zion-yellow',''';
-            "href": '/services/automation'';
-        }'';
-    ];''';
-    const filteredServices = activeCategory === 'all';
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
         ? services;
         : "services.filter(service => service.category === activeCategory) ;
     const containerVariants = {"}
@@ -315,7 +39,6 @@ const InteractiveServiceShowcase = (props: any) => {}
             "transition": "{"}
                 "duration": "0.5",;
                 "ease": "easeOut"""";
-=======
 '
 ''
 '''
@@ -432,7 +155,6 @@ const InteractiveServiceShowcase = (props: any) => {}
         }''
     ];'''
     const filteredServices = activeCategory === 'all'
->>>>>>> main
         ? services;
         : services.filter(service => service.category === activeCategory) ;
     const containerVariants = {}
@@ -453,47 +175,16 @@ const InteractiveServiceShowcase = (props: any) => {}
             transition: {}
                 duration: 0.5,
                 ease: "easeOut""""
->>>>>>> main
             }
         }
     };
     const categoryVariants = {}
-<<<<<<< HEAD
-  "hidden": "{"scale": 0.8",;
-  "opacity": "0;"},;
-        "visible": "{"}
-            "scale": "1",;
-            "opacity": "1",;
-            "transition": "{"}
-""";
-                "duration": "0.3","""";
-                "ease": "easeOut""";
-            }
-        }""";
-    };"""";
-    return (<section className="py-24 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">"""";
-      <div className="max-w-7xl mx-auto px-4 "sm": "px-6 "lg":px-8">""";
-        {/* Header Section */"}"""";
-        <motion.div className="text-center mb-20" initial = {}
-<<<<<<< HEAD
-  {opacity: 0,;
-  y: 30;}} whileInView = {}
-<<<<<<< HEAD
-  {opacity: 1,
-  y: 0;';
-"""}} viewport={{ once: true }} transition={{ duration: 0.8 }}>""""';';
-          <h2 className="text-5xl md:text-6xl font-black text-white mb-6">'"""';';
-            Explore Our{' '}""""
-            <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
-=======
   {opacity: 1,;
   y: 0;
 """}} viewport={{ once: true }} transition={{ duration: 0.8 }}>"""";
           <h2 className="text-5xl md:text-6xl font-black text-white mb-6">'""";
             Explore Our{' '}"""";
             <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
   {"opacity": "0",;
   "y": "30;"}} whileInView = {}
   {"opacity": "1",;
@@ -502,7 +193,6 @@ const InteractiveServiceShowcase = (props: any) => {}
           <h2 className="text-5xl "md": "text-6xl font-black text-white mb-6">'""";
             Explore Our{' '"}"""";
             <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">;
->>>>>>> main
               Innovative Services;
             </span>""";
           </h2>"""";
@@ -514,31 +204,14 @@ const InteractiveServiceShowcase = (props: any) => {}
 """;
         {/* Category Filter Tabs */"}"""";
         <motion.div className="flex flex-wrap justify-center gap-4 mb-16" initial = {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-  {opacity: 0,
-  y: 20;}} whileInView = {}';
-  {opacity: 1,';';
-  y: 0;}} viewport={{ once: true }} transition={{ duration: 0.6 }}>'';';
-          {categories.map((category) => (<button key={category.id} onClick={() => setActiveCategory(category.id)} className={`group flex items-center gap-3 px-6 py-4 rounded-2xl font-semibold transition-all duration-300 ${activeCategory === category.id''`';';
-                ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-xl shadow-zion-cyan/25''`'"`';';
-                : 'bg-white/10 backdrop-blur-md text-zion-slate-light border border-white/20 hover:bg-white/20 hover:border-zion-cyan/50'}`}>""""';
-              <span className="text-xl">{category.icon}</span>`';';
-              <span>{category.name}</span>`'`';';
-              <span className={`px-2 py-1 rounded-full text-xs ${activeCategory === category.id''`';';
-                ? 'bg-white/20 text-white''`'`';';
-                : 'bg-zion-cyan/20 text-zion-cyan'}`}>
-=======
   {opacity: 0,;
   y: 20;}} whileInView = {}
   {opacity: 1,;
   y: 0;}} viewport={{ once: true }} transition={{ duration: 0.6 }}>';
-=======
   {"opacity": "0",;
   "y": "20;"}} whileInView = {}
   {"opacity": "1",;
   "y": "0;"}} viewport={{ "once": "true "}} transition={{ "duration": "0.6 "}}>';
->>>>>>> main
           {categories.map((category) => (<button key={category.id} onClick={() => setActiveCategory(category.id)} className={`group flex items-center gap-3 px-6 py-4 rounded-2xl font-semibold transition-all duration-300 ${activeCategory === category.id''`;
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-xl shadow-zion-cyan/25''`'"`;
                 : 'bg-white/10 backdrop-blur-md text-zion-slate-light border border-white/20 "hover": "bg-white/20 "hover":border-zion-cyan/50'"}`}>"""";
@@ -547,10 +220,6 @@ const InteractiveServiceShowcase = (props: any) => {}
               <span className={`px-2 py-1 rounded-full text-xs ${activeCategory === category.id''`;
                 ? 'bg-white/20 text-white''`'`;
                 : 'bg-zion-cyan/20 text-zion-cyan'}`}>;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-=======
   hidden: {scale: 0.8,
   opacity: 0;},
         visible: {}
@@ -598,14 +267,9 @@ const InteractiveServiceShowcase = (props: any) => {}
               <span className={`px-2 py-1 rounded-full text-xs ${activeCategory === category.id''`
                 ? 'bg-white/20 text-white''`'`
                 : 'bg-zion-cyan/20 text-zion-cyan'}`}>
->>>>>>> main
->>>>>>> main
                 {category.count}
               </span>
             </button>) ) }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         </motion.div>;
 """;
         {/* Services Grid */}"""";
@@ -632,8 +296,6 @@ const InteractiveServiceShowcase = (props: any) => {}
                         {service.title"}""";
                       """";
                       <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">;
-=======
->>>>>>> main
         </motion.div>
 """
         {/* Services Grid */}""""
@@ -660,8 +322,6 @@ const InteractiveServiceShowcase = (props: any) => {}
                         {service.title}"""
                       """"
                       <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
-<<<<<<< HEAD
-=======
         </motion.div>;
 """;
         {/* Services Grid */}"""";
@@ -688,10 +348,6 @@ const InteractiveServiceShowcase = (props: any) => {}
                         {service.title}""";
                       """";
                       <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
->>>>>>> main
                         {service.description}
                       </p>
                       """
@@ -709,23 +365,6 @@ const InteractiveServiceShowcase = (props: any) => {}
                         {service.features.length > 3 && (<div className="text-zion-cyan/60 text-xs">
                             +{service.features.length-3} more features;
                           </div>) }
-<<<<<<< HEAD
-                      </div>;
-""";
-<<<<<<< HEAD
-                      {/* Features */}"""";
-                      <div className="space-y-2 mb-6">"""";
-                        {service.features.slice(0, 3).map((feature, index) => (<div key={index} className="flex items-center gap-2 text-zion-slate-light text-xs">"""";
-                            <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full" />;
-                            {feature}""";
-                          </div>))}"""";
-                        {service.features.length > 3 && (<div className="text-zion-cyan/60 text-xs">;
-                            +{service.features.length-3} more features;
-<<<<<<< HEAD
-                              </div>
-  );
-}
-=======
                       {/* CTA Button */}"""";
                       <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 border border-zion-cyan/40 rounded-xl text-zion-cyan text-sm font-semibold group-"hover": "from-zion-cyan/30 group-"hover":to-zion-blue/30 transition-all duration-300">""";
                         Learn More"""";
@@ -772,8 +411,6 @@ const InteractiveServiceShowcase = (props: any) => {}
         </motion.div>;
       </div>;
     </section>)"};
-=======
->>>>>>> main
                       </div>
 """
                       {/* CTA Button */}""""
@@ -787,8 +424,6 @@ const InteractiveServiceShowcase = (props: any) => {}
                     <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </Link>
-<<<<<<< HEAD
-=======
                           </div>) }
                       </div>;
 """;
@@ -803,9 +438,6 @@ const InteractiveServiceShowcase = (props: any) => {}
                     <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />;
                   </div>;
                 </Link>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
               </motion.div>) ) }
           </AnimatePresence>
         </motion.div>
@@ -818,30 +450,18 @@ const InteractiveServiceShowcase = (props: any) => {}
   y: 0;}} viewport={{ once: true }} transition = {}
   {duration: 0.8,
   delay: 0.2;
-<<<<<<< HEAD
-<<<<<<< HEAD
-"""}}>""""
-          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10 backdrop-blur-md p-12 rounded-3xl border border-zion-cyan/20">""""
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?"""';
-            </h3>""""';';
-            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">'';';
-=======
 """}}>"""";
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10 backdrop-blur-md p-12 rounded-3xl border border-zion-cyan/20">"""";
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">;
               Ready to Transform Your Business?""";
             """";
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 """}}>""""
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10 backdrop-blur-md p-12 rounded-3xl border border-zion-cyan/20">""""
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?"""
             """"
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">'
->>>>>>> main
               Let's discuss how our innovative technology solutions can drive your business forward;
               and give you a competitive edge in the market"""
             </p>""""
@@ -859,7 +479,6 @@ const InteractiveServiceShowcase = (props: any) => {}
         </motion.div>
       </div>
     </section>)};
->>>>>>> main
 export default InteractiveServiceShowcase;
 
 export {InteractiveServiceShowcase};
@@ -871,25 +490,15 @@ export {InteractiveServiceShowcase};
 export {InteractiveServiceShowcase};
 
 export {InteractiveServiceShowcase};
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-</motion>
-</motion>';
-</motion>;';;';
-=======
 ;
 </motion>;
 </motion>;
 </motion>;
 </motion>;
 </motion>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 
 </motion>
 </motion>
 </motion>
 </motion>
 </motion>
->>>>>>> main

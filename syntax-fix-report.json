@@ -38,8 +38,6 @@
     "/workspace/src/pages/SavedTalentsPage.js.jsx"
   ],
   "errorList": []
-=======
-<<<<<<< HEAD
   "timestamp": "2025-09-04T22:00:00.550Z",
   "fixedFiles": 123,
   "errors": 0,
@@ -170,6 +168,7 @@
   ],
   "errorDetails": []
 =======
+>>>>>>> origin/main
   "timestamp": "2025-09-05T02:57:49.742Z",
   "processedFiles": 8556,
   "fixedFiles": 6729,
@@ -6906,6 +6905,4 @@
     "zion_academy/static/js/script.jsx"
   ],
   "errorList": []
->>>>>>> main
->>>>>>> main
 }

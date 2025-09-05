@@ -1,7 +1,3 @@
-<<<<<<< HEAD:src/components/accessibility/AccessibilityProvider.tsx
-=======
-<<<<<<< HEAD
-=======
 import React, { createContext, useContext, useEffect, useState } from 'react';
 <<<<<<< HEAD
 ;
@@ -91,6 +87,7 @@ export function AccessibilityProvider("props": "any) {;
       }}
     >;
 =======
+>>>>>>> origin/main
 interface AccessibilityContextType {
   "isHighContrast": boolean;';
   isReducedMotion: boolean;';';
@@ -161,7 +158,6 @@ export function AccessibilityProvider($1) {
         toggleReducedMotion,
         setFontSize}}
     >
->>>>>>> main
       {children}
     </AccessibilityContext.Provider>;
   );
@@ -170,8 +166,8 @@ export function AccessibilityProvider($1) {
 ;
 export function useAccessibility("props": "any) {;
 =======
+>>>>>>> origin/main
 export function useAccessibility($1) {
->>>>>>> main
   const context = useContext(AccessibilityContext);
   if (context === undefined) {;
     throw new Error('useAccessibility must be used within an AccessibilityProvider');
@@ -183,11 +179,13 @@ export function useAccessibility($1) {
 </any>;
 </any>;
 </AccessibilityContextType>
+</AccessibilityContext>
+</any>
+</AccessibilityContextType>;';';
+import React,{ createContext,useContext,useEffect,useState } from 'react'; interface AccessibilityContextType { isHighContrast: boolean;'; isReducedMotion: boolean;';'; fontSize: 'small' | 'medium' | 'large'; toggleHighContrast: () => void;'; toggleReducedMotion: () => void;';'; setFontSize: (size: 'small' | 'medium' | 'large') => void} const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined); export function AccessibilityProvider($1) { const [isHighContrast,setIsHighContrast] = useState<any>(false); const [isReducedMotion,setIsReducedMotion] = useState<any>(false); const [fontSize,setFontSizeState] = useState<'small' | 'medium' | 'large'>('medium'); useEffect(() => { const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches; setIsReducedMotion(prefersReducedMotion); const savedHighContrast = localStorage.getItem('accessibility-high-contrast') === 'true const savedFontSize = localStorage.getItem('accessibility-font-size') as 'small' | 'medium' | 'large' || 'medium'; setIsHighContrast(savedHighContrast); setFontSizeState(savedFontSize); applyAccessibilityStyles(savedHighContrast,prefersReducedMotion,savedFontSize)},[]); const applyAccessibilityStyles = (props) => { const root = document.documentElement; if (highContrast) { root.classList.add('high-contrast');'} else { root.classList.remove('high-contrast')} if (reducedMotion) { root.classList.add('reduced-motion');'} else { root.classList.remove('reduced-motion')} root.classList.remove('font-small','font-medium','font-large'); root.classList.add(`font-${fontSize}`)}; const toggleHighContrast = (props) => { const newValue = !isHighContrast; setIsHighContrast(newValue);';'; localStorage.setItem('accessibility-high-contrast',newValue.toString()); applyAccessibilityStyles(newValue,isReducedMotion,fontSize)}; const toggleReducedMotion = (props) => { const newValue = !isReducedMotion; setIsReducedMotion(newValue);';'; localStorage.setItem('accessibility-reduced-motion',newValue.toString()); applyAccessibilityStyles(isHighContrast,newValue,fontSize)}; const setFontSize = (props) => { setFontSizeState(size);';'; localStorage.setItem('accessibility-font-size',size); applyAccessibilityStyles(isHighContrast,isReducedMotion,size)}; return ( <AccessibilityContext.Provider value={{ isHighContrast,isReducedMotion,fontSize,toggleHighContrast,toggleReducedMotion,setFontSize,}} > {children} </AccessibilityContext.Provider> )} export function useAccessibility($1) { const context = useContext(AccessibilityContext); if (context === undefined) { throw new Error('useAccessibility must be used within an AccessibilityProvider')} return context} </AccessibilityContext> </any> </AccessibilityContextType>;';';
 =======
 </AccessibilityContext>
 </any>
 </AccessibilityContextType>;';';
 import React,{ createContext,useContext,useEffect,useState } from 'react'; interface AccessibilityContextType { isHighContrast: boolean;'; isReducedMotion: boolean;';'; fontSize: 'small' | 'medium' | 'large'; toggleHighContrast: () => void;'; toggleReducedMotion: () => void;';'; setFontSize: (size: 'small' | 'medium' | 'large') => void} const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined); export function AccessibilityProvider($1) { const [isHighContrast,setIsHighContrast] = useState<any>(false); const [isReducedMotion,setIsReducedMotion] = useState<any>(false); const [fontSize,setFontSizeState] = useState<'small' | 'medium' | 'large'>('medium'); useEffect(() => { const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches; setIsReducedMotion(prefersReducedMotion); const savedHighContrast = localStorage.getItem('accessibility-high-contrast') === 'true const savedFontSize = localStorage.getItem('accessibility-font-size') as 'small' | 'medium' | 'large' || 'medium'; setIsHighContrast(savedHighContrast); setFontSizeState(savedFontSize); applyAccessibilityStyles(savedHighContrast,prefersReducedMotion,savedFontSize)},[]); const applyAccessibilityStyles = (props) => { const root = document.documentElement; if (highContrast) { root.classList.add('high-contrast');'} else { root.classList.remove('high-contrast')} if (reducedMotion) { root.classList.add('reduced-motion');'} else { root.classList.remove('reduced-motion')} root.classList.remove('font-small','font-medium','font-large'); root.classList.add(`font-${fontSize}`)}; const toggleHighContrast = (props) => { const newValue = !isHighContrast; setIsHighContrast(newValue);';'; localStorage.setItem('accessibility-high-contrast',newValue.toString()); applyAccessibilityStyles(newValue,isReducedMotion,fontSize)}; const toggleReducedMotion = (props) => { const newValue = !isReducedMotion; setIsReducedMotion(newValue);';'; localStorage.setItem('accessibility-reduced-motion',newValue.toString()); applyAccessibilityStyles(isHighContrast,newValue,fontSize)}; const setFontSize = (props) => { setFontSizeState(size);';'; localStorage.setItem('accessibility-font-size',size); applyAccessibilityStyles(isHighContrast,isReducedMotion,size)}; return ( <AccessibilityContext.Provider value={{ isHighContrast,isReducedMotion,fontSize,toggleHighContrast,toggleReducedMotion,setFontSize,}} > {children} </AccessibilityContext.Provider> )} export function useAccessibility($1) { const context = useContext(AccessibilityContext); if (context === undefined) { throw new Error('useAccessibility must be used within an AccessibilityProvider')} return context} </AccessibilityContext> </any> </AccessibilityContextType>;';';
->>>>>>> main
->>>>>>> main
->>>>>>> main:src_backup_temp/components/accessibility/AccessibilityProvider.tsx
+>>>>>>> origin/main

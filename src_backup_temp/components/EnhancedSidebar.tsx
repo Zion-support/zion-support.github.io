@@ -4,7 +4,6 @@ export default function Page("props": "any) {;
     setExpandedSections(newExpanded)"};
 ;
   const navigationSections = [{;
-
       "title": "Main Navigation",;
       "icon": "Hom e",;
       items[;";
@@ -18,26 +17,19 @@ export default function Page("props": "any) {;
         { "name": "Contact", "href": "/contact", "icon": "MessageCircl e "},";
         { "name": "Careers", "href": "/careers", "icon": "Briefcas e "},";
         { "name": "Partners", "href": "/partners", "icon": "Handshak e "}              </button>;
-
               <AnimatePresence>;
                 {expandedSections.has(section.title) && (<motion.div;
                     initial = {;
-
   { "opacity": "0",;
   "height": "0;
-
 "}}
                     animate = {;
-
   { "opacity": "1",;
   "height": 'auto';
-
 }}
                     exit = {;
-
   { "opacity": "0",;
   "height": "0;
-
 "}}
                     transition={{ "duration": "0.3 "}}";
                     className="ml-7 mt-2 space-y-1";
@@ -45,22 +37,16 @@ export default function Page("props": "any) {;
                     {section.items.map((item) => (<Link;
                         key={item.name}
                         initial = {;
-
   { "opacity": "0",;
   "x": "-20;
-
 "}}
                         animate = {;
-
   { "opacity": "1",;
   "x": "0;
-
 "}}
                         transition = {;
-
   { "duration": "0.2",;
   "delay": "itemInde x * 0.05;
-
 "}}
                       >";
                         <item.icon className="w-4 h-4" />;
@@ -75,27 +61,20 @@ export default function Page("props": "any) {;
               </AnimatePresence>;
             </div>) ) }
         </nav>;
-
         {/* Contact Info */}
         <motion.div";
           className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg";
           initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           transition = {;
-
   { "duration": "0.5",;
   "delay": "0.5;
-
 <<<<<<< HEAD
 "}}
         >";
@@ -111,6 +90,8 @@ export default function Page("props": "any) {;
             </div>";
             <div className="flex items-center space-x-2">";
 =======
+
+>>>>>>> origin/main
 }}
         >"
           <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?"
@@ -124,7 +105,6 @@ export default function Page("props": "any) {;
               <span>kleber@ziontechgroup.com</span>
             </div>"
             <div className="flex items-center space-x-2">"
->>>>>>> main
               <MapPin className="w-3 h-3"   />;              <span>Middletown, DE</span>;
             </div>;
           </div>;
@@ -132,6 +112,5 @@ export default function Page("props": "any) {;
       </div>;
     </aside>;) };
 '"`;
-
 </motion>;
 </motion>

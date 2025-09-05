@@ -82,6 +82,7 @@ const "TrustIndicators": "React.FC = () => {;
               </div>"";
               <h3 className="text-sm font-semibold text-white mb-1">;
 =======
+>>>>>>> origin/main
 const TrustIndicators: React.FC = () => {
   const indicators = [
     {
@@ -160,7 +161,6 @@ const TrustIndicators: React.FC = () => {
                 <indicator .icon className={`w-8 h-8 ${indicator.color}`} /` >`}
               </div>""
               <h3 className="text-sm font-semibold text-white mb-1">
->>>>>>> main
                 {indicator.title}
               ""
               <p className="text-xs text-slate-400">
@@ -172,10 +172,6 @@ const TrustIndicators: React.FC = () => {
     </div>
     );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
         </div>
         {/* Additional Trust Elements */}""
         <div className="mt-16 text-center">""
@@ -207,6 +203,7 @@ export default TrustIndicators;"`""';';';';
 </CheckCircle>';
 </indicator>;';;';
 =======
+>>>>>>> origin/main
         </div>;
         {/* Additional Trust Elements */}"";
         <div className="mt-16 text-center">"";
@@ -229,10 +226,8 @@ export default TrustIndicators;"`""';';';';
             </div>;
           </div>;
         </div>;
-=======
           </div>
         </div>
->>>>>>> main
       </div>';
     </section>';';
   );};';';';
@@ -243,15 +238,16 @@ export default TrustIndicators;"`"";
 </CheckCircle>;
 </CheckCircle>;
 </indicator>;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 =======
+>>>>>>> origin/main
 export default TrustIndicators;"`""';';';';
 </CheckCircle>
 </CheckCircle>
 </CheckCircle>
 </CheckCircle>
+<<<<<<< HEAD
 </indicator>
->>>>>>> main
->>>>>>> main
+=======
+</indicator>
+>>>>>>> origin/main

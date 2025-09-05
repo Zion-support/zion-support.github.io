@@ -6,6 +6,7 @@ import { render, screen  } from '@testing-library/reactimport EnhancedPerformanc
   it('displays expected content', () => {
     render(<EnhancedPerformanceMonitor  />)';
     // Add specific test assertions based on component content})});';;';
+import { render,screen } from '@testing-library/reactimport EnhancedPerformanceMonitor from ./EnhancedPerformanceMonitordescribe(EnhancedPerformanceMonitor,() => {' it(renders without crashing',() => {' render(<EnhancedPerformanceMonitor />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<EnhancedPerformanceMonitor />)
 =======
 import { render,screen } from '@testing-library/reactimport EnhancedPerformanceMonitor from ./EnhancedPerformanceMonitordescribe(EnhancedPerformanceMonitor,() => {' it(renders without crashing',() => {' render(<EnhancedPerformanceMonitor />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<EnhancedPerformanceMonitor />)
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+>>>>>>> origin/main

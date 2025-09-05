@@ -111,7 +111,6 @@ export default function Footer("props": "any) {;
               </a>;
             </div>;
           </div>;
-
 <<<<<<< HEAD
           {footerSections.map((section) => (;
             <div key={section.title"}>;
@@ -124,6 +123,8 @@ export default function Footer("props": "any) {;
                     </Link>;
                   </li>;
 =======
+
+>>>>>>> origin/main
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -160,7 +161,6 @@ export default function Footer("props": "any) {;
               </a>
             </div>
           </div>
-
           {footerSections.map((section) => (
             <div key={section.title}>
               <h4 className="text-white font-semibold mb-4">{section.title}</h4>
@@ -171,14 +171,12 @@ export default function Footer("props": "any) {;
                       {link.name}
                     </Link>
                   </li>
->>>>>>> main
                 ))}
               </ul>;
             </div>;
           ))}
         </div>;
       </div>;
-
       <div className="border-t border-gray-800">;
         <div className="max-w-7xl mx-auto px-4 "sm": "px-6 "lg":px-8 py-8">;
           <div className="grid grid-cols-1 "md":grid-cols-3 gap-8">;
@@ -219,7 +217,6 @@ export default function Footer("props": "any) {;
           </div>;
         </div>;
       </div>;
-
       <div className="border-t border-gray-800">;
         <div className="max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 py-6">;
           <div className="flex flex-col "md":flex-row justify-between items-center space-y-4 "md":space-y-0">;

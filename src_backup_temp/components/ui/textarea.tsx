@@ -1,7 +1,3 @@
-<<<<<<< HEAD:src/components/ui/textarea.tsx
-=======
-<<<<<<< HEAD
-=======
 import React from 'react';
 <<<<<<< HEAD
 ;
@@ -14,6 +10,7 @@ export function Textarea("props": "any) {;
       {...props}
      />;
 =======
+>>>>>>> origin/main
 interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   className?: string;
 }
@@ -23,21 +20,20 @@ export function Textarea({ className, ...props }: TextareaProps) {
       className={`flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "placeholder": text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}
       {...props}
     />
->>>>>>> main
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 </textarea>';
 </HTMLTextAreaElement>;';;';
-=======
 }
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+}
+</textarea>
+</HTMLTextAreaElement>;';';
+import React from 'react'; interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> { className?: string} export function Textarea({ className,...props }: TextareaProps) { return ( <textarea className={`flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`} {...props} /> )} </textarea> </HTMLTextAreaElement>;';';
+=======
 =======
 }
 </textarea>
 </HTMLTextAreaElement>;';';
 import React from 'react'; interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> { className?: string} export function Textarea({ className,...props }: TextareaProps) { return ( <textarea className={`flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`} {...props} /> )} </textarea> </HTMLTextAreaElement>;';';
->>>>>>> main
->>>>>>> main
->>>>>>> main:src_backup_temp/components/ui/textarea.tsx
+>>>>>>> origin/main

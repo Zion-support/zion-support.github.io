@@ -1,11 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight, Globe, Shield, Users export function ContactSection("props": "any) {  import { Link  "} from 'react-router-dom';
-,;
-        {;
-";
-=======
->>>>>>> main
 
 interface ContactSection.jsProps {
   // Add props here as needed
@@ -18,8 +11,4 @@ export default function ContactSection.js({ }: ContactSection.jsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-export default Component;
-=======
 }
->>>>>>> main

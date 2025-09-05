@@ -1,7 +1,3 @@
-<<<<<<< HEAD:src/components/PageLoader.tsx
-=======
-<<<<<<< HEAD
-=======
 import React from 'react';
 <<<<<<< HEAD
 ;
@@ -15,19 +11,24 @@ export const "PageLoader": "React.FC = ("props": any) => {;
     </div>;
   );
 "};
+export const "PageLoader": React.FC = (props) => {
+  return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
 =======
 export const "PageLoader": React.FC = (props) => {
   return (
-<<<<<<< HEAD
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-=======
+>>>>>>> origin/main
     <div className="min-h-screen bg-white">
->>>>>>> main
->>>>>>> main:src_backup_temp/components/PageLoader.tsx
       <div className="text-center">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
         <p className="text-gray-600">Loading...</p>
       </div>
     </div>
->>>>>>> main
->>>>>>> main
+<<<<<<< HEAD
+    );
+};
+  );
+};';';
+import React from 'react'; export const PageLoader: React.FC = (props) => { return ( <div className="min-h-screen bg-white"> <div className="text-center"> <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div> <p className="text-gray-600">Loading...</p> </div> </div> )};';';
+=======
+>>>>>>> origin/main

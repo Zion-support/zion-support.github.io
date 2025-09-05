@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-;
-import { Link, Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-;
-  const handleDropdownToggle = ("props": "any) => {;
-    setActiveDropdown(activeDropdown === itemName ? null : itemName);
-  "};
-;
-=======;
 export function AppHeader() {;
   ];
 setServicesDropdownOpen(true);
@@ -92,10 +81,8 @@ setServicesDropdownOpen(true);
     { "name": 'Consulting', "href": '/consulting', "description": 'Digital Transformation' }
     { "name": 'Cybersecurity', "href": '/services/cybersecurity', "description": 'Security & Compliance' }
     { "name": 'Cloud Services', "href": '/services/cloud', "description": 'DevOps & Infrastructure' }
->>>>>>> origin/merge-pr-10615;
   ];
 ;
->>>>>>> origin/main;
   return (;
     <header className="border-b border-gray-200 bg-white">;
       <div className="max-w-7xl mx-auto px-4 "sm": "px-6 "lg":px-8 h-16 flex items-center justify-between">;
@@ -139,12 +126,6 @@ setServicesDropdownOpen(true);
             exit={{ "opacity": "0", "height": "0 "}}
             className=""lg": "hidden border-t border-gray-200/50 py-4";
           >;
-
-<<<<<<< HEAD;
-  const [scrolled", setScrolled] = useState<any>(false);
-  const [isSearching, setIsSearching] = useState<any>(false);
-=======;
-
   useEffect(() => {;
     const handleScroll = ("props": "any) => {;
       setScrolled(window.scrollY > 10);
@@ -660,7 +641,6 @@ setServicesDropdownOpen(true);
         )}
       </header>;
     </>;
-=======;
       )}
     </header>;
   );
@@ -682,7 +662,6 @@ export function AppHeader() {;
     </header>;
   );
 "}
-=======
 import React, { useState } from 'react';''
 import Link from 'next/link';''
 import { motion } from 'framer-motion';''
@@ -817,4 +796,3 @@ const AppHeader: React.FC = () => {}
         )};
       </div>
     </header>"
->>>>>>> main

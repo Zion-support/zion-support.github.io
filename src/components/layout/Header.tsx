@@ -21,7 +21,10 @@ import {
   ArrowRight,
   Building2,
   Rocket,
-  Factory
+  Factory,
+  FileText,
+  BookOpen,
+  CheckCircle
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -69,7 +72,7 @@ export default function Header({ className = '' }: HeaderProps) {
         },
         {
           name: 'Cybersecurity',
-          href: '/security',
+          href: '/cybersecurity',
           icon: Shield,
           description: 'Advanced security solutions'
         },
@@ -78,6 +81,12 @@ export default function Header({ className = '' }: HeaderProps) {
           href: '/cloud-solutions',
           icon: Cloud,
           description: 'Cloud infrastructure & services'
+        },
+        {
+          name: 'Database Solutions',
+          href: '/database-solutions',
+          icon: Database,
+          description: 'Database management & optimization'
         }
       ]
     },
@@ -102,12 +111,60 @@ export default function Header({ className = '' }: HeaderProps) {
           href: '/industries',
           icon: Factory,
           description: 'Industry-specific solutions'
+        },
+        {
+          name: 'Custom Development',
+          href: '/custom-development',
+          icon: Code,
+          description: 'Tailored software development'
+        },
+        {
+          name: 'Digital Transformation',
+          href: '/digital-transformation',
+          icon: Network,
+          description: 'Complete digital transformation'
+        }
+      ]
+    },
+    {
+      name: 'Resources',
+      href: '/resources',
+      dropdown: [
+        {
+          name: 'Blog',
+          href: '/blog',
+          icon: Code,
+          description: 'Latest insights and updates'
+        },
+        {
+          name: 'Case Studies',
+          href: '/case-studies',
+          icon: CheckCircle,
+          description: 'Success stories and results'
+        },
+        {
+          name: 'White Papers',
+          href: '/white-papers',
+          icon: FileText,
+          description: 'In-depth technical guides'
+        },
+        {
+          name: 'Webinars',
+          href: '/webinars',
+          icon: Users,
+          description: 'Educational sessions'
+        },
+        {
+          name: 'Tutorials',
+          href: '/tutorials',
+          icon: BookOpen,
+          description: 'Step-by-step guides'
         }
       ]
     },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Blog', href: '/blog' }
+    { name: 'Demo', href: '/demo' }
   ];
 
   const contactInfo = {

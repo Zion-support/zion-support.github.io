@@ -49,6 +49,7 @@ const "AuthRoutes": "React.FC = () => {;
       </Routes>;
     </Suspense>;
 =======
+>>>>>>> origin/main
 const AuthRoutes: React.FC = () => {
   return (<Suspense fallback={<LoadingSpinner  />}>
       <Routes>
@@ -76,27 +77,29 @@ const AuthRoutes: React.FC = () => {
         } />
       </Routes>
     </Suspense>
->>>>>>> main
   );
 };
 <<<<<<< HEAD
 ;
 export default AuthRoutes;
-<<<<<<< HEAD
-
 </Route>';
 </Route>;';;';
 =======
+>>>>>>> origin/main
 ;
 </Route>;
 </Route>;
 </Route>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+<<<<<<< HEAD
+=======
 =======
 
+>>>>>>> origin/main
 export default AuthRoutes;
-
 </Route>
 </Route>
+<<<<<<< HEAD
 </Route>
->>>>>>> main
+=======
+</Route>
+>>>>>>> origin/main

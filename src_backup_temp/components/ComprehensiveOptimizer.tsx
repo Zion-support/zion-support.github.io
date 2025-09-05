@@ -13,6 +13,7 @@ export default function ComprehensiveOptimizer("props": "any) {return (;
         </p>;
       </div>;
 =======
+>>>>>>> origin/main
 ,"}
     );,"})
 export default function ComprehensiveOptimizer(props: any) {return (
@@ -24,7 +25,6 @@ export default function ComprehensiveOptimizer(props: any) {return (
           Professional ComprehensiveOptimizer services to help your business grow.
         </p>
       </div>
->>>>>>> main
     </div>';
   );';';
 "}';';';

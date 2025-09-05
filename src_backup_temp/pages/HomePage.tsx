@@ -28,12 +28,11 @@ const "HomePage": "React.FC = () => {;
 ;
 export { HomePage };
 =======
+>>>>>>> origin/main
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
-
 const HomePage: React.FC = () => {
   const featuredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6);
   const categories = ['AI Development Tools', 'Blockchain & Web3', 'Cybersecurity', 'Financial Technology', 'Healthcare Technology', 'Sustainability & ESG'];
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -67,7 +66,6 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Info Banner */}
       <section className="bg-blue-600 text-white py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -93,7 +91,6 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Featured Services */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -105,7 +102,6 @@ const HomePage: React.FC = () => {
               Discover our most innovative and impactful micro SAAS solutions designed to transform your business operations.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map((service) => (
               <div key={service.id} className="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow p-6">
@@ -122,15 +118,12 @@ const HomePage: React.FC = () => {
                     <span className="text-sm text-gray-500">/month</span>
                   </span>
                 </div>
-
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {service.title}
                 </h3>
-                
                 <p className="text-gray-600 mb-4">
                   {service.description}
                 </p>
-
                 <div className="flex flex-wrap gap-2 mb-4">
                   {service.tags.slice(0, 3).map((tag, index) => (
                     <span
@@ -141,7 +134,6 @@ const HomePage: React.FC = () => {
                     </span>
                   ))}
                 </div>
-
                 <div className="text-sm text-gray-600 mb-4">
                   <div className="flex justify-between">
                     <span>ROI:</span>
@@ -152,7 +144,6 @@ const HomePage: React.FC = () => {
                     <span className="font-semibold">{service.estimatedDelivery}</span>
                   </div>
                 </div>
-
                 <a
                   href="/innovative-services"
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors text-center block"
@@ -162,7 +153,6 @@ const HomePage: React.FC = () => {
               </div>
             ))}
           </div>
-
           <div className="text-center mt-12">
             <a
               href="/innovative-services"
@@ -173,7 +163,6 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Service Categories */}
       <section className="py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -185,7 +174,6 @@ const HomePage: React.FC = () => {
               Explore our comprehensive range of innovative micro SAAS services across multiple technology domains.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category, index) => {
               const categoryServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === category);
@@ -212,7 +200,6 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Why Choose Us */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -224,7 +211,6 @@ const HomePage: React.FC = () => {
               We deliver cutting-edge micro SAAS solutions with proven ROI and exceptional support.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -233,7 +219,6 @@ const HomePage: React.FC = () => {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Innovation First</h3>
               <p className="text-gray-600">Cutting-edge AI, blockchain, and emerging technologies</p>
             </div>
-
             <div className="text-center">
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">💰</span>
@@ -241,7 +226,6 @@ const HomePage: React.FC = () => {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Proven ROI</h3>
               <p className="text-gray-600">Average 300-800% return on investment</p>
             </div>
-
             <div className="text-center">
               <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">⚡</span>
@@ -249,7 +233,6 @@ const HomePage: React.FC = () => {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Fast Delivery</h3>
               <p className="text-gray-600">Most services delivered in 2-8 weeks</p>
             </div>
-
             <div className="text-center">
               <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🎯</span>
@@ -260,7 +243,6 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -293,6 +275,8 @@ const HomePage: React.FC = () => {
     </div>
   );
 };
+<<<<<<< HEAD
+=======
 
->>>>>>> main
+>>>>>>> origin/main
 export default HomePage;

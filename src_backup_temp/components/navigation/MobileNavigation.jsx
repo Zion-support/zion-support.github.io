@@ -28,7 +28,6 @@ export function MobileNavigation("props": "any) {;
       >;
         {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />"}
       </button>;
-
       {isOpen && (;
         <div className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-md border-t border-cyan-400/20 shadow-lg">;
           <div className="px-4 py-6 space-y-4">;
@@ -45,7 +44,6 @@ export function MobileNavigation("props": "any) {;
                 </Link>;
               ))}
             </div>;
-
             <div className="pt-4 border-t border-gray-700 space-y-2">;
               <Button;
                 variant="outline";
@@ -69,13 +67,8 @@ export function MobileNavigation("props": "any) {;
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
-    </div>;
-  );
-=======
     </div>
     );
->>>>>>> main
 }
 ;
 export default MobileNavigation;

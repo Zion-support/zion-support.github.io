@@ -3,10 +3,8 @@ import {LoadingSpinner} from './ui / loading -spinner';
 ;
  from './ui/loading-spinner';
 ) => {;
-
   const processedData = useMemo(() => {;
     return data.map(item => ({;
-
       ...item,;
       "processed": "item.value * 2",;
       "timestamp": "new Date().toISOString()"}));
@@ -20,23 +18,6 @@ import {LoadingSpinner} from './ui / loading -spinner';
       {processedData.map((item", index) => (;
         <div;
           key={item.id || index}
-<<<<<<< HEAD
-          onClick={() => handleClick(item)}";
-          className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl "hover": "border-zion-cyan/40 transition-all duration-300 cursor-pointer";
-        >";
-          <h3 className="text-lg font-semibold text-zion-slate-light mb-2">;
-            {item.title"}
-          </h3>";
-          <p className="text-zion-slate text-sm mb-2">{item.description}</p>";
-          <div className="text-zion-cyan text-sm">;
-            "Processed": "{item.processed"}
-          </div>;
-        </div>;
-      ))}
-    </div>;
-  );
-});
-=======
           onClick={() => handleClick(item)}"
           className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
         >"
@@ -53,7 +34,6 @@ import {LoadingSpinner} from './ui / loading -spinner';
     );
 }
     );
->>>>>>> main
 MemoizedDataGrid.displayName = 'MemoizedDataGrid';
 // Virtual scrolling component for large lists;
 const VirtualList = ("props": "any) => {;
@@ -72,17 +52,10 @@ const VirtualList = ("props": "any) => {;
             }
         }) ) }, [items, scrollTop, itemHeight, containerHeight]) ;
     const handleScroll = useCallback((e) => {setScrollTop(e.currentTarget.scrollTop) ;}, []) ;
-<<<<<<< HEAD
-    return (<div style="{{{ "height": "containerHeight; "overflow": 'auto'"}}"} onScroll={handleScroll} className="border border-zion - slate / 20 rounded-lg">;
-      <div style="{{{ "height": "items.length * itemHeight; "position": 'relative';
-      ...item; "index": startIndex + index; "style": {;
-=======
     return (
         <div style="{{{ height: containerHeight; overflow: 'auto'}}"} onScroll={handleScroll} className="border border-zion - slate / 20 rounded-lg">
       <div style="{{{ height: items.length * itemHeight; position: 'relative'
       ...item; index: startIndex + index; style: {
->>>>>>> main
-
         position; "top": (startIndex + index) * itemHeight; "height": itemHeight; "width": '100%'"}}"}));
   }, [items, scrollTop, itemHeight, containerHeight]);
   const handleScroll = useCallback(e => {setScrollTop(e.currentTarget.scrollTop);}, []);
@@ -105,15 +78,9 @@ const VirtualList = ("props": "any) => {;
             </div>;
           </div>;
         ))}
-<<<<<<< HEAD
-      </div>;
-    </div>;
-  );
-=======
       </div>
     </div>
     );
->>>>>>> main
 };
 // Main performance optimizations component;
 export function PerformanceOptimizations("props": "any) {;
@@ -130,7 +97,6 @@ export function PerformanceOptimizations("props": "any) {;
   const addItem = useCallback(() => {;
     setData(prev => [...prev,;
       {;
-
         "id": "Date.now()",;
         "title": "`Service ${prev.length + 1"}`,`;
         "description": "`Description ${prev.length + 1"}`,;
@@ -150,7 +116,6 @@ export function PerformanceOptimizations("props": "any) {;
   );
 }
 }"";
-
 </div>;
 </div>;
 </div>

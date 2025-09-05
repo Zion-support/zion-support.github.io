@@ -3,22 +3,23 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrench, Activity, Database, FileText, Users } from 'lucide-react';
-=======
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { Settings, 
   Brain, 
   Shield, 
   BarChart3, 
 =======
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+>>>>>>> origin/main
 import {
   Settings,
   Brain,
   Shield,
   BarChart3,
->>>>>>> main
   CheckCircle,
   ArrowRight,
   Cpu,
@@ -30,19 +31,17 @@ import {
 } from 'lucide-react';
 <<<<<<< HEAD
 import Layout from '../../components/Layout';';
->>>>>>> main
-
 const services = [;
   {}
     title: 'Smart Factory Solutions,',
     description: 'IoT-enabled manufacturing systems for intelligent production management.,',
 =======
+>>>>>>> origin/main
 import Layout from '../../components/Layout';
 const services = [
   {
     title: 'Smart Factory Solutions',
     description: 'IoT-enabled manufacturing systems for intelligent production management.',
->>>>>>> main
     icon: Settings,
     features: [;
       'Real-time production monitoring,',
@@ -108,20 +107,19 @@ const services = [
   }
 <<<<<<< HEAD
 ;];
-
 const benefits = [;
   {}
     title: 'Increased Efficiency,',
     description: 'Automated processes and AI optimization improve production efficiency.,',
     icon: Activity;
 =======
+>>>>>>> origin/main
 ];
 const benefits = [
   {
     title: 'Increased Efficiency',
     description: 'Automated processes and AI optimization improve production efficiency.',
     icon: Activity
->>>>>>> main
   },
   {}
     title: 'Reduced Downtime,',
@@ -140,7 +138,6 @@ const benefits = [
   }
 <<<<<<< HEAD
 ;];
-
 export default function ManufacturingPage() {
   return (;
     <Layout );
@@ -156,7 +153,6 @@ export default function ManufacturingPage() {
             <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>";
           </div>;
-
           <div className="container mx-auto px-4 relative z-10">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
@@ -188,8 +184,8 @@ export default function ManufacturingPage() {
             </motion.div>;
           </div>;
         </section>;
-
 =======
+>>>>>>> origin/main
 ];
 export default function ManufacturingPage() {
   return (
@@ -237,7 +233,6 @@ export default function ManufacturingPage() {
             </motion.div>
           </div>
         </section>
->>>>>>> main
         {/* Services Section */}
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
@@ -256,11 +251,11 @@ export default function ManufacturingPage() {
                 from small workshops to large industrial facilities.;
               </p>;
             </motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
 =======
+>>>>>>> origin/main
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -274,7 +269,6 @@ export default function ManufacturingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
->>>>>>> main
                   key={service.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -285,15 +279,14 @@ export default function ManufacturingPage() {
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">";
                     <service.icon className="w-6 h-6 text-white" />";
                   </div>;
-                  
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>"
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
-                  
                   <ul className="space-y-3">";
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
 =======
+>>>>>>> origin/main
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
@@ -305,7 +298,6 @@ export default function ManufacturingPage() {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
->>>>>>> main
                         {feature}
                       </li>,
                     ))}
@@ -316,12 +308,11 @@ export default function ManufacturingPage() {
             </div>,
           </div>;
         </section>;
-
 =======
+>>>>>>> origin/main
             </div>
           </div>
         </section>
->>>>>>> main
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
@@ -340,11 +331,11 @@ export default function ManufacturingPage() {
                 quality, and cost reduction.,
               </p>;
             </motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
 =======
+>>>>>>> origin/main
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -358,7 +349,6 @@ export default function ManufacturingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
->>>>>>> main
                   key={benefit.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -376,12 +366,11 @@ export default function ManufacturingPage() {
             </div>,
           </div>;
         </section>;
-
 =======
+>>>>>>> origin/main
             </div>
           </div>
         </section>
->>>>>>> main
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
@@ -412,6 +401,7 @@ export default function ManufacturingPage() {
       </div>;
     </Layout>;
 =======
+>>>>>>> origin/main
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Manufacturing?
@@ -433,6 +423,5 @@ export default function ManufacturingPage() {
         </section>
       </div>
     </Layout>
->>>>>>> main
   );
 }

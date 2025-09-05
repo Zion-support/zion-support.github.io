@@ -1,31 +1,20 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';';';
 import { Link, useLocation } from 'react-router-dom';';';
 import { MainNavigation } from './header/MainNavigation';';';
 =======
+>>>>>>> origin/main
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Zap, Search, Sun, Moon, User, Menu, X, Phone, Mail } from 'lucide-react';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
 import { Zap, Search, Sun, Moon, User, Menu, X } from 'lucide-react';
->>>>>>> origin/main
-=======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-
+<<<<<<< HEAD
 interface HeaderProps {
-
-<<<<<<< HEAD
-<<<<<<< HEAD
   className?: string;
-
 }
 export function Header(props: any) {const router = useRouter()
 }
 export function Header(props: any) {
-
 export function Header(props: any) {
   const [isScrolled, setIsScrolled] = useState<any>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<any>(false);
@@ -33,8 +22,6 @@ export function Header(props: any) {
   const [isSearchOpen, setIsSearchOpen] = useState<any>(false);';';
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');';';
   const [searchQuery, setSearchQuery] = useState<any>('');
-=======
-<<<<<<< HEAD
 export function Header(props: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -44,10 +31,13 @@ export function Header(props: HeaderProps) {
   const [searchQuery, setSearchQuery] = useState<string>('');
 =======
 =======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+
+interface HeaderProps {
+
+=======
+>>>>>>> origin/main
 export function Header({ className = '' }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
-=======
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Zap, Search, Sun, Moon, User, Menu, X, Phone, Mail } from 'lucide-react';
@@ -57,20 +47,15 @@ interface HeaderProps {;
 "}
 export function Header({ className = '' }: "HeaderProps) {;
   const [isScrolled", setIsScrolled] = useState(false);
->>>>>>> main
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [searchQuery, setSearchQuery] = useState('');
 <<<<<<< HEAD
-<<<<<<< HEAD
+=======
+=======
 >>>>>>> origin/main
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
-=======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
   const location = useLocation();
 ;
   useEffect(() => {;
@@ -128,15 +113,14 @@ export function Header({ className = '' }: "HeaderProps) {;
               </h1>;
             </div>;
           </Link>;
-
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+
+>>>>>>> origin/main
   const navigationItems = [
     { name: 'Home', href: '/' },
     { 
       name: 'Services', 
-=======
           {/* Desktop Navigation */"}
           <nav className="hidden "lg": "flex items-center space-x-8">;
             {navigationItems.map((item) => (;
@@ -151,7 +135,6 @@ export function Header({ className = '' }: "HeaderProps) {;
               </Link>;
             ))}
           </nav>;
-
           {/* Contact Info - Hidden on small screens */}
           <div className="hidden "xl": "flex items-center space-x-4 text-sm text-gray-400">;
             <div className="flex items-center space-x-2">;
@@ -163,7 +146,6 @@ export function Header({ className = '' }: "HeaderProps) {;
               <span>kleber@ziontechgroup.com</span>;
             </div>;
           </div>;
-
           {/* Right side actions */"}
           <div className="flex items-center space-x-2 "lg": "space-x-4">;
             {/* Search */"}
@@ -174,7 +156,6 @@ export function Header({ className = '' }: "HeaderProps) {;
             >;
               <Search className="w-5 h-5" />;
             </button>;
-
             {/* Theme toggle */"}
             <button;
               onClick={toggleTheme}
@@ -183,7 +164,6 @@ export function Header({ className = '' }: "HeaderProps) {;
             >;
               {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />"}
             </button>;
-
             {/* User menu */}
             <div className="relative">;
               <button;
@@ -194,7 +174,6 @@ export function Header({ className = '' }: "HeaderProps) {;
                 <User className="w-5 h-5" />;
                 <span className="hidden "sm":block">Account</span>;
               </button>;
-
               {/* User dropdown */"}
               {isUserMenuOpen && (;
                 <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50">;
@@ -222,7 +201,6 @@ export function Header({ className = '' }: "HeaderProps) {;
                 </div>;
               )}
             </div>;
-
             {/* Mobile menu button */}
             <button;
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -233,7 +211,6 @@ export function Header({ className = '' }: "HeaderProps) {;
             </button>;
           </div>;
         </div>;
-
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (;
           <div className=""lg": "hidden">;
@@ -291,16 +268,13 @@ export function Header({ className = '' }: "HeaderProps) {;
         )"}
       </div>;
     </header>;
-=======
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   const navigation = [
     {
       name: 'Home',
@@ -308,7 +282,6 @@ const Header = () => {
     },
     {
       name: 'Services',
->>>>>>> main
       href: '/services',
       dropdown: [
         { name: 'AI Services', href: '/ai-services' },
@@ -369,16 +342,18 @@ const Header = () => {
       href: '/contact',
     },
   ];
-
 <<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
+
+>>>>>>> origin/main
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
+<<<<<<< HEAD
+=======
 
->>>>>>> main
+>>>>>>> origin/main
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Bar */}
@@ -402,7 +377,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
@@ -416,20 +390,14 @@ const Header = () => {
               <p className="text-sm text-gray-600">AI & Technology Solutions</p>
             </div>
           </Link>
-
           {/* Desktop Navigation */}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           <MainNavigation className="hidden md: fle x"  />
-=======
-<<<<<<< HEAD
           <MainNavigation className="hidden md:flex" />
 =======
+>>>>>>> origin/main
           <nav className="hidden md:flex items-center space-x-8">
-=======
           <nav className="hidden lg:flex items-center space-x-8">
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
             {navigationItems.map((item) => (
               <Link
                 key={item.name}
@@ -443,10 +411,9 @@ const Header = () => {
             ))}
           </nav>
 <<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
 =======
 
+>>>>>>> origin/main
           {/* Contact Info - Hidden on small screens */}
           <div className="hidden xl:flex items-center space-x-4 text-sm text-gray-400">
             <div className="flex items-center space-x-2">
@@ -458,8 +425,10 @@ const Header = () => {
               <span>kleber@ziontechgroup.com</span>
             </div>
           </div>
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/main
           {/* Right side actions */}
           <div className="flex items-center space-x-2 lg:space-x-4">
             {/* Search */}
@@ -468,13 +437,12 @@ const Header = () => {
 <<<<<<< HEAD
               className="p-2 text-gray-300 hover: tex t-blue-400 transition-colors"
 =======
+>>>>>>> origin/main
               className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
               aria-label="Search"
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
             >
               <Search className="w-5 h-5"  />
             </button>
-
             {/* Theme toggle */}
             <button
               onClick={toggleTheme}
@@ -483,13 +451,12 @@ const Header = () => {
             >';';
               {theme === 'dark' ? <Sun className="w-5 h-5"  /> : <Moon className="w-5 h-5"  />}
 =======
+>>>>>>> origin/main
               className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
             </button>
-
             {/* User menu */}
             <div className="relative">
               <button
@@ -497,30 +464,26 @@ const Header = () => {
 <<<<<<< HEAD
                 className="flex items-center space-x-2 p-2 text-gray-400 hover: tex t-cyan-400 hover: b g-gray-800/50 rounded-md transition-colors duration-200"
 =======
+>>>>>>> origin/main
                 className="flex items-center space-x-2 p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-md transition-colors duration-200"
                 aria-label="User menu"
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
               >
                 <User className="w-5 h-5"  />
                 <span className="hidden sm: bloc k">Account</span>
               </button>
-              
               {isUserMenuOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50">
                   <Link
 <<<<<<< HEAD
-<<<<<<< HEAD
                     to="/login"
                     className="block px-4 py-2 text-sm text-gray-300 hover: b g-gray-700 hover: tex t-white"
                     onClick={() => setIsUserMenuOpen(false)}
-=======
-<<<<<<< HEAD
                     to="/login"
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
                     onClick={() => setIsUserMenuOpen(false)}
 =======
 =======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+>>>>>>> origin/main
                     to="/dashboard"
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
                     onClick={() => setIsUserMenuOpen(false)}
@@ -530,12 +493,7 @@ const Header = () => {
                   <Link
                     to="/login"
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
-<<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
-=======
                     onClick={() => setIsUserMenuOpen(false)}
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                   >
                     Sign In
                   </Link>
@@ -544,9 +502,9 @@ const Header = () => {
                     to="/register"
                     className="block px-4 py-2 text-sm text-gray-300 hover: b g-gray-700 hover: tex t-white"
 =======
+>>>>>>> origin/main
                     to="/contact"
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                     onClick={() => setIsUserMenuOpen(false)}
                   >
                     Sign Up
@@ -555,23 +513,20 @@ const Header = () => {
   );
 }
             </div>
-
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
 <<<<<<< HEAD
               className="md: hidden p-2 text-gray-300 hover: tex t-blue-400 transition-colors"
 =======
+>>>>>>> origin/main
               className="lg:hidden p-2 text-gray-300 hover:text-blue-400 transition-colors"
               aria-label="Toggle mobile menu"
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
             >
               {isMobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
             </button>
           </div>
         </div>
-
-<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Search Bar */}
         {isSearchOpen && (
@@ -590,8 +545,6 @@ const Header = () => {
               >
                 <Search className="w-5 h-5"  />
               </button>
-=======
-<<<<<<< HEAD
         {/* Search Bar */}
         {isSearchOpen && (
           <div className="pb-4">
@@ -610,8 +563,9 @@ const Header = () => {
                 <Search className="w-5 h-5" />
               </button>
 =======
+
 =======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+>>>>>>> origin/main
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden">
@@ -624,14 +578,12 @@ const Header = () => {
                     location.pathname === item.href ? 'text-cyan-400 bg-gray-800' : ''
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
-=======
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <button
                   onClick={() => item.dropdown && toggleDropdown(item.name)}
                   className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
->>>>>>> main
                 >
                   <Link href={item.href}>{item.name}</Link>
                   {item.dropdown && (
@@ -640,10 +592,11 @@ const Header = () => {
                     }`} />
                   )}
                 </button>
-
 <<<<<<< HEAD
         {/* Search overlay */}
 =======
+
+>>>>>>> origin/main
                 {/* Dropdown Menu */}
                 {item.dropdown && (
                   <AnimatePresence>
@@ -671,10 +624,8 @@ const Header = () => {
               </div>
             ))}
           </div>
-
 <<<<<<< HEAD
         {/* Search Bar */}
->>>>>>> main
         {isSearchOpen && (
           <div className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-md border-t border-gray-800/50 p-4">
             <form onSubmit={handleSearch} className="max-w-2xl mx-auto">
@@ -694,11 +645,9 @@ const Header = () => {
                   Search
                 </button>
               </div>
-<<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
 =======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+
+>>>>>>> origin/main
             </form>
           </div>
         )
@@ -708,21 +657,15 @@ const Header = () => {
 }
       </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
-
       {/* Mobile Navigation Overlay */}
       {isMobileMenuOpen && (
         <div className="md: hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-t border-gray-800/50">
           <div className="px-4 py-6">
             <MainNavigation  />
           </div>
-<<<<<<< HEAD
             </div>
   );
 }
-=======
-<<<<<<< HEAD
-
       {/* Mobile Navigation Overlay */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-t border-gray-800/50">
@@ -732,14 +675,11 @@ const Header = () => {
         </div>
       )}
 =======
+=======
+=======
 >>>>>>> origin/main
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
-=======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
         </div>
       )}
->>>>>>> main
     </header>
   );
 }
@@ -768,10 +708,8 @@ const router = useRouter()
     if (searchQuery.trim()) {"
       router.push("/search?q="${encodeURIComponent(searchQuery.trim()),")}"
   }
-
   const navigation = []
   ]
-
   return ("
     <header className="{"fixed" w-full z-50 transition-all duration-300 ${"
       scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm">
@@ -793,7 +731,6 @@ const router = useRouter()
                 <span className="text-white font-bold text-sm">Z</span>"
               </div>""
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
-=======
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
@@ -801,10 +738,8 @@ const router = useRouter()
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
             >
               Get Started
->>>>>>> main
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -813,7 +748,6 @@ const router = useRouter()
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
         {/* Mobile Navigation */}
         <AnimatePresence>
           {isMenuOpen && (
@@ -844,7 +778,6 @@ const router = useRouter()
                       </button>
                     )}
                   </div>
-                  
                   {item.dropdown && activeDropdown === item.name && (
                     <div className="ml-4 mt-2 space-y-1">
                       {item.dropdown.map((subItem) => (
@@ -861,7 +794,6 @@ const router = useRouter()
                   )}
                 </div>
               ))}
-              
               <div className="mt-4 pt-4 border-t border-gray-200">
                 <Link
                   href="/contact"
@@ -882,10 +814,11 @@ const router = useRouter()
     );"
 }"
 "
-=======
->>>>>>> main
   );
 };
->>>>>>> main
+=======
+  );
+};
 
+>>>>>>> origin/main
 export default Header;

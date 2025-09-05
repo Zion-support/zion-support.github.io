@@ -19,16 +19,12 @@ const contactInfo = [{;
       <div className="max-w-7xl mx-auto">;
         <motion.div;
           initial = {;
-
   { "opacity": 0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           transition={{ "duration": "0.8 "}}
           viewport={{ "once": "tru e "}}";
@@ -46,26 +42,19 @@ const contactInfo = [{;
             <motion.div;
               key={index}
               initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
               whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
               transition = {;
-
   { "duration": "0.6",;
   "delay": "inde x * 0.1;
-
 "}}
               viewport={{ "once": "tru e "}}";
               className="text-center";
-
 <<<<<<< HEAD
               <a href={contact.link}";
                 className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-4";
@@ -76,6 +65,8 @@ const contactInfo = [{;
               <p className="text-zion-slate-light">{contact.value}</p>;
             </motion.div>;
 =======
+
+>>>>>>> origin/main
               <a href={contact.link}"
                 className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-4"
 "
@@ -84,30 +75,23 @@ const contactInfo = [{;
               <h3 className="text-xl font-semibold text-white mb-2">{contact.title}"
               <p className="text-zion-slate-light">{contact.value}</p>
             </motion.div>
->>>>>>> main
           ))}
         </div>;
         <motion.div;
           initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           transition={{ "duration": "0.8 "}}
           viewport={{ "once": "tru e "}}";
           className="text-center";
-
           <Link";
             to="/contact";
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg "hover": "fro m-blue-700 "hover": t o-purple-700 transition-all duration-300 transform "hover": scal e-105";
-
             Contact Us Today";
             <ArrowRight className="ml-2 h-5 w-5"   />;
           </Link>;
@@ -122,7 +106,6 @@ export default ContactSection;
 export default ContactSection;
 export default ContactSection;
 '";
-
 </motion>;
 </motion>;
 </motion>

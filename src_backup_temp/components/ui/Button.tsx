@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';';';';
 interface ButtonProps {';';
   ';';';: any;';';
@@ -47,11 +46,7 @@ export const Button: Reac t.FC<ButtonProps> = ({';';';';';
     ';';';';';
     lg: 'px-6 py-3 text-base',',';';';';
     ';';';';';
-=======
-=======
->>>>>>> main
 import React from 'react';';';
-<<<<<<< HEAD
 interface ButtonProps {;
   ';';';: "any;
   "children": React.ReactNode;'",';';
@@ -59,13 +54,15 @@ interface ButtonProps {;
   variant?: 'default' | 'outline' | 'ghost' | 'link'",',';';
   ;: "any;
 =======
+=======
+import React from 'react';';';
+>>>>>>> origin/main
 interface ButtonProps {
   ';';';: any;
   children: React.ReactNode;',';';
   ';';';: any;
   variant?: 'default' | 'outline' | 'ghost' | 'link',',';';
   ';';';';: any;
->>>>>>> main
   size?: 'sm' | 'md' | 'lg' | 'icon';';
   asChild?: boolean;';';
   className?: string;';';';
@@ -78,11 +75,11 @@ interface ButtonProps {
 export const "Button": "React.FC<ButtonProps> = ({';';';
   children",',';';
 =======
+>>>>>>> origin/main
   disabled?: boolean
 }';';
 export const Button: React.FC<ButtonProps> = ({';';';
   children,',';';
->>>>>>> main
     ';';';
   variant = 'default',',';';
     ';';';
@@ -114,11 +111,10 @@ export const Button: React.FC<ButtonProps> = ({';';';
     "lg": 'px-6 py-3 text-base',',';';
     ';';';
 <<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
     icon: 'w-10 h-10 p-0'};
 =======
+>>>>>>> origin/main
     "icon": 'w-10 h-10 p-0'};
->>>>>>> main
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   if (asChild) {
     return <span className={classes}>{children}</span>;
@@ -130,7 +126,6 @@ export const Button: React.FC<ButtonProps> = ({';';';
       onClick={onClick}
       disabled={disabled}
 <<<<<<< HEAD
-<<<<<<< HEAD
     >';
       {children}';';
     </button>';';';
@@ -139,10 +134,9 @@ export const Button: React.FC<ButtonProps> = ({';';';
 export default Button;"';';';';';
 </ButtonProps>;';;';
 =======
+>>>>>>> origin/main
     >;
-=======
     >
->>>>>>> main
       {children}
     </button>';
   );';';
@@ -150,11 +144,10 @@ export default Button;"';';';';';
 <<<<<<< HEAD
 export default Button;";
 </ButtonProps>;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+export default Button;"';';';';
+</ButtonProps>
 =======
 =======
 export default Button;"';';';';
 </ButtonProps>
->>>>>>> main
->>>>>>> main
+>>>>>>> origin/main

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD:src/pages/Services.tsx
+<<<<<<< HEAD
+:src/pages/Services.tsx
 import { 
   Brain, 
   Shield, 
@@ -17,7 +18,6 @@ import {
   Clock,
   Award
 } from 'lucide-react';
-
 export function Services() {
   const services = [
     {
@@ -75,7 +75,6 @@ export function Services() {
       href: '/services/it-infrastructure'
     }
   ];
-
   const microSaasServices = [
     {
       title: 'AI Sales Copilot',
@@ -98,6 +97,7 @@ export function Services() {
       href: '/services/ai-business-intelligence'
 =======
 
+>>>>>>> origin/main
 export default function Services() {
   const services = [
     {
@@ -135,12 +135,11 @@ export default function Services() {
       description: "Business intelligence, data visualization, and advanced analytics solutions.",
       icon: "📊",
       href: "/services/data-analytics"
->>>>>>> main:src_backup_temp/pages/Services.tsx
     }
   ];
-
   return (
-<<<<<<< HEAD:src/pages/Services.tsx
+<<<<<<< HEAD
+:src/pages/Services.tsx
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-blue-900 to-purple-900">
@@ -156,7 +155,6 @@ export default function Services() {
           </div>
         </div>
       </section>
-
       {/* Core Services */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -166,7 +164,6 @@ export default function Services() {
               Enterprise-grade solutions built with cutting-edge technology
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <div key={service.id} className="bg-gray-800/50 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 group">
@@ -195,7 +192,6 @@ export default function Services() {
           </div>
         </div>
       </section>
-
       {/* Micro SAAS Services */}
       <section className="py-20 bg-gray-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -205,7 +201,6 @@ export default function Services() {
               Specialized tools designed to solve specific business challenges
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {microSaasServices.map((service, index) => (
               <div key={index} className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300">
@@ -230,7 +225,6 @@ export default function Services() {
           </div>
         </div>
       </section>
-
       {/* Why Choose Our Services */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -240,7 +234,6 @@ export default function Services() {
               We deliver results that matter to your business
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -251,7 +244,6 @@ export default function Services() {
                 World-class engineers and technology experts with proven track records
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-8 h-8 text-white" />
@@ -261,7 +253,6 @@ export default function Services() {
                 Rapid development and deployment with agile methodologies
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <DollarSign className="w-8 h-8 text-white" />
@@ -271,7 +262,6 @@ export default function Services() {
                 Competitive pricing with transparent, value-based billing
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
@@ -284,7 +274,6 @@ export default function Services() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -313,6 +302,7 @@ export default function Services() {
     </div>
   );
 =======
+>>>>>>> origin/main
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h1>
@@ -320,13 +310,11 @@ export default function Services() {
           Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
         </p>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
           <ServiceCard key={index} {...service} />
         ))}
       </div>
-
       {/* Additional Services Section */}
       <div className="mt-16">
         <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Specialized Solutions</h2>
@@ -343,7 +331,6 @@ export default function Services() {
               <li>• Change management and training</li>
             </ul>
           </div>
-          
           <div className="bg-gray-50 p-8 rounded-lg">
             <h3 className="text-xl font-bold text-gray-900 mb-4">Startup Solutions</h3>
             <p className="text-gray-600 mb-4">
@@ -361,7 +348,6 @@ export default function Services() {
     </div>
   );
 }
-
 function ServiceCard({ title, description, icon, href }: { 
   title: string; 
   description: string; 
@@ -380,5 +366,4 @@ function ServiceCard({ title, description, icon, href }: {
       <p className="text-gray-600 leading-relaxed">{description}</p>
     </Link>
   );
->>>>>>> main:src_backup_temp/pages/Services.tsx
 }

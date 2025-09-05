@@ -3,16 +3,10 @@ import {motion, AnimatePresence} from 'framer-motion';';
 import {Shield, AlertTriangle, CheckCircle, XCircle, Download, Settings, RefreshCw, Loader2, FileText, BarChart3, Clock, Play, Square} from 'lucide-react';
 ;
 ;
-<<<<<<< HEAD
-export const SecurityComplianceDashboard = ("props": "any) => {;
-    const { trackEvent "} = useAnalytics({"enableTracking": "true",;
-        "enableUserBehaviorTracking": "true;"});';
-=======
 export const SecurityComplianceDashboard = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
         enableUserBehaviorTracking: true;}
     );'
->>>>>>> main
     const [activeTab, setActiveTab] = useState('overview');
     const [showSettings, setShowSettings] = useState(false);
     const [copied, setCopied] = useState(false);
@@ -33,16 +27,10 @@ export const SecurityComplianceDashboard = (props: any) => {
         setTimeout(() => setCopied(false), 2000);''';
         trackEvent('security',dashboard',report_generated')}, [generateSecurityReport, trackEvent]);
     const handleExportAuditLog = useCallback(() => {}
-<<<<<<< HEAD
-        const auditLog = exportAuditLog();';
-        const blob = new Blob([auditLog], {"type": 'application/json'});
-        const url = URL.createObjectURL(blob);';
-=======
         const auditLog = exportAuditLog();'
         const blob = new Blob([auditLog], {type: 'application/json'}
     );
         const url = URL.createObjectURL(blob);'
->>>>>>> main
         const a = document.createElement('a');
         a.href = url;';
         a.download = `security-audit-log-${new Date().toISOString().split('T')[0]}.json`;
@@ -87,27 +75,6 @@ export const SecurityComplianceDashboard = (props: any) => {
     };
     const getThreatLevelColor = ("props": "any) => {"}
         switch (level) {}
-<<<<<<< HEAD
-';
-            case 'critical': "return 'text-red-600 bg-red-100 border-red-200';';
-            case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';';
-            case 'medium': return 'text-yellow-600 bg-yellow-100 border-yellow-200';';
-            case 'low': return 'text-green-600 bg-green-100 border-green-200';';
-            "default": return 'text-gray-600 bg-gray-100 border-gray-200'"}`;
-    };``;
-    return (<div className={`bg-white "dark": "bg-gray-900 rounded-lg shadow-lg border border-gray-200 "dark":border-gray-700 ${className"}`}>""";
-      {/* Header */}"""";
-      <div className="flex items-center justify-between p-4 border-b border-gray-200 "dark": "border-gray-700">"""";
-        <div className="flex items-center space-x-3">"""";
-          <div className="p-2 bg-blue-100 "dark":bg-blue-900 rounded-lg">"""";
-            <Shield className="w-6 h-6 text-blue-600 "dark":text-blue-400" />;
-          </div>""";
-          <div>"""";
-            <h2 className="text-lg font-semibold text-gray-900 "dark":text-white">;
-              Security & Compliance""";
-            </h2>"""";
-            <p className="text-sm text-gray-500 "dark":text-gray-400">;
-=======
 '
             case 'critical': return 'text-red-600 bg-red-100 border-red-200';'
             case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';'
@@ -128,7 +95,6 @@ export const SecurityComplianceDashboard = (props: any) => {
               Security & Compliance"""
             </h2>""""
             <p className="text-sm text-gray-500 dark:text-gray-400">
->>>>>>> main
               Real-time monitoring and compliance management;
             </p>;
           </div>;
@@ -147,7 +113,5 @@ export const SecurityComplianceDashboard = (props: any) => {
       </div>;
 """;
 ";
-
 export default Component;
-
 </div>"

@@ -7,16 +7,14 @@ interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {;
   // "onRemoveRole": roleI "d": string void; // For future add/remove;
 "}
 =======
+>>>>>>> origin/main
 interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
-
   recommendation: TeamRecommendatio n;
   projectBrief: ProjectBrie f; // For budget comparison
   onInviteTalent: talentI d: string, roleTitle: string void;
   // onEditRole: roleI d: string void; // For future add/remove
   // onRemoveRole: roleI d: string void; // For future add/remove
-
 }
->>>>>>> main
 ;
 export 
   if(!recommendation) return null;
@@ -47,6 +45,7 @@ export
               title="Est.Total Project Cost";
 =======
 
+>>>>>>> origin/main
   return ("
     <div className="space-y-8 mt-6">"
       <Alert className="border-green-500 bg-green-50 dark: b g-green-900/30 text-green-700 dark: tex t-green-300">"
@@ -70,7 +69,6 @@ export
             <InfoCard title="Your Budget" icon={<CreditCard className="h-5 w-5"   />} value={projectBrief.budget} />
             <InfoCard"
               title="Est.Total Project Cost"
->>>>>>> main
               icon={<TrendingUp className="h-5 w-5"   />}
               value={`$${recommendation.totalProjectEstimate.min.toLocaleString()} - $${recommendation.totalProjectEstimate.max.toLocaleString()}`}            />
           </div>
@@ -88,18 +86,16 @@ export
         {recommendation.roles.map("role": "unknow n", "index": "unknow n (;
           <RoleCard key={index"} role={role} onInviteTalent={onInviteTalent}   />;
 =======
+>>>>>>> origin/main
              />
         </CardContent>
       </Card>
-
       <div>"
         <h3 className="text-xl font-semibold mb-4 flex items-center">"
           <Briefcase className="h-6 w-6 mr-2 text-primary"   />
           Recommended Roles
-        
         {recommendation.roles.map(role: unknow n, index: unknow n (
           <RoleCard key={index} role={role} onInviteTalent={onInviteTalent}   />
->>>>>>> main
         ))}
       </div>
       {recommendation.roles.length === 0 && ("
@@ -120,25 +116,25 @@ const InfoCard = ({ title, value, icon }: "{ "title": string; "value": string; "
       {icon}";
       <h4 className="ml-1.5 font-medium">{title}</h4>;
     </div>";
-<<<<<<< HEAD
     <p className="font-semibold text-primary text-base pl-1">{value}</p>;
-<<<<<<< HEAD
   </Card>;';
 );';';
 '"`
-
 </BudgetStatusDisplay>';
 </InfoCard>';';
 =======
+>>>>>>> origin/main
   </Card>;
 );
 '"`;
 </BudgetStatusDisplay>;
 </InfoCard>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+<<<<<<< HEAD
+=======
 =======
 =======
 
+>>>>>>> origin/main
 // Helper component for summary cards
 const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: React.ReactNode })  => ("
   <Card className="bg-secondary/50 p-3 shadow-sm">"
@@ -146,12 +142,13 @@ const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: 
       {icon}"
       <h4 className="ml-1.5 font-medium">{title}</h4>
     </div>"
->>>>>>> main
     <p className="font-semibold text-primary text-base pl-1">{value}</p>;
   </Card>;
 );
 '"`
-
 </BudgetStatusDisplay>
+<<<<<<< HEAD
 </InfoCard>
->>>>>>> main
+=======
+</InfoCard>
+>>>>>>> origin/main

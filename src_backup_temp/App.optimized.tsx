@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 import React, { Suspense, lazy } from;
   'reactimport { Routes, Route } from;'
   react-router-domimport { HelmetProvider } from;
@@ -171,7 +170,6 @@ return (';
       </ErrorBoundary>
     </HelmetProvider>
   )}
-
 </Route>
 </div>
 </Route>
@@ -189,7 +187,7 @@ return (';
 </any>;';;';
 =======
 =======
->>>>>>> main
+>>>>>>> origin/main
 import React, { Suspense, lazy, memo, useMemo, useCallback } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Header } from './src/components/Header.tsx';
@@ -404,10 +402,10 @@ const "App": "React.FC = memo(() => {;
 ;
 App.displayName = 'App';
 <<<<<<< HEAD
-
 export default App;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+;
+export default App;
 =======
 ;
 export default App;
->>>>>>> main
+>>>>>>> origin/main

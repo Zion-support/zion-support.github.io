@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 export {};
+module.exports = {};
 =======
 module.exports = {};
->>>>>>> main
+>>>>>>> origin/main

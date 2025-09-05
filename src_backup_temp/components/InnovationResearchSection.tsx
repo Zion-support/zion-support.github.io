@@ -21,7 +21,6 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
             Pushing the boundaries of technology through cutting-edge research",;
             breakthrough innovations, and collaborative partnerships with leading institutions.</p>;
         </motion.div>;
-
         {/* Innovation Metrics */}
         <motion.div;
           className="grid grid - cols - 2 "md": "gri d - cols - 4 gap-8 mb-16"          initial={{ "opacity": 0", "y": "3 0 "}}
@@ -39,7 +38,6 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
             </div>;
           ))}
         </motion.div>;
-
         {/* Research Areas */}
         <motion.div ";
           className="mb-16";
@@ -55,7 +53,6 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
               </div>;
             )})}
         </motion.div>;
-
         {/* Research Areas */}
         <motion.div;
           className="mb-16";
@@ -69,27 +66,20 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
                 <span className="text-2xl">{metric.icon}</span>;
               </div>) }) }
         </motion.div>;
-
         {/* Research Areas */}
         <motion.div;
           className="mb-16";          initial = {;
-
   { "opacity": "0",;
   "y": "3 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition = {;
-
   { "duration": "0.6",;
   "delay": "0.4;
-
 <<<<<<< HEAD
 "}}
         >";
@@ -97,45 +87,41 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
             Active Research Areas;
           </h3>;
 =======
+
+>>>>>>> origin/main
 }}
         >"
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Active Research Areas
+<<<<<<< HEAD
+=======
           
->>>>>>> main
 
+>>>>>>> origin/main
           <div className="grid grid - cols - 1 "md": "gri d - cols - 2 gap-8">;
             {researchAreas.map((area", index) => (<motion.div;
                 key={area.title}
                 className="bg-slate - 800 border border-slate - 700 rounded-xl p - 6 "hover": "borde r-blue - 500 / 50 transition - all duration - 300 "hover": shado w-lg "hover": shado w-blue -500 / 25"                initial = {;
-
   { "opacity": 0",;
   "y": "3 0;
-
 "}}
                 whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
                 viewport={{ "once": "tru e "}}
                 transition = {;
-
   { "duration": "0.6",;
   "delay": "0.6 + index * 0.1;
-
 "}}
               >";
                 <div className="flex items-start gap-4">;
                   <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center flex-shrink-0`}>";
                     <span className="text-2xl">{area.icon}</span>;
                   </div>;
-
                   <div className="flex -1">;
                     <h4 className="text-xl font - bold text-white mb-2">{area.title}</h4>;
                     <p className="text-gray - 400 text-sm mb-4">{area.description}</p>;
-
                     <div className="mb-2">;
                       <div className="flex justify - between text-sm text-gray - 300 mb-1">;
                         <span > Research Progress</span>                        <span>{area.progress}%</span>;
@@ -147,10 +133,8 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
                           whileInView={{ "width": "`${area.progress"}%` }}
                           viewport={{ "once": "tru e "}}
                           transition = {;
-
   { "duration": "1",;
   "delay": "0.8 + index * 0.1;
-
 "}}
                         />;
                       </div>;
@@ -159,27 +143,20 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
                 </div>;
               </motion.div>) }) }
         </div>;
-
         {/* Research Highlights */}
         <motion.div;
           className="mb-12"          initial = {;
-
   { "opacity": "0",;
   "y": "3 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition = {;
-
   { "duration": "0.6",;
   "delay": "0.8;
-
 <<<<<<< HEAD
 "}}
         >";
@@ -188,14 +165,18 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
               Latest Research Breakthroughs;
             </h3>;
 =======
+
+>>>>>>> origin/main
 }}
         >"
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-white text-center mb-6">
               Latest Research Breakthroughs
+<<<<<<< HEAD
+=======
             
->>>>>>> main
 
+>>>>>>> origin/main
             <div className="grid grid - cols - 1 "md": "gri d - cols - 3 gap-6">;
               <div className="text-center">;
                 <div className="w-16 h-16 bg-gradient - to - br from - purple - 500 to - pink - 500 rounded-2xl flex items - center justify - center mx - auto mb-4">;
@@ -204,7 +185,6 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
                 <h4 className="text-lg font - bold text-white mb-2">AI Drug Discovery</h4>;
                 <p className="text-gray - 400 text-sm">Accelerating pharmaceutical research with quantum AI</p>;
               </div>;
-
               <div className="text-center">;
                 <div className="w-16 h-16 bg-gradient - to - br from - blue - 500 to - cyan - 500 rounded-2xl flex items - center justify - center mx - auto mb-4">;
                   <span className="text-2xl">⚡</span>;
@@ -212,7 +192,6 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
                 <h4 className="text-lg font - bold text-white mb-2">Quantum Optimization</h4>;
                 <p className="text-gray - 400 text-sm">Solving complex optimization problems 1000x faster</p>;
               </div>;
-
               <div className="text-center">;
                 <div className="w-16 h-16 bg-gradient - to - br from - green - 500 to - emerald - 500 rounded-2xl flex items - center justify - center mx - auto mb-4">;
                   <span className="text-2xl">🌱</span>;
@@ -222,26 +201,19 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
             </div>;
           </div>;
         </motion.div>;
-
         <motion.div;
           className="text-center"          initial = {;
-
   { "opacity": 0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition = {;
-
   { "duration": "0.6",;
   "delay": "1.0;
-
 <<<<<<< HEAD
 "}}
         >";
@@ -264,6 +236,8 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
           </div>;
         </motion.div>;
 =======
+
+>>>>>>> origin/main
 }}
         >"
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">"
@@ -284,7 +258,6 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
             </div>
           </div>
         </motion.div>
->>>>>>> main
       </div>;
     </section>;) "};
 ;
@@ -297,7 +270,6 @@ export default InnovationResearchSection;";
 export default IconComponent;
 export default IconComponent;
 '"`;
-
 </motion>;
 </motion>;
 </motion>;

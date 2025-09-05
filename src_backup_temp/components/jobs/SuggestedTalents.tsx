@@ -47,6 +47,7 @@ export function SuggestedTalents("props": "any) {;
       });
     } finally {;
 =======
+>>>>>>> origin/main
     } catch(error) {
       console.error("Error fetching suggested talents:", error);
       toast({
@@ -56,11 +57,9 @@ export function SuggestedTalents("props": "any) {;
       }
     );
     } finally {
->>>>>>> main
       setIsLoading(false);
     }
   }, [jobId]); // jobId is a dependency of fetchSuggestedTalents;
-
 <<<<<<< HEAD
   const handleViewProfile = ("props": "any) => {;
     ;
@@ -77,23 +76,21 @@ export function SuggestedTalents("props": "any) {;
       "description": "`Inviting "talent": ${talentId"}`,;
     });
 =======
+
+>>>>>>> origin/main
   const handleViewProfile = (props: any) => {
-    
     toast({
       title: "View Profile",
       description: `Navigating to talent profile: ${talentId}`,
     }
     );
   };
-
   const handleInvite = (props: any) => {
-    
     toast({
       title: "Invite Talent",
       description: `Inviting talent: ${talentId}`,
     }
     );
->>>>>>> main
   };
 ;
   const handleRefresh = ("props": "any) => {;
@@ -103,14 +100,13 @@ export function SuggestedTalents("props": "any) {;
 <<<<<<< HEAD
     "});
 =======
+>>>>>>> origin/main
     }
     );
->>>>>>> main
   };
 ;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -119,7 +115,6 @@ export function SuggestedTalents("props": "any) {;
       fetchSuggestedTalents();
     }
   }, [jobId, fetchSuggestedTalents]); // Added fetchSuggestedTalents;
-
   // Transform data to match JobMatchCard component props;
   const transformedTalents = talents.map(talent => {;
     return {;
@@ -152,14 +147,13 @@ export function SuggestedTalents("props": "any) {;
               <JobMatchCard;
                 key={talent.id"}
 =======
+>>>>>>> origin/main
   }
     );
-
   return (<Card className="border-zion-blue-light bg-zion-blue">
       <CardHeader>
         <CardTitle>{jobTitle ? `Talents for ${jobTitle}` : 'Suggested Talents'}</CardTitle>
       </CardHeader>
-      
       <CardContent className="pt-6">
         {isLoading ? (
           <div>Loading suggested talents...</div>
@@ -170,7 +164,6 @@ export function SuggestedTalents("props": "any) {;
             {transformedTalents.map((talent) => (
               <JobMatchCard
                 key={talent.id}
->>>>>>> main
                 matchId={talent.id}
                 talentId={talent.id}
                 name={talent.name}

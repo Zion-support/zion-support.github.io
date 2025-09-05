@@ -1,13 +1,8 @@
-<<<<<<< HEAD:src/test/integration/AIChatAssistant.test.tsx
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react'; import { render,screen,fireEvent,waitFor } from '@testing-library/react'; import { renderWithProviders } from '../test/testUtils'; import AIChatAssistant from '../components/AIChatAssistant'; describe('AIChatAssistant Integration Tests',() => { beforeEach(() => { jest.clearAllMocks()}); it('should render the AI assistant interface',() => { renderWithProviders(<AIChatAssistant />); expect(screen.getByText('AI Assistant')).toBeInTheDocument(); expect(screen.getByPlaceholderText('Type your message...')).toBeInTheDocument(); expect(screen.getByRole('button')).toBeInTheDocument()}); it('should send a message when user types and clicks send',async () => { renderWithProviders(<AIChatAssistant />); const input = screen.getByPlaceholderText('Type your message...'); const sendButton = screen.getByRole('button'); fireEvent.change(input,{ "target": "{ "value": 'Hello AI' "} }); fireEvent.click(sendButton); await waitFor(() => { expect(screen.getByText('Hello AI')).toBeInTheDocument()})}); it('should send a message when user presses Enter',async () => { renderWithProviders(<AIChatAssistant />); const input = screen.getByPlaceholderText('Type your message...'); fireEvent.change(input,{ "target": "{ "value": 'Hello AI' "} }); fireEvent.keyPress(input,{ "key": 'Enter',"code": 'Enter' }); await waitFor(() => { expect(screen.getByText('Hello AI')).toBeInTheDocument()})}); it('should not send empty messages',() => { renderWithProviders(<AIChatAssistant />); const sendButton = screen.getByRole('button'); expect(sendButton).toBeDisabled()}); it('should display AI response after sending message',async () => { renderWithProviders(<AIChatAssistant />); const input = screen.getByPlaceholderText('Type your message...'); const sendButton = screen.getByRole('button'); fireEvent.change(input,{ "target": "{ "value": 'Hello AI' "} }); fireEvent.click(sendButton); await waitFor(() => { expect(screen.getByText(/I "understand": "Hello AI"/)).toBeInTheDocument()},{ "timeout": '2000' })})});
-=======
 <<<<<<< HEAD
 =======
->>>>>>> main
+=======
+>>>>>>> origin/main
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { renderWithProviders } from '../test/testUtils';
@@ -19,19 +14,61 @@ describe('AIChatAssistant Integration Tests', () => {
     jest.clearAllMocks();
   }
     );
-
 =======
+>>>>>>> origin/main
     jest.clearAllMocks()});
->>>>>>> main
->>>>>>> main:src_backup_temp/test/integration/AIChatAssistant.test.tsx
   it('should render the AI assistant interface', () => {
     renderWithProviders(<AIChatAssistant />);
     expect(screen.getByText('AI Assistant')).toBeInTheDocument();
     expect(screen.getByPlaceholderText('Type your message...')).toBeInTheDocument();
+<<<<<<< HEAD
+    expect(screen.getByRole('button')).toBeInTheDocument();
+  }
+    );
+    expect(screen.getByRole('button')).toBeInTheDocument()});
+=======
+>>>>>>> origin/main
   it('should send a message when user types and clicks send', async () => {
     renderWithProviders(<AIChatAssistant />);
     const input = screen.getByPlaceholderText('Type your message...');
     const sendButton = screen.getByRole('button');
+<<<<<<< HEAD
+    fireEvent.change(input, { target: { value: 'Hello AI' } }
+    );
+    fireEvent.change(input, { "target": { value: 'Hello AI' } });
+    fireEvent.click(sendButton);
+    await waitFor(() => {
+      expect(screen.getByText('Hello AI')).toBeInTheDocument();
+    }
+    );
+  }
+    );
+      expect(screen.getByText('Hello AI')).toBeInTheDocument()})});
+  it('should send a message when user presses Enter', async () => {
+    renderWithProviders(<AIChatAssistant />);
+    const input = screen.getByPlaceholderText('Type your message...');
+    fireEvent.change(input, { target: { value: 'Hello AI' } }
+    );
+    fireEvent.keyPress(input, { key: 'Enter', code: 'Enter' }
+    );
+    await waitFor(() => {
+      expect(screen.getByText('Hello AI')).toBeInTheDocument();
+    }
+    );
+  }
+    );
+    fireEvent.change(input, { "target": { value: 'Hello AI' } });
+    fireEvent.keyPress(input, { "key": 'Enter', "code": 'Enter' });
+    await waitFor(() => {
+      expect(screen.getByText('Hello AI')).toBeInTheDocument()})});
+  it('should not send empty messages', () => {
+    renderWithProviders(<AIChatAssistant />);
+    const sendButton = screen.getByRole('button');
+    expect(sendButton).toBeDisabled();
+  }
+    );
+    expect(sendButton).toBeDisabled()});
+=======
     fireEvent.click(sendButton);
     await waitFor(() => {
   it('should send a message when user presses Enter', async () => {
@@ -40,22 +77,20 @@ describe('AIChatAssistant Integration Tests', () => {
   it('should not send empty messages', () => {
     renderWithProviders(<AIChatAssistant />);
     const sendButton = screen.getByRole('button');
+>>>>>>> origin/main
   it('should display AI response after sending message', async () => {
     renderWithProviders(<AIChatAssistant />);
     const input = screen.getByPlaceholderText('Type your message...');
     const sendButton = screen.getByRole('button');
+<<<<<<< HEAD
+    fireEvent.change(input, { target: { value: 'Hello AI' } }
+    );
+    fireEvent.change(input, { "target": { value: 'Hello AI' } });
     fireEvent.click(sendButton);
     // Wait for AI response
     await waitFor(() => {
-<<<<<<< HEAD:src/test/integration/AIChatAssistant.test.tsx
-=======
-<<<<<<< HEAD
       expect(screen.getByText(/I understand: "Hello AI"/)).toBeInTheDocument()}, { timeout: 2000 })})});
-=======
 import React from 'react'; import { render,screen,fireEvent,waitFor } from '@testing-library/react'; import { renderWithProviders } from '../test/testUtils'; import AIChatAssistant from '../components/AIChatAssistant'; describe('AIChatAssistant Integration Tests',() => { beforeEach(() => { jest.clearAllMocks()}); it('should render the AI assistant interface',() => { renderWithProviders(<AIChatAssistant />); expect(screen.getByText('AI Assistant')).toBeInTheDocument(); expect(screen.getByPlaceholderText('Type your message...')).toBeInTheDocument(); expect(screen.getByRole('button')).toBeInTheDocument()}); it('should send a message when user types and clicks send',async () => { renderWithProviders(<AIChatAssistant />); const input = screen.getByPlaceholderText('Type your message...'); const sendButton = screen.getByRole('button'); fireEvent.change(input,{ target: { value: 'Hello AI' } }); fireEvent.click(sendButton); await waitFor(() => { expect(screen.getByText('Hello AI')).toBeInTheDocument()})}); it('should send a message when user presses Enter',async () => { renderWithProviders(<AIChatAssistant />); const input = screen.getByPlaceholderText('Type your message...'); fireEvent.change(input,{ target: { value: 'Hello AI' } }); fireEvent.keyPress(input,{ key: 'Enter',code: 'Enter' }); await waitFor(() => { expect(screen.getByText('Hello AI')).toBeInTheDocument()})}); it('should not send empty messages',() => { renderWithProviders(<AIChatAssistant />); const sendButton = screen.getByRole('button'); expect(sendButton).toBeDisabled()}); it('should display AI response after sending message',async () => { renderWithProviders(<AIChatAssistant />); const input = screen.getByPlaceholderText('Type your message...'); const sendButton = screen.getByRole('button'); fireEvent.change(input,{ target: { value: 'Hello AI' } }); fireEvent.click(sendButton); await waitFor(() => { expect(screen.getByText(/I understand: "Hello AI"/)).toBeInTheDocument()},{ timeout: '2000' })})});
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-<<<<<<< HEAD
       expect(screen.getByText(/I understand: "Hello AI"/)).toBeInTheDocument();
     }, { timeout: 2000 }
     );
@@ -63,11 +98,14 @@ import React from 'react'; import { render,screen,fireEvent,waitFor } from '@tes
     );
 }
     );
+      expect(screen.getByText(/I "understand": "Hello AI"/)).toBeInTheDocument()}, { "timeout": 2000 })})});
+import React from 'react'; import { render,screen,fireEvent,waitFor } from '@testing-library/react'; import { renderWithProviders } from '../test/testUtils'; import AIChatAssistant from '../components/AIChatAssistant'; describe('AIChatAssistant Integration Tests',() => { beforeEach(() => { jest.clearAllMocks()}); it('should render the AI assistant interface',() => { renderWithProviders(<AIChatAssistant />); expect(screen.getByText('AI Assistant')).toBeInTheDocument(); expect(screen.getByPlaceholderText('Type your message...')).toBeInTheDocument(); expect(screen.getByRole('button')).toBeInTheDocument()}); it('should send a message when user types and clicks send',async () => { renderWithProviders(<AIChatAssistant />); const input = screen.getByPlaceholderText('Type your message...'); const sendButton = screen.getByRole('button'); fireEvent.change(input,{ target: { value: 'Hello AI' } }); fireEvent.click(sendButton); await waitFor(() => { expect(screen.getByText('Hello AI')).toBeInTheDocument()})}); it('should send a message when user presses Enter',async () => { renderWithProviders(<AIChatAssistant />); const input = screen.getByPlaceholderText('Type your message...'); fireEvent.change(input,{ target: { value: 'Hello AI' } }); fireEvent.keyPress(input,{ key: 'Enter',code: 'Enter' }); await waitFor(() => { expect(screen.getByText('Hello AI')).toBeInTheDocument()})}); it('should not send empty messages',() => { renderWithProviders(<AIChatAssistant />); const sendButton = screen.getByRole('button'); expect(sendButton).toBeDisabled()}); it('should display AI response after sending message',async () => { renderWithProviders(<AIChatAssistant />); const input = screen.getByPlaceholderText('Type your message...'); const sendButton = screen.getByRole('button'); fireEvent.change(input,{ target: { value: 'Hello AI' } }); fireEvent.click(sendButton); await waitFor(() => { expect(screen.getByText(/I understand: "Hello AI"/)).toBeInTheDocument()},{ timeout: 2000 })})});
+=======
+    fireEvent.click(sendButton);
+    // Wait for AI response
+    await waitFor(() => {
+import React from 'react'; import { render,screen,fireEvent,waitFor } from '@testing-library/react'; import { renderWithProviders } from '../test/testUtils'; import AIChatAssistant from '../components/AIChatAssistant'; describe('AIChatAssistant Integration Tests',() => { beforeEach(() => { jest.clearAllMocks()}); it('should render the AI assistant interface',() => { renderWithProviders(<AIChatAssistant />); expect(screen.getByText('AI Assistant')).toBeInTheDocument(); expect(screen.getByPlaceholderText('Type your message...')).toBeInTheDocument(); expect(screen.getByRole('button')).toBeInTheDocument()}); it('should send a message when user types and clicks send',async () => { renderWithProviders(<AIChatAssistant />); const input = screen.getByPlaceholderText('Type your message...'); const sendButton = screen.getByRole('button'); fireEvent.change(input,{ target: { value: 'Hello AI' } }); fireEvent.click(sendButton); await waitFor(() => { expect(screen.getByText('Hello AI')).toBeInTheDocument()})}); it('should send a message when user presses Enter',async () => { renderWithProviders(<AIChatAssistant />); const input = screen.getByPlaceholderText('Type your message...'); fireEvent.change(input,{ target: { value: 'Hello AI' } }); fireEvent.keyPress(input,{ key: 'Enter',code: 'Enter' }); await waitFor(() => { expect(screen.getByText('Hello AI')).toBeInTheDocument()})}); it('should not send empty messages',() => { renderWithProviders(<AIChatAssistant />); const sendButton = screen.getByRole('button'); expect(sendButton).toBeDisabled()}); it('should display AI response after sending message',async () => { renderWithProviders(<AIChatAssistant />); const input = screen.getByPlaceholderText('Type your message...'); const sendButton = screen.getByRole('button'); fireEvent.change(input,{ target: { value: 'Hello AI' } }); fireEvent.click(sendButton); await waitFor(() => { expect(screen.getByText(/I understand: "Hello AI"/)).toBeInTheDocument()},{ timeout: '2000' })})});
 =======
       expect(screen.getByText(/I "understand": "Hello AI"/)).toBeInTheDocument()}, { "timeout": 2000 })})});
 import React from 'react'; import { render,screen,fireEvent,waitFor } from '@testing-library/react'; import { renderWithProviders } from '../test/testUtils'; import AIChatAssistant from '../components/AIChatAssistant'; describe('AIChatAssistant Integration Tests',() => { beforeEach(() => { jest.clearAllMocks()}); it('should render the AI assistant interface',() => { renderWithProviders(<AIChatAssistant />); expect(screen.getByText('AI Assistant')).toBeInTheDocument(); expect(screen.getByPlaceholderText('Type your message...')).toBeInTheDocument(); expect(screen.getByRole('button')).toBeInTheDocument()}); it('should send a message when user types and clicks send',async () => { renderWithProviders(<AIChatAssistant />); const input = screen.getByPlaceholderText('Type your message...'); const sendButton = screen.getByRole('button'); fireEvent.change(input,{ target: { value: 'Hello AI' } }); fireEvent.click(sendButton); await waitFor(() => { expect(screen.getByText('Hello AI')).toBeInTheDocument()})}); it('should send a message when user presses Enter',async () => { renderWithProviders(<AIChatAssistant />); const input = screen.getByPlaceholderText('Type your message...'); fireEvent.change(input,{ target: { value: 'Hello AI' } }); fireEvent.keyPress(input,{ key: 'Enter',code: 'Enter' }); await waitFor(() => { expect(screen.getByText('Hello AI')).toBeInTheDocument()})}); it('should not send empty messages',() => { renderWithProviders(<AIChatAssistant />); const sendButton = screen.getByRole('button'); expect(sendButton).toBeDisabled()}); it('should display AI response after sending message',async () => { renderWithProviders(<AIChatAssistant />); const input = screen.getByPlaceholderText('Type your message...'); const sendButton = screen.getByRole('button'); fireEvent.change(input,{ target: { value: 'Hello AI' } }); fireEvent.click(sendButton); await waitFor(() => { expect(screen.getByText(/I understand: "Hello AI"/)).toBeInTheDocument()},{ timeout: 2000 })})});
->>>>>>> main
->>>>>>> main:src_backup_temp/test/integration/AIChatAssistant.test.tsx
->>>>>>> main
->>>>>>> main
->>>>>>> main
+>>>>>>> origin/main

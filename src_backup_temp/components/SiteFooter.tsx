@@ -86,6 +86,7 @@ export function SiteFooter("props": "any) {';
                   <li key={link.label}>;
                     <Link;
 =======
+>>>>>>> origin/main
           { navSections.map((section) => (
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}
@@ -93,7 +94,6 @@ export function SiteFooter("props": "any) {';
                 {section.links.map((link) => (
                   <li key={link.label}>
                     <Link
->>>>>>> main
                       href={link.href}
                       className="text-gray-300 "hover": "tex t-white transition-colors";
                     >;
@@ -106,9 +106,9 @@ export function SiteFooter("props": "any) {';
     </div>;
   );
 =======
+>>>>>>> origin/main
     </div>
     );
->>>>>>> main
 }
               </ul>;
             </div>;
@@ -118,9 +118,9 @@ export function SiteFooter("props": "any) {';
     </div>;
   );
 =======
+>>>>>>> origin/main
     </div>
     );
->>>>>>> main
 }
         </div>;
         {/* Bottom Section */}
@@ -146,9 +146,9 @@ export function SiteFooter("props": "any) {';
     </div>;
   );
 =======
+>>>>>>> origin/main
     </div>
     );
->>>>>>> main
 }
             </div>;
           </div>;

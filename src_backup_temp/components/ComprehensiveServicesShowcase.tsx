@@ -1,7 +1,5 @@
 import {  import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
 <<<<<<< HEAD
-<<<<<<< HEAD
-
 export default function Page(props: any) {';
 const ComprehensiveServicesShowcase: Reac t.FC = () => {;';';
   const [selectedCategory, setSelectedCategory] = useState<string>('all');';';
@@ -11,10 +9,9 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;';';
     ...EMERGING_TECH_SERVICES_2025';
   ];';';
   // Get unique categories'
-  
 =======
 =======
->>>>>>> main
+>>>>>>> origin/main
 ;
 export default function Page("props": "any) {;
 const "ComprehensiveServicesShowcase": React.FC = () => {;
@@ -23,8 +20,6 @@ const "ComprehensiveServicesShowcase": React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState<string>('');  // Combine all services;
   const "allServices": "Servic e[] = [...EXPANDED_INNOVATIVE_SERVICES_2025",;
     ...EMERGING_TECH_SERVICES_2025;
-=======
-
 export default function Page(props: any) {
 const ComprehensiveServicesShowcase: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -32,25 +27,20 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState<string>('');  // Combine all services
   const allServices: Servic e[] = [...EXPANDED_INNOVATIVE_SERVICES_2025,
     ...EMERGING_TECH_SERVICES_2025
->>>>>>> main
   ];
 <<<<<<< HEAD
   // Get unique categories';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+  // Get unique categories'
 =======
   // Get unique categories'
   
->>>>>>> main
+>>>>>>> origin/main
     return cats}, [allServices]) ;
   // Get unique innovation levels
-
     return levels}, [allServices]);  // Filter services
-  
     return allServices.filter(service => {;
-      
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-<<<<<<< HEAD
 <<<<<<< HEAD
       return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);';
   ';';
@@ -91,17 +81,15 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
       default:"
         return <Star className="h-6 w-6"   />};';
   };';';
-=======
-=======
->>>>>>> main
       return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
-<<<<<<< HEAD
 ;
       case 'AI & Customer Experience': ";
 =======
+=======
+      return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
   
+>>>>>>> origin/main
       case 'AI & Customer Experience':;
->>>>>>> main
       case 'AI & Supply Chain':;
       case 'AI & Legal Tech':;
       case 'AI & Healthcare':;
@@ -139,10 +127,8 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
       "default":";
         return <Star className="h-6 w-6"   />"};
   };
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
->>>>>>> main
+>>>>>>> origin/main
         return 'bg-gradient-to-r from-gray-600 to-slate-600'}  };
   return (";
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">;
@@ -221,7 +207,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               <select;
 <<<<<<< HEAD
                 value={selectedCategory}
-<<<<<<< HEAD
                 onChange={(e) => setSelectedCategory(e.target.value)}"
                 className="px-4 py-2 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent"
               >
@@ -229,20 +214,19 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                   <option key={category} value={category}>';';
 =======
 =======
+>>>>>>> origin/main
                 value={selectedCategory"}
->>>>>>> main
                 onChange={(e) => setSelectedCategory(e.target.value)}";
                 className="px-4 py-2 border border-gray-300 rounded-lg "focus": "rin g-2 "focus": rin g-zion-cyan "focus": borde r-transparent";
               >;
                 {categories.map(category  => (;
 <<<<<<< HEAD
                   <option key={category} value={category}>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                     {category === 'all' ? 'All Categories' : category}
 =======
+>>>>>>> origin/main
                   <option key={category"} value={category}>;
                     {category === 'all' ? 'All Categories' : "category"}
->>>>>>> main
                   </option>) ) }
               </select>;
             </div>;
@@ -252,7 +236,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               <select;
 <<<<<<< HEAD
                 value={selectedInnovationLevel}
-<<<<<<< HEAD
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)}"
                 className="px-4 py-2 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent"
               >
@@ -260,20 +243,19 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                   <option key={level} value={level}>';';
 =======
 =======
+>>>>>>> origin/main
                 value={selectedInnovationLevel"}
->>>>>>> main
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)}";
                 className="px-4 py-2 border border-gray-300 rounded-lg "focus": "rin g-2 "focus": rin g-zion-cyan "focus": borde r-transparent";
               >;
                 {innovationLevels.map(level  => (;
 <<<<<<< HEAD
                   <option key={level} value={level}>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                     {level === 'all' ? 'All Levels' : level}
 =======
+>>>>>>> origin/main
                   <option key={level"} value={level}>;
                     {level === 'all' ? 'All Levels' : "level"}
->>>>>>> main
                   </option>) ) }
               </select>;
             </div>;
@@ -305,7 +287,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                   <div className="flex items-start justify-between mb-4">";
                     <div className="flex items-center gap-3">";
                       <div className="p-2 bg-zion-cyan/10 rounded-lg text-zion-cyan">;
-=======
       default:"
         return <Star className="h-6 w-6"   />};
   };
@@ -326,13 +307,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               <Link "
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover: b g-zion-cyan-light transition-colors"
-
                 Get Started"
                 <ArrowRight className="ml-2 h-5 w-5"    />              </Link>
               <Link"
                 to="/request-quote"
                 className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover: b g-white hover: tex t-zion-blue-dark transition-colors"
-
                 Request Quote
               </Link>
             </div>
@@ -422,31 +401,23 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               <motion.div
                 key={service.id}
                 initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
                 animate = {
-
   { opacity: 1,
   y: 0
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: inde x * 0.1
-
 }}"
                 className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-all duration-300 overflow-hidden border border-gray-100"
-
                 {/* Service Header */}"
                 <div className="p-6 border-b border-gray-100">"
                   <div className="flex items-start justify-between mb-4">"
                     <div className="flex items-center gap-3">"
                       <div className="p-2 bg-zion-cyan/10 rounded-lg text-zion-cyan">
->>>>>>> main
                         {getCategoryIcon(service.category)}
                       </div>
                       <div>
@@ -497,10 +468,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                           {feature}
                         </div>
                       ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
                       {service.features.length > 5 && ("
                         <div className="text-sm text-zion-cyan font-medium">
                           +{service.features.length-5} more features
@@ -515,8 +482,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                     <div className="space-y-2">
                       {service.benefits.slice(0, 3).map((benefit, idx) => ("
                         <div key={idx} className="text-sm text-gray-600 bg-blue-50 p-2 rounded">
-<<<<<<< HEAD
-=======
                       {service.features.length > 5 && (";
                         <div className="text-sm text-zion-cyan font-medium">;
                           +{service.features.length-5} more features;
@@ -531,9 +496,10 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                     <div className="space-y-2">;
                       {service.benefits.slice(0, 3).map((benefit, idx) => (";
                         <div key={idx} className="text-sm text-gray-600 bg-blue-50 p-2 rounded">;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+<<<<<<< HEAD
 =======
->>>>>>> main
+=======
+>>>>>>> origin/main
                           {benefit}
                         </div>) ) }
                     </div>
@@ -545,7 +511,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                         <span
                           key={idx}"
                           className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full"
-
                           {tag}
                         </span>) ) }
 <<<<<<< HEAD
@@ -569,6 +534,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
           </div> {filteredServices.length === 0 && (;";
             <div className="text-center py-16">;";
 =======
+>>>>>>> origin/main
                     </div>
                   </div>
                   {/* CTA Buttons */}"
@@ -576,13 +542,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                     <Link`
                       to={`/contact?service=${service.id}`}"
                       className="flex-1 bg-zion-cyan text-white text-center py-2 px-4 rounded-lg hover: b g-zion-cyan-light transition-colors font-medium"
-
                       Get Started
                     </Link>
                     <Link`
                       to={`/services/${service.id}`}"
                       className="flex-1 border border-zion-cyan text-zion-cyan text-center py-2 px-4 rounded-lg hover: b g-zion-cyan hover: tex t-white transition-colors font-medium"
-
                       Learn More
                     </Link>
                   </div>
@@ -590,15 +554,14 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               </motion.div>) ) };
           </div> {filteredServices.length === 0 && (;"
             <div className="text-center py-16">;"
->>>>>>> main
               <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>;
-<<<<<<< HEAD
 <<<<<<< HEAD
               <button;';
                 onClick={() => {;';';
                   setSelectedCategory('all');';';
                   setSelectedInnovationLevel('all');';';
 =======
+>>>>>>> origin/main
               <button;
                 onClick={() => {;
                   setSelectedCategory('all');
@@ -631,7 +594,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
 ";
               <Phone className="mr-2 h-5 w-5"   />              Call Now;
 =======
->>>>>>> main
+>>>>>>> origin/main
                   setSearchTerm('')}}"                className="text-zion-cyan hover: tex t-zion-cyan-light font-medium"
               >
                 Clear all filters
@@ -651,7 +614,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
             <Link "
               to="/contact"
               className="inline-flex items-center px-8 py-3 bg-white text-zion-blue font-semibold rounded-lg hover: b g-gray-100 transition-colors"
-
               Contact Us"
               <ArrowRight className="ml-2 h-5 w-5"    />            </Link>
             <a"
@@ -666,11 +628,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
       </section>;';
     </div>;) };';';
 export default ComprehensiveServicesShowcase}}}}'"`
-
 </motion>
 </string>';
 </string>;';;';
 =======
+>>>>>>> origin/main
               <button;
                 onClick={() => {;
                   setSelectedCategory('all');
@@ -701,9 +663,10 @@ export default ComprehensiveServicesShowcase}}}}'"`
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover: b g-white hover: tex t-zion-blue transition-colors";
 ";
               <Phone className="mr-2 h-5 w-5"   />              Call Now;
+<<<<<<< HEAD
 =======
->>>>>>> main
->>>>>>> main
+=======
+>>>>>>> origin/main
             </a>;
           </div>;
         </div>;
@@ -715,16 +678,16 @@ export default ComprehensiveServicesShowcase}}}}'"`;
 </string>;
 </string>;
 </string>;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 =======
+>>>>>>> origin/main
     </div>;) };
 export default ComprehensiveServicesShowcase}}}}'"`
-
 </motion>
 </string>
 </string>
+<<<<<<< HEAD
 </string>
->>>>>>> main
->>>>>>> main
+=======
+</string>
+>>>>>>> origin/main

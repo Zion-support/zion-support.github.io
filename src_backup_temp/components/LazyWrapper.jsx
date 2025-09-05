@@ -5,19 +5,6 @@ const LazyWrapper = ("props": "any) => {"}
 export default function Page("props": "any) {"}
     }, [inView, isInView]) ;
     if(!isInView) {}
-<<<<<<< HEAD
-        return (<div ref={ref} className={`min-h-[200px] ${className}`}>;
-        <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize} />;
-      </div>) }
-    if(!isLoaded) {}
-`;
-``;
-```;
-````;
-        return (<div className={`min-h-[200px] ${className}`}>;
-        <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize} />;
-      </div>) ;
-=======
         return (
         <div ref={ref} className={`min-h-[200px] ${className}`}>
         <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize} />
@@ -32,7 +19,6 @@ export default function Page("props": "any) {"}
         <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize} />
       </div>
     );
->>>>>>> main
     }
     return (<motion.div initial = {}
   {"opacity": "0",;

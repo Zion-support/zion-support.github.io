@@ -23,16 +23,12 @@ export default function Page("props": "any) {;
         {/* Header Section */}
         <motion.div;
           initial = {;
-
   { "opacity": "0",;
   "y": "3 0;
-
 "}}
           animate = {;
-
   isVisible ? { "opacity": "1",;
   "y": "0;
-
 "} : "{ "opacity": 0", "y": "3 0 "}}
           transition={{ "duration": "0.8 "}}";
           className="text-center mb-16";
@@ -53,26 +49,19 @@ export default function Page("props": "any) {;
             Experience the future of technology with our cutting-edge 2027 services.';
             From quantum computing to AI consciousness", we're pushing the boundaries of what's possible.</p>;
         </motion.div>;
-
         {/* Category Filter */}
         <motion.div;
           initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           animate = {;
-
   isVisible ? { "opacity": "1",;
   "y": "0;
-
 "} : "{ "opacity": 0", "y": "2 0 "}}
           transition = {;
-
   { "duration": "0.8",;
   "delay": "0.2;
-
 "}}";
           className="mb-12";
 ";
@@ -98,17 +87,13 @@ export default function Page("props": "any) {;
                   {Icon && <Icon className="w-4 h-4"   />} {category};
                 </button>;) }) }          </div>;
         </motion.div>;
-
         {/* Services Grid */}
         <motion.div;
           initial = {;
-
   { "opacity": "0",;
   "y": "3 0 "}}          animate = {;
-
   isVisible ? { "opacity": "1",;
   "y": "0 "} : "{ "opacity": 0", "y": "3 0 "}}          transition = {;
-
   { "duration": "0.8",;
   "delay": "0.4 "}}"          className="grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-3 gap-8 mb-16";
         >;
@@ -116,22 +101,16 @@ export default function Page("props": "any) {;
             <motion.div;
               key={service.id}
               initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
               animate = {;
-
   isVisible ? { "opacity": "1",;
   "y": "0;
-
 "} : "{ "opacity": 0", "y": "2 0 "}}
               transition = {;
-
   { "duration": "0.6",;
   "delay": "inde x * 0.1;
-
 <<<<<<< HEAD
 "}}";
               className="group relative";
@@ -145,6 +124,8 @@ export default function Page("props": "any) {;
                     </h3>";
                     <p className="text-gray-300 text-sm leading-relaxed">;
 =======
+
+>>>>>>> origin/main
 }}"
               className="group relative"
 "
@@ -156,19 +137,16 @@ export default function Page("props": "any) {;
                       {service.title}
                     "
                     <p className="text-gray-300 text-sm leading-relaxed">
->>>>>>> main
                       {service.description}
                     </p>;
                   </div>;
                 </div>;
-
                 {/* Technology Tags */}";
                 <div className="flex flex-wrap gap-2 mb-4">;
                   {service.technology.slice(0, 3).map((tech, techIndex) => (;
                     <span;
                       key={techIndex}";
                       className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30";
-
                       {tech}
                     </span>;
                   ))}
@@ -177,7 +155,6 @@ export default function Page("props": "any) {;
                       +{service.technology.length-3} more;
                     </span>) }
                 </div>;
-
                 {/* Key Metrics */}";
                 <div className="grid grid-cols-2 gap-4 mb-4">;";
                   <div className="text-center">";
@@ -194,32 +171,24 @@ export default function Page("props": "any) {;
                   <button;
                     onClick={() => toggleServiceExpansion(service.id)}";
                     className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold "hover": "shado w-lg "hover": shado w-zion-cyan/25 transition-all duration-300 flex items-center gap-2";
-
                     {expandedService === service.id ? 'Less' : 'Learn More'"}";
                     {expandedService === service.id ? <ChevronUp className="w-4 h-4"   /> : "<ChevronDown className="w-4 h-4"   />"}                  </button>;
                 </div>;
-
                 {/* Expanded Service Details */}
                 <AnimatePresence>;
                   {expandedService === service.id && ;
                     <motion.div;
                       initial = {;
-
   { "opacity": "0",;
   "height": "0;
-
 "}}
                       animate = {;
-
   { "opacity": "1",;
   "height": 'auto';
-
 }}
                       exit = {;
-
   { "opacity": "0",;
   "height": "0;
-
 "}}
                       transition={{ "duration": "0.3 "}}";
                       className="overflow-hidden";
@@ -236,7 +205,6 @@ export default function Page("props": "any) {;
                               </li>) ) }
                           </ul>;
                         </div>;
-
                         {/* Benefits */}
                         <div>";
                           <h4 className="text-zion-purple font-semibold mb-2">Benefits</h4>";
@@ -248,7 +216,6 @@ export default function Page("props": "any) {;
                               </li>) ) }
                           </ul>;
                         </div>;
-
                         {/* Implementation Details */}";
                         <div className="grid grid-cols-2 gap-4">;
                           <div>";
@@ -260,13 +227,11 @@ export default function Page("props": "any) {;
                             <div className="text-gray-300 text-xs">{service.supportLevel}</div>;
                           </div>;
                         </div>;
-
                         {/* Primary CTA */}
                         <a href={service.href}";
                           target={service.external ? "_blank" : "_self"}";
                           rel={service.external ? "noopener noreferrer" : ""}";
                           className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold "hover": "shado w-lg "hover": shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2 group";
-
                           {service.ctaLabel"}";
                           <ArrowRight className="w-4 h-4 group-"hover": "translat e-x-1 transition-transform duration-300"   />";
                           {service.external && <ExternalLink className="w-4 h-4"   />"}                        </a>;
@@ -276,17 +241,13 @@ export default function Page("props": "any) {;
               </div>;
             </motion.div>) ) }
         </motion.div>;
-
         {/* Contact Section */}
         <motion.div;
           initial = {;
-
   { "opacity": "0",;
   "y": "3 0 "}}          animate = {;
-
   isVisible ? { "opacity": "1",;
   "y": "0 "} : "{ "opacity": 0", "y": "3 0 "}}          transition = {;
-
 <<<<<<< HEAD
   { "duration": "0.8",;
   "delay": "0.6 "}}"          className="text-center";
@@ -317,6 +278,8 @@ export default function Page("props": "any) {;
                 href="/contact";
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold "hover": shado w-lg "hover": shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2";
 =======
+
+>>>>>>> origin/main
   { duration: 0.8,
   delay: 0.6 }}"          className="text-center"
 "
@@ -345,8 +308,10 @@ export default function Page("props": "any) {;
               <a"
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover: shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
->>>>>>> main
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/main
                 Schedule Consultation";
                 <ArrowRight className="w-4 h-4"   />              </a>;
               <a";
@@ -354,7 +319,6 @@ export default function Page("props": "any) {;
                 target="_blank";
                 rel="noopener noreferrer";
                 className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-lg font-semibold "hover": b g-zion-cyan/10 transition-all duration-300 flex items-center justify-center gap-2";
-
                 Visit Website";
                 <ExternalLink className="w-4 h-4"   />              </a>;
             </div>;
@@ -363,7 +327,6 @@ export default function Page("props": "any) {;
       </div>;
     </section>;) "};
 '"`;
-
 </motion>;
 </motion>;
 </motion>;

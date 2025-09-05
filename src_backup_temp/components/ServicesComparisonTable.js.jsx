@@ -1,22 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';'''';';
-import React from 'react';
-;
-import {Badge} from "./ui/badge";';
-import {Button} from "./ui/button";';';
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "./ui/card";import {Check, X, Star, Clock, Phone, Mail} from 'lucide-react';';
-import {}';';
-  COMPREHENSIVE_SERVICES,'';';
-  CONTACT_INFO} from '@/data/comprehensiveServices';';
-export function ServicesComparisonTable(props: any) {}';';
-''';';
-'''';';
-=======
 import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';
-=======
 import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';'''
->>>>>>> main
 import React from 'react';
 ;
 import {Badge} from "./ui/badge";
@@ -25,14 +8,6 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "./ui/ca
 import {}
   COMPREHENSIVE_SERVICES,'
   CONTACT_INFO} from '@/data/comprehensiveServices';
-<<<<<<< HEAD
-export function ServicesComparisonTable("props": "any) {"}
-'';
-''';
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
   const serviceCategories = ['AI Services',IT Services',Micro SAAS'];
   const getFeatureIcon = hasFeature => {}
     return hasFeature ? (;
@@ -330,7 +305,6 @@ your business needs";
                   </CardContent>;
                 </Card>;
               ),;
-=======
 export function ServicesComparisonTable(props: any) {}
 ''
 '''
@@ -394,7 +368,6 @@ return()""
                     variant="outline"""""
                     className="w-full border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white ">,
                     View {category}
-
                   </Button>
                 </CardContent>
               </Card>
@@ -518,7 +491,6 @@ return()""
                   </TableCell>""""
                   <TableCell className="text-center">
                     {getFeatureIcon(true)}
-
                   </TableCell>
                 </TableRow>
               </TableBody>
@@ -564,7 +536,6 @@ your business needs"
               </h4>""""
               <p className="text-blue-600 dark:text-blue-400">,
                 {CONTACT_INFO.responseTime}
-
               </p>"
             </div>""
           </div>"""""
@@ -631,13 +602,7 @@ your business needs"
                   </CardContent>
                 </Card>
               ),
->>>>>>> main
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-
           </div>
     );"
 }""""
@@ -647,9 +612,7 @@ your business needs"
 }"""""
 """"""
 "
-
 export default Component
-
 </Star>
 </div>
 </Phone>
@@ -658,10 +621,6 @@ export default Component
 </Mail>
 </Phone>
 </X>
-<<<<<<< HEAD
-</Check>';
-</div>;';;';
-=======
 ;
           </div>;
   );";
@@ -684,9 +643,6 @@ export default Component;
 </X>;
 </Check>;
 </div>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 </X>
 </Check>
 </div>
->>>>>>> main

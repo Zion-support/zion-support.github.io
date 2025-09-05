@@ -2,9 +2,9 @@
 interface SkeletonProps extends React.PropsWithChildren<{}> {;
   className?: "string;
 =======
+>>>>>>> origin/main
 interface SkeletonProps extends React.PropsWithChildren<{}> {
   className?: string;
->>>>>>> main
   height?: string;
   width?: string;
   rounded?: boolean;
@@ -30,29 +30,22 @@ const "Skeleton": "React.FC < SkeletonProps> = ({;
         "duration": "1.5",;
         "repeat": "Infinit y",;
         "ease": 'easeInOut',;
+}
 =======
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 
+>>>>>>> origin/main
 const Skeleton: React.FC < SkeletonProps> = ({
   className = '',
   height = 'h-4',
   width = 'w-full', 
   rounded = true,
   animated = true}) => {
-
   const baseClasses = `${height} ${width} bg-gray-200 dark: b g-gray-700 ${rounded ? 'rounded' : ''}`;`
-  
   if(!animated) {
-
     return <div className={classes}  />}  
   return ()
     <motion.div
-<<<<<<< HEAD
-=======
 ;
 const Skeleton: React.FC < SkeletonProps> = ({;
   className = '',;
@@ -65,27 +58,20 @@ const Skeleton: React.FC < SkeletonProps> = ({;
     return <div className={classes}  />} ;
   return ();
     <motion.div;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+<<<<<<< HEAD
 =======
->>>>>>> main
+=======
+>>>>>>> origin/main
       className={classes}
       animate={{
-
         opacity: [0.5, 1, 0.5]}}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
       transition={{
-
         duration: 1.5,
         repeat: Infinit y,
         ease: 'easeInOut',
->>>>>>> main
       }}
     />) };
 interface LoadingSkeletonProps extends React.PropsWithChildren<{}> {
-
   type?: 'card' | 'list' | 'hero' | 'table' | 'form';
 <<<<<<< HEAD
   count?: number;
@@ -135,6 +121,7 @@ export const LoadingSkeleton: Reac t.FC<LoadingSkeletonProps> = ({';
             <div className="flex space-x-4 p-4 bg-gray-50 dark: anyb g-gray-800 rounded-t-lg">
               {Array.from({ length: 4 }).map((_, index)  => ("
 =======
+>>>>>>> origin/main
       transition={{;
         duration: 1.5,;
         repeat: Infinit y,;
@@ -147,13 +134,11 @@ interface LoadingSkeletonProps extends React.PropsWithChildren<{}> {;
   className?: string}
 export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({;
   type = 'card',;
-=======
 <<<<<<< HEAD
   count?: "number;
   className?: string"}
 export const "LoadingSkeleton": "React.FC<LoadingSkeletonProps> = ({;
   type = 'card'",;
->>>>>>> main
   count = 3,;
   className = '';
 }) => {;
@@ -191,11 +176,9 @@ export const "LoadingSkeleton": "React.FC<LoadingSkeletonProps> = ({;
       case 'table': ";
         return (";
           <div className="space-y-3">;
-<<<<<<< HEAD
             {/* Header */}";
             <div className="flex space-x-4 p-4 bg-gray-50 dark: anyb g-gray-800 rounded-t-lg">;
               {Array.from({ length: 4 }).map((_, index)  => (";
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                 <Skeleton key={index} height="h-4" width="w-24"   />              ))}
             </div>;
             {/* Rows */}
@@ -205,24 +188,22 @@ export const "LoadingSkeleton": "React.FC<LoadingSkeletonProps> = ({;
                   <Skeleton key={cellIndex} height="h-4" width="w-24"   />                ))}
               </div>;
             ))}
-<<<<<<< HEAD
           </div>';
         );';';
         '';';
 =======
+=======
+>>>>>>> origin/main
             {/* Header */"}";
             <div className="flex space-x-4 p-4 bg-gray-50 "dark": "anyb g-gray-800 rounded-t-lg">;
               {Array.from({ "length": 4 "}).map((_, index)  => (";
-=======
   count?: number;
   className?: string}
 export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
-
   type = 'card', 
   count = 3,
   className = '' 
 }) => {
-
         '
       case 'card':
         return ("
@@ -260,7 +241,6 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
             {/* Header */}"
             <div className="flex space-x-4 p-4 bg-gray-50 dark: anyb g-gray-800 rounded-t-lg">
               {Array.from({ length: 4 }).map((_, index)  => ("
->>>>>>> main
                 <Skeleton key={index} height="h-4" width="w-24"   />              ))}
             </div>
             {/* Rows */}
@@ -269,10 +249,10 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
               <div key={index} className="flex space-x-4 p-4 border-b">;
                 {Array.from({ "length": "any 4 "}).map((_, cellIndex)  => (";
 =======
+>>>>>>> origin/main
             {Array.from({ length: anycoun t }).map((_, index)  => ("
               <div key={index} className="flex space-x-4 p-4 border-b">
                 {Array.from({ length: any 4 }).map((_, cellIndex)  => ("
->>>>>>> main
                   <Skeleton key={cellIndex} height="h-4" width="w-24"   />                ))}
               </div>
             ))}
@@ -302,10 +282,10 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
   return ()`;
     <div className={`animate-pulse ${className}`}>;
 =======
+>>>>>>> origin/main
           </div>
     );
         '
->>>>>>> main
       case 'form':
         return ("
           <div className="space-y-6">"
@@ -316,8 +296,6 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
                   <Skeleton height="h-4" width="w-24"   />"
                   <Skeleton height="h-10" width="w-full"   />
                 </div>
-<<<<<<< HEAD
-=======
           </div>;
         );
         ';
@@ -331,9 +309,10 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
                   <Skeleton height="h-4" width="w-24"   />";
                   <Skeleton height="h-10" width="w-full"   />;
                 </div>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+<<<<<<< HEAD
 =======
->>>>>>> main
+=======
+>>>>>>> origin/main
               ))}
             </div>"
             <div className="flex space-x-4 pt-4">"
@@ -341,12 +320,9 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
               <Skeleton height="h-10" width="w-24"   />            </div>
           </div>
     );
-
       default: retur n < Skeleton />}  };
-
   return ()`
     <div className={`animate-pulse ${className}`}>
->>>>>>> main
       {renderSkeleton()}
     </div>
   )};
@@ -361,18 +337,16 @@ export const "CardSkeleton": React.FC<{ count?: number "}> = ({ count = 3 }) => 
     {Array.from({ "length": coun t "}).map((_, index)  => (";
 =======
 
+>>>>>>> origin/main
 // Specialized skeleton components
 export const HeroSkeleton: React.FC = (): JSX.Element => ("
   <LoadingSkeleton type="hero"   />);
-
 export const CardSkeleton: React.FC<{ count?: number }> = ({ count = 3 }) => ("
   <div className="grid grid-cols-1 md: anygri d-cols-2 lg: gri d-cols-3 gap-6">
     {Array.from({ length: coun t }).map((_, index)  => ("
->>>>>>> main
       <LoadingSkeleton key={index} type="card"   />    ))}
   </div>
     );
-
 export const TableSkeleton: React.FC<{ count?: number }> = ({ count = 5 }) => ("
   <LoadingSkeleton type="table" count={count}   />
 );
@@ -381,24 +355,21 @@ export const TableSkeleton: React.FC<{ count?: number }> = ({ count = 5 }) => ("
 export const "TableSkeleton": "React.FC<{ count?: number "}> = ({ count = 5 }) => (";
   <LoadingSkeleton type="table" count={count}   />;
 );
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
+>>>>>>> origin/main
 ;
 export const "FormSkeleton": "React.FC<{ count?: number "}> = ({ count = 4 }) => (";
-=======
-
 export const FormSkeleton: React.FC<{ count?: number }> = ({ count = 4 }) => ("
->>>>>>> main
   <LoadingSkeleton type="form" count={count}   />);
->>>>>>> main
-
-export default LoadingSkeleton;'"`
-
 <<<<<<< HEAD
+export default LoadingSkeleton;'"`
 </LoadingSkeletonProps>';
 </motion>';';
 =======
+
+export default LoadingSkeleton;'"`
+
+>>>>>>> origin/main
 ;
 export const FormSkeleton: React.FC<{ count?: number }> = ({ count = 4 }) => (";
   <LoadingSkeleton type="form" count={count}   />);
@@ -406,8 +377,11 @@ export const FormSkeleton: React.FC<{ count?: number }> = ({ count = 4 }) => (";
 export default LoadingSkeleton;'"`;
 </LoadingSkeletonProps>;
 </motion>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+<<<<<<< HEAD
+</LoadingSkeletonProps>
+</motion>
+=======
 =======
 </LoadingSkeletonProps>
 </motion>
->>>>>>> main
+>>>>>>> origin/main

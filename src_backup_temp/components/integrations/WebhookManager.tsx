@@ -35,8 +35,8 @@ export default function Page("props": "any) {;
       "eventTypes": "newWebhoo k.eventTypes.filter(e => e !== event);
     "});
 =======
+>>>>>>> origin/main
     }
-    
     setNewWebhook({
       ...newWebhook,
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
@@ -44,14 +44,12 @@ export default function Page("props": "any) {;
     }
     );
   };
-  
   const handleRemoveEvent = (props: any) => {
     setNewWebhook({
       ...newWebhook,
       eventTypes: newWebhoo k.eventTypes.filter(e => e !== event)
     }
     );
->>>>>>> main
   };
   ;
   const handleCreateWebhook = async () => {;
@@ -77,6 +75,7 @@ export default function Page("props": "any) {;
     });
 =======
     
+>>>>>>> origin/main
     // Reset form
     setNewWebhook({
       name: "",
@@ -86,7 +85,6 @@ export default function Page("props": "any) {;
       secret: ""
     }
     );
->>>>>>> main
   };
   ;
   const handleTestWebhook = async("webhookId": "string", "eventType": "WebhookEventTyp e) => {;
@@ -110,6 +108,7 @@ export default function Page("props": "any) {;
                 placeholder="e.g.", Job Postings Webhook";
 =======
   
+>>>>>>> origin/main
   return (
         <div className="space-y-8">
       <Card>
@@ -125,7 +124,6 @@ export default function Page("props": "any) {;
               <Input 
                 id="webhook-name" 
                 placeholder="e.g., Job Postings Webhook"
->>>>>>> main
                 value={newWebhook.name}
                 onChange={(e) => setNewWebhook({...newWebhook, "name": "e.target.value"})}
               />;
@@ -215,6 +213,7 @@ export default function Page("props": "any) {;
                       <CardTitle className="text-lg">{webhook.name}</CardTitle>;
                       <CardDescription className="truncate max-w-md">;
 =======
+>>>>>>> origin/main
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
             />
             <p className="text-xs text-muted-foreground">
@@ -227,10 +226,8 @@ export default function Page("props": "any) {;
           </Button>
         </CardFooter>
       </Card>
-      
       <div>
         <h3 className="text-lg font-medium mb-4">Your Webhooks
-        
         {loading ? (
           <p>Loading webhooks...</p>
         ) : error ? (
@@ -246,7 +243,6 @@ export default function Page("props": "any) {;
                     <div>
                       <CardTitle className="text-lg">{webhook.name}</CardTitle>
                       <CardDescription className="truncate max-w-md">
->>>>>>> main
                         {webhook.url}
                       </CardDescription>;
                     </div>;
@@ -344,10 +340,10 @@ export default function Page("props": "any) {;
     </div>;
   );
 =======
+>>>>>>> origin/main
       </div>
     </div>
     );
->>>>>>> main
 }
 ;
 </empty>

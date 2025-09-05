@@ -11,14 +11,6 @@ export function OnChainExport("props": "any) {;
         try {;
             // Check if wallet is available;
             const ethereum = window.ethereum;
-<<<<<<< HEAD
-            if (!ethereum) {;
-                toast({;
-                    "title": "Wallet not detected",;
-                    "description": "Please install MetaMask or another Ethereum wallet to use this feature",;
-                    "variant": "destructive";
-                });
-=======
             if (!ethereum) {
                 toast({
                     title: "Wallet not detected",
@@ -26,26 +18,9 @@ export function OnChainExport("props": "any) {;
                     variant: "destructive"
                 }
     );
->>>>>>> main
                 return}
             // Request accounts;
             const address = accounts[0];
-<<<<<<< HEAD
-            // Sign message to verify ownership;
-            const message = `Zion AI Marketplace wallet verification\"nAddress": "${address"}\"nTime": "${new Date().toISOString()"}`;
-            await ethereum.request({"method": 'personal_sign',;
-                params[address, message];});
-            setIsConnected(true);
-            toast({;
-                "title": "Wallet connected",;
-                "description": "`Wallet ${address.slice(0", 6)}...${address.slice(-4)} connected successfully`,;
-            })}
-        catch (error) {;
-            toast({;
-                "title": "Connection failed",;
-                "description": "error.message || "Could not connect to wallet"",;
-                "variant": "destructive";
-=======
             // Sign message to verify ownership
             const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
             await ethereum.request({method: 'personal_sign',
@@ -61,7 +36,6 @@ export function OnChainExport("props": "any) {;
                 title: "Connection failed",
                 description: error.message || "Could not connect to wallet",
                 variant: "destructive"
->>>>>>> main
             })}
     };
     const handleExportTokens = async () => {;
@@ -126,5 +100,4 @@ export function OnChainExport("props": "any) {;
       </CardContent>;
     </Card>)}
 ;
-
 export default OnChainExport;

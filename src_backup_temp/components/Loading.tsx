@@ -36,6 +36,7 @@ export default function Loading("props": "any) {';';';
     return (;
     <div className="min-h-screen bg-white">;
 =======
+>>>>>>> origin/main
     </div>
     );
 }
@@ -46,7 +47,6 @@ export default function Loading("props": "any) {';';';
   if (fullScreen) {
     return (
         <div className="min-h-screen bg-white">
->>>>>>> main
         {content}
       </div>;
     );
@@ -74,6 +74,7 @@ export function SkeletonText("props": "any) {;
       {Array.from({ "length": line s';
   "}).map((_, i) => (';';
 =======
+>>>>>>> origin/main
   return (
         <div className="min-h-screen bg-white">
       {content}
@@ -95,7 +96,6 @@ export function SkeletonText(props: any) {
         <div className="min-h-screen bg-white">
       {Array.from({ length: line s';
   }).map((_, i) => (';';
->>>>>>> main
         <div key={i}';';';
           className={`h-3 bg-gray-200 rounded ${',';';
     ';';';
@@ -108,9 +108,9 @@ export function SkeletonText(props: any) {
     </div>;
   );
 =======
+>>>>>>> origin/main
     </div>
     );
->>>>>>> main
 }';
     </div>';';
   );';';';

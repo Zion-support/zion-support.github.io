@@ -11,6 +11,7 @@ export default function FuturisticAnimatedBackground("props": "any) {return (;
           Professional FuturisticAnimatedBackground services to help your business grow.;
         </p>;
 =======
+>>>>>>> origin/main
 export default function FuturisticAnimatedBackground(props: any) {return (
         <div className="min-h-screen bg-white">
       <SEO title="FuturisticAnimatedBackground - Zion Tech Group" description="Professional FuturisticAnimatedBackground services by Zion Tech Group"  />
@@ -19,7 +20,6 @@ export default function FuturisticAnimatedBackground(props: any) {return (
         <p className="text-gray-300 text-lg">
           Professional FuturisticAnimatedBackground services to help your business grow.
         </p>
->>>>>>> main
       </div>';
     </div>';';
   );';';';

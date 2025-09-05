@@ -1,10 +1,7 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';';
 export default ComprehensiveNewServicesShowcase2025;';';
-=======
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import { ;
   NEW_MICRO_SAAS_SERVICES_2025,;
   NEW_IT_SERVICES_2025,;
@@ -96,7 +93,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
             designed to transform your business and drive unprecedented growth.;
           </p>;
         </div>;
-
         {/* Contact Info Banner */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 mb-12 text-white">;
           <div className="flex flex-col "md": "flex-row items-center justify-between">;
@@ -120,7 +116,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
             </div>;
           </div>;
         </div>;
-
         {/* Tabs */}
         <div className="flex flex-wrap justify-center mb-8">;
           {tabs.map((tab) => {;
@@ -144,7 +139,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
             );
           })}
         </div>;
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 gap-8">;
           {getCurrentServices().map((service) => (;
@@ -167,7 +161,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
                   </div>;
                   {getInnovationBadge(service.innovationLevel)}
                 </div>;
-
                 {/* Pricing */}
                 <div className="mb-4">;
                   <div className="flex items-center justify-between">;
@@ -182,7 +175,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
                     <p className="text-sm text-gray-600 mt-1">{service.userLimit}</p>;
                   )}
                 </div>;
-
                 {/* Key Features */}
                 <div className="mb-4">;
                   <h4 className="font-semibold text-gray-900 mb-2">Key "Features": "</h4>;
@@ -200,7 +192,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
                     )}
                   </ul>;
                 </div>;
-
                 {/* Benefits */}
                 <div className="mb-4">;
                   <h4 className="font-semibold text-gray-900 mb-2">"Benefits": "</h4>;
@@ -215,7 +206,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
                     ))}
                   </div>;
                 </div>;
-
                 {/* ROI and Setup Time */}
                 <div className="grid grid-cols-2 gap-4 mb-4">;
                   <div className="text-center">;
@@ -227,7 +217,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
                     <p className="font-semibold text-blue-600">{service.setupTime}</p>;
                   </div>;
                 </div>;
-
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">;
                   {service.tags.slice(0, 3).map((tag, index) => (;
@@ -239,7 +228,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
                     </span>;
                   ))}
                 </div>;
-
                 {/* CTA Button */}
                 <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg "hover": "bg-blue-700 transition-colors flex items-center justify-center space-x-2">;
                   <span>Learn More</span>;
@@ -249,7 +237,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
             </div>;
           ))"}
         </div>;
-
         {/* Service Detail Modal */}
         {selectedService && (;
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">;
@@ -277,7 +264,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
                     </svg>;
                   </button>;
                 </div>;
-
                 <div className="grid grid-cols-1 "md": "grid-cols-2 gap-8">;
                   {/* Features */"}
                   <div>;
@@ -291,7 +277,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
                       ))}
                     </ul>;
                   </div>;
-
                   {/* Benefits */}
                   <div>;
                     <h3 className="text-xl font-semibold mb-4">Benefits</h3>;
@@ -305,7 +290,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
                     </ul>;
                   </div>;
                 </div>;
-
                 {/* Contact Information */}
                 <div className="mt-8 p-6 bg-gray-50 rounded-lg">;
                   <h3 className="text-xl font-semibold mb-4">Get Started Today</h3>;
@@ -343,9 +327,11 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
 }
 ;
 export default ComprehensiveNewServicesShowcase2025;
-=======
 export default ComprehensiveNewServicesShowcase2025;
->>>>>>> main
+=======
+import React, { useState } from 'react';
+export default ComprehensiveNewServicesShowcase2025;
+>>>>>>> origin/main
 import { comprehensiveNewServices2025 } from '../data/comprehensiveNewServices2025';
 export default function Page(props: any) {
 ;
@@ -365,8 +351,6 @@ export default function Page(props: any) {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Discover our cutting-edge micro SAAS services, IT solutions, and AI-powered platforms.Each service is designed to transform your business with innovative technology and proven ROI.</p>
           </motion.div>
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import { 
   NEW_MICRO_SAAS_SERVICES_2025,
@@ -393,21 +377,17 @@ import {
   MapPin,
   Globe
 } from 'lucide-react';
-
 interface ServiceShowcaseProps {
   className?: string;
 }
-
 export function ComprehensiveNewServicesShowcase2025({ className = '' }: ServiceShowcaseProps) {
   const [activeTab, setActiveTab] = useState<'micro-saas' | 'it-services' | 'ai-services'>('micro-saas');
   const [selectedService, setSelectedService] = useState<any>(null);
-
   const tabs = [
     { id: 'micro-saas', name: 'Micro SAAS', icon: Zap, count: NEW_MICRO_SAAS_SERVICES_2025.length },
     { id: 'it-services', name: 'IT Services', icon: Server, count: NEW_IT_SERVICES_2025.length },
     { id: 'ai-services', name: 'AI Services', icon: Brain, count: NEW_INNOVATIVE_SERVICES_2025.length }
   ];
-
   const getCurrentServices = () => {
     switch (activeTab) {
       case 'micro-saas':
@@ -420,7 +400,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
         return [];
     }
   };
-
   const formatPrice = (price: number, model: string) => {
     if (model === 'monthly') {
       return `$${price.toLocaleString()}/month`;
@@ -431,21 +410,18 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
     }
     return `$${price.toLocaleString()}`;
   };
-
   const getInnovationBadge = (level: string) => {
     const colors = {
       'Revolutionary': 'bg-purple-100 text-purple-800 border-purple-200',
       'Advanced': 'bg-blue-100 text-blue-800 border-blue-200',
       'Professional': 'bg-green-100 text-green-800 border-green-200'
     };
-    
     return (
       <span className={`px-2 py-1 text-xs font-medium rounded-full border ${colors[level as keyof typeof colors] || colors.Professional}`}>
         {level}
       </span>
     );
   };
-
   return (
     <div className={`bg-gray-50 py-16 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -458,11 +434,11 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
             Discover our comprehensive suite of innovative Micro SAAS, IT Infrastructure, and AI services 
             designed to transform your business and drive unprecedented growth.
           </p>
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+<<<<<<< HEAD
 =======
->>>>>>> main
+=======
+>>>>>>> origin/main
         </div>
-
         {/* Search and Filter Section */}"
         <div className="mb-12">"
           <div className="flex flex-col lg: fle x-row gap-4 items-center justify-between">
@@ -477,10 +453,9 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
               />
             </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> main
 
+>>>>>>> origin/main
             {/* Category Filter */}"
             <div className="flex gap-2 overflow-x-auto pb-2">
               {categories.map((category) => (
@@ -495,8 +470,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                   <category.icon className="w-4 h-4" />
                   <span>{category.name}</span>
                 </button>) ) }
-<<<<<<< HEAD
-=======
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 mt-4 md:mt-0">
               <div className="flex items-center space-x-2">
                 <Phone className="w-5 h-5" />
@@ -510,11 +483,11 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                 <MapPin className="w-5 h-5" />
                 <span className="font-semibold">Middletown, DE</span>
               </div>
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+<<<<<<< HEAD
 =======
->>>>>>> main
+=======
+>>>>>>> origin/main
             </div>
-
             {/* Sort */}
             <select
               value={sortBy}
@@ -527,7 +500,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
             </select>
           </div>
         </div>
-
         {/* Services Grid */}"
         <div className="grid grid-cols-1 md: anygri d-cols-2 lg: gri d-cols-3 gap-8">
           {filteredServices.map((service, index)  => (
@@ -551,10 +523,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                     <p className="text-sm text-gray-400">{service.tagline}</p>
                   </div>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
                 {service.featured && ("
                   <div className="flex items-center space-x-1 text-yellow-400">"
                     <Star className="w-4 h-4 fill-current"   />"                    <span className="text-xs">Featured</span>
@@ -563,15 +531,13 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
               </div>
 <<<<<<< HEAD
 =======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
->>>>>>> main
 
+>>>>>>> origin/main
               {/* Description */}"
               <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                 {service.description}
               </p>
-
               {/* Pricing */}"
               <div className="mb-4 p-3 bg-gray-700 rounded-lg">"
                 <div className="flex items-center justify-between">
@@ -588,7 +554,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                   Setup: {service.pricing.setup} • Enterprise: {service.pricing.enterprise}
                 </div>
               </div>
-
               {/* Key Features */}"
               <div className="mb-4">"
                 <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>"
@@ -599,7 +564,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                     </div>
                   ))}
 <<<<<<< HEAD
-<<<<<<< HEAD
                   {service.features.length > 3 && ("
                     <div className="text-xs text-gray-500">
                       +{service.features.length-3} more features
@@ -607,16 +571,14 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
   );
 }
 =======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
+>>>>>>> origin/main
                   {service.features.length > 3 && ("
                     <div className="text-xs text-gray-500">
                       +{service.features.length-3} more features
                     </div>) }
->>>>>>> main
                 </div>
               </div>
-
               {/* Benefits */}"
               <div className="mb-4">"
                 <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Benefits:</h4>"
@@ -627,7 +589,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                     </div>) ) }
                 </div>
               </div>
-
               {/* Technical Specs */}"
               <div className="mb-4 p-3 bg-gray-700 rounded-lg">"
                 <div className="grid grid-cols-2 gap-2 text-xs">
@@ -649,7 +610,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                   </div>
                 </div>
               </div>
-
               {/* Target Audience */}"
               <div className="mb-4">"
                 <h4 className="text-sm font-semibold text-gray-400 mb-2">Perfect For:</h4>"
@@ -657,7 +617,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                   {service.targetAudience}
                 </div>
               </div>
-
               {/* CTA Buttons */}"
               <div className="space-y-2">
                 <a
@@ -677,7 +636,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
               </div>
             </motion.div>) ) }
         </div>
-
         {/* Contact Information Section */}
         <motion.div
           initial={{ opacity: 0, y: 2 0 }}
@@ -720,10 +678,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
               <p className="text-cyan-100">364 E Main St STE 1008</p>"              <p className="text-cyan-200 text-sm">Middletown DE 19709</p>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 "
           <div className="text-center mt-8">
             <a"
@@ -736,7 +690,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
             </a>
           </div>
         </motion.div>
-
         {/* Stats Section */}"
         <div className="mt-20">"
           <div className="grid grid-cols-2 md: gri d-cols-4 gap-8">
@@ -753,7 +706,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
               <div className="text-3xl font-bold text-white mb-2">15+</div>"
               <div className="text-gray-400">New Services</div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -767,7 +719,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
               <div className="text-3xl font-bold text-white mb-2">10+</div>"
               <div className="text-gray-400">AI-Powered</div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -781,7 +732,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
               <div className="text-3xl font-bold text-white mb-2">99.9%</div>"
               <div className="text-gray-400">Uptime</div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -800,26 +750,29 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
       </div>
     </div>) }
 export default ComprehensiveNewServicesShowcase2025;'"`
-
 </motion>
 <<<<<<< HEAD
 </motion>';
 </motion>;';;';
 =======
+>>>>>>> origin/main
         )}
       </div>
     </div>
   );
 }
-
 export default ComprehensiveNewServicesShowcase2025;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+<<<<<<< HEAD
+</motion>
 =======
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
->>>>>>> main
->>>>>>> main
+>>>>>>> origin/main

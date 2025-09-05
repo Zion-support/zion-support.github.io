@@ -1,10 +1,7 @@
-<<<<<<< HEAD:src/utils/productionLogger.js
-=======
 <<<<<<< HEAD
 /**;
  * Production logging utility for error tracking and monitoring;
  */;
-
 // Simple production logger utility;
   // In production, you might want to send this to a logging service;
   // For now, we'll just log to console in development';
@@ -29,10 +26,9 @@ export function logInfoToProduction(message, context = {}) {;
   }
   // "TODO": "Implement actual production logging service integration;
 "}
-=======
-<<<<<<< HEAD
 if(process.env.NODE_ENV === &apos;development&apos;) { export function logWarningToProduction(message,context = {}) { if (process.env.NODE_ENV === &apos;development&apos;) { } } export function logInfoToProduction(message,context = {}) { if (process.env.NODE_ENV === &apos;development&apos;) { } }
 =======
+>>>>>>> origin/main
 /**
  * Production logging utility for error tracking and monitoring
  */
@@ -60,7 +56,8 @@ export function logInfoToProduction(message, context = {}) {
   }
   // "TODO": Implement actual production logging service integration
 }
+<<<<<<< HEAD
 if(process.env.NODE_ENV === 'development') { export function logWarningToProduction(message,context = {}) { if (process.env.NODE_ENV === 'development') { } } export function logInfoToProduction(message,context = {}) { if (process.env.NODE_ENV === 'development') { } }
->>>>>>> main
->>>>>>> main
->>>>>>> main:src_backup_temp/utils/productionLogger.js
+=======
+if(process.env.NODE_ENV === 'development') { export function logWarningToProduction(message,context = {}) { if (process.env.NODE_ENV === 'development') { } } export function logInfoToProduction(message,context = {}) { if (process.env.NODE_ENV === 'development') { } }
+>>>>>>> origin/main

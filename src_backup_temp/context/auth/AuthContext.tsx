@@ -1,19 +1,14 @@
-<<<<<<< HEAD:src/context/auth/AuthContext.tsx
-=======
-<<<<<<< HEAD
-=======
 import React, { createContext, useContext } from 'react';
 <<<<<<< HEAD
 ;
 interface User {;
-
   "id": "string;
   "email": string;
 =======
+>>>>>>> origin/main
 interface User {
   "id": string;
   email: string;
->>>>>>> main
   displayName?: string;
   avatar?: string;
   role?: string;
@@ -23,12 +18,10 @@ interface User {
   updatedAt?: string"}
 ;
 interface AuthTokens {;
-
   "accessToken": "string | null;
   "refreshToken": string | null"}
 ;
 interface AuthContextType {;
-
   "user": "Use r | null;
   "isLoading": boolean;
   "onboardingStep": number;
@@ -48,6 +41,7 @@ const AuthContext = createContext<AuthContextType | null>(null);
 ;
 export const useAuth = ("props": "any) => {;
 =======
+>>>>>>> origin/main
   updatedAt?: string}
 interface AuthTokens {
   "accessToken": string | null;
@@ -69,7 +63,6 @@ login: (email: string, "password": string)  => Promise<any>;
   loginWithWeb3: ()  => Promise<any>}
 const AuthContext = createContext<AuthContextType | null>(null);
 export const useAuth = (props) => {;
->>>>>>> main
   const context = useContext(AuthContext);
   if (context = == null) {;';';
     throw new Error('useAuth must be used within an AuthProvider');
@@ -93,6 +86,7 @@ export type { User, AuthTokens, AuthContextType };}}}}
 </any>;
 </any>
 =======
+>>>>>>> origin/main
   return context;
 };
 export { AuthContext };
@@ -104,7 +98,8 @@ export type { User, AuthTokens, AuthContextType };}}}}
 </any>
 </any>
 </any>;';';
+<<<<<<< HEAD
 import React,{ createContext,useContext } from 'react'; interface User { id: string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string} interface AuthTokens { accessToken: string | null; refreshToken: string | null} interface AuthContextType { user: Use r | null; isLoading: boolean; onboardingStep: number; tokens: AuthToken s; login: (email: string,password: string) => Promise<any>; register: (name: string,email: string,password: string) => Promise<any>; signup: (email: string,password: string,userData) => Promise<any>; logout: () => Promise<any>; resetPassword: (email: string) => Promise<any>; updateProfile: (updates: Partia l<User>) => Promise<any>; loginWithGoogle: () => Promise<any>; loginWithFacebook: () => Promise<any>; loginWithTwitter: () => Promise<any>; loginWithWeb3: () => Promise<any>} const AuthContext = createContext<AuthContextType | null>(null); export const useAuth = (props) => {; const context = useContext(AuthContext); if (context = == null) {;';'; throw new Error('useAuth must be used within an AuthProvider'); return context}; export { AuthContext }; export type { User,AuthTokens,AuthContextType }}}}} </AuthContextType> </any> </any> </User> </any> </any> </any>;';';
->>>>>>> main
->>>>>>> main
->>>>>>> main:src_backup_temp/context/auth/AuthContext.tsx
+=======
+import React,{ createContext,useContext } from 'react'; interface User { id: string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string} interface AuthTokens { accessToken: string | null; refreshToken: string | null} interface AuthContextType { user: Use r | null; isLoading: boolean; onboardingStep: number; tokens: AuthToken s; login: (email: string,password: string) => Promise<any>; register: (name: string,email: string,password: string) => Promise<any>; signup: (email: string,password: string,userData) => Promise<any>; logout: () => Promise<any>; resetPassword: (email: string) => Promise<any>; updateProfile: (updates: Partia l<User>) => Promise<any>; loginWithGoogle: () => Promise<any>; loginWithFacebook: () => Promise<any>; loginWithTwitter: () => Promise<any>; loginWithWeb3: () => Promise<any>} const AuthContext = createContext<AuthContextType | null>(null); export const useAuth = (props) => {; const context = useContext(AuthContext); if (context = == null) {;';'; throw new Error('useAuth must be used within an AuthProvider'); return context}; export { AuthContext }; export type { User,AuthTokens,AuthContextType }}}}} </AuthContextType> </any> </any> </User> </any> </any> </any>;';';
+>>>>>>> origin/main

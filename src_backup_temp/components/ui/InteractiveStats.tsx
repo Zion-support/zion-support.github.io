@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src/components/ui/InteractiveStats.tsx
-=======
 <<<<<<< HEAD
 interface Stat {;
   "label": "string;
@@ -7,7 +5,6 @@ interface Stat {;
   "description": string;
 ;
 interface InteractiveStatsProps {;
-
   "stats": Stat[];
   className?: string;
 ;
@@ -19,10 +16,9 @@ const "InteractiveStats": React.FC<InteractiveStatsProps> = ({ stats", className
         <div;
           key={index}
           className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl "hover": "bg-white/10 transition-all duration-300";
-=======
-<<<<<<< HEAD
 interface Stat { label: string; value: string; description: string; interface InteractiveStatsProps { stats: Stat[]; className?: string; const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats,className = &quot; }) => { return ( <div className=&quot;min-h-screen bg-white&quot;> {stats.map((stat,index) => ( <div key={index}; className=&quot;text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300&quot; >; <div className=&quot;text-3xl font-bold text-blue-400 mb-2&quot;>{stat.value}</div>; <div className=&quot;text-lg font-semibold text-white mb-2&quot;>{stat.label}</div>; <div className=&quot;text-gray-300 text-sm&quot;>{stat.description}</div>; </div>; ))}; </div>; )}; export default InteractiveStats}}; </InteractiveStatsProps>
 =======
+>>>>>>> origin/main
 interface Stat {
   "label": string;
   value: string;
@@ -38,7 +34,6 @@ const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = 
         <div
           key={index};
           className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl "hover": bg-white/10 transition-all duration-300"
->>>>>>> main
         >;
           <div className="text-3xl font-bold text-blue-400 mb-2">{stat.value"}</div>;
           <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>;
@@ -50,10 +45,11 @@ const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = 
 };
 <<<<<<< HEAD
 ;
-=======
->>>>>>> main
 export default InteractiveStats;}};
 </InteractiveStatsProps>
 interface Stat { label: string; value: string; description: string; interface InteractiveStatsProps { stats: Stat[]; className?: string; const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats,className = " }) => { return ( <div className="min-h-screen bg-white"> {stats.map((stat,index) => ( <div key={index}; className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300" >; <div className="text-3xl font-bold text-blue-400 mb-2">{stat.value}</div>; <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>; <div className="text-gray-300 text-sm">{stat.description}</div>; </div>; ))}; </div>; )}; export default InteractiveStats}}; </InteractiveStatsProps>
->>>>>>> main
->>>>>>> main:src_backup_temp/components/ui/InteractiveStats.tsx
+=======
+export default InteractiveStats;}};
+</InteractiveStatsProps>
+interface Stat { label: string; value: string; description: string; interface InteractiveStatsProps { stats: Stat[]; className?: string; const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats,className = " }) => { return ( <div className="min-h-screen bg-white"> {stats.map((stat,index) => ( <div key={index}; className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300" >; <div className="text-3xl font-bold text-blue-400 mb-2">{stat.value}</div>; <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>; <div className="text-gray-300 text-sm">{stat.description}</div>; </div>; ))}; </div>; )}; export default InteractiveStats}}; </InteractiveStatsProps>
+>>>>>>> origin/main

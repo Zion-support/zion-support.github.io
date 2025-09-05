@@ -4,7 +4,6 @@ export default function Page("props": "any) {;
 []"}
 ;
 const "heroSlides": "HeroSlid e[] = [  {;
-
     "id": 'ai-solutions'",;
     "title": 'AI-Powered Business Solutions',;
     "subtitle":';
@@ -25,7 +24,6 @@ const "heroSlides": "HeroSlid e[] = [  {;
       { "label": 'Market Growth', "value": '280%', "icon": "Rocke t "},;
     ]},;
   {;
-
     "id": 'it-services',;
     "title": 'Comprehensive IT Services',;
     "subtitle": 'End-to-end technology solutions for modern businesses',;
@@ -45,7 +43,6 @@ const "heroSlides": "HeroSlid e[] = [  {;
       { "label": 'Response Time', "value": '<5min', "icon": "Rocke t "},;
     ]},;
   {;
-
     "id": 'green-it',;
     "title": 'Green IT Solutions',;
     "subtitle": 'Sustainable technology for a better future',;
@@ -90,7 +87,6 @@ const "heroSlides": "HeroSlid e[] = [  {;
   // Auto-play functionality with pause on hover;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -104,7 +100,6 @@ const "heroSlides": "HeroSlid e[] = [  {;
   // Handle keyboard navigation;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -122,7 +117,6 @@ const "heroSlides": "HeroSlid e[] = [  {;
   // Handle image loading;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -133,18 +127,19 @@ const "heroSlides": "HeroSlid e[] = [  {;
 <<<<<<< HEAD
           img.src = slide.image}) }) ;
 ;
+          img.src = slide.image}) }
+    );
 =======
           img.src = slide.image}) }
     );
 
->>>>>>> main
+>>>>>>> origin/main
       await Promise.all(imagePromises) ;
       setIsLoading(false) };
 ;
     preloadImages () }, [memoizedSlides]) ;
 ;
   if(isLoading) {;
-
     return (";
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">";
         <div className="text-center">";
@@ -161,7 +156,6 @@ const "heroSlides": "HeroSlid e[] = [  {;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]"  />";
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1),transparent_50%)]"  />;
       </div>;
-
       {/* Hero Content */}";
       <div className="relative z-10 container mx-auto px-4 "sm": "p x-6 "lg": p x-8 pt-20 pb-16">";
         <div className="grid "lg": gri d-cols-2 gap-12 items-center min-h-[80vh]">;
@@ -181,7 +175,6 @@ const "heroSlides": "HeroSlid e[] = [  {;
               >";
                 <Star className="w-4 h-4 mr-2 text-yellow-400"   />                Leading Technology Solutions;
               </motion.div>;
-
               <motion.h1;
                 initial={{ "opacity": "0", "y": "2 0 "}}
                 animate={{ "opacity": "1", "y": "0 "}}
@@ -192,7 +185,6 @@ const "heroSlides": "HeroSlid e[] = [  {;
                   {currentSlideData.title"}
                 </span>;
               </motion.h1>;
-
               <motion.p;
                 initial={{ "opacity": "0", "y": "2 0 "}}
                 animate={{ "opacity": "1", "y": "0 "}}
@@ -201,7 +193,6 @@ const "heroSlides": "HeroSlid e[] = [  {;
               >;
                 {currentSlideData.subtitle}
               </motion.p>;
-
               <motion.p;
                 initial={{ "opacity": "0", "y": "2 0 "}}
                 animate={{ "opacity": "1", "y": "0 "}}
@@ -211,7 +202,6 @@ const "heroSlides": "HeroSlid e[] = [  {;
                 {currentSlideData.description}
               </motion.p>;
             </div>;
-
             {/* Features */}
             <motion.div;
               initial={{ "opacity": "0", "y": "2 0 "}}
@@ -225,7 +215,6 @@ const "heroSlides": "HeroSlid e[] = [  {;
                 </div>;
               ))}
             </motion.div>;
-
             {/* CTA Button */}
             <motion.div;
               initial={{ "opacity": "0", "y": "2 0 "}}
@@ -239,12 +228,10 @@ const "heroSlides": "HeroSlid e[] = [  {;
               >;
                 {currentSlideData.cta"}";
                 <ArrowRight className="w-5 h-5 ml-2"   />              </Link>;
-
               <button;
                 onClick={() => setIsAutoPlaying(!isAutoPlaying)}";
                 className="inline-flex items-center justify-center px-6 py-4 border border-slate-600 "hover": "borde r-cyan-400 text-slate-300 "hover": tex t-cyan-400 font-medium rounded-lg transition-all duration-300";
                 aria-label={;
-
                   isAutoPlaying ? 'Pause slideshow' : 'Play slideshow';
                 "}
               >;
@@ -254,7 +241,6 @@ const "heroSlides": "HeroSlid e[] = [  {;
                   <Play className="w-5 h-5"   />;
                 )"}              </button>;
             </motion.div>;
-
             {/* Stats */}
             <motion.div;
               initial={{ "opacity": "0", "y": "2 0 "}}
@@ -272,7 +258,6 @@ const "heroSlides": "HeroSlid e[] = [  {;
               ))}
             </motion.div>;
           </motion.div>;
-
           {/* Visual Content */}
           <motion.div;
             initial={{ "opacity": "0", "x": "5 0 "}}
@@ -299,6 +284,7 @@ const "heroSlides": "HeroSlid e[] = [  {;
         </div>;
       </div>;
 =======
+>>>>>>> origin/main
                 "
                 <p className="text-slate-300">{currentSlideData.subtitle}</p>
               </div>
@@ -306,8 +292,10 @@ const "heroSlides": "HeroSlid e[] = [  {;
           </motion.div>
         </div>
       </div>
->>>>>>> main
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/main
       {/* Navigation Controls */}";
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">";
         <div className="flex space-x-2">;
@@ -324,7 +312,6 @@ const "heroSlides": "HeroSlid e[] = [  {;
           ))}
         </div>;
       </div>;
-
       {/* Arrow Navigation */}
       <button;
         onClick={prevSlide}";
@@ -332,7 +319,6 @@ const "heroSlides": "HeroSlid e[] = [  {;
         ;
       >";
         <ChevronLeft className="w-6 h-6"   />      </button>;
-
       <button;
         onClick={nextSlide"}";
         className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 "hover": "b g-slate-700/70 text-slate-300 "hover": tex t-white transition-all duration-300 backdrop-blur-sm";
@@ -343,7 +329,6 @@ const "heroSlides": "HeroSlid e[] = [  {;
     </section>) "}
 export { HeroSection };
 '"`;
-
 </button>;
 </motion>;
 </motion>;

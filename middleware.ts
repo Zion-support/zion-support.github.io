@@ -6,12 +6,30 @@ const publicRoutes = [
   "/about",
   "/contact",
   "/services",
+<<<<<<< HEAD
   "/ai-services",
-  "/blog",
-  "/docs",
+  "/it-services",
+  "/micro-saas",
+  "/api-docs",
+  "/api",
   "/careers",
+  "/case-studies"
+=======
+  "/micro-saas",
+  "/it-services",
+  "/ai-services",
+  "/pricing",
+  "/team",
+  "/careers",
+  "/blog",
+  "/news",
+  "/support",
+  "/faq",
   "/privacy",
-  "/terms"
+  "/terms",
+  "/login",
+  "/register"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
 ];
 
 export function middleware(request: NextRequest) {
@@ -35,6 +53,10 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
+<<<<<<< HEAD
+    '/((?!_next/static|_next/image|favicon.ico).*)',
+=======
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
   ],
 };

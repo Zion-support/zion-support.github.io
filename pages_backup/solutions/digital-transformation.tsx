@@ -2,11 +2,8 @@
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { RefreshCw, Target, Rocket, TrendingUp } from 'lucide-react';
-
-
-=======
 import React from 'react';
-<<<<<<< HEAD:pages/solutions/digital-transformation.tsx
+:pages/solutions/digital-transformation.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -32,7 +29,6 @@ import {
   BookOpen
 } from 'lucide-react';
 import MainLayout from '../../components/layout/MainLayout';
-
 const transformationSteps = [
   {
     step: '01',
@@ -67,7 +63,6 @@ const transformationSteps = [
     features: ['Team training', 'Documentation', 'Change management', '24/7 support']
   }
 ];
-
 const benefits = [
   {
     icon: TrendingUp,
@@ -94,7 +89,6 @@ const benefits = [
     metric: '99.9%'
   }
 ];
-
 const industries = [
   { name: 'Healthcare', icon: Building, description: 'Patient care optimization and medical data management' },
   { name: 'Finance', icon: DollarSign, description: 'Fraud detection and automated financial processes' },
@@ -103,13 +97,13 @@ const industries = [
   { name: 'Education', icon: BookOpen, description: 'Digital learning platforms and student management' },
   { name: 'Government', icon: Building, description: 'Citizen services and administrative efficiency' }
 ];
-
 export default function DigitalTransformation() {
 =======
+import React from 'react';
+>>>>>>> origin/main
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Rocket, RefreshCw, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
->>>>>>> main
 export default function DigitalTransformationPage() {
   const transformationServices = [;
     {}
@@ -138,7 +132,6 @@ export default function DigitalTransformationPage() {
     }
 <<<<<<< HEAD
 ;  ];
-
   return (;
     <Layout );
       title="Digital Transformation - Zion Tech Group"";
@@ -146,15 +139,16 @@ export default function DigitalTransformationPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
 =======
+>>>>>>> origin/main
   ];
->>>>>>> main:pages_backup/solutions/digital-transformation.tsx
   return (
     <MainLayout
       title="Digital Transformation Solutions - Zion Tech Group"
       description="Transform your business with our comprehensive digital transformation services. AI, cloud, automation, and more."
       keywords="digital transformation, business transformation, AI implementation, cloud migration, process optimization"
     >
-<<<<<<< HEAD:pages/solutions/digital-transformation.tsx
+<<<<<<< HEAD
+:pages/solutions/digital-transformation.tsx
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
@@ -165,13 +159,12 @@ export default function DigitalTransformationPage() {
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
 =======
+>>>>>>> origin/main
       <div className="min-h-screen bg-gray-50">
->>>>>>> main
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 text-white py-20">"
           <div className="container mx-auto px-4">";
             <motion.div;
->>>>>>> main:pages_backup/solutions/digital-transformation.tsx
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -188,8 +181,8 @@ export default function DigitalTransformationPage() {
             </motion.div>;
           </div>;
         </section>;
-
 =======
+>>>>>>> origin/main
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -212,8 +205,8 @@ export default function DigitalTransformationPage() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD:pages/solutions/digital-transformation.tsx
-
+<<<<<<< HEAD
+:pages/solutions/digital-transformation.tsx
         {/* Transformation Process */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -231,7 +224,6 @@ export default function DigitalTransformationPage() {
                 We follow a proven methodology to ensure successful digital transformation that delivers measurable results.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {transformationSteps.map((step, index) => {
                 const IconComponent = step.icon;
@@ -240,7 +232,7 @@ export default function DigitalTransformationPage() {
                     key={index}
                     className="bg-gray-50 rounded-lg p-6 text-center"
 =======
->>>>>>> main
+>>>>>>> origin/main
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -251,12 +243,12 @@ export default function DigitalTransformationPage() {
                   <motion.div);
                     key={index}
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
->>>>>>> main:pages_backup/solutions/digital-transformation.tsx
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
-<<<<<<< HEAD:pages/solutions/digital-transformation.tsx
+<<<<<<< HEAD
+:pages/solutions/digital-transformation.tsx
                   >
                     <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
                       {step.step}
@@ -274,6 +266,7 @@ export default function DigitalTransformationPage() {
                         <li key={idx} className="flex items-center">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
 =======
+>>>>>>> origin/main
                   >,
                     <div className="text-purple-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
@@ -288,7 +281,6 @@ export default function DigitalTransformationPage() {
                       {service.features.map((feature, featureIndex) => (,
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
->>>>>>> main:pages_backup/solutions/digital-transformation.tsx
                           {feature}
                         </li>,
                       ))}
@@ -300,13 +292,10 @@ export default function DigitalTransformationPage() {
             </div>,
           </div>;
         </section>;
-
-=======
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages/solutions/digital-transformation.tsx
-
+:pages/solutions/digital-transformation.tsx
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -324,7 +313,6 @@ export default function DigitalTransformationPage() {
                 See the measurable impact of digital transformation on your business performance.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => {
                 const IconComponent = benefit.icon;
@@ -349,7 +337,6 @@ export default function DigitalTransformationPage() {
             </div>
           </div>
         </section>
-
         {/* Industries Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -367,7 +354,6 @@ export default function DigitalTransformationPage() {
                 We have experience transforming businesses across various industries with tailored solutions.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, index) => {
                 const IconComponent = industry.icon;
@@ -391,7 +377,6 @@ export default function DigitalTransformationPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -421,7 +406,10 @@ export default function DigitalTransformationPage() {
       </div>
     </MainLayout>
 =======
->>>>>>> main
+            </div>
+          </div>
+        </section>
+>>>>>>> origin/main
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
@@ -443,6 +431,5 @@ export default function DigitalTransformationPage() {
         </section>;
       </div>;
     </Layout>;
->>>>>>> main:pages_backup/solutions/digital-transformation.tsx
   );
 }
