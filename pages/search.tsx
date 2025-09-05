@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, Clock, Star, FileText, Globe, Code, Database, Cloud } from 'lucide-react';
@@ -239,7 +238,6 @@ export default function SearchPage() {
         </section>
       </div>
     </MainLayout>
-=======
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
@@ -383,6 +381,34 @@ export default function SearchPage() {
     e.preventDefault();
     if (query.trim()) {
       router.push(`/search?q=${encodeURIComponent(query)}`);
+    performSearch(query);
+    router.push(`/search?q=${encodeURIComponent(query)}`, undefined, { shallow: true });
+  };
+
+  const handleRecentSearch = (searchTerm: string) => {
+    setQuery(searchTerm);
+    performSearch(searchTerm);
+    router.push(`/search?q=${encodeURIComponent(searchTerm)}`, undefined, { shallow: true });
+  };
+
+  const clearRecentSearches = () => {
+    setRecentSearches([]);
+    localStorage.removeItem('recentSearches');
+  };
+
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'service':
+        return '🔧';
+      case 'solution':
+        return '💡';
+      case 'page':
+        return '📄';
+      case 'resource':
+        return '📚';
+      default:
+        return '🔍';
+>>>>>>> origin/cursor/check-and-fix-netlify-build-1edd
     }
   };
 
@@ -569,6 +595,6 @@ export default function SearchPage() {
         </div>
       </div>
     </Layout>
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
+ursor/website-audit-and-update-with-deployment-9cae
   );
 }
