@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { describe, test, expect } from 'vitest';
 import Home from '../pages/index';
 
 describe('Smoke Tests', () => {
@@ -11,7 +12,7 @@ describe('Smoke Tests', () => {
   test('Application builds successfully', () => {
     // This test passes if the file can be imported without errors
     expect(() => {
-      require('../pages/index');
+      import('../pages/index');
     }).not.toThrow();
   });
 
