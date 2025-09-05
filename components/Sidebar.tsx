@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import { 
   X, 
   ChevronDown, 
@@ -13,6 +14,18 @@ import {
   Mail,
   MapPin,
   Building2,
+=======
+import { useRouter } from 'next/router';
+import {
+  X,
+  ChevronDown,
+  Home,
+  Briefcase,
+  Users,
+  Phone,
+  Mail,
+  MapPin,
+>>>>>>> 26a23840d0afc28627aae94549d1ebed59f462f6
   User,
   LogOut,
   Search
@@ -79,7 +92,11 @@ interface SidebarProps {
 }
 
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
+<<<<<<< HEAD
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+=======
+  const router = useRouter();
+>>>>>>> 26a23840d0afc28627aae94549d1ebed59f462f6
 
   useEffect(() => {
     if (isOpen) {
@@ -87,35 +104,45 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     } else {
       document.body.style.overflow = 'unset';
     }
-
     return () => {
       document.body.style.overflow = 'unset';
     };
   }, [isOpen]);
 
+<<<<<<< HEAD
   const handleDropdownToggle = (item: string) => {
     setActiveDropdown(activeDropdown === item ? null : item);
   };
+=======
+  const menuItems = [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'Services', href: '/services', icon: Briefcase },
+    { name: 'About', href: '/about', icon: Users },
+    { name: 'Contact', href: '/contact', icon: Phone },
+  ];
+>>>>>>> 26a23840d0afc28627aae94549d1ebed59f462f6
 
   return (
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+<<<<<<< HEAD
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
+=======
+            className="fixed inset-0 bg-black bg-opacity-50 z-50"
+>>>>>>> 26a23840d0afc28627aae94549d1ebed59f462f6
             onClick={onClose}
           />
-
-          {/* Sidebar */}
           <motion.div
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
+<<<<<<< HEAD
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
           >
             <div className="p-6">
@@ -130,10 +157,21 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 <button
                   onClick={onClose}
                   className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
+=======
+            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
+          >
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-8">
+                <h2 className="text-xl font-bold text-gray-900">Menu</h2>
+                <button
+                  onClick={onClose}
+                  className="p-2 text-gray-500 hover:text-gray-700"
+>>>>>>> 26a23840d0afc28627aae94549d1ebed59f462f6
                 >
                   <X className="w-6 h-6" />
                 </button>
               </div>
+<<<<<<< HEAD
 
               {/* Navigation */}
               <nav className="space-y-4">
@@ -203,6 +241,42 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   </div>
                   <div className="flex items-start text-gray-600">
                     <MapPin className="w-4 h-4 mr-3 mt-1" />
+=======
+              
+              <nav className="space-y-2">
+                {menuItems.map((item) => {
+                  const IconComponent = item.icon;
+                  return (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
+                        router.pathname === item.href
+                          ? 'bg-blue-100 text-blue-700'
+                          : 'text-gray-700 hover:bg-gray-100'
+                      }`}
+                      onClick={onClose}
+                    >
+                      <IconComponent className="w-5 h-5" />
+                      <span>{item.name}</span>
+                    </Link>
+                  );
+                })}
+              </nav>
+              
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3 text-gray-600">
+                    <Phone className="w-4 h-4" />
+                    <span>+1 302 464 0950</span>
+                  </div>
+                  <div className="flex items-center space-x-3 text-gray-600">
+                    <Mail className="w-4 h-4" />
+                    <span>kleber@ziontechgroup.com</span>
+                  </div>
+                  <div className="flex items-center space-x-3 text-gray-600">
+                    <MapPin className="w-4 h-4" />
+>>>>>>> 26a23840d0afc28627aae94549d1ebed59f462f6
                     <span>364 E Main St STE 1008, Middletown DE 19709</span>
                   </div>
                 </div>
@@ -213,4 +287,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       )}
     </AnimatePresence>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 26a23840d0afc28627aae94549d1ebed59f462f6

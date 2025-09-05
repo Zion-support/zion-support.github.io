@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -71,85 +72,98 @@ export default function MicroSAAS() {
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
               Powerful, focused tools that solve specific business problems. 
               No bloat, just results.
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Star } from 'lucide-react';
+
+const microSaasServices = [
+  {
+    title: 'Workflow Automation',
+    description: 'Streamline your business processes with custom automation tools.',
+    features: ['Process Optimization', 'Custom Workflows', 'Integration APIs'],
+    pricing: '$500 - $2,000/month'
+  },
+  {
+    title: 'Data Processing Tools',
+    description: 'Efficient data management and processing solutions.',
+    features: ['Data Cleaning', 'ETL Processes', 'Real-time Analytics'],
+    pricing: '$800 - $3,000/month'
+  },
+  {
+    title: 'Custom Dashboards',
+    description: 'Tailored dashboard solutions for better business insights.',
+    features: ['Real-time Data', 'Custom Visualizations', 'Mobile Responsive'],
+    pricing: '$1,200 - $4,000/month'
+  }
+];
+
+export default function MicroSAAS() {
+  return (
+    <>
+      <Head>
+        <title>Micro SaaS Solutions - Zion Tech Group</title>
+        <meta name="description" content="Innovative micro SaaS solutions for modern businesses. Custom tools and platforms designed to streamline operations." />
+        <meta name="keywords" content="micro SaaS, business tools, automation, custom software, SaaS solutions" />
+      </Head>
+
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Micro SaaS Solutions</h1>
+            <p className="text-xl md:text-2xl mb-8 text-gray-200">
+              Innovative micro SaaS solutions designed to streamline your business operations.
+>>>>>>> 26a23840d0afc28627aae94549d1ebed59f462f6
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                Get Started Today
-              </Link>
-              <Link href="/pricing" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                View Pricing
-              </Link>
-            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Services Grid */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Micro SaaS Solutions
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Each solution is designed to solve a specific business problem with maximum efficiency and minimum complexity.
-              </p>
-            </div>
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Micro SaaS Solutions</h2>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {microSAASServices.map((service, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                  <div className="mb-4">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>
-                    <p className="text-gray-600 mb-4">{service.description}</p>
-                  </div>
-
-                  <div className="mb-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                      <span className="text-sm text-gray-500">vs {service.marketPrice}</span>
-                    </div>
-                    <p className="text-sm text-green-600 font-semibold">{service.savings}</p>
-                  </div>
-
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      {service.features.slice(0, 4).map((feature, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      {service.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <span className="w-2 h-2 bg-green-600 rounded-full mr-2"></span>
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
-                      {service.category}
-                    </span>
-                    <Link
-                      href="/contact"
-                      className="text-blue-600 hover:text-blue-800 font-semibold text-sm"
-                    >
-                      Learn More →
-                    </Link>
-                  </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {microSaasServices.map((service, index) => (
+              <motion.div
+                key={index}
+                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+              >
+                <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <Star className="w-6 h-6 text-blue-600" />
                 </div>
-              ))}
-            </div>
+                
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
+                <p className="text-gray-600 mb-4">{service.description}</p>
+                
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <div className="mb-6">
+                  <span className="text-2xl font-bold text-blue-600">{service.pricing}</span>
+                </div>
+                
+                <Link href="/contact" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
+                  Learn More
+                  <span className="ml-2">→</span>
+                </Link>
+              </motion.div>
+            ))}
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* CTA Section */}
@@ -186,5 +200,10 @@ export default function MicroSAAS() {
         </section>
       </div>
     </Layout>
+=======
+        </div>
+      </section>
+    </>
+>>>>>>> 26a23840d0afc28627aae94549d1ebed59f462f6
   );
 }
