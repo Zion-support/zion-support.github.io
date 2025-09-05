@@ -56,19 +56,39 @@ class ErrorPreventionAutomation {
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
   }
+<<<<<<< HEAD
+
+  log(message) {
+    const timestamp = new Date().toISOString(;
+  });
+    const logMessage = `[${timestamp}] ${message}\;n;`;
+    
+    console.log(logMessage.trim(););
+    fs.appendFileSync(this.logFile, logMessage)}
+
+=======
 ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+>>>>>>> main
 >>>>>>> main
   async runErrorPrevention() {
     try {
       this.log('Running error prevention checks...');
       const startTime = Date.now();
       const results = {
+<<<<<<< HEAD
+        timestamp: new Date().toISOString(),
+        checks: {},
+        fixes: {},
+        errors: {}
+     ; ;};
+=======
         "timestamp": new Date().toISOString(),
         "checks": {},
         "fixes": {},
         "errors": {}
 <<<<<<< HEAD
      };
+>>>>>>> main
       
 =======
 };ursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -456,11 +476,18 @@ automation.start().catch(error => {}),
     try {
       this.log('Checking linting...');
       const result = execSync('npm run lint', { 
+<<<<<<< HEAD
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 30000
+      ;};);
+=======
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 30000
 <<<<<<< HEAD
       };);
+>>>>>>> main
       
 =======
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -487,11 +514,18 @@ automation.start().catch(error => {}),
     try {
       this.log('Checking types...');
       const result = execSync('npm run type-check', { 
+<<<<<<< HEAD
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 30000
+      ;};);
+=======
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 30000
 <<<<<<< HEAD
       };);
+>>>>>>> main
       
 =======
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -516,11 +550,18 @@ automation.start().catch(error => {}),
     try {
       this.log('Checking build...');
       const result = execSync('npm run build', { 
+<<<<<<< HEAD
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 300000
+      ;};);
+=======
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 300000
 <<<<<<< HEAD
       };);
+>>>>>>> main
       
 =======
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -545,11 +586,18 @@ automation.start().catch(error => {}),
     try {
       this.log('Checking dependencies...');
       const result = execSync('npm outdated', { 
+<<<<<<< HEAD
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 30000
+      ;};);
+=======
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 30000
 <<<<<<< HEAD
       };);
+>>>>>>> main
       
 =======
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -563,7 +611,8 @@ automation.start().catch(error => {}),
       if ( {
         // npm outdated returns 1 when there are outdated packages) {
      {
-        // npm outdated returns 1 when there are outdated packages}
+        // npm outdated returns 1 when there are outdated packages;
+  }
         const output = error.stdout || ;';';
         const outdatedCount = (output.match(/\n/g) || []).length -;1; // Subtract header line
         
@@ -595,11 +644,18 @@ automation.start().catch(error => {}),
     try {
       this.log('Checking security...');
       const result = execSync('npm audit --audit-level=moderate', { 
+<<<<<<< HEAD
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 120000
+      ;};);
+=======
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 120000
 <<<<<<< HEAD
       };);
+>>>>>>> main
       
 =======
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -634,7 +690,8 @@ automation.start().catch(error => {}),
 <<<<<<< HEAD
       
       // Check memory usage
-      const memoryUsage = process.memoryUsage(});
+      const memoryUsage = process.memoryUsage(;
+  });
       const memoryUsagePercent = (memoryUsage.heapUsed / memoryUsage.heapTotal) * 1;0;0;
       
       return {;
@@ -656,28 +713,48 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   }
   parseVulnerabilities(output) {
     const vulnerabilities = {
+<<<<<<< HEAD
+      critical: 0,
+      high: 0,
+      moderate: 0,
+      low: 0
+   ; ;};
+    
+=======
       "critical": 0,
       "high": 0,
       "moderate": 0,
       "low": 0
    };
+>>>>>>> main
     try {
       const criticalMatch = output.match(/(\d+) critical;/;);
       const highMatch = output.match(/(\d+) high;/;);
       const moderateMatch = output.match(/(\d+) moderate;/;);
       const lowMatch = output.match(/(\d+) low;/;);
       if (vulnerabilities.critical = parseInt(criticalMatch[1])) {
-    vulnerabilities.critical = parseInt(criticalMatch[1])}
+    vulnerabilities.critical = parseInt(criticalMatch[1]);
+  }
       if (vulnerabilities.high = parseInt(highMatch[1])) {
-    vulnerabilities.high = parseInt(highMatch[1])}
+    vulnerabilities.high = parseInt(highMatch[1]);
+  }
       if (vulnerabilities.moderate = parseInt(moderateMatch[1])) {
-    vulnerabilities.moderate = parseInt(moderateMatch[1])}
+    vulnerabilities.moderate = parseInt(moderateMatch[1]);
+  }
       if (vulnerabilities.low = parseInt(lowMatch[1])} catch (error) {
       this.log(`Failed to parse "vulnerabilities": ${error.message}`)}
     return vulnerabilities) {
     vulnerabilities.low = parseInt(lowMatch[1])} catch (error) {
+<<<<<<< HEAD
+      this.log(`Failed to parse vulnerabilities: ${error.message}`)}
+    
+    return vulnerabilities;
+  }}
+
+=======
       this.log(`Failed to parse "vulnerabilities": ${error.message}`)}
     return vulnerabilities}}
+>>>>>>> main
   getDirectorySize(dirPath) {
     let totalSize = ;0;
     try {
@@ -700,15 +777,26 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     } catch (error) {
       // Ignore errors
     }
+<<<<<<< HEAD
+    
+    return totalSize;
+  }}
+
+  async applyFixes(checks) {
+    const fixes = ;{;};
+    
+=======
     return totalSize}}
   async applyFixes(checks) {
     const fixes = ;{};
+>>>>>>> main
     try {
       // Fix linting issues
       if ( {
         this.log('Applying linting fixes...')) {
      {
-        this.log('Applying linting fixes...')}
+        this.log('Applying linting fixes...');
+  }
         try {
           execSync('npm run "lint": fix', { "cwd": this.projectRoot, "timeout": 60000 });
           fixes.linting = { "success": true, "message": 'Linting fixes applied' }} catch (error) {
@@ -718,7 +806,8 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       if ( {
         this.log('Updating dependencies...')) {
      {
-        this.log('Updating dependencies...')}
+        this.log('Updating dependencies...');
+  }
         try {
           execSync('npm update', { "cwd": this.projectRoot, "timeout": 300000 });
           fixes.dependencies = { "success": true, "message": 'Dependencies updated' }} catch (error) {
@@ -728,7 +817,8 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       if ( {
         this.log('Applying security fixes...')) {
      {
-        this.log('Applying security fixes...')}
+        this.log('Applying security fixes...');
+  }
         try {
           execSync('npm audit fix', { "cwd": this.projectRoot, "timeout": 300000 });
           fixes.security = { "success": true, "message": 'Security fixes applied' }} catch (error) {
@@ -738,7 +828,8 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       if ( {
         this.log('Applying performance optimizations...')) {
      {
-        this.log('Applying performance optimizations...')}
+        this.log('Applying performance optimizations...');
+  }
         try {
           execSync('npm run clean', { "cwd": this.projectRoot, "timeout": 30000 });
           execSync('npm run build', { "cwd": this.projectRoot, "timeout": 300000 });
@@ -746,6 +837,20 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
           fixes.performance = { "success": false, "message": error.message }}
       }
     } catch (error) {
+<<<<<<< HEAD
+      this.log(`Failed to apply fixes: ${error.message}`)}
+    
+    return fixes;}
+
+  async saveReport(results) {
+    const report = {
+      ...results,
+      projectRoot: this.projectRoot,
+      nodeVersion: process.version,
+      platform: process.platform
+   ; ;};
+    
+=======
       this.log(`Failed to apply "fixes": ${error.message}`)}
     return fixes}
   async saveReport(results) {
@@ -755,15 +860,26 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       "nodeVersion": process.version,
       "platform": process.platform
    };
+>>>>>>> main
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))}
   async reportError(type, error) {
     const errorReport = {
+<<<<<<< HEAD
+      timestamp: new Date().toISOString(),
+      type: type,
+      error: error.message,
+      stack: error.stack,
+      projectRoot: this.projectRoot
+   ; ;};
+    
+=======
       "timestamp": new Date().toISOString(),
       "type": type,
       "error": error.message,
       "stack": error.stack,
       "projectRoot": this.projectRoot
    };
+>>>>>>> main
     const errorFile = path.join(this.projectRoot, 'automation/logs/error-prevention-error.json';);
     fs.writeFileSync(errorFile, JSON.stringify(errorReport, null, 2));
     this.log(`Error "reported": ${type}`)}
@@ -779,7 +895,13 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     }, this.runInterval)) {
      {
         await this.runErrorPrevention()}
+<<<<<<< HEAD
+    }, this.runInterval);
+  }
+    
+=======
     }, this.runInterval)}
+>>>>>>> main
     // Handle graceful shutdown
     process.on('SIGTERM', () => {
       this.log('Received SIGTERM, shutting down gracefully');

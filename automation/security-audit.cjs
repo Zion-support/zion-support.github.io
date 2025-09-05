@@ -18,7 +18,12 @@ const securityChecks = [{
       } catch (error) {
         
       }
+<<<<<<< HEAD
+    },
+  },
+=======
     }},
+>>>>>>> main
   {
     "name": 'Environment Variables Check',
     "action": () => {
@@ -33,8 +38,14 @@ const securityChecks = [{
         }
       });
 
+<<<<<<< HEAD
+      console.log(`Found ${foundEnvFiles} environment files`);
+    },
+  },
+=======
       
     }},
+>>>>>>> main
   {
     "name": 'API Security Check',
     "action": () => {
@@ -50,15 +61,28 @@ const securityChecks = [{
           const content = fs.readFileSync(path.join(apiDir, file), 'utf8');
           if (
             content.includes('process.env') &&
+<<<<<<< HEAD
+            !content.includes('// Security: ')
+=======
             !content.includes('// "Security": ')
+>>>>>>> main
           ) {
             securityIssues++;
           }
         });
 
+<<<<<<< HEAD
+        console.log(
+          `Found ${apiFiles.length} API files, ${securityIssues} potential security issues`
+        );
+      }
+    },
+  },
+=======
         
       }
     }},
+>>>>>>> main
   {
     "name": 'Content Security Policy Check',
     "action": () => {
@@ -80,9 +104,16 @@ const securityChecks = [{
           }
         });
 
+<<<<<<< HEAD
+        console.log(`Found CSP in ${cspFound}/${pages.length} pages`);
+      }
+    },
+  },
+=======
         
       }
     }},
+>>>>>>> main
   {
     "name": 'HTTPS Enforcement Check',
     "action": () => {
@@ -98,7 +129,12 @@ const securityChecks = [{
       } else {
         
       }
+<<<<<<< HEAD
+    },
+  },
+=======
     }},
+>>>>>>> main
 ];
 
 // Run security checks
@@ -124,11 +160,22 @@ const report = {
   "timestamp": new Date().toISOString(),
   "checks": securityChecks.map(check => ({
     name: check.name,
+<<<<<<< HEAD
+    status: 'completed',
+  })),
+  summary: {
+    total: totalCount,
+    successful: successCount,
+    failed: totalCount - successCount,
+  },
+};
+=======
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
+>>>>>>> main
 
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
@@ -137,6 +184,9 @@ if (!fs.existsSync(reportsDir)) {
 
 const reportFile = path.join(reportsDir, `security-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
+console.log(`📄 Security report saved to: ${reportFile}`);
+=======
 
 =======
 <<<<<<< HEAD
@@ -155,5 +205,6 @@ console.log('� Security Audit Starting...\n')
     "name"
     "name"
     "status"
+>>>>>>> main
 >>>>>>> main
 >>>>>>> main

@@ -3,6 +3,10 @@
 
 const fs = require('fs');
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
 // Function to fix all remaining syntax errors
 function fixSyntaxErrors(content) {
   // Fix extra commas in JSX attributes
@@ -57,6 +61,18 @@ function processFile(filePath) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
     return false}
 }
+<<<<<<< HEAD
+=======
+console.log('🔧 Applying final comprehensive fixes...');
+
+// Fix SEO.tsx - remove everything after the return statement
+const seoContent = fs.readFileSync('src/components/SEO.tsx', 'utf8');
+const seoFixed = seoContent.split('  );')[0] + '  );';
+fs.writeFileSync('src/components/SEO.tsx', seoFixed, 'utf8');
+console.log('✅ Fixed SEO.tsx');
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+>>>>>>> main
 
 // Fix TalentCard.jsx - fix malformed JSX
 const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'utf8');
@@ -81,13 +97,29 @@ const talentFixed = talentContent
   .replace(/className="text-sm">/g, 'className="text-sm">');
 fs.writeFileSync('src/components/talent/TalentCard.jsx', talentFixed, 'utf8');
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+const filesToFix = [
+  'components/ContactForm.tsx',
+=======
 
 const filesToFix = ['components/ContactForm.tsx',
+>>>>>>> main
   'components/ErrorBoundary.tsx',
   'components/PerformanceMonitor.tsx',
   'pages/docs.tsx',
   'pages/index.tsx'
 ];
+<<<<<<< HEAD
+=======
+// Fix use-toast.ts - add missing closing brace
+const toastContent = fs.readFileSync('src/components/ui/use-toast.ts', 'utf8');
+const toastFixed = toastContent.replace('  return { showToast };\n}', '  return { showToast };\n}');
+fs.writeFileSync('src/components/ui/use-toast.ts', toastFixed, 'utf8');
+console.log('✅ Fixed use-toast.ts');
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+>>>>>>> main
 
 // Fix enhancedServices.ts - fix malformed object properties
 const servicesContent = fs.readFileSync('src/data/enhancedServices.ts', 'utf8');
@@ -113,8 +145,13 @@ const authFixed = authContent
   .replace(/useEffect\(\(\) => \{\s*\/\/ Check if user is logged in \(e\.g\., check localStorage, cookies, etc\.\)\s*\/\/ Implementation here\s*\}, \[\]\);/g, 'useEffect(() => {\n    // Check if user is logged in (e.g., check localStorage, cookies, etc.)\n    // Implementation here\n  }, []);');
 fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+console.log(`\n📊 Syntax fixing complete:`)) {
+=======
 
 ) {
+>>>>>>> main
     ) {
     if (processFile(file)) {
       totalFixed++}
@@ -128,6 +165,13 @@ fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
 if ( {
   ) {
      {
+<<<<<<< HEAD
+  console.log('\n✅ All syntax errors have been fixed!')}} else {
+  console.log('\n✅ No syntax errors found!')}
+=======
+console.log('✨ Final comprehensive fixes completed!');
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
   }} else {
   }
 =======
@@ -175,5 +219,6 @@ const fs = require('fs')
   .replace(/reviewCount: 156/g, '"reviewCount")
   .replace(/"isAuthenticated": tru e,/g, '"isAuthenticated")
   .replace(/"isLoading": fals e/g, '"isLoading")
+>>>>>>> main
 >>>>>>> main
 >>>>>>> main

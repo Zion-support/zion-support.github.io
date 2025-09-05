@@ -1,7 +1,15 @@
 {
   "compilerOptions": {
     "target": "es5",
+<<<<<<< HEAD
     "lib": ["dom", "dom.iterable", "es6"],
+=======
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es6"
+    ],
+>>>>>>> main
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -31,23 +39,6 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "pages._archive_corrupted",
-    "pages.disabled.full",
-    "pages.disabled_auto",
-    "pages_api.disabled",
-    "pages_backup_conflict",
-    "pages.blog.disabled",
-    "pages.corrupted.*",
-    "pages.broken",
-    "pages.bak",
-    "pages-quarantine",
-    "pages-disabled",
-    "pages.__backup",
-    "temp_backup",
-    "temp_broken_files",
-    "temp_working",
-    "tests.disabled",
-    "lib_backup"
+    "node_modules"
   ]
 }

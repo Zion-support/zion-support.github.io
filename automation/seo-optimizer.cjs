@@ -29,9 +29,16 @@ const seoChecks = [{
           }
         });
 
+<<<<<<< HEAD
+        console.log(`Found meta tags in ${metaTagCount}/${pages.length} pages`);
+      }
+    },
+  },
+=======
         
       }
     }},
+>>>>>>> main
   {
     "name": 'Sitemap Check',
     "action": () => {
@@ -42,7 +49,12 @@ const seoChecks = [{
       } else {
         
       }
+<<<<<<< HEAD
+    },
+  },
+=======
     }},
+>>>>>>> main
   {
     "name": 'Robots.txt Check',
     "action": () => {
@@ -53,7 +65,12 @@ const seoChecks = [{
       } else {
         
       }
+<<<<<<< HEAD
+    },
+  },
+=======
     }},
+>>>>>>> main
   {
     "name": 'Structured Data Check',
     "action": () => {
@@ -75,9 +92,18 @@ const seoChecks = [{
           }
         });
 
+<<<<<<< HEAD
+        console.log(
+          `Found structured data in ${structuredDataCount}/${pages.length} pages`
+        );
+      }
+    },
+  },
+=======
         
       }
     }},
+>>>>>>> main
   {
     "name": 'Alt Text Check',
     "action": () => {
@@ -102,9 +128,16 @@ const seoChecks = [{
           });
         });
 
+<<<<<<< HEAD
+        console.log(`Images with alt text: ${imagesWithAlt}/${totalImages}`);
+      }
+    },
+  },
+=======
         
       }
     }},
+>>>>>>> main
   {
     "name": 'Heading Structure Check',
     "action": () => {
@@ -123,9 +156,16 @@ const seoChecks = [{
           h2Count += (content.match(/<h2[^>]*>/g) || []).length;
         });
 
+<<<<<<< HEAD
+        console.log(`H1 tags: ${h1Count}, H2 tags: ${h2Count}`);
+      }
+    },
+  },
+=======
         
       }
     }},
+>>>>>>> main
 ];
 
 // Run SEO checks
@@ -151,11 +191,22 @@ const report = {
   "timestamp": new Date().toISOString(),
   "checks": seoChecks.map(check => ({
     name: check.name,
+<<<<<<< HEAD
+    status: 'completed',
+  })),
+  summary: {
+    total: totalCount,
+    successful: successCount,
+    failed: totalCount - successCount,
+  },
+};
+=======
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
+>>>>>>> main
 
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
@@ -164,6 +215,9 @@ if (!fs.existsSync(reportsDir)) {
 
 const reportFile = path.join(reportsDir, `seo-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
+console.log(`📄 SEO report saved to: ${reportFile}`);
+=======
 
 =======
 <<<<<<< HEAD
@@ -180,5 +234,6 @@ console.log(' SEO Optimizer Starting...\n')
     "name"
     "name"
     "status"
+>>>>>>> main
 >>>>>>> main
 >>>>>>> main

@@ -45,12 +45,22 @@ const nextConfig = {}
         "headers": [{ key: 'Cache-Control', "value": 'public, max-age=31536000, immutable' };]
         ];
       },
+<<<<<<< HEAD
+      {
+        source: '/public/(.*)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }
+        ]
+      }
+    ]}
+=======
       {}
         "source": '/public/(.*)',
         "headers": [{ key: 'Cache-Control', "value": 'public, max-age=31536000, immutable' };]
         ];
       };
     ]};
+>>>>>>> main
 };
 
 module.exports = nextConfig;

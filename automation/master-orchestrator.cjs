@@ -16,7 +16,11 @@ class MasterOrchestrator {
     this.startTime = Date.now();
     this.results = {};
     try {
+<<<<<<< HEAD
+      fs.mkdirSync(this.logsDir, { recursive: true });
+=======
       fs.mkdirSync(this.logsDir, { "recursive": true });
+>>>>>>> main
     } catch {}
   }
 
@@ -34,9 +38,16 @@ class MasterOrchestrator {
       return { "success": true, "output": out };
     } catch (e) {
       return {
+<<<<<<< HEAD
+        success: false,
+        error: e.message,
+        output: e.stdout?.toString?.() || '',
+      };
+=======
         "success": false,
         "error": e.message,
         "output": e.stdout?.toString?.() || ''};
+>>>>>>> main
     }
   }
 
@@ -72,12 +83,23 @@ class MasterOrchestrator {
       durationMs,
       total,
       passed,
+<<<<<<< HEAD
+      failed: total - passed,
+      status:
+        passed === total
+          ? 'HEALTHY'
+          : passed >= Math.floor(total * 0.8)
+            ? 'WARNING'
+            : 'CRITICAL',
+    };
+=======
       "failed": total - passed,
       "status": passed === total
           ? 'HEALTHY'
           : passed >= Math.floor(total * 0.8)
             ? 'WARNING'
             : 'CRITICAL'};
+>>>>>>> main
 
     try {
       fs.writeFileSync(
@@ -87,7 +109,11 @@ class MasterOrchestrator {
     } catch {}
 
     this.log(
+<<<<<<< HEAD
+      `Completed: ${passed}/${total} passed in ${durationMs}ms (Status: ${summary.status})`
+=======
       `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
+>>>>>>> main
     );
     return passed === total;
   }
@@ -111,4 +137,7 @@ if (require.main === module) {
 }
 
 module.exports = MasterOrchestrator;
+<<<<<<< HEAD
+=======
+>>>>>>> main
 >>>>>>> main

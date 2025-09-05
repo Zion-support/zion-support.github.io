@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> main
 import { render, screen } from '@testing-library/react';
 import App from '../src/App';
 describe('App', () => {
@@ -9,8 +12,15 @@ describe('App', () => {
   });
   it('has proper heading structure', () => {
     render(<App />);
+<<<<<<< HEAD
+    const heading = screen.getByRole('heading', { level: '1' });
+    expect(heading).toBeInTheDocument();
+  });
+});
+=======
     const heading = screen.getByRole('heading', { level: 1 });
     expect(heading).toBeInTheDocument();
   });
 });
+>>>>>>> main
 >>>>>>> main

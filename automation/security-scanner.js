@@ -247,7 +247,8 @@ class SecurityScanner {
 <<<<<<< HEAD
 
   log(message) {
-    const timestamp = new Date().toISOString(});
+    const timestamp = new Date().toISOString(;
+  });
     const logMessage = `[${timestamp}] ${message}\;n;`;
     
     );
@@ -263,10 +264,17 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       // Run npm audit;
       const auditOutput = execSync('npm audit --audit-level=moderate', { 
 <<<<<<< HEAD
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 120000
+      ;};);
+=======
+<<<<<<< HEAD
         "cwd": this.projectRoot;
         encoding: 'utf8'
         timeout: 120000;
       };);
+>>>>>>> main
       
 =======
 "cwd": this.projectRoot,
@@ -316,11 +324,19 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   parseVulnerabilities(output) {
     const vulnerabilities = {
 <<<<<<< HEAD
+      critical: 0,
+      high: 0,
+      moderate: 0,
+      low: 0
+   ; ;};
+=======
+<<<<<<< HEAD
       "critical": 0;
       high: 0;
       moderate: 0;
       low: 0;
    };
+>>>>>>> main
     
     try {
       // Parse npm audit output for vulnerability counts;
@@ -330,11 +346,14 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       const lowMatch = output.match(/(\d+) low;/;);
       
       if (vulnerabilities.critical = parseInt(criticalMatch[1])) {
-    vulnerabilities.critical = parseInt(criticalMatch[1])}
+    vulnerabilities.critical = parseInt(criticalMatch[1]);
+  }
       if (vulnerabilities.high = parseInt(highMatch[1])) {
-    vulnerabilities.high = parseInt(highMatch[1])}
+    vulnerabilities.high = parseInt(highMatch[1]);
+  }
       if (vulnerabilities.moderate = parseInt(moderateMatch[1])) {
-    vulnerabilities.moderate = parseInt(moderateMatch[1])}
+    vulnerabilities.moderate = parseInt(moderateMatch[1]);
+  }
       if (vulnerabilities.low = parseInt(lowMatch[1])} catch (error) {
       this.log(`Failed to parse "vulnerabilities": ${error.message}`)}
     
@@ -342,7 +361,8 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     vulnerabilities.low = parseInt(lowMatch[1])} catch (error) {
       this.log(`Failed to parse "vulnerabilities": ${error.message}`)}
     
-    return vulnerabilities}}
+    return vulnerabilities;
+  }}
 
   async handleSecurityIssues(vulnerabilities) {
     const totalIssues = vulnerabilities.critical + vulnerabilities.high + vulnerabilities.moderate + vulnerabilities.low;
@@ -350,13 +370,15 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     if ( {
       this.log(`Found ${totalIssues} security vulnerabilities`)) {
      {
-      this.log(`Found ${totalIssues} security vulnerabilities`)}
+      this.log(`Found ${totalIssues} security vulnerabilities`);
+  }
       
       // Auto-fix if possible;
       if ( {
         this.log('Critical or high severity vulnerabilities found, attempting auto-fix...')) {
      {
-        this.log('Critical or high severity vulnerabilities found, attempting auto-fix...')}
+        this.log('Critical or high severity vulnerabilities found, attempting auto-fix...');
+  }
         await this.autoFixSecurityIssues()} else {
 =======
 "critical": 0,
@@ -410,10 +432,17 @@ if (totalIssues > 0) {
       // Run npm audit fix;
       const fixOutput = execSync('npm audit fix', { 
 <<<<<<< HEAD
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 300000 // 5 minutes
+      ;};);
+=======
+<<<<<<< HEAD
         "cwd": this.projectRoot;
         encoding: 'utf8'
         timeout: 300000 // 5 minutes;
       };);
+>>>>>>> main
       
       this.log('Security fixes applied');
       
@@ -440,7 +469,11 @@ if (totalIssues > 0) {
       projectRoot: this.projectRoot;
       recommendation: this.getSecurityRecommendation(vulnerabilities)
 <<<<<<< HEAD
+   ; ;};
+=======
+<<<<<<< HEAD
    };
+>>>>>>> main
     
 =======
 };ursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -454,6 +487,23 @@ if (totalIssues > 0) {
     if ( {
       return '"CRITICAL": Immediate action required. Update dependencies or apply patches.') {
      {
+<<<<<<< HEAD
+      return 'CRITICAL: Immediate action required. Update dependencies or apply patches.';
+  }} else if ( {
+      return 'HIGH: Update dependencies as soon as possible.') {
+     {
+      return 'HIGH: Update dependencies as soon as possible.';
+  }} else if ( {
+      return 'MODERATE: Consider updating dependencies in next maintenance window.') {
+     {
+      return 'MODERATE: Consider updating dependencies in next maintenance window.';
+  }} else if ( {
+      return 'LOW: Monitor and update when convenient.') {
+     {
+      return 'LOW: Monitor and update when convenient.';
+  }} else {
+      return 'No security issues found.';}
+=======
       return 'CRITICAL: Immediate action required. Update dependencies or apply patches.'}} else if ( {
       return '"HIGH": Update dependencies as soon as possible.') {
      {
@@ -478,15 +528,24 @@ if (vulnerabilities.critical > 0) {
       return 'No security issues found.';
     }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 >>>>>>> main
+>>>>>>> main
   }
   async saveSecurityReport() {
     const report = {
+<<<<<<< HEAD
+      lastScan: this.lastScan,
+      projectRoot: this.projectRoot,
+      nodeVersion: process.version,
+      platform: process.platform
+   ; ;};
+=======
 <<<<<<< HEAD
       "lastScan": this.lastScan;
       projectRoot: this.projectRoot;
       nodeVersion: process.version;
       platform: process.platform;
    };
+>>>>>>> main
     
 =======
 "lastScan": this.lastScan,
@@ -500,11 +559,19 @@ if (vulnerabilities.critical > 0) {
   async reportSecurityFailure(error) {
     const failureReport = {
 <<<<<<< HEAD
+      timestamp: new Date().toISOString(),
+      error: error.message,
+      stack: error.stack,
+      projectRoot: this.projectRoot
+   ; ;};
+=======
+<<<<<<< HEAD
       "timestamp": new Date().toISOString()
       error: error.message;
       stack: error.stack;
       projectRoot: this.projectRoot;
    };
+>>>>>>> main
     
 =======
 "timestamp": new Date().toISOString(),
@@ -522,21 +589,32 @@ if (vulnerabilities.critical > 0) {
       this.log('Checking for dependency updates...');
       // Check for outdated packages;
       const outdatedOutput = execSync('npm outdated', { 
+<<<<<<< HEAD
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 60000
+      ;};);
+      
+      if () {
+=======
         "cwd": this.projectRoot;
         encoding: 'utf8'
         timeout: 60000;
       };);
       if (!fs.existsSync(logDir)) {
+>>>>>>> main
         this.log('Outdated dependencies found')) {
     ) {
-        this.log('Outdated dependencies found')}
+        this.log('Outdated dependencies found');
+  }
         await this.updateDependencies()} else {
         this.log('All dependencies are up to date')}
     } catch (error) {
       if ( {
         // npm outdated returns 1 when there are outdated packages) {
      {
-        // npm outdated returns 1 when there are outdated packages}
+        // npm outdated returns 1 when there are outdated packages;
+  }
         this.log('Outdated dependencies found');
         await this.updateDependencies()} else {
         this.log(`Dependency check "failed": ${error.message}`)}
@@ -565,7 +643,8 @@ if (vulnerabilities.critical > 0) {
       if ( {
         await this.runSecurityAudit()) {
      {
-        await this.runSecurityAudit()}
+        await this.runSecurityAudit();
+  }
         await this.checkDependencyUpdates()}
     }, this.scanInterval);
     // Handle graceful shutdown;

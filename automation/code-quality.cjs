@@ -18,7 +18,12 @@ const qualityChecks = [{
       } catch (error) {
         
       }
+<<<<<<< HEAD
+    },
+  },
+=======
     }},
+>>>>>>> main
   {
     "name": 'ESLint Code Analysis',
     "action": () => {
@@ -29,7 +34,12 @@ const qualityChecks = [{
       } catch (error) {
         
       }
+<<<<<<< HEAD
+    },
+  },
+=======
     }},
+>>>>>>> main
   {
     "name": 'Prettier Code Formatting',
     "action": () => {
@@ -40,7 +50,12 @@ const qualityChecks = [{
       } catch (error) {
         
       }
+<<<<<<< HEAD
+    },
+  },
+=======
     }},
+>>>>>>> main
   {
     "name": 'Code Complexity Analysis',
     "action": () => {
@@ -54,7 +69,11 @@ const qualityChecks = [{
       [pagesDir, componentsDir].forEach(dir => {
         if (fs.existsSync(dir)) {
           const files = fs
+<<<<<<< HEAD
+            .readdirSync(dir, { recursive: true })
+=======
             .readdirSync(dir, { "recursive": true })
+>>>>>>> main
             .filter(file => file.endsWith('.tsx') || file.endsWith('.ts'));
 
           files.forEach(file => {
@@ -69,9 +88,16 @@ const qualityChecks = [{
 
       const avgLinesPerFile =
         totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0;
+<<<<<<< HEAD
+      console.log(`Average lines per file: ${avgLinesPerFile}`);
+      console.log(`Total files analyzed: ${totalFiles}`);
+    },
+  },
+=======
       
       
     }},
+>>>>>>> main
   {
     "name": 'Import/Export Analysis',
     "action": () => {
@@ -90,10 +116,18 @@ const qualityChecks = [{
           exportCount += (content.match(/^export\s+/gm) || []).length;
         });
 
+<<<<<<< HEAD
+        console.log(`Total imports: ${importCount}`);
+        console.log(`Total exports: ${exportCount}`);
+      }
+    },
+  },
+=======
         
         
       }
     }},
+>>>>>>> main
   {
     "name": 'Dead Code Detection',
     "action": () => {
@@ -126,9 +160,16 @@ const qualityChecks = [{
           });
         });
 
+<<<<<<< HEAD
+        console.log(`Potential unused imports: ${unusedImports}`);
+      }
+    },
+  },
+=======
         
       }
     }},
+>>>>>>> main
 ];
 
 // Run quality checks
@@ -154,11 +195,22 @@ const report = {
   "timestamp": new Date().toISOString(),
   "checks": qualityChecks.map(check => ({
     name: check.name,
+<<<<<<< HEAD
+    status: 'completed',
+  })),
+  summary: {
+    total: totalCount,
+    successful: successCount,
+    failed: totalCount - successCount,
+  },
+};
+=======
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
+>>>>>>> main
 
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
@@ -167,6 +219,9 @@ if (!fs.existsSync(reportsDir)) {
 
 const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
+console.log(`📄 Quality report saved to: ${reportFile}`);
+=======
 
 =======
 <<<<<<< HEAD
@@ -188,5 +243,6 @@ console.log(' Code Quality Checker Starting...\n')
     "name"
             content.match(/^import\s+.*from\s+['"][^'')]
     "status"
+>>>>>>> main
 >>>>>>> main
 >>>>>>> main

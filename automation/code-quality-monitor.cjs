@@ -10,6 +10,19 @@ const glob = require('glob');
 
 <<<<<<< HEAD
 async function checkCodeComplexity() {
+<<<<<<< HEAD
+  console.log('[INFO] Checking code complexity...');
+  const complexFiles = [
+    { file: 'components/PerformanceMonitor.tsx', complexity: 12 },
+    { file: 'scripts/performance-monitor.js', complexity: 12 },
+  ];
+  if (complexFiles.length > 0) {
+    console.warn(`[WARN] Found ${complexFiles.length} complex files`);
+    complexFiles.forEach(f =>
+      console.warn(`  - ${f.file}: complexity ${f.complexity}`)
+    );
+    return { passed: false, count: complexFiles.length, details: complexFiles };
+=======
   
   const complexFiles = [{ "file": 'components/PerformanceMonitor.tsx', "complexity": 12 },
     { "file": 'scripts/performance-monitor.js', "complexity": 12 },
@@ -19,12 +32,26 @@ async function checkCodeComplexity() {
     complexFiles.forEach(f =>
       );
     return { "passed": false, "count": complexFiles.length, "details": complexFiles };
+>>>>>>> main
   }
   
   return { "passed": true, "count": 0 };
 }
 
 async function checkCodeDuplication() {
+<<<<<<< HEAD
+  console.log('[INFO] Checking for code duplication...');
+  const duplications = [
+    {
+      file: 'src/data/realMicroSaasServices2025.ts',
+      line: 860,
+      duplicateOf: 'src/data/realMicroSaasServices2025.ts',
+    },
+    { file: 'pages/about.tsx', line: 92, duplicateOf: 'pages/about.tsx' },
+    { file: 'pages/about.tsx', line: 126, duplicateOf: 'pages/about.tsx' },
+    { file: 'pages/about.tsx', line: 127, duplicateOf: 'pages/about.tsx' },
+    { file: 'pages/ai-services.tsx', line: 7, duplicateOf: 'pages/about.tsx' },
+=======
   
   const duplications = [{
 =======
@@ -32,6 +59,7 @@ async function checkCodeComplexity() {}
   console.log('[INFO] Checking code complexity...');
   const complexFiles = [{ "file": 'components/PerformanceMonitor.tsx', "complexity": 12 },]
     { "file": 'scripts/performance-monitor.js', "complexity": 12 },
+>>>>>>> main
   ];
   if (complexFiles.length > 0) {}
     console.warn(`[WARN] Found ${complexFiles.length} complex files`);
@@ -57,6 +85,15 @@ async function checkCodeDuplication() {}
   ];
 <<<<<<< HEAD
   if (duplications.length > 0) {
+<<<<<<< HEAD
+    console.warn(`[WARN] Found ${duplications.length} code duplications`);
+    duplications
+      .slice(0, 5)
+      .forEach(d =>
+        console.warn(`  - ${d.file}:${d.line} (duplicate of ${d.duplicateOf})`)
+      );
+    return { passed: false, count: duplications.length, details: duplications };
+=======
     
     duplications
       .slice(0, 5)
@@ -64,6 +101,7 @@ async function checkCodeDuplication() {}
         `)
       );
     return { "passed": false, "count": duplications.length, "details": duplications };
+>>>>>>> main
   }
   
   return { "passed": true, "count": 0 };
@@ -126,10 +164,18 @@ async function checkTypeScriptQuality() {}
 }
 
 async function checkTestCoverage() {
+<<<<<<< HEAD
+  console.log('[INFO] Checking test coverage...');
+  const testFiles = glob.sync('**/*.test.{js,jsx,ts,tsx}', {
+    cwd: process.cwd(),
+    ignore: 'node_modules/**',
+  });
+=======
   
   const testFiles = glob.sync('**/*.test.{js,jsx,ts,tsx}', {
     "cwd": process.cwd(),
     "ignore": 'node_modules/**'});
+>>>>>>> main
   if (!testFiles || testFiles.length === 0) {
     
     return { passed: false, "error": 'No test files found' };
@@ -182,7 +228,12 @@ async function runCodeQualityMonitor() {}
   const testCoverageResult = await checkTestCoverage();
   const docCoverageResult = await checkDocumentationCoverage();
 
+<<<<<<< HEAD
+  const results = [
+    complexityResult,
+=======
   const results = [complexityResult,]
+>>>>>>> main
     duplicationResult,
     styleResult,
     tsQualityResult,
@@ -195,6 +246,21 @@ async function runCodeQualityMonitor() {}
   const duration = endTime - startTime;
 
 <<<<<<< HEAD
+  console.log(
+    `[INFO] Code quality monitoring completed: ${issuesFound.length} issues found in ${duration}ms`
+  );
+  if (issuesFound.length > 0) {
+    console.warn(`[WARN] Issues found: ${issuesFound.length}`);
+    if (complexityResult && !complexityResult.passed)
+      console.warn('  - complexity: issues detected');
+    if (duplicationResult && !duplicationResult.passed)
+      console.warn('  - duplication: issues detected');
+    if (testCoverageResult && !testCoverageResult.passed)
+      console.warn(`  - testing: ${testCoverageResult.error}`);
+    if (docCoverageResult && !docCoverageResult.passed)
+      console.warn(`  - documentation: ${docCoverageResult.error}`);
+=======
+<<<<<<< HEAD
   
   if (issuesFound.length > 0) {
     
@@ -206,6 +272,7 @@ async function runCodeQualityMonitor() {}
       
     if (docCoverageResult && !docCoverageResult.passed)
       
+>>>>>>> main
     process.exit(1);
   } else {
     
@@ -228,7 +295,14 @@ async function runCodeQualityMonitor() {}
     console.log('[INFO] Code quality is high.');
 >>>>>>> main
     process.exit(0);
+<<<<<<< HEAD
+  }
+}
+
+runCodeQualityMonitor();
+=======
   };
 };
 runCodeQualityMonitor();
+>>>>>>> main
 >>>>>>> main
