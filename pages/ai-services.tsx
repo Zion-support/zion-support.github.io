@@ -859,6 +859,159 @@ title: 'Generative AI Content Creation Suite',
     features: ['Property Valuation', 'Market Analysis', 'Investment Recommendations', 'Risk Assessment'],
     pricing: '$3,000 - $15,000/setup',
     category: 'Real Estate AI'
+  },
+  {
+    title: 'AI-Powered Climate Modeling',
+    description: 'Advanced climate prediction and environmental impact analysis using machine learning.',
+    icon: Globe,
+    features: ['Climate Prediction', 'Environmental Impact', 'Weather Forecasting', 'Carbon Footprint Analysis'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Environmental AI',
+    popular: true
+  },
+  {
+    title: 'AI Quantum Computing Optimizer',
+    description: 'AI-driven quantum algorithm optimization and quantum machine learning solutions.',
+    icon: Cpu,
+    features: ['Quantum Algorithm Design', 'Optimization Problems', 'Quantum ML', 'Error Correction'],
+    pricing: '$25,000 - $100,000/project',
+    category: 'Quantum AI'
+  },
+  {
+    title: 'AI-Powered Space Mission Planning',
+    description: 'Autonomous space mission planning and satellite constellation optimization.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Satellite Optimization', 'Orbital Mechanics', 'Resource Allocation'],
+    pricing: '$50,000 - $200,000/project',
+    category: 'Space AI'
+  },
+  {
+    title: 'AI Neuromorphic Computing Platform',
+    description: 'Brain-inspired computing systems for edge AI and real-time processing.',
+    icon: Brain,
+    features: ['Neuromorphic Chips', 'Edge Computing', 'Real-time Processing', 'Low Power Consumption'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Neuromorphic AI'
+  },
+  {
+    title: 'AI-Powered Synthetic Biology',
+    description: 'AI-driven synthetic biology design and protein engineering platform.',
+    icon: Heart,
+    features: ['Protein Design', 'DNA Synthesis', 'Biological Modeling', 'Drug Discovery'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Synthetic Biology AI'
+  },
+  {
+    title: 'AI Autonomous Vehicle Fleet Management',
+    description: 'Intelligent fleet management and coordination for autonomous vehicles.',
+    icon: Car,
+    features: ['Fleet Coordination', 'Route Optimization', 'Predictive Maintenance', 'Safety Monitoring'],
+    pricing: '$30,000 - $150,000/setup',
+    category: 'Autonomous Vehicles'
+  },
+  {
+    title: 'AI-Powered Digital Twin Platform',
+    description: 'Real-time digital twin creation and simulation for complex systems.',
+    icon: Monitor,
+    features: ['Real-time Simulation', 'Predictive Modeling', 'System Optimization', 'Virtual Testing'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'Digital Twin AI'
+  },
+  {
+    title: 'AI Edge Computing Intelligence',
+    description: 'Distributed AI processing at the edge for IoT and real-time applications.',
+    icon: Network,
+    features: ['Edge Processing', 'IoT Integration', 'Real-time Analytics', 'Distributed Learning'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Edge AI'
+  },
+  {
+    title: 'AI-Powered Metaverse Platform',
+    description: 'AI-driven virtual world creation and immersive experience platform.',
+    icon: Globe,
+    features: ['Virtual World Creation', 'Avatar Generation', 'Behavioral AI', 'Immersive Experiences'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Metaverse AI'
+  },
+  {
+    title: 'AI Quantum Machine Learning',
+    description: 'Quantum-enhanced machine learning algorithms for complex optimization problems.',
+    icon: Cpu,
+    features: ['Quantum ML Algorithms', 'Optimization Problems', 'Quantum Neural Networks', 'Quantum Data Processing'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Quantum ML'
+  },
+  {
+    title: 'AI-Powered Brain-Computer Interface',
+    description: 'AI-driven brain-computer interface for medical and assistive applications.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'Motor Control', 'Cognitive Enhancement', 'Medical Applications'],
+    pricing: '$50,000 - $250,000/project',
+    category: 'BCI AI'
+  },
+  {
+    title: 'AI Autonomous Drone Swarm',
+    description: 'Coordinated autonomous drone operations for surveillance and delivery.',
+    icon: Rocket,
+    features: ['Swarm Coordination', 'Autonomous Navigation', 'Mission Planning', 'Collision Avoidance'],
+    pricing: '$35,000 - $175,000/setup',
+    category: 'Drone AI'
+  },
+  {
+    title: 'AI-Powered Robotic Process Automation',
+    description: 'Advanced RPA with AI decision-making and learning capabilities.',
+    icon: Bot,
+    features: ['Process Automation', 'Decision Making', 'Learning Algorithms', 'Exception Handling'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'RPA AI'
+  },
+  {
+    title: 'AI Blockchain Analytics Platform',
+    description: 'Advanced blockchain transaction analysis and cryptocurrency intelligence.',
+    icon: Shield,
+    features: ['Transaction Analysis', 'Anomaly Detection', 'Market Intelligence', 'Compliance Monitoring'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Blockchain AI'
+  },
+  {
+    title: 'AI-Powered 6G Network Optimization',
+    description: 'Next-generation network optimization and intelligent resource allocation.',
+    icon: Network,
+    features: ['Network Optimization', 'Resource Allocation', 'Predictive Maintenance', 'Performance Analytics'],
+    pricing: '$40,000 - $200,000/project',
+    category: '6G AI'
+  },
+  {
+    title: 'AI Autonomous Trading System',
+    description: 'Fully autonomous trading system with advanced market analysis and risk management.',
+    icon: TrendingUp,
+    features: ['Market Analysis', 'Risk Management', 'Portfolio Optimization', 'Real-time Trading'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'Trading AI'
+  },
+  {
+    title: 'AI-Powered Smart City Platform',
+    description: 'Comprehensive smart city management with AI-driven optimization.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Energy Management', 'Public Safety', 'Resource Allocation'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Smart City AI'
+  },
+  {
+    title: 'AI Augmented Reality Assistant',
+    description: 'AI-powered AR assistant for industrial and consumer applications.',
+    icon: Eye,
+    features: ['AR Object Recognition', 'Spatial Computing', 'Real-time Guidance', 'Hands-free Operation'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'AR AI'
+  },
+  {
+    title: 'AI-Powered Cybersecurity AI',
+    description: 'Self-learning cybersecurity system with adaptive threat detection.',
+    icon: Shield,
+    features: ['Adaptive Learning', 'Threat Detection', 'Automated Response', 'Behavioral Analysis'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Cybersecurity AI'
   }
 ];
 

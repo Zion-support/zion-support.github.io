@@ -13,7 +13,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   title = "Zion Tech Group",
   description = "Leading technology solutions provider",
   keywords = "technology, AI, cloud, micro SaaS"
-}: MainLayoutProps) {
+}: MainLayoutProps) => {
   return (
     <>
       <Head>

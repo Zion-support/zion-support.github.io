@@ -364,30 +364,16 @@ const $1 = {
                   </Link>
                   <Link
                     href="/contact"
-                    className="block w-full px-4 py-3 text-center bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors font-medium"
+                    className="block w-full px-4 py-3 text-center bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
                     onClick={closeMenu}
                   >
                     Free Consultation
                   </Link>
-                  {item.hasDropdown && item.dropdownItems && (
-                    <div className="ml-4 space-y-2 mt-2">
-                      {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
-                        <Link
-                          key={dropdownIndex}
-                          href={dropdownItem.href}
-                          className="block py-1 text-sm text-gray-600 hover:text-blue-600"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          {dropdownItem.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
                 </div>
-              ))}
-            </div>
-          </div>
-        )}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );

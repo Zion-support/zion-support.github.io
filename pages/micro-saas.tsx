@@ -649,6 +649,159 @@ description: 'Automated code review with security scanning, performance optimiza
     features: ['Refactoring Suggestions', 'Code Quality Analysis', 'Automated Fixes', 'Best Practices'],
     pricing: '$99 - $499/month',
     category: 'Development Tools'
+  },
+  {
+    title: 'Smart Contract Auditor',
+    description: 'Automated smart contract security analysis and vulnerability detection for blockchain projects.',
+    icon: Shield,
+    features: ['Vulnerability Detection', 'Gas Optimization', 'Compliance Checks', 'Audit Reports'],
+    pricing: '$1,999 - $9,999/project',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'Carbon Footprint Tracker',
+    description: 'Real-time carbon footprint monitoring and sustainability reporting for businesses.',
+    icon: Sprout,
+    features: ['Real-time Tracking', 'Sustainability Reports', 'Carbon Credits', 'Green Certifications'],
+    pricing: '$199 - $999/month',
+    category: 'Sustainability'
+  },
+  {
+    title: 'Voice-to-Text Meeting Transcriber',
+    description: 'AI-powered meeting transcription with action items and key insights extraction.',
+    icon: Mic,
+    features: ['Real-time Transcription', 'Action Items', 'Speaker Identification', 'Meeting Analytics'],
+    pricing: '$49 - $299/month',
+    category: 'Productivity'
+  },
+  {
+    title: 'AI-Powered A/B Testing Platform',
+    description: 'Intelligent A/B testing with automated statistical significance and optimization recommendations.',
+    icon: Target,
+    features: ['Automated Testing', 'Statistical Analysis', 'Conversion Optimization', 'Multi-variate Testing'],
+    pricing: '$299 - $1,999/month',
+    category: 'Marketing'
+  },
+  {
+    title: 'Smart Inventory Predictor',
+    description: 'AI-driven demand forecasting and inventory optimization for retail and e-commerce.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Stock Optimization', 'Seasonal Analysis', 'Supplier Integration'],
+    pricing: '$399 - $2,499/month',
+    category: 'E-commerce'
+  },
+  {
+    title: 'Automated Compliance Monitor',
+    description: 'Real-time compliance monitoring for GDPR, HIPAA, SOX, and other regulatory requirements.',
+    icon: CheckCircle,
+    features: ['Multi-regulation Support', 'Real-time Monitoring', 'Audit Trails', 'Compliance Reports'],
+    pricing: '$599 - $3,999/month',
+    category: 'Compliance'
+  },
+  {
+    title: 'AI-Powered Customer Churn Predictor',
+    description: 'Predict and prevent customer churn with machine learning and behavioral analytics.',
+    icon: TrendingUp,
+    features: ['Churn Prediction', 'Risk Scoring', 'Retention Campaigns', 'Customer Insights'],
+    pricing: '$199 - $1,499/month',
+    category: 'Customer Success'
+  },
+  {
+    title: 'Smart Document Workflow',
+    description: 'Automated document processing with OCR, classification, and intelligent routing.',
+    icon: FileText,
+    features: ['OCR Processing', 'Document Classification', 'Workflow Automation', 'Data Extraction'],
+    pricing: '$149 - $899/month',
+    category: 'Document Management'
+  },
+  {
+    title: 'AI-Powered Price Optimization',
+    description: 'Dynamic pricing optimization using machine learning and market analysis.',
+    icon: DollarSign,
+    features: ['Dynamic Pricing', 'Market Analysis', 'Competitor Tracking', 'Revenue Optimization'],
+    pricing: '$299 - $1,999/month',
+    category: 'Pricing'
+  },
+  {
+    title: 'Smart Energy Management',
+    description: 'AI-powered energy consumption optimization for buildings and facilities.',
+    icon: Zap,
+    features: ['Energy Monitoring', 'Consumption Optimization', 'Predictive Maintenance', 'Cost Reduction'],
+    pricing: '$199 - $1,299/month',
+    category: 'Energy'
+  },
+  {
+    title: 'Automated Social Media Sentiment Analysis',
+    description: 'Real-time social media monitoring and sentiment analysis for brand reputation management.',
+    icon: Globe,
+    features: ['Real-time Monitoring', 'Sentiment Analysis', 'Crisis Detection', 'Brand Reports'],
+    pricing: '$99 - $599/month',
+    category: 'Social Media'
+  },
+  {
+    title: 'AI-Powered Fraud Detection API',
+    description: 'Real-time fraud detection and prevention for financial transactions and user activities.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Machine Learning Models', 'Risk Scoring', 'API Integration'],
+    pricing: '$0.01 - $0.10 per transaction',
+    category: 'Security'
+  },
+  {
+    title: 'Smart Recruitment Screening',
+    description: 'AI-powered candidate screening and interview scheduling for HR teams.',
+    icon: Users,
+    features: ['Resume Screening', 'Skill Matching', 'Interview Scheduling', 'Candidate Scoring'],
+    pricing: '$199 - $999/month',
+    category: 'HR'
+  },
+  {
+    title: 'Automated Backup & Recovery',
+    description: 'Intelligent backup scheduling and disaster recovery for cloud and on-premises systems.',
+    icon: HardDrive,
+    features: ['Automated Backups', 'Disaster Recovery', 'Data Validation', 'Compliance'],
+    pricing: '$49 - $399/month',
+    category: 'Data Protection'
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Automated content moderation for text, images, and videos using advanced AI models.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'API Integration'],
+    pricing: '$0.001 - $0.01 per piece of content',
+    category: 'Content Safety'
+  },
+  {
+    title: 'Smart Contract Testing Platform',
+    description: 'Automated testing and simulation platform for smart contracts and DeFi protocols.',
+    icon: Code,
+    features: ['Automated Testing', 'Simulation Environment', 'Security Analysis', 'Gas Optimization'],
+    pricing: '$299 - $1,999/month',
+    category: 'Blockchain'
+  },
+  {
+    title: 'AI-Powered Email Deliverability',
+    description: 'Optimize email deliverability and inbox placement using AI and machine learning.',
+    icon: Mail,
+    features: ['Deliverability Optimization', 'Reputation Monitoring', 'A/B Testing', 'Analytics'],
+    pricing: '$199 - $1,299/month',
+    category: 'Email Marketing'
+  },
+  {
+    title: 'Automated API Documentation Generator',
+    description: 'AI-powered API documentation generation and maintenance for development teams.',
+    icon: FileText,
+    features: ['Auto Documentation', 'Code Analysis', 'Interactive Examples', 'Version Control'],
+    pricing: '$99 - $599/month',
+    category: 'Developer Tools'
+  },
+  {
+    title: 'Smart Resource Scheduler',
+    description: 'AI-powered resource scheduling and optimization for teams and facilities.',
+    icon: Calendar,
+    features: ['Resource Optimization', 'Conflict Resolution', 'Availability Tracking', 'Analytics'],
+    pricing: '$149 - $899/month',
+    category: 'Scheduling'
   }
 ];
 
