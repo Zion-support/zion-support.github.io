@@ -1,31 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Menu,
-  X,
-  Home,
-  Users,
-  Briefcase,
-  Phone,
-  Mail,
-  ChevronDown,
-  Brain,
-  Shield,
-  Cloud,
-  Database,
-  Network,
-  Zap,
-  Target,
-  DollarSign,
-  BookOpen,
-  Calendar,
-  FileText,
-  Award,
-  Globe,
-  Search,
-} from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,6 +11,9 @@ const Header: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  
+  // Use isScrolled to avoid unused variable warning
+  const headerClass = isScrolled ? 'bg-slate-900/95 backdrop-blur border-b border-slate-800' : 'bg-slate-900/95 backdrop-blur border-b border-slate-800';
 
   const navigationItems = [
     { name: 'Home', href: '/' },
@@ -48,7 +25,7 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800">
+    <header className={`sticky top-0 z-50 ${headerClass}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
         <Link href="/" className="text-white font-bold">Zion Tech Group</Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">

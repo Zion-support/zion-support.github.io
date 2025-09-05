@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Brain, Network, Cloud, Shield, Code, Zap, Building, Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, Github, Globe, ArrowRight, CheckCircle, Star, Server, Users, Building2, FileText, Rocket, Target, Atom, Lock, TrendingUp, Workflow, MessageCircle, DollarSign, Briefcase, ArrowUp, Sparkles, Home, Truck, Factory, Heart, BookOpen, BarChart3, Cpu, Leaf, Satellite, HelpCircle, ShoppingBag } from 'lucide-react';
+import { Menu, X, ChevronDown, Brain, Shield, Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, Globe, Server, Building2, Rocket, Target, DollarSign, Factory, Heart, BookOpen, ShoppingBag } from 'lucide-react';
 import { useRouter } from 'next/router';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';

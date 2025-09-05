@@ -1,13 +1,49 @@
 import React, { useEffect } from 'react';
 
+interface PerformanceData {
+  domContentLoaded: number;
+  loadComplete: number;
+  totalLoadTime: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+  resourceCount: number;
+  memory: {
+    used: number;
+    total: number;
+    limit: number;
+  } | null;
+}
+
 interface PerformanceMonitorProps {
-  onPerformanceData?: (data: any) => void;
+  onPerformanceData?: (data: PerformanceData) => void;
 }
 
 // Extend Window interface to include performance
 declare global {
   interface Window {
     performance: Performance;
+  }
+  
+  interface PerformanceEntry {
+    name: string;
+    startTime: number;
+  }
+  
+  interface Performance {
+    getEntriesByType(_type: string): PerformanceEntry[];
+    memory?: {
+      usedJSHeapSize: number;
+      totalJSHeapSize: number;
+      jsHeapSizeLimit: number;
+    };
+  }
+  
+  interface PerformanceNavigationTiming extends PerformanceEntry {
+    domContentLoadedEventStart: number;
+    domContentLoadedEventEnd: number;
+    loadEventStart: number;
+    loadEventEnd: number;
+    fetchStart: number;
   }
 }
 
@@ -17,7 +53,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
     if (typeof window === 'undefined' || typeof performance === 'undefined') return;
 
     const measurePerformance = () => {
-      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigation = window.performance.getEntriesByType('navigation')[0] as any; // eslint-disable-line @typescript-eslint/no-explicit-any
       const paint = window.performance.getEntriesByType('paint');
       
       const performanceData = {
@@ -46,7 +82,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       }
 
       // Log performance data in development
-      if (process.env.NODE_ENV === 'development') {
+      if (process.env.NODE_ENV === 'development' && onPerformanceData) {
+        // eslint-disable-next-line no-console
         console.log('Performance Metrics:', performanceData);
       }
     };
