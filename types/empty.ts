@@ -1,1 +1,1 @@
-module.exports = type __Empty = unknown,
+export type __Empty = unknown;
