@@ -9,6 +9,6 @@ export default function SecurityEnhancer.test() {return (
           Professional SecurityEnhancer.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

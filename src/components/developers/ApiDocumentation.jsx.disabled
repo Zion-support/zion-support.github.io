@@ -1,0 +1,8 @@
+import React from "react";
+<<<<<<< HEAD:src/components/developers/ApiDocumentation.jsx
+import {SEO} from "@/components/SEO";
+export {ApiDocumentation as default} from "./ApiDocumentation.js.jsx";
+=======
+import {SEO} from "@/components/SEO"
+export {ApiDocumentation as default} from "./ApiDocumentation.js.jsx";
+>>>>>>> main:src/components/developers/ApiDocumentation.jsx.disabled
