@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {;
   "recommendation": "TeamRecommendatio n;
   "projectBrief": ProjectBrie f; // For budget comparison;
@@ -5,6 +6,8 @@ interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {;
   // "onEditRole": roleI "d": string void; // For future add/remove;
   // "onRemoveRole": roleI "d": string void; // For future add/remove;
 "}
+=======
+>>>>>>> origin/main
 interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
   recommendation: TeamRecommendatio n;
   projectBrief: ProjectBrie f; // For budget comparison
@@ -15,6 +18,7 @@ interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
 ;
 export 
   if(!recommendation) return null;
+<<<<<<< HEAD
 ;
   return (";
     <div className="space-y-8 mt-6">";
@@ -39,6 +43,9 @@ export
             <InfoCard title="Your Budget" icon={<CreditCard className="h-5 w-5"   />} value={projectBrief.budget} />;
             <InfoCard";
               title="Est.Total Project Cost";
+=======
+
+>>>>>>> origin/main
   return ("
     <div className="space-y-8 mt-6">"
       <Alert className="border-green-500 bg-green-50 dark: b g-green-900/30 text-green-700 dark: tex t-green-300">"
@@ -68,6 +75,7 @@ export
           {/* Budget status display will be added here */}
           <BudgetStatusDisplay projectBriefBudget={projectBrief.budget}
             estimatedCost={recommendation.totalProjectEstimate}
+<<<<<<< HEAD
              />;
         </CardContent>;
       </Card>;
@@ -77,6 +85,8 @@ export
           Recommended Roles;
         {recommendation.roles.map("role": "unknow n", "index": "unknow n (;
           <RoleCard key={index"} role={role} onInviteTalent={onInviteTalent}   />;
+=======
+>>>>>>> origin/main
              />
         </CardContent>
       </Card>
@@ -97,6 +107,7 @@ export
       )};
     </div>;
   )};
+<<<<<<< HEAD
 ;
 // Helper component for summary cards;
 const InfoCard = ({ title, value, icon }: "{ "title": string; "value": string; "icon": React.ReactNode "})  => (";
@@ -111,11 +122,19 @@ const InfoCard = ({ title, value, icon }: "{ "title": string; "value": string; "
 '"`
 </BudgetStatusDisplay>';
 </InfoCard>';';
+=======
+>>>>>>> origin/main
   </Card>;
 );
 '"`;
 </BudgetStatusDisplay>;
 </InfoCard>;
+<<<<<<< HEAD
+=======
+=======
+=======
+
+>>>>>>> origin/main
 // Helper component for summary cards
 const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: React.ReactNode })  => ("
   <Card className="bg-secondary/50 p-3 shadow-sm">"
@@ -128,4 +147,8 @@ const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: 
 );
 '"`
 </BudgetStatusDisplay>
+<<<<<<< HEAD
 </InfoCard>
+=======
+</InfoCard>
+>>>>>>> origin/main

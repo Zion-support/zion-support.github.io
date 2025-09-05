@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 ';
@@ -128,6 +129,9 @@ const "UltimateZionServicesMarketing": "React.FC = () : JSX.Element => {;
       "description": 'Advanced infrastructure and DevOps solutions',;
       "marketSize": '$25.2 billion by 2027',;
       "growthRate": '150% annually'};
+=======
+=======
+>>>>>>> origin/main
 const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const categories = [{
@@ -192,10 +196,15 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
       marketSize: '$25.2 billion by 2027',;
       growthRate: '150% annually'};
   ];
+<<<<<<< HEAD
 ;
+=======
+
+>>>>>>> origin/main
     if(categoryId === 'all') return ultimateZionServices2025;
     return ultimateZionServices2025.filter(service => service.category === categoryId) };
   const selectedServices = getServicesByCategory(selectedCategory) ;
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-white">
 ;
@@ -343,6 +352,15 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                 onClick={ () => setSelectedCategory(category.id) }';
                 className={`px-6 py-3 rounded-xl border transition - all duration - 300 ${selectedCategory === category.id';';
                     ? 'bg-gradient - to - r from - purple - 600 to - pink - 600 border-purple - 400 text-white shadow-lg'';';
+=======
+;
+  return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">;
+=======
+
+  return (
+        <div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">
+      {/* Hero Section */}
+>>>>>>> origin/main
                 onClick={ () => setSelectedCategory(category.id) }
                 className={`px-6 py-3 rounded-xl border transition - all duration - 300 ${selectedCategory === category.id;
                     ? 'bg-gradient - to - r from - purple - 600 to - pink - 600 border-purple - 400 text-white shadow-lg';
@@ -351,11 +369,14 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                 <span className="mr-2 text-lg">{category.icon}</span>;
                 {category.name}
               </button>) ) }
+<<<<<<< HEAD
           </motion.div>
         </div>';
       </section>;';';
  {/* Category Overview */} {selectedCategory !== 'all' && (;"
         <section className="py-12 px-4 sm: p x-6 lg: p x-8">;"
+=======
+>>>>>>> origin/main
           </motion.div>;
         </div>;
       </section>;
@@ -427,12 +448,20 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
             whileInView = {
   { opacity: 1,
   y: 0
+<<<<<<< HEAD
 }}';
             transition={{ duration: 0.6 }}';';
           >'`';';
             whileInView = {;
   { opacity: 1,;
   y: 0;
+=======
+
+            whileInView = {;
+  { opacity: 1,;
+  y: 0;
+=======
+>>>>>>> origin/main
 }}
             transition={{ duration: 0.6 }}
           >
@@ -566,12 +595,16 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
           </motion.div>
         </div>
       </section>;
+<<<<<<< HEAD
  {/* Category Overview */} {selectedCategory !== 'all' && (;";
         <section className="py-12 px-4 "sm": "p x-6 "lg": p x-8">;";
+=======
+>>>>>>> origin/main
  {/* Category Overview */} {selectedCategory !== 'all' && (;"
         <section className="py-12 px-4 sm: p x-6 lg: p x-8">;"
           <div className="max-w-7xl mx-auto"> {(() => {;
               if(!category) return null;
+<<<<<<< HEAD
 ;
               return (<motion.div;
                   className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"                  initial = {;
@@ -599,6 +632,9 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                       </div>";
                       <div className="bg-white/10 rounded-lg p-4">;";
                         <div className="text-purple-400 font-semibold">Growth Rate</div>;";
+=======
+
+>>>>>>> origin/main
               return (<motion.div
                   className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"                  initial = {
   { opacity: 0,
@@ -632,6 +668,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                 </motion.div>;) }) () }          </div>
         </section>) }
       {/* Services Grid */}
+<<<<<<< HEAD
       <section className="py-20 px-4 "sm": "p x-6 "lg": p x-8">;
         <div  className="max - w-7xl mx -auto">;
           <motion.h2;
@@ -646,6 +683,8 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
             transition={{ "duration": "0.6 "}}
           >'`;
             {selectedCategory === 'all' ? 'All Revolutionary Services' : `${categories.find(c => c.id === selectedCategory)?.name} Services`}
+=======
+>>>>>>> origin/main
             {selectedCategory === 'all' ? 'All Revolutionary Services' : "`${categories.find(c => c.id === selectedCategory)?.name"} Services`}
           </motion.h2>;
           <motion.div;
@@ -732,10 +771,16 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}"
                   <div className="inline-block px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xs font-semibold mb-2">
                     {service.innovationLevel}
+<<<<<<< HEAD
                   </div>"';
                   <p className="text-sm text-purple-400 font-medium">';';
                   </div>";
                   <p className="text-sm text-purple-400 font-medium">;
+=======
+                  </div>";
+                  <p className="text-sm text-purple-400 font-medium">;
+=======
+>>>>>>> origin/main
                   </div>"
                   <p className="text-sm text-purple-400 font-medium">
                     {service.category.replace('-',).toUpperCase()}
@@ -748,6 +793,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                 {/* Description */}"
                 <p className="text-gray-400 text-sm mb-6 leading-relaxed">
                   {service.description}
+<<<<<<< HEAD
                 </p>;
                 {/* Pricing */}";
                 <div className="bg-white/5 rounded-lg p-4 mb-6">";
@@ -781,6 +827,8 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                     {service.benefits.slice(0, 3).map((benefit, idx) => (";
                       <div key={idx} className="flex items-center text-sm text-gray-300">";
                         <span className="text-green-400 mr-2">✓</span>;
+=======
+>>>>>>> origin/main
                 </p>
                 {/* Pricing */}"
                 <div className="bg-white/5 rounded-lg p-4 mb-6">"
@@ -829,6 +877,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                   </div>
                 </div>
                 {/* Market Information */}
+<<<<<<< HEAD
                 {service.marketSize && (";
                   <div className="mb-6">";
                     <h4 className="text-purple-400 font-semibold mb-2">🌍 Market Opportunity</h4>";
@@ -901,6 +950,8 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
             </div>";
             <div className="mt-6 text-sm text-gray-400">;
               <p>🌟 Trusted by Fortune 500 companies worldwide</p>;
+=======
+>>>>>>> origin/main
                 {service.marketSize && ("
                   <div className="mb-6">"
                     <h4 className="text-purple-400 font-semibold mb-2">🌍 Market Opportunity</h4>"
@@ -974,6 +1025,10 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                     </a>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
               </motion.div>) ) }
           </motion.div>
         </div>
@@ -1011,6 +1066,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
             </div>;
           </motion.div>;
         </div>;
+<<<<<<< HEAD
       </section>;';
     </div>;) };';';
 export default UltimateZionServicesMarketing;'"`
@@ -1037,6 +1093,11 @@ export default UltimateZionServicesMarketing;'"`;
 </section>;
 </div>;
 </any>;
+=======
+=======
+      </section>;
+=======
+>>>>>>> origin/main
     </div>;) };
 export default UltimateZionServicesMarketing;'"`
 </motion>
@@ -1052,4 +1113,8 @@ export default UltimateZionServicesMarketing;'"`
 </motion>
 </section>
 </div>
+<<<<<<< HEAD
 </any>
+=======
+</any>
+>>>>>>> origin/main

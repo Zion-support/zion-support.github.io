@@ -12,11 +12,14 @@ export default function Page("props": "any) {;
 "}, []);
     if(typeof window !== 'undefined') {;
         const providerOptions = {};
+<<<<<<< HEAD
         const modal = new Web3Modal({;
             "network": 'mainnet', ;
             "cacheProvider": "tru e", ;
             providerOptions,;
         });
+=======
+>>>>>>> origin/main
         const modal = new Web3Modal({
             network: 'mainnet', 
             cacheProvider: tru e, 
@@ -44,6 +47,7 @@ export default function Page("props": "any) {;
       const signer = provider.getSigner();
       const address = await signer.getAddress();
       const network = await provider.getNetwork();
+<<<<<<< HEAD
 ;
       setWallet({;
         provider,;
@@ -74,6 +78,9 @@ export default function Page("props": "any) {;
 ;
       instance.on('chainChanged', async () => { // Added async;
         // Re-initialize provider, signer, address, and chainId;
+=======
+
+>>>>>>> origin/main
       setWallet({
         provider,
         signer,
@@ -108,6 +115,7 @@ export default function Page("props": "any) {;
         const newSigner = newProvider.getSigner();
         const newAddress = await newSigner.getAddress();
         const newNetwork = await newProvider.getNetwork();
+<<<<<<< HEAD
         setWallet({;
           "provider": "newProvide r",;
           "signer": "newSigne r",;
@@ -126,6 +134,8 @@ export default function Page("props": "any) {;
     } catch(error) {;
       console.error('Error connecting "wallet":', error);
       // If user closes modal, it might throw an error, so we ensure state is reset;
+=======
+>>>>>>> origin/main
         setWallet({
           provider: newProvide r,
           signer: newSigne r,

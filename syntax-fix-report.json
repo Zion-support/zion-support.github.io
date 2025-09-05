@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-04T15:37:53.118Z",
   "totalFiles": 1516,
   "fixedFiles": 31,
@@ -166,6 +167,8 @@
     "lib/utils.ts"
   ],
   "errorDetails": []
+=======
+>>>>>>> origin/main
   "timestamp": "2025-09-05T02:57:49.742Z",
   "processedFiles": 8556,
   "fixedFiles": 6729,

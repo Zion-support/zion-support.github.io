@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { render, screen  } from '@testing-library/reactimport ModernNavigation from ./ModernNavigationdescribe(ModernNavigation, () => {';';';
   it(renders without crashing', () => {'';
     render(<ModernNavigation  />)';';
@@ -6,3 +7,6 @@ import { render, screen  } from '@testing-library/reactimport ModernNavigation f
     render(<ModernNavigation  />)';
     // Add specific test assertions based on component content})});';;';
 import { render,screen } from '@testing-library/reactimport ModernNavigation from ./ModernNavigationdescribe(ModernNavigation,() => {' it(renders without crashing',() => {' render(<ModernNavigation />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<ModernNavigation />)
+=======
+import { render,screen } from '@testing-library/reactimport ModernNavigation from ./ModernNavigationdescribe(ModernNavigation,() => {' it(renders without crashing',() => {' render(<ModernNavigation />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<ModernNavigation />)
+>>>>>>> origin/main

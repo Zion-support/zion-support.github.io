@@ -75,6 +75,7 @@ export default function Page("props": "any) {;
           transition = {;
   { "duration": "0.5",;
   "delay": "0.5;
+<<<<<<< HEAD
 "}}
         >";
           <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>";
@@ -88,6 +89,9 @@ export default function Page("props": "any) {;
               <span>kleber@ziontechgroup.com</span>;
             </div>";
             <div className="flex items-center space-x-2">";
+=======
+
+>>>>>>> origin/main
 }}
         >"
           <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?"

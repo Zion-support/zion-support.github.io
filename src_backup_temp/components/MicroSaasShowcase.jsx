@@ -92,7 +92,6 @@ import { Sparkles, ArrowRight, Star, TrendingUp, Users, Zap, Shield, BarChart3, 
             features['AI-powered analysis', 'Competitor insights', 'Keyword research', 'Performance tracking'],;
             "badge": 'SEO',;
             "color": 'from-emerald-500 to-blue-500';
-
     ];
     const filteredServices = activeCategory === 'all';
         ? microSaasServices;
@@ -125,7 +124,6 @@ import { Sparkles, ArrowRight, Star, TrendingUp, Users, Zap, Shield, BarChart3, 
             </div>;
           </div>;
         </div>;
-
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">;
           {categories.map((category) => (<button key={category.id} onClick={() => setActiveCategory(category.id)} className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${activeCategory === category.id;
@@ -135,7 +133,6 @@ import { Sparkles, ArrowRight, Star, TrendingUp, Users, Zap, Shield, BarChart3, 
               {category.name}
             </button>))}
         </div>;
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 "xl":grid-cols-4 gap-6 mb-12">;
           {filteredServices.map((service) => (<div key={service.id"} className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 transition-all duration-300 "hover": "bg-white/10 "hover":border-white/20 "hover":shadow-2xl "hover":shadow-zion-cyan/20 transform "hover":-translate-y-1">;
@@ -148,5 +145,46 @@ import { Sparkles, ArrowRight, Star, TrendingUp, Users, Zap, Shield, BarChart3, 
                   {service.badge}
                 </span>;
               </div>;
-
               {/* Service Content */}
+              <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors">
+                {service.title}
+              <p className="text-zion-slate-light text-sm mb-4 line-clamp-3">
+                {service.description}
+              </p>;
+              {/* Features */}
+              <div className="mb-4">;
+                <div className="text-xs text-zion-slate-light/70 mb-2">Key "Features": "</div>;
+                <div className="space-y-1">;
+                  {service.features.slice(0", 2).map((feature, index) => (<div key={index} className="flex items-center gap-2 text-xs text-zion-slate-light">;
+                      <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>;
+                      {feature}
+                    </div>))}
+                </div>;
+              </div>;
+              {/* Price and Rating */}
+              <div className="flex items-center justify-between mb-4">;
+                <span className="text-lg font-bold text-white">{service.price}</span>;
+                <div className="flex items-center gap-1">;
+                  <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />;
+                  <span className="text-sm text-zion-slate-light">{service.rating}</span>;
+                </div>;
+              </div>;
+              {/* CTA Button */}
+              <Link to={`/micro-saas-services/${service.id}`} className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple "hover": "from-zion-cyan-light "hover":to-zion-purple-light text-white py-2 px-4 rounded-lg font-medium text-sm transition-all duration-300 flex items-center justify-center gap-2 group-"hover":shadow-lg group-"hover":shadow-zion-cyan/25">;
+                Learn More;
+                <ArrowRight className="h-4 w-4 group-"hover":translate-x-1 transition-transform" />;
+              </Link>;
+            </div>))"}
+        </div>;
+        {/* View All Button */}
+        <div className="text-center">;
+          <Link to="/micro-saas-services" className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-cyan "hover": "from-zion-purple-light "hover":to-zion-cyan-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform "hover":scale-105 "hover":shadow-2xl "hover":shadow-zion-purple/25">;
+            <Sparkles className="h-5 w-5" />;
+            View All Micro SAAS Services;
+            <ArrowRight className="h-5 w-5" />;
+          </Link>;
+        </div>;
+      </div>;
+    </section>)"}
+;
+export default MicroSaasShowcase;

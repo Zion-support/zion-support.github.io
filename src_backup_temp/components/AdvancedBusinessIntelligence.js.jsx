@@ -290,3 +290,206 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                   <div className="flex items-center justify-between mb-3">";
                     <h3 className="font-semibold text-zion-slate">;
                       {metric.name}
+                    
+                    {getTrendIcon(metric.trend)}
+                  </div>";
+                  <div className="text-2xl font-bold text-zion-slate mb-2">;
+                    {formatValue(metric.value, metric.unit)}
+                  </div>";
+                  <div className="flex items-center justify-between text-sm">;
+                    <span`;
+                      className={`font-medium ${metric.trend === 'up'';
+                          ? 'text-green-600'';
+                          : "metric.trend === 'down'';
+                            ? 'text-red-600'';
+                            : 'text-gray-600'`;
+                      "}`}
+                    >;
+                      {metric.trend === 'up' ? '+' : ''}
+                      {metric.change}%;
+                    </span>";
+                    <span className="text-zion-slate-light">;
+                      "Target": "{formatValue(metric.target", metric.unit)}
+                    </span>;
+                  </div>;
+                  {showPredictions && (";
+                    <div className="mt-3 pt-3 border-t border-zion-slate-light/30">";
+                      <div className="text-xs text-zion-slate-light">;
+                        AI "Prediction": "{' '"}
+                        {formatValue();
+                          metric.value * (1 + metric.change / 100),;
+                          metric.unit;
+                        )}
+                      </div>;
+                    </div>;
+                  )}
+                </div>;
+              ))}
+            </div>;
+
+            {/* Quick Actions */}"
+            <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 p-4 rounded-xl border border-zion-cyan/20">"
+              <h3 className="font-semibold text-zion-slate mb-3 flex items-center gap-2">"
+                <Zap className="w-5 h-5 text-zion-cyan"  />
+                Quick Actions
+              "
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                {[{
+
+                    "label": 'Generate Report'",;
+                    "icon": "Download",;
+                    "action": "() => {"}},;
+                  {;
+
+                    "label": 'Schedule Review',;
+                    "icon": "Calendar",;
+                    "action": "() => {"}},;
+                  {;
+
+                    "label": 'Set Alerts',;
+                    "icon": "AlertTriangle",;
+                    "action": "() => {"}},;
+                  { "label": 'Export Data', "icon": "Download", "action": "() => {"} },;
+                ].map((item, index) => {;
+
+                  const Icon = item.icon;
+                  return ();
+                    <button;
+                      key={index}
+                      onClick={item.action}";
+                      className="p-3 bg-white "dark": "bg-zion-slate rounded-lg border border-zion-slate-light "hover":border-zion-cyan transition-colors text-sm font-medium text-zion-slate "hover":text-zion-cyan";
+                    >";
+                      <Icon className="w-4 h-4 mx-auto mb-2"  />;
+                      {item.label"}
+                    </button>;
+                  );
+                })}
+              </div>;
+            </div>;
+          </div>;
+        )}
+;
+        {activeTab === 'insights' && (";
+          <div className="space-y-4">;
+            {insights.map(insight => (;
+              <div;
+                key={insight.id}";
+                className="p-4 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-xl "hover":shadow-lg transition-shadow";
+              >";
+                <div className="flex items-start gap-3">;
+                  {getInsightIcon(insight.type)"}";
+                  <div className="flex-1">";
+                    <div className="flex items-center gap-3 mb-2">";
+                      <h3 className="font-semibold text-zion-slate">;
+                        {insight.title}
+                      
+                      <span`
+                        className={`px-2 py-1 rounded-full text-xs font-medium ${insight.impact === 'high''
+                            ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300''
+                            : insight.impact === 'medium''
+                              ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300''
+                              : 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'`
+                        }`}
+                      >
+                        {insight.impact} Impact
+                      </span>"
+                      <span className="text-sm text-zion-slate-light">
+                        {insight.confidence}% confidence
+                      </span>
+                    </div>"
+                    <p className="text-zion-slate-light mb-3">
+                      {insight.description}
+                    </p>;
+                    {insight.actionable && (;
+                      <div>";
+                        <h4 className="font-medium text-zion-slate mb-2">;
+                          Recommended "Actions": ";
+                        </h4>";
+                        <div className="flex flex-wrap gap-2">;
+                          {insight.actions.map((action", index) => (;
+                            <span;
+                              key={index}";
+                              className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm border border-zion-cyan/20";
+                            >;
+                              {action}
+                            </span>;
+                          ))}
+                        </div>;
+                      </div>;
+                    )}
+                  </div>;
+                </div>;
+              </div>;
+            ))}
+          </div>;
+        )}
+
+        {activeTab === 'models' && ("
+          <div className="space-y-4">
+            {models.map(model => (
+              <div
+                key={model.id}"
+                className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow"
+              >"
+                <div className="flex items-center justify-between mb-3">"
+                  <h3 className="font-semibold text-zion-slate">
+                    {model.name}
+                  
+                  <span`
+                    className={`px-3 py-1 rounded-full text-sm font-medium ${model.status === 'active''
+                        ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300''
+                        : model.status === 'training''
+                          ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300''
+                          : 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300'`
+                    }`}
+                  >
+                    {model.status}
+                  </span>;
+                </div>";
+                <div className="grid grid-cols-2 "md": "grid-cols-4 gap-4 text-sm">;
+                  <div>";
+                    <span className="text-zion-slate-light">"Accuracy":</span>";
+                    <div className="font-semibold text-zion-slate">;
+                      {model.accuracy"}%;
+                    </div>;
+                  </div>;
+                  <div>";
+                    <span className="text-zion-slate-light">"Category": "</span>";
+                    <div className="font-semibold text-zion-slate">;
+                      {model.category"}
+                    </div>;
+                  </div>;
+                  <div>";
+                    <span className="text-zion-slate-light">Last "Trained": "</span>";
+                    <div className="font-semibold text-zion-slate">;
+                      {new Date(model.lastTrained).toLocaleDateString()"}
+                    </div>;
+                  </div>;
+                  <div>";
+                    <span className="text-zion-slate-light">"Predictions": "</span>";
+                    <div className="font-semibold text-zion-slate">;
+                      {new Intl.NumberFormat('en-US').format(model.predictions)"}
+                    </div>;
+                  </div>;
+                </div>;
+              </div>;
+            ))}
+          </div>;
+        )}
+
+        {activeTab === 'analytics' && ("
+          <div className="space-y-6">"
+            <div className="text-center text-zion-slate-light">"
+              <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50"  />"
+              <h3 className="text-lg font-semibold mb-2">Advanced Analytics
+              <p>Detailed analytics and custom reports coming soon...</p>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+    );}
+"export default ComponentName;"
+
+</RefreshCw>;
+</RefreshCw>

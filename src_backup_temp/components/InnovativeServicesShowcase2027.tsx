@@ -111,6 +111,7 @@ export default function Page("props": "any) {;
               transition = {;
   { "duration": "0.6",;
   "delay": "inde x * 0.1;
+<<<<<<< HEAD
 "}}";
               className="group relative";
 ";
@@ -122,6 +123,9 @@ export default function Page("props": "any) {;
                       {service.title"}
                     </h3>";
                     <p className="text-gray-300 text-sm leading-relaxed">;
+=======
+
+>>>>>>> origin/main
 }}"
               className="group relative"
 "
@@ -244,6 +248,7 @@ export default function Page("props": "any) {;
   "y": "3 0 "}}          animate = {;
   isVisible ? { "opacity": "1",;
   "y": "0 "} : "{ "opacity": 0", "y": "3 0 "}}          transition = {;
+<<<<<<< HEAD
   { "duration": "0.8",;
   "delay": "0.6 "}}"          className="text-center";
 ";
@@ -272,6 +277,9 @@ export default function Page("props": "any) {;
               <a";
                 href="/contact";
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold "hover": shado w-lg "hover": shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2";
+=======
+
+>>>>>>> origin/main
   { duration: 0.8,
   delay: 0.6 }}"          className="text-center"
 "
@@ -300,6 +308,10 @@ export default function Page("props": "any) {;
               <a"
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover: shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
                 Schedule Consultation";
                 <ArrowRight className="w-4 h-4"   />              </a>;
               <a";

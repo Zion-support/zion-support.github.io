@@ -1,4 +1,5 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
+<<<<<<< HEAD
 ;
 export default function Page("props": "any) {;
 interface EnhancedAccessibilityProps {;
@@ -16,6 +17,9 @@ export const EnhancedAccessibility: Reac t.FC<EnhancedAccessibilityProps> = ({
   const [settings, setSettings] = useState<any>({';
 ';';
   colorBlindness: 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia';';';
+=======
+=======
+>>>>>>> origin/main
 ;
 export const "EnhancedAccessibility": React.FC<EnhancedAccessibilityProps> = ({;
   enabled = true",;: "any;
@@ -32,6 +36,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   className = '': any;
 "}) => {;
   const [isOpen, setIsOpen] = useState<any>(false);
+<<<<<<< HEAD
   const [settings, setSettings] = useState<any>({;
   colorBlindness: 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   fontSize: 'small' | 'medium' | 'large' | 'xlarge'}
@@ -46,6 +51,8 @@ export const EnhancedAccessibility: React.FC = () => {;
     focusIndicator: tru e,';';
     colorBlindness: 'normal',';';
     fontSize: 'medium'
+=======
+>>>>>>> origin/main
   const [settings, setSettings] = useState<AccessibilitySettings>({;
     highContrast: fals e,;
     largeText: fals e,;
@@ -55,6 +62,10 @@ export const EnhancedAccessibility: React.FC = () => {;
     focusIndicator: tru e,;
     colorBlindness: 'normal',;
     fontSize: 'medium';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
   "colorBlindness": 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   "fontSize": 'small' | 'medium' | 'large' | 'xlarge'}
 export const "EnhancedAccessibility": "React.FC = () => {;
@@ -105,10 +116,15 @@ export const EnhancedAccessibility: React.FC = () => {
     // Cleanup function
   };
 }, []);, []);    if(isOpen) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
       setIsVisible(true);
       if(timeoutRef.current) clearTimeout(timeoutRef.current)} else {
       timeoutRef.current = setTimeout(() => setIsVisible(false), 300)}
   }, [isOpen]) ;
+<<<<<<< HEAD
 ;
   // Apply accessibility settings;
   useEffect(() => {;
@@ -116,6 +132,9 @@ export const EnhancedAccessibility: React.FC = () => {
   return () => {;
     // Cleanup function;
   "};
+=======
+
+>>>>>>> origin/main
   // Apply accessibility settings
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -123,6 +142,10 @@ export const EnhancedAccessibility: React.FC = () => {
     // Cleanup function
   };
 }, []);, []);
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/main
     // High contrast
     if(settings.highContrast) {
       root.classList.add('high-contrast')} else {
@@ -134,12 +157,15 @@ export const EnhancedAccessibility: React.FC = () => {
       root.style.setProperty('--reduced-motion',reduce')} else {
       root.style.removeProperty('--reduced-motion');
     // Focus indicator
+<<<<<<< HEAD
     if(settings.focusIndicator) {';
 ';';
       root.style.setProperty('--focus-visible',2px solid #22ddd2')} else {';
 ';';
       root.style.setProperty('--focus-visible',none')}';';
     // Color blindness simulation'';';
+=======
+>>>>>>> origin/main
 ;
     // High contrast;
     if(settings.highContrast) {;
@@ -157,6 +183,10 @@ export const EnhancedAccessibility: React.FC = () => {
       root.style.setProperty('--focus-visible',2px solid #22ddd2')} else {;
       root.style.setProperty('--focus-visible',none')}
     // Color blindness simulation';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
     if(settings.focusIndicator) {
       root.style.setProperty('--focus-visible',2px solid #22ddd2')} else {
       root.style.setProperty('--focus-visible',none')}
@@ -164,24 +194,35 @@ export const EnhancedAccessibility: React.FC = () => {
     root.style.setProperty('--color-blindness', settings.colorBlindness);
     // Font size
     root.style.fontSize = fontSizeMap[settings.fontSize]}, [settings]) }
+<<<<<<< HEAD
     if(settings.reducedMotion) {';
 ';';
       document.documentElement.classList.add('reduced-motion')} else {';
 ';';
+=======
+>>>>>>> origin/main
     if(settings.reducedMotion) {
       document.documentElement.classList.add('reduced-motion')} else {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
       document.documentElement.classList.remove('reduced-motion')}
     if(settings.largeText) {
       document.documentElement.classList.add('large-text')} else {
       document.documentElement.classList.remove('large-text')}
     // Save settings to localStorage'
     localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
+<<<<<<< HEAD
 ;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
   "};
+=======
+
+>>>>>>> origin/main
   useEffect(() => {
   // TODO: Add dependencies if needed
   return () => {
@@ -192,6 +233,7 @@ export const EnhancedAccessibility: React.FC = () => {
     const saved = localStorage.getItem('accessibility-settings');    if(saved) {
       setSettings(JSON.parse(saved))}
   }, []);
+<<<<<<< HEAD
       [key]: !prev[key]}) ) };';
 ';';
   // Screen reader announcements'';
@@ -204,8 +246,19 @@ export const EnhancedAccessibility: React.FC = () => {
       [key]: "!prev[key]"}) ) };
 ;
   // Screen reader announcements';
+=======
+    if(settings.reducedMotion) {;
+      document.documentElement.classList.add('reduced-motion')} else {;
+      document.documentElement.classList.remove('reduced-motion')}
+=======
+
+>>>>>>> origin/main
       [key]: !prev[key]}) ) };
   // Screen reader announcements'
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/main
     announcement.setAttribute('aria-live',polite');
     announcement.setAttribute('aria-atomic',true');
     announcement.className="sr-only";    announcement.textContent = message;
@@ -214,12 +267,15 @@ export const EnhancedAccessibility: React.FC = () => {
     setTimeout(() => {
       document.body.removeChild(announcement) }, 1000) ;
     setAnnouncements(prev => [...prev, message]) }, []) ;
+<<<<<<< HEAD
   // Enhanced keyboard navigation;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
   "};
+=======
+>>>>>>> origin/main
   // Enhanced keyboard navigation
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -227,6 +283,7 @@ export const EnhancedAccessibility: React.FC = () => {
     // Cleanup function
   };
 }, []);, []);
+<<<<<<< HEAD
     if(!settings.keyboardNavigation) return;';
 ';';
       // Skip if in input/textarea'      if(target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
@@ -245,12 +302,19 @@ export const EnhancedAccessibility: React.FC = () => {
           break;';';
         case 'Enter':'';';
         case ' ':'';';
+=======
+=======
+>>>>>>> origin/main
     if(!settings.keyboardNavigation) return;
       // Skip if in input/textarea'      if(target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
+<<<<<<< HEAD
 ;
       switch(e.key) {;
         case 'Tab': ";
           // Enhanced tab navigation with visual feedback;
+=======
+
+>>>>>>> origin/main
       switch(e.key) {
         case 'Tab':
           // Enhanced tab navigation with visual feedback
@@ -262,14 +326,18 @@ export const EnhancedAccessibility: React.FC = () => {
             target.style.outlineOffset = '';
           "}, 2000) ;
           break;
+<<<<<<< HEAD
         case 'Enter':';
         case ' ':';
+=======
+>>>>>>> origin/main
         case 'Enter':'
         case ' ':'
           if(target.tagName = == 'BUTTON' || target.getAttribute('role') === 'button') {;
             e.preventDefault();
             target.click();
             announce(`Activated ${target.textContent || target.getAttribute('aria-label') || 'button'}`);
+<<<<<<< HEAD
           break;';
 ';';
         case 'Escape':';';
@@ -282,6 +350,12 @@ modals.forEach(modal:  > {;';';
         case 'Escape':;
           // Close modals, dropdowns, etc.';
 modals.forEach(modal:  > {;
+=======
+;
+=======
+
+          break;
+>>>>>>> origin/main
         case 'Escape': ";
           // Close modals", dropdowns, etc.';
 modals.forEach("modal": "> {;
@@ -308,20 +382,33 @@ modals.forEach(modal:  > {;
   };
 }, []);, []);
     if(!settings.keyboardNavigation) return;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
         if(mainContent) {
           (mainContent as HTMLElement).focus()}      }
       // Skip to navigation'
       if(e.key === 'Tab' && e.shiftKey && e.altKey) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 ;
         if(mainContent) {;
           (mainContent as HTMLElement).focus()}      }
 ;
       // Skip to navigation';
       if(e.key === 'Tab' && e.shiftKey && e.altKey) {;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
         e.preventDefault();
         if(navigation) {
           (navigation as HTMLElement).focus()}
       }
+<<<<<<< HEAD
     };';
 ';';
     document.addEventListener('keydown', handleKeyDown);';';
@@ -339,6 +426,9 @@ modals.forEach(modal:  > {;
     return () => {';
 ';';
       document.removeEventListener('focusin', handleFocusIn);';';
+=======
+=======
+>>>>>>> origin/main
     };
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
@@ -352,6 +442,7 @@ modals.forEach(modal:  > {;
     return () => {
       document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut)}}, [settings.focusIndicator, settings.screenReader, announce]) ;
+<<<<<<< HEAD
 ;
   // Skip to main content link;
   useEffect(() => {;
@@ -359,6 +450,9 @@ modals.forEach(modal:  > {;
   return () => {;
     // Cleanup function;
   "};
+=======
+
+>>>>>>> origin/main
   // Skip to main content link
   useEffect(() => {
 // TODO: Add dependencies if needed
@@ -366,11 +460,18 @@ modals.forEach(modal:  > {;
     // Cleanup function
   };
 }, []);, []);
+<<<<<<< HEAD
 </any>
 </AccessibilitySettings>
 </any>
 </any>';
 </EnhancedAccessibilityProps>;';;';
+=======
+
+</any>
+</AccessibilitySettings>
+</any>
+>>>>>>> origin/main
 ;
 </any>;
 </AccessibilitySettings>;
@@ -378,6 +479,13 @@ modals.forEach(modal:  > {;
 </any>;
 </any>;
 </EnhancedAccessibilityProps>;
+<<<<<<< HEAD
 </any>
 </any>
 </EnhancedAccessibilityProps>
+=======
+=======
+</any>
+</any>
+</EnhancedAccessibilityProps>
+>>>>>>> origin/main

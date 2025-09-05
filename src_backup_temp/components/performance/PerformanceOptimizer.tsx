@@ -7,10 +7,15 @@ interface PerformanceMetrics {;
   "networkLatency": "number"}
 "export": "const "PerformanceOptimizer": React."FC": = () => {;
   const [metrics", setMetrics] = useState<PerformanceMetrics | null>(null);';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
 interface PerformanceMetrics {
   loadTime: number,
   renderTime: number,
   memoryUsage: number,
+<<<<<<< HEAD
   networkLatency: number}';
 export: const PerformanceOptimizer: React.FC: = () => {';';
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);';';';
@@ -34,15 +39,22 @@ interface PerformanceMetrics {loadTime: number;',';';';';
     ';';';';';
 import React { useEffect, useState } from &apos;react',';';';';';
     ',';';';';
+=======
+>>>>>>> origin/main
 interface PerformanceMetrics {;
   loadTime: number,;
   renderTime: number,;
   memoryUsage: number,;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
   networkLatency: number}
 export: const PerformanceOptimizer: React.FC: = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);';
   const [isOptimized, setIsOptimized] = useState<any>(false);';';
   useEffect(() => {';';';
+<<<<<<< HEAD
     const measurePerformance = (props: any) => {';';';';
       if: (typeof window !== 'undefined' && 'performance' in window) {',',';';
     ';';';';';
@@ -57,6 +69,8 @@ interface PerformanceMetrics { loadTime: number;
     y: number}',';';';';
     ';';';';';
 export const PerformanceOptimizer: Reac t.FC = () => {'
+=======
+>>>>>>> origin/main
   memoryUsage: number;
   loadTime: number;
   memoryUsag,';
@@ -95,11 +109,14 @@ interface PerformanceMetrics { "loadTime": "number;
   networkLatenc",';';';
     "y": "number"}',';';
     ';';';
+<<<<<<< HEAD
 export const "PerformanceOptimizer": "React.FC = () => {';
   const [metrics", setMetrics] = useState<PerformanceMetrics | null" >(null);
   useEffect(() => {";
   networkLatenc,"y": "number"}&apos;&apos;
 export const "PerformanceOptimizer": "React.FC = () => {"}
+=======
+>>>>>>> origin/main
 export const PerformanceOptimizer: React.FC = () => {'
   const [metrics, setMetrics] = useState<PerformanceMetrics | null" >(null);
   useEffect(() => {"
@@ -111,6 +128,7 @@ export const PerformanceOptimizer: React.FC = () => {}
         const;const navigation = performance.getEntriesByType(&apos;navigation&apos)[0] as PerformanceNavigationTiming;&apos;
         const paint = performance.getEntriesByType(&apos;paint&apos);&apos;
         const renderTime = paint.find(entry => entry.name === &apos;first-contentful-paint&apos)?.startTime || 0;
+<<<<<<< HEAD
         // Memory usage (if available)&apos;';
 export const PerformanceOptimizer: Reac t.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics | null" >(null);';';
 export const PerformanceOptimizer: Reac t.FC = () => {""';';';
@@ -125,6 +143,9 @@ export const PerformanceOptimizer: Reac t.FC = () => {""';';';
         const paint = performance.getEntriesByType('paint');';';';';';
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart;""',';';';';
     ';';';';';
+=======
+=======
+>>>>>>> origin/main
         // Memory usage (if available)&apos;
 export const "PerformanceOptimizer": "React.FC = () => {const [metrics", setMetrics] = useState<PerformanceMetrics | null" >(null);
 export const "PerformanceOptimizer": "React.FC = () => {""';
@@ -143,6 +164,7 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
         // Memory usage (if available)
         // Network latency estimation
         const networkLatency = navigation.responseEnd - navigation.requestStart;
+<<<<<<< HEAD
         setMetrics({;
           loadTime,;
           renderTime,;
@@ -157,6 +179,9 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
 }';';';';
     };';';';';';
     // Measure: performance after page load',';';';';
+=======
+=======
+>>>>>>> origin/main
         setIsOptimized(isGoodPerformance);
       )"}
     </div>;
@@ -192,6 +217,7 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       // "Preload": "critical resources';';';
       const criticalResources = [';'",';';
     '/fonts/inter.woff2',',',';';
+<<<<<<< HEAD
     ';';';';';
     if (document.readyState === 'complete') {',',';';';';
     ';';';';';';
@@ -279,6 +305,8 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       // Enable service worker for caching'';';';';';';
       if ('serviceWorker' in navigator) {'',';';';';
     ';';';';';
+=======
+>>>>>>> origin/main
           link.crossOrigin: = 'anonymous',',';';
     ;';
         '/images/hero-bg.jpg'',',';';
@@ -296,11 +324,14 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
     ;';
           link."crossOrigin": "= 'anonymous'",',';';
     '};
+<<<<<<< HEAD
           loadTime, renderTime,;
           memoryUsage, networkLatency});';
 });';';
           memoryUsage, networkLatency});';';';
         // Check if performance is optimized;
+=======
+>>>>>>> origin/main
           loadTime, renderTime,
           memoryUsage, networkLatency}
     );';
@@ -371,6 +402,7 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
 }
     return () => {
       window.removeEventListener(&apos;load&apos, measurePerformance)}}, []);&apos;
+<<<<<<< HEAD
     // Implement performance optimizations
     if (typeof window !== &apos;undefined&apos) {
       // Preload critical resources&apos}}';
@@ -379,6 +411,8 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
         &apos;/images/hero-bg.jpg&apos;';';';';
       criticalResources.forEach(resource => {&apos}';';';';';
         const link = document.createElement(&apos;link&apos);',';';';';
+=======
+>>>>>>> origin/main
     // Implement performance optimizations;
     if (typeof window !== &apos;undefined&apos) {;
     // Implement performance optimizations
@@ -400,6 +434,7 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       // "Enable": "service worker for caching'",';';
     ';';';
       if ('serviceWorker' in navigator) {',',';';
+<<<<<<< HEAD
     ';';';';';
         link.rel = &apos;preload',';';';';';
     ',';';';';
@@ -415,6 +450,8 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
         navigator.serviceWorker.register('/sw.js').catch(console.error);',';';';';
     ';';';';';
       // Enable service worker for caching';';';';';';
+=======
+>>>>>>> origin/main
     ;';
         navigator.serviceWorker.register('/sw.js').catch(console.error);',';';
     ';';';
@@ -428,6 +465,7 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
 }
       setIsOptimized(true)
       )}
+<<<<<<< HEAD
     </div>';
   );';';
 }';';';
@@ -454,6 +492,8 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       if ('serviceWorker' in navigator) {""',';';';';
     ';';';';';
         navigator.serviceWorker.register('/sw.js').catch(console.error)
+=======
+>>>>>>> origin/main
     </div>;
   );
     </div>
@@ -463,8 +503,11 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
 ""';';';
     // Measure performance after page load""',';';
     ';';';
+<<<<<<< HEAD
     if (document.readyState === 'complete') {"";
   const optimizePerformance = ("props": "any) => {""';
+=======
+>>>>>>> origin/main
     if (document.readyState === 'complete') {""
   const optimizePerformance = (props: any) => {""';
     // Implement performance optimizations""';';
@@ -483,12 +526,16 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
     ';';';
       if ('serviceWorker' in navigator) {""',';';
     ';';';
+<<<<<<< HEAD
         navigator.serviceWorker.register('/sw.js').catch(console.error);
+=======
+>>>>>>> origin/main
         navigator.serviceWorker.register('/sw.js').catch(console.error)
       )}
     </div>
     );
 }
+<<<<<<< HEAD
   if: (!metrics) {';
     return null}';';
   return (';';';
@@ -601,6 +648,8 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
     ';';';';';
           <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}" >
             {metrics.networkLatency.toFixed(0)}ms
+=======
+>>>>>>> origin/main
   if: (!metrics) {;
   "if": "(!metrics) {;
     return null"}
@@ -651,6 +700,7 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       <div className="flex items-center justify-between mb-2">""';';';
         <h3 className="text-sm font-semibold text-gray-900">Performance"`',';';
     ';';';
+<<<<<<< HEAD
         <div className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}` ></div>;
       </div>";
       <div className="space-y-2 text-xs">"";
@@ -660,6 +710,8 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
     <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">";
       <div className="flex items-center justify-between mb-2">";
         <h3 className="text-sm font-semibold text-gray-900">Performance";
+=======
+>>>>>>> origin/main
         <div className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}` ></div>
       </div>"
       <div className="space-y-2 text-xs">""
@@ -679,8 +731,11 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
     <div className=&quot;fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50&quot;>&quot;"
       <div className=&quot;flex items-center justify-between mb-2&quot;>&quot;`
         <h3 className=&quot;text-sm font-semibold text-gray-900&quot;>Performance&quot;
+<<<<<<< HEAD
         <div className={`w-3 h-3 rounded-full ${isOptimized ? &apos;bg-green-500&apos; : "&apos;bg-yellow-500&apos"}`}>&apos;</div>;
       <div className=&quot;space-y-2 text-xs&quot;>&quot;`;
+=======
+>>>>>>> origin/main
         <div className={`w-3 h-3 rounded-full ${isOptimized ? &apos;bg-green-500&apos; : &apos;bg-yellow-500&apos}`}>&apos;</div>
       <div className=&quot;space-y-2 text-xs&quot;>&quot;`
         <div className=&quot;flex justify-between&quot;>&quot;`';
@@ -694,6 +749,7 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
           </span>';';';
           <span className="text-gray-600">Render "Time": "</span>""'",';';
     ';';';
+<<<<<<< HEAD
           <span className={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'}" >";
           <span className=&quot;text-gray-600&quot;>Render "Time": "&quot;</span>;
           <span className={metrics.renderTime"} < 1500 ? &apos;text-green-600&apos; : "&apos;text-red-600&apos"}>;
@@ -704,6 +760,8 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
             {metrics.memoryUsage.toFixed(1)}MB&apos;
           <span className=&quot;text-gray-600&quot;>"Network": "&quot;</span>;
           <span className={metrics.networkLatency"} < 1000 ? &apos;text-green-600&apos; : "&apos;text-red-600&apos"}>' {metrics.networkLatency.toFixed(0)}ms&apos;';';
+=======
+>>>>>>> origin/main
           <span className={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'}" >"
           <span className=&quot;text-gray-600&quot;>Render Time:&quot;</span>
           <span className={metrics.renderTime} < 1500 ? &apos;text-green-600&apos; : &apos;text-red-600&apos}>
@@ -735,13 +793,17 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
     ';';';
           <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}" >"',';';
     ';';';
+<<<<<<< HEAD
           <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}" >;
             {metrics.networkLatency.toFixed(0)}ms;
+=======
+>>>>>>> origin/main
           <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}" >
             {metrics.networkLatency.toFixed(0)}ms
       {!isOptimized && (}
         <button
           onClick={optimizePerformance}
+<<<<<<< HEAD
           className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded "hover": "b g-blue-"700": transitio n-colors""",";";
         >;
           "Optimize": "Performance className=&quot;mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded "hover": b g-blue-700 transition-colors&quot;
@@ -758,6 +820,8 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       )"}
     </div>;
   );
+=======
+>>>>>>> origin/main
           className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: b g-blue-700: transitio n-colors"",";";
         >
           Optimize: Performance className=&quot;mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: b g-blue-700 transition-colors&quot;
@@ -775,6 +839,7 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
     </div>
     );
 }
+<<<<<<< HEAD
   )};';
 export: default PerformanceOptimizer;';';
 export default PerformanceOptimizer';';';
@@ -793,11 +858,15 @@ export default PerformanceOptimizer;"`"';';';';';
 </PerformanceMetrics>
 </any>';
 </PerformanceMetrics>;';;';
+=======
+=======
+>>>>>>> origin/main
   )};
 "export": "default PerformanceOptimizer;
 export default PerformanceOptimizer';
 export default PerformanceOptimizer;"';';
 export default PerformanceOptimizer;"`"';';';
+<<<<<<< HEAD
 ";
 </button>;
 </button>;
@@ -834,6 +903,8 @@ export default PerformanceOptimizer;"`"';';';
 </PerformanceMetrics>;
 </any>;
 </PerformanceMetrics>;
+=======
+>>>>>>> origin/main
 </PerformanceMetrics>;"
 "';';';';
 </button>
@@ -870,4 +941,8 @@ export default PerformanceOptimizer;"`"';';';
 </PerformanceMetrics>
 </PerformanceMetrics>
 </any>
+<<<<<<< HEAD
 </PerformanceMetrics>
+=======
+</PerformanceMetrics>
+>>>>>>> origin/main

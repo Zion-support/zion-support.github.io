@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -29,6 +30,8 @@ export function FavoriteButton({ talentId, isFavorite, onToggle, className }: "F
       />;
     </Button>;
   );
+=======
+>>>>>>> origin/main
 ;,"}
     );,})
     );,"})"

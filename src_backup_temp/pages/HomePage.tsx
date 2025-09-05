@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 ;
 const "HomePage": "React.FC = () => {;
   return (;
@@ -26,6 +27,8 @@ const "HomePage": "React.FC = () => {;
 "};
 ;
 export { HomePage };
+=======
+>>>>>>> origin/main
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 const HomePage: React.FC = () => {
   const featuredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6);
@@ -272,4 +275,8 @@ const HomePage: React.FC = () => {
     </div>
   );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 export default HomePage;

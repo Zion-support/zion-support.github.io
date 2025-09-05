@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const AIChatAssistant: React.FC = () => {
   return (
     <main role=\"main\">
@@ -19,3 +20,7 @@ const AIChatAssistant: _React.FC = () => {}
 ;  );
 };,
 export default AIChatAssistant;
+=======
+export default AIChatAssistant;
+>>>>>>> main
+>>>>>>> origin/main

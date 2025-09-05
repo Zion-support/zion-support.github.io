@@ -1,7 +1,10 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
+<<<<<<< HEAD
 export const ThemeProvider: Reac t.FC < ThemeProviderProps> = ({ children }) => {';
 export const useTheme = (props: any) => {;';';
 type Theme = 'light' | 'dark' | 'system';';';
+=======
+>>>>>>> origin/main
 export const ThemeProvider: React.FC < ThemeProviderProps> = ({ children }) => {;
 export const useTheme = (props: any) => {;
 type Theme = 'light' | 'dark' | 'system';
@@ -11,6 +14,7 @@ interface ThemeContextType {;
   theme: Them e;
   setTheme: (theme: Them e) => void;
   isDark: boolean}
+<<<<<<< HEAD
 export 
   ';
   if(context = == null) {;';';
@@ -26,6 +30,9 @@ export const ThemeProvider: Reac t.FC<ThemeProviderProps> = ({ children }) => {
       if(saved && ['light',dark',system'].includes(saved)) {
         return saved}';
     }';';
+=======
+=======
+>>>>>>> origin/main
 export const "ThemeProvider": "React.FC < ThemeProviderProps> = ({ children "}) => {;
 export const useTheme = ("props": "any) => {;
 type Theme = 'light' | 'dark' | 'system';
@@ -68,6 +75,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
       if(saved && ['light',dark',system'].includes(saved)) {
         return saved}
     }
+<<<<<<< HEAD
     return 'system'});
 ;
     return 'system'}
@@ -79,19 +87,37 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   return () => {;
     // Cleanup function;
   "};
+=======
+    return 'system'}
+    );
+
+  const [isDark, setIsDark] = useState<any>(false);
+
+>>>>>>> origin/main
   useEffect(() => {
 // TODO: Add dependencies if needed
   return () => {
     // Cleanup function
   };
 }, []);, []);
+<<<<<<< HEAD
 </any>
 </Theme>';
 </ThemeProviderProps>;';;';
+=======
+>>>>>>> origin/main
 ;
 </any>;
 </Theme>;
 </ThemeProviderProps>;
+<<<<<<< HEAD
 </any>
 </Theme>
 </ThemeProviderProps>
+=======
+=======
+
+</any>
+</Theme>
+</ThemeProviderProps>
+>>>>>>> origin/main

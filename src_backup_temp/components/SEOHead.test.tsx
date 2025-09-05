@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/reactimport SEOHead from ./SEOHeaddescribe(SEOHead', () => {';';
   it('renders without crashing', () => {';
     render(<SEOHead  />)';';
@@ -6,3 +7,6 @@ import { render, screen } from '@testing-library/reactimport SEOHead from ./SEOH
     render(<SEOHead  />)';
     // Add specific test assertions based on component content})});';;';
 import { render,screen } from '@testing-library/reactimport SEOHead from ./SEOHeaddescribe(SEOHead',() => { it('renders without crashing',() => { render(<SEOHead />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<SEOHead />)
+=======
+import { render,screen } from '@testing-library/reactimport SEOHead from ./SEOHeaddescribe(SEOHead',() => { it('renders without crashing',() => { render(<SEOHead />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<SEOHead />)
+>>>>>>> origin/main

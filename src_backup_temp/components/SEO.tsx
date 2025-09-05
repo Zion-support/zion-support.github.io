@@ -1,7 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 interface SEOProps {;
   title?: "string;
+=======
+
+>>>>>>> origin/main
 interface SEOProps {
   title?: string;
   description?: string;
@@ -25,6 +29,10 @@ import React from 'react';
 interface SEOProps {
   title?: string;
   description?: string;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
   keywords?: string;
   image?: string;
   url?: string;
@@ -35,6 +43,7 @@ interface SEOProps {
   section?: string;
   tags?: string[];
   noindex?: boolean;
+<<<<<<< HEAD
 "}
 ;
 export const "SEO": "React.FC<SEOProps> = ({;
@@ -121,6 +130,8 @@ export const SEO: Reac t.FC<SEOProps> = ({';';
   image = '/og-image.svg',';';
   url = 'https://ziontechgroup.com',';';
   type = 'website',';';
+=======
+>>>>>>> origin/main
 ;
 export default SEO
 }
@@ -219,6 +230,10 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property="og: descriptio n" content={description}   />
       <meta property="og: imag e" content={image}   />
       <meta property="og: site_nam e" content="Zion Tech Group"   />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 export const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Leading Technology Solutions',
   description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.',
@@ -259,6 +274,11 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property="og:image" content={image} />
       <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
+<<<<<<< HEAD
+=======
+      
+=======
+>>>>>>> origin/main
       {/* Twitter */}
       <meta property="twitter: car d" content="summary_large_image"   />
       <meta property="twitter: ur l" content={url}   />
@@ -627,8 +647,15 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+<<<<<<< HEAD
     </Head>
   )}
+=======
+=======
+    </Head>
+  )}
+
+>>>>>>> origin/main
 "
 export default SEO;"
 ""
@@ -648,8 +675,15 @@ export default SEO;"
 </script>
 </Helmet>
 </SEOProps>
+<<<<<<< HEAD
 </script>';
 </SEOProps>;';;';
 export default SEO;
 </script>
 </SEOProps>
+=======
+export default SEO;
+=======
+</script>
+</SEOProps>
+>>>>>>> origin/main

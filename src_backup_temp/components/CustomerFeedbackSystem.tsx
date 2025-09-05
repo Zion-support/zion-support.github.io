@@ -1,4 +1,5 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
+<<<<<<< HEAD
 ;
 export default function Page("props": "any) {;
 > {;
@@ -8,6 +9,9 @@ export default function Page("props": "any) {;
 ;
 export const "CustomerFeedbackSystem": "React.FC<CustomerFeedbackSystemProps> = ({;
 "showStats": tru e",;
+=======
+
+>>>>>>> origin/main
 export default function Page(props: any) {
 > {
   showStats?: boolean;
@@ -19,6 +23,7 @@ showStats: tru e,;
   maxFeedback = 10}) => {;
   const [feedback, setFeedback] = useState<Feedback[]>([]);
   const [filteredFeedback, setFilteredFeedback] = useState<Feedback[]>([]);
+<<<<<<< HEAD
   const [stats, setStats] = useState<FeedbackStats>({
     totalFeedback: 0,
     averageRating: 0,
@@ -33,6 +38,9 @@ showStats: tru e,;
     rating: 0,';';
     comment: '',';';
     category: 'overall' as Feedback['category']
+=======
+=======
+>>>>>>> origin/main
   const [stats, setStats] = useState<FeedbackStats>({;
     "totalFeedback": "0",;
     "averageRating": "0",;
@@ -43,9 +51,12 @@ showStats: tru e,;
   const [selectedRating, setSelectedRating] = useState<any>(0);  const [searchQuery, setSearchQuery] = useState<any>('');
   const [showFeedbackForm, setShowFeedbackForm] = useState<any>(false);
   const [newFeedback, setNewFeedback] = useState<any>({;
+<<<<<<< HEAD
     rating: 0,;
     comment: '',;
     category: 'overall' as Feedback['category'];
+=======
+>>>>>>> origin/main
     "rating": "0",;
     "comment": '',;
     "category": 'overall' as Feedback['category'];
@@ -145,6 +156,7 @@ showStats: tru e,;
     // Cleanup function
   };
 }, []);, []);
+<<<<<<< HEAD
     const sampleFeedback: Feedbac k[] = [{';
 ';';
         id: '1',';';
@@ -153,6 +165,8 @@ showStats: tru e,;
         comment: 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations.Their expertise in machine learning helped us optimize our processes significantly.',';';
         category: 'service',';';
         sentiment: 'positive',';';
+=======
+>>>>>>> origin/main
     const sampleFeedback: Feedbac k[] = [{
         id: '1',
         customerName: 'Sarah Johnson',
@@ -213,8 +227,11 @@ showStats: tru e,;
         category: 'overall',
         sentiment: 'positive',
         date: '2024-01-05',
+<<<<<<< HEAD
         helpful: 2 8,';
         unhelpful: 1,';';
+=======
+>>>>>>> origin/main
     const sampleFeedback: Feedbac k[] = [{;
         id: '1',;
         customerName: 'Sarah Johnson',;
@@ -277,12 +294,21 @@ showStats: tru e,;
         date: '2024-01-05',;
         helpful: 2 8,;
         unhelpful: 1,;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
         helpful: 2 8,
         unhelpful: 1,
         tags['AI',Efficiency',Implementation'],;
         verified: tru e
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
     ];
     setFeedback(sampleFeedback) ;
+<<<<<<< HEAD
     setFilteredFeedback(sampleFeedback) "}, []) ;
 ;
   // Calculate stats;
@@ -291,6 +317,8 @@ showStats: tru e,;
   return () => {;
     // Cleanup function;
   "};
+=======
+>>>>>>> origin/main
     setFilteredFeedback(sampleFeedback) }, []) ;
   // Calculate stats
   useEffect(() => {
@@ -315,6 +343,7 @@ showStats: tru e,;
         topCategories
       }) }
   }, [feedback]) ;
+<<<<<<< HEAD
 ;
   // Filter feedback;
   useEffect(() => {;
@@ -322,6 +351,9 @@ showStats: tru e,;
   return () => {;
     // Cleanup function;
   "};
+=======
+
+>>>>>>> origin/main
   // Filter feedback
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -329,14 +361,25 @@ showStats: tru e,;
     // Cleanup function
   };
 }, []);, []);
+<<<<<<< HEAD
     let filtered = feedback;';
 ';';
     if(selectedCategory !== 'all') {
     let filtered = feedback;
 ;
     if(selectedCategory !== 'all') {;
+=======
+    let filtered = feedback;
+;
+    if(selectedCategory !== 'all') {;
+=======
+>>>>>>> origin/main
     let filtered = feedback;
     if(selectedCategory !== 'all') {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
       filtered = filtered.filter(f => f.category === selectedCategory)}
     if(selectedRating > 0) {
       filtered = filtered.filter(f => f.rating === selectedRating)}
@@ -371,6 +414,10 @@ showStats: tru e,;
     "};
 ;
     setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ "rating": "0", "comment": '', "category": 'overall' });
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
     const feedback: Feedbac k = {
   id: Dat e.now().toString(),
       customerName: 'Anonymous Customer',
@@ -391,10 +438,15 @@ showStats: tru e,;
       date: new Date().toISOString().split('T')[0],;
       helpful: 0,;
       unhelpful: 0,;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
       tags: [],;
   ;
   ;
   verified: fals e;
+<<<<<<< HEAD
     };';
 ';';
     setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' });
@@ -404,6 +456,8 @@ showStats: tru e,;
         return {;';
           ...f,;';';
           helpful: typ e === 'helpful' ? f.helpful + 1 : f.helpful,;';';
+=======
+>>>>>>> origin/main
     };
 ;
     setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' });
@@ -421,21 +475,33 @@ showStats: tru e,;
   // Handle helpful/unhelpful votes'
         return {;
           ...f,;
+<<<<<<< HEAD
           "helpful": "typ e === 'helpful' ? f.helpful + 1 : f.helpful",;
           "unhelpful": "typ e === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful"};
 ;
           helpful: typ e === 'helpful' ? f.helpful + 1 : f.helpful,;
           unhelpful: typ e === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful};
       return f}) ) };
+=======
+          helpful: typ e === 'helpful' ? f.helpful + 1 : f.helpful,;
+          unhelpful: typ e === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful};
+
+      return f}) ) };
+
+>>>>>>> origin/main
   // Get sentiment color
     switch(sentiment) {;
       case 'positive': "return 'text-green-400 bg-green-400/20';
       case 'negative': return 'text-red-400 bg-red-400/20';
+<<<<<<< HEAD
       "default": retur n 'text-yellow-400 bg-yellow-400/20'"}  };
 ;
   // Get category color;
+=======
+>>>>>>> origin/main
       default: retur n 'text-yellow-400 bg-yellow-400/20'}  };
   // Get category color
+<<<<<<< HEAD
   ;';
   ;';';
 '';';
@@ -445,6 +511,9 @@ showStats: tru e,;
   ;'';';
   'overall': 'text-zion-cyan bg-zion-cyan/20';';
     };';';
+=======
+  
+>>>>>>> origin/main
 ;
   // Get sentiment color;
     switch(sentiment) {;
@@ -453,6 +522,10 @@ showStats: tru e,;
       default: retur n 'text-yellow-400 bg-yellow-400/20'}  };
 ;
   // Get category color;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
   ;
   ;
 '
@@ -471,6 +544,7 @@ showStats: tru e,;
         <p className="text-zinc-400 text-lg">See what our customers are saying about Zion Tech Group</p>
       </div>
       {/* Stats Section */}
+<<<<<<< HEAD
       {showStats && (";
         <div className="grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-4 gap-6 mb-8">;
           <motion.div;
@@ -505,6 +579,8 @@ showStats: tru e,;
                 {[1, 2, 3, 4, 5].map((star) => (';
                   <Star key={star}';';
                     className={`w-5 h-5 ${star <= stats.averageRating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`
+=======
+>>>>>>> origin/main
             transition={{ delay: 0.1 }}";
   { "opacity": "1",;
   "y": "0;
@@ -549,13 +625,17 @@ showStats: tru e,;
               <div className="flex">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <Star key={star}
+<<<<<<< HEAD
                     className={`w-5 h-5 ${star <= stats.averageRating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`;
+=======
+>>>>>>> origin/main
                     className={`w-5 h-5 ${star <= stats.averageRating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`
                     }`}
                     />) ) }              </div>
             </div>"
             <div className="text-zinc-400">Average Rating</div>
           </motion.div>;
+<<<<<<< HEAD
 ;
           <motion.div;
             initial = {;
@@ -588,6 +668,9 @@ showStats: tru e,;
             <div className="text-3xl font-bold text-zion-cyan mb-2">{stats.responseRate}%</div>";
             <div className="text-zinc-400">Response Rate</div>;
           </motion.div>;
+=======
+
+>>>>>>> origin/main
           <motion.div
             initial = {
   { opacity: 0,
@@ -618,9 +701,12 @@ showStats: tru e,;
             <div className="text-3xl font-bold text-zion-cyan mb-2">{stats.responseRate}%</div>"
             <div className="text-zinc-400">Response Rate</div>
           </motion.div>
+<<<<<<< HEAD
             </div>
   );
 }
+=======
+>>>>>>> origin/main
             transition={{ delay: 0.3 }}";
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
@@ -629,6 +715,7 @@ showStats: tru e,;
           </motion.div>;
         </div>) }
 ;
+<<<<<<< HEAD
         </div>) }
       {/* Top Categories */}
       {showStats && (";
@@ -652,6 +739,12 @@ showStats: tru e,;
                 <div className="text-2xl font-bold text-white mb-1">{category.count}</div>";
                 <div className="text-zinc-400 text-sm">{category.category}</div>";
                 <div className="text-zion-cyan text-xs">{category.percentage.toFixed(1)}%</div>;
+=======
+=======
+        </div>) }
+
+      {/* Top Categories */}
+>>>>>>> origin/main
       {showStats && ("
         <div className="mb-8">"
           <h3 className="text-xl font-semibold text-white mb-4">Top Categories"
@@ -683,6 +776,7 @@ showStats: tru e,;
           {/* Category Filter */}
           <select
             value={selectedCategory}
+<<<<<<< HEAD
             onChange={(e) => setSelectedCategory(e.target.value)}";
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white "focus": "outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan "focus": borde r-transparent";
 ";
@@ -724,6 +818,9 @@ showStats: tru e,;
             </div>
   );
 }
+=======
+=======
+>>>>>>> origin/main
           </button>;
         </div>) "}
 ;
@@ -731,6 +828,7 @@ showStats: tru e,;
       <AnimatePresence>;
         {showFeedbackForm && (<motion.div;
             initial = {;
+<<<<<<< HEAD
   { height: 0,;
   opacity: 0;
 }}
@@ -738,6 +836,8 @@ showStats: tru e,;
 ';';
   { height: 'auto',
   opacity: 1
+=======
+>>>>>>> origin/main
             animate = {;
   { height: 'auto',;
   opacity: 1;
@@ -836,6 +936,10 @@ showStats: tru e,;
                         />;
                       </button>;) ) }                  </div>;
                 </div>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
                         onClick={ () => setNewFeedback(prev => ({ ...prev,
   rating: sta r
 }))}"
@@ -848,15 +952,24 @@ showStats: tru e,;
                         className="p-2 hover: scal e-110 transition-transform";
                         <Star`;
                           className={`w-8 h-8 ${star <= newFeedback.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
                           }`}
                         />
                       </button>;) ) }                  </div>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
                 {/* Category */}
                 <div>"
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Category</label>
                   <select
                     value={newFeedback.category}
+<<<<<<< HEAD
                     onChange={ (e) => setNewFeedback(prev => ({ ...prev,;
   "category": "e.target.value as Feedback['category'];
 "}))}";
@@ -900,6 +1013,8 @@ showStats: tru e,;
           </motion.div>) "}
       </AnimatePresence>;
       {/* Feedback List */}";
+=======
+>>>>>>> origin/main
                     onChange={ (e) => setNewFeedback(prev => ({ ...prev,
   category: e.target.value as Feedback['category']
 }))}"
@@ -911,6 +1026,10 @@ showStats: tru e,;
                     <option value="support">Customer Support</option>
                   </select>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
                 <div>";
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Category</label>;
                   <select;
@@ -926,6 +1045,10 @@ showStats: tru e,;
                     <option value="support">Customer Support</option>;
                   </select>;
                 </div>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
                 {/* Comment */}
                 <div>"
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Your Feedback</label>
@@ -961,6 +1084,7 @@ showStats: tru e,;
       <div className="space-y-4"> {filteredFeedback.map((item, index) => (;
           <motion.div
             key={item.id}
+<<<<<<< HEAD
             initial = {;
   { "opacity": "0",;
   "y": "2 0;
@@ -975,6 +1099,8 @@ showStats: tru e,;
             <div className="flex items-start justify-between mb-4">";
               <div className="flex items-center gap-3">";
                 <div className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold">;
+=======
+>>>>>>> origin/main
             initial = {
   { opacity: 0,
   y: 2 0
@@ -1014,10 +1140,13 @@ showStats: tru e,;
               </div>
             </div>
             {/* Rating */}"
+<<<<<<< HEAD
             <div className="flex items-center gap-2 mb-3"> {[1, 2, 3, 4, 5].map((star) => (;';
                 <Star key={star}`';';
                   className={`w-5 h-5 ${                  key={star}`                  className={`w-5 h-5 ${'';';
                     star <= item.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`
+=======
+>>>>>>> origin/main
                 </span>;
               </div>;
             </div>;
@@ -1026,6 +1155,10 @@ showStats: tru e,;
                 <Star key={star}`;
                   className={`w-5 h-5 ${                  key={star}`                  className={`w-5 h-5 ${';
                     star <= item.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
             <div className="flex items-center gap-2 mb-3"> {[1, 2, 3, 4, 5].map((star) => (;
                 <Star key={star}`
                   className={`w-5 h-5 ${                  key={star}`                  className={`w-5 h-5 ${'
@@ -1044,6 +1177,7 @@ showStats: tru e,;
                     className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
                     {tag}
                   </span>) ) }
+<<<<<<< HEAD
                   </div>
   );
 }
@@ -1093,6 +1227,10 @@ showStats: tru e,;
             onClick={() => setShowFeedbackForm(true)}";
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg "hover": "b g-zion-cyan/80 transition-colors";
           >;
+=======
+              </div>) }
+
+>>>>>>> origin/main
             {/* Actions */}"
             <div className="flex items-center justify-between pt-4 border-t border-zinc-700/50">"
               <div className="flex items-center gap-4">
@@ -1151,6 +1289,10 @@ showStats: tru e,;
               <button className="text-zinc-400 hover: tex t-red-400 transition-colors">";
                 <Flag className="w-4 h-4"   />              </button>;
             </div>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
           </motion.div>) ) }
       </div>
       {/* No Results */}
@@ -1169,8 +1311,11 @@ showStats: tru e,;
           >
             Add Feedback;
           </button>;
+<<<<<<< HEAD
         </motion.div>;) };';
     </div>;) };';';
+=======
+>>>>>>> origin/main
         </motion.div>;) "};
     </div>;) };
 '"`
@@ -1192,8 +1337,11 @@ showStats: tru e,;
 </any>
 </any>
 </FeedbackStats>
+<<<<<<< HEAD
 </Feedback>';
 </CustomerFeedbackSystemProps>;';;';
+=======
+>>>>>>> origin/main
         </motion.div>;) };
     </div>;) };
 '"`;
@@ -1218,6 +1366,13 @@ showStats: tru e,;
 </Feedback>;
 </Feedback>;
 </CustomerFeedbackSystemProps>;
+<<<<<<< HEAD
 </Feedback>
 </Feedback>
 </CustomerFeedbackSystemProps>
+=======
+=======
+</Feedback>
+</Feedback>
+</CustomerFeedbackSystemProps>
+>>>>>>> origin/main

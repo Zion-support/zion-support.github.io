@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { render, screen  } from '@testing-library/reactimport EnhancedPerformanceOptimizer from ./EnhancedPerformanceOptimizerdescribe(EnhancedPerformanceOptimizer, () => {';';';
   it(renders without crashing', () => {'';
     render(<EnhancedPerformanceOptimizer  />)';';
@@ -6,3 +7,6 @@ import { render, screen  } from '@testing-library/reactimport EnhancedPerformanc
     render(<EnhancedPerformanceOptimizer  />)';
     // Add specific test assertions based on component content})});';;';
 import { render,screen } from '@testing-library/reactimport EnhancedPerformanceOptimizer from ./EnhancedPerformanceOptimizerdescribe(EnhancedPerformanceOptimizer,() => {' it(renders without crashing',() => {' render(<EnhancedPerformanceOptimizer />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<EnhancedPerformanceOptimizer />)
+=======
+import { render,screen } from '@testing-library/reactimport EnhancedPerformanceOptimizer from ./EnhancedPerformanceOptimizerdescribe(EnhancedPerformanceOptimizer,() => {' it(renders without crashing',() => {' render(<EnhancedPerformanceOptimizer />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<EnhancedPerformanceOptimizer />)
+>>>>>>> origin/main

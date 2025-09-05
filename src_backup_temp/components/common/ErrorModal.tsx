@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { SEO } from "@/components/SEO";
 export default function ErrorModal("props": "any) {return (;
@@ -10,6 +11,8 @@ export default function ErrorModal("props": "any) {return (;
         </p>;
       </div>;
   );""}";
+=======
+>>>>>>> origin/main
 import React from "react"
 import { SEO } from "@/components/SEO"
 export default function ErrorModal(props: any) {return (
@@ -22,4 +25,8 @@ export default function ErrorModal(props: any) {return (
         </p>
       </div>
     );"}"
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 </div>

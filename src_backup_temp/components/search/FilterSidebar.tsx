@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
           </h3>;
           <button onClick={onClose}";
             className=""lg": "hidden p-2 "hover": b g-zion-blue-light/20 rounded-lg transition-colors";
@@ -17,6 +18,9 @@ import React from 'react';
               Clear all;
             </button>;
           </div>;
+=======
+          
+>>>>>>> origin/main
           <button onClick={onClose}"
             className="lg: hidden p-2 hover: b g-zion-blue-light/20 rounded-lg transition-colors"
 "
@@ -34,6 +38,10 @@ import React from 'react';
               Clear all
             </button>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
           {/* Filter groups */"}
           {filters.map((group) => (;";
             <div key={group.key} className="space-y-3">;";
@@ -52,6 +60,7 @@ import React from 'react';
   e.target.checked);
 ;
 ;
+<<<<<<< HEAD
 ;
 }";
                         className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded "focus": "rin g-zion-cyan "focus": rin g-2";
@@ -61,6 +70,8 @@ import React from 'react';
                         {option.count && (";
                           <span className="ml-2 text-zion-slate-light/60">;
                             ({option.count});
+=======
+>>>>>>> origin/main
 }"
                         className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded focus: rin g-zion-cyan focus: rin g-2"
                       />"

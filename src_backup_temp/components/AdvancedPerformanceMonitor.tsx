@@ -45,6 +45,7 @@ export default function Page("props": "any) {;
         color = 'text-yellow-500'} else {;
         rating = 'poor';
         color = 'text-red-500'}
+<<<<<<< HEAD
     });
 ;
   TrendingUp,';
@@ -53,6 +54,8 @@ export default function Page("props": "any) {;
     let "color": "string;
 ;
     if(averageScore >= 90) {;
+=======
+>>>>>>> origin/main
     }
     );
   TrendingUp,'
@@ -83,17 +86,22 @@ export default function Page("props": "any) {;
     if('PerformanceObserver' in window) {;
       // First Contentful Paint;
         if(fcpEntry) {;
+<<<<<<< HEAD
           setMetrics(prev => ({ ...prev, "fcp": "fcpEntr y.startTime "}))}
       });
       fcpObserver.observe({ "entryTypes": "['paint'] "});
 ;
       // Largest Contentful Paint;
+=======
+
+>>>>>>> origin/main
         if(fcpEntry) {
           setMetrics(prev => ({ ...prev, fcp: fcpEntr y.startTime }))}
       }
     );
       fcpObserver.observe({ entryTypes: ['paint'] }
     );
+<<<<<<< HEAD
         if(lastEntry) {;
           setMetrics(prev => ({ ...prev, "lcp": "lastEntr y.startTime "}))}
       });
@@ -101,32 +109,52 @@ export default function Page("props": "any) {;
 ;
       // First Input Delay;
       const fidObserver = new PerformanceObserver(list => {;
+=======
+
+        if(lastEntry) {;
+
+>>>>>>> origin/main
         if(lastEntry) {
           setMetrics(prev => ({ ...prev, lcp: lastEntr y.startTime }))}
       }
     );
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
     );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
         const entries = list.getEntries();        entries.forEach(entry => {;
           if (entry.processingStart && entry.startTime) {;
             setMetrics(prev => ({ ...prev, fid }) ) }
+<<<<<<< HEAD
         })});
       fidObserver.observe({ "entryTypes": "['first-input'] "});
 ;
       // Layout Shift;
       const clsObserver = new PerformanceObserver(list => {;
+=======
+>>>>>>> origin/main
         })}
     );
       fidObserver.observe({ entryTypes: ['first-input'] }
     );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
         let clsValue = 0;        list.getEntries().forEach(("entry": "an y) => {;
           if(!entry.hadRecentInput) {;
+<<<<<<< HEAD
             clsValue += entry.value"}
         });
         setMetrics(prev => ({ ...prev, "cls": "clsValu e "}));
       });
       clsObserver.observe({ "entryTypes": "['layout-shift'] "});
       return () => {;
+=======
+
+>>>>>>> origin/main
           if(!entry.hadRecentInput) {
             clsValue += entry.value}
         }
@@ -193,6 +221,7 @@ export default function Page("props": "any) {;
     return ();
       <button;
         onClick={() => setIsVisible(true)}
+<<<<<<< HEAD
         className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg "hover": "b g-zion-cyan/90 transition-all duration-300 z-50";
         ;
       >";
@@ -212,6 +241,8 @@ export default function Page("props": "any) {;
           ×;
         </button>      </div>;
   );""}";
+=======
+>>>>>>> origin/main
         className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover: b g-zion-cyan/90 transition-all duration-300 z-50"
       >"
         <Activity className="w-6 h-6"   />      </button>
@@ -228,4 +259,8 @@ export default function Page("props": "any) {;
           ×
         </button>      </div>
     );"}"
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 </div>

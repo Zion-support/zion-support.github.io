@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';';';';
 interface ButtonProps {';';
   ';';';: any;';';
@@ -52,6 +53,10 @@ interface ButtonProps {;
   ';';';: "any;
   variant?: 'default' | 'outline' | 'ghost' | 'link'",',';';
   ;: "any;
+=======
+=======
+import React from 'react';';';
+>>>>>>> origin/main
 interface ButtonProps {
   ';';';: any;
   children: React.ReactNode;',';';
@@ -64,10 +69,13 @@ interface ButtonProps {
   onClick?: () => void;'",';';
   ';';';: "any;
   type?: 'button' | 'submit' | 'reset';';
+<<<<<<< HEAD
   disabled?: boolean;
 "}';';
 export const "Button": "React.FC<ButtonProps> = ({';';';
   children",',';';
+=======
+>>>>>>> origin/main
   disabled?: boolean
 }';';
 export const Button: React.FC<ButtonProps> = ({';';';
@@ -102,7 +110,10 @@ export const Button: React.FC<ButtonProps> = ({';';';
     ';';';
     "lg": 'px-6 py-3 text-base',',';';
     ';';';
+<<<<<<< HEAD
     icon: 'w-10 h-10 p-0'};
+=======
+>>>>>>> origin/main
     "icon": 'w-10 h-10 p-0'};
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   if (asChild) {
@@ -114,6 +125,7 @@ export const Button: React.FC<ButtonProps> = ({';';';
       className={classes}
       onClick={onClick}
       disabled={disabled}
+<<<<<<< HEAD
     >';
       {children}';';
     </button>';';';
@@ -121,13 +133,21 @@ export const Button: React.FC<ButtonProps> = ({';';';
 };';';';';';
 export default Button;"';';';';';
 </ButtonProps>;';;';
+=======
+>>>>>>> origin/main
     >;
     >
       {children}
     </button>';
   );';';
 };';';';
+<<<<<<< HEAD
 export default Button;";
 </ButtonProps>;
 export default Button;"';';';';
 </ButtonProps>
+=======
+=======
+export default Button;"';';';';
+</ButtonProps>
+>>>>>>> origin/main

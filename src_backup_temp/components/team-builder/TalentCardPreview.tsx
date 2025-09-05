@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface TalentCardPreviewProps extends React.PropsWithChildren<{}> {
   talent: TalentProfile;
   onInvite: talentId: string, role: string void; // role is passed for context
@@ -10,3 +11,8 @@ export
 ';';
 interface TalentCardPreviewProps extends React.PropsWithChildren<{}> { talent: 'TalentProfile; onInvite: talentId: string',role: 'string void; roleTitle: string} export ></div> )}; '"`
 interface TalentCardPreviewProps extends React.PropsWithChildren<{}> { "talent": 'TalentProfile; "onInvite": "talentId": "string'","role": 'string void; "roleTitle": "string"} export ></div> )}; '"`
+=======
+interface TalentCardPreviewProps extends React.PropsWithChildren<{}> { talent: 'TalentProfile; onInvite: talentId: string',role: 'string void; roleTitle: string} export ></div> )}; '"`
+=======
+interface TalentCardPreviewProps extends React.PropsWithChildren<{}> { "talent": 'TalentProfile; "onInvite": "talentId": "string'","role": 'string void; "roleTitle": "string"} export ></div> )}; '"`
+>>>>>>> origin/main

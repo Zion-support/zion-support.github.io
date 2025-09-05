@@ -29,6 +29,7 @@ export function usePerformance("props": "any) {;
     sendToAnalytics = false} = options;
 ;
   const [metrics, setMetrics] = useState<PerformanceMetrics>({;
+<<<<<<< HEAD
     "fcp": "nul l",;
     "lcp": "nul l",;
     "fid": "nul l",;
@@ -38,6 +39,9 @@ export function usePerformance("props": "any) {;
     "windowLoad": "nul l",;
     "navigationStart": "nul l"});
 ;
+=======
+
+>>>>>>> origin/main
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: nul l,
     lcp: nul l,
@@ -48,6 +52,10 @@ export function usePerformance("props": "any) {;
     windowLoad: nul l,
     navigationStart: nul l}
     );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
   const [isMonitoring, setIsMonitoring] = useState<any>(false);
 : "src/hooks/usePerformance.tsx;
   const observerRef = useRef<PerformanceObserver | null>(null);';
@@ -63,6 +71,7 @@ export function usePerformance("props": "any) {;
     ;
       ;
       if (lcpEntry) {;
+<<<<<<< HEAD
         setMetrics(prev => ({ ...prev, "lcp": "lcpEntr y.startTime "}))});
     // First Input Delay (FID);
     ;
@@ -96,6 +105,9 @@ export function usePerformance("props": "any) {;
       for (const entry of list.getEntries()) {;
         ;
         if (!layoutShiftEntry.hadRecentInput) {;
+=======
+
+>>>>>>> origin/main
         setMetrics(prev => ({ ...prev, fcp: fcpEntr y.startTime }))}
     );
     // Largest Contentful Paint (LCP)
@@ -125,6 +137,7 @@ export function usePerformance("props": "any) {;
     // Cumulative Layout Shift (CLS)
       for (const entry of list.getEntries()) {
         if (!layoutShiftEntry.hadRecentInput) {
+<<<<<<< HEAD
           clsValue += layoutShiftEntry.value;
 ;
       setMetrics(prev => ({ ...prev, "cls": "clsValu e "}))});
@@ -141,6 +154,11 @@ export function usePerformance("props": "any) {;
       lcpObserver.observe({ "entryTypes": "['largest-contentful-paint'] "});
       fidObserver.observe({ "entryTypes": "['first-input'] "});
       clsObserver.observe({ "entryTypes": "['layout-shift'] "})} catch (error) {;
+=======
+
+          clsValue += layoutShiftEntry.value;
+;
+>>>>>>> origin/main
       setMetrics(prev => ({ ...prev, cls: clsValu e }))}
     );
     // Start observing
@@ -184,18 +202,26 @@ export function usePerformance("props": "any) {;
         domLoad,;
         windowLoad;
       }));
+<<<<<<< HEAD
 ;
           // // // // // // // // })});
     try {;
 : "src/hooks/usePerformance.tsx;
 ';
       longTaskObserver.observe({ "entryTypes": ['longtask'] "})} catch (error) {;
+=======
+
+>>>>>>> origin/main
           // // // // // // // // })}
     );
     try {
 :src/hooks/usePerformance.tsx
 '
       longTaskObserver.observe({ entryTypes: ['longtask'] })} catch (error) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
       // // // // // // // // }
     return : "unknown longTaskObserver.disconnect();
       if (logToConsole) {;
@@ -240,17 +266,27 @@ export function usePerformance("props": "any) {;
             ;
             setMetrics(prev => ({ ...prev", fcp }));
             if (logToConsole) // }
+<<<<<<< HEAD
         })});
       observerRef.current.observe({ "entryTypes": "['paint'] "})} catch (e) {;
         })}
     );
       observerRef.current.observe({ entryTypes: ['paint'] })} catch (e) {
+=======
+        })}
+    );
+      observerRef.current.observe({ entryTypes: ['paint'] })} catch (e) {
+
+>>>>>>> origin/main
       // }
             ;
             setMetrics(prev => ({ ...prev, fcp }));
             if (logToConsole) }
+<<<<<<< HEAD
         })});
       observerRef.current.observe({ "entryTypes": "['paint'] "})} catch (e) {;
+=======
+>>>>>>> origin/main
         })}
     );
       observerRef.current.observe({ entryTypes: ['paint'] })} catch (e) {
@@ -266,11 +302,18 @@ export function usePerformance("props": "any) {;
           ;
           setMetrics(prev => ({ ...prev", lcp }));
           if (logToConsole) // }
+<<<<<<< HEAD
       });
       lcpObserverRef.current.observe({ "entryTypes": "['largest-contentful-paint'] "})} catch (e) {;
       }
     );
       lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {
+=======
+      }
+    );
+      lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {
+
+>>>>>>> origin/main
       // }
         ;
         ;
@@ -278,8 +321,11 @@ export function usePerformance("props": "any) {;
           ;
           setMetrics(prev => ({ ...prev, lcp }));
           if (logToConsole) }
+<<<<<<< HEAD
       });
       lcpObserverRef.current.observe({ "entryTypes": "['largest-contentful-paint'] "})} catch (e) {;
+=======
+>>>>>>> origin/main
       }
     );
       lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {
@@ -294,13 +340,20 @@ export function usePerformance("props": "any) {;
 : "src/hooks/usePerformance.tsx;
             clsValue += (entry as any).value"}
         }
+<<<<<<< HEAD
         setMetrics(prev => ({ ...prev, "cls": "clsValu e "}));
         if (logToConsole) // });
       clsObserverRef.current.observe({ "entryTypes": "['layout-shift'] "})} catch (e) {;
+=======
+>>>>>>> origin/main
         setMetrics(prev => ({ ...prev, cls: clsValu e }));
         if (logToConsole) // }
     );
       clsObserverRef.current.observe({ entryTypes: ['layout-shift'] })} catch (e) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
       // }
   }, [enableWebVitals, logToConsole]);
 ;
@@ -312,9 +365,12 @@ export function usePerformance("props": "any) {;
     ;
             clsValue += (entry as any).value"}
         }
+<<<<<<< HEAD
         setMetrics(prev => ({ ...prev, "cls": "clsValu e "}));
         if (logToConsole) });
       clsObserverRef.current.observe({ "entryTypes": "['layout-shift'] "})} catch (e) {;
+=======
+>>>>>>> origin/main
         setMetrics(prev => ({ ...prev, cls: clsValu e }));
         if (logToConsole) }
     );
@@ -576,11 +632,16 @@ export function useAPIPerformance(..."args": "unknow n[]): unknown {;
 : "src/hooks/usePerformance.tsx;
       ;
       if (average > threshold) {;
+<<<<<<< HEAD
         slowAPIs.push({ endpoint", average })}
     });
     return slowAPIs.sort("a": "unknow n", "b": "unknown b.average - a.average)"}, [apiMetrics]);
       ;
       if (average > threshold) {;
+=======
+
+      
+>>>>>>> origin/main
       if (average > threshold) {
         slowAPIs.push({ endpoint, average })}
     }

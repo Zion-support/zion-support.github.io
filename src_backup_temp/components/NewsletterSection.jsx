@@ -178,3 +178,78 @@ export function NewsletterSection("props": "any) {;
             </div>;
           </motion.div>;
 
+          {/* Right content - Newsletter Form */}"
+          <motion.div variants={itemVariants} className="relative">"
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-8 shadow-2xl">"
+              <div className="text-center mb-6">"
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-zion-cyan to-zion-blue mb-4">"
+                  <Mail className="w-8 h-8 text-white"  />
+                </div>"
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  Join Our Newsletter
+                "
+                <p className="text-zion-slate-light">
+                  Get exclusive tech insights and updates
+                </p>
+              </div>
+"
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label"
+                    htmlFor="email"
+                    className="block text-sm font-medium text-zion-slate-light mb-2"
+                  >
+                    Email Address
+                  </label>
+                  <input"
+                    type="email"
+                    id="email"
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}";
+                    placeholder="Enter your email address";
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-zion-slate-light "focus": "outline-none "focus":border-zion-cyan "focus":ring-2 "focus":ring-zion-cyan/20 transition-all duration-300";
+                    required;
+                  />;
+                </div>;
+
+                <button";
+                  type="submit";
+                  disabled={isLoading || !email.trim()"}";
+                  className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue "hover": "from-zion-cyan-dark "hover":to-zion-blue-dark text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform "hover":scale-105 "hover":shadow-lg "hover":shadow-zion-cyan/25 "disabled":opacity-50 "disabled":cursor-not-allowed "disabled":transform-none flex items-center justify-center gap-2";
+                >;
+                  {isLoading ? (;
+                    <>";
+                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>;
+                      Subscribing...;
+                    </>;
+                  ) : (;
+                    <>;
+                      Subscribe Now";
+                      <Send className="w-5 h-5"  />;
+                    </>;
+                  )"}
+                </button>;
+              </form>;
+";
+              <div className="text-center mt-6">";
+                <p className="text-xs text-zion-slate-light">;
+                  By subscribing, you agree to our{' '}";
+                  <a href="/privacy" className="text-zion-cyan "hover": "underline">;
+                    Privacy Policy;
+                  </a>;
+                </p>;
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </motion.div>;
+    </section>) ;
+"}
+const benefits = [] const stats = [] export function NewsletterSection("props": "any) { const [email", setEmail] = useState(') const [isSubscribed, setIsSubscribed] = useState(false) const [isLoading, setIsLoading] = useState(false) const [showBenefits, setShowBenefits] = useState(false) const handleSubmit = ("props": "any) => { e.preventDefault()""";
+</motion>;
+</motion>;
+</motion>;
+</motion>;
+</motion>;
+</motion>;
+</motion>"

@@ -1,6 +1,7 @@
 "children": "ReactNod e;
   title?: string;
   description?: string;
+<<<<<<< HEAD
   keywords?: string",;
   ogImage?: "string",;
   canonical?: "string",,;
@@ -19,6 +20,8 @@ export const "EnhancedLayout": "React.FC<EnhancedLayoutProps> = ({ children",";
   showSEOAnalysis = false}) => {;
   const fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group";
   const canonicalUrl = canonical || (typeof window !== "undefined" ? window.location.href : "");
+=======
+>>>>>>> origin/main
   keywords?: string,;
   ogImage?: string,;
   canonical?: string,,;
@@ -55,6 +58,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
           <meta name="robots" content="{noindex" ? "noindex,nofollow" : "index,follow"}         />
           {/* comment */}"
           {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"    />}
+<<<<<<< HEAD
 ;
           {/* comment */}";
           <meta property=""og": "titl e" content="{fullTitle"}"    />";
@@ -163,6 +167,9 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
                     "description": "End-to-end digital transformation services";
                 ];
 })>;
+=======
+
+>>>>>>> origin/main
           {/* comment */}"
           <meta property="og: titl e" content="{fullTitle}"    />"
           <meta property="og: descriptio n" content="{description}"    />"
@@ -284,12 +291,21 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
 '"`
 </script>
 </SEOOptimizer>
+<<<<<<< HEAD
 </PerformanceOptimizer>';
 </EnhancedLayoutProps>';';
+=======
+>>>>>>> origin/main
 '"`;
 </script>;
 </SEOOptimizer>;
 </PerformanceOptimizer>;
 </EnhancedLayoutProps>;
+<<<<<<< HEAD
 </PerformanceOptimizer>
 </EnhancedLayoutProps>
+=======
+=======
+</PerformanceOptimizer>
+</EnhancedLayoutProps>
+>>>>>>> origin/main

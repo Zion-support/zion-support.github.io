@@ -81,19 +81,11 @@ export function AdvancedNotificationSystem() {;
         const searchMatch = notification.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
             notification.message.toLowerCase () .includes(searchQuery.toLowerCase () ) ;
         const readMatch = showRead || !notification.isRead;
-<<<<<<< HEAD:src/components/AdvancedNotificationSystem.jsx
-        return typeMatch && priorityMatch && categoryMatch && searchMatch && readMatch}
-    );
-    const markAllAsRead = (props: any) => {
-        setNotifications(prev => prev.map(n => ({ ...n, isRead: true })))};
-    const archiveNotification = (props: any) => {
-=======
         return typeMatch && priorityMatch && categoryMatch && searchMatch && readMatch}) ;
     const markAllAsRead = () => {;
         setNotifications(prev => prev.map (n => ({ ...n, isRead: true }) ) ) };
     const archiveNotification = (id) => {;
 
->>>>>>> main:src/components/AdvancedNotificationSystem.js.jsx.disabled
         setNotifications(prev => prev.map(n => n.id === id ? { ...n, isArchived: true } : n))};
     const deleteNotification = (id) => {;
 
@@ -147,33 +139,6 @@ export function AdvancedNotificationSystem() {;
         <Bell className="w-5 h-5"/>";
         {unreadCount > 0 && (<span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse">;
             {unreadCount > 9 ? '9+' : unreadCount}
-<<<<<<< HEAD:src/components/AdvancedNotificationSystem.jsx
-          </span>)}
-      </button>)}
-    if (isMinimized) {
-        return (
-        <div className="fixed bottom-4 right-36 z-50">
-        <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">
-          <div className="flex items-center gap-3">
-            <div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>
-            <span className="text-sm text-zion-slate">
-              {unreadCount > 0 ? `${unreadCount} unread notifications` : 'No new notifications'}
-            </span>
-            <button onClick={() => setIsMinimized(false)} className="text-zion-slate-light hover:text-zion-slate transition-colors">
-              <Eye className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-      </div>)}
-    return (
-        <div className="fixed bottom-4 right-4 w-96 h-[600px] bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 flex flex-col" ref={containerRef}>
-      {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-emerald/10 to-zion-cyan/10">
-        <div className="flex items-center gap-3">
-          <Bell className="w-5 h-5 text-zion-emerald" />
-          <span className="font-semibold text-zion-slate">Notifications</span>
-          {unreadCount > 0 && (<span className="bg-red-500 text-white text-xs rounded-full px-2 py-1">
-=======
           </span>) }
       </button>) }
     if(isMinimized) {;
@@ -198,7 +163,6 @@ export function AdvancedNotificationSystem() {;
           <Bell className="w-5 h-5 text-zion-emerald"/>";
           <span className="font-semibold text-zion-slate">Notifications</span>";
           {unreadCount > 0 && (<span className="bg-red-500 text-white text-xs rounded-full px-2 py-1">;
->>>>>>> main:src/components/AdvancedNotificationSystem.js.jsx.disabled
               {unreadCount}
             </span>)}
         </div>";
@@ -255,19 +219,11 @@ export function AdvancedNotificationSystem() {;
         </div>;
       </div>;
 
-<<<<<<< HEAD:src/components/AdvancedNotificationSystem.jsx
-      {/* Notifications List */}
-      <div className="flex-1 overflow-y-auto">
-        {Object.entries(groupedNotifications).map(([category, categoryNotifications]) => (<div key={category}>
-            {groupByCategory && (<div className="px-4 py-2 bg-zion-slate-light/10 border-b border-zion-slate-light">
-                <h3 className="text-sm font-medium text-zion-slate capitalize">{category}
-=======
       {/* Notifications List */}";
       <div className="flex-1 overflow-y-auto">;
         {Object.entries(groupedNotifications).map(([category, categoryNotifications]) => (<div key={category}>";
             {groupByCategory && (<div className="px-4 py-2 bg-zion-slate-light/10 border-b border-zion-slate-light">";
                 <h3 className="text-sm font-medium text-zion-slate capitalize">{category}</h3>;
->>>>>>> main:src/components/AdvancedNotificationSystem.js.jsx.disabled
               </div>)}
             '`;
             {categoryNotifications.map((notification) => (<div key={notification.id} className={`border-l-4 ${getPriorityColor(notification.priority)} ${!notification.isRead ? 'bg-zion-emerald/5' : 'bg-white dark:bg-zion-slate'} hover:bg-zion-slate-light/5 transition-colors`}>";

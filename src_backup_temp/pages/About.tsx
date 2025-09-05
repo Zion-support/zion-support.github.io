@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 :src/pages/About.tsx
 import { 
   Users, 
@@ -214,6 +215,9 @@ export function About() {
           </div>
         </div>
       </section>
+=======
+
+>>>>>>> origin/main
 export default function About() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">

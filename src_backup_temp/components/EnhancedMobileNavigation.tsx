@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';';';
 import { Link, useLocation  } from 'react-router-dom';';';
  from 'react';';
@@ -25,6 +26,21 @@ interface NavigationItem {;
 }>;';';
   icon: React.ComponentType<{ size?: number; className?: string;
 }>;
+=======
+=======
+import React from 'react';
+import { Link, useLocation  } from 'react-router-dom';
+ from 'react';
+export const EnhancedMobileNavigation: React.FC = () => {
+import { motion, AnimatePresence  } from 'framer-motion';
+
+ from 'lucide-react';
+
+>} from 'lucide-react';
+  icon: React.ComponentType<{ size?: number; className?: string;
+}>;
+=======
+>>>>>>> origin/main
   "label": "string;
   "path": string;
   "icon": React.ComponentType<{ size?: number; className?: string;
@@ -37,6 +53,7 @@ interface NavigationItem {;
   "icon": React.ComponentType<{ size?: number; className?: string "}>;
   children?: "NavigationItem[];  description?: string"}
 ;
+<<<<<<< HEAD
 const navigationItems: NavigationIte m[] = [{';
 ';';
     label: 'Home',';';
@@ -119,6 +136,8 @@ const navigationItems: NavigationIte m[] = [{';
 export const EnhancedMobileNavigation: Reac t.FC = () => {
   const [isOpen, setIsOpen] = useState<any>(false);';
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());';';
+=======
+>>>>>>> origin/main
 const navigationItems: NavigationIte m[] = [{;
     label: 'Home',;
     path: '/',;
@@ -216,6 +235,7 @@ export const "EnhancedMobileNavigation": "React.FC = () => {;
       if(menuRef.current && !menuRef.current.contains(event.target as Node)) {;
         setIsOpen(false)"}
     };
+<<<<<<< HEAD
 export default function EnhancedMobileNavigation(props: any) {
   const [isOpen, setIsOpen] = useState<any>(false);';
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);';';
@@ -253,6 +273,9 @@ export default function EnhancedMobileNavigation(props: any) {
       label: 'Contact',';';
       path: '/contact',
       icon: Phon e
+=======
+=======
+>>>>>>> origin/main
 ;
 export default function EnhancedMobileNavigation("props": "any) {;
   const [isOpen", setIsOpen] = useState<any>(false);
@@ -288,10 +311,13 @@ export default function EnhancedMobileNavigation("props": "any) {;
       "icon": "FileTex t;
     "},;
     {;
+<<<<<<< HEAD
       label: 'Contact',;
       path: '/contact',;
       icon: Phon e;
     }
+=======
+>>>>>>> origin/main
       "label": 'Contact',;
       "path": '/contact',;
       "icon": "Phon e;
@@ -404,11 +430,17 @@ export const EnhancedMobileNavigation: React.FC = () => {
     // Cleanup function
   };
 }, []);, []);
+<<<<<<< HEAD
     if(isOpen) {';
 ';';
       document.addEventListener('mousedown', handleClickOutside);';';
     if(isOpen) {;
       document.addEventListener('mousedown', handleClickOutside);
+=======
+    if(isOpen) {;
+      document.addEventListener('mousedown', handleClickOutside);
+=======
+>>>>>>> origin/main
     setActivePath(location.pathname)}, [location]);
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -481,15 +513,20 @@ export default function EnhancedMobileNavigation(props: any) {
     return () => {;
       document.removeEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'unset'}}, [isOpen]);
+<<<<<<< HEAD
 ;
   const toggleExpanded = ("props": "any) => {;
     setExpandedItems(prev => {;
       const newSet = new Set(prev);      if(newSet.has(label)) {;
         newSet.delete(label)"} else {;
+=======
+
+>>>>>>> origin/main
   const toggleExpanded = (props: any) => {
     setExpandedItems(prev => {
       const newSet = new Set(prev);      if(newSet.has(label)) {
         newSet.delete(label)} else {
+<<<<<<< HEAD
         newSet.add(label)}
       return newSet})};
     setExpandedItems(new Set())};';
@@ -498,13 +535,28 @@ export default function EnhancedMobileNavigation(props: any) {
     setExpandedItems(new Set())};
 ;
     setExpandedItems(new Set())};
+=======
+
+        newSet.add(label)}
+      return newSet})};
+;
+    setExpandedItems(new Set())};
+;
+=======
+
+    setExpandedItems(new Set())};
+
+>>>>>>> origin/main
     if(path === '/') {};
     return ()      <div key = {item.label} className="w-full">
         <motion.div
           initial={false}
+<<<<<<< HEAD
           animate = {';
 ';';
   { backgroundColor: isItemActiv e ? 'rgba(34, 221, 210,';';
+=======
+>>>>>>> origin/main
           animate = {;
   { "backgroundColor": "isItemActiv e ? 'rgba(34", 221, 210,;
           animate = {
@@ -514,6 +566,7 @@ export default function EnhancedMobileNavigation(props: any) {
           className={`relative ${depth > 0 ? 'ml-4' : ''}`}
           <Link
             to={item.path}
+<<<<<<< HEAD
             onClick={() => handleNavigation(item.path)}`;
             className={`flex items-center justify-between w-full p-4 text-left transition-all duration-200 ${isItemActive';
                 ? 'text-zion-cyan border-l-2 border-zion-cyan'';
@@ -522,6 +575,8 @@ export default function EnhancedMobileNavigation(props: any) {
 ";
             <div className="flex items-center gap-3">;
               <item.icon;
+=======
+>>>>>>> origin/main
             onClick={() => handleNavigation(item.path)}`
             className={`flex items-center justify-between w-full p-4 text-left transition-all duration-200 ${isItemActive'
                 ? 'text-zion-cyan border-l-2 border-zion-cyan''
@@ -529,8 +584,11 @@ export default function EnhancedMobileNavigation(props: any) {
             }`}
 "
             <div className="flex items-center gap-3">
+<<<<<<< HEAD
               <item.icon';
                 size={20}';';
+=======
+>>>>>>> origin/main
           animate = {;
   { backgroundColor: isItemActiv e ? 'rgba(34, 221, 210,;
   0.1)' : 'transparent' ;
@@ -548,6 +606,10 @@ export default function EnhancedMobileNavigation(props: any) {
             <div className="flex items-center gap-3">;
               <item.icon;
                 size={20}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
               <item.icon
                 size={20}
                 className={isItemActive ? 'text-zion-cyan' : 'text-zion-slate-light'}
@@ -569,9 +631,14 @@ export default function EnhancedMobileNavigation(props: any) {
               <ChevronDown size={16}`;
                 className={`transition-transform duration-200 ${                size={16}`                className={`transition-transform duration-200 ${';
                   isExpanded ? 'rotate-180' : ''`;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
                 }`}
                />) }          </Link>
           {hasChildren && (;
+<<<<<<< HEAD
             <button';
               onClick={() => toggleExpanded(item.label)}"';';
               className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hover: tex t-white transition-colors"'`';';
@@ -580,6 +647,9 @@ export default function EnhancedMobileNavigation(props: any) {
               <ChevronDown size={16}`';';
                 className={`transition-transform duration-200 ${                size={16}`                className={`transition-transform duration-200 ${'';';
                   isExpanded ? 'rotate-180' : ''`
+=======
+=======
+>>>>>>> origin/main
             <button;
               onClick={() => toggleExpanded(item.label)}";
               className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light "hover": "tex t-white transition-colors"'`;
@@ -588,6 +658,10 @@ export default function EnhancedMobileNavigation(props: any) {
               <ChevronDown size={16}`;
                 className={`transition-transform duration-200 ${                size={16}`                className={`transition-transform duration-200 ${';
                   isExpanded ? 'rotate-180' : ''`;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
             <button
               onClick={() => toggleExpanded(item.label)}"
               className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hover: tex t-white transition-colors"'`
@@ -599,6 +673,7 @@ export default function EnhancedMobileNavigation(props: any) {
                />
             </button>;) }        </motion.div>
         {hasChildren && (;
+<<<<<<< HEAD
           <AnimatePresence>;
             {isExpanded && (<motion.div;
                 initial = {;
@@ -620,12 +695,15 @@ export default function EnhancedMobileNavigation(props: any) {
                 className="overflow-hidden";
 ";
                 <div className="border-l border-zion-slate-light/20 ml-4">;
+=======
+>>>>>>> origin/main
           <AnimatePresence>
             {isExpanded && (<motion.div
                 initial = {
   { height: 0,
   opacity: 0
 }}
+<<<<<<< HEAD
                 animate = {';
 ';';
   { height: 'auto',
@@ -633,9 +711,19 @@ export default function EnhancedMobileNavigation(props: any) {
                 animate = {;
   { height: 'auto',;
   opacity: 1;
+=======
+                animate = {;
+  { height: 'auto',;
+  opacity: 1;
+=======
+>>>>>>> origin/main
                 animate = {
   { height: 'auto',
   opacity: 1
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 }}
                 exit = {
   { height: 0,
@@ -655,6 +743,10 @@ export default function EnhancedMobileNavigation(props: any) {
                 className="overflow-hidden";
 ";
                 <div className="border-l border-zion-slate-light/20 ml-4">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
                   {item.children!.map(child => renderNavigationItem(child, depth + 1))}
                 </div>
               </motion.div>;) };
@@ -663,6 +755,7 @@ export default function EnhancedMobileNavigation(props: any) {
   return ()
     <>
       {/* Mobile Menu Toggle */}
+<<<<<<< HEAD
       <button;
         onClick={() => setIsOpen(true)}";
         className=""lg": "hidden p-2 text-white "hover": tex t-zion-cyan transition-colors "focus": outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan/50 rounded-lg";
@@ -718,6 +811,8 @@ export default function EnhancedMobileNavigation(props: any) {
 ";
                         <action.icon size={20} className="mx-auto mb-2" />";
                         <span className="text-xs font-medium">{action.label}</span>;
+=======
+>>>>>>> origin/main
       <button
         onClick={() => setIsOpen(true)}"
         className="lg: hidden p-2 text-white hover: tex t-zion-cyan transition-colors focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan/50 rounded-lg"
@@ -803,6 +898,10 @@ export default function EnhancedMobileNavigation(props: any) {
                   <div className="grid grid-cols-3 gap-3">;
                     {quickActions.map(action => (;
                       <Link;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
                         key={action.label}
                         to={action.path}
                         onClick={() => handleNavigation(action.path)}`
@@ -821,6 +920,7 @@ export default function EnhancedMobileNavigation(props: any) {
                   "
                   <div className="space-y-1">
                     {navigationItems.map(item => renderNavigationItem(item))}
+<<<<<<< HEAD
                   </div>;
                 </nav>;
               </div>;
@@ -862,6 +962,8 @@ export default function EnhancedMobileNavigation(props: any) {
                   </div>;
                 </div>;
               </div>;
+=======
+>>>>>>> origin/main
                   </div>
                 </nav>
               </div>
@@ -906,8 +1008,11 @@ export default function EnhancedMobileNavigation(props: any) {
             </motion.div>;
           </motion.div>;) "};
       </AnimatePresence>;
+<<<<<<< HEAD
     </>';
   )}};';';
+=======
+>>>>>>> origin/main
     </>
   )}};
 '"`
@@ -923,8 +1028,11 @@ export default function EnhancedMobileNavigation(props: any) {
 </any>
 </any>
 </string>
+<<<<<<< HEAD
 </Set>';
 </any>;';;';
+=======
+>>>>>>> origin/main
     </>;
   )}};
 '"`;
@@ -942,5 +1050,11 @@ export default function EnhancedMobileNavigation(props: any) {
 </string>;
 </Set>;
 </any>;
+<<<<<<< HEAD
 </Set>
 </any>
+=======
+=======
+</Set>
+</any>
+>>>>>>> origin/main

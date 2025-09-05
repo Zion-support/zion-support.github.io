@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',;',';';';';
     ';';';';';';
 import { Link  } from 'react-router-dom'; import { motion  } from 'framer-motion',;',';';';';
@@ -67,6 +68,8 @@ import { Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Git
   https: ''',';';';';
     ';';';';';
 import React from 'react';';';
+=======
+>>>>>>> origin/main
 import React from 'react',;',';';
     ;
 import { Link  } from 'react-router-dom'; import { motion  } from 'framer-motion',;',';';
@@ -204,8 +207,11 @@ import {
   Calendar as CalendarIcon, 
   Package as PackageIcon, 
   CreditCard as CreditCardIcon, 
+<<<<<<< HEAD
   Globe2 as Globe2Icon, ';
   ShieldCheck as ShieldCheckIcon ';';
+=======
+>>>>>>> origin/main
 import React from 'react',;',';';
     ';';';';
 import { Link  } from 'react-router-dom'; import { motion  } from 'framer-motion',;',';';
@@ -345,6 +351,7 @@ import {;
   CreditCard as CreditCardIcon,;
   Globe2 as Globe2Icon,;
   ShieldCheck as ShieldCheckIcon;
+<<<<<<< HEAD
   Globe2 as Globe2Icon, 
   ShieldCheck as ShieldCheckIcon 
 } from 'lucide-react';
@@ -426,6 +433,13 @@ export const "EnhancedFooter": "React.FC = () => {;
                 >;
                   {link.name"}
                 </Link>;
+=======
+=======
+  Globe2 as Globe2Icon, 
+  ShieldCheck as ShieldCheckIcon 
+} from 'lucide-react';
+
+>>>>>>> origin/main
 export const EnhancedFooter: React.FC = () => {
   return (<footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
@@ -509,6 +523,7 @@ export const EnhancedFooter: React.FC = () => {
         </div>
       </div>
       {/* Trust Indicators */}
+<<<<<<< HEAD
       <div className="border-t border-gray-800 bg-gray-800">;
         <div className="max-w-7xl mx-auto px-4 "sm": "px-6 "lg":px-8 py-4">;
           <div className="flex flex-col "md":flex-row items-center justify-center space-y-2 "md":space-y-0 "md":space-x-8 text-sm text-gray-400">;
@@ -538,6 +553,11 @@ export const EnhancedFooter: React.FC = () => {
 export default EnhancedFooter;;';;';
 ;
 export default EnhancedFooter;
+=======
+;
+export default EnhancedFooter;
+=======
+>>>>>>> origin/main
 "};
 ;
       <div className="border-t border-gray-800 bg-gray-800">
@@ -565,4 +585,9 @@ export default EnhancedFooter;
     </footer>
   );
 };
+<<<<<<< HEAD
 export default EnhancedFooter;
+=======
+
+export default EnhancedFooter;
+>>>>>>> origin/main

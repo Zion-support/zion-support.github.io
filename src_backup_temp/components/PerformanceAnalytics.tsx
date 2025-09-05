@@ -152,6 +152,7 @@ export default function Page("props": "any) {;
                 animate = {;
   { "opacity": "1",;
   "y": "0;
+<<<<<<< HEAD
 "}}
                 transition={{ "delay": "0.4 + index * 0.1 "}}";
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 "hover": "borde r-blue-500/50 transition-all duration-300";
@@ -163,6 +164,9 @@ export default function Page("props": "any) {;
                     </div>";
                     <h3 className="text-lg font-semibold text-white">{metric.name}</h3>;
                   </div>;
+=======
+
+>>>>>>> origin/main
 }}
                 transition={{ delay: 0.4 + index * 0.1 }}"
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover: borde r-blue-500/50 transition-all duration-300"
@@ -198,6 +202,7 @@ export default function Page("props": "any) {;
             animate = {;
   { "opacity": "1",;
   "y": "0;
+<<<<<<< HEAD
 "}}
             transition={{ "delay": "0.5 "}}";
             className="grid grid-cols-1 "lg": "gri d-cols-2 gap-8 mb-12";
@@ -213,6 +218,9 @@ export default function Page("props": "any) {;
                     <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>";
                     <p className="text-sm text-gray-300">{alert}</p>;
                   </div>;
+=======
+
+>>>>>>> origin/main
 }}
             transition={{ delay: 0.5 }}"
             className="grid grid-cols-1 lg: gri d-cols-2 gap-8 mb-12"
@@ -231,6 +239,7 @@ export default function Page("props": "any) {;
                 ))}
               </div>;
             </div>;
+<<<<<<< HEAD
             {/* Recommendations */}";
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">";
               <div className="flex items-center gap-3 mb-4">";
@@ -242,6 +251,9 @@ export default function Page("props": "any) {;
                     <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>";
                     <p className="text-sm text-gray-300">{recommendation}</p>;
                   </div>;
+=======
+
+>>>>>>> origin/main
             {/* Recommendations */}"
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">"
               <div className="flex items-center gap-3 mb-4">"
@@ -267,6 +279,7 @@ export default function Page("props": "any) {;
           animate = {;
   { "opacity": "1",;
   "y": "0;
+<<<<<<< HEAD
 "}}
           transition={{ "delay": "0.6 "}}
           className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-xl p - 8 text-center";
@@ -276,6 +289,9 @@ export default function Page("props": "any) {;
           <p className="text-gray -400">;
             {isMonitoring;
               ? 'Real - time performance data is being collected and analyzed...'              : 'Start monitoring to view performance trends and historical data';
+=======
+
+>>>>>>> origin/main
 }}
           transition={{ delay: 0.6 }}
           className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-xl p - 8 text-center"

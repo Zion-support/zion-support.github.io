@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 :src/pages/Solutions.tsx
 import { Link } from 'react-router-dom';
 import { 
@@ -309,6 +310,8 @@ export function Solutions() {
     </div>
   );
 }
+=======
+>>>>>>> origin/main
 ;
 const "Solutions": "React.FC = () => {;
   return (;
@@ -323,4 +326,8 @@ const "Solutions": "React.FC = () => {;
   );
 "};
 ;
+<<<<<<< HEAD
 export default Solutions;
+=======
+export default Solutions;
+>>>>>>> origin/main
