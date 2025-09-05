@@ -55,6 +55,21 @@ const navigation = [
         href: '/micro-saas',
         description: 'Software as a Service solutions',
         icon: Cloud
+      },
+      {
+        name: 'Cloud & DevOps',
+        href: '/services/cloud-devops',
+        description: 'Cloud infrastructure and DevOps solutions'
+      },
+      {
+        name: 'Cybersecurity',
+        href: '/services/cybersecurity',
+        description: 'Advanced security solutions'
+      },
+      {
+        name: 'Data Analytics',
+        href: '/services/data-analytics',
+        description: 'Data analysis and business intelligence'
       }
     ]
   },
@@ -87,6 +102,58 @@ const navigation = [
         name: 'Retail',
         href: '/solutions/retail',
         description: 'Retail technology solutions'
+      },
+      {
+        name: 'Education',
+        href: '/solutions/education',
+        description: 'Educational technology solutions'
+      },
+      {
+        name: 'Government',
+        href: '/solutions/government',
+        description: 'Government and public sector solutions'
+      }
+    ]
+  },
+  {
+    name: 'Industries',
+    href: '/industries',
+    type: 'dropdown',
+    children: [
+      {
+        name: 'All Industries',
+        href: '/industries',
+        description: 'Industry-specific solutions'
+      },
+      {
+        name: 'Healthcare',
+        href: '/industries/healthcare',
+        description: 'Healthcare industry solutions'
+      },
+      {
+        name: 'Finance',
+        href: '/industries/finance',
+        description: 'Financial services solutions'
+      },
+      {
+        name: 'Education',
+        href: '/industries/education',
+        description: 'Education sector solutions'
+      },
+      {
+        name: 'Government',
+        href: '/industries/government',
+        description: 'Government solutions'
+      },
+      {
+        name: 'Manufacturing',
+        href: '/industries/manufacturing',
+        description: 'Manufacturing industry solutions'
+      },
+      {
+        name: 'Retail',
+        href: '/industries/retail',
+        description: 'Retail industry solutions'
       }
     ]
   },
@@ -116,6 +183,11 @@ const navigation = [
         description: 'Latest insights and news'
       },
       {
+        name: 'Press',
+        href: '/press',
+        description: 'Press releases and media'
+      },
+      {
         name: 'Partners',
         href: '/partners',
         description: 'Our partner network'
@@ -133,11 +205,6 @@ const navigation = [
         description: 'Technical documentation'
       },
       {
-        name: 'API Reference',
-        href: '/api',
-        description: 'API documentation'
-      },
-      {
         name: 'Help Center',
         href: '/help',
         description: 'Support and help resources'
@@ -148,9 +215,19 @@ const navigation = [
         description: 'Join our community'
       },
       {
+        name: 'Tutorials',
+        href: '/tutorials',
+        description: 'Learning resources and guides'
+      },
+      {
         name: 'Case Studies',
         href: '/case-studies',
         description: 'Success stories and examples'
+      },
+      {
+        name: 'White Papers',
+        href: '/white-papers',
+        description: 'In-depth research and insights'
       }
     ]
   },

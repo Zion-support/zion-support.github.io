@@ -1,67 +1,67 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+import { Building2, Users, Shield, Zap, Target, CheckCircle, ArrowRight } from 'lucide-react';
 
 const features = [
   {
-    icon: Cloud,
-    title: 'Cloud Migration',
-    description: 'Seamless migration to cloud platforms with zero downtime'
+    icon: Building2,
+    title: 'Scalable Architecture',
+    description: 'Enterprise-grade solutions that grow with your business'
   },
   {
-    icon: Server,
-    title: 'Infrastructure as Code',
-    description: 'Automated infrastructure provisioning and management'
-  },
-  {
-    icon: GitBranch,
-    title: 'CI/CD Pipelines',
-    description: 'Automated build, test, and deployment processes'
+    icon: Users,
+    title: 'Multi-tenant Support',
+    description: 'Secure multi-user environments with role-based access'
   },
   {
     icon: Shield,
-    title: 'Security & Compliance',
-    description: 'Enterprise-grade security and compliance frameworks'
+    title: 'Enterprise Security',
+    description: 'Advanced security protocols and compliance standards'
   },
   {
     icon: Zap,
-    title: 'Performance Optimization',
-    description: 'Optimized cloud resources for maximum performance'
+    title: 'High Performance',
+    description: 'Optimized for speed and reliability at scale'
+  },
+  {
+    icon: Target,
+    title: 'Custom Integration',
+    description: 'Seamless integration with existing enterprise systems'
   },
   {
     icon: CheckCircle,
-    title: 'Monitoring & Alerting',
-    description: '24/7 monitoring and proactive alerting systems'
+    title: '24/7 Support',
+    description: 'Dedicated enterprise support team'
   }
 ];
 
 const benefits = [
-  'Reduced infrastructure costs by up to 50%',
-  'Improved deployment speed and reliability',
+  'Reduced operational costs by up to 40%',
+  'Improved system reliability and uptime',
   'Enhanced security and compliance',
-  'Automated scaling and resource management',
-  'Better disaster recovery capabilities',
-  'Faster time-to-market for applications'
+  'Streamlined business processes',
+  'Better data management and analytics',
+  'Faster time-to-market for new initiatives'
 ];
 
-export default function CloudDevOpsServices() {
+export default function EnterpriseSolutions() {
   return (
     <Layout
-      title="Cloud & DevOps Services - Zion Tech Group"
-      description="Comprehensive cloud migration and DevOps services. Transform your infrastructure with modern cloud technologies and automated processes."
-      keywords="cloud services, DevOps, cloud migration, infrastructure as code, CI/CD, cloud optimization"
+      title="Enterprise Solutions - Zion Tech Group"
+      description="Comprehensive enterprise technology solutions designed for large-scale businesses. Scalable, secure, and reliable solutions."
+      keywords="enterprise solutions, large business, scalable technology, enterprise software"
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-cyan-700 text-white py-20">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Cloud & DevOps Services
+                Enterprise Solutions
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Transform your infrastructure with modern cloud technologies and automated DevOps processes
-                for improved performance, security, and scalability.
+                Transform your enterprise with scalable, secure, and intelligent technology solutions
+                designed for large-scale operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -80,11 +80,10 @@ export default function CloudDevOpsServices() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Cloud & DevOps Solutions
+                Enterprise-Grade Features
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive cloud and DevOps services designed to modernize your infrastructure
-                and accelerate your development processes.
+                Built for scale, security, and performance to meet the demands of modern enterprises.
               </p>
             </div>
 
@@ -112,11 +111,11 @@ export default function CloudDevOpsServices() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Why Choose Our Cloud & DevOps Services?
+                  Why Choose Our Enterprise Solutions?
                 </h2>
                 <p className="text-xl text-gray-600 mb-8">
-                  Our cloud and DevOps experts help you modernize your infrastructure,
-                  improve deployment processes, and optimize costs while maintaining security.
+                  Our enterprise solutions are designed to handle the complexity and scale of large organizations
+                  while maintaining security, performance, and reliability.
                 </p>
                 <ul className="space-y-4">
                   {benefits.map((benefit, index) => (
@@ -127,11 +126,11 @@ export default function CloudDevOpsServices() {
                   ))}
                 </ul>
               </div>
-              <div className="bg-gradient-to-r from-blue-600 to-cyan-700 p-8 rounded-xl text-white">
-                <h3 className="text-2xl font-bold mb-6">Ready to Modernize Your Infrastructure?</h3>
+              <div className="bg-gradient-to-r from-blue-600 to-purple-700 p-8 rounded-xl text-white">
+                <h3 className="text-2xl font-bold mb-6">Ready to Transform Your Enterprise?</h3>
                 <p className="text-lg mb-6">
-                  Let our cloud and DevOps experts help you transform your infrastructure
-                  and accelerate your development processes.
+                  Let our experts help you design and implement the perfect enterprise solution
+                  for your organization.
                 </p>
                 <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
                   Schedule Consultation
@@ -146,18 +145,18 @@ export default function CloudDevOpsServices() {
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Infrastructure?
+              Ready to Scale Your Enterprise?
             </h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Contact our cloud and DevOps team to discuss your specific requirements
-              and discover how we can help modernize your infrastructure.
+              Contact our enterprise solutions team to discuss your specific requirements
+              and discover how we can help transform your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                Contact Cloud Team
+                Contact Sales
               </button>
               <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
-                Download Cloud Brochure
+                Download Brochure
               </button>
             </div>
           </div>

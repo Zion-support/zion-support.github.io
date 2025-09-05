@@ -27,8 +27,7 @@ const services = [
   { name: 'Micro SaaS', href: '/micro-saas' },
   { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
   { name: 'Cybersecurity', href: '/services/cybersecurity' },
-  { name: 'Data Analytics', href: '/services/data-analytics' },
-  { name: 'Quantum Computing', href: '/services/quantum-computing' }
+  { name: 'Data Analytics', href: '/services/data-analytics' }
 ]
 
 const solutions = [
@@ -38,8 +37,7 @@ const solutions = [
   { name: 'Finance', href: '/solutions/finance' },
   { name: 'Retail', href: '/solutions/retail' },
   { name: 'Education', href: '/solutions/education' },
-  { name: 'Government', href: '/solutions/government' },
-  { name: 'Startup', href: '/solutions/startup' }
+  { name: 'Government', href: '/solutions/government' }
 ]
 
 const industries = [
@@ -64,7 +62,6 @@ const company = [
 
 const resources = [
   { name: 'Documentation', href: '/docs' },
-  { name: 'API Reference', href: '/api' },
   { name: 'Help Center', href: '/help' },
   { name: 'Community', href: '/community' },
   { name: 'Tutorials', href: '/tutorials' },
@@ -153,6 +150,23 @@ export default function Footer() {
                     className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
                     {solution.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Industries */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Industries</h3>
+            <ul className="space-y-2">
+              {industries.map((industry) => (
+                <li key={industry.name}>
+                  <Link
+                    href={industry.href}
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  >
+                    {industry.name}
                   </Link>
                 </li>
               ))}

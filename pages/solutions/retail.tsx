@@ -1,74 +1,74 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
+import { ShoppingCart, Users, BarChart3, Smartphone, CheckCircle, ArrowRight } from 'lucide-react';
 
 const features = [
   {
-    icon: Shield,
-    title: 'Security Assessment',
-    description: 'Comprehensive security audits and vulnerability assessments'
+    icon: ShoppingCart,
+    title: 'E-commerce Platform',
+    description: 'Complete online shopping experience with advanced features'
   },
   {
-    icon: Lock,
-    title: 'Data Protection',
-    description: 'Advanced encryption and data protection solutions'
+    icon: Users,
+    title: 'Customer Management',
+    description: 'Comprehensive customer relationship management system'
   },
   {
-    icon: Eye,
-    title: 'Threat Monitoring',
-    description: '24/7 security monitoring and threat detection'
+    icon: BarChart3,
+    title: 'Analytics & Insights',
+    description: 'Advanced analytics for sales, inventory, and customer behavior'
   },
   {
-    icon: AlertTriangle,
-    title: 'Incident Response',
-    description: 'Rapid response to security incidents and breaches'
+    icon: Smartphone,
+    title: 'Mobile Commerce',
+    description: 'Mobile-first shopping experience and mobile app solutions'
   },
   {
     icon: CheckCircle,
-    title: 'Compliance',
-    description: 'GDPR, HIPAA, SOX, and other regulatory compliance'
+    title: 'Inventory Management',
+    description: 'Real-time inventory tracking and automated reordering'
   },
   {
     icon: ArrowRight,
-    title: 'Security Training',
-    description: 'Employee security awareness and training programs'
+    title: 'Omnichannel',
+    description: 'Seamless integration across all sales channels'
   }
 ];
 
 const benefits = [
-  'Protection against cyber threats and attacks',
-  'Compliance with industry regulations',
-  'Reduced risk of data breaches',
-  'Enhanced customer trust and confidence',
-  'Lower insurance costs and liability',
-  'Peace of mind with 24/7 monitoring'
+  'Increased online sales and revenue',
+  'Improved customer experience',
+  'Better inventory management',
+  'Enhanced data-driven decision making',
+  'Streamlined operations',
+  'Mobile-first customer engagement'
 ];
 
-export default function CybersecurityServices() {
+export default function RetailSolutions() {
   return (
     <Layout
-      title="Cybersecurity Services - Zion Tech Group"
-      description="Comprehensive cybersecurity services to protect your business from threats. Advanced security solutions, compliance, and 24/7 monitoring."
-      keywords="cybersecurity, security services, data protection, threat monitoring, compliance, security audit"
+      title="Retail Solutions - Zion Tech Group"
+      description="Comprehensive retail technology solutions for e-commerce, omnichannel retail, and customer experience optimization."
+      keywords="retail solutions, e-commerce, omnichannel retail, customer experience, inventory management, retail analytics"
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-red-600 to-orange-700 text-white py-20">
+        <section className="bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Cybersecurity Services
+                Retail Solutions
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Protect your business with comprehensive cybersecurity solutions.
-                Advanced threat protection, compliance, and 24/7 monitoring.
+                Transform your retail business with modern e-commerce, omnichannel,
+                and customer experience solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                   Get Started
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors">
-                  Security Assessment
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                  View Demo
                 </button>
               </div>
             </div>
@@ -80,19 +80,18 @@ export default function CybersecurityServices() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Cybersecurity Solutions
+                Retail Technology Features
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive security services designed to protect your business
-                from evolving cyber threats and ensure regulatory compliance.
+                Comprehensive solutions designed to enhance every aspect of your retail business.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                    <feature.icon className="w-6 h-6 text-red-600" />
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                    <feature.icon className="w-6 h-6 text-purple-600" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -112,11 +111,11 @@ export default function CybersecurityServices() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Why Choose Our Cybersecurity Services?
+                  Driving Retail Success
                 </h2>
                 <p className="text-xl text-gray-600 mb-8">
-                  Our cybersecurity experts provide comprehensive protection against
-                  evolving threats while ensuring compliance with industry regulations.
+                  Our retail solutions help businesses increase sales, improve customer experience,
+                  and optimize operations across all channels.
                 </p>
                 <ul className="space-y-4">
                   {benefits.map((benefit, index) => (
@@ -127,14 +126,14 @@ export default function CybersecurityServices() {
                   ))}
                 </ul>
               </div>
-              <div className="bg-gradient-to-r from-red-600 to-orange-700 p-8 rounded-xl text-white">
-                <h3 className="text-2xl font-bold mb-6">Ready to Secure Your Business?</h3>
+              <div className="bg-gradient-to-r from-purple-600 to-pink-700 p-8 rounded-xl text-white">
+                <h3 className="text-2xl font-bold mb-6">Ready to Transform Retail?</h3>
                 <p className="text-lg mb-6">
-                  Let our cybersecurity experts help you implement comprehensive
-                  security solutions that protect your business and data.
+                  Let our retail technology experts help you create engaging customer experiences
+                  and optimize your retail operations.
                 </p>
-                <button className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
-                  Schedule Security Audit
+                <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
+                  Schedule Demo
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
@@ -146,18 +145,18 @@ export default function CybersecurityServices() {
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Protect Your Business?
+              Ready to Transform Your Retail Business?
             </h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Contact our cybersecurity team to discuss your security requirements
-              and discover how we can help protect your business from threats.
+              Contact our retail solutions team to discuss your specific requirements
+              and discover how we can help grow your retail business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors">
-                Contact Security Team
+              <button className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                Contact Retail Team
               </button>
               <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
-                Download Security Guide
+                Download Retail Brochure
               </button>
             </div>
           </div>

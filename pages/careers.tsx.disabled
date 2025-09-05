@@ -3,27 +3,21 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   Users, 
-<<<<<<< HEAD:pages/careers.tsx
   ArrowRight,
   CheckCircle,
   MapPin,
   Clock,
   Briefcase,
   GraduationCap,
-  Globe
-=======
+  Globe,
   Heart, 
   Zap, 
-  Globe, 
   Award, 
   Coffee, 
   Laptop, 
   Home, 
   DollarSign, 
-  BookOpen, 
-  Briefcase, 
-  CheckCircle 
->>>>>>> cursor/expand-services-advertise-and-build-project-5dae:pages/careers.tsx.disabled
+  BookOpen
 } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 

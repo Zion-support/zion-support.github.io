@@ -101,13 +101,13 @@ const apiEndpoints = [
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </motion.div>
-                    </div>
-                    <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
-                      <Copy className="w-5 h-5" />
-                    </button>
-                  </div>
-                    </div>
-                  </div>
+          </div>
+          <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
+            <Copy className="w-5 h-5" />
+          </button>
+        </div>
+      </div>
+    </div>
                 </div>
               </motion.div>
             ))}
