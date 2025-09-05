@@ -1,4 +1,6 @@
-import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';';';
 import { X  } from 'lucide-react';
 
 interface Filter {
@@ -19,4 +21,11 @@ interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
       </button>;
     </div>;
   );
-}
+}';
+;';;';
+=======
+import React from 'react'; import { X } from 'lucide-react'; interface Filter { key: 'string; value: string;' } label: 'string'} interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> { filters: Filte r[]; onRemoveFilter: (key: string) => void; onClearAll: () => void} className="text-sm text-zion-slate-light hover: tex t-zion-cyan transition-colors underline"; > Clear all; ></div> ></div> )}
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+import React from 'react'; import { X } from 'lucide-react'; interface Filter { "key": 'string; "value": "string;' "} "label": 'string'} interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> { "filters": "Filte r[]; "onRemoveFilter": ("key": string) => void; "onClearAll": () => void"} className="text-sm text-zion-slate-light "hover": "tex t-zion-cyan transition-colors underline"; > Clear all; ></div> ></div> )"}
+>>>>>>> main

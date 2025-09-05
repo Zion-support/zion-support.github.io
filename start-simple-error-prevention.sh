@@ -605,7 +605,7 @@ EOF
 # Main execution
 main() {
     echo -e "${BLUE}🚀 Zion Tech Group - Error Prevention & Auto-Fix Automation${NC}"
-    echo "=================================================================="
+    echo "==="
     echo
     
     # Setup

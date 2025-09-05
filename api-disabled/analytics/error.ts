@@ -1,2 +1,5 @@
-// Analytics error handling module
+<<<<<<< HEAD
 export {};
+=======
+module.exports = {};
+>>>>>>> main

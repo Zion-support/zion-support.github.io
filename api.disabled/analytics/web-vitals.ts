@@ -1,2 +1,5 @@
-// Web vitals analytics module
+<<<<<<< HEAD
 export {};
+=======
+module.exports = {};
+>>>>>>> main

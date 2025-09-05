@@ -1,33 +1,9 @@
-          <div>Broken JSX</div>
-          >;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-
-          </div>;
-        </div>;
-      </section>;
-
-          </div>;
-        </div>;
-      </section>;
-
-          <div>Broken JSX</div>
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-  );,
-};
-;
-export default ComprehensivePricing2027;
-import React from "react";
-import { SEO } from "@/components/SEO";
-;,"});,"});,
-}
-export default function ComprehensivePricing2027() {};
-  return null;
-}
-}
-}
+<<<<<<< HEAD
+<div>Broken JSX</div> > ></div> ></div> ></div> ></div> ></div> ></div> ></div> ></div> ></div> ></div> <div>Broken JSX</div> ></div> ></div> ></div> ></div> );}; export default ComprehensivePricing2027; import React from \"react\"; import { SEO } from \"@/components/SEO\";,\"});,\"});} export default function ComprehensivePricing2027() {}; return null} } }
+=======
+<<<<<<< HEAD
+<div>Broken JSX</div> > ></div> ></div> ></div> ></div> ></div> ></div> ></div> ></div> ></div> ></div> <div>Broken JSX</div> ></div> ></div> ></div> ></div> );}; export default ComprehensivePricing2027; import React from "react"; import { SEO } from "@/components/SEO";,"});,"});} export default function ComprehensivePricing2027() { return; }; return null} } }""
+=======
+<div>Broken JSX</div> > ></div> ></div> ></div> ></div> ></div> ></div> ></div> ></div> ></div> ></div> <div>Broken JSX</div> ></div> ></div> ></div> ></div> );}; export default ComprehensivePricing2027; import _React from "react"; import { SEO } from "@/components/SEO";,"});,"});} export default function ComprehensivePricing2027() {}; return null} } }
+>>>>>>> main
+>>>>>>> main
