@@ -1863,18 +1863,10 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
               <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
                 View All Services
               </Link>
-<<<<<<< HEAD
-                  </div>
-                  </motion.div>
-                  </div>
-                  </section>
-                  </div>
-=======
             </div>
           </motion.div>
         </div>
       </section>
     </div>
->>>>>>> origin/cursor/check-and-fix-netlify-build-b511
   );
 }
