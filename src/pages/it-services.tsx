@@ -247,6 +247,204 @@ const itServices = [
     ],
     pricing: "Starting at $179/month",
     contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Enterprise Backup & Disaster Recovery",
+    description: "Comprehensive backup and disaster recovery solution with automated failover and data protection",
+    icon: HardDrive,
+    features: [
+      "Automated Backups",
+      "Disaster Recovery Planning",
+      "Data Replication",
+      "Failover Automation",
+      "Compliance Backup",
+      "Recovery Testing"
+    ],
+    color: "from-slate-500 to-gray-500",
+    benefits: [
+      "99.99% data protection",
+      "Automated failover",
+      "Compliance assurance",
+      "Minimal downtime"
+    ],
+    pricing: "Starting at $349/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Advanced Endpoint Security Management",
+    description: "Comprehensive endpoint protection with AI-powered threat detection and automated response",
+    icon: Shield,
+    features: [
+      "AI Threat Detection",
+      "Endpoint Protection",
+      "Mobile Device Management",
+      "Patch Management",
+      "Behavioral Analysis",
+      "Incident Response"
+    ],
+    color: "from-red-500 to-orange-500",
+    benefits: [
+      "Advanced threat protection",
+      "Automated patch management",
+      "Mobile security",
+      "Reduced security incidents"
+    ],
+    pricing: "Starting at $199/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "IT Infrastructure Monitoring & Alerting",
+    description: "Comprehensive infrastructure monitoring with intelligent alerting and automated remediation",
+    icon: Monitor,
+    features: [
+      "Infrastructure Monitoring",
+      "Intelligent Alerting",
+      "Automated Remediation",
+      "Capacity Planning",
+      "Performance Optimization",
+      "Health Dashboards"
+    ],
+    color: "from-blue-500 to-indigo-500",
+    benefits: [
+      "Proactive issue detection",
+      "Automated problem resolution",
+      "Capacity optimization",
+      "Reduced downtime"
+    ],
+    pricing: "Starting at $229/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Cloud Security & Compliance Platform",
+    description: "Advanced cloud security solution with automated compliance monitoring and threat protection",
+    icon: Cloud,
+    features: [
+      "Cloud Security Monitoring",
+      "Compliance Automation",
+      "Threat Detection",
+      "Data Loss Prevention",
+      "Access Management",
+      "Security Analytics"
+    ],
+    color: "from-cyan-500 to-blue-500",
+    benefits: [
+      "Cloud security assurance",
+      "Automated compliance",
+      "Threat prevention",
+      "Data protection"
+    ],
+    pricing: "Starting at $299/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "IT Service Management (ITSM) Platform",
+    description: "Comprehensive ITSM solution with AI-powered automation and service optimization",
+    icon: Settings,
+    features: [
+      "Service Desk Automation",
+      "Incident Management",
+      "Change Management",
+      "Asset Management",
+      "Knowledge Management",
+      "Service Analytics"
+    ],
+    color: "from-purple-500 to-pink-500",
+    benefits: [
+      "Streamlined service delivery",
+      "Automated workflows",
+      "Improved efficiency",
+      "Better user experience"
+    ],
+    pricing: "Starting at $249/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Network Security & Firewall Management",
+    description: "Advanced network security solution with intelligent firewall management and threat prevention",
+    icon: Network,
+    features: [
+      "Firewall Management",
+      "Intrusion Detection",
+      "Network Segmentation",
+      "VPN Management",
+      "Traffic Analysis",
+      "Threat Prevention"
+    ],
+    color: "from-green-500 to-emerald-500",
+    benefits: [
+      "Advanced network protection",
+      "Automated threat blocking",
+      "Network optimization",
+      "Secure remote access"
+    ],
+    pricing: "Starting at $279/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "IT Automation & Orchestration Platform",
+    description: "Comprehensive IT automation platform with workflow orchestration and intelligent task management",
+    icon: Zap,
+    features: [
+      "Workflow Automation",
+      "Task Orchestration",
+      "Process Optimization",
+      "Resource Management",
+      "Scheduling Automation",
+      "Performance Monitoring"
+    ],
+    color: "from-yellow-500 to-orange-500",
+    benefits: [
+      "90% task automation",
+      "Improved efficiency",
+      "Reduced manual errors",
+      "Cost optimization"
+    ],
+    pricing: "Starting at $199/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "IT Training & Knowledge Management",
+    description: "Comprehensive IT training platform with knowledge management and skill development",
+    icon: Users,
+    features: [
+      "IT Training Modules",
+      "Knowledge Base",
+      "Skill Assessment",
+      "Certification Tracking",
+      "Learning Analytics",
+      "Expert Support"
+    ],
+    color: "from-indigo-500 to-purple-500",
+    benefits: [
+      "Improved IT skills",
+      "Knowledge retention",
+      "Certification tracking",
+      "Expert guidance"
+    ],
+    pricing: "Starting at $149/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "IT Cost Optimization & Management",
+    description: "Intelligent IT cost management with automated optimization and budget tracking",
+    icon: BarChart3,
+    features: [
+      "Cost Analysis",
+      "Budget Tracking",
+      "Resource Optimization",
+      "Vendor Management",
+      "ROI Analysis",
+      "Cost Forecasting"
+    ],
+    color: "from-emerald-500 to-teal-500",
+    benefits: [
+      "30% cost reduction",
+      "Optimized resource usage",
+      "Better budget control",
+      "Improved ROI"
+    ],
+    pricing: "Starting at $179/month",
+    contact: "kleber@ziontechgroup.com"
   }
 ];
 

@@ -1,7 +1,9 @@
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, CheckCircle, FileText, Users, Lock, Eye, Database, AlertCircle } from 'lucide-react';
 import Layout from '../components/Layout';
+import SimpleLayout from '../components/SimpleLayout';
 const complianceFrameworks = [
   {
     name: 'SOC 2 Type II',
@@ -64,6 +66,7 @@ const complianceFrameworks = [
     nextAudit: '2024-12-31'
   }
 ];
+
 const complianceAreas = [
   {
     category: 'Data Protection',
@@ -106,12 +109,16 @@ const complianceAreas = [
     ]
   }
 ];
+
+ursor/website-audit-and-update-with-deployment-9cae
 const complianceMetrics = [
   { label: 'SOC 2 Score', value: '98%', description: 'Last audit score' },
   { label: 'HIPAA Compliance', value: '100%', description: 'Current compliance status' },
   { label: 'GDPR Compliance', value: '100%', description: 'EU data protection compliance' },
   { label: 'Audit Frequency', value: 'Annual', description: 'Compliance audit schedule' }
 ];
+
+ursor/website-audit-and-update-with-deployment-9cae
 const certifications = [
   {
     name: 'SOC 2 Type II',
@@ -141,6 +148,8 @@ const certifications = [
 export default function CompliancePage() {
   return (
     <Layout
+    <SimpleLayout
+ursor/website-audit-and-update-with-deployment-9cae
       title="Compliance - Zion Tech Group"
       description="Learn about our compliance with industry standards including SOC 2, HIPAA, GDPR, and ISO 27001. Your data protection and regulatory compliance is our priority."
       keywords="compliance, SOC 2, HIPAA, GDPR, ISO 27001, data protection, regulatory compliance, security standards"
@@ -152,6 +161,8 @@ export default function CompliancePage() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
+
+ursor/website-audit-and-update-with-deployment-9cae
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -171,6 +182,8 @@ export default function CompliancePage() {
             </motion.div>
           </div>
         </section>
+
+ursor/website-audit-and-update-with-deployment-9cae
         {/* Compliance Metrics */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -191,6 +204,8 @@ export default function CompliancePage() {
             </div>
           </div>
         </section>
+
+ursor/website-audit-and-update-with-deployment-9cae
         {/* Compliance Frameworks */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -207,6 +222,8 @@ export default function CompliancePage() {
                 We maintain compliance with multiple industry standards and regulatory frameworks
               </p>
             </motion.div>
+
+ursor/website-audit-and-update-with-deployment-9cae
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {complianceFrameworks.map((framework, index) => (
                 <motion.div
@@ -230,6 +247,10 @@ export default function CompliancePage() {
                     </div>
                   </div>
                   <p className="text-gray-600 mb-6">{framework.description}</p>
+
+                  <p className="text-gray-600 mb-6">{framework.description}</p>
+
+ursor/website-audit-and-update-with-deployment-9cae
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Requirements:</h4>
                     <ul className="space-y-2">
@@ -241,6 +262,8 @@ export default function CompliancePage() {
                       ))}
                     </ul>
                   </div>
+
+ursor/website-audit-and-update-with-deployment-9cae
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
                       <span className="text-gray-500">Last Audit:</span>
@@ -256,6 +279,8 @@ export default function CompliancePage() {
             </div>
           </div>
         </section>
+
+ursor/website-audit-and-update-with-deployment-9cae
         {/* Compliance Areas */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -272,6 +297,8 @@ export default function CompliancePage() {
                 Our comprehensive approach to compliance across all operational areas
               </p>
             </motion.div>
+
+ursor/website-audit-and-update-with-deployment-9cae
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {complianceAreas.map((area, index) => (
                 <motion.div
@@ -300,6 +327,8 @@ export default function CompliancePage() {
             </div>
           </div>
         </section>
+
+ursor/website-audit-and-update-with-deployment-9cae
         {/* Certifications */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -316,6 +345,8 @@ export default function CompliancePage() {
                 Our current compliance certifications and their validity status
               </p>
             </motion.div>
+
+ursor/website-audit-and-update-with-deployment-9cae
             <div className="max-w-4xl mx-auto">
               <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
                 <div className="overflow-x-auto">
@@ -356,6 +387,8 @@ export default function CompliancePage() {
             </div>
           </div>
         </section>
+
+ursor/website-audit-and-update-with-deployment-9cae
         {/* Compliance Commitment */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -382,6 +415,17 @@ export default function CompliancePage() {
                   </p>
                   <p>
                     Regular audits, assessments, and training ensure that our compliance programs remain effective and
+                    At Zion Tech Group, compliance is not just a requirement—it's a fundamental part of our commitment to 
+                    protecting our clients' data and maintaining the highest standards of security and privacy.
+                  </p>
+                  <p className="mb-4">
+                    We continuously monitor and update our compliance programs to ensure they meet the latest regulatory 
+                    requirements and industry best practices. Our dedicated compliance team works closely with all departments 
+                    to maintain our certifications and implement necessary controls.
+                  </p>
+                  <p>
+                    Regular audits, assessments, and training ensure that our compliance programs remain effective and 
+ursor/website-audit-and-update-with-deployment-9cae
                     up-to-date with evolving regulations and standards.
                   </p>
                 </div>
@@ -389,6 +433,8 @@ export default function CompliancePage() {
             </div>
           </div>
         </section>
+
+ursor/website-audit-and-update-with-deployment-9cae
         {/* Contact Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -422,6 +468,10 @@ export default function CompliancePage() {
           </div>
         </section>
       </div>
+    </MainLayout>
     </Layout>
+    </SimpleLayout>
+ursor/website-audit-and-update-with-deployment-9cae
   );
 }
+

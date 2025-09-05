@@ -1126,6 +1126,157 @@ title: 'Generative AI Content Creation Suite',
     title: 'AI Medical Imaging Analysis',
     description: 'Deep learning-powered medical image analysis for radiology and diagnostic support.',
     icon: Heart,
+    features: ['Genetic Analysis', 'Disease Prediction', 'Drug Response', 'Lifestyle Recommendations'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Genomics AI'
+  },
+  {
+    title: 'AI Smart City Manager',
+    description: 'Comprehensive AI platform for smart city infrastructure and citizen services.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Resource Management', 'Citizen Services', 'Emergency Response'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Smart Cities'
+  },
+  {
+    title: 'AI Language Translation Master',
+    description: 'Real-time multi-language translation with cultural context understanding.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Cultural Context', 'Voice Translation', 'Document Translation'],
+    pricing: '$3,000 - $15,000/setup',
+    category: 'Language AI'
+  },
+  {
+    title: 'AI Financial Advisor Pro',
+    description: 'Advanced AI financial advisor with personalized investment strategies.',
+    icon: TrendingUp,
+    features: ['Portfolio Management', 'Risk Assessment', 'Market Analysis', 'Tax Optimization'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'FinTech AI'
+  },
+  {
+    title: 'AI Educational Tutor',
+    description: 'Personalized AI tutoring system with adaptive learning and assessment.',
+    icon: BookOpen,
+    features: ['Adaptive Learning', 'Personalized Curriculum', 'Progress Assessment', 'Skill Development'],
+    pricing: '$2,000 - $10,000/setup',
+    category: 'EdTech AI'
+  },
+  {
+    title: 'AI Retail Personalization Engine',
+    description: 'Advanced AI for personalized shopping experiences and inventory optimization.',
+    icon: ShoppingCart,
+    features: ['Personalized Recommendations', 'Inventory Optimization', 'Price Optimization', 'Customer Journey'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Retail AI'
+  },
+  {
+    title: 'AI Manufacturing Optimizer',
+    description: 'AI-powered manufacturing process optimization and quality control.',
+    icon: Settings,
+    features: ['Process Optimization', 'Quality Control', 'Predictive Maintenance', 'Supply Chain'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'Manufacturing AI'
+  },
+  {
+    title: 'AI Energy Grid Manager',
+    description: 'Intelligent energy grid management with renewable energy optimization.',
+    icon: Zap,
+    features: ['Grid Optimization', 'Renewable Integration', 'Load Balancing', 'Energy Storage'],
+    pricing: '$50,000 - $250,000/project',
+    category: 'Energy AI'
+  },
+  {
+    title: 'AI Legal Research Assistant',
+    description: 'AI-powered legal research and case law analysis platform.',
+    icon: FileText,
+    features: ['Case Law Research', 'Legal Document Analysis', 'Precedent Finding', 'Compliance Checking'],
+    pricing: '$8,000 - $40,000/setup',
+    category: 'Legal AI'
+  },
+  {
+    title: 'AI Sports Performance Analyzer',
+    description: 'AI-powered sports analytics and performance optimization for athletes.',
+    icon: Target,
+    features: ['Performance Analysis', 'Injury Prevention', 'Training Optimization', 'Biomechanics'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Sports AI'
+  },
+  {
+    title: 'AI Real Estate Valuator',
+    description: 'AI-powered real estate valuation and market analysis platform.',
+    icon: Building,
+    features: ['Property Valuation', 'Market Analysis', 'Investment Recommendations', 'Risk Assessment'],
+    pricing: '$3,000 - $15,000/setup',
+    category: 'Real Estate AI'
+  },
+  {
+    title: 'AI-Powered Climate Modeling',
+    description: 'Advanced climate prediction and environmental impact analysis using machine learning.',
+    icon: Globe,
+    features: ['Climate Prediction', 'Environmental Impact', 'Weather Forecasting', 'Carbon Footprint Analysis'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Environmental AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered IoT Intelligence',
+    description: 'Smart IoT solutions with AI for device management and data analytics.',
+    icon: Network,
+    features: ['Device Management', 'Predictive Maintenance', 'Data Analytics', 'Automated Control'],
+    pricing: '$8,000 - $50,000/project',
+    category: 'IoT',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Virtual Reality',
+    description: 'Immersive VR experiences powered by AI for training, entertainment, and education.',
+    icon: Monitor,
+    features: ['Immersive Environments', 'AI NPCs', 'Adaptive Learning', 'Haptic Feedback'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Virtual Reality',
+    popular: true
+  },
+  {
+    title: 'AI-Powered 5G Network Optimization',
+    description: 'Intelligent 5G network management and optimization using AI algorithms.',
+    icon: Network,
+    features: ['Network Slicing', 'Resource Allocation', 'Quality of Service', 'Predictive Maintenance'],
+    pricing: '$30,000 - $250,000/project',
+    category: '5G Technology',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Digital Transformation',
+    description: 'Complete digital transformation solutions using AI for business process automation.',
+    icon: Settings,
+    features: ['Process Automation', 'Workflow Optimization', 'Data Integration', 'Change Management'],
+    pricing: '$40,000 - $300,000/project',
+    category: 'Digital Transformation',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Customer Experience',
+    description: 'Comprehensive customer experience optimization using AI across all touchpoints.',
+    icon: Users,
+    features: ['Journey Mapping', 'Personalization', 'Sentiment Analysis', 'Predictive Support'],
+    pricing: '$15,000 - $100,000/setup',
+    category: 'Customer Experience',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Intelligence',
+    description: 'Advanced threat detection and response using machine learning and behavioral analysis.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Threat Intelligence'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Medical Imaging',
+    description: 'Advanced medical image analysis and diagnosis assistance using AI.',
+    icon: Heart,
     features: ['X-ray Analysis', 'MRI Interpretation', 'CT Scan Processing', 'Pathology Detection'],
     pricing: '$25,000 - $150,000/project',
     category: 'Medical AI'
@@ -1142,6 +1293,187 @@ title: 'Generative AI Content Creation Suite',
     title: 'AI Financial Trading Algorithm',
     description: 'Advanced algorithmic trading system with machine learning and real-time market analysis.',
     icon: TrendingUp,
+    features: ['Market Analysis', 'Risk Management', 'Portfolio Optimization', 'Real-time Trading'],
+    pricing: '$75,000 - $500,000/setup',
+    category: 'FinTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Climate Change Modeling',
+    description: 'Advanced climate modeling and prediction using machine learning and big data analytics.',
+    icon: Globe,
+    features: ['Climate Modeling', 'Weather Prediction', 'Impact Assessment', 'Policy Analysis'],
+    pricing: '$100,000 - $750,000/setup',
+    category: 'Environmental AI',
+    popular: true
+  },
+  {
+    title: 'AI Quantum Computing Optimizer',
+    description: 'AI-driven quantum algorithm optimization and quantum machine learning solutions.',
+    icon: Cpu,
+    features: ['Quantum Algorithm Design', 'Optimization Problems', 'Quantum ML', 'Error Correction'],
+    pricing: '$25,000 - $100,000/project',
+    category: 'Quantum AI'
+  },
+  {
+    title: 'AI-Powered Space Mission Planning',
+    description: 'Autonomous space mission planning and satellite constellation optimization.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Satellite Optimization', 'Orbital Mechanics', 'Resource Allocation'],
+    pricing: '$50,000 - $200,000/project',
+    category: 'Space AI'
+  },
+  {
+    title: 'AI Neuromorphic Computing Platform',
+    description: 'Brain-inspired computing systems for edge AI and real-time processing.',
+    icon: Brain,
+    features: ['Neuromorphic Chips', 'Edge Computing', 'Real-time Processing', 'Low Power Consumption'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Neuromorphic AI'
+  },
+  {
+    title: 'AI-Powered Synthetic Biology',
+    description: 'AI-driven synthetic biology design and protein engineering platform.',
+    icon: Heart,
+    features: ['Protein Design', 'DNA Synthesis', 'Biological Modeling', 'Drug Discovery'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Synthetic Biology AI'
+  },
+  {
+    title: 'AI Autonomous Vehicle Fleet Management',
+    description: 'Intelligent fleet management and coordination for autonomous vehicles.',
+    icon: Car,
+    features: ['Fleet Coordination', 'Route Optimization', 'Predictive Maintenance', 'Safety Monitoring'],
+    pricing: '$30,000 - $150,000/setup',
+    category: 'Autonomous Vehicles'
+  },
+  {
+    title: 'AI-Powered Digital Twin Platform',
+    description: 'Real-time digital twin creation and simulation for complex systems.',
+    icon: Monitor,
+    features: ['Real-time Simulation', 'Predictive Modeling', 'System Optimization', 'Virtual Testing'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'Digital Twin AI'
+  },
+  {
+    title: 'AI Edge Computing Intelligence',
+    description: 'Distributed AI processing at the edge for IoT and real-time applications.',
+    icon: Network,
+    features: ['Edge Processing', 'IoT Integration', 'Real-time Analytics', 'Distributed Learning'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Edge AI'
+  },
+  {
+    title: 'AI-Powered Metaverse Platform',
+    description: 'AI-driven virtual world creation and immersive experience platform.',
+    icon: Globe,
+    features: ['Virtual World Creation', 'Avatar Generation', 'Behavioral AI', 'Immersive Experiences'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Metaverse AI'
+  },
+  {
+    title: 'AI Quantum Machine Learning',
+    description: 'Quantum-enhanced machine learning algorithms for complex optimization problems.',
+    icon: Cpu,
+    features: ['Quantum ML Algorithms', 'Optimization Problems', 'Quantum Neural Networks', 'Quantum Data Processing'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Quantum ML'
+  },
+  {
+    title: 'AI-Powered Brain-Computer Interface',
+    description: 'AI-driven brain-computer interface for medical and assistive applications.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'Motor Control', 'Cognitive Enhancement', 'Medical Applications'],
+    pricing: '$50,000 - $250,000/project',
+    category: 'BCI AI'
+  },
+  {
+    title: 'AI Autonomous Drone Swarm',
+    description: 'Coordinated autonomous drone operations for surveillance and delivery.',
+    icon: Rocket,
+    features: ['Swarm Coordination', 'Autonomous Navigation', 'Mission Planning', 'Collision Avoidance'],
+    pricing: '$35,000 - $175,000/setup',
+    category: 'Drone AI'
+  },
+  {
+    title: 'AI-Powered Robotic Process Automation',
+    description: 'Advanced RPA with AI decision-making and learning capabilities.',
+    icon: Bot,
+    features: ['Process Automation', 'Decision Making', 'Learning Algorithms', 'Exception Handling'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'RPA AI'
+  },
+  {
+    title: 'AI Blockchain Analytics Platform',
+    description: 'Advanced blockchain transaction analysis and cryptocurrency intelligence.',
+    icon: Shield,
+    features: ['Transaction Analysis', 'Anomaly Detection', 'Market Intelligence', 'Compliance Monitoring'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Blockchain AI'
+  },
+  {
+    title: 'AI-Powered 6G Network Optimization',
+    description: 'Next-generation network optimization and intelligent resource allocation.',
+    icon: Network,
+    features: ['Network Optimization', 'Resource Allocation', 'Predictive Maintenance', 'Performance Analytics'],
+    pricing: '$40,000 - $200,000/project',
+    category: '6G AI'
+  },
+  {
+    title: 'AI Autonomous Trading System',
+    description: 'Fully autonomous trading system with advanced market analysis and risk management.',
+    icon: TrendingUp,
+    features: ['Market Analysis', 'Risk Management', 'Portfolio Optimization', 'Real-time Trading'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'Trading AI'
+  },
+  {
+    title: 'AI-Powered Smart City Platform',
+    description: 'Comprehensive smart city management with AI-driven optimization.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Energy Management', 'Public Safety', 'Resource Allocation'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Smart City AI'
+  },
+  {
+    title: 'AI Augmented Reality Assistant',
+    description: 'AI-powered AR assistant for industrial and consumer applications.',
+    icon: Eye,
+    features: ['AR Object Recognition', 'Spatial Computing', 'Real-time Guidance', 'Hands-free Operation'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'AR AI'
+  },
+  {
+    title: 'AI-Powered Cybersecurity AI',
+    description: 'Self-learning cybersecurity system with adaptive threat detection.',
+    icon: Shield,
+    features: ['Adaptive Learning', 'Threat Detection', 'Automated Response', 'Behavioral Analysis'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Cybersecurity AI'
+  },
+  {
+    title: 'AI-Powered Quantum Computing Optimization',
+    description: 'Quantum algorithm optimization and quantum machine learning solutions.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Optimization', 'Machine Learning', 'Error Correction'],
+    pricing: '$150,000 - $1,000,000/setup',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Grid Management',
+    description: 'Intelligent energy grid management with predictive analytics and optimization.',
+    icon: Zap,
+    features: ['Load Forecasting', 'Grid Optimization', 'Renewable Integration', 'Demand Response'],
+    pricing: '$50,000 - $300,000/setup',
+    category: 'Energy',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Precision Agriculture',
+    description: 'Smart farming solutions with AI-powered crop monitoring and optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
     features: ['Market Analysis', 'Risk Management', 'Portfolio Optimization', 'High-frequency Trading'],
     pricing: '$30,000 - $200,000/setup',
     category: 'FinTech AI'
