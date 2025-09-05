@@ -1,3 +1,4 @@
+/* eslint-env node */
 const improvements = ['Extracted common components to reduce duplication',
   'Added proper TypeScript types',
   'Improved error handling',

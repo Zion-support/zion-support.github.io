@@ -1,3 +1,4 @@
+/* eslint-env node */
 import Stripe from 'stripe';
 import { withErrorLogging } from './withErrorLogging.cjs';
 

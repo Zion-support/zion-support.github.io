@@ -1,3 +1,4 @@
+/* eslint-env node */
 import { withErrorLogging } from '../withErrorLogging.cjs';
 
 export default withErrorLogging(async (req, res) => {

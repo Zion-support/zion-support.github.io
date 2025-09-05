@@ -1,3 +1,4 @@
+/* eslint-env node */
 #!/usr/bin/env node;
 // Function to fix remaining lint errors;
 function fixRemainingLintErrors(content) {

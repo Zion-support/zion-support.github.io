@@ -1,3 +1,4 @@
+/* eslint-env node */
 #!/usr/bin/env node
 // Simple execution script for the master automation
 console.log(' Executing Master Automation...'

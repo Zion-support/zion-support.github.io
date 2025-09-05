@@ -1,3 +1,4 @@
+/* eslint-env node */
 // Build Verification Script
 // This script checks if our components can be imported without syntax errors
 console.log(' Starting build verification...'

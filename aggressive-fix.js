@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+/* eslint-env node */
+/* global process console */
 import fs from 'fs';
 import path from 'path';
 function createValidReactComponent(filePath) {
@@ -31,7 +33,8 @@ function fixFile(filePath) {
       return true;
     }
     return false;
-  } catch (_error) {
+  } catch (error) {
+    console.error('Error processing file:', error.message);
     return false;
   }
 }

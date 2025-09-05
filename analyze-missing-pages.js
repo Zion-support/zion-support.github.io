@@ -1,3 +1,4 @@
+/* eslint-env node */
 import fs from 'fs';
 import { execSync } from 'child_process';
 

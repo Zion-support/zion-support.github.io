@@ -1,3 +1,4 @@
+/* eslint-env node */
 cursor/fix-lint-push-and-merge-to-main-f3c1
 const { execSync } = require("child_process");
 class TestAutomation {

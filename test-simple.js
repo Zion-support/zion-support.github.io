@@ -1,3 +1,4 @@
+/* eslint-env node */
 #!/usr/bin/env node
 console.log('Simple test script running...');
 console.log('Node "version": ', process.version);

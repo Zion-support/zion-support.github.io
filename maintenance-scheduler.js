@@ -1,3 +1,4 @@
+/* eslint-env node */
 cursor/fix-lint-push-and-merge-to-main-f3c1
 const fs = require("fs");
 const { execSync } = require("child_process");
