@@ -1,12 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-
 const blogPosts = [
   { id: 1, title: 'The Future of AI in Business: 2025 Trends', excerpt: 'Explore AI trends transforming businesses.', author: 'Dr. Sarah Chen', date: '2024-01-15', readTime: '5 min read' },
-  { id: 2, title: 'Micro SaaS: Building Scalable Solutions', excerpt: 'Build and scale micro SaaS apps.', author: 'Michael Rodriguez', date: '2024-01-12', readTime: '7 min read' }
-]
-
+  { id: 2, title: 'Micro SaaS: Building Scalable Solutions', excerpt: 'Build and scale micro SaaS apps.', author: 'Michael Rodriguez', date: '2024-01-12', readTime: '7 min read' }]
 export default function BlogPage() {
   return (
     <div className="min-h-screen bg-white">
