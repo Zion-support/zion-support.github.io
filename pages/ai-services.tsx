@@ -390,6 +390,188 @@ const aiServices = [
     pricing: '$2,500 - $15,000/month',
     category: 'Performance AI',
     link: 'https://aiperformance.ziontechgroup.com'
+  },
+  // New Innovative AI Services
+  {
+    title: 'AI-Powered Drug Discovery',
+    description: 'Accelerated drug discovery using machine learning and molecular modeling.',
+    icon: Heart,
+    features: ['Molecular Modeling', 'Drug Design', 'Toxicity Prediction', 'Clinical Trial Optimization'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Healthcare AI',
+    popular: true,
+    link: 'https://aidrugdiscovery.ziontechgroup.com'
+  },
+  {
+    title: 'AI Climate Change Modeling',
+    description: 'Advanced climate modeling and environmental impact prediction using AI.',
+    icon: Sprout,
+    features: ['Climate Modeling', 'Impact Prediction', 'Carbon Footprint Analysis', 'Sustainability Planning'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Environmental AI',
+    link: 'https://aiclimate.ziontechgroup.com'
+  },
+  {
+    title: 'AI Quantum Computing Optimization',
+    description: 'Quantum algorithm optimization and quantum machine learning solutions.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Quantum ML', 'Optimization Problems', 'Hybrid Computing'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Quantum AI',
+    link: 'https://aiquantum.ziontechgroup.com'
+  },
+  {
+    title: 'AI Autonomous Vehicle Systems',
+    description: 'AI-powered autonomous vehicle perception, planning, and control systems.',
+    icon: Car,
+    features: ['Computer Vision', 'Path Planning', 'Decision Making', 'Safety Systems'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Autonomous Vehicles',
+    link: 'https://aiautonomous.ziontechgroup.com'
+  },
+  {
+    title: 'AI Space Exploration Analytics',
+    description: 'AI-powered space mission planning and astronomical data analysis.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Data Analysis', 'Satellite Operations', 'Space Weather'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Space AI',
+    link: 'https://aispace.ziontechgroup.com'
+  },
+  {
+    title: 'AI Brain-Computer Interface',
+    description: 'AI-powered brain-computer interface development and neural signal processing.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'BCI Development', 'Cognitive Enhancement', 'Medical Applications'],
+    pricing: '$150,000 - $1,500,000/project',
+    category: 'Neurotechnology',
+    link: 'https://aibci.ziontechgroup.com'
+  },
+  {
+    title: 'AI Synthetic Data Generation',
+    description: 'High-quality synthetic data generation for training and testing AI models.',
+    icon: Database,
+    features: ['Data Synthesis', 'Privacy Preservation', 'Model Training', 'Quality Assurance'],
+    pricing: '$10,000 - $100,000/project',
+    category: 'Data Generation',
+    link: 'https://aisyntheticdata.ziontechgroup.com'
+  },
+  {
+    title: 'AI Explainable AI (XAI)',
+    description: 'Making AI decisions transparent and interpretable for critical applications.',
+    icon: Eye,
+    features: ['Model Interpretability', 'Decision Explanation', 'Bias Detection', 'Trust Building'],
+    pricing: '$15,000 - $150,000/project',
+    category: 'Explainable AI',
+    link: 'https://aixai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Edge Intelligence',
+    description: 'AI inference and decision-making at the edge for real-time applications.',
+    icon: Server,
+    features: ['Edge Inference', 'Real-time Processing', 'Low Latency', 'Resource Optimization'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'Edge AI',
+    link: 'https://aiedge.ziontechgroup.com'
+  },
+  {
+    title: 'AI Federated Learning',
+    description: 'Privacy-preserving machine learning across distributed data sources.',
+    icon: Lock,
+    features: ['Privacy Preservation', 'Distributed Training', 'Model Aggregation', 'Secure Communication'],
+    pricing: '$25,000 - $250,000/project',
+    category: 'Federated Learning',
+    link: 'https://aifederated.ziontechgroup.com'
+  },
+  {
+    title: 'AI Multi-Modal Learning',
+    description: 'AI systems that process and understand multiple data types simultaneously.',
+    icon: FileText,
+    features: ['Multi-modal Processing', 'Cross-modal Learning', 'Fusion Techniques', 'Unified Understanding'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'Multi-Modal AI',
+    link: 'https://aimultimodal.ziontechgroup.com'
+  },
+  {
+    title: 'AI Reinforcement Learning',
+    description: 'Advanced reinforcement learning for complex decision-making and optimization.',
+    icon: Target,
+    features: ['RL Algorithms', 'Policy Optimization', 'Environment Simulation', 'Reward Engineering'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'Reinforcement Learning',
+    link: 'https://aireinforcement.ziontechgroup.com'
+  },
+  {
+    title: 'AI Transfer Learning',
+    description: 'Efficient model adaptation and knowledge transfer across domains.',
+    icon: Network,
+    features: ['Domain Adaptation', 'Knowledge Transfer', 'Few-shot Learning', 'Model Reuse'],
+    pricing: '$15,000 - $150,000/project',
+    category: 'Transfer Learning',
+    link: 'https://aitransfer.ziontechgroup.com'
+  },
+  {
+    title: 'AI Adversarial Defense',
+    description: 'Robust AI systems resistant to adversarial attacks and manipulation.',
+    icon: Shield,
+    features: ['Adversarial Training', 'Attack Detection', 'Defense Mechanisms', 'Robustness Testing'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'AI Security',
+    link: 'https://aiadversarial.ziontechgroup.com'
+  },
+  {
+    title: 'AI Continual Learning',
+    description: 'AI systems that learn continuously without forgetting previous knowledge.',
+    icon: BookOpen,
+    features: ['Continual Learning', 'Catastrophic Forgetting Prevention', 'Memory Management', 'Adaptive Learning'],
+    pricing: '$25,000 - $250,000/project',
+    category: 'Continual Learning',
+    link: 'https://aicontinual.ziontechgroup.com'
+  },
+  {
+    title: 'AI Meta-Learning',
+    description: 'AI systems that learn how to learn and adapt quickly to new tasks.',
+    icon: Brain,
+    features: ['Learning to Learn', 'Few-shot Adaptation', 'Meta-optimization', 'Task Generalization'],
+    pricing: '$35,000 - $350,000/project',
+    category: 'Meta-Learning',
+    link: 'https://aimeta.ziontechgroup.com'
+  },
+  {
+    title: 'AI Causal Inference',
+    description: 'Understanding cause-and-effect relationships in complex systems using AI.',
+    icon: TrendingUp,
+    features: ['Causal Discovery', 'Intervention Analysis', 'Counterfactual Reasoning', 'Causal Modeling'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'Causal AI',
+    link: 'https://aicausal.ziontechgroup.com'
+  },
+  {
+    title: 'AI Graph Neural Networks',
+    description: 'Advanced graph-based machine learning for complex relational data.',
+    icon: Network,
+    features: ['Graph Processing', 'Relational Learning', 'Network Analysis', 'Graph Embeddings'],
+    pricing: '$25,000 - $250,000/project',
+    category: 'Graph AI',
+    link: 'https://aigraph.ziontechgroup.com'
+  },
+  {
+    title: 'AI Time Series Forecasting',
+    description: 'Advanced time series analysis and forecasting using deep learning.',
+    icon: BarChart3,
+    features: ['Time Series Analysis', 'Long-term Forecasting', 'Anomaly Detection', 'Trend Analysis'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'Time Series AI',
+    link: 'https://aitimeseries.ziontechgroup.com'
+  },
+  {
+    title: 'AI Generative Models',
+    description: 'Advanced generative AI for creating realistic content and data.',
+    icon: Image,
+    features: ['Content Generation', 'Data Augmentation', 'Creative AI', 'Realistic Synthesis'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'Generative AI',
+    link: 'https://aigenerative.ziontechgroup.com'
   }
 ];
 
@@ -679,6 +861,59 @@ export default function AIServicesPage() {
               </Link>
               <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
                 View All Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+              Get in Touch with Our AI Experts
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Smartphone className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+                <p className="text-gray-600">+1 302 464 0950</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Mail className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+                <p className="text-gray-600">kleber@ziontechgroup.com</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Building className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
+                <p className="text-gray-600">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+              </div>
+            </div>
+            <div className="mt-8">
+              <p className="text-gray-600 mb-4">
+                Ready to harness the power of AI for your business? 
+                Contact us today for a free AI consultation and custom solution design.
+              </p>
+              <Link 
+                href="/contact" 
+                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+              >
+                Schedule AI Consultation
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
           </motion.div>

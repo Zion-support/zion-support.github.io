@@ -48,7 +48,9 @@ import {
   HardDrive,
   Bell,
   Home,
-  BookOpen
+  BookOpen,
+  Database,
+  Brain
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -297,6 +299,188 @@ const microSaaSProducts = [
     pricing: '$79 - $399/month',
     category: 'API Development',
     link: 'https://apidocs.ziontechgroup.com'
+  },
+  // New Innovative Micro SAAS Services
+  {
+    title: 'AI-Powered Compliance Tracker',
+    description: 'Automated regulatory compliance monitoring with real-time updates and risk assessment.',
+    icon: Shield,
+    features: ['Regulatory Monitoring', 'Risk Assessment', 'Automated Reporting', 'Compliance Alerts'],
+    pricing: '$299 - $1,499/month',
+    category: 'Compliance',
+    popular: true,
+    link: 'https://complianceai.ziontechgroup.com'
+  },
+  {
+    title: 'Sustainable Business Metrics Dashboard',
+    description: 'Track and optimize environmental impact with carbon footprint analysis and sustainability reporting.',
+    icon: Sprout,
+    features: ['Carbon Footprint Tracking', 'Sustainability Reporting', 'ESG Metrics', 'Goal Setting'],
+    pricing: '$199 - $999/month',
+    category: 'Sustainability',
+    link: 'https://sustainabilitytracker.ziontechgroup.com'
+  },
+  {
+    title: 'Remote Team Wellness Platform',
+    description: 'Employee wellness tracking with mental health support and productivity optimization.',
+    icon: Heart,
+    features: ['Wellness Tracking', 'Mental Health Support', 'Productivity Analytics', 'Team Building'],
+    pricing: '$49 - $299/month',
+    category: 'Employee Wellness',
+    link: 'https://wellnessplatform.ziontechgroup.com'
+  },
+  {
+    title: 'Supply Chain Intelligence Hub',
+    description: 'Real-time supply chain monitoring with predictive analytics and risk management.',
+    icon: Network,
+    features: ['Real-time Tracking', 'Predictive Analytics', 'Risk Management', 'Vendor Monitoring'],
+    pricing: '$399 - $2,499/month',
+    category: 'Supply Chain',
+    link: 'https://supplychainai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Personal Learning Assistant',
+    description: 'Personalized learning platform with adaptive content and skill assessment.',
+    icon: BookOpen,
+    features: ['Adaptive Learning', 'Skill Assessment', 'Progress Tracking', 'Certification Management'],
+    pricing: '$29 - $199/month',
+    category: 'Education',
+    link: 'https://learningai.ziontechgroup.com'
+  },
+  {
+    title: 'Voice AI Meeting Transcriber',
+    description: 'Real-time meeting transcription with AI-powered insights and action item extraction.',
+    icon: Mic,
+    features: ['Real-time Transcription', 'Action Item Extraction', 'Meeting Insights', 'Multi-language Support'],
+    pricing: '$99 - $499/month',
+    category: 'Productivity',
+    link: 'https://voicetranscriber.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Document Verifier',
+    description: 'Secure document verification using blockchain technology for authenticity and tamper-proof records.',
+    icon: Lock,
+    features: ['Blockchain Verification', 'Tamper Detection', 'Digital Signatures', 'Audit Trails'],
+    pricing: '$199 - $999/month',
+    category: 'Blockchain',
+    link: 'https://blockchainverify.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Customer Churn Predictor',
+    description: 'Predict and prevent customer churn with machine learning and automated retention campaigns.',
+    icon: TrendingUp,
+    features: ['Churn Prediction', 'Retention Campaigns', 'Customer Scoring', 'Automated Actions'],
+    pricing: '$299 - $1,499/month',
+    category: 'Customer Retention',
+    link: 'https://churnpredictor.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Audit Platform',
+    description: 'Automated smart contract security auditing with vulnerability detection and compliance checking.',
+    icon: Code,
+    features: ['Security Auditing', 'Vulnerability Detection', 'Compliance Checking', 'Gas Optimization'],
+    pricing: '$499 - $2,999/month',
+    category: 'Blockchain Security',
+    link: 'https://contractaudit.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Market Research Assistant',
+    description: 'Automated market research with competitor analysis and trend identification.',
+    icon: Search,
+    features: ['Competitor Analysis', 'Trend Identification', 'Market Reports', 'Data Visualization'],
+    pricing: '$199 - $1,299/month',
+    category: 'Market Research',
+    link: 'https://marketresearchai.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum-Safe Encryption Manager',
+    description: 'Future-proof encryption solutions preparing for quantum computing threats.',
+    icon: Shield,
+    features: ['Quantum-Safe Algorithms', 'Migration Tools', 'Compliance Support', 'Performance Monitoring'],
+    pricing: '$399 - $1,999/month',
+    category: 'Cybersecurity',
+    link: 'https://quantumsafe.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Fraud Detection System',
+    description: 'Real-time fraud detection using machine learning and behavioral analysis.',
+    icon: Eye,
+    features: ['Real-time Detection', 'Behavioral Analysis', 'Risk Scoring', 'Automated Responses'],
+    pricing: '$299 - $1,999/month',
+    category: 'Fraud Prevention',
+    link: 'https://frauddetection.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Orchestrator',
+    description: 'Manage and optimize edge computing resources with intelligent workload distribution.',
+    icon: Cpu,
+    features: ['Workload Distribution', 'Resource Optimization', 'Edge Monitoring', 'Auto-scaling'],
+    pricing: '$199 - $1,499/month',
+    category: 'Edge Computing',
+    link: 'https://edgeorchestrator.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Code Generator',
+    description: 'Generate code from natural language descriptions with multiple programming language support.',
+    icon: Code,
+    features: ['Natural Language Input', 'Multi-language Support', 'Code Testing', 'Documentation Generation'],
+    pricing: '$149 - $799/month',
+    category: 'Development',
+    link: 'https://codegenerator.ziontechgroup.com'
+  },
+  {
+    title: 'Digital Twin Platform',
+    description: 'Create and manage digital twins of physical assets with real-time monitoring and simulation.',
+    icon: Monitor,
+    features: ['Digital Twin Creation', 'Real-time Monitoring', 'Simulation Engine', 'Predictive Maintenance'],
+    pricing: '$499 - $2,999/month',
+    category: 'IoT',
+    link: 'https://digitaltwin.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Legal Document Analyzer',
+    description: 'Automated legal document analysis with contract review and risk assessment.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Risk Assessment', 'Clause Extraction', 'Compliance Checking'],
+    pricing: '$399 - $1,999/month',
+    category: 'Legal Tech',
+    link: 'https://legalanalyzer.ziontechgroup.com'
+  },
+  {
+    title: 'Autonomous Database Optimizer',
+    description: 'Self-tuning database performance with automated optimization and scaling.',
+    icon: Database,
+    features: ['Auto-tuning', 'Performance Monitoring', 'Scaling Recommendations', 'Query Optimization'],
+    pricing: '$299 - $1,499/month',
+    category: 'Database',
+    link: 'https://dboptimizer.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Video Content Creator',
+    description: 'Automated video creation from text with AI-generated visuals and voice synthesis.',
+    icon: Video,
+    features: ['Text-to-Video', 'AI Voice Synthesis', 'Visual Generation', 'Multi-format Export'],
+    pricing: '$199 - $1,299/month',
+    category: 'Content Creation',
+    link: 'https://videocreator.ziontechgroup.com'
+  },
+  {
+    title: 'Neural Network Model Marketplace',
+    description: 'Buy, sell, and deploy pre-trained AI models with version control and performance monitoring.',
+    icon: Brain,
+    features: ['Model Marketplace', 'Version Control', 'Performance Monitoring', 'Easy Deployment'],
+    pricing: '$99 - $999/month',
+    category: 'AI Marketplace',
+    link: 'https://modelmarketplace.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Accessibility Checker',
+    description: 'Automated web accessibility testing with WCAG compliance and improvement suggestions.',
+    icon: Eye,
+    features: ['WCAG Compliance', 'Automated Testing', 'Improvement Suggestions', 'Multi-page Scanning'],
+    pricing: '$79 - $399/month',
+    category: 'Accessibility',
+    link: 'https://accessibilitychecker.ziontechgroup.com'
   },
   {
     title: 'User Behavior Analytics',
@@ -848,6 +1032,59 @@ export default function MicroSaaSPage() {
               </Link>
               <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
                 View All Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+              Get in Touch with Our Experts
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Smartphone className="w-6 h-6 text-purple-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+                <p className="text-gray-600">+1 302 464 0950</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Mail className="w-6 h-6 text-purple-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+                <p className="text-gray-600">kleber@ziontechgroup.com</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Building className="w-6 h-6 text-purple-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
+                <p className="text-gray-600">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+              </div>
+            </div>
+            <div className="mt-8">
+              <p className="text-gray-600 mb-4">
+                Ready to transform your business with cutting-edge micro SaaS solutions? 
+                Contact us today for a free consultation and custom quote.
+              </p>
+              <Link 
+                href="/contact" 
+                className="inline-flex items-center px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-semibold"
+              >
+                Schedule Consultation
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
           </motion.div>
