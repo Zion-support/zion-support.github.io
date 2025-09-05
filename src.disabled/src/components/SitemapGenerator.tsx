@@ -1,3 +1,2 @@
-import { FileText,Download,Globe,Zap,Brain,Shield,Cloud,Users,ShoppingCart,BookOpen,MessageCircle,HelpCircle,Star,Atom,Network,Eye,PenTool,TrendingUp,Rocket,Heart,Crown,Sparkles,Flame,DollarSign,Workflow,Settings,Lock,BarChart3,Cpu,Building,Server,Activity,GraduationCap,Newspaper,Target,Briefcase,Phone,MapPin,Mail} from \'lucide-react\';
-const { FileText,Download,Globe,Zap,Brain,Shield,Cloud,Users,ShoppingCart,BookOpen,MessageCircle,HelpCircle,Star,Atom,Network,Eye,PenTool,TrendingUp,Rocket,Heart,Crown,Sparkles,Flame,DollarSign,Workflow,Settings,Lock,BarChart3,Cpu,Building,Server,Activity,GraduationCap,Newspaper,Target,Briefcase,Phone,MapPin,Mail} from "lucide-react";''"
-import { FileText,Download,Globe,Zap,Brain,Shield,Cloud,Users,ShoppingCart,BookOpen,MessageCircle,HelpCircle,Star,Atom,Network,Eye,PenTool,TrendingUp,Rocket,Heart,Crown,Sparkles,Flame,DollarSign,Workflow,Settings,Lock,BarChart3,Cpu,Building,Server,Activity,GraduationCap,Newspaper,Target,Briefcase,Phone,MapPin,Mail} from 'lucide-react';''
+>>>>>>> origin/main
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

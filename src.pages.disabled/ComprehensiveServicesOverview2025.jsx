@@ -1,4 +1,3 @@
-const ComprehensiveServicesOverview2025 = () => { const [selectedService,setSelectedService] = useState (null) const [selectedCategory,setSelectedCategory] = useState (\'all\') const categories = [\'all\',\'AI & Business Intelligence\',\'Cybersecurity & Quantum Computing\',\'DevOps & Infrastructure\',\'Blockchain & Supply Chain\',\'Healthcare & AI\',\'Quantum Computing & AI\',\'FinTech & AI\',\'IoT & Edge Computing\',\'Legal Tech & AI\',\'Marketing & AI\',\'Energy & Sustainability\',\'Logistics & Transportation\' ] const filteredServices = allEnhancedServices.filter (service => selectedCategory === \'all\' || service.category === selectedCategory) const getCategoryIcon = (category) => { const icons = { \'AI & Business Intelligence\': \',\'"Cybersecurity\": & Quantum Computing\': \',\'"DevOps\": & Infrastructure\': \',\'"Blockchain\": & Supply Chain\': \',\'"Healthcare\": & AI\': \',\'"Quantum\": Computing & AI\': \',\'"FinTech\": & AI\': \',\'"IoT\": & Edge Computing\': \',\'"Legal\": Tech & AI\': \',\'"Marketing\": & AI\': \',\'"Energy\": & Sustainability\': \',\''\';\'"\";
 import React from 'react';
 interface ComprehensiveServicesOverview2025Props {
   // Add props here as needed
@@ -10,4 +9,16 @@ export default function ComprehensiveServicesOverview2025({ }: ComprehensiveServ
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
+=======
+}
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

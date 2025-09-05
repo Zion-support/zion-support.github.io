@@ -1,6 +1,5 @@
-import React from 'react'
+import * as React from 'react'
 import MainLayout from '../components/layout/MainLayout'
-import { motion } from 'framer-motion'
 import {
   Shield, 
   Settings, 

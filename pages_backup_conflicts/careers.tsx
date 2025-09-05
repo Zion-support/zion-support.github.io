@@ -1,7 +1,9 @@
-import React from 'react';
+import * as React from 'react';
+
 interface CareersProps {
   // Add props here as needed
 }
+
 export default function Careers({ }: CareersProps) {
   return (
     <div>

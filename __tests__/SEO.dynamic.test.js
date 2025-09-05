@@ -1,21 +1,3 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import SEOdynamic from '../components/SEO.dynamic';
-describe('SEOdynamic', () => {
-  test('renders without crashing', () => {
-    render(<SEOdynamic />);
-    expect(screen.getByTestId('seo.dynamic')).toBeInTheDocument();
-  });
-  test('displays correct content', () => {
-    render(<SEOdynamic />);
-  });
-  test('handles user interactions', () => {
-    render(<SEOdynamic />);
-  });
-  test('applies correct styling', () => {
-    render(<SEOdynamic />);
-  });
-});
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOdynamic from "./components/SEO.dynamic"; describe("SEOdynamic",() => { test("renders without crashing",() => { render(<SEOdynamic />); expect(screen.getByTestId("seo.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOdynamic />)}); test("handles user interactions",() => { render(<SEOdynamic />)}); test("applies correct styling",() => { render(<SEOdynamic />)})});''"
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 import _React from 'react';  import '@testing-library/jest-dom'; import SEOdynamic from '../components/SEO.dynamic'; describe('SEOdynamic',() => { test('renders without crashing',() => { render(<SEOdynamic />); expect(screen.getByTestId('seo.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEOdynamic />)}); test('handles user interactions',() => { render(<SEOdynamic />)}); test('applies correct styling',() => { render(<SEOdynamic />)})});
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

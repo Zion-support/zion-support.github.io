@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages/docs/api.tsx.disabled
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -74,6 +75,9 @@ const response = await fetch('/api/ai/email-responder', {
     message: 'I need help with my account',
     context: { userId: '12345' }
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> 9a4f5825b5f6e9b21a821d0a21c3aa51adf201e7:pages/docs/api.tsx
 import React, { useState } from 'react';
 import MainLayout from '../../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -307,6 +311,7 @@ export default function APIDocumentationPage() {
           </div>
         </section>
 
+<<<<<<< HEAD:pages/docs/api.tsx.disabled
         {/* API Endpoints */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -370,6 +375,8 @@ export default function APIDocumentationPage() {
                 </motion.div>
               ))}
 =======
+=======
+>>>>>>> 9a4f5825b5f6e9b21a821d0a21c3aa51adf201e7:pages/docs/api.tsx
         {/* Navigation Tabs */}
         <section className="py-8 bg-white border-b">
           <div className="container mx-auto px-4">
@@ -726,6 +733,7 @@ export default function APIDocumentationPage() {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD:pages/docs/api.tsx.disabled
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -754,6 +762,8 @@ export default function APIDocumentationPage() {
                   View AI Services
                 </Link>
 =======
+=======
+>>>>>>> 9a4f5825b5f6e9b21a821d0a21c3aa51adf201e7:pages/docs/api.tsx
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
             <motion.div
@@ -787,7 +797,28 @@ export default function APIDocumentationPage() {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD:pages/docs/api.tsx.disabled
+=======
+=======
+import React from 'react';
+import MainLayout from '../../src/components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout 
+      title="Page - Zion Tech Group"
+      description="Zion Tech Group page"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+>>>>>>> 9a4f5825b5f6e9b21a821d0a21c3aa51adf201e7:pages/docs/api.tsx
       </div>
     </MainLayout>
   );
-}
+};
+
+export default Page;

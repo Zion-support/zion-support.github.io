@@ -1,19 +1,28 @@
 {
   "compilerOptions": {
+<<<<<<< HEAD
     "target": "es5",
+    "lib": ["dom", "dom.iterable", "es6"],
+=======
+    "target": "ES2020",
     "lib": [
       "dom",
       "dom.iterable",
       "es6"
     ],
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
+<<<<<<< HEAD
     "module": "esnext",
+    "moduleResolution": "bundler",
+=======
+    "module": "ESNext",
     "moduleResolution": "node",
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -25,8 +34,22 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+<<<<<<< HEAD
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/pages/*": ["./pages/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/types/*": ["./types/*"],
+      "@/data/*": ["./data/*"],
+      "@/styles/*": ["./styles/*"]
     }
+=======
+      "@/*": [
+        "./*"
+      ]
+    },
+    "allowSyntheticDefaultImports": true
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
   },
   "include": [
     "next-env.d.ts",
@@ -35,6 +58,8 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".next",
+    "dist"
   ]
 }

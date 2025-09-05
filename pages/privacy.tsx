@@ -1,12 +1,21 @@
-import React from 'react';
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Mail, Phone, MapPin } from 'lucide-react';
+<<<<<<< HEAD
 import MainLayout from '../components/layout/MainLayout';
+=======
+=======
+import React from 'react';
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+import MainLayout from '../src/components/layout/MainLayout';
+>>>>>>> 9a4f5825b5f6e9b21a821d0a21c3aa51adf201e7
 
-export default function PrivacyPage() {
+const Page = () => {
   return (
+<<<<<<< HEAD
     <MainLayout
       title="Privacy Policy - Zion Tech Group"
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
@@ -15,120 +24,151 @@ export default function PrivacyPage() {
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4">
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
+              className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Privacy Policy</h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Your privacy is important to us. Learn how we collect, use, and protect your information.
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+                Your privacy is important to us. This policy explains how we collect, use, and protect your information.
               </p>
+              <p className="text-sm text-gray-400">Last updated: January 2025</p>
             </motion.div>
           </div>
         </section>
 
         {/* Content Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
+        <section className="py-20">
+          <div className="container mx-auto px-4 max-w-4xl">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              className="bg-white rounded-lg shadow-lg p-8 md:p-12"
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-white rounded-2xl shadow-lg p-8 md:p-12"
+              transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className="prose prose-lg max-w-none">
-                <h2 className="text-2xl font-bold mb-6">Information We Collect</h2>
-                <p className="mb-6">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                  <Shield className="w-6 h-6 mr-3 text-blue-600" />
+                  Information We Collect
+                </h2>
+                <p className="text-gray-700 mb-6">
                   We collect information you provide directly to us, such as when you create an account, 
-                  use our services, or contact us for support.
+                  contact us, or use our services. This may include:
                 </p>
-                
-                <h3 className="text-xl font-semibold mb-4">Personal Information</h3>
-                <ul className="list-disc pl-6 mb-6">
-                  <li>Name and contact information</li>
-                  <li>Email address</li>
-                  <li>Phone number</li>
-                  <li>Company information</li>
-                  <li>Payment information</li>
+                <ul className="list-disc pl-6 mb-8 text-gray-700">
+                  <li>Name and contact information (email address, phone number, mailing address)</li>
+                  <li>Account credentials and profile information</li>
+                  <li>Payment and billing information</li>
+                  <li>Communications with us (emails, phone calls, chat messages)</li>
+                  <li>Information about your use of our services</li>
                 </ul>
 
-                <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
-                <ul className="list-disc pl-6 mb-6">
-                  <li>How you use our services</li>
-                  <li>Device information</li>
-                  <li>IP address</li>
-                  <li>Browser type and version</li>
-                  <li>Operating system</li>
-                </ul>
-
-                <h2 className="text-2xl font-bold mb-6 mt-12">How We Use Your Information</h2>
-                <p className="mb-6">
-                  We use the information we collect to provide, maintain, and improve our services.
+                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                  <Eye className="w-6 h-6 mr-3 text-blue-600" />
+                  How We Use Your Information
+                </h2>
+                <p className="text-gray-700 mb-6">
+                  We use the information we collect to:
                 </p>
-                
-                <ul className="list-disc pl-6 mb-6">
-                  <li>Provide and maintain our services</li>
-                  <li>Process transactions</li>
-                  <li>Send you technical notices and support messages</li>
+                <ul className="list-disc pl-6 mb-8 text-gray-700">
+                  <li>Provide, maintain, and improve our services</li>
+                  <li>Process transactions and send related information</li>
+                  <li>Send technical notices, updates, and support messages</li>
                   <li>Respond to your comments and questions</li>
-                  <li>Improve our services and develop new features</li>
-                  <li>Monitor and analyze usage and trends</li>
+                  <li>Monitor and analyze trends and usage</li>
+                  <li>Personalize and improve your experience</li>
                 </ul>
 
-                <h2 className="text-2xl font-bold mb-6 mt-12">Information Sharing</h2>
-                <p className="mb-6">
-                  We do not sell, trade, or otherwise transfer your personal information to third parties 
-                  without your consent, except as described in this policy.
+                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                  <Database className="w-6 h-6 mr-3 text-blue-600" />
+                  Information Sharing
+                </h2>
+                <p className="text-gray-700 mb-6">
+                  We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except:
+                </p>
+                <ul className="list-disc pl-6 mb-8 text-gray-700">
+                  <li>With service providers who assist us in operating our business</li>
+                  <li>When required by law or to protect our rights</li>
+                  <li>In connection with a business transfer or acquisition</li>
+                  <li>With your explicit consent</li>
+                </ul>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                  <Lock className="w-6 h-6 mr-3 text-blue-600" />
+                  Data Security
+                </h2>
+                <p className="text-gray-700 mb-6">
+                  We implement appropriate security measures to protect your personal information against unauthorized access, 
+                  alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.
                 </p>
 
-                <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
-                <p className="mb-6">
-                  We implement appropriate security measures to protect your personal information against 
-                  unauthorized access, alteration, disclosure, or destruction.
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Your Rights</h2>
+                <p className="text-gray-700 mb-6">
+                  You have the right to:
+                </p>
+                <ul className="list-disc pl-6 mb-8 text-gray-700">
+                  <li>Access and update your personal information</li>
+                  <li>Request deletion of your personal information</li>
+                  <li>Opt-out of marketing communications</li>
+                  <li>Request a copy of your data</li>
+                  <li>Withdraw consent at any time</li>
+                </ul>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Cookies and Tracking</h2>
+                <p className="text-gray-700 mb-6">
+                  We use cookies and similar technologies to enhance your experience, analyze usage, and personalize content. 
+                  You can control cookie settings through your browser preferences.
                 </p>
 
-                <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
-                <p className="mb-6">
-                  You have the right to access, update, or delete your personal information. You may also 
-                  opt out of certain communications from us.
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Changes to This Policy</h2>
+                <p className="text-gray-700 mb-8">
+                  We may update this privacy policy from time to time. We will notify you of any changes by posting the new 
+                  policy on this page and updating the "Last updated" date.
                 </p>
 
-                <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
-                <p className="mb-6">
-                  If you have any questions about this Privacy Policy, please contact us at:
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Us</h2>
+                <p className="text-gray-700 mb-6">
+                  If you have any questions about this privacy policy, please contact us:
                 </p>
-                
-                <div className="bg-gray-50 rounded-lg p-6">
+                <div className="bg-gray-50 p-6 rounded-lg">
                   <div className="flex items-center mb-4">
-                    <Mail className="w-5 h-5 text-blue-600 mr-3" />
-                    <span>kleber@ziontechgroup.com</span>
+                    <Mail className="w-5 h-5 mr-3 text-blue-600" />
+                    <span className="text-gray-700">kleber@ziontechgroup.com</span>
                   </div>
                   <div className="flex items-center mb-4">
-                    <Phone className="w-5 h-5 text-blue-600 mr-3" />
-                    <span>+1 302 464 0950</span>
+                    <Phone className="w-5 h-5 mr-3 text-blue-600" />
+                    <span className="text-gray-700">+1 302 464 0950</span>
                   </div>
                   <div className="flex items-start">
-                    <User className="w-5 h-5 text-blue-600 mr-3 mt-1" />
-                    <div>
-                      <p>Zion Tech Group</p>
-                      <p>364 E Main St STE 1008</p>
-                      <p>Middletown, DE 19709</p>
-                    </div>
+                    <MapPin className="w-5 h-5 mr-3 text-blue-600 mt-1" />
+                    <span className="text-gray-700">
+                      364 E Main St STE 1008<br />
+                      Middletown DE 19709
+                    </span>
                   </div>
                 </div>
-
-                <p className="text-sm text-gray-600 mt-8">
-                  Last updated: January 2024
-                </p>
               </div>
             </motion.div>
           </div>
         </section>
+=======
+    <MainLayout 
+      title="Page - Zion Tech Group"
+      description="Zion Tech Group page"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
       </div>
     </MainLayout>
   );
-}
+};
+
+export default Page;
