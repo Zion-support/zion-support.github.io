@@ -43,7 +43,9 @@ import {
   ShoppingCart,
   BookOpen,
   Home,
-  Gamepad2
+  Gamepad2,
+  Factory,
+  Trash2
 } from 'lucide-react';
 const aiServices = [
   {

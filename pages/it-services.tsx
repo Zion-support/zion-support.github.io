@@ -36,7 +36,8 @@ import {
   Rocket,
   Sprout,
   Eye,
-  Bot
+  Bot,
+  FileText
 } from 'lucide-react';
 const itServices = [{
     title: 'Cloud Infrastructure Management',
