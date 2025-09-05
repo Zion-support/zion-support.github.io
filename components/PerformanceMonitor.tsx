@@ -1,23 +1,33 @@
 import React, { useEffect } from 'react';
 
+interface PerformanceData {
+  domContentLoaded: number;
+  loadComplete: number;
+  totalLoadTime: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+  resourceCount: number;
+  memory: {
+    used: number;
+    total: number;
+    limit: number;
+  } | null;
+}
+
 interface PerformanceMonitorProps {
-  onPerformanceData?: (data: any) => void;
+  onPerformanceData?: (data: PerformanceData) => void;
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
-  // Only render on client side
-  if (typeof window === 'undefined') {
-    return null;
-  }
-
   useEffect(() => {
-    if (typeof performance === 'undefined') return;
+    // Only run on client side
+    if (typeof window === 'undefined' || typeof performance === 'undefined') return;
 
     const measurePerformance = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
       
-      const performanceData = {
+      const performanceData: PerformanceData = {
         // Navigation timing
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
