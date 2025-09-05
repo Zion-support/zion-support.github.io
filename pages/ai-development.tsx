@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Layout from './components/Layout';
 import { motion } from 'framer-motion';
-import { Brain, Code, Database, Zap, Shield, Cloud, ArrowRight, CheckCircle, Star, Users, Clock, DollarSign } from 'lucide-react';
+import { Brain, Code, Database, Zap, Shield, Cloud, ArrowRight, CheckCircle, Clock } from 'lucide-react';
 
 const aiServices = [
   {

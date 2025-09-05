@@ -49,6 +49,7 @@ export default function SearchPage() {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
+<<<<<<< HEAD
     // Handle search logic here
     console.log('Searching for:', query);
   };
@@ -66,6 +67,40 @@ export default function SearchPage() {
         <title>Search - Zion Tech Group</title>
         <meta name="description" content="Search our comprehensive technology solutions and services" />
       </Head>
+=======
+    router.push(`/search?q=${encodeURIComponent(searchTerm)}`);  };
+
+  return (
+    <Layout
+      title="Search - Zion Tech Group"
+      description="Search our comprehensive collection of services, articles, and resources."
+      keywords="search, services, articles, resources, technology"
+    >
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
+          
+          <div className="container mx-auto px-4 relative z-10">            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Search <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Results</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Find exactly what you're looking for in our comprehensive collection of services and resources.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+>>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
 
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -82,6 +117,7 @@ export default function SearchPage() {
           </p>
         </motion.div>
 
+<<<<<<< HEAD
         <div className="max-w-4xl mx-auto">
           <form onSubmit={handleSearch} className="mb-8">
             <div className="relative">
@@ -99,6 +135,120 @@ export default function SearchPage() {
               >
                 Search
               </button>
+=======
+              {/* Category Filter */}
+              <div className="flex flex-wrap gap-2 justify-center mb-8">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                      selectedCategory === category
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                    }`}
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
+
+              <div className="text-center">
+                <button
+                  onClick={() => {
+                    setSearchTerm('');
+                    setSelectedCategory('All');
+                  }}
+                  className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+                >
+                  Clear Filters
+                </button>
+              </div>
+            </div>          </div>
+        </section>
+
+        {/* Search Results */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-center mb-8"
+              >
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                  {results.length} results found
+                </h2>
+                <p className="text-gray-600">
+                  {searchTerm ? `for "${searchTerm}"` : 'Browse all content'}
+                </p>
+              </motion.div>
+
+              <div className="space-y-6">
+                {results.map((result, index) => (
+                  <motion.div
+                    key={result.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 group"
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <div className="flex items-center mb-2">
+                          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mr-3">
+                            {result.type}
+                          </span>
+                          <span className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">
+                            {result.category}
+                          </span>
+                        </div>
+                        
+                        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                          {result.title}
+                        </h3>
+                        
+                        <p className="text-gray-600 mb-4 leading-relaxed">
+                          {result.description}
+                        </p>
+                        
+                        <div className="flex items-center text-sm text-gray-500">
+                          <Clock className="w-4 h-4 mr-1" />
+                          <span>{new Date(result.date).toLocaleDateString()}</span>
+                        </div>
+                      </div>
+                      
+                      <Link
+                        href={result.url}
+                        className="ml-4 flex items-center text-blue-600 hover:text-blue-800 font-medium group-hover:translate-x-1 transition-transform"
+                      >
+                        View Details
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Link>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {results.length === 0 && (
+                <div className="text-center py-12">
+                  <div className="text-gray-400 mb-4">
+                    <Search className="w-16 h-16 mx-auto" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">No results found</h3>
+                  <p className="text-gray-600 mb-4">Try adjusting your search terms or filters.</p>
+                  <button
+                    onClick={() => {
+                      setSearchTerm('');
+                      setSelectedCategory('All');
+                    }}
+                    className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+                  >
+                    Clear All Filters
+                  </button>
+                </div>              )}
+>>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
             </div>
           </form>
 

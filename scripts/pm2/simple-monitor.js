@@ -23,8 +23,7 @@ class SimpleMonitor {}
     const timestamp = new Date().toISOString();,
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;,
     );
-    _console.log(logMessage.trim());
-    try {}
+    _console.log(logMessage.trim());    try {}
       fs.appendFileSync(this.logFile, logMessage);,
     } catch (error) {}
       _console.error('Failed to write to log file:', error.message);',

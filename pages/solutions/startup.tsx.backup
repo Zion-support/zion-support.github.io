@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import Head from 'next/head';
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -10,7 +7,7 @@ import {
   Zap, 
   DollarSign, 
   Users, 
-<<<<<<< HEAD
+:pages/solutions/startup.tsx.backup
   CheckCircle,
   ArrowRight,
   Cloud,
@@ -129,28 +126,6 @@ const successStories = [
     industry: "Education",
     growth: "1000% user growth",
     description: "Served 50K+ students with our learning platform"
-  }
-];
-
-export default function StartupSolutionsPage() {
-  return (
-    <Layout 
-      title="Startup Solutions - Zion Tech Group"
-      description="Fast, affordable technology solutions for startups. Quick setup, cost-effective pricing, and expert guidance to help your startup succeed."
-      keywords="startup solutions, MVP development, startup technology, affordable tech solutions, startup consulting"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-          </div>
-
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-=======
   ArrowRight, 
   CheckCircle, 
   Clock, 
@@ -183,24 +158,26 @@ const features = [
 
 export default function StartupSolutionsPage() {
   return (
-    <>
-      <Head>
-        <title>Startup Solutions - Zion Tech Group</title>
-        <meta name="description" content="Technology solutions designed for startups and growing companies." />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
+:pages/solutions/startup.tsx.backup
+    <Layout 
+      title="Startup Solutions - Zion Tech Group"
+      description="Fast, affordable technology solutions for startups. Quick setup, cost-effective pricing, and expert guidance to help your startup succeed."
+      keywords="startup solutions, MVP development, startup technology, affordable tech solutions, startup consulting"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4">
+        <section className="relative bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-<<<<<<< HEAD
               <div className="flex items-center justify-center mb-6">
                 <Rocket className="w-16 h-16 text-green-400 mr-4" />
                 <h1 className="text-4xl md:text-6xl font-bold">
@@ -218,19 +195,33 @@ export default function StartupSolutionsPage() {
                 <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                   View All Solutions
                 </Link>
-              </div>
-=======
+              </div>            </motion.div>
+    <>
+      <Head>
+        <title>Startup Solutions - Zion Tech Group</title>
+        <meta name="description" content="Technology solutions designed for startups and growing companies." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Startup Solutions</h1>
               <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
                 Technology solutions designed for startups and growing companies.
               </p>
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
             </motion.div>
           </div>
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
+:pages/solutions/startup.tsx.backup
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -410,34 +401,6 @@ export default function StartupSolutionsPage() {
                   <div className="text-gray-300 text-sm">
                     {story.description}
                   </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-                Ready to Launch Your Startup?
-              </h2>
-              <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-                Let's turn your startup idea into a reality with our proven technology solutions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Start Your Project
-                </Link>
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
-                  Meet Our Team
-=======
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -472,6 +435,27 @@ export default function StartupSolutionsPage() {
         </section>
 
         {/* CTA Section */}
+:pages/solutions/startup.tsx.backup
+        <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+                Ready to Launch Your Startup?
+              </h2>
+              <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
+                Let's turn your startup idea into a reality with our proven technology solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  Start Your Project
+                </Link>
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+                  Meet Our Team                </Link>
         <section className="py-20 bg-orange-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -498,17 +482,14 @@ export default function StartupSolutionsPage() {
                   className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 transition-colors font-semibold"
                 >
                   View Solutions
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </Layout>
-=======
+:pages/solutions/startup.tsx.backup
+    </Layout>  );
     </>
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
   );
 }

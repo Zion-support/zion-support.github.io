@@ -93,8 +93,7 @@ class DependencyHealthChecker {
       this.log(`Error in dependency health checker: ${error.message}`, 'ERROR');
     }
   }
-}
-const fs = require('fs');
+}const fs = require('fs');
 const path = require('path');
 const {
   execSync} = // // require('child_process');

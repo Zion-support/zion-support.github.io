@@ -8,16 +8,31 @@ export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
+=======
+  const handleSubmit = (e: React.FormEvent) => {
+>>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
     e.preventDefault();
     setIsLoading(true);
     // Handle login logic here
+<<<<<<< HEAD
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
   };
+=======
+    console.log('Login attempt:', formData);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });  };
+>>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
 
   return (
     <Layout
@@ -101,8 +116,12 @@ export default function LoginPage() {
                     type="checkbox"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                   />
+<<<<<<< HEAD
                   <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-700">
                     Remember me
+=======
+                  <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">                    Remember me
+>>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
                   </label>
                 </div>
 
@@ -113,6 +132,7 @@ export default function LoginPage() {
                 </div>
               </div>
 
+<<<<<<< HEAD
               <button
                 type="submit"
                 disabled={isLoading}
@@ -145,9 +165,17 @@ export default function LoginPage() {
                 </button>
                 <button className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
                   Microsoft
+=======
+              <div className="mt-6">
+                <button
+                  type="submit"
+                  className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
+                >                  Sign in
+>>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
                 </button>
               </div>
             </div>
+<<<<<<< HEAD
 
             <div className="mt-6 text-center">
               <p className="text-sm text-gray-600">
@@ -159,6 +187,9 @@ export default function LoginPage() {
             </div>
           </motion.div>
         </div>
+=======
+          </motion.form>        </div>
+>>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
       </div>
     </Layout>
   );

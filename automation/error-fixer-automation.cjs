@@ -145,10 +145,9 @@ class ErrorFixerAutomation {
 
       // Check for common corruption patterns
       const corruptionPatterns = [
-        /<<<<<<< HEAD/,
-        /=======/,
-        />>>>>>> cursor/,
-        /""',';';'/,
+        //,
+        //,
+        /        /""',';';'/,
         /';';';'/,
         /""';';';'/,
         /,\s*$/,
@@ -171,12 +170,10 @@ class ErrorFixerAutomation {
 
       // Remove merge conflict markers
       content = content.replace(
-        /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> cursor[^\n]*\n/g,
-        ''
+        /[\s\S]*?[\s\S]*?        ''
       );
       content = content.replace(
-        /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*\n/g,
-        ''
+        /[\s\S]*?[\s\S]*?        ''
       );
 
       // Fix common corruption patterns

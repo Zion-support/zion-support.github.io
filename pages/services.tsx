@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -103,6 +104,24 @@ export default function ServicesPage() {
         'Serverless computing',
         'Container orchestration',
         'Cloud security & compliance',
+=======
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Code, Database, Smartphone, Server, Lock, BarChart3 } from 'lucide-react';
+import Layout from '../components/Layout';
+
+const services = [
+  {
+    category: "AI Services",
+    icon: Brain,
+    color: "blue",
+    description: "80+ cutting-edge AI solutions",
+    services: [
+      "Machine Learning & Deep Learning",
+      "Natural Language Processing",
+      "Computer Vision & Image Recognition",        'Cloud security & compliance',
+>>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
         '24/7 monitoring & support'
       ],
       href: '/cloud-solutions',
@@ -288,6 +307,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
       {/* Process Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -353,6 +373,8 @@ export default function ServicesPage() {
         </div>
       </section>
     </>
+=======
+>>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
         {/* Main Services */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -578,6 +600,10 @@ export default function ServicesPage() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </MainLayout>
+=======
+    </Layout>
+>>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
   );
 }

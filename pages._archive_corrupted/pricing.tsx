@@ -49,44 +49,7 @@ export default function PricingPage() {
         "Standard security features",
         "Email support",
         "Basic analytics",
-        "Monthly reports"
-      ],
-      \"popular\": false
-    },
-    {
-      \"name\": \"Professional\",
-      \"description\": \"Ideal for growing businesses\",
-      \"price\": \"$7,999\",
-      \"period\": \"/month\",
-      \"icon\": Shield,
-      \"color\": \"from-cyan-500 to-blue-500\",
-      \"features\": [\'Advanced website development\',
-        \'Up to 15 pages\',
-        \'Custom functionality\',
-        \'Advanced SEO optimization\',
-        \'Priority support\',
-        \'6 months maintenance included\',
-        \'Analytics integration\',
-        \'Content management system\'
-      "name": 'Professional',
-      "description": 'Ideal for growing businesses',
-      "price": '$5,000',
-      "period": 'per month',
-      "name": "Professional",
-      "description": "Ideal for growing businesses",
-      "price": "$7,999",
-      "period": "/month",
-      "icon": Shield,
-      "color": "from-cyan-500 to-blue-500",
-      "features": ['Advanced website development',
-        'Up to 15 pages',
-        'Custom functionality',
-        'Advanced SEO optimization',
-        'Priority support',
-        '6 months maintenance included',
-        'Analytics integration',
-        'Content management system'
-      ],
+        "Monthly reports"      ],
       \"popular\": true
     },
     {
@@ -121,16 +84,7 @@ export default function PricingPage() {
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Simple, Transparent Pricing
-            </h1>
-            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
-              Choose the plan that fits your business needs.
-            </p>
-          </div>
-          <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
-          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
-            {pricingPlans.map((plan, index) => (
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">            {pricingPlans.map((plan, index) => (
               <div
                 key={plan.name}
                 className={`relative bg-white rounded-2xl shadow-lg p-8 ${
@@ -161,33 +115,7 @@ export default function PricingPage() {
                     <span className="text-gray-600 ml-2">{plan.period}</span>
                   </div>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className=\"flex items-center\">
-                      <CheckCircle className=\"w-5 h-5 text-green-500 mr-3 flex-shrink-0\" />
-                      <span className=\"text-gray-600\">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href=\"/contact\"
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-                    plan.popular
-                      ? \'bg-blue-600 text-white \"hover\": bg-blue-700\'
-                      : \'bg-gray-900 text-white hover:bg-gray-800\'
-                  }`}
-                >
-                  Get Started
-                  <ArrowRight className=\"w-4 h-4 ml-2 inline\" />
-                </Link>
-              </div>
-            ))}
-          </div>
-          <div className=\"text-center\">
-            <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Ready to Get Started?
+                <ul className="space-y-4 mb-8">              Ready to Get Started?
             </h2>
             <p className=\"text-xl text-gray-600 mb-8\">
               Contact us today for a free consultation and custom quote.

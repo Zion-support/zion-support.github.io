@@ -117,8 +117,7 @@ function main() {}
     _console.log('⚠️  Some lint errors remain. Check the output above.');',
   }
 }
-main();
-#!/usr/bin/env node;
+main();#!/usr/bin/env node;
 // Function to fix common lint errors;
 function fixLintErrors(content) {
   let fixed = content;

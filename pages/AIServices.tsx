@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import Layout from '../components/Layout';
 import { 
   Brain, 
@@ -374,3 +375,5 @@ export default function AIServices() {
     </Layout>
   );
 }
+=======
+>>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8

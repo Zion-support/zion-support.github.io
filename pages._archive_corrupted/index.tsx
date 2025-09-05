@@ -221,17 +221,7 @@ const Home = memo(() => {
                       ))}
                     </ul>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-                    {service.title}
-                  </h3>
-                  <p className=\"text-gray-600 mb-6 text-center\">
-                    {service.description}
-                  </p>
-                  <Link href={service.href} className=\"block\">
-                    <div className=\"w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold \"hover\": b g-blue-700 transition-colors text-center flex items-center justify-center\">
-                  <Link href={service.href} className="block">
-                    <div className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold "hover": b g-blue-700 transition-colors text-center flex items-center justify-center">
-                      Learn More
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">                      Learn More
                       <ArrowRight className=\"w-4 h-4 ml-2\"  />
                     </div>
                   </Link>
@@ -253,37 +243,7 @@ const Home = memo(() => {
               </p>
             </div>
             <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 lg: gri d-cols-4 gap-8\">
-            <div className="grid grid-cols-1 "md": gri d-cols-2 lg: gri d-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className=\"text-center\">
-                  <div className=\"bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center\">
-                    <feature.icon className=\"w-8 h-8 text-blue-600\" />
-                  </div>
-                  <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
-                    {feature.title}
-                  </h3>
-                  <p className=\"text-gray-600\">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Contact Information Section */}
-        <section className=\"py-16 bg-gray-50\">
-          <div className=\"max-w-7xl mx-auto px-4 \"sm\": p x-6 lg: p x-8\">
-            <div className=\"text-center mb-12\">
-              <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">Get In Touch</h2>
-              <p className=\"text-lg text-gray-600\">Ready to start your next project? Contact us today.</p>
-            </div>
-            <div className=\"grid grid-cols-1 md: gri d-cols-3 gap-8\">
-              <div className=\"text-center\">
-                <div className=\"w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4\">
-                  <Phone className=\"w-6 h-6 text-blue-600\"  />
-            <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-6 h-6 text-blue-600"  />
-                </div>
+            <div className="grid grid-cols-1 "md": gri d-cols-2 lg: gri d-cols-4 gap-8">                </div>
                 <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Phone</h3>
                 <a href=\"tel:+13024640950\" className=\"text-blue-600 hover: tex t-blue-700\">
                   +1 302 464 0950
@@ -294,41 +254,14 @@ const Home = memo(() => {
                   <Mail className=\"w-6 h-6 text-blue-600\"  />
               <div className="text-center">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-6 h-6 text-blue-600"  />
-                </div>
-                <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Email</h3>
-                <a href=\"mailto: klebe r@ziontechgroup.com\" className=\"text-blue-600 hover: tex t-blue-700\">
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div className=\"text-center\">
-                <div className=\"w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4\">
-                  <MapPin className=\"w-6 h-6 text-blue-600\"  />
-              <div className="text-center">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-6 h-6 text-blue-600"  />
-                </div>
+                  <Mail className="w-6 h-6 text-blue-600"  />                </div>
                 <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Address</h3>
                 <p className=\"text-gray-600\">
                   364 E Main St STE 1008<br  />
                   Middletown, DE 19709
                 </p>
                 <ul className=\"space-y-2 mb-6\">
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className=\"flex items-center gap-x-2\">
-                      <CheckCircle className=\"h-4 w-4 text-blue-600\"  />
-                      <span className=\"text-sm text-gray-700\">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className=\"flex items-center justify-between mb-4\">
-                  <div className=\"flex items-center space-x-2 text-sm text-gray-500\">
-                    <Clock className=\"h-4 w-4\"  />
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-2 text-sm text-gray-500">
-                    <Clock className="h-4 w-4"  />
-                    <span>{service.delivery}</span>
+                <ul className="space-y-2 mb-6">                    <span>{service.delivery}</span>
                   </div>
                   <div className=\"flex items-center space-x-2 text-sm text-gray-500\">
                     <DollarSign className=\"h-4 w-4\"  />
@@ -360,29 +293,7 @@ const Home = memo(() => {
                 <div className=\"flex items-center mb-4\">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg p-8 shadow-sm">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className=\"w-5 h-5 text-yellow-400 fill-current\" />
-                  ))}
-                </div>
-                <p className=\"text-gray-600 mb-6\">
-                  \"Zion Tech Group transformed our business with their AI-powered solutions. The ROI was immediate and the support is exceptional. Highly recommended!\"
-                </p>
-                <div className=\"flex items-center\">
-                  <div className=\"w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-4\">
-                    <span className=\"text-white font-bold\">JS</span>
-                  </div>
-                  <div>
-                    <h4 className=\"font-semibold text-gray-900\">John Smith</h4>
-                    <p className=\"text-gray-500 text-sm\">CEO, TechCorp Solutions</p>
-                  </div>
-                </div>
-              </div>
-              <div className=\"bg-white rounded-lg p-8 shadow-sm\">
-                <div className=\"flex items-center mb-4\">
-              <div className="bg-white rounded-lg p-8 shadow-sm">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
+                <div className="flex items-center mb-4">                  {[...Array(5)].map((_, i) => (
                     <Star key={i} className=\"w-5 h-5 text-yellow-400 fill-current\" />
                   ))}
                 </div>
@@ -402,45 +313,7 @@ const Home = memo(() => {
               <div className=\"bg-white rounded-lg p-8 shadow-sm\">
                 <div className=\"flex items-center mb-4\">
               <div className="bg-white rounded-lg p-8 shadow-sm">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className=\"w-5 h-5 text-yellow-400 fill-current\" />
-                  ))}
-                </div>
-                <p className=\"text-gray-600 mb-6\">
-                  \"The IT infrastructure they built for us is rock-solid. 99.9% uptime and their support team is always available. Worth every penny!\"
-                </p>
-                <div className=\"flex items-center\">
-                  <div className=\"w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mr-4\">
-                    <span className=\"text-white font-bold\">DW</span>
-                  </div>
-                  <div>
-                    <h4 className=\"font-semibold text-gray-900\">David Wilson</h4>
-                    <p className=\"text-gray-500 text-sm\">IT Director, Global Enterprises</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* Contact Information Section */}
-        <section className=\"py-20 bg-white\">
-          <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
-            <div className=\"text-center mb-16\">
-              <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">Get in Touch</h2>
-              <p className=\"text-xl text-gray-600\">
-                Ready to start your digital transformation journey? Contact us today.
-              </p>
-            </div>
-            <div className=\"grid grid-cols-1 md:grid-cols-3 gap-8\">
-              <div className=\"bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center\">
-                <div className=\"p-3 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-4 w-fit\">
-                  <Phone className=\"w-6 h-6 text-white\" />
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center">
-                <div className="p-3 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-4 w-fit">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
+                <div className="flex items-center mb-4">                </div>
                 <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">Phone</h3>
                 <p className=\"text-gray-600 mb-4\">Call us for immediate assistance</p>
                 <a href=\"tel:+13024640950\" className=\"text-blue-600 font-semibold hover:text-blue-700 transition-colors\">
@@ -452,21 +325,7 @@ const Home = memo(() => {
                   <Mail className=\"w-6 h-6 text-white\" />
               <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center">
                 <div className="p-3 rounded-lg bg-gradient-to-r from-green-500 to-green-600 mx-auto mb-4 w-fit">
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
-                <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">Email</h3>
-                <p className=\"text-gray-600 mb-4\">Send us a message anytime</p>
-                <a href=\"mailto:kleber@ziontechgroup.com\" className=\"text-blue-600 font-semibold hover:text-blue-700 transition-colors\">
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div className=\"bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center\">
-                <div className=\"p-3 rounded-lg bg-gradient-to-r from-purple-500 to-purple-600 mx-auto mb-4 w-fit\">
-                  <MapPin className=\"w-6 h-6 text-white\" />
-              <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center">
-                <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500 to-purple-600 mx-auto mb-4 w-fit">
-                  <MapPin className="w-6 h-6 text-white" />
-                </div>
+                  <Mail className="w-6 h-6 text-white" />                </div>
                 <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">Address</h3>
                 <p className=\"text-gray-600 mb-4\">Visit our headquarters</p>
                 <address className=\"text-blue-600 font-semibold not-italic\">

@@ -1,5 +1,4 @@
-// Development: Service Worker for Vite;
-// "Development": Service Worker for Vite;
+// Development: Service Worker for Vite;// "Development": Service Worker for Vite;
 const CACHE_NAME =
   zion-tech-group-dev-v1'';
 // Files: to cache in development;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import { Briefcase, MapPin, Clock, Users, CheckCircle, ArrowRight } from 'lucide-react';
@@ -272,6 +273,8 @@ export default function Talent() {
                       </ul>
               </Link>
 =======
+=======
+>>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -771,11 +774,15 @@ export default function TalentPage() {
                   Learn About Us
                 </Link>
               </div>
+<<<<<<< HEAD
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+=======
+>>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
             </motion.div>
           </div>
         </section>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </Layout>
   );
@@ -786,3 +793,8 @@ export default function TalentPage() {
 }
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 >>>>>>> main
+=======
+    </MainLayout>
+  );
+}
+>>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8

@@ -10,15 +10,13 @@ fix_merge_conflicts() {
     local file="$1"
     if [ -f "$file" ]; then
         # Remove merge conflict markers and keep content after the last marker
-        sed -i '/<<<<<<< HEAD/,/>>>>>>> origin\//d' "$file"
-        echo "Fixed: $file"
+        sed -i '//,/        echo "Fixed: $file"
     fi
 }
 
 # Find and fix all files with merge conflicts
 echo "🔍 Finding files with merge conflicts..."
-conflicted_files=$(grep -r ">>>>>>> origin/" . --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" -l 2>/dev/null || true)
-
+conflicted_files=$(grep -r "
 if [ -n "$conflicted_files" ]; then
     echo "Found $(echo "$conflicted_files" | wc -l) files with merge conflicts"
     

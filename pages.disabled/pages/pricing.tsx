@@ -180,5 +180,4 @@ const PricingPage: _React.FC = () => {}
       </section>;
     </>;
 ;  );
-};,
-export default PricingPage;
+};,export default PricingPage;

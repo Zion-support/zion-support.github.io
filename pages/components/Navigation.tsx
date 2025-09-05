@@ -18,6 +18,7 @@ import {
   Code,
   CreditCard,
   Document,
+<<<<<<< HEAD
   DollarSign,
   Eye,
   FileText,
@@ -46,6 +47,8 @@ import {
   Zap
 } from 'lucide-react';
 
+=======
+>>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
 const navigationItems = [
   {
     title: 'Services',
@@ -56,22 +59,34 @@ const navigationItems = [
         title: 'AI Services',
         href: '/ai-services',
         icon: Brain,
+<<<<<<< HEAD
         description: '30+ cutting-edge AI solutions',
         popular: true
+=======
+        description: '100+ cutting-edge AI solutions',        popular: true
+>>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
       },
       {
         title: 'IT Services',
         href: '/it-services',
         icon: Network,
+<<<<<<< HEAD
         description: '25+ comprehensive IT services',
         popular: true
+=======
+        description: '85+ comprehensive IT services',        popular: true
+>>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
       },
       {
         title: 'Micro SaaS',
         href: '/micro-saas',
         icon: Cloud,
+<<<<<<< HEAD
         description: '40+ innovative micro SaaS solutions',
         popular: true
+=======
+        description: '120+ innovative micro SaaS solutions',        popular: true
+>>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
       },
       {
         title: 'Cybersecurity',
@@ -190,13 +205,18 @@ const navigationItems = [
       {
         title: 'White Papers',
         href: '/white-papers',
+<<<<<<< HEAD
         icon: Document,
+=======
+        icon: FileText,
+>>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
         description: 'In-depth research reports'
       },
       {
         title: 'Tutorials',
         href: '/tutorials',
         icon: BookOpen,
+<<<<<<< HEAD
         description: 'Step-by-step guides'
       },
       {
@@ -205,6 +225,31 @@ const navigationItems = [
         icon: FileText,
         description: 'Technical documentation'
       }
+=======
+        description: 'Step-by-step guides',
+        popular: false
+      },
+      {
+        title: 'API Documentation',
+        href: '/api-docs',
+        icon: Code,
+        description: 'Developer resources',
+        popular: false
+      },
+      {
+        title: 'Training',
+        href: '/training',
+        icon: GraduationCap,
+        description: 'Professional development',
+        popular: false
+      },
+      {
+        title: 'FAQ',
+        href: '/faq',
+        icon: MessageSquare,
+        description: 'Frequently asked questions',
+        popular: false      }
+>>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
     ]
   },
   {
@@ -246,8 +291,13 @@ const navigationItems = [
         title: 'Press',
         href: '/press',
         icon: FileText,
+<<<<<<< HEAD
         description: 'Press releases and media'
       }
+=======
+        description: 'Terms and conditions',
+        popular: false      }
+>>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
     ]
   }
 ];

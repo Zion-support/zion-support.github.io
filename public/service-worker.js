@@ -1,8 +1,7 @@
 const CACHE_NAME =';static-cache-v1'';;
 const DATA_CACHE_NAME =';data-cache-v1'';;
 const FILES_TO_CACHE = [
-  '/', '';/index.html', '';/offline.html', '';/manifest.json', '';/vite.svg']';;
-const CACHE_NAME =';static-cache-v1'';
+  '/', '';/index.html', '';/offline.html', '';/manifest.json', '';/vite.svg']';;const CACHE_NAME =';static-cache-v1'';
 const DATA_CACHE_NAME =';data-cache-v1'';
 const FILES_TO_CACHE = ['/', '';/index.html', '';/offline.html', '';/manifest.json', '';/vite.svg']';
 self.addEventListener(

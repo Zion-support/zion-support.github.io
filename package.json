@@ -213,7 +213,7 @@
     "concurrently": "^8.2.2",
     "cssnano": "^7.1.1",
     "esbuild": "^0.25.9",
-    "eslint": "^9.34.0",
+    "eslint": "^9.35.0",
     "eslint-config-next": "^14.2.32",
     "eslint-formatter-junit": "^8.40.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",

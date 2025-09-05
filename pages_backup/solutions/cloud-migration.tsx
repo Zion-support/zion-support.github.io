@@ -1,26 +1,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
-import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import { Cloud, 
-  Shield, 
-  Zap, 
-  CheckCircle,
-  ArrowRight,
-  BarChart3,
-  Users,
-  Settings,
-  Database,
-  Globe,
-  Lock,
-  Smartphone,
-  Brain;
-} from 'lucide-react';
-import Layout from "../../components/Layout";";
-const phases = [;
+import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';const phases = [;
   {}
     title: 'Assessment & Planning,',
     description: 'Comprehensive analysis of current infrastructure and migration strategy development.,',
