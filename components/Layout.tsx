@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -59,17 +60,48 @@ export default function Layout({ title, description, children, keywords }: Layou
     { name: 'Contact', href: '/contact' }
   ];
 
+=======
+import Header from './Header';
+import Footer from './Footer';
+
+interface LayoutProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+  children: React.ReactNode;
+}
+
+export default function Layout({
+  children,
+  title = 'Zion Tech Group - Leading AI & Technology Solutions',
+  description = 'Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results.',
+  keywords = 'AI solutions, technology consulting, cloud services, automation, cybersecurity, web development, mobile development',
+  ogImage = '/og-image.jpg',
+  noIndex = false
+}: LayoutProps) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+<<<<<<< HEAD
         <meta name="keywords" content={keywords || "AI services, IT solutions, micro SaaS, technology consulting, digital transformation"} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+=======
+        <meta name="keywords" content={keywords} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content={noIndex ? "noindex,nofollow" : "index,follow"} />
+        
+        {/* Open Graph */}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:type" content="website" />
+<<<<<<< HEAD
         <link rel="canonical" href="https://ziontechgroup.com" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -485,6 +517,45 @@ export default function Layout({ title, description, children, keywords }: Layou
             </div>
           </div>
         </footer>
+=======
+        <meta property="og:site_name" content="Zion Tech Group" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+        
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Security headers */}
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <meta httpEquiv="X-Frame-Options" content="DENY" />
+        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+        
+        {/* Performance hints */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50 flex flex-col">
+        <Header />
+        
+        <main className="flex-1 overflow-x-hidden">
+          {children}
+        </main>
+        
+        <Footer />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
       </div>
     </>
   );

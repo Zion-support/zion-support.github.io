@@ -27,6 +27,10 @@ import {
   DollarSign
 } from 'lucide-react';
 import Layout from '../../components/Layout';
+<<<<<<< HEAD
+=======
+import { ShoppingCart, Brain, BarChart3, CheckCircle, ArrowRight, Package, Users, CreditCard, Smartphone, Globe, Database, TrendingUp } from 'lucide-react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
 
 const solutions = [
   {
@@ -63,8 +67,12 @@ const benefits = [
   {
     icon: TrendingUp,
     title: 'Increased Sales',
+<<<<<<< HEAD
     description: 'Boost sales with AI-powered recommendations and personalized experiences.',
     metric: '40%'
+=======
+    description: 'AI-powered personalization and optimization drive higher conversion rates'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
   },
   {
     icon: Users,

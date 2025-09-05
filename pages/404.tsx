@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Home, ArrowLeft, Search } from 'lucide-react';
 import MainLayout from '../src/components/layout/MainLayout';
 
@@ -13,11 +14,22 @@ export default function Custom404() {
     >
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 flex items-center justify-center px-4">
         <div className="text-center max-w-2xl mx-auto">
+=======
+import Layout from '../components/Layout';
+import { Home, ArrowLeft } from 'lucide-react';
+
+export default function Custom404() {
+  return (
+    <Layout title="404 - Page Not Found">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
+<<<<<<< HEAD
             {/* 404 Animation */}
             <motion.div
               className="text-9xl font-bold text-blue-600 mb-8"
@@ -84,10 +96,28 @@ export default function Custom404() {
               >
                 Contact Support →
               </Link>
+=======
+            <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
+            <h2 className="text-2xl font-semibold text-gray-700 mb-6">Page Not Found</h2>
+            <p className="text-gray-600 mb-8">The page you're looking for doesn't exist.</p>
+            <div className="flex justify-center space-x-4">
+              <Link href="/" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center">
+                <Home className="w-5 h-5 mr-2" />
+                Go Home
+              </Link>
+              <button onClick={() => window.history.back()} className="border border-gray-300 hover:bg-gray-50 text-gray-700 px-6 py-3 rounded-lg font-semibold transition-colors flex items-center">
+                <ArrowLeft className="w-5 h-5 mr-2" />
+                Go Back
+              </button>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
             </div>
           </motion.div>
         </div>
       </div>
+<<<<<<< HEAD
     </MainLayout>
+=======
+    </Layout>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
   );
 }

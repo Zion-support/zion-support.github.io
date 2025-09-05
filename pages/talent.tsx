@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -17,6 +18,24 @@ import {
   Zap,
   Calendar
 } from 'lucide-react';
+=======
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Layout from '../components/Layout';
+import { Users, MapPin, Clock, Star } from 'lucide-react';
+
+const talentPositions = [
+  {
+    id: 1,
+    title: "Senior AI/ML Engineer",
+    department: "AI Services",
+    location: "Remote",
+    type: "Full-time",
+    experience: "5+ years",
+    description: "Lead the development of cutting-edge AI solutions and machine learning models."
+  }
+];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
 
 export default function TalentPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -227,6 +246,7 @@ export default function TalentPage() {
   ];
 
   return (
+<<<<<<< HEAD
     <MainLayout
       title="Join Our Team - Zion Tech Group"
       description="Join our talented team of engineers, designers, and innovators. Explore career opportunities at Zion Tech Group and help us build the future of technology."
@@ -498,6 +518,14 @@ export default function TalentPage() {
                 </Link>
               </div>
             </motion.div>
+=======
+    <Layout title="Talent - Zion Tech Group">
+      <div className="min-h-screen bg-gray-50">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Join Our Team</h1>
+            <p className="text-xl text-blue-100">Find your next career opportunity</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
           </div>
         </section>
       </div>

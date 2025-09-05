@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -16,143 +17,87 @@ import {
   Clock,
   Tag
 } from 'lucide-react';
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import Layout from '../components/Layout';
+import { 
+  FileText, 
+  Download, 
+  Calendar, 
+  User, 
+  Clock, 
+  Tag,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  BookOpen
+} from 'lucide-react';
 
-export default function WhitePapersPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+const whitePapers = [
+  {
+    id: 1,
+    title: 'The Future of AI in Business',
+    description: 'A comprehensive analysis of how artificial intelligence is transforming business operations and creating new opportunities.',
+    author: 'Dr. Sarah Chen',
+    date: '2024-01-15',
+    readTime: '15 min',
+    category: 'AI & Machine Learning',
+    downloads: 1250,
+    icon: BookOpen,
+    color: 'from-blue-500 to-purple-500',
+    tags: ['AI', 'Business', 'Future', 'Technology']
+  },
+  {
+    id: 2,
+    title: 'Cloud Security Best Practices',
+    description: 'Essential security measures and best practices for protecting your cloud infrastructure and data.',
+    author: 'James Wilson',
+    date: '2024-01-10',
+    readTime: '12 min',
+    category: 'Cybersecurity',
+    downloads: 980,
+    icon: FileText,
+    color: 'from-red-500 to-pink-500',
+    tags: ['Security', 'Cloud', 'Best Practices', 'Compliance']
+  },
+  {
+    id: 3,
+    title: 'Digital Transformation Guide',
+    description: 'A step-by-step guide to successfully implementing digital transformation in your organization.',
+    author: 'Michael Rodriguez',
+    date: '2024-01-05',
+    readTime: '20 min',
+    category: 'Digital Transformation',
+    downloads: 1500,
+    icon: BookOpen,
+    color: 'from-green-500 to-blue-500',
+    tags: ['Digital Transformation', 'Strategy', 'Implementation', 'Business']
+  }
+];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
 
-  const categories = [
-    { id: 'all', name: 'All White Papers' },
-    { id: 'ai', name: 'AI & Machine Learning' },
-    { id: 'cloud', name: 'Cloud Solutions' },
-    { id: 'security', name: 'Cybersecurity' },
-    { id: 'development', name: 'Development' },
-    { id: 'business', name: 'Business Strategy' }
-  ];
+const categories = [
+  'All',
+  'AI & Machine Learning',
+  'Cybersecurity',
+  'Digital Transformation',
+  'Cloud Computing',
+  'Data Analytics'
+];
 
-  const whitePapers = [
-    {
-      id: 1,
-      title: 'The Future of Artificial Intelligence in Business',
-      description: 'A comprehensive analysis of how AI is transforming business operations, including case studies, implementation strategies, and ROI calculations.',
-      category: 'ai',
-      author: 'Dr. Sarah Johnson',
-      authorTitle: 'AI Research Director',
-      publishDate: '2024-01-10',
-      readTime: '15 min read',
-      downloads: 2450,
-      views: 8900,
-      rating: 4.8,
-      tags: ['AI', 'Machine Learning', 'Business Transformation', 'ROI'],
-      image: '/api/placeholder/400/250',
-      pdfUrl: '#',
-      isFeatured: true
-    },
-    {
-      id: 2,
-      title: 'Cloud Migration Strategies for Enterprise',
-      description: 'Best practices and proven methodologies for migrating enterprise applications to the cloud while ensuring security and performance.',
-      category: 'cloud',
-      author: 'Mike Chen',
-      authorTitle: 'Cloud Solutions Architect',
-      publishDate: '2024-01-05',
-      readTime: '12 min read',
-      downloads: 1890,
-      views: 7200,
-      rating: 4.7,
-      tags: ['Cloud Computing', 'Migration', 'Enterprise', 'Security'],
-      image: '/api/placeholder/400/250',
-      pdfUrl: '#',
-      isFeatured: true
-    },
-    {
-      id: 3,
-      title: 'Cybersecurity in the Age of Remote Work',
-      description: 'An in-depth look at the security challenges and solutions for organizations transitioning to remote and hybrid work models.',
-      category: 'security',
-      author: 'Alex Rodriguez',
-      authorTitle: 'Chief Security Officer',
-      publishDate: '2023-12-28',
-      readTime: '18 min read',
-      downloads: 3200,
-      views: 12500,
-      rating: 4.9,
-      tags: ['Cybersecurity', 'Remote Work', 'Zero Trust', 'Compliance'],
-      image: '/api/placeholder/400/250',
-      pdfUrl: '#',
-      isFeatured: false
-    },
-    {
-      id: 4,
-      title: 'Building Scalable Web Applications',
-      description: 'Technical guide covering architecture patterns, performance optimization, and scalability best practices for modern web applications.',
-      category: 'development',
-      author: 'Emily Watson',
-      authorTitle: 'Senior Full-Stack Developer',
-      publishDate: '2023-12-20',
-      readTime: '20 min read',
-      downloads: 1650,
-      views: 6800,
-      rating: 4.6,
-      tags: ['Web Development', 'Scalability', 'Architecture', 'Performance'],
-      image: '/api/placeholder/400/250',
-      pdfUrl: '#',
-      isFeatured: false
-    },
-    {
-      id: 5,
-      title: 'Digital Transformation Roadmap',
-      description: 'A strategic framework for organizations looking to embark on digital transformation initiatives, with practical implementation guidelines.',
-      category: 'business',
-      author: 'David Kim',
-      authorTitle: 'Digital Transformation Consultant',
-      publishDate: '2023-12-15',
-      readTime: '14 min read',
-      downloads: 2100,
-      views: 9500,
-      rating: 4.8,
-      tags: ['Digital Transformation', 'Strategy', 'Change Management', 'Technology'],
-      image: '/api/placeholder/400/250',
-      pdfUrl: '#',
-      isFeatured: true
-    },
-    {
-      id: 6,
-      title: 'Machine Learning Model Deployment Best Practices',
-      description: 'Comprehensive guide to deploying ML models in production environments, covering MLOps, monitoring, and maintenance strategies.',
-      category: 'ai',
-      author: 'Dr. Sarah Johnson',
-      authorTitle: 'AI Research Director',
-      publishDate: '2023-12-10',
-      readTime: '16 min read',
-      downloads: 1780,
-      views: 7600,
-      rating: 4.7,
-      tags: ['Machine Learning', 'MLOps', 'Deployment', 'Production'],
-      image: '/api/placeholder/400/250',
-      pdfUrl: '#',
-      isFeatured: false
-    }
-  ];
-
-  const filteredWhitePapers = whitePapers.filter(paper => {
-    const matchesSearch = paper.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         paper.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         paper.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || paper.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
-  const featuredPapers = whitePapers.filter(paper => paper.isFeatured);
-
+export default function WhitePapers() {
   return (
-    <MainLayout
+    <Layout
       title="White Papers - Zion Tech Group"
-      description="Access our comprehensive collection of white papers covering AI, cloud solutions, cybersecurity, and more. Download free technical resources and insights."
-      keywords="white papers, technical papers, AI research, cloud solutions, cybersecurity, business strategy, free downloads"
+      description="Access our comprehensive collection of white papers covering AI, cybersecurity, digital transformation, and other technology topics. Free downloads available."
+      keywords="white papers, research, AI, cybersecurity, digital transformation, technology insights, free downloads"
     >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
@@ -162,10 +107,17 @@ export default function WhitePapersPage() {
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
+=======
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
+<<<<<<< HEAD
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 White{' '}
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
@@ -175,11 +127,23 @@ export default function WhitePapersPage() {
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Access our comprehensive collection of technical white papers and research documents. 
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
+=======
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                White
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                  {" "}Papers
+                </span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Access our comprehensive collection of white papers covering AI, cybersecurity, 
+                digital transformation, and other technology topics.
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
               </p>
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Featured White Papers */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -266,10 +230,29 @@ export default function WhitePapersPage() {
                   </motion.div>
                 ))}
               </div>
+=======
+        {/* Category Filter */}
+        <section className="py-8 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap justify-center gap-4">
+              {categories.map((category, index) => (
+                <button
+                  key={index}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                    category === 'All'
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Search and Filter */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -386,11 +369,91 @@ export default function WhitePapersPage() {
                   </motion.div>
                 ))}
               </div>
+=======
+        {/* White Papers Grid */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {whitePapers.map((paper, index) => (
+                <motion.div
+                  key={paper.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+                >
+                  <div className={`h-2 bg-gradient-to-r ${paper.color}`}></div>
+                  
+                  <div className="p-8">
+                    <div className="flex items-center mb-4">
+                      <div className={`p-3 bg-gradient-to-r ${paper.color} rounded-lg`}>
+                        <paper.icon className="h-6 w-6 text-white" />
+                      </div>
+                      <span className="ml-3 px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                        {paper.category}
+                      </span>
+                    </div>
+                    
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                      {paper.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-6">
+                      {paper.description}
+                    </p>
+                    
+                    <div className="space-y-2 mb-6">
+                      <div className="flex items-center text-sm text-gray-600">
+                        <User className="h-4 w-4 mr-2" />
+                        {paper.author}
+                      </div>
+                      <div className="flex items-center text-sm text-gray-600">
+                        <Calendar className="h-4 w-4 mr-2" />
+                        {paper.date}
+                      </div>
+                      <div className="flex items-center text-sm text-gray-600">
+                        <Clock className="h-4 w-4 mr-2" />
+                        {paper.readTime} read
+                      </div>
+                      <div className="flex items-center text-sm text-gray-600">
+                        <Download className="h-4 w-4 mr-2" />
+                        {paper.downloads} downloads
+                      </div>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {paper.tags.map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="px-2 py-1 bg-blue-100 text-blue-600 text-xs rounded-full"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-500">
+                        Free Download
+                      </span>
+                      <Link
+                        href="/contact"
+                        className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                      >
+                        Download
+                        <Download className="ml-1 h-4 w-4" />
+                      </Link>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
             <motion.div
@@ -406,10 +469,26 @@ export default function WhitePapersPage() {
               <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
                 Subscribe to our newsletter to get notified about new white papers, 
                 research updates, and exclusive technical content.
+=======
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Want to Contribute a White Paper?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                We're always looking for industry experts to share their insights. 
+                Contact us if you'd like to contribute a white paper.
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
+<<<<<<< HEAD
                   className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
                 >
                   Subscribe to Updates
@@ -419,12 +498,28 @@ export default function WhitePapersPage() {
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold"
                 >
                   Read Our Blog
+=======
+                  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                  Contact Us
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  Learn About Us
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </MainLayout>
+=======
+    </Layout>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
   );
 }

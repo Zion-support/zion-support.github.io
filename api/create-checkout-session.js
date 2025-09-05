@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default function handler(req, res) {
+  res.status(200).json({ message: "Checkout session created" })}
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
+  res.status(200).json({ message: 'Checkout session created' });
+}
+export default function handler(req, res) {
+  res.status(200).json({ "message": 'Checkout session created' });
+}
+<<<<<<< HEAD
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+=======
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
 import Stripe from 'stripe';
 import { withErrorLogging } from '../../utils/withErrorLogging.cjs';
 
@@ -49,3 +67,4 @@ async function handler(req, res) {
 }
 
 export default withErrorLogging(handler);
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -70,3 +71,5 @@ const MainLayout: React.FC<MainLayoutProps> = ({
 };
 
 export default MainLayout;
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

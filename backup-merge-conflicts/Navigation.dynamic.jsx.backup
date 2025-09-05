@@ -1,0 +1,11 @@
+const Navigation = dynamic(() => import("./Navigation"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Navigation' ,'
+<<<<<<< HEAD:backup-merge-conflicts/Navigation.dynamic.jsx.backup
+</p>'
+<<<<<<< HEAD:backup-merge-conflicts/Navigation.dynamic.jsx.backup
+>>>>>>> main
+>>>>>>> main
+=======
+</p>'
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled/Navigation.dynamic.jsx
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:components.disabled/Navigation.dynamic.jsx

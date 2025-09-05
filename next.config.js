@@ -5,7 +5,6 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  trailingSlash: true,
   
   // Image optimization
   images: {
@@ -16,6 +15,7 @@ const nextConfig = {
     minimumCacheTTL: 31536000,
   },
   
+<<<<<<< HEAD
   // Webpack configuration to exclude problematic directories
   webpack: (config, { dev, isServer }) => {
     if (dev) {
@@ -57,8 +57,24 @@ const nextConfig = {
         ],
         poll: 1000,
         aggregateTimeout: 300,
+=======
+  // Webpack optimizations
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // Optimize bundle size
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
       };
     }
+    
     return config;
   },
   
@@ -80,12 +96,25 @@ const nextConfig = {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin',
           },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
+        ],
+      },
+      {
+        source: '/api/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, s-maxage=86400, stale-while-revalidate',
+          },
         ],
       },
     ];
   },
   
-  // Redirects for SEO
+  // Redirects
   async redirects() {
     return [
       {
@@ -94,7 +123,35 @@ const nextConfig = {
         permanent: true,
       },
     ];
-  }
+  },
+  
+  // Environment variables
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
+  },
+  
+  // Output configuration
+  output: 'standalone',
+  
+  // Trailing slash
+  trailingSlash: false,
+  
+  // Base path
+  basePath: '',
+  
+  // Asset prefix
+  assetPrefix: '',
+  
+  // Generate ETags
+  generateEtags: true,
+  
+  // Dist directory
+  distDir: '.next',
+  
+  // Build ID
+  generateBuildId: async () => {
+    return 'build-' + Date.now();
+  },
 };
 
 export default nextConfig;

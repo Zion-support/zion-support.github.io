@@ -1,0 +1,11 @@
+import { describe,it,expect } from 'vitest'; describe('Team Builder Invite API',() => { it('should work',() => { expect(true).toBe(true)})}
+<<<<<<< HEAD:backup-merge-conflicts/team-builder-invite.test.ts.backup
+});''
+<<<<<<< HEAD:backup-merge-conflicts/team-builder-invite.test.ts.backup
+>>>>>>> main
+>>>>>>> main
+=======
+});''
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/api/team-builder-invite.test.ts
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:__tests__/api/team-builder-invite.test.ts

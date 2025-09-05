@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
@@ -17,10 +18,24 @@ import {
   GraduationCap,
   Globe,
   CheckCircle
+=======
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Link from 'next/link';
+import Layout from '../components/Layout';
+import { 
+  Heart,
+  Laptop,
+  Users,
+  Globe,
+  CheckCircle,
+  ArrowRight
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
 } from 'lucide-react';
 
 const jobOpenings = [
   {
+<<<<<<< HEAD
     id: 1,
     title: "Senior AI Engineer",
     department: "AI & Machine Learning",
@@ -68,83 +83,89 @@ const jobOpenings = [
       "Strong understanding of security best practices"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
+=======
+    title: 'Senior AI Engineer',
+    location: 'Remote',
+    type: 'Full-time',
+    department: 'AI & Machine Learning',
+    description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
+    requirements: [
+      '5+ years experience in AI/ML',
+      'Strong Python and TensorFlow skills',
+      'Experience with cloud platforms',
+      'PhD in Computer Science preferred'
+    ]
+  },
+  {
+    title: 'Full Stack Developer',
+    location: 'San Francisco, CA',
+    type: 'Full-time',
+    department: 'Engineering',
+    description: 'Build scalable web applications using modern technologies.',
+    requirements: [
+      '3+ years full-stack experience',
+      'React, Node.js, and TypeScript',
+      'Database design and optimization',
+      'Agile development experience'
+    ]
+  },
+  {
+    title: 'DevOps Engineer',
+    location: 'Remote',
+    type: 'Full-time',
+    department: 'Infrastructure',
+    description: 'Manage cloud infrastructure and deployment pipelines.',
+    requirements: [
+      '4+ years DevOps experience',
+      'AWS, Azure, or GCP expertise',
+      'Docker and Kubernetes knowledge',
+      'CI/CD pipeline experience'
+    ]
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
   }
 ];
 
 const benefits = [
   {
     icon: Heart,
-    title: "Health & Wellness",
-    description: "Comprehensive health insurance, mental health support, and wellness programs"
+    title: 'Health & Wellness',
+    description: 'Comprehensive health insurance, mental health support, and wellness programs.'
   },
   {
-    icon: DollarSign,
-    title: "Competitive Compensation",
-    description: "Competitive salaries, performance bonuses, and equity participation"
+    icon: Laptop,
+    title: 'Flexible Work',
+    description: 'Remote work options, flexible hours, and modern equipment for productivity.'
   },
   {
-    icon: GraduationCap,
-    title: "Learning & Development",
-    description: "Professional development budget, conference attendance, and training programs"
+    icon: Users,
+    title: 'Team Culture',
+    description: 'Collaborative environment with regular team events and professional development.'
   },
   {
     icon: Globe,
-    title: "Flexible Work",
-    description: "Remote work options, flexible hours, and work-life balance"
-  },
-  {
-    icon: Coffee,
-    title: "Great Culture",
-    description: "Collaborative environment, team events, and inclusive workplace"
-  },
-  {
-    icon: Award,
-    title: "Career Growth",
-    description: "Clear career paths, mentorship programs, and advancement opportunities"
+    title: 'Global Impact',
+    description: 'Work on projects that make a real difference in the world.'
   }
 ];
 
-const values = [
-  {
-    title: "Innovation",
-    description: "We encourage creative thinking and embrace new technologies to solve complex problems."
-  },
-  {
-    title: "Collaboration",
-    description: "We believe in the power of teamwork and open communication across all levels."
-  },
-  {
-    title: "Excellence",
-    description: "We strive for the highest quality in everything we do and continuously improve."
-  },
-  {
-    title: "Integrity",
-    description: "We conduct business with honesty, transparency, and ethical practices."
-  }
-];
-
-export default function CareersPage() {
+export default function Careers() {
   return (
-    <MainLayout
+    <Layout
       title="Careers - Zion Tech Group"
-      description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
-      keywords="careers, jobs, employment, technology careers, AI jobs, software development"
+      description="Join our team of innovators and help shape the future of technology. Explore career opportunities at Zion Tech Group."
+      keywords="careers, jobs, employment, AI engineer, developer, tech jobs, remote work"
     >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-          </div>
-
-          <div className="container mx-auto px-4 relative z-10">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
+<<<<<<< HEAD
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Join Our{' '}
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -162,11 +183,38 @@ export default function CareersPage() {
                 <a href="#benefits" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                   See Benefits
                 </a>
+=======
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                Join Our
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                  {" "}Team
+                </span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Be part of a team that's building the future of technology. We're looking for passionate 
+                individuals who want to make a real impact.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Apply Now
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center px-8 py-4 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors"
+                >
+                  Learn About Us
+                </Link>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
               </div>
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Why Join Us */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -209,10 +257,50 @@ export default function CareersPage() {
                   </motion.div>
                 ))}
               </div>
+=======
+        {/* Benefits Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Why Work With Us
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We offer competitive benefits and a supportive environment for professional growth.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                    <benefit.icon className="h-8 w-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {benefit.description}
+                  </p>
+                </motion.div>
+              ))}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Our Values */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -269,10 +357,26 @@ export default function CareersPage() {
                 Open Positions
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+=======
+        {/* Job Openings */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Open Positions
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
                 Explore our current job openings and find the perfect role for you.
               </p>
             </motion.div>
 
+<<<<<<< HEAD
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {jobOpenings.map((job, index) => (
@@ -342,11 +446,64 @@ export default function CareersPage() {
                   </motion.div>
                 ))}
               </div>
+=======
+            <div className="space-y-8">
+              {jobOpenings.map((job, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8"
+                >
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{job.title}</h3>
+                      <div className="flex flex-wrap gap-4 text-sm text-gray-600">
+                        <span className="flex items-center">
+                          <Users className="h-4 w-4 mr-1" />
+                          {job.department}
+                        </span>
+                        <span className="flex items-center">
+                          <Globe className="h-4 w-4 mr-1" />
+                          {job.location}
+                        </span>
+                        <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full">
+                          {job.type}
+                        </span>
+                      </div>
+                    </div>
+                    <Link
+                      href="/contact"
+                      className="mt-4 md:mt-0 inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+                    >
+                      Apply Now
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-6">{job.description}</p>
+                  
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3">Requirements:</h4>
+                    <ul className="space-y-2">
+                      {job.requirements.map((requirement, reqIndex) => (
+                        <li key={reqIndex} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                          {requirement}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              ))}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
             <motion.div
@@ -376,11 +533,44 @@ export default function CareersPage() {
                 >
                   Learn More About Us
                 </a>
+=======
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Don't See Your Role?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                We're always looking for talented individuals. Send us your resume and let us know how you can contribute.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                  Send Resume
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  Learn About Us
+                </Link>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
               </div>
             </motion.div>
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </MainLayout>
+=======
+    </Layout>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
   );
 }

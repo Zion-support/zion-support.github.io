@@ -1,6 +1,7 @@
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import Link from 'next/link';
 import {
   ArrowRight,
@@ -45,10 +46,21 @@ const stats = [
   { number: '200+', label: 'Happy Clients', icon: Users },
   { number: '50+', label: 'Countries Served', icon: Globe },
   { number: '99%', label: 'Client Satisfaction', icon: Star }
+=======
+import Layout from '../components/Layout';
+import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Phone, Mail, MapPin, Cpu, Rocket, Car, Eye } from 'lucide-react';
+
+const stats = [
+  { number: "500+", label: "Projects Completed" },
+  { number: "99.9%", label: "Uptime Guarantee" },
+  { number: "50+", label: "Expert Team Members" },
+  { number: "24/7", label: "Support Available" }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
 ];
 
 const services = [
   {
+<<<<<<< HEAD
     icon: Brain,
     title: 'AI Services',
     description: 'Transform your business with cutting-edge artificial intelligence solutions.',
@@ -137,6 +149,184 @@ export default function HomePage() {
               <Link href="/services" className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
                 Our Services
               </Link>
+=======
+    title: 'AI Services',
+    description: 'Cutting-edge artificial intelligence solutions for your business',
+    icon: Brain,
+    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+    href: '/ai-services'
+  },
+  {
+    title: 'IT Services',
+    description: 'Comprehensive IT infrastructure and support solutions',
+    icon: Network,
+    features: ['Cloud Migration', 'DevOps', 'Cybersecurity', 'System Integration'],
+    href: '/it-services'
+  },
+  {
+    title: 'Micro SaaS',
+    description: 'Scalable software-as-a-service platforms and solutions',
+    icon: Cloud,
+    features: ['Custom Development', 'API Integration', 'White-label Solutions', 'Maintenance'],
+    href: '/micro-saas'
+  }
+];
+
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    company: "TechCorp Inc.",
+    role: "CTO",
+    content: "Zion Tech Group transformed our business with their AI solutions. The results exceeded our expectations.",
+    rating: 5
+  },
+  {
+    name: "Michael Chen",
+    company: "FinanceFlow Ltd.",
+    role: "CEO",
+    content: "Their cloud migration expertise saved us months of work and significantly improved our performance.",
+    rating: 5
+  },
+  {
+    name: "Emily Rodriguez",
+    company: "HealthCare Plus",
+    role: "IT Director",
+    content: "Outstanding cybersecurity implementation. We feel completely secure with their solutions.",
+    rating: 5
+  }
+];
+
+export default function Home() {
+  return (
+    <Layout
+      title="Zion Tech Group - Leading AI & Technology Solutions"
+      description="Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results."
+      keywords="AI solutions, technology consulting, cloud services, automation, cybersecurity, web development, mobile development"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                Transform Your Business with
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                  {" "}AI & Technology
+                </span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Leading provider of AI solutions, cloud services, and technology consulting. 
+                We help businesses achieve their goals through innovative technology.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center px-8 py-4 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors"
+                >
+                  Learn More
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-600 font-medium">
+                    {stat.label}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Services
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive technology solutions designed to accelerate your digital transformation.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8"
+                >
+                  <div className="flex items-center mb-6">
+                    <div className="p-3 bg-blue-100 rounded-lg">
+                      <service.icon className="h-8 w-8 text-blue-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 ml-4">
+                      {service.title}
+                    </h3>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-6">
+                    {service.description}
+                  </p>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <Link
+                    href={service.href}
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-1 h-4 w-4" />
+                  </Link>
+                </motion.div>
+              ))}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
             </div>
           </motion.div>
         </div>
@@ -165,6 +355,7 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Services Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -315,5 +506,87 @@ export default function HomePage() {
         </div>
       </section>
     </MainLayout>
+=======
+        {/* Testimonials Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                What Our Clients Say
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Don't just take our word for it. Here's what our clients have to say about our services.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg p-8"
+                >
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Award key={i} className="h-5 w-5 text-yellow-500" />
+                    ))}
+                  </div>
+                  
+                  <p className="text-gray-600 mb-6 italic">
+                    "{testimonial.content}"
+                  </p>
+                  
+                  <div>
+                    <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                    <div className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Let's discuss how our AI and technology solutions can help you achieve your goals.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                  Get Started Today
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  Learn About Us
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
   );
 }

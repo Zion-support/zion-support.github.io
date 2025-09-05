@@ -1,158 +1,168 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { BookOpen, Clock, Users, ArrowRight, CheckCircle, Code, Database, Cloud, Shield } from 'lucide-react';
 import Layout from '../components/Layout';
+import { 
+  BookOpen, 
+  Clock, 
+  User, 
+  Star,
+  Code,
+  Database,
+  Cloud,
+  Shield,
+  Download
+} from 'lucide-react';
 
 const guides = [
   {
     id: 1,
-    title: 'Complete Guide to Web Development',
-    description: 'A comprehensive guide covering HTML, CSS, JavaScript, and modern frameworks',
-    category: 'Web Development',
-    duration: '8 hours',
+    title: 'Getting Started with AI Integration',
+    description: 'A comprehensive guide to integrating AI solutions into your business processes.',
+    category: 'AI & Machine Learning',
+    icon: BookOpen,
+    color: 'from-blue-500 to-purple-500',
+    readTime: '15 min',
     difficulty: 'Beginner',
-    icon: Code,
-    features: ['HTML5 Fundamentals', 'CSS3 Styling', 'JavaScript Basics', 'React Introduction']
+    author: 'Dr. Sarah Chen',
+    publishedDate: '2024-01-15',
+    tags: ['AI', 'Integration', 'Business']
   },
   {
     id: 2,
     title: 'Cloud Migration Best Practices',
-    description: 'Learn how to successfully migrate your applications to the cloud',
+    description: 'Step-by-step guide to migrating your infrastructure to the cloud safely and efficiently.',
     category: 'Cloud Computing',
-    duration: '6 hours',
-    difficulty: 'Intermediate',
     icon: Cloud,
-    features: ['Migration Planning', 'Security Considerations', 'Cost Optimization', 'Performance Tuning']
+    color: 'from-green-500 to-blue-500',
+    readTime: '25 min',
+    difficulty: 'Intermediate',
+    author: 'Michael Rodriguez',
+    publishedDate: '2024-01-10',
+    tags: ['Cloud', 'Migration', 'Infrastructure']
   },
   {
     id: 3,
-    title: 'AI and Machine Learning Fundamentals',
-    description: 'Introduction to AI concepts and practical machine learning applications',
-    category: 'Artificial Intelligence',
-    duration: '10 hours',
-    difficulty: 'Intermediate',
-    icon: Database,
-    features: ['ML Algorithms', 'Data Preprocessing', 'Model Training', 'Deployment Strategies']
-  },
-  {
-    id: 4,
-    title: 'Cybersecurity Essentials',
-    description: 'Essential cybersecurity practices for protecting your digital assets',
-    category: 'Security',
-    duration: '5 hours',
-    difficulty: 'Beginner',
+    title: 'Cybersecurity Implementation Guide',
+    description: 'Essential security measures to protect your business from cyber threats.',
+    category: 'Cybersecurity',
     icon: Shield,
-    features: ['Threat Assessment', 'Security Policies', 'Incident Response', 'Compliance']
+    color: 'from-red-500 to-pink-500',
+    readTime: '30 min',
+    difficulty: 'Advanced',
+    author: 'James Wilson',
+    publishedDate: '2024-01-05',
+    tags: ['Security', 'Protection', 'Compliance']
   }
 ];
 
-export default function GuidesPage() {
+export default function Guides() {
   return (
     <Layout
-      title="Guides & Tutorials - Zion Tech Group"
-      description="Comprehensive guides and tutorials to help you master modern technology and development practices."
-      keywords="guides, tutorials, learning, web development, cloud, AI, cybersecurity"
+      title="Guides & Resources - Zion Tech Group"
+      description="Comprehensive guides and resources to help you implement technology solutions effectively. Learn from our experts."
+      keywords="guides, tutorials, resources, AI implementation, cloud migration, cybersecurity, best practices"
     >
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-          </div>
-          
-          <div className="container mx-auto px-4 relative z-10">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Guides & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Tutorials</span>
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                Guides &
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                  {" "}Resources
+                </span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Master modern technology with our comprehensive guides and step-by-step tutorials.
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Learn from our experts with comprehensive guides, tutorials, and resources 
+                designed to help you implement technology solutions effectively.
               </p>
             </motion.div>
           </div>
         </section>
 
         {/* Guides Grid */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Learning Resources
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Choose from our collection of expert-curated guides covering the latest technologies and best practices.
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {guides.map((guide, index) => (
                 <motion.div
                   key={guide.id}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
                 >
-                  <div className="p-6">
+                  <div className={`h-2 bg-gradient-to-r ${guide.color}`}></div>
+                  
+                  <div className="p-8">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                        <guide.icon className="w-6 h-6 text-blue-600" />
+                      <div className={`p-3 bg-gradient-to-r ${guide.color} rounded-lg`}>
+                        <guide.icon className="h-6 w-6 text-white" />
                       </div>
-                      <div>
-                        <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                          {guide.category}
-                        </span>
-                      </div>
+                      <span className="ml-3 px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                        {guide.category}
+                      </span>
                     </div>
                     
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
                       {guide.title}
                     </h3>
                     
-                    <p className="text-gray-600 mb-4 leading-relaxed">
+                    <p className="text-gray-600 mb-6">
                       {guide.description}
                     </p>
                     
-                    <div className="flex items-center justify-between mb-4 text-sm text-gray-500">
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
-                        {guide.duration}
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="flex items-center space-x-4 text-sm text-gray-500">
+                        <div className="flex items-center">
+                          <Clock className="h-4 w-4 mr-1" />
+                          {guide.readTime}
+                        </div>
+                        <div className="flex items-center">
+                          <User className="h-4 w-4 mr-1" />
+                          {guide.author}
+                        </div>
                       </div>
-                      <div className="flex items-center">
-                        <Users className="w-4 h-4 mr-1" />
+                      <span className={`px-2 py-1 text-xs rounded-full ${
+                        guide.difficulty === 'Beginner' ? 'bg-green-100 text-green-800' :
+                        guide.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-800' :
+                        'bg-red-100 text-red-800'
+                      }`}>
                         {guide.difficulty}
-                      </div>
+                      </span>
                     </div>
                     
-                    <div className="space-y-2 mb-6">
-                      <h4 className="font-semibold text-gray-900 text-sm">What you'll learn:</h4>
-                      <ul className="space-y-1">
-                        {guide.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-600">
-                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {guide.tags.map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="px-2 py-1 bg-blue-100 text-blue-600 text-xs rounded-full"
+                        >
+                          {tag}
+                        </span>
+                      ))}
                     </div>
                     
-                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group">
-                      Start Learning
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </button>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-500">
+                        {guide.publishedDate}
+                      </span>
+                      <Link
+                        href="/contact"
+                        className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                      >
+                        Read Guide
+                        <Download className="ml-1 h-4 w-4" />
+                      </Link>
+                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -161,29 +171,32 @@ export default function GuidesPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Start Learning?
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Need More Help?
               </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Join thousands of developers who are already learning with our comprehensive guides and tutorials.
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Our experts are here to help you implement these solutions and answer any questions you may have.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center">
-                  <BookOpen className="w-5 h-5 mr-2" />
-                  Browse All Guides
-                </button>
                 <Link
                   href="/contact"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
                 >
-                  Get Custom Training
+                  Get Expert Help
+                  <Download className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  Learn About Us
                 </Link>
               </div>
             </motion.div>

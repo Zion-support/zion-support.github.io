@@ -95,8 +95,12 @@ const benefits = [
   {
     icon: Shield,
     title: 'Enhanced Security',
+<<<<<<< HEAD
     description: 'Advanced security measures to protect financial data and transactions.',
     metric: '99.9%'
+=======
+    description: 'Advanced security measures protect against cyber threats and fraud'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
   },
   {
     icon: Clock,
