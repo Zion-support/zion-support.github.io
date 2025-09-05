@@ -302,6 +302,204 @@ const microSaasProducts = [
     benefits: ['Security Enhancement', 'Behavior Insights', 'Real-time Alerts', 'Cost Savings'],
     marketPrice: '$60 - $500/month',
     link: 'https://ziontechgroup.com/ai-video-analytics'
+  },
+  {
+    title: 'Smart Contract Management',
+    description: 'AI-powered contract lifecycle management with automated analysis and compliance tracking.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Automated Reviews', 'Compliance Tracking', 'Renewal Alerts'],
+    pricing: '$49 - $399/month',
+    category: 'Legal Tech',
+    benefits: ['Risk Reduction', 'Time Savings', 'Compliance Assurance', 'Cost Control'],
+    marketPrice: '$75 - $600/month',
+    link: 'https://ziontechgroup.com/smart-contract-management'
+  },
+  {
+    title: 'AI-Powered SEO Suite',
+    description: 'Comprehensive SEO optimization platform with AI-driven content and technical analysis.',
+    icon: Search,
+    features: ['Keyword Research', 'Content Optimization', 'Technical SEO', 'Rank Tracking'],
+    pricing: '$29 - $199/month',
+    category: 'SEO',
+    benefits: ['Higher Rankings', 'More Traffic', 'Better ROI', 'Automated Optimization'],
+    marketPrice: '$50 - $300/month',
+    link: 'https://ziontechgroup.com/ai-seo-suite'
+  },
+  {
+    title: 'Smart Expense Management',
+    description: 'AI-powered expense tracking and reimbursement platform for businesses.',
+    icon: CreditCard,
+    features: ['Receipt OCR', 'Policy Compliance', 'Automated Approval', 'Analytics'],
+    pricing: '$19 - $149/month',
+    category: 'Finance',
+    benefits: ['Time Savings', 'Policy Compliance', 'Cost Control', 'Automation'],
+    marketPrice: '$30 - $250/month',
+    link: 'https://ziontechgroup.com/smart-expense-management'
+  },
+  {
+    title: 'AI-Powered Time Tracking',
+    description: 'Intelligent time tracking with automatic project detection and productivity insights.',
+    icon: Clock,
+    features: ['Auto Time Tracking', 'Project Detection', 'Productivity Analytics', 'Team Management'],
+    pricing: '$15 - $99/month',
+    category: 'Productivity',
+    benefits: ['Accurate Tracking', 'Productivity Insights', 'Team Visibility', 'Billing Accuracy'],
+    marketPrice: '$25 - $150/month',
+    link: 'https://ziontechgroup.com/ai-time-tracking'
+  },
+  {
+    title: 'Smart Meeting Scheduler',
+    description: 'AI-powered meeting scheduling with calendar optimization and conflict resolution.',
+    icon: Calendar,
+    features: ['Smart Scheduling', 'Conflict Resolution', 'Time Zone Handling', 'Meeting Analytics'],
+    pricing: '$9 - $79/month',
+    category: 'Productivity',
+    benefits: ['Time Savings', 'Fewer Conflicts', 'Better Scheduling', 'Analytics'],
+    marketPrice: '$15 - $120/month',
+    link: 'https://ziontechgroup.com/smart-meeting-scheduler'
+  },
+  {
+    title: 'AI-Powered Password Manager',
+    description: 'Advanced password management with AI security analysis and breach monitoring.',
+    icon: Lock,
+    features: ['Password Generation', 'Security Analysis', 'Breach Monitoring', 'Team Sharing'],
+    pricing: '$5 - $39/month',
+    category: 'Security',
+    benefits: ['Enhanced Security', 'Convenience', 'Team Collaboration', 'Breach Protection'],
+    marketPrice: '$8 - $60/month',
+    link: 'https://ziontechgroup.com/ai-password-manager'
+  },
+  {
+    title: 'Smart Invoice Generator',
+    description: 'AI-powered invoice creation with automated data extraction and payment tracking.',
+    icon: FileText,
+    features: ['Auto Data Extraction', 'Template Customization', 'Payment Tracking', 'Tax Calculation'],
+    pricing: '$19 - $149/month',
+    category: 'Finance',
+    benefits: ['Time Savings', 'Accuracy', 'Professional Invoices', 'Payment Tracking'],
+    marketPrice: '$30 - $250/month',
+    link: 'https://ziontechgroup.com/smart-invoice-generator'
+  },
+  {
+    title: 'AI-Powered Customer Feedback Analysis',
+    description: 'Intelligent analysis of customer feedback with sentiment analysis and actionable insights.',
+    icon: MessageSquare,
+    features: ['Sentiment Analysis', 'Topic Extraction', 'Trend Analysis', 'Actionable Insights'],
+    pricing: '$29 - $199/month',
+    category: 'Customer Experience',
+    benefits: ['Better Understanding', 'Actionable Insights', 'Customer Satisfaction', 'Competitive Edge'],
+    marketPrice: '$50 - $300/month',
+    link: 'https://ziontechgroup.com/ai-customer-feedback'
+  },
+  {
+    title: 'Smart Inventory Forecasting',
+    description: 'AI-powered inventory prediction with demand forecasting and optimization recommendations.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Stock Optimization', 'Seasonal Analysis', 'Reorder Alerts'],
+    pricing: '$39 - $299/month',
+    category: 'Inventory',
+    benefits: ['Reduced Stockouts', 'Lower Costs', 'Better Planning', 'Optimized Inventory'],
+    marketPrice: '$60 - $500/month',
+    link: 'https://ziontechgroup.com/smart-inventory-forecasting'
+  },
+  {
+    title: 'AI-Powered Social Media Scheduler',
+    description: 'Intelligent social media management with optimal posting times and content suggestions.',
+    icon: Globe,
+    features: ['Optimal Timing', 'Content Suggestions', 'Multi-platform Posting', 'Engagement Analytics'],
+    pricing: '$19 - $149/month',
+    category: 'Social Media',
+    benefits: ['Better Engagement', 'Time Savings', 'Consistent Posting', 'Growth Tracking'],
+    marketPrice: '$30 - $250/month',
+    link: 'https://ziontechgroup.com/ai-social-scheduler'
+  },
+  {
+    title: 'Smart Document Scanner',
+    description: 'AI-powered document scanning with OCR, classification, and intelligent filing.',
+    icon: FileText,
+    features: ['OCR Processing', 'Auto Classification', 'Smart Filing', 'Search & Retrieval'],
+    pricing: '$15 - $99/month',
+    category: 'Document Management',
+    benefits: ['Easy Organization', 'Quick Search', 'Paperless Office', 'Time Savings'],
+    marketPrice: '$25 - $150/month',
+    link: 'https://ziontechgroup.com/smart-document-scanner'
+  },
+  {
+    title: 'AI-Powered Lead Scoring',
+    description: 'Intelligent lead qualification and scoring with automated follow-up recommendations.',
+    icon: Target,
+    features: ['Lead Scoring', 'Behavioral Analysis', 'Follow-up Automation', 'Conversion Prediction'],
+    pricing: '$29 - $199/month',
+    category: 'Sales',
+    benefits: ['Higher Conversion', 'Better Prioritization', 'Automated Workflows', 'ROI Improvement'],
+    marketPrice: '$50 - $300/month',
+    link: 'https://ziontechgroup.com/ai-lead-scoring'
+  },
+  {
+    title: 'Smart Email Signature Manager',
+    description: 'AI-powered email signature management with dynamic content and compliance tracking.',
+    icon: Mail,
+    features: ['Dynamic Signatures', 'Compliance Tracking', 'Brand Consistency', 'Analytics'],
+    pricing: '$9 - $59/month',
+    category: 'Email Marketing',
+    benefits: ['Brand Consistency', 'Compliance', 'Professional Image', 'Easy Management'],
+    marketPrice: '$15 - $90/month',
+    link: 'https://ziontechgroup.com/smart-email-signatures'
+  },
+  {
+    title: 'AI-Powered Website Heatmap',
+    description: 'Intelligent website analytics with user behavior tracking and optimization recommendations.',
+    icon: Eye,
+    features: ['Heatmap Analysis', 'User Behavior Tracking', 'Conversion Optimization', 'A/B Testing'],
+    pricing: '$19 - $149/month',
+    category: 'Web Analytics',
+    benefits: ['Better UX', 'Higher Conversions', 'Data-Driven Decisions', 'Optimization'],
+    marketPrice: '$30 - $250/month',
+    link: 'https://ziontechgroup.com/ai-website-heatmap'
+  },
+  {
+    title: 'Smart Appointment Booking',
+    description: 'AI-powered appointment scheduling with automated reminders and conflict resolution.',
+    icon: Calendar,
+    features: ['Auto Scheduling', 'Reminder Automation', 'Conflict Resolution', 'Calendar Sync'],
+    pricing: '$15 - $99/month',
+    category: 'Scheduling',
+    benefits: ['Reduced No-shows', 'Time Savings', 'Better Scheduling', 'Customer Satisfaction'],
+    marketPrice: '$25 - $150/month',
+    link: 'https://ziontechgroup.com/smart-appointment-booking'
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Automated content moderation with AI-powered detection of inappropriate content.',
+    icon: Shield,
+    features: ['Content Detection', 'Automated Moderation', 'Custom Rules', 'Real-time Processing'],
+    pricing: '$39 - $299/month',
+    category: 'Content Management',
+    benefits: ['Safer Platform', 'Reduced Manual Work', 'Consistent Moderation', 'Scalability'],
+    marketPrice: '$60 - $500/month',
+    link: 'https://ziontechgroup.com/ai-content-moderation'
+  },
+  {
+    title: 'Smart Backup Manager',
+    description: 'AI-powered backup solution with intelligent scheduling and data deduplication.',
+    icon: Database,
+    features: ['Auto Scheduling', 'Data Deduplication', 'Cloud Storage', 'Recovery Testing'],
+    pricing: '$19 - $149/month',
+    category: 'Data Management',
+    benefits: ['Data Protection', 'Cost Savings', 'Automation', 'Peace of Mind'],
+    marketPrice: '$30 - $250/month',
+    link: 'https://ziontechgroup.com/smart-backup-manager'
+  },
+  {
+    title: 'AI-Powered Form Builder',
+    description: 'Intelligent form creation with conditional logic and automated data processing.',
+    icon: FileText,
+    features: ['Drag & Drop Builder', 'Conditional Logic', 'Auto Processing', 'Analytics'],
+    pricing: '$15 - $99/month',
+    category: 'Form Management',
+    benefits: ['Easy Creation', 'Better UX', 'Data Processing', 'Analytics'],
+    marketPrice: '$25 - $150/month',
+    link: 'https://ziontechgroup.com/ai-form-builder'
   }
 ];
 
@@ -325,7 +523,17 @@ const categories = [
   'Energy',
   'Translation',
   'Compliance',
-  'Video Analytics'
+  'Video Analytics',
+  'Legal Tech',
+  'SEO',
+  'Productivity',
+  'Security',
+  'Customer Experience',
+  'Web Analytics',
+  'Scheduling',
+  'Content Management',
+  'Data Management',
+  'Form Management'
 ];
 
 const microSaasServices = [
@@ -1127,46 +1335,97 @@ export default function MicroSaasPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
-          <div className="container mx-auto px-4 text-center">
+              {/* Contact Information Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Get Started with Our Micro SaaS Solutions
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Contact our team to discuss your business needs and find the perfect micro SaaS solution.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Start with any of our micro SaaS solutions and see the difference AI-powered tools can make.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-                >
-                  Get Started
-                </Link>
-                <Link
-                  href="/ai-services"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold"
-                >
-                  View AI Services
-                </Link>
-              </div>
+              <Phone className="w-8 h-8 text-green-600 mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+              <p className="text-gray-600">+1 302 464 0950</p>
             </motion.div>
-          </div>
-        </section>
-      </div>
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
+
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Mail className="w-8 h-8 text-green-600 mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+              <p className="text-gray-600">kleber@ziontechgroup.com</p>
+            </motion.div>
+
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <MapPin className="w-8 h-8 text-green-600 mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
+              <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
+            </motion.div>
           </div>
         </div>
       </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Start with any of our micro SaaS solutions and see the difference AI-powered tools can make.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
+              >
+                Get Started
+              </Link>
+              <Link
+                href="/ai-services"
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold"
+              >
+                View AI Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      </div>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">

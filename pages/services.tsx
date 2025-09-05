@@ -779,6 +779,11 @@ export default function ServicesPage() {
           </div>
         </section>
       </div>
+
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-4">
+          <motion.div
             className="text-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

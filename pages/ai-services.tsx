@@ -1306,6 +1306,177 @@ const aiServices = [
     pricing: '$199 - $1,999/month',
     category: 'Customer Experience AI',
     popular: true
+  },
+  {
+    title: 'AI-Powered Autonomous Vehicle Systems',
+    description: 'Complete AI systems for autonomous vehicles including perception, planning, and control.',
+    icon: Car,
+    features: ['Computer Vision', 'Path Planning', 'Sensor Fusion', 'Safety Systems'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Autonomous Vehicles',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Blockchain Analytics',
+    description: 'Advanced blockchain analysis and cryptocurrency intelligence using machine learning.',
+    icon: Database,
+    features: ['Transaction Analysis', 'Fraud Detection', 'Market Intelligence', 'Compliance Monitoring'],
+    pricing: '$5,000 - $50,000/month',
+    category: 'Blockchain AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Edge Computing Platform',
+    description: 'Intelligent edge computing solutions with real-time AI processing capabilities.',
+    icon: Cpu,
+    features: ['Real-time Processing', 'Low Latency', 'Distributed AI', 'IoT Integration'],
+    pricing: '$10,000 - $100,000/setup',
+    category: 'Edge AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Augmented Reality (AR)',
+    description: 'Advanced AR solutions with AI-powered object recognition and interaction.',
+    icon: Eye,
+    features: ['Object Recognition', 'Spatial Mapping', 'Gesture Control', 'Real-time Rendering'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'AR AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Virtual Reality (VR)',
+    description: 'Immersive VR experiences powered by AI for realistic simulations and interactions.',
+    icon: Globe,
+    features: ['Realistic Simulations', 'AI NPCs', 'Behavioral Modeling', 'Haptic Feedback'],
+    pricing: '$30,000 - $250,000/project',
+    category: 'VR AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered 5G Network Optimization',
+    description: 'Intelligent 5G network management and optimization using AI algorithms.',
+    icon: Network,
+    features: ['Network Slicing', 'Traffic Optimization', 'Resource Allocation', 'Quality of Service'],
+    pricing: '$50,000 - $500,000/setup',
+    category: '5G AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered IoT Analytics Platform',
+    description: 'Comprehensive IoT data analysis and insights using advanced AI algorithms.',
+    icon: Cpu,
+    features: ['Sensor Data Analysis', 'Predictive Maintenance', 'Anomaly Detection', 'Real-time Alerts'],
+    pricing: '$5,000 - $50,000/month',
+    category: 'IoT AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Digital Marketing Automation',
+    description: 'Complete digital marketing automation with AI-driven campaign optimization.',
+    icon: Target,
+    features: ['Campaign Optimization', 'Audience Targeting', 'Content Personalization', 'ROI Maximization'],
+    pricing: '$2,000 - $20,000/month',
+    category: 'Marketing AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Supply Chain Intelligence',
+    description: 'End-to-end supply chain optimization using AI for demand forecasting and logistics.',
+    icon: Truck,
+    features: ['Demand Forecasting', 'Route Optimization', 'Inventory Management', 'Risk Assessment'],
+    pricing: '$15,000 - $150,000/setup',
+    category: 'Supply Chain AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Manufacturing',
+    description: 'Intelligent manufacturing systems with AI for quality control and optimization.',
+    icon: Factory,
+    features: ['Quality Control', 'Predictive Maintenance', 'Process Optimization', 'Defect Detection'],
+    pricing: '$25,000 - $250,000/setup',
+    category: 'Manufacturing AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Financial Risk Management',
+    description: 'Advanced financial risk assessment and management using AI and machine learning.',
+    icon: Shield,
+    features: ['Credit Risk Analysis', 'Market Risk Assessment', 'Operational Risk', 'Regulatory Compliance'],
+    pricing: '$20,000 - $200,000/setup',
+    category: 'Financial AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Grid Management',
+    description: 'Intelligent electrical grid management with AI for optimization and reliability.',
+    icon: Zap,
+    features: ['Load Balancing', 'Fault Detection', 'Energy Storage', 'Renewable Integration'],
+    pricing: '$50,000 - $500,000/setup',
+    category: 'Energy AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Water Management',
+    description: 'Smart water management systems with AI for conservation and quality monitoring.',
+    icon: Globe,
+    features: ['Water Quality Monitoring', 'Leak Detection', 'Consumption Optimization', 'Predictive Maintenance'],
+    pricing: '$10,000 - $100,000/setup',
+    category: 'Water AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Waste Management',
+    description: 'Intelligent waste management with AI for sorting, recycling, and optimization.',
+    icon: Package,
+    features: ['Waste Sorting', 'Recycling Optimization', 'Route Planning', 'Efficiency Analysis'],
+    pricing: '$15,000 - $150,000/setup',
+    category: 'Waste AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Building Management',
+    description: 'Intelligent building automation with AI for energy efficiency and comfort.',
+    icon: Building,
+    features: ['Energy Optimization', 'Occupant Comfort', 'Predictive Maintenance', 'Security Integration'],
+    pricing: '$25,000 - $250,000/setup',
+    category: 'Building AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Transportation Optimization',
+    description: 'Comprehensive transportation optimization using AI for public and private transit.',
+    icon: Car,
+    features: ['Route Optimization', 'Demand Prediction', 'Fleet Management', 'Traffic Analysis'],
+    pricing: '$30,000 - $300,000/setup',
+    category: 'Transportation AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Emergency Response',
+    description: 'Intelligent emergency response systems with AI for disaster prediction and management.',
+    icon: Shield,
+    features: ['Disaster Prediction', 'Resource Allocation', 'Evacuation Planning', 'Real-time Coordination'],
+    pricing: '$40,000 - $400,000/setup',
+    category: 'Emergency AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Agriculture',
+    description: 'Precision agriculture with AI for crop monitoring, yield optimization, and resource management.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
+    pricing: '$10,000 - $100,000/setup',
+    category: 'Agriculture AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Marine Technology',
+    description: 'Advanced marine technology with AI for ocean monitoring and maritime operations.',
+    icon: Globe,
+    features: ['Ocean Monitoring', 'Marine Life Tracking', 'Weather Prediction', 'Navigation Assistance'],
+    pricing: '$25,000 - $250,000/setup',
+    category: 'Marine AI',
+    popular: true
   }
 ];
 
@@ -1574,7 +1745,8 @@ export default function AIServicesPage() {
               </motion.div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
@@ -1585,93 +1757,29 @@ export default function AIServicesPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {benefit.description}
-                </p>
-              </motion.div>
-            ))}
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Transform Your Business with AI?
+              </h2>
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Let's discuss your AI needs and create a custom solution that drives real business value.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  href="/contact" 
+                  className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
+                >
+                  Start Your AI Journey
+                </Link>
+                <Link 
+                  href="/services" 
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold"
+                >
+                  Explore All Services
+                </Link>
+              </div>
+            </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our AI Development Process
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              A systematic approach to AI development that ensures successful implementation and maximum value.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {processSteps.map((step, index) => (
-              <motion.div
-                key={index}
-                className="text-center p-6 bg-gray-50 rounded-lg hover:bg-white hover:shadow-lg transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                  {step.step}
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {step.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Business with AI?
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let's discuss your AI needs and create a custom solution that drives real business value.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-              >
-                Start Your AI Journey
-              </Link>
-              <Link 
-                href="/services" 
-                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold"
-              >
-                Explore All Services
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </Layout>
-  );
-}
+        </section>
+      </Layout>
+    );
+  }
