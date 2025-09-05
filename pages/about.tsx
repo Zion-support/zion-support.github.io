@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
-import { Target, Rocket, Heart, Users, Award, Globe, Lightbulb, Shield, Zap } from 'lucide-react';
+import { Target, Rocket, Heart, Users, Award, Globe, Lightbulb, Shield, Zap, Cpu } from 'lucide-react';
 
 const values = [
   {
