@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { }
+import { 
   Users, 
   MessageSquare, 
   Calendar, 
@@ -13,15 +13,16 @@ import { }
   Star,
   Clock,
   MapPin,
-  ExternalLink;
+  ExternalLink
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
-const communityStats = []
+const communityStats = [
   { number: '2,500+', label: 'Active Members' },
   { number: '150+', label: 'Discussions' },
   { number: '50+', label: 'Events This Month' },
-  { number: '95%', label: 'Member Satisfaction' };
+  { number: '95%', label: 'Member Satisfaction' }
+];
 ];
 
 const featuredEvents = []
