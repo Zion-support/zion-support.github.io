@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import { Users, MessageCircle, Calendar, Award, CheckCircle, ArrowRight } from 'lucide-react';
-
 export default function CommunityPage() {
   const communityFeatures = [
     {
@@ -30,9 +29,8 @@ export default function CommunityPage() {
       features: ["Community Badges", "Contributor Recognition", "Special Access"]
     }
   ];
-
   return (
-    <Layout 
+    <Layout
       title="Community - Zion Tech Group"
       description="Join our vibrant community of developers, technologists, and innovators. Connect, learn, and grow together."
     >
@@ -50,13 +48,12 @@ export default function CommunityPage() {
                 Community
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Join our vibrant community of developers, technologists, and innovators. 
+                Join our vibrant community of developers, technologists, and innovators.
                 Connect, learn, and grow together in the world of technology.
               </p>
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -95,7 +92,6 @@ export default function CommunityPage() {
             </div>
           </div>
         </section>
-
         {/* Community Stats Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -113,7 +109,6 @@ export default function CommunityPage() {
                 Our growing community of technology enthusiasts and professionals.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-teal-600 mb-2">2,500+</div>
@@ -134,7 +129,6 @@ export default function CommunityPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-teal-600 to-blue-600 text-white">
           <div className="container mx-auto px-4 text-center">

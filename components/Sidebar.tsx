@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { 
-  Home, 
-  Briefcase, 
-  Target, 
-  Building2, 
-  FileText, 
-  HelpCircle, 
+import {
+  Home,
+  Briefcase,
+  Target,
+  Building2,
+  FileText,
+  HelpCircle,
   Search,
   X,
   ChevronRight,
@@ -18,30 +18,22 @@ import {
   DollarSign,
   ShoppingCart,
   GraduationCap,
-  Globe,
-  Cpu as CpuIcon,
-  Lock,
-  Network,
-  Monitor
+  Globe
 } from 'lucide-react';
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
-
   const toggleSection = (section: string) => {
-    setExpandedSections(prev => 
+    setExpandedSections(prev =>
       prev.includes(section)
         ? prev.filter(s => s !== section)
         : [...prev, section]
     );
   };
-
   const navigationItems = [
     {
       label: 'Home',
@@ -61,11 +53,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
         { label: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
         { label: 'Data Analytics', href: '/services/data-analytics', icon: Brain },
-        { label: 'Quantum Computing', href: '/services/quantum-computing', icon: CpuIcon },
-        { label: 'Blockchain Solutions', href: '/services/blockchain', icon: Lock },
-        { label: 'IoT & Smart Cities', href: '/services/iot-smart-cities', icon: Globe },
-        { label: 'Edge Computing', href: '/services/edge-computing', icon: Network },
-        { label: 'Digital Twins', href: '/services/digital-twins', icon: Monitor }
       ]
     },
     {
@@ -80,7 +67,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Finance', href: '/solutions/finance', icon: DollarSign },
         { label: 'Retail', href: '/solutions/retail', icon: ShoppingCart },
         { label: 'Education', href: '/solutions/education', icon: GraduationCap },
-        { label: 'Government', href: '/solutions/government', icon: Globe }
+        { label: 'Government', href: '/solutions/government', icon: Globe },
       ]
     },
     {
@@ -95,7 +82,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Education', href: '/industries/education', icon: GraduationCap },
         { label: 'Government', href: '/industries/government', icon: Globe },
         { label: 'Manufacturing', href: '/industries/manufacturing', icon: Building2 },
-        { label: 'Retail', href: '/industries/retail', icon: ShoppingCart }
+        { label: 'Retail', href: '/industries/retail', icon: ShoppingCart },
       ]
     },
     {
@@ -109,7 +96,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'Webinars', href: '/webinars' },
         { label: 'Help Center', href: '/help' },
-        { label: 'FAQ', href: '/faq' }
+        { label: 'FAQ', href: '/faq' },
       ]
     },
     {
@@ -122,22 +109,19 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Our Team', href: '/team' },
         { label: 'Careers', href: '/careers' },
         { label: 'News', href: '/news' },
-        { label: 'Contact', href: '/contact' }
+        { label: 'Contact', href: '/contact' },
       ]
     }
   ];
-
   const quickLinks = [
     { label: 'Get Started', href: '/contact', icon: ChevronRight },
     { label: 'Pricing', href: '/pricing', icon: DollarSign },
     { label: 'Support', href: '/support', icon: HelpCircle },
-    { label: 'Documentation', href: '/docs', icon: FileText }
+    { label: 'Documentation', href: '/docs', icon: FileText },
   ];
-
   const isActive = (href: string) => {
     return router.pathname === href;
   };
-
   return (
     <>
       {/* Overlay */}
@@ -147,7 +131,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           onClick={onClose}
         />
       )}
-      
       {/* Sidebar */}
       <div className={`
         fixed top-0 left-0 h-full w-80 bg-gray-900 text-white z-50 transform transition-transform duration-300 ease-in-out
@@ -169,7 +152,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             <X className="w-6 h-6" />
           </button>
         </div>
-
         {/* Search */}
         <div className="p-6 border-b border-gray-700">
           <div className="relative">
@@ -181,7 +163,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             />
           </div>
         </div>
-
         {/* Navigation */}
         <nav className="flex-1 overflow-y-auto">
           <div className="p-6">
@@ -200,7 +181,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     <item.icon className="w-5 h-5" />
                     <span className="font-medium">{item.label}</span>
                   </Link>
-                  
                   {item.hasSubmenu && (
                     <button
                       onClick={() => toggleSection(item.label)}
@@ -214,7 +194,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     </button>
                   )}
                 </div>
-
                 {item.hasSubmenu && expandedSections.includes(item.label) && (
                   <div className="ml-8 mt-2 space-y-1">
                     {item.submenu?.map((subItem, subIndex) => (
@@ -238,7 +217,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             ))}
           </div>
         </nav>
-
         {/* Quick Links */}
         <div className="p-6 border-t border-gray-700">
           <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
@@ -258,14 +236,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             ))}
           </div>
         </div>
-
         {/* Contact Info */}
         <div className="p-6 border-t border-gray-700">
           <div className="text-sm text-gray-400">
             <p className="mb-2">Need help?</p>
-            <p className="text-blue-400">kleber@ziontechgroup.com</p>
-            <p className="text-blue-400">+1 302 464 0950</p>
-            <p className="text-blue-400 text-xs mt-1">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+            <p className="text-blue-400">contact@ziontechgroup.com</p>
+            <p className="text-blue-400">+1 (555) 123-4567</p>
           </div>
         </div>
       </div>
