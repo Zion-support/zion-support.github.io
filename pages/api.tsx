@@ -2,43 +2,30 @@ import React from "react";
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
-export default function APIPage() {}
-  const apiFeatures = []
-    {}
+export default function APIPage() {
+  const apiFeatures = [
+    {
       title: "RESTful APIs",
       description: "Clean, intuitive REST API endpoints for easy integration",
       icon: Code,
-<<<<<<< HEAD
       features: ["JSON Responses", "HTTP Status Codes", "Rate Limiting"]
-=======
-      features: [JSON Responses", "HTTP Status Codes", "Rate Limiting"];
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
     },
-    {}
+    {
       title: "Comprehensive Documentation",
       description: "Detailed API documentation with examples and guides",
       icon: Book,
-<<<<<<< HEAD
       features: ["Interactive Docs", "Code Examples", "SDK Libraries"]
-=======
-      features: [Interactive Docs", "Code Examples", "SDK Libraries"];
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
     },
-    {}
+    {
       title: "High Performance",
       description: "Fast, reliable APIs built for scale and speed",
       icon: Zap,
-<<<<<<< HEAD
       features: ["Low Latency", "High Throughput", "Global CDN"]
-=======
-      features: [Low Latency", "High Throughput", "Global CDN"];
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
     },
-    {}
+    {
       title: "Enterprise Security",
       description: "Bank-level security with authentication and encryption",
       icon: Shield,
-<<<<<<< HEAD
       features: ["OAuth 2.0", "API Keys", "SSL/TLS Encryption"]
     }
   ];

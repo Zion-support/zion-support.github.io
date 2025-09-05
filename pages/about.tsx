@@ -410,8 +410,6 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
-=======
->>>>>>> 9ed4ba1b92a691fe36a93d14d4961cf252717c28
     </div>
   );
 };

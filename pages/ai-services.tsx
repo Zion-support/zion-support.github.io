@@ -73,9 +73,9 @@ const aiServices = [
     features: ['Natural Language Understanding', 'Context Awareness', 'Multi-language Support', 'Integration APIs'],
     pricing: '$1,000 - $6,000/month',
     category: 'Customer Service',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'Computer Vision Solutions',
     description: 'Image and video analysis using deep learning and computer vision.',
     icon: Eye,

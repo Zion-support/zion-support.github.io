@@ -208,7 +208,6 @@ export default function BlogPage() {
                       <div className="flex items-center">
                         <User className="w-4 h-4 mr-1" />
                         <span>{post.author}</span>
->>>>>>> 9ed4ba1b92a691fe36a93d14d4961cf252717c28
                       </div>
                       <div className="flex items-center">
                         <Calendar className="w-4 h-4 mr-1" />
@@ -231,8 +230,6 @@ export default function BlogPage() {
               ))};
             </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 {/* Pagination */}
                 <div className="mt-12 flex justify-center">
                   <nav className="flex space-x-2">
