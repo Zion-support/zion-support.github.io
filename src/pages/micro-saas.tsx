@@ -99,12 +99,112 @@ const microSaasServices = [
     ],
     color: "from-orange-500 to-red-500",
     benefits: [
-      "Better insights",
-      "Data-driven decisions",
-      "Automated reporting",
-      "Compliance assurance"
+      "Better decision making",
+      "Improved efficiency",
+      "Data-driven insights",
+      "Automated processes"
     ]
   },
+  {
+    title: "AI-Powered SaaS Tools",
+    description: "Intelligent software solutions that leverage artificial intelligence for enhanced functionality",
+    icon: Cpu,
+    features: [
+      "Machine Learning Integration",
+      "Natural Language Processing",
+      "Predictive Analytics",
+      "Automated Decision Making",
+      "Smart Recommendations",
+      "Intelligent Automation"
+    ],
+    color: "from-violet-500 to-purple-500",
+    benefits: [
+      "Enhanced intelligence",
+      "Automated insights",
+      "Better predictions",
+      "Reduced manual work"
+    ]
+  },
+  {
+    title: "Blockchain & Web3 Applications",
+    description: "Decentralized applications and Web3 solutions for the next generation of internet",
+    icon: Lock,
+    features: [
+      "Smart Contract Development",
+      "DeFi Applications",
+      "NFT Marketplaces",
+      "Decentralized Identity",
+      "Token Economics",
+      "Cross-chain Integration"
+    ],
+    color: "from-indigo-500 to-blue-500",
+    benefits: [
+      "Enhanced security",
+      "Transparency",
+      "Decentralization",
+      "Future-proof technology"
+    ]
+  },
+  {
+    title: "IoT & Edge Computing Platforms",
+    description: "Internet of Things solutions and edge computing platforms for connected devices",
+    icon: Settings,
+    features: [
+      "Device Management",
+      "Real-time Data Processing",
+      "Edge Analytics",
+      "Firmware Updates",
+      "Device Security",
+      "Cloud Integration"
+    ],
+    color: "from-teal-500 to-cyan-500",
+    benefits: [
+      "Real-time insights",
+      "Reduced latency",
+      "Cost efficiency",
+      "Scalable solutions"
+    ]
+  },
+  {
+    title: "Quantum Computing SaaS",
+    description: "Next-generation quantum computing solutions as a service",
+    icon: Rocket,
+    features: [
+      "Quantum Algorithm Development",
+      "Quantum Simulation",
+      "Quantum Machine Learning",
+      "Quantum Optimization",
+      "Hybrid Classical-Quantum Systems",
+      "Quantum Security"
+    ],
+    color: "from-pink-500 to-rose-500",
+    benefits: [
+      "Exponential processing power",
+      "Advanced problem solving",
+      "Competitive advantage",
+      "Future technology leadership"
+    ]
+  },
+  {
+    title: "AR/VR & Metaverse Platforms",
+    description: "Augmented and virtual reality applications for immersive experiences",
+    icon: Layers,
+    features: [
+      "AR/VR Development",
+      "3D Modeling & Animation",
+      "Spatial Computing",
+      "Metaverse Integration",
+      "Haptic Feedback",
+      "Cross-platform Compatibility"
+    ],
+    color: "from-emerald-500 to-green-500",
+    benefits: [
+      "Immersive experiences",
+      "Enhanced engagement",
+      "Innovative solutions",
+      "Future-ready technology"
+    ]
+  }
   {
     title: "Workflow Automation",
     description: "Intelligent automation solutions that streamline business processes",
@@ -459,6 +559,185 @@ export default function MicroSaasPage() {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Micro SaaS Pricing
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
+              Flexible pricing models for custom software solutions that scale with your business.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* MVP Plan */}
+            <motion.div
+              className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-blue-500 transition-all duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">MVP Development</h3>
+                <p className="text-gray-600 mb-4">Minimum viable product</p>
+                <div className="text-4xl font-bold text-blue-600 mb-2">$15,000</div>
+                <p className="text-gray-500">starting price</p>
+              </div>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">Basic Web Application</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">User Authentication</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">Database Setup</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">Basic API</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">3 Months Support</span>
+                </li>
+              </ul>
+              <Link
+                href="/contact"
+                className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-center block font-semibold"
+              >
+                Get Started
+              </Link>
+            </motion.div>
+
+            {/* Professional Plan */}
+            <motion.div
+              className="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-2xl p-8 relative transform scale-105"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold">
+                  Most Popular
+                </span>
+              </div>
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold mb-2">Full SaaS Platform</h3>
+                <p className="text-blue-100 mb-4">Complete software solution</p>
+                <div className="text-4xl font-bold mb-2">$45,000</div>
+                <p className="text-blue-100">starting price</p>
+              </div>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  <span>Advanced Web App</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  <span>Mobile Application</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  <span>AI Integration</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  <span>Payment Processing</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  <span>Analytics Dashboard</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  <span>6 Months Support</span>
+                </li>
+              </ul>
+              <Link
+                href="/contact"
+                className="w-full bg-white text-blue-600 py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors duration-300 text-center block font-semibold"
+              >
+                Get Started
+              </Link>
+            </motion.div>
+
+            {/* Enterprise Plan */}
+            <motion.div
+              className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-purple-500 transition-all duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise SaaS</h3>
+                <p className="text-gray-600 mb-4">Advanced enterprise solution</p>
+                <div className="text-4xl font-bold text-purple-600 mb-2">Custom</div>
+                <p className="text-gray-500">pricing</p>
+              </div>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">Quantum Computing SaaS</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">Blockchain Integration</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">AR/VR Applications</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">IoT Platform</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">White-label Solution</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">12 Months Support</span>
+                </li>
+              </ul>
+              <Link
+                href="/contact"
+                className="w-full bg-purple-600 text-white py-3 px-6 rounded-lg hover:bg-purple-700 transition-colors duration-300 text-center block font-semibold"
+              >
+                Contact Sales
+              </Link>
+            </motion.div>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-gray-600 mb-4">
+              All projects include free consultation and custom implementation
+            </p>
+            <Link
+              href="/contact"
+              className="text-blue-600 hover:text-blue-700 font-semibold underline"
+            >
+              Schedule a free consultation →
+            </Link>
           </div>
         </div>
       </section>
