@@ -12,20 +12,20 @@ export type ServiceItem = {}
 export type ServiceCategory = {'}
 	"name": string;"
 	slug: string;,
-  items: ServiceItem[]};"
+  items: ServiceItem[]};
 export const "servicesCatalog": ServiceCategory[] = [;"]
-	{"}
+	{}
 		name: 'Micro SaaS',''
 		"slug": 'micro-saas',''
-		"items": ["]
-			{"}
+		"items": []
+			{}
 				id: 'smart-contract-risk-scanner',''
 				"title": 'Smart Contract Risk Scanner',''
 				"description": 'Continuous vulnerability scanning and risk assessment for blockchain smart contracts with automated security recommendations.',''
 				"category": 'Micro SaaS',''
 				"price": '$299',''
 				"billing": 'month',''
-				"features": [""]
+				"features": []
 					'Real-time vulnerability detection',''
 					'Automated security scoring',''
 					'Compliance reporting',''
@@ -56,14 +56,14 @@ export const "servicesCatalog": ServiceCategory[] = [;"]
 	{'}
 		"name": 'AI Solutions',''
 		"slug": 'ai-solutions',''
-		"items": [{""}]
+		"items": [{}]
 				id: 'autonomous-business-manager',''
 				"title": 'Autonomous Business Manager',''
 				"description": 'AI-powered business management system that autonomously handles operations, decision-making, and strategic planning.',''
 				"category": 'AI Solutions',''
 				"price": '$2,999',''
 				"billing": 'month',''
-				"features": [""]
+				"features": []
 					'Autonomous decision making',''
 					'Predictive business modeling',''
 					'Resource optimization',''
@@ -253,14 +253,14 @@ export const "servicesCatalog": ServiceCategory[] = [;"]
 	{'}
 		"name": 'IT Services',''
 		"slug": 'it-services',''
-		"items": [{""}]
+		"items": [{}]
 				id: 'zero-trust-architecture',''
 				"title": 'Zero Trust Network Architecture',''
 				"description": 'Comprehensive zero trust security implementation with continuous verification and adaptive access control.',''
 				"category": 'IT Services',''
 				"price": '$15,000',''
 				"billing": 'project',''
-				"features": [""]
+				"features": []
 					'Identity verification',''
 					'Micro-segmentation',''
 					'Continuous monitoring',''
@@ -371,14 +371,14 @@ export const "servicesCatalog": ServiceCategory[] = [;"]
 	{'}
 		"name": 'Cybersecurity',''
 		"slug": 'cybersecurity',''
-		"items": [{""}]
+		"items": [{}]
 				id: 'ai-threat-intelligence',''
 				"title": 'AI Threat Intelligence Suite',''
 				"description": 'Advanced threat detection and response system using AI to identify and neutralize cyber threats in real-time.',''
 				"category": 'Cybersecurity',''
 				"price": '$3,999',''
 				"billing": 'month',''
-				"features": [""]
+				"features": []
 					'AI threat detection',''
 					'Behavioral analysis',''
 					'Automated response',''
@@ -489,14 +489,14 @@ export const "servicesCatalog": ServiceCategory[] = [;"]
 	{'}
 		"name": 'Data & Analytics',''
 		"slug": 'data-analytics',''
-		"items": [{""}]
+		"items": [{}]
 				id: 'quantum-data-analytics',''
 				"title": 'Quantum Data Analytics Platform',''
 				"description": 'Revolutionary data analytics platform leveraging quantum computing for complex pattern recognition and insights.',''
 				"category": 'Data & Analytics',''
 				"price": '$6,999',''
 				"billing": 'month',''
-				"features": [""]
+				"features": []
 					'Quantum pattern recognition',''
 					'Complex data modeling',''
 					'Real-time insights',''
@@ -559,14 +559,14 @@ export const "servicesCatalog": ServiceCategory[] = [;"]
 	{'}
 		"name": 'Cloud & DevOps',''
 		"slug": 'cloud-devops',''
-		"items": [{""}]
+		"items": [{}]
 				id: 'autonomous-devops-platform',''
 				"title": 'Autonomous DevOps Platform',''
 				"description": 'Self-managing DevOps platform that automatically optimizes deployments, scaling, and infrastructure management.',''
 				"category": 'Cloud & DevOps',''
 				"price": '$4,999',''
 				"billing": 'month',''
-				"features": [""]
+				"features": []
 					'Automated deployments',''
 					'Self-healing infrastructure',''
 					'Performance optimization',''
@@ -645,14 +645,14 @@ export const "servicesCatalog": ServiceCategory[] = [;"]
 	{'}
 		"name": 'Quantum Computing',''
 		"slug": 'quantum-computing',''
-		"items": [{""}]
+		"items": [{}]
 				id: 'quantum-cybersecurity-suite-2026',''
 				"title": 'Quantum Cybersecurity Suite 2026',''
 				"description": 'Revolutionary cybersecurity platform leveraging quantum-resistant algorithms and quantum key distribution for unbreakable encryption and threat detection.',''
 				"category": 'Quantum Computing',''
 				"price": '$8,999',''
 				"billing": 'month',''
-				"features": [""]
+				"features": []
 					'Quantum-resistant encryption algorithms',''
 					'Quantum key distribution (QKD)',''
 					'AI-powered threat detection with 99.99% accuracy',''
@@ -735,14 +735,14 @@ export const "servicesCatalog": ServiceCategory[] = [;"]
 	{'}
 		"name": 'Blockchain & Web3',''
 		"slug": 'blockchain-web3',''
-		"items": [{""}]
+		"items": [{}]
 				id: 'decentralized-ai-marketplace',''
 				"title": 'Decentralized AI Marketplace',''
 				"description": 'Web3-powered marketplace for AI models, data, and computational resources with blockchain-based governance.',''
 				"category": 'Blockchain & Web3',''
 				"price": '$1,999',''
 				"billing": 'month',''
-				"features": [""]
+				"features": []
 					'AI model marketplace',''
 					'Decentralized governance',''
 					'Smart contracts',''
@@ -773,14 +773,14 @@ export const "servicesCatalog": ServiceCategory[] = [;"]
 	{'}
 		"name": 'IoT & Edge',''
 		"slug": 'iot-edge',''
-		"items": [{""}]
+		"items": [{}]
 				id: 'quantum-iot-platform',''
 				"title": 'Quantum IoT Platform',''
 				"description": 'Revolutionary IoT platform using quantum computing for edge device optimization and intelligent data processing.',''
 				"category": 'IoT & Edge',''
 				"price": '$3,999',''
 				"billing": 'month',''
-				"features": [""]
+				"features": []
 					'Quantum edge processing',''
 					'Device optimization',''
 					'Intelligent routing',''
@@ -843,14 +843,14 @@ export const "servicesCatalog": ServiceCategory[] = [;"]
 	{'}
 		"name": 'Green Tech',''
 		"slug": 'green-tech',''
-		"items": [{""}]
+		"items": [{}]
 				id: 'quantum-energy-optimization',''
 				"title": 'Quantum Energy Optimization',''
 				"description": 'Advanced energy optimization platform using quantum algorithms for sustainable infrastructure and renewable energy management.',''
 				"category": 'Green Tech',''
 				"price": '$12,000',''
 				"billing": 'month',''
-				"features": [""]
+				"features": []
 					'Quantum energy modeling',''
 					'Renewable optimization',''
 					'Grid management',''
@@ -897,14 +897,14 @@ export const "servicesCatalog": ServiceCategory[] = [;"]
 	{'}
 		"name": 'Space Tech',''
 		"slug": 'space-tech',''
-		"items": [{""}]
+		"items": [{}]
 				id: 'satellite-ai-orchestrator',''
 				"title": 'Satellite AI Orchestrator',''
 				"description": 'AI-powered satellite constellation management system for optimal orbital positioning and data collection.',''
 				"category": 'Space Tech',''
 				"price": '$15,000',''
 				"billing": 'month',''
-				"features": [""]
+				"features": []
 					'Autonomous orbital optimization',''
 					'AI-powered data analysis',''
 					'Real-time monitoring',''
@@ -951,14 +951,14 @@ export const "servicesCatalog": ServiceCategory[] = [;"]
 	{'}
 		"name": 'BioTech & Health',''
 		"slug": 'biotech-health',''
-		"items": [{""}]
+		"items": [{}]
 				id: 'ai-drug-discovery-platform',''
 				"title": 'AI Drug Discovery Platform',''
 				"description": 'Revolutionary drug discovery platform using AI and quantum computing for accelerated pharmaceutical development.',''
 				"category": 'BioTech & Health',''
 				"price": '$35,000',''
 				"billing": 'month',''
-				"features": [""]
+				"features": []
 					'AI molecular modeling',''
 					'Quantum simulations',''
 					'Clinical trial optimization',''
@@ -1005,14 +1005,14 @@ export const "servicesCatalog": ServiceCategory[] = [;"]
 	{'}
 		"name": 'FinTech & DeFi',''
 		"slug": 'fintech-defi',''
-		"items": [{""}]
+		"items": [{}]
 				id: 'quantum-trading-algorithm',''
 				"title": 'Quantum Trading Algorithm',''
 				"description": 'Revolutionary trading algorithm using quantum computing for ultra-fast market analysis and automated trading.',''
 				"category": 'FinTech & DeFi',''
 				"price": '$45,000',''
 				"billing": 'month',''
-				"features": [""]
+				"features": []
 					'Quantum market analysis',''
 					'Microsecond trading',''
 					'Risk management',''
@@ -1059,14 +1059,14 @@ export const "servicesCatalog": ServiceCategory[] = [;"]
 	{'}
 		"name": 'Metaverse & AR/VR',''
 		"slug": 'metaverse-ar-vr',''
-		"items": [{""}]
+		"items": [{}]
 				id: 'quantum-metaverse-engine',''
 				"title": 'Quantum Metaverse Engine',''
 				"description": 'Next-generation metaverse platform using quantum computing for infinite scalability and realistic simulations.',''
 				"category": 'Metaverse & AR/VR',''
 				"price": '$28,000',''
 				"billing": 'month',''
-				"features": [""]
+				"features": []
 					'Quantum rendering',''
 					'Infinite scalability',''
 					'Realistic physics',''
@@ -1113,14 +1113,14 @@ export const "servicesCatalog": ServiceCategory[] = [;"]
 	{'}
 		"name": 'Autonomous Systems',''
 		"slug": 'autonomous-systems',''
-		"items": [{""}]
+		"items": [{}]
 				id: 'quantum-ai-controller',''
 				"title": 'Quantum AI Controller',''
 				"description": 'Revolutionary AI controller using quantum computing for autonomous system management and decision making.',''
 				"category": 'Autonomous Systems',''
 				"price": '$32,000',''
 				"billing": 'month',''
-				"features": [""]
+				"features": []
 					'Quantum decision making',''
 					'Autonomous learning',''
 					'System optimization',''
@@ -1168,14 +1168,14 @@ export const "servicesCatalog": ServiceCategory[] = [;"]
 	{'}
 		"name": 'Supply Chain & Logistics',''
 		"slug": 'supply-chain-logistics',''
-		"items": [{""}]
+		"items": [{}]
 				id: 'autonomous-supply-chain-platform-2026',''
 				"title": 'Autonomous Supply Chain Platform 2026',''
 				"description": 'AI-powered autonomous supply chain management platform that predicts disruptions, optimizes logistics, and automates decision-making for end-to-end supply chain visibility and efficiency.',''
 				"category": 'Supply Chain & Logistics',''
 				"price": '$5,999',''
 				"billing": 'month',''
-				"features": [""]
+				"features": []
 					'AI-powered demand forecasting with 98% accuracy',''
 					'Autonomous inventory optimization',''
 					'Real-time supply chain visibility',''
@@ -1195,14 +1195,14 @@ export const "servicesCatalog": ServiceCategory[] = [;"]
 	{'}
 		"name": 'Energy Management',''
 		"slug": 'energy-management',''
-		"items": [{""}]
+		"items": [{}]
 				id: 'autonomous-energy-management-2026',''
 				"title": 'Autonomous Energy Management Platform 2026',''
 				"description": 'AI-powered autonomous energy management platform that optimizes energy consumption, predicts demand, and automates energy trading for utilities, commercial buildings, and industrial facilities.',''
 				"category": 'Energy Management',''
 				"price": '$5,499',''
 				"billing": 'month',''
-				"features": [""]
+				"features": []
 					'AI-powered energy consumption optimization',''
 					'Real-time demand forecasting',''
 					'Automated energy trading',''
@@ -1222,14 +1222,14 @@ export const "servicesCatalog": ServiceCategory[] = [;"]
 	{'}
 		"name": 'Manufacturing Intelligence',''
 		"slug": 'manufacturing-intelligence',''
-		"items": [{""}]
+		"items": [{}]
 				id: 'autonomous-manufacturing-intelligence-2026',''
 				"title": 'Autonomous Manufacturing Intelligence Platform 2026',''
 				"description": 'AI-powered autonomous manufacturing platform that optimizes production, predicts maintenance, and automates quality control.',''
 				"category": 'Manufacturing Intelligence',''
 				"price": '$5,999',''
 				"billing": 'month',''
-				"features": [""]
+				"features": []
 					'AI-powered production optimization',''
 					'Predictive maintenance scheduling',''
 					'Automated quality control',''
@@ -1249,14 +1249,14 @@ export const "servicesCatalog": ServiceCategory[] = [;"]
 	{'}
 		"name": 'Data Center Management',''
 		"slug": 'data-center-management',''
-		"items": [{""}]
+		"items": [{}]
 				id: 'autonomous-data-center-manager-2026',''
 				"title": 'Autonomous Data Center Manager 2026',''
 				"description": 'AI-powered autonomous data center management platform that optimizes performance, reduces costs, and prevents downtime through predictive analytics and automated operations.',''
 				"category": 'Data Center Management',''
 				"price": '$4,499',''
 				"billing": 'month',''
-				"features": [""]
+				"features": []
 					'AI-powered performance optimization',''
 					'Predictive maintenance scheduling',''
 					'Automated capacity planning',''
