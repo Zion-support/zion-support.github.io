@@ -301,6 +301,501 @@ const aiServices = [
     category: 'Virtual Reality'
   },
   {
+    title: 'AI-Powered Metaverse Platform',
+    description: 'Complete metaverse creation with AI-generated worlds and avatars.',
+    icon: Globe,
+    features: ['World Generation', 'Avatar Creation', 'Social Interactions', 'Economy Management'],
+    pricing: '$100,000 - $500,000 project',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Digital Twin',
+    description: 'Real-time digital twins for industrial and urban environments.',
+    icon: Building,
+    features: ['Real-time Simulation', 'Predictive Modeling', 'IoT Integration', 'Performance Optimization'],
+    pricing: '$50,000 - $250,000 project',
+    category: 'Digital Twin',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Edge Computing',
+    description: 'Intelligent edge computing solutions with AI processing at the edge.',
+    icon: Server,
+    features: ['Edge AI Processing', 'Low Latency', 'Bandwidth Optimization', 'Real-time Analytics'],
+    pricing: '$25,000 - $125,000 setup',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered 5G Network Optimization',
+    description: 'Intelligent 5G network management and optimization using AI.',
+    icon: Network,
+    features: ['Network Optimization', 'Traffic Management', 'Resource Allocation', 'Performance Monitoring'],
+    pricing: '$75,000 - $375,000 project',
+    category: 'Telecommunications',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Blockchain Analytics',
+    description: 'Advanced blockchain analysis and cryptocurrency intelligence using AI.',
+    icon: Shield,
+    features: ['Transaction Analysis', 'Fraud Detection', 'Market Intelligence', 'Compliance Monitoring'],
+    pricing: '$15,000 - $75,000 setup',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Synthetic Data Generation',
+    description: 'High-quality synthetic data generation for training AI models.',
+    icon: Database,
+    features: ['Data Generation', 'Privacy Preservation', 'Model Training', 'Quality Assurance'],
+    pricing: '$10,000 - $50,000 project',
+    category: 'Data Science',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Robotic Process Automation',
+    description: 'Intelligent RPA with AI decision-making capabilities.',
+    icon: Settings,
+    features: ['Process Automation', 'Decision Making', 'Learning Capabilities', 'Integration'],
+    pricing: '$20,000 - $100,000 setup',
+    category: 'Automation',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Augmented Reality',
+    description: 'Advanced AR applications with AI-powered object recognition and interaction.',
+    icon: Eye,
+    features: ['Object Recognition', 'Spatial Mapping', 'Real-time Processing', 'Gesture Control'],
+    pricing: '$40,000 - $200,000 project',
+    category: 'Augmented Reality',
+    popular: true
+  },
+  {
+    title: 'AI-Powered IoT Analytics',
+    description: 'Intelligent IoT data analysis and device management using AI.',
+    icon: Cpu,
+    features: ['Device Management', 'Predictive Maintenance', 'Anomaly Detection', 'Energy Optimization'],
+    pricing: '$30,000 - $150,000 setup',
+    category: 'IoT',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Conversational AI',
+    description: 'Advanced conversational AI with emotional intelligence and context awareness.',
+    icon: MessageSquare,
+    features: ['Emotional Intelligence', 'Context Awareness', 'Multi-modal Interaction', 'Learning Capabilities'],
+    pricing: '$25,000 - $125,000 setup',
+    category: 'Conversational AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Predictive Maintenance',
+    description: 'Intelligent predictive maintenance for industrial equipment and machinery.',
+    icon: Settings,
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$35,000 - $175,000 setup',
+    category: 'Industrial AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personalization Engine',
+    description: 'Advanced personalization algorithms for e-commerce and content platforms.',
+    icon: Target,
+    features: ['User Profiling', 'Content Recommendation', 'Behavioral Analysis', 'A/B Testing'],
+    pricing: '$15,000 - $75,000 setup',
+    category: 'Personalization',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Voice Cloning',
+    description: 'High-quality voice cloning and synthesis for various applications.',
+    icon: Mic,
+    features: ['Voice Synthesis', 'Emotion Control', 'Language Support', 'Real-time Processing'],
+    pricing: '$20,000 - $100,000 setup',
+    category: 'Voice Technology',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Image Generation',
+    description: 'Advanced AI image generation and editing for creative and commercial use.',
+    icon: Image,
+    features: ['Text-to-Image', 'Style Transfer', 'Image Editing', 'High Resolution'],
+    pricing: '$10,000 - $50,000 setup',
+    category: 'Creative AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Autonomous Drones',
+    description: 'Intelligent autonomous drone systems for various commercial applications.',
+    icon: Rocket,
+    features: ['Autonomous Navigation', 'Object Detection', 'Mission Planning', 'Real-time Control'],
+    pricing: '$75,000 - $375,000 project',
+    category: 'Autonomous Systems',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Grid Management',
+    description: 'Intelligent smart grid optimization and renewable energy integration.',
+    icon: Zap,
+    features: ['Grid Optimization', 'Renewable Integration', 'Demand Response', 'Energy Storage'],
+    pricing: '$100,000 - $500,000 project',
+    category: 'Smart Grid',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Healthcare Diagnostics',
+    description: 'Advanced AI diagnostic systems for medical imaging and analysis.',
+    icon: Heart,
+    features: ['Medical Imaging', 'Disease Detection', 'Treatment Planning', 'Patient Monitoring'],
+    pricing: '$150,000 - $750,000 project',
+    category: 'Healthcare AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Financial Risk Assessment',
+    description: 'Intelligent financial risk analysis and credit scoring using AI.',
+    icon: TrendingUp,
+    features: ['Risk Modeling', 'Credit Scoring', 'Fraud Detection', 'Portfolio Analysis'],
+    pricing: '$50,000 - $250,000 setup',
+    category: 'FinTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimization',
+    description: 'Intelligent supply chain management with AI-powered optimization.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Management'],
+    pricing: '$75,000 - $375,000 setup',
+    category: 'Supply Chain',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Environmental Monitoring',
+    description: 'Intelligent environmental monitoring and climate change analysis.',
+    icon: Globe,
+    features: ['Climate Monitoring', 'Pollution Detection', 'Ecosystem Analysis', 'Sustainability Metrics'],
+    pricing: '$40,000 - $200,000 project',
+    category: 'Environmental AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Transportation',
+    description: 'Intelligent transportation systems with AI optimization and management.',
+    icon: Car,
+    features: ['Traffic Optimization', 'Route Planning', 'Fleet Management', 'Safety Monitoring'],
+    pricing: '$100,000 - $500,000 project',
+    category: 'Smart Transportation',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Educational Technology',
+    description: 'Intelligent educational platforms with personalized learning experiences.',
+    icon: BookOpen,
+    features: ['Personalized Learning', 'Adaptive Content', 'Progress Tracking', 'Assessment Tools'],
+    pricing: '$30,000 - $150,000 setup',
+    category: 'EdTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Retail Intelligence',
+    description: 'Intelligent retail analytics and customer experience optimization.',
+    icon: ShoppingCart,
+    features: ['Customer Analytics', 'Inventory Management', 'Price Optimization', 'Store Layout'],
+    pricing: '$25,000 - $125,000 setup',
+    category: 'Retail AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Gaming Intelligence',
+    description: 'Intelligent gaming systems with AI-powered NPCs and dynamic content.',
+    icon: Gamepad2,
+    features: ['NPC Intelligence', 'Dynamic Content', 'Player Behavior Analysis', 'Game Balancing'],
+    pricing: '$40,000 - $200,000 project',
+    category: 'Gaming AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Real Estate Intelligence',
+    description: 'Intelligent real estate analysis and property management using AI.',
+    icon: Building,
+    features: ['Property Valuation', 'Market Analysis', 'Tenant Management', 'Maintenance Prediction'],
+    pricing: '$20,000 - $100,000 setup',
+    category: 'PropTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Manufacturing Intelligence',
+    description: 'Intelligent manufacturing optimization and quality control using AI.',
+    icon: Factory,
+    features: ['Production Optimization', 'Quality Control', 'Predictive Maintenance', 'Supply Chain'],
+    pricing: '$75,000 - $375,000 setup',
+    category: 'Manufacturing AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Legal Intelligence',
+    description: 'Intelligent legal research and case analysis using AI.',
+    icon: BookOpen,
+    features: ['Legal Research', 'Case Analysis', 'Document Review', 'Compliance Monitoring'],
+    pricing: '$30,000 - $150,000 setup',
+    category: 'Legal AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Media Intelligence',
+    description: 'Intelligent media analysis and content optimization using AI.',
+    icon: Video,
+    features: ['Content Analysis', 'Trend Detection', 'Audience Insights', 'Content Optimization'],
+    pricing: '$25,000 - $125,000 setup',
+    category: 'Media AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Sports Analytics',
+    description: 'Intelligent sports performance analysis and prediction using AI.',
+    icon: Target,
+    features: ['Performance Analysis', 'Injury Prediction', 'Game Strategy', 'Player Development'],
+    pricing: '$35,000 - $175,000 setup',
+    category: 'Sports AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Travel Intelligence',
+    description: 'Intelligent travel planning and optimization using AI.',
+    icon: Globe,
+    features: ['Route Optimization', 'Price Prediction', 'Personalized Recommendations', 'Real-time Updates'],
+    pricing: '$20,000 - $100,000 setup',
+    category: 'Travel AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Insurance Intelligence',
+    description: 'Intelligent insurance risk assessment and claims processing using AI.',
+    icon: Shield,
+    features: ['Risk Assessment', 'Claims Processing', 'Fraud Detection', 'Customer Service'],
+    pricing: '$40,000 - $200,000 setup',
+    category: 'InsurTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Energy Intelligence',
+    description: 'Intelligent energy management and optimization using AI.',
+    icon: Zap,
+    features: ['Energy Optimization', 'Demand Forecasting', 'Renewable Integration', 'Cost Analysis'],
+    pricing: '$50,000 - $250,000 setup',
+    category: 'Energy AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Water Management',
+    description: 'Intelligent water resource management and conservation using AI.',
+    icon: Globe,
+    features: ['Water Quality Monitoring', 'Leak Detection', 'Conservation Planning', 'Distribution Optimization'],
+    pricing: '$30,000 - $150,000 setup',
+    category: 'Water Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Waste Management',
+    description: 'Intelligent waste collection and recycling optimization using AI.',
+    icon: Trash2,
+    features: ['Collection Optimization', 'Recycling Analysis', 'Cost Reduction', 'Environmental Impact'],
+    pricing: '$25,000 - $125,000 setup',
+    category: 'Waste Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Buildings',
+    description: 'Intelligent building management and optimization using AI.',
+    icon: Building,
+    features: ['Energy Management', 'Occupant Comfort', 'Maintenance Prediction', 'Security Systems'],
+    pricing: '$40,000 - $200,000 setup',
+    category: 'Smart Buildings',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Agriculture',
+    description: 'Intelligent agricultural optimization and monitoring using AI.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
+    pricing: '$35,000 - $175,000 setup',
+    category: 'AgTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Cities',
+    description: 'Intelligent city management and optimization using AI.',
+    icon: Building,
+    features: ['Traffic Management', 'Public Safety', 'Resource Allocation', 'Citizen Services'],
+    pricing: '$200,000 - $1,000,000 project',
+    category: 'Smart Cities',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Homes',
+    description: 'Intelligent home automation and management using AI.',
+    icon: Home,
+    features: ['Home Automation', 'Energy Management', 'Security Systems', 'Personalized Experience'],
+    pricing: '$15,000 - $75,000 setup',
+    category: 'Smart Homes',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Healthcare',
+    description: 'Intelligent healthcare management and patient care using AI.',
+    icon: Heart,
+    features: ['Patient Monitoring', 'Diagnostic Support', 'Treatment Planning', 'Health Analytics'],
+    pricing: '$100,000 - $500,000 setup',
+    category: 'Healthcare AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Finance',
+    description: 'Intelligent financial management and investment using AI.',
+    icon: TrendingUp,
+    features: ['Portfolio Management', 'Risk Assessment', 'Investment Advice', 'Fraud Detection'],
+    pricing: '$50,000 - $250,000 setup',
+    category: 'FinTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Education',
+    description: 'Intelligent educational management and personalized learning using AI.',
+    icon: BookOpen,
+    features: ['Personalized Learning', 'Progress Tracking', 'Assessment Tools', 'Content Generation'],
+    pricing: '$30,000 - $150,000 setup',
+    category: 'EdTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Retail',
+    description: 'Intelligent retail management and customer experience using AI.',
+    icon: ShoppingCart,
+    features: ['Customer Analytics', 'Inventory Management', 'Price Optimization', 'Personalized Shopping'],
+    pricing: '$40,000 - $200,000 setup',
+    category: 'Retail AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Manufacturing',
+    description: 'Intelligent manufacturing management and optimization using AI.',
+    icon: Factory,
+    features: ['Production Optimization', 'Quality Control', 'Predictive Maintenance', 'Supply Chain'],
+    pricing: '$75,000 - $375,000 setup',
+    category: 'Manufacturing AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Transportation',
+    description: 'Intelligent transportation management and optimization using AI.',
+    icon: Car,
+    features: ['Traffic Optimization', 'Route Planning', 'Fleet Management', 'Safety Monitoring'],
+    pricing: '$60,000 - $300,000 setup',
+    category: 'Transportation AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Energy',
+    description: 'Intelligent energy management and optimization using AI.',
+    icon: Zap,
+    features: ['Energy Optimization', 'Demand Forecasting', 'Renewable Integration', 'Grid Management'],
+    pricing: '$50,000 - $250,000 setup',
+    category: 'Energy AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Security',
+    description: 'Intelligent security management and threat detection using AI.',
+    icon: Shield,
+    features: ['Threat Detection', 'Access Control', 'Surveillance Analysis', 'Incident Response'],
+    pricing: '$40,000 - $200,000 setup',
+    category: 'Security AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Communication',
+    description: 'Intelligent communication management and optimization using AI.',
+    icon: MessageSquare,
+    features: ['Language Translation', 'Sentiment Analysis', 'Content Moderation', 'Customer Service'],
+    pricing: '$25,000 - $125,000 setup',
+    category: 'Communication AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Analytics',
+    description: 'Intelligent data analysis and business intelligence using AI.',
+    icon: BarChart3,
+    features: ['Data Analysis', 'Predictive Analytics', 'Business Intelligence', 'Decision Support'],
+    pricing: '$30,000 - $150,000 setup',
+    category: 'Analytics AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Automation',
+    description: 'Intelligent process automation and workflow optimization using AI.',
+    icon: Settings,
+    features: ['Process Automation', 'Workflow Optimization', 'Decision Making', 'Integration'],
+    pricing: '$35,000 - $175,000 setup',
+    category: 'Automation AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Innovation',
+    description: 'Intelligent innovation management and R&D optimization using AI.',
+    icon: Rocket,
+    features: ['Innovation Management', 'R&D Optimization', 'Patent Analysis', 'Market Research'],
+    pricing: '$50,000 - $250,000 setup',
+    category: 'Innovation AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Sustainability',
+    description: 'Intelligent sustainability management and environmental optimization using AI.',
+    icon: Globe,
+    features: ['Environmental Monitoring', 'Sustainability Metrics', 'Carbon Footprint', 'Resource Optimization'],
+    pricing: '$40,000 - $200,000 setup',
+    category: 'Sustainability AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Governance',
+    description: 'Intelligent governance management and policy optimization using AI.',
+    icon: Building,
+    features: ['Policy Analysis', 'Compliance Monitoring', 'Risk Assessment', 'Decision Support'],
+    pricing: '$60,000 - $300,000 setup',
+    category: 'Governance AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Society',
+    description: 'Intelligent societal management and citizen services using AI.',
+    icon: Users,
+    features: ['Citizen Services', 'Social Analytics', 'Public Safety', 'Resource Allocation'],
+    pricing: '$100,000 - $500,000 setup',
+    category: 'Society AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Future',
+    description: 'Intelligent future planning and scenario analysis using AI.',
+    icon: Rocket,
+    features: ['Future Planning', 'Scenario Analysis', 'Trend Prediction', 'Strategic Planning'],
+    pricing: '$75,000 - $375,000 setup',
+    category: 'Future AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Everything',
+    description: 'Comprehensive AI solutions for all aspects of business and life.',
+    icon: Brain,
+    features: ['Universal AI', 'Cross-domain Integration', 'Holistic Optimization', 'Future-proof Solutions'],
+    pricing: '$200,000 - $1,000,000 setup',
+    category: 'Universal AI',
+    popular: true
+  },
+  {
     title: 'AI-Powered Predictive Maintenance',
     description: 'Intelligent predictive maintenance for industrial equipment and machinery.',
     icon: Settings,

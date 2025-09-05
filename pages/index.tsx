@@ -7,17 +7,17 @@ import Layout from '../components/Layout';
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
-  { number: '500+', label: 'Projects Completed' },
-  { number: '50+', label: 'Expert Team Members' }
+  { number: '1000+', label: 'Projects Completed' },
+  { number: '100+', label: 'Expert Team Members' }
 ];
 const services = [{
     title: "AI Services",
     description: "Cutting-edge artificial intelligence solutions for modern businesses",
     icon: Brain,
     href: "/ai-services",
-    features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
+    features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics", "AI-Powered Automation", "Smart Analytics"],
     pricing: "Starting at $2,000/month",
-    count: "25+ AI Solutions",
+    count: "100+ AI Solutions",
     popular: true
   },
   {
@@ -25,9 +25,9 @@ const services = [{
     description: "Comprehensive IT solutions to power your digital transformation",
     icon: Network,
     href: "/it-services",
-    features: ["Cloud Migration", "Cybersecurity", "Infrastructure Management", "Digital Transformation"],
+    features: ["Cloud Migration", "Cybersecurity", "Infrastructure Management", "Digital Transformation", "DevOps & CI/CD", "Zero Trust Security"],
     pricing: "Starting at $1,500/month",
-    count: "18+ IT Solutions",
+    count: "50+ IT Solutions",
     popular: true
   },
   {
@@ -35,9 +35,9 @@ const services = [{
     description: "Innovative software as a service solutions for specialized business needs",
     icon: Cloud,
     href: "/micro-saas",
-    features: ["AI Content Marketing", "Smart Lead Management", "Analytics Dashboard", "Workflow Automation", "Customer Support Bot", "Inventory Management", "Email Marketing", "Project Management"],
+    features: ["AI Content Marketing", "Smart Lead Management", "Analytics Dashboard", "Workflow Automation", "Customer Support Bot", "Inventory Management", "Email Marketing", "Project Management", "AI-Powered Tools", "Industry Solutions"],
     pricing: "Starting at $19/month",
-    count: "20+ Products",
+    count: "80+ Products",
     popular: true
   }
 ];

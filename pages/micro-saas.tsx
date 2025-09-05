@@ -298,9 +298,208 @@ const microSaaSProducts = [
     title: 'AI-Powered Legal Document Analyzer',
     description: 'Automated legal document analysis and contract review using AI.',
     icon: FileText,
-    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
+    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Automated Summaries'],
     pricing: '$299 - $1,499/month',
-    category: 'Legal Tech'
+    category: 'Legal Tech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review and quality assurance using advanced AI analysis.',
+    icon: Code,
+    features: ['Automated Code Review', 'Security Vulnerability Detection', 'Performance Analysis', 'Best Practice Suggestions'],
+    pricing: '$199 - $999/month',
+    category: 'Development Tools',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Auditor',
+    description: 'Automated smart contract security analysis and vulnerability detection.',
+    icon: Shield,
+    features: ['Security Analysis', 'Gas Optimization', 'Vulnerability Detection', 'Compliance Checking'],
+    pricing: '$299 - $1,499/month',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'AI-Powered SEO Optimizer',
+    description: 'Intelligent SEO analysis and optimization recommendations for websites.',
+    icon: Search,
+    features: ['Keyword Research', 'Content Optimization', 'Technical SEO', 'Competitor Analysis'],
+    pricing: '$79 - $399/month',
+    category: 'Marketing',
+    popular: true
+  },
+  {
+    title: 'Automated Testing Platform',
+    description: 'AI-driven automated testing for web and mobile applications.',
+    icon: Monitor,
+    features: ['Visual Testing', 'API Testing', 'Performance Testing', 'Cross-browser Testing'],
+    pricing: '$149 - $799/month',
+    category: 'Quality Assurance',
+    popular: true
+  },
+  {
+    title: 'AI Customer Sentiment Analyzer',
+    description: 'Real-time customer sentiment analysis across multiple channels.',
+    icon: MessageSquare,
+    features: ['Multi-channel Analysis', 'Real-time Monitoring', 'Trend Analysis', 'Alert System'],
+    pricing: '$99 - $499/month',
+    category: 'Analytics',
+    popular: true
+  },
+  {
+    title: 'Smart Energy Management',
+    description: 'AI-powered energy consumption optimization for buildings and facilities.',
+    icon: Zap,
+    features: ['Energy Monitoring', 'Predictive Analytics', 'Cost Optimization', 'Sustainability Reporting'],
+    pricing: '$199 - $999/month',
+    category: 'Sustainability',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Video Content Generator',
+    description: 'Automated video creation and editing using AI for marketing and social media.',
+    icon: Video,
+    features: ['Auto Video Generation', 'Text-to-Video', 'Voice Synthesis', 'Multi-language Support'],
+    pricing: '$199 - $999/month',
+    category: 'Content Creation',
+    popular: true
+  },
+  {
+    title: 'Smart Inventory Forecasting',
+    description: 'AI-powered demand forecasting and inventory optimization for retail businesses.',
+    icon: Package,
+    features: ['Demand Prediction', 'Seasonal Analysis', 'Supplier Integration', 'Cost Optimization'],
+    pricing: '$149 - $799/month',
+    category: 'Retail Tech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Recruitment Assistant',
+    description: 'Intelligent candidate screening and matching for HR departments.',
+    icon: Users,
+    features: ['Resume Analysis', 'Skill Matching', 'Interview Scheduling', 'Bias Detection'],
+    pricing: '$99 - $499/month',
+    category: 'HR Tech',
+    popular: true
+  },
+  {
+    title: 'Smart Home Automation Hub',
+    description: 'AI-powered home automation with voice control and learning capabilities.',
+    icon: Home,
+    features: ['Voice Control', 'Learning Patterns', 'Energy Optimization', 'Security Integration'],
+    pricing: '$79 - $399/month',
+    category: 'IoT',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Medical Diagnosis Assistant',
+    description: 'AI-assisted medical diagnosis and treatment recommendations for healthcare providers.',
+    icon: Heart,
+    features: ['Symptom Analysis', 'Treatment Suggestions', 'Drug Interaction Check', 'Patient History Analysis'],
+    pricing: '$499 - $2,499/month',
+    category: 'Healthcare',
+    popular: true
+  },
+  {
+    title: 'Smart Financial Planning AI',
+    description: 'Personalized financial planning and investment advice using AI algorithms.',
+    icon: TrendingUp,
+    features: ['Portfolio Analysis', 'Risk Assessment', 'Goal Setting', 'Tax Optimization'],
+    pricing: '$29 - $199/month',
+    category: 'FinTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Language Learning Platform',
+    description: 'Personalized language learning with AI tutors and adaptive content.',
+    icon: BookOpen,
+    features: ['Adaptive Learning', 'Speech Recognition', 'Progress Tracking', 'Cultural Context'],
+    pricing: '$19 - $99/month',
+    category: 'EdTech',
+    popular: true
+  },
+  {
+    title: 'Smart Agriculture Monitoring',
+    description: 'AI-powered crop monitoring and yield optimization for farmers.',
+    icon: Sprout,
+    features: ['Crop Health Analysis', 'Weather Integration', 'Yield Prediction', 'Pest Detection'],
+    pricing: '$199 - $999/month',
+    category: 'AgTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Monitor',
+    description: 'Real-time threat detection and response using advanced AI algorithms.',
+    icon: Shield,
+    features: ['Threat Detection', 'Anomaly Analysis', 'Automated Response', 'Compliance Monitoring'],
+    pricing: '$299 - $1,499/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'Smart Manufacturing Optimizer',
+    description: 'AI-powered production optimization and quality control for manufacturing.',
+    icon: Factory,
+    features: ['Production Optimization', 'Quality Control', 'Predictive Maintenance', 'Supply Chain Integration'],
+    pricing: '$499 - $2,499/month',
+    category: 'Manufacturing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Real Estate Valuation',
+    description: 'Automated property valuation and market analysis using AI and big data.',
+    icon: Building,
+    features: ['Property Valuation', 'Market Analysis', 'Investment Recommendations', 'Risk Assessment'],
+    pricing: '$99 - $499/month',
+    category: 'PropTech',
+    popular: true
+  },
+  {
+    title: 'Smart Logistics Optimizer',
+    description: 'AI-powered route optimization and logistics management for transportation.',
+    icon: Truck,
+    features: ['Route Optimization', 'Fuel Efficiency', 'Delivery Tracking', 'Cost Analysis'],
+    pricing: '$199 - $999/month',
+    category: 'Logistics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Automated content moderation for social media and online platforms.',
+    icon: Eye,
+    features: ['Image Analysis', 'Text Analysis', 'Video Analysis', 'Real-time Processing'],
+    pricing: '$149 - $799/month',
+    category: 'Content Safety',
+    popular: true
+  },
+  {
+    title: 'Smart Energy Trading Platform',
+    description: 'AI-powered energy trading and grid optimization for utilities.',
+    icon: Zap,
+    features: ['Price Prediction', 'Grid Optimization', 'Renewable Integration', 'Trading Algorithms'],
+    pricing: '$999 - $4,999/month',
+    category: 'Energy',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personal Assistant',
+    description: 'Intelligent personal assistant for productivity and task management.',
+    icon: Bot,
+    features: ['Task Management', 'Calendar Integration', 'Email Automation', 'Voice Commands'],
+    pricing: '$9 - $49/month',
+    category: 'Productivity',
+    popular: true
+  },
+  {
+    title: 'Smart Waste Management System',
+    description: 'AI-powered waste collection optimization and recycling management.',
+    icon: Trash2,
+    features: ['Collection Optimization', 'Recycling Tracking', 'Cost Analysis', 'Environmental Impact'],
+    pricing: '$199 - $999/month',
+    category: 'Sustainability',
+    popular: true
   },
   {
     title: 'Intelligent Inventory Forecasting',
