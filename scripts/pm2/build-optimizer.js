@@ -1,433 +1,305 @@
 #!/usr/bin/env node
 
-/**
- * Build Optimizer Automation Script
- * Optimizes build process and bundle size
- */
-
-const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 class BuildOptimizer {
   constructor() {
-    this.logFile = './logs/pm2/build-optimizer.log';
-    this.errorFile = './logs/pm2/build-optimizer-error.log';
-    this.optimizationReport = './logs/build-optimization-report.json';
-    this.ensureLogDirectory();
+    this.projectRoot = process.cwd();
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/build-optimizer.log');
+    this.reportFile = path.join(this.projectRoot, 'logs/pm2/build-optimizer-report.json');
+    this.startTime = Date.now();
   }
 
-  ensureLogDirectory() {
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
-  }
-
-  log(message, level = 'INFO') {
+  log(message) {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    const logMessage = `[${timestamp}] ${message}\n`;
     
     try {
       fs.appendFileSync(this.logFile, logMessage);
-      if (level === 'ERROR') {
-        fs.appendFileSync(this.errorFile, logMessage);
-      }
-    } catch (err) {
-      console.error('Failed to write to log file:', err.message);
-    }
-  }
-
-  async optimizeBuild() {
-    try {
-      this.log('Starting build optimization...');
-      
-      // Analyze current build
-      const buildAnalysis = await this.analyzeBuild();
-      
-      // Optimize bundle size
-      const bundleOptimization = await this.optimizeBundleSize();
-      
-      // Optimize images
-      const imageOptimization = await this.optimizeImages();
-      
-      // Clean up unused code
-      const codeCleanup = await this.cleanupUnusedCode();
-      
-      // Generate optimization report
-      const optimizationReport = {
-        timestamp: new Date().toISOString(),
-        buildAnalysis,
-        bundleOptimization,
-        imageOptimization,
-        codeCleanup,
-        recommendations: this.generateOptimizationRecommendations(buildAnalysis, bundleOptimization)
-      };
-      
-      // Save optimization report
-      fs.writeFileSync(this.optimizationReport, JSON.stringify(optimizationReport, null, 2));
-      
-      this.log('Build optimization completed');
-      
-      return optimizationReport;
-      
     } catch (error) {
-      this.log(`Build optimization failed: ${error.message}`, 'ERROR');
-      throw error;
+      console.error('Error writing to log file:', error.message);
     }
   }
 
   async analyzeBuild() {
     try {
-      this.log('Analyzing current build...');
+      this.log('🏗️  Analyzing current build...');
       
-      const buildDir = './.next';
-      if (!fs.existsSync(buildDir)) {
-        return { error: 'Build directory not found' };
+      if (!fs.existsSync('dist')) {
+        this.log('📦 Building project first...');
+        execSync('npm run build', {
+          cwd: this.projectRoot,
+          stdio: 'pipe'
+        });
       }
       
-      const analysis = {
-        buildSize: this.getDirectorySize(buildDir),
-        staticFiles: this.getDirectorySize(path.join(buildDir, 'static')),
-        pages: this.analyzePages(),
-        chunks: this.analyzeChunks()
+      const buildStats = {
+        totalSize: 0,
+        fileCount: 0,
+        largestFiles: [],
+        jsFiles: [],
+        cssFiles: [],
+        assetFiles: []
       };
       
-      return analysis;
-    } catch (error) {
-      this.log(`Build analysis failed: ${error.message}`, 'ERROR');
-      return { error: error.message };
-    }
-  }
-
-  async optimizeBundleSize() {
-    try {
-      this.log('Optimizing bundle size...');
-      
-      // Check for duplicate dependencies
-      const duplicates = await this.findDuplicateDependencies();
-      
-      // Analyze bundle composition
-      const bundleAnalysis = await this.analyzeBundleComposition();
-      
-      return {
-        duplicates,
-        bundleAnalysis,
-        recommendations: this.generateBundleRecommendations(duplicates, bundleAnalysis)
+      const analyzeDirectory = (dir) => {
+        const items = fs.readdirSync(dir);
+        items.forEach(item => {
+          const fullPath = path.join(dir, item);
+          const stat = fs.statSync(fullPath);
+          
+          if (stat.isDirectory()) {
+            analyzeDirectory(fullPath);
+          } else {
+            const fileInfo = {
+              path: fullPath.replace(this.projectRoot + '/dist/', ''),
+              size: stat.size,
+              sizeKB: Math.round(stat.size / 1024 * 100) / 100
+            };
+            
+            buildStats.totalSize += stat.size;
+            buildStats.fileCount++;
+            
+            if (item.endsWith('.js')) {
+              buildStats.jsFiles.push(fileInfo);
+            } else if (item.endsWith('.css')) {
+              buildStats.cssFiles.push(fileInfo);
+            } else {
+              buildStats.assetFiles.push(fileInfo);
+            }
+          }
+        });
       };
-    } catch (error) {
-      this.log(`Bundle optimization failed: ${error.message}`, 'ERROR');
-      return { error: error.message };
-    }
-  }
-
-  async optimizeImages() {
-    try {
-      this.log('Optimizing images...');
       
-      const imageDir = './public/images';
-      if (!fs.existsSync(imageDir)) {
-        return { message: 'No images directory found' };
-      }
+      analyzeDirectory('dist');
       
-      const images = this.findImages(imageDir);
-      const optimizationResults = [];
+      // Sort files by size
+      const allFiles = [...buildStats.jsFiles, ...buildStats.cssFiles, ...buildStats.assetFiles];
+      buildStats.largestFiles = allFiles
+        .sort((a, b) => b.size - a.size)
+        .slice(0, 10);
       
-      for (const image of images) {
-        const result = await this.optimizeImage(image);
-        optimizationResults.push(result);
-      }
+      buildStats.totalSizeMB = Math.round(buildStats.totalSize / (1024 * 1024) * 100) / 100;
       
       return {
-        totalImages: images.length,
-        optimized: optimizationResults.filter(r => r.optimized).length,
-        results: optimizationResults
-      };
-    } catch (error) {
-      this.log(`Image optimization failed: ${error.message}`, 'ERROR');
-      return { error: error.message };
-    }
-  }
-
-  async cleanupUnusedCode() {
-    try {
-      this.log('Cleaning up unused code...');
-      
-      // Remove unused CSS
-      const cssCleanup = await this.cleanupUnusedCSS();
-      
-      // Remove unused JavaScript
-      const jsCleanup = await this.cleanupUnusedJS();
-      
-      // Clean up temporary files
-      const tempCleanup = await this.cleanupTempFiles();
-      
-      return {
-        cssCleanup,
-        jsCleanup,
-        tempCleanup
-      };
-    } catch (error) {
-      this.log(`Code cleanup failed: ${error.message}`, 'ERROR');
-      return { error: error.message };
-    }
-  }
-
-  getDirectorySize(dirPath) {
-    let totalSize = 0;
-    let fileCount = 0;
-    
-    try {
-      const files = fs.readdirSync(dirPath, { withFileTypes: true });
-      
-      for (const file of files) {
-        const filePath = path.join(dirPath, file.name);
-        
-        if (file.isDirectory()) {
-          const subDirSize = this.getDirectorySize(filePath);
-          totalSize += subDirSize.total;
-          fileCount += subDirSize.fileCount;
-        } else {
-          const stats = fs.statSync(filePath);
-          totalSize += stats.size;
-          fileCount++;
-        }
-      }
-    } catch (error) {
-      this.log(`Error calculating directory size: ${error.message}`, 'ERROR');
-    }
-    
-    return {
-      total: totalSize,
-      fileCount: fileCount,
-      average: fileCount > 0 ? totalSize / fileCount : 0
-    };
-  }
-
-  analyzePages() {
-    try {
-      const pagesDir = './pages';
-      if (!fs.existsSync(pagesDir)) {
-        return { error: 'Pages directory not found' };
-      }
-      
-      const pages = fs.readdirSync(pagesDir)
-        .filter(file => file.endsWith('.tsx') || file.endsWith('.jsx'))
-        .map(file => ({
-          name: file,
-          size: fs.statSync(path.join(pagesDir, file)).size
-        }));
-      
-      return {
-        count: pages.length,
-        totalSize: pages.reduce((sum, page) => sum + page.size, 0),
-        pages: pages
-      };
-    } catch (error) {
-      this.log(`Page analysis failed: ${error.message}`, 'ERROR');
-      return { error: error.message };
-    }
-  }
-
-  analyzeChunks() {
-    try {
-      const staticDir = './.next/static';
-      if (!fs.existsSync(staticDir)) {
-        return { error: 'Static directory not found' };
-      }
-      
-      const chunks = fs.readdirSync(staticDir)
-        .filter(file => file.endsWith('.js'))
-        .map(file => ({
-          name: file,
-          size: fs.statSync(path.join(staticDir, file)).size
-        }));
-      
-      return {
-        count: chunks.length,
-        totalSize: chunks.reduce((sum, chunk) => sum + chunk.size, 0),
-        chunks: chunks
-      };
-    } catch (error) {
-      this.log(`Chunk analysis failed: ${error.message}`, 'ERROR');
-      return { error: error.message };
-    }
-  }
-
-  async findDuplicateDependencies() {
-    try {
-      const result = execSync('npm ls --depth=0', { 
-        stdio: 'pipe',
-        cwd: process.cwd()
-      });
-      
-      // This is a simplified check - in reality, you'd use more sophisticated tools
-      return {
-        message: 'Dependency analysis completed',
-        duplicates: []
-      };
-    } catch (error) {
-      this.log(`Dependency analysis failed: ${error.message}`, 'ERROR');
-      return { error: error.message };
-    }
-  }
-
-  async analyzeBundleComposition() {
-    try {
-      // Analyze webpack bundle composition
-      return {
-        message: 'Bundle composition analysis completed',
-        recommendations: [
-          'Consider code splitting for large components',
-          'Use dynamic imports for route-based splitting',
-          'Optimize third-party library imports'
-        ]
-      };
-    } catch (error) {
-      this.log(`Bundle composition analysis failed: ${error.message}`, 'ERROR');
-      return { error: error.message };
-    }
-  }
-
-  findImages(dirPath) {
-    const images = [];
-    
-    try {
-      const files = fs.readdirSync(dirPath, { withFileTypes: true });
-      
-      for (const file of files) {
-        const filePath = path.join(dirPath, file.name);
-        
-        if (file.isDirectory()) {
-          images.push(...this.findImages(filePath));
-        } else if (file.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/i)) {
-          images.push(filePath);
-        }
-      }
-    } catch (error) {
-      this.log(`Image search failed: ${error.message}`, 'ERROR');
-    }
-    
-    return images;
-  }
-
-  async optimizeImage(imagePath) {
-    try {
-      const stats = fs.statSync(imagePath);
-      const originalSize = stats.size;
-      
-      // This is a placeholder - in reality, you'd use image optimization tools
-      return {
-        path: imagePath,
-        originalSize,
-        optimizedSize: originalSize,
-        optimized: false,
-        message: 'Image optimization not implemented'
+        success: true,
+        stats: buildStats
       };
     } catch (error) {
       return {
-        path: imagePath,
+        success: false,
+        error: error.message,
+        stats: null
+      };
+    }
+  }
+
+  async checkBundleAnalyzer() {
+    try {
+      this.log('📊 Checking bundle analyzer availability...');
+      
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const hasAnalyzer = packageJson.devDependencies &&
+        (packageJson.devDependencies['webpack-bundle-analyzer'] ||
+         packageJson.devDependencies['@next/bundle-analyzer']);
+      
+      return {
+        available: hasAnalyzer,
+        package: hasAnalyzer ?
+          (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer' : '@next/bundle-analyzer') :
+          null
+      };
+    } catch (error) {
+      return {
+        available: false,
         error: error.message
       };
     }
   }
 
-  async cleanupUnusedCSS() {
+  async checkOptimizationSettings() {
     try {
-      this.log('Cleaning up unused CSS...');
-      return { message: 'CSS cleanup completed' };
-    } catch (error) {
-      return { error: error.message };
-    }
-  }
-
-  async cleanupUnusedJS() {
-    try {
-      this.log('Cleaning up unused JavaScript...');
-      return { message: 'JavaScript cleanup completed' };
-    } catch (error) {
-      return { error: error.message };
-    }
-  }
-
-  async cleanupTempFiles() {
-    try {
-      this.log('Cleaning up temporary files...');
+      this.log('⚙️  Checking optimization settings...');
       
-      const tempFiles = [
-        '.next/cache',
-        'node_modules/.cache',
-        '*.log',
-        '*.tmp',
-        '.DS_Store',
-        'Thumbs.db'
-      ];
+      const settings = {
+        treeShaking: false,
+        minification: false,
+        codeSplitting: false,
+        compression: false
+      };
       
-      for (const pattern of tempFiles) {
-        try {
-          execSync(`find . -name "${pattern}" -type f -delete`, { 
-            stdio: 'pipe',
-            cwd: process.cwd()
-          });
-        } catch (err) {
-          // Ignore errors for file cleanup
-        }
+      // Check Next.js config
+      if (fs.existsSync('next.config.js')) {
+        const nextConfig = fs.readFileSync('next.config.js', 'utf8');
+        settings.minification = nextConfig.includes('swcMinify: true') || nextConfig.includes('swcMinify:true');
+        settings.compression = nextConfig.includes('compress: true') || nextConfig.includes('compress:true');
       }
       
-      return { message: 'Temporary files cleaned up' };
+      // Check package.json for optimization scripts
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const scripts = packageJson.scripts || {};
+      
+      settings.treeShaking = scripts.build && scripts.build.includes('--tree-shaking');
+      settings.codeSplitting = scripts.build && scripts.build.includes('--experimental-build-mode');
+      
+      return {
+        success: true,
+        settings: settings
+      };
     } catch (error) {
-      return { error: error.message };
+      return {
+        success: false,
+        error: error.message,
+        settings: null
+      };
     }
   }
 
-  generateOptimizationRecommendations(buildAnalysis, bundleOptimization) {
-    const recommendations = [];
+  async generateOptimizationReport(buildStats, analyzerInfo, settingsInfo) {
+    const report = {
+      timestamp: new Date().toISOString(),
+      summary: {
+        buildSize: buildStats?.stats?.totalSizeMB || 0,
+        fileCount: buildStats?.stats?.fileCount || 0,
+        optimizationScore: 0,
+        recommendations: []
+      },
+      details: {
+        build: buildStats,
+        analyzer: analyzerInfo,
+        settings: settingsInfo
+      },
+      optimizations: []
+    };
     
-    if (buildAnalysis.buildSize && buildAnalysis.buildSize.total > 10000000) {
-      recommendations.push('Build size is large - consider optimizing assets');
+    // Calculate optimization score
+    let score = 0;
+    const maxScore = 100;
+    
+    if (buildStats?.stats?.totalSizeMB < 2) score += 30;
+    else if (buildStats?.stats?.totalSizeMB < 5) score += 20;
+    else if (buildStats?.stats?.totalSizeMB < 10) score += 10;
+    
+    if (settingsInfo?.settings?.minification) score += 20;
+    if (settingsInfo?.settings?.compression) score += 15;
+    if (settingsInfo?.settings?.treeShaking) score += 15;
+    if (settingsInfo?.settings?.codeSplitting) score += 10;
+    if (analyzerInfo?.available) score += 10;
+    
+    report.summary.optimizationScore = Math.min(score, maxScore);
+    
+    // Generate optimization recommendations
+    if (buildStats?.stats?.totalSizeMB > 5) {
+      report.optimizations.push({
+        priority: 'high',
+        type: 'bundle-size',
+        message: 'Bundle size is large',
+        action: 'Implement code splitting and tree shaking',
+        impact: 'high'
+      });
     }
     
-    if (buildAnalysis.pages && buildAnalysis.pages.count > 20) {
-      recommendations.push('Many pages detected - consider implementing code splitting');
+    if (!settingsInfo?.settings?.minification) {
+      report.optimizations.push({
+        priority: 'high',
+        type: 'minification',
+        message: 'Minification not enabled',
+        action: 'Enable SWC minification in Next.js config',
+        impact: 'high'
+      });
     }
     
-    if (bundleOptimization.duplicates && bundleOptimization.duplicates.length > 0) {
-      recommendations.push('Duplicate dependencies found - consider deduplication');
+    if (!settingsInfo?.settings?.compression) {
+      report.optimizations.push({
+        priority: 'medium',
+        type: 'compression',
+        message: 'Compression not enabled',
+        action: 'Enable gzip compression',
+        impact: 'medium'
+      });
     }
     
-    if (recommendations.length === 0) {
-      recommendations.push('Build appears to be well optimized');
+    if (!analyzerInfo?.available) {
+      report.optimizations.push({
+        priority: 'low',
+        type: 'analysis',
+        message: 'Bundle analyzer not available',
+        action: 'Install webpack-bundle-analyzer for detailed analysis',
+        impact: 'low'
+      });
     }
     
-    return recommendations;
+    return report;
   }
 
-  generateBundleRecommendations(duplicates, bundleAnalysis) {
-    const recommendations = [];
-    
-    if (bundleAnalysis.recommendations) {
-      recommendations.push(...bundleAnalysis.recommendations);
+  async saveReport(report) {
+    try {
+      const reportDir = path.dirname(this.reportFile);
+      if (!fs.existsSync(reportDir)) {
+        fs.mkdirSync(reportDir, { recursive: true });
+      }
+      
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+      this.log(`Report saved to: ${this.reportFile}`);
+    } catch (error) {
+      this.log(`Error saving report: ${error.message}`);
     }
+  }
+
+  async run() {
+    this.log('🚀 Starting Build Optimizer...');
+    this.log(`Project root: ${this.projectRoot}`);
     
-    return recommendations;
+    try {
+      // Create logs directory if it doesn't exist
+      const logsDir = path.dirname(this.logFile);
+      if (!fs.existsSync(logsDir)) {
+        fs.mkdirSync(logsDir, { recursive: true });
+      }
+      
+      // Run all optimization checks
+      const buildStats = await this.analyzeBuild();
+      const analyzerInfo = await this.checkBundleAnalyzer();
+      const settingsInfo = await this.checkOptimizationSettings();
+      
+      // Generate report
+      this.log('📊 Generating optimization report...');
+      const report = await this.generateOptimizationReport(buildStats, analyzerInfo, settingsInfo);
+      
+      // Save report
+      await this.saveReport(report);
+      
+      const duration = Date.now() - this.startTime;
+      
+      // Log summary
+      this.log('\n📊 Build Optimizer Summary:');
+      this.log(`Build size: ${report.summary.buildSize} MB`);
+      this.log(`File count: ${report.summary.fileCount}`);
+      this.log(`Optimization score: ${report.summary.optimizationScore}/100`);
+      this.log(`Duration: ${duration}ms`);
+      
+      if (report.optimizations.length > 0) {
+        this.log('\n💡 Optimization Recommendations:');
+        report.optimizations.forEach(opt => {
+          this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`);
+          this.log(`    Action: ${opt.action}`);
+          this.log(`    Impact: ${opt.impact}`);
+        });
+      } else {
+        this.log('\n✨ Build is well optimized!');
+      }
+      
+    } catch (error) {
+      this.log(`❌ Error running build optimizer: ${error.message}`);
+      process.exit(1);
+    }
   }
 }
 
-// Run build optimization
-async function main() {
-  const optimizer = new BuildOptimizer();
-  
-  try {
-    await optimizer.optimizeBuild();
-    process.exit(0);
-  } catch (error) {
-    optimizer.log(`Build optimization failed: ${error.message}`, 'ERROR');
-    process.exit(1);
-  }
-}
-
-if (require.main === module) {
-  main();
-}
-
-module.exports = BuildOptimizer;
+// Run the build optimizer
+const optimizer = new BuildOptimizer();
+optimizer.run().catch(error => {
+  process.exit(1);
+});

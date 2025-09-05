@@ -5,9 +5,9 @@ export default {
       script: 'npm',
       args: 'run preview',
       cwd: './',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
@@ -18,10 +18,11 @@ export default {
     },
     {
       name: 'auto-fix',
-      script: 'scripts/pm2/auto-fix.cjs',
+      script: 'node',
+      args: 'scripts/pm2/auto-fix.js',
       cron_restart: '0 */6 * * *',
-      autorestart: true,
-      watch: false,
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production'
@@ -32,10 +33,11 @@ export default {
     },
     {
       name: 'healthcheck',
-      script: 'scripts/pm2/healthcheck.cjs',
+      script: 'node',
+      args: 'scripts/pm2/healthcheck.js',
       cron_restart: '*/5 * * * *',
-      autorestart: true,
-      watch: false,
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '128M',
       env: {
         NODE_ENV: 'production'
@@ -47,9 +49,9 @@ export default {
     {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -65,9 +67,9 @@ export default {
     {
       name: 'auto-commit-fixes',
       script: 'scripts/pm2/auto-commit-fixes.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -83,9 +85,9 @@ export default {
     {
       name: 'dependency-monitor',
       script: 'scripts/pm2/dependency-monitor.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -101,9 +103,9 @@ export default {
     {
       name: 'performance-monitor',
       script: 'scripts/pm2/performance-monitor.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -119,9 +121,9 @@ export default {
     {
       name: 'test-automation',
       script: 'scripts/pm2/test-automation.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -138,9 +140,9 @@ export default {
     {
       name: 'security-scanner',
       script: 'scripts/pm2/security-scanner.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -158,9 +160,9 @@ export default {
     {
       name: 'build-optimizer',
       script: 'scripts/pm2/build-optimizer.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -177,10 +179,10 @@ export default {
     },
     {
       name: 'git-workflow',
-      script: 'scripts/pm2/git-workflow-automator.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      script: 'scripts/pm2/git-workflow.js',
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -198,9 +200,9 @@ export default {
     {
       name: 'health-monitor',
       script: 'scripts/pm2/health-monitor.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -218,9 +220,9 @@ export default {
     {
       name: 'docs-generator',
       script: 'scripts/pm2/docs-generator.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -238,9 +240,9 @@ export default {
     {
       name: 'seo-accessibility',
       script: 'scripts/pm2/seo-accessibility.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
