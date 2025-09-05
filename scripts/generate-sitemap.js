@@ -37,5 +37,5 @@ const generateSitemap = () => {
 
   console.log('Sitemap generated successfully at:', sitemapPath);
 };
-
+generateSitemap();
 generateSitemap();

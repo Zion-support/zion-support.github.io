@@ -1,8 +1,3 @@
-[\s\S]*?
-    
-    // Clean up any remaining conflict markers
-    content = content.replace(/^.*$/gm, "");
-    content = content.replace(/^
     
     // Remove empty lines that might be left behind
     content = content.replace(/\n\s*\n\s*\n/g, "\n\n");
@@ -84,7 +79,6 @@ function findFilesWithIssues(dir) {
         )) {
           try {
             const content = fs.readFileSync(fullPath, "utf8");
-            if (content.includes("<<<<<<<") || content.includes("") || content.includes(">>>>>>>")) {
               files.push(fullPath)}
           } catch (error) {
             // Skip files that can't be read
@@ -126,7 +120,6 @@ try {
 } catch (error) {
   console.error("❌ Error during lint error "fixing": ", error.message);
   process.exit(1)}
-
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")

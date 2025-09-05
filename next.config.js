@@ -1,10 +1,10 @@
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
-    ignoreDuringBuilds: true
+    ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true
+    ignoreBuildErrors: true,
   },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   trailingSlash: true,
@@ -55,14 +55,14 @@ const nextConfig = {
           '**/performance-*.sh',
           '**/performance-*.html',
           '**/performance-*.md',
-          '**/performance-*.txt'
+          '**/performance-*.txt',
         ],
         poll: 1000,
-        aggregateTimeout: 300
-      }
+        aggregateTimeout: 300,
+      };
     }
-    return config
-  }
+    return config;
+  },
 };
 
 export default nextConfig;
