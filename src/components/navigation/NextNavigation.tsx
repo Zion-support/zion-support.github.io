@@ -18,10 +18,15 @@ import {
   Code,
   Database,
   Network,
-  Settings
+  Settings,
+  BarChart3
 } from 'lucide-react';
 
-const NextNavigation: React.FC = () => {
+interface NextNavigationProps {
+  onMenuClick?: () => void;
+}
+
+const NextNavigation: React.FC<NextNavigationProps> = ({ onMenuClick }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -61,27 +66,69 @@ const NextNavigation: React.FC = () => {
           description: 'Custom software solutions'
         },
         {
-          name: 'Cybersecurity',
-          href: '/services#cybersecurity',
-          icon: Shield,
-          description: 'Advanced security solutions'
-        },
-        {
-          name: 'Cloud & DevOps',
-          href: '/services#cloud',
+          name: 'Cloud Solutions',
+          href: '/services/cloud',
           icon: Database,
           description: 'Scalable cloud infrastructure'
         },
         {
-          name: 'Digital Transformation',
-          href: '/services#ai',
+          name: 'Cybersecurity',
+          href: '/services/cybersecurity',
+          icon: Shield,
+          description: 'Advanced security solutions'
+        },
+        {
+          name: 'Data Analytics',
+          href: '/services/data-analytics',
+          icon: BarChart3,
+          description: 'Business intelligence & analytics'
+        }
+      ]
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      dropdown: [
+        {
+          name: 'Enterprise Solutions',
+          href: '/solutions/enterprise',
+          icon: Shield,
+          description: 'Large organization solutions'
+        },
+        {
+          name: 'SMB Solutions',
+          href: '/solutions/smb',
+          icon: Users,
+          description: 'Small & medium business solutions'
+        },
+        {
+          name: 'Startup Solutions',
+          href: '/solutions/startup',
           icon: Zap,
+          description: 'Rapid deployment for startups'
+        },
+        {
+          name: 'Industry Solutions',
+          href: '/solutions/industry',
+          icon: Settings,
+          description: 'Industry-specific solutions'
+        },
+        {
+          name: 'Custom Development',
+          href: '/solutions/custom',
+          icon: Code,
+          description: 'Tailored solutions'
+        },
+        {
+          name: 'Digital Transformation',
+          href: '/solutions/digital-transformation',
+          icon: Network,
           description: 'Business transformation'
         }
       ]
     },
     { name: 'About', href: '/about' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Resources', href: '/resources' },
     { name: 'Contact', href: '/contact' }
   ];
 
@@ -204,7 +251,10 @@ const NextNavigation: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => {
+              setIsOpen(!isOpen);
+              if (onMenuClick) onMenuClick();
+            }}
             className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 transition-colors duration-200"
             aria-label="Toggle mobile menu"
           >
