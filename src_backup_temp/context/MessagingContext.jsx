@@ -7,7 +7,6 @@ const MessagingProvider({children}) {}
             content,;
             "timestamp": "new Date()",;
             "isRead": "false",;
-
 export {MessagingProvider};
 ;
 export {MessagingProvider};
@@ -18,11 +17,9 @@ export {MessagingProvider};
 ;
 export {MessagingProvider};
 import React from 'react';
-
 interface MessagingContext.jsProps {
   // Add props here as needed
 }
-
 export default function MessagingContext.js({ }: MessagingContext.jsProps) {
   return (
     <div>
@@ -30,4 +27,8 @@ export default function MessagingContext.js({ }: MessagingContext.jsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

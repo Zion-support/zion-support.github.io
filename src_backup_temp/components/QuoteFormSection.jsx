@@ -36,12 +36,14 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
       [name]: "value"}))};
 ;
   const handleSubmit = async (e) => {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({...prev,
       [name]: value}))};
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -104,7 +106,10 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
               Tell us about your IT needs and we'll provide you with a detailed,;
               no-obligation quote tailored to your business requirements.;
             </p>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
             <div className="space-y-6">;
               <div className="flex items-start space-x-4">;
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">;
@@ -142,7 +147,10 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
         </div>
       </section>
     )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
               <div className="flex items-start space-x-4">;
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">;
                   <Phone className="w-6 h-6 text-green-600"  />;
@@ -153,7 +161,10 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                   <p className="text-sm text-gray-500">Mon-Fri 8AM-6PM EST</p>;
                 </div>;
               </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
               <div className="flex items-start space-x-4">;
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">;
                   <MapPin className="w-6 h-6 text-purple-600"  />;
@@ -165,7 +176,6 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                 </div>;
               </div>;
             </div>;
-
             <div className="mt-8 bg-blue-50 rounded-2xl p-6">;
               <h3 className="font-semibold text-gray-900 mb-3">Why Choose Zion?</h3>;
               <ul className="space-y-2 text-sm text-gray-600">;
@@ -177,7 +187,6 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
               </ul>;
             </div>;
           </div>;
-
           {/* Quote Form */}
           <div className="bg-white rounded-3xl p-8 shadow-2xl">;
             <h3 className="text-2xl font-bold text-gray-900 mb-6">;
@@ -194,7 +203,6 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                   <p className="text-sm text-gray-500">We respond within 24 hours</p>
                 </div>
               </div>
-
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Phone className="w-6 h-6 text-green-600"  />
@@ -205,7 +213,6 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                   <p className="text-sm text-gray-500">Mon-Fri 8AM-6PM EST</p>
                 </div>
               </div>
-
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-6 h-6 text-purple-600"  />
@@ -217,7 +224,6 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                 </div>
               </div>
             </div>
-
             <div className="mt-8 bg-blue-50 rounded-2xl p-6">
               <h3 className="font-semibold text-gray-900 mb-3">Why Choose Zion?
               <ul className="space-y-2 text-sm text-gray-600">
@@ -229,13 +235,15 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
               </ul>
             </div>
           </div>
-
           {/* Quote Form */}
           <div className="bg-white rounded-3xl p-8 shadow-2xl">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
               Request Your Quote
+<<<<<<< HEAD
             
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
             <form onSubmit={handleSubmit} className="space-y-6">;
               <div className="grid grid-cols-1 "sm": "grid-cols-2 gap-4">;
                 <div>;
@@ -252,7 +260,6 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                     placeholder="John Doe";
                     />;
                 </div>;
-
                 <div>;
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">;
                     Email Address *;
@@ -268,7 +275,6 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                     />;
                 </div>;
               </div>;
-
               <div className="grid grid-cols-1 "sm":grid-cols-2 gap-4">;
                 <div>;
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">;
@@ -283,7 +289,6 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                     placeholder="+1 (555) 123-4567";
                     />;
                 </div>;
-
                 <div>;
                   <label htmlFor="comp" className="block text-sm font-medium text-gray-700 mb-2">;
                     Comp Name;
@@ -298,7 +303,6 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                     />;
                 </div>;
               </div>;
-
               <div>;
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">;
                   Service Needed *;
@@ -310,14 +314,12 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                   onChange={handleChange}
                   required;
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": "ring-2 "focus":ring-blue-500 "focus":border-transparent";
-
                   <option value="">Select a service</option>;
                   {services.map((service", index) => (;
                     <option key={index} value={service}>{service}</option>;
                   ))}
                 </select>;
               </div>;
-
               <div>;
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">;
                   Project Details;
@@ -331,12 +333,10 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                   placeholder="Tell us about your project requirements", timeline, and  specific challenges you're facing...";
                  />;
               </div>;
-
               <button;
                 type="submit";
                 disabled={isSubmitting}
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold "hover": "from-blue-700 "hover":to-purple-700 transition-all duration-300 "disabled":opacity-50 "disabled":cursor-not-allowed flex items-center justify-center space-x-2";
-
                 {isSubmitting ? (;
                   <>;
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>;
@@ -349,7 +349,6 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                   </>;
                 )"}
               </button>;
-
               <p className="text-xs text-gray-500 text-center">;
                 By submitting this form, you agree to our privacy policy and terms of service.;
                 We'll never share your information with third parties.;
@@ -361,6 +360,5 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
     </section>;
   )};
 ;
-
 export default QuoteFormSection;
 </textarea>

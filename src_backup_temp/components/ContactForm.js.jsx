@@ -151,7 +151,6 @@ const ContactForm = (props: any) => {
               placeholder="Enter your email address""";
               />;
           </div>;
-
           <div>""";
             <label"""";
               htmlFor="phone"""";
@@ -170,7 +169,6 @@ const ContactForm = (props: any) => {
               />;
           </div>;
         </div>;
-
         <div>""";
           <label"""";
             htmlFor="comp"""";
@@ -188,7 +186,6 @@ const ContactForm = (props: any) => {
             placeholder="Enter your comp name""";
             />;
         </div>;
-
         <div>""";
           <label"""";
             htmlFor="service"""";
@@ -216,7 +213,6 @@ const ContactForm = (props: any) => {
             <option value="other">Other</option>;
           </select>;
         </div>;
-
         <div>""";
           <label"""";
             htmlFor="message"""";

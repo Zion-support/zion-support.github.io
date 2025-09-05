@@ -9,7 +9,6 @@ export default function Page() {
       setIsLoading(false);
     }
   }, [jobId]); // jobId is a dependency of fetchMatches
-
   const triggerAIMatching = async () => {
     setIsProcessing(true);
     try {
@@ -17,15 +16,12 @@ export default function Page() {
         body: { jobId },
       }
     );
-      
       if(response.error) throw new Error(response.error.message);
-      
       toast({
         title: "AI Matching Complete",
         description: `Found ${response.data.matches || 0} potential talent matches for this job.`,
       }
     );
-      
       await fetchMatches();
     } catch(error) {
       console.error("Error triggering AI matching:", error);
@@ -39,7 +35,6 @@ export default function Page() {
       setIsProcessing(false);
     }
   };
-
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
@@ -47,7 +42,6 @@ export default function Page() {
       fetchMatches();
     }
   }, [jobId, fetchMatches]); // Added fetchMatches
-
   return {
     matches,
     isLoading,
@@ -58,4 +52,8 @@ export default function Page() {
 ;';;';
 import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() { ); setMatches([])} finally { setIsLoading(false)} },[jobId]); const triggerAIMatching = async () => { setIsProcessing(true); try { const response = await supabase.functions.invoke('job-talent-matcher',{ body: { jobId },}); if(response.error) throw new Error(response.error.message); toast({ title: "AI Matching Complete",description: `Found ${response.data.matches || 0} potential talent matches for this job.`,}); await fetchMatches()} catch(error) { console.error("Error triggering AI matching:",error); toast({ title: "Matching Failed",description: "Could not process talent matching.Please try again later.",variant: "destructive",})} finally { setIsProcessing(false)} }; useEffect(() => { },[]); if(jobId) { fetchMatches()} },[jobId,fetchMatches]); return { matches,isLoading,isProcessing,triggerAIMatching,refetch: 'fetchMatche s }}
   };
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

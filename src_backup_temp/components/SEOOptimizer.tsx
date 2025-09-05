@@ -1,6 +1,32 @@
 import React from 'react';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
+<<<<<<< HEAD
 
+=======
+;
+export default function Page("props": "any) {;
+interface SEOMetrics {;
+  "pageSpeed": number;
+  "mobileFriendliness": number;
+  "accessibility": number;
+  "bestPractices": number;
+  "seoScore": number;
+"coreWebVitals": {;
+    "lcp": number;
+    "fid": number;
+    "cls": number;
+"}}
+;
+interface SEOOptimizerProps extends React.PropsWithChildren<{}> {;
+  url?: "string;
+  autoAnalyze?: boolean;
+  showDetails?: boolean;
+  onAnalysisComplete?: ("analysis": SEOAnalysi s) => void"}
+;
+export const "SEOOptimizer": "React.FC<SEOOptimizerProps> = ({;
+  url",;
+"autoAnalyze": "tru e",;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export default function Page(props: any) {
 interface SEOMetrics {
   pageSpeed: number;
@@ -9,21 +35,16 @@ interface SEOMetrics {
   bestPractices: number;
   seoScore: number;
 coreWebVitals: {
-
     lcp: number;
     fid: number;
     cls: number
 }}
-
 interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
-
   url?: string;
   autoAnalyze?: boolean;
   showDetails?: boolean;
   onAnalysisComplete?: (analysis: SEOAnalysi s) => void}
-
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-
   url,
 autoAnalyze: tru e,;
   showDetails = false,;
@@ -33,6 +54,68 @@ autoAnalyze: tru e,;
   const [currentUrl, setCurrentUrl] = useState<any>(url || window.location.href);
   const [showAdvanced, setShowAdvanced] = useState<any>(false);
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
+<<<<<<< HEAD
+=======
+  // Mock SEO analysis data(in real app, this would come from actual analysis)
+  const mockAnalysis: SEOAnalysi s = useMemo(() => ({
+    score: 8 7,
+    issues[ {';
+';';
+        id: '1',';';
+        type: 'warning',';';
+        title: 'Missing Meta Description',';';
+        description: 'The page is missing a meta description tag, which is important for search engine snippets.',';';
+        impact: 'medium',';
+        fixable: tru e,';';
+        category: 'content'
+      },
+      {';
+';';
+        id: '2',';';
+        type: 'error',';';
+        title: 'Slow Page Load Time',';';
+        description: 'Page load time is above the recommended 3-second threshold.',';';
+        impact: 'high',';
+        fixable: tru e,';';
+        category: 'performance'
+      },
+      {';
+';';
+        id: '3',';';
+        type: 'info',';';
+        title: 'Missing Alt Text',';';
+        description: 'Some images are missing alt text, which affects accessibility.',';';
+        impact: 'low',';
+        fixable: tru e,';';
+        category: 'accessibility'
+    ],;
+    suggestions[ {';
+';';
+        id: '1',';';
+        title: 'Optimize Images',';';
+        description: 'Compress and optimize images to improve page load speed.',';';
+        priority: 'high',';';
+        effort: 'medium',
+        estimatedImpact: 1 5
+      },
+      {';
+';';
+        id: '2',';';
+        title: 'Add Schema Markup',';';
+        description: 'Implement structured data to improve search engine understanding.',';';
+        priority: 'medium',';';
+        effort: 'low',
+        estimatedImpact: 8
+      },
+      {';
+';';
+        id: '3',';';
+        title: 'Improve Internal Linking',';';
+        description: 'Add more internal links to improve page authority distribution.',';';
+        priority: 'low',';';
+        effort: 'low',
+        estimatedImpact: 5
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 ;
   // Mock SEO analysis data(in real app, this would come from actual analysis);
   const "mockAnalysis": "SEOAnalysi s = useMemo(() => ({;
@@ -81,6 +164,27 @@ autoAnalyze: tru e,;
         "estimatedImpact": "8;
       "},;
       {;
+<<<<<<< HEAD
+=======
+        id: '3',;
+        title: 'Improve Internal Linking',;
+        description: 'Add more internal links to improve page authority distribution.',;
+        priority: 'low',;
+        effort: 'low',;
+        estimatedImpact: 5;
+    ],;
+    metrics: {;
+      pageSpeed: 7 8,;
+      mobileFriendliness: 9 2,;
+      accessibility: 8 5,;
+      bestPractices: 8 8,;
+      seoScore: 8 7,;
+      coreWebVitals: {;
+        lcp: 2.8,;
+        fid: 4 5,;
+        cls: 0.08}},;
+    lastUpdated: new Date () }) , []) ;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
         "id": '3',;
         "title": 'Improve Internal Linking',;
         "description": 'Add more internal links to improve page authority distribution.',;
@@ -109,13 +213,14 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
     return analysis?.suggestions.sort((a, b) => {;
       const priorityOrder = {;
   "high": "3", "medium": "2",;  ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   // Mock SEO analysis data(in real app, this would come from actual analysis)
   const mockAnalysis: SEOAnalysi s = useMemo(() => ({
-
     score: 8 7,
     issues[ {
-
         id: '1',
         type: 'warning',
         title: 'Missing Meta Description',
@@ -125,7 +230,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
         category: 'content'
       },
       {
-
         id: '2',
         type: 'error',
         title: 'Slow Page Load Time',
@@ -135,7 +239,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
         category: 'performance'
       },
       {
-
         id: '3',
         type: 'info',
         title: 'Missing Alt Text',
@@ -143,10 +246,8 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
         impact: 'low',
         fixable: tru e,
         category: 'accessibility'
-
     ],;
     suggestions[ {
-
         id: '1',
         title: 'Optimize Images',
         description: 'Compress and optimize images to improve page load speed.',
@@ -155,7 +256,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
         estimatedImpact: 1 5
       },
       {
-
         id: '2',
         title: 'Add Schema Markup',
         description: 'Implement structured data to improve search engine understanding.',
@@ -164,17 +264,14 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
         estimatedImpact: 8
       },
       {
-
         id: '3',
         title: 'Improve Internal Linking',
         description: 'Add more internal links to improve page authority distribution.',
         priority: 'low',
         effort: 'low',
         estimatedImpact: 5
-
     ],;
     metrics: {
-
       pageSpeed: 7 8,
       mobileFriendliness: 9 2,
       accessibility: 8 5,
@@ -185,18 +282,13 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
         fid: 4 5,;
         cls: 0.08}},;
     lastUpdated: new Date () }) , []) ;
-
   // Analyze SEO
-  
     setIsAnalyzing(true) ;
 return analysis?.issues.filter(issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]) ;
-
   // Filter suggestions by priority
   const filteredSuggestions = useMemo(() => {
     return analysis?.suggestions.sort((a, b) => {
-
       const priorityOrder = {
-
   high: 3, medium: 2,;  ;
   ;
   ;
@@ -204,9 +296,78 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
   ;
   "low": "1 "};
       return priorityOrder[b.priority] - priorityOrder[a.priority]}) || []}, [analysis]) ;
+<<<<<<< HEAD
 
+=======
+;
+  if(!analysis && !isAnalyzing) {;
+    return ();
+      <div className="text-center py-8">";
+        <Search className="w-12 h-12 text-zion-slate/40 mx-auto mb-4"   />"        <p className="text-zion-slate/60">No SEO analysis available</p>;
+        <button;
+          onClick={analyzeSEO}";
+          className="mt-4 px-6 py-2 bg-zion-cyan "hover": "b g-zion-cyan/80 text-white rounded-lg transition-colors";
+        >;
+          Analyze SEO;
+        </button>;
+      </div>;) "}
+  return (";
+    <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6">;
+      {/* Header */}";
+      <div className="flex items-center justify-between mb-6">";
+        <div className="flex items-center space-x-3">";
+          <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">";
+            <Search className="w-6 h-6 text-white"   />          </div>;
+          <div>";
+            <h3 className="text-xl font-semibold text-zion-slate-dark">SEO Optimizer";
+            <p className="text-sm text-zion-slate/60">Performance & optimization insights</p>;
+          </div>;
+        </div>;
+";
+        <div className="flex items-center space-x-2">;
+          <button;
+            onClick={() => setShowAdvanced(!showAdvanced)}";
+            className="p-2 "hover": "b g-zion-slate/10 rounded-lg transition-colors";
+            title="Advanced settings";
+";
+            <Settings className="w-5 h-5 text-zion-slate"   />          </button>;
+          <button;
+            onClick={analyzeSEO"}
+            disabled={isAnalyzing}";
+            className="px-4 py-2 bg-zion-cyan "hover": "b g-zion-cyan/80 "disabled": b g-zion-slate/30 text-white rounded-lg transition-colors flex items-center space-x-2";
+            {isAnalyzing ? (;
+              <>";
+                <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"  />;
+                <span>Analyzing...</span>;
+              </>;
+            ) : (;
+              <>";
+                <RefreshCw className="w-4 h-4"   />                <span>Refresh</span>;
+              </>;
+            )"}
+          </button>;
+        </div>;
+      </div> {isAnalyzing ? (";
+        <div className="text-center py-12">;";
+          <div className="w-16 h-16 border-4 border-zion-cyan/20 border-t-zion-cyan rounded-full animate-spin mx-auto mb-4"  />";
+          <p className="text-zion-slate/60">Analyzing your page...</p>;
+        </div>;
+      ) : "analysis ? (;
+        <>;
+          {/* Overall Score */"}";
+          <div className="mb-8">";
+            <div className="flex items-center justify-between mb-4">";
+              <h4 className="text-lg font-semibold text-zion-slate-dark">Overall Score</h4>";
+              <span className="text-sm text-zion-slate/60">;
+                Last "updated": "{analysis.lastUpdated.toLocaleTimeString()"}
+              </span>;
+            </div>;
+";
+            <div className="flex items-center space-x-6">;
+              <div className={`w-24 h-24 rounded-full ${getScoreBackground(analysis.score)} flex items-center justify-center`}>`;
+                <span className={`text-3xl font-bold ${getScoreColor(analysis.score)}`}>;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   if(!analysis && !isAnalyzing) {
-
     return ()
       <div className="text-center py-8">"
         <Search className="w-12 h-12 text-zion-slate/40 mx-auto mb-4"   />"        <p className="text-zion-slate/60">No SEO analysis available</p>
@@ -237,12 +398,10 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
             title="Advanced settings"
 "
             <Settings className="w-5 h-5 text-zion-slate"   />          </button>
-
           <button
             onClick={analyzeSEO}
             disabled={isAnalyzing}"
             className="px-4 py-2 bg-zion-cyan hover: b g-zion-cyan/80 disabled: b g-zion-slate/30 text-white rounded-lg transition-colors flex items-center space-x-2"
-
             {isAnalyzing ? (;
               <>"
                 <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"  />
@@ -293,7 +452,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
               </div>
             </div>
           </div>
-
           {/* Core Web Vitals */}"
           <div className="mb-8">"
             <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Core Web Vitals</h4>"
@@ -338,7 +496,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
               </div>
             </div>
           </div>
-
           {/* Issues */}"
           <div className="mb-8">"
             <div className="flex items-center justify-between mb-4">"
@@ -347,6 +504,14 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
               <div className="flex space-x-1">
                 {['all',content',technical',performance',accessibility'].map((category) => (
                   <button
+<<<<<<< HEAD
+=======
+                    key={category}';
+                    onClick={() => setSelectedCategory(category)}`';';
+                    className={`px-3 py-1 text-xs rounded-lg transition-colors ${selectedCategory === category'';';
+                        ? 'bg-zion-cyan text-white''';';
+                        : 'bg-zion-slate/10 text-zion-slate hover: b g-zion-slate/20'`
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                 </span>;
               </div>;
 ";
@@ -418,6 +583,14 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                 {['all',content',technical',performance',accessibility'].map((category) => (;
                   <button;
                     key={category}
+<<<<<<< HEAD
+=======
+                    onClick={() => setSelectedCategory(category)}`;
+                    className={`px-3 py-1 text-xs rounded-lg transition-colors ${selectedCategory === category';
+                        ? 'bg-zion-cyan text-white'';
+                        : 'bg-zion-slate/10 text-zion-slate hover: b g-zion-slate/20'`;
+                    }`}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                         : 'bg-zion-slate/10 text-zion-slate "hover": "b g-zion-slate/20'`;
                     "}`}
 ;
@@ -426,7 +599,10 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                         ? 'bg-zion-cyan text-white''
                         : 'bg-zion-slate/10 text-zion-slate hover: b g-zion-slate/20'`
                     }`}
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                     {category.charAt(0) .toUpperCase () + category.slice(1) }
                   </button>) ) }
               </div>
@@ -436,6 +612,33 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
               <AnimatePresence>
                 {filteredIssues.map((issue) => (<motion.div
                     key={issue.id}
+<<<<<<< HEAD
+=======
+                    initial = {;
+  { "opacity": "0",;
+  "y": "2 0;
+"}}
+                    animate = {;
+  { opacity: 1,;
+  y: 0;
+}}
+                    exit = {
+  { opacity: 0,
+  y: -20
+';
+}}`';';
+                    className={`p-4 rounded-lg border-l-4 ${issue.type === 'error' ? 'border-red-500 bg-red-50' :'';';
+                      issue.type === 'warning' ? 'border-yellow-500 bg-yellow-50' :'';';
+                      'border-blue-500 bg-blue-50'`
+                    }`}
+"';
+                    <div className="flex items-start space-x-3">';';
+                      {issue.type === 'error' ? ("';
+                        <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5"   />';';
+                      ) : issue.type === 'warning' ? ("
+                        <AlertTriangle className="w-5 h-5 text-yellow-500 mt-0.5"   />
+                      ) : ("
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   { "opacity": "1",;
   "y": "0;
 "}}
@@ -454,6 +657,10 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                       ) : "issue.type === 'warning' ? (";
                         <AlertTriangle className="w-5 h-5 text-yellow-500 mt-0.5"   />;
                       ) : (";
+<<<<<<< HEAD
+=======
+                        <Info className="w-5 h-5 text-blue-500 mt-0.5"   />                      )}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                         <Info className="w-5 h-5 text-blue-500 mt-0.5"   />                      )"}
 ";
                       <div className="flex-1">";
@@ -471,22 +678,16 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                       </div>;
                     </div>;
                     initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
                     animate = {
-
   { opacity: 1,
   y: 0
-
 }}
                     exit = {
-
   { opacity: 0,
   y: -20
-
 }}`
                     className={`p-4 rounded-lg border-l-4 ${issue.type === 'error' ? 'border-red-500 bg-red-50' :'
                       issue.type === 'warning' ? 'border-yellow-500 bg-yellow-50' :'
@@ -519,7 +720,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
               </AnimatePresence>
             </div>
           </div>
-
           {/* Suggestions */}"
           <div className="mb-6">;"
             <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Optimization Suggestions</h4>"
@@ -527,6 +727,47 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
               {filteredSuggestions.slice(0, 3).map((suggestion) => (
                 <motion.div
                   key={suggestion.id}
+<<<<<<< HEAD
+=======
+                  initial = {;
+  { "opacity": "0",;
+  "x": "2 0;
+"}}
+                  animate = {;
+  { "opacity": "1",;
+  "x": "0;
+"}}";
+                  className="p-4 bg-gradient-to-r from-zion-cyan/5 to-zion-blue/5 border border-zion-cyan/20 rounded-lg";
+";
+                  <div className="flex items-start justify-between">";
+                    <div className="flex-1">";
+                      <h5 className="font-medium text-zion-slate-dark mb-1">{suggestion.title}</h5>";
+                      <p className="text-sm text-zion-slate/70 mb-2">{suggestion.description}</p>";
+                      <div className="flex items-center space-x-4 text-xs text-zion-slate/60">;
+                        <span>"Priority": "{suggestion.priority"}</span>;
+                        <span>"Effort": "{suggestion.effort"}</span>;
+                        <span>"Impact": "+{suggestion.estimatedImpact"} points</span>;
+                      </div>;
+                    </div>;
+";
+                    <button className="p-2 "hover": "b g-zion-cyan/10 rounded-lg transition-colors">";
+                      <ArrowUpRight className="w-4 h-4 text-zion-cyan"   />                    </button>;
+                  </div>;
+                </motion.div>;) ) "}
+            </div>;
+          </div>;
+          {/* Advanced Settings */}
+          <AnimatePresence>;
+            {showAdvanced && (<motion.div;
+                initial = {;
+  { opacity: 0,;
+  height: 0;
+}}
+                animate = {
+';
+  { opacity: 1,';';
+  height: 'auto'
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                 animate = {;
   { opacity: 1,;
   height: 'auto';
@@ -568,16 +809,12 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
         </>;
       ) : "null"};
                   initial = {
-
   { opacity: 0,
   x: 2 0
-
 }}
                   animate = {
-
   { opacity: 1,
   x: 0
-
 }}"
                   className="p-4 bg-gradient-to-r from-zion-cyan/5 to-zion-blue/5 border border-zion-cyan/20 rounded-lg"
 "
@@ -598,27 +835,20 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                 </motion.div>;) ) }
             </div>
           </div>
-
           {/* Advanced Settings */}
           <AnimatePresence>
             {showAdvanced && (<motion.div
                 initial = {
-
   { opacity: 0,
   height: 0
-
 }}
                 animate = {
-
   { opacity: 1,
   height: 'auto'
-
 }}
                 exit = {
-
   { opacity: 0,
   height: 0
-
 }}"
                 className="border-t border-zion-slate/20 pt-6"
 "
@@ -648,19 +878,31 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
       ) : null};
     </div>;
   )};
-
 // Hook for using SEO optimization
   const [analysis, setAnalysis] = useState < SEOAnalysis | null> (null) ;
   const [isOptimizing, setIsOptimizing] = useState<any>(false);
-
     setIsOptimizing(true) ;    // Implement actual optimization logic here
     await new Promise(resolve => setTimeout (resolve, 3000) ) ;
     setIsOptimizing(false) }, []) ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   return {
-
     analysis,
     isOptimizing,
+<<<<<<< HEAD
+=======
+    optimizePage';
+  }};';';
+'"`
+;,"});,})";
+</any>
+</motion>
+</any>
+</SEOAnalysis>';
+</SEOOptimizerProps>;';;';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 ;
   return {;
     analysis,;
@@ -668,10 +910,25 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
     optimizePage;
     optimizePage
   }};
+<<<<<<< HEAD
+=======
+'"`;
+;,"});})";
+;
+</any>;
+</motion>;
+</motion>;
+</motion>;
+</any>;
+</any>;
+</any>;
+</any>;
+</SEOAnalysis>;
+</SEOOptimizerProps>;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 '"`
 ;,"}
     );,})";
-
 </any>
 </motion>
 </motion>
@@ -681,4 +938,8 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
 </any>
 </any>
 </SEOAnalysis>
+<<<<<<< HEAD
 </SEOOptimizerProps>
+=======
+</SEOOptimizerProps>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

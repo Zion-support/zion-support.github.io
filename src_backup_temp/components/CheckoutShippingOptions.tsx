@@ -24,7 +24,6 @@ export function CheckoutShippingOptions("props": "any) {;
 ;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -32,7 +31,6 @@ export function CheckoutShippingOptions("props": "any) {;
     if(!toAddress) return;
     ;
       try {;
-
         if(res.ok) {;
           setRates(data.rates || [])} else {;
           console.error('Rates error', data)}
@@ -45,7 +43,13 @@ export function CheckoutShippingOptions("props": "any) {;
     if(rate && onSelect) onSelect(rate)};
 ;
   if(!toAddress) return null;
+<<<<<<< HEAD
 
+=======
+;
+  return (<div className="my-4">;
+      <h2 className="font-semibold mb-2">Shipping Options</h2>;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   return (
         <div className="my-4">
       <h2 className="font-semibold mb-2">Shipping Options</h2>

@@ -3,7 +3,6 @@ const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -278,7 +277,6 @@ export {ExpensiveComponent}"";
   )}
 export default ExpensiveComponent;";
 ";
-
 </SEO>;
 </div>;
 </div>;

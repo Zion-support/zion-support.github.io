@@ -20,4 +20,8 @@ export function RatingStars("props": "any) {;
 }
     </div>
     );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

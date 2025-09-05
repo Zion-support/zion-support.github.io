@@ -1,5 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { api, ApiResponse } from '@/services / api';
+<<<<<<< HEAD
+=======
+export default function Page("props": "any) {;
+"}}}
+interface User {;
+  "id": "number;
+  "name": string;
+  "email": string;
+  createdAt?: string;
+;
+const "ApiDemo": React.FC = (): JSX.Element => {;
+  const [users", setUsers] = useState<any>([]);
+  const [loading, setLoading] = useState<any>(false);
+  const [error, setError] = useState<any>(null);
+const [newUser, setNewUser] = useState<any>({ "name": '', "email": ''});
+  const [healthStatus, setHealthStatus] = useState<any>('Checking...');
+;
+  // Check API health on component mount;
+  useEffect(() => {;
+  // "TODO": "Add dependencies if needed;
+  return () => {;
+    // Cleanup function;
+  "};
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export default function Page(props: any) {
 }}}
 interface User {
@@ -7,7 +31,6 @@ interface User {
   name: string;
   email: string;
   createdAt?: string;
-
 const ApiDemo: React.FC = (): JSX.Element => {;
   const [users, setUsers] = useState<any>([]);
   const [loading, setLoading] = useState<any>(false);
@@ -15,37 +38,44 @@ const ApiDemo: React.FC = (): JSX.Element => {;
 const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
     );
   const [healthStatus, setHealthStatus] = useState<any>('Checking...');
-
   // Check API health on component mount
   useEffect(() => {
   // TODO: Add dependencies if needed
-
   return () => {
     // Cleanup function
   };
 }, []);, []);
     checkHealth () ;
     fetchUsers () }, []) ;
-
     try {;
+<<<<<<< HEAD
 ;
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {;
       
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {
 
+=======
+      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {';
+';';
+;
+      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {;
+      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
       setHealthStatus('❌ API Unhealthy')};
-
     setLoading(true) ;
     setError(null) ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
     try {
-      
       if(response.success && response.data) {
-
         setUsers(response.data)} catch(err) {
-
       setError(err instanceof Error ? err.message : 'Failed to fetch users')} finally {
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 ;
     try {;
       if(response.success && response.data) {;
@@ -54,28 +84,43 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
       setLoading(false)};
 ;
     e.preventDefault () ;
+<<<<<<< HEAD
+=======
+    if(!newUser.name.trim() || !newUser.email.trim()) {';
+';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 ;
     if(!newUser.name.trim() || !newUser.email.trim()) {;
       setLoading(false)};
-
     e.preventDefault () ;
-
     if(!newUser.name.trim() || !newUser.email.trim()) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
       setError('Name and email are required');
       return;
-
     setLoading(true) ;
     setError(null) ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
     try {
-      
       if(response.success && response.data) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 ;
     try {;
       if(response.success && response.data) {;
         setUsers(prev => [...prev, response.data!]);
+<<<<<<< HEAD
+=======
+        setNewUser({ "name": '', "email": '' })} catch(err) {;
+      setError(err instanceof Error ? err.message : 'Failed to create user')} finally {;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
       setLoading(false)};
   return ();
     <div className="max-w-4xl mx-auto p-6 space-y-6">";
@@ -123,9 +168,7 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
           </form>;
         </div>;
         setNewUser({ name: '', email: '' })} catch(err) {
-
       setError(err instanceof Error ? err.message : 'Failed to create user')} finally {
-
       setLoading(false)};
   return ()
     <div className="max-w-4xl mx-auto p-6 space-y-6">"
@@ -133,13 +176,11 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
           🚀 Vite + Node.js Hybrid App Demo
         </h2>
-
         {/* API Health Status */}"
         <div className="mb-6 p-4 bg-gray-50 rounded-lg">"
           <h3 className="text-lg font-semibold text-gray-700 mb-2">API Status"
           <p className="text-sm text-gray-600">{healthStatus}</p>
         </div>
-
         {/* Create User Form */}"
         <div className="mb-6 p-4 bg-blue-50 rounded-lg">"
           <h3 className="text-lg font-semibold text-blue-700 mb-4">Create New User"
@@ -169,6 +210,11 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
             <button"
               type="submit"
               disabled={loading}"
+<<<<<<< HEAD
+=======
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed"';
+';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                 onChange={ (e) => setNewUser(prev => ({ ...prev,;
   email: e.target.value;
 }))}";
@@ -181,25 +227,36 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
               disabled={loading}";
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed";
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed"
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
               {loading ? 'Creating...' : 'Create User'}
             </button>
           </form>
         </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
         {/* Error Display */}
         {error && ("
           <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">"
             <p className="text-red-700">{error}</p>
           </div>
         )}
-
         {/* Users List */}"
         <div className="p-4 bg-gray-50 rounded-lg">"
           <div className="flex justify-between items-center mb-4">"
             <h3 className="text-lg font-semibold text-gray-700">Users({users.length})
             <button
               onClick={fetchUsers}
+<<<<<<< HEAD
+=======
+              disabled={loading}"
+              className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: b g-gray-700 disabled: opacit y-50"';
+';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
         {error && (";
           <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">";
             <p className="text-red-700">{error}</p>;
@@ -215,12 +272,69 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
               disabled={loading}";
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: b g-gray-700 disabled: opacit y-50";
               {loading ? 'Loading...' : 'Refresh'}
+<<<<<<< HEAD
+=======
+              disabled={loading}";
+              className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md "hover": "b g-gray-700 "disabled": opacit y-50";
+              {loading ? 'Loading...' : 'Refresh'"}
+            </button>;
+          </div>;
+          {loading ? (";
+            <div className="text-center py-8">";
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>";
+              <p className="mt-2 text-gray-600">Loading users...</p>;
+            </div>;
+          ) : "users.length === 0 ? (";
+            <p className="text-gray-500 text-center py-8">No users found.Create one above!</p>;
+          ) : (";
+            <div className="space-y-3">;
+              {users.map((user) => (";
+                <div key={user.id"} className="flex justify-between items-center p-3 bg-white rounded-md border">;
+                  <div>";
+                    <p className="font-medium text-gray-900">{user.name}</p>";
+                    <p className="text-sm text-gray-600">{user.email}</p>;
+                    {user.createdAt && (";
+                      <p className="text-xs text-gray-400">;
+                        "Created": "{new Date(user.createdAt).toLocaleDateString()"}
+                      </p>;
+                    )}
+                  </div>";
+                  <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">;
+                    "ID": "{user.id"}
+                  </span>;
+                </div>) ) }
+                </div>
+  );
+}
+        </div>
+        {/* Architecture Info */}"
+        <div className="mt-8 p-4 bg-green-50 rounded-lg">"
+          <h3 className="text-lg font-semibold text-green-700 mb-2">🏗️ Architecture</h3>"
+          <div className="text-sm text-green-700 space-y-1">
+            <p>• <strong>Frontend:</strong> Vite + React(Port 3000) - Fast HMR & optimized builds</p>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
             </div>) }
         </div>;
         {/* Architecture Info */}";
         <div className="mt-8 p-4 bg-green-50 rounded-lg">";
           <h3 className="text-lg font-semibold text-green-700 mb-2">🏗️ Architecture";
           <div className="text-sm text-green-700 space-y-1">;
+<<<<<<< HEAD
+=======
+            <p>• <strong>Frontend:</strong> Vite + React(Port 3000) - Fast HMR & optimized builds</p>;
+            <p>• <strong>Backend:</strong> Node.js + Express(Port 5000) - API endpoints & business logic</p>;
+            <p>• <strong>Development:</strong> Vite proxy forwards /api calls to Node.js</p>;
+            <p>• <strong>Production:</strong> Node.js serves built frontend + API</p>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;) };';
+';';
+export default ApiDemo}}}}}}}'"`
+</any>
+</any>';
+</any>;';;';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
     </div>;) };
             <p>• <strong>"Frontend": "</strong> Vite + React(Port 3000) - Fast HMR & optimized builds</p>;
             <p>• <strong>"Backend":</strong> Node.js + Express(Port 5000) - API endpoints & business logic</p>;
@@ -239,11 +353,9 @@ export default ApiDemo}}}}}}}'"`;
 </any>;
               disabled={loading}"
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: b g-gray-700 disabled: opacit y-50"
-
               {loading ? 'Loading...' : 'Refresh'}
             </button>
           </div>
-
           {loading ? ("
             <div className="text-center py-8">"
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>"
@@ -270,7 +382,6 @@ export default ApiDemo}}}}}}}'"`;
                 </div>) ) }
             </div>) }
         </div>
-
         {/* Architecture Info */}"
         <div className="mt-8 p-4 bg-green-50 rounded-lg">"
           <h3 className="text-lg font-semibold text-green-700 mb-2">🏗️ Architecture"
@@ -283,11 +394,13 @@ export default ApiDemo}}}}}}}'"`;
         </div>;
       </div>;
     </div>;) };
-
 export default ApiDemo}}}}}}}'"`
-
 </any>
 </any>
 </any>
 </any>
+<<<<<<< HEAD
 </any>
+=======
+</any>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

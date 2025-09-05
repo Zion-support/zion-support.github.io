@@ -64,21 +64,19 @@ const Tabs = (props: any) => {}
     </div>
     );
 };
-
 export default Tabs;
-
 export {Tabs};
-
 export {Tabs};
-
 export {Tabs};
-
 export {Tabs};
-
 export {Tabs};
 ';
 </motion>;';;';
 ;
 </motion>;
+<<<<<<< HEAD
 
 </motion>
+=======
+</motion>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

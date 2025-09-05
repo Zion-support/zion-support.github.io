@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
-
-
 // Files with critical syntax errors that need immediate fixing
 const criticalFiles = [
   'src/components/Footer.tsx',
@@ -41,11 +36,9 @@ const criticalFiles = [
   'pages/services.tsx',
   'pages/talent.tsx'
 ];
-
 function fixMergeConflicts(content) {
   // Remove merge conflict markers
   return content
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -90,4 +83,3 @@ console.log(' Starting comprehensive syntax fixer...')
   fixed = fixed.replace(/className="([^"]*)"([^>]*?)>/g, 'className="$1"
   fixed = fixed.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, 'import { $1 } from "$2"
 cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> main

@@ -514,9 +514,7 @@ export function ContactInfo(props: any) {
 """""";""
 """""'
 "
-
 export default Component
-
 </div>
 </div>
 </Star>
@@ -796,4 +794,8 @@ export default Component;
 </Phone>
 </div>
 </div>
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

@@ -138,7 +138,5 @@ export const SecurityComplianceDashboard = (props: any) => {
       </div>;
 """;
 ";
-
 export default Component;
-
 </div>"

@@ -1,3 +1,7 @@
 ' \' \' \' \' \"export\": function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect(() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()\'';\"";
 " " " " " export: function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect(() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()"";"";"""
+<<<<<<< HEAD
 ' ' ' ' ' "export": function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect(() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()'';"";""}
+=======
+' ' ' ' ' "export": function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect(() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()'';"";""}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

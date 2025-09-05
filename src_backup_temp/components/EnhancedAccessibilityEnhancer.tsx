@@ -4,16 +4,12 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
 export default function Page("props": "any) {;
       // Apply large text;
       if(updatedSettings.largeText) {;
-
         document.documentElement.classList.add('large-text')"} else {;
-
         document.documentElement.classList.remove('large-text')}
 ;
       // Apply reduced motion;
       if(updatedSettings.reducedMotion) {;
-
         document.documentElement.classList.add('reduced-motion')} else {;
-
         document.documentElement.classList.remove('reduced-motion')}
 ;
     // Color blindness simulation;
@@ -35,12 +31,10 @@ export default function Page("props": "any) {;
 "}, []);
 ;
     if(savedSettings) {;
-
       setSettings(parsedSettings);
       applySettings(parsedSettings)}
   }, [enabled, applySettings]);
   // Screen reader announcements;
-
     announcement.setAttribute('aria-live',polite');
     announcement.setAttribute('aria-atomic',true');
     announcement.className="sr-only";
@@ -58,7 +52,6 @@ export default function Page("props": "any) {;
     if(!enabled || !settings.keyboardNavigation) return;
 ;
       switch(event.key) {;
-
         case 'ArrowDown':';
         case 'ArrowRight': ";
           event.preventDefault();
@@ -96,13 +89,11 @@ export default function Page("props": "any) {;
       setCurrentFocus(target) ;
 ;
       if(settings.focusIndicator) {;
-
         target.style.outline = '3px solid #3b82f6';
         target.style.outlineOffset = '2px'}
     };
 ;
       if(settings.focusIndicator) {;
-
         target.style.outline = '';
         target.style.outlineOffset = '';
       }
@@ -111,7 +102,6 @@ export default function Page("props": "any) {;
     document.addEventListener('focusin', handleFocusChange);    document.addEventListener('focusout', handleFocusOut);
 ;
     return () => {;
-
       document.removeEventListener('focusin', handleFocusChange);
       document.removeEventListener('focusout', handleFocusOut)}}, [settings.focusIndicator]) ;
 ;
@@ -134,21 +124,39 @@ export default function Page("props": "any) {;
       applySettings({ [key]: "newValue "});
 ;
       if(key === 'highContrast') {;
+<<<<<<< HEAD
 
+=======
+        announceToScreenReader();
+          newValue';
+            ? 'High contrast mode enabled'';
+            : 'High contrast mode disabled';
+        )} else if(key === 'largeText') {;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   // Toggle settings
-  
       applySettings({ [key]: newValue }
     );
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
         announceToScreenReader(';
           newValue ? 'Large text mode enabled' : 'Large text mode disabled';
         )}
     },;
     [settings, applySettings, announceToScreenReader];
   );
+<<<<<<< HEAD
 
+=======
+;
+  // Zoom controls;
+  ;
+      applySettings({ "zoomLevel": "newZoo m "});`;
+      announceToScreenReader(`Zoom level ${newZoom}%`)},;
+    [settings.zoomLevel, applySettings, announceToScreenReader];
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   // Zoom controls
-  
       applySettings({ zoomLevel: newZoo m }
     );`
       announceToScreenReader(`Zoom level ${newZoom}%`)},
@@ -169,7 +177,30 @@ export default function Page("props": "any) {;
         title="Accessibility Options";
       >";
         <Accessibility className="w-5 h-5"   />      </motion.button>;
+<<<<<<< HEAD
 
+=======
+      {/* Accessibility Panel */"}
+      <AnimatePresence>;
+        {isVisible && (<motion.div;
+            initial={{ "opacity": "0", "x": "30 0 "}}
+            animate={{ "opacity": "1", "x": "0 "}}
+            exit={{ "opacity": "0", "x": "30 0 "}}";
+            className="fixed top-4 right-20 z-50 w-80 bg-white "dark": "b g-slate-800 rounded-lg shadow-xl border border-slate-200 "dark": borde r-slate-700 overflow-hidden";
+          >;
+            {/* Header */"}";
+            <div className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";
+              <div className="flex items-center space-x-2">";
+                <Accessibility className="w-5 h-5"   />"                <h3 className="font-semibold">Accessibility</h3>;
+              </div>;
+              <button;
+                onClick={() => setIsVisible(false)}";
+                className="p-1 "hover": "b g-white/20 rounded transition-colors";
+                ;
+              >";
+                <EyeOff className="w-4 h-4"   />              </button>;
+            </div>;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isVisible && (<motion.div
@@ -186,11 +217,13 @@ export default function Page("props": "any) {;
               <button
                 onClick={() => setIsVisible(false)}"
                 className="p-1 hover: b g-white/20 rounded transition-colors"
-                
               >"
                 <EyeOff className="w-4 h-4"   />              </button>
             </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
             {/* Content */"}";
             <div className="p-4 space-y-4 max-h-96 overflow-y-auto">;
               {/* Visual Enhancements */}";
@@ -260,7 +293,6 @@ export default function Page("props": "any) {;
                   </button>;
                 </div>;
               </div>;
-
               {/* Navigation Options */}";
               <div className="space-y-3">";
                 <h4 className="text-sm font-semibold text-slate-700 "dark": "tex t-slate-300">;
@@ -318,7 +350,6 @@ export default function Page("props": "any) {;
                   <span>Reset to 100%</span>;
                 </button>;
               </div>;
-
               {/* Zoom Controls */"}";
               <div className="space-y-3">";
                 <h4 className="text-sm font-semibold text-slate-700 "dark": "tex t-slate-300">;
@@ -371,7 +402,6 @@ export default function Page("props": "any) {;
                   Run Accessibility Audit;
                 </button>;
               </div>;
-
               {/* Screen Reader Support */"}";
               <div className="space-y-3">";
                 <h4 className="text-sm font-semibold text-slate-700 "dark": "tex t-slate-300">;
@@ -401,7 +431,6 @@ export default function Page("props": "any) {;
                 </div>;
               </div>;
             </div>;
-
               {/* Current Focus Indicator */}
               {currentFocus && settings.focusIndicator && (";
                 <div className="p-3 bg-blue-50 "dark": "b g-blue-900/20 rounded-lg border border-blue-200 "dark": borde r-blue-800">";
@@ -418,11 +447,9 @@ export default function Page("props": "any) {;
           </motion.div>;
         )}
       </AnimatePresence>;
-
       {/* Screen Reader Only Styles */}`;
       <style jsx>{`;
         .sr-only {;
-
           "position": "absolut e;
           "width": 1p x;
           "height": 1p x;
@@ -434,14 +461,11 @@ export default function Page("props": "any) {;
           "border": 0"}
 ;
         .high-contrast {;
-
           "filter": "contras t(1.5) brightness(1.2)"}
 ;
         .large-text {;
-
           font-"size": "1.2em"}
         .reduced-motion * {;
-
           animation-"duration": "0.01ms !important;
           animation-iteration-"count": 1 !important;
           transition-"duration": 0.01ms !important"}`      `}</style>;
@@ -450,7 +474,6 @@ export default function Page("props": "any) {;
 ;
 export default EnhancedAccessibilityEnhancer;
 '"`;
-
 </span>;
 </span>;
 </span>;

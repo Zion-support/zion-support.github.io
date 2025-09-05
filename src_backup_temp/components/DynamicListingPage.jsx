@@ -52,20 +52,19 @@ export function DynamicListingPage("props": "any) {;
   useEffect(() => {setCurrentPage(1);"}, [searchQuery, selectedCategory, currentPriceFilter, selectedRating]);
 ;
   const handleRequestQuote = ("props": "any) => {;
+<<<<<<< HEAD
     
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
     return matchesSearch && matchesCategory && matchesPrice && matchesRating;}
     );
-
   const totalPages = itemsPerPage
     ? Math.ceil(filteredListings.length / itemsPerPage)
     : 1;
-
   const paginatedListings = itemsPerPage
     ? filteredListings.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
     : filteredListings;
-
   useEffect(() => {setCurrentPage(1);}, [searchQuery, selectedCategory, currentPriceFilter, selectedRating]);
-
   const handleRequestQuote = (props: any) => {
     setIsLoading(true);
     const listing = allListings.find(item => item.id === listingId);
@@ -93,7 +92,6 @@ export function DynamicListingPage("props": "any) {;
           description: `Your quote request for ${listing.title} has been sent.`
         }
     );
-        
         navigate("/request-quote", {
           state: {
             serviceType: categorySlug,
@@ -117,7 +115,10 @@ export function DynamicListingPage("props": "any) {;
           <h1 className="text-4xl font-bold text-white mb-4">{title}</h1>;
           <p className="text-xl text-blue-200">{description}</p>;
         </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   return (
         <div className="min-h-screen bg-blue-900 py-12 px-4">
       <div className="container mx-auto">
@@ -125,7 +126,10 @@ export function DynamicListingPage("props": "any) {;
           <h1 className="text-4xl font-bold text-white mb-4">{title}</h1>
           <p className="text-xl text-blue-200">{description}</p>
         </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
         {/* Search and Filters */}
         <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8">;
           <div className="grid grid-cols-1 "md": "grid-cols-4 gap-4 mb-6">;
@@ -152,7 +156,6 @@ export function DynamicListingPage("props": "any) {;
                 ))}
               </SelectContent>;
             </Select>;
-
             <Select value={selectedRating?.toString() || ""} onValueChange={(value) => setSelectedRating(value ? parseInt(value) : "null)"}>;
               <SelectTrigger>;
                 <SelectValue placeholder="Rating"  />;
@@ -164,7 +167,6 @@ export function DynamicListingPage("props": "any) {;
                 <SelectItem value="2">2+ Stars</SelectItem>;
               </SelectContent>;
             </Select>;
-
             <div className="flex gap-2">;
               <Button;
                 variant={view === "grid" ? "default" : "outline"}
@@ -182,7 +184,6 @@ export function DynamicListingPage("props": "any) {;
               </Button>;
             </div>;
           </div>;
-
           {/* Price Range Slider */}
           <div className="space-y-2">;
             <label className="text-sm font-medium text-white">Price Range</label>;
@@ -200,7 +201,6 @@ export function DynamicListingPage("props": "any) {;
             </div>;
           </div>;
         </div>;
-
         {/* Listings Grid */}
         <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 "xl":grid-cols-4 gap-6">;
           {paginatedListings.map((listing) => (;
@@ -239,7 +239,6 @@ export function DynamicListingPage("props": "any) {;
             </div>;
           ))}
         </div>;
-
         {/* Pagination */}
         {totalPages > 1 && (;
           <div className="flex justify-center mt-8">;

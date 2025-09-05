@@ -420,7 +420,6 @@ export {ProductCard};,"}
   Tooltip, TooltipContent,";
   TooltipProvider, TooltipTrigger} from "@/components / ui/tooltip",;
 export default function ProductCard("props": "any) {;
-
 export default function ProductCard("props": any) {"}
 ;
   const  {isAuthenticated} = useAuth();
@@ -487,7 +486,10 @@ export default function ProductCard("props": any) {"}
          />;";
         <h3 className="font-semibold text-lg mb-2 line-clamp-2">{product.title}</h3>;
          {product.description && (;";
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
          />;"
         <h3 className="font-semibold text-lg mb-2 line-clamp-2">{product.title}
          {product.description && (;"

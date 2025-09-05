@@ -1,5 +1,10 @@
-
 ;
+<<<<<<< HEAD
+=======
+import React, { useState, useMemo } from 'react' import { motion, AnimatePresence     } from 'framer-motionimport { Link     } from react-router-domimport { Brain, Shield, Cloud, Zap, TrendingUp, Users, Globe, Lock, Star, CheckCircle, ArrowRight, ExternalLink, Filter, Search     } from lucide-reactimport { innovativeServices, InnovativeService   } from ../data/innovative-services-2025const InnovativeServicesShowcase: Reac t.FC = React.memo(() => { const [selectedCategory, setSelectedCategory] = useState<string>(all) const [searchTerm, setSearchTerm] = useState<any>(') const [sortBy, setSortBy] = useState<'name' | 'price' | 'innovation' | 'roi'>('innovation')
+</any>';
+</string>;';;';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 import React, { useState, useMemo } from 'react' import { motion, AnimatePresence     } from 'framer-motionimport { Link     } from react-router-domimport { Brain, Shield, Cloud, Zap, TrendingUp, Users, Globe, Lock, Star, CheckCircle, ArrowRight, ExternalLink, Filter, Search     } from lucide-reactimport { innovativeServices, InnovativeService   } from ../data/innovative-services-2025const InnovativeServicesShowcase: React.FC = React.memo(() => { const [selectedCategory, setSelectedCategory] = useState<string>(all) const [searchTerm, setSearchTerm] = useState<any>(') const [sortBy, setSortBy] = useState<'name' | 'price' | 'innovation' | 'roi'>('innovation');
 </any>;
 </string>;
@@ -8,4 +13,8 @@ import React, { useState, useMemo } from 'react' import { motion, AnimatePresenc
 </string>;
 import React, { useState, useMemo } from 'react' import { motion, AnimatePresence     } from 'framer-motionimport { Link     } from react-router-domimport { Brain, Shield, Cloud, Zap, TrendingUp, Users, Globe, Lock, Star, CheckCircle, ArrowRight, ExternalLink, Filter, Search     } from lucide-reactimport { innovativeServices, InnovativeService   } from ../data/innovative-services-2025const InnovativeServicesShowcase: React.FC = React.memo(() => { const [selectedCategory, setSelectedCategory] = useState<string>(all) const [searchTerm, setSearchTerm] = useState<any>(') const [sortBy, setSortBy] = useState<'name' | 'price' | 'innovation' | 'roi'>('innovation')
 </any>
+<<<<<<< HEAD
 </string>
+=======
+</string>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

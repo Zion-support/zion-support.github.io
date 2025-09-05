@@ -5,7 +5,6 @@ import {Footer} from '@/components/Footer';
 import {SEO} from '@/components/SEO';
 const markdown = `;
 # Privacy Policy;
-
 Your privacy is important to us. This policy explains how Zion Tech Group collects, uses, and protects your information. Additional details will be added in a future revision.;
 `;
 const draft = true;
@@ -14,7 +13,10 @@ export {PrivacyPolicy}() {;
     return (<>;
 export default function PrivacyPolicy()() {
     return (<>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
       <SEO title="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical=""https": "//ziontechgroup.com/privacy" noindex={draft"}/>;
       <Header />;
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">;

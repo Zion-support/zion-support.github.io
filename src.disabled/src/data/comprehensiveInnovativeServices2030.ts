@@ -1,0 +1,6 @@
+<<<<<<< HEAD
+=======
+const { ProductListing } from "@/types/listings"; export const COMPREHENSIVE_INNOVATIVE_SERVICES_2030: "ProductListing[] = [","});"})"@/types/listings&apos;&apos,export const COMPREHENSIVE_INNOVATIVE_SERVICES_2030: "ProductListing[] = [","export const COMPREHENSIVE_INNOVATIVE_SERVICES_2030: "ProductListing[] = [",""""
+import { ProductListing } from "@/types/listings"; export const "COMPREHENSIVE_INNOVATIVE_SERVICES_2030": 'ProductListing[] = [',,"}
+});"})'@/types/listings&apos;&apos,export const "COMPREHENSIVE_INNOVATIVE_SERVICES_2030": 'ProductListing[] = [',"export const "COMPREHENSIVE_INNOVATIVE_SERVICES_2030": 'ProductListing[] = [',""]"
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
