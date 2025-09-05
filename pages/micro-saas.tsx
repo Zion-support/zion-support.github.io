@@ -45,7 +45,8 @@ import {
   BookOpen,
   ShoppingCart,
   Home,
-  Database
+  Database,
+  Brain
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -200,9 +201,225 @@ const microSaaSProducts = [
     title: 'Real Estate CRM',
     description: 'Specialized CRM for real estate agents and property management.',
     icon: Building,
-    features: ['Lead Management', 'Property Listings', 'Client Communication', 'Deal Tracking'],
-    pricing: '$39 - $199/month',
+    features: ['Lead Management', 'Property Listings', 'Client Communication', 'Transaction Tracking'],
+    pricing: '$99 - $499/month',
     category: 'Real Estate'
+  },
+  {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review and quality assurance using AI analysis.',
+    icon: Code,
+    features: ['Code Quality Analysis', 'Security Vulnerability Detection', 'Performance Optimization', 'Best Practices'],
+    pricing: '$199 - $999/month',
+    category: 'Development',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Automated content moderation using advanced AI for text, images, and videos.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'API Integration'],
+    pricing: '$399 - $1,999/month',
+    category: 'Content Safety',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Financial Trading Bot',
+    description: 'Automated trading bot with AI-driven market analysis and risk management.',
+    icon: TrendingUp,
+    features: ['Market Analysis', 'Algorithmic Trading', 'Risk Management', 'Portfolio Optimization'],
+    pricing: '$299 - $1,999/month',
+    category: 'FinTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Medical Diagnosis Assistant',
+    description: 'AI-powered medical diagnosis support and patient monitoring system.',
+    icon: Heart,
+    features: ['Symptom Analysis', 'Diagnosis Support', 'Patient Monitoring', 'Medical Records'],
+    pricing: '$499 - $2,999/month',
+    category: 'Healthcare',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Legal Document Analyzer',
+    description: 'AI-powered legal document analysis and contract review system.',
+    icon: BookOpen,
+    features: ['Contract Analysis', 'Risk Assessment', 'Clause Extraction', 'Compliance Checking'],
+    pricing: '$399 - $1,999/month',
+    category: 'Legal Tech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimizer',
+    description: 'Intelligent supply chain management with predictive analytics and automation.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Risk Analysis'],
+    pricing: '$599 - $2,999/month',
+    category: 'Logistics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Energy Management',
+    description: 'Smart energy management and optimization for buildings and facilities.',
+    icon: Zap,
+    features: ['Energy Consumption Analysis', 'Predictive Maintenance', 'Load Balancing', 'Cost Optimization'],
+    pricing: '$299 - $1,499/month',
+    category: 'Energy Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Quality Assurance',
+    description: 'Automated quality control and defect detection in manufacturing.',
+    icon: CheckCircle,
+    features: ['Visual Inspection', 'Defect Classification', 'Quality Metrics', 'Process Optimization'],
+    pricing: '$499 - $2,499/month',
+    category: 'Manufacturing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Customer Sentiment Analysis',
+    description: 'Real-time customer sentiment analysis across multiple channels.',
+    icon: MessageSquare,
+    features: ['Multi-channel Analysis', 'Emotion Detection', 'Trend Analysis', 'Alert System'],
+    pricing: '$199 - $999/month',
+    category: 'Customer Analytics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Autonomous Vehicle Fleet Management',
+    description: 'Complete autonomous vehicle fleet management and optimization platform.',
+    icon: Car,
+    features: ['Fleet Optimization', 'Route Planning', 'Maintenance Scheduling', 'Performance Analytics'],
+    pricing: '$999 - $4,999/month',
+    category: 'Autonomous Systems',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Climate Monitoring',
+    description: 'AI-powered climate monitoring and environmental impact assessment.',
+    icon: Sprout,
+    features: ['Climate Data Analysis', 'Environmental Monitoring', 'Impact Assessment', 'Reporting'],
+    pricing: '$299 - $1,499/month',
+    category: 'Environmental',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Space Mission Planning',
+    description: 'AI-powered space mission planning and satellite constellation management.',
+    icon: Rocket,
+    features: ['Mission Optimization', 'Satellite Coordination', 'Resource Allocation', 'Risk Assessment'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Space Technology',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Quantum Computing Simulator',
+    description: 'Quantum computing simulation and algorithm development platform.',
+    icon: Cpu,
+    features: ['Quantum Simulation', 'Algorithm Development', 'Performance Analysis', 'Educational Tools'],
+    pricing: '$499 - $2,999/month',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Brain-Computer Interface',
+    description: 'Advanced BCI system for medical applications and human-computer interaction.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'Motor Control', 'Cognitive Enhancement', 'Medical Diagnostics'],
+    pricing: '$999 - $4,999/month',
+    category: 'Neurotechnology',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Digital Twin Platform',
+    description: 'Comprehensive digital twin platform for asset simulation and monitoring.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Simulation', 'Predictive Analytics', 'Asset Optimization'],
+    pricing: '$799 - $3,999/month',
+    category: 'Digital Twins',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Precision Agriculture',
+    description: 'Smart farming solutions with AI for crop optimization and yield prediction.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
+    pricing: '$399 - $1,999/month',
+    category: 'AgTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Metaverse Creation Platform',
+    description: 'Complete AI-powered metaverse creation and management platform.',
+    icon: Globe,
+    features: ['Virtual World Creation', 'Avatar AI', 'Behavioral Simulation', 'Content Generation'],
+    pricing: '$1,499 - $7,999/month',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Language Translation Service',
+    description: 'Real-time, context-aware translation with cultural nuance understanding.',
+    icon: Globe,
+    features: ['100+ Languages', 'Cultural Context', 'Real-time Processing', 'Voice Translation'],
+    pricing: '$0.01 - $0.10 per 1K characters',
+    category: 'Language AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Emotional Intelligence Platform',
+    description: 'Advanced emotional AI for understanding and responding to human emotions.',
+    icon: Heart,
+    features: ['Emotion Recognition', 'Empathy Modeling', 'Social Interaction', 'Mental Health Support'],
+    pricing: '$599 - $2,999/month',
+    category: 'Emotional AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Scientific Discovery Platform',
+    description: 'AI system for accelerating scientific research and discovery across multiple domains.',
+    icon: BookOpen,
+    features: ['Hypothesis Generation', 'Literature Analysis', 'Experiment Design', 'Data Interpretation'],
+    pricing: '$999 - $4,999/month',
+    category: 'Scientific AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Edge Computing Platform',
+    description: 'AI processing at the edge for real-time decision making in IoT environments.',
+    icon: Network,
+    features: ['Edge AI Processing', 'Real-time Inference', 'Resource Optimization', 'Distributed Learning'],
+    pricing: '$799 - $3,999/month',
+    category: 'Edge AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personal Assistant Platform',
+    description: 'Advanced personal AI assistant with multi-modal interaction capabilities.',
+    icon: Bot,
+    features: ['Voice Interaction', 'Task Automation', 'Learning & Adaptation', 'Privacy Protection'],
+    pricing: '$299 - $1,499/month',
+    category: 'Personal AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Creative Design Studio',
+    description: 'AI-powered creative design platform for graphics, music, and multimedia content.',
+    icon: Image,
+    features: ['Graphic Design', 'Music Composition', 'Video Editing', '3D Modeling'],
+    pricing: '$199 - $999/month',
+    category: 'Creative AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Predictive Maintenance Platform',
+    description: 'Advanced predictive maintenance using AI for industrial equipment and machinery.',
+    icon: Settings,
+    features: ['Failure Prediction', 'Maintenance Scheduling', 'Performance Optimization', 'Cost Reduction'],
+    pricing: '$599 - $2,999/month',
+    category: 'Industrial AI',
+    popular: true
   },
   {
     title: 'Restaurant POS & Management',
