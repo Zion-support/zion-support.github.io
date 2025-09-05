@@ -87,7 +87,7 @@ const codeExamples = [
 });
 
 const data = await response.json();
-``
+`
   },
   {
     language: 'Python',
@@ -110,7 +110,7 @@ print(response.json())``
   {
     language: 'cURL',
     title: 'Get System Status',
-    code: `curl -X GET "https://ziontechgroup.com/api/v1/status" \\`
+    code: `curl -X GET "https://ziontechgroup.com/api/v1/status" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
   }
