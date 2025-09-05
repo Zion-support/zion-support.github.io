@@ -52,34 +52,6 @@ const benefits = [
     icon: Zap,
     title: "Fast Delivery",
     description: "Agile development with rapid deployment"
-  },
-  {
-    icon: Shield,
-    title: "24/7 Support",
-    description: "Round-the-clock technical support"
-  }
-];
-
-const benefits = [
-  {
-    icon: CheckCircle,
-    title: "Expert Team",
-    description: "50+ certified professionals with years of experience"
-  },
-  {
-    icon: Star,
-    title: "Proven Results",
-    description: "500+ successful projects delivered"
-  },
-  {
-    icon: Zap,
-    title: "Fast Delivery",
-    description: "Agile development with rapid deployment"
-  },
-  {
-    icon: Shield,
-    title: "24/7 Support",
-    description: "Round-the-clock technical support"
   }
 ];
 
