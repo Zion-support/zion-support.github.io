@@ -41,7 +41,7 @@ class AutomationImprovementSuite {
     this.log('🔧 Creating Enhanced Automation Scripts');
 
     // 1. Create a comprehensive error fixer
-    const errorFixerScript = "#!/usr/bin/env node
+    const errorFixerScript = `#!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');

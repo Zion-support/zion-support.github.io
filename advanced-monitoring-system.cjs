@@ -46,12 +46,12 @@ class AdvancedMonitoringSystem {
   }
 
   async generateReport() {
-    const metrics = await this.collectMetrics(;);
+    const metrics = await this.collectMetrics();
     const report = {
       "timestamp": new Date().toISOString(),
       metrics,
       "recommendations": this.generateRecommendations(metrics)
-   };
+    };
     
     fs.writeFileSync('monitoring-report.json', JSON.stringify(report, null, 2));
     return report}
@@ -59,12 +59,13 @@ class AdvancedMonitoringSystem {
   generateRecommendations(metrics) {
     const recommendations = [];
     
-    if ( { // 100MB
+    if (metrics.memoryUsage > 100 * 1024 * 1024) { // 100MB
       recommendations.push({
         "type": 'memory',
         "priority": 'high',
         "message": 'High memory usage detected. Consider optimizing memory usage.'
-      })}
+      });
+    }
     
     if (metrics.errors.length > 10) {
       recommendations.push({
@@ -73,26 +74,12 @@ class AdvancedMonitoringSystem {
         "message": 'High error rate detected. Review error logs.'
       })}
     
-    return recommendations) {
-     { // 100MB
-      recommendations.push({
-        "type": 'memory',
-        "priority": 'high',
-        "message": 'High memory usage detected. Consider optimizing memory usage.'
-      })}
-    
-    if (metrics.errors.length > 10) {
-      recommendations.push({
-        "type": 'errors',
-        "priority": 'high',
-        "message": 'High error rate detected. Review error logs.'
-      })}
-    
-    return recommendations}}
+    return recommendations;
+  }
 }
 
 // Run monitoring
-const monitor = new AdvancedMonitoringSystem;(;);
+const monitor = new AdvancedMonitoringSystem();
 monitor.generateReport().then(report => {
   console.log('📊 Monitoring report "generated": ', report)}).catch(error => {
   console.error('❌ Monitoring "failed": ', error)});
