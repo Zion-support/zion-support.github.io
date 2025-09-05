@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { 
-  Home, 
-  Briefcase, 
-  Target, 
-  Building2, 
-  FileText, 
-  HelpCircle, 
+import {
+  Home,
+  Briefcase,
+  Target,
+  Building2,
+  FileText,
+  HelpCircle,
   Search,
   X,
   ChevronRight,
@@ -20,24 +20,20 @@ import {
   GraduationCap,
   Globe
 } from 'lucide-react';
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
-
   const toggleSection = (section: string) => {
-    setExpandedSections(prev => 
-      prev.includes(section) 
+    setExpandedSections(prev =>
+      prev.includes(section)
         ? prev.filter(s => s !== section)
         : [...prev, section]
     );
   };
-
   const navigationItems = [
     {
       label: 'Home',
@@ -117,28 +113,24 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       ]
     }
   ];
-
   const quickLinks = [
     { label: 'Get Started', href: '/contact', icon: ChevronRight },
     { label: 'Pricing', href: '/pricing', icon: DollarSign },
     { label: 'Support', href: '/support', icon: HelpCircle },
     { label: 'Documentation', href: '/docs', icon: FileText },
   ];
-
   const isActive = (href: string) => {
     return router.pathname === href;
   };
-
   return (
     <>
       {/* Overlay */}
       {isOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
           onClick={onClose}
         />
       )}
-
       {/* Sidebar */}
       <div className={`
         fixed top-0 left-0 h-full w-80 bg-gray-900 text-white z-50 transform transition-transform duration-300 ease-in-out
@@ -160,7 +152,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             <X className="w-6 h-6" />
           </button>
         </div>
-
         {/* Search */}
         <div className="p-6 border-b border-gray-700">
           <div className="relative">
@@ -172,7 +163,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             />
           </div>
         </div>
-
         {/* Navigation */}
         <nav className="flex-1 overflow-y-auto">
           <div className="p-6">
@@ -191,21 +181,19 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     <item.icon className="w-5 h-5" />
                     <span className="font-medium">{item.label}</span>
                   </Link>
-                  
                   {item.hasSubmenu && (
                     <button
                       onClick={() => toggleSection(item.label)}
                       className="p-2 hover:bg-gray-800 rounded-lg"
                     >
-                      <ChevronRight 
+                      <ChevronRight
                         className={`w-4 h-4 transition-transform ${
                           expandedSections.includes(item.label) ? 'rotate-90' : ''
-                        }`} 
+                        }`}
                       />
                     </button>
                   )}
                 </div>
-
                 {item.hasSubmenu && expandedSections.includes(item.label) && (
                   <div className="ml-8 mt-2 space-y-1">
                     {item.submenu?.map((subItem, subIndex) => (
@@ -229,7 +217,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             ))}
           </div>
         </nav>
-
         {/* Quick Links */}
         <div className="p-6 border-t border-gray-700">
           <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
@@ -249,7 +236,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             ))}
           </div>
         </div>
-
         {/* Contact Info */}
         <div className="p-6 border-t border-gray-700">
           <div className="text-sm text-gray-400">

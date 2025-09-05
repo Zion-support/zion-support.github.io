@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from "../../components/Layout";
 import { motion } from 'framer-motion';
 import { BarChart3, TrendingUp, Database, Brain, CheckCircle, ArrowRight } from 'lucide-react';
-
 export default function DataAnalyticsPage() {
   const analyticsServices = [
     {
@@ -30,9 +29,8 @@ export default function DataAnalyticsPage() {
       features: ["Natural Language Processing", "Pattern Recognition", "Automated Insights"]
     }
   ];
-
   return (
-    <Layout 
+    <Layout
       title="Data Analytics Services - Zion Tech Group"
       description="Advanced data analytics solutions to unlock insights from your data and drive business growth."
     >
@@ -50,13 +48,12 @@ export default function DataAnalyticsPage() {
                 Data Analytics Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Unlock the power of your data with our comprehensive analytics solutions. 
+                Unlock the power of your data with our comprehensive analytics solutions.
                 Turn raw data into actionable insights that drive business success.
               </p>
             </motion.div>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -95,7 +92,6 @@ export default function DataAnalyticsPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
           <div className="container mx-auto px-4 text-center">

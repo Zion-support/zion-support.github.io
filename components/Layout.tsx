@@ -55,7 +55,7 @@ export default function Layout({
         
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https: //fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />ursor/add-new-services-and-deploy-updates-1b90
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* Structured Data */}
         <script
@@ -78,14 +78,13 @@ name: "Zion Tech Group",
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
+telephone: "+1-302-464-0950",
                 "contactType": "customer service",
                 "email": "contact@ziontechgroup.com"
               },
-              "sameAs": [
-                "https://linkedin.com/company/ziontechgroup",
-                "https://twitter.com/ziontechgroup",
-                "https://github.com/ziontechgroup"
+"sameAs": ["https: //linkedin.com/company/ziontechgroup",
+                "https: //twitter.com/ziontechgroup",
+                "https: //github.com/ziontechgroup"
               ]
             })
           }}

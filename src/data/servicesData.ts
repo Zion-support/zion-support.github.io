@@ -29,7 +29,6 @@ export interface InnovativeMicroSaasService {
     security: string[]};
   competitors?: string[];
   marketSize?: string}
-
 export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
   // AI-Powered Business Intelligence Platform
   {
@@ -96,7 +95,6 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     competitors: ["Tableau", "Power BI", "Looker", "Qlik"],
     marketSize: "$29.9 billion by 2025"
   },
-
   // AI-Powered Autonomous DevOps Platform
   {
     id: "ai-autonomous-devops-platform",
@@ -162,7 +160,6 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     competitors: ["DataDog", "New Relic", "Splunk", "PagerDuty"],
     marketSize: "$8.2 billion by 2025"
   },
-
   // Quantum-Safe Cybersecurity Suite
   {
     id: "quantum-safe-cybersecurity-suite",
@@ -228,7 +225,6 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     competitors: ["ISARA", "PQShield", "Crypta Labs", "Quantum Xchange"],
     marketSize: "$2.8 billion by 2025"
   },
-
   // AI-Powered Healthcare Diagnostics Platform
   {
     id: "ai-healthcare-diagnostics-platform",
@@ -294,7 +290,6 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     competitors: ["Butterfly Network", "Zebra Medical", "Aidoc", "Enlitic"],
     marketSize: "$45.2 billion by 2025"
   },
-
   // Edge AI Computing Platform
   {
     id: "edge-ai-computing-platform",
@@ -360,7 +355,6 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Intel OpenVINO"],
     marketSize: "$12.3 billion by 2025"
   },
-
   // Blockchain-Based Supply Chain Transparency Platform
   {
     id: "blockchain-supply-chain-platform",
@@ -426,7 +420,6 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     competitors: ["IBM Food Trust", "VeChain", "OriginTrail", "Ambrosus"],
     marketSize: "$3.2 billion by 2025"
   },
-
   // AI-Powered Customer Experience Platform
   {
     id: "ai-customer-experience-platform",
@@ -492,7 +485,6 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     competitors: ["Salesforce Einstein", "Adobe Experience Platform", "Oracle CX", "SAP Customer Experience"],
     marketSize: "$15.8 billion by 2025"
   },
-
   // Quantum Computing Simulation Platform
   {
     id: "quantum-computing-simulation-platform",
@@ -558,7 +550,6 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     competitors: ["IBM Qiskit", "Google Cirq", "Microsoft Q#", "Rigetti Forest"],
     marketSize: "$1.2 billion by 2025"
   },
-
   // AI-Powered Financial Risk Management Platform
   {
     id: "ai-financial-risk-management-platform",
@@ -624,7 +615,6 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     competitors: ["SAS Risk Management", "IBM OpenPages", "Oracle Risk Management", "SAP GRC"],
     marketSize: "$8.9 billion by 2025"
   },
-
   // Autonomous Vehicle Fleet Management Platform
   {
     id: "autonomous-vehicle-fleet-management",
@@ -691,17 +681,14 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     marketSize: "$5.6 billion by 2025"
   };
 ];
-
 // Import new services
 import { NEW_INNOVATIVE_SERVICES_2025 } from './newInnovativeServices2025
 import { NEW_IT_SERVICES_2025 } from './newITServices2025';
 import { NEW_MICRO_SAAS_SERVICES_2025 } from './newMicroSaasServices2025';
-
 // Re-export new services
 export { NEW_INNOVATIVE_SERVICES_2025 } from './newInnovativeServices2025
 export { NEW_IT_SERVICES_2025 } from './newITServices2025';
 export { NEW_MICRO_SAAS_SERVICES_2025 } from './newMicroSaasServices2025';
-
 // Export combined services
 export const ALL_SERVICES = [
   ...INNOVATIVE_SERVICES,

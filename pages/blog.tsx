@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
+import MainLayout from '../components/Layout';
 
 const blogPosts = [{
     id: 1,
@@ -97,7 +98,7 @@ export default function BlogPage() {
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Stay updated with the latest insights, trends, and best practices in technology
               </p>
-            </motion.div>ursor/add-new-services-and-deploy-updates-1b90
+            </motion.div>
           </div>
         </div>
       </section>
@@ -155,7 +156,7 @@ export default function BlogPage() {
                             Read More
                             <ArrowRight className="w-4 h-4 ml-1" />
                           </Link>
-                        </div>ursor/add-new-services-and-deploy-updates-1b90
+                        </div>
                       </div>
                       <div className="flex items-center gap-2">
                         <Calendar className="w-4 h-4" />

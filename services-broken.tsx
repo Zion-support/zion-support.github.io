@@ -11,7 +11,6 @@ import {
 	Shield, 
 	Code 
 } from "lucide-react";
-
 export default function Services() {
 	const title = "Services — Zion Tech Group";
 	const description = "AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.";
@@ -304,4 +303,3 @@ export default function Services() {
 		</>
 	);
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-1702

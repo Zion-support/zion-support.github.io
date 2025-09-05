@@ -2,11 +2,11 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Calendar, 
-  User, 
-  ArrowRight, 
-  Tag, 
+import {
+  Calendar,
+  User,
+  ArrowRight,
+  Tag,
   ExternalLink,
   Building,
   TrendingUp,
@@ -14,7 +14,6 @@ import {
   Clock,
   CheckCircle
 } from 'lucide-react';
-
 const caseStudies = [
   {
     id: 1,
@@ -131,7 +130,6 @@ const caseStudies = [
     image: "/api/placeholder/600/400"
   }
 ];
-
 const industries = [
   "All Industries",
   "Healthcare",
@@ -142,7 +140,6 @@ const industries = [
   "Logistics",
   "Technology"
 ];
-
 export default function CaseStudiesPage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -150,7 +147,6 @@ export default function CaseStudiesPage() {
         <title>Case Studies - Zion Tech Group</title>
         <meta name="description" content="Explore real-world success stories and case studies from our AI and technology implementations across various industries." />
       </Head>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -164,13 +160,11 @@ export default function CaseStudiesPage() {
           </div>
         </div>
       </section>
-
       {/* Featured Case Study */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Case Study</h2>
-            
             {caseStudies.filter(study => study.featured).map((study) => (
               <motion.article
                 key={study.id}
@@ -192,19 +186,15 @@ export default function CaseStudiesPage() {
                         {study.industry}
                       </span>
                     </div>
-                    
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">
                       {study.title}
                     </h2>
-                    
                     <div className="mb-4">
                       <h3 className="font-semibold text-gray-900 mb-2">Challenge:</h3>
                       <p className="text-gray-600 mb-4">{study.challenge}</p>
-                      
                       <h3 className="font-semibold text-gray-900 mb-2">Solution:</h3>
                       <p className="text-gray-600 mb-4">{study.solution}</p>
                     </div>
-                    
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-6">
                       <div className="flex items-center gap-4">
                         <div className="flex items-center gap-2">
@@ -218,7 +208,6 @@ export default function CaseStudiesPage() {
                       </div>
                       <span>{study.readTime}</span>
                     </div>
-                    
                     <Link
                       href={`/case-studies/${study.id}`}
                       className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
@@ -233,7 +222,6 @@ export default function CaseStudiesPage() {
           </div>
         </div>
       </section>
-
       {/* Industry Filter */}
       <section className="py-8 bg-white">
         <div className="container mx-auto px-4">
@@ -255,13 +243,11 @@ export default function CaseStudiesPage() {
           </div>
         </div>
       </section>
-
       {/* Case Studies Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">All Case Studies</h2>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {caseStudies.filter(study => !study.featured).map((study, index) => (
                 <motion.article
@@ -282,18 +268,15 @@ export default function CaseStudiesPage() {
                         {study.industry}
                       </span>
                     </div>
-                    
                     <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
                       {study.title}
                     </h3>
-                    
                     <div className="mb-4">
                       <h4 className="font-semibold text-gray-900 mb-1">Challenge:</h4>
                       <p className="text-gray-600 text-sm line-clamp-2">
                         {study.challenge}
                       </p>
                     </div>
-                    
                     <div className="mb-4">
                       <h4 className="font-semibold text-gray-900 mb-1">Key Results:</h4>
                       <ul className="text-sm text-gray-600 space-y-1">
@@ -305,7 +288,6 @@ export default function CaseStudiesPage() {
                         ))}
                       </ul>
                     </div>
-                    
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                       <div className="flex items-center gap-2">
                         <User className="w-4 h-4" />
@@ -316,7 +298,6 @@ export default function CaseStudiesPage() {
                         <span>{study.date}</span>
                       </div>
                     </div>
-                    
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-500">{study.readTime}</span>
                       <Link
@@ -331,7 +312,6 @@ export default function CaseStudiesPage() {
                 </motion.article>
               ))}
             </div>
-
             {/* Load More Button */}
             <div className="text-center mt-12">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
@@ -341,7 +321,6 @@ export default function CaseStudiesPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-blue-600">
         <div className="container mx-auto px-4">

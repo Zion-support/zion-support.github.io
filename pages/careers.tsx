@@ -2,21 +2,20 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  MapPin, 
-  Clock, 
-  Users, 
-  Heart, 
-  Zap, 
-  Award, 
-  BookOpen, 
+import {
+  MapPin,
+  Clock,
+  Users,
+  Heart,
+  Zap,
+  Award,
+  BookOpen,
   Coffee,
   Laptop,
   Globe,
   ArrowRight,
   CheckCircle
 } from 'lucide-react';
-
 const benefits = [
   {
     icon: Heart,
@@ -49,7 +48,6 @@ const benefits = [
     description: "Latest technology, equipment, and software to do your best work"
   }
 ];
-
 const openPositions = [
   {
     title: "Senior AI Engineer",
@@ -100,7 +98,6 @@ const openPositions = [
     description: "Drive product strategy and work with cross-functional teams."
   }
 ];
-
 const values = [
   {
     title: "Innovation First",
@@ -119,7 +116,6 @@ const values = [
     description: "Our success is measured by our clients' success and satisfaction with our solutions."
   }
 ];
-
 export default function CareersPage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -127,7 +123,6 @@ export default function CareersPage() {
         <title>Careers - Zion Tech Group</title>
         <meta name="description" content="Join our innovative team and build the future of technology. Explore career opportunities at Zion Tech Group." />
       </Head>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -155,7 +150,6 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
-
       {/* Why Join Us */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -168,7 +162,6 @@ export default function CareersPage() {
                 We're building something special, and we want you to be part of it
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -191,7 +184,6 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
-
       {/* Our Values */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -204,7 +196,6 @@ export default function CareersPage() {
                 The principles that guide everything we do
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {values.map((value, index) => (
                 <motion.div
@@ -231,7 +222,6 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
-
       {/* Open Positions */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -244,7 +234,6 @@ export default function CareersPage() {
                 Find your next opportunity with us
               </p>
             </div>
-
             <div className="space-y-6">
               {openPositions.map((position, index) => (
                 <motion.div
@@ -291,7 +280,6 @@ export default function CareersPage() {
                 </motion.div>
               ))}
             </div>
-
             <div className="text-center mt-12">
               <p className="text-gray-600 mb-4">
                 Don't see a position that fits? We're always looking for talented people.

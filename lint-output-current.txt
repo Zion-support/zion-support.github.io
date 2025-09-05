@@ -54,48 +54,28 @@ Warning: React version not specified in eslint-plugin-react settings. See https:
   27:1  warning  Unexpected console statement  no-console
 
 /workspace/build-verification.js
-   4:1  warning  Unexpected console statement  no-console
-   7:3  warning  Unexpected console statement  no-console
-  10:3  warning  Unexpected console statement  no-console
-  14:3  warning  Unexpected console statement  no-console
-  24:3  warning  Unexpected console statement  no-console
-  32:3  warning  Unexpected console statement  no-console
-  33:3  warning  Unexpected console statement  no-console
-  35:3  warning  Unexpected console statement  no-console
-  38:1  warning  Unexpected console statement  no-console
+  40:1  error  Parsing error: Unexpected token >>>
 
 /workspace/check-syntax.js
-  39:7   warning  Unexpected console statement  no-console
-  40:31  warning  Unexpected console statement  no-console
-  43:7   warning  Unexpected console statement  no-console
-  47:5   warning  Unexpected console statement  no-console
-  74:1   warning  Unexpected console statement  no-console
-  77:1   warning  Unexpected console statement  no-console
-  80:1   warning  Unexpected console statement  no-console
-  84:3   warning  Unexpected console statement  no-console
-  87:3   warning  Unexpected console statement  no-console
+  90:1  error  Parsing error: Unexpected character '#'
 
 /workspace/clean-conflicts.js
-   4:7  warning  'path' is assigned a value but never used  no-unused-vars
-  24:5  warning  Unexpected console statement               no-console
-  26:5  warning  Unexpected console statement               no-console
-  49:1  warning  Unexpected console statement               no-console
+  50:1  error  Parsing error: Unexpected character '#'
 
 /workspace/code-quality-checker.js
-  35:5   warning  Unexpected console statement  no-console
-  36:34  warning  Unexpected console statement  no-console
+  41:7  error  Parsing error: Identifier 'fs' has already been declared
 
 /workspace/code-quality-improvements.js
-  11:1  warning  Unexpected console statement  no-console
+  12:7  error  Parsing error: Identifier 'improvements' has already been declared
 
 /workspace/commit-and-push.js
   158:1  error  Parsing error: Unexpected character '#'
 
 /workspace/components/Footer.tsx
-  348:12  error  Parsing error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  98:15  error  Parsing error: Expression expected
 
 /workspace/components/Header.tsx
-  267:36  error  Parsing error: ')' expected
+  71:15  error  Parsing error: Expression expected
 
 /workspace/components/Layout.tsx
   8:20  error  Parsing error: Property or signature expected
@@ -139,13 +119,25 @@ Warning: React version not specified in eslint-plugin-react settings. See https:
 /workspace/ecosystem.working.js
   159:1  error  Parsing error: Unexpected token >>>
 
+/workspace/hooks/useDebounce.ts
+  18:0  error  Parsing error: Merge conflict marker encountered
+
 /workspace/hooks/useLocalStorage.ts
   1:268  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
   1:536  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
   1:543  error    Empty block statement              no-empty
 
+/workspace/hooks/useMessageChannelHandler.ts
+  37:0  error  Parsing error: Merge conflict marker encountered
+
+/workspace/hooks/useResponsive.ts
+  45:0  error  Parsing error: Merge conflict marker encountered
+
 /workspace/jest.setup.js
   32:1  error  Parsing error: Unexpected token >>>
+
+/workspace/lib_backup/db.ts
+  12:0  error  Parsing error: Merge conflict marker encountered
 
 /workspace/netlify/functions/edge-cache-warmer.js
   12:1  error  Parsing error: Unexpected token >>>
@@ -165,15 +157,31 @@ Warning: React version not specified in eslint-plugin-react settings. See https:
 /workspace/pages.old/index.tsx
   55:39  error  Parsing error: Identifier expected
 
+/workspace/pages/404.tsx
+   41:27  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+   41:48  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  125:24  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  125:40  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/workspace/pages/about.tsx
+   6:3  warning  'Brain' is defined but never used        @typescript-eslint/no-unused-vars
+  13:3  warning  'Zap' is defined but never used          @typescript-eslint/no-unused-vars
+  14:3  warning  'CheckCircle' is defined but never used  @typescript-eslint/no-unused-vars
+  15:3  warning  'ArrowRight' is defined but never used   @typescript-eslint/no-unused-vars
+  18:3  warning  'Building' is defined but never used     @typescript-eslint/no-unused-vars
+
 /workspace/pages/ai-services.tsx
-  219:48  error  Parsing error: ',' expected
+  49:26  error  Parsing error: ',' expected
 
 /workspace/pages/api-docs.tsx
-  150:60  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
-  150:73  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+    5:3   warning  'Code' is defined but never used                                 @typescript-eslint/no-unused-vars
+    6:3   warning  'ArrowRight' is defined but never used                           @typescript-eslint/no-unused-vars
+    7:3   warning  'CheckCircle' is defined but never used                          @typescript-eslint/no-unused-vars
+  153:60  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  153:73  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
 
 /workspace/pages/blog.tsx
-  86:9  error  Parsing error: JSX element 'section' has no corresponding closing tag
+  74:41  error  Parsing error: ',' expected
 
 /workspace/pages/careers.tsx
   168:19  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
@@ -210,7 +218,7 @@ Warning: React version not specified in eslint-plugin-react settings. See https:
   15:3  warning  'ExternalLink' is defined but never used  @typescript-eslint/no-unused-vars
 
 /workspace/pages/index.tsx
-  28:24  error  Parsing error: ',' expected
+  7:75  error  Parsing error: Expression expected
 
 /workspace/pages/industries.tsx
    15:3   warning  'Zap' is defined but never used                                  @typescript-eslint/no-unused-vars
@@ -252,10 +260,10 @@ Warning: React version not specified in eslint-plugin-react settings. See https:
   12:3  warning  'CreditCard' is defined but never used  @typescript-eslint/no-unused-vars
 
 /workspace/pages/it-services.tsx
-  384:122  error  Parsing error: Expression expected
+  39:26  error  Parsing error: ',' expected
 
 /workspace/pages/micro-saas.tsx
-  430:24  error  Parsing error: ',' expected
+  52:33  error  Parsing error: ',' expected
 
 /workspace/pages/news.tsx
   5:43  warning  'ExternalLink' is defined but never used  @typescript-eslint/no-unused-vars
@@ -292,7 +300,7 @@ Warning: React version not specified in eslint-plugin-react settings. See https:
   350:20  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
 
 /workspace/pages/services.tsx
-  34:31  error  Parsing error: ',' expected
+  14:31  error  Parsing error: ',' expected
 
 /workspace/pages/services/cloud.tsx
   4:25  warning  'Database' is defined but never used  @typescript-eslint/no-unused-vars
@@ -344,7 +352,7 @@ Warning: React version not specified in eslint-plugin-react settings. See https:
   216:20  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
 
 /workspace/pages/talent.tsx
-  33:85  error  Parsing error: Expression expected
+  7:27  error  Parsing error: ',' expected
 
 /workspace/pages/team.tsx
     4:39  warning  'Award' is defined but never used                                @typescript-eslint/no-unused-vars
@@ -368,12 +376,10 @@ Warning: React version not specified in eslint-plugin-react settings. See https:
   5:46  warning  'ArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
 
 /workspace/utils/api.ts
-  18:7  warning  'ApiClient' is defined but never used  @typescript-eslint/no-unused-vars
-  55:7  warning  Unexpected console statement           no-console
+  91:0  error  Parsing error: Merge conflict marker encountered
 
 /workspace/utils/messageChannelHandler.ts
-   7:17  warning  '_message' is defined but never used   @typescript-eslint/no-unused-vars
-  10:20  warning  '_callback' is defined but never used  @typescript-eslint/no-unused-vars
+  14:0  error  Parsing error: Merge conflict marker encountered
 
 /workspace/utils/next-link-shim.tsx
   10:21  error  Parsing error: Identifier expected
@@ -385,7 +391,7 @@ Warning: React version not specified in eslint-plugin-react settings. See https:
   2:42  error  Parsing error: ')' expected
 
 /workspace/utils/supabase/client.ts
-  7:12  warning  '_table' is defined but never used  @typescript-eslint/no-unused-vars
+  15:0  error  Parsing error: Merge conflict marker encountered
 
 /workspace/utils/testing-system.tsx
   10:4  error  Parsing error: Identifier expected
@@ -393,5 +399,5 @@ Warning: React version not specified in eslint-plugin-react settings. See https:
 /workspace/utils/validation.ts
   22:31  error  Parsing error: Identifier expected
 
-✖ 211 problems (70 errors, 141 warnings)
+✖ 205 problems (86 errors, 119 warnings)
 

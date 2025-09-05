@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from "../components/Layout";
 import { motion } from 'framer-motion';
 import { FileText, Download, Calendar, User, CheckCircle, ArrowRight } from 'lucide-react';
-
 export default function WhitepapersPage() {
   const whitepapers = [
     {
@@ -42,7 +41,6 @@ export default function WhitepapersPage() {
       pages: "52"
     }
   ];
-
   const whitepaperFeatures = [
     {
       title: "Expert Insights",
@@ -69,9 +67,8 @@ export default function WhitepapersPage() {
       features: ["Monthly Releases", "Trending Topics", "Latest Research"]
     }
   ];
-
   return (
-    <Layout 
+    <Layout
       title="White Papers - Zion Tech Group"
       description="Access our comprehensive collection of white papers on AI, cloud computing, cybersecurity, and digital transformation."
     >
@@ -89,13 +86,12 @@ export default function WhitepapersPage() {
                 White Papers
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Access our comprehensive collection of white papers on cutting-edge technologies. 
+                Access our comprehensive collection of white papers on cutting-edge technologies.
                 Deep insights from industry experts to help you stay ahead.
               </p>
             </motion.div>
           </div>
         </section>
-
         {/* Whitepapers Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -113,7 +109,6 @@ export default function WhitepapersPage() {
                 Download our latest research and insights on emerging technologies and industry trends.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {whitepapers.map((paper, index) => (
                 <motion.div
@@ -160,7 +155,6 @@ export default function WhitepapersPage() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -199,7 +193,6 @@ export default function WhitepapersPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-slate-600 to-blue-600 text-white">
           <div className="container mx-auto px-4 text-center">

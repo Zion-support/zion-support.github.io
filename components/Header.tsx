@@ -70,10 +70,6 @@ const contactInfo = {
   address: '364 E Main St STE 1008, Middletown, DE 19709'
 };
 
-export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -267,16 +263,16 @@ export default function Header() {
                   </AnimatePresence>
                 )}
               </div>
-            ))}
-          </div>
 
-          {/* CTA Button */}
-              <Link
-                href="/contact"
-                className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-              >
-                Get Started
-              </Link>
+              {/* CTA Button */}
+              <div className="ml-4">
+                <Link
+                  href="/contact"
+                  className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                >
+                  Get Started
+                </Link>
+              </div>
 
               {/* Mobile menu button */}
               <button
@@ -391,9 +387,9 @@ export default function Header() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
+      </div>
     </header>
   );
 }

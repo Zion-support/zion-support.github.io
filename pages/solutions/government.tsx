@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import { Shield, Users, FileText, Globe, Database, CheckCircle, ArrowRight } from 'lucide-react';
-
 const features = [
   {
     icon: Shield,
@@ -29,7 +28,6 @@ const features = [
     description: 'Government data analytics and business intelligence for informed decision making.'
   }
 ];
-
 const solutions = [
   'Citizen Portal Development',
   'Government Data Analytics',
@@ -42,10 +40,9 @@ const solutions = [
   'Compliance Management',
   'Public Sector Cloud Solutions'
 ];
-
 export default function GovernmentSolutionsPage() {
   return (
-    <Layout 
+    <Layout
       title="Government Solutions - Zion Tech Group"
       description="Transform government operations with our secure, compliant solutions including citizen portals, cybersecurity, document management, and open data platforms."
     >
@@ -61,8 +58,8 @@ export default function GovernmentSolutionsPage() {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform government operations with our secure, compliant technology solutions. 
-                From citizen portals to cybersecurity, we help government agencies deliver 
+                Transform government operations with our secure, compliant technology solutions.
+                From citizen portals to cybersecurity, we help government agencies deliver
                 better services while maintaining the highest security standards.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -77,7 +74,6 @@ export default function GovernmentSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -86,11 +82,10 @@ export default function GovernmentSolutionsPage() {
                 Comprehensive Government Technology Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our government solutions are designed to enhance citizen services, 
+                Our government solutions are designed to enhance citizen services,
                 improve operational efficiency, and ensure compliance with government regulations.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">
@@ -104,7 +99,6 @@ export default function GovernmentSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Solutions List */}
         <section className="py-20 bg-gray-800/30">
           <div className="container mx-auto px-4">
@@ -123,7 +117,6 @@ export default function GovernmentSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Compliance Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -133,11 +126,10 @@ export default function GovernmentSolutionsPage() {
                   Government Compliant & Secure
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  All our government solutions are built with security and compliance in mind, 
+                  All our government solutions are built with security and compliance in mind,
                   ensuring your systems meet the highest government standards and regulations.
                 </p>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -164,7 +156,6 @@ export default function GovernmentSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -173,7 +164,7 @@ export default function GovernmentSolutionsPage() {
                 Ready to Transform Government Services?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Let our government technology experts help you implement solutions that 
+                Let our government technology experts help you implement solutions that
                 enhance citizen services while maintaining the highest security standards.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

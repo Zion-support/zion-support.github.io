@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Heart, 
-  Brain, 
-  Shield, 
-  Users, 
-  BarChart3, 
+import {
+  Heart,
+  Brain,
+  Shield,
+  Users,
+  BarChart3,
   CheckCircle,
   ArrowRight,
   Phone,
@@ -19,7 +19,6 @@ import {
   FileText
 } from 'lucide-react';
 import Layout from '../../components/Layout';
-
 const services = [
   {
     title: 'AI-Powered Medical Diagnostics',
@@ -88,7 +87,6 @@ const services = [
     ]
   }
 ];
-
 const benefits = [
   {
     title: 'Improved Patient Outcomes',
@@ -111,7 +109,6 @@ const benefits = [
     icon: Shield
   }
 ];
-
 const caseStudies = [
   {
     title: 'AI Diagnostic System Implementation',
@@ -129,10 +126,9 @@ const caseStudies = [
     results: ['15 facilities connected', '80% workflow improvement', '100% data accuracy']
   }
 ];
-
 export default function HealthcarePage() {
   return (
-    <Layout 
+    <Layout
       title="Healthcare Technology Solutions - Zion Tech Group"
       description="Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, EHR systems, and medical imaging solutions."
       keywords="healthcare technology, medical AI, telemedicine, EHR systems, medical imaging, healthcare analytics"
@@ -145,7 +141,6 @@ export default function HealthcarePage() {
             <div className="absolute top-40 right-10 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-rose-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -163,7 +158,7 @@ export default function HealthcarePage() {
                 </h1>
               </div>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Revolutionizing healthcare delivery with cutting-edge AI, telemedicine, and digital health solutions. 
+                Revolutionizing healthcare delivery with cutting-edge AI, telemedicine, and digital health solutions.
                 Improve patient outcomes, enhance efficiency, and ensure regulatory compliance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -177,7 +172,6 @@ export default function HealthcarePage() {
             </motion.div>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -191,11 +185,10 @@ export default function HealthcarePage() {
                 Healthcare Technology Services
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive technology solutions designed specifically for healthcare organizations, 
+                Comprehensive technology solutions designed specifically for healthcare organizations,
                 from hospitals to private practices.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
@@ -208,10 +201,8 @@ export default function HealthcarePage() {
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                  
                   <ul className="space-y-3">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -225,7 +216,6 @@ export default function HealthcarePage() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -239,11 +229,10 @@ export default function HealthcarePage() {
                 Why Choose Our Healthcare Solutions?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our healthcare technology solutions deliver measurable improvements in patient care, 
+                Our healthcare technology solutions deliver measurable improvements in patient care,
                 operational efficiency, and regulatory compliance.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -263,7 +252,6 @@ export default function HealthcarePage() {
             </div>
           </div>
         </section>
-
         {/* Case Studies Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -277,11 +265,10 @@ export default function HealthcarePage() {
                 Healthcare Success Stories
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Real results from healthcare organizations that have transformed their operations 
+                Real results from healthcare organizations that have transformed their operations
                 with our technology solutions.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {caseStudies.map((study, index) => (
                 <motion.div
@@ -293,7 +280,6 @@ export default function HealthcarePage() {
                 >
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">{study.description}</p>
-                  
                   <div className="space-y-2">
                     {study.results.map((result, resultIndex) => (
                       <div key={resultIndex} className="flex items-center text-sm text-green-600">
@@ -307,7 +293,6 @@ export default function HealthcarePage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-red-600 to-pink-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -320,7 +305,7 @@ export default function HealthcarePage() {
                 Ready to Transform Healthcare?
               </h2>
               <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
-                Let our healthcare technology experts help you implement solutions that improve 
+                Let our healthcare technology experts help you implement solutions that improve
                 patient care and operational efficiency.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

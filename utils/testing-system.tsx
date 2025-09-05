@@ -1,14 +1,12 @@
 import "@testing-library/jest-dom";
-
 // Type definition for HTMLElement
 interface HTMLElement {
   click(): void;
 }
-
 export class TestingSystem {
   static async testUserInteraction(
-    element: HTMLElement,
-    action: 'click' | 'type' | 'hover'
+    "element": HTMLElement,
+    "action": 'click' | 'type' | 'hover'
   ) {
     switch (action) {
       case 'click':
@@ -25,3 +23,4 @@ export class TestingSystem {
     }
   }
 }
+import "@testing-library/jest-dom"; interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: 'click' | 'type' | 'hover' ) { switch (action) { case 'click': element.click(); break; case 'type': break; case 'hover': break; default: break} } }

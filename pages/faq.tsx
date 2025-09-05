@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus, HelpCircle, Search } from 'lucide-react';
-
 const faqs = [
   {
     category: "General",
@@ -73,42 +72,35 @@ const faqs = [
     ]
   }
 ];
-
 export default function FAQPage() {
   const [openItems, setOpenItems] = useState<number[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
-
   const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
+    setOpenItems(prev =>
+      prev.includes(index)
         ? prev.filter(i => i !== index)
         : [...prev, index]
     );
   };
-
   const categories = ['All', ...faqs.map(faq => faq.category)];
-  
   const allQuestions = faqs.flatMap(faq => faq.questions);
-  const filteredQuestions = allQuestions.filter(q => 
+  const filteredQuestions = allQuestions.filter(q =>
     q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
     q.answer.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
-  const displayQuestions = selectedCategory === 'All' 
-    ? filteredQuestions 
+  const displayQuestions = selectedCategory === 'All'
+    ? filteredQuestions
     : filteredQuestions.filter((_, index) => {
         const categoryIndex = faqs.findIndex(faq => faq.category === selectedCategory);
         return faqs[categoryIndex]?.questions.includes(allQuestions[index]);
       });
-
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>FAQ - Zion Tech Group</title>
         <meta name="description" content="Frequently asked questions about Zion Tech Group's services, pricing, and support." />
       </Head>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -122,7 +114,6 @@ export default function FAQPage() {
           </div>
         </div>
       </section>
-
       {/* Search and Filter */}
       <section className="py-12">
         <div className="container mx-auto px-4">
@@ -138,7 +129,6 @@ export default function FAQPage() {
                 className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
-
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2 mb-8">
               {categories.map((category) => (
@@ -155,7 +145,6 @@ export default function FAQPage() {
                 </button>
               ))}
             </div>
-
             {/* FAQ Items */}
             <div className="space-y-4">
               {displayQuestions.map((faq, index) => (
@@ -177,7 +166,6 @@ export default function FAQPage() {
                       <Plus className="w-5 h-5 text-blue-600" />
                     )}
                   </button>
-                  
                   <AnimatePresence>
                     {openItems.includes(index) && (
                       <motion.div
@@ -196,7 +184,6 @@ export default function FAQPage() {
                 </motion.div>
               ))}
             </div>
-
             {/* Contact CTA */}
             <div className="mt-12 text-center">
               <div className="bg-blue-50 rounded-lg p-8">

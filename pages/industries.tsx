@@ -2,17 +2,17 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Heart, 
-  Building, 
-  ShoppingCart, 
-  Settings, 
-  BookOpen, 
-  Shield, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Zap, 
+import {
+  Heart,
+  Building,
+  ShoppingCart,
+  Settings,
+  BookOpen,
+  Shield,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Zap,
   Users,
   Globe,
   BarChart3,
@@ -20,7 +20,6 @@ import {
   Network,
   Cloud
 } from 'lucide-react';
-
 const industries = [
   {
     title: 'Healthcare',
@@ -155,7 +154,6 @@ const industries = [
     pricing: 'Starting at $25,000/project'
   }
 ];
-
 const technologies = [
   { name: 'AI & Machine Learning', icon: Brain, description: 'Advanced AI solutions for every industry' },
   { name: 'Cloud Infrastructure', icon: Cloud, description: 'Scalable and secure cloud solutions' },
@@ -164,7 +162,6 @@ const technologies = [
   { name: 'IoT & Edge Computing', icon: Network, description: 'Connected and intelligent systems' },
   { name: 'Blockchain', icon: Globe, description: 'Secure and transparent solutions' }
 ];
-
 export default function IndustriesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -173,14 +170,12 @@ export default function IndustriesPage() {
         <meta name="description" content="Industry-specific technology solutions for healthcare, finance, e-commerce, manufacturing, education, and government sectors." />
         <meta name="keywords" content="industry solutions, healthcare AI, fintech, e-commerce technology, manufacturing automation, education technology, government solutions" />
       </Head>
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
           <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
         </div>
-
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -208,7 +203,6 @@ export default function IndustriesPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Industries Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -226,7 +220,6 @@ export default function IndustriesPage() {
               We understand the unique challenges and opportunities in each industry. Our solutions are designed to address specific sector needs while driving innovation and growth.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {industries.map((industry, index) => {
               const IconComponent = industry.icon;
@@ -243,15 +236,12 @@ export default function IndustriesPage() {
                   <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
                     {industry.title}
                   </h3>
-                  
                   <p className="text-gray-600 mb-6 leading-relaxed">
                     {industry.description}
                   </p>
-
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Services:</h4>
                     <ul className="space-y-2">
@@ -263,7 +253,6 @@ export default function IndustriesPage() {
                       ))}
                     </ul>
                   </div>
-
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
                     <ul className="space-y-2">
@@ -275,13 +264,11 @@ export default function IndustriesPage() {
                       ))}
                     </ul>
                   </div>
-
                   <div className="mb-6 p-4 bg-gray-50 rounded-lg">
                     <p className="text-sm text-gray-600 italic">
                       <strong>Case Study:</strong> {industry.caseStudy}
                     </p>
                   </div>
-
                   <div className="flex items-center justify-between">
                     <span className="text-lg font-semibold text-blue-600">{industry.pricing}</span>
                     <Link
@@ -298,7 +285,6 @@ export default function IndustriesPage() {
           </div>
         </div>
       </section>
-
       {/* Technologies Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -316,7 +302,6 @@ export default function IndustriesPage() {
               We leverage cutting-edge technologies to deliver innovative solutions across all industries.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech, index) => {
               const IconComponent = tech.icon;
@@ -344,7 +329,6 @@ export default function IndustriesPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">

@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import { ShoppingCart, Users, BarChart, Smartphone, Package, CheckCircle, ArrowRight } from 'lucide-react';
-
 const features = [
   {
     icon: ShoppingCart,
@@ -29,7 +28,6 @@ const features = [
     description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'
   }
 ];
-
 const solutions = [
   'E-commerce Platform Development',
   'Mobile Commerce Applications',
@@ -42,10 +40,9 @@ const solutions = [
   'Omnichannel Solutions',
   'Retail Mobile Applications'
 ];
-
 export default function RetailSolutionsPage() {
   return (
-    <Layout 
+    <Layout
       title="Retail Solutions - Zion Tech Group"
       description="Transform retail operations with our comprehensive e-commerce, inventory management, customer analytics, and omnichannel solutions."
     >
@@ -61,8 +58,8 @@ export default function RetailSolutionsPage() {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Revolutionize retail operations with our comprehensive technology solutions. 
-                From e-commerce platforms to inventory management, we help retailers deliver 
+                Revolutionize retail operations with our comprehensive technology solutions.
+                From e-commerce platforms to inventory management, we help retailers deliver
                 exceptional customer experiences and optimize business operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -77,7 +74,6 @@ export default function RetailSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -86,11 +82,10 @@ export default function RetailSolutionsPage() {
                 Comprehensive Retail Technology Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our retail solutions are designed to enhance customer experience, 
+                Our retail solutions are designed to enhance customer experience,
                 optimize operations, and drive business growth across all channels.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">
@@ -104,7 +99,6 @@ export default function RetailSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Solutions List */}
         <section className="py-20 bg-gray-800/30">
           <div className="container mx-auto px-4">
@@ -123,7 +117,6 @@ export default function RetailSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Omnichannel Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -133,11 +126,10 @@ export default function RetailSolutionsPage() {
                   Omnichannel Retail Experience
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Create seamless shopping experiences across all touchpoints with our 
+                  Create seamless shopping experiences across all touchpoints with our
                   integrated omnichannel retail solutions.
                 </p>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -164,7 +156,6 @@ export default function RetailSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -173,7 +164,7 @@ export default function RetailSolutionsPage() {
                 Ready to Transform Retail Operations?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Let our retail technology experts help you implement solutions that 
+                Let our retail technology experts help you implement solutions that
                 enhance customer experience and drive business growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

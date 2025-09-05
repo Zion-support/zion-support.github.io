@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  CheckCircle, 
+import {
+  Mail,
+  CheckCircle,
   ArrowRight,
   Users,
   Calendar,
@@ -15,7 +15,6 @@ import {
   BarChart3
 } from 'lucide-react';
 import Layout from '../components/Layout';
-
 const benefits = [
   {
     title: 'Exclusive Content',
@@ -38,7 +37,6 @@ const benefits = [
     icon: BarChart3
   }
 ];
-
 const newsletterTopics = [
   'AI & Machine Learning',
   'Cloud Computing',
@@ -49,20 +47,17 @@ const newsletterTopics = [
   'IoT Solutions',
   'Industry News'
 ];
-
 export default function NewsletterPage() {
   const [email, setEmail] = useState('');
   const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
   const [isSubscribed, setIsSubscribed] = useState(false);
-
   const handleTopicToggle = (topic: string) => {
-    setSelectedTopics(prev => 
-      prev.includes(topic) 
+    setSelectedTopics(prev =>
+      prev.includes(topic)
         ? prev.filter(t => t !== topic)
         : [...prev, topic]
     );
   };
-
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the subscription to your backend
@@ -70,9 +65,8 @@ export default function NewsletterPage() {
     setEmail('');
     setSelectedTopics([]);
   };
-
   return (
-    <Layout 
+    <Layout
       title="Newsletter - Zion Tech Group"
       description="Subscribe to our newsletter for exclusive content, webinar invitations, and the latest technology insights."
       keywords="newsletter, technology updates, industry insights, exclusive content, webinars"
@@ -85,7 +79,6 @@ export default function NewsletterPage() {
             <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -103,13 +96,12 @@ export default function NewsletterPage() {
                 </h1>
               </div>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Subscribe to our newsletter and get exclusive access to industry insights, 
+                Subscribe to our newsletter and get exclusive access to industry insights,
                 technology updates, and expert-led webinars delivered to your inbox.
               </p>
             </motion.div>
           </div>
         </section>
-
         {/* Subscription Form */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -146,7 +138,6 @@ export default function NewsletterPage() {
                   <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
                     Subscribe to Our Newsletter
                   </h2>
-                  
                   <form onSubmit={handleSubscribe} className="space-y-6">
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
@@ -162,7 +153,6 @@ export default function NewsletterPage() {
                         placeholder="Enter your email address"
                       />
                     </div>
-
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-3">
                         Topics of Interest (Select all that apply)
@@ -184,7 +174,6 @@ export default function NewsletterPage() {
                         ))}
                       </div>
                     </div>
-
                     <button
                       type="submit"
                       className="w-full flex items-center justify-center px-6 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 font-medium group"
@@ -199,7 +188,6 @@ export default function NewsletterPage() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -213,11 +201,10 @@ export default function NewsletterPage() {
                 What You'll Get
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our newsletter delivers valuable content directly to your inbox, 
+                Our newsletter delivers valuable content directly to your inbox,
                 helping you stay ahead of technology trends and industry developments.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -237,7 +224,6 @@ export default function NewsletterPage() {
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -269,7 +255,6 @@ export default function NewsletterPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -282,7 +267,7 @@ export default function NewsletterPage() {
                 Ready to Stay Updated?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Join thousands of professionals who rely on our newsletter for 
+                Join thousands of professionals who rely on our newsletter for
                 the latest technology insights and industry updates.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
