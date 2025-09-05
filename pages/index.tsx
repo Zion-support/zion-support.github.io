@@ -34,7 +34,11 @@ const services = [
 
 export default function HomePage() {
   return (
+<<<<<<< HEAD
     <MainLayout>
+=======
+    <Layout>
+>>>>>>> cursor/website-audit-and-update-with-deployment-090e
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 
       {/* Hero Section */}
@@ -247,6 +251,10 @@ export default function HomePage() {
         </div>
       </section>
       </div>
+<<<<<<< HEAD
     </MainLayout>
+=======
+    </Layout>
+>>>>>>> cursor/website-audit-and-update-with-deployment-090e
   );
 }
