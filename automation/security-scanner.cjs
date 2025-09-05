@@ -12,16 +12,16 @@ class SecurityScanner {
       securityScore: 0,
       vulnerabilities: [],
       recommendations: [],
-      metrics: {}
+      metrics: {},
     };
   }
 
   async scanFiles() {
     console.log('🔍 Scanning files for security issues...');
-    
+
     const filesToScan = this.findFilesToScan();
     this.results.metrics.totalFilesScanned = filesToScan.length;
-    
+
     for (const file of filesToScan) {
       await this.scanFile(file);
     }
@@ -30,23 +30,30 @@ class SecurityScanner {
   findFilesToScan() {
     const files = [];
     const extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
-    
-    const scanDirectory = (dir) => {
+
+    const scanDirectory = dir => {
       if (!fs.existsSync(dir)) return;
-      
+
       const items = fs.readdirSync(dir);
       items.forEach(item => {
         const itemPath = path.join(dir, item);
         const stats = fs.statSync(itemPath);
-        
-        if (stats.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+
+        if (
+          stats.isDirectory() &&
+          !item.startsWith('.') &&
+          item !== 'node_modules'
+        ) {
           scanDirectory(itemPath);
-        } else if (stats.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        } else if (
+          stats.isFile() &&
+          extensions.some(ext => item.endsWith(ext))
+        ) {
           files.push(itemPath);
         }
       });
     };
-    
+
     scanDirectory(process.cwd());
     return files;
   }
@@ -54,13 +61,12 @@ class SecurityScanner {
   async scanFile(filePath) {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
-      
+
       // Check for common security issues
       this.checkForHardcodedSecrets(content, filePath);
       this.checkForSQLInjection(content, filePath);
       this.checkForXSS(content, filePath);
       this.checkForInsecureDependencies(content, filePath);
-      
     } catch (error) {
       console.error(`Error scanning file ${filePath}:`, error.message);
     }
@@ -71,9 +77,9 @@ class SecurityScanner {
       /password\s*=\s*['"][^'"]+['"]/gi,
       /api[_-]?key\s*=\s*['"][^'"]+['"]/gi,
       /secret\s*=\s*['"][^'"]+['"]/gi,
-      /token\s*=\s*['"][^'"]+['"]/gi
+      /token\s*=\s*['"][^'"]+['"]/gi,
     ];
-    
+
     secretPatterns.forEach(pattern => {
       const matches = content.match(pattern);
       if (matches) {
@@ -82,7 +88,7 @@ class SecurityScanner {
           severity: 'high',
           file: filePath,
           description: 'Potential hardcoded secret detected',
-          matches: matches
+          matches: matches,
         });
       }
     });
@@ -91,9 +97,9 @@ class SecurityScanner {
   checkForSQLInjection(content, filePath) {
     const sqlPatterns = [
       /query\s*\(\s*['"][^'"]*\+[^'"]*['"]/gi,
-      /execute\s*\(\s*['"][^'"]*\+[^'"]*['"]/gi
+      /execute\s*\(\s*['"][^'"]*\+[^'"]*['"]/gi,
     ];
-    
+
     sqlPatterns.forEach(pattern => {
       const matches = content.match(pattern);
       if (matches) {
@@ -102,7 +108,7 @@ class SecurityScanner {
           severity: 'high',
           file: filePath,
           description: 'Potential SQL injection vulnerability',
-          matches: matches
+          matches: matches,
         });
       }
     });
@@ -112,9 +118,9 @@ class SecurityScanner {
     const xssPatterns = [
       /dangerouslySetInnerHTML/gi,
       /innerHTML\s*=/gi,
-      /document\.write/gi
+      /document\.write/gi,
     ];
-    
+
     xssPatterns.forEach(pattern => {
       const matches = content.match(pattern);
       if (matches) {
@@ -123,7 +129,7 @@ class SecurityScanner {
           severity: 'medium',
           file: filePath,
           description: 'Potential XSS vulnerability',
-          matches: matches
+          matches: matches,
         });
       }
     });
@@ -132,15 +138,14 @@ class SecurityScanner {
   checkForInsecureDependencies(content, filePath) {
     if (filePath.endsWith('package.json')) {
       const packageJson = JSON.parse(content);
-      const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
-      
+      const dependencies = {
+        ...packageJson.dependencies,
+        ...packageJson.devDependencies,
+      };
+
       // Check for known vulnerable packages
-      const vulnerablePackages = [
-        'lodash',
-        'moment',
-        'jquery'
-      ];
-      
+      const vulnerablePackages = ['lodash', 'moment', 'jquery'];
+
       vulnerablePackages.forEach(pkg => {
         if (dependencies[pkg]) {
           this.results.vulnerabilities.push({
@@ -148,7 +153,7 @@ class SecurityScanner {
             severity: 'medium',
             file: filePath,
             description: `Potentially vulnerable dependency: ${pkg}`,
-            package: pkg
+            package: pkg,
           });
         }
       });
@@ -157,46 +162,53 @@ class SecurityScanner {
 
   calculateSecurityScore() {
     const totalVulnerabilities = this.results.vulnerabilities.length;
-    const highSeverityVulns = this.results.vulnerabilities.filter(v => v.severity === 'high').length;
-    const mediumSeverityVulns = this.results.vulnerabilities.filter(v => v.severity === 'medium').length;
-    
+    const highSeverityVulns = this.results.vulnerabilities.filter(
+      v => v.severity === 'high'
+    ).length;
+    const mediumSeverityVulns = this.results.vulnerabilities.filter(
+      v => v.severity === 'medium'
+    ).length;
+
     let score = 100;
     score -= highSeverityVulns * 30;
     score -= mediumSeverityVulns * 15;
-    score -= (totalVulnerabilities - highSeverityVulns - mediumSeverityVulns) * 5;
-    
+    score -=
+      (totalVulnerabilities - highSeverityVulns - mediumSeverityVulns) * 5;
+
     this.results.securityScore = Math.max(0, score);
   }
 
   async generateRecommendations() {
     console.log('💡 Generating security recommendations...');
-    
-    const highSeverityVulns = this.results.vulnerabilities.filter(v => v.severity === 'high');
-    
+
+    const highSeverityVulns = this.results.vulnerabilities.filter(
+      v => v.severity === 'high'
+    );
+
     if (highSeverityVulns.length > 0) {
       this.results.recommendations.push({
         type: 'immediate_fix',
         priority: 'critical',
-        description: 'Fix high severity vulnerabilities immediately'
+        description: 'Fix high severity vulnerabilities immediately',
       });
     }
-    
+
     this.results.recommendations.push({
       type: 'security_audit',
       priority: 'high',
-      description: 'Run regular security audits with npm audit'
+      description: 'Run regular security audits with npm audit',
     });
-    
+
     this.results.recommendations.push({
       type: 'dependency_update',
       priority: 'medium',
-      description: 'Keep dependencies updated to latest secure versions'
+      description: 'Keep dependencies updated to latest secure versions',
     });
-    
+
     this.results.recommendations.push({
       type: 'code_review',
       priority: 'medium',
-      description: 'Implement security-focused code review process'
+      description: 'Implement security-focused code review process',
     });
   }
 
@@ -205,7 +217,7 @@ class SecurityScanner {
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
-    
+
     const reportPath = path.join(logsDir, `security-scan-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
     console.log(`📊 Report saved to: ${reportPath}`);
@@ -213,13 +225,15 @@ class SecurityScanner {
 
   async run() {
     console.log('🚀 Starting security scan...');
-    
+
     await this.scanFiles();
     this.calculateSecurityScore();
     await this.generateRecommendations();
     await this.saveReport();
-    
-    console.log(`✅ Security scan completed! Score: ${this.results.securityScore}/100`);
+
+    console.log(
+      `✅ Security scan completed! Score: ${this.results.securityScore}/100`
+    );
   }
 }
 

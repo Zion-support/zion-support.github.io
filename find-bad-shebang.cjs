@@ -4,14 +4,22 @@ const path = require('path');
 function findBadShebangs(dir) {
   const files = fs.readdirSync(dir);
   let found = [];
-  
+
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+
+    if (
+      stat.isDirectory() &&
+      !file.startsWith('.') &&
+      file !== 'node_modules'
+    ) {
       found = found.concat(findBadShebangs(filePath));
-    } else if (file.endsWith('.js') || file.endsWith('.cjs') || file.endsWith('.mjs')) {
+    } else if (
+      file.endsWith('.js') ||
+      file.endsWith('.cjs') ||
+      file.endsWith('.mjs')
+    ) {
       try {
         const content = fs.readFileSync(filePath, 'utf8');
         const firstLine = content.split('\n')[0];
@@ -25,7 +33,7 @@ function findBadShebangs(dir) {
       }
     }
   }
-  
+
   return found;
 }
 
