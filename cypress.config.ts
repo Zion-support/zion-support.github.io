@@ -1,7 +1,7 @@
-import { defineConfig } from 'cypress',
-,
-export default defineConfig({,
-  e2e: {,
+import { defineConfig } from 'cypress',;
+,;
+export default defineConfig({,;
+  e2e: {,;
     baseUrl: 'http://localhost:3000',;
     supportFile: 'cypress/support/e2e.ts',;
     specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',;
@@ -13,12 +13,12 @@ export default defineConfig({,
     requestTimeout: 10000,;
     responseTimeout: 10000,;
     pageLoadTimeout: 30000,;
-    retries: {,
+    retries: {,;
       runMode: 2,;
-      openMode: 0,
+      openMode: 0,;
     ,},;
-    setupNodeEvents(on, config) {,
-      // implement node event listeners here,
+    setupNodeEvents(on, config) {,;
+      // implement node event listeners here,;
     },;
   },;
-}),
+}),;

@@ -1,34 +1,34 @@
-import { defineConfig } from "vite",
-import react from "@vitejs/plugin-react",
-,
-export default defineConfig({,
+import { defineConfig } from "vite",;
+import react from "@vitejs/plugin-react",;
+,;
+export default defineConfig({,;
   plugins: [react()],;
-  server: {,
+  server: {,;
     port: 3000,;
     open: true,;
-    host: true,
+    host: true,;
   ,},;
-  build: {,
+  build: {,;
     outDir: "dist",;
     sourcemap: true,;
     minify: "terser",;
-    rollupOptions: {,
-      output: {,
-        manualChunks: {,
+    rollupOptions: {,;
+      output: {,;
+        manualChunks: {,;
           vendor: ["react", "react-dom"],;
           ui: ["framer-motion", "lucide-react"],;
-          router: ["react-router-dom"],
+          router: ["react-router-dom"],;
         ,};
       };
     },;
-    terserOptions: {,
-      compress: {,
+    terserOptions: {,;
+      compress: {,;
         drop_console: true,;
-        drop_debugger: true,
+        drop_debugger: true,;
       ,};
     };
   },;
-  optimizeDeps: {,
-    include: ["react", "react-dom", "framer-motion", "lucide-react"],
+  optimizeDeps: {,;
+    include: ["react", "react-dom", "framer-motion", "lucide-react"],;
   };
-}),
+}),;

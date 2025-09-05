@@ -1,6 +1,6 @@
-// Content Security Policy configuration,
-export const cspConfig = {,
-  directives: {,
+// Content Security Policy configuration,;
+export const cspConfig = {,;
+  directives: {,;
     defaultSrc: ["'self'"],;
     styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],;
     fontSrc: ["'self'", "https://fonts.gstatic.com"],;
@@ -11,6 +11,6 @@ export const cspConfig = {,
     objectSrc: ["'none'"],;
     baseUri: ["'self'"],;
     formAction: ["'self'"],;
-    upgradeInsecureRequests: [],
+    upgradeInsecureRequests: [],;
   ,};
 };
