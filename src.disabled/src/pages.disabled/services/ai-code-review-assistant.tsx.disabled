@@ -2,65 +2,61 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { ;
-  Code, Brain, Shield, Zap, CheckCircle, Star, ArrowRight, ;
-  Users, Clock, BarChart3, GitBranch, Bug, FileText, ;
-  ExternalLink, Phone, Mail, MapPin, Globe;,
+  Code, Brain, Shield, Zap, CheckCircle, Star, ArrowRight,
+  Users, Clock, BarChart3, GitBranch, Bug, FileText,
+  ExternalLink, Phone, Mail, MapPin, Globe;
 } from "lucide-react";
 
 export default function AICodeReviewAssistant() {;
-  const features = [;
-    "AI-Powered Code Analysis",;
-    "Automated Security Scanning", ;
-    "Performance Optimization Suggestions",;
-    "Code Quality Metrics",;
-    "Real-time Collaboration",;
-    "Integration with Git Platforms",;
-    "Custom Rule Configuration",;
-    "Automated Testing Recommendations";
-  ];
+  const features = [ "AI-Powered Code Analysis",
+    "Automated Security Scanning",
+    "Performance Optimization Suggestions",
+    "Code Quality Metrics",
+    "Real-time Collaboration",
+    "Integration with Git Platforms",
+    "Custom Rule Configuration",
+    "Automated Testing Recommendations" ];
 
-  const benefits = [;
-    "Reduce code review time by 70%",;
-    "Catch 95% of security vulnerabilities",;
-    "Improve code quality by 60%",;
-    "Accelerate development cycles",;
-    "Reduce production bugs by 80%",;
-    "Enhance team collaboration";
-  ];
+  const benefits = [ "Reduce code review time by 70%",
+    "Catch 95% of security vulnerabilities",
+    "Improve code quality by 60%",
+    "Accelerate development cycles",
+    "Reduce production bugs by 80%",
+    "Enhance team collaboration" ];
 
   const pricing = [;
     {;
-      name: "Starter",;
-      price: "$299/month",;
-      details: ["Up to 5 developers", "Basic AI analysis", "GitHub integration", "Email support", "10,000 lines/month"];,
-},;
+      name: "Starter",
+      price: "$299/month",
+      details: ["Up to 5 developers", "Basic AI analysis", "GitHub integration", "Email support", "10,000 lines/month"];
+},
     {;
-      name: "Professional", ;
-      price: "$799/month",;
-      details: ["Up to 25 developers", "Advanced AI analysis", "Multi-platform integration", "Priority support", "100,000 lines/month", "Custom rules"];,
-},;
+      name: "Professional",
+      price: "$799/month",
+      details: ["Up to 25 developers", "Advanced AI analysis", "Multi-platform integration", "Priority support", "100,000 lines/month", "Custom rules"];
+},
     {;
-      name: "Enterprise",;
-      price: "$1,999/month", ;
-      details: ["Unlimited developers", "Full AI suite", "All integrations", "24/7 support", "Unlimited lines", "Custom training", "SLA guarantee"];,
+      name: "Enterprise",
+      price: "$1,999/month",
+      details: ["Unlimited developers", "Full AI suite", "All integrations", "24/7 support", "Unlimited lines", "Custom training", "SLA guarantee"];
 }
   ];
 
   const useCases = [;
     {;
-      title: "Startup Development Teams",;
-      description: "Accelerate development with AI-powered code reviews that catch issues before they reach production.",;
-      icon: Users;,
-},;
+      title: "Startup Development Teams",
+      description: "Accelerate development with AI-powered code reviews that catch issues before they reach production.",
+      icon: Users;
+},
     {;
-      title: "Enterprise Security",;
-      description: "Ensure code security compliance with automated vulnerability detection and security best practices.",;
-      icon: Shield;,
-},;
+      title: "Enterprise Security",
+      description: "Ensure code security compliance with automated vulnerability detection and security best practices.",
+      icon: Shield;
+},
     {;
-      title: "DevOps Integration",;
-      description: "Seamlessly integrate with CI/CD pipelines for automated code quality checks and deployment gates.",;
-      icon: GitBranch;,
+      title: "DevOps Integration",
+      description: "Seamlessly integrate with CI/CD pipelines for automated code quality checks and deployment gates.",
+      icon: GitBranch;
 }
   ];
 
@@ -85,7 +81,7 @@ export default function AICodeReviewAssistant() {;
               AI Code Review Assistant;
             </h1>;
             <p className="text-blue-100 text-xl max-w-3xl mx-auto mb-8">;
-              Revolutionize your development workflow with AI-powered code analysis that catches bugs, ;
+              Revolutionize your development workflow with AI-powered code analysis that catches bugs,
               security vulnerabilities, and performance issues before they reach production.;
             </p>;
             <div className="flex flex-wrap justify-center gap-4">;
@@ -105,7 +101,6 @@ export default function AICodeReviewAssistant() {;
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced AI Features</h2>;
             <p className="text-gray-600 text-lg">Powered by cutting-edge machine learning algorithms</p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {features.map((feature, index) => (;
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">;
@@ -135,7 +130,6 @@ export default function AICodeReviewAssistant() {;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Results</h2>;
               <p className="text-gray-600 text-lg">Join thousands of development teams achieving better code quality</p>;
             </div>;
-            ;
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {benefits.map((benefit, index) => (;
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm">;
@@ -155,7 +149,6 @@ export default function AICodeReviewAssistant() {;
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>;
             <p className="text-gray-600 text-lg">Ideal solutions for different development scenarios</p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-3 gap-8">;
             {useCases.map((useCase, index) => (;
               <div key={index} className="text-center">;
@@ -176,7 +169,6 @@ export default function AICodeReviewAssistant() {;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Competitive Pricing</h2>;
               <p className="text-gray-600 text-lg">Choose the plan that fits your team size and needs</p>;
             </div>;
-            ;
             <div className="grid md:grid-cols-3 gap-8">;
               {pricing.map((tier, index) => (;
                 <div key={index} className={`bg-white rounded-xl p-8 shadow-lg ${tier.name === 'Professional' ? 'ring-2 ring-blue-500 relative' : ''}`}>;
@@ -235,5 +227,5 @@ export default function AICodeReviewAssistant() {;
         </section>;
       </div>;
     </>;
-  );,
+  );
 }

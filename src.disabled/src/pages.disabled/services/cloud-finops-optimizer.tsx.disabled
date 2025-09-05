@@ -1,22 +1,21 @@
 import React from 'react';
 import { ;
-  Cloud, ;
-  TrendingUp, ;
-  DollarSign, ;
-  BarChart3, ;
-  Zap, ;
-  Shield, ;
-  CheckCircle,;
-  ArrowRight,;
-  Star,;
-  Rocket,;
-  Target,;
-  Activity,;
-  PieChart,;
-  AlertTriangle,;
-  Lightbulb;,
+  Cloud,
+  TrendingUp,
+  DollarSign,
+  BarChart3,
+  Zap,
+  Shield,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Rocket,
+  Target,
+  Activity,
+  PieChart,
+  AlertTriangle,
+  Lightbulb;
 } from 'lucide-react';
-;
 export default function CloudFinOpsOptimizerPage() {;
   return (;
     <div className="min-h-screen bg-zion-slate-dark text-white">;
@@ -266,5 +265,5 @@ export default function CloudFinOpsOptimizerPage() {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 }

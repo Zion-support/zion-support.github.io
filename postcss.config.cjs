@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 module.exports = {
   plugins: {
     tailwindcss: {},
@@ -8,3 +9,10 @@ module.exports = {
 =======
 };
 >>>>>>> main
+=======
+module.exports = {;
+  plugins: {;
+    tailwindcss: {},
+
+}}
+>>>>>>> origin/automation-fixes

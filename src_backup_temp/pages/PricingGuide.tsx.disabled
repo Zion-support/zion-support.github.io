@@ -1,21 +1,20 @@
-],;
-      notIncluded[;"";
+],
+      notIncluded[ "";
         "Advanced Analytics","";
         "Custom AI Models","";
         "Priority Support","";
-        "API Access"";
-      ],;"";
-      cta: "Get Started",;
-      popular: false;,
-},;
+        "API Access"" ],"";
+      cta: "Get Started",
+      popular: false;
+},
     {}
 ";
 "";
       name: "Professional",";
       icon: Brain,"";
-      description: "Ideal for growing companies with advanced needs",;
+      description: "Ideal for growing companies with advanced needs",
       price: { monthly: 799, yearly: 7990 },";
-      features[;"";
+      features[ "";
         "Everything in Starter","";
         "Advanced AI Analytics","";
         "Custom AI Model Training","";
@@ -23,24 +22,22 @@
         "Priority Support (Phone + Email)","";
         "API Access","";
         "10 User Licenses","";
-        "Quarterly Strategy Sessions";
-      ],;";
-      notIncluded[;"";
+        "Quarterly Strategy Sessions" ],";
+      notIncluded[ "";
         "Enterprise Security","";
         "Custom Development","";
-        "Dedicated Account Manager"";
-      ],;"";
-      cta: "Start Free Trial",;
-      popular: true;,
-},;
+        "Dedicated Account Manager"" ],"";
+      cta: "Start Free Trial",
+      popular: true;
+},
     {}
 ";
 "";
       name: "Enterprise",";
       icon: Rocket,"";
-      description: "Full-scale solutions for large organizations",;
+      description: "Full-scale solutions for large organizations",
       price: { monthly: 2499, yearly: 24990 },";
-      features[;"";
+      features[ "";
         "Everything in Professional","";
         "Enterprise Security Suite","";
         "Custom Development","";
@@ -50,58 +47,57 @@
         "Unlimited User Licenses","";
         "Monthly Strategy Sessions","";
         "Custom Integration","";
-        "SLA Guarantees";,
+        "SLA Guarantees";
 };
-      ],;";
-      notIncluded: [],;"";
-      cta: "Contact Sales",;
-      popular: false;,
+      ],";
+      notIncluded: [],"";
+      cta: "Contact Sales",
+      popular: false;
 };
   ];
-;
   const servicePricing: unknown = [];
     {}
 ";
 "";
-      category: "AI & Machine Learning",;
+      category: "AI & Machine Learning",
       icon: Brain,";
-      services[;"";
+      services[ "";
         { name: "AI Business Intelligence", price: "From $299/month", description: "Advanced analytics and insights" },"";
         { name: "AI Sales Copilot", price: "From $199/month", description: "Intelligent sales automation" },"";
         { name: "AI Compliance Assistant", price: "From $399/month", description: "Automated compliance management" },"        { name: "LLM Content Studio", price: "From $149/month", description: "AI-powered content creation" }
-      ];,
-},;
+      ];
+},
     {}
 ";
 "";
-      category: "Cloud & DevOps",;
+      category: "Cloud & DevOps",
       icon: Cloud,";
-      services[;"";
+      services[ "";
         { name: "Cloud DevOps", price: "From $599/month", description: "End-to-end cloud solutions" },"";
         { name: "Cloud FinOps Optimizer", price: "From $299/month", description: "Cost optimization strategies" },"";
         { name: "FinOps Advisor", price: "From $499/month", description: "Financial operations consulting" }
-      ];,
-},;
+      ];
+},
     {}
 ";
 "";
-      category: "Cybersecurity",;
+      category: "Cybersecurity",
       icon: Shield,";
-      services[;"";
+      services[ "";
         { name: "AI Compliance Copilot", price: "From $399/month", description: "AI-powered security compliance" },"";
         { name: "Zero Trust Architecture", price: "From $799/month", description: "Modern security framework" },"";
         { name: "Incident Response Platform", price: "From $599/month", description: "Rapid threat response" }
-      ];,
-},;
+      ];
+},
     {}
 ";
 "";
-      category: "IT Infrastructure",;
+      category: "IT Infrastructure",
       icon: Cpu,";
-      services[;"";
-        { name: "IT Infrastructure Management", price: "From $699/month", description: "Enterprise infrastructure management" },;"";
-        { name: "Digital Twin", price: "From $899/month", description: "Virtual infrastructure modeling" },;"";
-        { name: "IT Consulting", price: "From $299/hour", description: "Strategic IT guidance" },;"";
+      services[ "";
+        { name: "IT Infrastructure Management", price: "From $699/month", description: "Enterprise infrastructure management" },"";
+        { name: "Digital Twin", price: "From $899/month", description: "Virtual infrastructure modeling" },"";
+        { name: "IT Consulting", price: "From $299/hour", description: "Strategic IT guidance" },"";
         { name: "Onsite Support", price: "From $199/hour", description: "Local technical assistance" };
       ]};
   ];";
@@ -160,7 +156,7 @@
 ';
                 plan.popular'';
                   ? 'border-cyan-500/50 bg-gradient-to-br from-slate-800/50 to-cyan-900/20'''`;
-                  : 'border-slate-700/50'``;,
+                  : 'border-slate-700/50'``;
 }`}>";
                 {plan.popular && ("";
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"";
@@ -193,7 +189,7 @@
 ';
                       plan.popular'';
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'''`;
-                        : 'bg-slate-700 text-white hover:bg-slate-600 border border-slate-600'``;,
+                        : 'bg-slate-700 text-white hover:bg-slate-600 border border-slate-600'``;
 }`}
                   >;
                     {tier.cta}";
@@ -209,7 +205,7 @@
                       <span className="text-sm">{feature}</span>;
                     </div>;
                   ))}
-;
+
                   {plan.notIncluded.length > 0 && (;
                     <>;
                       <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: unknown</h4>;
@@ -293,14 +289,10 @@
         </div>;
       </section>;
     </div>;
-  );,
+  );
 }
-;
 
 export { PricingGuide };
-;
 export { PricingGuide };
-;
 export { PricingGuide };
-;
 export { PricingGuide };

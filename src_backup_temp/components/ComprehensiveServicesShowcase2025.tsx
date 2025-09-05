@@ -1,26 +1,39 @@
 import React from 'react';
 import {  import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+<<<<<<< HEAD:src_backup_temp/components/ComprehensiveServicesShowcase2025.tsx
 export default function Page("props": "any) {;
 ", { "id": 'Metaverse', "name": 'Metaverse', "count": "allService s.filter(s => s.category === 'Metaverse').length", "icon": '🌍' }, { "id": 'Edge Computing', "name": 'Edge Computing', "count": "allService s.filter(s => s.category === 'Edge Computing').length", "icon": '🌐' }, { "id": 'Cybersecurity', "name": 'Cybersecurity', "count": "allService s.filter(s => s.category === 'Cybersecurity').length", "icon": '🛡️' };
   ] { "id": 'all', "name": 'All Levels', "icon": '🌟' }, { "id": 'Advanced', "name": 'Advanced', "icon": '🚀' }, { "id": 'Cutting-edge', "name": 'Cutting-edge', "icon": '⚡' }, { "id": 'Revolutionary', "name": 'Revolutionary', "icon": '💫' };
+=======
+export default function Page() {;
+    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };
+  ];
+    { id: 'all', name: 'All Levels', icon: '🌟' },
+    { id: 'Advanced', name: 'Advanced', icon: '🚀' },
+    { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' },
+    { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
+>>>>>>> origin/automation-fixes:src/components/ComprehensiveServicesShowcase2025.tsx
   ];
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    ;
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}) ;
+<<<<<<< HEAD:src_backup_temp/components/ComprehensiveServicesShowcase2025.tsx
 ;
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}
     );
+=======
+>>>>>>> origin/automation-fixes:src/components/ComprehensiveServicesShowcase2025.tsx
     switch(sortBy) {;
       case 'price': ";
         return a.price - b.price;      case 'name':;
         return a.title.localeCompare(b.title);
       case 'innovation':;
-        ;
-  ;
-  ;
+
 ';
+<<<<<<< HEAD:src_backup_temp/components/ComprehensiveServicesShowcase2025.tsx
   'Advanced': 1", 'Cutting-edge': "2",;  ;
   ;
   ;
@@ -44,10 +57,23 @@ export default function Page("props": "any) {;
         return 0}
     );
     hidden: { opacity: 0 },;
+=======
+  'Advanced': 1, 'Cutting-edge': 2,
+
+  'Revolutionary': 3 ;
+};
+        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
+               (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);      case 'category':;
+        return a.category.localeCompare(b.category) ;
+      default:;
+        return 0}) ;
+    hidden: { opacity: 0 },
+>>>>>>> origin/automation-fixes:src/components/ComprehensiveServicesShowcase2025.tsx
     visible: {;
-      opacity: 1,;
+      opacity: 1,
       transition: {;
         staggerChildren: 0.1;
+<<<<<<< HEAD:src_backup_temp/components/ComprehensiveServicesShowcase2025.tsx
       };
     };
   };
@@ -56,6 +82,15 @@ export default function Page("props": "any) {;
   "hidden": "{ "y": 2 0",;
   "opacity": "0;
 "},                value={searchTerm}
+=======
+};
+};
+};
+  const itemVariants = {;
+  hidden: { y: 20,
+  opacity: 0;
+},                value={searchTerm}
+>>>>>>> origin/automation-fixes:src/components/ComprehensiveServicesShowcase2025.tsx
                 onChange={(e) => setSearchTerm(e.target.value)}";
                 className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl pl-12 pr-4 py-3 text-white placeholder-zion-slate-400 "focus": "outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan/50 "focus": borde r-zion-cyan";
               />;
@@ -107,16 +142,26 @@ export default function Page("props": "any) {;
                   onClick={() => setViewMode('grid')}
                   className={`flex-1 px-3 py-2 rounded-lg transition-all ${viewMode === 'grid'';
                       ? 'bg-zion-cyan text-white'';
+<<<<<<< HEAD:src_backup_temp/components/ComprehensiveServicesShowcase2025.tsx
                       : 'text-zion-slate-400 "hover": "tex t-white'`;
                   "}`}
+=======
+                      : 'text-zion-slate-400 hover:text-white'`;
+}`}
+>>>>>>> origin/automation-fixes:src/components/ComprehensiveServicesShowcase2025.tsx
 ";
                   <Grid className="w-4 h-4 mx-auto"   />                </button>;
                 <button';
                   onClick={() => setViewMode('list')}`;
                   className={`flex-1 px-3 py-2 rounded-lg transition-all ${viewMode === 'list'';
                       ? 'bg-zion-cyan text-white'';
+<<<<<<< HEAD:src_backup_temp/components/ComprehensiveServicesShowcase2025.tsx
                       : 'text-zion-slate-400 "hover": "tex t-white'`;
                   "}`}
+=======
+                      : 'text-zion-slate-400 hover:text-white'`;
+}`}
+>>>>>>> origin/automation-fixes:src/components/ComprehensiveServicesShowcase2025.tsx
 ";
                   <List className="w-4 h-4 mx-auto"   />                </button>;
               </div>;
@@ -132,8 +177,14 @@ export default function Page("props": "any) {;
                   min="0";
                   max="10000";
                   value={priceRange[0]}
+<<<<<<< HEAD:src_backup_temp/components/ComprehensiveServicesShowcase2025.tsx
                   onChange={;
   (e) => setPriceRange([parseInt(e.target.value),;
+=======
+                  onChange = {;
+
+  (e) => setPriceRange([parseInt(e.target.value),
+>>>>>>> origin/automation-fixes:src/components/ComprehensiveServicesShowcase2025.tsx
   priceRange[1]]);
 }";
                   className="flex-1 h-2 bg-zion-slate-600 rounded-lg appearance-none cursor-pointer slider";
@@ -143,8 +194,14 @@ export default function Page("props": "any) {;
                   min="0";
                   max="10000";
                   value={priceRange[1]}
+<<<<<<< HEAD:src_backup_temp/components/ComprehensiveServicesShowcase2025.tsx
                   onChange={;
   (e) => setPriceRange([priceRange[0],;
+=======
+                  onChange = {;
+
+  (e) => setPriceRange([priceRange[0],
+>>>>>>> origin/automation-fixes:src/components/ComprehensiveServicesShowcase2025.tsx
   parseInt(e.target.value)]);
 }";
                   className="flex-1 h-2 bg-zion-slate-600 rounded-lg appearance-none cursor-pointer slider";
@@ -175,10 +232,15 @@ export default function Page("props": "any) {;
               <motion.div;
                 key={service.id"}
                 variants={itemVariants}`;
+<<<<<<< HEAD:src_backup_temp/components/ComprehensiveServicesShowcase2025.tsx
                 className={`bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6 "hover": "borde r-zion-cyan/50 "hover": shado w-lg "hover": shado w-zion-cyan/20 transition-all duration-300 cursor-pointer group ${viewMode === 'list' ? 'flex items-center gap-6' : ''`;
                 "}`}
+=======
+                className={`bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6 hover:border-zion-cyan/50 hover:shadow-lg hover:shadow-zion-cyan/20 transition-all duration-300 cursor-pointer group ${viewMode === 'list' ? 'flex items-center gap-6' : ''`;
+}`}
+>>>>>>> origin/automation-fixes:src/components/ComprehensiveServicesShowcase2025.tsx
                 onClick={() => handleServiceClick(service)}
-;
+
                 {viewMode === 'grid' ? (;
                   // Grid View;
                   <>;
@@ -304,6 +366,7 @@ export default function Page("props": "any) {;
               <p className="text-zion-slate-400 mb-6">;
                 Try adjusting your search criteria or filters;
               </p>;
+<<<<<<< HEAD:src_backup_temp/components/ComprehensiveServicesShowcase2025.tsx
           {filteredServices.length === 0 && (<motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}"
@@ -319,10 +382,14 @@ export default function Page("props": "any) {;
   ;
   ;
   ;
+=======
+              <button      onClick = {;
+
+>>>>>>> origin/automation-fixes:src/components/ComprehensiveServicesShowcase2025.tsx
   () => {;
                   setSearchTerm('');
                   setActiveCategory('all');
-                  setPriceRange([0,;
+                  setPriceRange([0,
   10000]);
                   setInnovationLevel('all')}}"                className="bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium "hover": "b g-zion-cyan/90 transition-colors";
               >;
@@ -339,9 +406,10 @@ export default function Page("props": "any) {;
             exit={{ "opacity": "0 "}}";
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4";
             onClick={closeModal}
-;
+
             <motion.div;
               initial = {;
+<<<<<<< HEAD:src_backup_temp/components/ComprehensiveServicesShowcase2025.tsx
   { "scale": "0.9",;
   "opacity": "0;
 "}}
@@ -353,6 +421,22 @@ export default function Page("props": "any) {;
   { "scale": "0.9",;
   "opacity": "0;
 "}}";
+=======
+
+  { scale: 0.9,
+  opacity: 0;
+}}
+              animate = {;
+
+  { scale: 1,
+  opacity: 1;
+}}
+              exit = {;
+
+  { scale: 0.9,
+  opacity: 0;
+}}";
+>>>>>>> origin/automation-fixes:src/components/ComprehensiveServicesShowcase2025.tsx
               className="bg-zion-slate-900 border border-zion-slate-700 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto";
               onClick={(e) => e.stopPropagation()}
 ";
@@ -533,7 +617,7 @@ export default function Page("props": "any) {;
                       </div>;
                     </div>;
                   </div>) }
-;
+
                 {/* Contact and CTA */}";
                 <div className="border-t border-zion-slate-700 pt-6">";
                   <div className="flex flex-col "md": "fle x-row items-center justify-between gap-4">";
@@ -560,7 +644,6 @@ export default function Page("props": "any) {;
       </AnimatePresence>;
     </div>;) ;
 </div></div></div></div></div></div></div>};
-;
 export default ComprehensiveServicesShowcase2025}}}}}}}}}}'"`;
 </motion>;
 </motion>;

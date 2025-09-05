@@ -1,44 +1,39 @@
 import React from 'react';
 import { SEO } from '@/components / SEO';
 export default function Page() {;
-,;
-    ],;,
+    ],,
 };
-;
   const formatDate = (dateString: string) => {;
     return new Date(dateString) .toLocaleDateString('en - US', {;
-      year: 'numeric',;
-      month: 'long',;
-      day: 'numeric',;,
-}) ;,
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',,
+}) ;
 };
-;
   const getCategoryIcon = (category: string) => {;
     const categoryIcons: { [key: string]: any } = {;
-      ai: Brain,;
-      quantum: Cpu,;
-      security: Shield,;
-      cloud: Cloud,;
-      business: TrendingUp,;
-      iot: Network,;
-      emerging: Zap,;,
+      ai: Brain,
+      quantum: Cpu,
+      security: Shield,
+      cloud: Cloud,
+      business: TrendingUp,
+      iot: Network,
+      emerging: Zap,,
 };
-    return categoryIcons[category] || BookOpen;,
+    return categoryIcons[category] || BookOpen;
 };
-;
   const getCategoryName = (category: string) => {;
     const categoryNames: { [key: string]: string } = {;
-      ai: 'Artificial Intelligence',;
-      quantum: 'Quantum Computing',;
-      security: 'Cybersecurity',;
-      cloud: 'Cloud & DevOps',;
-      business: 'Business Insights',;
-      iot: 'IoT & Edge',;
-      emerging: 'Emerging Tech',;,
+      ai: 'Artificial Intelligence',
+      quantum: 'Quantum Computing',
+      security: 'Cybersecurity',
+      cloud: 'Cloud & DevOps',
+      business: 'Business Insights',
+      iot: 'IoT & Edge',
+      emerging: 'Emerging Tech',,
 };
-    return categoryNames[category] || 'Uncategorized';,
+    return categoryNames[category] || 'Uncategorized';
 };
-;
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
       <SEO;
         title={`${blogPost.title} - Zion Tech Group Blog`}
@@ -69,7 +64,7 @@ export default function Page() {;
             <div className="flex items - center space - x-3 mb-6">;
               <span className="px-4 py-2 bg-cyan - 500 / 20 text-cyan - 400 text-sm rounded-full font - medium flex items - center space - x-2">;
                 {React.createElement (getCategoryIcon (blogPost.category) , {;
-                  className: 'w-4 h-4',;,
+                  className: 'w-4 h-4',,
 }) }
                 <span>{getCategoryName(blogPost.category) }</span>;
               </span>;
@@ -293,7 +288,7 @@ export default function Page() {;
           </motion.div>;
         </div>;
       </section>;
-    </div>) ;,
+    </div>) ;
 }
 export default function BlogPost() {return (";
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
@@ -304,6 +299,6 @@ export default function BlogPost() {return (";
           Professional BlogPost services to help your business grow.;
         </p>;
       </div>;
-  );,
+  );
 }
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-;
 const CloudServices: React.FC = () => {;
   return(<>;
       <SEO title="CloudServices - Zion Tech Group" />;
@@ -11,7 +10,6 @@ const CloudServices: React.FC = () => {;
         </div>;
       </div>;
     </>;
-  );,
+  );
 };
-;
 export default CloudServices;

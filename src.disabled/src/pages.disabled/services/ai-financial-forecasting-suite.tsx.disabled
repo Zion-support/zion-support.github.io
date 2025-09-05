@@ -2,74 +2,70 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { ;
-  TrendingUp, Brain, DollarSign, BarChart3, CheckCircle, Star, ArrowRight, ;
-  PieChart, LineChart, Activity, Target, Zap, Globe, ExternalLink, Phone, ;
-  Mail, MapPin, Calculator, CreditCard, Building, Users, Clock, Shield;,
+  TrendingUp, Brain, DollarSign, BarChart3, CheckCircle, Star, ArrowRight,
+  PieChart, LineChart, Activity, Target, Zap, Globe, ExternalLink, Phone,
+  Mail, MapPin, Calculator, CreditCard, Building, Users, Clock, Shield;
 } from "lucide-react";
 
 export default function AIFinancialForecastingSuite() {;
-  const features = [;
-    "AI-Powered Revenue Forecasting",;
-    "Cash Flow Prediction Models", ;
-    "Risk Assessment & Analysis",;
-    "Budget Optimization Engine",;
-    "Scenario Planning Tools",;
-    "Real-time Financial Dashboards",;
-    "Automated Reporting",;
-    "Compliance Monitoring";
-  ];
+  const features = [ "AI-Powered Revenue Forecasting",
+    "Cash Flow Prediction Models",
+    "Risk Assessment & Analysis",
+    "Budget Optimization Engine",
+    "Scenario Planning Tools",
+    "Real-time Financial Dashboards",
+    "Automated Reporting",
+    "Compliance Monitoring" ];
 
-  const benefits = [;
-    "Improve forecast accuracy by 85%",;
-    "Reduce financial planning time by 70%",;
-    "Optimize cash flow management",;
-    "Minimize financial risks by 60%",;
-    "Increase profitability by 25%",;
-    "Ensure regulatory compliance";
-  ];
+  const benefits = [ "Improve forecast accuracy by 85%",
+    "Reduce financial planning time by 70%",
+    "Optimize cash flow management",
+    "Minimize financial risks by 60%",
+    "Increase profitability by 25%",
+    "Ensure regulatory compliance" ];
 
   const pricing = [;
     {;
-      name: "Startup",;
-      price: "$2,499/month",;
-      details: ["Up to $10M revenue", "Basic forecasting", "Email support", "Standard reports", "Monthly planning"];,
-},;
+      name: "Startup",
+      price: "$2,499/month",
+      details: ["Up to $10M revenue", "Basic forecasting", "Email support", "Standard reports", "Monthly planning"];
+},
     {;
-      name: "Growth", ;
-      price: "$4,999/month",;
-      details: ["Up to $50M revenue", "Advanced AI models", "Priority support", "Real-time dashboards", "Quarterly planning", "Risk analysis"];,
-},;
+      name: "Growth",
+      price: "$4,999/month",
+      details: ["Up to $50M revenue", "Advanced AI models", "Priority support", "Real-time dashboards", "Quarterly planning", "Risk analysis"];
+},
     {;
-      name: "Enterprise",;
-      price: "$9,999/month", ;
-      details: ["Unlimited revenue", "Full AI suite", "24/7 support", "Custom models", "Annual planning", "Dedicated analyst", "White-label"];,
+      name: "Enterprise",
+      price: "$9,999/month",
+      details: ["Unlimited revenue", "Full AI suite", "24/7 support", "Custom models", "Annual planning", "Dedicated analyst", "White-label"];
 }
   ];
 
   const useCases = [;
     {;
-      title: "Startup Financial Planning",;
-      description: "Accurate revenue forecasting and cash flow management for growing startups and scale-ups.",;
-      icon: TrendingUp;,
-},;
+      title: "Startup Financial Planning",
+      description: "Accurate revenue forecasting and cash flow management for growing startups and scale-ups.",
+      icon: TrendingUp;
+},
     {;
-      title: "Enterprise Budgeting",;
-      description: "Comprehensive financial planning and budget optimization for large enterprises.",;
-      icon: Building;,
-},;
+      title: "Enterprise Budgeting",
+      description: "Comprehensive financial planning and budget optimization for large enterprises.",
+      icon: Building;
+},
     {;
-      title: "Investment Analysis",;
-      description: "Advanced risk assessment and scenario planning for investment decisions.",;
-      icon: Target;,
+      title: "Investment Analysis",
+      description: "Advanced risk assessment and scenario planning for investment decisions.",
+      icon: Target;
 }
   ];
 
   const industries = [;
-    { name: "Technology", accuracy: "92%", savings: "$2.3M" },;
-    { name: "Healthcare", accuracy: "89%", savings: "$1.8M" },;
-    { name: "Manufacturing", accuracy: "94%", savings: "$3.1M" },;
-    { name: "Retail", accuracy: "87%", savings: "$1.5M" },;
-    { name: "Financial Services", accuracy: "96%", savings: "$4.2M" },;
+    { name: "Technology", accuracy: "92%", savings: "$2.3M" },
+    { name: "Healthcare", accuracy: "89%", savings: "$1.8M" },
+    { name: "Manufacturing", accuracy: "94%", savings: "$3.1M" },
+    { name: "Retail", accuracy: "87%", savings: "$1.5M" },
+    { name: "Financial Services", accuracy: "96%", savings: "$4.2M" },
     { name: "Real Estate", accuracy: "91%", savings: "$2.7M" }
   ];
 
@@ -94,7 +90,7 @@ export default function AIFinancialForecastingSuite() {;
               AI Financial Forecasting Suite;
             </h1>;
             <p className="text-green-100 text-xl max-w-3xl mx-auto mb-8">;
-              Transform your financial planning with AI-powered forecasting that predicts revenue, ;
+              Transform your financial planning with AI-powered forecasting that predicts revenue,
               optimizes budgets, and minimizes risks with unprecedented accuracy.;
             </p>;
             <div className="flex flex-wrap justify-center gap-4">;
@@ -114,7 +110,6 @@ export default function AIFinancialForecastingSuite() {;
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Financial AI</h2>;
             <p className="text-gray-600 text-lg">Powered by machine learning and financial modeling</p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {features.map((feature, index) => (;
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">;
@@ -144,7 +139,6 @@ export default function AIFinancialForecastingSuite() {;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Measurable Financial Impact</h2>;
               <p className="text-gray-600 text-lg">Proven results from our financial planning solutions</p>;
             </div>;
-            ;
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {benefits.map((benefit, index) => (;
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm">;
@@ -164,7 +158,6 @@ export default function AIFinancialForecastingSuite() {;
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Industry-Leading Accuracy</h2>;
             <p className="text-gray-600 text-lg">Average forecast accuracy and cost savings by industry</p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {industries.map((industry, index) => (;
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 text-center">;
@@ -185,7 +178,6 @@ export default function AIFinancialForecastingSuite() {;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>;
               <p className="text-gray-600 text-lg">Ideal solutions for different financial planning needs</p>;
             </div>;
-            ;
             <div className="grid md:grid-cols-3 gap-8">;
               {useCases.map((useCase, index) => (;
                 <div key={index} className="text-center">;
@@ -207,7 +199,6 @@ export default function AIFinancialForecastingSuite() {;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>;
               <p className="text-gray-600 text-lg">Choose the plan that matches your business size</p>;
             </div>;
-            ;
             <div className="grid md:grid-cols-3 gap-8">;
               {pricing.map((tier, index) => (;
                 <div key={index} className={`bg-white rounded-xl p-8 shadow-lg border ${tier.name === 'Growth' ? 'ring-2 ring-green-500 relative' : ''}`}>;
@@ -266,5 +257,5 @@ export default function AIFinancialForecastingSuite() {;
         </section>;
       </div>;
     </>;
-  );,
+  );
 }

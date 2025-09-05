@@ -1,17 +1,26 @@
+<<<<<<< HEAD:src_backup_temp/components/NewsletterSection.tsx
 import React from 'react';
 "description": "Get exclusive access to tech trends and analysis";
     }, {;
       "icon": "Za p",;";
       "title": "Early Access",;";
       "description": "Be the first to know about beta programs and launches"};
+=======
+
+      description: "Get exclusive access to tech trends and analysis";
+},    {;
+      icon: Zap,";
+      title: "Early Access",";
+      description: "Be the first to know about beta programs and launches"};
+>>>>>>> origin/automation-fixes:src/components/NewsletterSection.tsx
   ];
-;
   if(isSubscribed) {;
     return (";
       <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">";
         <div className="max-w-4xl mx-auto px-6 text-center">;
           <motion.div;
             initial = {;
+<<<<<<< HEAD:src_backup_temp/components/NewsletterSection.tsx
   { "opacity": "0",;
   "scale": "0.8;
 "}}
@@ -20,6 +29,18 @@ import React from 'react';
   "scale": "1;
 "}}
             transition={{ "duration": "0.5 "}}";
+=======
+
+  { opacity: 0,
+  scale: 0.8;
+}}
+            animate = {;
+
+  { opacity: 1,
+  scale: 1;
+}}
+            transition={{ duration: 0.5 }}";
+>>>>>>> origin/automation-fixes:src/components/NewsletterSection.tsx
             className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-3xl p-12 border border-green-500/20";
 ";
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full mb-6">";
@@ -44,6 +65,7 @@ import React from 'react';
           {/* Left Column - Content */"}
           <motion.div;
             initial = {;
+<<<<<<< HEAD:src_backup_temp/components/NewsletterSection.tsx
   { "opacity": "0",;
   "x": "-30;
 "}}
@@ -52,6 +74,18 @@ import React from 'react';
   "x": "0;
 "}}
             transition={{ "duration": "0.6 "}}
+=======
+
+  { opacity: 0,
+  x: -30;
+}}
+            whileInView = {;
+
+  { opacity: 1,
+  x: 0;
+}}
+            transition={{ duration: 0.6 }}
+>>>>>>> origin/automation-fixes:src/components/NewsletterSection.tsx
 ";
             <h2 className="text-4xl "md": "tex t-5xl font-bold text-white mb-6">;
               Stay Ahead with Zion Tech Group;
@@ -64,6 +98,7 @@ import React from 'react';
                 <motion.div;
                   key={index}
                   initial = {;
+<<<<<<< HEAD:src_backup_temp/components/NewsletterSection.tsx
   { "opacity": "0",;
   "x": "-20;
 "}}
@@ -75,6 +110,22 @@ import React from 'react';
   { "duration": "0.5",;
   "delay": "inde x * 0.1;
 "}}";
+=======
+
+  { opacity: 0,
+  x: -20;
+}}
+                  whileInView = {;
+
+  { opacity: 1,
+  x: 0;
+}}
+                  transition = {;
+
+  { duration: 0.5,
+  delay: index * 0.1;
+}}";
+>>>>>>> origin/automation-fixes:src/components/NewsletterSection.tsx
                   className="flex items-start";
 ";
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mr-4 flex-shrink-0">";
@@ -104,6 +155,7 @@ import React from 'react';
           {/* Right Column - Newsletter Form */}
           <motion.div;
             initial = {;
+<<<<<<< HEAD:src_backup_temp/components/NewsletterSection.tsx
   { "opacity": "0",;
   "x": "3 0;
 "}}
@@ -115,6 +167,22 @@ import React from 'react';
   { "duration": "0.6",;
   "delay": "0.2;
 "}}
+=======
+
+  { opacity: 0,
+  x: 30;
+}}
+            whileInView = {;
+
+  { opacity: 1,
+  x: 0;
+}}
+            transition = {;
+
+  { duration: 0.6,
+  delay: 0.2;
+}}
+>>>>>>> origin/automation-fixes:src/components/NewsletterSection.tsx
           >";
             <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-3xl p-8 border border-slate-500">";
               <div className="text-center mb-6">";
@@ -190,8 +258,12 @@ import React from 'react';
           </motion.div>;
         </div>;
       </div>;
+<<<<<<< HEAD:src_backup_temp/components/NewsletterSection.tsx
     </section>;) "};
 ;
+=======
+    </section>;) };
+>>>>>>> origin/automation-fixes:src/components/NewsletterSection.tsx
 export default NewsletterSection}}}'";
 </motion>;
 </motion>;

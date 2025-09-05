@@ -2,143 +2,132 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ;
-  FileText, ;
-  CheckCircle, ;
-  Star, ;
-  Users, ;
-  TrendingUp, ;
-  Zap,;
-  ArrowLeft,;
-  Phone,;
-  Mail,;
-  Globe,;
-  Clock,;
-  Shield,;
-  Brain,;
-  Search,;
-  Palette,;
-  Target,;
-  BarChart3,;
-  MessageSquare,;
-  Calendar,;
-  Award;,
+  FileText,
+  CheckCircle,
+  Star,
+  Users,
+  TrendingUp,
+  Zap,
+  ArrowLeft,
+  Phone,
+  Mail,
+  Globe,
+  Clock,
+  Shield,
+  Brain,
+  Search,
+  Palette,
+  Target,
+  BarChart3,
+  MessageSquare,
+  Calendar,
+  Award;
 } from 'lucide-react';
-;
 const AIContentCreationSuite = () => {;
   const contactInfo = {;
-    phone: "+1 302 464 0950",;
-    email: "kleber@ziontechgroup.com",;
-    address: "364 E Main St STE 1008, Middletown DE 19709",;
-    website: "https://ziontechgroup.com";,
+    phone: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    address: "364 E Main St STE 1008, Middletown DE 19709",
+    website: "https://ziontechgroup.com";
 };
-;
   const features = [;
     {;
-      title: "Multi-Language Support",;
-      description: "Generate content in 50+ languages with native fluency and cultural context",;
-      icon: Globe;,
-},;
+      title: "Multi-Language Support",
+      description: "Generate content in 50+ languages with native fluency and cultural context",
+      icon: Globe;
+},
     {;
-      title: "SEO Optimization",;
-      description: "AI-powered SEO recommendations and keyword optimization for better search rankings",;
-      icon: Search;,
-},;
+      title: "SEO Optimization",
+      description: "AI-powered SEO recommendations and keyword optimization for better search rankings",
+      icon: Search;
+},
     {;
-      title: "Brand Voice Consistency",;
-      description: "Maintain consistent brand voice across all content with AI style matching",;
-      icon: Palette;,
-},;
+      title: "Brand Voice Consistency",
+      description: "Maintain consistent brand voice across all content with AI style matching",
+      icon: Palette;
+},
     {;
-      title: "Plagiarism Detection",;
-      description: "Advanced plagiarism checking with 99.9% accuracy and content originality scoring",;
-      icon: Shield;,
-},;
+      title: "Plagiarism Detection",
+      description: "Advanced plagiarism checking with 99.9% accuracy and content originality scoring",
+      icon: Shield;
+},
     {;
-      title: "Content Analytics",;
-      description: "Track content performance with detailed analytics and engagement metrics",;
-      icon: BarChart3;,
-},;
+      title: "Content Analytics",
+      description: "Track content performance with detailed analytics and engagement metrics",
+      icon: BarChart3;
+},
     {;
-      title: "Collaborative Workflow",;
-      description: "Team collaboration tools with real-time editing and approval workflows",;
-      icon: Users;,
+      title: "Collaborative Workflow",
+      description: "Team collaboration tools with real-time editing and approval workflows",
+      icon: Users;
 }
   ];
-;
   const pricingPlans = [;
     {;
-      name: "Starter",;
-      price: "$299",;
-      period: "/month",;
-      description: "Perfect for small businesses and startups",;
-      features: [;
-        "Up to 50 articles per month",;
-        "5 languages supported",;
-        "Basic SEO optimization",;
-        "Email support",;
-        "Content analytics dashboard";
-      ],;
-      popular: false;,
-},;
+      name: "Starter",
+      price: "$299",
+      period: "/month",
+      description: "Perfect for small businesses and startups",
+      features: [ "Up to 50 articles per month",
+        "5 languages supported",
+        "Basic SEO optimization",
+        "Email support",
+        "Content analytics dashboard" ],
+      popular: false;
+},
     {;
-      name: "Professional",;
-      price: "$599",;
-      period: "/month",;
-      description: "Ideal for growing businesses and marketing teams",;
-      features: [;
-        "Up to 200 articles per month",;
-        "25 languages supported",;
-        "Advanced SEO optimization",;
-        "Brand voice training",;
-        "Priority support",;
-        "Team collaboration tools",;
-        "API access";
-      ],;
-      popular: true;,
-},;
+      name: "Professional",
+      price: "$599",
+      period: "/month",
+      description: "Ideal for growing businesses and marketing teams",
+      features: [ "Up to 200 articles per month",
+        "25 languages supported",
+        "Advanced SEO optimization",
+        "Brand voice training",
+        "Priority support",
+        "Team collaboration tools",
+        "API access" ],
+      popular: true;
+},
     {;
-      name: "Enterprise",;
-      price: "$1,299",;
-      period: "/month",;
-      description: "For large organizations with high-volume content needs",;
-      features: [;
-        "Unlimited articles",;
-        "All 50+ languages",;
-        "Custom AI model training",;
-        "Dedicated account manager",;
-        "24/7 phone support",;
-        "Advanced analytics",;
-        "Custom integrations",;
-        "White-label options";
-      ],;
-      popular: false;,
+      name: "Enterprise",
+      price: "$1,299",
+      period: "/month",
+      description: "For large organizations with high-volume content needs",
+      features: [ "Unlimited articles",
+        "All 50+ languages",
+        "Custom AI model training",
+        "Dedicated account manager",
+        "24/7 phone support",
+        "Advanced analytics",
+        "Custom integrations",
+        "White-label options" ],
+      popular: false;
 }
   ];
-;
   const testimonials = [;
     {;
-      name: "Sarah Johnson",;
-      role: "Marketing Director",;
-      company: "TechFlow Solutions",;
-      content: "The AI Content Creation Suite has transformed our content marketing. We've seen a 300% increase in organic traffic and our content production time has been reduced by 70%.",;
-      rating: 5;,
-},;
+      name: "Sarah Johnson",
+      role: "Marketing Director",
+      company: "TechFlow Solutions",
+      content: "The AI Content Creation Suite has transformed our content marketing. We've seen a 300% increase in organic traffic and our content production time has been reduced by 70%.",
+      rating: 5;
+},
     {;
-      name: "Michael Chen",;
-      role: "CEO",;
-      company: "StartupXYZ",;
-      content: "As a startup, we needed to scale our content quickly. This platform has been a game-changer for our growth strategy.",;
-      rating: 5;,
-},;
+      name: "Michael Chen",
+      role: "CEO",
+      company: "StartupXYZ",
+      content: "As a startup, we needed to scale our content quickly. This platform has been a game-changer for our growth strategy.",
+      rating: 5;
+},
     {;
-      name: "Emily Rodriguez",;
-      role: "Content Manager",;
-      company: "Global Enterprises Inc",;
-      content: "The multi-language support and brand voice consistency features are incredible. Our international content strategy has never been stronger.",;
-      rating: 5;,
+      name: "Emily Rodriguez",
+      role: "Content Manager",
+      company: "Global Enterprises Inc",
+      content: "The multi-language support and brand voice consistency features are incredible. Our international content strategy has never been stronger.",
+      rating: 5;
 }
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">;
       {/* Header */}
@@ -155,7 +144,6 @@ const AIContentCreationSuite = () => {;
               <ArrowLeft className="w-4 h-4 mr-2" />;
               Back to Services;
             </Link>;
-            ;
             <div className="text-center mb-12">;
               <div className="flex items-center justify-center mb-6">;
                 <FileText className="w-16 h-16 text-cyan-400 mr-4" />;
@@ -166,7 +154,6 @@ const AIContentCreationSuite = () => {;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;
                 Advanced AI-powered content generation for marketing, blogs, and social media with SEO optimization and brand voice consistency.;
               </p>;
-              ;
               {/* Contact Info */}
               <div className="flex flex-wrap justify-center gap-6 mb-8">;
                 <a href={`tel:${contactInfo.phone}`} className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors">;
@@ -259,7 +246,7 @@ const AIContentCreationSuite = () => {;
                 className={`bg-gray-800/50 border rounded-xl p-8 relative ${;
                   plan.popular ;
                     ? 'border-cyan-500 shadow-lg shadow-cyan-500/20' ;
-                    : 'border-gray-700';,
+                    : 'border-gray-700';
 }`}
               >;
                 {plan.popular && (;
@@ -269,7 +256,7 @@ const AIContentCreationSuite = () => {;
                     </span>;
                   </div>;
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <div className="flex items-baseline justify-center mb-4">;
@@ -293,7 +280,7 @@ const AIContentCreationSuite = () => {;
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center ${;
                     plan.popular;
                       ? 'bg-cyan-500 hover:bg-cyan-600 text-white';
-                      : 'bg-gray-700 hover:bg-gray-600 text-white';,
+                      : 'bg-gray-700 hover:bg-gray-600 text-white';
 }`}
                 >;
                   Get Started;
@@ -384,7 +371,6 @@ const AIContentCreationSuite = () => {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 };
-;
 export default AIContentCreationSuite;

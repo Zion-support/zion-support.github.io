@@ -1,13 +1,20 @@
 import React, { useState } from "react";
-  Crown, Rocket,;
+  Crown, Rocket,
   Building} from "lucide-react";
  * PricingSection function;
  * @param {*} params - Function parameters;
  * @returns {*} Function return value;
  */;
+<<<<<<< HEAD:src_backup_temp/components/PricingSection.tsx
 function PricingSection("props": "any) {;
       "icon": Shiel d;
     "};  ];
+=======
+function PricingSection () {;
+
+      icon: Shield;
+};  ];
+>>>>>>> origin/automation-fixes:src/components/PricingSection.tsx
 const pricingTiers = [{;
 const savings = billingCycle === "annual" ? 25 : "0;
   return (;
@@ -18,6 +25,7 @@ const savings = billingCycle === "annual" ? 25 : "0;
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-zion-purple/5 rounded-full blur-3xl"></div>;
       </div>;
 ";
+<<<<<<< HEAD:src_backup_temp/components/PricingSection.tsx
       <div className="relative z-10 max-w-7xl mx-auto px-4 "sm": "p x-6 "lg": p x-8">",;
         {/* comment */}
 ;
@@ -36,19 +44,41 @@ return (<section className="py-20 bg-gradient - to - br from - slate - 900 via -
           transition={{ "duration": "0.6 "}}
 >";
           <h2 className="text-3xl "md": "tex t-5xl font-bold mb-6 text-white">"",;
+=======
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
+        {/* comment */}
+
+  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
+      <div className="max - w-7xl mx - auto px-6">;
+        <motion.div;
+          className="text-center mb-16"          initial = {;
+
+  { opacity: 0,
+  y: 20;
+}}
+          whileInView = {;
+
+  { opacity: 1,
+  y: 0;
+}}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >";
+          <h2 className="text-3xl md: text-5xl font-bold mb-6 text-white">",
+>>>>>>> origin/automation-fixes:src/components/PricingSection.tsx
             Simple, {" "}";
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
-              Transparent Pricing,;
+              Transparent Pricing,
             </span>;
           </h2>";
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">;
-            Choose the plan that best fits your business needs. All plans include our core features,;
+            Choose the plan that best fits your business needs. All plans include our core features,
 with no hidden fees or surprises.;
           </p>;
           {/* comment */}";
           <div className="{"flex" items-center justify-center gap-4 mb-8">";
             <span className="{"text-sm" ${billingCycle === "monthly" ? "text-white" : "text-zion-slate-light"}"}>;
-              Monthly,;
+              Monthly,
             </span>";
             <button onClick="{()" => setBillingCycle(billingCycle === "monthly" ? "annual" : "monthly")}";
               className=""relative" w-16 h-8 bg-zion-purple/20 rounded-full p-1 transition-colors duration-200";
@@ -58,28 +88,32 @@ layout,";
 className="{"w-6" h-6 bg-zion-cyan rounded-full shadow-lg ${;
                   billingCycle === "annual" ? "ml-8" : "ml-0>;
 }"}
-;
+
              />;
             </button>";
             <span className = "{"text-sm" ${billingCycle === "annual" ? "text-white" : "text-zion-slate-light"}"}>;
-              Annual,;
+              Annual,
             </span>";
             {billingCycle === "annual" && (;
               <motion.span,";
 initial="{{" "opacity": "0", "scale": "0.8 "}}";
                 animate="{{" "opacity": "1", "scale": "1 "}}";
                 className=""inline-flex" items-center gap-1 px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium"}
-;
+
               >";
                 <Check className="w-4 h-4"   />;
                 Save {savings}%;
               </motion.span>;
             )}
-;
+
           </div>;
         </motion.div>;
         {/* comment */}";
+<<<<<<< HEAD:src_backup_temp/components/PricingSection.tsx
         <div className="{"grid" grid-cols-1 "md": "gri d-cols-3 gap-8">",;
+=======
+        <div className="{"grid" grid-cols-1 md: grid-cols-3 gap-8">,
+>>>>>>> origin/automation-fixes:src/components/PricingSection.tsx
           {plans.map((plan, index) => {;
             const IconComponent = plan.icon;
             return (;
@@ -90,14 +124,20 @@ key = "{plan.name}"";
                 viewport="{{" "once": "tru e "}}";
                 transition="{{" "duration": "0.6", "delay": "inde x * 0.1 "}}";
                 className="{"relative" group ${";
+<<<<<<< HEAD:src_backup_temp/components/PricingSection.tsx
                   plan.popular ? ""md": "-mt-4 "md": m b-4" : """}"}
 ;
+=======
+                  plan.popular ? "md: -mt-4 md:mb-4" : ""}"}
+
+>>>>>>> origin/automation-fixes:src/components/PricingSection.tsx
               >;
                 {/* comment */}
-;
+
                 {plan.popular && (";
                   <div className=""absolute" -top-4 left-1/2 transform -translate-x-1/2 z-10"}>";
                     <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">";
+<<<<<<< HEAD:src_backup_temp/components/PricingSection.tsx
                       <Star className="{"w-4" h-4 fill-current"   />;
                       Most Popular,;
                     </div>;
@@ -110,6 +150,23 @@ key = "{plan.name}"";
                   </div> {/* comment */}";
                 <div className="{"relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 "hover": "borde r-zion-cyan/50 "hover": b g-zion-blue-light/20 transition-all duration-300 "hover": shado w-2xl "hover": shado w-zion-cyan/20 ${">;
                   plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : """}"}>;
+=======
+                      <Star className="{"w-4" h-4 fill-current"  />;
+                      Most Popular,
+                    </div>;
+                  </div>                )}
+
+                {/*   */}";
+                <div className="{`relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 ${">;
+                  plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}`}>;
+                  {/*   */}";
+                  <div className="{`w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>";
+                    <IconComponent className="`w-8" h-8`} />;
+                  </div>;
+                {/* comment */}";
+                <div className="{"relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 ${">;
+                  plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}"}>;
+>>>>>>> origin/automation-fixes:src/components/PricingSection.tsx
                   {/* comment */}";
                   <div className="{"w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-"hover": "scal e-110 transition-transform duration-300""}>";
                     <IconComponent className=""w-8" h-8"}        />;
@@ -144,15 +201,15 @@ key = "{plan.name}"";
                         {plan.originalPrice && ("
                           <span className="{"text-lg" text-zion-slate-light line-through">
                             ${plan.originalPrice}
-;
+
                           </span>;
                         )}
-;
+
                       </div>;
                     ) : "(";
                       <div className=""text-3xl" font-bold text-white""}>{plan.price}</div>;
                     )}
-;
+
                   </div>;
                   {/* comment */}";
                   <ul className="space-y-3 mb-8">;
@@ -162,7 +219,7 @@ key = "{plan.name}"";
                         <span className="text-zion-slate-light">{feature}</span>;
                       </li>;
                     ))}
-;
+
                   </ul>;
                   {/* comment */}";
                   <Link to="{plan.name" === "Enterprise" ? "/contact" : "/signup"}";
@@ -173,9 +230,15 @@ whileHover="{{" "scale": "1.02 "}}";
                       whileTap="{{" "scale": "0.98 "}}";
                       className="{"w-full" px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${;
                         plan.popular";
+<<<<<<< HEAD:src_backup_temp/components/PricingSection.tsx
                           ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white "hover": "fro m-zion-cyan/90 "hover": t o-zion-purple/90"">;
                           : "border border-zion-cyan text-zion-cyan "hover": b g-zion-cyan "hover": tex t-white""}"}
 ;
+=======
+                          ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover: from-zion-cyan/90 hover:to-zion-purple/90"">;
+                          : "border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white"}"}
+
+>>>>>>> origin/automation-fixes:src/components/PricingSection.tsx
                     >;
                       {plan.cta}";
                       <ArrowRight className=""w-4" h-4"}        />;
@@ -183,12 +246,18 @@ whileHover="{{" "scale": "1.02 "}}";
                   </Link>;
                 </div>;
                 {/* comment */}";
+<<<<<<< HEAD:src_backup_temp/components/PricingSection.tsx
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 group-"hover": "opacit y-20 transition-opacity duration-300 -z-10"></div>;
               </motion.div>",;
+=======
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 group-hover: opacity-20 transition-opacity duration-300 -z-10"></div>;
+              </motion.div>,
+>>>>>>> origin/automation-fixes:src/components/PricingSection.tsx
             )})}
-;
+
         </div>;
         {/* comment */}
+<<<<<<< HEAD:src_backup_temp/components/PricingSection.tsx
 ;
 <motion.div;
           className="mt-16 text-center"          initial = {;
@@ -205,16 +274,42 @@ whileHover="{{" "scale": "1.02 "}}";
   "delay": "0.4;
 "}}
 >";
+=======
+
+        <motion.div;
+          className="mt-16 text-center"          initial = {;
+
+  { opacity: 0,
+  y: 20;
+}}
+          whileInView = {;
+
+  { opacity: 1,
+  y: 0;
+}}
+          viewport={{ once: true }}
+          transition = {;
+
+  { duration: 0.6,
+  delay: 0.4;
+}}
+        >";
+>>>>>>> origin/automation-fixes:src/components/PricingSection.tsx
           <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">";
             <h3 className="text-2xl font-bold text-white mb-4">;
               Need a Custom Solution?;
             </h3>";
             <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">;
-              We understand that every business is unique. Contact us to discuss custom pricing,;
+              We understand that every business is unique. Contact us to discuss custom pricing,
 and solutions tailored to your specific requirements.;
             </p>";
+<<<<<<< HEAD:src_backup_temp/components/PricingSection.tsx
             <div className="flex flex-col "sm": "fle x-row gap-4 justify-center">";
               <Link to="/contact">",;
+=======
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">";
+              <Link to="/contact">,
+>>>>>>> origin/automation-fixes:src/components/PricingSection.tsx
                 <motion.button,";
 whileHover="{{" "scale": "1.05 "}}";
                   whileTap="{{" "scale": "0.95 "}}";
@@ -225,16 +320,27 @@ whileHover="{{" "scale": "1.05 "}}";
                 </motion.button>;
               </Link>";
               <Link to="/request-quote">";
+<<<<<<< HEAD:src_backup_temp/components/PricingSection.tsx
                 <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl text-lg font-semibold "hover": b g-zion-cyan "hover": tex t-white transition-all duration-300 flex items-center gap-2 justify-center">";
                   <Zap className="w-5 h-5"   />;
                   Get Free Quote",;
+=======
+                <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center">";
+                  <Zap className="w-5 h-5"  />;
+                  Get Free Quote,
+>>>>>>> origin/automation-fixes:src/components/PricingSection.tsx
                 </button>;
               </Link>;
             </div>;
         </motion.div>;
       </div>;
+<<<<<<< HEAD:src_backup_temp/components/PricingSection.tsx
     </section>";,;
 export default function PricingSection("props": "any) {return (";
+=======
+    </section>";
+export default function PricingSection() {return (";
+>>>>>>> origin/automation-fixes:src/components/PricingSection.tsx
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
       <SEO title="PricingSection - Zion Tech Group" description="Professional PricingSection services by Zion Tech Group"   />";
       <div className="container mx-auto px-4 py-20">";

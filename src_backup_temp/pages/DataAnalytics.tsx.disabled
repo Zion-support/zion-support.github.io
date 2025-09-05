@@ -1,6 +1,5 @@
 import React from "react";
-import { SEO } from "@/components/SEO";
-;,"});,"});,
+import { SEO } from "@/components/SEO";"});"});
 }
 export default function DataAnalytics() {return (";
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
@@ -11,6 +10,6 @@ export default function DataAnalytics() {return (";
           Professional DataAnalytics services to help your business grow.;
         </p>;
       </div>;
-  );,
+  );
 }
 }

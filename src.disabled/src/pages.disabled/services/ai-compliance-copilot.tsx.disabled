@@ -1,121 +1,117 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ;
-  Shield, ;
-  Brain, ;
-  CheckCircle, ;
-  AlertTriangle, ;
-  FileText, ;
-  Users, ;
-  Building2, ;
-  Zap,;
-  Lock,;
-  Eye,;
-  BarChart3,;
-  TrendingUp,;
-  Globe,;
-  ArrowRight,;
-  Star,;
-  Award,;
-  Clock,;
-  DollarSign,;
-  Target,;
-  Workflow,;
-  Database,;
-  Cloud,;
-  Smartphone,;
-  Server,;
-  Cpu,;
-  Network,;
-  ShieldCheck,;
-  Bot,;
-  Activity,;
-  MessageCircle,;
-  Search,;
-  BarChart,;
-  Users2,;
-  Settings,;
-  Palette,;
-  Handshake,;
-  Lightbulb,;
-  Code,;
-  Rocket,;
-  Atom,;
-  Leaf,;
-  Gamepad2,;
-  Coins,;
-  Satellite,;
-  Heart,;
-  ShoppingCart,;
-  BookOpen,;
-  Calendar,;
-  Phone,;
-  Mail,;
-  MapPin;,
+  Shield,
+  Brain,
+  CheckCircle,
+  AlertTriangle,
+  FileText,
+  Users,
+  Building2,
+  Zap,
+  Lock,
+  Eye,
+  BarChart3,
+  TrendingUp,
+  Globe,
+  ArrowRight,
+  Star,
+  Award,
+  Clock,
+  DollarSign,
+  Target,
+  Workflow,
+  Database,
+  Cloud,
+  Smartphone,
+  Server,
+  Cpu,
+  Network,
+  ShieldCheck,
+  Bot,
+  Activity,
+  MessageCircle,
+  Search,
+  BarChart,
+  Users2,
+  Settings,
+  Palette,
+  Handshake,
+  Lightbulb,
+  Code,
+  Rocket,
+  Atom,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  Heart,
+  ShoppingCart,
+  BookOpen,
+  Calendar,
+  Phone,
+  Mail,
+  MapPin;
 } from 'lucide-react';
-;
 export default function AIComplianceCopilot() {;
   const features = [;
     {;
-      icon: Shield,;
-      title: 'Regulatory Compliance',;
-      description: 'Automated monitoring and enforcement of industry regulations and standards';,
-},;
+      icon: Shield,
+      title: 'Regulatory Compliance',
+      description: 'Automated monitoring and enforcement of industry regulations and standards';
+},
     {;
-      icon: Brain,;
-      title: 'AI-Powered Analysis',;
-      description: 'Intelligent risk assessment and compliance gap identification';,
-},;
+      icon: Brain,
+      title: 'AI-Powered Analysis',
+      description: 'Intelligent risk assessment and compliance gap identification';
+},
     {;
-      icon: CheckCircle,;
-      title: 'Audit Trail',;
-      description: 'Comprehensive tracking and documentation of all compliance activities';,
-},;
+      icon: CheckCircle,
+      title: 'Audit Trail',
+      description: 'Comprehensive tracking and documentation of all compliance activities';
+},
     {;
-      icon: AlertTriangle,;
-      title: 'Risk Detection',;
-      description: 'Proactive identification of potential compliance violations and risks';,
-},;
+      icon: AlertTriangle,
+      title: 'Risk Detection',
+      description: 'Proactive identification of potential compliance violations and risks';
+},
     {;
-      icon: FileText,;
-      title: 'Document Management',;
-      description: 'Automated document generation, review, and approval workflows';,
-},;
+      icon: FileText,
+      title: 'Document Management',
+      description: 'Automated document generation, review, and approval workflows';
+},
     {;
-      icon: Users,;
-      title: 'Team Collaboration',;
-      description: 'Streamlined communication and coordination across compliance teams';,
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Streamlined communication and coordination across compliance teams';
 }
   ];
-;
   const benefits = [;
-    'Reduce compliance costs by up to 60%',;
-    'Automate 80% of routine compliance tasks',;
-    'Real-time monitoring and alerts',;
-    'Seamless integration with existing systems',;
-    'Scalable for enterprise organizations',;
+    'Reduce compliance costs by up to 60%',
+    'Automate 80% of routine compliance tasks',
+    'Real-time monitoring and alerts',
+    'Seamless integration with existing systems',
+    'Scalable for enterprise organizations',
     '24/7 compliance monitoring and reporting';
   ];
-;
   const useCases = [;
     {;
-      industry: 'Financial Services',;
-      description: 'Automated regulatory reporting, risk assessment, and compliance monitoring for banks and financial institutions';,
-},;
+      industry: 'Financial Services',
+      description: 'Automated regulatory reporting, risk assessment, and compliance monitoring for banks and financial institutions';
+},
     {;
-      industry: 'Healthcare',;
-      description: 'HIPAA compliance, patient data protection, and medical record management automation';,
-},;
+      industry: 'Healthcare',
+      description: 'HIPAA compliance, patient data protection, and medical record management automation';
+},
     {;
-      industry: 'Manufacturing',;
-      description: 'Quality control compliance, safety standards, and environmental regulations monitoring';,
-},;
+      industry: 'Manufacturing',
+      description: 'Quality control compliance, safety standards, and environmental regulations monitoring';
+},
     {;
-      industry: 'Technology',;
-      description: 'Data privacy compliance, cybersecurity standards, and software licensing compliance';,
+      industry: 'Technology',
+      description: 'Data privacy compliance, cybersecurity standards, and software licensing compliance';
 }
   ];
-;
   return (;
     <div className="min-h-screen bg-zion-blue">;
       <Helmet>;
@@ -162,7 +158,6 @@ export default function AIComplianceCopilot() {;
               industry expertise to deliver comprehensive compliance solutions.;
             </p>;
           </div>;
-          ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {features.map((feature, index) => {;
               const Icon = feature.icon;
@@ -174,7 +169,7 @@ export default function AIComplianceCopilot() {;
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>;
                   <p className="text-zion-slate-light">{feature.description}</p>;
                 </div>;
-              );,
+              );
 })}
           </div>;
         </div>;
@@ -201,7 +196,6 @@ export default function AIComplianceCopilot() {;
                 <ArrowRight className="w-5 h-5" />;
               </button>;
             </div>;
-            ;
             <div className="bg-zion-blue-darker border border-zion-purple/30 rounded-lg p-8">;
               <h3 className="text-2xl font-bold text-white mb-6 text-center">Key Metrics</h3>;
               <div className="grid grid-cols-2 gap-6">;
@@ -239,7 +233,6 @@ export default function AIComplianceCopilot() {;
               challenges across various industries and sectors.;
             </p>;
           </div>;
-          ;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
             {useCases.map((useCase, index) => (;
               <div key={index} className="bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">;
@@ -272,5 +265,5 @@ export default function AIComplianceCopilot() {;
         </div>;
       </div>;
     </div>;
-  );,
+  );
 }

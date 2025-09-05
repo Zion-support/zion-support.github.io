@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+<<<<<<< HEAD:src_backup_temp/components/integrations/WebhookManager.tsx
 export default function Page("props": "any) {;
 ",;
     { "value": "quote_received", "label": "Quote Request Received" },;
@@ -14,11 +15,24 @@ export default function Page("props": "any) {;
   }, [fetchWebhooks]); // Added fetchWebhooks;
   ;
   const handleAddEvent = ("props": "any) => {;
+=======
+export default function Page() {;
+    { value: "quote_received", label: "Quote Request Received" },
+    { value: "milestone_approved", label: "Milestone Approved" },
+    { value: "talent_hired", label: "Talent Hired" }
+  ];
+  useEffect(() => {
+  // TODO: Add dependencies if needed;
+}, []);
+    fetchWebhooks();
+}, [fetchWebhooks]); // Added fetchWebhooks;
+  const handleAddEvent = () => {;
+>>>>>>> origin/automation-fixes:src/components/integrations/WebhookManager.tsx
     if(!newWebhook.selectedEvent) return;
-    ;
     if(newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {;
       toast.error("This event is already added");
       return;
+<<<<<<< HEAD:src_backup_temp/components/integrations/WebhookManager.tsx
     "}
     ;
     setNewWebhook({;
@@ -49,20 +63,44 @@ export default function Page("props": "any) {;
     );
   };
   ;
+=======
+}
+
+    setNewWebhook({;
+      ...newWebhook,
+      eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
+      selectedEvent: "" as WebhookEventType;
+});
+};
+  const handleRemoveEvent = (event: WebhookEventType) => {;
+    setNewWebhook({;
+      ...newWebhook,
+      eventTypes: newWebhook.eventTypes.filter(e => e !== event);
+});
+};
+>>>>>>> origin/automation-fixes:src/components/integrations/WebhookManager.tsx
   const handleCreateWebhook = async () => {;
     if(!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {;
       toast.error("Please fill in all required fields");
       return;
+<<<<<<< HEAD:src_backup_temp/components/integrations/WebhookManager.tsx
     }
     ;
     await createWebhook(newWebhook.name, ;
       newWebhook.url, ;
       newWebhook.eventTypes, ;
+=======
+}
+
+    await createWebhook(newWebhook.name,
+      newWebhook.url,
+      newWebhook.eventTypes,
+>>>>>>> origin/automation-fixes:src/components/integrations/WebhookManager.tsx
       newWebhook.secret || undefined;
     );
-    ;
     // Reset form;
     setNewWebhook({;
+<<<<<<< HEAD:src_backup_temp/components/integrations/WebhookManager.tsx
       "name": "",;
       "url": "",;
       "selectedEvent": "" as WebhookEventType,;
@@ -84,6 +122,18 @@ export default function Page("props": "any) {;
     await testWebhook(webhookId", eventType);
   };
   ;
+=======
+      name: ",
+      url: ",
+      selectedEvent: "" as WebhookEventType,
+      eventTypes: [],
+      secret: ;
+});
+};
+  const handleTestWebhook = async(webhookId: string, eventType: WebhookEventType) => {;
+    await testWebhook(webhookId, eventType);
+};
+>>>>>>> origin/automation-fixes:src/components/integrations/WebhookManager.tsx
   return (<div className="space-y-8">;
       <Card>;
         <CardHeader>;
@@ -117,7 +167,6 @@ export default function Page("props": "any) {;
                 onChange={(e) => setNewWebhook({...newWebhook, "name": "e.target.value"})}
               />;
             </div>;
-            ;
             <div className="space-y-2">;
               <Label htmlFor="webhook-url">URL</Label>;
               <Input ;
@@ -128,7 +177,6 @@ export default function Page("props": "any) {;
               />;
             </div>;
           </div>;
-          ;
           <div className="space-y-2">;
             <Label>Events</Label>;
             <div className="flex flex-wrap gap-2 mb-2">;
@@ -162,7 +210,6 @@ export default function Page("props": "any) {;
               </Button>;
             </div>;
           </div>;
-          ;
           <div className="space-y-2">;
             <Label htmlFor="webhook-secret">Secret(optional)</Label>;
             <Input ;
@@ -181,10 +228,8 @@ export default function Page("props": "any) {;
           </Button>;
         </CardFooter>;
       </Card>;
-      ;
       <div>;
         <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>;
-        ;
         {loading ? (;
           <p>Loading webhooks...</p>;
         ) : "error ? (;
@@ -276,7 +321,6 @@ export default function Page("props": "any) {;
                   >;
                     <Trash className="h-4 w-4 mr-2"  /> Delete;
                   </Button>;
-                  ;
                   <Select;
                     onValueChange={(value) => handleTestWebhook(webhook.id, value as WebhookEventType)}
                   >;
@@ -297,7 +341,7 @@ export default function Page("props": "any) {;
             ))}
           </div>;
         )}
-        ;
+
         {testResult && (;
           <Card className="mt-4 border-blue-200">;
             <CardHeader>;
@@ -324,9 +368,12 @@ export default function Page("props": "any) {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD:src_backup_temp/components/integrations/WebhookManager.tsx
       </div>
     </div>
     );
+=======
+>>>>>>> origin/automation-fixes:src/components/integrations/WebhookManager.tsx
 }
 ;
 </empty>

@@ -45,6 +45,6 @@ const TermsOfService = () => {;
               </Link>;
             </div>;
     </>;
-  );,
+  );
 }
 export default TermsOfService;

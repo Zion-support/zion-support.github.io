@@ -1,161 +1,150 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ;
-  Brain, ;
-  BarChart3, ;
-  TrendingUp, ;
-  Zap, ;
-  Shield, ;
-  Users, ;
-  Clock, ;
-  CheckCircle,;
-  ArrowRight,;
-  Star,;
-  DollarSign,;
-  Target,;
-  Lightbulb,;
-  Database,;
-  ChartBar,;
-  PieChart,;
-  LineChart,;
-  Activity,;
-  Globe,;
-  Lock;,
+  Brain,
+  BarChart3,
+  TrendingUp,
+  Zap,
+  Shield,
+  Users,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  DollarSign,
+  Target,
+  Lightbulb,
+  Database,
+  ChartBar,
+  PieChart,
+  LineChart,
+  Activity,
+  Globe,
+  Lock;
 } from 'lucide-react';
-;
 export function AIAutonomousBusinessIntelligencePlatform() {;
   const features = [;
     {;
-      icon: Brain,;
-      title: "Autonomous Data Analysis",;
-      description: "AI-powered insights generation without human intervention, continuously learning and adapting to business patterns.";,
-},;
+      icon: Brain,
+      title: "Autonomous Data Analysis",
+      description: "AI-powered insights generation without human intervention, continuously learning and adapting to business patterns.";
+},
     {;
-      icon: BarChart3,;
-      title: "Real-time Dashboards",;
-      description: "Live business metrics, KPIs, and performance indicators with instant updates and alerts.";,
-},;
+      icon: BarChart3,
+      title: "Real-time Dashboards",
+      description: "Live business metrics, KPIs, and performance indicators with instant updates and alerts.";
+},
     {;
-      icon: TrendingUp,;
-      title: "Predictive Analytics",;
-      description: "Forecast trends, identify opportunities, and predict potential risks using advanced ML algorithms.";,
-},;
+      icon: TrendingUp,
+      title: "Predictive Analytics",
+      description: "Forecast trends, identify opportunities, and predict potential risks using advanced ML algorithms.";
+},
     {;
-      icon: Zap,;
-      title: "Automated Reporting",;
-      description: "Generate comprehensive reports automatically, saving hours of manual work each week.";,
-},;
+      icon: Zap,
+      title: "Automated Reporting",
+      description: "Generate comprehensive reports automatically, saving hours of manual work each week.";
+},
     {;
-      icon: Shield,;
-      title: "Data Security",;
-      description: "Enterprise-grade security with encryption, access controls, and compliance certifications.";,
-},;
+      icon: Shield,
+      title: "Data Security",
+      description: "Enterprise-grade security with encryption, access controls, and compliance certifications.";
+},
     {;
-      icon: Users,;
-      title: "Team Collaboration",;
-      description: "Share insights, create collaborative dashboards, and enable data-driven decision making across teams.";,
+      icon: Users,
+      title: "Team Collaboration",
+      description: "Share insights, create collaborative dashboards, and enable data-driven decision making across teams.";
 }
   ];
-;
   const pricingPlans = [;
     {;
-      name: "Starter",;
-      price: "$299",;
-      period: "/month",;
-      description: "Perfect for small businesses starting their BI journey",;
-      features: [;
-        "Up to 5 data sources",;
-        "Basic dashboards",;
-        "Standard reports",;
-        "Email support",;
-        "5GB data storage";
-      ],;
-      cta: "Start Free Trial",;
-      popular: false;,
-},;
+      name: "Starter",
+      price: "$299",
+      period: "/month",
+      description: "Perfect for small businesses starting their BI journey",
+      features: [ "Up to 5 data sources",
+        "Basic dashboards",
+        "Standard reports",
+        "Email support",
+        "5GB data storage" ],
+      cta: "Start Free Trial",
+      popular: false;
+},
     {;
-      name: "Professional",;
-      price: "$799",;
-      period: "/month",;
-      description: "Ideal for growing companies with advanced BI needs",;
-      features: [;
-        "Up to 20 data sources",;
-        "Advanced analytics",;
-        "Custom dashboards",;
-        "Priority support",;
-        "25GB data storage",;
-        "API access",;
-        "Advanced security";
-      ],;
-      cta: "Start Free Trial",;
-      popular: true;,
-},;
+      name: "Professional",
+      price: "$799",
+      period: "/month",
+      description: "Ideal for growing companies with advanced BI needs",
+      features: [ "Up to 20 data sources",
+        "Advanced analytics",
+        "Custom dashboards",
+        "Priority support",
+        "25GB data storage",
+        "API access",
+        "Advanced security" ],
+      cta: "Start Free Trial",
+      popular: true;
+},
     {;
-      name: "Enterprise",;
-      price: "$1,999",;
-      period: "/month",;
-      description: "For large organizations requiring enterprise-grade BI",;
-      features: [;
-        "Unlimited data sources",;
-        "AI-powered insights",;
-        "Custom integrations",;
-        "24/7 dedicated support",;
-        "Unlimited storage",;
-        "Advanced compliance",;
-        "Custom training",;
-        "SLA guarantees";
-      ],;
-      cta: "Contact Sales",;
-      popular: false;,
+      name: "Enterprise",
+      price: "$1,999",
+      period: "/month",
+      description: "For large organizations requiring enterprise-grade BI",
+      features: [ "Unlimited data sources",
+        "AI-powered insights",
+        "Custom integrations",
+        "24/7 dedicated support",
+        "Unlimited storage",
+        "Advanced compliance",
+        "Custom training",
+        "SLA guarantees" ],
+      cta: "Contact Sales",
+      popular: false;
 }
   ];
-;
   const benefits = [;
     {;
-      icon: Clock,;
-      title: "Save 20+ Hours Weekly",;
-      description: "Automate routine reporting and analysis tasks, freeing your team to focus on strategic decisions.";,
-},;
+      icon: Clock,
+      title: "Save 20+ Hours Weekly",
+      description: "Automate routine reporting and analysis tasks, freeing your team to focus on strategic decisions.";
+},
     {;
-      icon: CheckCircle,;
-      title: "Increase Revenue by 15-25%",;
-      description: "Data-driven insights help identify new opportunities and optimize existing processes.";,
-},;
+      icon: CheckCircle,
+      title: "Increase Revenue by 15-25%",
+      description: "Data-driven insights help identify new opportunities and optimize existing processes.";
+},
     {;
-      icon: Target,;
-      title: "Improve Decision Accuracy",;
-      description: "AI-powered recommendations reduce human bias and improve strategic planning outcomes.";,
-},;
+      icon: Target,
+      title: "Improve Decision Accuracy",
+      description: "AI-powered recommendations reduce human bias and improve strategic planning outcomes.";
+},
     {;
-      icon: Lightbulb,;
-      title: "Discover Hidden Insights",;
-      description: "Uncover patterns and correlations that traditional analysis methods might miss.";,
+      icon: Lightbulb,
+      title: "Discover Hidden Insights",
+      description: "Uncover patterns and correlations that traditional analysis methods might miss.";
 }
   ];
-;
   const useCases = [;
     {;
-      title: "Sales Performance Optimization",;
-      description: "Track sales metrics, identify top performers, and optimize sales strategies in real-time.",;
-      icon: TrendingUp;,
-},;
+      title: "Sales Performance Optimization",
+      description: "Track sales metrics, identify top performers, and optimize sales strategies in real-time.",
+      icon: TrendingUp;
+},
     {;
-      title: "Customer Behavior Analysis",;
-      description: "Understand customer patterns, preferences, and lifetime value for better marketing decisions.",;
-      icon: Users;,
-},;
+      title: "Customer Behavior Analysis",
+      description: "Understand customer patterns, preferences, and lifetime value for better marketing decisions.",
+      icon: Users;
+},
     {;
-      title: "Financial Forecasting",;
-      description: "Predict cash flow, revenue trends, and financial risks with high accuracy.",;
-      icon: ChartBar;,
-},;
+      title: "Financial Forecasting",
+      description: "Predict cash flow, revenue trends, and financial risks with high accuracy.",
+      icon: ChartBar;
+},
     {;
-      title: "Operational Efficiency",;
-      description: "Monitor operational KPIs and identify bottlenecks for process improvement.",;
-      icon: Activity;,
+      title: "Operational Efficiency",
+      description: "Monitor operational KPIs and identify bottlenecks for process improvement.",
+      icon: Activity;
 }
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate-darker to-zion-slate-darkest">;
       {/* Hero Section */}
@@ -311,7 +300,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {;
                 className={`relative p-8 rounded-2xl border transition-all duration-300 ${;
                   plan.popular;
                     ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-zion-purple/50 scale-105';
-                    : 'bg-zion-slate-dark/50 border-zion-slate hover:border-zion-purple/30';,
+                    : 'bg-zion-slate-dark/50 border-zion-slate hover:border-zion-purple/30';
 }`}
               >;
                 {plan.popular && (;
@@ -342,7 +331,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {;
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${;
                     plan.popular;
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan-light hover:to-zion-blue-light';
-                      : 'bg-zion-slate border border-zion-slate-light text-white hover:bg-zion-slate-light';,
+                      : 'bg-zion-slate border border-zion-slate-light text-white hover:bg-zion-slate-light';
 }`}
                 >;
                   {plan.cta}
@@ -396,7 +385,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {;
         </div>;
       </footer>;
     </div>;
-  );,
+  );
 }
-;
+
 export default AIAutonomousBusinessIntelligencePlatform;

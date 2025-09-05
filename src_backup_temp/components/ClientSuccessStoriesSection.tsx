@@ -1,5 +1,4 @@
 import {  import { motion  } from 'framer-motion';
-;
  params - Function parameters;
  * @returns {*} Function return value;
  */;
@@ -11,6 +10,7 @@ export function ClientSuccessStoriesSection("props": any) {;
         <motion.div ";
           className="text-center mb-16";
           initial = {;
+<<<<<<< HEAD:src_backup_temp/components/ClientSuccessStoriesSection.tsx
   { "opacity": 0",;
   "y": "2 0;
 "}}
@@ -20,6 +20,19 @@ export function ClientSuccessStoriesSection("props": any) {;
 "}}
           viewport={{ "once": "tru e "}}
           transition={{ "duration": "0.6 "}}
+=======
+
+  { opacity: 0,
+  y: 20;
+}}
+          whileInView = {;
+
+  { opacity: 1,
+  y: 0;
+}}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+>>>>>>> origin/automation-fixes:src/components/ClientSuccessStoriesSection.tsx
         >";
           <h2 className="text-4xl "md": "tex t-5xl font-bold text-white mb-4">;
             Client Success Stories;
@@ -29,6 +42,7 @@ export function ClientSuccessStoriesSection("props": any) {;
             across industries achieve remarkable transformations and measurable success.</p>;
         </motion.div>;
           initial = {;
+<<<<<<< HEAD:src_backup_temp/components/ClientSuccessStoriesSection.tsx
   { "opacity": 0",;
   "y": "2 0;
 "}}
@@ -43,6 +57,24 @@ export function ClientSuccessStoriesSection("props": any) {;
           className="grid grid-cols-2 "md": "gri d-cols-4 gap-8 mb-16";
         > {successMetrics.map ( (metric", index) => {;
             ;
+=======
+
+  { opacity: 0,
+  y: 20;
+}}
+          whileInView = {;
+
+  { opacity: 1,
+  y: 0;
+}}
+          transition = {;
+
+  { duration: 0.6,
+  delay: 0.1;
+}}";
+          className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">;
+          {successMetrics.map ( (metric, index) => {;
+>>>>>>> origin/automation-fixes:src/components/ClientSuccessStoriesSection.tsx
             return (";
               <div key = {metric.label} className="text-center">";
                 <div className="flex justify-center mb-4">";
@@ -65,6 +97,7 @@ export function ClientSuccessStoriesSection("props": any) {;
               key={story.id}";
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden "hover": "borde r-blue-500/50 transition-all duration-300 "hover": shado w-lg "hover": shado w-blue-500/25";
               initial = {;
+<<<<<<< HEAD:src_backup_temp/components/ClientSuccessStoriesSection.tsx
   { "opacity": 0",;
   "y": "3 0;
 "}}
@@ -77,6 +110,23 @@ export function ClientSuccessStoriesSection("props": any) {;
   { "duration": "0.6",;
   "delay": "inde x * 0.1;
 "}}
+=======
+
+  { opacity: 0,
+  y: 30;
+}}
+              whileInView = {;
+
+  { opacity: 1,
+  y: 0;
+}}
+              viewport={{ once: true }}
+              transition = {;
+
+  { duration: 0.6,
+  delay: index * 0.1;
+}}
+>>>>>>> origin/automation-fixes:src/components/ClientSuccessStoriesSection.tsx
             >";
               <div className="flex items-center mb-6">";
                 <div className="text-4xl mr-4">{testimonial.avatar}</div>;
@@ -145,6 +195,7 @@ export function ClientSuccessStoriesSection("props": any) {;
         {/* Success Metrics */}
         <motion.div;
           className="mb-16";          initial = {;
+<<<<<<< HEAD:src_backup_temp/components/ClientSuccessStoriesSection.tsx
   { "opacity": "0",;
   "y": "3 0;
 "}}
@@ -157,6 +208,23 @@ export function ClientSuccessStoriesSection("props": any) {;
   { "duration": "0.6",;
   "delay": "0.4;
 "}}
+=======
+
+  { opacity: 0,
+  y: 30;
+}}
+          whileInView = {;
+
+  { opacity: 1,
+  y: 0;
+}}
+          viewport={{ once: true }}
+          transition = {;
+
+  { duration: 0.6,
+  delay: 0.4;
+}}
+>>>>>>> origin/automation-fixes:src/components/ClientSuccessStoriesSection.tsx
         >";
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">";
             <h3 className="text-2xl font-bold text-white text-center mb-8">;
@@ -188,6 +256,7 @@ export function ClientSuccessStoriesSection("props": any) {;
         </motion.div>;
         <motion.div;
           className="text-center"          initial = {;
+<<<<<<< HEAD:src_backup_temp/components/ClientSuccessStoriesSection.tsx
   { "opacity": 0",;
   "y": "2 0;
 "}}
@@ -200,6 +269,23 @@ export function ClientSuccessStoriesSection("props": any) {;
   { "duration": "0.6",;
   "delay": "0.6;
 "}}
+=======
+
+  { opacity: 0,
+  y: 20;
+}}
+          whileInView = {;
+
+  { opacity: 1,
+  y: 0;
+}}
+          viewport={{ once: true }}
+          transition = {;
+
+  { duration: 0.6,
+  delay: 0.6;
+}}
+>>>>>>> origin/automation-fixes:src/components/ClientSuccessStoriesSection.tsx
         >";
           <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white">";
             <h3 className="text-2xl font-bold mb-4">;
@@ -240,8 +326,12 @@ export function ClientSuccessStoriesSection("props": any) {;
           </div>
         </motion.div>
       </div>;
+<<<<<<< HEAD:src_backup_temp/components/ClientSuccessStoriesSection.tsx
     </section>;) "};
 ;
+=======
+    </section>;) };
+>>>>>>> origin/automation-fixes:src/components/ClientSuccessStoriesSection.tsx
 export default ClientSuccessStoriesSection;";
             <span className="text-2xl">→</span>;
           </div>;

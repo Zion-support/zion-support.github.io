@@ -1,6 +1,7 @@
 import React from 'react';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
+<<<<<<< HEAD:src_backup_temp/components/EnhancedContact.tsx
 ;
 interface ContactFormData {;
   "name": "string;
@@ -51,10 +52,55 @@ export function EnhancedContact(...args[]):  {
       "value": 'Mon-"Fri": "9A M-6PM EST'",;
       "description": 'Available during these hours'};  ];
 ;
+=======
+interface ContactFormData {
+  name: string;
+  email: string;
+  phone: string;
+  comp: string;
+  service: string;
+  message: string;
+}
+
+interface ContactFormErrors {
+  [key: string]: string}
+
+export function EnhancedContact(...args[]):  {;
+
+  const [formData, setFormData] = useState<any>({;
+
+    name: '',
+    email: '',
+    phone: '',
+    comp: '',
+    service: 'general',
+    message: '';
+}) ;
+  const [errors, setErrors] = useState<any> ({}) ;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+    { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },
+    { value: 'cybersecurity', label: 'Cybersecurity' },
+    { value: 'digital-transformation', label: 'Digital Transformation' },
+    { value: 'consulting', label: 'IT Consulting' },
+    { value: 'quantum-computing', label: 'Quantum Computing' },
+    { value: 'green-it', label: 'Green IT Solutions' };
+  ];
+    const newErrors: ContactFormErrors = {};      // console.error('Error submitting form:', error)} finally {;
+
+      setIsSubmitting(false)}
+  };
+    {;
+      icon: Clock,
+      title: 'Business Hours',
+      value: 'Mon-Fri: 9AM-6PM EST',
+      description: 'Available during these hours'};  ];
+>>>>>>> origin/automation-fixes:src/components/EnhancedContact.tsx
   if(isSubmitted) {;
     return ();
       <motion.div;
         initial = {;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedContact.tsx
   { "opacity": "0",;
   "scale": "0.8;
 "}}
@@ -64,19 +110,37 @@ export function EnhancedContact(...args[]):  {
 "}}
         className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center py-20";
       >";
+=======
+
+  { opacity: 0,
+  scale: 0.8;
+}}
+        animate = {;
+
+  { opacity: 1,
+  scale: 1;
+}}
+        className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center py-20">";
+>>>>>>> origin/automation-fixes:src/components/EnhancedContact.tsx
         <div className="max-w-md mx-auto text-center">;
           <motion.div;
             initial={{ "scale": "0 "}}
             animate={{ "scale": "1 "}}
             transition = {;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedContact.tsx
   { "delay": "0.2",;
   "type": "spring";
+=======
+  { delay: 0.2,
+  type: "spring";
+>>>>>>> origin/automation-fixes:src/components/EnhancedContact.tsx
 }}";
             className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6";
           >";
             <CheckCircle className="w-10 h-10 text-white"   />          </motion.div>;
           <motion.h2;
             initial = {;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedContact.tsx
   { "opacity": "0",;
   "y": "2 0;
 "}}
@@ -87,10 +151,24 @@ export function EnhancedContact(...args[]):  {
             transition={{ "delay": "0.3 "}}";
             className="text-3xl font-bold text-white mb-4";
           >;
+=======
+
+  { opacity: 0,
+  y: 20;
+}}
+            animate = {;
+
+  { opacity: 1,
+  y: 0;
+}}
+            transition={{ delay: 0.3 }}";
+            className="text-3xl font-bold text-white mb-4">;
+>>>>>>> origin/automation-fixes:src/components/EnhancedContact.tsx
             Message Sent Successfully!;
           </motion.h2>;
           <motion.p;
             initial = {;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedContact.tsx
   { "opacity": "0",;
   "y": "2 0;
 "}}
@@ -101,9 +179,23 @@ export function EnhancedContact(...args[]):  {
             transition={{ "delay": "0.4 "}}";
             className="text-zion-slate-light mb-8";
           >;
+=======
+
+  { opacity: 0,
+  y: 20;
+}}
+            animate = {;
+
+  { opacity: 1,
+  y: 0;
+}}
+            transition={{ delay: 0.4 }}";
+            className="text-zion-slate-light mb-8">;
+>>>>>>> origin/automation-fixes:src/components/EnhancedContact.tsx
             Thank you for reaching out to us.We'll get back to you within 24 hours.</motion.p>;
           <motion.button;
             initial = {;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedContact.tsx
   { "opacity": "0",;
   "y": "2 0;
 "}}
@@ -112,6 +204,18 @@ export function EnhancedContact(...args[]):  {
   "y": "0;
 "}}
             transition={{ "delay": "0.5 "}}
+=======
+
+  { opacity: 0,
+  y: 20;
+}}
+            animate = {;
+
+  { opacity: 1,
+  y: 0;
+}}
+            transition={{ delay: 0.5 }}
+>>>>>>> origin/automation-fixes:src/components/EnhancedContact.tsx
             onClick={() => setIsSubmitted(false)}";
             className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg "hover": "fro m-zion-cyan-dark "hover": t o-zion-purple-dark transition-all duration-300 font-medium";
           >;
@@ -125,6 +229,7 @@ export function EnhancedContact(...args[]):  {
         {/* Header */"}
         <motion.div;
           initial = {;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedContact.tsx
   { "opacity": "0",;
   "y": "2 0;
 "}}
@@ -135,6 +240,19 @@ export function EnhancedContact(...args[]):  {
           className="text-center mb-16";
         >";
           <h1 className="text-4xl "md": "tex t-6xl font-bold text-white mb-6">;
+=======
+
+  { opacity: 0,
+  y: 20;
+}}
+          animate = {;
+
+  { opacity: 1,
+  y: 0;
+}}";
+          className="text-center mb-16">";
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
+>>>>>>> origin/automation-fixes:src/components/EnhancedContact.tsx
             Get in Touch;
           </h1>";
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
@@ -146,6 +264,7 @@ export function EnhancedContact(...args[]):  {
           {/* Contact Information */"}
           <motion.div;
             initial = {;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedContact.tsx
   { "opacity": "0",;
   "x": "-50;
 "}}
@@ -154,6 +273,18 @@ export function EnhancedContact(...args[]):  {
   "x": "0;
 "}}
             transition={{ "delay": "0.2 "}}
+=======
+
+  { opacity: 0,
+  x: -50;
+}}
+            animate = {;
+
+  { opacity: 1,
+  x: 0;
+}}
+            transition={{ delay: 0.2 }}
+>>>>>>> origin/automation-fixes:src/components/EnhancedContact.tsx
           >";
             <h2 className="text-2xl font-bold text-white mb-8">Contact Information</h2>;
 ";
@@ -162,6 +293,7 @@ export function EnhancedContact(...args[]):  {
                 <motion.div;
                   key={info.title}
                   initial = {;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedContact.tsx
   { "opacity": "0",;
   "x": "-20;
 "}}
@@ -172,6 +304,19 @@ export function EnhancedContact(...args[]):  {
                   transition={{ "delay": "0.3 + index * 0.1 "}}";
                   className="flex items-start space-x-4";
                 >";
+=======
+
+  { opacity: 0,
+  x: -20;
+}}
+                  animate = {;
+
+  { opacity: 1,
+  x: 0;
+}}
+                  transition={{ delay: 0.3 + index * 0.1 }}";
+                  className="flex items-start space-x-4">";
+>>>>>>> origin/automation-fixes:src/components/EnhancedContact.tsx
                   <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center flex-shrink-0">";
                     <info.icon className="w-6 h-6 text-zion-cyan" />;
                   </div>;
@@ -197,6 +342,7 @@ export function EnhancedContact(...args[]):  {
             {/* Comp Stats */}
             <motion.div;
               initial = {;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedContact.tsx
   { "opacity": "0",;
   "y": "2 0;
 "}}
@@ -207,6 +353,19 @@ export function EnhancedContact(...args[]):  {
               transition={{ "delay": "0.6 "}}";
               className="mt-12 p-6 bg-zion-blue-light/10 rounded-xl border border-zion-blue-light/20";
             >";
+=======
+
+  { opacity: 0,
+  y: 20;
+}}
+              animate = {;
+
+  { opacity: 1,
+  y: 0;
+}}
+              transition={{ delay: 0.6 }}";
+              className="mt-12 p-6 bg-zion-blue-light/10 rounded-xl border border-zion-blue-light/20">";
+>>>>>>> origin/automation-fixes:src/components/EnhancedContact.tsx
               <h3 className="text-xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h3>";
               <div className="grid grid-cols-2 gap-4">";
                 <div className="text-center">";
@@ -256,6 +415,7 @@ export function EnhancedContact(...args[]):  {
           {/* Contact Form */}
           <motion.div;
             initial = {;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedContact.tsx
   { "opacity": "0",;
   "x": "5 0;
 "}}
@@ -266,6 +426,19 @@ export function EnhancedContact(...args[]):  {
             transition={{ "delay": "0.3 "}}";
             className="bg-zion-blue-light/10 rounded-xl p-8 border border-zion-blue-light/20";
           >";
+=======
+
+  { opacity: 0,
+  x: 50;
+}}
+            animate = {;
+
+  { opacity: 1,
+  x: 0;
+}}
+            transition={{ delay: 0.3 }}";
+            className="bg-zion-blue-light/10 rounded-xl p-8 border border-zion-blue-light/20">";
+>>>>>>> origin/automation-fixes:src/components/EnhancedContact.tsx
             <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>;
 ";
             <form onSubmit={handleSubmit} className="space-y-6">;
@@ -278,6 +451,7 @@ export function EnhancedContact(...args[]):  {
                   type="text";
                   id="name";
                   value={formData.name}
+<<<<<<< HEAD:src_backup_temp/components/EnhancedContact.tsx
                   onChange={;
   (e) => handleInputChange('name',;
   e.target.value);
@@ -286,12 +460,24 @@ export function EnhancedContact(...args[]):  {
                       ? 'border-red-500 "focus": rin g-red-500'';
                       : 'border-zion-slate-light "focus": borde r-zion-cyan'`;
                   "} text-white placeholder-zion-slate-light`}";
+=======
+                  onChange = {;
+
+  (e) => handleInputChange('name',
+  e.target.value);
+}
+                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${errors.name';
+                      ? 'border-red-500 focus:ring-red-500'';
+                      : 'border-zion-slate-light focus:border-zion-cyan'`;
+} text-white placeholder-zion-slate-light`}";
+>>>>>>> origin/automation-fixes:src/components/EnhancedContact.tsx
                   placeholder="Enter your full name";
                 />;
                 <AnimatePresence>;
                   {errors['name'] && (;
                     <motion.p;
                       initial = {;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedContact.tsx
   { "opacity": "0",;
   "y": "-10;
 "}}
@@ -306,6 +492,24 @@ export function EnhancedContact(...args[]):  {
                       className="text-red-400 text-sm mt-1 flex items-center";
                     >";
                       <AlertCircle className="w-4 h-4 mr-1"   />;
+=======
+
+  { opacity: 0,
+  y: -10;
+}}
+                      animate = {;
+
+  { opacity: 1,
+  y: 0;
+}}
+                      exit = {;
+
+  { opacity: 0,
+  y: -10;
+}}";
+                      className="text-red-400 text-sm mt-1 flex items-center">";
+                      <AlertCircle className="w-4 h-4 mr-1"  />;
+>>>>>>> origin/automation-fixes:src/components/EnhancedContact.tsx
                       {errors['name']}                    </motion.p>) }
                 </AnimatePresence>;
               </div>;
@@ -318,6 +522,7 @@ export function EnhancedContact(...args[]):  {
                   type="email";
                   id="email";
                   value={formData.email}
+<<<<<<< HEAD:src_backup_temp/components/EnhancedContact.tsx
                   onChange={;
   (e) => handleInputChange('email',;
   e.target.value);
@@ -326,12 +531,24 @@ export function EnhancedContact(...args[]):  {
                       ? 'border-red-500 "focus": rin g-red-500'';
                       : 'border-zion-slate-light "focus": borde r-zion-cyan'`;
                   "} text-white placeholder-zion-slate-light`}";
+=======
+                  onChange = {;
+
+  (e) => handleInputChange('email',
+  e.target.value);
+}`;
+                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${errors.email';
+                      ? 'border-red-500 focus:ring-red-500'';
+                      : 'border-zion-slate-light focus:border-zion-cyan'`;
+} text-white placeholder-zion-slate-light`}";
+>>>>>>> origin/automation-fixes:src/components/EnhancedContact.tsx
                   placeholder="Enter your email address";
                 />;
                 <AnimatePresence>;
                   {errors['email'] && (;
                     <motion.p;
                       initial = {;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedContact.tsx
   { "opacity": "0",;
   "y": "-10;
 "}}
@@ -346,6 +563,24 @@ export function EnhancedContact(...args[]):  {
                       className="text-red-400 text-sm mt-1 flex items-center";
                     >";
                       <AlertCircle className="w-4 h-4 mr-1"   />;
+=======
+
+  { opacity: 0,
+  y: -10;
+}}
+                      animate = {;
+
+  { opacity: 1,
+  y: 0;
+}}
+                      exit = {;
+
+  { opacity: 0,
+  y: -10;
+}}";
+                      className="text-red-400 text-sm mt-1 flex items-center">";
+                      <AlertCircle className="w-4 h-4 mr-1"  />;
+>>>>>>> origin/automation-fixes:src/components/EnhancedContact.tsx
                       {errors['email']}                    </motion.p>) }
                 </AnimatePresence>;
               </div>;
@@ -358,9 +593,16 @@ export function EnhancedContact(...args[]):  {
                   <input";
                     type="tel";
                     id="phone";
+<<<<<<< HEAD:src_backup_temp/components/EnhancedContact.tsx
                     value={formData.phone"}
                     onChange={;
   (e) => handleInputChange('phone',;
+=======
+                    value={formData.phone}
+                    onChange = {;
+
+  (e) => handleInputChange('phone',
+>>>>>>> origin/automation-fixes:src/components/EnhancedContact.tsx
   e.target.value);
 }";
                     className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 "focus": "outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan "focus": borde r-zion-cyan text-white placeholder-zion-slate-light";
@@ -373,9 +615,16 @@ export function EnhancedContact(...args[]):  {
                   <input";
                     type="text";
                     id="company";
+<<<<<<< HEAD:src_backup_temp/components/EnhancedContact.tsx
                     value={formData.company"}
                     onChange={;
   (e) => handleInputChange('company',;
+=======
+                    value={formData.company}
+                    onChange = {;
+
+  (e) => handleInputChange('company',
+>>>>>>> origin/automation-fixes:src/components/EnhancedContact.tsx
   e.target.value);
 }";
                     className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 "focus": "outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan "focus": borde r-zion-cyan text-white placeholder-zion-slate-light";
@@ -391,8 +640,14 @@ export function EnhancedContact(...args[]):  {
                 <select";
                   id="service";
                   value={formData.service}
+<<<<<<< HEAD:src_backup_temp/components/EnhancedContact.tsx
                   onChange={;
   (e) => handleInputChange('service',;
+=======
+                  onChange = {;
+
+  (e) => handleInputChange('service',
+>>>>>>> origin/automation-fixes:src/components/EnhancedContact.tsx
   e.target.value);
 }";
                   className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 "focus": "outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan "focus": borde r-zion-cyan text-white";
@@ -411,6 +666,7 @@ export function EnhancedContact(...args[]):  {
                   id="message";
                   rows={4}
                   value={formData.message}
+<<<<<<< HEAD:src_backup_temp/components/EnhancedContact.tsx
                   onChange={;
   (e) => handleInputChange('message',;
   e.target.value);
@@ -419,12 +675,24 @@ export function EnhancedContact(...args[]):  {
                       ? 'border-red-500 "focus": rin g-red-500'';
                       : 'border-zion-slate-light "focus": borde r-zion-cyan'`;
                   "} text-white placeholder-zion-slate-light`}";
+=======
+                  onChange = {;
+
+  (e) => handleInputChange('message',
+  e.target.value);
+}`;
+                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan resize-none ${errors.message';
+                      ? 'border-red-500 focus:ring-red-500'';
+                      : 'border-zion-slate-light focus:border-zion-cyan'`;
+} text-white placeholder-zion-slate-light`}";
+>>>>>>> origin/automation-fixes:src/components/EnhancedContact.tsx
                   placeholder="Tell us about your project or inquiry...";
                 />;
                 <AnimatePresence>;
                   {errors['message'] && (;
                     <motion.p;
                       initial = {;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedContact.tsx
   { "opacity": "0",;
   "y": "-10;
 "}}
@@ -439,6 +707,24 @@ export function EnhancedContact(...args[]):  {
                       className="text-red-400 text-sm mt-1 flex items-center";
                     >";
                       <AlertCircle className="w-4 h-4 mr-1"   />;
+=======
+
+  { opacity: 0,
+  y: -10;
+}}
+                      animate = {;
+
+  { opacity: 1,
+  y: 0;
+}}
+                      exit = {;
+
+  { opacity: 0,
+  y: -10;
+}}";
+                      className="text-red-400 text-sm mt-1 flex items-center">";
+                      <AlertCircle className="w-4 h-4 mr-1"  />;
+>>>>>>> origin/automation-fixes:src/components/EnhancedContact.tsx
                       {errors['message']}                    </motion.p>) }
                 </AnimatePresence>;
               </div>;

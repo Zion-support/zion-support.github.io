@@ -4,76 +4,73 @@ import { SEOHead } from '../components/seo/SEOHead';import { Card, CardContent, 
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ;
-  Shield, ;
-  Lock, ;
-  Eye, ;
-  AlertTriangle, ;
-  Users, ;
-  Globe, ;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Star,;
-  CheckCircle,;
-  ArrowRight,;
-  Zap,;
-  Brain,;
-  Network,;
-  Server,;
-  Database,;
-  Key,;
-  Monitor,;
-  TrendingUp;,
+  Shield,
+  Lock,
+  Eye,
+  AlertTriangle,
+  Users,
+  Globe,
+  Phone,
+  Mail,
+  MapPin,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Zap,
+  Brain,
+  Network,
+  Server,
+  Database,
+  Key,
+  Monitor,
+  TrendingUp;
 } from 'lucide-react';
-;
 export default function CybersecurityServicesPage() {;
   const services = [;
     {;
-      title: "Zero Trust Security Framework",;
-      description: "Implement enterprise-grade security with our comprehensive zero trust architecture",;
-      features: ["Identity verification", "Continuous monitoring", "Threat detection", "Compliance reporting"],;
-      price: "From $3,000/month",;
-      icon: Shield;,
-},;
+      title: "Zero Trust Security Framework",
+      description: "Implement enterprise-grade security with our comprehensive zero trust architecture",
+      features: ["Identity verification", "Continuous monitoring", "Threat detection", "Compliance reporting"],
+      price: "From $3,000/month",
+      icon: Shield;
+},
     {;
-      title: "Advanced Threat Detection",;
-      description: "AI-powered security monitoring and real-time threat response",;
-      features: ["24/7 monitoring", "AI threat analysis", "Automated response", "Incident management"],;
-      price: "From $2,500/month",;
-      icon: Eye;,
-},;
+      title: "Advanced Threat Detection",
+      description: "AI-powered security monitoring and real-time threat response",
+      features: ["24/7 monitoring", "AI threat analysis", "Automated response", "Incident management"],
+      price: "From $2,500/month",
+      icon: Eye;
+},
     {;
-      title: "Security Compliance & Auditing",;
-      description: "Ensure your organization meets industry security standards and regulations",;
-      features: ["SOC2 compliance", "GDPR compliance", "Regular audits", "Risk assessment"],;
-      price: "From $4,000/month",;
-      icon: CheckCircle;,
+      title: "Security Compliance & Auditing",
+      description: "Ensure your organization meets industry security standards and regulations",
+      features: ["SOC2 compliance", "GDPR compliance", "Regular audits", "Risk assessment"],
+      price: "From $4,000/month",
+      icon: CheckCircle;
 }
   ];
-;
   const features = [;
     {;
-      icon: Shield,;
-      title: "Enterprise Security",;
-      description: "Bank-level security with SOC2 compliance and 24/7 monitoring";,
-},;
+      icon: Shield,
+      title: "Enterprise Security",
+      description: "Bank-level security with SOC2 compliance and 24/7 monitoring";
+},
     {;
-      icon: Brain,;
-      title: "AI-Powered Protection",;
-      description: "Advanced threat detection using machine learning algorithms";,
-},;
+      icon: Brain,
+      title: "AI-Powered Protection",
+      description: "Advanced threat detection using machine learning algorithms";
+},
     {;
-      icon: Network,;
-      title: "Network Security",;
-      description: "Comprehensive network protection and firewall management";,
-},;
+      icon: Network,
+      title: "Network Security",
+      description: "Comprehensive network protection and firewall management";
+},
     {;
-      icon: Users,;
-      title: "Access Control",;
-      description: "Secure user authentication and role-based permissions";,
+      icon: Users,
+      title: "Access Control",
+      description: "Secure user authentication and role-based permissions";
 }
   ];
-;
   return (;
     <>;
       <SEOHead ;
@@ -81,17 +78,16 @@ export default function CybersecurityServicesPage() {;
         description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business.";
         keywords={['cybersecurity', 'security services', 'threat detection', 'compliance', 'zero trust']}
         structuredData={{;
-          "@context": "https://schema.org",;
-          "@type": "Service",;
-          "name": "Cybersecurity Services",;
-          "description": "Comprehensive cybersecurity solutions",;
-          "url": "https://ziontechgroup.com/services/cybersecurity",;
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Cybersecurity Services",
+          "description": "Comprehensive cybersecurity solutions",
+          "url": "https://ziontechgroup.com/services/cybersecurity",
           "provider": {;
-            "@type": "Organization",;
-            "name": "Zion Tech Group";,
+            "@type": "Organization",
+            "name": "Zion Tech Group";
 }
         }}      />;
-      ;
       <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black">;
         {/* Hero Section */}
         <section className="py-32 px-4 relative overflow-hidden">;
@@ -110,7 +106,6 @@ export default function CybersecurityServicesPage() {;
               <br />;
               <span className="text-white">That Never Sleeps</span>;
             </h1>;
-            ;
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">;
               Protect your business with enterprise-grade cybersecurity solutions. Our AI-powered security ;
               platform provides 24/7 protection against evolving cyber threats.;
@@ -143,7 +138,6 @@ export default function CybersecurityServicesPage() {;
                 We combine advanced technology with proven expertise to deliver security that exceeds expectations;
               </p>;
             </div>;
-            ;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {features.map((feature, index) => (;
                 <div key={index} className="text-center">;
@@ -173,7 +167,6 @@ export default function CybersecurityServicesPage() {;
                 Comprehensive cybersecurity solutions designed to protect your business from all angles;
               </p>;
             </div>;
-            ;
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
               {services.map((service, index) => (;
                 <Card key={index} className="bg-gradient-to-br from-zinc-800 to-zinc-900 border-zinc-700">;
@@ -238,8 +231,7 @@ export default function CybersecurityServicesPage() {;
     </>;
   );
 import React from "react";
-import { SEO } from "@/components/SEO";
-;,"});,"});,
+import { SEO } from "@/components/SEO";"});"});
 }
 export default function CybersecurityServicesPage() {return (";
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
@@ -250,6 +242,6 @@ export default function CybersecurityServicesPage() {return (";
           Professional CybersecurityServicesPage services to help your business grow.;
         </p>;
       </div>;
-  );,
+  );
 }
 }

@@ -1,48 +1,43 @@
 import React from 'react';
 import { ;
-  Phone, ;
-  Mail, ;
-  MapPin, ;
-  Clock, ;
-  MessageCircle, ;
-  Globe, ;
-  CheckCircle,;
-  Star,;
-  Award,;
-  Users,;
-  Zap,;
-  Shield;,
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  MessageCircle,
+  Globe,
+  CheckCircle,
+  Star,
+  Award,
+  Users,
+  Zap,
+  Shield;
 } from 'lucide-react';
-;
 const ContactPage: React.FC = () => {;
   const contactInfo = {;
-    phone: "+1 302 464 0950",;
-    email: "kleber@ziontechgroup.com",;
-    address: "364 E Main St STE 1008, Middletown DE 19709",;
-    website: "https://ziontechgroup.com",;
-    hours: "Monday - Friday: 9:00 AM - 6:00 PM EST";,
+    phone: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    address: "364 E Main St STE 1008, Middletown DE 19709",
+    website: "https://ziontechgroup.com",
+    hours: "Monday - Friday: 9:00 AM - 6:00 PM EST";
 };
-;
-  const services = [;
-    "AI Customer Churn Prediction",;
-    "AI Financial Fraud Detection", ;
-    "AI Supply Chain Optimization",;
-    "AI Healthcare Diagnostics",;
-    "AI Content Creation Studio",;
-    "AI Predictive Maintenance",;
-    "AI Legal Document Analysis",;
-    "AI Real Estate Analytics",;
-    "AI Cybersecurity Threat Intelligence",;
-    "AI Personal Finance Advisor",;
-    "AI E-commerce Personalization",;
-    "AI HR Recruitment Platform",;
-    "AI Energy Management System",;
-    "AI Autonomous Vehicle Management",;
-    "AI Blockchain Supply Chain",;
-    "AI Smart City Infrastructure",;
-    "AI Quantum Financial Trading";
-  ];
-;
+  const services = [ "AI Customer Churn Prediction",
+    "AI Financial Fraud Detection",
+    "AI Supply Chain Optimization",
+    "AI Healthcare Diagnostics",
+    "AI Content Creation Studio",
+    "AI Predictive Maintenance",
+    "AI Legal Document Analysis",
+    "AI Real Estate Analytics",
+    "AI Cybersecurity Threat Intelligence",
+    "AI Personal Finance Advisor",
+    "AI E-commerce Personalization",
+    "AI HR Recruitment Platform",
+    "AI Energy Management System",
+    "AI Autonomous Vehicle Management",
+    "AI Blockchain Supply Chain",
+    "AI Smart City Infrastructure",
+    "AI Quantum Financial Trading" ];
   return (;
     <div className="min-h-screen bg-white">;
       {/* Hero Section */}
@@ -71,7 +66,6 @@ const ContactPage: React.FC = () => {;
             {/* Contact Details */}
             <div>;
               <h2 className="text-4xl font-bold text-gray-900 mb-8">Contact Information</h2>;
-              ;
               <div className="space-y-6">;
                 <div className="flex items-start">;
                   <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">;
@@ -324,7 +318,6 @@ const ContactPage: React.FC = () => {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 };
-;
 export default ContactPage;

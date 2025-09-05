@@ -45,6 +45,6 @@ const IoTEdgeComputing = () => {;
               </Link>;
             </div>;
     </>;
-  );,
+  );
 }
 export default IoTEdgeComputing;

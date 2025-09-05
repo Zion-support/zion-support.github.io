@@ -11,6 +11,7 @@ describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
     expect(screen.getByRole('main')).toBeInTheDocument();
+<<<<<<< HEAD
   });
   it('displays correct content', () => {
     render(<App />);
@@ -28,3 +29,15 @@ describe('App', () => {
     // Add interaction tests here
   });
 });
+=======
+});
+  it('displays correct content', () => {;
+    render(<App />);
+    // Add specific content checks based on component functionality;
+});
+  it('handles user interactions', () => {;
+    render(<App />);
+    // Add interaction tests based on component functionality;
+});
+})
+>>>>>>> origin/automation-fixes

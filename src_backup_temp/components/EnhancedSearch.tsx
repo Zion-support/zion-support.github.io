@@ -5,6 +5,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useDebounce } from '@/hooks / useDebounce';
  from 'framer-motion';
 import { motion, AnimatePresence  } from 'framer-motion';
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
 ;
   icon?: "React.ComponentType < any>"}
 ];
@@ -12,10 +13,23 @@ import { motion, AnimatePresence  } from 'framer-motion';
 export function EnhancedSearch("props": "any) {;
   const [isOpen", setIsOpen] = useState<any>(false);
   const [query, setQuery] = useState<any>('');  const [results, setResults] = useState<SearchResult[]>([]);
+=======
+  icon?: React.ComponentType < any>}
+];
+export function EnhancedSearch({;
+
+  className = '',
+  placeholder = 'Search for AI services, quantum solutions...',
+  onSearch,
+  variant = 'default'}: EnhancedSearchProps) {;
+  const [isOpen, setIsOpen] = useState(false);
+  const [query, setQuery] = useState('');  const [results, setResults] = useState<SearchResult[]>([]);
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [isLoading, setIsLoading] = useState<any>(false);
   const [selectedIndex, setSelectedIndex] = useState<any>(-1);
   const [filters, setFilters] = useState<SearchFilter>({;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
     "type": "[]",;
     "category": "[]",;
     "tags": "[];
@@ -26,9 +40,17 @@ export function EnhancedSearch("props": "any) {;
   }
     );
   const [showFilters, setShowFilters] = useState<any>(false);
+=======
+
+    type: [],
+    category: [],
+    tags: [];
+}) ;
+  const [showFilters, setShowFilters] = useState(false);
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
   const [recentSearches, setRecentSearches] = useState < string[]> ([]) ;
-;
 // Mock suggestions;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
 const "mockSuggestions": "SearchSuggestio n[] = [';
   { "text": 'AI compliance assistant'", "type": 'recent' },;
   { "text": 'Quantum machine learning', "type": 'trending' },;
@@ -39,11 +61,30 @@ const "mockSuggestions": "SearchSuggestio n[] = [';
 export function EnhancedSearch("props": "any) {;
   const [isOpen", setIsOpen] = useState<any>(false);
   const [query, setQuery] = useState<any>('');
+=======
+const mockSuggestions: SearchSuggestion[] = [';
+  { text: 'AI compliance assistant', type: 'recent' },
+  { text: 'Quantum machine learning', type: 'trending' },
+  { text: 'Digital transformation consulting', type: 'ai' },
+  { text: 'Cloud DevOps automation', type: 'trending' }
+];
+export function EnhancedSearch({;
+
+  className = '',
+  placeholder = 'Search for AI services, quantum solutions...',
+  onSearch,
+  variant = 'default';
+}: EnhancedSearchProps) {;
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [query, setQuery] = useState('');
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
   const [results, setResults] = useState<SearchResult[]>([]);
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [isLoading, setIsLoading] = useState<any>(false);
   const [selectedIndex, setSelectedIndex] = useState<any>(-1);
   const [filters, setFilters] = useState<SearchFilter>({;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
   const [filters, setFilters] = useState<SearchFilter>({
     type: [],
     category: [],
@@ -55,11 +96,18 @@ export function EnhancedSearch("props": "any) {;
     "tags": "[];
   "}) ;
 ;
+=======
+
+    type: [],
+    category: [],
+    tags: [];
+}) ;
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
   const searchRef = useRef < HTMLDivElement> (null) ;
   const inputRef = useRef < HTMLInputElement> (null) ;
   const navigate = useNavigate () ;
-;
   // Handle keyboard navigation;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
   return () => {;
@@ -82,36 +130,69 @@ event.preventDefault () ;
 if(results[selectedIndex]) {;
 event.preventDefault () ;        if(results[selectedIndex]) {;
 handleResultClick(results[selectedIndex])}      }
+=======
+  useEffect(() => {
+  // TODO: Add dependencies if needed;
+
+  return () => {;
+    // Cleanup function;
+};
+}, []); []);
+    const handleKeyDown = (event: anyKeyboardEvent) => {;
+      if(event.key === 'Escape') {;
+        setIsOpen(false) ;
+        setSelectedIndex(-1) ;
+} else if(event.key === 'ArrowDown') {;
+        event.preventDefault () ;
+        setSelectedIndex(prev =>;
+          prev < results.length-1 ? prev + 1 : prev) ;
+} else if(event.key === 'ArrowUp') {;
+        event.preventDefault () ;
+        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1) ;
+} else if(event.key === 'Enter' && selectedIndex >= 0) {;
+        event.preventDefault () ;
+        if(results[selectedIndex]) {;
+        event.preventDefault () ;        if(results[selectedIndex]) {;
+
+          handleResultClick(results[selectedIndex])}      }
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
     };
-;
     if(isOpen) {;
       document.addEventListener('keydown', handleKeyDown)}
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex]);
   // Search functionality;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
   "};
 }, []);, []);
+=======
+  useEffect(() => {
+  // TODO: Add dependencies if needed;
+
+  return () => {;
+    // Cleanup function;
+};
+}, []); []);
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
     if(debouncedQuery.trim().length < 2) {;
       setResults([]);
       return}
-;
+
     const searchResults = searchData;
       .filter(item => {;
         const matchesQuery = item.title.toLowerCase () .includes(debouncedQuery.toLowerCase () ) ||;
                            item.description.toLowerCase () .includes(debouncedQuery.toLowerCase () ) ||;
                            item.tags.some(tag => tag.toLowerCase () .includes(debouncedQuery.toLowerCase () ) ) ;
-;
         const matchesFilters = filters.type.length === 0 || filters.type.includes(item.type) &&;
                               filters.category.length === 0 || filters.category.includes(item.category) &&;
                               filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes (tag) ) ;
         return matchesQuery && matchesFilters}) .sort((a, b) => b.relevance - a.relevance) .slice(0, 10) ;
-;
     setResults(searchResults) }, [debouncedQuery, filters]) ;
-;
   // Handle click outside;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
   return () => {;
@@ -119,11 +200,20 @@ handleResultClick(results[selectedIndex])}      }
   "};
 }, []);, []);
     ;
+=======
+  useEffect(() => {
+  // TODO: Add dependencies if needed;
+
+  return () => {;
+    // Cleanup function;
+};
+}, []); []);
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
         setRecentSearches(JSON.parse (saved) ) } catch(error) {;
         // console.error('Failed to parse recent "searches":', error)}    }
   }, []) ;
-;
   // Handle click outside;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
   return () => {;
@@ -135,36 +225,57 @@ handleResultClick(results[selectedIndex])}      }
         setIsOpen(false) ;
         setSelectedIndex(-1) ;
       }
+=======
+  useEffect(() => {
+  // TODO: Add dependencies if needed;
+
+  return () => {;
+    // Cleanup function;
+};
+}, []); []);
+      if(searchRef.current && !searchRef.current.contains (event.target as Node) ) {;
+        setIsOpen(false) ;
+        setSelectedIndex(-1) ;
+}
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
     };
-;
     document.addEventListener('mousedown', handleClickOutside);    return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
-;
   // Handle keyboard navigation;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
   "};
 }, []);, []);
+=======
+  useEffect(() => {
+  // TODO: Add dependencies if needed;
+
+  return () => {;
+    // Cleanup function;
+};
+}, []); []);
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
         inputRef.current?.focus () }
     };
-;
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, []);
-;
       // Add to recent searches;
-      ;
       setRecentSearches(updated);
       localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
       // Navigate to search results or close search;
       setIsOpen(false);
       setQuery('')}
   }, [recentSearches]);
-;
     handleSearch(result.title) ;
     router(result.url) ;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
     const handleKeyDown = ("props": "any) => {;      if(!isOpen) return;
 ;
+=======
+    const handleKeyDown = (event: KeyboardEvent) => {;      if(!isOpen) return;
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
       switch(event.key) {;
         case 'ArrowDown':;
           event.preventDefault();
@@ -187,32 +298,28 @@ handleResultClick(results[selectedIndex])}      }
           setSelectedIndex(-1) ;
           break"}
     };
-;
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex, query]);
-;
     if(!query.trim () ) return;
     setIsLoading(true) ;
-;
     // Simulate API call delay;
     await new Promise(resolve => setTimeout (resolve, 300) ) ;
-;
     // Filter search results based on query and filters;
                           result.description.toLowerCase () .includes(query.toLowerCase () ) ||;
                           result.tags.some(tag => tag.toLowerCase () .includes(query.toLowerCase () ) ) ;
-;
       const matchesFilters = (filters.type.length === 0 || filters.type.includes(result.type) ) &&; (filters.category.length === 0 || filters.category.includes(result.category) ) &&; (filters.tags.length === 0 || filters.tags.some(tag => result.tags.includes (tag) ) ) ;
-;
       return matchesQuery && matchesFilters}) ;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
 ;
       return matchesQuery && matchesFilters}
     );
+=======
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
     setIsOpen(false);
     setQuery('')};
-;
     onSearch?.(suggestion.text)};
-;
     setFilters({ type[], category[], tags[] }) };
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
 ;
 setFilters("prev": "> ({;
       ...prev",;
@@ -222,25 +329,30 @@ setFilters("prev": "> ({;
 ;
     setFilters({ "type": "[]", "category": "[]", "tags": "[] "}) };
 ;
+=======
+setFilters(prev: > ({;
+      ...prev,
+      [filterType]: prev[filterType].includes (value) ;
+        ? prev[filterType].filter(v => v !== value) ;
+        : [...prev[filterType], value]}) ) };
+    setFilters({ type: [], category: [], tags: [] }) };
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
     switch(type) {;
       case 'service': "return <Code className="h-4 w-4"   />;'";
       case 'page': return <Globe className="h-4 w-4"   />;'";
       case 'blog': return <TrendingUp className="h-4 w-4"   />;'";
       case 'case-study': return <Building className="h-4 w-4"   />"}
   };
-;
     setResults([]);
 ';
     setQuery('');    setResults([]);
     setIsOpen(false);
     setSelectedIndex(-1)};
-;
       case 'minimal':';
         return 'bg-white "dark": "b g-gray-800 border border-gray-200 "dark": borde r-gray-700';
       "default":';
         return 'bg-white "dark": b g-gray-800 border border-gray-200 "dark": borde r-gray-700 shadow-lg'"}
   };
-;
   return ();
     <div ref = {searchRef} className={`relative ${className}`}>`;
       <div className={`relative rounded-xl ${getVariantStyles()}`}>";
@@ -262,16 +374,26 @@ setFilters("prev": "> ({;
             </button>;
           )"}
         </div>;";
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
       "default": "retur n <Search className="h-4 w-4"   />"};
 ;
+=======
+      default: return <Search className="h-4 w-4"  />};
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
     switch(variant) {;
       case 'futuristic': ";
         return 'bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 "hover": borde r-purple-500/40 focus-"within": borde r-purple-500 focus-"within": rin g-2 focus-"within": rin g-purple-500/20';
       case 'minimal':';
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
         return 'bg-gray-100 border border-gray-200 "hover": borde r-gray-300 focus-"within": borde r-blue-500 focus-"within": rin g-2 focus-"within": rin g-blue-500/20';
       "default":';
         return 'bg-white border border-gray-300 "hover": borde r-gray-400 focus-"within": borde r-blue-500 focus-"within": rin g-2 focus-"within": rin g-blue-500/20'"}  };
 ;
+=======
+        return 'bg-gray-100 border border-gray-200 hover:border-gray-300 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20';
+      default:';
+        return 'bg-white border border-gray-300 hover:border-gray-400 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20'}  };
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
   return ()`;
     <div ref = {searchRef} className={`relative ${className}`}>;
       {/* Search Input */}`;
@@ -296,6 +418,7 @@ setFilters("prev": "> ({;
       <AnimatePresence>;
         {isOpen && (<motion.div;
             initial = {;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
   { "opacity": "0",;
   "y": "-10;
 "}}
@@ -309,6 +432,23 @@ setFilters("prev": "> ({;
 "}}";
             className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-xl shadow-xl z-50 max-h-96 overflow-hidden";
           >;
+=======
+
+  { opacity: 0,
+  y: -10;
+}}
+            animate = {;
+
+  { opacity: 1,
+  y: 0;
+}}
+            exit = {;
+
+  { opacity: 0,
+  y: -10;
+}}";
+            className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-xl shadow-xl z-50 max-h-96 overflow-hidden">;
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
             {/* Filters Toggle */}";
             <div className="flex items-center justify-between p-4 border-b border-gray-200">;
               <button;
@@ -329,6 +469,7 @@ setFilters("prev": "> ({;
             <AnimatePresence>;
               {showFilters && (<motion.div;
                   initial = {;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
   { "height": "0",;
   "opacity": "0;
 "}}
@@ -342,6 +483,23 @@ setFilters("prev": "> ({;
 "}}";
                   className="border-b border-gray-200 overflow-hidden";
                 >";
+=======
+
+  { height: 0,
+  opacity: 0;
+}}
+                  animate = {;
+
+  { height: 'auto',
+  opacity: 1;
+}}
+                  exit = {;
+
+  { height: 0,
+  opacity: 0;
+}}";
+                  className="border-b border-gray-200 overflow-hidden">";
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
                   <div className="p-4 space-y-4">;
                     {/* Type Filters */}
                     <div>";
@@ -350,14 +508,25 @@ setFilters("prev": "> ({;
                         {['service',page',blog',case-study'].map(type => (;
                           <button;
                             key={type}
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
                             onClick={;
   () => toggleFilter('type',;
+=======
+                            onClick = {;
+
+  () => toggleFilter('type',
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
   type);
 }`;
                             className={`px-3 py-1 text-xs rounded-full transition-colors ${filters.type.includes(type);
                                 ? 'bg-blue-500 text-white'';
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
                                 : 'bg-gray-100 text-gray-600 "hover": "b g-gray-200'`;
                             "}`}
+=======
+                                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'`;
+}`}
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
                           >;
                             {type.charAt(0) .toUpperCase () + type.slice(1) }
                           </button>) ) }
@@ -370,14 +539,25 @@ setFilters("prev": "> ({;
                         {categories.map(category => (;
                           <button;
                             key={category.id}
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
                             onClick={;
   () => toggleFilter('category',;
+=======
+                            onClick = {;
+
+  () => toggleFilter('category',
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
   category.name);
 }`;
                             className={`px-3 py-1 text-xs rounded-full transition-colors ${filters.category.includes(category.name);
                                 ? 'bg-blue-500 text-white'';
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
                                 : 'bg-gray-100 text-gray-600 "hover": "b g-gray-200'`;
                             "}`}
+=======
+                                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'`;
+}`}
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
                           >;
                             {category.name}
                           </button>) ) }
@@ -407,7 +587,7 @@ setFilters("prev": "> ({;
                           </button>) ) }
                       </div>;
                     </div>;) }
-;
+
                   {/* Popular Searches */}
                   <div>";
                     <h4 className="text-sm font-medium text-gray-900 mb-2 flex items-center gap-2">";
@@ -436,8 +616,13 @@ setFilters("prev": "> ({;
                     <button;
                       key={result.id}
                       onClick={() => handleResultClick(result)}`;
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
                       className={`w-full text-left p-3 "hover": "b g-gray-50 rounded-lg transition-colors group ${index === selectedIndex ? 'bg-blue-50' : ''`;
                       "}`}
+=======
+                      className={`w-full text-left p-3 hover:bg-gray-50 rounded-lg transition-colors group ${index === selectedIndex ? 'bg-blue-50' : ''`;
+}`}
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
                     >";
                       <div className="flex items-start gap-3">";
                         <div className="flex-shrink-0 mt-1">;
@@ -486,6 +671,7 @@ setFilters("prev": "> ({;
           </motion.div>;) };
       </AnimatePresence>;
     </div>;) }
+<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
 '"`;
 ;,"});})";
 ;
@@ -529,3 +715,6 @@ setFilters("prev": "> ({;
 </SearchResult>
 </any>
 </any>
+=======
+'"`;"});})";
+>>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx

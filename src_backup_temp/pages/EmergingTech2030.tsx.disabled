@@ -1,6 +1,5 @@
 import React from "react";
-import { SEO } from "@/components/SEO";
-;,"});,"});,
+import { SEO } from "@/components/SEO";"});"});
 }
 export default function EmergingTech2030() {return (";
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
@@ -11,6 +10,6 @@ export default function EmergingTech2030() {return (";
           Professional EmergingTech2030 services to help your business grow.;
         </p>;
       </div>;
-  );,
+  );
 }
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const messageChannelHandler = {
   sendMessage: (message: string) => {},
   receiveMessage: (callback: (message: string) => void) => {},
@@ -6,6 +7,11 @@ export const messageChannelHandler = {
 type MessageHandler = {
   sendMessage: (message: unknown) => void;
   receiveMessage: (callback: (message: unknown) => void) => void;
+=======
+export const messageChannelHandler = {;
+  sendMessage: (message: any) => {},
+  receiveMessage: (callback: any) => {},,
+>>>>>>> origin/automation-fixes
 };
 export const messageChannelHandler: MessageHandler = {
   sendMessage: (_message) => {

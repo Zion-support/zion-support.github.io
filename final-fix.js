@@ -7,6 +7,7 @@ function fixFile(filePath) {
   const content = fs.readFileSync(filePath, "utf8");
     let fixed = content;
     // Fix missing semicolons after imports;
+<<<<<<< HEAD
     fixed = fixed.replace(/import\s+[^]+$/gm, (match) => {
   if (!match.endsWith(";")) {
   return match + ";"}
@@ -14,6 +15,17 @@ function fixFile(filePath) {
     // Fix broken JSX syntax;
     fixed = fixed.replace(/<([^>]+)\s*>/g, (match) => {
   return match.replace(/\s+/g, " ").trim()});
+=======
+    fixed = fixed.replace(/import\s+[^]+$/gm, (match) => {;
+  if (!match.endsWith(";")) {;
+  return match + ";";,
+}
+      return match});
+    // Fix broken JSX syntax;
+    fixed = fixed.replace(/<([^>]+)\s*>/g, (match) => {;
+  return match.replace(/\s+/g, " ").trim();,
+});
+>>>>>>> origin/automation-fixes
     // Fix malformed arrays and objects;
     fixed = fixed.replace(/\[\s*([^\]]+)\s*\]/g, "[$1]");
     fixed = fixed.replace(/\{\s*([^}]+)\s*\}/g, "{$1}");
@@ -28,22 +40,36 @@ function fixFile(filePath) {
   console.error(`"Error": ${filePath}`, error.message);
     return false}
 }
+<<<<<<< HEAD
 ;
 function processDirectory(dirPath) {
+=======
+
+function processDirectory(dirPath) {;
+>>>>>>> origin/automation-fixes
   const files = fs.readdirSync(dirPath);
   let fixedCount = 0;
   for (const file of files) {
   const fullPath = path.join(dirPath, file);
     const stat = fs.statSync(fullPath);
+<<<<<<< HEAD
     if (stat.isDirectory()) {
   fixedCount += processDirectory(fullPath)} else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) {
   if (fixFile(fullPath)) {
   fixedCount++}
+=======
+    if (stat.isDirectory()) {;
+  fixedCount += processDirectory(fullPath);,
+} else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) {;
+  if (fixFile(fullPath)) {;
+  fixedCount++;,
+}
+>>>>>>> origin/automation-fixes
     }
   }
-  ;
+
   return fixedCount}
-;
+
 const srcDir = path.join(__dirname, "src");
 console.log("Final fix...");
 const totalFixed = processDirectory(srcDir);

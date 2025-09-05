@@ -1,6 +1,19 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+const ServicesPage: NextPage = () => {;
+  return (;
+    <div>;
+      <Head>;
+        <title>Services - Zion Tech Group</title>;
+        <meta name="description" content="Explore our comprehensive AI micro SaaS, IT, and AI services with transparent pricing." />;
+      </Head>;
+      <main style={{ fontFamily: 'system-ui, sans-serif', lineHeight: 1.5, padding: '32px', maxWidth: 1120, margin: '0 auto' }}>;
+        <h1 style={{ marginTop: 0 }}>AI-Powered Micro SAAS Solutions</h1>;
+        <p>Discover our comprehensive suite of AI-powered micro SaaS services, IT solutions, and AI platforms with transparent pricing and rapid deployment.</p>;
+>>>>>>> origin/automation-fixes
 
 const Services: NextPage = () => {
   const serviceCategories = [
@@ -146,6 +159,7 @@ const Services: NextPage = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-xl mb-6">Let's discuss how we can help transform your business with technology</p>
@@ -167,3 +181,30 @@ const Services: NextPage = () => {
 };
 
 export default Services;
+=======
+        <h2 id="contact">Contact Information</h2>;
+        <div style={{ backgroundColor: '#f8f9fa', padding: '24px', borderRadius: '8px', marginTop: '24px' }}>;
+          <h3 style={{ marginTop: 0 }}>Get in Touch</h3>;
+          <p><strong>Mobile:</strong> <a href="tel:+13024640950">+1 302 464 0950</a></p>;
+          <p><strong>Email:</strong> <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>;
+          <p><strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>;
+          <p><strong>Website:</strong> <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer">https://ziontechgroup.com</a></p>;
+          <div style={{ marginTop: '16px' }}>;
+            <Link href="/contact" style={{ ;
+              backgroundColor: '#007bff',
+              color: 'white',
+              padding: '12px 24px',
+              borderRadius: '6px',
+              textDecoration: 'none',
+              display: 'inline-block';
+}}>;
+              Request a Quote;
+            </Link>;
+          </div>;
+        </div>;
+      </main>;
+    </div>;
+  );
+};
+export default ServicesPage;
+>>>>>>> origin/automation-fixes

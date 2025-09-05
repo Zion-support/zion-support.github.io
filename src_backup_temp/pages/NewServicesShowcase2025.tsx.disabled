@@ -45,6 +45,6 @@ const NewServicesShowcase2025 = () => {;
               </Link>;
             </div>;
     </>;
-  );,
+  );
 }
 export default NewServicesShowcase2025

@@ -45,6 +45,6 @@ const Partners = () => {;
               </Link>;
             </div>;
     </>;
-  );,
+  );
 }
 export default Partners;

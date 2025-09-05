@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   MapPin, 
   Phone, 
@@ -94,6 +95,28 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+=======
+import { ;
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Github,
+  Facebook,
+  ArrowUp;
+} from 'lucide-react';
+const Footer: React.FC = () => {;
+  const scrollToTop = () => {;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+  const currentYear = new Date().getFullYear();
+  return (;
+    <footer className="bg-black border-t border-white/10">;
+      <div className="container mx-auto px-4">;
+        {/* Main Footer Content */}
+        <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
+>>>>>>> origin/automation-fixes
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
@@ -187,6 +210,7 @@ export default function Footer() {
           </div>
 =======
 
+<<<<<<< HEAD
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
@@ -241,3 +265,16 @@ const Footer: React.FC = () => {
 
 export default Footer;
 >>>>>>> 26a23840d0afc28627aae94549d1ebed59f462f6
+=======
+      {/* Scroll to Top Button */}
+      <button;
+        onClick={scrollToTop}
+        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center z-50";
+        aria-label="Scroll to top">;
+        <ArrowUp className="w-6 h-6" />;
+      </button>;
+    </footer>;
+  );
+};
+export default Footer;
+>>>>>>> origin/automation-fixes

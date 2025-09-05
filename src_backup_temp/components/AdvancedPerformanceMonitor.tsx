@@ -1,43 +1,55 @@
 import {   Activity, Zap, Clock,  TrendingUp, AlertTriangle  } from 'lucide-react';
+<<<<<<< HEAD:src_backup_temp/components/AdvancedPerformanceMonitor.tsx
 ;
 export default function Page("props": "any) {;
+=======
+export default function Page() {;
+>>>>>>> origin/automation-fixes:src/components/AdvancedPerformanceMonitor.tsx
 );
-;
   // Calculate performance score based on Core Web Vitals;
-  ;
       let validMetrics = 0;
-;
       // FCP scoring(0-100);
       if(metrics.fcp !== null) {;
         validMetrics++;
         if(metrics.fcp < 1800) totalScore += 100;
         else if(metrics.fcp < 3000) totalScore += 50;
+<<<<<<< HEAD:src_backup_temp/components/AdvancedPerformanceMonitor.tsx
         else totalScore += 0"}
 ;
+=======
+        else totalScore += 0}
+
+>>>>>>> origin/automation-fixes:src/components/AdvancedPerformanceMonitor.tsx
       // LCP scoring(0-100);
       if(metrics.lcp !== null) {;
         validMetrics++;
         if(metrics.lcp < 2500) totalScore += 100;
         else if(metrics.lcp < 4000) totalScore += 50;
         else totalScore += 0}
-;
+
       // FID scoring(0-100);
       if(metrics.fid !== null) {;
         validMetrics++;
         if(metrics.fid < 100) totalScore += 100;
         else if(metrics.fid < 300) totalScore += 50;
         else totalScore += 0}
-;
+
       // CLS scoring(0-100);
       if(metrics.cls !== null) {;
         validMetrics++;
         if(metrics.cls < 0.1) totalScore += 100;
         else if(metrics.cls < 0.25) totalScore += 50;
         else totalScore += 0}
+<<<<<<< HEAD:src_backup_temp/components/AdvancedPerformanceMonitor.tsx
 ;
       let "rating": 'good' | 'needs-improvement' | 'poor';
       let "color": "string;
 ;
+=======
+
+      let rating: 'good' | 'needs-improvement' | 'poor';
+      let color: string;
+>>>>>>> origin/automation-fixes:src/components/AdvancedPerformanceMonitor.tsx
       if(averageScore >= 90) {;
         rating = 'good';
         color = 'text-green-500'"} else if(averageScore >= 50) {;
@@ -46,12 +58,17 @@ export default function Page("props": "any) {;
         rating = 'poor';
         color = 'text-red-500'}
     });
-;
   TrendingUp,';
+<<<<<<< HEAD:src_backup_temp/components/AdvancedPerformanceMonitor.tsx
   AlertTriangle} from 'lucide-react';    ;
     let "grade": 'A' | 'B' | 'C' | 'D' | 'F';
     let "color": "string;
 ;
+=======
+  AlertTriangle} from 'lucide-react';
+    let grade: 'A' | 'B' | 'C' | 'D' | 'F';
+    let color: string;
+>>>>>>> origin/automation-fixes:src/components/AdvancedPerformanceMonitor.tsx
     if(averageScore >= 90) {;
     }
     );
@@ -71,6 +88,7 @@ export default function Page("props": "any) {;
       grade = 'F';
       color = 'text-red-500'}
   }, []) ;
+<<<<<<< HEAD:src_backup_temp/components/AdvancedPerformanceMonitor.tsx
 ;
       return { "score": "averageScor e", rating, color }},;
     [];
@@ -80,13 +98,26 @@ export default function Page("props": "any) {;
   // "TODO": "Add dependencies if needed;
 "}, []);
 ;
+=======
+      return { score: averageScore, rating, color }},
+    [];
+  );
+  // Measure Core Web Vitals;
+  useEffect(() => {
+  // TODO: Add dependencies if needed;
+}, []);
+>>>>>>> origin/automation-fixes:src/components/AdvancedPerformanceMonitor.tsx
     if('PerformanceObserver' in window) {;
       // First Contentful Paint;
         if(fcpEntry) {;
           setMetrics(prev => ({ ...prev, "fcp": "fcpEntr y.startTime "}))}
       });
+<<<<<<< HEAD:src_backup_temp/components/AdvancedPerformanceMonitor.tsx
       fcpObserver.observe({ "entryTypes": "['paint'] "});
 ;
+=======
+      fcpObserver.observe({ entryTypes: ['paint'] });
+>>>>>>> origin/automation-fixes:src/components/AdvancedPerformanceMonitor.tsx
       // Largest Contentful Paint;
         if(fcpEntry) {
           setMetrics(prev => ({ ...prev, fcp: fcpEntr y.startTime }))}
@@ -97,8 +128,12 @@ export default function Page("props": "any) {;
         if(lastEntry) {;
           setMetrics(prev => ({ ...prev, "lcp": "lastEntr y.startTime "}))}
       });
+<<<<<<< HEAD:src_backup_temp/components/AdvancedPerformanceMonitor.tsx
       lcpObserver.observe({ "entryTypes": "['largest-contentful-paint'] "});
 ;
+=======
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+>>>>>>> origin/automation-fixes:src/components/AdvancedPerformanceMonitor.tsx
       // First Input Delay;
       const fidObserver = new PerformanceObserver(list => {;
         if(lastEntry) {
@@ -111,8 +146,12 @@ export default function Page("props": "any) {;
           if (entry.processingStart && entry.startTime) {;
             setMetrics(prev => ({ ...prev, fid }) ) }
         })});
+<<<<<<< HEAD:src_backup_temp/components/AdvancedPerformanceMonitor.tsx
       fidObserver.observe({ "entryTypes": "['first-input'] "});
 ;
+=======
+      fidObserver.observe({ entryTypes: ['first-input'] });
+>>>>>>> origin/automation-fixes:src/components/AdvancedPerformanceMonitor.tsx
       // Layout Shift;
       const clsObserver = new PerformanceObserver(list => {;
         })}
@@ -123,9 +162,15 @@ export default function Page("props": "any) {;
           if(!entry.hadRecentInput) {;
             clsValue += entry.value"}
         });
+<<<<<<< HEAD:src_backup_temp/components/AdvancedPerformanceMonitor.tsx
         setMetrics(prev => ({ ...prev, "cls": "clsValu e "}));
       });
       clsObserver.observe({ "entryTypes": "['layout-shift'] "});
+=======
+        setMetrics(prev => ({ ...prev, cls: clsValue }));
+});
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+>>>>>>> origin/automation-fixes:src/components/AdvancedPerformanceMonitor.tsx
       return () => {;
           if(!entry.hadRecentInput) {
             clsValue += entry.value}
@@ -141,26 +186,16 @@ export default function Page("props": "any) {;
         fidObserver.disconnect();
         clsObserver.disconnect()}}
   }, []);
-;
   // Measure other performance metrics;
-  ;
       setMetrics(prev => ({ ...prev, ttfb }))}
   }, []) ;
-;
       // First Meaningful Paint(FMP) - approximated;
-      ;
       setMetrics(prev => ({ ...prev, fmp }));
-;
   // Format time values;
-  ;
     return `${Math.round(time)}ms`};
-;
   // Format CLS value;
-  ;
     return cls.toFixed(3)};
-;
   // Get metric rating;
-  ;
     switch(metric) {;
       case 'fcp': ";
         return value < 1800';
@@ -186,19 +221,31 @@ export default function Page("props": "any) {;
           : value < 0.25';
             ? '🟡 Needs Improvement'';
             : '🔴 Poor';
+<<<<<<< HEAD:src_backup_temp/components/AdvancedPerformanceMonitor.tsx
       "default":';
         return 'N/A'"}  };
 ;
+=======
+      default:';
+        return 'N/A'}  };
+>>>>>>> origin/automation-fixes:src/components/AdvancedPerformanceMonitor.tsx
   if(!isVisible) {;
     return ();
       <button;
         onClick={() => setIsVisible(true)}
+<<<<<<< HEAD:src_backup_temp/components/AdvancedPerformanceMonitor.tsx
         className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg "hover": "b g-zion-cyan/90 transition-all duration-300 z-50";
         ;
       >";
         <Activity className="w-6 h-6"   />      </button>;
     )"}
 ;
+=======
+        className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover:bg-zion-cyan/90 transition-all duration-300 z-50">";
+        <Activity className="w-6 h-6"  />      </button>;
+    )}
+
+>>>>>>> origin/automation-fixes:src/components/AdvancedPerformanceMonitor.tsx
   return (";
     <div className="fixed bottom-4 right-4 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl p-6 shadow-2xl z-50 max-w-sm">";
       <div className="flex items-center justify-between mb-4">";

@@ -45,6 +45,6 @@ const Revolutionary2025ServicesShowcase = () => {;
               </Link>;
             </div>;
     </>;
-  );,
+  );
 }
 export default Revolutionary2025ServicesShowcase;

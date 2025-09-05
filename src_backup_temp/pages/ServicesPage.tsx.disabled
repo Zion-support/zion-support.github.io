@@ -1,5 +1,4 @@
 import React from 'react';
-;
 const ServicesPage: React.FC = () => {;
   return (;
     <div className="min-h-screen bg-gray-50 py-20">;
@@ -10,30 +9,27 @@ const ServicesPage: React.FC = () => {;
             Comprehensive technology solutions to help your business thrive in the digital age.;
           </p>;
         </div>;
-        ;
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
           <div className="bg-white p-8 rounded-lg shadow-lg">;
             <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>;
             <p className="text-gray-600 mb-6">;
-              Cutting-edge artificial intelligence solutions including machine learning, ;
+              Cutting-edge artificial intelligence solutions including machine learning,
               natural language processing, and intelligent automation.;
             </p>;
             <a href="/ai-services" className="text-blue-600 hover:text-blue-700 font-semibold">;
               Learn More →;
             </a>;
           </div>;
-          ;
           <div className="bg-white p-8 rounded-lg shadow-lg">;
             <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>;
             <p className="text-gray-600 mb-6">;
-              Comprehensive IT infrastructure, cloud migration, cybersecurity, ;
+              Comprehensive IT infrastructure, cloud migration, cybersecurity,
               and digital transformation solutions.;
             </p>;
             <a href="/it-services" className="text-blue-600 hover:text-blue-700 font-semibold">;
               Learn More →;
             </a>;
           </div>;
-          ;
           <div className="bg-white p-8 rounded-lg shadow-lg">;
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS</h3>;
             <p className="text-gray-600 mb-6">;
@@ -47,7 +43,6 @@ const ServicesPage: React.FC = () => {;
         </div>;
       </div>;
     </div>;
-  );,
+  );
 };
-;
 export default ServicesPage;

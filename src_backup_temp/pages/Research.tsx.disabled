@@ -45,6 +45,6 @@ const Research = () => {;
               </Link>;
             </div>;
     </>;
-  );,
+  );
 }
 export default Research;

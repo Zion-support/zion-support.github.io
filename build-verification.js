@@ -1,4 +1,5 @@
 console.log('🔍 Starting build verification...');
+<<<<<<< HEAD
 try {
   console.log('📦 Testing component imports...');
   const React = require('react');
@@ -10,10 +11,14 @@ try {
 // This script checks if our components can be imported without syntax errors
 console.log('🔍 Starting build verification...');
 try {
+=======
+try {;
+>>>>>>> origin/automation-fixes
   // Test component imports;
   console.log('📦 Testing component imports...');
   // Test basic React functionality;
   const React = require('react');
+<<<<<<< HEAD
   console.log('✅ React import successful', React.version);
   // Test framer-motion;
   const { motion } = require('framer-motion');
@@ -58,3 +63,20 @@ console.log('🏁 Build verification complete');
 }
 console.log('🏁 Build verification complete');
 console.log('🔍 Starting build verification...'); try { console.log('📦 Testing component imports...'); const React = require('react'); console.log('✅ React import successful',React.version); const { motion } = require('framer-motion'); console.log('✅ Framer Motion import successful',typeof motion); const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react'); console.log('✅ Lucide React icons import successful',{ ArrowRight: typeof ArrowRight,CheckCircle: typeof CheckCircle,Brain: typeof Brain,Cloud: typeof Cloud,Shield: typeof Shield,Zap: typeof Zap,}); console.log('🎉 All core dependencies imported successfully!'); console.log('📋 Components should be ready for build')} catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} console.log('🏁 Build verification complete');
+=======
+  console.log('✅ React import successful');
+  // Test framer-motion;
+  const { motion } = require('framer-motion');
+  console.log('✅ Framer Motion import successful');
+  // Test lucide-react icons;
+  const { ArrowRight, CheckCircle, Brain, Cloud, Shield, Zap } = require('lucide-react');
+  console.log('✅ Lucide React icons import successful');
+  console.log('🎉 All core dependencies imported successfully!');
+  console.log('📋 Components should be ready for build');
+} catch (error) {;
+  console.error('❌ Import error:', error.message);
+  process.exit(1);
+}
+
+console.log('🏁 Build verification complete');
+>>>>>>> origin/automation-fixes

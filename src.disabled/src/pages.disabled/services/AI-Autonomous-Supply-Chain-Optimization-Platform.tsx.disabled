@@ -2,146 +2,135 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { ;
-  Brain, ;
-  Truck, ;
-  Globe, ;
-  BarChart3, ;
-  Shield, ;
-  Zap, ;
-  CheckCircle, ;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Clock,;
-  Users,;
-  Database,;
-  Network,;
-  Cpu,;
-  TrendingUp,;
-  AlertTriangle,;
-  Package,;
-  Route;,
+  Brain,
+  Truck,
+  Globe,
+  BarChart3,
+  Shield,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Users,
+  Database,
+  Network,
+  Cpu,
+  TrendingUp,
+  AlertTriangle,
+  Package,
+  Route;
 } from 'lucide-react';
-;
 const AIAutonomousSupplyChainOptimizationPlatform: React.FC = () => {;
   const features = [;
     {;
-      title: "Autonomous Route Optimization",;
-      description: "AI-powered logistics that automatically optimize delivery routes in real-time",;
-      icon: Route,;
-      benefits: ["30% reduction in delivery costs", "Real-time traffic integration", "Dynamic route adjustments"];,
-},;
+      title: "Autonomous Route Optimization",
+      description: "AI-powered logistics that automatically optimize delivery routes in real-time",
+      icon: Route,
+      benefits: ["30% reduction in delivery costs", "Real-time traffic integration", "Dynamic route adjustments"];
+},
     {;
-      title: "Predictive Demand Forecasting",;
-      description: "Machine learning algorithms that predict demand patterns with 95% accuracy",;
-      icon: Brain,;
-      benefits: ["95% demand prediction accuracy", "Seasonal trend analysis", "Inventory optimization"];,
-},;
+      title: "Predictive Demand Forecasting",
+      description: "Machine learning algorithms that predict demand patterns with 95% accuracy",
+      icon: Brain,
+      benefits: ["95% demand prediction accuracy", "Seasonal trend analysis", "Inventory optimization"];
+},
     {;
-      title: "Real-Time Supply Chain Monitoring",;
-      description: "24/7 monitoring of your entire supply chain with instant alerts",;
-      icon: BarChart3,;
-      benefits: ["Live tracking and monitoring", "Instant disruption alerts", "Performance analytics"];,
-},;
+      title: "Real-Time Supply Chain Monitoring",
+      description: "24/7 monitoring of your entire supply chain with instant alerts",
+      icon: BarChart3,
+      benefits: ["Live tracking and monitoring", "Instant disruption alerts", "Performance analytics"];
+},
     {;
-      title: "Intelligent Inventory Management",;
-      description: "Automated inventory control that prevents stockouts and overstocking",;
-      icon: Package,;
-      benefits: ["Zero stockout guarantee", "Automated reorder points", "Cost optimization"];,
+      title: "Intelligent Inventory Management",
+      description: "Automated inventory control that prevents stockouts and overstocking",
+      icon: Package,
+      benefits: ["Zero stockout guarantee", "Automated reorder points", "Cost optimization"];
 }
   ];
-;
   const pricingPlans = [;
     {;
-      name: "Starter",;
-      price: "$199",;
-      period: "/month",;
-      description: "Perfect for small businesses",;
-      features: [;
-        "Basic route optimization",;
-        "Demand forecasting",;
-        "Inventory tracking",;
-        "Email support";
-      ],;
-      popular: false;,
-},;
+      name: "Starter",
+      price: "$199",
+      period: "/month",
+      description: "Perfect for small businesses",
+      features: [ "Basic route optimization",
+        "Demand forecasting",
+        "Inventory tracking",
+        "Email support" ],
+      popular: false;
+},
     {;
-      name: "Professional",;
-      price: "$599",;
-      period: "/month",;
-      description: "Ideal for growing companies",;
-      features: [;
-        "Advanced AI algorithms",;
-        "Real-time monitoring",;
-        "Custom dashboards",;
-        "Priority support",;
-        "API access";
-      ],;
-      popular: true;,
-},;
+      name: "Professional",
+      price: "$599",
+      period: "/month",
+      description: "Ideal for growing companies",
+      features: [ "Advanced AI algorithms",
+        "Real-time monitoring",
+        "Custom dashboards",
+        "Priority support",
+        "API access" ],
+      popular: true;
+},
     {;
-      name: "Enterprise",;
-      price: "$1,999",;
-      period: "/month",;
-      description: "For large corporations",;
-      features: [;
-        "Full autonomous operations",;
-        "Custom AI model training",;
-        "Dedicated account manager",;
-        "24/7 phone support",;
-        "White-label solutions";
-      ],;
-      popular: false;,
+      name: "Enterprise",
+      price: "$1,999",
+      period: "/month",
+      description: "For large corporations",
+      features: [ "Full autonomous operations",
+        "Custom AI model training",
+        "Dedicated account manager",
+        "24/7 phone support",
+        "White-label solutions" ],
+      popular: false;
 }
   ];
-;
   const useCases = [;
     {;
-      title: "E-commerce Logistics",;
-      description: "Optimize delivery routes and warehouse operations for online retail businesses",;
-      icon: Package;,
-},;
+      title: "E-commerce Logistics",
+      description: "Optimize delivery routes and warehouse operations for online retail businesses",
+      icon: Package;
+},
     {;
-      title: "Manufacturing Supply Chain",;
-      description: "Streamline raw material procurement and production scheduling",;
-      icon: Cpu;,
-},;
+      title: "Manufacturing Supply Chain",
+      description: "Streamline raw material procurement and production scheduling",
+      icon: Cpu;
+},
     {;
-      title: "Retail Distribution",;
-      description: "Optimize store replenishment and cross-docking operations",;
-      icon: Truck;,
-},;
+      title: "Retail Distribution",
+      description: "Optimize store replenishment and cross-docking operations",
+      icon: Truck;
+},
     {;
-      title: "Global Trade Operations",;
-      description: "Manage complex international supply chains with customs and compliance",;
-      icon: Globe;,
+      title: "Global Trade Operations",
+      description: "Manage complex international supply chains with customs and compliance",
+      icon: Globe;
 }
   ];
-;
   const benefits = [;
     {;
-      metric: "30%",;
-      description: "Cost Reduction",;
-      detail: "Average savings on logistics and inventory costs";,
-},;
+      metric: "30%",
+      description: "Cost Reduction",
+      detail: "Average savings on logistics and inventory costs";
+},
     {;
-      metric: "95%",;
-      description: "Accuracy",;
-      detail: "Demand forecasting and route optimization accuracy";,
-},;
+      metric: "95%",
+      description: "Accuracy",
+      detail: "Demand forecasting and route optimization accuracy";
+},
     {;
-      metric: "24/7",;
-      description: "Monitoring",;
-      detail: "Continuous supply chain oversight and optimization";,
-},;
+      metric: "24/7",
+      description: "Monitoring",
+      detail: "Continuous supply chain oversight and optimization";
+},
     {;
-      metric: "50%",;
-      description: "Faster Delivery",;
-      detail: "Improved delivery times through route optimization";,
+      metric: "50%",
+      description: "Faster Delivery",
+      detail: "Improved delivery times through route optimization";
 }
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">;
       <SEO ;
@@ -167,15 +156,12 @@ const AIAutonomousSupplyChainOptimizationPlatform: React.FC = () => {;
                 <Truck className="w-8 h-8 text-white" />;
               </div>;
             </div>;
-            ;
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
               AI Autonomous Supply Chain Optimization Platform;
             </h1>;
-            ;
             <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed">;
               Transform your supply chain operations with the world's most advanced AI platform that autonomously optimizes logistics, inventory management, and demand forecasting.;
             </p>;
-            ;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <a;
                 href="https://ziontechgroup.com/contact";
@@ -258,10 +244,8 @@ const AIAutonomousSupplyChainOptimizationPlatform: React.FC = () => {;
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6">;
                   <feature.icon className="w-8 h-8 text-white" />;
                 </div>;
-                ;
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>;
                 <p className="text-slate-300 mb-6 leading-relaxed">{feature.description}</p>;
-                ;
                 <ul className="space-y-3">;
                   {feature.benefits.map((benefit, idx) => (;
                     <li key={idx} className="flex items-center text-slate-300">;
@@ -304,7 +288,7 @@ const AIAutonomousSupplyChainOptimizationPlatform: React.FC = () => {;
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border-2 ${;
                   plan.popular ;
                     ? 'border-green-500 shadow-lg shadow-green-500/25' ;
-                    : 'border-slate-700/50';,
+                    : 'border-slate-700/50';
 }`}
               >;
                 {plan.popular && (;
@@ -314,11 +298,10 @@ const AIAutonomousSupplyChainOptimizationPlatform: React.FC = () => {;
                     </span>;
                   </div>;
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <p className="text-slate-400 mb-6">{plan.description}</p>;
-                  ;
                   <div className="flex items-baseline justify-center">;
                     <span className="text-5xl font-bold text-white">{plan.price}</span>;
                     <span className="text-slate-400 ml-1">{plan.period}</span>;
@@ -339,7 +322,7 @@ const AIAutonomousSupplyChainOptimizationPlatform: React.FC = () => {;
                   className={`w-full block text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${;
                     plan.popular;
                       ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700';
-                      : 'bg-slate-700 text-white hover:bg-slate-600';,
+                      : 'bg-slate-700 text-white hover:bg-slate-600';
 }`}
                 >;
                   Get Started;
@@ -379,7 +362,6 @@ const AIAutonomousSupplyChainOptimizationPlatform: React.FC = () => {;
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6">;
                   <useCase.icon className="w-8 h-8 text-white" />;
                 </div>;
-                ;
                 <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>;
                 <p className="text-slate-300 leading-relaxed">{useCase.description}</p>;
               </motion.div>;
@@ -400,12 +382,10 @@ const AIAutonomousSupplyChainOptimizationPlatform: React.FC = () => {;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Ready to Optimize Your Supply Chain?;
             </h2>;
-            ;
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">;
               Join the future of supply chain management with our AI Autonomous Optimization Platform. ;
               Get in touch today to schedule a personalized demo and see the results for yourself.;
             </p>;
-            ;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <a;
                 href="https://ziontechgroup.com/contact";
@@ -419,7 +399,6 @@ const AIAutonomousSupplyChainOptimizationPlatform: React.FC = () => {;
                 Contact Sales;
               </a>;
             </div>;
-            ;
             <div className="mt-8 text-slate-400">;
               <p>Questions? Call us at <a href="tel:+13024640950" className="text-green-400 hover:text-green-300">+1 302 464 0950</a></p>;
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
@@ -428,7 +407,6 @@ const AIAutonomousSupplyChainOptimizationPlatform: React.FC = () => {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 };
-;
 export default AIAutonomousSupplyChainOptimizationPlatform;

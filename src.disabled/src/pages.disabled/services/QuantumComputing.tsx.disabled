@@ -1,83 +1,77 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ;
-  Zap, ;
-  Brain, ;
-  Shield, ;
-  Cloud, ;
-  Cpu, ;
-  Rocket, ;
-  Atom, ;
-  Globe, ;
-  CheckCircle, ;
-  ArrowRight, ;
-  Star, ;
-  TrendingUp, ;
-  Users, ;
-  Lock, ;
-  Database, ;
-  Network, ;
-  Server, ;
-  CircuitBoard, ;
-  Microchip ;,
+  Zap,
+  Brain,
+  Shield,
+  Cloud,
+  Cpu,
+  Rocket,
+  Atom,
+  Globe,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,
+  Lock,
+  Database,
+  Network,
+  Server,
+  CircuitBoard,
+  Microchip ;
 } from 'lucide-react';
-;
 const QuantumComputing = () => {;
   const features = [;
     {;
-      icon: Atom,;
-      title: "Quantum Processing",;
-      description: "Advanced quantum algorithms for complex computational problems";,
-},;
+      icon: Atom,
+      title: "Quantum Processing",
+      description: "Advanced quantum algorithms for complex computational problems";
+},
     {;
-      icon: Brain,;
-      title: "AI Integration",;
-      description: "Seamless integration with machine learning and AI systems";,
-},;
+      icon: Brain,
+      title: "AI Integration",
+      description: "Seamless integration with machine learning and AI systems";
+},
     {;
-      icon: Shield,;
-      title: "Quantum Security",;
-      description: "Unbreakable encryption using quantum key distribution";,
-},;
+      icon: Shield,
+      title: "Quantum Security",
+      description: "Unbreakable encryption using quantum key distribution";
+},
     {;
-      icon: Cloud,;
-      title: "Cloud Quantum",;
-      description: "Access quantum computing power through our cloud platform";,
+      icon: Cloud,
+      title: "Cloud Quantum",
+      description: "Access quantum computing power through our cloud platform";
 }
   ];
-;
   const useCases = [;
     {;
-      title: "Financial Modeling",;
-      description: "Quantum algorithms for risk assessment and portfolio optimization",;
-      icon: TrendingUp;,
-},;
+      title: "Financial Modeling",
+      description: "Quantum algorithms for risk assessment and portfolio optimization",
+      icon: TrendingUp;
+},
     {;
-      title: "Drug Discovery",;
-      description: "Molecular simulation and protein folding for pharmaceutical research",;
-      icon: Brain;,
-},;
+      title: "Drug Discovery",
+      description: "Molecular simulation and protein folding for pharmaceutical research",
+      icon: Brain;
+},
     {;
-      title: "Cryptography",;
-      description: "Quantum-resistant encryption and secure communications",;
-      icon: Lock;,
-},;
+      title: "Cryptography",
+      description: "Quantum-resistant encryption and secure communications",
+      icon: Lock;
+},
     {;
-      title: "Optimization",;
-      description: "Solving complex logistics and supply chain problems",;
-      icon: Network;,
+      title: "Optimization",
+      description: "Solving complex logistics and supply chain problems",
+      icon: Network;
 }
   ];
-;
-  const technologies = [;
-    "Quantum Annealing",;
-    "Quantum Machine Learning",;
-    "Quantum Cryptography",;
-    "Quantum Error Correction",;
-    "Quantum-Classical Hybrid Systems",;
-    "Quantum Cloud Infrastructure";
-  ];
-;
+  const technologies = [ "Quantum Annealing",
+    "Quantum Machine Learning",
+    "Quantum Cryptography",
+    "Quantum Error Correction",
+    "Quantum-Classical Hybrid Systems",
+    "Quantum Cloud Infrastructure" ];
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">;
       {/* Hero Section */}
@@ -145,7 +139,7 @@ const QuantumComputing = () => {;
                   <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>;
                   <p className="text-slate-300 text-sm">{feature.description}</p>;
                 </div>;
-              );,
+              );
 })}
           </div>;
         </div>;
@@ -176,7 +170,7 @@ const QuantumComputing = () => {;
                   <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>;
                   <p className="text-slate-300 text-sm">{useCase.description}</p>;
                 </div>;
-              );,
+              );
 })}
           </div>;
         </div>;
@@ -281,7 +275,6 @@ const QuantumComputing = () => {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 };
-;
 export default QuantumComputing;

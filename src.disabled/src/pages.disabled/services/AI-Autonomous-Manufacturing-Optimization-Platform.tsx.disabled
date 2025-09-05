@@ -2,171 +2,154 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { ;
-  Brain, ;
-  Cpu, ;
-  Settings, ;
-  Zap, ;
-  CheckCircle, ;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Clock,;
-  Users,;
-  Database,;
-  Network,;
-  TrendingUp,;
-  AlertTriangle,;
-  Activity,;
-  Factory,;
-  Gauge,;
-  Wrench,;
-  BarChart3,;
-  Target,;
-  Cog,;
-  Monitor;,
+  Brain,
+  Cpu,
+  Settings,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Users,
+  Database,
+  Network,
+  TrendingUp,
+  AlertTriangle,
+  Activity,
+  Factory,
+  Gauge,
+  Wrench,
+  BarChart3,
+  Target,
+  Cog,
+  Monitor;
 } from 'lucide-react';
-;
 const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {;
   const features = [;
     {;
-      title: "AI-Powered Production Optimization",;
-      description: "Advanced machine learning algorithms that optimize production processes in real-time",;
-      icon: Brain,;
-      benefits: ["25% increase in production efficiency", "Real-time process optimization", "Predictive maintenance scheduling"];,
-},;
+      title: "AI-Powered Production Optimization",
+      description: "Advanced machine learning algorithms that optimize production processes in real-time",
+      icon: Brain,
+      benefits: ["25% increase in production efficiency", "Real-time process optimization", "Predictive maintenance scheduling"];
+},
     {;
-      title: "Autonomous Quality Control",;
-      description: "Computer vision and AI for automated quality inspection with 99.8% accuracy",;
-      icon: Eye,;
-      benefits: ["99.8% defect detection accuracy", "24/7 quality monitoring", "Automated quality reporting"];,
-},;
+      title: "Autonomous Quality Control",
+      description: "Computer vision and AI for automated quality inspection with 99.8% accuracy",
+      icon: Eye,
+      benefits: ["99.8% defect detection accuracy", "24/7 quality monitoring", "Automated quality reporting"];
+},
     {;
-      title: "Predictive Maintenance",;
-      description: "AI-driven predictive maintenance that prevents equipment failures and reduces downtime",;
-      icon: Wrench,;
-      benefits: ["90% reduction in unplanned downtime", "Predictive maintenance alerts", "Equipment lifecycle optimization"];,
-},;
+      title: "Predictive Maintenance",
+      description: "AI-driven predictive maintenance that prevents equipment failures and reduces downtime",
+      icon: Wrench,
+      benefits: ["90% reduction in unplanned downtime", "Predictive maintenance alerts", "Equipment lifecycle optimization"];
+},
     {;
-      title: "Supply Chain Integration",;
-      description: "Seamless integration with suppliers and logistics for optimal material flow",;
-      icon: Network,;
-      benefits: ["Real-time inventory tracking", "Automated reorder management", "Supplier performance analytics"];,
+      title: "Supply Chain Integration",
+      description: "Seamless integration with suppliers and logistics for optimal material flow",
+      icon: Network,
+      benefits: ["Real-time inventory tracking", "Automated reorder management", "Supplier performance analytics"];
 }
   ];
-;
   const pricingPlans = [;
     {;
-      name: "Small Factory",;
-      price: "$499",;
-      period: "/month",;
-      description: "Perfect for small manufacturing facilities",;
-      features: [;
-        "Basic production optimization",;
-        "Quality control monitoring",;
-        "Maintenance scheduling",;
-        "Email support";
-      ],;
-      popular: false;,
-},;
+      name: "Small Factory",
+      price: "$499",
+      period: "/month",
+      description: "Perfect for small manufacturing facilities",
+      features: [ "Basic production optimization",
+        "Quality control monitoring",
+        "Maintenance scheduling",
+        "Email support" ],
+      popular: false;
+},
     {;
-      name: "Medium Factory",;
-      price: "$1,499",;
-      period: "/month",;
-      description: "Ideal for growing manufacturing companies",;
-      features: [;
-        "Advanced AI algorithms",;
-        "Real-time optimization",;
-        "Custom dashboards",;
-        "Priority support",;
-        "API integration";
-      ],;
-      popular: true;,
-},;
+      name: "Medium Factory",
+      price: "$1,499",
+      period: "/month",
+      description: "Ideal for growing manufacturing companies",
+      features: [ "Advanced AI algorithms",
+        "Real-time optimization",
+        "Custom dashboards",
+        "Priority support",
+        "API integration" ],
+      popular: true;
+},
     {;
-      name: "Large Factory",;
-      price: "$4,999",;
-      period: "/month",;
-      description: "For large manufacturing corporations",;
-      features: [;
-        "Full autonomous operations",;
-        "Custom AI model training",;
-        "Dedicated account manager",;
-        "24/7 phone support",;
-        "White-label solutions";
-      ],;
-      popular: false;,
+      name: "Large Factory",
+      price: "$4,999",
+      period: "/month",
+      description: "For large manufacturing corporations",
+      features: [ "Full autonomous operations",
+        "Custom AI model training",
+        "Dedicated account manager",
+        "24/7 phone support",
+        "White-label solutions" ],
+      popular: false;
 }
   ];
-;
   const useCases = [;
     {;
-      title: "Automotive Manufacturing",;
-      description: "Optimize production lines and quality control for automotive components",;
-      icon: Car;,
-},;
+      title: "Automotive Manufacturing",
+      description: "Optimize production lines and quality control for automotive components",
+      icon: Car;
+},
     {;
-      title: "Electronics Manufacturing",;
-      description: "Streamline PCB assembly and electronic device production",;
-      icon: Cpu;,
-},;
+      title: "Electronics Manufacturing",
+      description: "Streamline PCB assembly and electronic device production",
+      icon: Cpu;
+},
     {;
-      title: "Food & Beverage",;
-      description: "Optimize food processing and packaging operations",;
-      icon: Package;,
-},;
+      title: "Food & Beverage",
+      description: "Optimize food processing and packaging operations",
+      icon: Package;
+},
     {;
-      title: "Pharmaceutical Manufacturing",;
-      description: "Ensure quality and compliance in drug manufacturing",;
-      icon: Pill;,
+      title: "Pharmaceutical Manufacturing",
+      description: "Ensure quality and compliance in drug manufacturing",
+      icon: Pill;
 }
   ];
-;
   const benefits = [;
     {;
-      metric: "25%",;
-      description: "Efficiency Gain",;
-      detail: "Average increase in production efficiency";,
-},;
+      metric: "25%",
+      description: "Efficiency Gain",
+      detail: "Average increase in production efficiency";
+},
     {;
-      metric: "99.8%",;
-      description: "Quality Rate",;
-      detail: "Defect detection accuracy rate";,
-},;
+      metric: "99.8%",
+      description: "Quality Rate",
+      detail: "Defect detection accuracy rate";
+},
     {;
-      metric: "90%",;
-      description: "Downtime Reduction",;
-      detail: "Reduction in unplanned equipment downtime";,
-},;
+      metric: "90%",
+      description: "Downtime Reduction",
+      detail: "Reduction in unplanned equipment downtime";
+},
     {;
-      metric: "30%",;
-      description: "Cost Reduction",;
-      detail: "Average reduction in manufacturing costs";,
+      metric: "30%",
+      description: "Cost Reduction",
+      detail: "Average reduction in manufacturing costs";
 }
   ];
-;
-  const manufacturingProcesses = [;
-    "Production Planning",;
-    "Quality Control",;
-    "Inventory Management",;
-    "Maintenance Scheduling",;
-    "Supply Chain Management",;
-    "Performance Analytics",;
-    "Predictive Analytics",;
-    "Process Optimization";
-  ];
-;
-  const industryStandards = [;
-    "ISO 9001",;
-    "ISO 14001",;
-    "ISO 45001",;
-    "Six Sigma",;
-    "Lean Manufacturing",;
-    "Industry 4.0",;
-    "Smart Factory",;
-    "Digital Twin";
-  ];
-;
+  const manufacturingProcesses = [ "Production Planning",
+    "Quality Control",
+    "Inventory Management",
+    "Maintenance Scheduling",
+    "Supply Chain Management",
+    "Performance Analytics",
+    "Predictive Analytics",
+    "Process Optimization" ];
+  const industryStandards = [ "ISO 9001",
+    "ISO 14001",
+    "ISO 45001",
+    "Six Sigma",
+    "Lean Manufacturing",
+    "Industry 4.0",
+    "Smart Factory",
+    "Digital Twin" ];
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">;
       <SEO ;
@@ -192,15 +175,12 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {;
                 <Factory className="w-8 h-8 text-white" />;
               </div>;
             </div>;
-            ;
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
               AI Autonomous Manufacturing Optimization Platform;
             </h1>;
-            ;
             <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed">;
               Transform your manufacturing operations with the world's most advanced AI platform for autonomous production optimization, quality control, and predictive maintenance.;
             </p>;
-            ;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <a;
                 href="https://ziontechgroup.com/contact";
@@ -283,10 +263,8 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {;
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6">;
                   <feature.icon className="w-8 h-8 text-white" />;
                 </div>;
-                ;
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>;
                 <p className="text-slate-300 mb-6 leading-relaxed">{feature.description}</p>;
-                ;
                 <ul className="space-y-3">;
                   {feature.benefits.map((benefit, idx) => (;
                     <li key={idx} className="flex items-center text-slate-300">;
@@ -395,7 +373,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {;
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border-2 ${;
                   plan.popular ;
                     ? 'border-orange-500 shadow-lg shadow-orange-500/25' ;
-                    : 'border-slate-700/50';,
+                    : 'border-slate-700/50';
 }`}
               >;
                 {plan.popular && (;
@@ -405,11 +383,10 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {;
                     </span>;
                   </div>;
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <p className="text-slate-400 mb-6">{plan.description}</p>;
-                  ;
                   <div className="flex items-baseline justify-center">;
                     <span className="text-5xl font-bold text-white">{plan.price}</span>;
                     <span className="text-slate-400 ml-1">{plan.period}</span>;
@@ -430,7 +407,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {;
                   className={`w-full block text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${;
                     plan.popular;
                       ? 'bg-gradient-to-r from-orange-500 to-red-600 text-white hover:from-orange-600 hover:to-red-700';
-                      : 'bg-slate-700 text-white hover:bg-slate-600';,
+                      : 'bg-slate-700 text-white hover:bg-slate-600';
 }`}
                 >;
                   Get Started;
@@ -470,7 +447,6 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {;
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6">;
                   <useCase.icon className="w-8 h-8 text-white" />;
                 </div>;
-                ;
                 <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>;
                 <p className="text-slate-300 leading-relaxed">{useCase.description}</p>;
               </motion.div>;
@@ -491,12 +467,10 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Ready to Transform Your Manufacturing?;
             </h2>;
-            ;
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">;
               Join the future of manufacturing with our AI Autonomous Optimization Platform. ;
               Get in touch today to schedule a personalized demo and see how we can improve your production efficiency.;
             </p>;
-            ;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <a;
                 href="https://ziontechgroup.com/contact";
@@ -510,7 +484,6 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {;
                 Contact Sales;
               </a>;
             </div>;
-            ;
             <div className="mt-8 text-slate-400">;
               <p>Questions? Call us at <a href="tel:+13024640950" className="text-orange-400 hover:text-orange-300">+1 302 464 0950</a></p>;
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
@@ -519,7 +492,6 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 };
-;
 export default AIAutonomousManufacturingOptimizationPlatform;

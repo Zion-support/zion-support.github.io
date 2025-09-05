@@ -1,96 +1,88 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo;
 import { Search, X  } from 'lucide-react';
 import { Input } from '@/components/ui/input';
-import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions'; ;
+import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
 import { SearchSuggestion } from '@/types/search';
-;
 export function EnhancedSearchInput({;
-  value,;
-  onChange,;
-  onSelectSuggestion,;
-  placeholder = "Search...",;
-  searchSuggestions;,
+  value,
+  onChange,
+  onSelectSuggestion,
+  placeholder = "Search...",
+  searchSuggestions;
 }: EnhancedSearchInputProps) {;
   const [isFocused, setIsFocused] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
   const [highlightedIndex, setHighlightedIndex] = useState<number>(-1);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-;
   const debouncedFilterSuggestions = useMemo(// Changed from useCallback to useMemo;
     () => debounce((currentValue: string, suggestions: SearchSuggestion[]) => {;
       if(!currentValue) {;
         setFilteredSuggestions(suggestions.filter(s => s.type === 'recent'));
-        return;,
+        return;
 }
-;
+
       const filtered = suggestions.filter(suggestion =>;
         suggestion.text.toLowerCase().includes(currentValue.toLowerCase());
       );
-;
       filtered.sort((a, b) => {;
         const aStartsWith = a.text.toLowerCase().startsWith(currentValue.toLowerCase()) ? -1 : 0;
         const bStartsWith = b.text.toLowerCase().startsWith(currentValue.toLowerCase()) ? -1 : 0;
-        return aStartsWith-bStartsWith;,
+        return aStartsWith-bStartsWith;
 });
-;
-      setFilteredSuggestions(filtered.slice(0, 8)); ;,
-}, 300),;
+      setFilteredSuggestions(filtered.slice(0, 8));
+}, 300),
     [setFilteredSuggestions] // setFilteredSuggestions from useState is stable;
   );
-;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+    // Cleanup function;
+};
+}, []); []);
     debouncedFilterSuggestions(value, searchSuggestions);
-    setHighlightedIndex(-1); ;
+    setHighlightedIndex(-1);
     return () => {;
-      debouncedFilterSuggestions.cancel();,
-};,
+      debouncedFilterSuggestions.cancel();
+};
 }, [value, searchSuggestions, debouncedFilterSuggestions]);
-;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+    // Cleanup function;
+};
+}, []); []);
     function handleClickOutside(event: MouseEvent) {;
       if(containerRef.current && !containerRef.current.contains(event.target as Node)) {;
-        setIsFocused(false);,
+        setIsFocused(false);
 }
     }
-    ;
+
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);,
+    return () => document.removeEventListener("mousedown", handleClickOutside);
 }, []);
-;
   const handleSelectSuggestion = (suggestionText: string) => { // Renamed suggestion to suggestionText;
     onChange(suggestionText);
     if(onSelectSuggestion) {;
-      onSelectSuggestion(suggestionText);,
+      onSelectSuggestion(suggestionText);
 }
     setIsFocused(false);
     inputRef.current?.blur();
-    setHighlightedIndex(-1); ;,
+    setHighlightedIndex(-1);
 };
-;
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
     if(!isFocused || filteredSuggestions.length === 0) {;
       if(e.key === 'Escape') { ;
         e.preventDefault();
         setIsFocused(false);
         setHighlightedIndex(-1);
-        inputRef.current?.blur();,
+        inputRef.current?.blur();
 }
-      return;,
+      return;
 }
-;
+
     switch(e.key) {;
       case 'ArrowDown':;
         e.preventDefault();
@@ -103,7 +95,7 @@ export function EnhancedSearchInput({;
       case 'Enter':;
         if(highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {;
           e.preventDefault();
-          handleSelectSuggestion(filteredSuggestions[highlightedIndex].text);,
+          handleSelectSuggestion(filteredSuggestions[highlightedIndex].text);
 }
         break;
       case 'Escape':;
@@ -113,10 +105,9 @@ export function EnhancedSearchInput({;
         inputRef.current?.blur();
         break;
       default:;
-        break;,
+        break;
 }
   };
-  ;
   return (<div;
       className="relative w-full";
       ref={containerRef}
@@ -133,7 +124,7 @@ export function EnhancedSearchInput({;
           type="text";
           value={value}
           onChange={(e) => {;
-            onChange(e.target.value);,
+            onChange(e.target.value);
 }}
           onFocus={() => setIsFocused(true)}
           onKeyDown={handleKeyDown} ;
@@ -146,13 +137,12 @@ export function EnhancedSearchInput({;
           <button;
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white";
             onClick={() => onChange('')}
-            ;
+
           >;
             <X className="h-4 w-4" />;
           </button>;
         )}
       </div>;
-      ;
       <AutocompleteSuggestions;
         suggestions={filteredSuggestions}
         searchTerm={value}
@@ -162,5 +152,5 @@ export function EnhancedSearchInput({;
         listId="autocomplete-suggestions-list" ;
       />;
     </div>;
-  );,
+  );
 }

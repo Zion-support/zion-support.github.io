@@ -3,6 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import { describe, it, expect, vi } from 'vitest';
 
+<<<<<<< HEAD
 describe('AccessibilityEnhancer', () => {
   it('renders children correctly', () => {
     render(
@@ -71,3 +72,9 @@ describe('AccessibilityEnhancer', () => {
     expect(element).toHaveAttribute('tabindex', '-1');
   });
 });
+=======
+test('renders accessibility enhancer', () => {;
+  render(<AccessibilityEnhancer />);
+  // Add more tests as needed;
+})
+>>>>>>> origin/automation-fixes
