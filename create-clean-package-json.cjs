@@ -1,4 +1,7 @@
-{
+const fs = require('fs');
+
+// Create a clean package.json with the essential dependencies
+const cleanPackageJson = {
   "name": "ziontechgroup-site",
   "version": "1.0.0",
   "private": true,
@@ -27,4 +30,9 @@
     "eslint": "^8.45.0",
     "eslint-config-next": "^15.5.2"
   }
-}
+};
+
+// Write the clean package.json
+fs.writeFileSync('package.json', JSON.stringify(cleanPackageJson, null, 2));
+
+console.log('Clean package.json created!');

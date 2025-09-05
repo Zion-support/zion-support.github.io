@@ -1,4 +1,7 @@
-{
+const fs = require('fs');
+
+// Create a clean tsconfig.json
+const cleanTsconfig = `{
   "compilerOptions": {
     "target": "es5",
     "lib": [
@@ -37,4 +40,9 @@
   "exclude": [
     "node_modules"
   ]
-}
+}`;
+
+// Write the clean tsconfig.json
+fs.writeFileSync('tsconfig.json', cleanTsconfig);
+
+console.log('Clean tsconfig.json created!');
