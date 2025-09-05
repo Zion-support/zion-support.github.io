@@ -85,7 +85,7 @@ The system automatically detects and fixes:
 - ✅ Missing React imports
 
 ### Code Quality Issues
-- ✅ Merge conflict markers (`<<<<<<< HEAD`, `=======`, `>>>>>>>`)
+- ✅ Merge conflict markers (``, ``, `>>>>>>>`)
 - ✅ Unterminated strings
 - ✅ Duplicate page files (.js vs .tsx)
 - ✅ Missing dependencies

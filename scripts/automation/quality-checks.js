@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+#!/usr/bin/env node,"}),"}) import { execSync } from,"}),"}) 'child_process',"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path.dirname(__filename),"}),"}) '🔍 Starting continuous quality checks automation...'),"}),"}) ,"}),"}) '🔍 Starting continuous quality checks automation...'),"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000; async function runQualityChecks() {,"}),"}) try {,"}),"}) 🔍 Running ESLint...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run lint',{ stdio: 'inherit }),"}),"}) ✅ ESLint completed successfully'),"}),"}) } catch (error) {,"}),"}) '⚠️ ESLint issues found but continuing...'),"}),"}) '🔍 Running TypeScript type checking...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run type-check',{ stdio: 'inherit }),"}),"}) ✅ Type checking completed successfully'),"}),"}) } catch (error) {,"}),"}) '⚠️ Type checking issues found but continuing...'),"}),"}) '🧪 Running tests...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm test',{ stdio: 'inherit }),"}),"}) ✅ Tests completed successfully'),"}),"}) } catch (error) {,"}),"}) '⚠️ Tests failed but continuing...'),"}),"}) '📊 Checking code coverage...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run test: coverage,{ stdio: ,"}),"}) inherit' }),"}),"}) '✅ Code coverage check completed'),"}),"}) } catch (error) {,"}),"}) 'ℹ️ Code coverage not available'),"}),"}) '🔍 Checking for dead code...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npx ts-unused-exports tsconfig.json',{ stdio: 'inherit }),"}),"}) ✅ Dead code check completed'),"}),"}) } catch (error) {,"}),"}) 'ℹ️ Dead code checker not available'),"}),"}) '🔍 Checking for circular dependencies...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npx madge --circular src/',{ stdio: 'inherit }),"}),"}) ✅ Circular dependency check completed'),"}),"}) } catch (error) {,"}),"}) 'ℹ️ Circular dependency checker not available'),"}),"}) '🔍 Checking for duplicate code...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npx jscpd src/',{ stdio: 'inherit }),"}),"}) ✅ Duplicate code check completed'),"}),"}) } catch (error) {,"}),"}) 'ℹ️ Duplicate code checker not available'),"}),"}) '🔍 Running ESLint...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run lint',{ stdio: 'inherit }),"}),"}) ✅ ESLint completed successfully'),"}),"}) } catch (error) {,"}),"}) '⚠️ ESLint issues found but continuing...'),"}),"}) }"}),"}) '🔍 Running TypeScript type checking...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run type-check',{ stdio: 'inherit }),"}),"}) ✅ Type checking completed successfully'),"}),"}) } catch (error) {,"}),"}) '⚠️ Type checking issues found but continuing...'),"}),"}) }"}),"}) '🧪 Running tests...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm test',{ stdio: 'inherit }),"}),"}) ✅ Tests completed successfully'),"}),"}) } catch (error) {,"}),"}) '⚠️ Tests failed but continuing...'),"}),"}) }"}),"}) '📊 Checking code coverage...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run test: coverage,{ stdio: ,"}),"}) inherit' }),"}),"}) '✅ Code coverage check completed'),"}),"}) } catch (error) {,"}),"}) 'ℹ️ Code coverage not available'),"}),"}) }"}),"}) '🔍 Checking for dead code...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npx ts-unused-exports tsconfig.json',{ stdio: 'inherit }),"}),"}) ✅ Dead code check completed'),"}),"}) } catch (error) {,"}),"}) 'ℹ️ Dead code checker not available'),"}),"}) }"}),"}) '🔍 Checking for circular dependencies...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npx madge --circular src/',{ stdio: 'inherit }),"}),"}) ✅ Circular dependency check completed'),"}),"}) } catch (error) {,"}),"}) 'ℹ️ Circular dependency checker not available'),"}),"}) }"}),"}) '🔍 Checking for duplicate code...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npx jscpd src/',{ stdio: 'inherit }),"}),"}) ✅ Duplicate code check completed'),"}),"}) } catch (error) {,"}),"}) 'ℹ️ Duplicate code checker not available'),"}),"}) }"}),"}) '📊 Generating quality report...'),"}),"}) ,"}),"}) status: 'completed,"}),"}) },"}),"}) ,"}),"}) ,"}) '📊 Generating quality report...'),"}),"}) const reportPath = path.join(process.cwd(),,"}),"}) 'quality-report.json'),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) '✅ Continuous quality checks completed successfully'),"}),"}) } catch (error) {,"}),"}) '❌ Continuous quality checks failed:',error.message),"}),"}) '✅ Continuous quality checks completed successfully'),"}),"}) } catch (error) {,"}),"}) '❌ Continuous quality checks failed: ,"}),"}) ,error.message),"}),"}) ,"}),"}) 't exit,just log the error and continue,"}),"}) async function runContinuous() {,"}),"}) ,"}),"}) await runQualityChecks(),"}),"}) setInterval(async () => {,"}),"}) await runQualityChecks(),"}),"}) },AUTOMATION_INTERVAL),"}),"}) }"}),"}) process.on('SIGINT,"}),"}) ',() => {,"}),"}) '),"}),"}) ,"}),"}) process.on('SIGINT,"}),"}) ',() => {,"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) process.on('SIGTERM,"}),"}) ',() => {,"}),"}) '),"}),"}) ,"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) runContinuous().catch(error => {,"}),"}) ,"}),"}) process.exit(1),"}),"}) }),"}),"}) }}}}}}}}}}"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000 async function runQualityChecks() { try {',🔍 Running ESLint...`); try { execSync( `npm run lint`,{ stdio: `inherit }) ✅ ESLint completed successfully')} catch (error) { '⚠️ ESLint issues found but continuing...'); '🔍 Running TypeScript type checking...'); try { execSync( 'npm run type-check',{ stdio: 'inherit }) ✅ Type checking completed successfully')} catch (error) { '⚠️ Type checking issues found but continuing...'); '🧪 Running tests...'); try { execSync( 'npm test',{ stdio: 'inherit }) ✅ Tests completed successfully')} catch (error) { '⚠️ Tests failed but continuing...'); '📊 Checking code coverage...'); try { execSync(' 'npm run test: coverage,{ stdio: inherit' }) '✅ Code coverage check completed')} catch (error) { 'ℹ️ Code coverage not available'); '🔍 Checking for dead code...'); try { execSync( 'npx ts-unused-exports tsconfig.json',{ stdio: 'inherit }) ✅ Dead code check completed')} catch (error) { 'ℹ️ Dead code checker not available'); '🔍 Checking for circular dependencies...'); try { execSync( 'npx madge --circular src/',{ stdio: 'inherit }) ✅ Circular dependency check completed')} catch (error) { 'ℹ️ Circular dependency checker not available'); '🔍 Checking for duplicate code...'); try { execSync( 'npx jscpd src/',{ stdio: `inherit }) ✅ Duplicate code check completed`)} catch (error) { `ℹ️ Duplicate code checker not available`)';ℹ️ Duplicate code checker not available'); `🔍 Running ESLint...`); try { execSync( `npm run lint`,{ stdio: 'inherit }) ✅ ESLint completed successfully')} catch (error) { '⚠️ ESLint issues found but continuing...') } '🔍 Running TypeScript type checking...'); try { execSync(' 'npm run type-check',{ stdio: 'inherit }); ✅ Type checking completed successfully')} catch (error) { '⚠️ Type checking issues found but continuing...') } '🧪 Running tests...'); try { execSync(' 'npm test',{ stdio: 'inherit }); ✅ Tests completed successfully')} catch (error) { '⚠️ Tests failed but continuing...') } '📊 Checking code coverage...'); try { execSync(' 'npm run test: coverage,{ stdio: inherit' }) '✅ Code coverage check completed')} catch (error) { 'ℹ️ Code coverage not available') } '🔍 Checking for dead code...'); try { execSync(' 'npx ts-unused-exports tsconfig.json',{ stdio: 'inherit }); ✅ Dead code check completed')} catch (error) { 'ℹ️ Dead code checker not available') } '🔍 Checking for circular dependencies...'); try { execSync(' 'npx madge --circular src/',{ stdio: 'inherit }); ✅ Circular dependency check completed')} catch (error) { 'ℹ️ Circular dependency checker not available') } '🔍 Checking for duplicate code...'); try { execSync(' 'npx jscpd src/',{ stdio: 'inherit }); ✅ Duplicate code check completed')} catch (error) { 'ℹ️ Duplicate code checker not available') } '📊 Generating quality report...'); status: 'completed} ;  const reportPath = path.join(process.cwd() `quality-report.json`); fs.writeFileSync(reportPath,JSON.stringify(report,null,2));
+=======
 #!/usr/bin/env node,"}),"})
 import { execSync } from,"}),"})
   'child_process',"}),"})
@@ -13,7 +16,7 @@ const __dirname = path.dirname(__filename),"}),"})
 ,"}),"})
 // // // console.log(,"}),"})
   '🔍 Starting continuous quality checks automation...'),"}),"})
-// Get automation interval from environment variable (default: 3 hours),"}),"})
+// Get automation interval from environment variable ("default": 3 hours),"}),"})
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000; // 3 hours,"}),"})
 async function runQualityChecks() {,"}),"})
   try {,"}),"})
@@ -23,7 +26,7 @@ async function runQualityChecks() {,"}),"})
   🔍 Running ESLint...'),"}),"})
     try {,"}),"})
       execSync(,"}),"})
-  'npm run lint', { stdio: 'inherit }),"}),"})
+  'npm run lint', { "stdio": 'inherit }),"}),"})
       // // // console.log(,,"}),"})
   ✅ ESLint completed successfully'),"}),"})
     } catch (error) {,"}),"})
@@ -34,7 +37,7 @@ async function runQualityChecks() {,"}),"})
   '🔍 Running TypeScript type checking...'),"}),"})
     try {,"}),"})
       execSync(,"}),"})
-  'npm run type-check', { stdio: 'inherit }),"}),"})
+  'npm run type-check', { "stdio": 'inherit }),"}),"})
       // // // console.log(,,"}),"})
   ✅ Type checking completed successfully'),"}),"})
     } catch (error) {,"}),"})
@@ -45,7 +48,7 @@ async function runQualityChecks() {,"}),"})
   '🧪 Running tests...'),"}),"})
     try {,"}),"})
       execSync(,"}),"})
-  'npm test', { stdio: 'inherit }),"}),"})
+  'npm test', { "stdio": 'inherit }),"}),"})
       // // // console.log(,,"}),"})
   ✅ Tests completed successfully'),"}),"})
     } catch (error) {,"}),"})
@@ -56,7 +59,7 @@ async function runQualityChecks() {,"}),"})
   '📊 Checking code coverage...'),"}),"})
     try {,"}),"})
       execSync(,"}),"})
-  'npm run test: coverage, { stdio: ,"}),"})
+  'npm run "test": coverage, { "stdio":  ,"}),"})
   inherit' }),"}),"})
       // // // console.log(,"}),"})
   '✅ Code coverage check completed'),"}),"})
@@ -68,7 +71,7 @@ async function runQualityChecks() {,"}),"})
   '🔍 Checking for dead code...'),"}),"})
     try {,"}),"})
       execSync(,"}),"})
-  'npx ts-unused-exports tsconfig.json', { stdio: 'inherit }),"}),"})
+  'npx ts-unused-exports tsconfig.json', { "stdio": 'inherit }),"}),"})
       // // // console.log(,,"}),"})
   ✅ Dead code check completed'),"}),"})
     } catch (error) {,"}),"})
@@ -79,7 +82,7 @@ async function runQualityChecks() {,"}),"})
   '🔍 Checking for circular dependencies...'),"}),"})
     try {,"}),"})
       execSync(,"}),"})
-  'npx madge --circular src/', { stdio: 'inherit }),"}),"})
+  'npx madge --circular src/', { "stdio": 'inherit }),"}),"})
       // // // console.log(,,"}),"})
   ✅ Circular dependency check completed'),"}),"})
     } catch (error) {,"}),"})
@@ -90,7 +93,7 @@ async function runQualityChecks() {,"}),"})
   '🔍 Checking for duplicate code...'),"}),"})
     try {,"}),"})
       execSync(,"}),"})
-  'npx jscpd src/', { stdio: 'inherit }),"}),"})
+  'npx jscpd src/', { "stdio": 'inherit }),"}),"})
       // // // console.log(,,"}),"})
   ✅ Duplicate code check completed'),"}),"})
     } catch (error) {,"}),"})
@@ -103,7 +106,7 @@ async function runQualityChecks() {,"}),"})
   '🔍 Running ESLint...'),"}),"})
     try {,"}),"})
       execSync(,"}),"})
-  'npm run lint', { stdio: 'inherit }),"}),"})
+  'npm run lint', { "stdio": 'inherit }),"}),"})
       // // // // // // // console.log(,,"}),"})
   ✅ ESLint completed successfully'),"}),"})
     } catch (error) {,"}),"})
@@ -115,7 +118,7 @@ async function runQualityChecks() {,"}),"})
   '🔍 Running TypeScript type checking...'),"}),"})
     try {,"}),"})
       execSync(,"}),"})
-  'npm run type-check', { stdio: 'inherit }),"}),"})
+  'npm run type-check', { "stdio": 'inherit }),"}),"})
       // // // // // // // console.log(,,"}),"})
   ✅ Type checking completed successfully'),"}),"})
     } catch (error) {,"}),"})
@@ -127,7 +130,7 @@ async function runQualityChecks() {,"}),"})
   '🧪 Running tests...'),"}),"})
     try {,"}),"})
       execSync(,"}),"})
-  'npm test', { stdio: 'inherit }),"}),"})
+  'npm test', { "stdio": 'inherit }),"}),"})
       // // // // // // // console.log(,,"}),"})
   ✅ Tests completed successfully'),"}),"})
     } catch (error) {,"}),"})
@@ -139,7 +142,7 @@ async function runQualityChecks() {,"}),"})
   '📊 Checking code coverage...'),"}),"})
     try {,"}),"})
       execSync(,"}),"})
-  'npm run test: coverage, { stdio: ,"}),"})
+  'npm run "test": coverage, { "stdio":  ,"}),"})
   inherit' }),"}),"})
       // // // // // // // console.log(,"}),"})
   '✅ Code coverage check completed'),"}),"})
@@ -152,7 +155,7 @@ async function runQualityChecks() {,"}),"})
   '🔍 Checking for dead code...'),"}),"})
     try {,"}),"})
       execSync(,"}),"})
-  'npx ts-unused-exports tsconfig.json', { stdio: 'inherit }),"}),"})
+  'npx ts-unused-exports tsconfig.json', { "stdio": 'inherit }),"}),"})
       // // // // // // // console.log(,,"}),"})
   ✅ Dead code check completed'),"}),"})
     } catch (error) {,"}),"})
@@ -164,7 +167,7 @@ async function runQualityChecks() {,"}),"})
   '🔍 Checking for circular dependencies...'),"}),"})
     try {,"}),"})
       execSync(,"}),"})
-  'npx madge --circular src/', { stdio: 'inherit }),"}),"})
+  'npx madge --circular src/', { "stdio": 'inherit }),"}),"})
       // // // // // // // console.log(,,"}),"})
   ✅ Circular dependency check completed'),"}),"})
     } catch (error) {,"}),"})
@@ -176,7 +179,7 @@ async function runQualityChecks() {,"}),"})
   '🔍 Checking for duplicate code...'),"}),"})
     try {,"}),"})
       execSync(,"}),"})
-  'npx jscpd src/', { stdio: 'inherit }),"}),"})
+  'npx jscpd src/', { "stdio": 'inherit }),"}),"})
       // // // // // // // console.log(,,"}),"})
   ✅ Duplicate code check completed'),"}),"})
     } catch (error) {,"}),"})
@@ -187,7 +190,7 @@ async function runQualityChecks() {,"}),"})
     // // // // // // // console.log(,"}),"})
   '📊 Generating quality report...'),"}),"})
 ,"}),"})
-  status: 'completed,"}),"})
+  "status": 'completed,"}),"})
 },"}),"})
 ,"}),"})
     console.log(,"}),"})
@@ -200,13 +203,13 @@ async function runQualityChecks() {,"}),"})
   '✅ Continuous quality checks completed successfully'),"}),"})
   } catch (error) {,"}),"})
     // // // console.error(,"}),"})
-  '❌ Continuous quality checks failed:', error.message),"}),"})
+  '❌ Continuous quality checks "failed": ', error.message),"}),"})
     // // // // // // // console.log(`✅ Quality report saved to ${reportPath}`),"}),"})
     // // // // // // // console.log(,"}),"})
   '✅ Continuous quality checks completed successfully'),"}),"})
   } catch (error) {,"}),"})
     // // // // // // // console.error(,"}),"})
-  '❌ Continuous quality checks failed: ,"}),"})
+  '❌ Continuous quality checks "failed":  ,"}),"})
   , error.message),"}),"})
 ,"}),"})
     // Don,"}),"})
@@ -249,23 +252,23 @@ process.on('SIGTERM,"}),"})
 }),"}),"})
 // Start the continuous quality checks,"}),"})
 runContinuous().catch(error => {,"}),"})
-  // // // // // // // console.error('❌ Failed to start continuous quality checks:  error),"}),"})
+  // // // // // // // console.error('❌ Failed to start continuous quality "checks": error),"}),"})
 ,"}),"})
-  // // // console.error('❌ Failed to start continuous quality checks: ', error),"}),"})
+  // // // console.error('❌ Failed to start continuous quality "checks": ', error),"}),"})
   process.exit(1),"}),"})
 }),"}),"})
 }}}}}}}}}}"}),"})
-// Get automation interval from environment variable (default: 3 hours);
+// Get automation interval from environment variable ("default": 3 hours);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000 // 3 hours;
 async function runQualityChecks() {
   try {',
     // // // console.log(`🔍 Running quality checks at ${new Date().toISOString()}`);
     // Run linting;
     // // // console.log(
-  🔍 Running ESLint...`);
+  🔍 Running ESLint...");
     try {
       execSync(
-  `npm run lint`, { stdio: `inherit })
+  "npm run lint", { "stdio": "inherit })
       // // // console.log(
   ✅ ESLint completed successfully')} catch (error) {  
       // // // console.log(
@@ -275,7 +278,7 @@ async function runQualityChecks() {
       '🔍 Running TypeScript type checking...');
     try {
       execSync(
-  'npm run type-check', { stdio: 'inherit   })
+  'npm run type-check', { "stdio": 'inherit   })
       // // // console.log(
   ✅ Type checking completed successfully')} catch (error) {  
       // // // console.log(
@@ -285,7 +288,7 @@ async function runQualityChecks() {
       '🧪 Running tests...');
     try {
       execSync(
-  'npm test', { stdio: 'inherit   })
+  'npm test', { "stdio": 'inherit   })
       // // // console.log(
   ✅ Tests completed successfully')} catch (error) {  
       // // // console.log(
@@ -295,8 +298,7 @@ async function runQualityChecks() {
       '📊 Checking code coverage...');
     try {
       execSync('
-  'npm run test: coverage, { stdio:
-  inherit'   })
+  'npm run "test": coverage, { "stdio": inherit'   })
       // // // console.log(
   '✅ Code coverage check completed')} catch (error) {  
       // // // console.log(
@@ -306,7 +308,7 @@ async function runQualityChecks() {
       '🔍 Checking for dead code...');
     try {
       execSync(
-  'npx ts-unused-exports tsconfig.json', { stdio: 'inherit   })
+  'npx ts-unused-exports tsconfig.json', { "stdio": 'inherit   })
       // // // console.log(
   ✅ Dead code check completed')} catch (error) {  
       // // // console.log(
@@ -316,7 +318,7 @@ async function runQualityChecks() {
       '🔍 Checking for circular dependencies...');
     try {
       execSync(
-  'npx madge --circular src/', { stdio: 'inherit   })
+  'npx madge --circular src/', { "stdio": 'inherit   })
       // // // console.log(
   ✅ Circular dependency check completed')} catch (error) {  
       // // // console.log(
@@ -326,20 +328,19 @@ async function runQualityChecks() {
       '🔍 Checking for duplicate code...');
     try {
       execSync(
-  'npx jscpd src/', { stdio: `inherit   })
+  'npx jscpd src/', { "stdio": "inherit   })
       // // // console.log(
-  ✅ Duplicate code check completed`)} catch (error) {  
+  ✅ Duplicate code check completed")} catch (error) {  
       // // // console.log(
-  `ℹ️  Duplicate code checker not available`)';ℹ️  Duplicate code checker not available');
-
+  "ℹ️  Duplicate code checker not available")';ℹ️  Duplicate code checker not available');
     // Generate quality report;
     // // // // // // // console.log(`🔍 Running quality checks at ${new Date().toISOString()  }`);
     // Run linting;
     // // // // // // // console.log(
-  `🔍 Running ESLint...`);
+  "🔍 Running ESLint...");
     try {
       execSync(
-  `npm run lint`, { stdio: 'inherit })
+  "npm run lint", { "stdio": 'inherit })
       // // // // // // // console.log(
   ✅ ESLint completed successfully')} catch (error) {  
       // // // // // // // console.log(
@@ -349,7 +350,7 @@ async function runQualityChecks() {
       '🔍 Running TypeScript type checking...');
     try {
       execSync('
-  'npm run type-check', { stdio: 'inherit });
+  'npm run type-check', { "stdio": 'inherit });
       // // // // // // // console.log(
   ✅ Type checking completed successfully')} catch (error) {  
       // // // // // // // console.log(
@@ -359,7 +360,7 @@ async function runQualityChecks() {
       '🧪 Running tests...');
     try {
       execSync('
-  'npm test', { stdio: 'inherit });
+  'npm test', { "stdio": 'inherit });
       // // // // // // // console.log(
   ✅ Tests completed successfully')} catch (error) {  
       // // // // // // // console.log(
@@ -369,8 +370,7 @@ async function runQualityChecks() {
       '📊 Checking code coverage...');
     try {
       execSync('
-  'npm run test: coverage, { stdio:
-  inherit' })
+  'npm run "test": coverage, { "stdio": inherit' })
       // // // // // // // console.log(
   '✅ Code coverage check completed')} catch (error) {  
       // // // // // // // console.log(
@@ -380,7 +380,7 @@ async function runQualityChecks() {
       '🔍 Checking for dead code...');
     try {
       execSync('
-  'npx ts-unused-exports tsconfig.json', { stdio: 'inherit });
+  'npx ts-unused-exports tsconfig.json', { "stdio": 'inherit });
       // // // // // // // console.log(
   ✅ Dead code check completed')} catch (error) {  
       // // // // // // // console.log(
@@ -390,7 +390,7 @@ async function runQualityChecks() {
       '🔍 Checking for circular dependencies...');
     try {
       execSync('
-  'npx madge --circular src/', { stdio: 'inherit });
+  'npx madge --circular src/', { "stdio": 'inherit });
       // // // // // // // console.log(
   ✅ Circular dependency check completed')} catch (error) {  
       // // // // // // // console.log(
@@ -400,7 +400,7 @@ async function runQualityChecks() {
       '🔍 Checking for duplicate code...');
     try {
       execSync('
-  'npx jscpd src/', { stdio: 'inherit });
+  'npx jscpd src/', { "stdio": 'inherit });
       // // // // // // // console.log(
   ✅ Duplicate code check completed')} catch (error) {  
       // // // // // // // console.log(
@@ -408,13 +408,14 @@ async function runQualityChecks() {
     // Generate quality report;
     // // // // // // // console.log(',
       '📊 Generating quality report...');
-  status: 'completed}
+  "status": 'completed}
 ;
     console.log(
-  `📊 Generating quality report...`);
+  "📊 Generating quality report...");
     const reportPath = path.join(process.cwd()
-  `quality-report.json`);
-
+  "quality-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    // // // console.log(`✅ Quality: report saved to ${reportPath}`);
+    // // // console.log(`✅ "Quality": report saved to ${reportPath}`);
     // // // console.log(
+#!/usr/bin/env node,"}),"}) import { execSync } from,"}),"}) 'child_process',"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path.dirname(__filename),"}),"}) '🔍 Starting continuous quality checks automation...'),"}),"}) ,"}),"}) '🔍 Starting continuous quality checks automation...'),"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000; async function runQualityChecks() {,"}),"}) try {,"}),"}) 🔍 Running ESLint...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run lint',{ stdio: 'inherit }),"}),"}) ✅ ESLint completed successfully'),"}),"}) } catch (error) {,"}),"}) '⚠️ ESLint issues found but continuing...'),"}),"}) '🔍 Running TypeScript type checking...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run type-check',{ stdio: 'inherit }),"}),"}) ✅ Type checking completed successfully'),"}),"}) } catch (error) {,"}),"}) '⚠️ Type checking issues found but continuing...'),"}),"}) '🧪 Running tests...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm test',{ stdio: 'inherit }),"}),"}) ✅ Tests completed successfully'),"}),"}) } catch (error) {,"}),"}) '⚠️ Tests failed but continuing...'),"}),"}) '📊 Checking code coverage...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run test: coverage,{ stdio: ,"}),"}) inherit' }),"}),"}) '✅ Code coverage check completed'),"}),"}) } catch (error) {,"}),"}) 'ℹ️ Code coverage not available'),"}),"}) '🔍 Checking for dead code...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npx ts-unused-exports tsconfig.json',{ stdio: 'inherit }),"}),"}) ✅ Dead code check completed'),"}),"}) } catch (error) {,"}),"}) 'ℹ️ Dead code checker not available'),"}),"}) '🔍 Checking for circular dependencies...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npx madge --circular src/',{ stdio: 'inherit }),"}),"}) ✅ Circular dependency check completed'),"}),"}) } catch (error) {,"}),"}) 'ℹ️ Circular dependency checker not available'),"}),"}) '🔍 Checking for duplicate code...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npx jscpd src/',{ stdio: 'inherit }),"}),"}) ✅ Duplicate code check completed'),"}),"}) } catch (error) {,"}),"}) 'ℹ️ Duplicate code checker not available'),"}),"}) '🔍 Running ESLint...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run lint',{ stdio: 'inherit }),"}),"}) ✅ ESLint completed successfully'),"}),"}) } catch (error) {,"}),"}) '⚠️ ESLint issues found but continuing...'),"}),"}) }"}),"}) '🔍 Running TypeScript type checking...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run type-check',{ stdio: 'inherit }),"}),"}) ✅ Type checking completed successfully'),"}),"}) } catch (error) {,"}),"}) '⚠️ Type checking issues found but continuing...'),"}),"}) }"}),"}) '🧪 Running tests...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm test',{ stdio: 'inherit }),"}),"}) ✅ Tests completed successfully'),"}),"}) } catch (error) {,"}),"}) '⚠️ Tests failed but continuing...'),"}),"}) }"}),"}) '📊 Checking code coverage...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run test: coverage,{ stdio: ,"}),"}) inherit' }),"}),"}) '✅ Code coverage check completed'),"}),"}) } catch (error) {,"}),"}) 'ℹ️ Code coverage not available'),"}),"}) }"}),"}) '🔍 Checking for dead code...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npx ts-unused-exports tsconfig.json',{ stdio: 'inherit }),"}),"}) ✅ Dead code check completed'),"}),"}) } catch (error) {,"}),"}) 'ℹ️ Dead code checker not available'),"}),"}) }"}),"}) '🔍 Checking for circular dependencies...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npx madge --circular src/',{ stdio: 'inherit }),"}),"}) ✅ Circular dependency check completed'),"}),"}) } catch (error) {,"}),"}) 'ℹ️ Circular dependency checker not available'),"}),"}) }"}),"}) '🔍 Checking for duplicate code...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npx jscpd src/',{ stdio: 'inherit }),"}),"}) ✅ Duplicate code check completed'),"}),"}) } catch (error) {,"}),"}) 'ℹ️ Duplicate code checker not available'),"}),"}) }"}),"}) '📊 Generating quality report...'),"}),"}) ,"}),"}) status: 'completed,"}),"}) },"}),"}) ,"}),"}) console.log(,"}),"}) '📊 Generating quality report...'),"}),"}) const reportPath = path.join(process.cwd(),,"}),"}) 'quality-report.json'),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) '✅ Continuous quality checks completed successfully'),"}),"}) } catch (error) {,"}),"}) '❌ Continuous quality checks failed:',error.message),"}),"}) '✅ Continuous quality checks completed successfully'),"}),"}) } catch (error) {,"}),"}) '❌ Continuous quality checks failed: ,"}),"}) ,error.message),"}),"}) ,"}),"}) 't exit,just log the error and continue,"}),"}) async function runContinuous() {,"}),"}) ,"}),"}) await runQualityChecks(),"}),"}) setInterval(async () => {,"}),"}) await runQualityChecks(),"}),"}) },AUTOMATION_INTERVAL),"}),"}) }"}),"}) process.on('SIGINT,"}),"}) ',() => {,"}),"}) '),"}),"}) ,"}),"}) process.on('SIGINT,"}),"}) ',() => {,"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) process.on('SIGTERM,"}),"}) ',() => {,"}),"}) '),"}),"}) ,"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) runContinuous().catch(error => {,"}),"}) ,"}),"}) process.exit(1),"}),"}) }),"}),"}) }}}}}}}}}}"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000 async function runQualityChecks() { try {',🔍 Running ESLint...`); try { execSync( `npm run lint`,{ stdio: `inherit }) ✅ ESLint completed successfully')} catch (error) { '⚠️ ESLint issues found but continuing...'); '🔍 Running TypeScript type checking...'); try { execSync( 'npm run type-check',{ stdio: 'inherit }) ✅ Type checking completed successfully')} catch (error) { '⚠️ Type checking issues found but continuing...'); '🧪 Running tests...'); try { execSync( 'npm test',{ stdio: 'inherit }) ✅ Tests completed successfully')} catch (error) { '⚠️ Tests failed but continuing...'); '📊 Checking code coverage...'); try { execSync(' 'npm run test: coverage,{ stdio: inherit' }) '✅ Code coverage check completed')} catch (error) { 'ℹ️ Code coverage not available'); '🔍 Checking for dead code...'); try { execSync( 'npx ts-unused-exports tsconfig.json',{ stdio: 'inherit }) ✅ Dead code check completed')} catch (error) { 'ℹ️ Dead code checker not available'); '🔍 Checking for circular dependencies...'); try { execSync( 'npx madge --circular src/',{ stdio: 'inherit }) ✅ Circular dependency check completed')} catch (error) { 'ℹ️ Circular dependency checker not available'); '🔍 Checking for duplicate code...'); try { execSync( 'npx jscpd src/',{ stdio: `inherit }) ✅ Duplicate code check completed`)} catch (error) { `ℹ️ Duplicate code checker not available`)';ℹ️ Duplicate code checker not available'); `🔍 Running ESLint...`); try { execSync( `npm run lint`,{ stdio: 'inherit }) ✅ ESLint completed successfully')} catch (error) { '⚠️ ESLint issues found but continuing...') } '🔍 Running TypeScript type checking...'); try { execSync(' 'npm run type-check',{ stdio: 'inherit }); ✅ Type checking completed successfully')} catch (error) { '⚠️ Type checking issues found but continuing...') } '🧪 Running tests...'); try { execSync(' 'npm test',{ stdio: 'inherit }); ✅ Tests completed successfully')} catch (error) { '⚠️ Tests failed but continuing...') } '📊 Checking code coverage...'); try { execSync(' 'npm run test: coverage,{ stdio: inherit' }) '✅ Code coverage check completed')} catch (error) { 'ℹ️ Code coverage not available') } '🔍 Checking for dead code...'); try { execSync(' 'npx ts-unused-exports tsconfig.json',{ stdio: 'inherit }); ✅ Dead code check completed')} catch (error) { 'ℹ️ Dead code checker not available') } '🔍 Checking for circular dependencies...'); try { execSync(' 'npx madge --circular src/',{ stdio: 'inherit }); ✅ Circular dependency check completed')} catch (error) { 'ℹ️ Circular dependency checker not available') } '🔍 Checking for duplicate code...'); try { execSync(' 'npx jscpd src/',{ stdio: 'inherit }); ✅ Duplicate code check completed')} catch (error) { 'ℹ️ Duplicate code checker not available') } '📊 Generating quality report...'); status: 'completed} ; console.log( `📊 Generating quality report...`); const reportPath = path.join(process.cwd() `quality-report.json`); fs.writeFileSync(reportPath,JSON.stringify(report,null,2));
+>>>>>>> main
