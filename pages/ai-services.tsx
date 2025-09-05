@@ -43,7 +43,8 @@ import {
   ShoppingCart,
   BookOpen,
   Home,
-  Gamepad2
+  Gamepad2,
+  Package
 } from 'lucide-react';
 
 const aiServices = [
@@ -596,6 +597,177 @@ title: 'Generative AI Content Creation Suite',
     features: ['Journey Mapping', 'Personalization', 'Sentiment Analysis', 'Predictive Support'],
     pricing: '$15,000 - $100,000/setup',
     category: 'Customer Experience',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Intelligence',
+    description: 'Advanced threat detection and response using machine learning and behavioral analysis.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Threat Intelligence'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Drug Discovery Platform',
+    description: 'Machine learning platform for accelerating drug discovery and development processes.',
+    icon: Heart,
+    features: ['Molecular Analysis', 'Drug Design', 'Toxicity Prediction', 'Clinical Trial Optimization'],
+    pricing: '$50,000 - $500,000/setup',
+    category: 'Healthcare',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Autonomous Vehicle Systems',
+    description: 'Complete autonomous vehicle solution with perception, planning, and control systems.',
+    icon: Car,
+    features: ['Computer Vision', 'Path Planning', 'Sensor Fusion', 'Safety Systems'],
+    pricing: '$100,000 - $1,000,000/setup',
+    category: 'Autonomous Systems',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Financial Trading Algorithm',
+    description: 'Advanced algorithmic trading system with machine learning and real-time market analysis.',
+    icon: TrendingUp,
+    features: ['Market Analysis', 'Risk Management', 'Portfolio Optimization', 'Real-time Trading'],
+    pricing: '$75,000 - $500,000/setup',
+    category: 'FinTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Climate Change Modeling',
+    description: 'Advanced climate modeling and prediction using machine learning and big data analytics.',
+    icon: Globe,
+    features: ['Climate Modeling', 'Weather Prediction', 'Impact Assessment', 'Policy Analysis'],
+    pricing: '$100,000 - $750,000/setup',
+    category: 'Environmental AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Space Exploration Systems',
+    description: 'Autonomous systems for space exploration with AI-powered mission planning and control.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Autonomous Navigation', 'Resource Management', 'Data Analysis'],
+    pricing: '$200,000 - $2,000,000/setup',
+    category: 'Space Technology',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Quantum Computing Optimization',
+    description: 'Quantum algorithm optimization and quantum machine learning solutions.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Optimization', 'Machine Learning', 'Error Correction'],
+    pricing: '$150,000 - $1,000,000/setup',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Grid Management',
+    description: 'Intelligent energy grid management with predictive analytics and optimization.',
+    icon: Zap,
+    features: ['Load Forecasting', 'Grid Optimization', 'Renewable Integration', 'Demand Response'],
+    pricing: '$50,000 - $300,000/setup',
+    category: 'Energy',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Precision Agriculture',
+    description: 'Smart farming solutions with AI-powered crop monitoring and optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
+    pricing: '$30,000 - $200,000/setup',
+    category: 'Agriculture',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart City Infrastructure',
+    description: 'Comprehensive smart city management with AI-powered optimization and monitoring.',
+    icon: Building,
+    features: ['Traffic Management', 'Energy Optimization', 'Public Safety', 'Resource Management'],
+    pricing: '$100,000 - $1,000,000/setup',
+    category: 'Smart Cities',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personalized Medicine',
+    description: 'Precision medicine platform with AI-powered treatment personalization and drug discovery.',
+    icon: Heart,
+    features: ['Genomic Analysis', 'Treatment Personalization', 'Drug Discovery', 'Clinical Decision Support'],
+    pricing: '$75,000 - $500,000/setup',
+    category: 'Healthcare',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Advanced Robotics',
+    description: 'Intelligent robotics systems with advanced perception, learning, and control capabilities.',
+    icon: Bot,
+    features: ['Computer Vision', 'Machine Learning', 'Autonomous Control', 'Human-Robot Interaction'],
+    pricing: '$100,000 - $750,000/setup',
+    category: 'Robotics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Natural Language Understanding',
+    description: 'Advanced NLP platform with multilingual understanding and context awareness.',
+    icon: MessageSquare,
+    features: ['Multilingual Processing', 'Context Understanding', 'Sentiment Analysis', 'Language Generation'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'Natural Language Processing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Advanced Computer Vision',
+    description: 'Cutting-edge computer vision solutions with 3D understanding and real-time processing.',
+    icon: Eye,
+    features: ['3D Vision', 'Real-time Processing', 'Object Recognition', 'Scene Understanding'],
+    pricing: '$40,000 - $250,000/setup',
+    category: 'Computer Vision',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Predictive Maintenance',
+    description: 'Advanced predictive maintenance system with IoT integration and machine learning.',
+    icon: Settings,
+    features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'IoT Integration'],
+    pricing: '$35,000 - $200,000/setup',
+    category: 'Industrial AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimization',
+    description: 'Intelligent supply chain management with demand forecasting and optimization.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Risk Management'],
+    pricing: '$50,000 - $300,000/setup',
+    category: 'Supply Chain',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Advanced Analytics Platform',
+    description: 'Comprehensive analytics platform with machine learning and real-time insights.',
+    icon: BarChart3,
+    features: ['Real-time Analytics', 'Machine Learning', 'Predictive Modeling', 'Data Visualization'],
+    pricing: '$30,000 - $200,000/setup',
+    category: 'Analytics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Content Generation Suite',
+    description: 'Advanced content creation platform with multi-modal generation capabilities.',
+    icon: FileText,
+    features: ['Text Generation', 'Image Creation', 'Video Production', 'Audio Synthesis'],
+    pricing: '$20,000 - $150,000/setup',
+    category: 'Content Creation',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Advanced Search Engine',
+    description: 'Intelligent search platform with semantic understanding and personalized results.',
+    icon: Search,
+    features: ['Semantic Search', 'Personalization', 'Multilingual Support', 'Real-time Indexing'],
+    pricing: '$40,000 - $250,000/setup',
+    category: 'Search Technology',
     popular: true
   }
 ];

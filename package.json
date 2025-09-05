@@ -8,7 +8,7 @@
     "ci:build-test": "npm run build && npm run test:smoke",
     "dev": "next dev",
     "build": "next build",
-    "prebuild": "echo \"Starting build...\" && node scripts/remove-console-logs.cjs",
+    "prebuild": "echo \"Starting build...\"",
     "export": "next build && next export",
     "start": "next start -p 3000",
     "postbuild": "echo \"Build completed\"",

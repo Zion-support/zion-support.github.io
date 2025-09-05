@@ -359,10 +359,3 @@ export default function TalentPage() {
     </Layout>
   );
 }
-                  </motion.div>
-                  </div>
-                  </section>
-                  </div>
-                  </MainLayout>
-  );
-}
