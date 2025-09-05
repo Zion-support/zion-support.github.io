@@ -1,7 +1,6 @@
 
-},
+},;
           observer.unobserve(image)}
       }
-
-}})),
-
+;
+}})),;
