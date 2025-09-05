@@ -3,6 +3,122 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
+---
+import { 
+  Users, 
+  Award, 
+  Target, 
+  Heart, 
+  Globe, 
+  Shield, 
+  Star, 
+  TrendingUp, 
+  Rocket, 
+  Lightbulb, 
+  Handshake 
+} from 'lucide-react';
+
+const values = [{
+    icon: Lightbulb,
+    title: 'Innovation',
+    description: 'We constantly push the boundaries of what&apos;s possible with technology, always seeking new and better ways to solve problems.'
+  },
+  {
+    icon: Shield,
+    title: 'Integrity',
+    description: 'We conduct business with the highest ethical standards, building trust through transparency and honest communication.'
+  },
+  {
+    icon: Star,
+    title: 'Excellence',
+    description: 'We strive for excellence in everything we do, delivering solutions that exceed expectations and drive real results.'
+  },
+  {
+    icon: Handshake,
+    title: 'Client Success',
+    description: 'Our success is measured by our clients&apos; success. We are committed to being true partners in their growth journey.'
+  }
+];
+
+const team = [{
+    name: 'Dr. Sarah Chen',
+    role: 'Chief Technology Officer',
+    expertise: 'AI & Machine Learning',
+    experience: '15+ years',
+    image: '/team/sarah-chen.jpg'
+  },
+  {
+    name: 'Michael Rodriguez',
+    role: 'Head of Engineering',
+    expertise: 'Cloud Infrastructure',
+    experience: '12+ years',
+    image: '/team/michael-rodriguez.jpg'
+  },
+  {
+    name: 'Emily Watson',
+    role: 'Lead Data Scientist',
+    expertise: 'Data Analytics & AI',
+    experience: '10+ years',
+    image: '/team/emily-watson.jpg'
+  },
+  {
+    name: 'David Kim',
+    role: 'Security Architect',
+    expertise: 'Cybersecurity',
+    experience: '14+ years',
+    image: '/team/david-kim.jpg'
+  }
+];
+
+const achievements = [{
+    icon: Award,
+    title: 'Industry Recognition',
+    description: 'Named "Top AI Solutions Provider" by TechCrunch 2024',
+    stat: '2024'
+  },
+  {
+    icon: Users,
+    title: 'Client Satisfaction',
+    description: '98% client retention rate with 500+ successful projects',
+    stat: '98%'
+  },
+  {
+    icon: Globe,
+    title: 'Global Reach',
+    description: 'Serving clients across 25+ countries worldwide',
+    stat: '25+'
+  },
+  {
+    icon: TrendingUp,
+    title: 'Growth',
+    description: '300% year-over-year growth in AI services',
+    stat: '300%'
+  }
+];
+
+const timeline = [{
+    year: '2018',
+    title: 'Company Founded',
+    description: 'Zion Tech Group was established with a vision to democratize AI and technology solutions.'
+  },
+  {
+    year: '2020',
+    title: 'AI Division Launch',
+    description: 'Launched our specialized AI services division, focusing on machine learning and automation.'
+  },
+  {
+    year: '2022',
+    title: 'Cloud Expansion',
+    description: 'Expanded into comprehensive cloud infrastructure and cybersecurity services.'
+  },
+  {
+    year: '2024',
+    title: 'Micro SaaS Platform',
+    description: 'Introduced our Micro SaaS solutions platform for rapid business application deployment.'
+  }
+];
+
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

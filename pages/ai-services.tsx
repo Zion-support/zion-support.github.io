@@ -43,6 +43,16 @@ const aiServices = [
       "Risk assessment",
       "Quality control automation"
     ]
+
+---
+    title: 'AI-Powered Email Responder',
+    description: 'Automated email responses using advanced NLP and machine learning algorithms.',
+    icon: Mail,
+    features: ['Natural Language Processing', 'Sentiment Analysis', 'Auto-categorization', 'Smart Routing'],
+    pricing: '$2,000 - $8,000 setup',
+    category: 'Automation',
+    popular: true
+
   },
   {
     title: "Natural Language Processing",
@@ -287,6 +297,116 @@ const aiServices = [
     features: ['Molecular Design', 'Drug Optimization', 'Toxicity Prediction', 'Clinical Trial Design'],
     pricing: '$50,000 - $500,000/project',
     category: 'Pharmaceuticals',
+
+---
+    features: ['Molecular Modeling', 'Drug-Target Interaction', 'Toxicity Prediction', 'Clinical Trial Optimization'],
+    pricing: '$50,000 - $200,000 project',
+    category: 'Healthcare'
+  },
+  {
+    title: 'AI Financial Modeling',
+    description: 'Advanced financial modeling and risk assessment using machine learning.',
+    icon: TrendingUp,
+    features: ['Portfolio Optimization', 'Risk Assessment', 'Market Prediction', 'Algorithmic Trading'],
+    pricing: '$10,000 - $50,000 project',
+    category: 'Finance'
+  },
+  {
+    title: 'AI Supply Chain Optimization',
+    description: 'Intelligent supply chain management with predictive analytics and automation.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Risk Analysis'],
+    pricing: '$15,000 - $75,000 project',
+    category: 'Logistics'
+  },
+  {
+    title: 'AI-Powered Recommendation Engine',
+    description: 'Personalized recommendation system for e-commerce and content platforms.',
+    icon: Target,
+    features: ['Collaborative Filtering', 'Content-Based Filtering', 'Real-time Updates', 'A/B Testing'],
+    pricing: '$3,000 - $15,000 setup',
+    category: 'E-commerce'
+  },
+  {
+    title: 'AI Social Media Manager',
+    description: 'Automated social media management with content creation and scheduling.',
+    icon: Globe,
+    features: ['Content Generation', 'Optimal Posting Times', 'Engagement Analysis', 'Brand Voice Consistency'],
+    pricing: '$500 - $2,500/month',
+    category: 'Marketing'
+  },
+  {
+    title: 'AI Code Review Assistant',
+    description: 'Automated code review and quality assurance using AI analysis.',
+    icon: Code,
+    features: ['Code Quality Analysis', 'Security Vulnerability Detection', 'Performance Optimization', 'Best Practices'],
+    pricing: '$2,000 - $10,000 setup',
+    category: 'Development'
+  },
+  {
+    title: 'AI Document Processing',
+    description: 'Intelligent document extraction, classification, and data processing.',
+    icon: FileText,
+    features: ['OCR Technology', 'Document Classification', 'Data Extraction', 'Workflow Automation'],
+    pricing: '$1,500 - $8,000/month',
+    category: 'Document Management'
+  },
+  {
+    title: 'AI Video Analytics',
+    description: 'Advanced video analysis for security, marketing, and business intelligence.',
+    icon: Video,
+    features: ['Object Tracking', 'Behavior Analysis', 'Crowd Counting', 'Anomaly Detection'],
+    pricing: '$4,000 - $20,000 project',
+    category: 'Video Analytics'
+  },
+  {
+    title: 'AI Talent Matching',
+    description: 'Intelligent candidate matching and recruitment optimization.',
+    icon: Users,
+    features: ['Resume Analysis', 'Skill Matching', 'Cultural Fit Assessment', 'Interview Scheduling'],
+    pricing: '$2,500 - $12,000 setup',
+    category: 'HR & Recruitment'
+  },
+  {
+    title: 'AI Energy Optimization',
+    description: 'Smart energy management and optimization for buildings and facilities.',
+    icon: Zap,
+    features: ['Energy Consumption Analysis', 'Predictive Maintenance', 'Load Balancing', 'Cost Optimization'],
+    pricing: '$8,000 - $40,000 project',
+    category: 'Energy Management'
+  },
+  {
+    title: 'AI Quality Assurance',
+    description: 'Automated quality control and defect detection in manufacturing.',
+    icon: CheckCircle,
+    features: ['Visual Inspection', 'Defect Classification', 'Quality Metrics', 'Process Optimization'],
+    pricing: '$10,000 - $50,000 project',
+    category: 'Manufacturing'
+  },
+  {
+    title: 'AI Legal Document Analysis',
+    description: 'Intelligent legal document review and contract analysis.',
+    icon: BookOpen,
+    features: ['Contract Analysis', 'Risk Assessment', 'Clause Extraction', 'Compliance Checking'],
+    pricing: '$5,000 - $25,000 setup',
+    category: 'Legal Tech'
+  },
+  {
+    title: 'AI Customer Sentiment Analysis',
+    description: 'Real-time customer sentiment analysis across multiple channels.',
+    icon: MessageSquare,
+    features: ['Multi-channel Analysis', 'Emotion Detection', 'Trend Analysis', 'Alert System'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Customer Analytics'
+  },
+  {
+    title: 'AI-Powered Autonomous Vehicles',
+description: 'Complete autonomous vehicle systems with advanced perception and decision-making capabilities.',
+    icon: Car,
+    features: ['Computer Vision', 'Sensor Fusion', 'Path Planning', 'Real-time Decision Making'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Autonomous Systems',
+
     popular: true
   },
   {

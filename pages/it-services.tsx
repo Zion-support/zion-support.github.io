@@ -109,6 +109,11 @@ const itServices = [
   {
     title: 'Cloud Migration & Management',
     description: 'Seamless migration to cloud platforms with ongoing management and optimization.',
+
+---
+    title: 'Cloud Infrastructure Management',
+    description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.',
+
     icon: Cloud,
     features: ['AWS/Azure/GCP Migration', 'Cost Optimization', 'Security Implementation', '24/7 Monitoring'],
     pricing: '$5,000 - $50,000 project',
@@ -304,6 +309,16 @@ const categories = [
   'Compliance',
   'Project Management',
   'Cost Optimization'
+
+---
+const technologies = [
+  { name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
+  { name: 'Containerization', icon: Server, description: 'Docker, Kubernetes, OpenShift' },
+  { name: 'Security Tools', icon: Shield, description: 'SIEM, WAF, IAM, Encryption' },
+  { name: 'Monitoring', icon: BarChart3, description: 'Prometheus, Grafana, ELK Stack' },
+  { name: 'Databases', icon: Database, description: 'PostgreSQL, MongoDB, Redis' },
+  { name: 'Networking', icon: Network, description: 'Cisco, Fortinet, SD-WAN' }
+
 ];
 
 const benefits = [

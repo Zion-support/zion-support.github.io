@@ -68,6 +68,17 @@ const blogPosts = [
   }
 ];
 
+
+---
+const categories = [{ name: "AI & Machine Learning", count: 12 },
+  { name: "Cloud Computing", count: 8 },
+  { name: "Cybersecurity", count: 6 },
+  { name: "SaaS Development", count: 10 },
+  { name: "Digital Transformation", count: 7 },
+  { name: "IT Infrastructure", count: 5 }
+];
+
+
 export default function BlogPage() {
   return (
     <Layout
@@ -154,6 +165,51 @@ export default function BlogPage() {
                   ))}
                 </div>
               </div>
+
+---
+
+              {/* Sidebar */}
+              <div className="lg:col-span-1">
+                <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+                  <h3 className="text-lg font-bold text-gray-900 mb-4">Categories</h3>
+                  <ul className="space-y-2">
+                    {categories.map((category, index) => (
+                      <li key={index}>
+                        <Link
+                          href={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
+                          className="flex items-center justify-between text-gray-600 hover:text-blue-600 transition-colors"
+                        >
+                          <span>{category.name}</span>
+                          <span className="text-sm bg-gray-100 px-2 py-1 rounded-full">
+                            {category.count}
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="bg-white rounded-lg shadow-lg p-6">
+                  <h3 className="text-lg font-bold text-gray-900 mb-4">Newsletter</h3>
+                  <p className="text-gray-600 mb-4">
+                    Subscribe to get the latest technology insights delivered to your inbox.
+                  </p>
+                  <form className="space-y-3">
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                    <button
+                      type="submit"
+                      className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
+                    >
+                      Subscribe
+                    </button>
+                  </form>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>

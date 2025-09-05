@@ -90,6 +90,19 @@ import {
 import Layout from '../components/Layout';
 
 const microSaasProducts = [
+
+---
+const microSaaSProducts = [
+  {
+    title: 'Cloud Cost Guard (FinOps Assistant)',
+    description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
+    icon: DollarSign,
+    features: ['Cost Anomaly Detection', 'Auto Rightsizing', 'Budget Forecasting', 'Multi-cloud Support'],
+    pricing: '$299 - $1,499/month',
+    category: 'FinOps',
+    popular: true
+  },
+
   {
     title: 'AI Content Marketing Suite',
     description: 'Automated content creation, SEO optimization, and social media management platform.',
@@ -412,6 +425,11 @@ const microSaasServices = [
   {
     title: "Workflow Automation",
     description: "Intelligent automation solutions that streamline business processes",
+
+---
+const features = [
+  {
+
     icon: Zap,
     features: [
       "Process Automation",
