@@ -299,6 +299,169 @@ const microSaaSProducts = [
     category: 'Sustainability'
   },
   {
+    title: 'AI-Powered Video Clip Maker',
+    description: 'Automatically transform long-form videos into engaging short clips for social media platforms.',
+    icon: Video,
+    features: ['Auto Video Editing', 'Social Media Optimization', 'AI Scene Detection', 'Multi-format Export'],
+    pricing: '$149 - $799/month',
+    category: 'Content Creation',
+    popular: true
+  },
+  {
+    title: 'E-Commerce Return Management SaaS',
+    description: 'Streamlined return processing with automated workflows and customer self-service portal.',
+    icon: Package,
+    features: ['Automated Return Processing', 'Self-Service Portal', 'Return Analytics', 'Inventory Integration'],
+    pricing: '$99 - $499/month',
+    category: 'E-commerce'
+  },
+  {
+    title: 'Mobile-First Survey Tool',
+    description: 'Create engaging, adaptive surveys optimized for mobile devices with real-time analytics.',
+    icon: Smartphone,
+    features: ['Mobile-Optimized Design', 'Adaptive Questioning', 'Real-time Analytics', 'Multi-language Support'],
+    pricing: '$29 - $199/month',
+    category: 'Data Collection'
+  },
+  {
+    title: 'AI-Powered Email Responder',
+    description: 'Intelligent email automation with smart categorization, auto-responses, and priority flagging.',
+    icon: Mail,
+    features: ['Smart Categorization', 'Auto-Response Generation', 'Priority Detection', 'Sentiment Analysis'],
+    pricing: '$79 - $399/month',
+    category: 'Communication',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Optimization Suite',
+    description: 'Leverage quantum algorithms for complex optimization problems in logistics and finance.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Optimization Problems', 'Financial Modeling', 'Logistics Planning'],
+    pricing: '$2,999 - $9,999/month',
+    category: 'Advanced Computing'
+  },
+  {
+    title: 'AI-Powered Talent Matching Platform',
+    description: 'Advanced AI matching system connecting businesses with verified tech professionals.',
+    icon: Users,
+    features: ['AI Skill Matching', 'Verified Professionals', 'Project Matching', 'Performance Tracking'],
+    pricing: '$199 - $1,299/month',
+    category: 'Recruitment',
+    popular: true
+  },
+  {
+    title: 'Blockchain Document Verification',
+    description: 'Secure document verification and authentication using blockchain technology.',
+    icon: Shield,
+    features: ['Document Authentication', 'Blockchain Storage', 'Tamper Detection', 'Legal Compliance'],
+    pricing: '$149 - $799/month',
+    category: 'Blockchain'
+  },
+  {
+    title: 'AI-Powered Content Moderation Suite',
+    description: 'Advanced content moderation using AI for text, images, and videos across platforms.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Real-time Processing', 'Custom Rules Engine', 'API Integration'],
+    pricing: '$299 - $1,999/month',
+    category: 'Content Safety'
+  },
+  {
+    title: 'Smart Contract Development Platform',
+    description: 'No-code smart contract creation and deployment with testing and auditing tools.',
+    icon: Code,
+    features: ['Visual Contract Builder', 'Automated Testing', 'Security Auditing', 'Multi-chain Support'],
+    pricing: '$199 - $999/month',
+    category: 'Blockchain'
+  },
+  {
+    title: 'AI-Powered Financial Forecasting',
+    description: 'Advanced financial modeling and forecasting using machine learning algorithms.',
+    icon: TrendingUp,
+    features: ['Predictive Modeling', 'Risk Assessment', 'Scenario Planning', 'Real-time Updates'],
+    pricing: '$399 - $2,499/month',
+    category: 'Finance'
+  },
+  {
+    title: 'Voice AI Assistant Platform',
+    description: 'Custom voice AI assistants with natural language processing and multi-language support.',
+    icon: Mic,
+    features: ['Voice Recognition', 'Natural Language Processing', 'Multi-language Support', 'Custom Training'],
+    pricing: '$299 - $1,999/month',
+    category: 'Voice AI'
+  },
+  {
+    title: 'AI-Powered Code Generation Tool',
+    description: 'Generate code from natural language descriptions with support for multiple programming languages.',
+    icon: Code,
+    features: ['Natural Language to Code', 'Multi-language Support', 'Code Optimization', 'Error Detection'],
+    pricing: '$199 - $1,299/month',
+    category: 'Development Tools'
+  },
+  {
+    title: 'Smart Home Automation Hub',
+    description: 'Centralized control and automation for smart home devices with AI-powered optimization.',
+    icon: Home,
+    features: ['Device Integration', 'AI Optimization', 'Energy Management', 'Security Monitoring'],
+    pricing: '$49 - $299/month',
+    category: 'IoT'
+  },
+  {
+    title: 'AI-Powered Medical Diagnosis Assistant',
+    description: 'AI assistant for medical professionals providing diagnostic support and treatment recommendations.',
+    icon: Heart,
+    features: ['Symptom Analysis', 'Diagnostic Support', 'Treatment Recommendations', 'Medical Literature Search'],
+    pricing: '$999 - $4,999/month',
+    category: 'Healthcare'
+  },
+  {
+    title: 'Automated Legal Document Generator',
+    description: 'AI-powered legal document creation and contract generation with compliance checking.',
+    icon: FileText,
+    features: ['Document Templates', 'Compliance Checking', 'Contract Analysis', 'Legal Research'],
+    pricing: '$199 - $1,499/month',
+    category: 'Legal Tech'
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimizer',
+    description: 'Intelligent supply chain management with demand forecasting and logistics optimization.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Logistics Optimization', 'Inventory Management', 'Risk Assessment'],
+    pricing: '$499 - $2,999/month',
+    category: 'Supply Chain'
+  },
+  {
+    title: 'Smart Agriculture Monitoring System',
+    description: 'IoT-based agricultural monitoring with AI-powered crop analysis and yield optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Weather Integration', 'Pest Detection'],
+    pricing: '$199 - $999/month',
+    category: 'Agriculture'
+  },
+  {
+    title: 'AI-Powered Cybersecurity Threat Hunter',
+    description: 'Advanced threat detection and response system using AI and machine learning.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Forensic Analysis'],
+    pricing: '$799 - $3,999/month',
+    category: 'Cybersecurity'
+  },
+  {
+    title: 'Virtual Reality Training Platform',
+    description: 'Immersive VR training solutions for corporate training and skill development.',
+    icon: Monitor,
+    features: ['VR Training Modules', 'Progress Tracking', 'Multi-user Support', 'Analytics Dashboard'],
+    pricing: '$299 - $1,999/month',
+    category: 'VR/AR'
+  },
+  {
+    title: 'AI-Powered Personal Finance Manager',
+    description: 'Intelligent personal finance management with budgeting, investment advice, and goal tracking.',
+    icon: DollarSign,
+    features: ['Budget Management', 'Investment Advice', 'Goal Tracking', 'Expense Categorization'],
+    pricing: '$9 - $49/month',
+    category: 'Personal Finance'
+  },
+  {
     title: 'AI-Powered Legal Document Analyzer',
     description: 'Automated legal document analysis and contract review using AI.',
     icon: FileText,
@@ -734,6 +897,159 @@ const microSaaSProducts = [
     pricing: '$199 - $1,299/month',
     category: 'Email Marketing',
     popular: true
+  },
+  {
+    title: 'AI Video Content Generator',
+    description: 'Automated video creation from text prompts with AI-generated visuals and voiceovers.',
+    icon: Video,
+    features: ['Text-to-Video', 'AI Voiceovers', 'Template Library', 'Multi-language Support'],
+    pricing: '$299 - $1,999/month',
+    category: 'Content Creation',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Auditor',
+    description: 'Automated smart contract security analysis and vulnerability detection for blockchain projects.',
+    icon: Shield,
+    features: ['Security Analysis', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Checks'],
+    pricing: '$499 - $2,999/project',
+    category: 'Blockchain'
+  },
+  {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review with security analysis, performance optimization, and best practices.',
+    icon: Code,
+    features: ['Automated Reviews', 'Security Scanning', 'Performance Analysis', 'Best Practices'],
+    pricing: '$199 - $1,499/month',
+    category: 'Development'
+  },
+  {
+    title: 'Quantum-Safe Encryption Service',
+    description: 'Post-quantum cryptography solutions for future-proof data protection.',
+    icon: Lock,
+    features: ['Quantum-Safe Algorithms', 'Key Management', 'Migration Tools', 'Compliance'],
+    pricing: '$999 - $4,999/month',
+    category: 'Security'
+  },
+  {
+    title: 'AI-Powered Legal Document Analyzer',
+    description: 'Automated legal document analysis, contract review, and compliance checking.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
+    pricing: '$399 - $2,499/month',
+    category: 'Legal Tech'
+  },
+  {
+    title: 'Edge Computing Orchestrator',
+    description: 'Intelligent edge computing resource management and workload distribution.',
+    icon: Cpu,
+    features: ['Edge Resource Management', 'Workload Distribution', 'Latency Optimization', 'Auto-scaling'],
+    pricing: '$199 - $1,299/month',
+    category: 'Edge Computing'
+  },
+  {
+    title: 'AI-Powered Medical Image Analysis',
+    description: 'Automated medical image analysis for radiology and diagnostic assistance.',
+    icon: Eye,
+    features: ['Image Analysis', 'Diagnostic Assistance', 'Pattern Recognition', 'Report Generation'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Healthcare AI'
+  },
+  {
+    title: 'Carbon Footprint Tracker',
+    description: 'Real-time carbon footprint monitoring and sustainability reporting for businesses.',
+    icon: Sprout,
+    features: ['Carbon Tracking', 'Sustainability Reports', 'Goal Setting', 'Industry Benchmarking'],
+    pricing: '$99 - $599/month',
+    category: 'Sustainability'
+  },
+  {
+    title: 'AI-Powered Fraud Detection',
+    description: 'Real-time fraud detection using machine learning for financial transactions.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Pattern Recognition', 'Risk Scoring', 'API Integration'],
+    pricing: '$299 - $1,999/month',
+    category: 'FinTech'
+  },
+  {
+    title: 'Voice AI Assistant Builder',
+    description: 'No-code platform for creating custom voice AI assistants and chatbots.',
+    icon: Mic,
+    features: ['No-code Builder', 'Voice Recognition', 'Natural Language Processing', 'Multi-platform'],
+    pricing: '$149 - $999/month',
+    category: 'Voice AI'
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimizer',
+    description: 'Intelligent supply chain optimization with demand forecasting and logistics planning.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Route Optimization', 'Inventory Management', 'Risk Analysis'],
+    pricing: '$499 - $2,999/month',
+    category: 'Supply Chain'
+  },
+  {
+    title: 'Real-time Language Translator',
+    description: 'Advanced real-time translation service with context awareness and industry-specific terminology.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Awareness', 'Industry Terms', 'Multi-modal Support'],
+    pricing: '$199 - $1,299/month',
+    category: 'Translation'
+  },
+  {
+    title: 'AI-Powered Investment Analyzer',
+    description: 'Automated investment analysis and portfolio optimization using advanced AI algorithms.',
+    icon: TrendingUp,
+    features: ['Portfolio Analysis', 'Risk Assessment', 'Market Prediction', 'Automated Rebalancing'],
+    pricing: '$299 - $1,999/month',
+    category: 'FinTech'
+  },
+  {
+    title: 'Smart Home Automation Hub',
+    description: 'Centralized smart home control with AI-powered automation and energy optimization.',
+    icon: Home,
+    features: ['Device Control', 'Energy Optimization', 'Predictive Automation', 'Voice Control'],
+    pricing: '$99 - $599/month',
+    category: 'IoT'
+  },
+  {
+    title: 'AI-Powered Resume Optimizer',
+    description: 'Intelligent resume optimization for ATS systems and job matching algorithms.',
+    icon: FileText,
+    features: ['ATS Optimization', 'Keyword Analysis', 'Format Optimization', 'Job Matching'],
+    pricing: '$29 - $199/month',
+    category: 'Career Tools'
+  },
+  {
+    title: 'Blockchain Analytics Platform',
+    description: 'Comprehensive blockchain transaction analysis and cryptocurrency tracking.',
+    icon: BarChart3,
+    features: ['Transaction Analysis', 'Wallet Tracking', 'Risk Assessment', 'Compliance Reporting'],
+    pricing: '$399 - $2,499/month',
+    category: 'Blockchain'
+  },
+  {
+    title: 'AI-Powered Mental Health Assistant',
+    description: 'Intelligent mental health monitoring and support using natural language processing.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Sentiment Analysis', 'Crisis Detection', 'Resource Recommendations'],
+    pricing: '$199 - $1,299/month',
+    category: 'Healthcare AI'
+  },
+  {
+    title: 'Autonomous Vehicle Fleet Manager',
+    description: 'AI-powered fleet management for autonomous vehicles with route optimization.',
+    icon: Car,
+    features: ['Fleet Optimization', 'Route Planning', 'Predictive Maintenance', 'Safety Monitoring'],
+    pricing: '$999 - $4,999/month',
+    category: 'Autonomous Vehicles'
+  },
+  {
+    title: 'AI-Powered Content Moderation Suite',
+    description: 'Advanced content moderation for social platforms with real-time AI analysis.',
+    icon: Eye,
+    features: ['Real-time Moderation', 'Multi-language Support', 'Context Analysis', 'Custom Rules'],
+    pricing: '$299 - $1,999/month',
+    category: 'Content Safety'
   }
 ];
 

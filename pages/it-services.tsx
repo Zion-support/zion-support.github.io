@@ -34,7 +34,8 @@ import {
   Brain,
   DollarSign,
   Rocket,
-  Sprout
+  Sprout,
+  Car
 } from 'lucide-react';
 
 
@@ -647,6 +648,276 @@ const itServices = [
     features: ['Infrastructure as Code', 'Automated Provisioning', 'Self-healing Systems', 'Configuration Management'],
     pricing: '$40,000 - $250,000/setup',
     category: 'Infrastructure Automation',
+    popular: true
+  },
+  {
+    title: 'AI-Powered IT Operations (AIOps)',
+    description: 'Intelligent IT operations using AI and machine learning for predictive maintenance and automation.',
+    icon: Brain,
+    features: ['Predictive Analytics', 'Automated Incident Response', 'Anomaly Detection', 'Self-healing Systems'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'AIOps',
+    popular: true
+  },
+  {
+    title: 'Quantum-Safe Cryptography Implementation',
+    description: 'Implementation of quantum-resistant cryptographic solutions for future-proof security.',
+    icon: Shield,
+    features: ['Post-Quantum Cryptography', 'Quantum Key Distribution', 'Security Assessment', 'Migration Planning'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Quantum Security'
+  },
+  {
+    title: 'Extended Reality (XR) Infrastructure',
+    description: 'Complete XR infrastructure setup for virtual, augmented, and mixed reality applications.',
+    icon: Monitor,
+    features: ['VR/AR Hardware Setup', 'Spatial Computing', 'Haptic Feedback', 'Multi-user Support'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'XR Infrastructure'
+  },
+  {
+    title: 'Digital Twin Technology Platform',
+    description: 'Digital twin implementation for real-time monitoring and simulation of physical assets.',
+    icon: Building,
+    features: ['Asset Modeling', 'Real-time Synchronization', 'Predictive Simulation', 'IoT Integration'],
+    pricing: '$40,000 - $250,000/project',
+    category: 'Digital Twins'
+  },
+  {
+    title: 'Autonomous Systems Infrastructure',
+    description: 'Infrastructure support for autonomous vehicles, drones, and robotic systems.',
+    icon: Car,
+    features: ['Edge Computing', 'Real-time Processing', 'Safety Systems', 'Communication Networks'],
+    pricing: '$60,000 - $400,000/project',
+    category: 'Autonomous Systems'
+  },
+  {
+    title: 'Neuromorphic Computing Solutions',
+    description: 'Implementation of brain-inspired computing systems for AI and machine learning workloads.',
+    icon: Cpu,
+    features: ['Neuromorphic Hardware', 'Spiking Neural Networks', 'Low Power Computing', 'Real-time Processing'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Neuromorphic Computing'
+  },
+  {
+    title: 'Satellite Communication Infrastructure',
+    description: 'Satellite communication systems and ground station infrastructure for global connectivity.',
+    icon: Globe,
+    features: ['Ground Station Setup', 'Satellite Integration', 'Global Coverage', 'Low Latency Communication'],
+    pricing: '$80,000 - $500,000/project',
+    category: 'Satellite Communications'
+  },
+  {
+    title: 'Biometric Security Systems',
+    description: 'Advanced biometric authentication and security systems for enterprise environments.',
+    icon: Shield,
+    features: ['Multi-modal Biometrics', 'Liveness Detection', 'Privacy Protection', 'Integration APIs'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'Biometric Security'
+  },
+  {
+    title: 'Smart City Infrastructure',
+    description: 'Comprehensive smart city infrastructure including IoT sensors, data platforms, and citizen services.',
+    icon: Building,
+    features: ['IoT Sensor Networks', 'Data Analytics Platform', 'Citizen Services', 'Traffic Management'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Smart Cities'
+  },
+  {
+    title: 'Holographic Display Systems',
+    description: 'Advanced holographic display technology for immersive visualization and communication.',
+    icon: Monitor,
+    features: ['Holographic Projection', '3D Visualization', 'Interactive Displays', 'Multi-user Collaboration'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Holographic Technology'
+  },
+  {
+    title: 'Space Technology Infrastructure',
+    description: 'Ground support systems and infrastructure for space missions and satellite operations.',
+    icon: Rocket,
+    features: ['Mission Control Systems', 'Satellite Tracking', 'Data Processing', 'Communication Networks'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Space Technology'
+  },
+  {
+    title: 'Advanced Materials Computing',
+    description: 'Infrastructure for advanced materials research and quantum materials computing.',
+    icon: Cpu,
+    features: ['Quantum Materials', 'Simulation Platforms', 'High-performance Computing', 'Research Tools'],
+    pricing: '$75,000 - $400,000/project',
+    category: 'Materials Computing'
+  },
+  {
+    title: 'Telepresence & Remote Collaboration',
+    description: 'Advanced telepresence systems for immersive remote collaboration and communication.',
+    icon: Users,
+    features: ['3D Telepresence', 'Haptic Feedback', 'Multi-site Collaboration', 'Real-time Translation'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Telepresence'
+  },
+  {
+    title: 'Brain-Computer Interface Infrastructure',
+    description: 'Infrastructure support for brain-computer interface applications and neural data processing.',
+    icon: Brain,
+    features: ['Neural Data Processing', 'Real-time Analysis', 'Safety Systems', 'Privacy Protection'],
+    pricing: '$80,000 - $500,000/project',
+    category: 'BCI Infrastructure'
+  },
+  {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing infrastructure setup and management for advanced computational needs.',
+    icon: Cpu,
+    features: ['Quantum Hardware Setup', 'Quantum Software Stack', 'Hybrid Computing', 'Quantum Security'],
+    pricing: '$100,000 - $1,000,000/setup',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Network',
+    description: 'Distributed edge computing infrastructure for low-latency applications and IoT devices.',
+    icon: Network,
+    features: ['Edge Nodes Deployment', 'Latency Optimization', 'IoT Integration', 'Distributed Processing'],
+    pricing: '$50,000 - $500,000/setup',
+    category: 'Edge Computing'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Comprehensive zero trust security implementation with continuous verification and monitoring.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Threat Detection'],
+    pricing: '$25,000 - $200,000/setup',
+    category: 'Security',
+    popular: true
+  },
+  {
+    title: 'Multi-Cloud Management Platform',
+    description: 'Unified management platform for multi-cloud environments with cost optimization and governance.',
+    icon: Cloud,
+    features: ['Multi-cloud Orchestration', 'Cost Optimization', 'Governance Policies', 'Unified Monitoring'],
+    pricing: '$15,000 - $150,000/setup',
+    category: 'Cloud Management'
+  },
+  {
+    title: 'AI Infrastructure as a Service',
+    description: 'Dedicated AI infrastructure with GPU clusters, ML pipelines, and model deployment platforms.',
+    icon: Brain,
+    features: ['GPU Clusters', 'ML Pipelines', 'Model Deployment', 'Auto-scaling'],
+    pricing: '$10,000 - $100,000/month',
+    category: 'AI Infrastructure',
+    popular: true
+  },
+  {
+    title: 'Blockchain Infrastructure Services',
+    description: 'Complete blockchain infrastructure setup including nodes, smart contracts, and DApp deployment.',
+    icon: Shield,
+    features: ['Blockchain Nodes', 'Smart Contract Deployment', 'DApp Hosting', 'Security Auditing'],
+    pricing: '$20,000 - $200,000/setup',
+    category: 'Blockchain'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network infrastructure design, implementation, and optimization for enterprise applications.',
+    icon: Wifi,
+    features: ['5G Core Network', 'Edge Computing Integration', 'Network Slicing', 'Performance Optimization'],
+    pricing: '$100,000 - $1,000,000/setup',
+    category: '5G Networks'
+  },
+  {
+    title: 'IoT Platform Infrastructure',
+    description: 'Comprehensive IoT platform with device management, data processing, and analytics capabilities.',
+    icon: Smartphone,
+    features: ['Device Management', 'Data Processing', 'Real-time Analytics', 'Security Framework'],
+    pricing: '$30,000 - $300,000/setup',
+    category: 'IoT Infrastructure'
+  },
+  {
+    title: 'Disaster Recovery as a Service',
+    description: 'Comprehensive disaster recovery solution with automated failover and data replication.',
+    icon: Shield,
+    features: ['Automated Failover', 'Data Replication', 'RTO/RPO Optimization', 'Testing & Validation'],
+    pricing: '$5,000 - $50,000/month',
+    category: 'Disaster Recovery'
+  },
+  {
+    title: 'Green IT Infrastructure',
+    description: 'Sustainable IT infrastructure with energy-efficient hardware and renewable energy integration.',
+    icon: Sprout,
+    features: ['Energy-efficient Hardware', 'Renewable Energy', 'Carbon Footprint Tracking', 'Sustainability Reporting'],
+    pricing: '$40,000 - $400,000/setup',
+    category: 'Green IT'
+  },
+  {
+    title: 'Hybrid Cloud Migration',
+    description: 'Seamless migration to hybrid cloud environments with workload optimization and cost management.',
+    icon: Cloud,
+    features: ['Workload Assessment', 'Migration Planning', 'Cost Optimization', 'Security Integration'],
+    pricing: '$25,000 - $250,000/project',
+    category: 'Cloud Migration'
+  },
+  {
+    title: 'API Gateway & Management',
+    description: 'Enterprise API gateway with rate limiting, security, monitoring, and developer portal.',
+    icon: Network,
+    features: ['API Gateway', 'Rate Limiting', 'Security Policies', 'Developer Portal'],
+    pricing: '$5,000 - $50,000/setup',
+    category: 'API Management'
+  },
+  {
+    title: 'Data Lake & Analytics Platform',
+    description: 'Modern data lake infrastructure with real-time analytics and machine learning capabilities.',
+    icon: Database,
+    features: ['Data Lake Setup', 'Real-time Processing', 'ML Integration', 'Data Governance'],
+    pricing: '$20,000 - $200,000/setup',
+    category: 'Data Analytics'
+  },
+  {
+    title: 'Microservices Architecture',
+    description: 'Microservices architecture design and implementation with container orchestration and service mesh.',
+    icon: Server,
+    features: ['Service Decomposition', 'Container Orchestration', 'Service Mesh', 'API Management'],
+    pricing: '$30,000 - $300,000/setup',
+    category: 'Microservices',
+    popular: true
+  },
+  {
+    title: 'DevSecOps Implementation',
+    description: 'Integrated development, security, and operations with automated security testing and compliance.',
+    icon: Shield,
+    features: ['Security Integration', 'Automated Testing', 'Compliance Monitoring', 'Threat Modeling'],
+    pricing: '$15,000 - $150,000/setup',
+    category: 'DevSecOps'
+  },
+  {
+    title: 'High-Performance Computing',
+    description: 'HPC infrastructure for scientific computing, simulations, and data-intensive applications.',
+    icon: Cpu,
+    features: ['HPC Clusters', 'Parallel Processing', 'Job Scheduling', 'Performance Optimization'],
+    pricing: '$50,000 - $500,000/setup',
+    category: 'HPC'
+  },
+  {
+    title: 'Network Function Virtualization',
+    description: 'NFV infrastructure for virtualized network functions and software-defined networking.',
+    icon: Network,
+    features: ['VNF Deployment', 'SDN Integration', 'Orchestration', 'Performance Monitoring'],
+    pricing: '$40,000 - $400,000/setup',
+    category: 'NFV/SDN'
+  },
+  {
+    title: 'Compliance & Governance Platform',
+    description: 'Comprehensive compliance management platform with automated reporting and audit trails.',
+    icon: Shield,
+    features: ['Compliance Monitoring', 'Automated Reporting', 'Audit Trails', 'Policy Management'],
+    pricing: '$10,000 - $100,000/setup',
+    category: 'Compliance'
+  },
+  {
+    title: 'Intelligent Monitoring & Observability',
+    description: 'AI-powered monitoring and observability platform with predictive analytics and automated remediation.',
+    icon: Monitor,
+    features: ['AI-powered Monitoring', 'Predictive Analytics', 'Automated Remediation', 'Root Cause Analysis'],
+    pricing: '$8,000 - $80,000/setup',
+    category: 'Monitoring',
     popular: true
   }
 ];
