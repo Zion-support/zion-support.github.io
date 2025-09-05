@@ -26,7 +26,8 @@ const navigation = [
       { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable SaaS solutions' },
       { name: 'Cloud & DevOps', href: '/services/cloud-devops', description: 'Cloud infrastructure solutions' },
       { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security solutions' },
-      { name: 'Data Analytics', href: '/services/data-analytics', description: 'Data insights and analytics' }
+      { name: 'Data Analytics', href: '/services/data-analytics', description: 'Data insights and analytics' },
+      { name: 'All Services', href: '/services', description: 'Complete service portfolio' }
     ]
   },
   {
@@ -37,7 +38,9 @@ const navigation = [
       { name: 'Healthcare', href: '/solutions/healthcare', description: 'Healthcare technology' },
       { name: 'Finance', href: '/solutions/finance', description: 'Financial services' },
       { name: 'Education', href: '/solutions/education', description: 'Educational technology' },
-      { name: 'Government', href: '/solutions/government', description: 'Government solutions' }
+      { name: 'Government', href: '/solutions/government', description: 'Government solutions' },
+      { name: 'Manufacturing', href: '/solutions/manufacturing', description: 'Manufacturing solutions' },
+      { name: 'Retail', href: '/solutions/retail', description: 'Retail technology' }
     ]
   },
   {
@@ -48,23 +51,47 @@ const navigation = [
       { name: 'Finance', href: '/industries/finance', description: 'Financial services' },
       { name: 'Education', href: '/industries/education', description: 'Education sector' },
       { name: 'Government', href: '/industries/government', description: 'Government sector' },
-      { name: 'Manufacturing', href: '/industries/manufacturing', description: 'Manufacturing industry' },
-      { name: 'Retail', href: '/industries/retail', description: 'Retail industry' }
+      { name: 'Manufacturing', href: '/industries/manufacturing', description: 'Manufacturing sector' },
+      { name: 'Retail', href: '/industries/retail', description: 'Retail industry' },
+      { name: 'Technology', href: '/industries/technology', description: 'Technology sector' }
     ]
   },
   {
     name: 'Resources',
     href: '/resources',
     children: [
-      { name: 'Blog', href: '/blog', description: 'Latest insights' },
+      { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
+      { name: 'API Reference', href: '/api', description: 'API documentation' },
+      { name: 'Help Center', href: '/help', description: 'Support and help' },
+      { name: 'Community', href: '/community', description: 'Join our community' },
       { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
-      { name: 'White Papers', href: '/white-papers', description: 'Technical papers' },
-      { name: 'Webinars', href: '/webinars', description: 'Educational content' },
-      { name: 'Help Center', href: '/help', description: 'Support resources' }
+      { name: 'Blog', href: '/blog', description: 'Latest insights' },
+      { name: 'White Papers', href: '/whitepapers', description: 'Technical papers' }
     ]
   },
-  { name: 'About', href: '/about' },
-  { name: 'Contact', href: '/contact' }
+  {
+    name: 'Company',
+    href: '/about',
+    children: [
+      { name: 'About Us', href: '/about', description: 'Learn about our company' },
+      { name: 'Our Team', href: '/team', description: 'Meet our experts' },
+      { name: 'Careers', href: '/careers', description: 'Join our team' },
+      { name: 'Partners', href: '/partners', description: 'Our partner network' },
+      { name: 'News', href: '/news', description: 'Latest news' },
+      { name: 'Contact', href: '/contact', description: 'Get in touch' }
+    ]
+  },
+  {
+    name: 'Pricing',
+    href: '/pricing',
+    children: [
+      { name: 'Service Pricing', href: '/pricing', description: 'View our pricing' },
+      { name: 'AI Services Pricing', href: '/pricing#ai-services', description: 'AI service pricing' },
+      { name: 'IT Services Pricing', href: '/pricing#it-services', description: 'IT service pricing' },
+      { name: 'Micro SaaS Pricing', href: '/pricing#micro-saas', description: 'SaaS pricing' },
+      { name: 'Enterprise Pricing', href: '/pricing#enterprise', description: 'Enterprise pricing' }
+    ]
+  }
 ];
 
 const contactInfo = {

@@ -2,27 +2,21 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { 
   Calendar, 
   User, 
-  ArrowRight,
-  Tag,
-  Clock,
-  Eye,
-  Share2,
+  ArrowRight, 
+  Tag, 
+  Clock, 
+  Eye, 
+  Share2, 
   BookOpen
 } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
-=======
-import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
 import Layout from '../components/Layout';
->>>>>>> cursor/expand-services-advertise-and-build-project-dc3f
 
 const blogPosts = [
   {
     id: 1,
-<<<<<<< HEAD
     title: 'The Future of AI in Business: Trends and Predictions for 2024',
     excerpt: 'Explore the latest AI trends and how they\'re transforming businesses across industries.',
     content: 'Artificial Intelligence is revolutionizing the way businesses operate...',
@@ -68,7 +62,9 @@ const blogPosts = [
     category: 'Quantum Computing',
     image: '/blog/quantum-computing.jpg',
     tags: ['Quantum Computing', 'Technology', 'Innovation', 'Future']
-=======
+  },
+  {
+    id: 2,
     title: "The Future of AI in Business: 2025 Trends",
     excerpt: "Explore the latest AI trends that are transforming businesses across industries.",
     author: "Dr. Sarah Chen",

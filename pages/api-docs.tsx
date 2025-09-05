@@ -5,24 +5,18 @@ import {
   Code, 
   ArrowRight,
   CheckCircle,
-<<<<<<< HEAD
   Shield,
   Zap,
   BookOpen,
   Terminal,
   Download,
-  Play
-=======
-  Copy,
   Play,
-  Download
->>>>>>> cursor/expand-services-advertise-and-build-project-dc3f
+  Copy
 } from 'lucide-react';
 import SimpleLayout from '../components/SimpleLayout';
 
 const endpoints = [
   {
-<<<<<<< HEAD
     name: 'Authentication',
     method: 'POST',
     endpoint: '/api/auth/login',
@@ -145,115 +139,6 @@ export default function APIDocsPage() {
 
         {/* Features Section */}
         <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-=======
-    method: "GET",
-    path: "/api/v1/users",
-    description: "Retrieve all users",
-    parameters: [
-      { name: "limit", type: "integer", required: false, description: "Number of users to return" },
-      { name: "offset", type: "integer", required: false, description: "Number of users to skip" }
-    ],
-    example: `curl -X GET "https://api.ziontechgroup.com/v1/users?limit=10" \\
-  -H "Authorization: Bearer YOUR_API_KEY"`
-  },
-  {
-    method: "POST",
-    path: "/api/v1/users",
-    description: "Create a new user",
-    parameters: [
-      { name: "name", type: "string", required: true, description: "User's full name" },
-      { name: "email", type: "string", required: true, description: "User's email address" },
-      { name: "role", type: "string", required: false, description: "User's role" }
-    ],
-    example: `curl -X POST "https://api.ziontechgroup.com/v1/users" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json" \\
-  -d '{"name": "John Doe", "email": "john@example.com"}'`
-  },
-  {
-    method: "PUT",
-    path: "/api/v1/users/{id}",
-    description: "Update a user",
-    parameters: [
-      { name: "id", type: "string", required: true, description: "User ID" },
-      { name: "name", type: "string", required: false, description: "User's full name" },
-      { name: "email", type: "string", required: false, description: "User's email address" }
-    ],
-    example: `curl -X PUT "https://api.ziontechgroup.com/v1/users/123" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json" \\
-  -d '{"name": "John Smith"}'`
-  },
-  {
-    method: "DELETE",
-    path: "/api/v1/users/{id}",
-    description: "Delete a user",
-    parameters: [
-      { name: "id", type: "string", required: true, description: "User ID" }
-    ],
-    example: `curl -X DELETE "https://api.ziontechgroup.com/v1/users/123" \\
-  -H "Authorization: Bearer YOUR_API_KEY"`
-  }
-];
-
-const sdks = [
-  { name: "JavaScript", version: "2.1.0", description: "Node.js and browser support" },
-  { name: "Python", version: "1.8.2", description: "Python 3.6+ support" },
-  { name: "PHP", version: "1.5.1", description: "PHP 7.4+ support" },
-  { name: "Java", version: "2.0.0", description: "Java 8+ support" },
-  { name: "Go", version: "1.2.0", description: "Go 1.16+ support" },
-  { name: "Ruby", version: "1.3.0", description: "Ruby 2.7+ support" }
-];
-
-export default function ApiDocsPage() {
-  return (
-    <SimpleLayout
-      title="API Documentation - Zion Tech Group"
-      description="Complete API reference with endpoints, authentication, examples, and SDKs for developers."
-      keywords="API documentation, REST API, GraphQL, SDKs, developer resources, API reference"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-green-900 via-teal-900 to-cyan-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-          </div>
-
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                API{' '}
-                <span className="bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">
-                  Documentation
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Complete API reference with endpoints, authentication, examples, and SDKs. 
-                Everything you need to integrate with our services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="#endpoints" className="px-8 py-4 bg-gradient-to-r from-green-500 to-teal-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Explore Endpoints
-                </Link>
-                <Link href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  Get API Key
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Quick Start */}
-        <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"

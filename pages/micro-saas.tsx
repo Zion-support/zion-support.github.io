@@ -43,17 +43,13 @@ import {
   Package,
   Calendar,
   BookOpen,
-<<<<<<< HEAD
   ShoppingCart,
   Home,
   Trash2,
   Camera,
-  HardDrive
-=======
+  HardDrive,
   Brain,
-  Truck,
-  ShoppingCart
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-597f
+  Truck
 } from 'lucide-react';
 
 const microSaaSProducts = [{

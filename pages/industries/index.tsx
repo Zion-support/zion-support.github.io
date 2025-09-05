@@ -9,18 +9,14 @@ import {
   ArrowRight,
   Building,
   Users,
-<<<<<<< HEAD
   CheckCircle,
   Globe,
-  Database
-} from 'lucide-react'
-=======
+  Database,
   Shield,
   Cloud,
   Brain
 } from 'lucide-react';
 import SimpleLayout from '../../components/SimpleLayout';
->>>>>>> cursor/expand-services-advertise-and-build-project-dc3f
 
 const industries = [
   {

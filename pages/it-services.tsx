@@ -85,7 +85,6 @@ const itServices = [
     category: 'Administration'
   },
   {
-<<<<<<< HEAD
     title: 'IT Consulting',
     description: 'Strategic IT consulting to align technology with business objectives.',
     icon: Users,
@@ -94,9 +93,6 @@ const itServices = [
     category: 'Consulting'
   },
   {
-    title: 'DevOps & CI/CD Implementation',
-    description: 'Complete DevOps transformation with continuous integration and deployment pipelines.',
-=======
     title: 'Enterprise Software Development',
     description: 'Custom enterprise software solutions tailored to your business requirements.',
     icon: Code,

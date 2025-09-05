@@ -19,21 +19,58 @@ const services = {
     { name: 'Predictive Analytics Platform', href: '/ai-services#predictive-analytics' },
     { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
     { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
-    { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' }
+    { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
+    { name: 'Natural Language Processing', href: '/ai-services#nlp-engine' },
+    { name: 'Fraud Detection AI', href: '/ai-services#fraud-detection' },
+    { name: 'Quantum Machine Learning', href: '/ai-services#quantum-ml' }
   ],
   'IT Services': [
     { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
     { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
     { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },
     { name: 'Database Management', href: '/it-services#database-management' },
-    { name: 'System Administration', href: '/it-services#system-administration' }
+    { name: 'System Administration', href: '/it-services#system-administration' },
+    { name: 'DevOps Implementation', href: '/it-services#devops' },
+    { name: 'Managed IT Services', href: '/it-services#managed-it' },
+    { name: 'Cloud Migration', href: '/it-services#cloud-migration' }
   ],
   'Micro SaaS': [
     { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
     { name: 'LLM Evaluation Suite', href: '/micro-saas#llm-evaluation' },
     { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
     { name: 'API Rate Limiting', href: '/micro-saas#api-rate-limiting' },
-    { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' }
+    { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
+    { name: 'Smart Inventory Optimizer', href: '/micro-saas#inventory-optimizer' },
+    { name: 'Meeting Assistant', href: '/micro-saas#meeting-assistant' },
+    { name: 'Lead Scoring Platform', href: '/micro-saas#lead-scoring' }
+  ],
+  'Solutions': [
+    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+    { name: 'Healthcare Technology', href: '/solutions/healthcare' },
+    { name: 'Financial Services', href: '/solutions/finance' },
+    { name: 'Educational Technology', href: '/solutions/education' },
+    { name: 'Government Solutions', href: '/solutions/government' },
+    { name: 'Manufacturing Solutions', href: '/solutions/manufacturing' },
+    { name: 'Retail Technology', href: '/solutions/retail' }
+  ],
+  'Resources': [
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/api' },
+    { name: 'Help Center', href: '/help' },
+    { name: 'Community', href: '/community' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'White Papers', href: '/whitepapers' },
+    { name: 'Webinars', href: '/webinars' }
+  ],
+  'Company': [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'News', href: '/news' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Pricing', href: '/pricing' }
   ]
 };
 
