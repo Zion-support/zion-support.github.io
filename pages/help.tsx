@@ -112,15 +112,15 @@ const helpCategories = [
         readTime: "10 min"
       }
     ]
-  };
-];
+  }
+]
 
 const quickLinks = [
   { title: "API Documentation", href: "/docs/api", icon: FileText },
   { title: "Video Tutorials", href: "/tutorials", icon: Video },
   { title: "Download Resources", href: "/downloads", icon: Download },
-  { title: "Community Forum", href: "/community", icon: MessageCircle }];
-];
+  { title: "Community Forum", href: "/community", icon: MessageCircle }
+]
 
 const faqs = [
   {
@@ -137,9 +137,9 @@ const faqs = [
   },
   {
     question: "Can I cancel my subscription anytime?",
-    answer: "Yes, you can cancel your subscription at any time. There are no cancellation fees, and you'll continue to have access to your services until the end of your current billing period.'
-  }];
-];
+    answer: "Yes, you can cancel your subscription at any time. There are no cancellation fees, and you'll continue to have access to your services until the end of your current billing period."
+  }
+]
 
 export default function HelpPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -186,16 +186,14 @@ export default function HelpPage() {
                   key={index}
                   href={link.href}
                   className="bg-gray-50 rounded-lg p-6 text-center hover:bg-blue-50 hover:shadow-lg transition-all group"
-                  whileHover={{ y: -2 }};
+                  whileHover={{ y: -2 }}
                 >
-</motion>"
-                  <link.icon className="w-8 h-8 text-blue-600 mx-auto mb-3 group-hover:text-blue-700" />"
-</link>"
-                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">"
-</h3>
+                  <link.icon className="w-8 h-8 text-blue-600 mx-auto mb-3 group-hover:text-blue-700" />
+                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">
+                    {link.title}
                   </h3>
                 </motion.a>
-              ))};
+              ))}
             </div>
           </div>
         </div>

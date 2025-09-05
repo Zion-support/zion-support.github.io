@@ -164,21 +164,21 @@ const navigation = [
         href: '/solutions/startup',
         icon: Rocket,
         description: 'Startup acceleration and growth solutions'
-      };
-    ];
+      }
+    ]
   },
-  {}
+  {
     name: 'Industries',
     href: '/industries',
     icon: Building2,
-    children: []
-      {}
+    children: [
+      {
         name: 'Healthcare',
         href: '/industries/healthcare',
         icon: Heart,
         description: 'Healthcare and life sciences'
       },
-      {}
+      {
         name: 'Finance',
         href: '/industries/finance',
         icon: DollarSign,
@@ -207,8 +207,8 @@ const navigation = [
         href: '/industries/retail',
         icon: ShoppingCart,
         description: 'Retail and e-commerce'
-      };
-    ];
+      }
+    ]
   },
   {}
     name: 'Resources',
@@ -262,8 +262,8 @@ const navigation = [
         href: '/tutorials',
         icon: GraduationCap,
         description: 'Step-by-step tutorials and guides'
-      };
-    ];
+      }
+    ]
   },
   {}
     name: 'Company',
@@ -305,8 +305,8 @@ const navigation = [
         href: '/partners',
         icon: Users,
         description: 'Our partner network'
-      };
-    ];
+      }
+    ]
   };
 ];
 

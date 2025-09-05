@@ -519,7 +519,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$10,000 - $50,000 setup',
     category: 'Insurance AI'
   },
-  {}
+  {
     title: 'AI-Powered Retail Personalization',
     description: 'Advanced retail personalization engine with real-time customer behavior analysis.',
     icon: ShoppingCart,
@@ -527,7 +527,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$5,000 - $25,000/month',
     category: 'Retail AI'
   },
-  {}
+  {
     title: 'AI-Powered Legal Research',
     description: 'Automated legal research and case law analysis using natural language processing.',
     icon: BookOpen,
@@ -535,7 +535,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$1,000 - $5,000/month',
     category: 'Legal AI'
   },
-  {}
+  {
     title: 'AI-Powered Environmental Monitoring',
     description: 'Comprehensive environmental monitoring using AI and IoT sensors for pollution detection.',
     icon: Globe,
@@ -543,7 +543,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$3,000 - $15,000 setup',
     category: 'Environmental AI'
   },
-  {}
+  {
     title: 'AI Language Translation',
     description: 'Real-time multi-language translation with cultural context understanding.',
     icon: Globe,
@@ -551,7 +551,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$2,000 - $10,000/month',
     category: 'Language Technology'
   },
-  {}
+  {
     title: 'AI-Powered Robotics',
     description: 'Intelligent robotic systems with advanced AI decision making.',
     icon: Bot,
