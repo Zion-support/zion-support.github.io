@@ -148,6 +148,321 @@ const itServices = [
     category: 'Support'
   },
   {
+    title: 'Kubernetes & Container Orchestration',
+    description: 'Advanced container orchestration and microservices architecture implementation.',
+    icon: Server,
+    features: ['Kubernetes Deployment', 'Microservices Architecture', 'Service Mesh', 'Auto-scaling'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Containers',
+    popular: true
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Implementation of zero trust security model for modern enterprise environments.',
+    icon: Shield,
+    features: ['Identity Verification', 'Device Trust', 'Network Segmentation', 'Continuous Monitoring'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'Security',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Edge computing infrastructure for low-latency applications and IoT deployments.',
+    icon: Cpu,
+    features: ['Edge Infrastructure', 'IoT Integration', 'Real-time Processing', 'Bandwidth Optimization'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design and implementation for enterprise and industrial applications.',
+    icon: Network,
+    features: ['5G Infrastructure', 'Network Slicing', 'Edge Computing', 'IoT Connectivity'],
+    pricing: '$50,000 - $250,000/project',
+    category: 'Telecommunications',
+    popular: true
+  },
+  {
+    title: 'AI/ML Infrastructure Setup',
+    description: 'Complete AI/ML infrastructure including GPU clusters, data pipelines, and model deployment.',
+    icon: Brain,
+    features: ['GPU Clusters', 'Data Pipelines', 'Model Training', 'MLOps Implementation'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'AI Infrastructure',
+    popular: true
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Blockchain network setup and smart contract deployment for enterprise applications.',
+    icon: Shield,
+    features: ['Blockchain Networks', 'Smart Contracts', 'DeFi Integration', 'Security Auditing'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Integration',
+    description: 'Quantum computing infrastructure and algorithm development for enterprise applications.',
+    icon: Cpu,
+    features: ['Quantum Hardware', 'Algorithm Development', 'Hybrid Computing', 'Security Applications'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'IoT Platform Development',
+    description: 'Complete IoT platform development including device management and data analytics.',
+    icon: Cpu,
+    features: ['Device Management', 'Data Analytics', 'Real-time Monitoring', 'Predictive Maintenance'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'IoT',
+    popular: true
+  },
+  {
+    title: 'API Gateway & Management',
+    description: 'Enterprise API gateway setup with security, monitoring, and rate limiting.',
+    icon: Network,
+    features: ['API Gateway', 'Rate Limiting', 'Authentication', 'Analytics & Monitoring'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'API Management',
+    popular: true
+  },
+  {
+    title: 'Microservices Architecture',
+    description: 'Complete microservices architecture design and implementation for scalable applications.',
+    icon: Server,
+    features: ['Service Design', 'API Development', 'Service Mesh', 'Monitoring'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Microservices',
+    popular: true
+  },
+  {
+    title: 'Data Lake & Analytics Platform',
+    description: 'Enterprise data lake setup with advanced analytics and machine learning capabilities.',
+    icon: Database,
+    features: ['Data Lake Architecture', 'ETL Pipelines', 'Analytics Platform', 'ML Integration'],
+    pricing: '$35,000 - $175,000/project',
+    category: 'Data Analytics',
+    popular: true
+  },
+  {
+    title: 'Hybrid Cloud Architecture',
+    description: 'Seamless hybrid cloud architecture connecting on-premises and cloud environments.',
+    icon: Cloud,
+    features: ['Hybrid Connectivity', 'Data Synchronization', 'Workload Migration', 'Cost Optimization'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Hybrid Cloud',
+    popular: true
+  },
+  {
+    title: 'Serverless Architecture',
+    description: 'Serverless application architecture using AWS Lambda, Azure Functions, or Google Cloud Functions.',
+    icon: Zap,
+    features: ['Function Development', 'Event-driven Architecture', 'Auto-scaling', 'Cost Optimization'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Serverless',
+    popular: true
+  },
+  {
+    title: 'Multi-Cloud Strategy',
+    description: 'Comprehensive multi-cloud strategy and implementation across AWS, Azure, and GCP.',
+    icon: Cloud,
+    features: ['Multi-cloud Architecture', 'Vendor Management', 'Cost Optimization', 'Disaster Recovery'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Multi-Cloud',
+    popular: true
+  },
+  {
+    title: 'Infrastructure as Code (IaC)',
+    description: 'Infrastructure automation using Terraform, Ansible, and other IaC tools.',
+    icon: Code,
+    features: ['Terraform Implementation', 'Ansible Automation', 'GitOps Workflow', 'Environment Management'],
+    pricing: '$12,000 - $60,000/project',
+    category: 'Automation',
+    popular: true
+  },
+  {
+    title: 'Observability & Monitoring',
+    description: 'Comprehensive observability platform with logging, metrics, and tracing.',
+    icon: Monitor,
+    features: ['Application Monitoring', 'Infrastructure Monitoring', 'Log Aggregation', 'Alerting'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Monitoring',
+    popular: true
+  },
+  {
+    title: 'Disaster Recovery as a Service (DRaaS)',
+    description: 'Comprehensive disaster recovery solution with automated failover and testing.',
+    icon: Shield,
+    features: ['Automated Failover', 'RTO/RPO Optimization', 'Regular Testing', 'Compliance'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Disaster Recovery',
+    popular: true
+  },
+  {
+    title: 'Cloud Cost Optimization',
+    description: 'Advanced cloud cost optimization and FinOps implementation for cost reduction.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Resource Optimization', 'Reserved Instances', 'Automated Scaling'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Cost Optimization',
+    popular: true
+  },
+  {
+    title: 'Security Operations Center (SOC)',
+    description: '24/7 security monitoring and incident response services.',
+    icon: Shield,
+    features: ['24/7 Monitoring', 'Threat Detection', 'Incident Response', 'Forensic Analysis'],
+    pricing: '$15,000 - $75,000/month',
+    category: 'Security Operations',
+    popular: true
+  },
+  {
+    title: 'Compliance & Governance',
+    description: 'IT compliance and governance framework implementation for regulatory requirements.',
+    icon: FileText,
+    features: ['Compliance Auditing', 'Policy Management', 'Risk Assessment', 'Documentation'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Compliance',
+    popular: true
+  },
+  {
+    title: 'Digital Transformation',
+    description: 'Complete digital transformation strategy and implementation for modern businesses.',
+    icon: Rocket,
+    features: ['Strategy Development', 'Technology Modernization', 'Process Automation', 'Change Management'],
+    pricing: '$50,000 - $250,000/project',
+    category: 'Digital Transformation',
+    popular: true
+  },
+  {
+    title: 'IT Service Management (ITSM)',
+    description: 'ITIL-based service management implementation with ServiceNow or similar platforms.',
+    icon: Settings,
+    features: ['Service Catalog', 'Incident Management', 'Change Management', 'Service Level Management'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'Service Management',
+    popular: true
+  },
+  {
+    title: 'Cloud Migration Services',
+    description: 'Comprehensive cloud migration services for applications and data.',
+    icon: Cloud,
+    features: ['Migration Planning', 'Application Modernization', 'Data Migration', 'Performance Optimization'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Cloud Migration',
+    popular: true
+  },
+  {
+    title: 'IT Architecture Consulting',
+    description: 'Enterprise IT architecture design and optimization consulting services.',
+    icon: Building,
+    features: ['Architecture Design', 'Technology Selection', 'Integration Planning', 'Scalability Planning'],
+    pricing: '$200 - $400/hour',
+    category: 'Architecture',
+    popular: true
+  },
+  {
+    title: 'Performance Engineering',
+    description: 'Application and infrastructure performance optimization and testing.',
+    icon: TrendingUp,
+    features: ['Performance Testing', 'Load Testing', 'Optimization', 'Capacity Planning'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Performance',
+    popular: true
+  },
+  {
+    title: 'IT Risk Assessment',
+    description: 'Comprehensive IT risk assessment and mitigation strategy development.',
+    icon: Shield,
+    features: ['Risk Analysis', 'Vulnerability Assessment', 'Mitigation Planning', 'Compliance Review'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Risk Management',
+    popular: true
+  },
+  {
+    title: 'IT Training & Certification',
+    description: 'Comprehensive IT training programs and certification preparation for teams.',
+    icon: BookOpen,
+    features: ['Technical Training', 'Certification Prep', 'Hands-on Labs', 'Assessment'],
+    pricing: '$5,000 - $25,000/program',
+    category: 'Training',
+    popular: true
+  },
+  {
+    title: 'IT Vendor Management',
+    description: 'IT vendor selection, contract negotiation, and relationship management.',
+    icon: Users,
+    features: ['Vendor Selection', 'Contract Negotiation', 'Performance Management', 'Cost Optimization'],
+    pricing: '$150 - $300/hour',
+    category: 'Vendor Management',
+    popular: true
+  },
+  {
+    title: 'IT Project Management',
+    description: 'Professional IT project management services for complex technology implementations.',
+    icon: Settings,
+    features: ['Project Planning', 'Resource Management', 'Risk Management', 'Quality Assurance'],
+    pricing: '$200 - $400/hour',
+    category: 'Project Management',
+    popular: true
+  },
+  {
+    title: 'IT Change Management',
+    description: 'IT change management and organizational transformation services.',
+    icon: Users,
+    features: ['Change Strategy', 'Stakeholder Management', 'Communication Planning', 'Training'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Change Management',
+    popular: true
+  },
+  {
+    title: 'IT Quality Assurance',
+    description: 'Comprehensive IT quality assurance and testing services.',
+    icon: CheckCircle,
+    features: ['Test Planning', 'Automated Testing', 'Performance Testing', 'Security Testing'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Quality Assurance',
+    popular: true
+  },
+  {
+    title: 'IT Innovation Lab',
+    description: 'IT innovation lab setup and management for emerging technology exploration.',
+    icon: Rocket,
+    features: ['Lab Setup', 'Technology Research', 'Proof of Concepts', 'Innovation Management'],
+    pricing: '$50,000 - $250,000/project',
+    category: 'Innovation',
+    popular: true
+  },
+  {
+    title: 'IT Sustainability',
+    description: 'IT sustainability and green computing solutions for environmental responsibility.',
+    icon: Sprout,
+    features: ['Energy Optimization', 'Carbon Footprint Reduction', 'Green Computing', 'Sustainability Reporting'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'Sustainability',
+    popular: true
+  },
+  {
+    title: 'IT Future Planning',
+    description: 'Strategic IT future planning and technology roadmap development.',
+    icon: Rocket,
+    features: ['Technology Roadmap', 'Future Planning', 'Trend Analysis', 'Strategic Planning'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Strategic Planning',
+    popular: true
+  },
+  {
+    title: 'IT Excellence',
+    description: 'Comprehensive IT excellence program for organizational transformation.',
+    icon: Award,
+    features: ['Excellence Framework', 'Best Practices', 'Continuous Improvement', 'Performance Management'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Excellence',
+    popular: true
+  },
+  {
     title: 'Software Development Services',
     description: 'Custom software development and application modernization services.',
     icon: Code,
