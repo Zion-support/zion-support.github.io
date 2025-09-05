@@ -188,6 +188,29 @@ const services = [
   }
 ];
 
+const whyChooseUs = [
+  {
+    title: "Expert Team",
+    description: "Certified professionals with years of experience",
+    icon: "👥"
+  },
+  {
+    title: "24/7 Support",
+    description: "Round-the-clock monitoring and support services",
+    icon: "🕐"
+  },
+  {
+    title: "Proven Track Record",
+    description: "Successfully delivered 500+ IT projects across industries",
+    icon: "✅"
+  },
+  {
+    title: "Cost-Effective",
+    description: "Transparent pricing with no hidden costs or surprises",
+    icon: "💰"
+  }
+];
+
 export default function ITServicesPage() {
   return (
     <Layout
@@ -263,13 +286,13 @@ export default function ITServicesPage() {
                 
                 {/* Features */}
                 <ul className="text-sm text-gray-500 space-y-2 mb-4">
-                  {service.features.slice(0, 4).map((feature, idx) => (
+                  {service.features && service.features.slice(0, 4).map((feature, idx) => (
                     <li key={idx} className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                       {feature}
                     </li>
                   ))}
-                  {service.features.length > 4 && (
+                  {service.features && service.features.length > 4 && (
                     <li className="text-blue-600 font-medium">
                       +{service.features.length - 4} more features
                     </li>
