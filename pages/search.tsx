@@ -146,41 +146,33 @@ export default function SearchPage() {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-  {
-                  transition={{ duration: 0.5 }},
-  {
+                  transition={{ duration: 0.5 }}
                   className="mb-8"
                 >
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                    Search results for "{router.query.q},
-  {
+                    Search results for "{router.query.q}"
                   </h2>
                   <p className="text-gray-600">
-                    {isLoading ? 'Searching...' : `${results.length} result${results.length !== 1 ? 's' : ''} found`}`
+                    {isLoading ? 'Searching...' : `${results.length} result${results.length !== 1 ? 's' : ''} found`}
                   </p>
                 </motion.div>
-              )},
-  {isLoading ? (})
+              )}
+              {isLoading ? (
                 <div className="text-center py-12">
                   <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
                   <p className="mt-4 text-gray-600">Searching...</p>
                 </div>
-              ) : results.length > 0 ? ()
+              ) : results.length > 0 ? (
                 <div className="space-y-6">
-  {results.map((result, index) => {},
-  {
+                  {results.map((result, index) => {
                     const IconComponent = result.icon;
                     return (
-    <motion.div
-                        key={result.id},
-  {
+                      <motion.div
+                        key={result.id}
                         className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
-                        initial={{ opacity: 0, y: 20 }},
-  {
-                        animate={{ opacity: 1, y: 0 }},
-  {
-                        transition={{ duration: 0.5, delay: index * 0.1 }},
-  {
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
                       >
                         <div className="flex items-start space-x-4">
                           <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -189,88 +181,73 @@ export default function SearchPage() {
                           <div className="flex-1">
                             <div className="flex items-center space-x-2 mb-2">
                               <h3 className="text-xl font-bold text-gray-900">
-                                {result.title},
-  {
+                                {result.title}
                               </h3>
                               <span className="px-2 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
-                                {result.type},
-  {
+                                {result.type}
                               </span>
                             </div>
                             <p className="text-gray-600 mb-4">
-                              {result.description},
-  {
+                              {result.description}
                             </p>
                             <a
-                              href={result.href},
-  {
+                              href={result.href}
                               className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
                             >
-                              Learn More;
+                              Learn More
                               <ArrowRight className="w-4 h-4 ml-1" />
                             </a>
                           </div>
                         </div>
                       </motion.div>
                     )
-  })},
-  {
+                  })}
                 </div>
-              ) : router.query.q ? ()
+              ) : router.query.q ? (
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }},
-  {
-                  animate={{ opacity: 1, y: 0 }},
-  {
-                  transition={{ duration: 0.5 }},
-  {
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
                   className="text-center py-12"
                 >
                   <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    No results found;
+                    No results found
                   </h3>
                   <p className="text-gray-600 mb-6">
-                    We couldn't find any results for "{router.query.q}. Try searching with different keywords.
+                    We couldn't find any results for "{router.query.q}". Try searching with different keywords.
                   </p>
                   <button
-                    onClick={() => {},
-  {
+                    onClick={() => {
                       setSearchQuery('');
                       setResults(searchResults);
                       router.push('/search')
-  }},
-  {
+                    }}
                     className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
-                    Clear Search;
+                    Clear Search
                   </button>
                 </motion.div>
-              ) : ()
+              ) : (
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }},
-  {
-                  animate={{ opacity: 1, y: 0 }},
-  {
-                  transition={{ duration: 0.5 }},
-  {
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
                   className="text-center py-12"
                 >
                   <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    Start your search;
+                    Start your search
                   </h3>
                   <p className="text-gray-600">
                     Enter a search term above to find services, solutions, and resources.
                   </p>
                 </motion.div>
-              )},
-  {
+              )}
             </div>
           </div>
         </section>
       </div>
     </Layout>
-  )
-  },
-  {
+  );
+};
