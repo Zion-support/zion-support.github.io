@@ -3,8 +3,10 @@ import React, { useEffect } from 'react';
 // Extend the Window interface to include performance and gtag
 declare global {
   interface Window {
-    performance: any;
-    gtag: (..._args: unknown[]) => void;
+    performance: {
+      getEntriesByType: (_type: string) => unknown[];
+    };
+    gtag: (...args: unknown[]) => void;
   }
 }
 
@@ -23,7 +25,7 @@ interface PerformanceData {
 }
 
 interface PerformanceMonitorProps {
-  onPerformanceData?: (_performanceData: PerformanceData) => void;
+  onPerformanceData?: (performanceData: PerformanceData) => void;
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
@@ -34,7 +36,13 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
     }
 
     const measurePerformance = () => {
-      const navigation = window.performance.getEntriesByType('navigation')[0] as any;
+      const navigation = window.performance.getEntriesByType('navigation')[0] as {
+        domContentLoadedEventEnd: number;
+        domContentLoadedEventStart: number;
+        loadEventEnd: number;
+        loadEventStart: number;
+        fetchStart: number;
+      };
       const paint = window.performance.getEntriesByType('paint');
       
       const performanceData: PerformanceData = {

@@ -9,7 +9,7 @@ interface Notification {
 
 interface NotificationSystemProps {
   notifications: Notification[];
-  onDismiss?: (_id: string) => void;
+  onDismiss?: (id: string) => void;
   className?: string;
 }
 
