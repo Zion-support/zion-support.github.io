@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { motion, AnimatePresence } from 'framer-motion'
-import {
-  Menu,
-  X,
-  Search,
-  Phone,
-  ChevronDown,
-  Brain,
-  Cloud,
-  Cpu as CpuIcon,
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  Search, 
+  Phone, 
+  ChevronDown, 
+  Brain, 
+  Cloud, 
+  Cpu as CpuIcon, 
   Globe,
   Mail,
   MapPin,
@@ -36,12 +36,15 @@ import {
   Award,
   Lock,
   Database
-} from 'lucide-react'
-const navigation = [{
+} from 'lucide-react';
+
+const navigation = [
+  {
     name: 'Services',
     href: '/services',
     icon: Settings,
-    children: [{
+    children: [
+      {
         name: 'AI Services',
         href: '/ai-services',
         icon: Brain,
@@ -54,7 +57,8 @@ const navigation = [{
           { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
           { name: 'Voice AI Assistant', href: '/ai-services#voice-ai-assistant' },
           { name: 'AI Fraud Detection', href: '/ai-services#ai-fraud-detection' },
-          { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' }]
+          { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' }
+        ]
       },
       {
         name: 'IT Services',
@@ -69,7 +73,8 @@ const navigation = [{
           { name: 'DevOps & CI/CD', href: '/it-services#devops-cicd' },
           { name: 'Data Center Migration', href: '/it-services#data-center-migration' },
           { name: 'IT Asset Management', href: '/it-services#it-asset-management' },
-          { name: 'Backup & Disaster Recovery', href: '/it-services#backup-disaster-recovery' }]
+          { name: 'Backup & Disaster Recovery', href: '/it-services#backup-disaster-recovery' }
+        ]
       },
       {
         name: 'Micro SaaS',
@@ -84,7 +89,8 @@ const navigation = [{
           { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
           { name: 'Workflow Automation', href: '/micro-saas#workflow-automation' },
           { name: 'AI Lead Scoring', href: '/micro-saas#ai-lead-scoring' },
-          { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' }]
+          { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' }
+        ]
       },
       {
         name: 'Cloud & DevOps',
@@ -109,13 +115,15 @@ const navigation = [{
         href: '/services/quantum-computing',
         icon: CpuIcon,
         description: 'Next-generation quantum computing solutions'
-      }]
+      }
+    ]
   },
   {
     name: 'Solutions',
     href: '/solutions',
     icon: Target,
-    children: [{
+    children: [
+      {
         name: 'Enterprise',
         href: '/solutions/enterprise',
         icon: Building2,
@@ -156,13 +164,15 @@ const navigation = [{
         href: '/solutions/startup',
         icon: Rocket,
         description: 'Startup acceleration and growth solutions'
-      }]
+      }
+    ]
   },
   {
     name: 'Industries',
     href: '/industries',
     icon: Building2,
-    children: [{
+    children: [
+      {
         name: 'Healthcare',
         href: '/industries/healthcare',
         icon: Heart,
@@ -197,7 +207,8 @@ const navigation = [{
         href: '/industries/retail',
         icon: ShoppingCart,
         description: 'Retail and e-commerce'
-      }]
+      }
+    ]
   },
   {
     name: 'Resources',
@@ -251,7 +262,8 @@ const navigation = [{
         href: '/tutorials',
         icon: GraduationCap,
         description: 'Step-by-step tutorials and guides'
-      }]
+      }
+    ]
   },
   {
     name: 'Company',
@@ -293,32 +305,41 @@ const navigation = [{
         href: '/partners',
         icon: Users,
         description: 'Our partner network'
-      }]
-  }]
+      }
+    ]
+  }
+];
+
 const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709'
-}
-export default function Header() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [activeDropdown, setActiveDropdown] = useState(null)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const router = useRouter()
+};
+
+export default function Header() {}
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const router = useRouter();
+
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleDropdownToggle = (index) => {
-    setActiveDropdown(activeDropdown === index ? null : index)
-  }
+    setActiveDropdown(activeDropdown === index ? null : index);
+  };
+
   const handleLinkClick = () => {
-    setIsOpen(false)
-    setActiveDropdown(null)
-  }
+    setIsOpen(false);
+    setActiveDropdown(null);
+  };
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
@@ -343,17 +364,19 @@ export default function Header() {
           </div>
         </div>
       </div>
-      {/* Main Navigation */}
+
+              {/* Main Navigation */}
       <nav className="bg-white shadow-sm">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
-            {/* Logo */}
+                          {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
               </div>
               <span className="text-2xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
+
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               {navigation.map((item, index) => (
@@ -366,6 +389,7 @@ export default function Header() {
                     <span>{item.name}</span>
                     <ChevronDown className="w-4 h-4" />
                   </button>
+
                   <AnimatePresence>
                     {activeDropdown === index && (
                       <motion.div
@@ -385,11 +409,11 @@ export default function Header() {
                                 <child.icon className="w-5 h-5 text-blue-600 mt-0.5 group-hover:text-blue-700" />
                                 <div>
                                   <div className="font-medium text-gray-900 group-hover:text-blue-600">
-                                    {child.name}
-                                  </div>
-                                  <div className="text-sm text-gray-500 mt-1">
-                                    {child.description}
-                                  </div>
+                                                                          {child.name}
+                                    </div>
+                                    <div className="text-sm text-gray-500 mt-1">
+                                      {child.description}
+                                    </div>
                                 </div>
                               </Link>
                             </div>
@@ -401,6 +425,7 @@ export default function Header() {
                 </div>
               ))}
             </div>
+
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <Link
@@ -416,6 +441,7 @@ export default function Header() {
                 Get Started
               </Link>
             </div>
+
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -425,6 +451,7 @@ export default function Header() {
             </button>
           </div>
         </div>
+
         {/* Mobile Navigation */}
         <AnimatePresence>
           {isOpen && (
@@ -476,5 +503,5 @@ export default function Header() {
         </AnimatePresence>
       </nav>
     </header>
-  )
-}
+  );
+};

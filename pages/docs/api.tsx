@@ -28,141 +28,140 @@ const apiEndpoints = [
     ],
     responses: [
       { code: 200, description: 'Success', example: '{ "services": [...], "total": 45 }' },
-      { code: 400, description: 'Bad Request', example: '{ "error": "Invalid parameters" }' };
-    ];
+      { code: 400, description: 'Bad Request', example: '{ "error": "Invalid parameters" }' }
+    ]
   },
-  {}
+  {
     method: 'POST',
     path: '/api/v1/contact',
     description: 'Submit a contact form or inquiry',
-    parameters: []
+    parameters: [
       { name: 'name', type: 'string', required: true, description: 'Contact person name' },
       { name: 'email', type: 'string', required: true, description: 'Contact email address' },
       { name: 'message', type: 'string', required: true, description: 'Message content' },
       { name: 'company', type: 'string', required: false, description: 'Company name' },
-      { name: 'phone', type: 'string', required: false, description: 'Phone number' };
+      { name: 'phone', type: 'string', required: false, description: 'Phone number' }
     ],
-    responses: []
+    responses: [
       { code: 201, description: 'Created', example: '{ "id": "123", "status": "received" }' },
-      { code: 400, description: 'Bad Request', example: '{ "error": "Missing required fields" }' };
-    ];
+      { code: 400, description: 'Bad Request', example: '{ "error": "Missing required fields" }' }
+    ]
   },
-  {}
+  {
     method: 'GET',
     path: '/api/v1/status',
     description: 'Get system status and health information',
     parameters: [],
-    responses: []
-      { code: 200, description: 'Success', example: '{ "status": "operational", "uptime": "99.9%" }' };
-    ];
+    responses: [
+      { code: 200, description: 'Success', example: '{ "status": "operational", "uptime": "99.9%" }' }
+    ]
   },
-  {}
+  {
     method: 'POST',
     path: '/api/v1/quote',
     description: 'Request a project quote',
-    parameters: []
+    parameters: [
       { name: 'project_type', type: 'string', required: true, description: 'Type of project (ai, cloud, web, mobile)' },
       { name: 'description', type: 'string', required: true, description: 'Project description' },
       { name: 'budget_range', type: 'string', required: false, description: 'Budget range' },
-      { name: 'timeline', type: 'string', required: false, description: 'Project timeline' };
+      { name: 'timeline', type: 'string', required: false, description: 'Project timeline' }
     ],
-    responses: []
+    responses: [
       { code: 201, description: 'Created', example: '{ "quote_id": "456", "estimated_cost": "$10,000 - $15,000" }' },
-      { code: 400, description: 'Bad Request', example: '{ "error": "Invalid project type" }' };
-    ];
-  };
+      { code: 400, description: 'Bad Request', example: '{ "error": "Invalid project type" }' }
+    ]
+  }
 ];
 
-const codeExamples = []
-  {}
+const codeExamples = [
+  {
     language: 'JavaScript',
     title: 'Fetch Services',
-    code: `const response = await fetch('https://ziontechgroup.com/api/v1/services', {`})
+    code: `const response = await fetch('https://ziontechgroup.com/api/v1/services', {
   method: 'GET',
-  headers: {}
+  headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
-  };
-});
+  }
+};
 
-const data = await response.json();
-``
+const data = await response.json();`
   },
-  {}
+  {
     language: 'Python',
     title: 'Submit Contact Form',
-    code: `import requests;`
+    code: `import requests
 url = 'https://ziontechgroup.com/api/v1/contact'
-headers = {}
+headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
-};
-data = {}
+}
+data = {
     'name': 'John Doe',
     'email': 'john@example.com',
     'message': 'Interested in AI services',
     'company': 'Tech Corp'
-};
-response = requests.post(url, json=data, headers=headers);
-print(response.json())``
+}
+response = requests.post(url, json=data, headers=headers)
+print(response.json())`
   },
-  {}
+  {
     language: 'cURL',
     title: 'Get System Status',
-    code: `curl -X GET "https://ziontechgroup.com/api/v1/status" \\`
+    code: `curl -X GET "https://ziontechgroup.com/api/v1/status" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json""
-  };
+  -H "Content-Type: application/json"`
+  }
 ];
 
-const sdkLibraries = []
-  {}
+const sdkLibraries = [
+  {
     name: 'JavaScript SDK',
     description: 'Official JavaScript SDK for easy integration',
     version: '1.2.0',
     install: 'npm install @ziontechgroup/sdk',
     documentation: '/docs/sdk/javascript'
   },
-  {}
+  {
     name: 'Python SDK',
     description: 'Python SDK with full API support',
     version: '1.1.5',
     install: 'pip install ziontechgroup-sdk',
     documentation: '/docs/sdk/python'
   },
-  {}
+  {
     name: 'PHP SDK',
     description: 'PHP SDK for server-side integration',
     version: '1.0.8',
     install: 'composer require ziontechgroup/sdk',
     documentation: '/docs/sdk/php'
-  };
+  }
 ];
 
-export default function APIDocumentationPage() {}
+export default function APIDocumentationPage() {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedMethod, setSelectedMethod] = useState('all');
 
-  const copyToClipboard = async (code: string, id: string) => {}
-    try {}
+  const copyToClipboard = async (code: string, id: string) => {
+    try {
       await navigator.clipboard.writeText(code);
       setCopiedCode(id);
       setTimeout(() => setCopiedCode(null), 2000);
-    } catch (err) {}
+    } catch (err) {
       console.error('Failed to copy: ', err);
-    };
+    }
   };
 
-  const filteredEndpoints = apiEndpoints.filter(endpoint => {})
+  const filteredEndpoints = apiEndpoints.filter(endpoint => {
     const matchesSearch = endpoint.path.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          endpoint.description.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesMethod = selectedMethod === 'all' || endpoint.method.toLowerCase() === selectedMethod.toLowerCase();
     return matchesSearch && matchesMethod;
   });
 
-  return ()
-    <Layout;
+  return (
+    <Layout
       title="API Documentation - Zion Tech Group"
       description="Complete API documentation for Zion Tech Group services. Learn how to integrate with our APIs, view endpoints, and access code examples."
       keywords="API documentation, REST API, integration, developer docs, endpoints, Zion Tech Group API"

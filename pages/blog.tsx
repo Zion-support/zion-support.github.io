@@ -12,8 +12,7 @@ const blogPosts = [{
     date: "2024-01-15",
     category: "AI & Technology",
     readTime: "5 min read",
-    image: "/api/placeholder/600/300",
-    tags: ["AI", "Business", "Technology"]
+    image: "/api/placeholder/600/300"
   },
   {
     id: 2,
@@ -23,8 +22,7 @@ const blogPosts = [{
     date: "2024-01-12",
     category: "Development",
     readTime: "7 min read",
-    image: "/api/placeholder/600/300",
-    tags: ["SaaS", "Development", "Scalability"]
+    image: "/api/placeholder/600/300"
   },
   {
     id: 3,
@@ -34,8 +32,7 @@ const blogPosts = [{
     date: "2024-01-10",
     category: "Security",
     readTime: "6 min read",
-    image: "/api/placeholder/600/300",
-    tags: ["Security", "Cloud", "Best Practices"]
+    image: "/api/placeholder/600/300"
   },
   {
     id: 4,
@@ -45,8 +42,7 @@ const blogPosts = [{
     date: "2024-01-08",
     category: "Strategy",
     readTime: "8 min read",
-    image: "/api/placeholder/600/300",
-    tags: ["Strategy", "Digital Transformation", "Business"]
+    image: "/api/placeholder/600/300"
   },
   {
     id: 5,
@@ -56,8 +52,7 @@ const blogPosts = [{
     date: "2024-01-05",
     category: "AI & Technology",
     readTime: "9 min read",
-    image: "/api/placeholder/600/300",
-    tags: ["Machine Learning", "Production", "MLOps"]
+    image: "/api/placeholder/600/300"
   },
   {
     id: 6,
@@ -67,8 +62,7 @@ const blogPosts = [{
     date: "2024-01-03",
     category: "Development",
     readTime: "6 min read",
-    image: "/api/placeholder/600/300",
-    tags: ["API", "Development", "Design"]
+    image: "/api/placeholder/600/300"
   }]
 export default function BlogPage() {
   return (
@@ -115,11 +109,9 @@ export default function BlogPage() {
                       </div>
                       <div className="p-6">
                         <div className="flex flex-wrap gap-2 mb-3">
-                          {post.tags.map((tag, tagIndex) => (
-                            <span key={tagIndex} className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
-                              {tag}
-                            </span>
-                          ))}
+                          <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                            {post.category}
+                          </span>
                         </div>
                         <h2 className="text-xl font-semibold text-gray-900 mb-2">
                           {post.title}
@@ -147,7 +139,7 @@ export default function BlogPage() {
                           </Link>
                         </div>
                       </div>
-                    </motion.article>
+                    </motion.div>
                   ))}
                 </div>
               </div>
@@ -155,6 +147,6 @@ export default function BlogPage() {
           </div>
         </section>
       </div>
-    </Layout>
-  )
+    </MainLayout>
+  );
 }
