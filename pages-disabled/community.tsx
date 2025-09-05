@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
+import {
   Users, 
   MessageSquare, 
   Calendar, 
