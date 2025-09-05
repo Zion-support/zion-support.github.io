@@ -55,12 +55,8 @@ class MasterAutomationOrchestrator {
         return false;
       }
 
-      // Try to run the script
-      const result = execSync(`node ${scriptPath}`, { 
-        cwd: process.cwd(), 
-        encoding: 'utf8',
-        timeout: 120000 
-      });
+      // Try to run as a command first
+      execSync(`node ${scriptPath}`, { stdio: 'inherit' });
       
       this.log(`✅ Completed: ${description}`);
       this.results.summary.scriptsRun++;
@@ -76,25 +72,47 @@ class MasterAutomationOrchestrator {
     this.results.phases.healthCheck.status = 'running';
     
     try {
-      // Check basic project health
-      const healthChecks = [
-        { name: 'Package.json exists', check: () => fs.existsSync('package.json') },
-        { name: 'Node modules exist', check: () => fs.existsSync('node_modules') },
-        { name: 'Next.js config exists', check: () => fs.existsSync('next.config.js') }
-      ];
+      // Check if health check script exists, if not create a basic one
+      if (!fs.existsSync('./scripts/health-check.cjs')) {
+        this.log('📝 Creating basic health check script...');
+        const healthCheckScript = `#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 
-      let allHealthy = true;
-      for (const check of healthChecks) {
-        if (check.check()) {
-          this.log(`✅ ${check.name}`);
-        } else {
-          this.log(`❌ ${check.name}`);
-          allHealthy = false;
-        }
+console.log('🔍 Running health check...');
+
+// Check basic project structure
+const checks = [
+  { name: 'package.json', path: 'package.json', required: true },
+  { name: 'node_modules', path: 'node_modules', required: true },
+  { name: 'pages directory', path: 'pages', required: true }
+];
+
+let allPassed = true;
+
+for (const check of checks) {
+  if (fs.existsSync(check.path)) {
+    console.log(\`✅ \${check.name} exists\`);
+  } else {
+    console.log(\`❌ \${check.name} missing\`);
+    if (check.required) allPassed = false;
+  }
+}
+
+if (allPassed) {
+  console.log('✅ Health check passed');
+  process.exit(0);
+} else {
+  console.log('❌ Health check failed');
+  process.exit(1);
+}
+`;
+        fs.writeFileSync('./scripts/health-check.cjs', healthCheckScript);
       }
 
-      this.results.phases.healthCheck.status = allHealthy ? 'completed' : 'failed';
-      this.results.phases.healthCheck.success = allHealthy;
+      const success = await this.runScript('./scripts/health-check.cjs', 'Health Check');
+      this.results.phases.healthCheck.status = success ? 'completed' : 'failed';
+      this.results.phases.healthCheck.success = success;
     } catch (error) {
       this.log(`❌ Health check failed: ${error.message}`);
       this.results.phases.healthCheck.status = 'failed';
@@ -107,21 +125,7 @@ class MasterAutomationOrchestrator {
     this.results.phases.performanceMonitor.status = 'running';
     
     try {
-      // Run performance monitoring scripts
-      const performanceScripts = [
-        'scripts/performance-monitor-enhanced.cjs',
-        'performance-optimizer.cjs',
-        'scripts/performance-optimizer.cjs'
-      ];
-
-      let success = false;
-      for (const script of performanceScripts) {
-        if (fs.existsSync(script)) {
-          success = await this.runScript(script, 'Performance Monitor');
-          if (success) break;
-        }
-      }
-
+      const success = await this.runScript('./scripts/simple-performance-monitor.cjs', 'Performance Monitor');
       this.results.phases.performanceMonitor.status = success ? 'completed' : 'failed';
       this.results.phases.performanceMonitor.success = success;
     } catch (error) {
@@ -136,26 +140,9 @@ class MasterAutomationOrchestrator {
     this.results.phases.codeQuality.status = 'running';
     
     try {
-      // Run linting
-      this.log('Running ESLint...');
-      try {
-        execSync('npm run lint', { stdio: 'inherit' });
-        this.log('✅ ESLint passed');
-      } catch (error) {
-        this.log('⚠️ ESLint found issues, but continuing...');
-      }
-
-      // Run TypeScript check
-      this.log('Running TypeScript check...');
-      try {
-        execSync('npx tsc --noEmit', { stdio: 'inherit' });
-        this.log('✅ TypeScript check passed');
-      } catch (error) {
-        this.log('⚠️ TypeScript check found issues, but continuing...');
-      }
-
-      this.results.phases.codeQuality.status = 'completed';
-      this.results.phases.codeQuality.success = true;
+      const success = await this.runScript('./scripts/simple-code-quality.cjs', 'Code Quality Check');
+      this.results.phases.codeQuality.status = success ? 'completed' : 'failed';
+      this.results.phases.codeQuality.success = success;
     } catch (error) {
       this.log(`❌ Code quality check failed: ${error.message}`);
       this.results.phases.codeQuality.status = 'failed';
@@ -168,30 +155,7 @@ class MasterAutomationOrchestrator {
     this.results.phases.testRunner.status = 'running';
     
     try {
-      // Try to run tests
-      const testScripts = [
-        'scripts/automation-test-runner.cjs',
-        'scripts/automated-testing-suite.cjs',
-        'scripts/test-runner.js'
-      ];
-
-      let success = false;
-      for (const script of testScripts) {
-        if (fs.existsSync(script)) {
-          success = await this.runScript(script, 'Test Runner');
-          if (success) break;
-        }
-      }
-
-      // Also try npm test
-      try {
-        execSync('npm test', { stdio: 'inherit' });
-        this.log('✅ NPM tests passed');
-        success = true;
-      } catch (error) {
-        this.log('⚠️ NPM tests not configured or failed');
-      }
-
+      const success = await this.runScript('./scripts/automation-test-runner.cjs', 'Test Runner');
       this.results.phases.testRunner.status = success ? 'completed' : 'failed';
       this.results.phases.testRunner.success = success;
     } catch (error) {
@@ -206,27 +170,12 @@ class MasterAutomationOrchestrator {
     this.results.phases.gitOperations.status = 'running';
     
     try {
-      // Check git status
-      this.log('Checking git status...');
-      const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
-      
-      if (gitStatus.trim()) {
-        this.log('📝 Uncommitted changes found, staging them...');
-        execSync('git add .', { stdio: 'inherit' });
-        
-        this.log('💾 Committing changes...');
-        execSync('git commit -m "Automated improvements and fixes from automation suite"', { stdio: 'inherit' });
-        
-        this.log('📤 Pushing changes...');
-        execSync('git push', { stdio: 'inherit' });
-        
+      const success = await this.runScript('./scripts/git-automation.cjs', 'Git Operations');
+      this.results.phases.gitOperations.status = success ? 'completed' : 'failed';
+      this.results.phases.gitOperations.success = success;
+      if (success) {
         this.results.summary.gitOperationsCompleted++;
-      } else {
-        this.log('✅ No changes to commit');
       }
-
-      this.results.phases.gitOperations.status = 'completed';
-      this.results.phases.gitOperations.success = true;
     } catch (error) {
       this.log(`❌ Git operations failed: ${error.message}`);
       this.results.phases.gitOperations.status = 'failed';
