@@ -31,7 +31,8 @@ const { execSync } = require("child_process")
       const content = fs.readFileSync(conflict.file, "utf8")
       const content = fs.readFileSync(conflict.file, "utf8")
   fs.writeFileSync(conflict.file, resolvedContent);this.log(" Auto-resolved conflict in ${conflict.file}")
-        try {execSync("git add "${conflict.file}", { "stdio": "pipe" });this.log("� Staged resolved file ${conflict.file}")} catch (error) {  this.log("⚠ Could not stage ${conflict.file  }: ${error.message}")
+        try {execSync("git add "${conflict.file}", { "stdio": "pipe" }
+});this.log("� Staged resolved file ${conflict.file}")} catch (error) {  this.log("⚠ Could not stage ${conflict.file  }: ${error.message}")
       } else {this.log("})
   this.log( Error resolving conflict in ${conflict.file}: ${error.message}")
   case ".ts"

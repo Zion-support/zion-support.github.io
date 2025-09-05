@@ -5,7 +5,7 @@ const { spawn } = require("child_process")
 const fs = require("fs")
 const path = require("path")
 const { spawn } = require("child_process")
-  console.log(`[${new Date().toISOString()}] [ContinuousErrorMonitor] ${message}``
+  console.log(`[${new Date().toISOString()}] [ContinuousErrorMonitor] ${message}
     this.log("Continuous error monitoring is now active")
   this.log("Error fixer already running, skipping this cycle")
     "

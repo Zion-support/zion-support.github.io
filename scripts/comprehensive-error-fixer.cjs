@@ -14,7 +14,7 @@ class ComprehensiveErrorFixer {}
     this.fixes = []};
   log(message, type = "info") {}
     const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}``
+    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}
     console.log(logEntry);
     this.logs.push(logEntry)};
   async fixCommonSyntaxErrors() {}
@@ -25,7 +25,7 @@ class ComprehensiveErrorFixer {}
       for (const file of sourceFiles) {}
         try {}
           await this.fixFileErrors(file)} catch (error) {}
-          this.log(`Failed to fix ${file}: ${error.message}`, "error")};`
+          this.log(`Failed to fix ${file}: ${error.message}`, "error")};
       };
       this.log("Common syntax errors fixed", "success");
       this.fixes.push("syntax_errors")} catch (error) {}
@@ -86,7 +86,8 @@ class ComprehensiveErrorFixer {}
   async runTypeScriptCheck() {}
     try {}
       this.log("Running TypeScript check...");
-      execSync("npx tsc --noEmit", { "cwd": this.projectRoot, "stdio": "pipe" });
+      execSync("npx tsc --noEmit", { "cwd": this.projectRoot, "stdio": "pipe" }
+});
       this.log("TypeScript check passed", "success");
       this.fixes.push("typescript_check")} catch (error) {}
       this.log("TypeScript check failed", "error");
@@ -95,7 +96,8 @@ class ComprehensiveErrorFixer {}
   async runLinting() {}
     try {}
       this.log("Running ESLint...");
-      execSync("npx eslint . --fix", { "cwd": this.projectRoot, "stdio": "pipe" });
+      execSync("npx eslint . --fix", { "cwd": this.projectRoot, "stdio": "pipe" }
+});
       this.log("ESLint passed", "success");
       this.fixes.push("eslint_fix")} catch (error) {}
       this.log("ESLint failed", "error");
@@ -123,7 +125,7 @@ class ComprehensiveErrorFixer {}
       this.log("Comprehensive Error Fixer completed");
       this.log(""Summary": ${report.summary.totalFixes} fixes applied, ${report.summary.totalErrors} errors found");
       return report} catch (error) {}
-      this.log("Error fixer "failed": ${error.message}`, "error");`
+      this.log("Error fixer "failed": ${error.message}`, "error");
       throw error};
   };
 };

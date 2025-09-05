@@ -21,7 +21,8 @@ class SEOAccessibility {}
   ensureLogDir() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: true }
+});
     };
   };
   log(message) {}
@@ -47,10 +48,10 @@ class SEOAccessibility {}
           const issues = this.analyzeSEO(content, file);
           seoIssues.push(...issues);
         } catch (err) {}
-          this.log(`Error reading ${file}: ${err.message}`);`
+          this.log(`Error reading ${file}: ${err.message}`);
         };
       };
-      this.log(`Found ${seoIssues.length} SEO issues`);`
+      this.log(`Found ${seoIssues.length} SEO issues`);
       
       return {}
         checked: true,
@@ -59,7 +60,7 @@ class SEOAccessibility {}
         filesChecked: htmlFiles.length;
       };
     } catch (error) {}
-      this.log(`SEO check failed: ${error.message}`);`
+      this.log(`SEO check failed: ${error.message}`);
       return { checked: false, error: error.message };
     };
   };
@@ -103,7 +104,8 @@ class SEOAccessibility {}
         type: 'missing_title',
         severity: 'high',
         message: 'Missing <title> tag'
-      });
+      }
+});
     };
     // Check for meta description;
     if (!content.includes('name="description"')) {}
@@ -112,7 +114,8 @@ class SEOAccessibility {}
         type: 'missing_meta_description',
         severity: 'high',
         message: 'Missing meta description'
-      });
+      }
+});
     };
     // Check for h1 tag;
     if (!content.includes('<h1>')) {}
@@ -121,7 +124,8 @@ class SEOAccessibility {}
         type: 'missing_h1',
         severity: 'medium',
         message: 'Missing <h1> tag'
-      });
+      }
+});
     };
     // Check for alt attributes on images;
     const imgTags = content.match(/<img[^>]*>/g) || [];
@@ -132,7 +136,8 @@ class SEOAccessibility {}
           type: 'missing_alt_text',
           severity: 'medium',
           message: 'Image missing alt attribute'
-        });
+        }
+});
       };
     };
     // Check for lang attribute;
@@ -142,7 +147,8 @@ class SEOAccessibility {}
         type: 'missing_lang',
         severity: 'medium',
         message: 'Missing lang attribute on html tag'
-      });
+      }
+});
     };
     // Check for viewport meta tag;
     if (!content.includes('name="viewport"')) {}
@@ -151,7 +157,8 @@ class SEOAccessibility {}
         type: 'missing_viewport',
         severity: 'high',
         message: 'Missing viewport meta tag'
-      });
+      }
+});
     };
     return issues;
   };
@@ -172,10 +179,10 @@ class SEOAccessibility {}
           const issues = this.analyzeAccessibility(content, file);
           a11yIssues.push(...issues);
         } catch (err) {}
-          this.log(`Error reading ${file}: ${err.message}`);`
+          this.log(`Error reading ${file}: ${err.message}`);
         };
       };
-      this.log(`Found ${a11yIssues.length} accessibility issues`);`
+      this.log(`Found ${a11yIssues.length} accessibility issues`);
       
       return {}
         checked: true,
@@ -184,7 +191,7 @@ class SEOAccessibility {}
         filesChecked: htmlFiles.length;
       };
     } catch (error) {}
-      this.log(`Accessibility check failed: ${error.message}`);`
+      this.log(`Accessibility check failed: ${error.message}`);
       return { checked: false, error: error.message };
     };
   };
@@ -201,8 +208,9 @@ class SEOAccessibility {}
           file: filePath,
           type: 'heading_hierarchy',
           severity: 'medium',
-          message: `Heading level ${level} follows level ${lastLevel} (skipped levels)``
-        });
+          message: `Heading level ${level} follows level ${lastLevel} (skipped levels)
+        }
+});
       };
       lastLevel = level;
     };
@@ -219,7 +227,8 @@ class SEOAccessibility {}
               type: 'missing_form_label',
               severity: 'high',
               message: 'Form input missing label or aria-label'
-            });
+            }
+});
           };
         };
       };
@@ -232,7 +241,8 @@ class SEOAccessibility {}
         type: 'color_contrast_check',
         severity: 'low',
         message: 'Manual color contrast check recommended'
-      });
+      }
+});
     };
     // Check for keyboard navigation;
     const interactiveElements = content.match(/<button|<a|<input|<select|<textarea/g) || [];
@@ -243,7 +253,8 @@ class SEOAccessibility {}
         type: 'keyboard_navigation',
         severity: 'medium',
         message: 'Consider adding tabindex for keyboard navigation'
-      });
+      }
+});
     };
     return issues;
   };
@@ -265,8 +276,9 @@ class SEOAccessibility {}
           performanceIssues.push({})
             type: 'large_bundle',
             severity: 'medium',
-            message: `Bundle size is ${(bundleSize / 1024 / 1024).toFixed(2)}MB (consider code splitting)``
-          });
+            message: `Bundle size is ${(bundleSize / 1024 / 1024).toFixed(2)}MB (consider code splitting)
+          }
+});
         };
       };
       // Check for unoptimized images;
@@ -278,14 +290,15 @@ class SEOAccessibility {}
             performanceIssues.push({})
               type: 'large_image',
               severity: 'medium',
-              message: `Large image file: ${path.basename(file)} (${(stats.size / 1024).toFixed(2)}KB)``
-            });
+              message: `Large image file: ${path.basename(file)} (${(stats.size / 1024).toFixed(2)}KB)
+            }
+});
           };
         } catch (err) {}
           // Skip files that can't be read;
         };
       };
-      this.log(`Found ${performanceIssues.length} performance issues`);`
+      this.log(`Found ${performanceIssues.length} performance issues`);
       
       return {}
         checked: true,
@@ -293,7 +306,7 @@ class SEOAccessibility {}
         totalIssues: performanceIssues.length;
       };
     } catch (error) {}
-      this.log(`Performance check failed: ${error.message}`);`
+      this.log(`Performance check failed: ${error.message}`);
       return { checked: false, error: error.message };
     };
   };
@@ -361,10 +374,12 @@ class SEOAccessibility {}
       
       // Check if Lighthouse is available;
       try {}
-        execSync('npx lighthouse --version', { stdio: 'pipe' });
+        execSync('npx lighthouse --version', { stdio: 'pipe' }
+});
       } catch (error) {}
         this.log('Lighthouse not found, installing...');
-        execSync('npm install -g lighthouse', { stdio: 'pipe' });
+        execSync('npm install -g lighthouse', { stdio: 'pipe' }
+});
       };
       // Run Lighthouse audit (simplified - would need a running server);
       this.log('Lighthouse audit requires a running server - skipping for now');
@@ -374,7 +389,7 @@ class SEOAccessibility {}
         reason: 'No running server available for audit'
       };
     } catch (error) {}
-      this.log(`Lighthouse audit failed: ${error.message}`);`
+      this.log(`Lighthouse audit failed: ${error.message}`);
       return { audited: false, error: error.message };
     };
   };
@@ -398,11 +413,11 @@ class SEOAccessibility {}
     const reportFile = path.join(__dirname, '../../logs/pm2/seo-accessibility-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    this.log(`SEO & Accessibility report generated: ${reportFile}`);`
+    this.log(`SEO & Accessibility report generated: ${reportFile}`);
     return report;
   };
   async start() {}
-    this.log(`${this.processName} started`);`
+    this.log(`${this.processName} started`);
     
     try {}
       const report = await this.generateReport();
@@ -414,10 +429,10 @@ class SEOAccessibility {}
       if (totalIssues === 0) {}
         this.log('SEO & Accessibility check completed - no issues found');
       } else {}
-        this.log(`SEO & Accessibility check completed - found ${totalIssues} issues`);`
+        this.log(`SEO & Accessibility check completed - found ${totalIssues} issues`);
       };
     } catch (error) {}
-      this.log(`SEO & Accessibility check error: ${error.message}`);`
+      this.log(`SEO & Accessibility check error: ${error.message}`);
     };
   };
 };

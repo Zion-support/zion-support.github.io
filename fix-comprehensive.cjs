@@ -12,7 +12,8 @@ function fixComprehensiveSyntax(filePath) {
     // Fix malformed arrow functions in map functions
     content = content.replace(/\.map\([^)]*\) => \(\)/g, (match) => {
       return match.replace(/\(\)/g, '');
-    });
+    }
+});
     
     // Fix malformed JSX elements with } instead of >
     content = content.replace(/<motion\.article\}/g, '<motion.article');
@@ -70,7 +71,8 @@ function fixComprehensiveSyntax(filePath) {
         return match + '`';
       }
       return match;
-    });
+    }
+});
     
     // Fix malformed JSX expressions
     content = content.replace(/\{([^}]*)\s*$/gm, (match, content) => {
@@ -78,7 +80,8 @@ function fixComprehensiveSyntax(filePath) {
         return match + '}';
       }
       return match;
-    });
+    }
+});
     
     // Fix missing closing braces in function components
     if (content.includes('export default function') && !content.trim().endsWith('}')) {
@@ -140,7 +143,8 @@ function fixComprehensiveSyntax(filePath) {
         return match + '`';
       }
       return match;
-    });
+    }
+});
     
     // Fix malformed JSX expressions
     content = content.replace(/\{([^}]*)\s*$/gm, (match, content) => {
@@ -148,7 +152,8 @@ function fixComprehensiveSyntax(filePath) {
         return match + '}';
       }
       return match;
-    });
+    }
+});
     
     // Write the fixed content back
     fs.writeFileSync(filePath, content, 'utf8');

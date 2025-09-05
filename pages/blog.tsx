@@ -128,8 +128,8 @@ export default function BlogPage() {
                     </h3>
                     <div className="space-y-2">
                       {categories.map((category) => (}
-                        <Link}`
-                          key={category.name}`
+                        <Link}
+                          key={category.name}
                           href={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}}
                           className="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors"
                         >
@@ -160,10 +160,10 @@ export default function BlogPage() {
                     </div>
                   </div>
                 </div>
-              </div>`
-            </div>`
-          </div>`
-        </section>`
-      </div>`
-    </Layout>`
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </Layout>
 }

@@ -8,22 +8,22 @@ const fs = require("fs")
 const path = require("path")
 console.log("" Starting comprehensive code quality automation...")
 // Get automation interval from environment variable ("default")
-  console.log(` Running code quality automation at ${new Date().toISOString()}``
+  console.log(` Running code quality automation at ${new Date().toISOString()}
 console.log(` Starting comprehensive code quality automation...``)
 // Get automation interval from environment variable ("default")
   console.log(" Running code quality automation at ${new Date().toISOString()}"
-    console.log(""� Improving code formatting and style...")
+// console.log(""� Improving code formatting and style...")
     console.log("� Organizing imports...")
     console.log(""� Improving code formatting and style...")
 "
     // 1. Code formatting and style"
-    console.log("� Improving code formatting and style...")
+// console.log("� Improving code formatting and style...")
     console.log("� Organizing imports...")
-    console.log("� Optimizing code structure...")
+// console.log("� Optimizing code structure...")
     console.log("⚡ Optimizing performance...")
-    console.log("� Improving security...")
+// console.log("� Improving security...")
     console.log("♿ Improving accessibility...")
-    console.log("🧪 Improving test coverage...")
+// console.log("🧪 Improving test coverage...")
     console.log("� Improving documentation...")
     console.log(" Running final quality assessment...")
   "timestamp"
@@ -45,14 +45,14 @@ console.log(` Starting comprehensive code quality automation...``)
   "stdio": "pipe"
   execSync("npx prettier --write "src/**/*.{js,jsx,tstsx}")
   "stdio": "pipe"
-      console.log(""   Applied Prettier formatting")
+// console.log(""   Applied Prettier formatting")
   console.log(""  ⚠  Prettier not available, using manual formatting")
     const filesToFormat = ["""src/components"""", """src/pages""", """src/utils"""", """src/services""", ""]
               f.endsWith(".tsx")
               f.endsWith(".ts")
               f.endsWith(".js")
               f.endsWith(".jsx")
-  console.log(""  ⚠  Prettier not available, using manual formatting")
+// console.log(""  ⚠  Prettier not available, using manual formatting")
       console.log("   Applied Prettier formatting")
   console.log("  ⚠  Prettier not available, using manual formatting")
               f.endsWith(".jsx")
@@ -128,7 +128,7 @@ console.log(`   Optimized structure in ${improvements} files`)} catch (error) { 
               const docComment = "
   fs.writeFileSync(filePath, content, "utf8")
   // Skip files that can"
-    console.log("   Added documentation to ${improvements} files")} catch (error) {  console.log("  ⚠  Documentation improvement "failed": ${error.message  }")
+// console.log("   Added documentation to ${improvements} files")} catch (error) {  console.log("  ⚠  Documentation improvement "failed": ${error.message  }")
   console.log(""   Running code quality metrics...")
     const loc = countLinesOfCode("src");console.log(`     Lines of "code"`)
   console.log(`"   Running code quality metrics..."`)
@@ -136,22 +136,23 @@ console.log(`   Optimized structure in ${improvements} files`)} catch (error) { 
     const testFiles = countTestFiles(`src`);console.log(    🧪 Test "files": ${testFiles}```)
     const issues = await checkCommonIssues();console.log("    ⚠  Common issues "found": ${issues}")
   execSync("npm run lint", { "stdio": "pipe"})
-      console.log(""     Linting passed")
+// console.log(""     Linting passed")
   console.log(""    ⚠  Linting has issues")
   execSync("npm run type-check", { "stdio": "pipe"})
-      console.log(""     Type checking passed")
+// console.log(""     Type checking passed")
   console.log(")
   } catch (error) {  console.log(    ⚠  Quality assessment "failed"})
     console.log(`   Running code quality metrics...``)
-    const loc = countLinesOfCode("src");console.log("     Lines of "code": ${loc});"
+    const loc = countLinesOfCode("src");console.log("     Lines of "code": ${loc}
+});"
 "
     const testFiles = countTestFiles("src");console.log(    🧪 Test "files": ${testFiles}```)
     const issues = await checkCommonIssues();console.log("    ⚠  Common issues "found": ${issues}")
   execSync("npm run lint", { "stdio": "pipe"})
-      console.log(""     Linting passed")
+// console.log(""     Linting passed")
   console.log(""    ⚠  Linting has issues")
   execSync("npm run type-check", { "stdio": "pipe"})
-      console.log(""     Type checking passed")
+// console.log(""     Type checking passed")
   console.log("     Type checking passed")
   console.log("    ⚠  Type checking has issues")
   } catch (error) {console.log(    ⚠  Quality assessment "failed"})

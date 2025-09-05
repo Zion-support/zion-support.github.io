@@ -35,7 +35,7 @@ class $1 {}
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};`
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
 ;
   async runDependencyManagement() {}
   this.log("Starting dependency management automation...");
@@ -73,7 +73,7 @@ class $1 {}
       // 7. Commit changes if successful;
       if (actions.length > 0 && errors.length === 0) {}
   await this.commitDependencyChanges(actions)};
-    } catch (error) {  this.log(`Dependency management "failed": ${error.message  }`, "ERROR");`
+    } catch (error) {  this.log(`Dependency management "failed": ${error.message  }`, "ERROR");
       errors.push({})
   "type": "SYSTEM_ERROR",
         "message": error.message,
@@ -103,7 +103,7 @@ class $1 {}
       // 7. Commit changes if successful;
       if (actions.length > 0 && errors.length === 0) {}
   await this.commitDependencyChanges(actions)};
-    } catch (error) {this.log(`Dependency management "failed": ${error.message}`, "ERROR");`
+    } catch (error) {this.log(`Dependency management "failed": ${error.message}`, "ERROR");
       errors.push({})
   "type": "SYSTEM_ERROR",
         "message": error.message,
@@ -231,7 +231,7 @@ class $1 {}
             "issue": "Missing package.json",
             "path": pkgPath})};
       };
-    } catch (error) {  this.log(`Error scanning "packages": ${error.message  }`, "WARN")};`
+    } catch (error) {  this.log(`Error scanning "packages": ${error.message  }`, "WARN")};
 ;
     return corrupted};
 ;
@@ -247,7 +247,8 @@ class $1 {}
   const result = execSync("npm outdated --json", {})
   "cwd": this.projectRoot,
         "stdio": "pipe",
-        "encoding": "utf8"});
+        "encoding": "utf8"}
+});
 
       const outdated = JSON.parse(result);
       return Object.entries(outdated).map((["name", "info"]) => ({})
@@ -332,7 +333,7 @@ class $1 {}
       if (modified) {}
   fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2));
         this.log("Fixed package.json issues")};
-    } catch (error) {  this.log(`Failed to fix package."json": ${error.message  }`, "ERROR")};`
+    } catch (error) {  this.log(`Failed to fix package."json": ${error.message  }`, "ERROR")};
 ;
     return fixes};
 ;
@@ -344,7 +345,8 @@ class $1 {}
       const packageLockPath = path.join(this.projectRoot, "package-lock.json");
 
       if (fs.existsSync(nodeModulesPath)) {}
-  fs.rmSync(nodeModulesPath, { "recursive": true, "force": true });
+  fs.rmSync(nodeModulesPath, { "recursive": true, "force": true }
+});
         this.log("Removed corrupted node_modules");
 
         actions.push({})
@@ -364,7 +366,7 @@ class $1 {}
   "type": "CLEANUP",
           "action": "Removed package-lock.json",
           "timestamp": new Date().toISOString()})};
-    } catch (error) {  this.log(`Failed to clean "dependencies": ${error.message  }`, "ERROR")};`
+    } catch (error) {  this.log(`Failed to clean "dependencies": ${error.message  }`, "ERROR")};
 ;
     return actions};
 ;
@@ -375,7 +377,8 @@ class $1 {}
       // Run npm install;
       execSync("npm install", {})
   "cwd": this.projectRoot,
-        "stdio": "pipe"});
+        "stdio": "pipe"}
+});
 
       this.log("Dependencies reinstalled successfully");
       actions.push({})
@@ -386,7 +389,7 @@ class $1 {}
       actions.push({})
   "type": "REINSTALL",
         "action": "Successfully reinstalled all dependencies",
-        "timestamp": new Date().toISOString()})} catch (error) {  this.log(`Failed to reinstall "dependencies": ${error.message  }`, "ERROR");`
+        "timestamp": new Date().toISOString()})} catch (error) {  this.log(`Failed to reinstall "dependencies": ${error.message  }`, "ERROR");
       throw error};
 ;
     return actions};
@@ -397,13 +400,14 @@ class $1 {}
   // Check for outdated dependencies;
       const outdated = await this.checkOutdatedDependencies();
 
-      if (outdated.length > 0) {this.log(`Found ${outdated.length} outdated dependencies`);`
+      if (outdated.length > 0) {this.log(`Found ${outdated.length} outdated dependencies`);
         // Update minor and patch versions only (safe updates);
         for (const dep of outdated) {}
   try {}
   if (this.isSafeUpdate(dep.current, dep.wanted)) {execSync(`npm update ${dep.name}`, {`})
   "cwd": this.projectRoot,
-                "stdio": "pipe"});
+                "stdio": "pipe"}
+});
               actions.push({})
   "type": "UPDATE",
                 "dependency": dep.name,"action": `Updated ${dep.name} from ${dep.current} to ${dep.wanted}`,`
@@ -414,16 +418,17 @@ class $1 {}
   try {}
   if (this.isSafeUpdate(dep.current, dep.wanted)) {execSync(`npm update ${dep.name}`, {`})
   "cwd": this.projectRoot,
-                "stdio": "pipe"});
+                "stdio": "pipe"}
+});
 
               actions.push({})
   "type": "UPDATE",
                 "dependency": dep.name,"action": `Updated ${dep.name} from ${dep.current} to ${dep.wanted}`,`
                 "timestamp": new Date().toISOString()})};
-          } catch (error) {  this.log(`Failed to update ${dep.name  }: ${error.message}`, "WARN")};`
+          } catch (error) {  this.log(`Failed to update ${dep.name  }: ${error.message}`, "WARN")};
         };
       };
-    } catch (error) {  this.log(`Failed to update "dependencies": ${error.message  }`, "WARN")};`
+    } catch (error) {  this.log(`Failed to update "dependencies": ${error.message  }`, "WARN")};
 ;
     return actions};
 ;
@@ -456,7 +461,7 @@ class $1 {}
       this.reportsDir,dependency-report-${Date.now()}.json";
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-this.log(`Dependency report "generated": ${reportFile}");`
+this.log(`Dependency report "generated": ${reportFile}");
 
     return report};
 ;
@@ -466,11 +471,13 @@ this.log(`Dependency report "generated": ${reportFile}");`
       // Add package.json and package-lock.json;
       execSync("git add package.json package-lock.json', {})
   "cwd": this.projectRoot,
-        "stdio": "pipe"});
+        "stdio": "pipe"}
+});
       // Commitconst commitMessage = `"chore": Auto-manage dependencies (${actions.length} actions)`;execSync(`git commit -m "${commitMessage}"`, {`})
   "cwd": this.projectRoot,
-        "stdio": "pipe"});
-      this.log("Dependency changes committed successfully")} catch (error) {  this.log(`Failed to commit dependency "changes": ${error.message  }`, "WARN")};`
+        "stdio": "pipe"}
+});
+      this.log("Dependency changes committed successfully")} catch (error) {  this.log(`Failed to commit dependency "changes": ${error.message  }`, "WARN")};
   };
 };
 ;
@@ -487,7 +494,7 @@ async function $1() {}
   process.exit(0); // Success} else if (result.errors.length > 0) {}
   process.exit(1); // Errors occurred} else {}
   process.exit(2); // No actions needed};
-  } catch (error) {  manager.log(`Fatal "error": ${error.message  }`, "ERROR");`
+  } catch (error) {  manager.log(`Fatal "error": ${error.message  }`, "ERROR");
     process.exit(1)};
 };
 ;

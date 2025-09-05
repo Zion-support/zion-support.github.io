@@ -41,7 +41,7 @@ const glob = require("glob")
   this.log("TypeScript not found, installing...")
         execSync("npm install --save-dev typescript")
   "cwd"
-          "stdio": `inherit``
+          "stdio": `inherit
         this.fixesApplied.push(")
   this.log("Warning")
         "WARN"
@@ -155,7 +155,7 @@ const glob = require("glob")
   let content = fs.readFileSync(filePath", "utf8")
             /from\s+[""]\.\.\/\.\.\/\.\.\/\.\.\//g,from "
             /from\s+["]([^""]+)[""]
-  if (importPath.startsWith(".") && !importPath.includes(".")) {return "from `${importPath}.js```
+  if (importPath.startsWith(".") && !importPath.includes(".")) {return "from `${importPath}.js
   fs.writeFileSync(filePath, content);this.fixesApplied.push(""FIXED_IMPORTS")
   this.log("Warning")
             "WARN"

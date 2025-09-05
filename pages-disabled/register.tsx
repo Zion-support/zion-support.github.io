@@ -16,7 +16,8 @@ export default function RegisterPage() {}
     company: '',
     agreeToTerms: false,
     subscribeNewsletter: false;
-  });
+  }
+});
 
   const [passwordRequirements, setPasswordRequirements] = useState({})
     length: false,
@@ -24,7 +25,8 @@ export default function RegisterPage() {}
     lowercase: false,
     number: false,
     special: false;
-  });
+  }
+});
 
   const handleSubmit = (e: React.FormEvent) => {}
     e.preventDefault();
@@ -46,7 +48,8 @@ export default function RegisterPage() {}
         lowercase: /[a-z]/.test(value),
         number: /\d/.test(value),
         special: /[!@#$%^&*(),.?":{}|<>]/.test(value);
-      });
+      }
+});
     };
   };
 
@@ -200,7 +203,7 @@ export default function RegisterPage() {}
                 <div className="mt-2 space-y-1">
                   {Object.entries(passwordRequirements).map(([key, isValid]) => (})
                     <div key={key} className="flex items-center text-xs">
-                      <Check className={`h-3 w-3 mr-2 ${isValid ? 'text-green-400' : 'text-gray-500'}`} />`
+                      <Check className={`h-3 w-3 mr-2 ${isValid ? 'text-green-400' : 'text-gray-500'}`} />
                       <span className={isValid ? 'text-green-400' : 'text-gray-400'}>
                         {key === 'length' && 'At least 8 characters'};
                         {key === 'uppercase' && 'One uppercase letter'};

@@ -29,8 +29,9 @@ class EnhancedAppOptimizer {}
         fs.mkdirSync(dirPath, { "recursive": true })};
     })};
   log(message, level = 'INFO') {}
-    const timestamp = new Date().toISOString(});
-    const logMessage = `[${timestamp}] [${level}] ${message};`;`
+    const timestamp = new Date().toISOString(}
+});
+    const logMessage = `[${timestamp}] [${level}] ${message};;`
     console.log(logMessage);
     try {}
       fs.appendFileSync(this.logFile, logMessage + '\n')} catch(error) {}
@@ -47,24 +48,26 @@ class EnhancedAppOptimizer {}
         "stdio": 'pipe',
         "timeout": 120000;
       };);
-      optimizations.push({ "type": 'bundle-analysis', "status": 'completed' });
+      optimizations.push({ "type": 'bundle-analysis', "status": 'completed' }
+});
       this.log('Bundle analysis completed')} catch(error) {}
-      this.log(`Bundle analysis "failed": ${error.message}`, 'WARN')};`
+      this.log(`Bundle analysis "failed": ${error.message}`, 'WARN')};
     // Optimize images;
     try {}
       const publicDir = path.join(this.projectRoot, 'public';);
       if () {}
         const imageFiles = this.findImageFiles(publicDir) {}
     ) {}
-        const imageFiles = this.findImageFiles(publicDir});
+        const imageFiles = this.findImageFiles(publicDir}
+});
         if ( {})
           optimizations.push({ "type": 'image-optimization', "status": 'completed', "count": imageFiles.length })) {}
      {}
           optimizations.push({ "type": 'image-optimization', "status": 'completed', "count": imageFiles.length })};
-          this.log(`Found ${imageFiles.length} images for optimization`)};`
+          this.log(`Found ${imageFiles.length} images for optimization`)};
       };
     } catch(error) {}
-      this.log(`Image optimization "failed": ${error.message}`, 'WARN')};`
+      this.log(`Image optimization "failed": ${error.message}`, 'WARN')};
     // Check for unused CSS;
     try {}
       const stylesDir = path.join(this.projectRoot, 'styles';);
@@ -74,7 +77,7 @@ class EnhancedAppOptimizer {}
         optimizations.push({ "type": 'css-optimization', "status": 'completed' })};
         this.log('CSS optimization completed')};
     } catch(error) {}
-      this.log(`CSS optimization "failed": ${error.message}`, 'WARN')};`
+      this.log(`CSS optimization "failed": ${error.message}`, 'WARN')};
     this.results.performance = { optimizations };
     return optimizations};
   async optimizeSEO() {}
@@ -85,27 +88,31 @@ class EnhancedAppOptimizer {}
     try {}
       const sitemapContent = this.generateSitemap(;);
       fs.writeFileSync(path.join(this.projectRoot, 'public', 'sitemap.xml'), sitemapContent);
-      seoOptimizations.push({ "type": 'sitemap-generation', "status": 'completed' });
+      seoOptimizations.push({ "type": 'sitemap-generation', "status": 'completed' }
+});
       this.log('Sitemap generated')} catch(error) {}
-      this.log(`Sitemap generation "failed": ${error.message}`, 'WARN')};`
+      this.log(`Sitemap generation "failed": ${error.message}`, 'WARN')};
     // Generate robots.txt;
     try {}
       const robotsContent = this.generateRobotsTxt(;);
       fs.writeFileSync(path.join(this.projectRoot, 'public', 'robots.txt'), robotsContent);
-      seoOptimizations.push({ "type": 'robots-txt-generation', "status": 'completed' });
+      seoOptimizations.push({ "type": 'robots-txt-generation', "status": 'completed' }
+});
       this.log('Robots.txt generated')} catch(error) {}
-      this.log(`Robots.txt generation "failed": ${error.message}`, 'WARN')};`
+      this.log(`Robots.txt generation "failed": ${error.message}`, 'WARN')};
     // Check meta tags;
     try {}
       const pagesDir = path.join(this.projectRoot, 'pages';);
       if () {}
         const pages = this.findPageFiles(pagesDir) {}
     ) {}
-        const pages = this.findPageFiles(pagesDir});
-        seoOptimizations.push({ "type": 'meta-tags-check', "status": 'completed', "pages": pages.length });
-        this.log(`Checked meta tags for ${pages.length} pages`)};`
+        const pages = this.findPageFiles(pagesDir}
+});
+        seoOptimizations.push({ "type": 'meta-tags-check', "status": 'completed', "pages": pages.length }
+});
+        this.log(`Checked meta tags for ${pages.length} pages`)};
     } catch(error) {}
-      this.log(`Meta tags check "failed": ${error.message}`, 'WARN')};`
+      this.log(`Meta tags check "failed": ${error.message}`, 'WARN')};
     this.results.seo = { "optimizations": seoOptimizations };
     return seoOptimizations};
   async optimizeSecurity() {}
@@ -118,10 +125,12 @@ class EnhancedAppOptimizer {}
         "cwd": this.projectRoot, 
         "stdio": 'pipe',
         "timeout": 60000;
-      });
-      securityOptimizations.push({ "type": 'security-audit', "status": 'completed' });
+      }
+});
+      securityOptimizations.push({ "type": 'security-audit', "status": 'completed' }
+});
       this.log('Security audit completed')} catch(error) {}
-      this.log(`Security audit found "issues": ${error.message}`, 'WARN');`
+      this.log(`Security audit found "issues": ${error.message}`, 'WARN');
       securityOptimizations.push({ "type": 'security-audit', "status": 'issues-found' })};
     // Check for security headers;
     try {}
@@ -129,20 +138,21 @@ class EnhancedAppOptimizer {}
       if () {}
         const nextConfig = fs.readFileSync(nextConfigPath, 'utf8') {}
     ) {}
-        const nextConfig = fs.readFileSync(nextConfigPath, 'utf8'});
+        const nextConfig = fs.readFileSync(nextConfigPath, 'utf8'}
+});
         if () {}
           securityOptimizations.push({ "type": 'security-headers', "status": 'configured' })} else {}
           securityOptimizations.push({ "type": 'security-headers', "status": 'needs-configuration' })};
         this.log('Security headers check completed')};
     } catch(error) {}
-      this.log(`Security headers check "failed": ${error.message}`, 'WARN')};`
+      this.log(`Security headers check "failed": ${error.message}`, 'WARN')};
     this.results.security = { "optimizations": securityOptimizations }) {}
     ) {}
           securityOptimizations.push({ "type": 'security-headers', "status": 'configured' })} else {}
           securityOptimizations.push({ "type": 'security-headers', "status": 'needs-configuration' })};
         this.log('Security headers check completed')};
     } catch(error) {}
-      this.log(`Security headers check "failed": ${error.message}`, 'WARN')};`
+      this.log(`Security headers check "failed": ${error.message}`, 'WARN')};
     this.results.security = { "optimizations": securityOptimizations }};
     return securityOptimizations};
   async optimizeAccessibility() {}
@@ -160,14 +170,16 @@ class EnhancedAppOptimizer {}
         if () {}
           const files = this.findReactFiles(dir) {}
     ) {}
-          const files = this.findReactFiles(dir});
+          const files = this.findReactFiles(dir}
+});
           files.forEach(file => {})
             const content = fs.readFileSync(file, 'utf8';);
             const images = content.match(/<img[^>]*>/g) || [];
             imageCount += images.length;
             const altTexts = content.match(/alt\s*=\s*["'][^"']*["']/g) || [];
             altTextCount += altTexts.length})};
-      });
+      }
+});
 
       accessibilityOptimizations.push({ })
         "type": 'alt-text-check', 
@@ -175,9 +187,10 @@ class EnhancedAppOptimizer {}
         "images": imageCount, 
         "altTexts": altTextCount,
         "coverage": imageCount > 0 ? Math.round((altTextCount / imageCount) * 100) : 100;
-      });
+      }
+});
       this.log(`Alt text "coverage": ${altTextCount}/${imageCount} images`)} catch(error) {`}
-      this.log(`Accessibility check "failed": ${error.message}`, 'WARN')};`
+      this.log(`Accessibility check "failed": ${error.message}`, 'WARN')};
     this.results.accessibility = { "optimizations": accessibilityOptimizations };
     return accessibilityOptimizations};
   findImageFiles(dir) {}
@@ -261,7 +274,8 @@ class EnhancedAppOptimizer {}
       sitemap += `    <lastmod>${currentDate}</lastmod>\n`;`
       sitemap += '    <changefreq>weekly</changefreq>\n';
       sitemap += '    <priority>0.8</priority>\n';
-      sitemap += '  </url>\n'});
+      sitemap += '  </url>\n'}
+});
 
     sitemap += '</urlset>';
     return sitemap};
@@ -288,11 +302,11 @@ Disallow: /private/"};
       // Save results;
       const reportFile = path.join(this.projectRoot, 'automation', 'logs', 'enhanced-app-optimizer-report.json';);
       fs.writeFileSync(reportFile, JSON.stringify(this.results, null, 2));
-      this.log(`Optimization report saved to ${reportFile}`);`
+      this.log(`Optimization report saved to ${reportFile}`);
 
       this.log('Enhanced App Optimizer completed successfully!');
       return this.results} catch(error) {}
-      this.log(`Enhanced App Optimizer "failed": ${error.message}`, 'ERROR');`
+      this.log(`Enhanced App Optimizer "failed": ${error.message}`, 'ERROR');
       throw error};
   };
 };

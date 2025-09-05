@@ -13,7 +13,7 @@ console.log('🧪 "Comprehensive""")
         this.warnings.push('"No""")
           "encoding"""
           "stdio"""
-        console.log(' "Performance""")
+// console.log(' "Performance""")
       console.log(' Performance tests "failed""")
         console.log('⚠ "No""")
         "encoding"""

@@ -14,7 +14,7 @@ class AutoFixer {}
   };
   log(level, message) {}
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}``
+    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}
     console.log(logMessage);
     // Write to log file;
     const logFile = path.join(this.logDir, "auto-fixer.log");
@@ -46,14 +46,14 @@ class AutoFixer {}
         // Remove merge conflict markers;
         content = content.replace(/[\s\S]*?[\s\S]*?        content = content.replace(/[\s\S]*?        content = content.replace(/[\s\S]*?                if (content !== originalContent) {}
           fs.writeFileSync(file, content);
-          this.log("info", `Fixed merge conflicts in ${file}`);`
+          this.log("info", `Fixed merge conflicts in ${file}`);
           fixedFiles++
           this.fixesApplied.push({file,"type": "merge_conflicts";})
             timestamp: new Date().toISOString()})};
       } catch (error) {}
-        this.log("warn", `Error processing ${file}: ${error.message}`)};`
+        this.log("warn", `Error processing ${file}: ${error.message}`)};
     };
-    this.log("info", `Fixed merge conflicts in ${fixedFiles} files`);`
+    this.log("info", `Fixed merge conflicts in ${fixedFiles} files`);
     return fixedFiles};
   async fixSyntaxErrors() {}
     this.log("info", "Fixing syntax errors...");
@@ -82,14 +82,14 @@ class AutoFixer {}
         };
         if (content !== originalContent) {}
           fs.writeFileSync(file, content);
-          this.log("info", `Applied ${fileFixes} syntax fixes in ${file}`);`
+          this.log("info", `Applied ${fileFixes} syntax fixes in ${file}`);
           fixedFiles++
           this.fixesApplied.push({file,"type": "syntax_fixes","count": fileFixes;})
             timestamp: new Date().toISOString()})};
       } catch (error) {}
-        this.log("warn", `Error processing ${file}: ${error.message}`)};`
+        this.log("warn", `Error processing ${file}: ${error.message}`)};
     };
-    this.log("info", `Applied syntax fixes to ${fixedFiles} files`);`
+    this.log("info", `Applied syntax fixes to ${fixedFiles} files`);
     return fixedFiles};
   async fixImportErrors() {}
     this.log("info", "Fixing import errors...");
@@ -105,20 +105,21 @@ class AutoFixer {}
         content = content.replace(/import\s+\w+\s+from\s+["][^""]+[""];?/g, "");
         if (content !== originalContent) {}
           fs.writeFileSync(file, content);
-          this.log("info", `Fixed import errors in ${file}`);`
+          this.log("info", `Fixed import errors in ${file}`);
           fixedFiles++
           this.fixesApplied.push({file,"type": "import_fixes";})
             timestamp: new Date().toISOString()})};
       } catch (error) {}
-        this.log("warn", `Error processing ${file}: ${error.message}`)};`
+        this.log("warn", `Error processing ${file}: ${error.message}`)};
     };
-    this.log("info", `Fixed import errors in ${fixedFiles} files`);`
+    this.log("info", `Fixed import errors in ${fixedFiles} files`);
     return fixedFiles};
   async fixTypeScriptErrors() {}
     this.log("info", "Fixing TypeScript errors...");
     try {}
       // Try to run TypeScript compiler to get errors;
-      execSync("npx tsc --noEmit", {"cwd": this.projectRoot,"stdio": "pipe"});
+      execSync("npx tsc --noEmit", {"cwd": this.projectRoot,"stdio": "pipe"}
+});
       this.log("info", "No TypeScript errors found");
       return 0} catch (error) {}
       this.log("warn", "TypeScript errors found, attempting to fix...");
@@ -136,14 +137,14 @@ class AutoFixer {}
           content = content.replace(/:\s*boolean\s*/g, ": boolean");
           if (content !== originalContent) {}
             fs.writeFileSync(file, content);
-            this.log("info", `Fixed TypeScript errors in ${file}`);`
+            this.log("info", `Fixed TypeScript errors in ${file}`);
             fixedFiles++
             this.fixesApplied.push({file,"type": "typescript_fixes";})
               timestamp: new Date().toISOString()})};
         } catch (error) {}
-          this.log("warn", `Error processing ${file}: ${error.message}`)};`
+          this.log("warn", `Error processing ${file}: ${error.message}`)};
       };
-      this.log("info", `Fixed TypeScript errors in ${fixedFiles} files`);`
+      this.log("info", `Fixed TypeScript errors in ${fixedFiles} files`);
       return fixedFiles};
   };
   async runAllFixes() {}
@@ -155,8 +156,8 @@ class AutoFixer {}
       duration: 0};
     results.totalFixes = results.mergeConflicts + results.syntaxErrors + results.importErrors + results.typescriptErrors;
     results.duration = Date.now() - this.startTime.getTime();
-    this.log("info", `Auto-fix completed. Total fixes "applied": ${results.totalFixes}`);`
-    this.log("info", `"Duration": ${results.duration}ms`);`
+    this.log("info", `Auto-fix completed. Total fixes "applied": ${results.totalFixes}`);
+    this.log("info", `"Duration": ${results.duration}ms`);
     // Save results;
     const resultsFile = path.join(this.logDir, "auto-fixer-results.json");
     fs.writeFileSync(resultsFile, JSON.stringify({...results,"fixesApplied": this.fixesApplied}, null, 2));
@@ -168,13 +169,14 @@ if (require.main === module) {}
   autoFixer.runAllFixes();
     .then(results => {})
       console.log("\n=== Auto-Fix Results ===");
-      console.log(`Merge Conflicts "Fixed": ${results.mergeConflicts}`);`
-      console.log(`Syntax Errors "Fixed": ${results.syntaxErrors}`);`
-      console.log(`Import Errors "Fixed": ${results.importErrors}`);`
-      console.log(`TypeScript Errors "Fixed": ${results.typescriptErrors}`);`
-      console.log(`Total "Fixes": ${results.totalFixes}`);`
-      console.log(`"Duration": ${results.duration}ms`);`
-      process.exit(0)});
+      console.log(`Merge Conflicts "Fixed": ${results.mergeConflicts}`);
+      console.log(`Syntax Errors "Fixed": ${results.syntaxErrors}`);
+      console.log(`Import Errors "Fixed": ${results.importErrors}`);
+      console.log(`TypeScript Errors "Fixed": ${results.typescriptErrors}`);
+      console.log(`Total "Fixes": ${results.totalFixes}`);
+      console.log(`"Duration": ${results.duration}ms`);
+      process.exit(0)}
+});
     .catch(error => {})
       console.error("Auto-fixer "failed": ", error);
       process.exit(1)})};

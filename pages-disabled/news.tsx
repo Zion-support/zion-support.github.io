@@ -160,7 +160,7 @@ export default function NewsPage() {
                 </button>
             </div>
           </div>
-        </section>``
+        </section>
           <section className="py-16 bg-white">"
 </section>
             <div className="container mx-auto px-4">"
@@ -229,13 +229,13 @@ export default function NewsPage() {
                       </div>
                       "
                       <div className="flex flex-wrap gap-2 mb-6">"
-</div>`
-                          <span key={index} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">"`
-</span>`
-                          </span>`
-                      </div>`
+</div>
+                          <span key={index} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">"
+</span>
+                          </span>
+                      </div>
                       `
-                      <Link`
+                      <Link
                         href={`/news/${featuredArticle.id}}"
                         className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold"
                       >
@@ -322,13 +322,13 @@ export default function NewsPage() {
                     </div>
                     "
                     <div className="flex flex-wrap gap-1 mb-4">"
-</div>`
-                        <span key={tagIndex} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">"`
-</span>`
-                        </span>`
-                    </div>`
+</div>
+                        <span key={tagIndex} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">"
+</span>
+                        </span>
+                    </div>
                     `
-                    <Link`
+                    <Link
                       href={`/news/${article.id}}"
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-blue-700"
                     >
@@ -370,11 +370,11 @@ export default function NewsPage() {
 </input>"
                 <button className="px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">"
 </button>
-                </button>`
-              </div>`
-            </motion.div>`
-          </div>`
-        </section>`
-      </div>`
-    </$1>`
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </$1>
 }

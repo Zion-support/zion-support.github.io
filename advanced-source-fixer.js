@@ -9,13 +9,13 @@ class AdvancedSourceFixer {}
   };
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`);`
+    console.log(`[${timestamp}] [${level}] ${message}`);
   };
   async fixDirectory(dirPath) {}
-    this.log(`Fixing directory: ${dirPath}`);`
+    this.log(`Fixing directory: ${dirPath}`);
     
     if (!fs.existsSync(dirPath)) {}
-      this.log(`Directory does not exist: ${dirPath}`, 'WARN');`
+      this.log(`Directory does not exist: ${dirPath}`, 'WARN');
       return;
     };
     const items = fs.readdirSync(dirPath);
@@ -92,11 +92,12 @@ class AdvancedSourceFixer {}
           file: filePath,
           timestamp: new Date().toISOString(),
           changes: 'Syntax fixes applied'
-        });
-        this.log(`Fixed: ${filePath}`);`
+        }
+});
+        this.log(`Fixed: ${filePath}`);
       };
     } catch (error) {}
-      this.log(`Error fixing ${filePath}: ${error.message}`, 'ERROR');`
+      this.log(`Error fixing ${filePath}: ${error.message}`, 'ERROR');
     };
   };
   async generateReport() {}
@@ -107,7 +108,7 @@ class AdvancedSourceFixer {}
     };
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`Report generated: ${this.reportFile}`);`
+    this.log(`Report generated: ${this.reportFile}`);
   };
   async run() {}
     this.log('Starting advanced source fixing...');

@@ -756,12 +756,12 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Choose the plan that fits your business needs. No hidden fees, no surprises.`
-            </p>`
-                  </motion.div>`
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">`
+            </p>
+                  </motion.div>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {pricingTiers.map((tier, index) => (`}
               <motion.div`}
-                key={index}`
+                key={index}
                 className={`p-8 rounded-xl shadow-lg ${
                   tier.popular ? "bg-purple-50 border-2 border-purple-200" : 'bg-white'
                 }}
@@ -791,13 +791,13 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   <ul className="space-y-3 mb-8">
                   {tier.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center text-gray-600">
-                  <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" />`
-                      {feature}`
-                    </li>`
-                  ))}`
-                </ul>`
-                  <Link`
-                  href="/contact"`
+                  <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                  <Link
+                  href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     tier.popular
 ? "bg-purple-600 hover:bg-purple-700 text-white" : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
@@ -934,11 +934,11 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                 Start Building
               </Link>
                   <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
-                View All Services`
-              </Link>`
-</div>`
-                  </motion.div>`
-                  </div>`
-                  </section>`
-                  </div>`
+                View All Services
+              </Link>
+</div>
+                  </motion.div>
+                  </div>
+                  </section>
+                  </div>
 }

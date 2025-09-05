@@ -135,7 +135,8 @@ export default function WebinarsPage() {}
       (selectedStatus === "Upcoming" && webinar.status === "upcoming") ||"
       (selectedStatus === "Recorded" && webinar.status === "recorded");"
     return categoryMatch && statusMatch;
-  });
+  }
+});
 
   return (")
     <div className="min-h-screen bg-gray-50">"
@@ -199,7 +200,7 @@ export default function WebinarsPage() {}
                         webinar.status === 'upcoming'''
                           ? 'bg-green-100 text-green-800'''
                           : 'bg-gray-100 text-gray-800''
-                      }`}>`
+                      }`}>
 </span>
                       </span>
                     </div>
@@ -345,7 +346,7 @@ export default function WebinarsPage() {}
                         webinar.status === 'upcoming'''
                           ? 'bg-green-100 text-green-800'''
                           : 'bg-gray-100 text-gray-800''
-                      }`}>`
+                      }`}>
 </span>
                       </span>
                     </div>

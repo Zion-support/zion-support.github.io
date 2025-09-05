@@ -115,7 +115,7 @@ const crypto = require("crypto")
   "type": "MISSING_PEER_DEPENDENCY"
               "package"
               "required"
-              "severity": "HIGH","suggestion": `Install ${peerDep}@${requiredVersion} as a dependency``
+              "severity": "HIGH","suggestion": `Install ${peerDep}@${requiredVersion} as a dependency
         "package.json"
         this.projectRoot,node_modules"
         "package.json"
@@ -249,4 +249,4 @@ this.log(` Optimization Report "generated"`)
 this.log(" Smart Dependency Optimization completed successfully")
       this.log(� Total "savings": ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB"
         " Smart Dependency Optimization "failed": ${error.message  }",ERROR"
-        ` Smart Dependency Optimization "failed": ${error.message}"`
+        ` Smart Dependency Optimization "failed": ${error.message}"

@@ -13,7 +13,8 @@ export default function RegisterPage() {
     confirmPassword: '',
     company: '',
     agreeToTerms: false
-  });
+  }
+});
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -34,7 +35,8 @@ export default function RegisterPage() {
     setFormData({
       ...formData,
       [name]: type === 'checkbox' ? checked : value
-    });
+    }
+});
   };
 
   const passwordRequirements = [

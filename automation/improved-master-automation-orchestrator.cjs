@@ -19,32 +19,32 @@ const { execSync, spawn } = require('child_process')
     this.log('=')
     const result = await this.runScript('Dependency Fixer', './automation/dependency-fixer.cjs')
       this.log(`Dependencies fixed: ${result.fixes} issues resolved`, 'SUCCESS'`)
-      this.log(`Dependency fixing failed: ${result.errors.join(', ')}`, 'ERROR'`
+      this.log(`Dependency fixing failed: ${result.errors.join(', ')}`, 'ERROR'
     this.log('\n PHASE 2: TYPESCRIPT FIXING', 'PHASE')
     this.log('=')
     const result = await this.runScript('TypeScript Fixer', './automation/typescript-fixer.cjs')
       this.log(`TypeScript issues fixed: ${result.fixes} issues resolved`, 'SUCCESS'`)
-      this.log(`TypeScript fixing failed: ${result.errors.join(', ')}`, 'ERROR'`
+      this.log(`TypeScript fixing failed: ${result.errors.join(', ')}`, 'ERROR'
     this.log('\n PHASE 3: SYNTAX VALIDATION', 'PHASE')
     this.log('=')
     const result = await this.runScript('Syntax Validator', './scripts/comprehensive-syntax-fixer.cjs')
       this.log(`Syntax validation completed: ${result.fixes} issues resolved`, 'SUCCESS'`)
-      this.log(`Syntax validation failed: ${result.errors.join(', ')}`, 'ERROR'`
+      this.log(`Syntax validation failed: ${result.errors.join(', ')}`, 'ERROR'
     this.log('\n PHASE 4: HEALTH CHECK', 'PHASE')
     this.log('=')
     const result = await this.runScript('Health Check', './automation/health-check.cjs')
       this.log('Health check passed', 'SUCCESS')
-      this.log(`Health check failed: ${result.errors.join(', ')}`, 'ERROR'`
+      this.log(`Health check failed: ${result.errors.join(', ')}`, 'ERROR'
     this.log('\n PHASE 5: SECURITY SCAN', 'PHASE')
     this.log('=')
     const result = await this.runScript('Security Scanner', './automation/security-scanner.cjs')
       this.log('Security scan completed', 'SUCCESS')
-      this.log(`Security scan failed: ${result.errors.join(', ')}`, 'ERROR'`
+      this.log(`Security scan failed: ${result.errors.join(', ')}`, 'ERROR'
     this.log('\n PHASE 6: PERFORMANCE OPTIMIZATION', 'PHASE')
     this.log('=')
     const result = await this.runScript('Performance Optimizer', './automation/performance-optimizer.cjs')
       this.log('Performance optimization completed', 'SUCCESS')
-      this.log(`Performance optimization failed: ${result.errors.join(', ')}`, 'ERROR'`
+      this.log(`Performance optimization failed: ${result.errors.join(', ')}`, 'ERROR'
     this.log('\n PHASE 7: BUILD TEST', 'PHASE')
     this.log('=')
       this.log('Running build test...', 'INFO')

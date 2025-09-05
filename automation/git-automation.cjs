@@ -21,11 +21,12 @@ class GitAutomation {}
       const { stdout, stderr } = await execAsync(command, {})
         "cwd": this.repoPath,
         "timeout": 60000,
-        ...options});
+        ...options}
+});
 
       return { "success": true, stdout, stderr };
     } catch (error) {}
-      this.log(`Command "failed": ${command} - ${error.message}`);`
+      this.log(`Command "failed": ${command} - ${error.message}`);
       return {}
         "success": false,
         "stdout": error.stdout || '',
@@ -50,8 +51,8 @@ class GitAutomation {}
     return result.success;
   };
   async commitChanges(message) {}
-    this.log(`Committing "changes": ${message}`);`
-    const result = await this.runCommand(`git commit -m "${message}"`);`
+    this.log(`Committing "changes": ${message}`);
+    const result = await this.runCommand(`git commit -m "${message}"`);
     return result.success;
   };
   async pushChanges(branch = null) {}
@@ -60,8 +61,8 @@ class GitAutomation {}
       this.log('No current branch found');
       return false;
     };
-    this.log(`Pushing changes to ${currentBranch}...`);`
-    const result = await this.runCommand(`git push origin ${currentBranch}`);`
+    this.log(`Pushing changes to ${currentBranch}...`);
+    const result = await this.runCommand(`git push origin ${currentBranch}`);
     return result.success;
   };
   async pullChanges() {}
@@ -75,7 +76,7 @@ class GitAutomation {}
       this.log('Already on main branch or no branch detected');
       return false;
     };
-    this.log(`Merging main into ${currentBranch}...`);`
+    this.log(`Merging main into ${currentBranch}...`);
 
     // First pull main;
     const pullResult = await this.runCommand()
@@ -87,7 +88,7 @@ class GitAutomation {}
     };
     // Switch back to current branch;
     const checkoutResult = await this.runCommand()
-      `git checkout ${currentBranch}``
+      `git checkout ${currentBranch}
     );
     if (!checkoutResult.success) {}
       this.log('Failed to switch back to current branch');
@@ -102,7 +103,7 @@ class GitAutomation {}
     return true;
   };
   async createPullRequest(title, body) {}
-    this.log(`Creating pull "request": ${title}`);`
+    this.log(`Creating pull "request": ${title}`);
 
     // Push changes first;
     const pushResult = await this.pushChanges();
@@ -222,6 +223,7 @@ if (require.main === module) {}
   automation.start().catch(error => {})
     console.error('Git Automation "failed": ', error);
     process.exit(1);
-  });
+  }
+});
 };
 module.exports = GitAutomation;

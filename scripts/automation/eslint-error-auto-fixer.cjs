@@ -15,29 +15,32 @@ class ESLintErrorAutoFixer {}
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
         fs.mkdirSync(dir, { "recursive": true })};
-    });
+    }
+});
     
     this.fixesApplied = 0;
     this.filesProcessed = 0};
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`)};`
+    console.log(`[${timestamp}] [${level}] ${message}`)};
   async runESLintCheck() {}
     try {}
       this.log('Running ESLint check...');
-      execSync('npm run lint', { "stdio": 'pipe' });
+      execSync('npm run lint', { "stdio": 'pipe' }
+});
       return { "success": true, "errors": [], "count": 0 }} catch (error) {}
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
       const errors = this.parseESLintErrors(output);
-      this.log(`ESLint check failed with ${errors.length} errors`, 'ERROR');`
+      this.log(`ESLint check failed with ${errors.length} errors`, 'ERROR');
       return { "success": false, errors, "count": errors.length }};
   };
   async runESLintFix() {}
     try {}
       this.log('Running ESLint auto-fix...');
-      execSync('npx eslint --fix src/**/*.{js,jsx,ts,tsx}', { "stdio": 'pipe' });
+      execSync('npx eslint --fix src/**/*.{js,jsx,ts,tsx}', { "stdio": 'pipe' }
+});
       return { "success": true, "fixed": true }} catch (error) {}
-      this.log(`ESLint auto-fix "failed": ${error.message}`, 'ERROR');`
+      this.log(`ESLint auto-fix "failed": ${error.message}`, 'ERROR');
       return { "success": false, "fixed": false }};
   };
   parseESLintErrors(output) {}
@@ -75,7 +78,7 @@ class ESLintErrorAutoFixer {}
         if (await this.fixSingleESLintError(error)) {}
           fixesApplied++};
       } catch (error) {}
-        this.log(`Failed to fix ESLint error in ${error.file}: ${error.message}`, 'ERROR')};`
+        this.log(`Failed to fix ESLint error in ${error.file}: ${error.message}`, 'ERROR')};
     };
     return fixesApplied};
   async fixSingleESLintError(error) {}
@@ -102,9 +105,9 @@ class ESLintErrorAutoFixer {}
         const result = fix(lines, error);
         if (result.modified) {}
           modifiedContent = result.content;
-          this.log(`Applied ESLint fix to ${error.file}: ${result.description}`, 'INFO')};`
+          this.log(`Applied ESLint fix to ${error.file}: ${result.description}`, 'INFO')};
       } catch (fixError) {}
-        this.log(`ESLint fix failed for ${error.file}: ${fixError.message}`, 'WARN')};`
+        this.log(`ESLint fix failed for ${error.file}: ${fixError.message}`, 'WARN')};
     };
     if (modifiedContent !== originalContent) {}
       fs.writeFileSync(error.file, modifiedContent);
@@ -125,7 +128,7 @@ class ESLintErrorAutoFixer {}
           return {}
             "modified": true,
             "content": lines.join('\n'),
-            "description": `Commented out unused variable ${varName}``
+            "description": `Commented out unused variable ${varName}
           }};
       };
     };
@@ -159,7 +162,7 @@ class ESLintErrorAutoFixer {}
             return {}
               "modified": true,
               "content": lines.join('\n'),
-              "description": `Commented out unused import ${importName}``
+              "description": `Commented out unused import ${importName}
             }};
         };
       };
@@ -243,12 +246,12 @@ class ESLintErrorAutoFixer {}
       if (checkResult.success) {}
         this.log('No ESLint errors found - no additional fixes needed', 'INFO');
         return};
-      this.log(`Found ${checkResult.errors.length} ESLint errors after auto-fix, applying custom fixes...`, 'INFO');`
+      this.log(`Found ${checkResult.errors.length} ESLint errors after auto-fix, applying custom fixes...`, 'INFO');
       
       // Apply custom fixes;
       const fixesApplied = await this.fixESLintErrors(checkResult.errors);
       
-      this.log(`Applied ${fixesApplied} custom fixes out of ${checkResult.errors.length} errors`, 'INFO');`
+      this.log(`Applied ${fixesApplied} custom fixes out of ${checkResult.errors.length} errors`, 'INFO');
       
       // Run check again to see if fixes worked;
       const postCheckResult = await this.runESLintCheck();
@@ -263,11 +266,11 @@ class ESLintErrorAutoFixer {}
       };
       
       // Save report;
-      const reportPath = path.join(this.reportsDir, `eslint-fix-report-${Date.now()}.json`);`
+      const reportPath = path.join(this.reportsDir, `eslint-fix-report-${Date.now()}.json`);
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       
       this.log(`ESLint auto-fix completed. Report saved to ${reportPath}`, 'INFO')} catch (error) {`}
-      this.log(`ESLint auto-fix "failed": ${error.message}`, 'ERROR')};`
+      this.log(`ESLint auto-fix "failed": ${error.message}`, 'ERROR')};
   };
   async startAutoFixer() {}
     this.log('Starting ESLint error auto-fixer...');
@@ -279,10 +282,10 @@ class ESLintErrorAutoFixer {}
     setInterval(async () => {}
       try {}
         await this.runAutoFix()} catch (error) {}
-        this.log(`Error in periodic "fix": ${error.message}`, 'ERROR')};`
+        this.log(`Error in periodic "fix": ${error.message}`, 'ERROR')};
     }, this.fixInterval);
 
-    this.log(`ESLint error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)};`
+    this.log(`ESLint error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)};
 };
 // Main execution;
 if (require.main === module) {}
@@ -291,14 +294,16 @@ if (require.main === module) {}
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     fixer.log('Shutting down ESLint error auto-fixer...');
-    process.exit(0)});
+    process.exit(0)}
+});
 
   process.on('SIGTERM', () => {}
     fixer.log('Shutting down ESLint error auto-fixer...');
-    process.exit(0)});
+    process.exit(0)}
+});
 
   // Start auto-fixer;
   fixer.startAutoFixer().catch(error => {})
-    fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');`
+    fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');
     process.exit(1)})};
 module.exports = ESLintErrorAutoFixer;
