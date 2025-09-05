@@ -1492,8 +1492,9 @@ export default function AIServicesPage() {
 
   const filteredServices = aiServices.filter(service => {
     const matchesCategory = selectedCategory === "All" || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch = (service.title && service.description) ? 
+      (service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+       service.description.toLowerCase().includes(searchTerm.toLowerCase())) : false;
     return matchesCategory && matchesSearch;
   });
 

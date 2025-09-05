@@ -39,6 +39,72 @@ const values = [
   }
 ];
 
+const team = [
+  {
+    name: 'Dr. Sarah Johnson',
+    role: 'Chief Executive Officer',
+    image: '/api/placeholder/300/300',
+    bio: 'Visionary leader with 20+ years in technology innovation and business strategy.'
+  },
+  {
+    name: 'Michael Chen',
+    role: 'Chief Technology Officer',
+    image: '/api/placeholder/300/300',
+    bio: 'AI and quantum computing expert leading our technical innovation initiatives.'
+  },
+  {
+    name: 'Emily Rodriguez',
+    role: 'Head of AI Research',
+    image: '/api/placeholder/300/300',
+    bio: 'Leading researcher in machine learning and artificial intelligence applications.'
+  },
+  {
+    name: 'David Kim',
+    role: 'VP of Engineering',
+    image: '/api/placeholder/300/300',
+    bio: 'Full-stack development expert specializing in scalable cloud architectures.'
+  },
+  {
+    name: 'Lisa Thompson',
+    role: 'Head of Security',
+    image: '/api/placeholder/300/300',
+    bio: 'Cybersecurity specialist ensuring enterprise-grade security across all solutions.'
+  },
+  {
+    name: 'James Wilson',
+    role: 'Head of Operations',
+    image: '/api/placeholder/300/300',
+    bio: 'Operations expert managing global delivery and client success initiatives.'
+  }
+];
+
+const achievements = [
+  {
+    icon: Award,
+    number: '500+',
+    label: 'Projects Completed',
+    description: 'Successfully delivered projects across various industries'
+  },
+  {
+    icon: Users,
+    number: '200+',
+    label: 'Happy Clients',
+    description: 'Satisfied clients worldwide trust our solutions'
+  },
+  {
+    icon: Globe,
+    number: '50+',
+    label: 'Countries Served',
+    description: 'Global presence with local expertise'
+  },
+  {
+    icon: Star,
+    number: '99.9%',
+    label: 'Uptime Guarantee',
+    description: 'Reliable and consistent service delivery'
+  }
+];
+
 export default function AboutPage() {
   return (
     <Layout
