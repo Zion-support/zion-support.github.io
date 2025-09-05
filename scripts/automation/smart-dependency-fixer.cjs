@@ -8,7 +8,7 @@ const fs = require("fs")
 const path = require("path")
 console.log(""� Starting smart dependency fixer automation...")
 // Get automation interval from environment variable ("default")
-  console.log(`� Running smart dependency fixer at ${new Date().toISOString()}``
+  console.log(`� Running smart dependency fixer at ${new Date().toISOString()}
 console.log(`� Starting smart dependency fixer automation...``)
 // Get automation interval from environment variable ("default")
   console.log("� Running smart dependency fixer at ${new Date().toISOString()}"
@@ -46,7 +46,7 @@ console.log(`� Starting smart dependency fixer automation...``)
     console.log(" Step 4: Checking for missing packages..."")
   const checkOutput = execSync("npm check --json")
   "stdio": "pipe"
-        console.log(` Found ${issues.vulnerabilities.length} vulnerable packages``)
+// console.log(` Found ${issues.vulnerabilities.length} vulnerable packages``)
   console.log(" No security vulnerabilities found")
     // Step "3"
     console.log(" Step 3: Checking for dependency conflicts...")
@@ -61,22 +61,22 @@ console.log(`� Starting smart dependency fixer automation...``)
   "stdio": "pipe"
   console.log(` No missing packages found``)
     // Step "5"
-    console.log(" Step 5: Attempting to fix issues automatically..."")
+// console.log(" Step 5: Attempting to fix issues automatically..."")
     console.log(" Step 6: Running npm install to ensure proper installation...")
   console.log(" No missing packages found")
     // Step "5"
-    console.log(" Step 5: Attempting to fix issues automatically..."")
+// console.log(" Step 5: Attempting to fix issues automatically..."")
     console.log(" Step 6: Running npm install to ensure proper installation...")
   console.log(" No missing packages found");")}"
 "
     // Step "5": Attempt to fix issues automatically"
-    console.log(" Step 5: Attempting to fix issues automatically..."")
+// console.log(" Step 5: Attempting to fix issues automatically..."")
     console.log(" Step 6: Running npm install to ensure proper installation...")
   execSync("npm install", { "stdio": "inherit"})
-      console.log(" npm install completed successfully")
+// console.log(" npm install completed successfully")
   console.log("⚠  npm install "failed": ")
     // Step "7"
-    console.log(" Step 7: Verifying fixes...")
+// console.log(" Step 7: Verifying fixes...")
     console.log(" Generating dependency fixer report...")
       "summary": "Smart dependency fixer completed"
       "status": "completed"
@@ -96,16 +96,16 @@ console.log(`� Starting smart dependency fixer automation...``)
   execSync("npm audit fix", { "stdio": "inherit"})
   "type": "vulnerabilities"
         "message": "Applied npm audit fix"
+// console.log(""⚠  Could not automatically fix all vulnerabilities")
   console.log(""⚠  Could not automatically fix all vulnerabilities")
-  console.log(""⚠  Could not automatically fix all vulnerabilities")
-  console.log("⚠  Could not automatically fix all vulnerabilities")
+// console.log("⚠  Could not automatically fix all vulnerabilities")
   console.log(" Attempting to update outdated packages...")
   const current = pkg.current.split(".")
       const latest = pkg.latest.split(".")
       // Only update if it"
   const packages = safeUpdates.map(pkg => pkg.name).join(" ");execSync(npm update ${packages}, { "stdio": "inherit"})
   "type": "outdated","message": Updated ${safeUpdates.length} packages safely}"
-  console.log("⚠  Could not update all outdated packages")
+// console.log("⚠  Could not update all outdated packages")
   console.log(" Attempting to install missing packages...")
   execSync("npm install", { "stdio": "inherit"})
   "type": "missing"
@@ -116,21 +116,21 @@ console.log(`� Starting smart dependency fixer automation...``)
   execSync("npm install --legacy-peer-deps", { "stdio": "inherit"})
   "type": "peerDependencies"
         "message": "Fixed peer dependency issues with legacy flag"
-  console.log("⚠  Could not fix peer dependency issues")
+// console.log("⚠  Could not fix peer dependency issues")
   console.log(" Verifying that dependency issues have been resolved...")
   const auditOutput = execSync("npm audit --json")
   "stdio": "pipe"
-  console.log(" Security vulnerabilities resolved")
+// console.log(" Security vulnerabilities resolved")
   console.log("⚠  Some security vulnerabilities remain")
-  console.log(" No security vulnerabilities found")
+// console.log(" No security vulnerabilities found")
   console.log(" No security vulnerabilities found")
   const lsOutput = execSync("npm ls --json", { "stdio": "pipe"})
-  console.log(" Dependency conflicts resolved")
+// console.log(" Dependency conflicts resolved")
   console.log("⚠  Some dependency conflicts remain")
   console.log(" No dependency conflicts found")
   const checkOutput = execSync("npm check --json")
   "stdio": "pipe"
-  console.log(" Missing packages resolved")
+// console.log(" Missing packages resolved")
   console.log("⚠  Some missing packages remain")
-  console.log(" No missing packages found")
+// console.log(" No missing packages found")
   console.log(" No missing packages found")

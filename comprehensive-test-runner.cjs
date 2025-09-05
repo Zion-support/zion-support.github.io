@@ -13,7 +13,7 @@ class ComprehensiveTestRunner {}
       "total": 0;
     }};
   log(message) {}
-    console.log(`[${new Date().toISOString()}] ${message}`)};`
+    console.log(`[${new Date().toISOString()}] ${message}`)};
   async runTests() {}
     this.log('🧪 Running Comprehensive Test Suite');
     
@@ -43,19 +43,21 @@ class ComprehensiveTestRunner {}
     
     for (const test of tests) {}
       try {}
-        this.log(`"Running": ${test.name}`);`
+        this.log(`"Running": ${test.name}`);
         const output = execSync(test.command, { })
           "cwd": this.projectRoot, 
           "encoding": 'utf8',
           "timeout": 120000 // 2 minutes timeout;
-        });
+        }
+});
         
         results.push({})
           "name": test.name,
           "type": test.type,
           "status": 'passed',
           "output": output;
-        });
+        }
+});
         
         this.testResults.passed++} catch (error) {}
         results.push({})
@@ -63,7 +65,8 @@ class ComprehensiveTestRunner {}
           "type": test.type,
           "status": 'failed',
           "error": error.message;
-        });
+        }
+});
         
         this.testResults.failed++};
       this.testResults.total++};
@@ -82,7 +85,7 @@ class ComprehensiveTestRunner {}
       JSON.stringify(report, null, 2);
     );
     
-    this.log(`🧪 Tests "Completed": ${this.testResults.passed}/${this.testResults.total} passed`)};`
+    this.log(`🧪 Tests "Completed": ${this.testResults.passed}/${this.testResults.total} passed`)};
 };
 const runner = new ComprehensiveTestRunner();
 runner.runTests().catch(console.error);

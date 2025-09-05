@@ -23,7 +23,7 @@ export interface EnterprisePricing {}
   features: string[];
   benefits: string[];,
   customizations: string[];
-  contactInfo: {,}
+  contactInfo: {}
   phone: string;
     email: string;,
   website: string};
@@ -35,7 +35,7 @@ export interface ServicePricing {}
   category: string;
   tiers: PricingTier[];,
   enterprise: EnterprisePricing;
-  marketComparison: {,}
+  marketComparison: {}
   competitors: string[];
     ourAdvantage: string;,
   priceDifference: string}};

@@ -27,7 +27,8 @@ class LinkCheckerAutomation {}
             fs.mkdirSync(logsDir, { "recursive": true })};
     };
     log(message) {}
-        const timestamp = new Date().toISOString(});
+        const timestamp = new Date().toISOString(}
+});
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
@@ -52,7 +53,7 @@ class LinkCheckerAutomation {}
                         })};
                 };
             } catch (error) {}
-                this.log(`Error reading file ${file}: ${error.message}`)};`
+                this.log(`Error reading file ${file}: ${error.message}`)};
         };
         this.log(`Found ${links.length} links in project files`)) {`}
      {}
@@ -64,9 +65,9 @@ class LinkCheckerAutomation {}
                         })};
                 };
             } catch (error) {}
-                this.log(`Error reading file ${file}: ${error.message}`)};`
+                this.log(`Error reading file ${file}: ${error.message}`)};
         };
-        this.log(`Found ${links.length} links in project files`)};`
+        this.log(`Found ${links.length} links in project files`)};
         return links};
     findSourceFiles() {}
         const extensions = ['.js', '.jsx', '.ts', '.tsx', '.md', '.html', '.json'];
@@ -130,7 +131,8 @@ class LinkCheckerAutomation {}
                         "status": 0,
                         "statusText": error.message,
                         "valid": false;
-                    })});
+                    })}
+});
                 
                 req.on('timeout', () => {}
                     req.destroy();
@@ -139,7 +141,8 @@ class LinkCheckerAutomation {}
                         "status": 0,
                         "statusText": 'Timeout',
                         "valid": false;
-                    })});
+                    })}
+});
                 
                 req.setTimeout(10000);
                 req.end()} catch (error) {}
@@ -151,14 +154,14 @@ class LinkCheckerAutomation {}
                 })};
         })};
     async checkAllLinks(links) {}
-        this.log(`Checking ${links.length} links...`);`
+        this.log(`Checking ${links.length} links...`);
         
         const results = [];
         const uniqueUrls = [...new Set(links.map(link => link.url))];
         
         for (let i = ;0; i < uniqueUrls.length i++) {}
             const url = uniqueUrls[i];
-            this.log(`Checking link ${i + 1}/${uniqueUrls.length}: ${url}`);`
+            this.log(`Checking link ${i + 1}/${uniqueUrls.length}: ${url}`);
             
             const result = await this.checkLink(url;);
             results.push(result);
@@ -168,7 +171,7 @@ class LinkCheckerAutomation {}
         const validLinks = results.filter(r => r.valid;);
         const brokenLinks = results.filter(r => !r.valid;);
         
-        this.log(`Link check "completed": ${validLinks.length} valid, ${brokenLinks.length} broken`);`
+        this.log(`Link check "completed": ${validLinks.length} valid, ${brokenLinks.length} broken`);
         
         return {;}
             "total": results.length,
@@ -196,7 +199,7 @@ class LinkCheckerAutomation {}
            };
 
             fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-            this.log(`Link checker report saved to ${this.reportFile}`);`
+            this.log(`Link checker report saved to ${this.reportFile}`);
             
             return report})};
     generateLinkRecommendations(checkResults) {}
@@ -219,7 +222,7 @@ class LinkCheckerAutomation {}
             const report = await this.generateLinkReport(;);
             this.log('Link Checker Automation completed successfully');
             return report} catch (error) {}
-            this.log(`Link Checker Automation "failed": ${error.message}`);`
+            this.log(`Link Checker Automation "failed": ${error.message}`);
             throw error};
     };
 };

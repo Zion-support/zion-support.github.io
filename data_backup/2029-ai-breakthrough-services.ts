@@ -23,7 +23,7 @@ export interface AIBreakthroughService2029 {}
   technology: string[];,
   benefits: string[];
   useCases: string[];,
-  aiCapabilities: string[];export const aiBreakthroughServices2029: AIBreakthroughService2029[] = [{,"}]
+  aiCapabilities: string[];export const aiBreakthroughServices2029: AIBreakthroughService2029[] = [{"}]
   id: "ai-consciousness-evolution-platform",""
     "name": "AI Consciousness Evolution Platform",""
     "tagline": "Develop genuine AI consciousness and emotional intelligence",""

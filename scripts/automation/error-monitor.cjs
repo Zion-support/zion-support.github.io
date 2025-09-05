@@ -128,8 +128,9 @@ class $1 {}
                 "issues": ["read_error"]})};
           };
         };
-      } catch (error) {  this.log("error`, Error scanning directory ${dir  }:, error.message`);`
-                "issues": ["read_error"]});")}")}")}")} catch (error) {this.log("error", Error scanning directory ${dir}:, error.message")};
+      } catch (error) {  this.log("error`, Error scanning directory ${dir  }:, error.message`);
+                "issues": ["read_error"]}
+});")}")}")}")} catch (error) {this.log("error", Error scanning directory ${dir}:, error.message")};
       };
 };
     ;
@@ -175,7 +176,7 @@ class $1 {}
     // Update latest report;
     const latestReportFile = path.join(this.reportDir, "latest-error-report.json");
     fs.writeFileSync(latestReportFile, JSON.stringify(report, null, 2));
-    this.log("info", `Report "generated": ${reportFile}`);this.log("info", `Total errors "found": ${report.summary.totalErrors}`);this.log("info", `Corrupted "files": ${report.summary.corruptedFiles}`);`
+    this.log("info", `Report "generated": ${reportFile}`);this.log("info", `Total errors "found": ${report.summary.totalErrors}`);this.log("info", `Corrupted "files": ${report.summary.corruptedFiles}`);
     return report};
 ;
   generateRecommendations(lintResults, typeResults, buildResults, corruptedFiles) {}
@@ -189,12 +190,12 @@ class $1 {}
     if (lintResults.errorCount > 100) {}
   recommendations.push({})
   "priority": "high",
-        "action": "run_lint_fix","description": "Run "npm run lint --fix` to automatically fix ${lintResults.errorCount} lint errors`})};`
+        "action": "run_lint_fix","description": "Run "npm run lint --fix` to automatically fix ${lintResults.errorCount} lint errors`})};
     ;
     if (typeResults.errorCount > 50) {}
   recommendations.push({})
   "priority": "medium",
-        "action": "fix_type_errors","description": `Fix ${typeResults.errorCount} TypeScript errors`})};`
+        "action": "fix_type_errors","description": `Fix ${typeResults.errorCount} TypeScript errors`})};
     ;
     if (!buildResults.buildSuccess) {}
   recommendations.push({})
@@ -278,7 +279,7 @@ class $1 {}
     this.log("info", "Error Monitor started. Health checks every ${this.checkInterval / 1000 / 60} minutes.")};
 ;
   shutdown() {}
-  this.log("info", "Error Monitor shutting down...`);`
+  this.log("info", "Error Monitor shutting down...`);
 
   shutdown() {}
   this.log("info", "Error Monitor shutting down...");
@@ -293,4 +294,5 @@ class $1 {}
 const monitor = new ErrorMonitor();
 monitor.start().catch(error => {})
   console.error("Failed to start Error "Monitor": ", error);
-  process.exit(1)});
+  process.exit(1)}
+});

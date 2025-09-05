@@ -1,8 +1,8 @@
-import _React from 'react';,
-import Head from 'next/head';';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';,
-import { }
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
   Brain, 
   Zap, 
   Shield, 
@@ -42,1294 +42,883 @@ import { }
   Mail,
   ShoppingCart,
   BookOpen,
-  Home,
-  Gamepad2;
-} from 'lucide-react';,
+  Package,
+  DollarSign
+} from 'lucide-react';
 
-const aiServices = [;
-  {}
-    title: 'AI-Powered Email Responder,',
-    description: 'Automated email responses using advanced NLP and machine learning algorithms.,',
+const aiServices = [
+  {
+    title: 'AI-Powered Email Responder',
+    description: 'Automated email responses using advanced NLP and machine learning algorithms.',
     icon: Mail,
-    features: ['Natural Language Processing, 'Sentiment Analysis', 'Auto-categorization', 'Smart Routing'],',
-    pricing: '$2,000 - $8,000 setup',',
-    category: 'Automation,',
-    popular: true;,
+    features: ['Natural Language Processing', 'Sentiment Analysis', 'Auto-categorization', 'Smart Routing'],
+    pricing: '$2,000 - $8,000 setup',
+    category: 'Automation',
+    link: 'https://aiemail.ziontechgroup.com'
   },
-  {}
-    title: 'Predictive Analytics Platform,',
-    description: 'Advanced forecasting and predictive modeling for business intelligence.,',
+  {
+    title: 'Predictive Analytics Platform',
+    description: 'Advanced forecasting and predictive modeling for business intelligence.',
     icon: BarChart3,
-    features: ['Time Series Analysis, 'Machine Learning Models', 'Real-time Predictions', 'Custom Dashboards'],',
-    pricing: '$4,000 - $20,000 project',',
-    category: 'Analytics,',
-    popular: true;,
+    features: ['Time Series Analysis', 'Machine Learning Models', 'Real-time Predictions', 'Custom Dashboards'],
+    pricing: '$4,000 - $20,000 project',
+    category: 'Analytics',
+    link: 'https://predictiveai.ziontechgroup.com'
   },
-  {}
-    title: 'Intelligent Chatbot System,',
-    description: 'AI-powered customer support with natural conversation capabilities.,',
+  {
+    title: 'Intelligent Chatbot System',
+    description: 'AI-powered customer support with natural conversation capabilities.',
     icon: MessageSquare,
-    features: ['Natural Language Understanding, 'Context Awareness', 'Multi-language Support', 'Integration APIs'],',
-    pricing: '$1,000 - $6,000/month',',
-    category: 'Customer Service,',
-    popular: true;,
-  },
-  {}
-    title: 'Computer Vision Solutions,',
-    description: 'Image and video analysis using deep learning and computer vision.,',
-    icon: Eye,
-    features: ['Object Detection, 'Image Classification', 'Facial Recognition', 'Video Analytics'],',
-    pricing: '$3,000 - $15,000 project',',
-    category: 'Computer Vision'';,
-  },
-  {}
-    title: 'AI Content Generation,',
-    description: 'Automated content creation using advanced language models.,',
-    icon: FileText,
-    features: ['Text Generation, 'Content Optimization', 'SEO Integration', 'Multi-format Output'],',
-    pricing: '$1,500 - $8,000/month',',
-    category: 'Content'';,
-  },
-  {}
-    title: 'Voice AI Assistant,',
-    description: 'Voice-controlled AI assistant with speech recognition and synthesis.,',
-    icon: Mic,
-    features: ['Speech-to-Text, 'Text-to-Speech', 'Voice Commands', 'Multi-language Support'],',
-    pricing: '$2,500 - $12,000 project',',
-    category: 'Voice'';,
-  },
-  {}
-    title: 'AI-Powered Fraud Detection,',
-    description: 'Real-time fraud detection using machine learning and behavioral analytics.,',
-    icon: Shield,
-    features: ['Real-time Analysis, 'Behavioral Patterns', 'Risk Scoring', 'Automated Alerts'],',
-    pricing: '$5,000 - $25,000 setup',',
-    category: 'Security,',
-    popular: true;,
-  },
-  {}
-    title: 'AI Drug Discovery Platform,',
-    description: 'Accelerated drug discovery using AI for molecular design and optimization.,',
-    icon: Heart,
-    features: ['Molecular Modeling, 'Drug-Target Interaction', 'Toxicity Prediction', 'Clinical Trial Optimization'],',
-    pricing: '$50,000 - $200,000 project',',
-    category: 'Healthcare'';,
-  },
-  {}
-    title: 'AI Financial Modeling,',
-    description: 'Advanced financial modeling and risk assessment using machine learning.,',
-    icon: TrendingUp,
-    features: ['Portfolio Optimization, 'Risk Assessment', 'Market Prediction', 'Algorithmic Trading'],',
-    pricing: '$10,000 - $50,000 project',',
-    category: 'Finance'';,
-  },
-  {}
-    title: 'AI Supply Chain Optimization,',
-    description: 'Intelligent supply chain management with predictive analytics and automation.,',
-    icon: Network,
-    features: ['Demand Forecasting, 'Inventory Optimization', 'Route Planning', 'Supplier Risk Analysis'],',
-    pricing: '$15,000 - $75,000 project',',
-    category: 'Logistics'';,
-  },
-  {}
-    title: 'AI-Powered Recommendation Engine,',
-    description: 'Personalized recommendation system for e-commerce and content platforms.,',
-    icon: Target,
-    features: ['Collaborative Filtering, 'Content-Based Filtering', 'Real-time Updates', 'A/B Testing'],',
-    pricing: '$3,000 - $15,000 setup',',
-    category: 'E-commerce'';,
-  },
-  {}
-    title: 'AI Social Media Manager,',
-    description: 'Automated social media management with content creation and scheduling.,',
-    icon: Globe,
-    features: ['Content Generation, 'Optimal Posting Times', 'Engagement Analysis', 'Brand Voice Consistency'],',
-    pricing: '$500 - $2,500/month',',
-    category: 'Marketing'';,
-  },
-  {
-    title: 'AI-Powered Legal Research Assistant',
-    description: 'Intelligent legal research and case law analysis with natural language processing.',
-    icon: FileText,
-    features: ['Case Law Analysis', 'Legal Document Review', 'Precedent Research', 'Contract Analysis'],
-    pricing: '$2,000 - $10,000/month',
-    category: 'Legal Tech',
-    popular: true
-  },
-  {
-    title: 'AI Medical Imaging Analysis',
-    description: 'Advanced medical imaging analysis for radiology and diagnostic support.',
-    icon: Eye,
-    features: ['X-ray Analysis', 'MRI Interpretation', 'CT Scan Analysis', 'Pathology Detection'],
-    pricing: '$5,000 - $25,000 setup',
-    category: 'Healthcare'
-  },
-  {
-    title: 'AI-Powered Cybersecurity Analyst',
-    description: 'Automated threat detection and response with behavioral analysis and incident management.',
-    icon: Shield,
-    features: ['Threat Hunting', 'Incident Response', 'Vulnerability Assessment', 'Security Orchestration'],
-    pricing: '$3,000 - $15,000/month',
-    category: 'Cybersecurity',
-    popular: true
-  },
-  {
-    title: 'AI Climate Change Predictor',
-    description: 'Advanced climate modeling and environmental impact prediction using machine learning.',
-    icon: Globe,
-    features: ['Weather Forecasting', 'Climate Modeling', 'Environmental Impact', 'Risk Assessment'],
-    pricing: '$10,000 - $50,000 project',
-    category: 'Environmental'
-  },
-  {
-    title: 'AI-Powered Autonomous Vehicle System',
-    description: 'Complete autonomous vehicle AI system with perception, planning, and control.',
-    icon: Car,
-    features: ['Object Detection', 'Path Planning', 'Decision Making', 'Safety Systems'],
-    pricing: '$100,000 - $500,000 project',
-    category: 'Automotive'
-  },
-  {
-    title: 'AI Quantum Computing Optimizer',
-    description: 'AI-powered quantum algorithm optimization and quantum machine learning.',
-    icon: Cpu,
-    features: ['Quantum Algorithm Design', 'Optimization Problems', 'Quantum ML', 'Error Correction'],
-    pricing: '$25,000 - $100,000 project',
-    category: 'Quantum Computing'
-  },
-  {
-    title: 'AI-Powered Space Mission Planner',
-    description: 'Autonomous space mission planning and satellite constellation optimization.',
-    icon: Rocket,
-    features: ['Mission Planning', 'Orbit Optimization', 'Resource Allocation', 'Risk Assessment'],
-    pricing: '$50,000 - $200,000 project',
-    category: 'Aerospace'
-  },
-  {
-    title: 'AI Smart City Controller',
-    description: 'Intelligent city management system with traffic optimization and resource management.',
-    icon: Building,
-    features: ['Traffic Optimization', 'Energy Management', 'Waste Management', 'Public Safety'],
-    pricing: '$25,000 - $100,000 project',
-    category: 'Smart Cities'
-  },
-  {
-    title: 'AI-Powered Agricultural Optimizer',
-    description: 'Precision agriculture with AI-driven crop optimization and yield prediction.',
-    icon: Sprout,
-    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
-    pricing: '$5,000 - $25,000 project',
-    category: 'Agriculture'
-  },
-  {
-    title: 'AI Mental Health Companion',
-    description: 'AI-powered mental health support with mood tracking and therapeutic interventions.',
-    icon: Heart,
-    features: ['Mood Analysis', 'Therapeutic Chat', 'Crisis Detection', 'Progress Tracking'],
-    pricing: '$1,000 - $5,000/month',
-    category: 'Healthcare'
-  },
-  {
-    title: 'AI-Powered Energy Grid Optimizer',
-    description: 'Intelligent energy grid management with demand forecasting and renewable integration.',
-    icon: Zap,
-    features: ['Demand Forecasting', 'Grid Optimization', 'Renewable Integration', 'Load Balancing'],
-    pricing: '$15,000 - $75,000 project',
-    category: 'Energy'
-  },
-  {
-    title: 'AI Blockchain Security Auditor',
-    description: 'Automated smart contract auditing and blockchain security analysis.',
-    icon: Shield,
-    features: ['Smart Contract Analysis', 'Vulnerability Detection', 'Security Auditing', 'Compliance Checking'],
-    pricing: '$2,000 - $10,000/project',
-    category: 'Blockchain'
-  },
-  {
-    title: 'AI-Powered Language Translator Pro',
-    description: 'Advanced real-time translation with cultural context and industry-specific terminology.',
-    icon: Globe,
-    features: ['Real-time Translation', 'Cultural Adaptation', 'Industry Terms', 'Voice Translation'],
-    pricing: '$500 - $2,500/month',
-    category: 'Language'
-  },
-  {
-    title: 'AI Creative Design Assistant',
-    description: 'AI-powered creative design tool for graphics, videos, and multimedia content.',
-    icon: Image,
-    features: ['Graphic Design', 'Video Editing', '3D Modeling', 'Brand Consistency'],
-    pricing: '$1,000 - $5,000/month',
-    category: 'Creative'
-  },
-  {
-    title: 'AI-Powered Investment Advisor',
-    description: 'Personalized investment recommendations with risk assessment and portfolio optimization.',
-    icon: TrendingUp,
-    features: ['Portfolio Analysis', 'Risk Assessment', 'Market Analysis', 'Investment Strategies'],
-    pricing: '$2,000 - $10,000/month',
-    category: 'Finance'
-  },
-  {
-    title: 'AI Smart Home Controller',
-    description: 'Intelligent home automation with learning capabilities and energy optimization.',
-    icon: Home,
-    features: ['Device Control', 'Energy Optimization', 'Learning Patterns', 'Voice Commands'],
-    pricing: '$1,000 - $5,000 setup',
-    category: 'IoT'
-  },
-  {
-    title: 'AI-Powered Educational Tutor',
-    description: 'Personalized learning assistant with adaptive curriculum and progress tracking.',
-    icon: BookOpen,
-    features: ['Adaptive Learning', 'Progress Tracking', 'Personalized Content', 'Assessment Tools'],
-    pricing: '$200 - $1,000/month',
-    category: 'Education'
-  },
-  {
-    title: 'AI Manufacturing Quality Inspector',
-    description: 'Automated quality control with computer vision and defect detection.',
-    icon: Settings,
-    features: ['Defect Detection', 'Quality Metrics', 'Process Optimization', 'Predictive Maintenance'],
-    pricing: '$5,000 - $25,000 setup',
-    category: 'Manufacturing'
-  },
-  {
-    title: 'AI-Powered Customer Service Pro',
-    description: 'Advanced customer service automation with emotional intelligence and context awareness.',
-    icon: MessageSquare,
-    features: ['Emotional Analysis', 'Context Awareness', 'Multi-channel Support', 'Escalation Management'],
-    pricing: '$1,500 - $7,500/month',
+    features: ['Natural Language Understanding', 'Context Awareness', 'Multi-language Support', 'Integration APIs'],
+    pricing: '$1,000 - $6,000/month',
     category: 'Customer Service',
-    popular: true
+    link: 'https://aichatbot.ziontechgroup.com'
   },
   {
-    title: 'AI Real Estate Market Analyzer',
-    description: 'Comprehensive real estate market analysis with investment recommendations.',
-    icon: Home,
-    features: ['Market Analysis', 'Property Valuation', 'Investment Insights', 'Risk Assessment'],
-    pricing: '$1,000 - $5,000/month',
-    category: 'Real Estate'
-  },
-  {
-    title: 'AI-Powered Sports Analytics',
-    description: 'Advanced sports performance analysis with injury prediction and strategy optimization.',
-    icon: Target,
-    features: ['Performance Analysis', 'Injury Prediction', 'Strategy Optimization', 'Player Development'],
-    pricing: '$2,000 - $10,000/month',
-    category: 'Sports'
-  },
-  {
-    title: 'AI Smart Transportation System',
-    description: 'Intelligent transportation management with route optimization and traffic prediction.',
-    icon: Car,
-    features: ['Route Optimization', 'Traffic Prediction', 'Fleet Management', 'Demand Forecasting'],
-    pricing: '$10,000 - $50,000 project',
-    category: 'Transportation'
-  },
-  {
-    title: 'AI-Powered Content Moderation Pro',
-    description: 'Advanced content moderation with context understanding and cultural sensitivity.',
+    title: 'Computer Vision Solutions',
+    description: 'Image and video analysis using deep learning and computer vision.',
     icon: Eye,
-    features: ['Context Analysis', 'Cultural Sensitivity', 'Multi-language Support', 'Real-time Processing'],
-    pricing: '$1,000 - $5,000/month',
-    category: 'Content Safety'
+    features: ['Object Detection', 'Image Classification', 'Facial Recognition', 'Video Analytics'],
+    pricing: '$3,000 - $15,000 project',
+    category: 'Computer Vision',
+    link: 'https://computervision.ziontechgroup.com'
   },
   {
-    title: 'AI Weather Prediction System',
-    description: 'Advanced weather forecasting with hyperlocal predictions and climate modeling.',
-    icon: Globe,
-    features: ['Hyperlocal Forecasting', 'Climate Modeling', 'Severe Weather Alerts', 'Agricultural Insights'],
-    pricing: '$2,000 - $10,000/month',
-    category: 'Meteorology'
-  },
-  {
-    title: 'AI-Powered Gaming Assistant',
-    description: 'Intelligent gaming companion with strategy optimization and player behavior analysis.',
-    icon: Gamepad2,
-    features: ['Strategy Optimization', 'Player Analysis', 'Game Balancing', 'Personalized Challenges'],
-    pricing: '$500 - $2,500/month',
-    category: 'Gaming'
-  },
-  {
-    title: 'AI Code Review Assistant',
-    description: 'Automated code review and quality assurance using AI analysis.',
-    icon: Code,
-    features: ['Code Quality Analysis, 'Security Vulnerability Detection', 'Performance Optimization', 'Best Practices'],',
-    pricing: '$2,000 - $10,000 setup',',
-    category: 'Development'';,
-  },
-  {}
-    title: 'AI Document Processing,',
-    description: 'Intelligent document extraction, classification, and data processing.',',
+    title: 'AI Content Generation',
+    description: 'Automated content creation using advanced language models.',
     icon: FileText,
-    features: ['OCR Technology, 'Document Classification', 'Data Extraction', 'Workflow Automation'],',
-    pricing: '$1,500 - $8,000/month',',
-    category: 'Document Management'';,
-  },
-  {}
-    title: 'AI Video Analytics,',
-    description: 'Advanced video analysis for security, marketing, and business intelligence.',',
-    icon: Video,
-    features: ['Object Tracking, 'Behavior Analysis', 'Crowd Counting', 'Anomaly Detection'],',
-    pricing: '$4,000 - $20,000 project',',
-    category: 'Video Analytics'';,
-  },
-  {}
-    title: 'AI Talent Matching,',
-    description: 'Intelligent candidate matching and recruitment optimization.,',
-    icon: Users,
-    features: ['Resume Analysis, 'Skill Matching', 'Cultural Fit Assessment', 'Interview Scheduling'],',
-    pricing: '$2,500 - $12,000 setup',',
-    category: 'HR & Recruitment'';,
-  },
-  {}
-    title: 'AI Energy Optimization,',
-    description: 'Smart energy management and optimization for buildings and facilities.,',
-    icon: Zap,
-    features: ['Energy Consumption Analysis, 'Predictive Maintenance', 'Load Balancing', 'Cost Optimization'],',
-    pricing: '$8,000 - $40,000 project',',
-    category: 'Energy Management'';,
-  },
-  {}
-    title: 'AI Quality Assurance,',
-    description: 'Automated quality control and defect detection in manufacturing.,',
-    icon: CheckCircle,
-    features: ['Visual Inspection, 'Defect Classification', 'Quality Metrics', 'Process Optimization'],',
-    pricing: '$10,000 - $50,000 project',',
-    category: 'Manufacturing'';,
-  },
-  {}
-    title: 'AI Legal Document Analysis,',
-    description: 'Intelligent legal document review and contract analysis.,',
-    icon: BookOpen,
-    features: ['Contract Analysis, 'Risk Assessment', 'Clause Extraction', 'Compliance Checking'],',
-    pricing: '$5,000 - $25,000 setup',',
-    category: 'Legal Tech'';,
-  },
-  {}
-    title: 'AI Customer Sentiment Analysis,',
-    description: 'Real-time customer sentiment analysis across multiple channels.,',
-    icon: MessageSquare,
-    features: ['Multi-channel Analysis, 'Emotion Detection', 'Trend Analysis', 'Alert System'],',
-    pricing: '$1,000 - $5,000/month',',
-    category: 'Customer Analytics'';,
-  },
-  {}
-    title: 'AI-Powered Autonomous Vehicles,',
-
-    description: 'Advanced autonomous vehicle systems with computer vision and decision making.,',
-    icon: Car,
-    features: ['Computer Vision, 'Path Planning', 'Obstacle Detection', 'Real-time Decision Making'],',
-    pricing: '$100,000 - $500,000 project',',
-
-    category: 'Autonomous Systems,',
-    popular: true;,
-  },
-  {}
-
-    title: 'AI Drug Discovery Platform,',
-    description: 'Accelerated drug discovery using AI for molecular design and optimization.,',
-    icon: Heart,
-    features: ['Molecular Modeling, 'Drug-Target Interaction', 'Toxicity Prediction', 'Clinical Trial Optimization'],',
-    pricing: '$50,000 - $200,000 project',',
-    category: 'Healthcare'';,
-  },
-  {}
-    title: 'AI-Powered Climate Modeling,',
-    description: 'Advanced climate prediction and environmental impact analysis using AI.,',
-    icon: Globe,
-    features: ['Climate Prediction, 'Environmental Impact Analysis', 'Weather Forecasting', 'Sustainability Metrics'],',
-    pricing: '$25,000 - $100,000 project',',
-    category: 'Environmental'';,
-  },
-  {}
-    title: 'AI Quantum Computing Optimizer,',
-    description: 'AI-powered quantum computing algorithm optimization and error correction.,',
-    icon: Cpu,
-    features: ['Quantum Algorithm Optimization, 'Error Correction', 'Quantum State Analysis', 'Performance Tuning'],',
-    pricing: '$75,000 - $300,000 project',',
-    category: 'Quantum Computing'';,
-  },
-  {}
-    title: 'AI-Powered Space Exploration,',
-    description: 'Autonomous space mission planning and satellite constellation management.,',
-    icon: Rocket,
-    features: ['Mission Planning, 'Satellite Management', 'Orbital Mechanics', 'Resource Optimization'],',
-    pricing: '$100,000 - $500,000 project',',
-    category: 'Space Technology'';,
-  },
-  {}
-    title: 'AI Neural Interface System,',
-    description: 'Brain-computer interface with AI-powered neural signal processing.,',
-    icon: Brain,
-    features: ['Neural Signal Processing, 'Motor Control', 'Cognitive Enhancement', 'Medical Applications'],',
-    pricing: '$200,000 - $1,000,000 project',',
-    category: 'Neurotechnology'';,
-  },
-  {}
-    title: 'AI-Powered Smart Cities,',
-    description: 'Comprehensive smart city management with AI optimization.,',
-    icon: Building,
-    features: ['Traffic Optimization, 'Energy Management', 'Public Safety', 'Resource Allocation'],',
-    pricing: '$500,000 - $2,000,000 project',',
-    category: 'Smart Cities'';,
-  },
-  {}
-    title: 'AI Agricultural Intelligence,',
-    description: 'Precision agriculture with AI-powered crop monitoring and optimization.,',
-    icon: Sprout,
-    features: ['Crop Monitoring, 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],',
-    pricing: '$15,000 - $75,000 project',',
-    category: 'Agriculture'';,
-  },
-  {}
-    title: 'AI-Powered Cybersecurity AI,',
-    description: 'Self-evolving AI cybersecurity system that adapts to new threats.,',
-    icon: Shield,
-    features: ['Threat Detection, 'Adaptive Defense', 'Zero-day Protection', 'Automated Response'],',
-    pricing: '$25,000 - $125,000 setup',',
-    category: 'Cybersecurity'';,
-  },
-  {}
-    title: 'AI Financial Trading System,',
-    description: 'High-frequency trading AI with market prediction and risk management.,',
-    icon: TrendingUp,
-    features: ['Market Prediction, 'Risk Management', 'Algorithmic Trading', 'Portfolio Optimization'],',
-    pricing: '$50,000 - $250,000 setup',',
-    category: 'FinTech'';,
-  },
-  {}
-    title: 'AI-Powered Virtual Reality,',
-    description: 'Immersive VR experiences with AI-generated content and interactions.,',
-    icon: Monitor,
-    features: ['AI-Generated Environments', 'Realistic Avatars', 'Natural Interactions', 'Adaptive Storytelling'],
-    pricing: '$15,000 - $75,000 project',
-    category: 'VR/AR'
+    features: ['Text Generation', 'Content Optimization', 'SEO Integration', 'Multi-format Output'],
+    pricing: '$1,500 - $8,000/month',
+    category: 'Content',
+    link: 'https://aicontent.ziontechgroup.com'
   },
   {
-    title: 'AI Quantum Machine Learning',
-    description: 'Quantum-enhanced machine learning algorithms for complex optimization problems.',
-    icon: Cpu,
-    features: ['Quantum Neural Networks', 'Optimization Algorithms', 'Quantum Feature Maps', 'Hybrid Classical-Quantum'],
-    pricing: '$100,000 - $500,000 project',
-    category: 'Quantum AI',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Edge Computing',
-    description: 'Intelligent edge computing solutions with real-time AI processing capabilities.',
-    icon: Server,
-    features: ['Real-time Processing', 'Low Latency', 'Offline Capability', 'Resource Optimization'],
-    pricing: '$25,000 - $125,000 setup',
-    category: 'Edge Computing'
-  },
-  {
-    title: 'AI Digital Twin Platform',
-    description: 'Comprehensive digital twin solutions with AI-powered simulation and optimization.',
-    icon: Building,
-    features: ['Real-time Simulation', 'Predictive Modeling', 'IoT Integration', 'Performance Optimization'],
-    pricing: '$50,000 - $250,000 project',
-    category: 'Digital Twins',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Blockchain Analytics',
-    description: 'Advanced blockchain analysis using AI for fraud detection and transaction insights.',
-    icon: Shield,
-    features: ['Transaction Analysis', 'Fraud Detection', 'Pattern Recognition', 'Risk Assessment'],
-    pricing: '$20,000 - $100,000 setup',
-    category: 'Blockchain'
-  },
-  {
-    title: 'AI Medical Imaging Analysis',
-    description: 'Advanced medical image analysis using deep learning for diagnosis and treatment planning.',
-    icon: Heart,
-    features: ['Radiology Analysis', 'Pathology Detection', 'Treatment Planning', 'Clinical Decision Support'],
-    pricing: '$75,000 - $300,000 project',
-    category: 'Healthcare AI'
-  },
-  {
-    title: 'AI-Powered Smart Grid',
-    description: 'Intelligent energy grid management with AI optimization and predictive maintenance.',
-    icon: Zap,
-    features: ['Load Forecasting', 'Fault Prediction', 'Energy Optimization', 'Grid Stability'],
-    pricing: '$100,000 - $500,000 project',
-    category: 'Smart Energy'
-  },
-  {
-    title: 'AI Autonomous Robotics',
-    description: 'Advanced autonomous robotic systems with AI decision-making and learning capabilities.',
-    icon: Bot,
-    features: ['Autonomous Navigation', 'Object Manipulation', 'Learning Algorithms', 'Safety Systems'],
-    pricing: '$150,000 - $750,000 project',
-    category: 'Robotics'
-  },
-  {
-    title: 'AI-Powered Cybersecurity AI',
-    description: 'Self-evolving AI cybersecurity system that adapts to new threats in real-time.',
-    icon: Shield,
-    features: ['Threat Detection', 'Adaptive Defense', 'Zero-day Protection', 'Automated Response'],
-    pricing: '$50,000 - $250,000 setup',
-    category: 'Cybersecurity AI',
-    popular: true
-  },
-  {
-    title: 'AI Financial Risk Management',
-    description: 'Advanced AI-powered financial risk assessment and management systems.',
-    icon: TrendingUp,
-    features: ['Credit Risk Analysis', 'Market Risk Assessment', 'Operational Risk', 'Regulatory Compliance'],
-    pricing: '$75,000 - $350,000 project',
-    category: 'FinTech'
-  },
-  {
-    title: 'AI-Powered Space Mission Planning',
-    description: 'Autonomous space mission planning and satellite constellation management using AI.',
-    icon: Rocket,
-    features: ['Mission Planning', 'Satellite Management', 'Orbital Mechanics', 'Resource Optimization'],
-    pricing: '$200,000 - $1,000,000 project',
-    category: 'Space Technology'
-  },
-  {
-    title: 'AI Neural Interface Development',
-    description: 'Brain-computer interface development with AI-powered neural signal processing.',
-    icon: Brain,
-    features: ['Neural Signal Processing', 'Motor Control', 'Cognitive Enhancement', 'Medical Applications'],
-    pricing: '$300,000 - $1,500,000 project',
-    category: 'Neurotechnology'
-  },
-  {
-    title: 'AI-Powered Smart City Management',
-    description: 'Comprehensive smart city management platform with AI optimization across all systems.',
-    icon: Building,
-    features: ['Traffic Optimization', 'Energy Management', 'Public Safety', 'Resource Allocation'],
-    pricing: '$500,000 - $2,500,000 project',
-    category: 'Smart Cities'
-  },
-  {
-    title: 'AI Agricultural Intelligence Platform',
-    description: 'Precision agriculture with AI-powered crop monitoring, yield prediction, and optimization.',
-    icon: Sprout,
-    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
-    pricing: '$30,000 - $150,000 project',
-    category: 'AgTech'
-  },
-  {
-    title: 'AI-Powered Climate Change Modeling',
-    description: 'Advanced climate prediction and environmental impact analysis using AI and machine learning.',
-    icon: Globe,
-    features: ['Climate Prediction', 'Environmental Impact Analysis', 'Weather Forecasting', 'Sustainability Metrics'],
-    pricing: '$100,000 - $500,000 project',
-    category: 'Environmental AI'
-  },
-  {
-    title: 'AI-Powered Virtual Reality',
-    description: 'Immersive VR experiences with AI-generated content and interactions.',
-    icon: Monitor,
-    features: ['Content Generation', 'Realistic Interactions', 'Adaptive Environments', 'User Behavior Analysis'],
-    pricing: '$30,000 - $150,000 project',
-    category: 'Virtual Reality'
-  },
-  {}
-    title: 'AI Language Translation,',
-    description: 'Real-time multi-language translation with cultural context understanding.,',
-    icon: Globe,
-    features: ['Real-time Translation, 'Cultural Context', 'Voice Translation', 'Document Translation'],',
-    pricing: '$2,000 - $10,000/month',',
-    category: 'Language Technology'';,
-  },
-  {}
-    title: 'AI-Powered Robotics,',
-    description: 'Intelligent robotic systems with advanced AI decision making.,',
-    icon: Bot,
-    features: ['Autonomous Navigation, 'Object Manipulation', 'Human-Robot Interaction', 'Learning Capabilities'],',
-    pricing: '$40,000 - $200,000 project',',
-    category: 'Robotics'';,
-  },
-  {}
-    title: 'AI Music Composition,',
-    description: 'AI-generated music composition with style adaptation and emotional intelligence.,',
+    title: 'Voice AI Assistant',
+    description: 'Voice-controlled AI assistant with speech recognition and synthesis.',
     icon: Mic,
-    features: ['Style Adaptation, 'Emotional Intelligence', 'Instrument Simulation', 'Collaborative Composition'],',
-    pricing: '$5,000 - $25,000 setup',',
-    category: 'Creative AI'';,
+    features: ['Speech-to-Text', 'Text-to-Speech', 'Voice Commands', 'Multi-language Support'],
+    pricing: '$2,500 - $12,000 project',
+    category: 'Voice',
+    link: 'https://voiceai.ziontechgroup.com'
   },
-  {}
-    title: 'AI-Powered Gaming,',
-    description: 'Intelligent game AI with adaptive difficulty and procedural content generation.,',
-    icon: Gamepad2,
-    features: ['Adaptive Difficulty, 'Procedural Content', 'NPC Intelligence', 'Player Behavior Analysis'],',
-    pricing: '$20,000 - $100,000 project',',
-    category: 'Gaming'';,
-  },
-  {}
-    title: 'AI Personal Health Coach,',
-    description: 'AI-powered personal health monitoring and wellness recommendations.,',
-    icon: Heart,
-    features: ['Health Monitoring, 'Wellness Recommendations', 'Symptom Analysis', 'Preventive Care'],',
-    pricing: '$99 - $499/month,',
-    category: 'Personal Health'';,
-  },
-  {}
-    title: 'AI-Powered Smart Home,',
-    description: 'Intelligent home automation with predictive behavior and energy optimization.,',
-    icon: Home,
-    features: ['Predictive Automation, 'Energy Optimization', 'Security Monitoring', 'Voice Control'],',
-    pricing: '$10,000 - $50,000 setup',',
-    category: 'Smart Home'';,
-  },
-  {}
-    title: 'AI Content Creation Studio,',
-    description: 'AI-powered content creation for marketing, social media, and advertising.',',
-    icon: Image,
-    features: ['Content Generation, 'Brand Consistency', 'Multi-format Output', 'Performance Optimization'],',
-    pricing: '$1,500 - $7,500/month',',
-    category: 'Content Marketing'';,
-  },
-  {}
-    title: 'AI-Powered Education Platform,',
-    description: 'Personalized learning platform with AI tutoring and assessment.,',
-    icon: BookOpen,
-    features: ['Personalized Learning, 'Adaptive Assessment', 'Progress Tracking', 'Skill Development'],',
-    pricing: '$2,000 - $10,000/month',',
-    category: 'EdTech'';,
-  },
-  {}
-    title: 'AI-Powered Drug Discovery,',
-    description: 'Accelerated drug discovery using AI for molecular design and optimization.,',
-    icon: Heart,
-    features: ['Molecular Design, 'Drug Optimization', 'Toxicity Prediction', 'Clinical Trial Design'],',
-    pricing: '$50,000 - $500,000/project',',
-    category: 'Pharmaceuticals,',
-    popular: true;,
-  },
-  {}
-    title: 'AI-Powered Autonomous Vehicles,',
-    description: 'Complete autonomous vehicle AI system with perception, planning, and control.',',
-    icon: Car,
-    features: ['Computer Vision, 'Path Planning', 'Sensor Fusion', 'Safety Systems'],',
-    pricing: '$100,000 - $2,000,000/project',',
-    category: 'Autonomous Systems'';,
-  },
-  {}
-    title: 'AI-Powered Financial Trading,',
-    description: 'Algorithmic trading system with AI-driven market analysis and execution.,',
-    icon: TrendingUp,
-    features: ['Market Analysis, 'Risk Management', 'Portfolio Optimization', 'Real-time Trading'],',
-    pricing: '$25,000 - $200,000/setup',',
-    category: 'FinTech'';,
-  },
-  {}
-    title: 'AI-Powered Climate Modeling,',
-    description: 'Advanced climate modeling and environmental impact prediction using AI.,',
-    icon: Globe,
-    features: ['Climate Prediction, 'Environmental Analysis', 'Carbon Footprint', 'Sustainability Planning'],',
-    pricing: '$30,000 - $300,000/project',',
-    category: 'Environmental'';,
-  },
-  {}
-    title: 'AI-Powered Space Exploration,',
-    description: 'AI systems for space mission planning, satellite operations, and data analysis.',',
-    icon: Rocket,
-    features: ['Mission Planning, 'Satellite Operations', 'Data Analysis', 'Autonomous Navigation'],',
-    pricing: '$100,000 - $1,000,000/project',',
-    category: 'Aerospace'';,
-  },
-  {}
-    title: 'AI-Powered Quantum Computing,',
-    description: 'AI algorithms and applications for quantum computing systems.,',
-    icon: Cpu,
-    features: ['Quantum Algorithms, 'Error Correction', 'Optimization', 'Simulation'],',
-    pricing: '$50,000 - $500,000/project',',
-    category: 'Quantum AI'';,
-  },
-  {}
-    title: 'AI-Powered Cybersecurity AI,',
-    description: 'Advanced AI systems for threat detection, response, and prevention.',',
+  {
+    title: 'AI Fraud Detection System',
+    description: 'Real-time fraud detection using machine learning and behavioral analysis.',
     icon: Shield,
-    features: ['Threat Detection, 'Behavioral Analysis', 'Automated Response', 'Predictive Security'],',
-    pricing: '$40,000 - $400,000/project',',
-    category: 'Cybersecurity'';,
+    features: ['Real-time Detection', 'Behavioral Analysis', 'Risk Scoring', 'API Integration'],
+    pricing: '$5,000 - $25,000 setup',
+    category: 'Security',
+    popular: true,
+    link: 'https://aifraud.ziontechgroup.com'
   },
-  {}
-    title: 'AI-Powered Smart Cities,',
-    description: 'Comprehensive AI solutions for smart city infrastructure and management.,',
-    icon: Building,
-    features: ['Traffic Optimization, 'Energy Management', 'Public Safety', 'Resource Planning'],',
-    pricing: '$100,000 - $1,000,000/project',',
-    category: 'Smart Cities'';,
-  },
-  {}
-    title: 'AI-Powered Robotics,',
-    description: 'AI-powered robotic systems for manufacturing, healthcare, and service industries.',',
-    icon: Bot,
-    features: ['Motion Planning, 'Object Recognition', 'Human-Robot Interaction', 'Learning Systems'],',
-    pricing: '$75,000 - $750,000/project',',
-    category: 'Robotics'';,
-  },
-  {}
-    title: 'AI-Powered Metaverse Platform,',
-    description: 'AI-driven virtual world creation and management for metaverse applications.,',
-    icon: Globe,
-    features: ['Virtual World Generation, 'Avatar AI', 'Content Creation', 'Social Interaction'],',
-    pricing: '$50,000 - $500,000/project',',
-    category: 'Metaverse'';,
-  },
-  {}
-    title: 'AI-Powered Brain-Computer Interface,',
-    description: 'AI systems for brain-computer interface applications and neural signal processing.,',
-    icon: Brain,
-    features: ['Neural Signal Processing, 'Pattern Recognition', 'Control Systems', 'Rehabilitation'],',
-    pricing: '$100,000 - $1,000,000/project',',
-    category: 'Neurotechnology'';,
-  },
-  {}
-    title: 'AI-Powered Supply Chain Optimization,',
-    description: 'End-to-end supply chain optimization using AI for logistics and inventory management.,',
-    icon: Network,
-    features: ['Demand Forecasting, 'Route Optimization', 'Inventory Management', 'Risk Assessment'],',
-    pricing: '$30,000 - $300,000/project',',
-    category: 'Supply Chain'';,
-  },
-  {}
-    title: 'AI-Powered Energy Grid Management,',
-    description: 'Smart grid management and renewable energy optimization using AI.,',
-    icon: Zap,
-    features: ['Grid Optimization, 'Renewable Integration', 'Demand Response', 'Predictive Maintenance'],',
-    pricing: '$40,000 - $400,000/project',',
-    category: 'Energy'';,
-  },
-  {}
-    title: 'AI-Powered Agricultural Intelligence,',
-    description: 'Precision agriculture and crop management using AI and IoT sensors.,',
-    icon: Sprout,
-    features: ['Crop Monitoring, 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],',
-    pricing: '$25,000 - $250,000/project',',
-    category: 'Agriculture'';,
-  },
-  {}
-    title: 'AI-Powered Quantum Computing Optimization,',
-    description: 'Advanced AI algorithms optimized for quantum computing systems and quantum machine learning.,',
-    icon: Cpu,
-    features: ['Quantum Algorithm Design, 'Quantum ML Models', 'Optimization Problems', 'Quantum Simulation'],',
-    pricing: '$50,000 - $500,000/project',',
-    category: 'Quantum AI,',
-    popular: true;,
-  },
-  {}
-    title: 'AI-Powered Brain-Computer Interface,',
-    description: 'Advanced BCI systems for medical applications and human-computer interaction.,',
-    icon: Brain,
-    features: ['Neural Signal Processing, 'Motor Control', 'Cognitive Enhancement', 'Medical Diagnostics'],',
-    pricing: '$100,000 - $1,000,000/project',',
-    category: 'Neurotechnology,',
-    popular: true;,
-  },
-  {}
-    title: 'AI Digital Twin for Smart Cities,',
-    description: 'Comprehensive digital twin platform for smart city management and optimization.,',
-    icon: Building,
-    features: ['Real-time Simulation, 'Traffic Optimization', 'Resource Management', 'Predictive Analytics'],',
-    pricing: '$200,000 - $2,000,000/project',',
-    category: 'Smart Cities,',
-    popular: true;,
-  },
-  {}
-    title: 'AI-Powered Precision Medicine,',
-    description: 'Personalized medicine using AI for treatment optimization and drug discovery.,',
-    icon: Heart,
-    features: ['Genomic Analysis, 'Treatment Optimization', 'Drug Response Prediction', 'Clinical Decision Support'],',
-    pricing: '$75,000 - $500,000/project',',
-    category: 'Precision Medicine,',
-    popular: true;,
-  },
-  {}
-    title: 'AI-Powered Space Mission Planning,',
-    description: 'AI systems for space mission planning, satellite operations, and planetary exploration.',',
-    icon: Rocket,
-    features: ['Mission Planning, 'Satellite Management', 'Planetary Analysis', 'Autonomous Navigation'],',
-    pricing: '$100,000 - $1,000,000/project',',
-    category: 'Space Technology,',
-    popular: true;,
-  },
-  {}
-    title: 'AI-Powered Climate Change Modeling,',
-    description: 'Advanced climate modeling and environmental impact prediction using AI.,',
-    icon: Sprout,
-    features: ['Climate Prediction, 'Carbon Footprint Analysis', 'Environmental Monitoring', 'Policy Impact Assessment'],',
-    pricing: '$50,000 - $500,000/project',',
-    category: 'Environmental AI,',
-    popular: true;,
-  },
-  {}
-    title: 'AI-Powered Cybersecurity Platform,',
-    description: 'Next-generation cybersecurity using AI for threat detection and response.,',
-    icon: Shield,
-    features: ['Threat Hunting, 'Behavioral Analysis', 'Automated Response', 'Zero-day Detection'],',
-    pricing: '$25,000 - $200,000/setup',',
-    category: 'Cybersecurity,',
-    popular: true;,
-  },
-  {}
-    title: 'AI-Powered Generative Content Creation,',
-    description: 'Advanced AI-powered content generation for text, images, videos, and audio.',',
+  {
+    title: 'AI Document Processing',
+    description: 'Intelligent document extraction and processing using OCR and NLP.',
     icon: FileText,
-    features: ['Text Generation, 'Image Creation', 'Video Production', 'Voice Synthesis'],',
-    pricing: '$5,000 - $50,000/month',',
-    category: 'Content Generation,',
-    popular: true;,
+    features: ['OCR Processing', 'Data Extraction', 'Form Recognition', 'Automated Workflows'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Document AI',
+    link: 'https://aidocuments.ziontechgroup.com'
   },
-  {}
-    title: 'AI-Powered Autonomous Vehicle Systems,',
-    description: 'Complete autonomous vehicle systems with advanced perception and decision-making capabilities.,',
-    icon: Car,
-    features: ['Computer Vision, 'Sensor Fusion', 'Path Planning', 'Real-time Decision Making'],',
-    pricing: '$200,000 - $2,000,000/project',',
-    category: 'Autonomous Systems,',
-    popular: true;,
+  {
+    title: 'AI Recommendation Engine',
+    description: 'Personalized recommendation system using collaborative filtering and deep learning.',
+    icon: Target,
+    features: ['Collaborative Filtering', 'Deep Learning', 'Real-time Updates', 'A/B Testing'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Recommendations',
+    link: 'https://airecommendations.ziontechgroup.com'
   },
-  {}
-    title: 'AI-Powered Financial Trading Algorithms,',
-    description: 'Advanced algorithmic trading systems with machine learning and real-time market analysis.,',
+  {
+    title: 'AI Translation Service',
+    description: 'Advanced neural machine translation with context awareness and domain adaptation.',
+    icon: Globe,
+    features: ['Neural Translation', 'Context Awareness', 'Domain Adaptation', 'API Integration'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Translation',
+    link: 'https://aitranslation.ziontechgroup.com'
+  },
+  {
+    title: 'AI Code Generation',
+    description: 'Automated code generation and assistance using large language models.',
+    icon: Code,
+    features: ['Code Generation', 'Bug Detection', 'Code Review', 'Documentation'],
+    pricing: '$2,500 - $12,000/month',
+    category: 'Development',
+    link: 'https://aicode.ziontechgroup.com'
+  },
+  {
+    title: 'AI Medical Diagnosis',
+    description: 'AI-powered medical image analysis and diagnostic assistance.',
+    icon: Heart,
+    features: ['Medical Imaging', 'Diagnostic Assistance', 'Risk Assessment', 'Clinical Integration'],
+    pricing: '$10,000 - $50,000 project',
+    category: 'Healthcare',
+    link: 'https://aimedical.ziontechgroup.com'
+  },
+  {
+    title: 'AI Supply Chain Optimization',
+    description: 'Intelligent supply chain management with demand forecasting and optimization.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Risk Management'],
+    pricing: '$5,000 - $30,000 project',
+    category: 'Supply Chain',
+    link: 'https://aisupplychain.ziontechgroup.com'
+  },
+  {
+    title: 'AI Financial Analysis',
+    description: 'Automated financial analysis and investment recommendations using AI.',
     icon: TrendingUp,
-    features: ['Market Analysis, 'Risk Management', 'Portfolio Optimization', 'Automated Trading'],',
-    pricing: '$50,000 - $500,000/setup',',
-    category: 'Algorithmic Trading,',
-    popular: true;,
+    features: ['Market Analysis', 'Risk Assessment', 'Portfolio Optimization', 'Real-time Alerts'],
+    pricing: '$3,000 - $20,000/month',
+    category: 'Finance',
+    link: 'https://aifinance.ziontechgroup.com'
   },
-  {}
-    title: 'AI-Powered Drug Discovery & Development,',
-    description: 'Accelerated drug discovery using AI for molecular design and clinical trial optimization.,',
-    icon: Heart,
-    features: ['Molecular Modeling, 'Drug-Target Interaction', 'Toxicity Prediction', 'Clinical Trial Optimization'],',
-    pricing: '$100,000 - $1,000,000/project',',
-    category: 'Pharmaceutical AI,',
-    popular: true;,
+  {
+    title: 'AI Quality Control',
+    description: 'Automated quality inspection using computer vision and machine learning.',
+    icon: CheckCircle,
+    features: ['Visual Inspection', 'Defect Detection', 'Quality Scoring', 'Process Optimization'],
+    pricing: '$4,000 - $25,000 project',
+    category: 'Manufacturing',
+    link: 'https://aiquality.ziontechgroup.com'
   },
-  {}
-    title: 'AI-Powered Energy Grid Optimization,',
-    description: 'Smart grid management and energy distribution optimization using AI.,',
+  {
+    title: 'AI Legal Document Analysis',
+    description: 'Intelligent legal document review and contract analysis using NLP.',
+    icon: BookOpen,
+    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Document Review'],
+    pricing: '$5,000 - $30,000/month',
+    category: 'Legal',
+    link: 'https://ailegal.ziontechgroup.com'
+  },
+  {
+    title: 'AI Energy Optimization',
+    description: 'Smart energy management and optimization using IoT and machine learning.',
     icon: Zap,
-    features: ['Grid Optimization, 'Demand Forecasting', 'Renewable Integration', 'Fault Detection'],',
-    pricing: '$75,000 - $750,000/project',',
-    category: 'Energy Management,',
-    popular: true;,
+    features: ['Energy Forecasting', 'Load Optimization', 'Predictive Maintenance', 'Cost Reduction'],
+    pricing: '$3,000 - $20,000 project',
+    category: 'Energy',
+    link: 'https://aienergy.ziontechgroup.com'
   },
-  {}
-    title: 'AI-Powered Manufacturing Quality Control,',
-    description: 'Advanced quality control and defect detection in manufacturing using computer vision.,',
+  {
+    title: 'AI Customer Insights',
+    description: 'Advanced customer behavior analysis and insights generation.',
+    icon: Users,
+    features: ['Behavior Analysis', 'Segmentation', 'Churn Prediction', 'Personalization'],
+    pricing: '$2,000 - $12,000/month',
+    category: 'Customer Analytics',
+    link: 'https://aicustomerinsights.ziontechgroup.com'
+  },
+  {
+    title: 'AI Process Automation',
+    description: 'Intelligent process automation using RPA and machine learning.',
     icon: Settings,
-    features: ['Visual Inspection, 'Defect Classification', 'Quality Metrics', 'Process Optimization'],',
-    pricing: '$25,000 - $250,000/project',',
-    category: 'Manufacturing AI,',
-    popular: true;,
+    features: ['RPA Integration', 'Process Mining', 'Workflow Optimization', 'Exception Handling'],
+    pricing: '$4,000 - $25,000 project',
+    category: 'Process Automation',
+    link: 'https://aiprocess.ziontechgroup.com'
   },
-  {}
-    title: 'AI-Powered Legal Document Analysis,',
-    description: 'Intelligent legal document review and contract analysis with risk assessment.,',
-    icon: BookOpen,
-    features: ['Contract Analysis, 'Risk Assessment', 'Clause Extraction', 'Compliance Checking'],',
-    pricing: '$10,000 - $100,000/setup',',
-    category: 'Legal Tech,',
-    popular: true;,
+  {
+    title: 'AI Research Assistant',
+    description: 'AI-powered research and data analysis for academic and business research.',
+    icon: Search,
+    features: ['Literature Review', 'Data Analysis', 'Hypothesis Generation', 'Report Generation'],
+    pricing: '$1,500 - $8,000/month',
+    category: 'Research',
+    link: 'https://airesearch.ziontechgroup.com'
   },
-  {}
-    title: 'AI-Powered Customer Service Automation,',
-    description: 'Advanced customer service automation with natural language understanding and sentiment analysis.,',
+  {
+    title: 'AI-Powered Cybersecurity',
+    description: 'Advanced threat detection and response using machine learning and behavioral analysis.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Zero-day Protection'],
+    pricing: '$8,000 - $40,000/month',
+    category: 'Cybersecurity',
+    popular: true,
+    link: 'https://aicybersecurity.ziontechgroup.com'
+  },
+  {
+    title: 'AI Marketing Automation',
+    description: 'Intelligent marketing campaign optimization with predictive analytics and personalization.',
+    icon: Target,
+    features: ['Campaign Optimization', 'Predictive Analytics', 'Personalization', 'ROI Optimization'],
+    pricing: '$3,000 - $18,000/month',
+    category: 'Marketing',
+    link: 'https://aimarketing.ziontechgroup.com'
+  },
+  {
+    title: 'AI Voice Analytics',
+    description: 'Advanced voice analysis for emotion detection, sentiment analysis, and call optimization.',
+    icon: Mic,
+    features: ['Emotion Detection', 'Sentiment Analysis', 'Call Optimization', 'Quality Scoring'],
+    pricing: '$2,500 - $15,000/month',
+    category: 'Voice Analytics',
+    link: 'https://aivoiceanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'AI Predictive Maintenance',
+    description: 'Machine learning-based predictive maintenance for industrial equipment and machinery.',
+    icon: Settings,
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$5,000 - $30,000/project',
+    category: 'Industrial AI',
+    link: 'https://aipredictivemaintenance.ziontechgroup.com'
+  },
+  {
+    title: 'AI Content Personalization',
+    description: 'Dynamic content personalization using machine learning and user behavior analysis.',
+    icon: FileText,
+    features: ['Dynamic Content', 'User Profiling', 'A/B Testing', 'Performance Optimization'],
+    pricing: '$2,000 - $12,000/month',
+    category: 'Content AI',
+    link: 'https://aicontentpersonalization.ziontechgroup.com'
+  },
+  {
+    title: 'AI Trading Algorithm',
+    description: 'Advanced algorithmic trading with machine learning and real-time market analysis.',
+    icon: TrendingUp,
+    features: ['Algorithmic Trading', 'Market Analysis', 'Risk Management', 'Portfolio Optimization'],
+    pricing: '$10,000 - $50,000/month',
+    category: 'FinTech',
+    link: 'https://aitrading.ziontechgroup.com'
+  },
+  {
+    title: 'AI Image Recognition',
+    description: 'Advanced computer vision for object detection, classification, and image analysis.',
+    icon: Eye,
+    features: ['Object Detection', 'Image Classification', 'Facial Recognition', 'Scene Analysis'],
+    pricing: '$2,000 - $15,000/month',
+    category: 'Computer Vision',
+    link: 'https://aiimagerecognition.ziontechgroup.com'
+  },
+  {
+    title: 'AI Natural Language Processing',
+    description: 'Advanced NLP services for text analysis, language understanding, and generation.',
     icon: MessageSquare,
-    features: ['Natural Language Understanding, 'Sentiment Analysis', 'Multi-channel Support', 'Escalation Management'],',
-    pricing: '$5,000 - $50,000/month',',
-    category: 'Customer Service,',
-    popular: true;,
+    features: ['Text Analysis', 'Language Understanding', 'Text Generation', 'Sentiment Analysis'],
+    pricing: '$1,500 - $10,000/month',
+    category: 'NLP',
+    link: 'https://ainlp.ziontechgroup.com'
   },
-  {}
-    title: 'AI-Powered Supply Chain Optimization,',
-    description: 'Intelligent supply chain management with predictive analytics and automation.,',
-    icon: Network,
-    features: ['Demand Forecasting, 'Inventory Optimization', 'Route Planning', 'Supplier Risk Analysis'],',
-    pricing: '$25,000 - $250,000/project',',
-    category: 'Supply Chain AI,',
-    popular: true;,
+  {
+    title: 'AI Data Mining',
+    description: 'Intelligent data mining and pattern recognition for business intelligence.',
+    icon: Database,
+    features: ['Pattern Recognition', 'Data Mining', 'Business Intelligence', 'Predictive Modeling'],
+    pricing: '$3,000 - $20,000/project',
+    category: 'Data Science',
+    link: 'https://aidatamining.ziontechgroup.com'
   },
-  {}
-    title: 'AI-Powered Real Estate Valuation,',
-    description: 'Automated property valuation and market analysis using AI and big data.,',
-    icon: Building,
-    features: ['Property Valuation, 'Market Analysis', 'Investment Recommendations', 'Risk Assessment'],',
-    pricing: '$2,000 - $20,000/month',',
-    category: 'Real Estate AI,',
-    popular: true;,
+  {
+    title: 'AI Video Analysis',
+    description: 'Advanced video content analysis with object tracking and behavior recognition.',
+    icon: Video,
+    features: ['Object Tracking', 'Behavior Recognition', 'Scene Analysis', 'Real-time Processing'],
+    pricing: '$4,000 - $25,000/month',
+    category: 'Video AI',
+    link: 'https://aivideoanalysis.ziontechgroup.com'
   },
-  {}
-    title: 'AI-Powered Educational Personalization,',
-    description: 'Personalized learning experiences with adaptive content and progress tracking.,',
+  {
+    title: 'AI Chatbot Development',
+    description: 'Custom AI chatbot development with natural language understanding and integration.',
+    icon: Bot,
+    features: ['Custom Development', 'NLP Integration', 'Multi-platform Support', 'Analytics'],
+    pricing: '$5,000 - $30,000/project',
+    category: 'Chatbot',
+    link: 'https://aichatbotdev.ziontechgroup.com'
+  },
+  {
+    title: 'AI Sentiment Analysis',
+    description: 'Real-time sentiment analysis for social media, reviews, and customer feedback.',
+    icon: TrendingUp,
+    features: ['Real-time Analysis', 'Multi-language Support', 'Social Media Monitoring', 'Dashboard'],
+    pricing: '$1,000 - $8,000/month',
+    category: 'Sentiment Analysis',
+    link: 'https://aisentiment.ziontechgroup.com'
+  },
+  {
+    title: 'AI Price Optimization',
+    description: 'Dynamic pricing optimization using machine learning and market analysis.',
+    icon: DollarSign,
+    features: ['Dynamic Pricing', 'Market Analysis', 'Competitor Monitoring', 'Revenue Optimization'],
+    pricing: '$3,000 - $20,000/month',
+    category: 'Pricing AI',
+    link: 'https://aipriceoptimization.ziontechgroup.com'
+  },
+  {
+    title: 'AI Inventory Management',
+    description: 'Intelligent inventory optimization with demand forecasting and automated ordering.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Automated Ordering', 'Inventory Optimization', 'Cost Reduction'],
+    pricing: '$2,500 - $15,000/month',
+    category: 'Inventory AI',
+    link: 'https://aiinventory.ziontechgroup.com'
+  },
+  {
+    title: 'AI Compliance Monitoring',
+    description: 'Automated compliance monitoring and reporting using AI and regulatory intelligence.',
+    icon: CheckCircle,
+    features: ['Compliance Monitoring', 'Regulatory Intelligence', 'Automated Reporting', 'Risk Assessment'],
+    pricing: '$4,000 - $25,000/month',
+    category: 'Compliance',
+    link: 'https://aicompliance.ziontechgroup.com'
+  },
+  {
+    title: 'AI Workflow Optimization',
+    description: 'Intelligent workflow analysis and optimization using process mining and AI.',
+    icon: Settings,
+    features: ['Process Mining', 'Workflow Analysis', 'Optimization Recommendations', 'Automation'],
+    pricing: '$3,000 - $20,000/project',
+    category: 'Workflow AI',
+    link: 'https://aiworkflow.ziontechgroup.com'
+  },
+  {
+    title: 'AI Knowledge Management',
+    description: 'Intelligent knowledge base management with automated content organization and search.',
     icon: BookOpen,
-    features: ['Adaptive Learning, 'Content Personalization', 'Progress Tracking', 'Learning Analytics'],',
-    pricing: '$5,000 - $50,000/month',',
-    category: 'EdTech AI,',
-    popular: true;,
+    features: ['Content Organization', 'Intelligent Search', 'Knowledge Extraction', 'Automated Updates'],
+    pricing: '$2,000 - $12,000/month',
+    category: 'Knowledge Management',
+    link: 'https://aiknowledge.ziontechgroup.com'
   },
-  {}
-    title: 'AI-Powered Mental Health Assessment,',
-    description: 'AI-powered mental health screening and assessment tools for healthcare providers.,',
+  {
+    title: 'AI Performance Monitoring',
+    description: 'AI-powered application and infrastructure performance monitoring with predictive alerts.',
+    icon: Monitor,
+    features: ['Performance Monitoring', 'Predictive Alerts', 'Root Cause Analysis', 'Optimization'],
+    pricing: '$2,500 - $15,000/month',
+    category: 'Performance AI',
+    link: 'https://aiperformance.ziontechgroup.com'
+  },
+  // New Innovative AI Services
+  {
+    title: 'AI-Powered Drug Discovery',
+    description: 'Accelerated drug discovery using machine learning and molecular modeling.',
     icon: Heart,
-    features: ['Mental Health Screening, 'Risk Assessment', 'Treatment Recommendations', 'Progress Monitoring'],',
-    pricing: '$10,000 - $100,000/setup',',
-    category: 'Mental Health AI,',
-    popular: true;,
+    features: ['Molecular Modeling', 'Drug Design', 'Toxicity Prediction', 'Clinical Trial Optimization'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Healthcare AI',
+    popular: true,
+    link: 'https://aidrugdiscovery.ziontechgroup.com'
+  },
+  {
+    title: 'AI Climate Change Modeling',
+    description: 'Advanced climate modeling and environmental impact prediction using AI.',
+    icon: Sprout,
+    features: ['Climate Modeling', 'Impact Prediction', 'Carbon Footprint Analysis', 'Sustainability Planning'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Environmental AI',
+    link: 'https://aiclimate.ziontechgroup.com'
+  },
+  {
+    title: 'AI Quantum Computing Optimization',
+    description: 'Quantum algorithm optimization and quantum machine learning solutions.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Quantum ML', 'Optimization Problems', 'Hybrid Computing'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Quantum AI',
+    link: 'https://aiquantum.ziontechgroup.com'
+  },
+  {
+    title: 'AI Autonomous Vehicle Systems',
+    description: 'AI-powered autonomous vehicle perception, planning, and control systems.',
+    icon: Car,
+    features: ['Computer Vision', 'Path Planning', 'Decision Making', 'Safety Systems'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Autonomous Vehicles',
+    link: 'https://aiautonomous.ziontechgroup.com'
+  },
+  {
+    title: 'AI Space Exploration Analytics',
+    description: 'AI-powered space mission planning and astronomical data analysis.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Data Analysis', 'Satellite Operations', 'Space Weather'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Space AI',
+    link: 'https://aispace.ziontechgroup.com'
+  },
+  {
+    title: 'AI Brain-Computer Interface',
+    description: 'AI-powered brain-computer interface development and neural signal processing.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'BCI Development', 'Cognitive Enhancement', 'Medical Applications'],
+    pricing: '$150,000 - $1,500,000/project',
+    category: 'Neurotechnology',
+    link: 'https://aibci.ziontechgroup.com'
+  },
+  {
+    title: 'AI Synthetic Data Generation',
+    description: 'High-quality synthetic data generation for training and testing AI models.',
+    icon: Database,
+    features: ['Data Synthesis', 'Privacy Preservation', 'Model Training', 'Quality Assurance'],
+    pricing: '$10,000 - $100,000/project',
+    category: 'Data Generation',
+    link: 'https://aisyntheticdata.ziontechgroup.com'
+  },
+  {
+    title: 'AI Explainable AI (XAI)',
+    description: 'Making AI decisions transparent and interpretable for critical applications.',
+    icon: Eye,
+    features: ['Model Interpretability', 'Decision Explanation', 'Bias Detection', 'Trust Building'],
+    pricing: '$15,000 - $150,000/project',
+    category: 'Explainable AI',
+    link: 'https://aixai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Edge Intelligence',
+    description: 'AI inference and decision-making at the edge for real-time applications.',
+    icon: Server,
+    features: ['Edge Inference', 'Real-time Processing', 'Low Latency', 'Resource Optimization'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'Edge AI',
+    link: 'https://aiedge.ziontechgroup.com'
+  },
+  {
+    title: 'AI Federated Learning',
+    description: 'Privacy-preserving machine learning across distributed data sources.',
+    icon: Lock,
+    features: ['Privacy Preservation', 'Distributed Training', 'Model Aggregation', 'Secure Communication'],
+    pricing: '$25,000 - $250,000/project',
+    category: 'Federated Learning',
+    link: 'https://aifederated.ziontechgroup.com'
+  },
+  {
+    title: 'AI Multi-Modal Learning',
+    description: 'AI systems that process and understand multiple data types simultaneously.',
+    icon: FileText,
+    features: ['Multi-modal Processing', 'Cross-modal Learning', 'Fusion Techniques', 'Unified Understanding'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'Multi-Modal AI',
+    link: 'https://aimultimodal.ziontechgroup.com'
+  },
+  {
+    title: 'AI Reinforcement Learning',
+    description: 'Advanced reinforcement learning for complex decision-making and optimization.',
+    icon: Target,
+    features: ['RL Algorithms', 'Policy Optimization', 'Environment Simulation', 'Reward Engineering'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'Reinforcement Learning',
+    link: 'https://aireinforcement.ziontechgroup.com'
+  },
+  {
+    title: 'AI Transfer Learning',
+    description: 'Efficient model adaptation and knowledge transfer across domains.',
+    icon: Network,
+    features: ['Domain Adaptation', 'Knowledge Transfer', 'Few-shot Learning', 'Model Reuse'],
+    pricing: '$15,000 - $150,000/project',
+    category: 'Transfer Learning',
+    link: 'https://aitransfer.ziontechgroup.com'
+  },
+  {
+    title: 'AI Adversarial Defense',
+    description: 'Robust AI systems resistant to adversarial attacks and manipulation.',
+    icon: Shield,
+    features: ['Adversarial Training', 'Attack Detection', 'Defense Mechanisms', 'Robustness Testing'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'AI Security',
+    link: 'https://aiadversarial.ziontechgroup.com'
+  },
+  {
+    title: 'AI Continual Learning',
+    description: 'AI systems that learn continuously without forgetting previous knowledge.',
+    icon: BookOpen,
+    features: ['Continual Learning', 'Catastrophic Forgetting Prevention', 'Memory Management', 'Adaptive Learning'],
+    pricing: '$25,000 - $250,000/project',
+    category: 'Continual Learning',
+    link: 'https://aicontinual.ziontechgroup.com'
+  },
+  {
+    title: 'AI Meta-Learning',
+    description: 'AI systems that learn how to learn and adapt quickly to new tasks.',
+    icon: Brain,
+    features: ['Learning to Learn', 'Few-shot Adaptation', 'Meta-optimization', 'Task Generalization'],
+    pricing: '$35,000 - $350,000/project',
+    category: 'Meta-Learning',
+    link: 'https://aimeta.ziontechgroup.com'
+  },
+  {
+    title: 'AI Causal Inference',
+    description: 'Understanding cause-and-effect relationships in complex systems using AI.',
+    icon: TrendingUp,
+    features: ['Causal Discovery', 'Intervention Analysis', 'Counterfactual Reasoning', 'Causal Modeling'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'Causal AI',
+    link: 'https://aicausal.ziontechgroup.com'
+  },
+  {
+    title: 'AI Graph Neural Networks',
+    description: 'Advanced graph-based machine learning for complex relational data.',
+    icon: Network,
+    features: ['Graph Processing', 'Relational Learning', 'Network Analysis', 'Graph Embeddings'],
+    pricing: '$25,000 - $250,000/project',
+    category: 'Graph AI',
+    link: 'https://aigraph.ziontechgroup.com'
+  },
+  {
+    title: 'AI Time Series Forecasting',
+    description: 'Advanced time series analysis and forecasting using deep learning.',
+    icon: BarChart3,
+    features: ['Time Series Analysis', 'Long-term Forecasting', 'Anomaly Detection', 'Trend Analysis'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'Time Series AI',
+    link: 'https://aitimeseries.ziontechgroup.com'
+  },
+  {
+    title: 'AI Generative Models',
+    description: 'Advanced generative AI for creating realistic content and data.',
+    icon: Image,
+    features: ['Content Generation', 'Data Augmentation', 'Creative AI', 'Realistic Synthesis'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'Generative AI',
+    link: 'https://aigenerative.ziontechgroup.com'
   }
-;];,
+];
 
-const industries = [;
-  { name: 'Healthcare, icon: Heart, description: 'AI-powered diagnostics and patient care' },',
+const industries = [
+  { name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },
+  { name: 'Finance', icon: Building, description: 'Fraud detection and risk assessment' },
+  { name: 'E-commerce', icon: ShoppingCart, description: 'Personalized recommendations and automation' },
+  { name: 'Manufacturing', icon: Settings, description: 'Predictive maintenance and quality control' },
+  { name: 'Education', icon: BookOpen, description: 'Personalized learning and assessment' },
+  { name: 'Transportation', icon: Car, description: 'Autonomous systems and route optimization' }
+];
 
-  { name: 'Finance, icon: Building, description: 'Fraud detection and risk assessment' },',
-  { name: 'E-commerce, icon: ShoppingCart, description: 'Personalized recommendations and automation' },',
-  { name: 'Manufacturing, icon: Settings, description: 'Predictive maintenance and quality control' },',
-  { name: 'Education, icon: BookOpen, description: 'Personalized learning and assessment' },',
-  { name: 'Transportation, icon: Car, description: 'Autonomous systems and route optimization' }',
-;];,
-
-
-const benefits = [;
-  {}
-
+const benefits = [
+  {
     icon: Zap,
     title: 'Increased Efficiency,',
     description: 'Automate repetitive tasks and processes,',
     stat: '40%'';,
   },
-  {}
+  {
     icon: TrendingUp,
     title: 'Better Insights,',
     description: 'Data-driven decision making,',
     stat: '60%'';,
   },
-  {}
+  {
     icon: Shield,
     title: 'Enhanced Security,',
     description: 'AI-powered threat detection,',
     stat: '99.9%'';,
   },
-  {}
+  {
     icon: Users,
-    title: 'Improved Experience,',
-    description: 'Personalized user interactions,',
-    stat: '85%'';,
+    title: 'Improved Experience',
+    description: 'Personalized user interactions',
+    stat: '85%'
   }
-;];,
+];
 
-export default function AIServicesPage() {}
-  return (;,
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-                  <Head>;
-                  <title>AI Services - Zion Tech Group</title>;
-                  <meta name="description" content="Cutting-edge AI solutions including machine learning, natural language processing, computer vision, and intelligent automation." />",
-                  <meta name="keywords" content="AI services, machine learning, NLP, computer vision, artificial intelligence, automation" />",
-                  </Head>;,
+export default function AIServicesPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Cutting-edge AI solutions including machine learning, natural language processing, computer vision, and intelligent automation." />
+        <meta name="keywords" content="AI services, machine learning, NLP, computer vision, artificial intelligence, automation" />
+      </Head>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">",
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
 
-        <div className="absolute inset-0">";
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
-          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
-        </div>;
-
-        <div className="container mx-auto px-4 relative z-10">";
-          <motion.div);
-
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"",
-          >;,
-
-            <div className="flex items-center justify-center mb-6">";
-              <Brain className="h-16 w-16 text-blue-400 mr-4" />";
-              <h1 className="text-4xl md:text-6xl font-bold">";
-
-                AI{' '}',
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">";,
-                  Services;
-                </span>;
-
-              </h1>;
-            </div>;
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
-              Transform your business with cutting-edge artificial intelligence solutions. From machine learning to natural language processing, we deliver AI that works.,
-            </p>;,
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">";
-
-                Get AI Consultation;
-              </Link>;
-                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">";
-                View All Services;
-              </Link>;
-                  </div>;
-                  </motion.div>;
-                  </div>;
-                  </section>;
+            className="text-center"
+          >
+            <div className="flex items-center justify-center mb-6">
+              <Brain className="h-16 w-16 text-blue-400 mr-4" />
+              <h1 className="text-4xl md:text-6xl font-bold">
+                AI{' '}
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Services
+                </span>
+              </h1>
+            </div>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transform your business with cutting-edge artificial intelligence solutions. From machine learning to natural language processing, we deliver AI that works.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Get AI Consultation
+              </Link>
+              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                View All Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-gray-50">",
-                  <div className="container mx-auto px-4">";,
-                  <motion.div;
-            className="text-center mb-16"";
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >,
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Our AI Solutions
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Comprehensive AI services designed to solve real business challenges and drive innovation.
+            </p>
+          </motion.div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">";
-
-              Our AI Solutions;
-            </h2>;
-                  <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">";
-              Comprehensive AI services designed to solve real business challenges and drive innovation.;
-            </p>;
-                  </motion.div>;
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-            {aiServices.map((service, index) => {}
-              const IconComponent = service.icon;,
-              return (;,
-                <motion.div);
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {aiServices.map((service, index) => {
+              const IconComponent = service.icon;
+              return (
+                <motion.div
                   key={index}
-
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"";
-
+                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-
                   whileHover={{ y: -5 }}
-                >,
-                  <div className="flex items-center justify-between mb-4">";,
-                    <div className="text-blue-600 group-hover:text-purple-600 transition-colors">";
-                      <IconComponent className="w-10 h-10" />";
-                    </div>;
-                    <span className="text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">";
-
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-blue-600 group-hover:text-purple-600 transition-colors">
+                      <IconComponent className="w-10 h-10" />
+                    </div>
+                    <span className="text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
                       {service.category}
-                    </span>,
-                  </div>;,
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">";
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {service.title}
-                  </h3>,
-                  <p className="text-gray-600 mb-4 leading-relaxed">";,
+                  </h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed">
                     {service.description}
-                  </p>,
-                  <div className="mb-4">";,
-
-                    <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>";
-                    <ul className="space-y-1">";
-
-                      {service.features.map((feature, featureIndex) => (,
-                        <li key={featureIndex} className="flex items-center text-xs text-gray-600">",
-                  <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />";,
+                  </p>
+                  
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-xs text-gray-600">
+                          <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
-                        </li>,
+                        </li>
                       ))}
-                    </ul>,
-                  </div>;,
-                  <div className="mb-4">";
-                  <span className="text-sm font-semibold text-blue-600">{service.pricing}</span>",
-                  </div>;,
-                  <Link;
-                    href="/contact"";
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"";
-                  >;
-                    <span>Get Quote</span>;
-                  <ArrowRight className="w-3 h-3 ml-1" />";
-                  </Link>;
-                  </motion.div>;
+                    </ul>
+                  </div>
+
+                  <div className="mb-4">
+                    <span className="text-sm font-semibold text-blue-600">{service.pricing}</span>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Link
+                      href={service.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    >
+                      <span>Try Now</span>
+                      <ArrowRight className="w-3 h-3 ml-1" />
+                    </Link>
+                    <Link
+                      href="/contact"
+                      className="w-full border border-blue-600 text-blue-600 hover:bg-blue-50 py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    >
+                      <span>Get Quote</span>
+                    </Link>
+                  </div>
+                </motion.div>
               );
             })}
-          </div>,
-                  </div>;,
-                  </section>;
+          </div>
+        </div>
+      </section>
 
       {/* Industries Section */}
-      <section className="py-20 bg-white">",
-                  <div className="container mx-auto px-4">";,
-                  <motion.div;
-            className="text-center mb-16"";
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >,
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Industries We Serve
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Our AI solutions are tailored for various industries and use cases.
+            </p>
+          </motion.div>
 
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">";
-              Industries We Serve;
-            </h2>;
-
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">";
-              Our AI solutions are tailored for various industries and use cases.;
-            </p>;
-                  </motion.div>;
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-            {industries.map((industry, index) => {}
-              const IconComponent = industry.icon;,
-              return (;,
-                <motion.div);
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {industries.map((industry, index) => {
+              const IconComponent = industry.icon;
+              return (
+                <motion.div
                   key={index}
-
-                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"";
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >,
-
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">";
-                  <IconComponent className="w-8 h-8 text-blue-600" />";
-                  </div>;
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">";
+                >
+                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {industry.name}
-                  </h3>,
-                  <p className="text-gray-600">";,
+                  </h3>
+                  <p className="text-gray-600">
                     {industry.description}
-                  </p>,
-                  </motion.div>;,
+                  </p>
+                </motion.div>
               );
             })}
-          </div>,
-                  </div>;,
-                  </section>;
+          </div>
+        </div>
+      </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gray-50">",
-                  <div className="container mx-auto px-4">";,
-                  <motion.div;
-            className="text-center mb-16"";
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >,
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our AI Services?
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Proven results and measurable impact for your business.
+            </p>
+          </motion.div>
 
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">";
-              Why Choose Our AI Services?;
-            </h2>;
-
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">";
-              Proven results and measurable impact for your business.;
-            </p>;
-                  </motion.div>;
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
-            {benefits.map((benefit, index) => {}
-              const IconComponent = benefit.icon;,
-              return (;,
-                <motion.div);
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => {
+              const IconComponent = benefit.icon;
+              return (
+                <motion.div
                   key={index}
-                  className="text-center"",
+                  className="text-center"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >,
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">";,
-                  <IconComponent className="w-8 h-8 text-blue-600" />";
-                  </div>;
-                  <div className="text-3xl font-bold text-blue-600 mb-2">";
+                >
+                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">
                     {benefit.stat}
-                  </div>,
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">";,
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {benefit.title}
-                  </h3>,
-                  <p className="text-gray-600">";,
+                  </h3>
+                  <p className="text-gray-600">
                     {benefit.description}
-                  </p>,
-                  </motion.div>;,
+                  </p>
+                </motion.div>
               );
             })}
-          </div>,
-                  </div>;,
-                  </section>;
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">",
-
-        <div className="container mx-auto px-4 text-center">";
-          <motion.div;
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >,
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your Business with AI?
+            </h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Let&apos;s discuss how our AI solutions can drive innovation and growth for your organization.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                Start Your AI Journey
+              </Link>
+              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
+                View All Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">";
-              Ready to Transform Your Business with AI?;
-            </h2>;
-
-            <p className="text-xl mb-8 max-w-2xl mx-auto">";
-              Let&apos;s discuss how our AI solutions can drive innovation and growth for your organization.;
-            </p>;
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                  <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
-                Start Your AI Journey;
-              </Link>;
-                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
-                View All Services;
-              </Link>;
-                  </div>;
-                  </motion.div>;
-                  </div>;
-                  </section>;
-
-      {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white">",
-        <div className="container mx-auto px-4">";,
-          <motion.div;
+      {/* Contact Information Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"",
-          >;,
-            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>";
-            <p className="text-xl mb-8 max-w-3xl mx-auto">";
-              Get in touch with our AI experts for a free consultation and discover how our cutting-edge AI solutions can revolutionize your business operations.;
-            </p>;
-            <div className="grid md:grid-cols-3 gap-8 mb-12">";
-              <div className="text-center">";
-                <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">";
-                  <span className="text-2xl">📞</span>";
-                </div>;
-                <h3 className="text-xl font-semibold mb-2">Call Us</h3>";
-                <p className="text-blue-100">+1 302 464 0950</p>";
-                <p className="text-sm text-blue-200">Available 24/7</p>";
-              </div>;
-              <div className="text-center">";
-                <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">";
-                  <span className="text-2xl">✉️</span>";
-                </div>;
-                <h3 className="text-xl font-semibold mb-2">Email Us</h3>";
-                <p className="text-blue-100">kleber@ziontechgroup.com</p>";
-                <p className="text-sm text-blue-200">Quick response guaranteed</p>";
-              </div>;
-              <div className="text-center">";
-                <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">";
-                  <span className="text-2xl">📍</span>";
-                </div>;
-                <h3 className="text-xl font-semibold mb-2">Visit Us</h3>";
-                <p className="text-blue-100">364 E Main St STE 1008</p>";
-                <p className="text-sm text-blue-200">Middletown, DE 19709</p>",
-              </div>;,
-            </div>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
-                Get Free AI Consultation;
-              </Link>;
-              <Link href="https://ziontechgroup.com" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
-                Visit Our Website;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-                  </div>;
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+              Get in Touch with Our AI Experts
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Smartphone className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+                <p className="text-gray-600">+1 302 464 0950</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Mail className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+                <p className="text-gray-600">kleber@ziontechgroup.com</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Building className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
+                <p className="text-gray-600">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+              </div>
+            </div>
+            <div className="mt-8">
+              <p className="text-gray-600 mb-4">
+                Ready to harness the power of AI for your business? 
+                Contact us today for a free AI consultation and custom solution design.
+              </p>
+              <Link 
+                href="/contact" 
+                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+              >
+                Schedule AI Consultation
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
-};
+}

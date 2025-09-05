@@ -8,7 +8,7 @@ export interface ExpandedServicePricing {}
   category: string;
   subcategory: string;,
   pricingTiers: {}
-starter: {,}
+starter: {}
   price: number;
       currency: string;,
   billingCycle: string;
@@ -74,7 +74,7 @@ export const "cybersecurityPricing": ExpandedServicePricing[] = [;"]
     "category": 'Cybersecurity',''
     "subcategory": 'Threat Intelligence',''
     "pricingTiers": {"}
-      starter: {,}
+      starter: {}
   price: 2500,"
         "currency": 'USD',''
         "billingCycle": 'monthly',''
@@ -232,7 +232,7 @@ export const "cybersecurityPricing": ExpandedServicePricing[] = [;"]
     "category": 'Cybersecurity',''
     "subcategory": 'Compliance Automation',''
     "pricingTiers": {"}
-      starter: {,}
+      starter: {}
   price: 1500,"
         "currency": 'USD',''
         "billingCycle": 'monthly',''
@@ -381,7 +381,7 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [;]
     "category": 'Data Analytics',''
     "subcategory": 'Predictive Analytics',''
     "pricingTiers": {"}
-      starter: {,}
+      starter: {}
   price: 1800,"
         "currency": 'USD',''
         "billingCycle": 'monthly',''
@@ -529,7 +529,7 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [;]
     "category": 'Cloud & DevOps',''
     "subcategory": 'Multi-Cloud Management',''
     "pricingTiers": {"}
-      starter: {,}
+      starter: {}
   price: 2000,"
         "currency": 'USD',''
         "billingCycle": 'monthly',''
@@ -677,7 +677,7 @@ export const iotEdgePricing: ExpandedServicePricing[] = [;]
     "category": 'IoT & Edge Computing',''
     "subcategory": 'Industrial IoT',''
     "pricingTiers": {"}
-      starter: {,}
+      starter: {}
   price: 2800,"
         "currency": 'USD',''
         "billingCycle": 'monthly',''
@@ -825,7 +825,7 @@ export const finTechPricing: ExpandedServicePricing[] = [;]
     "category": 'Financial Technology',''
     "subcategory": 'Quantum Finance',''
     "pricingTiers": {"}
-      starter: {,}
+      starter: {}
   price: 8000,"
         "currency": 'USD',''
         "billingCycle": 'monthly',''
@@ -973,7 +973,7 @@ export const healthcarePricing: ExpandedServicePricing[] = [;]
     "category": 'Healthcare Technology',''
     "subcategory": 'AI Diagnostics',''
     "pricingTiers": {"}
-      starter: {,}
+      starter: {}
   price: 3500,"
         "currency": 'USD',''
         "billingCycle": 'monthly',''

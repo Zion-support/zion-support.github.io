@@ -16,9 +16,9 @@ export interface AIService {}
   supportLevel: string;,
   marketPrice: string;,
   roi: string;,
-  innovationLevel: string;,
-  contactInfo: {,}
-    phone: string;,
+  innovationLevel: string;
+  contactInfo: {}
+  phone: string;
     email: string;,
     website: string};,
   technicalSpecs?: {}
@@ -67,34 +67,34 @@ export const AI_SERVICES: AIService[] = [;,
       "Appointment scheduling",",
       "FAQ automation";,",
     ],
-    targetAudience: [;,
-      "E-commerce companies",",
-      "SaaS businesses",",
-      "Healthcare providers",",
-      "Financial institutions",",
-      "Government agencies";,",
-    ],
-    tags: ["AI", "Chatbot", "NLP", "Virtual Assistant", "Customer Service"],",
-    estimatedDelivery: "4-8 weeks",",
-    supportLevel: "enterprise",",
-    marketPrice: "$2,500 - $8,000/month",",
-    roi: "300-500%",",
-    innovationLevel: "Advanced",",
-    contactInfo: {,}
-      phone: "+1 302 464 0950",",
-      email: "kleber@ziontechgroup.com",",
-      website: "https://ziontechgroup.com",",
-      address: "364 E Main St STE 1008 Middletown DE 19709";,",
+    targetAudience: ["]
+      "E-commerce companies",""
+      "SaaS businesses",""
+      "Healthcare providers",""
+      "Financial institutions",""
+      "Government agencies""];
+    ],"
+    tags: ["AI", "Chatbot", "NLP", "Virtual Assistant", "Customer Service"],""
+    estimatedDelivery: "4-8 weeks",""
+    supportLevel: "enterprise",""
+    marketPrice: "$2,500 - $8,000/month",""
+    roi: "300-500%",""
+    innovationLevel: "Advanced","
+    contactInfo: {"}
+  phone: "+1 302 464 0950",""
+      email: "kleber@ziontechgroup.com",""
+      website: "https://ziontechgroup.com",""
+      address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,}
-      technology: ["OpenAI GPT", "BERT", "Transformers", "_React", "Node.js", "WebSocket"],",
-      integrations: ["CRM systems", "Help desk", "Live chat", "Social media", "Mobile apps"],",
-      apiEndpoints: 200,
-      uptime: "99.9%",",
-      security: ["Data encryption", "GDPR compliance", "Access control", "Audit logging"];,",
-    },
-    competitors: ["IBM Watson", "Microsoft Bot Framework", "Google Dialogflow", "Amazon Lex"],",
-    marketSize: "_5.7 billion by 2025";,",
+    technicalSpecs: {"}
+  technology: ["OpenAI GPT", "BERT", "Transformers", "React", "Node.js", "WebSocket"],""
+      integrations: ["CRM systems", "Help desk", "Live chat", "Social media", "Mobile apps"],"
+      apiEndpoints: 200,"
+      uptime: "99.9%",""
+      security: ["Data encryption", "GDPR compliance", "Access control", "Audit logging"]"
+    },"
+    competitors: ["IBM Watson", "Microsoft Bot Framework", "Google Dialogflow", "Amazon Lex"],""
+    marketSize: "$15.7 billion by 2025""
   },
 
   // Machine Learning Model Development & Deployment;
@@ -133,34 +133,34 @@ export const AI_SERVICES: AIService[] = [;,
       "Image recognition",",
       "Natural language processing";,",
     ],
-    targetAudience: [;,
-      "Enterprise companies",",
-      "Financial institutions",",
-      "Healthcare organizations",",
-      "E-commerce platforms",",
-      "Manufacturing companies";,",
-    ],
-    tags: ["Machine Learning", "AI", "Predictive Analytics", "Model Development", "Data Science"],",
-    estimatedDelivery: "8-16 weeks",",
-    supportLevel: "enterprise",",
-    marketPrice: "_5,000 - _00,000/project",",
-    roi: "250-500%",",
-    innovationLevel: "Advanced",",
-    contactInfo: {,}
-      phone: "+1 302 464 0950",",
-      email: "kleber@ziontechgroup.com",",
-      website: "https://ziontechgroup.com",",
-      address: "364 E Main St STE 1008 Middletown DE 19709";,",
+    targetAudience: ["]
+      "Enterprise companies",""
+      "Financial institutions",""
+      "Healthcare organizations",""
+      "E-commerce platforms",""
+      "Manufacturing companies""];
+    ],"
+    tags: ["Machine Learning", "AI", "Predictive Analytics", "Model Development", "Data Science"],""
+    estimatedDelivery: "8-16 weeks",""
+    supportLevel: "enterprise",""
+    marketPrice: "$15,000 - $100,000/project",""
+    roi: "250-500%",""
+    innovationLevel: "Advanced","
+    contactInfo: {"}
+  phone: "+1 302 464 0950",""
+      email: "kleber@ziontechgroup.com",""
+      website: "https://ziontechgroup.com",""
+      address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,}
-      technology: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "MLflow", "Kubernetes"],",
-      integrations: ["Data warehouses", "APIs", "Cloud platforms", "Monitoring tools", "CI/CD pipelines"],",
-      apiEndpoints: 500,
-      uptime: "99.9%",",
-      security: ["Data encryption", "Model security", "Access control", "Audit logging"];,",
-    },
-    competitors: ["DataRobot", "H2O.ai", "Dataiku", "Alteryx", "SAS"],",
-    marketSize: "$31.2 billion by 2025";,",
+    technicalSpecs: {"}
+  technology: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "MLflow", "Kubernetes"],""
+      integrations: ["Data warehouses", "APIs", "Cloud platforms", "Monitoring tools", "CI/CD pipelines"],"
+      apiEndpoints: 500,"
+      uptime: "99.9%",""
+      security: ["Data encryption", "Model security", "Access control", "Audit logging"]"
+    },"
+    competitors: ["DataRobot", "H2O.ai", "Dataiku", "Alteryx", "SAS"],""
+    marketSize: "$31.2 billion by 2025""
   },
 
   // Computer Vision & Image Recognition Platform;
@@ -199,34 +199,34 @@ export const AI_SERVICES: AIService[] = [;,
       "Retail analytics",",
       "Document processing";,",
     ],
-    targetAudience: [;,
-      "Manufacturing companies",",
-      "Security firms",",
-      "Healthcare organizations",",
-      "Retail chains",",
-      "Government agencies";,",
-    ],
-    tags: ["Computer Vision", "Image Recognition", "AI", "Object Detection", "Facial Recognition"],",
-    estimatedDelivery: "6-12 weeks",",
-    supportLevel: "enterprise",",
-    marketPrice: "$3,500 - _2,000/month",",
-    roi: "200-400%",",
-    innovationLevel: "Advanced",",
-    contactInfo: {,}
-      phone: "+1 302 464 0950",",
-      email: "kleber@ziontechgroup.com",",
-      website: "https://ziontechgroup.com",",
-      address: "364 E Main St STE 1008 Middletown DE 19709";,",
+    targetAudience: ["]
+      "Manufacturing companies",""
+      "Security firms",""
+      "Healthcare organizations",""
+      "Retail chains",""
+      "Government agencies""];
+    ],"
+    tags: ["Computer Vision", "Image Recognition", "AI", "Object Detection", "Facial Recognition"],""
+    estimatedDelivery: "6-12 weeks",""
+    supportLevel: "enterprise",""
+    marketPrice: "$3,500 - $12,000/month",""
+    roi: "200-400%",""
+    innovationLevel: "Advanced","
+    contactInfo: {"}
+  phone: "+1 302 464 0950",""
+      email: "kleber@ziontechgroup.com",""
+      website: "https://ziontechgroup.com",""
+      address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,}
-      technology: ["OpenCV", "TensorFlow", "PyTorch", "YOLO", "_React", "Node.js"],",
-      integrations: ["Camera systems", "Storage platforms", "Analytics tools", "Mobile apps", "Cloud services"],",
-      apiEndpoints: 300,
-      uptime: "99.9%",",
-      security: ["Data encryption", "Privacy protection", "Access control", "Secure processing"];,",
-    },
-    competitors: ["Google Cloud Vision", "Amazon Rekognition", "Microsoft Computer Vision", "IBM Watson Visual Recognition"],",
-    marketSize: "_8.9 billion by 2025";,",
+    technicalSpecs: {"}
+  technology: ["OpenCV", "TensorFlow", "PyTorch", "YOLO", "React", "Node.js"],""
+      integrations: ["Camera systems", "Storage platforms", "Analytics tools", "Mobile apps", "Cloud services"],"
+      apiEndpoints: 300,"
+      uptime: "99.9%",""
+      security: ["Data encryption", "Privacy protection", "Access control", "Secure processing"]"
+    },"
+    competitors: ["Google Cloud Vision", "Amazon Rekognition", "Microsoft Computer Vision", "IBM Watson Visual Recognition"],""
+    marketSize: "$18.9 billion by 2025""
   },
 
   // Natural Language Processing & Text Analytics;
@@ -265,34 +265,34 @@ export const AI_SERVICES: AIService[] = [;,
       "Content moderation",",
       "Market research";,",
     ],
-    targetAudience: [;,
-      "Marketing agencies",",
-      "Customer service teams",",
-      "Research organizations",",
-      "Media companies",",
-      "Government agencies";,",
-    ],
-    tags: ["NLP", "Text Analytics", "Sentiment Analysis", "AI", "Language Processing"],",
-    estimatedDelivery: "4-8 weeks",",
-    supportLevel: "enterprise",",
-    marketPrice: "$2,800 - $9,000/month",",
-    roi: "250-450%",",
-    innovationLevel: "Advanced",",
-    contactInfo: {,}
-      phone: "+1 302 464 0950",",
-      email: "kleber@ziontechgroup.com",",
-      website: "https://ziontechgroup.com",",
-      address: "364 E Main St STE 1008 Middletown DE 19709";,",
+    targetAudience: ["]
+      "Marketing agencies",""
+      "Customer service teams",""
+      "Research organizations",""
+      "Media companies",""
+      "Government agencies""];
+    ],"
+    tags: ["NLP", "Text Analytics", "Sentiment Analysis", "AI", "Language Processing"],""
+    estimatedDelivery: "4-8 weeks",""
+    supportLevel: "enterprise",""
+    marketPrice: "$2,800 - $9,000/month",""
+    roi: "250-450%",""
+    innovationLevel: "Advanced","
+    contactInfo: {"}
+  phone: "+1 302 464 0950",""
+      email: "kleber@ziontechgroup.com",""
+      website: "https://ziontechgroup.com",""
+      address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,}
-      technology: ["spaCy", "NLTK", "Transformers", "BERT", "Python", "_React"],",
-      integrations: ["Social media APIs", "CRM systems", "Content management", "Analytics platforms"],",
-      apiEndpoints: 250,
-      uptime: "99.9%",",
-      security: ["Data encryption", "Privacy protection", "Access control", "Audit logging"];,",
-    },
-    competitors: ["Google Cloud NLP", "Amazon Comprehend", "Microsoft Text Analytics", "IBM Watson NLP"],",
-    marketSize: "$22.3 billion by 2025";,",
+    technicalSpecs: {"}
+  technology: ["spaCy", "NLTK", "Transformers", "BERT", "Python", "React"],""
+      integrations: ["Social media APIs", "CRM systems", "Content management", "Analytics platforms"],"
+      apiEndpoints: 250,"
+      uptime: "99.9%",""
+      security: ["Data encryption", "Privacy protection", "Access control", "Audit logging"]"
+    },"
+    competitors: ["Google Cloud NLP", "Amazon Comprehend", "Microsoft Text Analytics", "IBM Watson NLP"],""
+    marketSize: "$22.3 billion by 2025""
   },
 
   // AI-Powered Predictive Analytics Platform;
@@ -331,34 +331,34 @@ export const AI_SERVICES: AIService[] = [;,
       "Risk management",",
       "Market trend analysis";,",
     ],
-    targetAudience: [;,
-      "Retail companies",",
-      "Financial institutions",",
-      "Manufacturing companies",",
-      "Healthcare organizations",",
-      "E-commerce platforms";,",
-    ],
-    tags: ["Predictive Analytics", "AI", "Forecasting", "Machine Learning", "Business Intelligence"],",
-    estimatedDelivery: "6-10 weeks",",
-    supportLevel: "enterprise",",
-    marketPrice: "$4,200 - _5,000/month",",
-    roi: "300-600%",",
-    innovationLevel: "Advanced",",
-    contactInfo: {,}
-      phone: "+1 302 464 0950",",
-      email: "kleber@ziontechgroup.com",",
-      website: "https://ziontechgroup.com",",
-      address: "364 E Main St STE 1008 Middletown DE 19709";,",
+    targetAudience: ["]
+      "Retail companies",""
+      "Financial institutions",""
+      "Manufacturing companies",""
+      "Healthcare organizations",""
+      "E-commerce platforms""];
+    ],"
+    tags: ["Predictive Analytics", "AI", "Forecasting", "Machine Learning", "Business Intelligence"],""
+    estimatedDelivery: "6-10 weeks",""
+    supportLevel: "enterprise",""
+    marketPrice: "$4,200 - $15,000/month",""
+    roi: "300-600%",""
+    innovationLevel: "Advanced","
+    contactInfo: {"}
+  phone: "+1 302 464 0950",""
+      email: "kleber@ziontechgroup.com",""
+      website: "https://ziontechgroup.com",""
+      address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,}
-      technology: ["Python", "R", "Prophet", "ARIMA", "LSTM", "_React", "Node.js"],",
-      integrations: ["Data warehouses", "ERP systems", "CRM platforms", "Analytics tools"],",
-      apiEndpoints: 300,
-      uptime: "99.9%",",
-      security: ["Data encryption", "Access control", "Audit logging", "Privacy protection"];,",
-    },
-    competitors: ["SAS", "IBM SPSS", "RapidMiner", "Alteryx", "DataRobot"],",
-    marketSize: "$28.7 billion by 2025";,",
+    technicalSpecs: {"}
+  technology: ["Python", "R", "Prophet", "ARIMA", "LSTM", "React", "Node.js"],""
+      integrations: ["Data warehouses", "ERP systems", "CRM platforms", "Analytics tools"],"
+      apiEndpoints: 300,"
+      uptime: "99.9%",""
+      security: ["Data encryption", "Access control", "Audit logging", "Privacy protection"]"
+    },"
+    competitors: ["SAS", "IBM SPSS", "RapidMiner", "Alteryx", "DataRobot"],""
+    marketSize: "$28.7 billion by 2025""
   },
 
   // AI-Powered Content Generation Platform;
@@ -397,34 +397,34 @@ export const AI_SERVICES: AIService[] = [;,
       "Product descriptions",",
       "Educational materials";,",
     ],
-    targetAudience: [;,
-      "Marketing agencies",",
-      "E-commerce companies",",
-      "Content creators",",
-      "Educational institutions",",
-      "Publishing companies";,",
-    ],
-    tags: ["Content Generation", "AI", "Marketing", "Creative Writing", "Multimedia"],",
-    estimatedDelivery: "3-6 weeks",",
-    supportLevel: "standard",",
-    marketPrice: "_,800 - $6,000/month",",
-    roi: "200-400%",",
-    innovationLevel: "Advanced",",
-    contactInfo: {,}
-      phone: "+1 302 464 0950",",
-      email: "kleber@ziontechgroup.com",",
-      website: "https://ziontechgroup.com",",
-      address: "364 E Main St STE 1008 Middletown DE 19709";,",
+    targetAudience: ["]
+      "Marketing agencies",""
+      "E-commerce companies",""
+      "Content creators",""
+      "Educational institutions",""
+      "Publishing companies""];
+    ],"
+    tags: ["Content Generation", "AI", "Marketing", "Creative Writing", "Multimedia"],""
+    estimatedDelivery: "3-6 weeks",""
+    supportLevel: "standard",""
+    marketPrice: "$1,800 - $6,000/month",""
+    roi: "200-400%",""
+    innovationLevel: "Advanced","
+    contactInfo: {"}
+  phone: "+1 302 464 0950",""
+      email: "kleber@ziontechgroup.com",""
+      website: "https://ziontechgroup.com",""
+      address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,}
-      technology: ["GPT-4", "DALL-E", "Stable Diffusion", "_React", "Node.js", "Python"],",
-      integrations: ["CMS platforms", "Social media", "Email marketing", "Analytics tools"],",
-      apiEndpoints: 150,
-      uptime: "99.9%",",
-      security: ["Content security", "Copyright protection", "Access control", "Audit logging"];,",
-    },
-    competitors: ["Jasper AI", "Copy.ai", "Writesonic", "Canva", "Adobe Creative Suite"],",
-    marketSize: "_3.4 billion by 2025";,",
+    technicalSpecs: {"}
+  technology: ["GPT-4", "DALL-E", "Stable Diffusion", "React", "Node.js", "Python"],""
+      integrations: ["CMS platforms", "Social media", "Email marketing", "Analytics tools"],"
+      apiEndpoints: 150,"
+      uptime: "99.9%",""
+      security: ["Content security", "Copyright protection", "Access control", "Audit logging"]"
+    },"
+    competitors: ["Jasper AI", "Copy.ai", "Writesonic", "Canva", "Adobe Creative Suite"],""
+    marketSize: "$13.4 billion by 2025""
   },
 
   // AI-Powered Process Automation Platform;
@@ -463,34 +463,34 @@ export const AI_SERVICES: AIService[] = [;,
       "Order fulfillment",",
       "Compliance monitoring";,",
     ],
-    targetAudience: [;,
-      "Financial institutions",",
-      "Insurance companies",",
-      "Healthcare organizations",",
-      "Manufacturing companies",",
-      "Government agencies";,",
-    ],
-    tags: ["Process Automation", "AI", "RPA", "Workflow", "Business Process"],",
-    estimatedDelivery: "8-12 weeks",",
-    supportLevel: "enterprise",",
-    marketPrice: "$5,500 - _8,000/month",",
-    roi: "250-500%",",
-    innovationLevel: "Advanced",",
-    contactInfo: {,}
-      phone: "+1 302 464 0950",",
-      email: "kleber@ziontechgroup.com",",
-      website: "https://ziontechgroup.com",",
-      address: "364 E Main St STE 1008 Middletown DE 19709";,",
+    targetAudience: ["]
+      "Financial institutions",""
+      "Insurance companies",""
+      "Healthcare organizations",""
+      "Manufacturing companies",""
+      "Government agencies""];
+    ],"
+    tags: ["Process Automation", "AI", "RPA", "Workflow", "Business Process"],""
+    estimatedDelivery: "8-12 weeks",""
+    supportLevel: "enterprise",""
+    marketPrice: "$5,500 - $18,000/month",""
+    roi: "250-500%",""
+    innovationLevel: "Advanced","
+    contactInfo: {"}
+  phone: "+1 302 464 0950",""
+      email: "kleber@ziontechgroup.com",""
+      website: "https://ziontechgroup.com",""
+      address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,}
-      technology: ["Python", "RPA tools", "ML models", "Workflow engines", "_React", "Node.js"],",
-      integrations: ["ERP systems", "CRM platforms", "Document management", "Email systems"],",
-      apiEndpoints: 400,
-      uptime: "99.9%",",
-      security: ["Process security", "Data encryption", "Access control", "Audit logging"];,",
-    },
-    competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate", "Pega"],",
-    marketSize: "_9.6 billion by 2025";,",
+    technicalSpecs: {"}
+  technology: ["Python", "RPA tools", "ML models", "Workflow engines", "React", "Node.js"],""
+      integrations: ["ERP systems", "CRM platforms", "Document management", "Email systems"],"
+      apiEndpoints: 400,"
+      uptime: "99.9%",""
+      security: ["Process security", "Data encryption", "Access control", "Audit logging"]"
+    },"
+    competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate", "Pega"],""
+    marketSize: "$19.6 billion by 2025""
   },
 
   // AI-Powered Recommendation Engine;
@@ -529,34 +529,34 @@ export const AI_SERVICES: AIService[] = [;,
       "Job recommendations",",
       "Financial product suggestions";,",
     ],
-    targetAudience: [;,
-      "E-commerce platforms",",
-      "Streaming services",",
-      "Job boards",",
-      "Financial institutions",",
-      "Media companies";,",
-    ],
-    tags: ["Recommendation Engine", "AI", "Personalization", "Machine Learning", "E-commerce"],",
-    estimatedDelivery: "6-10 weeks",",
-    supportLevel: "enterprise",",
-    marketPrice: "$3,200 - _2,000/month",",
-    roi: "300-600%",",
-    innovationLevel: "Advanced",",
-    contactInfo: {,}
-      phone: "+1 302 464 0950",",
-      email: "kleber@ziontechgroup.com",",
-      website: "https://ziontechgroup.com",",
-      address: "364 E Main St STE 1008 Middletown DE 19709";,",
+    targetAudience: ["]
+      "E-commerce platforms",""
+      "Streaming services",""
+      "Job boards",""
+      "Financial institutions",""
+      "Media companies""];
+    ],"
+    tags: ["Recommendation Engine", "AI", "Personalization", "Machine Learning", "E-commerce"],""
+    estimatedDelivery: "6-10 weeks",""
+    supportLevel: "enterprise",""
+    marketPrice: "$3,200 - $12,000/month",""
+    roi: "300-600%",""
+    innovationLevel: "Advanced","
+    contactInfo: {"}
+  phone: "+1 302 464 0950",""
+      email: "kleber@ziontechgroup.com",""
+      website: "https://ziontechgroup.com",""
+      address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,}
-      technology: ["Python", "TensorFlow", "Apache Spark", "Redis", "_React", "Node.js"],",
-      integrations: ["E-commerce platforms", "Analytics tools", "User databases", "Content management"],",
-      apiEndpoints: 500,
-      uptime: "99.9%",",
-      security: ["Data privacy", "Access control", "Audit logging", "Secure APIs"];,",
-    },
-    competitors: ["Amazon Personalize", "Google Recommendations AI", "Microsoft Personalizer", "Recombee"],",
-    marketSize: "_1.2 billion by 2025";,",
+    technicalSpecs: {"}
+  technology: ["Python", "TensorFlow", "Apache Spark", "Redis", "React", "Node.js"],""
+      integrations: ["E-commerce platforms", "Analytics tools", "User databases", "Content management"],"
+      apiEndpoints: 500,"
+      uptime: "99.9%",""
+      security: ["Data privacy", "Access control", "Audit logging", "Secure APIs"]"
+    },"
+    competitors: ["Amazon Personalize", "Google Recommendations AI", "Microsoft Personalizer", "Recombee"],""
+    marketSize: "$11.2 billion by 2025""
   },
 
   // AI-Powered Fraud Detection System;
@@ -595,34 +595,34 @@ export const AI_SERVICES: AIService[] = [;,
       "Credit card fraud",",
       "Account takeover prevention";,",
     ],
-    targetAudience: [;,
-      "Financial institutions",",
-      "E-commerce companies",",
-      "Insurance companies",",
-      "Payment processors",",
-      "Government agencies";,",
-    ],
-    tags: ["Fraud Detection", "AI", "Security", "Machine Learning", "Risk Management"],",
-    estimatedDelivery: "8-14 weeks",",
-    supportLevel: "enterprise",",
-    marketPrice: "$4,800 - $20,000/month",",
-    roi: "400-800%",",
-    innovationLevel: "Advanced",",
-    contactInfo: {,}
-      phone: "+1 302 464 0950",",
-      email: "kleber@ziontechgroup.com",",
-      website: "https://ziontechgroup.com",",
-      address: "364 E Main St STE 1008 Middletown DE 19709";,",
+    targetAudience: ["]
+      "Financial institutions",""
+      "E-commerce companies",""
+      "Insurance companies",""
+      "Payment processors",""
+      "Government agencies""];
+    ],"
+    tags: ["Fraud Detection", "AI", "Security", "Machine Learning", "Risk Management"],""
+    estimatedDelivery: "8-14 weeks",""
+    supportLevel: "enterprise",""
+    marketPrice: "$4,800 - $20,000/month",""
+    roi: "400-800%",""
+    innovationLevel: "Advanced","
+    contactInfo: {"}
+  phone: "+1 302 464 0950",""
+      email: "kleber@ziontechgroup.com",""
+      website: "https://ziontechgroup.com",""
+      address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,}
-      technology: ["Python", "TensorFlow", "XGBoost", "Apache Kafka", "_React", "Node.js"],",
-      integrations: ["Payment systems", "Banking APIs", "Identity verification", "Risk management tools"],",
-      apiEndpoints: 300,
-      uptime: "99.99%",",
-      security: ["Data encryption", "Secure processing", "Access control", "Audit logging"];,",
-    },
-    competitors: ["FICO", "SAS", "IBM Safer Payments", "ACI Worldwide", "Feedzai"],",
-    marketSize: "$9.8 billion by 2025";,",
+    technicalSpecs: {"}
+  technology: ["Python", "TensorFlow", "XGBoost", "Apache Kafka", "React", "Node.js"],""
+      integrations: ["Payment systems", "Banking APIs", "Identity verification", "Risk management tools"],"
+      apiEndpoints: 300,"
+      uptime: "99.99%",""
+      security: ["Data encryption", "Secure processing", "Access control", "Audit logging"]"
+    },"
+    competitors: ["FICO", "SAS", "IBM Safer Payments", "ACI Worldwide", "Feedzai"],""
+    marketSize: "$9.8 billion by 2025""
   },
 
   // AI-Powered Voice & Speech Recognition;
@@ -661,34 +661,34 @@ export const AI_SERVICES: AIService[] = [;,
       "Accessibility tools",",
       "Voice-controlled applications";,",
     ],
-    targetAudience: [;,
-      "Software companies",",
-      "Healthcare organizations",",
-      "Educational institutions",",
-      "Government agencies",",
-      "Accessibility service providers";,",
-    ],
-    tags: ["Speech Recognition", "Voice AI", "Transcription", "Accessibility", "Voice Commands"],",
-    estimatedDelivery: "4-8 weeks",",
-    supportLevel: "standard",",
-    marketPrice: "$2,200 - $8,000/month",",
-    roi: "200-400%",",
-    innovationLevel: "Advanced",",
-    contactInfo: {,}
-      phone: "+1 302 464 0950",",
-      email: "kleber@ziontechgroup.com",",
-      website: "https://ziontechgroup.com",",
-      address: "364 E Main St STE 1008 Middletown DE 19709";,",
+    targetAudience: ["]
+      "Software companies",""
+      "Healthcare organizations",""
+      "Educational institutions",""
+      "Government agencies",""
+      "Accessibility service providers""];
+    ],"
+    tags: ["Speech Recognition", "Voice AI", "Transcription", "Accessibility", "Voice Commands"],""
+    estimatedDelivery: "4-8 weeks",""
+    supportLevel: "standard",""
+    marketPrice: "$2,200 - $8,000/month",""
+    roi: "200-400%",""
+    innovationLevel: "Advanced","
+    contactInfo: {"}
+  phone: "+1 302 464 0950",""
+      email: "kleber@ziontechgroup.com",""
+      website: "https://ziontechgroup.com",""
+      address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,}
-      technology: ["DeepSpeech", "Wav2Vec", "Whisper", "_React", "Node.js", "WebRTC"],",
-      integrations: ["Mobile apps", "Web applications", "Call centers", "Meeting platforms"],",
-      apiEndpoints: 200,
-      uptime: "99.9%",",
-      security: ["Data encryption", "Privacy protection", "Access control", "Secure processing"];,",
-    },
-    competitors: ["Google Speech-to-Text", "Amazon Transcribe", "Microsoft Speech Services", "IBM Watson Speech"],",
-    marketSize: "$7.5 billion by 2025";,",
+    technicalSpecs: {"}
+  technology: ["DeepSpeech", "Wav2Vec", "Whisper", "React", "Node.js", "WebRTC"],""
+      integrations: ["Mobile apps", "Web applications", "Call centers", "Meeting platforms"],"
+      apiEndpoints: 200,"
+      uptime: "99.9%",""
+      security: ["Data encryption", "Privacy protection", "Access control", "Secure processing"]"
+    },"
+    competitors: ["Google Speech-to-Text", "Amazon Transcribe", "Microsoft Speech Services", "IBM Watson Speech"],""
+    marketSize: "$7.5 billion by 2025""
   },
 
   // AI-Powered Predictive Maintenance System;
@@ -727,34 +727,34 @@ export const AI_SERVICES: AIService[] = [;,
       "Industrial machinery",",
       "Data center infrastructure";,",
     ],
-    targetAudience: [;,
-      "Manufacturing companies",",
-      "Fleet management companies",",
-      "Facility managers",",
-      "Industrial operations",",
-      "Equipment rental companies";,",
-    ],
-    tags: ["Predictive Analytics", "IoT", "Machine Learning", "Maintenance", "Industrial AI"],",
-    estimatedDelivery: "8-12 weeks",",
-    supportLevel: "enterprise",",
-    marketPrice: "$4,500 - _5,000/month",",
-    roi: "300-500%",",
-    innovationLevel: "Cutting-edge",",
-    contactInfo: {,}
-      phone: "+1 302 464 0950",",
-      email: "kleber@ziontechgroup.com",",
-      website: "https://ziontechgroup.com",",
-      address: "364 E Main St STE 1008 Middletown DE 19709";,",
+    targetAudience: ["]
+      "Manufacturing companies",""
+      "Fleet management companies",""
+      "Facility managers",""
+      "Industrial operations",""
+      "Equipment rental companies""];
+    ],"
+    tags: ["Predictive Analytics", "IoT", "Machine Learning", "Maintenance", "Industrial AI"],""
+    estimatedDelivery: "8-12 weeks",""
+    supportLevel: "enterprise",""
+    marketPrice: "$4,500 - $15,000/month",""
+    roi: "300-500%",""
+    innovationLevel: "Cutting-edge","
+    contactInfo: {"}
+  phone: "+1 302 464 0950",""
+      email: "kleber@ziontechgroup.com",""
+      website: "https://ziontechgroup.com",""
+      address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,}
-      technology: ["TensorFlow", "PyTorch", "IoT protocols", "Time series analysis", "_React", "Node.js"],",
-      integrations: ["SAP", "Oracle", "Maximo", "Siemens", "Schneider Electric"],",
-      apiEndpoints: 300,
-      uptime: "99.95%",",
-      security: ["End-to-end encryption", "Secure IoT protocols", "Data privacy", "Access control"];,",
-    },
-    competitors: ["IBM Maximo", "SAP Predictive Maintenance", "GE Predix", "PTC ThingWorx"],",
-    marketSize: "_2.3 billion by 2025";,",
+    technicalSpecs: {"}
+  technology: ["TensorFlow", "PyTorch", "IoT protocols", "Time series analysis", "React", "Node.js"],""
+      integrations: ["SAP", "Oracle", "Maximo", "Siemens", "Schneider Electric"],"
+      apiEndpoints: 300,"
+      uptime: "99.95%",""
+      security: ["End-to-end encryption", "Secure IoT protocols", "Data privacy", "Access control"]"
+    },"
+    competitors: ["IBM Maximo", "SAP Predictive Maintenance", "GE Predix", "PTC ThingWorx"],""
+    marketSize: "$12.3 billion by 2025""
   },
 
   // AI-Powered Financial Risk Assessment Platform;
@@ -793,34 +793,34 @@ export const AI_SERVICES: AIService[] = [;,
       "Supply chain risk assessment",",
       "Vendor risk evaluation";,",
     ],
-    targetAudience: [;,
-      "Banks and credit unions",",
-      "Insurance companies",",
-      "Investment firms",",
-      "Fintech companies",",
-      "Corporate treasuries";,",
-    ],
-    tags: ["FinTech", "Risk Management", "Machine Learning", "Financial AI", "Compliance"],",
-    estimatedDelivery: "10-14 weeks",",
-    supportLevel: "enterprise",",
-    marketPrice: "$3,500 - _2,000/month",",
-    roi: "250-400%",",
-    innovationLevel: "Advanced",",
-    contactInfo: {,}
-      phone: "+1 302 464 0950",",
-      email: "kleber@ziontechgroup.com",",
-      website: "https://ziontechgroup.com",",
-      address: "364 E Main St STE 1008 Middletown DE 19709";,",
+    targetAudience: ["]
+      "Banks and credit unions",""
+      "Insurance companies",""
+      "Investment firms",""
+      "Fintech companies",""
+      "Corporate treasuries""];
+    ],"
+    tags: ["FinTech", "Risk Management", "Machine Learning", "Financial AI", "Compliance"],""
+    estimatedDelivery: "10-14 weeks",""
+    supportLevel: "enterprise",""
+    marketPrice: "$3,500 - $12,000/month",""
+    roi: "250-400%",""
+    innovationLevel: "Advanced","
+    contactInfo: {"}
+  phone: "+1 302 464 0950",""
+      email: "kleber@ziontechgroup.com",""
+      website: "https://ziontechgroup.com",""
+      address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,}
-      technology: ["Python", "Scikit-learn", "XGBoost", "TensorFlow", "_React", "PostgreSQL"],",
-      integrations: ["FICO", "Experian", "Equifax", "TransUnion", "Banking APIs"],",
-      apiEndpoints: 250,
-      uptime: "99.9%",",
-      security: ["SOC 2 Type II", "PCI DSS", "GDPR", "End-to-end encryption"];,",
-    },
-    competitors: ["FICO", "SAS Risk Management", "IBM SPSS", "SAP Risk Management"],",
-    marketSize: "$8.7 billion by 2025";,",
+    technicalSpecs: {"}
+  technology: ["Python", "Scikit-learn", "XGBoost", "TensorFlow", "React", "PostgreSQL"],""
+      integrations: ["FICO", "Experian", "Equifax", "TransUnion", "Banking APIs"],"
+      apiEndpoints: 250,"
+      uptime: "99.9%",""
+      security: ["SOC 2 Type II", "PCI DSS", "GDPR", "End-to-end encryption"]"
+    },"
+    competitors: ["FICO", "SAS Risk Management", "IBM SPSS", "SAP Risk Management"],""
+    marketSize: "$8.7 billion by 2025""
   },
 
   // AI-Powered Supply Chain Optimization Platform;
@@ -859,34 +859,34 @@ export const AI_SERVICES: AIService[] = [;,
       "Food and beverage distribution",",
       "Pharmaceutical supply chains";,",
     ],
-    targetAudience: [;,
-      "Retail companies",",
-      "Manufacturing firms",",
-      "E-commerce businesses",",
-      "Logistics companies",",
-      "Distribution centers";,",
-    ],
-    tags: ["Supply Chain", "Optimization", "Demand Forecasting", "Inventory Management", "AI"],",
-    estimatedDelivery: "12-16 weeks",",
-    supportLevel: "enterprise",",
-    marketPrice: "$4,000 - _8,000/month",",
-    roi: "200-350%",",
-    innovationLevel: "Advanced",",
-    contactInfo: {,}
-      phone: "+1 302 464 0950",",
-      email: "kleber@ziontechgroup.com",",
-      website: "https://ziontechgroup.com",",
-      address: "364 E Main St STE 1008 Middletown DE 19709";,",
+    targetAudience: ["]
+      "Retail companies",""
+      "Manufacturing firms",""
+      "E-commerce businesses",""
+      "Logistics companies",""
+      "Distribution centers""];
+    ],"
+    tags: ["Supply Chain", "Optimization", "Demand Forecasting", "Inventory Management", "AI"],""
+    estimatedDelivery: "12-16 weeks",""
+    supportLevel: "enterprise",""
+    marketPrice: "$4,000 - $18,000/month",""
+    roi: "200-350%",""
+    innovationLevel: "Advanced","
+    contactInfo: {"}
+  phone: "+1 302 464 0950",""
+      email: "kleber@ziontechgroup.com",""
+      website: "https://ziontechgroup.com",""
+      address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,}
-      technology: ["Python", "Apache Spark", "TensorFlow", "_React", "MongoDB", "Kubernetes"],",
-      integrations: ["SAP", "Oracle", "Salesforce", "WMS systems", "TMS systems"],",
-      apiEndpoints: 400,
-      uptime: "99.9%",",
-      security: ["Data encryption", "Access control", "Audit trails", "Secure APIs"];,",
-    },
-    competitors: ["SAP Ariba", "Oracle Supply Chain", "Kinaxis", "Blue Yonder"],",
-    marketSize: "_5.2 billion by 2025";,",
+    technicalSpecs: {"}
+  technology: ["Python", "Apache Spark", "TensorFlow", "React", "MongoDB", "Kubernetes"],""
+      integrations: ["SAP", "Oracle", "Salesforce", "WMS systems", "TMS systems"],"
+      apiEndpoints: 400,"
+      uptime: "99.9%",""
+      security: ["Data encryption", "Access control", "Audit trails", "Secure APIs"]"
+    },"
+    competitors: ["SAP Ariba", "Oracle Supply Chain", "Kinaxis", "Blue Yonder"],""
+    marketSize: "$15.2 billion by 2025""
   },
 
   // AI-Powered Healthcare Diagnostics Assistant;
@@ -925,34 +925,34 @@ export const AI_SERVICES: AIService[] = [;,
       "Specialist consultations",",
       "Remote patient monitoring";,",
     ],
-    targetAudience: [;,
-      "Hospitals and clinics",",
-      "Radiology practices",",
-      "Primary care physicians",",
-      "Specialists",",
-      "Telemedicine platforms";,",
-    ],
-    tags: ["Healthcare AI", "Medical Diagnostics", "Image Analysis", "Clinical Decision Support", "Telemedicine"],",
-    estimatedDelivery: "16-20 weeks",",
-    supportLevel: "enterprise",",
-    marketPrice: "$5,500 - $25,000/month",",
-    roi: "300-500%",",
-    innovationLevel: "Cutting-edge",",
-    contactInfo: {,}
-      phone: "+1 302 464 0950",",
-      email: "kleber@ziontechgroup.com",",
-      website: "https://ziontechgroup.com",",
-      address: "364 E Main St STE 1008 Middletown DE 19709";,",
+    targetAudience: ["]
+      "Hospitals and clinics",""
+      "Radiology practices",""
+      "Primary care physicians",""
+      "Specialists",""
+      "Telemedicine platforms""];
+    ],"
+    tags: ["Healthcare AI", "Medical Diagnostics", "Image Analysis", "Clinical Decision Support", "Telemedicine"],""
+    estimatedDelivery: "16-20 weeks",""
+    supportLevel: "enterprise",""
+    marketPrice: "$5,500 - $25,000/month",""
+    roi: "300-500%",""
+    innovationLevel: "Cutting-edge","
+    contactInfo: {"}
+  phone: "+1 302 464 0950",""
+      email: "kleber@ziontechgroup.com",""
+      website: "https://ziontechgroup.com",""
+      address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,}
-      technology: ["PyTorch", "TensorFlow", "DICOM", "HL7 FHIR", "_React", "Node.js"],",
-      integrations: ["Epic", "Cerner", "Allscripts", "PACS systems", "EMR systems"],",
-      apiEndpoints: 500,
-      uptime: "99.99%",",
-      security: ["HIPAA compliance", "Data encryption", "Access control", "Audit logging"];,",
-    },
-    competitors: ["IBM Watson Health", "Google DeepMind", "Microsoft Healthcare", "NVIDIA Clara"],",
-    marketSize: "$45.2 billion by 2025";,",
+    technicalSpecs: {"}
+  technology: ["PyTorch", "TensorFlow", "DICOM", "HL7 FHIR", "React", "Node.js"],""
+      integrations: ["Epic", "Cerner", "Allscripts", "PACS systems", "EMR systems"],"
+      apiEndpoints: 500,"
+      uptime: "99.99%",""
+      security: ["HIPAA compliance", "Data encryption", "Access control", "Audit logging"]"
+    },"
+    competitors: ["IBM Watson Health", "Google DeepMind", "Microsoft Healthcare", "NVIDIA Clara"],""
+    marketSize: "$45.2 billion by 2025""
   },
 
   // AI-Powered Cybersecurity Threat Intelligence;
@@ -991,33 +991,33 @@ export const AI_SERVICES: AIService[] = [;,
       "Endpoint protection",",
       "Security operations centers";,",
     ],
-    targetAudience: [;,
-      "Large enterprises",",
-      "Government agencies",",
-      "Financial institutions",",
-      "Healthcare organizations",",
-      "Critical infrastructure";,",
-    ],
-    tags: ["Cybersecurity", "Threat Intelligence", "AI Security", "Incident Response", "Compliance"],",
-    estimatedDelivery: "10-14 weeks",",
-    supportLevel: "enterprise",",
-    marketPrice: "$3,200 - _5,000/month",",
-    roi: "200-400%",",
-    innovationLevel: "Advanced",",
-    contactInfo: {,}
-      phone: "+1 302 464 0950",",
-      email: "kleber@ziontechgroup.com",",
-      website: "https://ziontechgroup.com",",
-      address: "364 E Main St STE 1008 Middletown DE 19709";,",
+    targetAudience: ["]
+      "Large enterprises",""
+      "Government agencies",""
+      "Financial institutions",""
+      "Healthcare organizations",""
+      "Critical infrastructure""];
+    ],"
+    tags: ["Cybersecurity", "Threat Intelligence", "AI Security", "Incident Response", "Compliance"],""
+    estimatedDelivery: "10-14 weeks",""
+    supportLevel: "enterprise",""
+    marketPrice: "$3,200 - $15,000/month",""
+    roi: "200-400%",""
+    innovationLevel: "Advanced","
+    contactInfo: {"}
+  phone: "+1 302 464 0950",""
+      email: "kleber@ziontechgroup.com",""
+      website: "https://ziontechgroup.com",""
+      address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,}
-      technology: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "_React", "Node.js"],",
-      integrations: ["SIEM systems", "Firewalls", "EDR solutions", "Cloud platforms", "Threat feeds"],",
-      apiEndpoints: 350,
-      uptime: "99.9%",",
-      security: ["SOC 2", "ISO 27001", "Data encryption", "Secure communications"];,",
-    },
-    competitors: ["CrowdStrike", "Palo Alto Networks", "IBM Security", "Microsoft Sentinel"],",
-    marketSize: "$22.1 billion by 2025";,",
-  }
-];
+    technicalSpecs: {"}
+  technology: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "React", "Node.js"],""
+      integrations: ["SIEM systems", "Firewalls", "EDR solutions", "Cloud platforms", "Threat feeds"],"
+      apiEndpoints: 350,"
+      uptime: "99.9%",""
+      security: ["SOC 2", "ISO 27001", "Data encryption", "Secure communications"]"
+    },"
+    competitors: ["CrowdStrike", "Palo Alto Networks", "IBM Security", "Microsoft Sentinel"],""
+    marketSize: "$22.1 billion by 2025""
+  };
+];"
