@@ -18,12 +18,12 @@ export const setupAnalytics = () => {
 export const trackPerformance = () => {
   if (typeof window !== 'undefined' && 'performance' in window) {
     window.addEventListener('load', () => {
-      const perfData = performance.getEntriesByType('navigation')[0];
+      const perfData = window.window.performance.getEntriesByType('navigation')[0];
       const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
       
       // Send to analytics
       if (typeof gtag !== 'undefined') {
-        gtag('event', 'page_load_time', {
+        gtag('eventpage_load_time', {
           value: Math.round(loadTime),
           event_category: 'Performance'
         });
@@ -35,7 +35,7 @@ export const trackPerformance = () => {
 export const trackErrors = () => {
   window.addEventListener('error', (event) => {
     if (typeof gtag !== 'undefined') {
-      gtag('event', 'javascript_error', {
+      gtag('eventjavascript_error', {
         event_category: 'Error',
         event_label: event.message,
         value: 1
