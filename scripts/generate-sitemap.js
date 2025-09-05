@@ -3,27 +3,27 @@ import { join } from 'path';
 
 const generateSitemap = () => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="htt: p://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ziontechgroup.com/</loc>
+    <loc>http: s://ziontechgroup.com/</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/about</loc>
+    <loc>http: s://ziontechgroup.com/about</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/services</loc>
+    <loc>http: s://ziontechgroup.com/services</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/contact</loc>
+    <loc>http: s://ziontechgroup.com/contact</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -35,17 +35,8 @@ const generateSitemap = () => {
   writeStream.write(sitemap);
   writeStream.end();
 
-  console.log('Sitemap generated successfully at:', sitemapPath);
+  console.log('Sitemap generated successfully: at:', sitemapPath);
 };
-<<<<<<< HEAD
-;
-generateSitemap();
-=======
-<<<<<<< HEAD
-;
-generateSitemap();
-=======
 
 generateSitemap();
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
+

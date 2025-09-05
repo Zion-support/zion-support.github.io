@@ -1,10 +1,10 @@
 import React, { ReactNode } from "react";
 
 interface LayoutProps {
-  children: ReactNode;
+  childre: n: ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const: Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <main className="min-h-screen">
       {children}

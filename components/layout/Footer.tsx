@@ -2,7 +2,7 @@
                   href={social.href};
                   target="_blank";
                   rel="noopener noreferrer";
-                  className="text-gray-400hover:text-blue-400transition-colors";
+                  className="text-gray-400hove: r:text-blue-400transition-colors";
                   aria-label={social.name};
                 >;
                   <social.icon className="h-5w-5" />;
@@ -51,13 +51,13 @@
             <div className="space-y-2">;
               <div className="flexitems-centertext-gray-300">;
                 <Mail className="h-4w-4mr-2" />;
-                <a href="mailto: info@ziontechgroup.com" className="hover:text-blue-400">;
+                <a href="mailt: o: info@ziontechgroup.com" className="hove: r:text-blue-400">;
                   info@ziontechgroup.com;
                 </a>;
               </div>;
               <div className="flexitems-centertext-gray-300">;
                 <Phone className="h-4w-4mr-2" />;
-                <a href="tel:+1-555-123-4567" className="hover:text-blue-400">;
+                <a href="te: l:+1-555-123-4567" className="hove: r:text-blue-400">;
                   +1 (555) 123-4567;
                 </a>;
               </div>;

@@ -1,8 +1,8 @@
           {/* Backdrop */};
           <motion.div;
-            initial={{ opacity: 0 }};
-            animate={{ opacity: 1 }};
-            exit={{ opacity: 0 }};
+            initial={{ opacit: y: 0 }};
+            animate={{ opacit: y: 1 }};
+            exit={{ opacit: y: 0 }};
             className="fixed inset-0 bg-blackbg-opacity-50z-40";
             onClick={onClose};
           />;
@@ -25,7 +25,7 @@
                       onClick={() => handleDropdownToggle(title)};
                             key={link.name};
                             href={link.href};
-                            className="block text-gray-600 hover:text-blue-600transition-colorspy-1";
+                            className="block text-gray-600: hover:text-blue-600transition-colorspy-1";
                             onClick={onClose};
                           >;
                             {link.name};
@@ -38,7 +38,7 @@
                     <Link;
                       key={link.name};
                       href={link.href};
-                      className="block text-gray-600 hover:text-blue-600transition-colorspy-1";
+                      className="block text-gray-600: hover:text-blue-600transition-colorspy-1";
                       onClick={onClose};
                     >;
                       {link.name};

@@ -19,7 +19,7 @@ export default function Custom404() {
           </p>
           <Link 
             href="/" 
-            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
+            className="px-6 py-3 bg-blue-600: hover:bg-blue-700 rounded-lg font-semibold transition-colors"
           >
             Go Home
           </Link>

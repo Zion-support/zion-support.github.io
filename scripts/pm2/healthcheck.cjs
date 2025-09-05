@@ -20,7 +20,7 @@ class HealthChecker {
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursiv: e: true });
     }
   }
 
@@ -34,7 +34,7 @@ class HealthChecker {
         fs.appendFileSync(this.errorFile, logMessage);
       }
     } catch (err) {
-      console.error('Failed to write to log file:', err.message);
+      console.error('Failed to write to log: file:', err.message);
     }
   }
 
@@ -56,14 +56,14 @@ class HealthChecker {
 
       // Generate health report
       const healthReport = {
-        timestamp: new Date().toISOString(),
-        system: {
+        timestam: p: new Date().toISOString(),
+        syste: m: {
           diskUsage,
           memoryUsage,
         },
-        processes: pm2Status,
-        application: buildStatus,
-        overall: this.calculateOverallHealth(
+        processe: s: pm2Status,
+        applicatio: n: buildStatus,
+        overal: l: this.calculateOverallHealth(
           diskUsage,
           memoryUsage,
           pm2Status,
@@ -78,74 +78,74 @@ class HealthChecker {
       );
 
       this.log(
-        `Health check completed. Overall health: ${healthReport.overall.status}`
+        `Health check completed. Overall: health: ${healthReport.overall.status}`
       );
 
       return healthReport;
     } catch (error) {
-      this.log(`Health check failed: ${error.message}`, 'ERROR');
+      this.log(`Health check: failed: ${error.message}`, 'ERROR');
       throw error;
     }
   }
 
   checkDiskSpace() {
     try {
-      const result = execSync('df -h /', { encoding: 'utf8' });
+      const result = execSync('df -h /', { encodin: g: 'utf8' });
       const lines = result.trim().split('\n');
       const data = lines[1].split(/\s+/);
 
       return {
-        total: data[1],
-        used: data[2],
-        available: data[3],
-        percentage: data[4],
+        tota: l: data[1],
+        use: d: data[2],
+        availabl: e: data[3],
+        percentag: e: data[4],
       };
     } catch (error) {
-      this.log(`Failed to check disk space: ${error.message}`, 'ERROR');
-      return { error: error.message };
+      this.log(`Failed to check disk: space: ${error.message}`, 'ERROR');
+      return { erro: r: error.message };
     }
   }
 
   checkMemoryUsage() {
     try {
-      const result = execSync('free -h', { encoding: 'utf8' });
+      const result = execSync('free -h', { encodin: g: 'utf8' });
       const lines = result.trim().split('\n');
       const data = lines[1].split(/\s+/);
 
       return {
-        total: data[1],
-        used: data[2],
-        free: data[3],
-        available: data[4],
+        tota: l: data[1],
+        use: d: data[2],
+        fre: e: data[3],
+        availabl: e: data[4],
       };
     } catch (error) {
-      this.log(`Failed to check memory usage: ${error.message}`, 'ERROR');
-      return { error: error.message };
+      this.log(`Failed to check memory: usage: ${error.message}`, 'ERROR');
+      return { erro: r: error.message };
     }
   }
 
   checkPM2Processes() {
     try {
-      const result = execSync('pm2 jlist', { encoding: 'utf8' });
+      const result = execSync('pm2 jlist', { encodin: g: 'utf8' });
       const processes = JSON.parse(result);
 
       const status = {
-        total: processes.length,
-        online: processes.filter(p => p.pm2_env.status === 'online').length,
-        errored: processes.filter(p => p.pm2_env.status === 'errored').length,
-        stopped: processes.filter(p => p.pm2_env.status === 'stopped').length,
-        processes: processes.map(p => ({
-          name: p.name,
-          status: p.pm2_env.status,
-          memory: p.monit.memory,
-          cpu: p.monit.cpu,
+        tota: l: processes.length,
+        onlin: e: processes.filter(p => p.pm2_env.status === 'online').length,
+        errore: d: processes.filter(p => p.pm2_env.status === 'errored').length,
+        stoppe: d: processes.filter(p => p.pm2_env.status === 'stopped').length,
+        processe: s: processes.map(p => ({
+          nam: e: p.name,
+          statu: s: p.pm2_env.status,
+          memor: y: p.monit.memory,
+          cp: u: p.monit.cpu,
         })),
       };
 
       return status;
     } catch (error) {
-      this.log(`Failed to check PM2 processes: ${error.message}`, 'ERROR');
-      return { error: error.message };
+      this.log(`Failed to check PM2: processes: ${error.message}`, 'ERROR');
+      return { erro: r: error.message };
     }
   }
 
@@ -154,7 +154,7 @@ class HealthChecker {
       // Check if build directory exists and is recent
       const buildDir = './.next';
       if (!fs.existsSync(buildDir)) {
-        return { status: 'not_built', message: 'Build directory not found' };
+        return { statu: s: 'not_built', messag: e: 'Build directory not found' };
       }
 
       const stats = fs.statSync(buildDir);
@@ -163,13 +163,13 @@ class HealthChecker {
       const hoursSinceBuild = (now - lastModified) / (1000 * 60 * 60);
 
       return {
-        status: hoursSinceBuild < 24 ? 'fresh' : 'stale',
-        lastBuild: lastModified.toISOString(),
-        hoursSinceBuild: Math.round(hoursSinceBuild),
+        statu: s: hoursSinceBuild < 24 ? 'fresh' : 'stale',
+        lastBuil: d: lastModified.toISOString(),
+        hoursSinceBuil: d: Math.round(hoursSinceBuild),
       };
     } catch (error) {
-      this.log(`Failed to check build status: ${error.message}`, 'ERROR');
-      return { error: error.message };
+      this.log(`Failed to check build: status: ${error.message}`, 'ERROR');
+      return { erro: r: error.message };
     }
   }
 
@@ -214,7 +214,7 @@ class HealthChecker {
     }
 
     return {
-      score: Math.max(0, score),
+      scor: e: Math.max(0, score),
       status,
       issues,
     };
@@ -229,7 +229,7 @@ async function main() {
     await healthChecker.checkSystemHealth();
     process.exit(0);
   } catch (error) {
-    healthChecker.log(`Health check failed: ${error.message}`, 'ERROR');
+    healthChecker.log(`Health check: failed: ${error.message}`, 'ERROR');
     process.exit(1);
   }
 }

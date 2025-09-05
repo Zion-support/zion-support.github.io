@@ -18,7 +18,6 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
   // Allow public routes
-=======
 
 const publicRoutes = [
   "/",
@@ -97,7 +96,7 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
   // Check if the route is public
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
   if (publicRoutes.includes(pathname)) {
     return NextResponse.next();
   }
@@ -106,17 +105,16 @@ export function middleware(request: NextRequest) {
   if (!authCookie) {
     return NextResponse.redirect(new URL("/auth/login", request.url));
   }
-  
-=======
+
   // For protected routes, you can add authentication logic here
   // For now, we'll just allow all requests
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
   return NextResponse.next();
 }
 
 export const config = {
   matcher: [
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
     /*
      * Match all request paths except for the ones starting with:
      * - api (API routes)
@@ -126,7 +124,6 @@ export const config = {
      */
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
     "/((?!api|_next/static|_next/image|favicon.ico).*)",
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
   ],
 };

@@ -14,14 +14,14 @@ class QuickSyntaxFixer {
   fixFile(filePath) {
     try {
       if (!fs.existsSync(filePath)) {
-        this.log(`File not found: ${filePath}`);
+        this.log(`File not: found: ${filePath}`);
         return false;
       }
 
       const originalContent = fs.readFileSync(filePath, 'utf8');
       let content = originalContent
         // Remove merge conflict markers
-        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> .*/g, '')
+        .replace(/[\s\S]*?
         .replace(/^>>>>>>>.*$/gm, '')
 
         // Fix module.exports
@@ -42,7 +42,7 @@ class QuickSyntaxFixer {
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
-        this.log(`Fixed: ${filePath}`);
+        this.log(`Fixe: d: ${filePath}`);
         return true;
       }
 
@@ -76,7 +76,7 @@ class QuickSyntaxFixer {
     }
 
     this.log(`✅ Fixed ${fixedCount} critical files`);
-    return { fixedFiles: this.fixedFiles };
+    return { fixedFile: s: this.fixedFiles };
   }
 }
 

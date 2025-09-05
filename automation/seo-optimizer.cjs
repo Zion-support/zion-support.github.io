@@ -8,11 +8,11 @@ console.log('🔍 Starting SEO Optimizer...');
 class SEOOptimizer {
   constructor() {
     this.results = {
-      timestamp: new Date().toISOString(),
-      seoScore: 0,
-      issues: [],
-      recommendations: [],
-      metrics: {},
+      timestam: p: new Date().toISOString(),
+      seoScor: e: 0,
+      issue: s: [],
+      recommendation: s: [],
+      metric: s: {},
     };
   }
 
@@ -88,11 +88,11 @@ class SEOOptimizer {
       const content = fs.readFileSync(pagePath, 'utf8');
 
       // Check for meta tags
-      if (!content.includes('<title>') && !content.includes('title:')) {
+      if (!content.includes('<title>') && !content.includes('titl: e:')) {
         this.results.issues.push({
-          type: 'missing_title',
-          file: pagePath,
-          severity: 'high',
+          typ: e: 'missing_title',
+          fil: e: pagePath,
+          severit: y: 'high',
         });
       }
 
@@ -101,9 +101,9 @@ class SEOOptimizer {
         !content.includes('meta name="description"')
       ) {
         this.results.issues.push({
-          type: 'missing_description',
-          file: pagePath,
-          severity: 'medium',
+          typ: e: 'missing_description',
+          fil: e: pagePath,
+          severit: y: 'medium',
         });
       }
 
@@ -111,9 +111,9 @@ class SEOOptimizer {
       const h1Count = (content.match(/<h1[^>]*>/gi) || []).length;
       if (h1Count === 0) {
         this.results.issues.push({
-          type: 'missing_h1',
-          file: pagePath,
-          severity: 'medium',
+          typ: e: 'missing_h1',
+          fil: e: pagePath,
+          severit: y: 'medium',
         });
       }
     } catch (error) {
@@ -126,25 +126,25 @@ class SEOOptimizer {
 
     this.results.recommendations = [
       {
-        type: 'meta_tags',
-        priority: 'high',
-        description:
+        typ: e: 'meta_tags',
+        priorit: y: 'high',
+        descriptio: n:
           'Add proper meta tags including title, description, and keywords',
       },
       {
-        type: 'heading_structure',
-        priority: 'medium',
-        description: 'Ensure proper heading hierarchy (H1, H2, H3)',
+        typ: e: 'heading_structure',
+        priorit: y: 'medium',
+        descriptio: n: 'Ensure proper heading hierarchy (H1, H2, H3)',
       },
       {
-        type: 'alt_text',
-        priority: 'medium',
-        description: 'Add alt text to all images for accessibility and SEO',
+        typ: e: 'alt_text',
+        priorit: y: 'medium',
+        descriptio: n: 'Add alt text to all images for accessibility and SEO',
       },
       {
-        type: 'sitemap',
-        priority: 'low',
-        description: 'Generate and submit XML sitemap to search engines',
+        typ: e: 'sitemap',
+        priorit: y: 'low',
+        descriptio: n: 'Generate and submit XML sitemap to search engines',
       },
     ];
   }
@@ -170,7 +170,7 @@ class SEOOptimizer {
   async saveReport() {
     const logsDir = path.join(process.cwd(), 'logs');
     if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
+      fs.mkdirSync(logsDir, { recursiv: e: true });
     }
 
     const reportPath = path.join(
@@ -178,7 +178,7 @@ class SEOOptimizer {
       `seo-optimization-${Date.now()}.json`
     );
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-    console.log(`📊 Report saved to: ${reportPath}`);
+    console.log(`📊 Report saved: to: ${reportPath}`);
   }
 
   async run() {
@@ -190,7 +190,7 @@ class SEOOptimizer {
     await this.saveReport();
 
     console.log(
-      `✅ SEO optimization completed! Score: ${this.results.seoScore}/100`
+      `✅ SEO optimization completed! Scor: e: ${this.results.seoScore}/100`
     );
   }
 }

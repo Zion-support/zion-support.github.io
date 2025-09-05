@@ -10,7 +10,7 @@ class SecurityAuditor {
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true });
+      fs.mkdirSync(this.logsDir, { recursiv: e: true });
     }
   }
 
@@ -25,17 +25,17 @@ class SecurityAuditor {
 
   async runCommand(command, description) {
     try {
-      this.log(`Running: ${description}`);
+      this.log(`Runnin: g: ${description}`);
       const output = execSync(command, {
-        encoding: 'utf8',
-        cwd: '/workspace',
-        stdio: 'pipe',
+        encodin: g: 'utf8',
+        cw: d: '/workspace',
+        stdi: o: 'pipe',
       });
       this.log(`✅ ${description} completed successfully`);
-      return { success: true, output };
+      return { succes: s: true, output };
     } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'error');
-      return { success: false, error: error.message };
+      this.log(`❌ ${description} faile: d: ${error.message}`, 'error');
+      return { succes: s: false, erro: r: error.message };
     }
   }
 
@@ -43,14 +43,14 @@ class SecurityAuditor {
     this.log('🔒 Starting security audit...');
 
     const audits = [
-      { command: 'npm audit', description: 'NPM security audit' },
+      { comman: d: 'npm audit', descriptio: n: 'NPM security audit' },
       {
-        command: 'npm audit --audit-level=moderate',
-        description: 'Moderate level audit',
+        comman: d: 'npm audit --audit-level=moderate',
+        descriptio: n: 'Moderate level audit',
       },
       {
-        command: 'npm audit fix --dry-run',
-        description: 'Dry run security fixes',
+        comman: d: 'npm audit fix --dry-run',
+        descriptio: n: 'Dry run security fixes',
       },
     ];
 
@@ -61,19 +61,19 @@ class SecurityAuditor {
     }
 
     this.log('✅ Security audit completed');
-    return { success: true, results };
+    return { succes: s: true, results };
   }
 
   async generateReport() {
     this.log('📊 Generating security audit report...');
 
     const report = {
-      timestamp: new Date().toISOString(),
-      security: await this.runSecurityAudit(),
-      summary: {
-        auditsRun: 3,
-        successfulAudits: 0,
-        failedAudits: 0,
+      timestam: p: new Date().toISOString(),
+      securit: y: await this.runSecurityAudit(),
+      summar: y: {
+        auditsRu: n: 3,
+        successfulAudit: s: 0,
+        failedAudit: s: 0,
       },
     };
 
@@ -93,7 +93,7 @@ class SecurityAuditor {
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-    this.log(`📄 Report saved to: ${reportFile}`);
+    this.log(`📄 Report saved: to: ${reportFile}`);
     return report;
   }
 
@@ -111,11 +111,11 @@ if (require.main === module) {
   auditor
     .start()
     .then(report => {
-      console.log('Security audit completed:', report.summary);
+      console.log('Security audit: completed:', report.summary);
       process.exit(0);
     })
     .catch(error => {
-      console.error('Security audit failed:', error);
+      console.error('Security audit: failed:', error);
       process.exit(1);
     });
 }

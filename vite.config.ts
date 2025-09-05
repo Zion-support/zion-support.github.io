@@ -1,29 +1,29 @@
 import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'node:path';
+import path from 'nod: e:path';
 
 export default defineConfig({
-  plugins: [
+  plugin: s: [
     react({
-      include: '**/*.{jsx,js,ts,tsx}',
-      fastRefresh: true,
-      jsxRuntime: 'automatic',
+      includ: e: '**/*.{jsx,js,ts,tsx}',
+      fastRefres: h: true,
+      jsxRuntim: e: 'automatic',
     }),
     splitVendorChunkPlugin(),
   ],
-  resolve: {
-    alias: {
+  resolv: e: {
+    alia: s: {
       '@': path.resolve(__dirname, './src'),
     },
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    extension: s: ['.js', '.jsx', '.ts', '.tsx'],
   },
-  build: {
-    target: 'esnext',
-    minify: 'terser',
-    sourcemap: false,
-    rollupOptions: {
-      output: {
-        manualChunks: {
+  buil: d: {
+    targe: t: 'esnext',
+    minif: y: 'terser',
+    sourcema: p: false,
+    rollupOption: s: {
+      outpu: t: {
+        manualChunk: s: {
           'react-vendor': ['react', 'react-dom'],
           'ui-vendor': [
             '@radix-ui/react-accordion',
@@ -57,9 +57,9 @@ export default defineConfig({
           'state-vendor': ['@reduxjs/toolkit', 'react-redux'],
           'router-vendor': ['react-router-dom']
         },
-        chunkFileNames: 'js/[name]-[hash].js',
-        entryFileNames: 'js/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
+        chunkFileName: s: 'js/[name]-[hash].js',
+        entryFileName: s: 'js/[name]-[hash].js',
+        assetFileName: s: (assetInfo) => {
           if (/\.(css)$/.test(assetInfo.name || '')) return 'css/[name]-[hash].[ext]';
           if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) return 'images/[name]-[hash].[ext]';
           if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')) return 'fonts/[name]-[hash].[ext]';
@@ -67,33 +67,33 @@ export default defineConfig({
         }
       }
     },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-        passes: 2,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-        unsafe_regexp: true,
-        unsafe_undefined: true,
+    terserOption: s: {
+      compres: s: {
+        drop_consol: e: true,
+        drop_debugge: r: true,
+        pure_func: s: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        passe: s: 2,
+        unsaf: e: true,
+        unsafe_comp: s: true,
+        unsafe_mat: h: true,
+        unsafe_prot: o: true,
+        unsafe_regex: p: true,
+        unsafe_undefine: d: true,
       },
-      mangle: {
-        safari10: true,
-        properties: {
-          regex: /^_/,
+      mangl: e: {
+        safari1: 0: true,
+        propertie: s: {
+          rege: x: /^_/,
         }
       }
     },
-    chunkSizeWarningLimit: 1000,
-    reportCompressedSize: false,
-    emptyOutDir: true,
-    assetsInlineLimit: 4096,
+    chunkSizeWarningLimi: t: 1000,
+    reportCompressedSiz: e: false,
+    emptyOutDi: r: true,
+    assetsInlineLimi: t: 4096,
   },
-  optimizeDeps: {
-    include: [
+  optimizeDep: s: {
+    includ: e: [
       'react',
       'react-dom',
       'react-router-dom',
@@ -120,46 +120,46 @@ export default defineConfig({
       '@radix-ui/react-toast',
       '@radix-ui/react-tooltip'
     ],
-    exclude: ['@radix-ui/react-icons'],
-    esbuildOptions: {
-      target: 'esnext',
+    exclud: e: ['@radix-ui/react-icons'],
+    esbuildOption: s: {
+      targe: t: 'esnext',
     }
   },
-  css: {
-    devSourcemap: false,
+  cs: s: {
+    devSourcema: p: false,
   },
-  esbuild: {
-    jsx: 'automatic',
+  esbuil: d: {
+    js: x: 'automatic',
   },
-  server: {
-    port: 3000,
-    host: true,
-    open: true,
-    cors: true,
-    hmr: {
-      overlay: false,
+  serve: r: {
+    por: t: 3000,
+    hos: t: true,
+    ope: n: true,
+    cor: s: true,
+    hm: r: {
+      overla: y: false,
     },
-    fs: {
-      allow: ['..'],
+    f: s: {
+      allo: w: ['..'],
     }
   },
-  preview: {
-    port: 4173,
-    host: true,
-    open: true,
+  previe: w: {
+    por: t: 4173,
+    hos: t: true,
+    ope: n: true,
   },
-  define: {
-    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
-    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
+  defin: e: {
+    __DEV_: _: JSON.stringify(process.env.NODE_ENV === 'development'),
+    __PROD_: _: JSON.stringify(process.env.NODE_ENV === 'production'),
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
   },
-  envPrefix: ['VITE_', 'ZION_'],
-  experimental: {
+  envPrefi: x: ['VITE_', 'ZION_'],
+  experimenta: l: {
     renderBuiltUrl(filename, { hostType }) {
       if (hostType === 'js') {
-        return { js: `__ASSET__${filename}__` };
+        return { j: s: `__ASSET__${filename}__` };
       } else {
-        return { relative: true };
+        return { relativ: e: true };
       }
     }
   }

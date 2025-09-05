@@ -17,7 +17,6 @@ var UNASSIGNED = -1,
 for (var i = 0; i < 0x100; i++)
     UNASSIGNED_NODE[i] = UNASSIGNED;
 
-
 // Class DBCSCodec reads and initializes mapping tables.
 function DBCSCodec(codecOptions, iconv) {
     this.encodingName = codecOptions.encodingName;
@@ -28,7 +27,6 @@ function DBCSCodec(codecOptions, iconv) {
 
     // Load tables.
     var mappingTable = codecOptions.table();
-
 
     // Decode tables: MBCS -> Unicode.
 
@@ -51,7 +49,6 @@ function DBCSCodec(codecOptions, iconv) {
 
     this.defaultCharUnicode = iconv.defaultCharUnicode;
 
-    
     // Encode tables: Unicode -> DBCS.
 
     // `encodeTable` is array mapping from unicode char to encoded char. All its values are integers for performance.
@@ -92,7 +89,6 @@ function DBCSCodec(codecOptions, iconv) {
     this.defCharSB  = this.encodeTable[0][iconv.defaultCharSingleByte.charCodeAt(0)];
     if (this.defCharSB === UNASSIGNED) this.defCharSB = this.encodeTable[0]['?'];
     if (this.defCharSB === UNASSIGNED) this.defCharSB = "?".charCodeAt(0);
-
 
     // Load & create GB18030 tables when needed.
     if (typeof codecOptions.gb18030 === 'function') {
@@ -145,7 +141,6 @@ DBCSCodec.prototype._getDecodeTrieNode = function(addr) {
     }
     return node;
 }
-
 
 DBCSCodec.prototype._addDecodeChunk = function(chunk) {
     // First element of chunk is the hex mbcs code where we start.
@@ -264,9 +259,7 @@ DBCSCodec.prototype._fillEncodeTable = function(nodeIdx, prefix, skipEncodeChars
     }
 }
 
-
-
-// == Encoder ==================================================================
+// == Encoder ===
 
 function DBCSEncoder(options, codec) {
     // Encoder state
@@ -434,8 +427,7 @@ DBCSEncoder.prototype.end = function() {
 // Export for testing
 DBCSEncoder.prototype.findIdx = findIdx;
 
-
-// == Decoder ==================================================================
+// == Decoder ===
 
 function DBCSDecoder(options, codec) {
     // Decoder state

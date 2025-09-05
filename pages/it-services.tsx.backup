@@ -3,13 +3,13 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-=======
+
 import { 
   Server, 
   Shield, 
   Cloud, 
   Database, 
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
   Network, 
   Cloud, 
   Shield, 
@@ -31,7 +31,7 @@ import {
   Monitor,
   Link as LinkIcon,
   AlertTriangle
-=======
+
   ArrowRight, 
   Clock, 
   Award, 
@@ -55,11 +55,10 @@ import {
   Brain, 
   DollarSign, 
   Rocket 
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
 } from 'lucide-react';
 import Layout from './components/Layout';
 
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
 const itServices = [
   // Cloud & Infrastructure Services
   {
@@ -73,7 +72,7 @@ const itServices = [
     benefits: ['Reduced infrastructure costs', 'Improved scalability', 'Enhanced security', '24/7 monitoring'],
     marketPrice: '$5,000/month',
     link: '/contact'
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
   },
   {
     title: 'Hybrid Cloud Solutions',
@@ -522,7 +521,6 @@ const services = [
 const technologies = [
   { name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
 
-=======
     category: 'Performance'
   }
 ];
@@ -900,7 +898,7 @@ const benefits = [{
     stat: '99.9%'
   },
   {
-=======
+
     features: [
       "Security Audits & Assessments",
       "Penetration Testing",
@@ -1546,7 +1544,7 @@ export default function ITServicesPage() {
                       className="flex-1 bg-transparent border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white text-center py-2 px-4 rounded-lg text-sm font-semibold transition-colors"
                     >
                       Contact
-=======
+
     description: 'Advanced cybersecurity services to protect your business from threats',
     icon: Shield,
     features: ['Threat Detection', 'Security Audits', 'Penetration Testing', 'Compliance'],
@@ -1731,7 +1729,7 @@ export default function ITServices() {
                     >
                       Get Quote
                       <ArrowRight className="ml-2 w-4 h-4" />
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
                     </Link>
                   </div>
                 </motion.div>
@@ -1822,7 +1820,7 @@ export default function ITServices() {
         </div>
       </section>
     </Layout>
-=======
+
             </div>
           </div>
         </section>
@@ -1895,6 +1893,6 @@ export default function ITServices() {
         </section>
       </div>
     </>
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
   );
 }

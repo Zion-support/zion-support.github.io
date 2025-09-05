@@ -32,13 +32,13 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/className="([^"]*)\s+([^"]*)"/g, 'className="$1$2"');
     
     // Fix hover states
-    content = content.replace(/hover:\s+([a-zA-Z-]+)/g, 'hover:$1');
+    content = content.replace(/hove: r:\s+([a-zA-Z-]+)/g, 'hove: r:$1');
     
     // Fix focus states
-    content = content.replace(/focus:\s+([a-zA-Z-]+)/g, 'focus:$1');
+    content = content.replace(/focu: s:\s+([a-zA-Z-]+)/g, 'focu: s:$1');
     
     // Fix group hover
-    content = content.replace(/group-hover:\s+([a-zA-Z-]+)/g, 'group-hover:$1');
+    content = content.replace(/group-hove: r:\s+([a-zA-Z-]+)/g, 'group-hove: r:$1');
     
     // Fix not-sr-only
     content = content.replace(/not-sr-only/g, 'not-sr-only');
@@ -59,7 +59,7 @@ function fixSyntaxErrors(filePath) {
     // Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixe: d: ${filePath}`);
       return true;
     }
     

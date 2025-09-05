@@ -1,11 +1,9 @@
 'use strict';
 
-
 var utils = require('../utils/common');
 
-/* Public constants ==========================================================*/
-/* ===========================================================================*/
-
+/* Public constants ==*/
+/* =====*/
 
 //var Z_FILTERED          = 1;
 //var Z_HUFFMAN_ONLY      = 2;
@@ -19,8 +17,7 @@ var Z_TEXT                = 1;
 //var Z_ASCII             = 1; // = Z_TEXT
 var Z_UNKNOWN             = 2;
 
-/*============================================================================*/
-
+/*======*/
 
 function zero(buf) { var len = buf.length; while (--len >= 0) { buf[len] = 0; } }
 
@@ -36,7 +33,7 @@ var MAX_MATCH    = 258;
 /* The minimum and maximum match lengths */
 
 // From deflate.h
-/* ===========================================================================
+/* =====
  * Internal compression state.
  */
 
@@ -64,8 +61,7 @@ var MAX_BITS      = 15;
 var Buf_size      = 16;
 /* size of bit buffer in bi_buf */
 
-
-/* ===========================================================================
+/* =====
  * Constants
  */
 
@@ -102,7 +98,7 @@ var bl_order =
  * probability, to avoid transmitting the lengths for unused bit length codes.
  */
 
-/* ===========================================================================
+/* =====
  * Local data. These are initialized only once.
  */
 
@@ -144,7 +140,6 @@ var base_dist     = new Array(D_CODES);
 zero(base_dist);
 /* First normalized distance for each code (0 = distance of 1) */
 
-
 function StaticTreeDesc(static_tree, extra_bits, extra_base, elems, max_length) {
 
   this.static_tree  = static_tree;  /* static tree or NULL */
@@ -157,11 +152,9 @@ function StaticTreeDesc(static_tree, extra_bits, extra_base, elems, max_length) 
   this.has_stree    = static_tree && static_tree.length;
 }
 
-
 var static_l_desc;
 var static_d_desc;
 var static_bl_desc;
-
 
 function TreeDesc(dyn_tree, stat_desc) {
   this.dyn_tree = dyn_tree;     /* the dynamic tree */
@@ -169,14 +162,11 @@ function TreeDesc(dyn_tree, stat_desc) {
   this.stat_desc = stat_desc;   /* the corresponding static tree */
 }
 
-
-
 function d_code(dist) {
   return dist < 256 ? _dist_code[dist] : _dist_code[256 + (dist >>> 7)];
 }
 
-
-/* ===========================================================================
+/* =====
  * Output a short LSB first on the stream.
  * IN assertion: there is enough room in pendingBuf.
  */
@@ -187,8 +177,7 @@ function put_short(s, w) {
   s.pending_buf[s.pending++] = (w >>> 8) & 0xff;
 }
 
-
-/* ===========================================================================
+/* =====
  * Send a value on a given number of bits.
  * IN assertion: length <= 16 and value fits in length bits.
  */
@@ -204,13 +193,11 @@ function send_bits(s, value, length) {
   }
 }
 
-
 function send_code(s, c, tree) {
   send_bits(s, tree[c * 2]/*.Code*/, tree[c * 2 + 1]/*.Len*/);
 }
 
-
-/* ===========================================================================
+/* =====
  * Reverse the first len bits of a code, using straightforward code (a faster
  * method would use a table)
  * IN assertion: 1 <= len <= 15
@@ -225,8 +212,7 @@ function bi_reverse(code, len) {
   return res >>> 1;
 }
 
-
-/* ===========================================================================
+/* =====
  * Flush the bit buffer, keeping at most 7 bits in it.
  */
 function bi_flush(s) {
@@ -242,8 +228,7 @@ function bi_flush(s) {
   }
 }
 
-
-/* ===========================================================================
+/* =====
  * Compute the optimal bit lengths for a tree and update the total bit length
  * for the current block.
  * IN assertion: the fields freq and dad are set, heap[heap_max] and
@@ -341,8 +326,7 @@ function gen_bitlen(s, desc)
   }
 }
 
-
-/* ===========================================================================
+/* =====
  * Generate the codes for a given tree and bit counts (which need not be
  * optimal).
  * IN assertion: the array bl_count contains the bit length statistics for
@@ -384,8 +368,7 @@ function gen_codes(tree, max_code, bl_count)
   }
 }
 
-
-/* ===========================================================================
+/* =====
  * Initialize the various 'constant' tables.
  */
 function tr_static_init() {
@@ -488,8 +471,7 @@ function tr_static_init() {
   //static_init_done = true;
 }
 
-
-/* ===========================================================================
+/* =====
  * Initialize a new block.
  */
 function init_block(s) {
@@ -505,8 +487,7 @@ function init_block(s) {
   s.last_lit = s.matches = 0;
 }
 
-
-/* ===========================================================================
+/* =====
  * Flush the bit buffer and align the output on a byte boundary
  */
 function bi_windup(s)
@@ -521,7 +502,7 @@ function bi_windup(s)
   s.bi_valid = 0;
 }
 
-/* ===========================================================================
+/* =====
  * Copy a stored block, storing first the length and its
  * one's complement if requested.
  */
@@ -544,7 +525,7 @@ function copy_block(s, buf, len, header)
   s.pending += len;
 }
 
-/* ===========================================================================
+/* =====
  * Compares to subtrees, using the tree depth as tie breaker when
  * the subtrees have equal frequency. This minimizes the worst case length.
  */
@@ -555,7 +536,7 @@ function smaller(tree, n, m, depth) {
          (tree[_n2]/*.Freq*/ === tree[_m2]/*.Freq*/ && depth[n] <= depth[m]));
 }
 
-/* ===========================================================================
+/* =====
  * Restore the heap property by moving down the tree starting at node k,
  * exchanging a node with the smallest of its two sons if necessary, stopping
  * when the heap property is re-established (each father smaller than its
@@ -587,11 +568,10 @@ function pqdownheap(s, tree, k)
   s.heap[k] = v;
 }
 
-
 // inlined manually
 // var SMALLEST = 1;
 
-/* ===========================================================================
+/* =====
  * Send the block data compressed using the given Huffman trees
  */
 function compress_block(s, ltree, dtree)
@@ -645,8 +625,7 @@ function compress_block(s, ltree, dtree)
   send_code(s, END_BLOCK, ltree);
 }
 
-
-/* ===========================================================================
+/* =====
  * Construct one Huffman tree and assigns the code bit strings and lengths.
  * Update the total bit length for the current block.
  * IN assertion: the field freq is set for all tree elements.
@@ -745,8 +724,7 @@ function build_tree(s, desc)
   gen_codes(tree, max_code, s.bl_count);
 }
 
-
-/* ===========================================================================
+/* =====
  * Scan a literal or distance tree to determine the frequencies of the codes
  * in the bit length tree.
  */
@@ -811,8 +789,7 @@ function scan_tree(s, tree, max_code)
   }
 }
 
-
-/* ===========================================================================
+/* =====
  * Send a literal or distance tree in compressed form, using the codes in
  * bl_tree.
  */
@@ -882,8 +859,7 @@ function send_tree(s, tree, max_code)
   }
 }
 
-
-/* ===========================================================================
+/* =====
  * Construct the Huffman tree for the bit lengths and return the index in
  * bl_order of the last bit length code to send.
  */
@@ -917,8 +893,7 @@ function build_bl_tree(s) {
   return max_blindex;
 }
 
-
-/* ===========================================================================
+/* =====
  * Send the header for a block using dynamic Huffman trees: the counts, the
  * lengths of the bit length codes, the literal tree and the distance tree.
  * IN assertion: lcodes >= 257, dcodes >= 1, blcodes >= 4.
@@ -949,8 +924,7 @@ function send_all_trees(s, lcodes, dcodes, blcodes)
   //Tracev((stderr, "\ndist tree: sent %ld", s->bits_sent));
 }
 
-
-/* ===========================================================================
+/* =====
  * Check if the data type is TEXT or BINARY, using the following algorithm:
  * - TEXT if the two conditions below are satisfied:
  *    a) There are no non-portable control characters belonging to the
@@ -995,10 +969,9 @@ function detect_data_type(s) {
   return Z_BINARY;
 }
 
-
 var static_init_done = false;
 
-/* ===========================================================================
+/* =====
  * Initialize the tree data structures for a new zlib stream.
  */
 function _tr_init(s)
@@ -1020,8 +993,7 @@ function _tr_init(s)
   init_block(s);
 }
 
-
-/* ===========================================================================
+/* =====
  * Send a stored block
  */
 function _tr_stored_block(s, buf, stored_len, last)
@@ -1034,8 +1006,7 @@ function _tr_stored_block(s, buf, stored_len, last)
   copy_block(s, buf, stored_len, true); /* with header */
 }
 
-
-/* ===========================================================================
+/* =====
  * Send one empty static block to give enough lookahead for inflate.
  * This takes 10 bits, of which 7 may remain in the bit buffer.
  */
@@ -1045,8 +1016,7 @@ function _tr_align(s) {
   bi_flush(s);
 }
 
-
-/* ===========================================================================
+/* =====
  * Determine the best encoding for the current block: dynamic trees, static
  * trees or store, and output the encoded block to the zip file.
  */
@@ -1133,7 +1103,7 @@ function _tr_flush_block(s, buf, stored_len, last)
   //       s->compressed_len-7*last));
 }
 
-/* ===========================================================================
+/* =====
  * Save the match info and tally the frequency counts. Return true if
  * the current block must be flushed.
  */
