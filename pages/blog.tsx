@@ -82,11 +82,13 @@ export default function BlogPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}>
-              <h1
-                Tech Insights & Innovation></h1>
-              <p
-                Stay ahead with the latest insights on AI, technology trends, and business innovation></p>
-            </motion.div>>
+              <h1>
+                Tech Insights & Innovation
+              </h1>
+              <p>
+                Stay ahead with the latest insights on AI, technology trends, and business innovation
+              </p>
+            </motion.div>
         {/* Blog Posts Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -106,25 +108,45 @@ export default function BlogPage() {
                       <div className="p-6">
                         <div className="flex flex-wrap gap-2 mb-3">
                           {post.tags.map((tag, tagIndex) => (
-                            <span
-                          ))}></span>
-                        <h2
-                          {post.title}></h2>
-                        <p
-                          {post.excerpt}></p>
+                            <span key={tagIndex} className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                        <h2 className="text-xl font-semibold text-gray-900 mb-2">
+                          {post.title}
+                        </h2>
+                        <p className="text-gray-600 mb-4">
+                          {post.excerpt}
+                        </p>
                         <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                           <div className="flex items-center">
                             <User className="w-4 h-4 mr-1" />
-                            {post.author}>
+                            {post.author}
+                          </div>
                           <div className="flex items-center">
                             <Calendar className="w-4 h-4 mr-1" />
-                            {new Date(post.date).toLocaleDateString()}>
+                            {new Date(post.date).toLocaleDateString()}
+                          </div>
+                        </div>
                         <div className="flex items-center justify-between">
-                          <span{post.readTime}></span>
+                          <span>{post.readTime}</span>
                           <Link
                             href={`/blog/${post.id}`}
                             className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center">
                             Read More
                             <ArrowRight className="w-4 h-4 ml-1" />
-  )
+                          </Link>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+  );
 }
