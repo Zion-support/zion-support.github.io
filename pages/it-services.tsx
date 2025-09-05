@@ -360,6 +360,119 @@ const itServices = [
     features: ['API Development', 'System Integration', 'Data Synchronization', 'Workflow Automation'],
     pricing: '$15,000 - $75,000/project',
     category: 'Integration'
+  },
+  {
+    title: 'AI Infrastructure Setup',
+    description: 'Complete AI/ML infrastructure deployment with GPU clusters and model serving.',
+    icon: Brain,
+    features: ['GPU Cluster Setup', 'Model Serving', 'MLOps Pipeline', 'Auto-scaling'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'AI Infrastructure',
+    popular: true
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Blockchain network setup, smart contract deployment, and node management.',
+    icon: Shield,
+    features: ['Node Setup', 'Smart Contract Deployment', 'Security Auditing', 'Monitoring'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Blockchain'
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Edge computing infrastructure for IoT and real-time processing applications.',
+    icon: Cpu,
+    features: ['Edge Node Deployment', 'IoT Integration', 'Real-time Processing', 'Data Synchronization'],
+    pricing: '$15,000 - $80,000/project',
+    category: 'Edge Computing'
+  },
+  {
+    title: 'Quantum Computing Integration',
+    description: 'Quantum computing infrastructure and hybrid classical-quantum systems.',
+    icon: Cpu,
+    features: ['Quantum Hardware Setup', 'Hybrid Systems', 'Algorithm Optimization', 'Security Implementation'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Quantum Computing'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network infrastructure design and implementation for enterprise applications.',
+    icon: Wifi,
+    features: ['5G Core Setup', 'Network Slicing', 'Edge Computing', 'IoT Integration'],
+    pricing: '$30,000 - $200,000/project',
+    category: '5G Networks'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Complete zero trust security implementation with identity and access management.',
+    icon: Lock,
+    features: ['Identity Management', 'Access Controls', 'Network Segmentation', 'Continuous Monitoring'],
+    pricing: '$40,000 - $250,000/project',
+    category: 'Security Architecture'
+  },
+  {
+    title: 'Hybrid Cloud Management',
+    description: 'Unified management of multi-cloud and hybrid cloud environments.',
+    icon: Cloud,
+    features: ['Multi-cloud Orchestration', 'Cost Optimization', 'Security Management', 'Compliance'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'Cloud Management'
+  },
+  {
+    title: 'IoT Platform Development',
+    description: 'Complete IoT platform with device management, data processing, and analytics.',
+    icon: Smartphone,
+    features: ['Device Management', 'Data Processing', 'Real-time Analytics', 'Integration APIs'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'IoT Solutions'
+  },
+  {
+    title: 'Digital Transformation Consulting',
+    description: 'Comprehensive digital transformation strategy and implementation.',
+    icon: Rocket,
+    features: ['Strategy Development', 'Technology Assessment', 'Change Management', 'Implementation'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Digital Transformation'
+  },
+  {
+    title: 'API Gateway & Management',
+    description: 'Enterprise API gateway setup with security, monitoring, and rate limiting.',
+    icon: Network,
+    features: ['API Gateway Setup', 'Security Policies', 'Rate Limiting', 'Analytics Dashboard'],
+    pricing: '$10,000 - $60,000/project',
+    category: 'API Management'
+  },
+  {
+    title: 'Microservices Architecture',
+    description: 'Microservices architecture design and implementation for scalable applications.',
+    icon: Server,
+    features: ['Architecture Design', 'Service Decomposition', 'Container Orchestration', 'Service Mesh'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Microservices'
+  },
+  {
+    title: 'Data Lake & Warehouse Setup',
+    description: 'Modern data lake and warehouse implementation with real-time processing.',
+    icon: Database,
+    features: ['Data Lake Setup', 'ETL Pipelines', 'Real-time Processing', 'Analytics Platform'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Data Infrastructure'
+  },
+  {
+    title: 'Compliance & Governance',
+    description: 'IT compliance implementation for GDPR, HIPAA, SOX, and other regulations.',
+    icon: Shield,
+    features: ['Compliance Assessment', 'Policy Implementation', 'Audit Preparation', 'Risk Management'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Compliance'
+  },
+  {
+    title: 'IT Service Management (ITSM)',
+    description: 'Complete ITSM implementation with ServiceNow, Jira, or custom solutions.',
+    icon: Settings,
+    features: ['Service Catalog', 'Incident Management', 'Change Management', 'Knowledge Base'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'ITSM'
   }
 ];
 

@@ -363,6 +363,119 @@ const aiServices = [
     features: ['Personalized Learning', 'Adaptive Assessment', 'Progress Tracking', 'Skill Development'],
     pricing: '$2,000 - $10,000/month',
     category: 'EdTech'
+  },
+  {
+    title: 'AI-Powered Drug Discovery',
+    description: 'Accelerated drug discovery using AI for molecular design and optimization.',
+    icon: Heart,
+    features: ['Molecular Design', 'Drug Optimization', 'Toxicity Prediction', 'Clinical Trial Design'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Pharmaceuticals',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Autonomous Vehicles',
+    description: 'Complete autonomous vehicle AI system with perception, planning, and control.',
+    icon: Car,
+    features: ['Computer Vision', 'Path Planning', 'Sensor Fusion', 'Safety Systems'],
+    pricing: '$100,000 - $2,000,000/project',
+    category: 'Autonomous Systems'
+  },
+  {
+    title: 'AI-Powered Financial Trading',
+    description: 'Algorithmic trading system with AI-driven market analysis and execution.',
+    icon: TrendingUp,
+    features: ['Market Analysis', 'Risk Management', 'Portfolio Optimization', 'Real-time Trading'],
+    pricing: '$25,000 - $200,000/setup',
+    category: 'FinTech'
+  },
+  {
+    title: 'AI-Powered Climate Modeling',
+    description: 'Advanced climate modeling and environmental impact prediction using AI.',
+    icon: Globe,
+    features: ['Climate Prediction', 'Environmental Analysis', 'Carbon Footprint', 'Sustainability Planning'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'Environmental'
+  },
+  {
+    title: 'AI-Powered Space Exploration',
+    description: 'AI systems for space mission planning, satellite operations, and data analysis.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Satellite Operations', 'Data Analysis', 'Autonomous Navigation'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Aerospace'
+  },
+  {
+    title: 'AI-Powered Quantum Computing',
+    description: 'AI algorithms and applications for quantum computing systems.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Error Correction', 'Optimization', 'Simulation'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Quantum AI'
+  },
+  {
+    title: 'AI-Powered Cybersecurity AI',
+    description: 'Advanced AI systems for threat detection, response, and prevention.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Predictive Security'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'Cybersecurity'
+  },
+  {
+    title: 'AI-Powered Smart Cities',
+    description: 'Comprehensive AI solutions for smart city infrastructure and management.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Energy Management', 'Public Safety', 'Resource Planning'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Smart Cities'
+  },
+  {
+    title: 'AI-Powered Robotics',
+    description: 'AI-powered robotic systems for manufacturing, healthcare, and service industries.',
+    icon: Bot,
+    features: ['Motion Planning', 'Object Recognition', 'Human-Robot Interaction', 'Learning Systems'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Robotics'
+  },
+  {
+    title: 'AI-Powered Metaverse Platform',
+    description: 'AI-driven virtual world creation and management for metaverse applications.',
+    icon: Globe,
+    features: ['Virtual World Generation', 'Avatar AI', 'Content Creation', 'Social Interaction'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Metaverse'
+  },
+  {
+    title: 'AI-Powered Brain-Computer Interface',
+    description: 'AI systems for brain-computer interface applications and neural signal processing.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'Pattern Recognition', 'Control Systems', 'Rehabilitation'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Neurotechnology'
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimization',
+    description: 'End-to-end supply chain optimization using AI for logistics and inventory management.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Route Optimization', 'Inventory Management', 'Risk Assessment'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'Supply Chain'
+  },
+  {
+    title: 'AI-Powered Energy Grid Management',
+    description: 'Smart grid management and renewable energy optimization using AI.',
+    icon: Zap,
+    features: ['Grid Optimization', 'Renewable Integration', 'Demand Response', 'Predictive Maintenance'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'Energy'
+  },
+  {
+    title: 'AI-Powered Agricultural Intelligence',
+    description: 'Precision agriculture and crop management using AI and IoT sensors.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
+    pricing: '$25,000 - $250,000/project',
+    category: 'Agriculture'
   }
 ];
 
