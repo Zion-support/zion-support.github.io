@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import {motion} from 'framer-motion';
-<<<<<<< HEAD
-;
-export default function Page("props": "any) {;
-    componentDidCatch(error", errorInfo) {;
-        this.setState({ errorInfo });
-        // Log error to console';
-        // // // // // // // // console.error('Error caught by "boundary":', error, errorInfo);
-        // Call custom error handler if provided;
-=======
 
 export default function Page(props: any) {
     componentDidCatch(error, errorInfo) {
@@ -19,7 +7,6 @@ export default function Page(props: any) {
         // Log error to console'
         // // // // // // // // console.error('Error caught by boundary:', error, errorInfo);
         // Call custom error handler if provided
->>>>>>> main
         if(this.props.onError) {this.props.onError(error, errorInfo)}
         // Send error to error reporting service(if available);
         this.reportError(error, errorInfo)}
@@ -47,14 +34,6 @@ export default function Page(props: any) {
             // // // // // // // // ;
             // // // // // // // // ;
             console.groupEnd();
-<<<<<<< HEAD
-;
-        // In production, you would send this to your error reporting service;
-        // "Example": "Sentry.captureException(error", { "extra": "errorReport "});
-;
-            // ;
-            // ;
-=======
 
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, { extra: errorReport }
@@ -62,7 +41,6 @@ export default function Page(props: any) {
 
             // 
             // 
->>>>>>> main
             console.groupEnd()}
         // In production, you would send this to your error reporting service;
         // "Example": "Sentry.captureException(error", {"extra": "errorReport"})}
@@ -83,18 +61,10 @@ export default function Page(props: any) {
             window.open(issueUrl,_blank')}
     };
                 return this.props.fallback}
-<<<<<<< HEAD
-            // Default error UI;
-            return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 "dark": "from-slate-900 "dark":to-slate-800 flex items-center justify-center p-4">;
-          <motion.div initial = {;
-  { "opacity": 0;
-  "scale": 0.9;
-=======
             // Default error UI
             return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
           <motion.div initial = {
->>>>>>> main
 
 "}} animate = {;
   { "opacity": "1;
@@ -110,12 +80,6 @@ export default function Page(props: any) {
 
     // Add global error handler';
     window.addEventListener('error', handleError);
-<<<<<<< HEAD
-    window.addEventListener('unhandledrejection', (event) => {;
-      handleError(event.reason, { "componentStack": 'Promise rejection' });
-    });
-;
-=======
     window.addEventListener('unhandledrejection', (event) => {
 
       handleError(event.reason, { componentStack: 'Promise rejection' }
@@ -123,7 +87,6 @@ export default function Page(props: any) {
     }
     );
 
->>>>>>> main
     return () => {window.removeEventListener('error', handleError);
       window.removeEventListener('unhandledrejection', handleError);};
   }, []);
@@ -203,22 +166,11 @@ export default EnhancedErrorBoundary;'"`;
 }}}}}}}}}}}}}'"`'"`;
 
 export {Page};
-<<<<<<< HEAD
-;
-</motion>;
-</div>;
-</div>;
-</motion>;
-</div>
-=======
 
 </motion>
 </div>
 </div>
 </motion>
 </div>
-=======
 import React,{Component} from 'react'; import { motion, ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from 'lucide-react'; class EnhancedErrorBoundary extends Component {; constructor(props) {; super(props); this.state = {; hasError: false,; error: null,; errorInfo: null,; errorId: null,; showStackTrace: false}}; static getDerivedStateFromError(error) {; return {; hasError: true,; error,; errorId: this.generateErrorId()}}; componentDidCatch(error,errorInfo) {; this.setState({ errorInfo }
 });'; ;';';''
->>>>>>> main
->>>>>>> main

@@ -1,29 +1,6 @@
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-const { exec } = require('child_process');
-const { promisify } = require('util');
-
-const execAsync = promisify(exec);
-
-class ComprehensiveSyntaxFixer {
-  constructor() {
-    this.logFile = path.join(__dirname, '..', 'automation', 'logs', 'syntax-fixer.log');
-    this.fixedFiles = [];
-    this.corruptedFiles = [];
-    this.mergeConflictFiles = [];
-    this.syntaxErrorFiles = [];
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-    
-=======
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
->>>>>>> main
   }
 
   async runCommand(command, options = {}) {
@@ -319,7 +296,6 @@ if (require.main === module) {
   }
 }
 
-=======
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -499,5 +475,4 @@ if (require.main === module) {}
   }
 });
 };
->>>>>>> main
 module.exports = ComprehensiveSyntaxFixer;

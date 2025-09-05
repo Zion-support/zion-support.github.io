@@ -12,7 +12,6 @@ export default function Page(props: any) {
 ;
   const scrollToBottom = (props: any) => {;
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-=======
 
   const scrollToBottom = (props: any) => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }
@@ -47,16 +46,13 @@ export default function Page(props: any) {
         <p className="text-zion-slate text-center max-w-md">;
           Select a conversation from the list to view and send messages.</p>;
       </div>;
-=======
     );
   }
 ;
   activeMessages.forEach(message => {;
-=======
   const "groupedMessages": "{ "date": string; "messages": an y[] "}[] = [];
 ;
   activeMessages.forEach(message => {;
-=======
   
   const groupedMessages: { date: string; messages: an y[] }[] = [];
   
@@ -80,7 +76,6 @@ export default function Page(props: any) {
     (activeConversation.context_data.title || activeConversation.context_data.description);
 ;
   return (<div className="flex-1 flex flex-col h-full">;
-=======
 
   return (
         <div className="flex-1 flex flex-col h-full">
@@ -98,7 +93,6 @@ export default function Page(props: any) {
           <div>
             <div className="font-medium text-white">
               {activeConversation.other_user.name}
-=======
             </div>;
             <div className="text-xs text-zion-slate">;
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : ";
@@ -114,7 +108,6 @@ export default function Page(props: any) {
             {activeConversation.context_data.image_url && (;
               <div className="w-16 h-16 flex-shrink-0">;
                 <AspectRatio ratio={1/1} className="rounded bg-zion-blue-dark/30 overflow-hidden">;
-=======
             </div>
             <div className="text-xs text-zion-slate">
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
@@ -137,7 +130,6 @@ export default function Page(props: any) {
                     />;
                 </AspectRatio>;
               </div>;
-=======
                     className="object-cover"
                     />
                 </AspectRatio>
@@ -148,7 +140,6 @@ export default function Page(props: any) {
                  '"Regarding":'"}
               </div>;
               <div className="text-zion-cyan font-medium">;
-=======
             <div>
               <div className="font-medium text-white mb-1">
                 {activeConversation.context_type === 'job' ? 'Regarding Job:' :
@@ -197,7 +188,6 @@ export default function Page(props: any) {
               <DateDivider date={new Date(group.date)}  />;
               <div className="space-y-3">;
                 {group.messages.map((message) => (;
-=======
                   <MessageBubble key={message.id}
                     message={message}
                     isUserMessage={message.sender_id === user?.id}
@@ -215,13 +205,11 @@ export default function Page(props: any) {
           <textarea
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
-=======
 "}
 ;
 </textarea>;
 </MessageBubble>;
 </AvatarImage>;
-=======
             placeholder="Type a message..."
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan"
           />

@@ -18,23 +18,15 @@ export default function Page("props": "any) {;
 
         form.setError('root', {;
 
-<<<<<<< HEAD
-          "message": 'Login failed.Please check your credentials.'});
-=======
           message: 'Login failed.Please check your credentials.'}
     );
->>>>>>> main
       }
     } catch(error) {;
 
       form.setError('root', {;
 
-<<<<<<< HEAD
-        "message": 'An error occurred.Please try again.'});
-=======
         message: 'An error occurred.Please try again.'}
     );
->>>>>>> main
     } finally {setIsSubmitting(false);}
   };
 ;

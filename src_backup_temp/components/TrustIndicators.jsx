@@ -1,40 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-export function TrustIndicatorsCompact("props": "any) {;
-import { Shield", Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators("props": "any) {;
-    const indicators = [{;
-
-            "icon": Shield",;
-            "title": "Enterprise Security",";
-            "description": "SOC 2 Type II certified with end-to-end encryption",";
-            "color": "text-zion-cyan";
-        },;
-        {"icon": "Lock",";
-            "title": "Data Protection",";
-            "description": "GDPR & CCPA compliant with zero-knowledge architecture",";
-            "color": "text-zion-purple"},;
-        {"icon": "Award",";
-            "title": "Industry Leader",";
-            "description": "Recognized by Gartner & Forrester as market leader",";
-            "color": "text-zion-cyan"},;
-        {;
-
-            "icon": "Users",";
-            "title": "Verified Community",";
-            "description": "10,000+ verified professionals and companies",";
-            "color": "text-zion-purple";
-=======
 
 interface TrustIndicators.jsProps {
   // Add props here as needed
 }
 
-<<<<<<< HEAD
-            icon: Users,"
-            title: "Verified Community","
-            description: "10,000+ verified professionals and companies","
-            color: "text-zion-purple"
->>>>>>> main
 
     ];
     const certifications = [";
@@ -69,13 +38,8 @@ interface TrustIndicators.jsProps {
               </div>";
               <h3 className="text-lg font-semibold text-white mb-2">;
                 {indicator.title}
-<<<<<<< HEAD
-              </h3>";
-              <p className="text-zion-slate-light text-sm leading-relaxed">;
-=======
               "
               <p className="text-zion-slate-light text-sm leading-relaxed">
->>>>>>> main
                 {indicator.description}
               </p>;
             </div>) ) }
@@ -97,22 +61,6 @@ interface TrustIndicators.jsProps {
                 </div>) ) }
             </div>;
           </div>) }
-<<<<<<< HEAD
-;
-        {/* Certifications Section */}";
-        {showCertifications && (<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">";
-            <h3 className="text-2xl font-bold text-white text-center mb-8">;
-              Certifications & Compliance;
-            </h3>";
-            <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-4 gap-6">";
-              {certifications.map((cert", index) => (<div key={index} className="text-center p-4 bg-white/5 rounded-lg border border-white/10">";
-                  <div className="w-12 h-12 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-3">";
-                    <CheckCircle className="w-6 h-6 text-zion-cyan" />;
-                  </div>";
-                  <h4 className="font-semibold text-white mb-1">{cert.name}</h4>";
-                  <div className="text-zion-cyan text-sm font-medium mb-1">{cert.status}</div>";
-                  <div className="text-zion-slate-light text-xs">{cert.year}</div>;
-=======
 
         {/* Certifications Section */}"
         {showCertifications && (<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">"
@@ -127,7 +75,6 @@ interface TrustIndicators.jsProps {
                   <h4 className="font-semibold text-white mb-1">{cert.name}</h4>"
                   <div className="text-zion-cyan text-sm font-medium mb-1">{cert.status}</div>"
                   <div className="text-zion-slate-light text-xs">{cert.year}</div>
->>>>>>> main
                 </div>))}
             </div>;
           </div>) }
@@ -144,30 +91,6 @@ interface TrustIndicators.jsProps {
         </div>;
       </div>;
     </section>) }
-<<<<<<< HEAD
-// Compact version for smaller spaces;
-export function TrustIndicatorsCompact("props": "any) {;
-'`;
-    return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''"}`}>";
-      <div className="flex items-center gap-2 text-zion-cyan text-sm">";
-        <Shield className="w-4 h-4" />;
-        <span>SOC 2 Certified</span>;
-      </div>";
-      <div className="flex items-center gap-2 text-zion-purple text-sm">";
-        <Lock className="w-4 h-4" />;
-        <span>GDPR Compliant</span>;
-      </div>";
-      <div className="flex items-center gap-2 text-zion-cyan text-sm">";
-        <Users className="w-4 h-4" />;
-        <span>10K+ Verified</span>;
-      </div>";
-      <div className="flex items-center gap-2 text-zion-purple text-sm">";
-        <Zap className="w-4 h-4" />;
-        <span>99.9% Uptime</span>;
-      </div>;
-    </div>)}
-'"`;
-=======
 // Compact version for smaller spaces
 export function TrustIndicatorsCompact(props: any) {
 '`
@@ -191,7 +114,6 @@ export function TrustIndicatorsCompact(props: any) {
       </div>
     </div>)}
 '"`
-=======
 export default function TrustIndicators.js({ }: TrustIndicators.jsProps) {
   return (
     <div>
@@ -200,5 +122,3 @@ export default function TrustIndicators.js({ }: TrustIndicators.jsProps) {
     </div>
   );
 }
->>>>>>> main
->>>>>>> main

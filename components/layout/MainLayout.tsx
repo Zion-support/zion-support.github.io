@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
-=======
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -21,12 +20,10 @@ interface MainLayoutProps {
 
 const MainLayout: React.FC<MainLayoutProps> = ({
   children,
-=======
   title = "Zion Tech Group - Leading Technology Solutions Provider",
   description = "Transform your business with cutting-edge AI, IT services, and micro SaaS solutions. Expert technology consulting and implementation services.",
   keywords = "technology solutions, AI services, IT consulting, micro SaaS, cloud computing, digital transformation, cybersecurity, software development"
 }) => {
-=======
 const MainLayout: React.FC<MainLayoutProps> = ({ 
   children, 
   title, 
@@ -74,7 +71,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
     </>
   );
 }
-=======
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Zion Tech Group" />
         <meta property="og:title" content={title} />

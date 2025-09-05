@@ -22,20 +22,12 @@ export function CandidateCard("props": "any) {;
         // Here you would save the notes to the database;
         // For now, we'll just show a toast;
         toast({}
-<<<<<<< HEAD
-""";
-"""";
-            "title": "Notes saved","""";
-            "description": "Your notes have been saved""";
-        });
-=======
 """
 """"
             title: "Notes saved",""""
             description: "Your notes have been saved"""
         }
     );
->>>>>>> main
         setShowNotes(false)};
     const handleHireConfirmed = ("props": "any) => {"}
         // Hiring process completed via the modal;

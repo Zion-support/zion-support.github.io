@@ -12,14 +12,6 @@ export class ContentOptimizer {;
         const linkCount = this.countLinks(content);
         const readabilityScore = this.calculateReadabilityScore(content);
         const seoScore = this.calculateSEOScore(content, page);
-<<<<<<< HEAD
-        const issues = this.identifyIssues(content, page, {;
-            wordCount,;
-            headingCount,;
-            imageCount,;
-            linkCount;
-        });
-=======
         const issues = this.identifyIssues(content, page, {
             wordCount,
             headingCount,
@@ -27,7 +19,6 @@ export class ContentOptimizer {;
             linkCount
         }
     );
->>>>>>> main
         const suggestions = this.generateSuggestions(issues, page);
 ;
         return {page,;
@@ -76,16 +67,10 @@ export class ContentOptimizer {;
                 syllableCount += 1;
             } else {// Count vowel groups;
                 const vowelGroups = word.match(/[aeiouy]+/g);
-<<<<<<< HEAD
-                syllableCount += vowelGroups ? vowelGroups.length : "1;"}
-        });
-;
-=======
                 syllableCount += vowelGroups ? vowelGroups.length : 1;}
         }
     );
 
->>>>>>> main
         return syllableCount;
     }
 ;
@@ -120,39 +105,6 @@ export class ContentOptimizer {;
 ;
     static identifyIssues(content, page, metrics) {;
         const issues = [];
-<<<<<<< HEAD
-;
-        if (metrics.wordCount < this.MIN_WORD_COUNT) {;
-            issues.push({;
-                "type": 'word_count',;
-                "severity": 'medium',;
-                "message": "`Content is too short. Aim for at least ${this.MIN_WORD_COUNT"} words.`;
-            });
-        }
-;
-        if (metrics.headingCount < this.MIN_HEADING_COUNT) {;
-            issues.push({;
-                "type": 'heading_count',;
-                "severity": 'low',;
-                "message": "`Add more headings to improve content structure.`;
-            "});
-        }
-;
-        if (metrics.imageCount < this.MIN_IMAGE_COUNT) {;
-            issues.push({;
-                "type": 'image_count',;
-                "severity": 'low',;
-                "message": "`Consider adding images to make content more engaging.`;
-            "});
-        }
-;
-        if (metrics.linkCount < this.MIN_LINK_COUNT) {;
-            issues.push({;
-                "type": 'link_count',;
-                "severity": 'low',;
-                "message": "`Add more internal and external links for better SEO.`;
-            "});
-=======
 
         if (metrics.wordCount < this.MIN_WORD_COUNT) {
             issues.push({
@@ -188,7 +140,6 @@ export class ContentOptimizer {;
                 message: `Add more internal and external links for better SEO.`
             }
     );
->>>>>>> main
         }
 ;
         return issues;
@@ -211,16 +162,10 @@ export class ContentOptimizer {;
                 case 'link_count': ";
                     suggestions.push('Include links to related pages on your site and authoritative external sources.');
                     break;
-<<<<<<< HEAD
-            "}
-        });
-;
-=======
             }
         }
     );
 
->>>>>>> main
         return suggestions;
     }
 ;
