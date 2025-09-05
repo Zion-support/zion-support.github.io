@@ -14,8 +14,7 @@ export const optimizeImages = () => {
 
 export const preloadCriticalResources = () => {
   const criticalResources = [
-    '/fonts/main.woff2',
-    '/css/critical.css'
+    '/fonts/main.woff2/css/critical.css'
   ];
   
   criticalResources.forEach(resource => {
