@@ -5,35 +5,44 @@ const publicRoutes = [
   "/",
   "/about",
   "/contact",
+  "/blog",
   "/services",
-  "/products",
-  "/quote",
-  "/ai-services",
-  "/it-services",
-  "/micro-saas"
+  "/solutions",
+  "/industries",
+  "/resources",
+  "/talent",
+  "/team",
+  "/partners",
+  "/news",
+  "/careers",
+  "/privacy",
+  "/terms",
+  "/cookies",
+  "/sitemap",
+  "/auth/login",
+  "/auth/register",
+  "/auth/forgot-password",
+  "/auth/reset-password",
+  "/auth/verify",
 ];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
-  // Allow public routes
   if (publicRoutes.includes(pathname)) {
     return NextResponse.next();
   }
   
-  // Add security headers
-  const response = NextResponse.next();
+  const authCookie = request.cookies.get("auth-token");
+  if (!authCookie) {
+    return NextResponse.redirect(new URL("/auth/login", request.url));
+  }
   
-  response.headers.set('X-Frame-Options', 'DENY');
-  response.headers.set('X-Content-Type-Options', 'nosniff');
-  response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
-  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
-  
-  return response;
+  return NextResponse.next();
 }
 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+    "/((?!api|_next/static|_next/image|favicon.ico).*)",
   ],
 };
