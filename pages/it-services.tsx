@@ -27,7 +27,10 @@ import {
   Leaf,
   Monitor,
   Link as LinkIcon,
-  AlertTriangle
+  AlertTriangle,
+  Globe,
+  Heart,
+  Clock
 } from 'lucide-react';
 import Layout from './components/Layout';
 
@@ -558,6 +561,261 @@ const services = [
     marketPrice: "$3,500-8,500/month",
     benefits: ["99.9% uptime guarantee", "Rapid recovery", "Business continuity"],
     setupTime: "2-4 weeks"
+  },
+  {
+    title: "Quantum Computing Infrastructure",
+    description: "Next-generation quantum computing infrastructure and development environment",
+    icon: Atom,
+    features: [
+      "Quantum Hardware Integration",
+      "Quantum Algorithm Development",
+      "Quantum Software Stack",
+      "Hybrid Classical-Quantum Systems",
+      "Quantum Error Correction",
+      "Quantum Cloud Access"
+    ],
+    price: "Starting at $8,000/month",
+    marketPrice: "$15,000-50,000/month",
+    benefits: ["Exponential processing power", "Breakthrough problem solving", "Future-proof technology"],
+    setupTime: "8-12 weeks"
+  },
+  {
+    title: "AI-Powered IT Operations Center",
+    description: "Intelligent IT operations with AI-driven automation and predictive analytics",
+    icon: Brain,
+    features: [
+      "AI-Powered Monitoring",
+      "Predictive Incident Prevention",
+      "Automated Remediation",
+      "Intelligent Capacity Planning",
+      "Anomaly Detection",
+      "Self-Healing Systems"
+    ],
+    price: "Starting at $4,500/month",
+    marketPrice: "$7,000-18,000/month",
+    benefits: ["95% reduction in incidents", "Predictive maintenance", "Automated operations"],
+    setupTime: "4-6 weeks"
+  },
+  {
+    title: "Edge-to-Cloud Computing Platform",
+    description: "Seamless edge and cloud computing integration for distributed applications",
+    icon: Cpu,
+    features: [
+      "Edge Computing Nodes",
+      "Cloud Integration",
+      "Data Synchronization",
+      "Latency Optimization",
+      "Distributed Processing",
+      "Edge Security"
+    ],
+    price: "Starting at $3,500/month",
+    marketPrice: "$5,500-14,000/month",
+    benefits: ["Ultra-low latency", "Distributed processing", "Enhanced performance"],
+    setupTime: "4-6 weeks"
+  },
+  {
+    title: "Sustainable Green IT Solutions",
+    description: "Environmentally conscious IT infrastructure with carbon-neutral operations",
+    icon: Leaf,
+    features: [
+      "Carbon-Neutral Data Centers",
+      "Renewable Energy Integration",
+      "Energy-Efficient Hardware",
+      "Waste Reduction Programs",
+      "ESG Compliance",
+      "Environmental Monitoring"
+    ],
+    price: "Starting at $3,200/month",
+    marketPrice: "$5,000-12,000/month",
+    benefits: ["50% carbon footprint reduction", "ESG compliance", "Cost savings"],
+    setupTime: "3-5 weeks"
+  },
+  {
+    title: "Neuromorphic Computing Infrastructure",
+    description: "Brain-inspired computing systems for advanced AI and machine learning",
+    icon: Brain,
+    features: [
+      "Neuromorphic Processors",
+      "Spiking Neural Networks",
+      "Low-Power AI Processing",
+      "Real-time Learning",
+      "Pattern Recognition",
+      "Cognitive Computing"
+    ],
+    price: "Starting at $6,000/month",
+    marketPrice: "$10,000-25,000/month",
+    benefits: ["1000x energy efficiency", "Real-time learning", "Advanced AI capabilities"],
+    setupTime: "6-8 weeks"
+  },
+  {
+    title: "6G Network Infrastructure",
+    description: "Next-generation 6G network design and implementation for ultra-fast connectivity",
+    icon: Wifi,
+    features: [
+      "6G Network Planning",
+      "Terahertz Communication",
+      "Ultra-Massive MIMO",
+      "AI-Native Networks",
+      "Holographic Communication",
+      "Quantum Communication"
+    ],
+    price: "Starting at $7,500/month",
+    marketPrice: "$12,000-30,000/month",
+    benefits: ["100x faster than 5G", "Ultra-low latency", "Revolutionary connectivity"],
+    setupTime: "8-12 weeks"
+  },
+  {
+    title: "Space-Based IT Infrastructure",
+    description: "Satellite-based computing and communication infrastructure for global coverage",
+    icon: Globe,
+    features: [
+      "Satellite Computing",
+      "Space-Based Data Centers",
+      "Global Connectivity",
+      "Orbital Edge Computing",
+      "Space Communication",
+      "Earth Observation Integration"
+    ],
+    price: "Starting at $10,000/month",
+    marketPrice: "$20,000-100,000/month",
+    benefits: ["Global coverage", "Space-based processing", "Revolutionary connectivity"],
+    setupTime: "12-16 weeks"
+  },
+  {
+    title: "Biocomputing Infrastructure",
+    description: "DNA-based and biological computing systems for advanced data processing",
+    icon: Heart,
+    features: [
+      "DNA Data Storage",
+      "Biological Processors",
+      "Molecular Computing",
+      "Biomolecular Networks",
+      "Synthetic Biology Integration",
+      "Bio-Security Systems"
+    ],
+    price: "Starting at $8,500/month",
+    marketPrice: "$15,000-40,000/month",
+    benefits: ["Massive data density", "Biological processing", "Revolutionary storage"],
+    setupTime: "10-14 weeks"
+  },
+  {
+    title: "Holographic Computing Platform",
+    description: "3D holographic computing and display systems for immersive experiences",
+    icon: Monitor,
+    features: [
+      "Holographic Displays",
+      "3D Computing",
+      "Spatial Computing",
+      "Holographic Interfaces",
+      "Immersive Collaboration",
+      "3D Data Visualization"
+    ],
+    price: "Starting at $5,500/month",
+    marketPrice: "$9,000-22,000/month",
+    benefits: ["Immersive experiences", "3D computing", "Revolutionary interfaces"],
+    setupTime: "6-8 weeks"
+  },
+  {
+    title: "Quantum Internet Infrastructure",
+    description: "Quantum communication networks for ultra-secure global connectivity",
+    icon: Network,
+    features: [
+      "Quantum Key Distribution",
+      "Quantum Teleportation",
+      "Quantum Repeaters",
+      "Quantum Networks",
+      "Quantum Security",
+      "Quantum Cloud Integration"
+    ],
+    price: "Starting at $12,000/month",
+    marketPrice: "$25,000-100,000/month",
+    benefits: ["Unbreakable security", "Quantum communication", "Future-proof connectivity"],
+    setupTime: "12-16 weeks"
+  },
+  {
+    title: "Autonomous IT Management",
+    description: "Fully autonomous IT infrastructure management with self-optimizing systems",
+    icon: Settings,
+    features: [
+      "Self-Managing Systems",
+      "Autonomous Optimization",
+      "Self-Healing Infrastructure",
+      "Predictive Scaling",
+      "Intelligent Resource Allocation",
+      "Zero-Touch Operations"
+    ],
+    price: "Starting at $4,000/month",
+    marketPrice: "$6,500-16,000/month",
+    benefits: ["Zero-touch operations", "Self-optimization", "Reduced human intervention"],
+    setupTime: "4-6 weeks"
+  },
+  {
+    title: "Metaverse Infrastructure",
+    description: "Infrastructure for virtual worlds, augmented reality, and metaverse applications",
+    icon: Globe,
+    features: [
+      "Virtual World Hosting",
+      "AR/VR Infrastructure",
+      "3D Asset Management",
+      "Spatial Computing",
+      "Virtual Economy",
+      "Cross-Platform Integration"
+    ],
+    price: "Starting at $3,800/month",
+    marketPrice: "$6,000-15,000/month",
+    benefits: ["Immersive experiences", "Virtual economies", "Cross-platform integration"],
+    setupTime: "5-7 weeks"
+  },
+  {
+    title: "Time-Crystal Computing",
+    description: "Revolutionary time-crystal based computing for temporal data processing",
+    icon: Clock,
+    features: [
+      "Temporal Computing",
+      "Time-Crystal Processors",
+      "Temporal Data Storage",
+      "Time-Based Algorithms",
+      "Temporal Security",
+      "Time-Synchronized Systems"
+    ],
+    price: "Starting at $9,000/month",
+    marketPrice: "$18,000-45,000/month",
+    benefits: ["Temporal processing", "Revolutionary computing", "Time-based security"],
+    setupTime: "10-12 weeks"
+  },
+  {
+    title: "Consciousness-Based Computing",
+    description: "Advanced consciousness simulation and artificial general intelligence systems",
+    icon: Brain,
+    features: [
+      "Consciousness Simulation",
+      "AGI Development",
+      "Cognitive Architectures",
+      "Conscious AI Systems",
+      "Emotional Computing",
+      "Self-Aware Systems"
+    ],
+    price: "Starting at $15,000/month",
+    marketPrice: "$30,000-100,000/month",
+    benefits: ["True AI consciousness", "Emotional intelligence", "Self-aware systems"],
+    setupTime: "12-16 weeks"
+  },
+  {
+    title: "Dimensional Computing Platform",
+    description: "Multi-dimensional computing systems for complex problem solving",
+    icon: Atom,
+    features: [
+      "Multi-Dimensional Processing",
+      "Dimensional Data Storage",
+      "Cross-Dimensional Communication",
+      "Dimensional Algorithms",
+      "Reality Simulation",
+      "Dimensional Security"
+    ],
+    price: "Starting at $11,000/month",
+    marketPrice: "$22,000-60,000/month",
+    benefits: ["Multi-dimensional processing", "Reality simulation", "Revolutionary computing"],
+    setupTime: "10-14 weeks"
   }
 ];
 
