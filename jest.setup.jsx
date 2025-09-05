@@ -1,15 +1,41 @@
-import React from 'react',
-,
-interface Jest.setupProps {,
-  // Add props here as needed,
-};
-export default function Jest.setup({ }: Jest.setupProps) {,
-  return (,
-    <div>,
-      <h1>Jest.setup</h1>,
-      <p>This component is currently under development.</p>,
-    </div>,
-  ),
-};
-};
-};
+import React from 'react';
+
+// Mock Next.js router
+jest.mock('next/router', () => ({
+  useRouter() {
+    return {
+      route: '/',
+      pathname: '/',
+      query: {},
+      asPath: '/',
+      push: jest.fn(),
+      pop: jest.fn(),
+      reload: jest.fn(),
+      back: jest.fn(),
+      prefetch: jest.fn(),
+      beforePopState: jest.fn(),
+      events: {
+        on: jest.fn(),
+        off: jest.fn(),
+        emit: jest.fn(),
+      },
+    };
+  },
+}));
+
+// Mock Next.js Image component
+jest.mock('next/image', () => {
+  return function MockedImage({ src, alt, ...props }) {
+    return <img src={src} alt={alt} {...props} />;
+  };
+});
+
+// Mock Next.js Link component
+jest.mock('next/link', () => {
+  return function MockedLink({ href, children, ...props }) {
+    return <a href={href} {...props}>{children}</a>;
+  };
+});
+
+// Global test setup
+global.React = React;
