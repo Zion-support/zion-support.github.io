@@ -16,227 +16,318 @@ import {
   Phone,
   Mail,
   MapPin,
-  Users,
-  Lock
+  Cpu,
+  Wifi,
+  Brain,
+  FileText,
+  Users
 } from 'lucide-react';
 import Layout from './components/Layout';
 
 const services = [
   {
-    title: "Cloud Infrastructure & Migration",
-    description: "Complete cloud transformation with AWS, Azure, and GCP expertise for scalable, secure, and cost-optimized solutions",
+    title: "Quantum Computing Infrastructure",
+    description: "Revolutionary quantum computing solutions for complex problem solving and advanced optimization",
+    icon: Cpu,
+    features: [
+      "Quantum Hardware Integration",
+      "Quantum Algorithm Development",
+      "Quantum Error Correction",
+      "Hybrid Classical-Quantum Systems",
+      "Quantum Cloud Services",
+      "Quantum Security Implementation",
+      "Quantum Simulation Platforms",
+      "Quantum Machine Learning Infrastructure"
+    ],
+    price: "Starting at $25,000/month",
+    marketPrice: "$40,000-100,000/month",
+    benefits: ["Solve problems 1000x faster", "Revolutionary optimization capabilities", "Breakthrough research potential"],
+    setupTime: "12-16 weeks"
+  },
+  {
+    title: "Edge Computing Solutions",
+    description: "Distributed computing infrastructure for real-time processing and low-latency applications",
+    icon: Wifi,
+    features: [
+      "Edge Server Deployment",
+      "Real-time Data Processing",
+      "IoT Device Management",
+      "Edge AI & ML Models",
+      "5G Network Integration",
+      "Edge Security & Compliance",
+      "Distributed Storage Systems",
+      "Edge Analytics Platforms"
+    ],
+    price: "Starting at $3,500/month",
+    marketPrice: "$6,000-15,000/month",
+    benefits: ["Reduce latency by 90%", "Improve performance by 80%", "Enable real-time processing"],
+    setupTime: "6-8 weeks"
+  },
+  {
+    title: "Advanced Cloud Infrastructure",
+    description: "Next-generation cloud solutions with AI-powered optimization and multi-cloud management",
     icon: Cloud,
     features: [
-      "Multi-cloud strategy & architecture",
-      "AWS, Azure, GCP migration & optimization",
-      "Container orchestration (Kubernetes, Docker)",
-      "Serverless architecture design",
-      "Cloud cost optimization & FinOps",
-      "Disaster recovery & business continuity",
-      "Cloud security & compliance (SOC2, HIPAA)",
-      "Auto-scaling & performance tuning"
+      "Multi-Cloud Architecture",
+      "AI-Powered Auto-scaling",
+      "Serverless Computing",
+      "Container Orchestration",
+      "Cloud Security & Compliance",
+      "Disaster Recovery & Backup",
+      "Cost Optimization",
+      "Performance Monitoring"
     ],
     price: "Starting at $2,200/month",
-    marketPrice: "$3,500-7,000/month",
-    benefits: ["40% cost reduction", "99.9% uptime guarantee", "50% faster deployment", "24/7 monitoring"]
+    marketPrice: "$4,000-10,000/month",
+    benefits: ["Reduce costs by 40%", "Improve scalability by 300%", "Ensure 99.99% uptime"],
+    setupTime: "4-6 weeks"
   },
   {
-    title: "Advanced Cybersecurity Solutions",
-    description: "Comprehensive security services including zero-trust architecture, threat detection, and compliance management",
+    title: "Zero-Trust Security Architecture",
+    description: "Comprehensive security framework with continuous verification and micro-segmentation",
     icon: Shield,
     features: [
-      "Zero-trust security architecture",
-      "Advanced threat detection & response",
-      "Penetration testing & vulnerability assessments",
-      "Security operations center (SOC) services",
-      "Compliance management (SOC2, GDPR, HIPAA)",
-      "Identity & access management (IAM)",
-      "Security awareness training",
-      "Incident response & forensics"
+      "Identity & Access Management",
+      "Micro-segmentation",
+      "Continuous Monitoring",
+      "Threat Detection & Response",
+      "Data Loss Prevention",
+      "Security Orchestration",
+      "Compliance Automation",
+      "Risk Assessment & Management"
     ],
-    price: "Starting at $2,800/month",
-    marketPrice: "$4,500-9,000/month",
-    benefits: ["99.9% threat detection accuracy", "60% faster incident response", "100% compliance", "24/7 security monitoring"]
+    price: "Starting at $4,500/month",
+    marketPrice: "$8,000-20,000/month",
+    benefits: ["Prevent 99.9% of breaches", "Reduce security costs by 50%", "Ensure compliance 100%"],
+    setupTime: "8-12 weeks"
   },
   {
-    title: "DevOps & CI/CD Automation",
-    description: "Complete DevOps transformation with automated pipelines, infrastructure as code, and continuous monitoring",
+    title: "AI-Powered DevOps Platform",
+    description: "Intelligent DevOps solutions with automated testing, deployment, and monitoring",
     icon: Zap,
     features: [
-      "CI/CD pipeline design & implementation",
-      "Infrastructure as Code (Terraform, CloudFormation)",
-      "Container orchestration & microservices",
-      "Automated testing & quality gates",
-      "Monitoring & observability (Prometheus, Grafana)",
-      "GitOps & deployment strategies",
-      "Performance optimization & scaling",
-      "Disaster recovery automation"
+      "AI-Driven CI/CD Pipelines",
+      "Automated Testing & QA",
+      "Intelligent Deployment",
+      "Performance Optimization",
+      "Anomaly Detection",
+      "Self-Healing Systems",
+      "Predictive Scaling",
+      "DevSecOps Integration"
     ],
-    price: "Starting at $1,800/month",
-    marketPrice: "$3,000-6,000/month",
-    benefits: ["80% faster deployments", "90% reduction in errors", "50% improvement in reliability", "Automated scaling"]
+    price: "Starting at $3,200/month",
+    marketPrice: "$5,500-12,000/month",
+    benefits: ["Reduce deployment time by 70%", "Improve reliability by 85%", "Lower operational costs by 60%"],
+    setupTime: "6-8 weeks"
   },
   {
-    title: "Database & Data Management",
-    description: "Expert database administration, optimization, and data management across all major database platforms",
+    title: "Advanced Database Solutions",
+    description: "Next-generation database systems with AI optimization and real-time analytics",
     icon: Database,
     features: [
-      "Database design & architecture",
-      "Performance tuning & optimization",
-      "Data migration & consolidation",
-      "Backup & disaster recovery",
-      "Database security & encryption",
-      "Cloud database services (RDS, Aurora, CosmosDB)",
-      "Data warehousing & analytics",
-      "Database monitoring & maintenance"
+      "AI-Powered Query Optimization",
+      "Real-time Analytics",
+      "Distributed Database Systems",
+      "Data Lake & Warehouse",
+      "Advanced Backup & Recovery",
+      "Database Security & Encryption",
+      "Performance Tuning",
+      "Data Migration Services"
     ],
-    price: "Starting at $1,500/month",
-    marketPrice: "$2,500-5,000/month",
-    benefits: ["99.9% data availability", "50% performance improvement", "Automated backups", "Real-time monitoring"]
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,500-12,000/month",
+    benefits: ["Improve query performance by 90%", "Reduce storage costs by 50%", "Ensure data integrity 100%"],
+    setupTime: "4-6 weeks"
   },
   {
-    title: "Network Infrastructure & Security",
-    description: "Comprehensive network design, implementation, and security for enterprise-grade connectivity",
+    title: "5G Network Infrastructure",
+    description: "Cutting-edge 5G network solutions for ultra-fast connectivity and IoT applications",
     icon: Network,
     features: [
-      "Network architecture & design",
-      "SD-WAN & hybrid cloud networking",
-      "VPN & remote access solutions",
-      "Load balancing & traffic management",
-      "Network security & firewalls",
-      "Wireless network optimization",
-      "Network monitoring & management",
-      "Cloud networking (VPC, Transit Gateway)"
+      "5G Network Design & Implementation",
+      "Network Slicing",
+      "Edge Computing Integration",
+      "IoT Device Management",
+      "Network Security & Monitoring",
+      "Performance Optimization",
+      "Multi-Access Edge Computing",
+      "Network Function Virtualization"
     ],
-    price: "Starting at $1,200/month",
-    marketPrice: "$2,000-4,000/month",
-    benefits: ["99.9% network uptime", "40% performance improvement", "Enhanced security", "24/7 monitoring"]
+    price: "Starting at $5,500/month",
+    marketPrice: "$10,000-25,000/month",
+    benefits: ["Enable 10x faster speeds", "Support millions of IoT devices", "Reduce latency by 95%"],
+    setupTime: "8-12 weeks"
   },
   {
-    title: "IT Infrastructure Management",
-    description: "Complete IT infrastructure management including servers, storage, and system administration",
-    icon: Server,
-    features: [
-      "Server administration & maintenance",
-      "Storage management & optimization",
-      "System monitoring & alerting",
-      "User account management",
-      "Backup & disaster recovery",
-      "Performance optimization",
-      "Patch management & updates",
-      "24/7 system support"
-    ],
-    price: "Starting at $1,000/month",
-    marketPrice: "$1,800-3,500/month",
-    benefits: ["99.9% system uptime", "Proactive maintenance", "Cost optimization", "Expert support"]
-  },
-  {
-    title: "Microsoft 365 & Office Solutions",
-    description: "Complete Microsoft 365 implementation, migration, and optimization for modern workplace productivity",
-    icon: Settings,
-    features: [
-      "Microsoft 365 migration & setup",
-      "SharePoint & Teams optimization",
-      "Exchange Online & email security",
-      "Power Platform development",
-      "Azure AD & identity management",
-      "Security & compliance configuration",
-      "User training & adoption",
-      "Ongoing support & maintenance"
-    ],
-    price: "Starting at $1,400/month",
-    marketPrice: "$2,200-4,500/month",
-    benefits: ["50% productivity increase", "Enhanced collaboration", "Improved security", "Cost savings"]
-  },
-  {
-    title: "IT Consulting & Strategy",
-    description: "Strategic IT consulting to align technology with business goals and drive digital transformation",
+    title: "Blockchain Infrastructure",
+    description: "Secure blockchain solutions for enterprise applications and digital transformation",
     icon: Code,
     features: [
-      "IT strategy & roadmap development",
-      "Technology assessment & planning",
-      "Digital transformation consulting",
-      "Vendor evaluation & selection",
-      "IT governance & best practices",
-      "Cost optimization analysis",
-      "Technology risk assessment",
-      "Change management support"
+      "Blockchain Network Setup",
+      "Smart Contract Development",
+      "Cryptocurrency Integration",
+      "DeFi Platform Development",
+      "NFT Marketplace Creation",
+      "Blockchain Security",
+      "Consensus Mechanism Implementation",
+      "Interoperability Solutions"
     ],
-    price: "Starting at $150/hour",
-    marketPrice: "$200-400/hour",
-    benefits: ["Strategic alignment", "Cost optimization", "Risk mitigation", "Technology roadmap"]
+    price: "Starting at $4,200/month",
+    marketPrice: "$7,500-18,000/month",
+    benefits: ["Ensure transaction security 100%", "Reduce costs by 60%", "Enable new business models"],
+    setupTime: "6-10 weeks"
   },
   {
-    title: "Backup & Disaster Recovery",
-    description: "Comprehensive backup solutions and disaster recovery planning to ensure business continuity",
-    icon: Shield,
+    title: "Hybrid Cloud Management",
+    description: "Seamless integration of on-premises and cloud infrastructure with unified management",
+    icon: Server,
     features: [
-      "Automated backup solutions",
-      "Disaster recovery planning",
-      "Business continuity testing",
-      "Cloud backup services",
-      "Data replication & synchronization",
-      "Recovery time optimization",
-      "Compliance & audit support",
-      "24/7 monitoring & alerts"
+      "Hybrid Cloud Architecture",
+      "Unified Management Platform",
+      "Data Synchronization",
+      "Workload Migration",
+      "Security & Compliance",
+      "Cost Optimization",
+      "Disaster Recovery",
+      "Performance Monitoring"
     ],
-    price: "Starting at $800/month",
-    marketPrice: "$1,500-3,000/month",
-    benefits: ["99.9% data protection", "Fast recovery times", "Compliance ready", "Automated testing"]
+    price: "Starting at $3,800/month",
+    marketPrice: "$6,500-15,000/month",
+    benefits: ["Optimize costs by 45%", "Improve flexibility by 80%", "Ensure seamless operations"],
+    setupTime: "6-8 weeks"
   },
   {
-    title: "IT Support & Help Desk",
-    description: "Professional IT support services with 24/7 coverage and rapid response times",
-    icon: Users,
+    title: "AI Infrastructure Services",
+    description: "Specialized infrastructure for AI/ML workloads with GPU clusters and distributed computing",
+    icon: Brain,
     features: [
-      "24/7 help desk support",
-      "Remote desktop assistance",
-      "Hardware & software support",
-      "User training & onboarding",
-      "Issue tracking & resolution",
-      "Proactive system monitoring",
-      "Knowledge base management",
-      "SLA-guaranteed response times"
+      "GPU Cluster Management",
+      "Distributed Training Infrastructure",
+      "Model Serving Platforms",
+      "Data Pipeline Automation",
+      "MLOps Integration",
+      "AI Model Monitoring",
+      "Scalable Inference Systems",
+      "AI Security & Compliance"
     ],
-    price: "Starting at $1,200/month",
-    marketPrice: "$2,000-4,000/month",
-    benefits: ["24/7 availability", "Fast response times", "Proactive support", "User satisfaction"]
+    price: "Starting at $5,200/month",
+    marketPrice: "$9,000-22,000/month",
+    benefits: ["Accelerate AI development by 300%", "Reduce training time by 80%", "Scale AI workloads infinitely"],
+    setupTime: "8-10 weeks"
   },
   {
-    title: "Cloud Security & Compliance",
-    description: "Specialized cloud security services ensuring compliance with industry standards and regulations",
-    icon: Lock,
+    title: "Internet of Things (IoT) Platform",
+    description: "Comprehensive IoT infrastructure for device management, data processing, and analytics",
+    icon: Wifi,
     features: [
-      "Cloud security assessment",
-      "Compliance auditing (SOC2, HIPAA, GDPR)",
-      "Security policy development",
-      "Access control & identity management",
-      "Data encryption & protection",
-      "Security monitoring & alerting",
-      "Compliance reporting",
-      "Security training & awareness"
+      "IoT Device Management",
+      "Real-time Data Processing",
+      "Edge Computing Integration",
+      "IoT Security & Encryption",
+      "Device Analytics & Monitoring",
+      "Firmware Management",
+      "API Gateway Services",
+      "IoT Application Development"
     ],
     price: "Starting at $2,500/month",
-    marketPrice: "$4,000-8,000/month",
-    benefits: ["100% compliance", "Enhanced security", "Risk mitigation", "Audit readiness"]
+    marketPrice: "$4,500-12,000/month",
+    benefits: ["Connect millions of devices", "Process data in real-time", "Reduce operational costs by 40%"],
+    setupTime: "6-8 weeks"
   },
   {
-    title: "IT Project Management",
-    description: "Professional project management for IT implementations, migrations, and digital transformation projects",
+    title: "High-Performance Computing (HPC)",
+    description: "Supercomputing solutions for complex simulations, research, and data-intensive applications",
+    icon: Cpu,
+    features: [
+      "HPC Cluster Management",
+      "Parallel Processing Systems",
+      "Scientific Computing Platforms",
+      "High-Speed Interconnects",
+      "Job Scheduling & Management",
+      "Storage Optimization",
+      "Performance Tuning",
+      "Research Collaboration Tools"
+    ],
+    price: "Starting at $8,500/month",
+    marketPrice: "$15,000-40,000/month",
+    benefits: ["Process massive datasets", "Accelerate research by 100x", "Enable breakthrough discoveries"],
+    setupTime: "10-14 weeks"
+  },
+  {
+    title: "Disaster Recovery & Business Continuity",
+    description: "Comprehensive disaster recovery solutions with automated failover and data protection",
+    icon: Shield,
+    features: [
+      "Automated Backup Systems",
+      "Disaster Recovery Planning",
+      "Business Continuity Management",
+      "Data Replication Services",
+      "Failover & Recovery Testing",
+      "RTO/RPO Optimization",
+      "Compliance & Audit Support",
+      "24/7 Monitoring & Support"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$4,000-10,000/month",
+    benefits: ["Ensure 99.99% uptime", "Minimize data loss to zero", "Reduce recovery time by 90%"],
+    setupTime: "4-6 weeks"
+  },
+  {
+    title: "Digital Transformation Services",
+    description: "End-to-end digital transformation solutions for modernizing legacy systems and processes",
     icon: Settings,
     features: [
-      "Project planning & execution",
-      "Resource management & allocation",
-      "Timeline & milestone tracking",
-      "Risk assessment & mitigation",
-      "Stakeholder communication",
-      "Quality assurance & testing",
-      "Change management",
-      "Post-implementation support"
+      "Legacy System Modernization",
+      "Process Automation",
+      "Digital Workflow Design",
+      "API Integration Services",
+      "Data Migration & Integration",
+      "Change Management",
+      "Training & Support",
+      "Performance Optimization"
     ],
-    price: "Starting at $180/hour",
-    marketPrice: "$250-450/hour",
-    benefits: ["On-time delivery", "Budget control", "Risk mitigation", "Quality assurance"]
+    price: "Starting at $4,800/month",
+    marketPrice: "$8,500-20,000/month",
+    benefits: ["Modernize legacy systems", "Improve efficiency by 70%", "Enable digital innovation"],
+    setupTime: "8-12 weeks"
+  },
+  {
+    title: "Compliance & Governance Solutions",
+    description: "Comprehensive compliance management for regulatory requirements and industry standards",
+    icon: FileText,
+    features: [
+      "Regulatory Compliance Management",
+      "Audit Trail & Documentation",
+      "Risk Assessment & Mitigation",
+      "Policy Management",
+      "Compliance Monitoring",
+      "Reporting & Analytics",
+      "Training & Certification",
+      "Third-party Audits"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$5,000-12,000/month",
+    benefits: ["Ensure 100% compliance", "Reduce audit time by 60%", "Minimize regulatory risks"],
+    setupTime: "4-6 weeks"
+  },
+  {
+    title: "Managed IT Services",
+    description: "Comprehensive IT management services with 24/7 monitoring, support, and optimization",
+    icon: Users,
+    features: [
+      "24/7 IT Monitoring",
+      "Proactive Maintenance",
+      "Help Desk Support",
+      "Security Management",
+      "Performance Optimization",
+      "Software Updates & Patches",
+      "Asset Management",
+      "Strategic IT Consulting"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-6,000/month",
+    benefits: ["Reduce IT costs by 40%", "Improve system reliability by 90%", "Enable focus on core business"],
+    setupTime: "2-3 weeks"
   }
 ];
 
@@ -343,32 +434,35 @@ export default function ITServicesPage() {
                     </li>
                   ))}
                 </ul>
-                
-                {/* Benefits */}
-                {service.benefits && (
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Benefits:</h4>
-                    <ul className="text-xs text-gray-600 space-y-1">
-                      {service.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <div className="w-1 h-1 bg-blue-500 rounded-full mr-2"></div>
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                
-                <div className="mt-4 space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-lg font-bold text-blue-600">{service.price}</span>
+                <div className="mt-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-2xl font-bold text-blue-600">{service.price}</span>
                     {service.marketPrice && (
-                      <span className="text-sm text-gray-500 line-through">{service.marketPrice}</span>
+                      <span className="text-sm text-gray-500 line-through">
+                        {service.marketPrice}
+                      </span>
                     )}
                   </div>
                   {service.marketPrice && (
-                    <div className="text-xs text-green-600 font-medium">
-                      Save up to 40% vs market rates
+                    <div className="text-xs text-green-600 font-medium mb-2">
+                      Save up to 50% vs market rate
+                    </div>
+                  )}
+                  {service.setupTime && (
+                    <div className="text-sm text-gray-500 mb-2">
+                      Setup: {service.setupTime}
+                    </div>
+                  )}
+                  {service.benefits && (
+                    <div className="mt-3">
+                      <div className="text-sm font-semibold text-gray-900 mb-2">Key Benefits:</div>
+                      <div className="flex flex-wrap gap-1">
+                        {service.benefits.slice(0, 2).map((benefit, idx) => (
+                          <span key={idx} className="text-xs font-medium text-green-600 bg-green-50 px-2 py-1 rounded-full">
+                            {benefit}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   )}
                 </div>

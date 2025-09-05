@@ -72,281 +72,428 @@ const contactInfo = {
 const aiServices = [
   {
     id: 1,
-    title: 'GPT-4o & Advanced LLM Integration',
-    description: 'Custom large language model solutions with GPT-4o, Claude, and other cutting-edge models for enterprise applications.',
-    icon: Brain,
-    category: 'Machine Learning',
-    price: 'Starting at $2,500/month',
+    title: 'Quantum AI Computing',
+    description: 'Revolutionary quantum machine learning algorithms for solving complex optimization problems and advanced pattern recognition.',
+    icon: Cpu,
+    category: 'Quantum AI',
+    price: 'Starting at $15,000/month',
     features: [
-      'GPT-4o API integration & optimization',
-      'Custom prompt engineering',
-      'Fine-tuned model deployment',
-      'Multi-model orchestration',
-      'Context-aware responses',
-      'Cost optimization strategies',
-      'Real-time inference APIs',
-      'Custom training pipelines'
+      'Quantum machine learning algorithms',
+      'Quantum neural networks',
+      'Quantum optimization solvers',
+      'Quantum data processing',
+      'Hybrid classical-quantum models',
+      'Quantum error correction',
+      'Quantum simulation capabilities',
+      'Advanced quantum analytics'
     ],
     benefits: [
-      '95% accuracy in complex reasoning tasks',
-      '60% reduction in development time',
-      '40% cost savings vs building from scratch',
-      'Seamless integration with existing systems'
+      'Solve problems 1000x faster than classical computers',
+      'Handle exponentially complex datasets',
+      'Breakthrough optimization results',
+      'Revolutionary pattern recognition accuracy'
     ],
-    marketPrice: '$4,000-8,000/month',
-    setupTime: '1-2 weeks',
-    targetUsers: 'Enterprise, SaaS, Content, Customer Service'
+    marketPrice: '$25,000-50,000/month',
+    setupTime: '8-12 weeks',
+    targetUsers: 'Research, Finance, Pharmaceuticals, Aerospace'
   },
   {
     id: 2,
-    title: 'AI-Powered Document Intelligence',
-    description: 'Advanced document processing with OCR, classification, and data extraction using state-of-the-art computer vision and NLP.',
-    icon: Eye,
-    category: 'Computer Vision',
-    price: 'Starting at $1,800/month',
+    title: 'Autonomous Systems AI',
+    description: 'Self-driving vehicles, drones, and robotic systems with advanced AI decision-making and real-time adaptation.',
+    icon: Car,
+    category: 'Autonomous Systems',
+    price: 'Starting at $8,500/month',
     features: [
-      'Advanced OCR with 99.5% accuracy',
-      'Document classification & routing',
-      'Intelligent data extraction',
-      'Multi-format support (PDF, images, scans)',
-      'Handwriting recognition',
-      'Table & form extraction',
-      'Automated validation & verification',
-      'Real-time processing pipeline'
+      'Autonomous vehicle control systems',
+      'Drone navigation & mission planning',
+      'Robotic process automation',
+      'Real-time decision making',
+      'Sensor fusion & processing',
+      'Path planning & optimization',
+      'Collision avoidance systems',
+      'Machine learning adaptation'
     ],
     benefits: [
-      '90% reduction in manual data entry',
-      'Process 10,000+ documents per hour',
-      '99.5% accuracy in data extraction',
-      '50% faster document processing'
+      'Reduce operational costs by 60%',
+      'Improve safety by 95%',
+      'Enable 24/7 autonomous operations',
+      'Increase efficiency by 80%'
     ],
-    marketPrice: '$3,000-6,000/month',
-    setupTime: '2-3 weeks',
-    targetUsers: 'Finance, Legal, Healthcare, Insurance'
+    marketPrice: '$12,000-25,000/month',
+    setupTime: '6-10 weeks',
+    targetUsers: 'Transportation, Logistics, Manufacturing, Agriculture'
   },
   {
     id: 3,
-    title: 'Conversational AI & Chatbots',
-    description: 'Intelligent conversational agents with natural language understanding, context awareness, and human-like interactions.',
-    icon: MessageSquare,
-    category: 'NLP',
-    price: 'Starting at $1,200/month',
+    title: 'Advanced Predictive Analytics',
+    description: 'Next-generation predictive models with deep learning, time series analysis, and multi-dimensional forecasting.',
+    icon: TrendingUp,
+    category: 'Predictive Analytics',
+    price: 'Starting at $4,200/month',
     features: [
-      'Natural language understanding',
-      'Multi-turn conversation handling',
-      'Intent recognition & entity extraction',
-      'Voice & text integration',
-      'Knowledge base integration',
-      'Sentiment analysis & emotion detection',
-      'Multi-language support',
-      'Human handoff capabilities'
+      'Deep learning forecasting models',
+      'Time series analysis & prediction',
+      'Multi-variate analysis',
+      'Anomaly detection & alerting',
+      'Scenario modeling & simulation',
+      'Real-time prediction updates',
+      'Confidence interval analysis',
+      'Model explainability & interpretability'
     ],
     benefits: [
-      '80% reduction in support tickets',
-      '24/7 customer availability',
-      '90% customer satisfaction rate',
-      '60% cost savings on support'
+      'Improve prediction accuracy by 70%',
+      'Reduce forecasting errors by 85%',
+      'Enable proactive decision making',
+      'Increase revenue by 30-50%'
     ],
-    marketPrice: '$2,000-4,500/month',
-    setupTime: '1-2 weeks',
-    targetUsers: 'Customer Service, E-commerce, Healthcare, Education'
+    marketPrice: '$6,500-15,000/month',
+    setupTime: '4-6 weeks',
+    targetUsers: 'Finance, Retail, Healthcare, Energy'
   },
   {
     id: 4,
-    title: 'Predictive Analytics & Forecasting',
-    description: 'Advanced predictive models for demand forecasting, risk assessment, and business intelligence using machine learning.',
-    icon: BarChart3,
-    category: 'Machine Learning',
-    price: 'Starting at $2,200/month',
+    title: 'AI-Powered Drug Discovery',
+    description: 'Revolutionary AI platform for pharmaceutical research, molecular design, and drug development acceleration.',
+    icon: Heart,
+    category: 'Healthcare AI',
+    price: 'Starting at $12,000/month',
     features: [
-      'Time series forecasting',
-      'Demand prediction models',
-      'Risk assessment algorithms',
-      'Anomaly detection systems',
-      'Real-time predictions',
-      'Custom model training',
-      'Performance monitoring',
-      'Automated retraining'
+      'Molecular property prediction',
+      'Drug-target interaction modeling',
+      'Chemical compound optimization',
+      'Toxicity prediction & analysis',
+      'Clinical trial optimization',
+      'Biomarker discovery',
+      'Drug repurposing analysis',
+      'Patent landscape analysis'
     ],
     benefits: [
-      '85% accuracy in demand forecasting',
-      '30% reduction in inventory costs',
-      '40% improvement in planning accuracy',
-      'Real-time business insights'
+      'Reduce drug development time by 50%',
+      'Lower R&D costs by 40%',
+      'Increase success rates by 60%',
+      'Accelerate time-to-market by 3-5 years'
     ],
-    marketPrice: '$3,500-7,000/month',
-    setupTime: '3-4 weeks',
-    targetUsers: 'Retail, Manufacturing, Finance, Supply Chain'
+    marketPrice: '$20,000-40,000/month',
+    setupTime: '8-12 weeks',
+    targetUsers: 'Pharmaceuticals, Biotechnology, Research Institutions'
   },
   {
     id: 5,
-    title: 'AI-Powered Content Generation',
-    description: 'Intelligent content creation using advanced language models for marketing, documentation, and creative writing.',
-    icon: FileText,
-    category: 'NLP',
-    price: 'Starting at $1,500/month',
+    title: 'AI Financial Trading Systems',
+    description: 'High-frequency trading algorithms with machine learning, sentiment analysis, and risk management.',
+    icon: DollarSign,
+    category: 'Financial AI',
+    price: 'Starting at $6,800/month',
     features: [
-      'AI content writing & editing',
-      'Multi-format content generation',
-      'Brand voice customization',
-      'SEO optimization',
-      'Content personalization',
-      'Plagiarism detection',
-      'Multi-language content',
-      'Quality scoring & improvement'
+      'Algorithmic trading strategies',
+      'Real-time market analysis',
+      'Sentiment analysis integration',
+      'Risk management algorithms',
+      'Portfolio optimization',
+      'Market prediction models',
+      'High-frequency trading support',
+      'Regulatory compliance monitoring'
     ],
     benefits: [
-      '70% faster content creation',
-      '50% reduction in writing costs',
-      '40% improvement in engagement',
-      'Consistent brand messaging'
+      'Increase trading profits by 25-40%',
+      'Reduce risk exposure by 60%',
+      'Enable 24/7 automated trading',
+      'Improve portfolio performance by 35%'
     ],
-    marketPrice: '$2,500-5,000/month',
-    setupTime: '1-2 weeks',
-    targetUsers: 'Marketing, Content, E-commerce, Publishing'
+    marketPrice: '$10,000-25,000/month',
+    setupTime: '6-8 weeks',
+    targetUsers: 'Investment Banks, Hedge Funds, Trading Firms'
   },
   {
     id: 6,
-    title: 'Computer Vision for Quality Control',
-    description: 'Automated visual inspection systems for manufacturing, retail, and quality assurance using advanced computer vision.',
-    icon: Eye,
-    category: 'Computer Vision',
-    price: 'Starting at $2,800/month',
+    title: 'AI-Powered Cybersecurity',
+    description: 'Advanced threat detection, behavioral analysis, and automated response systems for enterprise security.',
+    icon: Shield,
+    category: 'Cybersecurity AI',
+    price: 'Starting at $3,500/month',
     features: [
-      'Defect detection & classification',
-      'Real-time visual inspection',
-      'Quality scoring algorithms',
-      'Multi-angle analysis',
-      'Custom model training',
-      'Integration with production lines',
-      'Statistical process control',
-      'Automated reporting'
+      'Threat detection & analysis',
+      'Behavioral anomaly detection',
+      'Automated incident response',
+      'Malware classification',
+      'Network traffic analysis',
+      'User behavior analytics',
+      'Predictive threat modeling',
+      'Security orchestration'
     ],
     benefits: [
-      '95% accuracy in defect detection',
-      '60% reduction in inspection time',
-      '40% improvement in product quality',
-      '24/7 automated monitoring'
+      'Detect threats 10x faster',
+      'Reduce false positives by 80%',
+      'Prevent 95% of cyber attacks',
+      'Lower security costs by 50%'
     ],
-    marketPrice: '$4,500-9,000/month',
-    setupTime: '3-4 weeks',
-    targetUsers: 'Manufacturing, Automotive, Electronics, Food'
+    marketPrice: '$5,500-12,000/month',
+    setupTime: '4-6 weeks',
+    targetUsers: 'Enterprises, Government, Healthcare, Finance'
   },
   {
     id: 7,
-    title: 'AI-Powered Recommendation Systems',
-    description: 'Intelligent recommendation engines for personalized user experiences, product suggestions, and content curation.',
-    icon: Target,
-    category: 'Machine Learning',
-    price: 'Starting at $1,800/month',
+    title: 'AI Content Generation',
+    description: 'Advanced content creation platform with natural language generation, creative writing, and multimedia content.',
+    icon: FileText,
+    category: 'Content AI',
+    price: 'Starting at $2,800/month',
     features: [
-      'Collaborative filtering',
-      'Content-based recommendations',
-      'Hybrid recommendation models',
-      'Real-time personalization',
-      'A/B testing framework',
-      'Cold start problem solutions',
-      'Multi-criteria recommendations',
-      'Performance analytics'
+      'Natural language generation',
+      'Creative writing assistance',
+      'Content optimization & SEO',
+      'Multi-language content creation',
+      'Video script generation',
+      'Social media content',
+      'Email marketing automation',
+      'Content personalization'
     ],
     benefits: [
-      '35% increase in conversion rates',
-      '50% improvement in user engagement',
-      '25% boost in average order value',
-      'Personalized user experiences'
+      'Increase content production by 300%',
+      'Reduce content costs by 70%',
+      'Improve engagement by 45%',
+      'Scale content globally'
     ],
-    marketPrice: '$3,000-6,000/month',
+    marketPrice: '$4,500-9,000/month',
     setupTime: '2-3 weeks',
-    targetUsers: 'E-commerce, Media, SaaS, Retail'
+    targetUsers: 'Marketing, Media, E-commerce, Education'
   },
   {
     id: 8,
-    title: 'AI-Powered Fraud Detection',
-    description: 'Advanced fraud detection and prevention systems using machine learning for real-time transaction monitoring.',
-    icon: Shield,
-    category: 'Machine Learning',
-    price: 'Starting at $2,500/month',
+    title: 'AI-Powered Supply Chain Optimization',
+    description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics planning.',
+    icon: Package,
+    category: 'Supply Chain AI',
+    price: 'Starting at $4,500/month',
     features: [
-      'Real-time fraud scoring',
-      'Behavioral analysis',
-      'Anomaly detection',
-      'Pattern recognition',
-      'Risk assessment models',
-      'Automated decision making',
-      'False positive reduction',
-      'Continuous learning'
+      'Demand forecasting & planning',
+      'Inventory optimization',
+      'Supplier risk assessment',
+      'Route optimization',
+      'Quality prediction',
+      'Cost optimization',
+      'Sustainability tracking',
+      'Real-time monitoring'
     ],
     benefits: [
-      '90% reduction in fraud losses',
-      '95% accuracy in fraud detection',
-      '60% reduction in false positives',
-      'Real-time protection'
+      'Reduce supply chain costs by 30%',
+      'Improve delivery times by 40%',
+      'Minimize inventory waste by 50%',
+      'Increase supplier reliability by 60%'
     ],
-    marketPrice: '$4,000-8,000/month',
-    setupTime: '3-4 weeks',
-    targetUsers: 'Finance, E-commerce, Insurance, Banking'
+    marketPrice: '$7,000-15,000/month',
+    setupTime: '6-8 weeks',
+    targetUsers: 'Manufacturing, Retail, Logistics, Automotive'
   },
   {
     id: 9,
-    title: 'AI-Powered Voice Analytics',
-    description: 'Advanced voice analysis for sentiment detection, emotion recognition, and speech analytics in customer interactions.',
-    icon: Mic,
-    category: 'NLP',
-    price: 'Starting at $1,600/month',
+    title: 'AI Medical Diagnosis Systems',
+    description: 'Advanced medical imaging analysis, diagnostic assistance, and treatment recommendation systems.',
+    icon: Heart,
+    category: 'Medical AI',
+    price: 'Starting at $5,500/month',
     features: [
-      'Voice sentiment analysis',
-      'Emotion recognition',
-      'Speaker identification',
-      'Call quality assessment',
-      'Real-time transcription',
-      'Keyword extraction',
-      'Conversation analytics',
-      'Performance insights'
+      'Medical image analysis',
+      'Diagnostic assistance',
+      'Treatment recommendations',
+      'Drug interaction checking',
+      'Patient risk assessment',
+      'Clinical decision support',
+      'Medical record analysis',
+      'Telemedicine integration'
     ],
     benefits: [
-      '85% accuracy in sentiment detection',
-      '40% improvement in customer satisfaction',
-      'Real-time conversation insights',
-      'Automated quality monitoring'
+      'Improve diagnostic accuracy by 40%',
+      'Reduce misdiagnosis by 60%',
+      'Speed up diagnosis by 50%',
+      'Lower healthcare costs by 30%'
     ],
-    marketPrice: '$2,800-5,500/month',
-    setupTime: '2-3 weeks',
-    targetUsers: 'Call Centers, Customer Service, Sales, Healthcare'
+    marketPrice: '$8,500-18,000/month',
+    setupTime: '6-10 weeks',
+    targetUsers: 'Hospitals, Clinics, Medical Research, Telemedicine'
   },
   {
     id: 10,
-    title: 'AI-Powered Supply Chain Optimization',
-    description: 'Intelligent supply chain management with demand forecasting, route optimization, and inventory management.',
-    icon: Truck,
-    category: 'Machine Learning',
-    price: 'Starting at $3,200/month',
+    title: 'AI-Powered Energy Management',
+    description: 'Smart energy optimization systems for renewable energy, grid management, and consumption optimization.',
+    icon: Zap,
+    category: 'Energy AI',
+    price: 'Starting at $3,800/month',
     features: [
-      'Demand forecasting',
-      'Route optimization',
-      'Inventory optimization',
-      'Supplier risk assessment',
-      'Cost optimization',
-      'Real-time tracking',
-      'Predictive maintenance',
-      'Sustainability metrics'
+      'Energy consumption optimization',
+      'Renewable energy forecasting',
+      'Grid stability management',
+      'Smart grid analytics',
+      'Demand response optimization',
+      'Energy storage management',
+      'Carbon footprint tracking',
+      'Cost optimization'
     ],
     benefits: [
-      '25% reduction in logistics costs',
-      '30% improvement in delivery times',
-      '40% reduction in stockouts',
-      '20% increase in efficiency'
+      'Reduce energy costs by 25%',
+      'Increase renewable energy usage by 40%',
+      'Improve grid efficiency by 35%',
+      'Lower carbon emissions by 30%'
+    ],
+    marketPrice: '$6,000-12,000/month',
+    setupTime: '4-6 weeks',
+    targetUsers: 'Utilities, Manufacturing, Commercial Buildings, Smart Cities'
+  },
+  {
+    id: 11,
+    title: 'AI-Powered Agriculture',
+    description: 'Precision agriculture solutions with crop monitoring, yield prediction, and automated farming systems.',
+    icon: Sprout,
+    category: 'Agriculture AI',
+    price: 'Starting at $2,500/month',
+    features: [
+      'Crop monitoring & analysis',
+      'Yield prediction & optimization',
+      'Pest & disease detection',
+      'Soil analysis & recommendations',
+      'Irrigation optimization',
+      'Weather prediction integration',
+      'Automated farming equipment',
+      'Supply chain optimization'
+    ],
+    benefits: [
+      'Increase crop yields by 30%',
+      'Reduce water usage by 40%',
+      'Lower pesticide use by 50%',
+      'Improve farm profitability by 45%'
+    ],
+    marketPrice: '$4,000-8,500/month',
+    setupTime: '4-6 weeks',
+    targetUsers: 'Farmers, Agribusiness, Food Companies, Research'
+  },
+  {
+    id: 12,
+    title: 'AI-Powered Legal Analytics',
+    description: 'Advanced legal research, contract analysis, and case prediction systems for law firms and legal departments.',
+    icon: BookOpen,
+    category: 'Legal AI',
+    price: 'Starting at $3,200/month',
+    features: [
+      'Legal document analysis',
+      'Contract review & extraction',
+      'Case law research',
+      'Litigation prediction',
+      'Compliance monitoring',
+      'Legal research automation',
+      'Document generation',
+      'Risk assessment'
+    ],
+    benefits: [
+      'Reduce research time by 70%',
+      'Improve case outcomes by 35%',
+      'Lower legal costs by 50%',
+      'Increase accuracy by 60%'
     ],
     marketPrice: '$5,000-10,000/month',
+    setupTime: '3-5 weeks',
+    targetUsers: 'Law Firms, Corporate Legal, Government, Legal Tech'
+  },
+  {
+    id: 13,
+    title: 'AI-Powered Real Estate Analytics',
+    description: 'Property valuation, market analysis, and investment optimization for real estate professionals.',
+    icon: Home,
+    category: 'Real Estate AI',
+    price: 'Starting at $2,200/month',
+    features: [
+      'Property valuation models',
+      'Market trend analysis',
+      'Investment opportunity scoring',
+      'Rental price optimization',
+      'Property recommendation engine',
+      'Market forecasting',
+      'Risk assessment',
+      'Portfolio optimization'
+    ],
+    benefits: [
+      'Improve property valuations by 25%',
+      'Increase investment returns by 40%',
+      'Reduce market research time by 80%',
+      'Optimize portfolio performance by 35%'
+    ],
+    marketPrice: '$3,500-7,500/month',
+    setupTime: '3-4 weeks',
+    targetUsers: 'Real Estate Agents, Investors, Property Managers, Developers'
+  },
+  {
+    id: 14,
+    title: 'AI-Powered Gaming & Entertainment',
+    description: 'Intelligent game development, player behavior analysis, and dynamic content generation systems.',
+    icon: Gamepad2,
+    category: 'Gaming AI',
+    price: 'Starting at $2,800/month',
+    features: [
+      'Procedural content generation',
+      'Player behavior analysis',
+      'Dynamic difficulty adjustment',
+      'NPC intelligence systems',
+      'Game balancing algorithms',
+      'Cheat detection systems',
+      'Personalized gaming experiences',
+      'Real-time analytics'
+    ],
+    benefits: [
+      'Increase player engagement by 50%',
+      'Reduce development time by 40%',
+      'Improve player retention by 35%',
+      'Lower operational costs by 30%'
+    ],
+    marketPrice: '$4,500-9,000/month',
     setupTime: '4-6 weeks',
-    targetUsers: 'Logistics, Manufacturing, Retail, E-commerce'
+    targetUsers: 'Game Studios, Entertainment Companies, Esports, Mobile Gaming'
+  },
+  {
+    id: 15,
+    title: 'AI-Powered Environmental Monitoring',
+    description: 'Advanced environmental data analysis, climate modeling, and sustainability optimization systems.',
+    icon: TreePine,
+    category: 'Environmental AI',
+    price: 'Starting at $3,500/month',
+    features: [
+      'Climate data analysis',
+      'Pollution monitoring',
+      'Biodiversity tracking',
+      'Environmental impact assessment',
+      'Sustainability optimization',
+      'Weather pattern analysis',
+      'Ecosystem health monitoring',
+      'Carbon footprint analysis'
+    ],
+    benefits: [
+      'Improve environmental monitoring by 60%',
+      'Reduce environmental impact by 40%',
+      'Enable proactive conservation',
+      'Optimize sustainability efforts by 50%'
+    ],
+    marketPrice: '$5,500-12,000/month',
+    setupTime: '4-6 weeks',
+    targetUsers: 'Environmental Agencies, NGOs, Research Institutions, Government'
   }
 ];
 
 const categories = [
   { name: "All", count: aiServices.length },
-  { name: "Machine Learning", count: aiServices.filter(s => s.category === "Machine Learning").length },
-  { name: "Computer Vision", count: aiServices.filter(s => s.category === "Computer Vision").length },
-  { name: "NLP", count: aiServices.filter(s => s.category === "NLP").length }
+  { name: "Quantum AI", count: aiServices.filter(s => s.category === "Quantum AI").length },
+  { name: "Autonomous Systems", count: aiServices.filter(s => s.category === "Autonomous Systems").length },
+  { name: "Predictive Analytics", count: aiServices.filter(s => s.category === "Predictive Analytics").length },
+  { name: "Healthcare AI", count: aiServices.filter(s => s.category === "Healthcare AI").length },
+  { name: "Financial AI", count: aiServices.filter(s => s.category === "Financial AI").length },
+  { name: "Cybersecurity AI", count: aiServices.filter(s => s.category === "Cybersecurity AI").length },
+  { name: "Content AI", count: aiServices.filter(s => s.category === "Content AI").length },
+  { name: "Supply Chain AI", count: aiServices.filter(s => s.category === "Supply Chain AI").length },
+  { name: "Medical AI", count: aiServices.filter(s => s.category === "Medical AI").length },
+  { name: "Energy AI", count: aiServices.filter(s => s.category === "Energy AI").length },
+  { name: "Agriculture AI", count: aiServices.filter(s => s.category === "Agriculture AI").length },
+  { name: "Legal AI", count: aiServices.filter(s => s.category === "Legal AI").length },
+  { name: "Real Estate AI", count: aiServices.filter(s => s.category === "Real Estate AI").length },
+  { name: "Gaming AI", count: aiServices.filter(s => s.category === "Gaming AI").length },
+  { name: "Environmental AI", count: aiServices.filter(s => s.category === "Environmental AI").length }
 ];
 
 export default function AIServicesPage() {
@@ -420,8 +567,29 @@ export default function AIServicesPage() {
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   
                   <div className="mb-4">
-                    <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                    <span className="text-gray-500 ml-2">({service.setupTime})</span>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                      {service.marketPrice && (
+                        <span className="text-sm text-gray-500 line-through">
+                          {service.marketPrice}
+                        </span>
+                      )}
+                    </div>
+                    {service.marketPrice && (
+                      <div className="text-xs text-green-600 font-medium mb-1">
+                        Save up to 50% vs market rate
+                      </div>
+                    )}
+                    {service.setupTime && (
+                      <div className="text-sm text-gray-500">
+                        Setup: {service.setupTime}
+                      </div>
+                    )}
+                    {service.targetUsers && (
+                      <div className="text-xs text-gray-500 mt-1">
+                        Ideal for: {service.targetUsers}
+                      </div>
+                    )}
                   </div>
 
                   <div className="mb-4">
