@@ -1,1 +1,5 @@
-import React from 'react'; import Head from 'next/head'; export default function AutonomousContentGeneration() {}; return null} }''
+<<<<<<< HEAD
+import React from \'react\'; import Head from \'next/head\'; export default function AutonomousContentGeneration() {}; return null} }
+=======
+import _React from 'react'; import Head from 'next/head'; export default function AutonomousContentGeneration() {}; return null} }
+>>>>>>> main

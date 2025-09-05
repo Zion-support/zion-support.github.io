@@ -1,14 +1,5 @@
-import React from 'react';
-
-interface AIAutonomousReasoningProps {
-  // Add props here as needed
-}
-
-export default function AIAutonomousReasoning({ }: AIAutonomousReasoningProps) {
-  return (
-    <div>
-      <h1>AIAutonomousReasoning</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< HEAD
+<<<<<<< \"HEAD\": src.pages.disabled/AIAutonomousReasoning.jsx import React from \'react\'; export default AIAutonomousReasoning; const AIAutonomousReasoning = () => { return (<> <Helmet> <title > AI Autonomous Reasoning Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous reasoning platform that continuously analyzes logic,solves problems,and makes decisions with advanced AI capabilities and autonomous operation.\" / / /> <meta name=\"keywords\" content=\"AI reasoning,autonomous reasoning,logical analysis,problem solving,autonomous operations,AI reasoning platform\" / / /> <link rel=\"canonical\" href=\""https\": import React from \'react\'; export default AIAutonomousReasoning; const AIAutonomousReasoning = () => { return (<> <Helmet> <title > AI Autonomous Reasoning Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous reasoning platform that continuously analyzes logic,solves problems,and makes decisions with advanced AI capabilities and autonomous operation.\" / / / /> <meta name=\"keywords\" content=\"AI reasoning,autonomous reasoning,logical analysis,problem solving,autonomous operations,AI reasoning platform\" / / / /> <link rel=\"canonical\" href=\""https\": \"";
+=======
+<<<<<<< "HEAD": src.pages.disabled/AIAutonomousReasoning.jsx import _React from 'react'; export default AIAutonomousReasoning; const AIAutonomousReasoning = () => { return (<> <Helmet> <title > AI Autonomous Reasoning Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous reasoning platform that continuously analyzes logic,solves problems,and makes decisions with advanced AI capabilities and autonomous operation." / / /> <meta name="keywords" content="AI reasoning,autonomous reasoning,logical analysis,problem solving,autonomous operations,AI reasoning platform" / / /> <link rel="canonical" href=""https": import _React from 'react'; export default AIAutonomousReasoning; const AIAutonomousReasoning = () => { return (<> <Helmet> <title > AI Autonomous Reasoning Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous reasoning platform that continuously analyzes logic,solves problems,and makes decisions with advanced AI capabilities and autonomous operation." / / / /> <meta name="keywords" content="AI reasoning,autonomous reasoning,logical analysis,problem solving,autonomous operations,AI reasoning platform" / / / /> <link rel="canonical" href=""https": "";
+>>>>>>> main

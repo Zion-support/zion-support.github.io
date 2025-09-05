@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import { useState } from \"react\"; import { DynamicListingPage } from \"@/components/DynamicListingPage\"; import { NEW_PRODUCTS } from \"@/data/newProductsData\"; const CATEGORY_FILTERS = Array.from(new Set(NEW_PRODUCTS.map(p => p.category))).map(c => ({ \"label\": \'c\',\"value\": \'c\' })); export default function NewProductsPage() {}; return null} }}/>);} ; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage };
+=======
+<<<<<<< HEAD
+const { useState } from "react"; import { DynamicListingPage } from "@/components/DynamicListingPage"; import { NEW_PRODUCTS } from "@/data/newProductsData"; const CATEGORY_FILTERS = Array.from(new Set(NEW_PRODUCTS.map(p => p.category))).map(c => ({ label: "c",value: "c" })); export default function NewProductsPage() { return; }; return null} }}/>);} ; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage };'"'"
+=======
 import React from 'react';
 
 interface NewProductsPageProps {
@@ -12,3 +18,5 @@ export default function NewProductsPage({ }: NewProductsPageProps) {
     </div>
   );
 }
+>>>>>>> main
+>>>>>>> main

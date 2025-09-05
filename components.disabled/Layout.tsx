@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 
 interface LayoutProps {
@@ -12,3 +14,4 @@ export default function Layout({ }: LayoutProps) {
     </div>
   );
 }
+>>>>>>> main

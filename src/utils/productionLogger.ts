@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+export function logErrorToProduction(message: string,error?: unknown): void { if (process.env[&apos;NODE_ENV&apos;] === &apos;development&apos;) { } }
+=======
 export function logErrorToProduction("message": string, error?: unknown): void {
   // In production, we might want to send errors to a logging service
   // For now, just console.error in development
@@ -6,3 +9,4 @@ export function logErrorToProduction("message": string, error?: unknown): void {
   // "TODO": Implement production error logging service
 }
 export function logErrorToProduction(message: string,error?: unknown): void { if (process.env['NODE_ENV'] === 'development') { console.error(message,error)} }
+>>>>>>> main

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class AutomationSuiteRunner { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot, "automation-reports");" this.logFile = path.join(this.reportsDir, "automation-suite.log"); this.ensureDirectories(); } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) {'"'"
+=======
 #!/usr/bin/env node
 /**
  * Automation Suite Runner
@@ -15,14 +18,17 @@ class AutomationSuiteRunner {
   }
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
+<<<<<<< HEAD
+=======
       fs.mkdirSync(this.reportsDir, { "recursive": true });
+>>>>>>> main
       fs.mkdirSync(this.reportsDir, { recursive: true });
     }
   }
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
+    
     fs.appendFileSync(this.logFile, logMessage + "\n");
   }
   async runCommand(command, description) {
@@ -291,3 +297,4 @@ if (require.main === module) {
   runner.run().catch(console.error);
 }
 module.exports = AutomationSuiteRunner;
+>>>>>>> main
