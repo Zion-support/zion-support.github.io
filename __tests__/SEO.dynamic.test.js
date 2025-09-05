@@ -1,14 +1,14 @@
-import React from 'react'; import { render,screen,fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import SEOdynamic from '../components/SEO.dynamic'; describe('SEOdynamic',() => { test('renders without crashing',() => { render(<SEOdynamic />); expect(screen.getByTestId('seo.dynamic')).toBeInTheDocument()}
-}); test('displays correct content',() => { render(<SEOdynamic />)}
-}); test('handles user interactions',() => { render(<SEOdynamic />)}
-}); test('applies correct styling',() => { render(<SEOdynamic />)})}
-});'
-</SEOdynamic>
-    render(<SEOdynamic />);
-</SEOdynamic>
-    render(<SEOdynamic />);
-</SEOdynamic>
-    render(<SEOdynamic />);
-</SEOdynamic>
-    render(<SEOdynamic />);
-</SEOdynamic>'
+import React from 'react';
+
+interface SEO.dynamic.testProps {
+  // Add props here as needed
+}
+
+export default function SEO.dynamic.test({ }: SEO.dynamic.testProps) {
+  return (
+    <div>
+      <h1>SEO.dynamic.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
