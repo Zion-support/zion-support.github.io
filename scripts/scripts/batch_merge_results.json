@@ -1,0 +1,1413 @@
+{
+  "count": 100,
+  "results": [
+    {
+      "number": 11424,
+      "title": "Analyze, improve, and deploy application",
+      "head": "cursor/analyze-improve-and-deploy-application-b27c",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11423,
+      "title": "Resolve conflicts and merge to main",
+      "head": "cursor/resolve-conflicts-and-merge-to-main-b5fb",
+      "update": {
+        "updated": true,
+        "output": "Merge made by the 'ort' strategy.\n .eslintignore                                     |  21 +-\n IMPROVEMENTS.md                                   | 267 +++++++-----\n automation-orchestrator-report-1756917987408.json |  60 +++\n build-optimization-report.json                    |  69 ++-\n code-quality-report.json                          |  20 +\n components/ContactForm.tsx                        | 224 ++++++++++\n components/ErrorBoundary.tsx                      |   5 +-\n components/Loading.tsx                            |   3 +-\n components/LoadingSpinner.tsx                     |  32 +-\n components/PerformanceMonitor.tsx                 |  31 +-\n components/SearchBar.tsx                          | 274 +++++++-----\n comprehensive-test-report.json                    | 243 ++++++++---\n dependency-update-report.json                     |   4 +\n health-check-report.json                          |  84 ++++\n next.config.js                                    |  11 +-\n package.json                                      |   9 +-\n pages/_app.tsx                                    | 221 ++++------\n pages/ai-services.tsx                             | 195 ++++++++-\n pages/contact.tsx                                 |  16 +\n pages/it-services.tsx                             | 200 +++++++++\n pages/micro-saas.tsx                              | 195 +++++++++\n performance-metrics.json                          |  29 ++\n public/sw.js                                      |  84 ++++\n scripts/advanced-build-optimizer.cjs              | 504 ++++++++++++++++++++++\n scripts/analyze-bundle.js                         |  19 +\n scripts/comprehensive-health-check.cjs            | 355 +++++++++++++++\n scripts/comprehensive-test-runner.cjs             | 425 ++++++++++++++++++\n styles/globals.css                                |  93 +++-\n syntax-fix-report.json                            |  14 +\n tailwind.config.js                                |   1 +\n 30 files changed, 3241 insertions(+), 467 deletions(-)\n create mode 100644 automation-orchestrator-report-1756917987408.json\n create mode 100644 components/ContactForm.tsx\n create mode 100644 public/sw.js\n create mode 100644 scripts/advanced-build-optimizer.cjs\n create mode 100644 scripts/analyze-bundle.js\n create mode 100644 scripts/comprehensive-health-check.cjs\n create mode 100644 scripts/comprehensive-test-runner.cjs\n\nTo https://github.com/Zion-Holdings/zion.app\n   af8a4fa4300..be46fee5053  pr-update-cursor/resolve-conflicts-and-merge-to-main-b5fb -> cursor/resolve-conflicts-and-merge-to-main-b5fb\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "http_error",
+        "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
+      }
+    },
+    {
+      "number": 11422,
+      "title": "Fix syntax, push, and merge to main",
+      "head": "cursor/fix-syntax-push-and-merge-to-main-c312",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11421,
+      "title": "Build nextjs app with syntax error",
+      "head": "cursor/build-nextjs-app-with-syntax-error-4840",
+      "update": {
+        "updated": true,
+        "output": "Merge made by the 'ort' strategy.\n .eslintignore                                     |  21 +-\n IMPROVEMENTS.md                                   | 267 +++++++-----\n automation-orchestrator-report-1756917987408.json |  60 +++\n build-optimization-report.json                    |  69 ++-\n code-quality-report.json                          |  20 +\n components/ContactForm.tsx                        | 224 ++++++++++\n components/ErrorBoundary.tsx                      |   5 +-\n components/Loading.tsx                            |   3 +-\n components/LoadingSpinner.tsx                     |  32 +-\n components/PerformanceMonitor.tsx                 |  31 +-\n components/SearchBar.tsx                          | 274 +++++++-----\n comprehensive-test-report.json                    | 243 ++++++++---\n dependency-update-report.json                     |   4 +\n health-check-report.json                          |  84 ++++\n next.config.js                                    |  11 +-\n package.json                                      |   9 +-\n pages/_app.tsx                                    | 221 ++++------\n pages/ai-services.tsx                             | 195 ++++++++-\n pages/contact.tsx                                 |  16 +\n pages/it-services.tsx                             | 200 +++++++++\n pages/micro-saas.tsx                              | 195 +++++++++\n performance-metrics.json                          |  29 ++\n public/sw.js                                      |  84 ++++\n scripts/advanced-build-optimizer.cjs              | 504 ++++++++++++++++++++++\n scripts/analyze-bundle.js                         |  19 +\n scripts/comprehensive-health-check.cjs            | 355 +++++++++++++++\n scripts/comprehensive-test-runner.cjs             | 425 ++++++++++++++++++\n styles/globals.css                                |  93 +++-\n syntax-fix-report.json                            |  14 +\n tailwind.config.js                                |   1 +\n 30 files changed, 3241 insertions(+), 467 deletions(-)\n create mode 100644 automation-orchestrator-report-1756917987408.json\n create mode 100644 components/ContactForm.tsx\n create mode 100644 public/sw.js\n create mode 100644 scripts/advanced-build-optimizer.cjs\n create mode 100644 scripts/analyze-bundle.js\n create mode 100644 scripts/comprehensive-health-check.cjs\n create mode 100644 scripts/comprehensive-test-runner.cjs\n\nTo https://github.com/Zion-Holdings/zion.app\n   fdafcb80075..b65f04bde99  pr-update-cursor/build-nextjs-app-with-syntax-error-4840 -> cursor/build-nextjs-app-with-syntax-error-4840\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "http_error",
+        "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
+      }
+    },
+    {
+      "number": 11420,
+      "title": "Fix syntax, push, and merge to main",
+      "head": "cursor/fix-syntax-push-and-merge-to-main-c14a",
+      "update": {
+        "updated": true,
+        "output": "Merge made by the 'ort' strategy.\n .eslintignore                                     |  21 +-\n IMPROVEMENTS.md                                   | 267 +++++-----\n INTELLIGENT-PM2-AUTOMATION-README.md              | 572 ++++++++++------------\n automation-orchestrator-report-1756917987408.json |  60 +++\n build-optimization-report.json                    |  69 ++-\n code-quality-report.json                          |  20 +\n components/ContactForm.tsx                        | 224 +++++++++\n components/ErrorBoundary.tsx                      |   5 +-\n components/Loading.tsx                            |   3 +-\n components/LoadingSpinner.tsx                     |  32 +-\n components/PerformanceMonitor.tsx                 |  31 +-\n components/SearchBar.tsx                          | 274 ++++++-----\n comprehensive-test-report.json                    | 243 +++++++--\n dependency-update-report.json                     |   4 +\n ecosystem.intelligent-enhanced.cjs                | 381 ++++++++++++++\n health-check-report.json                          |  84 ++++\n next.config.js                                    |  11 +-\n package.json                                      |   9 +-\n pages/_app.tsx                                    | 221 ++++-----\n pages/ai-services.tsx                             | 195 +++++++-\n pages/contact.tsx                                 |  16 +\n pages/it-services.tsx                             | 200 ++++++++\n pages/micro-saas.tsx                              | 195 ++++++++\n performance-metrics.json                          |  29 ++\n public/sw.js                                      |  84 ++++\n scripts/advanced-build-optimizer.cjs              | 504 +++++++++++++++++++\n scripts/analyze-bundle.js                         |  19 +\n scripts/comprehensive-health-check.cjs            | 355 ++++++++++++++\n scripts/comprehensive-test-runner.cjs             | 425 ++++++++++++++++\n scripts/intelligent-git-push-merge.sh             | 263 ++++++++++\n scripts/start-intelligent-enhanced-pm2.sh         | 427 ++++++++++++++++\n styles/globals.css                                |  93 +++-\n syntax-fix-report.json                            |  14 +\n tailwind.config.js                                |   1 +\n 34 files changed, 4573 insertions(+), 778 deletions(-)\n create mode 100644 automation-orchestrator-report-1756917987408.json\n create mode 100644 components/ContactForm.tsx\n create mode 100644 ecosystem.intelligent-enhanced.cjs\n create mode 100644 public/sw.js\n create mode 100644 scripts/advanced-build-optimizer.cjs\n create mode 100644 scripts/analyze-bundle.js\n create mode 100644 scripts/comprehensive-health-check.cjs\n create mode 100644 scripts/comprehensive-test-runner.cjs\n create mode 100755 scripts/intelligent-git-push-merge.sh\n create mode 100755 scripts/start-intelligent-enhanced-pm2.sh\n\nTo https://github.com/Zion-Holdings/zion.app\n   b6d42b31b6a..65e8e389cab  pr-update-cursor/fix-syntax-push-and-merge-to-main-c14a -> cursor/fix-syntax-push-and-merge-to-main-c14a\n"
+      },
+      "merge": {
+        "merged": true,
+        "merge_sha": "ad7560f227ff28fd16951804fb2b97b23e73fe38",
+        "raw": {
+          "sha": "ad7560f227ff28fd16951804fb2b97b23e73fe38",
+          "merged": true,
+          "message": "Pull Request successfully merged"
+        }
+      }
+    },
+    {
+      "number": 11419,
+      "title": "Enhance ziontechgroup website with new services and improvements",
+      "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-3d3b",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11418,
+      "title": "Add new services and advertise them",
+      "head": "cursor/add-new-services-and-advertise-them-2669",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11417,
+      "title": "Fix console errors and warnings",
+      "head": "cursor/fix-console-errors-and-warnings-7ce8",
+      "update": {
+        "updated": true,
+        "output": "Merge made by the 'ort' strategy.\n .eslintignore                                     |  21 +-\n IMPROVEMENTS.md                                   | 267 +++++-----\n INTELLIGENT-PM2-AUTOMATION-README.md              | 572 ++++++++++------------\n automation-orchestrator-report-1756917987408.json |  60 +++\n build-optimization-report.json                    |  69 ++-\n code-quality-report.json                          |  20 +\n components/ContactForm.tsx                        | 224 +++++++++\n components/ErrorBoundary.tsx                      |   5 +-\n components/Loading.tsx                            |   3 +-\n components/LoadingSpinner.tsx                     |  32 +-\n components/PerformanceMonitor.tsx                 |  31 +-\n components/SearchBar.tsx                          | 274 ++++++-----\n comprehensive-test-report.json                    | 243 +++++++--\n dependency-update-report.json                     |   4 +\n ecosystem.intelligent-enhanced.cjs                | 381 ++++++++++++++\n health-check-report.json                          |  84 ++++\n next.config.js                                    |  11 +-\n package.json                                      |   9 +-\n pages/_app.tsx                                    | 221 ++++-----\n pages/ai-services.tsx                             | 195 +++++++-\n pages/contact.tsx                                 |  16 +\n pages/index.tsx                                   |  10 -\n pages/it-services.tsx                             | 200 ++++++++\n pages/micro-saas.tsx                              | 195 ++++++++\n performance-metrics.json                          |  29 ++\n public/sw.js                                      |  84 ++++\n scripts/advanced-build-optimizer.cjs              | 504 +++++++++++++++++++\n scripts/analyze-bundle.js                         |  19 +\n scripts/comprehensive-health-check.cjs            | 355 ++++++++++++++\n scripts/comprehensive-test-runner.cjs             | 425 ++++++++++++++++\n scripts/intelligent-git-push-merge.sh             | 263 ++++++++++\n scripts/start-intelligent-enhanced-pm2.sh         | 427 ++++++++++++++++\n styles/globals.css                                |  93 +++-\n syntax-fix-report.json                            |  14 +\n tailwind.config.js                                |   1 +\n 35 files changed, 4573 insertions(+), 788 deletions(-)\n create mode 100644 automation-orchestrator-report-1756917987408.json\n create mode 100644 components/ContactForm.tsx\n create mode 100644 ecosystem.intelligent-enhanced.cjs\n create mode 100644 public/sw.js\n create mode 100644 scripts/advanced-build-optimizer.cjs\n create mode 100644 scripts/analyze-bundle.js\n create mode 100644 scripts/comprehensive-health-check.cjs\n create mode 100644 scripts/comprehensive-test-runner.cjs\n create mode 100755 scripts/intelligent-git-push-merge.sh\n create mode 100755 scripts/start-intelligent-enhanced-pm2.sh\n\nTo https://github.com/Zion-Holdings/zion.app\n   1537663881f..54ff1c06a31  pr-update-cursor/fix-console-errors-and-warnings-7ce8 -> cursor/fix-console-errors-and-warnings-7ce8\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "http_error",
+        "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
+      }
+    },
+    {
+      "number": 11415,
+      "title": "Resolve conflicts and merge to main",
+      "head": "cursor/resolve-conflicts-and-merge-to-main-047f",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11414,
+      "title": "Fix syntax, push, and merge to main",
+      "head": "cursor/fix-syntax-push-and-merge-to-main-86c1",
+      "update": {
+        "updated": true,
+        "output": "Merge made by the 'ort' strategy.\n .eslintignore                                     |  21 +-\n IMPROVEMENTS.md                                   | 267 +++++-----\n INTELLIGENT-PM2-AUTOMATION-README.md              | 572 ++++++++++------------\n automation-orchestrator-report-1756917987408.json |  60 +++\n build-optimization-report.json                    |  69 ++-\n code-quality-report.json                          |  20 +\n components/ContactForm.tsx                        | 224 +++++++++\n components/ErrorBoundary.tsx                      |   5 +-\n components/Loading.tsx                            |   3 +-\n components/LoadingSpinner.tsx                     |  32 +-\n components/PerformanceMonitor.tsx                 |  31 +-\n components/SearchBar.tsx                          | 274 ++++++-----\n comprehensive-test-report.json                    | 243 +++++++--\n dependency-update-report.json                     |   4 +\n ecosystem.intelligent-enhanced.cjs                | 381 ++++++++++++++\n health-check-report.json                          |  84 ++++\n next.config.js                                    |  11 +-\n package.json                                      |   9 +-\n pages/_app.tsx                                    | 221 ++++-----\n pages/ai-services.tsx                             | 195 +++++++-\n pages/contact.tsx                                 |  16 +\n pages/it-services.tsx                             | 200 ++++++++\n pages/micro-saas.tsx                              | 195 ++++++++\n performance-metrics.json                          |  29 ++\n public/sw.js                                      |  84 ++++\n scripts/advanced-build-optimizer.cjs              | 504 +++++++++++++++++++\n scripts/analyze-bundle.js                         |  19 +\n scripts/comprehensive-health-check.cjs            | 355 ++++++++++++++\n scripts/comprehensive-test-runner.cjs             | 425 ++++++++++++++++\n scripts/intelligent-git-push-merge.sh             | 263 ++++++++++\n scripts/start-intelligent-enhanced-pm2.sh         | 427 ++++++++++++++++\n styles/globals.css                                |  93 +++-\n syntax-fix-report.json                            |  14 +\n tailwind.config.js                                |   1 +\n 34 files changed, 4573 insertions(+), 778 deletions(-)\n create mode 100644 automation-orchestrator-report-1756917987408.json\n create mode 100644 components/ContactForm.tsx\n create mode 100644 ecosystem.intelligent-enhanced.cjs\n create mode 100644 public/sw.js\n create mode 100644 scripts/advanced-build-optimizer.cjs\n create mode 100644 scripts/analyze-bundle.js\n create mode 100644 scripts/comprehensive-health-check.cjs\n create mode 100644 scripts/comprehensive-test-runner.cjs\n create mode 100755 scripts/intelligent-git-push-merge.sh\n create mode 100755 scripts/start-intelligent-enhanced-pm2.sh\n\nTo https://github.com/Zion-Holdings/zion.app\n   00a6cdd80cc..a765792c59b  pr-update-cursor/fix-syntax-push-and-merge-to-main-86c1 -> cursor/fix-syntax-push-and-merge-to-main-86c1\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "http_error",
+        "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
+      }
+    },
+    {
+      "number": 11413,
+      "title": "Fix syntax, push, and merge to main",
+      "head": "cursor/fix-syntax-push-and-merge-to-main-61bc",
+      "update": {
+        "updated": true,
+        "output": "Merge made by the 'ort' strategy.\n .eslintignore                                     |  21 +-\n IMPROVEMENTS.md                                   | 267 +++++-----\n INTELLIGENT-PM2-AUTOMATION-README.md              | 572 ++++++++++------------\n automation-orchestrator-report-1756917987408.json |  60 +++\n build-optimization-report.json                    |  69 ++-\n code-quality-report.json                          |  20 +\n components/ContactForm.tsx                        | 224 +++++++++\n components/ErrorBoundary.tsx                      |   5 +-\n components/Loading.tsx                            |   3 +-\n components/LoadingSpinner.tsx                     |  32 +-\n components/PerformanceMonitor.tsx                 |  31 +-\n components/SearchBar.tsx                          | 274 ++++++-----\n comprehensive-test-report.json                    | 243 +++++++--\n dependency-update-report.json                     |   4 +\n ecosystem.intelligent-enhanced.cjs                | 381 ++++++++++++++\n health-check-report.json                          |  84 ++++\n next.config.js                                    |  11 +-\n package.json                                      |   9 +-\n pages/_app.tsx                                    | 221 ++++-----\n pages/ai-services.tsx                             | 195 +++++++-\n pages/contact.tsx                                 |  16 +\n pages/it-services.tsx                             | 200 ++++++++\n pages/micro-saas.tsx                              | 195 ++++++++\n performance-metrics.json                          |  29 ++\n public/sw.js                                      |  84 ++++\n scripts/advanced-build-optimizer.cjs              | 504 +++++++++++++++++++\n scripts/analyze-bundle.js                         |  19 +\n scripts/comprehensive-health-check.cjs            | 355 ++++++++++++++\n scripts/comprehensive-test-runner.cjs             | 425 ++++++++++++++++\n scripts/intelligent-git-push-merge.sh             | 263 ++++++++++\n scripts/start-intelligent-enhanced-pm2.sh         | 427 ++++++++++++++++\n styles/globals.css                                |  93 +++-\n syntax-fix-report.json                            |  14 +\n tailwind.config.js                                |   1 +\n 34 files changed, 4573 insertions(+), 778 deletions(-)\n create mode 100644 automation-orchestrator-report-1756917987408.json\n create mode 100644 components/ContactForm.tsx\n create mode 100644 ecosystem.intelligent-enhanced.cjs\n create mode 100644 public/sw.js\n create mode 100644 scripts/advanced-build-optimizer.cjs\n create mode 100644 scripts/analyze-bundle.js\n create mode 100644 scripts/comprehensive-health-check.cjs\n create mode 100644 scripts/comprehensive-test-runner.cjs\n create mode 100755 scripts/intelligent-git-push-merge.sh\n create mode 100755 scripts/start-intelligent-enhanced-pm2.sh\n\nTo https://github.com/Zion-Holdings/zion.app\n   920d107e3f0..e7b0ac64d54  pr-update-cursor/fix-syntax-push-and-merge-to-main-61bc -> cursor/fix-syntax-push-and-merge-to-main-61bc\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "http_error",
+        "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
+      }
+    },
+    {
+      "number": 11412,
+      "title": "Enhance ziontechgroup website with new services and improvements",
+      "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-0734",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11411,
+      "title": "Analyze, improve, and deploy application",
+      "head": "cursor/analyze-improve-and-deploy-application-45d8",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11410,
+      "title": "Fix syntax, push, and merge to main",
+      "head": "cursor/fix-syntax-push-and-merge-to-main-9705",
+      "update": {
+        "updated": true,
+        "output": "Merge made by the 'ort' strategy.\n .eslintignore                                      |    21 +-\n .github/MIGRATION_TO_PM2.md                        |    33 +-\n .github/workflows/ci-cd.yml                        |    40 -\n .github/workflows/continuous-automation.yml        |    61 -\n IMPROVEMENTS.md                                    |   267 +-\n INTELLIGENT-PM2-AUTOMATION-README.md               |   572 +-\n app-optimization-report.json                       |    47 +\n automation-orchestrator-report-1756917632684.json  |    60 +\n automation-orchestrator-report-1756917672344.json  |    60 +\n automation-orchestrator-report-1756917987408.json  |    60 +\n automation-orchestrator-report-1756918005571.json  |    60 +\n automation-orchestrator-report-1756918138011.json  |    60 +\n automation-orchestrator-report-1756918378473.json  |    60 +\n .../build-test-automation-report.json              |    42 +\n automation-reports/ci-cd-automation-report.json    |    42 +\n .../continuous-automation-report.json              |   109 +\n .../continuous-automation-summary.json             |     8 +\n automation-reports/quality-checks-report.json      |   118 +\n build-optimization-report.json                     |    69 +-\n code-quality-report.json                           |   126 +-\n components/Breadcrumb.tsx                          |    74 +\n components/ContactForm.tsx                         |   224 +\n components/ErrorBoundary.tsx                       |     9 +-\n components/Loading.tsx                             |     9 +-\n components/LoadingSpinner.tsx                      |    31 +\n components/PerformanceMonitor.tsx                  |    34 +-\n components/SearchBar.tsx                           |   189 +\n components/ThemeToggle.tsx                         |    46 +\n comprehensive-test-report.json                     |   243 +-\n dependency-update-report.json                      |     6 +-\n deployment-check-report.json                       |    46 +\n deployment/deploy.sh                               |     4 +\n deployment/next.config.js                          |    39 +\n deployment/package-lock.json                       | 23470 +++++++++++++++++++\n deployment/package.json                            |   303 +\n deployment/public/.well-known/security.txt         |     7 +\n deployment/public/_headers                         |    91 +\n deployment/public/_redirects                       |    20 +\n deployment/public/browserconfig.xml                |     9 +\n deployment/public/enterprise/index.html            |    90 +\n deployment/public/favicon.ico                      |     3 +\n deployment/public/favicon.svg                      |    11 +\n deployment/public/index.html                       |   185 +\n deployment/public/locales/en-US/common.json        |   130 +\n deployment/public/locales/es-ES/common.json        |    91 +\n deployment/public/manifest.json                    |   101 +\n deployment/public/offline.html                     |   161 +\n deployment/public/og-image.svg                     |    28 +\n deployment/public/request-quote/index.html         |    93 +\n deployment/public/robots.txt                       |    10 +\n deployment/public/search-index.json                | 11901 ++++++++++\n deployment/public/search/embeddings.json           |   146 +\n deployment/public/search/index.json                |    92 +\n deployment/public/search/meta.json                 |    47 +\n deployment/public/site.webmanifest                 |   166 +\n deployment/public/sitemap.json                     |    65 +\n deployment/public/sitemap.txt                      |     9 +\n deployment/public/sitemap.xml                      |    69 +\n deployment/public/structured-data.json             |    32 +\n deployment/public/test-sw.html                     |   264 +\n deployment/public/vite.svg                         |     1 +\n ecosystem.config.cjs                               |    64 +\n ecosystem.enhanced-intelligent.cjs                 |   410 +\n ecosystem.intelligent-enhanced.cjs                 |   381 +\n ecosystem.pm2-automation.cjs                       |   156 +\n health-check-report.json                           |   136 +-\n master-automation-report.json                      |    91 +-\n monitoring-dashboard.html                          |    86 +\n monitoring-metrics.json                            |    31 +\n next.config.js                                     |    11 +-\n package-lock.json                                  |    13 +-\n package.json                                       |    15 +-\n pages/404.tsx                                      |    60 +\n pages/_app.tsx                                     |   207 +-\n pages/ai-services.tsx                              |   597 +-\n pages/cloud-devops.tsx                             |   157 +\n pages/contact.tsx                                  |    16 +\n pages/cybersecurity.tsx                            |   157 +\n pages/docs.tsx                                     |   189 +\n pages/index.tsx                                    |    67 +-\n pages/it-services.tsx                              |   713 +-\n pages/micro-saas.tsx                               |   681 +-\n pages/quantum-computing.tsx                        |   157 +\n performance-metrics.json                           |    47 +-\n public/sw.js                                       |    84 +\n scripts/advanced-build-optimizer.cjs               |   504 +\n scripts/analyze-bundle.js                          |    19 +\n scripts/ci-cd-automation.cjs                       |   157 +\n scripts/comprehensive-health-check.cjs             |   355 +\n scripts/comprehensive-test-runner.cjs              |   425 +\n scripts/improve-performance.cjs                    |    78 +\n scripts/improve-seo.cjs                            |    80 +\n scripts/intelligent-git-push-merge.sh              |   263 +\n scripts/performance-monitor.js                     |   117 +\n scripts/start-intelligent-enhanced-pm2.sh          |   427 +\n security-scan-report.json                          |    68 +-\n styles/globals.css                                 |    93 +-\n syntax-fix-report.json                             |    16 +-\n tailwind.config.js                                 |     1 +\n 99 files changed, 46703 insertions(+), 890 deletions(-)\n delete mode 100644 .github/workflows/ci-cd.yml\n delete mode 100644 .github/workflows/continuous-automation.yml\n create mode 100644 app-optimization-report.json\n create mode 100644 automation-orchestrator-report-1756917632684.json\n create mode 100644 automation-orchestrator-report-1756917672344.json\n create mode 100644 automation-orchestrator-report-1756917987408.json\n create mode 100644 automation-orchestrator-report-1756918005571.json\n create mode 100644 automation-orchestrator-report-1756918138011.json\n create mode 100644 automation-orchestrator-report-1756918378473.json\n create mode 100644 automation-reports/build-test-automation-report.json\n create mode 100644 automation-reports/ci-cd-automation-report.json\n create mode 100644 automation-reports/continuous-automation-report.json\n create mode 100644 automation-reports/continuous-automation-summary.json\n create mode 100644 automation-reports/quality-checks-report.json\n create mode 100644 components/Breadcrumb.tsx\n create mode 100644 components/ContactForm.tsx\n create mode 100644 components/LoadingSpinner.tsx\n create mode 100644 components/SearchBar.tsx\n create mode 100644 components/ThemeToggle.tsx\n create mode 100644 deployment-check-report.json\n create mode 100755 deployment/deploy.sh\n create mode 100644 deployment/next.config.js\n create mode 100644 deployment/package-lock.json\n create mode 100644 deployment/package.json\n create mode 100644 deployment/public/.well-known/security.txt\n create mode 100644 deployment/public/_headers\n create mode 100644 deployment/public/_redirects\n create mode 100644 deployment/public/browserconfig.xml\n create mode 100644 deployment/public/enterprise/index.html\n create mode 100644 deployment/public/favicon.ico\n create mode 100644 deployment/public/favicon.svg\n create mode 100644 deployment/public/index.html\n create mode 100644 deployment/public/locales/en-US/common.json\n create mode 100644 deployment/public/locales/es-ES/common.json\n create mode 100644 deployment/public/manifest.json\n create mode 100644 deployment/public/offline.html\n create mode 100644 deployment/public/og-image.svg\n create mode 100644 deployment/public/request-quote/index.html\n create mode 100644 deployment/public/robots.txt\n create mode 100644 deployment/public/search-index.json\n create mode 100644 deployment/public/search/embeddings.json\n create mode 100644 deployment/public/search/index.json\n create mode 100644 deployment/public/search/meta.json\n create mode 100644 deployment/public/site.webmanifest\n create mode 100644 deployment/public/sitemap.json\n create mode 100644 deployment/public/sitemap.txt\n create mode 100644 deployment/public/sitemap.xml\n create mode 100644 deployment/public/structured-data.json\n create mode 100644 deployment/public/test-sw.html\n create mode 100644 deployment/public/vite.svg\n create mode 100644 ecosystem.enhanced-intelligent.cjs\n create mode 100644 ecosystem.intelligent-enhanced.cjs\n create mode 100644 ecosystem.pm2-automation.cjs\n create mode 100644 monitoring-dashboard.html\n create mode 100644 monitoring-metrics.json\n create mode 100644 pages/404.tsx\n create mode 100644 pages/cloud-devops.tsx\n create mode 100644 pages/cybersecurity.tsx\n create mode 100644 pages/docs.tsx\n create mode 100644 pages/quantum-computing.tsx\n create mode 100644 public/sw.js\n create mode 100644 scripts/advanced-build-optimizer.cjs\n create mode 100644 scripts/analyze-bundle.js\n create mode 100644 scripts/ci-cd-automation.cjs\n create mode 100644 scripts/comprehensive-health-check.cjs\n create mode 100644 scripts/comprehensive-test-runner.cjs\n create mode 100644 scripts/improve-performance.cjs\n create mode 100644 scripts/improve-seo.cjs\n create mode 100755 scripts/intelligent-git-push-merge.sh\n create mode 100644 scripts/performance-monitor.js\n create mode 100755 scripts/start-intelligent-enhanced-pm2.sh\n\nTo https://github.com/Zion-Holdings/zion.app\n   19ccf9da83e..f3bd2239a4c  pr-update-cursor/fix-syntax-push-and-merge-to-main-9705 -> cursor/fix-syntax-push-and-merge-to-main-9705\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "http_error",
+        "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
+      }
+    },
+    {
+      "number": 11408,
+      "title": "Enhance ziontechgroup website with new services and improvements",
+      "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-7e8e",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11407,
+      "title": "Website audit, content update, and deployment",
+      "head": "cursor/website-audit-content-update-and-deployment-3b98",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11406,
+      "title": "Automate, test, fix, improve, and merge code",
+      "head": "cursor/automate-test-fix-improve-and-merge-code-6564",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11405,
+      "title": "Analyze, improve, and deploy application",
+      "head": "cursor/analyze-improve-and-deploy-application-a0ae",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11404,
+      "title": "Migrate CI to PM2 and clean up GitHub actions",
+      "head": "cursor/migrate-ci-to-pm2-and-clean-up-github-actions-68cf",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11403,
+      "title": "Automate, test, fix, improve, and merge code",
+      "head": "cursor/automate-test-fix-improve-and-merge-code-f30e",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11402,
+      "title": "Fix syntax, push, and merge to main",
+      "head": "cursor/fix-syntax-push-and-merge-to-main-8b7c",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11401,
+      "title": "Migrate CI to PM2 and clean up GitHub actions",
+      "head": "cursor/migrate-ci-to-pm2-and-clean-up-github-actions-d197",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11400,
+      "title": "Fix errors and automate with pm2",
+      "head": "cursor/fix-errors-and-automate-with-pm2-789b",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11399,
+      "title": "Website audit, content update, and deployment",
+      "head": "cursor/website-audit-content-update-and-deployment-ae19",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11398,
+      "title": "Migrate CI to PM2 and clean up GitHub actions",
+      "head": "cursor/migrate-ci-to-pm2-and-clean-up-github-actions-e14e",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11397,
+      "title": "Migrate CI to PM2 and clean up GitHub actions",
+      "head": "cursor/migrate-ci-to-pm2-and-clean-up-github-actions-eac4",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11396,
+      "title": "Test and fix pm2 automations, merge to main",
+      "head": "cursor/test-and-fix-pm2-automations-merge-to-main-7e78",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11395,
+      "title": "Fix errors and automate with pm2",
+      "head": "cursor/fix-errors-and-automate-with-pm2-0532",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11393,
+      "title": "Enhance ziontechgroup website with new services and improvements",
+      "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-6ecc",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11391,
+      "title": "Analyze, improve, and deploy application",
+      "head": "cursor/analyze-improve-and-deploy-application-07c5",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11390,
+      "title": "Enhance pm2 automations for development and deployment",
+      "head": "cursor/enhance-pm2-automations-for-development-and-deployment-17a8",
+      "update": {
+        "updated": true,
+        "output": "Auto-merging package.json\nMerge made by the 'ort' strategy.\n .eslintignore                                      |  21 +-\n .github/MIGRATION_TO_PM2.md                        |  33 +-\n .github/workflows/ci-cd.yml                        |  40 --\n .github/workflows/continuous-automation.yml        |  61 ---\n IMPROVEMENTS.md                                    | 267 ++++++----\n INTELLIGENT-PM2-AUTOMATION-README.md               | 572 ++++++++++-----------\n app-optimization-report.json                       |  56 +-\n automation-orchestrator-report-1756917672344.json  |  60 +++\n automation-orchestrator-report-1756917987408.json  |  60 +++\n automation-orchestrator-report-1756918005571.json  |  60 +++\n automation-orchestrator-report-1756918138011.json  |  60 +++\n automation-orchestrator-report-1756918378473.json  |  60 +++\n .../build-test-automation-report.json              |  42 ++\n automation-reports/ci-cd-automation-report.json    |  42 ++\n .../continuous-automation-report.json              | 109 ++++\n .../continuous-automation-summary.json             |   8 +\n automation-reports/quality-checks-report.json      | 118 +++++\n build-optimization-report.json                     |  69 ++-\n code-quality-report.json                           |  24 +-\n components/ContactForm.tsx                         | 224 ++++++++\n components/ErrorBoundary.tsx                       |  10 +-\n components/Loading.tsx                             |   3 +-\n components/LoadingSpinner.tsx                      |  32 +-\n components/PerformanceMonitor.tsx                  |  31 +-\n components/SearchBar.tsx                           | 274 +++++-----\n comprehensive-test-report.json                     | 243 +++++++--\n dependency-update-report.json                      |   6 +-\n deployment-check-report.json                       |  46 ++\n ecosystem.config.cjs                               |  64 +++\n ecosystem.enhanced-intelligent.cjs                 | 410 +++++++++++++++\n ecosystem.intelligent-enhanced.cjs                 | 381 ++++++++++++++\n ecosystem.pm2-automation.cjs                       | 156 ++++++\n health-check-report.json                           | 136 +++--\n master-automation-report.json                      | 126 +++--\n next.config.js                                     |  11 +-\n package-lock.json                                  |  13 +-\n package.json                                       |  15 +-\n pages/_app.tsx                                     | 221 +++-----\n pages/ai-services.tsx                              | 195 ++++++-\n pages/contact.tsx                                  |  16 +\n pages/index.tsx                                    |  10 -\n pages/it-services.tsx                              | 200 +++++++\n pages/micro-saas.tsx                               | 195 +++++++\n performance-metrics.json                           |  55 +-\n public/sw.js                                       |  84 +++\n scripts/advanced-build-optimizer.cjs               | 504 ++++++++++++++++++\n scripts/analyze-bundle.js                          |  19 +\n scripts/ci-cd-automation.cjs                       | 157 ++++++\n scripts/comprehensive-health-check.cjs             | 355 +++++++++++++\n scripts/comprehensive-test-runner.cjs              | 425 +++++++++++++++\n scripts/improve-performance.cjs                    |  78 +++\n scripts/improve-seo.cjs                            |  80 +++\n scripts/intelligent-git-push-merge.sh              | 263 ++++++++++\n scripts/start-intelligent-enhanced-pm2.sh          | 427 +++++++++++++++\n security-scan-report.json                          |  68 +--\n styles/globals.css                                 |  93 +++-\n syntax-fix-report.json                             |  13 +-\n tailwind.config.js                                 |   1 +\n 58 files changed, 6333 insertions(+), 1069 deletions(-)\n delete mode 100644 .github/workflows/ci-cd.yml\n delete mode 100644 .github/workflows/continuous-automation.yml\n create mode 100644 automation-orchestrator-report-1756917672344.json\n create mode 100644 automation-orchestrator-report-1756917987408.json\n create mode 100644 automation-orchestrator-report-1756918005571.json\n create mode 100644 automation-orchestrator-report-1756918138011.json\n create mode 100644 automation-orchestrator-report-1756918378473.json\n create mode 100644 automation-reports/build-test-automation-report.json\n create mode 100644 automation-reports/ci-cd-automation-report.json\n create mode 100644 automation-reports/continuous-automation-report.json\n create mode 100644 automation-reports/continuous-automation-summary.json\n create mode 100644 automation-reports/quality-checks-report.json\n create mode 100644 components/ContactForm.tsx\n create mode 100644 deployment-check-report.json\n create mode 100644 ecosystem.enhanced-intelligent.cjs\n create mode 100644 ecosystem.intelligent-enhanced.cjs\n create mode 100644 ecosystem.pm2-automation.cjs\n create mode 100644 public/sw.js\n create mode 100644 scripts/advanced-build-optimizer.cjs\n create mode 100644 scripts/analyze-bundle.js\n create mode 100644 scripts/ci-cd-automation.cjs\n create mode 100644 scripts/comprehensive-health-check.cjs\n create mode 100644 scripts/comprehensive-test-runner.cjs\n create mode 100644 scripts/improve-performance.cjs\n create mode 100644 scripts/improve-seo.cjs\n create mode 100755 scripts/intelligent-git-push-merge.sh\n create mode 100755 scripts/start-intelligent-enhanced-pm2.sh\n\nTo https://github.com/Zion-Holdings/zion.app\n   039b9c39b8e..460d8f82377  pr-update-cursor/enhance-pm2-automations-for-development-and-deployment-17a8 -> cursor/enhance-pm2-automations-for-development-and-deployment-17a8\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "http_error",
+        "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
+      }
+    },
+    {
+      "number": 11389,
+      "title": "Website audit, content update, and deployment",
+      "head": "cursor/website-audit-content-update-and-deployment-7f98",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11388,
+      "title": "Automate, test, fix, improve, and merge code",
+      "head": "cursor/automate-test-fix-improve-and-merge-code-fad8",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11387,
+      "title": "Fix errors and automate with pm2",
+      "head": "cursor/fix-errors-and-automate-with-pm2-80da",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11385,
+      "title": "Analyze, improve, and deploy application",
+      "head": "cursor/analyze-improve-and-deploy-application-3482",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11384,
+      "title": "Website audit, content update, and deployment",
+      "head": "cursor/website-audit-content-update-and-deployment-023a",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11383,
+      "title": "Resolve conflicts and merge to main",
+      "head": "cursor/resolve-conflicts-and-merge-to-main-3a9c",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11382,
+      "title": "Fix lint, push, and merge to main",
+      "head": "cursor/fix-lint-push-and-merge-to-main-8b66",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11381,
+      "title": "Fix syntax, push, and merge to main",
+      "head": "cursor/fix-syntax-push-and-merge-to-main-b932",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11380,
+      "title": "Website audit, content update, and deployment",
+      "head": "cursor/website-audit-content-update-and-deployment-e21a",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11379,
+      "title": "Enhance ziontechgroup website with new services and improvements",
+      "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-3c00",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11377,
+      "title": "Resolve conflicts and merge to main",
+      "head": "cursor/resolve-conflicts-and-merge-to-main-4f86",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11376,
+      "title": "Fix lint, push, and merge to main",
+      "head": "cursor/fix-lint-push-and-merge-to-main-1fec",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11375,
+      "title": "Fix lint, push, and merge to main",
+      "head": "cursor/fix-lint-push-and-merge-to-main-f2d0",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11373,
+      "title": "Fix syntax, push, and merge to main",
+      "head": "cursor/fix-syntax-push-and-merge-to-main-4329",
+      "update": {
+        "updated": true,
+        "output": "Merge made by the 'ort' strategy.\n .eslintignore                                      |    21 +-\n .github/MIGRATION_TO_PM2.md                        |    33 +-\n .github/workflows/ci-cd.yml                        |    40 -\n .github/workflows/continuous-automation.yml        |    61 -\n IMPROVEMENTS.md                                    |   267 +-\n INTELLIGENT-PM2-AUTOMATION-README.md               |   572 +-\n app-optimization-report.json                       |    47 +\n automation-orchestrator-report-1756917632684.json  |    60 +\n automation-orchestrator-report-1756917672344.json  |    60 +\n automation-orchestrator-report-1756917987408.json  |    60 +\n automation-orchestrator-report-1756918005571.json  |    60 +\n automation-orchestrator-report-1756918138011.json  |    60 +\n automation-orchestrator-report-1756918378473.json  |    60 +\n .../build-test-automation-report.json              |    42 +\n automation-reports/ci-cd-automation-report.json    |    42 +\n .../continuous-automation-report.json              |   109 +\n .../continuous-automation-summary.json             |     8 +\n automation-reports/quality-checks-report.json      |   118 +\n build-optimization-report.json                     |    69 +-\n code-quality-report.json                           |   126 +-\n components.corrupted/Layout.tsx                    |    56 +-\n components.corrupted/SEOHead.tsx                   |   100 -\n components/Breadcrumb.tsx                          |    74 +\n components/ContactForm.tsx                         |   224 +\n components/ErrorBoundary.tsx                       |     9 +-\n components/Loading.tsx                             |     9 +-\n components/LoadingSpinner.tsx                      |    31 +\n components/PerformanceMonitor.tsx                  |    34 +-\n components/SearchBar.tsx                           |   189 +\n components/ThemeToggle.tsx                         |    46 +\n comprehensive-test-report.json                     |   243 +-\n dependency-update-report.json                      |     6 +-\n deployment-check-report.json                       |    46 +\n deployment/deploy.sh                               |     4 +\n deployment/next.config.js                          |    39 +\n deployment/package-lock.json                       | 23470 +++++++++++++++++++\n deployment/package.json                            |   303 +\n deployment/public/.well-known/security.txt         |     7 +\n deployment/public/_headers                         |    91 +\n deployment/public/_redirects                       |    20 +\n deployment/public/browserconfig.xml                |     9 +\n deployment/public/enterprise/index.html            |    90 +\n deployment/public/favicon.ico                      |     3 +\n deployment/public/favicon.svg                      |    11 +\n deployment/public/index.html                       |   185 +\n deployment/public/locales/en-US/common.json        |   130 +\n deployment/public/locales/es-ES/common.json        |    91 +\n deployment/public/manifest.json                    |   101 +\n deployment/public/offline.html                     |   161 +\n deployment/public/og-image.svg                     |    28 +\n deployment/public/request-quote/index.html         |    93 +\n deployment/public/robots.txt                       |    10 +\n deployment/public/search-index.json                | 11901 ++++++++++\n deployment/public/search/embeddings.json           |   146 +\n deployment/public/search/index.json                |    92 +\n deployment/public/search/meta.json                 |    47 +\n deployment/public/site.webmanifest                 |   166 +\n deployment/public/sitemap.json                     |    65 +\n deployment/public/sitemap.txt                      |     9 +\n deployment/public/sitemap.xml                      |    69 +\n deployment/public/structured-data.json             |    32 +\n deployment/public/test-sw.html                     |   264 +\n deployment/public/vite.svg                         |     1 +\n ecosystem.config.cjs                               |    64 +\n ecosystem.enhanced-intelligent.cjs                 |   410 +\n ecosystem.intelligent-enhanced.cjs                 |   381 +\n ecosystem.pm2-automation.cjs                       |   156 +\n health-check-report.json                           |   136 +-\n master-automation-report.json                      |    91 +-\n monitoring-dashboard.html                          |    86 +\n monitoring-metrics.json                            |    31 +\n next.config.js                                     |    16 +-\n package-lock.json                                  |    13 +-\n package.json                                       |    15 +-\n pages/404.tsx                                      |    60 +\n pages/_app.tsx                                     |   228 +-\n pages/ai-services.tsx                              |   597 +-\n pages/cloud-devops.tsx                             |   157 +\n pages/contact.tsx                                  |    16 +\n pages/cybersecurity.tsx                            |   157 +\n pages/docs.tsx                                     |   189 +\n pages/index.tsx                                    |    67 +-\n pages/it-services.tsx                              |   713 +-\n pages/micro-saas.tsx                               |   681 +-\n pages/quantum-computing.tsx                        |   157 +\n performance-metrics.json                           |    47 +-\n public/sw.js                                       |    84 +\n scripts/advanced-build-optimizer.cjs               |   504 +\n scripts/analyze-bundle.js                          |    19 +\n scripts/ci-cd-automation.cjs                       |   157 +\n scripts/comprehensive-health-check.cjs             |   355 +\n scripts/comprehensive-test-runner.cjs              |   425 +\n scripts/improve-performance.cjs                    |    78 +\n scripts/improve-seo.cjs                            |    80 +\n scripts/intelligent-git-push-merge.sh              |   263 +\n scripts/performance-monitor.js                     |   117 +\n scripts/start-intelligent-enhanced-pm2.sh          |   427 +\n security-scan-report.json                          |    68 +-\n styles/globals.css                                 |    93 +-\n syntax-fix-report.json                             |    16 +-\n tailwind.config.js                                 |     1 +\n 101 files changed, 46744 insertions(+), 1031 deletions(-)\n delete mode 100644 .github/workflows/ci-cd.yml\n delete mode 100644 .github/workflows/continuous-automation.yml\n create mode 100644 app-optimization-report.json\n create mode 100644 automation-orchestrator-report-1756917632684.json\n create mode 100644 automation-orchestrator-report-1756917672344.json\n create mode 100644 automation-orchestrator-report-1756917987408.json\n create mode 100644 automation-orchestrator-report-1756918005571.json\n create mode 100644 automation-orchestrator-report-1756918138011.json\n create mode 100644 automation-orchestrator-report-1756918378473.json\n create mode 100644 automation-reports/build-test-automation-report.json\n create mode 100644 automation-reports/ci-cd-automation-report.json\n create mode 100644 automation-reports/continuous-automation-report.json\n create mode 100644 automation-reports/continuous-automation-summary.json\n create mode 100644 automation-reports/quality-checks-report.json\n delete mode 100644 components.corrupted/SEOHead.tsx\n create mode 100644 components/Breadcrumb.tsx\n create mode 100644 components/ContactForm.tsx\n create mode 100644 components/LoadingSpinner.tsx\n create mode 100644 components/SearchBar.tsx\n create mode 100644 components/ThemeToggle.tsx\n create mode 100644 deployment-check-report.json\n create mode 100755 deployment/deploy.sh\n create mode 100644 deployment/next.config.js\n create mode 100644 deployment/package-lock.json\n create mode 100644 deployment/package.json\n create mode 100644 deployment/public/.well-known/security.txt\n create mode 100644 deployment/public/_headers\n create mode 100644 deployment/public/_redirects\n create mode 100644 deployment/public/browserconfig.xml\n create mode 100644 deployment/public/enterprise/index.html\n create mode 100644 deployment/public/favicon.ico\n create mode 100644 deployment/public/favicon.svg\n create mode 100644 deployment/public/index.html\n create mode 100644 deployment/public/locales/en-US/common.json\n create mode 100644 deployment/public/locales/es-ES/common.json\n create mode 100644 deployment/public/manifest.json\n create mode 100644 deployment/public/offline.html\n create mode 100644 deployment/public/og-image.svg\n create mode 100644 deployment/public/request-quote/index.html\n create mode 100644 deployment/public/robots.txt\n create mode 100644 deployment/public/search-index.json\n create mode 100644 deployment/public/search/embeddings.json\n create mode 100644 deployment/public/search/index.json\n create mode 100644 deployment/public/search/meta.json\n create mode 100644 deployment/public/site.webmanifest\n create mode 100644 deployment/public/sitemap.json\n create mode 100644 deployment/public/sitemap.txt\n create mode 100644 deployment/public/sitemap.xml\n create mode 100644 deployment/public/structured-data.json\n create mode 100644 deployment/public/test-sw.html\n create mode 100644 deployment/public/vite.svg\n create mode 100644 ecosystem.enhanced-intelligent.cjs\n create mode 100644 ecosystem.intelligent-enhanced.cjs\n create mode 100644 ecosystem.pm2-automation.cjs\n create mode 100644 monitoring-dashboard.html\n create mode 100644 monitoring-metrics.json\n create mode 100644 pages/404.tsx\n create mode 100644 pages/cloud-devops.tsx\n create mode 100644 pages/cybersecurity.tsx\n create mode 100644 pages/docs.tsx\n create mode 100644 pages/quantum-computing.tsx\n create mode 100644 public/sw.js\n create mode 100644 scripts/advanced-build-optimizer.cjs\n create mode 100644 scripts/analyze-bundle.js\n create mode 100644 scripts/ci-cd-automation.cjs\n create mode 100644 scripts/comprehensive-health-check.cjs\n create mode 100644 scripts/comprehensive-test-runner.cjs\n create mode 100644 scripts/improve-performance.cjs\n create mode 100644 scripts/improve-seo.cjs\n create mode 100755 scripts/intelligent-git-push-merge.sh\n create mode 100644 scripts/performance-monitor.js\n create mode 100755 scripts/start-intelligent-enhanced-pm2.sh\n\nTo https://github.com/Zion-Holdings/zion.app\n   aa454b8a8a2..2204f59f422  pr-update-cursor/fix-syntax-push-and-merge-to-main-4329 -> cursor/fix-syntax-push-and-merge-to-main-4329\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "http_error",
+        "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
+      }
+    },
+    {
+      "number": 11372,
+      "title": "Fix lint, push, and merge to main",
+      "head": "cursor/fix-lint-push-and-merge-to-main-bd11",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11371,
+      "title": "Automate, test, fix, improve, and merge code",
+      "head": "cursor/automate-test-fix-improve-and-merge-code-977a",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11370,
+      "title": "Website audit, content update, and deployment",
+      "head": "cursor/website-audit-content-update-and-deployment-ef12",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11369,
+      "title": "Add new services and advertise them",
+      "head": "cursor/add-new-services-and-advertise-them-7079",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11368,
+      "title": "Add new services and advertise them",
+      "head": "cursor/add-new-services-and-advertise-them-1114",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11367,
+      "title": "Analyze, improve, and deploy application",
+      "head": "cursor/analyze-improve-and-deploy-application-325c",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11365,
+      "title": "Automate, test, fix, improve, and merge code",
+      "head": "cursor/automate-test-fix-improve-and-merge-code-c5f6",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11364,
+      "title": "Fix syntax, push, and merge to main",
+      "head": "cursor/fix-syntax-push-and-merge-to-main-572b",
+      "update": {
+        "updated": true,
+        "output": "Auto-merging pages/_app.tsx\nMerge made by the 'ort' strategy.\n .eslintignore                                      |  21 +-\n .github/MIGRATION_TO_PM2.md                        |  33 +-\n .github/workflows/ci-cd.yml                        |  40 --\n .github/workflows/continuous-automation.yml        |  61 ---\n IMPROVEMENTS.md                                    | 267 ++++++----\n INTELLIGENT-PM2-AUTOMATION-README.md               | 572 ++++++++++-----------\n app-optimization-report.json                       |  56 +-\n automation-orchestrator-report-1756917672344.json  |  60 +++\n automation-orchestrator-report-1756917987408.json  |  60 +++\n automation-orchestrator-report-1756918005571.json  |  60 +++\n automation-orchestrator-report-1756918138011.json  |  60 +++\n automation-orchestrator-report-1756918378473.json  |  60 +++\n .../build-test-automation-report.json              |  42 ++\n automation-reports/ci-cd-automation-report.json    |  42 ++\n .../continuous-automation-report.json              | 109 ++++\n .../continuous-automation-summary.json             |   8 +\n automation-reports/quality-checks-report.json      | 118 +++++\n build-optimization-report.json                     |  69 ++-\n code-quality-report.json                           |  24 +-\n components/ContactForm.tsx                         | 224 ++++++++\n components/ErrorBoundary.tsx                       |  10 +-\n components/Loading.tsx                             |   3 +-\n components/LoadingSpinner.tsx                      |  32 +-\n components/PerformanceMonitor.tsx                  |  31 +-\n components/SearchBar.tsx                           | 274 +++++-----\n comprehensive-test-report.json                     | 243 +++++++--\n dependency-update-report.json                      |   6 +-\n deployment-check-report.json                       |  46 ++\n ecosystem.config.cjs                               |  64 +++\n ecosystem.enhanced-intelligent.cjs                 | 410 +++++++++++++++\n ecosystem.intelligent-enhanced.cjs                 | 381 ++++++++++++++\n ecosystem.pm2-automation.cjs                       | 156 ++++++\n health-check-report.json                           | 136 +++--\n master-automation-report.json                      | 126 +++--\n next.config.js                                     |  11 +-\n package-lock.json                                  |  13 +-\n package.json                                       |  15 +-\n pages/_app.tsx                                     | 218 +++-----\n pages/ai-services.tsx                              | 393 +++++++++++++-\n pages/contact.tsx                                  |  16 +\n pages/index.tsx                                    |   8 +-\n pages/it-services.tsx                              | 478 ++++++++++++++++-\n pages/micro-saas.tsx                               | 483 ++++++++++++++++-\n performance-metrics.json                           |  55 +-\n public/sw.js                                       |  84 +++\n scripts/advanced-build-optimizer.cjs               | 504 ++++++++++++++++++\n scripts/analyze-bundle.js                          |  19 +\n scripts/ci-cd-automation.cjs                       | 157 ++++++\n scripts/comprehensive-health-check.cjs             | 355 +++++++++++++\n scripts/comprehensive-test-runner.cjs              | 425 +++++++++++++++\n scripts/improve-performance.cjs                    |  78 +++\n scripts/improve-seo.cjs                            |  80 +++\n scripts/intelligent-git-push-merge.sh              | 263 ++++++++++\n scripts/start-intelligent-enhanced-pm2.sh          | 427 +++++++++++++++\n security-scan-report.json                          |  68 +--\n styles/globals.css                                 |  93 +++-\n syntax-fix-report.json                             |  13 +-\n tailwind.config.js                                 |   1 +\n 58 files changed, 7097 insertions(+), 1064 deletions(-)\n delete mode 100644 .github/workflows/ci-cd.yml\n delete mode 100644 .github/workflows/continuous-automation.yml\n create mode 100644 automation-orchestrator-report-1756917672344.json\n create mode 100644 automation-orchestrator-report-1756917987408.json\n create mode 100644 automation-orchestrator-report-1756918005571.json\n create mode 100644 automation-orchestrator-report-1756918138011.json\n create mode 100644 automation-orchestrator-report-1756918378473.json\n create mode 100644 automation-reports/build-test-automation-report.json\n create mode 100644 automation-reports/ci-cd-automation-report.json\n create mode 100644 automation-reports/continuous-automation-report.json\n create mode 100644 automation-reports/continuous-automation-summary.json\n create mode 100644 automation-reports/quality-checks-report.json\n create mode 100644 components/ContactForm.tsx\n create mode 100644 deployment-check-report.json\n create mode 100644 ecosystem.enhanced-intelligent.cjs\n create mode 100644 ecosystem.intelligent-enhanced.cjs\n create mode 100644 ecosystem.pm2-automation.cjs\n create mode 100644 public/sw.js\n create mode 100644 scripts/advanced-build-optimizer.cjs\n create mode 100644 scripts/analyze-bundle.js\n create mode 100644 scripts/ci-cd-automation.cjs\n create mode 100644 scripts/comprehensive-health-check.cjs\n create mode 100644 scripts/comprehensive-test-runner.cjs\n create mode 100644 scripts/improve-performance.cjs\n create mode 100644 scripts/improve-seo.cjs\n create mode 100755 scripts/intelligent-git-push-merge.sh\n create mode 100755 scripts/start-intelligent-enhanced-pm2.sh\n\nTo https://github.com/Zion-Holdings/zion.app\n   3cfec596250..1dfe918313a  pr-update-cursor/fix-syntax-push-and-merge-to-main-572b -> cursor/fix-syntax-push-and-merge-to-main-572b\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "http_error",
+        "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
+      }
+    },
+    {
+      "number": 11363,
+      "title": "Add new services and advertise them",
+      "head": "cursor/add-new-services-and-advertise-them-548b",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11362,
+      "title": "Website audit, content update, and deployment",
+      "head": "cursor/website-audit-content-update-and-deployment-67db",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11361,
+      "title": "Fix syntax, push, and merge to main",
+      "head": "cursor/fix-syntax-push-and-merge-to-main-75cd",
+      "update": {
+        "updated": true,
+        "output": "Auto-merging tailwind.config.js\nMerge made by the 'ort' strategy.\n .eslintignore                                      |    21 +-\n .github/MIGRATION_TO_PM2.md                        |    33 +-\n .github/workflows/ci-cd.yml                        |    40 -\n .github/workflows/continuous-automation.yml        |    61 -\n IMPROVEMENTS.md                                    |   267 +-\n INTELLIGENT-PM2-AUTOMATION-README.md               |   572 +-\n app-optimization-report.json                       |    47 +\n automation-orchestrator-report-1756917632684.json  |    60 +\n automation-orchestrator-report-1756917672344.json  |    60 +\n automation-orchestrator-report-1756917987408.json  |    60 +\n automation-orchestrator-report-1756918005571.json  |    60 +\n automation-orchestrator-report-1756918138011.json  |    60 +\n automation-orchestrator-report-1756918378473.json  |    60 +\n .../build-test-automation-report.json              |    42 +\n automation-reports/ci-cd-automation-report.json    |    42 +\n .../continuous-automation-report.json              |   109 +\n .../continuous-automation-summary.json             |     8 +\n automation-reports/quality-checks-report.json      |   118 +\n build-optimization-report.json                     |    69 +-\n code-quality-report.json                           |   126 +-\n components/ContactForm.tsx                         |   224 +\n components/ErrorBoundary.tsx                       |     9 +-\n components/Loading.tsx                             |     9 +-\n components/LoadingSpinner.tsx                      |    32 +-\n components/PerformanceMonitor.tsx                  |    34 +-\n components/SearchBar.tsx                           |   274 +-\n comprehensive-test-report.json                     |   243 +-\n dependency-update-report.json                      |     6 +-\n deployment-check-report.json                       |    46 +\n deployment/deploy.sh                               |     4 +\n deployment/next.config.js                          |    39 +\n deployment/package-lock.json                       | 23470 +++++++++++++++++++\n deployment/package.json                            |   303 +\n deployment/public/.well-known/security.txt         |     7 +\n deployment/public/_headers                         |    91 +\n deployment/public/_redirects                       |    20 +\n deployment/public/browserconfig.xml                |     9 +\n deployment/public/enterprise/index.html            |    90 +\n deployment/public/favicon.ico                      |     3 +\n deployment/public/favicon.svg                      |    11 +\n deployment/public/index.html                       |   185 +\n deployment/public/locales/en-US/common.json        |   130 +\n deployment/public/locales/es-ES/common.json        |    91 +\n deployment/public/manifest.json                    |   101 +\n deployment/public/offline.html                     |   161 +\n deployment/public/og-image.svg                     |    28 +\n deployment/public/request-quote/index.html         |    93 +\n deployment/public/robots.txt                       |    10 +\n deployment/public/search-index.json                | 11901 ++++++++++\n deployment/public/search/embeddings.json           |   146 +\n deployment/public/search/index.json                |    92 +\n deployment/public/search/meta.json                 |    47 +\n deployment/public/site.webmanifest                 |   166 +\n deployment/public/sitemap.json                     |    65 +\n deployment/public/sitemap.txt                      |     9 +\n deployment/public/sitemap.xml                      |    69 +\n deployment/public/structured-data.json             |    32 +\n deployment/public/test-sw.html                     |   264 +\n deployment/public/vite.svg                         |     1 +\n ecosystem.config.cjs                               |    64 +\n ecosystem.enhanced-intelligent.cjs                 |   410 +\n ecosystem.intelligent-enhanced.cjs                 |   381 +\n ecosystem.pm2-automation.cjs                       |   156 +\n health-check-report.json                           |   136 +-\n master-automation-report.json                      |    91 +-\n monitoring-dashboard.html                          |    86 +\n monitoring-metrics.json                            |    31 +\n next.config.js                                     |    11 +-\n package-lock.json                                  |    13 +-\n package.json                                       |    15 +-\n pages/404.tsx                                      |    70 +-\n pages/_app.tsx                                     |   212 +-\n pages/ai-services.tsx                              |   597 +-\n pages/cloud-devops.tsx                             |   157 +\n pages/contact.tsx                                  |    16 +\n pages/cybersecurity.tsx                            |   157 +\n pages/docs.tsx                                     |   189 +\n pages/index.tsx                                    |    67 +-\n pages/it-services.tsx                              |   713 +-\n pages/micro-saas.tsx                               |   681 +-\n pages/quantum-computing.tsx                        |   157 +\n performance-metrics.json                           |    47 +-\n public/sw.js                                       |    84 +\n scripts/advanced-build-optimizer.cjs               |   504 +\n scripts/analyze-bundle.js                          |    19 +\n scripts/ci-cd-automation.cjs                       |   157 +\n scripts/comprehensive-health-check.cjs             |   355 +\n scripts/comprehensive-test-runner.cjs              |   425 +\n scripts/improve-performance.cjs                    |    78 +\n scripts/improve-seo.cjs                            |    80 +\n scripts/intelligent-git-push-merge.sh              |   263 +\n scripts/performance-monitor.js                     |   117 +\n scripts/start-intelligent-enhanced-pm2.sh          |   427 +\n security-scan-report.json                          |    68 +-\n styles/globals.css                                 |    93 +-\n syntax-fix-report.json                             |    16 +-\n tailwind.config.js                                 |     1 +\n 97 files changed, 46521 insertions(+), 1053 deletions(-)\n delete mode 100644 .github/workflows/ci-cd.yml\n delete mode 100644 .github/workflows/continuous-automation.yml\n create mode 100644 app-optimization-report.json\n create mode 100644 automation-orchestrator-report-1756917632684.json\n create mode 100644 automation-orchestrator-report-1756917672344.json\n create mode 100644 automation-orchestrator-report-1756917987408.json\n create mode 100644 automation-orchestrator-report-1756918005571.json\n create mode 100644 automation-orchestrator-report-1756918138011.json\n create mode 100644 automation-orchestrator-report-1756918378473.json\n create mode 100644 automation-reports/build-test-automation-report.json\n create mode 100644 automation-reports/ci-cd-automation-report.json\n create mode 100644 automation-reports/continuous-automation-report.json\n create mode 100644 automation-reports/continuous-automation-summary.json\n create mode 100644 automation-reports/quality-checks-report.json\n create mode 100644 components/ContactForm.tsx\n create mode 100644 deployment-check-report.json\n create mode 100755 deployment/deploy.sh\n create mode 100644 deployment/next.config.js\n create mode 100644 deployment/package-lock.json\n create mode 100644 deployment/package.json\n create mode 100644 deployment/public/.well-known/security.txt\n create mode 100644 deployment/public/_headers\n create mode 100644 deployment/public/_redirects\n create mode 100644 deployment/public/browserconfig.xml\n create mode 100644 deployment/public/enterprise/index.html\n create mode 100644 deployment/public/favicon.ico\n create mode 100644 deployment/public/favicon.svg\n create mode 100644 deployment/public/index.html\n create mode 100644 deployment/public/locales/en-US/common.json\n create mode 100644 deployment/public/locales/es-ES/common.json\n create mode 100644 deployment/public/manifest.json\n create mode 100644 deployment/public/offline.html\n create mode 100644 deployment/public/og-image.svg\n create mode 100644 deployment/public/request-quote/index.html\n create mode 100644 deployment/public/robots.txt\n create mode 100644 deployment/public/search-index.json\n create mode 100644 deployment/public/search/embeddings.json\n create mode 100644 deployment/public/search/index.json\n create mode 100644 deployment/public/search/meta.json\n create mode 100644 deployment/public/site.webmanifest\n create mode 100644 deployment/public/sitemap.json\n create mode 100644 deployment/public/sitemap.txt\n create mode 100644 deployment/public/sitemap.xml\n create mode 100644 deployment/public/structured-data.json\n create mode 100644 deployment/public/test-sw.html\n create mode 100644 deployment/public/vite.svg\n create mode 100644 ecosystem.enhanced-intelligent.cjs\n create mode 100644 ecosystem.intelligent-enhanced.cjs\n create mode 100644 ecosystem.pm2-automation.cjs\n create mode 100644 monitoring-dashboard.html\n create mode 100644 monitoring-metrics.json\n create mode 100644 pages/cloud-devops.tsx\n create mode 100644 pages/cybersecurity.tsx\n create mode 100644 pages/docs.tsx\n create mode 100644 pages/quantum-computing.tsx\n create mode 100644 public/sw.js\n create mode 100644 scripts/advanced-build-optimizer.cjs\n create mode 100644 scripts/analyze-bundle.js\n create mode 100644 scripts/ci-cd-automation.cjs\n create mode 100644 scripts/comprehensive-health-check.cjs\n create mode 100644 scripts/comprehensive-test-runner.cjs\n create mode 100644 scripts/improve-performance.cjs\n create mode 100644 scripts/improve-seo.cjs\n create mode 100755 scripts/intelligent-git-push-merge.sh\n create mode 100644 scripts/performance-monitor.js\n create mode 100755 scripts/start-intelligent-enhanced-pm2.sh\n\nTo https://github.com/Zion-Holdings/zion.app\n   031b8f2f372..18b35f4c42d  pr-update-cursor/fix-syntax-push-and-merge-to-main-75cd -> cursor/fix-syntax-push-and-merge-to-main-75cd\n"
+      },
+      "merge": {
+        "merged": true,
+        "merge_sha": "03a293ed74e99994b01b203e7959ca071191116c",
+        "raw": {
+          "sha": "03a293ed74e99994b01b203e7959ca071191116c",
+          "merged": true,
+          "message": "Pull Request successfully merged"
+        }
+      }
+    },
+    {
+      "number": 11360,
+      "title": "Fix lint, push, and merge to main",
+      "head": "cursor/fix-lint-push-and-merge-to-main-168f",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11357,
+      "title": "Website audit, content update, and deployment",
+      "head": "cursor/website-audit-content-update-and-deployment-0814",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11356,
+      "title": "Add new services and advertise them",
+      "head": "cursor/add-new-services-and-advertise-them-ef0c",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11353,
+      "title": "Analyze, improve, and deploy application",
+      "head": "cursor/analyze-improve-and-deploy-application-f755",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11352,
+      "title": "Website audit, content update, and deployment",
+      "head": "cursor/website-audit-content-update-and-deployment-28c3",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11351,
+      "title": "Website audit, content update, and deployment",
+      "head": "cursor/website-audit-content-update-and-deployment-5e4f",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11350,
+      "title": "Fix syntax, push, and merge to main",
+      "head": "cursor/fix-syntax-push-and-merge-to-main-ad37",
+      "update": {
+        "updated": true,
+        "output": "Auto-merging pages/contact.tsx\nMerge made by the 'ort' strategy.\n .eslintignore                                      |    21 +-\n .github/MIGRATION_TO_PM2.md                        |    33 +-\n .github/workflows/ci-cd.yml                        |    40 -\n .github/workflows/continuous-automation.yml        |    61 -\n IMPROVEMENTS.md                                    |   247 +-\n INTELLIGENT-PM2-AUTOMATION-README.md               |   572 +-\n app-optimization-report.json                       |    47 +\n automation-orchestrator-report-1756917632684.json  |    60 +\n automation-orchestrator-report-1756917672344.json  |    60 +\n automation-orchestrator-report-1756917987408.json  |    60 +\n automation-orchestrator-report-1756918005571.json  |    60 +\n automation-orchestrator-report-1756918138011.json  |    60 +\n automation-orchestrator-report-1756918378473.json  |    60 +\n .../build-test-automation-report.json              |    42 +\n automation-reports/ci-cd-automation-report.json    |    42 +\n .../continuous-automation-report.json              |   109 +\n .../continuous-automation-summary.json             |     8 +\n automation-reports/quality-checks-report.json      |   118 +\n build-optimization-report.json                     |    69 +-\n code-quality-report.json                           |   126 +-\n components.corrupted/Layout.tsx                    |    56 +-\n components.corrupted/SEOHead.tsx                   |   100 -\n components/Breadcrumb.tsx                          |    74 +\n components/ContactForm.tsx                         |   224 +\n components/ErrorBoundary.tsx                       |    76 +\n components/Loading.tsx                             |    25 +\n components/LoadingSpinner.tsx                      |    31 +\n components/PerformanceMonitor.tsx                  |    89 +\n components/SearchBar.tsx                           |   189 +\n components/ThemeToggle.tsx                         |    46 +\n comprehensive-test-report.json                     |   243 +-\n dependency-update-report.json                      |     6 +-\n deployment-check-report.json                       |    46 +\n deployment/deploy.sh                               |     4 +\n deployment/next.config.js                          |    39 +\n deployment/package-lock.json                       | 23470 +++++++++++++++++++\n deployment/package.json                            |   303 +\n deployment/public/.well-known/security.txt         |     7 +\n deployment/public/_headers                         |    91 +\n deployment/public/_redirects                       |    20 +\n deployment/public/browserconfig.xml                |     9 +\n deployment/public/enterprise/index.html            |    90 +\n deployment/public/favicon.ico                      |     3 +\n deployment/public/favicon.svg                      |    11 +\n deployment/public/index.html                       |   185 +\n deployment/public/locales/en-US/common.json        |   130 +\n deployment/public/locales/es-ES/common.json        |    91 +\n deployment/public/manifest.json                    |   101 +\n deployment/public/offline.html                     |   161 +\n deployment/public/og-image.svg                     |    28 +\n deployment/public/request-quote/index.html         |    93 +\n deployment/public/robots.txt                       |    10 +\n deployment/public/search-index.json                | 11901 ++++++++++\n deployment/public/search/embeddings.json           |   146 +\n deployment/public/search/index.json                |    92 +\n deployment/public/search/meta.json                 |    47 +\n deployment/public/site.webmanifest                 |   166 +\n deployment/public/sitemap.json                     |    65 +\n deployment/public/sitemap.txt                      |     9 +\n deployment/public/sitemap.xml                      |    69 +\n deployment/public/structured-data.json             |    32 +\n deployment/public/test-sw.html                     |   264 +\n deployment/public/vite.svg                         |     1 +\n ecosystem.config.cjs                               |    64 +\n ecosystem.enhanced-intelligent.cjs                 |   410 +\n ecosystem.intelligent-enhanced.cjs                 |   381 +\n ecosystem.pm2-automation.cjs                       |   156 +\n health-check-report.json                           |   136 +-\n master-automation-report.json                      |    91 +-\n monitoring-dashboard.html                          |    86 +\n monitoring-metrics.json                            |    31 +\n next.config.js                                     |    19 +-\n package-lock.json                                  |    13 +-\n package.json                                       |    15 +-\n pages/404.tsx                                      |    60 +\n pages/_app.tsx                                     |   198 +-\n pages/ai-services.tsx                              |   597 +-\n pages/cloud-devops.tsx                             |   157 +\n pages/contact.tsx                                  |    16 +\n pages/cybersecurity.tsx                            |   157 +\n pages/docs.tsx                                     |   189 +\n pages/index.tsx                                    |    95 +-\n pages/it-services.tsx                              |   713 +-\n pages/micro-saas.tsx                               |   681 +-\n pages/quantum-computing.tsx                        |   157 +\n performance-metrics.json                           |    47 +-\n postcss.config.mjs                                 |    10 +-\n public/sw.js                                       |    84 +\n scripts/advanced-build-optimizer.cjs               |   504 +\n scripts/analyze-bundle.js                          |    19 +\n scripts/ci-cd-automation.cjs                       |   157 +\n scripts/comprehensive-health-check.cjs             |   355 +\n scripts/comprehensive-test-runner.cjs              |   425 +\n scripts/improve-performance.cjs                    |    78 +\n scripts/improve-seo.cjs                            |    80 +\n scripts/intelligent-git-push-merge.sh              |   263 +\n scripts/performance-monitor.js                     |   117 +\n scripts/start-intelligent-enhanced-pm2.sh          |   427 +\n security-scan-report.json                          |    68 +-\n styles/globals.css                                 |   335 +-\n syntax-fix-report.json                             |    16 +-\n tailwind.config.js                                 |    45 +\n targeted-syntax-fixer.cjs                          |     8 +-\n utils/next-link-shim.tsx                           |    46 +-\n 104 files changed, 47156 insertions(+), 1088 deletions(-)\n delete mode 100644 .github/workflows/ci-cd.yml\n delete mode 100644 .github/workflows/continuous-automation.yml\n create mode 100644 app-optimization-report.json\n create mode 100644 automation-orchestrator-report-1756917632684.json\n create mode 100644 automation-orchestrator-report-1756917672344.json\n create mode 100644 automation-orchestrator-report-1756917987408.json\n create mode 100644 automation-orchestrator-report-1756918005571.json\n create mode 100644 automation-orchestrator-report-1756918138011.json\n create mode 100644 automation-orchestrator-report-1756918378473.json\n create mode 100644 automation-reports/build-test-automation-report.json\n create mode 100644 automation-reports/ci-cd-automation-report.json\n create mode 100644 automation-reports/continuous-automation-report.json\n create mode 100644 automation-reports/continuous-automation-summary.json\n create mode 100644 automation-reports/quality-checks-report.json\n delete mode 100644 components.corrupted/SEOHead.tsx\n create mode 100644 components/Breadcrumb.tsx\n create mode 100644 components/ContactForm.tsx\n create mode 100644 components/ErrorBoundary.tsx\n create mode 100644 components/Loading.tsx\n create mode 100644 components/LoadingSpinner.tsx\n create mode 100644 components/PerformanceMonitor.tsx\n create mode 100644 components/SearchBar.tsx\n create mode 100644 components/ThemeToggle.tsx\n create mode 100644 deployment-check-report.json\n create mode 100755 deployment/deploy.sh\n create mode 100644 deployment/next.config.js\n create mode 100644 deployment/package-lock.json\n create mode 100644 deployment/package.json\n create mode 100644 deployment/public/.well-known/security.txt\n create mode 100644 deployment/public/_headers\n create mode 100644 deployment/public/_redirects\n create mode 100644 deployment/public/browserconfig.xml\n create mode 100644 deployment/public/enterprise/index.html\n create mode 100644 deployment/public/favicon.ico\n create mode 100644 deployment/public/favicon.svg\n create mode 100644 deployment/public/index.html\n create mode 100644 deployment/public/locales/en-US/common.json\n create mode 100644 deployment/public/locales/es-ES/common.json\n create mode 100644 deployment/public/manifest.json\n create mode 100644 deployment/public/offline.html\n create mode 100644 deployment/public/og-image.svg\n create mode 100644 deployment/public/request-quote/index.html\n create mode 100644 deployment/public/robots.txt\n create mode 100644 deployment/public/search-index.json\n create mode 100644 deployment/public/search/embeddings.json\n create mode 100644 deployment/public/search/index.json\n create mode 100644 deployment/public/search/meta.json\n create mode 100644 deployment/public/site.webmanifest\n create mode 100644 deployment/public/sitemap.json\n create mode 100644 deployment/public/sitemap.txt\n create mode 100644 deployment/public/sitemap.xml\n create mode 100644 deployment/public/structured-data.json\n create mode 100644 deployment/public/test-sw.html\n create mode 100644 deployment/public/vite.svg\n create mode 100644 ecosystem.enhanced-intelligent.cjs\n create mode 100644 ecosystem.intelligent-enhanced.cjs\n create mode 100644 ecosystem.pm2-automation.cjs\n create mode 100644 monitoring-dashboard.html\n create mode 100644 monitoring-metrics.json\n create mode 100644 pages/404.tsx\n create mode 100644 pages/cloud-devops.tsx\n create mode 100644 pages/cybersecurity.tsx\n create mode 100644 pages/docs.tsx\n create mode 100644 pages/quantum-computing.tsx\n create mode 100644 public/sw.js\n create mode 100644 scripts/advanced-build-optimizer.cjs\n create mode 100644 scripts/analyze-bundle.js\n create mode 100644 scripts/ci-cd-automation.cjs\n create mode 100644 scripts/comprehensive-health-check.cjs\n create mode 100644 scripts/comprehensive-test-runner.cjs\n create mode 100644 scripts/improve-performance.cjs\n create mode 100644 scripts/improve-seo.cjs\n create mode 100755 scripts/intelligent-git-push-merge.sh\n create mode 100644 scripts/performance-monitor.js\n create mode 100755 scripts/start-intelligent-enhanced-pm2.sh\n create mode 100644 tailwind.config.js\n\nTo https://github.com/Zion-Holdings/zion.app\n   6a65e41b861..ab49406dd9b  pr-update-cursor/fix-syntax-push-and-merge-to-main-ad37 -> cursor/fix-syntax-push-and-merge-to-main-ad37\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "http_error",
+        "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
+      }
+    },
+    {
+      "number": 11349,
+      "title": "Enhance ziontechgroup website with new services and improvements",
+      "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-93c9",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11348,
+      "title": "Fix syntax, push, and merge to main",
+      "head": "cursor/fix-syntax-push-and-merge-to-main-aa1b",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11347,
+      "title": "Analyze and fix web page errors and warnings",
+      "head": "cursor/analyze-and-fix-web-page-errors-and-warnings-6de2",
+      "update": {
+        "updated": true,
+        "output": "Merge made by the 'ort' strategy.\n .eslintignore                                      |    21 +-\n .github/MIGRATION_TO_PM2.md                        |    33 +-\n .github/workflows/ci-cd.yml                        |    40 -\n .github/workflows/continuous-automation.yml        |    61 -\n IMPROVEMENTS.md                                    |   267 +-\n INTELLIGENT-PM2-AUTOMATION-README.md               |   572 +-\n app-optimization-report.json                       |    47 +\n automation-orchestrator-report-1756917632684.json  |    60 +\n automation-orchestrator-report-1756917672344.json  |    60 +\n automation-orchestrator-report-1756917987408.json  |    60 +\n automation-orchestrator-report-1756918005571.json  |    60 +\n automation-orchestrator-report-1756918138011.json  |    60 +\n automation-orchestrator-report-1756918378473.json  |    60 +\n .../build-test-automation-report.json              |    42 +\n automation-reports/ci-cd-automation-report.json    |    42 +\n .../continuous-automation-report.json              |   109 +\n .../continuous-automation-summary.json             |     8 +\n automation-reports/quality-checks-report.json      |   118 +\n build-optimization-report.json                     |    69 +-\n code-quality-report.json                           |   126 +-\n components.corrupted/Layout.tsx                    |    56 +-\n components.corrupted/SEOHead.tsx                   |   100 -\n components/Breadcrumb.tsx                          |    74 +\n components/ContactForm.tsx                         |   224 +\n components/ErrorBoundary.tsx                       |     9 +-\n components/Loading.tsx                             |     9 +-\n components/LoadingSpinner.tsx                      |    31 +\n components/PerformanceMonitor.tsx                  |    34 +-\n components/SearchBar.tsx                           |   189 +\n components/ThemeToggle.tsx                         |    46 +\n comprehensive-test-report.json                     |   243 +-\n dependency-update-report.json                      |     6 +-\n deployment-check-report.json                       |    46 +\n deployment/deploy.sh                               |     4 +\n deployment/next.config.js                          |    39 +\n deployment/package-lock.json                       | 23470 +++++++++++++++++++\n deployment/package.json                            |   303 +\n deployment/public/.well-known/security.txt         |     7 +\n deployment/public/_headers                         |    91 +\n deployment/public/_redirects                       |    20 +\n deployment/public/browserconfig.xml                |     9 +\n deployment/public/enterprise/index.html            |    90 +\n deployment/public/favicon.ico                      |     3 +\n deployment/public/favicon.svg                      |    11 +\n deployment/public/index.html                       |   185 +\n deployment/public/locales/en-US/common.json        |   130 +\n deployment/public/locales/es-ES/common.json        |    91 +\n deployment/public/manifest.json                    |   101 +\n deployment/public/offline.html                     |   161 +\n deployment/public/og-image.svg                     |    28 +\n deployment/public/request-quote/index.html         |    93 +\n deployment/public/robots.txt                       |    10 +\n deployment/public/search-index.json                | 11901 ++++++++++\n deployment/public/search/embeddings.json           |   146 +\n deployment/public/search/index.json                |    92 +\n deployment/public/search/meta.json                 |    47 +\n deployment/public/site.webmanifest                 |   166 +\n deployment/public/sitemap.json                     |    65 +\n deployment/public/sitemap.txt                      |     9 +\n deployment/public/sitemap.xml                      |    69 +\n deployment/public/structured-data.json             |    32 +\n deployment/public/test-sw.html                     |   264 +\n deployment/public/vite.svg                         |     1 +\n ecosystem.config.cjs                               |    64 +\n ecosystem.enhanced-intelligent.cjs                 |   410 +\n ecosystem.intelligent-enhanced.cjs                 |   381 +\n ecosystem.pm2-automation.cjs                       |   156 +\n health-check-report.json                           |   136 +-\n master-automation-report.json                      |    91 +-\n monitoring-dashboard.html                          |    86 +\n monitoring-metrics.json                            |    31 +\n next.config.js                                     |    16 +-\n package-lock.json                                  |    13 +-\n package.json                                       |    15 +-\n pages/404.tsx                                      |    60 +\n pages/_app.tsx                                     |   206 +-\n pages/ai-services.tsx                              |   597 +-\n pages/cloud-devops.tsx                             |   157 +\n pages/contact.tsx                                  |    16 +\n pages/cybersecurity.tsx                            |   157 +\n pages/docs.tsx                                     |   189 +\n pages/index.tsx                                    |    67 +-\n pages/it-services.tsx                              |   713 +-\n pages/micro-saas.tsx                               |   681 +-\n pages/quantum-computing.tsx                        |   157 +\n performance-metrics.json                           |    47 +-\n public/sw.js                                       |    84 +\n scripts/advanced-build-optimizer.cjs               |   504 +\n scripts/analyze-bundle.js                          |    19 +\n scripts/ci-cd-automation.cjs                       |   157 +\n scripts/comprehensive-health-check.cjs             |   355 +\n scripts/comprehensive-test-runner.cjs              |   425 +\n scripts/improve-performance.cjs                    |    78 +\n scripts/improve-seo.cjs                            |    80 +\n scripts/intelligent-git-push-merge.sh              |   263 +\n scripts/performance-monitor.js                     |   117 +\n scripts/start-intelligent-enhanced-pm2.sh          |   427 +\n security-scan-report.json                          |    68 +-\n styles/globals.css                                 |    93 +-\n syntax-fix-report.json                             |    16 +-\n tailwind.config.js                                 |     5 +\n targeted-syntax-fixer.cjs                          |     8 +-\n utils/next-link-shim.tsx                           |    46 +-\n 103 files changed, 46778 insertions(+), 1033 deletions(-)\n delete mode 100644 .github/workflows/ci-cd.yml\n delete mode 100644 .github/workflows/continuous-automation.yml\n create mode 100644 app-optimization-report.json\n create mode 100644 automation-orchestrator-report-1756917632684.json\n create mode 100644 automation-orchestrator-report-1756917672344.json\n create mode 100644 automation-orchestrator-report-1756917987408.json\n create mode 100644 automation-orchestrator-report-1756918005571.json\n create mode 100644 automation-orchestrator-report-1756918138011.json\n create mode 100644 automation-orchestrator-report-1756918378473.json\n create mode 100644 automation-reports/build-test-automation-report.json\n create mode 100644 automation-reports/ci-cd-automation-report.json\n create mode 100644 automation-reports/continuous-automation-report.json\n create mode 100644 automation-reports/continuous-automation-summary.json\n create mode 100644 automation-reports/quality-checks-report.json\n delete mode 100644 components.corrupted/SEOHead.tsx\n create mode 100644 components/Breadcrumb.tsx\n create mode 100644 components/ContactForm.tsx\n create mode 100644 components/LoadingSpinner.tsx\n create mode 100644 components/SearchBar.tsx\n create mode 100644 components/ThemeToggle.tsx\n create mode 100644 deployment-check-report.json\n create mode 100755 deployment/deploy.sh\n create mode 100644 deployment/next.config.js\n create mode 100644 deployment/package-lock.json\n create mode 100644 deployment/package.json\n create mode 100644 deployment/public/.well-known/security.txt\n create mode 100644 deployment/public/_headers\n create mode 100644 deployment/public/_redirects\n create mode 100644 deployment/public/browserconfig.xml\n create mode 100644 deployment/public/enterprise/index.html\n create mode 100644 deployment/public/favicon.ico\n create mode 100644 deployment/public/favicon.svg\n create mode 100644 deployment/public/index.html\n create mode 100644 deployment/public/locales/en-US/common.json\n create mode 100644 deployment/public/locales/es-ES/common.json\n create mode 100644 deployment/public/manifest.json\n create mode 100644 deployment/public/offline.html\n create mode 100644 deployment/public/og-image.svg\n create mode 100644 deployment/public/request-quote/index.html\n create mode 100644 deployment/public/robots.txt\n create mode 100644 deployment/public/search-index.json\n create mode 100644 deployment/public/search/embeddings.json\n create mode 100644 deployment/public/search/index.json\n create mode 100644 deployment/public/search/meta.json\n create mode 100644 deployment/public/site.webmanifest\n create mode 100644 deployment/public/sitemap.json\n create mode 100644 deployment/public/sitemap.txt\n create mode 100644 deployment/public/sitemap.xml\n create mode 100644 deployment/public/structured-data.json\n create mode 100644 deployment/public/test-sw.html\n create mode 100644 deployment/public/vite.svg\n create mode 100644 ecosystem.enhanced-intelligent.cjs\n create mode 100644 ecosystem.intelligent-enhanced.cjs\n create mode 100644 ecosystem.pm2-automation.cjs\n create mode 100644 monitoring-dashboard.html\n create mode 100644 monitoring-metrics.json\n create mode 100644 pages/404.tsx\n create mode 100644 pages/cloud-devops.tsx\n create mode 100644 pages/cybersecurity.tsx\n create mode 100644 pages/docs.tsx\n create mode 100644 pages/quantum-computing.tsx\n create mode 100644 public/sw.js\n create mode 100644 scripts/advanced-build-optimizer.cjs\n create mode 100644 scripts/analyze-bundle.js\n create mode 100644 scripts/ci-cd-automation.cjs\n create mode 100644 scripts/comprehensive-health-check.cjs\n create mode 100644 scripts/comprehensive-test-runner.cjs\n create mode 100644 scripts/improve-performance.cjs\n create mode 100644 scripts/improve-seo.cjs\n create mode 100755 scripts/intelligent-git-push-merge.sh\n create mode 100644 scripts/performance-monitor.js\n create mode 100755 scripts/start-intelligent-enhanced-pm2.sh\n\nTo https://github.com/Zion-Holdings/zion.app\n   cf7b92f8252..4ed873bb992  pr-update-cursor/analyze-and-fix-web-page-errors-and-warnings-6de2 -> cursor/analyze-and-fix-web-page-errors-and-warnings-6de2\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "http_error",
+        "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
+      }
+    },
+    {
+      "number": 11346,
+      "title": "Enhance ziontechgroup website with new services and improvements",
+      "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-a474",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11345,
+      "title": "Automate, test, fix, improve, and merge code",
+      "head": "cursor/automate-test-fix-improve-and-merge-code-6eb1",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11344,
+      "title": "Add new services and advertise them",
+      "head": "cursor/add-new-services-and-advertise-them-3aac",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11343,
+      "title": "Add new services and advertise them",
+      "head": "cursor/add-new-services-and-advertise-them-90f5",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11342,
+      "title": "Fix syntax, push, and merge to main",
+      "head": "cursor/fix-syntax-push-and-merge-to-main-3395",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11341,
+      "title": "Fix syntax, push, and merge to main",
+      "head": "cursor/fix-syntax-push-and-merge-to-main-89a0",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11340,
+      "title": "Fix syntax, push, and merge to main",
+      "head": "cursor/fix-syntax-push-and-merge-to-main-64af",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11339,
+      "title": "Website audit, content update, and deployment",
+      "head": "cursor/website-audit-content-update-and-deployment-744f",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11338,
+      "title": "Automate, test, fix, improve, and merge code",
+      "head": "cursor/automate-test-fix-improve-and-merge-code-e4c1",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11337,
+      "title": "Analyze, improve, and deploy application",
+      "head": "cursor/analyze-improve-and-deploy-application-434d",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11336,
+      "title": "Add new services and advertise them",
+      "head": "cursor/add-new-services-and-advertise-them-6604",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11335,
+      "title": "Add new services and advertise them",
+      "head": "cursor/add-new-services-and-advertise-them-fbb6",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11334,
+      "title": "Enhance ziontechgroup website with new services and improvements",
+      "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-943d",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11332,
+      "title": "Automate, test, fix, improve, and merge code",
+      "head": "cursor/automate-test-fix-improve-and-merge-code-5bbe",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11331,
+      "title": "Fix syntax, push, and merge to main",
+      "head": "cursor/fix-syntax-push-and-merge-to-main-1585",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11330,
+      "title": "Automate, test, fix, improve, and merge code",
+      "head": "cursor/automate-test-fix-improve-and-merge-code-5bf6",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11329,
+      "title": "Build nextjs project with missing types",
+      "head": "cursor/build-nextjs-project-with-missing-types-9cf2",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11328,
+      "title": "Analyze, improve, and deploy application",
+      "head": "cursor/analyze-improve-and-deploy-application-6a17",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11327,
+      "title": "Fix syntax, push, and merge to main",
+      "head": "cursor/fix-syntax-push-and-merge-to-main-eade",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11326,
+      "title": "Enhance ziontechgroup website with new services and improvements",
+      "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-0a40",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11324,
+      "title": "Analyze, improve, and deploy application",
+      "head": "cursor/analyze-improve-and-deploy-application-e045",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11323,
+      "title": "Add new services and advertise them",
+      "head": "cursor/add-new-services-and-advertise-them-3448",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11322,
+      "title": "Fix syntax, push, and merge to main",
+      "head": "cursor/fix-syntax-push-and-merge-to-main-9e28",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11321,
+      "title": "Automate, test, fix, improve, and merge code",
+      "head": "cursor/automate-test-fix-improve-and-merge-code-d94d",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11320,
+      "title": "Add new services and advertise them",
+      "head": "cursor/add-new-services-and-advertise-them-f2bc",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11319,
+      "title": "Resolve conflicts and merge to main",
+      "head": "cursor/resolve-conflicts-and-merge-to-main-e90c",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11318,
+      "title": "Enhance ziontechgroup website with new services and improvements",
+      "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-1bd0",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11316,
+      "title": "Website audit, content update, and deployment",
+      "head": "cursor/website-audit-content-update-and-deployment-7469",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11314,
+      "title": "Fix syntax, push, and merge to main",
+      "head": "cursor/fix-syntax-push-and-merge-to-main-b812",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11313,
+      "title": "Analyze, improve, and deploy application",
+      "head": "cursor/analyze-improve-and-deploy-application-0b03",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11311,
+      "title": "Fix lint, push, and merge to main",
+      "head": "cursor/fix-lint-push-and-merge-to-main-eba6",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11310,
+      "title": "Website audit, content update, and deployment",
+      "head": "cursor/website-audit-content-update-and-deployment-86d4",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11309,
+      "title": "Fix lint, push, and merge to main",
+      "head": "cursor/fix-lint-push-and-merge-to-main-e076",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 11308,
+      "title": "Website audit, content update, and deployment",
+      "head": "cursor/website-audit-content-update-and-deployment-06ad",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    }
+  ]
+}

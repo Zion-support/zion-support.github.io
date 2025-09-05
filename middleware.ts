@@ -2,14 +2,14 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 // Define public routes that don't require authentication
-const publicRoutes = [
-  "/",
+const publicRoutes = ["/",
   "/about",
   "/contact",
   "/blog",
   "/services",
   "/products",
   "/talent",
+  "/test",
   "/auth/login",
   "/auth/register",
   "/auth/forgot-password",
@@ -37,8 +37,7 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: [
-    /*
+  matcher: [/*
      * Match all request paths except for the ones starting with:
      * - api (API routes)
      * - _next/static (static files)
