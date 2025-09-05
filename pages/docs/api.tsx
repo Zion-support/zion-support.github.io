@@ -12,7 +12,7 @@ const codeExamples = [
     'Content-Type': 'application/json'
   }
 })
-const data = await response.json()
+const data = await response.json()`
   },
   {
     language: 'Python',
@@ -30,7 +30,7 @@ data = {
   'company': 'Tech Corp'
 }
 response = requests.post(url, json=data, headers=headers)
-print(response.json())
+print(response.json())`
   }
 ]
 

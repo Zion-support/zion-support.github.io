@@ -8,7 +8,6 @@ import {
   Clock, 
   CheckCircle, 
   ArrowRight,
-  CheckCircle,
   Heart,
   Zap,
   Globe,
@@ -319,8 +318,8 @@ export default function CareersPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {culture.map((value, index) => {}
-                const IconComponent = value.icon;}
+              {culture.map((value, index) => {
+                const IconComponent = value.icon;
                 return (
                   <motion.div
                     key={index}
@@ -368,16 +367,15 @@ export default function CareersPage() {
             </motion.div>
 
             <div className="space-y-6">
-              {openPositions.map((position, index) => (}
+              {openPositions.map((position, index) => (
                 <motion.div
                   key={index}
-                  className={`bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 ${
+                  className={`bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center ${
                     position.featured ? "ring-2 ring-blue-500" : ''
-                  }}
+                  }`}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center"
                 >
                   {position.featured && (
                     <div className="mb-4">
@@ -428,7 +426,7 @@ export default function CareersPage() {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Requirements:</h4>
                     <ul className="space-y-1">
-                      {position.requirements.map((requirement, idx) => (}
+                      {position.requirements.map((requirement, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                           {requirement}
@@ -468,7 +466,7 @@ export default function CareersPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (}
+              {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={index}
                   className="bg-gray-50 p-6 rounded-lg"
@@ -505,7 +503,7 @@ export default function CareersPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md: text-4xl font-bold mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Join Us?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
@@ -524,4 +522,5 @@ export default function CareersPage() {
         </section>
       </div>
     </MainLayout>
+  );
 }

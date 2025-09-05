@@ -276,14 +276,13 @@ export default function CaseStudiesPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {caseStudies.filter(cs => cs.featured).map((caseStudy, index) => (}
+              {caseStudies.filter(cs => cs.featured).map((caseStudy, index) => (
                 <motion.div
                   key={caseStudy.id}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group border-2 border-emerald-100"
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group border-2 border-emerald-100 text-center"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center"
                 >
                   <div className="p-8">
                     <div className="flex items-center justify-between mb-4">
@@ -376,7 +375,7 @@ export default function CaseStudiesPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredCaseStudies.map((caseStudy, index) => (}
+              {filteredCaseStudies.map((caseStudy, index) => (
                 <motion.article
                   key={caseStudy.id}
                   className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
@@ -415,7 +414,7 @@ export default function CaseStudiesPage() {
                     </div>
                     
                     <div className="flex flex-wrap gap-1 mb-4">
-                      {caseStudy.technologies.map((tech, techIndex) => (}
+                      {caseStudy.technologies.map((tech, techIndex) => (
                         <span key={techIndex} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">
                           {tech}
                         </span>

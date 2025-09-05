@@ -114,7 +114,7 @@ export default function AIServicesPage() {
                     {service.description}
                   </p>
                   <div className="mb-4">
-<h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
+<h4 className="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
                   <ul className="space-y-1">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">
@@ -135,8 +135,8 @@ export default function AIServicesPage() {
                   <ArrowRight className="w-3 h-3 ml-1" />
                   </Link>
                   </motion.div>
-              );
-            })}
+                );
+              })}
           </div>
                   </div>
                   </section>
@@ -162,9 +162,12 @@ export default function AIServicesPage() {
               return (
                 <motion.div
                   key={index}
-className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}">
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="w-8 h-8 text-blue-600" />
                   </div>
@@ -175,8 +178,8 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                     {industry.description}
                   </p>
                   </motion.div>
-              );
-            })}
+                );
+              })}
           </div>
                   </div>
                   </section>
@@ -221,8 +224,8 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                     {benefit.description}
                   </p>
                   </motion.div>
-              );
-            })}
+                );
+              })}
           </div>
                   </div>
                   </section>
@@ -238,7 +241,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
           >
 <h2 className="text-3xl md: text-4xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let&apos,s discuss how our AI solutions can drive innovation and growth for your organization.
+              Let&apos;s discuss how our AI solutions can drive innovation and growth for your organization.
             </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
@@ -252,4 +255,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   </div>
                   </section>
                   </div>
+    </MainLayout>
+  );
 }

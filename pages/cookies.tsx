@@ -82,8 +82,7 @@ export default function CookiesPage() {
     analytics: false,
     functional: false,
     marketing: false
-  }
-});
+  });
   const [showPreferences, setShowPreferences] = useState(false);
 
   const handlePreferenceChange = (type: string, value: boolean) => {
@@ -107,8 +106,7 @@ export default function CookiesPage() {
       analytics: true,
       functional: true,
       marketing: true
-    }
-});
+    });
     savePreferences();
   };
 
@@ -118,8 +116,7 @@ export default function CookiesPage() {
       analytics: false,
       functional: false,
       marketing: false
-    }
-});
+    });
     savePreferences();
   };
 
@@ -220,8 +217,8 @@ export default function CookiesPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {cookieTypes.map((type, index) => {}
-                const IconComponent = type.icon;}
+              {cookieTypes.map((type, index) => {
+                const IconComponent = type.icon;
                 return (
                   <motion.div
                     key={index}
@@ -256,7 +253,7 @@ export default function CookiesPage() {
                         <div>
                           <h4 className="font-semibold text-gray-900 mb-2">Examples:</h4>
                           <ul className="space-y-1">
-                            {type.examples.map((example, idx) => (}
+                            {type.examples.map((example, idx) => (
                               <li key={idx} className="flex items-center text-sm text-gray-600">
                                 <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                                 {example}
@@ -302,7 +299,7 @@ export default function CookiesPage() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200">
-                    {cookieDetails.map((cookie, index) => (}
+                    {cookieDetails.map((cookie, index) => (
                       <tr key={index} className="hover:bg-gray-50">
                         <td className="px-6 py-4 text-sm font-mono text-gray-900">{cookie.name}</td>
                         <td className="px-6 py-4 text-sm text-gray-600">{cookie.purpose}</td>
