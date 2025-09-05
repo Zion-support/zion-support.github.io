@@ -53,7 +53,8 @@ import {
   FileText,
   Mic,
   Calendar,
-  Package
+  Package,
+  Car
 } from 'lucide-react';
 
 const itServices = [
