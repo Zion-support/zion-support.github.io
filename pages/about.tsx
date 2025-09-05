@@ -1,7 +1,15 @@
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { 
+  Brain,
+  Shield,
+  Users,
+  Zap,
+  Target,
+  Heart
+} from 'lucide-react';
+
 const AboutPage: React.FC = () => {
   const values = [
     {

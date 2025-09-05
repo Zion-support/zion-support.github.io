@@ -44,7 +44,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 export const realQ4Services2025: RealQ4Service[] = [
 	{
@@ -242,7 +242,8 @@ export const realQ4Services2025: RealQ4Service[] = [
 		rating: 4.5,
 		reviews: 28
 	}
-],
+];
+
 export const real2025Q4Additions = [
   {
     id: 'ai-governed-rag-platform',
@@ -661,4 +662,4 @@ export const real2025Q4Additions = [
     rating: 4.6,
     reviews: 9
   }
-],
+]

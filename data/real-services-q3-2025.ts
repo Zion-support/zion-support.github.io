@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants';
 
 export interface Q3Service {
   id: string,
@@ -37,7 +37,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 export const realServicesQ32025: Q3Service[] = [
   {
@@ -174,4 +174,4 @@ export const realServicesQ32025: Q3Service[] = [
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
   }
-],
+]

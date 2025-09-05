@@ -2163,7 +2163,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 27
   }
-],
+];
 
 // Helper functions
 export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSaasService[] => {
@@ -2189,7 +2189,15 @@ export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSa
     'Analytics & Business Intelligence': ['AI & Data AnalyticsAI & Market Research'],
     'Cloud & Infrastructure': ['Cloud PlatformEdge Computing & IoT'],
     'Climate Technology': ['Climate Technology']
-  },
+  };
+
+  return enhancedRealMicroSaasServices.filter(service => {
+    const serviceCategories = service.category || '';
+    return categoryMapping[categoryName]?.some(cat => 
+      serviceCategories.includes(cat)
+    ) || false;
+  });
+};
 
 // Service categories
 export const serviceCategories = [
@@ -2221,34 +2229,17 @@ export const serviceCategories = [
   'Financial Technology & TradingEnergy & Sustainability',
   'IoT & Smart CitiesClimate Technology',
   'Robotics & AutomationAgriculture & Food Tech'
-],
+];
 
-export const getServicesByCategory = (category: string) => {
-  if (category === 'All') return allEnhancedRealMicroSaasServices,
-  return allEnhancedRealMicroSaasServices.filter(service => service.category === category)
-},
 
 export const getPopularServices = () => {
-  return allEnhancedRealMicroSaasServices.filter(service => service.popular),
-},
+  return allEnhancedRealMicroSaasServices.filter(service => service.popular);
+};
 
 export const getServicesByPriceRange = (min: number, max: number) => {
   return allEnhancedRealMicroSaasServices.filter(service => {
-    const price = parseInt(service.price.replace('$', '')),
-    return price >= min && (max === Infinity ? true : price <= max),
-  }),
-},
+    const price = parseInt(service.price.replace('$', ''));
+    return price >= min && (max === Infinity ? true : price <= max);
+  });
+};
 
-export const serviceCategories = [
-  'AllQuantum Computing',
-  'AI & Machine LearningCybersecurity',
-  'Biomedical & HealthcareFinancial Technology',
-  'Content & MarketingData Analytics & BI',
-  'Customer Service & SupportSupply Chain & Logistics',
-  'Human ResourcesLegal Technology',
-  'Sales & MarketingBlockchain & Web3',
-  'IoT & Edge ComputingCloud & Infrastructure',
-  'Video & MediaSEO & Digital Marketing',
-  'Automation & RoboticsEdge Computing',
-  'Predictive Analytics'
-],
