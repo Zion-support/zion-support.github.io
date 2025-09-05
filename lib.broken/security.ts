@@ -1,37 +1,14 @@
+import React from 'react';
 
-// Security headers configuration;
-export const securityHeaders = [;
-  {;
-    "key": "X-DNS-Prefetch-Control",
-    "value": "on",},
-  {;
-    "key": "Strict-Transport-Security",
-    "value": "max-age=63072000; includeSubDomains; preload",},
-  {;
-    "key": "X-XSS-Protection",
-    "value": "1; mode=block",},
-  {;
-    "key": "X-Frame-Options",
-    "value": "SAMEORIGIN",},
-  {;
-    "key": "X-Content-Type-Options",
-    "value": "nosniff",},
-  {;
-    "key": "Referrer-Policy",
-    "value": "origin-when-cross-origin",},
-  {;
-    "key": "Permissions-Policy",
-    "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()",}
-];
-export const contentSecurityPolicy = {;
-  "directives": {;
-    defaultSrc: [""self""],
-    "styleSrc": [""self", ""unsafe-inline""],
-    "scriptSrc": [""self""],
-    "imgSrc": [""self", ""data": ", ""https": "],
-    "fontSrc": [""self""],
-    "connectSrc": [""self""],
-    "frameAncestors": [""none""],
-    "baseUri": [""self""],
-    "formAction": [""self""],}
+interface SecurityProps {
+  // Add props here as needed
+}
+
+export default function Security({ }: SecurityProps) {
+  return (
+    <div>
+      <h1>Security</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
 }

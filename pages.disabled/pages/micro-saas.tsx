@@ -1,1 +1,71 @@
-import React from 'react'; import Link from 'next/link'; export default function MicroSaaS() { const services = [{ "name": 'Cloud Cost Guard (FinOps Assistant)',"description": 'Anomaly detection,rightsizing,forecasting and budget guardrails across AWS/Azure/GCP.',"pricing": '$299–$1,499/month',"features": [ 'Anomaly detection on daily spend and resources','Idle/overprovisioned resource cleanup suggestions','Forecasting,budgets,and team alerts (Slack/Email)','Executive savings dashboards and benchmarks' ] },{ "name": 'LLM Evaluation & Safety Suite',"description": 'Prompt evaluation,bias/toxicity checks,jailbreak tests and guardrail policies.',"pricing": '$799–$3,500/month',"features": ['Automated prompt testing and optimization','Bias and toxicity detection','Jailbreak attempt monitoring','Custom guardrail policy enforcement' ] },{ "name": 'Customer Feedback & NPS Micro-App',"description": 'Embed surveys,analyze sentiment and route issues to the right team automatically.',"pricing": '$149–$799/month',"features": ['Embeddable survey widgets','Real-time sentiment analysis','Automated issue routing','NPS tracking and reporting' ] },{ "name": 'API Rate Limiting & Analytics',"description": 'Intelligent rate limiting,usage analytics,and cost optimization for API endpoints.',"pricing": '$199–$999/month',"features": ['Dynamic rate limiting based on usage patterns','Real-time API usage analytics','Cost optimization recommendations','Automated scaling and throttling' ] },{ "name": 'Database Performance Monitor',"description": 'Query optimization,performance insights,and automated indexing recommendations.',"pricing": '$399–$1,999/month',"features": ['Slow query identification and optimization','Performance trend analysis','Automated index recommendations','Capacity planning and scaling alerts' ] },{ "name": 'Security Compliance Dashboard',"description": 'Automated compliance monitoring,vulnerability scanning,and audit reporting.',"pricing": '$599–$2,499/month',"features": ['Multi-standard compliance monitoring (SOC2,GDPR,HIPAA)','Automated vulnerability scanning','Audit trail generation','Real-time security alerts' ] } ]; return ( <main style={{ "background": '#f8fafc',"minHeight": 'calc(100vh - 120px)' }}> <div style={{ "maxWidth": '1200',"margin": '0 auto',"padding": '24px 16px' }}> <div style={{ "textAlign": 'center',"marginBottom": '48' }}> <h1 style={{ "fontSize": '36',"fontWeight": '800',"marginBottom": '16',"color": '#0b1220' }}> Micro SaaS Solutions </h1> <p style={{ "fontSize": '18',"color": '#64748b',"maxWidth": '600',"margin": '0 auto' }}> Specialized software solutions that solve specific business problems with minimal overhead and maximum impact. </p> </div> <div style={{ "display": 'grid',"gridTemplateColumns": 'repeat(auto-fit,minmax(350px,1fr))',"gap": '24',"marginBottom": '48' }}> {services.map((service,index) => ( <div key={index} style={{ "background": 'white',"borderRadius": '16',"padding": '24',"border": '1px solid rgba(0,0,0,0.08)',"boxShadow": '0 1px 3px rgba(0,0,0,0.1)' }}> <h3 style={{ "fontSize": '20',"fontWeight": '700',"marginBottom": '12',"color": '#0b1220' }}> {service.name} </h3> <p style={{ "color": '#64748b',"marginBottom": '16',"lineHeight": '1.6' }}> {service.description} </p> <div style={{ "marginBottom": '16' }}> <strong style={{ "color": '#2563eb',"fontSize": '16' }}>{service.pricing}</strong> </div> <ul style={{ "listStyle": 'none',"padding": '0',"marginBottom": '20' }}> {service.features.map((feature,featureIndex) => ( <li key={featureIndex} style={{ "padding": '4px 0',"color": '#475569',"fontSize": '14',"display": 'flex',"alignItems": 'flex-start' }}> <span style={{ "color": '#22d3ee',"marginRight": '8',"marginTop": '2' }}>✓</span> {feature} </li> ))} </ul> <Link href="/contact" style={{ "display": 'inline-block',"background": '#22d3ee',"color": '#0b1220',"padding": '10px 16px',"borderRadius": '8',"fontWeight": '600',"textDecoration": 'none',"textAlign": 'center',"width": '100%' }}> Get Started </Link> </div> ))} </div> <div style={{ "background": 'linear-gradient(135deg,#22d3ee 0%,#06b6d4 100%)',"borderRadius": '16',"padding": '32',"textAlign": 'center',"color": '#0b1220' }}> <h2 style={{ "fontSize": '24',"fontWeight": '700',"marginBottom": '12' }}> Need a Custom Micro SaaS Solution? </h2> <p style={{ "fontSize": '16',"marginBottom": '20',"opacity": '0.9' }}> We can build a specialized solution tailored to your specific business needs. </p> <Link href="/contact" style={{ "display": 'inline-block',"background": '#0b1220',"color": 'white',"padding": '12px 24px',"borderRadius": '8',"fontWeight": '600',"textDecoration": 'none' }}> Discuss Your Project </Link> </div> </div> </main> )}
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+export default function Microsaas() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>Microsaas - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
+        <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
+      </Head>
+      
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Microsaas
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+              >
+                Get Started Today
+              </Link>
+              <Link 
+                href="/services" 
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16" 
+            initial={{ opacity: 0, y: 30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Coming Soon
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

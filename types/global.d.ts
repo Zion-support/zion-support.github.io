@@ -1,59 +1,14 @@
-// Global type declarations
-declare module "*.svg" {
-  const "content": string;
-  export default content}
+import React from 'react';
 
-declare module "*.png" {
-  const "content": string;
-  export default content}
-
-declare module "*.jpg" {
-  const "content": string;
-  export default content}
-
-declare module "*.jpeg" {
-  const "content": string;
-  export default content}
-
-declare module "*.gif" {
-  const "content": string;
-  export default content}
-
-declare module "*.webp" {
-  const "content": string;
-  export default content}
-
-declare module "*.css" {
-  const "content": { [className: string]: string };
-  export default content}
-
-declare module "*.scss" {
-  const "content": { [className: string]: string };
-  export default content}
-
-declare module "*.module.css" {
-  const "content": { [className: string]: string };
-  export default content}
-
-declare module "*.module.scss" {
-  const "content": { [className: string]: string };
-  export default content}
-
-// Next.js specific types
-declare namespace NodeJS {
-  interface ProcessEnv {
-    "NODE_ENV": "development" | "production" | "test";
-    NEXT_PUBLIC_SUPABASE_URL?: string;
-    NEXT_PUBLIC_SUPABASE_ANON_KEY?: string;
-    SUPABASE_SERVICE_ROLE_KEY?: string;
-    NEXT_PUBLIC_GA_TRACKING_ID?: string}
+interface Global.dProps {
+  // Add props here as needed
 }
 
-// Global window extensions
-declare global {
-  interface Window {
-    gtag?: (..."args": any[]) => void;
-    dataLayer?: any[]}
+export default function Global.d({ }: Global.dProps) {
+  return (
+    <div>
+      <h1>Global.d</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
 }
-
-export {};

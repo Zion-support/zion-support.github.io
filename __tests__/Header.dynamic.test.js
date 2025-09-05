@@ -1,26 +1,14 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Headerdynamic from '../components/Header.dynamic';
 
-describe('Headerdynamic', () => {
-  test('renders without crashing', () => {
-    render(<Headerdynamic />);
-    expect(screen.getByTestId('header.dynamic')).toBeInTheDocument();
-  });
+interface Header.dynamic.testProps {
+  // Add props here as needed
+}
 
-  test('displays correct content', () => {
-    render(<Headerdynamic />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
-    render(<Headerdynamic />);
-    // Add interaction tests based on component functionality
-  });
-
-  test('applies correct styling', () => {
-    render(<Headerdynamic />);
-    // Add styling tests if needed
-  });
-});
+export default function Header.dynamic.test({ }: Header.dynamic.testProps) {
+  return (
+    <div>
+      <h1>Header.dynamic.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

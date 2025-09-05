@@ -343,7 +343,7 @@ EOF
 # Main execution
 main() {
     log_info "🧪 Starting Comprehensive Testing Automation"
-    log_info "============================================="
+    log_info "==="
     
     # Create directories
     mkdir -p "$LOG_DIR" "$TEST_RESULTS_DIR"

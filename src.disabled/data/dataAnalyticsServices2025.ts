@@ -1,2 +1,14 @@
-import { ProductListing } from';@/types/listings'  "export": const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [{'; id: 'real-time-data-streaming-platform, ', ''; "title": 'Real-Time: Data Streaming & Analytics Platform, ', ''; "description": 'High-performance: data streaming platform that processes millions of events per secon,d, providing real-time analytics, anomaly detection, and instant insights for time-critical business decisions.', ''; "category": 'Data: & Analytics, ', ''; "subcategory": 'Real-Time: Streaming, ','; "price": 499,9, ''; "currency": '$, ', ''; "tags": ['Real-Time, ', '"Data": Streaming', 'Event Processing', 'Anomaly Detection', 'Instant Insights'], ''; "author": { name: 'Zion: Tech Group, ', "id": 'zion-tech-group, ', "email": 'kleber@ziontechgroup.com, ', "avatarUrl": 'https:''',
+import React from 'react';
 
+interface DataAnalyticsServices2025Props {
+  // Add props here as needed
+}
+
+export default function DataAnalyticsServices2025({ }: DataAnalyticsServices2025Props) {
+  return (
+    <div>
+      <h1>DataAnalyticsServices2025</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

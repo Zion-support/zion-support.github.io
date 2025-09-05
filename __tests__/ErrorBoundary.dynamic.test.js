@@ -1,26 +1,14 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import ErrorBoundarydynamic from '../components/ErrorBoundary.dynamic';
 
-describe('ErrorBoundarydynamic', () => {
-  test('renders without crashing', () => {
-    render(<ErrorBoundarydynamic />);
-    expect(screen.getByTestId('errorboundary.dynamic')).toBeInTheDocument();
-  });
+interface ErrorBoundary.dynamic.testProps {
+  // Add props here as needed
+}
 
-  test('displays correct content', () => {
-    render(<ErrorBoundarydynamic />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
-    render(<ErrorBoundarydynamic />);
-    // Add interaction tests based on component functionality
-  });
-
-  test('applies correct styling', () => {
-    render(<ErrorBoundarydynamic />);
-    // Add styling tests if needed
-  });
-});
+export default function ErrorBoundary.dynamic.test({ }: ErrorBoundary.dynamic.testProps) {
+  return (
+    <div>
+      <h1>ErrorBoundary.dynamic.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

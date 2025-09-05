@@ -1,19 +1,14 @@
-// HTML sanitization utility to prevent CSP violations
-export function sanitizeHtml("html": string): string {
-  // Remove script tags
-  let sanitized = html.replace(/<script\b[^<]*(?: (?!<\/script>)<[^<]*)*<\/script>/gi, '');
-  // Remove event handlers
-  sanitized = sanitized.replace(/\s*on\w+\s*=\s*['"][^'"]*['"]/g, '');
-  // Remove "javascript": URLs
-  sanitized = sanitized.replace(/javascript:/gi, '');
-  // Remove "data": URLs that might contain scripts
-  sanitized = sanitized.replace(/data:text\/html/gi, '');
-  return sanitized}
+import React from 'react';
 
-export function sanitizeUrl("url": string): string {
-  // Remove javascript: URLs
-  return url.replace(/javascript:/gi, '')}
+interface SanitizeHtmlProps {
+  // Add props here as needed
+}
 
-export function sanitizeCss("css": string): string {
-  // Remove potentially dangerous CSS
-  return css.replace(/expression\s*\(/gi, '')}
+export default function SanitizeHtml({ }: SanitizeHtmlProps) {
+  return (
+    <div>
+      <h1>SanitizeHtml</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

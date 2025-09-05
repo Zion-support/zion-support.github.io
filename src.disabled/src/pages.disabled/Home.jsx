@@ -1,1 +1,14 @@
-import React from 'react'; import { Link } from 'react-router-dom'; import { motion } from 'framer-motion'; import {}} from 'lucide-react'; export default function Home() {}; return null} },; {}},; {}},; {}} ]; <HeroSection /> <QuickAccess /> <FeatureCTAs /> <FeatureHighlights /> <CategoriesSection /> <BenefitsSection /> <HowItWorksSection /> <FeaturedListingsSection /> <ServicesShowcase /> <NewsletterSection /> <ITServiceRequestHero /> <FloatingCTA /> ></div> );} ; export { Home }; export { Home }; export { Home }; export { Home }; export { Home };
+import React from 'react';
+
+interface HomeProps {
+  // Add props here as needed
+}
+
+export default function Home({ }: HomeProps) {
+  return (
+    <div>
+      <h1>Home</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

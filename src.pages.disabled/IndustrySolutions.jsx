@@ -1,1 +1,14 @@
-<<<<<<< "HEAD": src.pages.disabled/IndustrySolutions.jsx import React from 'react'; export default IndustrySolutions; import { Search,Zap,CreditCard,Truck,Phone,Mail,MapPin,Building,Factory,Store,Home,GraduationCap,Stethoscope const IndustrySolutions = () => { const [searchTerm,setSearchTerm] = useState (") ; const [selectedIndustry,setSelectedIndustry] = useState ("all") ; const [selectedSolutionType,setSelectedSolutionType] = useState ("all") ; import React from 'react'; export default IndustrySolutions; import { Search,Zap,CreditCard,Truck,Phone,Mail,MapPin,Building,Factory,Store,Home,GraduationCap,Stethoscope const IndustrySolutions = () => { const [searchTerm,setSearchTerm] = useState (") ; const [selectedIndustry,setSelectedIndustry] = useState ("all") ; const [selectedSolutionType,setSelectedSolutionType] = useState ("all") ;"";
+import React from 'react';
+
+interface IndustrySolutionsProps {
+  // Add props here as needed
+}
+
+export default function IndustrySolutions({ }: IndustrySolutionsProps) {
+  return (
+    <div>
+      <h1>IndustrySolutions</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -35,7 +35,7 @@ info() {
 }
 
 print_header "📊 Continuous Monitoring System"
-echo "=================================="
+echo "======"
 echo
 
 # Configuration
@@ -435,33 +435,33 @@ EOF
 # Main monitoring function
 main() {
     print_header "💻 Phase 1: System Resources"
-    echo "============================="
+    echo "="
     
     monitor_system_resources
     
     print_header "⚡ Phase 2: Application Performance"
-    echo "=================================="
+    echo "======"
     
     monitor_application_performance
     
     print_header "🔒 Phase 3: Security Monitoring"
-    echo "=============================="
+    echo "=="
     
     monitor_security
     
     print_header "🏗️  Phase 4: Build Health"
-    echo "========================="
+    echo "===="
     
     monitor_build_health
     
     print_header "📊 Phase 5: Dashboard & Reporting"
-    echo "=================================="
+    echo "======"
     
     generate_monitoring_dashboard
     generate_monitoring_report
     
     print_header "🎉 Continuous Monitoring Complete!"
-    echo "=================================="
+    echo "======"
     
     success "Monitoring data saved to: $MONITORING_DIR"
     success "Dashboard available at: $MONITORING_DIR/dashboard.html"

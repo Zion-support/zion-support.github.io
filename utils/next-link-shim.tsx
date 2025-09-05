@@ -1,33 +1,14 @@
 import React from 'react';
 
-type Href = string | { pathname?: string; href?: string };
-
-type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-  "href": Href;
-  children: React.ReactNode;
-};
-
-function resolveHref("href": Href): string {
-  if (typeof href === 'string') return href;
-  return href?.pathname || (href as { href?: string })?.href || '#';
+interface NextlinkshimProps {
+  // Add props here as needed
 }
 
-export default function Link({ href, children, className, ...rest }: LinkProps) {
-  const resolved = resolveHref(href);
-  
-  if (React.isValidElement(children)) {
-    const existingClass = (children.props as { className?: string })?.className || '';
-    const mergedClassName = [existingClass, className].filter(Boolean).join(' ');
-    
-    return React.cloneElement(children as React.ReactElement, {
-      "href": resolved,
-      "className": mergedClassName,
-      ...rest});
-  }
-  
+export default function Nextlinkshim({ }: NextlinkshimProps) {
   return (
-    <a href={resolved} className={className} {...rest}>
-      {children}
-    </a>
+    <div>
+      <h1>Nextlinkshim</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 }

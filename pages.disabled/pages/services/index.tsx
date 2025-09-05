@@ -1,140 +1,71 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Cpu, Headphones, Calendar, Send, Layers } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-const categories = ['AI Services', 'IT Services', 'Development', 'Security'];
-
-export default function ServicesIndex() {
-  const services = [
-    {
-      name: 'AI & Machine Learning',
-      description: 'Advanced AI solutions for business automation and intelligence',
-      icon: Brain,
-      href: '/services/ai-machine-learning',
-      features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
-    },
-    {
-      name: 'Micro SaaS Solutions',
-      description: 'Specialized software solutions for specific business needs',
-      icon: Cpu,
-      href: '/services/micro-saas',
-      features: ['Custom Applications', 'API Integration', 'Scalable Infrastructure', 'Multi-tenant Support']
-    },
-    {
-      name: 'AI Content Creation',
-      description: 'Generate high-quality content at scale with AI-powered tools',
-      icon: FileText,
-      href: '/services/ai-content-creation',
-      features: ['Blog Posts', 'Social Media', 'Email Campaigns', 'SEO Optimization']
-    },
-    {
-      name: 'Email Automation',
-      description: 'Automate email marketing campaigns with intelligent sequences',
-      icon: Send,
-      href: '/services/email-automation',
-      features: ['Lead Nurturing', 'Behavioral Triggers', 'A/B Testing', 'Analytics']
-    },
-    {
-      name: 'Customer Support Platform',
-      description: 'AI-powered customer support with chatbots and ticketing',
-      icon: Headphones,
-      href: '/services/customer-support',
-      features: ['Live Chat', 'Ticket Management', 'Knowledge Base', 'Analytics']
-    },
-    {
-      name: 'Event Management',
-      description: 'Complete event planning and management solution',
-      icon: Calendar,
-      href: '/services/event-management',
-      features: ['Event Planning', 'Registration', 'Payment Processing', 'Analytics']
-    },
-    {
-      name: 'Workflow Automation',
-      description: 'Streamline business processes with intelligent automation',
-      icon: Zap,
-      href: '/services/workflow-automation',
-      features: ['Process Optimization', 'Integration', 'Monitoring', 'Reporting']
-    },
-    {
-      name: 'Project Management',
-      description: 'Comprehensive project management and collaboration tools',
-      icon: Target,
-      href: '/services/project-management',
-      features: ['Task Management', 'Team Collaboration', 'Progress Tracking', 'Resource Planning']
-    }
-  ];
-
+export default function Index() {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Head>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive technology services including AI, development, automation, and more." />
+        <title>Index - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
+        <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
       </Head>
       
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to transform your business and drive growth
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6">
-                <div className="flex items-center mb-4">
-                  <div className="p-3 bg-blue-100 rounded-lg mr-4">
-                    <service.icon className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900">{service.name}</h3>
-                </div>
-                
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <Check className="w-4 h-4 text-green-500 mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                
-                <Link 
-                  href={service.href}
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-1" />
-                </Link>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Contact us today to discuss your project and get a custom solution
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Index
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/contact"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                href="/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
               >
-                Get Free Consultation
+                Get Started Today
               </Link>
               <Link 
-                href="/pricing"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+                href="/services" 
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
               >
-                View Pricing
+                Explore Services
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </div>
-    </>
+      </section>
+      
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16" 
+            initial={{ opacity: 0, y: 30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Coming Soon
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 }

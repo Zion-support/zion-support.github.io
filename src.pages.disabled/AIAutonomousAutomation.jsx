@@ -1,1 +1,14 @@
-<<<<<<< "HEAD": src.pages.disabled/AIAutonomousAutomation.jsx import React from 'react'; export default AIAutonomousAutomation; const AIAutonomousAutomation = () => { return (<> <Helmet> <title > AI Autonomous Automation Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous automation platform that continuously automates processes,streamlines workflows,and optimizes operations with advanced AI capabilities and autonomous operation." / / /> <meta name="keywords" content="AI automation,autonomous automation,process automation,workflow optimization,autonomous operations,AI automation platform" / / /> <link rel="canonical" href=""https": import React from 'react'; export default AIAutonomousAutomation; const AIAutonomousAutomation = () => { return (<> <Helmet> <title > AI Autonomous Automation Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous automation platform that continuously automates processes,streamlines workflows,and optimizes operations with advanced AI capabilities and autonomous operation." / / / /> <meta name="keywords" content="AI automation,autonomous automation,process automation,workflow optimization,autonomous operations,AI automation platform" / / / /> <link rel="canonical" href=""https": "";
+import React from 'react';
+
+interface AIAutonomousAutomationProps {
+  // Add props here as needed
+}
+
+export default function AIAutonomousAutomation({ }: AIAutonomousAutomationProps) {
+  return (
+    <div>
+      <h1>AIAutonomousAutomation</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

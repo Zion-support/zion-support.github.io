@@ -34,9 +34,9 @@ print_success() {
 }
 
 print_header() {
-    echo -e "${BLUE}================================${NC}"
+    echo -e "${BLUE}====${NC}"
     echo -e "${BLUE}$1${NC}"
-    echo -e "${BLUE}================================${NC}"
+    echo -e "${BLUE}====${NC}"
 }
 
 # Check if PM2 is installed
@@ -167,7 +167,7 @@ setup_monitoring() {
     cat > monitor-intelligent-pm2.sh << 'EOF'
 #!/bin/bash
 echo "📊 Intelligent PM2 System Monitor"
-echo "================================="
+echo "====="
 echo "Process Status:"
 pm2 status
 echo ""

@@ -1,1 +1,14 @@
-<<<<<<< "HEAD": src.pages.disabled/_lite/Contact.tsx import React from 'react'; export default function Contact() {; return (; <div className="container mx-auto px-4 py-12">";" <h1 className="text-2xl font-bold mb-2">Contact</h1>";" <p className="text-gray-300">Email: kleber@ziontechgroup.com</p>;" </div>;";" );";" };";" import React from 'react'; export default function Contact() {; return (; <div className="container mx-auto px-4 py-12">";" <h1 className="text-2xl font-bold mb-2">Contact</h1>";" <p className="text-gray-300">"Email": kleber@ziontechgroup.com</p>;" </div>;";" );";" };";""";
+import React from 'react';
+
+interface ContactProps {
+  // Add props here as needed
+}
+
+export default function Contact({ }: ContactProps) {
+  return (
+    <div>
+      <h1>Contact</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

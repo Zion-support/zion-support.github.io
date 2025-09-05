@@ -1,1 +1,14 @@
-<<<<<<< "HEAD": src.pages.disabled/AIAutonomousVision.jsx import React from 'react'; export default AIAutonomousVision; const AIAutonomousVision = () => { return (<> <Helmet> <title > AI Autonomous Vision Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous vision platform that continuously analyzes visual data,recognizes objects,and processes images with advanced AI capabilities and autonomous operation." / / /> <meta name="keywords" content="AI vision,autonomous vision,computer vision,image recognition,autonomous operations,AI vision platform" / / /> <link rel="canonical" href=""https": import React from 'react'; export default AIAutonomousVision; const AIAutonomousVision = () => { return (<> <Helmet> <title > AI Autonomous Vision Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous vision platform that continuously analyzes visual data,recognizes objects,and processes images with advanced AI capabilities and autonomous operation." / / / /> <meta name="keywords" content="AI vision,autonomous vision,computer vision,image recognition,autonomous operations,AI vision platform" / / / /> <link rel="canonical" href=""https": "";
+import React from 'react';
+
+interface AIAutonomousVisionProps {
+  // Add props here as needed
+}
+
+export default function AIAutonomousVision({ }: AIAutonomousVisionProps) {
+  return (
+    <div>
+      <h1>AIAutonomousVision</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

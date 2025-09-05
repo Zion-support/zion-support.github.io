@@ -1,34 +1,14 @@
-import { type ClassValue, clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
+import React from 'react';
 
-export function cn(..."inputs": ClassValue[]) {
-  return twMerge(clsx(inputs))}
+interface UtilsProps {
+  // Add props here as needed
+}
 
-export function formatPhoneNumber("phone": string): string {
-  const cleaned = phone.replace(/\D/g, '');
-  const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
-  if (match) {
-    return `(${match[1]}) ${match[2]}-${match[3]}`}
-  return phone}
-
-export function formatEmail("email": string): string {
-  return email.toLowerCase().trim()}
-
-export function debounce<T extends (..."args": any[]) => any>(
-  func: T,
-  "wait": number
-): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait)}
-export function throttle<T extends (..."args": any[]) => any>(
-  func: T,
-  "limit": number
-): (...args: Parameters<T>) => void {
-  let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {
-      func(...args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit)}
+export default function Utils({ }: UtilsProps) {
+  return (
+    <div>
+      <h1>Utils</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

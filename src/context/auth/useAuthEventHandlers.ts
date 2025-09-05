@@ -1,31 +1,14 @@
-import { useCallback  } from 'react';
+import React from 'react';
 
-interface User {
+interface UseAuthEventHandlersProps {
+  // Add props here as needed
+}
 
-  "id": string;
-  email: string;
-  displayName?: string;
-  avatar?: string;
-  role?: string;
-  isEmailVerified?: boolean;
-  createdAt?: string;
-  updatedAt?: string}
-
-export const useAuthEventHandlers = (
-  "setUser": (user: Use r | null)  => void,
-  "setOnboardingStep": (step: number)  => void
-) => {;
-  const handleSignedIn = useCallback((user: Use r)  => {;
-    setUser(user);
-    setOnboardingStep(1); // Start onboarding process
-  }, [setUser, setOnboardingStep]);
-
-  const handleSignedOut = useCallback(() => {;
-    setUser(null);
-    setOnboardingStep(0); // Reset onboarding
-  }, [setUser, setOnboardingStep]);
-
-  return {
-    handleSignedIn,
-    handleSignedOut
-  }};';';
+export default function UseAuthEventHandlers({ }: UseAuthEventHandlersProps) {
+  return (
+    <div>
+      <h1>UseAuthEventHandlers</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

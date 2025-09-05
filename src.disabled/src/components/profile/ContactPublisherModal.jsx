@@ -1,1 +1,14 @@
-import React,{ useState } from 'react'; import { Dialog,DialogContent,DialogHeader,DialogTitle} from '@/components/ui/dialog'; from '@/components/ui/dialog'; from '@/components/ui/button'; import { Input } from '@/components/ui/input'; import { Textarea } from '@/components/ui/textarea'; import { Form,FormField,FormItem,FormLabel,FormControl,FormMessage } from '@/components/ui/form'; import { useForm } from 'react-hook-form'; import { Mail,PaperPlane import api from '@/services/apiClient'; import { toast } from '@/hooks/use-toast'; ); export function ContactPublisherModal({ isOpen,onClose,publisherName,publisherEmail}) {}; return null} export {};
+import React from 'react';
+
+interface ContactPublisherModalProps {
+  // Add props here as needed
+}
+
+export default function ContactPublisherModal({ }: ContactPublisherModalProps) {
+  return (
+    <div>
+      <h1>ContactPublisherModal</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

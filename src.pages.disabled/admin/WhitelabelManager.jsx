@@ -1,1 +1,14 @@
-<<<<<<< "HEAD": 'src.pages.disabled/admin/WhitelabelManager.jsx import React',{ useState } from 'react'';'; import SEO from '@/components/SEO'';'; import { WhitelabelRequestForm } from '@/components/admin/whitelabel/WhitelabelRequestForm'';'; import { TenantsList } from '@/components/admin/whitelabel/TenantsList'';'; import { Tabs,TabsContent,TabsList,TabsTrigger } from '@/components/ui/tabs'';'; import { useAuth } from '@/hooks/useAuth'';'; import { Navigate } from 'react-router-dom'; export default function WhitelabelManager() {}; const { user } = useAuth()'; const [activeTab,setActiveTab] = useState('tenants')'; import React,{ useState } from 'react'';'; import SEO from '@/components/SEO'';'; import { WhitelabelRequestForm } from '@/components/admin/whitelabel/WhitelabelRequestForm'';'; import { TenantsList } from '@/components/admin/whitelabel/TenantsList'';'; import { Tabs,TabsContent,TabsList,TabsTrigger } from '@/components/ui/tabs'';'; import { useAuth } from '@/hooks/useAuth'';'; import { Navigate } from 'react-router-dom'; export default function WhitelabelManager() {}; const { user } = useAuth()'; const [activeTab,setActiveTab] = useState('tenants')';';';
+import React from 'react';
+
+interface WhitelabelManagerProps {
+  // Add props here as needed
+}
+
+export default function WhitelabelManager({ }: WhitelabelManagerProps) {
+  return (
+    <div>
+      <h1>WhitelabelManager</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,1 +1,14 @@
-import React from "react"; const "ITInfrastructure2026": React.FC = () => {} const [searchQuery,setSearchQuery] = useState()" const [selectedCategory,setSelectedCategory] = useState("all");} const "ITInfrastructure2026": React.FC: = () => {} const [searchQuery,setSearchQuery] = useState()" const [selectedCategory,setSelectedCategory] = useState("all") ";"; const "ITInfrastructure2026": React.FC = () => {} const [searchQuery,setSearchQuery] = useState() const [selectedCategory,setSelectedCategory] = useState("all") "; const "ITInfrastructure2026": React.FC = () => {} const [searchQuery,setSearchQuery] = useState(")" const [selectedCategory,setSelectedCategory] = useState("all");} const "ITInfrastructure2026": React.FC = () => {} const;const [searchQuery,setSearchQuery] = useState(&apos;&apos)&apos;&apos,const [selectedCategory,setSelectedCategory] = useState(&apos;all&apos) "; const "ITInfrastructure2026": React.FC = () => {} const [searchQuery,setSearchQuery] = useState()" const [selectedCategory,setSelectedCategory] = useState("all") "; const "ITInfrastructure2026": React.FC = () => {}; )} ; ); export default ITInfrastructure2026;
+import React from 'react';
+
+interface ITInfrastructure2026Props {
+  // Add props here as needed
+}
+
+export default function ITInfrastructure2026({ }: ITInfrastructure2026Props) {
+  return (
+    <div>
+      <h1>ITInfrastructure2026</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,35 +1,14 @@
-import { useEffect, useCallback } from 'react';
+import React from 'react';
 
-// Type definition for MessageEvent
-interface MessageEvent {
-  "data": unknown;
+interface UseMessageChannelHandlerProps {
+  // Add props here as needed
 }
 
-interface MessageChannelHandlerProps {
-  onMessage?: ("message": unknown) => void;
-  onError?: (error: Error) => void;
-}
-
-export function useMessageChannelHandler({
-  onMessage,
-  onError
-}: MessageChannelHandlerProps = {}) {
-  const handleMessage = useCallback(("event": MessageEvent) => {
-    try {
-      if (onMessage) {
-        onMessage(event.data);
-      }
-    } catch (error) {
-      if (onError) {
-        onError(error as Error);
-      }
-    }
-  }, [onMessage, onError]);
-
-  useEffect(() => {
-    window.addEventListener('message', handleMessage);
-    return () => {
-      window.removeEventListener('message', handleMessage);
-    };
-  }, [handleMessage]);
+export default function UseMessageChannelHandler({ }: UseMessageChannelHandlerProps) {
+  return (
+    <div>
+      <h1>UseMessageChannelHandler</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
 }

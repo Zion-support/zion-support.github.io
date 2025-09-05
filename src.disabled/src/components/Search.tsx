@@ -1,1 +1,14 @@
-import React,{ useState,useEffect,useRef,useCallback } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; import { cn } from '@/lib/utils'; interface SearchResult { "id": string; title: string; description: string; url: string; type: 'page' | 'service' | 'blog' | 'case-study'; category: string; tags: string[]; relevance: number}; interface SearchProps { className?: string; placeholder?: string; onSearch?: ("query": 'string) => void; showFilters?: boolean; showSuggestions?: boolean;' }; export function Search({; className,; placeholder = 'Search Zion Tech Group...',; onSearch,; showFilters = true,; showSuggestions = true}: SearchProps) {}; return null} }
+import React from 'react';
+
+interface SearchProps {
+  // Add props here as needed
+}
+
+export default function Search({ }: SearchProps) {
+  return (
+    <div>
+      <h1>Search</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

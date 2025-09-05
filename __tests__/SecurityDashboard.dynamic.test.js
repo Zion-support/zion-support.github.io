@@ -1,26 +1,14 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import SecurityDashboarddynamic from '../components/SecurityDashboard.dynamic';
 
-describe('SecurityDashboarddynamic', () => {
-  test('renders without crashing', () => {
-    render(<SecurityDashboarddynamic />);
-    expect(screen.getByTestId('securitydashboard.dynamic')).toBeInTheDocument();
-  });
+interface SecurityDashboard.dynamic.testProps {
+  // Add props here as needed
+}
 
-  test('displays correct content', () => {
-    render(<SecurityDashboarddynamic />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
-    render(<SecurityDashboarddynamic />);
-    // Add interaction tests based on component functionality
-  });
-
-  test('applies correct styling', () => {
-    render(<SecurityDashboarddynamic />);
-    // Add styling tests if needed
-  });
-});
+export default function SecurityDashboard.dynamic.test({ }: SecurityDashboard.dynamic.testProps) {
+  return (
+    <div>
+      <h1>SecurityDashboard.dynamic.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

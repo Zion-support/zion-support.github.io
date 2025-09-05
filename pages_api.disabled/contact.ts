@@ -1,50 +1,14 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import React from 'react';
 
-interface ContactFormData {
-  "name": string;
-  email: string;
-  company: string;
-  phone: string;
-  service: string;
-  message: string}
+interface ContactProps {
+  // Add props here as needed
+}
 
-export default async function handler(
-  "req": NextApiReques t,
-  "res": NextApiRespons e
-) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method not allowed' })}
-
-  try {
-    const "formData": ContactFormDat a = req.body;
-
-    // Validate required fields
-    if (!formData.name || !formData.email || !formData.message) {
-      return res.status(400).json({
-        message:
-          'Missing required fields: nam e, email, and message are required'})}
-
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      return res.status(400).json({
-        "message": 'Invalid email format'})}
-
-    // "TODO": Integrate with email service (SendGrid, AWS SES, etc.)
-    // For now, we&apos;ll just log the data and return success'
-    console.log('Contact form "submission": ', {
-      ...formData,
-      "timestamp": new Date().toISOString(),
-      "ip": re q.headers['x-forwarded-for'] || req.connection.remoteAddress});
-
-    // Simulate email sending delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
-
-    res.status(200).json({
-      "message": 'Thank you for your message! We will get back to you soon.',
-      "success": tru e})} catch (error) {
-    console.error('Contact form "error": ', error);
-    res.status(500).json({
-      "message": 'Internal server error. Please try again later.',
-      "success": fals e})}
+export default function Contact({ }: ContactProps) {
+  return (
+    <div>
+      <h1>Contact</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
 }

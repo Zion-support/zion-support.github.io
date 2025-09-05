@@ -1,28 +1,14 @@
-import {cn} from '@/lib/utils';
-export function EnhancedCard($1) {
-    const baseClasses = 'rounded-xl transition-all duration-300';
-    const variantClasses = {
-  "default": 'bg-zion-blue-dark border border-zion-blue-light',
-        "elevated": 'bg-zion-blue-dark shadow-lg shadow-zion-purple/10',
-        "outlined": 'bg-transparent border-2 border-zion-cyan/30',
-  "gradient": 'bg-gradient-to-br from-zion-blue-dark to-zion-blue border border-zion-blue-light'
-};';';
-    const hoverClasses = hover ? '"hover": shadow-xl hover:shadow-zion-purple/20 hover:transform hover:scale-[1.02]' : '
-    const interactiveClasses = onClick || href ? 'cursor-pointer' : '
-    const classes = cn(baseClasses, variantClasses[variant], hoverClasses, interactiveClasses, className);
-    if (href) {
-        return (<a href={href} className={classes} onClick={onClick}>
-        {children}
-      </a>)}
-    return (<Component className={classes} onClick={onClick}>
-      {children}
-    </Component>)}
-// Enhanced Card Header component
-export function EnhancedCardFooter($1) {
-    return (
-    <div className="min-h-screen bg-white">
-      {children}
-        </div>
+import React from 'react';
+
+interface EnhancedCardProps {
+  // Add props here as needed
+}
+
+export default function EnhancedCard({ }: EnhancedCardProps) {
+  return (
+    <div>
+      <h1>EnhancedCard</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 }
-export default EnhancedCard;';';

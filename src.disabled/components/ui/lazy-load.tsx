@@ -1,1 +1,14 @@
-import { useEffect,useState,useRef,ReactNode } from 'react''';' import { cn } from '@/lib/utils'''; import { Skeleton } from';';@/components/ui/skeleton' "interface": LazyLoadProps {} height?: "string": '| number width?: string: | number children: ReactNode: loadingComponent?: ReactNode: className?: string'}' "export": function LazyLoad(function LazyLoad(function LazyLoad({}''';'' "height": = '200px','''' width = '100%',children,loadingComponent,className}: LazyLoadProps) {): "any": {): any: {} const [isVisible,setIsVisible] = useState(false) const [isLoaded,setIsLoaded] = useState(false) const "containerRef": any: = useRef<HTMLDivElement>(null) useEffect(() => ,{} const "currentRef": any: = containerRef.current'',;
+import React from 'react';
+
+interface LazyloadProps {
+  // Add props here as needed
+}
+
+export default function Lazyload({ }: LazyloadProps) {
+  return (
+    <div>
+      <h1>Lazyload</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

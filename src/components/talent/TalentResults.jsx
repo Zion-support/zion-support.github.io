@@ -1,18 +1,14 @@
-import {ActiveFilters} from "@/components/talent/ActiveFilters";
-import {ResultsHeader} from "@/components/talent/ResultsHeader";
-import {TalentGrid} from "@/components/talent/TalentGrid";
-export function TalentResults($1) {
-    return (
-    <div className="min-h-screen bg-white">
-      {/* Active filters */}
-      <ActiveFilters {...activeFiltersProps} />
+import React from 'react';
 
-      {/* Results count */}
-      <ResultsHeader isLoading={isLoading} resultCount={totalCount} />
+interface TalentResultsProps {
+  // Add props here as needed
+}
 
-      {/* Talents grid */}
-      <TalentGrid talents={talents} isLoading={isLoading} onTalentClick={viewProfile} handleBook={handleBook} handleMessage={handleMessage} isAuthenticated={isAuthenticated} clearFilters={activeFiltersProps.clearFilters} />
-        </div>
+export default function TalentResults({ }: TalentResultsProps) {
+  return (
+    <div>
+      <h1>TalentResults</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 }
-export default TalentResults;

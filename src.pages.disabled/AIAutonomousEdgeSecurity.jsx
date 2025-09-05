@@ -1,1 +1,14 @@
-<<<<<<< "HEAD": src.pages.disabled/AIAutonomousEdgeSecurity.jsx import React from 'react'; export default AIAutonomousEdgeSecurity; const AIAutonomousEdgeSecurity = () => { return (<> <Helmet> <title > AI Autonomous Edge Security Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous edge security platform that continuously secures edge devices,detects threats,and protects edge infrastructure with advanced AI capabilities and autonomous operation." / / /> <meta name="keywords" content="AI edge security,autonomous edge security,edge protection,threat detection,autonomous operations,AI edge security platform" / / /> <link rel="canonical" href=""https": import React from 'react'; export default AIAutonomousEdgeSecurity; const AIAutonomousEdgeSecurity = () => { return (<> <Helmet> <title > AI Autonomous Edge Security Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous edge security platform that continuously secures edge devices,detects threats,and protects edge infrastructure with advanced AI capabilities and autonomous operation." / / / /> <meta name="keywords" content="AI edge security,autonomous edge security,edge protection,threat detection,autonomous operations,AI edge security platform" / / / /> <link rel="canonical" href=""https": "";
+import React from 'react';
+
+interface AIAutonomousEdgeSecurityProps {
+  // Add props here as needed
+}
+
+export default function AIAutonomousEdgeSecurity({ }: AIAutonomousEdgeSecurityProps) {
+  return (
+    <div>
+      <h1>AIAutonomousEdgeSecurity</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

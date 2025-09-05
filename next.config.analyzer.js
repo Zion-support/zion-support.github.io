@@ -1,20 +1,14 @@
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+import React from 'react';
 
-module.exports = {
-  "webpack": (config, { isServer }) => {
-    if ( {
-      config.plugins.push(
-        new BundleAnalyzerPlugin({
-          "analyzerMode": 'static',
-          "openAnalyzer": 'false',
-          "reportFilename": isServer ? '../analyze/server.html' : './analyze/client.html'})
-      )}
-    return config) {
-     {
-      config.plugins.push(
-        new BundleAnalyzerPlugin({
-          "analyzerMode": 'static',
-          "openAnalyzer": false,
-          "reportFilename": isServer ? '../analyze/server.html' : './analyze/client.html'})
-      )}
-    return config}}};
+interface Next.config.analyzerProps {
+  // Add props here as needed
+}
+
+export default function Next.config.analyzer({ }: Next.config.analyzerProps) {
+  return (
+    <div>
+      <h1>Next.config.analyzer</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

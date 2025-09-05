@@ -1,1 +1,14 @@
-import React from';react' "interface": TrustScoreBadgeProps {'; score: number: | null | undefined; tooltipText?: strin,g} const "TrustScoreBadge": React.FC<TrustScoreBadgeProps> = ({ scor,e,"tooltipText": ''}) => { const displayScore = score !== null && score !== undefined ? "score": 'N/A' const defaultTooltip = score !== null && score !== undefined ? `Detailed analysis: ${tooltipText: || 'No analysis available,'}` : '"Trust": score not yet calculated.' const getScoreColor = () => { if (score === null || score === undefined) return 'text-gray-500' if (score > 85) return 'text-green-600' if (score > 70) return 'text-yellow-600' return 'text-red-600' } return ( <div className='trust-score-badge p-2 border rounded-md shadow-sm bg-white inline-block' title={tooltipText || defaultTooltip}''`;
+import React from 'react';
+
+interface TrustScoreBadgeProps {
+  // Add props here as needed
+}
+
+export default function TrustScoreBadge({ }: TrustScoreBadgeProps) {
+  return (
+    <div>
+      <h1>TrustScoreBadge</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

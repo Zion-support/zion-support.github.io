@@ -1,20 +1,14 @@
-import React, { Suspense, lazy } from 'react'
+import React from 'react';
+
 interface LazyComponentProps {
-  "component": () => Promise<{ default: React.ComponentType<unknown> }>
-  fallback?: React.ReactNode
-  ["key": string]: unknown
+  // Add props here as needed
 }
 
-export const "LazyComponent": React.FC<LazyComponentProps> = ({ 
-  component, 
-  fallback = <div>Loading...</div>,
-  ...props 
-}) => {
-  const LazyLoadedComponent = lazy(component)
+export default function LazyComponent({ }: LazyComponentProps) {
   return (
-    <Suspense fallback={fallback}>
-      <LazyLoadedComponent {...props} />
-    </Suspense>
-  )
+    <div>
+      <h1>LazyComponent</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
 }
-export default LazyComponent

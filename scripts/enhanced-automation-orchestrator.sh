@@ -35,7 +35,7 @@ info() {
 }
 
 print_header "🚀 Enhanced Automation Orchestrator"
-echo "=============================================="
+echo "===="
 echo
 
 # Create logs directory
@@ -221,7 +221,7 @@ main() {
     local start_time=$(date +%s)
     
     print_header "🔧 Phase 1: File Protection & Dependencies"
-    echo "=============================================="
+    echo "===="
     
     # Check file protection
     check_file_protection
@@ -230,43 +230,43 @@ main() {
     run_with_log "Dependency Installation" "npm install" true
     
     print_header "🔧 Phase 2: Code Quality & Syntax"
-    echo "======================================"
+    echo "==="
     
     # Run syntax fixes with protection
     run_syntax_fixes
     
     print_header "🏗️  Phase 3: Build & Compilation"
-    echo "=================================="
+    echo "======"
     
     # Run build with retry logic
     run_build_with_retry
     
     print_header "🧪 Phase 4: Testing & Quality Assurance"
-    echo "=========================================="
+    echo ""
     
     # Run tests
     run_tests
     
     print_header "⚡ Phase 5: Performance Optimization"
-    echo "====================================="
+    echo "=="
     
     # Run performance optimizations
     run_performance_optimizations
     
     print_header "🔒 Phase 6: Security Audit"
-    echo "============================"
+    echo ""
     
     # Run security audit
     run_security_audit
     
     print_header "📊 Phase 7: Reporting"
-    echo "======================"
+    echo "="
     
     # Generate comprehensive report
     generate_report
     
     print_header "🎉 Enhanced Automation Orchestrator Complete!"
-    echo "=============================================="
+    echo "===="
     
     local end_time=$(date +%s)
     local duration=$((end_time - start_time))

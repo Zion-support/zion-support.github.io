@@ -1,1 +1,14 @@
-<<<<<<< "HEAD": src.pages.disabled/InnovativeNewServices2025.jsx import React from 'react'; export default InnovativeNewServices2025; const InnovativeNewServices2025 = () => { const [selectedCategory,setSelectedCategory] = useState ("all") ; const [selectedPriceRange,setSelectedPriceRange] = useState ("all") ; const allServices = [...INNOVATIVE_NEW_SERVICES_2025,...SPECIALIZED_IT_SERVICES_2025]; const categories = ["all",...Array.from (new Set (allServices.map (service => service.category) ) ) ]; const priceRanges = [{ "value": "all","label": "All Prices" },{ "value": "0 - 2000","label": "Under $2,000 / month" },{ "value": "2000 - 5000","label": "$2,000 - $5,000 / month" },{ "value": "5000+","label": "$5,000+/month" } ]; const filteredServices = allServices.filter (service => { const categoryMatch = selectedCategory === "all" || service.category === selectedCategory; import React from 'react'; export default InnovativeNewServices2025; const InnovativeNewServices2025 = () => { const [selectedCategory,setSelectedCategory] = useState ("all") ; const [selectedPriceRange,setSelectedPriceRange] = useState ("all") ; const allServices = [...INNOVATIVE_NEW_SERVICES_2025,...SPECIALIZED_IT_SERVICES_2025]; const categories = ["all",...Array.from (new Set (allServices.map (service => service.category) ) ) ]; const priceRanges = [{ "value": "all","label": "All Prices" },{ "value": "0 - 2000","label": "Under $2,000 / month" },{ "value": "2000 - 5000","label": "$2,000 - $5,000 / month" },{ "value": "5000+","label": "$5,000+/month" } ]; const filteredServices = allServices.filter (service => { const categoryMatch = selectedCategory === "all" || service.category === selectedCategory;";
+import React from 'react';
+
+interface InnovativeNewServices2025Props {
+  // Add props here as needed
+}
+
+export default function InnovativeNewServices2025({ }: InnovativeNewServices2025Props) {
+  return (
+    <div>
+      <h1>InnovativeNewServices2025</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
