@@ -1,56 +1,56 @@
-<<<<<<< HEAD
 export interface UltimateInnovativeService {
-  "id": string;
-  title: string;
+  // TODO: Implement
+}
+  "id": string;"
+  title: string;,
   description: string;
-  category: string;
+  category: string;,
   subcategory: string;
-  price: number;
+  price: number;,
   currency: string;
-  pricingModel: string;
+  pricingModel: string;,
   features: string[];
-  benefits: string[];
+  benefits: string[];,
   useCases: string[];
-  targetAudience: string[];
+  targetAudience: string[];,
   tags: string[];
-  estimatedDelivery: string;
+  estimatedDelivery: string;,
   supportLevel: string;
-  marketPrice: string;
+  marketPrice: string;,
   roi: string;
-  innovationLevel: string;
-contactInfo: {
-
-    phone: string;
-    email: string;
-    website: string
+  innovationLevel: string;,
+  contactInfo: {
+    phone: string;,
+  email: string;
+    website: string;
 };
-  technicalSpecs?: {
-
-    "technology": string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[]};
+  technicalSpecs?: {"
+    "technology": string[];"
+    integrations: string[];,
+  apiEndpoints: number;
+    uptime: string;,
+  security: string[]};
   competitors?: string[];
   caseStudies?: string[]}
 ;
-export 
-  'IoT & Edge Computing',
-  'Metaverse & AR/VR',
-  'Robotics & Automation',
-  'Biotechnology',
-  'Space Technology',
-  'Green Technology';';';
-  'AI & Automation','
-  'Quantum Computing','
-  'Blockchain & Web3','
-  'Cybersecurity','
-  'IoT & Edge Computing','
-  'Metaverse & AR/VR','
-  'Robotics & Automation','
-  'Biotechnology','
-  'Space Technology','  'Green Technology'];
-export const SERVICE_SUBCATEGORIES = {
-=======
-export interface UltimateInnovativeService { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string }; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors?: string[]; caseStudies?: string[]} ; export 'IoT & Edge Computing','Metaverse & AR/VR','Robotics & Automation','Biotechnology','Space Technology','Green Technology';';'; 'AI & Automation',' 'Quantum Computing',' 'Blockchain & Web3',' 'Cybersecurity',' 'IoT & Edge Computing',' 'Metaverse & AR/VR',' 'Robotics & Automation',' 'Biotechnology',' 'Space Technology',' 'Green Technology']; ; export const SERVICE_SUBCATEGORIES = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+export;"
+  'IoT & Edge Computing',''
+  'Metaverse & AR/VR',''
+  'Robotics & Automation',''
+  'Biotechnology',''
+  'Space Technology',''
+  'Green Technology';';';''
+  'AI & Automation','''
+  'Quantum Computing','''
+  'Blockchain & Web3','''
+  'Cybersecurity','''
+  'IoT & Edge Computing','''
+  'Metaverse & AR/VR','''
+  'Robotics & Automation','''
+  'Biotechnology','''
+  'Space Technology','  'Green Technology'];'
+export const SERVICE_SUBCATEGORIES = {'
+export interface UltimateInnovativeService { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string }; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors?: string[]; caseStudies?: string[]} ; export 'IoT & Edge Computing','Metaverse & AR/VR','Robotics & Automation','Biotechnology','Space Technology','Green Technology';';'; 'AI & Automation',' 'Quantum Computing',' 'Blockchain & Web3',' 'Cybersecurity',' 'IoT & Edge Computing',' 'Metaverse & AR/VR',' 'Robotics & Automation',' 'Biotechnology',' 'Space Technology',' 'Green Technology']; ; export const SERVICE_SUBCATEGORIES = {'
+origin/cursor/automate-test-improve-and-merge-code-eafe;
+cursor/website-audit-and-update-with-deployment-76dc;
+cursor/fix-lint-push-and-merge-to-main-f3c1;'

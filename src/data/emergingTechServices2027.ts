@@ -1,36 +1,37 @@
-<<<<<<< HEAD
 export interface EmergingTechService2027 {
-  "id": string;
-  title: string;
+  // TODO: Implement
+}
+  "id": string;"
+  title: string;,
   description: string;
-  category: string;
+  category: string;,
   subcategory: string;
-  price: number;
+  price: number;,
   currency: string;
-  pricingModel: string;
+  pricingModel: string;,
   features: string[];
-  benefits: string[];
+  benefits: string[];,
   targetAudience: string[];
-  marketPrice: string;
+  marketPrice: string;,
   website: string;
-  contactEmail: string;
+  contactEmail: string;,
   tags: string[];
-  aiScore: number;
+  aiScore: number;,
   rating: number;
-  reviewCount: number;
+  reviewCount: number;,
   featured: boolean;
-  location: string;
+  location: string;,
   availability: string;
-  author: { name: string; id: string; avatarUrl?: string; verified: boolean };
-  "images": string[];
-  createdAt: string;
+  author: { name: string; id: string; avatarUrl?: string; verified: boolean };"
+  "images": string[];"
+  createdAt: string;,
   technologyStack: string[];
-  useCases: string[];
+  useCases: string[];,
   integrations: string[];
-  compliance: string[];
-  support: string[]}
-
-export const "EMERGING_TECH_SERVICES_2027": EmergingTechService2027[] = [];
-=======
+  compliance: string[];,
+  support: string[]}"
+export const "EMERGING_TECH_SERVICES_2027": EmergingTechService2027[] = [];"
 export interface EmergingTechService2027 { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; targetAudience: string[]; marketPrice: string; website: string; contactEmail: string; tags: string[]; aiScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; author: { name: string; id: string; avatarUrl?: string; verified: boolean }; images: string[]; createdAt: string; technologyStack: string[]; useCases: string[]; integrations: string[]; compliance: string[]; support: string[]} export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+origin/cursor/automate-test-improve-and-merge-code-eafe;
+cursor/website-audit-and-update-with-deployment-76dc;
+cursor/fix-lint-push-and-merge-to-main-f3c1;"

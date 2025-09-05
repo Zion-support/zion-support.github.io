@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "🚀 Quick Merge Conflict Resolver"
-echo "================================="
+echo "====="
 echo ""
 
 # Colors for output
@@ -62,7 +62,7 @@ conflict_files=()
 for dir in src pages components scripts; do
     if [ -d "$dir" ]; then
         while IFS= read -r -d '' file; do
-            if grep -l "<<<<<<< HEAD\|=======\|>>>>>>> " "$file" 2>/dev/null; then
+            if grep -l "\|\|>>>>>>> " "$file" 2>/dev/null; then
                 conflict_files+=("$file")
             fi
         done < <(find "$dir" -type f \( -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" -o -name "*.md" \) -print0 2>/dev/null)
@@ -85,9 +85,9 @@ if [ ${#conflict_files[@]} -gt 0 ]; then
         # Strategy: Keep HEAD version (our current changes)
         # Remove conflict markers and keep the HEAD section
         if sed -i.tmp '
-            /<<<<<<< HEAD/,/=======/!b
-            /<<<<<<< HEAD/d
-            /=======/,/>>>>>>> /d
+            //,//!b
+            //d
+            //,/>>>>>>> /d
         ' "$file" 2>/dev/null; then
             conflicts_resolved=$((conflicts_resolved + 1))
             log_success "Resolved conflicts in: $file"
@@ -109,7 +109,7 @@ fi
 log "🔄 Cleaning up any remaining conflict markers..."
 for dir in src pages components scripts; do
     if [ -d "$dir" ]; then
-        find "$dir" -type f \( -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" \) -exec grep -l "<<<<<<< HEAD\|=======\|>>>>>>> " {} \; 2>/dev/null | while read file; do
+        find "$dir" -type f \( -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" \) -exec grep -l "\|\|>>>>>>> " {} \; 2>/dev/null | while read file; do
             log "Additional cleanup for: $file"
             # Alternative approach: accept current version
             git checkout --ours "$file" 2>/dev/null && log_success "Accepted our version: $file"
@@ -181,7 +181,7 @@ fi
 # Step 10: Summary
 echo ""
 echo "📈 MERGE RESOLUTION SUMMARY"
-echo "=========================="
+echo "====="
 echo "✅ Conflicts resolved: $conflicts_resolved"
 echo "📁 Files processed: $files_processed"
 echo "❌ Errors encountered: $errors"

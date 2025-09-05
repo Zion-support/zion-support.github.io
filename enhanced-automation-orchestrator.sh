@@ -212,7 +212,7 @@ start_monitoring() {
 # Main execution
 main() {
     log_info "🚀 Starting Enhanced Automation Orchestrator"
-    log_info "=============================================="
+    log_info "===="
     
     # Create log directory
     mkdir -p "$LOG_DIR"

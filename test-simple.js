@@ -1,15 +1,13 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-
-console.log('Simple test script running...');
-console.log('Node "version": ', process.version);
-console.log('"Platform": ', process.platform);
-console.log('Current "directory": ', process.cwd());
-
-// Keep the process running
-setInterval(() => {
-  console.log('Test script still running at', new Date().toISOString());
-}, 30000);
-=======
-#!/usr/bin/env node console.log('Simple test script running...'); console.log('Node version:',process.version); console.log('Platform:',process.platform); console.log('Current directory:',process.cwd()); setInterval(() => { console.log('Test script still running at',new Date().toISOString())},30000);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+#!/usr/bin/env node;
+console.log('Simple test script running...');''
+console.log('Node "version": ', process.version);''
+console.log('"Platform": ', process.platform);''
+console.log('Current "directory": ', process.cwd());'
+// Keep the process running;
+setInterval(() => {'
+  console.log('Test script still running at', new Date().toISOString());'
+}, 30000);'
+#!/usr/bin/env node console.log('Simple test script running...'); console.log('Node version:',process.version); console.log('Platform:',process.platform); console.log('Current directory:',process.cwd()); setInterval(() => { console.log('Test script still running at',new Date().toISOString())},30000);'
+origin/cursor/automate-test-improve-and-merge-code-eafe;
+cursor/website-audit-and-update-with-deployment-76dc;
+cursor/fix-lint-push-and-merge-to-main-f3c1;'
