@@ -15,9 +15,20 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  Cpu,
+  Brain,
+  Globe,
+  Wifi,
+  BarChart3
 } from 'lucide-react';
-import Layout from '../../components/Layout';
+import Layout from '../components/Layout';
+
+const contactInfo = {
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709"
+};
 
 const services = [
   {
@@ -102,7 +113,219 @@ const services = [
       "Performance Optimization",
       "24/7 System Support"
     ],
-    price: "Starting at $800/month"
+    price: "Starting at $800/month",
+    marketPrice: "$1,200-2,500/month",
+    benefits: ["99.9% uptime", "Proactive monitoring", "24/7 support"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Cloud Migration & Modernization",
+    description: "Seamless migration to cloud platforms with modernization strategies",
+    icon: Cloud,
+    features: [
+      "Legacy System Migration",
+      "Cloud Architecture Design",
+      "Data Migration & Validation",
+      "Application Modernization",
+      "Cost Optimization",
+      "Security Implementation",
+      "Performance Tuning",
+      "Training & Support"
+    ],
+    price: "Starting at $3,500/month",
+    marketPrice: "$5,000-15,000/month",
+    benefits: ["50% cost reduction", "Improved scalability", "Enhanced security"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "Zero-Trust Security Architecture",
+    description: "Implement comprehensive zero-trust security model for maximum protection",
+    icon: Shield,
+    features: [
+      "Identity & Access Management",
+      "Network Segmentation",
+      "Micro-segmentation",
+      "Continuous Monitoring",
+      "Threat Detection & Response",
+      "Compliance Management",
+      "Security Policy Implementation",
+      "User Behavior Analytics"
+    ],
+    price: "Starting at $4,000/month",
+    marketPrice: "$6,000-20,000/month",
+    benefits: ["99.9% security", "Reduced attack surface", "Compliance ready"],
+    setupTime: "6-12 weeks"
+  },
+  {
+    title: "Edge Computing Solutions",
+    description: "Deploy edge computing infrastructure for low-latency applications",
+    icon: Network,
+    features: [
+      "Edge Server Deployment",
+      "IoT Device Management",
+      "Real-time Data Processing",
+      "Edge Security Implementation",
+      "Content Delivery Networks",
+      "5G Integration",
+      "Edge Analytics",
+      "Remote Management"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-12,000/month",
+    benefits: ["90% latency reduction", "Improved performance", "Cost efficiency"],
+    setupTime: "3-6 weeks"
+  },
+  {
+    title: "Quantum Computing Integration",
+    description: "Prepare for quantum computing with hybrid quantum-classical solutions",
+    icon: Cpu,
+    features: [
+      "Quantum Algorithm Development",
+      "Hybrid Computing Solutions",
+      "Quantum Security Implementation",
+      "Performance Optimization",
+      "Quantum Machine Learning",
+      "Cryptographic Solutions",
+      "Research & Development",
+      "Future-Proofing Strategies"
+    ],
+    price: "Starting at $8,000/month",
+    marketPrice: "$15,000-50,000/month",
+    benefits: ["Future-ready technology", "Competitive advantage", "Breakthrough performance"],
+    setupTime: "8-16 weeks"
+  },
+  {
+    title: "AI Infrastructure & MLOps",
+    description: "Complete AI infrastructure setup with machine learning operations",
+    icon: Brain,
+    features: [
+      "AI/ML Platform Setup",
+      "Model Training Infrastructure",
+      "MLOps Pipeline Implementation",
+      "Data Pipeline Automation",
+      "Model Deployment & Monitoring",
+      "A/B Testing Frameworks",
+      "GPU/TPU Management",
+      "Performance Optimization"
+    ],
+    price: "Starting at $3,000/month",
+    marketPrice: "$5,000-18,000/month",
+    benefits: ["Faster AI deployment", "Scalable ML operations", "Cost optimization"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "Blockchain & Web3 Infrastructure",
+    description: "Build and deploy blockchain solutions and Web3 infrastructure",
+    icon: Globe,
+    features: [
+      "Blockchain Network Setup",
+      "Smart Contract Development",
+      "DeFi Platform Development",
+      "NFT Marketplace Creation",
+      "Web3 Integration",
+      "Cryptocurrency Solutions",
+      "Security Audits",
+      "Compliance Management"
+    ],
+    price: "Starting at $4,500/month",
+    marketPrice: "$7,000-25,000/month",
+    benefits: ["Decentralized solutions", "Enhanced security", "Future-proof technology"],
+    setupTime: "6-12 weeks"
+  },
+  {
+    title: "IoT & Smart Device Management",
+    description: "Comprehensive IoT solutions for connected devices and smart systems",
+    icon: Wifi,
+    features: [
+      "IoT Device Integration",
+      "Sensor Network Management",
+      "Real-time Data Collection",
+      "Edge Computing Implementation",
+      "Device Security & Authentication",
+      "Remote Monitoring & Control",
+      "Data Analytics & Insights",
+      "Scalable Architecture"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-12,000/month",
+    benefits: ["Operational efficiency", "Real-time insights", "Automated processes"],
+    setupTime: "3-6 weeks"
+  },
+  {
+    title: "Disaster Recovery & Business Continuity",
+    description: "Comprehensive disaster recovery and business continuity solutions",
+    icon: Shield,
+    features: [
+      "Backup Strategy Implementation",
+      "Disaster Recovery Planning",
+      "Business Continuity Testing",
+      "Data Replication Solutions",
+      "Failover Systems",
+      "Recovery Time Optimization",
+      "Compliance & Documentation",
+      "24/7 Monitoring"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-10,000/month",
+    benefits: ["99.9% uptime", "Quick recovery", "Data protection"],
+    setupTime: "2-4 weeks"
+  },
+  {
+    title: "Performance Optimization & Monitoring",
+    description: "Advanced performance monitoring and optimization services",
+    icon: BarChart3,
+    features: [
+      "Application Performance Monitoring",
+      "Infrastructure Optimization",
+      "Database Performance Tuning",
+      "Network Optimization",
+      "Load Testing & Analysis",
+      "Capacity Planning",
+      "Real-time Alerting",
+      "Performance Reporting"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-8,000/month",
+    benefits: ["50% performance improvement", "Proactive monitoring", "Cost optimization"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Compliance & Governance Solutions",
+    description: "Ensure regulatory compliance and implement governance frameworks",
+    icon: CheckCircle,
+    features: [
+      "GDPR Compliance Implementation",
+      "HIPAA Compliance Solutions",
+      "SOX Compliance Management",
+      "ISO 27001 Certification",
+      "Audit Trail Implementation",
+      "Data Privacy Management",
+      "Risk Assessment",
+      "Policy Development"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,500-15,000/month",
+    benefits: ["Regulatory compliance", "Risk mitigation", "Audit readiness"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "Hybrid Cloud Solutions",
+    description: "Seamless integration of on-premises and cloud infrastructure",
+    icon: Cloud,
+    features: [
+      "Hybrid Cloud Architecture",
+      "Multi-cloud Management",
+      "Data Synchronization",
+      "Security Integration",
+      "Cost Optimization",
+      "Workload Migration",
+      "Unified Management",
+      "Compliance Management"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-12,000/month",
+    benefits: ["Flexible deployment", "Cost optimization", "Enhanced security"],
+    setupTime: "4-6 weeks"
   }
 ];
 
@@ -169,9 +392,31 @@ export default function ITServicesPage() {
               <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
                 Get Free Consultation
               </Link>
-              <Link href="/quote" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                Request Quote
-              </Link>
+              <a href={`tel:${contactInfo.phone}`} className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                Call {contactInfo.phone}
+              </a>
+            </motion.div>
+            <motion.div 
+              className="mt-8 text-center"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <p className="text-blue-200 mb-2">Ready to transform your IT infrastructure?</p>
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm">
+                <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-2 hover:text-blue-300 transition-colors">
+                  <Mail className="w-4 h-4" />
+                  {contactInfo.email}
+                </a>
+                <a href={`tel:${contactInfo.phone}`} className="flex items-center gap-2 hover:text-blue-300 transition-colors">
+                  <Phone className="w-4 h-4" />
+                  {contactInfo.phone}
+                </a>
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4" />
+                  {contactInfo.address}
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -202,15 +447,30 @@ export default function ITServicesPage() {
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <ul className="text-sm text-gray-500 space-y-2 mb-4">
-                  {service.features.map((feature, idx) => (
+                  {service.features.slice(0, 4).map((feature, idx) => (
                     <li key={idx} className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <div className="mt-4">
-                  <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                <div className="mt-4 space-y-2">
+                  <div className="flex justify-between items-center">
+                    <span className="text-lg font-bold text-blue-600">{service.price}</span>
+                    {service.marketPrice && (
+                      <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                    )}
+                  </div>
+                  {service.benefits && (
+                    <div className="text-xs text-green-600 font-medium">
+                      Benefits: {service.benefits.join(", ")}
+                    </div>
+                  )}
+                  {service.setupTime && (
+                    <div className="text-xs text-blue-600">
+                      Setup: {service.setupTime}
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}

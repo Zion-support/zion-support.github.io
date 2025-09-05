@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
+import Layout from '../components/Layout';
 import { 
   Brain, 
   Eye, 
@@ -150,6 +150,330 @@ const aiServices = [
     marketPrice: '$3,500-7,500/month',
     setupTime: '2-3 weeks',
     targetUsers: 'Customer Service, Content, Legal, Healthcare'
+  },
+  {
+    id: 4,
+    title: 'Predictive Analytics & Forecasting',
+    description: 'Advanced predictive models for business forecasting, demand planning, and risk assessment using machine learning.',
+    icon: TrendingUp,
+    category: 'Machine Learning',
+    price: 'Starting at $3,200/month',
+    features: [
+      'Demand forecasting & planning',
+      'Financial risk assessment',
+      'Customer behavior prediction',
+      'Market trend analysis',
+      'Inventory optimization',
+      'Sales forecasting',
+      'Churn prediction',
+      'Price optimization'
+    ],
+    benefits: [
+      'Improve forecast accuracy by 60-80%',
+      'Reduce inventory costs by 25-40%',
+      'Increase revenue by 15-30%',
+      'Minimize business risks'
+    ],
+    marketPrice: '$5,000-12,000/month',
+    setupTime: '4-6 weeks',
+    targetUsers: 'Retail, Finance, Manufacturing, E-commerce'
+  },
+  {
+    id: 5,
+    title: 'AI-Powered Chatbots & Virtual Assistants',
+    description: 'Intelligent conversational AI solutions for customer service, sales, and internal operations.',
+    icon: Bot,
+    category: 'NLP',
+    price: 'Starting at $1,800/month',
+    features: [
+      'Natural conversation handling',
+      'Multi-channel deployment',
+      'Integration with CRM systems',
+      'Voice & text capabilities',
+      'Context-aware responses',
+      'Escalation to human agents',
+      'Analytics & performance tracking',
+      'Custom personality & branding'
+    ],
+    benefits: [
+      'Reduce support costs by 60%',
+      'Improve response time by 90%',
+      'Increase customer satisfaction by 40%',
+      'Enable 24/7 customer service'
+    ],
+    marketPrice: '$3,000-8,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'Customer Service, E-commerce, Healthcare, Finance'
+  },
+  {
+    id: 6,
+    title: 'AI-Powered Document Processing',
+    description: 'Intelligent document analysis, extraction, and processing for automated workflows and compliance.',
+    icon: FileText,
+    category: 'Computer Vision',
+    price: 'Starting at $2,500/month',
+    features: [
+      'Document classification & sorting',
+      'Data extraction & validation',
+      'Contract analysis & review',
+      'Invoice processing automation',
+      'Compliance monitoring',
+      'Multi-format support (PDF, Word, Excel)',
+      'Batch processing capabilities',
+      'Integration with existing systems'
+    ],
+    benefits: [
+      'Process documents 10x faster',
+      'Reduce manual errors by 95%',
+      'Improve compliance accuracy by 80%',
+      'Save 70% on document processing costs'
+    ],
+    marketPrice: '$4,000-9,000/month',
+    setupTime: '3-5 weeks',
+    targetUsers: 'Legal, Finance, Healthcare, Insurance'
+  },
+  {
+    id: 7,
+    title: 'AI-Powered Recommendation Systems',
+    description: 'Personalized recommendation engines for e-commerce, content, and service platforms.',
+    icon: Target,
+    category: 'Machine Learning',
+    price: 'Starting at $2,800/month',
+    features: [
+      'Personalized product recommendations',
+      'Content recommendation engines',
+      'Cross-selling & upselling',
+      'Real-time personalization',
+      'A/B testing & optimization',
+      'Multi-channel recommendations',
+      'Behavioral analysis',
+      'Performance analytics'
+    ],
+    benefits: [
+      'Increase conversion rates by 25-50%',
+      'Boost average order value by 30%',
+      'Improve customer engagement by 40%',
+      'Reduce bounce rates by 35%'
+    ],
+    marketPrice: '$4,500-10,000/month',
+    setupTime: '3-4 weeks',
+    targetUsers: 'E-commerce, Media, Streaming, Retail'
+  },
+  {
+    id: 8,
+    title: 'AI-Powered Fraud Detection',
+    description: 'Advanced fraud detection and prevention systems using machine learning and behavioral analysis.',
+    icon: Shield,
+    category: 'Machine Learning',
+    price: 'Starting at $3,500/month',
+    features: [
+      'Real-time fraud detection',
+      'Behavioral pattern analysis',
+      'Anomaly detection algorithms',
+      'Risk scoring & assessment',
+      'Multi-channel monitoring',
+      'Adaptive learning models',
+      'False positive reduction',
+      'Integration with payment systems'
+    ],
+    benefits: [
+      'Reduce fraud losses by 80-90%',
+      'Decrease false positives by 60%',
+      'Improve detection speed by 95%',
+      'Lower operational costs by 50%'
+    ],
+    marketPrice: '$6,000-15,000/month',
+    setupTime: '4-6 weeks',
+    targetUsers: 'Banking, E-commerce, Insurance, Fintech'
+  },
+  {
+    id: 9,
+    title: 'AI-Powered Image & Video Analysis',
+    description: 'Advanced computer vision solutions for content moderation, quality control, and automated analysis.',
+    icon: Camera,
+    category: 'Computer Vision',
+    price: 'Starting at $2,200/month',
+    features: [
+      'Content moderation & filtering',
+      'Quality control automation',
+      'Object & scene recognition',
+      'Facial recognition & analysis',
+      'Video content analysis',
+      'Real-time processing',
+      'Custom model training',
+      'API integration'
+    ],
+    benefits: [
+      'Automate content moderation 24/7',
+      'Improve quality control accuracy by 95%',
+      'Reduce manual review time by 90%',
+      'Scale content analysis operations'
+    ],
+    marketPrice: '$3,500-8,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'Social Media, E-commerce, Manufacturing, Security'
+  },
+  {
+    id: 10,
+    title: 'AI-Powered Voice & Speech Processing',
+    description: 'Advanced voice recognition, speech-to-text, and voice analytics solutions.',
+    icon: Mic,
+    category: 'NLP',
+    price: 'Starting at $2,000/month',
+    features: [
+      'Speech-to-text conversion',
+      'Voice recognition & authentication',
+      'Sentiment analysis from voice',
+      'Multi-language support',
+      'Real-time transcription',
+      'Voice command processing',
+      'Call center analytics',
+      'Custom voice models'
+    ],
+    benefits: [
+      'Improve accessibility by 100%',
+      'Reduce transcription costs by 80%',
+      'Enhance customer experience by 45%',
+      'Enable hands-free operations'
+    ],
+    marketPrice: '$3,200-7,500/month',
+    setupTime: '2-3 weeks',
+    targetUsers: 'Healthcare, Call Centers, Accessibility, IoT'
+  },
+  {
+    id: 11,
+    title: 'AI-Powered Supply Chain Optimization',
+    description: 'Intelligent supply chain management with demand forecasting, route optimization, and inventory management.',
+    icon: Truck,
+    category: 'Machine Learning',
+    price: 'Starting at $4,000/month',
+    features: [
+      'Demand forecasting & planning',
+      'Route optimization algorithms',
+      'Inventory level optimization',
+      'Supplier performance analysis',
+      'Risk assessment & mitigation',
+      'Cost optimization',
+      'Real-time monitoring',
+      'Predictive maintenance'
+    ],
+    benefits: [
+      'Reduce supply chain costs by 20-35%',
+      'Improve delivery accuracy by 90%',
+      'Optimize inventory levels by 40%',
+      'Minimize supply chain risks'
+    ],
+    marketPrice: '$6,500-15,000/month',
+    setupTime: '6-8 weeks',
+    targetUsers: 'Logistics, Manufacturing, Retail, E-commerce'
+  },
+  {
+    id: 12,
+    title: 'AI-Powered Healthcare Solutions',
+    description: 'Medical AI solutions for diagnosis assistance, drug discovery, and patient care optimization.',
+    icon: Heart,
+    category: 'Machine Learning',
+    price: 'Starting at $5,000/month',
+    features: [
+      'Medical image analysis',
+      'Drug discovery assistance',
+      'Patient risk assessment',
+      'Treatment recommendation',
+      'Clinical decision support',
+      'Medical record analysis',
+      'Predictive health modeling',
+      'Compliance monitoring'
+    ],
+    benefits: [
+      'Improve diagnostic accuracy by 30-50%',
+      'Reduce treatment costs by 25%',
+      'Enhance patient outcomes by 40%',
+      'Accelerate drug discovery by 60%'
+    ],
+    marketPrice: '$8,000-20,000/month',
+    setupTime: '8-12 weeks',
+    targetUsers: 'Hospitals, Clinics, Pharmaceutical, Research'
+  },
+  {
+    id: 13,
+    title: 'AI-Powered Financial Analysis',
+    description: 'Intelligent financial analysis, trading algorithms, and risk management solutions.',
+    icon: PieChart,
+    category: 'Machine Learning',
+    price: 'Starting at $4,500/month',
+    features: [
+      'Algorithmic trading systems',
+      'Risk assessment & management',
+      'Credit scoring & analysis',
+      'Market trend prediction',
+      'Portfolio optimization',
+      'Fraud detection & prevention',
+      'Regulatory compliance',
+      'Real-time market analysis'
+    ],
+    benefits: [
+      'Improve trading performance by 25-40%',
+      'Reduce financial risks by 60%',
+      'Enhance decision-making speed by 90%',
+      'Optimize portfolio returns by 30%'
+    ],
+    marketPrice: '$7,500-18,000/month',
+    setupTime: '6-10 weeks',
+    targetUsers: 'Banks, Investment Firms, Fintech, Insurance'
+  },
+  {
+    id: 14,
+    title: 'AI-Powered Marketing Automation',
+    description: 'Intelligent marketing automation with personalization, campaign optimization, and customer journey mapping.',
+    icon: Target,
+    category: 'Machine Learning',
+    price: 'Starting at $2,500/month',
+    features: [
+      'Customer segmentation & targeting',
+      'Campaign optimization',
+      'Personalized content generation',
+      'Email marketing automation',
+      'Social media management',
+      'Lead scoring & nurturing',
+      'ROI optimization',
+      'Cross-channel coordination'
+    ],
+    benefits: [
+      'Increase marketing ROI by 200-300%',
+      'Improve conversion rates by 50%',
+      'Reduce customer acquisition costs by 40%',
+      'Enhance customer lifetime value by 60%'
+    ],
+    marketPrice: '$4,000-10,000/month',
+    setupTime: '3-5 weeks',
+    targetUsers: 'Marketing Agencies, E-commerce, SaaS, Retail'
+  },
+  {
+    id: 15,
+    title: 'AI-Powered Quality Assurance',
+    description: 'Automated quality testing and assurance solutions for software, products, and processes.',
+    icon: CheckCircle,
+    category: 'Computer Vision',
+    price: 'Starting at $2,000/month',
+    features: [
+      'Automated testing frameworks',
+      'Visual regression testing',
+      'Performance monitoring',
+      'Bug detection & classification',
+      'Test case generation',
+      'Quality metrics tracking',
+      'Continuous integration',
+      'Predictive quality analysis'
+    ],
+    benefits: [
+      'Reduce testing time by 70%',
+      'Improve test coverage by 90%',
+      'Decrease bug detection time by 80%',
+      'Lower quality assurance costs by 50%'
+    ],
+    marketPrice: '$3,500-8,500/month',
+    setupTime: '3-4 weeks',
+    targetUsers: 'Software Development, Manufacturing, E-commerce, SaaS'
   }
 ];
 

@@ -3,7 +3,13 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Phone, Mail, MapPin, Star, TrendingUp, Clock, DollarSign } from 'lucide-react';
-import Layout from '../../components/Layout';
+import Layout from '../components/Layout';
+
+const contactInfo = {
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709"
+};
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
@@ -151,10 +157,32 @@ export default function HomePage() {
                 <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                   Get Started Today
                 </Link>
-                <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  Explore Services
-                </Link>
+                <a href={`tel:${contactInfo.phone}`} className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                  Call {contactInfo.phone}
+                </a>
               </div>
+              <motion.div 
+                className="mt-8 text-center"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                <p className="text-gray-300 mb-4">Ready to transform your business?</p>
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm">
+                  <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-2 hover:text-blue-300 transition-colors">
+                    <Mail className="w-4 h-4" />
+                    {contactInfo.email}
+                  </a>
+                  <a href={`tel:${contactInfo.phone}`} className="flex items-center gap-2 hover:text-blue-300 transition-colors">
+                    <Phone className="w-4 h-4" />
+                    {contactInfo.phone}
+                  </a>
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-4 h-4" />
+                    {contactInfo.address}
+                  </div>
+                </div>
+              </motion.div>
             </motion.div>
           </div>
         </section>
@@ -237,9 +265,8 @@ export default function HomePage() {
                 );
               })}
             </div>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map((service, index) => (
               <motion.div 
                 key={index}
@@ -261,6 +288,7 @@ export default function HomePage() {
                 </div>
               </motion.div>
             ))}
+            </div>
           </div>
         </div>
       </section>
@@ -385,6 +413,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </div>
     </Layout>
   );
 }
