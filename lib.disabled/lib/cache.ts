@@ -1,0 +1,2 @@
+interface CacheItem<T> {}
+</T>

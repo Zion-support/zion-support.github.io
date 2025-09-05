@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src/utils/performance.js.disabled
+:src/utils/performance.js.disabled
 // performance utility,
 export const performance = {
   // Placeholder utility functions,
@@ -7,6 +7,5 @@ export const performance = {
   }
 };
 export default performance;
-=======
 export const performance = { init: function() { } }; export default performance;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe:src/utils/performance.js

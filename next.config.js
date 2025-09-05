@@ -2,23 +2,25 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['localhost']
+    domains: ['localhost'],
   },
   env: {
-    CUSTOM_KEY: process.env.CUSTOM_KEY
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
   },
   eslint: {
-    ignoreDuringBuilds: true
+    ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true
+    ignoreBuildErrors: true,
   },
   async rewrites() {
-    return [{
-      source: '/api/:path*',
-      destination: '/api/:path*'
-    }];
-  }
+    return [
+      {
+        source: '/api/:path*',
+        destination: '/api/:path*',
+      },
+    ];
+  },
 };
 
 export default nextConfig;

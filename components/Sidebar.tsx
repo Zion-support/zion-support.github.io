@@ -18,21 +18,24 @@ import {
   DollarSign,
   ShoppingCart,
   GraduationCap,
-  Globe
+  Globe,
+  Cpu as CpuIcon,
+  Lock,
+  Network,
+  Monitor
 } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
   const toggleSection = (section: string) => {
     setExpandedSections(prev => 
-      prev.includes(section) 
+      prev.includes(section)
         ? prev.filter(s => s !== section)
         : [...prev, section]
     );
@@ -57,6 +60,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
         { label: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
         { label: 'Data Analytics', href: '/services/data-analytics', icon: Brain },
+        { label: 'Quantum Computing', href: '/services/quantum-computing', icon: CpuIcon },
+        { label: 'Blockchain Solutions', href: '/services/blockchain', icon: Lock },
+        { label: 'IoT & Smart Cities', href: '/services/iot-smart-cities', icon: Globe },
+        { label: 'Edge Computing', href: '/services/edge-computing', icon: Network },
+        { label: 'Digital Twins', href: '/services/digital-twins', icon: Monitor }
       ]
     },
     {
@@ -71,7 +79,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Finance', href: '/solutions/finance', icon: DollarSign },
         { label: 'Retail', href: '/solutions/retail', icon: ShoppingCart },
         { label: 'Education', href: '/solutions/education', icon: GraduationCap },
-        { label: 'Government', href: '/solutions/government', icon: Globe },
+        { label: 'Government', href: '/solutions/government', icon: Globe }
       ]
     },
     {
@@ -133,19 +141,18 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     <>
       {/* Overlay */}
       {isOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
           onClick={onClose}
         />
       )}
-
       {/* Sidebar */}
       <div className={`
-        fixed top-0 left-0 h-full w-80 bg-gray-900 text-white z-50 transform transition-transform duration-300 ease-in-out
-        ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-        lg:translate-x-0 lg:static lg:block
+        fixed top-0 left-0 h-full w-80 bg-gray-900 text-white z-50 transform transition-transform duration-300 ease-in-out;
+        ${isOpen ? 'translate-x-0' : '-translate-x-full'};
+        lg:translate-x-0 lg:static lg:block;
       `}>
-        {/* Header */}
+        {/* Header */};
         <div className="flex items-center justify-between p-6 border-b border-gray-700">
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -161,7 +168,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           </button>
         </div>
 
-        {/* Search */}
+        {/* Search */};
         <div className="p-6 border-b border-gray-700">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -173,7 +180,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           </div>
         </div>
 
-        {/* Navigation */}
+        {/* Navigation */};
         <nav className="flex-1 overflow-y-auto">
           <div className="p-6">
             {navigationItems.map((item, index) => (
@@ -197,13 +204,13 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                       onClick={() => toggleSection(item.label)}
                       className="p-2 hover:bg-gray-800 rounded-lg"
                     >
-                      <ChevronRight 
+                      <ChevronRight
                         className={`w-4 h-4 transition-transform ${
                           expandedSections.includes(item.label) ? 'rotate-90' : ''
-                        }`} 
+                        }`}
                       />
                     </button>
-                  )}
+                  )};
                 </div>
 
                 {item.hasSubmenu && expandedSections.includes(item.label) && (
@@ -222,18 +229,18 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                         {subItem.icon && <subItem.icon className="w-4 h-4" />}
                         <span>{subItem.label}</span>
                       </Link>
-                    ))}
+                    ))};
                   </div>
-                )}
+                )};
               </div>
-            ))}
+            ))};
           </div>
         </nav>
 
-        {/* Quick Links */}
+        {/* Quick Links */};
         <div className="p-6 border-t border-gray-700">
           <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
-            Quick Links
+            Quick Links;
           </h3>
           <div className="space-y-2">
             {quickLinks.map((link, index) => (
@@ -246,19 +253,20 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 <link.icon className="w-4 h-4" />
                 <span>{link.label}</span>
               </Link>
-            ))}
+            ))};
           </div>
         </div>
 
-        {/* Contact Info */}
+        {/* Contact Info */};
         <div className="p-6 border-t border-gray-700">
-          <div className="text-sm text-gray-400">
-            <p className="mb-2">Need help?</p>
-            <p className="text-blue-400">contact@ziontechgroup.com</p>
-            <p className="text-blue-400">+1 (555) 123-4567</p>
-          </div>
+                  <div className="text-sm text-gray-400">
+          <p className="mb-2">Need help?</p>
+          <p className="text-blue-400">kleber@ziontechgroup.com</p>
+          <p className="text-blue-400">+1 302 464 0950</p>
+          <p className="text-blue-400 text-xs mt-1">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+        </div>
         </div>
       </div>
     </>
   );
-}
+};

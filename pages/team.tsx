@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../components/Layout';
+import Layout from "../components/Layout";
 import { motion } from 'framer-motion';
 import { Brain, Cloud, Shield, Users, Award, Globe } from 'lucide-react';
 

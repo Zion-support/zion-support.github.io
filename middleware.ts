@@ -5,8 +5,11 @@ const publicRoutes = [
   "/",
   "/about",
   "/contact",
-  "/blog",
   "/services",
+  "/ai-services",
+  "/it-services",
+  "/micro-saas",
+  "/blog",
   "/solutions",
   "/industries",
   "/resources",
@@ -23,7 +26,7 @@ const publicRoutes = [
   "/auth/register",
   "/auth/forgot-password",
   "/auth/reset-password",
-  "/auth/verify",
+  "/auth/verify"
 ];
 
 export function middleware(request: NextRequest) {
@@ -38,7 +41,7 @@ export function middleware(request: NextRequest) {
   if (!authCookie) {
     return NextResponse.redirect(new URL("/auth/login", request.url));
   }
-
+  
   return NextResponse.next();
 }
 

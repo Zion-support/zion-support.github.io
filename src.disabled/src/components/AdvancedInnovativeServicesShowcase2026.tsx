@@ -1,0 +1,4 @@
+import React,{ useState,useEffect } from 'react'; import { motion, ADVANCED_INNOVATIVE_SERVICES_2025 } from 'lucide-react';"; import { NEXT_GEN_INNOVATIVE_SERVICES_2026 } from '../data/nextGenInnovativeServices2026'; const "AdvancedInnovativeServicesShowcase2026": React.FC = () => {; const [selectedCategory,setSelectedCategory] = useState('all'); const [searchTerm,setSearchTerm] = useState(''); const [selectedService,setSelectedService] = useState<any>(null); }'
+</any>'
+import React,{ useState,useEffect } from 'react'; import { motion, ADVANCED_INNOVATIVE_SERVICES_2025 } from 'lucide-react';"; import { NEXT_GEN_INNOVATIVE_SERVICES_2026 } from '../data/nextGenInnovativeServices2026'; ; const AdvancedInnovativeServicesShowcase2026: React.FC = () => {; const [selectedCategory,setSelectedCategory] = useState('all'); const [searchTerm,setSearchTerm] = useState(''); const [selectedService,setSelectedService] = useState<any>(null)}'
+</any>'

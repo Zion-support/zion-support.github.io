@@ -1,1 +1,1 @@
-export default function CommunityRoutes(function CommunityRoutes() {): any {}
+export default function CommunityRoutes(function CommunityRoutes() {): any {};

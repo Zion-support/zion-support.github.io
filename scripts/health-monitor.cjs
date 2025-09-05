@@ -1,15 +1,8 @@
-#!/usr/bin/env node
-const { execSync } = require('child_process');
+#!/usr/bin/env node;
+const { execSync } = require('child_process')
 const fs = require('fs')
-
-class HealthMonitor {
-  constructor() {
-    this.checks = [{ "name": 'Memory Usage', "command": 'free -h' },
-      { "name": 'Disk Space', "command": 'df -h' },
-      { "name": 'Process Status', "command": 'ps aux | grep node' }
-    ]}
-
-  async runChecks() {
-    console.log('🏥 Running health checks...');
-    for (const check of this.checks) {
-      try {
+    this.checks = [{ "name": 'Memory Usage', "command"}]
+      { "name": 'Disk Space', "command"}
+      { "name": 'Process Status', "command"}
+        const result = execSync(check.command, { "encoding"})
+cursor/fix-lint-push-and-merge-to-main-f3c1;

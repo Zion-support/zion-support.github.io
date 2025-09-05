@@ -1,0 +1,5 @@
+import React from 'react'''
+import Link from 'next/link'''
+import { Shield, CheckCircle, ArrowRight, DollarSign, Clock } from 'lucide-react'''
+export default function SecurityHardening() { return ( <main className="min-h-screen bg-white"> <section className="bg-gradient-to-br from-red-50 to-rose-100 py-16"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="flex items-center gap-3 mb-6"> <div className="p-3 rounded-lg bg-rose-600 text-white w-fit"> <Shield className="w-6 h-6" /> </div> <h1 className="text-3xl font-bold text-gray-900">Security Hardening</h1> </div> <p className="text-gray-700 text-lg max-w-3xl"> Secure your web apps and cloud with best-practice headers,CSP,rate limiting,RBAC,secret management,and continuous scanning. We implement quick wins and long-term controls. </p> </div> </section> <section className="py-12"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6""})
+</main>)"

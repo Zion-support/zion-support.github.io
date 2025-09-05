@@ -1,1 +1,1 @@
-import React from "react"} ); "export default ComponentName;"
+import React from "react"} ); "export default ComponentName;"""
