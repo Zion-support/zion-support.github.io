@@ -11,5 +11,11 @@ git status --porcelain | grep "^UU" | cut -c4- | while read file; do
     git add "$file"
 done
 
+# Handle modify/delete conflicts by removing the files
+git status --porcelain | grep "^DU" | cut -c4- | while read file; do
+    echo "Removing deleted file: $file"
+    git rm "$file"
+done
+
 echo "All conflicts resolved. Committing merge..."
-git commit -m "Merge PR #11887: Automate test improve and merge code - Resolved conflicts by choosing main branch version"
+git commit -m "Merge PR #11903: Expand services advertise and build project - Resolved conflicts by choosing main branch version"
