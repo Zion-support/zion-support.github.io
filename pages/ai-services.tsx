@@ -2,101 +2,125 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Server, 
-  Shield, 
-  Cloud, 
-  Database, 
-  Network, 
-  Code, 
-  Settings, 
-  CheckCircle, 
-  Users, 
-  DollarSign, 
-  Brain, 
-  Cpu, 
-  Wifi, 
-  Monitor, 
-  AlertTriangle, 
-  TrendingUp, 
-  Lock, 
-  Globe, 
-  HardDrive, 
-  Smartphone, 
-  Building, 
+import {
+  ArrowRight,
+  CheckCircle,
+  Brain,
+  Eye,
+  MessageSquare,
   BarChart3,
-  Package,
-  GraduationCap,
-  Atom,
-  Leaf,
-  Link as LinkIcon,
-  ArrowRight, 
-  Clock, 
-  Award, 
-  Star, 
-  Zap,
-  Search, 
-  ShoppingCart, 
-  BookOpen, 
-  Rocket,
-  Laptop
+  FileText,
+  Mic,
+  Shield,
+  Heart,
+  BookOpen,
+  Globe,
+  Car,
+  Cpu,
+  Monitor,
+  Mail,
+  TrendingUp,
+  Building,
+  ShoppingCart
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
-const itServices = [
+const aiServices = [
   {
-    title: 'Cloud Infrastructure Management',
-    description: 'Comprehensive cloud infrastructure setup, management, and optimization services',
-    icon: Cloud,
-    features: ['AWS/Azure/GCP Setup', 'Server Management', 'Auto-scaling', 'Cost Optimization'],
-    pricing: '$2,000 - $10,000/month',
-    category: 'Cloud Computing',
+    id: 1,
+    title: 'AI Email Assistant',
+    description: 'Automatically respond to customer emails with intelligent, context-aware replies.',
+    icon: Mail,
+    features: ['Natural Language Processing', 'Sentiment Analysis', 'Auto-Response Generation', 'Multi-language Support'],
+    pricing: '$500 - $2,000/month',
+    category: 'Communication',
     popular: true,
-    benefits: ['Reduced infrastructure costs', 'Improved scalability', 'Enhanced security', '24/7 monitoring'],
-    marketPrice: '$5,000/month',
+    benefits: ['Reduces response time by 80%', 'Improves customer satisfaction', 'Saves 20+ hours/week'],
+    setupTime: '2-4 weeks',
     link: '/contact'
   },
   {
-    title: 'Cybersecurity Solutions',
-    description: 'Comprehensive security services to protect your business from cyber threats',
-    icon: Shield,
-    features: ['Security Assessment', 'Threat Monitoring', 'Incident Response', 'Compliance'],
-    pricing: '$1,500 - $8,000/month',
-    category: 'Security',
-    popular: true,
-    benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection'],
-    marketPrice: '$4,000/month',
-    link: '/contact'
-  },
-  {
-    title: 'Database Management',
-    description: 'Expert database design, optimization, and maintenance services',
-    icon: Database,
-    features: ['Database Design', 'Performance Optimization', 'Backup & Recovery', 'Migration'],
+    id: 2,
+    title: 'Predictive Analytics Platform',
+    description: 'Advanced AI platform for business forecasting and trend analysis.',
+    icon: BarChart3,
+    features: ['Machine Learning Models', 'Real-time Analytics', 'Custom Dashboards', 'API Integration'],
     pricing: '$1,000 - $5,000/month',
-    category: 'Database',
+    category: 'Analytics',
+    popular: true,
+    benefits: ['Increases accuracy by 40%', 'Reduces forecasting errors', 'Enables data-driven decisions'],
+    setupTime: '4-6 weeks',
+    link: '/contact'
+  },
+  {
+    id: 3,
+    title: 'Intelligent Chatbot System',
+    description: 'AI-powered chatbot with natural conversation capabilities and multi-channel support.',
+    icon: MessageSquare,
+    features: ['Natural Language Understanding', 'Multi-channel Support', 'Integration APIs', 'Analytics Dashboard'],
+    pricing: '$300 - $1,500/month',
+    category: 'Customer Service',
+    popular: true,
+    benefits: ['Handles 80% of queries automatically', 'Available 24/7', 'Reduces support costs'],
+    setupTime: '2-3 weeks',
+    link: '/contact'
+  },
+  {
+    id: 4,
+    title: 'Computer Vision Solutions',
+    description: 'AI-powered image and video analysis for various business applications.',
+    icon: Eye,
+    features: ['Object Detection', 'Image Classification', 'Facial Recognition', 'Video Analysis'],
+    pricing: '$800 - $3,000/month',
+    category: 'Computer Vision',
     popular: false,
-    benefits: ['Improved performance', 'Data integrity', 'Reduced downtime', 'Scalability'],
-    marketPrice: '$2,500/month',
+    benefits: ['Automates visual inspections', 'Improves accuracy', 'Enables new use cases'],
+    setupTime: '6-8 weeks',
+    link: '/contact'
+  },
+  {
+    id: 5,
+    title: 'AI Content Generation',
+    description: 'Automated content creation for blogs, social media, and marketing materials.',
+    icon: FileText,
+    features: ['Text Generation', 'SEO Optimization', 'Multi-format Output', 'Brand Voice Training'],
+    pricing: '$200 - $800/month',
+    category: 'Content Creation',
+    popular: true,
+    benefits: ['Saves 15+ hours/week', 'Maintains consistent quality', 'Scales content production'],
+    setupTime: '1-2 weeks',
+    link: '/contact'
+  },
+  {
+    id: 6,
+    title: 'Voice AI Assistant',
+    description: 'Intelligent voice assistant for customer service and internal operations.',
+    icon: Mic,
+    features: ['Speech Recognition', 'Natural Language Processing', 'Voice Synthesis', 'Multi-language Support'],
+    pricing: '$600 - $2,500/month',
+    category: 'Voice AI',
+    popular: false,
+    benefits: ['Handles voice queries', 'Improves accessibility', 'Reduces call center load'],
+    setupTime: '4-6 weeks',
     link: '/contact'
   }
 ];
 
 const industries = [
-  { name: 'Healthcare', icon: Shield, description: 'Secure and compliant IT solutions for healthcare organizations' },
-  { name: 'Finance', icon: TrendingUp, description: 'Robust IT infrastructure for financial services' },
-  { name: 'Manufacturing', icon: Building, description: 'Industrial IT solutions and automation' },
-  { name: 'Retail', icon: ShoppingCart, description: 'E-commerce and retail technology solutions' },
-  { name: 'Education', icon: GraduationCap, description: 'Educational technology and learning management systems' },
-  { name: 'Government', icon: Globe, description: 'Secure government IT solutions and compliance' }
+  { name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },
+  { name: 'Finance', icon: TrendingUp, description: 'Fraud detection and risk management' },
+  { name: 'Manufacturing', icon: Building, description: 'Quality control and predictive maintenance' },
+  { name: 'Retail', icon: ShoppingCart, description: 'Personalized shopping and inventory management' },
+  { name: 'Education', icon: BookOpen, description: 'Personalized learning and assessment' },
+  { name: 'Transportation', icon: Car, description: 'Autonomous vehicles and route optimization' }
 ];
 
-export default function ITServices() {
+export default function AIServices() {
   return (
     <Layout>
       <Head>
-        <title>IT Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services including cloud computing, cybersecurity, database management, and more. Professional IT solutions for your business." />
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI services including machine learning, computer vision, natural language processing, and more. Transform your business with cutting-edge AI solutions." />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
@@ -110,11 +134,11 @@ export default function ITServices() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                IT <span className="text-blue-600">Services</span>
+                AI <span className="text-blue-600">Services</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Professional IT services to keep your business running smoothly. From cloud computing to cybersecurity, 
-                we provide comprehensive technology solutions.
+                Transform your business with cutting-edge AI solutions. From machine learning to computer vision, 
+                we provide comprehensive AI services tailored to your needs.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
@@ -125,10 +149,10 @@ export default function ITServices() {
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
                 <Link
-                  href="/ai-services"
+                  href="/micro-saas"
                   className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
                 >
-                  View AI Services
+                  View Micro SaaS
                 </Link>
               </div>
             </motion.div>
@@ -145,16 +169,16 @@ export default function ITServices() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our IT Services</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our AI Services</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Comprehensive IT solutions designed to enhance your business operations and security.
+                Comprehensive AI solutions designed to transform your business operations and drive growth.
               </p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {itServices.map((service, index) => (
+              {aiServices.map((service, index) => (
                 <motion.div
-                  key={index}
+                  key={service.id}
                   className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -169,15 +193,13 @@ export default function ITServices() {
                   
                   <div className="mb-4">
                     <span className="text-2xl font-bold text-blue-600">{service.pricing}</span>
-                    {service.marketPrice && (
-                      <span className="text-gray-500 ml-2">(Market: {service.marketPrice})</span>
-                    )}
+                    <span className="text-gray-500 ml-2">({service.setupTime})</span>
                   </div>
 
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                     <ul className="text-sm text-gray-600 space-y-1">
-                      {service.features.map((feature, idx) => (
+                      {service.features.slice(0, 4).map((feature, idx) => (
                         <li key={idx} className="flex items-center">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
@@ -185,14 +207,6 @@ export default function ITServices() {
                       ))}
                     </ul>
                   </div>
-
-                  <Link
-                    href={service.link}
-                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                  >
-                    Get Quote
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
                 </motion.div>
               ))}
             </div>
@@ -211,7 +225,7 @@ export default function ITServices() {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Industries We Serve</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Our IT solutions are tailored for various industries and business requirements.
+                Our AI solutions are tailored for various industries and use cases.
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -245,10 +259,10 @@ export default function ITServices() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Enhance Your IT Infrastructure?
+                Ready to Transform Your Business with AI?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Let's discuss how our IT services can improve your business operations and security.
+                Let's discuss how our AI solutions can help you achieve your goals.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
@@ -259,10 +273,10 @@ export default function ITServices() {
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
                 <Link
-                  href="/micro-saas"
+                  href="/it-services"
                   className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 >
-                  View Micro SaaS
+                  View IT Services
                 </Link>
               </div>
             </motion.div>

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
-import { ShoppingCart, Brain, BarChart3, CheckCircle, ArrowRight, Package, Users, CreditCard, Smartphone, Globe, Database } from 'lucide-react';
+import { ShoppingCart, Brain, BarChart3, CheckCircle, ArrowRight, Package, Users, CreditCard, Smartphone, Globe, Database, TrendingUp } from 'lucide-react';
 
 const solutions = [
   {
@@ -34,8 +34,7 @@ const benefits = [
   {
     icon: TrendingUp,
     title: 'Increased Sales',
-    description: 'AI-powered personalization and optimization drive higher conversion rates',
-    icon: ShoppingCart
+    description: 'AI-powered personalization and optimization drive higher conversion rates'
   },
   {
     title: 'Better Customer Experience',

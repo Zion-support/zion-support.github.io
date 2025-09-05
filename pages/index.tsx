@@ -1,4 +1,8 @@
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
+import Layout from '../components/Layout';
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
@@ -8,6 +12,12 @@ const stats = [
   { number: '200+', label: 'Expert Team Members' },
   { number: '20+', label: 'Years Experience' }
 ];
+
+const contactInfo = {
+  phone: '+1 (302) 464-0950',
+  email: 'info@ziontechgroup.com',
+  address: '123 Business Ave, Suite 100, Wilmington, DE 19801'
+};
 
 const services = [
   {
