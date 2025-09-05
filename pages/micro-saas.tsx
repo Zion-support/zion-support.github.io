@@ -848,6 +848,89 @@ const microSaaSProducts = [
     pricing: 'Custom Pricing',
     category: 'Future Tech',
     link: 'https://aifuture.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Auditor Pro',
+    description: 'Automated smart contract security auditing with vulnerability detection and compliance checking.',
+    icon: Shield,
+    features: ['Automated Auditing', 'Vulnerability Detection', 'Compliance Checking', 'Gas Optimization'],
+    pricing: '$499 - $2,499/month',
+    category: 'Blockchain Security',
+    popular: true,
+    link: 'https://contractauditor.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Legal Document Analyzer',
+    description: 'Intelligent legal document analysis with contract review and risk assessment.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Legal Research'],
+    pricing: '$299 - $1,499/month',
+    category: 'Legal Tech',
+    link: 'https://legalanalyzer.ziontechgroup.com'
+  },
+  {
+    title: 'Predictive Maintenance Platform',
+    description: 'AI-driven predictive maintenance for industrial equipment with IoT integration.',
+    icon: Settings,
+    features: ['Predictive Analytics', 'IoT Integration', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$399 - $1,999/month',
+    category: 'Industrial IoT',
+    link: 'https://predictivemaintenance.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Trading Bot',
+    description: 'Automated cryptocurrency and stock trading with machine learning algorithms.',
+    icon: TrendingUp,
+    features: ['ML Algorithms', 'Risk Management', 'Portfolio Optimization', 'Real-time Trading'],
+    pricing: '$199 - $999/month',
+    category: 'FinTech',
+    popular: true,
+    link: 'https://tradingbot.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Home Automation Hub',
+    description: 'Centralized smart home control with AI-powered automation and energy optimization.',
+    icon: Home,
+    features: ['Device Control', 'AI Automation', 'Energy Optimization', 'Voice Commands'],
+    pricing: '$99 - $499/month',
+    category: 'Smart Home',
+    link: 'https://smarthome.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Recruitment Platform',
+    description: 'Intelligent candidate screening and matching with bias detection and diversity analytics.',
+    icon: Users,
+    features: ['Candidate Screening', 'Bias Detection', 'Diversity Analytics', 'Interview Scheduling'],
+    pricing: '$299 - $1,499/month',
+    category: 'HR Tech',
+    link: 'https://recruitmentai.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Supply Chain Tracker',
+    description: 'End-to-end supply chain visibility with blockchain verification and fraud detection.',
+    icon: Package,
+    features: ['Supply Chain Tracking', 'Blockchain Verification', 'Fraud Detection', 'Quality Assurance'],
+    pricing: '$399 - $1,999/month',
+    category: 'Supply Chain',
+    link: 'https://supplychain.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Mental Health Assistant',
+    description: 'Intelligent mental health support with mood tracking and personalized recommendations.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Personalized Recommendations', 'Crisis Detection', 'Professional Integration'],
+    pricing: '$49 - $249/month',
+    category: 'Health Tech',
+    link: 'https://mentalhealth.ziontechgroup.com'
+  },
+  {
+    title: 'Smart City Management Platform',
+    description: 'Comprehensive smart city infrastructure management with IoT and AI integration.',
+    icon: Building,
+    features: ['Infrastructure Management', 'IoT Integration', 'Traffic Optimization', 'Resource Management'],
+    pricing: '$999 - $4,999/month',
+    category: 'Smart Cities',
+    link: 'https://smartcity.ziontechgroup.com'
   }
 ];
 

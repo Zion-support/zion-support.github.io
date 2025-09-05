@@ -119,7 +119,9 @@ export default function HomePage() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                We deliver cutting-edge AI solutions, cloud services, and technology consulting to help your business thrive in the digital age.
+                Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services. 
+                <br className="hidden md:block" />
+                <span className="text-blue-300 font-semibold">Contact us: +1 302 464 0950 | kleber@ziontechgroup.com</span>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -191,11 +193,16 @@ export default function HomePage() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Services
+                Our Comprehensive Technology Solutions
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Comprehensive technology solutions designed to accelerate your business growth
+              <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+                We deliver cutting-edge AI solutions, cloud services, and technology consulting to help your business thrive in the digital age. 
+                Our expert team provides innovative solutions with 99.9% uptime guarantee and 24/7 support.
               </p>
+              <div className="mt-6 text-sm text-gray-500">
+                <p>📞 Call us: +1 302 464 0950 | 📧 Email: kleber@ziontechgroup.com</p>
+                <p>📍 Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
+              </div>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -232,6 +239,74 @@ export default function HomePage() {
                   </motion.div>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* Enhanced Services Overview */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Why Choose Zion Tech Group?
+              </h2>
+              <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+                We combine cutting-edge technology with proven expertise to deliver solutions that drive real business value. 
+                Our comprehensive approach ensures your success from concept to deployment.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+              <motion.div
+                className="text-center p-6 bg-white rounded-lg shadow-lg"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
+                <div className="text-gray-600 font-medium">Expert Team Members</div>
+                <div className="text-sm text-gray-500 mt-2">Certified professionals with advanced degrees</div>
+              </motion.div>
+              <motion.div
+                className="text-center p-6 bg-white rounded-lg shadow-lg"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-4xl font-bold text-green-600 mb-2">500+</div>
+                <div className="text-gray-600 font-medium">Projects Completed</div>
+                <div className="text-sm text-gray-500 mt-2">Across various industries and technologies</div>
+              </motion.div>
+              <motion.div
+                className="text-center p-6 bg-white rounded-lg shadow-lg"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-4xl font-bold text-purple-600 mb-2">99.9%</div>
+                <div className="text-gray-600 font-medium">Uptime Guarantee</div>
+                <div className="text-sm text-gray-500 mt-2">Reliable and secure infrastructure</div>
+              </motion.div>
+              <motion.div
+                className="text-center p-6 bg-white rounded-lg shadow-lg"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
+                <div className="text-gray-600 font-medium">Support Available</div>
+                <div className="text-sm text-gray-500 mt-2">Round-the-clock technical assistance</div>
+              </motion.div>
             </div>
           </div>
         </section>

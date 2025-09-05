@@ -675,6 +675,108 @@ const itServices = [
     pricing: 'Custom Pricing',
     category: 'Future Infrastructure',
     link: 'https://futureinfra.ziontechgroup.com'
+  },
+  {
+    title: 'AI Infrastructure Services',
+    description: 'Specialized infrastructure for AI/ML workloads with GPU clusters and optimized computing.',
+    icon: Brain,
+    features: ['GPU Clusters', 'ML Pipeline Infrastructure', 'Model Deployment', 'Performance Optimization'],
+    pricing: '$10,000 - $50,000/month',
+    category: 'AI Infrastructure',
+    popular: true,
+    link: 'https://aiinfra.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Complete blockchain infrastructure setup including nodes, validators, and smart contract deployment.',
+    icon: Lock,
+    features: ['Node Setup', 'Validator Services', 'Smart Contract Deployment', 'Blockchain Monitoring'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Blockchain',
+    link: 'https://blockchaininfra.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Infrastructure Management',
+    description: 'Comprehensive IoT infrastructure including device management, data processing, and analytics.',
+    icon: Wifi,
+    features: ['Device Management', 'Data Processing', 'Real-time Analytics', 'Edge Computing'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'IoT',
+    link: 'https://iotinfra.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing infrastructure and hybrid quantum-classical computing solutions.',
+    icon: Cpu,
+    features: ['Quantum Hardware', 'Hybrid Computing', 'Quantum Algorithms', 'Quantum Security'],
+    pricing: '$50,000 - $200,000/month',
+    category: 'Quantum Computing',
+    link: 'https://quantuminfra.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Distributed edge computing infrastructure for low-latency applications and real-time processing.',
+    icon: Monitor,
+    features: ['Edge Nodes', 'Low-latency Processing', 'Distributed Computing', 'Real-time Analytics'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Edge Computing',
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: '5G Network Infrastructure',
+    description: '5G network infrastructure design, deployment, and optimization for enterprise applications.',
+    icon: Network,
+    features: ['5G Network Design', 'Small Cell Deployment', 'Network Optimization', 'Performance Monitoring'],
+    pricing: '$20,000 - $100,000/project',
+    category: '5G Networks',
+    link: 'https://5ginfra.ziontechgroup.com'
+  },
+  {
+    title: 'Green IT Infrastructure',
+    description: 'Sustainable and energy-efficient IT infrastructure with carbon footprint optimization.',
+    icon: Sprout,
+    features: ['Energy Efficiency', 'Carbon Footprint Reduction', 'Renewable Energy', 'Sustainable Computing'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'Green IT',
+    link: 'https://greenit.ziontechgroup.com'
+  },
+  {
+    title: 'Hybrid Cloud Management',
+    description: 'Seamless hybrid cloud infrastructure management across on-premises and cloud environments.',
+    icon: Cloud,
+    features: ['Hybrid Architecture', 'Cloud Migration', 'Data Synchronization', 'Unified Management'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Hybrid Cloud',
+    popular: true,
+    link: 'https://hybridcloud.ziontechgroup.com'
+  },
+  {
+    title: 'DevOps Infrastructure',
+    description: 'Complete DevOps infrastructure with CI/CD pipelines, monitoring, and automation tools.',
+    icon: Code,
+    features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Automated Testing', 'Deployment Automation'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'DevOps',
+    link: 'https://devopsinfra.ziontechgroup.com'
+  },
+  {
+    title: 'Data Center Modernization',
+    description: 'Complete data center modernization with latest technologies and energy-efficient solutions.',
+    icon: Building,
+    features: ['Hardware Modernization', 'Energy Efficiency', 'Cooling Optimization', 'Space Utilization'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Data Center',
+    link: 'https://datacenter.ziontechgroup.com'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Comprehensive zero trust security architecture implementation and management.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Threat Detection'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Zero Trust',
+    popular: true,
+    link: 'https://zerotrust.ziontechgroup.com'
   }
 ];
 

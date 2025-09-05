@@ -516,6 +516,96 @@ const aiServices = [
     features: ['Personalized Learning', 'Adaptive Assessment', 'Progress Tracking', 'Skill Development'],
     pricing: '$2,000 - $10,000/month',
     category: 'EdTech'
+  },
+  {
+    title: 'AI-Powered Code Generation',
+    description: 'Advanced code generation using large language models with context awareness and optimization.',
+    icon: Code,
+    features: ['Code Generation', 'Context Awareness', 'Optimization Suggestions', 'Multi-language Support'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Development',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Suite',
+    description: 'Comprehensive AI-driven cybersecurity with threat detection and automated response.',
+    icon: Shield,
+    features: ['Threat Detection', 'Automated Response', 'Behavioral Analysis', 'Incident Management'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Medical Imaging',
+    description: 'Advanced medical image analysis with AI-powered diagnosis and treatment planning.',
+    icon: Eye,
+    features: ['Image Analysis', 'Diagnosis Support', 'Treatment Planning', 'Radiology Integration'],
+    pricing: '$5,000 - $25,000 setup',
+    category: 'Medical AI'
+  },
+  {
+    title: 'AI-Powered Autonomous Vehicles',
+    description: 'Self-driving vehicle technology with computer vision and decision-making algorithms.',
+    icon: Car,
+    features: ['Computer Vision', 'Decision Making', 'Sensor Fusion', 'Safety Systems'],
+    pricing: '$50,000 - $200,000 project',
+    category: 'Autonomous Systems'
+  },
+  {
+    title: 'AI-Powered Climate Modeling',
+    description: 'Advanced climate prediction and environmental impact analysis using AI.',
+    icon: Globe,
+    features: ['Climate Prediction', 'Impact Analysis', 'Environmental Monitoring', 'Policy Optimization'],
+    pricing: '$10,000 - $50,000 project',
+    category: 'Environmental AI'
+  },
+  {
+    title: 'AI-Powered Quantum Computing',
+    description: 'Quantum algorithm optimization and quantum machine learning solutions.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Quantum ML', 'Optimization', 'Simulation'],
+    pricing: '$25,000 - $100,000 project',
+    category: 'Quantum AI'
+  },
+  {
+    title: 'AI-Powered Space Exploration',
+    description: 'AI-driven space mission planning and autonomous spacecraft operations.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Autonomous Operations', 'Data Analysis', 'Risk Assessment'],
+    pricing: '$100,000 - $500,000 project',
+    category: 'Space AI'
+  },
+  {
+    title: 'AI-Powered Legal Research',
+    description: 'Intelligent legal research and case law analysis with natural language processing.',
+    icon: FileText,
+    features: ['Legal Research', 'Case Analysis', 'Precedent Finding', 'Document Review'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Legal AI'
+  },
+  {
+    title: 'AI-Powered Agriculture',
+    description: 'Smart farming solutions with crop monitoring and yield optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Optimization', 'Pest Detection', 'Resource Management'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'AgTech'
+  },
+  {
+    title: 'AI-Powered Energy Management',
+    description: 'Intelligent energy grid management and renewable energy optimization.',
+    icon: Zap,
+    features: ['Grid Management', 'Renewable Optimization', 'Demand Forecasting', 'Storage Management'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Energy AI'
+  },
+  {
+    title: 'AI-Powered Gaming Intelligence',
+    description: 'Advanced AI for game development with procedural generation and NPC behavior.',
+    icon: Gamepad2,
+    features: ['Procedural Generation', 'NPC Behavior', 'Game Balancing', 'Player Analytics'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Gaming AI'
   }
 ];
 

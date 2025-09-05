@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Calendar, User, ArrowRight, Tag } from 'lucide-react'
 import MainLayout from '../components/layout/MainLayout'
+
 const blogPosts = [{
     id: 1,
     title: "The Future of AI in Business: 2025 Trends",
@@ -28,43 +29,32 @@ const blogPosts = [{
   },
   {
     id: 3,
-    title: "Cloud Security Best Practices",
-    excerpt: "Essential security measures for protecting your cloud infrastructure and data.",
-    author: "Jennifer Liu",
+    title: "Cybersecurity Best Practices for 2025",
+    excerpt: "Essential cybersecurity strategies to protect your business from emerging threats.",
+    author: "Alex Thompson",
     date: "2024-01-10",
     category: "Security",
     readTime: "6 min read",
     image: "/api/placeholder/600/300",
-    tags: ["Security", "Cloud", "Best Practices"]
+    tags: ["Cybersecurity", "Security", "Best Practices"]
   },
   {
     id: 4,
-    title: "Digital Transformation Strategies",
-    excerpt: "How to successfully navigate your organization's digital transformation journey.",
-    author: "David Park",
+    title: "Cloud Migration Strategies",
+    excerpt: "A comprehensive guide to migrating your infrastructure to the cloud.",
+    author: "Jennifer Lee",
     date: "2024-01-08",
-    category: "Strategy",
+    category: "Cloud",
     readTime: "8 min read",
     image: "/api/placeholder/600/300",
-    tags: ["Strategy", "Digital Transformation", "Business"]
+    tags: ["Cloud", "Migration", "Infrastructure"]
   },
   {
     id: 5,
-    title: "Machine Learning in Production",
-    excerpt: "Best practices for deploying and maintaining ML models in production environments.",
-    author: "Dr. Sarah Chen",
+    title: "API Design Best Practices",
+    excerpt: "Learn how to design robust and scalable APIs for modern applications.",
+    author: "David Kim",
     date: "2024-01-05",
-    category: "AI & Technology",
-    readTime: "9 min read",
-    image: "/api/placeholder/600/300",
-    tags: ["Machine Learning", "Production", "MLOps"]
-  },
-  {
-    id: 6,
-    title: "API Design Principles",
-    excerpt: "Creating robust, scalable APIs that developers love to use and maintain.",
-    author: "Michael Rodriguez",
-    date: "2024-01-03",
     category: "Development",
     readTime: "6 min read",
     image: "/api/placeholder/600/300",
@@ -89,64 +79,82 @@ export default function BlogPage() {
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}>
-              <h1>
-                Tech Insights & Innovation
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Latest Insights & News
               </h1>
-              <p>
-                Stay ahead with the latest insights on AI, technology trends, and business innovation
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Stay updated with the latest trends in AI, technology, and business innovation
               </p>
             </motion.div>
-        {/* Blog Posts Section */}
-        <section className="py-20">
+          </div>
+        </section>
+
+        {/* Blog Posts */}
+        <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Main Content */}
-              <div className="lg:col-span-3">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {blogPosts.map((post, index) => (
+              <div className="lg:col-span-2">
+                <div className="space-y-8">
+                  {blogPosts.map((post) => (
                     <motion.article
                       key={post.id}
-                      className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                      className="bg-white rounded-lg shadow-lg overflow-hidden"
                       initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: index * 0.1 }}
-                      viewport={{ once: true }}>
-                      <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600">
-                        <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
-                      </div>
-                      <div className="p-6">
-                        <div className="flex flex-wrap gap-2 mb-3">
-                          {post.tags.map((tag, tagIndex) => (
-                            <span key={tagIndex} className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
-                              {tag}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8 }}
+                    >
+                      <div className="md:flex">
+                        <div className="md:w-1/3">
+                          <img
+                            src={post.image}
+                            alt={post.title}
+                            className="w-full h-48 md:h-full object-cover"
+                          />
+                        </div>
+                        <div className="p-6 md:w-2/3">
+                          <div className="flex items-center space-x-4 mb-4">
+                            <span className="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded">
+                              {post.category}
                             </span>
-                          ))}
-                        </div>
-                        <h2 className="text-xl font-semibold text-gray-900 mb-2">
-                          {post.title}
-                        </h2>
-                        <p className="text-gray-600 mb-4">
-                          {post.excerpt}
-                        </p>
-                        <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                          <div className="flex items-center">
-                            <User className="w-4 h-4 mr-1" />
-                            {post.author}
+                            <span className="text-gray-500 text-sm">{post.readTime}</span>
                           </div>
-                          <div className="flex items-center">
-                            <Calendar className="w-4 h-4 mr-1" />
-                            {new Date(post.date).toLocaleDateString()}
+                          <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                            {post.title}
+                          </h2>
+                          <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center space-x-4">
+                              <div className="flex items-center space-x-2">
+                                <User className="w-4 h-4 text-gray-500" />
+                                <span className="text-sm text-gray-600">{post.author}</span>
+                              </div>
+                              <div className="flex items-center space-x-2">
+                                <Calendar className="w-4 h-4 text-gray-500" />
+                                <span className="text-sm text-gray-600">{post.date}</span>
+                              </div>
+                            </div>
+                            <Link
+                              href={`/blog/${post.id}`}
+                              className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                            >
+                              Read More
+                              <ArrowRight className="w-4 h-4 ml-1" />
+                            </Link>
                           </div>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span>{post.readTime}</span>
-                          <Link
-                            href={`/blog/${post.id}`}
-                            className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center">
-                            Read More
-                            <ArrowRight className="w-4 h-4 ml-1" />
-                          </Link>
+                          <div className="flex flex-wrap gap-2 mt-4">
+                            {post.tags.map((tag) => (
+                              <span
+                                key={tag}
+                                className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800"
+                              >
+                                <Tag className="w-3 h-3 mr-1" />
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
                         </div>
                       </div>
                     </motion.article>
@@ -172,5 +180,5 @@ export default function BlogPage() {
         </section>
       </div>
     </MainLayout>
-  )
+  );
 }
