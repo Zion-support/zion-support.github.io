@@ -299,6 +299,186 @@ description: 'Automated code review with security scanning, performance optimiza
     popular: true
   },
   {
+    title: 'AI-Powered Metaverse Builder',
+    description: 'No-code platform for creating immersive 3D virtual worlds and metaverse experiences.',
+    icon: Globe,
+    features: ['3D World Builder', 'Avatar Creation', 'Virtual Events', 'NFT Integration'],
+    pricing: '$299 - $2,999/month',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Simulator',
+    description: 'Cloud-based quantum computing simulation and algorithm development platform.',
+    icon: Cpu,
+    features: ['Quantum Circuit Designer', 'Algorithm Testing', 'Performance Analysis', 'Educational Tools'],
+    pricing: '$199 - $1,999/month',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'Digital Twin Platform',
+    description: 'Create and manage digital twins of physical assets, processes, and systems.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Sync', 'Predictive Analytics', 'IoT Integration'],
+    pricing: '$399 - $3,999/month',
+    category: 'Digital Twin',
+    popular: true
+  },
+  {
+    title: 'Autonomous Drone Fleet Management',
+    description: 'Complete drone fleet management with autonomous flight planning and monitoring.',
+    icon: Rocket,
+    features: ['Flight Planning', 'Autonomous Operations', 'Payload Management', 'Regulatory Compliance'],
+    pricing: '$499 - $4,999/month',
+    category: 'Drone Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Carbon Footprint Tracker',
+    description: 'Real-time carbon footprint monitoring and sustainability optimization for businesses.',
+    icon: Sprout,
+    features: ['Carbon Tracking', 'Sustainability Goals', 'Offset Management', 'Reporting Dashboard'],
+    pricing: '$99 - $999/month',
+    category: 'Sustainability',
+    popular: true
+  },
+  {
+    title: 'Blockchain Analytics & Compliance',
+    description: 'Advanced blockchain transaction analysis and regulatory compliance monitoring.',
+    icon: Shield,
+    features: ['Transaction Tracking', 'Compliance Monitoring', 'Risk Assessment', 'Regulatory Reporting'],
+    pricing: '$299 - $2,999/month',
+    category: 'Blockchain Analytics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Voice Cloning Platform',
+    description: 'High-quality voice cloning and synthesis for personalized audio content.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Text-to-Speech', 'Emotion Control', 'Multi-language Support'],
+    pricing: '$199 - $1,999/month',
+    category: 'Voice Technology',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Development Suite',
+    description: 'Complete platform for developing, testing, and deploying smart contracts.',
+    icon: Code,
+    features: ['Visual Builder', 'Testing Framework', 'Deployment Tools', 'Security Auditing'],
+    pricing: '$149 - $1,499/month',
+    category: 'Blockchain Development',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personal Finance Manager',
+    description: 'Intelligent personal finance tracking with investment recommendations and budgeting.',
+    icon: DollarSign,
+    features: ['Expense Tracking', 'Investment Analysis', 'Budget Optimization', 'Financial Planning'],
+    pricing: '$9 - $99/month',
+    category: 'Personal Finance',
+    popular: true
+  },
+  {
+    title: 'Virtual Reality Meeting Platform',
+    description: 'Immersive VR meeting and collaboration platform for remote teams.',
+    icon: Users,
+    features: ['VR Meetings', '3D Collaboration', 'Spatial Audio', 'Avatar Customization'],
+    pricing: '$49 - $499/month',
+    category: 'VR Collaboration',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Legal Document Generator',
+    description: 'Automated legal document creation with contract templates and compliance checking.',
+    icon: FileText,
+    features: ['Document Templates', 'Compliance Checking', 'Version Control', 'E-signature Integration'],
+    pricing: '$199 - $1,999/month',
+    category: 'Legal Tech',
+    popular: true
+  },
+  {
+    title: 'Smart Home IoT Management',
+    description: 'Centralized management platform for smart home devices and automation.',
+    icon: Home,
+    features: ['Device Control', 'Automation Rules', 'Energy Monitoring', 'Security Management'],
+    pricing: '$19 - $199/month',
+    category: 'Smart Home',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Mental Health Assistant',
+    description: 'Intelligent mental health monitoring and support with mood tracking and therapy tools.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Therapy Sessions', 'Crisis Detection', 'Progress Monitoring'],
+    pricing: '$29 - $299/month',
+    category: 'Mental Health',
+    popular: true
+  },
+  {
+    title: 'Autonomous Vehicle Fleet Management',
+    description: 'Complete management system for autonomous vehicle fleets and logistics.',
+    icon: Car,
+    features: ['Fleet Monitoring', 'Route Optimization', 'Maintenance Scheduling', 'Safety Analytics'],
+    pricing: '$999 - $9,999/month',
+    category: 'Autonomous Vehicles',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Language Learning Platform',
+    description: 'Personalized language learning with AI tutors and immersive experiences.',
+    icon: BookOpen,
+    features: ['AI Tutoring', 'Speech Recognition', 'Cultural Context', 'Progress Tracking'],
+    pricing: '$19 - $199/month',
+    category: 'Education',
+    popular: true
+  },
+  {
+    title: 'Blockchain Identity Management',
+    description: 'Decentralized identity verification and management using blockchain technology.',
+    icon: Lock,
+    features: ['Identity Verification', 'Privacy Protection', 'Cross-platform Access', 'Compliance Tools'],
+    pricing: '$99 - $999/month',
+    category: 'Identity Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Real Estate Valuation',
+    description: 'Automated property valuation using AI and machine learning algorithms.',
+    icon: Building,
+    features: ['Property Analysis', 'Market Trends', 'Investment Insights', 'Risk Assessment'],
+    pricing: '$49 - $499/month',
+    category: 'Real Estate',
+    popular: true
+  },
+  {
+    title: 'Smart Agriculture Monitoring',
+    description: 'IoT-based farm monitoring with AI-powered crop and livestock management.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Livestock Tracking', 'Weather Integration', 'Yield Prediction'],
+    pricing: '$199 - $1,999/month',
+    category: 'Agriculture',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Scanner',
+    description: 'Automated vulnerability scanning and security assessment for web applications.',
+    icon: Shield,
+    features: ['Vulnerability Detection', 'Penetration Testing', 'Compliance Checking', 'Security Reports'],
+    pricing: '$99 - $999/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'Virtual Event Management Platform',
+    description: 'Complete platform for hosting and managing virtual events and conferences.',
+    icon: Calendar,
+    features: ['Event Creation', 'Attendee Management', 'Live Streaming', 'Networking Tools'],
+    pricing: '$149 - $1,499/month',
+    category: 'Event Management',
+    popular: true
+  },
+  {
     title: 'Real-Time Language Translation API',
     description: 'Advanced translation service with context awareness and industry-specific terminology.',
     icon: Globe,
