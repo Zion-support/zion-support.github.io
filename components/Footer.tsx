@@ -17,7 +17,8 @@ import {
   Twitter,
   Linkedin,
   Github,
-  Youtube
+  Youtube,
+  Building
 } from 'lucide-react';
 
 const services = {
@@ -29,7 +30,9 @@ const services = {
     { "name": 'AI Drug Discovery', "href": '/ai-services#ai-drug-discovery' },
     { "name": 'AI Autonomous Vehicles', "href": '/ai-services#ai-autonomous-vehicles' },
     { "name": 'AI Climate Modeling', "href": '/ai-services#ai-climate-modeling' },
-    { "name": 'AI Cybersecurity', "href": '/ai-services#ai-cybersecurity' }
+    { "name": 'AI Cybersecurity', "href": '/ai-services#ai-cybersecurity' },
+    { "name": 'AI Quantum Computing', "href": '/ai-services#ai-quantum' },
+    { "name": 'AI Space Mission Planning', "href": '/ai-services#ai-space' }
   ],
   'IT Services': [
     { "name": 'Cloud Infrastructure Management', "href": '/it-services#cloud-infrastructure' },
@@ -39,7 +42,9 @@ const services = {
     { "name": 'Blockchain Infrastructure', "href": '/it-services#blockchain-infrastructure' },
     { "name": 'IoT Platform Management', "href": '/it-services#iot-platform' },
     { "name": 'Digital Twin Technology', "href": '/it-services#digital-twins' },
-    { "name": 'Green IT Solutions', "href": '/it-services#green-it' }
+    { "name": 'Green IT Solutions', "href": '/it-services#green-it' },
+    { "name": 'Quantum Computing Infrastructure', "href": '/it-services#quantum-computing' },
+    { "name": 'AI Infrastructure Services', "href": '/it-services#ai-infrastructure' }
   ],
   'Micro SaaS': [
     { "name": 'Cloud Cost Guard', "href": '/micro-saas#cloud-cost-guard' },
@@ -49,32 +54,67 @@ const services = {
     { "name": 'Predictive Maintenance AI', "href": '/micro-saas#predictive-maintenance' },
     { "name": 'Blockchain Analytics', "href": '/micro-saas#blockchain-analytics' },
     { "name": 'AI SEO Optimizer', "href": '/micro-saas#ai-seo-optimizer' },
-    { "name": 'Smart Energy Management', "href": '/micro-saas#smart-energy' }
+    { "name": 'Smart Energy Management', "href": '/micro-saas#smart-energy' },
+    { "name": 'AI-Powered Code Generator', "href": '/micro-saas#ai-code-generator' },
+    { "name": 'Quantum Computing Simulator', "href": '/micro-saas#quantum-simulator' }
   ]
 };
 
-const company = [{ "name": 'About Us', "href": '/about' },
+const company = [
+  { "name": 'About Us', "href": '/about' },
   { "name": 'Our Team', "href": '/about#team' },
   { "name": 'Careers', "href": '/careers' },
   { "name": 'Case Studies', "href": '/case-studies' },
   { "name": 'Blog', "href": '/blog' },
-  { "name": 'News', "href": '/news' }
+  { "name": 'News', "href": '/news' },
+  { "name": 'Partners', "href": '/partners' },
+  { "name": 'Investor Relations', "href": '/investors' },
+  { "name": 'Sustainability', "href": '/sustainability' }
 ];
 
-const resources = [{ "name": 'Documentation', "href": '/docs' },
+const resources = [
+  { "name": 'Documentation', "href": '/docs' },
   { "name": 'API Reference', "href": '/api-docs' },
   { "name": 'Tutorials', "href": '/tutorials' },
   { "name": 'Guides', "href": '/guides' },
   { "name": 'FAQ', "href": '/faq' },
-  { "name": 'Support', "href": '/support' }
+  { "name": 'Support', "href": '/support' },
+  { "name": 'White Papers', "href": '/white-papers' },
+  { "name": 'Webinars', "href": '/webinars' },
+  { "name": 'Developer Tools', "href": '/developer-tools' }
 ];
 
-const legal = [{ "name": 'Privacy Policy', "href": '/privacy' },
+const solutions = [
+  { "name": 'Enterprise Solutions', "href": '/solutions/enterprise' },
+  { "name": 'Startup Solutions', "href": '/solutions/startup' },
+  { "name": 'Industry Solutions', "href": '/solutions/industry' },
+  { "name": 'Custom Development', "href": '/solutions/custom' },
+  { "name": 'Digital Transformation', "href": '/solutions/digital-transformation' },
+  { "name": 'Cloud Migration', "href": '/solutions/cloud-migration' },
+  { "name": 'AI Integration', "href": '/solutions/ai-integration' },
+  { "name": 'Blockchain Solutions', "href": '/solutions/blockchain' }
+];
+
+const industries = [
+  { "name": 'Healthcare', "href": '/industries/healthcare' },
+  { "name": 'Finance', "href": '/industries/finance' },
+  { "name": 'Manufacturing', "href": '/industries/manufacturing' },
+  { "name": 'Retail', "href": '/industries/retail' },
+  { "name": 'Education', "href": '/industries/education' },
+  { "name": 'Government', "href": '/industries/government' },
+  { "name": 'Energy', "href": '/industries/energy' },
+  { "name": 'Transportation', "href": '/industries/transportation' }
+];
+
+const legal = [
+  { "name": 'Privacy Policy', "href": '/privacy' },
   { "name": 'Terms of Service', "href": '/terms' },
   { "name": 'Cookie Policy', "href": '/cookies' },
   { "name": 'Security', "href": '/security' },
   { "name": 'Compliance', "href": '/compliance' },
-  { "name": 'Sitemap', "href": '/sitemap' }
+  { "name": 'Sitemap', "href": '/sitemap' },
+  { "name": 'Accessibility', "href": '/accessibility' },
+  { "name": 'GDPR Compliance', "href": '/gdpr' }
 ];
 
 const socialLinks = [{ "name": 'LinkedIn', "href": 'https://linkedin.com/company/ziontechgroup', "icon": Linkedin },
@@ -96,9 +136,9 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">Z</span>
@@ -110,7 +150,8 @@ export default function Footer() {
             </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Leading technology solutions provider specializing in AI, cloud services, 
-              and digital transformation. Empowering businesses with innovative technology.
+              and digital transformation. Empowering businesses with innovative technology 
+              and cutting-edge solutions for the modern digital world.
             </p>
             
             {/* Contact Info */}
@@ -132,6 +173,24 @@ export default function Footer() {
                 <span>{contactInfo.hours}</span>
               </div>
             </div>
+
+            {/* Social Links */}
+            <div className="mt-6">
+              <h4 className="text-sm font-medium text-gray-300 mb-3">Follow Us</h4>
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <Link
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Services */}
@@ -145,7 +204,7 @@ export default function Footer() {
                 <div key={category}>
                   <h4 className="text-sm font-medium text-gray-300 mb-2">{category}</h4>
                   <ul className="space-y-2">
-                    {links.slice(0, 3).map((link) => (
+                    {links.slice(0, 4).map((link) => (
                       <li key={link.name}>
                         <Link 
                           href={link.href}
@@ -162,18 +221,18 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Company */}
+          {/* Solutions */}
           <div>
             <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <Users className="w-5 h-5 mr-2 text-blue-400" />
-              Company
+              <Shield className="w-5 h-5 mr-2 text-blue-400" />
+              Solutions
             </h3>
             <ul className="space-y-3">
-              {company.map((link) => (
+              {solutions.map((link) => (
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
@@ -183,18 +242,57 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Industries */}
           <div>
+            <h3 className="text-lg font-semibold mb-6 flex items-center">
+              <Building className="w-5 h-5 mr-2 text-blue-400" />
+              Industries
+            </h3>
+            <ul className="space-y-3">
+              {industries.map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company & Resources */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 flex items-center">
+              <Users className="w-5 h-5 mr-2 text-blue-400" />
+              Company
+            </h3>
+            <ul className="space-y-3 mb-8">
+              {company.slice(0, 5).map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
             <h3 className="text-lg font-semibold mb-6 flex items-center">
               <Globe className="w-5 h-5 mr-2 text-blue-400" />
               Resources
             </h3>
             <ul className="space-y-3">
-              {resources.map((link) => (
+              {resources.slice(0, 5).map((link) => (
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}

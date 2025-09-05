@@ -25,7 +25,10 @@ import {
   ShoppingCart,
   BookOpen,
   Zap,
-  Video
+  Video,
+  Car,
+  Search,
+  Sprout
 } from 'lucide-react';
 
 const navigation = [
@@ -34,11 +37,11 @@ const navigation = [
     href: '/services',
     icon: Settings,
     children: [
-      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '40+' },
-      { name: 'IT Services', href: '/it-services', icon: Network, count: '40+' },
-      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '45+' },
+      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '80+' },
+      { name: 'IT Services', href: '/it-services', icon: Network, count: '70+' },
+      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '65+' },
       { name: 'Talent Solutions', href: '/talent', icon: Users, count: '15+' },
-      { name: 'All Services', href: '/services', icon: Globe, count: '140+' }
+      { name: 'All Services', href: '/services', icon: Globe, count: '230+' }
     ]
   },
   {
@@ -51,7 +54,9 @@ const navigation = [
       { name: 'Industry Solutions', href: '/solutions/industry', icon: BarChart3 },
       { name: 'Custom Development', href: '/solutions/custom', icon: Settings },
       { name: 'Digital Transformation', href: '/solutions/digital-transformation', icon: Zap },
-      { name: 'Cloud Migration', href: '/solutions/cloud-migration', icon: Cloud }
+      { name: 'Cloud Migration', href: '/solutions/cloud-migration', icon: Cloud },
+      { name: 'AI Integration', href: '/solutions/ai-integration', icon: Brain },
+      { name: 'Blockchain Solutions', href: '/solutions/blockchain', icon: Shield }
     ]
   },
   {
@@ -64,7 +69,9 @@ const navigation = [
       { name: 'Manufacturing', href: '/industries/manufacturing', icon: Settings },
       { name: 'Retail', href: '/industries/retail', icon: ShoppingCart },
       { name: 'Education', href: '/industries/education', icon: BookOpen },
-      { name: 'Government', href: '/industries/government', icon: Building }
+      { name: 'Government', href: '/industries/government', icon: Building },
+      { name: 'Energy', href: '/industries/energy', icon: Zap },
+      { name: 'Transportation', href: '/industries/transportation', icon: Car }
     ]
   },
   {
@@ -79,7 +86,9 @@ const navigation = [
       { name: 'API Reference', href: '/api-docs', icon: Settings },
       { name: 'FAQ', href: '/faq', icon: MessageSquare },
       { name: 'White Papers', href: '/white-papers', icon: FileText },
-      { name: 'Webinars', href: '/webinars', icon: Video }
+      { name: 'Webinars', href: '/webinars', icon: Video },
+      { name: 'Blog', href: '/blog', icon: MessageSquare },
+      { name: 'News', href: '/news', icon: MessageSquare }
     ]
   },
   {
@@ -92,7 +101,9 @@ const navigation = [
       { name: 'Careers', href: '/careers', icon: Rocket },
       { name: 'Partners', href: '/partners', icon: Network },
       { name: 'News', href: '/news', icon: MessageSquare },
-      { name: 'Blog', href: '/blog', icon: MessageSquare }
+      { name: 'Blog', href: '/blog', icon: MessageSquare },
+      { name: 'Investor Relations', href: '/investors', icon: DollarSign },
+      { name: 'Sustainability', href: '/sustainability', icon: Sprout }
     ]
   },
   {
@@ -149,29 +160,41 @@ export default function Header() {
       <nav className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2 flex-shrink-0">
             <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">Z</span>
             </div>
-            <div>
+            <div className="hidden sm:block">
               <div className="text-xl font-bold text-gray-900">Zion Tech Group</div>
               <div className="text-xs text-gray-600">Technology Solutions</div>
             </div>
           </Link>
 
+          {/* Search Bar - Desktop */}
+          <div className="hidden md:flex flex-1 max-w-md mx-8">
+            <div className="relative w-full">
+              <input
+                type="text"
+                placeholder="Search services, solutions..."
+                className="w-full px-4 py-2 pl-10 pr-4 text-gray-700 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+            </div>
+          </div>
+
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
                   href={item.href}
-                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors py-2"
                   onMouseEnter={() => setActiveDropdown(item.name)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
                   <item.icon className="w-4 h-4" />
-                  <span>{item.name}</span>
-                  {item.children && <ChevronDown className="w-4 h-4" />}
+                  <span className="text-sm">{item.name}</span>
+                  {item.children && <ChevronDown className="w-3 h-3" />}
                 </Link>
 
                 {/* Dropdown Menu */}
@@ -182,7 +205,7 @@ export default function Header() {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
-                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
+                        className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
                         onMouseEnter={() => setActiveDropdown(item.name)}
                         onMouseLeave={() => setActiveDropdown(null)}
                       >
@@ -194,7 +217,7 @@ export default function Header() {
                           >
                             <div className="flex items-center space-x-3">
                               <child.icon className="w-4 h-4" />
-                              <span>{child.name}</span>
+                              <span className="text-sm">{child.name}</span>
                             </div>
                             {child.count && (
                               <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full">
@@ -212,16 +235,16 @@ export default function Header() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-3 flex-shrink-0">
             <Link
               href="/contact"
-              className="px-6 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-medium"
+              className="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-medium text-sm"
             >
               Get Quote
             </Link>
             <Link
               href="/contact"
-              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm"
             >
               Free Consultation
             </Link>
@@ -230,7 +253,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
+            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors flex-shrink-0"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -243,30 +266,45 @@ export default function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden border-t border-gray-200 bg-white"
+              className="lg:hidden border-t border-gray-200 bg-white max-h-screen overflow-y-auto"
             >
-              <div className="py-4 space-y-2">
+              {/* Mobile Search */}
+              <div className="p-4 border-b border-gray-200">
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder="Search services, solutions..."
+                    className="w-full px-4 py-2 pl-10 pr-4 text-gray-700 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                </div>
+              </div>
+
+              <div className="py-4 space-y-1">
                 {navigation.map((item) => (
                   <div key={item.name}>
                     <Link
                       href={item.href}
-                      className="flex items-center space-x-2 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium"
+                      className="flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium"
                       onClick={closeMenu}
                     >
-                      <item.icon className="w-4 h-4" />
-                      <span>{item.name}</span>
+                      <div className="flex items-center space-x-3">
+                        <item.icon className="w-5 h-5" />
+                        <span className="text-base">{item.name}</span>
+                      </div>
+                      {item.children && <ChevronDown className="w-4 h-4" />}
                     </Link>
                     {item.children && (
-                      <div className="ml-8 space-y-1">
+                      <div className="ml-8 space-y-1 border-l-2 border-gray-100 pl-4">
                         {item.children.map((child) => (
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="flex items-center justify-between px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                            className="flex items-center justify-between px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded-lg mx-2"
                             onClick={closeMenu}
                           >
-                            <div className="flex items-center space-x-2">
-                              <child.icon className="w-3 h-3" />
+                            <div className="flex items-center space-x-3">
+                              <child.icon className="w-4 h-4" />
                               <span>{child.name}</span>
                             </div>
                             {child.count && (
@@ -282,7 +320,7 @@ export default function Header() {
                 ))}
                 
                 {/* Mobile CTA Buttons */}
-                <div className="px-4 pt-4 border-t border-gray-200 space-y-2">
+                <div className="px-4 pt-6 border-t border-gray-200 space-y-3">
                   <Link
                     href="/contact"
                     className="block w-full px-4 py-3 text-center border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-medium"
@@ -297,6 +335,20 @@ export default function Header() {
                   >
                     Free Consultation
                   </Link>
+                </div>
+
+                {/* Mobile Contact Info */}
+                <div className="px-4 pt-4 border-t border-gray-200">
+                  <div className="text-sm text-gray-600 space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <Phone className="w-4 h-4" />
+                      <span>{contactInfo.phone}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Mail className="w-4 h-4" />
+                      <span className="text-xs">{contactInfo.email}</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>

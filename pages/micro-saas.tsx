@@ -299,6 +299,178 @@ const microSaaSProducts = [
     link: 'https://apidocs.ziontechgroup.com'
   },
   {
+    title: 'AI-Powered Code Generator',
+    description: 'Generate production-ready code from natural language descriptions using advanced AI models.',
+    icon: Code,
+    features: ['Natural Language to Code', 'Multi-language Support', 'Code Optimization', 'Integration Ready'],
+    pricing: '$199 - $999/month',
+    category: 'Development',
+    popular: true,
+    link: 'https://aicodegen.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Analytics Platform',
+    description: 'Comprehensive blockchain data analysis with transaction tracking and smart contract monitoring.',
+    icon: Network,
+    features: ['Transaction Analysis', 'Smart Contract Monitoring', 'DeFi Analytics', 'Risk Assessment'],
+    pricing: '$299 - $1,499/month',
+    category: 'Blockchain',
+    link: 'https://blockchainanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Device Management Hub',
+    description: 'Centralized IoT device management with real-time monitoring and automated maintenance.',
+    icon: Settings,
+    features: ['Device Monitoring', 'Firmware Updates', 'Data Collection', 'Alert Management'],
+    pricing: '$149 - $799/month',
+    category: 'IoT',
+    link: 'https://iotmanager.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Video Editor',
+    description: 'Automated video editing with AI-driven content analysis and intelligent cuts.',
+    icon: Video,
+    features: ['AI Auto-editing', 'Content Analysis', 'Smart Cuts', 'Multi-format Export'],
+    pricing: '$99 - $499/month',
+    category: 'Video Production',
+    link: 'https://aivideoeditor.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Auditor',
+    description: 'Automated smart contract security analysis with vulnerability detection and recommendations.',
+    icon: Shield,
+    features: ['Security Analysis', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Checking'],
+    pricing: '$399 - $1,999/project',
+    category: 'Blockchain Security',
+    link: 'https://smartcontractauditor.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Data Labeling',
+    description: 'Automated data labeling and annotation for machine learning model training.',
+    icon: Target,
+    features: ['Auto Labeling', 'Quality Control', 'Multi-format Support', 'Team Collaboration'],
+    pricing: '$199 - $999/month',
+    category: 'Machine Learning',
+    link: 'https://aidatalabeling.ziontechgroup.com'
+  },
+  {
+    title: 'Voice Cloning & Synthesis',
+    description: 'High-quality voice cloning and text-to-speech synthesis for various applications.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Text-to-Speech', 'Emotion Control', 'Multi-language Support'],
+    pricing: '$299 - $1,499/month',
+    category: 'Voice Technology',
+    link: 'https://voicecloning.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Legal Research',
+    description: 'Intelligent legal research platform with case law analysis and precedent identification.',
+    icon: BookOpen,
+    features: ['Case Law Analysis', 'Precedent Identification', 'Legal Document Search', 'Citation Tracking'],
+    pricing: '$399 - $1,999/month',
+    category: 'Legal Tech',
+    link: 'https://ailegalresearch.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Energy Management',
+    description: 'AI-driven energy optimization for buildings and industrial facilities.',
+    icon: Zap,
+    features: ['Energy Forecasting', 'Load Optimization', 'Cost Analysis', 'Sustainability Tracking'],
+    pricing: '$199 - $999/month',
+    category: 'Energy Management',
+    link: 'https://smartenergy.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Recruitment',
+    description: 'Intelligent candidate screening and matching using advanced AI algorithms.',
+    icon: Users,
+    features: ['Resume Analysis', 'Skill Matching', 'Interview Scheduling', 'Bias Detection'],
+    pricing: '$299 - $1,499/month',
+    category: 'HR Tech',
+    link: 'https://airecruitment.ziontechgroup.com'
+  },
+  {
+    title: 'Predictive Maintenance AI',
+    description: 'Machine learning-powered predictive maintenance for industrial equipment.',
+    icon: Settings,
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$499 - $2,499/month',
+    category: 'Industrial AI',
+    link: 'https://predictivemaintenance.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Trading Bot',
+    description: 'Automated trading system with machine learning algorithms and risk management.',
+    icon: TrendingUp,
+    features: ['Algorithmic Trading', 'Risk Management', 'Market Analysis', 'Portfolio Optimization'],
+    pricing: '$199 - $999/month',
+    category: 'FinTech',
+    link: 'https://aitradingbot.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Home Automation',
+    description: 'AI-powered home automation with voice control and learning capabilities.',
+    icon: Home,
+    features: ['Voice Control', 'Learning Algorithms', 'Device Integration', 'Energy Optimization'],
+    pricing: '$99 - $499/month',
+    category: 'Smart Home',
+    link: 'https://smarthome.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Medical Diagnosis',
+    description: 'Medical image analysis and diagnostic assistance using advanced AI models.',
+    icon: Heart,
+    features: ['Medical Imaging', 'Diagnostic Assistance', 'Risk Assessment', 'Clinical Integration'],
+    pricing: '$999 - $4,999/month',
+    category: 'HealthTech',
+    link: 'https://aimedical.ziontechgroup.com'
+  },
+  {
+    title: 'Autonomous Vehicle Fleet Management',
+    description: 'AI-powered fleet management for autonomous vehicles with route optimization.',
+    icon: Car,
+    features: ['Route Optimization', 'Fleet Monitoring', 'Predictive Maintenance', 'Safety Analytics'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Autonomous Vehicles',
+    link: 'https://autonomousfleet.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Climate Modeling',
+    description: 'Advanced climate modeling and environmental impact analysis using AI.',
+    icon: Sprout,
+    features: ['Climate Modeling', 'Impact Analysis', 'Predictive Forecasting', 'Sustainability Metrics'],
+    pricing: '$499 - $2,499/month',
+    category: 'Climate Tech',
+    link: 'https://aiclimate.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum Computing Simulator',
+    description: 'Cloud-based quantum computing simulation and algorithm development platform.',
+    icon: Cpu,
+    features: ['Quantum Simulation', 'Algorithm Development', 'Circuit Design', 'Performance Analysis'],
+    pricing: '$299 - $1,499/month',
+    category: 'Quantum Computing',
+    link: 'https://quantumsimulator.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Drug Discovery',
+    description: 'Machine learning platform for drug discovery and molecular design.',
+    icon: Heart,
+    features: ['Molecular Design', 'Drug Discovery', 'Toxicity Prediction', 'Clinical Trials'],
+    pricing: '$2,999 - $14,999/month',
+    category: 'BioTech',
+    link: 'https://aidrugdiscovery.ziontechgroup.com'
+  },
+  {
+    title: 'Space Mission Planning AI',
+    description: 'AI-powered space mission planning and satellite constellation management.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Satellite Management', 'Orbit Optimization', 'Risk Assessment'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Space Tech',
+    link: 'https://spacemissionai.ziontechgroup.com'
+  },
+  {
     title: 'User Behavior Analytics',
     description: 'Deep user behavior analysis with heatmaps, session recordings, and conversion optimization.',
     icon: TrendingUp,
