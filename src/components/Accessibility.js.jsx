@@ -1,52 +1,106 @@
-import React, {useState, useEffect, createContext, useContext} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, {useState, useEffect, createContext, useContext} from 'react';'''';';
+import {motion, AnimatePresence} from 'framer-motion';';';
 import {Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X} from 'lucide-react';
 ;const AccessibilityContext = createContext(null);
 export const useAccessibility = (props: any) => {}
+  const context = useContext(AccessibilityContext);';
+  if (!context) {}';';
+''';';
+''''';';
+    throw new Error('''',';';
+      'useAccessibility must be used within an AccessibilityProvider'
+=======
+import React, {useState, useEffect, createContext, useContext} from 'react';
+=======
+import React, {useState, useEffect, createContext, useContext} from 'react';'''
+>>>>>>> main
+import {motion, AnimatePresence} from 'framer-motion';
+import {Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X} from 'lucide-react';
+;const AccessibilityContext = createContext(null);
+export const useAccessibility = ("props": "any) => {"}
   const context = useContext(AccessibilityContext);
   if (!context) {}
+<<<<<<< HEAD
 '';
 '';
 '''';
     throw new Error('''',;
       'useAccessibility must be used within an AccessibilityProvider';
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+''
+''
+''''
+    throw new Error('''',
+      'useAccessibility must be used within an AccessibilityProvider'
+>>>>>>> main
     );
   }
   return context;
 };
 // Accessibility Provider Component;
+<<<<<<< HEAD
+<<<<<<< HEAD
+export const AccessibilityProvider = (props: any) => {}';
+  const [highContrast, setHighContrast] = useState(false);';';
+  const [reducedMotion, setReducedMotion] = useState(false);'';';
+  const [fontSize, setFontSize] = useState('medium');'';';
+  const [colorBlindMode, setColorBlindMode] = useState('none');
+  // Load settings from localStorage;';
+  useEffect(() => {}';';
+''';';
+'''';';
+    const savedSettings = localStorage.getItem('zion-accessibility-settings');
+    if (savedSettings) {}
+      const settings = JSON.parse(savedSettings);';
+      setHighContrast(settings.highContrast || false);';';
+      setReducedMotion(settings.reducedMotion || false);'';';
+      setFontSize(settings.fontSize || 'medium');'';';
+=======
 export const AccessibilityProvider = (props: any) => {}
+=======
+export const AccessibilityProvider = ("props": "any) => {"}
+>>>>>>> main
   const [highContrast, setHighContrast] = useState(false);
-  const [reducedMotion, setReducedMotion] = useState(false);';
-  const [fontSize, setFontSize] = useState('medium');';
+  const [reducedMotion, setReducedMotion] = useState(false);'
+  const [fontSize, setFontSize] = useState('medium');'
   const [colorBlindMode, setColorBlindMode] = useState('none');
   // Load settings from localStorage;
   useEffect(() => {}
-'';
-''';
+''
+'''
     const savedSettings = localStorage.getItem('zion-accessibility-settings');
     if (savedSettings) {}
       const settings = JSON.parse(savedSettings);
       setHighContrast(settings.highContrast || false);
+<<<<<<< HEAD
       setReducedMotion(settings.reducedMotion || false);';
       setFontSize(settings.fontSize || 'medium');';
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+      setReducedMotion(settings.reducedMotion || false);'
+      setFontSize(settings.fontSize || 'medium');'
+>>>>>>> main
       setColorBlindMode(settings.colorBlindMode || 'none');
     }
 }, []);
+<<<<<<< HEAD
   // Save settings to localStorage;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
-  };
+  "};
 }, []);, []);
     const settings = {";
 ;,"});,"})";
- const AccessibilityContext = createContext (null) ; export const useAccessibility = (props: any) => { const context = useContext (AccessibilityContext) ; if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider") } return context};"""";,"});,"})";
+ const AccessibilityContext = createContext (null) ; export const useAccessibility = ("props": "any) => { const context = useContext (AccessibilityContext) ; if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider") "} return context};"""";,"});,"})";
 ;,"});,"})";
- const AccessibilityContext = createContext(null); export const useAccessibility = (props: any) => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" )} return context};,"});,"})"""";,"});,"})","});,"})","});,"})";
+ const AccessibilityContext = createContext(null); export const useAccessibility = ("props": "any) => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" )"} return context};,"});,"})"""";,"});,"})","});,"})","});,"})";
 ;const AccessibilityContext = createContext(null);,"});,"})";
-export const useAccessibility = (props: any) => {}"});,"})";
+export const useAccessibility = ("props": "any) => {"}"});,"})";
   const context = useContext(AccessibilityContext);,"});,"})";
   if (!context) {}"});,"})";
 ";,"});,"})";
@@ -59,7 +113,7 @@ export const useAccessibility = (props: any) => {}"});,"})";
   return context,"});,"});";
 };,"});,"})";
 // comment;
-export const AccessibilityProvider = (props: any) => {}"});,"})";
+export const AccessibilityProvider = ("props": "any) => {"}"});,"})";
   const [highContrast, setHighContrast] = useState(false);,"});,"})";
   const [reducedMotion, setReducedMotion] = useState(false);,"});,"})";
   const [fontSize, setFontSize] = useState("medium");,"});,"})";
@@ -119,14 +173,14 @@ export const AccessibilityProvider = (props: any) => {}"});,"})";
 }"";,"});,"})";
     // comment;
     root.style.fontSize ="""";,"});,"})";
-      fontSize == = "small" ? "14px" : fontSize === "large" ? "18px" : "16px",";,"});,"})";
+      fontSize == = "small" ? "14px" : "fontSize === "large" ? "18px" : "16px"",";,"});,"})";
     // comment;
     root.style.filter ="""";,"});,"})";
       colorBlindMode === "none""""";,"});,"})";
         ? "none""""";,"});,"})";
-        : colorBlindMode === "protanopia""""";,"});,"})";
+        : "colorBlindMode === "protanopia""""";","});,"})";
           ? "url(#protanopia)""""";,"});,"})";
-          : colorBlindMode === "deuteranopia""""";,"});,"})";
+          : "colorBlindMode === "deuteranopia""""";","});,"})";
             ? "url(#deuteranopia)""""";,"});,"})";
             : "url(#tritanopia);,"});,"});";
 }, [highContrast, reducedMotion, fontSize, colorBlindMode]);,"});,"})";
@@ -147,7 +201,7 @@ export const AccessibilityProvider = (props: any) => {}"});,"})";
   );,"});,"});";
 };,"});,"})";
 // comment;
-export const AccessibilityPanel = (props: any) => {}"});,"})";
+export const AccessibilityPanel = ("props": "any) => {"}"});,"})";
   const [isOpen, setIsOpen] = useState(false);,"});,"})";
   const {}"});,"})";
     highContrast,,"});,"})";
@@ -196,10 +250,10 @@ export const AccessibilityPanel = (props: any) => {}"});,"})";
     <>;,"});,"})";
       {/* comment */}"});,"})";
       <motion.button,"});,"})";
-        whileHover="{{" scale: 1.1 }}"});,"})";
-        whileTap="{{" scale: 0.9 }}"});,"})";
+        whileHover="{{" "scale": "1.1 "}}"});,"})";
+        whileTap="{{" "scale": "0.9 "}}"});,"})";
         onClick="{()" => setIsOpen(true)}"});,"})";
-        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300"""","});,"})";
+        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center "hover": "shadow-2xl "hover":shadow-zion-cyan/40 transition-all duration-300""""","});,"})";
         aria-label="Open Accessibility Settings"""";,"});,"})";
       >"""";,"});,"})";
         <Accessibility className="w-6 h-6"   />;,"});,"})";
@@ -208,16 +262,16 @@ export const AccessibilityPanel = (props: any) => {}"});,"})";
       <AnimatePresence>;,"});,"})";
         {isOpen && (;,"});,"})";
           <motion.div,"});,"})";
-            initial="{{" opacity: 0 }}"});,"})";
-            animate="{{" opacity: 1 }}""";,"});,"})";
-            exit="{{" opacity: 0 }}"""";,"});,"})";
+            initial="{{" "opacity": "0 "}}"});,"})";
+            animate="{{" "opacity": "1 "}}""";,"});,"})";
+            exit="{{" "opacity": "0 "}}"""";,"});,"})";
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4""";,"});,"})";
             onClick="{()" => setIsOpen(false)}"});,"})";
           >;,"});,"})";
             <motion.div,"});,"})";
-              initial="{{" scale: 0.9, opacity: 0 }}"});,"})";
-              animate="{{" scale: 1, opacity: 1 }}""";,"});,"})";
-              exit="{{" scale: 0.9, opacity: 0 }}"""";,"});,"})";
+              initial="{{" "scale": "0.9", "opacity": "0 "}}"});,"})";
+              animate="{{" "scale": "1", "opacity": "1 "}}""";,"});,"})";
+              exit="{{" "scale": "0.9", "opacity": "0 "}}"""";,"});,"})";
               className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto""";,"});,"})";
               onClick="{e" => e.stopPropagation()}"});,"})";
             >""";,"});,"})";
@@ -231,7 +285,7 @@ export const AccessibilityPanel = (props: any) => {}"});,"})";
                   variant="ghost"""";,"});,"})";
                   size="sm"""";,"});,"})";
                   onClick="{()" => setIsOpen(false)}"""";,"});,"})";
-                  className="text-zion-slate-light hover: text-white"""","});,"})";
+                  className="text-zion-slate-light "hover": "text-white""""","});,"})";
                 >"""";,"});,"})";
                   <X className="w-4 h-4"   />;,"});,"})";
                 </Button>;,"});,"})";
@@ -262,7 +316,7 @@ export const AccessibilityPanel = (props: any) => {}"});,"})";
                   >""";,"});,"})";
                     {highContrast ? ("""";,"});,"})";
                       <Eye className="w-4 h-4"   />""";,"});,"})";
-                    ) : ("""";,"});,"})";
+                    ) : "("""";","});,"})";
                       <EyeOff className="w-4 h-4"   />;,"});,"})";
                     )}"});,"})";
                   </Button>;,"});,"})";
@@ -291,7 +345,7 @@ export const AccessibilityPanel = (props: any) => {}"});,"})";
                   >""";,"});,"})";
                     {reducedMotion ? ("""";,"});,"})";
                       <VolumeX className="w-4 h-4"   />""";,"});,"})";
-                    ) : ("""";,"});,"})";
+                    ) : "("""";","});,"})";
                       <Volume2 className="w-4 h-4"   />;,"});,"})";
                     )}"});,"})";
                   </Button>;,"});,"})";
@@ -358,19 +412,19 @@ export const AccessibilityPanel = (props: any) => {}"});,"})";
                   """";,"});,"})";
                   <div className="space-y-2 text-sm text-zion-slate-light">"""";,"});,"})";
                     <div className="flex justify-between">""";,"});,"})";
-                      <span>Open Panel: </span>"""","});,"})";
+                      <span>Open "Panel": "</span>""""","});,"})";
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">;,"});,"})";
                         Ctrl/Cmd + Shift + A,"});,"})";
                       </kbd>""";,"});,"})";
                     </div>"""";,"});,"})";
                     <div className="flex justify-between">""";,"});,"})";
-                      <span>High Contrast: </span>"""","});,"})";
+                      <span>High "Contrast": "</span>""""","});,"})";
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">;,"});,"})";
                         Ctrl/Cmd + Shift + H,"});,"})";
                       </kbd>""";,"});,"})";
                     </div>"""";,"});,"})";
                     <div className="flex justify-between">""";,"});,"})";
-                      <span>Reduced Motion: </span>"""","});,"})";
+                      <span>Reduced "Motion": "</span>""""","});,"})";
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">;,"});,"})";
                         Ctrl/Cmd + Shift + M,"});,"})";
                       </kbd>;,"});,"})";
@@ -392,7 +446,7 @@ export const AccessibilityPanel = (props: any) => {}"});,"})";
 export const SkipToContent = () => (""";,"});,"})";
   <a"""";,"});,"})";
     href="#main-content"""";,"});,"})";
-    className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300""","});,"})";
+    className="sr-only "focus": "not-sr-only "focus":absolute "focus":top-4 "focus":left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 "hover":bg-zion-cyan-light transition-colors duration-300"""","});,"})";
   >;,"});,"})";
     Skip to main content,"});,"})";
   </a>;,"});,"})";
@@ -402,7 +456,7 @@ export const useFocusTrap = isActive => {}"});,"})";
   useEffect(() => {}"});,"})";
     if (!isActive) return,""";,"});,"})";
     const focusableElements =""""";,"});,"})";
-      "button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);,"});,"})";
+      "button, [href], input, select, textarea, [tabindex]: "not([tabindex="-1"]);","});,"})";
     const container = document.activeElement?.closest("[data-focus-trap]");,"});,"})";
     if(!container) return,"});,"})";
     const firstFocusableElement = focusableContent[0];,"});,"})";
@@ -433,42 +487,892 @@ export const SrOnly = ({children}) => ("""";,"});,"})";
 );,"});,"})";
 export default AccessibilityPanel;""";,"});,"})";
 """"";,"});,"})";
- const AccessibilityContext = createContext (null)  export const useAccessibility = (props: any) => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";;import React, {useState, useEffect, createContext, useContext} from "react"";import React, {useState, useEffect, createContext, useContext} from "react""";""";
- const AccessibilityContext = createContext (null)  export const useAccessibility = (props: any) => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";import React, {useState, useEffect, createContext, useContext}  from "react,;
+ const AccessibilityContext = createContext (null)  export const useAccessibility = ("props": "any) => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  "} return context }";;import React, {useState, useEffect, createContext, useContext} from "react"";import React, {useState, useEffect, createContext, useContext} from "react""";""";
+ const AccessibilityContext = createContext (null)  export const useAccessibility = ("props": "any) => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  "} return context }";import React, {useState, useEffect, createContext, useContext}  from "react,;
 const AccessibilityContext = createContext()";
-export const useAccessibility = (props: any) => {}
+export const useAccessibility = ("props": "any) => {"}
 const context = useContext(AccessibilityContext)";
   if (!context) {}"";
 """;
 """"";
     throw new Error(""""";
+=======
+  // Save settings to localStorage
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+    const settings = {"
+;,"}
+    );,"})"
+ const AccessibilityContext = createContext (null) ; export const useAccessibility = (props: any) => { const context = useContext (AccessibilityContext) ; if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider") } return context};"""";,"}
+    );,"})"
+;,"}
+    );,"})"
+ const AccessibilityContext = createContext(null); export const useAccessibility = (props: any) => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" )} return context};,"}
+    );,"})"""";,"}
+    );,"})","}
+    );,"})","}
+    );,"})"
+;const AccessibilityContext = createContext(null);,"}
+    );,"})"
+export const useAccessibility = (props: any) => {}"}
+    );,"})"
+  const context = useContext(AccessibilityContext);,"}
+    );,"})"
+  if (!context) {}"}
+    );,"})"
+";,"}
+    );,"})"
+"";,"}
+    );,"})"
+""";,"}
+    );,"})"
+    throw new Error("""";,"}
+    );,"})"
+      "useAccessibility must be used within an AccessibilityProvider";,"}
+    );,"})"
+    );,"}
+    );,"}
+    );"
+}"}
+    );,"})"
+  return context,"}
+    );,"}
+    );"
+};,"}
+    );,"})"
+// comment
+export const AccessibilityProvider = (props: any) => {}"}
+    );,"})"
+  const [highContrast, setHighContrast] = useState(false);,"}
+    );,"})"
+  const [reducedMotion, setReducedMotion] = useState(false);,"}
+    );,"})"
+  const [fontSize, setFontSize] = useState("medium");,"}
+    );,"})"
+  const [colorBlindMode, setColorBlindMode] = useState("none");,"}
+    );,"})"
+  // comment
+  useEffect(() => {}"}
+    );,"})"
+";,"}
+    );,"})"
+"";,"}
+    );,"})"
+""";,"}
+    );,"})"
+    const savedSettings = localStorage.getItem("zion-accessibility-settings");,"}
+    );,"})"
+    if (savedSettings) {}"}
+    );,"})"
+      const settings = JSON.parse(savedSettings);,"}
+    );,"})"
+      setHighContrast(settings.highContrast || false);,"}
+    );,"})"
+      setReducedMotion(settings.reducedMotion || false);,"}
+    );,"})"
+      setFontSize(settings.fontSize || "medium");,"}
+    );,"})"
+      setColorBlindMode(settings.colorBlindMode || "none");,"}
+    );,"}
+    );"
+}"}
+    );,"}
+    );"
+}, []);,"}
+    );,"})"
+  // comment
+  useEffect(() => {}"}
+    );,"})"
+    const settings = {}"}
+    );,"})"
+      highContrast,,"}
+    );,"})"
+      reducedMotion,";,"}
+    );,"})"
+      fontSize,"";,"}
+    );,"})"
+      colorBlindMode};""";,"}
+    );,"})"
+    localStorage.setItem("""";,"}
+    );,"})"
+      "zion-accessibility-settings",,"}
+    );,"})"
+      JSON.stringify(settings);,"}
+    );,"})"
+    );,"}
+    );,"}
+    );"
+}, [highContrast, reducedMotion, fontSize, colorBlindMode]);,"}
+    );,"})"
+  // comment
+  useEffect(() => {}"}
+    );,"})"
+    const root = document.documentElement,"}
+    );,"})"
+    // comment
+    if (highContrast) {}"}
+    );,"})"
+";,"}
+    );,"})"
+"";,"}
+    );,"})"
+""";,"}
+    );,"})"
+      root.classList.add("high-contrast");,"}
+    );,"}
+    );"
+} else {}"}
+    );,"})"
+";,"}
+    );,"})"
+"";,"}
+    );,"})"
+""";,"}
+    );,"})"
+      root.classList.remove("high-contrast");,"}
+    );,"}
+    );"
+}"}
+    );,"})"
+    // comment
+    if (reducedMotion) {}"}
+    );,"})"
+";,"}
+    );,"})"
+"";,"}
+    );,"})"
+""";,"}
+    );,"})"
+      root.classList.add("reduced-motion");,"}
+    );,"}
+    );"
+} else {}"}
+    );,"})"
+";,"}
+    );,"})"
+"";,"}
+    );,"})"
+""";,"}
+    );,"})"
+      root.classList.remove("reduced-motion");,"}
+    );,"}
+    );"
+}"";,"}
+    );,"})"
+    // comment
+    root.style.fontSize ="""";,"}
+    );,"})"
+      fontSize == = "small" ? "14px" : fontSize === "large" ? "18px" : "16px",";,"}
+    );,"})"
+    // comment
+    root.style.filter ="""";,"}
+    );,"})"
+      colorBlindMode === "none""""";,"}
+    );,"})"
+        ? "none""""";,"}
+    );,"})"
+        : colorBlindMode === "protanopia""""";,"}
+    );,"})"
+          ? "url(#protanopia)""""";,"}
+    );,"})"
+          : colorBlindMode === "deuteranopia""""";,"}
+    );,"})"
+            ? "url(#deuteranopia)""""";,"}
+    );,"})"
+            : "url(#tritanopia);,"}
+    );,"}
+    );"
+}, [highContrast, reducedMotion, fontSize, colorBlindMode]);,"}
+    );,"})"
+  const toggleReducedMotion = () => setReducedMotion(!reducedMotion);,"}
+    );,"})"
+  const value = {}"}
+    );,"})"
+    highContrast,,"}
+    );,"})"
+    reducedMotion,,"}
+    );,"})"
+    fontSize,,"}
+    );,"})"
+    colorBlindMode,,"}
+    );,"})"
+    toggleHighContrast,,"}
+    );,"})"
+    toggleReducedMotion,,"}
+    );,"})"
+    setFontSize,,"}
+    );,"})"
+    setColorBlindMode};,"}
+    );,"})"
+  return ();,"}
+    );,"})"
+    <AccessibilityContext.Provider value="{value}">;,"}
+    );,"})"
+      {children}"}
+    );,"})"
+    </AccessibilityContext.Provider>;,"}
+    );,"})"
+  );,"}
+    );,"}
+    );"
+};,"}
+    );,"})"
+// comment
+export const AccessibilityPanel = (props: any) => {}"}
+    );,"})"
+  const [isOpen, setIsOpen] = useState(false);,"}
+    );,"})"
+  const {}"}
+    );,"})"
+    highContrast,,"}
+    );,"})"
+    reducedMotion,,"}
+    );,"})"
+    fontSize,,"}
+    );,"})"
+    colorBlindMode,,"}
+    );,"})"
+    toggleHighContrast,,"}
+    );,"})"
+    toggleReducedMotion,,"}
+    );,"})"
+    setFontSize,,"}
+    );,"})"
+    setColorBlindMode} = useAccessibility();,"}
+    );,"})"
+  // comment
+  useEffect(() => {}"}
+    );,"})"
+    const handleKeyDown = event => {}"}
+    );,"})"
+      // comment
+      if();,"}
+    );,"})"
+        (event.ctrlKey || event.metaKey) &&";,"}
+    );,"})"
+        event.shiftKey &&"";,"}
+    );,"})"
+        event.key === "A";,"}
+    );,"})"
+      ) {}"}
+    );,"})"
+        event.preventDefault();,"}
+    );,"})"
+        setIsOpen(!isOpen);,"}
+    );,"}
+    );"
+}"}
+    );,"})"
+      // comment
+      if();,"}
+    );,"})"
+        (event.ctrlKey || event.metaKey) &&";,"}
+    );,"})"
+        event.shiftKey &&"";,"}
+    );,"})"
+        event.key === "H";,"}
+    );,"})"
+      ) {}"}
+    );,"})"
+        event.preventDefault();,"}
+    );,"})"
+        toggleHighContrast();,"}
+    );,"}
+    );"
+}"}
+    );,"})"
+      // comment
+      if();,"}
+    );,"})"
+        (event.ctrlKey || event.metaKey) &&";,"}
+    );,"})"
+        event.shiftKey &&"";,"}
+    );,"})"
+        event.key === "M";,"}
+    );,"})"
+      ) {}"}
+    );,"})"
+        event.preventDefault();,"}
+    );,"})"
+        toggleReducedMotion();,"}
+    );,"}
+    );"
+}"";,"}
+    );,"}
+    );"
+};""";,"}
+    );,"})"
+    window.addEventListener();"";,"}
+    );,"})"
+    return () => window.removeEventListener("keydown", handleKeyDown);,"}
+    );,"}
+    );"
+}, [isOpen, toggleHighContrast, toggleReducedMotion]);,"}
+    );,"})"
+  return ();,"}
+    );,"})"
+    <>;,"}
+    );,"})"
+      {/* comment */}"}
+    );,"})"
+      <motion.button,"}
+    );,"})"
+        whileHover="{{" scale: 1.1 }}"}
+    );,"})"
+        whileTap="{{" scale: 0.9 }}"}
+    );,"})"
+        onClick="{()" => setIsOpen(true)}"}
+    );,"})"
+        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300"""","}
+    );,"})"
+        aria-label="Open Accessibility Settings"""";,"}
+    );,"})"
+      >"""";,"}
+    );,"})"
+        <Accessibility className="w-6 h-6"   />;,"}
+    );,"})"
+      </motion.button>;,"}
+    );,"})"
+      {/* comment */}"}
+    );,"})"
+      <AnimatePresence>;,"}
+    );,"})"
+        {isOpen && (;,"}
+    );,"})"
+          <motion.div,"}
+    );,"})"
+            initial="{{" opacity: 0 }}"}
+    );,"})"
+            animate="{{" opacity: 1 }}""";,"}
+    );,"})"
+            exit="{{" opacity: 0 }}"""";,"}
+    );,"})"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4""";,"}
+    );,"})"
+            onClick="{()" => setIsOpen(false)}"}
+    );,"})"
+          >;,"}
+    );,"})"
+            <motion.div,"}
+    );,"})"
+              initial="{{" scale: 0.9, opacity: 0 }}"}
+    );,"})"
+              animate="{{" scale: 1, opacity: 1 }}""";,"}
+    );,"})"
+              exit="{{" scale: 0.9, opacity: 0 }}"""";,"}
+    );,"})"
+              className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto""";,"}
+    );,"})"
+              onClick="{e" => e.stopPropagation()}"}
+    );,"})"
+            >""";,"}
+    );,"})"
+              {/* comment */}"""";,"}
+    );,"})"
+              <div className="flex items-center justify-between mb-6">"""";,"}
+    );,"})"
+                <h2 className="text-xl font-bold text-white flex items-center gap-2">"""";,"}
+    );,"})"
+                  <Accessibility className="w-5 h-5 text-zion-cyan"   />;,"}
+    );,"})"
+                  Accessibility Settings,"}
+    );,"})"
+                </h2>""";,"}
+    );,"})"
+                <Button"""";,"}
+    );,"})"
+                  variant="ghost"""";,"}
+    );,"})"
+                  size="sm"""";,"}
+    );,"})"
+                  onClick="{()" => setIsOpen(false)}"""";,"}
+    );,"})"
+                  className="text-zion-slate-light hover: text-white"""","}
+    );,"})"
+                >"""";,"}
+    );,"})"
+                  <X className="w-4 h-4"   />;,"}
+    );,"})"
+                </Button>;,"}
+    );,"})"
+              </div>;,"}
+    );,"})"
+""";,"}
+    );,"})"
+              {/* comment */}"""";,"}
+    );,"})"
+              <div className="space-y-6">""";,"}
+    );,"})"
+                {/* comment */}"""";,"}
+    );,"})"
+                <div className="flex items-center justify-between">""";,"}
+    );,"})"
+                  <div>"""";,"}
+    );,"})"
+                    <h3 className="text-white font-medium mb-1">;,"}
+    );,"})"
+                      High Contrast""";,"}
+    );,"})"
+                    """";,"}
+    );,"})"
+                    <p className="text-sm text-zion-slate-light">;,"}
+    );,"})"
+                      Increase contrast for better visibility,"}
+    );,"})"
+                    </p>;,"}
+    );,"})"
+                  </div>";,"}
+    );,"})"
+                  <Button"""";,"}
+    );,"})"
+                    variant="{highContrast" ? "default" : "outline"}"""";,"}
+    );,"})"
+                    size="sm""";,"}
+    );,"})"
+                    onClick={toggleHighContrast}"}
+    );,"})"
+                    className={}"}
+    );,"})"
+";,"}
+    );,"})"
+                      highContrast"";,"}
+    );,"})"
+                        ? "bg-zion-cyan text-white""";,"}
+    );,"})"
+                        : "border-zion-cyan/30 text-zion-cyan";,"}
+    );,"}
+    );"
+}"}
+    );,"})"
+                  >""";,"}
+    );,"})"
+                    {highContrast ? ("""";,"}
+    );,"})"
+                      <Eye className="w-4 h-4"   />""";,"}
+    );,"})"
+                    ) : ("""";,"}
+    );,"})"
+                      <EyeOff className="w-4 h-4"   />;,"}
+    );,"})"
+                    )}"}
+    );,"})"
+                  </Button>;,"}
+    );,"})"
+                </div>;,"}
+    );,"})"
+""";,"}
+    );,"})"
+                {/* comment */}"""";,"}
+    );,"})"
+                <div className="flex items-center justify-between">""";,"}
+    );,"})"
+                  <div>"""";,"}
+    );,"})"
+                    <h3 className="text-white font-medium mb-1">;,"}
+    );,"})"
+                      Reduced Motion""";,"}
+    );,"})"
+                    """";,"}
+    );,"})"
+                    <p className="text-sm text-zion-slate-light">;,"}
+    );,"})"
+                      Minimize animations and transitions,"}
+    );,"})"
+                    </p>;,"}
+    );,"})"
+                  </div>";,"}
+    );,"})"
+                  <Button"""";,"}
+    );,"})"
+                    variant="{reducedMotion" ? "default" : "outline"}"""";,"}
+    );,"})"
+                    size="sm""";,"}
+    );,"})"
+                    onClick={toggleReducedMotion}"}
+    );,"})"
+                    className={}"}
+    );,"})"
+";,"}
+    );,"})"
+                      reducedMotion"";,"}
+    );,"})"
+                        ? "bg-zion-cyan text-white""";,"}
+    );,"})"
+                        : "border-zion-cyan/30 text-zion-cyan";,"}
+    );,"}
+    );"
+}"}
+    );,"})"
+                  >""";,"}
+    );,"})"
+                    {reducedMotion ? ("""";,"}
+    );,"})"
+                      <VolumeX className="w-4 h-4"   />""";,"}
+    );,"})"
+                    ) : ("""";,"}
+    );,"})"
+                      <Volume2 className="w-4 h-4"   />;,"}
+    );,"})"
+                    )}"}
+    );,"})"
+                  </Button>;,"}
+    );,"})"
+                </div>;,"}
+    );,"})"
+                {/* comment */}""";,"}
+    );,"})"
+                <div>"""";,"}
+    );,"})"
+                  <h3 className="text-white font-medium mb-3">Font Size"""";,"}
+    );,"})"
+                  <div className="flex gap-2">";,"}
+    );,"})"
+                    {["small",medium",large"].map(size => (;,"}
+    );,"})"
+                      <Button,"}
+    );,"})"
+                        key={size}""";,"}
+    );,"})"
+                        variant="{fontSize" === size ? "default" : "outline"}"""";,"}
+    );,"})"
+                        size="sm""";,"}
+    );,"})"
+                        onClick="{()" => setFontSize(size)}"}
+    );,"})"
+                        className={}"}
+    );,"})"
+";,"}
+    );,"})"
+"";,"}
+    );,"})"
+""";,"}
+    );,"})"
+                          fontSize === size"""";,"}
+    );,"})"
+                            ? "bg-zion-cyan text-white""""";,"}
+    );,"})"
+                            : "border-zion-cyan/30 text-zion-cyan";,"}
+    );,"}
+    );"
+}"}
+    );,"})"
+                      >;,"}
+    );,"})"
+                        {size.charAt(0).toUpperCase() + size.slice(1)}"}
+    );,"})"
+                      </Button>;,"}
+    );,"})"
+                    ))}"}
+    );,"})"
+                  </div>;,"}
+    );,"})"
+                {/* comment */}""";,"}
+    );,"})"
+                <div>"""";,"}
+    );,"})"
+                  <h3 className="text-white font-medium mb-3">;,"}
+    );,"})"
+                    Color Blind Support""";,"}
+    );,"})"
+                  """";,"}
+    );,"})"
+                  <div className="grid grid-cols-2 gap-2">";,"}
+    );,"})"
+                    {["none",protanopia",deuteranopia",tritanopia"].map();,"}
+    );,"})"
+                      mode => (;,"}
+    );,"})"
+                        <Button,"}
+    );,"})"
+                          key={mode}"}
+    );,"})"
+                          variant={}"}
+    );,"})"
+";,"}
+    );,"})"
+                            colorBlindMode === mode ? "default" : "outline""";,"}
+    );,"}
+    );"
+}"""";,"}
+    );,"})"
+                          size="sm""";,"}
+    );,"})"
+                          onClick="{()" => setColorBlindMode(mode)}"}
+    );,"})"
+                          className={}"}
+    );,"})"
+";,"}
+    );,"})"
+"";,"}
+    );,"})"
+""";,"}
+    );,"})"
+                            colorBlindMode === mode"""";,"}
+    );,"})"
+                              ? "bg-zion-cyan text-white""""";,"}
+    );,"})"
+                              : "border-zion-cyan/30 text-zion-cyan";,"}
+    );,"}
+    );"
+}"}
+    );,"})"
+                        >;,"}
+    );,"})"
+                          {mode.charAt(0).toUpperCase() + mode.slice(1)}"}
+    );,"})"
+                        </Button>;,"}
+    );,"})"
+                      );,"}
+    );,"})"
+                    )}"}
+    );,"})"
+                  </div>;,"}
+    );,"})"
+""";,"}
+    );,"})"
+                {/* comment */}"""";,"}
+    );,"})"
+                <div className="bg-zion-blue-dark/50 rounded-lg p-4">"""";,"}
+    );,"})"
+                  <h3 className="text-white font-medium mb-3 flex items-center gap-2">"""";,"}
+    );,"})"
+                    <Keyboard className="w-4 h-4 text-zion-cyan"   />;,"}
+    );,"})"
+                    Keyboard Shortcuts""";,"}
+    );,"})"
+                  """";,"}
+    );,"})"
+                  <div className="space-y-2 text-sm text-zion-slate-light">"""";,"}
+    );,"})"
+                    <div className="flex justify-between">""";,"}
+    );,"})"
+                      <span>Open Panel: </span>"""","}
+    );,"})"
+                      <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">;,"}
+    );,"})"
+                        Ctrl/Cmd + Shift + A,"}
+    );,"})"
+                      </kbd>""";,"}
+    );,"})"
+                    </div>"""";,"}
+    );,"})"
+                    <div className="flex justify-between">""";,"}
+    );,"})"
+                      <span>High Contrast: </span>"""","}
+    );,"})"
+                      <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">;,"}
+    );,"})"
+                        Ctrl/Cmd + Shift + H,"}
+    );,"})"
+                      </kbd>""";,"}
+    );,"})"
+                    </div>"""";,"}
+    );,"})"
+                    <div className="flex justify-between">""";,"}
+    );,"})"
+                      <span>Reduced Motion: </span>"""","}
+    );,"})"
+                      <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">;,"}
+    );,"})"
+                        Ctrl/Cmd + Shift + M,"}
+    );,"})"
+                      </kbd>;,"}
+    );,"})"
+                    </div>;,"}
+    );,"})"
+""";,"}
+    );,"})"
+              {/* comment */}"""";,"}
+    );,"})"
+              <div className="mt-6 pt-4 border-t border-zion-cyan/20">"""";,"}
+    );,"})"
+                <p className="text-xs text-zion-slate-light text-center">;,"}
+    );,"})"
+                  These settings are saved locally and will persist across,"}
+    );,"})"
+                  sessions.</p>;,"}
+    );,"})"
+              </div>;,"}
+    );,"})"
+            </motion.div>;,"}
+    );,"})"
+        )}"}
+    );,"})"
+      </AnimatePresence>;,"}
+    );,"})"
+    </>"}
+    );,"})"
+  );,"}
+    );,"}
+    );"
+};,"}
+    );,"})"
+// comment
+export const SkipToContent = () => (""";,"}
+    );,"})"
+  <a"""";,"}
+    );,"})"
+    href="#main-content"""";,"}
+    );,"})"
+    className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300""","}
+    );,"})"
+  >;,"}
+    );,"})"
+    Skip to main content,"}
+    );,"})"
+  </a>;,"}
+    );,"})"
+);,"}
+    );,"})"
+// comment
+export const useFocusTrap = isActive => {}"}
+    );,"})"
+  useEffect(() => {}"}
+    );,"})"
+    if (!isActive) return,""";,"}
+    );,"})"
+    const focusableElements =""""";,"}
+    );,"})"
+      "button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);,"}
+    );,"})"
+    const container = document.activeElement?.closest("[data-focus-trap]");,"}
+    );,"})"
+    if(!container) return,"}
+    );,"})"
+    const firstFocusableElement = focusableContent[0];,"}
+    );,"})"
+    const lastFocusableElement = focusableContent[focusableContent.length-1];,"}
+    );,"})"
+    const handleTabKey = e => {}"}
+    );,"})"
+";,"}
+    );,"})"
+      if (e.key === "Tab") {}"}
+    );,"})"
+        if(e.shiftKey) {}"}
+    );,"})"
+          if(document.activeElement === firstFocusableElement) {}"}
+    );,"})"
+            e.preventDefault();,"}
+    );,"})"
+            lastFocusableElement.focus();,"}
+    );,"}
+    );"
+}"}
+    );,"}
+    );"
+} else {}"}
+    );,"})"
+          if(document.activeElement === lastFocusableElement) {}"}
+    );,"})"
+            e.preventDefault();,"}
+    );,"})"
+            firstFocusableElement.focus();,"}
+    );,"}
+    );"
+}"}
+    );,"}
+    );"
+}";,"}
+    );,"}
+    );"
+}"";,"}
+    );,"}
+    );"
+};""";,"}
+    );,"})"
+    document.addEventListener();"";,"}
+    );,"})"
+    return () => document.removeEventListener("keydown", handleTabKey);,"}
+    );,"}
+    );"
+}, [isActive]);,"}
+    );,"}
+    );"
+};,"}
+    );,"})"
+// comment
+export const SrOnly = ({children}) => ("""";,"}
+    );,"})"
+  <span className="sr-only">{children}</span>;,"}
+    );,"})"
+);,"}
+    );,"})"
+export default AccessibilityPanel;""";,"}
+    );,"})"
+""""";,"}
+    );,"})"
+ const AccessibilityContext = createContext (null)  export const useAccessibility = (props: any) => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";import React, {useState, useEffect, createContext, useContext} from "react"";import React, {useState, useEffect, createContext, useContext} from "react""";"""
+ const AccessibilityContext = createContext (null)  export const useAccessibility = (props: any) => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";import React, {useState, useEffect, createContext, useContext}  from "react,
+const AccessibilityContext = createContext()"
+export const useAccessibility = (props: any) => {}
+const context = useContext(AccessibilityContext)"
+  if (!context) {}""
+"""
+"""""
+    throw new Error("""""
+>>>>>>> main
       "useAccessibility must be used within an AccessibilityProvider"    )}
-;
+
   return context}
+<<<<<<< HEAD
 ;
 // comment;
-export const AccessibilityProvider = (props: any) => {}";
+export const AccessibilityProvider = ("props": "any) => {"}";
   const [highContrast, setHighContrast] = useState(false)"";
   const [reducedMotion, setReducedMotion] = useState(false)"";
   const [fontSize, setFontSize] = useState("medium")"";
   const [colorBlindMode, setColorBlindMode] = useState();
+=======
+
+// comment
+export const AccessibilityProvider = (props: any) => {}"
+  const [highContrast, setHighContrast] = useState(false)""
+  const [reducedMotion, setReducedMotion] = useState(false)""
+  const [fontSize, setFontSize] = useState("medium")""
+  const [colorBlindMode, setColorBlindMode] = useState()
+>>>>>>> main
 }
-  // comment;
-useEffect(() => {}"";
-""";
-""""";
-    const savedSettings = localStorage.getItem();
+  // comment
+useEffect(() => {}""
+"""
+"""""
+    const savedSettings = localStorage.getItem()
 }
     if (savedSettings) {}
-;
-      const settings = JSON.parse(savedSettings)";
-      setHighContrast(settings.highContrast || false)"";
-      setReducedMotion(settings.reducedMotion || false)""";
-      setFontSize(settings.fontSize || "medium")""";
+
+      const settings = JSON.parse(savedSettings)"
+      setHighContrast(settings.highContrast || false)""
+      setReducedMotion(settings.reducedMotion || false)"""
+      setFontSize(settings.fontSize || "medium")"""
       setColorBlindMode(settings.colorBlindMode || "none")}
-;
-  }, []);
+
+  }, [])
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+  // comment
+useEffect(() => {}"
+    const settings = {}""
+      highContrast, reducedMotion,""
+      fontSize, "";""
+      colorBlindMode}"
+    const settings = {}"
+      highContrast, reducedMotion,""
+      fontSize,
+colorBlindMode};
+    localStorage.setItem('
+      'zion-accessibility-settings',
+      JSON.stringify(settings)
+<<<<<<< HEAD
+=======
   // comment;
 useEffect(() => {}";
     const settings = {}"";
@@ -482,32 +1386,46 @@ colorBlindMode};
     localStorage.setItem(';
       'zion-accessibility-settings',;
       JSON.stringify(settings);
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+>>>>>>> main
     );
   }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
+<<<<<<< HEAD
   // Apply accessibility settings to document;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
+  "};
+=======
+  // Apply accessibility settings to document
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
   };
+>>>>>>> main
 }, []);, []);
     const root = document.documentElement;
-    // High contrast mode;
+    // High contrast mode
     if(highContrast) {localStorage.setItem()}
-    )}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
+    )}, [highContrast, reducedMotion, fontSize, colorBlindMode])
 }
-  // comment;
+  // comment
 useEffect(() => {}
-;
-    const root = document.documentElement,;
-    // comment;
-if (highContrast) {}"";
-""";
-""""";
-      root.classList.add("high-contrast")} else {}"";
-""";
-""""";
+
+    const root = document.documentElement,
+    // comment
+if (highContrast) {}""
+"""
+"""""
+      root.classList.add("high-contrast")} else {}""
+"""
+"""""
       root.classList.remove("high-contrast")}
+<<<<<<< HEAD
 ;
     // comment;
 if (reducedMotion) {}"";
@@ -520,7 +1438,7 @@ if (reducedMotion) {}"";
 }""";
     // comment;
     root.style.fontSize = """"";
-      fontSize === "small" ? "14px" : fontSize === "large" ? "18px" : "16px"""";
+      fontSize === "small" ? "14px" : "fontSize === "large" ? "18px" : "16px"""";
     // comment;
     root.style.filter =""""";
       colorBlindMode === "none"""""";
@@ -529,107 +1447,143 @@ if (reducedMotion) {}"";
           ? "url(#protanopia)"""""";
           : colorBlindMode === "deuteranopia"""""";
             ? "url(#deuteranopia)""""";
-            : "url(#tritanopia),;
+            : "url(#tritanopia)",;
 }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
+=======
+
+    // comment
+if (reducedMotion) {}""
+"""
+"""""
+      root.classList.add("reduced-motion")} else {}""
+""
+""""
+      root.classList.remove("reduced - motion")", ",
+}"""
+    // comment
+    root.style.fontSize = """""
+      fontSize === "small" ? "14px" : fontSize === "large" ? "18px" : "16px""""
+    // comment
+    root.style.filter ="""""
+      colorBlindMode === "none""""""
+        ? "none""""""
+        : colorBlindMode === "protanopia""""""
+          ? "url(#protanopia)""""""
+          : colorBlindMode === "deuteranopia""""""
+            ? "url(#deuteranopia)"""""
+            : "url(#tritanopia),
+}, [highContrast, reducedMotion, fontSize, colorBlindMode])
+>>>>>>> main
 }
-  const toggleReducedMotion = () => setReducedMotion();
+  const toggleReducedMotion = () => setReducedMotion()
 }  const value = {}
-;
+
     highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode}
-;
-  return ()";
-    <AccessibilityContext .Provider value={value}" >";
+
+  return ()"
+    <AccessibilityContext .Provider value={value}" >"
       {children}
-;
-    </AccessibilityContext.Provider>;
+
+    </AccessibilityContext.Provider>
   )}
-;
-highContrast,;
-    reducedMotion,;
-    fontSize,;
-    colorBlindMode,;
-    toggleHighContrast,;
-    toggleReducedMotion,;
-    setFontSize,;
+
+highContrast,
+    reducedMotion,
+    fontSize,
+    colorBlindMode,
+    toggleHighContrast,
+    toggleReducedMotion,
+    setFontSize,
     setColorBlindMode} = useAccessibility();
+<<<<<<< HEAD
   // Keyboard shortcuts;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
+  "};
+=======
+  // Keyboard shortcuts
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
   };
+>>>>>>> main
 }, []);, []);
     const handleKeyDown = event => {const [isOpen, setIsOpen] = useState()}
   const {}
-;
-    highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode} = useAccessibility();
+
+    highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode} = useAccessibility()
 }
   // commentuseEffect(() => {}
-;
+
     const handleKeyDown = event => {}
-;
-      // comment;
-if()"";
-        (event.ctrlKey || event.metaKey) &&""";
-        event.shiftKey &&""";
-        event.key === "A;
+
+      // comment
+if()""
+        (event.ctrlKey || event.metaKey) &&"""
+        event.shiftKey &&"""
+        event.key === "A
       ) {}
-;
-        event.preventDefault();
+
+        event.preventDefault()
 }
         setIsOpen(!isOpen)}
-;
-      // comment;
-if()"";
-        (event.ctrlKey || event.metaKey) &&""";
-        event.shiftKey &&""";
-        event.key === "H";
+
+      // comment
+if()""
+        (event.ctrlKey || event.metaKey) &&"""
+        event.shiftKey &&"""
+        event.key === "H"
       ) {}
-;
-        event.preventDefault();
+
+        event.preventDefault()
 }
         toggleHighContrast()}
-;
-      // comment;
-if()"";
-        (event.ctrlKey || event.metaKey) &&""";
-        event.shiftKey &&""";
-        event.key === "M";
-      ) {}";
-        event.preventDefault()"";
-        toggleReducedMotion()", ";
-}""}";"";
-    window.addEventListener("keydown", handleKeyDown)";"";
-    return () => window.removeEventListener("keydown", handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion]);
+
+      // comment
+if()""
+        (event.ctrlKey || event.metaKey) &&"""
+        event.shiftKey &&"""
+        event.key === "M"
+      ) {}"
+        event.preventDefault()""
+        toggleReducedMotion()", "
+}""}";""
+    window.addEventListener("keydown", handleKeyDown)";""
+    return () => window.removeEventListener("keydown", handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])
 }
-}";
-    window.addEventListener("keydown", handleKeyDown)";
-    return () => window.removeEventListener("keydown", handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion]);
+}"
+    window.addEventListener("keydown", handleKeyDown)"
+    return () => window.removeEventListener("keydown", handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])
 }
-  return();
+  return()
 }
-    <>;
+    <>
       {/* comment */}
+<<<<<<< HEAD
 ;
       <motion .button,";
-whileHover = "{{" scale: 1.1 }}";
-        whileTap="{{" scale: 0.9 }}";
+whileHover = "{{" "scale": "1.1 "}}";
+        whileTap="{{" "scale": "0.9 "}}";
         onClick="{()" =" > setIsOpen(true)}"";
-        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300""""";
+        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center "hover": "shadow-2xl "hover":shadow-zion-cyan/40 transition-all duration-300""""";
         aria-label="Open Accessibility Settings"""""";
-        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover:shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300"";
+        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center "hover":shadow-2xl "hover":shadow-zion-cyan/40 transition-all duration-300"";
         aria-label="Open Accessibility Settings""""";
       >"""";
         <Accessibility className="w-6 h-6" /" >";
-      </motion.button>,;
+      </motion.button>",;
       {/* comment */}
 ;
       <AnimatePresence>;
         {isOpen && (;
           <motion .div,";
-initial="{{" opacity: 0 }}""";
-            animate="{{" opacity: 1 }}"""";
-            exit="{{" opacity: 0 }}"""";
+initial="{{" "opacity": "0 "}}""";
+            animate="{{" "opacity": "1 "}}"""";
+            exit="{{" "opacity": "0 "}}"""";
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4""";
             onClick="{()" =" > setIsOpen(false)}"";
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"";
@@ -637,9 +1591,9 @@ initial="{{" opacity: 0 }}""";
 ;
           >;
             <motion .div,";
-initial="{{" scale: 0.9, opacity: 0 }}""";
-              animate="{{" scale: 1, opacity: 1 }}"""";
-              exit="{{" scale: 0.9, opacity: 0 }}"""";
+initial="{{" "scale": "0.9", "opacity": "0 "}}""";
+              animate="{{" "scale": "1", "opacity": "1 "}}"""";
+              exit="{{" "scale": "0.9", "opacity": "0 "}}"""";
               className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto"";
               onClick="{e" =" > e.stopPropagation()}";
             >""""";
@@ -653,16 +1607,16 @@ initial="{{" scale: 0.9, opacity: 0 }}""";
                   variant="ghost"""""";
                   size="sm"""""";
                   onClick="{()" =" > setIsOpen(false)}""""";
-                  className="text-zion-slate-light hover: text-white""""";
+                  className="text-zion-slate-light "hover": "text-white""""";
                   variant="ghost""""";
-                  size="sm""""",;
+                  size="sm"""""",;
                   onClick="{()" =" > setIsOpen(false)}"""";
-                  className="text-zion-slate-light hover: text-white"";
+                  className="text-zion-slate-light "hover": "text-white"";
                 >"""";
                   <X className="w-4 h-4" /" >";
                 </Button>";
               </div>"";
-""""",;
+"""""",;
               {/* comment */}""""";
               <div className="space-y-6">""""";
                 {/* comment */}"""";
@@ -686,9 +1640,9 @@ initial="{{" scale: 0.9, opacity: 0 }}""";
                         : "border-zion-cyan/30 text-zion-cyan"}"" >""""";
                     {highContrast ? ("""";
                       <Eye className="w-4 h-4" /" >"""";
-                    ) : ("""";
+                    ) : "("""";
                       <EyeOff className="w-4 h-4" /" >";
-                    )}
+                    )"}
 ;
                   </Button>";
                 </div>"";
@@ -714,9 +1668,9 @@ initial="{{" scale: 0.9, opacity: 0 }}""";
                         : "border-zion-cyan/30 text-zion-cyan"}"" >""""";
                     {reducedMotion ? ("""";
                       <VolumeX className="w-4 h-4" /" >"""";
-                    ) : ("""";
+                    ) : "("""";
                       <Volume2 className="w-4 h-4" /" >";
-                    )}
+                    )"}
 ;
                   </Button>";
                 </div>"";
@@ -735,45 +1689,173 @@ initial="{{" scale: 0.9, opacity: 0 }}""";
 """"";
                           fontSize === size""""";
                             ? "bg-zion-cyan text-white"""""";
+=======
+
+      <motion .button,"
+whileHover = "{{" scale: 1.1 }}"
+        whileTap="{{" scale: 0.9 }}"
+        onClick="{()" =" > setIsOpen(true)}""
+        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300"""""
+        aria-label="Open Accessibility Settings""""""
+        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover:shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300""
+        aria-label="Open Accessibility Settings"""""
+      >""""
+        <Accessibility className="w-6 h-6" /" >"
+      </motion.button>,
+      {/* comment */}
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion .div,"
+initial="{{" opacity: 0 }}"""
+            animate="{{" opacity: 1 }}""""
+            exit="{{" opacity: 0 }}""""
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"""
+            onClick="{()" =" > setIsOpen(false)}""
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4""
+            onClick="{()" =" > setIsOpen(false)}
+
+          >
+            <motion .div,"
+initial="{{" scale: 0.9, opacity: 0 }}"""
+              animate="{{" scale: 1, opacity: 1 }}""""
+              exit="{{" scale: 0.9, opacity: 0 }}""""
+              className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto""
+              onClick="{e" =" > e.stopPropagation()}"
+            >"""""
+              {/* comment */}"""""
+              <div className="flex items-center justify-between mb-6">""""
+                <h2 className="text-xl font-bold text-white flex items-center gap-2">""""
+                  <Accessibility className="w-5 h-5 text-zion-cyan" /" >""
+                  Accessibility Settings""
+                </h2>"""""
+                <Button """""
+                  variant="ghost""""""
+                  size="sm""""""
+                  onClick="{()" =" > setIsOpen(false)}"""""
+                  className="text-zion-slate-light hover: text-white"""""
+                  variant="ghost"""""
+                  size="sm""""",
+                  onClick="{()" =" > setIsOpen(false)}""""
+                  className="text-zion-slate-light hover: text-white""
+                >""""
+                  <X className="w-4 h-4" /" >"
+                </Button>"
+              </div>""
+""""",
+              {/* comment */}"""""
+              <div className="space-y-6">"""""
+                {/* comment */}""""
+                <div className="flex items-center justify-between">"""""
+                  <div>""""
+                    <h3 className="text-white font-medium mb-1">""
+                      High Contrast"""""
+                    """"
+                    <p className="text-sm text-zion-slate-light">
+                      Increase contrast for better visibility"
+                    </p>""
+                  </div>"""
+                  <Button """""""
+                    variant="{highContrast" ? "default" : "outline"}"""""
+                    size="sm"""
+                    onClick="{toggleHighContrast}""
+                    className={}""
+"""
+                      highContrast"""
+                        ? "bg-zion-cyan text-white""""
+                        : "border-zion-cyan/30 text-zion-cyan"}"" >"""""
+                    {highContrast ? (""""
+                      <Eye className="w-4 h-4" /" >""""
+                    ) : (""""
+                      <EyeOff className="w-4 h-4" /" >"
+                    )}
+
+                  </Button>"
+                </div>""
+"""""
+                {/* comment */}"""""
+                <div className="flex items-center justify-between">"""""
+                  <div>""""
+                    <h3 className="text-white font-medium mb-1">""
+                      Reduced Motion"""""
+                    """"
+                    <p className="text-sm text-zion-slate-light">
+                      Minimize animations and transitions"
+                    </p>""
+                  </div>"""
+                  <Button """""""
+                    variant="{reducedMotion" ? "default" : "outline"}"""""
+                    size="sm"""
+                    onClick="{toggleReducedMotion}""
+                    className={}""
+"""
+                      reducedMotion"""
+                        ? "bg-zion-cyan text-white""""
+                        : "border-zion-cyan/30 text-zion-cyan"}"" >"""""
+                    {reducedMotion ? (""""
+                      <VolumeX className="w-4 h-4" /" >""""
+                    ) : (""""
+                      <Volume2 className="w-4 h-4" /" >"
+                    )}
+
+                  </Button>"
+                </div>""
+                {/* comment */}"""""
+                <div>"""""
+                  <h3 className="text-white font-medium mb-3">Font Size""""
+                  <div className="flex gap-2">"""
+                    {["small", medium",large"].map(size => ("
+                      <Button ""
+                        key={size}"""""
+                        variant="{fontSize" === size ? "default" : "outline"}"""""
+                        size="sm"""
+                        onClick="{()" =" > setFontSize(size)}""
+                        className={}""
+"""
+"""""
+                          fontSize === size"""""
+                            ? "bg-zion-cyan text-white""""""
+>>>>>>> main
                             : "border-zion-cyan/30 text-zion-cyan"}
-;
-                      >;
+
+                      >
                         {size.charAt(0).toUpperCase() + size.slice(1)}
-;
-                      </Button>;
+
+                      </Button>
                     ))}
-;
-                  </div>";
-                </div>"";
-                {/* comment */}""""";
-                <div>"""";
-                  <h3 className="text-white font-medium mb-3">"";
-                    Color Blind Support""""";
-                  """"";
-                  <div className="grid grid-cols-2 gap-2">""";
-                    {["none", protanopia",deuteranopia", tritanopia"].map()";
-                      mode => (";
-                        <Button key="{mode}"";
-                          variant={}"";
-"">;
-                            colorBlindMode === mode ? "default"  : "outline"""", ",;
-}""""";
-                          size = "sm""";
-                          onClick="{()" =" > setColorBlindMode(mode)}"";
-                          className={}"";
-""";
-""""";
-                            colorBlindMode === mode""""";
-                              ? "bg-zion-cyan text-white"""""";
+
+                  </div>"
+                </div>""
+                {/* comment */}"""""
+                <div>""""
+                  <h3 className="text-white font-medium mb-3">""
+                    Color Blind Support"""""
+                  """""
+                  <div className="grid grid-cols-2 gap-2">"""
+                    {["none", protanopia",deuteranopia", tritanopia"].map()"
+                      mode => ("
+                        <Button key="{mode}""
+                          variant={}""
+"">
+                            colorBlindMode === mode ? "default"  : "outline"""", ",
+}"""""
+                          size = "sm"""
+                          onClick="{()" =" > setColorBlindMode(mode)}""
+                          className={}""
+"""
+"""""
+                            colorBlindMode === mode"""""
+                              ? "bg-zion-cyan text-white""""""
                               : "border-zion-cyan/30 text-zion-cyan"}
-;
-                        >;
+
+                        >
                           {mode.charAt(0).toUpperCase() + mode.slice(1)}
-;
-                        </Button>;
-                      );
+
+                        </Button>
+                      )
 }
                     )}
+<<<<<<< HEAD
 ;
                   </div>";
                 </div>"";
@@ -786,21 +1868,21 @@ initial="{{" scale: 0.9, opacity: 0 }}""";
                   """"";
                   <div className="space-y-2 text-sm text-zion-slate-light">"""";
                     <div className="flex justify-between">""""";
-                      <span>Open Panel: </span>"""";
+                      <span>Open "Panel": "</span>"""";
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">";
                         Ctrl/Cmd + Shift + A"";
                       </kbd>""""";
                     </div>""""";
                     <div className="flex justify-between">""""";
-                      <span>High Contrast:</span>"""";
+                      <span>High "Contrast":</span>"""";
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">";
                         Ctrl/Cmd + Shift + H"";
                       </kbd>""""";
                     </div>""""";
                     <div className="flex justify-between">""""";
-                      <span>Reduced Motion:</span>"""";
+                      <span>Reduced "Motion":</span>"""";
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">;
-                        Ctrl/Cmd + Shift + M,;
+                        Ctrl/Cmd + Shift + M",;
                       </kbd>;
                     </div>;
                 </div>";
@@ -822,8 +1904,8 @@ sessions.</p>;
 export const SkipToContent = () => (""""";
   <a""""";
     href="#main-content""""";
-    className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300 ">;
-    Skip to main content,;
+    className="sr-only "focus": "not-sr-only "focus":absolute "focus":top-4 "focus":left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 "hover":bg-zion-cyan-light transition-colors duration-300 ">;
+    Skip to main content",;
   </a>;
 ),;
 // comment;
@@ -833,9 +1915,9 @@ export const useFocusTrap = isActive => {}";
   useEffect(() => {}";
     if (!isActive) return"";
     const focusableElements = """""";
-      "button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])";
+      "button, [href], input, select, textarea, [tabindex]: "not([tabindex="-1"])";
     const container = document.activeElement?.closest();
-}
+"}
     if(!container) return,;
 const firstFocusableElement = focusableContent[0];
     const lastFocusableElement = focusableContent[focusableContent.length-1]";
@@ -845,23 +1927,174 @@ const firstFocusableElement = focusableContent[0];
         if(e.shiftKey) {}
 ;
 useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
+<<<<<<< HEAD
   };
+<<<<<<< HEAD
+}, []);, []);';
+    if(!isActive) return;';';
+    const focusableElements ='"';';
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);';';
+=======
+=======
+  "};
+>>>>>>> main
 }, []);, []);
     if(!isActive) return;
     const focusableElements ='";
+      'button, [href], input, select, textarea, [tabindex]: "not([tabindex="-1"]);
+=======
+
+                  </div>"
+                </div>""
+"""""
+                {/* comment */}"""""
+                <div className="bg-zion-blue-dark/50 rounded-lg p-4">""""
+                  <h3 className="text-white font-medium mb-3 flex items-center gap-2">""""
+                    <Keyboard className="w-4 h-4 text-zion-cyan" /" >"
+                    Keyboard Shortcuts"""""
+                  """""
+                  <div className="space-y-2 text-sm text-zion-slate-light">""""
+                    <div className="flex justify-between">"""""
+                      <span>Open Panel: </span>""""
+                      <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">"
+                        Ctrl/Cmd + Shift + A""
+                      </kbd>"""""
+                    </div>"""""
+                    <div className="flex justify-between">"""""
+                      <span>High Contrast:</span>""""
+                      <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">"
+                        Ctrl/Cmd + Shift + H""
+                      </kbd>"""""
+                    </div>"""""
+                    <div className="flex justify-between">"""""
+                      <span>Reduced Motion:</span>""""
+                      <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">
+                        Ctrl/Cmd + Shift + M,
+                      </kbd>
+                    </div>
+                </div>"
+              </div>""
+""""",
+              {/* comment */}"""""
+              <div className="mt-6 pt-4 border-t border-zion-cyan/20">""""
+                <p className="text-xs text-zion-slate-light text-center">
+                  These settings are saved locally and will persist across,
+sessions.</p>
+              </div>
+            </motion.div>
+        )}
+
+      </AnimatePresence>
+</>
+  )}"
+// comment
+export const SkipToContent = () => ("""""
+  <a"""""
+    href="#main-content"""""
+    className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300 ">
+    Skip to main content,
+  </a>
+),
+// comment
+export const useFocusTrap = isActive => {}"
+  useEffect(() => {}""
+    if (!isActive) return"";""
+  useEffect(() => {}"
+    if (!isActive) return""
+    const focusableElements = """"""
+      "button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])"
+    const container = document.activeElement?.closest()
+}
+    if(!container) return,
+const firstFocusableElement = focusableContent[0]
+    const lastFocusableElement = focusableContent[focusableContent.length-1]"
+    const handleTabKey = e => {}""
+"""
+      if (e.key === "Tab") {}
+        if(e.shiftKey) {}
+
+useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+    if(!isActive) return;
+    const focusableElements ='"
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);
+<<<<<<< HEAD
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+>>>>>>> main
+>>>>>>> main
     const container = document.activeElement?.closest('[data-focus-trap]');
     if(!container) return;
     const firstFocusableElement = focusableContent[0];
     const lastFocusableElement = focusableContent[focusableContent.length-1];
+<<<<<<< HEAD
+    const handleTabKey = e => {e.preventDefault()"}            lastFocusableElement.focus()}
+;
+=======
     const handleTabKey = e => {e.preventDefault()}            lastFocusableElement.focus()}
-;
+
+>>>>>>> main
         } else {}
-;
+
           if(document.activeElement === lastFocusableElement) {}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+
+            e.preventDefault()"
+            firstFocusableElement.focus()}","
+}", "
+}""}";""
+    document.addEventListener("keydown", handleTabKey)"
+    return () => document.removeEventListener("keydown", handleTabKey)}, [isActive])}""
+// comment
+export const SrOnly = ({children}) => (""""
+  <span className="sr-only">{children}</span>"
+)""
+export default AccessibilityPanel"";""
+"""""""
+}"
+    document.addEventListener("keydown", handleTabKey)"
+    return () => document.removeEventListener("keydown", handleTabKey)}, [isActive])}""
+// comment
+export const SrOnly = ({children}) => (""""
+  <span className="sr-only">{children}</span>"
+)"
+export default AccessibilityPanel""
+""""'""
+
+</Keyboard>
+</Volume2>
+</VolumeX>
+</EyeOff>
+</Eye>
+</div>
+</X>
+</Accessibility>
+</motion>
+</motion>
+</Accessibility>
+</motion>
+</AccessibilityContext>
+</div>
+</div>
+</div>
+</div>
+</div>
+</motion>
+<<<<<<< HEAD
+</motion>';
+</AccessibilityContext>;';;';
+=======
 ;
             e.preventDefault()";
             firstFocusableElement.focus()}",";
@@ -906,3 +2139,9 @@ export default AccessibilityPanel"";
 </motion>;
 </motion>;
 </AccessibilityContext>;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+</motion>
+</motion>
+</AccessibilityContext>
+>>>>>>> main

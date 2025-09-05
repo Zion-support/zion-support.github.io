@@ -1,7 +1,7 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 
 // Function to fix syntax errors
 function fixSyntaxErrors(content) {
@@ -30,24 +30,22 @@ function fixSyntaxErrors(content) {
     if () {
       return match + ) {
     ) {
-      return match + ;
-  }';'}
-    return match;});
+      return match + }';'}
+    return match});
   
   // Fix missing semicolons after variable declarations
   content = content.replace(/(const|let|var)\s+\w+\s*=\s*[^]+(?![])/g, (match) => {
     if () {
       return match + ) {
     ) {
-      return match + ;
-  }';'}
-    return match;});
+      return match + }';'}
+    return match});
   
   // Fix try-catch syntax
   content = content.replace(/catch\(\)/g, 'catch(error)');
-  content = content.replace(/console\.log\('❌[^']+',\s*,\s*error\.message\)/g, 'console.log(\'❌ Package.json is invalid:\', error.message);');
+  content = content.replace(/console\.log\('❌[^']+',\s*,\s*error\.message\)/g, '');
   
-  return content;}
+  return content}
 
 // Function to process a file
 function processFile(filePath) {
@@ -58,18 +56,17 @@ function processFile(filePath) {
     if ( {
       fs.writeFileSync(filePath, fixedContent, 'utf8')) {
      {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-  }
-      console.log(`Fixed syntax errors in: ${filePath}`);
-      return true;}
-    return false;} catch (error) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8')}
+      
+      return true}
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;}
+    return false}
 }
 
 // Function to find files
 function findFiles(dir, extensions) {
-  const files = [;];
+  const files = [];
   
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir;);
@@ -91,15 +88,14 @@ function findFiles(dir, extensions) {
     }
   }
   
-  traverse(dir);
-  }
-  return files;}
+  traverse(dir)}
+  return files}
 
 // Main execution
-const extensions = ['.js', '.ts', '.cjs';];
+const extensions = ['.js', '.ts', '.cjs'];
 const files = findFiles('.', extension;s;);
 
-console.log(`Found ${files.length} files to check...`);
+
 
 let fixedCount = ;0;
 for (const file of files) {
@@ -107,10 +103,25 @@ for (const file of files) {
     fixedCount++}
 }
 
-console.log(`Fixed syntax errors in ${fixedCount} files.`)) {
+) {
     ) {
     fixedCount++}
 }
 
-console.log(`Fixed syntax errors in ${fixedCount} files.`);
-  }
+}
+=======
+  content = content.replace(/#!\/usr\/bin\/env node;/g, '#!/usr/bin/env node')
+  content = content.replace(/\/\*\*;/g, '/**')
+  content = content.replace(/\*\/;/g, '*/')
+  content = content.replace(/\/\/\s*;/g, '//')
+  content = content.replace(/\[\s*;/g, '[')]
+  content = content.replace(/,\s*\]/g, ']')
+  content = content.replace(/;\s*,/g, ';')
+  content = content.replace(/,\s*;/g, ';')
+  content = content.replace(/;\s*\]/g, ']')
+  content = content.replace(/;\s*\}/g, '}')
+      return match + }';'
+      return match + }';'
+  content = content.replace(/catch\(\)/g, 'catch(error)'
+  content = content.replace(/console\.log\('[^']+',\s*,\s*error\.message\)/g, 'console.log(\' Package.json is "invalid")
+>>>>>>> main

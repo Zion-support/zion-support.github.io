@@ -35,7 +35,7 @@ info() {
 }
 
 print_header "📊 Simple Monitoring System"
-echo "============================="
+echo "="
 echo
 
 # Configuration
@@ -314,33 +314,33 @@ EOF
 # Main monitoring function
 main() {
     print_header "💻 Phase 1: System Resources"
-    echo "============================="
+    echo "="
     
     monitor_system_resources
     
     print_header "⚡ Phase 2: Application Status"
-    echo "==============================="
+    echo "==="
     
     monitor_application_status
     
     print_header "📁 Phase 3: File Health"
-    echo "========================"
+    echo "==="
     
     monitor_file_health
     
     print_header "🏗️  Phase 4: Build Status"
-    echo "========================="
+    echo "===="
     
     check_build_status
     
     print_header "📊 Phase 5: Dashboard & Summary"
-    echo "=================================="
+    echo "======"
     
     create_simple_dashboard
     generate_summary_report
     
     print_header "🎉 Simple Monitoring Complete!"
-    echo "==============================="
+    echo "==="
     
     success "Monitoring data saved to: $MONITORING_DIR"
     success "Dashboard available at: $MONITORING_DIR/dashboard.html"
