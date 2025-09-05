@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/specializedFinancialAIServices2025.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -57,3 +59,4 @@ export default specializedFinancialAIServices2025}}"
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/specializedFinancialAIServices2025.ts

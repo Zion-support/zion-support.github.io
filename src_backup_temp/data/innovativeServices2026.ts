@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/innovativeServices2026.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -641,3 +643,4 @@ export type InnovativeService = {; id: string; title: string; description: strin
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/innovativeServices2026.ts

@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/utils/authUtils.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -65,3 +67,4 @@ export const cleanupAuthState = () => { try { if (typeof window !== 'undefined')
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/utils/authUtils.ts
