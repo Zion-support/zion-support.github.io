@@ -1,24 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { MobileConversationList } from "../components/messaging/MobileConversationList",
 import { MobileChatView } from "../components/messaging/MobileChatView",
-=======
-import React, { useState } from &quot;react&quot;;
-import { MobileHeader } from &quot;../components/common/MobileHeader&quot;;
-import { BottomNavigation } from &quot;../components/common/BottomNavigation&quot;;
-import { MobileConversationList } from &quot;../components/messaging/MobileConversationList&quot;;
-import { MobileChatView } from &quot;../components/messaging/MobileChatView&quot;;
-=======
-import React, {_useState} from "react";
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 // Mock data for demonstration
-<<<<<<< HEAD
 const mockConversations = [
   {
     id: &quot;1&quot;,
@@ -40,7 +26,6 @@ const mockConversations = [
     unreadCount: 0,
     isTyping: true},
   {
-<<<<<<< HEAD
     id: "4",
     name: "Creative Studios",
     lastMessage: "Your application has been received. We'll review it shortly.",
@@ -54,28 +39,12 @@ interface Message {
   timestamp: string,
   isMe: boolean,
   status: "read" | "sent" | "delivered"
-=======
-    id: &quot;4&quot;,
-    name: &quot;Creative Studios&quot;,
-    lastMessage: &quot;Your application has been received. We'll review it shortly.&quot;,
-    timestamp: &quot;Mon&quot;,
-    unreadCount: 0}];
-=======
-const _mockConversations = [
-  {_id: "1", _name: "Sarah Johnson", _lastMessage: "Looking forward to discussing the project tomorrow!", _timestamp: "10:45 AM", _unreadCount: 2},
-  {_id: "2", _name: "TechCorp Inc.", _lastMessage: "We'd like to schedule an interview for the React Developer position", _timestamp: "Yesterday", _unreadCount: 0},
-  {_id: "3", _name: "David Wilson", _lastMessage: "Can you share your portfolio link again?", _timestamp: "Wed", _unreadCount: 0, _isTyping: true},
-  {_id: "4", _name: "Creative Studios", _lastMessage: "Your application has been received. We'll review it shortly.", _timestamp: "Mon", _unreadCount: 0}];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 // Define the Message type to resolve the type error
 interface Message {_id: string;
   content: string;
   timestamp: string;
   isMe: boolean;
-<<<<<<< HEAD
   status: &quot;read&quot; | &quot;sent&quot; | &quot;delivered&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 }
 
 const mockMessages: Message[] = [
@@ -108,12 +77,7 @@ const mockMessages: Message[] = [
     content: &quot;That works for us. I'll send over a detailed brief later today. Would you be available for a quick call tomorrow to discuss further?&quot;,
     timestamp: &quot;10:45 AM&quot;,
     isMe: false,
-<<<<<<< HEAD
     status: "read"}],
-=======
-    status: &quot;read&quot;}];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 export function MobileMessages() {
   const [activeConversation, setActiveConversation] = useState<string | null>(null),
   const [messages, setMessages] = useState<Message[]>(mockMessages),
@@ -125,7 +89,6 @@ export function MobileMessages() {
   const handleBack = () => {
     setActiveConversation(null)
   },
-=======
   status: "read" | "sent" | "delivered";}
 
 const mockMessages: Message[] = [
@@ -142,24 +105,15 @@ export function MobileMessages() {_const [activeConversation, _setActiveConversa
     setActiveConversation(id);};
   
   const _handleBack = () => {_setActiveConversation(null);};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   const _handleSendMessage = (_content: string) => {_const newMessage: Message = {
       id: `${Date.now()}`,
       content,
       timestamp: &quot;Just now&quot;,
       isMe: true,
-<<<<<<< HEAD
       status: "sent"},
     setMessages([...messages, newMessage])
-  },
-=======
-      status: &quot;sent&quot;};
-    setMessages([...messages, newMessage]);
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  
-<<<<<<< HEAD
+  },  
   const currentContact = mockConversations.find(c => c.id === activeConversation),
   
   return (
@@ -173,21 +127,7 @@ export function MobileMessages() {_const [activeConversation, _setActiveConversa
           }}
           messages={messages}
           onBack={handleBack}
-          onSendMessage={handleSendMessage}
-=======
-  const _currentContact = mockConversations.find(c => c.id === activeConversation);
-  
-  return (
-    <div className="min-h-screen flex flex-col">
-      {_activeConversation ? (
-        <MobileChatView
-          contact={{
-            id: currentContact?.id || "", _name: currentContact?.name || "", _status: "Online"}}
-          messages={_messages}
-          onBack={_handleBack}
-          onSendMessage={_handleSendMessage}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        />
+          onSendMessage={handleSendMessage}        />
       ) : (
         <>
           <MobileHeader

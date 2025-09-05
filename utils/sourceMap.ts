@@ -2,7 +2,6 @@ import fs from "fs",
 import path from "path",
 export type SourceNodeType = "folder" | "file",
 
-<<<<<<< HEAD
 export interface SourceNode {
   name: string,
   path: string, // repo-relative path starting with '/'
@@ -34,31 +33,7 @@ function folder(name: string, basePath: string, children: string[] = []): Source
     name,
     path: fullPath,
     type: "folder",
-    children: children.map((child) => ({ name: child, path: withPath(fullPath, child), type: "folder" }))}
-=======
-export interface SourceNode {_name: string;
-  path: string; // repo-relative path starting with '/'
-  type: SourceNodeType;
-  children?: SourceNode[];
-  exists?: boolean;}
-
-export interface SourceMapStatus {_gitConnected: boolean;
-  gitBranch?: string;}
-
-export interface SourceMapResponse {_nodes: SourceNode[];
-  status: SourceMapStatus;}
-
-const _ROOT = process.cwd();
-
-function withPath(_base: string, _segment: string): string {_if (base === "/") return `/${segment}`;
-  return `${_base}/${_segment}`;
-}
-
-function folder(_name: string, _basePath: string, _children: string[] = []): SourceNode {_const _fullPath = withPath(basePath, _name);
-  return {
-    name, _path: fullPath, _type: "folder", _children: children.map(_(child) => ({ name: child, _path: withPath(fullPath, _child), _type: "folder"}))};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-}
+    children: children.map((child) => ({ name: child, path: withPath(fullPath, child), type: "folder" }))}}
 
 export function buildZionSourceMap(): SourceNode[] {_const map: SourceNode[] = [
     // 1. /core
@@ -115,7 +90,6 @@ export function buildZionSourceMap(): SourceNode[] {_const map: SourceNode[] = [
         {_name: "config-templates", _path: "/deployments/config-templates", _type: "folder"},
         {_name: "environments", _path: "/deployments/environments", _type: "folder"}]},
     // 8. /api
-<<<<<<< HEAD
     {
       name: "api",
       path: "/api",
@@ -125,18 +99,9 @@ export function buildZionSourceMap(): SourceNode[] {_const map: SourceNode[] = [
         { name: "partners", path: "/api/partners", type: "folder" },
         { name: "integrations", path: "/api/integrations", type: "folder" },
         { name: "webhooks", path: "/api/webhooks", type: "folder" }]}],
-=======
-    {_name: "api", _path: "/api", _type: "folder", _children: [
-        { name: "docs", _path: "/api/docs", _type: "folder"},
-        {_name: "partners", _path: "/api/partners", _type: "folder"},
-        {_name: "integrations", _path: "/api/integrations", _type: "folder"},
-        {_name: "webhooks", _path: "/api/webhooks", _type: "folder"}]}];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return map
 }
 
-<<<<<<< HEAD
 function markExistenceRecursive(node: SourceNode): SourceNode {
   const absolutePath = path.join(ROOT, node.path),
   const exists = fs.existsSync(absolutePath),
@@ -169,34 +134,8 @@ export function deployBasicTemplateForPath(repoRelativePath: string): DeployTemp
   const absoluteDir = path.join(ROOT, repoRelativePath),
   const createdPaths: string[] = [],
   const skippedPaths: string[] = [],
-=======
-function markExistenceRecursive(_node: SourceNode): SourceNode {_const _absolutePath = path.join(ROOT, _node.path);
-  const _exists = fs.existsSync(absolutePath);
-  const withExists: SourceNode = {
-    ...node, _exists};
-  if (node.children && node.children.length > 0) {_withExists.children = node.children.map(markExistenceRecursive);}
-  return withExists;
-}
-
-export function getSourceMapWithExistence(): SourceNode[] {_const _nodes = buildZionSourceMap();
-  return nodes.map(markExistenceRecursive);}
-
-export interface DeployTemplateResult {_createdPaths: string[];
-  skippedPaths: string[];}
-
-export function ensureDirectory(_dirPath: string): void {_if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, _{ recursive: true});
-  }
-}
-
-export function deployBasicTemplateForPath(_repoRelativePath: string): DeployTemplateResult {_const _absoluteDir = path.join(ROOT, _repoRelativePath);
-  const createdPaths: string[] = [];
-  const skippedPaths: string[] = [];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   ensureDirectory(absoluteDir),
 
-<<<<<<< HEAD
   const keepFile = path.join(absoluteDir, ".keep"),
   if (!fs.existsSync(keepFile)) {
     fs.writeFileSync(keepFile, ""),
@@ -214,19 +153,4 @@ export function deployBasicTemplateForPath(_repoRelativePath: string): DeployTem
     skippedPaths.push(readmeFile)
   }
 
-  return { createdPaths, skippedPaths }
-=======
-  const _keepFile = path.join(absoluteDir, _".keep");
-  if (!fs.existsSync(keepFile)) {
-    fs.writeFileSync(keepFile, _"");
-    createdPaths.push(keepFile);} else {_skippedPaths.push(keepFile);}
-
-  const _readmeFile = path.join(absoluteDir, "README.md");
-  if (!fs.existsSync(readmeFile)) {_const _readme = `# ${path.basename(absoluteDir)}\n\nThis module is part of the Zion OS modular source tree. Customize as needed.\n`;
-    fs.writeFileSync(readmeFile, readme);
-    createdPaths.push(readmeFile);
-  } else {_skippedPaths.push(readmeFile);}
-
-  return {_createdPaths, _skippedPaths};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-}
+  return { createdPaths, skippedPaths }}

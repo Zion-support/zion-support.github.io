@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client",
 
 import { useWalkthroughTarget } from "./OnboardingWalkthrough",
@@ -6,14 +5,6 @@ import { useAuth } from "@/contexts/AuthContext",
 import Link from "next/link",
 export function LayoutWrapper({ children }: { children: React.ReactNode }) {
   const { user, isAuthenticated, logout } = useAuth(),
-=======
-"use client";
-
-import Link from "next/link";
-
-export function LayoutWrapper(_{_children}: {_children: React.ReactNode}) {_const { user, _isAuthenticated, _logout} = useAuth();
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (
     <>
       <nav className="border-b border-white/10 sticky top-0 z-50 bg-zinc-900/50 backdrop-blur" {_...useWalkthroughTarget("nav-menu")}>

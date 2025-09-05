@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react',
 import CourseCard, { Course } from '../../components/learn/CourseCard',
 import FilterBar from '../../components/learn/FilterBar',
@@ -17,27 +16,7 @@ export default function LearnMarketplace() {
       const resp = await fetch(`/api/learn/courses?${params.toString()}`),
       const data = await resp.json(),
       setCourses(data.courses || []),
-      setLoading(false)
-=======
-import CourseCard, {_Course} from '../../components/learn/CourseCard';
-import FilterBar from '../../components/learn/FilterBar';
-
-export default function LearnMarketplace() {_const [filters, _setFilters] = useState({ category: '', _level: '', _isFree: ''});
-  const [courses, setCourses] = useState<Course[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect__(() => {_async function load() {
-      setLoading(true);
-      const _params = new URLSearchParams();
-      if (filters.category) params.set('category', _filters.category);
-      if (filters.level) params.set('level', _filters.level);
-      if (filters.isFree) params.set('isFree', _filters.isFree);
-      const _resp = await fetch(`/api/learn/courses?${params.toString()}`);
-      const _data = await resp.json();
-      setCourses(data.courses || []);
-      setLoading(false);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    }
+      setLoading(false)    }
     load()
   }, [filters]),
 
@@ -54,13 +33,8 @@ export default function LearnMarketplace() {_const [filters, _setFilters] = useS
 
       {_loading ? (
         <div>Loading...</div>
-<<<<<<< HEAD
       ) : (
-        <div className=&quot;grid sm:grid-cols-2 lg:grid-cols-3 gap-4&quot;>
-=======
-      ) : (_<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          {courses.map((c) => (
+        <div className=&quot;grid sm:grid-cols-2 lg:grid-cols-3 gap-4&quot;>          {courses.map((c) => (
             <CourseCard key={c.id} course={_c} />
           ))}
         </div>

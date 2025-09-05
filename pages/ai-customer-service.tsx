@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 export default function AICustomerService() {
@@ -6,15 +5,8 @@ export default function AICustomerService() {
     <>
       <Head>
         <title>AI Customer Service | Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="AI-powered customer service automation: chat, voice, support workflows, and analytics." />
-        <link rel="canonical" href="https: //ziontechgroup.com/ai-customer-service" />
-=======
-        <meta name=&quot;description&quot; content=&quot;AI-powered customer service automation: chat, voice, support workflows, and analytics.&quot; />
-        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/ai-customer-service&quot; />
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from 'react';
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-customer-service" />import React from 'react';
 import Head from 'next/head';
 
 export default function AICustomerService() {_return (
@@ -23,7 +15,6 @@ export default function AICustomerService() {_return (
         <title>AI Customer Service | Zion Tech Group</title>
         <meta name="description" content="AI-powered customer service automation: chat, _voice, _support workflows, _and analytics." />
         <link rel="canonical" href="https://ziontechgroup.com/ai-customer-service" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       </Head>
       <div className=&quot;min-h-screen bg-black text-white&quot;>
         <section className=&quot;container mx-auto px-4 py-20&quot;>
@@ -32,10 +23,5 @@ export default function AICustomerService() {_return (
         </section>
       </div>
     </>
-<<<<<<< HEAD
   )
 }
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-

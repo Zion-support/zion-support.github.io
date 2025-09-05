@@ -1,18 +1,10 @@
 
-<<<<<<< HEAD
 const http = require('http'),
 const fs = require('fs'),
 const path = require('path'),
-=======
-const _http = require('http');
-const _fs = require('fs');
-const _path = require('path');
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-const _server = http.createServer(_(req, _res) => {_if (req.url === '/' || req.url === '/index.html') {
-    fs.readFile(path.join(__dirname, _'offline.html'), _(_err, _data) => {
+const server = http.createServer(_(req, res) => {if (req.url === '/' || req.url === '/index.html') {
+    fs.readFile(path.join(_dirname, _'offline.html'), _(err, data) => {
       if (err) {
-<<<<<<< HEAD
         res.writeHead(500),
         res.end('Error loading offline.html'),
         return
@@ -21,8 +13,8 @@ const _server = http.createServer(_(req, _res) => {_if (req.url === '/' || req.u
       res.end(data)
     })
   } else if (req.url === '/online-check') {
-    // Endpoint to check if we're online
-    res.writeHead(200, { 'Content-Type': 'application/json' }),
+    // Endpoint to check if we're online,
+res.writeHead(200, { 'Content-Type': 'application/json' }),
     res.end(JSON.stringify({ online: false, message: 'Running in offline development mode' }))
   } else {
     res.writeHead(404),
@@ -32,12 +24,7 @@ const _server = http.createServer(_(req, _res) => {_if (req.url === '/' || req.u
 
 const PORT = 8080,
 server.listen(PORT, () => {
-<<<<<<< HEAD
-  // // // console.log(`
-=======
-  // console.log(`
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-╔══════════════════════════════════════════════════════════════════╗
+  // // // console.log(`╔══════════════════════════════════════════════════════════════════╗
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║                                                                  ║
@@ -57,20 +44,18 @@ server.listen(PORT, () => {
 ╚══════════════════════════════════════════════════════════════════╝
 `)
 }),
-=======
         res.writeHead(500);
         res.end('Error loading offline.html');
-        return;}
+        return}
       res.writeHead(200, {_'Content-Type': 'text/html'});
-      res.end(data);
-    });
-  } else if (req.url === '/online-check') {_// Endpoint to check if we're online
-    res.writeHead(200, _{ 'Content-Type': 'application/json'});
-    res.end(JSON.stringify({_online: false, _message: 'Running in offline development mode'}));
-  } else {_res.writeHead(404);
-    res.end('Not found');}
+      res.end(data)
+    })
+  } else if (req.url === '/online-check') {_// Endpoint to check if we're online,
+res.writeHead(200, _{ 'Content-Type': 'application/json'});
+    res.end(JSON.stringify({online: false, message: 'Running in offline development mode'}))
+  } else {res.writeHead(404);
+    res.end('Not found')}
 });
 
-const _PORT = 8080;
-server.listen(_PORT, _() => {});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+const PORT = 8080;
+server.listen(PORT, _() => {});

@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 import Link from "next/link",
 export default function CommunityPage() {
-  return (
-=======
-import Link from "next/link";
-
-export default function CommunityPage() {_return (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+  return (    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">

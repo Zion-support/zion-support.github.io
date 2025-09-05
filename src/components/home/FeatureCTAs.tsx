@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -8,19 +6,7 @@ import { Badge } from "@/components/ui/badge",
 import Link from "next/link",
 import { useTranslation } from "react-i18next",
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock } from 'lucide-react'
-import { cn } from "@/lib/utils",
-=======
-import React from &quot;react&quot;;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import Link from &quot;next/link&quot;;
-import { useTranslation } from &quot;react-i18next&quot;;
-import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock } from 'lucide-react'
-import { cn } from &quot;@/lib/utils&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface FeatureCTAsProps {
+import { cn } from "@/lib/utils",interface FeatureCTAsProps {
   className?: string,
   style?: React.CSSProperties
 }
@@ -116,7 +102,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       className={cn(
         &quot;py-16 bg-gradient-to-b from-background to-background/90&quot;,
         className
-=======
 import React from "react";
 import Link from "next/link";
 
@@ -142,11 +127,9 @@ export function FeatureCTAs(_{_className, _style}: FeatureCTAsProps) {_const { t
     <section
       className={_cn(
         "py-16 bg-gradient-to-b from-background to-background/90", _className
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       )}
       style={_style}
     >
-<<<<<<< HEAD
       <div className=&quot;container mx-auto px-4&quot;>
         <div className=&quot;mb-12 text-center&quot;>
           <h2 className=&quot;text-3xl font-bold tracking-tight mb-3&quot;>
@@ -164,77 +147,32 @@ export function FeatureCTAs(_{_className, _style}: FeatureCTAsProps) {_const { t
                 <div className=&quot;flex justify-between items-start&quot;>
                   {feature.icon}
                   {feature.badge && (
-                    <Badge variant=&quot;secondary&quot; className=&quot;bg-primary/20 text-primary&quot;>
-=======
-      <div className="container mx-auto px-4">
-        <div className="mb-12 text-center">
-          <h2 className="text-3xl font-bold tracking-tight mb-3">
-            {_t('home.features_heading')}
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            {_t('home.features_subheading')}
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {_features.map(_(feature, _index) => (
-            <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50">
-              <CardHeader className="pb-2">
-                <div className="flex justify-between items-start">
-                  {_feature.icon}
-                  {_feature.badge && (
-                    <Badge variant="secondary" className="bg-primary/20 text-primary">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      {t(`badges.${feature.badge}`)}
+                    <Badge variant=&quot;secondary&quot; className=&quot;bg-primary/20 text-primary&quot;>                      {t(`badges.${feature.badge}`)}
                     </Badge>
                   )}
                 </div>
-<<<<<<< HEAD
                 <CardTitle className=&quot;mt-4&quot;>{t(`features.${feature.key}`)}</CardTitle>
                 {feature.descriptionKey && (
-                  <CardDescription className=&quot;line-clamp-2&quot;>
-=======
-                <CardTitle className="mt-4">{_t(`features.${feature.key}`)}</CardTitle>
-                {_feature.descriptionKey && (
-                  <CardDescription className="line-clamp-2">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    {t(`features.${feature.descriptionKey}`)}
+                  <CardDescription className=&quot;line-clamp-2&quot;>                    {t(`features.${feature.descriptionKey}`)}
                   </CardDescription>
                 )}
               </CardHeader>
               <CardContent>
-<<<<<<< HEAD
                 {feature.detailsKey && (
-                  <p className=&quot;text-sm text-muted-foreground&quot;>
-=======
-                {_feature.detailsKey && (
-                  <p className="text-sm text-muted-foreground">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    {t(`features.${feature.detailsKey}`)}
+                  <p className=&quot;text-sm text-muted-foreground&quot;>                    {t(`features.${feature.detailsKey}`)}
                   </p>
                 )}
               </CardContent>
               <CardFooter>
                 <Button asChild className=&quot;w-full gap-1&quot;>
                   <Link
-<<<<<<< HEAD
                     href={feature.link}
                     aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
                     className=&quot;cursor-pointer&quot;
                     {...(feature.key === 'ai_talent_matching' && { &quot;data-testid&quot;: &quot;explore-ai-talent-matching-cta&quot; })}
                   >
                     <span>{t('general.explore')} {t(`features.${feature.key}`)}</span>
-                    <ArrowRight className=&quot;h-4 w-4&quot; />
-=======
-                    href={_feature.link}
-                    aria-label={_`${t('general.explore')} ${_t(`features.${feature.key}`)}`}
-                    className="cursor-pointer"
-                    {_...(feature.key === 'ai_talent_matching' && { "data-testid": "explore-ai-talent-matching-cta"})}
-                  >
-                    <span>{_t('general.explore')} {_t(`features.${feature.key}`)}</span>
-                    <ArrowRight className="h-4 w-4" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </Link>
+                    <ArrowRight className=&quot;h-4 w-4&quot; />                  </Link>
                 </Button>
               </CardFooter>
             </Card>

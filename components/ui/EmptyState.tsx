@@ -23,15 +23,13 @@ export default function EmptyState({ title, description, icon, primaryAction, se
               <a>
                 <EnhancedButton size="md">{primaryAction.label}</EnhancedButton>
               </a>
-            </Link>
-          )}
+            </Link>          )}
           {secondaryAction && (
             <Link href={secondaryAction.href}>
               <a>
                 <EnhancedButton variant="secondary" size="md">{secondaryAction.label}</EnhancedButton>
               </a>
-            </Link>
-          )}
+            </Link>          )}
         </div>
       )}
     </div>

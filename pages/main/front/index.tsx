@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
@@ -7,18 +6,7 @@ export default function FrontLanding() {
     <div className=&quot;relative min-h-screen overflow-hidden bg-slate-950 text-white&quot;>
       <Head>
         <title>Zion — Autonomous Cloud Automations</title>
-        <meta name=&quot;description&quot; content=&quot;Futuristic, cloud-native autonomous automations that innovate, optimize, and sync changes to the repo continuously.&quot; />
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-export default function FrontLanding() {_return (
-    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
-      <Head>
-        <title>Zion — Autonomous Cloud Automations</title>
-        <meta name="description" content="Futuristic, _cloud-native autonomous automations that innovate, _optimize, _and sync changes to the repo continuously." />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      </Head>
+        <meta name=&quot;description&quot; content=&quot;Futuristic, cloud-native autonomous automations that innovate, optimize, and sync changes to the repo continuously.&quot; />      </Head>
 
       {/* Animated background layers */}
       <div aria-hidden className=&quot;pointer-events-none absolute inset-0 -z-10&quot;>
@@ -31,20 +19,11 @@ export default function FrontLanding() {_return (
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Header */}
       <header className=&quot;relative z-10&quot;>
         <nav className=&quot;mx-auto flex max-w-7xl items-center justify-between px-6 py-6&quot;>
           <div className=&quot;text-2xl font-bold tracking-wide&quot;>
-            <Link href=&quot;/&quot;><a className=&quot;bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon&quot;>Zion</Link></Link>
-=======
-      {_/* Header */}
-      <header className="relative z-10">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
-          <div className="text-2xl font-bold tracking-wide">
-            <Link href="/"><a className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</a></Link>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          </div>
+            <Link href=&quot;/&quot;><a className=&quot;bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon&quot;>Zion</Link></Link>          </div>
           <div className=&quot;hidden gap-6 md:flex&quot;>
             <Link href=&quot;/&quot;><a className=&quot;text-white/80 hover:text-white&quot;>Home</Link></Link>
             <Link href=&quot;/automation&quot;><a className=&quot;text-white/80 hover:text-white&quot;>Automations</Link></Link>
@@ -54,7 +33,6 @@ export default function FrontLanding() {_return (
         </nav>
       </header>
 
-<<<<<<< HEAD
       {/* Hero */}
       <main className=&quot;relative z-10&quot;>
         <section className=&quot;mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24&quot;>
@@ -63,78 +41,35 @@ export default function FrontLanding() {_return (
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className=&quot;mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md&quot;
-=======
-      {_/* Hero */}
-      <main className="relative z-10">
-        <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24">
-          <div className="text-center">
-            <motion.div
-              initial={_{ opacity: 0, _y: 10}}
-              animate={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.6}}
-              className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md&quot;            >
               <span className=&quot;h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]&quot; />
               Autonomous agents running continuous improvements
             </motion.div>
 
             <motion.h1
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.05 }}
-              className=&quot;mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl&quot;
-=======
-              initial={_{ opacity: 0, _y: 8}}
-              animate={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.7, _delay: 0.05}}
-              className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl&quot;            >
               <span className=&quot;gradient-text&quot;>Autonomous Cloud Automations</span>
             </motion.h1>
 
             <motion.p
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className=&quot;mx-auto mt-5 max-w-3xl text-lg text-white/80&quot;
-=======
-              initial={_{ opacity: 0, _y: 8}}
-              animate={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.7, _delay: 0.1}}
-              className="mx-auto mt-5 max-w-3xl text-lg text-white/80"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;mx-auto mt-5 max-w-3xl text-lg text-white/80&quot;            >
               Self-improving, cloud-native agents that invent, generate, and run new automation factories—fixing, optimizing, and syncing changes to the repository continuously.
             </motion.p>
 
             <motion.div
-<<<<<<< HEAD
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className=&quot;mt-8 flex flex-wrap justify-center gap-3&quot;
-=======
-              initial={_{ opacity: 0}}
-              animate={_{ opacity: 1}}
-              transition={_{ delay: 0.2, _duration: 0.6}}
-              className="mt-8 flex flex-wrap justify-center gap-3"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
-<<<<<<< HEAD
+              className=&quot;mt-8 flex flex-wrap justify-center gap-3&quot;            >
               <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow">Explore Automations</a></Link>
-              <a href="https://github.com/Zion-Holdings/zion.app/actions/workflows/autonomous-meta.yml" target="_blank" rel="noopener noreferrer" className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Live Meta Factory</a>
-=======
-              <Link href=&quot;/automation&quot;><a className=&quot;rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow&quot;>Explore Automations</Link></Link>
-              <a href=&quot;https://github.com/Zion-Holdings/zion.app/actions/workflows/autonomous-meta.yml&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; className=&quot;rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10&quot;>Live Meta Factory</Link>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-            </motion.div>
+              <a href="https://github.com/Zion-Holdings/zion.app/actions/workflows/autonomous-meta.yml" target="_blank" rel="noopener noreferrer" className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Live Meta Factory</a>            </motion.div>
 
-<<<<<<< HEAD
             {/* Quick stats */}
             <div className=&quot;mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4&quot;>
               {[
@@ -151,30 +86,12 @@ export default function FrontLanding() {_return (
                   className=&quot;glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left&quot;
                 >
                   <div className=&quot;text-lg font-bold text-white&quot;>{k}</div>
-                  <div className=&quot;text-xs text-white/70&quot;>{v}</div>
-=======
-            {_/* Quick stats */}
-            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {_[
-                ['24/7', _'Autonomous'], _['Main', _'Direct Sync'], _['0 Ops', _'Cloud‑Native'], _['Safety', _'Guardrails']].map(_([k, _v]) => (
-                <motion.div
-                  key={k}
-                  initial={_{ opacity: 0, _y: 6}}
-                  whileInView={_{ opacity: 1, _y: 0}}
-                  viewport={_{ once: true}}
-                  transition={_{ duration: 0.5}}
-                  className="glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left"
-                >
-                  <div className="text-lg font-bold text-white">{_k}</div>
-                  <div className="text-xs text-white/70">{_v}</div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </motion.div>
+                  <div className=&quot;text-xs text-white/70&quot;>{v}</div>                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features */}
         <section className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;>
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Features</h2>
@@ -196,37 +113,11 @@ export default function FrontLanding() {_return (
               >
                 <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
                 <h3 className=&quot;text-lg font-semibold&quot;>{f.title}</h3>
-                <p className=&quot;mt-1 text-sm text-white/75&quot;>{f.desc}</p>
-=======
-        {_/* Features */}
-        <section className="mx-auto max-w-7xl px-6 pb-14">
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Features</h2>
-          <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {_[
-              { title: 'Self‑Improving', _desc: 'Agents continuously analyze, _invent, _and evolve automations.'},
-              {_title: 'Repo Sync', _desc: 'Changes are committed and pushed automatically to main.'},
-              {_title: 'Zero Ops', _desc: 'Runs fully in the cloud—no servers or manual intervention.'},
-              {_title: 'Safety‑First', _desc: 'Conservative edits with logs, _reports, _and guardrails.'},
-              {_title: 'Scalable', _desc: 'Generates domain‑specific factories on demand.'},
-              {_title: 'Observability', _desc: 'Dashboards, _reports, _and GitHub Actions artifacts.'}].map(_(f) => (
-              <motion.article
-                key={_f.title}
-                initial={_{ opacity: 0, _y: 8}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                viewport={_{ once: true}}
-                transition={_{ duration: 0.6}}
-                className="group glow-card relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md hover:border-cyan-400/30"
-              >
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold">{_f.title}</h3>
-                <p className="mt-1 text-sm text-white/75">{_f.desc}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </motion.article>
+                <p className=&quot;mt-1 text-sm text-white/75&quot;>{f.desc}</p>              </motion.article>
             ))}
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Capabilities */}
         <section className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;>
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Capabilities</h2>
@@ -245,34 +136,11 @@ export default function FrontLanding() {_return (
               >
                 <div className=&quot;absolute right-0 top-0 h-24 w-24 rounded-bl-[4rem] bg-cyan-400/10 blur-2xl&quot; />
                 <h3 className=&quot;text-lg font-semibold&quot;>{c.title}</h3>
-                <p className=&quot;mt-1 text-sm text-white/75&quot;>{c.desc}</p>
-=======
-        {_/* Capabilities */}
-        <section className="mx-auto max-w-7xl px-6 pb-14">
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities</h2>
-          <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
-            {_[
-              { title: 'Code Quality & Refactors', _desc: 'Lints, _fixes, _and proposes refactors with type‑safety improvements.'},
-              {_title: 'Performance & A11y', _desc: 'Optimizes bundles, _assets, _and accessibility with continuous checks.'},
-              {_title: 'Content & SEO', _desc: 'Curates content, _updates promotions, _and tunes metadata for reach.'}].map(_(c) => (
-              <motion.article
-                key={_c.title}
-                initial={_{ opacity: 0, _y: 8}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                viewport={_{ once: true}}
-                transition={_{ duration: 0.6}}
-                className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl"
-              >
-                <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[4rem] bg-cyan-400/10 blur-2xl" />
-                <h3 className="text-lg font-semibold">{_c.title}</h3>
-                <p className="mt-1 text-sm text-white/75">{_c.desc}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </motion.article>
+                <p className=&quot;mt-1 text-sm text-white/75&quot;>{c.desc}</p>              </motion.article>
             ))}
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Benefits */}
         <section className=&quot;mx-auto max-w-7xl px-6 pb-20&quot;>
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Benefits</h2>
@@ -288,31 +156,11 @@ export default function FrontLanding() {_return (
                 className=&quot;flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md&quot;
               >
                 <span className=&quot;mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]&quot; />
-                <span className=&quot;text-sm text-white/80&quot;>{b}</span>
-=======
-        {_/* Benefits */}
-        <section className="mx-auto max-w-7xl px-6 pb-20">
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits</h2>
-          <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md:grid-cols-2">
-            {_[
-              '24/7 progress without human intervention', _'Rapid feedback loop with safe, _incremental edits', _'Continuous delivery directly to main branch', _'Fewer regressions via layered checks and reports'].map(_(b) => (
-              <motion.div
-                key={b}
-                initial={_{ opacity: 0, _y: 6}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                viewport={_{ once: true}}
-                transition={_{ duration: 0.5}}
-                className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md"
-              >
-                <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
-                <span className="text-sm text-white/80">{_b}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </motion.div>
+                <span className=&quot;text-sm text-white/80&quot;>{b}</span>              </motion.div>
             ))}
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* CTA */}
         <section className=&quot;mx-auto max-w-7xl px-6 pb-24&quot;>
           <motion.div
@@ -320,18 +168,7 @@ export default function FrontLanding() {_return (
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className=&quot;animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl&quot;
-=======
-        {_/* CTA */}
-        <section className="mx-auto max-w-7xl px-6 pb-24">
-          <motion.div
-            initial={_{ opacity: 0, _scale: 0.98}}
-            whileInView={_{ opacity: 1, _scale: 1}}
-            viewport={_{ once: true}}
-            transition={_{ duration: 0.6}}
-            className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            className=&quot;animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl&quot;          >
             <h3 className=&quot;text-2xl font-bold&quot;>Ready to build with autonomous cloud agents?</h3>
             <p className=&quot;mx-auto mt-2 max-w-2xl text-white/80&quot;>Scale development with a tireless fleet of self‑improving automations.</p>
             <div className=&quot;mt-6 flex flex-wrap justify-center gap-3&quot;>
@@ -341,12 +178,7 @@ export default function FrontLanding() {_return (
           </motion.div>
         </section>
 
-<<<<<<< HEAD
         {/* Explore more */}
-<<<<<<< HEAD
-=======
-        {_/* Explore more */}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         <section className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -358,7 +190,6 @@ export default function FrontLanding() {_return (
             <Link href="/newsroom"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Newsroom — latest autonomous updates</span></a></Link>
             <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health — audits & insights</span></a></Link>
             <Link href="/contact"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Contact — discuss your use‑case</span></a></Link>
-=======
         <section className=&quot;mx-auto max-w-7xl px-6 pb-16&quot;>
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Explore more</h2>
           <div className=&quot;mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4&quot;>
@@ -370,7 +201,6 @@ export default function FrontLanding() {_return (
             <Link href=&quot;/newsroom&quot;><a className=&quot;bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10&quot;><span className=&quot;text-white/90&quot;>Newsroom — latest autonomous updates</span></Link></Link>
             <Link href=&quot;/site-health&quot;><a className=&quot;bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10&quot;><span className=&quot;text-white/90&quot;>Site Health — audits & insights</span></Link></Link>
             <Link href=&quot;/contact&quot;><a className=&quot;bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10&quot;><span className=&quot;text-white/90&quot;>Contact — discuss your use‑case</span></Link></Link>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           </div>
         </section>
       </main>

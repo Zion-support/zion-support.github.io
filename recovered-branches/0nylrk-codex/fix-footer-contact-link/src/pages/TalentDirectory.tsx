@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -11,22 +9,7 @@ import { useTalentDirectory } from "@/hooks/useTalentDirectory",
 import { SORT_OPTIONS } from "@/data/sortOptions",
 import { X } from "lucide-react",
 import { Button } from "@/components/ui/button",
-import { TalentProfile } from "@/types/talent",
-=======
-import React, { useState } from &quot;react&quot;;
-import { useNavigate } from &quot;react-router-dom&quot;;
-import { AppLayout } from &quot;@/layout/AppLayout&quot;;
-import { TalentGrid } from &quot;@/components/talent/TalentGrid&quot;;
-import { FilterSidebar } from &quot;@/components/talent/FilterSidebar&quot;;
-import { TalentResults } from &quot;@/components/talent/TalentResults&quot;;
-import { useTalentDirectory } from &quot;@/hooks/useTalentDirectory&quot;;
-import { SORT_OPTIONS } from &quot;@/data/sortOptions&quot;;
-import { X } from &quot;lucide-react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { TalentProfile } from &quot;@/types/talent&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export default function TalentDirectory() {
+import { TalentProfile } from "@/types/talent",export default function TalentDirectory() {
   const navigate = useNavigate(),
 
   // Use our custom hook to manage state
@@ -85,7 +68,6 @@ export default function TalentDirectory() {
           <div className=&quot;flex flex-col lg:flex-row gap-6&quot;>
             {/* Sidebar - Desktop */}
             <div className=&quot;w-full lg:w-64 shrink-0 hidden lg:block&quot;>
-=======
 import React, {_useState} from "react";
 
 export default function TalentDirectory() {_const _navigate = useNavigate();
@@ -115,7 +97,6 @@ export default function TalentDirectory() {_const _navigate = useNavigate();
           <div className="flex flex-col lg:flex-row gap-6">
             {_/* Sidebar - Desktop */}
             <div className="w-full lg:w-64 shrink-0 hidden lg:block">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <FilterSidebar
                 searchTerm={_searchTerm}
                 setSearchTerm={_setSearchTerm}
@@ -137,22 +118,12 @@ export default function TalentDirectory() {_const _navigate = useNavigate();
               />
             </div>
             
-<<<<<<< HEAD
             {/* Mobile filter button */}
             <div className=&quot;lg:hidden mb-4&quot;>
               <Button
                 onClick={() => setIsMobileFilterOpen(true)}
                 variant=&quot;outline&quot;
-                className=&quot;w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light&quot;
-=======
-            {_/* Mobile filter button */}
-            <div className="lg:hidden mb-4">
-              <Button
-                onClick={_() => setIsMobileFilterOpen(true)}
-                variant="outline"
-                className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light&quot;              >
                 Filter & Sort
               </Button>
             </div>
@@ -170,21 +141,12 @@ export default function TalentDirectory() {_const _navigate = useNavigate();
                 selectedSkills, _toggleSkill, _selectedAvailability, _toggleAvailability, _selectedRegions, _toggleRegion, _priceRange, _setPriceRange, _experienceRange, _setExperienceRange, _clearFilters}}
             />
             
-<<<<<<< HEAD
             {/* Mobile filter sidebar */}
             {isMobileFilterOpen && (
               <div className=&quot;fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex&quot;>
                 <div className=&quot;w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto&quot;>
                   <div className=&quot;flex justify-between items-center mb-4&quot;>
-                    <h3 className=&quot;font-bold text-white&quot;>Filter & Sort</h3>
-=======
-            {_/* Mobile filter sidebar */}
-            {_isMobileFilterOpen && (_<div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">
-                <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">
-                  <div className="flex justify-between items-center mb-4">
-                    <h3 className="font-bold text-white">Filter & Sort</h3>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    <Button
+                    <h3 className=&quot;font-bold text-white&quot;>Filter & Sort</h3>                    <Button
                       variant=&quot;ghost&quot;
                       size=&quot;sm&quot;
                       onClick={() => setIsMobileFilterOpen(false)}

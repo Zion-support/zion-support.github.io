@@ -1,18 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),
 const supabaseUrl = Deno.env.get('SUPABASE_URL') || '',
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '',
-=======
-import &quot;https://deno.land/x/xhr@0.1.0/mod.ts&quot;;
-import { serve } from &quot;https://deno.land/std@0.168.0/http/server.ts&quot;;
-import { createClient } from &quot;https://esm.sh/@supabase/supabase-js@2.7.1&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 const supabase = createClient(supabaseUrl, supabaseServiceKey),
 
 const corsHeaders = {
@@ -37,7 +29,6 @@ interface RequestBody {
   service: Service | null,
   quoteDetails: QuoteDetails
 }
-=======
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 
 const _openAIApiKey = Deno.env.get('OPENAI_API_KEY');
@@ -61,11 +52,9 @@ interface QuoteDetails {_description: string;
 
 interface RequestBody {_service: Service | null;
   quoteDetails: QuoteDetails;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 serve(_async (req) => {_// Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
-<<<<<<< HEAD
     return new Response(null, { headers: corsHeaders })
   }
 
@@ -86,12 +75,7 @@ serve(_async (req) => {_// Handle CORS preflight requests
         }
       }
     } catch (authError) {
-<<<<<<< HEAD
-      // // // console.log("Auth error:", authError),
-=======
-      // console.log(&quot;Auth error:&quot;, authError);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      // Continue without user identity
+      // // // console.log("Auth error:", authError),      // Continue without user identity
     }
 
     // Generate a summary and tags using OpenAI
@@ -101,7 +85,6 @@ serve(_async (req) => {_// Handle CORS preflight requests
         const openAIResponse = await fetch('https: //api.openai.com/v1/chat/completions', {
           method: 'POST',
           headers: {
-=======
     return new Response(null, _{ headers: corsHeaders});
   }
 
@@ -124,7 +107,6 @@ serve(_async (req) => {_// Handle CORS preflight requests
     try {_if (openAIApiKey) {
         const _openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', _{
           method: 'POST', _headers: {
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             'Authorization': `Bearer ${openAIApiKey}`,
             'Content-Type': 'application/json'},
           body: JSON.stringify({_model: 'gpt-4o-mini', _messages: [
@@ -148,26 +130,18 @@ serve(_async (req) => {_// Handle CORS preflight requests
           })
         }),
         
-<<<<<<< HEAD
         const aiResult = await openAIResponse.json(),
         if (!aiResult.error && aiResult.choices && aiResult.choices.length > 0) {
           aiAnalysis = aiResult.choices[0].message.content
         }
       }
     } catch (openAIError) {
-<<<<<<< HEAD
-      console.error("OpenAI error:", openAIError),
-=======
-      console.error(&quot;OpenAI error:&quot;, openAIError);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      // Continue without AI analysis
+      console.error("OpenAI error:", openAIError),      // Continue without AI analysis
     }
-=======
         const _aiResult = await openAIResponse.json();
         if (!aiResult.error && aiResult.choices && aiResult.choices.length > 0) {_aiAnalysis = aiResult.choices[0].message.content;}
       }
     } catch (openAIError) {_// Continue without AI analysis}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     // Store the quote request in the database
     const {_data, _error} = await supabase
@@ -179,17 +153,11 @@ serve(_async (req) => {_// Handle CORS preflight requests
     
     if (error) throw error,
     
-<<<<<<< HEAD
     return new Response(JSON.stringify({ success: true, data }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   } catch (error) {
     console.error('Error in process-quote function:', error),
     return new Response(JSON.stringify({ success: false, error: error.message }), {
       status: 500,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
-=======
-    return new Response(JSON.stringify({_success: true, _data}), {_headers: { ...corsHeaders, _'Content-Type': 'application/json'}});
-  } catch (error) {_return new Response(JSON.stringify({ success: false, _error: error.message}), {_status: 500, _headers: { ...corsHeaders, _'Content-Type': 'application/json'}});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  }
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})  }
 }),

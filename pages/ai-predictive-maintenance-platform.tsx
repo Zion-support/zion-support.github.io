@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AIPredictiveMaintenancePlatform() {
@@ -20,15 +19,8 @@ export default function AIPredictiveMaintenancePlatform() {
 				&quot;Visualizations and alerting&quot;,
 				&quot;APIs and event webhooks&quot;
 			]}
-<<<<<<< HEAD
 			industries={["Manufacturing", "Utilities", "Oil & Gas", "Transportation"]}
-			canonical="https: //ziontechgroup.com/ai-predictive-maintenance-platform"
-=======
-			industries={[&quot;Manufacturing&quot;, &quot;Utilities&quot;, &quot;Oil & Gas&quot;, &quot;Transportation&quot;]}
-			canonical=&quot;https://ziontechgroup.com/ai-predictive-maintenance-platform&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from 'react';
+			canonical="https: //ziontechgroup.com/ai-predictive-maintenance-platform"import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIPredictiveMaintenancePlatform() {_return (
@@ -44,7 +36,6 @@ export default function AIPredictiveMaintenancePlatform() {_return (
 			]}
 			industries={_["Manufacturing", _"Utilities", _"Oil & Gas", _"Transportation"]}
 			canonical="https://ziontechgroup.com/ai-predictive-maintenance-platform"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 		/>
 	)
 }

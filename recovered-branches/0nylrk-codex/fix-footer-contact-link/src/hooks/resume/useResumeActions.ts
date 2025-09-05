@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { Resume, ResumeBasicInfo } from '@/types/resume',
@@ -15,18 +14,7 @@ export function useResumeActions() {
     if (!user) {
       setError('You must be logged in to create a resume'),
       return null
-    }
-=======
-
-export function useResumeActions() {_const { user} = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  
-  const _createResume = async (basicInfo: ResumeBasicInfo): Promise<string | null> => {_if (!user) {
-      setError('You must be logged in to create a resume');
-      return null;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    
+    }    
     setIsLoading(true),
     setError(null),
     
@@ -38,13 +26,7 @@ export function useResumeActions() {_const { user} = useAuth();
       
       if (error) throw error,
       
-<<<<<<< HEAD
-      showSuccessToast("Resume created", "Your resume has been created successfully"),
-=======
-      showSuccessToast(&quot;Resume created&quot;, &quot;Your resume has been created successfully&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      
-<<<<<<< HEAD
+      showSuccessToast("Resume created", "Your resume has been created successfully"),      
       return data.id
     } catch (e: any) {
       return handleResumeError(e, 'Could not create resume') ? null : null
@@ -57,17 +39,7 @@ export function useResumeActions() {_const { user} = useAuth();
     if (!user) {
       setError('You must be logged in to update a resume'),
       return false
-    }
-=======
-      return data.id;
-    } catch (e: unknown) {_return handleResumeError(e, _'Could not create resume') ? null : null;} finally {_setIsLoading(false);}
-  };
-  
-  const _updateBasicInfo = async (resumeId: string, basicInfo: ResumeBasicInfo): Promise<boolean> => {_if (!user) {
-      setError('You must be logged in to update a resume');
-      return false;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    
+    }    
     setIsLoading(true),
     setError(null),
     
@@ -79,13 +51,7 @@ export function useResumeActions() {_const { user} = useAuth();
       
       if (error) throw error,
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-      return showSuccessToast("Resume updated", "Your resume information has been updated")
-=======
-      return showSuccessToast(&quot;Resume updated&quot;, &quot;Your resume information has been updated&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } catch (e: any) {
+      return showSuccessToast("Resume updated", "Your resume information has been updated")    } catch (e: any) {
       return handleResumeError(e, 'Could not update resume')
     } finally {
       setIsLoading(false)
@@ -97,7 +63,6 @@ export function useResumeActions() {_const { user} = useAuth();
       setError('You must be logged in to set active resume'),
       return false
     }
-=======
       return showSuccessToast("Resume updated", "Your resume information has been updated");
     } catch (e: unknown) {_return handleResumeError(e, _'Could not update resume');} finally {_setIsLoading(false);}
   };
@@ -105,7 +70,6 @@ export function useResumeActions() {_const { user} = useAuth();
   const _setActiveResume = async (resumeId: string): Promise<boolean> => {_if (!user) {
       setError('You must be logged in to set active resume');
       return false;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     setIsLoading(true),
     setError(null),
@@ -113,14 +77,8 @@ export function useResumeActions() {_const { user} = useAuth();
     try {_// First, _set all user's resumes to inactive
       const { error: resetError} = await supabase
         .from('talent_resumes')
-<<<<<<< HEAD
         .update({ is_active: false })
-        .eq('user_id', user.id),
-=======
-        .update({_is_active: false})
-        .eq('user_id', user.id);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      
+        .eq('user_id', user.id),      
       if (resetError) throw resetError,
       
       // Then, set the selected resume as active
@@ -132,13 +90,7 @@ export function useResumeActions() {_const { user} = useAuth();
       
       if (error) throw error,
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-      return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
-=======
-      return showSuccessToast(&quot;Active resume set&quot;, &quot;Your selected resume is now marked as active&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } catch (e: any) {
+      return showSuccessToast("Active resume set", "Your selected resume is now marked as active")    } catch (e: any) {
       return handleResumeError(e, 'Could not set active resume')
     } finally {
       setIsLoading(false)
@@ -151,11 +103,9 @@ export function useResumeActions() {_const { user} = useAuth();
     createResume,
     updateBasicInfo,
     setActiveResume}
-=======
       return showSuccessToast("Active resume set", "Your selected resume is now marked as active");
     } catch (e: unknown) {_return handleResumeError(e, _'Could not set active resume');} finally {_setIsLoading(false);}
   };
 
   return {_isLoading, _error, _createResume, _updateBasicInfo, _setActiveResume};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

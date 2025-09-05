@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 import Link from "next/link",
 export const metadata = {
   title: "AI Automation Services - Zion Tech Group",
   description: "Transform your business with intelligent AI automation solutions. Streamline operations, reduce costs, and enhance productivity with our cutting-edge automation technology.",
   keywords: "AI automation, business process automation, intelligent automation, workflow automation, Zion Tech Group"},
-=======
-import Link from "next/link";
-
-export const _metadata = {_title: "AI Automation Services - Zion Tech Group", _description: "Transform your business with intelligent AI automation solutions. Streamline operations, _reduce costs, _and enhance productivity with our cutting-edge automation technology.", _keywords: "AI automation, _business process automation, _intelligent automation, _workflow automation, _Zion Tech Group"};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default function AIAutomationServicesPage() {_return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">

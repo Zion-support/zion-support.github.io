@@ -1,20 +1,9 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
 import { Search } from "lucide-react",
 import { Input } from "@/components/ui/input",
-import { cn } from "@/lib/utils",
-=======
-import React from &quot;react&quot;;
-import { Link, useLocation } from &quot;react-router-dom&quot;;
-import { Search } from &quot;lucide-react&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { cn } from &quot;@/lib/utils&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface ApiDocsLayoutProps {
+import { cn } from "@/lib/utils",interface ApiDocsLayoutProps {
   children: React.ReactNode
 }
 
@@ -23,20 +12,11 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   const currentPath = location.pathname,
   
   const navigationItems = [
-<<<<<<< HEAD
     { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
     { title: "Webhooks", path: "/developers/docs/webhooks" },
     { title: "Sample Code", path: "/developers/docs/samples" },
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],
-=======
-    { title: &quot;Getting Started&quot;, path: &quot;/developers/docs/getting-started&quot; },
-    { title: &quot;API Reference&quot;, path: &quot;/developers/docs/reference&quot; },
-    { title: &quot;Webhooks&quot;, path: &quot;/developers/docs/webhooks&quot; },
-    { title: &quot;Sample Code&quot;, path: &quot;/developers/docs/samples&quot; },
-    { title: &quot;Error Codes & Rate Limits&quot;, path: &quot;/developers/docs/errors&quot; }];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
   return (
     <div className=&quot;flex min-h-screen bg-zinc-950&quot;>
       {/* Sidebar */}
@@ -44,7 +24,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
         <Link to=&quot;/developers/docs&quot; className=&quot;flex items-center mb-8&quot;>
           <div className=&quot;bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center&quot;>
             <span className=&quot;text-white font-bold&quot;>Z</span>
-=======
 import React from "react";
 
 interface ApiDocsLayoutProps {_children: React.ReactNode;}
@@ -65,7 +44,6 @@ export function ApiDocsLayout(_{_children}: ApiDocsLayoutProps) {_const _locatio
         <Link to="/developers/docs" className="flex items-center mb-8">
           <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center">
             <span className="text-white font-bold">Z</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </div>
           <span className=&quot;font-bold text-white&quot;>API Docs</span>
         </Link>
@@ -81,7 +59,6 @@ export function ApiDocsLayout(_{_children}: ApiDocsLayoutProps) {_const _locatio
         </div>
 
         <nav>
-<<<<<<< HEAD
           <ul className=&quot;space-y-1&quot;>
             {navigationItems.map((item) => (
               <li key={item.path}>
@@ -91,19 +68,7 @@ export function ApiDocsLayout(_{_children}: ApiDocsLayoutProps) {_const _locatio
                     &quot;block px-3 py-2 rounded-md text-sm&quot;,
                     currentPath === item.path
                       ? &quot;bg-zion-purple/20 text-zion-cyan&quot;
-                      : &quot;text-zinc-400 hover:text-white hover:bg-zinc-900&quot;
-=======
-          <ul className="space-y-1">
-            {_navigationItems.map((item) => (
-              <li key={item.path}>
-                <Link
-                  to={_item.path}
-                  className={_cn(
-                    "block px-3 py-2 rounded-md text-sm", _currentPath === item.path
-                      ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-zinc-400 hover:text-white hover:bg-zinc-900"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  )}
+                      : &quot;text-zinc-400 hover:text-white hover:bg-zinc-900&quot;                  )}
                 >
                   {_item.title}
                 </Link>
@@ -113,16 +78,9 @@ export function ApiDocsLayout(_{_children}: ApiDocsLayoutProps) {_const _locatio
         </nav>
       </div>
 
-<<<<<<< HEAD
       {/* Main content */}
       <div className=&quot;flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12&quot;>
-        {children}
-=======
-      {_/* Main content */}
-      <div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12">
-        {_children}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      </div>
+        {children}      </div>
     </div>
   )
 }

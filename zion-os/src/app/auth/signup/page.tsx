@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client",
 
 import { useState } from "react",
@@ -32,32 +31,6 @@ export default function SignUpPage() {
       setIsLoading(false)
     }
   },
-=======
-"use client";
-
-import Link from "next/link";
-
-export default function SignUpPage() {_const [name, _setName] = useState("");
-  const [email, _setEmail] = useState("");
-  const [password, _setPassword] = useState("");
-  const [confirmPassword, _setConfirmPassword] = useState("");
-  const [isLoading, _setIsLoading] = useState(false);
-  const [error, _setError] = useState("");
-  const { register} = useAuth();
-
-  const _handleSubmit = async (_e: React.FormEvent) => {_e.preventDefault();
-    setIsLoading(true);
-    setError("");
-
-    if (password !== confirmPassword) {
-      setError("Passwords do not match");
-      setIsLoading(false);
-      return;}
-
-    try {_await register(name, _email, _password);} catch (error) {_setError(error instanceof Error ? error.message : "Registration failed");} finally {_setIsLoading(false);}
-  };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">
       <div className="max-w-md w-full space-y-8 p-8">
@@ -99,8 +72,8 @@ export default function SignUpPage() {_const [name, _setName] = useState("");
         </div>
 
         <div className="bg-zinc-800/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50">
-          <form onSubmit={_handleSubmit} className="space-y-6">
-            {_error && (
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {error && (
               <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3">
                 <p className="text-red-400 text-sm">{error}</p>
               </div>
@@ -110,12 +83,12 @@ export default function SignUpPage() {_const [name, _setName] = useState("");
               <label htmlFor="name" className="block text-sm font-medium text-zinc-300 mb-2">
                 Full Name
               </label>
-              <input
-                id="name"
+              <input,
+id="name"
                 type="text"
-                required
-                value={_name}
-                onChange={_(_e) => setName(e.target.value)}
+                required,
+value={name}
+                onChange={_(e) => setName(e.target.value)}
                 className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Enter your full name"
               />
@@ -125,12 +98,12 @@ export default function SignUpPage() {_const [name, _setName] = useState("");
               <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">
                 Email Address
               </label>
-              <input
-                id="email"
+              <input,
+id="email"
                 type="email"
-                required
-                value={_email}
-                onChange={_(_e) => setEmail(e.target.value)}
+                required,
+value={email}
+                onChange={_(e) => setEmail(e.target.value)}
                 className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Enter your email address"
               />
@@ -140,12 +113,12 @@ export default function SignUpPage() {_const [name, _setName] = useState("");
               <label htmlFor="password" className="block text-sm font-medium text-zinc-300 mb-2">
                 Password
               </label>
-              <input
-                id="password"
+              <input,
+id="password"
                 type="password"
-                required
-                value={_password}
-                onChange={_(_e) => setPassword(e.target.value)}
+                required,
+value={password}
+                onChange={_(e) => setPassword(e.target.value)}
                 className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Create a strong password"
               />
@@ -156,23 +129,23 @@ export default function SignUpPage() {_const [name, _setName] = useState("");
               <label htmlFor="confirmPassword" className="block text-sm font-medium text-zinc-300 mb-2">
                 Confirm Password
               </label>
-              <input
-                id="confirmPassword"
+              <input,
+id="confirmPassword"
                 type="password"
-                required
-                value={_confirmPassword}
-                onChange={_(_e) => setConfirmPassword(e.target.value)}
+                required,
+value={confirmPassword}
+                onChange={_(e) => setConfirmPassword(e.target.value)}
                 className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Confirm your password"
               />
             </div>
 
-            <button
-              type="submit"
-              disabled={_isLoading}
+            <button,
+type="submit"
+              disabled={isLoading}
               className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-600/50 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200"
             >
-              {_isLoading ? "Creating Account..." : "Start Free Trial"}
+              {isLoading ? "Creating Account..." : "Start Free Trial"}
             </button>
           </form>
 
@@ -191,16 +164,9 @@ export default function SignUpPage() {_const [name, _setName] = useState("");
             By signing up, you agree to our{_" "}
             <Link href="/terms" className="text-zinc-400 hover:text-zinc-300">
               Terms of Service
-<<<<<<< HEAD
             </Link>{" "}
             and{" "}
-            <Link href="/privacy" className="text-zinc-400 hover: text-zinc-300">
-=======
-            </Link>{_" "}
-            and{_" "}
-            <Link href="/privacy" className="text-zinc-400 hover:text-zinc-300">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              Privacy Policy
+            <Link href="/privacy" className="text-zinc-400 hover: text-zinc-300">              Privacy Policy
             </Link>
           </p>
         </div>

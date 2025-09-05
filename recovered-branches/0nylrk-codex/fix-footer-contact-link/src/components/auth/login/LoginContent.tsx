@@ -1,12 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { LoginCard } from "./LoginCard",
-=======
-import { LoginCard } from &quot;./LoginCard&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export function LoginContent() {
+import { LoginCard } from "./LoginCard",export function LoginContent() {
   return (
     <div className=&quot;flex min-h-screen bg-zion-blue&quot;>
       <div className=&quot;flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24&quot;>
@@ -19,7 +12,6 @@ export function LoginContent() {
               <h3 className=&quot;text-3xl font-bold text-white mb-4&quot;>Join the Zion Community</h3>
               <p className=&quot;text-lg text-white/80&quot;>
                 Connect with thousands of AI professionals, discover new opportunities, and showcase your services to a global audience.
-=======
 
 export function LoginContent() {_return (
     <div className="flex min-h-screen bg-zion-blue">
@@ -33,16 +25,11 @@ export function LoginContent() {_return (
               <h3 className="text-3xl font-bold text-white mb-4">Join the Zion Community</h3>
               <p className="text-lg text-white/80">
                 Connect with thousands of AI professionals, _discover new opportunities, _and showcase your services to a global audience.
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   )
 }
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

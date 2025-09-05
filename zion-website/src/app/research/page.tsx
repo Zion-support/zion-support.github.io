@@ -80,8 +80,7 @@ export default function ResearchPage() {
             <p className="mt-6 text-lg leading-8 text-gray-300">
               At Zion Tech Group, we are at the forefront of technological innovation, 
               conducting groundbreaking research that shapes the future of AI and computing.
-            </p>
-          </div>
+            </p>          </div>
         </div>
       </div>
 
@@ -112,8 +111,7 @@ export default function ResearchPage() {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
+            </div>          </div>
         </div>
       </div>
     </div>

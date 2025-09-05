@@ -26,7 +26,6 @@ import {
   Globe,
   BarChart3
 } from 'lucide-react';
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);

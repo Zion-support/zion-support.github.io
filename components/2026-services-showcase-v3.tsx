@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
@@ -12,17 +11,6 @@ export default function ServicesShowcase2026V3() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   },
-=======
-import React from 'react';
-import Head from 'next/head';
-import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
-import Enhanced2026ServicesShowcaseV3 from '../components/sections/Enhanced2026ServicesShowcaseV3';
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
-
-export default function ServicesShowcase2026V3() {_const _contactInfo = {
-    mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (
     <UltraQuantumHolographicBackground 
       intensity="extreme" 

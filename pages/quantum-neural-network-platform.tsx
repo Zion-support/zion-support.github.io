@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -8,16 +7,8 @@ import {
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign
 } from 'lucide-react',
-=======
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import {_Atom, _Brain, _Cpu, _Zap, _Shield, _Globe, _Rocket, _Target, _TrendingUp, _Users, _CheckCircle, _ArrowRight, _Star, _Award, _Clock, _DollarSign} from 'lucide-react';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 const _QuantumNeuralNetworkPlatform = () => {_const _features = [
     {
-<<<<<<< HEAD
       icon: Brain,
       title: &quot;Quantum Consciousness Integration&quot;,
       description: &quot;Advanced AI consciousness with quantum processing capabilities&quot;,
@@ -44,16 +35,6 @@ const _QuantumNeuralNetworkPlatform = () => {_const _features = [
   ],
 
   const benefits = [
-<<<<<<< HEAD
-=======
-      icon: Brain, _title: "Quantum Consciousness Integration", _description: "Advanced AI consciousness with quantum processing capabilities", _color: "from-purple-500 to-pink-500"},
-    {_icon: Atom, _title: "Quantum Neural Processing", _description: "Revolutionary quantum computing for neural network operations", _color: "from-blue-500 to-cyan-500"},
-    {_icon: Cpu, _title: "Hybrid AI Architecture", _description: "Combines classical and quantum computing for optimal performance", _color: "from-emerald-500 to-teal-500"},
-    {_icon: Shield, _title: "Quantum Security", _description: "Unbreakable encryption using quantum cryptography", _color: "from-red-500 to-orange-500"}
-  ];
-
-  const _benefits = [
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     "1000x faster neural network training",
     "Quantum-level security and encryption",
     "Scalable consciousness simulation",
@@ -61,7 +42,6 @@ const _QuantumNeuralNetworkPlatform = () => {_const _features = [
     "Advanced pattern recognition",
     "Future-proof technology foundation"
   ],
-=======
     &quot;1000x faster neural network training&quot;,
     &quot;Quantum-level security and encryption&quot;,
     &quot;Scalable consciousness simulation&quot;,
@@ -69,9 +49,7 @@ const _QuantumNeuralNetworkPlatform = () => {_const _features = [
     &quot;Advanced pattern recognition&quot;,
     &quot;Future-proof technology foundation&quot;
   ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
-<<<<<<< HEAD
   const useCases = [
     {
       title: &quot;AI Research & Development&quot;,
@@ -90,19 +68,9 @@ const _QuantumNeuralNetworkPlatform = () => {_const _features = [
       description: &quot;Advanced risk assessment and market prediction algorithms&quot;
     }
   ],
-=======
-  const _useCases = [
-    {_title: "AI Research & Development", _description: "Accelerate AI breakthroughs with quantum processing power"},
-    {_title: "Cybersecurity", _description: "Unbreakable security protocols using quantum encryption"},
-    {_title: "Scientific Discovery", _description: "Solve complex scientific problems in minutes, _not years"},
-    {_title: "Financial Modeling", _description: "Advanced risk assessment and market prediction algorithms"}
-  ];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (_<>
       <Head>
         <title>Quantum Neural Network Platform - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name=&quot;description&quot; content=&quot;Revolutionary quantum neural network platform combining AI consciousness with quantum computing for unprecedented performance and capabilities.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;quantum computing, neural networks, AI consciousness, quantum AI, advanced technology&quot; />
         <meta property=&quot;og:title&quot; content=&quot;Quantum Neural Network Platform - Zion Tech Group&quot; />
@@ -115,23 +83,7 @@ const _QuantumNeuralNetworkPlatform = () => {_const _features = [
         {/* Hero Section */}
         <section className=&quot;relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;>
-=======
-        <meta name="description" content="Revolutionary quantum neural network platform combining AI consciousness with quantum computing for unprecedented performance and capabilities." />
-        <meta name="keywords" content="quantum computing, _neural networks, _AI consciousness, _quantum AI, _advanced technology" />
-        <meta property="og:title" content="Quantum Neural Network Platform - Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary quantum neural network platform combining AI consciousness with quantum computing." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/quantum-neural-network-platform" />
-      </Head>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {_/* Hero Section */}
-        <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            <motion.div
+          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;>            <motion.div
               initial={_{ opacity: 0, _y: 20}}
               animate={_{ opacity: 1, _y: 0}}
               transition={_{ duration: 0.8}}
@@ -164,7 +116,6 @@ const _QuantumNeuralNetworkPlatform = () => {_const _features = [
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -173,19 +124,7 @@ const _QuantumNeuralNetworkPlatform = () => {_const _features = [
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className=&quot;text-center mb-16&quot;
-=======
-        {_/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
-              className="text-center mb-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;text-center mb-16&quot;            >
               <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>
                 Revolutionary Features
               </h2>
@@ -194,7 +133,6 @@ const _QuantumNeuralNetworkPlatform = () => {_const _features = [
               </p>
             </motion.div>
 
-<<<<<<< HEAD
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>
               {features.map((feature, index) => (
                 <motion.div
@@ -209,31 +147,12 @@ const _QuantumNeuralNetworkPlatform = () => {_const _features = [
                     <feature.icon className=&quot;w-6 h-6 text-white&quot; />
                   </div>
                   <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
-                  <p className=&quot;text-gray-400&quot;>{feature.description}</p>
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {_features.map((feature, _index) => (
-                <motion.div
-                  key={index}
-                  initial={_{ opacity: 0, _y: 20}}
-                  whileInView={_{ opacity: 1, _y: 0}}
-                  transition={_{ duration: 0.8, _delay: index * 0.1}}
-                  viewport={_{ once: true}}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300"
-                >
-                  <div className={_`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{_feature.title}</h3>
-                  <p className="text-gray-400">{_feature.description}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </motion.div>
+                  <p className=&quot;text-gray-400&quot;>{feature.description}</p>                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -242,19 +161,7 @@ const _QuantumNeuralNetworkPlatform = () => {_const _features = [
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className=&quot;text-center mb-16&quot;
-=======
-        {_/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
-              className="text-center mb-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;text-center mb-16&quot;            >
               <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>
                 Unprecedented Benefits
               </h2>
@@ -263,7 +170,6 @@ const _QuantumNeuralNetworkPlatform = () => {_const _features = [
               </p>
             </motion.div>
 
-<<<<<<< HEAD
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -275,28 +181,12 @@ const _QuantumNeuralNetworkPlatform = () => {_const _features = [
                   className=&quot;flex items-center space-x-3&quot;
                 >
                   <CheckCircle className=&quot;w-6 h-6 text-green-400 flex-shrink-0&quot; />
-                  <span className=&quot;text-gray-300&quot;>{benefit}</span>
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {_benefits.map(_(benefit, _index) => (
-                <motion.div
-                  key={index}
-                  initial={_{ opacity: 0, _x: -20}}
-                  whileInView={_{ opacity: 1, _x: 0}}
-                  transition={_{ duration: 0.8, _delay: index * 0.1}}
-                  viewport={_{ once: true}}
-                  className="flex items-center space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300">{_benefit}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </motion.div>
+                  <span className=&quot;text-gray-300&quot;>{benefit}</span>                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Use Cases Section */}
         <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -305,19 +195,7 @@ const _QuantumNeuralNetworkPlatform = () => {_const _features = [
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className=&quot;text-center mb-16&quot;
-=======
-        {_/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
-              className="text-center mb-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;text-center mb-16&quot;            >
               <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>
                 Real-World Applications
               </h2>
@@ -326,7 +204,6 @@ const _QuantumNeuralNetworkPlatform = () => {_const _features = [
               </p>
             </motion.div>
 
-<<<<<<< HEAD
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
               {useCases.map((useCase, index) => (
                 <motion.div
@@ -338,48 +215,21 @@ const _QuantumNeuralNetworkPlatform = () => {_const _features = [
                   className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl border border-slate-700/50&quot;
                 >
                   <h3 className=&quot;text-2xl font-semibold text-white mb-4&quot;>{useCase.title}</h3>
-                  <p className=&quot;text-gray-400 text-lg&quot;>{useCase.description}</p>
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {_useCases.map(_(useCase, _index) => (
-                <motion.div
-                  key={index}
-                  initial={_{ opacity: 0, _y: 20}}
-                  whileInView={_{ opacity: 1, _y: 0}}
-                  transition={_{ duration: 0.8, _delay: index * 0.1}}
-                  viewport={_{ once: true}}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl border border-slate-700/50"
-                >
-                  <h3 className="text-2xl font-semibold text-white mb-4">{_useCase.title}</h3>
-                  <p className="text-gray-400 text-lg">{_useCase.description}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </motion.div>
+                  <p className=&quot;text-gray-400 text-lg&quot;>{useCase.description}</p>                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;>
-=======
-        {_/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            <motion.div
+          <div className=&quot;max-w-4xl mx-auto text-center&quot;>            <motion.div
               initial={_{ opacity: 0, _y: 20}}
               whileInView={_{ opacity: 1, _y: 0}}
               transition={_{ duration: 0.8}}
               viewport={_{ once: true}}
             >
-<<<<<<< HEAD
-              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
-=======
-              <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-                Ready to Experience the Future?
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">                Ready to Experience the Future?
               </h2>
               <p className=&quot;text-xl text-gray-400 mb-8&quot;>
                 Join the quantum revolution and transform your AI capabilities today

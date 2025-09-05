@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AIContentPersonalizationEngine() {
@@ -19,15 +18,8 @@ export default function AIContentPersonalizationEngine() {
 				&quot;Privacy-safe profiling and consent management&quot;,
 				&quot;Integrations: CDP, ESP, CMS, Web SDK&quot;
 			]}
-<<<<<<< HEAD
 			industries={["E‑commerce", "Media", "SaaS", "Education"]}
-			canonical="https: //ziontechgroup.com/ai-content-personalization-engine"
-=======
-			industries={[&quot;E‑commerce&quot;, &quot;Media&quot;, &quot;SaaS&quot;, &quot;Education&quot;]}
-			canonical=&quot;https://ziontechgroup.com/ai-content-personalization-engine&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from 'react';
+			canonical="https: //ziontechgroup.com/ai-content-personalization-engine"import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIContentPersonalizationEngine() {_return (
@@ -44,7 +36,6 @@ export default function AIContentPersonalizationEngine() {_return (
 			]}
 			industries={_["E‑commerce", _"Media", _"SaaS", _"Education"]}
 			canonical="https://ziontechgroup.com/ai-content-personalization-engine"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 		/>
 	)
 }

@@ -1,44 +1,22 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { BillingHeader } from "./BillingHeader",
 import { CurrentSubscription } from "./CurrentSubscription",
 import { PaymentMethods } from "./PaymentMethods",
 import { InvoiceHistory } from "./InvoiceHistory",
-import { UsageOverview } from "./UsageOverview",
-=======
-import React from &quot;react&quot;;
-import { BillingHeader } from &quot;./BillingHeader&quot;;
-import { CurrentSubscription } from &quot;./CurrentSubscription&quot;;
-import { PaymentMethods } from &quot;./PaymentMethods&quot;;
-import { InvoiceHistory } from &quot;./InvoiceHistory&quot;;
-import { UsageOverview } from &quot;./UsageOverview&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import {
+import { UsageOverview } from "./UsageOverview",import {
   Tabs,
   TabsContent,
   TabsList,
-<<<<<<< HEAD
   TabsTrigger} from "@/components/ui/tabs",
 
 export function BillingDashboard() {
   return (
-    <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">
-=======
-  TabsTrigger} from &quot;@/components/ui/tabs&quot;;
-
-export function BillingDashboard() {
-  return (
-    <div className=&quot;container mx-auto max-w-7xl py-8 px-4 md:px-6&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from "react";
+    <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">import React from "react";
 import {_Tabs, _TabsContent, _TabsList, _TabsTrigger} from "@/components/ui/tabs";
 
 export function BillingDashboard() {_return (
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <BillingHeader />
       
       <Tabs defaultValue=&quot;subscription&quot; className=&quot;mt-8&quot;>
@@ -66,9 +44,5 @@ export function BillingDashboard() {_return (
         </TabsContent>
       </Tabs>
     </div>
-<<<<<<< HEAD
   )
 }
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

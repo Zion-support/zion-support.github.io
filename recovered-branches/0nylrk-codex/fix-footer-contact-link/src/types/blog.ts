@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface BlogAuthor {
   name: string,
   title: string,
@@ -40,38 +39,3 @@ export interface GeneratedNewsletterContent {
   body: string,
   cta: string
 }
-=======
-export interface BlogAuthor {_name: string;
-  title: string;
-  avatarUrl: string;}
-
-export interface BlogPost {_id: string;
-  title: string;
-  slug: string;
-  excerpt: string;
-  content: string;
-  author: BlogAuthor;
-  publishedDate: string;
-  readTime: string;
-  category: string;
-  tags: string[];
-  featuredImage: string;
-  isFeatured?: boolean;
-  isPublished?: boolean;
-  createdBy?: string;
-  updatedAt?: string;}
-
-// Type for generated blog content
-export interface GeneratedBlogContent {_title: string;
-  metaDescription: string;
-  body: string;
-  tags: string[];
-  tweetSummary?: string;
-  imagePrompt?: string;}
-
-// Type for generated newsletter content
-export interface GeneratedNewsletterContent {_subject: string;
-  previewText: string;
-  body: string;
-  cta: string;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

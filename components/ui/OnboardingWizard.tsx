@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react',
 import Link from 'next/link',
 import { useRole } from '../context/RoleContext',
@@ -11,37 +10,18 @@ export default function OnboardingWizard() {
       const has = typeof window !== 'undefined' ? window.localStorage.getItem('zion_has_onboarded') : 'true',
       if (!has) {
         setOpen(true)
-      }
-=======
-import React, {_useEffect, _useState} from 'react';
-import Link from 'next/link';
-
-export default function OnboardingWizard() {_const { role, _setRole} = useRole();
-  const [open, setOpen] = useState(false);
-
-  useEffect__(() => {_try {
-      const _has = typeof window !== 'undefined' ? window.localStorage.getItem('zion_has_onboarded') : 'true';
-      if (!has) {
-        setOpen(true);}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    } catch {}
+      }    } catch {}
   }, []),
 
   function completeOnboarding() {_try {
       if (typeof window !== 'undefined') {
-<<<<<<< HEAD
         window.localStorage.setItem('zion_has_onboarded1')
-      }
-=======
-        window.localStorage.setItem('zion_has_onboarded', _'1');}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    } catch {}
+      }    } catch {}
     setOpen(false)
   }
 
   if (!open) return null,
 
-<<<<<<< HEAD
   return (
     <div className=&quot;fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4&quot;>
       <div className=&quot;w-full max-w-xl rounded-lg bg-white dark:bg-zinc-900 border border-gray-200 dark:border-gray-800 shadow-xl&quot;>
@@ -58,26 +38,7 @@ export default function OnboardingWizard() {_const { role, _setRole} = useRole()
           {role === 'client' ? (
             <div className=&quot;space-y-2&quot;>
               <div className=&quot;text-base font-medium&quot;>Next steps</div>
-              <ul className=&quot;list-disc pl-5 space-y-1 text-sm&quot;>
-=======
-  return (_<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-      <div className="w-full max-w-xl rounded-lg bg-white dark:bg-zinc-900 border border-gray-200 dark:border-gray-800 shadow-xl">
-        <div className="p-4 border-b border-gray-200 dark:border-gray-800 flex items-center justify-between">
-          <div className="font-semibold">Welcome to Zion</div>
-          <button onClick={_completeOnboarding} className="text-sm opacity-70 hover:opacity-100">Skip</button>
-        </div>
-        <div className="p-4 space-y-4">
-          <div className="text-sm opacity-80">Let's get you started. Who are you?</div>
-          <div className="flex gap-2">
-            <button onClick={_() => setRole('client')} className={_`px-3 py-1.5 rounded-md border ${role === 'client' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}>I'm a Client</button>
-            <button onClick={_() => setRole('talent')} className={_`px-3 py-1.5 rounded-md border ${role === 'talent' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}>I'm Talent</button>
-          </div>
-          {_role === 'client' ? (
-            <div className="space-y-2">
-              <div className="text-base font-medium">Next steps</div>
-              <ul className="list-disc pl-5 space-y-1 text-sm">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                <li>Post your first job and get matched in minutes</li>
+              <ul className=&quot;list-disc pl-5 space-y-1 text-sm&quot;>                <li>Post your first job and get matched in minutes</li>
                 <li>Invite talent you already know to apply</li>
                 <li>We can suggest matches based on your job description</li>
               </ul>
@@ -101,14 +62,8 @@ export default function OnboardingWizard() {_const { role, _setRole} = useRole()
             </div>
           )}
         </div>
-<<<<<<< HEAD
         <div className=&quot;p-4 border-t border-gray-200 dark:border-gray-800 flex justify-end&quot;>
-          <button onClick={completeOnboarding} className=&quot;px-3 py-1.5 rounded-md border&quot;>Done</button>
-=======
-        <div className="p-4 border-t border-gray-200 dark:border-gray-800 flex justify-end">
-          <button onClick={_completeOnboarding} className="px-3 py-1.5 rounded-md border">Done</button>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        </div>
+          <button onClick={completeOnboarding} className=&quot;px-3 py-1.5 rounded-md border&quot;>Done</button>        </div>
       </div>
     </div>
   )

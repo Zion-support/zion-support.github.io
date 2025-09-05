@@ -30,7 +30,6 @@ export default defineConfig({_plugins: [
           return 'assets/[name]-[hash].[ext]';},
       },
     },
-<<<<<<< HEAD
     terserOptions: {
       compress: {
         drop_console: true,
@@ -53,27 +52,15 @@ export default defineConfig({_plugins: [
         safari10: true,
         properties: {
           regex: /^_/,
-<<<<<<< HEAD
-        },
-=======
-    terserOptions: {_compress: {
-        drop_console: true, _drop_debugger: true, _pure_funcs: [
-          'console.log', _'console.info', _'console.debug', _'console.warn', _], _passes: 2, _unsafe: true, _unsafe_comps: true, _unsafe_math: true, _unsafe_proto: true, _unsafe_regexp: true, _unsafe_undefined: true, },
-      mangle: {_safari10: true, _properties: {
-          regex: /^_/, },
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      },
-=======
+        },      },
         }
       }
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
     },
     chunkSizeWarningLimit: 1000,
     reportCompressedSize: false,
     emptyOutDir: true,
     assetsInlineLimit: 4096,
   },
-<<<<<<< HEAD
   optimizeDeps: {
     include: [
       'react',
@@ -105,12 +92,7 @@ export default defineConfig({_plugins: [
     exclude: ['@radix-ui/react-icons'],
     esbuildOptions: {
       target: 'esnext',
-<<<<<<< HEAD
-    },
-=======
-    }
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-  },
+    },  },
   css: {
     devSourcemap: false,
   },
@@ -127,12 +109,7 @@ export default defineConfig({_plugins: [
     },
     fs: {
       allow: ['..'],
-<<<<<<< HEAD
-    },
-=======
-    }
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-  },
+    },  },
   preview: {
     port: 4173,
     host: true,
@@ -142,7 +119,6 @@ export default defineConfig({_plugins: [
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-=======
   optimizeDeps: {_include: [
       'react', _'react-dom', _'react-router-dom', _'framer-motion', _'lucide-react', _'@radix-ui/react-accordion', _'@radix-ui/react-alert-dialog', _'@radix-ui/react-avatar', _'@radix-ui/react-checkbox', _'@radix-ui/react-collapsible', _'@radix-ui/react-dialog', _'@radix-ui/react-dropdown-menu', _'@radix-ui/react-label', _'@radix-ui/react-popover', _'@radix-ui/react-progress', _'@radix-ui/react-radio-group', _'@radix-ui/react-scroll-area', _'@radix-ui/react-select', _'@radix-ui/react-separator', _'@radix-ui/react-slider', _'@radix-ui/react-slot', _'@radix-ui/react-switch', _'@radix-ui/react-tabs', _'@radix-ui/react-toast', _'@radix-ui/react-tooltip', _], _exclude: ['@radix-ui/react-icons'], _esbuildOptions: {
       target: 'esnext', },
@@ -152,7 +128,6 @@ export default defineConfig({_plugins: [
   server: {_port: 3000, _host: true, _open: true, _cors: true, _hmr: {
       overlay: false, },
     fs: {_allow: ['..'], },
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   },
   preview: {_port: 4173, _host: true, _open: true, },
   define: {__DEV__: JSON.stringify(process.env.NODE_ENV === 'development'), __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'), _'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV), },

@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 import Link from "next/link",
 export const metadata = {
   title: "Quantum Neural Network Platform - Zion Tech Group",
   description: "Revolutionary quantum neural network platform that combines quantum computing with artificial intelligence to solve previously intractable problems.",
   keywords: "quantum neural networks, quantum computing, AI, machine learning, quantum machine learning, Zion Tech Group"},
-=======
-import Link from "next/link";
-
-export const _metadata = {_title: "Quantum Neural Network Platform - Zion Tech Group", _description: "Revolutionary quantum neural network platform that combines quantum computing with artificial intelligence to solve previously intractable problems.", _keywords: "quantum neural networks, _quantum computing, _AI, _machine learning, _quantum machine learning, _Zion Tech Group"};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default function QuantumNeuralNetworkPlatformPage() {_return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">

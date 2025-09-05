@@ -1,20 +1,9 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
-=======
-import { serve } from &quot;https://deno.land/std@0.190.0/http/server.ts&quot;;
-import { Resend } from &quot;npm:resend@2.0.0&quot;;
-
-const corsHeaders = {
-  &quot;Access-Control-Allow-Origin&quot;: &quot;*&quot;,
-  &quot;Access-Control-Allow-Headers&quot;: &quot;authorization, x-client-info, apikey, content-type&quot;};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 interface SendNewsletterRequest {
   subject: string,
   previewText: string,
@@ -24,7 +13,6 @@ interface SendNewsletterRequest {
 }
 
 serve(async (req) => {
-<<<<<<< HEAD
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
@@ -32,18 +20,7 @@ serve(async (req) => {
   try {
     const resendApiKey = Deno.env.get("RESEND_API_KEY"),
     if (!resendApiKey) {
-      throw new Error("Resend API key is not set in environment variables")
-=======
-  if (req.method === &quot;OPTIONS&quot;) {
-    return new Response(null, { headers: corsHeaders });
-  }
-
-  try {
-    const resendApiKey = Deno.env.get(&quot;RESEND_API_KEY&quot;);
-    if (!resendApiKey) {
-      throw new Error(&quot;Resend API key is not set in environment variables&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    }
+      throw new Error("Resend API key is not set in environment variables")    }
 
     const resend = new Resend(resendApiKey),
     const { subject, previewText, body, testMode, testEmail } = await req.json() as SendNewsletterRequest,
@@ -54,7 +31,6 @@ serve(async (req) => {
         from: &quot;Zion Marketplace <newsletter@ziontechgroup.com>&quot;,
         to: [testEmail],
         subject: `[TEST] ${subject}`,
-=======
 
 const _corsHeaders = {_"Access-Control-Allow-Origin": "*", _"Access-Control-Allow-Headers": "authorization, _x-client-info, _apikey, _content-type"};
 
@@ -78,30 +54,18 @@ serve(_async (req) => {_if (req.method === "OPTIONS") {
     // If test mode, send to test email only
     if (testMode && testEmail) {_const _emailResponse = await resend.emails.send({
         from: "Zion Marketplace <newsletter@ziontechgroup.com>", _to: [testEmail], _subject: `[TEST] ${subject}`,
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         html: body,
         text: previewText}),
 
-<<<<<<< HEAD
       return new Response(JSON.stringify(emailResponse), {
-<<<<<<< HEAD
         headers: { ...corsHeaders, "Content-Type": "application/json" },
-        status: 200})
-=======
-        headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; },
-=======
-      return new Response(JSON.stringify(emailResponse), {_headers: { ...corsHeaders, _"Content-Type": "application/json"},
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        status: 200});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+        status: 200})        status: 200});
     } 
     
     // In production, we would fetch subscriber emails from the database
     // and send the newsletter to all subscribers
     // This is just a placeholder for now
-<<<<<<< HEAD
     const emailResponse = {
-<<<<<<< HEAD
       id: "test-email-id",
       message: "Email would be sent to all subscribers in production"
     },
@@ -114,28 +78,6 @@ serve(_async (req) => {_if (req.method === "OPTIONS") {
     
     return new Response(JSON.stringify({ error: error.message }) {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 500})
-=======
-      id: &quot;test-email-id&quot;,
-      message: &quot;Email would be sent to all subscribers in production&quot;
-    };
-
-    return new Response(JSON.stringify(emailResponse), {
-      headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; },
-      status: 200});
-  } catch (error) {
-    console.error(&quot;Error in send-newsletter function:&quot;, error);
-    
-    return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; },
-=======
-    const _emailResponse = {_id: "test-email-id", _message: "Email would be sent to all subscribers in production"};
-
-    return new Response(JSON.stringify(emailResponse), {_headers: { ...corsHeaders, _"Content-Type": "application/json"},
-      status: 200});
-  } catch (error) {_return new Response(JSON.stringify({ error: error.message}), {_headers: { ...corsHeaders, _"Content-Type": "application/json"},
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      status: 500});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+      status: 500})      status: 500});
   }
 }),

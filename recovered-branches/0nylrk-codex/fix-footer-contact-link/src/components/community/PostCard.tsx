@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",
@@ -10,21 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
 import { ForumPost } from "@/types/community",
-import { ProfileBadge } from "@/components/profile/ProfileBadge",
-=======
-import { formatDistanceToNow } from &quot;date-fns&quot;;
-import { Link } from &quot;react-router-dom&quot;;
-import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from &quot;lucide-react&quot;;
-import { Card, CardContent, CardFooter, CardHeader } from &quot;@/components/ui/card&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { Avatar, AvatarFallback, AvatarImage } from &quot;@/components/ui/avatar&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { cn } from &quot;@/lib/utils&quot;;
-import { ForumPost } from &quot;@/types/community&quot;;
-import { ProfileBadge } from &quot;@/components/profile/ProfileBadge&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface PostCardProps {
+import { ProfileBadge } from "@/components/profile/ProfileBadge",interface PostCardProps {
   post: ForumPost,
   compact?: boolean
 }
@@ -66,7 +50,6 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
             {post.tags?.map(tag => (
               <Badge key={tag} variant=&quot;outline&quot; className=&quot;bg-zion-purple/10 hover:bg-zion-purple/20&quot;>
                 {tag}
-=======
 
 interface PostCardProps {_post: ForumPost;
   compact?: boolean;}
@@ -105,7 +88,6 @@ export const _PostCard = (_{_post, _compact = false}: PostCardProps) => {_const 
             {_post.tags?.map(tag => (
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
                 {_tag}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </Badge>
             ))}
           </div>
@@ -118,7 +100,6 @@ export const _PostCard = (_{_post, _compact = false}: PostCardProps) => {_const 
         </CardContent>
       )}
 
-<<<<<<< HEAD
       <CardFooter className=&quot;flex justify-between&quot;>
         <div className=&quot;flex items-center gap-4&quot;>
           <div className=&quot;flex items-center gap-1&quot;>
@@ -133,25 +114,7 @@ export const _PostCard = (_{_post, _compact = false}: PostCardProps) => {_const 
           </div>
           <div className=&quot;flex items-center gap-1&quot;>
             <MessageSquare className=&quot;h-4 w-4&quot; />
-            <span className=&quot;text-sm&quot;>{post.replyCount} replies</span>
-=======
-      <CardFooter className="flex justify-between">
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-1">
-            <Button variant="ghost" size="sm" className="px-2">
-              <ThumbsUp className="h-4 w-4 mr-1" />
-              <span>{_post.upvotes}</span>
-            </Button>
-            <Button variant="ghost" size="sm" className="px-2">
-              <ThumbsDown className="h-4 w-4 mr-1" />
-              <span>{_post.downvotes}</span>
-            </Button>
-          </div>
-          <div className="flex items-center gap-1">
-            <MessageSquare className="h-4 w-4" />
-            <span className="text-sm">{_post.replyCount} replies</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          </div>
+            <span className=&quot;text-sm&quot;>{post.replyCount} replies</span>          </div>
         </div>
         
         {_post.isFeatured && (

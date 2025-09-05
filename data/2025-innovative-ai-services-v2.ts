@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface InnovativeAIService {
   id: string,
   name: string,
@@ -35,45 +34,7 @@ export interface InnovativeAIService {
   rating: number,
   reviews: number,
   marketSize: string,
-  growthRate: string
-=======
-export interface InnovativeAIService {_id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  price: {
-    monthly: number;
-    yearly: number;
-    currency: string;
-    trialDays: number;
-    setupTime: string;
-    enterprise: number;};
-  features: string[];
-  benefits: string[];
-  targetAudience: string[];
-  marketPosition: string;
-  competitors: string[];
-  techStack: string[];
-  realImplementation: boolean;
-  implementationDetails: string;
-  roi: string;
-  useCases: string[];
-  integrations: string[];
-  support: string;
-  compliance: string[];
-  link: string;
-  icon: string;
-  color: string;
-  popular: boolean;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  marketSize: string;
-  growthRate: string;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-}
+  growthRate: string}
 
 export const innovativeAIServicesV2: InnovativeAIService[] = [
   {_id: 'ai-emotional-intelligence-platform', _name: 'AI Emotional Intelligence Platform', _tagline: 'Advanced AI that understands and responds to human emotions', _description: 'Revolutionary AI platform that analyzes emotional context, _sentiment, _and behavioral patterns to provide empathetic and contextually appropriate responses.', _category: 'AI & Consciousness', _price: {

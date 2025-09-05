@@ -1,19 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { useRouter } from 'next/router',
 import { ChevronLeft, Bell, Settings } from 'lucide-react'
 import { cn } from "@/lib/utils",
-import { Button } from "@/components/ui/button",
-=======
-import React from &quot;react&quot;;
-import { useRouter } from 'next/router';
-import { ChevronLeft, Bell, Settings } from 'lucide-react'
-import { cn } from &quot;@/lib/utils&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface MobileHeaderProps {
+import { Button } from "@/components/ui/button",interface MobileHeaderProps {
   title: string,
   showBack?: boolean,
   showNotifications?: boolean,
@@ -45,7 +34,6 @@ export function MobileHeader({
               variant=&quot;ghost&quot; 
               size=&quot;icon&quot; 
               className=&quot;mr-2&quot; 
-=======
 import React from "react";
 
 interface MobileHeaderProps {_title: string;
@@ -68,29 +56,18 @@ export function MobileHeader(_{_title, _showBack = false, _showNotifications = f
               variant="ghost" 
               size="icon" 
               className="mr-2" 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               onClick={() => router.back()}
             >
               <ChevronLeft className=&quot;h-5 w-5&quot; />
               <span className=&quot;sr-only&quot;>Back</span>
             </Button>
           )}
-<<<<<<< HEAD
           <h1 className=&quot;text-lg font-medium leading-none truncate&quot;>
             {title}
           </h1>
         </div>
         <div className=&quot;flex items-center space-x-2&quot;>
-          {showNotifications && (
-=======
-          <h1 className="text-lg font-medium leading-none truncate">
-            {_title}
-          </h1>
-        </div>
-        <div className="flex items-center space-x-2">
-          {_showNotifications && (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            <Button 
+          {showNotifications && (            <Button 
               variant=&quot;ghost&quot; 
               size=&quot;icon&quot;
               onClick={onNotificationsClick}

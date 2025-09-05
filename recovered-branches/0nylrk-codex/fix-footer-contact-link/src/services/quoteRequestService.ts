@@ -1,15 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
-=======
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-import type { QuoteRequest, QuoteStatus } from &quot;@/types/quotes&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import type {_QuoteRequest, _QuoteStatus} from "@/types/quotes";
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes",import type {_QuoteRequest, _QuoteStatus} from "@/types/quotes";
 
 export const _quoteRequestService = {_// Get all quote requests (for admin)
   getAll: async () => {
@@ -21,34 +12,19 @@ export const _quoteRequestService = {_// Get all quote requests (for admin)
           display_name
         )
       `)
-<<<<<<< HEAD
-      .order('created_at', { ascending: false }),
-=======
-      .order('created_at', {_ascending: false});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    
+      .order('created_at', { ascending: false }),    
     if (error) throw error,
     
     // Format the data to include talent_name
-<<<<<<< HEAD
     return data.map((item: any) => ({
       ...item,
-      talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
-=======
-    return data.map(_(item: unknown) => ({_...item, _talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  },
+      talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]  },
   // Get quote requests for a specific talent
   getByTalentId: async (_talentId: string) => {_const { data, _error} = await supabase
       .from('quote_requests')
       .select('*')
       .eq('talent_id', talentId)
-<<<<<<< HEAD
-      .order('created_at', { ascending: false }),
-=======
-      .order('created_at', {_ascending: false});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    
+      .order('created_at', { ascending: false }),    
     if (error) throw error,
     return data as QuoteRequest[]
   },
@@ -66,7 +42,6 @@ export const _quoteRequestService = {_// Get all quote requests (for admin)
     
     if (error) throw error,
     
-<<<<<<< HEAD
     return {
       ...data,
       talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
@@ -78,18 +53,7 @@ export const _quoteRequestService = {_// Get all quote requests (for admin)
     // If marking as responded, set replied_at
     if (status === 'responded') {
       updates.replied_at = new Date().toISOString()
-    }
-=======
-    return {_...data, _talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest;
-  },
-  
-  // Update quote request status
-  updateStatus: async (_id: string, _status: QuoteStatus) => {_const updates: unknown = { status};
-    
-    // If marking as responded, set replied_at
-    if (status === 'responded') {_updates.replied_at = new Date().toISOString();}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    
+    }    
     // If marking as in_review and viewed_at is null, set viewed_at
     if (status === 'in_review') {_const { data} = await supabase
         .from('quote_requests')
@@ -97,14 +61,9 @@ export const _quoteRequestService = {_// Get all quote requests (for admin)
         .eq('id', id)
         .single(),
       
-<<<<<<< HEAD
       if (!data.viewed_at) {
         updates.viewed_at = new Date().toISOString()
-      }
-=======
-      if (!data.viewed_at) {_updates.viewed_at = new Date().toISOString();}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    }
+      }    }
     
     const {_data, _error} = await supabase
       .from('quote_requests')

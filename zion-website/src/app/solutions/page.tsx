@@ -94,8 +94,7 @@ export default function SolutionsPage() {
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               Our{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                Solutions
-              </span>
+                Solutions              </span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Cutting-edge AI and technology solutions that transform businesses 
@@ -133,8 +132,7 @@ export default function SolutionsPage() {
                   </a>
                 </div>
               ))}
-            </div>
-          </div>
+            </div>          </div>
         </div>
       </div>
     </div>

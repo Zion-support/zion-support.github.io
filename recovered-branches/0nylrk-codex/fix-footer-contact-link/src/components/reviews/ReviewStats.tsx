@@ -1,14 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Star } from "lucide-react",
-import { Progress } from "@/components/ui/progress",
-=======
-import { Star } from &quot;lucide-react&quot;;
-import { Progress } from &quot;@/components/ui/progress&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface ReviewStatsProps {
+import { Progress } from "@/components/ui/progress",interface ReviewStatsProps {
   averageRating: number,
   totalReviews: number,
   ratingDistribution?: Record<number number>
@@ -42,7 +34,6 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
             </div>
             <span className=&quot;text-sm text-muted-foreground&quot;>
               {totalReviews} {totalReviews === 1 ? &quot;review&quot; : &quot;reviews&quot;}
-=======
 
 interface ReviewStatsProps {_averageRating: number;
   totalReviews: number;
@@ -72,13 +63,11 @@ export function ReviewStats(_{_averageRating, _totalReviews, _ratingDistribution
             </div>
             <span className="text-sm text-muted-foreground">
               {_totalReviews} {_totalReviews === 1 ? "review" : "reviews"}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </span>
           </div>
         </div>
       </div>
       
-<<<<<<< HEAD
       {ratingDistribution && (
         <div className=&quot;space-y-2&quot;>
           {[5, 4, 3, 2, 1].map((rating) => (
@@ -90,21 +79,7 @@ export function ReviewStats(_{_averageRating, _totalReviews, _ratingDistribution
                 className=&quot;h-2&quot; 
               />
               <div className=&quot;w-8 text-xs text-muted-foreground&quot;>
-                {ratingDistribution[rating] || 0}
-=======
-      {_ratingDistribution && (_<div className="space-y-2">
-          {[5, _4, _3, _2, _1].map((rating) => (
-            <div key={rating} className="flex items-center gap-2">
-              <div className="w-6 text-sm text-right">{_rating}</div>
-              <Star className="h-3 w-3 text-yellow-400" />
-              <Progress 
-                value={_getPercentage(ratingDistribution[rating] || 0)} 
-                className="h-2" 
-              />
-              <div className="w-8 text-xs text-muted-foreground">
-                {_ratingDistribution[rating] || 0}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </div>
+                {ratingDistribution[rating] || 0}              </div>
             </div>
           ))}
         </div>

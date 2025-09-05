@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AIAutonomousEcosystemManager() {
@@ -19,15 +18,8 @@ export default function AIAutonomousEcosystemManager() {
 				&quot;Cost and performance optimization&quot;,
 				&quot;Integrations: Kubernetes, Slack/Teams, Jira, GitHub&quot;
 			]}
-<<<<<<< HEAD
 			industries={["Platform Teams", "R&D", "Operations", "Security"]}
-			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager"
-=======
-			industries={[&quot;Platform Teams&quot;, &quot;R&D&quot;, &quot;Operations&quot;, &quot;Security&quot;]}
-			canonical=&quot;https://ziontechgroup.com/ai-autonomous-ecosystem-manager&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from 'react';
+			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager"import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIAutonomousEcosystemManager() {_return (
@@ -44,7 +36,6 @@ export default function AIAutonomousEcosystemManager() {_return (
 			]}
 			industries={_["Platform Teams", _"R&D", _"Operations", _"Security"]}
 			canonical="https://ziontechgroup.com/ai-autonomous-ecosystem-manager"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 		/>
 	)
 }

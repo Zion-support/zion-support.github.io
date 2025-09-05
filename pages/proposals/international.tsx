@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 type ProposalListItem = {
@@ -14,25 +13,8 @@ type ProposalListItem = {
 export default function InternationalProposalsPage() {
   const [items, setItems] = useState<ProposalListItem[]>([]),
   const [filter, setFilter] = useState('All'),
-=======
-import React, {_useEffect, _useState} from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-
-type ProposalListItem = {_id: string;
-  title: string;
-  targetInstitution: string;
-  regionalScope: string;
-  type: string;
-  status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted';
-  createdAt: string;};
-
-export default function InternationalProposalsPage() {_const [items, _setItems] = useState<ProposalListItem[]>([]);
-  const [filter, _setFilter] = useState('All');
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-  useEffect__(() => {
+  useEffect_(() => {
     fetch('/api/proposals')
-<<<<<<< HEAD
       .then((r) => r.json())
       .then((d) => setItems(d.items || []))
       .catch(() => setItems([]))
@@ -46,22 +28,7 @@ export default function InternationalProposalsPage() {_const [items, _setItems] 
         <h1 className=&quot;text-2xl font-semibold&quot;>International Proposals</h1>
         <div className=&quot;flex items-center gap-2 text-sm&quot;>
           <span>Filter by region:</span>
-          <select className=&quot;border rounded px-2 py-1&quot; value={filter} onChange={(e) => setFilter(e.target.value)}>
-=======
-      .then(_(r) => r.json())
-      .then(_(d) => setItems(d.items || []))
-      .catch__(() => setItems([]));}, []);
-
-  const _filtered = items.filter(_(i) => (filter === 'All' ? true : i.regionalScope === filter));
-
-  return (_<EnhancedLayout>
-      <div className="space-y-4">
-        <h1 className="text-2xl font-semibold">International Proposals</h1>
-        <div className="flex items-center gap-2 text-sm">
-          <span>Filter by region:</span>
-          <select className="border rounded px-2 py-1" value={_filter} onChange={_(e) => setFilter(e.target.value)}>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            <option>All</option>
+          <select className=&quot;border rounded px-2 py-1&quot; value={filter} onChange={(e) => setFilter(e.target.value)}>            <option>All</option>
             <option>Global</option>
             <option>Africa</option>
             <option>LATAM</option>
@@ -69,7 +36,6 @@ export default function InternationalProposalsPage() {_const [items, _setItems] 
             <option>EU</option>
           </select>
         </div>
-<<<<<<< HEAD
         <div className=&quot;divide-y border rounded&quot;>
           {filtered.map((i) => (
             <div key={i.id} className=&quot;p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2&quot;>
@@ -80,33 +46,13 @@ export default function InternationalProposalsPage() {_const [items, _setItems] 
               </div>
               <div className=&quot;flex items-center gap-4 text-sm&quot;>
                 <span className=&quot;px-2 py-1 rounded bg-gray-100 dark:bg-gray-800&quot;>{i.status}</span>
-                <a className=&quot;text-blue-600 underline&quot; href={`/api/proposals?id=${i.id}`} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>JSON</Link>
-                <a className=&quot;text-blue-600 underline&quot; href={`/proposals/${i.id}.md`} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>Markdown</Link>
-                <a className=&quot;text-blue-600 underline&quot; href={`/proposals/${i.id}.pdf`} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>PDF</Link>
+                <a className=&quot;text-blue-600 underline&quot; href={`/api/proposals?id=${i.id}`} target=&quot;blank&quot; rel=&quot;noreferrer&quot;>JSON</Link>
+                <a className=&quot;text-blue-600 underline&quot; href={`/proposals/${i.id}.md`} target=&quot;blank&quot; rel=&quot;noreferrer&quot;>Markdown</Link>
+                <a className=&quot;text-blue-600 underline&quot; href={`/proposals/${i.id}.pdf`} target=&quot;blank&quot; rel=&quot;noreferrer&quot;>PDF</Link>
               </div>
             </div>
           ))}
-          {filtered.length === 0 && <div className=&quot;p-4 text-sm text-gray-600&quot;>No proposals yet.</div>}
-=======
-        <div className="divide-y border rounded">
-          {_filtered.map(_(i) => (
-            <div key={i.id} className="p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-              <div>
-                <div className="font-medium">{_i.title}</div>
-                <div className="text-sm text-gray-600">{_i.targetInstitution} • {_i.type} • {_i.regionalScope}</div>
-                <div className="text-xs text-gray-500">Created {_new Date(i.createdAt).toLocaleString()}</div>
-              </div>
-              <div className="flex items-center gap-4 text-sm">
-                <span className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800">{_i.status}</span>
-                <a className="text-blue-600 underline" href={_`/api/proposals?id=${i.id}`} target="_blank" rel="noreferrer">JSON</a>
-                <a className="text-blue-600 underline" href={_`/proposals/${i.id}.md`} target="_blank" rel="noreferrer">Markdown</a>
-                <a className="text-blue-600 underline" href={_`/proposals/${i.id}.pdf`} target="_blank" rel="noreferrer">PDF</a>
-              </div>
-            </div>
-          ))}
-          {_filtered.length === 0 && <div className="p-4 text-sm text-gray-600">No proposals yet.</div>}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        </div>
+          {filtered.length === 0 && <div className=&quot;p-4 text-sm text-gray-600&quot;>No proposals yet.</div>}        </div>
         <div className=&quot;text-sm text-gray-600&quot;>Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
       </div>
     </EnhancedLayout>

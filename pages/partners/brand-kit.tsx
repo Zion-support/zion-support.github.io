@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 export default function BrandKit() {
   return (
     <div className=&quot;space-y-4&quot;>
-      <h1 className=&quot;text-2xl font-semibold&quot;>Influencer Brand Kit</h1>
-=======
-export default function BrandKit() {_return (
-    <div className="space-y-4">
-      <h1 className="text-2xl font-semibold">Influencer Brand Kit</h1>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      <p>Download assets and messaging to promote Zion AI Marketplace.</p>
+      <h1 className=&quot;text-2xl font-semibold&quot;>Influencer Brand Kit</h1>      <p>Download assets and messaging to promote Zion AI Marketplace.</p>
       <ul className=&quot;list-disc pl-6&quot;>
         <li><a className=&quot;text-blue-600 underline&quot; href=&quot;/brand-kit.txt&quot;>Brand Kit (txt)</Link></li>
       </ul>
@@ -17,9 +10,5 @@ export default function BrandKit() {_return (
         <p>Invite your AI audience to earn & help them get hired.</p>
       </div>
     </div>
-<<<<<<< HEAD
   )
 }
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

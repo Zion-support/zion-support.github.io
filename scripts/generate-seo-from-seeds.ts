@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-<<<<<<< HEAD
 import fs from 'fs',
 import path from 'path',
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
@@ -12,29 +11,16 @@ async function post(url: string, body: any) {
 async function main() {
   const seedsPath = path.join(process.cwd(), 'datapage-metadataseo-seeds.json'),
   if (!fs.existsSync(seedsPath)) {
-<<<<<<< HEAD
     // // // console.log('No seeds file found at', seedsPath),
-    process.exit(0)
-=======
-    // console.log('No seeds file found at', seedsPath);
-    process.exit(0);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  }
+    process.exit(0)  }
   const seeds = JSON.parse(fs.readFileSync(seedsPath, 'utf8')) as Array<{ prompt: string, region?: string, service?: string }>,
   const outDir = path.join(process.cwd(), 'datapage-metadataseo'),
   fs.mkdirSync(outDir, { recursive: true }),
   for (const s of seeds) {
     const gen = await post(`${HOST}/api/seo/generate`, s),
     if (gen?.slug && gen?.payload) {
-<<<<<<< HEAD
       fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),
-      // // // console.log('Generated', gen.slug)
-=======
-      fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2));
-      // console.log('Generated', gen.slug);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import fs from 'fs';
+      // // // console.log('Generated', gen.slug)import fs from 'fs';
 import path from 'path';
 
 const _HOST = process.env.SELF_HOST || 'http://localhost:3000';
@@ -53,13 +39,8 @@ async function main() {_const _seedsPath = path.join(process.cwd(), _'data', _'p
   for (const s of seeds) {_const _gen = await post(`${HOST}/api/seo/generate`, s);
     if (gen?.slug && gen?.payload) {_fs.writeFileSync(path.join(outDir, _`${gen.slug}.json`), JSON.stringify(gen.payload, null, 2));
       
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   }
 }
 
-<<<<<<< HEAD
 main().catch((e) => { console.error(e), process.exit(1) }),
-=======
-main().catch(_(e) => {_process.exit(1);});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

@@ -1,41 +1,35 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Search, X } from 'lucide-react';
-=======
-import React, {_useState} from 'react';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-interface SearchBarProps {_onSearch?: (_query: string) => void;
+interface SearchBarProps {onSearch?: (query: string) => void;
   placeholder?: string;
-  className?: string;}
+  className?: string}
 
-const SearchBar: React.FC<SearchBarProps> = (_{_onSearch, _placeholder = 'Search...', _className = '', _}) => {_const [query, _setQuery] = useState('');
+const SearchBar: React.FC<SearchBarProps> = (_{onSearch, placeholder = 'Search...', className = '', _}) => {const [query, setQuery] = useState('');
 
-  const _handleSubmit = (_e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (onSearch && query.trim()) {
-      onSearch(query.trim());}
+      onSearch(query.trim())}
   };
 
-  const _handleClear = () => {_setQuery('');};
+  const handleClear = () => {setQuery('')};
 
   return (
     <div className={_'relative ' + className}>
-      <form onSubmit={_handleSubmit} className="relative">
+      <form onSubmit={handleSubmit} className="relative">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-          <input
-            type="text"
-            value={_query}
-            onChange={_e => setQuery(e.target.value)}
+          <input,
+type="text"
+            value={query}
+            onChange={e => setQuery(e.target.value)}
             onFocus={_() => {}}
-            placeholder={_placeholder}
+            placeholder={placeholder}
             className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
-          {_query && (
-            <button
-              type="button"
+          {query && (
+            <button,
+type="button"
               onClick={handleClear}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
             >
@@ -45,19 +39,18 @@ const SearchBar: React.FC<SearchBarProps> = (_{_onSearch, _placeholder = 'Search
         </div>
       </form>
     </div>
-  ),
+  )
 },
 
 export default SearchBar;
-=======
 import React { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 ;
 interface SearchResult {;
-  titl: e: string;
-  descriptio: n: string;
-  ur: l: string;
-  typ: e: 'service' | 'page' | 'category';
+  titl: e: string,
+  descriptio: n: string,
+  ur: l: string,
+  typ: e: 'service' | 'page' | 'category'
 };
 ;
 const: SearchBar: React.FC = () => {;
@@ -74,45 +67,45 @@ const: SearchBar: React.FC = () => {;
       titl: e: 'Micro SaaS Products';
       descriptio: n: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more';
       ur: l: '/micro-saas';
-      typ: e: 'category';
+      typ: e: 'category'
     };
     {;
       titl: e: 'AI Services';
       descriptio: n: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more';
       ur: l: '/ai-services';
-      typ: e: 'category';
+      typ: e: 'category'
     };
     {;
       titl: e: 'IT Services';
       descriptio: n: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more';
       ur: l: '/it-services';
-      typ: e: 'category';
+      typ: e: 'category'
     };
     {;
       titl: e: 'Cloud Cost Guard';
       descriptio: n: 'FinOps Assistant for anomaly detection and cost optimization';
       ur: l: '/services';
-      typ: e: 'service';
+      typ: e: 'service'
     };
     {;
       titl: e: 'Contact Us';
       descriptio: n: 'Get in touch with our experts for consultation and quotes';
       ur: l: '/contact';
-      typ: e: 'page';
+      typ: e: 'page'
     };
     {;
       titl: e: 'Pricing';
       descriptio: n: 'View our transparent pricing for all services';
       ur: l: '/pricing';
-      typ: e: 'page';
-    };
+      typ: e: 'page'
+    }
   ];
 ;
   const handleSearch = async (searchQuer: y: string) => {;
     if (!searchQuery.trim()) {;
       setResults([]);
       setIsOpen(false);
-      return;
+      return
     };
 ;
     setIsLoading(true);
@@ -127,7 +120,7 @@ const: SearchBar: React.FC = () => {;
 ;
     setResults(filteredResults);
     setIsOpen(true);
-    setIsLoading(false);
+    setIsLoading(false)
   };
 ;
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
@@ -138,23 +131,22 @@ const: SearchBar: React.FC = () => {;
 ;
   const handleResultClick = () => {;
     setIsOpen(false);
-    setQuery('');
+    setQuery('')
   };
 ;
   const handleKeyDown = (e: React.KeyboardEvent) => {;
     if (e.key === 'Escape') {;
       setIsOpen(false);
-      inputRef.current?.blur();
-    };
+      inputRef.current?.blur()
+    }
   };
 ;
   useEffect(() => {;
     const handleClickOutside = (even: t: MouseEvent) => {;
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {;
-        setIsOpen(false);
-      };
-    };
+        setIsOpen(false)
+      }
+    }
 };
 ;
 export default SearchBar;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

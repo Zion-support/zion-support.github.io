@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function FintechSolutions() {
@@ -19,15 +18,8 @@ export default function FintechSolutions() {
 				&quot;Realtime rules with feature store integration&quot;,
 				&quot;Integrations: Core banking, KYC, payments, CRMs&quot;
 			]}
-<<<<<<< HEAD
 			industries={["Fintech", "Banking", "Lending", "Payments"]}
-			canonical="https: //ziontechgroup.com/fintech-solutions"
-=======
-			industries={[&quot;Fintech&quot;, &quot;Banking&quot;, &quot;Lending&quot;, &quot;Payments&quot;]}
-			canonical=&quot;https://ziontechgroup.com/fintech-solutions&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from 'react';
+			canonical="https: //ziontechgroup.com/fintech-solutions"import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function FintechSolutions() {_return (
@@ -44,7 +36,6 @@ export default function FintechSolutions() {_return (
 			]}
 			industries={_["Fintech", _"Banking", _"Lending", _"Payments"]}
 			canonical="https://ziontechgroup.com/fintech-solutions"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 		/>
 	)
 }

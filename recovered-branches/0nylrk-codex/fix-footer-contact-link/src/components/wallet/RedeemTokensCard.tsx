@@ -1,30 +1,15 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
-import { Gift, ArrowRight, ExternalLink } from "lucide-react",
-=======
-import React, { useState } from &quot;react&quot;;
-import { useWallet } from &quot;@/hooks/useWallet&quot;;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Gift, ArrowRight, ExternalLink } from &quot;lucide-react&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import {
+import { Gift, ArrowRight, ExternalLink } from "lucide-react",import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-<<<<<<< HEAD
   DialogTrigger} from "@/components/ui/dialog",
-=======
-  DialogTrigger} from &quot;@/components/ui/dialog&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 type RewardOption = {
   id: string,
   title: string,
@@ -67,7 +52,6 @@ export function RedeemTokensCard() {
     await spendTokens(option.cost, `Redeemed: ${option.title}`),
     setOpen(false)
   },
-=======
 import React, {_useState} from "react";
 import {_Dialog, _DialogContent, _DialogDescription, _DialogHeader, _DialogTitle, _DialogTrigger} from "@/components/ui/dialog";
 
@@ -91,7 +75,6 @@ export function RedeemTokensCard() {_const { wallet, _spendTokens} = useWallet()
     await spendTokens(option.cost, _`Redeemed: ${option.title}`);
     setOpen(false);
   };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (_<Card>
       <CardHeader>
@@ -112,7 +95,6 @@ export function RedeemTokensCard() {_const { wallet, _spendTokens} = useWallet()
                 Exchange your tokens for these rewards. You currently have {_wallet?.balance || 0} ZION$.
               </DialogDescription>
             </DialogHeader>
-<<<<<<< HEAD
             <div className=&quot;space-y-4 py-4&quot;>
               {REWARD_OPTIONS.map((option) => (
                 <div key={option.id} className=&quot;flex justify-between items-center border-b pb-4&quot;>
@@ -126,41 +108,17 @@ export function RedeemTokensCard() {_const { wallet, _spendTokens} = useWallet()
                       size=&quot;sm&quot; 
                       variant={wallet && wallet.balance >= option.cost ? &quot;default&quot; : &quot;outline&quot;}
                       disabled={!wallet || wallet.balance < option.cost}
-                      onClick={() => handleRedeem(option)}
-=======
-            <div className="space-y-4 py-4">
-              {_REWARD_OPTIONS.map((option) => (_<div key={option.id} className="flex justify-between items-center border-b pb-4">
-                  <div>
-                    <h3 className="font-medium">{_option.title}</h3>
-                    <p className="text-sm text-muted-foreground">{_option.description}</p>
-                  </div>
-                  <div className="flex flex-col items-end gap-1">
-                    <span className="text-sm font-bold">{_option.cost} ZION$</span>
-                    <Button 
-                      size="sm" 
-                      variant={_wallet && wallet.balance >= option.cost ? "default" : "outline"}
-                      disabled={_!wallet || wallet.balance < option.cost}
-                      onClick={_() => handleRedeem(option)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    >
+                      onClick={() => handleRedeem(option)}                    >
                       Redeem <ArrowRight className=&quot;ml-1 h-3 w-3&quot; />
                     </Button>
                   </div>
                 </div>
               ))}
             </div>
-<<<<<<< HEAD
             <div className=&quot;flex justify-between&quot;>
               <Button variant=&quot;outline&quot; size=&quot;sm&quot; onClick={() => setOpen(false)}>Close</Button>
               <Button variant=&quot;ghost&quot; size=&quot;sm&quot;>
-                Learn More <ExternalLink className=&quot;ml-1 h-3 w-3&quot; />
-=======
-            <div className="flex justify-between">
-              <Button variant="outline" size="sm" onClick={_() => setOpen(false)}>Close</Button>
-              <Button variant="ghost" size="sm">
-                Learn More <ExternalLink className="ml-1 h-3 w-3" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </Button>
+                Learn More <ExternalLink className=&quot;ml-1 h-3 w-3&quot; />              </Button>
             </div>
           </DialogContent>
         </Dialog>

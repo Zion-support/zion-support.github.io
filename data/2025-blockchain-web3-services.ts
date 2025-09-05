@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface BlockchainWeb3Service {
   id: string,
   name: string,
@@ -33,43 +32,7 @@ export interface BlockchainWeb3Service {
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number
-=======
-export interface BlockchainWeb3Service {_id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  price: {
-    monthly: number;
-    yearly: number;
-    currency: string;
-    trialDays: number;
-    setupTime: string;
-    enterprise: string;};
-  features: string[];
-  benefits: string[];
-  targetAudience: string[];
-  marketPosition: string;
-  competitors: string[];
-  techStack: string[];
-  realImplementation: boolean;
-  implementationDetails: string;
-  roi: string;
-  useCases: string[];
-  integrations: string[];
-  support: string;
-  compliance: string[];
-  link: string;
-  icon: string;
-  color: string;
-  popular: boolean;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-}
+  reviews: number}
 
 export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
   {_id: 'decentralized-identity-management', _name: 'Decentralized Identity Management Platform', _tagline: 'Self-sovereign identity with zero-knowledge proof verification', _description: 'Revolutionary decentralized identity platform that gives users complete control over their digital identity while maintaining privacy through zero-knowledge proofs and blockchain technology.', _category: 'Blockchain & Web3', _price: {
@@ -115,17 +78,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       'Increase DeFi yields by 40-80%Reduce impermanent loss by 60%Optimize gas fees automaticallyMinimize risk through AI analysisAccess institutional-grade DeFi strategies'
     ],
     targetAudience: [
-<<<<<<< HEAD
-      'DeFi investors and tradersInstitutional investorsCrypto hedge fundsFamily officesRetail crypto investorsDeFi protocol developers'
-=======
-      'DeFi investors and traders',
-      'Institutional investors',
-      'Crypto hedge funds',
-      'Family offices',
-      'Retail window.crypto investors',
-      'DeFi protocol developers'
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    ],
+      'DeFi investors and tradersInstitutional investorsCrypto hedge fundsFamily officesRetail crypto investorsDeFi protocol developers'    ],
     marketPosition: 'Leading AI-powered DeFi optimization platform. Competes with Yearn Finance (free), Harvest Finance (free), and Beefy Finance (free). Our advantage: AI optimization and risk management.',
     competitors: ['Yearn Finance, Harvest Finance, Beefy Finance, Convex Finance, Curve Finance'],
     techStack: ['OpenAI GPT-4, TensorFlow, Solidity, React, Node.js, PostgreSQL, Redis'],

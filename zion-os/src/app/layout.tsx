@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import "./globals.css",
 import type { ReactNode } from "react",
 import { Metadata } from "next",
@@ -6,13 +5,6 @@ export const metadata = {
   title: "Zion OS - Launch Sovereign AI-Powered Digital Economies",
   description: "Unified deployment protocol for Zion ecosystems. Deploy AI-powered marketplaces, governance systems, and digital economies with one click.",
   keywords: "AI, blockchain, digital economy, marketplace, governance, deployment, Zion"},
-=======
-import "./globals.css";
-import type {_ReactNode} from "react";
-
-export const _metadata = {_title: "Zion OS - Launch Sovereign AI-Powered Digital Economies", _description: "Unified deployment protocol for Zion ecosystems. Deploy AI-powered marketplaces, _governance systems, _and digital economies with one click.", _keywords: "AI, _blockchain, _digital economy, _marketplace, _governance, _deployment, _Zion"};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default function RootLayout(_{_children}: {_children: ReactNode}) {_return (
     <html lang="en">
       <body className="min-h-screen bg-[var(--bg)] text-[var(--fg)]">

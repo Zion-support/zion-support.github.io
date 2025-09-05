@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState } from 'react',
 import { 
   DropdownMenu,
@@ -36,32 +35,9 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         setSaveDialogOpen(false),
         setNewResumeTitle('')
       }
-      setIsLoading(false)
-=======
-import {_DropdownMenu, _DropdownMenuContent, _DropdownMenuItem, _DropdownMenuSeparator, _DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
-
-interface ResumeVersionSelectorProps {_currentResume: Resume;
-  onResumeChange: (_resumeId: string) => void;}
-
-export function ResumeVersionSelector(_{_currentResume, _onResumeChange}: ResumeVersionSelectorProps) {_const { createResume, _fetchResume} = useResume();
-  const [saveDialogOpen, setSaveDialogOpen] = useState(false);
-  const [newResumeTitle, setNewResumeTitle] = useState('');
-  const [existingResumes, setExistingResumes] = useState<Resume[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  
-  const _handleCreateNewVersion = async () => {_if (newResumeTitle.trim()) {
-      setIsLoading(true);
-      const _resumeId = await createResume({ title: newResumeTitle.trim()});
-      if (resumeId) {_await fetchResume(resumeId);
-        onResumeChange(resumeId);
-        setSaveDialogOpen(false);
-        setNewResumeTitle('');}
-      setIsLoading(false);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    }
+      setIsLoading(false)    }
   },
 
-<<<<<<< HEAD
   return (
     <div className=&quot;flex items-center gap-2&quot;>
       <span className=&quot;text-sm text-muted-foreground&quot;>Resume:</span>
@@ -77,95 +53,43 @@ export function ResumeVersionSelector(_{_currentResume, _onResumeChange}: Resume
             <DropdownMenuItem 
               key={resume.id}
               onClick={() => onResumeChange(resume.id!)}
-              className=&quot;cursor-pointer&quot;
-=======
-  return (_<div className="flex items-center gap-2">
-      <span className="text-sm text-muted-foreground">Resume:</span>
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant="outline" size="sm" className="gap-2">
-            {_currentResume?.basic_info?.title || 'My Resume'}
-            <ChevronDown className="h-4 w-4" />
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
-          {_existingResumes.map((resume) => (_<DropdownMenuItem 
-              key={resume.id}
-              onClick={_() => onResumeChange(resume.id!)}
-              className="cursor-pointer"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;cursor-pointer&quot;            >
               {_resume.basic_info.title}
             </DropdownMenuItem>
           ))}
           <DropdownMenuSeparator />
           <DropdownMenuItem 
-<<<<<<< HEAD
             onClick={() => setSaveDialogOpen(true)}
-            className=&quot;cursor-pointer&quot;
-=======
-            onClick={_() => setSaveDialogOpen(true)}
-            className="cursor-pointer"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            className=&quot;cursor-pointer&quot;          >
             <Plus className=&quot;h-4 w-4 mr-2&quot; />
             Save as new version
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
       
-<<<<<<< HEAD
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
-        <DialogContent className=&quot;sm:max-w-md&quot;>
-=======
-      <Dialog open={_saveDialogOpen} onOpenChange={_setSaveDialogOpen}>
-        <DialogContent className="sm:max-w-md">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          <DialogHeader>
+        <DialogContent className=&quot;sm:max-w-md&quot;>          <DialogHeader>
             <DialogTitle>Save as new resume version</DialogTitle>
           </DialogHeader>
           <div className=&quot;py-4&quot;>
             <Input
-<<<<<<< HEAD
               value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
-              placeholder=&quot;Enter resume title (e.g. DevOps Resume)&quot;
-=======
-              value={_newResumeTitle}
-              onChange={_(_e) => setNewResumeTitle(e.target.value)}
-              placeholder="Enter resume title (e.g. DevOps Resume)"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            />
+              placeholder=&quot;Enter resume title (e.g. DevOps Resume)&quot;            />
           </div>
           <DialogFooter>
             <Button 
-<<<<<<< HEAD
               variant=&quot;outline&quot; 
-              onClick={() => setSaveDialogOpen(false)}
-=======
-              variant="outline" 
-              onClick={_() => setSaveDialogOpen(false)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              onClick={() => setSaveDialogOpen(false)}            >
               Cancel
             </Button>
             <Button 
-<<<<<<< HEAD
               onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() || isLoading}
               className=&quot;gap-2&quot;
             >
               {isLoading && <Loader2 className=&quot;h-4 w-4 animate-spin&quot; />}
-              <Save className=&quot;h-4 w-4&quot; />
-=======
-              onClick={_handleCreateNewVersion}
-              disabled={_!newResumeTitle.trim() || isLoading}
-              className="gap-2"
-            >
-              {_isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
-              <Save className="h-4 w-4" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              Save
+              <Save className=&quot;h-4 w-4&quot; />              Save
             </Button>
           </DialogFooter>
         </DialogContent>

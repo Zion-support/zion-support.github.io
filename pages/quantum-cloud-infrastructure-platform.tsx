@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
@@ -25,15 +24,8 @@ export default function QuantumCloudInfrastructurePlatformPage() {
 					&quot;Cross-region DR and backup&quot;,
 					&quot;Compliance and audit kits&quot;
 				]}
-<<<<<<< HEAD
 				industries={["Financial Services", "Life Sciences", "Government", "Energy", "Media"]}
-				canonical="https: //ziontechgroup.com/quantum-cloud-infrastructure-platform"
-=======
-				industries={[&quot;Financial Services&quot;, &quot;Life Sciences&quot;, &quot;Government&quot;, &quot;Energy&quot;, &quot;Media&quot;]}
-				canonical=&quot;https://ziontechgroup.com/quantum-cloud-infrastructure-platform&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from 'react';
+				canonical="https: //ziontechgroup.com/quantum-cloud-infrastructure-platform"import React from 'react';
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
@@ -56,7 +48,6 @@ export default function QuantumCloudInfrastructurePlatformPage() {_return (
 				]}
 				industries={_["Financial Services", _"Life Sciences", _"Government", _"Energy", _"Media"]}
 				canonical="https://ziontechgroup.com/quantum-cloud-infrastructure-platform"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 			/>
 		</>
 	)

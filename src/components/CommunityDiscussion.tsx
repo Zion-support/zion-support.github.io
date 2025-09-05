@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { MessageCircle } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -7,19 +5,7 @@ import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Avatar, AvatarFallback } from "@/components/ui/avatar",
 import { Card, CardContent } from "@/components/ui/card",
-import { Separator } from "@/components/ui/separator",
-=======
-import React, { useState } from &quot;react&quot;;
-import { MessageCircle } from 'lucide-react'
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { Textarea } from &quot;@/components/ui/textarea&quot;;
-import { Avatar, AvatarFallback } from &quot;@/components/ui/avatar&quot;;
-import { Card, CardContent } from &quot;@/components/ui/card&quot;;
-import { Separator } from &quot;@/components/ui/separator&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface DiscussionPost {
+import { Separator } from "@/components/ui/separator",interface DiscussionPost {
   id: number,
   author: string,
   avatar?: string,
@@ -34,10 +20,9 @@ const initialPosts: DiscussionPost[] = [
     author: &quot;Anna Zhou&quot;,
     time: &quot;2h ago&quot;,
     title: &quot;What AI trends are you most excited for in 2025?&quot;,
-    body: &quot;Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?&quot;},
+    body: &quot;Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?&quot},
   {
     id: 2,
-<<<<<<< HEAD
     author: "David Kim",
     time: "50m ago",
     title: "Quick tip: How to rank your Zion listing higher",
@@ -48,19 +33,6 @@ export const CommunityDiscussion: React.FC = () => {
   const [showNew, setShowNew] = useState(false),
   const [newTitle, setNewTitle] = useState(""),
   const [newBody, setNewBody] = useState(""),
-=======
-    author: &quot;David Kim&quot;,
-    time: &quot;50m ago&quot;,
-    title: &quot;Quick tip: How to rank your Zion listing higher&quot;,
-    body: &quot;Fill out every profile detail, add strong tags, and post weekly! See results in a month.&quot;}];
-
-export const CommunityDiscussion: React.FC = () => {
-  const [posts, setPosts] = useState(initialPosts);
-  const [showNew, setShowNew] = useState(false);
-  const [newTitle, setNewTitle] = useState("&quot;);
-  const [newBody, setNewBody] = useState("&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
   const handleAddPost = () => {
     if (!newTitle.trim() || !newBody.trim()) return,
     setPosts([
@@ -70,46 +42,16 @@ export const CommunityDiscussion: React.FC = () => {
         time: &quot;Now&quot;,
         title: newTitle,
         body: newBody},
-<<<<<<< HEAD
       ...posts]),
     setNewTitle(""),
     setNewBody(""),
     setShowNew(false)
-  },
-=======
-=======
-import React, {_useState} from "react";
-
-interface DiscussionPost {_id: number;
-  author: string;
-  avatar?: string;
-  time: string;
-  title: string;
-  body: string;}
-
-const initialPosts: DiscussionPost[] = [
-  {_id: 1, _author: "Anna Zhou", _time: "2h ago", _title: "What AI trends are you most excited for in 2025?", _body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},
-  {_id: 2, _author: "David Kim", _time: "50m ago", _title: "Quick tip: How to rank your Zion listing higher", _body: "Fill out every profile detail, _add strong tags, _and post weekly! See results in a month."}];
-
-export const CommunityDiscussion: React.FC = () => {_const [posts, _setPosts] = useState(initialPosts);
-  const [showNew, _setShowNew] = useState(false);
-  const [newTitle, _setNewTitle] = useState("");
-  const [newBody, _setNewBody] = useState("");
-
-  const _handleAddPost = () => {
-    if (!newTitle.trim() || !newBody.trim()) return;
-    setPosts([
-      {
-        id: Date.now(), _author: "You", _time: "Now", _title: newTitle, _body: newBody},
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      ...posts]);
+  },      ...posts]);
     setNewTitle("&quot;);
     setNewBody("&quot;);
-    setShowNew(false);
+    setShowNew(false)
   };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
-<<<<<<< HEAD
   return (
     <div className=&quot;w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in&quot;>
       <div className=&quot;flex items-center gap-3 mb-4&quot;>
@@ -118,108 +60,53 @@ export const CommunityDiscussion: React.FC = () => {_const [posts, _setPosts] = 
           Community Discussion
         </span>
         <span className=&quot;ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0.5&quot;>
-          {posts.length} posts
-=======
-  return (_<div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
-      <div className="flex items-center gap-3 mb-4">
-        <MessageCircle size={_28} className="text-zion-cyan" />
-        <span className="font-bold text-2xl text-white tracking-tight">
-          Community Discussion
-        </span>
-        <span className="ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0.5">
-          {_posts.length} posts
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        </span>
+          {posts.length} posts        </span>
       </div>
       <Separator className=&quot;mb-6&quot; />
       <div className=&quot;mb-4 flex justify-end&quot;>
-        <Button
-<<<<<<< HEAD
-          className=&quot;bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale&quot;
+        <Button,
+className=&quot;bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale&quot;
           size=&quot;sm&quot;
           onClick={() => setShowNew((v) => !v)}
         >
-          {showNew ? &quot;Cancel&quot; : &quot;New Post&quot;}
+          {showNew ? &quot;Cancel&quot; : &quot;New Post&quot}
         </Button>
       </div>
       {showNew && (
         <Card className=&quot;mb-6 animate-scale-in&quot;>
           <CardContent className=&quot;py-5&quot;>
-            <Input
-              placeholder=&quot;Title (e.g., Share an AI tool, Ask for help...)&quot;
-              className=&quot;mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate&quot;
-=======
-          className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
-          size="sm"
-          onClick={_() => setShowNew(_(v) => !v)}
-        >
-          {_showNew ? "Cancel" : "New Post"}
-        </Button>
-      </div>
-      {_showNew && (
-        <Card className="mb-6 animate-scale-in">
-          <CardContent className="py-5">
-            <Input
-              placeholder="Title (e.g., _Share an AI tool, _Ask for help...)"
-              className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              value={newTitle}
-              onChange={_(_e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
-              maxLength={_80}
+            <Input,
+placeholder=&quot;Title (e.g., Share an AI tool, Ask for help...)&quot;
+              className=&quot;mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate&quot;              value={newTitle}
+              onChange={_(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
+              maxLength={80}
             />
-            <Textarea
-<<<<<<< HEAD
-              placeholder=&quot;What's on your mind?&quot;
+            <Textarea,
+placeholder=&quot;What's on your mind?&quot;
               className=&quot;mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]&quot;
               value={newBody}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
               maxLength={400}
-              rows={3}
-=======
-              placeholder="What's on your mind?"
-              className="mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]"
-              value={_newBody}
-              onChange={_(_e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
-              maxLength={_400}
-              rows={_3}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            />
+              rows={3}            />
             <div className=&quot;flex gap-3 justify-end&quot;>
-              <Button
-<<<<<<< HEAD
-                variant=&quot;secondary&quot;
+              <Button,
+variant=&quot;secondary&quot;
                 size=&quot;sm&quot;
                 className=&quot;bg-zion-blue text-white hover:bg-zion-blue-dark&quot;
-                onClick={() => setShowNew(false)}
-=======
-                variant="secondary"
-                size="sm"
-                className="bg-zion-blue text-white hover:bg-zion-blue-dark"
-                onClick={_() => setShowNew(false)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                onClick={() => setShowNew(false)}              >
                 Cancel
               </Button>
-              <Button
-<<<<<<< HEAD
-                size=&quot;sm&quot;
+              <Button,
+size=&quot;sm&quot;
                 className=&quot;bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale&quot;
                 onClick={handleAddPost}
-                disabled={!newTitle.trim() || !newBody.trim()}
-=======
-                size="sm"
-                className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
-                onClick={_handleAddPost}
-                disabled={_!newTitle.trim() || !newBody.trim()}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                disabled={!newTitle.trim() || !newBody.trim()}              >
                 Post
               </Button>
             </div>
           </CardContent>
         </Card>
       )}
-<<<<<<< HEAD
       <div className=&quot;flex flex-col gap-6&quot;>
         {posts.map((post) => (
           <Card key={post.id} className=&quot;bg-zion-blue border-zion-slate-dark shadow-lg&quot;>
@@ -228,30 +115,18 @@ export const CommunityDiscussion: React.FC = () => {_const [posts, _setPosts] = 
                 <AvatarFallback>
                   {post.author
                     .split(&quot; &quot;)
-                    .map((s) => s[0])
-=======
-      <div className="flex flex-col gap-6">
-        {_posts.map(_(post) => (
-          <Card key={post.id} className="bg-zion-blue border-zion-slate-dark shadow-lg">
-            <CardContent className="py-4 flex gap-4">
-              <Avatar>
-                <AvatarFallback>
-                  {_post.author
-                    .split(" ")
-                    .map(_(s) => s[0])
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    .join("")
+                    .map((s) => s[0])                    .join("")
                     .toUpperCase()
-                    .slice(0, _2)}
+                    .slice(0, 2)}
                 </AvatarFallback>
               </Avatar>
               <div>
                 <div className="flex gap-2 items-center">
-                  <span className="font-semibold text-white">{_post.author}</span>
-                  <span className="text-xs text-zion-slate-light">{_post.time}</span>
+                  <span className="font-semibold text-white">{post.author}</span>
+                  <span className="text-xs text-zion-slate-light">{post.time}</span>
                 </div>
-                <h3 className="text-lg font-bold text-zion-cyan mt-1">{_post.title}</h3>
-                <p className="text-zion-slate-light mt-1 whitespace-pre-line">{_post.body}</p>
+                <h3 className="text-lg font-bold text-zion-cyan mt-1">{post.title}</h3>
+                <p className="text-zion-slate-light mt-1 whitespace-pre-line">{post.body}</p>
               </div>
             </CardContent>
           </Card>

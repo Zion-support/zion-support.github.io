@@ -13,7 +13,6 @@ const values = [
   {name: 'Trust & Security', description: 'We maintain the highest standards of security and ethical AI development.', icon: ShieldCheckIcon},
   {name: 'Research Excellence', description: 'Our team of world-class researchers drives breakthrough discoveries and innovations.', icon: AcademicCapIcon}
 ]
-
 const team = [
   {name: 'Dr. Sarah Chen', role: 'Chief Executive Officer', bio: 'Former AI researcher at Stanford, leading Zion Tech Group\'s vision for the future of technology.', image: '/images/team/sarah-chen.jpg'},
   {name: 'Dr. Marcus Rodriguez', role: 'Chief Technology Officer', bio: 'Quantum computing expert with 15+ years in advanced AI systems and neural network architecture.', image: '/images/team/marcus-rodriguez.jpg'},
@@ -37,8 +36,7 @@ export default function AboutPage() {
             <p className="mt-6 text-lg leading-8 text-gray-300">
               We are pioneers in artificial intelligence, quantum computing, and autonomous systems, 
               dedicated to transforming industries and advancing human potential through technology.
-            </p>
-          </div>
+            </p>          </div>
         </div>
       </div>
 
@@ -53,8 +51,7 @@ export default function AboutPage() {
               {values.map((value) => (
                 <div key={value.name} className="flex flex-col">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600">
-                    <value.icon className="h-6 w-6 text-white" aria-hidden="true" />
-                  </div>
+                    <value.icon className="h-6 w-6 text-white" aria-hidden="true" />                  </div>
                   <h3 className="mt-6 text-lg font-semibold text-white">{value.name}</h3>
                   <p className="mt-2 text-base text-gray-300">{value.description}</p>
                 </div>
@@ -82,8 +79,7 @@ export default function AboutPage() {
                   <p className="mt-2 text-sm text-gray-300">{person.bio}</p>
                 </div>
               ))}
-            </div>
-          </div>
+            </div>          </div>
         </div>
       </div>
     </div>

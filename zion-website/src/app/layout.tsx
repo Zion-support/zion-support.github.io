@@ -5,8 +5,7 @@ export const metadata: Metadata = {
   description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
   keywords: ['AI', 'artificial intelligence', 'technology', 'innovation', 'quantum computing', 'autonomous systems', 'business solutions', 'zion tech'],
   authors: [{ name: 'Zion Tech Group' }],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
+  creator: 'Zion Tech Group',  publisher: 'Zion Tech Group',
   openGraph: {
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
     description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
@@ -42,7 +41,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
-    </html>
+      <body>{children}</body>    </html>
   )
 }

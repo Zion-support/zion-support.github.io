@@ -1,15 +1,10 @@
 import Link from 'next/link'
 import Head from 'next/head'
 
-<<<<<<< HEAD
 const errorMessages: Record<string string> = {
   OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.',
   default: 'There was an issue with your authentication request.'
 }
-=======
-const errorMessages: Record<string, string> = {_OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.', _default: 'There was an issue with your authentication request.'}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default function AuthErrorPage() {_const { query} = useRouter()
   const _message = errorMessages[query.error as string] || errorMessages.default
 
@@ -25,14 +20,8 @@ export default function AuthErrorPage() {_const { query} = useRouter()
             <div className=&quot;mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20&quot;>
               <AlertTriangle className=&quot;h-6 w-6 text-red-600 dark:text-red-400&quot; />
             </div>
-<<<<<<< HEAD
             <CardTitle className=&quot;text-2xl font-bold&quot;>Authentication Error</CardTitle>
-            <p className=&quot;text-sm text-muted-foreground&quot;>{message}</p>
-=======
-            <CardTitle className="text-2xl font-bold">Authentication Error</CardTitle>
-            <p className="text-sm text-muted-foreground">{_message}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          </CardHeader>
+            <p className=&quot;text-sm text-muted-foreground&quot;>{message}</p>          </CardHeader>
           <CardContent className=&quot;space-y-4&quot;>
             <div className=&quot;text-center space-y-2&quot;>
               <Button asChild className=&quot;w-full&quot;>

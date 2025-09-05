@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const innovativeMicroSaasSolutions2025 = [
   {
     id: 'ai-powered-customer-feedback-analyzer',
@@ -23,18 +22,7 @@ export const innovativeMicroSaasSolutions2025 = [
         price: 399, 
         period: 'month', 
         features: ['Unlimited feedback itemsCustom AI trainingDedicated supportWhite-label solution'] 
-      }
-=======
-export const _innovativeMicroSaasSolutions2025 = [
-  {_id: 'ai-powered-customer-feedback-analyzer', _name: 'AI-Powered Customer Feedback Analyzer', _description: 'Intelligent platform that automatically analyzes customer feedback from multiple channels, _providing actionable insights and sentiment analysis to improve customer experience.', _features: [
-      'Multi-channel feedback collection (email, _social media, _surveys, _reviews)', _'AI-powered sentiment analysis with 95.8% accuracy', _'Real-time feedback processing and alerts', _'Automated insight generation and recommendations', _'Customer satisfaction trend analysis', _'Competitor feedback monitoring', _'Custom dashboard and reporting', _'Integration with CRM and support systems', _'Multi-language support', _'API access for custom integrations'
-    ], _pricing: {
-      starter: { 
-        price: 49, _period: 'month', _features: ['Up to 1, _000 feedback items/month', _'Basic sentiment analysis', _'Email support', _'Standard reports']},
-      professional: {_price: 149, _period: 'month', _features: ['Up to 10, _000 feedback items/month', _'Advanced AI analysis', _'Priority support', _'Custom dashboards']},
-      enterprise: {_price: 399, _period: 'month', _features: ['Unlimited feedback items', _'Custom AI training', _'Dedicated support', _'White-label solution']}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    },
+      }    },
     category: 'Customer Experience',
     tags: ['AICustomer FeedbackSentiment AnalysisCustomer ExperienceBusiness Intelligence'],
     website: 'https://ziontechgroup.com/ai-powered-customer-feedback-analyzer',
@@ -48,7 +36,6 @@ export const _innovativeMicroSaasSolutions2025 = [
     integrations: ['CRM systemsSupport platformsSocial mediaSurvey toolsAnalytics platforms'],
     compliance: ['GDPRCCPASOC2Data privacy regulations']
   },
-<<<<<<< HEAD
   {
     id: 'intelligent-inventory-optimization',
     name: 'Intelligent Inventory Optimization',
@@ -72,17 +59,7 @@ export const _innovativeMicroSaasSolutions2025 = [
         price: 499, 
         period: 'month', 
         features: ['Unlimited SKUsCustom AI trainingDedicated supportWhite-label solution'] 
-      }
-=======
-  {_id: 'intelligent-inventory-optimization', _name: 'Intelligent Inventory Optimization', _description: 'Smart inventory management platform that uses AI and machine learning to predict demand, _optimize stock levels, _and reduce inventory costs while maintaining customer satisfaction.', _features: [
-      'AI-powered demand forecasting with 92.4% accuracy', _'Real-time inventory tracking and monitoring', _'Automated reorder point calculations', _'Seasonal trend analysis and prediction', _'Multi-location inventory management', _'Supplier performance analytics', _'Cost optimization recommendations', _'Integration with ERP and e-commerce systems', _'Mobile app for on-the-go management', _'Advanced reporting and analytics'
-    ], _pricing: {
-      starter: { 
-        price: 79, _period: 'month', _features: ['Up to 1, _000 SKUs', _'Basic forecasting', _'Email support', _'Standard reports']},
-      professional: {_price: 199, _period: 'month', _features: ['Up to 10, _000 SKUs', _'Advanced AI forecasting', _'Priority support', _'Custom analytics']},
-      enterprise: {_price: 499, _period: 'month', _features: ['Unlimited SKUs', _'Custom AI training', _'Dedicated support', _'White-label solution']}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    },
+      }    },
     category: 'Supply Chain',
     tags: ['Inventory ManagementAIDemand ForecastingSupply ChainCost Optimization'],
     website: 'https://ziontechgroup.com/intelligent-inventory-optimization',
@@ -96,7 +73,6 @@ export const _innovativeMicroSaasSolutions2025 = [
     integrations: ['ERP systemsE-commerce platformsAccounting softwareShipping platformsSupplier systems'],
     compliance: ['SOC2ISO 27001Industry-specific regulations']
   },
-<<<<<<< HEAD
   {
     id: 'smart-expense-management-automation',
     name: 'Smart Expense Management Automation',
@@ -120,17 +96,7 @@ export const _innovativeMicroSaasSolutions2025 = [
         price: 249, 
         period: 'month', 
         features: ['Unlimited usersCustom AI trainingDedicated supportWhite-label solution'] 
-      }
-=======
-  {_id: 'smart-expense-management-automation', _name: 'Smart Expense Management Automation', _description: 'Intelligent expense management platform that automates expense tracking, _approval workflows, _and financial reporting using AI and machine learning.', _features: [
-      'AI-powered receipt scanning and data extraction', _'Automated expense categorization with 96.2% accuracy', _'Smart approval workflow automation', _'Real-time expense monitoring and alerts', _'Policy compliance checking and enforcement', _'Multi-currency support and conversion', _'Integration with accounting and ERP systems', _'Mobile app for expense submission', _'Advanced analytics and reporting', _'Custom policy and rule configuration'
-    ], _pricing: {
-      starter: { 
-        price: 39, _period: 'month', _features: ['Up to 10 users', _'Basic automation', _'Email support', _'Standard reports']},
-      professional: {_price: 99, _period: 'month', _features: ['Up to 50 users', _'Advanced AI automation', _'Priority support', _'Custom workflows']},
-      enterprise: {_price: 249, _period: 'month', _features: ['Unlimited users', _'Custom AI training', _'Dedicated support', _'White-label solution']}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    },
+      }    },
     category: 'Financial Management',
     tags: ['Expense ManagementAI AutomationFinancial ReportingWorkflow AutomationCompliance'],
     website: 'https://ziontechgroup.com/smart-expense-management-automation',
@@ -144,7 +110,6 @@ export const _innovativeMicroSaasSolutions2025 = [
     integrations: ['Accounting softwareERP systemsBanking platformsTravel booking systemsHR platforms'],
     compliance: ['SOC2ISO 27001Financial regulationsTax compliance']
   },
-<<<<<<< HEAD
   {
     id: 'ai-powered-social-media-scheduler',
     name: 'AI-Powered Social Media Scheduler',
@@ -168,17 +133,7 @@ export const _innovativeMicroSaasSolutions2025 = [
         price: 199, 
         period: 'month', 
         features: ['Unlimited social accountsCustom AI trainingDedicated supportWhite-label solution'] 
-      }
-=======
-  {_id: 'ai-powered-social-media-scheduler', _name: 'AI-Powered Social Media Scheduler', _description: 'Intelligent social media management platform that uses AI to optimize posting times, _generate engaging content, _and maximize engagement across multiple platforms.', _features: [
-      'AI-powered optimal posting time prediction', _'Automated content generation and curation', _'Multi-platform social media management', _'Engagement analytics and optimization', _'Hashtag research and optimization', _'Content calendar and scheduling', _'Team collaboration and approval workflows', _'Performance tracking and reporting', _'Integration with design and content tools', _'API access for custom integrations'
-    ], _pricing: {
-      starter: { 
-        price: 29, _period: 'month', _features: ['Up to 3 social accounts', _'Basic AI scheduling', _'Email support', _'Standard analytics']},
-      professional: {_price: 79, _period: 'month', _features: ['Up to 10 social accounts', _'Advanced AI features', _'Priority support', _'Custom analytics']},
-      enterprise: {_price: 199, _period: 'month', _features: ['Unlimited social accounts', _'Custom AI training', _'Dedicated support', _'White-label solution']}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    },
+      }    },
     category: 'Marketing & Social Media',
     tags: ['Social MediaAIContent MarketingSocial Media ManagementEngagement Optimization'],
     website: 'https://ziontechgroup.com/ai-powered-social-media-scheduler',
@@ -192,7 +147,6 @@ export const _innovativeMicroSaasSolutions2025 = [
     integrations: ['Social media platformsDesign toolsContent management systemsAnalytics platformsCRM systems'],
     compliance: ['Social media platform policiesData privacy regulationsContent guidelines']
   },
-<<<<<<< HEAD
   {
     id: 'intelligent-email-marketing-automation',
     name: 'Intelligent Email Marketing Automation',
@@ -216,17 +170,7 @@ export const _innovativeMicroSaasSolutions2025 = [
         price: 399, 
         period: 'month', 
         features: ['Unlimited subscribersCustom AI trainingDedicated supportWhite-label solution'] 
-      }
-=======
-  {_id: 'intelligent-email-marketing-automation', _name: 'Intelligent Email Marketing Automation', _description: 'Advanced email marketing platform that uses AI to personalize content, _optimize send times, _and maximize email engagement and conversion rates.', _features: [
-      'AI-powered personalization and segmentation', _'Optimal send time prediction with 94.7% accuracy', _'Automated email sequence optimization', _'A/B testing and performance optimization', _'Advanced subscriber behavior analytics', _'Dynamic content generation', _'Integration with CRM and e-commerce systems', _'Comprehensive email deliverability tools', _'Advanced reporting and analytics', _'Custom automation workflows'
-    ], _pricing: {
-      starter: { 
-        price: 59, _period: 'month', _features: ['Up to 5, _000 subscribers', _'Basic AI personalization', _'Email support', _'Standard reports']},
-      professional: {_price: 149, _period: 'month', _features: ['Up to 25, _000 subscribers', _'Advanced AI features', _'Priority support', _'Custom analytics']},
-      enterprise: {_price: 399, _period: 'month', _features: ['Unlimited subscribers', _'Custom AI training', _'Dedicated support', _'White-label solution']}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    },
+      }    },
     category: 'Marketing & Email',
     tags: ['Email MarketingAIMarketing AutomationPersonalizationConversion Optimization'],
     website: 'https://ziontechgroup.com/intelligent-email-marketing-automation',

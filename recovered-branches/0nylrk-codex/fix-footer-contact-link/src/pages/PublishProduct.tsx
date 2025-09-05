@@ -1,24 +1,11 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { ProductSubmissionForm } from "@/components/ProductSubmissionForm",
 import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
-import { SEO } from "@/components/SEO",
-=======
-import React from &quot;react&quot;;
-import { Header } from &quot;@/components/Header&quot;;
-import { Footer } from &quot;@/components/Footer&quot;;
-import { ProductSubmissionForm } from &quot;@/components/ProductSubmissionForm&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { Navigate } from &quot;react-router-dom&quot;;
-import { SEO } from &quot;@/components/SEO&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export default function PublishProduct() {
+import { SEO } from "@/components/SEO",export default function PublishProduct() {
   const { isAuthenticated, isLoading } = useAuth(),
   
   // Show loading while checking authentication
@@ -34,13 +21,7 @@ export default function PublishProduct() {
   
   // Redirect to login if not authenticated
   if (!isAuthenticated) {
-<<<<<<< HEAD
-    return <Navigate to="/login" state={{ from: '/publish' }} replace />
-=======
-    return <Navigate to=&quot;/login&quot; state={{ from: '/publish' }} replace />;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from "react";
+    return <Navigate to="/login" state={{ from: '/publish' }} replace />import React from "react";
 
 export default function PublishProduct() {_const { isAuthenticated, _isLoading} = useAuth();
   
@@ -55,7 +36,6 @@ export default function PublishProduct() {_const { isAuthenticated, _isLoading} 
   
   // Redirect to login if not authenticated
   if (!isAuthenticated) {_return <Navigate to="/login" state={{ from: '/publish'}} replace />;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   }
 
   return (
@@ -73,12 +53,7 @@ export default function PublishProduct() {_const { isAuthenticated, _isLoading} 
             Share your products, services, or digital assets with the Zion community.
           </p>
           
-<<<<<<< HEAD
-          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">
-=======
-          <div className=&quot;bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md:p-8&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-            <ProductSubmissionForm />
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">            <ProductSubmissionForm />
           </div>
         </div>
       </main>

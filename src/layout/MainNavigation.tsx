@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from "next/link",
 import { useRouter } from "next/router",
 import { useState } from "react",
@@ -7,18 +5,7 @@ import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",
 import { useTranslation } from "react-i18next",
 import { useFavorites } from "@/hooks/useFavorites",
-import { useCart } from "@/context/CartContext",
-=======
-import Link from &quot;next/link&quot;;
-import { useRouter } from &quot;next/router&quot;;
-import { useState } from &quot;react&quot;;
-import { cn } from &quot;@/lib/utils&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { useTranslation } from &quot;react-i18next&quot;;
-import { useFavorites } from &quot;@/hooks/useFavorites&quot;;
-import { useCart } from &quot;@/context/CartContext&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react'
+import { useCart } from "@/context/CartContext",import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react'
 import { LanguageSelector } from '@/components/header/LanguageSelector',
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card',
 import { MiniCartPreview } from '@/components/cart/MiniCartPreview',
@@ -102,7 +89,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/analytics',
       matches: (path: string) => path.startsWith('/analytics')
     })
-=======
 import Link from "next/link";
 
 interface MainNavigationProps {_isAdmin?: boolean;
@@ -145,29 +131,18 @@ export function MainNavigation(_{_isAdmin = false, _unreadCount = 0, _className}
   // Add admin-only links
   if (isAdmin) {_links.push({
       key: 'analytics', _name: t('nav.analytics'), _href: '/analytics', _matches: (_path: string) => path.startsWith('/analytics')});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   }
   
   return (_<>
       <button
-<<<<<<< HEAD
         className=&quot;navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary&quot; // Added ml-auto and mr-4 for positioning
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         aria-expanded={isMobileMenuOpen}
         aria-controls=&quot;main-navbar-collapse&quot;
-        aria-label=&quot;Toggle navigation&quot;
-=======
-        className="navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" // Added ml-auto and mr-4 for positioning
-        onClick={_() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        aria-expanded={_isMobileMenuOpen}
-        aria-controls="main-navbar-collapse"
-        aria-label="Toggle navigation"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      >
+        aria-label=&quot;Toggle navigation&quot;      >
         <span className=&quot;navbar-toggler-icon&quot;></span>
       </button>
       <nav
-<<<<<<< HEAD
         className={cn(&quot;navbar&quot;, className)}
         role=&quot;navigation&quot;
         aria-label=&quot;Main navigation&quot;
@@ -193,51 +168,19 @@ export function MainNavigation(_{_isAdmin = false, _unreadCount = 0, _className}
                     &quot;inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary&quot;,
                     link.matches(router.pathname)
                       ? &quot;bg-zion-purple/20 text-zion-cyan&quot;
-                      : &quot;text-white hover:bg-zion-purple/10 hover:text-zion-cyan&quot;
-=======
-        className={_cn("navbar", _className)}
-        role="navigation"
-        aria-label="Main navigation"
-      >
-        <div
-          id="main-navbar-collapse"
-          className={_cn(
-            "navbar-collapse", _{ "open": isMobileMenuOpen},
-            "w-full md:flex md:w-auto", // Handles visibility and desktop layout
-            !isMobileMenuOpen && "hidden" // Explicitly hide when not open and on mobile
-          )}
-        >
-          <ul className="navbar-nav flex flex-col md:flex-row md:items-center md:gap-1"> {_/* Added navbar-nav and flex direction classes */}
-            {_links.map(_(link) => (_<li key={link.name} className="nav-item">
-                <Link 
-                  href={_link.href}
-                  aria-label={_link.name}
-                  onClick={_() => setIsMobileMenuOpen(false)}
-                  className={_cn(
-                    "nav-link", _"inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary", _link.matches(router.pathname)
-                      ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  )}
+                      : &quot;text-white hover:bg-zion-purple/10 hover:text-zion-cyan&quot;                  )}
                 >
                   {_link.name}
                 </Link>
               </li>
             ))}
 
-<<<<<<< HEAD
             {/* Wishlist link */}
             {isAuthenticated && (
-              <li className=&quot;nav-item&quot;>
-=======
-            {_/* Wishlist link */}
-            {_isAuthenticated && (_<li className="nav-item">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                <Link 
+              <li className=&quot;nav-item&quot;>                <Link 
                   href=&quot;/wishlist&quot;
                   aria-label=&quot;Wishlist&quot;
                   onClick={() => setIsMobileMenuOpen(false)}
-<<<<<<< HEAD
                   className={cn(
                     &quot;nav-link&quot;,
                     &quot;relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary&quot;,
@@ -248,70 +191,37 @@ export function MainNavigation(_{_isAdmin = false, _unreadCount = 0, _className}
                 >
                   <Heart className=&quot;w-4 h-4&quot; />
                   {count > 0 && (
-                    <span className=&quot;absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center&quot;>
-=======
-                  className={_cn(
-                    "nav-link", _"relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary", _router.pathname === "/wishlist"
-                      ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
-                  )}
-                >
-                  <Heart className="w-4 h-4" />
-                  {_count > 0 && (
-                    <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      {count}
+                    <span className=&quot;absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center&quot;>                      {count}
                     </span>
                   )}
                 </Link>
               </li>
             )}
 
-<<<<<<< HEAD
             {/* Wallet link */}
             {isAuthenticated && (
-              <li className=&quot;nav-item&quot;>
-=======
-            {_/* Wallet link */}
-            {_isAuthenticated && (_<li className="nav-item">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                <Link 
+              <li className=&quot;nav-item&quot;>                <Link 
                   href=&quot;/wallet&quot;
                   aria-label=&quot;Wallet&quot;
                   onClick={() => setIsMobileMenuOpen(false)}
-<<<<<<< HEAD
                   className={cn(
                     &quot;nav-link&quot;,
                     &quot;relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary&quot;,
                     router.pathname === &quot;/wallet&quot;
                       ? &quot;bg-zion-purple/20 text-zion-cyan&quot;
-                      : &quot;text-white hover:bg-zion-purple/10 hover:text-zion-cyan&quot;
-=======
-                  className={_cn(
-                    "nav-link", _"relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary", _router.pathname === "/wallet"
-                      ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  )}
+                      : &quot;text-white hover:bg-zion-purple/10 hover:text-zion-cyan&quot;                  )}
                 >
                   <Wallet className=&quot;w-4 h-4&quot; />
                 </Link>
               </li>
             )}
 
-<<<<<<< HEAD
             {/* Messages link */}
             {isAuthenticated && (
-              <li className=&quot;nav-item&quot;>
-=======
-            {_/* Messages link */}
-            {_isAuthenticated && (_<li className="nav-item">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                <Link 
+              <li className=&quot;nav-item&quot;>                <Link 
                   href=&quot;/messages&quot;
                   aria-label=&quot;Messages&quot;
                   onClick={() => setIsMobileMenuOpen(false)}
-<<<<<<< HEAD
                   className={cn(
                     &quot;nav-link&quot;,
                     &quot;relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary&quot;,
@@ -322,26 +232,13 @@ export function MainNavigation(_{_isAdmin = false, _unreadCount = 0, _className}
                 >
                   <MessageSquare className=&quot;w-4 h-4&quot; />
                   {unreadCount > 0 && (
-                    <span className=&quot;absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center&quot;>
-=======
-                  className={_cn(
-                    "nav-link", _"relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary", _router.pathname === "/messages"
-                      ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
-                  )}
-                >
-                  <MessageSquare className="w-4 h-4" />
-                  {_unreadCount > 0 && (
-                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      {unreadCount > 9 ? '9+' : unreadCount}
+                    <span className=&quot;absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center&quot;>                      {unreadCount > 9 ? '9+' : unreadCount}
                     </span>
                   )}
                 </Link>
               </li>
             )}
 
-<<<<<<< HEAD
             {/* Cart icon with badge */}
             <li className=&quot;nav-item&quot;>
               <HoverCard openDelay={100}>
@@ -352,38 +249,16 @@ export function MainNavigation(_{_isAdmin = false, _unreadCount = 0, _className}
                     onClick={handleCartClick}
                     className={cn(
                       'nav-linkinline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
-                      router.pathname.startsWith('/cart')
-=======
-            {_/* Cart icon with badge */}
-            <li className="nav-item">
-              <HoverCard openDelay={_100}>
-                <HoverCardTrigger asChild>
-                  <Link
-                    href="/cart"
-                    aria-label={_t('nav.cart')}
-                    onClick={_handleCartClick}
-                    className={_cn(
-                      'nav-link', _'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary', _router.pathname.startsWith('/cart')
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        ? 'bg-zion-purple/20 text-zion-cyan'
+                      router.pathname.startsWith('/cart')                        ? 'bg-zion-purple/20 text-zion-cyan'
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                     )}
                   >
-<<<<<<< HEAD
                     <ShoppingCart className="w-4 h-4 mr-1" />
-<<<<<<< HEAD
-                    {t('nav.cartCart')}
-=======
-                    <ShoppingCart className=&quot;w-4 h-4 mr-1&quot; />
-                    {t('nav.cart', 'Cart')}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-                    {cartCount > 0 && (
+                    {t('nav.cartCart')}                    {cartCount > 0 && (
                       <span className=&quot;absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center&quot;>
-=======
                     {_t('nav.cart', _'Cart')}
                     {_cartCount > 0 && (
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         {cartCount}
                       </span>
                     )}

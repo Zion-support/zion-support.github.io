@@ -1,16 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
-import { CodeBlock } from "@/components/developers/CodeBlock",
-=======
-import React from &quot;react&quot;;
-import ApiDocsLayout from &quot;@/components/developers/ApiDocsLayout&quot;;
-import { CodeBlock } from &quot;@/components/developers/CodeBlock&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export function ApiErrorCodes() {
+import { CodeBlock } from "@/components/developers/CodeBlock",export function ApiErrorCodes() {
   const errorExample = `{
   &quot;error&quot;: &quot;validation_error&quot;,
   &quot;message&quot;: &quot;The request was invalid&quot;,
@@ -23,7 +14,6 @@ export function ApiErrorCodes() {
       &quot;field&quot;: &quot;budget.min&quot;,
       &quot;error&quot;: &quot;Budget minimum must be greater than 0&quot;
     }
-=======
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 
@@ -32,24 +22,14 @@ export function ApiErrorCodes() {_const _errorExample = `{
     {
       "field": "title", _"error": "Title is required"},
     {_"field": "budget.min", _"error": "Budget minimum must be greater than 0"}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   ]
 }`,
 
-<<<<<<< HEAD
   const rateLimitExample = `{
-<<<<<<< HEAD
   "error": "rate_limit_exceeded",
   "message": "Rate limit exceeded. Try again in 30 seconds",
   "retry_after": 30
 }`,
-=======
-  &quot;error&quot;: &quot;rate_limit_exceeded&quot;,
-  &quot;message&quot;: &quot;Rate limit exceeded. Try again in 30 seconds&quot;,
-  &quot;retry_after&quot;: 30
-}`;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
   const errorCodes = [
     {
       status: 400,
@@ -144,7 +124,6 @@ export function ApiErrorCodes() {_const _errorExample = `{
       notes: &quot;Webhooks don't count against your rate limits&quot;
     }
   ],
-=======
   const _rateLimitExample = `{_"error": "rate_limit_exceeded", _"message": "Rate limit exceeded. Try again in 30 seconds", _"retry_after": 30}`;
 
   const _errorCodes = [
@@ -168,7 +147,6 @@ export function ApiErrorCodes() {_const _errorExample = `{
     {_endpoint: "/api/talent (Search)", _limit: "50 requests per minute", _notes: "Higher limit for common search operations"},
     {_endpoint: "Webhook delivery", _limit: "N/A", _notes: "Webhooks don't count against your rate limits"}
   ];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <ApiDocsLayout>
@@ -181,12 +159,7 @@ export function ApiErrorCodes() {_const _errorExample = `{
           a JSON response body containing details about the error.
         </p>
         
-<<<<<<< HEAD
-        <CodeBlock code={errorExample} language=&quot;json&quot; showLineNumbers={true} />
-=======
-        <CodeBlock code={_errorExample} language="json" showLineNumbers={_true} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        
+        <CodeBlock code={errorExample} language=&quot;json&quot; showLineNumbers={true} />        
         <p>
           Most errors include:
         </p>
@@ -210,7 +183,6 @@ export function ApiErrorCodes() {_const _errorExample = `{
               </tr>
             </thead>
             <tbody>
-<<<<<<< HEAD
               {errorCodes.map((error, index) => (
                 <tr key={error.code} className={index < errorCodes.length - 1 ? &quot;border-b border-zinc-800&quot; : ""}>
                   <td className="py-2 px-4 text-white">
@@ -222,21 +194,7 @@ export function ApiErrorCodes() {_const _errorExample = `{
                   </td>
                   <td className="py-2 px-4 text-white font-mono">{error.code}</td>
                   <td className="py-2 px-4 text-zinc-300">{error.message}</td>
-                  <td className="py-2 px-4 text-zinc-400 text-sm&quot;>{error.details}</td>
-=======
-              {_errorCodes.map(_(error, _index) => (
-                <tr key={error.code} className={_index < errorCodes.length - 1 ? "border-b border-zinc-800" : ""}>
-                  <td className="py-2 px-4 text-white">
-                    <span className={_`inline-block px-2 rounded text-xs font-medium ${
-                      error.status < 500 ? "bg-orange-950 text-orange-500" : "bg-red-950 text-red-500"}`}>
-                      {_error.status}
-                    </span>
-                  </td>
-                  <td className="py-2 px-4 text-white font-mono">{_error.code}</td>
-                  <td className="py-2 px-4 text-zinc-300">{_error.message}</td>
-                  <td className="py-2 px-4 text-zinc-400 text-sm">{_error.details}</td>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </tr>
+                  <td className="py-2 px-4 text-zinc-400 text-sm&quot;>{error.details}</td>                </tr>
               ))}
             </tbody>
           </table>
@@ -257,12 +215,7 @@ export function ApiErrorCodes() {_const _errorExample = `{
           When you exceed the rate limit, you'll receive a 429 response with details on when to retry:
         </p>
         
-<<<<<<< HEAD
-        <CodeBlock code={rateLimitExample} language=&quot;json" showLineNumbers={true} />
-=======
-        <CodeBlock code={_rateLimitExample} language="json" showLineNumbers={_true} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        
+        <CodeBlock code={rateLimitExample} language=&quot;json" showLineNumbers={true} />        
         <h2>Rate Limits</h2>
         <p>
           To ensure fair usage and protect the API from abuse, we enforce rate limits on all endpoints.
@@ -279,20 +232,11 @@ export function ApiErrorCodes() {_const _errorExample = `{
               </tr>
             </thead>
             <tbody>
-<<<<<<< HEAD
               {rateLimits.map((limit, index) => (
                 <tr key={index} className={index < rateLimits.length - 1 ? "border-b border-zinc-800&quot; : "&quot;}>
                   <td className=&quot;py-2 px-4 text-white font-mono&quot;>{limit.endpoint}</td>
                   <td className=&quot;py-2 px-4 text-zinc-300&quot;>{limit.limit}</td>
-                  <td className=&quot;py-2 px-4 text-zinc-400 text-sm&quot;>{limit.notes}</td>
-=======
-              {_rateLimits.map(_(limit, _index) => (
-                <tr key={index} className={_index < rateLimits.length - 1 ? "border-b border-zinc-800" : ""}>
-                  <td className="py-2 px-4 text-white font-mono">{_limit.endpoint}</td>
-                  <td className="py-2 px-4 text-zinc-300">{_limit.limit}</td>
-                  <td className="py-2 px-4 text-zinc-400 text-sm">{_limit.notes}</td>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </tr>
+                  <td className=&quot;py-2 px-4 text-zinc-400 text-sm&quot;>{limit.notes}</td>                </tr>
               ))}
             </tbody>
           </table>

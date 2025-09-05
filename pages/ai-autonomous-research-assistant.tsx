@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AIAutonomousResearchAssistant() {
@@ -19,15 +18,8 @@ export default function AIAutonomousResearchAssistant() {
 				&quot;Export to Slides/Docs/Notion&quot;,
 				&quot;Compliance-friendly data handling, audit logs&quot;
 			]}
-<<<<<<< HEAD
 			industries={["Consulting", "Healthcare", "Finance", "Public Sector"]}
-			canonical="https: //ziontechgroup.com/ai-autonomous-research-assistant"
-=======
-			industries={[&quot;Consulting&quot;, &quot;Healthcare&quot;, &quot;Finance&quot;, &quot;Public Sector&quot;]}
-			canonical=&quot;https://ziontechgroup.com/ai-autonomous-research-assistant&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from 'react';
+			canonical="https: //ziontechgroup.com/ai-autonomous-research-assistant"import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIAutonomousResearchAssistant() {_return (
@@ -44,7 +36,6 @@ export default function AIAutonomousResearchAssistant() {_return (
 			]}
 			industries={_["Consulting", _"Healthcare", _"Finance", _"Public Sector"]}
 			canonical="https://ziontechgroup.com/ai-autonomous-research-assistant"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 		/>
 	)
 }

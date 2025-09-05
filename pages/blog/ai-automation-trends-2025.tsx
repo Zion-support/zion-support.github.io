@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link',
 import React from 'react',
 export default function AIAutomationTrends2025() {
-  return (
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react';
-
-export default function AIAutomationTrends2025() {_return (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    <>
+  return (    <>
       <Head>
         <title>
           AI Automation Trends 2025: The Future of Autonomous Systems | Zion
@@ -74,7 +65,6 @@ export default function AIAutomationTrends2025() {_return (
                 <p className='text-white/90 mb-4'>
                   One of the most significant trends we're seeing in 2025
                   is the emergence of truly autonomous decision-making systems.
-<<<<<<< HEAD
                   These aren't just rule-based automations
                   anymore—they're intelligent systems that can analyze
                   complex scenarios, learn from outcomes, and make decisions
@@ -82,18 +72,7 @@ export default function AIAutomationTrends2025() {_return (
                 </p>
                 <p className='text-white/90 mb-4'>
                   At Zion Tech Group, we've been at the forefront of this
-                  revolution, developing systems that can:
-=======
-                  These aren&apos;t just rule-based automations
-                  anymore—they&apos;re intelligent systems that can analyze
-                  complex scenarios, _learn from outcomes, _and make decisions
-                  with minimal human intervention.
-                </p>
-                <p className='text-white/90 mb-4'>
-                  At Zion Tech Group, _we&apos;ve been at the forefront of this
-                  revolution, _developing systems that can:
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </p>
+                  revolution, developing systems that can:                </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>
                     • Analyze market conditions and adjust strategies in
@@ -133,16 +112,9 @@ export default function AIAutomationTrends2025() {_return (
                   Human-AI Collaboration
                 </h2>
                 <p className='text-white/90 mb-4'>
-<<<<<<< HEAD
                   Contrary to popular belief, the future isn't about AI
                   replacing humans—it's about AI augmenting human
-                  capabilities. We're seeing a new paradigm emerge where
-=======
-                  Contrary to popular belief, _the future isn&apos;t about AI
-                  replacing humans—it&apos;s about AI augmenting human
-                  capabilities. We&apos;re seeing a new paradigm emerge where
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  humans and AI systems work together as collaborative partners.
+                  capabilities. We're seeing a new paradigm emerge where                  humans and AI systems work together as collaborative partners.
                 </p>
                 <p className='text-white/90 mb-4'>
                   This collaboration takes many forms:
@@ -230,18 +202,10 @@ export default function AIAutomationTrends2025() {_return (
                   themselves at a competitive advantage.
                 </p>
                 <p className='text-white/90'>
-<<<<<<< HEAD
                   At Zion Tech Group, we're committed to staying at the
                   forefront of these developments, ensuring our clients have
                   access to the most advanced autonomous systems available. The
-                  future of AI automation is here, and it's more exciting
-=======
-                  At Zion Tech Group, _we&apos;re committed to staying at the
-                  forefront of these developments, _ensuring our clients have
-                  access to the most advanced autonomous systems available. The
-                  future of AI automation is here, _and it&apos;s more exciting
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  than ever.
+                  future of AI automation is here, and it's more exciting                  than ever.
                 </p>
               </section>
             </article>
@@ -275,9 +239,5 @@ export default function AIAutomationTrends2025() {_return (
         </main>
       </div>
     </>
-<<<<<<< HEAD
   )
 }
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

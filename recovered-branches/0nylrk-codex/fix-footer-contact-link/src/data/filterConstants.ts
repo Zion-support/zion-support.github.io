@@ -1,11 +1,6 @@
 
 // Common skills for filtering
-<<<<<<< HEAD
 export const COMMON_SKILLS = [
-<<<<<<< HEAD
-=======
-export const _COMMON_SKILLS = [
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   "Machine Learning",
   "Python",
   "JavaScript",
@@ -28,7 +23,6 @@ export const _REGIONS = [
   "Middle East",
   "Africa"
 ],
-=======
   &quot;Machine Learning&quot;,
   &quot;Python&quot;,
   &quot;JavaScript&quot;,
@@ -51,4 +45,3 @@ export const REGIONS = [
   &quot;Middle East&quot;,
   &quot;Africa&quot;
 ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7

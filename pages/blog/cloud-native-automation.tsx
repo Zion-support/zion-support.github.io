@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link',
 import React from 'react',
 export default function CloudNativeAutomation() {
-  return (
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react';
-
-export default function CloudNativeAutomation() {_return (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    <>
+  return (    <>
       <Head>
         <title>
           Building Cloud-Native Automation Infrastructure | Zion Tech Group
@@ -108,15 +99,9 @@ export default function CloudNativeAutomation() {_return (
                   <li>Efficient resource allocation and management</li>
                 </ul>
                 <p className='text-white/90 mb-4'>
-<<<<<<< HEAD
                   Our Kubernetes clusters automatically handle load balancing,
                   service discovery, and failover, ensuring high availability
-                  and window.window.window.performance.
-=======
-                  Our Kubernetes clusters automatically handle load balancing, _service discovery, _and failover, _ensuring high availability
-                  and performance.
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </p>
+                  and window.window.window.performance.                </p>
               </section>
 
               <section className='mb-12'>
@@ -193,17 +178,9 @@ export default function CloudNativeAutomation() {_return (
                 </h2>
                 <p className='text-white/90 mb-4'>
                   As we continue to evolve our cloud-native automation
-<<<<<<< HEAD
                   infrastructure, we're exploring emerging technologies
-<<<<<<< HEAD
-                  like: </p>
-=======
-=======
-                  infrastructure, _we&apos;re exploring emerging technologies
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  like:
+                  like: </p>                  like:
                 </p>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>• Serverless computing for event-driven automation</li>
                   <li>Edge computing for low-latency processing</li>
@@ -245,9 +222,5 @@ export default function CloudNativeAutomation() {_return (
         </main>
       </div>
     </>
-<<<<<<< HEAD
   )
 }
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

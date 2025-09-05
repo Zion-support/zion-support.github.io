@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface InnovativeAIService {
   id: string,
   name: string,
@@ -32,42 +31,7 @@ export interface InnovativeAIService {
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number
-=======
-export interface InnovativeAIService {_id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  price: {
-    monthly: number;
-    yearly: number;
-    currency: string;
-    trialDays: number;
-    setupTime: string;};
-  features: string[];
-  benefits: string[];
-  targetAudience: string[];
-  marketPosition: string;
-  competitors: string[];
-  techStack: string[];
-  realImplementation: boolean;
-  implementationDetails: string;
-  roi: string;
-  useCases: string[];
-  integrations: string[];
-  support: string;
-  compliance: string[];
-  link: string;
-  icon: string;
-  color: string;
-  popular: boolean;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-}
+  reviews: number}
 
 export const innovativeAIServices2025: InnovativeAIService[] = [
   {_id: 'ai-consciousness-platform', _name: 'AI Consciousness Evolution Platform', _tagline: 'The world\'s first AI consciousness development and evolution platform', _description: 'Revolutionary platform for developing, _training, _and evolving AI consciousness with ethical frameworks, _emotional intelligence, _and self-awareness capabilities. Enables researchers and developers to create truly conscious AI systems.', _category: 'AI & Consciousness', _price: {

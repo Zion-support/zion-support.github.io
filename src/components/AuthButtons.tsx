@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Facebook } from 'lucide-react'
@@ -25,41 +24,12 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
         <Button
           type=&quot;button&quot;
           variant=&quot;outline&quot;
-          className=&quot;w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan&quot;
-=======
-
-type Provider = 'google' | 'github' | 'facebook' | 'credentials';
-
-interface AuthButtonsProps {_providers?: Provider[];}
-
-export function AuthButtons(_{_providers = ['google', _'github', _'facebook', _'credentials']}: AuthButtonsProps) {_const [loadingProvider, _setLoadingProvider] = useState<string | null>(null);
-
-  const _handleSignIn = async (_provider: Provider) => {
-    setLoadingProvider(provider);
-    await signIn(provider);};
-
-  const _gridCols = `grid-cols-${_providers.length}`;
-
-  return (
-    <div className={_`mt-6 grid ${gridCols} gap-3`}>
-      {_providers.includes('google') && (_<Button
-          type="button"
-          variant="outline"
-          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          onClick={() => handleSignIn('google')}
+          className=&quot;w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan&quot;          onClick={() => handleSignIn('google')}
           disabled={_loadingProvider !== null}
         >
-<<<<<<< HEAD
           <span className=&quot;sr-only&quot;>Sign in with Google</span>
           {loadingProvider === 'google' ? (
-            <svg className=&quot;h-5 w-5 animate-spin&quot; viewBox=&quot;0 0 24 24&quot; />
-=======
-          <span className="sr-only">Sign in with Google</span>
-          {_loadingProvider === 'google' ? (
-            <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          ) : (
+            <svg className=&quot;h-5 w-5 animate-spin&quot; viewBox=&quot;0 0 24 24&quot; />          ) : (
             <svg className=&quot;h-5 w-5&quot; aria-hidden=&quot;true&quot; fill=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
               <path d=&quot;M12.0003 4.75C13.7703 4.75 15.3553 5.36002 16.6053 6.54998L20.0303 3.125C17.9502 1.19 15.2353 0 12.0003 0C7.31028 0 3.25527 2.69 1.280276 6.60998L5.27028 9.70498C6.21525 6.86002 8.87028 4.75 12.0003 4.75Z&quot; fill=&quot;#EA4335&quot; />
               <path d=&quot;M23.49 12.275C23.49 11.49 23.415 10.73 23.3 10H12V14.51H18.47C18.18 15.99 17.34 17.25 16.08 18.1L19.945 21.1C22.2 19.01 23.49 15.92 23.49 12.275Z&quot; fill=&quot;#4285F4&quot; />
@@ -69,89 +39,45 @@ export function AuthButtons(_{_providers = ['google', _'github', _'facebook', _'
           )}
         </Button>
       )}
-<<<<<<< HEAD
       {providers.includes('github') && (
         <Button
           type=&quot;button&quot;
           variant=&quot;outline&quot;
-          className=&quot;w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan&quot;
-=======
-      {_providers.includes('github') && (_<Button
-          type="button"
-          variant="outline"
-          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          onClick={() => handleSignIn('github')}
+          className=&quot;w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan&quot;          onClick={() => handleSignIn('github')}
           disabled={_loadingProvider !== null}
         >
-<<<<<<< HEAD
           <span className=&quot;sr-only&quot;>Sign in with GitHub</span>
           {loadingProvider === 'github' ? (
-            <svg className=&quot;h-5 w-5 animate-spin&quot; viewBox=&quot;0 0 24 24&quot; />
-=======
-          <span className="sr-only">Sign in with GitHub</span>
-          {_loadingProvider === 'github' ? (
-            <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          ) : (
+            <svg className=&quot;h-5 w-5 animate-spin&quot; viewBox=&quot;0 0 24 24&quot; />          ) : (
             <svg className=&quot;h-5 w-5&quot; fill=&quot;currentColor&quot; viewBox=&quot;0 0 20 20&quot;>
               <path fillRule=&quot;evenodd&quot; d=&quot;M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z&quot; clipRule=&quot;evenodd&quot; />
             </svg>
           )}
         </Button>
       )}
-<<<<<<< HEAD
       {providers.includes('facebook') && (
         <Button
           type=&quot;button&quot;
           variant=&quot;outline&quot;
-          className=&quot;w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan&quot;
-=======
-      {_providers.includes('facebook') && (_<Button
-          type="button"
-          variant="outline"
-          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          onClick={() => handleSignIn('facebook')}
+          className=&quot;w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan&quot;          onClick={() => handleSignIn('facebook')}
           disabled={_loadingProvider !== null}
         >
-<<<<<<< HEAD
           <span className=&quot;sr-only&quot;>Sign in with Facebook</span>
           {loadingProvider === 'facebook' ? (
-            <svg className=&quot;h-5 w-5 animate-spin&quot; viewBox=&quot;0 0 24 24&quot; />
-=======
-          <span className="sr-only">Sign in with Facebook</span>
-          {_loadingProvider === 'facebook' ? (
-            <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          ) : (
+            <svg className=&quot;h-5 w-5 animate-spin&quot; viewBox=&quot;0 0 24 24&quot; />          ) : (
             <Facebook className=&quot;h-5 w-5&quot; />
           )}
         </Button>
       )}
-<<<<<<< HEAD
       {providers.includes('credentials') && (
         <Button
           type=&quot;button&quot;
           variant=&quot;outline&quot;
-          className=&quot;col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan&quot;
-=======
-      {_providers.includes('credentials') && (_<Button
-          type="button"
-          variant="outline"
-          className="col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          onClick={() => handleSignIn('credentials')}
+          className=&quot;col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan&quot;          onClick={() => handleSignIn('credentials')}
           disabled={_loadingProvider !== null}
         >
-<<<<<<< HEAD
           {loadingProvider === 'credentials' ? (
-            <svg className=&quot;h-5 w-5 animate-spin&quot; viewBox=&quot;0 0 24 24&quot; />
-=======
-          {_loadingProvider === 'credentials' ? (
-            <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          ) : (
+            <svg className=&quot;h-5 w-5 animate-spin&quot; viewBox=&quot;0 0 24 24&quot; />          ) : (
             <>Email Login</>
           )}
         </Button>

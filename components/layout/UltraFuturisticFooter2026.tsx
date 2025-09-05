@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
@@ -14,50 +13,41 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-=======
-import React from 'react';
-import Link from 'next/link';
-import {_Phone, _Mail, _MapPin, _Globe, _ArrowRight, _Star, _Shield, _Brain, _DollarSign, _Dna, _Rocket, _Users, _Award, _Zap, _Facebook, _Twitter, _Linkedin, _Instagram, _Youtube, _Github} from 'lucide-react';
-
-const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-const _serviceCategories = [
-  {_title: 'AI & Automation', _services: [
-      { name: 'AI Autonomous Business Processor', _href: '/ai-autonomous-business-processor'},
-      {_name: 'AI Predictive Enterprise Analytics', _href: '/ai-predictive-enterprise-analytics'},
-      {_name: 'AI Autonomous Customer Success', _href: '/ai-autonomous-customer-success'},
-      {_name: 'AI Autonomous Marketing Orchestrator', _href: '/ai-autonomous-marketing-orchestrator'},
-      {_name: 'AI Autonomous Sales Intelligence', _href: '/ai-autonomous-sales-intelligence'}
+const serviceCategories = [
+  {title: 'AI & Automation', services: [
+      { name: 'AI Autonomous Business Processor', href: '/ai-autonomous-business-processor'},
+      {name: 'AI Predictive Enterprise Analytics', href: '/ai-predictive-enterprise-analytics'},
+      {name: 'AI Autonomous Customer Success', href: '/ai-autonomous-customer-success'},
+      {name: 'AI Autonomous Marketing Orchestrator', href: '/ai-autonomous-marketing-orchestrator'},
+      {name: 'AI Autonomous Sales Intelligence', href: '/ai-autonomous-sales-intelligence'}
     ]
   },
-  {_title: 'Cybersecurity & Quantum', _services: [
-      { name: 'Quantum Encryption Platform', _href: '/quantum-encryption-platform'},
-      {_name: 'AI Autonomous Threat Hunter', _href: '/ai-autonomous-threat-hunter'},
-      {_name: 'Quantum Zero Trust Security', _href: '/quantum-zero-trust-security'},
-      {_name: 'AI Autonomous Vulnerability Scanner', _href: '/ai-autonomous-vulnerability-scanner'},
-      {_name: 'Quantum Secure Communication', _href: '/quantum-secure-communication'}
+  {title: 'Cybersecurity & Quantum', services: [
+      { name: 'Quantum Encryption Platform', href: '/quantum-encryption-platform'},
+      {name: 'AI Autonomous Threat Hunter', href: '/ai-autonomous-threat-hunter'},
+      {name: 'Quantum Zero Trust Security', href: '/quantum-zero-trust-security'},
+      {name: 'AI Autonomous Vulnerability Scanner', href: '/ai-autonomous-vulnerability-scanner'},
+      {name: 'Quantum Secure Communication', href: '/quantum-secure-communication'}
     ]
   },
-  {_title: 'Fintech & Blockchain', _services: [
-      { name: 'Quantum Financial Trading Platform', _href: '/quantum-financial-trading-platform'},
-      {_name: 'AI Autonomous Wealth Management', _href: '/ai-autonomous-wealth-management'},
-      {_name: 'Quantum Blockchain Finance', _href: '/quantum-blockchain-finance'},
-      {_name: 'AI Autonomous Insurance Platform', _href: '/ai-autonomous-insurance-platform'},
-      {_name: 'Quantum Payment Processing', _href: '/quantum-payment-processing'}
+  {title: 'Fintech & Blockchain', services: [
+      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform'},
+      {name: 'AI Autonomous Wealth Management', href: '/ai-autonomous-wealth-management'},
+      {name: 'Quantum Blockchain Finance', href: '/quantum-blockchain-finance'},
+      {name: 'AI Autonomous Insurance Platform', href: '/ai-autonomous-insurance-platform'},
+      {name: 'Quantum Payment Processing', href: '/quantum-payment-processing'}
     ]
   },
-  {_title: 'Healthcare & Biotech', _services: [
-      { name: 'AI Autonomous Medical Diagnostics', _href: '/ai-autonomous-medical-diagnostics'},
-      {_name: 'Quantum Drug Discovery Platform', _href: '/quantum-drug-discovery-platform'},
-      {_name: 'AI Autonomous Patient Care', _href: '/ai-autonomous-patient-care'},
-      {_name: 'Quantum Genomic Analysis', _href: '/quantum-genomic-analysis'},
-      {_name: 'AI Autonomous Clinical Trials', _href: '/ai-autonomous-clinical-trials'}
+  {title: 'Healthcare & Biotech', services: [
+      { name: 'AI Autonomous Medical Diagnostics', href: '/ai-autonomous-medical-diagnostics'},
+      {name: 'Quantum Drug Discovery Platform', href: '/quantum-drug-discovery-platform'},
+      {name: 'AI Autonomous Patient Care', href: '/ai-autonomous-patient-care'},
+      {name: 'Quantum Genomic Analysis', href: '/quantum-genomic-analysis'},
+      {name: 'AI Autonomous Clinical Trials', href: '/ai-autonomous-clinical-trials'}
     ]
   }
 ],
 
-<<<<<<< HEAD
 const companyLinks = [
   { name: 'About Us', href: '/about' },
   { name: 'Leadership Team', href: '/leadership' },
@@ -91,64 +81,19 @@ const socialLinks = [
 
 export default function UltraFuturisticFooter2026() {
   return (
-    <footer className=&quot;relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800&quot;>
-=======
-const _companyLinks = [
-  {_name: 'About Us', _href: '/about'},
-  {_name: 'Leadership Team', _href: '/leadership'},
-  {_name: 'Careers', _href: '/careers'},
-  {_name: 'News & Press', _href: '/news'},
-  {_name: 'Partners', _href: '/partners'},
-  {_name: 'Investors', _href: '/investors'},
-  {_name: 'Contact Us', _href: '/contact'},
-  {_name: 'Locations', _href: '/locations'}
-];
-
-const _resourceLinks = [
-  {_name: 'Documentation', _href: '/docs'},
-  {_name: 'API Reference', _href: '/api-documentation'},
-  {_name: 'Case Studies', _href: '/case-studies'},
-  {_name: 'Blog & News', _href: '/blog'},
-  {_name: 'Support Center', _href: '/support'},
-  {_name: 'Training & Certification', _href: '/training'},
-  {_name: 'Community Forum', _href: '/community'},
-  {_name: 'Developer Resources', _href: '/developer-resources'}
-];
-
-const _socialLinks = [
-  {_name: 'Facebook', _href: '#', _icon: Facebook},
-  {_name: 'Twitter', _href: '#', _icon: Twitter},
-  {_name: 'LinkedIn', _href: '#', _icon: Linkedin},
-  {_name: 'Instagram', _href: '#', _icon: Instagram},
-  {_name: 'YouTube', _href: '#', _icon: Youtube},
-  {_name: 'GitHub', _href: '#', _icon: Github}
-];
-
-export default function UltraFuturisticFooter2026() {_return (
-    <footer className="relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      {/* Background Effects */}
+    <footer className=&quot;relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800&quot;>      {/* Background Effects */}
       <div className=&quot;absolute inset-0 overflow-hidden&quot;>
-        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.05),transparent_50%)]&quot;></div>
-        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.05),transparent_50%)]&quot;></div>
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circleat_30%20%,rgba(6,182,212,0.05),transparent50%)]&quot;></div>
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circleat_70%80%,rgba(139,92,246,0.05),transparent50%)]&quot;></div>
       </div>
 
-<<<<<<< HEAD
       <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16&quot;>
         {/* Main Footer Content */}
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12&quot;>
           {/* Company Info */}
-          <div className=&quot;lg:col-span-2&quot;>
-=======
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {_/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
-          {_/* Company Info */}
-          <div className="lg:col-span-2">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
+          <div className=&quot;lg:col-span-2&quot;>            <motion.div,
+initial={_{ opacity: 0, y: 20}}
+              whileInView={_{ opacity: 1, y: 0}}
               transition={_{ duration: 0.6}}
             >
               <div className=&quot;flex items-center mb-6&quot;>
@@ -164,7 +109,6 @@ export default function UltraFuturisticFooter2026() {_return (
                 and healthcare biotech solutions. Transforming businesses with cutting-edge technology.
               </p>
               
-<<<<<<< HEAD
               {/* Contact Info */}
               <div className=&quot;space-y-3&quot;>
                 <div className=&quot;flex items-center text-gray-300&quot;>
@@ -181,39 +125,18 @@ export default function UltraFuturisticFooter2026() {_return (
                 </div>
                 <div className=&quot;flex items-center text-gray-300&quot;>
                   <Globe className=&quot;w-4 h-4 mr-3 text-cyan-400&quot; />
-                  <span>{contactInfo.website}</span>
-=======
-              {_/* Contact Info */}
-              <div className="space-y-3">
-                <div className="flex items-center text-gray-300">
-                  <Phone className="w-4 h-4 mr-3 text-cyan-400" />
-                  <span>{_contactInfo.mobile}</span>
-                </div>
-                <div className="flex items-center text-gray-300">
-                  <Mail className="w-4 h-4 mr-3 text-cyan-400" />
-                  <span>{_contactInfo.email}</span>
-                </div>
-                <div className="flex items-center text-gray-300">
-                  <MapPin className="w-4 h-4 mr-3 text-cyan-400" />
-                  <span>{_contactInfo.address}</span>
-                </div>
-                <div className="flex items-center text-gray-300">
-                  <Globe className="w-4 h-4 mr-3 text-cyan-400" />
-                  <span>{_contactInfo.website}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </div>
+                  <span>{contactInfo.website}</span>                </div>
               </div>
             </motion.div>
           </div>
 
           {_/* Service Categories */}
-          {_serviceCategories.map(_(category, _index) => (_<motion.div
-              key={index}
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.6, _delay: index * 0.1}}
+          {serviceCategories.map(_(category, index) => (_<motion.div,
+key={index}
+              initial={_{ opacity: 0, y: 20}}
+              whileInView={_{ opacity: 1, y: 0}}
+              transition={_{ duration: 0.6, delay: index * 0.1}}
             >
-<<<<<<< HEAD
               <h4 className=&quot;text-lg font-semibold text-white mb-4 flex items-center&quot;>
                 {category.title === 'AI & Automation' && <Brain className=&quot;w-5 h-5 mr-2 text-cyan-400&quot; />}
                 {category.title === 'Cybersecurity & Quantum' && <Shield className=&quot;w-5 h-5 mr-2 text-red-400&quot; />}
@@ -224,145 +147,82 @@ export default function UltraFuturisticFooter2026() {_return (
               <ul className=&quot;space-y-2&quot;>
                 {category.services.map((service, serviceIndex) => (
                   <li key={serviceIndex}>
-                    <Link 
-                      href={service.href}
+                    <Link,
+href={service.href}
                       className=&quot;text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group&quot;
                     >
                       <ArrowRight className=&quot;w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300&quot; />
                       {service.name}
-                    </a>
-=======
-              <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-                {_category.title === 'AI & Automation' && <Brain className="w-5 h-5 mr-2 text-cyan-400" />}
-                {_category.title === 'Cybersecurity & Quantum' && <Shield className="w-5 h-5 mr-2 text-red-400" />}
-                {_category.title === 'Fintech & Blockchain' && <DollarSign className="w-5 h-5 mr-2 text-green-400" />}
-                {_category.title === 'Healthcare & Biotech' && <Dna className="w-5 h-5 mr-2 text-blue-400" />}
-                {_category.title}
-              </h4>
-              <ul className="space-y-2">
-                {_category.services.map((service, _serviceIndex) => (
-                  <li key={serviceIndex}>
-                    <Link 
-                      href={_service.href}
-                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group"
-                    >
-                      <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
-                      {_service.name}
-                    </Link>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </li>
+                    </a>                  </li>
                 ))}
               </ul>
             </motion.div>
           ))}
         </div>
 
-<<<<<<< HEAD
         {/* Additional Links */}
         <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 mb-12&quot;>
-          {/* Company Links */}
-=======
-        {_/* Additional Links */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {_/* Company Links */}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          <motion.div
-            initial={_{ opacity: 0, _y: 20}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.6, _delay: 0.2}}
+          {/* Company Links */}          <motion.div,
+initial={_{ opacity: 0, y: 20}}
+            whileInView={_{ opacity: 1, y: 0}}
+            transition={_{ duration: 0.6, delay: 0.2}}
           >
             <h4 className=&quot;text-lg font-semibold text-white mb-4 flex items-center&quot;>
               <Users className=&quot;w-5 h-5 mr-2 text-purple-400&quot; />
               Company
             </h4>
-<<<<<<< HEAD
             <ul className=&quot;space-y-2&quot;>
               {companyLinks.map((link, index) => (
                 <li key={index}>
-                  <Link 
-                    href={link.href}
+                  <Link,
+href={link.href}
                     className=&quot;text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm&quot;
                   >
                     {link.name}
-                  </a>
-=======
-            <ul className="space-y-2">
-              {_companyLinks.map(_(link, _index) => (
-                <li key={index}>
-                  <Link 
-                    href={_link.href}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
-                  >
-                    {_link.name}
-                  </Link>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </li>
+                  </a>                </li>
               ))}
             </ul>
           </motion.div>
 
           {_/* Resources */}
-          <motion.div
-            initial={_{ opacity: 0, _y: 20}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.6, _delay: 0.3}}
+          <motion.div,
+initial={_{ opacity: 0, y: 20}}
+            whileInView={_{ opacity: 1, y: 0}}
+            transition={_{ duration: 0.6, delay: 0.3}}
           >
             <h4 className=&quot;text-lg font-semibold text-white mb-4 flex items-center&quot;>
               <Award className=&quot;w-5 h-5 mr-2 text-yellow-400&quot; />
               Resources
             </h4>
-<<<<<<< HEAD
             <ul className=&quot;space-y-2&quot;>
               {resourceLinks.map((link, index) => (
                 <li key={index}>
-                  <Link 
-                    href={link.href}
+                  <Link,
+href={link.href}
                     className=&quot;text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm&quot;
                   >
                     {link.name}
-                  </a>
-=======
-            <ul className="space-y-2">
-              {_resourceLinks.map(_(link, _index) => (
-                <li key={index}>
-                  <Link 
-                    href={_link.href}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
-                  >
-                    {_link.name}
-                  </Link>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </li>
+                  </a>                </li>
               ))}
             </ul>
           </motion.div>
 
           {_/* Social Media */}
-          <motion.div
-            initial={_{ opacity: 0, _y: 20}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.6, _delay: 0.4}}
+          <motion.div,
+initial={_{ opacity: 0, y: 20}}
+            whileInView={_{ opacity: 1, y: 0}}
+            transition={_{ duration: 0.6, delay: 0.4}}
           >
             <h4 className=&quot;text-lg font-semibold text-white mb-4 flex items-center&quot;>
               <Rocket className=&quot;w-5 h-5 mr-2 text-pink-400&quot; />
               Follow Us
             </h4>
-<<<<<<< HEAD
             <div className=&quot;grid grid-cols-3 gap-4&quot;>
               {socialLinks.map((social, index) => (
-                <Link
-                  key={index}
+                <Link,
+key={index}
                   href={social.href}
-                  className=&quot;w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group&quot;
-=======
-            <div className="grid grid-cols-3 gap-4">
-              {_socialLinks.map(_(social, _index) => (
-                <Link
-                  key={index}
-                  href={_social.href}
-                  className="w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                >
+                  className=&quot;w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group&quot;                >
                   <social.icon className=&quot;w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300&quot; />
                 </a>
               ))}
@@ -371,19 +231,11 @@ export default function UltraFuturisticFooter2026() {_return (
         </div>
 
         {_/* Newsletter Signup */}
-        <motion.div
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 20 }}
+        <motion.div,
+initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className=&quot;bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12&quot;
-=======
-          initial={_{ opacity: 0, _y: 20}}
-          whileInView={_{ opacity: 1, _y: 0}}
-          transition={_{ duration: 0.6, _delay: 0.5}}
-          className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        >
+          className=&quot;bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12&quot;        >
           <div className=&quot;text-center&quot;>
             <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>
               Stay Updated with Latest Innovations
@@ -393,8 +245,8 @@ export default function UltraFuturisticFooter2026() {_return (
               Be the first to know about breakthrough solutions and industry trends.
             </p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 max-w-md mx-auto&quot;>
-              <input
-                type=&quot;email&quot;
+              <input,
+type=&quot;email&quot;
                 placeholder=&quot;Enter your email&quot;
                 className=&quot;flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20&quot;
               />
@@ -406,27 +258,13 @@ export default function UltraFuturisticFooter2026() {_return (
         </motion.div>
 
         {_/* Bottom Bar */}
-        <motion.div
-<<<<<<< HEAD
-          initial={{ opacity: 0 }}
+        <motion.div,
+initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className=&quot;border-t border-gray-800 pt-8&quot;
-=======
-          initial={_{ opacity: 0}}
-          whileInView={_{ opacity: 1}}
-          transition={_{ duration: 0.6, _delay: 0.6}}
-          className="border-t border-gray-800 pt-8"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        >
-<<<<<<< HEAD
+          className=&quot;border-t border-gray-800 pt-8&quot;        >
           <div className="flex flex-col md: flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">
-=======
-          <div className=&quot;flex flex-col md:flex-row justify-between items-center&quot;>
-            <div className=&quot;text-gray-400 text-sm mb-4 md:mb-0&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-              © 2026 Zion Tech Group. All rights reserved. | 
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">              © 2026 Zion Tech Group. All rights reserved. | 
               <Link href=&quot;/privacy&quot; className=&quot;hover:text-cyan-400 transition-colors duration-300 ml-2&quot;>
                 Privacy Policy
               </a>

@@ -1,14 +1,7 @@
 
-<<<<<<< HEAD
 import React from 'react',
 import { MobileApp } from './MobileApp',
 export { MobileApp },
-=======
-import React from 'react';
-
-export {_MobileApp};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 // Export all mobile components for potential reuse in other projects
 export * from './components/common/BottomNavigation',
 export * from './components/common/MobileHeader',

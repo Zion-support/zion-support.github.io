@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link',
 const features = [
   { key: 'private_portal', label: 'Private hiring portal' },
@@ -29,22 +28,6 @@ const tiers = [
     blurb: 'Unlimited users, custom contracts and SLAs',
     highlights: ['Unlimited seatsCustom SLADedicated CSM'],
     includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}],
-=======
-import Link from 'next/link';
-
-const _features = [
-  {_key: 'private_portal', _label: 'Private hiring portal'},
-  {_key: 'dedicated_talent_pool', _label: 'Dedicated talent pool'},
-  {_key: 'custom_sla', _label: 'Custom SLA'},
-  {_key: 'branded_onboarding', _label: 'Branded onboarding'},
-  {_key: 'admin_dashboards', _label: 'Admin dashboards'}];
-
-const _tiers = [
-  {_id: 'teams', _name: 'Teams', _price: '$199/mo', _blurb: 'Up to 10 users, _core collaboration features', _highlights: ['10 seats', _'Private portal', _'Admin dashboard'], _includes: { private_portal: true, _dedicated_talent_pool: false, _custom_sla: false, _branded_onboarding: true, _admin_dashboards: true}},
-  {_id: 'business', _name: 'Business', _price: '$499/mo', _blurb: 'Up to 50 users, _advanced controls and limits', _highlights: ['50 seats', _'Dedicated talent pool', _'SLA options'], _includes: { private_portal: true, _dedicated_talent_pool: true, _custom_sla: true, _branded_onboarding: true, _admin_dashboards: true}},
-  {_id: 'enterprise-custom', _name: 'Enterprise', _price: 'Custom', _blurb: 'Unlimited users, _custom contracts and SLAs', _highlights: ['Unlimited seats', _'Custom SLA', _'Dedicated CSM'], _includes: { private_portal: true, _dedicated_talent_pool: true, _custom_sla: true, _branded_onboarding: true, _admin_dashboards: true}}];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default function EnterprisePlans() {_return (
     <main style={{ padding: '3rem', _maxWidth: 1100, _margin: '0 auto'}}>
       <header style={_{ textAlign: 'center', _marginBottom: '2rem'}}>
@@ -63,20 +46,11 @@ export default function EnterprisePlans() {_return (
                 <li key={h}>• {_h}</li>
               ))}
             </ul>
-<<<<<<< HEAD
             <div style={{ marginTop: 16, display: 'flex', gap: 8 }}>
               <Link href=&quot;/enterprise&quot; passHref legacyBehavior>
                 <a style={{ padding: '0.5rem 0.75rem', background: '#111827', color: 'white', borderRadius: 8 }}>Request Quote</Link>
               </Link>
-              <a href=&quot;mailto:sales@zion.ai&quot; style={{ padding: '0.5rem 0.75rem', border: '1px solid #111827', borderRadius: 8 }}>Schedule a Demo</Link>
-=======
-            <div style={_{ marginTop: 16, _display: 'flex', _gap: 8}}>
-              <Link href="/enterprise" passHref legacyBehavior>
-                <a style={_{ padding: '0.5rem 0.75rem', _background: '#111827', _color: 'white', _borderRadius: 8}}>Request Quote</a>
-              </Link>
-              <a href="mailto:sales@zion.ai" style={_{ padding: '0.5rem 0.75rem', _border: '1px solid #111827', _borderRadius: 8}}>Schedule a Demo</a>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            </div>
+              <a href=&quot;mailto:sales@zion.ai&quot; style={{ padding: '0.5rem 0.75rem', border: '1px solid #111827', borderRadius: 8 }}>Schedule a Demo</Link>            </div>
           </div>
         ))}
       </section>
@@ -115,14 +89,8 @@ export default function EnterprisePlans() {_return (
           <span style={_{ border: '1px solid #e5e7eb', _borderRadius: 6, _padding: '0.25rem 0.5rem'}}>ISO 27001</span>
           <span style={_{ border: '1px solid #e5e7eb', _borderRadius: 6, _padding: '0.25rem 0.5rem'}}>SOC 2</span>
         </div>
-<<<<<<< HEAD
         <div style={{ marginLeft: 'auto' }}>
-          <Link href=&quot;/enterprise/admin&quot;>Admin Dashboard</Link>
-=======
-        <div style={_{ marginLeft: 'auto'}}>
-          <Link href="/enterprise/admin">Admin Dashboard</Link>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        </div>
+          <Link href=&quot;/enterprise/admin&quot;>Admin Dashboard</Link>        </div>
       </section>
     </main>
   )

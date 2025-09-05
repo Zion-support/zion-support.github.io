@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Input } from '@/components/ui/input',
@@ -45,36 +44,7 @@ export default function GuestCheckoutModal({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className=&quot;bg-zion-blue border-zion-cyan/20 max-w-md&quot;>
-=======
-import {_Dialog, _DialogContent, _DialogDescription, _DialogFooter, _DialogHeader, _DialogTitle} from '@/components/ui/dialog';
-
-interface GuestCheckoutModalProps {_open: boolean;
-  onOpenChange: (_open: boolean) => void;
-  onSubmit: (_details: { email: string; address: string}) => void;
-}
-
-export default function GuestCheckoutModal(_{_open, _onOpenChange, _onSubmit}: GuestCheckoutModalProps) {_const [email, _setEmail] = useState('');
-  const [address, _setAddress] = useState('');
-  const [isSubmitting, _setIsSubmitting] = useState(false);
-
-  const _handleSubmit = async (_e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!email || !address) {
-      alert('Please fill in all required fields');
-      return;}
-
-    setIsSubmitting(true);
-    try {_onSubmit({ email, _address});
-    } finally {_setIsSubmitting(false);}
-  };
-
-  return (
-    <Dialog open={_open} onOpenChange={_onOpenChange}>
-      <DialogContent className="bg-zion-blue border-zion-cyan/20 max-w-md">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        <DialogHeader>
+      <DialogContent className=&quot;bg-zion-blue border-zion-cyan/20 max-w-md&quot;>        <DialogHeader>
           <DialogTitle className=&quot;text-white flex items-center gap-2&quot;>
             <User className=&quot;h-5 w-5 text-zion-cyan&quot; />
             Guest Checkout
@@ -84,18 +54,11 @@ export default function GuestCheckoutModal(_{_open, _onOpenChange, _onSubmit}: G
           </DialogDescription>
         </DialogHeader>
 
-<<<<<<< HEAD
         {!isProdDomain() && (
-          <div className=&quot;rounded-md bg-amber-500/20 p-2 text-center text-amber-400&quot;>
-=======
-        {_!isProdDomain() && (
-          <div className="rounded-md bg-amber-500/20 p-2 text-center text-amber-400">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            Pay with test data – use card 4242 4242 4242 4242 and any future date.
+          <div className=&quot;rounded-md bg-amber-500/20 p-2 text-center text-amber-400&quot;>            Pay with test data – use card 4242 4242 4242 4242 and any future date.
           </div>
         )}
 
-<<<<<<< HEAD
         <form onSubmit={handleSubmit} className=&quot;space-y-4&quot;>
           <div className=&quot;space-y-2&quot;>
             <Label htmlFor=&quot;guest-email&quot; className=&quot;text-white flex items-center gap-2&quot;>
@@ -107,22 +70,7 @@ export default function GuestCheckoutModal(_{_open, _onOpenChange, _onSubmit}: G
               type=&quot;email&quot;
               value={email || ''}
               onChange={(e) => setEmail(e.target.value || '')}
-              placeholder=&quot;your.email@example.com&quot;
-=======
-        <form onSubmit={_handleSubmit} className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="guest-email" className="text-white flex items-center gap-2">
-              <Mail className="h-4 w-4 text-zion-cyan" />
-              Email Address
-            </Label>
-            <Input
-              id="guest-email"
-              type="email"
-              value={_email || ''}
-              onChange={_(_e) => setEmail(e.target.value || '')}
-              placeholder="your.email@example.com"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              required
+              placeholder=&quot;your.email@example.com&quot;              required
               className=&quot;bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light&quot;
             />
           </div>
@@ -133,18 +81,10 @@ export default function GuestCheckoutModal(_{_open, _onOpenChange, _onSubmit}: G
               Shipping Address
             </Label>
             <Textarea
-<<<<<<< HEAD
               id=&quot;guest-address&quot;
               value={address || ''}
               onChange={(e) => setAddress(e.target.value || '')}
-              placeholder=&quot;Enter your full shipping address...&quot;
-=======
-              id="guest-address"
-              value={_address || ''}
-              onChange={_(_e) => setAddress(e.target.value || '')}
-              placeholder="Enter your full shipping address..."
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              required
+              placeholder=&quot;Enter your full shipping address...&quot;              required
               className=&quot;bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]&quot;
             />
           </div>
@@ -157,31 +97,16 @@ export default function GuestCheckoutModal(_{_open, _onOpenChange, _onSubmit}: G
 
           <DialogFooter className=&quot;space-x-2&quot;>
             <Button
-<<<<<<< HEAD
               type=&quot;button&quot;
               variant=&quot;outline&quot;
               onClick={() => onOpenChange(false)}
-              className=&quot;border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10&quot;
-=======
-              type="button"
-              variant="outline"
-              onClick={_() => onOpenChange(false)}
-              className="border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10&quot;            >
               Cancel
             </Button>
             <Button
-<<<<<<< HEAD
               type=&quot;submit&quot;
               disabled={isSubmitting || !email || !address}
-              className=&quot;bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue&quot;
-=======
-              type="submit"
-              disabled={_isSubmitting || !email || !address}
-              className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue&quot;            >
               {_isSubmitting ? (
                 'Processing...'
               ) : (

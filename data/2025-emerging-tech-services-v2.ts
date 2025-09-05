@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface EmergingTechService {
   id: string,
   name: string,
@@ -35,45 +34,7 @@ export interface EmergingTechService {
   rating: number,
   reviews: number,
   marketSize: string,
-  growthRate: string
-=======
-export interface EmergingTechService {_id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  price: {
-    monthly: number;
-    yearly: number;
-    currency: string;
-    trialDays: number;
-    setupTime: string;
-    enterprise: number;};
-  features: string[];
-  benefits: string[];
-  targetAudience: string[];
-  marketPosition: string;
-  competitors: string[];
-  techStack: string[];
-  realImplementation: boolean;
-  implementationDetails: string;
-  roi: string;
-  useCases: string[];
-  integrations: string[];
-  support: string;
-  compliance: string[];
-  link: string;
-  icon: string;
-  color: string;
-  popular: boolean;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  marketSize: string;
-  growthRate: string;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-}
+  growthRate: string}
 
 export const emergingTechServicesV2: EmergingTechService[] = [
   {_id: 'space-mining-platform', _name: 'Space Mining Platform', _tagline: 'Revolutionary asteroid mining and space resource extraction', _description: 'Advanced platform that enables automated asteroid mining, _resource extraction, _and space resource management using cutting-edge robotics and AI technology.', _category: 'Space & Emerging Tech', _price: {

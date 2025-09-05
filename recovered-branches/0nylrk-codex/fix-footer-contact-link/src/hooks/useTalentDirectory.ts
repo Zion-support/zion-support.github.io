@@ -1,18 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useAuthStatus } from "./talent/useAuthStatus",
 import { useTalentData } from "./talent/useTalentData",
 import { useFilterTalents } from "./talent/useFilterTalents",
-import { useUIState } from "./talent/useUIState",
-=======
-import { useAuthStatus } from &quot;./talent/useAuthStatus&quot;;
-import { useTalentData } from &quot;./talent/useTalentData&quot;;
-import { useFilterTalents } from &quot;./talent/useFilterTalents&quot;;
-import { useUIState } from &quot;./talent/useUIState&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export function useTalentDirectory() {
+import { useUIState } from "./talent/useUIState",export function useTalentDirectory() {
   // Fetch auth status and saved talents
   const { 
     isAuthenticated,
@@ -96,7 +86,6 @@ export function useTalentDirectory() {
     toggleSection,
     handleToggleSave
   }
-=======
 
 export function useTalentDirectory() {_// Fetch auth status and saved talents
   const { 
@@ -117,5 +106,4 @@ export function useTalentDirectory() {_// Fetch auth status and saved talents
     isMobileFilterOpen, _setIsMobileFilterOpen, _isHireModalOpen, _setIsHireModalOpen, _selectedTalent, _setSelectedTalent, _expandedSections, _// Auth and user state
     isAuthenticated, _userDetails, _savedTalents, _// Actions
     toggleSkill, _toggleAvailability, _toggleRegion, _clearFilters, _toggleSection, _handleToggleSave};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

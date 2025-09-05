@@ -42,8 +42,7 @@ export default function Footer() {
         <div className="mt-8 md:order-1 md:mt-0">
           <p className="text-center text-xs leading-5 text-gray-400">
             &copy; 2024 Zion Tech Group. All rights reserved.
-          </p>
-        </div>
+          </p>        </div>
       </div>
     </footer>
   )

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs',
 import path from 'path',
 import type { GetStaticProps } from 'next',
@@ -14,83 +13,35 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     const data = JSON.parse(raw),
     return { props: { report: data }, revalidate: 21600 }
   } catch {
-    return { props: { report: null }, revalidate: 21600 }
-=======
-import fs from 'fs';
-import path from 'path';
-import type {_GetStaticProps} from 'next';
-
-type Broken = {_url: string; page: string; status: number};
-interface Report {_generatedAt: string; pagesScanned: number; brokenLinks: Broken[]; pagesWithOgIssues: number; ogIssues: { page: string; missing: string[]}[] }
-
-type Props = {_report: Report | null};
-
-export const getStaticProps: GetStaticProps<Props> = async () => {_try {
-    const _file = path.join(process.cwd(), _'public', _'automation', _'site-validator.json');
-    const _raw = fs.readFileSync(file, _'utf8');
-    const _data = JSON.parse(raw);
-    return { props: { report: data}, revalidate: 21600 };
-  } catch {_return { props: { report: null}, revalidate: 21600 };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  }
+    return { props: { report: null }, revalidate: 21600 }  }
 },
 
-<<<<<<< HEAD
 export default function SiteValidator({ report }: Props) {
-  if (!report) return <div>No validation report yet.</div>,
-=======
-export default function SiteValidator(_{_report}: Props) {_if (!report) return <div>No validation report yet.</div>;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  return (
+  if (!report) return <div>No validation report yet.</div>,  return (
     <div className=&quot;space-y-6&quot;>
       <header className=&quot;space-y-1&quot;>
         <h1 className=&quot;text-3xl font-bold&quot;>Site Validator</h1>
         <p className=&quot;text-gray-600 dark:text-gray-300&quot;>Broken links and Open Graph checks from exported site.</p>
       </header>
-<<<<<<< HEAD
       <div className=&quot;grid sm:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
         <div className=&quot;p-4 rounded-lg border border-gray-200 dark:border-gray-800&quot;><div className=&quot;text-xs text-gray-500&quot;>Pages Scanned</div><div className=&quot;text-2xl font-semibold&quot;>{report.pagesScanned}</div></div>
         <div className=&quot;p-4 rounded-lg border border-gray-200 dark:border-gray-800&quot;><div className=&quot;text-xs text-gray-500&quot;>Broken Links</div><div className=&quot;text-2xl font-semibold&quot;>{report.brokenLinks.length}</div></div>
-        <div className=&quot;p-4 rounded-lg border border-gray-200 dark:border-gray-800&quot;><div className=&quot;text-xs text-gray-500&quot;>OG Issues</div><div className=&quot;text-2xl font-semibold&quot;>{report.pagesWithOgIssues}</div></div>
-=======
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Pages Scanned</div><div className="text-2xl font-semibold">{report.pagesScanned}</div></div>
-        <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Broken Links</div><div className="text-2xl font-semibold">{_report.brokenLinks.length}</div></div>
-        <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">OG Issues</div><div className="text-2xl font-semibold">{_report.pagesWithOgIssues}</div></div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      </div>
+        <div className=&quot;p-4 rounded-lg border border-gray-200 dark:border-gray-800&quot;><div className=&quot;text-xs text-gray-500&quot;>OG Issues</div><div className=&quot;text-2xl font-semibold&quot;>{report.pagesWithOgIssues}</div></div>      </div>
       {_report.brokenLinks.length > 0 && (
         <section>
-<<<<<<< HEAD
           <h2 className=&quot;font-semibold mb-2&quot;>Broken Links</h2>
           <ul className=&quot;text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800&quot;>
             {report.brokenLinks.slice(0, 500).map((b, i) => (
-              <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{b.page} → {b.url}</span><span className=&quot;text-gray-500&quot;>{b.status}</span></li>
-=======
-          <h2 className="font-semibold mb-2">Broken Links</h2>
-          <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
-            {report.brokenLinks.slice(0, _500).map(_(b, _i) => (
-              <li key={i} className="flex justify-between gap-4"><span className="truncate">{_b.page} → {_b.url}</span><span className="text-gray-500">{_b.status}</span></li>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            ))}
+              <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{b.page} → {b.url}</span><span className=&quot;text-gray-500&quot;>{b.status}</span></li>            ))}
           </ul>
         </section>
       )}
-<<<<<<< HEAD
       {report.ogIssues.length > 0 && (
         <section>
           <h2 className=&quot;font-semibold mb-2&quot;>Pages Missing OG Tags</h2>
           <ul className=&quot;text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800&quot;>
             {report.ogIssues.map((o, i) => (
-              <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{o.page}</span><span className=&quot;text-gray-500 truncate&quot;>{o.missing.join(', ')}</span></li>
-=======
-      {_report.ogIssues.length > 0 && (_<section>
-          <h2 className="font-semibold mb-2">Pages Missing OG Tags</h2>
-          <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
-            {report.ogIssues.map((o, _i) => (
-              <li key={i} className="flex justify-between gap-4"><span className="truncate">{_o.page}</span><span className="text-gray-500 truncate">{_o.missing.join(', _')}</span></li>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            ))}
+              <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{o.page}</span><span className=&quot;text-gray-500 truncate&quot;>{o.missing.join(', ')}</span></li>            ))}
           </ul>
         </section>
       )}

@@ -1,15 +1,7 @@
-<<<<<<< HEAD
 import Head from 'next/head',
 import React from 'react',
 export default function Update202508150405() {
-  return (
-=======
-import Head from 'next/head';
-import React from 'react';
-
-export default function Update202508150405() {_return (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    <>
+  return (    <>
       <Head>
         <title>Autonomous Update — 2025: 08: 15: 0405 | Zion Tech Group</title>
         <meta
@@ -119,9 +111,5 @@ export default function Update202508150405() {_return (
         </main>
       </div>
     </>
-<<<<<<< HEAD
   )
 }
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

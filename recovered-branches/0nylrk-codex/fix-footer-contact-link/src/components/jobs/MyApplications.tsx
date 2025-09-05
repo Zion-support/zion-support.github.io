@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -9,35 +7,12 @@ import { Button } from "@/components/ui/button",
 import { Loader2, MessageSquare, ExternalLink } from "lucide-react",
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
-import { ApplicationStatus } from "@/types/jobs",
-=======
-import { useState } from &quot;react&quot;;
-import { useJobApplications } from &quot;@/hooks/useJobApplications&quot;;
-import { Card, CardContent, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Loader2, MessageSquare, ExternalLink } from &quot;lucide-react&quot;;
-import { formatDistanceToNow } from &quot;date-fns&quot;;
-import { Link } from &quot;react-router-dom&quot;;
-import { ApplicationStatus } from &quot;@/types/jobs&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export function MyApplications() {
+import { ApplicationStatus } from "@/types/jobs",export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications(),
   
   const getStatusBadge = (status: ApplicationStatus) => {
     switch (status) {
-<<<<<<< HEAD
-      case "new": return <Badge variant="secondary">New</Badge>,
-=======
-
-export function MyApplications() {_const { applications, _isLoading, _error} = useJobApplications();
-  
-  const _getStatusBadge = (_status: ApplicationStatus) => {_switch (status) {
-      case "new":
-        return <Badge variant="secondary">New</Badge>;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      case "viewed":
+      case "new": return <Badge variant="secondary">New</Badge>,      case "viewed":
         return <Badge variant="outline">Viewed</Badge>,
       case "shortlisted":
         return <Badge className="bg-blue-100 text-blue-800">Shortlisted</Badge>,
@@ -49,7 +24,6 @@ export function MyApplications() {_const { applications, _isLoading, _error} = u
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>,
       default:
         return <Badge variant="outline">{status}</Badge>
-=======
       case &quot;new&quot;:
         return <Badge variant=&quot;secondary&quot;>New</Badge>;
       case &quot;viewed&quot;:
@@ -64,11 +38,9 @@ export function MyApplications() {_const { applications, _isLoading, _error} = u
         return <Badge className=&quot;bg-red-100 text-red-800&quot;>Rejected</Badge>;
       default:
         return <Badge variant=&quot;outline&quot;>{status}</Badge>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
   
-<<<<<<< HEAD
   if (isLoading) {
     return (
       <div className=&quot;flex justify-center items-center p-8&quot;>
@@ -79,42 +51,22 @@ export function MyApplications() {_const { applications, _isLoading, _error} = u
   
   if (error) {
     return (
-      <div className=&quot;text-center p-6 border rounded-md bg-red-50 text-red-800&quot;>
-=======
-  if (isLoading) {_return (
-      <div className="flex justify-center items-center p-8">
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />
-      </div>
-    );}
-  
-  if (error) {_return (
-      <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        <p>{error}</p>
+      <div className=&quot;text-center p-6 border rounded-md bg-red-50 text-red-800&quot;>        <p>{error}</p>
       </div>
     )
   }
   
-<<<<<<< HEAD
   if (applications.length === 0) {
     return (
       <Card className=&quot;bg-muted/30&quot;>
         <CardContent className=&quot;pt-6 text-center&quot;>
-          <p className=&quot;text-muted-foreground&quot;>
-=======
-  if (applications.length === 0) {_return (
-      <Card className="bg-muted/30">
-        <CardContent className="pt-6 text-center">
-          <p className="text-muted-foreground">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            You haven't submitted any applications yet.
+          <p className=&quot;text-muted-foreground&quot;>            You haven't submitted any applications yet.
           </p>
           <Button className=&quot;mt-4&quot; asChild>
             <Link to=&quot;/jobs&quot;>Browse Jobs</Link>
           </Button>
         </CardContent>
       </Card>
-<<<<<<< HEAD
     )
   }
   
@@ -125,22 +77,9 @@ export function MyApplications() {_const { applications, _isLoading, _error} = u
           <CardHeader className=&quot;pb-2&quot;>
             <div className=&quot;flex justify-between items-start&quot;>
               <CardTitle className=&quot;text-lg&quot;>
-                {application.job?.title || &quot;Unknown Job&quot;}
-=======
-    );}
-  
-  return (_<div className="grid gap-4 md:grid-cols-2">
-      {_applications.map((application) => (
-        <Card key={application.id}>
-          <CardHeader className="pb-2">
-            <div className="flex justify-between items-start">
-              <CardTitle className="text-lg">
-                {_application.job?.title || "Unknown Job"}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </CardTitle>
+                {application.job?.title || &quot;Unknown Job&quot;}              </CardTitle>
               {_getStatusBadge(application.status)}
             </div>
-<<<<<<< HEAD
             <p className=&quot;text-sm text-muted-foreground&quot;>
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
             </p>
@@ -148,18 +87,7 @@ export function MyApplications() {_const { applications, _isLoading, _error} = u
           <CardContent>
             <div className=&quot;space-y-3&quot;>
               {application.cover_letter && (
-                <p className=&quot;text-sm text-muted-foreground line-clamp-2 mb-2&quot;>
-=======
-            <p className="text-sm text-muted-foreground">
-              Applied {_formatDistanceToNow(new Date(application.created_at), _{ addSuffix: true})}
-            </p>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-3">
-              {_application.cover_letter && (
-                <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  {application.cover_letter}
+                <p className=&quot;text-sm text-muted-foreground line-clamp-2 mb-2&quot;>                  {application.cover_letter}
                 </p>
               )}
               
@@ -170,14 +98,8 @@ export function MyApplications() {_const { applications, _isLoading, _error} = u
                   className=&quot;text-xs&quot;
                   asChild
                 >
-<<<<<<< HEAD
                   <Link to={`/jobs/${application.job_id}`}>
-                    <ExternalLink className=&quot;h-3 w-3 mr-1&quot; /> View Job
-=======
-                  <Link to={_`/jobs/${application.job_id}`}>
-                    <ExternalLink className="h-3 w-3 mr-1" /> View Job
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </Link>
+                    <ExternalLink className=&quot;h-3 w-3 mr-1&quot; /> View Job                  </Link>
                 </Button>
                 
                 <Button 
@@ -186,14 +108,8 @@ export function MyApplications() {_const { applications, _isLoading, _error} = u
                   className=&quot;text-xs&quot;
                   asChild
                 >
-<<<<<<< HEAD
                   <Link to={`/messages?jobId=${application.job_id}`}>
-                    <MessageSquare className=&quot;h-3 w-3 mr-1&quot; /> Contact Client
-=======
-                  <Link to={_`/messages?jobId=${application.job_id}`}>
-                    <MessageSquare className="h-3 w-3 mr-1" /> Contact Client
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </Link>
+                    <MessageSquare className=&quot;h-3 w-3 mr-1&quot; /> Contact Client                  </Link>
                 </Button>
               </div>
             </div>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import { motion } from 'framer-motion',
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react',
@@ -20,15 +19,8 @@ export default function QuantumSecureCloudInfrastructure() {
 				&quot;Threat modeling and validation&quot;,
 				&quot;NIST PQC roadmap alignment]}
 			]}
-<<<<<<< HEAD
 			industries={["Financial Services", "Healthcare", "Government"]}
-			url="https: //ziontechgroup.com/quantum-secure-cloud-infrastructure"
-=======
-			industries={[&quot;Financial Services&quot;, &quot;Healthcare&quot;, &quot;Government&quot;]}
-			url=&quot;https://ziontechgroup.com/quantum-secure-cloud-infrastructure"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from 'react';
+			url="https: //ziontechgroup.com/quantum-secure-cloud-infrastructure"import React from 'react';
 import SEO from '../components/SEO';
 
 export default function QuantumSecureCloudInfrastructure() {_return (
@@ -44,7 +36,6 @@ export default function QuantumSecureCloudInfrastructure() {_return (
 			]}
 			industries={_["Financial Services", _"Healthcare", _"Government"]}
 			url="https://ziontechgroup.com/quantum-secure-cloud-infrastructure"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 		/>
 	)
 }

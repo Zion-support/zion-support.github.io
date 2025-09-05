@@ -1,15 +1,7 @@
 
-<<<<<<< HEAD
 import React from 'react',
 import { Button } from "@/components/ui/button",
 import { Upload, FileText } from 'lucide-react',
-=======
-import React from 'react';
-<<<<<<< HEAD
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Upload, FileText } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 interface UploadSectionProps {
   customFile: File | null,
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
@@ -22,7 +14,6 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
         <Upload className=&quot;h-8 w-8 text-zion-purple mb-2&quot; />
         <p className=&quot;text-sm text-zion-slate mb-2&quot;>
           {customFile ? customFile.name : &quot;Drag & drop your PDF or click to browse&quot;}
-=======
 
 interface UploadSectionProps {_customFile: File | null;
   onFileUpload: (_e: React.ChangeEvent<HTMLInputElement>) => void;}
@@ -33,27 +24,17 @@ export function UploadSection(_{_customFile, _onFileUpload}: UploadSectionProps)
         <Upload className="h-8 w-8 text-zion-purple mb-2" />
         <p className="text-sm text-zion-slate mb-2">
           {customFile ? customFile.name : "Drag & drop your PDF or click to browse"}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </p>
         <Button variant=&quot;outline&quot; className=&quot;relative&quot;>
           Browse Files
           <input
-<<<<<<< HEAD
             type=&quot;file&quot;
             className=&quot;absolute inset-0 w-full h-full opacity-0 cursor-pointer&quot;
             accept=&quot;.pdf&quot;
-            onChange={onFileUpload}
-=======
-            type="file"
-            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-            accept=".pdf"
-            onChange={_onFileUpload}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          />
+            onChange={onFileUpload}          />
         </Button>
       </div>
       
-<<<<<<< HEAD
       {customFile && (
         <div className=&quot;p-3 bg-zion-blue-dark/30 rounded-md&quot;>
           <div className=&quot;flex items-center justify-between&quot;>
@@ -61,18 +42,7 @@ export function UploadSection(_{_customFile, _onFileUpload}: UploadSectionProps)
               <FileText className=&quot;h-4 w-4 mr-2 text-zion-cyan&quot; />
               <span className=&quot;text-white&quot;>{customFile.name}</span>
             </div>
-            <span className=&quot;text-xs text-zion-slate&quot;>{Math.round(customFile.size / 1024)} KB</span>
-=======
-      {_customFile && (
-        <div className="p-3 bg-zion-blue-dark/30 rounded-md">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
-              <span className="text-white">{customFile.name}</span>
-            </div>
-            <span className="text-xs text-zion-slate">{_Math.round(customFile.size / 1024)} KB</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          </div>
+            <span className=&quot;text-xs text-zion-slate&quot;>{Math.round(customFile.size / 1024)} KB</span>          </div>
         </div>
       )}
     </div>

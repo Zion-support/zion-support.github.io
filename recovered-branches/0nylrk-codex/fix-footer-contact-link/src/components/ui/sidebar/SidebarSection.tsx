@@ -1,14 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
-import { cn } from "@/lib/utils",
-=======
-import React from &quot;react&quot;;
-import { cn } from &quot;@/lib/utils&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
+import { cn } from "@/lib/utils",interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string,
   title?: string,
   children?: React.ReactNode
@@ -23,7 +15,6 @@ export function SidebarSection({ className, title, children, ...props }: Sidebar
         </h3>
       )}
       <div className=&quot;space-y-1&quot;>{children}</div>
-=======
 import React from "react";
 
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {_className?: string;
@@ -38,7 +29,6 @@ export function SidebarSection(_{_className, _title, _children, _...props}: Side
         </h3>
       )}
       <div className="space-y-1">{_children}</div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     </div>
   )
 }

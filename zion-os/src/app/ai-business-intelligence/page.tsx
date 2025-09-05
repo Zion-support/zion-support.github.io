@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 import Link from "next/link",
 export const metadata = {
   title: "AI Business Intelligence - Zion Tech Group",
   description: "Transform your business with AI-powered analytics, predictive insights, and intelligent decision-making solutions.",
   keywords: "AI business intelligence, predictive analytics, data insights, business analytics, Zion Tech Group"},
-=======
-import Link from "next/link";
-
-export const _metadata = {_title: "AI Business Intelligence - Zion Tech Group", _description: "Transform your business with AI-powered analytics, _predictive insights, _and intelligent decision-making solutions.", _keywords: "AI business intelligence, _predictive analytics, _data insights, _business analytics, _Zion Tech Group"};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default function AIBusinessIntelligencePage() {_return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">

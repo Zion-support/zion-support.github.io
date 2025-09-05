@@ -1,27 +1,12 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading",
 import Link from "next/link",
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
 import { cn } from "@/lib/utils",
 import { useTranslation } from "react-i18next",
-=======
-import { GradientHeading } from &quot;./GradientHeading&quot;;
-import Link from &quot;next/link&quot;;
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
-import { HelpCircle } from 'lucide-react'; // Added HelpCircle for default icon
-import { cn } from &quot;@/lib/utils&quot;;
-import { useTranslation } from &quot;react-i18next&quot;;
-=======
-import Link from "next/link";
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 // This is the type definition copied from Categories.tsx for consistency.
 // Ideally, this would be in a shared types file.
-<<<<<<< HEAD
 interface CategoryType {
   id: string,
   name: string,
@@ -60,33 +45,17 @@ const getDefaultCategories = (t: any) => [
     id: &quot;innovation&quot;,
     name: t('categories.innovation'),
     description: t('categories.innovation_desc'),
-<<<<<<< HEAD
     iconName: "Lightbulb",
     link: "/innovation",
     color: "from-emerald-500 to-green-600"}],
-=======
-    iconName: &quot;Lightbulb&quot;,
-    link: &quot;/innovation&quot;,
-    color: &quot;from-emerald-500 to-green-600&quot;}];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 // Helper to get icon component from name
 const getIcon = (iconName?: string) => {
   switch (iconName) {
-<<<<<<< HEAD
     case "Briefcase": return <Briefcase className="w-10 h-10" />,
     case "Users": return <Users className="w-10 h-10" />,
     case "HardDrive": return <HardDrive className="w-10 h-10" />,
     case "Lightbulb": return <Lightbulb className="w-10 h-10" />,
-    default: return <HelpCircle className="w-10 h-10" />, // Default icon
-=======
-    case &quot;Briefcase&quot;: return <Briefcase className=&quot;w-10 h-10&quot; />;
-    case &quot;Users&quot;: return <Users className=&quot;w-10 h-10&quot; />;
-    case &quot;HardDrive&quot;: return <HardDrive className=&quot;w-10 h-10&quot; />;
-    case &quot;Lightbulb&quot;: return <Lightbulb className=&quot;w-10 h-10&quot; />;
-    default: return <HelpCircle className=&quot;w-10 h-10&quot; />; // Default icon
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  }
+    default: return <HelpCircle className="w-10 h-10" />, // Default icon  }
 },
 
 const getSpecialServices = (t: any) => [
@@ -138,7 +107,6 @@ export function CategoriesSection({
           </p>
           <p className=&quot;text-zion-slate-light text-md&quot;>
             {t('home.no_categories_support')}
-=======
 interface CategoryType {_id: string;
   name: string;
   description?: string;
@@ -195,7 +163,6 @@ export function CategoriesSection(_{_showTitle = true, _className, _style, _cate
           </p>
           <p className="text-zion-slate-light text-md">
             {_t('home.no_categories_support')}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </p>
         </div>
       </section>
@@ -203,28 +170,16 @@ export function CategoriesSection(_{_showTitle = true, _className, _style, _cate
   }
 
   return (
-<<<<<<< HEAD
     <section className={cn(&quot;py-20 bg-zion-blue&quot;, className)} style={style}>
       <div className=&quot;container mx-auto px-4&quot;>
         {showTitle && (
           <div className=&quot;text-center mb-16&quot;>
             <GradientHeading>{t('home.categories_title')}</GradientHeading>
             <p className=&quot;text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto&quot;>
-              {t('home.categories_subtitle')}
-=======
-    <section className={_cn("py-20 bg-zion-blue", _className)} style={_style}>
-      <div className="container mx-auto px-4">
-        {_showTitle && (
-          <div className="text-center mb-16">
-            <GradientHeading>{t('home.categories_title')}</GradientHeading>
-            <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
-              {_t('home.categories_subtitle')}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            </p>
+              {t('home.categories_subtitle')}            </p>
           </div>
         )}
         
-<<<<<<< HEAD
         <div className=&quot;grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6&quot;>
           {displayCategories.map((category) => (
             <Link
@@ -239,30 +194,11 @@ export function CategoriesSection(_{_showTitle = true, _className, _style, _cate
                   </div>
                 </div>
                 <h3 className=&quot;text-white text-xl font-bold mb-2&quot;>{category.title}</h3>
-                <p className=&quot;text-zion-slate-light&quot;>{category.description}</p>
-=======
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {_displayCategories.map(_(category) => (
-            <Link
-              key={category.id}
-              href={_category.link || '#'}
-              className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-            >
-              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
-                <div className={_`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <div className="text-white">
-                    {_category.icon}
-                  </div>
-                </div>
-                <h3 className="text-white text-xl font-bold mb-2">{_category.title}</h3>
-                <p className="text-zion-slate-light">{_category.description}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </div>
+                <p className=&quot;text-zion-slate-light&quot;>{category.description}</p>              </div>
             </Link>
           ))}
         </div>
         
-<<<<<<< HEAD
         {/* Special services section with translations */}
         <div className=&quot;mt-8&quot;>
           <h3 className=&quot;text-center text-xl font-bold text-white mb-6&quot;>{t('home.featured_services')}</h3>
@@ -271,19 +207,7 @@ export function CategoriesSection(_{_showTitle = true, _className, _style, _cate
               <Link 
                 key={service.title}
                 href={service.link}
-                className=&quot;px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300&quot;
-=======
-        {_/* Special services section with translations */}
-        <div className="mt-8">
-          <h3 className="text-center text-xl font-bold text-white mb-6">{_t('home.featured_services')}</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {_getSpecialServices(t).map(_(service) => (
-              <Link 
-                key={service.title}
-                href={_service.link}
-                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300&quot;              >
                 {_service.title}
               </Link>
             ))}

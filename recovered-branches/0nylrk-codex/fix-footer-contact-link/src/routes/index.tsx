@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import AuthRoutes from "./AuthRoutes",
 import DashboardRoutes from "./DashboardRoutes",
 import MarketplaceRoutes from "./MarketplaceRoutes",
@@ -10,23 +9,7 @@ import ContentRoutes from "./ContentRoutes",
 import ErrorRoutes from "./ErrorRoutes",
 import EnterpriseRoutes from "./EnterpriseRoutes",
 import CommunityRoutes from "./CommunityRoutes",
-import DeveloperRoutes from "./DeveloperRoutes",
-=======
-import AuthRoutes from &quot;./AuthRoutes&quot;;
-import DashboardRoutes from &quot;./DashboardRoutes&quot;;
-import MarketplaceRoutes from &quot;./MarketplaceRoutes&quot;;
-import TalentRoutes from &quot;./TalentRoutes&quot;;
-import AdminRoutes from &quot;./AdminRoutes&quot;;
-import MobileAppRoutes from &quot;./MobileAppRoutes&quot;;
-import ContentRoutes from &quot;./ContentRoutes&quot;;
-import ErrorRoutes from &quot;./ErrorRoutes&quot;;
-import EnterpriseRoutes from &quot;./EnterpriseRoutes&quot;;
-import CommunityRoutes from &quot;./CommunityRoutes&quot;;
-import DeveloperRoutes from &quot;./DeveloperRoutes&quot;;
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export {
+import DeveloperRoutes from "./DeveloperRoutes",export {
   AuthRoutes,
   DashboardRoutes,
   MarketplaceRoutes,
@@ -39,6 +22,4 @@ export {
   CommunityRoutes,
   DeveloperRoutes
 },
-=======
 export {_AuthRoutes, _DashboardRoutes, _MarketplaceRoutes, _TalentRoutes, _AdminRoutes, _MobileAppRoutes, _ContentRoutes, _ErrorRoutes, _EnterpriseRoutes, _CommunityRoutes, _DeveloperRoutes};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

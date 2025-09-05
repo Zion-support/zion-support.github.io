@@ -1,15 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Brain, Clock, Award, Zap } from "lucide-react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-=======
-import React from &quot;react&quot;;
-import { Brain, Clock, Award, Zap } from &quot;lucide-react&quot;;
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from &quot;@/components/ui/card&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 const features = [
   {
     icon: <Brain className=&quot;h-10 w-10 text-zion-cyan&quot; />,
@@ -53,7 +45,6 @@ export const AppFeatures: React.FC = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription className=&quot;text-gray-300&quot;>{feature.description}</CardDescription>
-=======
 import React from "react";
 
 const _features = [
@@ -81,7 +72,6 @@ export const AppFeatures: React.FC = () => {_return (_<section className="py-16 
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-300">{_feature.description}</CardDescription>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </CardContent>
             </Card>
           ))}

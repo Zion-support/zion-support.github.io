@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from 'react',
 import { ScrollArea } from '@/components/ui/scroll-area',
 import { Skeleton } from '@/components/ui/skeleton',
@@ -24,36 +23,14 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   onRetry
 }) => {
   return (
-    <ScrollArea className=&quot;flex-1 overflow-y-auto max-h-[350px]&quot;>
-=======
-import React from 'react';
-
-interface NotificationListProps {_loading: boolean;
-  error: string | null;
-  notifications: Notification[];
-  onMarkAsRead: (_id: string) => Promise<void>;
-  onDismiss: (_id: string) => Promise<void>;
-  onRetry: () => void;}
-
-export const NotificationList: React.FC<NotificationListProps> = (_{_loading, _error, _notifications, _onMarkAsRead, _onDismiss, _onRetry}) => {_return (
-    <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      {error ? (
+    <ScrollArea className=&quot;flex-1 overflow-y-auto max-h-[350px]&quot;>      {error ? (
         <div className=&quot;p-8 text-center text-amber-500&quot;>
           <p>{error}</p>
           <Button 
-<<<<<<< HEAD
             variant=&quot;outline&quot; 
             size=&quot;sm&quot; 
             className=&quot;mt-2&quot;
-            onClick={onRetry}
-=======
-            variant="outline" 
-            size="sm" 
-            className="mt-2"
-            onClick={_onRetry}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            onClick={onRetry}          >
             Try Again
           </Button>
         </div>

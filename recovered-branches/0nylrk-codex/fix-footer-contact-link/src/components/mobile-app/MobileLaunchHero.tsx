@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Link } from "react-router-dom",
 import { ArrowRight, Smartphone } from "lucide-react",
@@ -11,27 +9,11 @@ import { Card, CardContent } from "@/components/ui/card",
 export const MobileLaunchHero: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = "#", // Replace with actual App Store URL
-  const googlePlayUrl = "#", // Replace with actual Google Play URL
-=======
-import React from &quot;react&quot;;
-import { Link } from &quot;react-router-dom&quot;;
-import { ArrowRight, Smartphone } from &quot;lucide-react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { AppStoreButtons } from &quot;./AppStoreButtons&quot;;
-import { Card, CardContent } from &quot;@/components/ui/card&quot;;
-
-export const MobileLaunchHero: React.FC = () => {
-  // App store links - these would come from environment variables in production
-  const appStoreUrl = &quot;#&quot;; // Replace with actual App Store URL
-  const googlePlayUrl = &quot;#&quot;; // Replace with actual Google Play URL
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from "react";
+  const googlePlayUrl = "#", // Replace with actual Google Play URLimport React from "react";
 
 export const MobileLaunchHero: React.FC = () => {_// App store links - these would come from environment variables in production
   const _appStoreUrl = "#"; // Replace with actual App Store window.URL
   const _googlePlayUrl = "#"; // Replace with actual Google Play window.URL
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <section className=&quot;relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-purple/40 py-16 md:py-24&quot;>
@@ -43,14 +25,8 @@ export const MobileLaunchHero: React.FC = () => {_// App store links - these wou
               In Your Pocket
             </h1>
             
-<<<<<<< HEAD
             <p className=&quot;text-lg md:text-xl opacity-90 mb-8&quot;>
-              Find top AI talent or global IT jobs on the go. Track projects, message candidates, and get AI-powered matches instantly with our mobile app.
-=======
-            <p className="text-lg md:text-xl opacity-90 mb-8">
-              Find top AI talent or global IT jobs on the go. Track projects, _message candidates, _and get AI-powered matches instantly with our mobile app.
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            </p>
+              Find top AI talent or global IT jobs on the go. Track projects, message candidates, and get AI-powered matches instantly with our mobile app.            </p>
             
             <div className=&quot;mb-8&quot;>
               <AppStoreButtons 
@@ -75,7 +51,6 @@ export const MobileLaunchHero: React.FC = () => {_// App store links - these wou
             </div>
           </div>
           
-<<<<<<< HEAD
           <div className=&quot;flex-1 flex justify-center md:justify-end&quot;>
             <div className=&quot;relative&quot;>
               {/* Phone mockup with glow effect */}
@@ -85,20 +60,7 @@ export const MobileLaunchHero: React.FC = () => {_// App store links - these wou
                 <CardContent className=&quot;p-0&quot;>
                   <div className=&quot;w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center&quot;>
                     <Smartphone className=&quot;w-40 h-40 text-white opacity-40&quot; />
-                    {/* In production, replace with actual app screenshot */}
-=======
-          <div className="flex-1 flex justify-center md:justify-end">
-            <div className="relative">
-              {_/* Phone mockup with glow effect */}
-              <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>
-              
-              <Card className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3">
-                <CardContent className="p-0">
-                  <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">
-                    <Smartphone className="w-40 h-40 text-white opacity-40" />
-                    {_/* In production, _replace with actual app screenshot */}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </div>
+                    {/* In production, replace with actual app screenshot */}                  </div>
                 </CardContent>
               </Card>
             </div>

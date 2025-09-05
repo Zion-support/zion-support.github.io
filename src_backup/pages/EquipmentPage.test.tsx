@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import { Link } from 'react-router-dom',
 import { SERVICE_CATEGORIES } from '@/data/servicesData',
@@ -13,16 +12,8 @@ export function ContactPage() {
     budget: '',
     timeline: ''
   }),
-=======
-import React, {_useState} from 'react';
-
-export function ContactPage() {_const [formData, _setFormData] = useState({
-    name: '', _email: '', _company: '', _phone: '', _service: '', _message: '', _budget: '', _timeline: ''});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   const [selectedService, setSelectedService] = useState(''),
 
-<<<<<<< HEAD
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target,
     setFormData(prev => ({
@@ -44,27 +35,7 @@ export function ContactPage() {_const [formData, _setFormData] = useState({
       <div className=&quot;bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white&quot;>
         <div className=&quot;container mx-auto px-4 py-20&quot;>
           <div className=&quot;text-center max-w-4xl mx-auto&quot;>
-            <h1 className=&quot;text-5xl font-bold mb-6&quot;>
-=======
-  const _handleInputChange = (_e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {_const { name, _value} = e.target;
-    setFormData(prev => ({_...prev, _[name]: value}));
-  };
-
-  const _handleSubmit = (_e: React.FormEvent) => {_e.preventDefault();
-    // Here you would typically send the form data to your backend
-    const _mailtoLink = `mailto:kleber@ziontechgroup.com?subject=Service Inquiry from ${formData.name}&body=Name: ${_formData.name}%0D%0AEmail: ${_formData.email}%0D%0ACompany: ${_formData.company}%0D%0APhone: ${_formData.phone}%0D%0AService: ${_formData.service}%0D%0ABudget: ${_formData.budget}%0D%0ATimeline: ${_formData.timeline}%0D%0AMessage: ${_formData.message}`;
-    window.location.href = mailtoLink;
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-      {_/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl font-bold mb-6">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              Get in Touch
+            <h1 className=&quot;text-5xl font-bold mb-6&quot;>              Get in Touch
             </h1>
             <p className=&quot;text-xl mb-8 text-blue-100&quot;>
               Ready to transform your business? Let's discuss how Zion Tech Group can help you achieve your goals.
@@ -87,22 +58,12 @@ export function ContactPage() {_const [formData, _setFormData] = useState({
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Contact Info Banner */}
       <div className=&quot;bg-white border-b shadow-sm&quot;>
         <div className=&quot;container mx-auto px-4 py-4&quot;>
           <div className=&quot;flex flex-wrap justify-center items-center gap-8 text-gray-600&quot;>
             <div className=&quot;flex items-center gap-2&quot;>
-              <span className=&quot;text-blue-600&quot;>📍</span>
-=======
-      {_/* Contact Info Banner */}
-      <div className="bg-white border-b shadow-sm">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex flex-wrap justify-center items-center gap-8 text-gray-600">
-            <div className="flex items-center gap-2">
-              <span className="text-blue-600">📍</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <span className=&quot;text-blue-600&quot;>📍</span>              <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
             <div className=&quot;flex items-center gap-2&quot;>
               <span className=&quot;text-blue-600&quot;>📱</span>
@@ -122,7 +83,6 @@ export function ContactPage() {_const [formData, _setFormData] = useState({
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Main Content */}
       <div className=&quot;container mx-auto px-4 py-16&quot;>
         <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-16&quot;>
@@ -134,22 +94,7 @@ export function ContactPage() {_const [formData, _setFormData] = useState({
             </p>
             
             <form onSubmit={handleSubmit} className=&quot;space-y-6&quot;>
-              <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>
-=======
-      {_/* Main Content */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {_/* Contact Form */}
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
-            <p className="text-gray-600 mb-8">
-              Fill out the form below and we'll get back to you within 24 hours to discuss your project requirements.
-            </p>
-            
-            <form onSubmit={_handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                <div>
+              <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>                <div>
                   <label htmlFor=&quot;name&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
                     Full Name *
                   </label>
@@ -158,18 +103,10 @@ export function ContactPage() {_const [formData, _setFormData] = useState({
                     id=&quot;name&quot;
                     name=&quot;name&quot;
                     required
-<<<<<<< HEAD
                     value={formData.name}
                     onChange={handleInputChange}
                     className=&quot;w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
-                    placeholder=&quot;Your full name&quot;
-=======
-                    value={_formData.name}
-                    onChange={_handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your full name"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  />
+                    placeholder=&quot;Your full name&quot;                  />
                 </div>
                 
                 <div>
@@ -181,18 +118,10 @@ export function ContactPage() {_const [formData, _setFormData] = useState({
                     id=&quot;email&quot;
                     name=&quot;email&quot;
                     required
-<<<<<<< HEAD
                     value={formData.email}
                     onChange={handleInputChange}
                     className=&quot;w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
-                    placeholder=&quot;your.email@company.com&quot;
-=======
-                    value={_formData.email}
-                    onChange={_handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="your.email@company.com"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  />
+                    placeholder=&quot;your.email@company.com&quot;                  />
                 </div>
               </div>
               
@@ -202,24 +131,13 @@ export function ContactPage() {_const [formData, _setFormData] = useState({
                     Company Name
                   </label>
                   <input
-<<<<<<< HEAD
                     type=&quot;text&quot;
                     id=&quot;company&quot;
                     name=&quot;company&quot;
                     value={formData.company}
                     onChange={handleInputChange}
                     className=&quot;w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
-                    placeholder=&quot;Your company name&quot;
-=======
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={_formData.company}
-                    onChange={_handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your company name"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  />
+                    placeholder=&quot;Your company name&quot;                  />
                 </div>
                 
                 <div>
@@ -227,24 +145,13 @@ export function ContactPage() {_const [formData, _setFormData] = useState({
                     Phone Number
                   </label>
                   <input
-<<<<<<< HEAD
                     type=&quot;tel&quot;
                     id=&quot;phone&quot;
                     name=&quot;phone&quot;
                     value={formData.phone}
                     onChange={handleInputChange}
                     className=&quot;w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
-                    placeholder=&quot;+1 (555) 123-4567&quot;
-=======
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={_formData.phone}
-                    onChange={_handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="+1 (555) 123-4567"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  />
+                    placeholder=&quot;+1 (555) 123-4567&quot;                  />
                 </div>
               </div>
               
@@ -256,7 +163,6 @@ export function ContactPage() {_const [formData, _setFormData] = useState({
                   id=&quot;service&quot;
                   name=&quot;service&quot;
                   required
-<<<<<<< HEAD
                   value={formData.service}
                   onChange={handleInputChange}
                   className=&quot;w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
@@ -264,18 +170,7 @@ export function ContactPage() {_const [formData, _setFormData] = useState({
                   <option value="&quot;>Select a service</option>
                   {SERVICE_CATEGORIES.map((category) => (
                     <optgroup key={category.id} label={category.name}>
-                      {category.id === 'ai-services' && (
-=======
-                  value={_formData.service}
-                  onChange={_handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
-                  <option value="">Select a service</option>
-                  {_SERVICE_CATEGORIES.map(_(category) => (
-                    <optgroup key={category.id} label={_category.name}>
-                      {_category.id === 'ai-services' && (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        <>
+                      {category.id === 'ai-services' && (                        <>
                           <option value=&quot;ai-customer-service&quot;>AI Customer Service Automation</option>
                           <option value=&quot;ai-content-generation&quot;>AI Content Generation Suite</option>
                           <option value=&quot;ai-data-analytics&quot;>AI-Powered Business Intelligence</option>
@@ -320,20 +215,11 @@ export function ContactPage() {_const [formData, _setFormData] = useState({
                     Budget Range
                   </label>
                   <select
-<<<<<<< HEAD
                     id=&quot;budget&quot;
                     name=&quot;budget"
                     value={formData.budget}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
-=======
-                    id="budget"
-                    name="budget"
-                    value={_formData.budget}
-                    onChange={_handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  >
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;                  >
                     <option value="&quot;>Select budget range</option>
                     <option value=&quot;under-5k&quot;>Under $5,000</option>
                     <option value=&quot;5k-25k&quot;>$5,000 - $25,000</option>
@@ -348,20 +234,11 @@ export function ContactPage() {_const [formData, _setFormData] = useState({
                     Project Timeline
                   </label>
                   <select
-<<<<<<< HEAD
                     id=&quot;timeline&quot;
                     name=&quot;timeline&quot;
                     value={formData.timeline}
                     onChange={handleInputChange}
-                    className=&quot;w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
-=======
-                    id="timeline"
-                    name="timeline"
-                    value={_formData.timeline}
-                    onChange={_handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  >
+                    className=&quot;w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;                  >
                     <option value="&quot;>Select timeline</option>
                     <option value=&quot;asap&quot;>ASAP</option>
                     <option value=&quot;1-3-months&quot;>1-3 months</option>
@@ -380,20 +257,11 @@ export function ContactPage() {_const [formData, _setFormData] = useState({
                   id=&quot;message&quot;
                   name=&quot;message"
                   required
-<<<<<<< HEAD
                   rows={6}
                   value={formData.message}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
-                  placeholder=&quot;Tell us about your project, goals, and requirements...&quot;
-=======
-                  rows={_6}
-                  value={_formData.message}
-                  onChange={_handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Tell us about your project, goals, and requirements..."
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                />
+                  placeholder=&quot;Tell us about your project, goals, and requirements...&quot;                />
               </div>
               
               <button

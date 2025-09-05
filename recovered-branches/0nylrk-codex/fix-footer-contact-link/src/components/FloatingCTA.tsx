@@ -1,18 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
 import { useState, useEffect } from "react",
-import { X } from "lucide-react",
-=======
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Link } from &quot;react-router-dom&quot;;
-import { useState, useEffect } from &quot;react&quot;;
-import { X } from &quot;lucide-react&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export function FloatingCTA() {
+import { X } from "lucide-react",export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false),
   const [isClosed, setIsClosed] = useState(false),
 
@@ -28,47 +18,16 @@ export function FloatingCTA() {
       }
     },
 
-<<<<<<< HEAD
     window.addEventListener("scroll", handleScroll),
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
-  }, [isClosed]),
-=======
-    window.addEventListener(&quot;scroll&quot;, handleScroll);
-    return () => {
-      window.removeEventListener(&quot;scroll&quot;, handleScroll);
-    };
-=======
+  }, [isClosed]),  }, [isClosed]);
 
-export function FloatingCTA() {_const [isVisible, _setIsVisible] = useState(false);
-  const [isClosed, _setIsClosed] = useState(false);
-
-  useEffect__(() => {
-    const _handleScroll = () => {
-      const _scrollPosition = window.scrollY;
-      const _threshold = 600; // Show CTA after scrolling 600px
-
-      if (scrollPosition > threshold && !isClosed) {
-        setIsVisible(true);} else {_setIsVisible(false);}
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {_window.removeEventListener("scroll", _handleScroll);};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  }, [isClosed]);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
-<<<<<<< HEAD
   const handleClose = () => {
     setIsClosed(true),
     setIsVisible(false)
   },
-=======
-  const _handleClose = () => {_setIsClosed(true);
-    setIsVisible(false);};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   if (!isVisible) return null,
 
   return (
@@ -88,19 +47,10 @@ export function FloatingCTA() {_const [isVisible, _setIsVisible] = useState(fals
             <Link to=&quot;/signup&quot;>Register Now</Link>
           </Button>
           <button 
-<<<<<<< HEAD
             onClick={handleClose}
-<<<<<<< HEAD
-            className="text-zion-slate hover: text-white p-1"
-=======
-            onClick={_handleClose}
-            className="text-zion-slate hover:text-white p-1"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            aria-label="Close"
-=======
+            className="text-zion-slate hover: text-white p-1"            aria-label="Close"
             className=&quot;text-zion-slate hover:text-white p-1&quot;
             aria-label=&quot;Close&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           >
             <X className=&quot;w-5 h-5&quot; />
           </button>

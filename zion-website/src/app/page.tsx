@@ -15,7 +15,6 @@ const features = [
   {name: 'Data Analytics', description: 'Advanced analytics and insights that drive informed decision-making and business growth.', icon: ChartBarIcon},
   {name: 'Expert Team', description: 'World-class researchers and engineers dedicated to pushing the boundaries of what\'s possible.', icon: UserGroupIcon}
 ]
-
 const solutions = [
   {name: 'Autonomous Business Operations', description: 'AI-powered automation for enterprise efficiency.', href: '/solutions/autonomous-business'},
   {name: 'IT Asset Management', description: 'Intelligent management of digital infrastructure.', href: '/solutions/it-asset-management'}
@@ -36,8 +35,7 @@ export default function HomePage() {
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Zion Tech Group is pioneering the next generation of AI, quantum computing, and autonomous systems 
-              that will transform industries and advance human potential.
-            </p>
+              that will transform industries and advance human potential.            </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="/contact"
@@ -64,8 +62,7 @@ export default function HomePage() {
               {features.map((feature) => (
                 <div key={feature.name} className="flex flex-col">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600">
-                    <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
-                  </div>
+                    <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />                  </div>
                   <h3 className="mt-6 text-lg font-semibold text-white">{feature.name}</h3>
                   <p className="mt-2 text-base text-gray-300">{feature.description}</p>
                 </div>
@@ -92,8 +89,7 @@ export default function HomePage() {
                   </a>
                 </div>
               ))}
-            </div>
-          </div>
+            </div>          </div>
         </div>
       </div>
     </div>

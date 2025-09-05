@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import Layout from './layout/Layout',
 import { motion } from 'framer-motion',
@@ -33,31 +32,17 @@ const Homepage2041: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState(''),
 
   const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault(),
-=======
-import React, {_useState} from 'react';
-import Layout from './layout/Layout';
-import {_ArrowRight, _Star, _Search, _Shield, _Globe, _TrendingUp, _Brain, _Atom, _Zap, _Cpu, _Cloud, _BarChart3, _Lock, _Rocket, _Eye, _Sparkles, _Target, _Users, _Award, _Clock} from 'lucide-react';
-import Link from 'next/link';
-import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
-
-const Homepage2041: React.FC = () => {_const [searchQuery, _setSearchQuery] = useState('');
-
-  const _handleSearch = (_e: React.FormEvent) => {
-    e.preventDefault();
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    if (searchQuery.trim()) {
+    e.preventDefault(),    if (searchQuery.trim()) {
       window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`
     }
   },
 
-  const _featuredServices = [
+  const featuredServices = [
     ...innovative2041MicroSaasServices.filter(s => s.popular).slice(0, 3),
     ...innovative2041ITServices.filter(s => s.popular).slice(0, 2),
     ...innovative2041AIServices.filter(s => s.popular).slice(0, 1)
   ],
 
-<<<<<<< HEAD
   const testimonials = [
     {
       name: &quot;Dr. Sarah Chen&quot;,
@@ -65,7 +50,7 @@ const Homepage2041: React.FC = () => {_const [searchQuery, _setSearchQuery] = us
       company: &quot;FutureTech Inc.&quot;,
       content: &quot;Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago.&quot;,
       rating: 5,
-      avatar: &quot;👩‍💼&quot;
+      avatar: &quot;👩‍💼&quot
     },
     {
       name: &quot;Marcus Rodriguez&quot;,
@@ -73,7 +58,7 @@ const Homepage2041: React.FC = () => {_const [searchQuery, _setSearchQuery] = us
       company: &quot;QuantumCorp&quot;,
       content: &quot;Their quantum bio-computing platform accelerated our drug discovery by 1000x. We're now leading the industry in pharmaceutical innovation.&quot;,
       rating: 5,
-      avatar: &quot;👨‍💻&quot;
+      avatar: &quot;👨‍💻&quot
     },
     {
       name: &quot;Dr. Emily Watson&quot;,
@@ -81,54 +66,25 @@ const Homepage2041: React.FC = () => {_const [searchQuery, _setSearchQuery] = us
       company: &quot;SpaceLabs&quot;,
       content: &quot;The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency.&quot;,
       rating: 5,
-      avatar: &quot;👩‍🔬&quot;
+      avatar: &quot;👩‍🔬&quot
     }
   ],
 
   const stats = [
-<<<<<<< HEAD
     { number: "500+", label: "Revolutionary Services", icon: Rocket },
     { number: "50+", label: "Quantum Solutions", icon: Atom },
     { number: "1000x", label: "Performance Boost", icon: Zap },
     { number: "24/7", label: "AI Operations", icon: Brain }
-  ],
-=======
-    { number: &quot;500+&quot;, label: &quot;Revolutionary Services&quot;, icon: Rocket },
-    { number: &quot;50+&quot;, label: &quot;Quantum Solutions&quot;, icon: Atom },
-    { number: &quot;1000x&quot;, label: &quot;Performance Boost&quot;, icon: Zap },
-    { number: &quot;24/7&quot;, label: &quot;AI Operations&quot;, icon: Brain }
-=======
-  const _testimonials = [
-    {_name: "Dr. Sarah Chen", _role: "Chief AI Officer, _FutureTech Inc.", _company: "FutureTech Inc.", _content: "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago.", _rating: 5, _avatar: "👩‍💼"},
-    {_name: "Marcus Rodriguez", _role: "VP Quantum Computing, _QuantumCorp", _company: "QuantumCorp", _content: "Their quantum bio-computing platform accelerated our drug discovery by 1000x. We're now leading the industry in pharmaceutical innovation.", _rating: 5, _avatar: "👨‍💻"},
-    {_name: "Dr. Emily Watson", _role: "Research Director, _SpaceLabs", _company: "SpaceLabs", _content: "The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency.", _rating: 5, _avatar: "👩‍🔬"}
-  ];
-
-  const _stats = [
-    {_number: "500+", _label: "Revolutionary Services", _icon: Rocket},
-    {_number: "50+", _label: "Quantum Solutions", _icon: Atom},
-    {_number: "1000x", _label: "Performance Boost", _icon: Zap},
-    {_number: "24/7", _label: "AI Operations", _icon: Brain}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+  ]  ];
 
   return (
     <Layout>
-<<<<<<< HEAD
       {/* Main Content */}
       <main className=&quot;relative z-10&quot;>
-        {/* Hero Section */}
-=======
-      {_/* Main Content */}
-      <main className="relative z-10">
-        {_/* Hero Section */}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        <section 
-          className=&quot;min-h-screen flex items-center justify-center px-4 relative overflow-hidden&quot;
+        {/* Hero Section */}        <section,
+className=&quot;min-h-screen flex items-center justify-center px-4 relative overflow-hidden&quot;
           aria-labelledby=&quot;hero-heading&quot;
         >
-<<<<<<< HEAD
           {/* Optimized Background Elements */}
           <div className=&quot;absolute inset-0 -z-10&quot;>
             <div className=&quot;absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse&quot;></div>
@@ -138,8 +94,8 @@ const Homepage2041: React.FC = () => {_const [searchQuery, _setSearchQuery] = us
             {/* Enhanced particle system */}
             <div className=&quot;absolute inset-0&quot;>
               {[...Array(12)].map((_, i) => (
-                <motion.div
-                  key={i}
+                <motion.div,
+key={i}
                   className=&quot;absolute w-2 h-2 bg-cyan-400/40 rounded-full&quot;
                   animate={{
                     x: [0, 60, 0],
@@ -150,49 +106,23 @@ const Homepage2041: React.FC = () => {_const [searchQuery, _setSearchQuery] = us
                     duration: 5 + i * 0.3,
                     repeat: Infinity,
                     delay: i * 0.2,
-                    ease: &quot;easeInOut&quot;
+                    ease: &quot;easeInOut&quot
                   }}
-                  style={{
-=======
-          {_/* Optimized Background Elements */}
-          <div className="absolute inset-0 -z-10">
-            <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-            <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
-            
-            {_/* Enhanced particle system */}
-            <div className="absolute inset-0">
-              {_[...Array(12)].map(_(_, _i) => (
-                <motion.div
-                  key={i}
-                  className="absolute w-2 h-2 bg-cyan-400/40 rounded-full"
-                  animate={_{
-                    x: [0, _60, _0], _y: [0, _-60, _0], _opacity: [0, _0.7, _0], _scale: [0.5, _1, _0.5]}}
-                  transition={_{
-                    duration: 5 + i * 0.3, _repeat: Infinity, _delay: i * 0.2, _ease: "easeInOut"}}
-                  style={_{
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    left: `${Math.random() * 100}%`,
-                    top: `${_Math.random() * 100}%`}}
+                  style={{                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`}}
                 />
               ))}
             </div>
           </div>
 
-<<<<<<< HEAD
           {/* Hero Content */}
-          <div className=&quot;text-center max-w-7xl mx-auto relative z-10&quot;>
-=======
-          {_/* Hero Content */}
-          <div className="text-center max-w-7xl mx-auto relative z-10">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            <motion.div
-              initial={_{ opacity: 0, _y: 50}}
-              animate={_{ opacity: 1, _y: 0}}
+          <div className=&quot;text-center max-w-7xl mx-auto relative z-10&quot;>            <motion.div,
+initial={_{ opacity: 0, y: 50}}
+              animate={_{ opacity: 1, y: 0}}
               transition={_{ duration: 0.8}}
             >
-              <h1 
-                id=&quot;hero-heading&quot;
+              <h1,
+id=&quot;hero-heading&quot;
                 className=&quot;text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight&quot;
               >
                 <span className=&quot;bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent&quot;>
@@ -210,37 +140,21 @@ const Homepage2041: React.FC = () => {_const [searchQuery, _setSearchQuery] = us
               </p>
 
               {_/* Search Bar */}
-              <motion.div 
-<<<<<<< HEAD
-                className=&quot;max-w-3xl mx-auto mb-12&quot;
+              <motion.div,
+className=&quot;max-w-3xl mx-auto mb-12&quot;
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 <form onSubmit={handleSearch} className=&quot;relative&quot;>
-                  <input
-                    type=&quot;text&quot;
+                  <input,
+type=&quot;text&quot;
                     placeholder=&quot;Search revolutionary 2041 services...&quot;
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className=&quot;w-full px-8 py-6 bg-black/50 border border-cyan-500/50 rounded-3xl text-white placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-cyan-500/30 focus:border-transparent backdrop-blur-sm text-lg&quot;
-=======
-                className="max-w-3xl mx-auto mb-12"
-                initial={_{ opacity: 0, _y: 20}}
-                animate={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.8, _delay: 0.2}}
-              >
-                <form onSubmit={_handleSearch} className="relative">
-                  <input
-                    type="text"
-                    placeholder="Search revolutionary 2041 services..."
-                    value={_searchQuery}
-                    onChange={_(_e) => setSearchQuery(e.target.value)}
-                    className="w-full px-8 py-6 bg-black/50 border border-cyan-500/50 rounded-3xl text-white placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-cyan-500/30 focus:border-transparent backdrop-blur-sm text-lg"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  />
-                  <button
-                    type=&quot;submit&quot;
+                    className=&quot;w-full px-8 py-6 bg-black/50 border border-cyan-500/50 rounded-3xl text-white placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-cyan-500/30 focus:border-transparent backdrop-blur-sm text-lg&quot;                  />
+                  <button,
+type=&quot;submit&quot;
                     className=&quot;absolute right-3 top-3 px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 font-semibold&quot;
                   >
                     Explore Future
@@ -249,21 +163,13 @@ const Homepage2041: React.FC = () => {_const [searchQuery, _setSearchQuery] = us
               </motion.div>
 
               {_/* CTA Buttons */}
-              <motion.div 
-<<<<<<< HEAD
-                className=&quot;flex flex-col sm:flex-row gap-6 justify-center items-center&quot;
+              <motion.div,
+className=&quot;flex flex-col sm:flex-row gap-6 justify-center items-center&quot;
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-=======
-                className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-                initial={_{ opacity: 0, _y: 20}}
-                animate={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.8, _delay: 0.4}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
-                <Link
-                  href=&quot;/2041-futuristic-services-showcase&quot;
+                transition={{ duration: 0.8, delay: 0.4 }}              >
+                <Link,
+href=&quot;/2041-futuristic-services-showcase&quot;
                   className=&quot;px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-3&quot;
                 >
                   <Rocket className=&quot;w-6 h-6&quot; />
@@ -271,8 +177,8 @@ const Homepage2041: React.FC = () => {_const [searchQuery, _setSearchQuery] = us
                   <ArrowRight className=&quot;w-5 h-5&quot; />
                 </a>
                 
-                <Link
-                  href=&quot;/contact&quot;
+                <Link,
+href=&quot;/contact&quot;
                   className=&quot;px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3&quot;
                 >
                   <Users className=&quot;w-6 h-6&quot; />
@@ -283,83 +189,42 @@ const Homepage2041: React.FC = () => {_const [searchQuery, _setSearchQuery] = us
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Stats Section */}
         <section className=&quot;py-20 px-4&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
-            <motion.div 
-              className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8&quot;
+            <motion.div,
+className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8&quot;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
-        {_/* Stats Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div 
-              className="grid grid-cols-2 md:grid-cols-4 gap-8"
-              initial={_{ opacity: 0, _y: 30}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
-              {_stats.map(_(stat, _index) => (
-                <motion.div
-                  key={stat.label}
-<<<<<<< HEAD
+              viewport={{ once: true }}            >
+              {stats.map(_(stat, index) => (
+                <motion.div,
+key={stat.label}
                   className=&quot;text-center&quot;
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-=======
-                  className="text-center"
-                  initial={_{ opacity: 0, _y: 20}}
-                  whileInView={_{ opacity: 1, _y: 0}}
-                  transition={_{ duration: 0.5, _delay: index * 0.1}}
-                  viewport={_{ once: true}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                >
+                  viewport={{ once: true }}                >
                   <div className=&quot;w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4&quot;>
                     <stat.icon className=&quot;w-8 h-8 text-white&quot; />
                   </div>
-<<<<<<< HEAD
                   <div className=&quot;text-3xl md:text-4xl font-bold text-white mb-2&quot;>{stat.number}</div>
-                  <div className=&quot;text-gray-400&quot;>{stat.label}</div>
-=======
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">{_stat.number}</div>
-                  <div className="text-gray-400">{_stat.label}</div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </motion.div>
+                  <div className=&quot;text-gray-400&quot;>{stat.label}</div>                </motion.div>
               ))}
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Featured Services Section */}
         <section className=&quot;py-20 px-4 bg-gradient-to-b from-black to-gray-900/50&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
-            <motion.div 
-              className=&quot;text-center mb-16&quot;
+            <motion.div,
+className=&quot;text-center mb-16&quot;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
-        {_/* Featured Services Section */}
-        <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900/50">
-          <div className="max-w-7xl mx-auto">
-            <motion.div 
-              className="text-center mb-16"
-              initial={_{ opacity: 0, _y: 30}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              viewport={{ once: true }}            >
               <h2 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>
                 Revolutionary 2041 Services
               </h2>
@@ -368,51 +233,33 @@ const Homepage2041: React.FC = () => {_const [searchQuery, _setSearchQuery] = us
               </p>
             </motion.div>
 
-            <motion.div 
-<<<<<<< HEAD
-              className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;
+            <motion.div,
+className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-=======
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-              initial={_{ opacity: 0, _y: 30}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8, _delay: 0.2}}
-              viewport={_{ once: true}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
-              {_featuredServices.map(_(service, _index) => (
-                <motion.div
-                  key={service.id}
-                  initial={_{ opacity: 0, _y: 30}}
-                  whileInView={_{ opacity: 1, _y: 0}}
-                  transition={_{ duration: 0.5, _delay: 0.4 + index * 0.1}}
+              viewport={{ once: true }}            >
+              {featuredServices.map(_(service, index) => (
+                <motion.div,
+key={service.id}
+                  initial={_{ opacity: 0, y: 30}}
+                  whileInView={_{ opacity: 1, y: 0}}
+                  transition={_{ duration: 0.5, delay: 0.4 + index * 0.1}}
                   viewport={_{ once: true}}
                 >
-                  <UltraFuturisticServiceCard2026 service={_service} />
+                  <UltraFuturisticServiceCard2026 service={service} />
                 </motion.div>
               ))}
             </motion.div>
 
-            <motion.div 
-<<<<<<< HEAD
-              className=&quot;text-center mt-12&quot;
+            <motion.div,
+className=&quot;text-center mt-12&quot;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              viewport={{ once: true }}
-=======
-              className="text-center mt-12"
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8, _delay: 0.6}}
-              viewport={_{ once: true}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
-              <Link
-                href=&quot;/2041-futuristic-services-showcase&quot;
+              viewport={{ once: true }}            >
+              <Link,
+href=&quot;/2041-futuristic-services-showcase&quot;
                 className=&quot;inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105&quot;
               >
                 <Eye className=&quot;w-5 h-5&quot; />
@@ -423,28 +270,15 @@ const Homepage2041: React.FC = () => {_const [searchQuery, _setSearchQuery] = us
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Testimonials Section */}
         <section className=&quot;py-20 px-4&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
-            <motion.div 
-              className=&quot;text-center mb-16&quot;
+            <motion.div,
+className=&quot;text-center mb-16&quot;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
-        {_/* Testimonials Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div 
-              className="text-center mb-16"
-              initial={_{ opacity: 0, _y: 30}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              viewport={{ once: true }}            >
               <h2 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>
                 Leading the Future
               </h2>
@@ -453,25 +287,15 @@ const Homepage2041: React.FC = () => {_const [searchQuery, _setSearchQuery] = us
               </p>
             </motion.div>
 
-            <motion.div 
-<<<<<<< HEAD
-              className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;
+            <motion.div,
+className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-=======
-              className="grid grid-cols-1 md:grid-cols-3 gap-8"
-              initial={_{ opacity: 0, _y: 30}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8, _delay: 0.2}}
-              viewport={_{ once: true}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
-              {_testimonials.map(_(testimonial, _index) => (
-                <motion.div
-                  key={testimonial.name}
-<<<<<<< HEAD
+              viewport={{ once: true }}            >
+              {testimonials.map(_(testimonial, index) => (
+                <motion.div,
+key={testimonial.name}
                   className=&quot;bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm&quot;
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -487,53 +311,21 @@ const Homepage2041: React.FC = () => {_const [searchQuery, _setSearchQuery] = us
                   </div>
                   <div className=&quot;font-semibold text-white&quot;>{testimonial.name}</div>
                   <div className=&quot;text-cyan-400&quot;>{testimonial.role}</div>
-                  <div className=&quot;text-gray-500 text-sm&quot;>{testimonial.company}</div>
-=======
-                  className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm"
-                  initial={_{ opacity: 0, _y: 30}}
-                  whileInView={_{ opacity: 1, _y: 0}}
-                  transition={_{ duration: 0.5, _delay: 0.4 + index * 0.1}}
-                  viewport={_{ once: true}}
-                >
-                  <div className="text-4xl mb-4">{_testimonial.avatar}</div>
-                  <p className="text-gray-300 mb-6 leading-relaxed">{_testimonial.content}</p>
-                  <div className="flex items-center gap-2 mb-3">
-                    {_[...Array(testimonial.rating)].map(_(_, _i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <div className="font-semibold text-white">{_testimonial.name}</div>
-                  <div className="text-cyan-400">{_testimonial.role}</div>
-                  <div className="text-gray-500 text-sm">{_testimonial.company}</div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </motion.div>
+                  <div className=&quot;text-gray-500 text-sm&quot;>{testimonial.company}</div>                </motion.div>
               ))}
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;>
-            <motion.div 
-              className=&quot;bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm&quot;
+            <motion.div,
+className=&quot;bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm&quot;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
-        {_/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div 
-              className="bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm"
-              initial={_{ opacity: 0, _y: 30}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              viewport={{ once: true }}            >
               <h2 className=&quot;text-5xl md:text-6xl font-bold text-white mb-8&quot;>
                 Ready to Shape the Future?
               </h2>
@@ -541,20 +333,15 @@ const Homepage2041: React.FC = () => {_const [searchQuery, _setSearchQuery] = us
                 Join the technological revolution with our cutting-edge 2041 services. 
                 Transform your business, accelerate innovation, and lead the future of technology.
               </p>
-<<<<<<< HEAD
-              <div className="flex flex-col sm: flex-row gap-6 justify-center">
-=======
-              <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-                <Link
-                  href=&quot;/contact&quot;
+              <div className="flex flex-col sm: flex-row gap-6 justify-center">                <Link,
+href=&quot;/contact&quot;
                   className=&quot;px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3&quot;
                 >
                   <Sparkles className=&quot;w-6 h-6&quot; />
                   Start Your Journey
                 </a>
-                <Link
-                  href=&quot;/2041-futuristic-services-showcase&quot;
+                <Link,
+href=&quot;/2041-futuristic-services-showcase&quot;
                   className=&quot;px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3&quot;
                 >
                   <Target className=&quot;w-6 h-6&quot; />

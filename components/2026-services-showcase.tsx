@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useMemo } from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
@@ -13,34 +12,17 @@ export default function ServicesShowcase2026() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [sortBy, setSortBy] = useState('name'),
 
-  // Combine all 2026 services
-  const allServices = [
+  // Combine all 2026 services,
+const allServices = [
     ...revolutionary2026Services,
     ...emergingTech2026Services,
     ...comprehensiveIT2026Services
   ],
-=======
-import React, {_useState, _useMemo} from 'react';
-import Head from 'next/head';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-
-export default function ServicesShowcase2026() {_const [searchTerm, _setSearchTerm] = useState('');
-  const [selectedCategory, _setSelectedCategory] = useState('all');
-  const [sortBy, _setSortBy] = useState('name');
-
-  // Combine all 2026 services
-  const _allServices = [
-    ...revolutionary2026Services, _...emergingTech2026Services, _...comprehensiveIT2026Services
-  ];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-  // Filter and sort services
-  const _filteredServices = allServices
+  // Filter and sort services,
+const filteredServices = allServices
     .filter(service => {
-      const _matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-<<<<<<< HEAD
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()),
       const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),
       return matchesSearch && matchesCategory
@@ -48,19 +30,9 @@ export default function ServicesShowcase2026() {_const [searchTerm, _setSearchTe
     .sort((a, b) => {
       switch (sortBy) {
         case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
-=======
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
-      const _matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
-      return matchesSearch && matchesCategory;})
-    .sort(_(a, _b) => {_switch (sortBy) {
-        case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, _'')) - parseFloat(b.price.replace(/[^0-9.]/g, _''));
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        case 'rating':
+          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),        case 'rating':
           return b.rating - a.rating,
         case 'customers':
-<<<<<<< HEAD
           return b.customers - a.customers,
         default: return a.name.localeCompare(b.name)
       }
@@ -82,33 +54,14 @@ export default function ServicesShowcase2026() {_const [searchTerm, _setSearchTe
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   },
-=======
-          return b.customers - a.customers;
-        default:
-          return a.name.localeCompare(b.name);}
-    });
-
-  const _categories = [
-    {_id: 'all', _name: 'All Services', _icon: Globe, _count: allServices.length},
-    {_id: 'AI', _name: 'AI & Machine Learning', _icon: Brain, _count: allServices.filter(s => s.category.includes('AI')).length},
-    {_id: 'Quantum', _name: 'Quantum Computing', _icon: Atom, _count: allServices.filter(s => s.category.includes('Quantum')).length},
-    {_id: 'Emerging', _name: 'Emerging Technology', _icon: Sparkles, _count: allServices.filter(s => s.category.includes('Emerging')).length},
-    {_id: 'IT', _name: 'IT & Infrastructure', _icon: Shield, _count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length},
-    {_id: 'Autonomous', _name: 'Autonomous Systems', _icon: Target, _count: allServices.filter(s => s.category.includes('Autonomous')).length},
-    {_id: 'Cloud', _name: 'Cloud & DevOps', _icon: Cloud, _count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length}
-  ];
-
-  const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (
-    <UltraAdvancedFuturisticBackground 
-      intensity="extreme" 
+    <UltraAdvancedFuturisticBackground,
+intensity="extreme" 
       colorScheme="quantum-fusion"
-      particleCount={_600}
-      animationSpeed={_2.5}
-      enableHolographic={_true}
-      enableQuantumEffects={_true}
+      particleCount={600}
+      animationSpeed={2.5}
+      enableHolographic={true}
+      enableQuantumEffects={true}
     >
       <div className="min-h-screen">
         <Head>
@@ -130,9 +83,9 @@ export default function ServicesShowcase2026() {_const [searchTerm, _setSearchTe
         {_/* Hero Section */}
         <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={_{ opacity: 0, _y: 30}}
-              animate={_{ opacity: 1, _y: 0}}
+            <motion.div,
+initial={_{ opacity: 0, y: 30}}
+              animate={_{ opacity: 1, y: 0}}
               transition={_{ duration: 0.8}}
             >
               <h1 className="text-5xl md: text-7xl font-bold mb-6">
@@ -148,19 +101,19 @@ export default function ServicesShowcase2026() {_const [searchTerm, _setSearchTe
               {_/* Service Statistics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                 <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{_allServices.length}</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}</div>
                   <div className="text-gray-400 text-sm">Total Services</div>
                 </div>
                 <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">{_allServices.filter(s => s.category.includes('AI')).length}</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">{allServices.filter(s => s.category.includes('AI')).length}</div>
                   <div className="text-gray-400 text-sm">AI Services</div>
                 </div>
                 <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">{_allServices.filter(s => s.category.includes('Quantum')).length}</div>
+                  <div className="text-3xl font-bold text-pink-400 mb-2">{allServices.filter(s => s.category.includes('Quantum')).length}</div>
                   <div className="text-gray-400 text-sm">Quantum Services</div>
                 </div>
                 <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-green-400 mb-2">{_allServices.filter(s => s.category.includes('Emerging')).length}</div>
+                  <div className="text-3xl font-bold text-green-400 mb-2">{allServices.filter(s => s.category.includes('Emerging')).length}</div>
                   <div className="text-gray-400 text-sm">Emerging Tech</div>
                 </div>
               </div>
@@ -176,11 +129,11 @@ export default function ServicesShowcase2026() {_const [searchTerm, _setSearchTe
                 {_/* Search */}
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="text"
+                  <input,
+type="text"
                     placeholder="Search services..."
-                    value={_searchTerm}
-                    onChange={_(_e) => setSearchTerm(e.target.value)}
+                    value={searchTerm}
+                    onChange={_(e) => setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
                 </div>
@@ -188,14 +141,14 @@ export default function ServicesShowcase2026() {_const [searchTerm, _setSearchTe
                 {_/* Category Filter */}
                 <div className="relative">
                   <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <select
-                    value={_selectedCategory}
-                    onChange={_(_e) => setSelectedCategory(e.target.value)}
+                  <select,
+value={selectedCategory}
+                    onChange={_(e) => setSelectedCategory(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none"
                   >
-                    {_categories.map(category => (
-                      <option key={category.id} value={_category.id}>
-                        {_category.name} ({_category.count})
+                    {categories.map(category => (
+                      <option key={category.id} value={category.id}>
+                        {category.name} ({category.count})
                       </option>
                     ))}
                   </select>
@@ -204,9 +157,9 @@ export default function ServicesShowcase2026() {_const [searchTerm, _setSearchTe
                 {_/* Sort By */}
                 <div className="relative">
                   <TrendingUp className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <select
-                    value={_sortBy}
-                    onChange={_(_e) => setSortBy(e.target.value)}
+                  <select,
+value={sortBy}
+                    onChange={_(e) => setSortBy(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none"
                   >
                     <option value="name">Sort by Name</option>
@@ -224,19 +177,19 @@ export default function ServicesShowcase2026() {_const [searchTerm, _setSearchTe
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {_filteredServices.map(_(service, _index) => (
-                <motion.div
-                  key={service.id}
-                  initial={_{ opacity: 0, _y: 30}}
-                  animate={_{ opacity: 1, _y: 0}}
-                  transition={_{ duration: 0.6, _delay: index * 0.1}}
+              {filteredServices.map(_(service, index) => (
+                <motion.div,
+key={service.id}
+                  initial={_{ opacity: 0, y: 30}}
+                  animate={_{ opacity: 1, y: 0}}
+                  transition={_{ duration: 0.6, delay: index * 0.1}}
                   className="group"
                 >
                   <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                     {_/* Service Header */}
                     <div className="flex items-start justify-between mb-4">
-                      <div className="text-4xl">{_service.icon}</div>
-                      {_service.popular && (
+                      <div className="text-4xl">{service.icon}</div>
+                      {service.popular && (
                         <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full">
                           Popular
                         </span>
@@ -245,40 +198,40 @@ export default function ServicesShowcase2026() {_const [searchTerm, _setSearchTe
 
                     {_/* Service Title */}
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                      {_service.name}
+                      {service.name}
                     </h3>
 
                     {_/* Tagline */}
                     <p className="text-gray-300 text-sm mb-4">
-                      {_service.tagline}
+                      {service.tagline}
                     </p>
 
                     {_/* Price */}
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-2xl font-bold text-cyan-400">
-                        {_service.price}
-                        <span className="text-gray-400 text-lg font-normal">{_service.period}</span>
+                        {service.price}
+                        <span className="text-gray-400 text-lg font-normal">{service.period}</span>
                       </div>
                       <div className="flex items-center space-x-1">
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-white text-sm">{_service.rating}</span>
-                        <span className="text-gray-400 text-sm">({_service.reviews})</span>
+                        <span className="text-white text-sm">{service.rating}</span>
+                        <span className="text-gray-400 text-sm">({service.reviews})</span>
                       </div>
                     </div>
 
                     {_/* Description */}
                     <p className="text-gray-400 text-sm mb-4 line-clamp-3">
-                      {_service.description}
+                      {service.description}
                     </p>
 
                     {_/* Features */}
                     <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
                       <ul className="space-y-1">
-                        {_service.features.slice(0, _3).map(_(feature, _idx) => (
+                        {service.features.slice(0, 3).map(_(feature, idx) => (
                           <li key={idx} className="text-gray-400 text-xs flex items-center">
                             <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
-                            {_feature}
+                            {feature}
                           </li>
                         ))}
                       </ul>
@@ -287,16 +240,16 @@ export default function ServicesShowcase2026() {_const [searchTerm, _setSearchTe
                     {_/* Category and Technology */}
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded">
-                        {_service.category}
+                        {service.category}
                       </span>
                       <span className="text-xs text-gray-500">
-                        {_service.customers}+ customers
+                        {service.customers}+ customers
                       </span>
                     </div>
 
                     {_/* CTA Button */}
-                    <a
-                      href={_service.link}
+                    <a,
+href={service.link}
                       className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block"
                     >
                       Learn More
@@ -307,9 +260,9 @@ export default function ServicesShowcase2026() {_const [searchTerm, _setSearchTe
             </div>
 
             {_/* No Results */}
-            {_filteredServices.length === 0 && (
-              <motion.div
-                initial={{ opacity: 0}}
+            {filteredServices.length === 0 && (
+              <motion.div,
+initial={{ opacity: 0}}
                 animate={_{ opacity: 1}}
                 className="text-center py-16"
               >
@@ -324,9 +277,9 @@ export default function ServicesShowcase2026() {_const [searchTerm, _setSearchTe
         {_/* Contact Section */}
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={_{ opacity: 0, _y: 30}}
-              whileInView={_{ opacity: 1, _y: 0}}
+            <motion.div,
+initial={_{ opacity: 0, y: 30}}
+              whileInView={_{ opacity: 1, y: 0}}
               viewport={_{ once: true}}
               transition={_{ duration: 0.8}}
               className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm"
@@ -339,27 +292,27 @@ export default function ServicesShowcase2026() {_const [searchTerm, _setSearchTe
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="flex items-center justify-center space-x-3 text-cyan-300">
                   <span className="text-2xl">📱</span>
-                  <span className="font-semibold">{_contactInfo.mobile}</span>
+                  <span className="font-semibold">{contactInfo.mobile}</span>
                 </div>
                 <div className="flex items-center justify-center space-x-3 text-purple-300">
                   <span className="text-2xl">✉️</span>
-                  <span className="font-semibold">{_contactInfo.email}</span>
+                  <span className="font-semibold">{contactInfo.email}</span>
                 </div>
                 <div className="flex items-center justify-center space-x-3 text-pink-300">
                   <span className="text-2xl">📍</span>
-                  <span className="font-semibold text-sm">{_contactInfo.address}</span>
+                  <span className="font-semibold text-sm">{contactInfo.address}</span>
                 </div>
               </div>
 
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
+                <a,
+href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Contact Us Now
                 </a>
-                <a
-                  href="/pricing"
+                <a,
+href="/pricing"
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
                 >
                   View Pricing

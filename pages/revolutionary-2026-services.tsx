@@ -1,32 +1,16 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Revolutionary2026UltimateNavigation from '../components/layout/Revolutionary2026UltimateNavigation',
 import Revolutionary2026UltimateHero from '../components/sections/Revolutionary2026UltimateHero',
 import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase',
 import { Phone, Mail } from 'lucide-react',
-=======
-import React from 'react';
-import Head from 'next/head';
-import Revolutionary2026UltimateNavigation from '../components/layout/Revolutionary2026UltimateNavigation';
-import Revolutionary2026UltimateHero from '../components/sections/Revolutionary2026UltimateHero';
-import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default function Revolutionary2026ServicesPage() {_return (
     <>
       <Head>
         <title>Revolutionary 2026 Services - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name=&quot;description&quot; content=&quot;Experience the future with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI services, quantum computing, emerging technology, healthcare biotech, fintech blockchain, 2026 technology, Zion Tech Group&quot; />
-        <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; />
-=======
-        <meta name="description" content="Experience the future with our cutting-edge AI, _quantum computing, _and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions." />
-        <meta name="keywords" content="AI services, _quantum computing, _emerging technology, _healthcare biotech, _fintech blockchain, _2026 technology, _Zion Tech Group" />
-        <meta name="viewport" content="width=device-width, _initial-scale=1" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        
+        <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; />        
         {/* Open Graph */}
         <meta property=&quot;og:title&quot; content=&quot;Revolutionary 2026 Services - Zion Tech Group&quot; />
         <meta property=&quot;og:description&quot; content=&quot;Experience the future with our cutting-edge AI, quantum computing, and emerging technology services.&quot; />
@@ -34,7 +18,6 @@ export default function Revolutionary2026ServicesPage() {_return (
         <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/revolutionary-2026-services&quot; />
         <meta property=&quot;og:image&quot; content=&quot;https://ziontechgroup.com/og-image-revolutionary-2026.jpg&quot; />
         
-<<<<<<< HEAD
         {/* Twitter */}
         <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
         <meta name=&quot;twitter:title&quot; content=&quot;Revolutionary 2026 Services - Zion Tech Group&quot; />
@@ -46,25 +29,9 @@ export default function Revolutionary2026ServicesPage() {_return (
         <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; />
         <meta name=&quot;contact&quot; content=&quot;kleber@ziontechgroup.com&quot; />
         <meta name=&quot;phone&quot; content=&quot;+1 302 464 0950&quot; />
-        <meta name=&quot;address&quot; content=&quot;364 E Main St STE 1008 Middletown DE 19709&quot; />
-=======
-        {_/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Revolutionary 2026 Services - Zion Tech Group" />
-        <meta name="twitter:description" content="Experience the future with our cutting-edge AI, quantum computing, and emerging technology services." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/og-image-revolutionary-2026.jpg" />
-        
-        {_/* Additional Meta */}
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="contact" content="kleber@ziontechgroup.com" />
-        <meta name="phone" content="+1 302 464 0950" />
-        <meta name="address" content="364 E Main St STE 1008 Middletown DE 19709" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        
+        <meta name=&quot;address&quot; content=&quot;364 E Main St STE 1008 Middletown DE 19709&quot; />        
         {_/* Structured Data */}
         <script
-<<<<<<< HEAD
           type=&quot;application/ld+json&quot;
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -89,31 +56,14 @@ export default function Revolutionary2026ServicesPage() {_return (
                 &quot;email&quot;: &quot;kleber@ziontechgroup.com&quot;
               },
               &quot;sameAs&quot;: [
-                &quot;https://github.com/Zion-Holdings&quot;
-=======
-          type="application/ld+json"
-          dangerouslySetInnerHTML={_{
-            __html: JSON.stringify({
-              "@context": "https://schema.org", _"@type": "Organization", _"name": "Zion Tech Group", _"url": "https://ziontechgroup.com", _"logo": "https://ziontechgroup.com/logo.png", _"description": "Revolutionary AI, _quantum computing, _and emerging technology services for 2026", _"address": {
-                "@type": "PostalAddress", _"streetAddress": "364 E Main St STE 1008", _"addressLocality": "Middletown", _"addressRegion": "DE", _"postalCode": "19709", _"addressCountry": "US"},
-              "contactPoint": {_"@type": "ContactPoint", _"telephone": "+1-302-464-0950", _"contactType": "customer service", _"email": "kleber@ziontechgroup.com"},
-              "sameAs": [
-                "https://github.com/Zion-Holdings"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              ]
+                &quot;https://github.com/Zion-Holdings&quot;              ]
             })
           }}
         />
       </Head>
 
-<<<<<<< HEAD
       <main className=&quot;min-h-screen bg-gray-900&quot;>
-        {/* Navigation */}
-=======
-      <main className="min-h-screen bg-gray-900">
-        {_/* Navigation */}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        <Revolutionary2026UltimateNavigation />
+        {/* Navigation */}        <Revolutionary2026UltimateNavigation />
         
         {_/* Hero Section */}
         <Revolutionary2026UltimateHero />
@@ -121,7 +71,6 @@ export default function Revolutionary2026ServicesPage() {_return (
         {_/* Services Showcase */}
         <Revolutionary2026UltimateServicesShowcase />
         
-<<<<<<< HEAD
         {/* Additional Content Sections */}
         <section className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden&quot;>
           <div className=&quot;absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10&quot;></div>
@@ -130,19 +79,7 @@ export default function Revolutionary2026ServicesPage() {_return (
             {/* Why Choose Zion Tech Group */}
             <div className=&quot;text-center mb-16&quot;>
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
-                <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
-=======
-        {_/* Additional Content Sections */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10"></div>
-          
-          <div className="max-w-7xl mx-auto relative z-10">
-            {_/* Why Choose Zion Tech Group */}
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  Why Choose Zion Tech Group?
+                <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>                  Why Choose Zion Tech Group?
                 </span>
               </h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
@@ -151,7 +88,6 @@ export default function Revolutionary2026ServicesPage() {_return (
               </p>
             </div>
 
-<<<<<<< HEAD
             {/* Features Grid */}
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16&quot;>
               {[
@@ -198,46 +134,18 @@ export default function Revolutionary2026ServicesPage() {_return (
                       {feature.icon}
                     </div>
                     <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>{feature.title}</h3>
-                    <p className=&quot;text-gray-400 leading-relaxed&quot;>{feature.description}</p>
-=======
-            {_/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {_[
-                {
-                  icon: '🧠', _title: 'AI Consciousness', _description: 'First-to-market AI consciousness orchestration and autonomous intelligence systems.', _color: 'from-purple-500 to-pink-500'},
-                {_icon: '⚛️', _title: 'Quantum Technology', _description: 'Leading-edge quantum computing, _cryptography, _and quantum internet infrastructure.', _color: 'from-blue-500 to-cyan-500'},
-                {_icon: '🚀', _title: 'Emerging Tech', _description: 'Cutting-edge holographic metaverse, _space tech, _and autonomous manufacturing.', _color: 'from-green-500 to-emerald-500'},
-                {_icon: '🏥', _title: 'Healthcare Innovation', _description: 'Revolutionary AI drug discovery, _autonomous healthcare, _and biotech research.', _color: 'from-teal-500 to-cyan-500'},
-                {_icon: '💰', _title: 'Fintech Revolution', _description: 'Next-generation autonomous business intelligence and quantum blockchain solutions.', _color: 'from-yellow-500 to-orange-500'},
-                {_icon: '🌐', _title: 'Global Impact', _description: 'Serving 2, _500+ customers worldwide with transformative technology solutions.', _color: 'from-indigo-500 to-purple-500'}
-              ].map(_(feature, _index) => (
-                <div key={_index} className="group">
-                  <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105">
-                    <div className={_`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform`}>
-                      {_feature.icon}
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-4">{_feature.title}</h3>
-                    <p className="text-gray-400 leading-relaxed">{_feature.description}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </div>
+                    <p className=&quot;text-gray-400 leading-relaxed&quot;>{feature.description}</p>                  </div>
                 </div>
               ))}
             </div>
 
-<<<<<<< HEAD
             {/* Call to Action */}
-<<<<<<< HEAD
-=======
-            {_/* Call to Action */}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <div className="text-center">
               <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">
                 <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
-=======
             <div className=&quot;text-center&quot;>
               <div className=&quot;bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20&quot;>
                 <h3 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                   Ready to Experience the Future?
                 </h3>
                 <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>

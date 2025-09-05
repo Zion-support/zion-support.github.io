@@ -1,23 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { GradientHeading } from "./GradientHeading",
-=======
-import { GradientHeading } from &quot;./GradientHeading&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import {
+import { GradientHeading } from "./GradientHeading",import {
   Accordion,
   AccordionContent,
   AccordionItem,
-<<<<<<< HEAD
   AccordionTrigger} from "@/components/ui/accordion",
-import { FileText } from "lucide-react",
-=======
-  AccordionTrigger} from &quot;@/components/ui/accordion&quot;;
-import { FileText } from &quot;lucide-react&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-const faqs = [
+import { FileText } from "lucide-react",const faqs = [
   {
     question: &quot;How do I publish my AI product or service on Zion?&quot;,
     answer: &quot;Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product/Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check.&quot;},
@@ -34,14 +21,8 @@ const faqs = [
     question: &quot;What is Zion's Green IT and recycling program?&quot;,
     answer: &quot;Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipment, component reuse where possible, and adherence to international environmental standards including WEEE, RoHS, and e-Stewards certification. We provide certificates of proper disposal for corporate compliance requirements.&quot;},
   {
-<<<<<<< HEAD
     question: "Are there any fees for listing my products or services?",
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}],
-=======
-    question: &quot;Are there any fees for listing my products or services?&quot;,
-    answer: &quot;No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached.&quot;}];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 export function FaqSection() {
   return (
     <section className=&quot;py-20 bg-zion-blue&quot; id=&quot;faq&quot;>
@@ -50,7 +31,6 @@ export function FaqSection() {
           <GradientHeading>Frequently Asked Questions</GradientHeading>
           <p className=&quot;mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto&quot;>
             Find answers to common questions about AI product listings, IT equipment rentals, and datacenter maintenance services
-=======
 import {_Accordion, _AccordionContent, _AccordionItem, _AccordionTrigger} from "@/components/ui/accordion";
 
 const _faqs = [
@@ -67,7 +47,6 @@ export function FaqSection() {_return (_<section className="py-20 bg-zion-blue" 
           <GradientHeading>Frequently Asked Questions</GradientHeading>
           <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
             Find answers to common questions about AI product listings, _IT equipment rentals, _and datacenter maintenance services
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </p>
         </div>
 
@@ -77,7 +56,6 @@ export function FaqSection() {_return (_<section className="py-20 bg-zion-blue" 
             <h3 className=&quot;text-xl font-bold text-white&quot;>Common Questions</h3>
           </div>
           
-<<<<<<< HEAD
           <Accordion type=&quot;single&quot; collapsible className=&quot;w-full&quot;>
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className=&quot;border-zion-purple/10&quot;>
@@ -85,18 +63,7 @@ export function FaqSection() {_return (_<section className="py-20 bg-zion-blue" 
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className=&quot;text-zion-slate-light&quot;>
-                  {faq.answer}
-=======
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, _index) => (
-              <AccordionItem key={index} value={_`item-${index}`} className="border-zion-purple/10">
-                <AccordionTrigger className="text-white hover:text-zion-cyan">
-                  {_faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-zion-slate-light">
-                  {_faq.answer}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </AccordionContent>
+                  {faq.answer}                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

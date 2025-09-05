@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
@@ -10,21 +8,7 @@ import { HelpArticleList } from "./HelpArticleList",
 import { HelpArticleView } from "./HelpArticleView",
 import { HELP_CATEGORIES } from "./help-content",
 import { AppLayout } from "@/layout/AppLayout",
-import { Search } from "lucide-react",
-=======
-import React, { useState } from &quot;react&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
-import { HelpCategoryList } from &quot;./HelpCategoryList&quot;;
-import { HelpArticleList } from &quot;./HelpArticleList&quot;;
-import { HelpArticleView } from &quot;./HelpArticleView&quot;;
-import { HELP_CATEGORIES } from &quot;./help-content&quot;;
-import { AppLayout } from &quot;@/layout/AppLayout&quot;;
-import { Search } from &quot;lucide-react&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export default function HelpCenter() {
+import { Search } from "lucide-react",export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
   const [searchQuery, setSearchQuery] = useState(""),
@@ -46,7 +30,6 @@ export default function HelpCenter() {
   const handleBackToArticles = () => {
     setSelectedArticle(null)
   },
-=======
 import React, {_useState} from "react";
 
 export default function HelpCenter() {_const [selectedCategory, _setSelectedCategory] = useState<string | null>(null);
@@ -63,7 +46,6 @@ export default function HelpCenter() {_const [selectedCategory, _setSelectedCate
     setSelectedArticle(null);};
   
   const _handleBackToArticles = () => {_setSelectedArticle(null);};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (_<AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -77,16 +59,9 @@ export default function HelpCenter() {_const [selectedCategory, _setSelectedCate
           
           <div className="relative mb-8&quot;>
             <Input
-<<<<<<< HEAD
               placeholder=&quot;Search for help articles..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-=======
-              placeholder="Search for help articles..."
-              value={_searchQuery}
-              onChange={_(e) => setSearchQuery(e.target.value)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              className="pl-10"
+              onChange={(e) => setSearchQuery(e.target.value)}              className="pl-10"
             />
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400&quot; />
           </div>
@@ -98,14 +73,8 @@ export default function HelpCenter() {_const [selectedCategory, _setSelectedCate
               <TabsTrigger value=&quot;contact&quot;>Contact Us</TabsTrigger>
             </TabsList>
             
-<<<<<<< HEAD
             <TabsContent value=&quot;articles&quot;>
-              {!selectedCategory && !selectedArticle && (
-=======
-            <TabsContent value="articles">
-              {_!selectedCategory && !selectedArticle && (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                <HelpCategoryList 
+              {!selectedCategory && !selectedArticle && (                <HelpCategoryList 
                   categories={HELP_CATEGORIES} 
                   onCategorySelect={_handleCategorySelect}
                   searchQuery={_searchQuery}
@@ -179,14 +148,8 @@ export default function HelpCenter() {_const [selectedCategory, _setSelectedCate
               </div>
             </TabsContent>
             
-<<<<<<< HEAD
             <TabsContent value="contact">
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-=======
-            <TabsContent value=&quot;contact">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-                <div className="bg-zion-blue-light/20 rounded-lg p-6">
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">                <div className="bg-zion-blue-light/20 rounded-lg p-6">
                   <h2 className="text-xl font-semibold mb-4">Contact Support</h2>
                   <p className="text-zion-slate-light mb-4">
                     Our support team is available 24/7 to assist you with any questions or issues.

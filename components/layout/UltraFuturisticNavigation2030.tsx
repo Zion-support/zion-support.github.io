@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -21,14 +20,6 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-=======
-import React, {_useState, _useEffect} from 'react';
-import Link from 'next/link';
-import {_Menu, _X, _ChevronDown, _Search, _Phone, _Mail, _MapPin, _Rocket, _Brain, _Atom, _Globe, _Zap, _Sparkles, _Shield, _Microscope, _DollarSign, _Home, _Users, _Briefcase, _BookOpen, _MessageCircle, _Star, _TrendingUp, _Target, _Layers, _Cpu, _Database, _Cloud, _Lock, _ShieldCheck, _Earth, _Factory, _Car, _Building, _GraduationCap, _Scale, _Palette, _Camera, _Video, _Music, _Gamepad2, _Heart, _Leaf, _Sun, _Moon, _Wind, _Droplets, _Mountain, _Code, _Wrench, _Smartphone, _BarChart3, _Eye, _Infinity, _Hexagon, _Network} from 'lucide-react';
-
-const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 const _serviceCategories = [
   {_title: '🚀 2030 Ultra-Futuristic AI Services', _icon: Brain, _color: 'from-violet-600 via-purple-600 to-indigo-600', _description: 'Next-generation AI consciousness and creativity', _services: [
       { name: 'AI Consciousness Evolution Platform', _href: '/ai-consciousness-evolution-platform', _description: 'Develop genuine AI consciousness', _price: '$19, _999/month'},
@@ -74,7 +65,6 @@ const _serviceCategories = [
   }
 ],
 
-<<<<<<< HEAD
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
@@ -134,68 +124,7 @@ export default function UltraFuturisticNavigation2030() {
             <div className=&quot;flex items-center space-x-2&quot;>
               <Globe className=&quot;w-4 h-4 text-cyan-400&quot; />
               <a href={contactInfo.website} className=&quot;hover:text-cyan-400 transition-colors&quot;>
-                {contactInfo.website.replace('https://', '')}
-=======
-const _mainNavigation = [
-  {_name: 'Home', _href: '/', _icon: Home},
-  {_name: 'Services', _href: '/services', _icon: Briefcase},
-  {_name: 'Solutions', _href: '/solutions', _icon: Layers},
-  {_name: 'Pricing', _href: '/pricing', _icon: DollarSign},
-  {_name: 'Resources', _href: '/resources', _icon: BookOpen},
-  {_name: 'Case Studies', _href: '/case-studies', _icon: BarChart3},
-  {_name: 'Blog', _href: '/blog', _icon: MessageCircle},
-  {_name: 'Contact', _href: '/contact', _icon: MessageCircle}
-];
-
-const _quickLinks = [
-  {_name: 'AI Services', _href: '/services/ai', _icon: Brain, _color: 'from-purple-500 to-pink-500'},
-  {_name: 'Quantum Tech', _href: '/services/quantum', _icon: Atom, _color: 'from-blue-500 to-cyan-500'},
-  {_name: 'Biotech Solutions', _href: '/services/biotech', _icon: Microscope, _color: 'from-green-500 to-emerald-500'},
-  {_name: 'Space Technology', _href: '/services/space', _icon: Rocket, _color: 'from-indigo-500 to-purple-500'},
-  {_name: 'Enterprise IT', _href: '/services/enterprise', _icon: Cpu, _color: 'from-gray-500 to-slate-500'},
-  {_name: 'Micro SAAS', _href: '/services/micro-saas', _icon: Target, _color: 'from-orange-500 to-red-500'}
-];
-
-export default function UltraFuturisticNavigation2030() {_const [isOpen, _setIsOpen] = useState(false);
-  const [activeCategory, _setActiveCategory] = useState<number | null>(null);
-  const [isScrolled, _setIsScrolled] = useState(false);
-
-  useEffect__(() => {
-    const _handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);};
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const _toggleMenu = () => setIsOpen(!isOpen);
-  const _closeMenu = () => setIsOpen(false);
-
-  return (
-    <>
-      {_/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white py-2 px-4 text-sm">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
-          <div className="flex items-center space-x-6">
-            <div className="flex items-center space-x-2">
-              <Phone className="w-4 h-4 text-cyan-400" />
-              <span>{_contactInfo.mobile}</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Mail className="w-4 h-4 text-cyan-400" />
-              <span>{_contactInfo.email}</span>
-            </div>
-          </div>
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
-              <MapPin className="w-4 h-4 text-cyan-400" />
-              <span>{_contactInfo.address}</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Globe className="w-4 h-4 text-cyan-400" />
-              <a href={_contactInfo.website} className="hover:text-cyan-400 transition-colors">
-                {_contactInfo.website.replace('https://', _'')}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </a>
+                {contactInfo.website.replace('https://', '')}              </a>
             </div>
           </div>
         </div>
@@ -205,7 +134,6 @@ export default function UltraFuturisticNavigation2030() {_const [isOpen, _setIsO
       <nav className={_`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-black/90 backdrop-blur-xl border-b border-purple-500/20 shadow-2xl' 
-<<<<<<< HEAD
           : 'bg-gradient-to-r from-black/95 via-purple-900/95 to-black/95 backdrop-blur-sm'
       }`}>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -215,19 +143,7 @@ export default function UltraFuturisticNavigation2030() {_const [isOpen, _setIsO
               <Link href=&quot;/&quot; className=&quot;flex items-center space-x-3 group&quot;>
                 <div className=&quot;relative&quot;>
                   <div className=&quot;w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center transform group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300&quot;>
-                    <Zap className=&quot;w-6 h-6 text-white&quot; />
-=======
-          : 'bg-gradient-to-r from-black/95 via-purple-900/95 to-black/95 backdrop-blur-sm'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            {_/* Logo */}
-            <div className="flex items-center space-x-4">
-              <Link href="/" className="flex items-center space-x-3 group">
-                <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center transform group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">
-                    <Zap className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </div>
+                    <Zap className=&quot;w-6 h-6 text-white&quot; />                  </div>
                   <div className=&quot;absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300&quot;></div>
                 </div>
                 <div className=&quot;flex flex-col&quot;>
@@ -239,7 +155,6 @@ export default function UltraFuturisticNavigation2030() {_const [isOpen, _setIsO
               </a>
             </div>
 
-<<<<<<< HEAD
             {/* Desktop Navigation */}
             <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
               {mainNavigation.map((item) => (
@@ -256,31 +171,10 @@ export default function UltraFuturisticNavigation2030() {_const [isOpen, _setIsO
               {/* Services Dropdown */}
               <div className=&quot;relative group&quot;>
                 <button className=&quot;flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200&quot;>
-                  <Briefcase className=&quot;w-4 h-4&quot; />
-=======
-            {_/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              {_mainNavigation.map(_(item) => (
-                <Link
-                  key={item.name}
-                  href={_item.href}
-                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group"
-                >
-                  <item.icon className="w-4 h-4 group-hover:text-purple-400 transition-colors" />
-                  <span>{_item.name}</span>
-                </Link>
-              ))}
-              
-              {_/* Services Dropdown */}
-              <div className="relative group">
-                <button className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">
-                  <Briefcase className="w-4 h-4" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  <span>Services</span>
+                  <Briefcase className=&quot;w-4 h-4&quot; />                  <span>Services</span>
                   <ChevronDown className=&quot;w-4 h-4 group-hover:rotate-180 transition-transform duration-200&quot; />
                 </button>
                 
-<<<<<<< HEAD
                 {/* Mega Menu */}
                 <div className=&quot;absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-4&quot;>
                   <div className=&quot;p-8&quot;>
@@ -301,48 +195,15 @@ export default function UltraFuturisticNavigation2030() {_const [isOpen, _setIsO
                               <Link
                                 key={serviceIndex}
                                 href={service.href}
-                                className=&quot;block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duration-200 group&quot;
-=======
-                {_/* Mega Menu */}
-                <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-4">
-                  <div className="p-8">
-                    <div className="grid grid-cols-2 gap-8">
-                      {_serviceCategories.map(_(category, _index) => (_<div key={index} className="space-y-4">
-                          <div className="flex items-center space-x-3">
-                            <div className={_`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
-                              <category.icon className="w-5 h-5 text-white" />
-                            </div>
-                            <div>
-                              <h3 className="text-lg font-semibold text-white">{_category.title}</h3>
-                              <p className="text-sm text-gray-400">{_category.description}</p>
-                            </div>
-                          </div>
-                          <div className="space-y-2">
-                            {_category.services.map((service, _serviceIndex) => (
-                              <Link
-                                key={serviceIndex}
-                                href={_service.href}
-                                className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duration-200 group"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                              >
+                                className=&quot;block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duration-200 group&quot;                              >
                                 <div className=&quot;flex items-center justify-between&quot;>
                                   <div>
-<<<<<<< HEAD
                                     <h4 className=&quot;text-sm font-medium text-white group-hover:text-purple-400 transition-colors&quot;>
                                       {service.name}
                                     </h4>
                                     <p className=&quot;text-xs text-gray-400&quot;>{service.description}</p>
                                   </div>
-                                  <span className=&quot;text-xs font-mono text-purple-400&quot;>{service.price}</span>
-=======
-                                    <h4 className="text-sm font-medium text-white group-hover:text-purple-400 transition-colors">
-                                      {_service.name}
-                                    </h4>
-                                    <p className="text-xs text-gray-400">{_service.description}</p>
-                                  </div>
-                                  <span className="text-xs font-mono text-purple-400">{_service.price}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                                </div>
+                                  <span className=&quot;text-xs font-mono text-purple-400&quot;>{service.price}</span>                                </div>
                               </a>
                             ))}
                           </div>
@@ -354,14 +215,8 @@ export default function UltraFuturisticNavigation2030() {_const [isOpen, _setIsO
               </div>
             </div>
 
-<<<<<<< HEAD
             {/* CTA Buttons */}
-            <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
-=======
-            {_/* CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <Link
+            <div className=&quot;hidden lg:flex items-center space-x-4&quot;>              <Link
                 href=&quot;/contact&quot;
                 className=&quot;px-6 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-purple-500/25&quot;
               >
@@ -375,31 +230,19 @@ export default function UltraFuturisticNavigation2030() {_const [isOpen, _setIsO
               </a>
             </div>
 
-<<<<<<< HEAD
             {/* Mobile Menu Button */}
             <div className=&quot;lg:hidden&quot;>
               <button
                 onClick={toggleMenu}
                 className=&quot;p-2 rounded-lg text-gray-400 hover:text-white hover:bg-purple-500/20 transition-colors duration-200&quot;
               >
-                {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}
-=======
-            {_/* Mobile Menu Button */}
-            <div className="lg:hidden">
-              <button
-                onClick={_toggleMenu}
-                className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-purple-500/20 transition-colors duration-200"
-              >
-                {_isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </button>
+                {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}              </button>
             </div>
           </div>
         </div>
 
         {_/* Mobile Menu */}
         <AnimatePresence>
-<<<<<<< HEAD
           {isOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
@@ -427,37 +270,7 @@ export default function UltraFuturisticNavigation2030() {_const [isOpen, _setIsO
                 <div className=&quot;space-y-4&quot;>
                   <h3 className=&quot;text-lg font-semibold text-white px-3&quot;>Our Services</h3>
                   <div className=&quot;grid grid-cols-2 gap-3&quot;>
-                    {quickLinks.map((link) => (
-=======
-          {_isOpen && (_<motion.div
-              initial={{ opacity: 0, _height: 0}}
-              animate={_{ opacity: 1, _height: 'auto'}}
-              exit={_{ opacity: 0, _height: 0}}
-              className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20"
-            >
-              <div className="px-4 py-6 space-y-6">
-                {_/* Mobile Navigation Links */}
-                <div className="space-y-4">
-                  {_mainNavigation.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={_item.href}
-                      onClick={_closeMenu}
-                      className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-purple-500/10 transition-colors duration-200"
-                    >
-                      <item.icon className="w-5 h-5" />
-                      <span>{_item.name}</span>
-                    </Link>
-                  ))}
-                </div>
-
-                {_/* Mobile Services */}
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-white px-3">Our Services</h3>
-                  <div className="grid grid-cols-2 gap-3">
-                    {_quickLinks.map(_(link) => (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      <Link
+                    {quickLinks.map((link) => (                      <Link
                         key={link.name}
                         href={_link.href}
                         onClick={_closeMenu}
@@ -467,48 +280,24 @@ export default function UltraFuturisticNavigation2030() {_const [isOpen, _setIsO
                             : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                         }`}
                       >
-<<<<<<< HEAD
                         <link.icon className=&quot;w-6 h-6 mx-auto mb-2&quot; />
                         <span className=&quot;text-sm font-medium&quot;>{link.name}</span>
-                      </a>
-=======
-                        <link.icon className="w-6 h-6 mx-auto mb-2" />
-                        <span className="text-sm font-medium">{_link.name}</span>
-                      </Link>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    ))}
+                      </a>                    ))}
                   </div>
                 </div>
 
-<<<<<<< HEAD
                 {/* Mobile CTA */}
                 <div className=&quot;space-y-3 pt-4 border-t border-purple-500/20&quot;>
                   <Link
                     href=&quot;/contact&quot;
                     onClick={closeMenu}
-                    className=&quot;block w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white text-center rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-200&quot;
-=======
-                {_/* Mobile CTA */}
-                <div className="space-y-3 pt-4 border-t border-purple-500/20">
-                  <Link
-                    href="/contact"
-                    onClick={_closeMenu}
-                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white text-center rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-200"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  >
+                    className=&quot;block w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white text-center rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-200&quot;                  >
                     Get Started
                   </a>
                   <Link
-<<<<<<< HEAD
                     href=&quot;/pricing&quot;
                     onClick={closeMenu}
-                    className=&quot;block w-full px-6 py-3 border border-purple-500/30 text-purple-400 text-center rounded-lg hover:bg-purple-500/10 transition-all duration-200&quot;
-=======
-                    href="/pricing"
-                    onClick={_closeMenu}
-                    className="block w-full px-6 py-3 border border-purple-500/30 text-purple-400 text-center rounded-lg hover:bg-purple-500/10 transition-all duration-200"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  >
+                    className=&quot;block w-full px-6 py-3 border border-purple-500/30 text-purple-400 text-center rounded-lg hover:bg-purple-500/10 transition-all duration-200&quot;                  >
                     View Pricing
                   </a>
                 </div>
@@ -518,13 +307,7 @@ export default function UltraFuturisticNavigation2030() {_const [isOpen, _setIsO
         </AnimatePresence>
       </nav>
 
-<<<<<<< HEAD
       {/* Spacer for fixed navigation */}
-      <div className=&quot;h-20&quot;></div>
-=======
-      {_/* Spacer for fixed navigation */}
-      <div className="h-20"></div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    </>
+      <div className=&quot;h-20&quot;></div>    </>
   )
 }

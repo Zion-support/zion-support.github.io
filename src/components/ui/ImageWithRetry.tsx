@@ -1,31 +1,16 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import Image, { type ImageProps } from 'next/image',
 import { cn } from '@/lib/utils',
 interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {
   src: string,
-  alt?: string,
-=======
-import React, {_useState} from 'react';
-import Image, {_type ImageProps} from 'next/image';
-
-interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {_src: string;
-  alt?: string;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  /** Source to use if the main src fails */
+  alt?: string,  /** Source to use if the main src fails */
   fallbackSrc?: string,
   /** CSS class for the retry button */
-<<<<<<< HEAD
   retryClassName?: string
 }
-=======
-  retryClassName?: string;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 /**
  * Image component that falls back to a placeholder and offers a retry button when the image fails to load.
  */
-<<<<<<< HEAD
 export function ImageWithRetry({
   src,
   alt = '',
@@ -48,20 +33,6 @@ export function ImageWithRetry({
   },
 
   const fill = !('width' in props) && !('height' in props),
-=======
-export function ImageWithRetry(_{_src, _alt = '', _fallbackSrc = '/images/image-placeholder.svg', _className, _retryClassName, _...props}: ImageWithRetryProps) {_const [currentSrc, _setCurrentSrc] = useState(src);
-  const [failed, _setFailed] = useState(false);
-
-  const _handleError = () => {
-    setFailed(true);
-    setCurrentSrc(fallbackSrc);};
-
-  const _handleRetry = () => {_setFailed(false);
-    setCurrentSrc(src);};
-
-  const _fill = !('width' in props) && !('height' in props);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (
     <div className=&quot;relative inline-block&quot;>
       <Image

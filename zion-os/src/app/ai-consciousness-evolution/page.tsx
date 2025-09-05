@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 import Link from "next/link",
 export const metadata = {
   title: "AI Consciousness Evolution - Zion Tech Group",
   description: "Explore the frontier of artificial consciousness with our advanced AI systems that simulate and evolve cognitive processes.",
   keywords: "AI consciousness, artificial consciousness, cognitive AI, consciousness evolution, Zion Tech Group"},
-=======
-import Link from "next/link";
-
-export const _metadata = {_title: "AI Consciousness Evolution - Zion Tech Group", _description: "Explore the frontier of artificial consciousness with our advanced AI systems that simulate and evolve cognitive processes.", _keywords: "AI consciousness, _artificial consciousness, _cognitive AI, _consciousness evolution, _Zion Tech Group"};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default function AIConsciousnessEvolutionPage() {_return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">

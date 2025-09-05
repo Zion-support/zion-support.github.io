@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import { motion } from 'framer-motion',
 import { 
@@ -20,20 +19,6 @@ interface FooterSection {
   title: string,
   links: FooterLink[]
 }
-=======
-import React from 'react';
-import {_Mail, _Phone, _MapPin, _Globe, _Twitter, _Linkedin, _Github, _ArrowUp, _Crown, _Zap, _Brain, _Rocket, _Shield, _Users, _BookOpen, _Briefcase, _Atom} from 'lucide-react';
-import Link from 'next/link';
-
-interface FooterLink {_label: string;
-  href: string;
-  description?: string;
-  external?: boolean;}
-
-interface FooterSection {_title: string;
-  links: FooterLink[];}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 const footerSections: FooterSection[] = [
   {_title: 'Services', _links: [
       { label: 'AI & Machine Learning', _href: '/ai-services', _description: 'Advanced AI solutions'},
@@ -81,9 +66,7 @@ const footerSections: FooterSection[] = [
   }
 ],
 
-<<<<<<< HEAD
 const socialLinks = [
-<<<<<<< HEAD
   { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn', external: true },
   { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter', external: true },
   { icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup', label: 'GitHub', external: true }
@@ -97,27 +80,10 @@ const quickLinks = [
   { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4" /> },
   { name: 'Status', href: '/status', icon: <TrendingUp className="w-4 h-4" /> }
 ],
-=======
-  { icon: <Linkedin className=&quot;w-5 h-5&quot; />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn', external: true },
-  { icon: <Twitter className=&quot;w-5 h-5&quot; />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter', external: true },
-  { icon: <Github className=&quot;w-5 h-5&quot; />, href: 'https://github.com/ziontechgroup', label: 'GitHub', external: true }
-];
-
-const quickLinks = [
-  { name: 'About Us', href: '/about', icon: <Users className=&quot;w-4 h-4&quot; /> },
-  { name: 'Contact', href: '/contact', icon: <Phone className=&quot;w-4 h-4&quot; /> },
-  { name: 'Support', href: '/support', icon: <HelpCircle className=&quot;w-4 h-4&quot; /> },
-  { name: 'Documentation', href: '/docs', icon: <FileText className=&quot;w-4 h-4&quot; /> },
-  { name: 'API Reference', href: '/api', icon: <Code className=&quot;w-4 h-4&quot; /> },
-  { name: 'Status', href: '/status', icon: <TrendingUp className=&quot;w-4 h-4&quot; /> }
-];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   },
-=======
 const _socialLinks = [
   {_icon: <Linkedin className="w-5 h-5" />, _href: 'https://linkedin.com/company/ziontechgroup', _label: 'LinkedIn', _external: true},
   {_icon: <Twitter className="w-5 h-5" />, _href: 'https://twitter.com/ziontechgroup', _label: 'Twitter', _external: true},
@@ -136,7 +102,6 @@ const _quickLinks = [
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop = () => {
     window.scrollTo({ top: 0, _behavior: 'smooth'});
   };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   const _footerSections = [
     {_title: 'Services', _items: [
@@ -173,22 +138,12 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
     }
   ],
 
-<<<<<<< HEAD
   const socialLinks = [
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' },
     { icon: Globe, href: 'https://ziontechgroup.com', label: 'Website' }
   ],
-=======
-  const _socialLinks = [
-    {_icon: Twitter, _href: 'https://twitter.com/ziontechgroup', _label: 'Twitter'},
-    {_icon: Linkedin, _href: 'https://linkedin.com/company/ziontechgroup', _label: 'LinkedIn'},
-    {_icon: Github, _href: 'https://github.com/Zion-Holdings', _label: 'GitHub'},
-    {_icon: Globe, _href: 'https://ziontechgroup.com', _label: 'Website'}
-  ];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   const _containerVariants = {_hidden: { opacity: 0},
     visible: {_opacity: 1, _transition: {
         staggerChildren: 0.1}
@@ -202,7 +157,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
   },
 
   return (
-<<<<<<< HEAD
     <footer className=&quot;relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden&quot;>
       {/* Animated Background Elements */}
       <div className=&quot;absolute inset-0 -z-10&quot;>
@@ -222,29 +176,12 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
               delay: Math.random() * 8,
               ease: &quot;easeInOut&quot;
             }}
-            style={{
-=======
-    <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
-      {_/* Animated Background Elements */}
-      <div className="absolute inset-0 -z-10">
-        {_/* Quantum Particle Field */}
-        {_[...Array(30)].map(_(_, _i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
-            animate={_{
-              x: [0, _Math.random() * 1000, _0], _y: [0, _Math.random() * 1000, _0], _opacity: [0, _0.6, _0], _scale: [0, _1, _0]}}
-            transition={_{
-              duration: 15 + Math.random() * 10, _repeat: -1, _delay: Math.random() * 8, _ease: "easeInOut"}}
-            style={_{
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              left: `${Math.random() * 100}%`,
+            style={{              left: `${Math.random() * 100}%`,
               top: `${_Math.random() * 100}%`
             }}
           />
         ))}
         
-<<<<<<< HEAD
         {/* Gradient Overlays */}
         <div className=&quot;absolute inset-0 bg-gradient-to-t from-gray-900 via-purple-900/20 to-transparent&quot;></div>
         <div className=&quot;absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900&quot;></div>
@@ -265,31 +202,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
               <div className=&quot;flex items-center space-x-3 mb-6&quot;>
                 <div className=&quot;relative&quot;>
                   <div className=&quot;w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center&quot;>
-                    <Crown className=&quot;w-7 h-7 text-white&quot; />
-=======
-        {_/* Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-purple-900/20 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900"></div>
-      </div>
-
-      <div className="relative z-10">
-        {_/* Main Footer Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <motion.div
-            variants={_containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={_{ once: true}}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12"
-          >
-            {_/* Company Info */}
-            <motion.div variants={_itemVariants} className="lg:col-span-2">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center">
-                    <Crown className="w-7 h-7 text-white" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </div>
+                    <Crown className=&quot;w-7 h-7 text-white&quot; />                  </div>
                   <div className=&quot;absolute inset-0 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl blur-lg opacity-50&quot;></div>
                 </div>
                 <div>
@@ -310,18 +223,10 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                 We help businesses transform and thrive in the digital age.
               </p>
 
-<<<<<<< HEAD
               {/* Contact Info */}
               <div className=&quot;space-y-3&quot;>
                 <div className=&quot;flex items-center space-x-3 text-gray-300&quot;>
-                  <Phone className=&quot;w-4 h-4 text-cyan-400&quot; />
-=======
-              {_/* Contact Info */}
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Phone className="w-4 h-4 text-cyan-400" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  <span>+1 302 464 0950</span>
+                  <Phone className=&quot;w-4 h-4 text-cyan-400&quot; />                  <span>+1 302 464 0950</span>
                 </div>
                 <div className=&quot;flex items-center space-x-3 text-gray-300&quot;>
                   <Mail className=&quot;w-4 h-4 text-purple-400&quot; />
@@ -340,7 +245,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
               </div>
             </motion.div>
 
-<<<<<<< HEAD
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
               <motion.div key={section.title} variants={itemVariants}>
@@ -359,28 +263,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                         className=&quot;text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block&quot;
                       >
                         {item.label}
-                      </a>
-=======
-            {_/* Footer Sections */}
-            {_footerSections.map(_(section, _index) => (_<motion.div key={section.title} variants={_itemVariants}>
-                <h4 className="text-lg font-semibold text-white mb-6 flex items-center space-x-2">
-                  {_section.title === 'Services' && <Briefcase className="w-5 h-5 text-cyan-400" />}
-                  {_section.title === 'Solutions' && <Zap className="w-5 h-5 text-purple-400" />}
-                  {_section.title === 'Company' && <Users className="w-5 h-5 text-pink-400" />}
-                  {_section.title === 'Resources' && <BookOpen className="w-5 h-5 text-blue-400" />}
-                  <span>{_section.title}</span>
-                </h4>
-                <ul className="space-y-3">
-                  {_section.items.map((item) => (
-                    <li key={item.label}>
-                      <Link
-                        href={_item.href}
-                        className="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
-                      >
-                        {_item.label}
-                      </Link>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    </li>
+                      </a>                    </li>
                   ))}
                 </ul>
               </motion.div>
@@ -389,7 +272,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
 
           {_/* Social Links & Newsletter */}
           <motion.div
-<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -408,46 +290,16 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                     rel=&quot;noopener noreferrer&quot;
                     className=&quot;w-10 h-10 bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110&quot;
                     whileHover={{ y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-=======
-            initial={_{ opacity: 0, _y: 20}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.6}}
-            viewport={_{ once: true}}
-            className="mt-16 pt-12 border-t border-gray-800/50"
-          >
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-              {_/* Social Links */}
-              <div className="flex items-center space-x-6">
-                <span className="text-gray-400 font-medium">Follow Us:</span>
-                {_socialLinks.map(_(social) => (
-                  <motion.a
-                    key={social.label}
-                    href={_social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110"
-                    whileHover={_{ y: -2}}
-                    whileTap={_{ scale: 0.95}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  >
+                    whileTap={{ scale: 0.95 }}                  >
                     <social.icon className=&quot;w-5 h-5&quot; />
                   </motion.a>
                 ))}
               </div>
 
-<<<<<<< HEAD
               {/* Newsletter Signup */}
               <div className=&quot;flex-1 max-w-md&quot;>
                 <h5 className=&quot;text-lg font-semibold text-white mb-3&quot;>Stay Updated</h5>
-                <p className=&quot;text-gray-400 text-sm mb-4&quot;>
-=======
-              {_/* Newsletter Signup */}
-              <div className="flex-1 max-w-md">
-                <h5 className="text-lg font-semibold text-white mb-3">Stay Updated</h5>
-                <p className="text-gray-400 text-sm mb-4">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  Get the latest insights on AI consciousness, quantum computing, and future technology.
+                <p className=&quot;text-gray-400 text-sm mb-4&quot;>                  Get the latest insights on AI consciousness, quantum computing, and future technology.
                 </p>
                 <div className=&quot;flex space-x-2&quot;>
                   <input
@@ -456,16 +308,9 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                     className=&quot;flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent&quot;
                   />
                   <motion.button
-<<<<<<< HEAD
                     className=&quot;px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200&quot;
                     whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-=======
-                    className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
-                    whileHover={_{ scale: 1.05}}
-                    whileTap={_{ scale: 0.95}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  >
+                    whileTap={{ scale: 0.95 }}                  >
                     Subscribe
                   </motion.button>
                 </div>
@@ -476,20 +321,11 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
 
         {_/* Bottom Bar */}
         <motion.div
-<<<<<<< HEAD
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className=&quot;border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl&quot;
-=======
-          initial={_{ opacity: 0}}
-          whileInView={_{ opacity: 1}}
-          transition={_{ duration: 0.6}}
-          viewport={_{ once: true}}
-          className="border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        >
+          className=&quot;border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl&quot;        >
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6&quot;>
             <div className=&quot;flex flex-col md:flex-row items-center justify-between gap-4&quot;>
               <div className=&quot;text-gray-400 text-sm&quot;>
@@ -526,24 +362,13 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
 
       {_/* Scroll to Top Button */}
       <motion.button
-<<<<<<< HEAD
         onClick={scrollToTop}
         className=&quot;fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50&quot;
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3, delay: 1 }}
-=======
-        onClick={_scrollToTop}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50"
-        whileHover={_{ scale: 1.1, _y: -2}}
-        whileTap={_{ scale: 0.9}}
-        initial={_{ opacity: 0, _scale: 0}}
-        animate={_{ opacity: 1, _scale: 1}}
-        transition={_{ duration: 0.3, _delay: 1}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      >
+        transition={{ duration: 0.3, delay: 1 }}      >
         <ArrowUp className=&quot;w-6 h-6 mx-auto&quot; />
       </motion.button>
     </footer>

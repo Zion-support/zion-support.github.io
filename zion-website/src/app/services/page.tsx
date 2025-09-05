@@ -64,8 +64,7 @@ export default function ServicesPage() {
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Comprehensive AI and technology solutions designed to transform your business 
-              and accelerate innovation across all industries.
-            </p>
+              and accelerate innovation across all industries.            </p>
           </div>
         </div>
       </div>
@@ -98,8 +97,7 @@ export default function ServicesPage() {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
+            </div>          </div>
         </div>
       </div>
     </div>

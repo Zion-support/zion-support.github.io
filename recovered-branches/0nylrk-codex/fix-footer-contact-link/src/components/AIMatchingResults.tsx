@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { MatchResultItem } from "@/lib/ai-matchmaking",
 import { Card, CardContent } from "@/components/ui/card",
@@ -8,20 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",
 import { Skeleton } from "@/components/ui/skeleton",
-import { cn } from "@/lib/utils",
-=======
-import { useState } from &quot;react&quot;;
-import { MatchResultItem } from &quot;@/lib/ai-matchmaking&quot;;
-import { Card, CardContent } from &quot;@/components/ui/card&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { Avatar, AvatarFallback, AvatarImage } from &quot;@/components/ui/avatar&quot;;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
-import { BarChart3, BriefcaseIcon, Monitor, User } from &quot;@/components/icons&quot;;
-import { Skeleton } from &quot;@/components/ui/skeleton&quot;;
-import { cn } from &quot;@/lib/utils&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface AIMatchingResultsProps {
+import { cn } from "@/lib/utils",interface AIMatchingResultsProps {
   matches: MatchResultItem[],
   onSelectMatch?: (match: MatchResultItem) => void,
   isLoading?: boolean,
@@ -36,16 +21,10 @@ export function AIMatchingResults({
   projectDescription = "&quot;,
   serviceType: _serviceType = "&quot;
 }: AIMatchingResultsProps) {
-<<<<<<< HEAD
-  const [activeTab, setActiveTab] = useState("all"),
-=======
-  const [activeTab, setActiveTab] = useState(&quot;all&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  
+  const [activeTab, setActiveTab] = useState("all"),  
   // Group matches by category
   const categories = {
     all: matches,
-<<<<<<< HEAD
     talent: matches.filter(match => match.category.toLowerCase().includes("talent")),
     services: matches.filter(match => match.category.toLowerCase().includes("service")),
     equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
@@ -57,22 +36,7 @@ export function AIMatchingResults({
     if (lowerCategory.includes("talent")) return User,
     if (lowerCategory.includes("equipment")) return Monitor,
     return BriefcaseIcon
-  },
-=======
-    talent: matches.filter(match => match.category.toLowerCase().includes(&quot;talent&quot;)),
-    services: matches.filter(match => match.category.toLowerCase().includes(&quot;service&quot;)),
-    equipment: matches.filter(match => match.category.toLowerCase().includes(&quot;equipment&quot;))
-  };
-  
-  // Get the icon for a category
-  const getCategoryIcon = (category: string) => {
-    const lowerCategory = category.toLowerCase();
-    if (lowerCategory.includes(&quot;talent&quot;)) return User;
-    if (lowerCategory.includes(&quot;equipment&quot;)) return Monitor;
-    return BriefcaseIcon;
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  
+  },  
   if (isLoading) {
     return (
       <div className=&quot;space-y-4&quot;>
@@ -93,7 +57,6 @@ export function AIMatchingResults({
           <BarChart3 className=&quot;h-12 w-12 mx-auto text-zion-slate-light mb-3&quot; />
           <p className=&quot;text-white font-medium mb-2&quot;>No matches found</p>
           <p className=&quot;text-zion-slate-light text-sm mb-4&quot;>
-=======
 
 interface AIMatchingResultsProps {_matches: MatchResultItem[];
   onSelectMatch?: (_match: MatchResultItem) => void;
@@ -130,7 +93,6 @@ export function AIMatchingResults(_{_matches, _onSelectMatch, _isLoading = false
           <BarChart3 className="h-12 w-12 mx-auto text-zion-slate-light mb-3" />
           <p className="text-white font-medium mb-2">No matches found</p>
           <p className="text-zion-slate-light text-sm mb-4">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             Try adjusting your search criteria or description for better results.
           </p>
           {projectDescription && (
@@ -145,7 +107,6 @@ export function AIMatchingResults(_{_matches, _onSelectMatch, _isLoading = false
   }
   
   return (
-<<<<<<< HEAD
     <div className=&quot;space-y-4&quot;>
       <Tabs defaultValue=&quot;all&quot; value={activeTab} onValueChange={setActiveTab} className=&quot;w-full&quot;>
         <TabsList className=&quot;bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full&quot;>
@@ -184,46 +145,7 @@ export function AIMatchingResults(_{_matches, _onSelectMatch, _isLoading = false
                       <div className=&quot;flex-1 p-4&quot;>
                         <div className=&quot;flex items-start gap-4&quot;>
                           <Avatar className=&quot;h-12 w-12 border border-zion-blue-light&quot;>
-                            {match.image ? (
-=======
-    <div className="space-y-4">
-      <Tabs defaultValue="all" value={_activeTab} onValueChange={_setActiveTab} className="w-full">
-        <TabsList className="bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full">
-          <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple/20">
-            All ({_categories.all.length})
-          </TabsTrigger>
-          <TabsTrigger value="talent" className="data-[state=active]:bg-zion-purple/20">
-            Talent ({_categories.talent.length})
-          </TabsTrigger>
-          <TabsTrigger value="services" className="data-[state=active]:bg-zion-purple/20">
-            Services ({_categories.services.length})
-          </TabsTrigger>
-          <TabsTrigger value="equipment" className="data-[state=active]:bg-zion-purple/20">
-            Equipment ({_categories.equipment.length})
-          </TabsTrigger>
-        </TabsList>
-        
-        {_Object.entries(categories).map(_([tab, _items]) => (_<TabsContent key={tab} value={_tab} className="mt-4 space-y-3">
-            {_items.length > 0 ? (
-              items.map((match) => {
-                const _CategoryIcon = getCategoryIcon(match.category);
-                return (_<Card 
-                    key={match.id}
-                    className="bg-zion-blue-dark border-zion-blue-light overflow-hidden transition-all hover:border-zion-purple/50 cursor-pointer"
-                    onClick={_() => onSelectMatch && onSelectMatch(match)}
-                  >
-                    <div className="flex">
-                      <div className={_cn(
-                        "w-2", _match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" : 
-                        match.category.toLowerCase().includes("service") ? "bg-zion-purple" : 
-                        "bg-green-500"
-                      )} />
-                      <div className="flex-1 p-4">
-                        <div className="flex items-start gap-4">
-                          <Avatar className="h-12 w-12 border border-zion-blue-light">
-                            {_match.image ? (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                              <AvatarImage src={match.image} />
+                            {match.image ? (                              <AvatarImage src={match.image} />
                             ) : (
                               <AvatarFallback className=&quot;bg-zion-purple/20&quot;>
                                 <CategoryIcon className=&quot;h-6 w-6 text-zion-purple&quot; />
@@ -234,7 +156,6 @@ export function AIMatchingResults(_{_matches, _onSelectMatch, _isLoading = false
                           <div className=&quot;flex-1&quot;>
                             <div className=&quot;flex justify-between&quot;>
                               <div>
-<<<<<<< HEAD
                                 <h3 className=&quot;font-medium text-white&quot;>{match.title}</h3>
                                 <p className=&quot;text-zion-slate-light text-sm&quot;>{match.description}</p>
                               </div>
@@ -242,40 +163,18 @@ export function AIMatchingResults(_{_matches, _onSelectMatch, _isLoading = false
                                 <div className=&quot;text-right ml-2&quot;>
                                   <div className=&quot;font-medium text-white&quot;>${match.price}</div>
                                   <div className=&quot;text-xs text-zion-slate-light&quot;>
-                                    {match.category.toLowerCase().includes(&quot;talent&quot;) ? &quot;/hour&quot; : ""}
-=======
-                                <h3 className="font-medium text-white">{_match.title}</h3>
-                                <p className="text-zion-slate-light text-sm">{_match.description}</p>
-                              </div>
-                              {_match.price && (
-                                <div className="text-right ml-2">
-                                  <div className="font-medium text-white">${match.price}</div>
-                                  <div className="text-xs text-zion-slate-light">
-                                    {_match.category.toLowerCase().includes("talent") ? "/hour" : ""}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                                  </div>
+                                    {match.category.toLowerCase().includes(&quot;talent&quot;) ? &quot;/hour&quot; : ""}                                  </div>
                                 </div>
                               )}
                             </div>
                             
-<<<<<<< HEAD
                             <div className="mt-2 flex flex-wrap gap-1&quot;>
                               <Badge variant=&quot;outline" className="text-xs bg-zion-blue text-zion-cyan border-zion-cyan/30&quot;>
                                 {match.category}
                               </Badge>
                               {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (
                                 <Badge key={i} variant=&quot;outline" className="text-xs bg-zion-blue-dark text-white border-zion-blue-light">
-                                  {skill}
-=======
-                            <div className="mt-2 flex flex-wrap gap-1">
-                              <Badge variant="outline" className="text-xs bg-zion-blue text-zion-cyan border-zion-cyan/30">
-                                {_match.category}
-                              </Badge>
-                              {_match.skills && match.skills.slice(0, _3).map(_(skill: string, _i: number) => (
-                                <Badge key={i} variant="outline" className="text-xs bg-zion-blue-dark text-white border-zion-blue-light">
-                                  {_skill}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                                </Badge>
+                                  {skill}                                </Badge>
                               ))}
                             </div>
                           </div>

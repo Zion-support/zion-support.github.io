@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Package, RefreshCw } from 'lucide-react'
 import { Button } from './button',
 interface EmptyStateProps {
@@ -10,12 +9,7 @@ interface EmptyStateProps {
 }
 
 export function EmptyState({ 
-<<<<<<< HEAD
-  text = "No items available",
-=======
-  text = &quot;No items available&quot;, 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  description,
+  text = "No items available",  description,
   onRetry,
   showRetry = false,
   icon
@@ -30,7 +24,6 @@ export function EmptyState({
       </h3>
       {description && (
         <p className=&quot;text-gray-400 mb-6 max-w-md&quot;>
-=======
 
 interface EmptyStateProps {_text?: string;
   description?: string;
@@ -48,7 +41,6 @@ export function EmptyState(_{_text = "No items available", _description, _onRetr
       </h3>
       {_description && (
         <p className="text-gray-400 mb-6 max-w-md">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           {description}
         </p>
       )}

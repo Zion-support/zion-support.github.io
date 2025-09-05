@@ -1,17 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge",
 import { Crown, Medal, Trophy } from "lucide-react",
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Avatar, AvatarFallback, AvatarImage } from &quot;@/components/ui/avatar&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { Crown, Medal, Trophy } from &quot;lucide-react&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 interface LeaderboardEntry {
   id: string,
   rank: number,
@@ -21,7 +12,6 @@ interface LeaderboardEntry {
   earnings: number,
   badges: string[]
 }
-=======
 
 interface LeaderboardEntry {_id: string;
   rank: number;
@@ -30,12 +20,10 @@ interface LeaderboardEntry {_id: string;
   referrals: number;
   earnings: number;
   badges: string[];}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 export function PartnerLeaderboard() {_// Placeholder data - would come from API in real implementation
   const leaderboard: LeaderboardEntry[] = [
     {
-<<<<<<< HEAD
       id: &quot;1&quot;,
       rank: 1,
       name: &quot;AI Tech Guru&quot;,
@@ -80,17 +68,7 @@ export function PartnerLeaderboard() {_// Placeholder data - would come from API
       earnings: 2175,
       badges: [&quot;newcomer"]
     }
-  ],
-=======
-      id: "1", _rank: 1, _name: "AI Tech Guru", _avatar: "", _// window.URL would be here
-      referrals: 178, _earnings: 4500, _badges: ["gold", _"trending"]},
-    {_id: "2", _rank: 2, _name: "Machine Learning Hub", _avatar: "", _referrals: 145, _earnings: 3625, _badges: ["silver"]},
-    {_id: "3", _rank: 3, _name: "Neural Networks Pro", _avatar: "", _referrals: 124, _earnings: 3100, _badges: ["bronze"]},
-    {_id: "4", _rank: 4, _name: "AI Career Insights", _avatar: "", _referrals: 98, _earnings: 2450, _badges: []},
-    {_id: "5", _rank: 5, _name: "Deep Learning Daily", _avatar: "", _referrals: 87, _earnings: 2175, _badges: ["newcomer"]}
-  ];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  
+  ],  
   // Function to render rank badge
   const _renderRankBadge = (_rank: number) => {_switch(rank) {
       case 1:
@@ -144,7 +122,6 @@ export function PartnerLeaderboard() {_// Placeholder data - would come from API
                       <div className="font-semibold text-white">${_entry.earnings}</div>
                       <div className="text-xs text-zion-slate-light">earned</div>
                     </div>
-<<<<<<< HEAD
                     <div className="flex gap-1&quot;>
                       {entry.badges.includes(&quot;gold&quot;) && (
                         <Badge variant=&quot;outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400&quot;>
@@ -152,18 +129,7 @@ export function PartnerLeaderboard() {_// Placeholder data - would come from API
                         </Badge>
                       )}
                       {entry.badges.includes(&quot;trending&quot;) && (
-                        <Badge variant=&quot;outline" className="bg-blue-500/20 border-blue-500 text-blue-400">
-=======
-                    <div className="flex gap-1">
-                      {_entry.badges.includes("gold") && (
-                        <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">
-                          Elite
-                        </Badge>
-                      )}
-                      {_entry.badges.includes("trending") && (
-                        <Badge variant="outline" className="bg-blue-500/20 border-blue-500 text-blue-400">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                          Trending
+                        <Badge variant=&quot;outline" className="bg-blue-500/20 border-blue-500 text-blue-400">                          Trending
                         </Badge>
                       )}
                     </div>

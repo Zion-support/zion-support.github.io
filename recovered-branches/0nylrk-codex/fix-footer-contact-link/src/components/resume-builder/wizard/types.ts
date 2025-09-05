@@ -1,12 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Resume } from "@/types/resume",
-=======
-import { Resume } from &quot;@/types/resume&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export interface StepProps {
+import { Resume } from "@/types/resume",export interface StepProps {
   id: string,
   label: string
 }
@@ -34,7 +27,6 @@ export interface CreateResumeFormProps {
 export interface EmptyResumeProps {
   onCreateClick: () => void
 }
-=======
 
 export interface StepProps {_id: string;
   label: string;}
@@ -54,4 +46,3 @@ export interface CreateResumeFormProps {_onCreateResume: (_title: string) => Pro
   isLoading: boolean;}
 
 export interface EmptyResumeProps {_onCreateClick: () => void;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

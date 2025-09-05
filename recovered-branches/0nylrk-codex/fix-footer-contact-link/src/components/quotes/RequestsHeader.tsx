@@ -1,27 +1,13 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
-import { Badge } from "@/components/ui/badge",
-=======
-import React from &quot;react&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import { 
+import { Badge } from "@/components/ui/badge",import { 
   Select,
   SelectContent, 
   SelectItem, 
   SelectTrigger, 
   SelectValue 
-<<<<<<< HEAD
 } from "@/components/ui/select",
-import type { QuoteStatus } from "@/types/quotes",
-=======
-} from &quot;@/components/ui/select&quot;;
-import type { QuoteStatus } from &quot;@/types/quotes&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-type RequestsHeaderProps = {
+import type { QuoteStatus } from "@/types/quotes",type RequestsHeaderProps = {
   unreadCount: number,
   statusFilter: QuoteStatus | 'all',
   setStatusFilter: (value: QuoteStatus | 'all') => void,
@@ -38,20 +24,18 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
 }) => {
   return (
     <div className=&quot;flex flex-col md:flex-row justify-between items-start md:items-center mb-8&quot;>
-=======
 import React from "react";
-import {_Select, _SelectContent, _SelectItem, _SelectTrigger, _SelectValue} from "@/components/ui/select";
-import type {_QuoteStatus} from "@/types/quotes";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import type {QuoteStatus} from "@/types/quotes";
 
-type RequestsHeaderProps = {_unreadCount: number;
+type RequestsHeaderProps = {unreadCount: number,
   statusFilter: QuoteStatus | 'all';
-  setStatusFilter: (_value: QuoteStatus | 'all') => void;
+  setStatusFilter: (value: QuoteStatus | 'all') => void;
   archiveFilter: 'active' | 'archived' | 'all';
-  setArchiveFilter: (_value: 'active' | 'archived' | 'all') => void;};
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void};
 
-export const RequestsHeader: React.FC<RequestsHeaderProps> = (_{_unreadCount, _statusFilter, _setStatusFilter, _archiveFilter, _setArchiveFilter}) => {_return (
+export const RequestsHeader: React.FC<RequestsHeaderProps> = (_{unreadCount, statusFilter, setStatusFilter, archiveFilter, setArchiveFilter}) => {return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <div>
         <div className=&quot;flex items-center gap-3&quot;>
           <h1 className=&quot;text-3xl font-bold text-white&quot;>Hire Requests</h1>
@@ -67,9 +51,9 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = (_{_unreadCount, _s
       </div>
       
       <div className=&quot;flex gap-3 mt-4 md:mt-0&quot;>
-        <Select 
-          value={_statusFilter} 
-          onValueChange={_(_value) => setStatusFilter(value as QuoteStatus | 'all')}
+        <Select,
+value={statusFilter} 
+          onValueChange={_(value) => setStatusFilter(value as QuoteStatus | 'all')}
         >
           <SelectTrigger className=&quot;bg-zion-blue-dark border-zion-blue-light text-white w-[140px]&quot;>
             <SelectValue placeholder=&quot;All Statuses&quot; />
@@ -77,16 +61,16 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = (_{_unreadCount, _s
           <SelectContent>
             <SelectItem value=&quot;all&quot;>All Statuses</SelectItem>
             <SelectItem value=&quot;new&quot;>New</SelectItem>
-            <SelectItem value=&quot;in_review&quot;>In Review</SelectItem>
+            <SelectItem value=&quot;inreview&quot;>In Review</SelectItem>
             <SelectItem value=&quot;responded&quot;>Responded</SelectItem>
             <SelectItem value=&quot;accepted&quot;>Accepted</SelectItem>
             <SelectItem value=&quot;closed&quot;>Closed</SelectItem>
           </SelectContent>
         </Select>
         
-        <Select 
-          value={_archiveFilter} 
-          onValueChange={_(_value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
+        <Select,
+value={archiveFilter} 
+          onValueChange={_(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
         >
           <SelectTrigger className=&quot;bg-zion-blue-dark border-zion-blue-light text-white w-[140px]&quot;>
             <SelectValue placeholder=&quot;Active Only&quot; />

@@ -1,25 +1,12 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
-import { ShieldAlert } from "lucide-react",
-=======
-import { Link } from &quot;react-router-dom&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Header } from &quot;@/components/Header&quot;;
-import { Footer } from &quot;@/components/Footer&quot;;
-import { ShieldAlert } from &quot;lucide-react&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export default function Unauthorized() {
+import { ShieldAlert } from "lucide-react",export default function Unauthorized() {
   return (
-=======
 
 export default function Unauthorized() {_return (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <>
       <Header />
       <div className=&quot;min-h-screen bg-zion-blue flex flex-col items-center justify-center px-4 py-12&quot;>
@@ -35,14 +22,8 @@ export default function Unauthorized() {_return (
           </p>
           <div className=&quot;flex flex-col gap-3&quot;>
             <Link
-<<<<<<< HEAD
               to="/"
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
-=======
-              to=&quot;/&quot;
-              className=&quot;w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-            >
+              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"            >
               Return to Home
             </Link>
             <Link
@@ -56,9 +37,5 @@ export default function Unauthorized() {_return (
       </div>
       <Footer />
     </>
-<<<<<<< HEAD
   )
 }
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

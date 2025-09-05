@@ -1,16 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { TalentProfile } from "@/types/talent",
-=======
-import { TalentProfile } from &quot;@/types/talent&quot;;
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
-<<<<<<< HEAD
   {
     id: &quot;t-001&quot;,
     user_id: &quot;user-001&quot;,
@@ -320,79 +311,6 @@ export const TALENT_PROFILES: TalentProfile[] = [
       {
         title: &quot;Cancer Treatment Response Prediction&quot;,
         description: &quot;Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.&quot;
-      }
-=======
-  {_id: "t-001", _user_id: "user-001", _full_name: "Alexandra Chen", _professional_title: "Senior AI Engineer & Machine Learning Expert", _profile_picture_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200", _bio: "AI specialist with over 8 years of experience in computer vision and natural language processing. I've designed and implemented machine learning solutions for Fortune 500 companies across healthcare, _finance, _and retail sectors.", _location: "Boston, _MA", _skills: ["Machine Learning", _"TensorFlow", _"Python", _"Computer Vision", _"NLP", _"Data Science", _"PyTorch", _"Deep Learning"], _hourly_rate: 150, _years_experience: 8, _average_rating: 4.9, _rating_count: 43, _availability_type: "full_time", _is_verified: true, _key_projects: [
-      {
-        title: "Facial Recognition System", _description: "Built a state-of-the-art facial recognition system using deep learning for a major retail chain, _improving security protocols and reducing losses by 32%."},
-      {_title: "Sentiment Analysis API", _description: "Created an API for real-time sentiment analysis of customer feedback, _processing over 50, _000 reviews daily with 94% accuracy."}
-    ]
-  },
-  {_id: "t-002", _user_id: "user-002", _full_name: "Michael Reynolds", _professional_title: "DevOps Specialist & Cloud Architect", _profile_picture_url: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=200&h=200", _bio: "Infrastructure automation expert with 10+ years of experience in containerization, _CI/CD pipelines, _and cloud-native architectures. I specialize in designing and implementing scalable, _resilient, _and secure cloud infrastructure on AWS, _Azure, _and GCP.", _location: "Chicago, _IL", _skills: ["Kubernetes", _"Docker", _"AWS", _"Terraform", _"CI/CD", _"Azure", _"Python", _"Infrastructure as Code"], _hourly_rate: 135, _years_experience: 10, _average_rating: 4.8, _rating_count: 37, _availability_type: "part_time", _is_verified: true, _key_projects: [
-      {
-        title: "Cloud Migration & Modernization", _description: "Led migration of a legacy monolithic application to a microservices architecture on AWS, _reducing operational costs by 40% and improving deployment frequency."},
-      {_title: "DevOps Automation Pipeline", _description: "Implemented comprehensive CI/CD pipelines using GitHub Actions, _reducing deployment time from days to minutes and enabling 20+ deployments per day."}
-    ]
-  },
-  {_id: "t-003", _user_id: "user-003", _full_name: "Priya Sharma", _professional_title: "Data Scientist & Statistical Analyst", _profile_picture_url: "https://images.unsplash.com/photo-1580489944761-15a19d654955?auto=format&fit=crop&w=200&h=200", _bio: "PhD in Statistics with extensive experience in predictive modeling, _data visualization, _and business intelligence solutions. My work focuses on extracting actionable insights from complex datasets and developing statistical models that drive business decisions.", _location: "Seattle, _WA", _skills: ["Statistical Analysis", _"Python", _"R", _"Tableau", _"SQL", _"Machine Learning", _"Data Visualization", _"Predictive Modeling"], _hourly_rate: 145, _years_experience: 7, _average_rating: 4.9, _rating_count: 29, _availability_type: "project", _is_verified: false, _key_projects: [
-      {
-        title: "Customer Segmentation Analysis", _description: "Conducted advanced customer segmentation for an e-commerce client, _leading to targeted marketing campaigns that increased conversion rates by 35%."},
-      {_title: "Sales Forecasting Model", _description: "Developed time series forecasting models to predict seasonal sales patterns, _resulting in 22% improvement in inventory management."}
-    ]
-  },
-  {_id: "t-004", _user_id: "user-004", _full_name: "James Wilson", _professional_title: "Cybersecurity Expert & Ethical Hacker", _profile_picture_url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200", _bio: "CISSP-certified security professional with 10+ years of experience in threat detection, _incident response, _and security architecture. I specialize in conducting penetration tests, _security assessments, _and implementing robust security controls across enterprise environments.", _location: "Austin, _TX", _skills: ["Penetration Testing", _"Security Analysis", _"CISSP", _"Risk Management", _"Network Security", _"Incident Response", _"Security Architecture", _"Cloud Security"], _hourly_rate: 165, _years_experience: 12, _average_rating: 4.7, _rating_count: 31, _availability_type: "full_time", _is_verified: true, _key_projects: [
-      {
-        title: "Enterprise Security Assessment", _description: "Conducted comprehensive security assessment for a financial institution, _identifying and mitigating 24 critical vulnerabilities before they could be exploited."},
-      {_title: "Security Operations Center Design", _description: "Designed and implemented a 24/7 security operations center for a healthcare provider, _ensuring HIPAA compliance and protection of patient data."}
-    ]
-  },
-  {_id: "t-005", _user_id: "user-005", _full_name: "David Martinez", _professional_title: "Full-Stack Developer & React Expert", _profile_picture_url: "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&w=200&h=200", _bio: "Full-stack developer with 7+ years of experience specializing in React, _Node.js, _and modern JavaScript frameworks. I build scalable, _responsive, _and user-friendly web applications with a focus on performance optimization and clean code.", _location: "Miami, _FL", _skills: ["React", _"Node.js", _"TypeScript", _"MongoDB", _"GraphQL", _"Next.js", _"Redux", _"AWS"], _hourly_rate: 125, _years_experience: 7, _average_rating: 4.8, _rating_count: 42, _availability_type: "part_time", _is_verified: false, _key_projects: [
-      {
-        title: "E-Commerce Platform", _description: "Developed a responsive e-commerce platform using React and Node.js, _with features including user authentication, _product catalog, _shopping cart, _and payment integration."},
-      {_title: "Real-Time Analytics Dashboard", _description: "Built a real-time analytics dashboard using React, _Socket.io, _and D3.js, _allowing clients to monitor business metrics with live updates and interactive visualizations."}
-    ]
-  },
-  {_id: "t-006", _user_id: "user-006", _full_name: "Sarah Johnson", _professional_title: "AI Ethics Consultant & Policy Advisor", _profile_picture_url: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200", _bio: "Former tech policy advisor with expertise in AI ethics, _governance frameworks, _and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, _ensuring fair and transparent use of machine learning technologies.", _location: "Washington, _DC", _skills: ["AI Ethics", _"Policy Development", _"Risk Assessment", _"Governance", _"Responsible AI", _"Compliance", _"Stakeholder Engagement", _"Research"], _hourly_rate: 180, _years_experience: 9, _average_rating: 4.9, _rating_count: 21, _availability_type: "project", _is_verified: true, _key_projects: [
-      {
-        title: "Ethical AI Framework", _description: "Developed a comprehensive ethical AI framework for a Fortune 100 company, _establishing guidelines for responsible AI development and governance across their global operations."},
-      {_title: "Algorithmic Impact Assessment", _description: "Conducted algorithmic impact assessments for public sector AI systems, _ensuring fairness, _transparency, _and compliance with emerging regulatory requirements."}
-    ]
-  },
-  {_id: "t-007", _user_id: "user-007", _full_name: "Daniel Kim", _professional_title: "Computer Vision Engineer & Deep Learning Specialist", _profile_picture_url: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200", _bio: "Computer vision engineer with expertise in developing advanced visual recognition systems using deep learning. My work spans object detection, _image classification, _and video analysis for applications in retail, _manufacturing, _and autonomous systems.", _location: "San Francisco, _CA", _skills: ["Computer Vision", _"PyTorch", _"TensorFlow", _"Object Detection", _"Image Processing", _"C++", _"CUDA", _"Edge AI"], _hourly_rate: 155, _years_experience: 6, _average_rating: 4.7, _rating_count: 26, _availability_type: "full_time", _is_verified: true, _key_projects: [
-      {
-        title: "Retail Analytics System", _description: "Built a computer vision system for retail stores that analyzes customer behavior, _tracks inventory, _and provides real-time insights, _increasing conversion rates by 18%."},
-      {_title: "Manufacturing Defect Detection", _description: "Developed an automated visual inspection system that identifies manufacturing defects with 99.7% accuracy, _reducing quality control costs by 45%."}
-    ]
-  },
-  {_id: "t-008", _user_id: "user-008", _full_name: "Olivia Rodriguez", _professional_title: "Natural Language Processing Researcher", _profile_picture_url: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200", _bio: "PhD in Computational Linguistics with 8+ years of experience in NLP research and applications. I specialize in sentiment analysis, _text generation, _language understanding, _and multilingual NLP systems for enterprise applications.", _location: "Montreal, _Canada", _skills: ["Natural Language Processing", _"BERT", _"Transformers", _"GPT", _"Python", _"Hugging Face", _"Language Models", _"Sentiment Analysis"], _hourly_rate: 160, _years_experience: 8, _average_rating: 4.8, _rating_count: 34, _availability_type: "part_time", _is_verified: true, _key_projects: [
-      {
-        title: "Multilingual Customer Service AI", _description: "Developed an NLP system supporting 14 languages for customer service applications, _reducing response times by 62% and improving customer satisfaction scores."},
-      {_title: "Sentiment Analysis for Social Listening", _description: "Created advanced sentiment analysis models for brand monitoring across social media platforms with nuanced emotion detection and competitor analysis."}
-    ]
-  },
-  {_id: "t-009", _user_id: "user-009", _full_name: "Robert Zhang", _professional_title: "Quantum Machine Learning Researcher", _profile_picture_url: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=200&h=200", _bio: "Quantum computing researcher with focus on quantum machine learning algorithms and applications. My work bridges the gap between quantum computing theory and practical machine learning implementations for complex optimization problems.", _location: "Toronto, _Canada", _skills: ["Quantum Computing", _"Quantum Machine Learning", _"Qiskit", _"PennyLane", _"Linear Algebra", _"Python", _"TensorFlow Quantum", _"Optimization"], _hourly_rate: 190, _years_experience: 5, _average_rating: 4.9, _rating_count: 17, _availability_type: "project", _is_verified: false, _key_projects: [
-      {
-        title: "Quantum Portfolio Optimization", _description: "Implemented quantum algorithms for financial portfolio optimization, _achieving a 27% improvement in risk-adjusted returns compared to classical methods."},
-      {_title: "Quantum ML for Drug Discovery", _description: "Applied quantum machine learning techniques to accelerate pharmaceutical drug discovery processes, _reducing computational time for molecular simulations by 65%."}
-    ]
-  },
-  {_id: "t-010", _user_id: "user-010", _full_name: "Emma Taylor", _professional_title: "AI Product Manager & Strategy Consultant", _profile_picture_url: "https://images.unsplash.com/photo-1573497019236-61938a1a2cd2?auto=format&fit=crop&w=200&h=200", _bio: "Experienced product manager specializing in AI products and services. I bridge the gap between technical AI capabilities and business value, _helping organizations define, _develop, _and deploy impactful machine learning solutions.", _location: "London, _UK", _skills: ["Product Management", _"AI Strategy", _"User Research", _"Go-to-Market", _"Agile", _"Analytics", _"Stakeholder Management", _"Product Roadmap"], _hourly_rate: 140, _years_experience: 9, _average_rating: 4.8, _rating_count: 39, _availability_type: "full_time", _is_verified: true, _key_projects: [
-      {
-        title: "AI-Powered CRM Enhancement", _description: "Led product development for an AI enhancement to a major CRM platform, _increasing sales team productivity by 32% and improving lead conversion rates by 28%."},
-      {_title: "Predictive Analytics Platform", _description: "Developed product strategy and roadmap for a B2B predictive analytics platform, _growing client base by 215% within 18 months of launch."}
-    ]
-  },
-  {_id: "t-011", _user_id: "user-011", _full_name: "Marcus Johnson", _professional_title: "Reinforcement Learning Engineer", _profile_picture_url: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200", _bio: "Specialist in reinforcement learning with applications in robotics, _autonomous systems, _and optimization problems. I develop RL algorithms that enable systems to learn optimal behaviors through interaction with their environment.", _location: "Berlin, _Germany", _skills: ["Reinforcement Learning", _"Deep RL", _"PyTorch", _"TensorFlow", _"Robotics", _"Simulation", _"OpenAI Gym", _"Multi-agent Systems"], _hourly_rate: 150, _years_experience: 6, _average_rating: 4.7, _rating_count: 23, _availability_type: "part_time", _is_verified: true, _key_projects: [
-      {
-        title: "Autonomous Warehouse Robots", _description: "Designed reinforcement learning algorithms for a fleet of autonomous warehouse robots, _improving picking efficiency by 42% and reducing errors by 67%."},
-      {_title: "Energy Optimization System", _description: "Developed an RL-based system for optimizing energy consumption in large commercial buildings, _reducing energy costs by 29% while maintaining comfort levels."}
-    ]
-  },
-  {_id: "t-012", _user_id: "user-012", _full_name: "Sophia Lee", _professional_title: "Healthcare AI Specialist & Medical Imaging Expert", _profile_picture_url: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200", _bio: "Medical imaging specialist with expertise in applying AI to healthcare challenges. I develop deep learning solutions for medical image analysis, _diagnostics, _and personalized treatment planning in clinical settings.", _location: "Boston, _MA", _skills: ["Medical Imaging", _"Healthcare AI", _"Deep Learning", _"CNN", _"PyTorch", _"DICOM", _"Clinical Validation", _"Regulatory Compliance"], _hourly_rate: 170, _years_experience: 8, _average_rating: 4.9, _rating_count: 27, _availability_type: "project", _is_verified: true, _key_projects: [
-      {
-        title: "AI-Assisted Radiology Platform", _description: "Developed a deep learning system for detecting abnormalities in chest X-rays with 97% sensitivity, _reducing radiologist workload by 35% and improving early detection rates."},
-      {_title: "Cancer Treatment Response Prediction", _description: "Created ML models that predict patient response to specific cancer treatments based on medical imaging data, _improving treatment selection and patient outcomes."}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    ]
+      }    ]
   }
 ],

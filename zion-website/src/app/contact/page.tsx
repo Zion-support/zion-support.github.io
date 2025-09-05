@@ -12,7 +12,6 @@ const contactMethods = [
   {name: 'Address', description: 'Visit our headquarters', value: '364 E Main St STE 1008, Middletown, DE 19709', href: '#', icon: MapPinIcon},
   {name: 'Business Hours', description: 'We\'re here to help', value: 'Monday - Friday: 9:00 AM - 6:00 PM EST', href: '#', icon: ClockIcon}
 ]
-
 const faqs = [
   {question: 'What services do you offer?', answer: 'We provide comprehensive AI and technology solutions including autonomous systems, quantum computing, machine learning, cybersecurity, and digital transformation services.'},
   {question: 'How can I get started?', answer: 'Contact us through any of the methods above, and our team will schedule a consultation to understand your needs and provide a tailored solution.'},
@@ -30,8 +29,7 @@ export default function ContactPage() {
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               Contact{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                Zion Tech Group
-              </span>
+                Zion Tech Group              </span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Ready to transform your business with cutting-edge AI and technology solutions? 
@@ -61,8 +59,7 @@ export default function ContactPage() {
                   </a>
                 </div>
               ))}
-            </div>
-          </div>
+            </div>          </div>
         </div>
       </div>
 
@@ -80,8 +77,7 @@ export default function ContactPage() {
                   <p className="mt-2 text-base text-gray-300">{faq.answer}</p>
                 </div>
               ))}
-            </div>
-          </div>
+            </div>          </div>
         </div>
       </div>
     </div>

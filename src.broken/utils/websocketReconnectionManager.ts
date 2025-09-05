@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useRef, useCallback } from 'react'
 ,
 export function useWebSocketReconnection(options: unknown =  {}) {,
@@ -35,39 +34,4 @@ export function useWebSocketReconnection(options: unknown =  {}) {,
     attemptCount,
     attemptReconnection,
     resetReconnection
-  }
-=======
-;
-export function useWebSocketReconnection(_options: unknown =  {}) {_;
-  const [isReconnecting, _setIsReconnecting] = useState(false);
-  const [attemptCount, _setAttemptCount] = useState(0);
-  const timeoutRef: unknown = useRef<NodeJS.Timeout | null>(null);
-  const attemptReconnection: unknown = useCallback(_;
-    (callback: () => void) => {;
-      if (attemptCount >= (options.maxAttempts || 5)) {;
-        setIsReconnecting(false);
-        return;};
-      setIsReconnecting(true);
-      setAttemptCount(_(prev) => prev + 1);
-      const delay: unknown =;
-        (options.delay || 1000) *;
-        Math.pow(options.backoffMultiplier || 2, attemptCount);
-      timeoutRef.current = setTimeout__(() => {_;
-        callback();}, delay);
-    },;
-    [attemptCount, options],;
-  );
-  const resetReconnection: unknown = useCallback__(() => {_;
-    if (timeoutRef.current) {;
-      clearTimeout(timeoutRef.current);
-      timeoutRef.current = null;};
-    setIsReconnecting(false);
-    setAttemptCount(0);
-  }, []);
-  return {_;
-    isReconnecting, _;
-    attemptCount, _;
-    attemptReconnection, _;
-    resetReconnection;};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-}
+  }}

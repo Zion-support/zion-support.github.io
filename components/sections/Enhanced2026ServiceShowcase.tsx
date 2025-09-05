@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import { motion } from 'framer-motion',
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket } from 'lucide-react',
@@ -13,19 +12,9 @@ export default function Enhanced2026ServiceShowcase() {
       transition: {
         staggerChildren: 0.2,
         delayChildren: 0.1
-      }
-=======
-import React from 'react';
-
-export default function Enhanced2026ServiceShowcase() {_const _containerVariants = {
-    hidden: { opacity: 0},
-    visible: {_opacity: 1, _transition: {
-        staggerChildren: 0.2, _delayChildren: 0.1}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    }
+      }    }
   },
 
-<<<<<<< HEAD
   const itemVariants = {
     hidden: { 
       opacity: 0,
@@ -39,17 +28,9 @@ export default function Enhanced2026ServiceShowcase() {_const _containerVariants
       transition: {
         duration: 0.6,
         ease: &quot;easeOut&quot; as const
-      }
-=======
-  const _itemVariants = {_hidden: { 
-      opacity: 0, _y: 50, _scale: 0.9},
-    visible: {_opacity: 1, _y: 0, _scale: 1, _transition: {
-        duration: 0.6, _ease: "easeOut" as const}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    }
+      }    }
   },
 
-<<<<<<< HEAD
   const cardVariants = {
     hover: {
       y: -10,
@@ -57,25 +38,18 @@ export default function Enhanced2026ServiceShowcase() {_const _containerVariants
       transition: {
         duration: 0.3,
         ease: &quot;easeOut&quot; as const
-      }
-=======
-  const _cardVariants = {_hover: {
-      y: -10, _scale: 1.02, _transition: {
-        duration: 0.3, _ease: "easeOut" as const}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    }
+      }    }
   },
 
-  const _renderServiceCard = (_service: unknown, _index: number) => (
-    <motion.div
-<<<<<<< HEAD
-      key={service.id}
+  const renderServiceCard = (service: unknown, index: number) => (
+    <motion.div,
+key={service.id}
       variants={itemVariants}
       whileHover=&quot;hover&quot;
       className=&quot;group relative&quot;
     >
-      <motion.div
-        variants={cardVariants}
+      <motion.div,
+variants={cardVariants}
         className=&quot;relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300&quot;
       >
         {/* Glowing border effect */}
@@ -95,42 +69,11 @@ export default function Enhanced2026ServiceShowcase() {_const _containerVariants
             </div>
             {service.popular && (
               <div className=&quot;flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium&quot;>
-                <Star className=&quot;w-3 h-3 fill-current&quot; />
-=======
-      key={_service.id}
-      variants={_itemVariants}
-      whileHover="hover"
-      className="group relative"
-    >
-      <motion.div
-        variants={_cardVariants}
-        className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300"
-      >
-        {_/* Glowing border effect */}
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        
-        <div className="relative p-6">
-          {_/* Service header */}
-          <div className="flex items-start justify-between mb-4">
-            <div className="flex items-center space-x-3">
-              <div className="text-3xl">{_service.icon}</div>
-              <div>
-                <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
-                  {_service.name}
-                </h3>
-                <p className="text-slate-400 text-sm">{_service.tagline}</p>
-              </div>
-            </div>
-            {_service.popular && (
-              <div className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium">
-                <Star className="w-3 h-3 fill-current" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                <span>Popular</span>
+                <Star className=&quot;w-3 h-3 fill-current&quot; />                <span>Popular</span>
               </div>
             )}
           </div>
 
-<<<<<<< HEAD
           {/* Description */}
           <p className=&quot;text-slate-300 text-sm mb-4 leading-relaxed&quot;>
             {service.description}
@@ -143,89 +86,41 @@ export default function Enhanced2026ServiceShowcase() {_const _containerVariants
               {service.features.slice(0, 3).map((feature: string, idx: number) => (
                 <div key={idx} className=&quot;flex items-center space-x-2 text-xs text-slate-400&quot;>
                   <div className=&quot;w-1.5 h-1.5 bg-cyan-500 rounded-full&quot; />
-                  <span>{feature}</span>
-=======
-          {_/* Description */}
-          <p className="text-slate-300 text-sm mb-4 leading-relaxed">
-            {_service.description}
-          </p>
-
-          {_/* Features */}
-          <div className="mb-4">
-            <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
-            <div className="grid grid-cols-1 gap-1">
-              {_service.features.slice(0, _3).map(_(feature: string, _idx: number) => (
-                <div key={idx} className="flex items-center space-x-2 text-xs text-slate-400">
-                  <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full" />
-                  <span>{_feature}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </div>
+                  <span>{feature}</span>                </div>
               ))}
             </div>
           </div>
 
-<<<<<<< HEAD
           {/* Price and CTA */}
           <div className=&quot;flex items-center justify-between&quot;>
             <div className=&quot;text-right&quot;>
               <div className=&quot;text-2xl font-bold text-white&quot;>{service.price}</div>
               <div className=&quot;text-slate-400 text-sm&quot;>{service.period}</div>
             </div>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
+            <motion.button,
+whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className=&quot;flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25&quot;
-=======
-          {_/* Price and CTA */}
-          <div className="flex items-center justify-between">
-            <div className="text-right">
-              <div className="text-2xl font-bold text-white">{_service.price}</div>
-              <div className="text-slate-400 text-sm">{_service.period}</div>
-            </div>
-            <motion.button
-              whileHover={_{ scale: 1.05}}
-              whileTap={_{ scale: 0.95}}
-              className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25&quot;            >
               <span>Learn More</span>
               <ArrowRight className=&quot;w-4 h-4&quot; />
             </motion.button>
           </div>
 
-<<<<<<< HEAD
           {/* Market info */}
           <div className=&quot;mt-4 pt-4 border-t border-slate-700/50&quot;>
             <div className=&quot;flex items-center justify-between text-xs text-slate-500&quot;>
               <span>Market: {service.marketSize}</span>
-              <span>Growth: {service.growthRate}</span>
-=======
-          {_/* Market info */}
-          <div className="mt-4 pt-4 border-t border-slate-700/50">
-            <div className="flex items-center justify-between text-xs text-slate-500">
-              <span>Market: {_service.marketSize}</span>
-              <span>Growth: {_service.growthRate}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            </div>
+              <span>Growth: {service.growthRate}</span>            </div>
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Hover glow effect */}
-<<<<<<< HEAD
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover: opacity-100 transition-opacity duration-300" />
-=======
-        <div className=&quot;absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300&quot; />
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-        {_/* Hover glow effect */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover: opacity-100 transition-opacity duration-300" />        {_/* Hover glow effect */}
         <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       </motion.div>
     </motion.div>
   ),
 
-<<<<<<< HEAD
   return (
     <section className=&quot;py-20 relative overflow-hidden&quot;>
       {/* Background effects */}
@@ -233,25 +128,11 @@ export default function Enhanced2026ServiceShowcase() {_const _containerVariants
       
       <div className=&quot;container mx-auto px-4 relative z-10&quot;>
         {/* Section header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <motion.div,
+initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className=&quot;text-center mb-16&quot;
-=======
-  return (_<section className="py-20 relative overflow-hidden">
-      {_/* Background effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40" />
-      
-      <div className="container mx-auto px-4 relative z-10">
-        {_/* Section header */}
-        <motion.div
-          initial={_{ opacity: 0, _y: 30}}
-          whileInView={_{ opacity: 1, _y: 0}}
-          transition={_{ duration: 0.8}}
-          className="text-center mb-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        >
+          className=&quot;text-center mb-16&quot;        >
           <div className=&quot;flex items-center justify-center space-x-2 mb-4&quot;>
             <div className=&quot;w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center&quot;>
               <Rocket className=&quot;w-5 h-5 text-white&quot; />
@@ -268,130 +149,76 @@ export default function Enhanced2026ServiceShowcase() {_const _containerVariants
             </span>
           </h2>
           
-<<<<<<< HEAD
           <p className=&quot;text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed&quot;>
-            Discover our cutting-edge micro SAAS solutions, AI-powered platforms, and quantum-enhanced infrastructure services designed for the future of business.
-=======
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Discover our cutting-edge micro SAAS solutions, _AI-powered platforms, _and quantum-enhanced infrastructure services designed for the future of business.
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          </p>
+            Discover our cutting-edge micro SAAS solutions, AI-powered platforms, and quantum-enhanced infrastructure services designed for the future of business.          </p>
         </motion.div>
 
         {_/* AI Services Section */}
-        <motion.div
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 30 }}
+        <motion.div,
+initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className=&quot;mb-20&quot;
-=======
-          initial={_{ opacity: 0, _y: 30}}
-          whileInView={_{ opacity: 1, _y: 0}}
-          transition={_{ duration: 0.8, _delay: 0.2}}
-          className="mb-20"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        >
+          className=&quot;mb-20&quot;        >
           <div className=&quot;flex items-center space-x-3 mb-8&quot;>
             <Brain className=&quot;w-6 h-6 text-cyan-400&quot; />
             <h3 className=&quot;text-2xl font-bold text-white&quot;>AI-Powered Services</h3>
           </div>
           
-          <motion.div
-<<<<<<< HEAD
-            variants={containerVariants}
+          <motion.div,
+variants={containerVariants}
             initial=&quot;hidden&quot;
             whileInView=&quot;visible&quot;
-            className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;
-=======
-            variants={_containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
-            {_innovative2026AIServices.map((service, _index) => renderServiceCard(service, _index))}
+            className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;          >
+            {innovative2026AIServices.map((service, index) => renderServiceCard(service, index))}
           </motion.div>
         </motion.div>
 
         {_/* IT Infrastructure Section */}
-        <motion.div
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 30 }}
+        <motion.div,
+initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className=&quot;mb-20&quot;
-=======
-          initial={_{ opacity: 0, _y: 30}}
-          whileInView={_{ opacity: 1, _y: 0}}
-          transition={_{ duration: 0.8, _delay: 0.4}}
-          className="mb-20"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        >
+          className=&quot;mb-20&quot;        >
           <div className=&quot;flex items-center space-x-3 mb-8&quot;>
             <Globe className=&quot;w-6 h-6 text-purple-400&quot; />
             <h3 className=&quot;text-2xl font-bold text-white&quot;>IT Infrastructure & Security</h3>
           </div>
           
-          <motion.div
-<<<<<<< HEAD
-            variants={containerVariants}
+          <motion.div,
+variants={containerVariants}
             initial=&quot;hidden&quot;
             whileInView=&quot;visible&quot;
-            className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;
-=======
-            variants={_containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
-            {_innovative2026ITInfrastructureServices.map(_(service, _index) => renderServiceCard(service, _index))}
+            className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;          >
+            {innovative2026ITInfrastructureServices.map(_(service, index) => renderServiceCard(service, index))}
           </motion.div>
         </motion.div>
 
         {_/* Micro SAAS Section */}
-        <motion.div
-          initial={_{ opacity: 0, _y: 30}}
-          whileInView={_{ opacity: 1, _y: 0}}
-          transition={_{ duration: 0.8, _delay: 0.6}}
+        <motion.div,
+initial={_{ opacity: 0, y: 30}}
+          whileInView={_{ opacity: 1, y: 0}}
+          transition={_{ duration: 0.8, delay: 0.6}}
         >
           <div className=&quot;flex items-center space-x-3 mb-8&quot;>
             <Zap className=&quot;w-6 h-6 text-pink-400&quot; />
             <h3 className=&quot;text-2xl font-bold text-white&quot;>Micro SAAS Solutions</h3>
           </div>
           
-          <motion.div
-<<<<<<< HEAD
-            variants={containerVariants}
+          <motion.div,
+variants={containerVariants}
             initial=&quot;hidden&quot;
             whileInView=&quot;visible&quot;
-            className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;
-=======
-            variants={_containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
-            {_innovative2026MicroSaasServices.map(_(service, _index) => renderServiceCard(service, _index))}
+            className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;          >
+            {innovative2026MicroSaasServices.map(_(service, index) => renderServiceCard(service, index))}
           </motion.div>
         </motion.div>
 
         {_/* CTA Section */}
-        <motion.div
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 30 }}
+        <motion.div,
+initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className=&quot;text-center mt-16&quot;
-=======
-          initial={_{ opacity: 0, _y: 30}}
-          whileInView={_{ opacity: 1, _y: 0}}
-          transition={_{ duration: 0.8, _delay: 0.8}}
-          className="text-center mt-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        >
+          className=&quot;text-center mt-16&quot;        >
           <div className=&quot;bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8&quot;>
             <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>
               Ready to Transform Your Business?
@@ -400,33 +227,18 @@ export default function Enhanced2026ServiceShowcase() {_const _containerVariants
               Join thousands of businesses already leveraging our innovative AI and IT services to drive growth, efficiency, and competitive advantage.
             </p>
             <div className=&quot;flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4&quot;>
-              <motion.button
-<<<<<<< HEAD
-                whileHover={{ scale: 1.05 }}
+              <motion.button,
+whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className=&quot;bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25&quot;
-=======
-                whileHover={_{ scale: 1.05}}
-                whileTap={_{ scale: 0.95}}
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25&quot;              >
                 Start Free Trial
               </motion.button>
-              <motion.button
-<<<<<<< HEAD
-                whileHover={{ scale: 1.05 }}
+              <motion.button,
+whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-                className="border border-slate-600 hover: border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50"
-=======
-                className=&quot;border border-slate-600 hover:border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-                whileHover={_{ scale: 1.05}}
+                className="border border-slate-600 hover: border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50"                whileHover={_{ scale: 1.05}}
                 whileTap={_{ scale: 0.95}}
                 className="border border-slate-600 hover:border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               >
                 Schedule Demo
               </motion.button>

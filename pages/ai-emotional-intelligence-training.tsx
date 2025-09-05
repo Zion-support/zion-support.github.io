@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AIEmotionalIntelligenceTraining() {
@@ -19,15 +18,8 @@ export default function AIEmotionalIntelligenceTraining() {
 				&quot;Integrations: LMS, Slack/Teams, Gmail/Outlook&quot;,
 				&quot;Privacy-first voice and text processing&quot;
 			]}
-<<<<<<< HEAD
 			industries={["Customer Support", "Sales", "HR & L&D", "Leadership"]}
-			canonical="https: //ziontechgroup.com/ai-emotional-intelligence-training"
-=======
-			industries={[&quot;Customer Support&quot;, &quot;Sales&quot;, &quot;HR & L&D&quot;, &quot;Leadership&quot;]}
-			canonical=&quot;https://ziontechgroup.com/ai-emotional-intelligence-training&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from 'react';
+			canonical="https: //ziontechgroup.com/ai-emotional-intelligence-training"import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIEmotionalIntelligenceTraining() {_return (
@@ -44,7 +36,6 @@ export default function AIEmotionalIntelligenceTraining() {_return (
 			]}
 			industries={_["Customer Support", _"Sales", _"HR & L&D", _"Leadership"]}
 			canonical="https://ziontechgroup.com/ai-emotional-intelligence-training"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 		/>
 	)
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -19,29 +18,14 @@ import {
   Calendar, Clock, FileText2, PieChart, Atom,
   Truck, ChevronRight, Home
 } from 'lucide-react',
-=======
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import {_Brain, _Zap, _Target, _BarChart3, _Users, _TrendingUp, _MessageSquare, _Mail, _Phone, _MapPin, _ArrowRight, _Star, _CheckCircle, _Rocket, _Globe, _Shield, _Cpu, _FileText, _Image, _Video, _Music, _Palette, _Type, _User, _Search, _Eye, _Heart, _ShoppingCart, _Code, _Database, _Users2, _Award, _Lock, _Server, _Network, _Monitor, _Settings, _RefreshCw, _Play, _Pause, _AlertTriangle, _CheckCircle2, _Building, _Wifi, _HardDrive, _Cloud, _Smartphone, _Blocks, _Wallet, _CreditCard, _PiggyBank, _Building2, _Activity, _Waves, _BrainCircuit, _CpuIcon, _MonitorHeart, _Film, _Headphones, _Camera, _Gamepad2, _Tv, _Radio, _Factory, _Cog, _Gauge, _Wrench, _Settings2, _CpuIcon2, _Calendar, _Clock, _FileText2, _PieChart, _Atom, _Truck, _ChevronRight, _Home} from 'lucide-react';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default function ZionTechGroupPage() {_return (
     <>
       <Head>
         <title>About Zion Tech Group | Revolutionary Quantum AI & Autonomous Systems</title>
-<<<<<<< HEAD
         <meta name=&quot;description&quot; content=&quot;Discover Zion Tech Group's mission to revolutionize technology with quantum AI, autonomous systems, and cutting-edge platforms. Learn about our innovative solutions and global impact.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;Zion Tech Group, about us, quantum AI, autonomous systems, technology innovation, company mission&quot; />
         <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; />
-        <link rel=&quot;icon&quot; href=&quot;/favicon.ico&quot; />
-=======
-        <meta name="description" content="Discover Zion Tech Group's mission to revolutionize technology with quantum AI, _autonomous systems, _and cutting-edge platforms. Learn about our innovative solutions and global impact." />
-        <meta name="keywords" content="Zion Tech Group, _about us, _quantum AI, _autonomous systems, _technology innovation, _company mission" />
-        <meta name="viewport" content="width=device-width, _initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      </Head>
+        <link rel=&quot;icon&quot; href=&quot;/favicon.ico&quot; />      </Head>
 
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;>
         {/* Navigation */}
@@ -70,20 +54,11 @@ export default function ZionTechGroupPage() {_return (
           </div>
         </nav>
 
-<<<<<<< HEAD
         {/* Breadcrumb */}
         <div className=&quot;bg-black/20 border-b border-white/10&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4&quot;>
             <nav className=&quot;flex&quot; aria-label=&quot;Breadcrumb&quot;>
-              <ol className=&quot;flex items-center space-x-4&quot;>
-=======
-        {_/* Breadcrumb */}
-        <div className="bg-black/20 border-b border-white/10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <nav className="flex" aria-label="Breadcrumb">
-              <ol className="flex items-center space-x-4">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                <li>
+              <ol className=&quot;flex items-center space-x-4&quot;>                <li>
                   <div>
                     <Link href=&quot;/&quot; className=&quot;text-gray-300 hover:text-white&quot;>
                       <Home className=&quot;h-4 w-4&quot; />
@@ -102,24 +77,13 @@ export default function ZionTechGroupPage() {_return (
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Hero Section */}
         <div className=&quot;relative overflow-hidden py-24&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <div className=&quot;text-center&quot;>
               <h1 className=&quot;text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl&quot;>
                 <span className=&quot;block&quot;>About</span>
-                <span className=&quot;block text-purple-400&quot;>Zion Tech Group</span>
-=======
-        {_/* Hero Section */}
-        <div className="relative overflow-hidden py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
-                <span className="block">About</span>
-                <span className="block text-purple-400">Zion Tech Group</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </h1>
+                <span className=&quot;block text-purple-400&quot;>Zion Tech Group</span>              </h1>
               <p className=&quot;mt-3 max-w-md mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl&quot;>
                 We are the architects of tomorrow, building revolutionary quantum AI solutions and autonomous systems that will define the next decade of innovation.
               </p>
@@ -127,18 +91,10 @@ export default function ZionTechGroupPage() {_return (
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Mission & Vision Section */}
         <div className=&quot;py-16 bg-black/20&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-            <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12&quot;>
-=======
-        {_/* Mission & Vision Section */}
-        <div className="py-16 bg-black/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <div>
+            <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12&quot;>              <div>
                 <div className=&quot;w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mb-6&quot;>
                   <Target className=&quot;h-8 w-8 text-white&quot; />
                 </div>
@@ -167,22 +123,12 @@ export default function ZionTechGroupPage() {_return (
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Core Values Section */}
         <div className=&quot;py-16&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <div className=&quot;text-center mb-12&quot;>
               <h2 className=&quot;text-3xl font-bold text-white mb-4&quot;>Our Core Values</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
-=======
-        {_/* Core Values Section */}
-        <div className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Our Core Values</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                These principles guide everything we do and shape the culture of our organization.
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>                These principles guide everything we do and shape the culture of our organization.
               </p>
             </div>
 
@@ -241,37 +187,20 @@ export default function ZionTechGroupPage() {_return (
                 <div className=&quot;w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4&quot;>
                   <Rocket className=&quot;h-8 w-8 text-white&quot; />
                 </div>
-<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-white mb-2">Future-Focused</h3>
                 <p className="text-gray-300">
-                  We don't just adapt to change, we anticipate it and create the technologies that will define tomorrow.
-=======
-                <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Future-Focused</h3>
-                <p className=&quot;text-gray-300&quot;>
-                  We don't just adapt to change; we anticipate it and create the technologies that will define tomorrow.
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-                </p>
+                  We don't just adapt to change, we anticipate it and create the technologies that will define tomorrow.                </p>
               </div>
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Technology Stack Section */}
         <div className=&quot;py-16 bg-black/20&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <div className=&quot;text-center mb-12&quot;>
               <h2 className=&quot;text-3xl font-bold text-white mb-4&quot;>Our Technology Stack</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
-=======
-        {_/* Technology Stack Section */}
-        <div className="py-16 bg-black/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Our Technology Stack</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                We leverage the most advanced technologies available to create revolutionary solutions.
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>                We leverage the most advanced technologies available to create revolutionary solutions.
               </p>
             </div>
 
@@ -319,22 +248,12 @@ export default function ZionTechGroupPage() {_return (
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Company Stats Section */}
         <div className=&quot;py-16&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <div className=&quot;text-center mb-12&quot;>
               <h2 className=&quot;text-3xl font-bold text-white mb-4&quot;>Company Statistics</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
-=======
-        {_/* Company Stats Section */}
-        <div className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Company Statistics</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                Our impact in numbers - showcasing the scale and reach of our technology solutions.
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>                Our impact in numbers - showcasing the scale and reach of our technology solutions.
               </p>
             </div>
 
@@ -359,22 +278,12 @@ export default function ZionTechGroupPage() {_return (
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Team Section */}
         <div className=&quot;py-16 bg-black/20&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <div className=&quot;text-center mb-12&quot;>
               <h2 className=&quot;text-3xl font-bold text-white mb-4&quot;>Our Leadership Team</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
-=======
-        {_/* Team Section */}
-        <div className="py-16 bg-black/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Our Leadership Team</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                Meet the visionaries and experts who are driving innovation at Zion Tech Group.
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>                Meet the visionaries and experts who are driving innovation at Zion Tech Group.
               </p>
             </div>
 
@@ -415,20 +324,11 @@ export default function ZionTechGroupPage() {_return (
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* CTA Section */}
         <div className=&quot;bg-purple-600&quot;>
           <div className=&quot;max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8&quot;>
             <h2 className=&quot;text-3xl font-extrabold text-white sm:text-4xl&quot;>
-              <span className=&quot;block&quot;>Ready to Join the Future?</span>
-=======
-        {_/* CTA Section */}
-        <div className="bg-purple-600">
-          <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-              <span className="block">Ready to Join the Future?</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            </h2>
+              <span className=&quot;block&quot;>Ready to Join the Future?</span>            </h2>
             <p className=&quot;mt-4 text-lg leading-6 text-purple-100&quot;>
               Discover how Zion Tech Group can transform your business with revolutionary technology solutions.
             </p>
@@ -444,26 +344,19 @@ export default function ZionTechGroupPage() {_return (
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Footer */}
-<<<<<<< HEAD
-=======
-        {_/* Footer */}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         <footer className="bg-black/40">
           <div className="max-w-7xl mx-auto py-12 px-4 sm: px-6 lg:py-16 lg:px-8">
             <div className="xl:grid xl:grid-cols-3 xl:gap-8">
               <div className="space-y-8 xl:col-span-1">
                 <h3 className="text-2xl font-bold text-white">Zion Tech Group</h3>
                 <p className="text-gray-300 text-base">
-=======
         <footer className=&quot;bg-black/40&quot;>
           <div className=&quot;max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8&quot;>
             <div className=&quot;xl:grid xl:grid-cols-3 xl:gap-8&quot;>
               <div className=&quot;space-y-8 xl:col-span-1&quot;>
                 <h3 className=&quot;text-2xl font-bold text-white&quot;>Zion Tech Group</h3>
                 <p className=&quot;text-gray-300 text-base&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                   Leading the future with revolutionary quantum AI solutions and autonomous systems.
                 </p>
               </div>
@@ -507,16 +400,9 @@ export default function ZionTechGroupPage() {_return (
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
             <div className="mt-12 border-t border-gray-700 pt-8">
               <p className="text-base text-gray-400 xl:text-center">
-                &copy, 2025 Zion Tech Group. All rights reserved.
-=======
-            <div className=&quot;mt-12 border-t border-gray-700 pt-8&quot;>
-              <p className=&quot;text-base text-gray-400 xl:text-center&quot;>
-                &copy; 2025 Zion Tech Group. All rights reserved.
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-              </p>
+                &copy, 2025 Zion Tech Group. All rights reserved.              </p>
             </div>
           </div>
         </footer>

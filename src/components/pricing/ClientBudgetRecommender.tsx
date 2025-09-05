@@ -1,29 +1,14 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
-import {logErrorToProduction} from '@/utils/productionLogger',
-=======
-import React, { useState } from &quot;react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import { 
+import {logErrorToProduction} from '@/utils/productionLogger',import { 
   getClientBudgetSuggestion,
   PricingSuggestion,
   ClientBudgetParams,
   trackPricingSuggestion
-<<<<<<< HEAD
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
-import { useAuth } from "@/hooks/useAuth",
-=======
-} from &quot;@/services/pricingSuggestionService&quot;;
-import { PricingSuggestionBox } from &quot;./PricingSuggestionBox&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import { Sparkles } from 'lucide-react'
+import { useAuth } from "@/hooks/useAuth",import { Sparkles } from 'lucide-react'
 
 interface ClientBudgetRecommenderProps {
   jobTitle: string,
@@ -55,7 +40,6 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       const params: ClientBudgetParams = {
         jobTitle,
         category},
-=======
 import React, {_useState} from "react";
 import {_getClientBudgetSuggestion, _PricingSuggestion, _ClientBudgetParams, _trackPricingSuggestion} from "@/services/pricingSuggestionService";
 
@@ -76,13 +60,11 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     setIsLoading(true);
     try {_const params: ClientBudgetParams = {
         jobTitle, _category};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
       if (timeline) params.timeline = timeline,
       if (scope) params.scope = scope,
       if (experienceLevel) params.experienceLevel = experienceLevel,
 
-<<<<<<< HEAD
       const result = await getClientBudgetSuggestion(params),
       setSuggestion(result)
     } catch (error) {
@@ -94,32 +76,16 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 
   const handleApplySuggestion = () => {
     if (suggestion) {
-      onSuggestionApplied(suggestion.minRate, suggestion.maxRate),
-=======
-      const _result = await getClientBudgetSuggestion(params);
-      setSuggestion(result);
-    } catch (error) {_logErrorToProduction('Error generating budget suggestion:', _{ data: error});
-    } finally {_setIsLoading(false);}
-  };
-
-  const _handleApplySuggestion = () => {_if (suggestion) {
-      onSuggestionApplied(suggestion.minRate, _suggestion.maxRate);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      
+      onSuggestionApplied(suggestion.minRate, suggestion.maxRate),      
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
-<<<<<<< HEAD
           userId: user.id,
           suggestionType: &quot;client&quot;,
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
           accepted: true
-        })
-=======
-          userId: user.id, _suggestionType: "client", _suggestedMin: suggestion.minRate, _suggestedMax: suggestion.maxRate, _accepted: true});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      }
+        })      }
     }
   },
 
@@ -131,30 +97,16 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
             type=&quot;button&quot;
             variant=&quot;outline&quot;
             onClick={generateSuggestion}
-<<<<<<< HEAD
             disabled={!jobTitle || !category}
-            className=&quot;w-full&quot;
-=======
-            disabled={_!jobTitle || !category}
-            className="w-full"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            className=&quot;w-full&quot;          >
             <Sparkles className=&quot;h-4 w-4 mr-2&quot; /> Get Budget Recommendation
           </Button>
         ) : (
           <PricingSuggestionBox
-<<<<<<< HEAD
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
-            rateType=&quot;hourly&quot;
-=======
-            suggestion={_suggestion}
-            isLoading={_isLoading}
-            onApplySuggestion={_handleApplySuggestion}
-            rateType="hourly"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          />
+            rateType=&quot;hourly&quot;          />
         )}
       </div>
     </div>

@@ -1,18 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
-import { TalentProfile } from "@/types/talent",
-=======
-import { useState } from 'react';
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-import { toast } from &quot;@/hooks/use-toast&quot;;
-import { TalentProfile } from &quot;@/types/talent&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export interface HireRequestData {
+import { TalentProfile } from "@/types/talent",export interface HireRequestData {
   talent: {
     id: string,
     full_name: string,
@@ -45,7 +35,6 @@ export function useHireRequest() {
       const { data: response, error } = await supabase.functions.invoke('process-hire-request', {
         body: requestData
       }),
-=======
 
 export interface HireRequestData {_talent: {
     id: string;
@@ -71,55 +60,31 @@ export function useHireRequest() {_const [isSubmitting, _setIsSubmitting] = useS
     try {
       // Call the edge function to process the hire request
       const { data: response, _error} = await supabase.functions.invoke(_'process-hire-request', _{_body: requestData});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       if (error) throw error,
       
       // Show success message
-<<<<<<< HEAD
       toast({
-<<<<<<< HEAD
         title: "Request Submitted",
-        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`}),
-=======
-        title: &quot;Request Submitted&quot;,
-        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      
+        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`}),      
       return { success: true, requestId: response?.request_id }
     } catch (error) {
-<<<<<<< HEAD
       console.error("Error submitting hire request:", error),
       
-      const errorMessage = error instanceof Error 
-=======
-      toast({_title: "Request Submitted", _description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`});
-      
-      return {_success: true, _requestId: response?.request_id};
-    } catch (error) {_const _errorMessage = error instanceof Error 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        ? error.message 
+      const errorMessage = error instanceof Error         ? error.message 
         : "There was a problem submitting your request. Please try again.",
-=======
       console.error(&quot;Error submitting hire request:&quot;, error);
       
       const errorMessage = error instanceof Error 
         ? error.message 
         : &quot;There was a problem submitting your request. Please try again.&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       setError(errorMessage),
       
       toast({
-<<<<<<< HEAD
         title: &quot;Error&quot;,
         description: errorMessage,
-<<<<<<< HEAD
-        variant: "destructive"}),
-=======
-        variant: &quot;destructive&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      
+        variant: "destructive"}),      
       return { success: false, error: errorMessage }
     } finally {
       setIsSubmitting(false)
@@ -131,7 +96,6 @@ export function useHireRequest() {_const [isSubmitting, _setIsSubmitting] = useS
     isSubmitting,
     error
   }
-=======
         title: "Error", _description: errorMessage, _variant: "destructive"});
       
       return {_success: false, _error: errorMessage};
@@ -139,5 +103,4 @@ export function useHireRequest() {_const [isSubmitting, _setIsSubmitting] = useS
   };
   
   return {_submitHireRequest, _isSubmitting, _error};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

@@ -1,29 +1,15 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { BadgeDollarSign } from 'lucide-react'
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
-import Skeleton from "@/components/ui/skeleton",
-=======
-import React from &quot;react&quot;;
-import { BadgeDollarSign } from 'lucide-react'
-import { useWallet } from &quot;@/hooks/useWallet&quot;;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import Skeleton from &quot;@/components/ui/skeleton&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export function TokenDisplay() {
+import Skeleton from "@/components/ui/skeleton",export function TokenDisplay() {
   const { wallet, loading } = useWallet(),
-=======
 import React from "react";
 import Skeleton from "@/components/ui/skeleton";
 
 export function TokenDisplay() {_const { wallet, _loading} = useWallet();
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <Card>
@@ -35,14 +21,8 @@ export function TokenDisplay() {_const { wallet, _loading} = useWallet();
         <BadgeDollarSign className=&quot;h-6 w-6 text-primary&quot; />
       </CardHeader>
       <CardContent>
-<<<<<<< HEAD
         {loading ? (
-          <Skeleton className=&quot;h-12 w-28&quot; />
-=======
-        {_loading ? (
-          <Skeleton className="h-12 w-28" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        ) : (
+          <Skeleton className=&quot;h-12 w-28&quot; />        ) : (
           <div className=&quot;flex flex-col gap-2&quot;>
             <div className=&quot;flex items-end&quot;>
               <span className=&quot;text-3xl font-bold&quot;>{wallet?.balance || 0}</span>

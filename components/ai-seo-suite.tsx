@@ -1,19 +1,10 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
 import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react',
-=======
-import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default function AISeosuitePage() {_const _features = [
     {
-<<<<<<< HEAD
       icon: <Search className=&quot;w-8 h-8 text-white&quot; />,
       title: 'AI Keyword Research',
       description: 'Discover high-value keywords using advanced AI algorithms that analyze search patterns and competition.',
@@ -53,7 +44,6 @@ export default function AISeosuitePage() {_const _features = [
   const seoTools = [
     {
       category: 'Keyword Research',
-<<<<<<< HEAD
       icon: <Search className="w-6 h-6 text-blue-400" />,
       tools: ['Long-tail keyword finderCompetitor keyword analysisSearch volume estimationKeyword difficulty scoringTrending keywords']
     },
@@ -70,27 +60,7 @@ export default function AISeosuitePage() {_const _features = [
     {
       category: 'Analytics & Reporting',
       icon: <BarChart3 className="w-6 h-6 text-orange-400" />,
-      tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards']
-=======
-      icon: <Search className=&quot;w-6 h-6 text-blue-400&quot; />,
-      tools: ['Long-tail keyword finder', 'Competitor keyword analysis', 'Search volume estimation', 'Keyword difficulty scoring', 'Trending keywords']
-    },
-    {
-      category: 'On-Page SEO',
-      icon: <Target className=&quot;w-6 h-6 text-green-400&quot; />,
-      tools: ['Content optimization', 'Meta tag generator', 'Schema markup builder', 'Internal linking suggestions', 'Image optimization']
-    },
-    {
-      category: 'Technical SEO',
-      icon: <Settings className=&quot;w-6 h-6 text-purple-400&quot; />,
-      tools: ['Site audit tool', 'Page speed analyzer', 'Mobile optimization', 'Core Web Vitals', 'XML sitemap generator']
-    },
-    {
-      category: 'Analytics & Reporting',
-      icon: <BarChart3 className=&quot;w-6 h-6 text-orange-400&quot; />,
-      tools: ['Ranking tracker', 'Traffic analysis', 'Conversion tracking', 'Competitor monitoring', 'Custom dashboards']
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    }
+      tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards']    }
   ],
 
   const pricingPlans = [
@@ -176,7 +146,6 @@ export default function AISeosuitePage() {_const _features = [
     { metric: 'Conversion Rate', value: '+80%', description: 'Increase in conversion rates' },
     { metric: 'ROI', value: '400%', description: 'Average return on investment' }
   ],
-=======
       icon: <Search className="w-8 h-8 text-white" />, _title: 'AI Keyword Research', _description: 'Discover high-value keywords using advanced AI algorithms that analyze search patterns and competition.', _color: 'bg-gradient-to-br from-blue-500 to-cyan-600', _gradient: 'from-blue-400 to-cyan-500'},
     {_icon: <TrendingUp className="w-8 h-8 text-white" />, _title: 'Ranking Analytics', _description: 'Track your search rankings in real-time with comprehensive analytics and competitor insights.', _color: 'bg-gradient-to-br from-green-500 to-emerald-600', _gradient: 'from-green-400 to-emerald-500'},
     {_icon: <Target className="w-8 h-8 text-white" />, _title: 'Content Optimization', _description: 'AI-powered content analysis and optimization suggestions to improve search visibility.', _color: 'bg-gradient-to-br from-purple-500 to-indigo-600', _gradient: 'from-purple-400 to-indigo-500'},
@@ -227,7 +196,6 @@ export default function AISeosuitePage() {_const _features = [
     {_metric: 'Conversion Rate', _value: '+80%', _description: 'Increase in conversion rates'},
     {_metric: 'ROI', _value: '400%', _description: 'Average return on investment'}
   ];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
@@ -239,20 +207,11 @@ export default function AISeosuitePage() {_const _features = [
         <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
       </Head>
 
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className=&quot;relative min-h-screen flex items-center justify-center overflow-hidden bg-black&quot;>
         <div className=&quot;absolute inset-0&quot;>
           <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]&quot; />
-          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.08),transparent_50%)]&quot; />
-=======
-      {_/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.08),transparent_50%)]" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        </div>
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.08),transparent_50%)]&quot; />        </div>
         
         <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
           <div className=&quot;mb-8&quot;>
@@ -289,20 +248,11 @@ export default function AISeosuitePage() {_const _features = [
             </Button>
           </div>
 
-<<<<<<< HEAD
           {/* Stats */}
           <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto&quot;>
             <div className=&quot;text-center&quot;>
               <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-blue-400&quot;>+150%</div>
-              <div className=&quot;text-gray-400&quot;>Organic Traffic</div>
-=======
-          {_/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400">+150%</div>
-              <div className="text-gray-400">Organic Traffic</div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            </div>
+              <div className=&quot;text-gray-400&quot;>Organic Traffic</div>            </div>
             <div className=&quot;text-center&quot;>
               <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-green-400&quot;>+45%</div>
               <div className=&quot;text-gray-400&quot;>Search Rankings</div>
@@ -319,27 +269,17 @@ export default function AISeosuitePage() {_const _features = [
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className=&quot;py-24 bg-gray-900 relative overflow-hidden&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10&quot;>
           <div className=&quot;text-center mb-20&quot;>
-            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>
-=======
-      {_/* Features Section */}
-      <section className="py-24 bg-gray-900 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              Powerful SEO Features
+            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>              Powerful SEO Features
             </h2>
             <p className=&quot;text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed&quot;>
               Everything you need to dominate search rankings and drive organic traffic
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             {features.map((feature, index) => (
               <Card
@@ -356,65 +296,29 @@ export default function AISeosuitePage() {_const _features = [
                   {feature.title}
                 </h3>
                 <p className=&quot;text-gray-400 leading-relaxed&quot;>
-                  {feature.description}
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {_features.map(_(feature, _index) => (
-              <Card
-                key={index}
-                className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
-                style={_{ animationDelay: `${(index * 0.1) + 0.2}s` }}
-              >
-                <div className="relative">
-                  <div className={_`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>
-                    {_feature.icon}
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300">
-                  {_feature.title}
-                </h3>
-                <p className="text-gray-400 leading-relaxed">
-                  {_feature.description}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </p>
+                  {feature.description}                </p>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* SEO Tools Section */}
       <section className=&quot;py-24 bg-black relative overflow-hidden&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10&quot;>
           <div className=&quot;text-center mb-20&quot;>
-            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>
-=======
-      {_/* SEO Tools Section */}
-      <section className="py-24 bg-black relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              Comprehensive SEO Tools
+            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>              Comprehensive SEO Tools
             </h2>
             <p className=&quot;text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed&quot;>
               Professional-grade tools used by top SEO agencies and marketers
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
             {seoTools.map((tool, index) => (
-              <Card
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {_seoTools.map(_(tool, _index) => (_<Card
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                key={index}
+              <Card                key={index}
                 className=&quot;group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300&quot;
               >
-<<<<<<< HEAD
                 <div className=&quot;flex items-start space-x-4&quot;>
                   <div className=&quot;flex-shrink-0&quot;>{tool.icon}</div>
                   <div className=&quot;flex-1&quot;>
@@ -425,21 +329,7 @@ export default function AISeosuitePage() {_const _features = [
                       {tool.tools.map((toolName, toolIndex) => (
                         <div key={toolIndex} className=&quot;flex items-center text-sm text-gray-300&quot;>
                           <CheckCircle className=&quot;w-4 h-4 text-blue-400 mr-2 flex-shrink-0&quot; />
-                          {toolName}
-=======
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">{_tool.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors duration-300">
-                      {_tool.category}
-                    </h3>
-                    <div className="grid grid-cols-1 gap-2">
-                      {_tool.tools.map((toolName, _toolIndex) => (
-                        <div key={toolIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                          {_toolName}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        </div>
+                          {toolName}                        </div>
                       ))}
                     </div>
                   </div>
@@ -450,88 +340,48 @@ export default function AISeosuitePage() {_const _features = [
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Success Metrics Section */}
       <section className=&quot;py-24 bg-gray-900 relative overflow-hidden&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10&quot;>
           <div className=&quot;text-center mb-20&quot;>
-            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>
-=======
-      {_/* Success Metrics Section */}
-      <section className="py-24 bg-gray-900 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              Proven Results
+            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>              Proven Results
             </h2>
             <p className=&quot;text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed&quot;>
               See the impact our AI-powered SEO suite has on businesses
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>
-            {successMetrics.map((metric, index) => (
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {_successMetrics.map(_(metric, _index) => (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <Card
+            {successMetrics.map((metric, index) => (              <Card
                 key={index}
                 className=&quot;text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1&quot;
               >
-<<<<<<< HEAD
                 <div className=&quot;text-4xl font-bold mb-4 text-blue-400 group-hover:scale-110 transition-transform duration-300&quot;>
                   {metric.value}
                 </div>
                 <h3 className=&quot;text-xl font-bold mb-2 text-white&quot;>{metric.metric}</h3>
-                <p className=&quot;text-gray-400 text-sm&quot;>{metric.description}</p>
-=======
-                <div className="text-4xl font-bold mb-4 text-blue-400 group-hover:scale-110 transition-transform duration-300">
-                  {_metric.value}
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-white">{_metric.metric}</h3>
-                <p className="text-gray-400 text-sm">{_metric.description}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </Card>
+                <p className=&quot;text-gray-400 text-sm&quot;>{metric.description}</p>              </Card>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Use Cases Section */}
       <section className=&quot;py-24 bg-black relative overflow-hidden&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10&quot;>
           <div className=&quot;text-center mb-20&quot;>
-            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>
-=======
-      {_/* Use Cases Section */}
-      <section className="py-24 bg-black relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              Use Cases
+            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>              Use Cases
             </h2>
             <p className=&quot;text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed&quot;>
               Trusted by businesses across industries for SEO success
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
             {useCases.map((useCase, index) => (
-              <Card
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {_useCases.map(_(useCase, _index) => (_<Card
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                key={index}
+              <Card                key={index}
                 className=&quot;group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300&quot;
               >
-<<<<<<< HEAD
                 <div className=&quot;flex items-start space-x-4&quot;>
                   <div className=&quot;text-4xl&quot;>{useCase.icon}</div>
                   <div className=&quot;flex-1&quot;>
@@ -545,24 +395,7 @@ export default function AISeosuitePage() {_const _features = [
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex} className=&quot;flex items-center text-sm text-gray-300&quot;>
                           <TrendingUp className=&quot;w-4 h-4 text-blue-400 mr-2 flex-shrink-0&quot; />
-                          {benefit}
-=======
-                <div className="flex items-start space-x-4">
-                  <div className="text-4xl">{_useCase.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors duration-300">
-                      {_useCase.title}
-                    </h3>
-                    <p className="text-gray-400 mb-4 leading-relaxed">
-                      {_useCase.description}
-                    </p>
-                    <div className="grid grid-cols-2 gap-2">
-                      {_useCase.benefits.map((benefit, _benefitIndex) => (
-                        <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                          <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                          {_benefit}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        </div>
+                          {benefit}                        </div>
                       ))}
                     </div>
                   </div>
@@ -573,52 +406,29 @@ export default function AISeosuitePage() {_const _features = [
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Pricing Section */}
       <section id=&quot;pricing&quot; className=&quot;py-24 bg-gray-900 relative overflow-hidden&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10&quot;>
           <div className=&quot;text-center mb-20&quot;>
-            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>
-=======
-      {_/* Pricing Section */}
-      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              Simple, Transparent Pricing
+            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>              Simple, Transparent Pricing
             </h2>
             <p className=&quot;text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed&quot;>
               Choose the plan that fits your SEO needs
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
-            {pricingPlans.map((plan, index) => (
-=======
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {_pricingPlans.map(_(plan, _index) => (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <Card
+            {pricingPlans.map((plan, index) => (              <Card
                 key={index}
                 className={_`relative group ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''} border ${_plan.color} hover:border-blue-500/50 transition-all duration-300`}
               >
-<<<<<<< HEAD
                 {plan.popular && (
                   <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;>
-                    <span className=&quot;bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold&quot;>
-=======
-                {_plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      Most Popular
+                    <span className=&quot;bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold&quot;>                      Most Popular
                     </span>
                   </div>
                 )}
                 
-<<<<<<< HEAD
                 <div className=&quot;text-center mb-8&quot;>
                   <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>{plan.name}</h3>
                   <div className=&quot;text-4xl font-bold text-white mb-2&quot;>
@@ -631,37 +441,14 @@ export default function AISeosuitePage() {_const _features = [
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
                       <CheckCircle className=&quot;w-5 h-5 text-blue-400 mr-3 flex-shrink-0&quot; />
-                      {feature}
-=======
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{_plan.name}</h3>
-                  <div className="text-4xl font-bold text-white mb-2">
-                    {_plan.price}<span className="text-lg text-gray-400">{_plan.period}</span>
-                  </div>
-                  <p className="text-gray-400">{_plan.description}</p>
-                </div>
-
-                <ul className="space-y-4 mb-8">
-                  {_plan.features.map(_(feature, _featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-                      {_feature}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    </li>
+                      {feature}                    </li>
                   ))}
                 </ul>
 
                 <Button
-<<<<<<< HEAD
                   href=&quot;/contact&quot;
                   className={`w-full ${plan.buttonColor} text-white`}
-                  size=&quot;lg&quot;
-=======
-                  href="/contact"
-                  className={_`w-full ${plan.buttonColor} text-white`}
-                  size="lg"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                >
+                  size=&quot;lg&quot;                >
                   Get Started
                   <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
                 </Button>
@@ -671,72 +458,41 @@ export default function AISeosuitePage() {_const _features = [
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Integrations Section */}
       <section className=&quot;py-24 bg-black relative overflow-hidden&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10&quot;>
           <div className=&quot;text-center mb-20&quot;>
-            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>
-=======
-      {_/* Integrations Section */}
-      <section className="py-24 bg-black relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              Seamless Integrations
+            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>              Seamless Integrations
             </h2>
             <p className=&quot;text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed&quot;>
               Connect with your favorite tools and platforms
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6&quot;>
-            {integrations.map((integration, index) => (
-=======
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {_integrations.map(_(integration, _index) => (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <Card
+            {integrations.map((integration, index) => (              <Card
                 key={index}
                 className=&quot;text-center group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300&quot;
               >
-<<<<<<< HEAD
                 <div className=&quot;text-4xl mb-4 group-hover:scale-110 transition-transform duration-300&quot;>
                   {integration.icon}
                 </div>
                 <h3 className=&quot;font-semibold text-white mb-2&quot;>{integration.name}</h3>
-                <p className=&quot;text-sm text-gray-400&quot;>{integration.description}</p>
-=======
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {_integration.icon}
-                </div>
-                <h3 className="font-semibold text-white mb-2">{_integration.name}</h3>
-                <p className="text-sm text-gray-400">{_integration.description}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </Card>
+                <p className=&quot;text-sm text-gray-400&quot;>{integration.description}</p>              </Card>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
-<<<<<<< HEAD
-=======
-      {_/* CTA Section */}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <section className="py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
-=======
       <section className=&quot;py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden&quot;>
         <div className=&quot;absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10&quot; />
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10&quot;>
           <h2 className=&quot;text-4xl sm:text-5xl font-bold text-white mb-8&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             Ready to Dominate Search Rankings?
           </h2>
           <p className=&quot;text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed&quot;>

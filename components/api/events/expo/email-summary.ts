@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -6,19 +5,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const provider = process.env.MAIL_PROVIDER || 'none',
     if (provider === 'none') {
-<<<<<<< HEAD
       // // // console.log('[EmailSummary] Stub: no provider configured'),
-      return res.status(200).json({ status: 'queued', provider: 'stub' })
-=======
-      // console.log('[EmailSummary] Stub: no provider configured');
-      return res.status(200).json({ status: 'queued', provider: 'stub' });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    }
+      return res.status(200).json({ status: 'queued', provider: 'stub' })    }
     // TODO: Integrate with actual provider
     return res.status(200).json({ status: 'queued', provider })
   } catch (e: any) {
     return res.status(500).json({ error: e.message || 'Failed to queue emails' })
-=======
 import type {_NextApiRequest, _NextApiResponse} from 'next';
 
 export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed'});
@@ -30,6 +22,5 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
     // TODO: Integrate with actual provider
     return res.status(200).json({_status: 'queued', _provider});
   } catch (e: unknown) {_return res.status(500).json({ error: e.message || 'Failed to queue emails'});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   }
 }

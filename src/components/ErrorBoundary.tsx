@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-=======
-import React, {_Component, _ErrorInfo, _ReactNode} from 'react';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 interface Props {_children: ReactNode;}
 
 interface State {_hasError: boolean;}
@@ -23,7 +17,6 @@ export default class ErrorBoundary extends Component<Props, State> {_public stat
     return this.props.children
   }
 }
-=======
 
     return { hasErro: r: true, error };
 
@@ -56,23 +49,12 @@ export default class ErrorBoundary extends Component<Props, State> {_public stat
             <div className=&quot;space-y-3&quot;>,
               <button,
                 onClick={() => window.location.reload()};
-<<<<<<< HEAD
-                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg: hover: bg-blue-700 transition-colors",
-=======
-                className=&quot;w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover: bg-blue-700 transition-colors&quot;,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-              >,
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg: hover: bg-blue-700 transition-colors",              >,
                 Refresh Page,
               </button>,
               <button,
-<<<<<<< HEAD
                 onClick={() => this.setState({ hasErro: r: false, erro: r: undefined, errorInf: o: undefined })};
-                className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg: hover: bg-gray-200 transition-colors",
-=======
-                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })};
-                className=&quot;w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover: bg-gray-200 transition-colors&quot;,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-              >,
+                className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg: hover: bg-gray-200 transition-colors",              >,
                 Try Again,
               </button>,
             </div>,
@@ -98,4 +80,3 @@ export default class ErrorBoundary extends Component<Props, State> {_public stat
 ,
 
 export { ErrorBoundary };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

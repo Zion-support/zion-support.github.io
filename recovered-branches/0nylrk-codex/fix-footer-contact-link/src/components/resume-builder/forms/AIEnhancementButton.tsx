@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Sparkles, Loader2 } from 'lucide-react',
@@ -31,32 +30,11 @@ export function AIEnhancementButton({
     }
     
     setError(null),
-    const enhancedContent = await enhanceContent(
-=======
-
-interface AIEnhancementButtonProps {_currentContent: string;
-  enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general';
-  context?: string;
-  onEnhanced: (_enhancedContent: string) => void;
-  buttonText?: string;
-  className?: string;}
-
-export function AIEnhancementButton(_{_currentContent, _enhancementType, _context, _onEnhanced, _buttonText = "Enhance with AI", _className}: AIEnhancementButtonProps) {_const { enhanceContent, _isEnhancing} = useResumeEnhancer();
-  const [error, setError] = useState<string | null>(null);
-  
-  const _handleEnhance = async () => {_if (!currentContent || currentContent.trim().length < 10) {
-      setError('Please enter at least some basic content before enhancing');
-      return;}
-    
-    setError(null);
-    const _enhancedContent = await enhanceContent(
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      currentContent,
+    const enhancedContent = await enhanceContent(      currentContent,
       enhancementType,
       context
     ),
     
-<<<<<<< HEAD
     if (enhancedContent) {
       onEnhanced(enhancedContent)
     }
@@ -72,31 +50,9 @@ export function AIEnhancementButton(_{_currentContent, _enhancementType, _contex
       disabled={isEnhancing}
     >
       {isEnhancing ? (
-        <Loader2 className=&quot;h-3 w-3 animate-spin&quot; />
-=======
-    if (enhancedContent) {_onEnhanced(enhancedContent);}
-  };
-  
-  return (
-    <Button
-      type="button"
-      variant="ghost"
-      size="sm"
-      className={_`h-6 gap-1 text-primary hover:text-primary ${className}`}
-      onClick={_handleEnhance}
-      disabled={_isEnhancing}
-    >
-      {_isEnhancing ? (
-        <Loader2 className="h-3 w-3 animate-spin" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      ) : (
+        <Loader2 className=&quot;h-3 w-3 animate-spin&quot; />      ) : (
         <Sparkles className=&quot;h-3 w-3&quot; />
       )}
-<<<<<<< HEAD
-      <span className=&quot;text-xs&quot;>{buttonText}</span>
-=======
-      <span className="text-xs">{_buttonText}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    </Button>
+      <span className=&quot;text-xs&quot;>{buttonText}</span>    </Button>
   )
 }

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import Marketplace from "@/pages/Marketplace",
@@ -20,31 +18,7 @@ import ServiceDescriptionGenerator from "@/pages/ServiceDescriptionGenerator",
 import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage",
 import SearchPage from "@/pages/SearchPage",
 import ProjectRoom from "@/pages/ProjectRoom",
-import VideoCall from "@/pages/VideoCall",
-=======
-import { Route, Routes } from &quot;react-router-dom&quot;;
-import { ProtectedRoute } from &quot;@/components/ProtectedRoute&quot;;
-import Marketplace from &quot;@/pages/Marketplace&quot;;
-import Categories from &quot;@/pages/Categories&quot;;
-import CategoryDetail from &quot;@/pages/CategoryDetail&quot;;
-import Featured from &quot;@/pages/Featured&quot;;
-import ListingDetail from &quot;@/pages/ListingDetail&quot;;
-import EquipmentPage from &quot;@/pages/EquipmentPage&quot;;
-import EquipmentDetail from &quot;@/pages/EquipmentDetail&quot;;
-import PostJob from &quot;@/pages/PostJob&quot;;
-import JobDetails from &quot;@/pages/JobDetails&quot;;
-import PublishProduct from &quot;@/pages/PublishProduct&quot;;
-import ServicesPage from &quot;@/pages/ServicesPage&quot;;
-import RequestQuote from &quot;@/pages/RequestQuote&quot;;
-import AIMatcher from &quot;@/pages/AIMatcher&quot;;
-import ServiceDescriptionGenerator from &quot;@/pages/ServiceDescriptionGenerator&quot;;
-import ITOnsiteServicesPage from &quot;@/pages/ITOnsiteServicesPage&quot;;
-import SearchPage from &quot;@/pages/SearchPage&quot;;
-import ProjectRoom from &quot;@/pages/ProjectRoom&quot;;
-import VideoCall from &quot;@/pages/VideoCall&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-const MarketplaceRoutes = () => {
+import VideoCall from "@/pages/VideoCall",const MarketplaceRoutes = () => {
   return (
     <Routes>
       {/* Marketplace Routes */}
@@ -58,7 +32,6 @@ const MarketplaceRoutes = () => {
       {/* Equipment Routes */}
       <Route path=&quot;/equipment&quot; element={<EquipmentPage />} />
       <Route path=&quot;/equipment/:id&quot; element={<EquipmentDetail />} />
-=======
 import Marketplace from "@/pages/Marketplace";
 import Categories from "@/pages/Categories";
 import CategoryDetail from "@/pages/CategoryDetail";
@@ -91,50 +64,27 @@ const _MarketplaceRoutes = () => {_return (
       {_/* Equipment Routes */}
       <Route path="/equipment" element={_<EquipmentPage />} />
       <Route path="/equipment/:id" element={_<EquipmentDetail />} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       {_/* Job Routes */}
       <Route
-<<<<<<< HEAD
         path=&quot;/post-job&quot; 
         element={
-          <ProtectedRoute>
-=======
-        path="/post-job" 
-        element={_<ProtectedRoute>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            <PostJob />
+          <ProtectedRoute>            <PostJob />
           </ProtectedRoute>} 
       />
-<<<<<<< HEAD
       <Route path=&quot;/jobs/:id&quot; element={<JobDetails />} />
       
       {/* AI Matcher Routes */}
       <Route path=&quot;/ai-matcher&quot; element={<AIMatcher />} />
-      <Route path=&quot;/match&quot; element={<AIMatcher />} />
-=======
-      <Route path="/jobs/:id" element={_<JobDetails />} />
-      
-      {_/* AI Matcher Routes */}
-      <Route path="/ai-matcher" element={_<AIMatcher />} />
-      <Route path="/match" element={_<AIMatcher />} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      
+      <Route path=&quot;/match&quot; element={<AIMatcher />} />      
       {_/* Creator Routes */}
       <Route 
-<<<<<<< HEAD
         path=&quot;/publish&quot; 
         element={
-          <ProtectedRoute>
-=======
-        path="/publish" 
-        element={_<ProtectedRoute>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            <PublishProduct />
+          <ProtectedRoute>            <PublishProduct />
           </ProtectedRoute>} 
       />
       
-<<<<<<< HEAD
       {/* Service Routes */}
       <Route path=&quot;/services&quot; element={<ServicesPage />} />
       <Route path=&quot;/it-onsite-services&quot; element={<ITOnsiteServicesPage />} />
@@ -142,43 +92,20 @@ const _MarketplaceRoutes = () => {_return (
       <Route path=&quot;/service-description-generator&quot; element={<ServiceDescriptionGenerator />} />
       
       {/* Search Route */}
-      <Route path=&quot;/search&quot; element={<SearchPage />} />
-=======
-      {_/* Service Routes */}
-      <Route path="/services" element={_<ServicesPage />} />
-      <Route path="/it-onsite-services" element={_<ITOnsiteServicesPage />} />
-      <Route path="/request-quote" element={_<RequestQuote />} />
-      <Route path="/service-description-generator" element={_<ServiceDescriptionGenerator />} />
-      
-      {_/* Search Route */}
-      <Route path="/search" element={_<SearchPage />} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      
+      <Route path=&quot;/search&quot; element={<SearchPage />} />      
       {_/* Project Room Routes */}
       <Route 
-<<<<<<< HEAD
         path=&quot;/project/:projectId&quot; 
         element={
-          <ProtectedRoute>
-=======
-        path="/project/:projectId" 
-        element={_<ProtectedRoute>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            <ProjectRoom />
+          <ProtectedRoute>            <ProjectRoom />
           </ProtectedRoute>} 
       />
       
       {_/* Video Call Routes */}
       <Route 
-<<<<<<< HEAD
         path=&quot;/call/:roomId&quot; 
         element={
-          <ProtectedRoute>
-=======
-        path="/call/:roomId" 
-        element={_<ProtectedRoute>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            <VideoCall />
+          <ProtectedRoute>            <VideoCall />
           </ProtectedRoute>} 
       />
     </Routes>

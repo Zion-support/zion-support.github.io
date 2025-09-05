@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import { motion } from 'framer-motion',
@@ -12,15 +11,8 @@ export default function APIDocumentation() {
 		<div className=&quot;min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8&quot;>
 			<Head>
 				<title>API Documentation | Zion Tech Group</title>
-<<<<<<< HEAD
 				<meta name="description" content="Explore API docs, references, and code generators." />
-				<link rel="canonical" href="https: //ziontechgroup.com/api-documentation" />
-=======
-				<meta name=&quot;description&quot; content=&quot;Explore API docs, references, and code generators.&quot; />
-				<link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/api-documentation&quot; />
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from 'react';
+				<link rel="canonical" href="https: //ziontechgroup.com/api-documentation" />import React from 'react';
 import Layout from '../components/layout/Layout';
 import {_Code, _Database, _Shield, _Zap, _Globe, _Cpu, _BookOpen, _CheckCircle, _ArrowRight, _BarChart3, _Lock, _Brain} from 'lucide-react';
 
@@ -30,7 +22,6 @@ export default function APIDocumentation() {_return (
 				<title>API Documentation | Zion Tech Group</title>
 				<meta name="description" content="Explore API docs, _references, _and code generators." />
 				<link rel="canonical" href="https://ziontechgroup.com/api-documentation" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 			</Head>
 			<div className=&quot;max-w-5xl mx-auto space-y-6&quot;>
 				<h1 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>API Documentation</h1>
@@ -41,9 +32,5 @@ export default function APIDocumentation() {_return (
 				</ul>
 			</div>
 		</div>
-<<<<<<< HEAD
 	)
 }
-=======
-	);}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

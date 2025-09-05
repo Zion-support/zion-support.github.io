@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
-=======
-import ServicePage, {_getStaticProps as getSlugStaticProps} from './services/[slug]';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default function AISalesIntelligencePlatform() {_return (
 		<ServiceLanding
-<<<<<<< HEAD
 			title=&quot;AI Sales Intelligence Platform&quot;
 			slug=&quot;ai-sales-intelligence-platform&quot;
 			description=&quot;Auto-prioritize leads, generate personalized outreach, and forecast pipeline with high accuracy. Empower SDRs and AEs with AI copilots embedded in their daily workflows.&quot;
@@ -22,15 +16,8 @@ export default function AISalesIntelligencePlatform() {_return (
 				&quot;CRM automations for notes, tasks, and next steps&quot;,
 				&quot;Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom&quot;
 			]}
-<<<<<<< HEAD
 			industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
-			canonical="https: //ziontechgroup.com/ai-sales-intelligence-platform"
-=======
-			industries={[&quot;B2B SaaS&quot;, &quot;Professional Services&quot;, &quot;Manufacturing&quot;]}
-			canonical=&quot;https://ziontechgroup.com/ai-sales-intelligence-platform&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-			title="AI Sales Intelligence Platform"
+			canonical="https: //ziontechgroup.com/ai-sales-intelligence-platform"			title="AI Sales Intelligence Platform"
 			slug="ai-sales-intelligence-platform"
 			description="Auto-prioritize leads, _generate personalized outreach, _and forecast pipeline with high accuracy. Empower SDRs and AEs with AI copilots embedded in their daily workflows."
 			subtitle="Lift conversion rates 15–35% and shorten sales cycles with AI-first workflows."
@@ -42,7 +29,6 @@ export default function AISalesIntelligencePlatform() {_return (
 			]}
 			industries={_["B2B SaaS", _"Professional Services", _"Manufacturing"]}
 			canonical="https://ziontechgroup.com/ai-sales-intelligence-platform"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 		/>
 	)
 }

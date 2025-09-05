@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { Suspense } from 'react',
 import { Routes, Route } from 'react-router-dom',
 import './App.css',
@@ -7,18 +5,7 @@ import { ThemeProvider } from "./components/ThemeProvider",
 import { WhitelabelProvider } from "./context/WhitelabelContext",
 import { Toaster } from "./components/ui/toaster",
 import { Toaster as SonnerToaster } from "./components/ui/sonner",
-import InstallPrompt from "./components/InstallPrompt",
-=======
-import React, { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import './App.css';
-import { ThemeProvider } from &quot;./components/ThemeProvider&quot;;
-import { WhitelabelProvider } from &quot;./context/WhitelabelContext&quot;;
-import { Toaster } from &quot;./components/ui/toaster&quot;;
-import { Toaster as SonnerToaster } from &quot;./components/ui/sonner&quot;;
-import InstallPrompt from &quot;./components/InstallPrompt&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import {
+import InstallPrompt from "./components/InstallPrompt",import {
   AuthRoutes,
   DashboardRoutes,
   MarketplaceRoutes,
@@ -70,7 +57,6 @@ const baseRoutes = [
   { path: '/open-app', element: <OpenAppRedirect /> },
   { path: '/community', element: <CommunityPage /> },
   { path: '/contact', element: <ContactPage /> }],
-=======
 import React, {_Suspense} from 'react';
 import './App.css';
 import InstallPrompt from "./components/InstallPrompt";
@@ -113,7 +99,6 @@ const _baseRoutes = [
   {_path: '/open-app', _element: <OpenAppRedirect />},
   {_path: '/community', _element: <CommunityPage />},
   {_path: '/contact', _element: <ContactPage />}];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 const _App = () => {_return (_<WhitelabelProvider>
       <ThemeProvider>
@@ -122,7 +107,6 @@ const _App = () => {_return (_<WhitelabelProvider>
             {_baseRoutes.map(({ path, _element}) => (
               <Route key={_path} path={_path} element={_element} />
             ))}
-<<<<<<< HEAD
             <Route path=&quot;/auth/*&quot; element={<AuthRoutes />} />
             <Route path=&quot;/dashboard/*&quot; element={<DashboardRoutes />} />
             <Route path=&quot;/marketplace/*&quot; element={<MarketplaceRoutes />} />
@@ -134,22 +118,7 @@ const _App = () => {_return (_<WhitelabelProvider>
             <Route path=&quot;/community/*&quot; element={<CommunityRoutes />} />
             <Route path=&quot;/developers/*&quot; element={<DeveloperRoutes />} />
             <Route path=&quot;/seller/*&quot; element={<SellerRoutes />} />
-            <Route path=&quot;*&quot; element={<ErrorRoutes />} />
-=======
-            <Route path="/auth/*" element={_<AuthRoutes />} />
-            <Route path="/dashboard/*" element={_<DashboardRoutes />} />
-            <Route path="/marketplace/*" element={_<MarketplaceRoutes />} />
-            <Route path="/talent/*" element={_<TalentRoutes />} />
-            <Route path="/admin/*" element={_<AdminRoutes />} />
-            <Route path="/mobile/*" element={_<MobileAppRoutes />} />
-            <Route path="/content/*" element={_<ContentRoutes />} />
-            <Route path="/enterprise/*" element={_<EnterpriseRoutes />} />
-            <Route path="/community/*" element={_<CommunityRoutes />} />
-            <Route path="/developers/*" element={_<DeveloperRoutes />} />
-            <Route path="/seller/*" element={_<SellerRoutes />} />
-            <Route path="*" element={_<ErrorRoutes />} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          </Routes>
+            <Route path=&quot;*&quot; element={<ErrorRoutes />} />          </Routes>
         </Suspense>
         <Toaster />
         <SonnerToaster position=&quot;top-right&quot; />

@@ -1,19 +1,10 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
 import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react',
-=======
-import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default function CloudMonitoringPage() {_const _features = [
     {
-<<<<<<< HEAD
       icon: <Activity className=&quot;w-8 h-8 text-white&quot; />,
       title: 'Real-time Monitoring',
       description: 'Monitor your entire infrastructure in real-time with sub-second latency and instant alerting.',
@@ -53,7 +44,6 @@ export default function CloudMonitoringPage() {_const _features = [
   const monitoringCapabilities = [
     {
       category: 'Infrastructure',
-<<<<<<< HEAD
       icon: <Server className="w-6 h-6 text-blue-400" />,
       metrics: ['CPU UsageMemory UtilizationDisk I/ONetwork PerformanceContainer Metrics']
     },
@@ -70,27 +60,7 @@ export default function CloudMonitoringPage() {_const _features = [
     {
       category: 'Security',
       icon: <Shield className="w-6 h-6 text-red-400" />,
-      metrics: ['Threat DetectionAccess LogsVulnerability ScansCompliance StatusAudit Trails']
-=======
-      icon: <Server className=&quot;w-6 h-6 text-blue-400&quot; />,
-      metrics: ['CPU Usage', 'Memory Utilization', 'Disk I/O', 'Network Performance', 'Container Metrics']
-    },
-    {
-      category: 'Applications',
-      icon: <Code className=&quot;w-6 h-6 text-green-400&quot; />,
-      metrics: ['Response Time', 'Error Rates', 'Throughput', 'User Experience', 'API Performance']
-    },
-    {
-      category: 'Databases',
-      icon: <Database className=&quot;w-6 h-6 text-purple-400&quot; />,
-      metrics: ['Query Performance', 'Connection Pool', 'Index Usage', 'Replication Lag', 'Storage Growth']
-    },
-    {
-      category: 'Security',
-      icon: <Shield className=&quot;w-6 h-6 text-red-400&quot; />,
-      metrics: ['Threat Detection', 'Access Logs', 'Vulnerability Scans', 'Compliance Status', 'Audit Trails']
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    }
+      metrics: ['Threat DetectionAccess LogsVulnerability ScansCompliance StatusAudit Trails']    }
   ],
 
   const pricingPlans = [
@@ -169,7 +139,6 @@ export default function CloudMonitoringPage() {_const _features = [
       benefits: ['Regulatory complianceFraud detectionRisk managementCustomer trust']
     }
   ],
-=======
       icon: <Activity className="w-8 h-8 text-white" />, _title: 'Real-time Monitoring', _description: 'Monitor your entire infrastructure in real-time with sub-second latency and instant alerting.', _color: 'bg-gradient-to-br from-green-500 to-emerald-600', _gradient: 'from-green-400 to-emerald-500'},
     {_icon: <BarChart3 className="w-8 h-8 text-white" />, _title: 'Advanced Analytics', _description: 'Deep insights into performance metrics, _resource utilization, _and business intelligence.', _color: 'bg-gradient-to-br from-blue-500 to-cyan-600', _gradient: 'from-blue-400 to-cyan-500'},
     {_icon: <AlertTriangle className="w-8 h-8 text-white" />, _title: 'Smart Alerting', _description: 'AI-powered anomaly detection and intelligent alerting to prevent issues before they impact users.', _color: 'bg-gradient-to-br from-red-500 to-pink-600', _gradient: 'from-red-400 to-pink-500'},
@@ -213,7 +182,6 @@ export default function CloudMonitoringPage() {_const _features = [
     {_title: 'E-commerce', _description: 'Monitor website performance, _payment processing, _and inventory systems.', _icon: '🛒', _benefits: ['Higher conversion', _'Faster checkout', _'Inventory optimization', _'Revenue growth']},
     {_title: 'Financial Services', _description: 'Ensure compliance, _security, _and 24/7 availability of critical systems.', _icon: '💰', _benefits: ['Regulatory compliance', _'Fraud detection', _'Risk management', _'Customer trust']}
   ];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
@@ -225,20 +193,11 @@ export default function CloudMonitoringPage() {_const _features = [
         <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
       </Head>
 
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className=&quot;relative min-h-screen flex items-center justify-center overflow-hidden bg-black&quot;>
         <div className=&quot;absolute inset-0&quot;>
           <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.1),transparent_50%)]&quot; />
-          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_50%)]&quot; />
-=======
-      {_/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.1),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_50%)]" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        </div>
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_50%)]&quot; />        </div>
         
         <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
           <div className=&quot;mb-8&quot;>
@@ -275,20 +234,11 @@ export default function CloudMonitoringPage() {_const _features = [
             </Button>
           </div>
 
-<<<<<<< HEAD
           {/* Stats */}
           <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto&quot;>
             <div className=&quot;text-center&quot;>
               <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-green-400&quot;>99.99%</div>
-              <div className=&quot;text-gray-400&quot;>Uptime</div>
-=======
-          {_/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400">99.99%</div>
-              <div className="text-gray-400">Uptime</div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            </div>
+              <div className=&quot;text-gray-400&quot;>Uptime</div>            </div>
             <div className=&quot;text-center&quot;>
               <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-blue-400&quot;>1M+</div>
               <div className=&quot;text-gray-400&quot;>Metrics Tracked</div>
@@ -297,41 +247,24 @@ export default function CloudMonitoringPage() {_const _features = [
               <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-purple-400&quot;>50+</div>
               <div className=&quot;text-gray-400&quot;>Integrations</div>
             </div>
-<<<<<<< HEAD
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400"><100ms</div>
-              <div className="text-gray-400">Latency</div>
-=======
-            <div className=&quot;text-center&quot;>
-              <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-orange-400&quot;>&lt;100ms</div>
-              <div className=&quot;text-gray-400&quot;>Latency</div>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-            </div>
+              <div className="text-gray-400">Latency</div>            </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className=&quot;py-24 bg-gray-900 relative overflow-hidden&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10&quot;>
           <div className=&quot;text-center mb-20&quot;>
-            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>
-=======
-      {_/* Features Section */}
-      <section className="py-24 bg-gray-900 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              Powerful Monitoring Features
+            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>              Powerful Monitoring Features
             </h2>
             <p className=&quot;text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed&quot;>
               Everything you need to monitor and optimize your infrastructure
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             {features.map((feature, index) => (
               <Card
@@ -348,65 +281,29 @@ export default function CloudMonitoringPage() {_const _features = [
                   {feature.title}
                 </h3>
                 <p className=&quot;text-gray-400 leading-relaxed&quot;>
-                  {feature.description}
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {_features.map(_(feature, _index) => (
-              <Card
-                key={index}
-                className="text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
-                style={_{ animationDelay: `${(index * 0.1) + 0.2}s` }}
-              >
-                <div className="relative">
-                  <div className={_`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>
-                    {_feature.icon}
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-green-400 transition-colors duration-300">
-                  {_feature.title}
-                </h3>
-                <p className="text-gray-400 leading-relaxed">
-                  {_feature.description}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </p>
+                  {feature.description}                </p>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Monitoring Capabilities */}
       <section className=&quot;py-24 bg-black relative overflow-hidden&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10&quot;>
           <div className=&quot;text-center mb-20&quot;>
-            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>
-=======
-      {_/* Monitoring Capabilities */}
-      <section className="py-24 bg-black relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              Comprehensive Monitoring
+            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>              Comprehensive Monitoring
             </h2>
             <p className=&quot;text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed&quot;>
               Monitor every aspect of your infrastructure with detailed metrics and insights
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
             {monitoringCapabilities.map((capability, index) => (
-              <Card
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {_monitoringCapabilities.map(_(capability, _index) => (_<Card
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                key={index}
+              <Card                key={index}
                 className=&quot;group border border-gray-700 hover:border-green-500/30 hover:bg-gray-900/80 transition-all duration-300&quot;
               >
-<<<<<<< HEAD
                 <div className=&quot;flex items-start space-x-4&quot;>
                   <div className=&quot;flex-shrink-0&quot;>{capability.icon}</div>
                   <div className=&quot;flex-1&quot;>
@@ -417,21 +314,7 @@ export default function CloudMonitoringPage() {_const _features = [
                       {capability.metrics.map((metric, metricIndex) => (
                         <div key={metricIndex} className=&quot;flex items-center text-sm text-gray-300&quot;>
                           <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2 flex-shrink-0&quot; />
-                          {metric}
-=======
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">{_capability.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-green-400 transition-colors duration-300">
-                      {_capability.category}
-                    </h3>
-                    <div className="grid grid-cols-1 gap-2">
-                      {_capability.metrics.map((metric, _metricIndex) => (
-                        <div key={metricIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {_metric}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        </div>
+                          {metric}                        </div>
                       ))}
                     </div>
                   </div>
@@ -442,38 +325,22 @@ export default function CloudMonitoringPage() {_const _features = [
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Use Cases Section */}
       <section className=&quot;py-24 bg-gray-900 relative overflow-hidden&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10&quot;>
           <div className=&quot;text-center mb-20&quot;>
-            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>
-=======
-      {_/* Use Cases Section */}
-      <section className="py-24 bg-gray-900 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              Use Cases
+            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>              Use Cases
             </h2>
             <p className=&quot;text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed&quot;>
               Trusted by teams across industries for reliable infrastructure monitoring
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
             {useCases.map((useCase, index) => (
-              <Card
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {_useCases.map(_(useCase, _index) => (_<Card
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                key={index}
+              <Card                key={index}
                 className=&quot;group border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300&quot;
               >
-<<<<<<< HEAD
                 <div className=&quot;flex items-start space-x-4&quot;>
                   <div className=&quot;text-4xl&quot;>{useCase.icon}</div>
                   <div className=&quot;flex-1&quot;>
@@ -487,24 +354,7 @@ export default function CloudMonitoringPage() {_const _features = [
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex} className=&quot;flex items-center text-sm text-gray-300&quot;>
                           <TrendingUp className=&quot;w-4 h-4 text-green-400 mr-2 flex-shrink-0&quot; />
-                          {benefit}
-=======
-                <div className="flex items-start space-x-4">
-                  <div className="text-4xl">{_useCase.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-green-400 transition-colors duration-300">
-                      {_useCase.title}
-                    </h3>
-                    <p className="text-gray-400 mb-4 leading-relaxed">
-                      {_useCase.description}
-                    </p>
-                    <div className="grid grid-cols-2 gap-2">
-                      {_useCase.benefits.map((benefit, _benefitIndex) => (
-                        <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                          <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {_benefit}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        </div>
+                          {benefit}                        </div>
                       ))}
                     </div>
                   </div>
@@ -515,52 +365,29 @@ export default function CloudMonitoringPage() {_const _features = [
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Pricing Section */}
       <section id=&quot;pricing&quot; className=&quot;py-24 bg-black relative overflow-hidden&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10&quot;>
           <div className=&quot;text-center mb-20&quot;>
-            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>
-=======
-      {_/* Pricing Section */}
-      <section id="pricing" className="py-24 bg-black relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              Simple, Transparent Pricing
+            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>              Simple, Transparent Pricing
             </h2>
             <p className=&quot;text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed&quot;>
               Choose the plan that fits your monitoring needs
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
-            {pricingPlans.map((plan, index) => (
-=======
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {_pricingPlans.map(_(plan, _index) => (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <Card
+            {pricingPlans.map((plan, index) => (              <Card
                 key={index}
                 className={_`relative group ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''} border ${_plan.color} hover:border-green-500/50 transition-all duration-300`}
               >
-<<<<<<< HEAD
                 {plan.popular && (
                   <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;>
-                    <span className=&quot;bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold&quot;>
-=======
-                {_plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      Most Popular
+                    <span className=&quot;bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold&quot;>                      Most Popular
                     </span>
                   </div>
                 )}
                 
-<<<<<<< HEAD
                 <div className=&quot;text-center mb-8&quot;>
                   <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>{plan.name}</h3>
                   <div className=&quot;text-4xl font-bold text-white mb-2&quot;>
@@ -573,37 +400,14 @@ export default function CloudMonitoringPage() {_const _features = [
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
                       <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 flex-shrink-0&quot; />
-                      {feature}
-=======
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{_plan.name}</h3>
-                  <div className="text-4xl font-bold text-white mb-2">
-                    {_plan.price}<span className="text-lg text-gray-400">{_plan.period}</span>
-                  </div>
-                  <p className="text-gray-400">{_plan.description}</p>
-                </div>
-
-                <ul className="space-y-4 mb-8">
-                  {_plan.features.map(_(feature, _featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {_feature}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    </li>
+                      {feature}                    </li>
                   ))}
                 </ul>
 
                 <Button
-<<<<<<< HEAD
                   href=&quot;/contact&quot;
                   className={`w-full ${plan.buttonColor} text-white`}
-                  size=&quot;lg&quot;
-=======
-                  href="/contact"
-                  className={_`w-full ${plan.buttonColor} text-white`}
-                  size="lg"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                >
+                  size=&quot;lg&quot;                >
                   Get Started
                   <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
                 </Button>
@@ -613,72 +417,41 @@ export default function CloudMonitoringPage() {_const _features = [
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Integrations Section */}
       <section className=&quot;py-24 bg-gray-900 relative overflow-hidden&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10&quot;>
           <div className=&quot;text-center mb-20&quot;>
-            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>
-=======
-      {_/* Integrations Section */}
-      <section className="py-24 bg-gray-900 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              Seamless Integrations
+            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>              Seamless Integrations
             </h2>
             <p className=&quot;text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed&quot;>
               Connect with your favorite tools and platforms
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6&quot;>
-            {integrations.map((integration, index) => (
-=======
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {_integrations.map(_(integration, _index) => (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <Card
+            {integrations.map((integration, index) => (              <Card
                 key={index}
                 className=&quot;text-center group border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300&quot;
               >
-<<<<<<< HEAD
                 <div className=&quot;text-4xl mb-4 group-hover:scale-110 transition-transform duration-300&quot;>
                   {integration.icon}
                 </div>
                 <h3 className=&quot;font-semibold text-white mb-2&quot;>{integration.name}</h3>
-                <p className=&quot;text-sm text-gray-400&quot;>{integration.description}</p>
-=======
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {_integration.icon}
-                </div>
-                <h3 className="font-semibold text-white mb-2">{_integration.name}</h3>
-                <p className="text-sm text-gray-400">{_integration.description}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </Card>
+                <p className=&quot;text-sm text-gray-400&quot;>{integration.description}</p>              </Card>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
-<<<<<<< HEAD
-=======
-      {_/* CTA Section */}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <section className="py-24 bg-gradient-to-r from-green-600 to-blue-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
-=======
       <section className=&quot;py-24 bg-gradient-to-r from-green-600 to-blue-600 relative overflow-hidden&quot;>
         <div className=&quot;absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10&quot; />
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10&quot;>
           <h2 className=&quot;text-4xl sm:text-5xl font-bold text-white mb-8&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             Ready to Monitor Your Infrastructure?
           </h2>
           <p className=&quot;text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed&quot;>

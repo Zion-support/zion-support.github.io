@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { 
@@ -33,9 +32,9 @@ export function TenantsList() {
     try {
       setIsLoading(true),
       const { data, error } = await supabase
-        .from('whitelabel_tenants')
+        .from('whitelabeltenants')
         .select('*')
-        .order('created_at', { ascending: false }),
+        .order('createdat', { ascending: false }),
         
       if (error) throw error,
       setTenants(data as WhitelabelTenant[])
@@ -49,141 +48,66 @@ export function TenantsList() {
       setIsLoading(false)
     }
   },
-=======
-import React, {_useState, _useEffect} from 'react';
-import {_Table, _TableBody, _TableCell, _TableHead, _TableHeader, _TableRow} from '@/components/ui/table';
-import {_DropdownMenu, _DropdownMenuContent, _DropdownMenuItem, _DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
-
-export function TenantsList() {_const [tenants, _setTenants] = useState<WhitelabelTenant[]>([]);
-  const [isLoading, _setIsLoading] = useState(true);
-
-  useEffect__(() => {
-    loadTenants();}, []);
-
-  const _loadTenants = async () => {_try {
-      setIsLoading(true);
-      const { data, _error} = await supabase
-        .from('whitelabel_tenants')
-        .select('*')
-        .order('created_at', {_ascending: false});
-        
-      if (error) throw error;
-      setTenants(data as WhitelabelTenant[]);
-    } catch (error: unknown) {_toast({
-        variant: 'destructive', _title: 'Failed to load tenants', _description: error.message});
-    } finally {_setIsLoading(false);}
-  };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-  const _toggleTenantStatus = async (_tenant: WhitelabelTenant) => {_try {
+  const toggleTenantStatus = async (tenant: WhitelabelTenant) => {try {
       const { error} = await supabase
-        .from('whitelabel_tenants')
-<<<<<<< HEAD
-        .update({ is_active: !tenant.is_active })
-        .eq('id', tenant.id),
-=======
-        .update({_is_active: !tenant.is_active})
-        .eq('id', tenant.id);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        
+        .from('whitelabeltenants')
+        .update({ isactive: !tenant.isactive })
+        .eq('id', tenant.id),        
       if (error) throw error,
       
-      // Update local state
-      setTenants(tenants.map(t => 
-<<<<<<< HEAD
-        t.id === tenant.id ? { ...t, is_active: !t.is_active } : t
+      // Update local state,
+setTenants(tenants.map(t => 
+        t.id === tenant.id ? { ...t, isactive: !t.isactive } : t
       )),
       
       toast({
-        title: `Tenant ${tenant.is_active ? 'deactivated' : 'activated'}`,
-        description: `${tenant.brand_name} has been ${tenant.is_active ? 'deactivated' : 'activated'} successfully.`})
+        title: `Tenant ${tenant.isactive ? 'deactivated' : 'activated'}`,
+        description: `${tenant.brandname} has been ${tenant.isactive ? 'deactivated' : 'activated'} successfully.`})
     } catch (error: any) {
       console.error('Error toggling tenant status:', error),
       toast({
         variant: 'destructive',
         title: 'Failed to update tenant',
-        description: error.message})
-=======
-        t.id === tenant.id ? {_...t, _is_active: !t.is_active} : t
-      ));
-      
-      toast({_title: `Tenant ${tenant.is_active ? 'deactivated' : 'activated'}`,
-        description: `${_tenant.brand_name} has been ${_tenant.is_active ? 'deactivated' : 'activated'} successfully.`});
-    } catch (error: unknown) {_toast({
-        variant: 'destructive', _title: 'Failed to update tenant', _description: error.message});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    }
+        description: error.message})    }
   },
 
-  const _verifyDns = async (_tenant: WhitelabelTenant) => {_try {
-      // In a real implementation, _this would verify DNS records
-      // For now, _we'll just mark it as verified
-      const { error} = await supabase
-        .from('whitelabel_tenants')
-<<<<<<< HEAD
-        .update({ dns_verified: true })
-        .eq('id', tenant.id),
-=======
-        .update({_dns_verified: true})
-        .eq('id', tenant.id);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        
+  const verifyDns = async (tenant: WhitelabelTenant) => {try {
+      // In a real implementation, this would verify DNS records
+      // For now, we'll just mark it as verified,
+const { error} = await supabase
+        .from('whitelabeltenants')
+        .update({ dnsverified: true })
+        .eq('id', tenant.id),        
       if (error) throw error,
       
-      // Update local state
-      setTenants(tenants.map(t => 
-<<<<<<< HEAD
-        t.id === tenant.id ? { ...t, dns_verified: true } : t
+      // Update local state,
+setTenants(tenants.map(t => 
+        t.id === tenant.id ? { ...t, dnsverified: true } : t
       )),
       
       toast({
         title: 'DNS verified',
-        description: `Custom domain for ${tenant.brand_name} has been verified.`})
+        description: `Custom domain for ${tenant.brandname} has been verified.`})
     } catch (error: any) {
       console.error('Error verifying DNS:', error),
       toast({
         variant: 'destructive',
         title: 'Failed to verify DNS',
-        description: error.message})
-=======
-        t.id === tenant.id ? {_...t, _dns_verified: true} : t
-      ));
-      
-      toast({_title: 'DNS verified', _description: `Custom domain for ${tenant.brand_name} has been verified.`});
-    } catch (error: unknown) {_toast({
-        variant: 'destructive', _title: 'Failed to verify DNS', _description: error.message});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    }
+        description: error.message})    }
   },
 
   return (
-<<<<<<< HEAD
     <div className=&quot;space-y-4&quot;>
       <div className=&quot;flex justify-between items-center&quot;>
         <h2 className=&quot;text-xl font-semibold&quot;>White-Label Tenants</h2>
         <Button onClick={loadTenants} variant=&quot;outline&quot; size=&quot;sm&quot;>
-          <RefreshCcw className=&quot;mr-2 h-4 w-4&quot; />
-=======
-    <div className="space-y-4">
-      <div className="flex justify-between items-center">
-        <h2 className="text-xl font-semibold">White-Label Tenants</h2>
-        <Button onClick={_loadTenants} variant="outline" size="sm">
-          <RefreshCcw className="mr-2 h-4 w-4" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          Refresh
+          <RefreshCcw className=&quot;mr-2 h-4 w-4&quot; />          Refresh
         </Button>
       </div>
 
-<<<<<<< HEAD
       {isLoading ? (
         <div className=&quot;flex justify-center p-8&quot;>
-          <div className=&quot;animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary&quot;></div>
-=======
-      {_isLoading ? (
-        <div className="flex justify-center p-8">
-          <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary"></div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        </div>
+          <div className=&quot;animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary&quot;></div>        </div>
       ) : (
         <div className=&quot;rounded-md border&quot;>
           <Table>
@@ -204,15 +128,14 @@ export function TenantsList() {_const [tenants, _setTenants] = useState<Whitelab
                     No tenants found. Create a new white-label instance to get started.
                   </TableCell>
                 </TableRow>
-<<<<<<< HEAD
               ) : (
                 tenants.map((tenant) => (
                   <TableRow key={tenant.id}>
-                    <TableCell className=&quot;font-medium&quot;>{tenant.brand_name}</TableCell>
+                    <TableCell className=&quot;font-medium&quot;>{tenant.brandname}</TableCell>
                     <TableCell>
-                      <a 
-                        href={`https://${tenant.subdomain}.ziontechmarketplace.com`}
-                        target=&quot;_blank&quot;
+                      <a,
+href={`https://${tenant.subdomain}.ziontechmarketplace.com`}
+                        target=&quot;blank&quot;
                         rel=&quot;noopener noreferrer&quot;
                         className=&quot;flex items-center hover:underline&quot;
                       >
@@ -221,55 +144,24 @@ export function TenantsList() {_const [tenants, _setTenants] = useState<Whitelab
                       </Link>
                     </TableCell>
                     <TableCell>
-                      {tenant.custom_domain ? (
-                        <div className=&quot;flex items-center&quot;>
-=======
-              ) : (_tenants.map((tenant) => (_<TableRow key={_tenant.id}>
-                    <TableCell className="font-medium">{_tenant.brand_name}</TableCell>
-                    <TableCell>
-                      <a 
-                        href={_`https://${tenant.subdomain}.ziontechmarketplace.com`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center hover:underline"
-                      >
-                        {_tenant.subdomain}
-                        <ExternalLink className="ml-1 h-3 w-3" />
-                      </a>
-                    </TableCell>
-                    <TableCell>
-                      {_tenant.custom_domain ? (
-                        <div className="flex items-center">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                          <a
-                            href={`https://${tenant.custom_domain}`}
-                            target=&quot;_blank&quot;
+                      {tenant.customdomain ? (
+                        <div className=&quot;flex items-center&quot;>                          <a,
+href={`https://${tenant.customdomain}`}
+                            target=&quot;blank&quot;
                             rel=&quot;noopener noreferrer&quot;
                             className=&quot;hover:underline flex items-center&quot;
                           >
-<<<<<<< HEAD
-                            {tenant.custom_domain}
+                            {tenant.customdomain}
                             <ExternalLink className=&quot;ml-1 h-3 w-3&quot; />
                           </Link>
-                          <Badge 
-                            variant={tenant.dns_verified ? &quot;default&quot; : &quot;outline&quot;} 
+                          <Badge,
+variant={tenant.dnsverified ? &quot;default&quot; : &quot;outline&quot} 
                             className=&quot;ml-2&quot;
                           >
-                            {tenant.dns_verified ? &quot;Verified&quot; : &quot;Pending&quot;}
-=======
-                            {_tenant.custom_domain}
-                            <ExternalLink className="ml-1 h-3 w-3" />
-                          </a>
-                          <Badge 
-                            variant={_tenant.dns_verified ? "default" : "outline"} 
-                            className="ml-2"
-                          >
-                            {_tenant.dns_verified ? "Verified" : "Pending"}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                          </Badge>
-                          {_!tenant.dns_verified && (
-                            <Button 
-                              variant=&quot;ghost&quot; 
+                            {tenant.dnsverified ? &quot;Verified&quot; : &quot;Pending&quot}                          </Badge>
+                          {_!tenant.dnsverified && (
+                            <Button,
+variant=&quot;ghost&quot; 
                               size=&quot;sm&quot; 
                               onClick={() => verifyDns(tenant)}
                               className=&quot;ml-1 h-6 w-6 p-0&quot;
@@ -284,22 +176,12 @@ export function TenantsList() {_const [tenants, _setTenants] = useState<Whitelab
                       )}
                     </TableCell>
                     <TableCell>
-<<<<<<< HEAD
-                      <Badge variant={tenant.is_active ? &quot;default&quot; : &quot;destructive&quot;}>
-                        {tenant.is_active ? &quot;Active&quot; : &quot;Inactive&quot;}
+                      <Badge variant={tenant.isactive ? &quot;default&quot; : &quot;destructive&quot}>
+                        {tenant.isactive ? &quot;Active&quot; : &quot;Inactive&quot}
                       </Badge>
                     </TableCell>
-                    <TableCell>{format(new Date(tenant.created_at), 'MMM d, yyyy')}</TableCell>
-                    <TableCell className=&quot;text-right&quot;>
-=======
-                      <Badge variant={_tenant.is_active ? "default" : "destructive"}>
-                        {_tenant.is_active ? "Active" : "Inactive"}
-                      </Badge>
-                    </TableCell>
-                    <TableCell>{_format(new Date(tenant.created_at), _'MMM d, _yyyy')}</TableCell>
-                    <TableCell className="text-right">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      <DropdownMenu>
+                    <TableCell>{format(new Date(tenant.createdat), 'MMM d, yyyy')}</TableCell>
+                    <TableCell className=&quot;text-right&quot;>                      <DropdownMenu>
                         <DropdownMenuTrigger asChild>
                           <Button variant=&quot;ghost&quot; size=&quot;sm&quot;>
                             <MoreHorizontal className=&quot;h-4 w-4&quot; />
@@ -316,7 +198,7 @@ export function TenantsList() {_const [tenants, _setTenants] = useState<Whitelab
                             Manage Admins
                           </DropdownMenuItem>
                           <DropdownMenuItem onClick={_() => toggleTenantStatus(tenant)}>
-                            {_tenant.is_active ? (
+                            {tenant.isactive ? (
                               <>
                                 <PowerOff className=&quot;mr-2 h-4 w-4&quot; />
                                 Disable Tenant

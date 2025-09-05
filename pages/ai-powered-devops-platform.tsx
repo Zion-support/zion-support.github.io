@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
@@ -25,15 +24,8 @@ export default function AIPoweredDevOpsPlatformPage() {
 					&quot;Rollback orchestration with blast radius limits&quot;,
 					&quot;Incident prediction, runbooks, and guardrails&quot;
 				]}
-<<<<<<< HEAD
 				industries={["SaaS", "E-commerce", "Fintech", "Media", "Enterprise IT"]}
-				canonical="https: //ziontechgroup.com/ai-powered-devops-platform"
-=======
-				industries={[&quot;SaaS&quot;, &quot;E-commerce&quot;, &quot;Fintech&quot;, &quot;Media&quot;, &quot;Enterprise IT&quot;]}
-				canonical=&quot;https://ziontechgroup.com/ai-powered-devops-platform&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from 'react';
+				canonical="https: //ziontechgroup.com/ai-powered-devops-platform"import React from 'react';
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
@@ -56,7 +48,6 @@ export default function AIPoweredDevOpsPlatformPage() {_return (
 				]}
 				industries={_["SaaS", _"E-commerce", _"Fintech", _"Media", _"Enterprise IT"]}
 				canonical="https://ziontechgroup.com/ai-powered-devops-platform"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 			/>
 		</>
 	)

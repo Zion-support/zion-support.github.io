@@ -1,15 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Star } from 'lucide-react'
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
-=======
-import React from &quot;react&quot;;
-import { Star } from 'lucide-react'
-import { Card, CardContent, CardFooter } from &quot;@/components/ui/card&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 const testimonials = [
   {
     name: &quot;Alex Johnson&quot;,
@@ -41,7 +33,6 @@ export const AppTestimonials: React.FC = () => {
         <div className=&quot;text-center mb-12&quot;>
           <h2 className=&quot;text-3xl md:text-4xl font-bold mb-4&quot;>What Our Users Say</h2>
           <p className=&quot;text-lg text-gray-300 max-w-2xl mx-auto&quot;>
-=======
 import React from "react";
 
 const _testimonials = [
@@ -55,12 +46,10 @@ export const AppTestimonials: React.FC = () => {_return (_<section className="py
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Users Say</h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             Join thousands of satisfied users who have transformed their tech careers with the Zion mobile app.
           </p>
         </div>
         
-<<<<<<< HEAD
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
           {testimonials.map((testimonial, index) => (
             <Card key={index} className=&quot;bg-zion-blue-dark border-zion-purple/30&quot;>
@@ -82,32 +71,7 @@ export const AppTestimonials: React.FC = () => {_return (_<section className="py
                   </div>
                   <div>
                     <p className=&quot;font-semibold text-white&quot;>{testimonial.name}</p>
-                    <p className=&quot;text-sm text-gray-400&quot;>{testimonial.role}</p>
-=======
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, _index) => (
-            <Card key={index} className="bg-zion-blue-dark border-zion-purple/30">
-              <CardContent className="pt-6">
-                <div className="flex mb-4">
-                  {_Array.from({ length: 5}).map(_(_, _i) => (
-                    <Star 
-                      key={_i}
-                      className={_`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
-                    />
-                  ))}
-                </div>
-                <p className="text-gray-200 mb-6">"{_testimonial.text}"</p>
-              </CardContent>
-              <CardFooter className="border-t border-zion-purple/20 pt-4">
-                <div className="flex items-center">
-                  <div className="h-10 w-10 rounded-full overflow-hidden mr-4">
-                    <img src={_testimonial.avatar} alt={_testimonial.name} className="h-full w-full object-cover" loading="lazy" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white">{_testimonial.name}</p>
-                    <p className="text-sm text-gray-400">{_testimonial.role}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </div>
+                    <p className=&quot;text-sm text-gray-400&quot;>{testimonial.role}</p>                  </div>
                 </div>
               </CardFooter>
             </Card>

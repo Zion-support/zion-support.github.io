@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -7,18 +6,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!markdown || !tokenName) return res.status(400).json({ error: 'Missing markdown or tokenName' }),
 
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
-<<<<<<< HEAD
   const html = `<!doctype html><html><head><meta charset="utf-8"><title>${tokenName} Whitepaper</title></head><body><pre style="white-space: pre-wrap,font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace,">${escapeHtml(markdown)}</pre></body></html>`,
   const base64 = Buffer.from(html, 'utf-8').toString('base64'),
   const url = `data: text/html,base64,${base64}`,
-  res.status(200).json({ url })
-=======
-  const html = `<!doctype html><html><head><meta charset=&quot;utf-8&quot;><title>${tokenName} Whitepaper</title></head><body><pre style=&quot;white-space:pre-wrap;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;&quot;>${escapeHtml(markdown)}</pre></body></html>`;
-  const base64 = Buffer.from(html, 'utf-8').toString('base64');
-  const url = `data:text/html;base64,${base64}`;
-  res.status(200).json({ url });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-}
+  res.status(200).json({ url })}
 
 function escapeHtml(str: string) {
   return String(str)
@@ -26,7 +17,6 @@ function escapeHtml(str: string) {
     .replace(/</g, '<')
     .replace(/>/g, '>')
 }
-=======
 import type {_NextApiRequest, _NextApiResponse} from 'next';
 
 export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed'});
@@ -44,4 +34,3 @@ function escapeHtml(_str: string) {_return String(str)
     .replace(/&/g, _'&amp;')
     .replace(/</g, _'&lt;')
     .replace(/>/g, _'&gt;');}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

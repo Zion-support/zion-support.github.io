@@ -37,8 +37,7 @@ import path from 'path';
 type Service = typeof enhancedRealMicroSaasServices[number];
 const service = useMemo(() => {
   if (!slug) return undefined;
-  const all: any[] = ([] as any[])
-      .concat(
+  const all: any[] = ([] as any[])      .concat(
         enhancedRealMicroSaasServices as any,
         extraServices as any,
         additionalEnhancedServices as any,
@@ -75,7 +74,6 @@ const service = useMemo(() => {
     });
     if (byLink) return byLink;
   }, [slug]);
-
 function getAllServices(): Service[] {
   return enhancedRealMicroSaasServices
     .concat(extraServices as Service[], additionalEnhancedServices as Service[])
@@ -132,8 +130,7 @@ function getExistingRootPageSlugs(): Set<string> {
 	}
 	return slugs;
 }
-;
-export async function getStaticPaths() {
+;export async function getStaticPaths() {
 	const services = getAllServices(),
 	const slugs = new Set<string>(),
 	for (const s of services) {;
@@ -147,8 +144,7 @@ export async function getStaticPaths() {
 	}
 }
 ;
-export async function getStaticProps({ params }: { params: { slug: string } }) {;
-	const services = getAllServices(),
+export async function getStaticProps({ params }: { params: { slug: string } }) {;	const services = getAllServices(),
 	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, ''),
 	let service: Service | undefined = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug),
 	if (!service) {;
@@ -162,8 +158,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 export default function RootServiceDetailPage({ service }: { service: Service }) {;
 	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`,
 	return (
-		<UltraFuturisticBackground variant="quantum" intensity="high">
-			<Head>
+		<UltraFuturisticBackground variant="quantum" intensity="high">			<Head>
 				<title>{service.name} | Zion Tech Group</title>
 				<meta name="description" content={service.tagline || service.description} />
 				<link rel="canonical" href={canonical} />
@@ -217,8 +212,7 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 									<li key={f} className="flex items-start gap-2">
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
-									</li>
-								))}
+									</li>								))}
 							</ul>
 						</Card>
 
@@ -227,8 +221,7 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 							<div className="flex flex-wrap gap-2">
 								{(service.integrations || []).slice(0, 12).map((i: string) => (
 									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>
-								))}
-							</div>
+								))}							</div>
 						</Card>
 					</div>
 
@@ -245,13 +238,21 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 								</Link>
 								<div className="flex items-start gap-2 text-gray-300">
 									<MapPin className="w-4 h-4 mt-1" /> 364 E Main St STE 1008 Middletown DE 19709
-								</div>
-							</div>
+								</div>							</div>
 							<div className="mt-6">
 								<Button href="/contact" className="w-full">Talk to Sales</Button>
 							</div>
 						</Card>
 
+						<Card className="p-6 bg-black/40 border border-gray-700/50">
+							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>
+							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">								Open canonical page <ExternalLink className="w-4 h-4" />
+							</a>
+						<Card className=&quot;p-6 bg-black/40 border border-gray-700/50&quot;>
+							<h3 className=&quot;text-white text-lg font-semibold mb-3&quot;>Learn More</h3>
+							<a href={service.link || canonical} className=&quot;inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200&quot;>
+								Open canonical page <ExternalLink className=&quot;w-4 h-4&quot; />
+							</Link>
 						</Card>
 					</div>
 				</div>

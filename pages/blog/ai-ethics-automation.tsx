@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link',
 import React from 'react',
 export default function AIEthicsAutomation() {
-  return (
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react';
-
-export default function AIEthicsAutomation() {_return (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    <>
+  return (    <>
       <Head>
         <title>
           Ethical Considerations in Autonomous AI Systems | Zion Tech Group
@@ -237,14 +228,8 @@ export default function AIEthicsAutomation() {_return (
                   Commitment to Ethical AI
                 </h3>
                 <p className='text-white/80 mb-4'>
-<<<<<<< HEAD
                   At Zion Tech Group, we believe that ethical AI development is
-                  not just a responsibility—it's a competitive advantage
-=======
-                  At Zion Tech Group, _we believe that ethical AI development is
-                  not just a responsibility—it&apos;s a competitive advantage
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  that builds trust and drives long-term success.
+                  not just a responsibility—it's a competitive advantage                  that builds trust and drives long-term success.
                 </p>
                 <div className='flex flex-wrap gap-4'>
                   <Link
@@ -266,9 +251,5 @@ export default function AIEthicsAutomation() {_return (
         </main>
       </div>
     </>
-<<<<<<< HEAD
   )
 }
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

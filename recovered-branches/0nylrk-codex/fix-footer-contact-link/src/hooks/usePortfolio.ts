@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState, useCallback } from 'react',
 import { PortfolioProject } from '@/types/resume',
 import { supabase } from '@/integrations/supabase/client',
@@ -15,19 +14,7 @@ export function usePortfolio() {
     if (!user) {
       setError('You must be logged in to access portfolio projects'),
       return []
-    }
-=======
-
-export function usePortfolio() {_const { user} = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [projects, setProjects] = useState<PortfolioProject[]>([]);
-  
-  const _fetchProjects = useCallback(_async () => {_if (!user) {
-      setError('You must be logged in to access portfolio projects');
-      return [];}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    
+    }    
     setIsLoading(true),
     setError(null),
     
@@ -35,15 +22,9 @@ export function usePortfolio() {_const { user} = useAuth();
         .from('portfolio_projects')
         .select('*')
         .eq('user_id', user.id)
-<<<<<<< HEAD
-        .order('created_at', { ascending: false }),
-=======
-        .order('created_at', {_ascending: false});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      
+        .order('created_at', { ascending: false }),      
       if (error) throw error,
       
-<<<<<<< HEAD
       setProjects(data || []),
       return data || []
     } catch (e: any) {
@@ -59,19 +40,7 @@ export function usePortfolio() {_const { user} = useAuth();
     if (!user) {
       setError('You must be logged in to add a portfolio project'),
       return null
-    }
-=======
-      setProjects(data || []);
-      return data || [];
-    } catch (e: unknown) {_setError(e.message);
-      return [];} finally {_setIsLoading(false);}
-  }, [user]);
-  
-  const _addProject = async (project: PortfolioProject): Promise<string | null> => {_if (!user) {
-      setError('You must be logged in to add a portfolio project');
-      return null;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    
+    }    
     setIsLoading(true),
     setError(null),
     
@@ -83,18 +52,10 @@ export function usePortfolio() {_const { user} = useAuth();
       
       if (error) throw error,
       
-<<<<<<< HEAD
       toast({
-<<<<<<< HEAD
         title: "Project added",
         description: "Your project has been added to your portfolio"
-      }),
-=======
-        title: &quot;Project added&quot;,
-        description: &quot;Your project has been added to your portfolio&quot;
-      });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      
+      }),      
       await fetchProjects(),
       return data.id
     } catch (e: any) {
@@ -103,8 +64,6 @@ export function usePortfolio() {_const { user} = useAuth();
       toast({
         title: &quot;Error&quot;,
         description: `Could not add project: ${e.message}`,
-<<<<<<< HEAD
-=======
       toast({_title: "Project added", _description: "Your project has been added to your portfolio"});
       
       await fetchProjects();
@@ -112,17 +71,9 @@ export function usePortfolio() {_const { user} = useAuth();
     } catch (e: unknown) {_setError(e.message);
       toast({
         title: "Error", _description: `Could not add project: ${e.message}`,
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         variant: "destructive"
       }),
-      return null
-=======
-        variant: &quot;destructive&quot;
-      });
-      return null;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
+      return null    } finally {
       setIsLoading(false)
     }
   },
@@ -132,14 +83,12 @@ export function usePortfolio() {_const { user} = useAuth();
       setError('You must be logged in to update a portfolio project'),
       return false
     }
-=======
     } finally {_setIsLoading(false);}
   };
   
   const _updateProject = async (projectId: string, project: PortfolioProject): Promise<boolean> => {_if (!user) {
       setError('You must be logged in to update a portfolio project');
       return false;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     setIsLoading(true),
     setError(null),
@@ -152,18 +101,10 @@ export function usePortfolio() {_const { user} = useAuth();
       
       if (error) throw error,
       
-<<<<<<< HEAD
       toast({
-<<<<<<< HEAD
         title: "Project updated",
         description: "Your portfolio project has been updated"
-      }),
-=======
-        title: &quot;Project updated&quot;,
-        description: &quot;Your portfolio project has been updated&quot;
-      });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      
+      }),      
       await fetchProjects(),
       return true
     } catch (e: any) {
@@ -172,8 +113,6 @@ export function usePortfolio() {_const { user} = useAuth();
       toast({
         title: &quot;Error&quot;,
         description: `Could not update project: ${e.message}`,
-<<<<<<< HEAD
-=======
       toast({_title: "Project updated", _description: "Your portfolio project has been updated"});
       
       await fetchProjects();
@@ -181,17 +120,9 @@ export function usePortfolio() {_const { user} = useAuth();
     } catch (e: unknown) {_setError(e.message);
       toast({
         title: "Error", _description: `Could not update project: ${e.message}`,
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         variant: "destructive"
       }),
-      return false
-=======
-        variant: &quot;destructive&quot;
-      });
-      return false;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
+      return false    } finally {
       setIsLoading(false)
     }
   },
@@ -201,14 +132,12 @@ export function usePortfolio() {_const { user} = useAuth();
       setError('You must be logged in to delete a portfolio project'),
       return false
     }
-=======
     } finally {_setIsLoading(false);}
   };
   
   const _deleteProject = async (projectId: string): Promise<boolean> => {_if (!user) {
       setError('You must be logged in to delete a portfolio project');
       return false;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     setIsLoading(true),
     setError(null),
@@ -221,18 +150,10 @@ export function usePortfolio() {_const { user} = useAuth();
       
       if (error) throw error,
       
-<<<<<<< HEAD
       toast({
-<<<<<<< HEAD
         title: "Project deleted",
         description: "Your portfolio project has been deleted"
-      }),
-=======
-        title: &quot;Project deleted&quot;,
-        description: &quot;Your portfolio project has been deleted&quot;
-      });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      
+      }),      
       setProjects(projects.filter(p => p.id !== projectId)),
       return true
     } catch (e: any) {
@@ -241,8 +162,6 @@ export function usePortfolio() {_const { user} = useAuth();
       toast({
         title: &quot;Error&quot;,
         description: `Could not delete project: ${e.message}`,
-<<<<<<< HEAD
-=======
       toast({_title: "Project deleted", _description: "Your portfolio project has been deleted"});
       
       setProjects(projects.filter(p => p.id !== projectId));
@@ -250,17 +169,9 @@ export function usePortfolio() {_const { user} = useAuth();
     } catch (e: unknown) {_setError(e.message);
       toast({
         title: "Error", _description: `Could not delete project: ${e.message}`,
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         variant: "destructive"
       }),
-      return false
-=======
-        variant: &quot;destructive&quot;
-      });
-      return false;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
+      return false    } finally {
       setIsLoading(false)
     }
   },
@@ -274,10 +185,8 @@ export function usePortfolio() {_const { user} = useAuth();
     updateProject,
     deleteProject
   }
-=======
     } finally {_setIsLoading(false);}
   };
   
   return {_isLoading, _error, _projects, _fetchProjects, _addProject, _updateProject, _deleteProject};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

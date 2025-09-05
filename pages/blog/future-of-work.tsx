@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link',
 import React from 'react',
 export default function FutureOfWork() {
-  return (
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react';
-
-export default function FutureOfWork() {_return (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    <>
+  return (    <>
       <Head>
         <title>
           The Future of Work: Human-AI Collaboration | Zion Tech Group
@@ -70,12 +61,7 @@ export default function FutureOfWork() {_return (
                 <p className='text-white/90 mb-4'>
                   The workplace is undergoing a fundamental transformation. Gone
                   are the days when AI was seen as a threat to human employment.
-<<<<<<< HEAD
-                  Today, we're witnessing the emergence of a new paradigm:
-=======
-                  Today, _we&apos;re witnessing the emergence of a new paradigm:
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  human-AI collaboration that amplifies human capabilities
+                  Today, we're witnessing the emergence of a new paradigm:                  human-AI collaboration that amplifies human capabilities
                   rather than replacing them.
                 </p>
                 <p className='text-white/90 mb-4'>
@@ -155,15 +141,8 @@ export default function FutureOfWork() {_return (
                   Skills for the Future
                 </h2>
                 <p className='text-white/90 mb-4'>
-<<<<<<< HEAD
                   As the nature of work evolves, so do the skills required for
-                  success. The most valuable employees will be those who can: </p>
-=======
-                  As the nature of work evolves, _so do the skills required for
-                  success. The most valuable employees will be those who can:
-                </p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                <ul className='space-y-2 text-white/80 mb-6'>
+                  success. The most valuable employees will be those who can: </p>                <ul className='space-y-2 text-white/80 mb-6'>
                   <li>
                     • <strong>Collaborate with AI:</strong> Understand AI
                     capabilities and limitations
@@ -281,9 +260,5 @@ export default function FutureOfWork() {_return (
         </main>
       </div>
     </>
-<<<<<<< HEAD
   )
 }
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

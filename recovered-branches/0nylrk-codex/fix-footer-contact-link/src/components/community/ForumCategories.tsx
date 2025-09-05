@@ -1,28 +1,14 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Link } from "react-router-dom",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-import { useAuth } from "@/hooks/useAuth",
-=======
-import { Link } from &quot;react-router-dom&quot;;
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from &quot;@/components/ui/card&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import {
+import { useAuth } from "@/hooks/useAuth",import {
   MessageSquare,
   Briefcase,
   Code,
   FileText,
   Megaphone
-<<<<<<< HEAD
 } from "@/components/icons",
 import { ForumCategory, ForumCategoryInfo } from "@/types/community",
-=======
-} from &quot;@/components/icons&quot;;
-import { ForumCategory, ForumCategoryInfo } from &quot;@/types/community&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 const categories: ForumCategoryInfo[] = [
   {
     id: &quot;getting-hired&quot;,
@@ -72,7 +58,6 @@ const iconMap = {
 export const ForumCategories = () => {
   const { user } = useAuth(),
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
-=======
 import {_MessageSquare, _Briefcase, _Code, _FileText, _Megaphone} from "@/components/icons";
 
 const categories: ForumCategoryInfo[] = [
@@ -87,20 +72,13 @@ const _iconMap = {_Briefcase, _MessageSquare, _Code, _FileText, _Megaphone};
 
 export const _ForumCategories = () => {_const { user} = useAuth();
   const _isAdmin = user?.userType === 'admin' || user?.role === 'admin';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   const _visibleCategories = categories.filter(
     category => !category.adminOnly || isAdmin
   ),
 
-<<<<<<< HEAD
   return (
-<<<<<<< HEAD
-    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
-=======
-    <div className=&quot;grid gap-4 md:grid-cols-2 lg:grid-cols-3&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      {visibleCategories.map((category) => {
+    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">      {visibleCategories.map((category) => {
         const Icon = iconMap[category.icon as keyof typeof iconMap],
         return (
           <Link key={category.id} to={`/community/category/${category.id}`}>
@@ -113,7 +91,6 @@ export const _ForumCategories = () => {_const { user} = useAuth();
               </CardHeader>
               <CardContent>
                 <CardDescription className=&quot;text-base&quot;>{category.description}</CardDescription>
-=======
   return (_<div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
       {_visibleCategories.map((category) => {
         const _Icon = iconMap[category.icon as keyof typeof iconMap];
@@ -128,7 +105,6 @@ export const _ForumCategories = () => {_const { user} = useAuth();
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">{_category.description}</CardDescription>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </CardContent>
             </Card>
           </Link>

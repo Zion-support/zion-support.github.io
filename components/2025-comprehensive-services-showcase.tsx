@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
@@ -8,7 +7,7 @@ import {
   TrendingUp, Zap, Globe
 } from 'lucide-react',
 
-// Import our new service data
+// Import our new service data,
 import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services',
 import { advancedCybersecurityServices } from '../data/2025-advanced-cybersecurity-services',
 import { advancedCloudDevOpsServices2025 } from '../data/2025-advanced-cloud-devops-services',
@@ -17,7 +16,7 @@ import { emergingTechnologyServices } from '../data/2025-emerging-technology-ser
 const ComprehensiveServicesShowcase2025 = () => {
   const [activeTab, setActiveTab] = useState('all'),
 
-// Helper function to get service pricing
+// Helper function to get service pricing,
 const getServicePricing = (service: any) => {
   if (service.pricing?.starter) return service.pricing.starter,
   if (service.price?.monthly) return `$${service.price.monthly}/month`,
@@ -25,12 +24,12 @@ const getServicePricing = (service: any) => {
   return 'Contact for pricing'
 },
 
-// Helper function to get service features
+// Helper function to get service features,
 const getServiceFeatures = (service: any) => {
   return service.keyFeatures || service.features || []
 },
 
-// Helper function to get service setup time
+// Helper function to get service setup time,
 const getServiceSetupTime = (service: any) => {
   if (service.setupTime) return service.setupTime,
   if (service.pricing?.setupTime) return service.pricing.setupTime,
@@ -38,48 +37,15 @@ const getServiceSetupTime = (service: any) => {
   return 'N/A'
 },
 
-// Helper function to get service trial days
+// Helper function to get service trial days,
 const getServiceTrialDays = (service: any) => {
   if (service.trialDays) return service.trialDays,
   if (service.pricing?.trialDays) return service.pricing.trialDays,
   if (service.price?.trialDays) return service.price.trialDays,
   return 'N/A'
 },
-=======
-import React, {_useState} from 'react';
-import SEO from '../components/SEO';
-import {_Brain, _Building, _Target, _Cpu, _Shield, _Check, _Phone, _Mail, _MapPin, _TrendingUp, _Zap, _Globe} from 'lucide-react';
-
-// Import our new service data
-
-const _ComprehensiveServicesShowcase2025 = () => {_const [activeTab, _setActiveTab] = useState('all');
-
-// Helper function to get service pricing
-const _getServicePricing = (_service: unknown) => {
-  if (service.pricing?.starter) return service.pricing.starter;
-  if (service.price?.monthly) return `$${service.price.monthly}/month`;
-  if (typeof service.price === 'string') return service.price;
-  return 'Contact for pricing';
-};
-
-// Helper function to get service features
-const _getServiceFeatures = (_service: unknown) => {_return service.keyFeatures || service.features || [];};
-
-// Helper function to get service setup time
-const _getServiceSetupTime = (_service: unknown) => {_if (service.setupTime) return service.setupTime;
-  if (service.pricing?.setupTime) return service.pricing.setupTime;
-  if (service.price?.setupTime) return service.price.setupTime;
-  return 'N/A';};
-
-// Helper function to get service trial days
-const _getServiceTrialDays = (_service: unknown) => {_if (service.trialDays) return service.trialDays;
-  if (service.pricing?.trialDays) return service.pricing.trialDays;
-  if (service.price?.trialDays) return service.price.trialDays;
-  return 'N/A';};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-// All services combined
-const _allServices = [
+// All services combined,
+const allServices = [
   ...advancedAIMLServices,
   ...advancedCybersecurityServices,
       ...advancedCloudDevOpsServices2025,
@@ -87,7 +53,6 @@ const _allServices = [
   ...emergingTechnologyServices
 ],
 
-<<<<<<< HEAD
   const categories = [
     { id: 'all', name: 'All Services', icon: <Target className="w-5 h-5" /> },
     { id: 'business-intelligence', name: 'Business Intelligence', icon: <TrendingUp className="w-5 h-5" /> },
@@ -96,20 +61,8 @@ const _allServices = [
     { id: 'micro-saas', name: 'Micro SAAS', icon: <Zap className="w-5 h-5" /> },
     { id: 'ai-services', name: 'AI Services', icon: <Cpu className="w-5 h-5" /> }
   ],
-=======
-  const _categories = [
-    {_id: 'all', _name: 'All Services', _icon: <Target className="w-5 h-5" />},
-    {_id: 'business-intelligence', _name: 'Business Intelligence', _icon: <TrendingUp className="w-5 h-5" />},
-    {_id: 'ai-automation', _name: 'AI Automation', _icon: <Brain className="w-5 h-5" />},
-    {_id: 'it-infrastructure', _name: 'IT Infrastructure', _icon: <Building className="w-5 h-5" />},
-    {_id: 'micro-saas', _name: 'Micro SAAS', _icon: <Zap className="w-5 h-5" />},
-    {_id: 'ai-services', _name: 'AI Services', _icon: <Cpu className="w-5 h-5" />}
-  ];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-  const _filteredServices = activeTab === 'all' 
+  const filteredServices = activeTab === 'all' 
     ? allServices 
-<<<<<<< HEAD
     : allServices.filter(service => {
         if (activeTab === 'business-intelligence') return service.category?.includes('Business Intelligence') || service.category?.includes('Analytics'),
         if (activeTab === 'ai-automation') return service.category?.includes('AI Automation'),
@@ -118,19 +71,10 @@ const _allServices = [
         if (activeTab === 'ai-services') return service.category?.includes('AI Services'),
         return true
       }),
-=======
-    : allServices.filter(service => {_if (activeTab === 'business-intelligence') return service.category?.includes('Business Intelligence') || service.category?.includes('Analytics');
-        if (activeTab === 'ai-automation') return service.category?.includes('AI Automation');
-        if (activeTab === 'it-infrastructure') return service.category?.includes('IT Infrastructure');
-        if (activeTab === 'micro-saas') return service.category?.includes('Micro SAAS');
-        if (activeTab === 'ai-services') return service.category?.includes('AI Services');
-        return true;});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (_<div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
-      <SEO 
-        title="2025 Comprehensive Services Showcase - Zion Tech Group"
-        description="Discover our comprehensive portfolio of innovative micro SAAS, _IT infrastructure, _and AI services. Transform your business with cutting-edge solutions."
+      <SEO,
+title="2025 Comprehensive Services Showcase - Zion Tech Group"
+        description="Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, and AI services. Transform your business with cutting-edge solutions."
         keywords={_["micro SAAS", _"IT services", _"AI services", _"business intelligence", _"automation", _"cloud infrastructure"]}
       />
 
@@ -138,9 +82,9 @@ const _allServices = [
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <motion.div
-            initial={_{ opacity: 0, _y: 20}}
-            animate={_{ opacity: 1, _y: 0}}
+          <motion.div,
+initial={_{ opacity: 0, y: 20}}
+            animate={_{ opacity: 1, y: 0}}
             transition={_{ duration: 0.8}}
             className="text-center"
           >
@@ -148,11 +92,11 @@ const _allServices = [
               2025 Comprehensive Services Showcase
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Transform your business with our innovative portfolio of micro SAAS, _IT infrastructure, _and AI services
+              Transform your business with our innovative portfolio of micro SAAS, IT infrastructure, and AI services
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <span className="bg-blue-600/20 px-4 py-2 rounded-full border border-blue-400/30">
-                {_allServices.length}+ Services
+                {allServices.length}+ Services
               </span>
               <span className="bg-purple-600/20 px-4 py-2 rounded-full border border-purple-400/30">
                 AI-Powered Solutions
@@ -195,16 +139,16 @@ const _allServices = [
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-2">
-            {_categories.map((category) => (_<button
-                key={category.id}
+            {categories.map((category) => (_<button,
+key={category.id}
                 onClick={_() => setActiveTab(category.id)}
                 className={_`flex items-center gap-2 px-4 py-2 rounded-full border transition-all ${
                   activeTab === category.id
                     ? 'bg-blue-600 text-white border-blue-600'
                     : 'bg-white text-gray-700 border-gray-300 hover:border-blue-300 hover:text-blue-600'}`}
               >
-                {_category.icon}
-                {_category.name}
+                {category.icon}
+                {category.name}
               </button>
             ))}
           </div>
@@ -215,12 +159,12 @@ const _allServices = [
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {_filteredServices.map(_(service, _index) => (
-              <motion.div
-                key={service.id}
-                initial={_{ opacity: 0, _y: 20}}
-                animate={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.5, _delay: index * 0.1}}
+            {filteredServices.map(_(service, index) => (
+              <motion.div,
+key={service.id}
+                initial={_{ opacity: 0, y: 20}}
+                animate={_{ opacity: 1, y: 0}}
+                transition={_{ duration: 0.5, delay: index * 0.1}}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
               >
                 {_/* Service Header */}
@@ -228,14 +172,14 @@ const _allServices = [
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
-                        {_service.name}
+                        {service.name}
                       </h3>
                       <p className="text-gray-600 text-sm mb-3">
-                        {_service.tagline}
+                        {service.tagline}
                       </p>
                       <div className="flex items-center gap-2 text-sm text-gray-500">
                         <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">
-                          {_service.category}
+                          {service.category}
                         </span>
                         <span className="px-2 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">
                           Micro SAAS
@@ -248,7 +192,7 @@ const _allServices = [
                 {_/* Service Content */}
                 <div className="p-6">
                   <p className="text-gray-700 mb-4 line-clamp-3">
-                    {_service.description}
+                    {service.description}
                   </p>
 
                   {_/* Pricing */}
@@ -258,7 +202,7 @@ const _allServices = [
                       <div className="flex justify-between text-sm">
                         <span className="text-gray-600">Starting at:</span>
                         <span className="font-semibold text-green-600">
-                          {_service.pricing ? service.pricing.starter : `${(service as any).price}${_(service as any).period}`}
+                          {service.pricing ? service.pricing.starter : `${(service as any).price}${_(service as any).period}`}
                         </span>
                       </div>
                       <div className="text-xs text-gray-500">
@@ -271,10 +215,10 @@ const _allServices = [
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features</h4>
                     <div className="grid grid-cols-2 gap-1">
-                      {_service.features?.slice(0, _6).map(_(feature, _idx) => (
+                      {service.features?.slice(0, 6).map(_(feature, idx) => (
                         <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">
                           <Check className="w-3 h-3 text-green-500 flex-shrink-0" />
-                          <span className="truncate">{_feature}</span>
+                          <span className="truncate">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -284,27 +228,25 @@ const _allServices = [
                   <div className="mb-4 text-sm">
                     <div className="flex justify-between mb-1">
                       <span className="text-gray-600">Market Size:</span>
-                      <span className="font-semibold text-gray-900">{_service.marketSize}</span>
+                      <span className="font-semibold text-gray-900">{service.marketSize}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-600">Target Audience:</span>
-                      <span className="font-semibold text-gray-900">{_service.targetAudience}</span>
+                      <span className="font-semibold text-gray-900">{service.targetAudience}</span>
                     </div>
                   </div>
 
-
-
                   {_/* CTA Button */}
                   <div className="flex flex-col gap-2">
-                    <a
-                      href={_`mailto:${(service as any).contact || 'kleber@ziontechgroup.com'}?subject=Inquiry about ${_service.name}`}
+                    <a,
+href={_`mailto:${(service as any).contact || 'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                     >
                       <Mail className="w-4 h-4" />
                       Get Started
                     </a>
-                    <a
-                      href={_`tel:${(service as any).mobile || '+1 302 464 0950'}`}
+                    <a,
+href={_`tel:${(service as any).mobile || '+1 302 464 0950'}`}
                       className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                     >
                       <Phone className="w-4 h-4" />
@@ -318,53 +260,53 @@ const _allServices = [
 
           {_/* Services Display */}
           <AnimatePresence mode="wait">
-            {_viewMode === 'grid' ? (_<motion.div 
-                key="grid"
+            {viewMode === 'grid' ? (_<motion.div,
+key="grid"
                 initial={{ opacity: 0}}
                 animate={_{ opacity: 1}}
                 exit={_{ opacity: 0}}
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               >
-                {_filteredServices.map((service, _index) => (
-                  <motion.div
-                    key={service.id}
-                    initial={_{ opacity: 0, _y: 20}}
-                    animate={_{ opacity: 1, _y: 0}}
-                    transition={_{ duration: 0.5, _delay: index * 0.1}}
+                {filteredServices.map((service, index) => (
+                  <motion.div,
+key={service.id}
+                    initial={_{ opacity: 0, y: 20}}
+                    animate={_{ opacity: 1, y: 0}}
+                    transition={_{ duration: 0.5, delay: index * 0.1}}
                     className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
                   >
                     {_/* Service Header */}
                     <div className={_`p-6 bg-gradient-to-r ${service.color} text-white`}>
                       <div className="flex items-center justify-between mb-4">
-                        <span className="text-4xl">{_service.icon}</span>
-                        {_service.popular && (
+                        <span className="text-4xl">{service.icon}</span>
+                        {service.popular && (
                           <span className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-bold">
                             POPULAR
                           </span>
                         )}
                       </div>
-                      <h3 className="text-xl font-bold mb-2">{_service.name}</h3>
-                      <p className="text-blue-100 text-sm">{_service.tagline}</p>
+                      <h3 className="text-xl font-bold mb-2">{service.name}</h3>
+                      <p className="text-blue-100 text-sm">{service.tagline}</p>
                       
                       {_/* Price */}
                       <div className="mt-4">
                         <span className="text-2xl font-bold">
-                          {_getServicePricing(service)}
+                          {getServicePricing(service)}
                         </span>
                       </div>
                     </div>
 
                     {_/* Service Content */}
                     <div className="p-6">
-                      <p className="text-gray-600 mb-4 line-clamp-3">{_service.description}</p>
+                      <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
                       
                       {_/* Price */}
                       <div className="mb-4">
                         <span className="text-3xl font-bold text-gray-900">
-                          {_typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
+                          {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
                         </span>
                         <span className="text-gray-500">
-                          {_typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
+                          {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
                         </span>
                       </div>
 
@@ -372,10 +314,10 @@ const _allServices = [
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                         <ul className="space-y-1">
-                          {_getServiceFeatures(service).slice(0, _4).map(_(feature, _idx) => (
+                          {getServiceFeatures(service).slice(0, 4).map(_(feature, idx) => (
                             <li key={idx} className="flex items-center text-sm text-gray-600">
                               <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                              {_feature}
+                              {feature}
                             </li>
                           ))}
                         </ul>
@@ -384,18 +326,18 @@ const _allServices = [
                       {_/* Category Badge */}
                       <div className="mb-4">
                         <span className={_`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
-                          {_getCategoryIcon(service.category)}
-                          <span className="ml-1">{_service.category}</span>
+                          {getCategoryIcon(service.category)}
+                          <span className="ml-1">{service.category}</span>
                         </span>
                       </div>
 
                       {_/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
                         <div>
-                          <span className="font-medium">Setup:</span> {_getServiceSetupTime(service)}
+                          <span className="font-medium">Setup:</span> {getServiceSetupTime(service)}
                         </div>
                         <div>
-                          <span className="font-medium">Trial:</span> {_getServiceTrialDays(service)} days
+                          <span className="font-medium">Trial:</span> {getServiceTrialDays(service)} days
                         </div>
                       </div>
 
@@ -404,10 +346,10 @@ const _allServices = [
                         <div className="text-sm">
                           <span className="text-gray-500">Expected ROI:</span>
                           <span className="text-green-600 font-semibold ml-1">
-                            {_service.roi.split(' ')[0]} ROI
+                            {service.roi.split(' ')[0]} ROI
                           </span>
                         </div>
-                        {_service.popular && (
+                        {service.popular && (
                           <div className="flex items-center gap-1 text-yellow-600">
                             <Star className="w-4 h-4 fill-current" />
                             <span className="text-sm font-medium">Popular</span>
@@ -418,20 +360,20 @@ const _allServices = [
                         <div className="lg:w-1/3">
                           <div className="text-right mb-4">
                             <span className="text-3xl font-bold text-gray-900">
-                              {_typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
+                              {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
                             </span>
                             <span className="text-gray-500">
-                              {_typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
+                              {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
                             </span>
                           </div>
                           
                           <div className="mb-4">
                             <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
-                              {_service.features.slice(0, _4).map(_(feature, _idx) => (
+                              {service.features.slice(0, 4).map(_(feature, idx) => (
                                 <li key={idx} className="flex items-center">
                                   <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                                  {_feature}
+                                  {feature}
                                 </li>
                               ))}
                             </ul>
@@ -440,13 +382,13 @@ const _allServices = [
                           {_/* Category and Action */}
                           <div className="flex flex-col items-end space-y-3">
                             <span className={_`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
-                              {_getCategoryIcon(service.category)}
-                              <span className="ml-1">{_service.category}</span>
+                              {getCategoryIcon(service.category)}
+                              <span className="ml-1">{service.category}</span>
                             </span>
                             
-                            <a
-                              href={_service.link}
-                              target="_blank"
+                            <a,
+href={service.link}
+                              target="blank"
                               rel="noopener noreferrer"
                               className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium flex items-center"
                             >
@@ -464,7 +406,7 @@ const _allServices = [
           </AnimatePresence>
 
           {_/* No Results */}
-          {_filteredServices.length === 0 && (
+          {filteredServices.length === 0 && (
             <div className="text-center py-12">
               <div className="text-gray-400 mb-4">
                 <Search className="w-16 h-16 mx-auto" />
@@ -489,9 +431,9 @@ const _allServices = [
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
+            <motion.div,
+initial={_{ opacity: 0, y: 20}}
+              whileInView={_{ opacity: 1, y: 0}}
               transition={_{ duration: 0.5}}
               className="text-center p-6"
             >
@@ -504,10 +446,10 @@ const _allServices = [
               </p>
             </motion.div>
 
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.5, _delay: 0.1}}
+            <motion.div,
+initial={_{ opacity: 0, y: 20}}
+              whileInView={_{ opacity: 1, y: 0}}
+              transition={_{ duration: 0.5, delay: 0.1}}
               className="text-center p-6"
             >
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -519,10 +461,10 @@ const _allServices = [
               </p>
             </motion.div>
 
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.5, _delay: 0.2}}
+            <motion.div,
+initial={_{ opacity: 0, y: 20}}
+              whileInView={_{ opacity: 1, y: 0}}
+              transition={_{ duration: 0.5, delay: 0.2}}
               className="text-center p-6"
             >
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -566,15 +508,15 @@ const _allServices = [
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation"
+            <a,
+href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation"
               className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
             >
               <Mail className="w-5 h-5" />
               Start Consultation
             </a>
-            <a
-              href="https://ziontechgroup.com"
+            <a,
+href="https://ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2"
             >
               <Globe className="w-5 h-5" />

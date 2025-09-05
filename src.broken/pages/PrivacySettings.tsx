@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react',
 import { Header } from '@/components/Header',
 import { Footer } from '@/components/Footer',
@@ -14,16 +13,6 @@ export default function PrivacySettings() {
   const handleSave = () => {
     updateConsent({ analytics, ads })
   },
-=======
-
-export default function PrivacySettings() {_const { consent, _updateConsent} = useConsent();
-  const [analytics, setAnalytics] = useState(consent.analytics);
-  const [ads, setAds] = useState(consent.ads);
-
-  const _handleSave = () => {_updateConsent({ analytics, _ads});
-  };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (
     <>
       <Header />

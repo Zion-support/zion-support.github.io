@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface CybersecurityQuantumService {
   id: string,
   name: string,
@@ -33,43 +32,7 @@ export interface CybersecurityQuantumService {
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number
-=======
-export interface CybersecurityQuantumService {_id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  price: {
-    monthly: number;
-    yearly: number;
-    currency: string;
-    trialDays: number;
-    setupTime: string;
-    enterprise: string;};
-  features: string[];
-  benefits: string[];
-  targetAudience: string[];
-  marketPosition: string;
-  competitors: string[];
-  techStack: string[];
-  realImplementation: boolean;
-  implementationDetails: string;
-  roi: string;
-  useCases: string[];
-  integrations: string[];
-  support: string;
-  compliance: string[];
-  link: string;
-  icon: string;
-  color: string;
-  popular: boolean;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-}
+  reviews: number}
 
 export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
   {_id: 'quantum-resistant-encryption-platform', _name: 'Quantum-Resistant Encryption Platform', _tagline: 'Future-proof security with post-quantum cryptography', _description: 'Revolutionary encryption platform that implements quantum-resistant algorithms, _ensuring data security remains impenetrable even when quantum computers become mainstream.', _category: 'Quantum Security & Cryptography', _price: {

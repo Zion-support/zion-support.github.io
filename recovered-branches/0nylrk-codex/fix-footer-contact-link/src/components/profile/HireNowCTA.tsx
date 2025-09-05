@@ -1,18 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { HireRequestModal } from "./hire-request",
 import { useState } from "react",
-import { TalentProfile } from "@/types/talent",
-=======
-import { Button } from &quot;@/components/ui/button&quot;;
-import { HireRequestModal } from &quot;./hire-request&quot;;
-import { useState } from &quot;react&quot;;
-import { TalentProfile } from &quot;@/types/talent&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface HireNowCTAProps {
+import { TalentProfile } from "@/types/talent",interface HireNowCTAProps {
   talentProfile: {
     id: string,
     full_name?: string,
@@ -41,7 +31,6 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
   return (
     <div className=&quot;bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4&quot;>
       <h3 className=&quot;text-xl font-bold mb-4&quot;>Hire {talentProfile?.full_name || 'This Talent'}</h3>
-=======
 
 interface HireNowCTAProps {_talentProfile: {
     id: string;
@@ -66,42 +55,23 @@ export function HireNowCTA(_{_talentProfile}: HireNowCTAProps) {_const [modalOpe
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">
       <h3 className="text-xl font-bold mb-4">Hire {_talentProfile?.full_name || 'This Talent'}</h3>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       <div className=&quot;mb-4&quot;>
         <div className=&quot;flex justify-between mb-2&quot;>
           <span>Profile Completeness</span>
-<<<<<<< HEAD
-          <span className=&quot;font-bold&quot;>{profileCompleteness}%</span>
-=======
-          <span className="font-bold">{_profileCompleteness}%</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        </div>
+          <span className=&quot;font-bold&quot;>{profileCompleteness}%</span>        </div>
         <div className=&quot;h-2 bg-zion-blue-light rounded-full overflow-hidden&quot;>
           <div
-<<<<<<< HEAD
             className=&quot;h-full bg-gradient-to-r from-zion-purple to-zion-cyan&quot;
-            style={{ width: `${profileCompleteness}%` }}
-=======
-            className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"
-            style={_{ width: `${profileCompleteness}%` }}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          />
+            style={{ width: `${profileCompleteness}%` }}          />
         </div>
       </div>
       
       <div className=&quot;flex flex-col space-y-4 mt-6&quot;>
         <Button
-<<<<<<< HEAD
           onClick={handleOpenModal}
           disabled={!canHire}
-          className=&quot;bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white&quot;
-=======
-          onClick={_handleOpenModal}
-          disabled={_!canHire}
-          className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        >
+          className=&quot;bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white&quot;        >
           Request to Hire
         </Button>
         
@@ -121,7 +91,6 @@ export function HireNowCTA(_{_talentProfile}: HireNowCTAProps) {_const [modalOpe
 }
 
 // Helper function to calculate profile completeness
-<<<<<<< HEAD
 function calculateProfileCompleteness(profile: any) {
   if (!profile) return 0,
   
@@ -138,23 +107,6 @@ function calculateProfileCompleteness(profile: any) {
       completedFields++
     }
     totalFields++
-  }),
-=======
-function calculateProfileCompleteness(_profile: unknown) {_if (!profile) return 0;
-  
-  const _fields = [
-    'full_name', _'professional_title', _'bio', _'skills', _'hourly_rate', _'location', _'portfolio_links', _'experience', _'availability_type'
-  ];
-  
-  let _completedFields = 0;
-  let _totalFields = 0;
-  
-  fields.forEach(field => {
-    if (profile[field]) {
-      completedFields++;}
-    totalFields++;
-  });
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  
+  }),  
   return Math.min(Math.round((completedFields / totalFields) * 100), 100)
 }

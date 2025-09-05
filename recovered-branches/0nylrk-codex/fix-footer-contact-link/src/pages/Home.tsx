@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -12,50 +11,19 @@ import { SEO } from "@/components/SEO",
 import { HeroSection } from "@/components/HeroSection",
 import { QuickAccess } from "@/components/home/QuickAccess",
 import { FeatureCTAs } from "@/components/home/FeatureCTAs",
-import { FeatureHighlights } from "@/components/home/FeatureHighlights",
-=======
-import React from 'react';
-<<<<<<< HEAD
-import { Header } from &quot;@/components/Header&quot;;
-import { Footer } from &quot;@/components/Footer&quot;;
-import { CategoriesSection } from &quot;@/components/CategoriesSection&quot;;
-import { BenefitsSection } from &quot;@/components/BenefitsSection&quot;;
-import { HowItWorksSection } from &quot;@/components/HowItWorksSection&quot;;
-import { NewsletterSection } from &quot;@/components/NewsletterSection&quot;;
-import { FeaturedListingsSection } from &quot;@/components/FeaturedListingsSection&quot;;
-import { SEO } from &quot;@/components/SEO&quot;;
-import { HeroSection } from &quot;@/components/HeroSection&quot;;
-import { QuickAccess } from &quot;@/components/home/QuickAccess&quot;;
-import { FeatureCTAs } from &quot;@/components/home/FeatureCTAs&quot;;
-import { FeatureHighlights } from &quot;@/components/home/FeatureHighlights&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export default function Home() {
+import { FeatureHighlights } from "@/components/home/FeatureHighlights",export default function Home() {
   return (
     <div className=&quot;min-h-screen bg-background&quot;>
-=======
 
 export default function Home() {_return (
     <div className="min-h-screen bg-background">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <SEO 
-<<<<<<< HEAD
         title="Zion - The Tech & AI Marketplace" 
-<<<<<<< HEAD
         description="Discover top AI and tech talent, services, and equipment in one place."
         keywords="AI, technology, marketplace, services, talent"
-        canonical="https: //app.ziontechgroup.com/"
-=======
-        title=&quot;Zion - The Tech & AI Marketplace&quot; 
-        description=&quot;Discover top AI and tech talent, services, and equipment in one place.&quot;
-        keywords=&quot;AI, technology, marketplace, services, talent&quot;
-        canonical=&quot;https://app.ziontechgroup.com/&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-        description="Discover top AI and tech talent, _services, _and equipment in one place."
+        canonical="https: //app.ziontechgroup.com/"        description="Discover top AI and tech talent, _services, _and equipment in one place."
         keywords="AI, _technology, _marketplace, _services, _talent"
         canonical="https://app.ziontechgroup.com/"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       />
       <Header />
       
@@ -74,9 +42,5 @@ export default function Home() {_return (
       <NewsletterSection />
       <Footer />
     </div>
-<<<<<<< HEAD
   )
 }
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

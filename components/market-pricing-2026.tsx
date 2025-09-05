@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
@@ -12,15 +11,15 @@ export default function MarketPricing2026() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [priceRange, setPriceRange] = useState('all'),
 
-  // Combine all 2026 services
-  const allServices = [
+  // Combine all 2026 services,
+const allServices = [
     ...revolutionary2026Services,
     ...emergingTech2026Services,
     ...comprehensiveIT2026Services
   ],
 
-  // Filter services based on selection
-  const filteredServices = allServices.filter(service => {
+  // Filter services based on selection,
+const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),
     const matchesPrice = priceRange === 'all' || 
       (priceRange === 'budget' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 5000) ||
@@ -53,8 +52,8 @@ export default function MarketPricing2026() {
     website: 'https://ziontechgroup.com'
   },
 
-  // Calculate pricing statistics
-  const pricingStats = {
+  // Calculate pricing statistics,
+const pricingStats = {
     totalServices: allServices.length,
     averagePrice: allServices.reduce((sum, service) => sum + parseFloat(service.price.replace(/[^0-9.]/g, '')), 0) / allServices.length,
     lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')))),
@@ -64,68 +63,13 @@ export default function MarketPricing2026() {
   },
 
   return (
-    <UltraAdvancedFuturisticBackground 
-      intensity=&quot;extreme&quot; 
+    <UltraAdvancedFuturisticBackground,
+intensity=&quot;extreme&quot; 
       colorScheme=&quot;quantum-fusion&quot;
       particleCount={600}
       animationSpeed={2.5}
       enableHolographic={true}
-      enableQuantumEffects={true}
-=======
-import React, {_useState} from 'react';
-import Head from 'next/head';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-
-export default function MarketPricing2026() {_const [selectedCategory, _setSelectedCategory] = useState('all');
-  const [priceRange, _setPriceRange] = useState('all');
-
-  // Combine all 2026 services
-  const _allServices = [
-    ...revolutionary2026Services, _...emergingTech2026Services, _...comprehensiveIT2026Services
-  ];
-
-  // Filter services based on selection
-  const _filteredServices = allServices.filter(service => {
-    const _matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
-    const _matchesPrice = priceRange === 'all' || 
-      (priceRange === 'budget' && parseFloat(service.price.replace(/[^0-9.]/g, _'')) < 5000) ||
-      (priceRange === 'mid' && parseFloat(service.price.replace(/[^0-9.]/g, _'')) >= 5000 && parseFloat(service.price.replace(/[^0-9.]/g, _'')) < 15000) ||
-      (priceRange === 'premium' && parseFloat(service.price.replace(/[^0-9.]/g, _'')) >= 15000);
-    return matchesCategory && matchesPrice;});
-
-  const _categories = [
-    {_id: 'all', _name: 'All Categories', _icon: BarChart3, _count: allServices.length},
-    {_id: 'AI', _name: 'AI & Machine Learning', _icon: Brain, _count: allServices.filter(s => s.category.includes('AI')).length},
-    {_id: 'Quantum', _name: 'Quantum Computing', _icon: Atom, _count: allServices.filter(s => s.category.includes('Quantum')).length},
-    {_id: 'Emerging', _name: 'Emerging Technology', _icon: Sparkles, _count: allServices.filter(s => s.category.includes('Emerging')).length},
-    {_id: 'IT', _name: 'IT & Infrastructure', _icon: Shield, _count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length},
-    {_id: 'Autonomous', _name: 'Autonomous Systems', _icon: Target, _count: allServices.filter(s => s.category.includes('Autonomous')).length},
-    {_id: 'Cloud', _name: 'Cloud & DevOps', _icon: Cloud, _count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length}
-  ];
-
-  const _priceRanges = [
-    {_id: 'all', _name: 'All Prices', _range: 'All price ranges'},
-    {_id: 'budget', _name: 'Budget ($0 - $5K)', _range: 'Affordable solutions for startups and small businesses'},
-    {_id: 'mid', _name: 'Mid-Range ($5K - $15K)', _range: 'Professional solutions for growing companies'},
-    {_id: 'premium', _name: 'Premium ($15K+)', _range: 'Enterprise-grade solutions for large organizations'}
-  ];
-
-  const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
-
-  // Calculate pricing statistics
-  const _pricingStats = {_totalServices: allServices.length, _averagePrice: allServices.reduce(_(sum, _service) => sum + parseFloat(service.price.replace(/[^0-9.]/g, _'')), _0) / allServices.length, _lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, _'')))), _highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, _'')))), _totalCustomers: allServices.reduce(_(sum, _service) => sum + service.customers, _0), _averageRating: allServices.reduce(_(sum, _service) => sum + service.rating, _0) / allServices.length};
-
-  return (
-    <UltraAdvancedFuturisticBackground 
-      intensity="extreme" 
-      colorScheme="quantum-fusion"
-      particleCount={_600}
-      animationSpeed={_2.5}
-      enableHolographic={_true}
-      enableQuantumEffects={_true}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    >
+      enableQuantumEffects={true}    >
       <div className=&quot;min-h-screen&quot;>
         <Head>
           <title>Zion Tech Group - 2026 Market Pricing & Competitive Analysis | 1500+ Solutions</title>
@@ -143,18 +87,11 @@ export default function MarketPricing2026() {_const [selectedCategory, _setSelec
         {_/* Navigation */}
         <UltraAdvancedNavigation />
 
-<<<<<<< HEAD
         {/* Hero Section */}
         <section className=&quot;relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8&quot;>
-          <div className=&quot;max-w-7xl mx-auto text-center&quot;>
-=======
-        {_/* Hero Section */}
-        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            <motion.div
-              initial={_{ opacity: 0, _y: 30}}
-              animate={_{ opacity: 1, _y: 0}}
+          <div className=&quot;max-w-7xl mx-auto text-center&quot;>            <motion.div,
+initial={_{ opacity: 0, y: 30}}
+              animate={_{ opacity: 1, y: 0}}
               transition={_{ duration: 0.8}}
             >
               <h1 className=&quot;text-5xl md:text-7xl font-bold mb-6&quot;>
@@ -167,7 +104,6 @@ export default function MarketPricing2026() {_const [selectedCategory, _setSelec
                 quantum computing, and emerging technology services
               </p>
               
-<<<<<<< HEAD
               {/* Pricing Statistics */}
               <div className=&quot;grid grid-cols-2 md:grid-cols-5 gap-6 mb-12&quot;>
                 <div className=&quot;text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm&quot;>
@@ -188,37 +124,12 @@ export default function MarketPricing2026() {_const [selectedCategory, _setSelec
                 </div>
                 <div className=&quot;text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm&quot;>
                   <div className=&quot;text-3xl font-bold text-yellow-400 mb-2&quot;>{pricingStats.totalCustomers.toLocaleString()}+</div>
-                  <div className=&quot;text-gray-400 text-sm&quot;>Total Customers</div>
-=======
-              {_/* Pricing Statistics */}
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-12">
-                <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{_pricingStats.totalServices}</div>
-                  <div className="text-gray-400 text-sm">Total Services</div>
-                </div>
-                <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">${_pricingStats.averagePrice.toFixed(0)}</div>
-                  <div className="text-gray-400 text-sm">Avg. Price/Month</div>
-                </div>
-                <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">${_pricingStats.lowestPrice.toFixed(0)}</div>
-                  <div className="text-gray-400 text-sm">Lowest Price</div>
-                </div>
-                <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-green-400 mb-2">${_pricingStats.highestPrice.toFixed(0)}</div>
-                  <div className="text-gray-400 text-sm">Highest Price</div>
-                </div>
-                <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-yellow-400 mb-2">{_pricingStats.totalCustomers.toLocaleString()}+</div>
-                  <div className="text-gray-400 text-sm">Total Customers</div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </div>
+                  <div className=&quot;text-gray-400 text-sm&quot;>Total Customers</div>                </div>
               </div>
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Filters Section */}
         <section className=&quot;relative z-10 py-8 px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -228,72 +139,37 @@ export default function MarketPricing2026() {_const [selectedCategory, _setSelec
                 <div>
                   <label className=&quot;block text-white font-semibold mb-3&quot;>Service Category</label>
                   <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-2&quot;>
-                    {categories.map(category => (
-=======
-        {_/* Filters Section */}
-        <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {_/* Category Filter */}
-                <div>
-                  <label className="block text-white font-semibold mb-3">Service Category</label>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-                    {_categories.map(_category => (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      <button
-                        key={category.id}
+                    {categories.map(category => (                      <button,
+key={category.id}
                         onClick={_() => setSelectedCategory(category.id)}
                         className={_`p-3 rounded-xl text-sm font-medium transition-all duration-300 ${
                           selectedCategory === category.id
                             ? 'bg-cyan-500 text-black'
                             : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50'}`}
                       >
-<<<<<<< HEAD
                         <div className=&quot;flex items-center justify-center space-x-2&quot;>
                           <category.icon className=&quot;w-4 h-4&quot; />
                           <span>{category.name}</span>
                         </div>
-                        <div className=&quot;text-xs mt-1 opacity-75&quot;>({category.count})</div>
-=======
-                        <div className="flex items-center justify-center space-x-2">
-                          <category.icon className="w-4 h-4" />
-                          <span>{_category.name}</span>
-                        </div>
-                        <div className="text-xs mt-1 opacity-75">({_category.count})</div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      </button>
+                        <div className=&quot;text-xs mt-1 opacity-75&quot;>({category.count})</div>                      </button>
                     ))}
                   </div>
                 </div>
 
                 {_/* Price Range Filter */}
                 <div>
-<<<<<<< HEAD
                   <label className=&quot;block text-white font-semibold mb-3&quot;>Price Range</label>
                   <div className=&quot;space-y-2&quot;>
-                    {priceRanges.map(range => (
-=======
-                  <label className="block text-white font-semibold mb-3">Price Range</label>
-                  <div className="space-y-2">
-                    {_priceRanges.map(_range => (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      <button
-                        key={range.id}
+                    {priceRanges.map(range => (                      <button,
+key={range.id}
                         onClick={_() => setPriceRange(range.id)}
                         className={_`w-full p-3 rounded-xl text-left transition-all duration-300 ${
                           priceRange === range.id
                             ? 'bg-cyan-500 text-black'
                             : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50'}`}
                       >
-<<<<<<< HEAD
                         <div className=&quot;font-medium&quot;>{range.name}</div>
-                        <div className=&quot;text-xs opacity-75&quot;>{range.range}</div>
-=======
-                        <div className="font-medium">{_range.name}</div>
-                        <div className="text-xs opacity-75">{_range.range}</div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      </button>
+                        <div className=&quot;text-xs opacity-75&quot;>{range.range}</div>                      </button>
                     ))}
                   </div>
                 </div>
@@ -302,60 +178,35 @@ export default function MarketPricing2026() {_const [selectedCategory, _setSelec
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Market Analysis Section */}
         <section className=&quot;relative z-10 py-16 px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+            <motion.div,
+initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className=&quot;text-center mb-12&quot;
-=======
-        {_/* Market Analysis Section */}
-        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={_{ opacity: 0, _y: 30}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              viewport={_{ once: true}}
-              transition={_{ duration: 0.8}}
-              className="text-center mb-12"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;text-center mb-12&quot;            >
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Market Analysis & Competitive Positioning</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
-                Our services are strategically positioned to provide maximum value while maintaining competitive pricing 
-                in the rapidly evolving technology landscape
+                Our services are strategically positioned to provide maximum value while maintaining competitive pricing,
+in the rapidly evolving technology landscape
               </p>
             </motion.div>
 
-<<<<<<< HEAD
             {/* Market Insights Grid */}
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 mb-16&quot;>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
+              <motion.div,
+initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className=&quot;bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm&quot;
-=======
-            {_/* Market Insights Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              <motion.div
-                initial={_{ opacity: 0, _y: 30}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                viewport={_{ once: true}}
-                transition={_{ duration: 0.6, _delay: 0.1}}
-                className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm&quot;              >
                 <div className=&quot;text-4xl mb-4&quot;>📊</div>
                 <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>Competitive Pricing</h3>
                 <p className=&quot;text-gray-300 text-sm mb-4&quot;>
-                  Our pricing is strategically positioned to be 20-40% more affordable than enterprise competitors 
-                  while providing superior features and ROI
+                  Our pricing is strategically positioned to be 20-40% more affordable than enterprise competitors,
+while providing superior features and ROI
                 </p>
                 <div className=&quot;flex items-center text-cyan-400 text-sm&quot;>
                   <TrendingUp className=&quot;w-4 h-4 mr-2&quot; />
@@ -363,26 +214,17 @@ export default function MarketPricing2026() {_const [selectedCategory, _setSelec
                 </div>
               </motion.div>
 
-              <motion.div
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 30 }}
+              <motion.div,
+initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className=&quot;bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm&quot;
-=======
-                initial={_{ opacity: 0, _y: 30}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                viewport={_{ once: true}}
-                transition={_{ duration: 0.6, _delay: 0.2}}
-                className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm&quot;              >
                 <div className=&quot;text-4xl mb-4&quot;>🎯</div>
                 <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>ROI Guarantee</h3>
                 <p className=&quot;text-gray-300 text-sm mb-4&quot;>
-                  Every service comes with our 1000% ROI guarantee, ensuring that customers see 
-                  exceptional returns on their investment
+                  Every service comes with our 1000% ROI guarantee, ensuring that customers see,
+exceptional returns on their investment
                 </p>
                 <div className=&quot;flex items-center text-green-400 text-sm&quot;>
                   <Award className=&quot;w-4 h-4 mr-2&quot; />
@@ -390,26 +232,17 @@ export default function MarketPricing2026() {_const [selectedCategory, _setSelec
                 </div>
               </motion.div>
 
-              <motion.div
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 30 }}
+              <motion.div,
+initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className=&quot;bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm&quot;
-=======
-                initial={_{ opacity: 0, _y: 30}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                viewport={_{ once: true}}
-                transition={_{ duration: 0.6, _delay: 0.3}}
-                className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm&quot;              >
                 <div className=&quot;text-4xl mb-4&quot;>🚀</div>
                 <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>Future-Proof Technology</h3>
                 <p className=&quot;text-gray-300 text-sm mb-4&quot;>
-                  Our 2026 services incorporate cutting-edge technologies that will remain 
-                  relevant and competitive for years to come
+                  Our 2026 services incorporate cutting-edge technologies that will remain,
+relevant and competitive for years to come
                 </p>
                 <div className=&quot;flex items-center text-purple-400 text-sm&quot;>
                   <Zap className=&quot;w-4 h-4 mr-2&quot; />
@@ -420,12 +253,11 @@ export default function MarketPricing2026() {_const [selectedCategory, _setSelec
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Services Pricing Grid */}
         <section className=&quot;relative z-10 py-16 px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+            <motion.div,
+initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -439,8 +271,8 @@ export default function MarketPricing2026() {_const [selectedCategory, _setSelec
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
               {filteredServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
+                <motion.div,
+key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -451,46 +283,11 @@ export default function MarketPricing2026() {_const [selectedCategory, _setSelec
                     <div className=&quot;flex items-start justify-between mb-4&quot;>
                       <div className=&quot;text-4xl&quot;>{service.icon}</div>
                       {service.popular && (
-                        <span className=&quot;bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full&quot;>
-=======
-        {_/* Services Pricing Grid */}
-        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={_{ opacity: 0, _y: 30}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              viewport={_{ once: true}}
-              transition={_{ duration: 0.8}}
-              className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Service Pricing & Features</h2>
-              <p className="text-xl text-gray-300">
-                {_filteredServices.length} services found matching your criteria
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {_filteredServices.map(_(service, _index) => (
-                <motion.div
-                  key={service.id}
-                  initial={_{ opacity: 0, _y: 30}}
-                  animate={_{ opacity: 1, _y: 0}}
-                  transition={_{ duration: 0.6, _delay: index * 0.1}}
-                  className="group"
-                >
-                  <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                    {_/* Service Header */}
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="text-4xl">{_service.icon}</div>
-                      {_service.popular && (
-                        <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                          Popular
+                        <span className=&quot;bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full&quot;>                          Popular
                         </span>
                       )}
                     </div>
 
-<<<<<<< HEAD
                     {/* Service Title */}
                     <h3 className=&quot;text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300&quot;>
                       {service.name}
@@ -506,31 +303,11 @@ export default function MarketPricing2026() {_const [selectedCategory, _setSelec
                       <div className=&quot;text-center&quot;>
                         <div className=&quot;text-3xl font-bold text-cyan-400 mb-1&quot;>
                           {service.price}
-                          <span className=&quot;text-gray-400 text-lg font-normal&quot;>{service.period}</span>
-=======
-                    {_/* Service Title */}
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                      {_service.name}
-                    </h3>
-
-                    {_/* Tagline */}
-                    <p className="text-gray-300 text-sm mb-4">
-                      {_service.tagline}
-                    </p>
-
-                    {_/* Pricing Section */}
-                    <div className="bg-gray-700/30 rounded-xl p-4 mb-4">
-                      <div className="text-center">
-                        <div className="text-3xl font-bold text-cyan-400 mb-1">
-                          {_service.price}
-                          <span className="text-gray-400 text-lg font-normal">{_service.period}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        </div>
+                          <span className=&quot;text-gray-400 text-lg font-normal&quot;>{service.period}</span>                        </div>
                         <div className=&quot;text-gray-400 text-sm&quot;>Starting price</div>
                       </div>
                     </div>
 
-<<<<<<< HEAD
                     {/* Market Position */}
                     <div className=&quot;mb-4&quot;>
                       <h4 className=&quot;text-white font-semibold mb-2 text-sm&quot;>Market Position</h4>
@@ -543,40 +320,16 @@ export default function MarketPricing2026() {_const [selectedCategory, _setSelec
                     <div className=&quot;grid grid-cols-2 gap-4 mb-4&quot;>
                       <div className=&quot;text-center p-3 bg-gray-700/30 rounded-lg&quot;>
                         <div className=&quot;text-lg font-bold text-green-400 mb-1&quot;>
-                          {service.roi.split(' ')[0]}
-=======
-                    {_/* Market Position */}
-                    <div className="mb-4">
-                      <h4 className="text-white font-semibold mb-2 text-sm">Market Position</h4>
-                      <p className="text-gray-400 text-xs leading-relaxed">
-                        {_service.marketPosition}
-                      </p>
-                    </div>
-
-                    {_/* ROI & Customers */}
-                    <div className="grid grid-cols-2 gap-4 mb-4">
-                      <div className="text-center p-3 bg-gray-700/30 rounded-lg">
-                        <div className="text-lg font-bold text-green-400 mb-1">
-                          {_service.roi.split(' ')[0]}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        </div>
+                          {service.roi.split(' ')[0]}                        </div>
                         <div className=&quot;text-gray-400 text-xs&quot;>ROI</div>
                       </div>
-<<<<<<< HEAD
                       <div className=&quot;text-center p-3 bg-gray-700/30 rounded-lg&quot;>
                         <div className=&quot;text-lg font-bold text-blue-400 mb-1&quot;>
-                          {service.customers.toLocaleString()}+
-=======
-                      <div className="text-center p-3 bg-gray-700/30 rounded-lg">
-                        <div className="text-lg font-bold text-blue-400 mb-1">
-                          {_service.customers.toLocaleString()}+
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        </div>
+                          {service.customers.toLocaleString()}+                        </div>
                         <div className=&quot;text-gray-400 text-xs&quot;>Customers</div>
                       </div>
                     </div>
 
-<<<<<<< HEAD
                     {/* Key Features */}
                     <div className=&quot;mb-4&quot;>
                       <h4 className=&quot;text-white font-semibold mb-2 text-sm&quot;>Key Features</h4>
@@ -584,23 +337,11 @@ export default function MarketPricing2026() {_const [selectedCategory, _setSelec
                         {service.features.slice(0, 3).map((feature, idx) => (
                           <li key={idx} className=&quot;text-gray-400 text-xs flex items-center&quot;>
                             <Zap className=&quot;w-3 h-3 text-cyan-400 mr-2 flex-shrink-0&quot; />
-                            {feature}
-=======
-                    {_/* Key Features */}
-                    <div className="mb-4">
-                      <h4 className="text-white font-semibold mb-2 text-sm">Key Features</h4>
-                      <ul className="space-y-1">
-                        {_service.features.slice(0, _3).map(_(feature, _idx) => (
-                          <li key={idx} className="text-gray-400 text-xs flex items-center">
-                            <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
-                            {_feature}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                          </li>
+                            {feature}                          </li>
                         ))}
                       </ul>
                     </div>
 
-<<<<<<< HEAD
                     {/* Technology Stack */}
                     <div className=&quot;mb-4&quot;>
                       <h4 className=&quot;text-white font-semibold mb-2 text-sm&quot;>Technology</h4>
@@ -611,36 +352,16 @@ export default function MarketPricing2026() {_const [selectedCategory, _setSelec
                           </span>
                         ))}
                         {service.technology.length > 3 && (
-                          <span className=&quot;text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded&quot;>
-=======
-                    {_/* Technology Stack */}
-                    <div className="mb-4">
-                      <h4 className="text-white font-semibold mb-2 text-sm">Technology</h4>
-                      <div className="flex flex-wrap gap-1">
-                        {_service.technology.slice(0, _3).map(_(tech, _idx) => (
-                          <span key={idx} className="text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded">
-                            {_tech}
-                          </span>
-                        ))}
-                        {_service.technology.length > 3 && (
-                          <span className="text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                            +{service.technology.length - 3} more
+                          <span className=&quot;text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded&quot;>                            +{service.technology.length - 3} more
                           </span>
                         )}
                       </div>
                     </div>
 
                     {_/* CTA Button */}
-                    <a
-<<<<<<< HEAD
-                      href={service.link}
-                      className=&quot;w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block&quot;
-=======
-                      href={_service.link}
-                      className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    >
+                    <a,
+href={service.link}
+                      className=&quot;w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block&quot;                    >
                       View Details
                     </a>
                   </div>
@@ -649,18 +370,11 @@ export default function MarketPricing2026() {_const [selectedCategory, _setSelec
             </div>
 
             {_/* No Results */}
-            {_filteredServices.length === 0 && (
-              <motion.div
-<<<<<<< HEAD
-                initial={{ opacity: 0 }}
+            {filteredServices.length === 0 && (
+              <motion.div,
+initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className=&quot;text-center py-16&quot;
-=======
-                initial={{ opacity: 0}}
-                animate={_{ opacity: 1}}
-                className="text-center py-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;text-center py-16&quot;              >
                 <div className=&quot;text-6xl mb-4&quot;>🔍</div>
                 <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>No services found</h3>
                 <p className=&quot;text-gray-400&quot;>Try adjusting your category or price range filters</p>
@@ -669,35 +383,21 @@ export default function MarketPricing2026() {_const [selectedCategory, _setSelec
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Contact Section */}
         <section className=&quot;relative z-10 py-20 px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+            <motion.div,
+initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className=&quot;bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm&quot;
-=======
-        {_/* Contact Section */}
-        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={_{ opacity: 0, _y: 30}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              viewport={_{ once: true}}
-              transition={_{ duration: 0.8}}
-              className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm&quot;            >
               <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>Ready to Get Started?</h2>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-                Contact our team to discuss pricing, implementation, and how our revolutionary 2026 services 
-                can transform your business with exceptional ROI
+                Contact our team to discuss pricing, implementation, and how our revolutionary 2026 services,
+can transform your business with exceptional ROI
               </p>
               
-<<<<<<< HEAD
               <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 mb-8&quot;>
                 <div className=&quot;flex items-center justify-center space-x-3 text-cyan-300&quot;>
                   <span className=&quot;text-2xl&quot;>📱</span>
@@ -709,37 +409,17 @@ export default function MarketPricing2026() {_const [selectedCategory, _setSelec
                 </div>
                 <div className=&quot;flex items-center justify-center space-x-3 text-pink-300&quot;>
                   <span className=&quot;text-2xl&quot;>📍</span>
-                  <span className=&quot;font-semibold text-sm&quot;>{contactInfo.address}</span>
-=======
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="flex items-center justify-center space-x-3 text-cyan-300">
-                  <span className="text-2xl">📱</span>
-                  <span className="font-semibold">{_contactInfo.mobile}</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3 text-purple-300">
-                  <span className="text-2xl">✉️</span>
-                  <span className="font-semibold">{_contactInfo.email}</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3 text-pink-300">
-                  <span className="text-2xl">📍</span>
-                  <span className="font-semibold text-sm">{_contactInfo.address}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </div>
+                  <span className=&quot;font-semibold text-sm&quot;>{contactInfo.address}</span>                </div>
               </div>
 
-<<<<<<< HEAD
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
-=======
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-                <a
-                  href=&quot;/contact&quot;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">                <a,
+href=&quot;/contact&quot;
                   className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105&quot;
                 >
                   Get Custom Quote
                 </a>
-                <a
-                  href=&quot;/2026-services-showcase&quot;
+                <a,
+href=&quot;/2026-services-showcase&quot;
                   className=&quot;px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300&quot;
                 >
                   View All Services

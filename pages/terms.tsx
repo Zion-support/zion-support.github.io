@@ -1,7 +1,6 @@
 import React from 'react',
       ]
     },
-<<<<<<< HEAD
     {
       title: 'Quantum Technology Services',
       terms: [
@@ -24,25 +23,8 @@ import {
 
 const TermsPage: React.FC = () => {
   const lastUpdated = 'January 17, 2025',
-=======
-    {_title: 'Quantum Technology Services', _terms: [
-        'Quantum computing resources are allocated based on service tier', _'Users must comply with export control regulations', _'Performance metrics are provided for informational purposes only', _'Service interruptions may occur during quantum system calibration'
-      ]},
-    {_title: 'Cybersecurity Services', _terms: [
-        'Security assessments are conducted according to industry standards', _'Vulnerability reports are confidential and must not be shared', _'Penetration testing requires written authorization', _'Incident response follows our established protocols'
-import Layout from '../components/layout/Layout';
-import SEOOptimizer from '../components/SEOOptimizer';
-import AnalyticsTracker from '../components/AnalyticsTracker';
-import ErrorBoundary from '../components/ErrorBoundary';
-import { 
-  FileText, _Shield, _AlertTriangle, _CheckCircle, _User, _Lock, _Globe, _Scale, _Clock, _Mail} from 'lucide-react';
-
-const TermsPage: React.FC = () => {_const _lastUpdated = 'January 17, _2025';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   const _termsSections = [
     {
-<<<<<<< HEAD
       title: 'Acceptance of Terms',
       icon: <CheckCircle className=&quot;w-8 h-8&quot; />,
       color: 'from-cyan-500 to-blue-500',
@@ -88,37 +70,11 @@ import {
       <section className=&quot;bg-gradient-to-r from-blue-600 to-purple-600 py-20&quot;>
         <div className=&quot;container mx-auto px-4 text-center&quot;>
           <h1 className=&quot;text-5xl font-bold text-white mb-6&quot;>Terms of Service</h1>
-          <p className=&quot;text-xl text-blue-100 max-w-3xl mx-auto&quot;>
-=======
-      title: 'Acceptance of Terms', _icon: <CheckCircle className="w-8 h-8" />, _color: 'from-cyan-500 to-blue-500', _content: [
-        'By accessing or using our services, _you agree to be bound by these terms', _'If you do not agree to these terms, _do not use our services', _'We may modify these terms at any time with notice', _'Continued use after changes constitutes acceptance of new terms'
-      ]},
-    {_title: 'Service Description', _icon: <Globe className="w-8 h-8" />, _color: 'from-purple-500 to-pink-500', _content: [
-        'AI and machine learning solutions', _'Quantum computing services', _'IT infrastructure and consulting', _'Micro SAAS applications', _'Business automation services', _'Technical support and maintenance'
-      ]},
-    {_title: 'User Responsibilities', _icon: <User className="w-8 h-8" />, _color: 'from-green-500 to-emerald-500', _content: [
-        'Provide accurate and complete information', _'Maintain security of your account credentials', _'Comply with applicable laws and regulations', _'Use services for lawful purposes only', _'Respect intellectual property rights'
-      ]},
-    {_title: 'Intellectual Property', _icon: <Lock className="w-8 h-8" />, _color: 'from-orange-500 to-red-500', _content: [
-        'Our services and content are protected by copyright', _'You retain rights to your own content', _'No transfer of intellectual property rights', _'License to use our services as intended', _'Prohibition of reverse engineering'
-      ]}
-  ];
-
-  const _prohibitedActivities = [
-import {_FileText, _Shield, _CheckCircle, _AlertTriangle, _Globe, _Calendar, _Scale, _Users, _ArrowRight, _BookOpen, _Lock, _Zap, _Building, _Brain, _Rocket} from 'lucide-react';
-
-      {_/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">Terms of Service</h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            Please read these terms carefully before using our website or services.
+          <p className=&quot;text-xl text-blue-100 max-w-3xl mx-auto&quot;>            Please read these terms carefully before using our website or services.
           </p>
         </div>
       </section>
 
-<<<<<<< HEAD
 import { motion } from 'framer-motion',
 import { Shield, FileText, Scale, Lock, Eye, Users, Globe, AlertTriangle } from 'lucide-react',
 import Layout from '../components/layout/Layout',
@@ -131,14 +87,8 @@ const Terms: React.FC = () => {
     },
     {
       title: 'Use License',
-<<<<<<< HEAD
       content: `Permission is granted to temporarily download one copy of the materials (information or software) on Zion Tech Group's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials, use the materials for any commercial purpose or for any public display, attempt to reverse engineer any software contained on Zion Tech Group's website, remove any copyright or other proprietary notations from the materials, or transfer the materials to another person or "mirror" the materials on any other server.`,
-      icon: <Lock className="w-6 h-6 text-blue-400" />
-=======
-      content: `Permission is granted to temporarily download one copy of the materials (information or software) on Zion Tech Group's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials; use the materials for any commercial purpose or for any public display; attempt to reverse engineer any software contained on Zion Tech Group's website; remove any copyright or other proprietary notations from the materials; or transfer the materials to another person or &quot;mirror&quot; the materials on any other server.`,
-      icon: <Lock className=&quot;w-6 h-6 text-blue-400&quot; />
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    },
+      icon: <Lock className="w-6 h-6 text-blue-400" />    },
     {
       title: 'Service Description',
       content: `Zion Tech Group provides AI consciousness technology, quantum computing solutions, autonomous systems, and related consulting services. We reserve the right to modify, suspend, or discontinue any aspect of our services at any time.`,
@@ -183,23 +133,12 @@ const Terms: React.FC = () => {
     <Layout>
       <div className=&quot;min-h-screen bg-gradient-to-br from-black via-purple-900 to-blue-900&quot;>
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="relative pt-32 pb-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
 import { motion } from 'framer-motion',
 import { FileText, Scale, Shield, Clock, CheckCircle, AlertTriangle } from 'lucide-react',
 import Layout from '../components/layout/Layout',
-import SEO from '../components/SEO',
-=======
-        <section className=&quot;relative pt-32 pb-20 px-4&quot;>
-          <div className=&quot;max-w-7xl mx-auto text-center&quot;>
-import { motion } from 'framer-motion';
-import { FileText, Scale, Shield, Clock, CheckCircle, AlertTriangle } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import SEO from '../components/SEO';
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-const termsSections = [
+import SEO from '../components/SEO',const termsSections = [
   {
     title: 'Acceptance of Terms',
     icon: <CheckCircle className=&quot;w-6 h-6 text-green-400&quot; />,
@@ -221,7 +160,6 @@ const termsSections = [
     content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
   }
 ],
-=======
 import Layout from '../components/layout/Layout';
 
 const Terms: React.FC = () => {_const _sections = [
@@ -255,12 +193,10 @@ const _termsSections = [
   {_title: 'Disclaimer', _icon: <AlertTriangle className="w-6 h-6 text-orange-400" />, _content: 'The materials on our website are provided on an "as is" basis. We make no warranties, _expressed or implied.'},
   {_title: 'Limitations', _icon: <Shield className="w-6 h-6 text-purple-400" />, _content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'}
 ];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 export default function Terms() {_return (
     <Layout>
       <SEO
-<<<<<<< HEAD
         title=&quot;Terms of Service | Zion Tech Group&quot;
         description=&quot;Read Zion Tech Group's Terms of Service, including usage policies, user agreements, and legal conditions for accessing our technology services.&quot;
         keywords={[&quot;terms of service&quot;, &quot;user agreement&quot;, &quot;legal terms&quot;, &quot;conditions of use&quot;, &quot;service agreement&quot;, &quot;Zion Tech Group&quot;]}
@@ -270,20 +206,7 @@ export default function Terms() {_return (
         {/* Hero Section */}
         <section className=&quot;relative pt-32 pb-20 overflow-hidden&quot;>
           <div className=&quot;absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-cyan-900/20&quot;></div>
-          <div className=&quot;relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
-=======
-        title="Terms of Service | Zion Tech Group"
-        description="Read Zion Tech Group's Terms of Service, _including usage policies, _user agreements, _and legal conditions for accessing our technology services."
-        keywords={["terms of service", _"user agreement", _"legal terms", _"conditions of use", _"service agreement", _"Zion Tech Group"]}
-      />
-
-      <div className="min-h-screen bg-black text-white">
-        {_/* Hero Section */}
-        <section className="relative pt-32 pb-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-cyan-900/20"></div>
-          <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            <motion.div
+          <div className=&quot;relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>            <motion.div
               initial={_{ opacity: 0, _y: 20}}
               animate={_{ opacity: 1, _y: 0}}
               transition={_{ duration: 0.8}}
@@ -469,7 +392,6 @@ export default function Terms() {_return (
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* User Obligations Section */}
         <section className=&quot;py-20&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -478,19 +400,7 @@ export default function Terms() {_return (
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className=&quot;text-center mb-16&quot;
-=======
-        {_/* User Obligations Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
-              className="text-center mb-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;text-center mb-16&quot;            >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
               <h2 className=&quot;text-3xl lg:text-4xl font-bold text-white mb-6&quot;>
                 User Obligations
@@ -503,22 +413,12 @@ export default function Terms() {_return (
             <div className=&quot;bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50&quot;>
               <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
                 <div>
-<<<<<<< HEAD
                   <h3 className=&quot;text-2xl font-bold text-white mb-6&quot;>Your Responsibilities:</h3>
                   <ul className=&quot;space-y-3&quot;>
                     {userObligations.map((obligation, index) => (
                       <li key={index} className=&quot;flex items-start gap-3 text-gray-300&quot;>
                         <CheckCircle className=&quot;w-5 h-5 text-green-400 mt-0.5 flex-shrink-0&quot; />
-                        <span>{obligation}</span>
-=======
-                  <h3 className="text-2xl font-bold text-white mb-6">Your Responsibilities:</h3>
-                  <ul className="space-y-3">
-                    {_userObligations.map(_(obligation, _index) => (
-                      <li key={index} className="flex items-start gap-3 text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                        <span>{_obligation}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      </li>
+                        <span>{obligation}</span>                      </li>
                     ))}
                   </ul>
                 </div>
@@ -550,7 +450,6 @@ export default function Terms() {_return (
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Liability Limitations */}
         {/* Intellectual Property Section */}
         <section className=&quot;py-20&quot;>
@@ -560,20 +459,7 @@ export default function Terms() {_return (
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className=&quot;text-center mb-16&quot;
-=======
-        {_/* Liability Limitations */}
-        {_/* Intellectual Property Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
-              className="text-center mb-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;text-center mb-16&quot;            >
               <h2 className=&quot;text-3xl lg:text-4xl font-bold text-white mb-6&quot;>
                 Liability & Limitations
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
@@ -597,18 +483,10 @@ export default function Terms() {_return (
 
             <div className=&quot;space-y-6&quot;>
               <motion.div
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className=&quot;bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8&quot;
-=======
-                initial={_{ opacity: 0, _y: 20}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.8}}
-                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8&quot;              >
                 <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Limitation of Liability</h3>
                 <p className=&quot;text-gray-300 leading-relaxed mb-4&quot;>
                   In no event shall Zion Tech Group, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the service.
@@ -619,18 +497,10 @@ export default function Terms() {_return (
               </motion.div>
 
               <motion.div
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
-                className=&quot;bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8&quot;
-=======
-                initial={_{ opacity: 0, _y: 20}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.8, _delay: 0.1}}
-                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8&quot;              >
                 <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Governing Law</h3>
                 <p className=&quot;text-gray-300 leading-relaxed&quot;>
                   These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions. Any disputes arising from these Terms or your use of our services shall be resolved in the courts of the United States.
@@ -638,18 +508,10 @@ export default function Terms() {_return (
               </motion.div>
 
               <motion.div
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className=&quot;bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8&quot;
-=======
-                initial={_{ opacity: 0, _y: 20}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.8, _delay: 0.2}}
-                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8&quot;              >
                 <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Changes to Terms</h3>
                 <p className=&quot;text-gray-300 leading-relaxed mb-4&quot;>
                   We reserve the right to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days notice prior to any new terms taking effect.
@@ -662,7 +524,6 @@ export default function Terms() {_return (
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Limitation of Liability Section */}
         <section className=&quot;py-20&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -671,19 +532,7 @@ export default function Terms() {_return (
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className=&quot;text-center mb-16&quot;
-=======
-        {_/* Limitation of Liability Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
-              className="text-center mb-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;text-center mb-16&quot;            >
               <h2 className=&quot;text-3xl lg:text-4xl font-bold text-white mb-6&quot;>
                 Questions About Terms?
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
@@ -730,7 +579,6 @@ export default function Terms() {_return (
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}
         {/* Contact Section */}
         <section className=&quot;py-20&quot;>
@@ -742,22 +590,7 @@ export default function Terms() {_return (
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
-=======
-        {_/* CTA Section */}
-        {_/* Contact Section */}
-        <section className="py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {_/* Contact Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                Questions About These Terms?
+              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>                Questions About These Terms?
               </h2>
               <p className=&quot;text-xl text-gray-400 mb-8&quot;>
                 We're here to clarify any questions about our terms of service and help ensure compliance.
@@ -786,29 +619,15 @@ export default function Terms() {_return (
               
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
                 <motion.button
-<<<<<<< HEAD
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className=&quot;px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-blue-700 transition-all duration-300&quot;
-=======
-                  whileHover={_{ scale: 1.05}}
-                  whileTap={_{ scale: 0.95}}
-                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-blue-700 transition-all duration-300"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                >
+                  className=&quot;px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-blue-700 transition-all duration-300&quot;                >
                   Contact Support
                 </motion.button>
                 <motion.button
-<<<<<<< HEAD
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className=&quot;px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300&quot;
-=======
-                  whileHover={_{ scale: 1.05}}
-                  whileTap={_{ scale: 0.95}}
-                  className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                >
+                  className=&quot;px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300&quot;                >
                   Download Terms PDF
                 </motion.button>
               </div>
@@ -817,7 +636,6 @@ export default function Terms() {_return (
         </section>
       </div>
     </Layout>
-<<<<<<< HEAD
       {/* Terms Overview */}
       <section id=&quot;terms-sections&quot; className=&quot;py-20&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -825,18 +643,7 @@ export default function Terms() {_return (
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className=&quot;text-center mb-16&quot;
-=======
-      {_/* Terms Overview */}
-      <section id="terms-sections" className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={_{ opacity: 0, _y: 30}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.8}}
-            className="text-center mb-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
               Terms Overview
             </h2>
@@ -845,7 +652,6 @@ export default function Terms() {_return (
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>
             {termsSections.map((section, index) => (
               <motion.div
@@ -860,32 +666,13 @@ export default function Terms() {_return (
                     {section.icon}
                   </div>
                   <h3 className=&quot;text-xl font-semibold mb-2&quot;>{section.title}</h3>
-                  <p className=&quot;text-gray-300 text-sm&quot;>{section.description}</p>
-=======
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {_termsSections.map(_(section, _index) => (
-              <motion.div
-                key={section.title}
-                initial={_{ opacity: 0, _y: 30}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6, _delay: index * 0.1}}
-                className="group cursor-pointer"
-              >
-                <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-800/50 to-black/50 border border-white/10 hover:border-cyan-500/30 transition-all duration-300">
-                  <div className={_`w-16 h-16 mb-4 rounded-2xl bg-gradient-to-r ${section.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    {_section.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{_section.title}</h3>
-                  <p className="text-gray-300 text-sm">{_section.description}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </div>
+                  <p className=&quot;text-gray-300 text-sm&quot;>{section.description}</p>                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Service Categories */}
       <section className=&quot;py-20 bg-gradient-to-r from-gray-900/50 to-black/50&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -893,18 +680,7 @@ export default function Terms() {_return (
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className=&quot;text-center mb-16&quot;
-=======
-      {_/* Service Categories */}
-      <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={_{ opacity: 0, _y: 30}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.8}}
-            className="text-center mb-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
               Service Categories & Terms
             </h2>
@@ -913,7 +689,6 @@ export default function Terms() {_return (
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className=&quot;grid lg:grid-cols-2 gap-8&quot;>
             {serviceCategories.map((service, index) => (
               <motion.div
@@ -941,98 +716,40 @@ export default function Terms() {_return (
                         {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className=&quot;flex items-start gap-2&quot;>
                             <CheckCircle className=&quot;w-4 h-4 text-green-400 mt-0.5 flex-shrink-0&quot; />
-                            {feature}
-=======
-          <div className="grid lg:grid-cols-2 gap-8">
-            {_serviceCategories.map(_(service, _index) => (_<motion.div
-                key={service.category}
-                initial={_{ opacity: 0, _y: 30}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6, _delay: index * 0.1}}
-                className="group"
-              >
-                <div className="bg-gradient-to-br from-gray-800/50 to-black/50 rounded-2xl border border-white/10 hover:border-cyan-500/30 transition-all duration-300 overflow-hidden">
-                  <div className="h-24 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center">
-                      {_service.icon}
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                      {_service.category}
-                    </h3>
-                    <p className="text-gray-300 mb-4">{_service.description}</p>
-                    
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features:</h4>
-                      <ul className="text-sm text-gray-300 space-y-1">
-                        {_service.features.map((feature, _featureIndex) => (
-                          <li key={featureIndex} className="flex items-start gap-2">
-                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                            {_feature}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                          </li>
+                            {feature}                          </li>
                         ))}
                       </ul>
                     </div>
 
                     <div>
-<<<<<<< HEAD
                       <h4 className=&quot;text-sm font-semibold text-yellow-400 mb-2&quot;>Restrictions:</h4>
                       <ul className=&quot;text-sm text-gray-300 space-y-1&quot;>
                         {service.restrictions.map((restriction, restrictionIndex) => (
                           <li key={restrictionIndex} className=&quot;flex items-start gap-2&quot;>
                             <AlertTriangle className=&quot;w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0&quot; />
-                            {restriction}
-=======
-                      <h4 className="text-sm font-semibold text-yellow-400 mb-2">Restrictions:</h4>
-                      <ul className="text-sm text-gray-300 space-y-1">
-                        {_service.restrictions.map(_(restriction, _restrictionIndex) => (
-                          <li key={restrictionIndex} className="flex items-start gap-2">
-                            <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
-                            {_restriction}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                          </li>
+                            {restriction}                          </li>
                         ))}
                       </ul>
     'Unauthorized access to our systems or networksInterference with service operationDistribution of malware or harmful codeViolation of third-party rightsAttempts to gain unauthorized accessUse of services for illegal activities'
   ],
 
-<<<<<<< HEAD
   const limitations = [
-<<<<<<< HEAD
     'Services provided "as is" without warrantiesNo guarantee of uninterrupted serviceLimitation of liability for damagesNo responsibility for third-party contentService availability subject to changeTechnical support during business hours only'
-  ],
-=======
-    'Services provided &quot;as is&quot; without warranties',
-=======
-  const _limitations = [
-    'Services provided "as is" without warranties',
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    'No guarantee of uninterrupted service',
+  ],    'No guarantee of uninterrupted service',
     'Limitation of liability for damages',
     'No responsibility for third-party content',
     'Service availability subject to change',
     'Technical support during business hours only'
   ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   return (_<ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
       <Layout>
-<<<<<<< HEAD
         <main className=&quot;relative z-10 pt-8&quot;>
           {/* Hero Section */}
           <section className=&quot;py-20 px-4&quot;>
-            <div className=&quot;max-w-6xl mx-auto text-center&quot;>
-=======
-        <main className="relative z-10 pt-8">
-          {_/* Hero Section */}
-          <section className="py-20 px-4">
-            <div className="max-w-6xl mx-auto text-center">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <motion.div
+            <div className=&quot;max-w-6xl mx-auto text-center&quot;>              <motion.div
                 initial={_{ opacity: 0, _y: 20}}
                 animate={_{ opacity: 1, _y: 0}}
                 transition={_{ duration: 0.6}}
@@ -1043,32 +760,17 @@ export default function Terms() {_return (
                 <p className=&quot;text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
                   Please read these terms carefully before using our services. They govern your use of Zion Tech Group's technology solutions.
                 </p>
-<<<<<<< HEAD
                 <div className=&quot;flex items-center justify-center gap-4 text-gray-400&quot;>
                   <FileText className=&quot;w-6 h-6&quot; />
-                  <span>Last updated: {lastUpdated}</span>
-=======
-                <div className="flex items-center justify-center gap-4 text-gray-400">
-                  <FileText className="w-6 h-6" />
-                  <span>Last updated: {_lastUpdated}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </div>
+                  <span>Last updated: {lastUpdated}</span>                </div>
               </motion.div>
             </div>
           </section>
 
-<<<<<<< HEAD
           {/* Overview */}
           <section className=&quot;py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50&quot;>
             <div className=&quot;max-w-6xl mx-auto&quot;>
-              <div className=&quot;grid lg:grid-cols-2 gap-12 items-center&quot;>
-=======
-          {_/* Overview */}
-          <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                <motion.div
+              <div className=&quot;grid lg:grid-cols-2 gap-12 items-center&quot;>                <motion.div
                   initial={_{ opacity: 0, _x: -20}}
                   whileInView={_{ opacity: 1, _x: 0}}
                   transition={_{ duration: 0.6}}
@@ -1081,16 +783,9 @@ export default function Terms() {_return (
                     services. They protect both you and us, _ensuring a clear understanding of our relationship 
                     and responsibilities.
                   </p>
-<<<<<<< HEAD
                   <p className=&quot;text-lg text-gray-300 mb-6 leading-relaxed&quot;>
                     By using our services, you acknowledge that you have read, understood, and agree to 
-                    be bound by these terms. If you have any questions, please contact us before proceeding.
-=======
-                  <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                    By using our services, _you acknowledge that you have read, _understood, _and agree to 
-                    be bound by these terms. If you have any questions, _please contact us before proceeding.
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </p>
+                    be bound by these terms. If you have any questions, please contact us before proceeding.                  </p>
                   <div className=&quot;flex items-center gap-4 text-cyan-400&quot;>
                     <Scale className=&quot;w-6 h-6&quot; />
                     <span className=&quot;font-medium&quot;>Clear and fair terms</span>
@@ -1098,18 +793,10 @@ export default function Terms() {_return (
                 </motion.div>
                 
                 <motion.div
-<<<<<<< HEAD
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-                  className=&quot;relative&quot;
-=======
-                  initial={_{ opacity: 0, _x: 20}}
-                  whileInView={_{ opacity: 1, _x: 0}}
-                  transition={_{ duration: 0.6, _delay: 0.2}}
-                  className="relative"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                >
+                  className=&quot;relative&quot;                >
                   <div className=&quot;bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30&quot;>
                     <div className=&quot;text-center space-y-6&quot;>
                       <div className=&quot;w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto&quot;>
@@ -1135,7 +822,6 @@ export default function Terms() {_return (
             </div>
           </section>
 
-<<<<<<< HEAD
           {/* Key Terms */}
           <section className=&quot;py-20 px-4&quot;>
             <div className=&quot;max-w-6xl mx-auto&quot;>
@@ -1143,23 +829,11 @@ export default function Terms() {_return (
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className=&quot;text-center mb-16&quot;
-=======
-          {_/* Key Terms */}
-          <section className="py-20 px-4">
-            <div className="max-w-6xl mx-auto">
-              <motion.div
-                initial={_{ opacity: 0, _y: 20}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6}}
-                className="text-center mb-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;text-center mb-16&quot;              >
                 <h2 className=&quot;text-4xl font-bold mb-4 text-white&quot;>Key Terms and Conditions</h2>
                 <p className=&quot;text-xl text-gray-300&quot;>Essential information about using our services</p>
               </motion.div>
               
-<<<<<<< HEAD
               <div className=&quot;grid md:grid-cols-2 gap-8&quot;>
                 {termsSections.map((section, index) => (
                   <motion.div
@@ -1179,29 +853,7 @@ export default function Terms() {_return (
                       {section.content.map((item, itemIndex) => (
                         <li key={itemIndex} className=&quot;flex items-start gap-3&quot;>
                           <div className=&quot;w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0&quot;></div>
-                          <span className=&quot;text-gray-300&quot;>{item}</span>
-=======
-              <div className="grid md:grid-cols-2 gap-8">
-                {_termsSections.map((section, _index) => (_<motion.div
-                    key={section.title}
-                    initial={_{ opacity: 0, _y: 20}}
-                    whileInView={_{ opacity: 1, _y: 0}}
-                    transition={_{ duration: 0.6, _delay: index * 0.1}}
-                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
-                  >
-                    <div className={_`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
-                      <div className="text-white">
-                        {_section.icon}
-                      </div>
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-4">{_section.title}</h3>
-                    <ul className="space-y-3">
-                      {_section.content.map((item, _itemIndex) => (
-                        <li key={itemIndex} className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-300">{_item}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        </li>
+                          <span className=&quot;text-gray-300&quot;>{item}</span>                        </li>
                       ))}
                     </ul>
                   </motion.div>
@@ -1210,7 +862,6 @@ export default function Terms() {_return (
             </div>
           </section>
 
-<<<<<<< HEAD
           {/* Prohibited Activities */}
           <section className=&quot;py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50&quot;>
             <div className=&quot;max-w-6xl mx-auto&quot;>
@@ -1218,53 +869,25 @@ export default function Terms() {_return (
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className=&quot;text-center mb-16&quot;
-=======
-          {_/* Prohibited Activities */}
-          <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
-            <div className="max-w-6xl mx-auto">
-              <motion.div
-                initial={_{ opacity: 0, _y: 20}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6}}
-                className="text-center mb-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;text-center mb-16&quot;              >
                 <h2 className=&quot;text-4xl font-bold mb-4 text-white&quot;>Prohibited Activities</h2>
                 <p className=&quot;text-xl text-gray-300&quot;>Activities that are not allowed when using our services</p>
               </motion.div>
               
               <motion.div
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className=&quot;bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl p-8 border border-red-500/30&quot;
-=======
-                initial={_{ opacity: 0, _y: 20}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6, _delay: 0.2}}
-                className="bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl p-8 border border-red-500/30"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl p-8 border border-red-500/30&quot;              >
                 <div className=&quot;flex items-center gap-4 mb-6&quot;>
                   <AlertTriangle className=&quot;w-8 h-8 text-red-400&quot; />
                   <h3 className=&quot;text-2xl font-bold text-white&quot;>What You Cannot Do</h3>
                 </div>
-<<<<<<< HEAD
                 <div className=&quot;grid md:grid-cols-2 gap-4&quot;>
                   {prohibitedActivities.map((activity, index) => (
                     <div key={index} className=&quot;flex items-start gap-3&quot;>
                       <div className=&quot;w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0&quot;></div>
-                      <span className=&quot;text-gray-300&quot;>{activity}</span>
-=======
-                <div className="grid md:grid-cols-2 gap-4">
-                  {_prohibitedActivities.map(_(activity, _index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-300">{_activity}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    </div>
+                      <span className=&quot;text-gray-300&quot;>{activity}</span>                    </div>
                   ))}
                 </div>
                 <div className=&quot;mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg&quot;>
@@ -1277,7 +900,6 @@ export default function Terms() {_return (
             </div>
           </section>
 
-<<<<<<< HEAD
           {/* Service Limitations */}
           <section className=&quot;py-20 px-4&quot;>
             <div className=&quot;max-w-6xl mx-auto&quot;>
@@ -1285,53 +907,25 @@ export default function Terms() {_return (
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className=&quot;text-center mb-16&quot;
-=======
-          {_/* Service Limitations */}
-          <section className="py-20 px-4">
-            <div className="max-w-6xl mx-auto">
-              <motion.div
-                initial={_{ opacity: 0, _y: 20}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6}}
-                className="text-center mb-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;text-center mb-16&quot;              >
                 <h2 className=&quot;text-4xl font-bold mb-4 text-white&quot;>Service Limitations and Disclaimers</h2>
                 <p className=&quot;text-xl text-gray-300&quot;>Important information about service availability and warranties</p>
               </motion.div>
               
               <motion.div
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className=&quot;bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl p-8 border border-yellow-500/30&quot;
-=======
-                initial={_{ opacity: 0, _y: 20}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6, _delay: 0.2}}
-                className="bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl p-8 border border-yellow-500/30"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl p-8 border border-yellow-500/30&quot;              >
                 <div className=&quot;flex items-center gap-4 mb-6&quot;>
                   <Shield className=&quot;w-8 h-8 text-yellow-400&quot; />
                   <h3 className=&quot;text-2xl font-bold text-white&quot;>Service Limitations</h3>
                 </div>
-<<<<<<< HEAD
                 <div className=&quot;grid md:grid-cols-2 gap-4&quot;>
                   {limitations.map((limitation, index) => (
                     <div key={index} className=&quot;flex items-start gap-3&quot;>
                       <div className=&quot;w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0&quot;></div>
-                      <span className=&quot;text-gray-300&quot;>{limitation}</span>
-=======
-                <div className="grid md:grid-cols-2 gap-4">
-                  {_limitations.map(_(limitation, _index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-300">{_limitation}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    </div>
+                      <span className=&quot;text-gray-300&quot;>{limitation}</span>                    </div>
                   ))}
                 </div>
                 <div className=&quot;mt-6 p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-lg&quot;>
@@ -1345,7 +939,6 @@ export default function Terms() {_return (
             </div>
           </section>
 
-<<<<<<< HEAD
           {/* Detailed Terms */}
           <section className=&quot;py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50&quot;>
             <div className=&quot;max-w-4xl mx-auto&quot;>
@@ -1353,18 +946,7 @@ export default function Terms() {_return (
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className=&quot;space-y-12&quot;
-=======
-          {_/* Detailed Terms */}
-          <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
-            <div className="max-w-4xl mx-auto">
-              <motion.div
-                initial={_{ opacity: 0, _y: 20}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6}}
-                className="space-y-12"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;space-y-12&quot;              >
                 <div>
                   <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>Detailed Terms and Conditions</h2>
                   
@@ -1520,7 +1102,6 @@ export default function Terms() {_return (
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Terms Overview */}
         <section className=&quot;py-20&quot;>
           <div className=&quot;max-w-4xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -1529,19 +1110,7 @@ export default function Terms() {_return (
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className=&quot;text-center mb-16&quot;
-=======
-        {_/* Terms Overview */}
-        <section className="py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
-              className="text-center mb-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;text-center mb-16&quot;            >
               <h2 className=&quot;text-4xl font-bold mb-6&quot;>Terms Overview</h2>
               <p className=&quot;text-xl text-gray-400 leading-relaxed&quot;>
                 These Terms of Service govern your use of Zion Tech Group's website and services. 
@@ -1549,7 +1118,6 @@ export default function Terms() {_return (
               </p>
             </motion.div>
 
-<<<<<<< HEAD
             {/* Key Terms Points */}
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8 mb-16&quot;>
               {termsSections.map((section, index) => (
@@ -1565,32 +1133,12 @@ export default function Terms() {_return (
                     {section.icon}
                     <h3 className=&quot;text-xl font-semibold&quot;>{section.title}</h3>
                   </div>
-                  <p className=&quot;text-gray-300&quot;>{section.content}</p>
-=======
-            {_/* Key Terms Points */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-              {_termsSections.map(_(section, _index) => (
-                <motion.div
-                  key={section.title}
-                  initial={_{ opacity: 0, _y: 20}}
-                  whileInView={_{ opacity: 1, _y: 0}}
-                  transition={_{ duration: 0.8, _delay: index * 0.1}}
-                  viewport={_{ once: true}}
-                  className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-xl"
-                >
-                  <div className="flex items-center space-x-3 mb-4">
-                    {_section.icon}
-                    <h3 className="text-xl font-semibold">{_section.title}</h3>
-                  </div>
-                  <p className="text-gray-300">{_section.content}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </motion.div>
+                  <p className=&quot;text-gray-300&quot;>{section.content}</p>                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Detailed Terms */}
         <section className=&quot;py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50&quot;>
           <div className=&quot;max-w-4xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -1599,19 +1147,7 @@ export default function Terms() {_return (
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className=&quot;space-y-12&quot;
-=======
-        {_/* Detailed Terms */}
-        <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
-              className="space-y-12"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;space-y-12&quot;            >
               <div className=&quot;text-center mb-16&quot;>
                 <h2 className=&quot;text-4xl font-bold mb-4&quot;>Detailed Terms and Conditions</h2>
                 <p className=&quot;text-xl text-gray-400&quot;>
@@ -1619,18 +1155,10 @@ export default function Terms() {_return (
                 </p>
               </div>
 
-<<<<<<< HEAD
               {/* Section 1: Definitions */}
               <div className=&quot;prose prose-invert max-w-none&quot;>
                 <h3 className=&quot;text-2xl font-bold text-cyan-400 mb-4&quot;>1. Definitions</h3>
-                <div className=&quot;text-gray-300 space-y-4&quot;>
-=======
-              {_/* Section 1: Definitions */}
-              <div className="prose prose-invert max-w-none">
-                <h3 className="text-2xl font-bold text-cyan-400 mb-4">1. Definitions</h3>
-                <div className="text-gray-300 space-y-4">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  <p>
+                <div className=&quot;text-gray-300 space-y-4&quot;>                  <p>
                     The following terms shall have the meanings set forth below:
                   </p>
                   <ul className=&quot;list-disc list-inside space-y-2 ml-4&quot;>
@@ -1643,18 +1171,10 @@ export default function Terms() {_return (
                 </div>
               </div>
 
-<<<<<<< HEAD
               {/* Section 2: Acceptance */}
               <div className=&quot;prose prose-invert max-w-none&quot;>
                 <h3 className=&quot;text-2xl font-bold text-purple-400 mb-4&quot;>2. Acceptance of Terms</h3>
-                <div className=&quot;text-gray-300 space-y-4&quot;>
-=======
-              {_/* Section 2: Acceptance */}
-              <div className="prose prose-invert max-w-none">
-                <h3 className="text-2xl font-bold text-purple-400 mb-4">2. Acceptance of Terms</h3>
-                <div className="text-gray-300 space-y-4">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  <p>
+                <div className=&quot;text-gray-300 space-y-4&quot;>                  <p>
                     By accessing, browsing, or using our services, you acknowledge that you have read,
                     understood, and agree to be bound by these Terms of Service and our Privacy Policy.
                   </p>
@@ -1666,20 +1186,11 @@ export default function Terms() {_return (
                 </div>
               </div>
 
-<<<<<<< HEAD
               {/* Section 3: Use of Services */}
               <div className=&quot;prose prose-invert max-w-none&quot;>
                 <h3 className=&quot;text-2xl font-bold text-emerald-400 mb-4&quot;>3. Use of Services</h3>
                 <div className=&quot;text-gray-300 space-y-4&quot;>
-                  <h4 className=&quot;text-lg font-semibold text-white&quot;>Permitted Use</h4>
-=======
-              {_/* Section 3: Use of Services */}
-              <div className="prose prose-invert max-w-none">
-                <h3 className="text-2xl font-bold text-emerald-400 mb-4">3. Use of Services</h3>
-                <div className="text-gray-300 space-y-4">
-                  <h4 className="text-lg font-semibold text-white">Permitted Use</h4>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  <p>
+                  <h4 className=&quot;text-lg font-semibold text-white&quot;>Permitted Use</h4>                  <p>
                     You may use our services for lawful purposes only. You agree not to use the services:
                   </p>
                   <ul className=&quot;list-disc list-inside space-y-2 ml-4&quot;>
@@ -1698,18 +1209,10 @@ export default function Terms() {_return (
                 </div>
               </div>
 
-<<<<<<< HEAD
               {/* Section 4: Intellectual Property */}
               <div className=&quot;prose prose-invert max-w-none&quot;>
                 <h3 className=&quot;text-2xl font-bold text-orange-400 mb-4&quot;>4. Intellectual Property Rights</h3>
-                <div className=&quot;text-gray-300 space-y-4&quot;>
-=======
-              {_/* Section 4: Intellectual Property */}
-              <div className="prose prose-invert max-w-none">
-                <h3 className="text-2xl font-bold text-orange-400 mb-4">4. Intellectual Property Rights</h3>
-                <div className="text-gray-300 space-y-4">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  <p>
+                <div className=&quot;text-gray-300 space-y-4&quot;>                  <p>
                     All content, features, and functionality of our services are owned by Zion Tech Group 
                     and are protected by copyright, trademark, and other intellectual property laws.
                   </p>
@@ -1727,18 +1230,10 @@ export default function Terms() {_return (
                 </div>
               </div>
 
-<<<<<<< HEAD
               {/* Section 5: Privacy */}
               <div className=&quot;prose prose-invert max-w-none&quot;>
                 <h3 className=&quot;text-2xl font-bold text-pink-400 mb-4&quot;>5. Privacy</h3>
-                <div className=&quot;text-gray-300 space-y-4&quot;>
-=======
-              {_/* Section 5: Privacy */}
-              <div className="prose prose-invert max-w-none">
-                <h3 className="text-2xl font-bold text-pink-400 mb-4">5. Privacy</h3>
-                <div className="text-gray-300 space-y-4">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  <p>
+                <div className=&quot;text-gray-300 space-y-4&quot;>                  <p>
                     Your privacy is important to us. Please review our Privacy Policy, which also governs 
                     your use of our services, to understand our practices.
                   </p>
@@ -1749,20 +1244,11 @@ export default function Terms() {_return (
                 </div>
               </div>
 
-<<<<<<< HEAD
               {/* Section 6: Disclaimers */}
               <div className=&quot;prose prose-invert max-w-none&quot;>
                 <h3 className=&quot;text-2xl font-bold text-red-400 mb-4&quot;>6. Disclaimers and Limitations</h3>
                 <div className=&quot;text-gray-300 space-y-4&quot;>
-                  <h4 className=&quot;text-lg font-semibold text-white&quot;>Service Availability</h4>
-=======
-              {_/* Section 6: Disclaimers */}
-              <div className="prose prose-invert max-w-none">
-                <h3 className="text-2xl font-bold text-red-400 mb-4">6. Disclaimers and Limitations</h3>
-                <div className="text-gray-300 space-y-4">
-                  <h4 className="text-lg font-semibold text-white">Service Availability</h4>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  <p>
+                  <h4 className=&quot;text-lg font-semibold text-white&quot;>Service Availability</h4>                  <p>
                     We strive to maintain service availability but do not guarantee uninterrupted access. 
                     Services may be temporarily unavailable due to maintenance, updates, or technical issues.
                   </p>
@@ -1783,18 +1269,10 @@ export default function Terms() {_return (
                 </div>
               </div>
 
-<<<<<<< HEAD
               {/* Section 7: Termination */}
               <div className=&quot;prose prose-invert max-w-none&quot;>
                 <h3 className=&quot;text-2xl font-bold text-yellow-400 mb-4&quot;>7. Termination</h3>
-                <div className=&quot;text-gray-300 space-y-4&quot;>
-=======
-              {_/* Section 7: Termination */}
-              <div className="prose prose-invert max-w-none">
-                <h3 className="text-2xl font-bold text-yellow-400 mb-4">7. Termination</h3>
-                <div className="text-gray-300 space-y-4">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  <p>
+                <div className=&quot;text-gray-300 space-y-4&quot;>                  <p>
                     We may terminate or suspend your access to our services immediately, without prior 
                     notice, for any reason whatsoever, including breach of these terms.
                   </p>
@@ -1805,18 +1283,10 @@ export default function Terms() {_return (
                 </div>
               </div>
 
-<<<<<<< HEAD
               {/* Section 8: Governing Law */}
               <div className=&quot;prose prose-invert max-w-none&quot;>
                 <h3 className=&quot;text-2xl font-bold text-indigo-400 mb-4&quot;>8. Governing Law</h3>
-                <div className=&quot;text-gray-300 space-y-4&quot;>
-=======
-              {_/* Section 8: Governing Law */}
-              <div className="prose prose-invert max-w-none">
-                <h3 className="text-2xl font-bold text-indigo-400 mb-4">8. Governing Law</h3>
-                <div className="text-gray-300 space-y-4">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  <p>
+                <div className=&quot;text-gray-300 space-y-4&quot;>                  <p>
                     These terms shall be governed by and construed in accordance with the laws of the 
                     State of Delaware, without regard to conflict of law principles.
                   </p>
@@ -1827,18 +1297,10 @@ export default function Terms() {_return (
                 </div>
               </div>
 
-<<<<<<< HEAD
               {/* Section 9: Contact Information */}
               <div className=&quot;prose prose-invert max-w-none&quot;>
                 <h3 className=&quot;text-2xl font-bold text-cyan-400 mb-4&quot;>9. Contact Information</h3>
-                <div className=&quot;text-gray-300 space-y-4&quot;>
-=======
-              {_/* Section 9: Contact Information */}
-              <div className="prose prose-invert max-w-none">
-                <h3 className="text-2xl font-bold text-cyan-400 mb-4">9. Contact Information</h3>
-                <div className="text-gray-300 space-y-4">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  <p>
+                <div className=&quot;text-gray-300 space-y-4&quot;>                  <p>
                     If you have any questions about these Terms of Service, please contact us:
                   </p>
                   <div className=&quot;bg-gray-900/50 border border-gray-700 rounded-lg p-6&quot;>
@@ -1855,7 +1317,6 @@ export default function Terms() {_return (
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Agreement Section */}
         <section className=&quot;py-20&quot;>
           <div className=&quot;max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
@@ -1864,19 +1325,7 @@ export default function Terms() {_return (
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className=&quot;p-8 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-400/20 rounded-xl&quot;
-=======
-        {_/* Agreement Section */}
-        <section className="py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
-              className="p-8 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-400/20 rounded-xl"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;p-8 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-400/20 rounded-xl&quot;            >
               <Scale className=&quot;w-12 h-12 text-cyan-400 mx-auto mb-4&quot; />
               <h3 className=&quot;text-2xl font-bold mb-4&quot;>Agreement Acknowledgment</h3>
               <p className=&quot;text-gray-300 mb-6&quot;>
@@ -1898,16 +1347,9 @@ export default Terms,
             </div>
           </section>
 
-<<<<<<< HEAD
           {/* Contact Information */}
           <section className=&quot;py-20 px-4&quot;>
-            <div className=&quot;max-w-4xl mx-auto text-center&quot;>
-=======
-          {_/* Contact Information */}
-          <section className="py-20 px-4">
-            <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <motion.div
+            <div className=&quot;max-w-4xl mx-auto text-center&quot;>              <motion.div
                 initial={_{ opacity: 0, _y: 20}}
                 whileInView={_{ opacity: 1, _y: 0}}
                 transition={_{ duration: 0.6}}
@@ -1919,12 +1361,7 @@ export default Terms,
                   If you have any questions about these Terms of Service or need clarification on any 
                   provision, please don't hesitate to reach out to us.
                 </p>
-<<<<<<< HEAD
-                <div className="flex flex-col sm: flex-row gap-4 justify-center">
-=======
-                <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-                  <a
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">                  <a
                     href=&quot;mailto:kleber@ziontechgroup.com&quot;
                     className=&quot;bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2&quot;
                   >

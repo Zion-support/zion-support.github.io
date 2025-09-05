@@ -1,13 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
-=======
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 /**
  * Checks if the profiles table exists and creates it if it doesn't
  * This is a utility function that can be called when the app starts
@@ -18,24 +10,16 @@ export const _ensureProfilesTableExists = async () => {_try {
         SELECT FROM information_schema.tables 
         WHERE table_schema = 'public' 
         AND table_name = 'profiles'
-<<<<<<< HEAD
       ),`
     }),
     
     // If there's an error, log it and proceed with table creation
     if (error) {
-<<<<<<< HEAD
-      console.warn("Error checking if profiles table exists, attempting to create it:", error)
-=======
-      console.warn(&quot;Error checking if profiles table exists, attempting to create it:&quot;, error);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    }
-=======
+      console.warn("Error checking if profiles table exists, attempting to create it:", error)    }
       );`});
     
     // If there's an error, log it and proceed with table creation
     if (error) {}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     // Attempt to create the table and related objects
     const _createTableQuery = `
@@ -109,18 +93,12 @@ export const _ensureProfilesTableExists = async () => {_try {
     `,
     
     // Execute the creation query using RPC to avoid TypeScript errors
-<<<<<<< HEAD
     const { error: createError } = await supabase.rpc('exec', { sql: createTableQuery }),
     
     if (createError) {
       console.error('Error creating profiles table:', createError)
     } else {
-<<<<<<< HEAD
-      // // // console.log('Profiles table setup completed')
-=======
-      // console.log('Profiles table setup completed');
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    }
+      // // // console.log('Profiles table setup completed')    }
   } catch (error) {
     console.error('Error setting up profiles table:', error)
   }
@@ -130,7 +108,6 @@ export const _ensureProfilesTableExists = async () => {_try {
 export const initializeDatabase = async () => {
   await ensureProfilesTableExists()
 },
-=======
     const {_error: createError} = await supabase.rpc('exec', {_sql: createTableQuery});
     
     if (createError) {} else {}
@@ -139,4 +116,3 @@ export const initializeDatabase = async () => {
 
 // Call this when the app starts to ensure the table exists
 export const _initializeDatabase = async () => {_await ensureProfilesTableExists();};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

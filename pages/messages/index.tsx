@@ -1,19 +1,9 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import EmptyState from '../../components/ui/EmptyState',
 const Messages: NextPage = () => {
   return (
-    <div className=&quot;space-y-6 pb-16&quot;>
-=======
-import type {_NextPage} from 'next';
-import Head from 'next/head';
-import EmptyState from '../../components/ui/EmptyState';
-
-const Messages: NextPage = () => {_return (
-    <div className="space-y-6 pb-16">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      <Head>
+    <div className=&quot;space-y-6 pb-16&quot;>      <Head>
         <title>Messages - Zion</title>
       </Head>
 

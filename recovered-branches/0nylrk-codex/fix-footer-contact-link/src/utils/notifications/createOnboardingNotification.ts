@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { createNotification } from './createNotification',
 import { OnboardingNotificationParams } from './types',
 /**
@@ -13,18 +12,7 @@ export async function createOnboardingNotification({
   let title = '',
   let message = '',
   let actionUrl = '',
-  let actionText = '',
-=======
-
-/**
- * Creates an onboarding notification for a user
- */
-export async function createOnboardingNotification(_{_userId, _missingMilestone, _userRole}: OnboardingNotificationParams) {_let _title = '';
-  let _message = '';
-  let _actionUrl = '';
-  let _actionText = '';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  
+  let actionText = '',  
   if (userRole === 'talent') {
     switch (missingMilestone) {
       case 'profile_completed':
@@ -40,7 +28,6 @@ export async function createOnboardingNotification(_{_userId, _missingMilestone,
         actionText = 'Add Skills',
         break,
       case 'availability_set':
-<<<<<<< HEAD
         title = 'Set your availability',
         message = 'Set your availability to help clients know when you can work',
         actionUrl = '/profile/settings',
@@ -48,16 +35,7 @@ export async function createOnboardingNotification(_{_userId, _missingMilestone,
         break
     }
   } else {
-    switch (missingMilestone) {
-=======
-        title = 'Set your availability';
-        message = 'Set your availability to help clients know when you can work';
-        actionUrl = '/profile/settings';
-        actionText = 'Set Availability';
-        break;}
-  } else {_switch (missingMilestone) {
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      case 'job_posted':
+    switch (missingMilestone) {      case 'job_posted':
         title = 'Post your first job',
         message = 'Post your first job to start finding talent',
         actionUrl = '/post-job',
@@ -70,7 +48,6 @@ export async function createOnboardingNotification(_{_userId, _missingMilestone,
         actionText = 'View Matches',
         break,
       case 'talent_invited':
-<<<<<<< HEAD
         title = 'Invite talent',
         message = 'Invite talent to speed up your hiring process',
         actionUrl = '/talent',
@@ -87,15 +64,4 @@ export async function createOnboardingNotification(_{_userId, _missingMilestone,
     sendEmail: false,
     actionUrl,
     actionText
-  })
-=======
-        title = 'Invite talent';
-        message = 'Invite talent to speed up your hiring process';
-        actionUrl = '/talent';
-        actionText = 'Find Talent';
-        break;}
-  }
-  
-  return createNotification({_userId, _title, _message, _type: 'onboarding', _sendEmail: false, _actionUrl, _actionText});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-}
+  })}

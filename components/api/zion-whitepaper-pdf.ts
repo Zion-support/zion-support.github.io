@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 import PDFDocument from 'pdfkit',
 import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper',
@@ -16,18 +15,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const editionParam = (req.query.edition as string) || 'full',
   const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full',
 
-<<<<<<< HEAD
   res.setHeader('Content-Typeapplication/pdf'),
   res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`),
-=======
-  res.setHeader('Content-Type', 'application/pdf');
-  res.setHeader('Content-Disposition', `attachment; filename=&quot;zion-protocol-${edition}.pdf&quot;`);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
   const doc = new (PDFDocument as any)({ autoFirstPage: false }),
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`,
   doc.info.Author = 'Zion Protocol',
-=======
 import type {_NextApiRequest, _NextApiResponse} from 'next';
 import PDFDocument from 'pdfkit';
 
@@ -46,12 +38,10 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   const _doc = new (PDFDocument as any)({_autoFirstPage: false});
   doc.info.Title = `Zion Protocol Whitepaper (${_edition})`;
   doc.info.Author = 'Zion Protocol';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   doc.pipe(res),
 
   // Cover page
-<<<<<<< HEAD
   doc.addPage(),
   doc.fontSize(26).fillColor('#000000').text('Zion Protocol Whitepaper', { align: 'left' }),
   doc.moveDown(),
@@ -63,20 +53,6 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 
   const sections = getWhitepaperSections(edition as any),
   sections.forEach((s) => writeSection(doc, s.title, s.contentMd)),
-=======
-  doc.addPage();
-  doc.fontSize(26).fillColor('#000000').text('Zion Protocol Whitepaper', {_align: 'left'});
-  doc.moveDown();
-  doc.fontSize(14).fillColor('#444444').text(`Edition: ${_edition.toUpperCase()}`);
-  doc.moveDown();
-  doc.fontSize(10).fillColor('#666666').text('Operator Prompt (for maintenance):');
-  doc.moveDown(0.5);
-  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, {_width: 480});
-
-  const _sections = getWhitepaperSections(edition as any);
-  sections.forEach(_(s) => writeSection(doc, s.title, s.contentMd));
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   // End
   doc.addPage(),
   doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.'),

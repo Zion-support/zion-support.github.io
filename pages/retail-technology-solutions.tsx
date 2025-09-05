@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function RetailTechnologySolutions() {
@@ -19,15 +18,8 @@ export default function RetailTechnologySolutions() {
 				&quot;Omni-channel journey orchestration&quot;,
 				&quot;Integrations: POS, eCom, WMS, ESP, CDP&quot;
 			]}
-<<<<<<< HEAD
 			industries={["Retail", "CPG", "E‑commerce"]}
-			canonical="https: //ziontechgroup.com/retail-technology-solutions"
-=======
-			industries={[&quot;Retail&quot;, &quot;CPG&quot;, &quot;E‑commerce&quot;]}
-			canonical=&quot;https://ziontechgroup.com/retail-technology-solutions&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from 'react';
+			canonical="https: //ziontechgroup.com/retail-technology-solutions"import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function RetailTechnologySolutions() {_return (
@@ -44,7 +36,6 @@ export default function RetailTechnologySolutions() {_return (
 			]}
 			industries={_["Retail", _"CPG", _"E‑commerce"]}
 			canonical="https://ziontechgroup.com/retail-technology-solutions"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 		/>
 	)
 }

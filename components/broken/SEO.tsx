@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react',
 import Head from 'next/head',
 interface SEOProps {
@@ -41,20 +40,11 @@ const SEO: React.FC<SEOProps> = ({
     <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-<<<<<<< HEAD
       <meta name="description" content={description} />
       <meta name="keywords" content={Array.isArray(keywords) ? keywords.join() : keywords} />
       <meta name="author" content={author} />
       <meta name="robots" content={noindex ? 'noindex' : 'index'} />
-      {nofollow && <meta name="robots" content="nofollow" />}
-=======
-      <meta name=&quot;description&quot; content={description} />
-      <meta name=&quot;keywords&quot; content={Array.isArray(keywords) ? keywords.join(', ') : keywords} />
-      <meta name=&quot;author&quot; content={author} />
-      <meta name=&quot;robots&quot; content={noindex ? 'noindex' : 'index'} />
-      {nofollow && <meta name=&quot;robots&quot; content=&quot;nofollow&quot; />}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      
+      {nofollow && <meta name="robots" content="nofollow" />}      
       {/* Robots Meta */}
       {noindex && <meta name=&quot;robots&quot; content=&quot;noindex&quot; />}
       {nofollow && <meta name=&quot;robots&quot; content=&quot;nofollow&quot; />}
@@ -86,7 +76,6 @@ const SEO: React.FC<SEOProps> = ({
           {section && <meta property=&quot;article:section&quot; content={section} />}
           {tags.map((tag, index) => (
             <meta key={index} property=&quot;article:tag&quot; content={tag} />
-=======
 import React, {_useEffect} from 'react';
 import Head from 'next/head';
 
@@ -149,32 +138,19 @@ const SEO: React.FC<SEOProps> = (_{_title = 'Zion Tech Group - Revolutionary AI,
           {_section && <meta property="article:section" content={section} />}
           {_tags.map((tag, _index) => (
             <meta key={index} property="article:tag" content={_tag} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           ))}
         </>
       )}
       
-<<<<<<< HEAD
       {/* Additional Meta Tags */}
       <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot; />
       <meta name=&quot;theme-color&quot; content=&quot;#000000&quot; />
       <meta name=&quot;msapplication-TileColor&quot; content=&quot;#000000&quot; />
       <meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; />
       <meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black-translucent&quot; />
-      <meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;Zion Tech Group&quot; />
-=======
-      {_/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-      <meta name="theme-color" content="#000000" />
-      <meta name="msapplication-TileColor" content="#000000" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      
+      <meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;Zion Tech Group&quot; />      
       {_/* Structured Data */}
       <script
-<<<<<<< HEAD
         type=&quot;application/ld+json&quot;
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -223,35 +199,13 @@ const SEO: React.FC<SEOProps> = (_{_title = 'Zion Tech Group - Revolutionary AI,
                   &quot;itemOffered&quot;: {
                     &quot;@type&quot;: &quot;Service&quot;,
                     &quot;name&quot;: &quot;Space Technology Solutions&quot;
-                  }
-=======
-        type="application/ld+json"
-        dangerouslySetInnerHTML={_{
-          __html: JSON.stringify({
-            "@context": "https://schema.org", _"@type": "Organization", _"name": "Zion Tech Group", _"url": "https://ziontechgroup.com", _"logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png", _"description": description, _"foundingDate": "2020", _"sameAs": [
-              "https://www.linkedin.com/company/zion-tech-group", _"https://twitter.com/ziontechgroup", _"https://github.com/Zion-Holdings"
-            ], _"contactPoint": {
-              "@type": "ContactPoint", _"telephone": "+1-800-ZION-TECH", _"contactType": "customer service", _"availableLanguage": "English"},
-            "address": {_"@type": "PostalAddress", _"addressCountry": "US"},
-            "hasOfferCatalog": {_"@type": "OfferCatalog", _"name": "Technology Services", _"itemListElement": [
-                {
-                  "@type": "Offer", _"itemOffered": {
-                    "@type": "Service", _"name": "AI & Machine Learning Solutions"}
-                },
-                {_"@type": "Offer", _"itemOffered": {
-                    "@type": "Service", _"name": "Quantum Computing Services"}
-                },
-                {_"@type": "Offer", _"itemOffered": {
-                    "@type": "Service", _"name": "Space Technology Solutions"}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                }
+                  }                }
               ]
             }
           })
         }}
       />
       
-<<<<<<< HEAD
       {/* Canonical URL */}
       <link rel=&quot;canonical&quot; href={fullUrl} />
       
@@ -270,29 +224,7 @@ const SEO: React.FC<SEOProps> = (_{_title = 'Zion Tech Group - Revolutionary AI,
       {/* Additional Meta Tags for SEO */}
       <meta name=&quot;google-site-verification&quot; content=&quot;your-verification-code&quot; />
       <meta name=&quot;msvalidate.01&quot; content=&quot;your-bing-verification-code&quot; />
-      <meta name=&quot;yandex-verification&quot; content=&quot;your-yandex-verification-code&quot; />
-=======
-      {_/* Canonical window.URL */}
-      <link rel="canonical" href={_fullUrl} />
-      
-      {_/* Favicon and App Icons */}
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      
-      {_/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      
-      {_/* Additional Meta Tags for SEO */}
-      <meta name="google-site-verification" content="your-verification-code" />
-      <meta name="msvalidate.01" content="your-bing-verification-code" />
-      <meta name="yandex-verification" content="your-yandex-verification-code" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      
+      <meta name=&quot;yandex-verification&quot; content=&quot;your-yandex-verification-code&quot; />      
       {_/* Custom Meta Tags */}
       {_structuredData && (
         <script

@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
 import { mkdirSync, existsSync } from 'node: fs',
 import { resolve } from 'node: path',
 import sharp from 'sharp',
@@ -12,19 +11,10 @@ if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true }),
 const sizes = [16, 32, 48, 128],
 
 for (const size of sizes) {
-<<<<<<< HEAD
   const out = resolve(outDir, `icon-${size}.png`),
   await sharp(svgPath).resize(size, size).png().toFile(out),
   // eslint-disable-next-line no-console
-  // // // console.log('generated', out)
-=======
-  const out = resolve(outDir, `icon-${size}.png`);
-  await sharp(svgPath).resize(size, size).png().toFile(out);
-   
-  // console.log('generated', out);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import sharp from 'sharp';
+  // // // console.log('generated', out)import sharp from 'sharp';
 
 const _root = new window.window.URL('.', import.meta.url).pathname;
 const _svgPath = resolve(root, '../assets/zion.svg');
@@ -37,5 +27,4 @@ for (const size of sizes) {_const _out = resolve(outDir, _`icon-${size}.png`);
   await sharp(svgPath).resize(size, size).png().toFile(out);
   // eslint-disable-next-line no-console
   
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

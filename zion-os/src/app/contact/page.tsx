@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 export default function ContactPage() {
   return (
-    <div className=&quot;min-h-screen bg-white&quot;>
-=======
-export default function ContactPage() {_return (
-    <div className="min-h-screen bg-white">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      {/* Hero Section */}
+    <div className=&quot;min-h-screen bg-white&quot;>      {/* Hero Section */}
       <section className=&quot;bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
           <h1 className=&quot;text-4xl md:text-6xl font-bold mb-6&quot;>
@@ -19,7 +13,6 @@ export default function ContactPage() {_return (
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Contact Form & Info */}
       <section className=&quot;py-20&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -28,19 +21,7 @@ export default function ContactPage() {_return (
             <div className=&quot;bg-gray-50 p-8 rounded-xl&quot;>
               <h2 className=&quot;text-2xl font-bold text-gray-900 mb-6&quot;>Send us a Message</h2>
               <form className=&quot;space-y-6&quot;>
-                <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>
-=======
-      {_/* Contact Form & Info */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {_/* Contact Form */}
-            <div className="bg-gray-50 p-8 rounded-xl">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  <div>
+                <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>                  <div>
                     <label htmlFor=&quot;firstName&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
                       First Name *
                     </label>
@@ -132,16 +113,9 @@ export default function ContactPage() {_return (
                     Message *
                   </label>
                   <textarea
-<<<<<<< HEAD
                     id=&quot;message&quot;
                     name=&quot;message"
-                    rows={5}
-=======
-                    id="message"
-                    name="message"
-                    rows={_5}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    required
+                    rows={5}                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
                     placeholder=&quot;Tell us about your project or inquiry...&quot;
                   ></textarea>
@@ -168,14 +142,8 @@ export default function ContactPage() {_return (
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-<<<<<<< HEAD
                     <svg className="w-6 h-6 text-blue-600&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
-                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M3 5a2 2 0 012-2h3.28a1 1 0 01.554.89l-1.363 12a1 1 0 01-.554.89H5a2 2 0 01-2-2V5zM16 12V5a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0a2 2 0 012 2v3a2 2 0 01-2 2H4a2 2 0 01-2-2v-3a2 2 0 012-2h16z" />
-=======
-                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.554.89l-1.363 12a1 1 0 01-.554.89H5a2 2 0 01-2-2V5zM16 12V5a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0a2 2 0 012 2v3a2 2 0 01-2 2H4a2 2 0 01-2-2v-3a2 2 0 012-2h16z" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    </svg>
+                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M3 5a2 2 0 012-2h3.28a1 1 0 01.554.89l-1.363 12a1 1 0 01-.554.89H5a2 2 0 01-2-2V5zM16 12V5a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0a2 2 0 012 2v3a2 2 0 01-2 2H4a2 2 0 01-2-2v-3a2 2 0 012-2h16z" />                    </svg>
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Office Address</h3>
@@ -190,14 +158,8 @@ export default function ContactPage() {_return (
 
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-<<<<<<< HEAD
                     <svg className="w-6 h-6 text-green-600&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
-                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M3 5a2 2 0 012-2h3.28a1 1 0 01.554.89l-1.363 12a1 1 0 01-.554.89H5a2 2 0 01-2-2V5zM16 12V5a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0a2 2 0 012 2v3a2 2 0 01-2 2H4a2 2 0 01-2-2v-3a2 2 0 012-2h16z" />
-=======
-                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.554.89l-1.363 12a1 1 0 01-.554.89H5a2 2 0 01-2-2V5zM16 12V5a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0a2 2 0 012 2v3a2 2 0 01-2 2H4a2 2 0 01-2-2v-3a2 2 0 012-2h16z" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    </svg>
+                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M3 5a2 2 0 012-2h3.28a1 1 0 01.554.89l-1.363 12a1 1 0 01-.554.89H5a2 2 0 01-2-2V5zM16 12V5a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0a2 2 0 012 2v3a2 2 0 01-2 2H4a2 2 0 01-2-2v-3a2 2 0 012-2h16z" />                    </svg>
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Contact Details</h3>
@@ -211,14 +173,8 @@ export default function ContactPage() {_return (
 
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
-<<<<<<< HEAD
                     <svg className="w-6 h-6 text-purple-600&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
-                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-=======
-                    <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    </svg>
+                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />                    </svg>
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Business Hours</h3>

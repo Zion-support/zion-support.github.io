@@ -1,39 +1,23 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { GradientHeading } from "@/components/GradientHeading",
-=======
-import { GradientHeading } from &quot;@/components/GradientHeading&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import { Clock, Map, DollarSign } from 'lucide-react'
+import { GradientHeading } from "@/components/GradientHeading",import { Clock, Map, DollarSign } from 'lucide-react'
 
 export function PageHero() {
   return (
     <div className=&quot;text-center mb-12&quot;>
       <GradientHeading className=&quot;mb-4&quot;>Global IT Onsite Services</GradientHeading>
       <p className=&quot;text-xl text-zion-slate-light max-w-3xl mx-auto&quot;>
-=======
 
 export function PageHero() {_return (
     <div className="text-center mb-12">
       <GradientHeading className="mb-4">Global IT Onsite Services</GradientHeading>
       <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         Professional IT onsite support services with transparent pricing across 190+ countries worldwide
       </p>
       
-<<<<<<< HEAD
       <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mt-12">
         <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">
           <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
-            <Map className="h-8 w-8 text-zion-cyan" />
-=======
-      <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 mt-12&quot;>
-        <div className=&quot;bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center&quot;>
-          <div className=&quot;bg-zion-purple/20 p-3 rounded-full mb-4&quot;>
-            <Map className=&quot;h-8 w-8 text-zion-cyan&quot; />
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-          </div>
+            <Map className="h-8 w-8 text-zion-cyan" />          </div>
           <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>Global Coverage</h3>
           <p className=&quot;text-zion-slate-light&quot;>IT onsite services available in over 190 countries and territories worldwide</p>
         </div>
@@ -55,9 +39,5 @@ export function PageHero() {_return (
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   )
 }
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

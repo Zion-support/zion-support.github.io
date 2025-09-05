@@ -10,7 +10,6 @@ const navigation = [
   { name: 'Research', href: '/research' },
   { name: 'Contact', href: '/contact' }
 ]
-
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -57,8 +56,7 @@ export default function Navigation() {
               >
                 {item.name}
               </a>
-            ))}
-          </div>
+            ))}          </div>
         </div>
       )}
     </nav>

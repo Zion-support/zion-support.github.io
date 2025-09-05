@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Config } from "tailwindcss",
 import { fontFamily } from "tailwindcss/defaultTheme",
 import plugin from "tailwindcss/plugin",
-import animatePlugin from "tailwindcss-animate",
-=======
-import { Config } from &quot;tailwindcss&quot;;
-import { fontFamily } from &quot;tailwindcss/defaultTheme&quot;;
-import plugin from &quot;tailwindcss/plugin&quot;;
-import animatePlugin from &quot;tailwindcss-animate&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-const config: Config = {
+import animatePlugin from "tailwindcss-animate",const config: Config = {
   darkMode: [&quot;class&quot;],
   content: [
     &quot;./pages/**/*.{ts,tsx}&quot;,
@@ -86,7 +76,6 @@ const config: Config = {
       animation: {
         &quot;accordion-down&quot;: &quot;accordion-down 0.2s ease-out&quot;,
         &quot;accordion-up&quot;: &quot;accordion-up 0.2s ease-out&quot;}}},
-=======
 import plugin from "tailwindcss/plugin";
 import animatePlugin from "tailwindcss-animate";
 
@@ -121,12 +110,10 @@ const config: Config = {_darkMode: ["class"], _content: [
         "accordion-up": {_from: { height: "var(--radix-accordion-content-height)"},
           to: {_height: "0"}}},
       animation: {_"accordion-down": "accordion-down 0.2s ease-out", _"accordion-up": "accordion-up 0.2s ease-out"}}},
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   plugins: [
     animatePlugin,
     plugin(function({_addUtilities}) {_const _newUtilities = {
         '.rtl': {
-<<<<<<< HEAD
           direction: 'rtl',
           textAlign: 'right'},
         '.ltr': {
@@ -134,11 +121,4 @@ const config: Config = {_darkMode: ["class"], _content: [
           textAlign: 'left'}},
       addUtilities(newUtilities)
     })]},
-=======
-          direction: 'rtl', _textAlign: 'right'},
-        '.ltr': {_direction: 'ltr', _textAlign: 'left'}};
-      addUtilities(newUtilities);
-    })]};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default config,

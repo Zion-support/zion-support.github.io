@@ -1,44 +1,32 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-=======
-import React from &quot;react&quot;;
-import ApiDocsLayout from &quot;@/components/developers/ApiDocsLayout&quot;;
-import { CodeBlock } from &quot;@/components/developers/CodeBlock&quot;;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 export function ApiSampleCode() {
-  // JavaScript example with Axios
-  const jsAxiosExample = `// Using Axios with JavaScript
+  // JavaScript example with Axios,
+const jsAxiosExample = `// Using Axios with JavaScript,
 import axios from 'axios',
-// Configure Axios with the base URL and headers
+// Configure Axios with the base URL and headers,
 const api = axios.create({
   baseURL: 'https://api.zionai.com/v1',
   headers: {
-=======
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 
-export function ApiSampleCode() {_// JavaScript example with Axios
-  const _jsAxiosExample = `// Using Axios with JavaScript
+export function ApiSampleCode() {_// JavaScript example with Axios,
+const jsAxiosExample = `// Using Axios with JavaScript,
 import axios from 'axios';
 
-// Configure Axios with the base window.URL and headers
-const _api = axios.create({
-  baseURL: 'https://api.zionai.com/v1', _headers: {
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    'Authorization': \`Bearer \${YOUR_API_KEY}\`,
+// Configure Axios with the base window.URL and headers,
+const api = axios.create({
+  baseURL: 'https://api.zionai.com/v1', headers: {
+    'Authorization': \`Bearer \${YOURAPI_KEY}\`,
     'Content-Type': 'application/json'
   }
 }),
 
-// Get all jobs
-<<<<<<< HEAD
+// Get all jobs,
 async function getJobs(filters = {}) {
   try {
     const response = await api.get('/api/jobs', { params: filters }),
@@ -49,7 +37,7 @@ async function getJobs(filters = {}) {
   }
 }
 
-// Post a new job
+// Post a new job,
 async function createJob(jobData) {
   try {
     const response = await api.post('/api/jobs', jobData),
@@ -60,7 +48,7 @@ async function createJob(jobData) {
   }
 }
 
-// Search for talent
+// Search for talent,
 async function searchTalent(filters = {}) {
   try {
     const response = await api.get('/api/talent', { params: filters }),
@@ -68,42 +56,15 @@ async function searchTalent(filters = {}) {
   } catch (error) {
     console.error('Error searching talent:', error.response?.data || error.message),
     throw error
-  }
-=======
-async function getJobs(_filters = {}) {_try {
-    const _response = await api.get('/api/jobs', _{ params: filters});
-    return response.data;
-  } catch (error) {_throw error;}
-}
+  }}
 
-// Post a new job
-async function createJob(_jobData) {_try {
-    const _response = await api.post('/api/jobs', _jobData);
-    return response.data;} catch (error) {_throw error;}
-}
-
-// Search for talent
-async function searchTalent(_filters = {}) {_try {
-    const _response = await api.get('/api/talent', _{ params: filters});
-    return response.data;
-  } catch (error) {_throw error;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-}
-
-// Example usage
-async function main() {_try {
-    // Get all open jobs
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const jobs = await getJobs({ status: 'open', limit: 5 }),
-    // // // console.log('Jobs:', jobs),
-=======
-    const jobs = await getJobs({ status: 'open', limit: 5 });
-    // console.log('Jobs:', jobs);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    
-    // Create a new job
-    const newJob = await createJob({
+// Example usage,
+async function main() {try {
+    // Get all open jobs,
+const jobs = await getJobs({ status: 'open', limit: 5 }),
+    // // // console.log('Jobs:', jobs),    
+    // Create a new job,
+const newJob = await createJob({
       title: 'Frontend Developer',
       description: 'We need a skilled frontend developer...',
       category: 'development',
@@ -112,114 +73,68 @@ async function main() {_try {
         max: 7500,
         currency: 'USD'
       },
-<<<<<<< HEAD
       skills: ['ReactTypeScriptTailwind CSS']
     }),
     // // // console.log('New job created:', newJob),
     
-    // Search for talent with React skills
-    const talent = await searchTalent({ skills: 'React', limit: 10 }),
-    // // // console.log('Talent:', talent)
-=======
-      skills: ['React', 'TypeScript', 'Tailwind CSS']
-    });
-    // console.log('New job created:', newJob);
-    
-    // Search for talent with React skills
-    const talent = await searchTalent({ skills: 'React', limit: 10 });
-    // console.log('Talent:', talent);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  } catch (error) {
+    // Search for talent with React skills,
+const talent = await searchTalent({ skills: 'React', limit: 10 }),
+    // // // console.log('Talent:', talent)  } catch (error) {
     console.error('Something went wrong:', error)
   }
-=======
-    const _jobs = await getJobs({ status: 'open', _limit: 5});
-    
-    
-    // Create a new job
-    const _newJob = await createJob({_title: 'Frontend Developer', _description: 'We need a skilled frontend developer...', _category: 'development', _budget: {
-        min: 5000, _max: 7500, _currency: 'USD'},
+    const jobs = await getJobs({ status: 'open', limit: 5});
+
+    // Create a new job,
+const newJob = await createJob({title: 'Frontend Developer', description: 'We need a skilled frontend developer...', category: 'development', budget: {
+        min: 5000, max: 7500, currency: 'USD'},
       skills: ['React', 'TypeScript', 'Tailwind CSS']
     });
-    
-    
-    // Search for talent with React skills
-    const _talent = await searchTalent({_skills: 'React', _limit: 10});
+
+    // Search for talent with React skills,
+const talent = await searchTalent({skills: 'React', limit: 10})
     
   } catch (error) {}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }
 
 main(),`,
 
-  // Python example with requests
-  const _pythonExample = `# Using requests with Python
-import requests
-import json
+  // Python example with requests,
+const pythonExample = `# Using requests with Python,
+import requests,
+import json,
+APIKEY = 'YOURAPI_KEY'
+BASEURL = 'https://api.zionai.com/v1'
 
-API_KEY = 'YOUR_API_KEY'
-BASE_URL = 'https://api.zionai.com/v1'
-
-<<<<<<< HEAD
 headers = {
-    'Authorization': f'Bearer {API_KEY}Content-Type': 'application/json'
+    'Authorization': f'Bearer {APIKEY}Content-Type': 'application/json'
 }
 
-def get_jobs(filters=None):
+def getjobs(filters=None):
     &quot;"&quot;Get all jobs with optional filters&quot;"&quot;
-    url = f&quot;{BASE_URL}/api/jobs&quot;
-=======
-headers = {_'Authorization': f'Bearer {API_KEY}',
-    'Content-Type': 'application/json'
-}
+    url = f&quot;{BASEURL}/api/jobs&quot;    response = requests.get(url, params=filters, headers=headers)
+    response.raisefor_status()  # Raise exception for 4XX/5XX responses,
+return response.json()
 
-def get_jobs(filters=None):
-    """Get all jobs with optional filters"""
-    url = f"{_BASE_URL}/api/jobs"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    response = requests.get(url, params=filters, headers=headers)
-    response.raise_for_status()  # Raise exception for 4XX/5XX responses
-    return response.json()
-
-def create_job(job_data):
-<<<<<<< HEAD
+def createjob(jobdata):
     &quot;"&quot;Create a new job posting&quot;"&quot;
-    url = f&quot;{BASE_URL}/api/jobs&quot;
-=======
-    """Create a new job posting"""
-    url = f"{_BASE_URL}/api/jobs"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    response = requests.post(url, json=job_data, headers=headers)
-    response.raise_for_status()
+    url = f&quot;{BASEURL}/api/jobs&quot;    response = requests.post(url, json=jobdata, headers=headers)
+    response.raisefor_status()
     return response.json()
 
-def search_talent(filters=None):
-<<<<<<< HEAD
+def searchtalent(filters=None):
     &quot;"&quot;Search for talent with optional filters&quot;"&quot;
-    url = f&quot;{BASE_URL}/api/talent&quot;
-=======
-    """Search for talent with optional filters"""
-    url = f"{_BASE_URL}/api/talent"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    response = requests.get(url, params=filters, headers=headers)
-    response.raise_for_status()
+    url = f&quot;{BASEURL}/api/talent&quot;    response = requests.get(url, params=filters, headers=headers)
+    response.raisefor_status()
     return response.json()
 
-# Example usage
-if __name__ == &quot;__main__&quot;:
+# Example usage,
+if _name__ == &quot;_main__&quot;:
     try:
-        # Get all open jobs
-<<<<<<< HEAD
-<<<<<<< HEAD
-        jobs = get_jobs({'status': 'openlimit': 5})
-        print(f"Found {len(jobs['jobs'])} jobs")
-=======
-        jobs = get_jobs({'status': 'open', 'limit': 5})
-        print(f&quot;Found {len(jobs['jobs'])} jobs&quot;)
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-        
-        # Create a new job
-        new_job = create_job({
+        # Get all open jobs,
+jobs = getjobs({'status': 'openlimit': 5})
+        print(f"Found {len(jobs['jobs'])} jobs")        
+        # Create a new job,
+newjob = createjob({
             'title': 'Data Scientistdescription': 'Looking for an experienced data scientist...category': 'databudget': {
                 'min': 6000,
                 'max': 9000,
@@ -227,74 +142,60 @@ if __name__ == &quot;__main__&quot;:
             },
             'skills': ['PythonMachine LearningSQL']
         })
-        print(f&quot;New job created with ID: {new_job['id']}&quot;)
+        print(f&quot;New job created with ID: {newjob['id']}&quot;)
         
-        # Search for talent with Python skills
-<<<<<<< HEAD
-        talent = search_talent({'skills': 'Pythonlimit': 10})
-        print(f"Found {len(talent['talent'])} talented people")
-=======
-        talent = search_talent({'skills': 'Python', 'limit': 10})
-        print(f&quot;Found {len(talent['talent'])} talented people&quot;)
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-        
+        # Search for talent with Python skills,
+talent = searchtalent({'skills': 'Pythonlimit': 10})
+        print(f"Found {len(talent['talent'])} talented people")        
     except requests.exceptions.HTTPError as e:
         print(f&quot;HTTP Error: {e}&quot;)
         print(f&quot;Response: {e.response.text}&quot;)
     except Exception as e:
-<<<<<<< HEAD
         print(f"Error: {e}")`,
-=======
-        print(f&quot;Error: {e}&quot;)`;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
-  // Node.js example with fetch
-  const nodeFetchExample = `// Using node-fetch with Node.js
+  // Node.js example with fetch,
+const nodeFetchExample = `// Using node-fetch with Node.js,
 import fetch from 'node-fetch',
-const API_KEY = 'YOUR_API_KEY',
-const BASE_URL = 'https: //api.zionai.com/v1',
+const APIKEY = 'YOURAPI_KEY',
+const BASEURL = 'https: //api.zionai.com/v1',
 
-// Helper to handle API requests
+// Helper to handle API requests,
 async function apiRequest(endpoint, options = {}) {
-  const url = \`\${BASE_URL}\${endpoint}\`,
-=======
-        jobs = get_jobs({_'status': 'open', _'limit': 5})
-        print(f"Found {_len(jobs['jobs'])} jobs")
+  const url = \`\${BASEURL}\${endpoint}\`,
+        jobs = getjobs({_'status': 'open', _'limit': 5})
+        print(f"Found {len(jobs['jobs'])} jobs")
         
-        # Create a new job
-        new_job = create_job({_'title': 'Data Scientist', _'description': 'Looking for an experienced data scientist...', _'category': 'data', _'budget': {
+        # Create a new job,
+newjob = createjob({_'title': 'Data Scientist', _'description': 'Looking for an experienced data scientist...', _'category': 'data', _'budget': {
                 'min': 6000, _'max': 9000, _'currency': 'USD'},
             'skills': ['Python', 'Machine Learning', 'SQL']
         })
-        print(f"New job created with ID: {_new_job['id']}")
+        print(f"New job created with ID: {new_job['id']}")
         
-        # Search for talent with Python skills
-        talent = search_talent({_'skills': 'Python', _'limit': 10})
-        print(f"Found {_len(talent['talent'])} talented people")
+        # Search for talent with Python skills,
+talent = searchtalent({_'skills': 'Python', _'limit': 10})
+        print(f"Found {len(talent['talent'])} talented people")
         
     except requests.exceptions.HTTPError as e:
-        print(f"HTTP Error: {_e}")
-        print(f"Response: {_e.response.text}")
+        print(f"HTTP Error: {e}")
+        print(f"Response: {e.response.text}")
     except Exception as e:
-        print(f"Error: {_e}")`;
+        print(f"Error: {e}")`;
 
-  // Node.js example with fetch
-  const _nodeFetchExample = `// Using node-fetch with Node.js
+  // Node.js example with fetch,
+const nodeFetchExample = `// Using node-fetch with Node.js,
 import fetch from 'node-fetch';
 
-const _API_KEY = 'YOUR_API_KEY';
-const _BASE_URL = 'https://api.zionai.com/v1';
+const API_KEY = 'YOURAPI_KEY';
+const BASE_URL = 'https://api.zionai.com/v1';
 
-// Helper to handle API requests
-async function apiRequest(_endpoint, _options = {}) {_const _url = \`\${BASE_URL}\${_endpoint}\`;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+// Helper to handle API requests,
+async function apiRequest(endpoint, options = {}) {const url = \`\${BASEURL}\${endpoint}\`;
   
-  const _headers = {_'Authorization': \`Bearer \${API_KEY}\`,
+  const headers = {_'Authorization': \`Bearer \${APIKEY}\`,
     'Content-Type': 'application/json',
     ...options.headers
   },
   
-<<<<<<< HEAD
   const config = {
     ...options,
     headers
@@ -304,25 +205,15 @@ async function apiRequest(_endpoint, _options = {}) {_const _url = \`\${BASE_URL
   
   if (!response.ok) {
     const error = await response.json(),
-    throw new Error(error.message || \`API error: \${response.status}\`)
-=======
-  const _config = {_...options, _headers};
-  
-  const _response = await fetch(url, config);
-  
-  if (!response.ok) {_const _error = await response.json();
-    throw new Error(error.message || \`API error: \${response.status}\`);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  }
+    throw new Error(error.message || \`API error: \${response.status}\`)  }
   
   return response.json()
 }
 
-// Get all jobs
-<<<<<<< HEAD
+// Get all jobs,
 async function getJobs(filters = {}) {
-  // Convert filters to query string
-  const params = new URLSearchParams(),
+  // Convert filters to query string,
+const params = new URLSearchParams(),
   Object.entries(filters).forEach(([key, value]) => {
     params.append(key, value)
   }),
@@ -331,7 +222,7 @@ async function getJobs(filters = {}) {
   return apiRequest(\`/api/jobs\${queryString}\`, { method: 'GET' })
 }
 
-// Post a new job
+// Post a new job,
 async function createJob(jobData) {
   return apiRequest('/api/jobs', {
     method: 'POST',
@@ -339,7 +230,7 @@ async function createJob(jobData) {
   })
 }
 
-// Search for talent
+// Search for talent,
 async function searchTalent(filters = {}) {
   const params = new URLSearchParams(),
   Object.entries(filters).forEach(([key, value]) => {
@@ -347,46 +238,15 @@ async function searchTalent(filters = {}) {
   }),
   
   const queryString = params.toString() ? \`?\${params.toString()}\` : '',
-  return apiRequest(\`/api/talent\${queryString}\`, { method: 'GET' })
-=======
-async function getJobs(_filters = {}) {_// Convert filters to query string
-  const _params = new URLSearchParams();
-  Object.entries(filters).forEach(_([key, _value]) => {
-    params.append(key, _value);});
-  
-  const _queryString = params.toString() ? \`?\${_params.toString()}\` : '';
-  return apiRequest(\`/api/jobs\${_queryString}\`, {_method: 'GET'});
-}
+  return apiRequest(\`/api/talent\${queryString}\`, { method: 'GET' })}
 
-// Post a new job
-async function createJob(_jobData) {_return apiRequest('/api/jobs', _{
-    method: 'POST', _body: JSON.stringify(jobData)});
-}
-
-// Search for talent
-async function searchTalent(_filters = {}) {_const _params = new URLSearchParams();
-  Object.entries(filters).forEach(_([key, _value]) => {
-    params.append(key, _value);});
-  
-  const _queryString = params.toString() ? \`?\${_params.toString()}\` : '';
-  return apiRequest(\`/api/talent\${_queryString}\`, {_method: 'GET'});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-}
-
-// Example usage
-async function main() {_try {
-    // Get all open jobs
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const jobs = await getJobs({ status: 'open', limit: 5 }),
-    // // // console.log('Jobs:', jobs),
-=======
-    const jobs = await getJobs({ status: 'open', limit: 5 });
-    // console.log('Jobs:', jobs);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    
-    // Create a new job
-    const newJob = await createJob({
+// Example usage,
+async function main() {try {
+    // Get all open jobs,
+const jobs = await getJobs({ status: 'open', limit: 5 }),
+    // // // console.log('Jobs:', jobs),    
+    // Create a new job,
+const newJob = await createJob({
       title: 'Backend Developer',
       description: 'We need a skilled backend developer...',
       category: 'development',
@@ -395,42 +255,27 @@ async function main() {_try {
         max: 8000,
         currency: 'USD'
       },
-<<<<<<< HEAD
       skills: ['Node.jsExpressMongoDB']
     }),
     // // // console.log('New job created:', newJob),
     
-    // Search for talent with Node.js skills
-    const talent = await searchTalent({ skills: 'Node.js', limit: 10 }),
-    // // // console.log('Talent:', talent)
-=======
-      skills: ['Node.js', 'Express', 'MongoDB']
-    });
-    // console.log('New job created:', newJob);
-    
-    // Search for talent with Node.js skills
-    const talent = await searchTalent({ skills: 'Node.js', limit: 10 });
-    // console.log('Talent:', talent);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  } catch (error) {
+    // Search for talent with Node.js skills,
+const talent = await searchTalent({ skills: 'Node.js', limit: 10 }),
+    // // // console.log('Talent:', talent)  } catch (error) {
     console.error('Something went wrong:', error)
   }
-=======
-    const _jobs = await getJobs({ status: 'open', _limit: 5});
-    
-    
-    // Create a new job
-    const _newJob = await createJob({_title: 'Backend Developer', _description: 'We need a skilled backend developer...', _category: 'development', _budget: {
-        min: 6000, _max: 8000, _currency: 'USD'},
+    const jobs = await getJobs({ status: 'open', limit: 5});
+
+    // Create a new job,
+const newJob = await createJob({title: 'Backend Developer', description: 'We need a skilled backend developer...', category: 'development', budget: {
+        min: 6000, max: 8000, currency: 'USD'},
       skills: ['Node.js', 'Express', 'MongoDB']
     });
-    
-    
-    // Search for talent with Node.js skills
-    const _talent = await searchTalent({_skills: 'Node.js', _limit: 10});
+
+    // Search for talent with Node.js skills,
+const talent = await searchTalent({skills: 'Node.js', limit: 10})
     
   } catch (error) {}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }
 
 main(),`,
@@ -441,14 +286,14 @@ main(),`,
         <h1>Sample Code</h1>
         
         <p>
-          The following code examples demonstrate how to integrate with the Zion AI Marketplace API
-          using different programming languages and libraries.
+          The following code examples demonstrate how to integrate with the Zion AI Marketplace API,
+using different programming languages and libraries.
         </p>
 
         <h2>Authentication</h2>
         <p>
-          All API requests require authentication using API keys. Make sure to include your API key
-          in the Authorization header as shown in the examples below.
+          All API requests require authentication using API keys. Make sure to include your API key,
+in the Authorization header as shown in the examples below.
         </p>
         
         <div className=&quot;bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6&quot;>
@@ -467,33 +312,18 @@ main(),`,
           </TabsList>
           <TabsContent value=&quot;javascript&quot;>
             <p>Using Axios with JavaScript:</p>
-<<<<<<< HEAD
-            <CodeBlock code={jsAxiosExample} language=&quot;javascript&quot; showLineNumbers={true} />
-=======
-            <CodeBlock code={_jsAxiosExample} language="javascript" showLineNumbers={_true} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          </TabsContent>
+            <CodeBlock code={jsAxiosExample} language=&quot;javascript&quot; showLineNumbers={true} />          </TabsContent>
           <TabsContent value=&quot;python&quot;>
             <p>Using requests with Python:</p>
-<<<<<<< HEAD
-            <CodeBlock code={pythonExample} language=&quot;python&quot; showLineNumbers={true} />
-=======
-            <CodeBlock code={_pythonExample} language="python" showLineNumbers={_true} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          </TabsContent>
+            <CodeBlock code={pythonExample} language=&quot;python&quot; showLineNumbers={true} />          </TabsContent>
           <TabsContent value=&quot;node&quot;>
             <p>Using fetch with Node.js:</p>
-<<<<<<< HEAD
-            <CodeBlock code={nodeFetchExample} language=&quot;javascript&quot; showLineNumbers={true} />
-=======
-            <CodeBlock code={_nodeFetchExample} language="javascript" showLineNumbers={_true} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          </TabsContent>
+            <CodeBlock code={nodeFetchExample} language=&quot;javascript&quot; showLineNumbers={true} />          </TabsContent>
         </Tabs>
 
         <h2>Using the Examples</h2>
         <p>
-          To use these examples, you'll need to replace 'YOUR_API_KEY' with your actual API key,
+          To use these examples, you'll need to replace 'YOURAPI_KEY' with your actual API key,
           which you can generate in the <a href=&quot;/developers/portal&quot; className=&quot;text-zion-cyan&quot;>Developer Portal</Link>.
         </p>
         

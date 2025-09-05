@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 import Link from "next/link",
 export const metadata = {
   title: "AI Autonomous Business Manager - Zion Tech Group",
   description: "Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, process automation, and strategic optimization.",
   keywords: "AI business manager, autonomous business, business automation, AI decision making, Zion Tech Group"},
-=======
-import Link from "next/link";
-
-export const _metadata = {_title: "AI Autonomous Business Manager - Zion Tech Group", _description: "Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, _process automation, _and strategic optimization.", _keywords: "AI business manager, _autonomous business, _business automation, _AI decision making, _Zion Tech Group"};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default function AIBusinessManagerPage() {_return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">

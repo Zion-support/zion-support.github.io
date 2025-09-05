@@ -1,18 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Download, Mail, BarChart3 } from 'lucide-react'
-import Link from "next/link",
-=======
-import React from &quot;react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Download, Mail, BarChart3 } from 'lucide-react'
-import Link from &quot;next/link&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export function BillingHeader() {
+import Link from "next/link",export function BillingHeader() {
   return (
     <div className=&quot;space-y-2&quot;>
       <div className=&quot;flex items-center justify-between&quot;>
@@ -20,7 +10,6 @@ export function BillingHeader() {
         <div className=&quot;flex gap-2&quot;>
           <Button variant=&quot;outline&quot; size=&quot;sm&quot; className=&quot;gap-1&quot;>
             <Download className=&quot;h-4 w-4&quot; />
-=======
 import React from "react";
 import Link from "next/link";
 
@@ -31,7 +20,6 @@ export function BillingHeader() {_return (
         <div className="flex gap-2">
           <Button variant="outline" size="sm" className="gap-1">
             <Download className="h-4 w-4" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             Export
           </Button>
           <Button variant=&quot;outline&quot; size=&quot;sm&quot; className=&quot;gap-1&quot;>
@@ -46,17 +34,9 @@ export function BillingHeader() {_return (
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
       <p className=&quot;text-muted-foreground&quot;>
         Manage your subscription, view invoice history, and update payment methods.
       </p>
     </div>
   )
 }
-=======
-      <p className="text-muted-foreground">
-        Manage your subscription, _view invoice history, _and update payment methods.
-      </p>
-    </div>
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

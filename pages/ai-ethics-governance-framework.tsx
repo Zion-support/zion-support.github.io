@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AIEthicsGovernanceFramework() {
@@ -19,15 +18,8 @@ export default function AIEthicsGovernanceFramework() {
 				&quot;Regulatory mapping (EU AI Act, NIST AI RMF)&quot;,
 				&quot;Training and incident response runbooks&quot;
 			]}
-<<<<<<< HEAD
 			industries={["Finance", "Healthcare", "Public Sector", "SaaS"]}
-			canonical="https: //ziontechgroup.com/ai-ethics-governance-framework"
-=======
-			industries={[&quot;Finance&quot;, &quot;Healthcare&quot;, &quot;Public Sector&quot;, &quot;SaaS&quot;]}
-			canonical=&quot;https://ziontechgroup.com/ai-ethics-governance-framework&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from 'react';
+			canonical="https: //ziontechgroup.com/ai-ethics-governance-framework"import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIEthicsGovernanceFramework() {_return (
@@ -44,7 +36,6 @@ export default function AIEthicsGovernanceFramework() {_return (
 			]}
 			industries={_["Finance", _"Healthcare", _"Public Sector", _"SaaS"]}
 			canonical="https://ziontechgroup.com/ai-ethics-governance-framework"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 		/>
 	)
 }

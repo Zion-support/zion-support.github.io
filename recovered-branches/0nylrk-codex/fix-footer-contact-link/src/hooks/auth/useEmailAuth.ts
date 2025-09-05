@@ -1,38 +1,24 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth",
-import { cleanupAuthState } from "@/utils/authUtils",
-=======
-import { useState } from &quot;react&quot;;
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-import { toast } from &quot;@/hooks/use-toast&quot;;
-import type { UserProfile } from &quot;@/types/auth&quot;;
-import { cleanupAuthState } from &quot;@/utils/authUtils&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export const useEmailAuth = (
+import { cleanupAuthState } from "@/utils/authUtils",export const useEmailAuth = (
   setUser: (user: UserProfile | null) => void,
   setIsLoading: (loading: boolean) => void
 ) => {
   const login = async ({ email, password }: { email: string, password: string }) => {
     try {
       setIsLoading(true),
-=======
 import type {_UserProfile} from "@/types/auth";
 
 export const _useEmailAuth = (_setUser: (user: UserProfile | null) => void,
   setIsLoading: (_loading: boolean) => void
 ) => {_const _login = async (_{ email, _password}: {_email: string; password: string}) => {_try {
       setIsLoading(true);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       // Clean up any stale auth state before login
       cleanupAuthState(),
       
-<<<<<<< HEAD
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password}),
@@ -41,33 +27,17 @@ export const _useEmailAuth = (_setUser: (user: UserProfile | null) => void,
         toast({
           title: &quot;Login failed&quot;,
           description: error.message,
-<<<<<<< HEAD
           variant: "destructive"}),
-        return { error }
-=======
-          variant: &quot;destructive&quot;});
-        return { error };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      }
+        return { error }      }
 
       return { data }
     } catch (error: any) {
-<<<<<<< HEAD
       console.error("Login error:", error),
       toast({
         title: "Login failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"}),
-      return { error }
-=======
-      console.error(&quot;Login error:&quot;, error);
-      toast({
-        title: &quot;Login failed&quot;,
-        description: error.message || &quot;An unexpected error occurred&quot;,
-        variant: &quot;destructive&quot;});
-      return { error };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
+      return { error }    } finally {
       setIsLoading(false)
     }
   },
@@ -75,7 +45,6 @@ export const _useEmailAuth = (_setUser: (user: UserProfile | null) => void,
   const signup = async (email: string, password: string, userData?: any) => {
     try {
       setIsLoading(true),
-=======
       const { data, _error} = await supabase.auth.signInWithPassword({_email, _password});
 
       if (error) {_toast({
@@ -92,45 +61,28 @@ export const _useEmailAuth = (_setUser: (user: UserProfile | null) => void,
 
   const _signup = async (_email: string, _password: string, _userData?: unknown) => {_try {
       setIsLoading(true);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       // Clean up any stale auth state before signup
       cleanupAuthState(),
       
       // Attempt to sign out any existing session first to prevent conflicts
       try {
-<<<<<<< HEAD
         await supabase.auth.signOut({ scope: 'global' })
       } catch (err) {
         // Continue even if signout fails
-<<<<<<< HEAD
-        // // // console.log("Sign out before signup failed:", err)
-=======
-        // console.log(&quot;Sign out before signup failed:&quot;, err);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      }
-=======
+        // // // console.log("Sign out before signup failed:", err)      }
         await supabase.auth.signOut({ scope: 'global'});
       } catch (err) {_// Continue even if signout fails}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       // Create a proper options object
       const {_data, _error} = await supabase.auth.signUp({_email, _password, _options: {
           // Only store a simple display name in the profile data
           data: {
-<<<<<<< HEAD
-<<<<<<< HEAD
             display_name: userData?.displayName ?? userData?.name ?? ""
           }}}),
-=======
-            display_name: userData?.displayName ?? userData?.name ?? "&quot;
-          }}});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
       if (error) {
         toast({
           title: &quot;Signup failed&quot;,
           description: error.message,
-<<<<<<< HEAD
           variant: "destructive"}),
         return { error }
       }
@@ -145,25 +97,7 @@ export const _useEmailAuth = (_setUser: (user: UserProfile | null) => void,
         title: "Signup failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"}),
-      return { error }
-=======
-          variant: &quot;destructive&quot;});
-        return { error };
-      }
-
-      toast({
-        title: &quot;Signup successful&quot;,
-        description: &quot;Check your email for verification instructions.&quot;});
-      return { data };
-    } catch (error: any) {
-      console.error(&quot;Signup error:&quot;, error);
-      toast({
-        title: &quot;Signup failed&quot;,
-        description: error.message || &quot;An unexpected error occurred&quot;,
-        variant: &quot;destructive&quot;});
-      return { error };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
+      return { error }    } finally {
       setIsLoading(false)
     }
   },
@@ -178,7 +112,6 @@ export const _useEmailAuth = (_setUser: (user: UserProfile | null) => void,
         toast({
           title: &quot;Password reset failed&quot;,
           description: error.message,
-<<<<<<< HEAD
           variant: "destructive"}),
         return { error }
       }
@@ -193,32 +126,13 @@ export const _useEmailAuth = (_setUser: (user: UserProfile | null) => void,
         title: "Password reset failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"}),
-      return { error }
-=======
-          variant: &quot;destructive&quot;});
-        return { error };
-      }
-
-      toast({
-        title: &quot;Password reset email sent&quot;,
-        description: &quot;Check your email for password reset instructions.&quot;});
-      return {};
-    } catch (error: any) {
-      console.error(&quot;Password reset error:&quot;, error);
-      toast({
-        title: &quot;Password reset failed&quot;,
-        description: error.message || &quot;An unexpected error occurred&quot;,
-        variant: &quot;destructive"});
-      return { error };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
+      return { error }    } finally {
       setIsLoading(false)
     }
   },
 
   return { login, signup, resetPassword }
 },
-=======
             display_name: userData?.displayName ?? userData?.name ?? ""}}});
 
       if (error) {_toast({
@@ -253,4 +167,3 @@ export const _useEmailAuth = (_setUser: (user: UserProfile | null) => void,
 
   return {_login, _signup, _resetPassword};
 };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

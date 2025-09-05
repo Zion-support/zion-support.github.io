@@ -2,9 +2,8 @@
 import fs from 'fs',
 import path from 'path',
 import https from 'https',
-const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
+const HOST = process.env.SELFHOST || 'http: //localhost:3000',
 
-<<<<<<< HEAD
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
   { prompt: 'AI Devs in Brazil', region: 'Brazil', service: 'AI' },
   { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' },
@@ -42,59 +41,50 @@ async function main() {
       console.warn('Generate failed for', p.prompt),
       continue
     }
-<<<<<<< HEAD
     const file = path.join(outDir, `${res.slug}.json`),
     fs.writeFileSync(file, JSON.stringify(res.payload, null, 2)),
-    // // // console.log('Wrote', file)
-=======
-    const file = path.join(outDir, `${res.slug}.json`);
-    fs.writeFileSync(file, JSON.stringify(res.payload, null, 2));
-    // console.log('Wrote', file);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  }
+    // // // console.log('Wrote', file)  }
 }
 
 main().catch((e) => {
   console.error(e),
   process.exit(1)
 }),
-=======
-const _HOST = process.env.SELF_HOST || 'http://localhost:3000';
+const HOST = process.env.SELFHOST || 'http://localhost:3000';
 
-const prompts: Array<{_prompt: string; region?: string; service?: string}> = [
-  {_prompt: 'AI Devs in Brazil', _region: 'Brazil', _service: 'AI'},
-  {_prompt: 'Rent Servers in Kabul', _region: 'Kabul', _service: 'servers'},
-  {_prompt: 'LLM Engineers in Toronto', _region: 'Toronto', _service: 'LLM'},
-  {_prompt: 'Cybersecurity Experts in Berlin', _region: 'Berlin', _service: 'security'}];
+const prompts: Array<{prompt: string, region?: string; service?: string}> = [
+  {prompt: 'AI Devs in Brazil', region: 'Brazil', service: 'AI'},
+  {prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers'},
+  {prompt: 'LLM Engineers in Toronto', region: 'Toronto', service: 'LLM'},
+  {prompt: 'Cybersecurity Experts in Berlin', region: 'Berlin', service: 'security'}];
 
-async function postJson(_url: string, _body: unknown): Promise<any> {_return new Promise(_(resolve, _reject) => {
-    const _u = new window.URL(url);
-    const _data = JSON.stringify(body);
+async function postJson(url: string, body: unknown): Promise<any> {return new Promise(_(resolve, reject) => {
+    const u = new window.URL(url);
+    const data = JSON.stringify(body);
     const opts: unknown = {
-      method: 'POST', _headers: { 'Content-Type': 'application/json', _'Content-Length': Buffer.byteLength(data)}};
-    const _lib = u.protocol === 'https:' ? https : require('http');
-    const _req = lib.request(_url, _opts, _(res: unknown) => {_let _buf = '';
+      method: 'POST', headers: { 'Content-Type': 'application/json', _'Content-Length': Buffer.byteLength(data)}};
+    const lib = u.protocol === 'https:' ? https : require('http');
+    const req = lib.request(url, opts, _(res: unknown) => {let buf = '';
       res.on(_'data', _(d: unknown) => (buf += d));
       res.on(_'end', _() => {
-        try { resolve(JSON.parse(buf));} catch {_resolve({}); }
-      });
+        try { resolve(JSON.parse(buf))} catch {resolve({}) }
+      })
     });
     req.on('error', reject);
     req.write(data);
-    req.end();
-  });
+    req.end()
+  })
 }
 
-async function main() {_const _outDir = path.join(process.cwd(), _'data', _'page-metadata', _'seo');
+async function main() {const outDir = path.join(process.cwd(), _'data', _'page-metadata', _'seo');
   fs.mkdirSync(outDir, _{ recursive: true});
 
-  for (const p of prompts) {_const _res = await postJson(`${HOST}/api/seo/generate`, p);
-    if (!res || !res.slug || !res.payload) {_continue;}
-    const _file = path.join(outDir, `${_res.slug}.json`);
-    fs.writeFileSync(file, JSON.stringify(res.payload, null, 2));
+  for (const p of prompts) {const res = await postJson(`${HOST}/api/seo/generate`, p);
+    if (!res || !res.slug || !res.payload) {continue}
+    const file = path.join(outDir, `${res.slug}.json`);
+    fs.writeFileSync(file, JSON.stringify(res.payload, null, 2))
     
   }
 }
 
-main().catch(_(e) => {_process.exit(1);});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+main().catch(_(e) => {process.exit(1)});

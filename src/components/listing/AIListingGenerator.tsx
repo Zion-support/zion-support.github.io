@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -8,21 +6,7 @@ import { supabase } from "@/integrations/supabase/client",
 import { AIListingForm } from "./AIListingForm",
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
-import {logErrorToProduction} from '@/utils/productionLogger',
-=======
-import React, { useState } from &quot;react&quot;;
-import { useToast } from &quot;@/hooks/use-toast&quot;;
-import { Card, CardContent, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Sparkles } from 'lucide-react'
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-import { AIListingForm } from &quot;./AIListingForm&quot;;
-import { GeneratedContentDisplay } from &quot;./GeneratedContentDisplay&quot;;
-import { LoadingContentSkeleton } from &quot;./LoadingContentSkeleton&quot;;
-import {logErrorToProduction} from '@/utils/productionLogger';
-
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface GeneratedContent {
+import {logErrorToProduction} from '@/utils/productionLogger',interface GeneratedContent {
   description: string,
   tags: string[],
   suggestedPrice: {
@@ -75,30 +59,15 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 
       setGeneratedContent((data as any)?.generated || null),
       toast({
-<<<<<<< HEAD
         title: "Content Generated",
         description: "AI has created optimized listing content for you."
-      })
-=======
-        title: &quot;Content Generated&quot;,
-        description: &quot;AI has created optimized listing content for you.&quot;
-      });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } catch (error) {
+      })    } catch (error) {
       logErrorToProduction('Error generating content:', { data: error }),
       toast({
-<<<<<<< HEAD
         title: "Generation Failed",
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
         variant: "destructive"
-      })
-=======
-        title: &quot;Generation Failed&quot;,
-        description: error instanceof Error ? error.message : &quot;Failed to generate content. Please try again.&quot;,
-        variant: &quot;destructive&quot;
-      });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
+      })    } finally {
       setIsLoading(false)
     }
   },
@@ -107,18 +76,9 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent),
       toast({
-<<<<<<< HEAD
         title: "Content Applied",
         description: "The generated content has been applied to your listing."
-      })
-=======
-        title: &quot;Content Applied&quot;,
-        description: &quot;The generated content has been applied to your listing.&quot;
-      });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React, {_useState} from "react";
-
+      })import React, {_useState} from "react";
 
 interface GeneratedContent {_description: string;
   tags: string[];
@@ -164,7 +124,6 @@ export function AIListingGenerator(_{_onApplyGenerated, _initialValues = {} }: A
       onApplyGenerated(generatedContent);
       toast({
         title: "Content Applied", _description: "The generated content has been applied to your listing."});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   },
 

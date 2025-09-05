@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -7,15 +6,8 @@ export default function IndustrySolutions() {
     <>
       <Head>
         <title>Industry Solutions | Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Industry-specific AI, quantum, and micro SaaS solutions for healthcare, finance, manufacturing, retail, education, government, energy, biotech and more." />
-        <link rel="canonical" href="https: //ziontechgroup.com/industry-solutions" />
-=======
-        <meta name=&quot;description&quot; content=&quot;Industry-specific AI, quantum, and micro SaaS solutions for healthcare, finance, manufacturing, retail, education, government, energy, biotech and more.&quot; />
-        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/industry-solutions&quot; />
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from 'react';
+        <link rel="canonical" href="https: //ziontechgroup.com/industry-solutions" />import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -25,7 +17,6 @@ export default function IndustrySolutions() {_return (
         <title>Industry Solutions | Zion Tech Group</title>
         <meta name="description" content="Industry-specific AI, _quantum, _and micro SaaS solutions for healthcare, _finance, _manufacturing, _retail, _education, _government, _energy, _biotech and more." />
         <link rel="canonical" href="https://ziontechgroup.com/industry-solutions" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       </Head>
       <div className=&quot;min-h-screen bg-black text-white&quot;>
         <section className=&quot;container mx-auto px-4 py-20&quot;>
@@ -45,9 +36,5 @@ export default function IndustrySolutions() {_return (
         </section>
       </div>
     </>
-<<<<<<< HEAD
   )
 }
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

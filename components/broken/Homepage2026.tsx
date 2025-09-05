@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Layout from './layout/Layout',
 import Link from 'next/link',
@@ -8,17 +7,9 @@ import {
   Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin,
   Users, Building, Rocket, CheckCircle, Phone, Mail
 } from 'lucide-react',
-=======
-import React from 'react';
-import Layout from './layout/Layout';
-import Link from 'next/link';
-import {_ArrowRight, _Star, _Brain, _Atom, _Shield, _Zap, _TrendingUp, _Globe, _MapPin, _Users, _Building, _Rocket, _CheckCircle, _Phone, _Mail} from 'lucide-react';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 const Homepage2026: React.FC = () => {_return (
     <Layout>
       {/* Main Content */}
-<<<<<<< HEAD
       <main className=&quot;relative z-10&quot;>
         {/* Hero Section */}
         <section className=&quot;min-h-screen flex items-center justify-center px-4 relative overflow-hidden&quot;>
@@ -26,47 +17,20 @@ const Homepage2026: React.FC = () => {_return (
           <div className=&quot;absolute inset-0 pointer-events-none&quot;>
             <div className=&quot;absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse&quot;></div>
             <div className=&quot;absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000&quot;></div>
-            <div className=&quot;absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000&quot;></div>
-=======
-      <main className="relative z-10">
-        {_/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
-          {_/* Background Elements */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse"></div>
-            <div className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000"></div>
-            <div className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000"></div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          </div>
+            <div className=&quot;absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000&quot;></div>          </div>
           
           <div className=&quot;text-center max-w-4xl mx-auto relative z-10&quot;>
             <motion.div
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className=&quot;space-y-6&quot;
-=======
-              initial={_{ opacity: 0, _y: 20}}
-              animate={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              className="space-y-6"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;space-y-6&quot;            >
               {_/* Company Badge */}
               <motion.div
-<<<<<<< HEAD
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className=&quot;inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium&quot;
-=======
-                initial={_{ opacity: 0, _scale: 0.8}}
-                animate={_{ opacity: 1, _scale: 1}}
-                transition={_{ duration: 0.6, _delay: 0.2}}
-                className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium&quot;              >
                 <Star className=&quot;w-4 h-4&quot; />
                 <span>Innovation Leader 2026</span>
               </motion.div>
@@ -78,20 +42,11 @@ const Homepage2026: React.FC = () => {_return (
                 Pioneering the future of technology with innovative micro SAAS services, cutting-edge IT infrastructure, and advanced AI solutions
               </p>
               
-<<<<<<< HEAD
               {/* Enhanced CTA Section */}
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center mb-8&quot;>
                 <Link href=&quot;/comprehensive-2025-services-showcase&quot;>
                   <button className=&quot;group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25&quot;>
-                    <span className=&quot;flex items-center gap-2&quot;>
-=======
-              {_/* Enhanced CTA Section */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <Link href="/comprehensive-2025-services-showcase">
-                  <button className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
-                    <span className="flex items-center gap-2">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      Explore Services
+                    <span className=&quot;flex items-center gap-2&quot;>                      Explore Services
                       <ArrowRight className=&quot;w-5 h-5 group-hover:translate-x-1 transition-transform&quot; />
                     </span>
                   </button>
@@ -110,18 +65,10 @@ const Homepage2026: React.FC = () => {_return (
               
               {_/* Trust Indicators */}
               <motion.div
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className=&quot;flex items-center justify-center space-x-6 text-sm text-gray-400&quot;
-=======
-                initial={_{ opacity: 0, _y: 20}}
-                animate={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.8, _delay: 0.4}}
-                className="flex items-center justify-center space-x-6 text-sm text-gray-400"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;flex items-center justify-center space-x-6 text-sm text-gray-400&quot;              >
                 <div className=&quot;flex items-center space-x-2&quot;>
                   <Shield className=&quot;w-4 h-4 text-green-400&quot; />
                   <span>Enterprise Security</span>
@@ -139,7 +86,6 @@ const Homepage2026: React.FC = () => {_return (
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Company Stats */}
         <section className=&quot;py-20 px-4 bg-black/30 relative&quot;>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5&quot;></div>
@@ -148,19 +94,7 @@ const Homepage2026: React.FC = () => {_return (
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className=&quot;text-center mb-16&quot;
-=======
-        {_/* Company Stats */}
-        <section className="py-20 px-4 bg-black/30 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
-          <div className="max-w-6xl mx-auto relative z-10">
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              className="text-center mb-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;text-center mb-16&quot;            >
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Zion Tech Group?</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 We deliver innovative solutions that drive real business transformation
@@ -169,18 +103,10 @@ const Homepage2026: React.FC = () => {_return (
 
             <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>
               <motion.div
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className=&quot;text-center&quot;
-=======
-                initial={_{ opacity: 0, _y: 20}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6, _delay: 0.1}}
-                className="text-center"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;text-center&quot;              >
                 <div className=&quot;text-4xl mb-4&quot;>🚀</div>
                 <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Micro SAAS Solutions</h3>
                 <p className=&quot;text-gray-300 text-sm&quot;>
@@ -189,18 +115,10 @@ const Homepage2026: React.FC = () => {_return (
               </motion.div>
 
               <motion.div
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className=&quot;text-center&quot;
-=======
-                initial={_{ opacity: 0, _y: 20}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6, _delay: 0.2}}
-                className="text-center"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;text-center&quot;              >
                 <div className=&quot;text-4xl mb-4&quot;>🏗️</div>
                 <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>IT Infrastructure</h3>
                 <p className=&quot;text-gray-300 text-sm&quot;>
@@ -209,18 +127,10 @@ const Homepage2026: React.FC = () => {_return (
               </motion.div>
 
               <motion.div
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className=&quot;text-center&quot;
-=======
-                initial={_{ opacity: 0, _y: 20}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6, _delay: 0.3}}
-                className="text-center"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;text-center&quot;              >
                 <div className=&quot;text-4xl mb-4&quot;>🤖</div>
                 <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>AI Automation</h3>
                 <p className=&quot;text-gray-300 text-sm&quot;>
@@ -229,18 +139,10 @@ const Homepage2026: React.FC = () => {_return (
               </motion.div>
 
               <motion.div
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className=&quot;text-center&quot;
-=======
-                initial={_{ opacity: 0, _y: 20}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6, _delay: 0.4}}
-                className="text-center"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;text-center&quot;              >
                 <div className=&quot;text-4xl mb-4&quot;>🧠</div>
                 <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Cutting-Edge AI</h3>
                 <p className=&quot;text-gray-300 text-sm&quot;>
@@ -251,7 +153,6 @@ const Homepage2026: React.FC = () => {_return (
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Service Categories */}
         <section className=&quot;py-20 px-4&quot;>
           <div className=&quot;max-w-6xl mx-auto&quot;>
@@ -259,42 +160,20 @@ const Homepage2026: React.FC = () => {_return (
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className=&quot;text-center mb-16&quot;
-=======
-        {_/* Service Categories */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              className="text-center mb-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;text-center mb-16&quot;            >
               <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Our Service Portfolio</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Comprehensive solutions covering every aspect of modern business technology needs
               </p>
             </motion.div>
 
-<<<<<<< HEAD
             <div className=&quot;grid md:grid-cols-2 lg:grid-cols-2 gap-8&quot;>
               {/* AI Automation Services */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className=&quot;bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300&quot;
-=======
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-              {_/* AI Automation Services */}
-              <motion.div
-                initial={_{ opacity: 0, _x: -20}}
-                whileInView={_{ opacity: 1, _x: 0}}
-                transition={_{ duration: 0.6, _delay: 0.1}}
-                className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300&quot;              >
                 <div className=&quot;text-5xl mb-6&quot;>🤖</div>
                 <h3 className=&quot;text-2xl font-semibold text-white mb-4&quot;>AI Automation Services</h3>
                 <p className=&quot;text-gray-300 mb-6&quot;>
@@ -324,18 +203,10 @@ const Homepage2026: React.FC = () => {_return (
 
               {_/* IT Infrastructure Services */}
               <motion.div
-<<<<<<< HEAD
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className=&quot;bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300&quot;
-=======
-                initial={_{ opacity: 0, _x: 20}}
-                whileInView={_{ opacity: 1, _x: 0}}
-                transition={_{ duration: 0.6, _delay: 0.2}}
-                className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300&quot;              >
                 <div className=&quot;text-5xl mb-6&quot;>🏗️</div>
                 <h3 className=&quot;text-2xl font-semibold text-white mb-4&quot;>IT Infrastructure Services</h3>
                 <p className=&quot;text-gray-300 mb-6&quot;>
@@ -365,18 +236,10 @@ const Homepage2026: React.FC = () => {_return (
 
               {_/* Micro SAAS Solutions */}
               <motion.div
-<<<<<<< HEAD
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className=&quot;bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300&quot;
-=======
-                initial={_{ opacity: 0, _x: -20}}
-                whileInView={_{ opacity: 1, _x: 0}}
-                transition={_{ duration: 0.6, _delay: 0.3}}
-                className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300&quot;              >
                 <div className=&quot;text-5xl mb-6&quot;>🚀</div>
                 <h3 className=&quot;text-2xl font-semibold text-white mb-4&quot;>Micro SAAS Solutions</h3>
                 <p className=&quot;text-gray-300 mb-6&quot;>
@@ -406,18 +269,10 @@ const Homepage2026: React.FC = () => {_return (
 
               {_/* Cutting-Edge AI Services */}
               <motion.div
-<<<<<<< HEAD
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className=&quot;bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300&quot;
-=======
-                initial={_{ opacity: 0, _x: 20}}
-                whileInView={_{ opacity: 1, _x: 0}}
-                transition={_{ duration: 0.6, _delay: 0.4}}
-                className="bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300&quot;              >
                 <div className=&quot;text-5xl mb-6&quot;>🧠</div>
                 <h3 className=&quot;text-2xl font-semibold text-white mb-4&quot;>Cutting-Edge AI Services</h3>
                 <p className=&quot;text-gray-300 mb-6&quot;>
@@ -448,7 +303,6 @@ const Homepage2026: React.FC = () => {_return (
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Contact Section */}
         <section className=&quot;py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10&quot;>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;>
@@ -456,18 +310,7 @@ const Homepage2026: React.FC = () => {_return (
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className=&quot;space-y-6&quot;
-=======
-        {_/* Contact Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              className="space-y-6"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;space-y-6&quot;            >
               <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>
                 Ready to Transform Your Business?
               </h2>
@@ -475,24 +318,17 @@ const Homepage2026: React.FC = () => {_return (
                 Get in touch with our team to discuss how our innovative services can drive your success
               </p>
               
-<<<<<<< HEAD
               {/* Contact Information */}
-<<<<<<< HEAD
-=======
-              {_/* Contact Information */}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <div className="bg-black/30 backdrop-blur-sm border border-gray-700 rounded-lg p-8 mb-8">
                 <h3 className="text-2xl font-semibold text-cyan-400 mb-6">Contact Information</h3>
                 <div className="grid md: grid-cols-2 gap-6 text-left">
                   <div className="flex items-center space-x-3">
                     <Globe className="w-5 h-5 text-blue-400" />
-=======
               <div className=&quot;bg-black/30 backdrop-blur-sm border border-gray-700 rounded-lg p-8 mb-8&quot;>
                 <h3 className=&quot;text-2xl font-semibold text-cyan-400 mb-6&quot;>Contact Information</h3>
                 <div className=&quot;grid md:grid-cols-2 gap-6 text-left&quot;>
                   <div className=&quot;flex items-center space-x-3&quot;>
                     <Globe className=&quot;w-5 h-5 text-blue-400&quot; />
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                     <div>
                       <div className=&quot;text-sm text-gray-400&quot;>Website</div>
                       <a href=&quot;https://ziontechgroup.com&quot; className=&quot;text-cyan-400 hover:underline font-medium&quot;>

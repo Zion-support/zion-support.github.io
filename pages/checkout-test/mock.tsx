@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import { useRouter } from 'next/router',
 import Link from 'next/link',
@@ -13,17 +12,6 @@ export default function MockCheckoutPage() {
     router.push('/checkout'),
     return <div>Redirecting...</div>
   }
-=======
-import React from 'react';
-import Link from 'next/link';
-
-export default function MockCheckoutPage() {_const _router = useRouter();
-  const { mock} = router.query;
-
-  if (!mock) {_router.push('/checkout');
-    return <div>Redirecting...</div>;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (
     <div className=&quot;min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4&quot;>
       <div className=&quot;container mx-auto max-w-2xl&quot;>
@@ -52,18 +40,10 @@ export default function MockCheckoutPage() {_const _router = useRouter();
             </ul>
           </div>
 
-<<<<<<< HEAD
           <div className="space-y-4">
             <div className="text-zion-slate-light text-sm">
               <p>To test with real Stripe: </p>
-              <ol className="list-decimal list-inside space-y-1 mt-2">
-=======
-          <div className=&quot;space-y-4&quot;>
-            <div className=&quot;text-zion-slate-light text-sm&quot;>
-              <p>To test with real Stripe:</p>
-              <ol className=&quot;list-decimal list-inside space-y-1 mt-2&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-                <li>Configure real Stripe test keys in environment variables</li>
+              <ol className="list-decimal list-inside space-y-1 mt-2">                <li>Configure real Stripe test keys in environment variables</li>
                 <li>Set STRIPE_TEST_MODE=true for test environment</li>
                 <li>Use test card: 4242 4242 4242 4242</li>
               </ol>

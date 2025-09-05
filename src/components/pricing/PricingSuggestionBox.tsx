@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
@@ -13,29 +11,11 @@ interface PricingSuggestionBoxProps {
   isLoading: boolean,
   onApplySuggestion: () => void,
   rateType: "hourly" | "fixed"
-=======
-import React from &quot;react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from &quot;@/components/ui/tooltip&quot;;
-import { Card, CardContent } from &quot;@/components/ui/card&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { Loader2, Info, ThumbsUp } from 'lucide-react'
-import { PricingSuggestion } from &quot;@/services/pricingSuggestionService&quot;;
-=======
-import React from "react";
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 interface PricingSuggestionBoxProps {_suggestion: PricingSuggestion | null;
   isLoading: boolean;
   onApplySuggestion: () => void;
-<<<<<<< HEAD
   rateType: &quot;hourly&quot; | &quot;fixed&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 }
-=======
-  rateType: "hourly" | "fixed";}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = (_{_suggestion, _isLoading, _onApplySuggestion, _rateType}) => {_if (isLoading) {
     return (
       <Card className=&quot;border border-dashed border-muted&quot;>
@@ -48,7 +28,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = (_{_sug
           </div>
         </CardContent>
       </Card>
-<<<<<<< HEAD
     )
   }
 
@@ -57,16 +36,9 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = (_{_sug
   }
 
   const confidenceColor = {
-<<<<<<< HEAD
     High: "bg-green-100 text-green-800",
     Medium: "bg-yellow-100 text-yellow-800",
     Low: "bg-red-100 text-red-800"}[suggestion.confidence],
-=======
-    High: &quot;bg-green-100 text-green-800&quot;,
-    Medium: &quot;bg-yellow-100 text-yellow-800&quot;,
-    Low: &quot;bg-red-100 text-red-800&quot;}[suggestion.confidence];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
   return (
     <Card className=&quot;border-2 border-dashed border-muted-foreground/20&quot;>
       <CardContent className=&quot;p-5 space-y-4&quot;>
@@ -89,7 +61,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = (_{_sug
         <div className=&quot;flex items-start space-x-2 text-sm text-muted-foreground&quot;>
           <Info className=&quot;h-4 w-4 flex-shrink-0 mt-1&quot; />
           <p>{suggestion.explanation}</p>
-=======
     );}
 
   if (!suggestion) {_return null;}
@@ -118,7 +89,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = (_{_sug
         <div className="flex items-start space-x-2 text-sm text-muted-foreground">
           <Info className="h-4 w-4 flex-shrink-0 mt-1" />
           <p>{_suggestion.explanation}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </div>
 
         <div className=&quot;flex items-center justify-between&quot;>
@@ -126,16 +96,9 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = (_{_sug
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
-<<<<<<< HEAD
                   variant=&quot;default&quot;
                   onClick={onApplySuggestion}
-                  className=&quot;w-full&quot;
-=======
-                  variant="default"
-                  onClick={_onApplySuggestion}
-                  className="w-full"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                >
+                  className=&quot;w-full&quot;                >
                   <ThumbsUp className=&quot;h-4 w-4 mr-2&quot; /> Apply Suggestion
                 </Button>
               </TooltipTrigger>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import { 
@@ -17,20 +16,6 @@ const UltraAdvancedNavigation: React.FC = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
     },
-=======
-import React, {_useState, _useEffect} from 'react';
-import {_Menu, _X, _ChevronDown, _Search, _Phone, _Mail, _MapPin, _Brain, _Rocket, _Dna, _Globe, _Shield, _Wifi, _Package, _Bot, _Car, _Building2, _DollarSign, _Monitor, _Users, _Cpu, _Zap, _Atom, _Database, _Cloud, _Lock, _Code} from 'lucide-react';
-import Link from 'next/link';
-
-const UltraAdvancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = useState(false);
-  const [isScrolled, _setIsScrolled] = useState(false);
-  const [activeDropdown, _setActiveDropdown] = useState<string | null>(null);
-
-  useEffect__(() => {
-    const _handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
@@ -72,7 +57,6 @@ const UltraAdvancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = u
         {_name: 'IoT Management', _href: '/it-asset-discovery-agent', _icon: Wifi, _description: 'AI-powered device management', _price: '$7, _999/month'}
       ]
     },
-<<<<<<< HEAD
     {
       name: 'Micro SaaS',
       href: '/services',
@@ -102,20 +86,9 @@ const UltraAdvancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = u
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   },
-=======
-    {_name: 'Micro SaaS', _href: '/services', _icon: Monitor, _description: '300+ micro SaaS services'},
-    {_name: 'Market Pricing', _href: '/market-pricing', _icon: DollarSign, _description: 'Benchmarks & vendor references'},
-    {_name: 'About', _href: '/about', _icon: null},
-    {_name: 'Contact', _href: '/contact', _icon: null}
-  ];
-
-  const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (_<nav className={_`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50' 
-<<<<<<< HEAD
         : 'bg-transparent'
     }`}>
       <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -125,19 +98,7 @@ const UltraAdvancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = u
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className=&quot;flex items-center&quot;
-=======
-        : 'bg-transparent'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          {_/* Logo */}
-          <motion.div
-            initial={_{ opacity: 0, _x: -20}}
-            animate={_{ opacity: 1, _x: 0}}
-            transition={_{ duration: 0.5}}
-            className="flex items-center"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            className=&quot;flex items-center&quot;          >
             <Link href=&quot;/&quot; className=&quot;flex items-center space-x-3 group&quot;>
               <div className=&quot;w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300&quot;>
                 <Zap className=&quot;w-6 h-6 text-white&quot; />
@@ -151,23 +112,14 @@ const UltraAdvancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = u
             </a>
           </motion.div>
 
-<<<<<<< HEAD
           {/* Desktop Navigation */}
           <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
             {navigationItems.map((item, index) => (
               <div key={item.name} className=&quot;relative group&quot;>
-                {item.dropdown ? (
-=======
-          {_/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {_navigationItems.map((item, _index) => (_<div key={item.name} className="relative group">
-                {_item.dropdown ? (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  <button
+                {item.dropdown ? (                  <button
                     onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
                     className=&quot;flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2&quot;
                   >
-<<<<<<< HEAD
                     {item.icon && <item.icon className=&quot;w-4 h-4&quot; />}
                     <span>{item.name}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
@@ -181,29 +133,12 @@ const UltraAdvancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = u
                   >
                     {item.icon && <item.icon className=&quot;w-4 h-4&quot; />}
                     <span>{item.name}</span>
-                  </a>
-=======
-                    {_item.icon && <item.icon className="w-4 h-4" />}
-                    <span>{_item.name}</span>
-                    <ChevronDown className={_`w-4 h-4 transition-transform duration-300 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''}`} />
-                  </button>
-                ) : (
-                  <Link
-                    href={_item.href}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2"
-                  >
-                    {_item.icon && <item.icon className="w-4 h-4" />}
-                    <span>{_item.name}</span>
-                  </Link>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                )}
+                  </a>                )}
 
                 {_/* Dropdown Menu */}
                 {_item.dropdown && (_<AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div
-<<<<<<< HEAD
                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
@@ -217,28 +152,10 @@ const UltraAdvancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = u
                               <Link
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
-                                className=&quot;flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group&quot;
-=======
-                        initial={{ opacity: 0, _y: 10, _scale: 0.95}}
-                        animate={_{ opacity: 1, _y: 0, _scale: 1}}
-                        exit={_{ opacity: 0, _y: 10, _scale: 0.95}}
-                        transition={_{ duration: 0.2}}
-                        className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden"
-                      >
-                        <div className="p-4">
-                          <div className="text-sm text-gray-400 mb-3">{_item.description}</div>
-                          <div className="space-y-2">
-                            {_item.dropdown.map((dropdownItem) => (
-                              <Link
-                                key={dropdownItem.name}
-                                href={_dropdownItem.href}
-                                className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                              >
+                                className=&quot;flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group&quot;                              >
                                 <div className=&quot;w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200&quot;>
                                   <dropdownItem.icon className=&quot;w-5 h-5 text-cyan-400&quot; />
                                 </div>
-<<<<<<< HEAD
                                 <div className=&quot;flex-1&quot;>
                                   <div className=&quot;text-white font-medium group-hover:text-cyan-400 transition-colors duration-200&quot;>
                                     {dropdownItem.name}
@@ -246,18 +163,7 @@ const UltraAdvancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = u
                                   <div className=&quot;text-sm text-gray-400&quot;>{dropdownItem.description}</div>
                                 </div>
                                 <div className=&quot;text-sm font-semibold text-cyan-400&quot;>
-                                  {dropdownItem.price}
-=======
-                                <div className="flex-1">
-                                  <div className="text-white font-medium group-hover:text-cyan-400 transition-colors duration-200">
-                                    {_dropdownItem.name}
-                                  </div>
-                                  <div className="text-sm text-gray-400">{_dropdownItem.description}</div>
-                                </div>
-                                <div className="text-sm font-semibold text-cyan-400">
-                                  {_dropdownItem.price}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                                </div>
+                                  {dropdownItem.price}                                </div>
                               </a>
                             ))}
                           </div>
@@ -270,7 +176,6 @@ const UltraAdvancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = u
             ))}
           </div>
 
-<<<<<<< HEAD
           {/* Contact Info & CTA */}
           <div className=&quot;hidden lg:flex items-center space-x-6&quot;>
             <div className=&quot;flex items-center space-x-4 text-sm text-gray-300&quot;>
@@ -280,64 +185,31 @@ const UltraAdvancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = u
               </a>
               <a href={`mailto:${contactInfo.email}`} className=&quot;flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200&quot;>
                 <Mail className=&quot;w-4 h-4&quot; />
-                <span className=&quot;hidden xl:inline&quot;>{contactInfo.email}</span>
-=======
-          {_/* Contact Info & CTA */}
-          <div className="hidden lg:flex items-center space-x-6">
-            <div className="flex items-center space-x-4 text-sm text-gray-300">
-              <a href={_`tel:${contactInfo.mobile}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">
-                <Phone className="w-4 h-4" />
-                <span className="hidden xl:inline">{_contactInfo.mobile}</span>
-              </a>
-              <a href={_`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">
-                <Mail className="w-4 h-4" />
-                <span className="hidden xl:inline">{_contactInfo.email}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </a>
+                <span className=&quot;hidden xl:inline&quot;>{contactInfo.email}</span>              </a>
             </div>
             
             <motion.a
-<<<<<<< HEAD
               href=&quot;/contact&quot;
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className=&quot;bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300&quot;
-=======
-              href="/contact"
-              whileHover={_{ scale: 1.05}}
-              whileTap={_{ scale: 0.95}}
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300&quot;            >
               Get Started
             </motion.a>
           </div>
 
-<<<<<<< HEAD
           {/* Mobile Menu Button */}
           <div className=&quot;lg:hidden&quot;>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className=&quot;text-gray-300 hover:text-white transition-colors duration-200&quot;
             >
-              {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}
-=======
-          {_/* Mobile Menu Button */}
-          <div className="lg:hidden">
-            <button
-              onClick={_() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white transition-colors duration-200"
-            >
-              {_isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            </button>
+              {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}            </button>
           </div>
         </div>
       </div>
 
       {_/* Mobile Menu */}
       <AnimatePresence>
-<<<<<<< HEAD
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -349,39 +221,18 @@ const UltraAdvancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = u
             <div className=&quot;px-4 py-6 space-y-4&quot;>
               {navigationItems.map((item) => (
                 <div key={item.name}>
-                  {item.dropdown ? (
-=======
-        {_isOpen && (_<motion.div
-            initial={{ opacity: 0, _height: 0}}
-            animate={_{ opacity: 1, _height: 'auto'}}
-            exit={_{ opacity: 0, _height: 0}}
-            transition={_{ duration: 0.3}}
-            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50 overflow-hidden"
-          >
-            <div className="px-4 py-6 space-y-4">
-              {_navigationItems.map((item) => (_<div key={item.name}>
-                  {_item.dropdown ? (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    <div>
+                  {item.dropdown ? (                    <div>
                       <button
                         onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
                         className=&quot;flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3&quot;
                       >
-<<<<<<< HEAD
                         <div className=&quot;flex items-center space-x-3&quot;>
                           {item.icon && <item.icon className=&quot;w-5 h-5&quot; />}
-                          <span>{item.name}</span>
-=======
-                        <div className="flex items-center space-x-3">
-                          {_item.icon && <item.icon className="w-5 h-5" />}
-                          <span>{_item.name}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        </div>
+                          <span>{item.name}</span>                        </div>
                         <ChevronDown className={_`w-4 h-4 transition-transform duration-200 ${
                           activeDropdown === item.name ? 'rotate-180' : ''}`} />
                       </button>
                       
-<<<<<<< HEAD
                       {activeDropdown === item.name && (
                         <div className=&quot;ml-8 mt-2 space-y-2&quot;>
                           {item.dropdown.map((dropdownItem) => (
@@ -392,23 +243,10 @@ const UltraAdvancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = u
                               className=&quot;block py-2 text-gray-400 hover:text-white transition-colors duration-200&quot;
                             >
                               {dropdownItem.name}
-                            </a>
-=======
-                      {_activeDropdown === item.name && (_<div className="ml-8 mt-2 space-y-2">
-                          {item.dropdown.map((dropdownItem) => (_<Link
-                              key={dropdownItem.name}
-                              href={_dropdownItem.href}
-                              onClick={_() => setIsOpen(false)}
-                              className="block py-2 text-gray-400 hover:text-white transition-colors duration-200"
-                            >
-                              {_dropdownItem.name}
-                            </Link>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                          ))}
+                            </a>                          ))}
                         </div>
                       )}
                     </div>
-<<<<<<< HEAD
                   ) : (
                     <Link
                       href={item.href}
@@ -417,22 +255,10 @@ const UltraAdvancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = u
                     >
                       {item.icon && <item.icon className=&quot;w-5 h-5&quot; />}
                       <span>{item.name}</span>
-                    </a>
-=======
-                  ) : (_<Link
-                      href={_item.href}
-                      onClick={_() => setIsOpen(false)}
-                      className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
-                    >
-                      {_item.icon && <item.icon className="w-5 h-5" />}
-                      <span>{_item.name}</span>
-                    </Link>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  )}
+                    </a>                  )}
                 </div>
               ))}
               
-<<<<<<< HEAD
               {/* Mobile Contact Info */}
               <div className=&quot;pt-6 border-t border-gray-800/50&quot;>
                 <div className=&quot;space-y-3 text-sm text-gray-400&quot;>
@@ -446,39 +272,14 @@ const UltraAdvancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = u
                   </a>
                   <div className=&quot;flex items-start space-x-3&quot;>
                     <MapPin className=&quot;w-4 h-4 mt-0.5&quot; />
-                    <span>{contactInfo.address}</span>
-=======
-              {_/* Mobile Contact Info */}
-              <div className="pt-6 border-t border-gray-800/50">
-                <div className="space-y-3 text-sm text-gray-400">
-                  <a href={_`tel:${contactInfo.mobile}`} className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">
-                    <Phone className="w-4 h-4" />
-                    <span>{_contactInfo.mobile}</span>
-                  </a>
-                  <a href={_`mailto:${contactInfo.email}`} className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">
-                    <Mail className="w-4 h-4" />
-                    <span>{_contactInfo.email}</span>
-                  </a>
-                  <div className="flex items-start space-x-3">
-                    <MapPin className="w-4 h-4 mt-0.5" />
-                    <span>{_contactInfo.address}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </div>
+                    <span>{contactInfo.address}</span>                  </div>
                 </div>
                 
                 <motion.a
-<<<<<<< HEAD
                   href=&quot;/contact&quot;
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className=&quot;block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300&quot;
-=======
-                  href="/contact"
-                  whileHover={_{ scale: 1.05}}
-                  whileTap={_{ scale: 0.95}}
-                  className="block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                >
+                  className=&quot;block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300&quot;                >
                   Get Started
                 </motion.a>
               </div>

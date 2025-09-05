@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import { useRouter } from 'next/router',
@@ -18,29 +17,10 @@ export default function ServiceDetailPage() {
           <h1 className=&quot;text-2xl font-bold text-white mb-4&quot;>Service Not Found</h1>
           <p className=&quot;text-gray-400 mb-6&quot;>The requested service could not be found.</p>
           <Button href=&quot;/services&quot; variant=&quot;primary&quot;>
-            <ArrowLeft className=&quot;w-4 h-4 mr-2&quot; />
-=======
-import React from 'react';
-import Head from 'next/head';
-import ServiceDetail from '../../components/sections/ServiceDetail';
-import Button from '../../components/ui/Button';
-
-export default function ServiceDetailPage() {_const _router = useRouter();
-  const { id} = router.query;
-  
-  if (!id || typeof id !== 'string') {_return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-white mb-4">Service Not Found</h1>
-          <p className="text-gray-400 mb-6">The requested service could not be found.</p>
-          <Button href="/services" variant="primary">
-            <ArrowLeft className="w-4 h-4 mr-2" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            Back to Services
+            <ArrowLeft className=&quot;w-4 h-4 mr-2&quot; />            Back to Services
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
     )
   }
 
@@ -53,21 +33,7 @@ export default function ServiceDetailPage() {_const _router = useRouter();
           <h1 className=&quot;text-2xl font-bold text-white mb-4&quot;>Service Not Found</h1>
           <p className=&quot;text-gray-400 mb-6&quot;>The requested service &quot;{id}&quot; could not be found.</p>
           <Button href=&quot;/services&quot; variant=&quot;primary&quot;>
-            <ArrowLeft className=&quot;w-4 h-4 mr-2&quot; />
-=======
-    );}
-
-  const _service = getServiceById(id);
-
-  if (!service) {_return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-white mb-4">Service Not Found</h1>
-          <p className="text-gray-400 mb-6">The requested service "{id}" could not be found.</p>
-          <Button href="/services" variant="primary">
-            <ArrowLeft className="w-4 h-4 mr-2" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            Back to Services
+            <ArrowLeft className=&quot;w-4 h-4 mr-2&quot; />            Back to Services
           </Button>
         </div>
       </div>
@@ -77,7 +43,6 @@ export default function ServiceDetailPage() {_const _router = useRouter();
   return (
     <>
       <Head>
-<<<<<<< HEAD
         <title>{service.name} | Zion Tech Group - Micro SaaS Services</title>
         <meta name=&quot;description&quot; content={service.description} />
         <meta property=&quot;og:title&quot; content={`${service.name} | Zion Tech Group`} />
@@ -89,22 +54,7 @@ export default function ServiceDetailPage() {_const _router = useRouter();
         {/* Navigation */}
         <nav className=&quot;border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-            <div className=&quot;flex items-center justify-between h-16&quot;>
-=======
-        <title>{_service.name} | Zion Tech Group - Micro SaaS Services</title>
-        <meta name="description" content={_service.description} />
-        <meta property="og:title" content={_`${service.name} | Zion Tech Group`} />
-        <meta property="og:description" content={_service.description} />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-
-      <div className="min-h-screen bg-black">
-        {_/* Navigation */}
-        <nav className="border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <Button
+            <div className=&quot;flex items-center justify-between h-16&quot;>              <Button
                 href=&quot;/services&quot;
                 variant=&quot;ghost&quot;
                 size=&quot;sm&quot;
@@ -114,18 +64,10 @@ export default function ServiceDetailPage() {_const _router = useRouter();
                 Back to Services
               </Button>
               <Button
-<<<<<<< HEAD
                 href={service.website}
                 variant=&quot;primary&quot;
                 size=&quot;sm&quot;
-                icon={<ExternalLink className=&quot;w-4 h-4&quot; />}
-=======
-                href={_service.website}
-                variant="primary"
-                size="sm"
-                icon={_<ExternalLink className="w-4 h-4" />}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                icon={<ExternalLink className=&quot;w-4 h-4&quot; />}              >
                 Visit Service
               </Button>
             </div>
@@ -135,20 +77,13 @@ export default function ServiceDetailPage() {_const _router = useRouter();
         {_/* Service Detail Content */}
         <ServiceDetail service={_service} />
 
-<<<<<<< HEAD
         {/* Related Services CTA */}
-<<<<<<< HEAD
-=======
-        {_/* Related Services CTA */}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         <section className="py-16 bg-gray-900/50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
-=======
         <section className=&quot;py-16 bg-gray-900/50&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
             <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
               Looking for Something Else?
             </h2>
             <p className=&quot;text-gray-400 mb-8 max-w-2xl mx-auto&quot;>

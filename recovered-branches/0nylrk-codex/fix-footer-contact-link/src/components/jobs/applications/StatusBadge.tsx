@@ -1,30 +1,12 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { ApplicationStatus } from "@/types/jobs",
-import { Badge } from "@/components/ui/badge",
-=======
-import { ApplicationStatus } from &quot;@/types/jobs&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface StatusBadgeProps {
+import { Badge } from "@/components/ui/badge",interface StatusBadgeProps {
   status: ApplicationStatus
 }
 
 export function StatusBadge({ status }: StatusBadgeProps) {
   switch (status) {
-<<<<<<< HEAD
-    case "new": return <Badge variant="secondary">Submitted</Badge>,
-=======
-
-interface StatusBadgeProps {_status: ApplicationStatus;}
-
-export function StatusBadge(_{_status}: StatusBadgeProps) {_switch (status) {
-    case "new":
-      return <Badge variant="secondary">Submitted</Badge>;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    case "viewed":
+    case "new": return <Badge variant="secondary">Submitted</Badge>,    case "viewed":
       return <Badge variant="outline">Viewed</Badge>,
     case "shortlisted":
       return <Badge className="bg-blue-100 text-blue-800">Shortlisted</Badge>,
@@ -36,7 +18,6 @@ export function StatusBadge(_{_status}: StatusBadgeProps) {_switch (status) {
       return <Badge className="bg-red-100 text-red-800">Not Selected</Badge>,
     default:
       return <Badge variant="outline">{status}</Badge>
-=======
     case &quot;new&quot;:
       return <Badge variant=&quot;secondary&quot;>Submitted</Badge>;
     case &quot;viewed&quot;:
@@ -51,6 +32,5 @@ export function StatusBadge(_{_status}: StatusBadgeProps) {_switch (status) {
       return <Badge className=&quot;bg-red-100 text-red-800&quot;>Not Selected</Badge>;
     default:
       return <Badge variant=&quot;outline&quot;>{status}</Badge>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 }

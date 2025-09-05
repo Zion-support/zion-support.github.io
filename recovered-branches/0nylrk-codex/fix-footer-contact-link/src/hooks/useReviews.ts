@@ -1,20 +1,9 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
 import { Review, ReviewReport } from "@/types/reviews",
-import { toast } from "@/hooks/use-toast",
-=======
-import { useState } from &quot;react&quot;;
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { Review, ReviewReport } from &quot;@/types/reviews&quot;;
-import { toast } from &quot;@/hooks/use-toast&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export function useReviews(projectId?: string) {
+import { toast } from "@/hooks/use-toast",export function useReviews(projectId?: string) {
   const { user } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
   const [reviews, setReviews] = useState<Review[]>([]),
@@ -24,7 +13,6 @@ export function useReviews(projectId?: string) {
   // Fetch reviews for a project
   const fetchProjectReviews = async (projectId: string) => {
     if (!projectId) return,
-=======
 
 export function useReviews(_projectId?: string) {_const { user} = useAuth();
   const [isLoading, setIsLoading] = useState(false);
@@ -34,77 +22,46 @@ export function useReviews(_projectId?: string) {_const { user} = useAuth();
   
   // Fetch reviews for a project
   const _fetchProjectReviews = async (_projectId: string) => {_if (!projectId) return;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     setIsLoading(true),
     
     try {
-<<<<<<< HEAD
       const { data, error } = await supabase
-        .from(&quot;reviews&quot;)
-=======
-      const { data, _error} = await supabase
-        .from("reviews")
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        .select(`
+        .from(&quot;reviews&quot;)        .select(`
           *,
           reviewer_profile: profiles!reviewer_id(display_name, avatar_url)
         `)
-<<<<<<< HEAD
         .eq("project_id", projectId)
         .eq("is_visible", true)
-        .eq("status", "approved"),
-=======
-        .eq(&quot;project_id&quot;, projectId)
-        .eq(&quot;is_visible&quot;, true)
-        .eq(&quot;status&quot;, &quot;approved&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-        
+        .eq("status", "approved"),        
       if (error) throw error,
       
       setReviews(data || []),
       
       // Check if current user has already submitted a review
-<<<<<<< HEAD
       if (user) {
         const { data: userReviewData, error: userReviewError } = await supabase
-<<<<<<< HEAD
-=======
-      if (user) {_const { data: userReviewData, _error: userReviewError} = await supabase
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           .from("reviews")
           .select("*")
           .eq("project_id", projectId)
           .eq("reviewer_id", user.id)
           .single(),
-=======
           .from(&quot;reviews&quot;)
           .select(&quot;*&quot;)
           .eq(&quot;project_id&quot;, projectId)
           .eq(&quot;reviewer_id&quot;, user.id)
           .single();
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           
-<<<<<<< HEAD
         if (!userReviewError && userReviewData) {
           setUserReview(userReviewData)
         }
       }
     } catch (err: any) {
-<<<<<<< HEAD
       console.error("Error fetching reviews:", err),
       toast({
         title: "Error",
         description: "Failed to load reviews",
-        variant: "destructive"})
-=======
-      console.error(&quot;Error fetching reviews:&quot;, err);
-      toast({
-        title: &quot;Error&quot;,
-        description: &quot;Failed to load reviews&quot;,
-        variant: &quot;destructive&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
+        variant: "destructive"})    } finally {
       setIsLoading(false)
     }
   },
@@ -112,7 +69,6 @@ export function useReviews(_projectId?: string) {_const { user} = useAuth();
   // Fetch reviews for a user (to display on profile)
   const fetchUserReviews = async (userId: string) => {
     if (!userId) return,
-=======
         if (!userReviewError && userReviewData) {_setUserReview(userReviewData);}
       }
     } catch (err: unknown) {_toast({
@@ -122,57 +78,29 @@ export function useReviews(_projectId?: string) {_const { user} = useAuth();
   
   // Fetch reviews for a user (to display on profile)
   const _fetchUserReviews = async (_userId: string) => {_if (!userId) return;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     setIsLoading(true),
     
     try {
-<<<<<<< HEAD
       const { data, error } = await supabase
-        .from(&quot;reviews&quot;)
-=======
-      const { data, _error} = await supabase
-        .from("reviews")
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        .select(`
+        .from(&quot;reviews&quot;)        .select(`
           *,
           reviewer_profile:profiles!reviewer_id(display_name, avatar_url)
         `)
-<<<<<<< HEAD
         .eq("reviewee_id", userId)
         .eq("is_visible", true)
         .eq("status", "approved")
-<<<<<<< HEAD
-        .order("created_at", { ascending: false }),
-=======
-        .eq(&quot;reviewee_id&quot;, userId)
-        .eq(&quot;is_visible&quot;, true)
-        .eq(&quot;status&quot;, &quot;approved&quot;)
-        .order(&quot;created_at&quot;, { ascending: false });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-        .order("created_at", {_ascending: false});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+        .order("created_at", { ascending: false }),        .order("created_at", {_ascending: false});
         
       if (error) throw error,
       
-<<<<<<< HEAD
       setReviews(data || [])
     } catch (err: any) {
-<<<<<<< HEAD
       console.error("Error fetching user reviews:", err),
       toast({
         title: "Error",
         description: "Failed to load reviews",
-        variant: "destructive"})
-=======
-      console.error(&quot;Error fetching user reviews:&quot;, err);
-      toast({
-        title: &quot;Error&quot;,
-        description: &quot;Failed to load reviews&quot;,
-        variant: &quot;destructive&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
+        variant: "destructive"})    } finally {
       setIsLoading(false)
     }
   },
@@ -191,81 +119,34 @@ export function useReviews(_projectId?: string) {_const { user} = useAuth();
   }) => {
     if (!user) {
       toast({
-<<<<<<< HEAD
         title: "Error",
         description: "You must be logged in to submit a review",
         variant: "destructive"}),
-      return false
-=======
-        title: &quot;Error&quot;,
-        description: &quot;You must be logged in to submit a review&quot;,
-        variant: &quot;destructive&quot;});
-=======
-      setReviews(data || []);
-    } catch (err: unknown) {_toast({
-        title: "Error", _description: "Failed to load reviews", _variant: "destructive"});
-    } finally {_setIsLoading(false);}
-  };
-  
-  // Submit a review
-  const _submitReview = async (_review: {_project_id: string;
-    reviewee_id: string;
-    rating: number;
-    review_text: string;
-    communication_rating?: number;
-    quality_rating?: number;
-    timeliness_rating?: number;
-    would_work_again?: boolean;
-    is_anonymous: boolean;}) => {_if (!user) {
-      toast({
-        title: "Error", _description: "You must be logged in to submit a review", _variant: "destructive"});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      return false;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+      return false      return false;
     }
     
     setIsSubmitting(true),
     
-<<<<<<< HEAD
     try {
       const { data, error } = await supabase
         .from(&quot;reviews&quot;)
         .insert({
           ...review,
-          reviewer_id: user.id})
-=======
-    try {_const { data, _error} = await supabase
-        .from("reviews")
-        .insert({_...review, _reviewer_id: user.id})
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        .select()
+          reviewer_id: user.id})        .select()
         .single(),
         
       if (error) throw error,
       
-<<<<<<< HEAD
       toast({
-<<<<<<< HEAD
         title: "Success",
-        description: "Your review has been submitted and is pending approval"}),
-=======
-        title: &quot;Success&quot;,
-        description: &quot;Your review has been submitted and is pending approval&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      
+        description: "Your review has been submitted and is pending approval"}),      
       setUserReview(data),
       return true
     } catch (err: any) {
-<<<<<<< HEAD
-      console.error("Error submitting review:", err),
-=======
-      console.error(&quot;Error submitting review:&quot;, err);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      
+      console.error("Error submitting review:", err),      
       // Check for unique constraint violation
       if (err.code === &quot;23505&quot;) {
         toast({
-<<<<<<< HEAD
           title: "Error",
           description: "You have already submitted a review for this project",
           variant: "destructive"})
@@ -273,18 +154,7 @@ export function useReviews(_projectId?: string) {_const { user} = useAuth();
         toast({
           title: "Error",
           description: "Failed to submit review",
-          variant: "destructive"})
-=======
-          title: &quot;Error&quot;,
-          description: &quot;You have already submitted a review for this project&quot;,
-          variant: &quot;destructive&quot;});
-      } else {
-        toast({
-          title: &quot;Error&quot;,
-          description: &quot;Failed to submit review&quot;,
-          variant: &quot;destructive&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      }
+          variant: "destructive"})      }
       return false
     } finally {
       setIsSubmitting(false)
@@ -294,7 +164,6 @@ export function useReviews(_projectId?: string) {_const { user} = useAuth();
   // Update a review
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {
     if (!user) return false,
-=======
       toast({_title: "Success", _description: "Your review has been submitted and is pending approval"});
       
       setUserReview(data);
@@ -312,63 +181,32 @@ export function useReviews(_projectId?: string) {_const { user} = useAuth();
   
   // Update a review
   const _updateReview = async (_reviewId: string, _updates: Partial<Review>) => {_if (!user) return false;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     setIsSubmitting(true),
     
     try {
-<<<<<<< HEAD
       const { error } = await supabase
-        .from(&quot;reviews&quot;)
-=======
-      const { error} = await supabase
-        .from("reviews")
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        .update(updates)
-<<<<<<< HEAD
+        .from(&quot;reviews&quot;)        .update(updates)
         .eq("id", reviewId)
         .eq("reviewer_id", user.id)
-        .eq("status", "pending"),
-=======
-        .eq(&quot;id&quot;, reviewId)
-        .eq(&quot;reviewer_id&quot;, user.id)
-        .eq(&quot;status&quot;, &quot;pending&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-        
+        .eq("status", "pending"),        
       if (error) throw error,
       
-<<<<<<< HEAD
       toast({
-<<<<<<< HEAD
         title: "Success",
-        description: "Your review has been updated"}),
-=======
-        title: &quot;Success&quot;,
-        description: &quot;Your review has been updated&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      
+        description: "Your review has been updated"}),      
       if (userReview) {
         setUserReview({ ...userReview, ...updates })
       }
       
       return true
     } catch (err: any) {
-<<<<<<< HEAD
       console.error("Error updating review:", err),
       toast({
         title: "Error",
         description: "Failed to update review",
         variant: "destructive"}),
-      return false
-=======
-      console.error(&quot;Error updating review:&quot;, err);
-      toast({
-        title: &quot;Error&quot;,
-        description: &quot;Failed to update review&quot;,
-        variant: &quot;destructive&quot;});
-      return false;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
+      return false    } finally {
       setIsSubmitting(false)
     }
   },
@@ -389,21 +227,13 @@ export function useReviews(_projectId?: string) {_const { user} = useAuth();
         // Check for unique constraint violation
         if (error.code === &quot;23505&quot;) {
           toast({
-<<<<<<< HEAD
             title: "Error",
             description: "You have already reported this review",
-            variant: "destructive"})
-=======
-            title: &quot;Error&quot;,
-            description: &quot;You have already reported this review&quot;,
-            variant: &quot;destructive&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-        } else {
+            variant: "destructive"})        } else {
           throw error
         }
       } else {
         toast({
-<<<<<<< HEAD
           title: "Report Submitted",
           description: "Thank you. Our team will review your report"}),
         return true
@@ -413,21 +243,7 @@ export function useReviews(_projectId?: string) {_const { user} = useAuth();
       toast({
         title: "Error",
         description: "Failed to report review",
-        variant: "destructive"})
-=======
-          title: &quot;Report Submitted&quot;,
-          description: &quot;Thank you. Our team will review your report&quot;});
-        return true;
-      }
-    } catch (err: any) {
-      console.error(&quot;Error reporting review:&quot;, err);
-      toast({
-        title: &quot;Error&quot;,
-        description: &quot;Failed to report review&quot;,
-        variant: &quot;destructive&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-      toast({_title: "Success", _description: "Your review has been updated"});
+        variant: "destructive"})      toast({_title: "Success", _description: "Your review has been updated"});
       
       if (userReview) {_setUserReview({ ...userReview, _...updates});
       }
@@ -458,14 +274,12 @@ export function useReviews(_projectId?: string) {_const { user} = useAuth();
       }
     } catch (err: unknown) {_toast({
         title: "Error", _description: "Failed to report review", _variant: "destructive"});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
     
     return false
   },
   
   // Initialize by fetching reviews if projectId is provided
-<<<<<<< HEAD
   if (projectId && reviews.length === 0 && !isLoading) {
     fetchProjectReviews(projectId)
   }
@@ -479,10 +293,4 @@ export function useReviews(_projectId?: string) {_const { user} = useAuth();
     fetchUserReviews,
     submitReview,
     updateReview,
-    reportReview}
-=======
-  if (projectId && reviews.length === 0 && !isLoading) {_fetchProjectReviews(projectId);}
-  
-  return {_reviews, _userReview, _isLoading, _isSubmitting, _fetchProjectReviews, _fetchUserReviews, _submitReview, _updateReview, _reportReview};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-}
+    reportReview}}

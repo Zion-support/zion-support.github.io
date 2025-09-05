@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 import Link from 'next/link',
 export default function ServicesPage() {
-  return (
-=======
-import Link from 'next/link';
-
-export default function ServicesPage() {_return (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">
+  return (    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
         <div className="container mx-auto px-6 text-center">

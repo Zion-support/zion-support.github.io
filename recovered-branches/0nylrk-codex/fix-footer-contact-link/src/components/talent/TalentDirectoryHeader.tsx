@@ -1,12 +1,5 @@
 
-<<<<<<< HEAD
-import React from "react",
-=======
-import React from &quot;react&quot;;
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface TalentDirectoryHeaderProps {
+import React from "react",interface TalentDirectoryHeaderProps {
   title: string,
   description: string
 }
@@ -20,7 +13,6 @@ export function TalentDirectoryHeader({ title, description }: TalentDirectoryHea
         </h1>
         <p className=&quot;text-zion-slate-light max-w-2xl&quot;>
           {description}
-=======
 interface TalentDirectoryHeaderProps {_title: string;
   description: string;}
 
@@ -32,7 +24,6 @@ export function TalentDirectoryHeader(_{_title, _description}: TalentDirectoryHe
         </h1>
         <p className="text-zion-slate-light max-w-2xl">
           {_description}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </p>
       </div>
     </div>

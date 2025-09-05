@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function HealthcareAISolutions() {
@@ -19,15 +18,8 @@ export default function HealthcareAISolutions() {
 				&quot;HIPAA-compliant data pipelines and audit&quot;,
 				&quot;EHR integrations: HL7/FHIR, Epic, Cerner&quot;
 			]}
-<<<<<<< HEAD
 			industries={["Hospitals", "Clinics", "Payers", "HealthTech"]}
-			canonical="https: //ziontechgroup.com/healthcare-ai-solutions"
-=======
-			industries={[&quot;Hospitals&quot;, &quot;Clinics&quot;, &quot;Payers&quot;, &quot;HealthTech&quot;]}
-			canonical=&quot;https://ziontechgroup.com/healthcare-ai-solutions&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from 'react';
+			canonical="https: //ziontechgroup.com/healthcare-ai-solutions"import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function HealthcareAISolutions() {_return (
@@ -44,7 +36,6 @@ export default function HealthcareAISolutions() {_return (
 			]}
 			industries={_["Hospitals", _"Clinics", _"Payers", _"HealthTech"]}
 			canonical="https://ziontechgroup.com/healthcare-ai-solutions"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 		/>
 	)
 }

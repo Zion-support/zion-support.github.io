@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect } from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -7,73 +5,43 @@ import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 import { useFeatureUsage } from "@/hooks/useFeatureUsage",
-import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus",
-=======
-import React, { useEffect } from &quot;react&quot;;
-import { Header } from &quot;@/components/Header&quot;;
-import { SEO } from &quot;@/components/SEO&quot;;
-import { GradientHeading } from &quot;@/components/GradientHeading&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import Link from 'next/link';
-import { useFeatureUsage } from &quot;@/hooks/useFeatureUsage&quot;;
-import { useAdvancedOnboardingStatus } from &quot;@/hooks/useAdvancedOnboardingStatus&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export default function AIPoweredContent() {
+import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus",export default function AIPoweredContent() {
   useFeatureUsage('ZionGPT'),
   const schema = {
-<<<<<<< HEAD
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "AI Content Generation",
     "description": "Generate SEO-optimized content using ZionGPT to boost your online visibility.",
     "url": "https://app.ziontechgroup.com/features/ai-content-generation"
   },
-=======
-    &quot;@context&quot;: &quot;https://schema.org&quot;,
-    &quot;@type&quot;: &quot;WebPage&quot;,
-    &quot;name&quot;: &quot;AI Content Generation&quot;,
-    &quot;description&quot;: &quot;Generate SEO-optimized content using ZionGPT to boost your online visibility.&quot;,
-    &quot;url&quot;: &quot;https://app.ziontechgroup.com/features/ai-content-generation&quot;
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
   const { markAiExplored } = useAdvancedOnboardingStatus(),
 
   useEffect(() => {
     markAiExplored()
   }, [markAiExplored]),
-=======
-import React, {_useEffect} from "react";
+import React, {useEffect} from "react";
 import Link from 'next/link';
 
-export default function AIPoweredContent() {_useFeatureUsage('ZionGPT');
-  const _schema = {
+export default function AIPoweredContent() {useFeatureUsage('ZionGPT');
+  const schema = {
     "@context": "https://schema.org", _"@type": "WebPage", _"name": "AI Content Generation", _"description": "Generate SEO-optimized content using ZionGPT to boost your online visibility.", _"url": "https://app.ziontechgroup.com/features/ai-content-generation"};
 
-  const {_markAiExplored} = useAdvancedOnboardingStatus();
+  const {markAiExplored} = useAdvancedOnboardingStatus();
 
-  useEffect__(() => {_markAiExplored();}, [markAiExplored]);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+  useEffect_(() => {markAiExplored()}, [markAiExplored]);
 
   return (
     <>
-      <SEO
-        title=&quot;AI Content Generation&quot;
+      <SEO,
+title=&quot;AI Content Generation&quot;
         description=&quot;Generate SEO-optimized blog posts, service descriptions and FAQs with ZionGPT.&quot;
         keywords=&quot;AI content generation, ZionGPT, SEO tools&quot;
         canonical=&quot;https://app.ziontechgroup.com/features/ai-content-generation&quot;
       />
       {_/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-<<<<<<< HEAD
-        type=&quot;application/ld+json&quot;
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-=======
-        type="application/ld+json"
-        dangerouslySetInnerHTML={_{ __html: JSON.stringify(schema)}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      ></script>
+      <script,
+type=&quot;application/ld+json&quot;
+        dangerouslySetInnerHTML={{ _html: JSON.stringify(schema) }}      ></script>
       <Header />
       <main className=&quot;bg-background text-white py-12&quot;>
         <div className=&quot;container mx-auto px-4 md:px-6&quot;>
@@ -82,25 +50,14 @@ export default function AIPoweredContent() {_useFeatureUsage('ZionGPT');
             ZionGPT helps you craft high quality articles, service descriptions and FAQs in minutes.
           </p>
           <div className=&quot;relative w-full h-auto aspect-video mb-12 mx-auto rounded-lg shadow-xl overflow-hidden&quot;>
-            <img
-<<<<<<< HEAD
-              src="https: //placehold.co/800x400"
+            <img,
+src="https: //placehold.co/800x400"
               alt="Screenshot of ZionGPT content tool"
               className="object-cover"
             />
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
-=======
-              src=&quot;https://placehold.co/800x400&quot;
-              alt=&quot;Screenshot of ZionGPT content tool&quot;
-              className=&quot;object-cover&quot;
-            />
-          </div>
-          <h2 className=&quot;text-2xl font-bold mb-4&quot;>Benefits &amp; Use Cases</h2>
-          <ul className=&quot;list-disc list-inside space-y-2 mb-8 text-zion-slate-light&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-            <li>Save time drafting marketing content for your products or services.</li>
+          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">            <li>Save time drafting marketing content for your products or services.</li>
             <li>Improve search rankings with keyword optimized text.</li>
             <li>Create multilingual content to reach a global audience.</li>
           </ul>

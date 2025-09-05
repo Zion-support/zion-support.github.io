@@ -1,18 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" }),
-=======
-import type { NextApiRequest, NextApiResponse } from &quot;next&quot;;
-import { readState, filterEventsByScope } from &quot;../../../utils/sync/storage&quot;;
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== &quot;GET&quot;) return res.status(405).json({ error: &quot;Method not allowed&quot; });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
   const state = readState(),
   const events = filterEventsByScope(state.events, state.config.scope),
 
@@ -21,28 +11,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   let globalVotes = 0,
 
   for (const e of events) {
-<<<<<<< HEAD
-    if (e.type === "token_transfer") {
+    if (e.type === "tokentransfer") {
       const p = e.payload as any,
       totalsByToken[p.token] = (totalsByToken[p.token] || 0) + (p.amount || 0)
-    } else if (e.type === "leaderboard_entry") {
+    } else if (e.type === "leaderboardentry") {
       const p = e.payload as any,
       contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] || 0) + (p.score || 0)
     } else if (e.type === "proposal") {
       const p = e.payload as any,
-      globalVotes += Array.isArray(p.votes) ? p.votes.length : 0
-=======
-    if (e.type === &quot;token_transfer&quot;) {
-      const p = e.payload as any;
-      totalsByToken[p.token] = (totalsByToken[p.token] || 0) + (p.amount || 0);
-    } else if (e.type === &quot;leaderboard_entry&quot;) {
-      const p = e.payload as any;
-      contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] || 0) + (p.score || 0);
-    } else if (e.type === &quot;proposal&quot;) {
-      const p = e.payload as any;
-      globalVotes += Array.isArray(p.votes) ? p.votes.length : 0;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    }
+      globalVotes += Array.isArray(p.votes) ? p.votes.length : 0    }
   }
 
   const topContributors = Object.entries(contributionsBySubject)
@@ -55,30 +32,28 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     topContributors,
     totalVoteCount: globalVotes,
     lastSyncedAt: state.lastSyncedAt})
-=======
-import type {_NextApiRequest, _NextApiResponse} from "next";
+import type {NextApiRequest, NextApiResponse} from "next";
 
-export default function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed"});
+export default function handler(req: NextApiRequest, res: NextApiResponse) {if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed"});
 
-  const _state = readState();
-  const _events = filterEventsByScope(state.events, state.config.scope);
+  const state = readState();
+  const events = filterEventsByScope(state.events, state.config.scope);
 
   const totalsByToken: Record<string, number> = {};
   const contributionsBySubject: Record<string, number> = {};
-  let _globalVotes = 0;
+  let globalVotes = 0;
 
-  for (const e of events) {_if (e.type === "token_transfer") {
-      const _p = e.payload as any;
-      totalsByToken[p.token] = (totalsByToken[p.token] || 0) + (p.amount || 0);} else if (e.type === "leaderboard_entry") {_const _p = e.payload as any;
-      contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] || 0) + (p.score || 0);} else if (e.type === "proposal") {_const _p = e.payload as any;
-      globalVotes += Array.isArray(p.votes) ? p.votes.length : 0;}
+  for (const e of events) {if (e.type === "tokentransfer") {
+      const p = e.payload as any;
+      totalsByToken[p.token] = (totalsByToken[p.token] || 0) + (p.amount || 0)} else if (e.type === "leaderboardentry") {const p = e.payload as any;
+      contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] || 0) + (p.score || 0)} else if (e.type === "proposal") {const p = e.payload as any;
+      globalVotes += Array.isArray(p.votes) ? p.votes.length : 0}
   }
 
-  const _topContributors = Object.entries(contributionsBySubject)
-    .map(_([subjectId, _score]) => ({_subjectId, _score}))
-    .sort(_(a, _b) => b.score - a.score)
+  const topContributors = Object.entries(contributionsBySubject)
+    .map(_([subjectId, score]) => ({subjectId, score}))
+    .sort(_(a, b) => b.score - a.score)
     .slice(0, 10);
 
-  return res.status(200).json({_treasuryTotals: totalsByToken, _topContributors, _totalVoteCount: globalVotes, _lastSyncedAt: state.lastSyncedAt});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+  return res.status(200).json({treasuryTotals: totalsByToken, topContributors, totalVoteCount: globalVotes, lastSyncedAt: state.lastSyncedAt})
 }

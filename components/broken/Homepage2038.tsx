@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Layout from './layout/Layout',
 import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038',
@@ -20,24 +19,8 @@ const Homepage2038: React.FC = () => {
   const featuredMicroSaas = innovative2038MicroSaasServices.filter(s => s.popular).slice(0, 3),
   const featuredIT = innovative2038ITServices.filter(s => s.popular).slice(0, 3),
   const featuredAI = innovative2038AIServices.filter(s => s.popular).slice(0, 3),
-=======
-import React from 'react';
-import Layout from './layout/Layout';
-import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038';
-import Link from 'next/link';
-import {_ArrowRight, _Star, _Brain, _Atom, _Shield, _Zap, _TrendingUp, _Globe, _Rocket, _Target, _Cpu, _Cloud, _Lock, _Users, _Award, _CheckCircle, _Sparkles, _Infinity, _Zap as Lightning} from 'lucide-react';
-
-// Import new services
-
-const Homepage2038: React.FC = () => {_// Get featured services from each category
-  const _featuredMicroSaas = innovative2038MicroSaasServices.filter(s => s.popular).slice(0, _3);
-  const _featuredIT = innovative2038ITServices.filter(s => s.popular).slice(0, _3);
-  const _featuredAI = innovative2038AIServices.filter(s => s.popular).slice(0, _3);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (_<Layout>
       {/* Main Content */}
-<<<<<<< HEAD
       <main className=&quot;relative z-10&quot;>
         {/* Hero Section */}
         <section className=&quot;min-h-screen flex items-center justify-center px-4 relative overflow-hidden&quot;>
@@ -47,49 +30,20 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
             <div className=&quot;absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000&quot;></div>
             <div className=&quot;absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000&quot;></div>
             <div className=&quot;absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-1500&quot;></div>
-            <div className=&quot;absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-500&quot;></div>
-=======
-      <main className="relative z-10">
-        {_/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
-          {_/* Background Elements */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse"></div>
-            <div className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000"></div>
-            <div className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000"></div>
-            <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-1500"></div>
-            <div className="absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-500"></div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          </div>
+            <div className=&quot;absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-500&quot;></div>          </div>
           
           <div className=&quot;text-center max-w-5xl mx-auto relative z-10&quot;>
             <motion.div
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className=&quot;space-y-8&quot;
-=======
-              initial={_{ opacity: 0, _y: 20}}
-              animate={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              className="space-y-8"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;space-y-8&quot;            >
               {_/* Company Badge */}
               <motion.div
-<<<<<<< HEAD
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className=&quot;inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium backdrop-blur-sm&quot;
-=======
-                initial={_{ opacity: 0, _scale: 0.8}}
-                animate={_{ opacity: 1, _scale: 1}}
-                transition={_{ duration: 0.6, _delay: 0.2}}
-                className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium backdrop-blur-sm"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium backdrop-blur-sm&quot;              >
                 <Star className=&quot;w-4 h-4&quot; />
                 <span>Innovation Leader 2038</span>
                 <Sparkles className=&quot;w-4 h-4&quot; />
@@ -98,7 +52,6 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
               <h1 className=&quot;text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight&quot;>
                 Zion Tech Group
               </h1>
-<<<<<<< HEAD
               <p className=&quot;text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed&quot;>
                 Pioneering the future of technology with revolutionary AI, quantum computing, and consciousness evolution solutions
               </p>
@@ -109,21 +62,7 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
                   <motion.button 
                     className=&quot;group px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 text-lg&quot;
                     whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-=======
-              <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">
-                Pioneering the future of technology with revolutionary AI, _quantum computing, _and consciousness evolution solutions
-              </p>
-              
-              {_/* Enhanced CTA Section */}
-              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-10">
-                <Link href="/get-started">
-                  <motion.button 
-                    className="group px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 text-lg"
-                    whileHover={_{ scale: 1.05}}
-                    whileTap={_{ scale: 0.95}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  >
+                    whileTap={{ scale: 0.95 }}                  >
                     <span className=&quot;flex items-center gap-3&quot;>
                       Get Started
                       <ArrowRight className=&quot;w-6 h-6 group-hover:translate-x-1 transition-transform&quot; />
@@ -132,16 +71,9 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
                 </a>
                 <Link href=&quot;/services&quot;>
                   <motion.button 
-<<<<<<< HEAD
                     className=&quot;px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg backdrop-blur-sm&quot;
                     whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-=======
-                    className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg backdrop-blur-sm"
-                    whileHover={_{ scale: 1.05}}
-                    whileTap={_{ scale: 0.95}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  >
+                    whileTap={{ scale: 0.95 }}                  >
                     Explore Services
                   </motion.button>
                 </a>
@@ -149,18 +81,10 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
               
               {_/* Trust Indicators */}
               <motion.div
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className=&quot;flex flex-wrap items-center justify-center gap-8 text-sm text-gray-400&quot;
-=======
-                initial={_{ opacity: 0, _y: 20}}
-                animate={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.8, _delay: 0.4}}
-                className="flex flex-wrap items-center justify-center gap-8 text-sm text-gray-400"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;flex flex-wrap items-center justify-center gap-8 text-sm text-gray-400&quot;              >
                 <div className=&quot;flex items-center space-x-2&quot;>
                   <Shield className=&quot;w-5 h-5 text-green-400&quot; />
                   <span>Enterprise Security</span>
@@ -182,7 +106,6 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Company Stats */}
         <section className=&quot;py-24 px-4 bg-black/30 relative&quot;>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5&quot;></div>
@@ -196,63 +119,28 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
             >
               <motion.div 
                 className=&quot;p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300&quot;
-                whileHover={{ scale: 1.05 }}
-=======
-        {_/* Company Stats */}
-        <section className="py-24 px-4 bg-black/30 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
-          <div className="max-w-7xl mx-auto relative z-10">
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
-              className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
-            >
-              <motion.div 
-                className="p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300"
-                whileHover={_{ scale: 1.05}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                whileHover={{ scale: 1.05 }}              >
                 <div className=&quot;text-5xl font-bold text-cyan-400 mb-3 group-hover:text-cyan-300 transition-colors&quot;>100+</div>
                 <div className=&quot;text-gray-300 text-lg&quot;>AI Services</div>
                 <div className=&quot;text-sm text-cyan-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity&quot;>Cutting-edge solutions</div>
               </motion.div>
               <motion.div 
-<<<<<<< HEAD
                 className=&quot;p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300&quot;
-                whileHover={{ scale: 1.05 }}
-=======
-                className="p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300"
-                whileHover={_{ scale: 1.05}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                whileHover={{ scale: 1.05 }}              >
                 <div className=&quot;text-5xl font-bold text-blue-400 mb-3 group-hover:text-blue-300 transition-colors&quot;>200+</div>
                 <div className=&quot;text-gray-300 text-lg&quot;>Quantum Solutions</div>
                 <div className=&quot;text-sm text-blue-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity&quot;>Next-gen computing</div>
               </motion.div>
               <motion.div 
-<<<<<<< HEAD
                 className=&quot;p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300&quot;
-                whileHover={{ scale: 1.05 }}
-=======
-                className="p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300"
-                whileHover={_{ scale: 1.05}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                whileHover={{ scale: 1.05 }}              >
                 <div className=&quot;text-5xl font-bold text-purple-400 mb-3 group-hover:text-purple-300 transition-colors&quot;>24/7</div>
                 <div className=&quot;text-gray-300 text-lg&quot;>Autonomous Operations</div>
                 <div className=&quot;text-sm text-purple-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity&quot;>Always available</div>
               </motion.div>
               <motion.div 
-<<<<<<< HEAD
                 className=&quot;p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300&quot;
-                whileHover={{ scale: 1.05 }}
-=======
-                className="p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300"
-                whileHover={_{ scale: 1.05}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                whileHover={{ scale: 1.05 }}              >
                 <div className=&quot;text-5xl font-bold text-green-400 mb-3 group-hover:text-green-300 transition-colors&quot;>∞</div>
                 <div className=&quot;text-gray-300 text-lg&quot;>Future Possibilities</div>
                 <div className=&quot;text-sm text-green-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity&quot;>Unlimited potential</div>
@@ -261,7 +149,6 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Featured AI Services */}
         <section className=&quot;py-24 px-4&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -270,19 +157,7 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className=&quot;text-center mb-20&quot;
-=======
-        {_/* Featured AI Services */}
-        <section className="py-24 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
-              className="text-center mb-20"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;text-center mb-20&quot;            >
               <h2 className=&quot;text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent&quot;>
                 Revolutionary AI Services
               </h2>
@@ -291,14 +166,8 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
               </p>
             </motion.div>
             
-<<<<<<< HEAD
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16&quot;>
-              {featuredAI.map((service, index) => (
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {_featuredAI.map((service, _index) => (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                <motion.div
+              {featuredAI.map((service, index) => (                <motion.div
                   key={service.id}
                   initial={_{ opacity: 0, _y: 20}}
                   whileInView={_{ opacity: 1, _y: 0}}
@@ -306,14 +175,8 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
                   viewport={_{ once: true}}
                 >
                   <UltraFuturisticServiceCard2038
-<<<<<<< HEAD
                     service={service}
-                    variant=&quot;consciousness&quot;
-=======
-                    service={_service}
-                    variant="consciousness"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  />
+                    variant=&quot;consciousness&quot;                  />
                 </motion.div>
               ))}
             </div>
@@ -321,16 +184,9 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
             <div className=&quot;text-center&quot;>
               <Link href=&quot;/ai-services&quot;>
                 <motion.button
-<<<<<<< HEAD
                   className=&quot;px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg&quot;
                   whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-=======
-                  className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg"
-                  whileHover={_{ scale: 1.05}}
-                  whileTap={_{ scale: 0.95}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                >
+                  whileTap={{ scale: 0.95 }}                >
                   View All AI Services
                 </motion.button>
               </a>
@@ -338,7 +194,6 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Featured Micro SAAS Services */}
         <section className=&quot;py-24 px-4 bg-black/20&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -347,19 +202,7 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className=&quot;text-center mb-20&quot;
-=======
-        {_/* Featured Micro SAAS Services */}
-        <section className="py-24 px-4 bg-black/20">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
-              className="text-center mb-20"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;text-center mb-20&quot;            >
               <h2 className=&quot;text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent&quot;>
                 Innovative Micro SAAS
               </h2>
@@ -368,14 +211,8 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
               </p>
             </motion.div>
             
-<<<<<<< HEAD
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16&quot;>
-              {featuredMicroSaas.map((service, index) => (
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {_featuredMicroSaas.map(_(service, _index) => (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                <motion.div
+              {featuredMicroSaas.map((service, index) => (                <motion.div
                   key={service.id}
                   initial={_{ opacity: 0, _y: 20}}
                   whileInView={_{ opacity: 1, _y: 0}}
@@ -383,14 +220,8 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
                   viewport={_{ once: true}}
                 >
                   <UltraFuturisticServiceCard2038
-<<<<<<< HEAD
                     service={service}
-                    variant=&quot;automation&quot;
-=======
-                    service={_service}
-                    variant="automation"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  />
+                    variant=&quot;automation&quot;                  />
                 </motion.div>
               ))}
             </div>
@@ -398,16 +229,9 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
             <div className=&quot;text-center&quot;>
               <Link href=&quot;/services&quot;>
                 <motion.button
-<<<<<<< HEAD
                   className=&quot;px-8 py-4 border-2 border-emerald-400 text-emerald-400 font-semibold rounded-xl hover:bg-emerald-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg&quot;
                   whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-=======
-                  className="px-8 py-4 border-2 border-emerald-400 text-emerald-400 font-semibold rounded-xl hover:bg-emerald-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg"
-                  whileHover={_{ scale: 1.05}}
-                  whileTap={_{ scale: 0.95}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                >
+                  whileTap={{ scale: 0.95 }}                >
                   Explore All Services
                 </motion.button>
               </a>
@@ -415,7 +239,6 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Featured IT Services */}
         <section className=&quot;py-24 px-4&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -424,19 +247,7 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className=&quot;text-center mb-20&quot;
-=======
-        {_/* Featured IT Services */}
-        <section className="py-24 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
-              className="text-center mb-20"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;text-center mb-20&quot;            >
               <h2 className=&quot;text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent&quot;>
                 Advanced IT Infrastructure
               </h2>
@@ -445,14 +256,8 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
               </p>
             </motion.div>
             
-<<<<<<< HEAD
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16&quot;>
-              {featuredIT.map((service, index) => (
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {_featuredIT.map(_(service, _index) => (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                <motion.div
+              {featuredIT.map((service, index) => (                <motion.div
                   key={service.id}
                   initial={_{ opacity: 0, _y: 20}}
                   whileInView={_{ opacity: 1, _y: 0}}
@@ -460,14 +265,8 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
                   viewport={_{ once: true}}
                 >
                   <UltraFuturisticServiceCard2038
-<<<<<<< HEAD
                     service={service}
-                    variant=&quot;quantum&quot;
-=======
-                    service={_service}
-                    variant="quantum"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  />
+                    variant=&quot;quantum&quot;                  />
                 </motion.div>
               ))}
             </div>
@@ -475,16 +274,9 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
             <div className=&quot;text-center&quot;>
               <Link href=&quot;/it-services&quot;>
                 <motion.button
-<<<<<<< HEAD
                   className=&quot;px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover:bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg&quot;
                   whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-=======
-                  className="px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover:bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg"
-                  whileHover={_{ scale: 1.05}}
-                  whileTap={_{ scale: 0.95}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                >
+                  whileTap={{ scale: 0.95 }}                >
                   View All IT Services
                 </motion.button>
               </a>
@@ -492,7 +284,6 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Why Choose Us */}
         <section className=&quot;py-24 px-4 bg-black/30&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -501,19 +292,7 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className=&quot;text-center mb-20&quot;
-=======
-        {_/* Why Choose Us */}
-        <section className="py-24 px-4 bg-black/30">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
-              className="text-center mb-20"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;text-center mb-20&quot;            >
               <h2 className=&quot;text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
                 Why Choose Zion Tech Group?
               </h2>
@@ -522,7 +301,6 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
               </p>
             </motion.div>
             
-<<<<<<< HEAD
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
               {[
                 {
@@ -577,42 +355,12 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
                     </div>
                   </div>
                   <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>{feature.title}</h3>
-                  <p className=&quot;text-gray-300 leading-relaxed&quot;>{feature.description}</p>
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {_[
-                {
-                  icon: <Brain className="w-12 h-12" />, _title: "AI Consciousness Evolution", _description: "Leading the development of artificial consciousness and emotional intelligence", _color: "from-purple-500 to-pink-500"},
-                {_icon: <Atom className="w-12 h-12" />, _title: "Quantum Computing Power", _description: "Access to the most advanced quantum computing capabilities available", _color: "from-blue-500 to-cyan-500"},
-                {_icon: <Shield className="w-12 h-12" />, _title: "Future-Proof Security", _description: "Quantum-resistant encryption and zero-trust security frameworks", _color: "from-red-500 to-orange-500"},
-                {_icon: <Rocket className="w-12 h-12" />, _title: "Innovation First", _description: "Constantly pushing the boundaries of what's possible in technology", _color: "from-green-500 to-emerald-500"},
-                {_icon: <Users className="w-12 h-12" />, _title: "Global Expertise", _description: "World-class team with experience across cutting-edge technologies", _color: "from-indigo-500 to-purple-500"},
-                {_icon: <Award className="w-12 h-12" />, _title: "Proven Results", _description: "Track record of delivering transformative solutions to leading organizations", _color: "from-yellow-500 to-orange-500"}
-              ].map(_(feature, _index) => (
-                <motion.div
-                  key={_index}
-                  initial={_{ opacity: 0, _y: 20}}
-                  whileInView={_{ opacity: 1, _y: 0}}
-                  transition={_{ duration: 0.6, _delay: index * 0.1}}
-                  viewport={_{ once: true}}
-                  className="text-center p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300"
-                  whileHover={_{ scale: 1.05}}
-                >
-                  <div className={_`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <div className="text-white">
-                      {_feature.icon}
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{_feature.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{_feature.description}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </motion.div>
+                  <p className=&quot;text-gray-300 leading-relaxed&quot;>{feature.description}</p>                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className=&quot;py-24 px-4&quot;>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;>
@@ -621,19 +369,7 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className=&quot;space-y-8&quot;
-=======
-        {_/* CTA Section */}
-        <section className="py-24 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
-              className="space-y-8"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;space-y-8&quot;            >
               <h2 className=&quot;text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent&quot;>
                 Ready to Shape the Future?
               </h2>
@@ -645,16 +381,9 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
               <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center&quot;>
                 <Link href=&quot;/contact&quot;>
                   <motion.button
-<<<<<<< HEAD
                     className=&quot;px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 text-lg&quot;
                     whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-=======
-                    className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 text-lg"
-                    whileHover={_{ scale: 1.05}}
-                    whileTap={_{ scale: 0.95}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  >
+                    whileTap={{ scale: 0.95 }}                  >
                     <span className=&quot;flex items-center gap-3&quot;>
                       Get Started Today
                       <ArrowRight className=&quot;w-6 h-6&quot; />
@@ -663,16 +392,9 @@ const Homepage2038: React.FC = () => {_// Get featured services from each catego
                 </a>
                 <Link href=&quot;/services&quot;>
                   <motion.button
-<<<<<<< HEAD
                     className=&quot;px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg&quot;
                     whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-=======
-                    className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg"
-                    whileHover={_{ scale: 1.05}}
-                    whileTap={_{ scale: 0.95}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  >
+                    whileTap={{ scale: 0.95 }}                  >
                     Explore Our Services
                   </motion.button>
                 </a>
