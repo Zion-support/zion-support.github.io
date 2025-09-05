@@ -1,1 +1,147 @@
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class AllAutomationsRunner { constructor() { this.projectRoot = process.cwd();" this.reportsDir = path.join(this.projectRoot, "all-automations-reports"); this.ensureDirectories()} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir, { recursive: true })} } log(message) { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] ${message}`)} async runAutomation(scriptName, scriptPath) {` this.log(` Running ${scriptName}.`); try {` const result = execSync(`node ${scriptPath}`, {" cwd: this.projectRoot,"" encoding: "utf8"," timeout: 300000 / 5 minutes });` this.log(` ${scriptName} completed successfully`); return {" name: scriptName," success: true," output: result }} catch (error) {"` this.log(` ${scriptName} failed: ${error.message}`); return {" name: scriptName," success: false," error: error.message }} } async runAllAutomations() {" this.log(" Starting All Automations Runner"); const automations = [{"" name: "Error Prevention System","" script: "scripts/error-prevention-system.cjs" }, {"" name: "Performance Optimizer","" script: "scripts/performance-optimizer.cjs" }, {"" name: "Security Auditor","" script: "scripts/security-auditor.cjs" }, {"" name: "Build Monitor","" script: "scripts/build-monitor.cjs" }, {"" name: "Code Quality Monitor","" script: "scripts/code-quality-monitor.cjs" }, {"" name: "Dependency Manager","" script: "scripts/dependency-manager.cjs" }, {"" name: "Git Workflow Automator","" script: "scripts/git-workflow-automator.cjs" }, {"" name: "Health Monitor","" script: "scripts/health-monitor.cjs" }, {"" name: "Log Analyzer","" script: "scripts/log-analyzer.cjs" }, {"" name: "Resource Optimizer","" script: "scripts/resource-optimizer.cjs" } ]; const results = []; for (const automation of automations) { const result = await this.runAutomation(automation.name, automation.script); results.push(result)} return results} async generateOverallReport(automationResults) {" this.log(" Generating overall report."); const report = {" timestamp: new Date().toISOString()," summary: { total: automationResults.length," successful: automationResults.filter(r => r.success).length," failed: automationResults.filter(r => !r.success).length }," results: automationResults," recommendations: this.generateOverallRecommendations(automationResults) };` const reportFile = path.join(this.reportsDir, `all-automations-report-${Date.now()}.json`); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)); "` this.log(` Overall report generated: ${reportFile}`); return report} generateOverallRecommendations(automationResults) { const recommendations = []; const failedAutomations = automationResults.filter(r => !r.success); if (failedAutomations.length > 0) { recommendations.push({"" type: "failed_automations","" priority: "high","` message: `${failedAutomations.length} automations failed. Review and fix the issues.`,"" impact: "Ensures all automations work properly"," failedAutomations: failedAutomations.map(a => a.name) })} const successfulAutomations = automationResults.filter(r => r.success); if (successfulAutomations.length === automationResults.length) { recommendations.push({"" type: "all_automations_successful","" priority: "low","" message: "All automations completed successfully. Great job!","" impact: "Indicates a healthy project state" })} return recommendations} async run() {" this.log(" Starting All Automations Runner"); try { const automationResults = await this.runAllAutomations(); const overallReport = await this.generateOverallReport(automationResults);" this.log(" All Automations Runner completed!");"` this.log(` Total automations: ${overallReport.summary.total}`);"` this.log(` Successful: ${overallReport.summary.successful}`);"` this.log(` Failed: ${overallReport.summary.failed}`);"` this.log(` Recommendations: ${overallReport.recommendations.length}`); if (overallReport.summary.failed > 0) {" this.log(" Some automations failed. Check the report for details."); process.exit(1)} else {" this.log(" All automations completed successfully!"); process.exit(0)} } catch (error) {"` this.log(` All Automations Runner failed: ${error.message}`); process.exit(1)} }}/ Run the runner if this file is executed directlyif (require.main === module) { const runner = new AllAutomationsRunner(); runner.run()}module.exports = AllAutomationsRunner;""`"`
+const fs = require('fs');
+const path = require('path');
+const { exec } = require('child_process');
+const { promisify } = require('util');
+
+const execAsync = promisify(exec);
+
+class RunAllAutomations {
+  constructor() {
+    this.logFile = path.join(__dirname, '..', 'automation', 'logs', 'run-all-automations.log');
+    this.results = {
+      success: [],
+      failed: [],
+      warnings: []
+    };
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+    console.log(logMessage.trim());
+    fs.appendFileSync(this.logFile, logMessage);
+  }
+
+  async runCommand(command, options = {}) {
+    try {
+      const { stdout, stderr } = await execAsync(command, { 
+        cwd: process.cwd(), 
+        timeout: 120000, 
+        ...options 
+      });
+      return { success: true, stdout, stderr };
+    } catch (error) {
+      this.log(`Command failed: ${command} - ${error.message}`);
+      return { 
+        success: false, 
+        stdout: error.stdout || "", 
+        stderr: error.stderr || error.message 
+      };
+    }
+  }
+
+  async runAutomation(scriptName, command) {
+    this.log(`Running: ${scriptName}`);
+    const result = await this.runCommand(command);
+    
+    if (result.success) {
+      this.results.success.push({ script: scriptName, output: result.stdout });
+      this.log(`✅ ${scriptName} completed successfully`);
+    } else {
+      this.results.failed.push({ script: scriptName, error: result.stderr });
+      this.log(`❌ ${scriptName} failed: ${result.stderr}`);
+    }
+    
+    return result;
+  }
+
+  async runAll() {
+    this.log('🚀 Starting comprehensive automation run...');
+    
+    // Ensure logs directory exists
+    const logsDir = path.join(__dirname, '..', 'automation', 'logs');
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true });
+    }
+
+    // Define all automation scripts to run
+    const automations = [
+      { name: 'Install Dependencies', command: 'npm install' },
+      { name: 'Type Check', command: 'npm run type-check' },
+      { name: 'Lint Fix', command: 'npm run lint:fix' },
+      { name: 'Build Application', command: 'npm run build' },
+      { name: 'Test Smoke', command: 'npm run test:smoke' },
+      { name: 'Security Audit', command: 'npm run security:audit' },
+      { name: 'Performance Monitor', command: 'npm run perf:monitor' },
+      { name: 'SEO Optimizer', command: 'npm run automation:seo' },
+      { name: 'Health Check', command: 'npm run automation:health' },
+      { name: 'Quick Improvements', command: 'node scripts/quick-app-improvements.cjs' },
+      { name: 'Performance Improver', command: 'node scripts/performance-improver.cjs' },
+      { name: 'Security Improver', command: 'node scripts/security-improver.cjs' },
+      { name: 'Git Status', command: 'git status' },
+      { name: 'Git Add', command: 'git add .' },
+      { name: 'Git Commit', command: 'git commit -m "Automated improvements and fixes"' },
+      { name: 'Git Push', command: 'git push origin main' }
+    ];
+
+    // Run each automation
+    for (const automation of automations) {
+      await this.runAutomation(automation.name, automation.command);
+    }
+
+    // Generate comprehensive report
+    this.generateReport();
+    
+    this.log('🎉 Comprehensive automation run completed');
+    this.log(`✅ Successful: ${this.results.success.length}`);
+    this.log(`❌ Failed: ${this.results.failed.length}`);
+    this.log(`⚠️ Warnings: ${this.results.warnings.length}`);
+
+    return this.results;
+  }
+
+  generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      summary: {
+        total: this.results.success.length + this.results.failed.length,
+        successful: this.results.success.length,
+        failed: this.results.failed.length,
+        warnings: this.results.warnings.length
+      },
+      details: {
+        successful: this.results.success,
+        failed: this.results.failed,
+        warnings: this.results.warnings
+      }
+    };
+
+    const reportFile = path.join(__dirname, '..', 'automation', 'logs', 'comprehensive-automation-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    this.log(`📊 Report saved to ${reportFile}`);
+    return report;
+  }
+}
+
+// Handle command line arguments
+if (require.main === module) {
+  const runner = new RunAllAutomations();
+  const command = process.argv[2];
+
+  switch (command) {
+    case "run":
+      runner.runAll().catch(error => {
+        console.error("Automation run failed: ", error);
+        process.exit(1);
+      });
+      break;
+    case "report":
+      runner.generateReport();
+      break;
+    default:
+      console.log("Usage: node run-all-automations.cjs [run|report]");
+      process.exit(1);
+  }
+}
+
+module.exports = RunAllAutomations;
