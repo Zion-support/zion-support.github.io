@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, ArrowRight } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
+import SEOHead from '../components/SEOHead';
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
@@ -35,7 +36,12 @@ const services = [
 export default function HomePage() {
   return (
     <MainLayout>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEOHead 
+        title="Zion Tech Group - Leading AI & Technology Solutions"
+        description="Revolutionary AI solutions, enterprise IT services, and innovative micro SaaS products. Transform your business with cutting-edge technology from quantum computing to metaverse intelligence."
+        keywords="AI solutions, IT services, micro SaaS, quantum computing, blockchain, machine learning, digital transformation, enterprise technology"
+      />
+      <div id="main-content" className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
