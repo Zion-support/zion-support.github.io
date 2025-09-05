@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import SimpleLayout from './components/SimpleLayout';
+=======
+import Layout from './components/Layout';
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 
 export default function TestPage() {
   return (

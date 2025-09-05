@@ -81,16 +81,18 @@ import {
   Bot, 
   FileText, 
 <<<<<<< HEAD
+<<<<<<< HEAD
   Image, 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
+=======
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
   Video, 
   Mic, 
   Code, 
   Settings, 
   Monitor, 
   Smartphone, 
-  Cloud, 
   Server, 
   Network, 
   Car, 
@@ -116,6 +118,7 @@ import {
   MapPin,
   Zap,
   Users,
+<<<<<<< HEAD
   Shield,
   Gamepad2,
   Wifi,
@@ -144,6 +147,11 @@ const contactInfo = {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
 >>>>>>> main
+=======
+  Shield
+} from 'lucide-react';
+
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 const aiServices = [
   // AI Automation & Workflow
   {
@@ -1334,10 +1342,34 @@ const aiServices = [
     title: 'AI-Powered Quantum Computing Optimization',
     description: 'Quantum algorithm optimization and quantum machine learning solutions.',
     icon: Cpu,
+<<<<<<< HEAD
     features: ['Quantum Algorithms', 'Optimization', 'Machine Learning', 'Error Correction'],
     pricing: '$150,000 - $1,000,000/setup',
     category: 'Quantum Computing',
     popular: true
+=======
+    category: 'Quantum AI',
+    price: 'Starting at $8,500/month',
+    features: [
+      'Quantum machine learning algorithms',
+      'Quantum optimization solutions',
+      'Quantum neural networks',
+      'Hybrid classical-quantum models',
+      'Quantum data processing',
+      'Advanced cryptography',
+      'Quantum simulation',
+      'Real-time quantum computing'
+    ],
+    benefits: [
+      'Solve previously intractable problems',
+      'Exponential speedup for specific tasks',
+      'Breakthrough optimization results',
+      'Future-proof AI architecture'
+    ],
+    marketPrice: '$12,000-25,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Research, Finance, Pharmaceuticals, Defense'
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
   },
   {
     title: 'AI-Powered Smart Grid Management',
@@ -2280,6 +2312,7 @@ const aiServices = [
       'Reduce content moderation costs by 70%',
       'Enable multilingual operations'
     ],
+<<<<<<< HEAD
     marketPrice: '$3,500-7,500/month',
     setupTime: '2-3 weeks',
     targetUsers: 'Customer Service, Content, Legal, Healthcare'
@@ -3824,6 +3857,65 @@ const benefits = [{
     setupTime: '3-6 weeks',
     targetUsers: 'Media, Entertainment, Education, Accessibility'
 >>>>>>> main
+=======
+    marketPrice: '$3,000-6,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'Marketing, Media, Entertainment, Design'
+  },
+  {
+    id: 11,
+    title: 'AI-Powered Cybersecurity',
+    description: 'Advanced AI security systems with threat detection, automated response, and predictive security analytics.',
+    icon: Shield,
+    category: 'Security AI',
+    price: 'Starting at $4,800/month',
+    features: [
+      'Threat detection & prevention',
+      'Automated incident response',
+      'Behavioral analysis',
+      'Vulnerability assessment',
+      'Security orchestration',
+      'Compliance monitoring',
+      'Zero-trust architecture',
+      'Predictive security'
+    ],
+    benefits: [
+      'Detect threats 10x faster',
+      'Reduce false positives by 85%',
+      'Automate 90% of security tasks',
+      'Prevent 99.9% of attacks'
+    ],
+    marketPrice: '$6,500-13,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'Enterprises, Government, Healthcare, Finance'
+  },
+  {
+    id: 12,
+    title: 'AI-Powered Personal Assistant',
+    description: 'Advanced personal AI assistant with natural language processing, task automation, and intelligent scheduling.',
+    icon: Users,
+    category: 'Personal AI',
+    price: 'Starting at $199/month',
+    features: [
+      'Natural language understanding',
+      'Task automation',
+      'Intelligent scheduling',
+      'Email management',
+      'Research assistance',
+      'Voice interaction',
+      'Learning & adaptation',
+      'Multi-platform integration'
+    ],
+    benefits: [
+      'Increase productivity by 50%',
+      'Save 15+ hours per week',
+      'Improve task organization',
+      'Enable hands-free operation'
+    ],
+    marketPrice: '$300-600/month',
+    setupTime: '1-2 weeks',
+    targetUsers: 'Professionals, Executives, Entrepreneurs, Students'
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
   }
 ];
 
@@ -3831,6 +3923,7 @@ const categories = [
   { name: "All", count: aiServices.length },
   { name: "Machine Learning", count: aiServices.filter(s => s.category === "Machine Learning").length },
   { name: "Computer Vision", count: aiServices.filter(s => s.category === "Computer Vision").length },
+<<<<<<< HEAD
   { name: "NLP", count: aiServices.filter(s => s.category === "NLP").length },
   { name: "Analytics", count: aiServices.filter(s => s.category === "Analytics").length },
   { name: "Conversational AI", count: aiServices.filter(s => s.category === "Conversational AI").length },
@@ -3856,10 +3949,34 @@ const categories = [
   { name: "Real Estate AI", count: aiServices.filter(s => s.category === "Real Estate AI").length },
   { name: "Gaming AI", count: aiServices.filter(s => s.category === "Gaming AI").length },
   { name: "Climate AI", count: aiServices.filter(s => s.category === "Climate AI").length }
+=======
+  { name: "Quantum AI", count: aiServices.filter(s => s.category === "Quantum AI").length },
+  { name: "Autonomous Systems", count: aiServices.filter(s => s.category === "Autonomous Systems").length },
+  { name: "Neural Interfaces", count: aiServices.filter(s => s.category === "Neural Interfaces").length },
+  { name: "Pharmaceutical AI", count: aiServices.filter(s => s.category === "Pharmaceutical AI").length },
+  { name: "Environmental AI", count: aiServices.filter(s => s.category === "Environmental AI").length },
+  { name: "Space AI", count: aiServices.filter(s => s.category === "Space AI").length },
+  { name: "FinTech AI", count: aiServices.filter(s => s.category === "FinTech AI").length },
+  { name: "Creative AI", count: aiServices.filter(s => s.category === "Creative AI").length },
+  { name: "Security AI", count: aiServices.filter(s => s.category === "Security AI").length },
+  { name: "Personal AI", count: aiServices.filter(s => s.category === "Personal AI").length }
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 ];
 
 export default function AIServicesPage() {
+  const [selectedCategory, setSelectedCategory] = React.useState("All");
+  const [searchTerm, setSearchTerm] = React.useState("");
+
+  const filteredServices = aiServices.filter(service => {
+    const matchesCategory = selectedCategory === "All" || service.category === selectedCategory;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
                   <Head>
@@ -3924,54 +4041,51 @@ export default function AIServicesPage() {
       title="AI Services - Zion Tech Group | Machine Learning, Computer Vision & NLP"
       description="Comprehensive AI services including machine learning, computer vision, natural language processing, and custom AI solutions. Transform your business with cutting-edge AI technology."
       keywords="AI services, machine learning, computer vision, NLP, artificial intelligence, AI consulting, custom AI solutions"
+=======
+    <Layout
+      title="AI Services - Zion Tech Group"
+      description="Cutting-edge AI services including machine learning, computer vision, NLP, and AI consulting. Transform your business with intelligent automation and data-driven insights."
+      keywords="AI services, machine learning, computer vision, NLP, artificial intelligence, AI consulting, automation, predictive analytics"
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
     >
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">AI Services</h1>
-              <p className="text-xl mb-8 max-w-3xl mx-auto">
-                Transform your business with cutting-edge AI solutions. From machine learning models to computer vision and natural language processing, we deliver intelligent solutions that drive growth and innovation.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-                >
-                  Get Free Consultation
-                </Link>
-                <a 
-                  href={`tel:${contactInfo.phone}`}
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
-                >
-                  Call {contactInfo.phone}
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Services Grid */}
-        <section className="py-16">
+        <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
           <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our AI Services</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Comprehensive AI solutions tailored to your business needs
-              </p>
-            </motion.div>
+            <div className="text-center max-w-4xl mx-auto">
+              <motion.h1 
+                className="text-5xl md:text-6xl font-bold mb-6 leading-tight"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                Advanced AI Services
+              </motion.h1>
+              <motion.p 
+                className="text-xl md:text-2xl mb-8 text-gray-200"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                Cutting-edge artificial intelligence solutions powered by machine learning, computer vision, 
+                and natural language processing. Transform your business with intelligent automation.
+              </motion.p>
+              
+              <motion.div 
+                className="flex flex-col sm:flex-row justify-center gap-4 mb-12"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                <Link href="/contact" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                  Get Free AI Consultation
+                </Link>
+                <a href="tel:+13024640950" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                  Call +1 302 464 0950
+                </a>
+              </motion.div>
 
+<<<<<<< HEAD
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiServices.map((service, index) => (
                 <motion.div
@@ -4861,10 +4975,37 @@ export default function AIServices() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
                 </motion.div>
               ))}
+=======
+              {/* Stats */}
+              <motion.div 
+                className="grid md:grid-cols-4 gap-8 mt-16"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-400">80+</div>
+                  <div className="text-gray-300">AI Solutions</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-400">95%</div>
+                  <div className="text-gray-300">Accuracy Rate</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-400">24/7</div>
+                  <div className="text-gray-300">AI Monitoring</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-400">300+</div>
+                  <div className="text-gray-300">AI Models Deployed</div>
+                </div>
+              </motion.div>
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* CTA Section */}
 <<<<<<< HEAD
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
@@ -4921,8 +5062,171 @@ export default function AIServices() {
                   View IT Services
                 </Link>
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
+=======
+        {/* Search and Filter Section */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              {/* Search Bar */}
+              <div className="relative mb-8">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search AI services..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg"
+                />
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
               </div>
-            </motion.div>
+
+              {/* Category Filter */}
+              <div className="flex flex-wrap gap-2 justify-center">
+                {categories.map((category) => (
+                  <button
+                    key={category.name}
+                    onClick={() => setSelectedCategory(category.name)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                      selectedCategory === category.name
+                        ? 'bg-purple-600 text-white'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    {category.name} ({category.count})
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-8">
+              {filteredServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                >
+                  <div className="p-8">
+                    {/* Header */}
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex items-center">
+                        <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                          <service.icon className="w-6 h-6 text-purple-600" />
+                        </div>
+                        <div>
+                          <span className="bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded-full">
+                            {service.category}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="flex items-center text-yellow-500">
+                        <Star className="w-4 h-4 fill-current" />
+                        <Star className="w-4 h-4 fill-current" />
+                        <Star className="w-4 h-4 fill-current" />
+                        <Star className="w-4 h-4 fill-current" />
+                        <Star className="w-4 h-4 fill-current" />
+                      </div>
+                    </div>
+
+                    {/* Title and Description */}
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+                    <p className="text-gray-600 mb-4">{service.description}</p>
+
+                    {/* Features */}
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
+                      <ul className="space-y-1">
+                        {service.features.slice(0, 5).map((feature, idx) => (
+                          <li key={idx} className="flex items-center text-sm text-gray-600">
+                            <CheckCircle className="w-4 h-4 text-purple-500 mr-2 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                        {service.features.length > 5 && (
+                          <li className="text-sm text-purple-600 font-medium">
+                            +{service.features.length - 5} more features
+                          </li>
+                        )}
+                      </ul>
+                    </div>
+
+                    {/* Benefits */}
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-gray-900 mb-2">Proven Benefits:</h4>
+                      <ul className="space-y-1">
+                        {service.benefits.map((benefit, idx) => (
+                          <li key={idx} className="flex items-center text-sm text-purple-600">
+                            <TrendingUp className="w-4 h-4 mr-2 flex-shrink-0" />
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Pricing and Info */}
+                    <div className="border-t border-gray-200 pt-4">
+                      <div className="flex items-center justify-between mb-4">
+                        <div>
+                          <div className="text-2xl font-bold text-purple-600">{service.price}</div>
+                          <div className="text-sm text-gray-500">vs market: {service.marketPrice}</div>
+                        </div>
+                        <div className="text-right text-sm text-gray-500">
+                          <div>Setup: {service.setupTime}</div>
+                          <div>Target: {service.targetUsers}</div>
+                        </div>
+                      </div>
+
+                      <div className="flex space-x-2">
+                        <Link 
+                          href="/contact" 
+                          className="flex-1 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg text-sm font-semibold text-center transition-colors"
+                        >
+                          Get Started
+                        </Link>
+                        <Link 
+                          href={`/contact?service=${encodeURIComponent(service.title)}`} 
+                          className="flex-1 bg-transparent border border-purple-600 text-purple-600 hover:bg-purple-50 px-4 py-2 rounded-lg text-sm font-semibold text-center transition-colors"
+                        >
+                          Learn More
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {filteredServices.length === 0 && (
+              <div className="text-center py-12">
+                <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">No services found</h3>
+                <p className="text-gray-600">Try adjusting your search or filter criteria</p>
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl font-bold mb-4">Ready to Harness the Power of AI?</h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Get started with our AI services and discover how artificial intelligence can transform your business.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link href="/contact" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                Get Free AI Consultation
+              </Link>
+              <a href="tel:+13024640950" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                Call +1 302 464 0950
+              </a>
+            </div>
           </div>
         </section>
       </div>

@@ -18,6 +18,7 @@ export default function PrivacyPage() {
 =======
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, User, Mail, Phone } from 'lucide-react';
 
@@ -29,6 +30,20 @@ export default function PrivacyPage() {
         <meta name="description" content="Learn about how Zion Tech Group protects your privacy and handles your personal information." />
       </Head>
 
+=======
+import Link from 'next/link';
+import { Shield, Lock, Eye, Database, Mail, Phone, MapPin } from 'lucide-react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+export default function PrivacyPage() {
+  return (
+    <MainLayout
+      title="Privacy Policy - Zion Tech Group"
+      description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
+      keywords="privacy policy, data protection, personal information, GDPR compliance"
+      canonical="https://ziontechgroup.com/privacy"
+    >
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -333,7 +348,7 @@ export default function PrivacyPage() {
           </div>
         </section>
       </div>
-    </Layout>
+    </MainLayout>
   );
 }
 =======

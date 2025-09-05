@@ -20,6 +20,7 @@ export default function TermsPage() {
 =======
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { FileText, Scale, Shield, AlertTriangle } from 'lucide-react';
 
@@ -31,6 +32,20 @@ export default function TermsPage() {
         <meta name="description" content="Terms of service for Zion Tech Group services." />
       </Head>
 
+=======
+import Link from 'next/link';
+import { FileText, Shield, AlertCircle, Scale, Mail, Phone, MapPin } from 'lucide-react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+export default function TermsPage() {
+  return (
+    <MainLayout
+      title="Terms of Service - Zion Tech Group"
+      description="Zion Tech Group's terms of service outlining the rules and regulations for using our services."
+      keywords="terms of service, user agreement, service terms, legal terms"
+      canonical="https://ziontechgroup.com/terms"
+    >
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-20">
@@ -444,7 +459,7 @@ export default function TermsPage() {
           </div>
         </section>
       </div>
-    </Layout>
+    </MainLayout>
   );
 }
 =======
