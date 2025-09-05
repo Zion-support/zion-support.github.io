@@ -1,10 +1,20 @@
+<<<<<<< HEAD:pages/register.tsx
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Link from 'next/link';
+import { User, Mail, Lock, Eye, EyeOff, ArrowRight } from 'lucide-react';
+
+export default function Register() {
+=======
 import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { User, Mail, Lock, Eye, EyeOff, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
-import Layout from '../components/Layout';
 
 export default function RegisterPage() {
+>>>>>>> main:pages_disabled/register.tsx
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -26,16 +36,26 @@ export default function RegisterPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle registration logic here
-    console.log('Registration attempt:', formData);
+<<<<<<< HEAD:pages/register.tsx
+    // Handle form submission
+    console.log('Form submitted:', formData);
   };
 
   return (
-    <Layout
-      title="Register - Zion Tech Group"
-      description="Create your Zion Tech Group account to access our comprehensive technology solutions and services."
-      keywords="register, sign up, account, Zion Tech Group, technology solutions"
-    >
+    <div className="min-h-screen bg-gray-50">
+=======
+    // Handle registration logic here
+    console.log('Registration data:', formData);
+  };
+
+  return (
+    <>
+>>>>>>> main:pages_disabled/register.tsx
+      <Head>
+        <title>Register - Zion Tech Group</title>
+        <meta name="description" content="Create your Zion Tech Group account to access our comprehensive technology solutions and services." />
+      </Head>
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <motion.div
@@ -244,6 +264,10 @@ export default function RegisterPage() {
           </motion.div>
         </div>
       </div>
-    </Layout>
+<<<<<<< HEAD:pages/register.tsx
+    </div>
+=======
+    </>
+>>>>>>> main:pages_disabled/register.tsx
   );
 }
