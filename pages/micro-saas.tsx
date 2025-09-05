@@ -48,7 +48,8 @@ import {
   HardDrive,
   Bell,
   Home,
-  BookOpen
+  BookOpen,
+  Brain
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -297,6 +298,89 @@ const microSaaSProducts = [
     pricing: '$79 - $399/month',
     category: 'API Development',
     link: 'https://apidocs.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Code Generator',
+    description: 'Advanced code generation using AI with support for multiple programming languages and frameworks.',
+    icon: Code,
+    features: ['Multi-language Support', 'Framework Integration', 'Code Optimization', 'Documentation Generation'],
+    pricing: '$299 - $1,499/month',
+    category: 'AI Development',
+    popular: true,
+    link: 'https://aicodegen.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Integration Platform',
+    description: 'Easy blockchain integration with smart contract deployment and Web3 connectivity.',
+    icon: Shield,
+    features: ['Smart Contract Deployment', 'Web3 Integration', 'Multi-chain Support', 'Security Auditing'],
+    pricing: '$499 - $2,499/month',
+    category: 'Blockchain',
+    link: 'https://blockchainplatform.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Device Management',
+    description: 'Comprehensive IoT device management with real-time monitoring and analytics.',
+    icon: Settings,
+    features: ['Device Monitoring', 'Real-time Analytics', 'Remote Management', 'Security Protocols'],
+    pricing: '$199 - $999/month',
+    category: 'IoT',
+    link: 'https://iotmanagement.ziontechgroup.com'
+  },
+  {
+    title: 'AR/VR Content Creator',
+    description: 'No-code AR/VR content creation platform with immersive experience builder.',
+    icon: Monitor,
+    features: ['No-code Builder', '3D Asset Library', 'Multi-platform Export', 'Analytics Dashboard'],
+    pricing: '$399 - $1,999/month',
+    category: 'AR/VR',
+    link: 'https://arvrcreator.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum Computing Simulator',
+    description: 'Quantum algorithm development and simulation platform for researchers and developers.',
+    icon: Cpu,
+    features: ['Quantum Simulator', 'Algorithm Development', 'Visualization Tools', 'Performance Analysis'],
+    pricing: '$999 - $4,999/month',
+    category: 'Quantum Computing',
+    link: 'https://quantumsimulator.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Orchestrator',
+    description: 'Distributed computing management platform for edge devices and microservices.',
+    icon: Network,
+    features: ['Edge Orchestration', 'Microservices Management', 'Load Balancing', 'Monitoring'],
+    pricing: '$599 - $2,999/month',
+    category: 'Edge Computing',
+    link: 'https://edgeorchestrator.ziontechgroup.com'
+  },
+  {
+    title: 'AI Model Marketplace',
+    description: 'Marketplace for buying, selling, and deploying pre-trained AI models.',
+    icon: Brain,
+    features: ['Model Marketplace', 'Easy Deployment', 'Performance Metrics', 'Revenue Sharing'],
+    pricing: '$99 - $499/month + 10% commission',
+    category: 'AI Marketplace',
+    popular: true,
+    link: 'https://aimodelmarketplace.ziontechgroup.com'
+  },
+  {
+    title: 'Digital Twin Creator',
+    description: 'Create and manage digital twins of physical assets with real-time synchronization.',
+    icon: Monitor,
+    features: ['Digital Twin Creation', 'Real-time Sync', 'Predictive Analytics', 'IoT Integration'],
+    pricing: '$799 - $3,999/month',
+    category: 'Digital Twin',
+    link: 'https://digitaltwincreator.ziontechgroup.com'
+  },
+  {
+    title: 'Metaverse Builder',
+    description: 'Comprehensive platform for building and managing virtual worlds and experiences.',
+    icon: Globe,
+    features: ['Virtual World Builder', 'Avatar System', 'Multi-user Support', 'Monetization Tools'],
+    pricing: '$1,499 - $7,499/month',
+    category: 'Metaverse',
+    link: 'https://metaversebuilder.ziontechgroup.com'
   },
   {
     title: 'User Behavior Analytics',

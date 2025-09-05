@@ -33,7 +33,9 @@ import {
   Kanban,
   DollarSign,
   Code,
-  Rocket
+  Rocket,
+  Brain,
+  Sprout
 } from 'lucide-react';
 
 const itServices = [
@@ -299,6 +301,107 @@ const itServices = [
     pricing: '$12,000 - $80,000/project',
     category: 'Governance',
     link: 'https://itgovernance.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing infrastructure setup and quantum algorithm development services.',
+    icon: Cpu,
+    features: ['Quantum Hardware Setup', 'Algorithm Development', 'Quantum Simulation', 'Hybrid Computing'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Quantum Computing',
+    popular: true,
+    link: 'https://quantuminfrastructure.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Distributed edge computing infrastructure for real-time processing and low latency.',
+    icon: Network,
+    features: ['Edge Infrastructure', 'Real-time Processing', 'Low Latency Networks', 'Distributed Management'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Edge Computing',
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Infrastructure Services',
+    description: 'Enterprise blockchain infrastructure setup and smart contract development.',
+    icon: Shield,
+    features: ['Blockchain Setup', 'Smart Contract Development', 'Consensus Mechanisms', 'Security Auditing'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'Blockchain',
+    link: 'https://blockchaininfra.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Infrastructure Management',
+    description: 'Comprehensive IoT infrastructure design, deployment, and management services.',
+    icon: Settings,
+    features: ['IoT Architecture', 'Device Management', 'Data Processing', 'Security Implementation'],
+    pricing: '$20,000 - $150,000/project',
+    category: 'IoT',
+    link: 'https://iotinfrastructure.ziontechgroup.com'
+  },
+  {
+    title: 'AR/VR Infrastructure Services',
+    description: 'Immersive technology infrastructure setup and content delivery optimization.',
+    icon: Monitor,
+    features: ['AR/VR Infrastructure', 'Content Delivery', 'Performance Optimization', 'User Experience'],
+    pricing: '$35,000 - $250,000/project',
+    category: 'AR/VR',
+    link: 'https://arvrinfrastructure.ziontechgroup.com'
+  },
+  {
+    title: 'AI Infrastructure & MLOps',
+    description: 'Complete AI infrastructure setup with MLOps pipeline and model deployment.',
+    icon: Brain,
+    features: ['AI Infrastructure', 'MLOps Pipeline', 'Model Deployment', 'Performance Monitoring'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'AI Infrastructure',
+    popular: true,
+    link: 'https://aiinfrastructure.ziontechgroup.com'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network infrastructure design, implementation, and optimization services.',
+    icon: Wifi,
+    features: ['5G Network Design', 'Infrastructure Setup', 'Performance Optimization', 'Security Implementation'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: '5G Networks',
+    link: 'https://5gnetworks.ziontechgroup.com'
+  },
+  {
+    title: 'Digital Twin Infrastructure',
+    description: 'Digital twin platform infrastructure for real-time simulation and monitoring.',
+    icon: Monitor,
+    features: ['Digital Twin Platform', 'Real-time Simulation', 'IoT Integration', 'Analytics Dashboard'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Digital Twin',
+    link: 'https://digitaltwininfra.ziontechgroup.com'
+  },
+  {
+    title: 'Metaverse Infrastructure',
+    description: 'Comprehensive metaverse infrastructure setup and virtual world management.',
+    icon: Globe,
+    features: ['Metaverse Platform', 'Virtual World Creation', 'Avatar Systems', 'Monetization Infrastructure'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Metaverse',
+    link: 'https://metaverseinfra.ziontechgroup.com'
+  },
+  {
+    title: 'Green IT Solutions',
+    description: 'Sustainable IT infrastructure design and energy-efficient computing solutions.',
+    icon: Sprout,
+    features: ['Energy Efficiency', 'Carbon Footprint Reduction', 'Sustainable Hardware', 'Green Data Centers'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'Green IT',
+    link: 'https://greenit.ziontechgroup.com'
+  },
+  {
+    title: 'Space Technology Infrastructure',
+    description: 'Satellite communication infrastructure and space-based computing solutions.',
+    icon: Rocket,
+    features: ['Satellite Infrastructure', 'Space-based Computing', 'Ground Station Setup', 'Orbital Management'],
+    pricing: '$100,000 - $2,000,000/project',
+    category: 'Space Technology',
+    link: 'https://spacetechnology.ziontechgroup.com'
   },
   {
     title: 'Enterprise Data Management',

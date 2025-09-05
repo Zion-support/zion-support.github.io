@@ -13,6 +13,7 @@ import {
   Users,
   Globe,
   Settings,
+  Cpu,
   Facebook,
   Twitter,
   Linkedin,
@@ -21,49 +22,69 @@ import {
 } from 'lucide-react';
 
 const services = {
-  'AI Solutions': [{ "name": 'AI-Powered Email Responder', "href": '/ai-services#ai-email-responder' },
-    { "name": 'Predictive Analytics Platform', "href": '/ai-services#predictive-analytics' },
-    { "name": 'Intelligent Chatbot System', "href": '/ai-services#intelligent-chatbot' },
-    { "name": 'Computer Vision Solutions', "href": '/ai-services#computer-vision' },
-    { "name": 'AI Content Generation', "href": '/ai-services#ai-content-generation' },
-    { "name": 'Voice AI Assistant', "href": '/ai-services#voice-ai-assistant' },
-    { "name": 'AI Fraud Detection', "href": '/ai-services#ai-fraud-detection' },
-    { "name": 'AI Drug Discovery', "href": '/ai-services#ai-drug-discovery' }
+  'AI Solutions': [
+    { "name": 'AI Climate Intelligence', "href": '/ai-services#ai-climate-intelligence' },
+    { "name": 'AI Quantum Computing', "href": '/ai-services#ai-quantum-computing' },
+    { "name": 'AI Blockchain Analytics', "href": '/ai-services#ai-blockchain-analytics' },
+    { "name": 'AI Metaverse Solutions', "href": '/ai-services#ai-metaverse-solutions' },
+    { "name": 'AI Autonomous Vehicles', "href": '/ai-services#ai-autonomous-vehicles' },
+    { "name": 'AI Space Technology', "href": '/ai-services#ai-space-technology' },
+    { "name": 'AI Digital Twin Platform', "href": '/ai-services#ai-digital-twin-platform' },
+    { "name": 'AI Neuromorphic Computing', "href": '/ai-services#ai-neuromorphic-computing' }
   ],
-  'IT Services': [{ "name": 'Cloud Infrastructure Management', "href": '/it-services#cloud-infrastructure' },
-    { "name": 'Cybersecurity Solutions', "href": '/it-services#cybersecurity' },
-    { "name": 'Network Infrastructure', "href": '/it-services#network-infrastructure' },
-    { "name": 'Database Management', "href": '/it-services#database-management' },
-    { "name": 'DevOps & CI/CD', "href": '/it-services#devops-cicd' },
-    { "name": 'Data Center Migration', "href": '/it-services#data-center-migration' },
-    { "name": 'IT Asset Management', "href": '/it-services#it-asset-management' },
-    { "name": 'Backup & Disaster Recovery', "href": '/it-services#backup-disaster-recovery' }
+  'IT Services': [
+    { "name": 'Quantum Computing Infrastructure', "href": '/it-services#quantum-computing-infrastructure' },
+    { "name": 'Edge Computing Solutions', "href": '/it-services#edge-computing-solutions' },
+    { "name": 'Blockchain Infrastructure', "href": '/it-services#blockchain-infrastructure' },
+    { "name": 'AI Infrastructure & MLOps', "href": '/it-services#ai-infrastructure-mlops' },
+    { "name": '5G Network Implementation', "href": '/it-services#5g-network-implementation' },
+    { "name": 'Digital Twin Infrastructure', "href": '/it-services#digital-twin-infrastructure' },
+    { "name": 'Metaverse Infrastructure', "href": '/it-services#metaverse-infrastructure' },
+    { "name": 'Space Technology Infrastructure', "href": '/it-services#space-technology-infrastructure' }
   ],
-  'Micro SaaS': [{ "name": 'Cloud Cost Guard', "href": '/micro-saas#cloud-cost-guard' },
-    { "name": 'LLM Evaluation Suite', "href": '/micro-saas#llm-evaluation' },
-    { "name": 'Customer Feedback App', "href": '/micro-saas#customer-feedback' },
-    { "name": 'API Rate Limiting', "href": '/micro-saas#api-rate-limiting' },
-    { "name": 'Content Moderation AI', "href": '/micro-saas#content-moderation' },
-    { "name": 'Workflow Automation', "href": '/micro-saas#workflow-automation' },
-    { "name": 'AI Lead Scoring', "href": '/micro-saas#ai-lead-scoring' },
-    { "name": 'Social Media Scheduler', "href": '/micro-saas#social-media-scheduler' }
+  'Micro SaaS': [
+    { "name": 'AI-Powered Code Generator', "href": '/micro-saas#ai-powered-code-generator' },
+    { "name": 'Blockchain Integration Platform', "href": '/micro-saas#blockchain-integration-platform' },
+    { "name": 'IoT Device Management', "href": '/micro-saas#iot-device-management' },
+    { "name": 'AR/VR Content Creator', "href": '/micro-saas#arvr-content-creator' },
+    { "name": 'Quantum Computing Simulator', "href": '/micro-saas#quantum-computing-simulator' },
+    { "name": 'AI Model Marketplace', "href": '/micro-saas#ai-model-marketplace' },
+    { "name": 'Digital Twin Creator', "href": '/micro-saas#digital-twin-creator' },
+    { "name": 'Metaverse Builder', "href": '/micro-saas#metaverse-builder' }
   ]
 };
 
-const company = [{ "name": 'About Us', "href": '/about' },
+const company = [
+  { "name": 'About Us', "href": '/about' },
   { "name": 'Our Team', "href": '/about#team' },
   { "name": 'Careers', "href": '/careers' },
+  { "name": 'Partners', "href": '/partners' },
   { "name": 'Case Studies', "href": '/case-studies' },
   { "name": 'Blog', "href": '/blog' },
-  { "name": 'News', "href": '/news' }
+  { "name": 'News', "href": '/news' },
+  { "name": 'Press Kit', "href": '/press-kit' }
 ];
 
-const resources = [{ "name": 'Documentation', "href": '/docs' },
+const resources = [
+  { "name": 'Documentation', "href": '/docs' },
   { "name": 'API Reference', "href": '/api-docs' },
   { "name": 'Tutorials', "href": '/tutorials' },
   { "name": 'Guides', "href": '/guides' },
+  { "name": 'White Papers', "href": '/white-papers' },
+  { "name": 'Webinars', "href": '/webinars' },
   { "name": 'FAQ', "href": '/faq' },
   { "name": 'Support', "href": '/support' }
+];
+
+const technologies = [
+  { "name": 'AI & Machine Learning', "href": '/technologies/ai-ml' },
+  { "name": 'Cloud Computing', "href": '/technologies/cloud' },
+  { "name": 'Blockchain', "href": '/technologies/blockchain' },
+  { "name": 'IoT', "href": '/technologies/iot' },
+  { "name": 'Quantum Computing', "href": '/technologies/quantum' },
+  { "name": 'Edge Computing', "href": '/technologies/edge' },
+  { "name": 'AR/VR', "href": '/technologies/ar-vr' },
+  { "name": '5G Networks', "href": '/technologies/5g' }
 ];
 
 const legal = [{ "name": 'Privacy Policy', "href": '/privacy' },
@@ -93,7 +114,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-6">
@@ -188,6 +209,27 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               {resources.map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    href={link.href}
+                    className="text-gray-400 hover: text-white transition-colors text-sm flex items-center group"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Technologies */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 flex items-center">
+              <Cpu className="w-5 h-5 mr-2 text-blue-400" />
+              Technologies
+            </h3>
+            <ul className="space-y-3">
+              {technologies.map((link) => (
                 <li key={link.name}>
                   <Link 
                     href={link.href}

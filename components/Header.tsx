@@ -18,7 +18,11 @@ import {
   Globe,
   FileText,
   MessageSquare,
-  Rocket
+  Rocket,
+  Cpu,
+  Building,
+  Zap,
+  Monitor
 } from 'lucide-react';
 
 const navigation = [{
@@ -26,36 +30,62 @@ const navigation = [{
     "href": '/services',
     "icon": Settings,
     "children": [
-      { name: 'AI Solutions', "href": '/ai-services', "icon": Brain, "count": '20+' },
-      { "name": 'IT Services', "href": '/it-services', "icon": Network, "count": '20+' },
-      { "name": 'Micro SaaS', "href": '/micro-saas', "icon": Cloud, "count": '25+' },
-      { "name": 'All Services', "href": '/services', "icon": Globe, "count": '65+' }
+      { name: 'AI Solutions', "href": '/ai-services', "icon": Brain, "count": '30+' },
+      { "name": 'IT Services', "href": '/it-services', "icon": Network, "count": '35+' },
+      { "name": 'Micro SaaS', "href": '/micro-saas', "icon": Cloud, "count": '40+' },
+      { "name": 'All Services', "href": '/services', "icon": Globe, "count": '105+' }
     ]
   },
   {
     "name": 'Solutions',
     "href": '/solutions',
     "icon": Shield,
-    "children": [{ name: 'Enterprise Solutions', "href": '/solutions/enterprise', "icon": Shield },
+    "children": [
+      { name: 'Enterprise Solutions', "href": '/solutions/enterprise', "icon": Building },
       { "name": 'Startup Solutions', "href": '/solutions/startup', "icon": Rocket },
       { "name": 'Industry Solutions', "href": '/solutions/industry', "icon": BarChart3 },
-      { "name": 'Custom Development', "href": '/solutions/custom', "icon": Settings }
+      { "name": 'Custom Development', "href": '/solutions/custom', "icon": Settings },
+      { "name": 'Digital Transformation', "href": '/solutions/digital-transformation', "icon": Zap },
+      { "name": 'Cloud Migration', "href": '/solutions/cloud-migration', "icon": Cloud }
+    ]
+  },
+  {
+    "name": 'Technologies',
+    "href": '/technologies',
+    "icon": Cpu,
+    "children": [
+      { name: 'AI & Machine Learning', "href": '/technologies/ai-ml', "icon": Brain },
+      { "name": 'Cloud Computing', "href": '/technologies/cloud', "icon": Cloud },
+      { "name": 'Blockchain', "href": '/technologies/blockchain', "icon": Shield },
+      { "name": 'IoT', "href": '/technologies/iot', "icon": Settings },
+      { "name": 'Quantum Computing', "href": '/technologies/quantum', "icon": Cpu },
+      { "name": 'Edge Computing', "href": '/technologies/edge', "icon": Network }
     ]
   },
   {
     "name": 'Resources',
     "href": '/resources',
     "icon": FileText,
-    "children": [{ name: 'Documentation', "href": '/docs', "icon": FileText },
+    "children": [
+      { name: 'Documentation', "href": '/docs', "icon": FileText },
       { "name": 'Case Studies', "href": '/case-studies', "icon": BarChart3 },
       { "name": 'Blog', "href": '/blog', "icon": MessageSquare },
-      { "name": 'API Reference', "href": '/api-docs', "icon": Settings }
+      { "name": 'API Reference', "href": '/api-docs', "icon": Settings },
+      { "name": 'White Papers', "href": '/white-papers', "icon": FileText },
+      { "name": 'Webinars', "href": '/webinars', "icon": Monitor }
     ]
   },
   {
-    "name": 'About',
+    "name": 'Company',
     "href": '/about',
-    "icon": Users
+    "icon": Users,
+    "children": [
+      { name: 'About Us', "href": '/about', "icon": Users },
+      { "name": 'Our Team', "href": '/about#team', "icon": Users },
+      { "name": 'Careers', "href": '/careers', "icon": Users },
+      { "name": 'Partners', "href": '/partners', "icon": Globe },
+      { "name": 'News', "href": '/news', "icon": MessageSquare }
+    ]
   },
   {
     "name": 'Contact',

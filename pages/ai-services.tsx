@@ -390,6 +390,89 @@ const aiServices = [
     pricing: '$2,500 - $15,000/month',
     category: 'Performance AI',
     link: 'https://aiperformance.ziontechgroup.com'
+  },
+  {
+    title: 'AI Climate Intelligence',
+    description: 'Advanced climate data analysis and environmental impact prediction using machine learning.',
+    icon: Sprout,
+    features: ['Climate Modeling', 'Environmental Impact Analysis', 'Carbon Footprint Tracking', 'Sustainability Insights'],
+    pricing: '$5,000 - $30,000/project',
+    category: 'Climate AI',
+    popular: true,
+    link: 'https://aiclimate.ziontechgroup.com'
+  },
+  {
+    title: 'AI Quantum Computing Solutions',
+    description: 'Quantum machine learning algorithms and quantum-optimized AI solutions for complex problems.',
+    icon: Cpu,
+    features: ['Quantum ML Algorithms', 'Optimization Problems', 'Cryptography', 'Quantum Simulation'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Quantum AI',
+    link: 'https://aiquantum.ziontechgroup.com'
+  },
+  {
+    title: 'AI Edge Computing Platform',
+    description: 'Distributed AI processing at the edge with real-time inference and reduced latency.',
+    icon: Smartphone,
+    features: ['Edge Inference', 'Real-time Processing', 'Offline Capability', 'Bandwidth Optimization'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Edge AI',
+    link: 'https://aiedge.ziontechgroup.com'
+  },
+  {
+    title: 'AI Blockchain Analytics',
+    description: 'Advanced blockchain transaction analysis and DeFi protocol optimization using AI.',
+    icon: Shield,
+    features: ['Transaction Analysis', 'DeFi Optimization', 'Smart Contract Auditing', 'Risk Assessment'],
+    pricing: '$10,000 - $50,000/month',
+    category: 'Blockchain AI',
+    popular: true,
+    link: 'https://aiblockchain.ziontechgroup.com'
+  },
+  {
+    title: 'AI Metaverse Solutions',
+    description: 'AI-powered virtual world creation, avatar intelligence, and immersive experiences.',
+    icon: Globe,
+    features: ['Virtual World Generation', 'Avatar AI', 'Behavioral Simulation', 'Immersive Experiences'],
+    pricing: '$12,000 - $60,000/project',
+    category: 'Metaverse AI',
+    link: 'https://aimetaverse.ziontechgroup.com'
+  },
+  {
+    title: 'AI Autonomous Vehicles',
+    description: 'Advanced AI systems for autonomous vehicle navigation, safety, and fleet management.',
+    icon: Car,
+    features: ['Autonomous Navigation', 'Safety Systems', 'Fleet Management', 'Traffic Optimization'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Autonomous AI',
+    link: 'https://aiautonomous.ziontechgroup.com'
+  },
+  {
+    title: 'AI Space Technology',
+    description: 'AI solutions for satellite data analysis, space mission optimization, and space exploration.',
+    icon: Rocket,
+    features: ['Satellite Data Analysis', 'Mission Optimization', 'Space Weather Prediction', 'Orbital Mechanics'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Space AI',
+    link: 'https://aispace.ziontechgroup.com'
+  },
+  {
+    title: 'AI Digital Twin Platform',
+    description: 'Comprehensive digital twin creation and simulation for physical assets and processes.',
+    icon: Monitor,
+    features: ['Digital Twin Creation', 'Real-time Simulation', 'Predictive Modeling', 'IoT Integration'],
+    pricing: '$15,000 - $80,000/project',
+    category: 'Digital Twin AI',
+    link: 'https://aidigitaltwin.ziontechgroup.com'
+  },
+  {
+    title: 'AI Neuromorphic Computing',
+    description: 'Brain-inspired AI computing systems for ultra-efficient processing and learning.',
+    icon: Brain,
+    features: ['Neuromorphic Processing', 'Spiking Neural Networks', 'Ultra-low Power', 'Real-time Learning'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Neuromorphic AI',
+    link: 'https://aineuromorphic.ziontechgroup.com'
   }
 ];
 
