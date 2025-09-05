@@ -13,14 +13,20 @@ function fixSyntaxIssues(filePath) {
     let fixed = false;
 
     // Fix import statements with trailing commas
-    if (content.includes('import React from \'react\',')) {
-      content = content.replace(/import React from 'react',/g, 'import React from \'react\';');
+    if (content.includes("import React from 'react',")) {
+      content = content.replace(
+        /import React from 'react',/g,
+        "import React from 'react';"
+      );
       fixed = true;
     }
 
     // Fix export statements with trailing commas
     if (content.includes('export interface')) {
-      content = content.replace(/export interface (\w+) \{/g, 'export interface $1 {');
+      content = content.replace(
+        /export interface (\w+) \{/g,
+        'export interface $1 {'
+      );
       fixed = true;
     }
 
@@ -42,7 +48,10 @@ function fixSyntaxIssues(filePath) {
     content = content.replace(/,\s*;/g, ';');
 
     // Fix React component syntax
-    content = content.replace(/const (\w+) = \(\) => \{/g, 'const $1 = () => {');
+    content = content.replace(
+      /const (\w+) = \(\) => \{/g,
+      'const $1 = () => {'
+    );
     content = content.replace(/export default (\w+),/g, 'export default $1;');
 
     // Fix TypeScript interface syntax
@@ -85,18 +94,22 @@ function fixSyntaxIssues(filePath) {
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   let files = [];
   const items = fs.readdirSync(dir);
-  
+
   for (const item of items) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+
+    if (
+      stat.isDirectory() &&
+      !item.startsWith('.') &&
+      item !== 'node_modules'
+    ) {
       files = files.concat(getAllFiles(fullPath, extensions));
     } else if (extensions.some(ext => item.endsWith(ext))) {
       files.push(fullPath);
     }
   }
-  
+
   return files;
 }
 
@@ -104,18 +117,18 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
 try {
   const files = getAllFiles('/workspace');
   let fixedCount = 0;
-  
+
   console.log(`Found ${files.length} files to check`);
-  
+
   for (const file of files) {
     if (fixSyntaxIssues(file)) {
       fixedCount++;
       console.log(`✅ Fixed: ${file}`);
     }
   }
-  
+
   console.log(`\n🎯 Fixed ${fixedCount} files`);
-  
+
   // Try to run build after fixes
   console.log('\n🔨 Testing build after fixes...');
   try {
@@ -124,7 +137,6 @@ try {
   } catch (error) {
     console.log('⚠️ Build still has issues, but syntax fixes applied');
   }
-  
 } catch (error) {
   console.error('Error:', error.message);
   process.exit(1);

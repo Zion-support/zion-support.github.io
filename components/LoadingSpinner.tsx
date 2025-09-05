@@ -4,6 +4,7 @@ interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
   className?: string;
+<<<<<<< HEAD
   fullScreen?: boolean;
 }
 
@@ -12,10 +13,19 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   text = 'Loading...', 
   className = '',
   fullScreen = false
+=======
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+  text = 'Loading...',
+  className = '',
+>>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
+<<<<<<< HEAD
     lg: 'w-12 h-12'
   };
 
@@ -25,6 +35,13 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
   return (
     <div className={containerClasses}>
+=======
+    lg: 'w-12 h-12',
+  };
+
+  return (
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+>>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
       <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-slate-300 border-t-blue-600`} />
       {text && (
         <p className="mt-2 text-slate-400 text-sm">{text}</p>
@@ -32,5 +49,36 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     </div>
   );
 };
+<<<<<<< HEAD
 
 export default LoadingSpinner;
+=======
+<<<<<<< HEAD
+
+export default LoadingSpinner;
+=======
+,
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
+  size = 'md',
+  text = 'Loading...',
+  className = '',
+}) => {,
+  const sizeClasses = {,
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+  };
+,
+  return (,
+    <div className={`flex flex-col items-center justify-center ${className}`}>,
+      <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-slate-300 border-t-blue-600`} />,
+      {text && (,
+        <p className="mt-2 text-slate-400 text-sm">{text}</p>,
+      )};
+    </div>,
+  ),
+};
+,
+export default LoadingSpinner,
+>>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
+>>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31

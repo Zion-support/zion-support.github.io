@@ -23,9 +23,11 @@ class ImportCleaner {
       }
 
       let content = fs.readFileSync(filePath, 'utf8');
-      
+
       // Find lucide-react import
-      const importMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
+      const importMatch = content.match(
+        /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/
+      );
       if (!importMatch) {
         return true; // No lucide-react import
       }
@@ -39,7 +41,7 @@ class ImportCleaner {
       // Remove duplicates while preserving order
       const uniqueImports = [];
       const seen = new Set();
-      
+
       for (const imp of imports) {
         // Extract the base name (before 'as')
         const baseName = imp.split(' as ')[0].trim();
@@ -72,11 +74,11 @@ class ImportCleaner {
 
   async cleanAllFiles() {
     this.log('🚀 Starting import cleaning...');
-    
+
     const filesToClean = [
       'pages/components/Navigation.tsx',
       'pages/it-services.tsx',
-      'pages/components/Footer.tsx'
+      'pages/components/Footer.tsx',
     ];
 
     for (const file of filesToClean) {

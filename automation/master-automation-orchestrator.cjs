@@ -12,38 +12,38 @@ async function runAllAutomations() {
     {
       name: 'Code Quality Check',
       command: 'npm run lint:check',
-      critical: false
+      critical: false,
     },
     {
       name: 'Type Check',
       command: 'npm run type-check',
-      critical: false
+      critical: false,
     },
     {
       name: 'Build Test',
       command: 'npm run build',
-      critical: true
+      critical: true,
     },
     {
       name: 'Test Suite',
       command: 'npm run test:smoke',
-      critical: true
+      critical: true,
     },
     {
       name: 'Security Audit',
       command: 'npm audit',
-      critical: false
+      critical: false,
     },
     {
       name: 'Performance Analysis',
       command: 'node automation/performance-optimizer.js',
-      critical: false
+      critical: false,
     },
     {
       name: 'Security Scan',
       command: 'node automation/security-scanner.cjs',
-      critical: false
-    }
+      critical: false,
+    },
   ];
 
   const results = [];
@@ -54,22 +54,21 @@ async function runAllAutomations() {
     try {
       console.log(`\n🔧 Running: ${task.name}`);
       const startTime = Date.now();
-      
-      execSync(task.command, { 
+
+      execSync(task.command, {
         stdio: 'pipe',
-        cwd: '/workspace'
+        cwd: '/workspace',
       });
-      
+
       const duration = Date.now() - startTime;
       results.push({
         task: task.name,
         status: 'success',
         duration: duration,
-        critical: task.critical
+        critical: task.critical,
       });
       successCount++;
       console.log(`✅ ${task.name} completed in ${duration}ms`);
-      
     } catch (error) {
       const duration = Date.now() - Date.now();
       results.push({
@@ -77,11 +76,11 @@ async function runAllAutomations() {
         status: 'failed',
         duration: duration,
         critical: task.critical,
-        error: error.message
+        error: error.message,
       });
       failureCount++;
       console.log(`❌ ${task.name} failed: ${error.message}`);
-      
+
       if (task.critical) {
         console.log(`⚠️ Critical task failed: ${task.name}`);
       }
@@ -99,7 +98,9 @@ function generateReport(results) {
       totalTasks: results.results.length,
       successful: results.successCount,
       failed: results.failureCount,
-      successRate: ((results.successCount / results.results.length) * 100).toFixed(2) + '%'
+      successRate:
+        ((results.successCount / results.results.length) * 100).toFixed(2) +
+        '%',
     },
     tasks: results.results,
     recommendations: [
@@ -107,8 +108,8 @@ function generateReport(results) {
       'Address any critical failures immediately',
       'Review and fix linting issues',
       'Optimize performance based on analysis results',
-      'Implement security recommendations'
-    ]
+      'Implement security recommendations',
+    ],
   };
 
   // Ensure reports directory exists
@@ -129,29 +130,33 @@ function generateReport(results) {
 async function main() {
   try {
     console.log('🎯 Starting comprehensive automation run...\n');
-    
+
     const results = await runAllAutomations();
     const report = generateReport(results);
-    
+
     console.log('\n📊 AUTOMATION SUMMARY');
     console.log('====================');
     console.log(`Total Tasks: ${report.summary.totalTasks}`);
     console.log(`Successful: ${report.summary.successful}`);
     console.log(`Failed: ${report.summary.failed}`);
     console.log(`Success Rate: ${report.summary.successRate}`);
-    
+
     if (results.failureCount > 0) {
       console.log('\n❌ FAILED TASKS:');
       results.results
         .filter(r => r.status === 'failed')
         .forEach(r => console.log(`  - ${r.task}: ${r.error}`));
     }
-    
+
     console.log('\n✅ Master automation orchestration completed');
-    console.log('📄 Detailed report saved to: /workspace/automation/reports/master-automation-report.json');
-    
+    console.log(
+      '📄 Detailed report saved to: /workspace/automation/reports/master-automation-report.json'
+    );
+
     // Return success/failure based on critical tasks
-    const criticalFailures = results.results.filter(r => r.critical && r.status === 'failed');
+    const criticalFailures = results.results.filter(
+      r => r.critical && r.status === 'failed'
+    );
     if (criticalFailures.length > 0) {
       console.log('\n⚠️ Critical tasks failed - manual intervention required');
       process.exit(1);
@@ -159,7 +164,6 @@ async function main() {
       console.log('\n🎉 All critical tasks passed successfully');
       process.exit(0);
     }
-    
   } catch (error) {
     console.error('❌ Master automation failed:', error.message);
     process.exit(1);

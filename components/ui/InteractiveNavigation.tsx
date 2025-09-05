@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 const InteractiveNavigation = () = > {};
 ;
+=======
+
+const InteractiveNavigation = () => {};
+>>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31

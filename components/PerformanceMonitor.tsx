@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 
+<<<<<<< HEAD
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
@@ -51,16 +52,58 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
       if (lcpEntries.length > 0) {
         metrics.largestContentfulPaint = lcpEntries[lcpEntries.length - 1].startTime;
+=======
+interface PerformanceData {
+  loadTime: number;
+  domContentLoaded: number;
+  firstContentfulPaint?: number;
+  largestContentfulPaint?: number;
+  firstInputDelay?: number;
+  cumulativeLayoutShift?: number;
+}
+
+interface PerformanceMonitorProps {
+  onPerformanceData?: (data: PerformanceData) => void;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
+  useEffect(() => {
+    const measurePerformance = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
+      
+      const performanceData: PerformanceData = {
+        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+      };
+
+      // Get paint metrics
+      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+      if (fcp) {
+        performanceData.firstContentfulPaint = fcp.startTime;
+      }
+
+      // Get LCP
+      const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
+      if (lcpEntries.length > 0) {
+        performanceData.largestContentfulPaint = lcpEntries[lcpEntries.length - 1].startTime;
+>>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
       }
 
       // Get FID
       const fidEntries = performance.getEntriesByType('first-input');
       if (fidEntries.length > 0) {
+<<<<<<< HEAD
         metrics.firstInputDelay = (fidEntries[0] as any).processingStart - fidEntries[0].startTime;
+=======
+        const fidEntry = fidEntries[0] as PerformanceEventTiming;
+        performanceData.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
+>>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
       }
 
       // Get CLS
       const clsEntries = performance.getEntriesByType('layout-shift');
+<<<<<<< HEAD
       let cls = 0;
       clsEntries.forEach((entry: any) => {
         if (!entry.hadRecentInput) {
@@ -96,6 +139,18 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         }
       }
     };
+=======
+      if (clsEntries.length > 0) {
+        performanceData.cumulativeLayoutShift = clsEntries.reduce((sum, entry) => {
+          const layoutShiftEntry = entry as LayoutShift;
+          return sum + (layoutShiftEntry.value || 0);
+        }, 0);
+      }
+
+      onPerformanceData?.(performanceData);
+    };
+<<<<<<< HEAD
+>>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 
     // Measure performance after page load
     if (document.readyState === 'complete') {
@@ -107,6 +162,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return () => {
       window.removeEventListener('load', measurePerformance);
     };
+<<<<<<< HEAD
   }, [onPerformanceData, logMetrics, onThresholdExceeded]);
 
   if (showMetrics) {
@@ -116,8 +172,34 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       </div>
     );
   }
+=======
+  }, [onPerformanceData]);
+>>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 
   return null;
 };
 
+<<<<<<< HEAD
 export default PerformanceMonitor;
+=======
+export default PerformanceMonitor;
+=======
+,
+    // Measure performance after page load,
+    if (document.readyState === 'complete') {,
+      measurePerformance(),
+    } else {,
+      window.addEventListener('load', measurePerformance),
+    };
+,
+    return () => {,
+      window.removeEventListener('load', measurePerformance),
+    };
+  }, [onPerformanceData]),
+,
+  return null,
+};
+,
+export default PerformanceMonitor,
+>>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
+>>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
