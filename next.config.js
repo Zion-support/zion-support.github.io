@@ -46,7 +46,7 @@ const nextConfig = {
       };
     }
     
-    // Development optimizations
+    // Development watch options
     if (dev) {
       config.watchOptions = {
         ignored: [
@@ -85,11 +85,10 @@ const nextConfig = {
         ],
         poll: 1000,
         aggregateTimeout: 300
-      }
+      };
     }
-    
-    return config;
+    return config
   }
 }
 
-export default nextConfig;
+export default nextConfig
