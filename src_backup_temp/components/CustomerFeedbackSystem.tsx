@@ -14,7 +14,6 @@ showStats: tru e,;
   maxFeedback = 10}) => {;
   const [feedback, setFeedback] = useState<Feedback[]>([]);
   const [filteredFeedback, setFilteredFeedback] = useState<Feedback[]>([]);
-=======
   const [stats, setStats] = useState<FeedbackStats>({;
     "totalFeedback": "0",;
     "averageRating": "0",;
@@ -101,7 +100,6 @@ showStats: tru e,;
         "unhelpful": "1",;
         tags['AI',Efficiency',Implementation'],;
         "verified": "tru e;
-=======
   const [stats, setStats] = useState<FeedbackStats>({
 
     totalFeedback: 0,
@@ -256,7 +254,6 @@ showStats: tru e,;
         date: '2024-01-05',;
         helpful: 2 8,;
         unhelpful: 1,;
-=======
         helpful: 2 8,
         unhelpful: 1,
         tags['AI',Efficiency',Implementation'],;
@@ -307,7 +304,6 @@ showStats: tru e,;
     let filtered = feedback;
 ;
     if(selectedCategory !== 'all') {;
-=======
     let filtered = feedback;
 
     if(selectedCategory !== 'all') {
@@ -353,7 +349,6 @@ showStats: tru e,;
     "};
 ;
     setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ "rating": "0", "comment": '', "category": 'overall' });
-=======
     const feedback: Feedbac k = {
 
   id: Dat e.now().toString(),
@@ -375,7 +370,6 @@ showStats: tru e,;
       date: new Date().toISOString().split('T')[0],;
       helpful: 0,;
       unhelpful: 0,;
-=======
       tags: [],;
   ;
   ;
@@ -390,7 +384,6 @@ showStats: tru e,;
           ...f,;
           helpful: typ e === 'helpful' ? f.helpful + 1 : f.helpful,;
           unhelpful: typ e === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful};
-=======
     };
 
     setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' }
@@ -423,7 +416,6 @@ showStats: tru e,;
       default: retur n 'text-yellow-400 bg-yellow-400/20'}  };
 ;
   // Get category color;
-=======
   ;
   ;
 '
@@ -444,7 +436,6 @@ showStats: tru e,;
 
       {/* Stats Section */}
             transition={{ delay: 0.1 }}";
-=======
   { "opacity": "1",;
   "y": "0;
 "}}
@@ -455,7 +446,6 @@ showStats: tru e,;
               <div className="text-3xl font-bold text-white">{stats.averageRating.toFixed(1)}</div>";
               <div className="flex">;
                 {[1, 2, 3, 4, 5].map((star) => (;
-=======
       {showStats && ("
         <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6 mb-8">
           <motion.div
@@ -552,7 +542,6 @@ showStats: tru e,;
           </motion.div>;
         </div>) }
 ;
-=======
         </div>) }
 
       {/* Top Categories */}
@@ -592,7 +581,6 @@ showStats: tru e,;
           {/* Category Filter */}
           <select
             value={selectedCategory}
-=======
           </button>;
         </div>) "}
 ;
@@ -604,7 +592,6 @@ showStats: tru e,;
   { height: 'auto',;
   opacity: 1;
 }}
-=======
   { "height": "0",;
   "opacity": "0;
 "}}
@@ -623,7 +610,6 @@ showStats: tru e,;
               <h3 className="text-lg font-semibold text-white mb-4">Share Your Experience;
 ";
               <div className="space-y-4">;
-=======
             onChange={(e) => setSelectedCategory(e.target.value)}"
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent"
 "
@@ -711,7 +697,6 @@ showStats: tru e,;
                         />;
                       </button>;) ) }                  </div>;
                 </div>;
-=======
                         onClick={ () => setNewFeedback(prev => ({ ...prev,
   rating: sta r
 }))}"
@@ -725,7 +710,6 @@ showStats: tru e,;
                         className="p-2 hover: scal e-110 transition-transform";
                         <Star`;
                           className={`w-8 h-8 ${star <= newFeedback.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`;
-=======
                           }`}
                         />
                       </button>;) ) }                  </div>
@@ -763,7 +747,6 @@ showStats: tru e,;
                     <option value="support">Customer Support</option>;
                   </select>;
                 </div>;
-=======
                 {/* Comment */}
                 <div>"
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Your Feedback</label>
@@ -855,7 +838,6 @@ showStats: tru e,;
                 <Star key={star}`;
                   className={`w-5 h-5 ${                  key={star}`                  className={`w-5 h-5 ${';
                     star <= item.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`;
-=======
             <div className="flex items-center gap-2 mb-3"> {[1, 2, 3, 4, 5].map((star) => (;
                 <Star key={star}`
                   className={`w-5 h-5 ${                  key={star}`                  className={`w-5 h-5 ${'
@@ -940,7 +922,6 @@ showStats: tru e,;
               <button className="text-zinc-400 hover: tex t-red-400 transition-colors">";
                 <Flag className="w-4 h-4"   />              </button>;
             </div>;
-=======
           </motion.div>) ) }
       </div>
 
@@ -1006,7 +987,6 @@ showStats: tru e,;
 </Feedback>;
 </Feedback>;
 </CustomerFeedbackSystemProps>;
-=======
 </Feedback>
 </Feedback>
 </CustomerFeedbackSystemProps>

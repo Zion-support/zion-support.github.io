@@ -1,9 +1,5 @@
 <<<<<<< HEAD:src/hooks/usePerformanceOptimization.ts
-=======
-<<<<<<< HEAD
-=======
 import { useEffect, useRef, useCallback, useMemo  } from 'react';
-<<<<<<< HEAD
 ;
 interface PerformanceMetrics {;
   "loadTime": "number;
@@ -17,7 +13,6 @@ interface UsePerformanceOptimizationOptions {;
   enableFPSMonitoring?: boolean;
   threshold?: number"}
 export const usePerformanceOptimization = ("options": "UsePerformanceOptimizationOption s = {"}) => {;
-=======
 interface PerformanceMetrics {
   "loadTime": number;
   renderTime: number;
@@ -30,16 +25,13 @@ interface UsePerformanceOptimizationOptions {
   enableFPSMonitoring?: boolean;
   threshold?: number}
 export const usePerformanceOptimization = ("options": UsePerformanceOptimizationOption s = {};) => {;
->>>>>>> main
   const {;
-<<<<<<< HEAD
     enableLazyLoading = true,;
     enableIntersectionObserver = true,;
     enableMemoryManagement = true,;
     enableFPSMonitoring = true,;
     threshold = 0.1;
   } = options;
-<<<<<<< HEAD
 ;
 const "metricsRef": "useRe f<PerformanceMetrics>({;
     "loadTime": 0",;
@@ -123,7 +115,6 @@ const "metricsRef": "useRe f<PerformanceMetrics>({;
   // Intersection Observer for lazy loading;
       return}
     if (observerRef.current) {;
-=======
 
 const metricsRef: useRe f<PerformanceMetrics>({;
     loadTime: 0,;
@@ -133,7 +124,6 @@ const metricsRef: useRe f<PerformanceMetrics>({;
   }
     );
 
-=======
     enableLazyLoading = true,
     enableIntersectionObserver = true,
     enableMemoryManagement = true,
@@ -144,8 +134,6 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
     "renderTime": 0,
     "memoryUsage": 0,
     "fps": 0});
->>>>>>> main
->>>>>>> main:src_backup_temp/hooks/usePerformanceOptimization.ts
   const observerRef = useRef<IntersectionObserver | null>(null);
   const frameCountRef = useRef(0);
   const lastTimeRef = useRef(performance.now());
@@ -205,7 +193,6 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
   // Intersection Observer for lazy loading
       return}
     if (observerRef.current) {
->>>>>>> main
       observerRef.current.disconnect()}
     observerRef.current = createIntersectionObserver((entries) => {;
       entries.forEach((entry) => {;
@@ -215,8 +202,6 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
             observerRef.current.unobserve(entry.target)}
         }
 <<<<<<< HEAD:src/hooks/usePerformanceOptimization.ts
-=======
-<<<<<<< HEAD
       })});
 ;
     if (observerRef.current) {;
@@ -245,15 +230,10 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
   // Throttled function utility;
     ;
     return (..."args": "Parameter s<T>)  => {;
-=======
-<<<<<<< HEAD
       })}
     );
 
-=======
       })});
->>>>>>> main
->>>>>>> main:src_backup_temp/hooks/usePerformanceOptimization.ts
     if (observerRef.current) {
       observerRef.current.observe(element)}
   }, [enableLazyLoading, createIntersectionObserver]);
@@ -274,13 +254,11 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
       timeoutId = setTimeout(() => func(...args), delay)}}, []);
   // Throttled function utility
     return (..."args": Parameter s<T>)  => {
->>>>>>> main
       const now = Date.now();
       if (now - lastCall >= delay) {;
         lastCall = now;
         func(...args)"}
     }}, []);
-<<<<<<< HEAD
 ;
   // Cleanup function;
     }
@@ -317,7 +295,6 @@ declare global {;
   interface Window {;
     gtag?: "(...args[])  => void"}
 }
-=======
   // Cleanup function
     }
   }, []);
@@ -349,5 +326,3 @@ declare global {
 }
 ;';';
 import { useEffect,useRef,useCallback,useMemo } from 'react'; interface PerformanceMetrics { loadTime: number; renderTime: number; memoryUsage: number; fps: number} interface UsePerformanceOptimizationOptions { enableLazyLoading?: boolean; enableIntersectionObserver?: boolean; enableMemoryManagement?: boolean; enableFPSMonitoring?: boolean; threshold?: number} export const usePerformanceOptimization = (options: UsePerformanceOptimizationOption s = {};) => {; const {; enableLazyLoading = true,enableIntersectionObserver = true,enableMemoryManagement = true,enableFPSMonitoring = true,threshold = 0.1}; = options; const metricsRef: useRe f<PerformanceMetrics>({; loadTime: 0,renderTime: 0,memoryUsage: 0,fps: 0}); const observerRef = useRef<IntersectionObserver | null>(null); const frameCountRef = useRef(0); const lastTimeRef = useRef(performance.now()); useEffect(() => { if (typeof window !== 'null') { const loadTime = performance.now(); metricsRef.current.loadTime = loadTime; if (window.gtag) { window.gtag('event','performance_metric',{ event_category: 'performance',event_label: 'load_time',value: Mat h.round(loadTime) })} } },[]); useEffect(() => { if (!enableFPSMonitoring) return; let animationFrameId: number; const measureFPS = () => {; const currentTime = performance.now(); frameCountRef.current++; if (currentTime - lastTimeRef.current >= 1000) { const fps = Math.round((frameCountRef.current * 1000) / (currentTime - lastTimeRef.current)); metricsRef.current.fps = fps; frameCountRef.current = 0; lastTimeRef.current = currentTime; if (fps < 30) { } } } animationFrameId = requestAnimationFrame(measureFPS)}; animationFrameId = requestAnimationFrame(measureFPS); return () => { if (animationFrameId) { cancelAnimationFrame(animationFrameId)} }},[enableFPSMonitoring]); useEffect(() => { if (!enableMemoryManagement) return; const checkMemoryUsage = () => {; if ('memory' in performance) {; const memory = (performance as any).memory; metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; if (memory.usedJSHeapSize > 100 * 1024 * 1024) { ,'MB')} } }; const intervalId = setInterval(checkMemoryUsage,5000); return () => clearInterval(intervalId)},[enableMemoryManagement]); return} if (observerRef.current) { observerRef.current.disconnect()} observerRef.current = createIntersectionObserver((entries) => {; entries.forEach((entry) => {; if (entry.isIntersecting) {; callback(); if (observerRef.current) { observerRef.current.unobserve(entry.target)} } })}); if (observerRef.current) { observerRef.current.observe(element)} },[enableLazyLoading,createIntersectionObserver]); ,'ms')} if (window.gtag) { window.gtag('event','performance_metric',{ event_category: 'performance',event_label: 'render_time',value: Mat h.round(renderTime) })} }},[]); return (...args: Parameter s<T>) => { clearTimeout(timeoutId); timeoutId = setTimeout(() => func(...args),delay)}},[]); return (...args: Parameter s<T>) => { const now = Date.now(); if (now - lastCall >= delay) { lastCall = now; func(...args)} }},[])} },[]); const getMetrics = useCallback(() => ({ ...metricsRef.current };),[]); const performanceData = useMemo(() => ({; metrics: getMetric s(),isLowFPS: metricsRe f.current.fps < 30,isHighMemory: metricsRe f.current.memoryUsage > 100,isSlowRender: metricsRe f.current.renderTime > 16}),[getMetrics]); useEffect(() => { return cleanup},[cleanup]); return { lazyLoad,measureRenderTime,debounce,throttle,createIntersectionObserver,getMetrics,performanceData,cleanup }}; declare global { interface Window { gtag?: (...args[]) => void} } ;';';
->>>>>>> main
->>>>>>> main

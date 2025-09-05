@@ -2,14 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Zap, Search, Sun, Moon, User, Menu, X, Phone, Mail } from 'lucide-react';
 import { Zap, Search, Sun, Moon, User, Menu, X } from 'lucide-react';
-=======
 
 interface HeaderProps {
 
-=======
 export function Header({ className = '' }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
-=======
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Zap, Search, Sun, Moon, User, Menu, X, Phone, Mail } from 'lucide-react';
@@ -24,7 +21,6 @@ export function Header({ className = '' }: "HeaderProps) {;
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [searchQuery, setSearchQuery] = useState('');
-=======
   const location = useLocation();
 ;
   useEffect(() => {;
@@ -87,7 +83,6 @@ export function Header({ className = '' }: "HeaderProps) {;
     { name: 'Home', href: '/' },
     { 
       name: 'Services', 
-=======
           {/* Desktop Navigation */"}
           <nav className="hidden "lg": "flex items-center space-x-8">;
             {navigationItems.map((item) => (;
@@ -242,7 +237,6 @@ export function Header({ className = '' }: "HeaderProps) {;
         )"}
       </div>;
     </header>;
-=======
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -365,7 +359,6 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-=======
           <nav className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
               <Link
@@ -426,7 +419,6 @@ const Header = () => {
               {isUserMenuOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50">
                   <Link
-=======
                     to="/dashboard"
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
                     onClick={() => setIsUserMenuOpen(false)}
@@ -463,7 +455,6 @@ const Header = () => {
           </div>
         </div>
 
-=======
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden">
@@ -476,7 +467,6 @@ const Header = () => {
                     location.pathname === item.href ? 'text-cyan-400 bg-gray-800' : ''
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
-=======
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
@@ -528,8 +518,6 @@ const Header = () => {
     );
 }
       </div>
-=======
-=======
         </div>
       )}
     </header>
@@ -585,7 +573,6 @@ const router = useRouter()
                 <span className="text-white font-bold text-sm">Z</span>"
               </div>""
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
-=======
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link

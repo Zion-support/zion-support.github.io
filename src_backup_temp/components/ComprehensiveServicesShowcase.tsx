@@ -1,5 +1,4 @@
 import {  import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
-=======
 ;
 export default function Page("props": "any) {;
 const "ComprehensiveServicesShowcase": React.FC = () => {;
@@ -8,7 +7,6 @@ const "ComprehensiveServicesShowcase": React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState<string>('');  // Combine all services;
   const "allServices": "Servic e[] = [...EXPANDED_INNOVATIVE_SERVICES_2025",;
     ...EMERGING_TECH_SERVICES_2025;
-=======
 
 export default function Page(props: any) {
 const ComprehensiveServicesShowcase: React.FC = () => {;
@@ -29,7 +27,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
       
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-=======
       return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
   
       case 'AI & Customer Experience':;
@@ -142,7 +139,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
             <div className="flex items-center gap-2">";
               <span className="text-gray-700 font-medium">"Category": "</span>;
               <select;
-=======
                 value={selectedCategory"}
                 onChange={(e) => setSelectedCategory(e.target.value)}";
                 className="px-4 py-2 border border-gray-300 rounded-lg "focus": "rin g-2 "focus": rin g-zion-cyan "focus": borde r-transparent";
@@ -157,7 +153,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
             <div className="flex items-center gap-2">";
               <span className="text-gray-700 font-medium">"Innovation": "</span>;
               <select;
-=======
                 value={selectedInnovationLevel"}
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)}";
                 className="px-4 py-2 border border-gray-300 rounded-lg "focus": "rin g-2 "focus": rin g-zion-cyan "focus": borde r-transparent";
@@ -196,7 +191,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                   <div className="flex items-start justify-between mb-4">";
                     <div className="flex items-center gap-3">";
                       <div className="p-2 bg-zion-cyan/10 rounded-lg text-zion-cyan">;
-=======
       default:"
         return <Star className="h-6 w-6"   />};
   };
@@ -415,7 +409,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                     <div className="space-y-2">;
                       {service.benefits.slice(0, 3).map((benefit, idx) => (";
                         <div key={idx} className="text-sm text-gray-600 bg-blue-50 p-2 rounded">;
-=======
                           {benefit}
                         </div>) ) }
                     </div>
@@ -513,12 +506,10 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover: b g-white hover: tex t-zion-blue transition-colors";
 ";
               <Phone className="mr-2 h-5 w-5"   />              Call Now;
-=======
             </a>;
           </div>;
         </div>;
       </section>;
-=======
     </div>;) };
 export default ComprehensiveServicesShowcase}}}}'"`
 

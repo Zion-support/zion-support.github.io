@@ -8,7 +8,6 @@ export default function Layout({ children }: LayoutProps) {
         {children}
       </main>
       <Footer />
-=======
 
 interface LayoutProps {
   children: React.ReactNode;

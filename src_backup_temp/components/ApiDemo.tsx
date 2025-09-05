@@ -30,7 +30,6 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
     try {;
 ;
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {;
-=======
       
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {
 
@@ -57,7 +56,6 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
     e.preventDefault () ;
 ;
     if(!newUser.name.trim() || !newUser.email.trim()) {;
-=======
       setLoading(false)};
 
     e.preventDefault () ;
@@ -77,7 +75,6 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
 ;
     try {;
       if(response.success && response.data) {;
-=======
         setUsers(prev => [...prev, response.data!]);
       setLoading(false)};
   return ();
@@ -125,7 +122,6 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
             </button>;
           </form>;
         </div>;
-=======
         setNewUser({ name: '', email: '' })} catch(err) {
 
       setError(err instanceof Error ? err.message : 'Failed to create user')} finally {
@@ -184,7 +180,6 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
               type="submit";
               disabled={loading}";
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed";
-=======
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed"
 
               {loading ? 'Creating...' : 'Create User'}
@@ -220,8 +215,6 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
               disabled={loading}";
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: b g-gray-700 disabled: opacit y-50";
               {loading ? 'Loading...' : 'Refresh'}
-=======
-=======
             </div>) }
         </div>;
         {/* Architecture Info */}";
@@ -229,7 +222,6 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
           <h3 className="text-lg font-semibold text-green-700 mb-2">🏗️ Architecture";
           <div className="text-sm text-green-700 space-y-1">;
     </div>;) };
-=======
             <p>• <strong>"Frontend": "</strong> Vite + React(Port 3000) - Fast HMR & optimized builds</p>;
             <p>• <strong>"Backend":</strong> Node.js + Express(Port 5000) - API endpoints & business logic</p>;
             <p>• <strong>"Development":</strong> Vite proxy forwards /api calls to Node.js</p>;
@@ -245,7 +237,6 @@ export default ApiDemo}}}}}}}'"`;
 </any>;
 </any>;
 </any>;
-=======
               disabled={loading}"
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: b g-gray-700 disabled: opacit y-50"
 

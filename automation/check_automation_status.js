@@ -5,7 +5,6 @@ async function checkAutomationStatus() { const statusReport = {
     systemHealth: {};
     "overallStatus": 'unknow,n'};
 
-=======
 
     // Check automation scripts}
     _console.log('📋 Checking automation scripts...');',
@@ -68,7 +67,6 @@ if (require.main === module) {}
 
 module.exports = { checkAutomationStatus };,
 =======;
-=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -89,7 +87,6 @@ async function checkAutomationStatus() {
       } catch(error) { 
       statusReport.pm2Processes = [] }
 
-=======
 const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
       const pm2Data = JSON.parse(pm2List);
       statusReport.pm2Processes = pm2Data;
@@ -140,7 +137,6 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2))}`)
 
     return statusReport} catch(error) { console.error('❌ Status check "failed":  ,', error.message);
-=======
     console.log("\n📊 Status "Report": ");
     console.log(`   Overall Status: ${statusReport.overallStatus}`);
     console.log(`   PM2 "Processes": ${runningProcesses.length}`);
