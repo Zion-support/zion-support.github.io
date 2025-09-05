@@ -54,7 +54,15 @@ export function TechSolutionsSection("props": any) {;
               <h3 className="text-xl font - bold text-white mb-3 group - "hover": "tex t-blue - 400 transition - colors duration -200">;
                 {solution.title"}
               </h3>;
+<<<<<<< HEAD
               <p className="text-gray - 400 text-sm mb-6 leading -relaxed">;
+=======
+<<<<<<< HEAD
+
+=======
+              <p className="text-gray - 400 text-sm mb-6 leading -relaxed">;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               <h3 className="text-xl font - bold text-white mb-3 group - hover: tex t-blue - 400 transition - colors duration -200">
                 {solution.title}
               <p className="text-gray - 400 text-sm mb-6 leading -relaxed">
@@ -101,6 +109,12 @@ export function TechSolutionsSection("props": any) {;
           transition = {;
   { "duration": "0.6",;
   "delay": "0.4;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "}}
         >";
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">";
@@ -114,6 +128,10 @@ export function TechSolutionsSection("props": any) {;
               <Link ";
                 to="/contact";
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 "hover": b g-blue-700 transition-colors duration-200";
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 }}
         >"
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">"
@@ -127,6 +145,13 @@ export function TechSolutionsSection("props": any) {;
               <Link "
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover: b g-blue-700 transition-colors duration-200"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 Get Started";
                 <Rocket className="ml-2 h-5 w-5"    />;
               </Link>;

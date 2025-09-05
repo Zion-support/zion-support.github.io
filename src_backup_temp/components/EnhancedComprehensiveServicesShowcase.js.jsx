@@ -347,6 +347,10 @@ enterprise-level reliability,;
                           className="text-gray-300 flex items-center""" >"""""";
                           className="text-gray-300 flex items-center"" >"""";
                           <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
           </div>
         </div>"
       </section>""

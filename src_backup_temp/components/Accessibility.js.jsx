@@ -1304,6 +1304,10 @@ export const AccessibilityProvider = ("props": "any) => {"}";
   const [reducedMotion, setReducedMotion] = useState(false)"";
   const [fontSize, setFontSize] = useState("medium")"";
   const [colorBlindMode, setColorBlindMode] = useState();
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 // comment
 export const AccessibilityProvider = (props: any) => {}"
   const [highContrast, setHighContrast] = useState(false)""
@@ -1405,6 +1409,10 @@ if (reducedMotion) {}"";
             ? "url(#deuteranopia)""""";
             : "url(#tritanopia)",;
 }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
     // comment
 if (reducedMotion) {}""
 """
@@ -1626,6 +1634,10 @@ initial="{{" "scale": "0.9", "opacity": "0 "}}""";
 """"";
                           fontSize === size""""";
                             ? "bg-zion-cyan text-white"""""";
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
       <motion .button,"
 whileHover = "{{" scale: 1.1 }}"
         whileTap="{{" scale: 0.9 }}"
@@ -1864,6 +1876,10 @@ useEffect(() => {;
     if(!isActive) return;
     const focusableElements ='";
       'button, [href], input, select, textarea, [tabindex]: "not([tabindex="-1"]);
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                   </div>"
                 </div>""
 """""
@@ -1947,8 +1963,16 @@ useEffect(() => {
     const handleTabKey = e => {e.preventDefault()"}            lastFocusableElement.focus()}
 ;
     const handleTabKey = e => {e.preventDefault()}            lastFocusableElement.focus()}
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
         } else {}
           if(document.activeElement === lastFocusableElement) {}
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
             e.preventDefault()"
             firstFocusableElement.focus()}","
 }", "
@@ -2037,4 +2061,8 @@ export default AccessibilityPanel"";
 </AccessibilityContext>;
 </motion>
 </motion>
+<<<<<<< HEAD
 </AccessibilityContext>
+=======
+</AccessibilityContext>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

@@ -19,6 +19,11 @@ export default function Page("props": "any) {;
     if(newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {;
       toast.error("This event is already added");
       return;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     "}
     ;
     setNewWebhook({;
@@ -33,6 +38,10 @@ export default function Page("props": "any) {;
       ...newWebhook",;
       "eventTypes": "newWebhoo k.eventTypes.filter(e => e !== event);
     "});
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     }
     setNewWebhook({
       ...newWebhook,
@@ -60,6 +69,12 @@ export default function Page("props": "any) {;
       newWebhook.eventTypes, ;
       newWebhook.secret || undefined;
     );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     ;
     // Reset form;
     setNewWebhook({;
@@ -69,6 +84,10 @@ export default function Page("props": "any) {;
       "eventTypes": "[]",;
       "secret": "";
     });
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     // Reset form
     setNewWebhook({
       name: "",
@@ -83,6 +102,12 @@ export default function Page("props": "any) {;
   const handleTestWebhook = async("webhookId": "string", "eventType": "WebhookEventTyp e) => {;
     await testWebhook(webhookId", eventType);
   };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   ;
   return (<div className="space-y-8">;
       <Card>;
@@ -98,6 +123,10 @@ export default function Page("props": "any) {;
               <Input ;
                 id="webhook-name" ;
                 placeholder="e.g.", Job Postings Webhook";
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
         <div className="space-y-8">
       <Card>
@@ -169,6 +198,11 @@ export default function Page("props": "any) {;
               id="webhook-secret" ;
               placeholder="A secret key to verify the webhook source";
               value={newWebhook.secret}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               onChange={(e) => setNewWebhook({...newWebhook, "secret": "e.target.value"})}
             />;
             <p className="text-xs text-muted-foreground">;
@@ -200,6 +234,10 @@ export default function Page("props": "any) {;
                     <div>;
                       <CardTitle className="text-lg">{webhook.name}</CardTitle>;
                       <CardDescription className="truncate max-w-md">;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
             />
             <p className="text-xs text-muted-foreground">
@@ -321,9 +359,18 @@ export default function Page("props": "any) {;
             </CardContent>;
           </Card>;
         )}
+<<<<<<< HEAD
       </div>;
     </div>;
   );
+=======
+<<<<<<< HEAD
+=======
+      </div>;
+    </div>;
+  );
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       </div>
     </div>
     );

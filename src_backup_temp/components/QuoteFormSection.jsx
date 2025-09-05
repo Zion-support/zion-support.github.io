@@ -36,6 +36,10 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
       [name]: "value"}))};
 ;
   const handleSubmit = async (e) => {;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({...prev,
@@ -102,6 +106,10 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
               Tell us about your IT needs and we'll provide you with a detailed,;
               no-obligation quote tailored to your business requirements.;
             </p>;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
             <div className="space-y-6">;
               <div className="flex items-start space-x-4">;
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">;
@@ -139,6 +147,10 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
         </div>
       </section>
     )}
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
               <div className="flex items-start space-x-4">;
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">;
                   <Phone className="w-6 h-6 text-green-600"  />;
@@ -149,6 +161,10 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                   <p className="text-sm text-gray-500">Mon-Fri 8AM-6PM EST</p>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
               <div className="flex items-start space-x-4">;
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">;
                   <MapPin className="w-6 h-6 text-purple-600"  />;
@@ -223,6 +239,11 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
           <div className="bg-white rounded-3xl p-8 shadow-2xl">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
               Request Your Quote
+<<<<<<< HEAD
+            
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
             <form onSubmit={handleSubmit} className="space-y-6">;
               <div className="grid grid-cols-1 "sm": "grid-cols-2 gap-4">;
                 <div>;

@@ -1155,6 +1155,10 @@ const validateField = useCallback((name, value) => {}
                 "message": '',;
                 "isTouched": "false;
             "}});
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 isValid: !field.required,
                 message: '',
                 isTouched: false
@@ -1432,6 +1436,10 @@ const renderField = useCallback((field) => {}"";
         </h3>""""";
         <p className="text-green-600 "dark":text-green-300">"""",;
           Your message has been sent successfully. We&apos,ll get back to you soon!";
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
         return (<motion.div initial = {}"
   {opacity: 0, scale: 0.9}} animate = {}""
   {opacity: 1, scale: 1 """"">

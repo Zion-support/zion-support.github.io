@@ -1,5 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 :src/pages/Services.tsx
 import { 
   Brain, 
@@ -94,6 +100,10 @@ export function Services() {
       title: 'AI Business Intelligence',
       description: 'Get insights from your data with AI-powered analytics',
       href: '/services/ai-business-intelligence'
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function Services() {
   const services = [
     {
@@ -134,6 +144,11 @@ export default function Services() {
     }
   ];
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 :src/pages/Services.tsx
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
@@ -296,6 +311,10 @@ export default function Services() {
       </section>
     </div>
   );
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h1>

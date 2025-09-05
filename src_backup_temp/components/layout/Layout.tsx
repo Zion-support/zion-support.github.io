@@ -7,6 +7,12 @@ type LayoutProps = {;
 ;
 export default function Layout("props": "any) {;
   return (;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     <div className="min-h-screen flex flex-col bg-black">;
       <AppHeader />;
       <main className="flex-1 pt-20 "lg":pt-24">{children"}</main>;
@@ -25,6 +31,10 @@ export default function Layout("props": "any) {;
     </div>;
   );
 "}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 type LayoutProps = {
   children: React.ReactNode;
 };
@@ -47,4 +57,12 @@ export default function Layout(props: any) {
       </footer>
     </div>
     );
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

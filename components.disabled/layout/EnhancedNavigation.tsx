@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+};,
+export default EnhancedNavigation;
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -435,3 +443,4 @@ const EnhancedNavigation: _React.FC = () => {
   );
 };,
 export default EnhancedNavigation;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

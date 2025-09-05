@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export: interface EmergingTechService2027 { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; targetAudience: string[]; marketPrice: string; website: string; contactEmail: string; tags: string[]; aiScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; author: { name: string; i d: string; avatarUrl?: string} verified: "boolea",n} images: "string[] createdAt: string: technologyStack: string[] useCases: string[] integrations: string[] compliance: string[] support: string[]"} export: const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;'"'"
 import React from 'react';
 interface EmergingTechServices2027Props {
@@ -10,4 +15,9 @@ export default function EmergingTechServices2027({ }: EmergingTechServices2027Pr
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

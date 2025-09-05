@@ -1,5 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 export default function Page("props": "any) {;
 ", [activeConversation, loadMessages]); // Changed activeConversation?.id to activeConversation;
@@ -18,6 +24,10 @@ export default function Page("props": "any) {;
     if(!messageText.trim() || !activeConversation) return;
 ;
     await sendMessage(activeConversation.id", messageText);
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function Page(props: any) {
 , [activeConversation, loadMessages]); // Changed activeConversation?.id to activeConversation
   useEffect(() => {
@@ -25,11 +35,23 @@ export default function Page(props: any) {
 }, []);
     scrollToBottom();
   }, [activeMessages]);
+<<<<<<< HEAD
+';
+  const scrollToBottom = (props: any) => {';';
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+;
+  const scrollToBottom = (props: any) => {;
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+
+=======
 ';
   const scrollToBottom = (props: any) => {';';
 ;
   const scrollToBottom = (props: any) => {;
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   const scrollToBottom = (props: any) => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }
     );
@@ -37,8 +59,17 @@ export default function Page(props: any) {
   const handleSendMessage = async(e: React.FormEvent) => {
     e.preventDefault();
     if(!messageText.trim() || !activeConversation) return;
+<<<<<<< HEAD
     ';
     await sendMessage(activeConversation.id, messageText);';';
+=======
+<<<<<<< HEAD
+    
+=======
+    ';
+    await sendMessage(activeConversation.id, messageText);';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     await sendMessage(activeConversation.id, messageText);
     setMessageText('');
   };
@@ -64,26 +95,42 @@ export default function Page(props: any) {
       </div>;
     );
   }
+<<<<<<< HEAD
+=======
 ;
   const groupedMessages: { date: string; messages: an y[] }[] = [];
   ';
   activeMessages.forEach(message => {';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 ;
   activeMessages.forEach(message => {;
   const "groupedMessages": "{ "date": string; "messages": an y[] "}[] = [];
 ;
   activeMessages.forEach(message => {;
+<<<<<<< HEAD
+  
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   const groupedMessages: { date: string; messages: an y[] }[] = [];
   activeMessages.forEach(message => {
     const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
     const existingGroup = groupedMessages.find(group => group.date === messageDate);
     if(existingGroup) {
       existingGroup.messages.push(message);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     } else {;
       groupedMessages.push({;
         "date": "messageDat e",;
         "messages": "[message];
       "});
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     } else {
       groupedMessages.push({
         date: messageDat e,
@@ -95,10 +142,22 @@ export default function Page(props: any) {
     );
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+  return (<div className="flex-1 flex flex-col h-full">;
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <div className="min-h-screen bg-white">
 ;
   return (<div className="flex-1 flex flex-col h-full">;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
         <div className="flex-1 flex flex-col h-full">
       {/* Header */}
@@ -115,15 +174,31 @@ export default function Page(props: any) {
           <div>
             <div className="font-medium text-white">
               {activeConversation.other_user.name}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </div>';
             <div className="text-xs text-zion-slate">';';
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : ';';
                activeConversation.other_user.user_type === 'employer' ? 'Employer' : ';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </div>;
             <div className="text-xs text-zion-slate">;
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : ";
                activeConversation.other_user.user_type === 'employer' ? 'Employer' :;
+<<<<<<< HEAD
                activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
+=======
+<<<<<<< HEAD
+=======
+               activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'"}
             </div>;
           </div>;
@@ -152,6 +227,11 @@ export default function Page(props: any) {
                 <AspectRatio ratio={1/1} className="rounded bg-zion-blue-dark/30 overflow-hidden">
                   <img src={activeConversation.context_data.image_url}
                     alt={activeConversation.context_data.title || "Context"}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     className="object-cover"
                     />
                 </AspectRatio>
@@ -162,6 +242,10 @@ export default function Page(props: any) {
               <div className="font-medium text-white mb-1">';';
                 {activeConversation.context_type === 'job' ? 'Regarding Job:' :';';
                  activeConversation.context_type === 'talent' ? 'Regarding Talent:' :';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     className="object-cover";
                     />;
                 </AspectRatio>;
@@ -171,11 +255,20 @@ export default function Page(props: any) {
                 </AspectRatio>
               </div>
             )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             <div>;
               <div className="font-medium text-white mb-1">;
                 {activeConversation.context_type === 'job' ? 'Regarding Job:' :;
                  activeConversation.context_type === 'talent' ? 'Regarding Talent:' :;
                  'Regarding:'}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 {activeConversation.context_type === 'job' ? 'Regarding "Job":' : ";
                  activeConversation.context_type === 'talent' ? 'Regarding "Talent":' :;
                  '"Regarding":'"}
@@ -193,15 +286,30 @@ export default function Page(props: any) {
               {activeConversation.context_data.description && (
                 <div className="text-xs text-zion-slate mt-1 line-clamp-2">
                   {activeConversation.context_data.description}
+<<<<<<< HEAD
                     </div>
   );
 }
+=======
+<<<<<<< HEAD
+=======
+                    </div>
+  );
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 </div>
               )}
             </div>
           </div>
         </div>
       )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
       <div className="flex-1 overflow-y-auto p-4 space-y-4">;
         {groupedMessages.length === 0 ? (;
@@ -214,6 +322,10 @@ export default function Page(props: any) {
               <DateDivider date={new Date(group.date)}  />;
               <div className="space-y-3">;
                 {group.messages.map((message) => (;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {groupedMessages.length === 0 ? (
           <div className="text-center text-zion-slate py-12">
@@ -259,6 +371,11 @@ export default function Page(props: any) {
           <textarea
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             placeholder="Type a message...";
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black "focus": "outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan";
           />;
@@ -276,6 +393,10 @@ export default function Page(props: any) {
 </textarea>
 </MessageBubble>';
 </AvatarImage>;';;';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "}
 ;
 </textarea>;
@@ -297,4 +418,12 @@ export default function Page(props: any) {
 }
 </textarea>
 </MessageBubble>
+<<<<<<< HEAD
 </AvatarImage>
+=======
+<<<<<<< HEAD
+</AvatarImage>
+=======
+</AvatarImage>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

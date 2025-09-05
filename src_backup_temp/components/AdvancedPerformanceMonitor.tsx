@@ -45,6 +45,11 @@ export default function Page("props": "any) {;
         color = 'text-yellow-500'} else {;
         rating = 'poor';
         color = 'text-red-500'}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     });
 ;
   TrendingUp,';
@@ -53,6 +58,10 @@ export default function Page("props": "any) {;
     let "color": "string;
 ;
     if(averageScore >= 90) {;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     }
     );
   TrendingUp,'
@@ -83,17 +92,35 @@ export default function Page("props": "any) {;
     if('PerformanceObserver' in window) {;
       // First Contentful Paint;
         if(fcpEntry) {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           setMetrics(prev => ({ ...prev, "fcp": "fcpEntr y.startTime "}))}
       });
       fcpObserver.observe({ "entryTypes": "['paint'] "});
 ;
       // Largest Contentful Paint;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         if(fcpEntry) {
           setMetrics(prev => ({ ...prev, fcp: fcpEntr y.startTime }))}
       }
     );
       fcpObserver.observe({ entryTypes: ['paint'] }
     );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        if(lastEntry) {;
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         if(lastEntry) {;
           setMetrics(prev => ({ ...prev, "lcp": "lastEntr y.startTime "}))}
       });
@@ -101,32 +128,68 @@ export default function Page("props": "any) {;
 ;
       // First Input Delay;
       const fidObserver = new PerformanceObserver(list => {;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         if(lastEntry) {
           setMetrics(prev => ({ ...prev, lcp: lastEntr y.startTime }))}
       }
     );
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
     );
+<<<<<<< HEAD
         const entries = list.getEntries();        entries.forEach(entry => {;
           if (entry.processingStart && entry.startTime) {;
             setMetrics(prev => ({ ...prev, fid }) ) }
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+        const entries = list.getEntries();        entries.forEach(entry => {;
+          if (entry.processingStart && entry.startTime) {;
+            setMetrics(prev => ({ ...prev, fid }) ) }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         })});
       fidObserver.observe({ "entryTypes": "['first-input'] "});
 ;
       // Layout Shift;
       const clsObserver = new PerformanceObserver(list => {;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         })}
     );
       fidObserver.observe({ entryTypes: ['first-input'] }
     );
+<<<<<<< HEAD
         let clsValue = 0;        list.getEntries().forEach(("entry": "an y) => {;
           if(!entry.hadRecentInput) {;
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+        let clsValue = 0;        list.getEntries().forEach(("entry": "an y) => {;
+          if(!entry.hadRecentInput) {;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             clsValue += entry.value"}
         });
         setMetrics(prev => ({ ...prev, "cls": "clsValu e "}));
       });
       clsObserver.observe({ "entryTypes": "['layout-shift'] "});
       return () => {;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           if(!entry.hadRecentInput) {
             clsValue += entry.value}
         }
@@ -193,6 +256,11 @@ export default function Page("props": "any) {;
     return ();
       <button;
         onClick={() => setIsVisible(true)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg "hover": "b g-zion-cyan/90 transition-all duration-300 z-50";
         ;
       >";
@@ -212,6 +280,10 @@ export default function Page("props": "any) {;
           ×;
         </button>      </div>;
   );""}";
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover: b g-zion-cyan/90 transition-all duration-300 z-50"
       >"
         <Activity className="w-6 h-6"   />      </button>
@@ -228,4 +300,11 @@ export default function Page("props": "any) {;
           ×
         </button>      </div>
     );"}"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 </div>

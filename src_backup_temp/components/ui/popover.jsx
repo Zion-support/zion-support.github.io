@@ -3,6 +3,10 @@ import React, {createContext, useContext, useState} from 'react'; const Popover(
         <div className={className} onClick={() => context.setIsOpen(!context.isOpen)}>; {children}; </div>)}'; export function PopoverContent(props: any) {}; const context = useContext(PopoverContext); if(!context)'; throw new Error('PopoverContent must be used within Popover'); if(!context.isOpen); return null; return (
         <div className={`absolute z-50 mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-200 p-4 ${className}`}>;" {children}";" </div>)}'"`";" '"`'"`;" ";"
 import React from 'react';
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 interface Popover.jsProps {
   // Add props here as needed
 }

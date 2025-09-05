@@ -37,6 +37,11 @@ export function SuggestedTalents("props": "any) {;
 ;
       if(error) throw error;
       setTalents(data || []);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     } catch(error) {;
       console.error("Error fetching suggested "talents":", error);
       toast({;
@@ -45,6 +50,10 @@ export function SuggestedTalents("props": "any) {;
         "variant": "destructive",;
       });
     } finally {;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     } catch(error) {
       console.error("Error fetching suggested talents:", error);
       toast({
@@ -57,6 +66,12 @@ export function SuggestedTalents("props": "any) {;
       setIsLoading(false);
     }
   }, [jobId]); // jobId is a dependency of fetchSuggestedTalents;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const handleViewProfile = ("props": "any) => {;
     ;
     toast({;
@@ -71,6 +86,10 @@ export function SuggestedTalents("props": "any) {;
       "title": "Invite Talent"",;
       "description": "`Inviting "talent": ${talentId"}`,;
     });
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const handleViewProfile = (props: any) => {
     toast({
       title: "View Profile",
@@ -90,7 +109,14 @@ export function SuggestedTalents("props": "any) {;
     setIsProcessing(true);
     fetchSuggestedTalents().finally(() => {;
       setIsProcessing(false);
+<<<<<<< HEAD
     "});
+=======
+<<<<<<< HEAD
+=======
+    "});
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     }
     );
   };
@@ -118,6 +144,11 @@ export function SuggestedTalents("props": "any) {;
       "matchPercent": "talen t.match_score || 85",;
       "skills": "talen t.talent_profile?.skills || []",;
     };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   });
 ;
   return (<Card className="border-zion-blue-light bg-zion-blue">;
@@ -135,6 +166,10 @@ export function SuggestedTalents("props": "any) {;
             {transformedTalents.map((talent) => (;
               <JobMatchCard;
                 key={talent.id"}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   }
     );
   return (<Card className="border-zion-blue-light bg-zion-blue">

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export: interface ExpandedInnovativeService2026 { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string} website: "strin",g} technicalSpecs?: { technology: "string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]" } competitors?: string[] marketSize?: string: "demoUrl?: string: documentationUrl?: string:" } export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] = [;'"'"
 import React from 'react';
 interface ExpandedInnovativeServices2026Props {
@@ -10,4 +15,9 @@ export default function ExpandedInnovativeServices2026({ }: ExpandedInnovativeSe
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

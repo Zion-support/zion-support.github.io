@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import { Send, Bot, User } from 'lucide-react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 interface Message {;
   "id": "string;
@@ -29,6 +34,10 @@ const "AIChatAssistant": "React.FC = ("props": any) => {;
         "id": (Date.now() + 1).toString()",;
         "text": "`I "understand": "${userMessage.text"}". How can I help?`,;
         "sender": 'ai';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 interface Message {
   "id": string;';
   text: string;';';
@@ -56,6 +65,11 @@ const "AIChatAssistant": React.FC = (props) => {
       setMessages(prev => [...prev, aiMessage]);
     }, 1000);
   };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   return (;
     <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg">;
@@ -80,6 +94,10 @@ const "AIChatAssistant": React.FC = (props) => {
         <div className="flex space-x-2">;
           <input;
             type="text";
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <div className="min-h-screen bg-white">
       <div className="p-4 border-b">
@@ -108,6 +126,11 @@ const "AIChatAssistant": React.FC = (props) => {
           />;
           <button;
             onClick={handleSend}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             className="px-4 py-2 bg-blue-500 text-white rounded-lg "hover": "bg-blue-600";
           >;
             <Send className="w-4 h-4" />;
@@ -122,6 +145,10 @@ export default AIChatAssistant;
 ;
 </any>;
 </Message>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             className="px-4 py-2 bg-blue-500 text-white rounded-lg "hover": bg-blue-600"
           >
             <Send className="w-4 h-4" />
@@ -134,4 +161,12 @@ export default AIChatAssistant;
 export default AIChatAssistant;
 </any>
 </Message>;';';
+<<<<<<< HEAD
 import React,{ useState } from 'react'; import { Send,Bot,User } from 'lucide-react'; interface Message { id: string;'; text: string;';'; sender: 'user' | 'ai'} const AIChatAssistant: React.FC = (props) => { const [messages,setMessages] = useState<Message[]>([]); const [input,setInput] = useState<any>("); const handleSend = (props) => { if (!input.trim()) return; const userMessage: Message = { id: Date.now().toString(),text: input,sender: 'user' };; setMessages(prev => [...prev,userMessage]);';'; setInput("); setTimeout(() => { const aiMessage: Message = { id: (Date.now() + 1).toString(),text: `I understand: "${userMessage.text}". How can I help?`,sender: 'ai' };; setMessages(prev => [...prev,aiMessage])},1000)}; return ( <div className="min-h-screen bg-white"> <div className="p-4 border-b"> <h3 className="text-lg font-semibold flex items-center"> <Bot className="w-5 h-5 mr-2 text-blue-500" /> AI Assistant </h3> </div> <divclassName="h-96 overflow-y-auto p-4 space-y-4"> {messages.map((message) => (';'; <divkey={message.id} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>'; <div className={`max-w-xs px-4 py-2 rounded-lg ${message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-100'}`}> <p>{message.text}</p> </div> </div> ))} </div> <div className="p-4 border-t"> <div className="flex space-x-2"> <input type="text" value={input} onChange={(e) => setInput(e.target.value)} onKeyPress={(e) => e.key === 'Enter' && handleSend()} placeholder="Type your message..." className="flex-1 px-3 py-2 border rounded-lg" /> <button onClick={handleSend} className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600" > <Send className="w-4 h-4" /> </button> </div> </div> </div> )}; export default AIChatAssistant; </any> </Message>;';';
+=======
+<<<<<<< HEAD
+import React,{ useState } from 'react'; import { Send,Bot,User } from 'lucide-react'; interface Message { id: string;'; text: string;';'; sender: 'user' | 'ai'} const AIChatAssistant: React.FC = (props) => { const [messages,setMessages] = useState<Message[]>([]); const [input,setInput] = useState<any>("); const handleSend = (props) => { if (!input.trim()) return; const userMessage: Message = { id: Date.now().toString(),text: input,sender: 'user' };; setMessages(prev => [...prev,userMessage]);';'; setInput("); setTimeout(() => { const aiMessage: Message = { id: (Date.now() + 1).toString(),text: `I understand: "${userMessage.text}". How can I help?`,sender: 'ai' };; setMessages(prev => [...prev,aiMessage])},1000)}; return ( <div className="min-h-screen bg-white"> <div className="p-4 border-b"> <h3 className="text-lg font-semibold flex items-center"> <Bot className="w-5 h-5 mr-2 text-blue-500" /> AI Assistant </h3> </div> <divclassName="h-96 overflow-y-auto p-4 space-y-4"> {messages.map((message) => (';'; <divkey={message.id} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>'; <div className={`max-w-xs px-4 py-2 rounded-lg ${message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-100'}`}> <p>{message.text}</p> </div> </div> ))} </div> <div className="p-4 border-t"> <div className="flex space-x-2"> <input type="text" value={input} onChange={(e) => setInput(e.target.value)} onKeyPress={(e) => e.key === 'Enter' && handleSend()} placeholder="Type your message..." className="flex-1 px-3 py-2 border rounded-lg" /> <button onClick={handleSend} className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600" > <Send className="w-4 h-4" /> </button> </div> </div> </div> )}; export default AIChatAssistant; </any> </Message>;';';
+=======
+import React,{ useState } from 'react'; import { Send,Bot,User } from 'lucide-react'; interface Message { id: string;'; text: string;';'; sender: 'user' | 'ai'} const AIChatAssistant: React.FC = (props) => { const [messages,setMessages] = useState<Message[]>([]); const [input,setInput] = useState<any>("); const handleSend = (props) => { if (!input.trim()) return; const userMessage: Message = { id: Date.now().toString(),text: input,sender: 'user' };; setMessages(prev => [...prev,userMessage]);';'; setInput("); setTimeout(() => { const aiMessage: Message = { id: (Date.now() + 1).toString(),text: `I understand: "${userMessage.text}". How can I help?`,sender: 'ai' };; setMessages(prev => [...prev,aiMessage])},1000)}; return ( <div className="min-h-screen bg-white"> <div className="p-4 border-b"> <h3 className="text-lg font-semibold flex items-center"> <Bot className="w-5 h-5 mr-2 text-blue-500" /> AI Assistant </h3> </div> <divclassName="h-96 overflow-y-auto p-4 space-y-4"> {messages.map((message) => (';'; <divkey={message.id} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>'; <div className={`max-w-xs px-4 py-2 rounded-lg ${message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-100'}`}> <p>{message.text}</p> </div> </div> ))} </div> <div className="p-4 border-t"> <div className="flex space-x-2"> <input type="text" value={input} onChange={(e) => setInput(e.target.value)} onKeyPress={(e) => e.key === 'Enter' && handleSend()} placeholder="Type your message..." className="flex-1 px-3 py-2 border rounded-lg" /> <button onClick={handleSend} className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600" > <Send className="w-4 h-4" /> </button> </div> </div> </div> )}; export default AIChatAssistant; </any> </Message>;';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

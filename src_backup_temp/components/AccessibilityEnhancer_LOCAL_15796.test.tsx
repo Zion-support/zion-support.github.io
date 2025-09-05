@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { render,screen } from '@testing-library/reactimport AccessibilityEnhancer_LOCAL_15796 from ./AccessibilityEnhancer_LOCAL_15796describe(AccessibilityEnhancer_LOCAL_15796,() => {it(renders without crashing,() => {render(<AccessibilityEnhancer_LOCAL_15796 />) expect(screen.getByRole(main) || screen.getByText(/.*/)).toBeInTheDocument()}) it(displays expected content';,() => { render(<AccessibilityEnhancer_LOCAL_15796 />)
+import { render,screen } from &apos;@testing-library/reactimport AccessibilityEnhancer_LOCAL_15796 from ./AccessibilityEnhancer_LOCAL_15796describe(AccessibilityEnhancer_LOCAL_15796,() => {it(renders without crashing,() => {render(<AccessibilityEnhancer_LOCAL_15796 />)&apos;; expect(screen.getByRole(main) || screen.getByText(/.*/)).toBeInTheDocument()})&apos;;&apos;; it(displays expected content&apos;;,() => { render(<AccessibilityEnhancer_LOCAL_15796 />)&apos;;
+import { render,screen } from &apos;@testing-library/reactimport AccessibilityEnhancer_LOCAL_15796 from ./AccessibilityEnhancer_LOCAL_15796describe(AccessibilityEnhancer_LOCAL_15796,() => {it(renders without crashing,() => {render(<AccessibilityEnhancer_LOCAL_15796 />)&apos;; expect(screen.getByRole(main) || screen.getByText(/.*/)).toBeInTheDocument()})';'; it(displays expected content';,() => { render(<AccessibilityEnhancer_LOCAL_15796 />)';
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import { render, screen  } from '@testing-library/reactimport AccessibilityEnhancer_LOCAL_15796 from ./AccessibilityEnhancer_LOCAL_15796describe(AccessibilityEnhancer_LOCAL_15796, () => {it(renders without crashing, () => {render(<AccessibilityEnhancer_LOCAL_15796  />)';
     expect(screen.getByRole(main) || screen.getByText(/.*/)).toBeInTheDocument()})';';
   it(displays expected content';, () => {
@@ -7,4 +15,9 @@ import { render,screen } from '@testing-library/reactimport AccessibilityEnhance
 import { render,screen } from &apos;@testing-library/reactimport AccessibilityEnhancer_LOCAL_15796 from ./AccessibilityEnhancer_LOCAL_15796describe(AccessibilityEnhancer_LOCAL_15796,() => {it(renders without crashing,() => {render(<AccessibilityEnhancer_LOCAL_15796 />)&apos;; expect(screen.getByRole(main) || screen.getByText(/.*/)).toBeInTheDocument()})&apos;;&apos;; it(displays expected content&apos;;,() => { render(<AccessibilityEnhancer_LOCAL_15796 />)&apos;;
 const { render,screen } from "@testing-library/reactimport AccessibilityEnhancer_LOCAL_15796 from ./AccessibilityEnhancer_LOCAL_15796describe(AccessibilityEnhancer_LOCAL_15796,() => {it(renders without crashing,() => {render(<AccessibilityEnhancer_LOCAL_15796 />)"; expect(screen.getByRole(main) | screen.getByText(/.*/)).toBeInTheDocument()})";"
   "; it(displays expected content";,() => { render(<AccessibilityEnhancer_LOCAL_15796 />)";''"
+<<<<<<< HEAD
 import { render,screen } from &apos;@testing-library/reactimport AccessibilityEnhancer_LOCAL_15796 from ./AccessibilityEnhancer_LOCAL_15796describe(AccessibilityEnhancer_LOCAL_15796,() => {it(renders without crashing,() => {render(<AccessibilityEnhancer_LOCAL_15796 />)&apos;; expect(screen.getByRole(main) || screen.getByText(/.*/)).toBeInTheDocument()})';'; it(displays expected content';,() => { render(<AccessibilityEnhancer_LOCAL_15796 />)';
+=======
+import { render,screen } from &apos;@testing-library/reactimport AccessibilityEnhancer_LOCAL_15796 from ./AccessibilityEnhancer_LOCAL_15796describe(AccessibilityEnhancer_LOCAL_15796,() => {it(renders without crashing,() => {render(<AccessibilityEnhancer_LOCAL_15796 />)&apos;; expect(screen.getByRole(main) || screen.getByText(/.*/)).toBeInTheDocument()})';'; it(displays expected content';,() => { render(<AccessibilityEnhancer_LOCAL_15796 />)';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

@@ -102,6 +102,10 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             lastChecked: new Date(),'''
             parentPage: 'Contact','''
             linkText: 'Email'
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
     ];
     useEffect ( () => {}
         setLinkStatuses (sampleLinks) ;
@@ -692,12 +696,20 @@ export {LinkHealthMonitor};
 export {LinkHealthMonitor};
 ;
 export {LinkHealthMonitor};
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </motion>';
 </motion>;';;';
 ;
 </motion>;
 </motion>;
 </motion>;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export {LinkHealthMonitor};
 export {LinkHealthMonitor};
 export {LinkHealthMonitor};
@@ -705,4 +717,8 @@ export {LinkHealthMonitor};
 export {LinkHealthMonitor};
 </motion>
 </motion>
+<<<<<<< HEAD
 </motion>
+=======
+</motion>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

@@ -1,3 +1,12 @@
+<<<<<<< HEAD
 import React from \'react\'; interface CommunityVerifiedBadgeProps { \"endorsementCount\": \'number; threshold?: number; className?: string;\' } const \"CommunityVerifiedBadge\": React.FC<CommunityVerifiedBadgeProps> = ({ endorsementCount,threshold = 3,className = \" }) => {};
 const React from "react"; interface CommunityVerifiedBadgeProps { endorsementCount: "number; threshold?: number; className?: string;" } const CommunityVerifiedBadge: React.FC<CommunityVerifiedBadgeProps> = ({ endorsementCount,threshold = 3,className = " }) => {};'"'"
 import _React from 'react'; interface CommunityVerifiedBadgeProps { "endorsementCount": 'number; threshold?: number; className?: string;' } const "CommunityVerifiedBadge": _React.FC<CommunityVerifiedBadgeProps> = ({ endorsementCount,threshold = 3,className = " }) => {};
+=======
+<<<<<<< HEAD
+=======
+import React from \'react\'; interface CommunityVerifiedBadgeProps { \"endorsementCount\": \'number; threshold?: number; className?: string;\' } const \"CommunityVerifiedBadge\": React.FC<CommunityVerifiedBadgeProps> = ({ endorsementCount,threshold = 3,className = \" }) => {};
+const React from "react"; interface CommunityVerifiedBadgeProps { endorsementCount: "number; threshold?: number; className?: string;" } const CommunityVerifiedBadge: React.FC<CommunityVerifiedBadgeProps> = ({ endorsementCount,threshold = 3,className = " }) => {};'"'"
+import _React from 'react'; interface CommunityVerifiedBadgeProps { "endorsementCount": 'number; threshold?: number; className?: string;' } const "CommunityVerifiedBadge": _React.FC<CommunityVerifiedBadgeProps> = ({ endorsementCount,threshold = 3,className = " }) => {};
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

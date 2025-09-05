@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:src/reportWebVitals.ts
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 type Reporter = ("metric": "any) => void;
 ;
 function defaultReporter("metric": any): void {;
@@ -53,9 +60,19 @@ export function reportWebVitals("reporter": Reporter = defaultReporter): void {
     })';
     .catch(() => {
       // ignore if web-vitals isn't available
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     }
     );
 }
     })}
 ;';';
+<<<<<<< HEAD
 type Reporter = ($1) => void; function defaultReporter($1): void { .rating,})} export function reportWebVitals(reporter: Reporter = defaultReporter): void { import('web-vitals') .then($1) => { const onCLS = mod.onCLS ?? mod.getCLS; const onFID = mod.onFID ?? mod.getFID; const onFCP = mod.onFCP ?? mod.getFCP; const onLCP = mod.onLCP ?? mod.getLCP; const onTTFB = mod.onTTFB ?? mod.getTTFB; try { onCLS && onCLS(reporter)} catch {} try { onFID && onFID(reporter)} catch {} try { onFCP && onFCP(reporter)} catch {} try { onLCP && onLCP(reporter)} catch {} try { onTTFB && onTTFB(reporter)} catch {} })'; .catch(() => { })} ;';';
+=======
+type Reporter = ($1) => void; function defaultReporter($1): void { .rating,})} export function reportWebVitals(reporter: Reporter = defaultReporter): void { import('web-vitals') .then($1) => { const onCLS = mod.onCLS ?? mod.getCLS; const onFID = mod.onFID ?? mod.getFID; const onFCP = mod.onFCP ?? mod.getFCP; const onLCP = mod.onLCP ?? mod.getLCP; const onTTFB = mod.onTTFB ?? mod.getTTFB; try { onCLS && onCLS(reporter)} catch {} try { onFID && onFID(reporter)} catch {} try { onFCP && onFCP(reporter)} catch {} try { onLCP && onLCP(reporter)} catch {} try { onTTFB && onTTFB(reporter)} catch {} })'; .catch(() => { })} ;';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

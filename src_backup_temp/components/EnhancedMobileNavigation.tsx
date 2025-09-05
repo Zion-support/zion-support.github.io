@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+import { Link, useLocation  } from 'react-router-dom';
+ from 'react';
+export const EnhancedMobileNavigation: React.FC = () => {
+import { motion, AnimatePresence  } from 'framer-motion';
+
+ from 'lucide-react';
+
+>} from 'lucide-react';
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';';';
 import { Link, useLocation  } from 'react-router-dom';';';
  from 'react';';
@@ -23,6 +37,7 @@ interface NavigationItem {;
   path: string;
   icon: Reac t.ComponentType<{ size?: number; className?: string';
 }>;';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   icon: React.ComponentType<{ size?: number; className?: string;
 }>;
   "label": "string;
@@ -37,6 +52,11 @@ interface NavigationItem {;
   "icon": React.ComponentType<{ size?: number; className?: string "}>;
   children?: "NavigationItem[];  description?: string"}
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const navigationItems: NavigationIte m[] = [{';
 ';';
     label: 'Home',';';
@@ -119,6 +139,10 @@ const navigationItems: NavigationIte m[] = [{';
 export const EnhancedMobileNavigation: Reac t.FC = () => {
   const [isOpen, setIsOpen] = useState<any>(false);';
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const navigationItems: NavigationIte m[] = [{;
     label: 'Home',;
     path: '/',;
@@ -216,6 +240,11 @@ export const "EnhancedMobileNavigation": "React.FC = () => {;
       if(menuRef.current && !menuRef.current.contains(event.target as Node)) {;
         setIsOpen(false)"}
     };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function EnhancedMobileNavigation(props: any) {
   const [isOpen, setIsOpen] = useState<any>(false);';
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);';';
@@ -253,6 +282,10 @@ export default function EnhancedMobileNavigation(props: any) {
       label: 'Contact',';';
       path: '/contact',
       icon: Phon e
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 export default function EnhancedMobileNavigation("props": "any) {;
   const [isOpen", setIsOpen] = useState<any>(false);
@@ -288,10 +321,19 @@ export default function EnhancedMobileNavigation("props": "any) {;
       "icon": "FileTex t;
     "},;
     {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       label: 'Contact',;
       path: '/contact',;
       icon: Phon e;
     }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       "label": 'Contact',;
       "path": '/contact',;
       "icon": "Phon e;
@@ -314,6 +356,10 @@ export default function EnhancedMobileNavigation("props": "any) {;
   return () => {;
     // Cleanup function;
   "};
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 interface NavigationItem {
   label: string;
   path: string;
@@ -404,9 +450,15 @@ export const EnhancedMobileNavigation: React.FC = () => {
     // Cleanup function
   };
 }, []);, []);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     if(isOpen) {';
 ';';
       document.addEventListener('mousedown', handleClickOutside);';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
     if(isOpen) {;
       document.addEventListener('mousedown', handleClickOutside);
     setActivePath(location.pathname)}, [location]);
@@ -481,15 +533,39 @@ export default function EnhancedMobileNavigation(props: any) {
     return () => {;
       document.removeEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'unset'}}, [isOpen]);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   const toggleExpanded = ("props": "any) => {;
     setExpandedItems(prev => {;
       const newSet = new Set(prev);      if(newSet.has(label)) {;
         newSet.delete(label)"} else {;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const toggleExpanded = (props: any) => {
     setExpandedItems(prev => {
       const newSet = new Set(prev);      if(newSet.has(label)) {
         newSet.delete(label)} else {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        newSet.add(label)}
+      return newSet})};
+;
+    setExpandedItems(new Set())};
+;
+
+    setExpandedItems(new Set())};
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         newSet.add(label)}
       return newSet})};
     setExpandedItems(new Set())};';
@@ -498,13 +574,26 @@ export default function EnhancedMobileNavigation(props: any) {
     setExpandedItems(new Set())};
 ;
     setExpandedItems(new Set())};
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     if(path === '/') {};
     return ()      <div key = {item.label} className="w-full">
         <motion.div
           initial={false}
+<<<<<<< HEAD
           animate = {';
 ';';
   { backgroundColor: isItemActiv e ? 'rgba(34, 221, 210,';';
+=======
+<<<<<<< HEAD
+=======
+          animate = {';
+';';
+  { backgroundColor: isItemActiv e ? 'rgba(34, 221, 210,';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           animate = {;
   { "backgroundColor": "isItemActiv e ? 'rgba(34", 221, 210,;
           animate = {
@@ -514,6 +603,11 @@ export default function EnhancedMobileNavigation(props: any) {
           className={`relative ${depth > 0 ? 'ml-4' : ''}`}
           <Link
             to={item.path}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             onClick={() => handleNavigation(item.path)}`;
             className={`flex items-center justify-between w-full p-4 text-left transition-all duration-200 ${isItemActive';
                 ? 'text-zion-cyan border-l-2 border-zion-cyan'';
@@ -522,6 +616,10 @@ export default function EnhancedMobileNavigation(props: any) {
 ";
             <div className="flex items-center gap-3">;
               <item.icon;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             onClick={() => handleNavigation(item.path)}`
             className={`flex items-center justify-between w-full p-4 text-left transition-all duration-200 ${isItemActive'
                 ? 'text-zion-cyan border-l-2 border-zion-cyan''
@@ -529,8 +627,16 @@ export default function EnhancedMobileNavigation(props: any) {
             }`}
 "
             <div className="flex items-center gap-3">
+<<<<<<< HEAD
               <item.icon';
                 size={20}';';
+=======
+<<<<<<< HEAD
+=======
+              <item.icon';
+                size={20}';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           animate = {;
   { backgroundColor: isItemActiv e ? 'rgba(34, 221, 210,;
   0.1)' : 'transparent' ;
@@ -572,6 +678,11 @@ export default function EnhancedMobileNavigation(props: any) {
                 }`}
                />) }          </Link>
           {hasChildren && (;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             <button';
               onClick={() => toggleExpanded(item.label)}"';';
               className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hover: tex t-white transition-colors"'`';';
@@ -580,6 +691,10 @@ export default function EnhancedMobileNavigation(props: any) {
               <ChevronDown size={16}`';';
                 className={`transition-transform duration-200 ${                size={16}`                className={`transition-transform duration-200 ${'';';
                   isExpanded ? 'rotate-180' : ''`
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             <button;
               onClick={() => toggleExpanded(item.label)}";
               className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light "hover": "tex t-white transition-colors"'`;
@@ -599,6 +714,11 @@ export default function EnhancedMobileNavigation(props: any) {
                />
             </button>;) }        </motion.div>
         {hasChildren && (;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           <AnimatePresence>;
             {isExpanded && (<motion.div;
                 initial = {;
@@ -620,22 +740,39 @@ export default function EnhancedMobileNavigation(props: any) {
                 className="overflow-hidden";
 ";
                 <div className="border-l border-zion-slate-light/20 ml-4">;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           <AnimatePresence>
             {isExpanded && (<motion.div
                 initial = {
   { height: 0,
   opacity: 0
 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 animate = {';
 ';';
   { height: 'auto',
   opacity: 1
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                 animate = {;
   { height: 'auto',;
   opacity: 1;
                 animate = {
   { height: 'auto',
   opacity: 1
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 }}
                 exit = {
   { height: 0,
@@ -663,6 +800,11 @@ export default function EnhancedMobileNavigation(props: any) {
   return ()
     <>
       {/* Mobile Menu Toggle */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       <button;
         onClick={() => setIsOpen(true)}";
         className=""lg": "hidden p-2 text-white "hover": tex t-zion-cyan transition-colors "focus": outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan/50 rounded-lg";
@@ -718,6 +860,10 @@ export default function EnhancedMobileNavigation(props: any) {
 ";
                         <action.icon size={20} className="mx-auto mb-2" />";
                         <span className="text-xs font-medium">{action.label}</span>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       <button
         onClick={() => setIsOpen(true)}"
         className="lg: hidden p-2 text-white hover: tex t-zion-cyan transition-colors focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan/50 rounded-lg"
@@ -821,6 +967,11 @@ export default function EnhancedMobileNavigation(props: any) {
                   "
                   <div className="space-y-1">
                     {navigationItems.map(item => renderNavigationItem(item))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   </div>;
                 </nav>;
               </div>;
@@ -862,6 +1013,10 @@ export default function EnhancedMobileNavigation(props: any) {
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   </div>
                 </nav>
               </div>
@@ -906,8 +1061,16 @@ export default function EnhancedMobileNavigation(props: any) {
             </motion.div>;
           </motion.div>;) "};
       </AnimatePresence>;
+<<<<<<< HEAD
     </>';
   )}};';';
+=======
+<<<<<<< HEAD
+=======
+    </>';
+  )}};';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </>
   )}};
 '"`
@@ -923,8 +1086,16 @@ export default function EnhancedMobileNavigation(props: any) {
 </any>
 </any>
 </string>
+<<<<<<< HEAD
 </Set>';
 </any>;';;';
+=======
+<<<<<<< HEAD
+=======
+</Set>';
+</any>;';;';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </>;
   )}};
 '"`;
@@ -943,4 +1114,12 @@ export default function EnhancedMobileNavigation(props: any) {
 </Set>;
 </any>;
 </Set>
+<<<<<<< HEAD
 </any>
+=======
+<<<<<<< HEAD
+</any>
+=======
+</any>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

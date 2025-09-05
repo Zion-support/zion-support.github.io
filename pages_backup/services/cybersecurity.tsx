@@ -1,4 +1,15 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Eye, Shield, Lock, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
+
+const securityServices = [
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
@@ -127,6 +138,10 @@ const features = [
     title: 'Data Protection',
     description: 'Advanced encryption and data protection solutions'
   },
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   {
     icon: Eye,
     title: 'Threat Monitoring',
@@ -148,6 +163,13 @@ const features = [
     description: 'Employee security awareness and training programs'
   }
 ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export default function CybersecurityPage() {
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const benefits = [
   'Protection against cyber threats and attacks',
   'Compliance with industry regulations',
@@ -157,6 +179,10 @@ const benefits = [
   'Peace of mind with 24/7 monitoring'
 ];
 export default function CybersecurityServices() {
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <Layout
       title="Cybersecurity Services - Zion Tech Group"
@@ -186,6 +212,26 @@ export default function CybersecurityServices() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        {/* Services Grid */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {securityServices.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
+                >
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <service.icon className="w-6 h-6 text-blue-600" />
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -203,6 +249,10 @@ export default function CybersecurityServices() {
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-red-600" />
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -215,6 +265,12 @@ export default function CybersecurityServices() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -250,6 +306,10 @@ export default function CybersecurityServices() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -271,6 +331,14 @@ export default function CybersecurityServices() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </Layout>
+=======
+<<<<<<< HEAD
+    </>
+=======
+    </Layout>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   );
 }

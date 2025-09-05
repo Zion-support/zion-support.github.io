@@ -1,4 +1,10 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 export default function Page("props": "any) {;
 interface DataVisualizationProps extends React.PropsWithChildren<{"}> {;
@@ -9,6 +15,10 @@ interface DataVisualizationProps extends React.PropsWithChildren<{"}> {;
 ;
 export const "DataVisualization": "React.FC<DataVisualizationProps> = ({;
 "title":  "Data Analytics Dashboard"",;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function Page(props: any) {
 interface DataVisualizationProps extends React.PropsWithChildren<{}> {
   title?: string;
@@ -22,6 +32,19 @@ title:  "Data Analytics Dashboard",;
   showActions = true}) => {;
   const [selectedTimeRange, setSelectedTimeRange] = useState<any>('7d');
   const [isLoading, setIsLoading] = useState<any>(false);  const [activeChart, setActiveChart] = useState<any>('bar');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+  // Sample data - in a real app, this would come from an API;
+  const [chartData, setChartData] = useState<any>({;
+
+  // Sample data - in a real app, this would come from an API
+  const [chartData, setChartData] = useState<any>({
+
+    labels['Jan',Feb',Mar',Apr',May',Jun'],;
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Sample data - in a real app, this would come from an API
   const [chartData, setChartData] = useState<any>({';
 ';';
@@ -41,10 +64,19 @@ title:  "Data Analytics Dashboard",;
       "label": 'Revenue',;
       data[65, 59, 80, 81, 56, 55],;
       backgroundColor['rgba(34, 221, 210, 0.2)],;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       borderColor['rgba(34, 221, 210, 1)],;
       "borderWidth": "2;
     "}];
   }) ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const [metrics, setMetrics] = useState<any> ([{';
 ';';
       title: 'Total Revenue',';';
@@ -76,6 +108,10 @@ title:  "Data Analytics Dashboard",;
       change: 0.0,;';';
       changeType: 'neutral',"';
       icon: <Activity className="w-5 h-5"   />,;';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   const [metrics, setMetrics] = useState<any> ([{;
       "title": 'Total Revenue',;
@@ -146,6 +182,12 @@ title:  "Data Analytics Dashboard",;
   // Simulate data refresh
     setIsLoading(true) ;    // Simulate API call
     await new Promise(resolve => setTimeout (resolve, 1000) ) ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
     // Update chart data with new random values;
 setChartData("prev": "> ({;
@@ -172,6 +214,10 @@ setChartData("prev": "> ({;
       "backgroundColor": "[';
         'rgba(34", 221, 210, 0.8),rgba(140, 21, 233, 0.8),rgba(239, 68, 68, 0.8),rgba(16, 185, 129, 0.8),rgba(245, 158, 11, 0.8);
       ],;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     // Update chart data with new random values
 setChartData(prev:  > ({;
       ...prev,;
@@ -194,9 +240,18 @@ setChartData(prev:  > ({;
       data: [35, 25, 20, 15, 5],
       backgroundColor: ['
         'rgba(34, 221, 210, 0.8),rgba(140, 21, 233, 0.8),rgba(239, 68, 68, 0.8),rgba(16, 185, 129, 0.8),rgba(245, 158, 11, 0.8)
+<<<<<<< HEAD
       ],';
       borderColor[;';';
         'rgba(34, 221, 210, 1),rgba(140, 21, 233, 1),rgba(239, 68, 68, 1),rgba(16, 185, 129, 1),rgba(245, 158, 11, 1)
+=======
+<<<<<<< HEAD
+=======
+      ],';
+      borderColor[;';';
+        'rgba(34, 221, 210, 1),rgba(140, 21, 233, 1),rgba(239, 68, 68, 1),rgba(16, 185, 129, 1),rgba(245, 158, 11, 1)
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     // Update metrics with new random values;
     setMetrics(prev => prev.map(metric => ({;
       ...metric,;
@@ -226,6 +281,11 @@ setChartData(prev:  > ({;
   ;
   "borderWidth": "2;
     ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 }]};
   // Generate line chart data';
   const lineChartData = {';';
@@ -243,6 +303,10 @@ setChartData(prev:  > ({;
 </any>;
 </any>;
 </DataVisualizationProps>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 }]};
   // Generate line chart data
   const lineChartData = {
@@ -252,4 +316,12 @@ setChartData(prev:  > ({;
 </any>
 </any>
 </any>
+<<<<<<< HEAD
 </DataVisualizationProps>
+=======
+<<<<<<< HEAD
+</DataVisualizationProps>
+=======
+</DataVisualizationProps>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const PricingPage: React.FC = () => {
   return (
     <>
@@ -181,4 +187,8 @@ const PricingPage: _React.FC = () => {}
     </>;
 ;  );
 };,
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default PricingPage;

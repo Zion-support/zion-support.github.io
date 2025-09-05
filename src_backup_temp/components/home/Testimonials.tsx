@@ -63,8 +63,16 @@ return ();
                 </div>";
                 <h3 className="text-lg font-semibold text-white mb-1">;
                   {testimonials[currentIndex].name}
+<<<<<<< HEAD
                 </h3>";
                 <p className="text-zion-cyan font-medium mb-1">;
+=======
+<<<<<<< HEAD
+=======
+                </h3>";
+                <p className="text-zion-cyan font-medium mb-1">;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 "
                 <p className="text-zion-cyan font-medium mb-1">
                   {testimonials[currentIndex].role}

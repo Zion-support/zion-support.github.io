@@ -9,7 +9,13 @@ import React from 'react';
 interface RequestQuote.jsProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
+
 }} animate = {
+
+=======
+}} animate = {
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   { "opacity": "1",;
   "y": "0;
 "}} transition = {;
@@ -185,6 +191,10 @@ interface RequestQuote.jsProps {
 "}} whileInView = {;
   { "opacity": "1",;
   "x": "0;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 "}} viewport={{ "once": "true "}} transition={{ "duration": "0.8 "}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">;
                 <h3 className="text-xl font-bold text-white mb-4">Get in Touch</h3>;
                 <div className="space-y-4">;
@@ -217,6 +227,10 @@ interface RequestQuote.jsProps {
                   </div>
                 </div>
               </motion.div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
               {/* Why Choose Us */}
               <motion.div initial = {;
   { "opacity": "0",;
@@ -227,6 +241,10 @@ interface RequestQuote.jsProps {
 "}} viewport={{ "once": "true "}} transition = {;
   { "duration": "0.8",;
   "delay": "0.2;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 "}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">;
                 <h3 className="text-xl font-bold text-white mb-4">Why Choose Us</h3>;
                 <div className="space-y-4">;
@@ -291,6 +309,10 @@ interface RequestQuote.jsProps {
                   </div>
                 </div>
               </motion.div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
               {/* Process */}
               <motion.div initial = {;
   { "opacity": "0",;
@@ -301,6 +323,10 @@ interface RequestQuote.jsProps {
 "}} viewport={{ "once": "true "}} transition = {;
   { "duration": "0.8",;
   "delay": "0.4;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 "}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">;
                 <h3 className="text-xl font-bold text-white mb-4">Our Process</h3>;
                 <div className="space-y-4">;
@@ -392,6 +418,10 @@ export {RequestQuote};
 </motion>;
 </motion>;
 </motion>
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </motion>
 </motion>
 </motion>
@@ -407,4 +437,8 @@ export default function RequestQuote.js({ }: RequestQuote.jsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

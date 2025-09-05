@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:src/data/aiServicesData.ts
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export interface AIService {;
   "id": "string;
   "title": string;
@@ -2689,4 +2696,8 @@ export const AI_SERVICES: AIService[] = [
     competitors: ["CrowdStrike", "Palo Alto Networks", "IBM Security", "Microsoft Sentinel"],
     marketSize: "$22.1 billion by 2025"
   }
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

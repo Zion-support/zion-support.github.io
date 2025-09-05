@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -8,6 +16,10 @@ import { motion } from 'framer-motion';
 import { ShoppingCart, 
   Brain, 
   BarChart3, 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import {
   ShoppingCart,
   Brain,
@@ -21,11 +33,20 @@ import {
   Globe,
   Database;
 } from 'lucide-react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from '../../components/Layout';';
 const services = [;
   {}
     title: 'E-commerce Platforms,',
     description: 'Custom e-commerce solutions with advanced features and seamless user experience.,',
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -94,12 +115,21 @@ const services = [
       'Social commerce integration'';
     ];
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;];
 const benefits = [;
   {}
     title: 'Increased Sales,',
     description: 'Personalized experiences and optimized inventory drive higher conversion rates.,',
     icon: ShoppingCart;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ];
 const benefits = [
   {
@@ -122,6 +152,11 @@ const benefits = [
     description: 'Advanced analytics provide actionable insights for business growth.,',
     icon: Database;
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;];
 export default function RetailPage() {
   return (;
@@ -169,6 +204,10 @@ export default function RetailPage() {
             </motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ];
 export default function RetailPage() {
   return (
@@ -223,6 +262,11 @@ export default function RetailPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -236,6 +280,10 @@ export default function RetailPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -253,6 +301,11 @@ export default function RetailPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">";
@@ -264,6 +317,10 @@ export default function RetailPage() {
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">
@@ -281,9 +338,18 @@ export default function RetailPage() {
                   </ul>,
                 </motion.div>;
               ))}
+<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
+=======
+<<<<<<< HEAD
+=======
+            </div>,
+          </div>;
+        </section>;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
@@ -294,6 +360,11 @@ export default function RetailPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -307,6 +378,10 @@ export default function RetailPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -333,9 +408,18 @@ export default function RetailPage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
+<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
+=======
+<<<<<<< HEAD
+=======
+            </div>,
+          </div>;
+        </section>;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
@@ -346,6 +430,11 @@ export default function RetailPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Retail?;
@@ -367,6 +456,10 @@ export default function RetailPage() {
         </section>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Retail?

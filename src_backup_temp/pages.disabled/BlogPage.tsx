@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
 const "BlogPage": React.FC = () => {
   return (
@@ -13,4 +18,9 @@ const "BlogPage": React.FC = () => {
 };
 export { BlogPage };
 export default BlogPage;
+<<<<<<< HEAD
 import React from 'react'; const BlogPage: React.FC = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-center"> Blog </h1> <p className="text-xl text-gray-600 text-center">Coming soon...</p> </div> </div> )}; export { BlogPage }; export default BlogPage;
+=======
+import React from 'react'; const BlogPage: React.FC = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-center"> Blog </h1> <p className="text-xl text-gray-600 text-center">Coming soon...</p> </div> </div> )}; export { BlogPage }; export default BlogPage;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

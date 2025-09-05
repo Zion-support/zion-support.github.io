@@ -8,4 +8,8 @@ import {useState,useEffect,useCallback} from &apos;react&apos;; export const use
 const {useState,useEffect,useCallback} from "react"; export const useAccessibility = (props) => {; const [preferences,setPreferences] = useState({; highContrast: false largeText: false reducedMotion: false focusIndicator: true screenReader: false keyboardNavigation: true}); const [settings,setSettings] = useState({; fontSize: "medium" colorScheme: "default" motionPreference: "no-preference" focusStyle: "default"});");";";";";"; export default ComponentName;";";";";";";'"'"
 import { useEffect } from 'react';,
 import { useState } from 'react';,
+<<<<<<< HEAD
 import {useState,useEffect,useCallback} from 'react'; export const useAccessibility = (props) => {; const [preferences,setPreferences] = useState({; highContrast: false largeText: false reducedMotion: false focusIndicator: true screenReader: false keyboardNavigation: true}); const [settings,setSettings] = useState({; fontSize: 'medium' colorScheme: 'default' motionPreference: 'no-preference' focusStyle: 'default'});");';';';';'; export default ComponentName;";';';';';';
+=======
+import {useState,useEffect,useCallback} from 'react'; export const useAccessibility = (props) => {; const [preferences,setPreferences] = useState({; highContrast: false largeText: false reducedMotion: false focusIndicator: true screenReader: false keyboardNavigation: true}); const [settings,setSettings] = useState({; fontSize: 'medium' colorScheme: 'default' motionPreference: 'no-preference' focusStyle: 'default'});");';';';';'; export default ComponentName;";';';';';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

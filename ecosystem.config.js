@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default {
   apps: [
     {
@@ -175,6 +180,10 @@ export default {
       out_file: 'logs/pm2/syntax-fixer-out.log',
     }
   ],
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 module.exports = {
   apps: [{
     name: "ziontechgroup-site",

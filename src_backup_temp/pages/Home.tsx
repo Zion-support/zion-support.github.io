@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 :src/pages/Home.tsx
 import { Link } from 'react-router-dom';
 import { 
@@ -194,6 +199,10 @@ export function Home() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 const "Home": "React.FC = () => {;
   return (;
@@ -220,4 +229,12 @@ const "Home": "React.FC = () => {;
   );
 "};
 ;
+<<<<<<< HEAD
 export default Home;
+=======
+<<<<<<< HEAD
+export default Home;
+=======
+export default Home;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 #!/usr/bin/env node
 /**
  * Advanced Monitoring Script
@@ -49,4 +55,9 @@ class AdvancedMonitor {
 // Start monitoring
 const monitor = new AdvancedMonitor()
 monitor.startMonitoring()
+<<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
+=======
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

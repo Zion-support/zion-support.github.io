@@ -1,18 +1,39 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;export function ITServiceRequestHero(...args[]): "{;
   const [location", setLocation] = useState<any>("");
   const [isSubmitting, setIsSubmitting] = useState<any>(false);
 ;
   const handleSubmit = async "e": "React.FormEvent {;    e.preventDefault();
     if(location.trim()) {;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;export function ITServiceRequestHero(...args[]):  {
   const [location, setLocation] = useState<any>("");
   const [isSubmitting, setIsSubmitting] = useState<any>(false);
   const handleSubmit = async e: React.FormEvent {;    e.preventDefault();
     if(location.trim()) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       setIsSubmitting(true);
       // Simulate API call
       setTimeout(: unknown {
         setIsSubmitting(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         router(`/it-onsite-services?location = ${encodeURIComponent(location)"}`)}, 1000)}}}}}}}}}};
 ;
   const containerVariants = {;
@@ -46,6 +67,7 @@
   ];
 import React, { useState } from 'react';';';
 import { motion  } from 'framer-motion';';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 ;
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
@@ -83,6 +105,11 @@ import { motion  } from 'framer-motion';
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 import { Link  } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 ,";
     { "icon": "Glob e", "text": "Global Coverage", "color": "text-zion-purple" },";
@@ -162,6 +189,10 @@ export function ITServiceRequestHero("props": "any) {;
             initial = {
   { opacity: 0,
   x: 3 0
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         viewport={{ "once": "tru e "}}
 ";
         <div className="grid grid-cols-1 "lg": "gri d-cols-2 gap-16 items-center">;
@@ -219,9 +250,18 @@ export function ITServiceRequestHero("props": "any) {;
           </motion.div>;
           <motion.div;
             initial = {;
+<<<<<<< HEAD
   { opacity: 0,;
   x: 3 0;
 }}
+=======
+<<<<<<< HEAD
+=======
+  { opacity: 0,;
+  x: 3 0;
+}}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   { "opacity": 0",;
   "x": "3 0;
 "}}
@@ -281,6 +321,10 @@ export function ITServiceRequestHero("props": "any) {;
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>";
                 <span className="text-green-400 text-sm font-semibold">Online Now</span>;
               </div>;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 ,"
     { icon: Glob e, text: "Global Coverage", color: "text-zion-purple" },"
     { icon: Shiel d, text: "Certified Technicians", color: "text-zion-cyan-light" },;"
@@ -419,16 +463,32 @@ export function ITServiceRequestHero(props: any) {
           </motion.div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </section>;';
   )}';';
+=======
+<<<<<<< HEAD
+=======
+    </section>;';
+  )}';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </section>;
   )}
 '"`
 </motion>
 </Button>
 </motion>
+<<<<<<< HEAD
 </any>';
 </any>;';;';
+=======
+<<<<<<< HEAD
+=======
+</any>';
+</any>;';;';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </section>;
   )}
 '"`;
@@ -440,4 +500,12 @@ export function ITServiceRequestHero(props: any) {
 </any>;
 </motion>
 </any>
+<<<<<<< HEAD
 </any>
+=======
+<<<<<<< HEAD
+</any>
+=======
+</any>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

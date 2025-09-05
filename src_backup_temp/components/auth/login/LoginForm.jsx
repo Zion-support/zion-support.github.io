@@ -14,12 +14,20 @@ export default function Page("props": "any) {;
         navigate('/');
       } else {;
         form.setError('root', {;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
           "message": 'Login failed.Please check your credentials.'});
           message: 'Login failed.Please check your credentials.'}
     );
       }
     } catch(error) {;
       form.setError('root', {;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
         "message": 'An error occurred.Please try again.'});
         message: 'An error occurred.Please try again.'}
     );

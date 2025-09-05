@@ -1,4 +1,10 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 export default function Page("props": "any) {;
 > {;
@@ -12,18 +18,37 @@ export const "SearchAndFilterSystem": "React.FC<SearchAndFilterSystemProps> = ({
   onResultsChange,;
   placeholder = "Search services, articles, team members...",;
   showFilters = true}) => {;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function Page(props: any) {
 > {
   data: SearchResul t[];
   onResultsChange?: (results: SearchResul t[]) => void;
   placeholder?: string;
   showFilters?: boolean}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   data,
   onResultsChange,
   placeholder = "Search services, articles, team members...",
+<<<<<<< HEAD
   showFilters = true}) => {';
 ';';
+=======
+<<<<<<< HEAD
+=======
+  showFilters = true}) => {';
+';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
   data,;
@@ -31,6 +56,13 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
   placeholder = "Search services, articles, team members...",;
   showFilters = true}) => {;
   showFilters = true}) => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const [searchQuery, setSearchQuery] = useState<any>('');
   const [isSearchFocused, setIsSearchFocused] = useState<any>(false);
   const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set());
@@ -47,6 +79,11 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
         break;
       case 'name': "results = results.sort((a", b) => a.title.localeCompare(b.title) ) ;
         break;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       "default": "// relevance;
         // Keep original order for relevance;
         break;
@@ -59,6 +96,10 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
   return () => {;
     // Cleanup function;
   "};
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       default: // relevance
         // Keep original order for relevance
         break;
@@ -76,6 +117,19 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
       newFilters.delete(filterId)} else {
       newFilters.add(filterId);
     setActiveFilters(newFilters) };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+  // Clear all filters;
+
+  // Clear all filters
+  
+    setSelectedCategory('all');
+    setSortBy('relevance')};
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Clear all filters';
   ';';
     setSelectedCategory('all');';';
@@ -109,6 +163,10 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
       "default": retur n <Globe className="w-4 h-4"   />"};
 ;
   // Get category color;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Get icon for type
   const getTypeIcon = (props: any) => {
     switch(type) {
@@ -119,6 +177,13 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
       case 'technology': return <Brain className="w-4 h-4"   />;"
       default: retur n <Globe className="w-4 h-4"   />};
   // Get category color
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     return colors[category as keyof typeof colors] || 'text-zinc-400'};
   return ("
     <div className="w-full max-w-6xl mx-auto">
@@ -131,6 +196,11 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
             onChange={(e) => setSearchQuery(e.target.value)}
             onFocus={() => setIsSearchFocused(true)}
             onBlur={() => setTimeout(() => setIsSearchFocused(false), 200)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             placeholder={placeholder}"
             className="w-full pl-12 pr-4 py-4 bg-zinc-900/50 border border-zinc-700/50 rounded-xl text-white placeholder-zinc-400 focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent transition-all duration-300 backdrop-blur-md"
           />';
@@ -139,6 +209,10 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
               onClick={() => setSearchQuery('')}"
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-400 hover: tex t-white transition-colors"
 "
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             placeholder={placeholder}";
             className="w-full pl-12 pr-4 py-4 bg-zinc-900/50 border border-zinc-700/50 rounded-xl text-white placeholder-zinc-400 "focus": "outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan "focus": borde r-transparent transition-all duration-300 backdrop-blur-md";
           />;
@@ -217,6 +291,11 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
           <div className="relative">
             <select
               value={selectedCategory}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               onChange={(e) => setSelectedCategory(e.target.value)}";
               className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm "focus": "outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan "focus": borde r-transparent transition-all duration-300";
 ";
@@ -225,6 +304,10 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
                 <option key={category.id"} value={category.value}>;
                   {category.label} ({category.count});
                 </option>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               onChange={(e) => setSelectedCategory(e.target.value)}"
               className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent transition-all duration-300"
 "
@@ -240,6 +323,11 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
           <div className="relative">
             <select
               value={sortBy}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               onChange={(e) => setSortBy(e.target.value)}";
               className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm "focus": "outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan "focus": borde r-transparent transition-all duration-300";
 ";
@@ -255,13 +343,25 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
 className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${showFilterPanel'';';
                 ? 'bg-zion-cyan text-white''';';
                 : 'bg-zinc-900/50 text-zinc-300 hover: tex t-white border border-zinc-700/50'`
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           {/* Filter Toggle */"}
           <button;
             onClick={() => setShowFilterPanel(!showFilterPanel)}`;
 "className": "{`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${showFilterPanel';
                 ? 'bg-zion-cyan text-white'';
+<<<<<<< HEAD
                 : 'bg-zinc-900/50 text-zinc-300 hover: tex t-white border border-zinc-700/50'`;
             }`}
+=======
+<<<<<<< HEAD
+=======
+                : 'bg-zinc-900/50 text-zinc-300 hover: tex t-white border border-zinc-700/50'`;
+            }`}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 : 'bg-zinc-900/50 text-zinc-300 "hover": tex t-white border border-zinc-700/50'`;
             "}`}
 ";
@@ -292,18 +392,37 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
               </span>) }
           </button>
           {/* Clear Filters */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           {activeFilters.size > 0 && (;
             <button;
               onClick={clearAllFilters}";
               className="px-3 py-2 text-sm text-zinc-400 "hover": "tex t-white transition-colors";
               Clear all;
             </button>) "}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           {activeFilters.size > 0 && (
             <button
               onClick={clearAllFilters}"
               className="px-3 py-2 text-sm text-zinc-400 hover: tex t-white transition-colors"
               Clear all
             </button>) }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        </div>) }
+;
+        </div>) }
+
+      {/* Filter Panel */}
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </div>
   );
 }
@@ -321,6 +440,10 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
 ';';
   { height: 'auto',
   opacity: 1
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             animate = {;
   { height: 'auto',;
   opacity: 1;
@@ -329,6 +452,11 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
   { height: 0,;
   opacity: 0;
 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             transition = {
 ';
   { duration: 0.3,';';
@@ -340,6 +468,10 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
               <h3 className="text-sm font-medium text-white mb-4">Advanced Filters</h3>
 "
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-4">
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   { "height": "0",;
   "opacity": "0;
 "}}
@@ -360,8 +492,16 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
             <div className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">";
               <h3 className="text-sm font-medium text-white mb-4">Advanced Filters;
 ";
+<<<<<<< HEAD
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-4">;
                 {/* Type Filters */}
+=======
+<<<<<<< HEAD
+=======
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-4">;
+                {/* Type Filters */}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               <div className="grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-3 gap-4">;
                 {/* Type Filters */"}
                 <div>";
@@ -378,10 +518,19 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                         <span className="text-sm text-zinc-300">{type.label"}</span>";
                         <span className="text-xs text-zinc-500">({type.count})</span>;
                       </label>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     ))}
                   </div>;
                 </div>;
                 {/* Tag Filters */}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       <AnimatePresence>
         {showFilterPanel && (<motion.div
             initial = {
@@ -431,10 +580,19 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                     {['AI',Cloud',Security',DevOps',Digital Transformation',Machine Learning'].map((tag) => (
                       <button
                         key={tag}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                         onClick={() => toggleFilter(tag.toLowerCase())}`';
                         className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${activeFilters.has(tag.toLowerCase())';';
                             ? 'bg-zion-cyan text-white''';';
                             : 'bg-zinc-800/50 text-zinc-300 hover: b g-zinc-700/50'`
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 <div>";
                   <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Popular Tags</h4>";
                   <div className="flex flex-wrap gap-2">;
@@ -446,17 +604,33 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                             ? 'bg-zion-cyan text-white'';
                             : 'bg-zinc-800/50 text-zinc-300 hover: b g-zinc-700/50'`;
                         }`}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                         onClick={() => toggleFilter(tag.toLowerCase())}`;
                         className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${activeFilters.has(tag.toLowerCase());
                             ? 'bg-zion-cyan text-white'';
                             : 'bg-zinc-800/50 text-zinc-300 "hover": "b g-zinc-700/50'`;
                         "}`}
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                         onClick={() => toggleFilter(tag.toLowerCase())}`
                         className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${activeFilters.has(tag.toLowerCase())
                             ? 'bg-zion-cyan text-white''
                             : 'bg-zinc-800/50 text-zinc-300 hover: b g-zinc-700/50'`
                         }`}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                         {tag}
                       </button>) ) }
                   </div>
@@ -477,11 +651,17 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                         <input";
                           type="checkbox";
                           checked={activeFilters.has(location.toLowerCase())}
+<<<<<<< HEAD
+=======
                           onChange={() => toggleFilter(location.toLowerCase())}";
                           className="w-4 h-4 text-zion-cyan bg-zinc-800 border-zinc-600 rounded "focus": "rin g-zion-cyan "focus": rin g-2";
                         />";
                         <span className="text-sm text-zinc-300">{location"}</span>;
                       </label>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                           onChange={() => toggleFilter(location.toLowerCase())}"
                           className="w-4 h-4 text-zion-cyan bg-zinc-800 border-zinc-600 rounded focus: rin g-zion-cyan focus: rin g-2"
                         />"
@@ -503,6 +683,11 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
       <div className="space-y-4"> {filteredResults.map((result) => (;
           <motion.div
             key={result.id}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             initial = {;
   { "opacity": "0",;
   "y": "2 0;
@@ -530,6 +715,10 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                       </div>;
                     )}`;
                     <span className={`text-xs px-2 py-1 rounded-full bg-zinc-800/50 ${getCategoryColor(result.category)}`}>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             initial = {
   { opacity: 0,
   y: 2 0
@@ -569,9 +758,18 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                     <div className="flex items-center gap-1">"
                       <MapPin className="w-4 h-4"   />
                       {result.location}
+<<<<<<< HEAD
                         </div>
   );
 }
+=======
+<<<<<<< HEAD
+=======
+                        </div>
+  );
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     </div>
                   )}
                   {result.date && ("
@@ -605,6 +803,11 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
           </motion.div>;) ) }
       </div>
       {/* No Results */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {filteredResults.length === 0 && (<motion.div;
           initial={{ "opacity": "0 "}}
           animate={{ "opacity": "1 "}}";
@@ -620,6 +823,10 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
             Clear all filters;
           </button>;
         </motion.div>) "}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {filteredResults.length === 0 && (<motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}"
@@ -635,10 +842,24 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
             Clear all filters
           </button>
         </motion.div>) }
+<<<<<<< HEAD
         </div>
   );
     </div>) }
 }
+=======
+<<<<<<< HEAD
+=======
+        </div>
+  );
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+    </div>) }
+}
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 }
 '"`
 </motion>
@@ -650,8 +871,16 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
 </any>
 </string>
 </Set>
+<<<<<<< HEAD
 </any>';
 </SearchAndFilterSystemProps>;';;';
+=======
+<<<<<<< HEAD
+=======
+</any>';
+</SearchAndFilterSystemProps>;';;';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </div>) }
 ;
 }
@@ -672,4 +901,12 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
 </SearchAndFilterSystemProps>;
 </any>
 </any>
+<<<<<<< HEAD
 </SearchAndFilterSystemProps>
+=======
+<<<<<<< HEAD
+</SearchAndFilterSystemProps>
+=======
+</SearchAndFilterSystemProps>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

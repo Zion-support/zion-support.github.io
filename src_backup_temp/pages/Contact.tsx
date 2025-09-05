@@ -1,4 +1,10 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 :src/pages/Contact.tsx
 import { 
   Mail, 
@@ -11,11 +17,20 @@ import {
   MessageCircle
 } from 'lucide-react';
 export function Contact() {
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 :src/pages/Contact.tsx
     phone: '',
     service: '',
@@ -23,6 +38,10 @@ export default function Contact() {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     message: ''
   });
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -33,6 +52,11 @@ export default function Contact() {
   };
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 :src/pages/Contact.tsx
     // Handle form submission here
     setIsSubmitted(true);
@@ -311,6 +335,10 @@ export default function Contact() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     // Handle form submission
   };
   return (

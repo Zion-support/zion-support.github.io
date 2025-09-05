@@ -1,5 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+/* eslint-env node */
+/* global module */
+module.exports = {
+  extends: [
+    'next/core-web-vitals',
+    '@typescript-eslint/recommended'
+  ],
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default {
   extends: ['next/core-web-vitals', 'next/typescript'],
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -16,6 +29,15 @@ export default {
     '@typescript-eslint/no-unused-vars': 'warn',
     'no-console': 'off',
     'no-undef': 'off',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    'react/no-unescaped-entities': 'off',
+    '@typescript-eslint/no-explicit-any': 'warn'
+  },
+  env: {
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   "extends": [
     "next/core-web-vitals",
     "next/typescript"
@@ -91,9 +113,40 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     node: true,
-    es6: true
+    browser: true,
+    es2021: true
   },
+<<<<<<< HEAD
+  ignorePatterns: [
+    'pages._archive_corrupted/**',
+    'pages.disabled.full/**',
+    'pages.disabled_auto/**',
+    'pages_api.disabled/**',
+    'pages_backup_conflict/**',
+    'pages.blog.disabled/**',
+    'pages.corrupted.*/**',
+    'pages.broken/**',
+    'pages.bak/**',
+    'pages-quarantine/**',
+    'pages-disabled/**',
+    'pages.__backup/**',
+    'temp_backup/**',
+    'temp_broken_files/**',
+    'temp_working/**',
+    'tests.disabled/**',
+    'lib_backup/**',
+    'node_modules/**',
+    '.next/**',
+    'out/**',
+    'dist/**',
+    'build/**'
+  ]
+=======
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
@@ -106,4 +159,8 @@ module.exports = {
     'no-unused-vars': 'warn',
     '@next/next/no-img-element': 'warn'
   }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 };

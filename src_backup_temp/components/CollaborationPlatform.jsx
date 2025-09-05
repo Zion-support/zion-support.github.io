@@ -12,6 +12,10 @@ export function CollaborationPlatform("props": "any) {;
     const [isFullscreen, setIsFullscreen] = useState(false);
     const [participants, setParticipants] = useState(mockParticipants);
     const [localUser, setLocalUser] = useState({;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
         "isVideoOn": "true",;
         "isAudioOn": "true",;
         "isScreenSharing": "false",;

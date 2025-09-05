@@ -180,6 +180,10 @@ const MobileNavigation = (props: any) => {}
             transition: {}';';
                 duration: 0.3,'';';
   ease: 'easeInOut'
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
         setActiveDropdown(activeDropdown === label ? null : label)};
     const handleSearch = (props: any) => {}
                 {"label": 'About Us', "href": '/about'},''';
@@ -623,15 +627,27 @@ export {MobileNavigation};
 export {MobileNavigation};
 ;
 export {MobileNavigation};
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </motion>';
 </motion>;';;';
 ;
 </motion>;
 </motion>;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export {MobileNavigation};
 export {MobileNavigation};
 export {MobileNavigation};
 export {MobileNavigation};
 export {MobileNavigation};
 </motion>
+<<<<<<< HEAD
 </motion>
+=======
+</motion>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

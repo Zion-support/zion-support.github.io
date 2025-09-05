@@ -54,6 +54,10 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
                 {feature.title}
               </h3>;
               <p className="text-zion-slate-light text-sm leading-relaxed">;
+<<<<<<< HEAD
+              
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
               <p className="text-zion-slate-light text-sm leading-relaxed">
                 {feature.description}
               </p>;

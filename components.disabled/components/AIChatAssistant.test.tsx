@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    expect(input).toBeInTheDocument();
+  });
+});
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 describe(\'AIChatAssistant\', () => {
   it(\'renders without crashing\', () => {
     render(<AIChatAssistant />);
@@ -29,3 +37,4 @@ describe('AIChatAssistant', () => {'}
     expect(input).toBeInTheDocument();
   });
 });
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

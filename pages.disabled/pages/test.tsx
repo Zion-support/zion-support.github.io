@@ -1,2 +1,10 @@
+<<<<<<< HEAD
 import React from \'react\'; export default function Test() { return ( <div> <h1>Test Page</h1> <p>This is a test page to check if Next.js is working.</p> </div> )}
 import _React from 'react'; export default function Test() { return ( <div> <h1>Test Page</h1> <p>This is a test page to check if Next.js is working.</p> </div> )}
+=======
+<<<<<<< HEAD
+=======
+import React from \'react\'; export default function Test() { return ( <div> <h1>Test Page</h1> <p>This is a test page to check if Next.js is working.</p> </div> )}
+import _React from 'react'; export default function Test() { return ( <div> <h1>Test Page</h1> <p>This is a test page to check if Next.js is working.</p> </div> )}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

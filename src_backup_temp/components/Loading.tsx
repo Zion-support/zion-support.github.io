@@ -24,6 +24,11 @@ export default function Loading("props": "any) {';';';
         <p className=`text-gray-600 text-sm font-medium`}>{text}</p>;
       );
       )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </div>;
   );
 }
@@ -34,6 +39,10 @@ export default function Loading("props": "any) {';';';
   if (fullScreen) {;
     return (;
     <div className="min-h-screen bg-white">;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </div>
     );
 }
@@ -48,6 +57,11 @@ export default function Loading("props": "any) {';';';
       </div>;
     );
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (;
     <div className="min-h-screen bg-white">;
       {content}
@@ -69,6 +83,10 @@ export function SkeletonText("props": "any) {;
     <div className="min-h-screen bg-white">;
       {Array.from({ "length": line s';
   "}).map((_, i) => (';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
         <div className="min-h-screen bg-white">
       {content}
@@ -98,8 +116,16 @@ export function SkeletonText(props: any) {
         ></di></div>;
       ));
       )}
+<<<<<<< HEAD
     </div>;
   );
+=======
+<<<<<<< HEAD
+=======
+    </div>;
+  );
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </div>
     );
 }';

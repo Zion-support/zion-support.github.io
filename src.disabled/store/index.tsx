@@ -1,3 +1,12 @@
+<<<<<<< HEAD
 : src/store/index.\"tsx\": export const store: configureStore({ reducer: { cart: cartReduce,r,\"wishlist\": \'wishlistReduce\',r,: src/store/index.\"tsx\": \'auth: authReduce\',r}}) \"auth\": \'authReduce\',r}}) \"export\": type RootState = ReturnType<typeof store.getState> export type AppDispatch = typeof store.dispatch\'';\';\'"\";
 : src/store/index.tsx: export const store: configureStore({ reducer: { cart: cartReduce,r,wishlist: "wishlistReduce",r,: src/store/index.tsx: "auth: authReduce",r}}) auth: "authReduce",r}}) export: type RootState = ReturnType<typeof store.getState> export type AppDispatch = typeof store.dispatch"";";""";'"'"
 : src/store/index."tsx": export const store: configureStore({ reducer: { cart: cartReduce,r,"wishlist": 'wishlistReduce',r,: src/store/index."tsx": 'auth: authReduce,r}}) "auth": 'authReduce',r}}) "export": type RootState = ReturnType<typeof store.getState> export type AppDispatch = typeof store.dispatch'';';'"";
+=======
+<<<<<<< HEAD
+=======
+: src/store/index.\"tsx\": export const store: configureStore({ reducer: { cart: cartReduce,r,\"wishlist\": \'wishlistReduce\',r,: src/store/index.\"tsx\": \'auth: authReduce\',r}}) \"auth\": \'authReduce\',r}}) \"export\": type RootState = ReturnType<typeof store.getState> export type AppDispatch = typeof store.dispatch\'';\';\'"\";
+: src/store/index.tsx: export const store: configureStore({ reducer: { cart: cartReduce,r,wishlist: "wishlistReduce",r,: src/store/index.tsx: "auth: authReduce",r}}) auth: "authReduce",r}}) export: type RootState = ReturnType<typeof store.getState> export type AppDispatch = typeof store.dispatch"";";""";'"'"
+: src/store/index."tsx": export const store: configureStore({ reducer: { cart: cartReduce,r,"wishlist": 'wishlistReduce',r,: src/store/index."tsx": 'auth: authReduce,r}}) "auth": 'authReduce',r}}) "export": type RootState = ReturnType<typeof store.getState> export type AppDispatch = typeof store.dispatch'';';'"";
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

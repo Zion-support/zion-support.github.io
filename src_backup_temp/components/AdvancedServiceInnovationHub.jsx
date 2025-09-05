@@ -953,6 +953,10 @@ of emerging technologies and capitalize on future opportunities."""";
 </div>;
         </div>;
       </motion.div>;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
         </motion.div>) }"
       {/* comment */}"{viewMode === "insights" && (<motion.div initial = {}">
 ""}} transition="{{" delay: 0.1 }} className="space-y-6">"";"

@@ -689,6 +689,10 @@ Get AI Recommendations;
                 <Button variant = "outline" className="border-white text-white "hover": "bg-white "hover":text-zion-purple" onClick = {"}>;
 " () => window.open(""tel": "+13024640950"",_blank");";
                   <Zap className="w-5 h-5 mr-2`        />;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
           </div> {/* comment */}"
 ""}} transition="{{" delay: 0.4 }} className="mt-12 text-center">"";"
             <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"";"

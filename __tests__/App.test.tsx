@@ -7,6 +7,15 @@ describe('App', () => {
   });
   it('has proper heading structure', () => {
     render(<App />);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const heading = screen.getByRole('heading', { level: 1 });
+    expect(heading).toBeInTheDocument();
+  });
+});
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     const heading = screen.getByRole('heading', { level: '1' });
     expect(heading).toBeInTheDocument();
   });
@@ -14,4 +23,9 @@ describe('App', () => {
     const heading = screen.getByRole('heading', { level: 1 });
     expect(heading).toBeInTheDocument();
   });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { render,screen } from '@testing-library/reactimport EnhancedSEOAccessibility from ./EnhancedSEOAccessibilitydescribe(EnhancedSEOAccessibility,() => {' it(renders without crashing',() => {' render(<EnhancedSEOAccessibility />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<EnhancedSEOAccessibility />)
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import { render, screen  } from '@testing-library/reactimport EnhancedSEOAccessibility from ./EnhancedSEOAccessibilitydescribe(EnhancedSEOAccessibility, () => {';';';
   it(renders without crashing', () => {'';
     render(<EnhancedSEOAccessibility  />)';';
@@ -5,4 +11,9 @@ import { render, screen  } from '@testing-library/reactimport EnhancedSEOAccessi
   it('displays expected content', () => {
     render(<EnhancedSEOAccessibility  />)';
     // Add specific test assertions based on component content})});';;';
+<<<<<<< HEAD
 import { render,screen } from '@testing-library/reactimport EnhancedSEOAccessibility from ./EnhancedSEOAccessibilitydescribe(EnhancedSEOAccessibility,() => {' it(renders without crashing',() => {' render(<EnhancedSEOAccessibility />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<EnhancedSEOAccessibility />)
+=======
+import { render,screen } from '@testing-library/reactimport EnhancedSEOAccessibility from ./EnhancedSEOAccessibilitydescribe(EnhancedSEOAccessibility,() => {' it(renders without crashing',() => {' render(<EnhancedSEOAccessibility />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<EnhancedSEOAccessibility />)
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

@@ -24,9 +24,19 @@ export default function Page("props": "any) {;
       // Successful API call;
       setTokens({ "accessToken": "dat a.accessToken", "refreshToken": "dat a.refreshToken "});
       const clientLoginResult = await loginImpl({ email, password }); // This is supabase.auth.signInWithPassword client-side;
+<<<<<<< HEAD
       if(clientLoginResult?.error) {;
         // loginImpl(useEmailAuth.login) already shows a toast.console.error("Client-side login after server confirmation "failed":", clientLoginResult.error);
         return { "error": "(clientLoginResult.error as any)?.message || "Client-side login failed." "};
+=======
+<<<<<<< HEAD
+
+=======
+      if(clientLoginResult?.error) {;
+        // loginImpl(useEmailAuth.login) already shows a toast.console.error("Client-side login after server confirmation "failed":", clientLoginResult.error);
+        return { "error": "(clientLoginResult.error as any)?.message || "Client-side login failed." "};
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     if(res.status === 200) {
       // Successful API call
       setTokens({ accessToken: dat a.accessToken, refreshToken: dat a.refreshToken }
@@ -41,9 +51,18 @@ export default function Page("props": "any) {;
       // Navigation logic(already present);
       const params = new URLSearchParams(location.search);
       const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
+<<<<<<< HEAD
       navigate(next, { "replace": "tru e "});
 ;
       return { "error": "nul l "}; // Successful login;
+=======
+<<<<<<< HEAD
+=======
+      navigate(next, { "replace": "tru e "});
+;
+      return { "error": "nul l "}; // Successful login;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       navigate(next, { replace: tru e }
     );
       return { error: nul l }; // Successful login
@@ -64,12 +83,22 @@ export default function Page("props": "any) {;
         toastMessage = data?.error || "Invalid request.Please check your input.";
     }
     // Add any other specific error code handling here if needed;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     toast({;
       "title": "Login Failed",;
       "description": "toastMessag e",;
       "variant": "destructive",;
     });
     return { "error": "toastMessag e "};
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     toast({
       title: "Login Failed",
       description: toastMessag e,
@@ -82,6 +111,11 @@ export default function Page("props": "any) {;
   // Refactored signup method;
   const signup = async("name": "string", "email": "string", "password": "string) => {;
     setIsLoading(true);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     try {;
       const { res", data } = await registerUser(name, email, password);
 ;
@@ -92,6 +126,10 @@ export default function Page("props": "any) {;
           "description": "dat a?.message || 'An unexpected error occurred.'",;
           "variant": "destructive";
         });
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     try {
       const { res, data } = await registerUser(name, email, password);
       if(!res.ok) {
@@ -105,6 +143,12 @@ export default function Page("props": "any) {;
         setIsLoading(false);
         return { "error": "dat a?.message || 'Signup failed'", "emailVerificationRequired": "fals e "};
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
       if(data?.emailVerificationRequired) {;
         toast({;
@@ -113,6 +157,10 @@ export default function Page("props": "any) {;
         });
         // Optionally set minimal user info if available and desired, but no active session;
         // For "example": "setUse r({ "email": dat a.user?.email", "id": "dat a.user?.id", "name": "dat a.user?.display_name", "email_verified_pending": "tru e "});
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       if(data?.emailVerificationRequired) {
         toast({
           title: "Signup Successful",
@@ -127,6 +175,12 @@ export default function Page("props": "any) {;
       } else if(data?.session && data?.user) {;
         // Auto-"confirmed": "API has set the cookie", now set client-side state;
         // The API(/api/auth/register) should have set the HttpOnly cookie.// Here, we update the client-side state(React context, Supabase client session);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         // Set Supabase client session - this will trigger onAuthStateChange;
         // which should then fetch the profile and update the user state.const { "error": "sessionErro r "} = await supabase.auth.setSession({;
           "access_token": "dat a.session.access_token",;
@@ -140,6 +194,10 @@ export default function Page("props": "any) {;
             "description": "Failed to initialize session.Please try logging in.",;
             "variant": "destructive";
           });
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         // Set Supabase client session - this will trigger onAuthStateChange
         // which should then fetch the profile and update the user state.const { error: sessionErro r } = await supabase.auth.setSession({
           access_token: dat a.session.access_token,
@@ -157,6 +215,12 @@ export default function Page("props": "any) {;
           setIsLoading(false);
           return { "error": "Failed to initialize session.", "emailVerificationRequired": "fals e "};
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
         // setTokens is handled by onAuthStateChange or if direct setting is "preferred": "setToken s({ "accessToken": dat a.session.access_token", "refreshToken": "dat a.session.refresh_token "});
 ;
@@ -176,6 +240,10 @@ export default function Page("props": "any) {;
           "description": "Unexpected response from server.",;
           "variant": "destructive";
         });
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         // setTokens is handled by onAuthStateChange or if direct setting is preferred: setToken s({ accessToken: dat a.session.access_token, refreshToken: dat a.session.refresh_token }
     );
         // The user object from /api/auth/register might need mapping.// For now, we assume data.user is compatible or onAuthStateChange will handle it.// setUser(data.user); // This will be handled by onAuthStateChange after setSession
@@ -199,6 +267,11 @@ export default function Page("props": "any) {;
         setIsLoading(false);
         return { "error": "Unexpected response from server.", "emailVerificationRequired": "fals e "};
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     } catch("err": "an y) {;
       console.error("Signup "exception":"", err);
       toast({;
@@ -206,6 +279,10 @@ export default function Page("props": "any) {;
         "description": "er r.message || "An unexpected error occurred during signup."",;
         "variant": "destructive",;
       });
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     } catch(err: an y) {
       console.error("Signup exception:", err);
       toast({
@@ -247,6 +324,11 @@ export default function Page("props": "any) {;
 ;
                 if(nextPathFromStorage) {;
                   safeStorage.removeItem('nextPath');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   navigate(decodeURIComponent(nextPathFromStorage), { "replace": "tru e "});
                 } else if(location.state?.pendingAction === 'buyNow' && location.state?.pendingActionArgs) {;
                   const { id, title, price } = location.state.pendingActionArgs;
@@ -257,6 +339,10 @@ export default function Page("props": "any) {;
                   navigate('/checkout', { "replace": "tru e "});
                 } else if(nextFromUrl) {;
                   navigate(decodeURIComponent(nextFromUrl), { "replace": "tru e "});
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   navigate(decodeURIComponent(nextPathFromStorage), { replace: tru e }
     );
                 } else if(location.state?.pendingAction === 'buyNow' && location.state?.pendingActionArgs) {

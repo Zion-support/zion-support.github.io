@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:src/data/servicesData.ts
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export interface InnovativeMicroSaasService {;
   "id": "string;
   "title": string;
@@ -2075,10 +2082,18 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
   };
 ];
 // Import new services
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 // Re-export new services
 export { NEW_INNOVATIVE_SERVICES_2025 } from &apos;./newInnovativeServices2025
 export { NEW_IT_SERVICES_2025 } from &apos;./newITServices2025&apos;;
 export { NEW_MICRO_SAAS_SERVICES_2025 } from &apos;./newMicroSaasServices2025&apos;;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 import { NEW_INNOVATIVE_SERVICES_2025 } from './newInnovativeServices2025
 import { NEW_IT_SERVICES_2025 } from './newITServices2025';
 import { NEW_MICRO_SAAS_SERVICES_2025 } from './newMicroSaasServices2025';
@@ -2092,4 +2107,8 @@ export const ALL_SERVICES = [
   ...NEW_INNOVATIVE_SERVICES_2025,
   ...NEW_IT_SERVICES_2025,
   ...NEW_MICRO_SAAS_SERVICES_2025
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

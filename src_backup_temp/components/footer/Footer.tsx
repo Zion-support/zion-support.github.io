@@ -101,6 +101,11 @@ export function Footer("props": "any) {;
             </div>;
           </div>;
           {/* Footer Links */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           {footerSections.map((section) => (;
             <div key={section.title}>;
               <h3 className="text-white font-semibold mb-4">{section.title}</h3>;
@@ -109,6 +114,10 @@ export function Footer("props": "any) {;
                   <li key={link.name}>;
                     <Link href={link.href} className="text-slate-300 "hover": "text-cyan-400 transition-colors duration-200">{link.name"}</Link>;
                   </li>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           {footerSections.map((section) => (
             <div key={section.title}>
               <h3 className="text-white font-semibold mb-4">{section.title}
@@ -124,6 +133,11 @@ export function Footer("props": "any) {;
         </div>;
       </div>;
       {/* Newsletter Signup */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       <div className="border-t border-slate-700 py-8">;
         <div className="container mx-auto px-4 "sm": "p x-6 "lg": p x-8">;
           <div className="flex flex-col "md": fle x-row items-center justify-between">;
@@ -143,6 +157,10 @@ export function Footer("props": "any) {;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       <div className="border-t border-slate-700 py-8">
         <div className="container mx-auto px-4 sm: p x-6 lg: p x-8">
           <div className="flex flex-col md: fle x-row items-center justify-between">
@@ -162,6 +180,13 @@ export function Footer("props": "any) {;
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {/* Bottom Footer */"}
       <div className="border-t border-slate-700 py-6">;
         <div className="container mx-auto px-4 "sm": "p x-6 "lg": p x-8">;

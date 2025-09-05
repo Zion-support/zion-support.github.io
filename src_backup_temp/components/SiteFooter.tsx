@@ -77,6 +77,11 @@ export function SiteFooter("props": "any) {';
             </div>;
           </div>;
           {/* Navigation Sections */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           { navSections.map((section) => (;
             <div key={section.title}>;
               <h3 className="text-lg font-semibold mb-4">{section.title}</h3>;
@@ -84,6 +89,10 @@ export function SiteFooter("props": "any) {';
                 {section.links.map((link) => (;
                   <li key={link.label}>;
                     <Link;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           { navSections.map((section) => (
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}
@@ -99,8 +108,16 @@ export function SiteFooter("props": "any) {';
                   </li>;
                 ));
       )}
+<<<<<<< HEAD
     </div>;
   );
+=======
+<<<<<<< HEAD
+=======
+    </div>;
+  );
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </div>
     );
 }
@@ -108,8 +125,16 @@ export function SiteFooter("props": "any) {';
             </div>;
           ));
       )}
+<<<<<<< HEAD
     </div>;
   );
+=======
+<<<<<<< HEAD
+=======
+    </div>;
+  );
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </div>
     );
 }
@@ -133,8 +158,16 @@ export function SiteFooter("props": "any) {';
                 </a>;
               ));
       )}
+<<<<<<< HEAD
     </div>;
   );
+=======
+<<<<<<< HEAD
+=======
+    </div>;
+  );
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </div>
     );
 }

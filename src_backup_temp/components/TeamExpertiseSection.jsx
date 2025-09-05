@@ -165,6 +165,10 @@ const stats = [";
 "}} viewport={{ "once": "true "}} transition = {;
   { "duration": "0.6",;
   "delay": "0.2;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 "}}>";
           <h3 className="text-3xl font-bold text-white text-center mb-12">";
             Areas of <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Expertise</span>;
@@ -172,6 +176,11 @@ const stats = [";
 }}>"
           <h3 className="text-3xl font-bold text-white text-center mb-12">"
             Areas of <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Expertise</span>
+<<<<<<< HEAD
+          
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
           <div className="grid grid - cols - 1 "md": "grid - cols - 2 "lg":grid - cols - 3 gap-6">;
             {expertiseAreas.map((area", index) => (<motion.div key={index} initial = {  { "opacity": "0",;
   "y": "20;
@@ -215,6 +224,10 @@ const stats = [";
 "}} viewport={{ "once": "true "}} transition = {;
   { "duration": "0.6",;
   "delay": "0.3;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 "}}>";
           <h3 className="text-3xl font-bold text-white text-center mb-12">";
             Leadership <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Team</span>;
@@ -222,6 +235,11 @@ const stats = [";
 }}>"
           <h3 className="text-3xl font-bold text-white text-center mb-12">"
             Leadership <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Team</span>
+<<<<<<< HEAD
+          
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
           <div className="grid grid - cols - 1 "md": "grid - cols - 2 "lg":grid - cols - 3 gap-8">;
             {teamMembers.map((member", index) => (<motion.div key={member.id} variants={itemVariants} whileHover={{ "y": "-8 "}} transition = {;
   { "type": "spring",;
@@ -334,6 +352,10 @@ const stats = [";
 "}} viewport={{ "once": "true "}} transition = {;
   { "duration": "0.6",;
   "delay": "0.5;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 "}}>";
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">";
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">";
@@ -407,4 +429,8 @@ export default function TeamExpertiseSection.js({ }: TeamExpertiseSection.jsProp
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

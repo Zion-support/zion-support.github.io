@@ -23,6 +23,10 @@ export default function Page("props": "any) {;
 ;
   const scrollToTop = ("props": "any) => {;
     window.scrollTo({;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
       "top": 0",;
       "behavior": 'smooth'});
   const scrollToTop = (props: any) => {
@@ -83,6 +87,10 @@ export default ScrollToTop;
 export default ScrollToTop;
 export default ScrollToTop;
 '";
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </motion>;
 </AnimatePresence>
 export default ScrollToTop;
@@ -95,4 +103,8 @@ export default ScrollToTop;
 '"
 </motion>
 </AnimatePresence>
+<<<<<<< HEAD
 import React from 'react'; export default ScrollToTop',','; ';';';';';'; ";';';'; ";';';';'; """
+=======
+import React from 'react'; export default ScrollToTop',','; ';';';';';'; ";';';'; ";';';';'; """
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

@@ -6,12 +6,30 @@ const publicRoutes = [
   "/about",
   "/contact",
   "/services",
+<<<<<<< HEAD
   "/ai-services",
   "/blog",
   "/docs",
+=======
+  "/micro-saas",
+  "/it-services",
+  "/ai-services",
+  "/pricing",
+  "/team",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   "/careers",
+  "/blog",
+  "/news",
+  "/support",
+  "/faq",
   "/privacy",
+<<<<<<< HEAD
   "/terms"
+=======
+  "/terms",
+  "/login",
+  "/register"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ];
 
 export function middleware(request: NextRequest) {

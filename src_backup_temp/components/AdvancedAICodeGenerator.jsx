@@ -45,6 +45,10 @@ export const useApi = ("props": "any) => {;
       ;
       if (!response.ok) {;
         throw new Error(\`HTTP error! "status": "\${response.status"}\`);
+<<<<<<< HEAD
+    
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
     try {
       const response = await fetch(url, {
         method: options.method || 'GET',
@@ -506,6 +510,10 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
     </div>
     );
 };
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export default AdvancedAICodeGenerator;
 ;
 </string>

@@ -103,6 +103,12 @@ export function FeatureHighlights("props": "any) {;
               key={index}
               variants={itemVariants}
               whileHover={{;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 "y": "-5",;
                 "scale": "1.02",;
                 "transition": "{ "duration": 0.3 "}
@@ -126,6 +132,10 @@ export function FeatureHighlights("props": "any) {;
                 {feature.title"}
               </h3>;
               <p className="text-gray-400 text-sm leading-relaxed">;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 y: -5,
                 scale: 1.02,
                 transition: { duration: 0.3 }

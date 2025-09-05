@@ -1,2 +1,10 @@
+<<<<<<< HEAD
 export: interface EquipmentItem { id: string; name: string; description: string; price: number; category: string; image: string; spec s: string[]; availabilit } y: "boolean"} export const EQUIPMENT_DETAILS: EquipmentItem[] = [ { i d: "1"," name: "High-Performance GPU Server",description: "Enterprise-grade GPU server for AI/ML workloads",price: "2500",category: "Servers",image: "http s:"""";""""
 "export": interface EquipmentItem { id: string; name: string; description: string; price: number; category: string; image: string; spec s: string[]; availabilit } "y": 'boolean'} export const "EQUIPMENT_DETAILS": EquipmentItem[] = [ { i d: '1,' "name": 'High-Performance GPU Server',"description": 'Enterprise-grade GPU server for AI/ML workloads',"price": '2500',"category": 'Servers',"image": 'http s:'''";"
+=======
+<<<<<<< HEAD
+=======
+export: interface EquipmentItem { id: string; name: string; description: string; price: number; category: string; image: string; spec s: string[]; availabilit } y: "boolean"} export const EQUIPMENT_DETAILS: EquipmentItem[] = [ { i d: "1"," name: "High-Performance GPU Server",description: "Enterprise-grade GPU server for AI/ML workloads",price: "2500",category: "Servers",image: "http s:"""";""""
+"export": interface EquipmentItem { id: string; name: string; description: string; price: number; category: string; image: string; spec s: string[]; availabilit } "y": 'boolean'} export const "EQUIPMENT_DETAILS": EquipmentItem[] = [ { i d: '1,' "name": 'High-Performance GPU Server',"description": 'Enterprise-grade GPU server for AI/ML workloads',"price": '2500',"category": 'Servers',"image": 'http s:'''";"
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

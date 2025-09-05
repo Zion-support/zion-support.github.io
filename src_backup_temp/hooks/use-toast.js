@@ -1,4 +1,9 @@
 import React, { useState, useCallback } from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 // Simple toast function for direct import"";
 export const toast = ({ title, description, variant = 'default' }) => {;
@@ -29,6 +34,10 @@ export const useToast = () => {;
   return {;
     toast, dismiss;
     toasts};};"`"
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 // Simple toast function for direct import";';
 export const toast = ({ title, description, variant = 'default' };) => {
   // In a real app, this would integrate with a toast library;
@@ -51,4 +60,12 @@ export const useToast = () => {;
   return {
     toast, dismiss';
     toasts}};"`";';';
+<<<<<<< HEAD
 import React,{ useState,useCallback } from 'react'; export const toast = ({ title,description,variant = 'default' };) => { return Date.now()}; export const useToast = () => {; const [toasts,setToasts] = useState([]); ";'; const toast = useCallback(({ title,description,variant = 'default' };) => { const id = Date.now(); const newToast = { id,title,description,variant };; setToasts(prev => [...prev,newToast]); setTimeout(() => { setToasts(prev => prev.filter(t => t.id !== id))},5000); return id},[]); const dismiss = useCallback((id) => { setToasts(prev => prev.filter(t => t.id !== id))};,[]); return { toast,dismiss'; toasts}};"`";';';
+=======
+<<<<<<< HEAD
+import React,{ useState,useCallback } from 'react'; export const toast = ({ title,description,variant = 'default' };) => { return Date.now()}; export const useToast = () => {; const [toasts,setToasts] = useState([]); ";'; const toast = useCallback(({ title,description,variant = 'default' };) => { const id = Date.now(); const newToast = { id,title,description,variant };; setToasts(prev => [...prev,newToast]); setTimeout(() => { setToasts(prev => prev.filter(t => t.id !== id))},5000); return id},[]); const dismiss = useCallback((id) => { setToasts(prev => prev.filter(t => t.id !== id))};,[]); return { toast,dismiss'; toasts}};"`";';';
+=======
+import React,{ useState,useCallback } from 'react'; export const toast = ({ title,description,variant = 'default' };) => { return Date.now()}; export const useToast = () => {; const [toasts,setToasts] = useState([]); ";'; const toast = useCallback(({ title,description,variant = 'default' };) => { const id = Date.now(); const newToast = { id,title,description,variant };; setToasts(prev => [...prev,newToast]); setTimeout(() => { setToasts(prev => prev.filter(t => t.id !== id))},5000); return id},[]); const dismiss = useCallback((id) => { setToasts(prev => prev.filter(t => t.id !== id))};,[]); return { toast,dismiss'; toasts}};"`";';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

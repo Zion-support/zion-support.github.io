@@ -1,6 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export function SEOHead(props: any) {
   const fullTitle = `${title} | Zion Tech Group - AI & Technology Solutions`;';
   const defaultKeywords = [';';
@@ -12,6 +17,10 @@ export function SEOHead(props: any) {
     'blockchain solutions',';';
     'cloud services',';';
     'digital transformation',';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 interface SEOHeadProps {
   title: string;
   description: string;
@@ -25,6 +34,11 @@ interface SEOHeadProps {;
   ogType?: string;
   ogImage?: string;
   structuredData?: any;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 }
 export function SEOHead({ 
   title, 
@@ -48,6 +62,10 @@ export function SEOHead({
     'cloud services',
     'digital transformation',
     'Zion Tech Group'
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "}
 ;
 export function SEOHead({ ;
@@ -133,10 +151,19 @@ export function SEOHead({ ;
             "addressCountry": "US";
           }
         })}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       </script>
     </Helmet>
   );';
 };';;';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   );
 }
 export default SEOHead;
@@ -145,4 +172,12 @@ export default SEOHead;
   );
 }
 ;
+<<<<<<< HEAD
 export default SEOHead;
+=======
+<<<<<<< HEAD
+export default SEOHead;
+=======
+export default SEOHead;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

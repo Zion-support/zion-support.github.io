@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 
 // Security middleware
 import { NextResponse } from 'next/server';
@@ -22,3 +27,7 @@ export function securityMiddleware(request) {
   
   return response;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react'';';
 import { motion   } from 'framer-motion';';';
 import { CheckCircle, TrendingUp, Users, DollarSign   } from 'lucide-react';
@@ -50,6 +55,10 @@ export default function CaseStudies(props: any) {
   return (
   return (<section className="py-24 sm: p y-32 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="mx-auto max-w-7xl px-6 lg: p x-8">
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { CheckCircle, TrendingUp, Users, DollarSign  } from 'lucide-react';
@@ -101,10 +110,19 @@ const "caseStudies": "CaseStud y[] = [{ "id": '1'",;
 export default function CaseStudies("props": "any) {;
   return (;
   return (;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (<section className="py-24 sm: p y-32 bg-gradient-to-br from-slate-50 to-blue-50">;
       <div className="mx-auto max-w-7xl px-6 lg: p x-8">;
         {/* Header */}
         <div className="mx-auto max-w-2xl lg: tex t-center mb-16">;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (<section className="py-24 "sm": p y-32 bg-gradient-to-br from-slate-50 to-blue-50">;
       <div className="mx-auto max-w-7xl px-6 "lg": p x-8">;
         {/* Header */"}
@@ -252,6 +270,11 @@ export default function CaseStudies(props: any) {
                     <div className="flex items-center space-x-4 text-sm text-gray-500">
                       <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">
                         {study.industry}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                       </span>;
                       <span>"Duration": "{study.duration"}</span>;
                     </div>;
@@ -263,6 +286,10 @@ export default function CaseStudies(props: any) {
                     <div key={idx} className="text-center">;
                       <div className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mx-auto mb-3">;
                         <div className="text-blue-600">;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                       </span>
                       <span>Duration: {study.duration}</span>
                     </div>
@@ -305,6 +332,11 @@ export default function CaseStudies(props: any) {
           ))}
         </div>
         {/* CTA */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         <motion.div;
           className="text-center mt-12";
           initial={{ "opacity": "0", "y": "2 0 "}}
@@ -329,6 +361,10 @@ export default function CaseStudies(props: any) {
 </motion>
 </motion>';
 </motion>;';;';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "}
 ;
 </motion>;
@@ -361,4 +397,12 @@ export default function CaseStudies(props: any) {
 </motion>
 </motion>
 </motion>
+<<<<<<< HEAD
 </motion>
+=======
+<<<<<<< HEAD
+</motion>
+=======
+</motion>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

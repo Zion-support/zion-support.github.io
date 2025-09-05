@@ -224,6 +224,10 @@ const InnovativeServicesShowcase = ("props": "any) => {;
                     {selectedService.benefits.map((benefit, idx) => ("""";
                       <li key="{idx}" className="text-gray-300 flex items-center">"""";
                         <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                     </div>"
                   </div>""
                 </div>"""""
@@ -371,6 +375,10 @@ const InnovativeServicesShowcase = ("props": "any) => {;
                           <div className="flex justify-between">"""";
                             <span className="text-gray-300">"ROI": "</span>"""";
                             <span className="text-white text-green-400">",;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                   </ul>"
                 </div>""
 """""
@@ -530,6 +538,10 @@ const InnovativeServicesShowcase = ("props": "any) => {;
                           /" >"""";
                         </svg>"""";
                         <span className="text-white">;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                             </span>
                           </div>
 </>

@@ -1,8 +1,17 @@
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
+<<<<<<< HEAD
 export default function Page(props: any) {';
 ,';';
   { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },';';
+=======
+<<<<<<< HEAD
+=======
+export default function Page(props: any) {';
+,';';
+  { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function Page("props": "any) {;
 ",;
   { "code": 'pt' as SupportedLanguage, "name": 'Português', "flag": '🇧🇷' },;
@@ -37,6 +46,12 @@ const defaultLanguageContext: LanguageContextTyp e = {;
   supportedLanguages;
 };
 const LanguageContext = createContext(defaultLanguageContext);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 export const useLanguage = (): "LanguageContextType => useContext(LanguageContext);
 ;
@@ -53,6 +68,10 @@ export const "LanguageProvider": "React.FC<LanguageProviderProps> = ({;
   children",;
   authState = { "isAuthenticated": "fals e", "user": "nul l "} ;
 }) => {;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
 interface LanguageProviderProps {
   children: ReactNod e;
@@ -67,27 +86,54 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   authState = { isAuthenticated: fals e, user: nul l } 
 }) => {
   const { i18n, t } = useTranslation();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const { isAuthenticated, user } = authState;';
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(';';
     (i18n.language?.substring(0, 2) as SupportedLanguage) || 'en'';
   );';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const { isAuthenticated, user } = authState;
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(
     (i18n.language?.substring(0, 2) as SupportedLanguage) || 'en'
   );
   const [isRTL, setIsRTL] = useState<any>(i18n.dir() === 'rtl');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
   "};
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   useEffect(() => {
   // TODO: Add dependencies if needed
   return () => {
     // Cleanup function
+<<<<<<< HEAD
   };';
 }, []);, []);';';
+=======
+<<<<<<< HEAD
+=======
+  };';
+}, []);, []);';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const { isAuthenticated, user } = authState;
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(;
     (i18n.language?.substring(0, 2) as SupportedLanguage) || 'en';
@@ -118,6 +164,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   // TODO: Add dependencies if needed
   return () => {
     // Cleanup function
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   };';
 }, []);, []);';';
     setIsRTL(i18n.dir() === 'rtl');
@@ -127,6 +178,10 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     if(i18n.dir() === 'rtl') {';';
       document.documentElement.classList.add('rtl');';
     } else {';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   }, [i18n]); // i18n is a dependency here;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -139,6 +194,14 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     document.documentElement.lang = currentLanguage;
     if(i18n.dir() === 'rtl') {
       document.documentElement.classList.add('rtl');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    } else {
+      document.documentElement.classList.remove('rtl');
+    }
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     } else {;
     } else {
       document.documentElement.classList.remove('rtl');
@@ -162,6 +225,10 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
             console.error('Error updating language preference:', error);
           }';
         } catch(err) {';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     const syncLanguageWithProfile = async () => {;
       if(isAuthenticated && user?.id && currentLanguage) { // ensure currentLanguage is also checked;
         try {;
@@ -198,11 +265,29 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       }
     };
     syncLanguageWithProfile();
+<<<<<<< HEAD
   }, [currentLanguage, isAuthenticated, user]); // Correct dependencies;
   const changeLanguage = async("lang": "SupportedLanguag e) => {;
   }, [currentLanguage, isAuthenticated, user]); // Correct dependencies
   const changeLanguage = async(lang: SupportedLanguag e) => {
     if(lang === currentLanguage) return;
+=======
+<<<<<<< HEAD
+=======
+  }, [currentLanguage, isAuthenticated, user]); // Correct dependencies;
+  const changeLanguage = async("lang": "SupportedLanguag e) => {;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+  }, [currentLanguage, isAuthenticated, user]); // Correct dependencies
+  const changeLanguage = async(lang: SupportedLanguag e) => {
+    if(lang === currentLanguage) return;
+<<<<<<< HEAD
+;
+    try {;
+    
+    try {
+      await i18n.changeLanguage(lang);
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     try {
       await i18n.changeLanguage(lang);';
       setCurrentLanguage(lang); // This will trigger the RTL effect';';
@@ -227,6 +312,10 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 ;
       // The language preference sync will be handled by the useEffect above;
       // that depends on currentLanguage, isAuthenticated, and user.} catch(err) {;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       console.error('Error changing "language":', err);
       setCurrentLanguage(lang); // This will trigger the RTL effect
       safeStorage.setItem('i18n_lang', lang);
@@ -252,16 +341,40 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     </LanguageContext.Provider>
   );
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 </LanguageContext>
 </any>
 </SupportedLanguage>';
 </LanguageProviderProps>;';;';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 </LanguageContext>;
 </any>;
 </SupportedLanguage>;
 </LanguageProviderProps>;
+<<<<<<< HEAD
 </LanguageContext>
 </any>
 </SupportedLanguage>
 </LanguageProviderProps>
+=======
+<<<<<<< HEAD
+
+</LanguageContext>
+</any>
+</SupportedLanguage>
+</LanguageProviderProps>
+=======
+</LanguageContext>
+</any>
+</SupportedLanguage>
+</LanguageProviderProps>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

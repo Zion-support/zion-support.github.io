@@ -17,6 +17,10 @@ export default function Page("props": "any) {;
     const avgResponseTime =;
       links.reduce((sum, l) => sum + (l.responseTime || 0), 0) / totalLinks;
     setReport({;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
       totalLinks,;
       healthyLinks,;
       brokenLinks,;
@@ -272,6 +276,10 @@ export default function Page("props": "any) {;
                   </table>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
               {/* Recommendations */}";
               <div className="bg-gradient-to-r from-yellow-900/20 to-orange-900/20 border border-yellow-500/20 rounded-lg p-4">";
                 <h3 className="text-lg font-semibold text-yellow-400 mb-2 flex items-center">";

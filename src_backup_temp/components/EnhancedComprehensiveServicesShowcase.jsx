@@ -54,6 +54,10 @@ const EnhancedComprehensiveServicesShowcase = ("props": "any) => {"}
 '';
 ''';
   const [activeCategory, setActiveCategory] = useState('all');''';
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 const EnhancedComprehensiveServicesShowcase = (props: any) => {}
 '
 ''
@@ -144,6 +148,10 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
       service.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   const serviceCategories = []';
     {}';';
 '';';
@@ -409,9 +417,17 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
             Zion Tech Group"""";
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">';
               {' '"}
+<<<<<<< HEAD
+
   const closeModal = (props: any) => {}
     setSelectedService(null);
   };
+
+=======
+  const closeModal = (props: any) => {}
+    setSelectedService(null);
+  };
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"""
       {/* Header Section */}""""
@@ -843,6 +859,10 @@ export {EnhancedComprehensiveServicesShowcase};
 export {EnhancedComprehensiveServicesShowcase};
 ;
 export {EnhancedComprehensiveServicesShowcase};
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </path>';
 </div>;';;';
 ;
@@ -854,9 +874,17 @@ export {EnhancedComprehensiveServicesShowcase};
       </section>
 export default EnhancedComprehensiveServicesShowcase;
 export {EnhancedComprehensiveServicesShowcase};
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export {EnhancedComprehensiveServicesShowcase};
 export {EnhancedComprehensiveServicesShowcase};
 export {EnhancedComprehensiveServicesShowcase};
 export {EnhancedComprehensiveServicesShowcase};
 </path>
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

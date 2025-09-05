@@ -305,6 +305,10 @@ return()""
                     variant="outline"""""
                     className="w-full border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white ">,
                     View {category}
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                   </Button>
                 </CardContent>
               </Card>
@@ -623,4 +627,8 @@ export default Component;
 </div>;
 </div>;
 </div>
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

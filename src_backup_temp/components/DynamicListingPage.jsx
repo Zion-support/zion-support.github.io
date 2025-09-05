@@ -52,6 +52,10 @@ export function DynamicListingPage("props": "any) {;
   useEffect(() => {setCurrentPage(1);"}, [searchQuery, selectedCategory, currentPriceFilter, selectedRating]);
 ;
   const handleRequestQuote = ("props": "any) => {;
+<<<<<<< HEAD
+    
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
     return matchesSearch && matchesCategory && matchesPrice && matchesRating;}
     );
   const totalPages = itemsPerPage
@@ -111,6 +115,10 @@ export function DynamicListingPage("props": "any) {;
           <h1 className="text-4xl font-bold text-white mb-4">{title}</h1>;
           <p className="text-xl text-blue-200">{description}</p>;
         </div>;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   return (
         <div className="min-h-screen bg-blue-900 py-12 px-4">
       <div className="container mx-auto">
@@ -118,6 +126,10 @@ export function DynamicListingPage("props": "any) {;
           <h1 className="text-4xl font-bold text-white mb-4">{title}</h1>
           <p className="text-xl text-blue-200">{description}</p>
         </div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
         {/* Search and Filters */}
         <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8">;
           <div className="grid grid-cols-1 "md": "grid-cols-4 gap-4 mb-6">;

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default AIChatAssistant;
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const AIChatAssistant: React.FC = () => {
   return (
     <main role=\"main\">
@@ -18,4 +24,9 @@ const AIChatAssistant: _React.FC = () => {}
     </main>;,
 ;  );
 };,
+<<<<<<< HEAD
 export default AIChatAssistant;
+=======
+export default AIChatAssistant;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

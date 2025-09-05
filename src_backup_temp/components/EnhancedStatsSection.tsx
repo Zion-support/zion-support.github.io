@@ -1,5 +1,11 @@
 import {  import { motion, useAnimation  } from 'framer-motion';
  from 'lucide-react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 interface Stat {;
   "id": "string;
@@ -78,6 +84,10 @@ export default function EnhancedStatsSection(...args[]): "{;
   // "TODO": "Add dependencies if needed;
 "}, []);
     if(inView) {;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 interface Stat {
   id: string;
   icon: React.ComponentType < any>;
@@ -88,6 +98,11 @@ interface Stat {
   gradient: string
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const stats: Sta t[] = [{';
 ';';
     id: 'clients',';
@@ -96,6 +111,10 @@ const stats: Sta t[] = [{';
     label: 'Global Clients',';';
     description: 'Serving businesses across 50+ countries',';';
     color: 'zion-cyan',';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const stats: Sta t[] = [{
     id: 'clients',
     icon: User s,
@@ -149,6 +168,13 @@ const stats: Sta t[] = [{
     description: 'Rapidly expanding global presence',
     color: 'zion-blue',
     gradient: 'from-zion-blue to-zion-cyan'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const stats: Sta t[] = [{;
     id: 'clients',;
     icon: User s,;
@@ -214,10 +240,22 @@ export default function EnhancedStatsSection(...args[]):  {
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    if(inView) {;
+    if(inView) {
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     if(inView) {';
 ';';
     if(inView) {;
     if(inView) {
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       controls.start('visible')}
   }, [controls, inView]);
     const increment = numericValue / (duration / 16) ; // 60fps
@@ -226,6 +264,11 @@ export default function EnhancedStatsSection(...args[]):  {
       if(current >= numericValue) {
         current = numericValue;
         clearInterval(timer) }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 setCountedValues("prev": "> ({;
         ...prev",;
         [target]: "Math.floor (current) "}) ) }, 16) ;
@@ -335,6 +378,10 @@ setCountedValues("prev": "> ({;
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">';
                     {countedValues[stat.value] || 0}';';
                     {stat.value.includes('%') && '%'}';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   { "duration": "0.5",;
   "delay": "inde x * 0.1;
 "}}
@@ -457,11 +504,20 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
                   {stat.description}
                 </p>
                 {/* Hover effect overlay */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 <motion.div";
                   className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-"hover": "opacit y-100 transition-opacity duration-300";
                   initial={false"}
                 />;
               </motion.div>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 <motion.div"
                   className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover: opacit y-100 transition-opacity duration-300"
                   initial={false}
@@ -470,6 +526,11 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
             </motion.div>;) ) }
         </div>
         {/* Bottom Achievement Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         <motion.div;
           initial = {;
   { "opacity": "0",;
@@ -512,6 +573,10 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
                 <div className="text-3xl font-bold text-zion-blue mb-2">100%</div>";
                 <div className="text-gray-300">Client Retention</div>;
               </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         <motion.div
           initial = {
   { opacity: 0,
@@ -557,6 +622,12 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
             </div>;
           </div>;
         </motion.div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      </div>;
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       </div>;';
     </section>;) }';';
 '"`
@@ -576,6 +647,10 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
 </motion>;
 </motion>;
 </any>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </section>;) }
 '"`
 </motion>
@@ -586,4 +661,12 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
 </motion>
 </motion>
 </motion>
+<<<<<<< HEAD
 </any>
+=======
+<<<<<<< HEAD
+</any>
+=======
+</any>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

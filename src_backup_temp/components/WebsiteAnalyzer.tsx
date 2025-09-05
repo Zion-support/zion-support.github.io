@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 export const WebsiteAnalyzer: Reac t.FC = () : JSX.Element => {';
 export default WebsiteAnalyzer;';';
+=======
+<<<<<<< HEAD
+=======
+export const WebsiteAnalyzer: Reac t.FC = () : JSX.Element => {';
+export default WebsiteAnalyzer;';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export const WebsiteAnalyzer: React.FC = () : JSX.Element => {;
 export default WebsiteAnalyzer;
 import { CheckCircle, import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
@@ -32,6 +40,13 @@ export default function Page(props: any) {
           // console.error(`Error analyzing ${page}:`, error)}
         // Add delay to prevent overwhelming the server
         await new Promise(resolve => setTimeout (resolve, 100) ) }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       setAnalysisResult({
         summary,
         pages: result s,
@@ -39,6 +54,12 @@ export default function Page(props: any) {
         missingPages
       }) } catch(error) {
       // console.error('Analysis failed:', error)} finally {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       setIsAnalyzing(false);';
       setProgress(100);';';
       setCurrentPage('')}
@@ -55,6 +76,10 @@ export default function Page(props: any) {
       case 'missing':"';
         return <AlertTriangle className="w-4 h-4 text-yellow-500"   />;';';
       case 'external':"
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
       setAnalysisResult({;
         summary,;
@@ -76,6 +101,15 @@ export default function Page(props: any) {
         return <XCircle className="w-4 h-4 text-red-500"   />;
       case 'missing':"
         return <AlertTriangle className="w-4 h-4 text-yellow-500"   />;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      case 'external':"
+        return <ExternalLink className="w-4 h-4 text-blue-500"   />;
+      default:"
+        return <AlertTriangle className="w-4 h-4 text-gray-500"   />}
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       case 'external':";
       case 'external':"
         return <ExternalLink className="w-4 h-4 text-blue-500"   />;
@@ -91,6 +125,10 @@ export default function Page(props: any) {
       case 'external':'';';
         return 'text-blue-600 bg-blue-100';';';
       default:'';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   };
       case 'broken':'
         return 'text-red-600 bg-red-100';
@@ -98,8 +136,16 @@ export default function Page(props: any) {
         return 'text-yellow-600 bg-yellow-100';
       case 'external':'
         return 'text-blue-600 bg-blue-100';
+<<<<<<< HEAD
       default:';
       "default":';
+=======
+<<<<<<< HEAD
+=======
+      default:';
+      "default":';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       default:'
         return 'text-gray-600 bg-gray-100'}  };
   return ("
@@ -115,6 +161,11 @@ export default function Page(props: any) {
           <div className="flex space-x-3">
             <button
               onClick={analyzeWebsite}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               disabled={isAnalyzing}"
               className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed"
             >
@@ -130,6 +181,10 @@ export default function Page(props: any) {
                 className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover: b g-green-700"
               >"
                 <Download className="w-4 h-4 mr-2"   />                Export Report
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               disabled={isAnalyzing}";
               className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg "hover": "b g-blue-700 "disabled": opacit y-50 "disabled": curso r-not-allowed";
             >;
@@ -145,7 +200,14 @@ export default function Page(props: any) {
                 className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg "hover": "b g-green-700";
               >";
                 <Download className="w-4 h-4 mr-2"   />                Export Report;
+<<<<<<< HEAD
               </button>) }
+=======
+<<<<<<< HEAD
+=======
+              </button>) }
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               </button>) "}
           </div>;
         </div>;
@@ -200,6 +262,14 @@ export default function Page(props: any) {
                 Analyzing: <span className="font-mono">{currentPage}</span>
               </p>
             )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          </div>
+        )}
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               </div>
   );
 }
@@ -222,6 +292,10 @@ export default function Page(props: any) {
                 <div  className="flex items -center">;
                   <CheckCircle className="w-8 h-8 text-green - 600 mr-3"  />;
                   <div>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {analysisResult && ("
           <div className="space-y-6">
             {/* Summary Cards */}"
@@ -282,6 +356,11 @@ export default function Page(props: any) {
               </div>
             </div>
             {/* Broken Links */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             {analysisResult.brokenLinks.length > 0 && (";
               <div className="bg-red-50 border border-red-200 rounded-lg p-4">";
                 <h3 className="text-lg font-semibold text-red-900 mb-3 flex items-center">";
@@ -297,6 +376,10 @@ export default function Page(props: any) {
                       <span className="px-2 py-1 text-xs font-medium rounded-full bg-red-100 text-red-800">;
                         Broken;
                       </span>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             {analysisResult.brokenLinks.length > 0 && ("
               <div className="bg-red-50 border border-red-200 rounded-lg p-4">"
                 <h3 className="text-lg font-semibold text-red-900 mb-3 flex items-center">"
@@ -313,15 +396,28 @@ export default function Page(props: any) {
                         Broken
                       </span>
                     </div>) ) }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 </div>
                   </div>
   );
 }
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                 </div>;
               </div>) }
 ;
                 </div>
               </div>) }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             {/* Missing Pages */}
             {analysisResult.missingPages.length > 0 && ("
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">"
@@ -338,6 +434,15 @@ export default function Page(props: any) {
                         Missing
                       </span>
                     </div>) ) }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                </div>;
+                </div>
+              </div>) }
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 </div>
                   </div>
   );
@@ -390,6 +495,10 @@ export default function Page(props: any) {
                         {page.links.length > 6 && (";
                           <p className="text-xs text-gray-500">... and {page.links.length-6} more</p>;
                         )}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             {/* Page Analysis */}"
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">"
               <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">"
@@ -420,6 +529,11 @@ export default function Page(props: any) {
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               </div>
   );
 }
@@ -428,6 +542,10 @@ export default function Page(props: any) {
 export default WebsiteAnalyzer;'"`
 ';
 </div>;';;';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                       </div>;
                     )}
                   </div>;
@@ -437,7 +555,17 @@ export default WebsiteAnalyzer;'"`
           </div>) }
       </div>
     </div>) };
+<<<<<<< HEAD
+export default WebsiteAnalyzer;'"`
+
+</div>
+=======
 export default WebsiteAnalyzer;'"`;
 </div>;
 export default WebsiteAnalyzer;'"`
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

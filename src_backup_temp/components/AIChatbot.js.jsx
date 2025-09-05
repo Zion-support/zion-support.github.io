@@ -71,6 +71,10 @@ const [inputValue, setInputValue] = useState('');
     // Add bot message with typing effect;
     const addBotMessage = useCallback((content, metadata) => {;
         const message = addMessage({;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
             "type": 'bot',;
             content,;
             metadata;
@@ -116,6 +120,10 @@ const [inputValue, setInputValue] = useState('');
             return;
         // Add user message;
         const userMessage = addMessage({;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
             "type": 'user',;
             "content": "input.trim();
         "});
@@ -139,6 +147,10 @@ const [inputValue, setInputValue] = useState('');
             const response = await simulateAIProcessing(input);
             // Add bot response;
             addBotMessage(response, {;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                 "intent": 'response',;
                 "confidence": "0.9",;
                 suggestions[;";

@@ -1586,6 +1586,10 @@ key="{index}"";
               </CardContent>;
             </Card>;
           </motion.div>;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
       <motion.div,"
 initial="{{" opacity: 0, y: 20 }}"""
         animate="{{" opacity: 1, y: 0 }}""""
@@ -1863,6 +1867,10 @@ insights to optimize your business performance and make data-driven"";
             </Button>;
           </div>;
       </motion.div>;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
       <motion .div,"
 initial="{{" opacity: 0, y: 20 }}"""
         animate="{{" opacity: 1, y: 0 }}""""

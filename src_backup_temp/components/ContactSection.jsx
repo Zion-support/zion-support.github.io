@@ -3,6 +3,10 @@ import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight, Globe, Shield, U
 ,;
         {;
 ";
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 interface ContactSection.jsProps {
   // Add props here as needed
 }
@@ -14,4 +18,8 @@ export default function ContactSection.js({ }: ContactSection.jsProps) {
     </div>
   );
 export default Component;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

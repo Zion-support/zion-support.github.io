@@ -41,6 +41,10 @@ import React from 'react';
 interface TechSolutionsSection.jsProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
         id: 'iot-solutions',
         title: 'IoT Solutions',
         description: 'Connected devices and smart systems for the modern world',"
@@ -172,6 +176,10 @@ const industries = ['";
                       {solution.icon}
                     </div>;
                   </div>;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                   <h3 className="text-2xl font - bold text-white mb-3 group - "hover": "text-zion - cyan transition -colors">                    {solution.title"}
                   </h3>";
                   <p className="text-zion-slate-light leading-relaxed mb-4">;
@@ -266,6 +274,10 @@ const industries = ['";
 "}} viewport={{ "once": "true "}} transition = {;
   { "duration": "0.6",;
   "delay": "0.5;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 "}}>";
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">";
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">";
@@ -331,4 +343,8 @@ export default function TechSolutionsSection.js({ }: TechSolutionsSection.jsProp
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

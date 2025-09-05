@@ -17,6 +17,12 @@ export function JobPostingForm("props": "any) {;
   const { createJob", updateJob, getJobById } = useJobs();
   const [isFormLoading, setIsFormLoading] = useState<any>(false);
   const [editorContent, setEditorContent] = useState<any>("");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   ;
   const {;
     form,;
@@ -31,6 +37,10 @@ export function JobPostingForm("props": "any) {;
   } = useJobForm({ jobId, onSuccess });
 ;
   const { handleSubmit, setValue, getValues, formState } = form; // Destructured getValues;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const {
     form,
     isLoading,
@@ -130,9 +140,19 @@ export function JobPostingForm("props": "any) {;
           <p className="text-sm text-muted-foreground">;
             Fill in the details below to create a job posting.</p>;
         </div>;
+<<<<<<< HEAD
         <BasicInfoFields control={form.control}  />;
         ;
         <DateFields startDate={startDate} ;
+=======
+<<<<<<< HEAD
+
+=======
+        <BasicInfoFields control={form.control}  />;
+        ;
+        <DateFields startDate={startDate} ;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (<Form {...form}>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div>

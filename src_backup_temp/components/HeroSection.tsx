@@ -124,10 +124,22 @@ const "heroSlides": "HeroSlid e[] = [  {;
     ;
           img.onload = resolve;
           img.onerror = resolve;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          img.src = slide.image}) }
+    );
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           img.src = slide.image}) }) ;
 ;
           img.src = slide.image}) }
     );
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       await Promise.all(imagePromises) ;
       setIsLoading(false) };
 ;
@@ -269,6 +281,11 @@ const "heroSlides": "HeroSlid e[] = [  {;
               <div className="text-center space-y-4">";
                 <h3 className="text-2xl font-bold text-white">;
                   {currentSlideData.title}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 </h3>";
                 <p className="text-slate-300">{currentSlideData.subtitle}</p>;
               </div>;
@@ -276,6 +293,10 @@ const "heroSlides": "HeroSlid e[] = [  {;
           </motion.div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 "
                 <p className="text-slate-300">{currentSlideData.subtitle}</p>
               </div>
@@ -283,6 +304,13 @@ const "heroSlides": "HeroSlid e[] = [  {;
           </motion.div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {/* Navigation Controls */}";
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">";
         <div className="flex space-x-2">;

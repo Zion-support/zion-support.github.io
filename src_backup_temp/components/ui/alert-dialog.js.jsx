@@ -13,6 +13,10 @@ const AlertDialog({children, open, onOpenChange}) {;
 }}>;
       <div className="relative">;
 import React,{useState} from &apos;react&apos;; const AlertDialog({children,open,onOpenChange}) { const [internalOpen,setInternalOpen] = useState(false); const isOpen = isControlled ? open : internalOpen; const setIsOpen = (props) => { if (!isControlled) { setInternalOpen(newOpen)} if (onOpenChange) {onOpenChange(newOpen)} };; return (<AlertDialogContext.Provider value = { { isOpen,setIsOpen }}> <div className=&quot;relative&quot;> {children} </div> </AlertDialogContext.Provider>)} export function AlertDialogTrigger($1) { const context = useContext(AlertDialogContext); if (!context)&apos;;&apos;; throw new Error(&apos;AlertDialogTrigger must be used within AlertDialog&apos;); return (<div onClick={() => context.setIsOpen(true)}> {children} </div> )} export function AlertDialogContent($1) { const context = useContext(AlertDialogContext); if (!context)&apos;;&apos;; throw new Error(&apos;AlertDialogContent must be used within AlertDialog&apos;); if (!context.isOpen) return null; return ( <div className=&quot;min-h-screen bg-white&quot;> <div className=&quot;fixed inset-0 bg-black bg-opacity-50&quot; /> <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}> {children} </div> </div> )} export function AlertDialogAction($1) { const context = useContext(AlertDialogContext); if (!context)&apos;;&apos;; throw new Error(&apos;AlertDialogAction must be used within AlertDialog&apos;); const handleClick = (props) => { if (onClick) onClick(); context.setIsOpen(false)}; return (<button className={`px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors ${className}`} onClick={handleClick}> {children} </button>)} export function AlertDialogCancel($1) { const context = useContext(AlertDialogContext); if (!context)&apos;;&apos;; throw new Error(&apos;AlertDialogCancel must be used within AlertDialog&apos;); return (<button className={`px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 transition-colors ${className}`} onClick={() => context.setIsOpen(false)}> {children} </button>)} </AlertDialogContext>;&apos;;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 }}>
       <div className="relative">
         {children}
@@ -63,4 +67,9 @@ export function AlertDialogCancel("props": "any) {;
     </button>)}
 ;
 </AlertDialogContext>
+<<<<<<< HEAD
+
 </AlertDialogContext>
+=======
+</AlertDialogContext>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

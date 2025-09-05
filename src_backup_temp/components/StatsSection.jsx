@@ -28,6 +28,10 @@ export function StatsSection("props": "any) {;
       "description": 'Industry expertise and knowledge',;
       "icon": '🏆',;
       "color": 'from-red-500 to-pink-500'}
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export function StatsSection(props: any) {
   const stats = [{
       number: '500+',
@@ -83,6 +87,11 @@ export function StatsSection(props: any) {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">;
                   {stat.label}
                 </h3>;
+<<<<<<< HEAD
+                
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                 <p className="text-gray-600 leading-relaxed">;
                   {stat.description}
                 </p>;
@@ -90,6 +99,10 @@ export function StatsSection(props: any) {
             </div>;
           ))}
         </div>;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
         <div className="text-center mt-12">;
           <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8 border border-blue-200">;
             <h3 className="text-2xl font-bold text-gray-900 mb-4">;
@@ -158,4 +171,8 @@ export default function StatsSection.js({ }: StatsSection.jsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

@@ -21,11 +21,20 @@ export function ReferralMiddleware("props": "any) {;
 "}, []);
     async function sendReferral("props": "any) {;
       const code = localStorage.getItem('referralCode');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       if(!code || !user?.id || !user?.email) return; // Guard against missing email as well;
       try {;
         await supabase.functions.invoke('track-referral'", {;
           "body": "{ "refCode": cod e", "userId": "use r.id", "email": "use r.email "}
         });
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       if(!code || !user?.id || !user?.email) return; // Guard against missing email as well
       try {
         await supabase.functions.invoke('track-referral', {

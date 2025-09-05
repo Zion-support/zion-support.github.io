@@ -28,4 +28,12 @@ export const findService = ("_serviceName": string) => {
   // Implementation placeholder
   return null;
 };
+<<<<<<< HEAD
 export const findService = (_serviceName: string) => { return null};
+=======
+<<<<<<< HEAD
+export const findService = (_serviceName: string) => { return null};
+=======
+export const findService = (_serviceName: string) => { return null};
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

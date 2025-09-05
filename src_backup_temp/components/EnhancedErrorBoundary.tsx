@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 import React from 'react';';';
+=======
+<<<<<<< HEAD
+=======
+import React from 'react';';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Button } from './ui/button';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
@@ -56,6 +63,11 @@ import {  import { motion  } from 'framer-motion';
 export default function Page(props: any) {
 -${Math.random().toString(36).substr(2, 9)}`}}
   componentDidCatch(error: Erro r, errorInfo: ErrorInf o) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ';
     // Log error to console in development';';
     if (process.env.NODE_ENV === 'development') {';';
@@ -63,6 +75,10 @@ export default function Page(props: any) {
       console.error('Error:', error);';';
       console.error('Error Info:', errorInfo);
       console.groupEnd();
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Button } from './ui/button';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
@@ -106,6 +122,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.group('🚨 Error Boundary Caught Error');
@@ -117,8 +140,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
+<<<<<<< HEAD
 ';
     // Log to external service in production';';
+=======
+<<<<<<< HEAD
+
+=======
+';
+    // Log to external service in production';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     // Log to external service in production
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send to an error reporting service
@@ -126,6 +158,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       console.error('Production Error:', error, errorInfo);
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   private reportError = ("error": "Error", "errorInfo": "ErrorInfo) => {;
     if (!this.props.enableReporting) return;
 ;
@@ -200,6 +238,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   render() {;
     if (this.state.hasError) {;
       if (this.props.fallback) {;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     // Send error to error reporting service
     this.reportError(error, errorInfo) }
   private async reportError(error: Erro r, errorInfo: ErrorInf o) {
@@ -308,6 +350,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <p className="text-gray-600 mb-6">;
               We're sorry, but something unexpected happened. Our team has been notified.;
             </p>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             {this.props.showDetails && this.state.error && (;
               <details className="mb-6 text-left">;
                 <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2">;
@@ -580,8 +629,16 @@ export default EnhancedErrorBoundary;
 </p>
 </motion>
 </motion>
+<<<<<<< HEAD
 </motion>';
 </motion>;';;';
+=======
+<<<<<<< HEAD
+=======
+</motion>';
+</motion>;';;';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
@@ -702,9 +759,22 @@ export const useErrorReporting = () => {
   return { reportError };
 };
 export default EnhancedErrorBoundary;
+<<<<<<< HEAD
 </motion>
 </motion>
 </motion>
 </motion>
 </motion>
 </motion>
+=======
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+<<<<<<< HEAD
+</motion>
+=======
+</motion>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

@@ -45,6 +45,11 @@ function FeaturedListingsSection("props": "any) {          initial = {;
                   />;
                 <div className="absolute top - 3 left -3">;
                   <span className="px-3 py-1 bg-blue - 600 text-white text-xs font - semibold rounded-full">                    {listing.category}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   </span>;
                 </div>;
 ";
@@ -57,6 +62,10 @@ function FeaturedListingsSection("props": "any) {          initial = {;
                 </h3>;
 ";
                 <p className="text-gray-600 mb-4 leading-relaxed">;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   </span>
                 </div>
 "

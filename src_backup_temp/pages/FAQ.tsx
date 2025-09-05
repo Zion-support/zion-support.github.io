@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 :src/pages/FAQ.tsx
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, HelpCircle, Search } from 'lucide-react';
@@ -231,6 +236,10 @@ export function FAQ() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
 ;
 const "FAQ": "React.FC = () => {;
@@ -246,4 +255,12 @@ const "FAQ": "React.FC = () => {;
   );
 "};
 ;
+<<<<<<< HEAD
 export default FAQ;
+=======
+<<<<<<< HEAD
+export default FAQ;
+=======
+export default FAQ;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

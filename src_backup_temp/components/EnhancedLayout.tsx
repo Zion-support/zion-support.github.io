@@ -1,6 +1,11 @@
 "children": "ReactNod e;
   title?: string;
   description?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   keywords?: string",;
   ogImage?: "string",;
   canonical?: "string",,;
@@ -19,6 +24,10 @@ export const "EnhancedLayout": "React.FC<EnhancedLayoutProps> = ({ children",";
   showSEOAnalysis = false}) => {;
   const fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group";
   const canonicalUrl = canonical || (typeof window !== "undefined" ? window.location.href : "");
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   keywords?: string,;
   ogImage?: string,;
   canonical?: string,,;
@@ -55,6 +64,12 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
           <meta name="robots" content="{noindex" ? "noindex,nofollow" : "index,follow"}         />
           {/* comment */}"
           {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"    />}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
           {/* comment */}";
           <meta property=""og": "titl e" content="{fullTitle"}"    />";
@@ -163,6 +178,10 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
                     "description": "End-to-end digital transformation services";
                 ];
 })>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           {/* comment */}"
           <meta property="og: titl e" content="{fullTitle}"    />"
           <meta property="og: descriptio n" content="{description}"    />"
@@ -284,12 +303,28 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
 '"`
 </script>
 </SEOOptimizer>
+<<<<<<< HEAD
 </PerformanceOptimizer>';
 </EnhancedLayoutProps>';';
+=======
+<<<<<<< HEAD
+=======
+</PerformanceOptimizer>';
+</EnhancedLayoutProps>';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 '"`;
 </script>;
 </SEOOptimizer>;
 </PerformanceOptimizer>;
 </EnhancedLayoutProps>;
 </PerformanceOptimizer>
+<<<<<<< HEAD
 </EnhancedLayoutProps>
+=======
+<<<<<<< HEAD
+</EnhancedLayoutProps>
+=======
+</EnhancedLayoutProps>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

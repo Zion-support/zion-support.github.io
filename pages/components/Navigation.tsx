@@ -11,18 +11,20 @@ import {
   Calculator,
   Calendar,
   Camera,
+  Car,
   CheckCircle,
   ChevronDown,
   Clock,
   Cloud,
   Code,
   CreditCard,
-  Document,
+  Cpu,
   DollarSign,
   Eye,
   FileText,
   Gamepad2,
   Globe,
+  GraduationCap,
   Heart,
   Home,
   Lock,
@@ -37,11 +39,13 @@ import {
   Settings,
   Shield,
   ShoppingCart,
+  Sprout,
   Star,
   Target,
   TrendingUp,
   Truck,
   Users,
+  Wifi,
   X,
   Zap
 } from 'lucide-react';
@@ -190,8 +194,21 @@ const navigationItems = [
       {
         title: 'White Papers',
         href: '/white-papers',
+<<<<<<< HEAD
         icon: Document,
         description: 'In-depth research reports'
+=======
+        icon: FileText,
+        description: 'In-depth research reports',
+        popular: false
+      },
+      {
+        title: 'Webinars',
+        href: '/webinars',
+        icon: Calendar,
+        description: 'Educational sessions',
+        popular: false
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       },
       {
         title: 'Tutorials',

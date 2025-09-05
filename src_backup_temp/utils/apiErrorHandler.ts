@@ -12,4 +12,8 @@ export const apiErrorHandler = {}
 export const apiErrorHandler = {} variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({ ' variant: 'destructive',' title: 'Error',description: 'messag e'});
     description: messag e}
     );
+<<<<<<< HEAD
   // Log error for debugging
+=======
+  // Log error for debugging
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

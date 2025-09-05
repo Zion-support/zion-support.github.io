@@ -338,6 +338,10 @@ export const AdvancedServiceComparison = (props: any) => {
   "y": "0 ;
 ;
 ;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 ;
 "}} transition={{ "delay": "0.3 "}} className="mt-8 bg-white rounded-lg shadow-lg p-6">;
           <h3 className="text-2xl font-bold text-zion-blue-dark mb-4">;
@@ -399,6 +403,10 @@ export const AdvancedServiceComparison = (props: any) => {
   "y": "0 ;
 ;
 ;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 ;
 "}} transition={{ "delay": "0.4 "}} className="mt-12 text-center">;
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">;
@@ -525,4 +533,8 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+''']
             <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple "hover": from-zion-cyan-dark hover:to-zion-purple-dark"""
           <divclassName="flex flex-col "sm": flex-row gap-4 justify-center"""
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light"""
+<<<<<<< HEAD
             <Button variant="outline" className="border-white text-white "hover": bg-white hover:text-zion-purple""]"
+=======
+            <Button variant="outline" className="border-white text-white "hover": bg-white hover:text-zion-purple""]"
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

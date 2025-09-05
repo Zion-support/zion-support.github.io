@@ -13,6 +13,10 @@ export {PrivacyPolicy}() {;
     return (<>;
 export default function PrivacyPolicy()() {
     return (<>
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
       <SEO title="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical=""https": "//ziontechgroup.com/privacy" noindex={draft"}/>;
       <Header />;
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">;

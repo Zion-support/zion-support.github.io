@@ -1,4 +1,10 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 export default function Page("props": "any) {;
 > {;
@@ -8,6 +14,10 @@ export default function Page("props": "any) {;
 ;
 export const "CustomerFeedbackSystem": "React.FC<CustomerFeedbackSystemProps> = ({;
 "showStats": tru e",;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function Page(props: any) {
 > {
   showStats?: boolean;
@@ -19,6 +29,11 @@ showStats: tru e,;
   maxFeedback = 10}) => {;
   const [feedback, setFeedback] = useState<Feedback[]>([]);
   const [filteredFeedback, setFilteredFeedback] = useState<Feedback[]>([]);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const [stats, setStats] = useState<FeedbackStats>({
     totalFeedback: 0,
     averageRating: 0,
@@ -33,6 +48,10 @@ showStats: tru e,;
     rating: 0,';';
     comment: '',';';
     category: 'overall' as Feedback['category']
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const [stats, setStats] = useState<FeedbackStats>({;
     "totalFeedback": "0",;
     "averageRating": "0",;
@@ -43,9 +62,18 @@ showStats: tru e,;
   const [selectedRating, setSelectedRating] = useState<any>(0);  const [searchQuery, setSearchQuery] = useState<any>('');
   const [showFeedbackForm, setShowFeedbackForm] = useState<any>(false);
   const [newFeedback, setNewFeedback] = useState<any>({;
+<<<<<<< HEAD
     rating: 0,;
     comment: '',;
     category: 'overall' as Feedback['category'];
+=======
+<<<<<<< HEAD
+=======
+    rating: 0,;
+    comment: '',;
+    category: 'overall' as Feedback['category'];
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     "rating": "0",;
     "comment": '',;
     "category": 'overall' as Feedback['category'];
@@ -145,6 +173,11 @@ showStats: tru e,;
     // Cleanup function
   };
 }, []);, []);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     const sampleFeedback: Feedbac k[] = [{';
 ';';
         id: '1',';';
@@ -153,6 +186,10 @@ showStats: tru e,;
         comment: 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations.Their expertise in machine learning helped us optimize our processes significantly.',';';
         category: 'service',';';
         sentiment: 'positive',';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     const sampleFeedback: Feedbac k[] = [{
         id: '1',
         customerName: 'Sarah Johnson',
@@ -213,8 +250,16 @@ showStats: tru e,;
         category: 'overall',
         sentiment: 'positive',
         date: '2024-01-05',
+<<<<<<< HEAD
         helpful: 2 8,';
         unhelpful: 1,';';
+=======
+<<<<<<< HEAD
+=======
+        helpful: 2 8,';
+        unhelpful: 1,';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     const sampleFeedback: Feedbac k[] = [{;
         id: '1',;
         customerName: 'Sarah Johnson',;
@@ -281,8 +326,19 @@ showStats: tru e,;
         unhelpful: 1,
         tags['AI',Efficiency',Implementation'],;
         verified: tru e
+<<<<<<< HEAD
     ];
     setFeedback(sampleFeedback) ;
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+    ];
+    setFeedback(sampleFeedback) ;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     setFilteredFeedback(sampleFeedback) "}, []) ;
 ;
   // Calculate stats;
@@ -291,6 +347,10 @@ showStats: tru e,;
   return () => {;
     // Cleanup function;
   "};
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     setFilteredFeedback(sampleFeedback) }, []) ;
   // Calculate stats
   useEffect(() => {
@@ -315,6 +375,12 @@ showStats: tru e,;
         topCategories
       }) }
   }, [feedback]) ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   // Filter feedback;
   useEffect(() => {;
@@ -322,6 +388,10 @@ showStats: tru e,;
   return () => {;
     // Cleanup function;
   "};
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Filter feedback
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -329,14 +399,27 @@ showStats: tru e,;
     // Cleanup function
   };
 }, []);, []);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     let filtered = feedback;';
 ';';
     if(selectedCategory !== 'all') {
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
     let filtered = feedback;
 ;
     if(selectedCategory !== 'all') {;
     let filtered = feedback;
     if(selectedCategory !== 'all') {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       filtered = filtered.filter(f => f.category === selectedCategory)}
     if(selectedRating > 0) {
       filtered = filtered.filter(f => f.rating === selectedRating)}
@@ -395,6 +478,11 @@ showStats: tru e,;
   ;
   ;
   verified: fals e;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     };';
 ';';
     setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' });
@@ -404,6 +492,10 @@ showStats: tru e,;
         return {;';
           ...f,;';';
           helpful: typ e === 'helpful' ? f.helpful + 1 : f.helpful,;';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     };
 ;
     setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' });
@@ -421,21 +513,49 @@ showStats: tru e,;
   // Handle helpful/unhelpful votes'
         return {;
           ...f,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          helpful: typ e === 'helpful' ? f.helpful + 1 : f.helpful,;
+          unhelpful: typ e === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful};
+
+      return f}) ) };
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           "helpful": "typ e === 'helpful' ? f.helpful + 1 : f.helpful",;
           "unhelpful": "typ e === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful"};
 ;
           helpful: typ e === 'helpful' ? f.helpful + 1 : f.helpful,;
           unhelpful: typ e === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful};
       return f}) ) };
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Get sentiment color
     switch(sentiment) {;
       case 'positive': "return 'text-green-400 bg-green-400/20';
       case 'negative': return 'text-red-400 bg-red-400/20';
+<<<<<<< HEAD
       "default": retur n 'text-yellow-400 bg-yellow-400/20'"}  };
 ;
   // Get category color;
       default: retur n 'text-yellow-400 bg-yellow-400/20'}  };
   // Get category color
+=======
+<<<<<<< HEAD
+=======
+      "default": retur n 'text-yellow-400 bg-yellow-400/20'"}  };
+;
+  // Get category color;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+      default: retur n 'text-yellow-400 bg-yellow-400/20'}  };
+  // Get category color
+<<<<<<< HEAD
+  
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   ;';
   ;';';
 '';';
@@ -445,6 +565,10 @@ showStats: tru e,;
   ;'';';
   'overall': 'text-zion-cyan bg-zion-cyan/20';';
     };';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   // Get sentiment color;
     switch(sentiment) {;
@@ -471,6 +595,11 @@ showStats: tru e,;
         <p className="text-zinc-400 text-lg">See what our customers are saying about Zion Tech Group</p>
       </div>
       {/* Stats Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {showStats && (";
         <div className="grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-4 gap-6 mb-8">;
           <motion.div;
@@ -505,6 +634,10 @@ showStats: tru e,;
                 {[1, 2, 3, 4, 5].map((star) => (';
                   <Star key={star}';';
                     className={`w-5 h-5 ${star <= stats.averageRating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             transition={{ delay: 0.1 }}";
   { "opacity": "1",;
   "y": "0;
@@ -549,13 +682,26 @@ showStats: tru e,;
               <div className="flex">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <Star key={star}
+<<<<<<< HEAD
                     className={`w-5 h-5 ${star <= stats.averageRating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`;
+=======
+<<<<<<< HEAD
+=======
+                    className={`w-5 h-5 ${star <= stats.averageRating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     className={`w-5 h-5 ${star <= stats.averageRating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`
                     }`}
                     />) ) }              </div>
             </div>"
             <div className="text-zinc-400">Average Rating</div>
           </motion.div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
           <motion.div;
             initial = {;
@@ -588,6 +734,10 @@ showStats: tru e,;
             <div className="text-3xl font-bold text-zion-cyan mb-2">{stats.responseRate}%</div>";
             <div className="text-zinc-400">Response Rate</div>;
           </motion.div>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           <motion.div
             initial = {
   { opacity: 0,
@@ -618,9 +768,18 @@ showStats: tru e,;
             <div className="text-3xl font-bold text-zion-cyan mb-2">{stats.responseRate}%</div>"
             <div className="text-zinc-400">Response Rate</div>
           </motion.div>
+<<<<<<< HEAD
             </div>
   );
 }
+=======
+<<<<<<< HEAD
+=======
+            </div>
+  );
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             transition={{ delay: 0.3 }}";
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
@@ -630,6 +789,10 @@ showStats: tru e,;
         </div>) }
 ;
         </div>) }
+<<<<<<< HEAD
+
+      {/* Top Categories */}
+=======
       {/* Top Categories */}
       {showStats && (";
         <div className="mb-8">";
@@ -652,6 +815,10 @@ showStats: tru e,;
                 <div className="text-2xl font-bold text-white mb-1">{category.count}</div>";
                 <div className="text-zinc-400 text-sm">{category.category}</div>";
                 <div className="text-zion-cyan text-xs">{category.percentage.toFixed(1)}%</div>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {showStats && ("
         <div className="mb-8">"
           <h3 className="text-xl font-semibold text-white mb-4">Top Categories"
@@ -683,6 +850,11 @@ showStats: tru e,;
           {/* Category Filter */}
           <select
             value={selectedCategory}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             onChange={(e) => setSelectedCategory(e.target.value)}";
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white "focus": "outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan "focus": borde r-transparent";
 ";
@@ -724,6 +896,10 @@ showStats: tru e,;
             </div>
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           </button>;
         </div>) "}
 ;
@@ -731,6 +907,11 @@ showStats: tru e,;
       <AnimatePresence>;
         {showFeedbackForm && (<motion.div;
             initial = {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   { height: 0,;
   opacity: 0;
 }}
@@ -738,6 +919,10 @@ showStats: tru e,;
 ';';
   { height: 'auto',
   opacity: 1
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             animate = {;
   { height: 'auto',;
   opacity: 1;
@@ -852,11 +1037,23 @@ showStats: tru e,;
                         />
                       </button>;) ) }                  </div>
                 </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 {/* Category */}
                 <div>"
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Category</label>
                   <select
                     value={newFeedback.category}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     onChange={ (e) => setNewFeedback(prev => ({ ...prev,;
   "category": "e.target.value as Feedback['category'];
 "}))}";
@@ -900,6 +1097,10 @@ showStats: tru e,;
           </motion.div>) "}
       </AnimatePresence>;
       {/* Feedback List */}";
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     onChange={ (e) => setNewFeedback(prev => ({ ...prev,
   category: e.target.value as Feedback['category']
 }))}"
@@ -911,6 +1112,13 @@ showStats: tru e,;
                     <option value="support">Customer Support</option>
                   </select>
                 </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 <div>";
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Category</label>;
                   <select;
@@ -961,6 +1169,11 @@ showStats: tru e,;
       <div className="space-y-4"> {filteredFeedback.map((item, index) => (;
           <motion.div
             key={item.id}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             initial = {;
   { "opacity": "0",;
   "y": "2 0;
@@ -975,6 +1188,10 @@ showStats: tru e,;
             <div className="flex items-start justify-between mb-4">";
               <div className="flex items-center gap-3">";
                 <div className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold">;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             initial = {
   { opacity: 0,
   y: 2 0
@@ -1014,10 +1231,19 @@ showStats: tru e,;
               </div>
             </div>
             {/* Rating */}"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             <div className="flex items-center gap-2 mb-3"> {[1, 2, 3, 4, 5].map((star) => (;';
                 <Star key={star}`';';
                   className={`w-5 h-5 ${                  key={star}`                  className={`w-5 h-5 ${'';';
                     star <= item.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 </span>;
               </div>;
             </div>;
@@ -1044,6 +1270,13 @@ showStats: tru e,;
                     className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
                     {tag}
                   </span>) ) }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              </div>) }
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   </div>
   );
 }
@@ -1093,6 +1326,10 @@ showStats: tru e,;
             onClick={() => setShowFeedbackForm(true)}";
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg "hover": "b g-zion-cyan/80 transition-colors";
           >;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             {/* Actions */}"
             <div className="flex items-center justify-between pt-4 border-t border-zinc-700/50">"
               <div className="flex items-center gap-4">
@@ -1169,8 +1406,16 @@ showStats: tru e,;
           >
             Add Feedback;
           </button>;
+<<<<<<< HEAD
         </motion.div>;) };';
     </div>;) };';';
+=======
+<<<<<<< HEAD
+=======
+        </motion.div>;) };';
+    </div>;) };';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         </motion.div>;) "};
     </div>;) };
 '"`
@@ -1192,8 +1437,16 @@ showStats: tru e,;
 </any>
 </any>
 </FeedbackStats>
+<<<<<<< HEAD
 </Feedback>';
 </CustomerFeedbackSystemProps>;';;';
+=======
+<<<<<<< HEAD
+=======
+</Feedback>';
+</CustomerFeedbackSystemProps>;';;';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         </motion.div>;) };
     </div>;) };
 '"`;
@@ -1220,4 +1473,12 @@ showStats: tru e,;
 </CustomerFeedbackSystemProps>;
 </Feedback>
 </Feedback>
+<<<<<<< HEAD
 </CustomerFeedbackSystemProps>
+=======
+<<<<<<< HEAD
+</CustomerFeedbackSystemProps>
+=======
+</CustomerFeedbackSystemProps>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

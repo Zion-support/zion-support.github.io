@@ -1,6 +1,11 @@
 import React from 'react',;',';';
     ;
 import {SEO } from '@/components/SEO';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ,"});,"});
 export default function ComprehensiveOptimizer("props": "any) {return (;
     <div className="min-h-screen bg-white">;
@@ -11,6 +16,10 @@ export default function ComprehensiveOptimizer("props": "any) {return (;
           Professional ComprehensiveOptimizer services to help your business grow.;
         </p>;
       </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ,"}
     );,"})
 export default function ComprehensiveOptimizer(props: any) {return (

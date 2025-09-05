@@ -75,6 +75,12 @@ export default function Page("props": "any) {;
           transition = {;
   { "duration": "0.5",;
   "delay": "0.5;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "}}
         >";
           <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>";
@@ -88,6 +94,10 @@ export default function Page("props": "any) {;
               <span>kleber@ziontechgroup.com</span>;
             </div>";
             <div className="flex items-center space-x-2">";
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 }}
         >"
           <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?"

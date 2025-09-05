@@ -98,6 +98,11 @@ export default function Page(props: any) {
                   navigator.serviceWorker.controller
                 ) {
                   // New service worker available
+<<<<<<< HEAD
+                  
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                   // New service worker available'
                   // // 
                 }
@@ -212,4 +217,8 @@ export default function PerformanceOptimizer(props) {
   }, [location.pathname]);
   return null;
 }
+<<<<<<< HEAD
  export const PerformanceOptimizer = memo(({children}) => { const location = useLocation () """
+=======
+ export const PerformanceOptimizer = memo(({children}) => { const location = useLocation () """
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

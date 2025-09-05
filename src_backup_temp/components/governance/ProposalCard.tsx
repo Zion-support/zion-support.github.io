@@ -1,5 +1,10 @@
 import React from 'react';
 interface Proposal {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   "id": "string;
   "title": string;
   "description": string;
@@ -27,6 +32,10 @@ const "ProposalCard": "React.FC<ProposalCardProps> = ({;
   const getStatusColor = ("props": "any) => {;
     switch (status) {;
       case 'active':;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   "id": string;
   title: string;';
   description: string;';';
@@ -38,9 +47,18 @@ const "ProposalCard": "React.FC<ProposalCardProps> = ({;
   proposer: string;
   category: string;
 }
+<<<<<<< HEAD
 interface ProposalCardProps {
 ';
   proposal: Proposa l;';';
+=======
+<<<<<<< HEAD
+=======
+interface ProposalCardProps {
+';
+  proposal: Proposa l;';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 interface ProposalCardProps {;
   proposal: Proposa l;
@@ -50,6 +68,11 @@ interface ProposalCardProps {
   onVote?: (proposalId: string, "vote": 'for' | 'against') => void;
   canVote?: boolean;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const ProposalCard: React.FC<ProposalCardProps> = ({ 
   proposal, 
   onVote, 
@@ -65,6 +88,10 @@ const ProposalCard: React.FC<ProposalCardProps> = ({
         return 'bg-red-100 text-red-800';';';
       case 'expired':';';
         return 'bg-gray-100 text-gray-800';';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 const ProposalCard: React.FC<ProposalCardProps> = ({;
   proposal,;
@@ -90,6 +117,12 @@ const "ProposalCard": Reac t.FC<ProposalCardProps> = ({
         return 'bg-red-100 text-red-800';
       case 'expired':';
         return 'bg-gray-100 text-gray-800';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      "default": retur n 'bg-gray-100 text-gray-800';
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       default: retur n 'bg-gray-100 text-gray-800';
     }
       "default": retur n 'bg-gray-100 text-gray-800';
@@ -102,6 +135,10 @@ const "ProposalCard": Reac t.FC<ProposalCardProps> = ({
   "};
 ;
   const handleVote = ("props": "any) => {;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     }
   };
   const getVotePercentage = (props) => {;
@@ -132,7 +169,14 @@ const "ProposalCard": Reac t.FC<ProposalCardProps> = ({
         <div className="flex-1">;
           <h3 className="text-lg font-semibold text-gray-900 mb-2">;
             {proposal.title}
+<<<<<<< HEAD
           <p className="text-sm text-gray-600 mb-3">
+=======
+<<<<<<< HEAD
+=======
+          <p className="text-sm text-gray-600 mb-3">
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
           <p className="text-sm text-gray-600 mb-3">;
             {proposal.description}
@@ -154,6 +198,11 @@ const "ProposalCard": Reac t.FC<ProposalCardProps> = ({
       </div>;
       <div className="mb-4">;
         <div className="flex justify-between text-sm text-gray-600 mb-2">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           <span>Votes "For": "{proposal.votesFor"}</span>;
           <span>Votes "Against": "{proposal.votesAgainst"}</span>;
         </div>;
@@ -164,6 +213,10 @@ const "ProposalCard": Reac t.FC<ProposalCardProps> = ({
         </div>;
         <div className="text-xs text-gray-500 mt-1">;
           Total "Votes": "{proposal.totalVotes"}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           <span>Votes "For": {proposal.votesFor}</span>;
           <span>Votes "Against": {proposal.votesAgainst}</span>;
         </div>;
@@ -178,6 +231,11 @@ const "ProposalCard": Reac t.FC<ProposalCardProps> = ({
       </div>;
       <div className="flex justify-between items-center">;
         <div className="text-sm text-gray-500">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           Ends: {new Date(proposal.endDate).toLocaleDateString()}
         </div>';
         ';';
@@ -220,6 +278,10 @@ const "ProposalCard": Reac t.FC<ProposalCardProps> = ({
         )"}
       </div>;
     </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           "Ends": {new Date(proposal.endDate).toLocaleDateString()}
         </div>
         ';';
@@ -245,10 +307,24 @@ const "ProposalCard": Reac t.FC<ProposalCardProps> = ({
     );
 };
 export default ProposalCard;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 </div>';
 </ProposalCardProps>;';;';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </div>;
 </ProposalCardProps>;
 </div>
 </ProposalCardProps>;';';
+<<<<<<< HEAD
 import React from 'react'; ; interface Proposal {; id: string; title: string;'; description: string;';'; status: 'active' | 'passed' | 'rejected' | 'expired'; votesFor: number; votesAgainst: number; totalVotes: number; endDate: string; proposer: string; category: string} interface ProposalCardProps { proposal: Proposa l;';'; onVote?: (proposalId: string,vote: 'for' | 'against') => void; canVote?: boolean} const ProposalCard: Reac t.FC<ProposalCardProps> = ({ proposal,onVote,canVote = false };) => { const getStatusColor = (props) => { switch (status) { case 'active':'; return 'bg-green-100 text-green-800'; case 'passed':'; return 'bg-blue-100 text-blue-800'; case 'rejected':'; return 'bg-red-100 text-red-800'; case 'expired':'; return 'bg-gray-100 text-gray-800'; default: retur n 'bg-gray-100 text-gray-800'} }; ; const getVotePercentage = (props) => {; if (proposal.totalVotes === 0) return 0; return Math.round((votes / proposal.totalVotes) * 100)}; ; const handleVote = (props) => {; if (onVote && canVote) {; onVote(proposal.id,vote)} }; return ( <div className="min-h-screen bg-white"> <div className="flex justify-between items-start mb-4"> <div className="flex-1"> <h3 className="text-lg font-semibold text-gray-900 mb-2"> {proposal.title} ; <p className="text-sm text-gray-600 mb-3">; {proposal.description} </p>; </div>; <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(proposal.status)}`}>; {proposal.status.charAt(0).toUpperCase() + proposal.status.slice(1)} </span>; </div>; <div className="grid grid-cols-2 gap-4 mb-4">; <div>; <span className="text-sm text-gray-500">Proposer</span>; <p className="text-sm font-medium text-gray-900">{proposal.proposer}</p>; </div>; <div>; <span className="text-sm text-gray-500">Category</span>; <p className="text-sm font-medium text-gray-900">{proposal.category}</p>; </div>; </div>; <div className="mb-4">; <div className="flex justify-between text-sm text-gray-600 mb-2">; <span>Votes For: {proposal.votesFor}</span>; <span>Votes Against: {proposal.votesAgainst}</span>; </div>; <div className="w-full bg-gray-200 rounded-full h-2">; <div className="bg-green-600 h-2 rounded-full transition-all duration-300"; style="{{{ width: `${getVotePercentage(proposal.votesFor)}}"%` }} />; </div>; <div className="text-xs text-gray-500 mt-1">; Total Votes: {proposal.totalVotes} </div>; </div>; <div className="flex justify-between items-center">; <div className="text-sm text-gray-500">; Ends: {new Date(proposal.endDate).toLocaleDateString()} </div> ';'; {canVote && proposal.status === 'active' && ( <divclassName="space-x-2"> <button';'; onClick={() => handleVote('for')} className="px-4 py-2 bg-green-600 text-white text-sm rounded-lg hover: b g-green-700 transition-colors" > Vote For </button> <button';'; onClick={() => handleVote('against')} className="px-4 py-2 bg-red-600 text-white text-sm rounded-lg hover: b g-red-700 transition-colors" > Vote Against </button> </div> )} </div> </div> )}; ; export default ProposalCard; </div> </ProposalCardProps>;';';
+=======
+<<<<<<< HEAD
+import React from 'react'; ; interface Proposal {; id: string; title: string;'; description: string;';'; status: 'active' | 'passed' | 'rejected' | 'expired'; votesFor: number; votesAgainst: number; totalVotes: number; endDate: string; proposer: string; category: string} interface ProposalCardProps { proposal: Proposa l;';'; onVote?: (proposalId: string,vote: 'for' | 'against') => void; canVote?: boolean} const ProposalCard: Reac t.FC<ProposalCardProps> = ({ proposal,onVote,canVote = false };) => { const getStatusColor = (props) => { switch (status) { case 'active':'; return 'bg-green-100 text-green-800'; case 'passed':'; return 'bg-blue-100 text-blue-800'; case 'rejected':'; return 'bg-red-100 text-red-800'; case 'expired':'; return 'bg-gray-100 text-gray-800'; default: retur n 'bg-gray-100 text-gray-800'} }; ; const getVotePercentage = (props) => {; if (proposal.totalVotes === 0) return 0; return Math.round((votes / proposal.totalVotes) * 100)}; ; const handleVote = (props) => {; if (onVote && canVote) {; onVote(proposal.id,vote)} }; return ( <div className="min-h-screen bg-white"> <div className="flex justify-between items-start mb-4"> <div className="flex-1"> <h3 className="text-lg font-semibold text-gray-900 mb-2"> {proposal.title} ; <p className="text-sm text-gray-600 mb-3">; {proposal.description} </p>; </div>; <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(proposal.status)}`}>; {proposal.status.charAt(0).toUpperCase() + proposal.status.slice(1)} </span>; </div>; <div className="grid grid-cols-2 gap-4 mb-4">; <div>; <span className="text-sm text-gray-500">Proposer</span>; <p className="text-sm font-medium text-gray-900">{proposal.proposer}</p>; </div>; <div>; <span className="text-sm text-gray-500">Category</span>; <p className="text-sm font-medium text-gray-900">{proposal.category}</p>; </div>; </div>; <div className="mb-4">; <div className="flex justify-between text-sm text-gray-600 mb-2">; <span>Votes For: {proposal.votesFor}</span>; <span>Votes Against: {proposal.votesAgainst}</span>; </div>; <div className="w-full bg-gray-200 rounded-full h-2">; <div className="bg-green-600 h-2 rounded-full transition-all duration-300"; style="{{{ width: `${getVotePercentage(proposal.votesFor)}}"%` }} />; </div>; <div className="text-xs text-gray-500 mt-1">; Total Votes: {proposal.totalVotes} </div>; </div>; <div className="flex justify-between items-center">; <div className="text-sm text-gray-500">; Ends: {new Date(proposal.endDate).toLocaleDateString()} </div> ';'; {canVote && proposal.status === 'active' && ( <divclassName="space-x-2"> <button';'; onClick={() => handleVote('for')} className="px-4 py-2 bg-green-600 text-white text-sm rounded-lg hover: b g-green-700 transition-colors" > Vote For </button> <button';'; onClick={() => handleVote('against')} className="px-4 py-2 bg-red-600 text-white text-sm rounded-lg hover: b g-red-700 transition-colors" > Vote Against </button> </div> )} </div> </div> )}; ; export default ProposalCard; </div> </ProposalCardProps>;';';
+=======
+import React from 'react'; ; interface Proposal {; id: string; title: string;'; description: string;';'; status: 'active' | 'passed' | 'rejected' | 'expired'; votesFor: number; votesAgainst: number; totalVotes: number; endDate: string; proposer: string; category: string} interface ProposalCardProps { proposal: Proposa l;';'; onVote?: (proposalId: string,vote: 'for' | 'against') => void; canVote?: boolean} const ProposalCard: Reac t.FC<ProposalCardProps> = ({ proposal,onVote,canVote = false };) => { const getStatusColor = (props) => { switch (status) { case 'active':'; return 'bg-green-100 text-green-800'; case 'passed':'; return 'bg-blue-100 text-blue-800'; case 'rejected':'; return 'bg-red-100 text-red-800'; case 'expired':'; return 'bg-gray-100 text-gray-800'; default: retur n 'bg-gray-100 text-gray-800'} }; ; const getVotePercentage = (props) => {; if (proposal.totalVotes === 0) return 0; return Math.round((votes / proposal.totalVotes) * 100)}; ; const handleVote = (props) => {; if (onVote && canVote) {; onVote(proposal.id,vote)} }; return ( <div className="min-h-screen bg-white"> <div className="flex justify-between items-start mb-4"> <div className="flex-1"> <h3 className="text-lg font-semibold text-gray-900 mb-2"> {proposal.title} ; <p className="text-sm text-gray-600 mb-3">; {proposal.description} </p>; </div>; <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(proposal.status)}`}>; {proposal.status.charAt(0).toUpperCase() + proposal.status.slice(1)} </span>; </div>; <div className="grid grid-cols-2 gap-4 mb-4">; <div>; <span className="text-sm text-gray-500">Proposer</span>; <p className="text-sm font-medium text-gray-900">{proposal.proposer}</p>; </div>; <div>; <span className="text-sm text-gray-500">Category</span>; <p className="text-sm font-medium text-gray-900">{proposal.category}</p>; </div>; </div>; <div className="mb-4">; <div className="flex justify-between text-sm text-gray-600 mb-2">; <span>Votes For: {proposal.votesFor}</span>; <span>Votes Against: {proposal.votesAgainst}</span>; </div>; <div className="w-full bg-gray-200 rounded-full h-2">; <div className="bg-green-600 h-2 rounded-full transition-all duration-300"; style="{{{ width: `${getVotePercentage(proposal.votesFor)}}"%` }} />; </div>; <div className="text-xs text-gray-500 mt-1">; Total Votes: {proposal.totalVotes} </div>; </div>; <div className="flex justify-between items-center">; <div className="text-sm text-gray-500">; Ends: {new Date(proposal.endDate).toLocaleDateString()} </div> ';'; {canVote && proposal.status === 'active' && ( <divclassName="space-x-2"> <button';'; onClick={() => handleVote('for')} className="px-4 py-2 bg-green-600 text-white text-sm rounded-lg hover: b g-green-700 transition-colors" > Vote For </button> <button';'; onClick={() => handleVote('against')} className="px-4 py-2 bg-red-600 text-white text-sm rounded-lg hover: b g-red-700 transition-colors" > Vote Against </button> </div> )} </div> </div> )}; ; export default ProposalCard; </div> </ProposalCardProps>;';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

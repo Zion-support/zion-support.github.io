@@ -1,3 +1,12 @@
+<<<<<<< HEAD
 import React from \'react\'; const ITConsulting = () => { return ( <div> <h1>ITConsulting</h1> <p>Component placeholder</p> </div> )}; export default ITConsulting;
 const React from "react"; const ITConsulting = () => { return ( <div> <h1>ITConsulting</h1> <p>Component placeholder</p> </div> )}; export default ITConsulting;''"
 import _React from 'react'; const ITConsulting = () => { return ( <div> <h1>ITConsulting</h1> <p>Component placeholder</p> </div> )}; export default ITConsulting;
+=======
+<<<<<<< HEAD
+=======
+import React from \'react\'; const ITConsulting = () => { return ( <div> <h1>ITConsulting</h1> <p>Component placeholder</p> </div> )}; export default ITConsulting;
+const React from "react"; const ITConsulting = () => { return ( <div> <h1>ITConsulting</h1> <p>Component placeholder</p> </div> )}; export default ITConsulting;''"
+import _React from 'react'; const ITConsulting = () => { return ( <div> <h1>ITConsulting</h1> <p>Component placeholder</p> </div> )}; export default ITConsulting;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

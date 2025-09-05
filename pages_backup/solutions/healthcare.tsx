@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Heart, 
+  Shield, 
+  Database, 
+  Users, 
+  Activity, 
+  CheckCircle, 
+  ArrowRight 
+} from 'lucide-react';
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from '../../components/Layout';
 import { Heart, Shield, Database, Users, Activity } from 'lucide-react';
 import React from 'react';
@@ -30,6 +49,10 @@ const features = [;
     description: 'AI-powered analytics for population health management and predictive insights.'';
 import Layout from '../../components/Layout';
 import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const features = [
   {
     icon: Heart,
@@ -48,6 +71,18 @@ const features = [
   },
   {
     icon: Users,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    title: 'Provider Management',
+    description: 'Comprehensive provider and staff management solutions',
+    benefits: ['Provider profiles', 'Scheduling', 'Communication', 'Performance tracking']
+  }
+];
+
+export default function HealthcareSolutionsPage() {
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     title: 'Provider Portal',
     description: 'Streamlined workflows for healthcare providers and staff'
   },
@@ -138,6 +173,10 @@ const benefits = [
   'Real-time health monitoring and alerts'
 ];
 export default function HealthcareSolutions() {
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <Layout
       title="Healthcare Solutions - Zion Tech Group"
@@ -177,13 +216,40 @@ export default function HealthcareSolutions() {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Built specifically for healthcare organizations with compliance, security, and patient care in mind.
               </p>
+<<<<<<< HEAD
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+<<<<<<< HEAD
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+=======
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-green-600" />
                   </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-gray-600 mb-4">{feature.description}</p>
+                  <div className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        {benefit}
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -308,6 +374,10 @@ export default function HealthcareSolutions() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
@@ -332,6 +402,14 @@ export default function HealthcareSolutions() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </Layout>
+=======
+<<<<<<< HEAD
+    </>
+=======
+    </Layout>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   );
 }

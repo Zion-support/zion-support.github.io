@@ -1,5 +1,10 @@
 import React from 'react';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function Page("props": "any) {;
 ;
   "performance": {;
@@ -19,6 +24,7 @@ interface EnhancedAnalyticsProps {;
 export const EnhancedAnalytics: Reac t.FC<EnhancedAnalyticsProps> = ({
   enabled = true,: any;';
   showDashboard = false,: any;';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
   enabled = true,: any;
   showDashboard = false,: any;
@@ -57,6 +63,12 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   const [userInteractions, setUserInteractions] = useState<any>(0);
   const [scrollDepth, setScrollDepth] = useState<any>(0);
   const [timeOnPage, setTimeOnPage] = useState<any>(0);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   // Initialize analytics;
   useEffect(() => {;
@@ -64,6 +76,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   return () => {;
     // Cleanup function;
   "};
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Initialize analytics
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -72,15 +88,31 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   };
 }, []);, []);
     if(!enabled) return;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ';
     // Initialize Google Analytics(if tracking ID provided)';';
     if(trackingId && trackingId !== 'G-XXXXXXXXXX') {';
 ';';
       // Google Analytics 4 initialization'';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
     // Initialize Google Analytics(if tracking ID provided);
     if(trackingId && trackingId !== 'G-XXXXXXXXXX') {;
       // Google Analytics 4 initialization';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     // Initialize Google Analytics(if tracking ID provided)
     if(trackingId && trackingId !== 'G-XXXXXXXXXX') {
       // Google Analytics 4 initialization'
@@ -90,6 +122,12 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       window.dataLayer = window.dataLayer || [];
       function gtag("props": "any) {;
       function gtag(props: any) {
+<<<<<<< HEAD
+
+        window.dataLayer.push(args);
+      "}
+      gtag('js', new Date());
+=======
         window.dataLayer.push(args);
       "}
       gtag('js', new Date());
@@ -137,6 +175,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           "previous_page": "currentPag e",;
           "time_on_previous_page": "timeOnPag e"});
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       gtag('config', trackingId, {
         page_title: documen t.title,
         page_location: windo w.location.href,
@@ -188,6 +230,13 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     );
     return : unknown {
       if(script) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         document.head.removeChild(script)}
     }}, [enabled, trackingId]) ;
   // Track page changes
@@ -198,6 +247,13 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   };
 }, []);, []);
     if(!enabled) return;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     const handleRouteChange = (...args: unknow n[]): unknown => {
       const newPage = window.location.pathname;      if(newPage !== currentPage) {
         // Track page view'
@@ -217,10 +273,27 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 ;
           time_on_previous_page: timeOnPag e}
     );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         setCurrentPage(newPage) ;
         setTimeOnPage(0) ;
         setScrollDepth(0) ;
         setUserInteractions(0) }    };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+    // Listen for route changes(for SPA);
+
+    // Listen for route changes(for SPA)
+    window.addEventListener('popstate', handleRouteChange);
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ';
     // Listen for route changes(for SPA)';';
     window.addEventListener('popstate', handleRouteChange);';
@@ -244,6 +317,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       "is_initial_page": "tru e"});
 ;
     return () => {;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       window.removeEventListener('popstate', handleRouteChange)}}, [enabled, currentPage, timeOnPage]) ;
   // Track user interactions;
   useEffect(() => {;
@@ -252,6 +329,11 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Cleanup function;
   "};
 }, []);, []);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     if(!enabled) return;';
 ';';
       trackEvent('user_interaction', {';
@@ -260,11 +342,20 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 '';';
         interaction_type: 'click',
         page_path: currentPag e,
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     if(!enabled) return;
 ;
       trackEvent('user_interaction', {;
       setUserInteractions(prev => prev + 1);'      trackEvent('user_interaction', {;
 ';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         interaction_type: 'click',;
         page_path: currentPag e,;
         timestamp: Dat e.now()})};
@@ -293,6 +384,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     }};';';
     // Set up event listeners'';';
     document.addEventListener('click', trackInteraction);';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         "interaction_type": 'click',;
         "page_path": "currentPag e",;
         "timestamp": "Dat e.now()"})};
@@ -312,6 +407,11 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             "milestone": "7 5",;
             "page_path": "currentPag e"})} else if(scrollPercent >= 90 && scrollDepth < 90) {;
           trackEvent('scroll_milestone', {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             milestone: 9 0,;
             page_path: currentPag e})}
       }
@@ -325,6 +425,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     return () => {';
 ';';
       document.removeEventListener('click', trackInteraction);';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
     return () => {;
       document.removeEventListener('click', trackInteraction);
@@ -339,6 +443,14 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Cleanup function;
   };
 }, []);, []);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            "milestone": "9 0",;
+            "page_path": "currentPag e"})}
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     if(!enabled) return;';
 ';';
         trackEvent('performance_metrics', {
@@ -354,6 +466,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       window.addEventListener('load', trackPerformance);';';
             "milestone": "9 0",;
             "page_path": "currentPag e"})}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
     // Track initial page'
     trackEvent('page_view', {
       page_path: currentPag e,
@@ -405,6 +518,11 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       if(sessionRef.current) {
         clearInterval(sessionRef.current)}
     }}, [enabled, currentPage, scrollDepth]) ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Track performance metrics;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
@@ -424,6 +542,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     if(document.readyState === 'complete') {;
       trackPerformance()} else {;
       window.addEventListener('load', trackPerformance);
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       return () => window.removeEventListener('load', trackPerformance)}
   }, [enabled, currentPage]) ;
   // Track session end;
@@ -448,8 +570,16 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Cleanup function
   };
 }, []);, []);
+<<<<<<< HEAD
     if(!enabled) return;';
 ';';
+=======
+<<<<<<< HEAD
+=======
+    if(!enabled) return;';
+';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     if(!enabled) return;
         trackEvent('performance_metrics', {
           load_time: loadTim e,
@@ -470,16 +600,36 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   };
 }, []);, []);
     if(!enabled) return;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       trackEvent('session_end', {
         session_duration: sessionDuratio n,
         pages_viewed: 1, // Simplified
         total_interactions: userInteraction s,
         average_time_on_page: timeOnPag e})};
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     window.addEventListener('beforeunload', handleBeforeUnload);
     return () => window.removeEventListener('beforeunload', handleBeforeUnload)}, [enabled, sessionStart, userInteractions, timeOnPage]);
   // Track event function
       // Google Analytics 4
       if(window.gtag) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       // Custom analytics tracking
       // Send to analytics endpoint(if configured)
       if(process.env.REACT_APP_ANALYTICS_ENDPOINT) {
@@ -487,6 +637,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 ';';
           method: 'POST',';';
           headers: { 'Content-Type': 'application/json' },
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     if(!enabled) return;
 ;
       trackEvent('session_end', {;
@@ -502,6 +656,8 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       // Google Analytics 4;
       if(window.gtag) {;
         window.gtag('event', eventName, parameters)}
+<<<<<<< HEAD
+=======
 ;
       // Custom analytics tracking;
       // Send to analytics endpoint(if configured);
@@ -510,6 +666,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           method: 'POST',;
           headers: { 'Content-Type': 'application/json' },;
           body: JSO N.stringify(eventData)}).catch(console.error)}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           "method": 'POST',;
           "headers": "{ 'Content-Type': 'application/json' "},;
           "body": "JSO N.stringify(eventData)"}).catch(console.error)}
@@ -517,6 +677,11 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       // Store locally for dashboard;
       setAnalyticsData(prev => {;
         if (!prev) return null;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         return {
 ';
           ...prev,';';
@@ -525,6 +690,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             ...prev.userEngagement,
             scrollDepth: Mat h.max(prev.userEngagement.scrollDepth, scrollDepth),
             timeOnPage: Mat h.max(prev.userEngagement.timeOnPage, timeOnPage),
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
         return {;
           ...prev,;
@@ -581,6 +750,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             "lcp": "150 0",;
             "fid": "5 0",;
             "cls": "0.05"}}})}
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
       // Custom analytics tracking
       // Send to analytics endpoint(if configured)
       if(process.env.REACT_APP_ANALYTICS_ENDPOINT) {
@@ -668,6 +841,11 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   return ()
     <>
       {/* Analytics Toggle Button */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {showDashboard && (<motion.button;
           initial={{ "opacity": "0", "scale": "0.8 "}}
           animate={{ "opacity": "1", "scale": "1 "}}
@@ -859,6 +1037,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                         {page.views"}
                       </span>;
                     </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {showDashboard && (<motion.button
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -1121,8 +1303,16 @@ export default EnhancedAnalytics;
 </motion>
 </any>
 </any>
+<<<<<<< HEAD
 </AnalyticsData>';
 </EnhancedAnalyticsProps>;';;';
+=======
+<<<<<<< HEAD
+=======
+</AnalyticsData>';
+</EnhancedAnalyticsProps>;';;';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       </AnimatePresence>;
     </>) };
 export default EnhancedAnalytics;
@@ -1142,4 +1332,12 @@ export default EnhancedAnalytics;
 </any>
 </any>
 </AnalyticsData>
+<<<<<<< HEAD
 </EnhancedAnalyticsProps>
+=======
+<<<<<<< HEAD
+</EnhancedAnalyticsProps>
+=======
+</EnhancedAnalyticsProps>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

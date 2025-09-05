@@ -61,6 +61,12 @@ export default function Page("props": "any) {;
       "status": 'coming-soon';
     }
   ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
     return matchesCategory && matchesSearch});
 ;
@@ -72,6 +78,10 @@ export default function Page("props": "any) {;
   });
 ;
       case 'beta': ";
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     return matchesCategory && matchesSearch}
     );
       case 'price':
@@ -102,10 +112,20 @@ export default function Page("props": "any) {;
           initial = {;
   { "opacity": "0",;
   "y": "2 0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "}}
           animate = {;
   { "opacity": "1",;
   "y": "0;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-12">
       <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
@@ -114,6 +134,13 @@ export default function Page("props": "any) {;
           initial = {
   { opacity: 0,
   y: 2 0
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "}}
           className="text-center mb-16";
         >;

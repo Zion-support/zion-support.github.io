@@ -76,6 +76,10 @@ class MimeTypeFallback {;
       const response = await fetch(url, { method: 'HEAD' }
     );
       if (!response.ok) {
+<<<<<<< HEAD
+        
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
         return false;
       }
       const contentType = response.headers.get('content-type');
@@ -101,6 +105,10 @@ class MimeTypeFallback {;
       try {;
         const response = await fetch(fallbackUrl", { "method": 'HEAD' });
         if (response.ok) {;
+<<<<<<< HEAD
+    
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
     if (fallbackUrl) {
       try {
         const response = await fetch(fallbackUrl, { method: 'HEAD' }
@@ -129,6 +137,10 @@ class MimeTypeFallback {;
     });
 ;
     // Replace stylesheet links;
+<<<<<<< HEAD
+      
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
     }
     );
     // Replace stylesheet links
@@ -137,6 +149,10 @@ class MimeTypeFallback {;
       (link as HTMLLinkElement).href = fallbackUrl;
       ;
     });
+<<<<<<< HEAD
+      
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
     }
     );
   }

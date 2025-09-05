@@ -209,13 +209,30 @@ export function SecurityEnhancer("props": any) {;
   }, [logSecurityEvent]) ;
 ;
   // Filter events;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     return matchesSearch && matchesFilter}) ;
 ;
   // Get status icon;
   ;
+<<<<<<< HEAD
     return matchesSearch && matchesFilter}
     );
   // Get status icon
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+    return matchesSearch && matchesFilter}
+    );
+  // Get status icon
+<<<<<<< HEAD
+  
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   };
 ;
   // Get event icon;
@@ -290,6 +307,12 @@ export function SecurityEnhancer("props": any) {;
                     <X className="w-5 h-5"   />                  </button>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {/* Security Status */"}
               {securityStatus && (";
                 <div className="mb-6">";
@@ -315,6 +338,10 @@ export function SecurityEnhancer("props": any) {;
                         </span>;
                         {getStatusIcon();
                           securityStatus[item.key as keyof SecurityStatus];
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {/* Security Status */}
               {securityStatus && ("
                 <div className="mb-6">"
@@ -347,6 +374,11 @@ export function SecurityEnhancer("props": any) {;
                 </div>) }
 ;
               {/* Security Metrics */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {securityMetrics && (";
                 <div className="mb-6">";
                   <h3 className="text-lg font-semibold mb-3 text-gray-900 "dark": "tex t-white">;
@@ -386,6 +418,10 @@ export function SecurityEnhancer("props": any) {;
                       </p>;
                     </div>;
                   </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {securityMetrics && ("
                 <div className="mb-6">"
                   <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: tex t-white">
@@ -450,11 +486,21 @@ export function SecurityEnhancer("props": any) {;
                     )"}
                   </button>;
                 </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 {/* Filters and Search */}";
                 <div className="mb-3 space-y-2">";
                   <div className="flex space-x-2">;
                     {['info',warning',error',success'].map(type => (;
                       <button;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {/* Security Events */}"
               <div className="mb-6">"
                 <div className="flex items-center justify-between mb-3">"
@@ -543,6 +589,12 @@ export function SecurityEnhancer("props": any) {;
                     </div>) "}
                 </div>;
               </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {/* Quick Actions */}";
               <div className="mb-6">";
                 <h3 className="text-lg font-semibold mb-3 text-gray-900 "dark": "tex t-white">;
@@ -559,6 +611,10 @@ export function SecurityEnhancer("props": any) {;
                   >";
                     <Activity className="w-4 h-4"   />"                    <span className="text-sm">Check Status</span>;
                   </button>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {/* Quick Actions */}"
               <div className="mb-6">"
                 <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: tex t-white">
@@ -575,6 +631,13 @@ export function SecurityEnhancer("props": any) {;
                   >"
                     <Activity className="w-4 h-4"   />"                    <span className="text-sm">Check Status</span>
                   </button>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   <button;
                     onClick={() => setSecurityEvents([])"}";
                     className="flex items-center justify-center space-x-2 p-3 bg-gray-50 "dark": "b g-gray-800 text-gray-700 "dark": tex t-gray-300 rounded-lg "hover": b g-gray-100 "dark": hove "r":bg-gray-700 transition-colors";
@@ -584,6 +647,12 @@ export function SecurityEnhancer("props": any) {;
                   </button>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {/* Security Tips */"}";
               <div className="mb-6">";
                 <h3 className="text-lg font-semibold mb-3 text-gray-900 "dark": "tex t-white">;
@@ -598,6 +667,10 @@ export function SecurityEnhancer("props": any) {;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {/* Security Tips */}"
               <div className="mb-6">"
                 <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: tex t-white">

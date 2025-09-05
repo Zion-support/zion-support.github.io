@@ -144,6 +144,10 @@ export default function Page("props": "any) {;
               {searchQuery && ` for "${searchQuery}"`}
             </p>;
           </div>;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
           {/* Listings Grid */}";
           {isLoading ? (<div className="flex justify-center py-20">";
               <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />";

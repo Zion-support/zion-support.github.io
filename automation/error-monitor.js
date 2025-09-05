@@ -36,6 +36,13 @@ class ErrorMonitor {
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     // Initial health check
     await this.performHealthCheck();
     // Start continuous monitoring
@@ -68,7 +75,14 @@ class ErrorMonitor {
       this.monitoringReport.errorsDetected.push({
         type: 'health_check_failure',
         message: error.message,
+<<<<<<< HEAD
         timestamp: new Date().toISOString()
+=======
+<<<<<<< HEAD
+=======
+        timestamp: new Date().toISOString()
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         timestamp: new Date().toISOString(),
       });
     }
@@ -169,12 +183,26 @@ class ErrorMonitor {
             line: parseInt(match[2]),
             column: parseInt(match[3]),
             message: match[4].trim(),
+<<<<<<< HEAD
             timestamp: new Date().toISOString()
+=======
+<<<<<<< HEAD
+=======
+            timestamp: new Date().toISOString()
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             timestamp: new Date().toISOString(),
           });
         }
       }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     return errors;
   }
   parseESLintErrors(output) {
@@ -189,14 +217,30 @@ class ErrorMonitor {
           line: parseInt(match[2]),
           column: parseInt(match[3]),
           message: match[4].trim(),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           timestamp: new Date().toISOString()
         });
       }
     }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           timestamp: new Date().toISOString(),
         });
       }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     return errors;
   }
   updateHealthStatus() {
@@ -217,9 +261,18 @@ class ErrorMonitor {
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
+<<<<<<< HEAD
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+=======
+<<<<<<< HEAD
+=======
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -236,14 +289,29 @@ class ErrorMonitor {
       const ErrorFixerAutomation = require('./error-fixer-automation.js');
       const automation = new ErrorFixerAutomation();
       await automation.run();
+<<<<<<< HEAD
       console.log('✅ Error fixer completed');
+=======
+<<<<<<< HEAD
+
+=======
+      console.log('✅ Error fixer completed');
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
       this.monitoringReport.errorsDetected.push({
         type: 'error_fixer_failure',
         message: error.message,
+<<<<<<< HEAD
         timestamp: new Date().toISOString()
+=======
+<<<<<<< HEAD
+=======
+        timestamp: new Date().toISOString()
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         timestamp: new Date().toISOString(),
       });
     }
@@ -269,6 +337,13 @@ class ErrorMonitor {
     if (!fs.existsSync(reportDir)) {
       fs.mkdirSync(reportDir, { recursive: true });
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
     fs.writeFileSync(

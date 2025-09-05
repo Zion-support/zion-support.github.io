@@ -2,6 +2,10 @@ import React, {useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
 ;
 export default function Page("props": "any) {]"}) => {;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
     const [mousePosition, setMousePosition] = useState({ "x": "0", "y": "0 "});
 export default function Page(props: any) {]}) => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }

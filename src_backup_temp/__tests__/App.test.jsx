@@ -244,6 +244,10 @@ describe('App Component', () => {;
 ;
     expect(screen.getByTestId('index-page')).toBeInTheDocument()})}
     );
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export {MockIndex, MockAbout, MockContact};
 ;
 export {MockIndex, MockAbout, MockContact};

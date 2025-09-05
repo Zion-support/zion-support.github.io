@@ -1,5 +1,11 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   "id": "string;
   "title": string;
@@ -25,6 +31,10 @@ interface SmartNotificationSystemProps {;
 "};
 ;
 const "SmartNotificationSystem": "React.FC<SmartNotificationSystemProps> = ({ enabled = true "}) => {;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   id: string;
   title: string;
   message: string;
@@ -37,11 +47,24 @@ const "SmartNotificationSystem": "React.FC<SmartNotificationSystemProps> = ({ en
   actions?: NotificationAction[];
   metadata?: Record < string, any>;
   expiresAt?: Date;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+  label: string;
+  action: () => void;
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   label: string;';
   action: () => void;';';
 ;
   label: string;
   action: () => void;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   label: string;
   action: () => void;
   variant?: 'primary' | 'secondary' | 'danger';
@@ -53,6 +76,17 @@ const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabl
   if(!enabled) return null;
   return <div className="hidden" aria-hidden="true"  />};
 export default SmartNotificationSystem;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+</SmartNotificationSystemProps>;
+;,"}
+    );,})";
+
+</SmartNotificationSystemProps>
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;,"});,})";
 ';
 </SmartNotificationSystemProps>;';;';
@@ -63,4 +97,9 @@ export default SmartNotificationSystem;
 </SmartNotificationSystemProps>;
 ;,"}
     );,})";
+<<<<<<< HEAD
 </SmartNotificationSystemProps>
+=======
+</SmartNotificationSystemProps>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

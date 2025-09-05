@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import indexp from '../pages/index.p'; describe('index.p Integration Tests',() => { test('page renders correctly',() => { render(<indexp />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('navigation works',() => { render(<indexp />)}); test('page content is accessible',() => { render(<indexp />)}); test('page loads with correct data',() => { render(<indexp />)})});
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -18,4 +24,9 @@ describe('index.p Integration Tests', () => {
   });
 });
 const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import indexp from "./pages/index.p"; describe("index.p Integration Tests",() => { test("page renders correctly",() => { render(<indexp />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("navigation works",() => { render(<indexp />)}); test("page content is accessible",() => { render(<indexp />)}); test("page loads with correct data",() => { render(<indexp />)})});''"
+<<<<<<< HEAD
 import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import indexp from '../pages/index.p'; describe('index.p Integration Tests',() => { test('page renders correctly',() => { render(<indexp />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('navigation works',() => { render(<indexp />)}); test('page content is accessible',() => { render(<indexp />)}); test('page loads with correct data',() => { render(<indexp />)})});
+=======
+import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import indexp from '../pages/index.p'; describe('index.p Integration Tests',() => { test('page renders correctly',() => { render(<indexp />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('navigation works',() => { render(<indexp />)}); test('page content is accessible',() => { render(<indexp />)}); test('page loads with correct data',() => { render(<indexp />)})});
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

@@ -1,6 +1,11 @@
 import React from 'react',;',';';
     ;
 import {SEO } from '@/components/SEO';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function ModernUIEnhancer("props": "any) {return (;
     <div className="min-h-screen bg-white">;
       <SEO title="ModernUIEnhancer - Zion Tech Group" description="Professional ModernUIEnhancer services by Zion Tech Group"  />;
@@ -9,6 +14,10 @@ export default function ModernUIEnhancer("props": "any) {return (;
         <p className="text-gray-300 text-lg">;
           Professional ModernUIEnhancer services to help your business grow.;
         </p>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function ModernUIEnhancer(props: any) {return (
         <div className="min-h-screen bg-white">
       <SEO title="ModernUIEnhancer - Zion Tech Group" description="Professional ModernUIEnhancer services by Zion Tech Group"  />

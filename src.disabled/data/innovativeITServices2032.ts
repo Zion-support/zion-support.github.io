@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export: interface InnovativeITService { id: string; title: string; description: string; category: string; subcategory?: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; integration: string[]; support: string[]; link: string; badge?: string; icon: string; marketPrice: string; contactEmail: string; tags: string[]; techScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; author: { name: string; i d: string; avatarUrl?: string} verified: "boolea",n} images: "string[] createdAt: string"} export: const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [;'"'"
 import React from 'react';
 interface InnovativeITServices2032Props {
@@ -10,4 +15,9 @@ export default function InnovativeITServices2032({ }: InnovativeITServices2032Pr
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

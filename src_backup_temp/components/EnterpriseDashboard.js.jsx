@@ -425,6 +425,10 @@ await new Promise(resolve => setTimeout(resolve, 1000))"
 """;
 """"";
                 "error": "error instanceof Error ? error.message : "Unknown error""}) }
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                 tab: activeTab, dateRange}) }"
         catch (error) {}""
 """
@@ -766,6 +770,10 @@ default: """,,
                           <span>{alert.timestamp.toLocaleTimeString()}</span>";
                           <span>{alert.source}</span>""";
                           <span className="{"px-2" py-1 rounded ${getStatusColor(alert.status)}"}" >";
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -1105,6 +1113,10 @@ default: """,,
                         <div className="text-xs text-yellow-700 dark:text-yellow-300">,;
                           {service.lastIncident.type} - {service.lastIncident.timestamp.toLocaleDateString()}
                         <div className="text-xs text-yellow-700 "dark":text-yellow-300">",;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -1379,6 +1391,10 @@ default: """,,
                       <p>Analytics Chart</p>;
                     </div>;
               </div>",;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -1414,6 +1430,10 @@ default: """,,
                     </div>
               </div>,
             </motion.div>) }
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
         </AnimatePresence>"
       </div>""""
     </div>)}"""""""
@@ -1500,4 +1520,8 @@ export default Component;
 </div>;
 </div>;
 </div>
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

@@ -3,11 +3,24 @@ export default function Page("props": "any) {;
 ) => {;
   const [imageSrc", setImageSrc] = useState<any>(src);  const [isLoading, setIsLoading] = useState<any>(true);
   const [hasError, setHasError] = useState<any>(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  // Intersection Observer for lazy loading  // Intersection Observer for lazy loading      }
+    );
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   // Intersection Observer for lazy loading  // Intersection Observer for lazy loading      }) ;
 ;
   // Intersection Observer for lazy loading  // Intersection Observer for lazy loading      }
     );
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     observerRef.current.observe(imgRef.current) ;
 ;
     return () => {;
@@ -55,6 +68,12 @@ export default function Page("props": "any) {;
       return url.toString()} catch {;
       return src}
   };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   // Base classes;
   ;
@@ -80,6 +99,10 @@ export default function Page("props": "any) {;
       </div>) ;
   "}}) => {;
     </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Base classes
   // Loading skeleton
   if(!isIntersecting) {

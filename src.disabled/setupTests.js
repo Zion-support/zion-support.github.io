@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const "@testing-library/jest-dom""; Object.defineProperty(windo,w,"matchMedia",{"; writable: "tru",e value: global.global.global.global.jest.fn().mockImplementation(query: => ({ matches: fals,e media: "quer",y onchange: "nul",l addListener: global.global.global.global.jest.fn(),removeListener: global.global.global.global.jest.fn(),addEventListener: global.global.global.global.jest.fn() removeEventListener: global.global.global.global.jest.fn() dispatchEvent: global.global.global.global.jest.fn()}))}) global.IntersectionObserver: = class IntersectionObserver { constructor() { return; } disconnect() { return; } observe() { return; } unobserve() { return; } }'"'"
 import React from 'react';
 interface SetupTestsProps {
@@ -10,4 +15,9 @@ export default function SetupTests({ }: SetupTestsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

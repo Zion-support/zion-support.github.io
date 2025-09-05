@@ -70,12 +70,21 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
                 </div>";
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">;
                   {currentTestimonial.name}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 </h3>";
                 <p className="text-gray-600 mb-1">{currentTestimonial.role}</p>";
                 <p className="text-blue-600 font-semibold">{currentTestimonial.comp}</p>";
                 <div className="flex items-center justify-center gap-4 mt-3 text-sm text-gray-500">";
                   <span className="flex items-center">";
                     <Users className="h-4 w-4 mr-1"   />;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 "
                 <p className="text-gray-600 mb-1">{currentTestimonial.role}</p>"
                 <p className="text-blue-600 font-semibold">{currentTestimonial.comp}</p>"
@@ -167,6 +176,12 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
           whileInView = {;
   { "opacity": "1",;
   "y": "0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "}}
           viewport={{ "once": "tru e "}}
           transition={{ "duration": "0.6", "delay": "0.2 "}}
@@ -189,6 +204,10 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
             </div>;
           </div>;
         </motion.div>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 }}
           viewport={{ once: tru e }}
           transition={{ duration: 0.6, delay: 0.2 }}

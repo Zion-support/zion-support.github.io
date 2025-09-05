@@ -54,6 +54,12 @@ export function EnhancedAccessibilityPanel("props": any) {;
   const [isVisible", setIsVisible] = useState<any>(false);
   const [isExpanded, setIsExpanded] = useState<any>(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     "highContrast": "fals e",;
     "largeText": "fals e",;
     "reducedMotion": "fals e",;
@@ -64,6 +70,10 @@ export function EnhancedAccessibilityPanel("props": any) {;
     "lineHeight": "1.5",;
     "letterSpacing": "0",;
     "wordSpacing": "0"});
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     highContrast: fals e,
     largeText: fals e,
     reducedMotion: fals e,

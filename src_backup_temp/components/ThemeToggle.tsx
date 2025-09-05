@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';
+;
+import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';
+
+type Theme = 'dark' | 'light' | 'system';
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';';
 ';';
 import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';
@@ -11,12 +21,23 @@ interface ThemeToggleProps {;
 }';
 ';';
 export const ThemeToggle: Reac t.FC<ThemeToggleProps> = ({ className = '' }) => {;';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Add your props "here": "any;
 ;
   className?: string;
 "}
 ;
+<<<<<<< HEAD
 export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {;
+=======
+<<<<<<< HEAD
+=======
+export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export const "ThemeToggle": "React.FC<ThemeToggleProps> = ({ className = '' "}) => {;
   const [theme, setTheme] = useState<Theme>('system');  const [mounted, setMounted] = useState<any>(false);
 ;
@@ -25,6 +46,10 @@ export const "ThemeToggle": "React.FC<ThemeToggleProps> = ({ className = '' "}) 
   return () => {;
     // Cleanup function;
   "};
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 interface ThemeToggleProps {
   // Add your props here: any;
   className?: string
@@ -41,24 +66,49 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     if(savedTheme) {
       setTheme(savedTheme)}
   }, []) ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
   "};
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   useEffect(() => {
   // TODO: Add dependencies if needed
   return () => {
     // Cleanup function
   };
 }, []);, []);
+<<<<<<< HEAD
     if(!mounted) return;';
 ';';
     if(!mounted) return;
+=======
+<<<<<<< HEAD
+    if(!mounted) return;
+
+=======
+    if(!mounted) return;';
+';';
+    if(!mounted) return;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       root.classList.toggle('dark', theme === 'dark') ;
     }
     localStorage.setItem('theme', theme) ;
   }, [theme, mounted]) ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   if(!mounted) {;
     return ();
       <div className="w-32 h-10 rounded-lg bg-gray-200 "dark": "b g-gray-700 animate-pulse"  />;
@@ -99,6 +149,10 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
               >";
                 <themeOption.icon className="w-4 h-4" />;
                 <span>{themeOption.label}</span>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   if(!mounted) {
     return ()
       <div className="w-32 h-10 rounded-lg bg-gray-200 dark: b g-gray-700 animate-pulse"  />
@@ -159,11 +213,20 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
             className="absolute top-full right-0 mt-2 w-32 bg-white dark: b g-gray-800 border border-gray-200 dark: borde r-gray-700 rounded-lg shadow-lg z-50"
           >
             {themes.map((themeOption) => (<button      key={themeOption.value}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 onClick={ () => {';
                   setTheme(themeOption.value) ;';';
                   setIsOpen(false) }}                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm hover: b g-gray-100 dark: hove r:bg-gray-700 transition-colors ${theme === themeOption.value'';';
                     ? 'bg-blue-50 dark: b g-blue-900/20 text-blue-600 dark: tex t-blue-400''';';
                     : 'text-gray-700 dark: tex t-gray-300'`
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 onClick={ () => {;
                   setTheme(themeOption.value) ;
                   setIsOpen(false) }}                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm hover: b g-gray-100 dark: hove r:bg-gray-700 transition-colors ${theme === themeOption.value';
@@ -180,6 +243,11 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
                 <span>{themeOption.label}</span>
               </button>) ) }
           </motion.div>) }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       </AnimatePresence>;
     </div>) ;
 };';
@@ -208,6 +276,10 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   const themes: { value: Them e; label: string; icon: Reac t.ComponentType<any> }[] = ['';';
     { value: 'light', label: 'Light theme', icon: Su n },';';
     { value: 'dark', label: 'Dark theme', icon: Moo n },';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       </AnimatePresence>
     </div>
     );
@@ -215,8 +287,17 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     const root = document.documentElement;
     const systemTheme = window.matchMedia(' (prefers - color - "scheme": "dar k) ') .matches ? 'dark' : 'light';
     const effectiveTheme = theme === 'system' ? systemTheme : theme;
+<<<<<<< HEAD
 ;
     root.classList.remove('light'", 'dark') ;
+=======
+<<<<<<< HEAD
+
+=======
+;
+    root.classList.remove('light'", 'dark') ;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     root.classList.remove('light', 'dark') ;
     root.classList.add(effectiveTheme) ;
     // Update CSS custom properties for smooth transitions    root.classList.add(effectiveTheme);
@@ -231,6 +312,11 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
       root.style.setProperty('--zion-text-primary',#0f172a');
       root.style.setProperty('--zion-text-secondary',#475569')}
     localStorage.setItem('zion-theme', theme)}, [theme, mounted])};
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const themes: { value: Them e; label: string; icon: React.ComponentType<any> }[] = [';
     { value: 'light', label: 'Light theme', icon: Su n },;
     { value: 'dark', label: 'Dark theme', icon: Moo n },;
@@ -255,6 +341,10 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
         transition={{ "duration": "0.3 "}}
       >;
         {themes.map((themeOption) => {;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const themes: { value: Them e; label: string; icon: React.ComponentType<any> }[] = ['
     { value: 'light', label: 'Light theme', icon: Su n },
     { value: 'dark', label: 'Dark theme', icon: Moo n },
@@ -275,6 +365,14 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
         {themes.map((themeOption) => {
           const Icon = themeOption.icon;
           const isActive = theme === themeOption.value;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+
+          return (<motion.button              key={themeOption.value}
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           return (<motion.button              key={themeOption.value}';
               onClick={() => handleThemeChange(themeOption.value)}`';';
               className={`relative p-2 rounded-lg transition-all duration-200 ${isActive'';';
@@ -289,6 +387,10 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   : 'text-gray-300 "hover": "tex t-white "hover": b g-white/10'`;
               "}`}
               whileHover={{ "scale": "1.05 "}}
@@ -328,8 +430,16 @@ export default ThemeToggle;
 </any>
 </motion>
 </any>
+<<<<<<< HEAD
 </Theme>';
 </ThemeToggleProps>;';;';
+=======
+<<<<<<< HEAD
+=======
+</Theme>';
+</ThemeToggleProps>;';;';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       </motion.div>;
     </div>) };
 export default ThemeToggle;
@@ -345,4 +455,12 @@ export default ThemeToggle;
 </ThemeToggleProps>;
 </any>
 </Theme>
+<<<<<<< HEAD
 </ThemeToggleProps>
+=======
+<<<<<<< HEAD
+</ThemeToggleProps>
+=======
+</ThemeToggleProps>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

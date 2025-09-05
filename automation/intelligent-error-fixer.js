@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
@@ -209,6 +214,10 @@ class IntelligentErrorFixer {
           fs.unlinkSync(duplicate);
         }
       }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const fs = require('fs');
 const path = require('path');
 const {
@@ -252,9 +261,18 @@ const {
             return content.replace(match[0], match[0] + match[0].charAt(0));
           }},
         "mergeConflicts": {
+<<<<<<< HEAD
           "fix": content => {
             // Remove merge conflict markers
             return content
+=======
+<<<<<<< HEAD
+=======
+          "fix": content => {
+            // Remove merge conflict markers
+            return content
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           pattern: /||
           "fix": content => {
             // Remove merge conflict markers
@@ -278,10 +296,19 @@ const {
     }
     async runBuildCheck() {
       try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         execSync(`yarn add ${toInstall.join(' ')}`, { stdio: 'pipe' });
         this.log('Successfully installed missing dependencies');
       } catch (error) {
         this.log(`Failed to install dependencies: ${error.message}`, 'ERROR');
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         this.log('Running build check...');
         const result = execSync('yarn build', {
           "encoding": 'utf8',
@@ -307,6 +334,11 @@ const {
         this.log('Lint check found "issues": ' + error.message, 'WARN');
         return { "success": false, "output": error.stdout || error.message };
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     };
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`Report generated: ${this.reportFile}`);
@@ -362,6 +394,10 @@ const {
     }
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     }
     async runTypeCheck() {
       try {
@@ -574,5 +610,14 @@ if (require.main === module) {
   fixer.run().catch(console.error);
 }
 module.exports = IntelligentErrorFixer;
+<<<<<<< HEAD
 module.exports = IntelligentErrorFixer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
+=======
+module.exports = IntelligentErrorFixer;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

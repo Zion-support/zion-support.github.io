@@ -1,4 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 :src/pages/About.tsx
 import { 
   Users, 
@@ -214,6 +220,10 @@ export function About() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function About() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">

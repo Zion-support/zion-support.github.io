@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -72,181 +73,79 @@ const response = await fetch('/api/ai/email-responder', {
   body: JSON.stringify({
     message: 'I need help with my account',
     context: { userId: '12345' }
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React, { useState } from 'react';
 import MainLayout from '../../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
-import {
-  Code,
-  Copy,
-  Check,
-  ExternalLink,
-  ArrowRight,
-  Terminal,
-  Globe,
-  Shield,
-  Zap,
-  Database,
-  Cpu,
-  Cloud,
-  XCircle
-} from 'lucide-react';
+import { Code, Copy, Check, ExternalLink, ArrowRight, Terminal, Globe, Shield, Zap } from 'lucide-react';
 
-export default function APIDocumentationPage() {
-  const [copiedCode, setCopiedCode] = useState(null);
-  const [activeTab, setActiveTab] = useState('overview');
+export default function APIDocsPage() {
+  const [copiedCode, setCopiedCode] = useState<string | null>(null);
+
+  const copyToClipboard = (code: string, id: string) => {
+    navigator.clipboard.writeText(code);
+    setCopiedCode(id);
+    setTimeout(() => setCopiedCode(null), 2000);
+  };
 
   const apiEndpoints = [
     {
       id: 'auth',
       title: 'Authentication',
-      description: 'Endpoints for user authentication and authorization',
-      methods: ['POST', 'GET', 'PUT', 'DELETE'],
-      baseUrl: '/api/v1/auth',
-      endpoints: [
-        {
-          method: 'POST',
-          path: '/login',
-          description: 'Authenticate user with email and password',
-          parameters: [
-            { name: 'email', type: 'string', required: true, description: 'User email address' },
-            { name: 'password', type: 'string', required: true, description: 'User password' }
-          ],
-          response: {
-            status: 200,
-            data: {
-              token: 'string',
-              user: 'object',
-              expires_in: 'number'
-            }
-          }
-        },
-        {
-          method: 'POST',
-          path: '/register',
-          description: 'Register a new user account',
-          parameters: [
-            { name: 'email', type: 'string', required: true, description: 'User email address' },
-            { name: 'password', type: 'string', required: true, description: 'User password' },
-            { name: 'name', type: 'string', required: true, description: 'User full name' }
-          ],
-          response: {
-            status: 201,
-            data: {
-              user: 'object',
-              message: 'string'
-            }
-          }
-        },
-        {
-          method: 'POST',
-          path: '/logout',
-          description: 'Logout user and invalidate token',
-          parameters: [],
-          response: {
-            status: 200,
-            data: {
-              message: 'string'
-            }
-          }
+      description: 'Secure user authentication and authorization',
+      method: 'POST',
+      endpoint: '/api/v1/auth/login',
+      parameters: [
+        { name: 'email', type: 'string', required: true, description: 'User email address' },
+        { name: 'password', type: 'string', required: true, description: 'User password' }
+      ],
+      response: {
+        success: true,
+        data: {
+          token: 'string',
+          user: 'object',
+          expires: 'string'
         }
-      ]
+      }
     },
     {
-      id: 'users',
-      title: 'Users',
-      description: 'User management and profile operations',
-      methods: ['GET', 'PUT', 'DELETE'],
-      baseUrl: '/api/v1/users',
-      endpoints: [
-        {
-          method: 'GET',
-          path: '/profile',
-          description: 'Get current user profile',
-          parameters: [],
-          response: {
-            status: 200,
-            data: {
-              id: 'string',
-              name: 'string',
-              email: 'string',
-              created_at: 'string',
-              updated_at: 'string'
-            }
-          }
-        },
-        {
-          method: 'PUT',
-          path: '/profile',
-          description: 'Update user profile',
-          parameters: [
-            { name: 'name', type: 'string', required: false, description: 'User full name' },
-            { name: 'email', type: 'string', required: false, description: 'User email address' }
-          ],
-          response: {
-            status: 200,
-            data: {
-              user: 'object',
-              message: 'string'
-            }
-          }
+      id: 'ai-email',
+      title: 'AI Email Responder',
+      description: 'Generate intelligent email responses using AI',
+      method: 'POST',
+      endpoint: '/api/v1/ai/email-responder',
+      parameters: [
+        { name: 'message', type: 'string', required: true, description: 'The email message to respond to' },
+        { name: 'context', type: 'object', required: false, description: 'Additional context for the response' }
+      ],
+      response: {
+        success: true,
+        data: {
+          response: 'string',
+          confidence: 'number',
+          suggestions: 'array'
         }
-      ]
+      }
     },
     {
-      id: 'projects',
-      title: 'Projects',
-      description: 'Project management and operations',
-      methods: ['GET', 'POST', 'PUT', 'DELETE'],
-      baseUrl: '/api/v1/projects',
-      endpoints: [
-        {
-          method: 'GET',
-          path: '/',
-          description: 'Get list of user projects',
-          parameters: [
-            { name: 'page', type: 'number', required: false, description: 'Page number for pagination' },
-            { name: 'limit', type: 'number', required: false, description: 'Number of items per page' }
-          ],
-          response: {
-            status: 200,
-            data: {
-              projects: 'array',
-              pagination: 'object'
-            }
-          }
-        },
-        {
-          method: 'POST',
-          path: '/',
-          description: 'Create a new project',
-          parameters: [
-            { name: 'name', type: 'string', required: true, description: 'Project name' },
-            { name: 'description', type: 'string', required: false, description: 'Project description' },
-            { name: 'type', type: 'string', required: true, description: 'Project type' }
-          ],
-          response: {
-            status: 201,
-            data: {
-              project: 'object',
-              message: 'string'
-            }
-          }
-        },
-        {
-          method: 'GET',
-          path: '/:id',
-          description: 'Get project details',
-          parameters: [
-            { name: 'id', type: 'string', required: true, description: 'Project ID' }
-          ],
-          response: {
-            status: 200,
-            data: {
-              project: 'object'
-            }
-          }
+      id: 'analytics',
+      title: 'Predictive Analytics',
+      description: 'Get predictive insights from your data',
+      method: 'POST',
+      endpoint: '/api/v1/analytics/predict',
+      parameters: [
+        { name: 'data', type: 'array', required: true, description: 'Input data for prediction' },
+        { name: 'model', type: 'string', required: true, description: 'Model type to use for prediction' }
+      ],
+      response: {
+        success: true,
+        data: {
+          predictions: 'array',
+          confidence: 'number',
+          accuracy: 'number'
         }
-      ]
+      }
     }
   ];
 
@@ -256,6 +155,7 @@ const response = await fetch('https://api.ziontechgroup.com/api/v1/auth/login', 
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
+    'Authorization': 'Bearer YOUR_API_KEY'
   },
   body: JSON.stringify({
     email: 'user@example.com',
@@ -280,52 +180,36 @@ print(data)`,
     curl: `# cURL Example
 curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
   -H "Content-Type: application/json" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
   -d '{
     "email": "user@example.com",
     "password": "your-password"
   }'`
   };
 
-  const copyToClipboard = (code, language) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(language);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
-
-  const tabs = [
-    { id: 'overview', label: 'Overview', icon: Globe },
-    { id: 'authentication', label: 'Authentication', icon: Shield },
-    { id: 'endpoints', label: 'Endpoints', icon: Code },
-    { id: 'examples', label: 'Examples', icon: Terminal },
-    { id: 'errors', label: 'Errors', icon: XCircle }
-  ];
-
   return (
     <MainLayout
       title="API Documentation - Zion Tech Group"
-      description="Comprehensive API documentation for Zion Tech Group services. Learn how to integrate with our APIs and build powerful applications."
-      keywords="API documentation, REST API, integration, developers, endpoints, authentication"
+      description="Comprehensive API documentation for integrating with Zion Tech Group services. Build powerful applications with our RESTful APIs."
+      keywords="API documentation, developer resources, REST API, integration, SDK"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
+              className="text-center"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                API{' '}
-                <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                  Documentation
-                </span>
+                API <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Documentation</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Comprehensive API documentation for integrating with Zion Tech Group services. 
@@ -335,6 +219,7 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* API Endpoints */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -781,43 +666,144 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
                   View AI Services
                 </Link>
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+=======
+        {/* API Endpoints Section */}
+        <section className="py-20 bg-white">
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           <div className="container mx-auto px-4">
             <motion.div
-              className="text-center"
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-                Start building with our APIs today. Get your API key and begin integrating 
-                with our powerful services.
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">API Endpoints</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Explore our comprehensive API endpoints for seamless integration with our services.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-                >
-                  Get API Key
-                </a>
-                <a
-                  href="/docs"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold"
-                >
-                  View Full Documentation
-                </a>
-              </div>
             </motion.div>
+
+            <div className="space-y-8">
+              {apiEndpoints.map((endpoint, index) => (
+                <motion.div
+                  key={endpoint.id}
+                  className="bg-white rounded-xl shadow-lg p-8 border border-gray-100"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex items-start justify-between mb-6">
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{endpoint.title}</h3>
+                      <p className="text-gray-600 mb-4">{endpoint.description}</p>
+                      <div className="flex items-center gap-4">
+                        <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                          endpoint.method === 'POST' ? 'bg-green-100 text-green-800' :
+                          endpoint.method === 'GET' ? 'bg-blue-100 text-blue-800' :
+                          'bg-yellow-100 text-yellow-800'
+                        }`}>
+                          {endpoint.method}
+                        </span>
+                        <code className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded">
+                          {endpoint.endpoint}
+                        </code>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-3">Parameters</h4>
+                      <div className="space-y-2">
+                        {endpoint.parameters.map((param, paramIndex) => (
+                          <div key={paramIndex} className="flex items-start gap-2">
+                            <span className="text-sm font-medium text-gray-900 min-w-0 flex-shrink-0">
+                              {param.name}
+                            </span>
+                            <span className="text-sm text-gray-500">({param.type})</span>
+                            {param.required && (
+                              <span className="text-xs bg-red-100 text-red-800 px-2 py-1 rounded">
+                                Required
+                              </span>
+                            )}
+                            <p className="text-sm text-gray-600">{param.description}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-3">Response</h4>
+                      <pre className="bg-gray-100 p-4 rounded-lg text-sm overflow-x-auto">
+                        <code>{JSON.stringify(endpoint.response, null, 2)}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Code Examples Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Code Examples</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Get started quickly with our code examples in multiple programming languages.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {Object.entries(codeExamples).map(([language, code], index) => (
+                <motion.div
+                  key={language}
+                  className="bg-white rounded-xl shadow-lg p-6"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-lg font-semibold text-gray-900 capitalize">
+                      {language}
+                    </h3>
+                    <button
+                      onClick={() => copyToClipboard(code, language)}
+                      className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
+                    >
+                      {copiedCode === language ? (
+                        <Check className="w-4 h-4 text-green-500" />
+                      ) : (
+                        <Copy className="w-4 h-4" />
+                      )}
+                    </button>
+                  </div>
+                  <pre className="bg-gray-100 p-4 rounded-lg text-sm overflow-x-auto">
+                    <code>{code}</code>
+                  </pre>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </Layout>
   );
 }
       </div>
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </MainLayout>
   );
 }

@@ -129,6 +129,10 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             </>)}
         </button>
       </div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
       {/* Summary Stats */}";
       <div className="grid grid-cols-3 gap-4 mb-6">";
         <div className="text-center p-3 bg-green-500/20 border border-green-500/30 rounded-lg">";

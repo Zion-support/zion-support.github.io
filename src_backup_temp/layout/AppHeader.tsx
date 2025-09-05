@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
 ;
 import { Link, Link } from 'react-router-dom';
@@ -8,6 +13,10 @@ import { Menu, X } from 'lucide-react';
   "};
 ;
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export function AppHeader() {;
   ];
 setServicesDropdownOpen(true);
@@ -132,10 +141,19 @@ setServicesDropdownOpen(true);
             exit={{ "opacity": "0", "height": "0 "}}
             className=""lg": "hidden border-t border-gray-200/50 py-4";
           >;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   const [scrolled", setScrolled] = useState<any>(false);
   const [isSearching, setIsSearching] = useState<any>(false);
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   useEffect(() => {;
     const handleScroll = ("props": "any) => {;
       setScrolled(window.scrollY > 10);
@@ -796,4 +814,12 @@ const AppHeader: React.FC = () => {}
           </motion.div>
         )};
       </div>
+<<<<<<< HEAD
     </header>"
+=======
+<<<<<<< HEAD
+    </header>"
+=======
+    </header>"
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

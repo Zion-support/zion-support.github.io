@@ -119,6 +119,10 @@ export function ChatBotPanel("props": "any) {;
             }
     );
             if(!response.ok) {
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                 return {;
                     "success": "false",";
                     "message": "I'm having trouble connecting to my knowledge base right now.";

@@ -7,4 +7,8 @@ import {useState,useEffect,useCallback,useMemo} from &apos;react&apos;; export c
 const {useState,useEffect,useCallback,useMemo} from "react"; export const useSearch = (props) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false }; = options; const [searchState,setSearchState] = useState({; query: " filters: {},; sortBy: null sortOrder: "asc" results: data isLoading: false totalResults: data.length}); const [debouncedQuery,setDebouncedQuery] = useState(");");";";";";"; export default ComponentName;";";";";";";'"'"
 import { useEffect } from 'react';,
 import { useState } from 'react';,
+<<<<<<< HEAD
 import {useState,useEffect,useCallback,useMemo} from 'react'; export const useSearch = (props) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false }; = options; const [searchState,setSearchState] = useState({; query: " filters: {},; sortBy: null sortOrder: 'asc' results: data isLoading: false totalResults: data.length}); const [debouncedQuery,setDebouncedQuery] = useState(");");';';';';'; export default ComponentName;";';';';';';
+=======
+import {useState,useEffect,useCallback,useMemo} from 'react'; export const useSearch = (props) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false }; = options; const [searchState,setSearchState] = useState({; query: " filters: {},; sortBy: null sortOrder: 'asc' results: data isLoading: false totalResults: data.length}); const [debouncedQuery,setDebouncedQuery] = useState(");");';';';';'; export default ComponentName;";';';';';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

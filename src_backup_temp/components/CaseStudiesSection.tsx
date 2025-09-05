@@ -55,6 +55,11 @@ export function CaseStudiesSection("props": any) {;
                 <div>";
                   <h3 className="text-xl font-bold text-gray-900">;
                     {study.comp}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   </h3>";
                   <p className="text-gray-600 text-sm">{study.industry}</p>;
                 </div>;
@@ -73,6 +78,10 @@ export function CaseStudiesSection("props": any) {;
                 <ul className="space-y-2">;
                   {study.results.map((result", resultIndex) => (";
                     <li key={resultIndex} className="flex items-center text-sm text-gray-700">";
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   "
                   <p className="text-gray-600 text-sm">{study.industry}</p>
                 </div>
@@ -118,6 +127,12 @@ export function CaseStudiesSection("props": any) {;
           transition = {;
   { "duration": "0.6",;
   "delay": "0.4;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "}}
         >";
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">";
@@ -131,6 +146,10 @@ export function CaseStudiesSection("props": any) {;
               <Link ";
                 to="/contact";
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 "hover": b g-gray-100 rounded-lg font-medium transition-colors duration-200";
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 }}
         >"
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">"
@@ -144,6 +163,13 @@ export function CaseStudiesSection("props": any) {;
               <Link "
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover: b g-gray-100 rounded-lg font-medium transition-colors duration-200"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 Start Your Project";
                 <TrendingUp className="ml-2 h-5 w-5"    />;
               </Link>;

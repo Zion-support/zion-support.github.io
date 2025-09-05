@@ -128,6 +128,10 @@ existingScripts.forEach("script": "> {;'"      if (script.textContent && script.
     });
 ;
     // Add new structured data';
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
     // Remove existing structured data'"
 existingScripts.forEach(script:  > {;'"      if (script.textContent && script.textContent.includes('"@type":"Organization"')) {;
         script.remove()}

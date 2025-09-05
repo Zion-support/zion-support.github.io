@@ -139,6 +139,11 @@ import React from 'react';
                   <div key={index}>";
                     <h3 className="text-sm font-semibold text-cyan-400 mb-2">;
                       {category.category}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     </h3>";
                     <div className="space-y-2 ml-4">;
                       {category.items.map(("service": "unknow n", "serviceIndex": "unknow n ;
@@ -148,6 +153,10 @@ import React from 'react';
                           className="block text-gray-300 "hover": "tex t-white transition-colors duration-200";
                           onClick={( setIsOpen(false)"}
                         >;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     "
                     <div className="space-y-2 ml-4">
                       {category.items.map((service: unknow n, serviceIndex: unknow n 

@@ -16,6 +16,12 @@ interface ContactFormErrors {;
 ;
 export function EnhancedContact(...args[]): "{;
   const [formData", setFormData] = useState<any>({;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     "name": '',;
     "email": '',;
     "phone": '',;
@@ -25,6 +31,10 @@ export function EnhancedContact(...args[]): "{;
   }) ;
 ;
   const [errors, setErrors] = useState<any> ({}) ;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 interface ContactFormErrors {
   [key: string]: string}
 export function EnhancedContact(...args[]):  {
@@ -168,6 +178,12 @@ export function EnhancedContact(...args[]):  {
                   animate = {;
   { "opacity": "1",;
   "x": "0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "}}
                   transition={{ "delay": "0.3 + index * 0.1 "}}";
                   className="flex items-start space-x-4";
@@ -180,6 +196,10 @@ export function EnhancedContact(...args[]):  {
                     <p className="text-zion-cyan font-medium mb-1">{info.value}</p>";
                     <p className="text-zion-slate-light text-sm">{info.description}</p>;
                   </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 }}
                   transition={{ delay: 0.3 + index * 0.1 }}"
                   className="flex items-start space-x-4"
@@ -203,6 +223,12 @@ export function EnhancedContact(...args[]):  {
               animate = {;
   { "opacity": "1",;
   "y": "0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "}}
               transition={{ "delay": "0.6 "}}";
               className="mt-12 p-6 bg-zion-blue-light/10 rounded-xl border border-zion-blue-light/20";
@@ -228,6 +254,10 @@ export function EnhancedContact(...args[]):  {
               </div>;
             </motion.div>;
           </motion.div>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 }}
               transition={{ delay: 0.6 }}"
               className="mt-12 p-6 bg-zion-blue-light/10 rounded-xl border border-zion-blue-light/20"
@@ -253,6 +283,13 @@ export function EnhancedContact(...args[]):  {
               </div>
             </motion.div>
           </motion.div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           {/* Contact Form */}
           <motion.div;
             initial = {;

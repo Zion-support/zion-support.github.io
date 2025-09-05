@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { api, ApiResponse } from '@/services / api';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function Page("props": "any) {;
 "}}}
 interface User {;
@@ -21,6 +26,10 @@ const [newUser, setNewUser] = useState<any>({ "name": '', "email": ''});
   return () => {;
     // Cleanup function;
   "};
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function Page(props: any) {
 }}}
 interface User {
@@ -45,18 +54,46 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
     checkHealth () ;
     fetchUsers () }, []) ;
     try {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {;
+      
+      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {';
 ';';
 ;
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {;
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {
+<<<<<<< HEAD
       setHealthStatus('❌ API Unhealthy')};
     setLoading(true) ;
     setError(null) ;
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+      setHealthStatus('❌ API Unhealthy')};
+    setLoading(true) ;
+    setError(null) ;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     try {
       if(response.success && response.data) {
         setUsers(response.data)} catch(err) {
       setError(err instanceof Error ? err.message : 'Failed to fetch users')} finally {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
     try {;
       if(response.success && response.data) {;
@@ -65,25 +102,57 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
       setLoading(false)};
 ;
     e.preventDefault () ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     if(!newUser.name.trim() || !newUser.email.trim()) {';
 ';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 ;
     if(!newUser.name.trim() || !newUser.email.trim()) {;
       setLoading(false)};
     e.preventDefault () ;
     if(!newUser.name.trim() || !newUser.email.trim()) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       setError('Name and email are required');
       return;
     setLoading(true) ;
     setError(null) ;
+<<<<<<< HEAD
     try {
       if(response.success && response.data) {
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+    try {
+      if(response.success && response.data) {
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
     try {;
       if(response.success && response.data) {;
         setUsers(prev => [...prev, response.data!]);
+<<<<<<< HEAD
+=======
         setNewUser({ "name": '', "email": '' })} catch(err) {;
       setError(err instanceof Error ? err.message : 'Failed to create user')} finally {;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       setLoading(false)};
   return ();
     <div className="max-w-4xl mx-auto p-6 space-y-6">";
@@ -173,8 +242,16 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
             <button"
               type="submit"
               disabled={loading}"
+<<<<<<< HEAD
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed"';
 ';';
+=======
+<<<<<<< HEAD
+=======
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed"';
+';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 onChange={ (e) => setNewUser(prev => ({ ...prev,;
   email: e.target.value;
 }))}";
@@ -187,10 +264,24 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
               disabled={loading}";
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed";
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {loading ? 'Creating...' : 'Create User'}
             </button>
           </form>
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Error Display */}
         {error && ("
           <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">"
@@ -203,9 +294,18 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
             <h3 className="text-lg font-semibold text-gray-700">Users({users.length})
             <button
               onClick={fetchUsers}
+<<<<<<< HEAD
               disabled={loading}"
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: b g-gray-700 disabled: opacit y-50"';
 ';';
+=======
+<<<<<<< HEAD
+=======
+              disabled={loading}"
+              className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: b g-gray-700 disabled: opacit y-50"';
+';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {error && (";
           <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">";
             <p className="text-red-700">{error}</p>;
@@ -221,6 +321,11 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
               disabled={loading}";
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: b g-gray-700 disabled: opacit y-50";
               {loading ? 'Loading...' : 'Refresh'}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               disabled={loading}";
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md "hover": "b g-gray-700 "disabled": opacit y-50";
               {loading ? 'Loading...' : 'Refresh'"}
@@ -259,12 +364,21 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
           <h3 className="text-lg font-semibold text-green-700 mb-2">🏗️ Architecture</h3>"
           <div className="text-sm text-green-700 space-y-1">
             <p>• <strong>Frontend:</strong> Vite + React(Port 3000) - Fast HMR & optimized builds</p>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </div>) }
         </div>;
         {/* Architecture Info */}";
         <div className="mt-8 p-4 bg-green-50 rounded-lg">";
           <h3 className="text-lg font-semibold text-green-700 mb-2">🏗️ Architecture";
           <div className="text-sm text-green-700 space-y-1">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             <p>• <strong>Frontend:</strong> Vite + React(Port 3000) - Fast HMR & optimized builds</p>;
             <p>• <strong>Backend:</strong> Node.js + Express(Port 5000) - API endpoints & business logic</p>;
             <p>• <strong>Development:</strong> Vite proxy forwards /api calls to Node.js</p>;
@@ -278,6 +392,10 @@ export default ApiDemo}}}}}}}'"`
 </any>
 </any>';
 </any>;';;';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </div>;) };
             <p>• <strong>"Frontend": "</strong> Vite + React(Port 3000) - Fast HMR & optimized builds</p>;
             <p>• <strong>"Backend":</strong> Node.js + Express(Port 5000) - API endpoints & business logic</p>;
@@ -342,4 +460,12 @@ export default ApiDemo}}}}}}}'"`
 </any>
 </any>
 </any>
+<<<<<<< HEAD
 </any>
+=======
+<<<<<<< HEAD
+</any>
+=======
+</any>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

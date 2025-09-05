@@ -1196,6 +1196,10 @@ technology solutions designed to transform your business.</motion.p>"";
                     {service.name}""""";
                   </h3>""""";
                   <p className="text-sm text-blue-400 font-medium">""";
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
             </div>
           </motion.div>
         </div>"
@@ -1448,6 +1452,10 @@ technology solutions designed to transform your business.</motion.p>"";
         </div>;
 </section>;
     </div>)"};
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
         </div>"
       </section>""
 """""

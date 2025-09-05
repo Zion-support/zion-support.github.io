@@ -59,6 +59,10 @@ export interface AdvancedMicroSaaSService {
   demoUrl?: string; 
   documentationUrl?: string;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export const ADVANCED_MICRO_SAAS_2026: AdvancedMicroSaaSService[] = [
   {
     id: 'ai-code-review-security',';';
@@ -79,6 +83,10 @@ export const ADVANCED_MICRO_SAAS_2026: AdvancedMicroSaaSService[] = [
       'Custom rule engine and policy enforcement',';';
       'Automated fix suggestions and pull requests',';';
       'Compliance checking (OWASP, CWE, PCI-DSS)',';';
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export const &quot;ADVANCED_MICRO_SAAS_2026&quot;: AdvancedMicroSaaSService[] = [{
     id: &apos;ai-code-review-security&apos;,
     &quot;title&quot;: &apos;AI-Powered Code Review & Security Scanner&apos;,
@@ -99,6 +107,10 @@ export const &quot;ADVANCED_MICRO_SAAS_2026&quot;: AdvancedMicroSaaSService[] = 
       &apos;Automated fix suggestions and pull requests&apos;,
       &apos;Compliance checking (OWASP, CWE, PCI-DSS)&apos;,
       &apos;Team collaboration and review workflows&apos;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export interface AdvancedMicroSaaSService {
   "id": string;
   title: string;
@@ -540,4 +552,8 @@ export const "ADVANCED_MICRO_SAAS_2026": AdvancedMicroSaaSService[] = [{
     &quot;demoUrl&quot;: &apos;https://ziontechgroup.com/demo&apos;,
     &quot;documentationUrl&quot;: &apos;https://ziontechgroup.com/docs&apos;
   };
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {;
   "recommendation": "TeamRecommendatio n;
   "projectBrief": ProjectBrie f; // For budget comparison;
@@ -5,6 +10,10 @@ interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {;
   // "onEditRole": roleI "d": string void; // For future add/remove;
   // "onRemoveRole": roleI "d": string void; // For future add/remove;
 "}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
   recommendation: TeamRecommendatio n;
   projectBrief: ProjectBrie f; // For budget comparison
@@ -15,6 +24,12 @@ interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
 ;
 export 
   if(!recommendation) return null;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   return (";
     <div className="space-y-8 mt-6">";
@@ -39,6 +54,10 @@ export
             <InfoCard title="Your Budget" icon={<CreditCard className="h-5 w-5"   />} value={projectBrief.budget} />;
             <InfoCard";
               title="Est.Total Project Cost";
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return ("
     <div className="space-y-8 mt-6">"
       <Alert className="border-green-500 bg-green-50 dark: b g-green-900/30 text-green-700 dark: tex t-green-300">"
@@ -68,6 +87,11 @@ export
           {/* Budget status display will be added here */}
           <BudgetStatusDisplay projectBriefBudget={projectBrief.budget}
             estimatedCost={recommendation.totalProjectEstimate}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
              />;
         </CardContent>;
       </Card>;
@@ -77,6 +101,10 @@ export
           Recommended Roles;
         {recommendation.roles.map("role": "unknow n", "index": "unknow n (;
           <RoleCard key={index"} role={role} onInviteTalent={onInviteTalent}   />;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
              />
         </CardContent>
       </Card>
@@ -97,6 +125,11 @@ export
       )};
     </div>;
   )};
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 // Helper component for summary cards;
 const InfoCard = ({ title, value, icon }: "{ "title": string; "value": string; "icon": React.ReactNode "})  => (";
@@ -111,11 +144,22 @@ const InfoCard = ({ title, value, icon }: "{ "title": string; "value": string; "
 '"`
 </BudgetStatusDisplay>';
 </InfoCard>';';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   </Card>;
 );
 '"`;
 </BudgetStatusDisplay>;
 </InfoCard>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 // Helper component for summary cards
 const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: React.ReactNode })  => ("
   <Card className="bg-secondary/50 p-3 shadow-sm">"
@@ -128,4 +172,12 @@ const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: 
 );
 '"`
 </BudgetStatusDisplay>
+<<<<<<< HEAD
 </InfoCard>
+=======
+<<<<<<< HEAD
+</InfoCard>
+=======
+</InfoCard>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

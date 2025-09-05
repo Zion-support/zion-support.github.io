@@ -74,6 +74,10 @@ const ServiceCard = ("props": "any) => {    const [isHovered", setIsHovered] = u
                     {service.category}""""";
                   </span>"""";
                   <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                 x[0, Math.random() * 100 - 50], y[0, Math.random() * 100 - 50], opacity[0.6, 0.2, 0.6]
   }} transition = {}"
   {}"""
@@ -157,6 +161,10 @@ const ServiceCard = ("props": "any) => {    const [isHovered", setIsHovered] = u
             {service.technologyStack && (<div className="mt-4 pt-4 border-t border-gray-700/50">"""";
                 <h4 className="text-sm font-semibold text-purple-400 mb-2">Tech Stack</h4>"""";
                 <div className="flex flex-wrap gap-1">"""";
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
               </div>"
             </div>""
 """""
@@ -220,6 +228,10 @@ export const FuturisticServicesShowcase = ("props": "any) => {"}"";
     const [searchTerm, setSearchTerm] = useState("")";
     const [visibleServices, setVisibleServices] = useState(new Set())";
     const categories = [];
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                 </div>"
               </div>) }""
 """""
@@ -460,6 +472,10 @@ export default Component;
 </div>;
 </div>;
 </motion>;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   {opacity: 0, y: 50}} animate = {}"
   {opacity: 1, y: 0}} transition = {}""
   {duration: 0.8, delay: 0.5 """"">
@@ -530,4 +546,8 @@ export default Component;
 </motion>
 </div>
 </div>
+<<<<<<< HEAD
 </motion>
+=======
+</motion>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

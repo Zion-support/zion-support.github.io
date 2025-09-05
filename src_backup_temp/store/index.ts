@@ -11,6 +11,10 @@ export const store = configureStore({
   }
 }
     );
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export type RootState = ReturnType;<typeof store.getState>;';
 export type AppDispatch = typeof store.dispatch;';';
 export type AppDispatch = typeof store.dispatch;""';';';
@@ -19,4 +23,8 @@ export type RootState = ReturnType<typeof store.getState> export type AppDispatc
 export type RootState = ReturnType;<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 export type AppDispatch = typeof store.dispatch;""';
+<<<<<<< HEAD
 "';';
+=======
+"';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

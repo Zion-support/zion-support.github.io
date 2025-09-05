@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import { Route,Routes } from\';react-router-dom.ts\' import { ProtectedRoute } from\';\';../components/ProtectedRoute\' import TalentDirectory from\';\';../pages/TalentDirectory\' import TalentsPage from\';\';../pages/TalentsPage\' import TalentProfilePage from\';\';../pages/TalentProfilePage\' import SavedTalentsPage from\';\';../pages/SavedTalentsPage\' import CreateTalentProfile from\';\';../pages/CreateTalentProfile\' import ProfilePage from\';\';../pages/ProfilePage\' \"export\": default function TalentRoutes(...args: any[]): any: { return ( <> <Route path = \'directory\' element={<TalentDirectory /,>} />\''\' <Route path=\'list\' element={<TalentsPage />} />\' </>\')\''}\''\';\';\'';
 const { Route,Routes } from";react-router-dom.ts" import { ProtectedRoute } from";";./components/ProtectedRoute" import TalentDirectory from";";./pages/TalentDirectory" import TalentsPage from";";./pages/TalentsPage" import TalentProfilePage from";";./pages/TalentProfilePage" import SavedTalentsPage from";";./pages/SavedTalentsPage" import CreateTalentProfile from";";./pages/CreateTalentProfile" import ProfilePage from";";./pages/ProfilePage" export: default function TalentRoutes(.args: any[]): any: { return ( <> <Route path = "directory" element={<TalentDirectory /,>} />""" <Route path="list" element={<TalentsPage />} />" </>")""}""";";"";'"'"
 import React from 'react';
@@ -11,4 +16,9 @@ export default function TalentRoutes({ }: TalentRoutesProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect, useRef, useCallback } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; import { cn } from '@/lib/utils'; ; interface SearchResult { id: string; title: string; description: string; url: string; type: 'page' | 'service' | 'blog' | 'case-study'; category: string; tags: string[]; relevance: number;   }; interface SearchProps {
+ className?: string; placeholder?: string; onSearch?: (query: string) => void; showFilters?: boolean; showSuggestions?: boolean; 
+}; export function Search(props: any) {; const [query, setQuery] = useState<any>(''); const [isOpen, setIsOpen] = useState<any>(false); const [results, setResults] = useState<SearchResult[]>([]); const [isLoading, setIsLoading] = useState<any>(false); const [selectedFilters, setSelectedFilters] = useState<string[]>([]); const [showFiltersPanel, setShowFiltersPanel] = useState<any>(false); const searchRef = useRef<HTMLDivElement>(null); const inputRef = useRef<HTMLInputElement>(null); ;
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React, { useState, useEffect, useRef, useCallback } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; import { cn } from '@/lib/utils'; ; interface SearchResult { "id": "string; "title": string; "description": string; "url": string; "type": 'page' | 'service' | 'blog' | 'case-study'; "category": string; "tags": string[]; "relevance": number;   "}; interface SearchProps {;
  className?: "string; placeholder?: string; onSearch?: ("query": string) => void; showFilters?: boolean; showSuggestions?: boolean; ;
 "}; export function Search("props": "any) {; const [query", setQuery] = useState<any>(''); const [isOpen, setIsOpen] = useState<any>(false); const [results, setResults] = useState<SearchResult[]>([]); const [isLoading, setIsLoading] = useState<any>(false); const [selectedFilters, setSelectedFilters] = useState<string[]>([]); const [showFiltersPanel, setShowFiltersPanel] = useState<any>(false); const searchRef = useRef<HTMLDivElement>(null); const inputRef = useRef<HTMLInputElement>(null); ;
@@ -12,6 +21,10 @@ import React, { useState, useEffect, useRef, useCallback } from 'react'; import 
 import React, { useState, useEffect, useRef, useCallback } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; import { cn } from '@/lib/utils'; ; interface SearchResult { id: string; title: string; description: string; url: string; type: 'page' | 'service' | 'blog' | 'case-study'; category: string; tags: string[]; relevance: number;   }; interface SearchProps {
  className?: string; placeholder?: string; onSearch?: (query: string) => void; showFilters?: boolean; showSuggestions?: boolean; 
 }; export function Search(props: any) {; const [query, setQuery] = useState<any>(''); const [isOpen, setIsOpen] = useState<any>(false); const [results, setResults] = useState<SearchResult[]>([]); const [isLoading, setIsLoading] = useState<any>(false); const [selectedFilters, setSelectedFilters] = useState<string[]>([]); const [showFiltersPanel, setShowFiltersPanel] = useState<any>(false); const searchRef = useRef<HTMLDivElement>(null); const inputRef = useRef<HTMLInputElement>(null); ;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 </any>
 </string>
 </any>

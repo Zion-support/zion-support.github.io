@@ -1808,6 +1808,10 @@ const;const;const field = fields.find(f => f.name === name);
         </h3>"";";
         <p className="text-green-600 "dark": "text-green-300">"",",;
           Your message has been sent successfully. We"ll get back to you soon!,;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   {opacity: 0>
 scale: 0.9}} animate = {}
   {opacity: 1,
@@ -1881,6 +1885,10 @@ scale: 1 "",">
           Your message has been sent successfully. We"ll get back to you soon!"",;
         <p className="text-green-600 "dark": "text-green-300">"","";
           Your message has been sent successfully. We&apos,ll get back to you soon!";
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
         </motion.button>
   {opacity: 0, scale: 0.9}} animate = {}
   {opacity: 1,

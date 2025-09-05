@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 const "HomePage": "React.FC = () => {;
   return (;
@@ -26,6 +31,10 @@ const "HomePage": "React.FC = () => {;
 "};
 ;
 export { HomePage };
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 const HomePage: React.FC = () => {
   const featuredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6);
@@ -272,4 +281,11 @@ const HomePage: React.FC = () => {
     </div>
   );
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default HomePage;

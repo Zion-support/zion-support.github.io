@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React, { useEffect, useState } from 'react';
 interface PerformanceMetrics {
   loadTime: number;
@@ -9,6 +14,10 @@ const PerformanceMonitor: React.FC = () => {
     memoryUsage: 0,
     renderTime: 0
   });
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   renderTime: number;
 }
 const PerformanceMonitor: React.FC = () => {
@@ -17,6 +26,13 @@ const PerformanceMonitor: React.FC = () => {
     memoryUsage: 0,
     renderTime: 0
   });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   useEffect(() => {
 ;
 interface PerformanceMetrics {;
@@ -38,19 +54,40 @@ const "PerformanceMonitor": "React.FC = () => {;
     // Measure page load time;
     if (window.performance.timing) {;
       const loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
+<<<<<<< HEAD
       setMetrics(prev => ({ ...prev, loadTime }))}
       setMetrics(prev => ({ ...prev, loadTime }));
     }
+=======
+<<<<<<< HEAD
+      setMetrics(prev => ({ ...prev, loadTime }));
+    }
+
+=======
+      setMetrics(prev => ({ ...prev, loadTime }))}
+      setMetrics(prev => ({ ...prev, loadTime }));
+    }
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     // Measure memory usage (if available)
     if ('memory' in performance) {
       const memory = (performance as any).memory;
       setMetrics(prev => ({ 
         ...prev, 
         memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024) 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       }))}
     // Measure render time
     const endTime = performance.now();
     setMetrics(prev => ({ ...prev, renderTime: Math.round(endTime - startTime) }))}, []);
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       }));
       setMetrics(prev => ({ ...prev, loadTime }));
     }
@@ -68,6 +105,11 @@ const "PerformanceMonitor": "React.FC = () => {;
     const endTime = performance.now();
     setMetrics(prev => ({ ...prev, "renderTime": "Math.round(endTime - startTime) "}));
   }, []);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <div className="bg-gray-100 p-4 rounded-lg">
       <h3 className="text-lg font-semibold mb-4">Performance Metrics</h3>
@@ -87,6 +129,7 @@ const "PerformanceMonitor": "React.FC = () => {;
       </div>
     </div>
   )};
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   );
 };
 ;
@@ -172,4 +215,13 @@ const PerformanceMonitor = () => {
   }, []);
   return null; // This component doesn't render anything
 };
+<<<<<<< HEAD
 export default PerformanceMonitor;
+=======
+<<<<<<< HEAD
+
+export default PerformanceMonitor;
+=======
+export default PerformanceMonitor;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

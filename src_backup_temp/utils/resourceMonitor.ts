@@ -202,6 +202,10 @@ class ResourceMonitor {;
   getErrorSummary() {;
     this.errors.forEach(error => {;
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1});
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   getErrorSummary() {
     this.errors.forEach(error => {
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1}

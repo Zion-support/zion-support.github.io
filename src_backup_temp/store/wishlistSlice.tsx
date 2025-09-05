@@ -1,4 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 export default function Wishlistslice("props": "any) {;
   return (;
@@ -12,6 +18,10 @@ export default function Wishlistslice("props": "any) {;
     </div>;
   );
 "}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function Wishlistslice(props: any) {
   return (
         <div className="min-h-screen bg-white">
@@ -23,4 +33,12 @@ export default function Wishlistslice(props: any) {
       </div>
     </div>
     );
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

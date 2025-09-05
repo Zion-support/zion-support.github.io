@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -206,6 +211,10 @@ export { FuturisticFooter };
 </motion>;
 </motion>;
 </motion>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';''
 import Link from 'next/link';''
 import { motion } from 'framer-motion';'
@@ -284,16 +293,33 @@ const FuturisticFooter: React.FC = () => {}
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },''
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }'];
   ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const scrollToTop = (props: any) => {
     window.scrollTo({ top: 0, behavior: 'smooth' }
     );
   };
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const stats = [']
     { value: '500+', label: 'Projects Completed', icon: CheckCircle },''
     { value: '99.9%', label: 'Uptime Guarantee', icon: Shield },''
     { value: '24/7', label: 'Support Available', icon: Award },''
     { value: '50+', label: 'Expert Team', icon: Zap }'];
   ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (')
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">"
 </footer>"
@@ -333,6 +359,11 @@ const FuturisticFooter: React.FC = () => {}
                     <stat.icon className="w-6 h-6 text-cyan-400" />"
 </stat>
                   </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   <div>
                     <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-600 bg-clip-text text-transparent">
                       ZION TECH GROUP
@@ -343,12 +374,23 @@ const FuturisticFooter: React.FC = () => {}
                   Leading the future of technology with cutting-edge AI services, innovative solutions, 
                   and comprehensive IT services. Empowering businesses to thrive in the digital age.
                 </p>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 </div>"
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>""
                 <div className="text-slate-400 text-sm">{stat.label}</div>"
               </motion.div>);
             ))};
           </motion.div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           {/* Main Footer Content */}"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-12">"
 </div>"
@@ -459,4 +501,12 @@ const FuturisticFooter: React.FC = () => {}
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </footer>"
+=======
+<<<<<<< HEAD
+    </footer>"
+=======
+    </footer>"
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

@@ -106,11 +106,21 @@ export function AnalyticsManager("props": "any) {;
     if(currentSession) {;
       saveSessionData(currentSession)}
   }, [currentSession]) };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
     // Scroll tracking';
     document.addEventListener('scroll', handleScroll, { "passive": "tru e "});
 ;
     // Page unload tracking';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     // Scroll tracking'
     document.addEventListener('scroll', handleScroll, { passive: tru e }
     );
@@ -150,41 +160,95 @@ export function AnalyticsManager("props": "any) {;
 ;
         if(fcp) {;
           trackPerformance('fcp', fcp.startTime)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       });
       fcpObserver.observe({ "entryTypes": "['paint'] "});
 ;
       // Largest Contentful Paint;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       }
     );
       fcpObserver.observe({ entryTypes: ['paint'] }
     );
+<<<<<<< HEAD
         if(lcp) {;
           trackPerformance('lcp', lcp.startTime)}
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+        if(lcp) {;
+          trackPerformance('lcp', lcp.startTime)}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       });
       lcpObserver.observe({ "entryTypes": "['largest-contentful-paint'] "});
 ;
       // First Input Delay;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       }
     );
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
     );
+<<<<<<< HEAD
         if(fid) {;
           trackPerformance('fid', fid.processingStart - fid.startTime)}
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+        if(fid) {;
+          trackPerformance('fid', fid.processingStart - fid.startTime)}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       });
       fidObserver.observe({ "entryTypes": "['first-input'] "});
 ;
       // Cumulative Layout Shift;
       const clsObserver = new PerformanceObserver(list => {;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       }
     );
       fidObserver.observe({ entryTypes: ['first-input'] }
     );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         let clsValue = 0;        for (const entry of list.getEntries()) {;
           if(!entry.hadRecentInput) {;
             clsValue += (entry as any).value}
         }
+<<<<<<< HEAD
         trackPerformance('cls', clsValue)});
       clsObserver.observe({ "entryTypes": "['layout-shift'] "})}
+=======
+<<<<<<< HEAD
+=======
+        trackPerformance('cls', clsValue)});
+      clsObserver.observe({ "entryTypes": "['layout-shift'] "})}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         trackPerformance('cls', clsValue)}
     );
       clsObserver.observe({ entryTypes: ['layout-shift'] })}
@@ -192,6 +256,12 @@ export function AnalyticsManager("props": "any) {;
     }, 30000) ;
 ;
     return () => clearInterval(activityInterval) }, [currentSession]) ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
         trackEvent('page_view', { path });
 ;
@@ -199,6 +269,10 @@ export function AnalyticsManager("props": "any) {;
         sendAnalyticsData('page_view', { path, "timestamp": "Dat e.now() "})}
     },;
     [currentSession];
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         trackEvent('page_view', { path }
     );
         // Send to analytics endpoint'

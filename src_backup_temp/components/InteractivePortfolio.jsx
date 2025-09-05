@@ -176,11 +176,20 @@ export function InteractivePortfolio("props": "any) {;
                       <span className="text-xs">{project.rating}</span>;
                     </div>;
                   </div>;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                   <h3 className="text-xl font-bold text-zion-slate mb-3 group-"hover": "text-zion-cyan transition-colors">;
                     {project.title"}
                   </h3>;
                   <h3 className="text-xl font-bold text-zion-slate mb-3 group-hover:text-zion-cyan transition-colors">
                     {project.title}
+<<<<<<< HEAD
+                  
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                   <p className="text-zion-slate-light text-sm leading-relaxed mb-4 line-clamp-3">;
                     {project.description}
                   </p>;
@@ -238,6 +247,10 @@ export function InteractivePortfolio("props": "any) {;
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
       {/* Project Modal */"}
       {isModalOpen && selectedProject && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={closeModal} onKeyDown={handleKeyPress} tabIndex={0}>;
           <div className="bg-white "dark": "bg-zion-slate rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()"}>;
@@ -262,6 +275,10 @@ export function InteractivePortfolio("props": "any) {;
                   <ChevronRight className="w-5 h-5" />;
                 </button>;
               </div>;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
               {/* Project Details */"}
               <div className="grid grid-cols-1 "lg": "grid-cols-3 gap-6">;
                 <div className=""lg":col-span-2">;
@@ -285,6 +302,10 @@ export function InteractivePortfolio("props": "any) {;
                         {tech}
                       </span>))}
                   </div>;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Tags</h3>;
                   <div className="flex flex-wrap gap-2">;
                     {selectedProject.tags.map((tag, index) => (<span key={index} className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate rounded-full text-sm">;

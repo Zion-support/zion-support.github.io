@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import ServiceWorkerRegistration from &apos;./ServiceWorkerRegistration; describe(&apos;ServiceWorkerRegistration&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<ServiceWorkerRegistration / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
 it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import ServiceWorkerRegistration from &apos;./ServiceWorkerRegistration; describe(&apos;ServiceWorkerRegistration&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<ServiceWorkerRegistration / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
 import React from 'react';
@@ -11,4 +16,9 @@ export default function ServiceWorkerRegistration.test({ }: ServiceWorkerRegistr
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

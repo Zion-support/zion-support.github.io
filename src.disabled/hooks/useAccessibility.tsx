@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 : src/hooks/useAccessibility.\"tsx\": interface UseAccessibilityOptions { enableKeyboardNavigation?: boolean; enableFocusManagement?: boolean; enableScreenReaderSupport?: boolean; enableHighContrast?: boolean; enableReducedMotion?: boolean} enableLargeText?: boolean} \"interface\": AccessibilityFeatures { isHighContrast: boolean; isReducedMotion: boolean; isLargeText: boolean; isScreenReader: boolea,n} :src/hooks/useAccessibility.\"tsx\": \'export export enableKeyboardNavigation = true\',enableFocusManagement = true,enableScreenReaderSupport = true,enableHighContrast = true,enableReducedMotion = true,enableLargeText = true} = options;
 : src/hooks/useAccessibility.tsx: interface UseAccessibilityOptions { enableKeyboardNavigation?: boolean; enableFocusManagement?: boolean; enableScreenReaderSupport?: boolean; enableHighContrast?: boolean; enableReducedMotion?: boolean} enableLargeText?: boolean} interface: AccessibilityFeatures { isHighContrast: boolean; isReducedMotion: boolean; isLargeText: boolean; isScreenReader: boolea,n} :src/hooks/useAccessibility.tsx: "export export enableKeyboardNavigation = true",enableFocusManagement = true,enableScreenReaderSupport = true,enableHighContrast = true,enableReducedMotion = true,enableLargeText = true} = options;'"'"
 import React from 'react';
@@ -11,4 +16,9 @@ export default function UseAccessibility({ }: UseAccessibilityProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

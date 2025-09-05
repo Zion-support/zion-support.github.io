@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from '../../components/Layout';
 import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
 import React from 'react';
@@ -10,10 +21,21 @@ const features = [;
     description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',
 import Layout from '../../components/Layout';
 import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const features = [
   {
     icon: Cloud,
     title: 'Cloud Migration',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
+    benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     description: 'Seamless migration to cloud platforms with zero downtime'
   },
   {}
@@ -149,6 +171,10 @@ export default function CloudDevOpsPage() {
     </Layout>;
     title: 'Infrastructure as Code',
     description: 'Automated infrastructure provisioning and management'
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   },
   {
     icon: GitBranch,
@@ -171,6 +197,24 @@ export default function CloudDevOpsPage() {
     description: '24/7 monitoring and proactive alerting systems'
   }
 ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+const tools = [
+  { name: 'AWS', description: 'Amazon Web Services cloud platform' },
+  { name: 'Azure', description: 'Microsoft Azure cloud services' },
+  { name: 'Google Cloud', description: 'Google Cloud Platform solutions' },
+  { name: 'Docker', description: 'Containerization platform' },
+  { name: 'Kubernetes', description: 'Container orchestration' },
+  { name: 'Terraform', description: 'Infrastructure as code' },
+  { name: 'Jenkins', description: 'CI/CD automation' },
+  { name: 'Prometheus', description: 'Monitoring and alerting' }
+];
+
+export default function CloudDevOpsPage() {
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const benefits = [
   'Reduced infrastructure costs by up to 50%',
   'Improved deployment speed and reliability',
@@ -180,6 +224,10 @@ const benefits = [
   'Faster time-to-market for applications'
 ];
 export default function CloudDevOpsServices() {
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <Layout
       title="Cloud & DevOps Services - Zion Tech Group"
@@ -220,7 +268,15 @@ export default function CloudDevOpsServices() {
                 Comprehensive cloud and DevOps services designed to modernize your infrastructure
                 and accelerate your development processes.
               </p>
+<<<<<<< HEAD
             </div>
+=======
+<<<<<<< HEAD
+            </motion.div>
+=======
+            </div>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -238,6 +294,78 @@ export default function CloudDevOpsServices() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        {/* Tools Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Technologies We Use</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                We work with leading cloud platforms and DevOps tools to deliver the best solutions.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {tools.map((tool, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors text-center"
+                >
+                  <h3 className="text-lg font-semibold mb-2">{tool.name}</h3>
+                  <p className="text-gray-600 text-sm">{tool.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Process</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                We follow a proven methodology to ensure successful cloud and DevOps implementations.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              {[
+                { step: '1', title: 'Assessment', description: 'Analyze your current infrastructure and requirements' },
+                { step: '2', title: 'Planning', description: 'Design the optimal cloud and DevOps strategy' },
+                { step: '3', title: 'Implementation', description: 'Execute the migration and setup processes' },
+                { step: '4', title: 'Optimization', description: 'Monitor, optimize, and maintain your systems' }
+              ].map((phase, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                    {phase.step}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{phase.title}</h3>
+                  <p className="text-gray-600">{phase.description}</p>
+                </motion.div>
+              ))}
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -270,6 +398,10 @@ export default function CloudDevOpsServices() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
@@ -294,6 +426,14 @@ export default function CloudDevOpsServices() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </Layout>
+=======
+<<<<<<< HEAD
+    </>
+=======
+    </Layout>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   );
 }
