@@ -108,26 +108,6 @@ export default function APIPage() {
             </div>
           </div>
         </section>
-
-    title: 'GraphQL API',
-    description: 'Flexible GraphQL API for complex queries',
-    icon: Code,
-    features: ['Flexible Queries', 'Real-time Subscriptions', 'Schema Introspection', 'Type Safety']
-  },
-  {
-    title: 'WebSocket API',
-    description: 'Real-time communication and updates',
-    icon: Zap,
-    features: ['Real-time Updates', 'Bidirectional Communication', 'Low Latency', 'Event-driven']
-  },
-  {
-    title: 'SDK Libraries',
-    description: 'Official SDKs for popular programming languages',
-    icon: Book,
-    features: ['JavaScript/TypeScript', 'Python', 'Java', 'C#/.NET']
-  }
-];
-=======
 import {
   Code,
   Copy,
@@ -145,7 +125,31 @@ import {
 } from 'lucide-react';
 
 export default function APIPage() {
-  const apiEndpoints = [
+  return (
+    <>
+      <Head>
+        <title>API Documentation - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive API documentation for Zion Tech Group services" />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold text-center mb-8">API Documentation</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {apiEndpoints.map((endpoint) => (
+              <div key={endpoint.id} className="bg-white rounded-lg shadow-md p-6">
+                <h2 className="text-xl font-semibold mb-2">{endpoint.title}</h2>
+                <p className="text-gray-600 mb-4">{endpoint.description}</p>
+                <p className="text-sm text-blue-600">{endpoint.baseUrl}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+const apiEndpoints = [
     {
       id: 'auth',
       title: 'Authentication',
@@ -391,7 +395,6 @@ export default function APIPage() {
                   className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 >
                   View AI Services
-=======
                 <motion.div
                   className="bg-white border border-gray-200 rounded-lg p-6"
                   initial={{ opacity: 0, y: 30 }}

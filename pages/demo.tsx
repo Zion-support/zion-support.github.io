@@ -1,11 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-import Layout from './components/Layout';
-=======
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import { Play, CheckCircle, ArrowRight, Star, Users, Clock, Shield } from 'lucide-react';
->>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
 
 const demoFeatures = [
   {

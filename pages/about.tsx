@@ -1,27 +1,16 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { 
-<<<<<<< HEAD
-=======
   TrendingUp,
   Building,
   Rocket,
   Lightbulb,
   Handshake,
->>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
   Brain, 
   Users, 
   Award, 
   Target, 
   Heart, 
-<<<<<<< HEAD
-  Globe,
-  TrendingUp,
-  Building,
-  Rocket,
-  Lightbulb,
-  Handshake
-=======
   Globe, 
   Shield, 
   Zap, 
@@ -31,7 +20,6 @@ import {
   DollarSign, 
   Clock, 
   BarChart3
->>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
 } from 'lucide-react';
 
 const values = [
@@ -43,12 +31,13 @@ const values = [
   {
     icon: Users,
     title: 'Collaboration',
-<<<<<<< HEAD
     description: 'We believe in the power of collaboration and work closely with our clients to achieve their goals.'
   }
-                  </motion.div>
-                  </div>
-                  </section>
+];
+
+export default function AboutPage() {
+  return (
+    <>
       {/* Mission, Vision, Values */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -230,7 +219,6 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
                   viewport={{ once: true }}
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-=======
                     <IconComponent className="w-8 h-8 text-blue-600" />
                   </div>
                   <div className="text-3xl font-bold text-blue-600 mb-2">
@@ -301,7 +289,7 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
 
@@ -311,10 +299,10 @@ const team = [{
     "expertise": 'AI & Machine Learning',
     "experience": '15+ years',
     "image": '/team/sarah-chen.jpg'
-=======
-    description: 'We work closely with our clients as partners, ensuring their success is our success.'
->>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
-  },
+  }
+];
+
+const additionalValues = [
   {
     icon: Award,
     title: 'Excellence',

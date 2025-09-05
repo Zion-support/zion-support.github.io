@@ -129,7 +129,7 @@ const values = [
 
 export default function CareersPage() {
   return (
-    <MainLayout
+    <Layout
       title="Careers - Zion Tech Group"
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI jobs, software development"
