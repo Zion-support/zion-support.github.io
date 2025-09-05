@@ -22,11 +22,12 @@ const docCategories = [
     title: "Getting Started",
     description: "Quick start guides and basic setup instructions",
     icon: BookOpen,
-    color: "blue",
+    color: 'from-blue-500 to-cyan-500',
     docs: [
-      { title: "Quick Start Guide", description: "Get up and running in 5 minutes", type: "Guide", updated: "2024-01-15" },
-      { title: "Installation Guide", description: "Step-by-step installation instructions", type: "Tutorial", updated: "2024-01-10" },
-      { title: "Configuration", description: "Basic configuration and setup", type: "Reference", updated: "2024-01-08" }
+      { title: 'Quick Start Guide', description: 'Get up and running in minutes', time: '5 min read' },
+      { title: 'Installation Guide', description: 'Step-by-step installation instructions', time: '10 min read' },
+      { title: 'Configuration', description: 'Configure your environment', time: '15 min read' },
+      { title: 'First Project', description: 'Create your first project', time: '20 min read' }
     ]
   },
   {
