@@ -18,6 +18,7 @@ import {
   Settings,
   Shield,
   Zap,
+  Brain,
   Code,
   Database,
   Cloud
