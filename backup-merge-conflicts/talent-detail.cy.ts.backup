@@ -1,0 +1,43 @@
+<<<<<<< HEAD:cypress_backup/e2e/talent-detail.cy.ts
+
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main:backup-merge-conflicts/talent-detail.cy.ts.backup
+>>>>>>> main
+describe('talent detail page', () => {
+  it('loads profile from API', () => {
+    cy.intercept('GET', '/api/talent/t-123', {
+      "statusCode": 200,
+      "body": {
+        id: 't-123',
+        "full_name": 'Cypress Talent',
+        "bio": 'Testing bio',
+        "skills": ['Cypress']}}).as('getTalent');
+    cy.visit('/talent/t-123');
+    cy.wait('@getTalent');
+    cy.get('[data-testid="talent-name"]').should('contain', 'Cypress Talent')})});
+<<<<<<< HEAD:cypress_backup/e2e/talent-detail.cy.ts
+describe('talent detail page',() => { it('loads profile from API',() => { cy.intercept('GET','/api/talent/t-123',{ statusCode: '200',body: { id: 't-123',full_name: 'Cypress Talent',bio: 'Testing bio',skills: ['Cypress'],},}).as('getTalent'); cy.visit('/talent/t-123'); cy.wait('@getTalent'); cy.get('[data-testid="talent-name"]').should('contain','Cypress Talent')})});
+
+
+=======
+<<<<<<< HEAD
+=======
+describe('talent detail page',() => { it('loads profile from API',() => { cy.intercept('GET','/api/talent/t-123',{ statusCode: '200',body: { id: 't-123',full_name: 'Cypress Talent',bio: 'Testing bio',skills: ['Cypress'],},}).as('getTalent'); cy.visit('/talent/t-123'); cy.wait('@getTalent'); cy.get('[data-testid="talent-name"]').should('contain','Cypress Talent')})});
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+>>>>>>> origin/main:backup-merge-conflicts/talent-detail.cy.ts.backup
+>>>>>>> main
+>>>>>>> main
+describe('talent detail page',() => { it('loads profile from API',() => { cy.intercept('GET','/api/talent/t-123',{ statusCode: 200,body: { id: 't-123',full_name: 'Cypress Talent',bio: 'Testing bio',skills: ['Cypress'],},}).as('getTalent'); cy.visit('/talent/t-123'); cy.wait('@getTalent'); cy.get('[data-testid="talent-name"]').should('contain','Cypress Talent')})});
+>>>>>>> main
+<<<<<<< HEAD:cypress_backup/e2e/talent-detail.cy.ts
+>>>>>>> origin/main
+
+=======
+>>>>>>> origin/main:backup-merge-conflicts/talent-detail.cy.ts.backup

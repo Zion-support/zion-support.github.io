@@ -1,0 +1,23 @@
+import React from 'react';
+
+interface ServiceLandingTemplateProps {
+  // Add props here as needed
+}
+
+export default function ServiceLandingTemplate({ }: ServiceLandingTemplateProps) {
+  return (
+    <div>
+      <h1>ServiceLandingTemplate</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+<<<<<<< HEAD:backup-merge-conflicts/ServiceLandingTemplate.jsx.backup
+}
+<<<<<<< HEAD:backup-merge-conflicts/ServiceLandingTemplate.jsx.backup
+>>>>>>> main
+>>>>>>> main
+=======
+}
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/components/services/ServiceLandingTemplate.jsx
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src.disabled/components/services/ServiceLandingTemplate.jsx

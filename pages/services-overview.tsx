@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import { Brain, Network, Cloud, Shield, Zap, Users, Globe, CheckCircle, ArrowRight, Star, Clock, DollarSign, BarChart3, Target, Award } from 'lucide-react';
+=======
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Layout from '../components/Layout';
+import { Brain, Server, Cloud } from 'lucide-react';
+>>>>>>> origin/main
 
 const serviceCategories = [
   {
     title: 'AI Services',
+<<<<<<< HEAD
     description: 'Cutting-edge artificial intelligence solutions for modern businesses',
     icon: Brain,
     services: ['AI Analytics', 'Machine Learning', 'Natural Language Processing', 'Computer Vision'],
@@ -81,11 +89,26 @@ const benefits = [
     title: 'Proven Results',
     description: 'Track record of successful implementations',
     icon: Award
+=======
+    description: 'Cutting-edge artificial intelligence solutions',
+    icon: Brain
+  },
+  {
+    title: 'IT Services',
+    description: 'Comprehensive IT infrastructure and support',
+    icon: Server
+  },
+  {
+    title: 'Cloud Services',
+    description: 'Scalable cloud solutions for modern businesses',
+    icon: Cloud
+>>>>>>> origin/main
   }
 ];
 
 export default function ServicesOverviewPage() {
   return (
+<<<<<<< HEAD
     <Layout
       title="Services Overview - Zion Tech Group"
       description="Comprehensive overview of our technology services and solutions designed to transform your business."
@@ -274,9 +297,21 @@ export default function ServicesOverviewPage() {
                 </Link>
               </div>
             </motion.div>
+=======
+    <Layout title="Services Overview - Zion Tech Group">
+      <div className="min-h-screen bg-gray-50">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
+            <p className="text-xl text-blue-100">Comprehensive technology solutions</p>
+>>>>>>> origin/main
           </div>
         </section>
       </div>
     </Layout>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/main

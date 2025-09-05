@@ -61,6 +61,7 @@ const Header = () => {
       name: 'Company',
       href: '/company',
       dropdown: [
+        { name: 'About Us', href: '/about' },
         { name: 'Our Team', href: '/team' },
         { name: 'Careers', href: '/careers' },
         { name: 'Partners', href: '/partners' },

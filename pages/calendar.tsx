@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { 
-  Calendar, 
+  CalendarIcon as CalendarIconIcon, 
   Clock, 
   Users, 
   CheckCircle, 
@@ -91,7 +91,7 @@ const teamMembers = [
   }
 ];
 
-export default function Calendar() {
+export default function CalendarIcon() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Head>

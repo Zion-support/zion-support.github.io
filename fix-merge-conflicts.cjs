@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -78,3 +79,15 @@ console.log('\nResolving conflicts...\n');
 filesWithConflicts.forEach(processFile);
 
 console.log('\n✓ All merge conflicts resolved!');
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
+const fs = require('fs');
+const path = require('path');
+function fixMergeConflicts(filePath) {}
+  try {}
+    let content = fs.readFileSync(filePath, 'utf8');
+    // Remove merge conflict markers and keep the newer version (after );
+>>>>>>> origin/main

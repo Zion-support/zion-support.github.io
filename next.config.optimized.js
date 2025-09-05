@@ -1,9 +1,27 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
+module.exports = withBundleAnalyzer({
+<<<<<<< HEAD
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+>>>>>>> origin/main
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   reactStrictMode: true,
   swcMinify: true,
   compress: true,
   poweredByHeader: false,
+<<<<<<< HEAD
   eslint: { ignoreDuringBuilds: false },
   typescript: { ignoreBuildErrors: false },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
@@ -56,8 +74,11 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/main
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   "enabled": process.env.ANALYZE === 'true'});
 module.exports = withBundleAnalyzer({
@@ -67,27 +88,71 @@ module.exports = withBundleAnalyzer({
   "poweredByHeader": false,
   "generateEtags": false,
   "images": {
+=======
+  generateEtags: false,
+  images: {
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     domains: ['images.unsplash.com', 'via.placeholder.com'],
-    "formats": ['image/webp', 'image/avif']},
-  "experimental": {
+    formats: ['image/webp', 'image/avif'],
+  },
+  experimental: {
     optimizeCss: true,
-    "optimizePackageImports": ['@mui/material', '@mui/icons-material']},
-  "webpack": (config, { dev, isServer }) => {
+    optimizePackageImports: ['@mui/material', '@mui/icons-material'],
+  },
+  webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
-        "chunks": 'all',
-        "cacheGroups": {
+        chunks: 'all',
+        cacheGroups: {
           vendor: {
             test: /[\\/]node_modules[\\/]/,
-            "name": 'vendors',
-            "chunks": 'all'},
-          "common": {
+            name: 'vendors',
+            chunks: 'all',
+          },
+          common: {
             name: 'common',
+<<<<<<< HEAD
 const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: 'true',swcMinify: 'true',compress: 'true',poweredByHeader: 'false',generateEtags: 'false',images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: '2',chunks: 'all',enforce: 'true',},},}} return config},});
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+            minChunks: 2,
+            chunks: 'all',
+            enforce: true,
+          },
+        },
+<<<<<<< HEAD
+      }}
+    return config},
+});
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
+const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: 'true',swcMinify: 'true',compress: 'true',poweredByHeader: 'false',generateEtags: 'false',images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: '2',chunks: 'all',enforce: 'true',},},}} return config},});
+>>>>>>> origin/main
             "minChunks": 2,
             "chunks": 'all',
             "enforce": true}}}}
     return config}});
+<<<<<<< HEAD
 const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: true,swcMinify: true,compress: true,poweredByHeader: false,generateEtags: false,images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: 2,chunks: 'all',enforce: true,},},}} return config},});
+=======
+<<<<<<< HEAD
+const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: true,swcMinify: true,compress: true,poweredByHeader: false,generateEtags: false,images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: 2,chunks: 'all',enforce: true,},},}} return config},});
+=======
+const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: true,swcMinify: true,compress: true,poweredByHeader: false,generateEtags: false,images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: 2,chunks: 'all',enforce: true,},},}} return config},});
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+      };
+    }
+    return config;
+  },
+});
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+>>>>>>> origin/main

@@ -21,8 +21,9 @@ import {
   Rocket,
   Factory,
   FileText,
+  BarChart3,
   BookOpen,
-  CheckCircle
+  Video
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -54,19 +55,19 @@ export default function Header({ className = '' }: HeaderProps) {
           name: 'AI Services',
           href: '/ai-services',
           icon: Brain,
-          description: 'Cutting-edge AI solutions'
+          description: 'Machine Learning, NLP, Computer Vision'
         },
         {
           name: 'IT Services',
           href: '/it-services',
           icon: Code,
-          description: 'Comprehensive IT solutions'
+          description: 'Cloud, Security, Managed Services'
         },
         {
           name: 'Micro SaaS',
           href: '/micro-saas',
           icon: Cloud,
-          description: 'Scalable SaaS applications'
+          description: 'Ready-to-use SaaS applications'
         },
         {
           name: 'Cybersecurity',
@@ -78,13 +79,13 @@ export default function Header({ className = '' }: HeaderProps) {
           name: 'Cloud Solutions',
           href: '/cloud-solutions',
           icon: Cloud,
-          description: 'Cloud infrastructure & services'
+          description: 'AWS, Azure, GCP expertise'
         },
         {
-          name: 'Database Solutions',
-          href: '/database-solutions',
-          icon: Database,
-          description: 'Database management & optimization'
+          name: 'Custom Development',
+          href: '/custom-development',
+          icon: Settings,
+          description: 'Bespoke software solutions'
         }
       ]
     },
@@ -111,15 +112,9 @@ export default function Header({ className = '' }: HeaderProps) {
           description: 'Industry-specific solutions'
         },
         {
-          name: 'Custom Development',
-          href: '/custom-development',
-          icon: Code,
-          description: 'Tailored software development'
-        },
-        {
           name: 'Digital Transformation',
           href: '/digital-transformation',
-          icon: Network,
+          icon: Zap,
           description: 'Complete digital transformation'
         }
       ]
@@ -131,38 +126,38 @@ export default function Header({ className = '' }: HeaderProps) {
         {
           name: 'Blog',
           href: '/blog',
-          icon: Code,
-          description: 'Latest insights and updates'
+          icon: FileText,
+          description: 'Latest insights and trends'
         },
         {
           name: 'Case Studies',
           href: '/case-studies',
-          icon: CheckCircle,
+          icon: BarChart3,
           description: 'Success stories and results'
         },
         {
           name: 'White Papers',
           href: '/white-papers',
-          icon: FileText,
-          description: 'In-depth technical guides'
+          icon: BookOpen,
+          description: 'In-depth research and analysis'
         },
         {
           name: 'Webinars',
           href: '/webinars',
-          icon: Users,
-          description: 'Educational sessions'
+          icon: Video,
+          description: 'Educational sessions and demos'
         },
         {
-          name: 'Tutorials',
-          href: '/tutorials',
-          icon: BookOpen,
-          description: 'Step-by-step guides'
+          name: 'API Documentation',
+          href: '/api-docs',
+          icon: Code,
+          description: 'Technical documentation'
         }
       ]
     },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Demo', href: '/demo' }
+    { name: 'Pricing', href: '/pricing' }
   ];
 
   const contactInfo = {

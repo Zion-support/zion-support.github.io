@@ -56,7 +56,7 @@ export default function QuotePage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission
-    // console.log('Form submitted:', { selectedServices, selectedSize, formData });
+    console.log('Form submitted:', { selectedServices, selectedSize, formData });
   };
 
   return (

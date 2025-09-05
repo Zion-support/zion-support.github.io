@@ -1,11 +1,17 @@
 import js from '@eslint/js';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/main
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 
 export default [
   {
@@ -19,7 +25,10 @@ export default [
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
       'scripts/',
       'automation/',
       'automation_backup/',
@@ -121,6 +130,56 @@ export default [
       'contracts.disabled/',
       'solutions.disabled/',
       'zion-os.disabled/',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      'cypress.disabled/',
+      'data/2024-*.ts',
+      'data/2025-*.ts',
+      'data/2026-*.ts',
+      'data/2026-*.js',
+      'data/',
+      'disabled-api/',
+      'fix_utils_files.ts',
+      'zion_academy/',
+      'automation_backup/',
+      'automation/backups/',
+      'backup-pages/',
+      'backup/',
+      'lib_backup/',
+      'data_backup/',
+      'styles_backup/',
+      'api-backup/',
+      'temp_backup/',
+      'corrupted_files_backup_2/',
+      'ai-optimization-backups/',
+      'optimization-reports/',
+      'test-generation-reports/',
+      'test-reports/',
+      'test-results/',
+      'security-reports/',
+      'pages.__backup/',
+      'pages-disabled/',
+      'pages.disabled_auto/',
+      'pages.disabled_full/',
+      'pages.old/',
+      'pages_api.disabled/',
+      'pages_backup/',
+      'pages_backup_before_cleanup/',
+      'pages_backup_conflict/',
+      'pages_backup_conflicts/',
+      'pages_disabled/',
+      'pages.bak/',
+      'pages.broken/',
+      'pages.corrupted.*/',
+      'pages.blog.disabled/',
+      'pages.disabled.full/',
+      'pages._archive_corrupted/',
+      'pages._quarantine/',
+      'pages-quarantine/',
+      'pages-backup/',
+=======
+>>>>>>> origin/main
       'src_backup_temp/',
       'temp-backup/',
       'tests/',
@@ -128,6 +187,7 @@ export default [
       'public/',
       'server/',
       'services/',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
       'components.disabled_full/',
       'data.disabled/',
       'database/',
@@ -173,7 +233,10 @@ export default [
       'pages.broken/',
       'pages.corrupted.1756905863/',
       'pages.disabled.full/'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
     ]
   },
   {
@@ -240,6 +303,113 @@ export default [
         }
       }
     },
+<<<<<<< HEAD
+=======
+    plugins: {
+      react,
+      'react-hooks': reactHooks
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
+    }
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      parser: tsparser,
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly',
+        requestAnimationFrame: 'readonly',
+        cancelAnimationFrame: 'readonly',
+        fetch: 'readonly',
+        URL: 'readonly',
+        URLSearchParams: 'readonly',
+        Blob: 'readonly',
+        CustomEvent: 'readonly',
+        Intl: 'readonly',
+        performance: 'readonly',
+        caches: 'readonly',
+        Notification: 'readonly',
+        ServiceWorker: 'readonly',
+        ServiceWorkerRegistration: 'readonly',
+        PushSubscription: 'readonly',
+        NotificationPermission: 'readonly',
+        process: 'readonly',
+        global: 'readonly',
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        vi: 'readonly',
+        Deno: 'readonly',
+        React: 'readonly',
+        KeyboardEvent: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLButtonElement: 'readonly',
+        HTMLAnchorElement: 'readonly',
+        MutationObserver: 'readonly',
+        RequestInit: 'readonly',
+        AbortController: 'readonly',
+        fs: 'readonly',
+        CodeQualityChecker: 'readonly'
+      }
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
+<<<<<<< HEAD
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+=======
+      react: react,
+      'react-hooks': reactHooks
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
+    },
+    rules: {
+      'no-console': 'warn',
+      'no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': 'warn',
+<<<<<<< HEAD
+=======
+      '@typescript-eslint/no-explicit-any': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
+    }
+  },
+  {
+    files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      globals: {
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        jest: 'readonly',
+        fireEvent: 'readonly',
+        render: 'readonly',
+>>>>>>> origin/main
         screen: 'readonly'
       }
 
@@ -247,6 +417,7 @@ export default [
     rules: {
       'no-console': 'off',
       'no-unused-vars': 'warn',
+<<<<<<< HEAD
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'warn',
@@ -269,5 +440,9 @@ export default [
       '@typescript-eslint/no-unused-vars': 'warn'
     }
 
+=======
+      '@typescript-eslint/no-unused-vars': 'warn'
+    }
+>>>>>>> origin/main
   }
 ];

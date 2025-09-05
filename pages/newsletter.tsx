@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import { FileText, Mail, Users, Clock, CheckCircle, ArrowRight, Star, Shield, Zap, Globe, Video, BarChart3 } from 'lucide-react';
@@ -22,10 +23,39 @@ const newsletterFeatures = [
     title: 'Industry Reports',
     description: 'Comprehensive reports on market trends and business opportunities',
     icon: BarChart3
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import {
+  ArrowRight,
+  Users,
+  Calendar,
+  FileText,
+  Video,
+  Globe,
+  Shield,
+  Zap
+} from 'lucide-react';
+import Layout from '../components/Layout';
+
+const benefits = [
+  {
+    title: 'Exclusive Content',
+    description: 'Get access to exclusive white papers, case studies, and industry insights.',
+    icon: FileText
+  },
+  {
+    title: 'Webinar Invitations',
+    description: 'Receive invitations to our expert-led webinars and virtual events',
+    icon: Video
+>>>>>>> origin/main
   }
 ];
 
 export default function NewsletterPage() {
+<<<<<<< HEAD
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
 
@@ -210,6 +240,15 @@ export default function NewsletterPage() {
                 </button>
               </div>
             </motion.div>
+=======
+  return (
+    <Layout title="Newsletter - Zion Tech Group">
+      <div className="min-h-screen bg-gray-50">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Stay Updated</h1>
+            <p className="text-xl text-blue-100">Get the latest insights and updates from our team</p>
+>>>>>>> origin/main
           </div>
         </section>
       </div>

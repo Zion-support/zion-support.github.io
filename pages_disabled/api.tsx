@@ -1,4 +1,125 @@
+import React from 'react';
+<<<<<<< HEAD
+import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
+import {
+  Code,
+  Copy,
+  Check,
+  ExternalLink,
+  ArrowRight,
+  Terminal,
+  Globe,
+  Shield,
+  Zap,
+  Database,
+  Cpu,
+  Cloud,
+  XCircle
+} from 'lucide-react';
+
+export default function APIPage() {
+  const apiEndpoints = [
+    {
+      id: 'auth',
+      title: 'Authentication',
+      description: 'Secure authentication and authorization endpoints',
+      baseUrl: '/api/v1/auth',
+      methods: [
+        {
+          method: 'POST',
+          endpoint: '/login',
+          description: 'Authenticate user with email and password',
+          code: `curl -X POST https://api.ziontechgroup.com/v1/auth/login \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "email": "user@example.com",
+    "password": "your_password"
+  }'`
+        },
+        {
+          method: 'POST',
+          endpoint: '/register',
+          description: 'Register a new user account',
+          code: `curl -X POST https://api.ziontechgroup.com/v1/auth/register \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "email": "user@example.com",
+    "password": "your_password",
+    "name": "John Doe"
+  }'`
+        }
+      ]
+    },
+    {
+      id: 'ai-services',
+      title: 'AI Services',
+      description: 'Access our AI-powered services and models',
+      baseUrl: '/api/v1/ai',
+      methods: [
+        {
+          method: 'POST',
+          endpoint: '/chat',
+          description: 'Send messages to our AI chat service',
+          code: `curl -X POST https://api.ziontechgroup.com/v1/ai/chat \\
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "message": "Hello, how can you help me?",
+    "model": "gpt-4",
+    "temperature": 0.7
+  }'`
+        }
+      ]
+    }
+  ];
+
+  const responseExamples = {
+    success: {
+      status: 200,
+      data: {
+        message: "Request successful",
+        data: {
+          id: "12345",
+          name: "Example Response",
+          created_at: "2024-01-01T00:00:00Z"
+        }
+      }
+    },
+    error: {
+      status: 400,
+      error: {
+        code: "VALIDATION_ERROR",
+        message: "Invalid request parameters",
+        details: {
+          field: "email",
+          issue: "Invalid email format"
+        }
+      }
+    }
+  };
+
+  return (
+    <MainLayout
+      title="API Documentation - Zion Tech Group"
+      description="Comprehensive API documentation for Zion Tech Group services. Access our AI, cloud, and enterprise APIs with detailed examples and guides."
+      keywords="API documentation, REST API, AI API, cloud API, developer resources"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+=======
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Layout from '../components/Layout';
 import { Code, Book, Zap, Shield, Globe, Database, Server, Lock, CheckCircle, ArrowRight } from 'lucide-react';
 
@@ -19,24 +140,29 @@ const apiServices = [
     title: 'WebSocket API',
     description: 'Real-time bidirectional communication',
     icon: Zap,
+<<<<<<< HEAD:pages_disabled/api.tsx
     features: ['Real-time Updates', 'Low Latency', 'Persistent Connection', 'Event-driven']
+=======
+    features: ['Real-time Updates', 'Low Latency', 'Persistent Connections', 'Event-driven']
+  },
+  {
+    title: 'Database API',
+    description: 'Secure database access and management',
+    icon: Database,
+    features: ['CRUD Operations', 'Query Optimization', 'Data Validation', 'Backup & Recovery']
+>>>>>>> origin/main:pages/api.tsx
   },
   {
     title: 'Authentication API',
     description: 'Secure user authentication and authorization',
     icon: Lock,
-    features: ['OAuth 2.0', 'JWT Tokens', 'Multi-factor Auth', 'Session Management']
+    features: ['JWT Tokens', 'OAuth 2.0', 'Role-based Access', 'Multi-factor Auth']
   },
   {
-    title: 'Data API',
-    description: 'Access and manage your data',
-    icon: Database,
-    features: ['CRUD Operations', 'Data Validation', 'Query Optimization', 'Caching']
-  },
-  {
-    title: 'Analytics API',
-    description: 'Track and analyze usage patterns',
+    title: 'Monitoring API',
+    description: 'API performance and health monitoring',
     icon: Server,
+<<<<<<< HEAD:pages_disabled/api.tsx
     features: ['Usage Metrics', 'Performance Data', 'Custom Events', 'Real-time Dashboards']
   }
 ];
@@ -98,11 +224,33 @@ export default function APIPage() {
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
+=======
+    features: ['Health Checks', 'Performance Metrics', 'Error Tracking', 'Alerting']
+  }
+];
+
+export default function API() {
+  return (
+    <Layout
+      title="API Services - Zion Tech Group"
+      description="Comprehensive API services including REST, GraphQL, WebSocket, and more. Build powerful applications with our developer-friendly APIs."
+      keywords="API services, REST API, GraphQL, WebSocket, database API, authentication API"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
+>>>>>>> origin/main:pages/api.tsx
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center text-white"
             >
+<<<<<<< HEAD
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
+<<<<<<< HEAD:pages_disabled/api.tsx
                 Powerful APIs
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
@@ -117,11 +265,48 @@ export default function APIPage() {
                   View Documentation
                 </button>
 
+=======
+                API{' '}
+                <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                  Documentation
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Integrate with Zion Tech Group's powerful APIs to build amazing applications 
+                with AI, cloud services, and enterprise solutions.
+              </p>
+=======
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                API
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                  {" "}Services
+                </span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Comprehensive API services designed to power your applications with robust, scalable, and secure endpoints.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  href="/api-docs"
+                  className="inline-flex items-center px-8 py-4 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors"
+                >
+                  View Documentation
+                </Link>
+>>>>>>> origin/main:pages/api.tsx
               </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD:pages_disabled/api.tsx
         {/* API Services Grid */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -351,6 +536,9 @@ const apiEndpoints = [
           </div>
         </section>
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main:pages/api.tsx
         {/* Quick Start */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -418,6 +606,7 @@ const apiEndpoints = [
         </section>
 
         {/* Response Examples */}
+<<<<<<< HEAD:pages_disabled/api.tsx
 ursor/fix-lint-push-and-merge-to-main-4bb1
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -483,6 +672,22 @@ ursor/fix-lint-push-and-merge-to-main-4bb1
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Get started with our APIs in just a few lines of code.
+=======
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Response Examples
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Understand the structure of our API responses with these examples.
+>>>>>>> origin/main:pages/api.tsx
               </p>
             </motion.div>
 
@@ -506,6 +711,7 @@ ursor/fix-lint-push-and-merge-to-main-4bb1
                   </div>
                 </motion.div>
 
+<<<<<<< HEAD:pages_disabled/api.tsx
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -533,6 +739,8 @@ ursor/fix-lint-push-and-merge-to-main-4bb1
                   className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 >
                   View AI Services
+=======
+>>>>>>> origin/main:pages/api.tsx
                 <motion.div
                   className="bg-white border border-gray-200 rounded-lg p-6"
                   initial={{ opacity: 0, y: 30 }}
@@ -550,15 +758,86 @@ ursor/fix-lint-push-and-merge-to-main-4bb1
                     </pre>
                   </div>
                 </motion.div>
+<<<<<<< HEAD:pages_disabled/api.tsx
 ursor/fix-lint-push-and-merge-to-main-4bb1
+=======
+>>>>>>> origin/main:pages/api.tsx
               </div>
+=======
+        {/* Services Grid */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our API Services
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Choose from our comprehensive suite of API services designed for modern applications.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {apiServices.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8"
+                >
+                  <div className="flex items-center mb-6">
+                    <div className="p-3 bg-blue-100 rounded-lg">
+                      <service.icon className="h-8 w-8 text-blue-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 ml-4">
+                      {service.title}
+                    </h3>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-6">
+                    {service.description}
+                  </p>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-3">Features:</h4>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-1 h-4 w-4" />
+                  </Link>
+                </motion.div>
+              ))}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD:pages_disabled/api.tsx
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="container mx-auto px-4 text-center">
+=======
+<<<<<<< HEAD
+        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4">
+>>>>>>> origin/main:pages/api.tsx
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -567,6 +846,7 @@ ursor/fix-lint-push-and-merge-to-main-4bb1
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Build Something Amazing?
               </h2>
+<<<<<<< HEAD:pages_disabled/api.tsx
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Start building with our APIs today and join thousands of developers creating innovative applications.
               </p>
@@ -579,12 +859,49 @@ ursor/fix-lint-push-and-merge-to-main-4bb1
                   View Documentation
                 </button>
 
+=======
+              <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
+                Start building with our APIs today. Get your API key and begin integrating 
+                with our powerful services.
+=======
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Build with Our APIs?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Start integrating our powerful API services into your applications today.
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                  Get API Access
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  href="/api-docs"
+                  className="inline-flex items-center px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  View Documentation
+                </Link>
+>>>>>>> origin/main:pages/api.tsx
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD:pages_disabled/api.tsx
 
+=======
+>>>>>>> origin/main:pages/api.tsx
   );
 }

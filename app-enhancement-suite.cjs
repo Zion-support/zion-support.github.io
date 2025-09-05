@@ -17,6 +17,11 @@ class AppEnhancementSuite {}
   };
   createSecurityEnhancements() {}
     this.log('🔒 Creating Security Enhancements');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 
     // Create security headers configuration
     const securityConfig = {
@@ -26,6 +31,10 @@ class AppEnhancementSuite {}
         'X-XSS-Protection': '1; mode=block',
         'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
         'Content-Security-Policy':
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
+>>>>>>> origin/main
           "default-src 'self'; script-src 'self' 'unsafe-inline'"},
       "validation": {
         inputSanitization: true,
@@ -128,6 +137,13 @@ class AppEnhancementSuite {}
     this.createMonitoringScripts();
 
     const report = {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
+>>>>>>> origin/main
     const securityHeaders = {}
       'X-Content-Type-Options': 'nosniff',
       'X-Frame-Options': 'DENY',

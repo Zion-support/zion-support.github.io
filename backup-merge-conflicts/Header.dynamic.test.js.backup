@@ -1,0 +1,37 @@
+<<<<<<< HEAD:__tests__/Header.dynamic.test.js
+import _React from 'react';  import '@testing-library/jest-dom'; import Headerdynamic from '../components/Header.dynamic'; describe('Headerdynamic',() => { test('renders without crashing',() => { render(<Headerdynamic />); expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Headerdynamic />)}); test('handles user interactions',() => { render(<Headerdynamic />)}); test('applies correct styling',() => { render(<Headerdynamic />)})});
+>>>>>>> origin/main
+
+=======
+<<<<<<< HEAD:backup-merge-conflicts/Header.dynamic.test.js.backup
+<<<<<<< HEAD
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import Headerdynamic from '../components/Header.dynamic';
+describe('Headerdynamic', () => {
+  test('renders without crashing', () => {
+    render(<Headerdynamic />);
+    expect(screen.getByTestId('header.dynamic')).toBeInTheDocument();
+  });
+  test('displays correct content', () => {
+    render(<Headerdynamic />);
+  });
+  test('handles user interactions', () => {
+    render(<Headerdynamic />);
+  });
+  test('applies correct styling', () => {
+    render(<Headerdynamic />);
+  });
+});
+=======
+<<<<<<< HEAD
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Headerdynamic from "./components/Header.dynamic"; describe("Headerdynamic",() => { test("renders without crashing",() => { render(<Headerdynamic />); expect(screen.getByTestId("header.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Headerdynamic />)}); test("handles user interactions",() => { render(<Headerdynamic />)}); test("applies correct styling",() => { render(<Headerdynamic />)})});''"
+=======
+import _React from 'react';  import '@testing-library/jest-dom'; import Headerdynamic from '../components/Header.dynamic'; describe('Headerdynamic',() => { test('renders without crashing',() => { render(<Headerdynamic />); expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Headerdynamic />)}); test('handles user interactions',() => { render(<Headerdynamic />)}); test('applies correct styling',() => { render(<Headerdynamic />)})});
+>>>>>>> main
+>>>>>>> main
+=======
+import _React from 'react';  import '@testing-library/jest-dom'; import Headerdynamic from '../components/Header.dynamic'; describe('Headerdynamic',() => { test('renders without crashing',() => { render(<Headerdynamic />); expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Headerdynamic />)}); test('handles user interactions',() => { render(<Headerdynamic />)}); test('applies correct styling',() => { render(<Headerdynamic />)})});
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/Header.dynamic.test.js
+>>>>>>> origin/main:backup-merge-conflicts/Header.dynamic.test.js.backup

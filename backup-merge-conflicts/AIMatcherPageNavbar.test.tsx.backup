@@ -1,0 +1,15 @@
+<<<<<<< HEAD:tests/AIMatcherPageNavbar.test.tsx
+import { render, MemoryRouter } from 'lucide-react'; import { AppLayout } from '@/layout/AppLayout'; import AIMatcherPage from '@/pages/AIMatcher'; test('')'
+>>>>>>> origin/main
+
+=======
+<<<<<<< HEAD
+import { render } from \'@testing-library/react\'; import { MemoryRouter } from \'react-router-dom\'; import { AppLayout } from \'@/layout/AppLayout\'; import AIMatcherPage from \'@/pages/AIMatcher\'; test(\'
+=======
+<<<<<<< HEAD
+const { render } from "@testing-library/react"; import { MemoryRouter } from "react-router-dom"; import { AppLayout } from "@/layout/AppLayout"; import AIMatcherPage from "@/pages/AIMatcher"; test("""
+=======
+import { render, MemoryRouter } from 'lucide-react'; import { AppLayout } from '@/layout/AppLayout'; import AIMatcherPage from '@/pages/AIMatcher'; test('')'
+>>>>>>> main
+>>>>>>> main
+>>>>>>> origin/main:backup-merge-conflicts/AIMatcherPageNavbar.test.tsx.backup

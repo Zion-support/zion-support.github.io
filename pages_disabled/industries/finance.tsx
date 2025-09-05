@@ -1,27 +1,88 @@
 import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
-import { motion } from 'framer-motion';
+import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Shield, DollarSign, TrendingUp, Users, Clock, Star } from 'lucide-react';
+import { motion } from 'framer-motion';
+import {
+  DollarSign,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  BarChart3,
+  Clock,
+  Award,
+  Brain,
+  Shield,
+  Target,
+  TrendingUp,
+  Globe,
+  Building,
+  Rocket,
+  Lock,
+  Activity,
+  CreditCard,
+  FileText,
+  Database,
+  TrendingDown
+} from 'lucide-react';
+import Layout from '../../components/Layout';
 
 const solutions = [
   {
-    title: 'Fintech Applications',
-    description: 'Secure, scalable fintech solutions including mobile banking, payment processing, and digital wallets.',
-    features: ['Mobile Banking', 'Payment Processing', 'Digital Wallets', 'API Integration'],
-    icon: DollarSign
+    title: 'Fraud Detection & Prevention',
+    description: 'AI-powered real-time fraud detection and prevention systems for financial transactions.',
+    icon: Shield,
+    features: ['Real-time Monitoring', 'Machine Learning Models', 'Risk Scoring', 'Automated Alerts'],
+    benefits: ['99.9% accuracy', '60% faster detection', '40% cost reduction', '24/7 monitoring']
   },
   {
-    title: 'Risk Management Systems',
-    description: 'Advanced risk assessment and management platforms with real-time monitoring and compliance.',
-    features: ['Real-time Monitoring', 'Fraud Detection', 'Compliance Reporting', 'Risk Analytics'],
-    icon: Shield
+    title: 'Algorithmic Trading',
+    description: 'Advanced trading algorithms and automated trading systems for financial markets.',
+    icon: TrendingUp,
+    features: ['High-frequency Trading', 'Risk Management', 'Portfolio Optimization', 'Market Analysis'],
+    benefits: ['25% better returns', 'Reduced risk', 'Faster execution', 'Data-driven decisions']
   },
   {
-    title: 'Trading Platforms',
-    description: 'High-performance trading platforms with low latency and advanced analytics capabilities.',
-    features: ['Low Latency', 'Real-time Data', 'Advanced Analytics', 'Algorithmic Trading'],
+    title: 'Risk Assessment Platform',
+    description: 'Comprehensive risk assessment and management platform for financial institutions.',
+    icon: Target,
+    features: ['Credit Risk Analysis', 'Market Risk Assessment', 'Operational Risk', 'Compliance Monitoring'],
+    benefits: ['30% risk reduction', 'Faster approvals', 'Better compliance', 'Improved accuracy']
+  },
+  {
+    title: 'Digital Banking Solutions',
+    description: 'Modern digital banking platform with mobile-first design and advanced features.',
+    icon: CreditCard,
+    features: ['Mobile Banking', 'Digital Wallets', 'Payment Processing', 'Account Management'],
+    benefits: ['50% user engagement', 'Reduced costs', 'Better UX', 'Increased security']
+  }
+];
+
+const challenges = [
+  {
+    challenge: 'Regulatory Compliance',
+    description: 'Meeting complex financial regulations and compliance requirements.',
+    solution: 'Automated compliance monitoring, regulatory reporting, and audit trail systems.',
+    icon: FileText
+  },
+  {
+    challenge: 'Data Security',
+    description: 'Protecting sensitive financial data from cyber threats and breaches.',
+    solution: 'Multi-layer security, encryption, and advanced threat detection systems.',
+    icon: Lock
+  },
+  {
+    challenge: 'Real-time Processing',
+    description: 'Processing high-volume transactions in real-time with low latency.',
+    solution: 'High-performance computing, microservices architecture, and optimized databases.',
+    icon: Clock
+  },
+  {
+    challenge: 'Scalability',
+    description: 'Handling increasing transaction volumes and user growth.',
+    solution: 'Cloud-native architecture, auto-scaling, and distributed systems.',
     icon: TrendingUp
+<<<<<<< HEAD:pages_disabled/industries/finance.tsx
   },
   {
     title: 'Regulatory Compliance',
@@ -29,42 +90,51 @@ const solutions = [
     features: ['KYC/AML', 'Regulatory Reporting', 'Audit Trails', 'Data Governance'],
     icon: Users
 
+=======
+>>>>>>> origin/main:pages/industries/finance.tsx
   }
 ];
 
 const benefits = [
   {
+    icon: DollarSign,
+    title: 'Cost Reduction',
+    description: 'Automate processes and reduce operational costs through technology.',
+    metric: '35%'
+  },
+  {
     icon: Shield,
-    title: 'Bank-Grade Security',
-    description: 'Enterprise-level security with encryption, authentication, and fraud prevention'
+    title: 'Enhanced Security',
+<<<<<<< HEAD
+    description: 'Advanced security measures to protect financial data and transactions.',
+    metric: '99.9%'
+=======
+    description: 'Advanced security measures protect against cyber threats and fraud'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
   },
   {
     icon: Clock,
-    title: 'Real-time Processing',
-    description: 'High-performance systems for real-time financial transactions and data processing'
+    title: 'Faster Processing',
+    description: 'Real-time transaction processing and instant decision making.',
+    metric: '80%'
   },
   {
     icon: Users,
-    title: 'Compliance Expertise',
-    description: 'Deep knowledge of financial regulations and compliance requirements'
-  },
-  {
-    icon: Star,
-    title: 'Proven Track Record',
-    description: 'Successfully delivered solutions for leading financial institutions'
+    title: 'Better Customer Experience',
+    description: 'Improved user experience with modern digital banking solutions.',
+    metric: '90%'
   }
 ];
 
 const caseStudies = [
   {
-    title: 'Digital Banking Platform',
-    client: 'Regional Credit Union',
-    challenge: 'Modernize legacy banking systems and improve customer experience',
-    solution: 'Developed comprehensive digital banking platform with mobile app and web portal',
-    results: ['60% increase in digital transactions', '40% reduction in operational costs', '95% customer satisfaction'],
-    image: '/api/placeholder/400/300'
+    title: 'Major Bank',
+    description: 'Implemented AI-powered fraud detection across all digital channels.',
+    results: ['99.5% fraud detection', '60% false positive reduction', '$5M annual savings'],
+    icon: Building
   },
   {
+<<<<<<< HEAD:pages_disabled/industries/finance.tsx
     title: 'Trading System Modernization',
     client: 'Investment Firm',
     challenge: 'Replace outdated trading system with modern, high-performance platform',
@@ -72,21 +142,42 @@ const caseStudies = [
     results: ['80% faster trade execution', '50% reduction in system downtime', '30% increase in trading volume'],
     image: '/api/placeholder/400/300'
 
+=======
+    title: 'Investment Firm',
+    description: 'Deployed algorithmic trading system for portfolio management.',
+    results: ['25% better returns', '40% risk reduction', '50% faster execution'],
+    icon: TrendingUp
+  },
+  {
+    title: 'Credit Union',
+    description: 'Digital transformation with mobile banking and payment solutions.',
+    results: ['70% mobile adoption', '45% cost reduction', '95% customer satisfaction'],
+    icon: CreditCard
+>>>>>>> origin/main:pages/industries/finance.tsx
   }
 ];
 
-export default function FinancePage() {
+export default function Finance() {
   return (
-    <MainLayout
+    <Layout
       title="Financial Technology Solutions - Zion Tech Group"
-      description="Transform financial services with our secure, scalable fintech solutions including digital banking, trading platforms, and compliance systems."
-      keywords="fintech, financial technology, banking software, trading platforms, compliance, risk management"
+      description="Transform financial services with AI-powered fraud detection, algorithmic trading, and digital banking solutions."
+      keywords="fintech, financial technology, fraud detection, algorithmic trading, digital banking, risk assessment"
     >
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
+<<<<<<< HEAD:pages_disabled/industries/finance.tsx
         <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+=======
+        <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
+>>>>>>> origin/main:pages/industries/finance.tsx
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -94,13 +185,16 @@ export default function FinancePage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Financial Technology
-                <span className="block text-yellow-400">Solutions</span>
+                Financial{' '}
+                <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                  Technology
+                </span>
               </h1>
-              <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
-                Secure, scalable fintech solutions for digital banking, trading platforms, and regulatory compliance.
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Revolutionize financial services with AI-powered solutions, fraud detection, and digital banking platforms.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD:pages_disabled/industries/finance.tsx
 
                 <Link
                   href="/contact"
@@ -108,11 +202,12 @@ export default function FinancePage() {
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
+=======
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Get FinTech Solution
+>>>>>>> origin/main:pages/industries/finance.tsx
                 </Link>
-                <Link
-                  href="/case-studies"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
-                >
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                   View Case Studies
 
                 </Link>
@@ -123,15 +218,21 @@ export default function FinancePage() {
 
         {/* Solutions Section */}
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Financial Solutions
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Financial Technology Solutions
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Comprehensive technology solutions designed for the financial services industry
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Comprehensive fintech solutions designed for modern financial institutions.
               </p>
-            </div>
+            </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {solutions.map((solution, index) => {
@@ -139,26 +240,95 @@ export default function FinancePage() {
                 return (
                   <motion.div
                     key={index}
+                    className="bg-gray-50 rounded-lg p-6"
                     initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.2 }}
-                    className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow"
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
                   >
-                    <div className="flex items-center mb-4">
-                      <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                        <IconComponent className="w-6 h-6 text-blue-600" />
+                    <div className="flex items-start space-x-4">
+                      <div className="text-green-600">
+                        <IconComponent className="w-8 h-8" />
                       </div>
-                      <h3 className="text-xl font-semibold text-gray-900">{solution.title}</h3>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-gray-900 mb-3">{solution.title}</h3>
+                        <p className="text-gray-600 mb-4">{solution.description}</p>
+                        <div className="grid grid-cols-2 gap-4">
+                          <div>
+                            <h4 className="font-semibold text-gray-800 mb-2">Features:</h4>
+                            <ul className="text-sm text-gray-600 space-y-1">
+                              {solution.features.map((feature, idx) => (
+                                <li key={idx} className="flex items-center">
+                                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                                  {feature}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-gray-800 mb-2">Benefits:</h4>
+                            <ul className="text-sm text-gray-600 space-y-1">
+                              {solution.benefits.map((benefit, idx) => (
+                                <li key={idx} className="flex items-center">
+                                  <Star className="w-4 h-4 text-yellow-500 mr-2" />
+                                  {benefit}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <p className="text-gray-600 mb-4">{solution.description}</p>
-                    <ul className="space-y-2">
-                      {solution.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Challenges & Solutions */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Financial Industry Challenges
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                We address the unique challenges facing financial institutions today.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {challenges.map((challenge, index) => {
+                const IconComponent = challenge.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    className="bg-white rounded-lg p-6 shadow-lg"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="flex items-start space-x-4">
+                      <div className="text-green-600">
+                        <IconComponent className="w-8 h-8" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-gray-900 mb-3">{challenge.challenge}</h3>
+                        <p className="text-gray-600 mb-4">{challenge.description}</p>
+                        <div className="bg-green-50 p-4 rounded-lg">
+                          <h4 className="font-semibold text-green-800 mb-2">Our Solution:</h4>
+                          <p className="text-sm text-green-700">{challenge.solution}</p>
+                        </div>
+                      </div>
+                    </div>
                   </motion.div>
                 );
               })}
@@ -168,16 +338,22 @@ export default function FinancePage() {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Us for Finance
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Financial Benefits
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                We understand the unique challenges and regulatory requirements of financial services
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Measurable improvements in efficiency, security, and customer satisfaction.
               </p>
-            </div>
+            </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => {
@@ -185,15 +361,17 @@ export default function FinancePage() {
                 return (
                   <motion.div
                     key={index}
+                    className="bg-gray-50 rounded-lg p-6 text-center"
                     initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className="text-center"
+                    viewport={{ once: true }}
                   >
-                    <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <IconComponent className="w-8 h-8 text-blue-600" />
+                    <div className="text-green-600 mb-4">
+                      <IconComponent className="w-12 h-12 mx-auto" />
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                    <div className="text-3xl font-bold text-green-600 mb-2">{benefit.metric}</div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
                     <p className="text-gray-600">{benefit.description}</p>
                   </motion.div>
                 );
@@ -203,56 +381,61 @@ export default function FinancePage() {
           </div>
         </section>
 
-        {/* Case Studies Section */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        {/* Case Studies */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Success Stories
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                See how we've helped financial institutions transform their operations
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Real results from financial institutions that have transformed their operations.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {caseStudies.map((study, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  className="bg-gray-50 rounded-lg overflow-hidden shadow-lg"
-                >
-                  <img
-                    src={study.image}
-                    alt={study.title}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{study.title}</h3>
-                    <p className="text-gray-600 mb-2"><strong>Client:</strong> {study.client}</p>
-                    <p className="text-gray-600 mb-4"><strong>Challenge:</strong> {study.challenge}</p>
-                    <p className="text-gray-600 mb-4"><strong>Solution:</strong> {study.solution}</p>
-                    <div className="mb-4">
-                      <h4 className="font-semibold text-gray-900 mb-2">Results:</h4>
-                      <ul className="space-y-1">
-                        {study.results.map((result, resultIndex) => (
-                          <li key={resultIndex} className="flex items-center text-sm text-gray-600">
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {caseStudies.map((study, index) => {
+                const IconComponent = study.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    className="bg-white rounded-lg p-6 shadow-lg"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="text-green-600 mb-4">
+                      <IconComponent className="w-8 h-8" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{study.title}</h3>
+                    <p className="text-gray-600 mb-4">{study.description}</p>
+                    <div>
+                      <h4 className="font-semibold text-gray-800 mb-2">Results:</h4>
+                      <ul className="text-sm text-gray-600 space-y-1">
+                        {study.results.map((result, idx) => (
+                          <li key={idx} className="flex items-center">
+                            <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                             {result}
                           </li>
                         ))}
                       </ul>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD:pages_disabled/industries/finance.tsx
         <section className="py-20 bg-blue-600">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -276,9 +459,34 @@ export default function FinancePage() {
               </Link>
             </div>
 
+=======
+        <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Transform Financial Services
+              </h2>
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Join leading financial institutions in revolutionizing their services with cutting-edge technology.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  Get FinTech Consultation
+                </Link>
+                <Link href="/industries" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+                  View All Industries
+                </Link>
+              </div>
+            </motion.div>
+>>>>>>> origin/main:pages/industries/finance.tsx
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }
