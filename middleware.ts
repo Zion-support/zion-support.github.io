@@ -6,20 +6,13 @@ const publicRoutes = [
   "/about",
   "/contact",
   "/services",
-  "/micro-saas",
-  "/it-services",
   "/ai-services",
-  "/pricing",
-  "/team",
+  "/it-services",
+  "/micro-saas",
+  "/api-docs",
+  "/api",
   "/careers",
-  "/blog",
-  "/news",
-  "/support",
-  "/faq",
-  "/privacy",
-  "/terms",
-  "/login",
-  "/register"
+  "/case-studies"
 ];
 
 export function middleware(request: NextRequest) {
@@ -43,6 +36,6 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+    '/((?!_next/static|_next/image|favicon.ico).*)',
   ],
 };

@@ -41,7 +41,6 @@ export default function ApiKeysManager("props": "any) {"}
   -H ""Authorization": Bearer ${apiKey"}" \\"`"`;
   -H "Content-"Type": "application/json"`"};
     if(loading) {}
-<<<<<<< HEAD
 """;
 """";
         return (<div className="flex items-center justify-center p-8">"""";
@@ -54,7 +53,6 @@ export default function ApiKeysManager("props": "any) {"}
           <p className="text-zinc-400">Manage your API keys for accessing Zion Tech Group APIs</p>""";
         </div>"""";
         <Button onClick={() => setShowCreateDialog(true)} className="bg-zion-cyan "hover": "bg-zion-cyan-light text-zinc-900">;
-=======
 """
 """"
         return (
@@ -69,7 +67,6 @@ export default function ApiKeysManager("props": "any) {"}
           <p className="text-zinc-400">Manage your API keys for accessing Zion Tech Group APIs</p>"""
         </div>""""
         <Button onClick={() => setShowCreateDialog(true)} className="bg-zion-cyan hover:bg-zion-cyan-light text-zinc-900">
->>>>>>> main
           Create New API Key;
         </Button>;
       </div>;
@@ -106,7 +103,6 @@ export default function ApiKeysManager("props": "any) {"}
             </Button>"""";
             <Button onClick={handleCreateKey"} className="bg-zion-cyan "hover": "bg-zion-cyan-light text-zinc-900">;
               Create Key;
-<<<<<<< HEAD
             </Button>;
           </DialogFooter>;
         </DialogContent>;
@@ -138,7 +134,6 @@ export default function ApiKeysManager("props": "any) {"}
                   <span className={`px-2 py-1 text-xs rounded-full ${apiKey.isActive''`;
                 ? 'bg-green-900/30 text-green-400 border border-green-500/30''`'`;
                 : 'bg-red-900/30 text-red-400 border border-red-500/30'}`}>';
-=======
             </Button>
           </DialogFooter>
         </DialogContent>
@@ -170,7 +165,6 @@ export default function ApiKeysManager("props": "any) {"}
                   <span className={`px-2 py-1 text-xs rounded-full ${apiKey.isActive''`
                 ? 'bg-green-900/30 text-green-400 border border-green-500/30''`'`
                 : 'bg-red-900/30 text-red-400 border border-red-500/30'}`}>'
->>>>>>> main
                     {apiKey.isActive ? 'Active' : 'Inactive'}
                   </span>;
                 </div>""";

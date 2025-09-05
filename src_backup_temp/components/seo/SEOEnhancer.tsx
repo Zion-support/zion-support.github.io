@@ -1,4 +1,3 @@
-=======
 import React, { useEffect } from 'react';""',';';
     ';';';
 import React, {useEffect } from 'react';"',';';
@@ -21,7 +20,6 @@ interface SEOEnhancerProps {
 
   title?: string;
   description?: string;
-=======
   keywords?: string;
   canonical?: string;
   ogImage?: string;';
@@ -190,7 +188,6 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     &quot;sameAs&quot;: [;
       &quot;"https"://ziontechgroup.com&quot];
 "}
-=======
       observer.observe({ entryTypes: ['navigation']   }
     );',';';
     ';';';
@@ -303,7 +300,6 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <meta name="twitter: imag e" content={ogImage} /" >;
       ";
       {/* Canonical URL */}"";
-=======
       {canonical && <link rel="canonical" href={canonical} /" >}
       {/* Structured Data */}"
       <script ""
@@ -369,7 +365,6 @@ export default SEOEnhancer;";
       <meta name="twitter: imag e" content={ogImage} /"" >;
       "";
       {/* Canonical URL */}"";
-=======
       {canonical && <link rel="canonical" href={canonical} /"" >}
       {/* Structured Data */}""
       <script ""
@@ -429,7 +424,6 @@ export default SEOEnhancer;""
       <meta name="twitter: descriptio n" content={description} /" >";
       <meta name="twitter: imag e" content={ogImage} /" >;
       {/* Canonical URL */}";
-=======
       <meta name="twitter: imag e" content={ogImage} /" >
       {/* Canonical URL */}"
       {canonical && <link rel="canonical" href={canonical} /" >}, {/* Structured Data */}';
@@ -467,7 +461,6 @@ export default SEOEnhancer;""
       <meta httpEquiv=&quot;X-Frame-Options&quot; content=&quot;DENY&quot;   />&quot;
       <meta httpEquiv=&quot;X-XSS-Protection&quot; content=&quot;1; mode=block&quot;   />&quot;
     </Head>;
-=======
     </Head>
   );
 };';

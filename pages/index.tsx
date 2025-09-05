@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award } from 'lucide-react';
+import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Cpu, Star, Phone, Mail, MapPin } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const stats = [
@@ -15,24 +15,57 @@ const stats = [
 const services = [
   {
     title: 'AI Services',
-    description: 'Cutting-edge artificial intelligence solutions',
+    description: '20+ cutting-edge AI solutions including machine learning, computer vision, NLP, and quantum AI',
     icon: Brain,
     link: '/ai-services',
-    color: 'from-blue-500 to-purple-600'
+    color: 'from-blue-500 to-purple-600',
+    stats: '20+ AI Solutions',
+    pricing: 'Starting at $1,800/month'
   },
   {
     title: 'IT Services',
-    description: 'Comprehensive IT solutions and support',
+    description: '25+ comprehensive IT services from cloud infrastructure to quantum computing and 6G networks',
     icon: Network,
     link: '/it-services',
-    color: 'from-green-500 to-blue-600'
+    color: 'from-green-500 to-blue-600',
+    stats: '25+ IT Services',
+    pricing: 'Starting at $1,999/month'
   },
   {
     title: 'Micro SAAS',
-    description: 'Innovative micro software solutions',
+    description: '30+ innovative micro SaaS solutions for modern businesses across all industries',
     icon: Cloud,
     link: '/micro-saas',
-    color: 'from-purple-500 to-pink-600'
+    color: 'from-purple-500 to-pink-600',
+    stats: '30+ SaaS Solutions',
+    pricing: 'Starting at $15/month'
+  },
+  {
+    title: 'Cloud Solutions',
+    description: 'Scalable cloud infrastructure, migration services, and DevOps automation',
+    icon: Globe,
+    link: '/cloud-solutions',
+    color: 'from-indigo-500 to-cyan-600',
+    stats: 'Multi-Cloud Support',
+    pricing: 'Starting at $1,800/month'
+  },
+  {
+    title: 'Cybersecurity',
+    description: 'Advanced security solutions with AI-powered threat detection and zero-trust architecture',
+    icon: Shield,
+    link: '/cybersecurity',
+    color: 'from-red-500 to-orange-600',
+    stats: '24/7 Protection',
+    pricing: 'Starting at $2,000/month'
+  },
+  {
+    title: 'Quantum Computing',
+    description: 'Next-generation quantum computing infrastructure and quantum AI solutions',
+    icon: Cpu,
+    link: '/quantum-computing',
+    color: 'from-violet-500 to-purple-600',
+    stats: 'Future Technology',
+    pricing: 'Starting at $19,999/month'
   }
 ];
 
@@ -149,20 +182,36 @@ export default function HomePage() {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 group"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
+                    <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+                      {service.stats}
+                    </span>
+                  </div>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <div className="flex justify-between items-center mb-6">
+                    <span className="text-lg font-bold text-green-600">{service.pricing}</span>
+                    <div className="flex items-center text-yellow-500">
+                      <Star className="w-4 h-4 fill-current" />
+                      <Star className="w-4 h-4 fill-current" />
+                      <Star className="w-4 h-4 fill-current" />
+                      <Star className="w-4 h-4 fill-current" />
+                      <Star className="w-4 h-4 fill-current" />
+                      <span className="ml-1 text-sm text-gray-600">(4.9/5)</span>
+                    </div>
+                  </div>
                   <Link
                     href={service.link}
                     className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold group-hover:translate-x-2 transition-transform duration-300"
@@ -209,6 +258,70 @@ export default function HomePage() {
                   <p className="text-gray-600">{feature.description}</p>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Information Section */}
+        <section className="py-20 bg-gray-100">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Get In Touch With Our Experts
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Ready to transform your business? Contact our team of experts for a free consultation and personalized solution.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="bg-white rounded-xl shadow-lg p-8 text-center"
+              >
+                <Phone className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>
+                <p className="text-gray-600 mb-4">Call us for immediate assistance</p>
+                <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-800 font-semibold text-lg">
+                  +1 302 464 0950
+                </a>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-white rounded-xl shadow-lg p-8 text-center"
+              >
+                <Mail className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
+                <p className="text-gray-600 mb-4">Send us a message anytime</p>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-800 font-semibold text-lg">
+                  kleber@ziontechgroup.com
+                </a>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="bg-white rounded-xl shadow-lg p-8 text-center"
+              >
+                <MapPin className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Address</h3>
+                <p className="text-gray-600 mb-4">Visit our headquarters</p>
+                <p className="text-gray-700 font-medium">
+                  364 E Main St STE 1008<br />
+                  Middletown DE 19709
+                </p>
+              </motion.div>
             </div>
           </div>
         </section>

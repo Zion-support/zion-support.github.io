@@ -277,7 +277,6 @@ export function Footer() {;
         </div>;
       </div>;
     </footer>;
-=======
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -305,7 +304,6 @@ import {
   FileText,
 import React, { useState } from 'react';
 import Link from 'next/link';
-=======
   TrendingUp,
   Briefcase,
   Newspaper,
@@ -454,7 +452,6 @@ import {
 
 export function Footer(props: any) {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['company']));
-=======
   Search,
   BarChart,
   Users2,
@@ -473,21 +470,17 @@ export default function Footer(props: any) {
     const handleScroll = (props: any) => {
   Facebook, 
   Instagram,
-=======
   Youtube,
   ArrowRight,
   Shield,
   Award,
   Users,
 import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
-=======
   Palette,
   ChevronDown
-=======
   DollarSign,
   ExternalLink
 } from 'lucide-react';
-=======
   Clock
 } from 'lucide-react';
 
@@ -619,9 +612,7 @@ const Footer = () => {
               <li><Link href="/support" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Support</Link></li>
               <li><Link href="/help" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Help Center</Link></li>
             </ul>
-=======
   // Scroll to top
-=======
       const scrollToTopButton = document.getElementById('scroll-to-top');
       if (scrollToTopButton) {
         if (window.pageYOffset > 300) {
@@ -811,7 +802,6 @@ const Footer = () => {
                 {socialLinks.map((link) => (
                   <motion.a
                     key={link.name}
-=======
           <div>
             <h4 className="text-lg font-semibold mb-6">Company</h4>
             <ul className="space-y-3">
@@ -858,7 +848,6 @@ const Footer = () => {
               <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl">
                 Subscribe
               </button>
-=======
         {/* Additional Links */}
         <div className="mt-8 pt-6 border-t border-gray-700">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-sm">
@@ -922,7 +911,6 @@ const Footer = () => {
     </footer>
   );
 }
-=======
   const footerSections = [
     {
       title: 'Company',
@@ -994,7 +982,6 @@ const Footer = () => {
     { icon: <Facebook className="w-5 h-5" />, url: "https://facebook.com/ziontechgroup", color: "hover:text-blue-400" },
     { icon: <Instagram className="w-5 h-5" />, url: "https://instagram.com/ziontechgroup", color: "hover:text-blue-400" },
     { icon: <Github className="w-5 h-5" />, url: "https://github.com/ziontechgroup", color: "hover:text-gray-400" }
-=======
 import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
 
 export function Footer(props: any) {
@@ -1003,7 +990,6 @@ export function Footer(props: any) {
     );
   };
 
-=======
   const footerSections = [
     {
       title: "Services",
@@ -1069,9 +1055,7 @@ export function Footer(props: any) {
     { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github }
   ];
 
-=======
   return (
-=======
               {socialLinks.map((social, index) => (
                 <a 
                   key={index}
@@ -1082,7 +1066,6 @@ export function Footer(props: any) {
                 >
                   {social.icon}
                 </a>
-=======
                     <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                     {link.name}
                   </Link>
@@ -1092,7 +1075,6 @@ export function Footer(props: any) {
           </div>
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
-=======
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
               <ul className="space-y-2">
@@ -1271,7 +1253,6 @@ export function Footer(props: any) {
       </div>
 
 export default Footer;
-=======
 
       {/* Scroll to Top Button */}
       <button
@@ -1329,8 +1310,6 @@ export default Footer;
               <span>© 2024 Zion Tech Group. Made with</span>
               <Heart className="w-4 h-4 text-red-500" />
               <span>for innovation.</span>
-=======
-=======
     <footer className="bg-gray-900 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -1529,12 +1508,9 @@ export default Footer;
                   </a>
                 </div>
               </div>
-=======
               
-=======
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}
-=======
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}
               <ul className="space-y-2">
@@ -1552,7 +1528,6 @@ export default Footer;
               </ul>
             </div>
           ))}
-=======
         </div>
 
         {/* Stats Section */}
@@ -1603,7 +1578,6 @@ export default Footer;
               <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors">
                 Cookie Policy
               </Link>
-=======
             <div className="flex items-center space-x-6 text-sm">
               <Link href="/sitemap" className="text-gray-400 hover:text-blue-400 transition-colors">Sitemap</Link>
               <Link href="/accessibility" className="text-gray-400 hover:text-blue-400 transition-colors">Accessibility</Link>
@@ -1611,7 +1585,6 @@ export default Footer;
             </div>
           </div>
         </div>
-=======
       </div>
 
       {/* Bottom Bar */}
@@ -1647,12 +1620,9 @@ export default Footer;
     </footer>
   );
 }
-=======
 }
 ;';;';
-=======
 }
-=======
 };
 
 export default Footer;

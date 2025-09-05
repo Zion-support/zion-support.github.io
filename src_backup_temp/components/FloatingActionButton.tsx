@@ -22,12 +22,10 @@ Plus,;
   Bookmark,;
   Download,;
   Printer';
-=======
   Bookmark,
   Download,
   Printer'
 } from 'lucide-react';
-=======
   "id": "string;
   "icon": React.ComponentType<{ size?: number; className?: string;
 "}>;
@@ -38,7 +36,6 @@ Plus,;
 ;
 interface FloatingActionButtonProps {;
   actions?: "FloatingAction[];
-=======
 
 interface FloatingAction {
 
@@ -69,7 +66,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
 }) => {;
   const [isExpanded, setIsExpanded] = useState<any>(false);
   const [showScrollButton, setShowScrollButton] = useState<any>(false);
-=======
 ;
 const "FloatingActionButton": React.FC<FloatingActionButtonProps> = ({;
   actions = []",: "any;
@@ -89,7 +85,6 @@ const "FloatingActionButton": React.FC<FloatingActionButtonProps> = ({;
   return () => {;
     // Cleanup function;
   "};
-=======
 
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
@@ -119,7 +114,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       ';
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange)} else {;
-=======
 }, []);, []);
 
     if(theme === 'auto') {
@@ -351,7 +345,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           window.print()},;
         color: 'bg-gray-500 hover: b g-gray-600',;
         priority: 'low' as const;
-=======
       {
 
         id: 'download',
@@ -426,7 +419,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 ;
   // Get position classes;
       case 'top-right':';
-=======
     setTimeout(() => {
 
       notification.classList.add('translate-x-full');
@@ -439,7 +431,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         return 'top-6 right-6';
       case 'top-left':'
         return 'top-6 left-6';
-=======
       default:'
         return 'bottom-6 right-6'}
   };
@@ -449,7 +440,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   };
                     "animationDelay": "`${index * 100"}}"ms`,;
                     "animation": 'slideInUp 0.3s ease-out forwards';
-=======
 
   return ()
     <>
@@ -478,7 +468,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
                     {action.label}
                   </span>
                 </div>) ) }
-=======
             </div>) }
 
           {/* Main Button */}
@@ -572,7 +561,6 @@ export default FloatingActionButton;
 </any>;
 </any>;
 </FloatingActionButtonProps>;
-=======
 
 </any>
 </FloatingActionButtonProps>

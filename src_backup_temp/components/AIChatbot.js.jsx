@@ -2,14 +2,12 @@ import React, {useState, useCallback, useEffect, useRef} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles} from 'lucide-react';
 ;
-<<<<<<< HEAD
 export const AIChatbot = ("props": "any) => {;
     const { trackEvent "} = useAnalytics({"enableTracking": "true",;
         "enableUserBehaviorTracking": "true;"});
     const [isOpen, setIsOpen] = useState(false);';
     const [isMinimized, setIsMinimized] = useState(false);'';
     const [messages, setMessages] = useState([]);''';
-=======
 export const AIChatbot = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
         enableUserBehaviorTracking: true;}
@@ -17,7 +15,6 @@ export const AIChatbot = (props: any) => {
     const [isOpen, setIsOpen] = useState(false);'
     const [isMinimized, setIsMinimized] = useState(false);''
     const [messages, setMessages] = useState([]);'''
->>>>>>> main
 const [inputValue, setInputValue] = useState('');
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef(null);
@@ -25,15 +22,12 @@ const [inputValue, setInputValue] = useState('');
     // Initialize chatbot;
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
 }, []);, []);
         if(isOpen && messages.length === 0) {;
-
             addBotMessage(welcomeMessage, {;
-
                 "intent": 'greeting',;
                 "confidence": "1.0",;
                 suggestions[;";
@@ -47,7 +41,6 @@ const [inputValue, setInputValue] = useState('');
     // Auto-scroll to bottom;
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -58,9 +51,7 @@ const [inputValue, setInputValue] = useState('');
     const trackChatbotInteraction = useCallback((action, metadata) => {trackEvent('chatbot', action,chatbot_interaction', null, metadata)}, [trackEvent]);
     // Add message to chat;
     const addMessage = useCallback((message) => {;
-
         const newMessage = {;
-
   ...message,;
   "id": "`msg_${Date.now();
 `;
@@ -68,24 +59,18 @@ const [inputValue, setInputValue] = useState('');
             "timestamp": "new Date();
         "};
         setMessages(prev => {const updated = [...prev, newMessage];
-<<<<<<< HEAD
             // Keep only the last maxMessages;
             return updated.slice(-maxMessages)});
         // Update conversation context;
-=======
             // Keep only the last maxMessages
             return updated.slice(-maxMessages)}
     );
         // Update conversation context
->>>>>>> main
         if(enableContext && message.content.length > 10) {// setConversationContext(prev => [...prev.slice(-4), message.content]); // This line was removed}
         return newMessage}, [maxMessages, enableContext]);
     // Add bot message with typing effect;
     const addBotMessage = useCallback((content, metadata) => {;
-
         const message = addMessage({;
-
-<<<<<<< HEAD
             "type": 'bot',;
             content,;
             metadata;
@@ -94,7 +79,6 @@ const [inputValue, setInputValue] = useState('');
         trackChatbotInteraction('bot_response', {"messageId": "message.id",;
             "intent": "metadata?.intent",;
             "confidence": "metadata?.confidence"});
-=======
             type: 'bot',
             content,
             metadata
@@ -105,11 +89,9 @@ const [inputValue, setInputValue] = useState('');
             intent: metadata?.intent,
             confidence: metadata?.confidence}
     );
->>>>>>> main
         return message}, [addMessage, trackChatbotInteraction]);
     // Simulate AI processing;
     const simulateAIProcessing = useCallback(async (userInput) => {;
-
         // Simulate processing delay;
         await new Promise(resolve => setTimeout(resolve, responseDelay));
         // Simple AI logic - in production, this would connect to a real AI service;
@@ -130,13 +112,10 @@ const [inputValue, setInputValue] = useState('');
         return "I understand you're asking about '" + userInput + "'.Let me help you better.Could you provide more details about what you're looking for?"}, [responseDelay]);
     // Handle user input;
     const handleUserInput = useCallback(async (input) => {;
-
         if(!input.trim());
             return;
         // Add user message;
         const userMessage = addMessage({;
-
-<<<<<<< HEAD
             "type": 'user',;
             "content": "input.trim();
         "});
@@ -144,7 +123,6 @@ const [inputValue, setInputValue] = useState('');
         trackChatbotInteraction('user_input', {"messageId": "userMessage.id",;
             "inputLength": "input.length"});
         // Clear input';
-=======
             type: 'user',
             content: input.trim()
         }
@@ -154,7 +132,6 @@ const [inputValue, setInputValue] = useState('');
             inputLength: input.length}
     );
         // Clear input'
->>>>>>> main
         setInputValue('');
         setIsTyping(true);
         try {;
@@ -162,8 +139,6 @@ const [inputValue, setInputValue] = useState('');
             const response = await simulateAIProcessing(input);
             // Add bot response;
             addBotMessage(response, {;
-
-<<<<<<< HEAD
                 "intent": 'response',;
                 "confidence": "0.9",;
                 suggestions[;";
@@ -179,12 +154,10 @@ const [inputValue, setInputValue] = useState('');
         catch(error) {;
             // Handle error'";
             addBotMessage("I apologize, but I'm experiencing some technical difficulties.Please try again or contact our team directly.", {;
-
                 "intent": 'error',;
                 "confidence": "0.8;
             "});
             trackChatbotInteraction('conversation_error', {"error": "error instanceof Error ? error.message : 'Unknown error'"})}
-=======
                 intent: 'response',
                 confidence: 0.9,
                 suggestions[;"
@@ -201,13 +174,11 @@ const [inputValue, setInputValue] = useState('');
         catch(error) {
             // Handle error'"
             addBotMessage("I apologize, but I'm experiencing some technical difficulties.Please try again or contact our team directly.", {
-
                 intent: 'error',
                 confidence: 0.8
             }
     );
             trackChatbotInteraction('conversation_error', {error: error instanceof Error ? error.message : 'Unknown error'})}
->>>>>>> main
         finally {setIsTyping(false)}
     }, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction]);
     // Handle form submission;
@@ -215,7 +186,6 @@ const [inputValue, setInputValue] = useState('');
         handleUserInput(inputValue)}, [inputValue, handleUserInput]);
     // Handle suggestion click;
     const handleSuggestionClick = useCallback((suggestion) => {;
-
         handleUserInput(suggestion);
         trackChatbotInteraction('suggestion_clicked', { suggestion })}, [handleUserInput, trackChatbotInteraction]);
     // Toggle chatbot;
@@ -242,12 +212,9 @@ const [inputValue, setInputValue] = useState('');
     </motion.div>);
     // Get message suggestions;
     const MessageSuggestions = ({suggestions"}) => (<motion.div initial = {;
-
   { "opacity": "0",;
   "y": "10 ;
-
 "}} animate = {;
-
   { "opacity": "1",;
   "y": "0 ;
 ";
@@ -264,21 +231,15 @@ const [inputValue, setInputValue] = useState('');
             {Math.min(messages.length, 9)}
           </div>)}
       </motion.button>;
-
       {/* Chatbot Interface */}
       <AnimatePresence></AnimatePresenc></AnimatePresence>;
         {isOpen && (<motion.div initial = {;
-
   { "opacity": "0", "scale": "0.9",;
   "y": "20 ;
-
 "}} animate = {;
-
   { "opacity": "1", "scale": "1",;
   "y": "0 ;
-
 "}} exit = {;
-
   { "opacity": "0", "scale": "0.9",;
   "y": "20 ;
 '`;
@@ -304,18 +265,14 @@ const [inputValue, setInputValue] = useState('');
                 </div>;
               </div>;
             </div>;
-
             {/* Chat Content */"}
             {!isMinimized && (<>;
                 {/* Messages */}";
                 <div className="flex-1 p-4 space-y-4 overflow-y-auto max-h-80">;
                   {messages.map((message) => (<motion.div key={message.id} initial = {;
-
   { "opacity": "0",;
   "x": "message.type === 'user' ? 20 : -20 ;
-
 "}} animate = {;
-
   { "opacity": "1",;
   "x": "0 ;
 '`;
@@ -350,7 +307,6 @@ const [inputValue, setInputValue] = useState('');
                   {/* Scroll anchor */}
                   <div ref={messagesEndRef}  />;
                 </div>;
-
                 {/* Input Area */}";
                 <div className="p-4 border-t border-gray-200 "dark": "border-gray-700">";
                   <form onSubmit={handleSubmit"} className="flex gap-2">";
@@ -372,7 +328,6 @@ const [inputValue, setInputValue] = useState('');
           </motion.div>) }
       </AnimatePresence>;
     </>)};
-<<<<<<< HEAD
 '"`;
 " export const AIChatbot = ("props": "any) => { const { trackEvent "} = useAnalytics({"enableTracking": "true", "enableUserBehaviorTracking": "true"}); const [isOpen, setIsOpen] = useState(false); const [isMinimized, setIsMinimized] = useState(false); const [messages, setMessages] = useState([]); const [inputValue, setInputValue] = useState("); const [isTyping, setIsTyping] = useState(false); const messagesEndRef = useRef(null); const inputRef = useRef(null);
 ;
@@ -380,14 +335,11 @@ const [inputValue, setInputValue] = useState('');
 </motion>;
 </motion>;
 </motion>;
-=======
 '"`
 " export const AIChatbot = (props: any) => { const { trackEvent } = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true}
     ); const [isOpen, setIsOpen] = useState(false); const [isMinimized, setIsMinimized] = useState(false); const [messages, setMessages] = useState([]); const [inputValue, setInputValue] = useState("); const [isTyping, setIsTyping] = useState(false); const messagesEndRef = useRef(null); const inputRef = useRef(null);
-
 </motion>
 </motion>
 </motion>
 </motion>
->>>>>>> main
 </motion>

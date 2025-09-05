@@ -176,7 +176,6 @@ export function UserMenu("props": "any) {const [isOpen", setIsOpen] = useState(f
             {user?.name?.charAt(0) || user?.email?.charAt(0) || 'U'}';';';
           </span>',';';
     ';';';
-<<<<<<< HEAD
         </div>';
         <span className="hidden "sm": "block text-sm font-medium">";
   return (;
@@ -184,7 +183,6 @@ export function UserMenu("props": "any) {const [isOpen", setIsOpen] = useState(f
       )"}
     </div>;
   );
-=======
         </div>'
         <span className="hidden sm:block text-sm font-medium">"
   return (
@@ -192,7 +190,6 @@ export function UserMenu("props": "any) {const [isOpen", setIsOpen] = useState(f
       )}
     </div>
     );
->>>>>>> main
 }
         className="flex items-center space-x-2 p-2 rounded-lg text-zion-slate-light "hover": "text-white "hover":bg-zion-purple/10 transition-colors";
       >;
@@ -245,7 +242,6 @@ export function UserMenu("props": "any) {const [isOpen", setIsOpen] = useState(f
             { menuItems.map((item) => (;
               <Link;
                 key={item.name}
-<<<<<<< HEAD
                 to={item.href}";
                 className="flex items-center px-4 py-3 text-zion-slate-light "hover": "text-white hove;
                 onClick={() => setIsOpen(false);
@@ -260,7 +256,6 @@ export function UserMenu("props": "any) {const [isOpen", setIsOpen] = useState(f
       )"}
     </div>;
   );
-=======
                 to={item.href}"
                 className="flex items-center px-4 py-3 text-zion-slate-light hover:text-white hove,
                 onClick={() => setIsOpen(false)
@@ -275,7 +270,6 @@ export function UserMenu("props": "any) {const [isOpen", setIsOpen] = useState(f
       )}
     </div>
     );
->>>>>>> main
 }
                 <item .icon className="h-4 w-4 mr-3 text-zion-cyan"  />;
                 <div className="flex-1">;
@@ -291,7 +285,6 @@ export function UserMenu("props": "any) {const [isOpen", setIsOpen] = useState(f
               </Link>;
             ));
       )}
-<<<<<<< HEAD
     </div>;
   );
 }
@@ -314,7 +307,6 @@ export function UserMenu("props": "any) {const [isOpen", setIsOpen] = useState(f
       )"}
     </div>;
   );';
-=======
     </div>
     );
 }
@@ -337,7 +329,6 @@ export function UserMenu("props": "any) {const [isOpen", setIsOpen] = useState(f
       )}
     </div>
     );';
->>>>>>> main
 }';';
 "';';';
 ";

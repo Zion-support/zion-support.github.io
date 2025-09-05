@@ -1,8 +1,2 @@
-<<<<<<< HEAD
 '\"export\": function KanbanColumn({ id,title,description,applications,count }) {\''\'";\";
-=======
-<<<<<<< HEAD
 "export: function KanbanColumn({ id,title,description,applications,count }) {"""";";'"'"
-=======
->>>>>>> main
->>>>>>> main

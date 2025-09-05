@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // cartUtils utility;
 export const cartUtils = {;
   // Placeholder utility functions;
@@ -6,13 +5,7 @@ export const cartUtils = {;
   "}
 }
 export default cartUtils;
-=======
-<<<<<<< HEAD
 export const cartUtils = { init: function() { } }; export default cartUtils;
-=======
-<<<<<<< HEAD
-
-=======
 // cartUtils utility,
 export const cartUtils = {
   // Placeholder utility functions,
@@ -21,6 +14,3 @@ export const cartUtils = {
 };
 export default cartUtils;
 export const cartUtils = { init: function() { } }; export default cartUtils;
->>>>>>> main
->>>>>>> main
->>>>>>> main

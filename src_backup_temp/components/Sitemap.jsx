@@ -1,11 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 export default Sitemap;
 ;
-=======
-
-<<<<<<< HEAD
->>>>>>> main
 import {Link} from 'react-router-dom';
 export default function Page("props": "any) {;
 ",;
@@ -46,7 +41,6 @@ export default function Page("props": "any) {;
             {"path": '/terms', "label": 'Terms of Service', "description": 'Terms and conditions of service'}
         ];
     };
-<<<<<<< HEAD
     return (<div className="bg-slate-50 py-16">";
       <div className="max-w-7xl mx-auto px-4 "sm": "px-6 "lg":px-8">";
         <div className="text-center mb-12">";
@@ -112,7 +106,6 @@ export default function Page("props": "any) {;
 <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 "xl":grid-cols-4 gap-4">';
             {['';
             'AI Autonomous Audit'", AI Autonomous Compliance',AI Autonomous Creativity', AI Autonomous Customer Service',AI Autonomous Database Security', AI Autonomous Decision Engine',AI Autonomous Design', AI Autonomous DevOps',AI Autonomous Edge Security', AI Autonomous Education',AI Autonomous Finance', AI Autonomous Forensics',AI Autonomous Governance', AI Autonomous Healthcare',AI Autonomous Hybrid Security', AI Autonomous Identity Security',AI Autonomous Incident Response', AI Autonomous Infrastructure Security',AI Autonomous Invention', AI Autonomous IoT Security',AI Autonomous Learning', AI Autonomous Legal Counsel',AI Autonomous Logistics', AI Autonomous Malware Analysis',AI Autonomous Management', AI Autonomous Manufacturing',AI Autonomous Marketing', AI Autonomous Microservice Security',AI Autonomous Mobile Security', AI Autonomous Monitoring',AI Autonomous Network Security', AI Autonomous Optimization',AI Autonomous Orchestration', AI Autonomous Penetration Testing',AI Autonomous Planning', AI Autonomous Prediction',AI Autonomous Quality Assurance', AI Autonomous Reasoning',AI Autonomous Recommendation', AI Autonomous Risk Management',AI Autonomous Robotics', AI Autonomous Scientific Research',AI Autonomous Serverless Security', AI Autonomous Software Engineering',AI Autonomous Speech', AI Autonomous Synthesis',AI Autonomous Systems Platform', AI Autonomous Testing',AI Autonomous Threat Detection', AI Autonomous Threat Intelligence',AI Autonomous Trading', AI Autonomous Translation',AI Autonomous Virtual Assistant', AI Autonomous Vision',AI Autonomous Vulnerability Assessment', AI Autonomous Web Security',AI Autonomous Workflow', AI Autonomous Writing',AI Autonomous Zero Trust Security';
-=======
     return (
         <div className="bg-slate-50 py-16">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -134,7 +127,6 @@ export default function Page("props": "any) {;
                     <div className="text-sm text-slate-600">{item.description}</div>
                   </Link>
                 </li>) ) }
-
             </ul>"
           </div>""
           {/* comment */}"""""
@@ -179,7 +171,6 @@ export default function Page("props": "any) {;
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">'
             {[''
             'AI Autonomous Audit', AI Autonomous Compliance',AI Autonomous Creativity', AI Autonomous Customer Service',AI Autonomous Database Security', AI Autonomous Decision Engine',AI Autonomous Design', AI Autonomous DevOps',AI Autonomous Edge Security', AI Autonomous Education',AI Autonomous Finance', AI Autonomous Forensics',AI Autonomous Governance', AI Autonomous Healthcare',AI Autonomous Hybrid Security', AI Autonomous Identity Security',AI Autonomous Incident Response', AI Autonomous Infrastructure Security',AI Autonomous Invention', AI Autonomous IoT Security',AI Autonomous Learning', AI Autonomous Legal Counsel',AI Autonomous Logistics', AI Autonomous Malware Analysis',AI Autonomous Management', AI Autonomous Manufacturing',AI Autonomous Marketing', AI Autonomous Microservice Security',AI Autonomous Mobile Security', AI Autonomous Monitoring',AI Autonomous Network Security', AI Autonomous Optimization',AI Autonomous Orchestration', AI Autonomous Penetration Testing',AI Autonomous Planning', AI Autonomous Prediction',AI Autonomous Quality Assurance', AI Autonomous Reasoning',AI Autonomous Recommendation', AI Autonomous Risk Management',AI Autonomous Robotics', AI Autonomous Scientific Research',AI Autonomous Serverless Security', AI Autonomous Software Engineering',AI Autonomous Speech', AI Autonomous Synthesis',AI Autonomous Systems Platform', AI Autonomous Testing',AI Autonomous Threat Detection', AI Autonomous Threat Intelligence',AI Autonomous Trading', AI Autonomous Translation',AI Autonomous Virtual Assistant', AI Autonomous Vision',AI Autonomous Vulnerability Assessment', AI Autonomous Web Security',AI Autonomous Workflow', AI Autonomous Writing',AI Autonomous Zero Trust Security'
->>>>>>> main
         ].map((service) => {}
 '""";
             const path = '/' + service.toLowerCase().replace(/\s+/g,-').replace(/ai-autonomous-/,ai-autonomous-');"""";
@@ -201,25 +192,20 @@ export {Sitemap};
 export {Sitemap};
 ;
 export {Page, Sitemap};
-<<<<<<< HEAD
 ;
 </li>;
 </li>;
 </li>;
 </div>;
 </div>
-=======
-
 </li>
 </li>
 </li>
 </div>
 </div>
-=======
 interface Sitemap.jsProps {
   // Add props here as needed
 }
-
 export default function Sitemap.js({ }: Sitemap.jsProps) {
   return (
     <div>
@@ -228,5 +214,3 @@ export default function Sitemap.js({ }: Sitemap.jsProps) {
     </div>
   );
 }
->>>>>>> main
->>>>>>> main

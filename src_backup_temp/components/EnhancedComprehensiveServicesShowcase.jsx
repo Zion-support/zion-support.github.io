@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, {useState} from 'react';'''';';
 import {innovativeServices2025} from '../data/innovativeServices2025';'''';';
 import {ULTIMATE_INNOVATIVE_SERVICES_2027} from '../data/ultimateInnovativeServices2027';'''';';
-=======
 import React, {useState} from 'react';'''
 import {innovativeServices2025} from '../data/innovativeServices2025';'''
 import {ULTIMATE_INNOVATIVE_SERVICES_2027} from '../data/ultimateInnovativeServices2027';'''
->>>>>>> main
 import {motion} from 'framer-motion';
 import {}
   Brain,
@@ -17,7 +13,6 @@ import {}
   Zap,
   Atom,
   TrendingUp,
-<<<<<<< HEAD
   Star,';
   ArrowRight,';';
   CheckCircle,'';';
@@ -30,7 +25,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}';';
 ''';';
 '''';';
   const [activeCategory, setActiveCategory] = useState('all');'''';';
-=======
 import React, {useState} from 'react';
 import {innovativeServices2025} from '../data/innovativeServices2025';
 import {ULTIMATE_INNOVATIVE_SERVICES_2027} from '../data/ultimateInnovativeServices2027';
@@ -48,42 +42,28 @@ import {}
   CheckCircle,';
   Phone,'';
   Mail,''';
-=======
   Star,
   ArrowRight,
   CheckCircle,'
   Phone,''
   Mail,'''
->>>>>>> main
   MapPin} from 'lucide-react';
-<<<<<<< HEAD
 ;
 const EnhancedComprehensiveServicesShowcase = ("props": "any) => {"}
 ';
 '';
 ''';
   const [activeCategory, setActiveCategory] = useState('all');''';
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-=======
-
 const EnhancedComprehensiveServicesShowcase = (props: any) => {}
 '
 ''
 '''
   const [activeCategory, setActiveCategory] = useState('all');'''
->>>>>>> main
->>>>>>> main
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState(null);
-
   // Transform services for the showcase;
   const transformedServices = []
     ...innovativeServices2025.map(service => ({}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       ...service,;
       "category": "service.category",;
       "price": "service.price",;
@@ -104,8 +84,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
       "icon": "service.icon || '🚀'",';
       "color": "service.color || 'from-purple-600 to-indigo-700'",';
       "badge": "service.badge || 'New'"}));
-=======
->>>>>>> main
       ...service,
       category: service.category,
       price: service.price,
@@ -114,7 +92,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
       benefits: service.benefits,
       icon: service.icon,
       color: service.color,
-<<<<<<< HEAD
       badge: service.badge})),';
     ...ULTIMATE_INNOVATIVE_SERVICES_2027.map(service => ({}';';
       ...service,'';';
@@ -127,7 +104,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
       icon: service.icon || '🚀','';';
       color: service.color || 'from-purple-600 to-indigo-700','';';
       badge: service.badge || 'New'}))
-=======
       ...service,;
       category: service.category,;
       price: service.price,;
@@ -148,8 +124,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
       icon: service.icon || '🚀',';
       color: service.color || 'from-purple-600 to-indigo-700',';
       badge: service.badge || 'New'}));
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
       badge: service.badge})),
     ...ULTIMATE_INNOVATIVE_SERVICES_2027.map(service => ({}
       ...service,'
@@ -162,20 +136,14 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
       icon: service.icon || '🚀','
       color: service.color || 'from-purple-600 to-indigo-700','
       badge: service.badge || 'New'}))
->>>>>>> main
->>>>>>> main
   ];
-
   const filteredServices = transformedServices.filter(service => {}
     const matchesSearch =
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
-<<<<<<< HEAD
   });
-<<<<<<< HEAD
-
   const serviceCategories = []';
     {}';';
 '';';
@@ -256,23 +224,18 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
       id: 'Digital Transformation','''';';
       name: 'Digital Transformation','''';';
       count: transformedServices.filter(s => s.category.includes('Digital'))
-=======
 ;
   const serviceCategories = [];
-=======
   }
     );
-
   const serviceCategories = []
     {}
-<<<<<<< HEAD
 ';
 '';
 ''';
       "id": 'AI & Innovation Services',''';
       "name": 'AI & Innovation Services',;
       "count": "innovativeServices2025.length"},;
->>>>>>> main
     {}
 ';
 '';
@@ -342,17 +305,13 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
 ';
 '';
 ''';
-<<<<<<< HEAD
       id: 'Digital Transformation',''';
       name: 'Digital Transformation',''';
       count: transformedServices.filter(s => s.category.includes('Digital'));
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
       "id": 'Digital Transformation',''';
       "name": 'Digital Transformation',''';
       "count": "transformedServices.filter(s => s.category.includes('Digital'));
         .length"}
-=======
 '
 ''
 '''
@@ -431,15 +390,11 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
       id: 'Digital Transformation','''
       name: 'Digital Transformation','''
       count: transformedServices.filter(s => s.category.includes('Digital'))
->>>>>>> main
         .length}
->>>>>>> main
   ];
-
   const handleServiceClick = service => {}
     setSelectedService(service);
   };
-<<<<<<< HEAD
 ;
   const closeModal = ("props": "any) => {"}
     setSelectedService(null);
@@ -454,26 +409,17 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
             Zion Tech Group"""";
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">';
               {' '"}
-=======
-
   const closeModal = (props: any) => {}
     setSelectedService(null);
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"""
       {/* Header Section */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto text-center">""""
-<<<<<<< HEAD
           <h1 className="text-4xl md:text-6xl font-bold mb-6">"""';
             Zion Tech Group""""';';
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'';';
-=======
 ;
   return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">""";
@@ -483,14 +429,10 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
           <h1 className="text-4xl md:text-6xl font-bold mb-6">""";
             Zion Tech Group"""";
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
           <h1 className="text-4xl md:text-6xl font-bold mb-6">"""
             Zion Tech Group""""
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
->>>>>>> main
               {' '}
->>>>>>> main
               Innovative Services 2025;
             </span>"""
           </h1>""""
@@ -498,7 +440,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
             Discover our cutting-edge portfolio of micro SAAS solutions, IT;
             services, and AI-powered innovations designed to transform your;
             business and drive competitive advantage in the digital age;
-<<<<<<< HEAD
           </p>;
 """;
           {/* Key Statistics */}"""";
@@ -554,7 +495,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
           {/* Category Filter */}"""";
           <div className="flex flex-wrap justify-center gap-4 mb-12">;
             {serviceCategories.map(category => (;
-=======
           </p>
 """
           {/* Key Statistics */}""""
@@ -610,11 +550,8 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
           {/* Category Filter */}""""
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {serviceCategories.map(category => (
->>>>>>> main
               <button;
                 key={category.id}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 onClick={() => setActiveCategory(category.id)}';
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${}';';
 '';';
@@ -623,25 +560,17 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
                   activeCategory === category.id'''`'`';';
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'''`'`'`';';
                     : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'````
-=======
-=======
->>>>>>> main
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${}
-<<<<<<< HEAD
 ';
 '';
 '''`;
                   activeCategory === category.id'''`'`;
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'''`'`'`;
-<<<<<<< HEAD
                     : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'````;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                 }`}
-=======
                     : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 "hover": "bg-white/20'````;
                 "}`}
->>>>>>> main
               >;
                 {category.name} ({category.count});
               </button>;
@@ -665,7 +594,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
                   {service.name}""";
                 """";
                 <p className="text-gray-300 mb-4 line-clamp-3">;
-=======
 '
 ''
 '''`
@@ -696,21 +624,14 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
                   {service.name}"""
                 """"
                 <p className="text-gray-300 mb-4 line-clamp-3">
->>>>>>> main
                   {service.description}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
                 </p>"""
 """"
                 <div className="flex items-center justify-between mb-4">""""
                   <span className="px-3 py-1 bg-white/10 rounded-full text-sm text-white">
-<<<<<<< HEAD
                     {service.category}"""';
                   </span>""""';';
                   <span className="text-lg font-bold text-blue-400">'';';
-=======
                 </p>""";
 """";
                 <div className="flex items-center justify-between mb-4">"""";
@@ -718,12 +639,9 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
                     {service.category}""";
                   </span>"""";
                   <span className="text-lg font-bold text-blue-400">';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
                     {service.category}"""
                   </span>""""
                   <span className="text-lg font-bold text-blue-400">'
->>>>>>> main
                     ${service.displayPrice?.toLocaleString() || 'Contact Us'}
                   </span>
                 </div>"""
@@ -737,7 +655,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
                       {tag}
                     </span>
                   ))}
-<<<<<<< HEAD
                 </div>""";
 """";
                 <div className="text-sm text-gray-400">"""";
@@ -773,7 +690,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
               """";
               <p className="text-gray-300">;
                 We stay ahead of technology trends", offering the latest AI,;
-=======
                 </div>"""
 """"
                 <div className="text-sm text-gray-400">""""
@@ -809,7 +725,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
               """"
               <p className="text-gray-300">
                 We stay ahead of technology trends, offering the latest AI,
->>>>>>> main
                 quantum computing, and emerging tech solutions;
               </p>
             </div>"""
@@ -833,9 +748,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
               <p className="text-gray-300">
                 Built with security, scalability, and compliance in mind for;
                 enterprise-level reliability;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
               </p>;
             </div>;
           </div>;
@@ -872,8 +784,6 @@ export default EnhancedComprehensiveServicesShowcase;
 ;
 export {EnhancedComprehensiveServicesShowcase"};
 ;
-=======
->>>>>>> main
               </p>
             </div>
           </div>
@@ -884,11 +794,9 @@ export {EnhancedComprehensiveServicesShowcase"};
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">""""
         <div className="max-w-4xl mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
             Ready to Transform Your Business?"""';
           </h2>""""';';
           <p className="text-xl text-gray-300 mb-8">'';';
-=======
               </p>;
             </div>;
           </div>;
@@ -902,12 +810,9 @@ export {EnhancedComprehensiveServicesShowcase"};
             Ready to Transform Your Business?""";
           </h2>"""";
           <p className="text-xl text-gray-300 mb-8">';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
             Ready to Transform Your Business?"""
           </h2>""""
           <p className="text-xl text-gray-300 mb-8">'
->>>>>>> main
             Let's discuss how our innovative services can help drive your;
             digital transformation and competitive advantage"""
           </p>""""
@@ -923,7 +828,6 @@ export {EnhancedComprehensiveServicesShowcase"};
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"""
             >
               Call Us: +1 302 464 0950;
-<<<<<<< HEAD
             </a>;
           </div>;
         </div>;
@@ -939,34 +843,20 @@ export {EnhancedComprehensiveServicesShowcase};
 export {EnhancedComprehensiveServicesShowcase};
 ;
 export {EnhancedComprehensiveServicesShowcase};
-<<<<<<< HEAD
-
 </path>';
 </div>;';;';
-=======
 ;
 </path>;
 </div>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
             </a>
           </div>
         </div>
       </section>
-
 export default EnhancedComprehensiveServicesShowcase;
-
 export {EnhancedComprehensiveServicesShowcase};
-
->>>>>>> main
 export {EnhancedComprehensiveServicesShowcase};
-
 export {EnhancedComprehensiveServicesShowcase};
-
 export {EnhancedComprehensiveServicesShowcase};
-
 export {EnhancedComprehensiveServicesShowcase};
-
 </path>
 </div>
->>>>>>> main

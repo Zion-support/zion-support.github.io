@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, {useState} from 'react';'''';';
 import {Link, useLocation} from 'react-router-dom';'''';';
 import {Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown} from 'lucide-react';
@@ -38,38 +36,31 @@ const Navigation = (props: any) => {}
             services[;'';';
                 {name: 'Healthcare IT', href: '/comprehensive-services#healthcare-it-solutions'},'';';
                 {name: 'FinTech Solutions', href: '/comprehensive-services#fintech-solutions-pro'},'';';
-=======
 import React, {useState} from 'react';
 import {Link, useLocation} from 'react-router-dom';
 import {Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown} from 'lucide-react';
 const Navigation = (props: any) => {}
-=======
 import React, {useState} from 'react';'''
 import {Link, useLocation} from 'react-router-dom';'''
 import {Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown} from 'lucide-react';
 const Navigation = ("props": "any) => {"}
->>>>>>> main
     const [isOpen, setIsOpen] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
-<<<<<<< HEAD
     const location = useLocation();';
     const navigationItems = ['';
         {"name": 'Home', "href": '/', "icon": "Globe"}, '';
         {"name": 'Micro SAAS Services', "href": '/micro-saas-services', "icon": "Zap"}, '';
         {"name": 'Comprehensive Services', "href": '/comprehensive-services', "icon": "Brain"}, '';
         {"name": 'Pricing', "href": '/pricing', "icon": "Building"}
-=======
     const location = useLocation();'
     const navigationItems = [''
         {name: 'Home', href: '/', icon: Globe}, ''
         {name: 'Micro SAAS Services', href: '/micro-saas-services', icon: Zap}, ''
         {name: 'Comprehensive Services', href: '/comprehensive-services', icon: Brain}, ''
         {name: 'Pricing', href: '/pricing', icon: Building}
->>>>>>> main
     ];
     const serviceCategories = []
         {}
-<<<<<<< HEAD
 ';
             "name": 'AI & Machine Learning',;
             services[;';
@@ -91,21 +82,17 @@ const Navigation = ("props": "any) => {"}
 ';
             "name": 'Industry Solutions',;
             services[;';
-<<<<<<< HEAD
                 {name: 'Healthcare IT', href: '/comprehensive-services#healthcare-it-solutions'},';
                 {name: 'FinTech Solutions', href: '/comprehensive-services#fintech-solutions-pro'},';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                 {name: 'GreenTech Analytics', href: '/comprehensive-services#greentech-analytics'}
             ];
         }
-<<<<<<< HEAD
     ];';
     const isActive = (props: any) => {}';';
 ''';';
         if (href === '/') {}';';
 ''';';
 ''''';';
-=======
                 {"name": 'Healthcare IT', "href": '/comprehensive-services#healthcare-it-solutions'},';
                 {"name": 'FinTech Solutions', "href": '/comprehensive-services#fintech-solutions-pro'},';
                 {"name": 'GreenTech Analytics', "href": '/comprehensive-services#greentech-analytics'}
@@ -114,7 +101,6 @@ const Navigation = ("props": "any) => {"}
     ];
     const isActive = ("props": "any) => {"}
 '';
-=======
 '
             name: 'AI & Machine Learning',
             services[;'
@@ -144,15 +130,12 @@ const Navigation = ("props": "any) => {"}
     ];
     const isActive = (props: any) => {}
 ''
->>>>>>> main
         if (href === '/') {}
 ''
 ''
 ''''
->>>>>>> main
             return location.pathname === '/'}
         return location.pathname.startsWith(href)};
-<<<<<<< HEAD
     return (<nav className="bg-zion-blue-dark/95 backdrop-blur-sm border-b border-zion-blue-light/30 fixed top-0 left-0 right-0 z-50">"""";
       <div className="container mx-auto px-4 "sm": "px-6 "lg":px-8">"""";
         <div className="flex justify-between items-center h-16">""";
@@ -192,7 +175,6 @@ const Navigation = ("props": "any) => {"}
                           <h3 className="text-sm font-semibold text-zion-cyan">{category.name}"""";
                           <div className="space-y-1">"""";
                             {category.services.map((service) => (<Link key={service.name} to={service.href} className="block px-3 py-2 text-sm text-zion-slate-light "hover": "text-white "hover":bg-white/10 rounded-lg transition-colors" onClick={() => setIsServicesOpen(false)"}>;
-=======
     return (<nav className="bg-zion-blue-dark/95 backdrop-blur-sm border-b border-zion-blue-light/30 fixed top-0 left-0 right-0 z-50">""""
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">""""
         <div className="flex justify-between items-center h-16">"""
@@ -232,8 +214,6 @@ const Navigation = ("props": "any) => {"}
                           <h3 className="text-sm font-semibold text-zion-cyan">{category.name}""""
                           <div className="space-y-1">""""
                             {category.services.map((service) => (<Link key={service.name} to={service.href} className="block px-3 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-white/10 rounded-lg transition-colors" onClick={() => setIsServicesOpen(false)}>
-<<<<<<< HEAD
-=======
     ];
     const isActive = (props: any) => {}
 '';
@@ -254,8 +234,6 @@ const Navigation = ("props": "any) => {"}
               </div>"""";
               <span className="text-xl font-bold text-white">Zion Tech Group</span>;
             </Link>;
-=======
->>>>>>> main
                                 {service.name}
                               </Link>) )
       )}
@@ -271,7 +249,6 @@ const Navigation = ("props": "any) => {"}
                     </div>
                   </div>
                 </div>) }
-<<<<<<< HEAD
             </div>;
 """;
             {/* Contact Button */}"""";
@@ -279,7 +256,6 @@ const Navigation = ("props": "any) => {"}
               <Phone className="w-4 h-4" />;
               <span>Contact Us</span>;
             </a>;
->>>>>>> main
           </div>;
 """;
           {/* Mobile menu button */"}"""";
@@ -304,7 +280,6 @@ const Navigation = ("props": "any) => {"}
                   <span>{item.name}</span>;
                 </Link>) }) }
 """;
-<<<<<<< HEAD
             {/* Services Dropdown */}"""";
             <div className="relative">"""";
               <button onClick={() => setIsServicesOpen(!isServicesOpen)} className="flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium text-zion-slate-light hover:text-white hover:bg-white/10 transition-colors">"""";
@@ -320,7 +295,6 @@ const Navigation = ("props": "any) => {"}
                           <h3 className="text-sm font-semibold text-zion-cyan">{category.name}"""";
                           <div className="space-y-1">"""";
                             {category.services.map((service) => (<Link key={service.name} to={service.href} className="block px-3 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-white/10 rounded-lg transition-colors" onClick={() => setIsServicesOpen(false)}>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                                 {service.name}
                               </Link>) );
       )}
@@ -333,13 +307,11 @@ const Navigation = ("props": "any) => {"}
     </div>;
   );
 }
-<<<<<<< HEAD
                     </div>
                   </div>
                     </div>
   );
 }
-=======
             {/* Mobile Services */}"""";
             <div className="px-3 py-2">"""";
               <h3 className="text-sm font-semibold text-zion-cyan mb-2">Service Categories"""";
@@ -348,8 +320,6 @@ const Navigation = ("props": "any) => {"}
                     <h4 className="text-sm font-medium text-white mb-1">{category.name}</h4>"""";
                     <div className="space-y-1">"""";
                       {category.services.map((service) => (<Link key={service.name} to={service.href} className="block px-3 py-1 text-sm text-zion-slate-light "hover": "text-white rounded transition-colors" onClick={() => setIsOpen(false)"}>;
-=======
->>>>>>> main
             </div>
 """
             {/* Contact Button */}""""
@@ -362,8 +332,6 @@ const Navigation = ("props": "any) => {"}
           {/* Mobile menu button */}""""
           <div className="lg:hidden">""""
             <button onClick={() => setIsOpen(!isOpen)} className="text-zion-slate-light hover:text-white focus:outline-none focus:text-white">""""
-<<<<<<< HEAD
-=======
                     </div>;
                   </div>;
                 </div>) }
@@ -379,9 +347,6 @@ const Navigation = ("props": "any) => {"}
           {/* Mobile menu button */}"""";
           <div className="lg:hidden">"""";
             <button onClick={() => setIsOpen(!isOpen)} className="text-zion-slate-light hover:text-white focus:outline-none focus:text-white">"""";
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -392,8 +357,6 @@ const Navigation = ("props": "any) => {"}
       {isOpen && (<div className="lg:hidden">""""
           <div className="px-2 pt-2 pb-3 space-y-1 bg-zion-blue-dark border-t border-zion-blue-light/30">
             {navigationItems.map((item) => {}
-<<<<<<< HEAD
-<<<<<<< HEAD
 `';
                 const Icon = item.icon;``';';
                 return (<Link key={item.name} to={item.href} className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-base font-medium transition-colors ${isActive(item.href)'`';';
@@ -401,7 +364,6 @@ const Navigation = ("props": "any) => {"}
                         : 'text-zion-slate-light hover:text-white hover:bg-white/10'}`} onClick={() => setIsOpen(false)}>""""
                   <Icon className="w-5 h-5" />
                   <span>{item.name}</span>
-=======
 `;
                 const Icon = item.icon;``;
                 return (<Link key={item.name} to={item.href} className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-base font-medium transition-colors ${isActive(item.href)'`;
@@ -409,8 +371,6 @@ const Navigation = ("props": "any) => {"}
                         : 'text-zion-slate-light hover:text-white hover:bg-white/10'}`} onClick={() => setIsOpen(false)}>"""";
                   <Icon className="w-5 h-5" />;
                   <span>{item.name}</span>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 `
                 const Icon = item.icon;``
                 return (<Link key={item.name} to={item.href} className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-base font-medium transition-colors ${isActive(item.href)'`
@@ -418,7 +378,6 @@ const Navigation = ("props": "any) => {"}
                         : 'text-zion-slate-light hover:text-white hover:bg-white/10'}`} onClick={() => setIsOpen(false)}>""""
                   <Icon className="w-5 h-5" />
                   <span>{item.name}</span>
->>>>>>> main
                 </Link>) }) }
 """
             {/* Mobile Services */}""""
@@ -429,7 +388,6 @@ const Navigation = ("props": "any) => {"}
                     <h4 className="text-sm font-medium text-white mb-1">{category.name}</h4>""""
                     <div className="space-y-1">""""
                       {category.services.map((service) => (<Link key={service.name} to={service.href} className="block px-3 py-1 text-sm text-zion-slate-light hover:text-white rounded transition-colors" onClick={() => setIsOpen(false)}>
->>>>>>> main
                           {service.name}
                         </Link>) )
       )}
@@ -438,7 +396,6 @@ const Navigation = ("props": "any) => {"}
 }
                     </div>
                   </div>) ) }
-<<<<<<< HEAD
               </div>;
             </div>;
 """;
@@ -454,7 +411,6 @@ const Navigation = ("props": "any) => {"}
       )"}
     </div>;
   );
-=======
               </div>
             </div>
 """
@@ -470,11 +426,9 @@ const Navigation = ("props": "any) => {"}
       )}
     </div>
     );
->>>>>>> main
 }
     </nav>)};
 export default Navigation;
-<<<<<<< HEAD
 ;
 export {Navigation, Icon, Icon};
 ;
@@ -483,24 +437,13 @@ export {Navigation, Icon, Icon};
 export {Navigation, Icon, Icon};
 ;
 export {Navigation, Icon, Icon};
-<<<<<<< HEAD
-
 export {Navigation, Icon, Icon};';
 ;';;';
-=======
 ;
 export {Navigation, Icon, Icon};
 ;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-
 export {Navigation, Icon, Icon};
-
 export {Navigation, Icon, Icon};
-
 export {Navigation, Icon, Icon};
-
 export {Navigation, Icon, Icon};
-
 export {Navigation, Icon, Icon};
->>>>>>> main
