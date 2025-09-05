@@ -57,32 +57,52 @@ export default function APIDocsPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
-            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">API Endpoints</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore our comprehensive API endpoints for seamless integration with our services.
+              Explore our comprehensive API endpoints for AI services, IT solutions, and micro SaaS platforms.
             </p>
           </motion.div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {apiEndpoints.map((endpoint, index) => {
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'AI Services API',
+                endpoint: '/api/ai',
+                description: 'Access our AI-powered services including natural language processing, computer vision, and machine learning models.',
+                icon: Brain,
+                methods: ['GET', 'POST', 'PUT']
+              },
+              {
+                title: 'IT Services API',
+                endpoint: '/api/it',
+                description: 'Manage IT infrastructure, cloud services, and technical support through our comprehensive API.',
+                icon: Server,
+                methods: ['GET', 'POST', 'PUT', 'DELETE']
+              },
+              {
+                title: 'Micro SaaS API',
+                endpoint: '/api/saas',
+                description: 'Integrate with our micro SaaS solutions for business automation and productivity tools.',
+                icon: Cloud,
+                methods: ['GET', 'POST']
+              }
+            ].map((endpoint, index) => {
               const IconComponent = endpoint.icon;
               return (
                 <motion.div
                   key={index}
-                  className="bg-white rounded-xl shadow-lg p-8 border border-gray-100"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  className="bg-white rounded-xl shadow-lg p-8 border border-gray-200 hover:shadow-xl transition-shadow duration-300"
                 >
                   <div className="flex items-center mb-4">
-                    <div className="bg-blue-100 p-3 rounded-lg mr-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
                       <IconComponent className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
@@ -90,23 +110,23 @@ export default function APIDocsPage() {
                       <code className="text-sm text-blue-600">{endpoint.endpoint}</code>
                     </div>
                   </div>
-
+                  
                   <p className="text-gray-600 mb-4">{endpoint.description}</p>
-
-                  <div className="mb-4">
+                  
+                  <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-900 mb-2">Supported Methods:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {endpoint.methods.map((method, idx) => (
-                        <span key={idx} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">
+                      {endpoint.methods.map((method, methodIndex) => (
+                        <span key={methodIndex} className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs font-mono">
                           {method}
                         </span>
                       ))}
                     </div>
                   </div>
-
+                  
                   <Link
                     href={`/api-docs/${endpoint.endpoint.replace('/api/', '')}`}
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     View Documentation
                     <ArrowRight className="w-4 h-4 ml-1" />
@@ -119,94 +139,23 @@ export default function APIDocsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Help with Integration?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
+            <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
               Our developer support team is here to help you integrate our APIs successfully.
             </p>
             <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-              Contact Developer Support
+              Contact Support
             </Link>
           </motion.div>
         </div>
       </section>
-
-        {/* Code Examples */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Code Examples</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Get started quickly with our code examples in multiple programming languages.
-              </p>
-            </motion.div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {codeExamples.map((example, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-gray-900 rounded-xl p-6"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-lg font-semibold text-white">{example.language}</h3>
-                    <Code className="w-5 h-5 text-blue-400" />
-                  </div>
-                  <pre className="text-sm text-gray-300 overflow-x-auto">
-                    <code>{example.code}</code>
-                  </pre>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Get your API key and start integrating our AI services into your applications.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-                >
-                  Get API Key
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-                <Link
-                  href="/ai-services"
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-                >
-                  View AI Services
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
     </div>
   );
 }
