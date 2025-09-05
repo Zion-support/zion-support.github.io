@@ -6,704 +6,210 @@ import {
   Cloud, 
   Zap, 
   Shield, 
-  Users, 
-  BarChart3, 
-  CheckCircle, 
   ArrowRight, 
-  Clock, 
-  Star, 
-  DollarSign, 
-  Award, 
+  CheckCircle, 
+  Users, 
   Globe, 
-  Lock, 
-  Cpu, 
-  Bot, 
-  FileText, 
-  Image, 
-  Video, 
-  Mic, 
-  Code, 
-  Settings, 
-  Monitor, 
-  Smartphone, 
-  Server, 
-  Network, 
-  Car, 
-  Rocket, 
-  Heart, 
-  Building, 
-  Sprout,
-  Mail,
-  MessageSquare,
-  Search,
-  Eye,
-  Target,
-  TrendingUp,
-  Share2,
-  Receipt,
-  Package,
-  Calendar,
-  Headphones,
-  Kanban,
-  HardDrive,
-  Bell,
-  Home,
-  BookOpen,
-  Database
+  Award,
+  Code,
+  Database,
+  Smartphone,
+  BarChart3,
+  CreditCard,
+  Settings,
+  Lock
 } from 'lucide-react';
-
-const microSaaSProducts = [
-  {
-    title: 'Cloud Cost Guard (FinOps Assistant)',
-    description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
-    icon: DollarSign,
-    features: ['Cost Anomaly Detection', 'Auto Rightsizing', 'Budget Forecasting', 'Multi-cloud Support'],
-    pricing: '$299 - $1,499/month',
-    category: 'FinOps',
-    popular: true,
-    link: 'https://cloudcostguard.ziontechgroup.com'
-  },
-  {
-    title: 'LLM Evaluation & Safety Suite',
-    description: 'Prompt evaluation, bias/toxicity checks, jailbreak tests and guardrail policies.',
-    icon: Shield,
-    features: ['Prompt Testing', 'Bias Detection', 'Safety Checks', 'Guardrail Policies'],
-    pricing: '$799 - $3,500/month',
-    category: 'AI Safety',
-    link: 'https://llmsafety.ziontechgroup.com'
-  },
-  {
-    title: 'Customer Feedback & NPS Micro-App',
-    description: 'Embed surveys, analyze sentiment and route issues to the right team automatically.',
-    icon: MessageSquare,
-    features: ['Survey Builder', 'Sentiment Analysis', 'Auto Routing', 'NPS Tracking'],
-    pricing: '$149 - $799/month',
-    category: 'Customer Success',
-    link: 'https://feedbackpro.ziontechgroup.com'
-  },
-  {
-    title: 'API Rate Limiting & Analytics',
-    description: 'Intelligent rate limiting with detailed analytics and usage insights.',
-    icon: BarChart3,
-    features: ['Smart Rate Limiting', 'Usage Analytics', 'Real-time Monitoring', 'Custom Rules'],
-    pricing: '$199 - $999/month',
-    category: 'API Management',
-    link: 'https://apiguard.ziontechgroup.com'
-  },
-  {
-    title: 'Content Moderation AI',
-    description: 'Automated content moderation using advanced AI for text, images, and videos.',
-    icon: Eye,
-    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'API Integration'],
-    pricing: '$399 - $1,999/month',
-    category: 'Content Safety',
-    link: 'https://contentmod.ziontechgroup.com'
-  },
-  {
-    title: 'Workflow Automation Engine',
-    description: 'No-code workflow automation with integrations to popular business tools.',
-    icon: Settings,
-    features: ['Visual Builder', '100+ Integrations', 'Conditional Logic', 'Scheduled Tasks'],
-    pricing: '$99 - $599/month',
-    category: 'Automation',
-    link: 'https://workflowpro.ziontechgroup.com'
-  },
-  {
-    title: 'Social Media Scheduler Pro',
-    description: 'AI-powered social media management with optimal posting times and content suggestions.',
-    icon: Share2,
-    features: ['Multi-platform Posting', 'AI Content Suggestions', 'Analytics Dashboard', 'Team Collaboration'],
-    pricing: '$49 - $299/month',
-    category: 'Social Media',
-    popular: true,
-    link: 'https://socialscheduler.ziontechgroup.com'
-  },
-  {
-    title: 'Invoice & Payment Tracker',
-    description: 'Automated invoicing, payment tracking, and financial reporting for small businesses.',
-    icon: Receipt,
-    features: ['Auto Invoice Generation', 'Payment Tracking', 'Tax Calculations', 'Financial Reports'],
-    pricing: '$29 - $149/month',
-    category: 'Finance',
-    link: 'https://invoicetracker.ziontechgroup.com'
-  },
-  {
-    title: 'Employee Time Tracking Hub',
-    description: 'Comprehensive time tracking with project management and productivity analytics.',
-    icon: Clock,
-    features: ['Time Tracking', 'Project Management', 'Productivity Analytics', 'Team Reports'],
-    pricing: '$19 - $99/month',
-    category: 'Productivity',
-    link: 'https://timetracker.ziontechgroup.com'
-  },
-  {
-    title: 'Email Marketing Automation',
-    description: 'Advanced email marketing with AI-driven personalization and campaign optimization.',
-    icon: Mail,
-    features: ['AI Personalization', 'A/B Testing', 'Behavioral Triggers', 'Advanced Analytics'],
-    pricing: '$79 - $399/month',
-    category: 'Marketing',
-    link: 'https://emailpro.ziontechgroup.com'
-  },
-  {
-    title: 'Inventory Management System',
-    description: 'Real-time inventory tracking with predictive analytics and automated reordering.',
-    icon: Package,
-    features: ['Real-time Tracking', 'Predictive Analytics', 'Auto Reordering', 'Multi-location Support'],
-    pricing: '$99 - $499/month',
-    category: 'E-commerce',
-    link: 'https://inventorypro.ziontechgroup.com'
-  },
-  {
-    title: 'Lead Generation Engine',
-    description: 'AI-powered lead generation with automated outreach and qualification scoring.',
-    icon: Target,
-    features: ['AI Lead Scoring', 'Automated Outreach', 'CRM Integration', 'Conversion Tracking'],
-    pricing: '$199 - $999/month',
-    category: 'Sales',
-    link: 'https://leadgen.ziontechgroup.com'
-  },
-  {
-    title: 'Document Management Pro',
-    description: 'Secure document storage with AI-powered search, OCR, and collaboration features.',
-    icon: FileText,
-    features: ['AI Search', 'OCR Processing', 'Version Control', 'Team Collaboration'],
-    pricing: '$39 - $199/month',
-    category: 'Document Management',
-    link: 'https://docmanager.ziontechgroup.com'
-  },
-  {
-    title: 'Website Performance Monitor',
-    description: 'Real-time website monitoring with performance optimization recommendations.',
-    icon: Monitor,
-    features: ['Real-time Monitoring', 'Performance Optimization', 'Uptime Tracking', 'Alert System'],
-    pricing: '$29 - $149/month',
-    category: 'Web Performance',
-    link: 'https://webmonitor.ziontechgroup.com'
-  },
-  {
-    title: 'Password Manager for Teams',
-    description: 'Secure password management with team sharing and enterprise security features.',
-    icon: Lock,
-    features: ['Team Sharing', 'Enterprise Security', 'Password Generator', 'Breach Monitoring'],
-    pricing: '$49 - $199/month',
-    category: 'Security',
-    link: 'https://passwordmanager.ziontechgroup.com'
-  },
-  {
-    title: 'Meeting Scheduler AI',
-    description: 'Intelligent meeting scheduling with calendar integration and conflict resolution.',
-    icon: Calendar,
-    features: ['Smart Scheduling', 'Calendar Integration', 'Conflict Resolution', 'Time Zone Handling'],
-    pricing: '$19 - $99/month',
-    category: 'Scheduling',
-    link: 'https://meetingscheduler.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Video Editor Pro',
-    description: 'Automated video editing with AI-driven content analysis and social media optimization.',
-    icon: Video,
-    features: ['Auto Video Editing', 'Social Media Optimization', 'Content Analysis', 'Multi-format Export'],
-    pricing: '$79 - $399/month',
-    category: 'Video Production',
-    popular: true,
-    link: 'https://videoeditor.ziontechgroup.com'
-  },
-  {
-    title: 'E-commerce Return Management',
-    description: 'Automated return processing with intelligent routing and customer satisfaction tracking.',
-    icon: Package,
-    features: ['Auto Return Processing', 'Smart Routing', 'Customer Satisfaction', 'Analytics Dashboard'],
-    pricing: '$99 - $499/month',
-    category: 'E-commerce',
-    link: 'https://returnmanager.ziontechgroup.com'
-  },
-  {
-    title: 'AI Content Headline Generator',
-    description: 'AI-powered headline and subject line optimization for maximum engagement and CTR.',
-    icon: FileText,
-    features: ['Headline Optimization', 'A/B Testing', 'Engagement Analytics', 'Multi-platform Support'],
-    pricing: '$29 - $149/month',
-    category: 'Content Marketing',
-    link: 'https://headlinegen.ziontechgroup.com'
-  },
-  {
-    title: 'Smart Survey Builder',
-    description: 'Conversational survey platform with AI-powered question generation and response analysis.',
-    icon: MessageSquare,
-    features: ['AI Question Generation', 'Conversational Interface', 'Response Analysis', 'Real-time Insights'],
-    pricing: '$49 - $249/month',
-    category: 'Research',
-    link: 'https://smartsurvey.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Hiring Assistant',
-    description: 'Automated resume screening and video interview analysis with bias detection.',
-    icon: Users,
-    features: ['Resume Screening', 'Video Interview Analysis', 'Bias Detection', 'Candidate Scoring'],
-    pricing: '$199 - $999/month',
-    category: 'HR Tech',
-    link: 'https://hiringai.ziontechgroup.com'
-  },
-  {
-    title: 'Social Media Engagement Bot',
-    description: 'AI-powered social media automation with intelligent content curation and engagement.',
-    icon: Share2,
-    features: ['Content Curation', 'Auto Engagement', 'Sentiment Analysis', 'Performance Tracking'],
-    pricing: '$79 - $399/month',
-    category: 'Social Media',
-    link: 'https://socialbot.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Journaling App',
-    description: 'Intelligent journaling with mood tracking, insights, and personalized recommendations.',
-    icon: BookOpen,
-    features: ['Mood Tracking', 'AI Insights', 'Personalized Recommendations', 'Privacy Protection'],
-    pricing: '$9 - $49/month',
-    category: 'Wellness',
-    link: 'https://journalai.ziontechgroup.com'
-  },
-  {
-    title: 'HTML to PDF Converter Pro',
-    description: 'High-performance HTML to PDF conversion with batch processing and API integration.',
-    icon: FileText,
-    features: ['Batch Processing', 'API Integration', 'Custom Templates', 'Cloud Storage'],
-    pricing: '$19 - $99/month',
-    category: 'Document Processing',
-    link: 'https://htmltopdf.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Appointment Scheduler',
-    description: 'Intelligent appointment booking with automated reminders and calendar optimization.',
-    icon: Calendar,
-    features: ['Smart Booking', 'Auto Reminders', 'Calendar Optimization', 'Multi-timezone Support'],
-    pricing: '$39 - $199/month',
-    category: 'Scheduling',
-    link: 'https://appointmentai.ziontechgroup.com'
-  },
-  {
-    title: 'Product Review Management',
-    description: 'Automated review collection, moderation, and display with sentiment analysis.',
-    icon: Star,
-    features: ['Auto Review Collection', 'Sentiment Analysis', 'Review Moderation', 'Display Widgets'],
-    pricing: '$29 - $149/month',
-    category: 'E-commerce',
-    link: 'https://reviewmanager.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Form Builder',
-    description: 'Intelligent form creation with conditional logic and advanced analytics.',
-    icon: FileText,
-    features: ['Conditional Logic', 'Advanced Analytics', 'Multi-step Forms', 'API Integration'],
-    pricing: '$19 - $99/month',
-    category: 'Form Builder',
-    link: 'https://formbuilder.ziontechgroup.com'
-  },
-  {
-    title: 'Healthcare Appointment System',
-    description: 'Specialized appointment scheduling for healthcare providers with patient management.',
-    icon: Heart,
-    features: ['Patient Management', 'Medical History', 'Insurance Verification', 'Telemedicine Support'],
-    pricing: '$99 - $499/month',
-    category: 'Healthcare',
-    link: 'https://healthappointments.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Fitness Tracker',
-    description: 'Personalized fitness tracking with AI-driven workout recommendations and progress analysis.',
-    icon: Heart,
-    features: ['AI Workout Plans', 'Progress Analysis', 'Nutrition Tracking', 'Goal Setting'],
-    pricing: '$9 - $49/month',
-    category: 'Fitness',
-    link: 'https://fitnessai.ziontechgroup.com'
-  },
-  {
-    title: 'Automated Invoicing System',
-    description: 'Smart invoicing with automated generation, payment tracking, and tax calculations.',
-    icon: Receipt,
-    features: ['Auto Generation', 'Payment Tracking', 'Tax Calculations', 'Multi-currency Support'],
-    pricing: '$19 - $99/month',
-    category: 'Finance',
-    link: 'https://autoinvoice.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered CRM Assistant',
-    description: 'Intelligent CRM with automated lead scoring, follow-up suggestions, and sales forecasting.',
-    icon: Users,
-    features: ['Lead Scoring', 'Follow-up Automation', 'Sales Forecasting', 'Pipeline Management'],
-    pricing: '$49 - $249/month',
-    category: 'CRM',
-    link: 'https://crmai.ziontechgroup.com'
-  },
-  {
-    title: 'Social Media Performance Tracker',
-    description: 'Comprehensive social media analytics with competitor analysis and ROI tracking.',
-    icon: BarChart3,
-    features: ['Multi-platform Analytics', 'Competitor Analysis', 'ROI Tracking', 'Custom Reports'],
-    pricing: '$39 - $199/month',
-    category: 'Analytics',
-    link: 'https://socialanalytics.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Email Integration',
-    description: 'Self-hosted email service with advanced filtering, automation, and security features.',
-    icon: Mail,
-    features: ['Advanced Filtering', 'Email Automation', 'Security Features', 'API Integration'],
-    pricing: '$29 - $149/month',
-    category: 'Email Service',
-    link: 'https://emailintegration.ziontechgroup.com'
-  },
-  {
-    title: 'Professional Editing Service',
-    description: 'On-demand professional editing with AI assistance and human quality control.',
-    icon: FileText,
-    features: ['AI Assistance', 'Human Quality Control', 'Fast Turnaround', 'Multiple Formats'],
-    pricing: '$0.05 - $0.25/word',
-    category: 'Content Services',
-    link: 'https://proediting.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Data Collection',
-    description: 'Intelligent data collection from multiple sources with automated processing and insights.',
-    icon: Database,
-    features: ['Multi-source Collection', 'Automated Processing', 'Data Insights', 'Real-time Updates'],
-    pricing: '$99 - $499/month',
-    category: 'Data Analytics',
-    link: 'https://datacollector.ziontechgroup.com'
-  },
-  {
-    title: 'Code Review Assistant',
-    description: 'AI-powered code review with automated suggestions and security vulnerability detection.',
-    icon: Code,
-    features: ['AI Code Review', 'Security Scanning', 'Performance Analysis', 'Team Collaboration'],
-    pricing: '$99 - $499/month',
-    category: 'Development',
-    link: 'https://codereview.ziontechgroup.com'
-  },
-  {
-    title: 'Customer Support Ticketing',
-    description: 'AI-enhanced customer support with automated ticket routing and response suggestions.',
-    icon: Headphones,
-    features: ['AI Ticket Routing', 'Response Suggestions', 'Knowledge Base', 'Multi-channel Support'],
-    pricing: '$79 - $399/month',
-    category: 'Customer Support',
-    link: 'https://supporttickets.ziontechgroup.com'
-  },
-  {
-    title: 'Project Management Hub',
-    description: 'Comprehensive project management with AI-powered resource allocation and timeline optimization.',
-    icon: Kanban,
-    features: ['AI Resource Allocation', 'Timeline Optimization', 'Team Collaboration', 'Progress Tracking'],
-    pricing: '$59 - $299/month',
-    category: 'Project Management',
-    link: 'https://projecthub.ziontechgroup.com'
-  },
-  {
-    title: 'Data Backup & Recovery',
-    description: 'Automated data backup with instant recovery and cross-platform synchronization.',
-    icon: HardDrive,
-    features: ['Automated Backups', 'Instant Recovery', 'Cross-platform Sync', 'Version History'],
-    pricing: '$39 - $199/month',
-    category: 'Data Management',
-    link: 'https://databackup.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered SEO Optimizer',
-    description: 'Automated SEO analysis and optimization with real-time keyword tracking and content suggestions.',
-    icon: Search,
-    features: ['Keyword Research', 'Content Optimization', 'Rank Tracking', 'Competitor Analysis'],
-    pricing: '$149 - $799/month',
-    category: 'SEO',
-    popular: true,
-    link: 'https://seooptimizer.ziontechgroup.com'
-  },
-  {
-    title: 'Smart Analytics Dashboard',
-    description: 'Real-time business intelligence with AI-driven insights and predictive analytics.',
-    icon: BarChart3,
-    features: ['Real-time Dashboards', 'Predictive Analytics', 'Custom Reports', 'Data Visualization'],
-    pricing: '$199 - $999/month',
-    category: 'Analytics',
-    link: 'https://smartanalytics.ziontechgroup.com'
-  },
-  {
-    title: 'Automated Testing Suite',
-    description: 'Comprehensive automated testing platform for web and mobile applications.',
-    icon: CheckCircle,
-    features: ['UI Testing', 'API Testing', 'Performance Testing', 'Cross-browser Testing'],
-    pricing: '$299 - $1,499/month',
-    category: 'Quality Assurance',
-    link: 'https://autotesting.ziontechgroup.com'
-  },
-  {
-    title: 'Customer Onboarding Platform',
-    description: 'Streamlined customer onboarding with interactive tutorials and progress tracking.',
-    icon: Rocket,
-    features: ['Interactive Tutorials', 'Progress Tracking', 'Personalized Paths', 'Analytics'],
-    pricing: '$99 - $499/month',
-    category: 'Customer Success',
-    link: 'https://onboarding.ziontechgroup.com'
-  },
-  {
-    title: 'AI Content Moderation',
-    description: 'Advanced content moderation using machine learning for text, images, and video content.',
-    icon: Eye,
-    features: ['Multi-modal Detection', 'Custom Rules Engine', 'Real-time Processing', 'API Integration'],
-    pricing: '$399 - $1,999/month',
-    category: 'Content Safety',
-    link: 'https://contentmoderation.ziontechgroup.com'
-  },
-  {
-    title: 'Subscription Management Hub',
-    description: 'Complete subscription lifecycle management with billing automation and analytics.',
-    icon: Receipt,
-    features: ['Billing Automation', 'Subscription Analytics', 'Churn Prevention', 'Payment Processing'],
-    pricing: '$199 - $999/month',
-    category: 'Subscription Management',
-    link: 'https://subscriptionhub.ziontechgroup.com'
-  },
-  {
-    title: 'API Documentation Generator',
-    description: 'Automated API documentation with interactive testing and version management.',
-    icon: Code,
-    features: ['Auto Documentation', 'Interactive Testing', 'Version Management', 'Team Collaboration'],
-    pricing: '$79 - $399/month',
-    category: 'API Development',
-    link: 'https://apidocs.ziontechgroup.com'
-  },
-  {
-    title: 'User Behavior Analytics',
-    description: 'Deep user behavior analysis with heatmaps, session recordings, and conversion optimization.',
-    icon: TrendingUp,
-    features: ['Heatmaps', 'Session Recordings', 'Conversion Funnels', 'A/B Testing'],
-    pricing: '$149 - $799/month',
-    category: 'User Analytics',
-    link: 'https://useranalytics.ziontechgroup.com'
-  },
-  {
-    title: 'Multi-Channel Notification Center',
-    description: 'Unified notification system across email, SMS, push, and in-app channels.',
-    icon: Bell,
-    features: ['Multi-channel Delivery', 'Smart Routing', 'Template Management', 'Delivery Analytics'],
-    pricing: '$99 - $499/month',
-    category: 'Communications',
-    link: 'https://notifications.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Chat Support',
-    description: 'Intelligent customer support chatbot with human handoff and knowledge base integration.',
-    icon: MessageSquare,
-    features: ['Natural Language Processing', 'Human Handoff', 'Knowledge Base', 'Multi-language'],
-    pricing: '$199 - $999/month',
-    category: 'Customer Support',
-    link: 'https://aichat.ziontechgroup.com'
-  },
-  {
-    title: 'Real Estate Management Platform',
-    description: 'Complete property management solution with tenant portal and maintenance tracking.',
-    icon: Building,
-    features: ['Property Management', 'Tenant Portal', 'Maintenance Tracking', 'Financial Reporting'],
-    pricing: '$299 - $1,499/month',
-    category: 'Real Estate',
-    link: 'https://realestate.ziontechgroup.com'
-  },
-  {
-    title: 'Healthcare Appointment Scheduler',
-    description: 'Medical practice management with appointment scheduling and patient communication.',
-    icon: Calendar,
-    features: ['Appointment Scheduling', 'Patient Communication', 'Billing Integration', 'Compliance Tools'],
-    pricing: '$199 - $999/month',
-    category: 'Healthcare',
-    link: 'https://healthcare.ziontechgroup.com'
-  },
-  {
-    title: 'E-learning Platform Builder',
-    description: 'Create and manage online courses with interactive content and progress tracking.',
-    icon: BookOpen,
-    features: ['Course Builder', 'Progress Tracking', 'Interactive Content', 'Certification System'],
-    pricing: '$149 - $799/month',
-    category: 'Education',
-    link: 'https://elearning.ziontechgroup.com'
-  },
-  {
-    title: 'Fleet Management System',
-    description: 'Complete fleet tracking and management with GPS monitoring and maintenance scheduling.',
-    icon: Car,
-    features: ['GPS Tracking', 'Maintenance Scheduling', 'Driver Management', 'Fuel Monitoring'],
-    pricing: '$199 - $999/month',
-    category: 'Fleet Management',
-    link: 'https://fleetmanagement.ziontechgroup.com'
-  },
-  {
-    title: 'Event Management Platform',
-    description: 'Comprehensive event planning and management with ticketing and attendee tracking.',
-    icon: Calendar,
-    features: ['Event Planning', 'Ticketing System', 'Attendee Management', 'Analytics Dashboard'],
-    pricing: '$99 - $499/month',
-    category: 'Event Management',
-    link: 'https://eventmanagement.ziontechgroup.com'
-  },
-  {
-    title: 'Restaurant POS & Management',
-    description: 'Complete restaurant management system with POS, inventory, and staff scheduling.',
-    icon: Receipt,
-    features: ['POS System', 'Inventory Management', 'Staff Scheduling', 'Customer Analytics'],
-    pricing: '$199 - $999/month',
-    category: 'Restaurant',
-    link: 'https://restaurantpos.ziontechgroup.com'
-  },
-  {
-    title: 'Fitness Tracking & Coaching',
-    description: 'Personal fitness platform with workout tracking, nutrition planning, and AI coaching.',
-    icon: Heart,
-    features: ['Workout Tracking', 'Nutrition Planning', 'AI Coaching', 'Progress Analytics'],
-    pricing: '$29 - $149/month',
-    category: 'Fitness',
-    link: 'https://fitness.ziontechgroup.com'
-  },
-  {
-    title: 'Cryptocurrency Portfolio Tracker',
-    description: 'Advanced crypto portfolio management with real-time tracking and trading alerts.',
-    icon: TrendingUp,
-    features: ['Portfolio Tracking', 'Real-time Prices', 'Trading Alerts', 'Tax Reporting'],
-    pricing: '$49 - $299/month',
-    category: 'Cryptocurrency',
-    link: 'https://cryptotracker.ziontechgroup.com'
-  },
-  {
-    title: 'Smart Home Automation',
-    description: 'IoT platform for smart home device management and automation rules.',
-    icon: Home,
-    features: ['Device Management', 'Automation Rules', 'Energy Monitoring', 'Security Integration'],
-    pricing: '$99 - $499/month',
-    category: 'IoT',
-    link: 'https://smarthome.ziontechgroup.com'
-  }
-];
+import Layout from '../components/Layout';
 
 const features = [
   {
-    icon: Zap,
-    title: 'Rapid Deployment',
-    description: 'Get up and running in days, not months'
+    icon: Cloud,
+    title: 'Cloud-Native Architecture',
+    description: 'Built for the cloud with auto-scaling and high availability.',
+    benefits: ['Auto-scaling', 'High Availability', 'Global CDN', 'Load Balancing']
   },
   {
     icon: Shield,
     title: 'Enterprise Security',
-    description: 'Bank-level security and compliance'
+    description: 'Bank-level security with encryption and compliance.',
+    benefits: ['Data Encryption', 'SOC 2 Compliance', 'GDPR Ready', 'Multi-Factor Auth']
+  },
+  {
+    icon: Zap,
+    title: 'Lightning Fast',
+    description: 'Optimized for speed and performance.',
+    benefits: ['Sub-second Load Times', 'Caching Strategy', 'CDN Integration', 'Performance Monitoring']
   },
   {
     icon: Users,
-    title: 'Scalable Architecture',
-    description: 'Grows with your business needs'
-  },
-  {
-    icon: Globe,
-    title: 'Multi-tenant Ready',
-    description: 'Built for SaaS from the ground up'
-  },
-  {
-    icon: BarChart3,
-    title: 'Analytics Built-in',
-    description: 'Comprehensive usage and performance metrics'
-  },
-  {
-    icon: Lock,
-    title: 'Data Privacy',
-    description: 'GDPR and SOC 2 compliant by default'
+    title: 'Multi-Tenant',
+    description: 'Secure multi-tenancy for different user groups.',
+    benefits: ['User Isolation', 'Custom Branding', 'Role-Based Access', 'White-label Options']
   }
 ];
 
-const benefits = [
+const services = [
   {
-    icon: Clock,
-    title: 'Fast Time to Market',
-    description: 'Launch your SaaS in weeks, not months',
-    stat: '80%'
+    icon: Code,
+    title: 'Custom SaaS Development',
+    description: 'Bespoke software solutions tailored to your specific business needs.',
+    features: [
+      'Custom Features',
+      'API Development',
+      'Third-party Integrations',
+      'Custom Workflows',
+      'Advanced Analytics',
+      'Mobile Apps'
+    ],
+    color: 'from-blue-500 to-blue-600'
   },
   {
-    icon: DollarSign,
-    title: 'Cost Effective',
-    description: 'Lower development and maintenance costs',
-    stat: '60%'
+    icon: Database,
+    title: 'Data Management',
+    description: 'Comprehensive data solutions for your SaaS platform.',
+    features: [
+      'Data Warehousing',
+      'Real-time Analytics',
+      'Data Visualization',
+      'ETL Processes',
+      'Data Security',
+      'Backup & Recovery'
+    ],
+    color: 'from-green-500 to-green-600'
   },
   {
-    icon: Star,
-    title: 'High Quality',
-    description: 'Production-ready code and infrastructure',
-    stat: '99.9%'
+    icon: CreditCard,
+    title: 'Payment Integration',
+    description: 'Seamless payment processing and subscription management.',
+    features: [
+      'Subscription Billing',
+      'Payment Gateways',
+      'Invoice Generation',
+      'Tax Calculation',
+      'Refund Management',
+      'Financial Reporting'
+    ],
+    color: 'from-purple-500 to-purple-600'
   },
   {
-    icon: TrendingUp,
-    title: 'Scalable',
-    description: 'Handles growth from startup to enterprise',
-    stat: '10x'
+    icon: Settings,
+    title: 'Platform Management',
+    description: 'Complete platform administration and maintenance.',
+    features: [
+      'User Management',
+      'System Monitoring',
+      'Performance Optimization',
+      'Security Updates',
+      'Backup Management',
+      '24/7 Support'
+    ],
+    color: 'from-orange-500 to-orange-600'
   }
 ];
 
-const pricingTiers = [
+const technologies = [
+  {
+    name: 'React & Next.js',
+    description: 'Modern frontend framework for responsive web applications.',
+    icon: Code
+  },
+  {
+    name: 'Node.js & Express',
+    description: 'Scalable backend development with JavaScript.',
+    icon: Database
+  },
+  {
+    name: 'PostgreSQL',
+    description: 'Robust relational database for complex data management.',
+    icon: Database
+  },
+  {
+    name: 'AWS/Azure',
+    description: 'Cloud infrastructure for scalability and reliability.',
+    icon: Cloud
+  },
+  {
+    name: 'Docker & Kubernetes',
+    description: 'Containerization and orchestration for deployment.',
+    icon: Settings
+  },
+  {
+    name: 'Stripe/PayPal',
+    description: 'Secure payment processing and subscription management.',
+    icon: CreditCard
+  }
+];
+
+const pricing = [
   {
     name: 'Starter',
-    description: 'Perfect for small teams and MVPs',
-    price: '$299',
-    period: '/month',
+    price: '$2,999',
+    period: 'one-time',
+    description: 'Perfect for small businesses and startups.',
     features: [
-      'Up to 1,000 users',
-      'Basic analytics',
+      'Up to 100 users',
+      'Basic features',
       'Email support',
       'Standard security',
-      '1 custom integration'
+      'Mobile responsive',
+      'Basic analytics'
     ],
     popular: false
   },
   {
     name: 'Professional',
-    description: 'Ideal for growing businesses',
-    price: '$799',
-    period: '/month',
+    price: '$7,999',
+    period: 'one-time',
+    description: 'Ideal for growing businesses with advanced needs.',
     features: [
-      'Up to 10,000 users',
-      'Advanced analytics',
+      'Up to 1,000 users',
+      'Advanced features',
       'Priority support',
       'Enhanced security',
-      '5 custom integrations',
+      'Custom integrations',
+      'Advanced analytics',
       'API access'
     ],
     popular: true
   },
   {
     name: 'Enterprise',
-    description: 'For large organizations',
     price: 'Custom',
-    period: '',
+    period: 'quote',
+    description: 'Tailored solutions for large organizations.',
     features: [
       'Unlimited users',
-      'Custom analytics',
+      'Custom features',
       'Dedicated support',
       'Enterprise security',
-      'Unlimited integrations',
-      'Custom development'
+      'White-label options',
+      'Custom development',
+      'SLA guarantee'
     ],
     popular: false
   }
 ];
 
-export default function MicroSaaSPage() {
+const stats = [
+  { number: '100+', label: 'SaaS Projects Delivered' },
+  { number: '99.9%', label: 'Uptime Guarantee' },
+  { number: '50+', label: 'Integrations Available' },
+  { number: '24/7', label: 'Support Available' }
+];
+
+export default function MicroSAASPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Head>
-        <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Scalable Micro SaaS solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics." />
-        <meta name="keywords" content="Micro SaaS, SaaS solutions, cloud applications, scalable software, business automation" />
-      </Head>
-
+    <Layout
+      title="Micro SaaS - Zion Tech Group"
+      description="Custom micro SaaS solutions built with modern technologies. Scalable, secure, and cost-effective software as a service platforms."
+      keywords="micro SaaS, custom SaaS development, software as a service, SaaS platform, subscription software"
+    >
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
         </div>
-
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -711,31 +217,60 @@ export default function MicroSaaSPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="flex items-center justify-center mb-6">
-              <Cloud className="h-16 w-16 text-purple-400 mr-4" />
-              <h1 className="text-4xl md:text-6xl font-bold">
-                Micro{' '}
-                <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-                  SaaS
-                </span>
-              </h1>
-            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Custom{' '}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Micro SaaS
+              </span>{' '}
+              Solutions
+            </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Scalable software solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics.
+              Build scalable, secure, and profitable micro SaaS applications tailored to your specific business needs and market requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              <Link 
+                href="/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+              >
                 Start Your SaaS
               </Link>
-              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                View All Services
+              <Link 
+                href="/solutions" 
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
+              >
+                View Examples
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Products Grid */}
+      {/* Stats Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-600 font-medium">
+                  {stat.label}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
@@ -745,94 +280,45 @@ export default function MicroSaaSPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Micro SaaS Products
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our Micro SaaS Solutions?
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Ready-to-deploy SaaS solutions that solve specific business problems with minimal setup time.
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Our micro SaaS platforms are built with modern technologies and best practices to ensure scalability, security, and profitability.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaaSProducts.map((product, index) => {
-              const IconComponent = product.icon;
-              return (
-                <motion.div
-                  key={index}
-                  className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative ${
-                    product.popular ? 'ring-2 ring-purple-200' : ''
-                  }`}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5 }}
-                >
-                  {product.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                        Popular
-                      </span>
-                    </div>
-                  )}
-                  
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-purple-600 group-hover:text-indigo-600 transition-colors">
-                      <IconComponent className="w-10 h-10" />
-                    </div>
-                    <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded-full">
-                      {product.category}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {product.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    {product.description}
-                  </p>
-                  
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {product.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-xs text-gray-600">
-                          <CheckCircle className="w-3 h-3 text-purple-500 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-4">
-                    <span className="text-sm font-semibold text-purple-600">{product.pricing}</span>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Link
-                      href={product.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
-                    >
-                      <span>Try Now</span>
-                      <ArrowRight className="w-3 h-3 ml-1" />
-                    </Link>
-                    <Link
-                      href="/contact"
-                      className="w-full border border-purple-600 text-purple-600 hover:bg-purple-50 py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
-                    >
-                      <span>Get Quote</span>
-                    </Link>
-                  </div>
-                </motion.div>
-              );
-            })}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                className="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-12 h-12 bg-blue-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  {feature.description}
+                </p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex}>• {benefit}</li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Services Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
@@ -843,42 +329,51 @@ export default function MicroSaaSPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Micro SaaS?
+              Our Micro SaaS Services
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Built for modern businesses that need fast, reliable, and scalable solutions.
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              We provide end-to-end micro SaaS development services from concept to deployment and beyond.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-              const IconComponent = feature.icon;
-              return (
-                <motion.div
-                  key={index}
-                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-purple-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {feature.description}
-                  </p>
-                </motion.div>
-              );
-            })}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                className="bg-gray-50 p-8 rounded-lg hover:bg-white hover:shadow-lg transition-all duration-300 group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <service.icon className="w-8 h-8 text-white" />
+                </div>
+                
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  {service.title}
+                </h3>
+                
+                <p className="text-gray-600 mb-6">
+                  {service.description}
+                </p>
+                
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-600">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Technologies Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
@@ -889,40 +384,34 @@ export default function MicroSaaSPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Proven Results
+              Technologies We Use
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our Micro SaaS solutions deliver measurable business impact.
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              We leverage cutting-edge technologies to build robust, scalable, and secure micro SaaS applications.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => {
-              const IconComponent = benefit.icon;
-              return (
-                <motion.div
-                  key={index}
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-purple-600" />
-                  </div>
-                  <div className="text-3xl font-bold text-purple-600 mb-2">
-                    {benefit.stat}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {benefit.description}
-                  </p>
-                </motion.div>
-              );
-            })}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {technologies.map((tech, index) => (
+              <motion.div
+                key={index}
+                className="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-12 h-12 bg-blue-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                  <tech.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {tech.name}
+                </h3>
+                <p className="text-gray-600">
+                  {tech.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -938,61 +427,64 @@ export default function MicroSaaSPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Simple, Transparent Pricing
+              Micro SaaS Pricing
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose the plan that fits your business needs. No hidden fees, no surprises.
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Choose the perfect plan for your micro SaaS project. All plans include our core development services.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+            {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                className={`p-8 rounded-xl shadow-lg ${
-                  tier.popular ? 'bg-purple-50 border-2 border-purple-200' : 'bg-white'
+                className={`bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 relative ${
+                  plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
                 }`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                {tier.popular && (
-                  <div className="text-center mb-4">
-                    <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
                 
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  {tier.name}
+                  {plan.name}
                 </h3>
-                <p className="text-gray-600 mb-6">
-                  {tier.description}
-                </p>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-purple-600">{tier.price}</span>
-                  <span className="text-gray-600">{tier.period}</span>
+                
+                <div className="mb-4">
+                  <span className="text-4xl font-bold text-blue-600">{plan.price}</span>
+                  <span className="text-gray-600 ml-2">/{plan.period}</span>
                 </div>
+                
+                <p className="text-gray-600 mb-6">
+                  {plan.description}
+                </p>
+                
                 <ul className="space-y-3 mb-8">
-                  {tier.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-600">
-                      <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
                       {feature}
                     </li>
                   ))}
                 </ul>
+                
                 <Link
                   href="/contact"
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
-                    tier.popular
-                      ? 'bg-purple-600 hover:bg-purple-700 text-white'
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+                    plan.popular
+                      ? 'bg-blue-600 text-white hover:bg-blue-700'
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                   }`}
                 >
-                  <span>Choose Plan</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  Get Started
                 </Link>
               </motion.div>
             ))}
@@ -1001,7 +493,7 @@ export default function MicroSaaSPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -1010,22 +502,28 @@ export default function MicroSaaSPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Launch Your Micro SaaS?
+              Ready to Build Your Micro SaaS?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let&apos;s build the perfect SaaS solution for your business needs. Fast, secure, and scalable.
+              Let us help you create a profitable micro SaaS business with our proven development process and expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                Start Building
+              <Link 
+                href="/contact" 
+                className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
+              >
+                Start Your Project
               </Link>
-              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
-                View All Services
+              <Link 
+                href="/solutions" 
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+              >
+                View Examples
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
-    </div>
+    </Layout>
   );
 }

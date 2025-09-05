@@ -2,311 +2,162 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  Search, 
-  Phone, 
-  ChevronDown, 
-  Brain, 
-  Cloud, 
-  Cpu as CpuIcon, 
-  Globe,
+import {
+  Menu,
+  X,
+  Phone,
   Mail,
   MapPin,
-  Zap,
-  Shield,
+  ChevronDown,
+  Building2,
+  Brain,
+  Network,
+  Cloud,
   Users,
   FileText,
   HelpCircle,
-  DollarSign,
   Settings,
-  Network,
-  Rocket,
-  BarChart3,
-  MessageSquare,
-  Youtube,
-  Building2,
   Target,
-  Heart,
-  ShoppingCart,
-  GraduationCap,
-  BookOpen,
-  Calendar,
-  Award,
-  Lock,
-  Database
+  ArrowRight,
+  ExternalLink
 } from 'lucide-react';
 
 const navigation = [
   {
+    name: 'Home',
+    href: '/',
+    type: 'link'
+  },
+  {
     name: 'Services',
     href: '/services',
-    icon: Settings,
+    type: 'dropdown',
     children: [
+      {
+        name: 'All Services',
+        href: '/services',
+        description: 'Comprehensive technology solutions'
+      },
       {
         name: 'AI Services',
         href: '/ai-services',
-        icon: Brain,
-        description: 'Advanced AI solutions and machine learning platforms',
-        children: [
-          { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
-          { name: 'Predictive Analytics Platform', href: '/ai-services#predictive-analytics' },
-          { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
-          { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
-          { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
-          { name: 'Voice AI Assistant', href: '/ai-services#voice-ai-assistant' },
-          { name: 'AI Fraud Detection', href: '/ai-services#ai-fraud-detection' },
-          { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' }
-        ]
+        description: 'Artificial Intelligence solutions',
+        icon: Brain
       },
       {
         name: 'IT Services',
         href: '/it-services',
-        icon: CpuIcon,
-        description: 'Comprehensive IT infrastructure and support',
-        children: [
-          { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
-          { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
-          { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },
-          { name: 'Database Management', href: '/it-services#database-management' },
-          { name: 'DevOps & CI/CD', href: '/it-services#devops-cicd' },
-          { name: 'Data Center Migration', href: '/it-services#data-center-migration' },
-          { name: 'IT Asset Management', href: '/it-services#it-asset-management' },
-          { name: 'Backup & Disaster Recovery', href: '/it-services#backup-disaster-recovery' }
-        ]
+        description: 'Information Technology services',
+        icon: Network
       },
       {
         name: 'Micro SaaS',
         href: '/micro-saas',
-        icon: Cloud,
-        description: 'Innovative micro software-as-a-service solutions',
-        children: [
-          { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
-          { name: 'LLM Evaluation Suite', href: '/micro-saas#llm-evaluation' },
-          { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
-          { name: 'API Rate Limiting', href: '/micro-saas#api-rate-limiting' },
-          { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
-          { name: 'Workflow Automation', href: '/micro-saas#workflow-automation' },
-          { name: 'AI Lead Scoring', href: '/micro-saas#ai-lead-scoring' },
-          { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' }
-        ]
-      },
-      {
-        name: 'Cloud & DevOps',
-        href: '/services/cloud-devops',
-        icon: Cloud,
-        description: 'Cloud infrastructure and DevOps automation'
-      },
-      {
-        name: 'Cybersecurity',
-        href: '/services/cybersecurity',
-        icon: Shield,
-        description: 'Advanced security solutions and compliance'
-      },
-      {
-        name: 'Data Analytics',
-        href: '/services/data-analytics',
-        icon: BarChart3,
-        description: 'Business intelligence and data insights'
-      },
-      {
-        name: 'Quantum Computing',
-        href: '/services/quantum-computing',
-        icon: CpuIcon,
-        description: 'Next-generation quantum computing solutions'
+        description: 'Software as a Service solutions',
+        icon: Cloud
       }
     ]
   },
   {
     name: 'Solutions',
     href: '/solutions',
-    icon: Target,
+    type: 'dropdown',
     children: [
+      {
+        name: 'All Solutions',
+        href: '/solutions',
+        description: 'Complete solution portfolio'
+      },
       {
         name: 'Enterprise',
         href: '/solutions/enterprise',
-        icon: Building2,
-        description: 'Enterprise-grade solutions for large organizations'
+        description: 'Large-scale business solutions'
       },
       {
         name: 'Healthcare',
         href: '/solutions/healthcare',
-        icon: Heart,
-        description: 'Healthcare technology and compliance solutions'
+        description: 'Healthcare technology solutions'
       },
       {
         name: 'Finance',
         href: '/solutions/finance',
-        icon: DollarSign,
-        description: 'Financial services and fintech solutions'
+        description: 'Financial technology solutions'
       },
       {
         name: 'Retail',
         href: '/solutions/retail',
-        icon: ShoppingCart,
-        description: 'E-commerce and retail technology solutions'
-      },
-      {
-        name: 'Education',
-        href: '/solutions/education',
-        icon: GraduationCap,
-        description: 'Educational technology and learning platforms'
-      },
-      {
-        name: 'Government',
-        href: '/solutions/government',
-        icon: Shield,
-        description: 'Government and public sector solutions'
-      },
-      {
-        name: 'Startup',
-        href: '/solutions/startup',
-        icon: Rocket,
-        description: 'Startup acceleration and growth solutions'
+        description: 'Retail technology solutions'
       }
     ]
   },
   {
-    name: 'Industries',
-    href: '/industries',
-    icon: Building2,
+    name: 'Company',
+    href: '/about',
+    type: 'dropdown',
     children: [
       {
-        name: 'Healthcare',
-        href: '/industries/healthcare',
-        icon: Heart,
-        description: 'Healthcare and life sciences'
+        name: 'About Us',
+        href: '/about',
+        description: 'Learn about our company'
       },
       {
-        name: 'Finance',
-        href: '/industries/finance',
-        icon: DollarSign,
-        description: 'Financial services and banking'
+        name: 'Our Team',
+        href: '/team',
+        description: 'Meet our experts'
       },
       {
-        name: 'Education',
-        href: '/industries/education',
-        icon: GraduationCap,
-        description: 'Educational institutions and training'
+        name: 'Careers',
+        href: '/careers',
+        description: 'Join our team'
       },
       {
-        name: 'Government',
-        href: '/industries/government',
-        icon: Shield,
-        description: 'Government and public sector'
+        name: 'Blog',
+        href: '/blog',
+        description: 'Latest insights and news'
       },
       {
-        name: 'Manufacturing',
-        href: '/industries/manufacturing',
-        icon: CpuIcon,
-        description: 'Manufacturing and industrial'
-      },
-      {
-        name: 'Retail',
-        href: '/industries/retail',
-        icon: ShoppingCart,
-        description: 'Retail and e-commerce'
+        name: 'Partners',
+        href: '/partners',
+        description: 'Our partner network'
       }
     ]
   },
   {
     name: 'Resources',
     href: '/resources',
-    icon: FileText,
+    type: 'dropdown',
     children: [
       {
-        name: 'Blog',
-        href: '/blog',
-        icon: BookOpen,
-        description: 'Latest insights and industry news'
+        name: 'Documentation',
+        href: '/docs',
+        description: 'Technical documentation'
       },
       {
-        name: 'White Papers',
-        href: '/white-papers',
-        icon: FileText,
-        description: 'In-depth research and analysis'
-      },
-      {
-        name: 'Case Studies',
-        href: '/case-studies',
-        icon: Award,
-        description: 'Success stories and client results'
-      },
-      {
-        name: 'Webinars',
-        href: '/webinars',
-        icon: Calendar,
-        description: 'Educational webinars and training'
+        name: 'API Reference',
+        href: '/api',
+        description: 'API documentation'
       },
       {
         name: 'Help Center',
         href: '/help',
-        icon: HelpCircle,
-        description: 'Support and documentation'
+        description: 'Support and help resources'
       },
       {
-        name: 'Documentation',
-        href: '/docs',
-        icon: BookOpen,
-        description: 'Technical documentation and guides'
+        name: 'Community',
+        href: '/community',
+        description: 'Join our community'
       },
       {
-        name: 'API Reference',
-        href: '/api-docs',
-        icon: Network,
-        description: 'API documentation and integration guides'
-      },
-      {
-        name: 'Tutorials',
-        href: '/tutorials',
-        icon: GraduationCap,
-        description: 'Step-by-step tutorials and guides'
+        name: 'Case Studies',
+        href: '/case-studies',
+        description: 'Success stories and examples'
       }
     ]
   },
   {
-    name: 'Company',
-    href: '/company',
-    icon: Users,
-    children: [
-      {
-        name: 'About Us',
-        href: '/about',
-        icon: Users,
-        description: 'Learn about our mission and values'
-      },
-      {
-        name: 'Our Team',
-        href: '/team',
-        icon: Users,
-        description: 'Meet our expert team'
-      },
-      {
-        name: 'Careers',
-        href: '/careers',
-        icon: Award,
-        description: 'Join our growing team'
-      },
-      {
-        name: 'News',
-        href: '/news',
-        icon: MessageSquare,
-        description: 'Company news and announcements'
-      },
-      {
-        name: 'Contact',
-        href: '/contact',
-        icon: Mail,
-        description: 'Get in touch with us'
-      },
-      {
-        name: 'Partners',
-        href: '/partners',
-        icon: Users,
-        description: 'Our partner network'
-      }
-    ]
+    name: 'Contact',
+    href: '/contact',
+    type: 'link'
   }
 ];
 
@@ -358,85 +209,88 @@ export default function Header() {
                 <span>{contactInfo.email}</span>
               </div>
             </div>
-            <div className="flex items-center space-x-4">
-              <span className="text-blue-100">24/7 Support Available</span>
+            <div className="flex items-center space-x-2">
+              <MapPin className="w-4 h-4" />
+              <span className="hidden sm:inline">{contactInfo.address}</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* Main Navigation */}
-      <nav className="bg-white shadow-sm">
+      <nav className="bg-white/95 backdrop-blur-md border-b border-gray-200">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <Building2 className="w-6 h-6 text-white" />
               </div>
-              <span className="text-2xl font-bold text-gray-900">Zion Tech Group</span>
+              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               {navigation.map((item, index) => (
                 <div key={item.name} className="relative">
-                  <button
-                    onClick={() => handleDropdownToggle(index)}
-                    className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors py-2"
-                  >
-                    <item.icon className="w-4 h-4" />
-                    <span>{item.name}</span>
-                    <ChevronDown className="w-4 h-4" />
-                  </button>
-
-                  <AnimatePresence>
-                    {activeDropdown === index && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50"
+                  {item.type === 'link' ? (
+                    <Link
+                      href={item.href}
+                      className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                    >
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <div className="relative">
+                      <button
+                        onClick={() => handleDropdownToggle(index)}
+                        className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors font-medium"
                       >
-                        <div className="grid grid-cols-2 gap-4">
-                          {item.children?.map((child) => (
-                            <div key={child.name} className="p-3 hover:bg-gray-50 rounded-lg">
-                              <Link
-                                href={child.href}
-                                onClick={handleLinkClick}
-                                className="flex items-start space-x-3 group"
-                              >
-                                <child.icon className="w-5 h-5 text-blue-600 mt-0.5 group-hover:text-blue-700" />
-                                <div>
-                                  <div className="font-medium text-gray-900 group-hover:text-blue-600">
-                                    {child.name}
+                        <span>{item.name}</span>
+                        <ChevronDown className="w-4 h-4" />
+                      </button>
+                      
+                      <AnimatePresence>
+                        {activeDropdown === index && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 10 }}
+                            className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+                          >
+                            {item.children?.map((child) => {
+                              const IconComponent = child.icon;
+                              return (
+                                <Link
+                                  key={child.name}
+                                  href={child.href}
+                                  onClick={handleLinkClick}
+                                  className="flex items-start space-x-3 px-4 py-3 hover:bg-gray-50 transition-colors"
+                                >
+                                  {IconComponent && (
+                                    <IconComponent className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                                  )}
+                                  <div>
+                                    <div className="font-medium text-gray-900">{child.name}</div>
+                                    <div className="text-sm text-gray-500">{child.description}</div>
                                   </div>
-                                  <div className="text-sm text-gray-500 mt-1">
-                                    {child.description}
-                                  </div>
-                                </div>
-                              </Link>
-                            </div>
-                          ))}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                                </Link>
+                              );
+                            })}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
 
-            {/* CTA Buttons */}
+            {/* CTA Button */}
             <div className="hidden lg:flex items-center space-x-4">
               <Link
                 href="/contact"
-                className="px-4 py-2 text-gray-700 hover:text-blue-600 transition-colors"
-              >
-                Contact
-              </Link>
-              <Link
-                href="/contact"
-                className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
               >
                 Get Started
               </Link>
@@ -445,7 +299,7 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 text-gray-700 hover:text-blue-600"
+              className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -462,28 +316,57 @@ export default function Header() {
               className="lg:hidden bg-white border-t border-gray-200"
             >
               <div className="container mx-auto px-4 py-4">
-                {navigation.map((item) => (
+                {navigation.map((item, index) => (
                   <div key={item.name} className="mb-4">
-                    <Link
-                      href={item.href}
-                      onClick={handleLinkClick}
-                      className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 py-2 font-medium"
-                    >
-                      <item.icon className="w-4 h-4" />
-                      <span>{item.name}</span>
-                    </Link>
-                    {item.children && (
-                      <div className="ml-6 mt-2 space-y-2">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            href={child.href}
-                            onClick={handleLinkClick}
-                            className="block text-sm text-gray-600 hover:text-blue-600 py-1"
-                          >
-                            {child.name}
-                          </Link>
-                        ))}
+                    {item.type === 'link' ? (
+                      <Link
+                        href={item.href}
+                        onClick={handleLinkClick}
+                        className="block py-2 text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                      >
+                        {item.name}
+                      </Link>
+                    ) : (
+                      <div>
+                        <button
+                          onClick={() => handleDropdownToggle(index)}
+                          className="flex items-center justify-between w-full py-2 text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                        >
+                          <span>{item.name}</span>
+                          <ChevronDown className={`w-4 h-4 transition-transform ${
+                            activeDropdown === index ? 'rotate-180' : ''
+                          }`} />
+                        </button>
+                        <AnimatePresence>
+                          {activeDropdown === index && (
+                            <motion.div
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: 'auto' }}
+                              exit={{ opacity: 0, height: 0 }}
+                              className="ml-4 mt-2 space-y-2"
+                            >
+                              {item.children?.map((child) => {
+                                const IconComponent = child.icon;
+                                return (
+                                  <Link
+                                    key={child.name}
+                                    href={child.href}
+                                    onClick={handleLinkClick}
+                                    className="flex items-start space-x-3 py-2 text-gray-600 hover:text-blue-600 transition-colors"
+                                  >
+                                    {IconComponent && (
+                                      <IconComponent className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                                    )}
+                                    <div>
+                                      <div className="font-medium">{child.name}</div>
+                                      <div className="text-sm text-gray-500">{child.description}</div>
+                                    </div>
+                                  </Link>
+                                );
+                              })}
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
                       </div>
                     )}
                   </div>
@@ -492,7 +375,7 @@ export default function Header() {
                   <Link
                     href="/contact"
                     onClick={handleLinkClick}
-                    className="block w-full text-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                    className="block w-full text-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
                   >
                     Get Started
                   </Link>
