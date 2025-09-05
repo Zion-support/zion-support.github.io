@@ -4,7 +4,6 @@ const nextConfig = {
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-<<<<<<< HEAD
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   
   // Performance optimizations
@@ -108,16 +107,6 @@ const nextConfig = {
       },
     ];
   },
-=======
-  output: 'export',
-  trailingSlash: true,
-  images: {
-    unoptimized: true
-  },
-  env: {
-    CUSTOM_KEY: process.env.CUSTOM_KEY
-  }
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 };
 
 export default nextConfig;
