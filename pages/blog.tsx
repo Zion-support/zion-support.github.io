@@ -186,7 +186,7 @@ export default function BlogPage() {
                       <li key={index}>
                         <Link
                           href={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
-                          className="flex items-center justify-between text-gray-600 "hover": text-blue-600 transition-colors"
+                          className="flex items-center justify-between text-gray-600 hover:text-blue-600 transition-colors"
                         >
                           <span>{category.name}</span>
                           <span className="text-sm bg-gray-100 px-2 py-1 rounded-full">

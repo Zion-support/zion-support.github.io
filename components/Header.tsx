@@ -175,9 +175,9 @@ export function Header({ className }: HeaderProps) {
                   <AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div
-                        initial={{ "opacity": 0, "y": 10 }}
-                        animate={{ "opacity": 1, "y": 0 }}
-                        exit={{ "opacity": 0, "y": 10 }}
+                        initial={{ opacity:0, y:10 }}
+                        animate={{ opacity:1, y:0 }}
+                        exit={{ opacity:0, y:10 }}
                         className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
                         onMouseEnter={() => setActiveDropdown(item.name)}
                         onMouseLeave={() => setActiveDropdown(null)}
@@ -252,10 +252,10 @@ export function Header({ className }: HeaderProps) {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
-              initial={{ "opacity": 0, "height": 0 }}
-              animate={{ "opacity": 1, "height": 'auto' }}
-              exit={{ "opacity": 0, "height": 0 }}
-              className=""lg": hidden border-t border-gray-200 bg-white"
+              initial={{ opacity:0, "height": 0 }}
+              animate={{ opacity:1, "height": 'auto' }}
+              exit={{ opacity:0, "height": 0 }}
+              className="lg:hidden border-t border-gray-200 bg-white"
             >
               <div className="py-4 space-y-2">
                 {navigation.map((item) => (
