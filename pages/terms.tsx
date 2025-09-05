@@ -5,7 +5,6 @@ export default function TermsPage() {
   return (
     <Layout title="Terms of Service - Zion Tech Group">
       <div className="min-h-screen bg-white">
-<<<<<<< HEAD
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
           <div className="container mx-auto px-4">
@@ -57,18 +56,6 @@ export default function TermsPage() {
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-=======
-        {/* Header Section */}
-        <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Terms of Service</h1>
-              <p className="text-lg text-gray-300">
-                Please read these terms carefully before using our services.
-              </p>
             </div>
           </div>
         </section>
@@ -169,7 +156,6 @@ export default function TermsPage() {
             </div>
           </div>
         </section>
->>>>>>> 87bd6421ab0886afe7f98cfd20d727a180a1a8d4
       </div>
     </Layout>
   );

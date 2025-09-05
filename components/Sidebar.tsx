@@ -18,7 +18,11 @@ import {
   DollarSign,
   ShoppingCart,
   GraduationCap,
-  Globe
+  Globe,
+  Cpu,
+  Lock,
+  Network,
+  Monitor
 } from 'lucide-react';
 
 interface SidebarProps {

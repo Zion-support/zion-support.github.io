@@ -3,14 +3,16 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
+import Layout from '../components/Layout';
 
-const blogPosts = [{
+const blogPosts = [
+  {
     id: 1,
     title: "The Future of AI in Business: Trends and Predictions for 2024",
     excerpt: "Explore the latest AI trends that are reshaping how businesses operate and compete in the digital landscape.",
     author: "Sarah Johnson",
     date: "2024-01-15",
-    "readTime": "5 min read",
+    readTime: "5 min read",
     tags: ["AI", "Business", "Technology"],
     image: "/api/placeholder/400/250"
   },
@@ -20,7 +22,7 @@ const blogPosts = [{
     excerpt: "Learn how micro SaaS applications are revolutionizing software delivery and what it takes to build successful solutions.",
     author: "Michael Chen",
     date: "2024-01-10",
-    "readTime": "7 min read",
+    readTime: "7 min read",
     tags: ["SaaS", "Development", "Scalability"],
     image: "/api/placeholder/400/250"
   },
@@ -30,7 +32,7 @@ const blogPosts = [{
     excerpt: "Essential security measures every SMB should implement to protect their digital assets and customer data.",
     author: "Emily Rodriguez",
     date: "2024-01-05",
-    "readTime": "6 min read",
+    readTime: "6 min read",
     tags: ["Security", "SMB", "Best Practices"],
     image: "/api/placeholder/400/250"
   },
@@ -40,7 +42,7 @@ const blogPosts = [{
     excerpt: "Step-by-step guide to successfully migrating your infrastructure to the cloud while minimizing risks and downtime.",
     author: "David Kim",
     date: "2023-12-28",
-    "readTime": "8 min read",
+    readTime: "8 min read",
     tags: ["Cloud", "Migration", "Infrastructure"],
     image: "/api/placeholder/400/250"
   },
@@ -48,43 +50,52 @@ const blogPosts = [{
     id: 5,
     title: "The Role of Data Analytics in Digital Transformation",
     excerpt: "How data analytics is driving digital transformation and helping businesses make data-driven decisions.",
-    author: "Sarah Johnson",
+    author: "Lisa Wang",
     date: "2023-12-20",
-    "readTime": "6 min read",
+    readTime: "6 min read",
     tags: ["Analytics", "Digital Transformation", "Data"],
     image: "/api/placeholder/400/250"
   },
   {
     id: 6,
     title: "Building Resilient IT Infrastructure for Remote Work",
-    excerpt: "Key considerations for creating IT infrastructure that supports remote and hybrid work environments.",
-    author: "Michael Chen",
+    excerpt: "Key strategies for creating robust IT infrastructure that supports remote work and ensures business continuity.",
+    author: "Alex Thompson",
     date: "2023-12-15",
-    "readTime": "5 min read",
-    tags: ["IT Infrastructure", "Remote Work", "Resilience"],
+    readTime: "7 min read",
+    tags: ["Infrastructure", "Remote Work", "Resilience"],
     image: "/api/placeholder/400/250"
   }
 ];
 
-const categories = [{ name: "AI & Machine Learning", count: 12 },
+const categories = [
+  { name: "AI & Machine Learning", count: 12 },
   { name: "Cloud Computing", count: 8 },
-  { name: "Cybersecurity", count: 6 },
-  { name: "SaaS Development", count: 10 },
-  { name: "Digital Transformation", count: 7 },
-  { name: "IT Infrastructure", count: 5 }
+  { name: "Cybersecurity", count: 15 },
+  { name: "Development", count: 20 },
+  { name: "Business Strategy", count: 10 },
+  { name: "Data Analytics", count: 6 }
 ];
 
 export default function BlogPage() {
   return (
-<MainLayout 
-      title="Blog - Zion Tech Group"
-      description="Insights, trends, and best practices in AI, cloud computing, cybersecurity, and technology solutions."
-      keywords="technology blog, AI insights, cloud computing, cybersecurity, SaaS development, digital transformation"
-    >
-      <div className="min-h-screen bg-gray-50">
+    <Layout title="Blog - Zion Tech Group">
+      <Head>
+        <title>Blog - Zion Tech Group</title>
+        <meta name="description" content="Stay updated with the latest insights, trends, and best practices in technology from our expert team." />
+        <meta name="keywords" content="technology blog, AI insights, cloud computing, cybersecurity, development, business strategy" />
+      </Head>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
+          
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -97,8 +108,7 @@ export default function BlogPage() {
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Stay updated with the latest insights, trends, and best practices in technology
               </p>
-              </motion.div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
@@ -155,30 +165,13 @@ export default function BlogPage() {
                             Read More
                             <ArrowRight className="w-4 h-4 ml-1" />
                           </Link>
-                        </div>ursor/add-new-services-and-deploy-updates-1b90
+                        </div>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4" />
-                        <span>{post.date}</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-500">{post.readTime}</span>
-                      <Link
-                        href={`/blog/${post.id}`}
-                        className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
-                      >
-                        Read More
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </motion.article>
-              ))}
-            </div>
+                    </motion.article>
+                  ))}
+                </div>
 
-{/* Pagination */}
+                {/* Pagination */}
                 <div className="mt-12 flex justify-center">
                   <nav className="flex space-x-2">
                     <button className="px-3 py-2 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
@@ -240,11 +233,11 @@ export default function BlogPage() {
                     </button>
                   </form>
                 </div>
-              </div>ursor/add-new-services-and-deploy-updates-1b90
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </Layout>
   );
 }
