@@ -4,12 +4,12 @@ const categories = [
     description: 'Quick start guides and setup instructions',
     icon: BookOpen,
     color: 'from-blue-500 to-cyan-500,',
-    docs: [;
-      { title: 'Quick Start Guide, description: 'Get up and running in minutes, time: '5 min read' },',
-      { title: 'Installation Guide, description: 'Step-by-step installation instructions, time: '10 min read' },',
-      { title: 'Configuration, description: 'Configure your environment, time: '15 min read' },',
-      { title: 'First Project, description: 'Create your first project, time: '20 min read' }',
-    ];
+    docs: [
+      { title: 'Quick Start Guide', description: 'Get up and running in minutes', time: '5 min read' },
+      { title: 'Installation Guide', description: 'Step-by-step installation instructions', time: '10 min read' },
+      { title: 'Configuration', description: 'Configure your environment', time: '15 min read' },
+      { title: 'First Project', description: 'Create your first project', time: '20 min read' }
+    ]
   },
   {
     title: 'API Reference',
