@@ -16,8 +16,6 @@ module.exports = {
         "3xl": "1920px"
       },
       spacing: {
-        "3xl": "1920px"},
-      "spacing": {
         18: "4.5rem",
         88: "22rem",
         128: "32rem",
@@ -32,13 +30,6 @@ module.exports = {
         "2xl": "6rem",
       },
       animation: {
-        "responsive": {
-          DEFAULT: "1rem",
-          "sm": "2rem",
-          "lg": "4rem",
-          "xl": "5rem",
-          "2xl": "6rem",},},
-      "animation": {;
         float: "float 6s ease-in-out infinite",
         "gradient-x": "gradient-x 3s ease infinite",
         "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
