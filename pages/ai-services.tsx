@@ -43,7 +43,9 @@ import {
   ShoppingCart,
   BookOpen,
   Home,
-  Gamepad2
+  Gamepad2,
+  Phone,
+  MapPin
 } from 'lucide-react';
 
 const aiServices = [
@@ -516,6 +518,159 @@ const aiServices = [
     features: ['Personalized Learning', 'Adaptive Assessment', 'Progress Tracking', 'Skill Development'],
     pricing: '$2,000 - $10,000/month',
     category: 'EdTech'
+  },
+  {
+    title: 'AI-Powered Cybersecurity Shield',
+    description: 'Advanced threat detection and response system using machine learning and behavioral analysis.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Zero-day Protection'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Medical Imaging Analysis',
+    description: 'Advanced medical image analysis for radiology, pathology, and diagnostic imaging.',
+    icon: Eye,
+    features: ['Radiology Analysis', 'Pathology Detection', 'Diagnostic Assistance', 'Treatment Planning'],
+    pricing: '$15,000 - $75,000 setup',
+    category: 'Medical AI'
+  },
+  {
+    title: 'AI-Powered Smart City Management',
+    description: 'Intelligent city infrastructure management with traffic optimization and resource allocation.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Resource Allocation', 'Environmental Monitoring', 'Emergency Response'],
+    pricing: '$50,000 - $200,000 project',
+    category: 'Smart Cities'
+  },
+  {
+    title: 'AI-Powered Language Translation',
+    description: 'Real-time language translation with context awareness and cultural adaptation.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Awareness', 'Cultural Adaptation', 'Voice Translation'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Language Processing'
+  },
+  {
+    title: 'AI-Powered Predictive Maintenance',
+    description: 'Intelligent equipment maintenance prediction to prevent failures and optimize performance.',
+    icon: Settings,
+    features: ['Failure Prediction', 'Maintenance Scheduling', 'Performance Optimization', 'Cost Reduction'],
+    pricing: '$10,000 - $50,000 setup',
+    category: 'Industrial AI'
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Automated content moderation for social media, forums, and user-generated content.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Context Understanding', 'Bias Mitigation', 'Scalable Processing'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Content Safety'
+  },
+  {
+    title: 'AI-Powered Financial Risk Assessment',
+    description: 'Advanced financial risk modeling and credit scoring using machine learning.',
+    icon: TrendingUp,
+    features: ['Credit Scoring', 'Risk Modeling', 'Fraud Detection', 'Regulatory Compliance'],
+    pricing: '$8,000 - $40,000 setup',
+    category: 'Financial AI'
+  },
+  {
+    title: 'AI-Powered Agricultural Optimization',
+    description: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Resource Optimization', 'Pest Detection'],
+    pricing: '$15,000 - $75,000 project',
+    category: 'AgTech'
+  },
+  {
+    title: 'AI-Powered Virtual Reality Assistant',
+    description: 'Intelligent VR/AR assistant with natural interaction and spatial understanding.',
+    icon: Monitor,
+    features: ['Natural Interaction', 'Spatial Understanding', 'Gesture Recognition', 'Voice Commands'],
+    pricing: '$25,000 - $100,000 project',
+    category: 'VR/AR'
+  },
+  {
+    title: 'AI-Powered Legal Research Assistant',
+    description: 'Intelligent legal research and case law analysis with automated brief generation.',
+    icon: BookOpen,
+    features: ['Case Law Analysis', 'Brief Generation', 'Precedent Finding', 'Legal Research'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Legal AI'
+  },
+  {
+    title: 'AI-Powered Mental Health Support',
+    description: 'Intelligent mental health monitoring and support with personalized interventions.',
+    icon: Heart,
+    features: ['Mood Analysis', 'Crisis Detection', 'Personalized Support', 'Professional Integration'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Mental Health'
+  },
+  {
+    title: 'AI-Powered Supply Chain Visibility',
+    description: 'End-to-end supply chain visibility with predictive analytics and risk management.',
+    icon: Network,
+    features: ['End-to-end Tracking', 'Risk Prediction', 'Optimization', 'Real-time Monitoring'],
+    pricing: '$20,000 - $100,000 project',
+    category: 'Supply Chain'
+  },
+  {
+    title: 'AI-Powered Energy Trading',
+    description: 'Intelligent energy trading and grid optimization using machine learning.',
+    icon: Zap,
+    features: ['Price Prediction', 'Grid Optimization', 'Trading Algorithms', 'Demand Forecasting'],
+    pricing: '$30,000 - $150,000 project',
+    category: 'Energy Trading'
+  },
+  {
+    title: 'AI-Powered Customer Journey Analytics',
+    description: 'Comprehensive customer journey analysis with personalization and optimization.',
+    icon: Users,
+    features: ['Journey Mapping', 'Personalization', 'Conversion Optimization', 'Behavioral Analysis'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Customer Analytics'
+  },
+  {
+    title: 'AI-Powered Blockchain Analytics',
+    description: 'Advanced blockchain transaction analysis and cryptocurrency market intelligence.',
+    icon: Cpu,
+    features: ['Transaction Analysis', 'Market Intelligence', 'Risk Assessment', 'Compliance Monitoring'],
+    pricing: '$10,000 - $50,000/month',
+    category: 'Blockchain AI'
+  },
+  {
+    title: 'AI-Powered Space Mission Planning',
+    description: 'Autonomous space mission planning and satellite constellation optimization.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Orbit Optimization', 'Resource Allocation', 'Risk Assessment'],
+    pricing: '$100,000 - $500,000 project',
+    category: 'Space Technology'
+  },
+  {
+    title: 'AI-Powered Quantum Machine Learning',
+    description: 'Quantum-enhanced machine learning algorithms for complex optimization problems.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Optimization', 'Pattern Recognition', 'Quantum Advantage'],
+    pricing: '$75,000 - $300,000 project',
+    category: 'Quantum AI'
+  },
+  {
+    title: 'AI-Powered Autonomous Drones',
+    description: 'Intelligent drone systems with autonomous navigation and mission execution.',
+    icon: Rocket,
+    features: ['Autonomous Navigation', 'Mission Planning', 'Object Detection', 'Swarm Coordination'],
+    pricing: '$50,000 - $200,000 project',
+    category: 'Autonomous Systems'
+  },
+  {
+    title: 'AI-Powered Personalized Medicine',
+    description: 'Precision medicine solutions with personalized treatment recommendations.',
+    icon: Heart,
+    features: ['Genomic Analysis', 'Treatment Optimization', 'Drug Interaction', 'Outcome Prediction'],
+    pricing: '$25,000 - $100,000 setup',
+    category: 'Precision Medicine'
   }
 ];
 
@@ -796,6 +951,40 @@ export default function AIServicesPage() {
               <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
                 View All Services
               </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
+              Get in Touch
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <Phone className="h-8 w-8 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold mb-2">Phone</h3>
+                <p className="text-gray-600">+1 302 464 0950</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <Mail className="h-8 w-8 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold mb-2">Email</h3>
+                <p className="text-gray-600">kleber@ziontechgroup.com</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <MapPin className="h-8 w-8 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold mb-2">Address</h3>
+                <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
             </div>
           </motion.div>
         </div>

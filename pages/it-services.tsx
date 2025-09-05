@@ -39,7 +39,10 @@ import {
   Brain,
   Heart,
   ShoppingCart,
-  FileText
+  FileText,
+  Phone,
+  Mail,
+  MapPin
 } from 'lucide-react';
 
 const itServices = [
@@ -675,6 +678,178 @@ const itServices = [
     pricing: 'Custom Pricing',
     category: 'Future Infrastructure',
     link: 'https://futureinfra.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered IT Operations',
+    description: 'Intelligent IT operations management with AI-driven automation and predictive analytics.',
+    icon: Brain,
+    features: ['AI Automation', 'Predictive Analytics', 'Anomaly Detection', 'Self-healing Systems'],
+    pricing: '$10,000 - $50,000/month',
+    category: 'AI Operations',
+    popular: true,
+    link: 'https://aiops.ziontechgroup.com'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Comprehensive zero trust security implementation with identity verification and micro-segmentation.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Least Privilege Access'],
+    pricing: '$25,000 - $100,000/project',
+    category: 'Zero Trust Security',
+    link: 'https://zerotrust.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Distributed edge computing infrastructure for low-latency applications and IoT deployments.',
+    icon: Cpu,
+    features: ['Edge Infrastructure', 'IoT Integration', 'Low-latency Processing', 'Distributed Management'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Edge Computing',
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum-Safe Cryptography',
+    description: 'Post-quantum cryptography implementation to protect against future quantum computing threats.',
+    icon: Lock,
+    features: ['Quantum-safe Algorithms', 'Migration Planning', 'Compliance', 'Future-proofing'],
+    pricing: '$50,000 - $200,000/project',
+    category: 'Quantum Security',
+    link: 'https://quantumsafe.ziontechgroup.com'
+  },
+  {
+    title: '5G Network Implementation',
+    description: 'Complete 5G network design, deployment, and optimization for enterprise environments.',
+    icon: Wifi,
+    features: ['5G Infrastructure', 'Network Slicing', 'Edge Integration', 'Performance Optimization'],
+    pricing: '$100,000 - $500,000/project',
+    category: '5G Networks',
+    link: 'https://5gnetworks.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Enterprise blockchain solutions with private networks, smart contracts, and tokenization.',
+    icon: Cpu,
+    features: ['Private Blockchains', 'Smart Contracts', 'Tokenization', 'Consensus Mechanisms'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Blockchain',
+    link: 'https://blockchaininfra.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Platform Development',
+    description: 'Comprehensive IoT platform with device management, data processing, and analytics.',
+    icon: Network,
+    features: ['Device Management', 'Data Processing', 'Real-time Analytics', 'Security Integration'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'IoT Platforms',
+    link: 'https://iotplatform.ziontechgroup.com'
+  },
+  {
+    title: 'Hybrid Cloud Migration',
+    description: 'Seamless migration to hybrid cloud environments with workload optimization and cost management.',
+    icon: Cloud,
+    features: ['Workload Migration', 'Cost Optimization', 'Security Integration', 'Performance Tuning'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'Cloud Migration',
+    link: 'https://hybridcloud.ziontechgroup.com'
+  },
+  {
+    title: 'API Gateway & Management',
+    description: 'Enterprise API gateway with security, monitoring, and developer portal management.',
+    icon: Code,
+    features: ['API Security', 'Rate Limiting', 'Developer Portal', 'Analytics & Monitoring'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'API Management',
+    link: 'https://apigateway.ziontechgroup.com'
+  },
+  {
+    title: 'Microservices Architecture',
+    description: 'Modern microservices architecture design and implementation with container orchestration.',
+    icon: Server,
+    features: ['Service Design', 'Container Orchestration', 'Service Mesh', 'Monitoring'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Microservices',
+    link: 'https://microservices.ziontechgroup.com'
+  },
+  {
+    title: 'Data Lake & Analytics Platform',
+    description: 'Enterprise data lake with advanced analytics, machine learning, and business intelligence.',
+    icon: BarChart3,
+    features: ['Data Lake Design', 'ETL Pipelines', 'ML Integration', 'Business Intelligence'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Data Analytics',
+    link: 'https://datalake.ziontechgroup.com'
+  },
+  {
+    title: 'Identity & Access Management',
+    description: 'Comprehensive IAM solution with single sign-on, multi-factor authentication, and privileged access management.',
+    icon: Users,
+    features: ['Single Sign-On', 'MFA', 'Privileged Access', 'Identity Governance'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Identity Management',
+    link: 'https://iam.ziontechgroup.com'
+  },
+  {
+    title: 'Compliance & Governance',
+    description: 'IT compliance management with automated auditing, reporting, and regulatory adherence.',
+    icon: FileText,
+    features: ['Compliance Auditing', 'Automated Reporting', 'Risk Assessment', 'Regulatory Adherence'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Compliance',
+    link: 'https://compliance.ziontechgroup.com'
+  },
+  {
+    title: 'IT Service Management',
+    description: 'Complete ITSM implementation with ITIL processes, service catalog, and automation.',
+    icon: Settings,
+    features: ['ITIL Processes', 'Service Catalog', 'Incident Management', 'Change Management'],
+    pricing: '$12,000 - $60,000/project',
+    category: 'ITSM',
+    link: 'https://itsm.ziontechgroup.com'
+  },
+  {
+    title: 'Digital Transformation Consulting',
+    description: 'Strategic digital transformation consulting with technology roadmap and implementation planning.',
+    icon: TrendingUp,
+    features: ['Strategy Development', 'Technology Roadmap', 'Change Management', 'Implementation Planning'],
+    pricing: '$150 - $400/hour',
+    category: 'Digital Transformation',
+    link: 'https://digitaltransformation.ziontechgroup.com'
+  },
+  {
+    title: 'Cloud Cost Optimization',
+    description: 'Advanced cloud cost optimization with rightsizing, reserved instances, and automated scaling.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Rightsizing', 'Reserved Instances', 'Automated Scaling'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'Cloud Optimization',
+    link: 'https://cloudoptimization.ziontechgroup.com'
+  },
+  {
+    title: 'IT Disaster Recovery Testing',
+    description: 'Comprehensive disaster recovery testing and validation with automated failover procedures.',
+    icon: HardDrive,
+    features: ['DR Testing', 'Failover Validation', 'Recovery Procedures', 'Business Continuity'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Disaster Recovery',
+    link: 'https://drtesting.ziontechgroup.com'
+  },
+  {
+    title: 'IT Performance Monitoring',
+    description: 'Advanced IT performance monitoring with real-time dashboards and predictive analytics.',
+    icon: Monitor,
+    features: ['Real-time Monitoring', 'Predictive Analytics', 'Custom Dashboards', 'Alerting'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Performance Monitoring',
+    link: 'https://performancemonitoring.ziontechgroup.com'
+  },
+  {
+    title: 'IT Training & Certification',
+    description: 'Comprehensive IT training programs with certification preparation and hands-on labs.',
+    icon: BookOpen,
+    features: ['Certification Prep', 'Hands-on Labs', 'Custom Training', 'Skill Assessment'],
+    pricing: '$2,000 - $10,000/person',
+    category: 'IT Training',
+    link: 'https://ittraining.ziontechgroup.com'
   }
 ];
 
@@ -1050,6 +1225,40 @@ export default function ITServicesPage() {
               <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
                 View All Services
               </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
+              Get in Touch
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <Phone className="h-8 w-8 text-green-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold mb-2">Phone</h3>
+                <p className="text-gray-600">+1 302 464 0950</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <Mail className="h-8 w-8 text-green-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold mb-2">Email</h3>
+                <p className="text-gray-600">kleber@ziontechgroup.com</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <MapPin className="h-8 w-8 text-green-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold mb-2">Address</h3>
+                <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
             </div>
           </motion.div>
         </div>

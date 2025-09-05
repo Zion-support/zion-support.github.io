@@ -49,7 +49,11 @@ import {
   Bell,
   Home,
   BookOpen,
-  Brain
+  Brain,
+  Palette,
+  QrCode,
+  Phone,
+  MapPin
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -244,6 +248,97 @@ const microSaaSProducts = [
     category: 'SEO',
     popular: true,
     link: 'https://seooptimizer.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Video Editor',
+    description: 'Automated video editing with AI-driven cuts, transitions, and content optimization for social media.',
+    icon: Video,
+    features: ['AI Auto-Editing', 'Social Media Optimization', 'Template Library', 'Brand Consistency'],
+    pricing: '$79 - $399/month',
+    category: 'Video Production',
+    popular: true,
+    link: 'https://videoeditor.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Auditor',
+    description: 'Automated smart contract security analysis and vulnerability detection for blockchain projects.',
+    icon: Shield,
+    features: ['Security Analysis', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Checks'],
+    pricing: '$299 - $1,499/month',
+    category: 'Blockchain',
+    link: 'https://contractauditor.ziontechgroup.com'
+  },
+  {
+    title: 'AI Voice Cloning Studio',
+    description: 'High-quality voice cloning and text-to-speech generation for content creators and businesses.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Multi-language Support', 'Emotion Control', 'Real-time Generation'],
+    pricing: '$199 - $999/month',
+    category: 'Audio Production',
+    link: 'https://voicecloning.ziontechgroup.com'
+  },
+  {
+    title: 'Automated A/B Testing Platform',
+    description: 'AI-driven A/B testing with automatic winner selection and statistical significance validation.',
+    icon: BarChart3,
+    features: ['Auto Test Creation', 'Statistical Validation', 'Winner Selection', 'Performance Tracking'],
+    pricing: '$149 - $799/month',
+    category: 'Conversion Optimization',
+    link: 'https://abtesting.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Document Processor',
+    description: 'AI-powered document extraction, classification, and data entry automation for businesses.',
+    icon: FileText,
+    features: ['Document Extraction', 'Auto Classification', 'Data Entry Automation', 'OCR Processing'],
+    pricing: '$99 - $499/month',
+    category: 'Document Processing',
+    link: 'https://docprocessor.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Logo Generator',
+    description: 'Professional logo creation with AI design assistance and brand consistency tools.',
+    icon: Image,
+    features: ['AI Design Assistant', 'Brand Consistency', 'Multiple Formats', 'Vector Export'],
+    pricing: '$29 - $149/month',
+    category: 'Design',
+    link: 'https://logogenerator.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Email Signature Manager',
+    description: 'Dynamic email signatures with team branding, social links, and compliance features.',
+    icon: Mail,
+    features: ['Dynamic Signatures', 'Team Branding', 'Social Integration', 'Compliance Tools'],
+    pricing: '$19 - $99/month',
+    category: 'Email Management',
+    link: 'https://emailsignature.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Resume Builder',
+    description: 'Intelligent resume creation with ATS optimization and industry-specific templates.',
+    icon: FileText,
+    features: ['ATS Optimization', 'Industry Templates', 'Skills Matching', 'Cover Letter Generator'],
+    pricing: '$39 - $199/month',
+    category: 'Career Tools',
+    link: 'https://resumebuilder.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Generator',
+    description: 'Automated smart contract creation for DeFi, NFTs, and blockchain applications.',
+    icon: Code,
+    features: ['Contract Templates', 'Security Auditing', 'Gas Optimization', 'Multi-chain Support'],
+    pricing: '$199 - $999/month',
+    category: 'Blockchain Development',
+    link: 'https://contractgenerator.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Translation Hub',
+    description: 'Real-time translation with context awareness and industry-specific terminology support.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Awareness', 'Industry Terms', 'Quality Scoring'],
+    pricing: '$79 - $399/month',
+    category: 'Translation',
+    link: 'https://translationhub.ziontechgroup.com'
   },
   {
     title: 'Smart Analytics Dashboard',
@@ -848,6 +943,133 @@ const microSaaSProducts = [
     pricing: 'Custom Pricing',
     category: 'Future Tech',
     link: 'https://aifuture.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Code Generator',
+    description: 'Generate production-ready code from natural language descriptions with AI assistance.',
+    icon: Code,
+    features: ['Natural Language to Code', 'Multiple Languages', 'Code Review', 'Testing Generation'],
+    pricing: '$199 - $999/month',
+    category: 'Development',
+    popular: true,
+    link: 'https://codegenerator.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Testing Suite',
+    description: 'Comprehensive testing framework for smart contracts with automated vulnerability detection.',
+    icon: Shield,
+    features: ['Automated Testing', 'Vulnerability Detection', 'Gas Analysis', 'Multi-chain Support'],
+    pricing: '$299 - $1,499/month',
+    category: 'Blockchain Testing',
+    link: 'https://contracttesting.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Email Writer',
+    description: 'Intelligent email composition with tone adjustment and professional templates.',
+    icon: Mail,
+    features: ['Tone Adjustment', 'Professional Templates', 'Grammar Check', 'Personalization'],
+    pricing: '$29 - $149/month',
+    category: 'Email Tools',
+    link: 'https://emailwriter.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Data Scraper',
+    description: 'Intelligent web scraping with anti-detection and data cleaning capabilities.',
+    icon: Search,
+    features: ['Anti-Detection', 'Data Cleaning', 'Scheduled Scraping', 'API Export'],
+    pricing: '$99 - $499/month',
+    category: 'Data Collection',
+    link: 'https://datascraper.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Meeting Notes',
+    description: 'Automated meeting transcription with action item extraction and follow-up reminders.',
+    icon: Mic,
+    features: ['Auto Transcription', 'Action Items', 'Follow-up Reminders', 'Team Collaboration'],
+    pricing: '$49 - $249/month',
+    category: 'Productivity',
+    link: 'https://meetingnotes.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Form Builder',
+    description: 'AI-powered form creation with conditional logic and advanced validation rules.',
+    icon: FileText,
+    features: ['Conditional Logic', 'Advanced Validation', 'Multi-step Forms', 'Analytics'],
+    pricing: '$39 - $199/month',
+    category: 'Form Builder',
+    link: 'https://formbuilder.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Image Optimizer',
+    description: 'Automatic image optimization with format conversion and compression for web performance.',
+    icon: Image,
+    features: ['Auto Optimization', 'Format Conversion', 'Compression', 'WebP Generation'],
+    pricing: '$19 - $99/month',
+    category: 'Image Tools',
+    link: 'https://imageoptimizer.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Deployer',
+    description: 'Automated smart contract deployment with verification and monitoring across multiple chains.',
+    icon: Rocket,
+    features: ['Multi-chain Deployment', 'Auto Verification', 'Monitoring', 'Gas Optimization'],
+    pricing: '$149 - $799/month',
+    category: 'Blockchain Deployment',
+    link: 'https://contractdeployer.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Survey Creator',
+    description: 'Intelligent survey creation with question suggestions and response analysis.',
+    icon: BarChart3,
+    features: ['Question Suggestions', 'Response Analysis', 'Template Library', 'Real-time Results'],
+    pricing: '$59 - $299/month',
+    category: 'Survey Tools',
+    link: 'https://surveycreator.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Password Generator',
+    description: 'Advanced password generation with security analysis and breach monitoring.',
+    icon: Lock,
+    features: ['Security Analysis', 'Breach Monitoring', 'Custom Rules', 'Team Sharing'],
+    pricing: '$9 - $49/month',
+    category: 'Security Tools',
+    link: 'https://passwordgenerator.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered QR Code Generator',
+    description: 'Dynamic QR code creation with analytics tracking and customization options.',
+    icon: QrCode,
+    features: ['Dynamic QR Codes', 'Analytics Tracking', 'Customization', 'Bulk Generation'],
+    pricing: '$19 - $99/month',
+    category: 'QR Tools',
+    link: 'https://qrcodegenerator.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Analytics',
+    description: 'Comprehensive analytics and monitoring for deployed smart contracts with performance insights.',
+    icon: BarChart3,
+    features: ['Performance Analytics', 'Transaction Monitoring', 'Gas Usage Analysis', 'Security Alerts'],
+    pricing: '$199 - $999/month',
+    category: 'Blockchain Analytics',
+    link: 'https://contractanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Color Palette Generator',
+    description: 'Intelligent color palette creation with accessibility compliance and brand matching.',
+    icon: Palette,
+    features: ['Accessibility Compliance', 'Brand Matching', 'Color Harmony', 'Export Options'],
+    pricing: '$29 - $149/month',
+    category: 'Design Tools',
+    link: 'https://colorpalette.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Event Monitor',
+    description: 'Real-time monitoring of smart contract events with alerting and notification system.',
+    icon: Bell,
+    features: ['Real-time Monitoring', 'Custom Alerts', 'Event Filtering', 'Notification System'],
+    pricing: '$99 - $499/month',
+    category: 'Blockchain Monitoring',
+    link: 'https://eventmonitor.ziontechgroup.com'
   }
 ];
 
@@ -1292,6 +1514,40 @@ export default function MicroSaaSPage() {
               <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
                 View All Services
               </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
+              Get in Touch
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <Phone className="h-8 w-8 text-purple-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold mb-2">Phone</h3>
+                <p className="text-gray-600">+1 302 464 0950</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <Mail className="h-8 w-8 text-purple-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold mb-2">Email</h3>
+                <p className="text-gray-600">kleber@ziontechgroup.com</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <MapPin className="h-8 w-8 text-purple-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold mb-2">Address</h3>
+                <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
             </div>
           </motion.div>
         </div>
