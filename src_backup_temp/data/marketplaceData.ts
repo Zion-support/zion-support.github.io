@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/marketplaceData.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -209,3 +211,4 @@ export interface MarketplaceItem { id: string; title: string; category: 'product
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/marketplaceData.ts

@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/innovativeMicroSaasServices2026.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1312,3 +1314,4 @@ export interface InnovativeMicroSaasService2026 { id: string; title: string; des
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/innovativeMicroSaasServices2026.ts
