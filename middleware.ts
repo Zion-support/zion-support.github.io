@@ -5,14 +5,21 @@ const publicRoutes = [
   "/",
   "/about",
   "/contact",
+  "/blog",
   "/services",
   "/ai-services",
   "/it-services",
   "/micro-saas",
-  "/api-docs",
-  "/api",
   "/careers",
-  "/case-studies"
+  "/privacy",
+  "/terms",
+  "/cookies",
+  "/sitemap",
+  "/auth/login",
+  "/auth/register",
+  "/auth/forgot-password",
+  "/auth/reset-password",
+  "/auth/verify",
 ];
 
 export function middleware(request: NextRequest) {
