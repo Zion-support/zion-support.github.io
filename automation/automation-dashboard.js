@@ -46,7 +46,7 @@ const url = require('url''')
     <script src=';"https"")"
                 </div>").join("")
 </script>)"
-                </div>`).join(''): '<"p"""`
+                </div>`).join(''): '<"p"""
             "type"""
                     "label"""
                     "borderColor"""

@@ -14,7 +14,8 @@ const blogPosts = [
     date: "2024-01-15",
     category: "AI & Technology",
     readTime: "5 min read",
-    image: "/api/placeholder/600/300"
+    image: "/api/placeholder/600/300",
+    tags: ["AI", "Business", "Technology"]
   },
   {
     id: 2,
@@ -24,7 +25,8 @@ const blogPosts = [
     date: "2024-01-12",
     category: "Development",
     readTime: "7 min read",
-    image: "/api/placeholder/600/300"
+    image: "/api/placeholder/600/300",
+    tags: ["SaaS", "Development", "Scalability"]
   },
   {
     id: 3,
@@ -34,7 +36,8 @@ const blogPosts = [
     date: "2024-01-10",
     category: "Security",
     readTime: "6 min read",
-    image: "/api/placeholder/600/300"
+    image: "/api/placeholder/600/300",
+    tags: ["Security", "Cloud", "Best Practices"]
   },
   {
     id: 4,
@@ -44,7 +47,8 @@ const blogPosts = [
     date: "2024-01-08",
     category: "Strategy",
     readTime: "8 min read",
-    image: "/api/placeholder/600/300"
+    image: "/api/placeholder/600/300",
+    tags: ["Strategy", "Digital Transformation", "Business"]
   },
   {
     id: 5,
@@ -54,7 +58,8 @@ const blogPosts = [
     date: "2024-01-05",
     category: "AI & Technology",
     readTime: "9 min read",
-    image: "/api/placeholder/600/300"
+    image: "/api/placeholder/600/300",
+    tags: ["Machine Learning", "Production", "MLOps"]
   },
   {
     id: 6,
@@ -64,10 +69,16 @@ const blogPosts = [
     date: "2024-01-03",
     category: "Development",
     readTime: "6 min read",
+<<<<<<< HEAD
     image: "/api/placeholder/600/300"
   }
 ];
 
+=======
+    image: "/api/placeholder/600/300",
+    tags: ["API", "Development", "Design"]
+  }]
+>>>>>>> main
 export default function BlogPage() {
   return (
     <Layout
@@ -79,8 +90,12 @@ export default function BlogPage() {
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Latest insights on AI, technology, and business innovation from Zion Tech Group experts." />
       </Head>
+<<<<<<< HEAD
       
       <div className="min-h-screen bg-gray-50">
+=======
+      <div className="min-h-screen bg-white">
+>>>>>>> main
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
@@ -114,9 +129,15 @@ export default function BlogPage() {
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: index * 0.1 }}
+<<<<<<< HEAD
                       viewport={{ once: true }}
                     >
                       <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600"></div>
+=======
+                      viewport={{ once: true }}>
+                      <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600">
+                      </div>
+>>>>>>> main
                       <div className="p-6">
                         <div className="flex flex-wrap gap-2 mb-3">
                           <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
@@ -159,5 +180,5 @@ export default function BlogPage() {
         </section>
       </div>
     </Layout>
-  );
+  )
 }

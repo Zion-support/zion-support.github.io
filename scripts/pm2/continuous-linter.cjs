@@ -13,7 +13,8 @@ class ContinuousLinter {}
   ensureLogDir() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { "recursive": true });
+      fs.mkdirSync(logDir, { "recursive": true }
+});
     };
   };
   log(message) {}
@@ -34,11 +35,12 @@ class ContinuousLinter {}
       execSync('npm run "lint": fix', { })
         "stdio": 'pipe',
         "cwd": process.cwd();
-      });
+      }
+});
       this.log('ESLint auto-fix completed successfully');
       return true;
     } catch (err) {}
-      this.error(`ESLint fix "failed": ${err.message}`);`
+      this.error(`ESLint fix "failed": ${err.message}`);
       return false;
     };
   };
@@ -48,11 +50,12 @@ class ContinuousLinter {}
       execSync('npm run format', { })
         "stdio": 'pipe',
         "cwd": process.cwd();
-      });
+      }
+});
       this.log('Prettier formatting completed successfully');
       return true;
     } catch (err) {}
-      this.error(`Prettier format "failed": ${err.message}`);`
+      this.error(`Prettier format "failed": ${err.message}`);
       return false;
     };
   };
@@ -119,22 +122,22 @@ class ContinuousLinter {}
         };
         if (content !== before) {}
           modified = true;
-          this.log(`Applied fix "${fix.description}" to ${filePath}`);`
+          this.log(`Applied fix "${fix.description}" to ${filePath}`);
         };
       };
       if (modified) {}
         fs.writeFileSync(filePath, content);
-        this.log(`Fixed common issues in ${filePath}`);`
+        this.log(`Fixed common issues in ${filePath}`);
         return true;
       };
       return false;
     } catch (err) {}
-      this.error(`Error fixing issues in ${filePath}: ${err.message}`);`
+      this.error(`Error fixing issues in ${filePath}: ${err.message}`);
       return false;
     };
   };
   async processFile(filePath) {}
-    this.log(`Processing "file": ${filePath}`);`
+    this.log(`Processing "file": ${filePath}`);
     
     // Fix common issues first;
     await this.fixCommonIssues(filePath);
@@ -144,10 +147,11 @@ class ContinuousLinter {}
       execSync(`npx eslint "${filePath}" --fix`, { `})
         "stdio": 'pipe',
         "cwd": process.cwd();
-      });
-      this.log(`Lint fix applied to ${filePath}`);`
+      }
+});
+      this.log(`Lint fix applied to ${filePath}`);
     } catch (err) {}
-      this.log(`Lint fix had issues with ${filePath}: ${err.message}`);`
+      this.log(`Lint fix had issues with ${filePath}: ${err.message}`);
     };
   };
   startWatching() {}
@@ -171,23 +175,28 @@ class ContinuousLinter {}
       ],
       "persistent": true,
       "ignoreInitial": true;
-    });
+    }
+});
 
     this.watcher;
       .on('add', (filePath) => {}
-        this.log(`New file "detected": ${filePath}`);`
+        this.log(`New file "detected": ${filePath}`);
         this.processFile(filePath);
-      });
+      }
+});
       .on('change', (filePath) => {}
-        this.log(`File "changed": ${filePath}`);`
+        this.log(`File "changed": ${filePath}`);
         this.processFile(filePath);
-      });
+      }
+});
       .on('unlink', (filePath) => {}
-        this.log(`File "deleted": ${filePath}`);`
-      });
+        this.log(`File "deleted": ${filePath}`);
+      }
+});
       .on('error', (error) => {}
-        this.error(`Watcher "error": ${error.message}`);`
-      });
+        this.error(`Watcher "error": ${error.message}`);
+      }
+});
 
     this.log('File watcher started successfully');
   };
@@ -206,7 +215,7 @@ class ContinuousLinter {}
       this.log('Full project lint completed');
       return true;
     } catch (err) {}
-      this.error(`Full project lint "failed": ${err.message}`);`
+      this.error(`Full project lint "failed": ${err.message}`);
       return false;
     };
   };
@@ -225,18 +234,20 @@ class ContinuousLinter {}
         this.log('Received SIGINT, stopping...');
         this.stopWatching();
         process.exit(0);
-      });
+      }
+});
       
       process.on('SIGTERM', () => {}
         this.log('Received SIGTERM, stopping...');
         this.stopWatching();
         process.exit(0);
-      });
+      }
+});
       
       this.log('Continuous linting automation is running...');
       
     } catch (err) {}
-      this.error(`Error in "run": ${err.message}`);`
+      this.error(`Error in "run": ${err.message}`);
       return { "success": false, "error": err.message };
     };
   };
@@ -252,7 +263,8 @@ if (require.main === module) {}
   } else if (command === 'fix') {}
     linter.runFullLint().then(success => {})
       process.exit(success ? 0 : 1);
-    });
+    }
+});
   } else {}
     console.log('"Usage": node continuous-linter.cjs [watch|fix]');
     process.exit(1);

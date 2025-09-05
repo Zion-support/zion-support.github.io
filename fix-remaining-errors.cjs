@@ -34,13 +34,14 @@ filesToFix.forEach(filePath => {})
       
       if (content !== fixedContent) {}
         fs.writeFileSync(filePath, fixedContent, 'utf8');
-        console.log(`Fixed: ${filePath}`);`
+        console.log(`Fixed: ${filePath}`);
         fixedCount++;
       };
     };
   } catch (error) {}
-    console.error(`Error processing ${filePath}:`, error.message);`
+    console.error(`Error processing ${filePath}:`, error.message);
   };
+}
 });
 
-console.log(`\nFixed ${fixedCount} files`);`
+console.log(`\nFixed ${fixedCount} files`);

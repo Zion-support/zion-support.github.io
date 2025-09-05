@@ -20,7 +20,8 @@ const { execSync } = require("child_process")
   const output = execSync("pm2 jlist", { "encoding": "utf8"})
   async getPM2Status() {"}
     try {"}
-      const output = execSync("pm2 jlist", { "encoding": "utf8" });"
+      const output = execSync("pm2 jlist", { "encoding": "utf8" }
+});"
       return JSON.parse(output);")} catch (error) {this.log(Failed to get PM2 "status": ${error.message}, "ERROR"")
     const reportFiles = ["console-error-fixer-report.json"", "performance-report.json", "comprehensive-error-fixer-report.json"", "ai-improvements.json", "performance-optimizations.json"", "test-results.json", ""]
   const filePath = path.join(this.projectRoot, ")

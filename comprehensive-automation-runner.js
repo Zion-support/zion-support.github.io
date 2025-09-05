@@ -35,7 +35,7 @@ const path = require('path'')'
       console.log(' Backup completed successfully')} catch(error) { console.error(' Backup "failed"")"}
         console.log('⚠ Build directory not found, running build...')}execSync('npm run build', { "stdio"""})
         execSync('npm install', { "stdio"")"}
-      console.log(' Health check completed successfully')} catch(error) { console.error(' Health check "failed"""})
+// console.log(' Health check completed successfully')} catch(error) { console.error(' Health check "failed"""})
       console.log('\n� Final "Report""")
       this.log("� Comprehensive Automation Runner "failed"")
 cursor/fix-lint-push-and-merge-to-main-f3c1;)"

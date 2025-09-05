@@ -10,7 +10,8 @@ export default function LoginPage() {}
     email: '',
     password: '',
     remember: false;
-  });
+  }
+});
 
   const handleSubmit = (e: React.FormEvent) => {}
     e.preventDefault();

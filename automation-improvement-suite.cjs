@@ -11,7 +11,8 @@ class AutomationImprovementSuite {}
     
     // Ensure reports directory exists;
     if (!fs.existsSync(this.reportsDir)) {}
-      fs.mkdirSync(this.reportsDir, { recursive: true });
+      fs.mkdirSync(this.reportsDir, { recursive: true }
+});
     };
   };
   log(message, level = 'INFO') {}
@@ -85,20 +86,21 @@ class AutomationImprovementSuite {}
   };
   async runOptimization(optimization) {}
     try {}
-      this.log(`Running: ${optimization.name}`);`
+      this.log(`Running: ${optimization.name}`);
       const result = execSync(optimization.command, { })
         encoding: 'utf8',
         cwd: this.projectRoot;
-      });
+      }
+});
       
-      this.log(`${optimization.name} completed successfully`);`
+      this.log(`${optimization.name} completed successfully`);
       return { }
         success: true, 
         status: 'completed',
         result;
       };
     } catch (error) {}
-      this.log(`${optimization.name} failed: ${error.message}`, 'ERROR');`
+      this.log(`${optimization.name} failed: ${error.message}`, 'ERROR');
       return { }
         success: false, 
         status: 'failed',
@@ -115,7 +117,8 @@ class AutomationImprovementSuite {}
       results.push({})
         ...optimization,
         ...result;
-      });
+      }
+});
     };
     return results;
   };
@@ -134,7 +137,7 @@ class AutomationImprovementSuite {}
 
     const reportPath = path.join(this.reportsDir, 'automation-improvement-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`Automation improvement report generated: ${reportPath}`);`
+    this.log(`Automation improvement report generated: ${reportPath}`);
   };
   async run() {}
     this.log('🚀 Starting Automation Improvement Suite...');
@@ -144,9 +147,9 @@ class AutomationImprovementSuite {}
       this.generateReport(optimizationResults);
       
       const successCount = optimizationResults.filter(r => r.success).length;
-      this.log(`✅ Automation Improvement Suite completed! ${successCount}/${optimizationResults.length} optimizations successful`);`
+      this.log(`✅ Automation Improvement Suite completed! ${successCount}/${optimizationResults.length} optimizations successful`);
     } catch (error) {}
-      this.log(`❌ Automation Improvement Suite failed: ${error.message}`, 'ERROR');`
+      this.log(`❌ Automation Improvement Suite failed: ${error.message}`, 'ERROR');
     };
   };
 };

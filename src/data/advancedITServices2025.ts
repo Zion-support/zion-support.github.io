@@ -20,9 +20,9 @@ export interface AdvancedITService {}
   marketPrice: string; ,
   roi: string; 
   innovationLevel: string; ,
-  contactInfo: { phone: string; email: string; website: string; address: string }; "
-  "technicalSpecs": { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[] };""
-  "competitors": string[];"
+  contactInfo: { phone: string; email: string; website: string; address: string };
+  "technicalSpecs": { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[] };
+  "competitors": string[];
   marketSize: string; ,
   growthRate: string; 
   rating: number; ,

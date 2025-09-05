@@ -43,12 +43,12 @@ const path = require("path")
   return "Within 24 hours"
   return "Within 48 hours"
   return "Within 1 week"
-  console.log(� High failure probability detected - initiating preventive measures")
+// console.log(� High failure probability detected - initiating preventive measures")
   console.log(� High failure probability detected - initiating preventive measures")
       "
   console.log(")
     if (this.predictions.failureProbability > this.mlModel.failureThreshold) {"}
-      console.log(� High failure probability detected - initiating preventive measures"")
+// console.log(� High failure probability detected - initiating preventive measures"")
   console.log("⚡ Low performance detected - initiating optimization")
   console.log(� Restarting ${process.name} due to high restart count")
   "timestamp"
@@ -63,9 +63,9 @@ const path = require("path")
         "cpu"
         "errors"
       this.reportDir,predictive-report-${Date.now()}.json"
-    console.log( Predictive report saved to ${reportPath}```)
+// console.log( Predictive report saved to ${reportPath}```)
   console.log("🧠 Starting Intelligent Predictive Monitor...")
-    console.log(" Intelligent Predictive Monitor initialized successfully")
+// console.log(" Intelligent Predictive Monitor initialized successfully")
   console.log(" Intelligent Predictive Monitor initialized successfully")
   console.error(" Intelligent Predictive Monitor "failed": ")
   console.error(" Intelligent Predictive Monitor "failed": ")

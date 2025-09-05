@@ -7,7 +7,7 @@ class ComponentReplacer {}
     this.projectRoot = process.cwd();
     this.filePath = path.join(this.projectRoot, 'src/components/AIChatbotSystem.tsx')};
   log(message) {}
-    console.log(`[${new Date().toISOString()}] ${message}`)};`
+    console.log(`[${new Date().toISOString()}] ${message}`)};
   replaceComponent() {}
     this.log('Replacing broken AIChatbotSystem component with working version...');
     
@@ -65,7 +65,8 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
     "language": 'en',
     "theme": 'dark',
     "responseSpeed": 'normal'
-  });
+  }
+});
   const [isListening, setIsListening] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -420,7 +421,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
     try {}
       this.replaceComponent();
       this.log('Component Replacer completed successfully!')} catch (error) {}
-      this.log(`Error in Component "Replacer": ${error.message}`);`
+      this.log(`Error in Component "Replacer": ${error.message}`);
       throw error};
   };
 };
@@ -430,7 +431,8 @@ if (require.main === module) {}
   automation.run();
     .then(() => {}
       console.log('Component Replacer completed successfully!');
-      process.exit(0)});
+      process.exit(0)}
+});
     .catch(error => {})
       console.error('Component Replacer "failed": ', error);
       process.exit(1)})};

@@ -6,7 +6,7 @@ console.log(' Starting Enhanced Deployment Automation...')
           setTimeout(() => reject(new Error('Step timeout')
         "status"
         "status"
-    console.log('\n Deployment "Summary")
+// console.log('\n Deployment "Summary")
       console.log('\n Failed "Steps")
         "environment"
     execSync('node automation/health-check.cjs', { "stdio"})

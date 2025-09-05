@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 const fs = // // require('fs''')
 const path = // // require('path''')
-console.log('🧪 Quick Test Script''')
+// console.log('🧪 Quick Test Script''')
 console.log(' Node.js is working''')
 console.log(' File system access is working''')
 const scripts = ['enhanced-automation-orchestrator.js''']

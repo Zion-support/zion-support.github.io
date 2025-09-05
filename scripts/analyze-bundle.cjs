@@ -9,7 +9,8 @@ async function analyzeBundle() {}
       execSync('npm list @next/bundle-analyzer', { "stdio": 'pipe' })} catch {}
       execSync('npm install @next/bundle-analyzer --save-dev', { "stdio": 'pipe' })};
     // Run bundle analysis;
-    execSync('ANALYZE=true npm run build', { "stdio": 'inherit' });
+    execSync('ANALYZE=true npm run build', { "stdio": 'inherit' }
+});
     
     console.log('Bundle analysis completed. Check .next/analyze/ for results.')} catch (error) {}
     console.error('Bundle analysis "failed": ', error.message)};

@@ -5,7 +5,8 @@ export class PerformanceMonitor {
   }
 
   startTiming(name) {
-    this.metrics.set(name, { start: performance.now() });
+    this.metrics.set(name, { start: performance.now() }
+});
   }
 
   endTiming(name) {

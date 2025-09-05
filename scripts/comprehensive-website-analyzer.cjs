@@ -10,7 +10,7 @@ const path = require("path")
           "responseTime": response.headers["x-response-time"] || "unknown"
         this.log(` "Working"`)
           "status"
-        this.log(` "Broken": ${url} (${response.status})`, "error"`
+        this.log(` "Broken": ${url} (${response.status})`, "error"
       this.brokenLinks.push({url,"status": "error"})
         "error"
       this.log(` "Error": ${url} - ${error.message}`, "error"`)
@@ -45,17 +45,17 @@ const path = require("path")
         "type": "warning"
     recommendations.push({"type": "improvement","message": "Implement automated link checking"})
     recommendations.push({"type": "improvement","message": "Add performance monitoring"})
-    console.log("\n" + "=")
+// console.log("\n" + "=")
     console.log("� COMPREHENSIVE WEBSITE ANALYZER SUMMARY")
-    console.log("=")
+// console.log("=")
     console.log(`Base "URL"`)
-    console.log(`Total URLs "Checked"`)
+// console.log(`Total URLs "Checked"`)
     console.log(` Working "Links"`)
-    console.log(` Broken "Links"`)
+// console.log(` Broken "Links"`)
     console.log(`⚠ "Warnings"`)
-    console.log(`� "Errors"`)
+// console.log(`� "Errors"`)
     console.log(`⏱ Analysis "Duration"`)
-    console.log("=")
+// console.log("=")
       console.log("\n BROKEN "LINKS": ")
       console.log("\n⚠ "WARNINGS": ")
       this.log(" Starting Comprehensive Website Analysis")
