@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import Layout from '../components/Layout';
 import {
   Search,
   HelpCircle,
@@ -343,22 +344,105 @@ export default function HelpPage() {
     <Layout>
       <Head>
         <title>Help Center - Zion Tech Group</title>
-    icon: Video,
-    href: '/tutorials'
-  },
-  {
-    title: 'Community Forum',
-    description: 'Connect with other users and experts',
-    icon: MessageCircle,
-    href: '/community'
-  },
-  {
-    title: 'Contact Support',
-    description: 'Get help from our support team',
-    icon: Phone,
-    href: '/contact'
-  }
-];
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Help Center
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Find answers to common questions and get support for our services
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <div className="flex items-center mb-4">
+                <Video className="h-8 w-8 text-blue-600 mr-3" />
+                <h3 className="text-lg font-semibold text-gray-900">Tutorials</h3>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Step-by-step guides to help you get started
+              </p>
+              <a
+                href="/tutorials"
+                className="text-blue-600 hover:text-blue-800 font-medium"
+              >
+                View Tutorials →
+              </a>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <div className="flex items-center mb-4">
+                <MessageCircle className="h-8 w-8 text-green-600 mr-3" />
+                <h3 className="text-lg font-semibold text-gray-900">Community Forum</h3>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Connect with other users and experts
+              </p>
+              <a
+                href="/community"
+                className="text-green-600 hover:text-green-800 font-medium"
+              >
+                Join Community →
+              </a>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <div className="flex items-center mb-4">
+                <FileText className="h-8 w-8 text-purple-600 mr-3" />
+                <h3 className="text-lg font-semibold text-gray-900">Documentation</h3>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Comprehensive technical documentation
+              </p>
+              <a
+                href="/docs"
+                className="text-purple-600 hover:text-purple-800 font-medium"
+              >
+                Read Docs →
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  How do I get started with your services?
+                </h3>
+                <p className="text-gray-600">
+                  You can start by browsing our services page and selecting the solution that best fits your needs. 
+                  Our team will guide you through the onboarding process.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  What support options are available?
+                </h3>
+                <p className="text-gray-600">
+                  We offer 24/7 email support, live chat during business hours, and comprehensive documentation. 
+                  Enterprise customers also have access to dedicated support channels.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  How can I contact your support team?
+                </h3>
+                <p className="text-gray-600">
+                  You can reach us through our contact form, email us directly, or use the live chat feature 
+                  on our website. We typically respond within 24 hours.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
+}
 
 export default function HelpPage() {
   const [searchTerm, setSearchTerm] = useState('');
