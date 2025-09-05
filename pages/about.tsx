@@ -139,7 +139,6 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-<<<<<<< HEAD
               className="bg-white p-8 rounded-xl shadow-lg text-center"
               initial={{ opacity: 0, y:30 }}
               whileInView={{ opacity:1, y:0 }}
@@ -184,27 +183,11 @@ export default function AboutPage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Values</h3>
               <p className="text-gray-600 leading-relaxed">
                 Innovation, integrity, excellence, and client success are the core values that guide everything we do.
-=======
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                About{' '};
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Zion Tech Group;
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                We are a leading technology solutions provider dedicated to transforming businesses through innovative AI, cloud architecture, and cutting-edge development services.
->>>>>>> 9ed4ba1b92a691fe36a93d14d4961cf252717c28
               </p>
             </motion.div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
       {/* Values Section */}
       <section className="py-20 bg-white">

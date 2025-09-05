@@ -64,9 +64,9 @@ const aiServices = [
     features: ['Time Series Analysis', 'Machine Learning Models', 'Real-time Predictions', 'Custom Dashboards'],
     pricing: '$4,000 - $20,000 project',
     category: 'Analytics',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'Intelligent Chatbot System',
     description: 'AI-powered customer support with natural conversation capabilities.',
     icon: MessageSquare,
