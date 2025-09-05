@@ -199,6 +199,7 @@ export default function AboutPage() {
               </p>
             </motion.div>
           </div>
+          </div>
         </section>
 
         {/* Mission, Vision, Values */}
@@ -349,12 +350,26 @@ export default function AboutPage() {
                     <span className="text-2xl font-bold text-white">
                       {member.name.split(' ').map(n => n[0]).join('')}
                     </span>
-                  </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  <motion.div
-              className="bg-white p-8 rounded-xl shadow-lg text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{member.name}</h3>
+                  <p className="text-sm text-gray-600 mb-2">{member.role}</p>
+                  <p className="text-xs text-gray-500">
+                    {member.experience}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Mission, Vision, Values */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                className="bg-white p-8 rounded-xl shadow-lg text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
             >
@@ -396,17 +411,18 @@ export default function AboutPage() {
                 Innovation, integrity, excellence, and client success are the core values that guide everything we do.
               </p>
                   </motion.div>
-                  </div>
-                  </div>
-                  </section>
+                </div>
+              </div>
+            </div>
+          </section>
 
-      {/* Values Section */}
-      <section className="py-20 bg-white">
-                  <div className="container mx-auto px-4">
-                  <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+          {/* Values Section */}
+          <section className="py-20 bg-white">
+            <div className="container mx-auto px-4">
+              <motion.div
+                className="text-center mb-16"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >

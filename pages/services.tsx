@@ -45,7 +45,6 @@ const services = [
     "pricing": "Starting at $29/month",
     "count": "45+ Products",
     "popular": true
-    popular: true
   }
 ];
 
@@ -92,7 +91,8 @@ const benefits = [
     icon: Shield,
     title: "24/7 Support",
     description: "Round-the-clock technical support"
-  }
+  },
+  {
     title: "Micro SaaS",
     description: "Scalable software as a service solutions designed for specific business needs, rapid deployment, and innovative functionality.",
     icon: Cloud,
