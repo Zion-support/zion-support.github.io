@@ -390,6 +390,206 @@ const aiServices = [
     pricing: '$2,500 - $15,000/month',
     category: 'Performance AI',
     link: 'https://aiperformance.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Cybersecurity',
+    description: 'Advanced AI-driven cybersecurity solutions with threat detection and response.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Risk Assessment'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Cybersecurity',
+    popular: true,
+    link: 'https://aicybersecurity.ziontechgroup.com'
+  },
+  {
+    title: 'AI Customer Service Automation',
+    description: 'Intelligent customer service automation with natural language understanding.',
+    icon: MessageSquare,
+    features: ['Natural Language Processing', 'Intent Recognition', 'Automated Responses', 'Escalation Management'],
+    pricing: '$3,000 - $18,000/month',
+    category: 'Customer Service',
+    link: 'https://aicustomerservice.ziontechgroup.com'
+  },
+  {
+    title: 'AI Marketing Automation',
+    description: 'Comprehensive AI-powered marketing automation with personalization and optimization.',
+    icon: Target,
+    features: ['Campaign Optimization', 'Personalization', 'Predictive Analytics', 'ROI Tracking'],
+    pricing: '$4,000 - $25,000/month',
+    category: 'Marketing',
+    link: 'https://aimarketing.ziontechgroup.com'
+  },
+  {
+    title: 'AI Data Analytics Platform',
+    description: 'Advanced AI-powered data analytics with automated insights and visualization.',
+    icon: BarChart3,
+    features: ['Automated Insights', 'Predictive Analytics', 'Data Visualization', 'Real-time Processing'],
+    pricing: '$5,000 - $30,000/project',
+    category: 'Analytics',
+    link: 'https://aianalytics.ziontechgroup.com'
+  },
+  {
+    title: 'AI Process Automation',
+    description: 'Intelligent process automation with AI-driven decision making and optimization.',
+    icon: Settings,
+    features: ['Process Mining', 'Automated Workflows', 'Decision Intelligence', 'Performance Optimization'],
+    pricing: '$6,000 - $35,000/project',
+    category: 'Process Automation',
+    link: 'https://aiprocess.ziontechgroup.com'
+  },
+  {
+    title: 'AI Video Analytics',
+    description: 'Advanced video analysis using computer vision for security and business intelligence.',
+    icon: Video,
+    features: ['Object Detection', 'Behavior Analysis', 'Facial Recognition', 'Real-time Alerts'],
+    pricing: '$4,000 - $25,000/project',
+    category: 'Video AI',
+    link: 'https://aivideo.ziontechgroup.com'
+  },
+  {
+    title: 'AI Voice Analytics',
+    description: 'Intelligent voice analysis for sentiment, emotion, and content understanding.',
+    icon: Mic,
+    features: ['Sentiment Analysis', 'Emotion Detection', 'Speaker Identification', 'Content Analysis'],
+    pricing: '$2,000 - $15,000/month',
+    category: 'Voice AI',
+    link: 'https://aivoice.ziontechgroup.com'
+  },
+  {
+    title: 'AI Predictive Maintenance',
+    description: 'AI-powered predictive maintenance for industrial equipment and machinery.',
+    icon: Settings,
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$8,000 - $50,000/project',
+    category: 'Industrial AI',
+    link: 'https://aipredictive.ziontechgroup.com'
+  },
+  {
+    title: 'AI Content Moderation',
+    description: 'Automated content moderation using advanced AI for text, images, and videos.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Context Understanding', 'Policy Enforcement', 'Human Review'],
+    pricing: '$3,000 - $20,000/month',
+    category: 'Content AI',
+    link: 'https://aicontentmod.ziontechgroup.com'
+  },
+  {
+    title: 'AI Search & Discovery',
+    description: 'Intelligent search and discovery platform with semantic understanding and personalization.',
+    icon: Search,
+    features: ['Semantic Search', 'Personalization', 'Auto-tagging', 'Recommendation Engine'],
+    pricing: '$4,000 - $25,000/project',
+    category: 'Search AI',
+    link: 'https://aisearch.ziontechgroup.com'
+  },
+  {
+    title: 'AI Risk Management',
+    description: 'Comprehensive AI-powered risk assessment and management solutions.',
+    icon: Shield,
+    features: ['Risk Assessment', 'Predictive Modeling', 'Scenario Analysis', 'Compliance Monitoring'],
+    pricing: '$10,000 - $60,000/project',
+    category: 'Risk Management',
+    link: 'https://airisk.ziontechgroup.com'
+  },
+  {
+    title: 'AI Talent Acquisition',
+    description: 'AI-powered talent acquisition with intelligent candidate matching and screening.',
+    icon: Users,
+    features: ['Candidate Matching', 'Resume Analysis', 'Interview Scheduling', 'Bias Detection'],
+    pricing: '$5,000 - $30,000/project',
+    category: 'HR AI',
+    link: 'https://aitalent.ziontechgroup.com'
+  },
+  {
+    title: 'AI Sales Intelligence',
+    description: 'AI-powered sales intelligence with lead scoring and opportunity analysis.',
+    icon: TrendingUp,
+    features: ['Lead Scoring', 'Opportunity Analysis', 'Sales Forecasting', 'Customer Insights'],
+    pricing: '$3,000 - $20,000/month',
+    category: 'Sales AI',
+    link: 'https://aisales.ziontechgroup.com'
+  },
+  {
+    title: 'AI Compliance Monitoring',
+    description: 'Automated compliance monitoring and reporting using AI and machine learning.',
+    icon: Shield,
+    features: ['Compliance Tracking', 'Automated Reporting', 'Risk Assessment', 'Audit Support'],
+    pricing: '$6,000 - $35,000/project',
+    category: 'Compliance AI',
+    link: 'https://aicompliance.ziontechgroup.com'
+  },
+  {
+    title: 'AI Edge Computing',
+    description: 'AI solutions optimized for edge computing environments with low latency processing.',
+    icon: Cpu,
+    features: ['Edge Optimization', 'Low Latency', 'Offline Processing', 'Resource Efficiency'],
+    pricing: '$8,000 - $45,000/project',
+    category: 'Edge AI',
+    link: 'https://aiedge.ziontechgroup.com'
+  },
+  {
+    title: 'AI Conversational Commerce',
+    description: 'AI-powered conversational commerce with natural language shopping experiences.',
+    icon: ShoppingCart,
+    features: ['Natural Language Processing', 'Product Recommendations', 'Order Management', 'Customer Support'],
+    pricing: '$5,000 - $30,000/project',
+    category: 'Commerce AI',
+    link: 'https://aicommerce.ziontechgroup.com'
+  },
+  {
+    title: 'AI Knowledge Management',
+    description: 'Intelligent knowledge management system with automated content organization and retrieval.',
+    icon: BookOpen,
+    features: ['Content Organization', 'Automated Tagging', 'Semantic Search', 'Knowledge Graphs'],
+    pricing: '$4,000 - $25,000/project',
+    category: 'Knowledge AI',
+    link: 'https://aiknowledge.ziontechgroup.com'
+  },
+  {
+    title: 'AI Real-time Decision Engine',
+    description: 'AI-powered real-time decision making system for complex business scenarios.',
+    icon: Zap,
+    features: ['Real-time Processing', 'Decision Trees', 'Machine Learning', 'A/B Testing'],
+    pricing: '$7,000 - $40,000/project',
+    category: 'Decision AI',
+    popular: true,
+    link: 'https://aidecisions.ziontechgroup.com'
+  },
+  {
+    title: 'AI Augmented Reality',
+    description: 'AI-powered augmented reality solutions for enhanced user experiences.',
+    icon: Monitor,
+    features: ['Object Recognition', 'Spatial Mapping', 'Real-time Processing', 'User Interaction'],
+    pricing: '$15,000 - $80,000/project',
+    category: 'AR AI',
+    link: 'https://aiar.ziontechgroup.com'
+  },
+  {
+    title: 'AI Blockchain Analytics',
+    description: 'AI-powered blockchain analysis for transaction monitoring and risk assessment.',
+    icon: Building,
+    features: ['Transaction Analysis', 'Risk Assessment', 'Pattern Recognition', 'Compliance Monitoring'],
+    pricing: '$6,000 - $35,000/project',
+    category: 'Blockchain AI',
+    link: 'https://aiblockchain.ziontechgroup.com'
+  },
+  {
+    title: 'AI Climate Analytics',
+    description: 'AI-powered climate data analysis and environmental impact assessment.',
+    icon: Sprout,
+    features: ['Climate Modeling', 'Impact Assessment', 'Predictive Analytics', 'Sustainability Metrics'],
+    pricing: '$8,000 - $50,000/project',
+    category: 'Climate AI',
+    link: 'https://aiclimate.ziontechgroup.com'
+  },
+  {
+    title: 'AI Quantum Computing',
+    description: 'AI solutions optimized for quantum computing environments and algorithms.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Optimization', 'Simulation', 'Hybrid Computing'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Quantum AI',
+    link: 'https://aiquantum.ziontechgroup.com'
   }
 ];
 

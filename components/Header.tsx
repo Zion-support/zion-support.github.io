@@ -25,7 +25,8 @@ import {
   ShoppingCart,
   BookOpen,
   Zap,
-  Video
+  Video,
+  Cpu
 } from 'lucide-react';
 
 const navigation = [
@@ -34,11 +35,11 @@ const navigation = [
     href: '/services',
     icon: Settings,
     children: [
-      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '40+' },
-      { name: 'IT Services', href: '/it-services', icon: Network, count: '40+' },
-      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '45+' },
+      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '60+' },
+      { name: 'IT Services', href: '/it-services', icon: Network, count: '50+' },
+      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '65+' },
       { name: 'Talent Solutions', href: '/talent', icon: Users, count: '15+' },
-      { name: 'All Services', href: '/services', icon: Globe, count: '140+' }
+      { name: 'All Services', href: '/services', icon: Globe, count: '190+' }
     ]
   },
   {
@@ -51,7 +52,9 @@ const navigation = [
       { name: 'Industry Solutions', href: '/solutions/industry', icon: BarChart3 },
       { name: 'Custom Development', href: '/solutions/custom', icon: Settings },
       { name: 'Digital Transformation', href: '/solutions/digital-transformation', icon: Zap },
-      { name: 'Cloud Migration', href: '/solutions/cloud-migration', icon: Cloud }
+      { name: 'Cloud Migration', href: '/solutions/cloud-migration', icon: Cloud },
+      { name: 'AI Implementation', href: '/solutions/ai-implementation', icon: Brain },
+      { name: 'Cybersecurity Solutions', href: '/solutions/cybersecurity', icon: Shield }
     ]
   },
   {
@@ -64,7 +67,9 @@ const navigation = [
       { name: 'Manufacturing', href: '/industries/manufacturing', icon: Settings },
       { name: 'Retail', href: '/industries/retail', icon: ShoppingCart },
       { name: 'Education', href: '/industries/education', icon: BookOpen },
-      { name: 'Government', href: '/industries/government', icon: Building }
+      { name: 'Government', href: '/industries/government', icon: Building },
+      { name: 'Technology', href: '/industries/technology', icon: Cpu },
+      { name: 'Real Estate', href: '/industries/real-estate', icon: Building }
     ]
   },
   {
@@ -79,7 +84,9 @@ const navigation = [
       { name: 'API Reference', href: '/api-docs', icon: Settings },
       { name: 'FAQ', href: '/faq', icon: MessageSquare },
       { name: 'White Papers', href: '/white-papers', icon: FileText },
-      { name: 'Webinars', href: '/webinars', icon: Video }
+      { name: 'Webinars', href: '/webinars', icon: Video },
+      { name: 'Blog', href: '/blog', icon: MessageSquare },
+      { name: 'News', href: '/news', icon: MessageSquare }
     ]
   },
   {
@@ -92,7 +99,8 @@ const navigation = [
       { name: 'Careers', href: '/careers', icon: Rocket },
       { name: 'Partners', href: '/partners', icon: Network },
       { name: 'News', href: '/news', icon: MessageSquare },
-      { name: 'Blog', href: '/blog', icon: MessageSquare }
+      { name: 'Blog', href: '/blog', icon: MessageSquare },
+      { name: 'Contact', href: '/contact', icon: Phone }
     ]
   },
   {
@@ -103,7 +111,9 @@ const navigation = [
       { name: 'Get Support', href: '/support', icon: Phone },
       { name: 'Contact Us', href: '/contact', icon: Phone },
       { name: 'Documentation', href: '/docs', icon: FileText },
-      { name: 'FAQ', href: '/faq', icon: MessageSquare }
+      { name: 'FAQ', href: '/faq', icon: MessageSquare },
+      { name: 'Live Chat', href: '/support#chat', icon: MessageSquare },
+      { name: 'Ticket System', href: '/support#tickets', icon: FileText }
     ]
   }
 ];

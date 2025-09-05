@@ -33,7 +33,9 @@ import {
   Kanban,
   DollarSign,
   Code,
-  Rocket
+  Rocket,
+  Brain,
+  Sprout
 } from 'lucide-react';
 
 const itServices = [
@@ -416,6 +418,180 @@ const itServices = [
     pricing: '$12,000 - $80,000/project',
     category: 'Monitoring Solutions',
     link: 'https://enterprisemonitoring.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered IT Operations',
+    description: 'Intelligent IT operations using AI and machine learning for predictive maintenance.',
+    icon: Brain,
+    features: ['Predictive Analytics', 'Anomaly Detection', 'Automated Remediation', 'Performance Optimization'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'AI Operations',
+    popular: true,
+    link: 'https://aiops.ziontechgroup.com'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Implementation of zero trust security model with continuous verification.',
+    icon: Shield,
+    features: ['Identity Verification', 'Device Trust', 'Network Segmentation', 'Continuous Monitoring'],
+    pricing: '$25,000 - $120,000/project',
+    category: 'Security Architecture',
+    link: 'https://zerotrust.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Edge computing infrastructure and application deployment services.',
+    icon: Wifi,
+    features: ['Edge Infrastructure', 'Latency Optimization', 'Distributed Computing', 'IoT Integration'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Edge Computing',
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum-Safe Cryptography',
+    description: 'Implementation of quantum-resistant cryptographic solutions for future security.',
+    icon: Lock,
+    features: ['Quantum Algorithms', 'Post-Quantum Crypto', 'Migration Planning', 'Security Assessment'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Advanced Security',
+    link: 'https://quantumsafe.ziontechgroup.com'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, deployment, and optimization services.',
+    icon: Network,
+    features: ['5G Planning', 'Network Deployment', 'Performance Optimization', 'IoT Integration'],
+    pricing: '$50,000 - $300,000/project',
+    category: '5G Networks',
+    link: 'https://5gnetworks.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Blockchain network setup, smart contract development, and integration services.',
+    icon: Building,
+    features: ['Blockchain Setup', 'Smart Contracts', 'DApp Development', 'Integration Services'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Blockchain',
+    link: 'https://blockchaininfra.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Platform Development',
+    description: 'Comprehensive IoT platform development with device management and analytics.',
+    icon: Smartphone,
+    features: ['Device Management', 'Data Analytics', 'Real-time Processing', 'Security Integration'],
+    pricing: '$30,000 - $180,000/project',
+    category: 'IoT Solutions',
+    link: 'https://iotplatform.ziontechgroup.com'
+  },
+  {
+    title: 'AR/VR Infrastructure',
+    description: 'Augmented and virtual reality infrastructure setup and application development.',
+    icon: Monitor,
+    features: ['AR/VR Setup', 'Application Development', 'Performance Optimization', 'User Experience'],
+    pricing: '$40,000 - $250,000/project',
+    category: 'AR/VR',
+    link: 'https://arvrinfra.ziontechgroup.com'
+  },
+  {
+    title: 'Green IT Solutions',
+    description: 'Sustainable IT solutions with energy efficiency and carbon footprint reduction.',
+    icon: Sprout,
+    features: ['Energy Optimization', 'Carbon Tracking', 'Sustainable Hardware', 'Green Data Centers'],
+    pricing: '$15,000 - $80,000/project',
+    category: 'Sustainability',
+    link: 'https://greenit.ziontechgroup.com'
+  },
+  {
+    title: 'IT Automation & Orchestration',
+    description: 'Comprehensive IT process automation and workflow orchestration services.',
+    icon: Settings,
+    features: ['Process Automation', 'Workflow Orchestration', 'API Integration', 'Monitoring'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Automation',
+    link: 'https://itautomation.ziontechgroup.com'
+  },
+  {
+    title: 'Multi-Cloud Management',
+    description: 'Unified management platform for multiple cloud providers and hybrid environments.',
+    icon: Cloud,
+    features: ['Multi-Cloud Dashboard', 'Cost Optimization', 'Security Management', 'Compliance'],
+    pricing: '$25,000 - $120,000/project',
+    category: 'Cloud Management',
+    popular: true,
+    link: 'https://multicloud.ziontechgroup.com'
+  },
+  {
+    title: 'IT Disaster Recovery as a Service',
+    description: 'Comprehensive disaster recovery services with guaranteed RTO and RPO.',
+    icon: HardDrive,
+    features: ['Disaster Recovery Planning', 'Data Replication', 'Failover Testing', 'Recovery Guarantees'],
+    pricing: '$10,000 - $60,000/project',
+    category: 'Disaster Recovery',
+    link: 'https://draas.ziontechgroup.com'
+  },
+  {
+    title: 'IT Compliance Automation',
+    description: 'Automated compliance monitoring and reporting for various regulatory frameworks.',
+    icon: Shield,
+    features: ['Compliance Monitoring', 'Automated Reporting', 'Risk Assessment', 'Audit Support'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Compliance Automation',
+    link: 'https://complianceauto.ziontechgroup.com'
+  },
+  {
+    title: 'IT Service Desk Automation',
+    description: 'AI-powered service desk with intelligent ticket routing and resolution.',
+    icon: Headphones,
+    features: ['AI Ticket Routing', 'Automated Resolution', 'Knowledge Management', 'Self-Service Portal'],
+    pricing: '$12,000 - $60,000/project',
+    category: 'Service Desk',
+    link: 'https://servicedeskauto.ziontechgroup.com'
+  },
+  {
+    title: 'IT Capacity Planning & Forecasting',
+    description: 'Advanced capacity planning with predictive analytics and resource forecasting.',
+    icon: BarChart3,
+    features: ['Capacity Analysis', 'Predictive Modeling', 'Resource Forecasting', 'Cost Planning'],
+    pricing: '$18,000 - $90,000/project',
+    category: 'Capacity Planning',
+    link: 'https://capacityplanning.ziontechgroup.com'
+  },
+  {
+    title: 'IT Change Management',
+    description: 'Comprehensive change management processes with risk assessment and approval workflows.',
+    icon: Settings,
+    features: ['Change Planning', 'Risk Assessment', 'Approval Workflows', 'Impact Analysis'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Change Management',
+    link: 'https://changemanagement.ziontechgroup.com'
+  },
+  {
+    title: 'IT Performance Engineering',
+    description: 'Advanced performance engineering with load testing and optimization services.',
+    icon: Zap,
+    features: ['Load Testing', 'Performance Analysis', 'Optimization', 'Scalability Testing'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Performance Engineering',
+    link: 'https://performanceeng.ziontechgroup.com'
+  },
+  {
+    title: 'IT Service Integration',
+    description: 'Integration of disparate IT services and systems for unified operations.',
+    icon: Network,
+    features: ['Service Integration', 'API Management', 'Data Synchronization', 'Workflow Integration'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Service Integration',
+    link: 'https://serviceintegration.ziontechgroup.com'
+  },
+  {
+    title: 'IT Innovation Lab',
+    description: 'Dedicated innovation lab for exploring emerging technologies and proof-of-concepts.',
+    icon: Rocket,
+    features: ['Technology Exploration', 'Proof of Concepts', 'Innovation Workshops', 'Pilot Programs'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Innovation',
+    popular: true,
+    link: 'https://innovationlab.ziontechgroup.com'
   }
 ];
 

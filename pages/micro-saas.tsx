@@ -48,7 +48,8 @@ import {
   HardDrive,
   Bell,
   Home,
-  BookOpen
+  BookOpen,
+  Database
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -197,6 +198,180 @@ const microSaaSProducts = [
     pricing: '$19 - $99/month',
     category: 'Scheduling',
     link: 'https://meetingscheduler.ziontechgroup.com'
+  },
+  {
+    title: 'AI Content Creation Studio',
+    description: 'Advanced AI-powered content generation for blogs, social media, and marketing materials.',
+    icon: FileText,
+    features: ['Multi-format Content', 'Brand Voice Training', 'SEO Optimization', 'Plagiarism Check'],
+    pricing: '$149 - $799/month',
+    category: 'Content Creation',
+    popular: true,
+    link: 'https://aicontentstudio.ziontechgroup.com'
+  },
+  {
+    title: 'Automated Email Follow-up System',
+    description: 'Intelligent email sequences with personalization and behavioral triggers.',
+    icon: Mail,
+    features: ['Behavioral Triggers', 'Personalization Engine', 'A/B Testing', 'Conversion Analytics'],
+    pricing: '$79 - $399/month',
+    category: 'Email Automation',
+    link: 'https://emailfollowup.ziontechgroup.com'
+  },
+  {
+    title: 'Event Management Dashboard',
+    description: 'Complete event planning solution with ticketing, scheduling, and attendee management.',
+    icon: Calendar,
+    features: ['Event Planning', 'Ticketing System', 'Attendee Management', 'Analytics Dashboard'],
+    pricing: '$199 - $999/month',
+    category: 'Event Management',
+    link: 'https://eventmanager.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Talent Matching',
+    description: 'Advanced AI algorithms to match businesses with verified tech professionals.',
+    icon: Users,
+    features: ['AI Matching', 'Skill Verification', 'Project Matching', 'Performance Tracking'],
+    pricing: '$299 - $1,499/month',
+    category: 'Talent Solutions',
+    popular: true,
+    link: 'https://talentmatcher.ziontechgroup.com'
+  },
+  {
+    title: 'Customer Support Hub',
+    description: 'Comprehensive helpdesk platform with AI chatbots and knowledge base management.',
+    icon: Headphones,
+    features: ['Ticket Management', 'AI Chatbots', 'Knowledge Base', 'Live Chat'],
+    pricing: '$99 - $499/month',
+    category: 'Customer Support',
+    link: 'https://supportHub.ziontechgroup.com'
+  },
+  {
+    title: 'Code Quality Analyzer',
+    description: 'Automated code review and quality analysis with security vulnerability detection.',
+    icon: Code,
+    features: ['Code Review', 'Security Scanning', 'Performance Analysis', 'Best Practices Check'],
+    pricing: '$149 - $699/month',
+    category: 'Development Tools',
+    link: 'https://codeanalyzer.ziontechgroup.com'
+  },
+  {
+    title: 'API Documentation Generator',
+    description: 'Automatically generate interactive API documentation from code annotations.',
+    icon: BookOpen,
+    features: ['Auto Generation', 'Interactive Docs', 'Testing Interface', 'Version Management'],
+    pricing: '$79 - $399/month',
+    category: 'API Tools',
+    link: 'https://apidocsgen.ziontechgroup.com'
+  },
+  {
+    title: 'Database Performance Optimizer',
+    description: 'AI-powered database optimization with query analysis and performance recommendations.',
+    icon: Database,
+    features: ['Query Analysis', 'Performance Tuning', 'Index Optimization', 'Capacity Planning'],
+    pricing: '$199 - $999/month',
+    category: 'Database Tools',
+    link: 'https://dboptimizer.ziontechgroup.com'
+  },
+  {
+    title: 'Cloud Security Scanner',
+    description: 'Comprehensive cloud security assessment with compliance checking and threat detection.',
+    icon: Shield,
+    features: ['Security Scanning', 'Compliance Checks', 'Threat Detection', 'Remediation Guides'],
+    pricing: '$299 - $1,499/month',
+    category: 'Security Tools',
+    popular: true,
+    link: 'https://cloudsecurity.ziontechgroup.com'
+  },
+  {
+    title: 'Mobile App Analytics Pro',
+    description: 'Advanced analytics for mobile applications with user behavior tracking and optimization.',
+    icon: Smartphone,
+    features: ['User Analytics', 'Crash Reporting', 'Performance Monitoring', 'A/B Testing'],
+    pricing: '$99 - $499/month',
+    category: 'Mobile Analytics',
+    link: 'https://mobileanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'SEO Audit & Optimization',
+    description: 'Comprehensive SEO analysis with automated optimization recommendations and tracking.',
+    icon: Search,
+    features: ['Site Audit', 'Keyword Research', 'Content Optimization', 'Rank Tracking'],
+    pricing: '$149 - $699/month',
+    category: 'SEO Tools',
+    link: 'https://seoaudit.ziontechgroup.com'
+  },
+  {
+    title: 'Video Content Manager',
+    description: 'AI-powered video management with automatic transcription, editing, and optimization.',
+    icon: Video,
+    features: ['Auto Transcription', 'Video Editing', 'Thumbnail Generation', 'Analytics'],
+    pricing: '$199 - $999/month',
+    category: 'Video Tools',
+    link: 'https://videomanager.ziontechgroup.com'
+  },
+  {
+    title: 'Project Management AI',
+    description: 'Intelligent project management with AI-powered task prioritization and resource allocation.',
+    icon: Kanban,
+    features: ['AI Prioritization', 'Resource Allocation', 'Risk Assessment', 'Progress Tracking'],
+    pricing: '$99 - $499/month',
+    category: 'Project Management',
+    link: 'https://projectai.ziontechgroup.com'
+  },
+  {
+    title: 'Financial Forecasting Tool',
+    description: 'AI-powered financial forecasting with scenario planning and risk analysis.',
+    icon: TrendingUp,
+    features: ['Financial Modeling', 'Scenario Planning', 'Risk Analysis', 'Cash Flow Projections'],
+    pricing: '$299 - $1,499/month',
+    category: 'Financial Tools',
+    link: 'https://financialforecast.ziontechgroup.com'
+  },
+  {
+    title: 'Compliance Management System',
+    description: 'Automated compliance tracking with regulatory updates and audit trail management.',
+    icon: Shield,
+    features: ['Compliance Tracking', 'Regulatory Updates', 'Audit Trails', 'Risk Assessment'],
+    pricing: '$199 - $999/month',
+    category: 'Compliance',
+    link: 'https://compliancemanager.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Translation Service',
+    description: 'Real-time translation service with context awareness and industry-specific terminology.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Awareness', 'Industry Terms', 'Quality Assurance'],
+    pricing: '$49 - $299/month',
+    category: 'Translation',
+    link: 'https://aitranslate.ziontechgroup.com'
+  },
+  {
+    title: 'Social Media Analytics Pro',
+    description: 'Advanced social media analytics with sentiment analysis and competitor tracking.',
+    icon: Share2,
+    features: ['Sentiment Analysis', 'Competitor Tracking', 'Influencer Analytics', 'Campaign ROI'],
+    pricing: '$79 - $399/month',
+    category: 'Social Analytics',
+    link: 'https://socialanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'Automated Testing Suite',
+    description: 'Comprehensive automated testing platform with AI-powered test case generation.',
+    icon: CheckCircle,
+    features: ['Auto Test Generation', 'Cross-browser Testing', 'Performance Testing', 'CI/CD Integration'],
+    pricing: '$199 - $999/month',
+    category: 'Testing Tools',
+    link: 'https://autotesting.ziontechgroup.com'
+  },
+  {
+    title: 'Data Visualization Studio',
+    description: 'AI-powered data visualization with interactive dashboards and real-time updates.',
+    icon: BarChart3,
+    features: ['Interactive Dashboards', 'Real-time Updates', 'AI Insights', 'Custom Visualizations'],
+    pricing: '$149 - $699/month',
+    category: 'Data Visualization',
+    link: 'https://dataviz.ziontechgroup.com'
   },
   {
     title: 'Code Review Assistant',

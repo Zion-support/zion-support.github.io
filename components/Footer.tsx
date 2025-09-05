@@ -22,34 +22,34 @@ import {
 
 const services = {
   'AI Solutions': [
-    { "name": 'AI-Powered Email Responder', "href": '/ai-services#ai-email-responder' },
-    { "name": 'Predictive Analytics Platform', "href": '/ai-services#predictive-analytics' },
-    { "name": 'Intelligent Chatbot System', "href": '/ai-services#intelligent-chatbot' },
-    { "name": 'Computer Vision Solutions', "href": '/ai-services#computer-vision' },
-    { "name": 'AI Drug Discovery', "href": '/ai-services#ai-drug-discovery' },
-    { "name": 'AI Autonomous Vehicles', "href": '/ai-services#ai-autonomous-vehicles' },
-    { "name": 'AI Climate Modeling', "href": '/ai-services#ai-climate-modeling' },
-    { "name": 'AI Cybersecurity', "href": '/ai-services#ai-cybersecurity' }
+    { "name": 'AI-Powered Cybersecurity', "href": '/ai-services#ai-cybersecurity' },
+    { "name": 'AI Customer Service Automation', "href": '/ai-services#ai-customer-service' },
+    { "name": 'AI Marketing Automation', "href": '/ai-services#ai-marketing' },
+    { "name": 'AI Data Analytics Platform', "href": '/ai-services#ai-analytics' },
+    { "name": 'AI Process Automation', "href": '/ai-services#ai-process' },
+    { "name": 'AI Video Analytics', "href": '/ai-services#ai-video' },
+    { "name": 'AI Predictive Maintenance', "href": '/ai-services#ai-predictive' },
+    { "name": 'AI Real-time Decision Engine', "href": '/ai-services#ai-decisions' }
   ],
   'IT Services': [
-    { "name": 'Cloud Infrastructure Management', "href": '/it-services#cloud-infrastructure' },
-    { "name": 'Zero Trust Security', "href": '/it-services#zero-trust-security' },
-    { "name": 'Edge Computing', "href": '/it-services#edge-computing' },
-    { "name": '5G Network Implementation', "href": '/it-services#5g-networks' },
-    { "name": 'Blockchain Infrastructure', "href": '/it-services#blockchain-infrastructure' },
-    { "name": 'IoT Platform Management', "href": '/it-services#iot-platform' },
-    { "name": 'Digital Twin Technology', "href": '/it-services#digital-twins' },
-    { "name": 'Green IT Solutions', "href": '/it-services#green-it' }
+    { "name": 'AI-Powered IT Operations', "href": '/it-services#aiops' },
+    { "name": 'Zero Trust Security Architecture', "href": '/it-services#zerotrust' },
+    { "name": 'Edge Computing Solutions', "href": '/it-services#edgecomputing' },
+    { "name": '5G Network Implementation', "href": '/it-services#5gnetworks' },
+    { "name": 'Blockchain Infrastructure', "href": '/it-services#blockchaininfra' },
+    { "name": 'IoT Platform Development', "href": '/it-services#iotplatform' },
+    { "name": 'Multi-Cloud Management', "href": '/it-services#multicloud' },
+    { "name": 'IT Innovation Lab', "href": '/it-services#innovationlab' }
   ],
   'Micro SaaS': [
-    { "name": 'Cloud Cost Guard', "href": '/micro-saas#cloud-cost-guard' },
-    { "name": 'AI Email Responder', "href": '/micro-saas#ai-email-responder' },
-    { "name": 'Voice Meeting Assistant', "href": '/micro-saas#voice-meeting-assistant' },
-    { "name": 'Smart Contract Analyzer', "href": '/micro-saas#smart-contract-analyzer' },
-    { "name": 'Predictive Maintenance AI', "href": '/micro-saas#predictive-maintenance' },
-    { "name": 'Blockchain Analytics', "href": '/micro-saas#blockchain-analytics' },
-    { "name": 'AI SEO Optimizer', "href": '/micro-saas#ai-seo-optimizer' },
-    { "name": 'Smart Energy Management', "href": '/micro-saas#smart-energy' }
+    { "name": 'AI Content Creation Studio', "href": '/micro-saas#aicontentstudio' },
+    { "name": 'AI-Powered Talent Matching', "href": '/micro-saas#talentmatcher' },
+    { "name": 'Cloud Security Scanner', "href": '/micro-saas#cloudsecurity' },
+    { "name": 'Code Quality Analyzer', "href": '/micro-saas#codeanalyzer' },
+    { "name": 'Financial Forecasting Tool', "href": '/micro-saas#financialforecast' },
+    { "name": 'Social Media Analytics Pro', "href": '/micro-saas#socialanalytics' },
+    { "name": 'Automated Testing Suite', "href": '/micro-saas#autotesting' },
+    { "name": 'Data Visualization Studio', "href": '/micro-saas#dataviz' }
   ]
 };
 
