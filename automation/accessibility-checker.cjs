@@ -16,9 +16,18 @@ const a11yChecks = [{
         const cssFiles = fs
           .readdirSync(stylesDir)
           .filter(file => file.endsWith('.css'));
+<<<<<<< HEAD
+        console.log(
+          `Found ${cssFiles.length} CSS files to check for color contrast`
+        );
+      }
+    },
+  },
+=======
         
       }
     }},
+>>>>>>> main
   {
     "name": 'Keyboard Navigation Check',
     "action": () => {
@@ -38,9 +47,16 @@ const a11yChecks = [{
           interactiveElements += buttons + links + inputs;
         });
 
+<<<<<<< HEAD
+        console.log(`Found ${interactiveElements} interactive elements`);
+      }
+    },
+  },
+=======
         
       }
     }},
+>>>>>>> main
   {
     "name": 'ARIA Labels Check',
     "action": () => {
@@ -57,9 +73,16 @@ const a11yChecks = [{
           ariaElements += (content.match(/aria-[^=]*=/g) || []).length;
         });
 
+<<<<<<< HEAD
+        console.log(`Found ${ariaElements} ARIA attributes`);
+      }
+    },
+  },
+=======
         
       }
     }},
+>>>>>>> main
   {
     "name": 'Focus Management Check',
     "action": () => {
@@ -77,9 +100,16 @@ const a11yChecks = [{
             .length;
         });
 
+<<<<<<< HEAD
+        console.log(`Found ${focusElements} focus-related elements`);
+      }
+    },
+  },
+=======
         
       }
     }},
+>>>>>>> main
   {
     "name": 'Screen Reader Support Check',
     "action": () => {
@@ -98,9 +128,16 @@ const a11yChecks = [{
           ).length;
         });
 
+<<<<<<< HEAD
+        console.log(`Found ${srElements} screen reader support elements`);
+      }
+    },
+  },
+=======
         
       }
     }},
+>>>>>>> main
 ];
 
 // Run accessibility checks
@@ -126,11 +163,22 @@ const report = {
   "timestamp": new Date().toISOString(),
   "checks": a11yChecks.map(check => ({
     name: check.name,
+<<<<<<< HEAD
+    status: 'completed',
+  })),
+  summary: {
+    total: totalCount,
+    successful: successCount,
+    failed: totalCount - successCount,
+  },
+};
+=======
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
+>>>>>>> main
 
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
@@ -142,6 +190,9 @@ const reportFile = path.join(
   `accessibility-report-${Date.now()}.json`
 );
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
+console.log(`📄 Accessibility report saved to: ${reportFile}`);
+=======
 
 =======
 <<<<<<< HEAD
@@ -157,5 +208,6 @@ console.log('♿ Accessibility Checker Starting...\n')
     "name"
     "name"
     "status"
+>>>>>>> main
 >>>>>>> main
 >>>>>>> main

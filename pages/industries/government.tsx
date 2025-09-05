@@ -23,7 +23,7 @@ import {
   Database,
   Vote
 } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const solutions = [
   {
@@ -85,7 +85,7 @@ const benefits = [
 
 export default function Government() {
   return (
-    <MainLayout
+    <Layout
       title="Government Technology Solutions - Zion Tech Group"
       description="Transform government services with digital platforms, citizen portals, data analytics, and cybersecurity solutions."
       keywords="government technology, digital government, citizen services, government analytics, public sector, e-government"
@@ -265,6 +265,6 @@ export default function Government() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

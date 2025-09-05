@@ -159,7 +159,8 @@ class LintingAutomation {
 <<<<<<< HEAD
 
   log(message) {
-    const timestamp = new Date().toISOString(});
+    const timestamp = new Date().toISOString(;
+  });
     const logMessage = `[${timestamp}] ${message}\;n;`;
     
     );
@@ -175,10 +176,17 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       // Run linting;
       const lintOutput = execSync('npm run lint', { 
 <<<<<<< HEAD
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 60000
+      ;};);
+=======
+<<<<<<< HEAD
         "cwd": this.projectRoot;
         encoding: 'utf8'
         timeout: 60000;
       };);
+>>>>>>> main
       
 =======
 "cwd": this.projectRoot,
@@ -228,12 +236,21 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     try {
       // Try to auto-fix linting issues;
       this.log('Attempting to auto-fix linting issues...');
+<<<<<<< HEAD
+      
+      const fixOutput = execSync('npm run lint:fix', { 
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 120000
+      ;};);
+=======
       const fixOutput = execSync('npm run "lint": fix', { 
 <<<<<<< HEAD
         "cwd": this.projectRoot;
         encoding: 'utf8'
         timeout: 120000;
       };);
+>>>>>>> main
       
 =======
 "cwd": this.projectRoot,
@@ -245,10 +262,17 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       // Run linting again to check if issues were resolved;
       const recheckOutput = execSync('npm run lint', { 
 <<<<<<< HEAD
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 60000
+      ;};);
+=======
+<<<<<<< HEAD
         "cwd": this.projectRoot;
         encoding: 'utf8'
         timeout: 60000;
       };);
+>>>>>>> main
       
 =======
 "cwd": this.projectRoot,
@@ -268,7 +292,11 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       projectRoot: this.projectRoot;
       eslintConfig: this.getEslintConfig()
 <<<<<<< HEAD
+   ; ;};
+=======
+<<<<<<< HEAD
    };
+>>>>>>> main
     
 =======
 };ursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -282,15 +310,34 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       if () {
         return {) {
     ) {
+<<<<<<< HEAD
+        return {;
+  }
+          exists: true,
+          path: configPath,
+          size: fs.statSync(configPath).size
+=======
         return {}
           "exists": true;
           path: configPath;
           size: fs.statSync(configPath).size;
+>>>>>>> main
         }}
     } catch (error) {
       // Ignore errors;
     }
     
+<<<<<<< HEAD
+    return { exists: false ;}}
+
+  async reportLintingFailure(error) {
+    const failureReport = {
+      timestamp: new Date().toISOString(),
+      error: error.message,
+      stack: error.stack,
+      projectRoot: this.projectRoot
+   ; ;};
+=======
     return { "exists": false }}
 
   async reportLintingFailure(error) {
@@ -300,6 +347,7 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       stack: error.stack;
       projectRoot: this.projectRoot;
    };
+>>>>>>> main
     
 =======
 const configPath = path.join(this.projectRoot, 'eslint.config.js');
@@ -340,7 +388,8 @@ return { "exists": false };
       if ( {
         this.log(`Found ${filesToCheck.length} recently modified files, running linting...`)) {
      {
-        this.log(`Found ${filesToCheck.length} recently modified files, running linting...`)}
+        this.log(`Found ${filesToCheck.length} recently modified files, running linting...`);
+  }
         await this.runLinting()}
       
 =======
@@ -356,24 +405,34 @@ return { "exists": false };
     }
   }
   getRecentFiles() {
+<<<<<<< HEAD
+    const recentFiles = [;];
+    const cutoffTime = Date.now() - 600;0;0; // 1 minute ago
+    
+    try {
+      // Check common source directories
+      const sourceDirs = ['pages', 'components', 'lib', 'hooks', 'utils';];
+=======
     const recentFiles = [];
 <<<<<<< HEAD
     const cutoffTime = Date.now() - 600;0;0; // 1 minute ago;
     try {
       // Check common source directories;
       const sourceDirs = ['pages', 'components', 'lib', 'hooks', 'utils'];
+>>>>>>> main
       
       for (const dir of sourceDirs) {
         const dirPath = path.join(this.projectRoot, dir;);
         if () {
           const files = this.getFilesInDirectory(dirPath) {
     ) {
-          const files = this.getFilesInDirectory(dirPath});
+          const files = this.getFilesInDirectory(dirPath;
+  });
           recentFiles.push(...files.filter(file => {
             try {
               const stats = fs.statSync(file;);
-              return stats.mtime.getTime() > cutoffTime} catch {
-              return false}
+              return stats.mtime.getTime() > cutoffTime;} catch {
+              return false;}
           }))}
 =======
 const cutoffTime = Date.now() - 60000; // 1 minute ago
@@ -401,10 +460,14 @@ const cutoffTime = Date.now() - 60000; // 1 minute ago
     }
 <<<<<<< HEAD
     
+<<<<<<< HEAD
+    return recentFiles;}
+=======
     return recentFiles}
 =======
 <<<<<<< HEAD
     
+>>>>>>> main
 >>>>>>> main
 
   getFilesInDirectory(dir, fileList = []) {}
@@ -452,9 +515,18 @@ if (stat.isDirectory()) {
       // Ignore errors;
     }
     
+<<<<<<< HEAD
+    return fileList;
+  }}
+
+  async start() {
+    this.isRunning = true;
+    this.log('Linting Automation started');
+=======
     return fileList}}
 =======
 <<<<<<< HEAD
+>>>>>>> main
     
 >>>>>>> main
 
@@ -473,7 +545,8 @@ if (stat.isDirectory()) {
     }, this.lintInterval)) {
      {
         await this.checkFileChanges()}
-    }, this.lintInterval)}
+    }, this.lintInterval);
+  }
     
 =======
     

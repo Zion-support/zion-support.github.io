@@ -12,7 +12,7 @@ import {
   Mic,
   BookOpen
 } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from './components/Layout';
 
 const upcomingEvents = [
   {
@@ -100,7 +100,7 @@ const eventTypes = [
 
 export default function EventsPage() {
   return (
-    <MainLayout
+    <Layout
       title="Events - Zion Tech Group"
       description="Join our upcoming events, conferences, workshops, and webinars. Learn from industry experts and connect with peers."
       keywords="events, conferences, workshops, webinars, meetups, training, networking"
@@ -351,6 +351,6 @@ export default function EventsPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

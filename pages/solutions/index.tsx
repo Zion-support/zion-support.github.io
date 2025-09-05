@@ -13,7 +13,7 @@ import {
   Globe,
   Target
 } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const solutions = [
   {
@@ -88,7 +88,7 @@ const stats = [
 
 export default function SolutionsPage() {
   return (
-    <MainLayout 
+    <Layout 
       title="Solutions - Zion Tech Group"
       description="Comprehensive technology solutions for enterprises, startups, and industries. Custom development and specialized services."
       keywords="enterprise solutions, startup solutions, custom development, industry solutions, technology consulting"
@@ -287,6 +287,6 @@ export default function SolutionsPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }
