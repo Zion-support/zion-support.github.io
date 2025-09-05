@@ -11,6 +11,9 @@ const nextConfig = {
     scrollRestoration: true,
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+    serverComponentsExternalPackages: ['sharp'],
+    optimizeServerReact: true,
+    serverMinification: true,
   },
   
   // Turbopack configuration
@@ -78,6 +81,10 @@ const nextConfig = {
       config.plugins.push(
         new webpack.optimize.ModuleConcatenationPlugin()
       );
+      
+      // Add tree shaking optimization
+      config.optimization.usedExports = true;
+      config.optimization.sideEffects = false;
     }
     
     return config;
