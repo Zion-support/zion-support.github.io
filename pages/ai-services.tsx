@@ -43,7 +43,8 @@ import {
   ShoppingCart,
   BookOpen,
   Home,
-  Gamepad2
+  Gamepad2,
+  DollarSign
 } from 'lucide-react';
 
 const aiServices = [
@@ -650,6 +651,273 @@ const aiServices = [
     pricing: '$10,000 - $100,000/setup',
     category: 'Mental Health AI',
     popular: true
+  },
+  {
+    title: 'AI-Powered Autonomous Code Generation',
+    description: 'Advanced AI system that generates production-ready code from natural language descriptions.',
+    icon: Code,
+    features: ['Natural Language to Code', 'Multi-language Support', 'Code Review Integration', 'Testing Automation'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Development AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Predictive Maintenance',
+    description: 'Machine learning system for predicting equipment failures and optimizing maintenance schedules.',
+    icon: Settings,
+    features: ['Failure Prediction', 'Maintenance Optimization', 'Cost Reduction', 'Real-time Monitoring'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'Industrial AI'
+  },
+  {
+    title: 'AI-Powered Real Estate Valuation',
+    description: 'Advanced property valuation using AI analysis of market data, location, and property features.',
+    icon: Building,
+    features: ['Market Analysis', 'Property Valuation', 'Investment Insights', 'Risk Assessment'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Real Estate AI'
+  },
+  {
+    title: 'AI-Powered Legal Research Assistant',
+    description: 'Intelligent legal research platform that analyzes case law and provides legal insights.',
+    icon: BookOpen,
+    features: ['Case Law Analysis', 'Legal Research', 'Precedent Finding', 'Document Analysis'],
+    pricing: '$8,000 - $40,000/setup',
+    category: 'Legal AI'
+  },
+  {
+    title: 'AI-Powered Weather Prediction',
+    description: 'Advanced weather forecasting system using machine learning and satellite data analysis.',
+    icon: Globe,
+    features: ['Hyperlocal Forecasting', 'Severe Weather Alerts', 'Climate Analysis', 'Agricultural Insights'],
+    pricing: '$12,000 - $60,000/setup',
+    category: 'Environmental AI'
+  },
+  {
+    title: 'AI-Powered Sports Analytics',
+    description: 'Comprehensive sports performance analysis and prediction using computer vision and ML.',
+    icon: Target,
+    features: ['Performance Analysis', 'Injury Prediction', 'Tactical Insights', 'Player Scouting'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Sports AI'
+  },
+  {
+    title: 'AI-Powered Food Safety Inspector',
+    description: 'Computer vision system for automated food safety inspection and quality control.',
+    icon: Shield,
+    features: ['Contamination Detection', 'Quality Assessment', 'Compliance Monitoring', 'Traceability'],
+    pricing: '$30,000 - $150,000/setup',
+    category: 'Food Safety AI'
+  },
+  {
+    title: 'AI-Powered Wildlife Conservation',
+    description: 'AI system for wildlife monitoring, poaching detection, and conservation management.',
+    icon: Sprout,
+    features: ['Species Identification', 'Poaching Detection', 'Habitat Monitoring', 'Population Tracking'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Conservation AI'
+  },
+  {
+    title: 'AI-Powered Personal Stylist',
+    description: 'Virtual personal styling assistant using computer vision and fashion trend analysis.',
+    icon: Image,
+    features: ['Style Analysis', 'Outfit Recommendations', 'Trend Prediction', 'Size Optimization'],
+    pricing: '$2,000 - $10,000/setup',
+    category: 'Fashion AI'
+  },
+  {
+    title: 'AI-Powered Music Composition',
+    description: 'AI system that creates original music compositions and soundtracks for various media.',
+    icon: Mic,
+    features: ['Original Composition', 'Style Adaptation', 'Emotion-based Music', 'Multi-genre Support'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Creative AI'
+  },
+  {
+    title: 'AI-Powered Language Translation',
+    description: 'Real-time language translation with cultural context and industry-specific terminology.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Cultural Context', 'Industry Terminology', 'Voice Translation'],
+    pricing: '$3,000 - $15,000/setup',
+    category: 'Language AI'
+  },
+  {
+    title: 'AI-Powered Investment Advisor',
+    description: 'Sophisticated AI investment platform with portfolio optimization and risk management.',
+    icon: TrendingUp,
+    features: ['Portfolio Optimization', 'Risk Assessment', 'Market Analysis', 'Automated Trading'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Financial AI'
+  },
+  {
+    title: 'AI-Powered Smart City Management',
+    description: 'Comprehensive AI platform for smart city operations and urban planning optimization.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Energy Management', 'Public Safety', 'Resource Allocation'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Smart City AI'
+  },
+  {
+    title: 'AI-Powered Drug Interaction Checker',
+    description: 'Advanced AI system for detecting potential drug interactions and adverse effects.',
+    icon: Heart,
+    features: ['Drug Interaction Analysis', 'Adverse Effect Prediction', 'Dosage Optimization', 'Patient Safety'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Pharmaceutical AI'
+  },
+  {
+    title: 'AI-Powered Customer Journey Mapping',
+    description: 'Intelligent customer journey analysis and optimization using behavioral data.',
+    icon: Users,
+    features: ['Journey Mapping', 'Behavior Analysis', 'Optimization Recommendations', 'ROI Tracking'],
+    pricing: '$8,000 - $40,000/setup',
+    category: 'Customer Experience AI'
+  },
+  {
+    title: 'AI-Powered Supply Chain Risk Assessment',
+    description: 'Comprehensive supply chain risk analysis and mitigation using AI and external data.',
+    icon: Network,
+    features: ['Risk Identification', 'Supplier Analysis', 'Disruption Prediction', 'Mitigation Strategies'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Supply Chain AI'
+  },
+  {
+    title: 'AI-Powered Personal Finance Manager',
+    description: 'Intelligent personal finance management with budgeting, investment, and savings optimization.',
+    icon: DollarSign,
+    features: ['Budget Optimization', 'Investment Advice', 'Savings Goals', 'Expense Categorization'],
+    pricing: '$1,000 - $5,000/setup',
+    category: 'Personal Finance AI'
+  },
+  {
+    title: 'AI-Powered Content Moderation Suite',
+    description: 'Advanced content moderation system for text, images, and videos across multiple platforms.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Real-time Processing', 'Custom Rules', 'Scalable Architecture'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Content Safety AI'
+  },
+  {
+    title: 'AI-Powered Predictive Analytics for Retail',
+    description: 'Comprehensive retail analytics with demand forecasting and inventory optimization.',
+    icon: ShoppingCart,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Price Optimization', 'Customer Insights'],
+    pricing: '$12,000 - $60,000/setup',
+    category: 'Retail AI'
+  },
+  {
+    title: 'AI-Powered Medical Imaging Analysis',
+    description: 'Advanced medical image analysis using deep learning for radiology and pathology.',
+    icon: Eye,
+    features: ['X-ray Analysis', 'MRI Interpretation', 'CT Scan Processing', 'Pathology Detection'],
+    pricing: '$25,000 - $100,000/setup',
+    category: 'Medical AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Autonomous Drone Systems',
+    description: 'Intelligent drone systems with computer vision and autonomous navigation.',
+    icon: Rocket,
+    features: ['Autonomous Navigation', 'Object Detection', 'Mission Planning', 'Real-time Analysis'],
+    pricing: '$50,000 - $200,000/project',
+    category: 'Autonomous Systems'
+  },
+  {
+    title: 'AI-Powered Financial Risk Assessment',
+    description: 'Advanced financial risk modeling and assessment using machine learning.',
+    icon: TrendingUp,
+    features: ['Credit Risk Analysis', 'Market Risk Assessment', 'Operational Risk', 'Regulatory Compliance'],
+    pricing: '$30,000 - $150,000/setup',
+    category: 'FinTech AI'
+  },
+  {
+    title: 'AI-Powered Smart Grid Optimization',
+    description: 'Intelligent energy grid management and optimization using AI algorithms.',
+    icon: Zap,
+    features: ['Load Balancing', 'Demand Prediction', 'Fault Detection', 'Energy Optimization'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Energy AI'
+  },
+  {
+    title: 'AI-Powered Drug Discovery Platform',
+    description: 'Accelerated drug discovery using AI for molecular design and optimization.',
+    icon: Heart,
+    features: ['Molecular Modeling', 'Drug-Target Interaction', 'Toxicity Prediction', 'Clinical Trial Design'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Pharmaceutical AI'
+  },
+  {
+    title: 'AI-Powered Climate Change Modeling',
+    description: 'Advanced climate modeling and environmental impact prediction using AI.',
+    icon: Globe,
+    features: ['Climate Prediction', 'Environmental Impact', 'Weather Forecasting', 'Carbon Footprint Analysis'],
+    pricing: '$75,000 - $300,000/project',
+    category: 'Environmental AI'
+  },
+  {
+    title: 'AI-Powered Quantum Computing Optimization',
+    description: 'AI-powered quantum computing algorithm optimization and error correction.',
+    icon: Cpu,
+    features: ['Quantum Algorithm Design', 'Error Correction', 'Quantum State Analysis', 'Performance Optimization'],
+    pricing: '$150,000 - $600,000/project',
+    category: 'Quantum AI'
+  },
+  {
+    title: 'AI-Powered Space Mission Planning',
+    description: 'Autonomous space mission planning and satellite constellation management.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Satellite Management', 'Orbital Mechanics', 'Resource Optimization'],
+    pricing: '$200,000 - $800,000/project',
+    category: 'Space AI'
+  },
+  {
+    title: 'AI-Powered Neural Interface Technology',
+    description: 'Brain-computer interface with AI-powered neural signal processing.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'Motor Control', 'Cognitive Enhancement', 'Medical Applications'],
+    pricing: '$500,000 - $2,000,000/project',
+    category: 'Neurotechnology AI'
+  },
+  {
+    title: 'AI-Powered Smart City Management',
+    description: 'Comprehensive smart city management with AI optimization across all systems.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Energy Management', 'Public Safety', 'Resource Allocation'],
+    pricing: '$1,000,000 - $5,000,000/project',
+    category: 'Smart City AI'
+  },
+  {
+    title: 'AI-Powered Agricultural Intelligence',
+    description: 'Precision agriculture with AI-powered crop monitoring and optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Agricultural AI'
+  },
+  {
+    title: 'AI-Powered Cybersecurity AI',
+    description: 'Self-evolving AI cybersecurity system that adapts to new threats in real-time.',
+    icon: Shield,
+    features: ['Threat Detection', 'Adaptive Defense', 'Zero-day Protection', 'Automated Response'],
+    pricing: '$50,000 - $250,000/setup',
+    category: 'Cybersecurity AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Financial Trading System',
+    description: 'High-frequency trading AI with market prediction and risk management.',
+    icon: TrendingUp,
+    features: ['Market Prediction', 'Risk Management', 'Algorithmic Trading', 'Portfolio Optimization'],
+    pricing: '$100,000 - $500,000/setup',
+    category: 'Trading AI'
+  },
+  {
+    title: 'AI-Powered Virtual Reality Content',
+    description: 'Immersive VR experiences with AI-generated content and interactions.',
+    icon: Gamepad2,
+    features: ['AI Content Generation', 'Interactive Experiences', 'Real-time Adaptation', 'Multi-user Support'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'VR AI'
   }
 ];
 
