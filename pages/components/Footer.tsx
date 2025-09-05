@@ -45,7 +45,9 @@ import {
   Wrench,
   PieChart,
   ClipboardList,
-  Layers
+  Layers,
+  Cpu,
+  Rocket
 } from 'lucide-react';
 
 const footerSections = [
@@ -57,29 +59,22 @@ const footerSections = [
       { title: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
       { title: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
       { title: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
-      { title: 'Data Analytics', href: '/data-analytics', icon: BarChart3 }
+      { title: 'Quantum Computing', href: '/quantum-computing', icon: Cpu },
+      { title: 'Edge Computing', href: '/edge-computing', icon: Network },
+      { title: 'Blockchain', href: '/blockchain', icon: Lock }
     ]
   },
   {
     title: 'Solutions',
     links: [
-      { title: 'Automation', href: '/automation', icon: Zap },
-      { title: 'AI Development', href: '/ai-development', icon: Brain },
-      { title: 'Digital Transformation', href: '/digital-transformation', icon: Settings },
-      { title: 'IoT Solutions', href: '/iot-solutions', icon: Globe },
-      { title: 'Blockchain', href: '/blockchain', icon: Lock },
-      { title: 'Quantum Computing', href: '/quantum-computing', icon: Code }
-    ]
-  },
-  {
-    title: 'Industries',
-    links: [
-      { title: 'Healthcare', href: '/industries/healthcare', icon: Heart },
-      { title: 'Finance', href: '/industries/finance', icon: DollarSign },
-      { title: 'Manufacturing', href: '/industries/manufacturing', icon: Settings },
-      { title: 'Retail', href: '/industries/retail', icon: ShoppingCart },
-      { title: 'Education', href: '/industries/education', icon: BookOpen },
-      { title: 'Real Estate', href: '/industries/real-estate', icon: Home }
+      { title: 'Enterprise Solutions', href: '/enterprise', icon: Building },
+      { title: 'Startup Solutions', href: '/startup', icon: Rocket },
+      { title: 'E-commerce', href: '/ecommerce', icon: ShoppingCart },
+      { title: 'Healthcare', href: '/healthcare', icon: Heart },
+      { title: 'Finance', href: '/finance', icon: DollarSign },
+      { title: 'Education', href: '/education', icon: BookOpen },
+      { title: 'Manufacturing', href: '/manufacturing', icon: Settings },
+      { title: 'Smart Cities', href: '/smart-cities', icon: Globe }
     ]
   },
   {
@@ -88,9 +83,11 @@ const footerSections = [
       { title: 'Blog', href: '/blog', icon: FileText },
       { title: 'Case Studies', href: '/case-studies', icon: BarChart3 },
       { title: 'White Papers', href: '/white-papers', icon: FileText },
+      { title: 'Webinars', href: '/webinars', icon: Calendar },
       { title: 'Tutorials', href: '/tutorials', icon: BookOpen },
       { title: 'Documentation', href: '/docs', icon: FileText },
-      { title: 'Events', href: '/events', icon: Calendar }
+      { title: 'API Reference', href: '/api-docs', icon: Code },
+      { title: 'Status Page', href: '/status', icon: Activity }
     ]
   },
   {
@@ -99,21 +96,11 @@ const footerSections = [
       { title: 'About Us', href: '/about', icon: Building },
       { title: 'Team', href: '/team', icon: Users },
       { title: 'Careers', href: '/careers', icon: Users },
+      { title: 'Contact', href: '/contact', icon: Phone },
       { title: 'Partners', href: '/partners', icon: Globe },
       { title: 'News', href: '/news', icon: FileText },
-      { title: 'Press', href: '/press', icon: FileText },
-      { title: 'Contact', href: '/contact', icon: MessageSquare }
-    ]
-  },
-  {
-    title: 'Support',
-    links: [
-      { title: 'Help Center', href: '/help', icon: MessageSquare },
-      { title: 'Documentation', href: '/docs', icon: FileText },
-      { title: 'API Reference', href: '/api', icon: Code },
-      { title: 'Status Page', href: '/status', icon: BarChart3 },
-      { title: 'Community', href: '/community', icon: Users },
-      { title: 'Training', href: '/training', icon: BookOpen }
+      { title: 'Privacy Policy', href: '/privacy', icon: Lock },
+      { title: 'Terms of Service', href: '/terms', icon: FileText }
     ]
   }
 ];

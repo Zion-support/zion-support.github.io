@@ -1,12 +1,12 @@
 import React from 'react';
-import SimpleLayout from './components/SimpleLayout';
+import Layout from './components/Layout';
 
 export default function TestPage() {
   return (
-    <SimpleLayout title="Test Page">
+    <Layout title="Test Page" description="Test page for Zion Tech Group">
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
         <h1 className="text-4xl font-bold text-gray-900">Test Page</h1>
       </div>
-    </SimpleLayout>
+    </Layout>
   );
 }
