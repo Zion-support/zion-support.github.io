@@ -1,17 +1,13 @@
 import React from 'react';
-<<<<<<< HEAD
 export function BlogSection("props": "any) {;
-
 import { Link  "} from 'react-router-dom';
 ,;
         {;
-
             "id": '2',;
             "title": 'Building Scalable Web Applications',;
             "excerpt": 'Best practices and architectural patterns for creating scalable web apps...',;
             "date": '2024-01-10',;
             "readTime": '12 min read';
-
     ];
     return (<section className="py-16">";
       <div className="container mx-auto px-4">";
@@ -33,19 +29,14 @@ import { Link  "} from 'react-router-dom';
                 <span>{post.date}</span>;
                 <span>{post.readTime}</span>;
               </div>;
-=======
-
 interface BlogSection.jsProps {
   // Add props here as needed
 }
-
-<<<<<<< HEAD
             id: '2',
             title: 'Building Scalable Web Applications',
             excerpt: 'Best practices and architectural patterns for creating scalable web apps...',
             date: '2024-01-10',
             readTime: '12 min read'
-
     ];
     return (<section className="py-16">"
       <div className="container mx-auto px-4">"
@@ -67,16 +58,12 @@ interface BlogSection.jsProps {
                 <span>{post.date}</span>
                 <span>{post.readTime}</span>
               </div>
->>>>>>> main
             </article>) ) }
         </div>;
       </div>;
     </section>)}
-<<<<<<< HEAD
 '"`;
-=======
 '"`
-=======
 export default function BlogSection.js({ }: BlogSection.jsProps) {
   return (
     <div>
@@ -85,5 +72,3 @@ export default function BlogSection.js({ }: BlogSection.jsProps) {
     </div>
   );
 }
->>>>>>> main
->>>>>>> main

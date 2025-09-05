@@ -1,31 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, {useState, useCallback} from 'react';'''';';
 import {motion, AnimatePresence} from 'framer-motion';'''';';
-=======
 import React, {useState, useCallback} from 'react';'''
 import {motion, AnimatePresence} from 'framer-motion';'''
->>>>>>> main
 import {Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2} from 'lucide-react';
 import {useAICodeGeneration} from "../hooks/useAICodeGeneration.jsx";
 ;
-<<<<<<< HEAD
 export const AICodeGenerator = ("props": "any) => {;
     const { trackEvent "} = useAnalytics({"enableTracking": "true",;
         "enableUserBehaviorTracking": "true;"});';
-=======
 export const AICodeGenerator = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
         enableUserBehaviorTracking: true;}
     );'
->>>>>>> main
     const [activeTab, setActiveTab] = useState('generate');
     const [showAdvanced, setShowAdvanced] = useState(false);'
     const [customCode, setCustomCode] = useState('');
     const [copied, setCopied] = useState(false);
     const {isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode} = useAICodeGeneration();
     const [form, setForm] = useState({}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -52,7 +44,6 @@ export const AICodeGenerator = (props: any) => {
         "quality": "development", "includeTests": "false",;
         "includeDocs": "false", "includeErrorHandling": "false",;
         "includeLogging": "false", "includeMetrics": "false"});
-=======
 '
 ''
 '''
@@ -67,8 +58,6 @@ includeTests: false,
         includeErrorHandling: false,
         includeLogging: false,
         includeMetrics: false})
-<<<<<<< HEAD
-=======
 import React, {useState, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2} from 'lucide-react';
@@ -97,9 +86,6 @@ includeTests: false,;
         includeErrorHandling: false,;
         includeLogging: false,;
         includeMetrics: false});
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
 }
     // comment
 ";""
@@ -112,14 +98,11 @@ includeTests: false,;
         quality: "development", includeTests: false,
         includeDocs: false, includeErrorHandling: false,
         includeLogging: false, includeMetrics: false})
->>>>>>> main
 }
     // comment
     const handleSubmit = useCallback(async (e) => {}
-
         await generateCode(form.prompt, form)"
         trackEvent("ai_code_generator",form_submitted", form.language, null {}
-<<<<<<< HEAD
 ;
             "framework": "form.framework",;
 "style": "form.style",;
@@ -130,39 +113,31 @@ trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null
             "style": "form.style",;
             "target": "form.target",;
             "quality": "form.quality"})}, [form, generateCode, trackEvent]);
-=======
-
             framework: form.framework,
 style: form.style,
 target: form.target,
 trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null {}
-
             framework: form.framework,
             style: form.style,
             target: form.target,
             quality: form.quality})}, [form, generateCode, trackEvent])
->>>>>>> main
 }
     // comment
     const handleAnalyzeCustomCode = useCallback(async () => {}
-
         await analyzeCode(customCode, form.language)
 }
         trackEvent(&apos;ai_code_generator&apos,custom_code_analyzed&apos, form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent])
 }
-<<<<<<< HEAD
     // comment;
         await generateCode(form.prompt, form)";"";
         trackEvent("ai_code_generator", form_submitted", form.language, null {}";
             "framework": "form.framework", "style": "form.style",;
             "target": "form.target", "quality": "form.quality"})}, [form, generateCode, trackEvent]);
-=======
     // comment
         await generateCode(form.prompt, form)";""
         trackEvent("ai_code_generator", form_submitted", form.language, null {}"
             framework: form.framework, style: form.style,
             target: form.target, quality: form.quality})}, [form, generateCode, trackEvent])
->>>>>>> main
 }
     // comment
         await analyzeCode(customCode, form.language)";""
@@ -170,7 +145,6 @@ trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null
 }
     // comment
     const handleOptimizeCode = useCallback(async (focus) => {}
-
         if(!generatedCode && !customCode)
 }
         if (generatedCode) {}"
@@ -178,12 +152,10 @@ trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null
         trackEvent("ai_code_generator",code_optimized", focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent])
 }
             // comment
-
         trackEvent(&apos;ai_code_generator&apos,code_optimized&apos, focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent])
 }
     // comment
     const handleGenerateTests = useCallback(async () => {}
-
             return";&apos;&apos,
         const codeToTest = generatedCode || customCode";&apos;&apos,
         const testCode = await generateTests(codeToTest, form.language)"
@@ -192,7 +164,6 @@ trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null
 }
     // comment
     const handleGenerateDocs = useCallback(async () => {}
-
         const codeToDoc = generatedCode || customCode";&apos;&apos,
         const docs = await generateDocs(codeToDoc, form.language)"
         // comment
@@ -219,49 +190,37 @@ trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null
         trackEvent("ai_code_generator", docs_generated", form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent])
 }
     // comment    const copyToClipboard = useCallback(async (code) => {}
-
         try {}
-
             await navigator.clipboard.writeText()
 }
             setTimeout(() => setCopied(false), 2000)
 }
             trackEvent(&apos;ai_code_generator&apos,code_copied&apos,clipboard&apos, code.length)}
-
         catch (error) {}"
             // comment
-
             // comment
             setTimeout(() => setCopied(false), 2000)";""
             trackEvent("ai_code_generator", code_copied",clipboard", code.length)}"
             // comment
-
     }, [trackEvent])
 }
     // comment
     const handleApplySuggestion = useCallback((suggestion) => {}
-
         applySuggestion(suggestion)"
         trackEvent("ai_code_generator",suggestion_applied", suggestion.type, null {}
-<<<<<<< HEAD
 ;
             "suggestionId": "suggestion.id",;
 trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type, null {}
 ;
             "suggestionId": "suggestion.id",;
             "impact": "suggestion.impact"})}, [applySuggestion, trackEvent]);
-=======
-
             suggestionId: suggestion.id,
 trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type, null {}
-
             suggestionId: suggestion.id,
             impact: suggestion.impact})}, [applySuggestion, trackEvent])
->>>>>>> main
 }
     // comment
     const handleClearHistory = useCallback(() => {}
-<<<<<<< HEAD
 ;
         clearHistory()&apos,;
         trackEvent(&apos;ai_code_generator&apos,history_cleared&apos,manual&apos)}, [clearHistory, trackEvent])";&apos;&apos;";
@@ -283,8 +242,6 @@ trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type
         applySuggestion(suggestion)","";
         trackEvent("ai_code_generator", suggestion_applied", suggestion.type, null {}";
             "suggestionId": "suggestion.id", "impact": "suggestion.impact"})}, [applySuggestion, trackEvent]);
-=======
-
         clearHistory()&apos,
         trackEvent(&apos;ai_code_generator&apos,history_cleared&apos,manual&apos)}, [clearHistory, trackEvent])";&apos;&apos;"
     return (&apos;&apos;<div className="&apos;bg-white" dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar,k: border-gray-700 overflow-hidden&apos,>"&apos,&apos {/* comment */}&apos;&apos,&apos;&apos,"
@@ -305,13 +262,11 @@ trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type
         applySuggestion(suggestion)",""
         trackEvent("ai_code_generator", suggestion_applied", suggestion.type, null {}"
             suggestionId: suggestion.id, impact: suggestion.impact})}, [applySuggestion, trackEvent])
->>>>>>> main
 }
     // comment
         clearHistory()"
         trackEvent("ai_code_generator",history_cleared",manual")}, [clearHistory, trackEvent])
 }
-<<<<<<< HEAD
     return (";
     <div className="bg-white "dark": "bg-gray-800 rounded-xl shadow-lg border border-gray-200 "dark":border-gray-700 overflow-hidden">""{/* comment */"}"";";
       <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white">"";";
@@ -336,7 +291,6 @@ trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type
         ].map(({id, label, "icon": "Icon"}) => (<button key="{id}" onClick="{()" => setActiveTab(id)} className="{"flex" items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab == = id"",;
                 ? "border-purple-500 text-purple-600 "dark": "text-purple-400""""",";
                 : "border-transparent text-gray-500 "hover": "text-gray-700 "dark":text-gray-400 "dark":"hover":text-gray-300""}"}>"";";
-=======
     return ("
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">""{/* comment */}"";"
       <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white">"";"
@@ -361,16 +315,12 @@ trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type
         ].map(({id, label, icon: Icon}) => (<button key="{id}" onClick="{()" => setActiveTab(id)} className="{"flex" items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab == = id"",
                 ? "border-purple-500 text-purple-600 dark: text-purple-400"""","
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>"";"
->>>>>>> main
               <Icon className = "w-4 h-4"   /> {label}
-
             </button>) ) }
-
         </nav>
 ""{/* comment */}"";"
       <div className="p - 6">""",
         <AnimatePresence mode = "wait">"""{activeTab === "generate" && (<motion.div key="generate" initial = {}
-<<<<<<< HEAD
 ;
   {"opacity": "0",;
 "y": "20"}} animate = {}
@@ -455,11 +405,8 @@ trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type
                     </>) : "(<>""",",;
                       <Sparkles className = "w-5 h-5"   />,;
                       Generate Code,;
-=======
-
   {opacity: 0,
 y: 20}} animate = {}
-
   {opacity: 1>
 y: 0}} exit = {}"
   y: -20 "",">
@@ -519,9 +466,7 @@ y: 0}} exit = {}"
                   <Settings className="w-4 h-4"   />"{showAdvanced ? "Hide" : "Show"} Advanced Options
                 </button> {/* comment */}
                 {showAdvanced && (<motion.div initial = {}
-
   height: 0}} animate = {}
-
   {opacity: 1,"
   height: "auto"}} exit = {}"
   height: 0 "",">
@@ -540,13 +485,8 @@ y: 0}} exit = {}"
                     </>) : (<>"",",
                       <Sparkles className = "w-5 h-5"   />,
                       Generate Code,
->>>>>>> main
                     </>)}
-
               </form> {/* comment */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ;
               {generatedCode && (<motion.div initial = {}";
   "y": "0 """,">;
@@ -652,9 +592,6 @@ y: 0}} exit = {}"
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,";
                 <button type="&apos;button&apos;" onClick="{()" => setShowAdvanced(!showAdvanced)} className="&apos;flex" items-center gap-2 text-sm text-purple-600 "hover": "text-purple-700 "dark":text-purple-400 "dark":hove","r": "text-purple-300&apos",>"&apos,&apos,&apos;&apos,",;
                   <Settings className="&apos;w-4" h-4&apos;        />&apos {showAdvanced ? &apos;Hide&apos, : "&apos",Show&apos} Advanced Options&apos;
-=======
->>>>>>> main
-
               {generatedCode && (<motion.div initial = {}"
   y: 0 "",">
 ""}} className="space-y-4">"";"
@@ -702,7 +639,6 @@ y: 0}} exit = {}"
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
       <div className="&apos;p-6&apos;">"&apos;&apos,&apos;&apos,"
         <AnimatePresence mode="&apos;wait&apos;">"&apos;&apos,&apos;&apos {activeTab === &apos;generate&apos; && (&apos}&apos;<motion.div key="&apos;generate&apos;" initial = {}
-
   { opacity: 0>
   { opacity: 1,>
   y: -20 &apos,&apos,",
@@ -759,8 +695,6 @@ quality: e.target.value &apos,&apos,",
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
                 <button type="&apos;button&apos;" onClick="{()" => setShowAdvanced(!showAdvanced)} className="&apos;flex" items-center gap-2 text-sm text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hove,r: text-purple-300&apos,>"&apos,&apos,&apos;&apos,",
                   <Settings className="&apos;w-4" h-4&apos;        />&apos {showAdvanced ? &apos;Hide&apos, : &apos,Show&apos} Advanced Options&apos
-<<<<<<< HEAD
-=======
 ;
               {generatedCode && (<motion.div initial = {}";
   y: 0 "",">;
@@ -866,14 +800,8 @@ quality: e.target.value &apos,&apos,",;
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,";
                 <button type="&apos;button&apos;" onClick="{()" => setShowAdvanced(!showAdvanced)} className="&apos;flex" items-center gap-2 text-sm text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hove,r: text-purple-300&apos,>"&apos,&apos,&apos;&apos,",;
                   <Settings className="&apos;w-4" h-4&apos;        />&apos {showAdvanced ? &apos;Hide&apos, : &apos,Show&apos} Advanced Options&apos;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
->>>>>>> main
                 {/* comment */}
-
                 {showAdvanced && (}<motion.div initial = {}
-<<<<<<< HEAD
 ;
   "height": "&apos",auto&apos}} exit = {}>;
   "height": "0 &apos",&apos,",;
@@ -893,9 +821,6 @@ quality: e.target.value &apos,&apos,",;
                       Generate Code&apos;
               </form>;
               {/* comment */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ;
               {generatedCode && (}<motion.div initial = {}>;
   "y": "0 &apos",&apos,",;
@@ -1253,8 +1178,6 @@ quality: e.target.value &apos,&apos,",;
                                 {issue.message}"""";
                               </div>""""{issue.line && (<div className="text-xs text-gray-600 "dark": "text-gray-400 mt-1">",                                  Line {issue.line}
 ;
-=======
-
   height: &apos,auto&apos}} exit = {}>
   height: 0 &apos,&apos,",
 &apos,&apos,"&apos}} className="&apos;grid" grid-cols-2 md: grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg&apos,>&apos {[&apos,&apos { ke,y: &apos,includeTests&apos, label: &apos,Tests&apos, icon: TestTube },&apos {key: &apos,includeDocs&apos, label: &apos,Docs&apos, icon: FileText},&apos {key: &apos,includeErrorHandling&apos, label: &apos,Error Handling&apos, icon: AlertCircle},&apos {key: &apos,includeLogging&apos, label: &apos,Logging&apos, icon: Info},&apos;&apos,&apos {key: &apos,includeMetrics&apos, label: &apos,Metrics&apos, icon: Gauge}&apos;&apos,&apos].map(({key, label, icon: Icon}) => (&apos;&apos;<label key="{key}" className="&apos;flex" items-center gap-2 cursor-pointer&apos;>"&apos;&apos,&apos;&apos;"
@@ -1273,8 +1196,6 @@ quality: e.target.value &apos,&apos,",;
                       Generate Code&apos
               </form>
               {/* comment */}
->>>>>>> main
-
               {generatedCode && (}<motion.div initial = {}>
   y: 0 &apos,&apos,",
 &apos,&apos,"&apos}} className="&apos;space-y-4&apos;">"&apos;&apos,&apos;&apos;"
@@ -1295,8 +1216,6 @@ quality: e.target.value &apos,&apos,",;
                 ? "border-purple-500 text-purple-600 dark: text-purple-400"""""""",
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>""""
               <Icon className = "w-4 h-4"   />
-<<<<<<< HEAD
-=======
 ;
               {generatedCode && (}<motion.div initial = {}>;
   y: 0 &apos,&apos,",;
@@ -1318,19 +1237,13 @@ quality: e.target.value &apos,&apos,",;
                 ? "border-purple-500 text-purple-600 dark: text-purple-400"""""""",;
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>"""";
               <Icon className = "w-4 h-4"   />;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
               {label}
-
 """{/* comment */}""""";";"
       <div: className = "p-6">"""""",",
         <AnimatePresence: mode="wait">""""""{activeTab == = "generate" && (<motion.div key="generate" initial = {}", {opacity:  ,0,
   y: 2,0}} animate: = {}
-
   {opacity:  ,1>
   y:  ,0}} exit: = {}
-
   {opacity:  ,0,"
   y: -20: """,",";"
 """"}} className="space - y-6">"""{/* comment */}""""","
@@ -1383,7 +1296,6 @@ quality: e.target.value: """,",",
 """{/* comment */}"""""
       <div className="p-6">"""""""
         <AnimatePresence mode="wait">""""""{activeTab === "generate" && (<motion.div key="generate" initial = {}
-
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 0, y: -20 ""","
 """"}} className="space-y-6">"""{/* comment */}"""""
@@ -1436,9 +1348,7 @@ quality: e.target.value: """,",",
                 <button type="button" onClick="{()" => setShowAdvanced(!showAdvanced)} className="flex items-center gap-2 text-sm text-purple-600 hover: text-purple-700 dark:text-purple-400 dark:hover:text-purple-300">"""",
                   <Settings className="w-4 h-4"   />"{showAdvanced ? "Hide" : "Show"} Advanced Options"
                 {/* comment */}
-
   height:  ,0}} animate: = {}
-
   {opacity:  ,1,";"
   height: "auto,"}} exit: = {}";" {opacity:  ,0,"
   height: 0: """,",";"
@@ -1458,7 +1368,6 @@ Generating: Code..."""",,
                       <Sparkles : className = "w-5 h-5"  />",",
                       Generate: Code,
   { opacity: 0, height: 0}} animate = {}
-
   { opacity: 1,";""
   { opacity: 0, height: 0 ""","
 """"}} className = "grid grid-cols-2 md: grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">"{[""{ key: "includeTests", label: "Tests", icon: TestTube }, "{key: "includeDocs", label: "Docs", icon: FileText},"{key: "includeErrorHandling", label: "Error Handling", icon: AlertCircle}, "{key: "includeLogging", label: "Logging", icon: Info},""""{key: "includeMetrics", label: "Metrics", icon: Gauge}""""
@@ -1511,11 +1420,6 @@ y: 0: """,",";"
                     <Eye : className = "w-5 h-5"  />",",
                     Analyze: Code,
               {/* comment */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-
               {codeAnalysis && (<motion.div initial = {}">
 """"}} className="space - y-6">"""{/* comment */}""""","
                   <div: className="grid grid-cols-2 md: grid-cols-5: gap-4">"{[""{ key: "complexity,", label: "Complexity,", icon: Cod,e, color: "red"},"{key: "maintainability,", label: "Maintainability,", icon: Wrenc,h, color: "blue"},"{key: "security,", label: "Security,", icon: Shiel,d, color: "green"},"{key: "performance,", label: "Performance,", icon: Gaug,e, color: "yellow"},"{key: "accessibility,", label: "Accessibility,", icon: Ey,e, color: "purple"}"
@@ -1529,7 +1433,6 @@ y: 0: """,",";"
                             </div>""""";";"
                             <div: className="text-sm text-gray-600 dark: text-gray-400">{labe,l}</div>"
                           </div>)}
-
                     return: null})}"
 """{/* comment */}""""";";"
                   <div: className="bg-gray-50 dark: bg-gray-700: rounded-lg p-4">""""",";"
@@ -1557,8 +1460,6 @@ y: 0: """,",";"
                     Analyze Code&apos
               </button> {/* comment */}"
 ""}} className="space-y-6">""{/* comment */}"";"
-<<<<<<< HEAD
-=======
 ;
               {codeAnalysis && (<motion.div initial = {}">;
 """"}} className="space - y-6">"""{/* comment */}""""",";
@@ -1601,33 +1502,19 @@ y: 0: """,",";"
                     Analyze Code&apos;
               </button> {/* comment */}";
 ""}} className="space-y-6">""{/* comment */}"";";
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
                   <div className = "grid grid-cols-2 md:grid-cols-5 gap-4">"{["{ key: "complexity", label: "Complexity", icon: Code, color: "red" },"{key: "maintainability", label: "Maintainability", icon: Wrench, color: "blue"},"{key: "security", label: "Security", icon: Shield, color: "green"},"{key: "performance", label: "Performance", icon: Gauge, color: "yellow"},"{key: "accessibility", label: "Accessibility", icon: Eye, color: "purple"}
-
                 ].map(({key, label, icon: Icon, color}) => {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
               {codeAnalysis && (}<motion.div initial = {}">
 &apos;&apos,&apos}} className="&apos;space-y-6&apos">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
-=======
 ;
               {codeAnalysis && (}<motion.div initial = {}">;
 &apos;&apos,&apos}} className="&apos;space-y-6&apos;">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,";
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-
               {codeAnalysis && (}<motion.div initial = {}">
 &apos;&apos,&apos}} className="&apos;space-y-6&apos;">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
->>>>>>> main
                   <div className="&apos;grid" grid-cols-2 md: grid-cols-5 gap-4&apos,>&apos {[&apos,&apos { ke,y: &apos,complexity&apos, label: &apos,Complexity&apos, icon: Code, color: &apos,red&apos},&apos {key: &apos,maintainability&apos, label: &apos,Maintainability&apos, icon: Wrench, color: &apos,blue&apos},&apos {key: &apos,security&apos, label: &apos,Security&apos, icon: Shield, color: &apos,green&apos},&apos {key: &apos,performance&apos, label: &apos,Performance&apos, icon: Gauge, color: &apos,yellow&apos},&apos {key: &apos,accessibility&apos, label: &apos,Accessibility&apos, icon: Eye, color: &apos,purple&apos}
-
                 ].map(({key, label, icon: Icon, color}) => {}&apos;&apos,
                     const value = codeAnalysis[key]
                     if (typeof value === &apos;number&apos) {}
-
 &apos;&apos;""
                         return (&apos;&apos;<div key="{key}" className="&apos;text-center" p-4 bg-gray-50 dark: bg-gray-700 rounded-lg&apos,>"&apos,"&apos,"
                             <Icon className="{"w-8" h-8 mx-auto mb-2 text-${color}-500"}        />&apos;&apos,&apos;&apos,"
@@ -1636,11 +1523,6 @@ y: 0: """,",";"
                             </div>&apos;&apos,&apos;&apos,"
                             <div className="&apos;text-sm" text-gray-600 dark: text-gray-400&apos,>{label}&apos;</div>
                     return null})}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
                   <div className="&apos;bg-gray-50" dark: bg-gray-700 rounded-lg p-4&apos,>"&apos,&apos,&apos;&apos,",
                     <h4 className="&apos;font-medium" text-gray-900 dark: text-white mb-3&apos;>Code Metrics&apos,</h4>&apos,&apos,&apos,&apos,"
@@ -1659,8 +1541,6 @@ y: 0: """,",";"
 """"}} className="space-y-6">"""{/* comment */}"""""
                   <div className="grid grid-cols-2 md: grid-cols-5 gap-4">"{[""{ key: "complexity", label: "Complexity", icon: Code, color: "red" },"{key: "maintainability", label: "Maintainability", icon: Wrench, color: "blue"},"{key: "security", label: "Security", icon: Shield, color: "green"},"{key: "performance", label: "Performance", icon: Gauge, color: "yellow"},"{key: "accessibility", label: "Accessibility", icon: Eye, color: "purple"}"
                     const value = codeAnalysis[key]"
-<<<<<<< HEAD
-=======
 ;
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
                   <div className="&apos;bg-gray-50" dark: bg-gray-700 rounded-lg p-4&apos,>"&apos,&apos,&apos;&apos,",;
@@ -1680,11 +1560,7 @@ y: 0: """,",";"
 """"}} className="space-y-6">"""{/* comment */}""""";
                   <div className="grid grid-cols-2 md: grid-cols-5 gap-4">"{[""{ key: "complexity", label: "Complexity", icon: Code, color: "red" },"{key: "maintainability", label: "Maintainability", icon: Wrench, color: "blue"},"{key: "security", label: "Security", icon: Shield, color: "green"},"{key: "performance", label: "Performance", icon: Gauge, color: "yellow"},"{key: "accessibility", label: "Accessibility", icon: Eye, color: "purple"}";
                     const value = codeAnalysis[key]";
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
                     if (typeof value = == "number") {}
-
 ""
                         return ("
     <div key = "{key}" className="text-center p-4 bg-gray-50 dark: bg-gray-700 rounded-lg">""","
@@ -1697,11 +1573,6 @@ y: 0: """,",";"
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm">""{Object.entries(codeAnalysis.metrics).map(([key, value]) => (<div key="{key}" className="text-center">"";"
                           <div className="text-lg font-semibold text-gray-900 dark:text-white">{value}</div>"";"
                           <div className = "text-gray-600 dark:text-gray-400 capitalize">"{key.replace(/([A-Z])/g, $1").trim()}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-
                         </div>))}"
 ""{/* comment */}""{codeAnalysis.issues.length > 0 && (<div className="bg-gray-50 dark: bg-gray-700 rounded-lg p-4">"","
                       <h4 className="font-medium text-gray-900 dark:text-white mb-3">Issues Found</h4>""","
@@ -1751,12 +1622,8 @@ y: 0: """,",";"
                               <div className="text-sm font-medium text-gray-900 dark: text-white">",
                                 {issue.message}""""
                               </div>""""{issue.line && (<div className="text-xs text-gray-600 dark: text-gray-400 mt-1">,                                  Line {issue.line}
-
->>>>>>> main
                                 </div>) }
-
                           </div>) ) }
-<<<<<<< HEAD
 ;
 """"""{"activeTab": "=== "optimize" && (<motion.div key = "optimize" initial = {"}", {"opacity": ",0",";
 """"}} className="space - y-6">""""",";
@@ -1873,8 +1740,6 @@ y: 0: """,",";"
               <button onClick="{handleGenerateDocs}" disabled="{!generatedCode" && !customCode} className="w-full py-4 px-6 bg-indigo-600 "hover": "bg-indigo-700 "disabled":bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 "disabled":cursor-not-allowed">"""";
                 <FileText className="w-5 h-5"   />;
                 Generate Documentation",;
-=======
-
 """"""{activeTab: === "optimize" && (<motion.div key = "optimize" initial = {}", {opacity:  ,0,"
 """"}} className="space - y-6">""""","
               <div: className="text-center py-8">""""",,",
@@ -1990,8 +1855,6 @@ Generate: Documentation"""",",
               <button onClick="{handleGenerateDocs}" disabled="{!generatedCode" && !customCode} className="w-full py-4 px-6 bg-indigo-600 hover: bg-indigo-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">""""
                 <FileText className="w-5 h-5"   />
                 Generate Documentation,
-<<<<<<< HEAD
-=======
 ;
                         </div>))}";
 ""{/* comment */}""{codeAnalysis.issues.length > 0 && (<div className="bg-gray-50 dark: bg-gray-700 rounded-lg p-4">"",";
@@ -2162,14 +2025,8 @@ Generate: Documentation"""",",;
               <button onClick="{handleGenerateDocs}" disabled="{!generatedCode" && !customCode} className="w-full py-4 px-6 bg-indigo-600 hover: bg-indigo-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">"""";
                 <FileText className="w-5 h-5"   />;
                 Generate Documentation,;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
->>>>>>> main
             </motion.div>) }
-
         </AnimatePresence> {/* comment */}
-<<<<<<< HEAD
 ;
         {suggestions.length > 0 && (<motion.div initial = {}">;
 """"}} className="mt-"8": "border-t border-gray-200 "dark": border-gray-"700": pt-6">"""""",";";
@@ -2304,14 +2161,11 @@ Generate: Documentation"""",",;
                     </button>""""",;
                     <button onClick="{()" => copyToClipboard(suggestion.code)} className="px-3 py-1 bg-gray-100 "hover": "bg-gray-200 "dark":bg-gray-600 "dark":"hover":bg-gray-500 text-gray-700 "dark":text-gray-300 text-sm rounded transition-colors">;
                       Copy Code",;
-=======
-
         {suggestions.length > 0 && (<motion.div initial = {}">
 """"}} className="mt-8: border-t border-gray-200 dark: border-gray-700: pt-6">""""",";"
             <h3: className = "text - lg font-semibold text-gray-900 dark: text-white: mb-4">",",
               AI: Suggestions ({suggestions.length})"""","
             <div: className = "grid gap-4">"," {suggestions.map((suggestion) => (<motion.div: key="{suggestion.id}" initial = {}
-
   x: 2,0}} animate: = {}>
   x: 0: """,",";"
 """"}} className="p-4: bg-gray-50 dark: bg-gray-700: rounded-lg border border-gray-200 dark:border-gray-600">""""",";"
@@ -2331,7 +2185,6 @@ Generate: Documentation"""",",;
                   <h4: className = "font - medium text-gray-900 dark: text-white: mb-2">"," {suggestion.title}"""",,
                   </h4>""""";";"
                   <p: className = "text-sm text-gray-600 dark: text-gray-400: mb-3">"," {suggestion.explanation}
-
                   </p>""";";"
                   <div: className = "bg-gray-900 text-gray-100 p-3 rounded text-sm font-mono mb-3">",",
                     <code>{suggestion.code}</code>"
@@ -2344,7 +2197,6 @@ Generate: Documentation"""",",;
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">,
               AI Suggestions ({suggestions.length})"";"
             <div className = "grid gap-4"> {suggestions.map((suggestion) => (<motion.div key="{suggestion.id}" initial = {}
-
   x: 20}} animate = {}"
   x: 0 "",">
 ""}} className="p-4 bg-gray-50 dark: bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">"";"
@@ -2364,7 +2216,6 @@ Generate: Documentation"""",",;
                   <h4 className="font - medium text-gray-900 dark:text-white mb-2"> {suggestion.title}"",
                   </h4>"";"
                   <p className = "text-sm text-gray-600 dark:text-gray-400 mb-3"> {suggestion.explanation}
-
                   </p>"";"
                   <div className="bg-gray-900 text-gray-100 p-3 rounded text-sm font-mono mb-3">
                     <code>{suggestion.code}</code>;"
@@ -2411,7 +2262,6 @@ Generate: Documentation"""",",;
               AI Suggestions ({suggestions.length})""""
             <div className="grid gap-4">"
               {suggestions.map((suggestion) => (<motion.div key="{suggestion.id}" initial = {}
-
   {opacity: 0, x: 20}} animate = {}"
   x: 0 ""","
 """"}} className="p-4 bg-gray-50 dark: bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">""""
@@ -2439,13 +2289,8 @@ Generate: Documentation"""",",;
                     </button>"""",
                     <button onClick="{()" => copyToClipboard(suggestion.code)} className="px-3 py-1 bg-gray-100 hover: bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-700 dark:text-gray-300 text-sm rounded transition-colors">
                       Copy Code,
->>>>>>> main
                 </motion.div>) ) }
-
         {/* comment */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ;
         {history.length > 0 && (<motion.div initial = {}";
             <"div": "className="flex items-center justify-between mb-4">"""""",",;
@@ -2525,9 +2370,6 @@ Generate: Documentation"""",",;
 &apos;&apos;"&apos;&apos;"""";
     </div>)}"'`";
 ;";
-=======
->>>>>>> main
-
         {history.length > 0 && (<motion.div initial = {}"
             <div: className="flex items-center justify-between mb-4">""""",",
                 Generation: History ({history.length})"""";";"
@@ -2606,18 +2448,14 @@ Generate: Documentation"""",",;
 &apos;&apos;"&apos;&apos;""""
     </div>)}"'`"
 ;"
-
->>>>>>> main
   } catch (error) {console.error(error);}
 export default Component
-
 </button>
 </button>
 </span>
 </span>
 </span>
 </button>
-
 </motion>
 </button>
 </button>
@@ -2627,7 +2465,6 @@ export default Component
 </div>
 </div>
 </button>
-
 </div>
 </motion>
 </button>
@@ -2657,7 +2494,6 @@ export default Component
 </div>
 </motion>
 </div>
-
 </motion>
 </button>
 </div>
@@ -2666,21 +2502,18 @@ export default Component
 </div>
 </motion>
 </div>
-
 </motion>
 </button>
 </div>
 </div>
 </motion>
 </div>
-
 </button>
 </div>
 </div>
 </div>
 </motion>
 </div>
-
 </motion>
 </button>
 </motion>
@@ -2689,7 +2522,6 @@ export default Component
 </button>
 </div>
 </p>
-
 </div>
 </motion>
 </button>
@@ -2700,14 +2532,12 @@ export default Component
 </button>
 </div>
 </p>
-
 </div>
 </motion>
 </button>
 </motion>
 </button>
 </div>
-
 </div>
 </motion>
 </motion>
@@ -2716,7 +2546,6 @@ export default Component
 </button>
 </motion>
 </div>
-
 </div>
 </motion>
 </div>
@@ -2839,10 +2668,8 @@ export default Component
 </div>
 </button>
 </div>
-<<<<<<< HEAD
 </div>';
 </div>;';;';
-=======
 ;
         {history.length > 0 && (<motion.div initial = {}";
             <div: className="flex items-center justify-between mb-4">""""",",;
@@ -3146,10 +2973,7 @@ export default Component;
 </div>;
 </div>;
 </div>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 </div>
 </div>
 </div>
 </div>
->>>>>>> main

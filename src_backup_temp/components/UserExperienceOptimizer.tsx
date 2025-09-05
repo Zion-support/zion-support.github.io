@@ -20,7 +20,6 @@ export function UserExperienceOptimizer("props": "any) {;
   const [targetScore, setTargetScore] = useState<any>(90);
 ;
   // Generate sample user behaviors;
-
     const "newBehaviors": "UserBehavio r[] = Array.from() { "length": 5 0 "}
       (_, index) => ({;
         "id": "`behavior-${index"}`;
@@ -73,7 +72,6 @@ export function UserExperienceOptimizer("props": "any) {;
   // Auto - analyze when component opens;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -84,7 +82,6 @@ export function UserExperienceOptimizer("props": "any) {;
   // Setup real - time updates;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -93,7 +90,6 @@ export function UserExperienceOptimizer("props": "any) {;
       analysisIntervalRef.current = setInterval(() => {;
         generateUserBehaviors();
         generateUXMetrics()}, 45000); // Update every 45 seconds;
-
       return () => {;
         if(analysisIntervalRef.current) {;
           clearInterval(analysisIntervalRef.current)}
@@ -106,7 +102,6 @@ export function UserExperienceOptimizer("props": "any) {;
   ]);
 ;
   // Get trend display;
-
     return ();
       <div`;
         className={`flex items-center space-x-1 ${colors[trend as keyof typeof colors]}`}
@@ -124,7 +119,6 @@ export function UserExperienceOptimizer("props": "any) {;
     return colors[effort as keyof typeof colors] || colors.low};
 ;
   // Filter behaviors by timeframe;
-
     return userBehaviors.filter();
       behavior =>;
         now-behavior.timestamp.getTime() <= timeframes[selectedTimeframe];
@@ -145,7 +139,6 @@ export function UserExperienceOptimizer("props": "any) {;
       >";
         <Users className="w-6 h-6"   />"        <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse"  />;
       </motion.button>;
-
       {/* UX Optimizer Modal */}
       <AnimatePresence>;
         {isOpen && (;
@@ -185,7 +178,6 @@ export function UserExperienceOptimizer("props": "any) {;
                     <RefreshCw'`;
                       className={`w-5 h-5 ${isAnalyzing ? 'animate-spin' : ''"}`}
                     />                  </button>;
-
                   <button;
                     onClick={() => setIsFullscreen(!isFullscreen)}";
                     className="p-2 text-gray-600 "hover": "tex t-green-600 "dark": tex t-gray-400 "dark": hove "r":text-green-400 transition-colors";
@@ -196,7 +188,6 @@ export function UserExperienceOptimizer("props": "any) {;
                       <Maximize2 className="w-5 h-5"  />;
                     )"}
                   </button>;
-
                   <button;
                     onClick={() => setIsOpen(false)}";
                     className="p-2 text-gray-600 "hover": "tex t-green-600 "dark": tex t-gray-400 "dark": hove "r":text-green-400 transition-colors";
@@ -204,8 +195,6 @@ export function UserExperienceOptimizer("props": "any) {;
                     <X className="w-5 h-5"   />                  </button>;
                 </div>;
               </div>;
-
-<<<<<<< HEAD
               {/* Content */"}";
               <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">;
                 {isAnalyzing ? (";
@@ -268,7 +257,6 @@ export function UserExperienceOptimizer("props": "any) {;
                         </div>;
                       </div>;
                     </div>;
-=======
               {/* Content */}"
               <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
                 {isAnalyzing ? ("
@@ -331,8 +319,6 @@ export function UserExperienceOptimizer("props": "any) {;
                         </div>
                       </div>
                     </div>
->>>>>>> main
-
                     {/* Navigation Tabs */}";
                     <div className="flex space-x-1 bg-gray-100 "dark": "b g-gray-800 rounded-lg p-1">;
                       {[{;
@@ -365,9 +351,7 @@ export function UserExperienceOptimizer("props": "any) {;
                           </span>;
                         </button>) ) }
                     </div>;
-
                     {/* UX Metrics View */}
-<<<<<<< HEAD
                     {selectedView === 'metrics' && (";
                       <div className="space-y-4">";
                         <div className="flex items-center justify-between">";
@@ -404,7 +388,6 @@ export function UserExperienceOptimizer("props": "any) {;
                                 <h4 className="font-medium text-gray-900 "dark": "tex t-white">;
                                   {metric.name"}
                                 </h4>;
-=======
                     {selectedView === 'metrics' && ("
                       <div className="space-y-4">"
                         <div className="flex items-center justify-between">"
@@ -441,7 +424,6 @@ export function UserExperienceOptimizer("props": "any) {;
                                 <h4 className="font-medium text-gray-900 dark: tex t-white">
                                   {metric.name}
                                 </h4>
->>>>>>> main
                                 {getTrendDisplay(metric.trend, metric.change) }
                               </div>;
 ";
@@ -473,7 +455,6 @@ export function UserExperienceOptimizer("props": "any) {;
                         </div>;
                       </div>) }
                     {/* User Behaviors View */}
-<<<<<<< HEAD
                     {selectedView === 'behaviors' && (";
                       <div className="space-y-4">";
                         <div className="flex items-center justify-between">";
@@ -514,13 +495,11 @@ export function UserExperienceOptimizer("props": "any) {;
                                         <AlertTriangle className="w-4 h-4 text-red-600"   />;
                                       )"}
                                     </div>;
-=======
                     {selectedView === 'behaviors' && ("
                       <div className="space-y-4">"
                         <div className="flex items-center justify-between">"
                           <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
                             User Behavior Analysis
-                          
                           <button
                             onClick={() => setShowAdvanced(!showAdvanced)}"
                             className="px-3 py-1 text-sm bg-green-600 text-white rounded-md hover: b g-green-700 transition-colors"
@@ -555,8 +534,6 @@ export function UserExperienceOptimizer("props": "any) {;
                                         <AlertTriangle className="w-4 h-4 text-red-600"   />
                                       )}
                                     </div>
->>>>>>> main
-
                                     <div>";
                                       <h4 className="font-medium text-gray-900 "dark": "tex t-white">;
                                         {behavior.action"}
@@ -587,7 +564,6 @@ export function UserExperienceOptimizer("props": "any) {;
                         </div>;
                       </div>) }
                     {/* Optimization Suggestions View */}
-<<<<<<< HEAD
                     {selectedView === 'suggestions' && (";
                       <div className="space-y-4">";
                         <h3 className="text-lg font-semibold text-gray-900 "dark": "tex t-white">;
@@ -610,12 +586,10 @@ export function UserExperienceOptimizer("props": "any) {;
                                   <div className="flex-1">";
                                     <div className="flex items-center space-x-3 mb-2">;
                                       <div`;
-=======
                     {selectedView === 'suggestions' && ("
                       <div className="space-y-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
                           Optimization Suggestions
-                        
 "
                         <div className="grid gap-4">
                           {optimizationSuggestions
@@ -633,7 +607,6 @@ export function UserExperienceOptimizer("props": "any) {;
                                   <div className="flex-1">"
                                     <div className="flex items-center space-x-3 mb-2">
                                       <div`
->>>>>>> main
                                         className={`px-2 py-1 rounded-full text-xs font-medium ${getImpactColor(suggestion.impact)}`}
                                       >;
                                         {suggestion.impact} impact;
@@ -665,7 +638,6 @@ export function UserExperienceOptimizer("props": "any) {;
                                         "Category": "{suggestion.category"}
                                       </span>;
                                     </div>;
-
                                     {showAdvanced && (";
                                       <div className="bg-gray-50 "dark": "b g-gray-700 rounded-lg p-3">";
                                         <h5 className="font-medium text-gray-900 "dark": tex t-white mb-2">;
@@ -691,7 +663,6 @@ export function UserExperienceOptimizer("props": "any) {;
                             ))"}
                         </div>;
                       </div>) }
-<<<<<<< HEAD
                     {/* Action Buttons */}";
                     <div className="flex items-center justify-center space-x-4 pt-6">";
                       <button className="flex items-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg "hover": "b g-green-700 transition-colors">";
@@ -726,8 +697,6 @@ export function UserExperienceOptimizer("props": "any) {;
                   </div>) "}
               </div>;
             </motion.div>;
-=======
-
                     {/* Action Buttons */}"
                     <div className="flex items-center justify-center space-x-4 pt-6">"
                       <button className="flex items-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg hover: b g-green-700 transition-colors">"
@@ -762,13 +731,11 @@ export function UserExperienceOptimizer("props": "any) {;
                   </div>) }
               </div>
             </motion.div>
->>>>>>> main
           </motion.div>) }
       </AnimatePresence>;
     </>;
   )}
 '"`;
-
 </motion>;
 </motion>;
 </motion>;

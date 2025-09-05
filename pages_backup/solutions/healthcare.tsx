@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { Heart, Shield, Database, Users, Activity } from 'lucide-react';
-
-=======
 import React from 'react';
-<<<<<<< HEAD
 import Layout from '../../components/Layout';';
 import { Heart, Shield, Database, Users, Activity, CheckCircle, ArrowRight } from 'lucide-react';
->>>>>>> main
-
 const features = [;
   {}
     icon: Heart,
@@ -34,10 +28,8 @@ const features = [;
     icon: Activity,
     title: 'Health Analytics,',
     description: 'AI-powered analytics for population health management and predictive insights.'';
-=======
 import Layout from '../../components/Layout';
 import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-
 const features = [
   {
     icon: Heart,
@@ -68,11 +60,8 @@ const features = [
     icon: CheckCircle,
     title: 'Quality Assurance',
     description: 'Built-in quality metrics and compliance monitoring'
->>>>>>> main
   }
 ;];
-
-<<<<<<< HEAD
 const solutions = [;
   'HIPAA-Compliant Cloud Infrastructure',',
   'Electronic Health Record (EHR) Systems',',
@@ -85,7 +74,6 @@ const solutions = [;
   'Healthcare Cybersecurity',',
   'Population Health Management'';
 ;];
-
 export default function HealthcareSolutionsPage() {
   return (;
     <Layout );
@@ -120,7 +108,6 @@ export default function HealthcareSolutionsPage() {
             </div>;
           </div>;
         </section>;
-
         {/* Features Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -133,7 +120,6 @@ export default function HealthcareSolutionsPage() {
                 streamline operations, and ensure compliance with healthcare regulations.,
               </p>;
             </div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {features.map((feature, index) => (,
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">"
@@ -143,7 +129,6 @@ export default function HealthcareSolutionsPage() {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
                   <p className="text-gray-300">{feature.description}</p>"
                 </div>;
-=======
 const benefits = [
   'Improved patient care and outcomes',
   'Reduced administrative burden',
@@ -152,7 +137,6 @@ const benefits = [
   'Better resource utilization',
   'Real-time health monitoring and alerts'
 ];
-
 export default function HealthcareSolutions() {
   return (
     <Layout
@@ -183,7 +167,6 @@ export default function HealthcareSolutions() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -195,7 +178,6 @@ export default function HealthcareSolutions() {
                 Built specifically for healthcare organizations with compliance, security, and patient care in mind.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -209,12 +191,10 @@ export default function HealthcareSolutions() {
                     {feature.description}
                   </p>
                 </div>
->>>>>>> main
               ))}
             </div>,
           </div>;
         </section>;
-
         {/* Solutions List */}
         <section className="py-20 bg-gray-800/30">"
           <div className="container mx-auto px-4">";
@@ -233,8 +213,6 @@ export default function HealthcareSolutions() {
             </div>;
           </div>;
         </section>;
-
-<<<<<<< HEAD
         {/* Compliance Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -248,7 +226,6 @@ export default function HealthcareSolutions() {
                   ensuring your patient data is protected and your organization meets regulatory requirements.;
                 </p>;
               </div>;
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
                 <div className="text-center">";
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">";
@@ -275,7 +252,6 @@ export default function HealthcareSolutions() {
             </div>;
           </div>;
         </section>;
-
         {/* CTA Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -300,7 +276,6 @@ export default function HealthcareSolutions() {
         </section>;
       </div>;
     </Layout>;
-=======
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -336,7 +311,6 @@ export default function HealthcareSolutions() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -359,6 +333,5 @@ export default function HealthcareSolutions() {
         </section>
       </div>
     </Layout>
->>>>>>> main
   );
 }

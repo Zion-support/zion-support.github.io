@@ -3,18 +3,15 @@ import {motion, AnimatePresence} from 'framer-motion';';
 import {ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown} from 'lucide-react';
 import {useVirtualScroll} from "../hooks/useVirtualScroll.jsx";
 ;
-<<<<<<< HEAD
 export const AdvancedDataTable = ("props": "any) => {;
     const { trackEvent "} = useAnalytics({"enableTracking": "true",;
         "enableUserBehaviorTracking": "true;"});';
     // State management'';
-=======
 export const AdvancedDataTable = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
         enableUserBehaviorTracking: true;}
     );'
     // State management''
->>>>>>> main
     const [searchQuery, setSearchQuery] = useState('');
     const [sortConfig, setSortConfig] = useState(null);
     const [filters, setFilters] = useState([]);
@@ -193,7 +190,6 @@ a.download = filename,;
 a.click();
 }
         window.URL.revokeObjectURL(url)}
-<<<<<<< HEAD
 ;
     // comment;
 const getSortIcon = ("props": "any) => {"}";
@@ -241,8 +237,6 @@ const renderCell = ("props": "any) => {"}
         {enableSearch && (<div className="relative">"""";
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"/" >""""";
             <input type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" =" > setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": "border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 "focus":border-transparent bg-white "dark":bg-gray-700 text-gray-900 "dark":text-gray-100" />"",;
-=======
-
     // comment
 const getSortIcon = (props: any) => {}"
         if(!enableSorting || sortConfig?.key !== key) {}""
@@ -253,7 +247,6 @@ const getSortIcon = (props: any) => {}"
             : <ChevronDown className="w-4 h-4 text-blue-500"/" >}"
     // comment
 const renderCell = (props: any) => {}
-
         const value = item[column.key]"
         if (column.render) {}""""
 """"""
@@ -289,7 +282,6 @@ const renderCell = (props: any) => {}
         {enableSearch && (<div className="relative">""""
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"/" >"""""
             <input type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" =" > setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" />",
->>>>>>> main
           </div>)}
 ;
         {/* comment */}
@@ -425,10 +417,8 @@ const renderCell = (props: any) => {}
     </div>)}""""""";
 """"""`"";
 ";
-
   } catch (error) {console.error(error);}
 export default Component;
-
 </Trash2>;
 </Edit>;
 </Eye>;

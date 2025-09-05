@@ -100,9 +100,7 @@ export function Footer("props": "any) {;
               </div>;
             </div>;
           </div>;
-
           {/* Footer Links */}
-<<<<<<< HEAD
           {footerSections.map((section) => (;
             <div key={section.title}>;
               <h3 className="text-white font-semibold mb-4">{section.title}</h3>;
@@ -111,7 +109,6 @@ export function Footer("props": "any) {;
                   <li key={link.name}>;
                     <Link href={link.href} className="text-slate-300 "hover": "text-cyan-400 transition-colors duration-200">{link.name"}</Link>;
                   </li>;
-=======
           {footerSections.map((section) => (
             <div key={section.title}>
               <h3 className="text-white font-semibold mb-4">{section.title}
@@ -120,16 +117,13 @@ export function Footer("props": "any) {;
                   <li key={link.name}>
                     <Link href={link.href} className="text-slate-300 hover:text-cyan-400 transition-colors duration-200">{link.name}</Link>
                   </li>
->>>>>>> main
                 ))}
               </ul>;
             </div>;
           ))}
         </div>;
       </div>;
-
       {/* Newsletter Signup */}
-<<<<<<< HEAD
       <div className="border-t border-slate-700 py-8">;
         <div className="container mx-auto px-4 "sm": "p x-6 "lg": p x-8">;
           <div className="flex flex-col "md": fle x-row items-center justify-between">;
@@ -149,7 +143,6 @@ export function Footer("props": "any) {;
           </div>;
         </div>;
       </div>;
-=======
       <div className="border-t border-slate-700 py-8">
         <div className="container mx-auto px-4 sm: p x-6 lg: p x-8">
           <div className="flex flex-col md: fle x-row items-center justify-between">
@@ -169,8 +162,6 @@ export function Footer("props": "any) {;
           </div>
         </div>
       </div>
->>>>>>> main
-
       {/* Bottom Footer */"}
       <div className="border-t border-slate-700 py-6">;
         <div className="container mx-auto px-4 "sm": "p x-6 "lg": p x-8">;
@@ -191,7 +182,6 @@ export function Footer("props": "any) {;
                 Cookie Policy;
               </Link>;
             </div>;
-
             {/* Social Links */"}
             <div className="flex items-center space-x-4">;
               {socialLinks.map((social) => (;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import { SEO } from "@/components/SEO";
 export default function ProjectDetailsFields("props": "any) {return (;
@@ -11,7 +10,6 @@ export default function ProjectDetailsFields("props": "any) {return (;
         </p>;
       </div>;
   );""}";
-=======
 import React from "react"
 import { SEO } from "@/components/SEO"
 export default function ProjectDetailsFields(props: any) {return (
@@ -24,6 +22,4 @@ export default function ProjectDetailsFields(props: any) {return (
         </p>
       </div>
     );"}"
->>>>>>> main
-
 </div>

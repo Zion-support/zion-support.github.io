@@ -1,5 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD:src/pages/About.tsx
+:src/pages/About.tsx
 import { 
   Users, 
   Target, 
@@ -10,7 +10,6 @@ import {
   CheckCircle,
   ArrowRight
 } from 'lucide-react';
-
 export function About() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -29,7 +28,6 @@ export function About() {
           </div>
         </div>
       </section>
-
       {/* Mission & Vision */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,7 +47,6 @@ export function About() {
                 enabling our clients to stay ahead in an ever-evolving digital landscape.
               </p>
             </div>
-
             <div>
               <div className="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
                 <Globe className="w-8 h-8 text-white" />
@@ -69,7 +66,6 @@ export function About() {
           </div>
         </div>
       </section>
-
       {/* Values */}
       <section className="py-20 bg-gray-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,7 +75,6 @@ export function About() {
               The principles that guide everything we do
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -92,7 +87,6 @@ export function About() {
                 cutting-edge solutions.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Heart className="w-8 h-8 text-white" />
@@ -104,7 +98,6 @@ export function About() {
                 all our interactions.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="w-8 h-8 text-white" />
@@ -116,7 +109,6 @@ export function About() {
                 success and mutual growth.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Award className="w-8 h-8 text-white" />
@@ -128,7 +120,6 @@ export function About() {
                 expectations and drive measurable results.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-teal-600 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Globe className="w-8 h-8 text-white" />
@@ -140,7 +131,6 @@ export function About() {
                 both businesses and the environment.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle className="w-8 h-8 text-white" />
@@ -155,7 +145,6 @@ export function About() {
           </div>
         </div>
       </section>
-
       {/* Team Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -165,7 +154,6 @@ export function About() {
               Meet the brilliant minds behind our innovative solutions
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-800/50 p-8 rounded-xl border border-gray-700">
               <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -177,7 +165,6 @@ export function About() {
                 with deep expertise in AI technologies.
               </p>
             </div>
-
             <div className="bg-gray-800/50 p-8 rounded-xl border border-gray-700">
               <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Award className="w-10 h-10 text-white" />
@@ -188,7 +175,6 @@ export function About() {
                 algorithms development.
               </p>
             </div>
-
             <div className="bg-gray-800/50 p-8 rounded-xl border border-gray-700">
               <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Lightbulb className="w-10 h-10 text-white" />
@@ -202,7 +188,6 @@ export function About() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -229,32 +214,26 @@ export function About() {
           </div>
         </div>
       </section>
-=======
-
 export default function About() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold text-gray-900 mb-8">About Zion Tech Group</h1>
-      
       <div className="prose prose-lg max-w-none">
         <p className="text-xl text-gray-600 mb-8">
           Zion Tech Group is a leading technology solutions provider specializing in AI, 
           cybersecurity, cloud infrastructure, and digital transformation services.
         </p>
-        
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
         <p className="text-gray-600 mb-6">
           To empower businesses with cutting-edge technology solutions that drive innovation, 
           efficiency, and growth. We combine technical expertise with business acumen to deliver 
           solutions that create real value.
         </p>
-        
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>
         <p className="text-gray-600 mb-6">
           To be the premier technology partner for organizations seeking to transform their 
           digital infrastructure and leverage the power of artificial intelligence and cloud computing.
         </p>
-        
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Values</h2>
         <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
           <li>Innovation and continuous learning</li>
@@ -264,7 +243,6 @@ export default function About() {
           <li>Excellence in delivery</li>
         </ul>
       </div>
->>>>>>> main:src_backup_temp/pages/About.tsx
     </div>
   );
 }

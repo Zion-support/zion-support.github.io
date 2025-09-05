@@ -12,7 +12,6 @@ export default function ProductCard("props": "any) {;
   const [imageError, setImageError] = useState(false);
   const router = useRouter();
   const {enqueueSnackbar} = useSnackbar();
-<<<<<<< HEAD
   ;
   if (!product || ;
       typeof product.id !== "string" || ;
@@ -27,8 +26,6 @@ export default function ProductCard("props": "any) {;
           Product information unavailable.;
         </p>;
       </div>;
-=======
-  
   if (!product || 
       typeof product.id !== "string" || 
       typeof product.title !== "string" || 
@@ -43,7 +40,6 @@ export default function ProductCard("props": "any) {;
           Product information unavailable.
         </p>
       </div>
->>>>>>> main
     );
   }
   ;

@@ -1,15 +1,10 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
-
-
-=======
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
->>>>>>> main
 export default function SMBSolutionsPage() {
   const smbServices = [;
     {}
@@ -36,16 +31,13 @@ export default function SMBSolutionsPage() {
       icon: Building2,
       features: ["Scalable Infrastructure", "Future-Proof", "Growth Support"]"
     }
-<<<<<<< HEAD
 ;  ];
-
   return (;
     <Layout );
       title="SMB Solutions - Zion Tech Group"";
       description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."";
     >;
       <div className="min-h-screen bg-gray-50">";
-=======
   ];
   return (
     <Layout
@@ -53,7 +45,6 @@ export default function SMBSolutionsPage() {
       description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."
     >
       <div className="min-h-screen bg-gray-50">
->>>>>>> main
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">"
           <div className="container mx-auto px-4">";
@@ -61,7 +52,6 @@ export default function SMBSolutionsPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -74,8 +64,6 @@ export default function SMBSolutionsPage() {
             </motion.div>;
           </div>;
         </section>;
-
-=======
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -88,7 +76,6 @@ export default function SMBSolutionsPage() {
             </motion.div>
           </div>
         </section>
->>>>>>> main
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -124,16 +111,12 @@ export default function SMBSolutionsPage() {
                   </motion.div>;
                 );
               })}
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
-
-=======
             </div>
           </div>
         </section>
->>>>>>> main
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

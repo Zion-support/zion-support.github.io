@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """;,"});,"})";
 """;,"});,"})","});,"})","});,"})","})";
   Tooltip,,"});,"})";
@@ -57,7 +56,6 @@ export {EmptyState};,"});,"})";
               </Button>;
             ) : "(";
               <Button disabled" >{cta"}</Button>";
-=======
 """;,"}
     );,"})"
 """;,"}
@@ -158,7 +156,6 @@ export {EmptyState};,"}
               </Button>
             ) : ("
               <Button disabled" >{cta}</Button>"
->>>>>>> main
             )}
 ;
           </TooltipTrigger>;

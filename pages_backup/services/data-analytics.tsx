@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
-<<<<<<< HEAD
 import Layout from "../../components/Layout";";
->>>>>>> main
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { BarChart3, TrendingUp, Database, Brain } from 'lucide-react';
-
-
 export default function DataAnalyticsPage() {
   const analyticsServices = [;
     {}
@@ -36,7 +30,6 @@ export default function DataAnalyticsPage() {
       features: ["Natural Language Processing", "Pattern Recognition", "Automated Insights"]"
     }
 ;  ];
-
   return (;
     <Layout );
       title="Data Analytics Services - Zion Tech Group"";
@@ -62,7 +55,6 @@ export default function DataAnalyticsPage() {
             </motion.div>;
           </div>;
         </section>;
-
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -101,7 +93,6 @@ export default function DataAnalyticsPage() {
             </div>,
           </div>;
         </section>;
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
@@ -123,10 +114,8 @@ export default function DataAnalyticsPage() {
         </section>;
       </div>;
     </Layout>;
-=======
 import Layout from '../../components/Layout';
 import { BarChart3, Database, TrendingUp, Brain, CheckCircle, ArrowRight } from 'lucide-react';
-
 const features = [
   {
     icon: BarChart3,
@@ -159,7 +148,6 @@ const features = [
     description: 'Interactive charts, graphs, and visual data representations'
   }
 ];
-
 const benefits = [
   'Data-driven decision making',
   'Improved business performance',
@@ -168,7 +156,6 @@ const benefits = [
   'Enhanced competitive advantage',
   'Automated reporting and analytics'
 ];
-
 export default function DataAnalyticsServices() {
   return (
     <Layout
@@ -199,7 +186,6 @@ export default function DataAnalyticsServices() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -212,7 +198,6 @@ export default function DataAnalyticsServices() {
                 in your data and drive business growth.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -230,7 +215,6 @@ export default function DataAnalyticsServices() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -266,7 +250,6 @@ export default function DataAnalyticsServices() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -289,6 +272,5 @@ export default function DataAnalyticsServices() {
         </section>
       </div>
     </Layout>
->>>>>>> main
   );
 }

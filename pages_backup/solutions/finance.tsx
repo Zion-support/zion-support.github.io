@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { DollarSign, Shield, TrendingUp, Users, Database } from 'lucide-react';
-
-=======
 import React from 'react';
-<<<<<<< HEAD
 import Layout from '../../components/Layout';';
 import { DollarSign, Shield, TrendingUp, Users, Database, CheckCircle, ArrowRight } from 'lucide-react';
->>>>>>> main
-
 const features = [;
   {}
     icon: DollarSign,
@@ -34,10 +28,8 @@ const features = [;
     icon: Database,
     title: 'Fraud Detection,',
     description: 'Real-time fraud detection and prevention systems using advanced analytics.'';
-=======
 import Layout from '../../components/Layout';
 import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-
 const features = [
   {
     icon: DollarSign,
@@ -68,11 +60,8 @@ const features = [
     icon: CheckCircle,
     title: 'Audit Trail',
     description: 'Complete transaction and activity audit trails'
->>>>>>> main
   }
 ;];
-
-<<<<<<< HEAD
 const solutions = [;
   'Digital Banking Platforms',',
   'Payment Processing Systems',',
@@ -85,7 +74,6 @@ const solutions = [;
   'Cryptocurrency Solutions',',
   'Financial Mobile Applications'';
 ;];
-
 export default function FinanceSolutionsPage() {
   return (;
     <Layout );
@@ -120,7 +108,6 @@ export default function FinanceSolutionsPage() {
             </div>;
           </div>;
         </section>;
-
         {/* Features Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -133,7 +120,6 @@ export default function FinanceSolutionsPage() {
                 improve efficiency, and ensure compliance with financial regulations.,
               </p>;
             </div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {features.map((feature, index) => (,
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">"
@@ -143,7 +129,6 @@ export default function FinanceSolutionsPage() {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
                   <p className="text-gray-300">{feature.description}</p>"
                 </div>;
-=======
 const benefits = [
   'Enhanced security and fraud prevention',
   'Improved regulatory compliance',
@@ -152,7 +137,6 @@ const benefits = [
   'Reduced operational costs',
   'Faster transaction processing'
 ];
-
 export default function FinanceSolutions() {
   return (
     <Layout
@@ -183,7 +167,6 @@ export default function FinanceSolutions() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -195,7 +178,6 @@ export default function FinanceSolutions() {
                 Built for financial institutions with security, compliance, and performance as top priorities.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -209,12 +191,10 @@ export default function FinanceSolutions() {
                     {feature.description}
                   </p>
                 </div>
->>>>>>> main
               ))}
             </div>,
           </div>;
         </section>;
-
         {/* Solutions List */}
         <section className="py-20 bg-gray-800/30">"
           <div className="container mx-auto px-4">";
@@ -233,8 +213,6 @@ export default function FinanceSolutions() {
             </div>;
           </div>;
         </section>;
-
-<<<<<<< HEAD
         {/* Compliance Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -248,7 +226,6 @@ export default function FinanceSolutions() {
                   ensuring your financial data is protected and your organization meets regulatory requirements.;
                 </p>;
               </div>;
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
                 <div className="text-center">";
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">";
@@ -275,7 +252,6 @@ export default function FinanceSolutions() {
             </div>;
           </div>;
         </section>;
-
         {/* CTA Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -300,7 +276,6 @@ export default function FinanceSolutions() {
         </section>;
       </div>;
     </Layout>;
-=======
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -336,7 +311,6 @@ export default function FinanceSolutions() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -359,6 +333,5 @@ export default function FinanceSolutions() {
         </section>
       </div>
     </Layout>
->>>>>>> main
   );
 }

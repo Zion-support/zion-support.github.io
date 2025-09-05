@@ -1,5 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD:src/pages/Home.tsx
+:src/pages/Home.tsx
 import { Link } from 'react-router-dom';
 import { 
   Zap, 
@@ -14,7 +14,6 @@ import {
   Target,
   Rocket
 } from 'lucide-react';
-
 export function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
@@ -50,7 +49,6 @@ export function Home() {
           </div>
         </div>
       </section>
-
       {/* Services Preview */}
       <section className="py-20 bg-gray-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,7 +60,6 @@ export function Home() {
               Comprehensive technology solutions to drive your business forward
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-800/50 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300">
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
@@ -81,7 +78,6 @@ export function Home() {
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
-
             <div className="bg-gray-800/50 p-8 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300">
               <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
                 <Shield className="w-6 h-6 text-white" />
@@ -99,7 +95,6 @@ export function Home() {
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
-
             <div className="bg-gray-800/50 p-8 rounded-xl border border-gray-700 hover:border-green-500 transition-all duration-300">
               <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-6">
                 <Cloud className="w-6 h-6 text-white" />
@@ -120,7 +115,6 @@ export function Home() {
           </div>
         </div>
       </section>
-
       {/* Why Choose Us */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -132,7 +126,6 @@ export function Home() {
               We combine cutting-edge technology with deep industry expertise
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -143,7 +136,6 @@ export function Home() {
                 Stay ahead with the latest technologies and methodologies
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
@@ -153,7 +145,6 @@ export function Home() {
                 World-class engineers and technology experts
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="w-8 h-8 text-white" />
@@ -163,7 +154,6 @@ export function Home() {
                 Proven track record of successful implementations
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-white" />
@@ -176,7 +166,6 @@ export function Home() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -205,7 +194,6 @@ export function Home() {
     </div>
   );
 }
-=======
 ;
 const "Home": "React.FC = () => {;
   return (;
@@ -233,4 +221,3 @@ const "Home": "React.FC = () => {;
 "};
 ;
 export default Home;
->>>>>>> main:src_backup_temp/pages/Home.tsx

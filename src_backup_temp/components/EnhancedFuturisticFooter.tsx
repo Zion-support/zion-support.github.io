@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 ;
@@ -145,18 +144,12 @@ import { Link } from 'react-router-dom';
     }
   ];
 }
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   const footerSections = [
->>>>>>> origin/merge-pr-10615
     {
       title: 'Revolutionary 2030 Services',
       featured: true,
       links: [
         { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', featured: true },
-
         { name: 'Quantum AI Trading Platform', href: '/services/quantum-ai-trading', featured: true },
         { name: 'Neural Interface Platform', href: '/services/neural-interface', featured: true },
         { name: 'Holographic Workspace Platform', href: '/services/holographic-workspace', featured: true },
@@ -170,7 +163,6 @@ import { Link } from 'react-router-dom';
       ]
     },
     {
-
       title: 'AI & Analytics Services',
       featured: true,
       links: [
@@ -292,15 +284,12 @@ import { Link } from 'react-router-dom';
         { name: 'Partnerships', href: '/partners', featured: false },
         { name: 'Press & Media', href: '/press', featured: false },
         { name: 'Legal & Privacy', href: '/legal', featured: false },
-<<<<<<< HEAD
         { name: 'Support Center', href: '/support', featured: false }
-=======
         { name: 'Terms of Service', href: '/terms', featured: false },
         { name: 'Privacy Policy', href: '/privacy', featured: false }
       ]
     }
   ];
-
   return ()    <footer className="relative bg-slate-950 border-t border-cyan-400/20 overflow-hidden">
       {/* Enhanced Animated Background */}"
       <div className="absolute inset-0 bg-futuristic-enhanced">"
@@ -315,15 +304,12 @@ import { Link } from 'react-router-dom';
           <div className="w-2 h-2 bg-purple-400 rounded-full opacity-60 neon-glow"></div>
         </div>
       </div>
-
     { name: 'Terms of Service', href: '/terms', description: 'Service terms' },;
     { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },;
     { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },;
     { name: 'Security', href: '/security', description: 'Security practices' },;
     { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' };  ];
-
   // Create missing pages for broken links
-  
       </Link>;) };
   return ("
           <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
@@ -331,7 +317,6 @@ import { Link } from 'react-router-dom';
         <div className="absolute inset-0 opacity-30">"
           <div className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-slate-900/20"></div>
         </div>
-
       <div  className="relative">
         {/* Main Footer Content */}
         <div  className="container - responsive py-16">
@@ -361,7 +346,6 @@ import { Link } from 'react-router-dom';
               </motion.div>
             ))}
           </motion.div>
-
           {/* Main Footer Grid */}
           <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap-8 mb-12">
             {/* Company Info */}
@@ -403,7 +387,6 @@ import { Link } from 'react-router-dom';
                 </div>
               </div>
             </div>
-
               {/* Social Links */}"
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
@@ -420,10 +403,8 @@ import { Link } from 'react-router-dom';
                 ))}
               </div>
             </div>
-
             <p className="text-gray - 300 mb-6 max - w-md">
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure,              and digital transformation services.Transforming businesses with cutting - edge technology.</p>
-
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
               <div key={section.title}>"
@@ -445,7 +426,6 @@ import { Link } from 'react-router-dom';
                 </ul>
               </motion.div>) ) }
           </div>
-
           {/* Additional Links Grid */}"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Company */}
@@ -463,7 +443,6 @@ import { Link } from 'react-router-dom';
                   </li>) ) }
               </ul>
             </div>
-
             {/* Support */}
             <div>"
               <h4 className="text-lg font-semibold text-white mb-4">Support</h4>"
@@ -479,7 +458,6 @@ import { Link } from 'react-router-dom';
                   </li>) ) }
               </ul>
             </div>
-
             {/* Legal */}
             <div>"
               <h4 className="text-lg font-semibold text-white mb-4">Legal</h4>"
@@ -495,7 +473,6 @@ import { Link } from 'react-router-dom';
                   </li>) ) }
               </ul>
             </div>
-
             {/* Social & Newsletter */}
             <div>"
               <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>"
@@ -526,7 +503,6 @@ import { Link } from 'react-router-dom';
               </div>
             </div>
           </div>
-
           {/* Bottom Bar */}"
           <div className="pt-8 border-t border-slate-800/50">"
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">"
@@ -557,7 +533,6 @@ import { Link } from 'react-router-dom';
       ]
     },
     {
-
       title: 'Company',;
       icon: Building,
       color: 'from-green-600 to-emerald-600',
@@ -573,7 +548,6 @@ import { Link } from 'react-router-dom';
       ]
     },
     {
-
       title: 'Resources & Learning',;
       icon: BookOpen,
       color: 'from-orange-600 to-red-600',
@@ -590,7 +564,6 @@ import { Link } from 'react-router-dom';
       ]
     },
     {
-
       title: 'Platform & Tools',;
       icon: Settings,
       color: 'from-slate-600 to-gray-600',
@@ -604,7 +577,6 @@ import { Link } from 'react-router-dom';
       ]
     },
     {
-
       title: 'Legal & Compliance',;
       icon: Shield,
       color: 'from-gray-600 to-slate-600',
@@ -616,13 +588,8 @@ import { Link } from 'react-router-dom';
         { name: 'Compliance', href: '/compliance' },;
         { name: 'Accessibility', href: '/accessibility' },;
         { name: 'Sitemap', href: '/sitemap' }
->>>>>>> origin/merge-pr-10615
       ]
     }
   ];
 }
-=======
-import React from 'react'; import { Link } from 'react-router-dom'; <<<<<<<HEADexport function EnhancedFuturisticFooter($1) { const year = new Date().getFullYear(); return ('; <footer style="{{{ borderTop: '1px solid #e5e7eb'; background: '#fafafa'; marginTop: 48}}"}>'; <divstyle="{{{ display: 'grid'; gridTemplateColumns: 'repeat(3; gap: 16; padding: '24px 16px'; maxWidth: 1100; margin: '0 auto'}}"}> <section>'; <h2 style="{{{ fontSize: 14; color: '#6b7280'; margin: '0 0 8px'}}"}>Company</h2> <navaria-label="Company">'; <Link to="/about" style="{{{ display: 'block'; color: '#374151'}}"}>About</Link>'; <Link to="/careers" style="{{{ display: 'block'; color: '#374151'}}"}>Careers</Link>'; <Link to="/contact" style="{{{ display: 'block'; color: '#374151'}}"}>Contact</Link> </nav> </section> <section>'; <h2 style="{{{ fontSize: 14; color: '#6b7280'; margin: '0 0 8px'}}"}>Services</h2> <navaria-label="Services">'; <Link to="/services" style="{{{ display: 'block'; color: '#374151'}}"}>All Services</Link>'; <Link to="/services/ai-services" style="{{{ display: 'block'; color: '#374151'}}"}>AI Services</Link>'; <Link to="/services/it-services" style="{{{ display: 'block'; color: '#374151'}}"}>IT Services</Link>'; <Link to="/services/micro-saas" style="{{{ display: 'block'; color: '#374151'}}"}>Micro SaaS</Link> </nav> </section> <section>'; <h2 style="{{{ fontSize: 14; color: '#6b7280'; margin: '0 0 8px'}}"}>Solutions</h2> <navaria-label="Solutions">'; <Link to="/solutions" style="{{{ display: 'block'; color: '#374151'}}"}>Overview</Link>'; <Link to="/solutions/enterprise" style="{{{ display: 'block'; color: '#374151'}}"}>Enterprise</Link> </nav> </section> </div>'; <div style="{{{ padding: '12px 16px'; borderTop: '1px solid #e5e7eb'; color: '#6b7280'; textAlign: 'center'}}"}>© {year} Zion Tech Group</div> </footer> )} export default EnhancedFuturisticFooter;  const footerSections = [ 
->>>>>>> main
->>>>>>> main
->>>>>>> main
+import React from 'react'; import { Link } from 'react-router-dom'; <<<<<<<HEADexport function EnhancedFuturisticFooter($1) { const year = new Date().getFullYear(); return ('; <footer style="{{{ borderTop: '1px solid #e5e7eb'; background: '#fafafa'; marginTop: 48}}"}>'; <divstyle="{{{ display: 'grid'; gridTemplateColumns: 'repeat(3; gap: 16; padding: '24px 16px'; maxWidth: 1100; margin: '0 auto'}}"}> <section>'; <h2 style="{{{ fontSize: 14; color: '#6b7280'; margin: '0 0 8px'}}"}>Company</h2> <navaria-label="Company">'; <Link to="/about" style="{{{ display: 'block'; color: '#374151'}}"}>About</Link>'; <Link to="/careers" style="{{{ display: 'block'; color: '#374151'}}"}>Careers</Link>'; <Link to="/contact" style="{{{ display: 'block'; color: '#374151'}}"}>Contact</Link> </nav> </section> <section>'; <h2 style="{{{ fontSize: 14; color: '#6b7280'; margin: '0 0 8px'}}"}>Services</h2> <navaria-label="Services">'; <Link to="/services" style="{{{ display: 'block'; color: '#374151'}}"}>All Services</Link>'; <Link to="/services/ai-services" style="{{{ display: 'block'; color: '#374151'}}"}>AI Services</Link>'; <Link to="/services/it-services" style="{{{ display: 'block'; color: '#374151'}}"}>IT Services</Link>'; <Link to="/services/micro-saas" style="{{{ display: 'block'; color: '#374151'}}"}>Micro SaaS</Link> </nav> </section> <section>'; <h2 style="{{{ fontSize: 14; color: '#6b7280'; margin: '0 0 8px'}}"}>Solutions</h2> <navaria-label="Solutions">'; <Link to="/solutions" style="{{{ display: 'block'; color: '#374151'}}"}>Overview</Link>'; <Link to="/solutions/enterprise" style="{{{ display: 'block'; color: '#374151'}}"}>Enterprise</Link> </nav> </section> </div>'; <div style="{{{ padding: '12px 16px'; borderTop: '1px solid #e5e7eb'; color: '#6b7280'; textAlign: 'center'}}"}>© {year} Zion Tech Group</div> </footer> )} export default EnhancedFuturisticFooter;  const footerSections = [

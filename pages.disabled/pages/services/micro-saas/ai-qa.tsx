@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 export default function AIQACopilot() {; return (; <Article; title=\"AI QA Copilot\"; subtitle=\"Autogenerates tests from user flows and PR diffs\"; price=\"from $99/mo\"; bullets={[; \'Watches PRs and generates Playwright/Cypress tests automatically\',; \'Finds flaky tests; groups by root cause and suggests fixes\',; \'CI integrations for GitHub Actions,GitLab,CircleCI\',; \'Tracks coverage and critical-path user flows\'; ]} links={{ \"website\": \'https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
 export default function Aiqa() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -14,7 +11,6 @@ export default function Aiqa() {
         <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
         <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
       </Head>
-      
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
@@ -50,7 +46,6 @@ export default function Aiqa() {
           </motion.div>
         </div>
       </section>
-      
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div 
@@ -72,4 +67,3 @@ export default function Aiqa() {
     </div>
   );
 }
->>>>>>> main

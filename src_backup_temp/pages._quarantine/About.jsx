@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 ;
 export default function About("props": "any) {;
@@ -9,13 +8,7 @@ export default function About("props": "any) {;
 		</main>;
 	);
 }
-=======
-<<<<<<< HEAD
 import React from &apos;react&apos;; export default function About($1) { return ( <main style=&quot;{{{padding: 24}}&quot;}> <h1>About</h1> <p>Zion Tech Group delivers AI,cloud,and security solutions.</p> </main> )} ;&apos;;&apos;;
-=======
-<<<<<<< HEAD
-
-=======
 import React from 'react';
 export default function About($1) {
 	return (
@@ -27,6 +20,3 @@ export default function About($1) {
 }
 ;';';
 import React from 'react'; export default function About($1) { return ( <main style="{{{padding: 24}}"}> <h1>About</h1> <p>Zion Tech Group delivers AI,cloud,and security solutions.</p> </main> )} ;';';
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 export interface ServiceContact {
   phone: string;
   email: string;
   website: string;
   address: string;
 }
-
 export interface MicroSaasService {
   id: string;
   name: string;
@@ -32,7 +30,6 @@ export interface MicroSaasService {
   useCases: string[];
   technologies: string[];
 }
-
 // Zion Tech Group Contact Information
 export const zionContact: ServiceContact = {
   phone: "+1 302 464 0950",
@@ -40,7 +37,6 @@ export const zionContact: ServiceContact = {
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
 };
-
 // Revolutionary Micro SAAS Services 2025
 export const newMicroSaasServices2025: MicroSaasService[] = [
   {
@@ -594,7 +590,6 @@ export const newMicroSaasServices2025: MicroSaasService[] = [
     technologies: ["NLP", "Machine Learning", "Python", "React", "Elasticsearch"]
   }
 ];
-
 // Revolutionary IT Services 2025
 export interface ITService {
   id: string;
@@ -622,7 +617,6 @@ export interface ITService {
   useCases: string[];
   technologies: string[];
 }
-
 export const newITServices2025: ITService[] = [
   {
     id: "cloud-migration-expert",
@@ -900,7 +894,6 @@ export const newITServices2025: ITService[] = [
     technologies: ["SIEM", "Machine Learning", "Network Analysis", "Threat Intelligence", "Automation"]
   }
 ];
-
 // Revolutionary AI Services 2025
 export interface AIService {
   id: string;
@@ -928,7 +921,6 @@ export interface AIService {
   useCases: string[];
   technologies: string[];
 }
-
 export const newAIServices2025: AIService[] = [
   {
     id: "ai-predictive-maintenance",
@@ -1261,14 +1253,8 @@ export const newAIServices2025: AIService[] = [
     technologies: ["Machine Learning", "Deep Learning", "Python", "TensorFlow", "Apache Kafka"]
   }
 ];
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface ComprehensiveNewService { id: string; title: string; description: string; category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech'; pricing: { monthly: string; yearly: string; enterprise: string; setup: string; marketPrice: string}; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string; address: string}; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors?: string[]; marketSize?: string; implementationTime?: string; trainingRequired?: string; compliance?: string[]}; export const COMPREHENSIVE_NEW_SERVICES: ComprehensiveServic e[] = [;';
 ';';
-=======
-=======
->>>>>>> main
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, InnovativeMicroSaasService2025 } from './innovativeMicroSaasServices2025';
 import { INNOVATIVE_AI_SERVICES_2025, InnovativeAIService2025 } from './innovativeAIServices2025';
 import { INNOVATIVE_IT_SERVICES_2025, InnovativeITService2025 } from './innovativeITServices2025';
@@ -1463,16 +1449,6 @@ export const getNewServicesWithFreeTier = () => {;
 export const getNewBetaAccessServices = () => {;
   return COMPREHENSIVE_NEW_SERVICES_2025.filter(service => service.betaAccess);
 };
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-=======
-<<<<<<< HEAD
 export interface ComprehensiveNewService { id: string; title: string; description: string; category: &apos;micro-saas&apos; | &apos;it-services&apos; | &apos;ai-services&apos; | &apos;emerging-tech&apos; | &apos;quantum-computing&apos; | &apos;blockchain-web3&apos; | &apos;space-tech&apos; | &apos;biotech-ai&apos; | &apos;fintech&apos; | &apos;healthtech&apos; | &apos;edutech&apos; | &apos;martech&apos;; pricing: { monthly: string; yearly: string; enterprise: string; setup: string; marketPrice: string}; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string; address: string}; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors?: string[]; marketSize?: string; implementationTime?: string; trainingRequired?: string; compliance?: string[]}; export const COMPREHENSIVE_NEW_SERVICES: ComprehensiveServic e[] = [;
-=======
 export interface ComprehensiveNewService { "id": string; title: string; description: string; category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech'; pricing: { monthly: string; yearly: string; enterprise: string; setup: string; marketPrice: string}; "features": string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string; address: string}; technicalSpecs?: { "technology": string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors?: string[]; marketSize?: string; implementationTime?: string; trainingRequired?: string; compliance?: string[]}; export const "COMPREHENSIVE_NEW_SERVICES": ComprehensiveServic e[] = [;
 export interface ComprehensiveNewService { id: string; title: string; description: string; category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech'; pricing: { monthly: string; yearly: string; enterprise: string; setup: string; marketPrice: string}; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string; address: string}; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors?: string[]; marketSize?: string; implementationTime?: string; trainingRequired?: string; compliance?: string[]}; export const COMPREHENSIVE_NEW_SERVICES: ComprehensiveServic e[] = [;
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -11,16 +11,12 @@ export function TechSolutionsSection("props": any) {;
         <motion.div ";
           className="text-center mb-16";
           initial = {;
-
   { "opacity": 0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition={{ "duration": "0.6 "}}
@@ -39,52 +35,37 @@ export function TechSolutionsSection("props": any) {;
               key={solution.title}";
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 "hover": "borde r-blue-500/50 transition-all duration-300 "hover": shado w-lg "hover": shado w-blue-500/25 group";
               initial = {;
-
   { "opacity": 0",;
   "y": "3 0;
-
 "}}
               whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
               viewport={{ "once": "tru e "}}
               transition = {;
-
   { "duration": "0.6",;
   "delay": "inde x * 0.1;
-
 "}}
             >;
               <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-"hover": "scal e-110 transition-transform duration-300`"}>";
                 <span className="text-3xl">{solution.icon}</span>;
               </div>;
-
               <h3 className="text-xl font - bold text-white mb-3 group - "hover": "tex t-blue - 400 transition - colors duration -200">;
                 {solution.title"}
               </h3>;
-
-<<<<<<< HEAD
               <p className="text-gray - 400 text-sm mb-6 leading -relaxed">;
-=======
               <h3 className="text-xl font - bold text-white mb-3 group - hover: tex t-blue - 400 transition - colors duration -200">
                 {solution.title}
-              
-
               <p className="text-gray - 400 text-sm mb-6 leading -relaxed">
->>>>>>> main
                 {solution.description}
               </p>;
-
               <ul className="space - y-2">;
                 {solution.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="flex items - center gap-2 text-sm">;
                     <div className="w-2 h-2 bg-blue - 400 rounded-full"></div>;
                     <span className="text-gray -300">{benefit}</span>;
                   </li>) ) }
               </ul>;
-
               <div className="mt-6 pt - 4 border-t border-slate -700">;
                 <div className="text-blue - 400 text-sm font - semibold group - "hover": "tex t-blue - 300 transition - colors duration -200">                  Learn More →;
                 </div>;
@@ -100,36 +81,26 @@ export function TechSolutionsSection("props": any) {;
                       {feature}
                     </li>) ) }
                 </ul>;
-
                 <Link ";
                   to="/services";
                   className="inline-flex items-center text-blue-600 "hover": "tex t-blue-700 font-medium transition-colors duration-200 group-"hover": translat e-x-1";
-
                   Learn More";
                   <Rocket className="ml-2 h-4 w-4 transition-transform duration-200 group-"hover": translat e-x-1"    />                </Link>;
               </motion.div>) "}) }
         </div>;
-
         <motion.div;
           className="mt-16 text-center"          initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition = {;
-
   { "duration": "0.6",;
   "delay": "0.4;
-
-<<<<<<< HEAD
 "}}
         >";
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">";
@@ -143,7 +114,6 @@ export function TechSolutionsSection("props": any) {;
               <Link ";
                 to="/contact";
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 "hover": b g-blue-700 transition-colors duration-200";
-=======
 }}
         >"
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">"
@@ -157,15 +127,12 @@ export function TechSolutionsSection("props": any) {;
               <Link "
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover: b g-blue-700 transition-colors duration-200"
->>>>>>> main
-
                 Get Started";
                 <Rocket className="ml-2 h-5 w-5"    />;
               </Link>;
               <Link ";
                 to="/services";
                 className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white "hover": b g-gray-50 transition-colors duration-200";
-
                 View All Services";
                 <Code className="ml-2 h-5 w-5"    />              </Link>;
             </div>;
@@ -183,7 +150,6 @@ export default TechSolutionsSection;";
 export default TechSolutionsSection;
 export default TechSolutionsSection;
 '"`;
-
 </motion>;
 </motion>;
 </motion>

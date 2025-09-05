@@ -1,5 +1,24 @@
-<<<<<<< HEAD
-module.exports = function securityHeaders(req,res,next) { res.setHeader("X-Content-Type-Options","nosniff"); res.setHeader("X-Frame-Options","DENY"); res.setHeader("X-XSS-Protection","1; mode=block"); res.setHeader("Referrer-Policy","strict-origin-when-cross-origin"); res.setHeader("Permissions-Policy","camera=(),microphone=(),geolocation=()"); next()}''"
-=======
-export function securityHeaders(req,res,next) { res.setHeader('X-Content-Type-Options','nosniff'); res.setHeader('X-Frame-Options','DENY'); res.setHeader('X-XSS-Protection','1; mode=block'); res.setHeader('Referrer-Policy','strict-origin-when-cross-origin'); res.setHeader('Permissions-Policy','camera=(),microphone=(),geolocation=()'); next()}''
->>>>>>> main
+
+// Security middleware
+import { NextResponse } from 'next/server';
+import { getSecurityHeaders } from '../utils/security-headers';
+
+export function securityMiddleware(request) {
+  const response = NextResponse.next();
+  
+  // Add security headers
+  const headers = getSecurityHeaders();
+  headers.forEach(({ key, value }) => {
+    response.headers.set(key, value);
+  });
+  
+  // Add HSTS header for HTTPS
+  if (request.nextUrl.protocol === 'https:') {
+    response.headers.set(
+      'Strict-Transport-Security',
+      'max-age=31536000; includeSubDomains; preload'
+    );
+  }
+  
+  return response;
+}

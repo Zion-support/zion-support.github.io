@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const AIChatAssistant: React.FC = () => {
   return (
     <main role=\"main\">
@@ -8,10 +7,7 @@ const AIChatAssistant: React.FC = () => {
     </main>
   );
 };
-=======
-<<<<<<< HEAD
 const React from "react";const AIChatAssistant: React.FC = () => { return ( <main role="main">" {" "}" <h1>AI Chat Assistant</h1>{" "}"" <input placeholder="Type your message." />{" "} </main> );};module.exports = default AIChatAssistant;"""
-=======
 import _React from 'react';,
 const AIChatAssistant: _React.FC = () => {}
   return (;,
@@ -22,6 +18,4 @@ const AIChatAssistant: _React.FC = () => {}
     </main>;,
 ;  );
 };,
->>>>>>> main
 export default AIChatAssistant;
->>>>>>> main

@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';';
 export const TestimonialsSection: Reac t.FC = () => {';';
-=======
 import React, { useState } from 'react';
-<<<<<<< HEAD
 export const "TestimonialsSection": "React.FC = () => {;
 import { motion", AnimatePresence  } from 'framer-motion';
 ;
@@ -39,15 +35,11 @@ export default function Page("props": "any) {;
     "rating": "5",;";
     "industry": "Healthcare",;";
     "project": "Cloud Migration & Optimization"};
-=======
 export const TestimonialsSection: React.FC = () => {
->>>>>>> main
 import { motion, AnimatePresence  } from 'framer-motion';
-
 export default function Page(props: any) {
 ,
   {
-
     id: 4,"
     name: "James Thompson","
     position: "CEO","
@@ -60,7 +52,6 @@ export default function Page(props: any) {
     verified: tru e
   },
   {
-
     id: 5,"
     name: "Lisa Park","
     position: "Head of Marketing","
@@ -73,8 +64,6 @@ export default function Page(props: any) {
     verified: tru e
   }"
     company: "Healthcare Innovations",;"
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 export const TestimonialsSection: React.FC = () => {;
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -106,30 +95,20 @@ export default function Page(props: any) {;
     verified: tru e;
   }";
     company: "Healthcare Innovations",;";
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
     content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",;
     rating: 5,;"
     industry: "Healthcare",;"
     project: "Cloud Migration & Optimization"};
->>>>>>> main
 ];
-
 ;
-<<<<<<< HEAD
 ;
 export const "TestimonialsSection": "React.FC = props {;
   const [currentTestimonial", setCurrentTestimonial] = useState<typeof 0>(0);
-=======
 export const TestimonialsSection: React.FC = props {
   const [currentTestimonial, setCurrentTestimonial] = useState<typeof 0>(0);
->>>>>>> main
   const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true);
-
   const [currentTestimonial, setCurrentTestimonial] = useState<any>(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState<any>(true) }}};
-<<<<<<< HEAD
 ;
   // Auto - play functionality;
   React.useEffect(() => {;
@@ -137,21 +116,15 @@ export const TestimonialsSection: React.FC = props {
   return () => {;
     // Cleanup function;
   "};
-=======
-
   // Auto - play functionality
   React.useEffect(() => {
   // TODO: Add dependencies if needed
-
   return () => {
     // Cleanup function
   };
->>>>>>> main
 }, []);, []);
     if(!isAutoPlaying) return}, 5000) ;
-
     return () => clearInterval(interval) }, [isAutoPlaying, currentTestimonial]) ;
-<<<<<<< HEAD
 ;
   return (";
     <section className="py-20 bg-zion-blue-dark">";
@@ -173,8 +146,6 @@ export const TestimonialsSection: React.FC = props {
                 <Quote className="w-8 h-8 text-zion-cyan opacity-60"   />              </div>;
               {/* Rating */}";
               <div className="flex items-center mb-4"> {[...Array(testimonial.rating)].map((_, i) => (;";
-=======
-
   return ("
     <section className="py-20 bg-zion-blue-dark">"
       <div className="container mx-auto px-4">"
@@ -190,13 +161,11 @@ export const TestimonialsSection: React.FC = props {
             <div
               key={index}"
               className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 hover: borde r-zion-purple/50 transition-all duration-300 hover: transform hover:scale-105 group"
-
               {/* Quote icon */}"
               <div className="mb-4">"
                 <Quote className="w-8 h-8 text-zion-cyan opacity-60"   />              </div>
               {/* Rating */}"
               <div className="flex items-center mb-4"> {[...Array(testimonial.rating)].map((_, i) => (;"
->>>>>>> main
                   <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"   />                ))}
               </div>
               {/* Content */}"
@@ -236,7 +205,6 @@ export const TestimonialsSection: React.FC = props {
           </div>
         </div>
         {/* Stats Section */}
-<<<<<<< HEAD
         <motion.div";
           className="text-center mb-16";
           initial={{ "opacity": "0", "y": "3 0 "}}
@@ -268,7 +236,6 @@ export const TestimonialsSection: React.FC = props {
               <div className="text-lg font-semibold text-cyan-400 mb-1">{stat.label}</div>";
               <div className="text-sm text-gray-400">{stat.description}</div>;
             </div>;
-=======
         <motion.div"
           className="text-center mb-16"
           initial={{ opacity: 0, y: 3 0 }}
@@ -283,7 +250,6 @@ export const TestimonialsSection: React.FC = props {
             See how Zion Tech Group is transforming businesses across industries with our cutting-edge AI solutions
           </p>
         </motion.div>
-
         {/* Stats Section */}
         <motion.div"
           className="grid grid-cols-2 md: gri d-cols-4 gap-8 mb-20"
@@ -301,16 +267,13 @@ export const TestimonialsSection: React.FC = props {
               <div className="text-lg font-semibold text-cyan-400 mb-1">{stat.label}</div>"
               <div className="text-sm text-gray-400">{stat.description}</div>
             </div>
->>>>>>> main
           ))}
         </motion.div>
-
         {/* Testimonials Carousel */}"
         <div className="relative">"
           <AnimatePresence mode="wait">
             <motion.div
               key={currentTestimonial}
-<<<<<<< HEAD
               initial={{ "opacity": "0", "x": "5 0 "}}
               animate={{ "opacity": "1", "x": "0 "}}
               exit={{ "opacity": "0", "x": "-50 "}}
@@ -342,7 +305,6 @@ export const TestimonialsSection: React.FC = props {
                     <div className="flex items-center gap-2 bg-green-500/20 border border-green-500/30 rounded-lg p-3">";
                       <CheckCircle className="w-5 h-5 text-green-400"   />"                      <span className="text-green-400 text-sm font-medium">Verified Customer</span>;
                     </div>;
-=======
               initial={{ opacity: 0, x: 5 0 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
@@ -357,34 +319,24 @@ export const TestimonialsSection: React.FC = props {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"   />
                     ))}
                   </div>
-
                   <Quote className="w-8 h-8 text-cyan - 400 mb-4"  />
-
                   <blockquote className="text-lg md: tex t-xl text-white mb-6 leading -relaxed">
                     "{current.content}"
                   </blockquote>
-
                   <div  className="space - y-3">
                     <h4 className="text-xl font - semibold text-white">{current.name}</h4>
                     <p className="text-cyan -400">{current.position}</p>
                     <p className="text-gray -300">{current.company}</p>
                     <p className="text-sm text-gray -400">{current.industry} Industry</p>                  </div>
                 </div>
-
                 {/* Results and Verification */}"
                 <div className="lg:w-80 space-y-6">
                   {/* Verification Badge */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
                   {current.verified && ("
                     <div className="flex items-center gap-2 bg-green-500/20 border border-green-500/30 rounded-lg p-3">"
                       <CheckCircle className="w-5 h-5 text-green-400"   />"                      <span className="text-green-400 text-sm font-medium">Verified Customer</span>
                     </div>
->>>>>>> main
                   )}
-
                   {/* Results */}"
                   <div className="bg-white/5 border border-white/10 rounded-lg p-4">"
                     <h5 className="text-white font-semibold mb-3">Key Results</h5>"
@@ -393,7 +345,6 @@ export const TestimonialsSection: React.FC = props {
                         <li key={index} className="flex items-center gap-2 text-sm text-gray-300">"
                           <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0"   />                          {result}
                         </li>) ) }
-<<<<<<< HEAD
                     </ul>;
                   </div>;
                   {/* Industry Badge */}";
@@ -421,10 +372,8 @@ export const TestimonialsSection: React.FC = props {
                       ? 'bg-cyan-400 scale-125'';
                       : 'bg-white/30 "hover": "b g-white/50'`;
                   "}`}`;
-=======
                     </ul>
                   </div>
-
                   {/* Industry Badge */}"
                   <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-lg p-3 text-center">"
                     <span className="text-cyan-400 text-sm font-medium">{current.industry}</span>
@@ -433,28 +382,23 @@ export const TestimonialsSection: React.FC = props {
               </div>
             </motion.div>
           </AnimatePresence>
-
           {/* Navigation Controls */}"
           <div className="flex items-center justify-center mt-8 gap-4">
             <button
               onClick={prevTestimonial}"
               className="p-3 bg-white/10 hover: b g-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover: scal e-110"
-              
             >"
               <ChevronLeft className="w-5 h-5"   />            </button>
-
             {/* Dots */}"
             <div className="flex gap-2">
               {testimonials.map((_, index) => (
                 <button
-<<<<<<< HEAD
                   key={index}';
                   onClick={() => goToTestimonial(index)}';';
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial'';';
                       ? 'bg-cyan-400 scale-125''';';
                       : 'bg-white/30 hover: b g-white/50'`
                   }`}`
-=======
                   {current.verified && (";
                     <div className="flex items-center gap-2 bg-green-500/20 border border-green-500/30 rounded-lg p-3">";
                       <CheckCircle className="w-5 h-5 text-green-400"   />"                      <span className="text-green-400 text-sm font-medium">Verified Customer</span>;
@@ -496,22 +440,15 @@ export const TestimonialsSection: React.FC = props {
                       ? 'bg-cyan-400 scale-125'';
                       : 'bg-white/30 hover: b g-white/50'`;
                   }`}`;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
                   key={index}
                   onClick={() => goToTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial'
                       ? 'bg-cyan-400 scale-125''
                       : 'bg-white/30 hover: b g-white/50'`
                   }`}`
->>>>>>> main
->>>>>>> main
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             </div>;
             <button;
               onClick={nextTestimonial}";
@@ -552,18 +489,13 @@ export const TestimonialsSection: React.FC = props {
       </div>;
     </section>;
   )};";
-=======
->>>>>>> main
             </div>
-
             <button
               onClick={nextTestimonial}"
               className="p-3 bg-white/10 hover: b g-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover: scal e-110"
-              
             >"
               <ChevronRight className="w-5 h-5"   />            </button>
           </div>
-
           {/* Auto-play Toggle */}"
           <div className="flex justify-center mt-4">
             <button
@@ -577,9 +509,6 @@ export const TestimonialsSection: React.FC = props {
             </button>
           </div>
         </div>
-
-<<<<<<< HEAD
-=======
             </div>;
             <button;
               onClick={nextTestimonial}";
@@ -600,9 +529,6 @@ export const TestimonialsSection: React.FC = props {
             </button>;
           </div>;
         </div>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
         {/* Trust Indicators */}
         <motion.div"
           className="mt-20 text-center"
@@ -623,30 +549,22 @@ export const TestimonialsSection: React.FC = props {
       </div>
     </section>
   )};"
->>>>>>> main
             <div className="text-zion-slate-light">Support Available</div>;
           </div>;
         </motion.div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
       </div>;';
     </section>;) };';';
-=======
       </div>;
     </section>;) };
->>>>>>> main
 '"`
-
 </motion>
 </button>
 </motion>
 </motion>
 </motion>
 </any>
-<<<<<<< HEAD
 </typeof>';
 </typeof>;';;';
-=======
       </div>;
     </section>;) };
 '"`;
@@ -659,9 +577,6 @@ export const TestimonialsSection: React.FC = props {
 </any>;
 </typeof>;
 </typeof>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 </any>
 </typeof>
 </typeof>
->>>>>>> main

@@ -23,7 +23,6 @@ export default function Page("props": "any) {;
     const [isLoading, setIsLoading] = useState(false);
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -32,7 +31,6 @@ export default function Page("props": "any) {;
         localStorage.setItem('category_selected_sort', selectedSort)}, [selectedSort]);
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -41,7 +39,6 @@ export default function Page("props": "any) {;
         localStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter]);
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -64,10 +61,8 @@ export default function Page("props": "any) {;
             return matchesSearch && (listing.aiScore || 0) >= 85;
         return matchesSearch});
         .sort((a, b) => {;
-
         // Apply sorting;
         switch(selectedSort) {;
-
             case 'newest': ";
                 return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
             case 'oldest':;
@@ -80,7 +75,6 @@ export default function Page("props": "any) {;
                 return a.title.localeCompare(b.title);
             case 'z-a':;
                 return b.title.localeCompare(a.title);
-<<<<<<< HEAD
             "default":;
                 return 0"}
     });
@@ -90,7 +84,6 @@ export default function Page("props": "any) {;
           <div className="text-center mb-12">;
             <GradientHeading>{title}</GradientHeading>";
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
-=======
             default:
                 return 0}
     }
@@ -101,11 +94,9 @@ export default function Page("props": "any) {;
           <div className="text-center mb-12">
             <GradientHeading>{title}</GradientHeading>"
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
->>>>>>> main
               {description}
             </p>;
           </div>;
-
           {/* Filters and Search */}";
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">";
             <div className="grid grid-cols-1 "md": "grid-cols-3 gap-4">";
@@ -129,7 +120,6 @@ export default function Page("props": "any) {;
                     </SelectItem>) ) }
                 </SelectContent>;
               </Select>;
-
               <Select value={selectedFilter} onValueChange={setSelectedFilter}>";
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">";
                   <div className="flex items-center">";
@@ -147,7 +137,6 @@ export default function Page("props": "any) {;
               </Select>;
             </div>;
           </div>;
-
           {/* Results Count */}";
           <div className="mb-6">";
             <p className="text-zion-slate-light">;
@@ -155,8 +144,6 @@ export default function Page("props": "any) {;
               {searchQuery && ` for "${searchQuery}"`}
             </p>;
           </div>;
-
-<<<<<<< HEAD
           {/* Listings Grid */}";
           {isLoading ? (<div className="flex justify-center py-20">";
               <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />";
@@ -175,7 +162,6 @@ export default function Page("props": "any) {;
         </div>;
       </div>;
       <Footer  />;
-=======
           {/* Listings Grid */}"
           {isLoading ? (<div className="flex justify-center py-20">"
               <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />"
@@ -194,6 +180,5 @@ export default function Page("props": "any) {;
         </div>
       </div>
       <Footer  />
->>>>>>> main
     </>)}
 '"`;

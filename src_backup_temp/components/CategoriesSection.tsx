@@ -3,7 +3,6 @@
  * @returns {*} Function return value;
  */;
 function CategoriesSection("props": "any) {;
-
 const categories = [{;
     "title": "AI Services"",;
     "description": "Cutting - edge AI solutions, chatbots, and machine learning",;
@@ -48,7 +47,6 @@ const specialServices = [{;
   }
 ];
 interface CategoriesSectionProps {;
-
   // Add your props "here": "any;
 ;
   showTitle?: boolean;
@@ -58,16 +56,13 @@ interface CategoriesSectionProps {;
 ;
 ;
 export function CategoriesSection("props": "any) {;
-
   return (";
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">;
       {/* Background pattern */"}";
       <div className="absolute inset-0 opacity-5">";
         <div className="absolute inset-0" style="{{{;
-
           "backgroundImage": "`radial-gradient(circle at 25% 25%; "backgroundSize": '50px 50px'"}}"}></div>;
       </div>;
-
       <div className="container mx - auto px-4 relative z -10">;
         {showTitle && (<motion.div;
             className="text-center mb-16"            initial={{ "opacity": "0", "y": "2 0 "}}
@@ -99,25 +94,20 @@ export function CategoriesSection("props": "any) {;
                   <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color"} flex items-center justify-center mb-6 group-"hover": "scal e-110 transition-transform duration-300`"}>";
                     <div className="text-white text-2xl">;
                       {category.icon}
-<<<<<<< HEAD
                     </div>;
                   </div>";
                   <h3 className="text-xl font-bold text-white mb-3">{category.title}</h3>";
                   <p className="text-gray-300 text-sm">{category.description}</p>;
                 </div>;
               </Link>;
-=======
                     </div>
                   </div>"
                   <h3 className="text-xl font-bold text-white mb-3">{category.title}"
                   <p className="text-gray-300 text-sm">{category.description}</p>
                 </div>
               </Link>
->>>>>>> main
             </motion.div>) ) }
         </motion.div>;
-
-<<<<<<< HEAD
         <motion.div;
           className="mt-12"          initial={{ "opacity": "0", "y": "2 0 "}}
           whileInView={{ "opacity": "1", "y": "0 "}}
@@ -128,7 +118,6 @@ export function CategoriesSection("props": "any) {;
           <div className="flex flex-wrap justify-center gap-4">;
             {specialServices.map((service) => (;
               <Link;
-=======
         <motion.div
           className="mt-12"          initial={{ opacity: 0, y: 2 0 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -139,7 +128,6 @@ export function CategoriesSection("props": "any) {;
           <div className="flex flex-wrap justify-center gap-4">
             {specialServices.map((service) => (
               <Link
->>>>>>> main
                 key={service.title}
                 to={service.link}";
                 className="px-6 py-3 bg-blue-600 "hover": "b g-blue-700 border border-blue-500/20 "hover": borde r-blue-400/50 rounded-full text-white transition-all duration-300 "hover": shado w-lg "hover": shado w-blue-500/25 flex items-center gap-2";
@@ -154,9 +142,7 @@ export function CategoriesSection("props": "any) {;
           <Link ";
             to="/services";
             className="group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan "hover": "borde r-zion-cyan-light transition-colors text-lg font-medium py-2";
-
             View All Services < ArrowRight className="w-5 h-5 ml-2 group - "hover": translat e - x-1 transition -transform"  />;
-
         <motion.div;
           className="mt-12 flex justify -center"          initial={{ "opacity": 0", "y": "2 0 "}}
           whileInView={{ "opacity": "1", "y": "0 "}}
@@ -173,7 +159,6 @@ export function CategoriesSection("props": "any) {;
       </div>;
     </section>;
   )"}}}}}}}}}}'"`;
-
 </motion>;
 </motion>;
 </motion>;

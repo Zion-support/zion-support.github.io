@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 export default function PlatformEngineering() {; return (; <Article; title=\"Platform Engineering\"; subtitle=\"Golden paths,IDPs,and paved roads to accelerate delivery\"; price=\"from $18k/project\"; bullets={[; \'Backstage or Internal Developer Portal setup with scorecards\',; \'Paved road templates for services,infra,and CI/CD\',; \'Secure supply \"chain\": \'SBOM\',SLSA,provenance,signing\',; \'Developer experience \"metrics\": \'DORA\',lead time,MTTR\'; ]} /> );} ; function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) {; return (; <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <ContactFooter /> ></div> );} ; function ContactFooter() {; return (; <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: ></div> );} ;
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
 export default function Platformengineering() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -14,7 +11,6 @@ export default function Platformengineering() {
         <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
         <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
       </Head>
-      
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
@@ -50,7 +46,6 @@ export default function Platformengineering() {
           </motion.div>
         </div>
       </section>
-      
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div 
@@ -72,4 +67,3 @@ export default function Platformengineering() {
     </div>
   );
 }
->>>>>>> main

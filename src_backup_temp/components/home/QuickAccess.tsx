@@ -13,7 +13,6 @@ export default function Page("props": "any) {;
   "hover": "{;
       "y": -8",      "scale": "1.02",;
       "transition": "{;
-
         "duration": 0.3",;"  "ease": "easeOut";
       ;
 }}};
@@ -34,16 +33,12 @@ export default function Page("props": "any) {;
         {/* Header */}
         <motion.div;
           initial = {;
-
   { "opacity": "0",;
   "y": "3 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           transition={{ "duration": "0.8 "}}
           viewport={{ "once": "tru e "}}";
@@ -53,10 +48,8 @@ export default function Page("props": "any) {;
             initial={{ "scale": "0 "}}
             whileInView={{ "scale": "1 "}}
             transition = {;
-
   { "duration": "0.6",;
   "delay": "0.2;
-
 "}}
             viewport={{ "once": "tru e "}}";
             className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan mb-6";
@@ -65,29 +58,22 @@ export default function Page("props": "any) {;
           </motion.h2>;
           <motion.p;
             initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
             whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
             transition = {;
-
   { "duration": "0.6",;
   "delay": "0.2;
-
 "}}";
             className="text-lg text-gray-300 max-w-2xl mx-auto";
           >;
             Find the perfect solution for your business needs with our organized service categories;
           </motion.p>;
         </div>;
-
         {/* Quick Links Grid */}";
         <div className="grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-3 gap-6 mb-12">;
           {quickLinks.map((link", index <motion.div;
@@ -108,33 +94,27 @@ export default function Page("props": "any) {;
                 >";
                   <link .icon className="w-6 h-6 text-white"  />;
                 </motion.div>;
-
                 <motion.div;
                   animate={{ "rotate": "hoveredCategor y === link.title ? 90 : 0 "}}
                   transition={{ "duration": "0.3 "}}
                 >";
                   <ChevronRight className="w-5 h-5 text-gray-400 group-"hover": "tex t-zion-cyan transition-colors"   />                </motion.div>;
               </div>;
-
-<<<<<<< HEAD
               {/* Content */"}";
               <div className="mb-4">";
                 <h3 className="text-xl font-bold text-white mb-2 group-"hover": "tex t-zion-cyan transition-colors">;
                   {link.title"}
                 </h3>";
                 <p className="text-gray-300 text-sm leading-relaxed">;
-=======
               {/* Content */}"
               <div className="mb-4">"
                 <h3 className="text-xl font-bold text-white mb-2 group-hover: tex t-zion-cyan transition-colors">
                   {link.title}
                 "
                 <p className="text-gray-300 text-sm leading-relaxed">
->>>>>>> main
                   {link.description}
                 </p>;
               </div>;
-
               {/* Features Preview */}";
               <div className="mb-4">";
                 <div className="grid grid-cols-2 gap-2">;
@@ -142,22 +122,16 @@ export default function Page("props": "any) {;
                     <motion.div;
                       key={feature"}
                       initial = {;
-
   { "opacity": "0",;
   "x": "-10;
-
 "}}
                       whileInView = {;
-
   { "opacity": "1",;
   "x": "0;
-
 "}}
                       transition = {;
-
   { "duration": "0.4",;
   "delay": "0.1 + idx * 0.1;
-
 "}}
                       viewport={{ "once": "tru e "}}";
                       className="flex items-center gap-2 text-xs text-gray-400";
@@ -168,7 +142,6 @@ export default function Page("props": "any) {;
                   ))}
                 </div>;
               </div>;
-
               {/* Stats */}";
               <div className="mb-4">";
                 <div className="flex items-center justify-between text-sm">;
@@ -176,22 +149,16 @@ export default function Page("props": "any) {;
                     <motion.div;
                       key={key"}
                       initial = {;
-
   { "opacity": "0",;
   "scale": "0.8;
-
 "}}
                       whileInView = {;
-
   { "opacity": "1",;
   "scale": "1;
-
 "}}
                       transition = {;
-
   { "duration": "0.4",;
   "delay": "0.2 + idx * 0.1;
-
 "}}
                       viewport={{ "once": "tru e "}}";
                       className="text-center";
@@ -202,7 +169,6 @@ export default function Page("props": "any) {;
                   ))}
                 </div>;
               </div>;
-
               {/* CTA */}
               <motion.div;
                 whileHover={{ "scale": "1.05 "}}
@@ -219,9 +185,7 @@ export default function Page("props": "any) {;
             </motion.div>;
           ))"}
         </div>;
-
         {/* Service Categories Overview */}
-<<<<<<< HEAD
         <motion.div;
           initial={{ "opacity": "0", "y": "2 0 "}}
           whileInView={{ "opacity": "1", "y": "0 "}}
@@ -248,7 +212,6 @@ export default function Page("props": "any) {;
                 <div className="text-sm font-medium text-white group-"hover": "tex t-cyan-400 transition-colors duration-300">;
                   {category.name"}
                 </div>;
-=======
         <motion.div
           initial={{ opacity: 0, y: 2 0 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -275,12 +238,10 @@ export default function Page("props": "any) {;
                 <div className="text-sm font-medium text-white group-hover: tex t-cyan-400 transition-colors duration-300">
                   {category.name}
                 </div>
->>>>>>> main
               </motion.div>;
             ))}
           </div>;
         </motion.div> {/* CTA Section */}
-<<<<<<< HEAD
         <motion.div;
           initial={{ "opacity": "0", "y": "2 0 "}}
           whileInView={{ "opacity": "1", "y": "0 "}}
@@ -308,7 +269,6 @@ export default function Page("props": "any) {;
             </div>;
           </div>;
         </motion.div>;
-=======
         <motion.div
           initial={{ opacity: 0, y: 2 0 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -336,22 +296,17 @@ export default function Page("props": "any) {;
             </div>
           </div>
         </motion.div>
->>>>>>> main
-
         {/* Enhanced CTA Section */"}
         <motion.div;
           initial = {;
-
   { "opacity": "0",;
   "y": "3 0 ;
 ;
 "}}          whileInView = {;
-
   { "opacity": "1",;
   "y": "0 ;
 ;
 "}}          transition = {;
-
   { "duration": "0.8",;
   "delay": "0.4 ;
 ;
@@ -366,20 +321,15 @@ export default function Page("props": "any) {;
             <div className="flex flex-col "sm": "fle x-row gap-4 justify-center">;
               <Link                to="/contact";
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full "hover": fro m-cyan-600 "hover": t o-blue-700 transition-all duration-300 transform "hover": scal e-105 "hover": shado w-lg "hover": shado w-cyan-500/25";
-
                 Contact Our Team;
               </Link>;
               <Link";
                 to="/services";
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full "hover": b g-cyan-500 "hover": tex t-white transition-all duration-300";
-
-<<<<<<< HEAD
                 Browse All Services;
               </Link>;
-=======
   { duration: 0.8,
   delay: 0.4 ;
-
 }}
           viewport={{ once: tru e }}
           className="text-center"
@@ -391,16 +341,13 @@ export default function Page("props": "any) {;
             <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <Link                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover: fro m-cyan-600 hover: t o-blue-700 transition-all duration-300 transform hover: scal e-105 hover: shado w-lg hover: shado w-cyan-500/25"
-
                 Contact Our Team
               </Link>
               <Link"
                 to="/services"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover: b g-cyan-500 hover: tex t-white transition-all duration-300"
-
                 Browse All Services
               </Link>
->>>>>>> main
             </div>;
           </div>;
         </motion.div>;
@@ -409,7 +356,6 @@ export default function Page("props": "any) {;
   )"};
 ;export { QuickAccess };
 '"`;
-
 </motion>;
 </motion>;
 </motion>;

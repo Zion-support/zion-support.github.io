@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { Suspense, lazy, useEffect, memo, useCallback } from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';';';
 import { Routes, Route } from 'react-router-dom';';';
 import { Header } from './src/components/Header.tsx';';';
@@ -16,28 +12,18 @@ import PerformanceOptimizer from './src/components/PerformanceOptimizer.tsx';';'
 import EnhancedAccessibilityEnhancer from './src/components/EnhancedAccessibilityEnhancer.tsx';';';
 import { MobileExperienceEnhancer } from './src/components/MobileExperienceEnhancer.tsx';';';
 import { ChatAssistant } from './components/ChatAssistant';
-=======
 import React, { Suspense, lazy, useState } from 'react';
-=======
 import React, { Suspense, lazy, useState, useEffect, memo, useCallback } from 'react';
-=======
 import React, { Suspense, lazy } from 'react';
->>>>>>> main
->>>>>>> main
->>>>>>> main
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import Footer from './components/Footer';
 import { Sidebar } from './components/Sidebar';
 import { ErrorBoundary } from 'react-error-boundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
-<<<<<<< HEAD
 import { AccessibilityControls } from './components/AccessibilityEnhancer';
-<<<<<<< HEAD
 // import { preloadCriticalResources, enableLazyLoading } from './utils/performance';
-=======
 import { preloadCriticalResources, enableLazyLoading } from './utils/performance.ts';
->>>>>>> main
 import './styles/accessibility.css';
 ;
 // Enhanced Components - temporarily disabled due to build issues;
@@ -45,16 +31,11 @@ import './styles/accessibility.css';
 // import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
 // import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 // import { ChatAssistant } from './components/ChatAssistant';
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
-=======
 ;
 // Enhanced lazy loading with preloading hints;
 const createLazyComponent = ("importFn": "() => Promise<any>", fallback?: "React.ReactNode) => {;
->>>>>>> main
   const LazyComponent = lazy(importFn);
   return ("props": any) => (;
     <Suspense fallback={fallback || <LoadingSpinner />"}>;
@@ -62,8 +43,6 @@ const createLazyComponent = ("importFn": "() => Promise<any>", fallback?: "React
     </Suspense>;
   );
 };
-<<<<<<< HEAD
-
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
 const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));
@@ -81,22 +60,12 @@ const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServic
 const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025').then(module => ({ default: module.NewServicesShowcase2025 })));
 const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025').then(module => ({ default: module.EnhancedNewServices2025 })));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
-<<<<<<< HEAD
 const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveServicesShowcase').then(module => ({ default: module.default })));
-<<<<<<< HEAD
 const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServicesShowcase2025').then(module => ({ default: module.default })));
-=======
 const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025').then(module => ({ default: module.EnhancedServicesShowcase2025 })));
-=======
 const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.default })));
 const ComprehensiveNewServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveNewServicesShowcase2025').then(module => ({ default: module.default })));
 const EnhancedServicesShowcase2025 = lazy(() => import('./components/EnhancedServicesShowcase2025').then(module => ({ default: module.EnhancedServicesShowcase2025 })));
->>>>>>> main
->>>>>>> main
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 ';
 // Lazy load pages for better performance';';
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));';';
@@ -121,7 +90,6 @@ const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveSe
 // Service Pages';';
 const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ default: module.AISolutions })));';';
 const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ default: module.QuantumComputing })));';';
-=======
 ;
 // Lazy load pages for better performance;
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ "default": "module.HomePage "})));
@@ -161,7 +129,6 @@ const PageLoader = () => (;
 );
 ;
 // Lazy load pages - only import existing ones;
-=======
 // Enhanced Components
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
@@ -169,14 +136,10 @@ import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer'
 import { ChatAssistant } from './components/ChatAssistant';
 // Lazy load pages for better performance - only import existing pages
 const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ default: module.default })));
->>>>>>> main
 // Service Pages
-<<<<<<< HEAD
 const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ default: module.AISolutions })));
 const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ default: module.QuantumComputing })));
->>>>>>> main
 const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity').then(module => ({ default: module.Cybersecurity })));
-
 // Loading component
 const PageLoader = () => (
   <div className="flex items-center justify-center min-h-screen bg-gray-900">
@@ -186,9 +149,7 @@ const PageLoader = () => (
     </div>
   </div>
     );
-
 // Lazy load pages - only import existing ones
->>>>>>> main
 const Home = createLazyComponent(() => import('./pages/Home'));
 const About = createLazyComponent(() => import('./pages/About'));
 const Contact = createLazyComponent(() => import('./pages/Contact'));
@@ -208,20 +169,16 @@ const Careers = createLazyComponent(() => import('./pages/Careers'));
 const Support = createLazyComponent(() => import('./pages/Support'));
 const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
 const ComprehensivePricing = createLazyComponent(() => import('./pages/ComprehensivePricing'));
-<<<<<<< HEAD
-
 // Additional service components
 const AIServices = createLazyComponent(() => import('./pages/AIServices'));
 const ITServices = createLazyComponent(() => import('./pages/ITServices'));
 const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
-
 const App: React.FC = memo(() => {
   // Initialize performance optimizations
   useEffect(() => {
     // preloadCriticalResources();
     // enableLazyLoading();
   }, []);
-
   // Memoize error boundary fallback
   const errorFallback = useCallback(({ error, resetErrorBoundary }: any) => (
     <div className="error-boundary">
@@ -234,13 +191,8 @@ const App: React.FC = memo(() => {
       </div>
     </div>
   ), []);
-=======
-<<<<<<< HEAD
->>>>>>> main
-
 export default function App(props: any) {
   return (
-<<<<<<< HEAD
     <EnhancedErrorBoundary 
       fallback={errorFallback}
       showDetails={process.env.NODE_ENV === 'development'}
@@ -250,7 +202,6 @@ export default function App(props: any) {
         <div className="min-h-screen bg-gray-50 flex">
           <Header />
           <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-          
           <main className="flex-1 lg:ml-80 min-h-screen">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
@@ -284,20 +235,16 @@ export default function App(props: any) {
                 <Route path="/team" element={<About />} />
                 <Route path="/news" element={<News />} />
                 <Route path="/help" element={<Help />} />
-                
                 {/* New pricing guide route */}
                 <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricing />} />
-                
                 {/* Service Routes */}
                 <Route path="/ai-services" element={<AIServices />} />
                 <Route path="/it-services" element={<ITServices />} />
                 <Route path="/micro-saas" element={<MicroSaaS />} />
-                
                 {/* New sitemap routes */}
                 <Route path="/ai-solutions" element={<AISolutions />} />
                 <Route path="/solutions/enterprise" element={<Solutions />} />
                 <Route path="/solutions/healthcare" element={<Solutions />} />
-                
                 {/* Service routes */}
                 <Route path="/services/cloud-devops" element={<Services />} />
                 <Route path="/services/digital-twin" element={<Services />} />
@@ -320,62 +267,49 @@ export default function App(props: any) {
                 <Route path="/services/it-helpdesk" element={<Services />} />
                 <Route path="/services/affiliate-tracking" element={<Services />} />
                 <Route path="/services/mobile-survey" element={<Services />} />
-                
                 {/* New AI Content Creation Service */}
                 <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
-                
                 {/* Additional new service routes */}
                 <Route path="/services/ai-seo" element={<Services />} />
                 <Route path="/services/interview-assessment" element={<Services />} />
                 <Route path="/services/helpdesk" element={<Helpdesk />} />
                 <Route path="/services/dsr-portal" element={<Services />} />
                 <Route path="/services/security-headers-csp" element={<Services />} />
-                
                 {/* New AI-powered micro SAAS service routes */}
                 <Route path="/services/ai-project-management" element={<Services />} />
                 <Route path="/services/ai-customer-support-automation" element={<Services />} />
                 <Route path="/services/ai-financial-analytics" element={<Services />} />
                 <Route path="/services/ai-marketing-automation" element={<Services />} />
-                
                 {/* Additional innovative AI services */}
                 <Route path="/services/ai-quantum-financial-trading" element={<Services />} />
                 <Route path="/services/ai-predictive-maintenance" element={<Services />} />
-                
                 {/* Additional innovative AI services */}
                 <Route path="/services/ai-autonomous-supply-chain" element={<Services />} />
                 <Route path="/services/ai-cybersecurity-threat-intelligence" element={<Services />} />
-                
                 {/* Additional innovative AI service routes */}
                 <Route path="/services/ai-workflow-orchestrator" element={<Services />} />
                 <Route path="/services/ai-data-governance-platform" element={<Services />} />
                 <Route path="/services/ai-customer-experience-analytics" element={<Services />} />
-                
                 {/* Quantum and advanced services */}
                 <Route path="/services/quantum-computing" element={<QuantumComputing />} />
                 <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-                
                 {/* Revolutionary services */}
                 <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
                 <Route path="/new-services-2025" element={<NewServicesShowcase2025 />} />
                 <Route path="/enhanced-services-2025" element={<EnhancedNewServices2025 />} />
-                
                 {/* Sitemap routes */}
                 <Route path="/sitemap" element={<Sitemap />} />
                 <Route path="/comprehensive-sitemap" element={<ComprehensiveSitemap />} />
-                
                 {/* Support routes */}
                 <Route path="/support" element={<Support />} />
                 <Route path="/training" element={<Training />} />
                 <Route path="/helpdesk" element={<Helpdesk />} />
-                
                 {/* Catch-all route */}
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </Suspense>
           </main>
-          
           <Footer />
-          
           {/* Enhanced Components - temporarily disabled due to build issues */}
           {/* <PerformanceOptimizer />
           <EnhancedAccessibilityEnhancer />
@@ -384,13 +318,10 @@ export default function App(props: any) {
         </div>
       </Router>
     </EnhancedErrorBoundary>
-=======
     <ErrorBoundary>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gray-50">
         <Header />
         <Sidebar />
-        
         <main className="flex-1 lg:ml-80">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
@@ -407,11 +338,8 @@ export default function App(props: any) {
               <Route path="/search" element={<Services />} />
               <Route path="/services" element={<Services />} />
               <Route path="/comprehensive-services" element={<ComprehensiveServicesShowcase />} />
-<<<<<<< HEAD
               <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
-=======
               <Route path="/enhanced-services-2025" element={<EnhancedServicesShowcase2025 />} />
->>>>>>> main
               <Route path="/solutions" element={<Solutions />} />
               <Route path="/resources" element={<Services />} />
               <Route path="/case-studies" element={<Services />} />
@@ -426,20 +354,16 @@ export default function App(props: any) {
               <Route path="/team" element={<About />} />
               <Route path="/news" element={<News />} />
               <Route path="/help" element={<Help />} />
-              
               {/* New pricing guide route */}
               <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricing />} />
-              
               {/* Service Routes */}
               <Route path="/ai-services" element={<AISolutions />} />
               <Route path="/it-services" element={<Services />} />
               <Route path="/micro-saas" element={<Services />} />
-              
               {/* New sitemap routes */}
               <Route path="/ai-solutions" element={<AISolutions />} />
               <Route path="/solutions/enterprise" element={<Solutions />} />
               <Route path="/solutions/healthcare" element={<Solutions />} />
-              
               {/* Service routes */}
               <Route path="/services/cloud-devops" element={<Services />} />
               <Route path="/services/digital-twin" element={<Services />} />
@@ -462,68 +386,53 @@ export default function App(props: any) {
               <Route path="/services/it-helpdesk" element={<Services />} />
               <Route path="/services/affiliate-tracking" element={<Services />} />
               <Route path="/services/mobile-survey" element={<Services />} />
-              
               {/* Additional new service routes */}
               <Route path="/services/ai-seo" element={<Services />} />
               <Route path="/services/interview-assessment" element={<Services />} />
               <Route path="/services/helpdesk" element={<Helpdesk />} />
               <Route path="/services/dsr-portal" element={<Services />} />
               <Route path="/services/security-headers-csp" element={<Services />} />
-              
               {/* New AI-powered micro SAAS service routes */}
               <Route path="/services/ai-project-management" element={<Services />} />
               <Route path="/services/ai-customer-support-automation" element={<Services />} />
               <Route path="/services/ai-financial-analytics" element={<Services />} />
               <Route path="/services/ai-marketing-automation" element={<Services />} />
-              
               {/* Additional innovative AI services */}
               <Route path="/services/ai-quantum-financial-trading" element={<Services />} />
               <Route path="/services/ai-predictive-maintenance" element={<Services />} />
-              
               {/* Additional innovative AI services */}
               <Route path="/services/ai-autonomous-supply-chain" element={<Services />} />
               <Route path="/services/ai-cybersecurity-threat-intelligence" element={<Services />} />
-              
               {/* Additional innovative AI service routes */}
               <Route path="/services/ai-workflow-orchestrator" element={<Services />} />
               <Route path="/services/ai-data-governance-platform" element={<Services />} />
               <Route path="/services/ai-customer-experience-analytics" element={<Services />} />
-              
               {/* Quantum and advanced services */}
               <Route path="/services/quantum-computing" element={<QuantumComputing />} />
               <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-              
               {/* Revolutionary services */}
               <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
               <Route path="/new-services-2025" element={<NewServicesShowcase2025 />} />
               <Route path="/enhanced-services-2025" element={<EnhancedNewServices2025 />} />
-              
               {/* Sitemap routes */}
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/comprehensive-sitemap" element={<ComprehensiveSitemap />} />
-              
               {/* Support routes */}
               <Route path="/support" element={<Support />} />
               <Route path="/training" element={<Training />} />
               <Route path="/helpdesk" element={<Helpdesk />} />
-              
               {/* Catch-all route */}
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </Suspense>
         </main>
-        
         <Footer />
-        
         {/* Enhanced Components */}
         <PerformanceOptimizer />
         <EnhancedAccessibilityEnhancer />
         <MobileExperienceEnhancer />
         <ChatAssistant />
       </div>
-=======
-=======
-
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/Home').then(module => ({ default: module.default })));
 const About = lazy(() => import('./pages/About').then(module => ({ default: module.default })));
@@ -545,15 +454,10 @@ const Login = lazy(() => import('./pages/Login').then(module => ({ default: modu
 const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ default: module.default })));
 const ComprehensivePricing = lazy(() => import('./pages/ComprehensivePricing').then(module => ({ default: module.default })));
 const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServicesShowcase2025').then(module => ({ default: module.default })));
-
 // New innovative services pages
-
 // Additional service components
-=======
-<<<<<<< HEAD
 ;
 // Additional service components;
->>>>>>> main
 const AIServices = createLazyComponent(() => import('./pages/AIServices'));
 const ITServices = createLazyComponent(() => import('./pages/ITServices'));
 const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
@@ -585,10 +489,7 @@ const "App": "React.FC = memo(() => {;
       fallback={errorFallback}
       showDetails={process.env.NODE_ENV === 'development'}
       enableReporting={true}
-<<<<<<< HEAD
     >
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
     >;
       <Router>;
         <div className="min-h-screen bg-gray-50 flex">;
@@ -728,18 +629,12 @@ const "App": "React.FC = memo(() => {;
         </div>;
       </Router>;
     </EnhancedErrorBoundary>;
->>>>>>> main
   );
 });
 ;
 export default App;
-=======
-
-<<<<<<< HEAD
 export default App;
-=======
 export default function App(props: any) {
-=======
 const AISolutions = lazy(() => import('./pages/AIServices').then(module => ({ default: module.default })));
 const ITServices = lazy(() => import('./pages/ITServices').then(module => ({ default: module.default })));
 // Create placeholder components for missing pages
@@ -782,10 +677,8 @@ const Careers = () => <div className="min-h-screen flex items-center justify-cen
 const WhitePapers = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">White Papers</h1></div>;
 const ComprehensivePricing = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Comprehensive Pricing</h1></div>;
 export default function App() {
->>>>>>> main
   return (
     <ErrorBoundary>
->>>>>>> main
       <Router>
         <div className="min-h-screen bg-gray-50">
           <Header />
@@ -899,21 +792,12 @@ export default function App() {
           <ChatAssistant />
         </div>
       </Router>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
     </ErrorBoundary>
   );';
 };';;';
-=======
     </EnhancedErrorBoundary>
   );
 }
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
     </ErrorBoundary>
   );
 }
->>>>>>> main
->>>>>>> main
->>>>>>> main

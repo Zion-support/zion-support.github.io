@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 const PricingPage: React.FC = () => {
   return (
     <>
@@ -13,7 +11,6 @@ const PricingPage: React.FC = () => {
           <p className=\"text-gray-600 mb-10 max-w-3xl\">
             We tailor solutions to your needs. Below are typical starting ranges observed in the market. Get a custom quote at any time.
           </p>
-          
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\">
             <div className=\"border rounded-xl p-6 shadow-sm\">
               <h3 className=\"text-xl font-semibold mb-2\">AI Development</h3>
@@ -24,7 +21,6 @@ const PricingPage: React.FC = () => {
                 <li>Enterprise: $75,000+</li>
               </ul>
             </div>
-            
             <div className=\"border rounded-xl p-6 shadow-sm\">
               <h3 className=\"text-xl font-semibold mb-2\">Micro SaaS</h3>
               <p className=\"text-gray-600 mb-4\">Idea validation, build, payments, analytics, hosting.</p>
@@ -34,7 +30,6 @@ const PricingPage: React.FC = () => {
                 <li>Scale: $100,000+</li>
               </ul>
             </div>
-            
             <div className=\"border rounded-xl p-6 shadow-sm\">
               <h3 className=\"text-xl font-semibold mb-2\">Cloud & DevOps</h3>
               <p className=\"text-gray-600 mb-4\">AWS/GCP/Azure architecture, IaC, observability.</p>
@@ -44,7 +39,6 @@ const PricingPage: React.FC = () => {
                 <li>Managed: from $2,000/mo</li>
               </ul>
             </div>
-            
             <div className=\"border rounded-xl p-6 shadow-sm\">
               <h3 className=\"text-xl font-semibold mb-2\">Cybersecurity</h3>
               <p className=\"text-gray-600 mb-4\">Pen-testing, hardening, SOC, compliance.</p>
@@ -54,7 +48,6 @@ const PricingPage: React.FC = () => {
                 <li>Managed SOC: from $3,000/mo</li>
               </ul>
             </div>
-            
             <div className=\"border rounded-xl p-6 shadow-sm\">
               <h3 className=\"text-xl font-semibold mb-2\">Data & Analytics</h3>
               <p className=\"text-gray-600 mb-4\">Warehouses, pipelines, BI, ML ops.</p>
@@ -64,7 +57,6 @@ const PricingPage: React.FC = () => {
                 <li>ML Ops: $25,000+</li>
               </ul>
             </div>
-            
             <div className=\"border rounded-xl p-6 shadow-sm\">
               <h3 className=\"text-xl font-semibold mb-2\">Web & Mobile</h3>
               <p className=\"text-gray-600 mb-4\">React/Next.js, React Native, APIs.</p>
@@ -75,7 +67,6 @@ const PricingPage: React.FC = () => {
               </ul>
             </div>
           </div>
-          
           <div className=\"text-center mt-12\">
             <div className=\"flex flex-col sm:flex-row gap-4 justify-center\">
               <Link 
@@ -97,11 +88,9 @@ const PricingPage: React.FC = () => {
     </>
   );
 };
-=======
 import _React from 'react';,
 import Head from 'next/head';';
 import Link from 'next/link';';
-
 const PricingPage: _React.FC = () => {}
   return (;,
     <>;
@@ -115,7 +104,6 @@ const PricingPage: _React.FC = () => {}
           <p className="text-gray-600 mb-10 max-w-3xl">");
             We tailor solutions to your needs. Below are typical starting ranges observed in the market. Get a custom quote at any time.;
           </p>;
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">";
             <div className="border rounded-xl p-6 shadow-sm">";
               <h3 className="text-xl font-semibold mb-2">AI Development</h3>";
@@ -126,7 +114,6 @@ const PricingPage: _React.FC = () => {}
                 <li>Enterprise: $75,000+</li>,
               </ul>;,
             </div>;
-            
             <div className="border rounded-xl p-6 shadow-sm">";
               <h3 className="text-xl font-semibold mb-2">Micro SaaS</h3>";
               <p className="text-gray-600 mb-4">Idea validation, build, payments, analytics, hosting.</p>",
@@ -136,7 +123,6 @@ const PricingPage: _React.FC = () => {}
                 <li>Scale: $100,000+</li>,
               </ul>;,
             </div>;
-            
             <div className="border rounded-xl p-6 shadow-sm">";
               <h3 className="text-xl font-semibold mb-2">Cloud & DevOps</h3>";
               <p className="text-gray-600 mb-4">AWS/GCP/Azure architecture, IaC, observability.</p>",
@@ -146,7 +132,6 @@ const PricingPage: _React.FC = () => {}
                 <li>Managed: from $2,000/mo</li>,
               </ul>;,
             </div>;
-            
             <div className="border rounded-xl p-6 shadow-sm">";
               <h3 className="text-xl font-semibold mb-2">Cybersecurity</h3>";
               <p className="text-gray-600 mb-4">Pen-testing, hardening, SOC, compliance.</p>",
@@ -156,7 +141,6 @@ const PricingPage: _React.FC = () => {}
                 <li>Managed SOC: from $3,000/mo</li>,
               </ul>;,
             </div>;
-            
             <div className="border rounded-xl p-6 shadow-sm">";
               <h3 className="text-xl font-semibold mb-2">Data & Analytics</h3>";
               <p className="text-gray-600 mb-4">Warehouses, pipelines, BI, ML ops.</p>",
@@ -166,7 +150,6 @@ const PricingPage: _React.FC = () => {}
                 <li>ML Ops: $25,000+</li>,
               </ul>;,
             </div>;
-            
             <div className="border rounded-xl p-6 shadow-sm">";
               <h3 className="text-xl font-semibold mb-2">Web & Mobile</h3>";
               <p className="text-gray-600 mb-4">_React/Next.js, _React Native, APIs.</p>",
@@ -177,7 +160,6 @@ const PricingPage: _React.FC = () => {}
               </ul>;,
             </div>;
           </div>;
-          
           <div className="text-center mt-12">";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
               <Link;
@@ -199,6 +181,4 @@ const PricingPage: _React.FC = () => {}
     </>;
 ;  );
 };,
->>>>>>> main
-
 export default PricingPage;

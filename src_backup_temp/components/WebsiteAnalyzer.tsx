@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const WebsiteAnalyzer: Reac t.FC = () : JSX.Element => {';
 export default WebsiteAnalyzer;';';
-=======
 export const WebsiteAnalyzer: React.FC = () : JSX.Element => {;
 export default WebsiteAnalyzer;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 import { CheckCircle, import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
-=======
 export const "WebsiteAnalyzer": "React.FC = () : JSX.Element => {;
 export default WebsiteAnalyzer;
 import { CheckCircle", import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
->>>>>>> main
 ;
 export default function Page("props": "any) {;
  catch(error) {;
@@ -21,9 +15,6 @@ export default function Page("props": "any) {;
 ;
         // Add delay to prevent overwhelming the server;
         await new Promise(resolve => setTimeout (resolve, 100) ) }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ;
       setAnalysisResult({;
         summary,;
@@ -32,31 +23,22 @@ export default function Page("props": "any) {;
         missingPages;
       }) } catch(error) {;
       // console.error('Analysis "failed":', error)} finally {;
-=======
 export const WebsiteAnalyzer: React.FC = () : JSX.Element => {
 export default WebsiteAnalyzer;
 import { CheckCircle, import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
-
 export default function Page(props: any) {
  catch(error) {
 `
           // console.error(`Error analyzing ${page}:`, error)}
-
         // Add delay to prevent overwhelming the server
         await new Promise(resolve => setTimeout (resolve, 100) ) }
->>>>>>> main
-
       setAnalysisResult({
-
         summary,
         pages: result s,
         brokenLinks,
         missingPages
       }) } catch(error) {
-
       // console.error('Analysis failed:', error)} finally {
-
-<<<<<<< HEAD
       setIsAnalyzing(false);';
       setProgress(100);';';
       setCurrentPage('')}
@@ -73,7 +55,6 @@ export default function Page(props: any) {
       case 'missing':"';
         return <AlertTriangle className="w-4 h-4 text-yellow-500"   />;';';
       case 'external':"
-=======
 ;
       setAnalysisResult({;
         summary,;
@@ -82,39 +63,25 @@ export default function Page(props: any) {
         missingPages;
       }) } catch(error) {;
       // console.error('Analysis failed:', error)} finally {;
-=======
->>>>>>> main
->>>>>>> main
       setIsAnalyzing(false);
       setProgress(100);
       setCurrentPage('')}
   };
-
     a.href = url;
     a.download = 'zion-website-analysis.json';    document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url)};
-
       case 'broken':"
         return <XCircle className="w-4 h-4 text-red-500"   />;
       case 'missing':"
         return <AlertTriangle className="w-4 h-4 text-yellow-500"   />;
-<<<<<<< HEAD
       case 'external':";
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
       case 'external':"
->>>>>>> main
         return <ExternalLink className="w-4 h-4 text-blue-500"   />;
-<<<<<<< HEAD
       "default":";
-=======
       default:"
->>>>>>> main
         return <AlertTriangle className="w-4 h-4 text-gray-500"   />}
-<<<<<<< HEAD
-<<<<<<< HEAD
   };';
 ';';
       case 'broken':'';';
@@ -124,29 +91,17 @@ export default function Page(props: any) {
       case 'external':'';';
         return 'text-blue-600 bg-blue-100';';';
       default:'';';
-=======
-=======
->>>>>>> main
   };
-
       case 'broken':'
         return 'text-red-600 bg-red-100';
       case 'missing':'
         return 'text-yellow-600 bg-yellow-100';
       case 'external':'
         return 'text-blue-600 bg-blue-100';
-<<<<<<< HEAD
       default:';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-<<<<<<< HEAD
       "default":';
-=======
       default:'
->>>>>>> main
->>>>>>> main
         return 'text-gray-600 bg-gray-100'}  };
-
   return ("
     <div className="max-w-7xl mx-auto p-6 space-y-6">"
       <div className="bg-white rounded-lg shadow-lg p-6">"
@@ -160,8 +115,6 @@ export default function Page(props: any) {
           <div className="flex space-x-3">
             <button
               onClick={analyzeWebsite}
-<<<<<<< HEAD
-<<<<<<< HEAD
               disabled={isAnalyzing}"
               className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed"
             >
@@ -177,9 +130,6 @@ export default function Page(props: any) {
                 className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover: b g-green-700"
               >"
                 <Download className="w-4 h-4 mr-2"   />                Export Report
-=======
-=======
->>>>>>> main
               disabled={isAnalyzing}";
               className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg "hover": "b g-blue-700 "disabled": opacit y-50 "disabled": curso r-not-allowed";
             >;
@@ -195,12 +145,8 @@ export default function Page(props: any) {
                 className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg "hover": "b g-green-700";
               >";
                 <Download className="w-4 h-4 mr-2"   />                Export Report;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
               </button>) }
-=======
               </button>) "}
->>>>>>> main
           </div>;
         </div>;
         {isAnalyzing && (";
@@ -219,7 +165,6 @@ export default function Page(props: any) {
               <p className="text-sm text-gray-600 mt-2">";
                 "Analyzing": "<span className="font-mono">{currentPage"}</span>;
               </p>;
-=======
               disabled={isAnalyzing}"
               className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed"
             >
@@ -238,7 +183,6 @@ export default function Page(props: any) {
               </button>) }
           </div>
         </div>
-
         {isAnalyzing && ("
           <div className="mb-6">"
             <div className="flex items-center justify-between mb-2">"
@@ -255,17 +199,12 @@ export default function Page(props: any) {
               <p className="text-sm text-gray-600 mt-2">"
                 Analyzing: <span className="font-mono">{currentPage}</span>
               </p>
->>>>>>> main
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
               </div>
   );
 }
-=======
           </div>
         )}
-<<<<<<< HEAD
 ;
         {analysisResult && (";
           <div className="space-y-6">;
@@ -283,9 +222,6 @@ export default function Page(props: any) {
                 <div  className="flex items -center">;
                   <CheckCircle className="w-8 h-8 text-green - 600 mr-3"  />;
                   <div>;
-=======
-
->>>>>>> main
         {analysisResult && ("
           <div className="space-y-6">
             {/* Summary Cards */}"
@@ -298,13 +234,10 @@ export default function Page(props: any) {
                   </div>
                 </div>
               </div>
-
               <div  className="bg-green - 50 p - 4 rounded-lg border border-green -200">
                 <div  className="flex items -center">
                   <CheckCircle className="w-8 h-8 text-green - 600 mr-3"  />
                   <div>
-<<<<<<< HEAD
-=======
           </div>;
         )}
 ;
@@ -324,17 +257,12 @@ export default function Page(props: any) {
                 <div  className="flex items -center">;
                   <CheckCircle className="w-8 h-8 text-green - 600 mr-3"  />;
                   <div>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
->>>>>>> main
                     <p className="text-2xl font - bold text-green -900">                      {analysisResult.summary.totalLinks - analysisResult.summary.brokenLinks - analysisResult.summary.missingPages}
                     </p>"
                     <p className="text-sm text-green-700">Working Links</p>
                   </div>
                 </div>
               </div>
-
               <div  className="bg-red - 50 p - 4 rounded-lg border border-red -200">
                 <div  className="flex items -center">
                   <XCircle className="w-8 h-8 text-red - 600 mr-3"  />
@@ -344,7 +272,6 @@ export default function Page(props: any) {
                   </div>
                 </div>
               </div>
-
               <div  className="bg-yellow-50 p - 4 rounded-lg border border-yellow-200">
                 <div  className="flex items -center">
                   <AlertTriangle className="w-8 h-8 text-yellow-600 mr-3"  />
@@ -354,9 +281,7 @@ export default function Page(props: any) {
                 </div>
               </div>
             </div>
-
             {/* Broken Links */}
-<<<<<<< HEAD
             {analysisResult.brokenLinks.length > 0 && (";
               <div className="bg-red-50 border border-red-200 rounded-lg p-4">";
                 <h3 className="text-lg font-semibold text-red-900 mb-3 flex items-center">";
@@ -372,7 +297,6 @@ export default function Page(props: any) {
                       <span className="px-2 py-1 text-xs font-medium rounded-full bg-red-100 text-red-800">;
                         Broken;
                       </span>;
-=======
             {analysisResult.brokenLinks.length > 0 && ("
               <div className="bg-red-50 border border-red-200 rounded-lg p-4">"
                 <h3 className="text-lg font-semibold text-red-900 mb-3 flex items-center">"
@@ -388,24 +312,16 @@ export default function Page(props: any) {
                       <span className="px-2 py-1 text-xs font-medium rounded-full bg-red-100 text-red-800">
                         Broken
                       </span>
->>>>>>> main
                     </div>) ) }
-<<<<<<< HEAD
-<<<<<<< HEAD
                 </div>
                   </div>
   );
 }
-=======
                 </div>;
               </div>) }
 ;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
                 </div>
               </div>) }
-
->>>>>>> main
             {/* Missing Pages */}
             {analysisResult.missingPages.length > 0 && ("
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">"
@@ -422,8 +338,6 @@ export default function Page(props: any) {
                         Missing
                       </span>
                     </div>) ) }
-<<<<<<< HEAD
-<<<<<<< HEAD
                 </div>
                   </div>
   );
@@ -448,13 +362,9 @@ export default function Page(props: any) {
                             {getStatusIcon(link.status)}"
                             <span className="font-mono text-xs truncate">{link.url}</span>
                           </div>
-=======
                 </div>;
-=======
                 </div>
->>>>>>> main
               </div>) }
-<<<<<<< HEAD
 ;
             {/* Page Analysis */}";
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">";
@@ -476,16 +386,10 @@ export default function Page(props: any) {
                             {getStatusIcon(link.status)}";
                             <span className="font-mono text-xs truncate">{link.url}</span>;
                           </div>;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                         ))}
                         {page.links.length > 6 && (";
                           <p className="text-xs text-gray-500">... and {page.links.length-6} more</p>;
                         )}
-<<<<<<< HEAD
-=======
-=======
-
             {/* Page Analysis */}"
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">"
               <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">"
@@ -505,9 +409,7 @@ export default function Page(props: any) {
                           <div key={linkIndex} className="flex items-center space-x-2 text-sm">
                             {getStatusIcon(link.status)}"
                             <span className="font-mono text-xs truncate">{link.url}</span>
->>>>>>> main
                           </div>
->>>>>>> main
                         ))}
                         {page.links.length > 6 && ("
                           <p className="text-xs text-gray-500">... and {page.links.length-6} more</p>
@@ -518,7 +420,6 @@ export default function Page(props: any) {
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
               </div>
   );
 }
@@ -527,24 +428,16 @@ export default function Page(props: any) {
 export default WebsiteAnalyzer;'"`
 ';
 </div>;';;';
-=======
                       </div>;
                     )}
                   </div>;
                 ))}
               </div>;
             </div>;
-=======
->>>>>>> main
           </div>) }
       </div>
     </div>) };
-<<<<<<< HEAD
 export default WebsiteAnalyzer;'"`;
 </div>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 export default WebsiteAnalyzer;'"`
-
 </div>
->>>>>>> main

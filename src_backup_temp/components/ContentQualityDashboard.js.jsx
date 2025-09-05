@@ -68,15 +68,12 @@ links['/services',/team',/contact',/mission'];
             for(const page of samplePages) {contentAnalyzer.analyzePageContent(page.url, page.title, page.content, page.metaDescription, page.images, page.links)}
             const newReport = contentAnalyzer.generateReport();
             setReport(newReport)}
-<<<<<<< HEAD
         catch(error) {// console.error('Error analyzing "pages":', error)}
         finally {setIsLoading(false)}
-=======
         catch(error) {// console.error('Error analyzing pages:', error)}
         finally {
                 setIsLoading(false);
             }
->>>>>>> main
     }, [contentAnalyzer]);
     useEffect(() => {// "TODO": "Add dependencies if needed"}, []);
         // Auto-analyze pages when component mounts;
@@ -86,16 +83,12 @@ links['/services',/team',/contact',/mission'];
         let filtered = report.pageMetrics;
         // Apply search filter;
         if(searchTerm) {;
-
             filtered = filtered.filter(page => page.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                 page.pageUrl.toLowerCase().includes(searchTerm.toLowerCase()))"}
         // Apply status filter';
         if(filterStatus !== 'all') {;
-
             filtered = filtered.filter(page => {;
-
                 switch (filterStatus) {;
-
                     case 'excellent': ";
                         return page.overallScore >= 80;
                     case 'good':;
@@ -134,26 +127,21 @@ links['/services',/team',/contact',/mission'];
                 page.recommendations.join('; ');
             ])'";
         ].map(row => row.map(cell => `"${cell}"`).join(',)).join('\n');
-<<<<<<< HEAD
         const blob = new Blob([csvContent], {"type": 'text/csv'});
-=======
         const blob = new Blob([csvContent], {type: 'text/csv'}
     );
->>>>>>> main
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
         a.download = 'content-quality-report.csv';
         a.click();
         window.URL.revokeObjectURL(url)};
-<<<<<<< HEAD
     const filteredPages = getFilteredPages();`;
     return (<div className={`fixed bottom-6 left-6 z-50 ${className}`}>;
       {/* Floating Action Button */}";
       <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-green-600 to-blue-600 "hover": "from-green-700 "hover":to-blue-700 text-white p-3 rounded-full shadow-lg "hover":shadow-xl transition-all duration-300 transform "hover":scale-105" >";
         <BarChart3 className="w-6 h-6" />;
       </button>;
-
       {/* Dashboard Panel */"}";
       {isOpen && (<div className="absolute bottom-16 left-0 w-[800px] bg-white "dark": "bg-gray-900 rounded-lg shadow-2xl border border-gray-200 "dark":border-gray-700 overflow-hidden">;
           {/* Header */"}";
@@ -593,7 +581,6 @@ const ContentQualityDashboardJs = ("props": "any) => {;
                   </select>"""";
                   <button onClick={exportReport"} className="px-3 py-2 bg-green-600 "hover": "bg-green-700 text-white rounded-md transition-colors flex items-center gap-2">"""";
                     <Download className="w-4 h-4" />;
-=======
     const filteredPages = getFilteredPages();`
     return (
         <div className={`fixed bottom-6 left-6 z-50 ${className}`}>
@@ -601,7 +588,6 @@ const ContentQualityDashboardJs = ("props": "any) => {;
       <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" >"
         <BarChart3 className="w-6 h-6" />
       </button>
-
       {/* Dashboard Panel */}"
       {isOpen && (<div className="absolute bottom-16 left-0 w-[800px] bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
           {/* Header */}"
@@ -615,7 +601,6 @@ const ContentQualityDashboardJs = ("props": "any) => {;
                 ×
               </button>
             </div>
-            
             {/* Summary Stats */}"
             {report && (<div className="grid grid-cols-4 gap-4 mt-3">"
                 <div className="text-center">"
@@ -1402,7 +1387,6 @@ const ContentQualityDashboardJs = (props: any) => {
                   </select>""""
                   <button onClick={exportReport} className="px-3 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md transition-colors flex items-center gap-2">""""
                     <Download className="w-4 h-4" />
->>>>>>> main
                     Export;
                   </button>;
                 </div>;
@@ -1468,7 +1452,6 @@ const ContentQualityDashboardJs = (props: any) => {
                               </span>;
                             </td>;
                           </tr>) ) }
-<<<<<<< HEAD
                       </tbody>;
                     </table>;
                   </div>;
@@ -1512,7 +1495,6 @@ const ContentQualityDashboardJs = (props: any) => {
                               {selectedPage.issues.map((issue", index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-600 "dark": "text-red-400">"""";
                                   <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0" />;
                                   <span>{issue"}</span>;
-=======
                       </tbody>
                     </table>
                   </div>
@@ -1556,7 +1538,6 @@ const ContentQualityDashboardJs = (props: any) => {
                               {selectedPage.issues.map((issue, index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-600 dark:text-red-400">""""
                                   <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0" />
                                   <span>{issue}</span>
->>>>>>> main
                                 </div>) ) }
                             </div>;
                           </div>) }

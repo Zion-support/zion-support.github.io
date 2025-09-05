@@ -1,50 +1,32 @@
-<<<<<<< HEAD
 import React, {useState} from 'react';                <Clock className="w-5 h-5 text-cyan-400" />;
                 <span>24-Hour Response</span>;
               </motion.div>;
               <motion.div initial = {;
-
   { "opacity": "0",;
   "y": "20;
-
 "}} animate = {;
-=======
 import React from 'react';
-
 interface RequestQuote.jsProps {
   // Add props here as needed
 }
-
-<<<<<<< HEAD
 }} animate = {
->>>>>>> main
-
   { "opacity": "1",;
   "y": "0;
-
 "}} transition = {;
-
   { "duration": "0.6",;
   "delay": "0.2;
-
 "}} className="flex items-center justify-center space-x-3 text-white/80">                <CheckCircle className="w-5 h-5 text-green-400" />;
                 <span>Free Consultation</span>;
               </motion.div>;
               <motion.div initial = {;
-
   { "opacity": "0",;
   "y": "20;
-
 "}} animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}} transition = {;
-
   { "duration": "0.6",;
   "delay": "0.3;
-
 "}} className="flex items-center justify-center space-x-3 text-white/80">                <Calculator className="w-5 h-5 text-purple-400" />;
                 <span>Detailed Estimate</span>;
               </motion.div>;
@@ -52,7 +34,6 @@ interface RequestQuote.jsProps {
           </motion.div>;
         </div>;
       </section>;
-
       {/* Main Form Section */}";
       <section className="py-20 px-6">";
         <div className="max-w-6xl mx-auto">";
@@ -60,15 +41,11 @@ interface RequestQuote.jsProps {
             {/* Form */"}";
             <div className=""lg": "col-span-2">;
               <motion.div initial = {;
-
   { "opacity": 0",;
   "x": "-30;
-
 "}} whileInView = {;
-
   { "opacity": "1",;
   "x": "0;
-
 "}} viewport={{ "once": "true "}} transition={{ "duration": "0.8 "}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">                <h2 className="text-3xl font-bold text-white mb-8">Project Details</h2>;
 ";
                 <form onSubmit={handleSubmit} className="space-y-6">;
@@ -94,12 +71,10 @@ interface RequestQuote.jsProps {
                       <input type="tel" name="phone" value={formData.phone"} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 "focus": "outline-none "focus":border-cyan-400 transition-colors" placeholder="Enter your phone number"  />;
                     </div>;
                   </div>;
-
                   <div>";
                     <label className="block text-white font-medium mb-2">Company</label>";
                     <input type="text" name="comp" value={formData.comp"} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 "focus": "outline-none "focus":border-cyan-400 transition-colors" placeholder="Enter your comp name"  />;
                   </div>;
-
                   {/* Project Type */"}
                   <div>";
                     <label className="block text-white font-medium mb-4">Project Type *</label>";
@@ -120,7 +95,6 @@ interface RequestQuote.jsProps {
                         </label>))}
                     </div>;
                   </div>;
-
                   {/* Budget and Timeline */}";
                   <div className="grid grid-cols-1 "md": "grid-cols-2 gap-6">;
                     <div>";
@@ -142,7 +116,6 @@ interface RequestQuote.jsProps {
                       </select>;
                     </div>;
                   </div>;
-
                   {/* Urgency */}
                   <div>";
                     <label className="block text-white font-medium mb-4">Project Urgency</label>";
@@ -158,13 +131,11 @@ interface RequestQuote.jsProps {
                         </label>))}
                     </div>;
                   </div>;
-
                   {/* Project Description */}
                   <div>";
                     <label className="block text-white font-medium mb-2">Project Description *</label>";
                     <textarea name="description" value={formData.description} onChange={handleInputChange} required rows={6} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 "focus": "outline-none "focus":border-cyan-400 transition-colors resize-none" placeholder="Describe your project requirements", goals, and  specific features you need..." />;
                   </div>;
-
                   {/* Submit Button */}'"`;
                   <button type="submit" disabled={!isFormValid || submissionStatus === 'submitting'} className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-2 ${!isFormValid || submissionStatus === 'submitting'';
             ? 'bg-gray-600 text-gray-400 cursor-not-allowed''`;
@@ -180,33 +151,24 @@ interface RequestQuote.jsProps {
                         <span>Request Quote</span>;
                       </>)"}
                   </button>;
-
                   {/* Status Messages */}
                   {submissionStatus === 'success' && (<motion.div initial = {;
-
   { "opacity": "0",;
   "y": "10;
-
 "}} animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}} className="flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg">;
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />                      <span className="text-green-400">;
                         Thank you! We've received your quote request and will respond within 24 hours.</span>;
                     </motion.div>)}
 ;
                   {submissionStatus === 'error' && (<motion.div initial = {;
-
   { "opacity": "0",;
   "y": "10;
-
 "}} animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}} className="flex items-center p-4 bg-red-500/20 border border-red-500/50 rounded-lg">;
                       <AlertCircle className="w-5 h-5 text-red-400 mr-3" />                      <span className="text-red-400">;
                         Something went wrong.Please try again or contact us directly.</span>;
@@ -214,21 +176,15 @@ interface RequestQuote.jsProps {
                 </form>;
               </motion.div>;
             </div>;
-
             {/* Sidebar */}";
             <div className="space-y-8">;
               {/* Contact Information */}
               <motion.div initial = {;
-
   { "opacity": "0",;
   "x": "30;
-
 "}} whileInView = {;
-
   { "opacity": "1",;
   "x": "0;
-
-<<<<<<< HEAD
 "}} viewport={{ "once": "true "}} transition={{ "duration": "0.8 "}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">;
                 <h3 className="text-xl font-bold text-white mb-4">Get in Touch</h3>;
                 <div className="space-y-4">;
@@ -245,7 +201,6 @@ interface RequestQuote.jsProps {
                   </div>;
                 </div>;
               </motion.div>;
-=======
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-white mb-4">Get in Touch
                 <div className="space-y-4">
@@ -262,25 +217,16 @@ interface RequestQuote.jsProps {
                   </div>
                 </div>
               </motion.div>
->>>>>>> main
-
               {/* Why Choose Us */}
               <motion.div initial = {;
-
   { "opacity": "0",;
   "x": "30;
-
 "}} whileInView = {;
-
   { "opacity": "1",;
   "x": "0;
-
 "}} viewport={{ "once": "true "}} transition = {;
-
   { "duration": "0.8",;
   "delay": "0.2;
-
-<<<<<<< HEAD
 "}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">;
                 <h3 className="text-xl font-bold text-white mb-4">Why Choose Us</h3>;
                 <div className="space-y-4">;
@@ -313,7 +259,6 @@ interface RequestQuote.jsProps {
                   </div>;
                 </div>;
               </motion.div>;
-=======
 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-white mb-4">Why Choose Us
                 <div className="space-y-4">
@@ -346,25 +291,16 @@ interface RequestQuote.jsProps {
                   </div>
                 </div>
               </motion.div>
->>>>>>> main
-
               {/* Process */}
               <motion.div initial = {;
-
   { "opacity": "0",;
   "x": "30;
-
 "}} whileInView = {;
-
   { "opacity": "1",;
   "x": "0;
-
 "}} viewport={{ "once": "true "}} transition = {;
-
   { "duration": "0.8",;
   "delay": "0.4;
-
-<<<<<<< HEAD
 "}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">;
                 <h3 className="text-xl font-bold text-white mb-4">Our Process</h3>;
                 <div className="space-y-4">;
@@ -401,7 +337,6 @@ interface RequestQuote.jsProps {
           </div>;
         </div>;
       </section>;
-=======
 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-white mb-4">Our Process
                 <div className="space-y-4">
@@ -438,7 +373,6 @@ interface RequestQuote.jsProps {
           </div>
         </div>
       </section>
->>>>>>> main
     </div>)}
 export {RequestQuote};
 ;
@@ -449,7 +383,6 @@ export {RequestQuote};
 export {RequestQuote};
 ;
 export {RequestQuote};
-<<<<<<< HEAD
 ;
 </motion>;
 </motion>;
@@ -459,8 +392,6 @@ export {RequestQuote};
 </motion>;
 </motion>;
 </motion>
-=======
-
 </motion>
 </motion>
 </motion>
@@ -469,7 +400,6 @@ export {RequestQuote};
 </motion>
 </motion>
 </motion>
-=======
 export default function RequestQuote.js({ }: RequestQuote.jsProps) {
   return (
     <div>
@@ -478,5 +408,3 @@ export default function RequestQuote.js({ }: RequestQuote.jsProps) {
     </div>
   );
 }
->>>>>>> main
->>>>>>> main

@@ -1,21 +1,16 @@
 import js from '@eslint/js';
-<<<<<<< HEAD
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
-
 export default [
   {
     ignores: [
-=======
-<<<<<<< HEAD
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
-
 export default [
   js.configs.recommended,
   {
@@ -49,7 +44,6 @@ export default [
         setInterval: 'readonly',
         clearTimeout: 'readonly',
         clearInterval: 'readonly',
-<<<<<<< HEAD
         requestAnimationFrame: 'readonly',
         cancelAnimationFrame: 'readonly',
         fetch: 'readonly',
@@ -88,17 +82,13 @@ export default [
         __filename: 'readonly',
         Buffer: 'readonly',
         global: 'readonly'
-=======
->>>>>>> main
       },
-=======
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 export default [{
     "ignores": [
->>>>>>> main
       'node_modules/',
       '.next/',
       'out/',
@@ -108,7 +98,6 @@ export default [{
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
-<<<<<<< HEAD
       'fix-critical-files.js',
       'fix-*.js',
       'fix-*.cjs',
@@ -211,7 +200,6 @@ export default [{
       'no-undef': 'off',
     },
   },
-=======
       '.prettierrc.js',
       '.eslintrc.*',
       '*.min.js',
@@ -360,7 +348,6 @@ export default [{
         "fs": 'readonly',
         "CodeQualityChecker": 'readonly'
       }
->>>>>>> main
     },
     plugins: {
       '@typescript-eslint': typescript,
@@ -371,7 +358,6 @@ export default [{
       'no-console': 'warn',
       'no-unused-vars': 'warn',
       '@typescript-eslint/no-unused-vars': 'warn',
-<<<<<<< HEAD
       'react/jsx-uses-react': 'error',
       'react/jsx-uses-vars': 'error',
     },
@@ -380,15 +366,12 @@ export default [{
         version: 'detect',
       },
     },
-=======
       'no-console': 'warn',
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off'
     }
->>>>>>> main
   },
   {
-<<<<<<< HEAD
     "ignores": ['node_modules/**',
       '.next/**',
       'out/**',
@@ -469,7 +452,6 @@ export default [{
       'deployments/**',
       'pages.__backup/**',
       'pages-disabled/**',
-<<<<<<< HEAD
       // Exclude problematic directories
       'automation/**',
       'automation_backup/**',
@@ -487,7 +469,6 @@ export default [{
       'pages.disabled.full/**',
       'ai-optimization-backups/**',
       'fix_typescript_syntax_errors.jsx'
-=======
       'src/**',
       'automation/**',
       'automation_backup/**',
@@ -619,11 +600,9 @@ export default [{
       '*.ear',
       '*.sar',
       '*.nar'
->>>>>>> main
     ]
   }
 ];
-=======
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       globals: {
@@ -658,6 +637,4 @@ export default [{
       'coverage/',
     ],
   },
->>>>>>> main
 ];
->>>>>>> main

@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
-
 interface ServiceTypeStep.testProps {
   // Add props here as needed
 }
-
 export default function ServiceTypeStep.test({ }: ServiceTypeStep.testProps) {
   return (
     <div>
@@ -14,4 +10,3 @@ export default function ServiceTypeStep.test({ }: ServiceTypeStep.testProps) {
     </div>
   );
 }
->>>>>>> main
