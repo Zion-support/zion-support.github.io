@@ -8,7 +8,8 @@ import {
   MessageSquare, 
   Eye, 
   CheckCircle, 
-  ArrowRight 
+  ArrowRight,
+  Bot
 } from 'lucide-react';
 import MainLayout from '../src/components/layout/MainLayout';
 

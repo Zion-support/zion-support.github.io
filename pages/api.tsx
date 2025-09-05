@@ -3,11 +3,7 @@ import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
   Code,
-  Copy,
   Check,
-  ExternalLink,
-  ArrowRight,
-  Terminal,
   Globe,
   Shield,
   Zap,

@@ -2,16 +2,9 @@ import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
 import { 
-  Code, 
   ArrowRight,
-  Book,
-  Zap,
-  Shield,
-  Globe,
-  Database,
   Server,
   Lock,
-  CheckCircle,
   Brain,
   Cloud
 } from 'lucide-react';
