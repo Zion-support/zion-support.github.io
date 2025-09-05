@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+module.exports = function ErrorBanner($1) { return ( <div className="min-h-screen bg-white"> {msg} </div> )} export default ErrorBanner;""
+=======
 import React from 'react';
 
 export function ErrorBanner({ message }) {
@@ -9,3 +12,4 @@ export function ErrorBanner({ message }) {
 }
 
 export default ErrorBanner;
+>>>>>>> main

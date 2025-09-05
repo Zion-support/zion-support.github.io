@@ -1,6 +1,7 @@
-import _React from 'react';,
-import { motion } from 'framer-motion';,
-import { Shield, Lock, Eye, Database, Users, AlertTriangle, CheckCircle, Clock } from 'lucide-react';,
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Shield, Lock, Eye, Database, Users, AlertTriangle, CheckCircle, Clock } from 'lucide-react';
 import Layout from '../components/Layout';';
 
 const securityFeatures = [;
@@ -32,7 +33,7 @@ const securityFeatures = [;
     color: 'from-orange-500 to-red-500,',
     details: ['24/7 security monitoring, 'Real-time threat detection', 'Comprehensive audit logs', 'Incident response']',
   }
-;];,
+;];
 
 const complianceStandards = [;
   {}
@@ -63,65 +64,65 @@ const complianceStandards = [;
     icon: Clock,
     color: 'text-yellow-600',
   }
-;];,
+;];
 
 const securityPractices = [;
   {}
     category: 'Data Protection,',
-    practices: [;,
+    practices: [;
       'Regular data backups with encryption,',
       'Secure data deletion procedures',',
       'Data minimization principles',',
-      'Privacy by design approach'';,
-    ];,
+      'Privacy by design approach'';
+    ];
   },
   {}
     category: 'Infrastructure Security,',
-    practices: [;,
+    practices: [;
       'Regular security updates and patches,',
       'Secure configuration management',',
       'Vulnerability assessments',',
-      'Penetration testing'';,
-    ];,
+      'Penetration testing'';
+    ];
   },
   {}
     category: 'Employee Security,',
-    practices: [;,
+    practices: [;
       'Background checks for all employees,',
       'Security awareness training',',
       'Confidentiality agreements',',
-      'Regular security briefings'';,
-    ];,
+      'Regular security briefings'';
+    ];
   },
   {}
     category: 'Incident Response,',
-    practices: [;,
+    practices: [;
       '24/7 security monitoring,',
       'Rapid incident response procedures',',
       'Regular security drills',',
-      'Post-incident analysis and improvement'';,
-    ];,
+      'Post-incident analysis and improvement'';
+    ];
   }
-;];,
+;];
 
 const securityMetrics = [;
   { label: 'Uptime, value: '99.9%, description: 'System availability' },',
   { label: 'Response Time, value: '< 1 min, description: 'Security incident response' },',
   { label: 'Audit Score, value: '98%, description: 'Last security audit' },',
   { label: 'Vulnerabilities, value: '0, description: 'Critical vulnerabilities' }',
-;];,
+;];
 
-export default function SecurityPage() {}
-  return (;,
+export default function SecurityPage() {
+  return (;
     <Layout);
       title="Security - Zion Tech Group"";
-      description="Learn about our comprehensive security measures, compliance standards, and data protection practices. Your data security is our top priority."",
-      keywords="security, data protection, compliance, encryption, SOC 2, HIPAA, GDPR, cybersecurity"",
-    >;,
+      description="Learn about our comprehensive security measures, compliance standards, and data protection practices. Your data security is our top priority.""
+      keywords="security, data protection, compliance, encryption, SOC 2, HIPAA, GDPR, cybersecurity""
+    >;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">",
-          <div className="absolute inset-0">";,
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">"
+          <div className="absolute inset-0">";
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
           </div>;
@@ -131,8 +132,8 @@ export default function SecurityPage() {}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"",
-            >;,
+              className="text-center max-w-4xl mx-auto""
+            >;
               <div className="flex items-center justify-center mb-6">";
                 <Shield className="w-16 h-16 text-blue-400 mr-4" />";
                 <h1 className="text-5xl md:text-6xl font-bold">";
@@ -147,8 +148,8 @@ export default function SecurityPage() {}
         </section>;
 
         {/* Security Metrics */}
-        <section className="py-16 bg-white">",
-          <div className="container mx-auto px-4">";,
+        <section className="py-16 bg-white">"
+          <div className="container mx-auto px-4">";
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
               {securityMetrics.map((metric, index) => (,
                 <motion.div}),
@@ -156,26 +157,26 @@ export default function SecurityPage() {}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center"",
-                >;,
-                  <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">{metric.value}</div>",
-                  <div className="text-gray-900 font-medium mb-1">{metric.label}</div>",
-                  <div className="text-sm text-gray-600">{metric.description}</div>",
-                </motion.div>;,
+                  className="text-center""
+                >;
+                  <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">{metric.value}</div>"
+                  <div className="text-gray-900 font-medium mb-1">{metric.label}</div>"
+                  <div className="text-sm text-gray-600">{metric.description}</div>"
+                </motion.div>;
               ))}
             </div>,
-          </div>;,
+          </div>;
         </section>;
 
         {/* Security Features */}
-        <section className="py-20 bg-gray-50">",
-          <div className="container mx-auto px-4">";,
+        <section className="py-20 bg-gray-50">"
+          <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"",
-            >;,
+              className="text-center mb-16""
+            >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Security <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Features</span>";
               </h2>;
@@ -191,41 +192,41 @@ export default function SecurityPage() {}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
-                  className="bg-white rounded-2xl shadow-xl p-8"",
-                >;,
+                  className="bg-white rounded-2xl shadow-xl p-8""
+                >;
                   <div className="flex items-center mb-6">";
                     <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center mr-4`}>,
-                      <feature.icon className="w-8 h-8 text-white" />";,
+                      <feature.icon className="w-8 h-8 text-white" />";
                     </div>;
                     <div>;
-                      <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>",
-                      <p className="text-gray-600">{feature.description}</p>",
-                    </div>;,
+                      <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>"
+                      <p className="text-gray-600">{feature.description}</p>"
+                    </div>;
                   </div>;
 
                   <ul className="space-y-3">";
                     {feature.details.map((detail, detailIndex) => (,
-                      <li key={detailIndex} className="flex items-center text-gray-600">",
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";,
+                      <li key={detailIndex} className="flex items-center text-gray-600">"
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";
                         {detail}
                       </li>,
                     ))}
                   </ul>,
-                </motion.div>;,
+                </motion.div>;
               ))}
             </div>,
-          </div>;,
+          </div>;
         </section>;
 
         {/* Compliance Standards */}
-        <section className="py-20 bg-white">",
-          <div className="container mx-auto px-4">";,
+        <section className="py-20 bg-white">"
+          <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"",
-            >;,
+              className="text-center mb-16""
+            >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Compliance <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Standards</span>";
               </h2>;
@@ -241,8 +242,8 @@ export default function SecurityPage() {}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"",
-                >;,
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300""
+                >;
                   <div className="flex items-center justify-between mb-4">";
                     <Database className="w-8 h-8 text-blue-600" />";
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${}
@@ -250,24 +251,24 @@ export default function SecurityPage() {}
                     }`}>,
                       {standard.status}
                     </span>,
-                  </div>;,
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{standard.name}</h3>",
-                  <p className="text-gray-600 text-sm">{standard.description}</p>",
-                </motion.div>;,
+                  </div>;
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{standard.name}</h3>"
+                  <p className="text-gray-600 text-sm">{standard.description}</p>"
+                </motion.div>;
               ))}
             </div>,
-          </div>;,
+          </div>;
         </section>;
 
         {/* Security Practices */}
-        <section className="py-20 bg-gray-50">",
-          <div className="container mx-auto px-4">";,
+        <section className="py-20 bg-gray-50">"
+          <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"",
-            >;,
+              className="text-center mb-16""
+            >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Security <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Practices</span>";
               </h2>;
@@ -283,33 +284,33 @@ export default function SecurityPage() {}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-lg"",
-                >;,
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{category.category}</h3>",
-                  <ul className="space-y-3">";,
+                  className="bg-white rounded-xl p-6 shadow-lg""
+                >;
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{category.category}</h3>"
+                  <ul className="space-y-3">";
                     {category.practices.map((practice, practiceIndex) => (,
-                      <li key={practiceIndex} className="flex items-start text-gray-600">",
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />";,
+                      <li key={practiceIndex} className="flex items-start text-gray-600">"
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />";
                         {practice}
                       </li>,
                     ))}
                   </ul>,
-                </motion.div>;,
+                </motion.div>;
               ))}
             </div>,
-          </div>;,
+          </div>;
         </section>;
 
         {/* Incident Response */}
-        <section className="py-20 bg-white">",
-          <div className="container mx-auto px-4">";,
+        <section className="py-20 bg-white">"
+          <div className="container mx-auto px-4">";
             <div className="max-w-4xl mx-auto">";
               <motion.div;
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-center mb-12"",
-              >;,
+                className="text-center mb-12""
+              >;
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                   Incident <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Response</span>";
                 </h2>;
@@ -340,21 +341,22 @@ export default function SecurityPage() {}
                 <p className="text-gray-600 mt-6">";
                   Our security team is available 24/7 to respond to any security incidents. We have established;
                   procedures for rapid detection, containment, and resolution of security issues.,
-                </p>;,
+                </p>;
               </div>;
             </div>;
           </div>;
         </section>;
 
         {/* Contact Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">",
-          <div className="container mx-auto px-4 text-center">";,
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
+          <div className="container mx-auto px-4 text-center">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
             >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";,
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Security Questions?;
               </h2>;
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">";
@@ -380,5 +382,104 @@ export default function SecurityPage() {}
         </section>;
       </div>;
     </Layout>;
+=======
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Security Questions?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Have questions about our security measures or need to report a security concern? Contact our security team.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="mailto:security@ziontechgroup.com"
+                  className="px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
+                >
+                  <Shield className="mr-2 w-5 h-5" />
+                  Security Team
+                </a>
+                <a
+                  href="/contact"
+                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-semibold transition-colors"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </MainLayout>
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+export default function Security() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>Security - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
+        <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
+      </Head>
+      
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Security
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+              >
+                Get Started Today
+              </Link>
+              <Link 
+                href="/services" 
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16" 
+            initial={{ opacity: 0, y: 30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Coming Soon
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+ursor/expand-services-advertise-and-build-project-cac2
+    </Layout>
+>>>>>>> main
   );
 }

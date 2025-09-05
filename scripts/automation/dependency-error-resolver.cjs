@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+#!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class $1 { constructor() {""
+=======
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -504,3 +507,4 @@ if (require.main === module) {
     process.exit(1)})}
 ;
 module.exports = DependencyErrorResolver
+>>>>>>> main

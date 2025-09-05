@@ -2,11 +2,93 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Brain, Network, Cloud, ArrowRight, CheckCircle, Star, Zap, Shield } from 'lucide-react';
+=======
+import {
+  Brain,
+  Network,
+  Cloud,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Award,
+  Clock,
+  Shield,
+  Zap,
+  BarChart3,
+  Target,
+  TrendingUp,
+  Globe,
+  Database,
+  Lock,
+  Cpu,
+  Bot,
+  FileText,
+  MessageSquare,
+  Search,
+  Eye,
+  Mic,
+  Code,
+  Settings,
+  Database,
+  Monitor,
+  Smartphone,
+  Server,
+  Car,
+  Rocket,
+  Heart,
+  Building,
+  Sprout,
+  Mail,
+  ShoppingCart,
+  BookOpen,
+  Home,
+  Gamepad2,
+  Package,
+  Truck,
+  Factory,
+  Banknote,
+  Calendar,
+  MapPin,
+  Phone,
+  Headphones,
+  Wrench,
+  Cog,
+  Layers,
+  GitBranch,
+  Terminal,
+  Plus,
+  Minus,
+  DollarSign,
+  CreditCard,
+  Download,
+  Upload,
+  RefreshCw,
+  Play,
+  Pause,
+  Stop,
+  SkipForward,
+  SkipBack,
+  Volume2,
+  VolumeX,
+  Wifi,
+  WifiOff,
+  Battery,
+  BatteryLow,
+  Signal,
+  SignalHigh,
+  SignalLow,
+  SignalZero
+} from 'lucide-react';
+import Layout from '../components/Layout';
+>>>>>>> main
 
 const services = [
   {
     title: "AI Services",
+<<<<<<< HEAD
     description: "Cutting-edge artificial intelligence solutions including machine learning, natural language processing, computer vision, and autonomous systems.",
     icon: Brain,
     href: "/ai-services",
@@ -23,20 +105,45 @@ const services = [
     features: ["Cloud Infrastructure", "Cybersecurity", "System Administration", "Network Management", "DevOps & CI/CD", "Data Center Migration", "Edge Computing", "5G Networks", "AI Infrastructure", "Blockchain"],
     pricing: "Starting at $120/hour",
     count: "35+ Services",
+=======
+    description: "Cutting-edge artificial intelligence solutions to transform your business operations",
+    icon: Brain,
+    href: "/ai-services",
+    features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
+    pricing: "Starting at $2,000/month",
+    count: "15+ Services",
+    popular: true
+  },
+  {
+    title: "IT Services",
+    description: "Comprehensive IT solutions for modern businesses",
+    icon: Settings,
+    href: "/it-services",
+    features: ["Cloud Migration", "Cybersecurity", "System Integration", "IT Consulting"],
+    pricing: "Starting at $150/hour",
+    count: "20+ Services",
+>>>>>>> main
     popular: true
   },
   {
     title: "Micro SaaS",
-    description: "Innovative software as a service solutions including AI-powered tools, blockchain applications, smart energy management, and specialized business automation platforms.",
-    icon: Cloud,
+    description: "Specialized software solutions for specific business needs",
+    icon: Package,
     href: "/micro-saas",
+<<<<<<< HEAD
     features: ["AI-Powered Tools", "Blockchain Analytics", "Smart Energy Management", "Voice AI Assistants", "Predictive Maintenance", "Smart Contracts", "Green Technology", "Advanced Automation"],
     pricing: "Starting at $29/month",
     count: "45+ Products",
+=======
+    features: ["Custom Development", "API Integration", "Scalable Architecture", "24/7 Support"],
+    pricing: "Starting at $99/month",
+    count: "25+ Products",
+>>>>>>> main
     popular: true
   }
 ];
 
+<<<<<<< HEAD
 const benefits = [
   {
     icon: CheckCircle,
@@ -57,11 +164,59 @@ const benefits = [
     icon: Shield,
     title: "24/7 Support",
     description: "Round-the-clock technical support"
+=======
+const mainServices = [
+  {
+    title: "AI Services",
+    description: "Cutting-edge artificial intelligence solutions to transform your business operations",
+    icon: Brain,
+    href: "/ai-services",
+    features: [
+      "Machine Learning Models",
+      "Natural Language Processing",
+      "Computer Vision",
+      "Predictive Analytics",
+      "AI Chatbots",
+      "Process Automation"
+    ],
+    color: "from-purple-500 to-pink-500"
+  },
+  {
+    title: "IT Services",
+    description: "Comprehensive information technology solutions for modern businesses",
+    icon: Network,
+    href: "/it-services",
+    features: [
+      "Cloud Migration",
+      "Infrastructure Management",
+      "Network Security",
+      "System Integration",
+      "IT Consulting",
+      "24/7 Support"
+    ],
+    color: "from-blue-500 to-cyan-500"
+  },
+  {
+    title: "Micro SaaS",
+    description: "Scalable software as a service solutions for specific business needs",
+    icon: Cloud,
+    href: "/micro-saas",
+    features: [
+      "Custom Applications",
+      "API Development",
+      "Data Management",
+      "User Analytics",
+      "Scalable Architecture",
+      "Multi-tenant Solutions"
+    ],
+    color: "from-green-500 to-emerald-500"
+>>>>>>> main
   }
 ];
 
 export default function ServicesPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Head>
         <title>Our Services - Zion Tech Group</title>
@@ -77,8 +232,8 @@ export default function ServicesPage() {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <motion.div,
+    initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -99,8 +254,8 @@ export default function ServicesPage() {
       {/* Services Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-12 md:mb-16"
+          <motion.div,
+    className="text-center mb-12 md:mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -118,13 +273,44 @@ export default function ServicesPage() {
             {services.map((service, index) => {
               const IconComponent = service.icon;
               return (
+                <motion.div,
+    key={index}
+                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative"
+=======
+    <Layout>
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Our Services
+              </h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Comprehensive technology solutions to transform your business
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {mainServices.map((service, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative"
+                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+>>>>>>> main
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
                   whileHover={{ y: -5 }}
                 >
                   {service.popular && (
@@ -165,8 +351,8 @@ export default function ServicesPage() {
                     <span className="text-lg font-semibold text-blue-600">{service.pricing}</span>
                   </div>
 
-                  <Link
-                    href={service.href}
+                  <Link,
+    href={service.href}
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center group"
                   >
                     <span>Learn More</span>
@@ -175,15 +361,43 @@ export default function ServicesPage() {
                 </motion.div>
               );
             })}
+=======
+                >
+                  <div className="flex items-center mb-4">
+                    <service.icon className="h-8 w-8 text-blue-600 mr-3" />
+                    <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
+                  </div>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-gray-500">{service.pricing}</span>
+                    <Link
+                      href={service.href}
+                      className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                    >
+                      Learn More
+                    </Link>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+>>>>>>> main
           </div>
-        </div>
-      </section>
+        </section>
 
+<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
+          <motion.div,
+    className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -201,14 +415,24 @@ export default function ServicesPage() {
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
               return (
+                <motion.div,
+    key={index}
+=======
+        {/* Stats Section */}
+        <section className="py-20 bg-blue-600">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
                 <motion.div
                   key={index}
+>>>>>>> main
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
+<<<<<<< HEAD
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-blue-600" />
                   </div>
@@ -228,8 +452,8 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <motion.div,
+    initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -252,5 +476,18 @@ export default function ServicesPage() {
         </div>
       </section>
     </div>
+=======
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-blue-100">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+>>>>>>> main
   );
 }

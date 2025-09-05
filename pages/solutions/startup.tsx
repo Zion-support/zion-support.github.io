@@ -1,7 +1,7 @@
-import _React from 'react';,
+import React from 'react';
 import Link from 'next/link';';
-import { motion } from 'framer-motion';,
-import { Rocket, Zap, DollarSign, Users, ArrowRight, CheckCircle, Clock, Target, TrendingUp } from 'lucide-react';,
+import { motion } from 'framer-motion';
+import { Rocket, Zap, DollarSign, Users, ArrowRight, CheckCircle, Clock, Target, TrendingUp } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
 const features = [;
@@ -29,7 +29,7 @@ const features = [;
     icon: Users,
     benefits: ['Technical Mentorship, 'Best Practices', 'Industry Insights', 'Ongoing Support']',
   }
-;];,
+;];
 
 const services = [;
   { title: 'MVP Development, description: 'Minimum viable product development in 2-4 weeks' },',
@@ -38,26 +38,26 @@ const services = [;
   { title: 'API Development, description: 'Robust APIs for your mobile and web applications' },',
   { title: 'Cloud Setup, description: 'Scalable cloud infrastructure from day one' },',
   { title: 'Growth Hacking, description: 'Technical solutions to accelerate user acquisition' }',
-;];,
+;];
 
 const stats = [;
   { number: '100+, label: 'Startups Helped' },',
   { number: '300+, label: 'Projects Delivered' },',
   { number: '300%, label: 'Average Growth' },',
   { number: '2-4, label: 'Weeks to MVP' }',
-;];,
+;];
 
-export default function StartupSolutionsPage() {}
-  return (;,
+export default function StartupSolutionsPage() {
+  return (;
     <Layout);
       title="Startup Solutions - Zion Tech Group"";
-      description="Rapid development and scaling solutions for startups. MVP development, tech stack selection, and growth-focused technology solutions."",
-      keywords="startup solutions, MVP development, rapid prototyping, startup technology, scaling solutions"",
-    >;,
+      description="Rapid development and scaling solutions for startups. MVP development, tech stack selection, and growth-focused technology solutions.""
+      keywords="startup solutions, MVP development, rapid prototyping, startup technology, scaling solutions""
+    >;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20 overflow-hidden">",
-          <div className="absolute inset-0">";,
+        <section className="relative bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20 overflow-hidden">"
+          <div className="absolute inset-0">";
             <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
             <div className="absolute top-40 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
           </div>;
@@ -67,8 +67,8 @@ export default function StartupSolutionsPage() {}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"",
-            >;,
+              className="text-center max-w-4xl mx-auto""
+            >;
               <div className="flex items-center justify-center mb-6">";
                 <Rocket className="w-16 h-16 text-green-400 mr-4" />";
                 <h1 className="text-5xl md:text-6xl font-bold">";
@@ -98,8 +98,8 @@ export default function StartupSolutionsPage() {}
         </section>;
 
         {/* Stats Section */}
-        <section className="py-16 bg-white">",
-          <div className="container mx-auto px-4">";,
+        <section className="py-16 bg-white">"
+          <div className="container mx-auto px-4">";
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
               {stats.map((stat, index) => (,
                 <motion.div}),
@@ -107,31 +107,31 @@ export default function StartupSolutionsPage() {}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center"",
-                >;,
-                  <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">{stat.number}</div>",
-                  <div className="text-gray-600 font-medium">{stat.label}</div>",
-                </motion.div>;,
+                  className="text-center""
+                >;
+                  <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">{stat.number}</div>"
+                  <div className="text-gray-600 font-medium">{stat.label}</div>"
+                </motion.div>;
               ))}
             </div>,
-          </div>;,
+          </div>;
         </section>;
 
         {/* Features Section */}
-        <section className="py-20 bg-gray-50">",
-          <div className="container mx-auto px-4">";,
+        <section className="py-20 bg-gray-50">"
+          <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"",
-            >;,
+              className="text-center mb-16""
+            >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Advantages</span>";
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 We understand the unique challenges startups face and provide solutions that help you move fast, stay lean, and scale efficiently,
-              </p>;,
+              </p>;
             </motion.div>;
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
@@ -141,47 +141,47 @@ export default function StartupSolutionsPage() {}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
-                  className="bg-white rounded-2xl shadow-xl p-8"",
-                >;,
+                  className="bg-white rounded-2xl shadow-xl p-8""
+                >;
                   <div className="flex items-center mb-6">";
                     <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl flex items-center justify-center mr-4">";
                       <feature.icon className="w-8 h-8 text-white" />";
                     </div>;
                     <div>;
-                      <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>",
-                      <p className="text-gray-600">{feature.description}</p>",
-                    </div>;,
+                      <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>"
+                      <p className="text-gray-600">{feature.description}</p>"
+                    </div>;
                   </div>;
 
                   <ul className="space-y-3">";
                     {feature.benefits.map((benefit, benefitIndex) => (,
-                      <li key={benefitIndex} className="flex items-center text-gray-600">",
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";,
+                      <li key={benefitIndex} className="flex items-center text-gray-600">"
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";
                         {benefit}
                       </li>,
                     ))}
                   </ul>,
-                </motion.div>;,
+                </motion.div>;
               ))}
             </div>,
-          </div>;,
+          </div>;
         </section>;
 
         {/* Services Section */}
-        <section className="py-20 bg-white">",
-          <div className="container mx-auto px-4">";,
+        <section className="py-20 bg-white">"
+          <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"",
-            >;,
+              className="text-center mb-16""
+            >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Services</span>";
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Comprehensive startup services designed to help you build, launch, and scale your business,
-              </p>;,
+              </p>;
             </motion.div>;
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
@@ -191,25 +191,25 @@ export default function StartupSolutionsPage() {}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"",
-                >;,
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>",
-                  <p className="text-gray-600">{service.description}</p>",
-                </motion.div>;,
+                  className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300""
+                >;
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>"
+                  <p className="text-gray-600">{service.description}</p>"
+                </motion.div>;
               ))}
             </div>,
-          </div>;,
+          </div>;
         </section>;
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">",
-          <div className="container mx-auto px-4 text-center">";,
+        <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">"
+          <div className="container mx-auto px-4 text-center">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";,
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Launch Your Startup?;
               </h2>;
               <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">";

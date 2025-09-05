@@ -291,6 +291,204 @@ const microSaasServices = [
     ],
     pricing: "Starting at $189/month",
     contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Cybersecurity Monitoring",
+    description: "Real-time threat detection and response system with automated security incident management",
+    icon: Shield,
+    features: [
+      "Real-time Threat Detection",
+      "Automated Incident Response",
+      "Vulnerability Assessment",
+      "Compliance Monitoring",
+      "Security Analytics",
+      "24/7 Monitoring"
+    ],
+    color: "from-red-500 to-orange-500",
+    benefits: [
+      "99.9% threat detection accuracy",
+      "Automated response to threats",
+      "Reduced security incidents",
+      "Compliance assurance"
+    ],
+    pricing: "Starting at $449/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Smart Energy Management Platform",
+    description: "AI-driven energy optimization for buildings and facilities with predictive maintenance and cost reduction",
+    icon: Zap,
+    features: [
+      "Energy Consumption Analytics",
+      "Predictive Maintenance",
+      "Cost Optimization",
+      "Carbon Footprint Tracking",
+      "Smart Grid Integration",
+      "Automated Controls"
+    ],
+    color: "from-green-500 to-lime-500",
+    benefits: [
+      "35% energy cost reduction",
+      "Predictive maintenance alerts",
+      "Reduced carbon footprint",
+      "Automated energy optimization"
+    ],
+    pricing: "Starting at $299/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Legal Document Analysis",
+    description: "Intelligent contract review and legal document analysis with risk assessment and compliance checking",
+    icon: Layers,
+    features: [
+      "Contract Analysis",
+      "Risk Assessment",
+      "Compliance Checking",
+      "Document Comparison",
+      "Legal Research",
+      "Automated Summaries"
+    ],
+    color: "from-slate-500 to-gray-500",
+    benefits: [
+      "90% faster contract review",
+      "Reduced legal risks",
+      "Automated compliance checking",
+      "Improved accuracy"
+    ],
+    pricing: "Starting at $399/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Intelligent Fleet Management System",
+    description: "AI-powered fleet optimization with route planning, fuel efficiency, and predictive maintenance",
+    icon: Settings,
+    features: [
+      "Route Optimization",
+      "Fuel Efficiency Tracking",
+      "Predictive Maintenance",
+      "Driver Behavior Analysis",
+      "Cost Management",
+      "Real-time Monitoring"
+    ],
+    color: "from-blue-500 to-indigo-500",
+    benefits: [
+      "25% fuel cost reduction",
+      "Optimized routes",
+      "Reduced maintenance costs",
+      "Improved driver safety"
+    ],
+    pricing: "Starting at $349/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Healthcare Analytics",
+    description: "Comprehensive healthcare data analysis with patient insights, treatment optimization, and outcome prediction",
+    icon: Target,
+    features: [
+      "Patient Data Analysis",
+      "Treatment Optimization",
+      "Outcome Prediction",
+      "Risk Stratification",
+      "Clinical Decision Support",
+      "Population Health Analytics"
+    ],
+    color: "from-emerald-500 to-cyan-500",
+    benefits: [
+      "Improved patient outcomes",
+      "Optimized treatment plans",
+      "Reduced healthcare costs",
+      "Better clinical decisions"
+    ],
+    pricing: "Starting at $599/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Smart Real Estate Management",
+    description: "AI-powered property management with tenant screening, maintenance prediction, and market analysis",
+    icon: Globe,
+    features: [
+      "Tenant Screening",
+      "Maintenance Prediction",
+      "Market Analysis",
+      "Rent Optimization",
+      "Property Valuation",
+      "Investment Analytics"
+    ],
+    color: "from-amber-500 to-orange-500",
+    benefits: [
+      "40% reduction in vacancies",
+      "Predictive maintenance",
+      "Optimized rental income",
+      "Better investment decisions"
+    ],
+    pricing: "Starting at $279/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Social Media Intelligence",
+    description: "Comprehensive social media monitoring and analysis with sentiment tracking and influencer identification",
+    icon: Users,
+    features: [
+      "Sentiment Analysis",
+      "Influencer Identification",
+      "Trend Monitoring",
+      "Brand Mention Tracking",
+      "Competitor Analysis",
+      "Campaign Performance"
+    ],
+    color: "from-pink-500 to-purple-500",
+    benefits: [
+      "Real-time brand monitoring",
+      "Improved social strategy",
+      "Better influencer partnerships",
+      "Enhanced brand reputation"
+    ],
+    pricing: "Starting at $199/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Intelligent Quality Assurance Platform",
+    description: "AI-powered quality control with automated testing, defect prediction, and process optimization",
+    icon: CheckCircle,
+    features: [
+      "Automated Testing",
+      "Defect Prediction",
+      "Process Optimization",
+      "Quality Metrics",
+      "Compliance Monitoring",
+      "Continuous Improvement"
+    ],
+    color: "from-teal-500 to-cyan-500",
+    benefits: [
+      "95% defect detection rate",
+      "Reduced testing time",
+      "Improved product quality",
+      "Automated compliance"
+    ],
+    pricing: "Starting at $329/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Customer Feedback Analysis",
+    description: "Intelligent analysis of customer feedback with sentiment analysis, trend identification, and action recommendations",
+    icon: MessageSquare,
+    features: [
+      "Sentiment Analysis",
+      "Trend Identification",
+      "Action Recommendations",
+      "Multi-channel Feedback",
+      "Competitor Comparison",
+      "ROI Tracking"
+    ],
+    color: "from-violet-500 to-purple-500",
+    benefits: [
+      "Real-time feedback insights",
+      "Improved customer satisfaction",
+      "Data-driven improvements",
+      "Competitive advantage"
+    ],
+    pricing: "Starting at $179/month",
+    contact: "kleber@ziontechgroup.com"
   }
 ];
 

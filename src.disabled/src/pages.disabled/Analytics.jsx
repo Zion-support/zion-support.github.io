@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+const { jsx as _jsx,jsxs as _jsxs,Fragment as _Fragment } from "react/jsx-runtime"; import { Footer } from "@/components/Footer";"""; import SEO from "@/components/SEO";"""; import { GradientHeading } from "@/components/GradientHeading"; export default function Analytics() { return; }; return null} return (_jsxs(_Fragment,{ children[_jsx(SEO,{ title: "Analytics - Zion Tech Group",description: "View platform analytics and insights.",canonical: "https: export { Analytics }; export { Analytics }; export { Analytics }; export { Analytics }; export { Analytics };'"'"
+=======
 import React from 'react';
 
 interface AnalyticsProps {
@@ -12,3 +15,4 @@ export default function Analytics({ }: AnalyticsProps) {
     </div>
   );
 }
+>>>>>>> main

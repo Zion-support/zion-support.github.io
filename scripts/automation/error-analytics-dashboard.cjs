@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+#!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");""
+=======
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -982,3 +985,4 @@ if (require.main === module) {
     process.exit(1)})}
 ;
 module.exports = ErrorAnalyticsDashboard
+>>>>>>> main

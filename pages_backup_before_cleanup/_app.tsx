@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+const type { AppProps } from "next/app" import "./styles/globals.css" export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} /> }''"
+=======
 import React from 'react';
 
 interface _appProps {
@@ -12,3 +15,4 @@ export default function _app({ }: _appProps) {
     </div>
   );
 }
+>>>>>>> main

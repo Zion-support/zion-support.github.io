@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+#!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");class ContinuousImprovement { constructor() { this.ensureLogDir(); } ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; return false; } } try {" this.log("Checking for dependency updates.");"" execSync("npm outdated", { stdio: "pipe" });" this.log("Dependency check completed"); return true; } catch (error) {"` this.log(`Dependency check failed: ${error.message}`); return false; } } return false; } }}module.exports = ContinuousImprovement;""`"`
+=======
 #!/usr/bin/env node;
 ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
 cursor/website-audit-and-update-with-deployment-76dc;
@@ -123,3 +126,4 @@ cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 };
 module.exports = ContinuousImprovement;
+>>>>>>> main
