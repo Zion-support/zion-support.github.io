@@ -45,7 +45,10 @@ import {
   Calendar,
   Headphones,
   Kanban,
-  HardDrive
+  HardDrive,
+  Home,
+  BookOpen,
+  ShoppingCart
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -230,6 +233,286 @@ const microSaaSProducts = [
     pricing: '$39 - $199/month',
     category: 'Data Management',
     link: 'https://databackup.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered SEO Optimizer',
+    description: 'Automated SEO analysis and optimization with real-time ranking tracking and content suggestions.',
+    icon: Search,
+    features: ['Real-time SEO Analysis', 'Content Optimization', 'Ranking Tracking', 'Competitor Analysis'],
+    pricing: '$149 - $799/month',
+    category: 'SEO',
+    popular: true,
+    link: 'https://seooptimizer.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Auditor',
+    description: 'Automated smart contract security analysis and vulnerability detection for blockchain projects.',
+    icon: Shield,
+    features: ['Security Analysis', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Checks'],
+    pricing: '$499 - $2,999/project',
+    category: 'Blockchain',
+    link: 'https://contractauditor.ziontechgroup.com'
+  },
+  {
+    title: 'Voice Analytics Platform',
+    description: 'AI-powered voice analysis for customer service calls with sentiment and quality scoring.',
+    icon: Mic,
+    features: ['Sentiment Analysis', 'Quality Scoring', 'Call Transcription', 'Insights Dashboard'],
+    pricing: '$199 - $999/month',
+    category: 'Analytics',
+    link: 'https://voiceanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'Carbon Footprint Tracker',
+    description: 'Track and optimize your company\'s carbon footprint with actionable sustainability insights.',
+    icon: Sprout,
+    features: ['Carbon Tracking', 'Sustainability Reports', 'Goal Setting', 'Industry Benchmarking'],
+    pricing: '$99 - $499/month',
+    category: 'Sustainability',
+    link: 'https://carbonfootprint.ziontechgroup.com'
+  },
+  {
+    title: 'AI Legal Document Analyzer',
+    description: 'Automated legal document analysis with contract review and risk assessment.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
+    pricing: '$299 - $1,499/month',
+    category: 'Legal Tech',
+    link: 'https://legalanalyzer.ziontechgroup.com'
+  },
+  {
+    title: 'Real-time Collaboration Whiteboard',
+    description: 'Advanced digital whiteboard with AI-powered meeting transcription and action item extraction.',
+    icon: Monitor,
+    features: ['Real-time Collaboration', 'AI Transcription', 'Action Item Extraction', 'Integration APIs'],
+    pricing: '$79 - $399/month',
+    category: 'Collaboration',
+    link: 'https://whiteboardpro.ziontechgroup.com'
+  },
+  {
+    title: 'Supply Chain Visibility Platform',
+    description: 'End-to-end supply chain tracking with predictive analytics and risk management.',
+    icon: Network,
+    features: ['Real-time Tracking', 'Predictive Analytics', 'Risk Management', 'Supplier Portal'],
+    pricing: '$399 - $1,999/month',
+    category: 'Supply Chain',
+    link: 'https://supplychain.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered A/B Testing Platform',
+    description: 'Intelligent A/B testing with automated test generation and statistical significance analysis.',
+    icon: Target,
+    features: ['Auto Test Generation', 'Statistical Analysis', 'Multi-variate Testing', 'Conversion Optimization'],
+    pricing: '$199 - $999/month',
+    category: 'Testing',
+    link: 'https://abtesting.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Home IoT Manager',
+    description: 'Centralized IoT device management with automation rules and energy optimization.',
+    icon: Home,
+    features: ['Device Management', 'Automation Rules', 'Energy Optimization', 'Security Monitoring'],
+    pricing: '$49 - $249/month',
+    category: 'IoT',
+    link: 'https://smarthome.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Fraud Detection',
+    description: 'Real-time fraud detection using machine learning for financial transactions and user behavior.',
+    icon: Shield,
+    features: ['Real-time Detection', 'ML Models', 'Behavioral Analysis', 'Risk Scoring'],
+    pricing: '$299 - $1,499/month',
+    category: 'Security',
+    link: 'https://frauddetection.ziontechgroup.com'
+  },
+  {
+    title: 'Employee Wellness Tracker',
+    description: 'Comprehensive employee wellness monitoring with mental health insights and productivity metrics.',
+    icon: Heart,
+    features: ['Wellness Monitoring', 'Mental Health Insights', 'Productivity Metrics', 'Team Analytics'],
+    pricing: '$29 - $149/month',
+    category: 'HR Tech',
+    link: 'https://wellnesstracker.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Code Generator',
+    description: 'Generate production-ready code from natural language descriptions with multiple language support.',
+    icon: Code,
+    features: ['Natural Language to Code', 'Multi-language Support', 'Code Review', 'Documentation Generation'],
+    pricing: '$199 - $999/month',
+    category: 'Development',
+    link: 'https://codegenerator.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Energy Management',
+    description: 'AI-powered energy consumption optimization for buildings and industrial facilities.',
+    icon: Zap,
+    features: ['Energy Optimization', 'Predictive Maintenance', 'Cost Analysis', 'Sustainability Reporting'],
+    pricing: '$399 - $1,999/month',
+    category: 'Energy',
+    link: 'https://energymanager.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Translation Hub',
+    description: 'Real-time translation service with context awareness and industry-specific terminology.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Awareness', 'Industry Terminology', 'Quality Scoring'],
+    pricing: '$99 - $499/month',
+    category: 'Translation',
+    link: 'https://translationhub.ziontechgroup.com'
+  },
+  {
+    title: 'Predictive Maintenance Platform',
+    description: 'AI-driven predictive maintenance for industrial equipment with failure prediction and optimization.',
+    icon: Settings,
+    features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Equipment Monitoring'],
+    pricing: '$599 - $2,999/month',
+    category: 'Industrial IoT',
+    link: 'https://predictivemaintenance.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Resume Parser',
+    description: 'Intelligent resume parsing and candidate matching with skills extraction and ranking.',
+    icon: Users,
+    features: ['Resume Parsing', 'Skills Extraction', 'Candidate Matching', 'Ranking Algorithm'],
+    pricing: '$149 - $799/month',
+    category: 'HR Tech',
+    link: 'https://resumeparser.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Document Workflow',
+    description: 'Automated document processing with intelligent routing, approval workflows, and compliance tracking.',
+    icon: FileText,
+    features: ['Intelligent Routing', 'Approval Workflows', 'Compliance Tracking', 'Version Control'],
+    pricing: '$199 - $999/month',
+    category: 'Document Management',
+    link: 'https://documentworkflow.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Market Research',
+    description: 'Automated market research with competitor analysis, trend identification, and opportunity mapping.',
+    icon: TrendingUp,
+    features: ['Competitor Analysis', 'Trend Identification', 'Opportunity Mapping', 'Market Reports'],
+    pricing: '$299 - $1,499/month',
+    category: 'Market Research',
+    link: 'https://marketresearch.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Generator',
+    description: 'AI-powered smart contract generation with security best practices and automated testing.',
+    icon: Code,
+    features: ['Contract Generation', 'Security Best Practices', 'Automated Testing', 'Deployment Tools'],
+    pricing: '$399 - $1,999/project',
+    category: 'Blockchain',
+    link: 'https://contractgenerator.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Video Editor',
+    description: 'Automated video editing with AI-driven content analysis, trimming, and enhancement.',
+    icon: Video,
+    features: ['Auto Editing', 'Content Analysis', 'Smart Trimming', 'Enhancement Tools'],
+    pricing: '$99 - $499/month',
+    category: 'Video Production',
+    link: 'https://videoeditor.ziontechgroup.com'
+  },
+  {
+    title: 'Intelligent Inventory Forecasting',
+    description: 'AI-powered demand forecasting and inventory optimization with supply chain integration.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Supply Chain Integration', 'Cost Analysis'],
+    pricing: '$299 - $1,499/month',
+    category: 'Supply Chain',
+    link: 'https://inventoryforecast.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Customer Segmentation',
+    description: 'Advanced customer segmentation using machine learning with behavioral analysis and targeting.',
+    icon: Target,
+    features: ['Behavioral Analysis', 'ML Segmentation', 'Targeting Tools', 'Campaign Optimization'],
+    pricing: '$199 - $999/month',
+    category: 'Marketing',
+    link: 'https://customersegment.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Compliance Monitor',
+    description: 'Automated compliance monitoring with regulatory updates and risk assessment across industries.',
+    icon: Shield,
+    features: ['Regulatory Updates', 'Risk Assessment', 'Compliance Reports', 'Industry Standards'],
+    pricing: '$399 - $1,999/month',
+    category: 'Compliance',
+    link: 'https://compliancemonitor.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Email Security',
+    description: 'Advanced email security with phishing detection, malware scanning, and threat intelligence.',
+    icon: Mail,
+    features: ['Phishing Detection', 'Malware Scanning', 'Threat Intelligence', 'Incident Response'],
+    pricing: '$149 - $799/month',
+    category: 'Security',
+    link: 'https://emailsecurity.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Fleet Management',
+    description: 'AI-powered fleet management with route optimization, fuel efficiency, and predictive maintenance.',
+    icon: Car,
+    features: ['Route Optimization', 'Fuel Efficiency', 'Predictive Maintenance', 'Driver Analytics'],
+    pricing: '$199 - $999/month',
+    category: 'Fleet Management',
+    link: 'https://fleetmanager.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Advanced content moderation using computer vision and NLP for text, images, and videos.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Real-time Processing', 'Custom Rules', 'API Integration'],
+    pricing: '$299 - $1,499/month',
+    category: 'Content Safety',
+    link: 'https://contentmoderation.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Building Management',
+    description: 'IoT-based building management with energy optimization, occupancy tracking, and predictive maintenance.',
+    icon: Building,
+    features: ['Energy Optimization', 'Occupancy Tracking', 'Predictive Maintenance', 'Space Utilization'],
+    pricing: '$499 - $2,499/month',
+    category: 'Building Management',
+    link: 'https://buildingmanager.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Financial Planning',
+    description: 'Personalized financial planning with investment recommendations and risk assessment.',
+    icon: DollarSign,
+    features: ['Investment Recommendations', 'Risk Assessment', 'Goal Setting', 'Portfolio Analysis'],
+    pricing: '$99 - $499/month',
+    category: 'FinTech',
+    link: 'https://financialplanner.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Agriculture Monitor',
+    description: 'IoT-based agriculture monitoring with crop health analysis, weather prediction, and yield optimization.',
+    icon: Sprout,
+    features: ['Crop Health Analysis', 'Weather Prediction', 'Yield Optimization', 'Soil Monitoring'],
+    pricing: '$199 - $999/month',
+    category: 'AgTech',
+    link: 'https://agriculturemonitor.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Learning Management',
+    description: 'Intelligent learning management with personalized content, progress tracking, and skill assessment.',
+    icon: BookOpen,
+    features: ['Personalized Content', 'Progress Tracking', 'Skill Assessment', 'Adaptive Learning'],
+    pricing: '$149 - $799/month',
+    category: 'EdTech',
+    link: 'https://learningmanager.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Retail Analytics',
+    description: 'AI-powered retail analytics with customer behavior analysis, inventory optimization, and sales forecasting.',
+    icon: ShoppingCart,
+    features: ['Customer Behavior Analysis', 'Inventory Optimization', 'Sales Forecasting', 'Heat Mapping'],
+    pricing: '$299 - $1,499/month',
+    category: 'Retail Tech',
+    link: 'https://retailanalytics.ziontechgroup.com'
   }
 ];
 
