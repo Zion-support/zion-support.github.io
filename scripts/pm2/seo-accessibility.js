@@ -399,8 +399,8 @@ class SEOAccessibility {
     };
     
     // Calculate overall score
-    let totalIssues = seoResult.totalIssues + a11yResult.totalIssues + perfResult.totalIssues;
-    let maxScore = 100;
+    const totalIssues = seoResult.totalIssues + a11yResult.totalIssues + perfResult.totalIssues;
+    const maxScore = 100;
     
     if (totalIssues === 0) {
       report.summary.overallScore = 100;

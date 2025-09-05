@@ -6,7 +6,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import next from '@next/eslint-plugin-next';
 
 export default [
-  js.configs.recommended;
+  js.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
@@ -31,6 +31,13 @@ export default [
         clearInterval: 'readonly',
         fetch: 'readonly',
         process: 'readonly',
+        // Node.js globals
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        global: 'readonly',
+        Buffer: 'readonly',
         // DOM types
         HTMLInputElement: 'readonly',
         HTMLTextAreaElement: 'readonly',
@@ -41,6 +48,17 @@ export default [
         KeyboardEvent: 'readonly',
         Node: 'readonly',
         PerformanceObserver: 'readonly',
+        URL: 'readonly',
+        // Jest globals
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        jest: 'readonly',
         // React
         React: 'readonly'
       }
@@ -56,7 +74,14 @@ export default [
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       ...next.configs.recommended.rules,
-      'no-unused-vars': 'warnno-console': 'warnprefer-const': 'errorno-var': 'errorreact/prop-types': 'offreact/react-in-jsx-scope': 'off@typescript-eslint/no-unused-vars': 'warn@typescript-eslint/no-explicit-any': 'warn'
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'error',
+      'no-var': 'error',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn'
     },
     settings: {
       react: {

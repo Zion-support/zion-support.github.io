@@ -20,15 +20,11 @@ jest.mock('next/router', () => ({
         off: jest.fn(),
         emit: jest.fn(),
       },
-<<<<<<< HEAD
-=======
       isFallback: false,
->>>>>>> cursor/automate-test-improve-and-merge-code-bf0a
     };
   },
 }));
 
-<<<<<<< HEAD
 // Mock Next.js Image component
 jest.mock('next/image', () => ({
   __esModule: true,
@@ -51,7 +47,7 @@ beforeEach(() => {
   // Reset all mocks before each test
   jest.clearAllMocks();
 });
-=======
+
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -82,4 +78,3 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 };
->>>>>>> cursor/automate-test-improve-and-merge-code-bf0a
