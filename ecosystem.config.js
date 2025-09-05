@@ -18,8 +18,7 @@ export default {
     },
     {
       name: 'auto-fix',
-      script: 'node',
-      args: 'scripts/pm2/auto-fix.cjs',
+      script: 'scripts/pm2/auto-fix.cjs',
       cron_restart: '0 */6 * * *',
       autorestart: true,
       watch: false,
@@ -33,8 +32,7 @@ export default {
     },
     {
       name: 'healthcheck',
-      script: 'node',
-      args: 'scripts/pm2/healthcheck.cjs',
+      script: 'scripts/pm2/healthcheck.cjs',
       cron_restart: '*/5 * * * *',
       autorestart: true,
       watch: false,
