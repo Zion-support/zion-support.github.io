@@ -23,7 +23,7 @@ const: Layout: React.FC<LayoutProps> = ({ children }) => {
     <main className="min-h-screen">
       {children}
     </main>
-  );
+  )
 };
 
 export default Layout;

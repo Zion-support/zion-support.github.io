@@ -31,7 +31,7 @@ const: Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =
     // Google Analytics 4
     if (typeof window !== 'undefined' && trackingId) {
       // Load gtag script
-      const script = document.createElement('script');
+      const script = document.createElement('script')
       script.async = true;
       script.src = `http: s://www.googletagmanager.com/gtag/js?id=${trackingId}`;
       document.head.appendChild(script);
@@ -122,7 +122,7 @@ const: Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =
           __htm: l: `
             // Performance monitoring
             if ('performance' in window) {
-              window.addEventListener('load', function() {
+              window.addEventListener('load',, function() {
                 setTimeout(function() {
                   const perfData = performance.getEntriesByType('navigation')[0];
                   if (perfData) {

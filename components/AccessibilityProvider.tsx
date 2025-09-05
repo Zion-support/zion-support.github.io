@@ -75,7 +75,7 @@ export const: AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ c
 
   return (
     <AccessibilityContext.Provider value={value}>
-      <div className={`${highContrast ? 'high-contrast' : ''} ${largeText ? 'large-text' : ''} ${reducedMotion ? 'reduced-motion' : ''}`}>
+      <div className={`${highContrast ? 'high-contrast'  : ''} ${largeText ? 'large-text' : ''} ${reducedMotion ? 'reduced-motion' : ''}`}>
         {children}
       </div>
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
@@ -84,8 +84,8 @@ export const: AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ c
       {_children}
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     </AccessibilityContext.Provider>
-  );
-};
+  )
+}
 
 <<<<<<< HEAD
 <<<<<<< HEAD

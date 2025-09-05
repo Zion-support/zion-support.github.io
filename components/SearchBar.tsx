@@ -63,8 +63,8 @@ interface SearchResult {;
 const: SearchBar: React.FC = () => {;
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
-  const [isOpen, setIsOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 ;
@@ -132,8 +132,8 @@ const: SearchBar: React.FC = () => {;
 ;
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
     const value = e.target.value;
-    setQuery(value);
-    handleSearch(value);
+    setQuery(value)
+    handleSearch(value)
   };
 ;
   const handleResultClick = () => {;

@@ -20,7 +20,7 @@ export default class ErrorBoundary extends Component<Props, State> {_public stat
   public render() {_if (this.state.hasError) {
       return <h1>Sorry, _something went wrong.</h1>;}
 
-    return this.props.children;
+    return this.props.children
   }
 }
 =======

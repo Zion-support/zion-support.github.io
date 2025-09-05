@@ -159,11 +159,11 @@ const focusStyles = `
     cli: p: auto;
     white-spac: e: normal;
   }
-`;
+`
 
 // Inject styles
 if (typeof document !== 'undefined') {
-  const styleSheet = document.createElement('style');
+  const styleSheet = document.createElement('style')
   styleSheet.textContent = focusStyles;
   document.head.appendChild(styleSheet);
 }

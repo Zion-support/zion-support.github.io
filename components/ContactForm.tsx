@@ -293,8 +293,8 @@ const ContactForm: React.FC = () => {_const [formData, _setFormData] = useState<
       )}
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     </form>
-  );
-};
+  )
+}
 
 export default ContactForm;
 ,

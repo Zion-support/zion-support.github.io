@@ -88,7 +88,7 @@ class ErrorBoundary extends Component<Props, State> {_constructor(props: Props) 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
 
       return (
@@ -205,10 +205,10 @@ class ErrorBoundary extends Component<Props, State> {_constructor(props: Props) 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           </div>
         </div>
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
