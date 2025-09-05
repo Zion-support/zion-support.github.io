@@ -1,7 +1,6 @@
 export interface AdvancedCybersecurityService {}
   // TODO: Implement;
-};
-  "id": string;"
+};id": string;"
   name: string;,
   description: string;
   category: string;,
@@ -15,13 +14,13 @@ export interface AdvancedCybersecurityService {}
   reviewCount: number;,
   launchDate: string;
   popular?: boolean}"
-export const "ADVANCED_CYBERSECURITY_SERVICES_2027": AdvancedCybersecurityService[] = [{""}]
+export const "ADVANCED_CYBERSECURITY_SERVICES_2027": AdvancedCybersecurityService[] = [{}]
     id: 'ai-threat-intelligence-platform',''
     "name": 'AI-Powered Threat Intelligence Platform',''
     "description": 'Advanced threat detection and intelligence using machine learning and AI algorithms',''
     "category": 'Threat Intelligence',''
     "price": '$2,999/month',''
-    "features": [""]
+    "features": []
       'Real-time threat detection',''
       'AI-powered anomaly detection',''
       'Automated incident response',''
@@ -40,12 +39,11 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_2027": AdvancedCybersecurityServic
       'Incident response''];
     ],'
     "targetAudience": 'Large enterprises, MSSPs, Security teams',''
-    "rating": 4.8,""
-    "reviewCount": 156,""
+    "rating": 4.8, 
+    "reviewCount": 156, 
     "launchDate": '2027-01-15',''
-    "popular": true;"
-  },
-  {"}
+    "popular": true;"},
+  {}
     "id": 'zero-trust-security-framework',''
     "name": 'Zero Trust Security Framework',''
     "description": 'Comprehensive zero trust implementation with identity verification and micro-segmentation',''
@@ -69,8 +67,8 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_2027": AdvancedCybersecurityServic
       'Compliance management''];
     ],'
     "targetAudience": 'Enterprises, Government agencies, Healthcare organizations',''
-    "rating": 4.7,""
-    "reviewCount": 89,""
+    "rating": 4.7, 
+    "reviewCount": 89, 
     "launchDate": '2027-02-01''
   },
   {'}
@@ -97,12 +95,11 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_2027": AdvancedCybersecurityServic
       'Blockchain security''];
     ],'
     "targetAudience": 'Financial institutions, Government, Healthcare, Critical infrastructure',''
-    "rating": 4.9,""
-    "reviewCount": 67,""
+    "rating": 4.9, 
+    "reviewCount": 67, 
     "launchDate": '2027-01-20',''
-    "popular": true;"
-  },
-  {"}
+    "popular": true;"},
+  {}
     "id": 'ai-penetration-testing',''
     "name": 'AI-Powered Penetration Testing',''
     "description": 'Automated penetration testing with AI-driven vulnerability discovery and exploitation',''
@@ -126,8 +123,8 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_2027": AdvancedCybersecurityServic
       'Vulnerability management''];
     ],'
     "targetAudience": 'Security consultants, Enterprises, MSSPs',''
-    "rating": 4.6,""
-    "reviewCount": 123,""
+    "rating": 4.6, 
+    "reviewCount": 123, 
     "launchDate": '2027-02-10''
   },
   {'}
@@ -154,8 +151,8 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_2027": AdvancedCybersecurityServic
       'Security operations''];
     ],'
     "targetAudience": 'Cloud-first organizations, Enterprises, DevOps teams',''
-    "rating": 4.7,""
-    "reviewCount": 94,""
+    "rating": 4.7, 
+    "reviewCount": 94, 
     "launchDate": '2027-01-25''
   },
   {'}
@@ -182,8 +179,8 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_2027": AdvancedCybersecurityServic
       'Consumer IoT''];
     ],'
     "targetAudience": 'IoT manufacturers, Industrial companies, Smart city operators',''
-    "rating": 4.5,""
-    "reviewCount": 78,""
+    "rating": 4.5, 
+    "reviewCount": 78, 
     "launchDate": '2027-02-15''
   };'
 ];';';''

@@ -93,8 +93,12 @@ export default function APIPage() {
 <<<<<<< HEAD
 const apiFeaturesDetailed = [{
 =======
+<<<<<<< HEAD
+const apiFeaturesDetailed = [{
+=======
   const apiFeatures = [{
 >>>>>>> main
+>>>>>>> origin/resolve-all-conflicts-and-merge-1757067704
     title: 'RESTful API Design',
     description: 'Clean, intuitive REST API endpoints following industry best practices',
     icon: Code,
@@ -140,6 +144,8 @@ const sdkLanguages = [
   { name: 'Go', icon: 'GO', color: 'bg-cyan-500' }]
   
   // UI State & helpers
+<<<<<<< HEAD
+=======
 =======
   const sdkLanguages = [
     { name: 'JavaScript', icon: 'JS', color: 'bg-yellow-500' },
@@ -149,6 +155,7 @@ const sdkLanguages = [
     { name: 'PHP', icon: 'PHP', color: 'bg-indigo-500' },
     { name: 'Go', icon: 'GO', color: 'bg-cyan-500' }]
 >>>>>>> main
+>>>>>>> origin/resolve-all-conflicts-and-merge-1757067704
   const [selectedEndpoint, setSelectedEndpoint] = useState(0)
   const [copiedCode, setCopiedCode] = useState<number | null>(null)
   const copyToClipboard = (text: string, index: number) => {
