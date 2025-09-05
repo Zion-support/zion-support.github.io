@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
+import fs from "fs";
+import path from "path";
+// import { execSync } from "child_process"; // Not currently used
 
 class CodeQualityMonitor {
   constructor() {
@@ -35,8 +35,8 @@ class CodeQualityMonitor {
       this.saveMetrics();
       this.log("Code quality analysis completed successfully");
       return this.metrics;
-    } catch (error) {
-      this.log(`Code quality analysis failed: ${error.message}`, "ERROR");
+    } catch (analysisError) {
+      this.log(`Code quality analysis failed: ${analysisError.message}`, "ERROR");
       return null;
     }
   }
@@ -51,7 +51,9 @@ class CodeQualityMonitor {
         totalComplexity += lines.length * 0.1; // Simplified complexity metric
       });
       return Math.min(Math.floor(totalComplexity), 100);
-    } catch (error) {
+    } catch (complexityError) {
+      // Log error for debugging
+      console.warn(`Complexity calculation error: ${complexityError.message}`);
       return Math.floor(Math.random() * 10) + 1;
     }
   }
@@ -67,7 +69,9 @@ class CodeQualityMonitor {
       
       // Lower file size = higher maintainability
       return Math.max(50, 100 - Math.floor(avgFileSize / 1000));
-    } catch (error) {
+    } catch (maintainabilityError) {
+      // Log error for debugging
+      console.warn(`Maintainability calculation error: ${maintainabilityError.message}`);
       return Math.floor(Math.random() * 100) + 50;
     }
   }

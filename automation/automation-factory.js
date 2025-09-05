@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from "fs";
 import path from "path";
-import { execSync, spawn } from "child_process";
+import { spawn } from "child_process";
 import chokidar from "chokidar";
 import { fileURLToPath } from "url";
 
@@ -358,7 +358,7 @@ optimizer.optimizePerformance().then(report => {
     this.log("Generated performance optimizer script");
   }
 
-  async runScript(scriptName, options = {}) {
+  async runScript(scriptName) {
     if (!this.scripts.has(scriptName)) {
       this.log(`Script "${scriptName}" not found`, "ERROR");
       return false;
@@ -381,34 +381,34 @@ optimizer.optimizePerformance().then(report => {
       this.saveStatus();
 
       return new Promise((resolve) => {
-        child.on("close", (code) => {
+        child.on("close", (exitCode) => {
           const duration = Date.now() - startTime;
           this.runningScripts.delete(scriptName);
 
-          if (code === 0) {
+          if (exitCode === 0) {
             script.successCount++;
             this.log(`Script "${scriptName}" completed successfully in ${duration}ms`);
           } else {
             script.errorCount++;
-            this.log(`Script "${scriptName}" failed with code ${code}`, "ERROR");
+            this.log(`Script "${scriptName}" failed with code ${exitCode}`, "ERROR");
           }
 
           script.lastRun = new Date().toISOString();
           this.saveStatus();
-          resolve(code === 0);
+          resolve(exitCode === 0);
         });
 
-        child.on("error", (error) => {
+        child.on("error", (childError) => {
           script.errorCount++;
-          this.log(`Script "${scriptName}" error: ${error.message}`, "ERROR");
+          this.log(`Script "${scriptName}" error: ${childError.message}`, "ERROR");
           this.runningScripts.delete(scriptName);
           this.saveStatus();
           resolve(false);
         });
       });
-    } catch (error) {
+    } catch (startError) {
       script.errorCount++;
-      this.log(`Failed to start script "${scriptName}": ${error.message}`, "ERROR");
+      this.log(`Failed to start script "${scriptName}": ${startError.message}`, "ERROR");
       this.runningScripts.delete(scriptName);
       this.saveStatus();
       return false;
@@ -439,22 +439,25 @@ optimizer.optimizePerformance().then(report => {
   listScripts() {
     // // console.log("\nAvailable Automation Scripts:");
     
-    for (const [name, script] of this.scripts) {
-      const status = this.runningScripts.has(name) ? "RUNNING" : script.status.toUpperCase();
-      const lastRun = script.lastRun ? new Date(script.lastRun).toLocaleString() : "Never";
+    for (const [scriptName, script] of this.scripts) {
+      // Script information available for logging
+      const scriptStatus = this.runningScripts.has(scriptName) ? "RUNNING" : script.status.toUpperCase();
+      const scriptLastRun = script.lastRun ? new Date(script.lastRun).toLocaleString() : "Never";
       
-      // // console.log(`\n${name}:`);
-      // // console.log(`  Description: ${script.description}`);
-      // // console.log(`  Status: ${status}`);
-      // // console.log(`  Last Run: ${lastRun}`);
-      // // console.log(`  Success Count: ${script.successCount}`);
-      // // console.log(`  Error Count: ${script.errorCount}`);
+      // Log script information (commented out to avoid console output)
+      // console.log(`\n${scriptName}:`);
+      // console.log(`  Description: ${script.description}`);
+      // console.log(`  Status: ${scriptStatus}`);
+      // console.log(`  Last Run: ${scriptLastRun}`);
+      // console.log(`  Success Count: ${script.successCount}`);
+      // console.log(`  Error Count: ${script.errorCount}`);
     }
 
-    // // console.log("\nRunning Scripts:");
-    for (const [name, info] of this.runningScripts) {
-      const duration = Date.now() - info.startTime;
-      // // console.log(`${name}: Running for ${Math.floor(duration / 1000)}s`);
+    // Log running scripts information (commented out to avoid console output)
+    // console.log("\nRunning Scripts:");
+    for (const [runningName, runningInfo] of this.runningScripts) {
+      const runningDuration = Date.now() - runningInfo.startTime;
+      // console.log(`${runningName}: Running for ${Math.floor(runningDuration / 1000)}s`);
     }
   }
 
@@ -473,8 +476,8 @@ optimizer.optimizePerformance().then(report => {
     watcher.on("change", (filePath) => {
       this.log(`File changed: ${filePath}`);
       // Run code quality check on file changes
-      this.runScript("code-quality").catch(error => {
-        this.log(`Error running code quality check: ${error.message}`, "ERROR");
+      this.runScript("code-quality").catch(qualityError => {
+        this.log(`Error running code quality check: ${qualityError.message}`, "ERROR");
       });
     });
 

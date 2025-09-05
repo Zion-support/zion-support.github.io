@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
 
 /**
  * Build Monitor - Continuously monitors build health and reports issues
@@ -48,30 +48,36 @@ class BuildMonitor {
         results.build.status = 'success';
         results.build.duration = Date.now() - buildStart;
         this.consecutiveFailures = 0;
-        this.log('Build check: SUCCESS')} catch (error) {
+        this.log('Build check: SUCCESS');
+      } catch (buildError) {
         results.build.status = 'failed';
         results.build.duration = Date.now() - buildStart;
-        results.build.errors = this.parseErrors(error.stdout || error.message);
+        results.build.errors = this.parseErrors(buildError.stdout || buildError.message);
         this.consecutiveFailures++;
-        this.log(`Build check: FAILED (${this.consecutiveFailures} consecutive failures)`, 'ERROR')}
+        this.log(`Build check: FAILED (${this.consecutiveFailures} consecutive failures)`, 'ERROR');
+      }
 
       // Check linting (non-blocking)
       try {
         execSync('yarn lint', { stdio: 'pipe', cwd: process.cwd() });
         results.lint.status = 'success';
-        this.log('Lint check: SUCCESS')} catch (error) {
+        this.log('Lint check: SUCCESS');
+      } catch (lintError) {
         results.lint.status = 'failed';
-        results.lint.issues = this.parseLintIssues(error.stdout || error.message);
-        this.log('Lint check: ISSUES FOUNDWARN')}
+        results.lint.issues = this.parseLintIssues(lintError.stdout || lintError.message);
+        this.log('Lint check: ISSUES FOUND', 'WARN');
+      }
 
       // Check TypeScript (non-blocking)
       try {
         execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'pipe', cwd: process.cwd() });
         results.typeCheck.status = 'success';
-        this.log('TypeScript check: SUCCESS')} catch (error) {
+        this.log('TypeScript check: SUCCESS');
+      } catch (typeError) {
         results.typeCheck.status = 'failed';
-        results.typeCheck.errors = this.parseTypeErrors(error.stdout || error.message);
-        this.log('TypeScript check: ERRORS FOUNDWARN')}
+        results.typeCheck.errors = this.parseTypeErrors(typeError.stdout || typeError.message);
+        this.log('TypeScript check: ERRORS FOUND', 'WARN');
+      }
 
       // Check dependencies
       try {
@@ -81,12 +87,17 @@ class BuildMonitor {
         });
         results.dependencies.status = 'success';
         results.dependencies.outdated = JSON.parse(outdated);
-        this.log('Dependencies check: SUCCESS')} catch (error) {
+        this.log('Dependencies check: SUCCESS');
+      } catch (depError) {
         results.dependencies.status = 'warning';
-        this.log('Dependencies check: Some packages may be outdatedWARN')}
+        this.log('Dependencies check: Some packages may be outdated', 'WARN');
+        // Log dependency error for debugging
+        this.log(`Dependency check error: ${depError.message}`, 'WARN');
+      }
 
-    } catch (error) {
-      this.log(`Error during health check: ${error.message}`, 'ERROR')}
+    } catch (healthError) {
+      this.log(`Error during health check: ${healthError.message}`, 'ERROR');
+    }
 
     return results}
 
@@ -147,8 +158,10 @@ class BuildMonitor {
     let previousReport = null;
     if (fs.existsSync(this.reportFile)) {
       try {
-        previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8'))} catch (error) {
-        this.log('Could not read previous reportWARN')}
+        previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8'))        } catch (reportError) {
+        this.log('Could not read previous report', 'WARN');
+        this.log(`Report read error: ${reportError.message}`, 'WARN');
+      }
     }
 
     const report = {
@@ -218,16 +231,19 @@ class BuildMonitor {
       this.log(`Build health check completed. Health score: ${report.healthScore}/100`);
       
       if (report.healthScore < 70) {
-        this.log('Build health is below threshold. Consider immediate action.WARN')}
+        this.log('Build health is below threshold. Consider immediate action.', 'WARN');
+      }
       
-    } catch (error) {
-      this.log(`Error in build monitor: ${error.message}`, 'ERROR')}
+    } catch (monitorError) {
+      this.log(`Error in build monitor: ${monitorError.message}`, 'ERROR');
+    }
   }
 }
 
 // Main execution
 if (require.main === module) {
   const monitor = new BuildMonitor();
-  monitor.run().catch(console.error)}
+  monitor.run().catch(console.error);
+}
 
 module.exports = BuildMonitor;
