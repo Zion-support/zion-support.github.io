@@ -75,6 +75,7 @@ export function usePerformanceMonitor() {
     try {
       observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.warn('Performance Observer not fully supported:', error);
     }
 

@@ -9,14 +9,14 @@ interface Notification {
 
 interface NotificationSystemProps {
   notifications: Notification[];
-  onDismiss?: (notificationId: string) => void;
+  onDismiss?: (id: string) => void;
   className?: string;
 }
 
 const NotificationSystem: React.FC<NotificationSystemProps> = ({
   notifications,
   onDismiss,
-  className,
+  className = '',
 }) => {
   const getNotificationStyles = (type: Notification['type']) => {
     switch (type) {
