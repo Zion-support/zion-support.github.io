@@ -33,17 +33,14 @@ import {
   Star,
   CheckCircle,
   ArrowRight,
-  TrendingUp,
   Lightbulb,
   Target,
   Award,
-  Clock,
   DollarSign,
   Trash2,
   Camera,
   HardDrive,
-  Droplets,
-  Calendar
+  Droplets
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -412,7 +409,8 @@ const microSaasServices = [
     marketPrice: '$100 - $500/month',
     link: 'https://ziontechgroup.com/ai-workflow-automation',
     contact: '+1 302 464 0950'
-=======
+  },
+  {
     title: 'Password Manager',
     description: 'Secure password storage and management for individuals and teams.',
     icon: Lock,
@@ -471,25 +469,19 @@ const microSaasServices = [
     marketPrice: '$25-150/month',
     link: '/contact',
     popular: true
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
   }
 ];
-        'Automated rightsizing recommendations',
-        'Budget forecasting and alerting',
-        'Resource utilization optimization',
-        'Multi-cloud cost comparison',
-        'Executive dashboards and reporting'
-      ],
-      pricing: '$299 – $1,499/month',
-      timeline: '1–2 weeks',
-      benefits: [
-        'Average 30% reduction in cloud costs',
-        'Automated cost optimization',
-        'Real-time budget monitoring',
-        'Proactive cost anomaly detection'
-      ],
-      category: 'Cloud Management'
-    },
+
+const additionalFeatures = [
+  'Automated rightsizing recommendations',
+  'Proactive cost anomaly detection'
+];
+
+const additionalServices = [
+  {
+    category: 'Cloud Management',
+    features: additionalFeatures
+  },
     {
       icon: FileText,
       name: 'Smart Document Processor',

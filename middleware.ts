@@ -20,12 +20,9 @@ import type { NextRequest } from 'next/server';
   "/api",
   "/careers",
   "/case-studies"
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   "/terms",
   "/login",
   "/register"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 ];
 
 export function middleware(request: NextRequest) {
@@ -47,6 +44,5 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
   ],
 };

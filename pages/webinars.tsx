@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Layout from '../components/Layout';
 import { 
   Calendar, 
   Clock, 
@@ -58,9 +59,10 @@ export default function WebinarsPage() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Webinars</h1>
-                Join our educational webinars and learn from industry experts.
-              </p>
+                                <h1 className="text-4xl md:text-6xl font-bold mb-6">Webinars</h1>
+                  <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                    Join our educational webinars and learn from industry experts.
+                  </p>
             </motion.div>
           </div>
         </section>
@@ -167,12 +169,30 @@ export default function WebinarsPage() {
         </section>
 
         {/* CTA Section */}
-                </Link>
-              </div>
+        <section className="py-20 bg-blue-600">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center text-white"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Learn?
+              </h2>
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Join our upcoming webinars and expand your knowledge
+              </p>
+              <Link 
+                href="/contact" 
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Contact Us
+              </Link>
             </motion.div>
           </div>
         </section>
       </div>
-    </>
+    </Layout>
   );
 }

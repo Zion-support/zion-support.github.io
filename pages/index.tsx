@@ -17,5 +17,31 @@ const contactInfo = {
 
 const services = [
   {
+    title: 'AI Solutions',
+    description: 'Cutting-edge artificial intelligence services',
+    icon: Brain
+  },
+  {
+    title: 'Cloud Services',
+    description: 'Scalable cloud infrastructure solutions',
+    icon: Cloud
+  },
+  {
+    title: 'Cybersecurity',
+    description: 'Advanced security solutions for your business',
+    icon: Shield
+  }
+];
+
+export default function HomePage() {
+  return (
+    <Layout 
+      title="Zion Tech Group - Leading AI & Technology Solutions"
+      description="Transform your business with cutting-edge AI solutions, cloud services, and technology consulting."
+    >
+      <div className="min-h-screen bg-gray-50">
+        <h1>Welcome to Zion Tech Group</h1>
+      </div>
+    </Layout>
   );
 }

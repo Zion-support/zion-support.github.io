@@ -45,7 +45,8 @@ const accessibilityFeatures = [
     ]
   },
   {
-=======
+    category: "Audio Accessibility",
+    features: [
       "Closed captions",
       "Visual alerts",
       "Text alternatives for audio",
@@ -57,7 +58,6 @@ const accessibilityFeatures = [
   {
     title: "Motor Accessibility",
     description: "Features to support users with motor impairments",
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
     icon: Hand,
     title: "Motor Accessibility",
     description: "Keyboard navigation and customizable interaction methods",
@@ -69,7 +69,8 @@ const accessibilityFeatures = [
     ]
   },
   {
-=======
+    category: "Motor Accessibility",
+    features: [
       "Keyboard-only navigation",
       "Voice control",
       "Large click targets",
@@ -81,7 +82,6 @@ const accessibilityFeatures = [
   {
     title: "Cognitive Accessibility",
     description: "Features to support users with cognitive impairments",
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
     icon: Brain,
     title: "Cognitive Accessibility",
     description: "Clear navigation, consistent layouts, and simplified interfaces",
@@ -89,15 +89,13 @@ const accessibilityFeatures = [
       "Consistent navigation patterns",
       "Clear and simple language",
       "Error prevention and recovery",
-      "Customizable interface complexity"
-=======
+      "Customizable interface complexity",
       "Clear navigation",
       "Consistent layout",
       "Error prevention",
       "Progress indicators",
       "Help and support",
       "Customizable interface"
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
     ]
   }
 ];
@@ -251,7 +249,7 @@ export default function AccessibilityPage() {
   ];
 
   return (
-    <MainLayout
+    <Layout
       title="Accessibility Statement - Zion Tech Group"
       description="Learn about our commitment to web accessibility and how we ensure our website is accessible to all users, including those with disabilities."
       keywords="accessibility, WCAG, ADA compliance, screen reader, keyboard navigation, inclusive design"
@@ -288,13 +286,13 @@ export default function AccessibilityPage() {
                 viewport={{ once: true }}
               >
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
+                  Accessibility Features
+                </h2>
+                <p className="text-lg text-gray-600 mb-8">
+                  Comprehensive accessibility solutions for all users
+                </p>
               </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -475,6 +473,6 @@ export default function AccessibilityPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }
