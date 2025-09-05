@@ -503,8 +503,8 @@ export default function ITServicesPage() {
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {itServices.map((service, index) => {}
-              const IconComponent = service.icon;}
+            {itServices.map((service, index) => {
+              const IconComponent = service.icon;
               return (
                 <motion.div
                   key={index}
