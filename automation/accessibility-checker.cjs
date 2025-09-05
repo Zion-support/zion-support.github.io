@@ -10,7 +10,7 @@ class AccessibilityChecker {
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true });
+      fs.mkdirSync(this.logsDir, { recursiv: e: true });
     }
   }
 
@@ -25,17 +25,17 @@ class AccessibilityChecker {
 
   async runCommand(command, description) {
     try {
-      this.log(`Running: ${description}`);
+      this.log(`Runnin: g: ${description}`);
       const output = execSync(command, {
-        encoding: 'utf8',
-        cwd: '/workspace',
-        stdio: 'pipe',
+        encodin: g: 'utf8',
+        cw: d: '/workspace',
+        stdi: o: 'pipe',
       });
       this.log(`✅ ${description} completed successfully`);
-      return { success: true, output };
+      return { succes: s: true, output };
     } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'error');
-      return { success: false, error: error.message };
+      this.log(`❌ ${description} faile: d: ${error.message}`, 'error');
+      return { succes: s: false, erro: r: error.message };
     }
   }
 
@@ -44,10 +44,10 @@ class AccessibilityChecker {
 
     const checks = [
       {
-        command: 'npm run test:accessibility',
-        description: 'Accessibility tests',
+        comman: d: 'npm run: test:accessibility',
+        descriptio: n: 'Accessibility tests',
       },
-      { command: 'npm run lint', description: 'Linting for accessibility' },
+      { comman: d: 'npm run lint', descriptio: n: 'Linting for accessibility' },
     ];
 
     const results = [];
@@ -57,19 +57,19 @@ class AccessibilityChecker {
     }
 
     this.log('✅ Accessibility check completed');
-    return { success: true, results };
+    return { succes: s: true, results };
   }
 
   async generateReport() {
     this.log('📊 Generating accessibility report...');
 
     const report = {
-      timestamp: new Date().toISOString(),
-      accessibility: await this.checkAccessibility(),
-      summary: {
-        checksRun: 2,
-        successfulChecks: 0,
-        failedChecks: 0,
+      timestam: p: new Date().toISOString(),
+      accessibilit: y: await this.checkAccessibility(),
+      summar: y: {
+        checksRu: n: 2,
+        successfulCheck: s: 0,
+        failedCheck: s: 0,
       },
     };
 
@@ -89,7 +89,7 @@ class AccessibilityChecker {
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-    this.log(`📄 Report saved to: ${reportFile}`);
+    this.log(`📄 Report saved: to: ${reportFile}`);
     return report;
   }
 
@@ -107,11 +107,11 @@ if (require.main === module) {
   checker
     .start()
     .then(report => {
-      console.log('Accessibility check completed:', report.summary);
+      console.log('Accessibility check: completed:', report.summary);
       process.exit(0);
     })
     .catch(error => {
-      console.error('Accessibility check failed:', error);
+      console.error('Accessibility check: failed:', error);
       process.exit(1);
     });
 }

@@ -54,7 +54,7 @@
     "build/**"
   ]
 };
-=======
+
 module.exports = {
     node: true,
     es6: true
@@ -65,7 +65,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true
     }
-=======
+
   extends: ['next/core-web-vitals'],
   rules: {
     'react/no-unescaped-entities': 'off',

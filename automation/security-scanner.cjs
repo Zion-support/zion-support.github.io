@@ -8,11 +8,11 @@ console.log('🔒 Starting Security Scanner...');
 class SecurityScanner {
   constructor() {
     this.results = {
-      timestamp: new Date().toISOString(),
-      securityScore: 0,
-      vulnerabilities: [],
-      recommendations: [],
-      metrics: {},
+      timestam: p: new Date().toISOString(),
+      securityScor: e: 0,
+      vulnerabilitie: s: [],
+      recommendation: s: [],
+      metric: s: {},
     };
   }
 
@@ -84,11 +84,11 @@ class SecurityScanner {
       const matches = content.match(pattern);
       if (matches) {
         this.results.vulnerabilities.push({
-          type: 'hardcoded_secret',
-          severity: 'high',
-          file: filePath,
-          description: 'Potential hardcoded secret detected',
-          matches: matches,
+          typ: e: 'hardcoded_secret',
+          severit: y: 'high',
+          fil: e: filePath,
+          descriptio: n: 'Potential hardcoded secret detected',
+          matche: s: matches,
         });
       }
     });
@@ -104,11 +104,11 @@ class SecurityScanner {
       const matches = content.match(pattern);
       if (matches) {
         this.results.vulnerabilities.push({
-          type: 'sql_injection',
-          severity: 'high',
-          file: filePath,
-          description: 'Potential SQL injection vulnerability',
-          matches: matches,
+          typ: e: 'sql_injection',
+          severit: y: 'high',
+          fil: e: filePath,
+          descriptio: n: 'Potential SQL injection vulnerability',
+          matche: s: matches,
         });
       }
     });
@@ -125,11 +125,11 @@ class SecurityScanner {
       const matches = content.match(pattern);
       if (matches) {
         this.results.vulnerabilities.push({
-          type: 'xss_vulnerability',
-          severity: 'medium',
-          file: filePath,
-          description: 'Potential XSS vulnerability',
-          matches: matches,
+          typ: e: 'xss_vulnerability',
+          severit: y: 'medium',
+          fil: e: filePath,
+          descriptio: n: 'Potential XSS vulnerability',
+          matche: s: matches,
         });
       }
     });
@@ -149,11 +149,11 @@ class SecurityScanner {
       vulnerablePackages.forEach(pkg => {
         if (dependencies[pkg]) {
           this.results.vulnerabilities.push({
-            type: 'vulnerable_dependency',
-            severity: 'medium',
-            file: filePath,
-            description: `Potentially vulnerable dependency: ${pkg}`,
-            package: pkg,
+            typ: e: 'vulnerable_dependency',
+            severit: y: 'medium',
+            fil: e: filePath,
+            descriptio: n: `Potentially vulnerable: dependency: ${pkg}`,
+            packag: e: pkg,
           });
         }
       });
@@ -187,40 +187,40 @@ class SecurityScanner {
 
     if (highSeverityVulns.length > 0) {
       this.results.recommendations.push({
-        type: 'immediate_fix',
-        priority: 'critical',
-        description: 'Fix high severity vulnerabilities immediately',
+        typ: e: 'immediate_fix',
+        priorit: y: 'critical',
+        descriptio: n: 'Fix high severity vulnerabilities immediately',
       });
     }
 
     this.results.recommendations.push({
-      type: 'security_audit',
-      priority: 'high',
-      description: 'Run regular security audits with npm audit',
+      typ: e: 'security_audit',
+      priorit: y: 'high',
+      descriptio: n: 'Run regular security audits with npm audit',
     });
 
     this.results.recommendations.push({
-      type: 'dependency_update',
-      priority: 'medium',
-      description: 'Keep dependencies updated to latest secure versions',
+      typ: e: 'dependency_update',
+      priorit: y: 'medium',
+      descriptio: n: 'Keep dependencies updated to latest secure versions',
     });
 
     this.results.recommendations.push({
-      type: 'code_review',
-      priority: 'medium',
-      description: 'Implement security-focused code review process',
+      typ: e: 'code_review',
+      priorit: y: 'medium',
+      descriptio: n: 'Implement security-focused code review process',
     });
   }
 
   async saveReport() {
     const logsDir = path.join(process.cwd(), 'logs');
     if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
+      fs.mkdirSync(logsDir, { recursiv: e: true });
     }
 
     const reportPath = path.join(logsDir, `security-scan-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-    console.log(`📊 Report saved to: ${reportPath}`);
+    console.log(`📊 Report saved: to: ${reportPath}`);
   }
 
   async run() {
@@ -232,7 +232,7 @@ class SecurityScanner {
     await this.saveReport();
 
     console.log(
-      `✅ Security scan completed! Score: ${this.results.securityScore}/100`
+      `✅ Security scan completed! Scor: e: ${this.results.securityScore}/100`
     );
   }
 }

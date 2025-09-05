@@ -66,7 +66,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         }
       } // Allow subclasses to massage the input prior to running
 
-
       oldString = this.castInput(oldString);
       newString = this.castInput(newString);
       oldString = this.removeEmpty(this.tokenize(oldString));
@@ -89,7 +88,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           count: newString.length
         }]);
       } // Main worker method. checks all permutations of a given edit length for acceptance.
-
 
       function execEditLength() {
         for (var diagonalPath = -1 * editLength; diagonalPath <= editLength; diagonalPath += 2) {
@@ -115,7 +113,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           // path whose position in the new string is the farthest from the origin
           // and does not pass the bounds of the diff graph
 
-
           if (!canAdd || canRemove && addPath.newPos < removePath.newPos) {
             basePath = clonePath(removePath);
             self.pushComponent(basePath.components, undefined, true);
@@ -140,7 +137,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       } // Performs the length of edit iteration. Is a bit fugly as this has to support the
       // sync and async mode which is never fun. Loops over execEditLength until a value
       // is produced.
-
 
       if (callback) {
         (function exec() {
@@ -279,7 +275,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     // For this case we merge the terminal into the prior string and drop the change.
     // This is only available for string mode.
 
-
     var lastComponent = components[componentLen - 1];
 
     if (componentLen > 1 && typeof lastComponent.value === 'string' && (lastComponent.added || lastComponent.removed) && diff.equals('', lastComponent.value)) {
@@ -382,7 +377,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     if (!linesAndNewlines[linesAndNewlines.length - 1]) {
       linesAndNewlines.pop();
     } // Merge the content and line separators into single tokens
-
 
     for (var i = 0; i < linesAndNewlines.length; i++) {
       var line = linesAndNewlines[i];
@@ -590,7 +584,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           break;
         } // Diff index
 
-
         var header = /^(?:Index:|diff(?: -r \w+)+)\s+(.+?)\s*$/.exec(line);
 
         if (header) {
@@ -600,7 +593,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         i++;
       } // Parse file headers if they are defined. Unified diff requires them, but
       // there's no technical issues to have an isolated hunk without file header
-
 
       parseFileHeader(index);
       parseFileHeader(index); // Parse hunks
@@ -624,7 +616,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     } // Parses the --- and +++ headers, if none are found, no lines
     // are consumed.
 
-
     function parseFileHeader(index) {
       var fileHeader = /^(---|\+\+\+)\s+(.*)$/.exec(diffstr[i]);
 
@@ -643,7 +634,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       }
     } // Parses a hunk
     // This assumes that we are at the start of a hunk.
-
 
     function parseHunk() {
       var chunkHeaderIndex = i,
@@ -686,7 +676,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         }
       } // Handle the empty block count case
 
-
       if (!addCount && hunk.newLines === 1) {
         hunk.newLines = 0;
       }
@@ -694,7 +683,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       if (!removeCount && hunk.oldLines === 1) {
         hunk.oldLines = 0;
       } // Perform optional sanity checking
-
 
       if (options.strict) {
         if (addCount !== hunk.newLines) {
@@ -733,7 +721,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         } // Check if trying to fit beyond text length, and if not, check it fits
         // after offset location (or desired location on first iteration)
 
-
         if (start + localOffset <= maxLine) {
           return localOffset;
         }
@@ -746,7 +733,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           wantForward = true;
         } // Check if trying to fit before text beginning, and if not, check it fits
         // before offset location
-
 
         if (minLine <= start - localOffset) {
           return -localOffset++;
@@ -775,7 +761,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       uniDiff = uniDiff[0];
     } // Apply the diff to the input
 
-
     var lines = source.split(/\r\n|[\n\v\f\r\x85]/),
         delimiters = source.match(/\r\n|[\n\v\f\r\x85]/g) || [],
         hunks = uniDiff.hunks,
@@ -791,7 +776,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     /**
      * Checks if the hunk exactly fits on the provided location
      */
-
 
     function hunkFits(hunk, toPos) {
       for (var j = 0; j < hunk.lines.length; j++) {
@@ -816,7 +800,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       return true;
     } // Search best fit offsets for each hunk based on the previous ones
 
-
     for (var i = 0; i < hunks.length; i++) {
       var hunk = hunks[i],
           maxLine = lines.length - hunk.oldLines,
@@ -836,10 +819,8 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       } // Set lower text limit to end of the current hunk, so next ones don't try
       // to fit over already patched text
 
-
       minLine = hunk.offset + hunk.oldStart + hunk.oldLines;
     } // Apply patch hunks
-
 
     var diffOffset = 0;
 
@@ -881,7 +862,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         }
       }
     } // Handle EOFNL insertion/removal
-
 
     if (removeEOFNL) {
       while (!lines[lines.length - 1]) {
@@ -982,11 +962,9 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           }
         } // Output our changes
 
-
         (_curRange = curRange).push.apply(_curRange, _toConsumableArray(lines.map(function (entry) {
           return (current.added ? '+' : '-') + entry;
         }))); // Track the updated file position
-
 
         if (current.added) {
           newLine += lines.length;
@@ -1066,7 +1044,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       ret.push('Index: ' + oldFileName);
     }
 
-    ret.push('===================================================================');
+    ret.push('====');
     ret.push('--- ' + diff.oldFileName + (typeof diff.oldHeader === 'undefined' ? '' : '\t' + diff.oldHeader));
     ret.push('+++ ' + diff.newFileName + (typeof diff.newHeader === 'undefined' ? '' : '\t' + diff.newHeader));
 
@@ -1292,7 +1270,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         conflict(hunk, collectChange(mine), collectChange(their));
       }
     } // Now push anything that may be remaining
-
 
     insertTrailing(hunk, mine);
     insertTrailing(hunk, their);
