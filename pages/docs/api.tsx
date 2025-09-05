@@ -39,6 +39,8 @@ print(response.json())
         {/* API Endpoints Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
@@ -49,10 +51,15 @@ print(response.json())
                 Explore our available API endpoints
               </p>
             </motion.div>
-                      <span className={`px-3 py-1 rounded text-sm font-medium ${
-                        endpoint.method === 'GET' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
-                      }`}>
-                        {endpoint.method}
+            
+            <div className="grid gap-6">
+              {endpoints.map((endpoint, index) => (
+                <div key={index} className="bg-gray-50 rounded-lg p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className={`px-3 py-1 rounded text-sm font-medium ${
+                      endpoint.method === 'GET' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
+                    }`}>
+                      {endpoint.method}
                       </span>
                     </div>
             </div>

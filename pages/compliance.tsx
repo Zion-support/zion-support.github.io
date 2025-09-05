@@ -4,15 +4,15 @@ const complianceFrameworks = [
     description: 'Service Organization Control 2 Type II compliance for security, availability, and confidentiality',
     status: 'Compliant',
     icon: Shield,
-    color: 'from-blue-500 to-cyan-500,',
-    details: [;
-      'Annual third-party audits,',
-      'Security controls implementation',',
-      'Availability monitoring',',
-      'Confidentiality protection'';
+    color: 'from-blue-500 to-cyan-500',
+    details: [
+      'Annual third-party audits',
+      'Security controls implementation',
+      'Availability monitoring',
+      'Confidentiality protection'
     ],
-    lastAudit: '2024-01-15,',
-    nextAudit: '2025-01-15'';
+    lastAudit: '2024-01-15',
+    nextAudit: '2025-01-15'
   },
   {
     name: 'HIPAA',

@@ -1,5 +1,5 @@
 
-import Link from 'next/link';';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   BookOpen, 
@@ -89,8 +89,12 @@ const guides = [
     sections: 16,
     downloads: 1600
   }
+];
 
-          <div className="container mx-auto px-4 relative z-10">
+export default function GuidesPage() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}

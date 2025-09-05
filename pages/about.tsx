@@ -98,7 +98,7 @@ export default function AboutPage() {
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 These core values guide everything we do and shape our approach to delivering exceptional technology solutions.
               </p>
-            </div>
+            </motion.div>
             
             <div className="grid md:grid-cols-3 gap-8">
               {values.map((value, index) => {
