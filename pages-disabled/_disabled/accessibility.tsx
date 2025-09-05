@@ -267,8 +267,8 @@ export default function AccessibilityPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {standardsCompliance.map((standard, index) => {
-                const IconComponent = standard.icon;
+              {standardsCompliance.map((standard, index) => {}
+                const IconComponent = standard.icon;}
                 return (
                   <motion.div
                     key={index}
@@ -322,13 +322,14 @@ export default function AccessibilityPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {accessibilityTools.map((tool, index) => (
+              {accessibilityTools.map((tool, index) => (}
                 <motion.div
                   key={index}
                   className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
                 >
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -372,7 +373,7 @@ export default function AccessibilityPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {accessibilityGuidelines.map((category, index) => (
+              {accessibilityGuidelines.map((category, index) => (}
                 <motion.div
                   key={index}
                   className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300"
@@ -385,7 +386,7 @@ export default function AccessibilityPage() {
                     {category.category}
                   </h3>
                   <ul className="space-y-2">
-                    {category.guidelines.map((guideline, idx) => (
+                    {category.guidelines.map((guideline, idx) => (}
                       <li key={idx} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {guideline}
@@ -421,25 +422,11 @@ export default function AccessibilityPage() {
                   <p className="text-gray-600 mb-6">
                     If you encounter any accessibility barriers or have suggestions for improvement, we want to hear from you. Your feedback helps us create better experiences for everyone.
                   </p>
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:pages_disabled/accessibility.tsx
->>>>>>> a19edd82339f030d1486cb753755512ca6e7d150
-<<<<<<<< HEAD:pages-disabled/accessibility.tsx.disabled
-                </div>
-========
                   <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
                     {standard.level}
                   </span>
                 </motion.div>
->>>>>>>> cursor/expand-services-advertise-and-build-project-59da:pages_disabled/accessibility.tsx
-<<<<<<< HEAD
-=======
-========
-                </div>
->>>>>>>> a19edd82339f030d1486cb753755512ca6e7d150:pages-disabled/accessibility.tsx.disabled
->>>>>>> a19edd82339f030d1486cb753755512ca6e7d150
-              </motion.div>
+              ))}
             </div>
           </div>
         </section>
@@ -463,12 +450,11 @@ export default function AccessibilityPage() {
                 </a>
                 <a href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
                   General Contact
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </MainLayout>
-  );
+                </a>`
+              </div>`
+            </motion.div>`
+          </div>`
+        </section>`
+      </div>`
+    </MainLayout>`
 }

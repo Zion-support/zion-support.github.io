@@ -243,6 +243,204 @@ const aiServices = [
     ],
     pricing: "Starting at $399/month",
     contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Predictive Maintenance",
+    description: "Intelligent equipment monitoring and maintenance prediction using IoT and machine learning",
+    icon: Cpu,
+    features: [
+      "Equipment Monitoring",
+      "Failure Prediction",
+      "Maintenance Scheduling",
+      "Cost Optimization",
+      "Performance Analytics",
+      "IoT Integration"
+    ],
+    color: "from-blue-500 to-indigo-500",
+    useCases: [
+      "Manufacturing equipment",
+      "HVAC systems",
+      "Fleet vehicles",
+      "Industrial machinery"
+    ],
+    pricing: "Starting at $449/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Language Translation & NLP",
+    description: "Advanced natural language processing with real-time translation and sentiment analysis",
+    icon: MessageSquare,
+    features: [
+      "Real-time Translation",
+      "Sentiment Analysis",
+      "Language Detection",
+      "Text Summarization",
+      "Voice Recognition",
+      "Multi-language Support"
+    ],
+    color: "from-purple-500 to-violet-500",
+    useCases: [
+      "Global communication",
+      "Content localization",
+      "Customer support",
+      "Market research"
+    ],
+    pricing: "Starting at $199/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Supply Chain Optimization",
+    description: "Intelligent supply chain management with demand forecasting and logistics optimization",
+    icon: Globe,
+    features: [
+      "Demand Forecasting",
+      "Inventory Optimization",
+      "Route Planning",
+      "Supplier Management",
+      "Risk Assessment",
+      "Cost Optimization"
+    ],
+    color: "from-green-500 to-emerald-500",
+    useCases: [
+      "Retail inventory management",
+      "Manufacturing supply chains",
+      "Logistics optimization",
+      "Procurement automation"
+    ],
+    pricing: "Starting at $379/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Drug Discovery & Research",
+    description: "Advanced AI solutions for pharmaceutical research, drug discovery, and molecular analysis",
+    icon: Target,
+    features: [
+      "Molecular Analysis",
+      "Drug Discovery",
+      "Clinical Trial Optimization",
+      "Side Effect Prediction",
+      "Drug Interaction Analysis",
+      "Research Automation"
+    ],
+    color: "from-cyan-500 to-teal-500",
+    useCases: [
+      "Pharmaceutical research",
+      "Drug development",
+      "Clinical trials",
+      "Medical research"
+    ],
+    pricing: "Starting at $799/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Autonomous Vehicle Systems",
+    description: "Advanced AI for autonomous vehicle navigation, safety, and fleet management",
+    icon: Smartphone,
+    features: [
+      "Autonomous Navigation",
+      "Object Detection",
+      "Path Planning",
+      "Safety Monitoring",
+      "Fleet Management",
+      "Real-time Analytics"
+    ],
+    color: "from-orange-500 to-red-500",
+    useCases: [
+      "Autonomous vehicles",
+      "Fleet management",
+      "Delivery optimization",
+      "Transportation safety"
+    ],
+    pricing: "Starting at $999/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Climate & Environmental Analysis",
+    description: "Intelligent environmental monitoring and climate prediction using satellite data and AI",
+    icon: Globe,
+    features: [
+      "Climate Modeling",
+      "Environmental Monitoring",
+      "Weather Prediction",
+      "Carbon Footprint Analysis",
+      "Sustainability Metrics",
+      "Satellite Data Processing"
+    ],
+    color: "from-emerald-500 to-green-500",
+    useCases: [
+      "Climate research",
+      "Environmental monitoring",
+      "Sustainability planning",
+      "Weather forecasting"
+    ],
+    pricing: "Starting at $549/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Personalization Engine",
+    description: "Advanced personalization platform for content, products, and user experiences",
+    icon: Users,
+    features: [
+      "User Behavior Analysis",
+      "Content Personalization",
+      "Product Recommendations",
+      "Dynamic Pricing",
+      "A/B Testing",
+      "Real-time Adaptation"
+    ],
+    color: "from-pink-500 to-rose-500",
+    useCases: [
+      "E-commerce personalization",
+      "Content platforms",
+      "Marketing automation",
+      "User experience optimization"
+    ],
+    pricing: "Starting at $279/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Voice & Speech Analytics",
+    description: "Advanced voice analysis for emotion detection, speaker identification, and speech optimization",
+    icon: MessageSquare,
+    features: [
+      "Emotion Detection",
+      "Speaker Identification",
+      "Speech Recognition",
+      "Voice Cloning",
+      "Audio Enhancement",
+      "Real-time Processing"
+    ],
+    color: "from-indigo-500 to-purple-500",
+    useCases: [
+      "Call center analytics",
+      "Voice assistants",
+      "Security applications",
+      "Media production"
+    ],
+    pricing: "Starting at $329/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Quantum Computing Solutions",
+    description: "Cutting-edge quantum computing applications for optimization and complex problem solving",
+    icon: Cpu,
+    features: [
+      "Quantum Optimization",
+      "Complex Problem Solving",
+      "Cryptography",
+      "Simulation",
+      "Machine Learning",
+      "Research Applications"
+    ],
+    color: "from-violet-500 to-purple-500",
+    useCases: [
+      "Financial modeling",
+      "Drug discovery",
+      "Cryptography",
+      "Scientific research"
+    ],
+    pricing: "Starting at $1,299/month",
+    contact: "kleber@ziontechgroup.com"
   }
 ];
 

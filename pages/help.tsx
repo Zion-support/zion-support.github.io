@@ -1,20 +1,21 @@
-import React, { useState } from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Search, 
-  HelpCircle, 
-  BookOpen, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  FileText, 
+  Search,
+  HelpCircle,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  FileText,
   Video,
   Download,
   ExternalLink,
   ChevronDown,
-  ChevronRight
+  ChevronRight,
+  ArrowRight
 } from 'lucide-react';
 const helpCategories = [
   {
@@ -113,15 +114,13 @@ const helpCategories = [
       }
     ]
   }
-]
-
+];
 const quickLinks = [
   { title: "API Documentation", href: "/docs/api", icon: FileText },
   { title: "Video Tutorials", href: "/tutorials", icon: Video },
   { title: "Download Resources", href: "/downloads", icon: Download },
   { title: "Community Forum", href: "/community", icon: MessageCircle }
-]
-
+];
 const faqs = [
   {
     question: "How do I get started with your AI services?",
@@ -139,43 +138,20 @@ const faqs = [
     question: "Can I cancel my subscription anytime?",
     answer: "Yes, you can cancel your subscription at any time. There are no cancellation fees, and you'll continue to have access to your services until the end of your current billing period."
   }
-]
-
-const contactMethods = [
-  {
-    title: "Live Chat",
-    description: "Get instant help from our support team",
-    icon: MessageCircle,
-    available: "24/7",
-    responseTime: "Immediate"
-  },
-  {
-    title: "Email Support",
-    description: "Send us a detailed message",
-    icon: Mail,
-    available: "24/7",
-    responseTime: "Within 2 hours"
-  },
-  {
-    title: "Phone Support",
-    description: "Speak directly with our experts",
-    icon: Phone,
-    available: "Mon-Fri 9AM-6PM EST",
-    responseTime: "Immediate"
-  }
-]
-
+];
 export default function HelpPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
-  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
-
+  const toggleCategory = (categoryTitle: string) => {
+    setExpandedCategory(expandedCategory === categoryTitle ? null : categoryTitle);
+  };
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Help Center - Zion Tech Group</title>
         <meta name="description" content="Get help with Zion Tech Group services. Find guides, tutorials, and support resources." />
       </Head>
+      {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -184,8 +160,9 @@ export default function HelpPage() {
               Help Center
             </h1>
             <p className="text-xl text-blue-100 mb-8">
-              Find answers, guides, and support for all your questions
+              Find answers, guides, and support to help you succeed
             </p>
+            {/* Search Bar */}
             <div className="relative max-w-2xl mx-auto">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
@@ -193,12 +170,13 @@ export default function HelpPage() {
                 placeholder="Search for help articles, guides, and tutorials..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
           </div>
         </div>
       </section>
+      {/* Quick Links */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -223,11 +201,12 @@ export default function HelpPage() {
           </div>
         </div>
       </section>
+      {/* Help Categories */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-              Frequently Asked Questions
+              Browse by Category
             </h2>
             <div className="space-y-6">
               {helpCategories.map((category, categoryIndex) => (
@@ -240,7 +219,7 @@ export default function HelpPage() {
                 >
                   <button
                     onClick={() => toggleCategory(category.title)}
-                    className="w-full p-6 text-left hover:bg-gray-50 transition-colors"
+                    className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                   >
                     <div className="flex items-center gap-4">
                       <category.icon className="w-6 h-6 text-blue-600" />
@@ -248,10 +227,14 @@ export default function HelpPage() {
                         {category.title}
                       </h3>
                     </div>
-                    <ChevronDown className="w-5 h-5 text-gray-500" />
+                    {expandedCategory === category.title ? (
+                      <ChevronDown className="w-5 h-5 text-gray-500" />
+                    ) : (
+                      <ChevronRight className="w-5 h-5 text-gray-500" />
+                    )}
                   </button>
                   <AnimatePresence>
-                    {expandedCategories.includes(category.title) && (
+                    {expandedCategory === category.title && (
                       <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
@@ -269,7 +252,7 @@ export default function HelpPage() {
                               >
                                 <div className="flex items-start justify-between mb-2">
                                   <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
-                                    {article.category}
+                                    {article.type}
                                   </span>
                                   <span className="text-xs text-gray-500">
                                     {article.readTime}
@@ -279,7 +262,7 @@ export default function HelpPage() {
                                   {article.title}
                                 </h4>
                                 <p className="text-sm text-gray-600">
-                                  {article.excerpt}
+                                  {article.description}
                                 </p>
                               </motion.div>
                             ))}
@@ -294,14 +277,15 @@ export default function HelpPage() {
           </div>
         </div>
       </section>
+      {/* FAQ Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-              Contact Support
+              Frequently Asked Questions
             </h2>
             <div className="space-y-6">
-              {contactMethods.map((method, index) => (
+              {faqs.map((faq, index) => (
                 <motion.div
                   key={index}
                   className="bg-gray-50 rounded-lg p-6"
@@ -310,10 +294,10 @@ export default function HelpPage() {
                   transition={{ delay: index * 0.1 }}
                 >
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                    {method.title}
+                    {faq.question}
                   </h3>
                   <p className="text-gray-600">
-                    {method.description}
+                    {faq.answer}
                   </p>
                 </motion.div>
               ))}
@@ -321,6 +305,7 @@ export default function HelpPage() {
           </div>
         </div>
       </section>
+      {/* Contact Support */}
       <section className="py-16 bg-blue-600">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -328,7 +313,7 @@ export default function HelpPage() {
               Still Need Help?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Our support team is here to help you succeed. Get in touch with us today.
+              Our support team is here to help you succeed
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white/10 rounded-lg p-6">
@@ -347,10 +332,10 @@ export default function HelpPage() {
                 <h3 className="text-lg font-semibold text-white mb-2">Phone Support</h3>
                 <p className="text-blue-100 mb-4">Call us directly</p>
                 <a
-                  href="tel:+13024640950"
+                  href="tel:+15551234567"
                   className="text-white hover:text-blue-200 font-medium"
                 >
-                  +1 302 464 0950
+                  +1 (555) 123-4567
                 </a>
               </div>
               <div className="bg-white/10 rounded-lg p-6">

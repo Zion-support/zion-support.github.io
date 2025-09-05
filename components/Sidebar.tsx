@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import {
-  Home,
-  Briefcase,
-  Target,
-  Building2,
-  FileText,
-  HelpCircle,
+import { 
+  Home, 
+  Briefcase, 
+  Target, 
+  Building2, 
+  FileText, 
+  HelpCircle, 
   Search,
   X,
   ChevronRight,
@@ -18,23 +18,27 @@ import {
   DollarSign,
   ShoppingCart,
   GraduationCap,
-  Globe
+  Globe,
+  Mail
 } from 'lucide-react';
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const toggleSection = (section: string) => {
-    setExpandedSections(prev =>
-      prev.includes(section)
+    setExpandedSections(prev => 
+      prev.includes(section) 
         ? prev.filter(s => s !== section)
         : [...prev, section]
     );
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   const navigationItems = [
     {
       label: 'Home',
@@ -83,7 +87,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Education', href: '/industries/education', icon: GraduationCap },
         { label: 'Government', href: '/industries/government', icon: Globe },
         { label: 'Manufacturing', href: '/industries/manufacturing', icon: Building2 },
-        { label: 'Retail', href: '/industries/retail', icon: ShoppingCart }
+        { label: 'Retail', href: '/industries/retail', icon: ShoppingCart },
       ]
     },
     {
@@ -93,11 +97,22 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       hasSubmenu: true,
       submenu: [
         { label: 'Blog', href: '/blog' },
+<<<<<<< HEAD
         { label: 'White Papers', href: '/white-papers' },
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'Webinars', href: '/webinars' },
         { label: 'Help Center', href: '/help' },
-        { label: 'FAQ', href: '/faq' }
+        { label: 'FAQ', href: '/faq' },
+=======
+        { label: 'Case Studies', href: '/case-studies' },
+        { label: 'White Papers', href: '/whitepapers' },
+        { label: 'Webinars', href: '/webinars' },
+        { label: 'Tutorials', href: '/tutorials' },
+        { label: 'Guides', href: '/guides' },
+        { label: 'Help Center', href: '/help' },
+        { label: 'FAQ', href: '/faq' },
+        { label: 'Documentation', href: '/docs' },
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
       ]
     },
     {
@@ -110,29 +125,60 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Our Team', href: '/team' },
         { label: 'Careers', href: '/careers' },
         { label: 'News', href: '/news' },
-        { label: 'Contact', href: '/contact' }
+        { label: 'Contact', href: '/contact' },
+      ]
+<<<<<<< HEAD
+    }
+  ];
+=======
+    },
+    {
+      label: 'Support',
+      href: '/support',
+      icon: HelpCircle,
+      hasSubmenu: true,
+      submenu: [
+        { label: 'Support Center', href: '/support' },
+        { label: 'Help Center', href: '/help' },
+        { label: 'FAQ', href: '/faq' },
+        { label: 'Contact Support', href: '/contact' },
+        { label: 'Documentation', href: '/docs' },
+        { label: 'API Docs', href: '/api-docs' },
       ]
     }
   ];
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   const quickLinks = [
     { label: 'Get Started', href: '/contact', icon: ChevronRight },
     { label: 'Pricing', href: '/pricing', icon: DollarSign },
     { label: 'Support', href: '/support', icon: HelpCircle },
-    { label: 'Documentation', href: '/docs', icon: FileText }
+    { label: 'Documentation', href: '/docs', icon: FileText },
+<<<<<<< HEAD
   ];
   const isActive = (href: string) => {
     return router.pathname === href;
   };
+=======
+    { label: 'Search', href: '/search', icon: Search },
+    { label: 'Sitemap', href: '/sitemap', icon: Search },
+    { label: 'Newsletter', href: '/newsletter', icon: Mail },
+  ];
+
+  const isActive = (href: string) => {
+    return router.pathname === href;
+  };
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   return (
     <>
       {/* Overlay */}
       {isOpen && (
-        <div
+        <div 
           className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
           onClick={onClose}
         />
       )}
-      
       {/* Sidebar */}
       <div className={`
         fixed top-0 left-0 h-full w-80 bg-gray-900 text-white z-50 transform transition-transform duration-300 ease-in-out
@@ -154,7 +200,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             <X className="w-6 h-6" />
           </button>
         </div>
-
+<<<<<<< HEAD
         {/* Search */}
         <div className="p-6 border-b border-gray-700">
           <div className="relative">
@@ -166,7 +212,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             />
           </div>
         </div>
-
         {/* Navigation */}
         <nav className="flex-1 overflow-y-auto">
           <div className="p-6">
@@ -221,7 +266,68 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             ))}
           </div>
         </nav>
+=======
 
+        <nav className="p-4">
+          <div className="space-y-2">
+            {navigationItems.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <div key={index}>
+                  <div className="flex items-center justify-between">
+                    <Link
+                      href={item.href}
+                      className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
+                        isActive(item.href)
+                          ? 'bg-blue-600 text-white'
+                          : 'text-gray-300 hover:bg-gray-800 hover:text-white'
+                      }`}
+                      onClick={onClose}
+                    >
+                      <Icon className="w-5 h-5" />
+                      <span>{item.label}</span>
+                    </Link>
+                    
+                    {item.hasSubmenu && (
+                      <button
+                        onClick={() => toggleSection(item.label)}
+                        className="p-2 hover:bg-gray-800 rounded-lg"
+                      >
+                        <ChevronRight 
+                          className={`w-4 h-4 transition-transform ${
+                            expandedSections.includes(item.label) ? 'rotate-90' : ''
+                          }`} 
+                        />
+                      </button>
+                    )}
+                  </div>
+
+                  {item.hasSubmenu && expandedSections.includes(item.label) && (
+                    <div className="ml-8 mt-2 space-y-1">
+                      {item.submenu?.map((subItem, subIndex) => (
+                        <Link
+                          key={subIndex}
+                          href={subItem.href}
+                          className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-colors ${
+                            isActive(subItem.href)
+                              ? 'bg-blue-600 text-white'
+                              : 'text-gray-400 hover:bg-gray-800 hover:text-white'
+                          }`}
+                          onClick={onClose}
+                        >
+                          {subItem.icon && <subItem.icon className="w-4 h-4" />}
+                          <span>{subItem.label}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </nav>
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
         {/* Quick Links */}
         <div className="p-6 border-t border-gray-700">
           <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
@@ -241,14 +347,21 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
         {/* Contact Info */}
         <div className="p-6 border-t border-gray-700">
           <div className="text-sm text-gray-400">
             <p className="mb-2">Need help?</p>
+<<<<<<< HEAD
+            <p className="text-blue-400">contact@ziontechgroup.com</p>
+            <p className="text-blue-400">+1 (555) 123-4567</p>
+=======
             <p className="text-blue-400">kleber@ziontechgroup.com</p>
             <p className="text-blue-400">+1 302 464 0950</p>
-            <p className="text-blue-400 text-xs mt-1">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
           </div>
         </div>
       </div>
