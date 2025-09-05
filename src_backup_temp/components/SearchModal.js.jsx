@@ -2,7 +2,6 @@ import {jsx as _jsx, jsxs as _jsxs} from 'react/jsx-runtime';
 export default function Page("props": "any) {;
 ",;
         {;
-
             "id": '4',;
             "type": 'page',;
             "title": 'Cybersecurity Services',;
@@ -25,29 +24,22 @@ export default function Page("props": "any) {;
         await new Promise(resolve => setTimeout (resolve, 300) ) ;
         // Filter results based on query and active filter;
         const filteredResults = mockSearchResults.filter(result => {;
-
             const matchesFilter = activeFilter === 'all' || result.type === activeFilter;
             return matchesQuery && matchesFilter}
     );
         setResults(filteredResults) ;
         setIsLoading(false) };
     const handleSearch = ("props": "any) => {;
-
         if(searchQuery.trim()) {;
-
             setQuery(searchQuery);
             addToRecentSearches(searchQuery)"}
     };
     const addToRecentSearches = ("props": "any) => {;
-
         setRecentSearches(prev => {;
-
             const filtered = prev.filter(s => s !== searchQuery);
             return [searchQuery", ...filtered].slice(0, 5)})};
     const getTypeIcon = ("props": "any) => {;
-
         switch(type) {;
-
             case 'service':";
                 return _jsx(Briefcase", { "className": "h-4 w-4" });
             case 'talent':";
@@ -74,9 +66,7 @@ export default function Page("props": "any) {;
                 return _jsx(Search, {className: "h-4 w-4"})}
     };
     const getTypeColor = ("props": "any) => {;
-
         switch(type) {;
-
             case 'service':';
                 return 'bg-blue-100 text-blue-700';
             case 'talent':';

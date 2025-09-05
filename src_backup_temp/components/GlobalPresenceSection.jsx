@@ -8,7 +8,6 @@ export default function Page("props": "any) {;
 ];
 const partnerships = [{;
 ";
-
   );
 export default Component;
 import React,{useState} from &apos;react&apos;; import {motion,AnimatePresence} from &apos;framer-motion&apos;; export default function Page($1) { ,&quot; { icon: <Star className=&quot;w-6 h-6&quot; />,value: &quot;4.8/5&quot;,label: &quot;Global Rating&quot; },&quot; {icon: <TrendingUp className=&quot;w-6 h-6&quot; />,value: &quot;98%&quot;,label: &quot;Client Satisfaction&quot;} ]; const partnerships = [{ &quot; ); export default Component&apos;; ;&apos;;&apos;;

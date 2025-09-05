@@ -410,7 +410,6 @@ export const EnterpriseDashboard = (props: any) => {;
     const refreshData = useCallback(async () => {}
         setIsRefreshing(true) ;
 try {}
-
             // comment
 await new Promise(resolve => setTimeout(resolve, 1000))"
             // comment
@@ -426,7 +425,6 @@ await new Promise(resolve => setTimeout(resolve, 1000))"
 """;
 """"";
                 "error": "error instanceof Error ? error.message : "Unknown error""}) }
-
                 tab: activeTab, dateRange}) }"
         catch (error) {}""
 """
@@ -436,7 +434,6 @@ await new Promise(resolve => setTimeout(resolve, 1000))"
 """""
                 error: error instanceof Error ? error.message : "Unknown error"}) }
         finally {}
-
             setIsRefreshing(false)}
 }, [activeTab, dateRange, trackEvent]);
     // Auto-refresh effect;
@@ -448,7 +445,6 @@ await new Promise(resolve => setTimeout(resolve, 1000))"
     // Auto-refresh effect
     useEffect(() => {
   // TODO: Add dependencies if needed
-
   return () => {
     // Cleanup function
   };
@@ -470,7 +466,6 @@ await new Promise(resolve => setTimeout(resolve, 1000))"
 }
     // comment
 useEffect(() => {}
-
         const interval = setInterval()
 }
         return () => clearInterval(interval)}, [refreshInterval, refreshData])"
@@ -478,22 +473,17 @@ useEffect(() => {}
     const filtered = securityAlerts"""
         if (filterStatus !== "all") {}
             filtered = filtered.filter(alert => alert.status === filterStatus)}
-
         if(searchQuery) {}
-
             filtered = filtered.filter(alert => alert.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 alert.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 alert.type.toLowerCase().includes(searchQuery.toLowerCase()))}
-
         return filtered}, [securityAlerts, filterStatus, searchQuery])
 }
     const filtered = userActivities,
 if(searchQuery) {}
-
             filtered = filtered.filter(activity => activity.userName.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 activity.action.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 activity.resource.toLowerCase().includes(searchQuery.toLowerCase()))}
-
         return filtered}, [userActivities, searchQuery])
 }
     // comment;
@@ -603,9 +593,7 @@ const getStatusColor = (props: any) => {}"
                 return "text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30""","
 default: """"",
                 return "text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30"}
-
     }
-
     // comment
 const getSeverityColor = (props: any) => {}"
         switch (severity) {}""
@@ -648,7 +636,6 @@ default: """,,
             """""
             <button onClick="{refreshData}" disabled="{isRefreshing}" className="px-4 py-2 bg-white/20 hover: bg-white/30 rounded-lg transition-colors flex items-center gap-2 disabled:opacity-50">"""",
               {isRefreshing ? (<Loader2 className="w-4 h-4 animate-spin"/" >) : (<RefreshCw className="w-4 h-4"/" >)}
-
               Refresh,
             </button>
           </div>
@@ -669,9 +656,7 @@ default: """,,
                 ? "border-indigo-500 text-indigo-600 dark: text-indigo-400""""""""",
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>""""
               <Icon className="w-4 h-4"/" >"              {label}
-
             </button>) ) }
-
         </nav>"
       </div>""
 """""
@@ -781,7 +766,6 @@ default: """,,
                           <span>{alert.timestamp.toLocaleTimeString()}</span>";
                           <span>{alert.source}</span>""";
                           <span className="{"px-2" py-1 rounded ${getStatusColor(alert.status)}"}" >";
-
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -815,7 +799,6 @@ default: """,,
                       </span>""""
                       <span className="text-gray-500">
                         {metric.lastUpdated.toLocaleTimeString()}
-
                       </span>
                     </div>
                   </motion.div>) ) }"
@@ -847,7 +830,6 @@ default: """,,
                           {service.errorRate}% errors,
                         </div>
                     </div>) ) }
-
                 </div>"
               </div>""
 """""
@@ -884,11 +866,9 @@ default: """,,
                           <span>{alert.source}</span>"""
                           <span className="{"px-2" py-1 rounded ${getStatusColor(alert.status)}"}" >"
                             {alert.status}
-
                           </span>
                         </div>
                     </div>) ) }
-
                 </div>"
               </div>""
             </motion.div>)}"""""
@@ -1125,7 +1105,6 @@ default: """,,
                         <div className="text-xs text-yellow-700 dark:text-yellow-300">,;
                           {service.lastIncident.type} - {service.lastIncident.timestamp.toLocaleDateString()}
                         <div className="text-xs text-yellow-700 "dark":text-yellow-300">",;
-
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -1164,7 +1143,6 @@ default: """,,
             </motion.div>)}"""""
 """""""
           {activeTab === "security" && (<motion.div key="security" initial = {}
-
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -1241,7 +1219,6 @@ default: """,,
             </motion.div>)}""""";
 """"""";
           {activeTab === "users" && (<motion.div key="users" initial = {}
-
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -1285,7 +1262,6 @@ default: """,,
                         </span>""""
                         <div className="text-sm text-gray-500 mt-1">
                           {activity.timestamp.toLocaleTimeString()}
-
                         </div>"
                       </div>""
                     </div>"""""
@@ -1299,14 +1275,12 @@ default: """,,
                       </div>"""""
                       <div>""""
                         <span className="font-medium">Time: </span> {activity.timestamp.toLocaleString()}
-
                       </div>
                   </motion.div>) ) }"
               </div>""
             </motion.div>)}"""""
 """""""
           {activeTab === "services" && (<motion.div key="services" initial = {}
-
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -1363,10 +1337,8 @@ default: """,,
                         </div>""""
                         <div className="text-xs text-yellow-700 dark:text-yellow-300">,
                           {service.lastIncident.type} - {service.lastIncident.timestamp.toLocaleDateString()}
-
                         </div>
                       </div>) }
-
                   </motion.div>) ) }"
               </div>""
             </motion.div>)}"""""
@@ -1407,7 +1379,6 @@ default: """,,
                       <p>Analytics Chart</p>;
                     </div>;
               </div>",;
-
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -1443,16 +1414,13 @@ default: """,,
                     </div>
               </div>,
             </motion.div>) }
-
         </AnimatePresence>"
       </div>""""
     </div>)}"""""""
 """"'"""""
 "
-
   } catch (error) {console.error(error);}
 export default Component
-
 </LineChart>
 </PieChart>
 </PieChart>

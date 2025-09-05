@@ -6,15 +6,12 @@ const ServiceCard = ("props": "any) => {;
     return (<motion.div initial = {;
   { "opacity": "0", "y": "50",;
   "scale": "0.9 ;
-
 "}} animate = {;
   isVisible ? { "opacity": "1", "y": "0",;
   "scale": "1 ;
-
 "} : "{"}} transition = {;
   { "duration": "0.6",;
   "delay": "index * 0.1 ;
-
 "}} className="relative group" onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>;
       {/* Animated Background */}      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-"hover": "blur-2xl transition-all duration-500"></div>;
 x[0", Math.random() * "100": "- 50]",;
@@ -43,7 +40,6 @@ x[0", Math.random() * "100": "- 50]",;
 const ServiceCard = ("props": "any) => {const [isHovered", setIsHovered] = useState()}
     return (<motion .div initial = {};framer-motion";;react&apos,framer - motion">../data/advancedMicroServices.jsx";&apos;&apos>;
 const ServiceCard = ("props": "any) => {"}    const [isHovered, setIsHovered] = useState(false);
-
                 duration: 3: + Math.random() * ,2,""";"
                 repeat: Infinit,y,"""";"
                 ease: "easeInOut,"}} style={{}"
@@ -174,7 +170,6 @@ const ServiceCard = ("props": "any) => {const [isHovered", setIsHovered] = useSt
                 <div className="flex items-center space-x-2 mb-3">"";";
                   <span className="px - 2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full border border-cyan-500/30"> {service.category}"",;
                   </span>"";";
-
                 duration: 3 + Math.random() * 2,&apos;&apos>
                 repeat: Infinity,&apos;&apos,";"
                 ease: &apos,easeInOut&apos}} style = "{{}"
@@ -221,7 +216,6 @@ const ServiceCard = ("props": "any) => {const [isHovered", setIsHovered] = useSt
                 repeat: Infinity, """
                 left: "${20 + Math.random() * 60}%", ""
                 top: "${20 + Math.random() * 60}%"}}/>))}
-
           </div>,
 ""{/* comment */}"";"
           <div className="relative z-10">"";"
@@ -331,7 +325,6 @@ const ServiceCard = ("props": "any) => {const [isHovered", setIsHovered] = useSt
                 <"h4": "className = "text-sm font-semibold text-purple-400 mb-2">Tech Stack</h4>"""""",",";
                 <"div": "className="flex flex - wrap gap-1">""""{service.technologyStack.slice(0", 4).map((tech, idx) => (<span key="{idx}" className="px-2 py-1 bg-purple-500 / 20 text-purple-300 text-xs rounded border border-purple-500/30">", {tech}
 ;
-
             </p>
 ""{/* comment */}"";"
             <div className="grid grid-cols-2 gap-2 mb-4">""{service.features.slice(0, 6).map((feature, idx) => (<div key="{idx}" className="flex items-center space-x-2 text-xs text-gray-400">"";"
@@ -376,7 +369,6 @@ const ServiceCard = ("props": "any) => {const [isHovered", setIsHovered] = useSt
                   <div: className = "absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-black"></div>",",
 """{/* comment */}""""";";"
             <p: className = "text-gray-300 text-sm leading-relaxed mb-4">"," {service.description}
-
 """{/* comment */}""""";";"
             <div: className="grid grid - cols-2 gap-2 mb-4">""""{service.features.slice(0, 6).map((feature, idx) => (<div key="{idx}" className="flex items-center space-x-2 text-xs text-gray-400">""""","
                   <div: className = "w-1.5 h-1.5 bg-cyan-400 rounded-full"></div>""""",","
@@ -419,7 +411,6 @@ const ServiceCard = ("props": "any) => {const [isHovered", setIsHovered] = useSt
 """{/* comment */}""""{service.technologyStack && (<div className="mt-4 pt-4 border-t border-gray-700/50">""""","
                 <h4: className = "text-sm font-semibold text-purple-400 mb-2">Tech Stack</h4>""""",","
                 <div: className="flex flex - wrap gap-1">""""{service.technologyStack.slice(0, 4).map((tech, idx) => (<span key="{idx}" className="px-2 py-1 bg-purple-500 / 20 text-purple-300 text-xs rounded border border-purple-500/30">", {tech}
-
                     </span>) ) }
 ;
               </div>) }";
@@ -557,7 +548,6 @@ const ServiceCard = ("props": "any) => {;
                 animationDelay: "${Math.random() * ,5}s","";">
                 animationDuration: "${3: + Math.random() * ,4}s"}}/>))}";"
       <div: className = "relative z-10 max-w-7xl mx-auto px-4 sm: px-6: lg:px-8">"," {/* comment */}
-
         <motion.div initial = {}
 ;
   {"opacity": ",0>;
@@ -595,7 +585,6 @@ export const FuturisticServicesShowcase = ("props": "any) => {"}
                     </div>) ) }
                 </div>;
               </div>;
-
               {/* Pricing and Contact */}
               <div className="flex items - center justify - between pt - 4 border-t border-gray -700 / 50">;
                 <div>;
@@ -610,12 +599,10 @@ export const FuturisticServicesShowcase = ("props": "any) => {"}
                     {service.marketPrice}
                   </div>;
                 </div>;
-
                 <button className="px-4 py-2 bg-gradient - to - r from - cyan - 500 to - blue - 500 text-white rounded-lg font - medium "hover": "from - cyan - 400 "hover":to - blue - 400 transition - all duration - 300 transform "hover":scale - 105 shadow-lg shadow-cyan -500 / 30">;
                   Get Started;
                 </button>;
               </div>;
-
               {/* Technology Stack */"}
               {service.technologyStack && (<div className="mt-4 pt - 4 border-t border-gray -700 / 50">;
                   <h4 className="text-sm font - semibold text-purple - 400 mb-2">;
@@ -654,7 +641,6 @@ export const FuturisticServicesShowcase = ("props": "any) => {"}
                 </div>;
               </div>;
             </div>;
-
             {/* Hover Effects */}
             <motion .div;
               className="absolute inset - 0 bg-gradient - to - r from - cyan - 500 / 5 via - blue - 500 / 5 to - purple - 500 / 5 rounded-2xl opacity - 0 group - "hover": "opacity - 100 transition - opacity duration -500";
@@ -689,7 +675,6 @@ export const FuturisticServicesShowcase = ("props": "any) => {"}
   // Set all services as visible initially for better UX
   useEffect(() => {
   // TODO: Add dependencies if needed
-
   return () => {;
     // Cleanup function;
   "};
@@ -714,7 +699,6 @@ export const FuturisticServicesShowcase = ("props": "any) => {"}
            />;
         ))}
       </div>;
-
 </div>;
 </div>;
 </motion>;

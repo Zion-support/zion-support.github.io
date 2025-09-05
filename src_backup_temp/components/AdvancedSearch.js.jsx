@@ -77,7 +77,6 @@ export function AdvancedSearch("props": "any) {;
           </button>;
         </div>;
       </div>;
-
       {/* Advanced Filters */"}
       {isExpanded && (<div className="mt-4 p-4 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg">;
           <div className="flex items-center justify-between mb-3">;
@@ -99,7 +98,6 @@ export function AdvancedSearch("props": "any) {;
                 Clear All
               </button>)}
           </div>
-          
           <div className="flex flex-wrap gap-2">
             {categories.map(category => (<button key={category} onClick={() => toggleFilter(category)} className={`px-3 py-1 text-xs rounded-full border transition-all duration-200 ${selectedFilters.includes(category)
                     ? 'bg-zion-cyan text-white border-zion-cyan'

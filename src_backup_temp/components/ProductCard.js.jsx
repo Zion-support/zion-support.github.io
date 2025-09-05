@@ -26,7 +26,6 @@ export default function ProductCard("props": "any) {;
           Product information unavailable.;
         </p>;
       </div>;
-  
   if (!product || 
       typeof product.id !== "string" || 
       typeof product.title !== "string" || 

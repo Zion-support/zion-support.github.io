@@ -7,7 +7,6 @@ import { Input "} from './ui/input';
 export default function Page("props": "any) {;
 ",;
         {;
-
             "id": 'synthetic-biology',;
             "title": 'Synthetic Biology Revolution',;
             "description": 'Engineering of custom organisms and biological systems for industrial applications.',;
@@ -21,7 +20,6 @@ export default function Page("props": "any) {;
             "status": 'Growing';
         },;
         {;
-
             "id": 'brain-computer-interfaces',;
             "title": 'Brain-Computer Interface Revolution',;
             "description": 'Direct neural control of computers and digital systems for enhanced human capabilities.',;
@@ -33,27 +31,21 @@ export default function Page("props": "any) {;
             keyPlayers['Neuralink',Kernel',Medical Device Companies'],;
             technologies['Neural Interfaces',Signal Processing',AI/ML'],;
             "status": 'Emerging';
-
     ];
     const filteredTrends = useMemo(() => {;
         return innovationTrends.filter(trend => {;
-
             const matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                 trend.description.toLowerCase().includes(searchTerm.toLowerCase());
             return matchesCategory && matchesImpact && matchesStatus && matchesSearch})}, [selectedCategory, selectedImpact, selectedStatus, searchTerm]);
     const getImpactColor = ("props": "any) => {;
-
         switch(impact) {;
-
             case 'High': return 'bg-red-100 text-red-800';
             case 'Medium': return 'bg-yellow-100 text-yellow-800';
             case 'Low': return 'bg-green-100 text-green-800';
             "default": return 'bg-gray-100 text-gray-800'"}
     };
     const getStatusColor = ("props": "any) => {;
-
         switch(status) {;
-
             case 'Emerging': return 'bg-blue-100 text-blue-800';
             case 'Growing': return 'bg-green-100 text-green-800';
             case 'Mature': return 'bg-orange-100 text-orange-800';
@@ -61,7 +53,6 @@ export default function Page("props": "any) {;
             "default": return 'bg-gray-100 text-gray-800'"}
     };
     const getCategoryIcon = ("props": "any) => {;
-
         switch(category) {;
 '";
             case 'quantum': return <Atom className="w-5 h-5" />;'";
@@ -92,12 +83,9 @@ export default function Page("props": "any) {;
         <div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div initial = {;
-
   { "opacity": "0",;
   "y": "20;
-
 "}} animate = {;
-
   { "opacity": "1",;
   "y": "0;
 ";
@@ -965,7 +953,6 @@ of emerging technologies and capitalize on future opportunities."""";
 </div>;
         </div>;
       </motion.div>;
-
         </motion.div>) }"
       {/* comment */}"{viewMode === "insights" && (<motion.div initial = {}">
 ""}} transition="{{" delay: 0.1 }} className="space-y-6">"";"

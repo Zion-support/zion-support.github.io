@@ -897,7 +897,6 @@ const SEOOptimizer = ("props": "any) => {"}
                     images["/images / ai - solutions.jpg"], ",;
                     links["/services", /about",/contact"], ",;
                     keywords["artificial intelligence", machine learning",predictive analytics", AI automation"];
-
             ]&apos;&apos;
             const pageAnalyses = samplePages.map(page => {}
 ;
@@ -967,7 +966,6 @@ issues,;
 ;
         catch (error) {}";
             // comment;
-
             // comment;
         finally {}
 ;
@@ -975,7 +973,6 @@ issues,;
 }, []);
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -983,7 +980,6 @@ issues,;
         // Auto-analyze SEO when component mounts;
         analyzeSEO()}, [analyzeSEO]);
     const calculateSEOScore = ("props": "any) => {;
-
 </button>;
 </div>;
 </div>;
@@ -1015,7 +1011,6 @@ issues,;
 </div>
 </div>
 </button>
-
 </div>
 </div>
 </div>

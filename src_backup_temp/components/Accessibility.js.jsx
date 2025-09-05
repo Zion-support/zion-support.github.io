@@ -480,7 +480,6 @@ const context = useContext(AccessibilityContext)";
   // Save settings to localStorage
   useEffect(() => {
   // TODO: Add dependencies if needed
-
   return () => {
     // Cleanup function
   };
@@ -1297,7 +1296,6 @@ const context = useContext(AccessibilityContext)"
 """""
     throw new Error("""""
       "useAccessibility must be used within an AccessibilityProvider"    )}
-
   return context}
 ;
 // comment;
@@ -1306,7 +1304,6 @@ export const AccessibilityProvider = ("props": "any) => {"}";
   const [reducedMotion, setReducedMotion] = useState(false)"";
   const [fontSize, setFontSize] = useState("medium")"";
   const [colorBlindMode, setColorBlindMode] = useState();
-
 // comment
 export const AccessibilityProvider = (props: any) => {}"
   const [highContrast, setHighContrast] = useState(false)""
@@ -1321,13 +1318,11 @@ useEffect(() => {}""
     const savedSettings = localStorage.getItem()
 }
     if (savedSettings) {}
-
       const settings = JSON.parse(savedSettings)"
       setHighContrast(settings.highContrast || false)""
       setReducedMotion(settings.reducedMotion || false)"""
       setFontSize(settings.fontSize || "medium")"""
       setColorBlindMode(settings.colorBlindMode || "none")}
-
   }, [])
 }
   // comment
@@ -1367,7 +1362,6 @@ colorBlindMode};
   // Apply accessibility settings to document
   useEffect(() => {
   // TODO: Add dependencies if needed
-
   return () => {
     // Cleanup function
   };
@@ -1379,7 +1373,6 @@ colorBlindMode};
 }
   // comment
 useEffect(() => {}
-
     const root = document.documentElement,
     // comment
 if (highContrast) {}""
@@ -1412,7 +1405,6 @@ if (reducedMotion) {}"";
             ? "url(#deuteranopia)""""";
             : "url(#tritanopia)",;
 }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
-
     // comment
 if (reducedMotion) {}""
 """
@@ -1438,16 +1430,12 @@ if (reducedMotion) {}""
 }
   const toggleReducedMotion = () => setReducedMotion()
 }  const value = {}
-
     highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode}
-
   return ()"
     <AccessibilityContext .Provider value={value}" >"
       {children}
-
     </AccessibilityContext.Provider>
   )}
-
 highContrast,
     reducedMotion,
     fontSize,
@@ -1465,42 +1453,34 @@ highContrast,
   // Keyboard shortcuts
   useEffect(() => {
   // TODO: Add dependencies if needed
-
   return () => {
     // Cleanup function
   };
 }, []);, []);
     const handleKeyDown = event => {const [isOpen, setIsOpen] = useState()}
   const {}
-
     highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode} = useAccessibility()
 }
   // commentuseEffect(() => {}
-
     const handleKeyDown = event => {}
-
       // comment
 if()""
         (event.ctrlKey || event.metaKey) &&"""
         event.shiftKey &&"""
         event.key === "A
       ) {}
-
         event.preventDefault()
 }
         setIsOpen(!isOpen)}
-
       // comment
 if()""
         (event.ctrlKey || event.metaKey) &&"""
         event.shiftKey &&"""
         event.key === "H"
       ) {}
-
         event.preventDefault()
 }
         toggleHighContrast()}
-
       // comment
 if()""
         (event.ctrlKey || event.metaKey) &&"""
@@ -1646,7 +1626,6 @@ initial="{{" "scale": "0.9", "opacity": "0 "}}""";
 """"";
                           fontSize === size""""";
                             ? "bg-zion-cyan text-white"""""";
-
       <motion .button,"
 whileHover = "{{" scale: 1.1 }}"
         whileTap="{{" scale: 0.9 }}"
@@ -1659,7 +1638,6 @@ whileHover = "{{" scale: 1.1 }}"
         <Accessibility className="w-6 h-6" /" >"
       </motion.button>,
       {/* comment */}
-
       <AnimatePresence>
         {isOpen && (
           <motion .div,"
@@ -1670,7 +1648,6 @@ initial="{{" opacity: 0 }}"""
             onClick="{()" =" > setIsOpen(false)}""
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4""
             onClick="{()" =" > setIsOpen(false)}
-
           >
             <motion .div,"
 initial="{{" scale: 0.9, opacity: 0 }}"""
@@ -1725,7 +1702,6 @@ initial="{{" scale: 0.9, opacity: 0 }}"""
                     ) : (""""
                       <EyeOff className="w-4 h-4" /" >"
                     )}
-
                   </Button>"
                 </div>""
 """""
@@ -1753,7 +1729,6 @@ initial="{{" scale: 0.9, opacity: 0 }}"""
                     ) : (""""
                       <Volume2 className="w-4 h-4" /" >"
                     )}
-
                   </Button>"
                 </div>""
                 {/* comment */}"""""
@@ -1772,13 +1747,10 @@ initial="{{" scale: 0.9, opacity: 0 }}"""
                           fontSize === size"""""
                             ? "bg-zion-cyan text-white""""""
                             : "border-zion-cyan/30 text-zion-cyan"}
-
                       >
                         {size.charAt(0).toUpperCase() + size.slice(1)}
-
                       </Button>
                     ))}
-
                   </div>"
                 </div>""
                 {/* comment */}"""""
@@ -1802,10 +1774,8 @@ initial="{{" scale: 0.9, opacity: 0 }}"""
                             colorBlindMode === mode"""""
                               ? "bg-zion-cyan text-white""""""
                               : "border-zion-cyan/30 text-zion-cyan"}
-
                         >
                           {mode.charAt(0).toUpperCase() + mode.slice(1)}
-
                         </Button>
                       )
 }
@@ -1894,7 +1864,6 @@ useEffect(() => {;
     if(!isActive) return;
     const focusableElements ='";
       'button, [href], input, select, textarea, [tabindex]: "not([tabindex="-1"]);
-
                   </div>"
                 </div>""
 """""
@@ -1934,7 +1903,6 @@ sessions.</p>
               </div>
             </motion.div>
         )}
-
       </AnimatePresence>
 </>
   )}"
@@ -1963,10 +1931,8 @@ const firstFocusableElement = focusableContent[0]
 """
       if (e.key === "Tab") {}
         if(e.shiftKey) {}
-
 useEffect(() => {
   // TODO: Add dependencies if needed
-
   return () => {
     // Cleanup function
   };
@@ -1981,11 +1947,8 @@ useEffect(() => {
     const handleTabKey = e => {e.preventDefault()"}            lastFocusableElement.focus()}
 ;
     const handleTabKey = e => {e.preventDefault()}            lastFocusableElement.focus()}
-
         } else {}
-
           if(document.activeElement === lastFocusableElement) {}
-
             e.preventDefault()"
             firstFocusableElement.focus()}","
 }", "
@@ -2007,7 +1970,6 @@ export const SrOnly = ({children}) => (""""
 )"
 export default AccessibilityPanel""
 """"'""
-
 </Keyboard>
 </Volume2>
 </VolumeX>

@@ -1,9 +1,7 @@
-<<<<<<< HEAD:src/utils/logger.ts
 /**;
  * Production-safe logging utility;
  * Automatically disables logging in production builds;
  */;
-
 type LogLevel = 'debug' | 'info' | 'warn' | 'error';
 ;
 interface LoggerConfig {;

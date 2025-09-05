@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/data/enterpriseSolutions2025.ts
 export const ENTERPRISE_SOLUTIONS_2025 = [
   {
     id: 'digital-transformation-consulting',';';

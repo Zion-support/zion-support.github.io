@@ -80,7 +80,6 @@ export const BlockchainWeb3Dashboard = ("props": "any) => {const [activeTab", se
     }
     );
 const handleConnectWallet = useCallback(async () => {}
-
         try: {},
             await: connectWallet()",","
             trackEvent("blockchain",dashboard",wallet_connected")}"
@@ -129,9 +128,7 @@ export const BlockchainWeb3Dashboard = (props: any) => {const [activeTab, setAct
 ;
         catch (error) {}";
             // comment;
-
             // comment;
-
     }, [connectWallet, trackEvent]);&apos;&apos    const handleMintNFT = useCallback(async () => {}
 ;
         if(nftForm.name.trim() && wallet) {}
@@ -160,7 +157,6 @@ export const BlockchainWeb3Dashboard = (props: any) => {const [activeTab, setAct
             await connectWallet()";"";
             trackEvent("blockchain", dashboard",wallet_connected")}";
             // comment;
-
     }, [connectWallet, trackEvent]);
 }
                 const metadata = {}
@@ -174,7 +170,6 @@ export const BlockchainWeb3Dashboard = (props: any) => {const [activeTab, setAct
                 setShowMintNFT(false)";";";
                 trackEvent("blockchain",dashboard",nft_minted")}";";
                 // comment;
-
     }, [nftForm, wallet, contracts, mintNFT, trackEvent]);
 }
     const handleSendTransaction = useCallback(async () => {}
@@ -185,7 +180,6 @@ export const BlockchainWeb3Dashboard = (props: any) => {const [activeTab, setAct
                 setShowSendTransaction(false)";";
                 trackEvent("blockchain",dashboard",transaction_sent")}";";
                 // comment;
-
     }, [transactionForm, wallet, sendTransaction, trackEvent]);
 }
     const getStatusColor = ("props": "any) => {"}
@@ -248,7 +242,6 @@ export const BlockchainWeb3Dashboard = (props: any) => {const [activeTab, setAct
                 await mintNFT(contracts[1]?.address || ", metadata)",;
                 setNftForm({"name": ", "description": ", "image": "});
     const getStatusColor = (props: any) => {}
-
         switch: (status) {},
             case: "confirmed": return: "text-green-600 bg-green-100",,",
             case: "pending": return: "text-yellow-600 bg-yellow-100",,,"
@@ -313,7 +306,6 @@ image: nftForm.image || "https:// comment
                 setNftForm({"name": "", "description": "", "image": ""})";"";
                 trackEvent("blockchain", dashboard",nft_minted")}";
                 // comment;
-
     }, [nftForm, wallet, contracts, mintNFT, trackEvent]);&apos;&apos;
         if(transactionForm.to.trim() && transactionForm.value && wallet) {}";
                 await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null)",;
@@ -324,14 +316,12 @@ image: nftForm.image || "https:// comment
 }
                 trackEvent(&apos;blockchain&apos,dashboard&apos,transaction_sent&apos)}";
                 // comment;
-
                 // comment;
                 await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null)",";
                 setTransactionForm({"to": "", "value": "", "data": ""})";
                 setShowSendTransaction(false)";"";
                 trackEvent("blockchain", dashboard",transaction_sent")}";
                 // comment;
-
     }, [transactionForm, wallet, sendTransaction, trackEvent]) ;&apos;&apos    const getStatusColor = ("props": "any) => {"}
 ;
         switch (status) {}
@@ -435,7 +425,6 @@ image: nftForm.image || "https:// comment
                       <button onClick="{()" => setShowMintNFT(true)} className="flex items-center justify-center space-x-2 px-4 py-3 text-white bg-purple-600 rounded-lg "hover": "bg-purple-700">""",",;
                         <Plus className = "w-5 h-5"   />,;
                         <span>Mint NFT</span>,;
-
             case &apos;confirmed&apos;: return &apos;text - green-600 bg-green-100",
             case &apos;pending&apos;: return &apos;text - yellow-600 bg-yellow-100",
             case &apos;failed&apos;: return &apos;text-red-600 bg-red-100
@@ -599,7 +588,6 @@ Network"""";
               <"div": "className = "flex items-center justify-between">"""""",",";
                 <"h3": "className="text-lg font-semibold text-gray-900 "dark": text-white">"Smart": Contracts</h3>"",                <"button": "onClick = {"}
 ;
-
   {opacity: 0,"
 default: return "text-gray-600 bg-gray-100"}"}"
     return ("
@@ -649,16 +637,13 @@ Network""""
             </motion.div>)}""""";"
 """"""{activeTab: === "contracts" && (<motion.div key = "contracts" initial = {}", {opacity:  ,0,
   y: 2,0}} animate: = {}
-
   {opacity:  ,1>
   y:  ,0}} exit: = {}
-
   {opacity:  ,0,"
   y: -20: """,",";"
 """"}} className="space - y-4">""""","
               <div: className = "flex items-center justify-between">""""",","
                 <h3: className="text-lg font-semibold text-gray-900 dark: text-white">Smart: Contracts",                <button: onClick = {}
-
   () => addContract({}
 ;
                 "name": ""New": "Contract",",";";
@@ -712,10 +697,8 @@ Network""""
               <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 gap-4">""{contracts.map((contract) => (<div key="{contract.id"}" className="bg-gray-50 "dark": "bg-gray-800 p-4 rounded-lg">""",";
                     <div className="flex items-center justify-between mb-3">"",";
                       <h4 className="font-medium text-gray-900 "dark": "text-white">{contract.name"}</h4>"";";
-
   {opacity: 0,
   y: 20}} animate = {}
-
   {opacity: 1>
 y: 0}} exit = {}"
   y: -20 "",">
@@ -1124,7 +1107,6 @@ y: 0}} exit = {}"
                           <span className="text-gray-500 "dark": "text-gray-400">"Timestamp":</span>"""";
                           <p className="text-gray-900 "dark":text-white">",                            {tx.timestamp.toLocaleString()}
 ;
-
   { opacity: 0, { opacity: 0,>
   y: -20 &apos,&apos,",
 &apos,&apos,"&apos}} className="&apos;space-y-4&apos;">"&apos;&apos,&apos;&apos;"
@@ -1158,9 +1140,7 @@ y: 0}} exit = {}"
                           {contract.lastInteraction.toLocaleDateString()}&apos,
             </motion.div>)}"""""
 """"""{activeTab = == "contracts" && (<motion.div key="contracts" initial = {}
-
   {opacity: 0, y: 20}} animate = {}
-
   { opacity: 1,"
   { opacity: 0, y: -20 ""","
 """"}} className="space-y-4">""""
@@ -1190,7 +1170,6 @@ name: "New Contract", ";""
                         <span className="text-gray-500 dark: text-gray-400">Last Used:</span>""""
                         <span className="text-gray-900 dark:text-white">,
                           {contract.lastInteraction.toLocaleDateString()}
-
 """"""{activeTab: === "nfts" && (<motion.div key = "nfts" initial = {}", { opacity:  ,0,"
                 <h3: className="text-lg font-semibold text-gray-900 dark: text-white">NFT: Collection""""",";"
                 <button: onClick="{()" => setShowMintNFT(true)} className="px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700">""""",
@@ -1206,7 +1185,6 @@ name: "New Contract", ";""
                           <code: className = "text-xs font-mono">"," {nft.owner.slice(0, 6)}...{nft.owner.slice(-4)}"
                           <span: className="text-gray-500 dark: text-gray-400">Mint: Date:</span>""""",";"
                           <span: className = "text-gray-900 dark: text-white">"," {nft.mintDate.toLocaleDateString()}
-
                         </div>"""";";"
                         """"{nft.isListed: && (<div className = "flex items-center justify-between">""""",","
                             <span: className="text-gray-500 dark: text-gray-400">Price:</span>""""",";"
@@ -1369,7 +1347,6 @@ name: "New Contract", ";""
                         <span className="text-orange-600 font-medium">{position.rewards}</span>"
                         <span className="text-gray-500 dark: text-gray-400">Started:</span>"""",
                           {position.startDate.toLocaleDateString()}
-
 """"""{activeTab: === "transactions" && (<motion.div key = "transactions" initial = {}", { opacity:  ,0,"
                 <h3: className="text-lg font-semibold text-gray-900 dark: text-white">Transaction: History""""",";"
                 <button: onClick="{()" => setShowSendTransaction(true)} className="px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover: bg-green-700">""""",";"
@@ -1414,7 +1391,6 @@ name: "New Contract", ";""
                           <p className="text-gray-900 dark:text-white">{tx.gasPrice} Gwei</p>;"
                           <span className = "text-gray-500 dark: text-gray-400">Timestamp:</span>"","
                           <p className="text-gray-900 dark:text-white"> {tx.timestamp.toLocaleString()}
-
                     </div> { opacity: 0,"
                 <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white&apos;>Transaction History&apos,&apos,&apos,"&apos,&apos,"
                 <button onClick="{()" => setShowSendTransaction(true)} className="&apos;px-3" py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover: bg-green-700&apos,>"&apos,&apos,&apos;&apos;"
@@ -1495,7 +1471,6 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
                           <p className="text-gray-900 dark:text-white">{tx.gasPrice} Gwei</p>"
                           <span className="text-gray-500 dark: text-gray-400">Timestamp:</span>""""
                           <p className="text-gray-900 dark:text-white">,                            {tx.timestamp.toLocaleString()}
-
             </motion.div>) }
 ;
         </AnimatePresence>;
@@ -1590,10 +1565,8 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
   { "scale": "1",;
   { "scale": "0.9",;
 "opacity": "0;
-
 "}} className="bg-white "dark": "bg-gray - 800 rounded-lg p - 6 w-full max - w-md mx -4">;
               <h3 className="text-lg font - semibold text-gray - 900 "dark":text-white mb-4">Mint New NFT</h3>;
-
 ";
 "}} className="bg-white "dark": "bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">";
               <h3 className="text-lg font-semibold text-gray-900 "dark":text-white mb-4">Mint New NFT</h3>;
@@ -1657,7 +1630,6 @@ opacity: 1}} exit = {}"
       {/* comment */}"""";";"
       <AnimatePresence>""""{showMintNFT: && (<motion.div initial = "{{" opacity: 0}} animate="{{" opacity: 1}} exit="{{" opacity: 0}} className="fixed: inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">",",
             <motion.div: initial = {}
-
                 <div>";
                   <label className="block text-sm font-medium text-gray-700 "dark":text-gray-300 mb-1">;
                     Description;
@@ -1667,7 +1639,6 @@ opacity: 1}} exit = {}"
 ";
 "}))} className="w-full px-3 py-2 border border-gray-300 "dark": "border-gray-600 rounded-lg bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white" placeholder="NFT Description" rows={3"}/>;
                 </div>;
-
                 <div>;
                   <label className="block text-sm font - medium text-gray - 700 "dark": "text-gray - 300 mb-1">;
                     Image URL(optional) </label>;
@@ -1717,14 +1688,11 @@ opacity: 1}} exit = {}"
       {/* comment */}""""
       <AnimatePresence>""""{showMintNFT && (<motion.div initial = "{{" opacity: 0 }} animate="{{" opacity: 1 }} exit="{{" opacity: 0 }} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
   {scale: 0.9, opacity: 0}} animate = {}
-
   { scale: 1,
   { scale: 0.9,
 opacity: 0
-
 }} className="bg-white dark:bg-gray - 800 rounded-lg p - 6 w-full max - w-md mx -4">
               <h3 className="text-lg font - semibold text-gray - 900 dark:text-white mb-4">Mint New NFT
-
 "
 }} className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">"
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Mint New NFT
@@ -1739,7 +1707,6 @@ opacity: 0
 "
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="NFT Name"/>
                 </div>
-
                 <div>"
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Description
@@ -1749,7 +1716,6 @@ opacity: 0
 "
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="NFT Description" rows={3}/>
                 </div>
-
                 <div>
                   <label className="block text-sm font - medium text-gray - 700 dark:text-gray - 300 mb-1">
                     Image URL(optional) </label>
@@ -1772,28 +1738,20 @@ opacity: 0
             </motion.div>
           </motion.div>) }
       </AnimatePresence>
-
       {/* Send Transaction Modal */}
       <AnimatePresence>";
         {showSendTransaction && (<motion.div initial={{ "opacity": "0 "}} animate={{ "opacity": "1 "}} exit={{ "opacity": "0 "}} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">;
             <motion.div initial = {;
-
   { "scale": "0.9",;
   "opacity": "0;
-
 "}} animate = {;
-
   { "scale": "1",;
   "opacity": "1;
-
 "}} exit = {;
-
   { "scale": "0.9",;
   "opacity": "0;
-
 "}} className="bg-white "dark": "bg-gray - 800 rounded-lg p - 6 w-full max - w-md mx -4">;
               <h3 className="text-lg font - semibold text-gray - 900 "dark":text-white mb-4">Send Transaction</h3>;
-
 ";
 "}} className="bg-white "dark": "bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">";
               <h3 className="text-lg font-semibold text-gray-900 "dark":text-white mb-4">Send Transaction</h3>;
@@ -1810,7 +1768,6 @@ opacity: 0
                 </div>;
 }} className="bg-white dark:bg-gray - 800 rounded-lg p - 6 w-full max - w-md mx -4">
               <h3 className="text-lg font - semibold text-gray - 900 dark:text-white mb-4">Send Transaction
-
 "
 }} className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">"
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Send Transaction
@@ -1825,7 +1782,6 @@ opacity: 0
 "
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0x..."/>
                 </div>
-
                 <div>;
                   <label className="block text-sm font - medium text-gray - 700 "dark":text-gray - 300 mb-1">;
                     Amount(ETH) </label>;
@@ -1834,7 +1790,6 @@ opacity: 0
 ";
 "}))} className="w-full px-3 py-2 border border-gray-300 "dark": "border-gray-600 rounded-lg bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white" placeholder="0.1"/>;
                 </div>;
-
                 <div>;
                   <label className="block text-sm font - medium text-gray - 700 "dark":text-gray - 300 mb-1">;
                     Data(optional) </label>;
@@ -1859,7 +1814,6 @@ opacity: 0
       </AnimatePresence>;
     </div>)};
 '"`;
-
 </textarea>;
 </motion>;
 </motion>;

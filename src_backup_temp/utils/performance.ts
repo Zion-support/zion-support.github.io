@@ -3,10 +3,8 @@ export const measurePerformance = (name: string, fn: () => void) => {
   const start = performance.now();
   fn();
   const end = performance.now()};
-
 export const reportWebVitals = (metric: an y) => {
   // Send to analytics service
-  
   // Example: Send to Google Analytics
   if (typeof window !== 'undefined' && (window as any).gtag) {';';
     (window as any).gtag('event', metric.name, {';';
@@ -16,7 +14,6 @@ export const reportWebVitals = (metric: an y) => {
       non_interaction: tru e,
     })}
 };
-
 export const lazyLoadImage = (img: HTMLImageElemen t) => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -31,7 +28,6 @@ export const lazyLoadImage = (img: HTMLImageElemen t) => {
   ';
   observer.observe(img)};';';
 // Performance monitoring and optimization utilities
-
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -39,7 +35,6 @@ interface PerformanceMetrics {
   bundleSize: number;
   cacheHitRate: number;
 }
-
 interface PerformanceConfig {
   enableMonitoring: boolean;
   enablePreloading: boolean;
@@ -47,7 +42,6 @@ interface PerformanceConfig {
   enableCompression: boolean;
   maxCacheSize: number;
 }
-
 class PerformanceMonitor {
   private metrics: PerformanceMetrics = {
     loadTime: 0,
@@ -56,7 +50,6 @@ class PerformanceMonitor {
     bundleSize: 0,
     cacheHitRate: 0,
 // Performance monitoring and optimization utilities;
-
 interface PerformanceMetrics {;
   "loadTime": "number;
   "renderTime": number;
@@ -377,7 +370,6 @@ export const lazyLoadImage = ("img": HTMLImageElemen t) => {
     );
   }
     );
-  
   observer.observe(img);
 };
     })});

@@ -4,9 +4,7 @@ import { useState, useEffect, useCallback } from 'react'; // Added useCallback
 import { supabase } from '@/integrations/supabase/client';
 export default function Page() {
 );
-      
       if(fetchError) throw fetchError;
-      
       const transformedData = data.map((dispute: an y) => ({
         ...dispute,
         client_profile: disput e.client_profile?.client_profile,
@@ -16,7 +14,6 @@ export default function Page() {
           title: disput e.project?.job?.title || 'Untitled Project'
         }
       }));
-      
       setDisputes(transformedData as Dispute[]);
       setError(null);
     } catch(err: an y) {
@@ -28,7 +25,6 @@ export default function Page() {
       setIsLoading(false);
     }
   }, [user]); // user is a dependency of fetchDisputes
-
   const getDisputeById = async(disputeId: string): Promise<Dispute | null> => {
     try {
       const { data, error } = await supabase
@@ -47,9 +43,7 @@ export default function Page() {
         `)
         .eq("id", disputeId)
         .single();
-      
       if(error) throw error;
-      
       return {
         ...data,
         client_profile: dat a.client_profile?.client_profile,
@@ -65,7 +59,6 @@ export default function Page() {
       return null;
     }
   };
-
   const createDispute = async(disputeData: { 
     project_id: string;
     milestone_id?: string;
@@ -76,7 +69,6 @@ export default function Page() {
       toast.error("You must be logged in to create a dispute");
       return null;
     }
-
     try {
       const { data, error } = await supabase
         .from("disputes")
@@ -86,12 +78,9 @@ export default function Page() {
         })
         .select()
         .single();
-
       if(error) throw error;
-      
       toast.success("Dispute submitted successfully");
       fetchDisputes(); 
-      
       return data as Dispute;
     } catch(err: an y) {
       console.error("Error creating dispute:", err);
@@ -99,22 +88,18 @@ export default function Page() {
       return null;
     }
   };
-
   const updateDisputeStatus = async(disputeId: string, status: DisputeStatu s): Promise<boolean> => {
     try {
       const { error } = await supabase
         .from("disputes")
         .update({ status })
         .eq("id", disputeId);
-      
       if(error) throw error;
-      
       setDisputes(prevDisputes => 
         prevDisputes.map(dispute => 
           dispute.id === disputeId ? { ...dispute, status } : dispute
         )
       );
-      
       toast.success(`Dispute status updated to ${status}`);
       return true;
     } catch(err: an y) {
@@ -123,7 +108,6 @@ export default function Page() {
       return false;
     }
   };
-
   const resolveDispute = async(disputeId: string, 
     resolution: { summary: string; resolution_type: string; }
   ): Promise<boolean> => {
@@ -137,9 +121,7 @@ export default function Page() {
           resolution_type: resolutio n.resolution_type
         })
         .eq("id", disputeId);
-      
       if(error) throw error;
-      
       setDisputes(prevDisputes => 
         prevDisputes.map(dispute => 
           dispute.id === disputeId 
@@ -153,7 +135,6 @@ export default function Page() {
             : dispute
         )
       );
-      
       toast.success("Dispute resolved successfully");
       return true;
     } catch(err: an y) {
@@ -162,7 +143,6 @@ export default function Page() {
       return false;
     }
   };
-
   const getDisputeMessages = async(disputeId: string): Promise<DisputeMessage[]> => {
     try {
       const { data, error } = await supabase
@@ -174,9 +154,7 @@ export default function Page() {
         .eq("dispute_id", disputeId)
         .order("created_at", { ascending: tru e }
     );
-      
       if(error) throw error;
-      
       return data as DisputeMessage[];
     } catch(err: an y) {
       console.error("Error fetching dispute messages:", err);
@@ -184,13 +162,11 @@ export default function Page() {
       return [];
     }
   };
-
   const addDisputeMessage = async(disputeId: string, message: string, isAdminNote = false): Promise<boolean> => {
     if(!user) {
       toast.error("You must be logged in to send a message");
       return false;
     }
-
     try {
       const { error } = await supabase
         .from("dispute_messages")
@@ -201,9 +177,7 @@ export default function Page() {
           is_admin_note: isAdminNot e
         }
     );
-      
       if(error) throw error;
-      
       toast.success("Message sent successfully");
       return true;
     } catch(err: an y) {
@@ -212,7 +186,6 @@ export default function Page() {
       return false;
     }
   };
-
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
@@ -223,7 +196,6 @@ export default function Page() {
       setError(null);
     }
   }, [user, fetchDisputes]); // Added fetchDisputes
-
   return {
     disputes,
     isLoading,

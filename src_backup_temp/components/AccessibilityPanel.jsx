@@ -12,7 +12,6 @@ export const AccessibilityPanel = ("props": "any) => {;
         "focusIndicator": "true;
     "});
     ;
-
 export const AccessibilityPanel = (props: any) => {
     const [settings, setSettings] = useState({
         highContrast: false,
@@ -24,7 +23,6 @@ export const AccessibilityPanel = (props: any) => {
         focusIndicator: true
     }
     );
-    
     const [accessibilityScore, setAccessibilityScore] = useState(85);
     const [activeTab, setActiveTab] = useState('general');
 ;
@@ -109,7 +107,6 @@ export const AccessibilityPanel = (props: any) => {
                                 ×;
                             </button>;
                         </div>;
-
                         <div className="space-y-6">;
                             {/* Font Size */"}
                             <div>;
@@ -125,7 +122,6 @@ export const AccessibilityPanel = (props: any) => {
                                     className="w-full";
                                 />;
                             </div>;
-
                             {/* High Contrast */}
                             <div>;
                                 <label className="flex items-center">;
@@ -138,7 +134,6 @@ export const AccessibilityPanel = (props: any) => {
                                     <span className="text-sm text-gray-700 "dark": "text-gray-300">High Contrast</span>;
                                 </label>;
                             </div>;
-
                             {/* Reduced Motion */"}
                             <div>;
                                 <label className="flex items-center">;
@@ -151,7 +146,6 @@ export const AccessibilityPanel = (props: any) => {
                                     <span className="text-sm text-gray-700 "dark": "text-gray-300">Reduced Motion</span>;
                                 </label>;
                             </div>;
-
                             {/* Focus Indicator */"}
                             <div>;
                                 <label className="flex items-center">;
@@ -164,7 +158,6 @@ export const AccessibilityPanel = (props: any) => {
                                     <span className="text-sm text-gray-700 "dark": "text-gray-300">Focus Indicators</span>;
                                 </label>;
                             </div>;
-
                             {/* Reset Button */"}
                             <button;
                                 onClick={resetSettings}
@@ -181,7 +174,6 @@ export const AccessibilityPanel = (props: any) => {
 };
 ;
 </motion>
-
 </motion>
 import React,{useState,useEffect} from &apos;react&apos;; import {motion,AnimatePresence} from &apos;framer-motion&apos;; export const AccessibilityPanel = (props) => { const [settings,setSettings] = useState({ highContrast: false,fontSize: 100,colorBlindness: &apos;none&apos;,reducedMotion: false,screenReader: false,keyboardNavigation: false,focusIndicator: true };); &apos;; const [accessibilityScore,setAccessibilityScore] = useState(85); const [activeTab,setActiveTab] = useState(&apos;general&apos;); useEffect(() => { const savedSettings = localStorage.getItem(&apos;accessibility-settings&apos;); if (savedSettings) { try { const parsed = JSON.parse(savedSettings); setSettings(prev => ({ ...prev,...parsed }));&apos;;&apos;} catch (error) {} } },[]); useEffect(() => { applySettings(settings);&apos;; localStorage.setItem(&apos;accessibility-settings&apos;,JSON.stringify(settings))},[settings]); const applySettings = (props) => { const root = document.documentElement; if (newSettings.highContrast) { root.style.setProperty(&apos;--high-contrast&apos;,&apos;1&apos;);&apos;;&apos;; root.classList.add(&apos;high-contrast&apos;);&apos;;&apos;} else {root.style.setProperty(&apos;--high-contrast&apos;,&apos;0&apos;);&apos;;&apos;; root.classList.remove(&apos;high-contrast&apos;)} root.style.setProperty(&apos;--font-size&apos;,`${newSettings.fontSize}%`); &apos;; if (newSettings.reducedMotion) {root.classList.add(&apos;reduced-motion&apos;)} else {root.style.setProperty(&apos;--reduced-motion&apos;,&apos;no-preference&apos;)} if (settings.focusIndicator) {root.style.setProperty(&apos;--focus-visible&apos;,&apos;auto&apos;)} else {root.style.setProperty(&apos;--focus-visible&apos;,&apos;none&apos;)} root.classList.remove(&apos;protanopia&apos;,&apos;deuteranopia&apos;,&apos;tritanopia&apos;);&apos;;&apos;; if (newSettings.colorBlindness !== &apos;none&apos;) {root.classList.add(newSettings.colorBlindness)} if (newSettings.focusIndicator) {root.classList.add(&apos;focus-visible&apos;)} else {root.classList.remove(&apos;focus-visible&apos;)} }; const updateSetting = (props) => { setSettings(prev => ({ ...prev,[key]: value };))}; const resetSettings = (props) => { const defaultSettings = { highContrast: false,fontSize: 100,reducedMotion: false,screenReader: false,keyboardNavigation: false,focusIndicator: true,colorBlindness: &apos;none&apos; };; setSettings(defaultSettings)}; return ( <AnimatePresence> {isOpen && ( <motion.div initial={{ opacity: 0,x: -300 }} animate={{ opacity: 1,x: 0 }} exit={{ opacity: 0,x: -300 }} className=&quot;fixed left-0 top-0 h-full w-80 bg-white dark:bg-gray-800 shadow-xl z-50&quot; > <div className=&quot;p-6&quot;> <div className=&quot;flex items-center justify-between mb-6&quot;> <h2 className=&quot;text-xl font-bold text-gray-900 dark:text-white&quot;> Accessibility </h2> <button onClick={onToggle} className=&quot;text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200&quot; > × </button> </div> <div className=&quot;space-y-6&quot;> {} <div> <label className=&quot;block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2&quot;> Font Size: {settings.fontSize}% </label> <input type=&quot;range&quot; min=&quot;80&quot; max=&quot;200&quot;; value={settings.fontSize} onChange={(e) => updateSetting(&apos;fontSize&apos;,parseInt(e.target.value))} className=&quot;w-full&quot; /> </div> {} <div> <label className=&quot;flex items-center&quot;> <input type=&quot;checkbox&quot;; checked={settings.highContrast} onChange={(e) => updateSetting(&apos;highContrast&apos;,e.target.checked)} className=&quot;mr-2&quot; /> <span className=&quot;text-sm text-gray-700 dark:text-gray-300&quot;>High Contrast</span> </label> </div> {} <div> <label className=&quot;flex items-center&quot;> <input type=&quot;checkbox&quot;; checked={settings.reducedMotion} onChange={(e) => updateSetting(&apos;reducedMotion&apos;,e.target.checked)} className=&quot;mr-2&quot; /> <span className=&quot;text-sm text-gray-700 dark:text-gray-300&quot;>Reduced Motion</span> </label> </div> {} <div> <label className=&quot;flex items-center&quot;> <input type=&quot;checkbox&quot;; checked={settings.focusIndicator} onChange={(e) => updateSetting(&apos;focusIndicator&apos;,e.target.checked)} className=&quot;mr-2&quot; /> <span className=&quot;text-sm text-gray-700 dark:text-gray-300&quot;>Focus Indicators</span> </label> </div> {} <button onClick={resetSettings} className=&quot;w-full px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors&quot; > Reset to Default </button> </div> </div> </motion.div> )} </AnimatePresence> )}; </motion>;&apos;;&apos;;
 const React,{useState,useEffect} from "react"; import {motion,AnimatePresence} from "framer-motion"; export const AccessibilityPanel = (props) => { const [settings,setSettings] = useState({ highContrast: false,fontSize: 100,colorBlindness:"

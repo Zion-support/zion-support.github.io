@@ -29,7 +29,6 @@ export function ServiceShowcase("props": "any) {;
             Discover our cutting-edge solutions designed to transform your business with AI", security, and innovation;
           </p>;
         </div>;
-
         <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 gap-8">;
           {services.slice(0", 6).map((service) => (<Card key={service.id} className="group relative overflow-hidden bg-gradient-to-br from-zinc-800/50 to-zinc-700/50 border-zinc-600/30 "hover": "border-zion-cyan/50 transition-all duration-500 "hover":scale-105 backdrop-blur-sm">;
               {service.featured && (<div className="absolute top-4 right-4">;
@@ -54,7 +53,6 @@ export function ServiceShowcase("props": "any) {;
                   {service.description}
                 </CardDescription>;
               </CardHeader>;
-
               <CardContent className="space-y-4">;
                 <div className="flex items-center justify-between">;
                   <div className="flex items-center gap-2">;
@@ -66,7 +64,6 @@ export function ServiceShowcase("props": "any) {;
                     <span className="text-zion-cyan font-semibold">AI "Score": "{service.aiScore"}</span>;
                   </div>;
                 </div>;
-
                 <div className="space-y-2">;
                   <h4 className="text-sm font-semibold text-zinc-300">Key "Features": "</h4>;
                   <div className="flex flex-wrap gap-2">;
@@ -75,7 +72,6 @@ export function ServiceShowcase("props": "any) {;
                       </Badge>))}
                   </div>;
                 </div>;
-
                 <div className="pt-4 border-t border-zinc-600/30">;
                   <div className="flex items-center justify-between mb-4">;
                     <span className="text-2xl font-bold text-white">;
@@ -83,18 +79,15 @@ export function ServiceShowcase("props": "any) {;
                     </span>;
                     <span className="text-zinc-400 text-sm">per month</span>;
                   </div>;
-
                   <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple "hover": "from-zion-purple "hover":to-zion-cyan text-white font-semibold transition-all duration-300 "hover":shadow-lg "hover":shadow-zion-cyan/25">;
                     Get Started;
                   </Button>;
                 </div>;
               </CardContent>;
-
               {/* Hover Effect Overlay */"}
               <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/5 to-zion-purple/5 opacity-0 group-"hover": "opacity-100 transition-opacity duration-300 pointer-events-none" />;
             </Card>))"}
         </div>;
-
         <div className="text-center mt-12">;
           <Button size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-purple "hover": "from-zion-purple "hover":to-zion-cyan text-white font-semibold px-8 py-4 text-lg transition-all duration-300 "hover":shadow-lg "hover":shadow-zion-cyan/25">;
             View All Services;
@@ -103,7 +96,6 @@ export function ServiceShowcase("props": "any) {;
       </div>;
     </div>)"}
 ;
-
 export default ServiceShowcase;
     return (
         <div className="py-12 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">

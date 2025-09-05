@@ -6,7 +6,6 @@ export const cartUtils = {;
 }
 export default cartUtils;
 export const cartUtils = { init: function() { } }; export default cartUtils;
-
 // cartUtils utility,
 export const cartUtils = {
   // Placeholder utility functions,

@@ -54,7 +54,6 @@ const EnhancedComprehensiveServicesShowcase = ("props": "any) => {"}
 '';
 ''';
   const [activeCategory, setActiveCategory] = useState('all');''';
-
 const EnhancedComprehensiveServicesShowcase = (props: any) => {}
 '
 ''
@@ -62,7 +61,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
   const [activeCategory, setActiveCategory] = useState('all');'''
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState(null);
-
   // Transform services for the showcase;
   const transformedServices = []
     ...innovativeServices2025.map(service => ({}
@@ -139,7 +137,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
       color: service.color || 'from-purple-600 to-indigo-700','
       badge: service.badge || 'New'}))
   ];
-
   const filteredServices = transformedServices.filter(service => {}
     const matchesSearch =
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -147,7 +144,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
       service.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
-
   const serviceCategories = []';
     {}';';
 '';';
@@ -232,7 +228,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
   const serviceCategories = [];
   }
     );
-
   const serviceCategories = []
     {}
 ';
@@ -397,7 +392,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
       count: transformedServices.filter(s => s.category.includes('Digital'))
         .length}
   ];
-
   const handleServiceClick = service => {}
     setSelectedService(service);
   };
@@ -415,11 +409,9 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
             Zion Tech Group"""";
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">';
               {' '"}
-
   const closeModal = (props: any) => {}
     setSelectedService(null);
   };
-
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"""
       {/* Header Section */}""""
@@ -851,7 +843,6 @@ export {EnhancedComprehensiveServicesShowcase};
 export {EnhancedComprehensiveServicesShowcase};
 ;
 export {EnhancedComprehensiveServicesShowcase};
-
 </path>';
 </div>;';;';
 ;
@@ -861,18 +852,11 @@ export {EnhancedComprehensiveServicesShowcase};
           </div>
         </div>
       </section>
-
 export default EnhancedComprehensiveServicesShowcase;
-
 export {EnhancedComprehensiveServicesShowcase};
-
 export {EnhancedComprehensiveServicesShowcase};
-
 export {EnhancedComprehensiveServicesShowcase};
-
 export {EnhancedComprehensiveServicesShowcase};
-
 export {EnhancedComprehensiveServicesShowcase};
-
 </path>
 </div>

@@ -1,5 +1,4 @@
 import React from &apos;react&apos;; import {motion} from &apos;framer-motion&apos;; import {cn} from &apos;@/lib/utils&apos;; export function LoadingSpinner($1) { const sizeClasses = { xs: &apos;w-4 h-4&apos;,sm: &apos;w-6 h-6&apos;,md: &apos;w-8 h-8&apos;,lg: &apos;w-12 h-12&apos;,xl: &apos;w-16 h-16&apos; };;&apos;; const colorClasses = {primary: &apos;border-zion-purple&apos;,secondary: &apos;border-zion-cyan&apos;,white: &apos;border-white&apos;,custom: &quot;};; const borderColor = customColor || colorClasses[color]; return (&apos;; <div className={cn(&apos;flex flex-col items-center justify-center&apos;,className)}> <motion .div &apos;; className={cn(&apos;;&apos;; &apos;border-2 border-t-transparent rounded-full animate-spin&apos;,sizeClasses[size],borderColor )} animate={{ rotate: 360 }} transition={{ duration: 1,repeat: Infinity,ease: &quot;linear&quot; }} role=&quot;status&quot; aria-label=&quot;Loading&quot; /> {showText && ( <motion.p className=&quot;mt-3 text-sm text-zion-slate-light text-center&quot; initial={{ opacity: 0,y: 10 }} animate={{ opacity: 1,y: 0 }} transition={{ delay: 0.2 }} > {text} </motion.p> )} </div> )} export function SkeletonLoader($1) { return ( <div className={cn(&apos;space-y-3&apos;,className)}> {Array.from({ length: lines }).map((_,index) => ( <motion .div&apos;; key={index} className={cn(&apos;bg-zion-slate-light/20 rounded animate-pulse&apos;,height)} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: index * 0.1 }} /> ))} </div> )} export function PageLoader($1) { return ( <div className={cn(&apos;min-h-screen flex items-center justify-center&apos;,className)}> <div className=&quot;text-center&quot;> <LoadingSpinner size=&quot;xl&quot; color=&quot;primary&quot; showText text={text} /> </div> </div> )} export function ButtonLoader($1) { return ( <div className={cn(&apos;inline-flex items-center&apos;,className)}> <LoadingSpinner size={size} color=&quot;white&quot; /> <span className=&quot;ml-2&quot;>Loading...</span> </div> )} export default LoadingSpinner; </motion> </motion>;&apos;;&apos;;
-
 import React from 'react';
 import {motion} from 'framer-motion';
 import {cn} from '@/lib/utils';
@@ -37,7 +36,6 @@ export function LoadingSpinner("props": "any) {;
         role="status";
         aria-label="Loading";
        />;
-
       {showText && (;
         <motion.p ;
           className="mt-3 text-sm text-zion-slate-light text-center";
@@ -127,7 +125,6 @@ export function ButtonLoader("props": "any) {;
   );
 }
 ;
-
 export default LoadingSpinner;
 </motion>;
 </motion>;

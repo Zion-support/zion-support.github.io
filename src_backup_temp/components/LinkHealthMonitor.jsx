@@ -102,7 +102,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             lastChecked: new Date(),'''
             parentPage: 'Contact','''
             linkText: 'Email'
-
     ];
     useEffect ( () => {}
         setLinkStatuses (sampleLinks) ;
@@ -693,24 +692,17 @@ export {LinkHealthMonitor};
 export {LinkHealthMonitor};
 ;
 export {LinkHealthMonitor};
-
 </motion>';
 </motion>;';;';
 ;
 </motion>;
 </motion>;
 </motion>;
-
 export {LinkHealthMonitor};
-
 export {LinkHealthMonitor};
-
 export {LinkHealthMonitor};
-
 export {LinkHealthMonitor};
-
 export {LinkHealthMonitor};
-
 </motion>
 </motion>
 </motion>

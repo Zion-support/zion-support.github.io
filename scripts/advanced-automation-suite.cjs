@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");"console.log(" Advanced Automation Suite");"console.log("============================");''"
-=======
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");"console.log(" Advanced Automation Suite");"console.log("");''"
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
-
-
-
-=======
 console.log('🚀 Advanced Automation Suite');
 console.log('');
 // Function to create ESLint configuration fix
@@ -41,7 +34,6 @@ module.exports = {
   }
 };
 ";
->>>>>>> main
 class AdvancedAutomationSuite {
   constructor() {
     this.results = {
@@ -54,23 +46,14 @@ class AdvancedAutomationSuite {
       seo: {}
     };
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> main
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    
   }
-<<<<<<< HEAD
-
-=======
 // Function to create deployment automation
 function createDeploymentAutomation() {
   console.log('\n🚀 Creating Deployment Automation...');
   const deploymentScript = "#!/bin/bash
->>>>>>> main
   async runCommand(command, description) {
     try {
       this.log(`Running: ${description}`);
@@ -87,10 +70,6 @@ function createDeploymentAutomation() {
       return null;
     }
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> main
   async createAdvancedMonitoring() {
     this.log('Creating advanced monitoring system...');
     const monitoringScript = `#!/usr/bin/env node
@@ -136,20 +115,13 @@ class AutomatedTestFramework {
     this.tests.push({ name, testFn });
   }
   async runTests() {
-<<<<<<< HEAD
-    
-    
-=======
     console.log('🧪 Running automated tests...');
->>>>>>> main
     for (const test of this.tests) {
       try {
         await test.testFn();
         this.results.passed++;
-        
       } catch (error) {
         this.results.failed++;
-        
       }
     }
     this.results.total = this.tests.length;
@@ -166,12 +138,7 @@ class AutomatedTestFramework {
       fs.mkdirSync(path.dirname(reportPath), { recursive: true });
     }
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-<<<<<<< HEAD
-    
-    
-=======
     console.log(\`\\n📊 Test Results: \${this.results.passed}/\${this.results.total} passed\`);
->>>>>>> main
   }
 }
 module.exports = AutomatedTestFramework;`;
@@ -189,12 +156,10 @@ class PerformanceOptimizer {
     this.optimizations = [];
   }
   async optimizeImages() {
-    
     // Image optimization logic would go here
     this.optimizations.push('Images optimized');
   }
   async optimizeCode() {
-    
     // Code optimization logic would go here
     this.optimizations.push('Code optimized');
   }
@@ -225,12 +190,10 @@ class SecurityEnhancer {
     this.securityChecks = [];
   }
   async checkDependencies() {
-    
     // Dependency check logic would go here
     this.securityChecks.push('Dependencies checked');
   }
   async checkCodeSecurity() {
-    
     // Code security check logic would go here
     this.securityChecks.push('Code security checked');
   }
@@ -261,12 +224,10 @@ class SEOEnhancer {
     this.seoChecks = [];
   }
   async checkMetaTags() {
-    
     // Meta tag check logic would go here
     this.seoChecks.push('Meta tags checked');
   }
   async checkStructuredData() {
-    
     // Structured data check logic would go here
     this.seoChecks.push('Structured data checked');
   }
@@ -302,9 +263,6 @@ npm run test:smoke || true
 echo "🌐 Deploying to production..."
 # Add your deployment commands here
 echo "✅ Deployment completed successfully!"`;
-<<<<<<< HEAD
-
-=======
 echo "✅ Deployment completed successfully!";";
   fs.writeFileSync('deploy.sh', deploymentScript);
   fs.chmodSync('deploy.sh', '755');
@@ -531,7 +489,6 @@ module.exports = nextConfig;
       'lighthouse': 'lighthouse "http": //localhost:3000 --output=html --output-path=./lighthouse-report.html',
       '"perf": audit': 'npm run build && npm run lighthouse'
     }
->>>>>>> main
     const deployPath = path.join(process.cwd(), 'scripts', 'deploy.sh');
     fs.writeFileSync(deployPath, deploymentScript);
     fs.chmodSync(deployPath, '755');
@@ -547,10 +504,7 @@ module.exports = nextConfig;
     await this.createDeploymentAutomation();
     this.results.scriptsRun = this.results.improvements.length;
     this.log('\\n📊 ADVANCED AUTOMATION SUITE SUMMARY');
-<<<<<<< HEAD
-=======
     this.log('==');
->>>>>>> main
     this.log(`Scripts created: ${this.results.scriptsRun}`);
     this.log(`Improvements: ${this.results.improvements.length}`);
     this.log(`Errors: ${this.results.errors.length}`);
@@ -566,28 +520,20 @@ module.exports = nextConfig;
         this.log(`  ${index + 1}. ${error}`);
       });
     }
-<<<<<<< HEAD
-
-=======
 console.log('⚡ Performance optimization completed!');
 ";
->>>>>>> main
     // Save results
     const resultsPath = path.join(process.cwd(), 'automation-reports', 'advanced-automation-results.json');
     if (!fs.existsSync(path.dirname(resultsPath))) {
       fs.mkdirSync(path.dirname(resultsPath), { recursive: true });
     }
     fs.writeFileSync(resultsPath, JSON.stringify(this.results, null, 2));
-<<<<<<< HEAD
-
     this.log('\\n🎉 Advanced automation suite completed!');
   }
 }
-
 // Run the automation suite
 const automation = new AdvancedAutomationSuite();
 automation.runAllAutomations().catch(console.error);
-=======
     this.log('\\n🎉 Advanced automation suite completed!');
   }
 }
@@ -633,5 +579,3 @@ main().catch(console.error);
 // Run the automation suite
 const automation = new AdvancedAutomationSuite();
 automation.runAllAutomations().catch(console.error);
->>>>>>> main
->>>>>>> main
