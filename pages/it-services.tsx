@@ -530,7 +530,6 @@ title: 'AI-Powered IT Operations (AIOps)',
     popular: true
   },
   {
-<<<<<<< HEAD
     title: 'Quantum Computing Infrastructure',
     description: 'Quantum computing infrastructure setup and management for research and enterprise applications.',
     icon: Cpu,
@@ -684,8 +683,6 @@ title: 'AI-Powered IT Operations (AIOps)',
     category: 'Change Management'
   },
   {
-=======
->>>>>>> 9cdb1ba2fcd2f1643402e1f0bd1771f058239fee
     title: 'AI-Powered IT Operations (AIOps)',
     description: 'Intelligent IT operations using AI and machine learning for predictive maintenance and automation.',
     icon: Cpu,
@@ -809,27 +806,6 @@ title: 'AI-Powered IT Operations (AIOps)',
     features: ['Predictive Maintenance', 'Automated Incident Response', 'Performance Optimization', 'Anomaly Detection'],
     pricing: '$15,000 - $75,000/setup',
     category: 'AI Operations',
-<<<<<<< HEAD
-=======
-    popular: true
-  },
-  {
-    title: 'Edge Computing Solutions',
-    description: 'Edge computing infrastructure and management for distributed applications.',
-    icon: Cpu,
-    features: ['Edge Infrastructure', 'Latency Optimization', 'Distributed Processing', 'Remote Management'],
-    pricing: '$20,000 - $100,000/project',
-    category: 'Edge Computing',
-    popular: true
-  },
-  {
-    title: '5G Network Implementation',
-    description: '5G network design, implementation, and optimization services.',
-    icon: Network,
-    features: ['5G Planning', 'Network Slicing', 'Performance Optimization', 'Security Implementation'],
-    pricing: '$50,000 - $500,000/project',
-    category: '5G Technology',
->>>>>>> 9cdb1ba2fcd2f1643402e1f0bd1771f058239fee
     popular: true
   },
   {
@@ -902,17 +878,6 @@ title: 'AI-Powered IT Operations (AIOps)',
     features: ['Function Design', 'Event-driven Architecture', 'Cost Optimization', 'Performance Tuning'],
     pricing: '$15,000 - $100,000/project',
     category: 'Serverless',
-    popular: true
-<<<<<<< HEAD
-=======
-  },
-  {
-    title: 'AI-Powered IT Operations (AIOps)',
-    description: 'Intelligent IT operations with machine learning-powered monitoring and automation.',
-    icon: Brain,
-    features: ['Predictive Analytics', 'Automated Incident Response', 'Anomaly Detection', 'Root Cause Analysis'],
-    pricing: '$25,000 - $200,000/setup',
-    category: 'AIOps',
     popular: true
   },
   {
@@ -1076,7 +1041,6 @@ title: 'AI-Powered IT Operations (AIOps)',
     pricing: '$2,000 - $15,000 per person',
     category: 'Training',
     popular: true
->>>>>>> 9cdb1ba2fcd2f1643402e1f0bd1771f058239fee
   }
 ];
 

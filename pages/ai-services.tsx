@@ -608,7 +608,6 @@ title: 'Generative AI Content Creation Suite',
     popular: true
   },
   {
-<<<<<<< HEAD
     title: 'AI-Powered Quantum Machine Learning',
     description: 'Quantum-enhanced machine learning algorithms for complex optimization problems.',
     icon: Cpu,
@@ -916,8 +915,6 @@ title: 'Generative AI Content Creation Suite',
     category: 'Real Estate AI'
   },
   {
-=======
->>>>>>> 9cdb1ba2fcd2f1643402e1f0bd1771f058239fee
     title: 'AI-Powered Metaverse Development',
     description: 'Complete metaverse solutions with AI-driven virtual environments and avatars.',
     icon: Globe,
@@ -970,8 +967,6 @@ title: 'Generative AI Content Creation Suite',
     pricing: '$15,000 - $100,000/setup',
     category: 'Customer Experience',
     popular: true
-<<<<<<< HEAD
-=======
   },
   {
     title: 'AI-Powered Cybersecurity Intelligence',
@@ -1143,7 +1138,6 @@ title: 'Generative AI Content Creation Suite',
     pricing: '$40,000 - $250,000/setup',
     category: 'Search Technology',
     popular: true
->>>>>>> 9cdb1ba2fcd2f1643402e1f0bd1771f058239fee
   }
 ];
 
