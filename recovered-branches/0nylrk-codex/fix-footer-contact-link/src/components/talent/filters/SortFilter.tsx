@@ -1,4 +1,34 @@
 
+<<<<<<< HEAD
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue} from "@/components/ui/select",;
+import { SortFilterProps } from "@/types/filters",;
+;
+export function SortFilter({ sortOption, setSortOption } SortFilterProps) {;
+  return (;
+    <div className="mb-6">;
+      <label className="text-sm font-medium text-zion-slate-light mb-2 block">;
+        Sort by;
+      </label>;
+      <Select value={sortOption} onValueChange={setSortOption}>;
+        <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">;
+          <SelectValue placeholder="Sort by" />;
+        </SelectTrigger>;
+        <SelectContent className="bg-zion-blue border-zion-blue-light text-white">;
+          <SelectItem value="relevance">Relevance</SelectItem>;
+          <SelectItem value="rating">Highest Rating</SelectItem>;
+          <SelectItem value="experience">Most Experienced</SelectItem>;
+          <SelectItem value="price-low">Price:Low to High</SelectItem>;
+          <SelectItem value="price-high">Price:High to Low</SelectItem>;
+        </SelectContent>;
+      </Select>;
+    </div>;
+  );
+=======
 import {
   Select,
   SelectContent,
@@ -35,4 +65,5 @@ export function SortFilter(_{_sortOption, _setSortOption}: SortFilterProps) {_re
       </Select>
     </div>
   )
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

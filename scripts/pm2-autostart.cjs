@@ -1,69 +1,83 @@
-#!/usr/bin/env node
-
-/**
- * PM2 Autostart
- * Manages PM2 startup configuration and autostart functionality
- */
-
+#!/usr/bin/env node;
+;
+/**;
+ * PM2 Autostart;
+ * Manages PM2 startup configuration and autostart functionality;
+ */;
+;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
-class PM2Autostart {
-  constructor() {
+;
+class PM2Autostart {;
+  constructor() {;
     this.configDir = path.join(__dirname, '..', 'automation');
     this.ecosystemFiles = this.findEcosystemFiles();
   }
-
-  findEcosystemFiles() {
-    try {
-      const files = fs.readdirSync(this.configDir)
-        .filter(file => file.startsWith('ecosystem') && file.endsWith('.cjs'))
+;
+  findEcosystemFiles() {;
+    try {;
+      const files = fs.readdirSync(this.configDir);
+        .filter(file => file.startsWith('ecosystem') && file.endsWith('.cjs'));
         .map(file => path.join(this.configDir, file));
       return files;
-    } catch (error) {
+    } catch (error) {;
       console.error('❌ Error reading automation directory:', error.message);
       return [];
     }
   }
-
-  async setupAutostart() {
+;
+  async setupAutostart() {;
     console.log('🚀 Setting up PM2 autostart...');
-    
-    try {
-      // Save current PM2 configuration
-      execSync('pm2 save', { stdio: 'inherit' });
+    ;
+    try {;
+      // Save current PM2 configuration;
+      execSync('pm2 save', { stdio:'inherit' });
       console.log('✅ PM2 configuration saved');
-      
-      // Setup startup script
-      execSync('pm2 startup', { stdio: 'inherit' });
+      ;
+      // Setup startup script;
+      execSync('pm2 startup', { stdio:'inherit' });
       console.log('✅ PM2 startup script generated');
-      
-      // Save again after startup setup
-      execSync('pm2 save', { stdio: 'inherit' });
+      ;
+      // Save again after startup setup;
+      execSync('pm2 save', { stdio:'inherit' });
       console.log('✅ PM2 configuration saved with startup');
-      
+      ;
       return true;
-    } catch (error) {
+    } catch (error) {;
       console.error('❌ Failed to setup autostart:', error.message);
       return false;
     }
   }
-
-  async disableAutostart() {
+;
+  async disableAutostart() {;
     console.log('🛑 Disabling PM2 autostart...');
-    
-    try {
-      // Uninstall startup script
-      execSync('pm2 unstartup', { stdio: 'inherit' });
+    ;
+    try {;
+      // Uninstall startup script;
+      execSync('pm2 unstartup', { stdio:'inherit' });
       console.log('✅ PM2 autostart disabled');
-      
+      ;
       return true;
-    } catch (error) {
+    } catch (error) {;
       console.error('❌ Failed to disable autostart:', error.message);
       return false;
     }
   }
+<<<<<<< HEAD
+;
+  async getAutostartStatus() {;
+    try {;
+      const output = execSync('pm2 startup', { encoding:'utf8' });
+      return {;
+        enabled:!output.includes('You have to run this command as root'),;
+        output:output;
+      };
+    } catch (error) {;
+      return {;
+        enabled:false,;
+        error:error.message;
+=======
 
   async getAutostartStatus() {
     try {
@@ -76,113 +90,114 @@ class PM2Autostart {
       return {
         enabled: false;
         error: error.message
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
     }
   }
-
-  async listSavedProcesses() {
-    try {
-      const output = execSync('pm2 list', { encoding: 'utf8' });
+;
+  async listSavedProcesses() {;
+    try {;
+      const output = execSync('pm2 list', { encoding:'utf8' });
       return output;
-    } catch (error) {
-      return `Error listing processes: ${error.message}`;
+    } catch (error) {;
+      return `Error listing processes:${error.message}`;
     }
   }
-
-  async restoreProcesses() {
+;
+  async restoreProcesses() {;
     console.log('🔄 Restoring PM2 processes...');
-    
-    try {
-      execSync('pm2 resurrect', { stdio: 'inherit' });
+    ;
+    try {;
+      execSync('pm2 resurrect', { stdio:'inherit' });
       console.log('✅ PM2 processes restored');
       return true;
-    } catch (error) {
+    } catch (error) {;
       console.error('❌ Failed to restore processes:', error.message);
       return false;
     }
   }
-
-  async saveCurrentState() {
+;
+  async saveCurrentState() {;
     console.log('💾 Saving current PM2 state...');
-    
-    try {
-      execSync('pm2 save', { stdio: 'inherit' });
+    ;
+    try {;
+      execSync('pm2 save', { stdio:'inherit' });
       console.log('✅ Current state saved');
       return true;
-    } catch (error) {
+    } catch (error) {;
       console.error('❌ Failed to save state:', error.message);
       return false;
     }
   }
-
-  async generateStartupScript() {
+;
+  async generateStartupScript() {;
     console.log('📝 Generating startup script...');
-    
-    const scriptContent = `#!/bin/bash
-# PM2 Startup Script for Zion Tech Group
+    ;
+    const scriptContent = `#!/bin/bash;
+# PM2 Startup Script for Zion Tech Group;
 # Generated on ${new Date().toISOString()}
-
-# Set environment
-export NODE_ENV=production
-export PM2_HOME=/home/\$USER/.pm2
-
-# Start PM2 daemon
-pm2 resurrect
-
-# Wait for processes to start
-sleep 5
-
-# Check status
-pm2 status
-
-echo "PM2 startup complete at \$(date)"
+;
+# Set environment;
+export NODE_ENV=production;
+export PM2_HOME=/home/\$USER/.pm2;
+;
+# Start PM2 daemon;
+pm2 resurrect;
+;
+# Wait for processes to start;
+sleep 5;
+;
+# Check status;
+pm2 status;
+;
+echo "PM2 startup complete at \$(date)";
 `;
-
+;
     const scriptPath = path.join(__dirname, '..', 'start-pm2.sh');
     fs.writeFileSync(scriptPath, scriptContent);
     fs.chmodSync(scriptPath, '755');
-    
-    console.log(`✅ Startup script generated: ${scriptPath}`);
+    ;
+    console.log(`✅ Startup script generated:${scriptPath}`);
     return scriptPath;
   }
-
-  async createSystemdService() {
+;
+  async createSystemdService() {;
     console.log('🔧 Creating systemd service...');
-    
-    const serviceContent = `[Unit]
-Description=PM2 Process Manager for Zion Tech Group
-After=network.target
-
-[Service]
-Type=forking
+    ;
+    const serviceContent = `[Unit];
+Description=PM2 Process Manager for Zion Tech Group;
+After=network.target;
+;
+[Service];
+Type=forking;
 User=${process.env.USER || 'root'}
 WorkingDirectory=${process.cwd()}
-Environment=PATH=/usr/bin:/usr/local/bin
-Environment=NODE_ENV=production
-ExecStart=/usr/bin/pm2 resurrect
-ExecReload=/usr/bin/pm2 reload all
-ExecStop=/usr/bin/pm2 kill
-Restart=on-failure
-
-[Install]
-WantedBy=multi-user.target
+Environment=PATH=/usr/bin:/usr/local/bin;
+Environment=NODE_ENV=production;
+ExecStart=/usr/bin/pm2 resurrect;
+ExecReload=/usr/bin/pm2 reload all;
+ExecStop=/usr/bin/pm2 kill;
+Restart=on-failure;
+;
+[Install];
+WantedBy=multi-user.target;
 `;
-
+;
     const servicePath = path.join(__dirname, '..', 'zion-pm2.service');
     fs.writeFileSync(servicePath, serviceContent);
-    
-    console.log(`✅ Systemd service file generated: ${servicePath}`);
-    console.log('💡 To install: sudo cp zion-pm2.service /etc/systemd/system/ && sudo systemctl enable zion-pm2');
-    
+    ;
+    console.log(`✅ Systemd service file generated:${servicePath}`);
+    console.log('💡 To install:sudo cp zion-pm2.service /etc/systemd/system/ && sudo systemctl enable zion-pm2');
+    ;
     return servicePath;
   }
-
-  async showHelp() {
+;
+  async showHelp() {;
     console.log('PM2 Autostart Manager');
     console.log('=====================');
     console.log('');
     console.log('Available ecosystem files:');
-    this.ecosystemFiles.forEach(file => {
+    this.ecosystemFiles.forEach(file => {;
       console.log(`  - ${path.basename(file)}`);
     });
     console.log('');
@@ -198,62 +213,62 @@ WantedBy=multi-user.target
     console.log('  help         - Show this help');
   }
 }
-
-// CLI execution
-async function main() {
+;
+// CLI execution;
+async function main() {;
   const autostart = new PM2Autostart();
   const command = process.argv[2] || 'help';
-
-  try {
-    switch (command) {
-      case 'setup':
+;
+  try {;
+    switch (command) {;
+      case 'setup':;
         await autostart.setupAutostart();
         break;
-        
-      case 'disable':
+        ;
+      case 'disable':;
         await autostart.disableAutostart();
         break;
-        
-      case 'status':
+        ;
+      case 'status':;
         const status = await autostart.getAutostartStatus();
-        console.log('Autostart Status:', status.enabled ? 'Enabled' : 'Disabled');
+        console.log('Autostart Status:', status.enabled ? 'Enabled' :'Disabled');
         if (status.output) console.log(status.output);
         break;
-        
-      case 'list':
+        ;
+      case 'list':;
         const processes = await autostart.listSavedProcesses();
         console.log(processes);
         break;
-        
-      case 'restore':
+        ;
+      case 'restore':;
         await autostart.restoreProcesses();
         break;
-        
-      case 'save':
+        ;
+      case 'save':;
         await autostart.saveCurrentState();
         break;
-        
-      case 'startup':
+        ;
+      case 'startup':;
         await autostart.generateStartupScript();
         break;
-        
-      case 'systemd':
+        ;
+      case 'systemd':;
         await autostart.createSystemdService();
         break;
-        
-      case 'help':
-      default:
+        ;
+      case 'help':;
+      default:;
         autostart.showHelp();
         break;
     }
-  } catch (error) {
+  } catch (error) {;
     console.error('❌ Error:', error.message);
     process.exit(1);
   }
 }
-
-if (require.main === module) {
+;
+if (require.main === module) {;
   main();
 }
-
+;
 module.exports = PM2Autostart;

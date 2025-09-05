@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+#!/usr/bin/env node;
+;
+=======
 #!/usr/bin/env node
 
 <<<<<<< HEAD
@@ -219,24 +223,29 @@ class HealthChecker {
 const healthChecker = new HealthChecker();
 healthChecker.run().catch(console.error);
 =======
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 const { execSync } = require('child_process');
-
+;
 console.log('🏥 Running Health Check...');
-
-const checks = [
-  { nam: e: 'Build Status', comman: d: 'npm run build' },
-  { nam: e: 'Test Status', comman: d: 'npm run: test:smoke' },
-  { nam: e: 'Lint Status', comman: d: 'npm run: lint:check' },
-  { nam: e: 'Type Check', comman: d: 'npm run type-check' }
+;
+const checks = [;
+  { nam:e:'Build Status', comman:d:'npm run build' },;
+  { nam:e:'Test Status', comman:d:'npm run:test:smoke' },;
+  { nam:e:'Lint Status', comman:d:'npm run:lint:check' },;
+  { nam:e:'Type Check', comman:d:'npm run type-check' }
 ];
-
-checks.forEach(check => {
-  try {
-    execSync(check.command, { stdi: o: 'pipe' });
-    console.log(`✅ ${check.name}: OK`);
-  } catch (error) {
-    console.log(`❌ ${check.name}: FAILED`);
+;
+checks.forEach(check => {;
+  try {;
+    execSync(check.command, { stdi:o:'pipe' });
+    console.log(`✅ ${check.name} OK`);
+  } catch (error) {;
+    console.log(`❌ ${check.name} FAILED`);
   }
 });
+<<<<<<< HEAD
+;
+=======
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

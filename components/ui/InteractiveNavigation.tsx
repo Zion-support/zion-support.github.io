@@ -1,6 +1,11 @@
 import React, {useState} from 'react';
 import Link from 'next/link';
 
+<<<<<<< HEAD
+const InteractiveNavigation = () => {};
+;
+export default InteractiveNavigation;
+=======
 interface NavItem {label: string,
   href: string,
   children?: NavItem[]}
@@ -114,3 +119,4 @@ href={item.href}
 
 export default InteractiveNavigation;
 export default InteractiveNavigation;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { getConfig } from "../../../../utils/token/service",;
+import { tokenStore } from "../../../../utils/token/storage",;
+;
+export default function handler(req:NextApiRequest, res:NextApiResponse) {;
+  if (req.method === "GET") {;
+    return res.status(200).json(getConfig());
+  }
+  if (req.method === "POST") {;
+    const body = req.body || {},;
+    const current = tokenStore.getConfig(),;
+    const updated = { ...current, ...body },;
+    tokenStore.setConfig(updated),;
+    return res.status(200).json(updated),;
+  }
+  return res.status(405).json({ error:"Method not allowed" }),;
+=======
 import type { NextApiRequest, NextApiResponse } from "next",
 import { getConfig } from "../../../../utils/token/service",
 import { tokenStore } from "../../../../utils/token/storage",
@@ -23,4 +41,5 @@ export default function handler(_req: NextApiRequest, _res: NextApiResponse) {_i
     return res.status(200).json(updated);
   }
   return res.status(405).json({_error: "Method not allowed"});
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from "next",;
+;
+export default function handler(req:NextApiRequest, res:NextApiResponse) {;
+  if (req.method !== "POST") return res.status(405).json({ ok:false, error:"Method not allowed" }),;
+  const { name, url } = req.body || {},;
+  if (!name) return res.status(400).json({ ok:false, error:"Missing name" }),;
+  // Echo back URL, real impl would upload to storage (Supabase, S3, etc.);
+  return res.status(201).json({ ok:true, file:{ name, url:url || null } }),;
+=======
 import type { NextApiRequest, NextApiResponse } from "next",
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -12,4 +22,5 @@ export default function handler(_req: NextApiRequest, _res: NextApiResponse) {_i
   if (!name) return res.status(400).json({_ok: false, _error: "Missing name"});
   // Echo back window.URL; real impl would upload to storage (Supabase, S3, etc.)
   return res.status(201).json({_ok: true, _file: { name, _url: url || null} });
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

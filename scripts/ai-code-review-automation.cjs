@@ -1,5 +1,20 @@
 
 const winston = require('winston');
+<<<<<<< HEAD
+;
+const logger = winston.createLogger({;
+  level:'info',;
+  format:winston.format.combine(;
+    winston.format.timestamp(),;
+    winston.format.errors({ stack:true }),;
+    winston.format.json();
+  ),;
+  defaultMeta:{ service:'automation-script' },;
+  transports:[;
+    new winston.transports.File({ filename:'logs/error.log', level:'error' }),;
+    new winston.transports.File({ filename:'logs/combined.log' });
+  ];
+=======
 
 const logger = winston.createLogger({
   level: 'info';
@@ -13,30 +28,83 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
     new winston.transports.File({ filename: 'logs/combined.log' })
   ]
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 });
-
-if (process.env.NODE_ENV !== 'production') {
-  logger.add(new winston.transports.Console({
-    format: winston.format.simple()
+;
+if (process.env.NODE_ENV !== 'production') {;
+  logger.add(new winston.transports.Console({;
+    format:winston.format.simple();
   }));
 }
-
-
-/**
- * Autonomous AI Code Review Agent
- * 
- * Independently analyzes code quality, identifies issues, and applies improvements
- * using AI-powered analysis and autonomous decision making.
- */
-
+;
+;
+/**;
+ * Autonomous AI Code Review Agent;
+ * ;
+ * Independently analyzes code quality, identifies issues, and applies improvements;
+ * using AI-powered analysis and autonomous decision making.;
+ */;
+;
 const fs = require('fs').promises;
 const path = require('path');
 const { execSync } = require('child_process');
 const EventEmitter = require('events');
-
-class AICodeReviewAgent extends EventEmitter {
-  constructor() {
+;
+class AICodeReviewAgent extends EventEmitter {;
+  constructor() {;
     super();
+<<<<<<< HEAD
+    ;
+    this.config = {;
+      name:'AI Code Review Agent',;
+      version:'1.0.0',;
+      ;
+      // Analysis configuration;
+      analysis:{;
+        maxFileSize:1024 * 1024, // 1MB;
+        excludedPatterns:[;
+          'node_modules/**',;
+          '.git/**',;
+          'dist/**',;
+          'build/**',;
+          'coverage/**',;
+          '*.min.js',;
+          '*.bundle.js';
+        ],;
+        includedExtensions:['.js', '.jsx', '.ts', '.tsx', '.vue', '.py', '.java', '.cpp', '.c'],;
+        ;
+        // Quality thresholds;
+        thresholds:{;
+          complexity:10,;
+          maintainability:65,;
+          testCoverage:80,;
+          securityScore:90;
+        }
+      },;
+      ;
+      // AI configuration;
+      ai:{;
+        providers:['cursor', 'openai', 'claude'],;
+        maxSuggestions:5,;
+        confidenceThreshold:0.8;
+      },;
+      ;
+      // Improvement configuration;
+      improvements:{;
+        autoApply:true,;
+        maxChangesPerRun:10,;
+        requireTests:true,;
+        backupChanges:true;
+      }
+    };
+    ;
+    this.state = {;
+      isRunning:false,;
+      lastAnalysis:null,;
+      improvementsApplied:0,;
+      issuesFound:0,;
+      filesAnalyzed:0;
+=======
     
     this.config = {
       name: 'AI Code Review Agent';
@@ -83,19 +151,33 @@ class AICodeReviewAgent extends EventEmitter {
       improvementsApplied: 0;
       issuesFound: 0;
       filesAnalyzed: 0
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
   }
-
-  async analyze() {
+;
+  async analyze() {;
     logger.info('🔍 Starting AI Code Review Analysis...');
-    
+    ;
     this.state.isRunning = true;
     const startTime = Date.now();
-    
-    try {
-      // Get files to analyze
+    ;
+    try {;
+      // Get files to analyze;
       const files = await this.getFilesToAnalyze();
       logger.info(`📁 Found ${files.length} files to analyze`);
+<<<<<<< HEAD
+      ;
+      const results = {;
+        summary:{;
+          filesAnalyzed:0,;
+          issuesFound:0,;
+          improvementsApplied:0,;
+          executionTime:0;
+        },;
+        files:[],;
+        improvements:[],;
+        recommendations:[];
+=======
       
       const results = {
         summary: {
@@ -107,99 +189,112 @@ class AICodeReviewAgent extends EventEmitter {
         files: [];
         improvements: [];
         recommendations: []
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
-      
-      // Analyze each file
-      for (const file of files) {
-        try {
+      ;
+      // Analyze each file;
+      for (const file of files) {;
+        try {;
           const fileResult = await this.analyzeFile(file);
           results.files.push(fileResult);
           results.summary.filesAnalyzed++;
-          
-          if (fileResult.issues.length > 0) {
+          ;
+          if (fileResult.issues.length > 0) {;
             results.summary.issuesFound += fileResult.issues.length;
           }
-          
-          if (fileResult.improvements.length > 0) {
+          ;
+          if (fileResult.improvements.length > 0) {;
             results.summary.improvementsApplied += fileResult.improvements.length;
           }
-          
-        } catch (error) {
-          logger.warn(`⚠️ Failed to analyze ${file}:`, error.message);
+          ;
+        } catch (error) {;
+          logger.warn(`⚠️ Failed to analyze ${file} `, error.message);
         }
       }
-      
-      // Generate AI recommendations
+      ;
+      // Generate AI recommendations;
       const recommendations = await this.generateAIRecommendations(results);
       results.recommendations = recommendations;
-      
-      // Apply improvements if enabled
-      if (this.config.improvements.autoApply) {
+      ;
+      // Apply improvements if enabled;
+      if (this.config.improvements.autoApply) {;
         await this.applyImprovements(results.improvements);
       }
-      
+      ;
       results.summary.executionTime = Date.now() - startTime;
-      
-      // Update state
+      ;
+      // Update state;
       this.state.lastAnalysis = results;
       this.state.improvementsApplied += results.summary.improvementsApplied;
       this.state.issuesFound += results.summary.issuesFound;
       this.state.filesAnalyzed += results.summary.filesAnalyzed;
-      
+      ;
       logger.info(`✅ Analysis completed in ${results.summary.executionTime}ms`);
-      logger.info(`📊 Summary: ${results.summary.filesAnalyzed} files, ${results.summary.issuesFound} issues, ${results.summary.improvementsApplied} improvements`);
-      
+      logger.info(`📊 Summary:${results.summary.filesAnalyzed} files, ${results.summary.issuesFound} issues, ${results.summary.improvementsApplied} improvements`);
+      ;
       return results;
-      
-    } catch (error) {
+      ;
+    } catch (error) {;
       logger.error('❌ Analysis failed:', error.message);
       throw error;
-    } finally {
+    } finally {;
       this.state.isRunning = false;
     }
   }
-
-  async getFilesToAnalyze() {
+;
+  async getFilesToAnalyze() {;
     const files = [];
     const projectRoot = process.cwd();
-    
-    async function scanDirectory(dir) {
-      try {
-        const entries = await fs.readdir(dir, { withFileTypes: true });
-        
-        for (const entry of entries) {
+    ;
+    async function scanDirectory(dir) {;
+      try {;
+        const entries = await fs.readdir(dir, { withFileTypes:true });
+        ;
+        for (const entry of entries) {;
           const fullPath = path.join(dir, entry.name);
           const relativePath = path.relative(projectRoot, fullPath);
-          
-          if (entry.isDirectory()) {
-            // Check if directory should be excluded
-            const shouldExclude = this.config.analysis.excludedPatterns.some(pattern => {
+          ;
+          if (entry.isDirectory()) {;
+            // Check if directory should be excluded;
+            const shouldExclude = this.config.analysis.excludedPatterns.some(pattern => {;
               const regex = new RegExp(pattern.replace(/\*\*/g, '.*'));
               return regex.test(relativePath);
             });
-            
-            if (!shouldExclude) {
+            ;
+            if (!shouldExclude) {;
               await scanDirectory.call(this, fullPath);
             }
-          } else if (entry.isFile()) {
-            // Check if file should be included
+          } else if (entry.isFile()) {;
+            // Check if file should be included;
             const ext = path.extname(entry.name);
-            if (this.config.analysis.includedExtensions.includes(ext)) {
+            if (this.config.analysis.includedExtensions.includes(ext)) {;
               const stats = await fs.stat(fullPath);
-              if (stats.size <= this.config.analysis.maxFileSize) {
+              if (stats.size <= this.config.analysis.maxFileSize) {;
                 files.push(relativePath);
               }
             }
           }
         }
-      } catch (error) {
-        logger.warn(`⚠️ Could not scan directory ${dir}:`, error.message);
+      } catch (error) {;
+        logger.warn(`⚠️ Could not scan directory ${dir} `, error.message);
       }
     }
-    
+    ;
     await scanDirectory.call(this, projectRoot);
     return files;
   }
+<<<<<<< HEAD
+;
+  async analyzeFile(filePath) {;
+    logger.info(`🔍 Analyzing:${filePath}`);
+    ;
+    const result = {;
+      file:filePath,;
+      issues:[],;
+      improvements:[],;
+      metrics:{},;
+      aiSuggestions:[];
+=======
 
   async analyzeFile(filePath) {
     logger.info(`🔍 Analyzing: ${filePath}`);
@@ -210,40 +305,51 @@ class AICodeReviewAgent extends EventEmitter {
       improvements: [];
       metrics: {};
       aiSuggestions: []
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
-    
-    try {
-      // Read file content
+    ;
+    try {;
+      // Read file content;
       const content = await fs.readFile(filePath, 'utf8');
-      
-      // Basic metrics analysis
+      ;
+      // Basic metrics analysis;
       result.metrics = this.calculateMetrics(content, filePath);
-      
-      // Static analysis
+      ;
+      // Static analysis;
       const staticIssues = await this.performStaticAnalysis(content, filePath);
       result.issues.push(...staticIssues);
-      
-      // AI-powered analysis
+      ;
+      // AI-powered analysis;
       const aiAnalysis = await this.performAIAnalysis(content, filePath);
       result.aiSuggestions = aiAnalysis.suggestions;
       result.issues.push(...aiAnalysis.issues);
       result.improvements.push(...aiAnalysis.improvements);
-      
-      // Quality scoring
+      ;
+      // Quality scoring;
       result.qualityScore = this.calculateQualityScore(result);
-      
-    } catch (error) {
-      logger.warn(`⚠️ Failed to analyze ${filePath}:`, error.message);
+      ;
+    } catch (error) {;
+      logger.warn(`⚠️ Failed to analyze ${filePath} `, error.message);
       result.error = error.message;
     }
-    
+    ;
     return result;
   }
-
-  calculateMetrics(content, filePath) {
+;
+  calculateMetrics(content, filePath) {;
     const lines = content.split('\n');
     const codeLines = lines.filter(line => line.trim() && !line.trim().startsWith('//') && !line.trim().startsWith('/*'));
     const commentLines = lines.filter(line => line.trim().startsWith('//') || line.trim().startsWith('/*'));
+<<<<<<< HEAD
+    ;
+    return {;
+      totalLines:lines.length,;
+      codeLines:codeLines.length,;
+      commentLines:commentLines.length,;
+      commentRatio:commentLines.length / Math.max(codeLines.length, 1),;
+      averageLineLength:codeLines.reduce((sum, line) => sum + line.length, 0) / Math.max(codeLines.length, 1),;
+      maxLineLength:Math.max(...codeLines.map(line => line.length), 0);
+=======
     
     return {
       totalLines: lines.length;
@@ -252,73 +358,92 @@ class AICodeReviewAgent extends EventEmitter {
       commentRatio: commentLines.length / Math.max(codeLines.length, 1);
       averageLineLength: codeLines.reduce((sum, line) => sum + line.length, 0) / Math.max(codeLines.length, 1);
       maxLineLength: Math.max(...codeLines.map(line => line.length), 0)
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     };
   }
-
-  async performStaticAnalysis(content, filePath) {
+;
+  async performStaticAnalysis(content, filePath) {;
     const issues = [];
-    
-    // Complexity analysis
+    ;
+    // Complexity analysis;
     const complexity = this.calculateComplexity(content);
+<<<<<<< HEAD
+    if (complexity > this.config.analysis.thresholds.complexity) {;
+      issues.push({;
+        type:'complexity',;
+        severity:'warning',;
+        message:`High cyclomatic complexity:${complexity}`,;
+        line:this.findComplexityLine(content);
+=======
     if (complexity > this.config.analysis.thresholds.complexity) {
       issues.push({
         type: 'complexity';
         severity: 'warning';
         message: `High cyclomatic complexity: ${complexity}`;
         line: this.findComplexityLine(content)
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
     }
-    
-    // Code smell detection
+    ;
+    // Code smell detection;
     const codeSmells = this.detectCodeSmells(content);
     issues.push(...codeSmells);
-    
-    // Security analysis
+    ;
+    // Security analysis;
     const securityIssues = this.detectSecurityIssues(content);
     issues.push(...securityIssues);
-    
-    // Performance analysis
+    ;
+    // Performance analysis;
     const performanceIssues = this.detectPerformanceIssues(content);
     issues.push(...performanceIssues);
-    
+    ;
     return issues;
   }
-
-  calculateComplexity(content) {
-    // Simplified cyclomatic complexity calculation
-    const complexityKeywords = [
-      'if', 'else', 'for', 'while', 'do', 'switch', 'case', 'catch', '&&', '||', '?'
+;
+  calculateComplexity(content) {;
+    // Simplified cyclomatic complexity calculation;
+    const complexityKeywords = [;
+      'if', 'else', 'for', 'while', 'do', 'switch', 'case', 'catch', '&&', '||', '?';
     ];
-    
-    let complexity = 1; // Base complexity
-    
-    for (const keyword of complexityKeywords) {
+    ;
+    let complexity = 1; // Base complexity;
+    ;
+    for (const keyword of complexityKeywords) {;
       const regex = new RegExp(`\\b${keyword}\\b`, 'g');
       const matches = content.match(regex);
-      if (matches) {
+      if (matches) {;
         complexity += matches.length;
       }
     }
-    
+    ;
     return complexity;
   }
-
-  findComplexityLine(content) {
+;
+  findComplexityLine(content) {;
     const lines = content.split('\n');
-    for (let i = 0; i < lines.length; i++) {
+    for (let i = 0; i < lines.length; i++) {;
       const line = lines[i];
-      if (line.includes('if') || line.includes('for') || line.includes('while')) {
+      if (line.includes('if') || line.includes('for') || line.includes('while')) {;
         return i + 1;
       }
     }
     return 1;
   }
-
-  detectCodeSmells(content) {
+;
+  detectCodeSmells(content) {;
     const smells = [];
-    
-    // Long functions
+    ;
+    // Long functions;
     const functions = this.extractFunctions(content);
+<<<<<<< HEAD
+    for (const func of functions) {;
+      if (func.lines > 50) {;
+        smells.push({;
+          type:'code_smell',;
+          severity:'warning',;
+          message:`Long function:${func.name} (${func.lines} lines)`,;
+          line:func.line;
+=======
     for (const func of functions) {
       if (func.lines > 50) {
         smells.push({
@@ -326,88 +451,123 @@ class AICodeReviewAgent extends EventEmitter {
           severity: 'warning';
           message: `Long function: ${func.name} (${func.lines} lines)`;
           line: func.line
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         });
       }
     }
-    
-    // Duplicate code detection (simplified)
+    ;
+    // Duplicate code detection (simplified);
     const duplicatePatterns = this.findDuplicatePatterns(content);
+<<<<<<< HEAD
+    for (const pattern of duplicatePatterns) {;
+      smells.push({;
+        type:'code_smell',;
+        severity:'info',;
+        message:`Potential duplicate code pattern:${pattern.description}`,;
+        line:pattern.line;
+=======
     for (const pattern of duplicatePatterns) {
       smells.push({
         type: 'code_smell';
         severity: 'info';
         message: `Potential duplicate code pattern: ${pattern.description}`;
         line: pattern.line
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
     }
-    
+    ;
     return smells;
   }
-
-  extractFunctions(content) {
+;
+  extractFunctions(content) {;
     const functions = [];
     const lines = content.split('\n');
-    
-    for (let i = 0; i < lines.length; i++) {
+    ;
+    for (let i = 0; i < lines.length; i++) {;
       const line = lines[i];
-      const functionMatch = line.match(/function\s+(\w+)|(\w+)\s*[:=]\s*function|(\w+)\s*[:=]\s*\(/);
-      
-      if (functionMatch) {
+      const functionMatch = line.match(/function\s+(\w+)|(\w+)\s*[=]\s*function|(\w+)\s*[=]\s*\(/);
+      ;
+      if (functionMatch) {;
         const name = functionMatch[1] || functionMatch[2] || functionMatch[3];
         let functionLines = 0;
         let braceCount = 0;
         let started = false;
-        
-        for (let j = i; j < lines.length; j++) {
+        ;
+        for (let j = i; j < lines.length; j++) {;
           const funcLine = lines[j];
-          if (funcLine.includes('{')) {
+          if (funcLine.includes('{')) {;
             braceCount++;
             started = true;
           }
-          if (funcLine.includes('}')) {
+          if (funcLine.includes('}')) {;
             braceCount--;
           }
-          
+          ;
           if (started) functionLines++;
-          
+          ;
           if (braceCount === 0 && started) break;
         }
+<<<<<<< HEAD
+        ;
+        functions.push({;
+          name,;
+          line:i + 1,;
+          lines:functionLines;
+=======
         
         functions.push({
           name;
           line: i + 1;
           lines: functionLines
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         });
       }
     }
-    
+    ;
     return functions;
   }
-
-  findDuplicatePatterns(content) {
+;
+  findDuplicatePatterns(content) {;
     const patterns = [];
     const lines = content.split('\n');
-    
-    // Simple duplicate line detection
+    ;
+    // Simple duplicate line detection;
     const lineCounts = {};
-    for (let i = 0; i < lines.length; i++) {
+    for (let i = 0; i < lines.length; i++) {;
       const line = lines[i].trim();
-      if (line.length > 10) {
+      if (line.length > 10) {;
         lineCounts[line] = (lineCounts[line] || 0) + 1;
+<<<<<<< HEAD
+        if (lineCounts[line] === 2) {;
+          patterns.push({;
+            description:`Duplicate line:"${line.substring(0, 50)}..."`,;
+            line:i + 1;
+=======
         if (lineCounts[line] === 2) {
           patterns.push({
             description: `Duplicate line: "${line.substring(0, 50)}..."`;
             line: i + 1
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           });
         }
       }
     }
-    
+    ;
     return patterns;
   }
-
-  detectSecurityIssues(content) {
+;
+  detectSecurityIssues(content) {;
     const issues = [];
+<<<<<<< HEAD
+    ;
+    // Common security patterns;
+    const securityPatterns = [;
+      { pattern:/eval\s*\(/, message:'Use of eval() is dangerous', severity:'high' },;
+      { pattern:/innerHTML\s*=/, message:'Direct innerHTML assignment may cause XSS', severity:'medium' },;
+      { pattern:/password\s*=/, message:'Hardcoded password detected', severity:'high' },;
+      { pattern:/api_key\s*=/, message:'Hardcoded API key detected', severity:'high' },;
+      { pattern:/console\.log/, message:'Console.log in production code', severity:'low' }
+=======
     
     // Common security patterns
     const securityPatterns = [
@@ -416,11 +576,21 @@ class AICodeReviewAgent extends EventEmitter {
       { pattern: /password\s*=/, message: 'Hardcoded password detected', severity: 'high' };
       { pattern: /api_key\s*=/, message: 'Hardcoded API key detected', severity: 'high' };
       { pattern: /console\.log/, message: 'Console.log in production code', severity: 'low' }
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     ];
-    
+    ;
     const lines = content.split('\n');
-    for (let i = 0; i < lines.length; i++) {
+    for (let i = 0; i < lines.length; i++) {;
       const line = lines[i];
+<<<<<<< HEAD
+      for (const pattern of securityPatterns) {;
+        if (pattern.pattern.test(line)) {;
+          issues.push({;
+            type:'security',;
+            severity:pattern.severity,;
+            message:pattern.message,;
+            line:i + 1;
+=======
       for (const pattern of securityPatterns) {
         if (pattern.pattern.test(line)) {
           issues.push({
@@ -428,27 +598,46 @@ class AICodeReviewAgent extends EventEmitter {
             severity: pattern.severity;
             message: pattern.message;
             line: i + 1
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           });
         }
       }
     }
-    
+    ;
     return issues;
   }
-
-  detectPerformanceIssues(content) {
+;
+  detectPerformanceIssues(content) {;
     const issues = [];
+<<<<<<< HEAD
+    ;
+    // Performance anti-patterns;
+    const performancePatterns = [;
+      { pattern:/\.innerHTML\s*\+=/, message:'String concatenation in loop', severity:'medium' },;
+      { pattern:/for\s*\([^)]*\)\s*{[^}]*\.innerHTML/, message:'DOM manipulation in loop', severity:'medium' },;
+      { pattern:/setTimeout\s*\(\s*function/, message:'Consider using requestAnimationFrame', severity:'low' }
+=======
     
     // Performance anti-patterns
     const performancePatterns = [
       { pattern: /\.innerHTML\s*\+=/, message: 'String concatenation in loop', severity: 'medium' };
       { pattern: /for\s*\([^)]*\)\s*{[^}]*\.innerHTML/, message: 'DOM manipulation in loop', severity: 'medium' };
       { pattern: /setTimeout\s*\(\s*function/, message: 'Consider using requestAnimationFrame', severity: 'low' }
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     ];
-    
+    ;
     const lines = content.split('\n');
-    for (let i = 0; i < lines.length; i++) {
+    for (let i = 0; i < lines.length; i++) {;
       const line = lines[i];
+<<<<<<< HEAD
+      for (const pattern of performancePatterns) {;
+        if (pattern.pattern.test(line)) {;
+          issues.push({;
+            type:'performance',;
+            severity:pattern.severity,;
+            message:pattern.message,;
+            line:i + 1;
+=======
       for (const pattern of performancePatterns) {
         if (pattern.pattern.test(line)) {
           issues.push({
@@ -456,13 +645,31 @@ class AICodeReviewAgent extends EventEmitter {
             severity: pattern.severity;
             message: pattern.message;
             line: i + 1
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           });
         }
       }
     }
-    
+    ;
     return issues;
   }
+<<<<<<< HEAD
+;
+  async performAIAnalysis(content, filePath) {;
+    const result = {;
+      suggestions:[],;
+      issues:[],;
+      improvements:[];
+    };
+    ;
+    try {;
+      // Prepare context for AI;
+      const context = {;
+        file:filePath,;
+        content:content.substring(0, 2000), // Limit content size;
+        metrics:this.calculateMetrics(content, filePath),;
+        language:path.extname(filePath).substring(1);
+=======
 
   async performAIAnalysis(content, filePath) {
     const result = {
@@ -478,11 +685,32 @@ class AICodeReviewAgent extends EventEmitter {
         content: content.substring(0, 2000), // Limit content size
         metrics: this.calculateMetrics(content, filePath);
         language: path.extname(filePath).substring(1)
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       };
-      
-      // Get AI suggestions
+      ;
+      // Get AI suggestions;
       const suggestions = await this.getAISuggestions(context);
       result.suggestions = suggestions;
+<<<<<<< HEAD
+      ;
+      // Convert suggestions to issues and improvements;
+      for (const suggestion of suggestions) {;
+        if (suggestion.type === 'issue') {;
+          result.issues.push({;
+            type:'ai_suggestion',;
+            severity:suggestion.severity || 'medium',;
+            message:suggestion.message,;
+            line:suggestion.line,;
+            confidence:suggestion.confidence;
+          });
+        } else if (suggestion.type === 'improvement') {;
+          result.improvements.push({;
+            type:'ai_improvement',;
+            description:suggestion.message,;
+            code:suggestion.code,;
+            line:suggestion.line,;
+            confidence:suggestion.confidence;
+=======
       
       // Convert suggestions to issues and improvements
       for (const suggestion of suggestions) {
@@ -501,30 +729,43 @@ class AICodeReviewAgent extends EventEmitter {
             code: suggestion.code;
             line: suggestion.line;
             confidence: suggestion.confidence
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           });
         }
       }
-      
-    } catch (error) {
-      logger.warn(`⚠️ AI analysis failed for ${filePath}:`, error.message);
+      ;
+    } catch (error) {;
+      logger.warn(`⚠️ AI analysis failed for ${filePath} `, error.message);
     }
-    
+    ;
     return result;
   }
-
-  async getAISuggestions(context) {
-    // This is a simplified implementation
-    // In a real system, you would integrate with actual AI APIs
-    
-    const prompt = `
-Analyze this code and provide suggestions for improvement:
-
-File: ${context.file}
-Language: ${context.language}
-Metrics: ${JSON.stringify(context.metrics)}
-
-Code:
+;
+  async getAISuggestions(context) {;
+    // This is a simplified implementation;
+    // In a real system, you would integrate with actual AI APIs;
+    ;
+    const prompt = `;
+Analyze this code and provide suggestions for improvement:;
+;
+File:${context.file}
+Language:${context.language}
+Metrics:${JSON.stringify(context.metrics)}
+;
+Code:;
 ${context.content}
+<<<<<<< HEAD
+;
+Provide suggestions in JSON format:;
+[;
+  {;
+    "type":"issue|improvement",;
+    "severity":"low|medium|high",;
+    "message":"description",;
+    "line":123,;
+    "confidence":0.95,;
+    "code":"improved code (optional)";
+=======
 
 Provide suggestions in JSON format:
 [
@@ -535,82 +776,98 @@ Provide suggestions in JSON format:
     "line": 123;
     "confidence": 0.95;
     "code": "improved code (optional)"
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   }
-]
+];
     `;
-    
-    // Simulate AI response
+    ;
+    // Simulate AI response;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
-// Store timeoutId for cleanup if needed
+// Store timeoutId for cleanup if needed;
 ;
+<<<<<<< HEAD
+// Store timeoutId for cleanup if needed;
+        severity:'medium',;
+        message:'Consider extracting this function for better reusability',;
+        line:10,;
+        confidence:0.85,;
+        code:'// Improved code would go here';
+      },;
+      {;
+        type:'issue',;
+        severity:'low',;
+        message:'Variable name could be more descriptive',;
+        line:15,;
+        confidence:0.75;
+=======
 // Store timeoutId for cleanup if needed
         severity: 'medium';
         message: 'Consider extracting this function for better reusability';
@@ -624,41 +881,51 @@ Provide suggestions in JSON format:
         message: 'Variable name could be more descriptive';
         line: 15;
         confidence: 0.75
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       }
     ];
   }
-
-  calculateQualityScore(result) {
+;
+  calculateQualityScore(result) {;
     let score = 100;
-    
-    // Deduct points for issues
-    for (const issue of result.issues) {
-      switch (issue.severity) {
-        case 'high':
+    ;
+    // Deduct points for issues;
+    for (const issue of result.issues) {;
+      switch (issue.severity) {;
+        case 'high':;
           score -= 10;
           break;
-        case 'medium':
+        case 'medium':;
           score -= 5;
           break;
-        case 'low':
+        case 'low':;
           score -= 2;
           break;
       }
     }
-    
-    // Bonus for good metrics
+    ;
+    // Bonus for good metrics;
     if (result.metrics.commentRatio > 0.2) score += 5;
     if (result.metrics.averageLineLength < 80) score += 5;
-    
+    ;
     return Math.max(0, Math.min(100, score));
   }
-
-  async generateAIRecommendations(results) {
+;
+  async generateAIRecommendations(results) {;
     const recommendations = [];
-    
-    // Analyze overall patterns
+    ;
+    // Analyze overall patterns;
     const totalIssues = results.summary.issuesFound;
     const totalFiles = results.summary.filesAnalyzed;
+<<<<<<< HEAD
+    ;
+    if (totalIssues > totalFiles * 2) {;
+      recommendations.push({;
+        type:'general',;
+        priority:'high',;
+        message:'High number of issues detected. Consider implementing code quality standards.',;
+        action:'implement_quality_standards';
+=======
     
     if (totalIssues > totalFiles * 2) {
       recommendations.push({
@@ -666,96 +933,115 @@ Provide suggestions in JSON format:
         priority: 'high';
         message: 'High number of issues detected. Consider implementing code quality standards.';
         action: 'implement_quality_standards'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
     }
-    
-    // Security recommendations
+    ;
+    // Security recommendations;
     const securityIssues = results.files.flatMap(f => f.issues.filter(i => i.type === 'security'));
+<<<<<<< HEAD
+    if (securityIssues.length > 0) {;
+      recommendations.push({;
+        type:'security',;
+        priority:'high',;
+        message:`${securityIssues.length} security issues found. Immediate review required.`,;
+        action:'security_review';
+=======
     if (securityIssues.length > 0) {
       recommendations.push({
         type: 'security';
         priority: 'high';
         message: `${securityIssues.length} security issues found. Immediate review required.`;
         action: 'security_review'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
     }
-    
-    // Performance recommendations
+    ;
+    // Performance recommendations;
     const performanceIssues = results.files.flatMap(f => f.issues.filter(i => i.type === 'performance'));
+<<<<<<< HEAD
+    if (performanceIssues.length > 0) {;
+      recommendations.push({;
+        type:'performance',;
+        priority:'medium',;
+        message:`${performanceIssues.length} performance issues found. Consider optimization.`,;
+        action:'performance_optimization';
+=======
     if (performanceIssues.length > 0) {
       recommendations.push({
         type: 'performance';
         priority: 'medium';
         message: `${performanceIssues.length} performance issues found. Consider optimization.`;
         action: 'performance_optimization'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       });
     }
-    
+    ;
     return recommendations;
   }
-
-  async applyImprovements(improvements) {
+;
+  async applyImprovements(improvements) {;
     if (!this.config.improvements.autoApply) return;
-    
+    ;
     logger.info(`🔧 Applying ${improvements.length} improvements...`);
-    
-    for (const improvement of improvements) {
-      try {
+    ;
+    for (const improvement of improvements) {;
+      try {;
         await this.applyImprovement(improvement);
-      } catch (error) {
+      } catch (error) {;
         logger.warn(`⚠️ Failed to apply improvement:`, error.message);
       }
     }
   }
-
-  async applyImprovement(improvement) {
+;
+  async applyImprovement(improvement) {;
     if (!improvement.code) return;
-    
-    // Create backup if enabled
-    if (this.config.improvements.backupChanges) {
+    ;
+    // Create backup if enabled;
+    if (this.config.improvements.backupChanges) {;
       await this.createBackup(improvement.file);
     }
-    
-    // Apply the improvement
-    // This is a simplified implementation
-    logger.info(`✅ Applied improvement: ${improvement.description}`);
+    ;
+    // Apply the improvement;
+    // This is a simplified implementation;
+    logger.info(`✅ Applied improvement:${improvement.description}`);
   }
-
-  async createBackup(filePath) {
+;
+  async createBackup(filePath) {;
     const backupPath = `${filePath}.backup.${Date.now()}`;
     await fs.copyFile(filePath, backupPath);
   }
 }
-
-// Export the agent
+;
+// Export the agent;
 module.exports = AICodeReviewAgent;
-
-// Run the agent if this file is executed directly
-if (require.main === module) {
+;
+// Run the agent if this file is executed directly;
+if (require.main === module) {;
   const agent = new AICodeReviewAgent();
-  
-  agent.analyze()
-    .then(results => {
+  ;
+  agent.analyze();
+    .then(results => {;
       logger.info('📊 Analysis Results:');
       logger.info(JSON.stringify(results, null, 2));
       process.exit(0);
-    })
-    .catch(error => {
+    });
+    .catch(error => {;
       logger.error('❌ Analysis failed:', error.message);
       process.exit(1);
     });
-} 
-
-// Graceful shutdown handling
-process.on('SIGINT', () => {
+} ;
+;
+// Graceful shutdown handling;
+process.on('SIGINT', () => {;
   console.log('\n🛑 Received SIGINT, shutting down gracefully...');
-  // Add cleanup logic here
+  // Add cleanup logic here;
   process.exit(0);
 });
-
-process.on('SIGTERM', () => {
+;
+process.on('SIGTERM', () => {;
   console.log('\n🛑 Received SIGTERM, shutting down gracefully...');
-  // Add cleanup logic here
+  // Add cleanup logic here;
   process.exit(0);
 });
-
+;

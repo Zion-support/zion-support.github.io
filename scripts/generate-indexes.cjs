@@ -1,29 +1,29 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
-
-function pascalToWords(str) {
-  return str
-    .replace(/([a-z])([A-Z])/g, '$1 $2')
-    .replace(/[-_]+/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
+;
+function pascalToWords(str) {;
+  return str;
+    .replace(/([a-z])([A-Z])/g, '$1 $2');
+    .replace(/[-_]+/g, ' ');
+    .replace(/\s+/g, ' ');
+    .trim();
     .replace(/\b\w/g, (m) => m.toUpperCase());
 }
-
-function kebabToTitle(slug) {
+;
+function kebabToTitle(slug) {;
   const cleaned = slug.replace(/\.(t|j)sx?$/, '').replace(/index$/, '').replace(/^\//, '');
-  return cleaned
-    .split('/')
-    .pop()
-    .replace(/-/g, ' ')
+  return cleaned;
+    .split('/');
+    .pop();
+    .replace(/-/g, ' ');
     .replace(/\b\w/g, (m) => m.toUpperCase());
 }
-
-function extractTitleFromFile(filePath) {
-  try {
+;
+function extractTitleFromFile(filePath) {;
+  try {;
     const content = fs.readFileSync(filePath, 'utf8');
     const titleMatch = content.match(/<title>([^<]+)<\/title>/i);
     if (titleMatch && titleMatch[1]) return titleMatch[1].replace(/\s*-\s*Zion Tech Solutions\s*$/i, '').trim();
@@ -32,59 +32,76 @@ function extractTitleFromFile(filePath) {
   } catch {}
   return null;
 }
+<<<<<<< HEAD
+;
+function writeFileIfChanged(targetPath, newContent) {;
+  const prev = fs.existsSync(targetPath) ? fs.readFileSync(targetPath, 'utf8') :'';
+  if (prev.trim() !== newContent.trim()) {;
+    fs.mkdirSync(path.dirname(targetPath), { recursive:true });
+=======
 
 function writeFileIfChanged(targetPath, newContent) {
   const prev = fs.existsSync(targetPath) ? fs.readFileSync(targetPath, 'utf8') : '';
   if (prev.trim() !== newContent.trim()) {
     fs.mkdirSync(path.dirname(targetPath) { recursive: true });
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     fs.writeFileSync(targetPath, newContent);
     console.log(`Updated ${path.relative(process.cwd(), targetPath)}`);
-  } else {
+  } else {;
     console.log(`No changes for ${path.relative(process.cwd(), targetPath)}`);
   }
 }
-
-function generateIndexPage({ title, description, items, baseHref, extraIntro }) {
-  const listItems = items
-    .map(({ href, text }) => `          <li><Link href="${href}"><a>${text}</a></Link></li>`) // Next 11 Link with <a>
+;
+function generateIndexPage({ title, description, items, baseHref, extraIntro }) {;
+  const listItems = items;
+    .map(({ href, text }) => `          <li><Link href="${href}"><a>${text}</a></Link></li>`) // Next 11 Link with <a>;
     .join('\n');
-
+;
   return `import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-
-const Index: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>${title} - Zion Tech Solutions</title>
-        <meta name="description" content="${description}" />
-      </Head>
-      <main>
-        <h1>${title}</h1>
-        ${extraIntro ? `<p>${extraIntro}</p>` : ''}
-        <ul>
+;
+const Index:NextPage = () => {;
+  return (;
+    <div>;
+      <Head>;
+        <title>${title} - Zion Tech Solutions</title>;
+        <meta name="description" content="${description}" />;
+      </Head>;
+      <main>;
+        <h1>${title}</h1>;
+        ${extraIntro ? `<p>${extraIntro}</p>` :''}
+        <ul>;
 ${listItems}
-        </ul>
-      </main>
-    </div>
+        </ul>;
+      </main>;
+    </div>;
   );
 };
-
+;
 export default Index;
 `;}
-
-function buildBlogIndex() {
+;
+function buildBlogIndex() {;
   const blogDir = path.join(process.cwd(), 'pages', 'blog');
-  const files = glob.sync('pages/blog/*.tsx', { ignore: ['pages/blog/index.tsx'] });
-  const items = files
-    .map((fp) => {
+  const files = glob.sync('pages/blog/*.tsx', { ignore:['pages/blog/index.tsx'] });
+  const items = files;
+    .map((fp) => {;
       const slug = '/' + path.relative(path.join(process.cwd(), 'pages'), fp).replace(/\\/g, '/').replace(/\.(t|j)sx?$/, '');
       const href = slug.replace(/^\/pages/, '');
       const title = extractTitleFromFile(fp) || kebabToTitle(fp);
-      return { href: href.replace(/^\/pages/, ''), text: title };
-    })
+      return { href:href.replace(/^\/pages/, ''), text:title };
+    });
     .sort((a, b) => a.text.localeCompare(b.text));
+<<<<<<< HEAD
+;
+  const content = generateIndexPage({;
+    title:'Blog',;
+    description:'Latest articles and insights from Zion Tech Solutions',;
+    items,;
+    baseHref:'/blog',;
+    extraIntro:'Browse our latest posts:';
+=======
 
   const content = generateIndexPage({
     title: 'Blog';
@@ -92,21 +109,31 @@ function buildBlogIndex() {
     items;
     baseHref: '/blog';
     extraIntro: 'Browse our latest posts:'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   });
   writeFileIfChanged(path.join(blogDir, 'index.tsx'), content);
 }
-
-function buildServicesIndex() {
+;
+function buildServicesIndex() {;
   const servicesDir = path.join(process.cwd(), 'pages', 'services');
-  const files = glob.sync('pages/services/*.tsx', { ignore: ['pages/services/index.tsx'] });
-  const items = files
-    .map((fp) => {
+  const files = glob.sync('pages/services/*.tsx', { ignore:['pages/services/index.tsx'] });
+  const items = files;
+    .map((fp) => {;
       const slug = '/' + path.relative(path.join(process.cwd(), 'pages'), fp).replace(/\\/g, '/').replace(/\.(t|j)sx?$/, '');
       const href = slug.replace(/^\/pages/, '');
       const title = extractTitleFromFile(fp) || kebabToTitle(fp);
-      return { href, text: title };
-    })
+      return { href, text:title };
+    });
     .sort((a, b) => a.text.localeCompare(b.text));
+<<<<<<< HEAD
+;
+  const content = generateIndexPage({;
+    title:'Services',;
+    description:'Explore the services we offer',;
+    items,;
+    baseHref:'/services',;
+    extraIntro:'Our service offerings:';
+=======
 
   const content = generateIndexPage({
     title: 'Services';
@@ -114,13 +141,14 @@ function buildServicesIndex() {
     items;
     baseHref: '/services';
     extraIntro: 'Our service offerings:'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   });
   writeFileIfChanged(path.join(servicesDir, 'index.tsx'), content);
 }
-
-function main() {
+;
+function main() {;
   buildBlogIndex();
   buildServicesIndex();
 }
-
+;
 main();

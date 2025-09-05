@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+        {description && <meta name="description" content={description} />},;
+      {children},;
+    </>);
+},
+=======
 import React, { ReactNode } from 'react';
 interface SimpleLayoutProps {_children: ReactNode;
   title?: string;}
@@ -21,3 +27,4 @@ export default SimpleLayout;
       {children};
     </>)
 },
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+},;
+export default usePerformanceMonitor,;
+=======
 // Type definitions for performance APIs,
 declare global {interface PerformanceEntry {
     name: string,
@@ -45,3 +49,4 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {const [metri
 
   return metrics
 }
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

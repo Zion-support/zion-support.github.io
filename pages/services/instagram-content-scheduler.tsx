@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import UseTokensButton from '../../components/tokens/UseTokensButton',;
+;
+const InstagramContentScheduler:NextPage = () => {;
+  return (;
+    <div>;
+      <Head>;
+        <title>InstagramContentScheduler - Zion Tech Solutions</title>;
+        <meta name="description" content="InstagramContentScheduler service" />;
+      </Head>;
+      ;
+      <main className="space-y-4">;
+        <h1>InstagramContentScheduler</h1>;
+        <p>Service details coming soon...</p>;
+        <UseTokensButton serviceId="instagram-content-scheduler" />;
+        <Link href="/services">Back to Services</Link>;
+      </main>;
+    </div>;
+  );
+},;
+;
+=======
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -18,4 +43,5 @@ const InstagramContentScheduler: NextPage = () => {
     </div>
   )
 },
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 export default InstagramContentScheduler,

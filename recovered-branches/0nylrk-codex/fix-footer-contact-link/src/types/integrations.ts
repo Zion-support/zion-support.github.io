@@ -1,4 +1,18 @@
 
+<<<<<<< HEAD
+export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",;
+;
+export type IntegrationStatus = "connected" | "warning" | "disconnected",;
+;
+export interface Integration {;
+  id:string,;
+  name:string,;
+  description:string,;
+  logoUrl:string,;
+  status:IntegrationStatus,;
+  lastSync?:string,;
+  type:IntegrationType;
+=======
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",
 
 export type IntegrationStatus = "connected" | "warning" | "disconnected",
@@ -10,16 +24,33 @@ export interface Integration {
   status: IntegrationStatus,
   lastSync?: string,
   type: IntegrationType
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
-
-export interface SyncLog {
-  id: string,
-  integration: string,
-  event: string,
-  status: "success" | "error" | "warning",
-  timestamp: string,
-  details: string
+;
+export interface SyncLog {;
+  id:string,;
+  integration:string,;
+  event:string,;
+  status:"success" | "error" | "warning",;
+  timestamp:string,;
+  details:string;
 }
+<<<<<<< HEAD
+;
+export type CrmIntegrationEvents = ;
+  | "contact_synced";
+  | "deal_created";
+  | "deal_updated";
+  | "note_added";
+  | "job_synced",;
+;
+export type AtsIntegrationEvents = ;
+  | "applicant_created";
+  | "candidate_status_changed";
+  | "interview_scheduled";
+  | "resume_uploaded";
+  | "job_posted",;
+=======
 export type CrmIntegrationEvents = 
   | "contact_synced"
   | "deal_created"
@@ -54,3 +85,4 @@ export type AtsIntegrationEvents =
   | &quot;interview_scheduled&quot;
   | &quot;resume_uploaded&quot;
   | &quot;job_posted&quot;;
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

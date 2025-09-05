@@ -1,13 +1,51 @@
+<<<<<<< HEAD
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Trophy } from 'lucide-react';
+;
+export interface LeaderboardEntry {;
+  name:string,;
+  points:number;
+=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",import { Trophy } from 'lucide-react'
 
 export interface LeaderboardEntry {
   name: string,
   points: number
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
-
-interface UserLeaderboardProps {
-  entries: LeaderboardEntry[]
+;
+interface UserLeaderboardProps {;
+  entries:LeaderboardEntry[];
 }
+<<<<<<< HEAD
+;
+export function UserLeaderboard({ entries } UserLeaderboardProps) {;
+  return (;
+    <Card>;
+      <CardHeader>;
+        <CardTitle className="flex items-center gap-2">;
+          <Trophy className="h-5 w-5" /> Leaderboard;
+        </CardTitle>;
+        <CardDescription>Top users by points</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <div className="space-y-2">;
+          {entries.map((e, idx) => (;
+            <div;
+              key={e.name}
+              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50";
+            >;
+              <span className="font-medium">;
+                {idx + 1}. {e.name}
+              </span>;
+              <span className="text-sm">{e.points} pts</span>;
+            </div>;
+          ))}
+        </div>;
+      </CardContent>;
+    </Card>;
+  ),;
+=======
 
 export interface LeaderboardEntry {_name: string;
   points: number;}
@@ -36,4 +74,5 @@ export function UserLeaderboard(_{_entries}: UserLeaderboardProps) {_return (_<C
       </CardContent>
     </Card>
   )
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

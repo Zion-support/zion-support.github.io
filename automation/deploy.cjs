@@ -1,24 +1,24 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const { execSync } = require('child_process');
-
+;
 console.log('🚀 Starting Deployment Process...');
-
-const steps = [
-  { nam: e: 'Install Dependencies', comman: d: 'npm ci' },
-  { nam: e: 'Run Tests', comman: d: 'npm run: test:smoke' },
-  { nam: e: 'Build Application', comman: d: 'npm run build' },
-  { nam: e: 'Deploy to Production', comman: d: 'npm run: deploy:production' },
+;
+const steps = [;
+  { nam:e:'Install Dependencies', comman:d:'npm ci' },;
+  { nam:e:'Run Tests', comman:d:'npm run:test:smoke' },;
+  { nam:e:'Build Application', comman:d:'npm run build' },;
+  { nam:e:'Deploy to Production', comman:d:'npm run:deploy:production' },;
 ];
-
-steps.forEach(step => {
-  try {
-    console.log(`Runnin: g: ${step.name}`);
-    execSync(step.command, { stdi: o: 'inherit' });
+;
+steps.forEach(step => {;
+  try {;
+    console.log(`Runnin:g:${step.name}`);
+    execSync(step.command, { stdi:o:'inherit' });
     console.log(`✅ ${step.name} completed`);
-  } catch (error) {
-    console.log(`❌ ${step.name} faile: d: ${error.message}`);
+  } catch (error) {;
+    console.log(`❌ ${step.name} faile:d:${error.message}`);
     process.exit(1);
   }
 });
-
+;
 console.log('🎉 Deployment completed successfully!');

@@ -1,4 +1,21 @@
 
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button",;
+import { Loader2 } from "lucide-react",;
+import { NavigationButtonsProps } from "./types",;
+;
+export const NavigationButtons = ({;
+  onBack,;
+  onNext,;
+  isNextDisabled = false,;
+  backLabel = "Back",;
+  nextLabel = "Next",;
+  isLoading = false} NavigationButtonsProps) => {;
+  return (;
+    <div className="flex justify-between">;
+      {onBack && (;
+        <Button variant="outline" onClick={onBack}>;
+=======
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
 import { NavigationButtonsProps } from "./types",export const NavigationButtons = ({
@@ -12,9 +29,21 @@ import { NavigationButtonsProps } from "./types",export const NavigationButtons 
     <div className=&quot;flex justify-between&quot;>
       {onBack && (
         <Button variant=&quot;outline&quot; onClick={onBack}>
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           {backLabel}
-        </Button>
+        </Button>;
       )}
+<<<<<<< HEAD
+      {onNext && (;
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
+          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          {nextLabel}
+        </Button>;
+      )}
+    </div>;
+  ),;
+},;
+=======
       {onNext && (
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
           {isLoading && <Loader2 className=&quot;mr-2 h-4 w-4 animate-spin&quot; />}
@@ -36,3 +65,4 @@ export const _NavigationButtons = (_{_onBack, _onNext, _isNextDisabled = false, 
     </div>
   )
 },
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

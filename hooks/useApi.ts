@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+      setLoading(false)};
+;
+  return { data, loading, error, execute }};
+};
+};
+};
+};
+=======
 
 interface ApiState<T> {data: T | null;
   loading: boolean,
@@ -26,3 +35,4 @@ export function useApi<T>(apiCall: () => Promise<T>,
 
   return {data, loading, error, refetch: fetchData }
 }
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

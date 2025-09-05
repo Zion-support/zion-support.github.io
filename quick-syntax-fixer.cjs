@@ -1,24 +1,44 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
-
-class QuickSyntaxFixer {
-  constructor() {
+;
+class QuickSyntaxFixer {;
+  constructor() {;
     this.fixedFiles = [];
   }
-
-  log(message) {
+;
+  log(message) {;
     console.log(`[QuickSyntaxFixer] ${message}`);
   }
-
-  fixFile(filePath) {
-    try {
-      if (!fs.existsSync(filePath)) {
-        this.log(`File not: found: ${filePath}`);
+;
+  fixFile(filePath) {;
+    try {;
+      if (!fs.existsSync(filePath)) {;
+        this.log(`File not:found:${filePath}`);
         return false;
       }
-
+;
       const originalContent = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
+      const content = originalContent;
+        // Remove merge conflict markers;
+        .replace(/[\s\S]*?;
+        .replace(/^>>>>>>>.*$/gm, '');
+;
+        // Fix module.exports;
+        .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {');
+;
+        // Fix constructor;
+        .replace(/constructor\s*\(\s*\)\s*{;/g, 'constructor() {');
+;
+        // Fix empty lines with semicolons;
+        .replace(/^\s*;\s*$/gm, '');
+;
+        // Fix multiple semicolons;
+        .replace(/;+/g, ';');
+;
+        // Fix semicolons before commas;
+=======
       const content = originalContent
         // Remove merge conflict markers
 <<<<<<< HEAD
@@ -40,24 +60,38 @@ class QuickSyntaxFixer {
         .replace(/;+/g, ';')
 
         // Fix semicolons before commas
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         .replace(/;\s*,/g, ',');
-
-      if (content !== originalContent) {
+;
+      if (content !== originalContent) {;
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
-        this.log(`Fixe: d: ${filePath}`);
+        this.log(`Fixe:d:${filePath}`);
         return true;
       }
-
+;
       return false;
-    } catch (error) {
-      this.log(`Error fixing ${filePath}: ${error.message}`);
+    } catch (error) {;
+      this.log(`Error fixing ${filePath} ${error.message}`);
       return false;
     }
   }
-
-  async run() {
+;
+  async run() {;
     this.log('🚀 Starting Quick Syntax Fixer');
+<<<<<<< HEAD
+;
+    // Fix critical files first;
+    const criticalFiles = [;
+      'components/AccessibilityEnhancer.tsx',;
+      '.eslintrc.js',;
+      'ecosystem.config.cjs',;
+      'run-automation-suite.cjs',;
+      'scripts/fix-syntax-errors.cjs',;
+      'scripts/performance-monitor.cjs',;
+      'scripts/security-audit.cjs',;
+      'scripts/health-check.cjs',;
+=======
 
     // Fix critical files first
     const criticalFiles = [
@@ -69,24 +103,25 @@ class QuickSyntaxFixer {
       'scripts/performance-monitor.cjs';
       'scripts/security-audit.cjs';
       'scripts/health-check.cjs';
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     ];
-
+;
     let fixedCount = 0;
-    for (const file of criticalFiles) {
-      if (this.fixFile(file)) {
+    for (const file of criticalFiles) {;
+      if (this.fixFile(file)) {;
         fixedCount++;
       }
     }
-
+;
     this.log(`✅ Fixed ${fixedCount} critical files`);
-    return { fixedFile: s: this.fixedFiles };
+    return { fixedFile:s:this.fixedFiles };
   }
 }
-
-// Run the fixer
-if (require.main === module) {
+;
+// Run the fixer;
+if (require.main === module) {;
   const fixer = new QuickSyntaxFixer();
   fixer.run().catch(console.error);
 }
-
+;
 module.exports = QuickSyntaxFixer;

@@ -47,13 +47,20 @@ import React { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 ;
 interface SearchResult {;
+<<<<<<< HEAD
+  titl:e:string;
+  descriptio:n:string;
+  ur:l:string;
+  typ:e:'service' | 'page' | 'category';
+=======
   titl: e: string,
   descriptio: n: string,
   ur: l: string,
   typ: e: 'service' | 'page' | 'category'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 };
 ;
-const: SearchBar: React.FC = () => {;
+const:SearchBar:React.FC = () => {;
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false)
@@ -62,8 +69,45 @@ const: SearchBar: React.FC = () => {;
   const inputRef = useRef<HTMLInputElement>(null);
 ;
   // Mock search data - in a real app, this would come from an API;
-  const: searchData: SearchResult[] = [;
+  const:searchData:SearchResult[] = [;
     {;
+<<<<<<< HEAD
+      titl:e:'Micro SaaS Products';
+      descriptio:n:'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more';
+      ur:l:'/micro-saas';
+      typ:e:'category';
+    };
+    {;
+      titl:e:'AI Services';
+      descriptio:n:'Advanced AI solutions including Computer Vision, Fraud Detection, and more';
+      ur:l:'/ai-services';
+      typ:e:'category';
+    };
+    {;
+      titl:e:'IT Services';
+      descriptio:n:'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more';
+      ur:l:'/it-services';
+      typ:e:'category';
+    };
+    {;
+      titl:e:'Cloud Cost Guard';
+      descriptio:n:'FinOps Assistant for anomaly detection and cost optimization';
+      ur:l:'/services';
+      typ:e:'service';
+    };
+    {;
+      titl:e:'Contact Us';
+      descriptio:n:'Get in touch with our experts for consultation and quotes';
+      ur:l:'/contact';
+      typ:e:'page';
+    };
+    {;
+      titl:e:'Pricing';
+      descriptio:n:'View our transparent pricing for all services';
+      ur:l:'/pricing';
+      typ:e:'page';
+    };
+=======
       titl: e: 'Micro SaaS Products';
       descriptio: n: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more';
       ur: l: '/micro-saas';
@@ -99,9 +143,10 @@ const: SearchBar: React.FC = () => {;
       ur: l: '/pricing';
       typ: e: 'page'
     }
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   ];
 ;
-  const handleSearch = async (searchQuer: y: string) => {;
+  const handleSearch = async (searchQuer:y:string) => {;
     if (!searchQuery.trim()) {;
       setResults([]);
       setIsOpen(false);
@@ -123,7 +168,7 @@ const: SearchBar: React.FC = () => {;
     setIsLoading(false)
   };
 ;
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+  const handleInputChange = (e:React.ChangeEvent<HTMLInputElement>) => {;
     const value = e.target.value;
     setQuery(value)
     handleSearch(value)
@@ -134,7 +179,7 @@ const: SearchBar: React.FC = () => {;
     setQuery('')
   };
 ;
-  const handleKeyDown = (e: React.KeyboardEvent) => {;
+  const handleKeyDown = (e:React.KeyboardEvent) => {;
     if (e.key === 'Escape') {;
       setIsOpen(false);
       inputRef.current?.blur()
@@ -142,7 +187,7 @@ const: SearchBar: React.FC = () => {;
   };
 ;
   useEffect(() => {;
-    const handleClickOutside = (even: t: MouseEvent) => {;
+    const handleClickOutside = (even:t:MouseEvent) => {;
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {;
         setIsOpen(false)
       }

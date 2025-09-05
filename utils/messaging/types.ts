@@ -1,11 +1,23 @@
-export type UserRole = 'client' | 'talent' | 'admin',
-
-export interface UserSummary {
-  id: string,
-  name: string,
-  role: UserRole,
-  avatarUrl?: string
+export type UserRole = 'client' | 'talent' | 'admin',;
+;
+export interface UserSummary {;
+  id:string,;
+  name:string,;
+  role:UserRole,;
+  avatarUrl?:string;
 }
+<<<<<<< HEAD
+;
+export type ConversationContextType = 'job' | 'talent' | 'general' | 'application' | 'invite',;
+;
+export interface ConversationContext {;
+  type:ConversationContextType,;
+  jobId?:string,;
+  jobTitle?:string,;
+  talentId?:string,;
+  talentName?:string,;
+  proposalLink?:string;
+=======
 export type ConversationContextType = 'job' | 'talent' | 'general' | 'application' | 'invite',
 
 export interface ConversationContext {
@@ -15,15 +27,31 @@ export interface ConversationContext {
   talentId?: string,
   talentName?: string,
   proposalLink?: string
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
-
-export interface Conversation {
-  id: string,
-  participants: string[], // [clientId, talentId] or any two users
-  context?: ConversationContext,
-  lastMessageAt: string, // ISO
-  unreadBy: string[], // userIds who have unread messages
+;
+export interface Conversation {;
+  id:string,;
+  participants:string[], // [clientId, talentId] or any two users;
+  context?:ConversationContext,;
+  lastMessageAt:string, // ISO;
+  unreadBy:string[], // userIds who have unread messages;
 }
+<<<<<<< HEAD
+;
+export type MessageStatus = 'sent' | 'delivered' | 'read',;
+;
+export interface Message {;
+  id:string,;
+  conversationId:string,;
+  senderId:string,;
+  recipientId:string,;
+  body:string,;
+  attachmentUrl?:string, // saved under /public/uploads;
+  linkUrl?:string,;
+  createdAt:string, // ISO;
+  status:MessageStatus;
+=======
 export type MessageStatus = 'sent' | 'delivered' | 'read',
 
 export interface Message {
@@ -36,22 +64,23 @@ export interface Message {
   linkUrl?: string,
   createdAt: string, // ISO
   status: MessageStatus
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }
-
-export interface InboxItem {
-  conversation: Conversation,
-  otherParticipant: UserSummary,
-  lastMessage?: Message,
-  unreadCount: number
+;
+export interface InboxItem {;
+  conversation:Conversation,;
+  otherParticipant:UserSummary,;
+  lastMessage?:Message,;
+  unreadCount:number;
 }
-
-export interface NewMessageInput {
-  conversationId?: string,
-  senderId: string,
-  recipientId: string,
-  body: string,
-  linkUrl?: string,
-  attachmentBase64?: string, // data URL or raw base64
-  attachmentName?: string, // optional filename
-  context?: ConversationContext
+;
+export interface NewMessageInput {;
+  conversationId?:string,;
+  senderId:string,;
+  recipientId:string,;
+  body:string,;
+  linkUrl?:string,;
+  attachmentBase64?:string, // data URL or raw base64;
+  attachmentName?:string, // optional filename;
+  context?:ConversationContext;
 }

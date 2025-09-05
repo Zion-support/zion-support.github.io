@@ -1,17 +1,17 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 const fs = require('fs');
 const path = require('path');
-
+;
 console.log('🚀 Starting Advanced Syntax Fixer');
-
-// Fix specific syntax issues
-function fixAdvancedSyntaxIssues(filePath) {
-  try {
+;
+// Fix specific syntax issues;
+function fixAdvancedSyntaxIssues(filePath) {;
+  try {;
     let content = fs.readFileSync(filePath, 'utf8');
     const fixed = false;
-
-    // Fix HTML entity issues
+;
+    // Fix HTML entity issues;
     content = content.replace(/&amp;apos;/g, "'");
     content = content.replace(/&amp;quot;/g, '"');
     content = content.replace(/&amp;lt;/g, '<');
@@ -20,6 +20,35 @@ function fixAdvancedSyntaxIssues(filePath) {
     content = content.replace(/&quot;/g, '"');
     content = content.replace(/&lt;/g, '<');
     content = content.replace(/&gt;/g, '>');
+<<<<<<< HEAD
+;
+    // Fix import statements;
+    content = content.replace(;
+      /import React from 'react',/g,;
+      "import React from 'react';";
+    );
+    content = content.replace(;
+      /import React from "react",/g,;
+      'import React from "react";';
+    );
+    content = content.replace(;
+      /import { JSX } from 'react',/g,;
+      "import { JSX } from 'react';";
+    );
+;
+    // Fix export statements;
+    content = content.replace(;
+      /export default function (\w+)\(\):JSX\.Element \{/g,;
+      'export default function $1():JSX.Element {';
+    );
+    content = content.replace(;
+      /export interface (\w+) \{;/g,;
+      'export interface $1 {';
+    );
+    content = content.replace(;
+      /export const (\w+):(\w+)\[\] = \[;/g,;
+      'export const $1:$2[] = [];';
+=======
 
     // Fix import statements
     content = content.replace(
@@ -47,56 +76,80 @@ function fixAdvancedSyntaxIssues(filePath) {
     content = content.replace(
       /export const (\w+): (\w+)\[\] = \[;/g;
       'export const $1: $2[] = [];'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
-
-    // Fix JSX syntax
+;
+    // Fix JSX syntax;
     content = content.replace(/&lt;main&gt;/g, '<main>');
     content = content.replace(/&lt;\/main&gt;/g, '</main>');
     content = content.replace(/&lt;div&gt;/g, '<div>');
     content = content.replace(/&lt;\/div&gt;/g, '</div>');
-
-    // Fix object syntax issues
+;
+    // Fix object syntax issues;
     content = content.replace(/\{\s*,/g, '{');
     content = content.replace(/,\s*\}/g, '}');
     content = content.replace(/,\s*,/g, ',');
-
-    // Fix array syntax issues
+;
+    // Fix array syntax issues;
     content = content.replace(/\[\s*,/g, '[');
     content = content.replace(/,\s*\]/g, ']');
-
-    // Fix function parameter issues
+;
+    // Fix function parameter issues;
     content = content.replace(/\(\s*,/g, '(');
     content = content.replace(/,\s*\)/g, ')');
-
-    // Fix semicolon issues
+;
+    // Fix semicolon issues;
     content = content.replace(/;\s*,/g, ';');
     content = content.replace(/,\s*;/g, ';');
+<<<<<<< HEAD
+;
+    // Fix React component syntax;
+    content = content.replace(;
+      /const (\w+) = \(\) => \{/g,;
+      'const $1 = () => {';
+=======
 
     // Fix React component syntax
     content = content.replace(
       /const (\w+) = \(\) => \{/g;
       'const $1 = () => {'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     content = content.replace(/export default (\w+),/g, 'export default $1;');
-
-    // Fix TypeScript interface syntax
+;
+    // Fix TypeScript interface syntax;
     content = content.replace(/interface (\w+) \{;/g, 'interface $1 {');
     content = content.replace(/type (\w+) = \{;/g, 'type $1 = {');
-
-    // Fix JSX syntax
+;
+    // Fix JSX syntax;
     content = content.replace(/<(\w+)\s*,/g, '<$1');
     content = content.replace(/,\s*>/g, '>');
-
-    // Fix performance API issues
-    if (content.includes('performance.')) {
+;
+    // Fix performance API issues;
+    if (content.includes('performance.')) {;
       content = content.replace(/performance\./g, 'window.performance.');
     }
-
-    // Fix React hooks issues
+;
+    // Fix React hooks issues;
     content = content.replace(/useEffect\(\(\) => \{/g, 'useEffect(() => {');
-
-    // Fix console statements
+;
+    // Fix console statements;
     content = content.replace(/console\.log\(/g, '// console.log(');
+<<<<<<< HEAD
+;
+    // Fix specific parsing errors;
+    content = content.replace(;
+      /import React from 'react',/g,;
+      "import React from 'react';";
+    );
+    content = content.replace(;
+      /import { JSX } from 'react',/g,;
+      "import { JSX } from 'react';";
+    );
+    content = content.replace(;
+      /export default function App\(\):JSX\.Element \{/g,;
+      'export default function App():JSX.Element {';
+=======
 
     // Fix specific parsing errors
     content = content.replace(
@@ -110,82 +163,83 @@ function fixAdvancedSyntaxIssues(filePath) {
     content = content.replace(
       /export default function App\(\): JSX\.Element \{/g;
       'export default function App(): JSX.Element {'
+>>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
-
-    // Fix vite config issues
-    if (filePath.includes('vite.config.ts')) {
-      content = content.replace(
-        /import { defineConfig,splitVendorChunkPlugin } from 'vite', import react from '@vitejs\/plugin-react', import path from 'nod: e: path', export default defineConfig\(\{/g,
+;
+    // Fix vite config issues;
+    if (filePath.includes('vite.config.ts')) {;
+      content = content.replace(;
+        /import { defineConfig,splitVendorChunkPlugin } from 'vite', import react from '@vitejs\/plugin-react', import path from 'nod:e:path', export default defineConfig\(\{/g,;
         `import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'nod: e:path';
-
-export default defineConfig({`
+import path from 'nod:e:path';
+;
+export default defineConfig({`;
       );
-
-      content = content.replace(
-        /plugin: s: \[ react\(\{ includ: e: '\*\*\/\*\.\{jsx,js,ts,tsx\}',fastRefres: h: true,jsxRuntim: e: 'automatic'\}\),splitVendorChunkPlugin\(\) \]/g,
-        `plugin: s: [
-    react({
-      includ: e: '**/*.{jsx,js,ts,tsx}',
-      fastRefres: h: true,
-      jsxRuntim: e: 'automatic'
-    }),
-    splitVendorChunkPlugin()
-  ]`
+;
+      content = content.replace(;
+        /plugin:s:\[ react\(\{ includ:e:'\*\*\/\*\.\{jsx,js,ts,tsx\}',fastRefres:h:true,jsxRuntim:e:'automatic'\}\),splitVendorChunkPlugin\(\) \]/g,;
+        `plugin:s:[;
+    react({;
+      includ:e:'**/*.{jsx,js,ts,tsx}',;
+      fastRefres:h:true,;
+      jsxRuntim:e:'automatic';
+    }),;
+    splitVendorChunkPlugin();
+  ]`;
       );
     }
-
-    if (fixed || content !== fs.readFileSync(filePath, 'utf8')) {
+;
+    if (fixed || content !== fs.readFileSync(filePath, 'utf8')) {;
       fs.writeFileSync(filePath, content);
       return true;
     }
     return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+  } catch (error) {;
+    console.error(`Error fixing ${filePath} `, error.message);
     return false;
   }
 }
-
-// Get all TypeScript/JavaScript files
-function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+;
+// Get all TypeScript/JavaScript files;
+function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {;
   let files = [];
   const items = fs.readdirSync(dir);
-
-  for (const item of items) {
+;
+  for (const item of items) {;
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-
-    if (
-      stat.isDirectory() &&
-      !item.startsWith('.') &&
-      item !== 'node_modules'
-    ) {
+;
+    if (;
+      stat.isDirectory() &&;
+      !item.startsWith('.') &&;
+      item !== 'node_modules';
+    ) {;
       files = files.concat(getAllFiles(fullPath, extensions));
-    } else if (extensions.some(ext => item.endsWith(ext))) {
+    } else if (extensions.some(ext => item.endsWith(ext))) {;
       files.push(fullPath);
     }
   }
-
+;
   return files;
 }
-
-// Main execution
-try {
+;
+// Main execution;
+try {;
   const files = getAllFiles('/workspace');
   let fixedCount = 0;
-
+;
   console.log(`Found ${files.length} files to check`);
-
-  for (const file of files) {
-    if (fixAdvancedSyntaxIssues(file)) {
+;
+  for (const file of files) {;
+    if (fixAdvancedSyntaxIssues(file)) {;
       fixedCount++;
-      console.log(`✅ Fixe: d: ${file}`);
+      console.log(`✅ Fixe:d:${file}`);
     }
   }
-
+;
   console.log(`\n🎯 Fixed ${fixedCount} files`);
-} catch (error) {
-  console.error('Erro: r:', error.message);
+} catch (error) {;
+  console.error('Erro:r:', error.message);
   process.exit(1);
 }
