@@ -1,6 +1,17 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import { Mail, ArrowRight, Users, Calendar, FileText, Video, Globe, Shield, Zap } from 'lucide-react';
+=======
+  ArrowRight,
+  Users,
+  Calendar,
+  FileText,
+  Video,
+  Globe,
+  Shield,
+  Zap,
+>>>>>>> main
 
 const benefits = [
   {
@@ -8,6 +19,7 @@ const benefits = [
     description: 'Get access to exclusive white papers, case studies, and industry insights.',
     icon: FileText
   },
+<<<<<<< HEAD
   {
     title: 'Webinar Invitations',
     description: 'Receive invitations to our expert-led webinars and virtual events.',
@@ -88,4 +100,11 @@ export default function Newsletter() {
       </div>
     </div>
   );
+=======
+  {}
+    title: 'Webinar Invitations,',
+    description: 'Receive invitations to our expert-led webinars and virtual events.,',
+    icon: Video;
+  },
+>>>>>>> main
 }

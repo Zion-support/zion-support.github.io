@@ -12,14 +12,16 @@ const publicRoutes = [
   "/resources",
   "/talent",
   "/team",
-  "/pricing",
-  "/security",
-  "/compliance",
+  "/partners",
+  "/news",
+  "/careers",
   "/privacy",
   "/terms",
   "/cookies",
-  "/sitemap",
-  "/search",
+  "/accessibility",
+  "/compliance",
+  "/gdpr",
+  "/security",
   "/support",
   "/help",
   "/faq",
@@ -27,24 +29,49 @@ const publicRoutes = [
   "/tutorials",
   "/webinars",
   "/white-papers",
-  "/whitepapers",
-  "/news",
-  "/newsletter",
-  "/partners",
   "/case-studies",
-  "/community",
-  "/company",
-  "/industries",
+  "/press",
+  "/events",
+  "/newsletter",
+  "/sitemap",
+  "/api-docs",
+  "/docs",
+  "/api",
   "/login",
   "/register",
   "/forgot-password",
-  "/ai-services",
-  "/it-services",
+  "/pricing",
+  "/company",
+  "/community",
+  "/status",
+  "/search",
   "/micro-saas",
-  "/products",
+  "/it-services",
+  "/ai-services",
+  "/services-overview",
+  "/solutions/cloud-migration",
+  "/solutions/custom",
+  "/solutions/digital-transformation",
+  "/solutions/education",
   "/solutions/enterprise",
-  "/solutions/small-business",
-  "/solutions/startup"
+  "/solutions/finance",
+  "/solutions/government",
+  "/solutions/healthcare",
+  "/solutions/industry",
+  "/solutions/retail",
+  "/solutions/smb",
+  "/solutions/startup",
+  "/services/cloud",
+  "/services/cloud-devops",
+  "/services/cybersecurity",
+  "/services/data-analytics",
+  "/services/quantum-computing",
+  "/industries/education",
+  "/industries/finance",
+  "/industries/government",
+  "/industries/healthcare",
+  "/industries/manufacturing",
+  "/industries/retail"
 ];
 
 export function middleware(request: NextRequest) {
@@ -56,7 +83,7 @@ export function middleware(request: NextRequest) {
   }
   
   // For protected routes, you can add authentication logic here
-  // For now, we'll just allow access
+  // For now, we'll just allow all requests
   return NextResponse.next();
 }
 
@@ -69,6 +96,6 @@ export const config = {
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
      */
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+    "/((?!api|_next/static|_next/image|favicon.ico).*)",
   ],
 };

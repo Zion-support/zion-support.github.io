@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/AccessibilityEnhancer_BASE_15796.tsx
+=======
 <<<<<<< HEAD
 import React from 'react',;',';';
     ;
@@ -59,6 +61,7 @@ const React from "react",;"
 =======
 import _React from 'react',;'; ';';';';';'; import {SEO } from '@/components/SEO'; export default function AccessibilityEnhancerBASE15796(_) {return ( <div className="min-h-screen bg-white"> <SEO title="AccessibilityEnhancerBASE15796 - Zion Tech Group" description="Professional AccessibilityEnhancerBASE15796 services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">AccessibilityEnhancerBASE15796</h1> <p className="text-gray-300 text-lg"> Professional AccessibilityEnhancerBASE15796 services to help your business grow.'; </p>'; </div>';'; </div>';';'; );';';';';'}";';';';';';
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/AccessibilityEnhancer_BASE_15796.tsx
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
+=======
+
+import Link from 'next/link';';
+>>>>>>> main
 import { motion } from 'framer-motion';
 import { 
   BookOpen, 
@@ -21,8 +26,13 @@ import {
   Database,
   Cloud
 } from 'lucide-react';
+<<<<<<< HEAD
 import Layout from '../components/Layout';
 
+=======
+import MainLayout from '../components/layout/MainLayout';
+import { FileText, Clock, Users, ArrowRight, CheckCircle, BookOpen, Code, Database, Cloud, Shield } from 'lucide-react';
+>>>>>>> main
 const guides = [
   {
     title: 'Complete Guide to Web Development',
@@ -90,6 +100,7 @@ const guides = [
     rating: 4.9,
     downloads: 1600
   }
+<<<<<<< HEAD
 ];
 
 const categories = [
@@ -113,6 +124,36 @@ export default function GuidesPage() {
     return matchesCategory && matchesSearch;
   });
 
+=======
+
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+
+];
+
+ursor/website-audit-and-update-with-deployment-9cae
+const categories = [
+  { name: 'All', count: 24, active: true },
+  { name: 'Web Development', count: 6, active: false },
+  { name: 'Cloud Computing', count: 5, active: false },
+  { name: 'Database', count: 4, active: false },
+  { name: 'Security', count: 3, active: false },
+  { name: 'API Development', count: 3, active: false },
+  { name: 'DevOps', count: 3, active: false }
+];
+
+ursor/website-audit-and-update-with-deployment-9cae
+const popularGuides = [
+  { title: 'Getting Started with React', downloads: 3200, category: 'Web Development' },
+  { title: 'AWS Security Best Practices', downloads: 2800, category: 'Cloud Computing' },
+  { title: 'SQL Performance Optimization', downloads: 2600, category: 'Database' },
+  { title: 'RESTful API Design', downloads: 2400, category: 'API Development' }
+];
+export default function GuidesPage() {
+>>>>>>> main
   return (
     <Layout
       title="Guides & Resources - Zion Tech Group"
@@ -140,6 +181,7 @@ export default function GuidesPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Search and Filter */}
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
@@ -170,10 +212,27 @@ export default function GuidesPage() {
                   </select>
                 </div>
               </div>
+=======
+ursor/website-audit-and-update-with-deployment-9cae
+        {/* Categories Filter */}
+
             </div>
           </div>
         </section>
 
+ursor/website-audit-and-update-with-deployment-9cae
+        {/* Popular Guides */}
+                  key={guide.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+
+>>>>>>> main
+            </div>
+          </div>
+        </section>
+
+<<<<<<< HEAD
         {/* Guides Grid */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -251,6 +310,80 @@ export default function GuidesPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+=======
+ursor/website-audit-and-update-with-deployment-9cae
+        {/* Guides Grid */}
+                  key={guide.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                        {guide.category}
+                      </span>,
+                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${}
+                        guide.difficulty === 'Beginner' ? 'bg-green-100 text-green-600' :',
+                        guide.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-600' :';
+                        'bg-red-100 text-red-600'';
+                      }`}>,
+                        {guide.difficulty}
+
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                      <div className="flex items-center">
+                        <Clock className="w-4 h-4 mr-1" />
+                        {guide.readTime}
+
+                    <Link
+                      href="#"
+                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
+                    >
+                      Download Guide
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
+                  </div>
+                </motion.div>
+              ))}
+
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{guide.title}</h3>
+                    <p className="text-gray-600 mb-4">{guide.description}</p>
+
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{guide.title}</h3>
+                    <p className="text-gray-600 mb-4">{guide.description}</p>
+
+ursor/website-audit-and-update-with-deployment-9cae
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                      <div className="flex items-center">
+                        <Clock className="w-4 h-4 mr-1" />
+                        {guide.readTime}
+                      </div>
+                      <div className="flex items-center">
+                        <BookOpen className="w-4 h-4 mr-1" />
+                        {guide.sections} sections
+                      </div>
+                      <div className="flex items-center">
+                        <Users className="w-4 h-4 mr-1" />
+                        {guide.downloads} downloads
+                      </div>
+                    </div>
+
+ursor/website-audit-and-update-with-deployment-9cae
+                    <Link
+                      href="#"
+                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
+                    >
+                      Download Guide
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+ursor/website-audit-and-update-with-deployment-9cae
+        {/* CTA Section */}
+>>>>>>> main
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Need Custom Training?
@@ -277,5 +410,9 @@ export default function GuidesPage() {
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD
+=======
+    </SimpleLayout>
+>>>>>>> main
   );
 }

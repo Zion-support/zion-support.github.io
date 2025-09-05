@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -36,6 +38,7 @@ export function logInfoToProduction(message, context = {}) {};
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
   // "TODO": Implement actual production logging service integration}}
+>>>>>>> main
 >>>>>>> main
 ; if(process.env.NODE_ENV === 'development') {}; * @param {string} message - Warning message; * @param {Object} context - Additional context data; */; export function logWarningToProduction(message,context = {}) {}; return null} } } ; ; export function logInfoToProduction(message,context = {}) {}; return null} } }}
 >>>>>>> main

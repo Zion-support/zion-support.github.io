@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/navigation/SidebarNavigation.tsx
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React { useState } from 'react',;',';';';';
@@ -1512,6 +1514,7 @@ import Link from &apos;next/link';react&apos; import { Link, useLocation } from 
 import React { useState } from 'react' import { Link, useLocation } from 'react-router-dom' import { motion, AnimatePresence } from 'framer-motion' import {  Brain, Cloud, Shield, Cpu, Zap, Leaf, Star, ChevronRight, ChevronDown, Home, Users, Settings, FileText, HelpCircle, Phone, Mail, MapPin, Globe, Rocket, Sparkles, Target, Lightbulb, Code, Database, Network, Lock, Heart, Activity, Building, Briefcase, GraduationCap, Factory, ShoppingCart, Truck, Zap as ZapIcon, Sun, TreePine }  from 'lucide-react';interface NavigationItem {
 ";';';';
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/navigation/SidebarNavigation.tsx
 </motion>
 </string>
 </SidebarNavigationProps>

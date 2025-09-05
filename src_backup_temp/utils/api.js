@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/utils/api.js
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -35,3 +37,4 @@ export const api = { async get(url) { const response = await fetch(url); if (!re
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/utils/api.js

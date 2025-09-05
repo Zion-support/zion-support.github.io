@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
   Server,
   Shield,
@@ -33,332 +34,516 @@ import {
   Brain,
   DollarSign,
   Rocket,
-  Sprout,
+  Target,
+  Heart,
+  GraduationCap,
+  PieChart,
+  Truck,
+  Home,
+  Video,
+  ClipboardList,
   Eye,
   Bot,
-  Package,
-  Heart,
-  FileText,
-  Truck,
-  Video
+  Phone,
+  Mail,
+  MapPin,
+  Activity,
+  RefreshCw,
+  Layers,
+  Compass,
+  Lightning
 } from 'lucide-react';
+import Layout from '../components/Layout';
 
 const itServices = [
   {
-    title: 'Cloud Infrastructure Management',
-    description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.',
-    icon: Cloud,
-    features: ['Multi-cloud Strategy', 'Cost Optimization', 'Auto-scaling', 'Disaster Recovery'],
-    pricing: '$6,000 - $30,000/project',
-    category: 'Cloud',
-    popular: true
-  },
-  {
-    title: 'Cybersecurity Solutions',
-    description: 'Advanced security measures including threat detection, vulnerability assessment, and incident response.',
-    icon: Shield,
-    features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Security Audits'],
-    pricing: '$8,000 - $40,000/setup',
-    category: 'Security',
-    popular: true
-  },
-  {
-    title: 'Database Management',
-    description: 'Database design, optimization, migration, and maintenance services for all major database systems.',
-    icon: Database,
-    features: ['Database Design', 'Performance Optimization', 'Migration Services', '24/7 Monitoring'],
-    pricing: '$5,000 - $25,000/project',
-    category: 'Database'
-  },
-  {
-    title: 'Network Infrastructure',
-    description: 'Complete network design, implementation, and management for enterprise environments.',
-    icon: Network,
-    features: ['Network Design', 'Implementation', 'Performance Monitoring', 'Troubleshooting'],
-    pricing: '$10,000 - $50,000/project',
-    category: 'Networking'
-  },
-  {
-    title: 'IT Support & Maintenance',
-    description: 'Comprehensive IT support services including help desk, maintenance, and system administration.',
-    icon: Monitor,
-    features: ['24/7 Help Desk', 'System Maintenance', 'User Support', 'Remote Management'],
-    pricing: '$2,000 - $10,000/month',
-    category: 'Support',
-    popular: true
-  },
-  {
-    title: 'System Integration',
-    description: 'Seamless integration of disparate systems and applications for improved efficiency.',
-    icon: Settings,
-    features: ['API Integration', 'Data Synchronization', 'Workflow Automation', 'Custom Solutions'],
-    pricing: '$15,000 - $75,000/project',
-    category: 'Integration'
-  },
-  {
-    title: 'IT Consulting',
-    description: 'Strategic IT consulting to help businesses align technology with business objectives.',
-    icon: Users,
-    features: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Vendor Management'],
-    pricing: '$150 - $300/hour',
-    category: 'Consulting'
-  },
-  {
-    title: 'Data Backup & Recovery',
-    description: 'Comprehensive data protection solutions including backup, disaster recovery, and business continuity.',
-    icon: HardDrive,
-    features: ['Automated Backups', 'Disaster Recovery', 'Data Encryption', 'Recovery Testing'],
-    pricing: '$3,000 - $15,000/setup',
-    category: 'Data Protection'
-  },
-  {
-    title: 'Mobile Device Management',
-    description: 'Complete mobile device management including security, app deployment, and device monitoring.',
-    icon: Smartphone,
-    features: ['Device Security', 'App Management', 'Remote Wipe', 'Compliance Monitoring'],
-    pricing: '$5 - $15/device/month',
-    category: 'Mobile'
-  },
-  {
-    title: 'IT Cost Optimization Platform',
-    description: 'AI-powered IT cost optimization with resource right-sizing and waste reduction.',
-    icon: DollarSign,
-    features: ['Cost Analysis', 'Resource Right-sizing', 'Waste Detection', 'Optimization Recommendations'],
-    pricing: '$15,000 - $75,000/setup',
-    category: 'Cost Optimization'
-  },
-  {
+    id: 'ai-business-process-automation',
     title: 'AI-Powered Business Process Automation',
-    description: 'Comprehensive AI automation solutions for enterprise processes, document processing, and workflow optimization.',
-    icon: Cpu,
-    features: ['Process Automation', 'Document Processing', 'Workflow Optimization', 'RPA Integration'],
-    pricing: '$25,000 - $150,000/project',
-    category: 'AI Automation',
-    popular: true
+    description: 'Transform your business operations with intelligent automation that learns and adapts to your workflows',
+    icon: Bot,
+    features: ['Intelligent Workflow Design', 'Process Mining & Analysis', 'RPA Integration', 'Real-time Monitoring'],
+    pricing: 'Starting at $2,500/month',
+    category: 'AI & Automation',
+    benefits: ['Reduce operational costs by 60%', 'Eliminate manual errors', 'Scale processes automatically'],
+    marketPrice: '$5,000-15,000/month'
   },
   {
+    id: 'ai-cybersecurity-operations',
     title: 'AI Cybersecurity Operations Center',
-    description: 'AI-powered security operations center with advanced threat detection and automated response.',
+    description: 'Advanced threat detection and response with AI-powered security monitoring and incident management',
     icon: Shield,
-    features: ['AI Threat Detection', 'Automated Response', 'Security Analytics', '24/7 Monitoring'],
-    pricing: '$50,000 - $300,000/setup',
-    category: 'AI Security',
-    popular: true
+    features: ['AI Threat Detection', 'Automated Response', 'Security Analytics', 'Compliance Monitoring'],
+    pricing: 'Starting at $3,500/month',
+    category: 'Cybersecurity',
+    benefits: ['99.9% threat detection accuracy', 'Real-time incident response', 'Reduced security costs'],
+    marketPrice: '$8,000-25,000/month'
   },
   {
+    id: 'ai-data-analytics-platform',
     title: 'AI Data Analytics Platform',
-    description: 'Advanced AI-powered data analytics platform for business intelligence and predictive insights.',
+    description: 'Unlock insights from your data with advanced AI-powered analytics, machine learning, and predictive modeling',
     icon: BarChart3,
-    features: ['Predictive Analytics', 'Real-time Insights', 'Data Visualization', 'Machine Learning'],
-    pricing: '$30,000 - $200,000/setup',
-    category: 'AI Analytics'
+    features: ['Predictive Analytics', 'Machine Learning Models', 'Real-time Dashboards', 'Data Visualization'],
+    pricing: 'Starting at $2,000/month',
+    category: 'Data & Analytics',
+    benefits: ['Make data-driven decisions', 'Predict future trends', 'Optimize business performance'],
+    marketPrice: '$4,000-12,000/month'
   },
   {
-    title: 'AI Customer Experience Platform',
-    description: 'AI-driven customer experience solutions including chatbots, personalization, and sentiment analysis.',
-    icon: Users,
-    features: ['AI Chatbots', 'Personalization', 'Sentiment Analysis', 'Customer Insights'],
-    pricing: '$20,000 - $100,000/setup',
-    category: 'AI Customer Experience'
+    id: 'cloud-infrastructure-management',
+    title: 'Cloud Infrastructure Management',
+    description: 'Comprehensive cloud solutions with automated scaling, monitoring, and cost optimization',
+    icon: Cloud,
+    features: ['Multi-Cloud Management', 'Auto-Scaling', 'Cost Optimization', 'Disaster Recovery'],
+    pricing: 'Starting at $1,500/month',
+    category: 'Cloud Services',
+    benefits: ['Reduce cloud costs by 40%', 'Improve reliability', 'Scale on demand'],
+    marketPrice: '$3,000-10,000/month'
   },
   {
-    title: 'AI Financial Technology Solutions',
-    description: 'AI-powered fintech solutions including fraud detection, risk assessment, and automated trading.',
-    icon: DollarSign,
-    features: ['Fraud Detection', 'Risk Assessment', 'Automated Trading', 'Compliance Monitoring'],
-    pricing: '$40,000 - $250,000/setup',
-    category: 'AI Fintech'
-  },
-  {
-    title: 'AI Healthcare IT Solutions',
-    description: 'AI-powered healthcare technology solutions including patient management and medical imaging analysis.',
-    icon: Heart,
-    features: ['Patient Management', 'Medical Imaging', 'Diagnostic Support', 'Health Analytics'],
-    pricing: '$35,000 - $200,000/setup',
-    category: 'AI Healthcare'
-  },
-  {
-    title: 'AI Legal Technology Platform',
-    description: 'AI-powered legal technology solutions including document analysis, contract review, and case management.',
-    icon: FileText,
-    features: ['Document Analysis', 'Contract Review', 'Case Management', 'Legal Research'],
-    pricing: '$25,000 - $150,000/setup',
-    category: 'AI Legal'
-  },
-  {
-    title: 'AI Supply Chain Management',
-    description: 'AI-powered supply chain optimization including demand forecasting and logistics management.',
-    icon: Truck,
-    features: ['Demand Forecasting', 'Logistics Optimization', 'Inventory Management', 'Risk Assessment'],
-    pricing: '$30,000 - $180,000/setup',
-    category: 'AI Supply Chain'
-  },
-  {
-    title: 'AI Human Resources Platform',
-    description: 'AI-powered HR solutions including recruitment, performance management, and employee analytics.',
-    icon: Users,
-    features: ['AI Recruitment', 'Performance Analytics', 'Employee Insights', 'Talent Management'],
-    pricing: '$20,000 - $120,000/setup',
-    category: 'AI HR'
-  },
-  {
-    title: 'AI Real Estate Technology',
-    description: 'AI-powered real estate solutions including property valuation, market analysis, and virtual tours.',
-    icon: Building,
-    features: ['Property Valuation', 'Market Analysis', 'Virtual Tours', 'Investment Analytics'],
-    pricing: '$25,000 - $150,000/setup',
-    category: 'AI Real Estate'
-  },
-  {
-    title: 'AI E-commerce Solutions',
-    description: 'AI-powered e-commerce solutions including recommendation engines, pricing optimization, and customer analytics.',
-    icon: ShoppingCart,
-    features: ['Recommendation Engines', 'Pricing Optimization', 'Customer Analytics', 'Inventory Management'],
-    pricing: '$30,000 - $200,000/setup',
-    category: 'AI E-commerce'
-  },
-  {
-    title: 'AI Education Technology',
-    description: 'AI-powered educational technology including personalized learning and automated assessment.',
-    icon: BookOpen,
-    features: ['Personalized Learning', 'Automated Assessment', 'Learning Analytics', 'Content Generation'],
-    pricing: '$25,000 - $150,000/setup',
-    category: 'AI Education'
-  },
-  {
-    title: 'AI Manufacturing Solutions',
-    description: 'AI-powered manufacturing solutions including predictive maintenance and quality control.',
+    id: 'ai-devops-automation',
+    title: 'AI DevOps Automation Platform',
+    description: 'Intelligent CI/CD pipelines with automated testing, deployment, and infrastructure management',
     icon: Settings,
-    features: ['Predictive Maintenance', 'Quality Control', 'Production Optimization', 'Supply Chain Integration'],
-    pricing: '$40,000 - $250,000/setup',
-    category: 'AI Manufacturing'
+    features: ['AI-Powered Testing', 'Automated Deployment', 'Infrastructure as Code', 'Performance Monitoring'],
+    pricing: 'Starting at $2,200/month',
+    category: 'DevOps & Infrastructure',
+    benefits: ['90% faster deployments', 'Zero-downtime updates', 'Automated quality assurance'],
+    marketPrice: '$5,000-15,000/month'
   },
   {
-    title: 'AI Energy Management Systems',
-    description: 'AI-powered energy management including consumption optimization and renewable energy integration.',
-    icon: Zap,
-    features: ['Consumption Optimization', 'Renewable Integration', 'Energy Analytics', 'Smart Grid Management'],
-    pricing: '$35,000 - $200,000/setup',
-    category: 'AI Energy'
-  },
-  {
-    title: 'AI Transportation Solutions',
-    description: 'AI-powered transportation solutions including route optimization and fleet management.',
-    icon: Truck,
-    features: ['Route Optimization', 'Fleet Management', 'Traffic Analysis', 'Predictive Maintenance'],
-    pricing: '$30,000 - $180,000/setup',
-    category: 'AI Transportation'
-  },
-  {
-    title: 'AI Retail Technology',
-    description: 'AI-powered retail solutions including inventory management and customer behavior analysis.',
-    icon: ShoppingCart,
-    features: ['Inventory Management', 'Customer Analytics', 'Price Optimization', 'Demand Forecasting'],
-    pricing: '$25,000 - $150,000/setup',
-    category: 'AI Retail'
-  },
-  {
-    title: 'AI Government Solutions',
-    description: 'AI-powered government technology including citizen services and policy analysis.',
-    icon: Building,
-    features: ['Citizen Services', 'Policy Analysis', 'Resource Optimization', 'Compliance Monitoring'],
-    pricing: '$50,000 - $300,000/setup',
-    category: 'AI Government'
-  },
-  {
-    title: 'AI Non-Profit Solutions',
-    description: 'AI-powered solutions for non-profits including donor management and impact measurement.',
+    id: 'ai-customer-experience',
+    title: 'AI Customer Experience Platform',
+    description: 'Enhance customer satisfaction with AI-powered chatbots, personalization, and omnichannel support',
     icon: Heart,
-    features: ['Donor Management', 'Impact Measurement', 'Volunteer Coordination', 'Grant Management'],
-    pricing: '$20,000 - $100,000/setup',
-    category: 'AI Non-Profit'
+    features: ['AI Chatbots', 'Personalization Engine', 'Omnichannel Support', 'Sentiment Analysis'],
+    pricing: 'Starting at $1,800/month',
+    category: 'Customer Experience',
+    benefits: ['Increase customer satisfaction', 'Reduce support costs', 'Personalized experiences'],
+    marketPrice: '$3,500-12,000/month'
   },
   {
-    title: 'AI Entertainment Technology',
-    description: 'AI-powered entertainment solutions including content recommendation and audience analytics.',
-    icon: Video,
-    features: ['Content Recommendation', 'Audience Analytics', 'Content Generation', 'Personalization'],
-    pricing: '$30,000 - $200,000/setup',
-    category: 'AI Entertainment'
+    id: 'ai-supply-chain-optimization',
+    title: 'AI Supply Chain Optimization',
+    description: 'Optimize your supply chain with AI-powered demand forecasting, inventory management, and logistics optimization',
+    icon: Truck,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Risk Management'],
+    pricing: 'Starting at $2,800/month',
+    category: 'Supply Chain',
+    benefits: ['Reduce inventory costs', 'Improve delivery times', 'Minimize supply chain risks'],
+    marketPrice: '$6,000-20,000/month'
+  },
+  {
+    id: 'ai-financial-services',
+    title: 'AI Financial Services Platform',
+    description: 'Advanced financial technology solutions with AI-powered risk assessment, fraud detection, and trading algorithms',
+    icon: DollarSign,
+    features: ['Risk Assessment', 'Fraud Detection', 'Algorithmic Trading', 'Regulatory Compliance'],
+    pricing: 'Starting at $4,000/month',
+    category: 'Financial Technology',
+    benefits: ['Reduce financial risks', 'Detect fraud in real-time', 'Optimize trading strategies'],
+    marketPrice: '$10,000-30,000/month'
+  },
+  {
+    id: 'ai-healthcare-solutions',
+    title: 'AI Healthcare Technology Solutions',
+    description: 'Transform healthcare delivery with AI-powered diagnostics, patient management, and medical research tools',
+    icon: Heart,
+    features: ['Medical Image Analysis', 'Patient Risk Assessment', 'Drug Discovery', 'Clinical Decision Support'],
+    pricing: 'Starting at $3,500/month',
+    category: 'Healthcare Technology',
+    benefits: ['Improve diagnostic accuracy', 'Reduce medical errors', 'Accelerate research'],
+    marketPrice: '$8,000-25,000/month'
+  },
+  {
+    id: 'ai-education-platform',
+    title: 'AI Education Technology Platform',
+    description: 'Revolutionize learning with AI-powered personalized education, adaptive learning, and intelligent tutoring systems',
+    icon: GraduationCap,
+    features: ['Personalized Learning', 'Adaptive Assessments', 'Intelligent Tutoring', 'Learning Analytics'],
+    pricing: 'Starting at $1,200/month',
+    category: 'Education Technology',
+    benefits: ['Improve learning outcomes', 'Personalize education', 'Track student progress'],
+    marketPrice: '$2,500-8,000/month'
+  },
+  {
+    id: 'ai-manufacturing-optimization',
+    title: 'AI Manufacturing Optimization',
+    description: 'Optimize manufacturing processes with AI-powered quality control, predictive maintenance, and production planning',
+    icon: Building,
+    features: ['Predictive Maintenance', 'Quality Control', 'Production Optimization', 'Supply Chain Integration'],
+    pricing: 'Starting at $3,000/month',
+    category: 'Manufacturing Technology',
+    benefits: ['Reduce downtime', 'Improve product quality', 'Optimize production efficiency'],
+    marketPrice: '$6,000-18,000/month'
+  },
+  {
+    id: 'ai-retail-solutions',
+    title: 'AI Retail Technology Solutions',
+    description: 'Enhance retail operations with AI-powered inventory management, customer analytics, and personalized shopping experiences',
+    icon: ShoppingCart,
+    features: ['Inventory Management', 'Customer Analytics', 'Personalized Recommendations', 'Price Optimization'],
+    pricing: 'Starting at $2,200/month',
+    category: 'Retail Technology',
+    benefits: ['Increase sales', 'Optimize inventory', 'Improve customer experience'],
+    marketPrice: '$4,500-15,000/month'
+  },
+  {
+    id: 'ai-energy-management',
+    title: 'AI Energy Management System',
+    description: 'Optimize energy consumption with AI-powered smart grid management, renewable energy integration, and predictive analytics',
+    icon: Lightning,
+    features: ['Smart Grid Management', 'Energy Forecasting', 'Renewable Integration', 'Cost Optimization'],
+    pricing: 'Starting at $2,500/month',
+    category: 'Energy Technology',
+    benefits: ['Reduce energy costs', 'Optimize consumption', 'Integrate renewables'],
+    marketPrice: '$5,000-15,000/month'
+  },
+  {
+    id: 'ai-transportation-logistics',
+    title: 'AI Transportation & Logistics',
+    description: 'Optimize transportation and logistics with AI-powered route optimization, fleet management, and demand forecasting',
+    icon: Truck,
+    features: ['Route Optimization', 'Fleet Management', 'Demand Forecasting', 'Real-time Tracking'],
+    pricing: 'Starting at $2,800/month',
+    category: 'Transportation Technology',
+    benefits: ['Reduce transportation costs', 'Improve delivery efficiency', 'Optimize routes'],
+    marketPrice: '$6,000-20,000/month'
+  },
+  {
+    id: 'ai-real-estate-platform',
+    title: 'AI Real Estate Technology Platform',
+    description: 'Transform real estate with AI-powered property valuation, market analysis, and intelligent property management',
+    icon: Home,
+    features: ['Property Valuation', 'Market Analysis', 'Tenant Screening', 'Maintenance Prediction'],
+    pricing: 'Starting at $1,800/month',
+    category: 'Real Estate Technology',
+    benefits: ['Accurate property valuations', 'Optimize rental income', 'Predict maintenance needs'],
+    marketPrice: '$3,500-12,000/month'
+  },
+  {
+    id: 'ai-legal-tech-platform',
+    title: 'AI Legal Technology Platform',
+    description: 'Streamline legal operations with AI-powered document analysis, contract review, and legal research automation',
+    icon: BookOpen,
+    features: ['Document Analysis', 'Contract Review', 'Legal Research', 'Compliance Monitoring'],
+    pricing: 'Starting at $2,500/month',
+    category: 'Legal Technology',
+    benefits: ['Reduce legal costs', 'Improve accuracy', 'Accelerate research'],
+    marketPrice: '$5,000-18,000/month'
+  },
+  {
+    id: 'ai-marketing-automation',
+    title: 'AI Marketing Automation Platform',
+    description: 'Maximize marketing ROI with AI-powered campaign optimization, customer segmentation, and personalized content delivery',
+    icon: Target,
+    features: ['Campaign Optimization', 'Customer Segmentation', 'Content Personalization', 'ROI Analytics'],
+    pricing: 'Starting at $1,500/month',
+    category: 'Marketing Technology',
+    benefits: ['Increase marketing ROI', 'Personalize campaigns', 'Optimize customer targeting'],
+    marketPrice: '$3,000-10,000/month'
+  },
+  {
+    id: 'ai-hr-technology',
+    title: 'AI Human Resources Technology',
+    description: 'Transform HR operations with AI-powered recruitment, employee analytics, and workforce optimization',
+    icon: Users,
+    features: ['Talent Acquisition', 'Employee Analytics', 'Performance Management', 'Workforce Planning'],
+    pricing: 'Starting at $1,800/month',
+    category: 'Human Resources Technology',
+    benefits: ['Improve hiring quality', 'Optimize workforce', 'Reduce HR costs'],
+    marketPrice: '$3,500-12,000/month'
+  },
+  {
+    id: 'ai-iot-platform',
+    title: 'AI Internet of Things Platform',
+    description: 'Connect and manage IoT devices with AI-powered data processing, device management, and predictive analytics',
+    icon: Wifi,
+    features: ['Device Management', 'Data Processing', 'Predictive Analytics', 'Edge Computing'],
+    pricing: 'Starting at $2,200/month',
+    category: 'IoT Technology',
+    benefits: ['Optimize device performance', 'Predict maintenance needs', 'Process data at scale'],
+    marketPrice: '$4,500-15,000/month'
+  },
+  {
+    id: 'ai-blockchain-solutions',
+    title: 'AI Blockchain Technology Solutions',
+    description: 'Secure and transparent solutions with AI-powered blockchain applications, smart contracts, and decentralized systems',
+    icon: Lock,
+    features: ['Smart Contracts', 'Decentralized Applications', 'Cryptocurrency Integration', 'Security Protocols'],
+    pricing: 'Starting at $3,500/month',
+    category: 'Blockchain Technology',
+    benefits: ['Enhanced security', 'Transparent transactions', 'Reduce intermediaries'],
+    marketPrice: '$8,000-25,000/month'
   }
 ];
 
+const categories = [
+  'All',
+  'AI & Automation',
+  'Cybersecurity',
+  'Data & Analytics',
+  'Cloud Services',
+  'DevOps & Infrastructure',
+  'Customer Experience',
+  'Supply Chain',
+  'Financial Technology',
+  'Healthcare Technology',
+  'Education Technology',
+  'Manufacturing Technology',
+  'Retail Technology',
+  'Energy Technology',
+  'Transportation Technology',
+  'Real Estate Technology',
+  'Legal Technology',
+  'Marketing Technology',
+  'Human Resources Technology',
+  'IoT Technology',
+  'Blockchain Technology'
+];
+
 export default function ITServices() {
+  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  const [searchTerm, setSearchTerm] = React.useState('');
+
+  const filteredServices = itServices.filter(service => {
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <Layout>
       <Head>
-        <title>IT Services & Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services and AI-powered solutions for modern businesses" />
+        <title>IT Services & Solutions | ZionTech Group</title>
+        <meta name="description" content="Comprehensive IT services and solutions powered by AI and cutting-edge technology. Transform your business with our expert IT consulting and implementation services." />
+        <meta name="keywords" content="IT services, technology solutions, AI services, cloud computing, cybersecurity, data analytics" />
       </Head>
 
-      <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            IT Services & Solutions
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive IT services and AI-powered solutions designed to transform your business operations and drive growth.
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {itServices.map((service, index) => (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
             <motion.div
-              key={service.title}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+              transition={{ duration: 0.8 }}
+              className="text-center"
             >
-              <div className="flex items-center mb-4">
-                <service.icon className="h-8 w-8 text-blue-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
-              </div>
-              
-              <p className="text-gray-600 mb-4">{service.description}</p>
-              
-              <div className="mb-4">
-                <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
-                <ul className="space-y-1">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-              <div className="mb-4">
-                <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
-                  {service.category}
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                IT Services &
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  {" "}Solutions
                 </span>
-                {service.popular && (
-                  <span className="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded ml-2">
-                    Popular
-                  </span>
-                )}
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Comprehensive technology solutions designed to accelerate your business growth. 
+                From AI-powered automation to cloud infrastructure, we deliver cutting-edge IT services.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                >
+                  Get Started Today
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  href="/pricing"
+                  className="border border-gray-300 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+                >
+                  View Pricing
+                </Link>
               </div>
-              
-              <div className="text-2xl font-bold text-gray-900 mb-4">
-                {service.pricing}
-              </div>
-              
-              <Link href="/contact">
-                <a className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold">
-                  Learn More
-                  <ArrowRight className="h-4 w-4 ml-1" />
-                </a>
-              </Link>
             </motion.div>
-          ))}
-        </div>
+          </div>
+        </section>
+
+        {/* Search and Filter Section */}
+        <section className="py-12 bg-black/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col lg:flex-row gap-6">
+              {/* Search */}
+              <div className="flex-1">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                  <input
+                    type="text"
+                    placeholder="Search IT services and solutions..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-300/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              </div>
+
+              {/* Category Filter */}
+              <div className="lg:w-64">
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full px-4 py-3 bg-white/10 border border-gray-300/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  {categories.map((category) => (
+                    <option key={category} value={category} className="bg-gray-800 text-white">
+                      {category}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300 group"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
+                      <service.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full">
+                      {service.category}
+                    </span>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-gray-300 mb-6 text-sm">
+                    {service.description}
+                  </p>
+
+                  <div className="space-y-3 mb-6">
+                    <h4 className="text-sm font-semibold text-white">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.slice(0, 3).map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="space-y-3 mb-6">
+                    <h4 className="text-sm font-semibold text-white">Benefits:</h4>
+                    <ul className="space-y-1">
+                      {service.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-300">
+                          <ArrowRight className="h-4 w-4 text-blue-400 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="border-t border-gray-600 pt-4">
+                    <div className="flex items-center justify-between mb-4">
+                      <div>
+                        <div className="text-2xl font-bold text-white">{service.pricing}</div>
+                        <div className="text-sm text-gray-400">Market: {service.marketPrice}</div>
+                      </div>
+                      <div className="flex items-center text-yellow-400">
+                        <Star className="h-4 w-4 fill-current" />
+                        <span className="ml-1 text-sm">4.9/5</span>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-2">
+                      <Link
+                        href="/contact"
+                        className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center"
+                      >
+                        Get Quote
+                      </Link>
+                      <Link
+                        href="/micro-saas"
+                        className="flex-1 border border-gray-300 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 text-center"
+                      >
+                        Learn More
+                      </Link>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Transform Your IT Infrastructure?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Let our expert team design and implement the perfect technology solution for your business needs
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"
+                >
+                  Get Custom Solution
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  href="/micro-saas"
+                  className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
+                >
+                  Explore Micro SaaS
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Contact Info */}
+        <section className="py-16 bg-black/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="flex items-center justify-center">
+                  <Phone className="h-6 w-6 text-blue-400 mr-3" />
+                  <span className="text-gray-300">+1 302 464 0950</span>
+                </div>
+                <div className="flex items-center justify-center">
+                  <Mail className="h-6 w-6 text-blue-400 mr-3" />
+                  <span className="text-gray-300">kleber@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center justify-center">
+                  <MapPin className="h-6 w-6 text-blue-400 mr-3" />
+                  <span className="text-gray-300">364 E Main St STE 1008 Middletown DE 19709</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
       </div>
-    </div>
+    </Layout>
   );
 }

@@ -1,5 +1,7 @@
 import js from '@eslint/js';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -99,6 +101,7 @@ import tsparser from '@typescript-eslint/parser';
 export default [{
     "ignores": [
 >>>>>>> main
+>>>>>>> main
       'node_modules/',
       '.next/',
       'out/',
@@ -108,6 +111,8 @@ export default [{
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       'fix-critical-files.js',
       'fix-*.js',
@@ -361,6 +366,7 @@ export default [{
         "CodeQualityChecker": 'readonly'
       }
 >>>>>>> main
+>>>>>>> main
     },
     plugins: {
       '@typescript-eslint': typescript,
@@ -371,23 +377,10 @@ export default [{
       'no-console': 'warn',
       'no-unused-vars': 'warn',
       '@typescript-eslint/no-unused-vars': 'warn',
-<<<<<<< HEAD
-      'react/jsx-uses-react': 'error',
-      'react/jsx-uses-vars': 'error',
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-=======
-      'no-console': 'warn',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
-    }
->>>>>>> main
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     "ignores": ['node_modules/**',
       '.next/**',
@@ -658,6 +651,7 @@ export default [{
       'coverage/',
     ],
   },
+>>>>>>> main
 >>>>>>> main
 ];
 >>>>>>> main

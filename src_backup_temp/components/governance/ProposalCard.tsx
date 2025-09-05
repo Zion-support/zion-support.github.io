@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/governance/ProposalCard.tsx
+=======
 <<<<<<< HEAD
 =======
 import React from 'react';
@@ -99,6 +101,7 @@ const "ProposalCard": Reac t.FC<ProposalCardProps> = ({
 };) => {
   const getStatusColor = (props) => {
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/governance/ProposalCard.tsx
     switch (status) {
       case 'active':';
 >>>>>>> main
@@ -170,6 +173,8 @@ const "ProposalCard": Reac t.FC<ProposalCardProps> = ({
 =======
 >>>>>>> main
             {proposal.title}
+<<<<<<< HEAD:src/components/governance/ProposalCard.tsx
+=======
 <<<<<<< HEAD
           
           <p className="text-sm text-gray-600 mb-3">
@@ -178,6 +183,7 @@ const "ProposalCard": Reac t.FC<ProposalCardProps> = ({
 ;
           <p className="text-sm text-gray-600 mb-3">;
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/governance/ProposalCard.tsx
             {proposal.description}
           </p>;
         </div>;

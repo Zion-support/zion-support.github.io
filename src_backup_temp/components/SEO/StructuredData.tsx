@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/SEO/StructuredData.tsx
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 import Head from 'next/head' interface StructuredDataProps {';
@@ -32,6 +34,7 @@ const Head from "next/head" interface StructuredDataProps { type?: "Organization
 =======
 import Head from 'next/head' interface StructuredDataProps { type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'Articledata?: any';'} export const StructuredData: Reac t.FC<StructuredDataProps> = ({ type = Organization,data};) => { const getDefaultData = (props) => { switch (type) { case 'Organization': return { '@context': 'https:" </StructuredDataProps>;';
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/SEO/StructuredData.tsx
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

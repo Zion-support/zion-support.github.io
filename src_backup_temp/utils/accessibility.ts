@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/utils/accessibility.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -59,6 +61,7 @@ export const accessibilityUtils = {
         return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4)});
       return 0.2126 * r + 0.7152 * g + 0.0722 * b};
 >>>>>>> main
+>>>>>>> main:src_backup_temp/utils/accessibility.ts
     const lum1 = getLuminance(color1);
     const lum2 = getLuminance(color2);
     const brightest = Math.max(lum1, lum2);

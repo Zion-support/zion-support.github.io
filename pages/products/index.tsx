@@ -44,6 +44,7 @@ const products = [
 ];
 
 const ProductsIndex: NextPage = () => {
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
@@ -120,6 +121,21 @@ const ProductsIndex: NextPage = () => {
         </div>
       </div>
     </div>
+=======
+    }
+  ];
+
+  return (
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+>>>>>>> main
   );
 };
 

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 export default function App(): JSX.Element {
   return (
@@ -24,6 +26,7 @@ export default function App(): React.JSX.Element {
     </main>
   );
 }
+>>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

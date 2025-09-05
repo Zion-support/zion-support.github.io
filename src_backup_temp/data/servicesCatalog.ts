@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/servicesCatalog.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1293,3 +1295,4 @@ export type ServiceItem = { id: string; title: string; description: string; cate
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/servicesCatalog.ts

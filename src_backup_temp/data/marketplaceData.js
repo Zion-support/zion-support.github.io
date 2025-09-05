@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/marketplaceData.js
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -170,3 +172,4 @@ export const generateSearchSuggestions = () => [ 'AI Services','Cloud Migration'
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/marketplaceData.js

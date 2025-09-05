@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/legal/TermsOfService.tsx
+=======
 <<<<<<< HEAD
 const TermsOfService = ("props": "any) => {;
   return (;
@@ -137,6 +139,7 @@ const TermsOfService = (props) => {
 =======
     <div className="min-h-screen bg-white">
 >>>>>>> main
+>>>>>>> main:src_backup_temp/legal/TermsOfService.tsx
       <div className="max-w-4xl mx-auto space-y-8">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Terms of Service</h1>
