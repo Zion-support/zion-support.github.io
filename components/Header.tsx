@@ -29,7 +29,6 @@ import {
   Code
 } from 'lucide-react';
 
-<<<<<<< HEAD
 const navigation = {
   'Services': [
     { name: 'AI Services', href: '/ai-services' },
@@ -103,84 +102,6 @@ const quickLinks = [
   { name: 'Free Consultation', href: '/consultation' },
   { name: 'Get Quote', href: '/quote' },
   { name: 'Support', href: '/support' }
-=======
-const navigation = [
-  {
-    name: 'Services',
-    href: '/services',
-    icon: Settings,
-    children: [
-      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '80+' },
-      { name: 'IT Services', href: '/it-services', icon: Network, count: '60+' },
-      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '100+' },
-      { name: 'All Services', href: '/services', icon: Globe, count: '240+' }
-    ]
-  },
-  {
-    name: 'Solutions',
-    href: '/solutions',
-    icon: Shield,
-    children: [
-      { name: 'Digital Transformation', href: '/solutions/digital-transformation', icon: Zap },
-      { name: 'Cloud Migration', href: '/solutions/cloud-migration', icon: Cloud },
-      { name: 'AI Implementation', href: '/solutions/ai-implementation', icon: Brain },
-      { name: 'Cybersecurity', href: '/solutions/cybersecurity', icon: Shield },
-      { name: 'Data Analytics', href: '/solutions/data-analytics', icon: BarChart3 },
-      { name: 'IoT Solutions', href: '/solutions/iot', icon: Cpu }
-    ]
-  },
-  {
-    name: 'Industries',
-    href: '/industries',
-    icon: Building,
-    children: [
-      { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
-      { name: 'Finance', href: '/industries/finance', icon: DollarSign },
-      { name: 'Manufacturing', href: '/industries/manufacturing', icon: Settings },
-      { name: 'Retail', href: '/industries/retail', icon: ShoppingCart },
-      { name: 'Education', href: '/industries/education', icon: BookOpen },
-      { name: 'Government', href: '/industries/government', icon: Building },
-      { name: 'Energy', href: '/industries/energy', icon: Zap },
-      { name: 'Transportation', href: '/industries/transportation', icon: Car }
-    ]
-  },
-  {
-    name: 'Resources',
-    href: '/resources',
-    icon: FileText,
-    children: [
-      { name: 'White Papers', href: '/white-papers', icon: FileText },
-      { name: 'Webinars', href: '/webinars', icon: Video },
-      { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
-      { name: 'Blog', href: '/blog', icon: MessageSquare },
-      { name: 'Documentation', href: '/docs', icon: FileText },
-      { name: 'API Reference', href: '/api-docs', icon: Code }
-    ]
-  },
-  {
-    name: 'Company',
-    href: '/about',
-    icon: Users,
-    children: [
-      { name: 'About Us', href: '/about', icon: Users },
-      { name: 'Our Team', href: '/team', icon: Users },
-      { name: 'Careers', href: '/careers', icon: Rocket },
-      { name: 'Partners', href: '/partners', icon: Network },
-      { name: 'News', href: '/news', icon: MessageSquare },
-      { name: 'Contact', href: '/contact', icon: Phone }
-    ]
-  },
-  {
-    name: 'Pricing',
-    href: '/pricing',
-    icon: DollarSign
-  },
-  {
-    name: 'Contact',
-    href: '/contact',
-    icon: Phone
-  }
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 ];
 
 export default function Header() {
@@ -202,7 +123,6 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-<<<<<<< HEAD
           <nav className="hidden lg:flex items-center space-x-6">
             {Object.entries(navigation).map(([title, links]) => (
               <div key={title} className="relative group">
@@ -229,58 +149,11 @@ export default function Header() {
                       ))}
                     </div>
                   </div>
-=======
-          <nav className="hidden lg:flex space-x-8">
-            {navigation.map((item) => (
-              <div key={item.name} className="relative group">
-                <button
-                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                  onMouseEnter={() => setOpenDropdown(item.name)}
-                  onMouseLeave={() => setOpenDropdown(null)}
-                >
-                  <item.icon className="w-4 h-4" />
-                  <span>{item.name}</span>
-                  {item.children && <ChevronDown className="w-4 h-4" />}
-                </button>
-
-                {item.children && (
-                  <AnimatePresence>
-                    {openDropdown === item.name && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
-                        onMouseEnter={() => setOpenDropdown(item.name)}
-                        onMouseLeave={() => setOpenDropdown(null)}
-                      >
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            href={child.href}
-                            className="flex items-center justify-between px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
-                          >
-                            <div className="flex items-center space-x-3">
-                              <child.icon className="w-4 h-4" />
-                              <span>{child.name}</span>
-                            </div>
-                            {child.count && (
-                              <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full">
-                                {child.count}
-                              </span>
-                            )}
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
                 )}
               </div>
             ))}
           </nav>
 
-<<<<<<< HEAD
           {/* Quick Links */}
           <div className="hidden lg:flex items-center space-x-3">
             {quickLinks.map((link) => (
@@ -295,13 +168,6 @@ export default function Header() {
             <Link
               href="/contact"
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-=======
-          {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              href="/contact"
-              className="px-6 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-medium"
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
             >
               Get Quote
             </Link>

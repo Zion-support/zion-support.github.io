@@ -25,132 +25,58 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-<<<<<<< HEAD
-const footerSections = {
-  'Services': [
-    { name: 'AI Services', href: '/ai-services' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: 'Cloud Solutions', href: '/cloud-solutions' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Quantum Computing', href: '/quantum-computing' },
-    { name: 'Blockchain', href: '/blockchain' },
-    { name: 'IoT Solutions', href: '/iot-solutions' },
-    { name: 'Data Analytics', href: '/data-analytics' },
-    { name: 'Custom Development', href: '/custom-development' }
-  ],
-  'Solutions': [
-    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-    { name: 'Startup Solutions', href: '/solutions/startup' },
-    { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
-    { name: 'Custom Development', href: '/solutions/custom' },
-    { name: 'AI Implementation', href: '/solutions/ai-implementation' },
-    { name: 'Cloud Migration', href: '/solutions/cloud-migration' },
-    { name: 'Legacy Modernization', href: '/solutions/legacy-modernization' },
-    { name: 'API Development', href: '/solutions/api-development' }
-  ],
-  'Industries': [
-    { name: 'Healthcare', href: '/industries/healthcare' },
-    { name: 'Finance', href: '/industries/finance' },
-    { name: 'Education', href: '/industries/education' },
-    { name: 'Government', href: '/industries/government' },
-    { name: 'Manufacturing', href: '/industries/manufacturing' },
-    { name: 'Retail', href: '/industries/retail' },
-    { name: 'Agriculture', href: '/industries/agriculture' },
-    { name: 'Energy', href: '/industries/energy' },
-    { name: 'Transportation', href: '/industries/transportation' },
-    { name: 'Real Estate', href: '/industries/real-estate' }
-  ],
-  'Resources': [
-    { name: 'Blog', href: '/blog' },
-    { name: 'Documentation', href: '/docs' },
-    { name: 'API Documentation', href: '/docs/api' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'White Papers', href: '/white-papers' },
-    { name: 'Webinars', href: '/webinars' },
-    { name: 'Training', href: '/training' },
-    { name: 'FAQ', href: '/faq' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Best Practices', href: '/best-practices' }
-  ],
-  'Company': [
-=======
 interface FooterProps {
   className?: string;
 }
+
+const contactInfo = {
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709"
+};
 
 export default function Footer({ className = '' }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   const services = [
     { name: 'AI Services', href: '/ai-services', icon: Brain },
-    { name: 'IT Services', href: '/it-services', icon: Code },
-    { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
-    { name: 'Cybersecurity', href: '/security', icon: Shield },
-    { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
-    { name: 'Database Solutions', href: '/database-solutions', icon: Database }
+    { name: 'IT Services', href: '/it-services', icon: Cloud },
+    { name: 'Micro SaaS', href: '/micro-saas', icon: Code },
+    { name: 'Blockchain', href: '/blockchain', icon: Shield },
+    { name: 'IoT Solutions', href: '/iot', icon: Network },
+    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield }
   ];
 
   const solutions = [
-    { name: 'Enterprise Solutions', href: '/enterprise-solutions' },
-    { name: 'Startup Solutions', href: '/startup-solutions' },
-    { name: 'Industry Solutions', href: '/industries' },
-    { name: 'Custom Development', href: '/custom-development' },
-    { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: 'Consulting', href: '/consulting' }
+    { name: 'Enterprise Solutions', href: '/enterprise' },
+    { name: 'Startup Solutions', href: '/solutions/startup' },
+    { name: 'E-commerce', href: '/ecommerce' },
+    { name: 'Healthcare', href: '/industries/healthcare' },
+    { name: 'Finance', href: '/industries/finance' },
+    { name: 'Education', href: '/industries/education' }
   ];
 
   const company = [
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
-    { name: 'Careers', href: '/careers' },
     { name: 'Case Studies', href: '/case-studies' },
-    { name: 'News', href: '/news' },
-<<<<<<< HEAD
-    { name: 'Partners', href: '/partners' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Security', href: '/security' }
-  ],
-  'Support': [
-    { name: 'Help Center', href: '/help' },
-    { name: 'Contact Support', href: '/contact' },
-    { name: 'Status Page', href: '/status' },
-    { name: 'Free Consultation', href: '/consultation' },
-    { name: 'Get Quote', href: '/quote' },
-    { name: 'Terms of Service', href: '/terms' }
-  ]
-};
-=======
-    { name: 'Partners', href: '/partners' }
+    { name: 'Careers', href: '/careers' },
+    { name: 'Contact', href: '/contact' }
   ];
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 
   const resources = [
     { name: 'Blog', href: '/blog' },
     { name: 'Documentation', href: '/docs' },
-    { name: 'API Documentation', href: '/docs/api' },
+    { name: 'API Reference', href: '/api-docs' },
     { name: 'Tutorials', href: '/tutorials' },
-    { name: 'White Papers', href: '/white-papers' },
-    { name: 'Webinars', href: '/webinars' }
+    { name: 'Best Practices', href: '/best-practices' }
   ];
 
   const legal = [
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'Security', href: '/security' },
-    { name: 'Compliance', href: '/compliance' },
-    { name: 'Accessibility', href: '/accessibility' }
+    { name: 'Cookie Policy', href: '/cookies' }
   ];
-
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown, DE 19709'
-  };
 
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
@@ -175,7 +101,7 @@ export default function Footer({ className = '' }: FooterProps) {
               <h3 className="text-2xl font-bold">Zion Tech Group</h3>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Leading provider of AI solutions, cloud services, and technology consulting. 
+              Leading provider of AI solutions, cloud services, and technology consulting.
               We help businesses transform and grow through innovative technology.
             </p>
             
@@ -198,7 +124,7 @@ export default function Footer({ className = '' }: FooterProps) {
                 <span>{contactInfo.address}</span>
               </div>
             </div>
-
+  
             {/* Social Links */}
             <div className="flex space-x-4 mt-6">
               {socialLinks.map((social) => (
@@ -215,7 +141,7 @@ export default function Footer({ className = '' }: FooterProps) {
               ))}
             </div>
           </div>
-
+  
           {/* Services */}
           <div>
             <h4 className="text-lg font-semibold mb-6">Services</h4>
@@ -234,7 +160,7 @@ export default function Footer({ className = '' }: FooterProps) {
               ))}
             </ul>
           </div>
-
+  
           {/* Solutions */}
           <div>
             <h4 className="text-lg font-semibold mb-6">Solutions</h4>
@@ -251,7 +177,7 @@ export default function Footer({ className = '' }: FooterProps) {
               ))}
             </ul>
           </div>
-
+  
           {/* Company & Resources */}
           <div>
             <h4 className="text-lg font-semibold mb-6">Company</h4>
@@ -267,7 +193,7 @@ export default function Footer({ className = '' }: FooterProps) {
                 </li>
               ))}
             </ul>
-
+  
             <h4 className="text-lg font-semibold mb-6">Resources</h4>
             <ul className="space-y-3">
               {resources.map((resource) => (
@@ -283,7 +209,7 @@ export default function Footer({ className = '' }: FooterProps) {
             </ul>
           </div>
         </div>
-
+  
         {/* Trust Indicators */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -311,7 +237,7 @@ export default function Footer({ className = '' }: FooterProps) {
           </div>
         </div>
       </div>
-
+  
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-6">

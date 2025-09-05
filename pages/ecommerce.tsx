@@ -15,7 +15,7 @@ import {
   Shield,
   Zap
 } from 'lucide-react';
-import MainLayout from '../src/components/layout/MainLayout';
+import MainLayout from '../components/layout/MainLayout';
 
 const features = [
   {

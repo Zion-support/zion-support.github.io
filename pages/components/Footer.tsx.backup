@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { 
   Activity,
   ArrowRight,
@@ -54,6 +55,10 @@ import {
   Wrench,
   Zap
 } from 'lucide-react';
+=======
+import { motion } from 'framer-motion';
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Database, Server, Shield, Zap, Users, CheckCircle, ArrowRight, Phone, Mail, BarChart3, Lock, RefreshCw } from 'lucide-react';
-import MainLayout from '../src/components/layout/MainLayout';
+import MainLayout from '../components/layout/MainLayout';
 
 const services = [
   {

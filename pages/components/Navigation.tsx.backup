@@ -18,6 +18,7 @@ import {
   Code,
   Cpu,
   CreditCard,
+<<<<<<< HEAD
   DollarSign,
   Eye,
   FileText,
@@ -77,6 +78,9 @@ import {
   TrendingUp as Growth,
   Clock as Time,
   DollarSign as Money
+=======
+  Document
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 } from 'lucide-react';
 
 const navigationItems = [

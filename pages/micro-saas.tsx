@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Rocket, 
   Heart, 
   Building, 
@@ -46,32 +45,6 @@ import {
   Camera,
   HardDrive,
   Droplets
-=======
-  Cloud, 
-  Zap, 
-  BarChart3, 
-  Code, 
-  Settings, 
-  CheckCircle, 
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Users,
-  Shield,
-  Globe,
-  Package,
-  DollarSign,
-  GraduationCap,
-  Calendar,
-  FileText,
-  ShoppingCart,
-  Network,
-  Wifi,
-  Brain,
-  Video,
-  Smartphone
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -94,7 +67,6 @@ const microSaasSolutions = [
     setupTime: "1-2 weeks"
   },
   {
-<<<<<<< HEAD
     title: 'Social Media Scheduler',
     description: 'Schedule and manage all your social media posts across multiple platforms from one dashboard.',
     icon: Calendar,
@@ -253,10 +225,6 @@ const microSaasSolutions = [
   {
     title: 'Analytics Dashboard',
     description: 'Comprehensive analytics and reporting for your business metrics and KPIs.',
-=======
-    title: "Data Processing Tools",
-    description: "Powerful data analysis and processing solutions",
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     icon: BarChart3,
     features: [
       "Data Visualization",
@@ -680,7 +648,6 @@ const microSaasSolutions = [
     setupTime: "3-5 weeks"
   }
 ];
-<<<<<<< HEAD
 
 const microSaaSProducts = [
   {
@@ -2004,8 +1971,6 @@ const microSaaSProducts = [
       category: 'Quantum Computing'
     }
   ];
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 
 const industries = [
   {

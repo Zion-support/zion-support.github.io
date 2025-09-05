@@ -13,7 +13,7 @@ import {
   Users,
   Zap
 } from 'lucide-react';
-import MainLayout from '../src/components/layout/MainLayout';
+import MainLayout from '../components/layout/MainLayout';
 import { useState } from 'react';
 
 const serviceTypes = [
