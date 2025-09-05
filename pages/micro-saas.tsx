@@ -15,7 +15,14 @@ import {
   MapPin,
   Users,
   Shield,
-  Globe
+  Globe,
+  ShoppingCart,
+  Target,
+  DollarSign,
+  GraduationCap,
+  Package,
+  FileText,
+  MessageSquare
 } from 'lucide-react';
 import Layout from './components/Layout';
 
@@ -32,7 +39,9 @@ const microSaasSolutions = [
       "API Integrations",
       "Real-time Notifications"
     ],
-    price: "Starting at $1,500/month"
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-4,000/month",
+    benefits: ["Reduce manual work by 80%", "Increase efficiency by 60%", "Save 20+ hours/week"]
   },
   {
     title: "Data Processing Tools",
@@ -46,7 +55,9 @@ const microSaasSolutions = [
       "Report Generation",
       "Data Export/Import"
     ],
-    price: "Starting at $2,000/month"
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-6,000/month",
+    benefits: ["Process 10x more data", "Generate insights 5x faster", "Reduce errors by 90%"]
   },
   {
     title: "API Integration Services",
@@ -60,7 +71,9 @@ const microSaasSolutions = [
       "Rate Limiting",
       "Authentication & Security"
     ],
-    price: "Starting at $1,800/month"
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-5,500/month",
+    benefits: ["Connect 50+ systems", "Reduce integration time by 70%", "99.9% uptime guarantee"]
   },
   {
     title: "Custom Dashboard Solutions",
@@ -74,7 +87,9 @@ const microSaasSolutions = [
       "Mobile Responsive",
       "Export Capabilities"
     ],
-    price: "Starting at $1,200/month"
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-3,500/month",
+    benefits: ["Improve decision making", "Save 15+ hours/week", "Real-time insights"]
   },
   {
     title: "SaaS Platform Development",
@@ -88,7 +103,9 @@ const microSaasSolutions = [
       "Analytics & Reporting",
       "Scalable Infrastructure"
     ],
-    price: "Starting at $3,500/month"
+    price: "Starting at $3,500/month",
+    marketPrice: "$6,000-15,000/month",
+    benefits: ["Scale to millions of users", "Generate recurring revenue", "Reduce development costs by 60%"]
   },
   {
     title: "Business Intelligence Tools",
@@ -102,7 +119,169 @@ const microSaasSolutions = [
       "Machine Learning Integration",
       "Real-time Insights"
     ],
-    price: "Starting at $2,500/month"
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,500-8,000/month",
+    benefits: ["Increase revenue by 25%", "Reduce costs by 30%", "Make data-driven decisions"]
+  },
+  {
+    title: "Customer Relationship Management",
+    description: "Comprehensive CRM solution for managing customer relationships and sales pipelines",
+    icon: Users,
+    features: [
+      "Contact Management",
+      "Sales Pipeline Tracking",
+      "Email Marketing Automation",
+      "Lead Scoring",
+      "Customer Analytics",
+      "Integration with 100+ tools"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$4,000-7,000/month",
+    benefits: ["Increase sales by 35%", "Improve customer retention", "Automate follow-ups"]
+  },
+  {
+    title: "Project Management Suite",
+    description: "Complete project management solution with team collaboration and resource planning",
+    icon: Globe,
+    features: [
+      "Task Management",
+      "Team Collaboration",
+      "Resource Planning",
+      "Time Tracking",
+      "Budget Management",
+      "Progress Reporting"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,200-6,000/month",
+    benefits: ["Complete projects 40% faster", "Improve team productivity", "Reduce project costs"]
+  },
+  {
+    title: "E-commerce Management",
+    description: "All-in-one e-commerce platform with inventory, orders, and customer management",
+    icon: ShoppingCart,
+    features: [
+      "Inventory Management",
+      "Order Processing",
+      "Customer Management",
+      "Payment Processing",
+      "Shipping Integration",
+      "Analytics & Reporting"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$5,000-12,000/month",
+    benefits: ["Increase sales by 50%", "Reduce order processing time", "Improve customer experience"]
+  },
+  {
+    title: "HR Management System",
+    description: "Comprehensive HR solution for employee management, payroll, and performance tracking",
+    icon: Users,
+    features: [
+      "Employee Database",
+      "Payroll Management",
+      "Performance Reviews",
+      "Time & Attendance",
+      "Benefits Administration",
+      "Compliance Tracking"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["Reduce HR workload by 60%", "Improve employee satisfaction", "Ensure compliance"]
+  },
+  {
+    title: "Marketing Automation",
+    description: "Advanced marketing automation platform for lead nurturing and campaign management",
+    icon: Target,
+    features: [
+      "Email Marketing",
+      "Lead Nurturing",
+      "Campaign Management",
+      "A/B Testing",
+      "Social Media Integration",
+      "Analytics & ROI Tracking"
+    ],
+    price: "Starting at $1,600/month",
+    marketPrice: "$3,000-6,500/month",
+    benefits: ["Increase leads by 200%", "Improve conversion rates", "Automate marketing tasks"]
+  },
+  {
+    title: "Financial Management",
+    description: "Complete financial management solution for accounting, invoicing, and expense tracking",
+    icon: DollarSign,
+    features: [
+      "Accounting & Bookkeeping",
+      "Invoice Generation",
+      "Expense Tracking",
+      "Financial Reporting",
+      "Tax Preparation",
+      "Bank Integration"
+    ],
+    price: "Starting at $1,900/month",
+    marketPrice: "$3,500-7,000/month",
+    benefits: ["Save 25+ hours/month", "Improve cash flow", "Ensure tax compliance"]
+  },
+  {
+    title: "Learning Management System",
+    description: "Comprehensive LMS for online courses, training, and educational content delivery",
+    icon: GraduationCap,
+    features: [
+      "Course Creation",
+      "Student Management",
+      "Progress Tracking",
+      "Assessment Tools",
+      "Certification System",
+      "Mobile Learning"
+    ],
+    price: "Starting at $2,300/month",
+    marketPrice: "$4,000-9,000/month",
+    benefits: ["Scale education programs", "Improve learning outcomes", "Reduce training costs"]
+  },
+  {
+    title: "Inventory Management",
+    description: "Advanced inventory management system with real-time tracking and automated reordering",
+    icon: Package,
+    features: [
+      "Real-time Inventory Tracking",
+      "Automated Reordering",
+      "Supplier Management",
+      "Barcode Scanning",
+      "Multi-location Support",
+      "Analytics & Forecasting"
+    ],
+    price: "Starting at $2,100/month",
+    marketPrice: "$3,800-7,500/month",
+    benefits: ["Reduce stockouts by 80%", "Lower inventory costs", "Improve accuracy"]
+  },
+  {
+    title: "Document Management",
+    description: "Secure document management system with version control and collaboration features",
+    icon: FileText,
+    features: [
+      "Document Storage",
+      "Version Control",
+      "Collaboration Tools",
+      "Search & Retrieval",
+      "Access Control",
+      "Audit Trail"
+    ],
+    price: "Starting at $1,400/month",
+    marketPrice: "$2,500-5,000/month",
+    benefits: ["Improve document security", "Reduce search time by 90%", "Enable remote collaboration"]
+  },
+  {
+    title: "Communication Platform",
+    description: "Unified communication platform with messaging, video calls, and file sharing",
+    icon: MessageSquare,
+    features: [
+      "Team Messaging",
+      "Video Conferencing",
+      "File Sharing",
+      "Screen Sharing",
+      "Integration with 200+ apps",
+      "Mobile & Desktop Apps"
+    ],
+    price: "Starting at $1,700/month",
+    marketPrice: "$3,000-6,000/month",
+    benefits: ["Improve team collaboration", "Reduce meeting costs", "Increase productivity"]
   }
 ];
 
@@ -220,7 +399,7 @@ export default function MicroSaasPage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {microSaasSolutions.map((solution, index) => (
               <motion.div 
                 key={index}
@@ -243,7 +422,32 @@ export default function MicroSaasPage() {
                   ))}
                 </ul>
                 <div className="mt-4">
-                  <span className="text-2xl font-bold text-purple-600">{solution.price}</span>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-2xl font-bold text-purple-600">{solution.price}</span>
+                    {solution.marketPrice && (
+                      <span className="text-sm text-gray-500 line-through">
+                        {solution.marketPrice}
+                      </span>
+                    )}
+                  </div>
+                  {solution.marketPrice && (
+                    <div className="text-xs text-green-600 font-medium mb-2">
+                      Save up to 40% vs market rate
+                    </div>
+                  )}
+                  {solution.benefits && (
+                    <div className="text-xs text-gray-600">
+                      <div className="font-semibold mb-1">Key Benefits:</div>
+                      <ul className="space-y-1">
+                        {solution.benefits.slice(0, 2).map((benefit, idx) => (
+                          <li key={idx} className="flex items-center">
+                            <CheckCircle className="w-3 h-3 text-green-500 mr-1" />
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}
