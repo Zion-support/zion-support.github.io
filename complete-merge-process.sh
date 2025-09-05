@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "🚀 Complete Merge Process"
-echo "========================="
+echo "===="
 echo ""
 echo "This script will:"
 echo "1. Resolve merge conflicts"
@@ -45,7 +45,7 @@ chmod +x resolve-all-conflicts.sh 2>/dev/null
 
 # Step 1: Resolve merge conflicts
 log "🔧 Step 1: Resolving merge conflicts..."
-echo "======================================="
+echo "===="
 
 if [ -f "quick-merge-resolver.sh" ]; then
     if bash quick-merge-resolver.sh; then
@@ -61,7 +61,7 @@ echo ""
 
 # Step 2: Merge open PRs
 log "📋 Step 2: Merging open PRs..."
-echo "=============================="
+echo "=="
 
 if [ -f "merge-open-prs.sh" ]; then
     if bash merge-open-prs.sh; then
@@ -77,7 +77,7 @@ echo ""
 
 # Step 3: Final verification and push
 log "🔍 Step 3: Final verification..."
-echo "================================"
+echo "===="
 
 # Check git status
 log "📊 Checking final git status..."
@@ -124,7 +124,7 @@ fi
 
 # Step 4: Build verification (optional)
 log "🏗️  Step 4: Build verification..."
-echo "================================="
+echo "====="
 
 if [ -f "package.json" ]; then
     log "📦 Running npm install to ensure dependencies are up to date..."
@@ -147,7 +147,7 @@ fi
 # Final summary
 echo ""
 echo "🎉 COMPLETE MERGE PROCESS SUMMARY"
-echo "================================="
+echo "====="
 echo ""
 log_success "✅ Merge conflicts resolved"
 log_success "✅ Open PRs processed"
