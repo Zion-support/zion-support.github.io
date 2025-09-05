@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
@@ -127,16 +126,7 @@ const features = [
     icon: Lock,
     title: 'Data Protection',
     description: 'Advanced encryption and data protection solutions'
-  },
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Eye, Shield, Lock, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
-
-const securityServices = [
->>>>>>> origin/main
-  {
+  },  {
     title: "Security Assessment",
     description: "Comprehensive security evaluation of your systems",
     icon: Eye,
@@ -165,7 +155,6 @@ const securityServices = [
     pricing: "$500 - $2,000/month"
   }
 ];
-<<<<<<< HEAD
 const benefits = [
   'Protection against cyber threats and attacks',
   'Compliance with industry regulations',
@@ -174,12 +163,7 @@ const benefits = [
   'Lower insurance costs and liability',
   'Peace of mind with 24/7 monitoring'
 ];
-export default function CybersecurityServices() {
-=======
-
-export default function CybersecurityPage() {
->>>>>>> origin/main
-  return (
+export default function CybersecurityServices() {  return (
     <>
       <Head>
         <title>Cybersecurity Services - Zion Tech Group</title>
@@ -204,7 +188,6 @@ export default function CybersecurityPage() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -221,25 +204,7 @@ export default function CybersecurityPage() {
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                    <feature.icon className="w-6 h-6 text-red-600" />
-=======
-
-        {/* Services Grid */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {securityServices.map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
-                >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="w-6 h-6 text-blue-600" />
->>>>>>> origin/main
-                  </div>
+                    <feature.icon className="w-6 h-6 text-red-600" />                  </div>
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <div className="space-y-2 mb-4">
@@ -263,7 +228,6 @@ export default function CybersecurityPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -298,11 +262,7 @@ export default function CybersecurityPage() {
               </div>
             </div>
           </div>
-        </section>
-=======
-
->>>>>>> origin/main
-        {/* CTA Section */}
+        </section>        {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -335,10 +295,5 @@ export default function CybersecurityPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </Layout>
-=======
-    </>
->>>>>>> origin/main
-  );
+    </Layout>  );
 }

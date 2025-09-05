@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const PricingPage: React.FC = () => {
   return (
     <>
@@ -181,8 +180,4 @@ const PricingPage: _React.FC = () => {}
       </section>;
     </>;
 ;  );
-};,
-=======
-
->>>>>>> origin/main
-export default PricingPage;
+};,export default PricingPage;

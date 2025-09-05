@@ -133,7 +133,6 @@ const microSaasServices = [
     popular: false
   },
   {
-<<<<<<< HEAD
     title: '5G Network Optimization',
     description: 'AI-powered 5G network optimization with performance monitoring, capacity planning, and automated optimization.',
     icon: Network,
@@ -412,68 +411,7 @@ const microSaasServices = [
     benefits: ['Process Optimization', 'Automation', 'Cost Reduction', 'Efficiency Gains', 'Better Workflows'],
     marketPrice: '$100 - $500/month',
     link: 'https://ziontechgroup.com/ai-workflow-automation',
-    contact: '+1 302 464 0950'
-=======
-    title: 'Password Manager',
-    description: 'Secure password storage and management for individuals and teams.',
-    icon: Lock,
-    features: ['Secure encryption', 'Password generation', 'Team sharing', 'Breach monitoring'],
-    pricing: '$12/month',
-    category: 'Security',
-    benefits: ['Enhanced security', 'Easy password management', 'Team collaboration'],
-    marketPrice: '$5-20/month',
-    link: '/contact',
-    popular: false
-  },
-  {
-    title: 'File Storage & Sharing',
-    description: 'Secure cloud storage with advanced sharing and collaboration features.',
-    icon: Cloud,
-    features: ['Secure cloud storage', 'File sharing', 'Version control', 'Team collaboration'],
-    pricing: '$20/month',
-    category: 'Storage',
-    benefits: ['Access files anywhere', 'Secure sharing', 'Version history'],
-    marketPrice: '$10-50/month',
-    link: '/contact',
-    popular: false
-  },
-  {
-    title: 'Time Tracking Tool',
-    description: 'Track time spent on projects and tasks with detailed reporting and insights.',
-    icon: Clock,
-    features: ['Time tracking', 'Project management', 'Detailed reports', 'Team insights'],
-    pricing: '$18/month',
-    category: 'Productivity',
-    benefits: ['Better time management', 'Accurate billing', 'Productivity insights'],
-    marketPrice: '$10-30/month',
-    link: '/contact',
-    popular: false
-  },
-  {
-    title: 'Website Builder',
-    description: 'Create professional websites with drag-and-drop builder and responsive templates.',
-    icon: Globe,
-    features: ['Drag-and-drop builder', 'Responsive templates', 'SEO tools', 'E-commerce integration'],
-    pricing: '$35/month',
-    category: 'Web Development',
-    benefits: ['No coding required', 'Professional results', 'SEO optimized'],
-    marketPrice: '$15-100/month',
-    link: '/contact',
-    popular: false
-  },
-  {
-    title: 'CRM System',
-    description: 'Manage customer relationships with comprehensive CRM features and automation.',
-    icon: Users,
-    features: ['Contact management', 'Sales pipeline', 'Automation', 'Reporting'],
-    pricing: '$50/month',
-    category: 'CRM',
-    benefits: ['Improve sales by 25%', 'Better customer relationships', 'Automated workflows'],
-    marketPrice: '$25-150/month',
-    link: '/contact',
-    popular: true
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
-  }
+    contact: '+1 302 464 0950'  }
 ];
         'Automated rightsizing recommendations',
         'Budget forecasting and alerting',

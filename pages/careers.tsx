@@ -55,34 +55,12 @@ const positions = [
       'Experience with infrastructure as code',
       'Strong automation and scripting skills'
     ],
-<<<<<<< HEAD
-    benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget', 'Certification support']
-=======
-    benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget']
-  },
-  {
-    title: 'Product Manager',
-    location: 'Remote / Delaware',
-    type: 'Full-time',
-    department: 'Product',
-    description: 'Drive product strategy and roadmap for our AI and technology solutions.',
-    requirements: [
-      '5+ years of product management',
-      'AI/ML product experience preferred',
-      'Strong analytical skills',
-      'Excellent communication skills'
-    ],
-    benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget']
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
-  }
+    benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget', 'Certification support']  }
 ];
 
 const benefits = [
   {
     icon: Heart,
-<<<<<<< HEAD
-=======
     title: "Health & Wellness",
     description: "Comprehensive health insurance, mental health support, and wellness programs"
   },
@@ -150,8 +128,163 @@ export default function CareersPage() {
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Join Our Team
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Build the future of technology with us. We're looking for passionate individuals who want to make a difference.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Why Work With Us
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We offer competitive benefits and a supportive work environment that helps you grow both personally and professionally.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => {
+                const IconComponent = benefit.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow"
+                  >
+                    <IconComponent className="w-8 h-8 text-blue-600 mb-4" />
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-gray-600">
+                      {benefit.description}
+                    </p>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Open Positions Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Open Positions
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Explore our current job openings and find the perfect role for you.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {positions.map((position, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                >
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {position.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {position.description}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-500">
+                      {position.location}
+                    </span>
+                    <span className="text-sm text-blue-600 font-medium">
+                      {position.type}
+                    </span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Application Process Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                How to Apply
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our application process is designed to be straightforward and transparent.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {process.map((step, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                    {index + 1}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {step.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Join Our Team?
+            </h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Don't see a position that matches your skills? We're always looking for talented individuals. Send us your resume and let's talk.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                Apply Now
+              </Link>
+              <Link href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
+                Send Resume
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
+
+export default Careers;
+
+const benefits = [
+  {
     icon: Heart,
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
     title: 'Health & Wellness',
     description: 'Comprehensive health insurance and wellness programs'
   },
@@ -191,31 +324,6 @@ export default function Careers() {
               className="text-center text-white"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-<<<<<<< HEAD
-=======
-                Join Our <span className="text-blue-600">Team</span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Help us build the future of AI and technology. We're looking for passionate, 
-                innovative individuals to join our growing team.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Apply Now
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-                <Link
-                  href="/about"
-                  className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
-                >
-                  Learn About Us
-                </Link>
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
                 Join Our{' '}
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Amazing Team
@@ -466,11 +574,8 @@ export default function Careers() {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-=======
         </section>
       </div>
     </MainLayout>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
   );
 }

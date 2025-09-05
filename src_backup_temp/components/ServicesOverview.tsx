@@ -64,17 +64,12 @@ export function ServicesOverview(...args[]): "{;
                   <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-"hover": "scal e-110 transition-transform duration-300`"}>";
                     <category.icon className="w-8 h-8 text-white" />;
                   </div>;
-<<<<<<< HEAD
                   {/* Category Info */}";
                   <h3 className="text-lg font-bold text-white mb-2 group-"hover": "tex t-zion-cyan transition-colors duration-300 text-center">;
                     {category.name"}
                   </h3>;
 ";
-                  <p className="text-zion-slate-light text-sm text-center mb-4 leading-relaxed">;
-=======
-
->>>>>>> origin/main
-                  {/* Category Info */}"
+                  <p className="text-zion-slate-light text-sm text-center mb-4 leading-relaxed">;                  {/* Category Info */}"
                   <h3 className="text-lg font-bold text-white mb-2 group-hover: tex t-zion-cyan transition-colors duration-300 text-center">
                     {category.name}
 "
@@ -130,7 +125,6 @@ export function ServicesOverview(...args[]): "{;
                 transition = {;
   { "duration": "0.6",;
   "delay": "inde x * 0.1;
-<<<<<<< HEAD
 "}}
                 whileHover={{ "y": "-5 "}}
 ";
@@ -139,11 +133,7 @@ export function ServicesOverview(...args[]): "{;
                     <h3 className="text-xl font-bold text-white mb-2 group-"hover": "tex t-zion-cyan transition-colors duration-300">;
                       {service.title"}
                     </h3>";
-                    <p className="text-zion-slate-light leading-relaxed mb-3">;
-=======
-
->>>>>>> origin/main
-}}
+                    <p className="text-zion-slate-light leading-relaxed mb-3">;}}
                 whileHover={{ y: -5 }}
 "
                 <div className="flex items-start justify-between mb-4">"

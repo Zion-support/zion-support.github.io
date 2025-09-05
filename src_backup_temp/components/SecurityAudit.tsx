@@ -81,7 +81,6 @@ const "SecurityAudit": "React.FC = ("props": any) => {;
       </div>;
     );
   }
-<<<<<<< HEAD
 ;
   return (;
     <div className="bg-gray-100 p-4 rounded-lg">;
@@ -92,11 +91,7 @@ const "SecurityAudit": "React.FC = ("props": any) => {;
       ;
       <div className="space-y-3">;
         {checks.map((check, index) => (;
-          <div;
-=======
-
->>>>>>> origin/main
-  return (
+          <div;  return (
     <div className="bg-gray-100 p-4 rounded-lg">
       <div className="flex items-center mb-4">
         <Shield className="w-5 h-5 mr-2 text-blue-500" />
@@ -117,12 +112,9 @@ const "SecurityAudit": "React.FC = ("props": any) => {;
             <p className="text-sm text-gray-600 mt-1">{check.message}</p>;
           </div>;
         ))}
-<<<<<<< HEAD
       </div>;
     </div>;
   );
-=======
->>>>>>> origin/main
       </div>
     </div>
     );

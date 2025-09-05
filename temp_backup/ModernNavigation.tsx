@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 interface ModernNavigationProps {
   // Add props here as needed
@@ -11,5 +10,3 @@ export default function ModernNavigation({ }: ModernNavigationProps) {
     </div>
   );
 }
-=======
->>>>>>> origin/main

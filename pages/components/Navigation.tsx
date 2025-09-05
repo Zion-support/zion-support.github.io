@@ -5,8 +5,6 @@ import {
   ArrowRight,
   Award,
   BarChart3,
-<<<<<<< HEAD
-=======
   Shield,
   Code,
   Zap,
@@ -17,7 +15,6 @@ import {
   MessageSquare,
   Calendar,
   ShoppingCart,
->>>>>>> origin/main
   BookOpen,
   Brain,
   Building,
@@ -53,51 +50,10 @@ import {
   Star,
   Target,
   TrendingUp,
-<<<<<<< HEAD
   Truck,
   Users,
   X,
-  Zap
-=======
-  Clock,
-  DollarSign,
-  Cpu,
-  Rocket,
-  Car,
-  Sprout,
-  Wifi,
-  GraduationCap,
-  Award as Recognition,
-  Star as Rating,
-  Users as People,
-  Settings as Config,
-  BarChart3 as Analytics,
-  Shield as Security,
-  Code as Programming,
-  Zap as Lightning,
-  Globe as World,
-  Home as House,
-  Building as Office,
-  FileText as Document,
-  MessageSquare as Chat,
-  Calendar as Schedule,
-  ShoppingCart as Cart,
-  BookOpen as Book,
-  Camera as Photo,
-  Music as Audio,
-  Gamepad2 as Gaming,
-  Heart as Love,
-  Truck as Delivery,
-  Calculator as Math,
-  CreditCard as Payment,
-  Lock as Secure,
-  Eye as View,
-  Target as Goal,
-  TrendingUp as Growth,
-  Clock as Time,
-  DollarSign as Money
->>>>>>> origin/main
-} from 'lucide-react';
+  Zap} from 'lucide-react';
 
 const navigationItems = [
   {

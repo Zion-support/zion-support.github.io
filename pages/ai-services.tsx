@@ -1917,13 +1917,13 @@ export default function AIServicesPage() {
               </Link>
               <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
                 View All Services
-              </Link>
+                  </Link>
+                </div>
+              </motion.div>
             </div>
-          </motion.div>
-        </div>
-      </section>
+          </section>
 
-      {/* Contact Section */}
+          {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4">
           <motion.div

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { render, screen  } from '@testing-library/reactimport EnhancedNewsletterForm from ./EnhancedNewsletterFormdescribe(EnhancedNewsletterForm, () => {';';';
   it(renders without crashing', () => {'';
     render(<EnhancedNewsletterForm  />)';';
@@ -7,6 +6,3 @@ import { render, screen  } from '@testing-library/reactimport EnhancedNewsletter
     render(<EnhancedNewsletterForm  />)';
     // Add specific test assertions based on component content})});';;';
 import { render,screen } from '@testing-library/reactimport EnhancedNewsletterForm from ./EnhancedNewsletterFormdescribe(EnhancedNewsletterForm,() => {' it(renders without crashing',() => {' render(<EnhancedNewsletterForm />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<EnhancedNewsletterForm />)
-=======
-import { render,screen } from '@testing-library/reactimport EnhancedNewsletterForm from ./EnhancedNewsletterFormdescribe(EnhancedNewsletterForm,() => {' it(renders without crashing',() => {' render(<EnhancedNewsletterForm />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<EnhancedNewsletterForm />)
->>>>>>> origin/main

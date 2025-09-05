@@ -23,7 +23,7 @@
 
   // Check if file has merge conflicts
   hasMergeConflicts(content) {
-    return content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>');
+    return content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>');
   }
 
   // Check if file has syntax errors
@@ -49,8 +49,7 @@
     let fixed = content;
     
     // Fix merge conflicts by keeping the HEAD version
-    fixed = fixed.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g, '$1\n');
-    
+    fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
     // Fix common syntax patterns
     fixed = fixed.replace(/,\s*"/g, ',\n  "');
     fixed = fixed.replace(/;\s*"/g, ';\n  "');

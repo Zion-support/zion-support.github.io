@@ -1,7 +1,6 @@
 import React from 'react',;',';';
     ;
 import {SEO } from '@/components/SEO';
-<<<<<<< HEAD
 ,"});,"});
 export default function ComprehensiveSEOEnhancer("props": "any) {return (;
     <div className="min-h-screen bg-white">;
@@ -12,8 +11,6 @@ export default function ComprehensiveSEOEnhancer("props": "any) {return (;
           Professional ComprehensiveSEOEnhancer services to help your business grow.;
         </p>;
       </div>;
-=======
->>>>>>> origin/main
 ,"}
     );,"})
 export default function ComprehensiveSEOEnhancer(props: any) {return (

@@ -124,39 +124,26 @@ export default function Page("props": "any) {;
       applySettings({ [key]: "newValue "});
 ;
       if(key === 'highContrast') {;
-<<<<<<< HEAD
         announceToScreenReader();
           newValue';
             ? 'High contrast mode enabled'';
             : 'High contrast mode disabled';
-        )} else if(key === 'largeText') {;
-=======
-
->>>>>>> origin/main
-  // Toggle settings
+        )} else if(key === 'largeText') {;  // Toggle settings
       applySettings({ [key]: newValue }
     );
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/main
         announceToScreenReader(';
           newValue ? 'Large text mode enabled' : 'Large text mode disabled';
         )}
     },;
     [settings, applySettings, announceToScreenReader];
   );
-<<<<<<< HEAD
 ;
   // Zoom controls;
   ;
       applySettings({ "zoomLevel": "newZoo m "});`;
       announceToScreenReader(`Zoom level ${newZoom}%`)},;
-    [settings.zoomLevel, applySettings, announceToScreenReader];
-=======
-
->>>>>>> origin/main
-  // Zoom controls
+    [settings.zoomLevel, applySettings, announceToScreenReader];  // Zoom controls
       applySettings({ zoomLevel: newZoo m }
     );`
       announceToScreenReader(`Zoom level ${newZoom}%`)},
@@ -177,7 +164,6 @@ export default function Page("props": "any) {;
         title="Accessibility Options";
       >";
         <Accessibility className="w-5 h-5"   />      </motion.button>;
-<<<<<<< HEAD
       {/* Accessibility Panel */"}
       <AnimatePresence>;
         {isVisible && (<motion.div;
@@ -197,11 +183,7 @@ export default function Page("props": "any) {;
                 ;
               >";
                 <EyeOff className="w-4 h-4"   />              </button>;
-            </div>;
-=======
-
->>>>>>> origin/main
-      {/* Accessibility Panel */}
+            </div>;      {/* Accessibility Panel */}
       <AnimatePresence>
         {isVisible && (<motion.div
             initial={{ opacity: 0, x: 30 0 }}
@@ -220,10 +202,7 @@ export default function Page("props": "any) {;
               >"
                 <EyeOff className="w-4 h-4"   />              </button>
             </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/main
             {/* Content */"}";
             <div className="p-4 space-y-4 max-h-96 overflow-y-auto">;
               {/* Visual Enhancements */}";

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { render, screen  } from '@testing-library/reactimport ProductReviews from ./ProductReviewsdescribe(ProductReviews, () => {';';';
   it(renders without crashing', () => {'';
     render(<ProductReviews  />)';';
@@ -7,6 +6,3 @@ import { render, screen  } from '@testing-library/reactimport ProductReviews fro
     render(<ProductReviews  />)';
     // Add specific test assertions based on component content})});';;';
 import { render,screen } from '@testing-library/reactimport ProductReviews from ./ProductReviewsdescribe(ProductReviews,() => {' it(renders without crashing',() => {' render(<ProductReviews />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<ProductReviews />)
-=======
-import { render,screen } from '@testing-library/reactimport ProductReviews from ./ProductReviewsdescribe(ProductReviews,() => {' it(renders without crashing',() => {' render(<ProductReviews />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<ProductReviews />)
->>>>>>> origin/main

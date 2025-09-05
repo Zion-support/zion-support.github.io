@@ -1,6 +1,5 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
-<<<<<<< HEAD
 ;
   "id": "string;
   "title": string;
@@ -25,11 +24,7 @@ interface SmartNotificationSystemProps {;
 ;
 "};
 ;
-const "SmartNotificationSystem": "React.FC<SmartNotificationSystemProps> = ({ enabled = true "}) => {;
-=======
-
->>>>>>> origin/main
-  id: string;
+const "SmartNotificationSystem": "React.FC<SmartNotificationSystemProps> = ({ enabled = true "}) => {;  id: string;
   title: string;
   message: string;
   type: 'success' | 'error' | 'warning' | 'info' | 'system';
@@ -41,20 +36,11 @@ const "SmartNotificationSystem": "React.FC<SmartNotificationSystemProps> = ({ en
   actions?: NotificationAction[];
   metadata?: Record < string, any>;
   expiresAt?: Date;
-<<<<<<< HEAD
   label: string;';
   action: () => void;';';
 ;
   label: string;
-  action: () => void;
-=======
-;
-  label: string;
-  action: () => void;
-=======
-
->>>>>>> origin/main
-  label: string;
+  action: () => void;  label: string;
   action: () => void;
   variant?: 'primary' | 'secondary' | 'danger';
   icon?: React.ComponentType < any>}
@@ -65,22 +51,9 @@ const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabl
   if(!enabled) return null;
   return <div className="hidden" aria-hidden="true"  />};
 export default SmartNotificationSystem;
-<<<<<<< HEAD
 ;,"});,})";
 ';
 </SmartNotificationSystemProps>;';;';
 ;
 </SmartNotificationSystemProps>;
 ;,"});})";
-=======
->>>>>>> origin/main
-;
-</SmartNotificationSystemProps>;
-;,"}
-    );,})";
-<<<<<<< HEAD
-</SmartNotificationSystemProps>
-=======
-
-</SmartNotificationSystemProps>
->>>>>>> origin/main

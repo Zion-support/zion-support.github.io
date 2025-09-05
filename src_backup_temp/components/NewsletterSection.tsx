@@ -74,7 +74,6 @@ import React from 'react';
                   transition = {;
   { "duration": "0.5",;
   "delay": "inde x * 0.1;
-<<<<<<< HEAD
 "}}";
                   className="flex items-start";
 ";
@@ -84,11 +83,7 @@ import React from 'react';
                   <div>";
                     <h3 className="text-lg font-semibold text-white mb-1">{benefit.title}</h3>";
                     <p className="text-gray-400">{benefit.description}</p>;
-                  </div>;
-=======
-
->>>>>>> origin/main
-}}"
+                  </div>;}}"
                   className="flex items-start"
 "
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mr-4 flex-shrink-0">"
@@ -118,7 +113,6 @@ import React from 'react';
             transition = {;
   { "duration": "0.6",;
   "delay": "0.2;
-<<<<<<< HEAD
 "}}
           >";
             <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-3xl p-8 border border-slate-500">";
@@ -136,11 +130,7 @@ import React from 'react';
                   </label>;
                   <input";
                     type="email";
-                    id="email";
-=======
-
->>>>>>> origin/main
-}}
+                    id="email";}}
           >"
             <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-3xl p-8 border border-slate-500">"
               <div className="text-center mb-6">"

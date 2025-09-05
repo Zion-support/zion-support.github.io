@@ -3,19 +3,11 @@ export default function Page("props": "any) {;
 ) => {;
   const [imageSrc", setImageSrc] = useState<any>(src);  const [isLoading, setIsLoading] = useState<any>(true);
   const [hasError, setHasError] = useState<any>(false);
-<<<<<<< HEAD
 ;
   // Intersection Observer for lazy loading  // Intersection Observer for lazy loading      }) ;
 ;
   // Intersection Observer for lazy loading  // Intersection Observer for lazy loading      }
-    );
-=======
-
-  // Intersection Observer for lazy loading  // Intersection Observer for lazy loading      }
-    );
-
->>>>>>> origin/main
-    observerRef.current.observe(imgRef.current) ;
+    );    observerRef.current.observe(imgRef.current) ;
 ;
     return () => {;
       if(observerRef.current) {;
@@ -62,7 +54,6 @@ export default function Page("props": "any) {;
       return url.toString()} catch {;
       return src}
   };
-<<<<<<< HEAD
 ;
   // Base classes;
   ;
@@ -87,11 +78,7 @@ export default function Page("props": "any) {;
         </div>;
       </div>) ;
   "}}) => {;
-    </div>;
-=======
-
->>>>>>> origin/main
-  // Base classes
+    </div>;  // Base classes
   // Loading skeleton
   if(!isIntersecting) {
     return (

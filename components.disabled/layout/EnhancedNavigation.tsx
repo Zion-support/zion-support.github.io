@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -433,8 +432,6 @@ const EnhancedNavigation: _React.FC = () => {
         )}{' '}',
       </div>{' '}',
     </nav>;,
-=======
->>>>>>> origin/main
   );
 };,
 export default EnhancedNavigation;

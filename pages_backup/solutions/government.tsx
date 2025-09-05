@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { Shield, Users, FileText, Globe, Database } from 'lucide-react';
 import React from 'react';
@@ -30,24 +29,7 @@ const features = [;
     title: 'Data Analytics,',
     description: 'Government data analytics and business intelligence for informed decision making.'';
 import Layout from '../../components/Layout';
-import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-=======
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Users, 
-  FileText, 
-  Globe, 
-  Database, 
-  CheckCircle, 
-  ArrowRight 
-} from 'lucide-react';
-
->>>>>>> origin/main
-const features = [
+import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';const features = [
   {
     icon: Shield,
     title: 'Cybersecurity & Compliance',
@@ -67,7 +49,6 @@ const features = [
     benefits: ['Document storage', 'Workflow automation', 'Version control', 'Collaboration']
   },
   {
-<<<<<<< HEAD
     icon: CheckCircle,
     title: 'Workflow Automation',
     description: 'Automated government processes and approvals'
@@ -153,18 +134,7 @@ const benefits = [
   'Reduced operational costs',
   'Increased government efficiency'
 ];
-export default function GovernmentSolutions() {
-=======
-    icon: Database,
-    title: 'Data Management',
-    description: 'Secure data management and analytics for government data',
-    benefits: ['Data governance', 'Analytics', 'Reporting', 'Integration']
-  }
-];
-
-export default function GovernmentSolutionsPage() {
->>>>>>> origin/main
-  return (
+export default function GovernmentSolutions() {  return (
     <>
       <Head>
         <title>Government Solutions - Zion Tech Group</title>
@@ -202,14 +172,8 @@ export default function GovernmentSolutionsPage() {
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our government solutions are built with security and compliance in mind.
               </p>
-<<<<<<< HEAD
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> origin/main
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">              {features.map((feature, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -220,7 +184,6 @@ export default function GovernmentSolutionsPage() {
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-blue-600" />
                   </div>
-<<<<<<< HEAD
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -344,22 +307,7 @@ export default function GovernmentSolutionsPage() {
                   Schedule Consultation
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
-              </div>
-=======
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
-                  <div className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                        {benefit}
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
->>>>>>> origin/main
-            </div>
+              </div>            </div>
           </div>
         </section>
         {/* CTA Section */}
@@ -395,10 +343,5 @@ export default function GovernmentSolutionsPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </Layout>
-=======
-    </>
->>>>>>> origin/main
-  );
+    </Layout>  );
 }

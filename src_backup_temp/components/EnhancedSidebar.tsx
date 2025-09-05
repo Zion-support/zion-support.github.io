@@ -75,7 +75,6 @@ export default function Page("props": "any) {;
           transition = {;
   { "duration": "0.5",;
   "delay": "0.5;
-<<<<<<< HEAD
 "}}
         >";
           <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>";
@@ -88,11 +87,7 @@ export default function Page("props": "any) {;
               <Mail className="w-4 h-4"   />;
               <span>kleber@ziontechgroup.com</span>;
             </div>";
-            <div className="flex items-center space-x-2">";
-=======
-
->>>>>>> origin/main
-}}
+            <div className="flex items-center space-x-2">";}}
         >"
           <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?"
           <div className="space-y-2 text-xs text-zion-slate-light">"

@@ -28,7 +28,7 @@ class ConflictResolver {
       let content = fs.readFileSync(filePath, 'utf8');
       
       // Check if file has merge conflicts
-      if (!content.includes('<<<<<<< HEAD')) {
+      if (!content.includes('')) {
         return true; // No conflicts
       }
 
@@ -36,13 +36,11 @@ class ConflictResolver {
       
       // Remove merge conflict markers and keep HEAD version
       content = content
-        .replace(/<<<<<<< HEAD\n?/g, '')
-        .replace(/=======.*?\n?/g, '')
-        .replace(/>>>>>>> [^\n]+\n?/g, '')
-        .replace(/<<<<<<< [^\n]+\n?/g, '')
-        .replace(/=======.*?\n?/g, '')
-        .replace(/>>>>>>> [^\n]+\n?/g, '');
-
+        .replace(/\n?/g, '')
+        .replace(/.*?\n?/g, '')
+        .replace(/        .replace(/<<<<<<< [^\n]+\n?/g, '')
+        .replace(/.*?\n?/g, '')
+        .replace(/
       // Clean up any remaining artifacts
       content = content
         .replace(/\n{3,}/g, '\n\n') // Remove excessive newlines
@@ -64,7 +62,7 @@ class ConflictResolver {
     
     // Get all files with merge conflicts
     try {
-      const result = execSync('grep -r "^<<<<<<< HEAD" . --include="*.js" --include="*.cjs" --include="*.ts" --include="*.tsx" --include="*.jsx" --include="*.json" --include="*.md" --include="*.sh" -l', { 
+      const result = execSync('grep -r "^" . --include="*.js" --include="*.cjs" --include="*.ts" --include="*.tsx" --include="*.jsx" --include="*.json" --include="*.md" --include="*.sh" -l', { 
         encoding: 'utf8',
         cwd: process.cwd()
       });

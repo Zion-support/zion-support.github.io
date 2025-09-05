@@ -99,11 +99,11 @@ class EnhancedErrorMonitor {
     const errors = [];
     
     // Check for syntax errors
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
       errors.push({
         type: 'merge_conflict',
         message: 'Merge conflict markers detected',
-        line: this.findLineNumber(content, '<<<<<<< HEAD')
+        line: this.findLineNumber(content, '')
       });
     }
 
@@ -213,10 +213,7 @@ class EnhancedErrorMonitor {
   fixMergeConflicts(content) {
     // Remove merge conflict markers and keep the latest version
     return content
-      .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-      .replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '')
-      .replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-  }
+      .replace(/[\s\S]*?[\s\S]*?      .replace(/[\s\S]*?      .replace(/[\s\S]*?  }
 
   fixSyntaxErrors(content, error) {
     switch (error.message) {

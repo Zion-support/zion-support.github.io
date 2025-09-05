@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
@@ -117,16 +116,7 @@ export default function DataAnalyticsPage() {
     </Layout>;
 import Layout from '../../components/Layout';
 import { BarChart3, Database, TrendingUp, Brain, CheckCircle, ArrowRight } from 'lucide-react';
-const features = [
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { BarChart3, TrendingUp, Database, Brain, CheckCircle, ArrowRight } from 'lucide-react';
-
-const analyticsServices = [
->>>>>>> origin/main
-  {
+const features = [  {
     title: "Business Intelligence",
     description: "Transform data into actionable business insights",
     icon: BarChart3,
@@ -155,7 +145,6 @@ const analyticsServices = [
     pricing: "$4,000 - $20,000/month"
   }
 ];
-<<<<<<< HEAD
 const benefits = [
   'Data-driven decision making',
   'Improved business performance',
@@ -164,12 +153,7 @@ const benefits = [
   'Enhanced competitive advantage',
   'Automated reporting and analytics'
 ];
-export default function DataAnalyticsServices() {
-=======
-
-export default function DataAnalyticsPage() {
->>>>>>> origin/main
-  return (
+export default function DataAnalyticsServices() {  return (
     <>
       <Head>
         <title>Data Analytics Services - Zion Tech Group</title>
@@ -194,7 +178,6 @@ export default function DataAnalyticsPage() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -211,25 +194,7 @@ export default function DataAnalyticsPage() {
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                    <feature.icon className="w-6 h-6 text-purple-600" />
-=======
-
-        {/* Services Grid */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {analyticsServices.map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
-                >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="w-6 h-6 text-blue-600" />
->>>>>>> origin/main
-                  </div>
+                    <feature.icon className="w-6 h-6 text-purple-600" />                  </div>
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <div className="space-y-2 mb-4">
@@ -253,7 +218,6 @@ export default function DataAnalyticsPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -288,11 +252,7 @@ export default function DataAnalyticsPage() {
               </div>
             </div>
           </div>
-        </section>
-=======
-
->>>>>>> origin/main
-        {/* CTA Section */}
+        </section>        {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -325,10 +285,5 @@ export default function DataAnalyticsPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </Layout>
-=======
-    </>
->>>>>>> origin/main
-  );
+    </Layout>  );
 }

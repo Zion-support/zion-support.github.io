@@ -103,7 +103,6 @@ export function FeatureHighlights("props": "any) {;
               key={index}
               variants={itemVariants}
               whileHover={{;
-<<<<<<< HEAD
                 "y": "-5",;
                 "scale": "1.02",;
                 "transition": "{ "duration": 0.3 "}
@@ -126,11 +125,7 @@ export function FeatureHighlights("props": "any) {;
               <h3 className="text-xl font-bold text-white mb-3 group-"hover": "tex t-blue-400 transition-colors duration-200">;
                 {feature.title"}
               </h3>;
-              <p className="text-gray-400 text-sm leading-relaxed">;
-=======
-
->>>>>>> origin/main
-                y: -5,
+              <p className="text-gray-400 text-sm leading-relaxed">;                y: -5,
                 scale: 1.02,
                 transition: { duration: 0.3 }
               }}"

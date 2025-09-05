@@ -80,24 +80,16 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
           transition = {;
   { "duration": "0.6",;
   "delay": "0.4;
-<<<<<<< HEAD
 "}}
         >";
           <h3 className="text-3xl font-bold text-white text-center mb-12">;
             Active Research Areas;
-          </h3>;
-=======
-
->>>>>>> origin/main
-}}
+          </h3>;}}
         >"
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Active Research Areas
-<<<<<<< HEAD
-=======
           
 
->>>>>>> origin/main
           <div className="grid grid - cols - 1 "md": "gri d - cols - 2 gap-8">;
             {researchAreas.map((area", index) => (<motion.div;
                 key={area.title}
@@ -157,26 +149,18 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
           transition = {;
   { "duration": "0.6",;
   "delay": "0.8;
-<<<<<<< HEAD
 "}}
         >";
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">";
             <h3 className="text-2xl font-bold text-white text-center mb-6">;
               Latest Research Breakthroughs;
-            </h3>;
-=======
-
->>>>>>> origin/main
-}}
+            </h3>;}}
         >"
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-white text-center mb-6">
               Latest Research Breakthroughs
-<<<<<<< HEAD
-=======
             
 
->>>>>>> origin/main
             <div className="grid grid - cols - 1 "md": "gri d - cols - 3 gap-6">;
               <div className="text-center">;
                 <div className="w-16 h-16 bg-gradient - to - br from - purple - 500 to - pink - 500 rounded-2xl flex items - center justify - center mx - auto mb-4">;
@@ -214,7 +198,6 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
           transition = {;
   { "duration": "0.6",;
   "delay": "1.0;
-<<<<<<< HEAD
 "}}
         >";
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">";
@@ -234,11 +217,7 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
                 <BookOpen className="ml-2 h-5 w-5"   />              </button>;
             </div>;
           </div>;
-        </motion.div>;
-=======
-
->>>>>>> origin/main
-}}
+        </motion.div>;}}
         >"
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">"
             <h3 className="text-2xl font-bold mb-4">

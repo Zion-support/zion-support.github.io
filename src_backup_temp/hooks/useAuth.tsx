@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 interface User {;
   "id": "string;
@@ -142,67 +141,7 @@ export function useAuth() {;
     logout;
     register;
   }
-}
-=======
->>>>>>> origin/main
-interface User {
-  id: string;
-  email: string;
-  name: string;
-  role: 'user' | 'admin' | 'moderator';
-  userType?: string;
-  displayName?: string;
-  avatarUrl?: string;
-}
-interface AuthState {
-  user: Use r | null;
-  isAuthenticated: boolean;
-  isLoading: boolean;
-}
-export function useAuth(props: any) {
-  const [authState, setAuthState] = useState<AuthState>({
-    user: nul l,
-    isAuthenticated: fals e,
-    isLoading: tru e
-  }
-    );
-  useEffect(: unknown {
-    // Check if user is logged in (e.g., check localStorage, cookies, etc.)
-:src/hooks/useAuth.tsx
-      if(storedUser && token) {
-        try {
-          setAuthState({
-            user,
-            isAuthenticated: tru e,
-:src/hooks/useAuth.tsx
-            isLoading: fals e})} catch(error) {
-          // console.error('Error parsing stored user:', error);
-            isLoading: fals e,
-          })} catch(error) {
-          console.error('Error parsing stored user:', error);
-            isAuthenticated: true,
-            isLoading: false
-          });
-        } else {
-          setAuthState({
-            user: null,
-            isAuthenticated: false,
-            isLoading: false
-          });
-<<<<<<< HEAD
-        }';
-      } catch (error) {';';
-        console.error('Error parsing stored user:', error);
-        }
-      } catch (error) {
-        console.error('Auth check failed:', error);
-=======
-        }
-      } catch (error) {
-        console.error('Auth check failed:', error);
-=======
->>>>>>> origin/main
-          setAuthState({
+}          setAuthState({
             user: nul l,
             isAuthenticated: fals e,
             isLoading: fals e
@@ -224,10 +163,7 @@ export function useAuth(props: any) {
           isLoading: fals e,
         })}
     };
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/main
     checkAuth()}, []);
     setAuthState({
       user: mockUse r,
@@ -277,36 +213,9 @@ export function useAuth(props: any) {
         ...prev,
         user: updatedUse r
       }));
-<<<<<<< HEAD
 ';
       // Update localStorage';';
-      localStorage.setItem('zion_user', JSON.stringify(updatedUser));
-=======
->>>>>>> origin/main
-      if (response.ok) {
-        const { user, token } = await response.json();
-        localStorage.setItem('user', JSON.stringify(user));
-        localStorage.setItem('token', token);
-        setAuthState({
-          user,
-          isAuthenticated: true,
-          isLoading: false
-        });
-        return { success: true };
-      } else {
-        return { success: false, error: 'Login failed' };
-      }
-    } catch (error) {
-      console.error('Login error:', error);
-      return { success: false, error: 'Network error' };
-    }
-  };
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> origin/main
-      // Update localStorage
+      localStorage.setItem('zion_user', JSON.stringify(updatedUser));      // Update localStorage
       localStorage.setItem('zion_user', JSON.stringify(updatedUser));
     }
   };
@@ -320,18 +229,9 @@ export function useAuth(props: any) {
 '
     updateProfile,
   }}
-<<<<<<< HEAD
 ';
 </AuthState>';';
     logout
   };
 }
 </AuthState>
-=======
-    logout
-  };
-}
-=======
-
-</AuthState>
->>>>>>> origin/main

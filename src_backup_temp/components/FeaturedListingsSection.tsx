@@ -45,7 +45,6 @@ function FeaturedListingsSection("props": "any) {          initial = {;
                   />;
                 <div className="absolute top - 3 left -3">;
                   <span className="px-3 py-1 bg-blue - 600 text-white text-xs font - semibold rounded-full">                    {listing.category}
-<<<<<<< HEAD
                   </span>;
                 </div>;
 ";
@@ -58,8 +57,6 @@ function FeaturedListingsSection("props": "any) {          initial = {;
                 </h3>;
 ";
                 <p className="text-gray-600 mb-4 leading-relaxed">;
-=======
->>>>>>> origin/main
                   </span>
                 </div>
 "

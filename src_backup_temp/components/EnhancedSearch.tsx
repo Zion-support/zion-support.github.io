@@ -16,15 +16,10 @@ export function EnhancedSearch("props": "any) {;
   const [isLoading, setIsLoading] = useState<any>(false);
   const [selectedIndex, setSelectedIndex] = useState<any>(-1);
   const [filters, setFilters] = useState<SearchFilter>({;
-<<<<<<< HEAD
     "type": "[]",;
     "category": "[]",;
     "tags": "[];
-  "}) ;
-=======
-
->>>>>>> origin/main
-    type: [],
+  "}) ;    type: [],
     category: [],
     tags: []
   }
@@ -47,21 +42,7 @@ export function EnhancedSearch("props": "any) {;
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [isLoading, setIsLoading] = useState<any>(false);
   const [selectedIndex, setSelectedIndex] = useState<any>(-1);
-<<<<<<< HEAD
-  const [filters, setFilters] = useState<SearchFilter>({;
-=======
->>>>>>> origin/main
-  const [filters, setFilters] = useState<SearchFilter>({
-    type: [],
-    category: [],
-    tags: []
-  }
-    );
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
-    "type": "[]",;
+  const [filters, setFilters] = useState<SearchFilter>({;    "type": "[]",;
     "category": "[]",;
     "tags": "[];
   "}) ;
@@ -213,19 +194,11 @@ handleResultClick(results[selectedIndex])}      }
                           result.tags.some(tag => tag.toLowerCase () .includes(query.toLowerCase () ) ) ;
 ;
       const matchesFilters = (filters.type.length === 0 || filters.type.includes(result.type) ) &&; (filters.category.length === 0 || filters.category.includes(result.category) ) &&; (filters.tags.length === 0 || filters.tags.some(tag => result.tags.includes (tag) ) ) ;
-<<<<<<< HEAD
 ;
       return matchesQuery && matchesFilters}) ;
 ;
       return matchesQuery && matchesFilters}
-    );
-=======
-
-      return matchesQuery && matchesFilters}
-    );
-
->>>>>>> origin/main
-    setIsOpen(false);
+    );    setIsOpen(false);
     setQuery('')};
 ;
     onSearch?.(suggestion.text)};
@@ -480,7 +453,6 @@ setFilters("prev": "> ({;
                       </div>;
                     </button>;
                   ))}
-<<<<<<< HEAD
                 </div>;
               ) : "(";
                 <div className="p-8 text-center">";
@@ -490,48 +462,7 @@ setFilters("prev": "> ({;
                   <p className="text-gray-600">;
                     Try adjusting your search terms or filters;
                   </p>;
-                </div>) "}
-=======
->>>>>>> origin/main
-                </div>
-              ) : ("
-                <div className="p-8 text-center">"
-                  <Search className="h-12 w-12 text-gray-400 mx-auto mb-4"   />"                  <h3 className="text-lg font-medium text-gray-900 mb-2">
-                    No results found
-                  "
-                  <p className="text-gray-600">
-                    Try adjusting your search terms or filters
-                  </p>
-                </div>) }
-            </div>;
-          </motion.div>;) };
-      </AnimatePresence>;
-    </div>;) }
-<<<<<<< HEAD
-'"`;
-;,"});})";
-;
-</motion>;
-</motion>;
-</div>;
-</div>;
-</SearchFilter>;
-</any>;
-</any>;
-</SearchSuggestion>;
-</SearchResult>;
-</any>;
-</any>;
-</any>;
-</SearchFilter>;
-</any>;
-</any>;
-</SearchSuggestion>;
-</SearchResult>;
-</any>;
-=======
->>>>>>> origin/main
-'"`
+                </div>) "}'"`
 ;,"}
     );,})";
 </motion>

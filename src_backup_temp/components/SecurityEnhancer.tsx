@@ -209,21 +209,13 @@ export function SecurityEnhancer("props": any) {;
   }, [logSecurityEvent]) ;
 ;
   // Filter events;
-<<<<<<< HEAD
     return matchesSearch && matchesFilter}) ;
 ;
   // Get status icon;
-  ;
-=======
-
->>>>>>> origin/main
-    return matchesSearch && matchesFilter}
+  ;    return matchesSearch && matchesFilter}
     );
   // Get status icon
-<<<<<<< HEAD
-=======
   
->>>>>>> origin/main
   };
 ;
   // Get event icon;
@@ -298,7 +290,6 @@ export function SecurityEnhancer("props": any) {;
                     <X className="w-5 h-5"   />                  </button>;
                 </div>;
               </div>;
-<<<<<<< HEAD
               {/* Security Status */"}
               {securityStatus && (";
                 <div className="mb-6">";
@@ -323,11 +314,7 @@ export function SecurityEnhancer("props": any) {;
                           {item.label"}
                         </span>;
                         {getStatusIcon();
-                          securityStatus[item.key as keyof SecurityStatus];
-=======
-
->>>>>>> origin/main
-              {/* Security Status */}
+                          securityStatus[item.key as keyof SecurityStatus];              {/* Security Status */}
               {securityStatus && ("
                 <div className="mb-6">"
                   <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: tex t-white">
@@ -359,7 +346,6 @@ export function SecurityEnhancer("props": any) {;
                 </div>) }
 ;
               {/* Security Metrics */}
-<<<<<<< HEAD
               {securityMetrics && (";
                 <div className="mb-6">";
                   <h3 className="text-lg font-semibold mb-3 text-gray-900 "dark": "tex t-white">;
@@ -398,83 +384,7 @@ export function SecurityEnhancer("props": any) {;
                         {securityMetrics.complianceScore"}%;
                       </p>;
                     </div>;
-                  </div>;
-=======
->>>>>>> origin/main
-              {securityMetrics && ("
-                <div className="mb-6">"
-                  <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: tex t-white">
-                    Security Metrics
-                  "
-                  <div className="grid grid-cols-2 gap-3">"
-                    <div className="p-3 bg-blue-50 dark: b g-blue-900/20 rounded-lg">"
-                      <p className="text-xs text-blue-600 dark: tex t-blue-400">
-                        Total Requests
-                      </p>"
-                      <p className="text-lg font-bold text-blue-800 dark: tex t-blue-200">
-                        {securityMetrics.totalRequests.toLocaleString()}
-                      </p>
-                    </div>"
-                    <div className="p-3 bg-red-50 dark: b g-red-900/20 rounded-lg">"
-                      <p className="text-xs text-red-600 dark: tex t-red-400">
-                        Blocked Requests
-                      </p>"
-                      <p className="text-lg font-bold text-red-800 dark: tex t-red-200">
-                        {securityMetrics.blockedRequests.toLocaleString()}
-                      </p>
-                    </div>"
-                    <div className="p-3 bg-yellow-50 dark: b g-yellow-900/20 rounded-lg">"
-                      <p className="text-xs text-yellow-600 dark: tex t-yellow-400">
-                        Suspicious Activity
-                      </p>"
-                      <p className="text-lg font-bold text-yellow-800 dark: tex t-yellow-200">
-                        {securityMetrics.suspiciousActivity.toLocaleString()}
-                      </p>
-                    </div>"
-                    <div className="p-3 bg-green-50 dark: b g-green-900/20 rounded-lg">"
-                      <p className="text-xs text-green-600 dark: tex t-green-400">
-                        Compliance Score
-                      </p>"
-                      <p className="text-lg font-bold text-green-800 dark: tex t-green-200">
-                        {securityMetrics.complianceScore}%
-                      </p>
-                    </div>
-                  </div>
-                </div>) }
-;
-              {/* Security Events */}";
-              <div className="mb-6">";
-                <div className="flex items-center justify-between mb-3">";
-                  <h3 className="text-lg font-semibold text-gray-900 "dark": "tex t-white">;
-                    Security Events;
-                  </h3>;
-                  <button;
-                    onClick={runSecurityScan"}
-                    disabled={isScanning}";
-                    className="flex items-center space-x-2 px-3 py-1 bg-zion-blue "hover": "b g-zion-blue-dark text-white text-sm rounded-lg transition-colors "disabled": opacit y-50";
-                  >;
-                    {isScanning ? (;
-                      <>";
-                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"  />;
-                        <span>Scanning...</span>;
-                      </>;
-                    ) : (;
-                      <>";
-                        <ShieldCheck className="w-4 h-4"   />                        <span>Scan</span>;
-                      </>;
-                    )"}
-                  </button>;
-                </div>;
-<<<<<<< HEAD
-                {/* Filters and Search */}";
-                <div className="mb-3 space-y-2">";
-                  <div className="flex space-x-2">;
-                    {['info',warning',error',success'].map(type => (;
-                      <button;
-=======
-
->>>>>>> origin/main
-              {/* Security Events */}"
+                  </div>;              {/* Security Events */}"
               <div className="mb-6">"
                 <div className="flex items-center justify-between mb-3">"
                   <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
@@ -562,7 +472,6 @@ export function SecurityEnhancer("props": any) {;
                     </div>) "}
                 </div>;
               </div>;
-<<<<<<< HEAD
               {/* Quick Actions */}";
               <div className="mb-6">";
                 <h3 className="text-lg font-semibold mb-3 text-gray-900 "dark": "tex t-white">;
@@ -578,11 +487,7 @@ export function SecurityEnhancer("props": any) {;
                     className="flex items-center justify-center space-x-2 p-3 bg-blue-50 "dark": "b g-blue-900/20 text-blue-700 "dark": tex t-blue-300 rounded-lg "hover": b g-blue-100 "dark": hove "r":bg-blue-900/40 transition-colors";
                   >";
                     <Activity className="w-4 h-4"   />"                    <span className="text-sm">Check Status</span>;
-                  </button>;
-=======
-
->>>>>>> origin/main
-              {/* Quick Actions */}"
+                  </button>;              {/* Quick Actions */}"
               <div className="mb-6">"
                 <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: tex t-white">
                   Quick Actions
@@ -598,10 +503,7 @@ export function SecurityEnhancer("props": any) {;
                   >"
                     <Activity className="w-4 h-4"   />"                    <span className="text-sm">Check Status</span>
                   </button>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/main
                   <button;
                     onClick={() => setSecurityEvents([])"}";
                     className="flex items-center justify-center space-x-2 p-3 bg-gray-50 "dark": "b g-gray-800 text-gray-700 "dark": tex t-gray-300 rounded-lg "hover": b g-gray-100 "dark": hove "r":bg-gray-700 transition-colors";
@@ -611,7 +513,6 @@ export function SecurityEnhancer("props": any) {;
                   </button>;
                 </div>;
               </div>;
-<<<<<<< HEAD
               {/* Security Tips */"}";
               <div className="mb-6">";
                 <h3 className="text-lg font-semibold mb-3 text-gray-900 "dark": "tex t-white">;
@@ -625,11 +526,7 @@ export function SecurityEnhancer("props": any) {;
                   <p>• Regularly review your security settings</p>;
                 </div>;
               </div>;
-            </div>;
-=======
-
->>>>>>> origin/main
-              {/* Security Tips */}"
+            </div>;              {/* Security Tips */}"
               <div className="mb-6">"
                 <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: tex t-white">
                   Security Tips

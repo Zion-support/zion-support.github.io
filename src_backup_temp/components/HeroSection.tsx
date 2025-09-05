@@ -124,17 +124,10 @@ const "heroSlides": "HeroSlid e[] = [  {;
     ;
           img.onload = resolve;
           img.onerror = resolve;
-<<<<<<< HEAD
           img.src = slide.image}) }) ;
 ;
           img.src = slide.image}) }
-    );
-=======
-          img.src = slide.image}) }
-    );
-
->>>>>>> origin/main
-      await Promise.all(imagePromises) ;
+    );      await Promise.all(imagePromises) ;
       setIsLoading(false) };
 ;
     preloadImages () }, [memoizedSlides]) ;
@@ -275,28 +268,13 @@ const "heroSlides": "HeroSlid e[] = [  {;
               <div className="text-center space-y-4">";
                 <h3 className="text-2xl font-bold text-white">;
                   {currentSlideData.title}
-<<<<<<< HEAD
                 </h3>";
                 <p className="text-slate-300">{currentSlideData.subtitle}</p>;
               </div>;
             </div>;
           </motion.div>;
         </div>;
-      </div>;
-=======
->>>>>>> origin/main
-                "
-                <p className="text-slate-300">{currentSlideData.subtitle}</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
-      {/* Navigation Controls */}";
+      </div>;      {/* Navigation Controls */}";
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">";
         <div className="flex space-x-2">;
           {memoizedSlides.map((_, index) => (;

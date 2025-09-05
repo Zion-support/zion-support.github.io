@@ -1,50 +1,9 @@
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
-<<<<<<< HEAD
 export default function Page(props: any) {';
 ,';';
-  { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },';';
-=======
->>>>>>> origin/main
-export default function Page("props": "any) {;
-",;
-  { "code": 'pt' as SupportedLanguage, "name": 'Português', "flag": '🇧🇷' },;
-  { "code": 'ar' as SupportedLanguage, "name": 'العربية', "flag": '🇸🇦' }
-];
-;
-const "defaultLanguageContext": "LanguageContextTyp e = {;
-  "currentLanguage": 'en'",;
-  "changeLanguage": "asyn c () => {"},;
-  "isRTL": "fals e",;
-  supportedLanguages;
-export default function Page(props: any) {
-,
-  { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },
-  { code: 'ar' as SupportedLanguage, name: 'العربية', flag: '🇸🇦' }
-];
-const defaultLanguageContext: LanguageContextTyp e = {
-  currentLanguage: 'en',
-  changeLanguage: asyn c () => {},
-  isRTL: fals e,
-  supportedLanguages
-export default function Page(props: any) {;
-,;
-  { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },;
-  { code: 'ar' as SupportedLanguage, name: 'العربية', flag: '🇸🇦' }
-];
-;
-const defaultLanguageContext: LanguageContextTyp e = {;
-  currentLanguage: 'en',;
-  changeLanguage: asyn c () => {},;
-  isRTL: fals e,;
-  supportedLanguages;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/main
-};
+  { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },';';};
 const LanguageContext = createContext(defaultLanguageContext);
-<<<<<<< HEAD
 ;
 export const useLanguage = (): "LanguageContextType => useContext(LanguageContext);
 ;
@@ -60,11 +19,7 @@ interface LanguageProviderProps {;
 export const "LanguageProvider": "React.FC<LanguageProviderProps> = ({;
   children",;
   authState = { "isAuthenticated": "fals e", "user": "nul l "} ;
-}) => {;
-=======
-
->>>>>>> origin/main
-export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
+}) => {;export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
 interface LanguageProviderProps {
   children: ReactNod e;
   authState?: { 
@@ -78,52 +33,15 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   authState = { isAuthenticated: fals e, user: nul l } 
 }) => {
   const { i18n, t } = useTranslation();
-<<<<<<< HEAD
   const { isAuthenticated, user } = authState;';
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(';';
     (i18n.language?.substring(0, 2) as SupportedLanguage) || 'en'';
-  );';';
-=======
->>>>>>> origin/main
-  const { isAuthenticated, user } = authState;
-  const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(
-    (i18n.language?.substring(0, 2) as SupportedLanguage) || 'en'
-  );
-  const [isRTL, setIsRTL] = useState<any>(i18n.dir() === 'rtl');
-<<<<<<< HEAD
-;
-  useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-  "};
-=======
-  
->>>>>>> origin/main
-  useEffect(() => {
+  );';';  useEffect(() => {
   // TODO: Add dependencies if needed
   return () => {
     // Cleanup function
-<<<<<<< HEAD
   };';
-}, []);, []);';';
-=======
->>>>>>> origin/main
-  const { isAuthenticated, user } = authState;
-  const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(;
-    (i18n.language?.substring(0, 2) as SupportedLanguage) || 'en';
-  );
-  const [isRTL, setIsRTL] = useState<any>(i18n.dir() === 'rtl');
-;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/main
-  };
+}, []);, []);';';  };
 }, []);, []);
     const savedLang = safeStorage.getItem('i18n_lang') as SupportedLanguage;
     if(savedLang && supportedLanguages.some(lang => lang.code === savedLang)) {
@@ -138,73 +56,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   return () => {;
     // Cleanup function;
   "};
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/main
-  }, [i18n]); // i18n is a dependency here
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-  return () => {
-    // Cleanup function
-<<<<<<< HEAD
-  };';
-}, []);, []);';';
-    setIsRTL(i18n.dir() === 'rtl');
-    document.documentElement.dir = i18n.dir();
-    document.documentElement.lang = currentLanguage;';
-    ';';
-    if(i18n.dir() === 'rtl') {';';
-      document.documentElement.classList.add('rtl');';
-    } else {';';
-=======
->>>>>>> origin/main
   }, [i18n]); // i18n is a dependency here;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
   return () => {;
     // Cleanup function;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/main
-  };
-}, []);, []);
-    setIsRTL(i18n.dir() === 'rtl');
-    document.documentElement.dir = i18n.dir();
-    document.documentElement.lang = currentLanguage;
-    if(i18n.dir() === 'rtl') {
-      document.documentElement.classList.add('rtl');
-<<<<<<< HEAD
-    } else {;
-    } else {
-      document.documentElement.classList.remove('rtl');
-    }
-  }, [currentLanguage, i18n]); // "Correct": "i18n and currentLanguage;
-  useEffect(() => {;
-  // "TODO": Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-  "};
-}, []);, []);
-    const syncLanguageWithProfile = async () => {
-      if(isAuthenticated && user?.id && currentLanguage) { // ensure currentLanguage is also checked
-        try {';
-          const { error } = await supabase';';
-            .from('profiles')';
-            .update({ preferred_language: currentLanguag e })';';
-            .eq('id', user.id);
-            ';
-          if(error) {';';
-            console.error('Error updating language preference:', error);
-          }';
-        } catch(err) {';';
-=======
-    } else {
-      document.documentElement.classList.remove('rtl');
-    }
-=======
->>>>>>> origin/main
     const syncLanguageWithProfile = async () => {;
       if(isAuthenticated && user?.id && currentLanguage) { // ensure currentLanguage is also checked;
         try {;
@@ -241,32 +97,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       }
     };
     syncLanguageWithProfile();
-<<<<<<< HEAD
   }, [currentLanguage, isAuthenticated, user]); // Correct dependencies;
-  const changeLanguage = async("lang": "SupportedLanguag e) => {;
-=======
->>>>>>> origin/main
-  }, [currentLanguage, isAuthenticated, user]); // Correct dependencies
-  const changeLanguage = async(lang: SupportedLanguag e) => {
-    if(lang === currentLanguage) return;
-<<<<<<< HEAD
-    try {
-      await i18n.changeLanguage(lang);';
-      setCurrentLanguage(lang); // This will trigger the RTL effect';';
-      safeStorage.setItem('i18n_lang', lang);
-      const langName = supportedLanguages.find(l => l.code === lang)?.name || lang;';
-      toast({';';
-        description: t('language.language_changed', { language: langNam e })
-      });
-      // The language preference sync will be handled by the useEffect above';
-      // that depends on currentLanguage, isAuthenticated, and user.} catch(err) {';';
-=======
->>>>>>> origin/main
-;
+  const changeLanguage = async("lang": "SupportedLanguag e) => {;;
     try {;
     try {
       await i18n.changeLanguage(lang);
-<<<<<<< HEAD
       setCurrentLanguage(lang); // This will trigger the RTL effect;
       safeStorage.setItem('i18n_lang'", lang);
 ;
@@ -276,56 +111,12 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       });
 ;
       // The language preference sync will be handled by the useEffect above;
-      // that depends on currentLanguage, isAuthenticated, and user.} catch(err) {;
-=======
->>>>>>> origin/main
-      console.error('Error changing "language":', err);
-      setCurrentLanguage(lang); // This will trigger the RTL effect
-      safeStorage.setItem('i18n_lang', lang);
-      const langName = supportedLanguages.find(l => l.code === lang)?.name || lang;
-      toast({
-        description: t('language.language_changed', { language: langNam e })
-      }
-    );
-      // The language preference sync will be handled by the useEffect above
-      // that depends on currentLanguage, isAuthenticated, and user.} catch(err) {
-      console.error('Error changing language:', err);
-    }
-  };
-  return (<LanguageContext.Provider 
-      value={{ 
-        currentLanguage, 
-        changeLanguage, 
-        isRTL,
-        supportedLanguages
-      }}
-    >
-      {children}
-    </LanguageContext.Provider>
-  );
-};
-<<<<<<< HEAD
-</LanguageContext>
-</any>
-</SupportedLanguage>';
-</LanguageProviderProps>;';;';
-=======
->>>>>>> origin/main
-;
+      // that depends on currentLanguage, isAuthenticated, and user.} catch(err) {;;
 </LanguageContext>;
 </any>;
 </SupportedLanguage>;
 </LanguageProviderProps>;
-<<<<<<< HEAD
 </LanguageContext>
 </any>
 </SupportedLanguage>
 </LanguageProviderProps>
-=======
-=======
-
-</LanguageContext>
-</any>
-</SupportedLanguage>
-</LanguageProviderProps>
->>>>>>> origin/main

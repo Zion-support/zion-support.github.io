@@ -88,7 +88,6 @@ export function UltimateServicesShowcase(...args[]): "{;
           </h1>";
           <p className="text-xl text-zion-gray-light max-w-4xl mx-auto leading-relaxed">;
             Discover our revolutionary AI", IT infrastructure, and micro SAAS solutions that are transforming industries worldwide.Each service is backed by cutting - edge technology and proven results.</p>;
-<<<<<<< HEAD
           {/* Contact Information */}";
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-zion-gray-light">";
             <div className="flex items-center gap-2">";
@@ -100,11 +99,7 @@ export function UltimateServicesShowcase(...args[]): "{;
               <span>{contact.email}</span>;
             </div>";
             <div className="flex items-center gap-2">";
-              <MapPin className="w-5 h-5 text-zion-cyan"   />              <span>{contact.address}</span>;
-=======
-
->>>>>>> origin/main
-          {/* Contact Information */}"
+              <MapPin className="w-5 h-5 text-zion-cyan"   />              <span>{contact.address}</span>;          {/* Contact Information */}"
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-zion-gray-light">"
             <div className="flex items-center gap-2">"
               <Phone className="w-5 h-5 text-zion-cyan"   />

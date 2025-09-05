@@ -9,8 +9,4 @@ export default function ServiceTypeStep.test({ }: ServiceTypeStep.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/main

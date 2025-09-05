@@ -72,13 +72,6 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
 ];
 
-const contactInfo = {
-  phone: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008, Middletown, DE 19709',
-  hours: '24/7 Support Available'
-};
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -235,22 +228,21 @@ export default function Footer() {
       {/* Newsletter Signup */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-8">
-            <div className="mb-4 md:mb-0">
-              <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
-              <p className="text-gray-400 text-sm">
-                Get the latest technology insights and company updates delivered to your inbox.
-              </p>
-            </div>
-            <div className="flex w-full md:w-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 md:w-64 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
-              />
-              <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-r-lg transition-colors font-medium">
-                Subscribe
-              </button>
-            </div>
+          <div className="mb-4 md:mb-0">
+            <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
+            <p className="text-gray-400 text-sm">
+              Get the latest technology insights and company updates delivered to your inbox.
+            </p>
+          </div>
+          <div className="flex w-full md:w-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 md:w-64 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
+            />
+            <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-r-lg transition-colors font-medium">
+              Subscribe
+            </button>
           </div>
         </div>
       </div>
@@ -258,17 +250,16 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
-            <div className="text-sm text-gray-400 mb-4 md:mb-0">
-              © 2024 Zion Tech Group. All rights reserved. | 
-              <span className="ml-2">Delaware, United States</span>
-            </div>
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <span>Certified & Compliant</span>
-              <span>•</span>
-              <span>SOC 2 Type II</span>
-              <span>•</span>
-              <span>ISO 27001</span>
-            </div>
+          <div className="text-sm text-gray-400 mb-4 md:mb-0">
+            © 2024 Zion Tech Group. All rights reserved. | 
+            <span className="ml-2">Delaware, United States</span>
+          </div>
+          <div className="flex items-center space-x-6 text-sm text-gray-400">
+            <span>Certified & Compliant</span>
+            <span>•</span>
+            <span>SOC 2 Type II</span>
+            <span>•</span>
+            <span>ISO 27001</span>
           </div>
         </div>
       </div>

@@ -42,13 +42,7 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
                   <span className="text-sm">⚡</span>;
                 </div>;
                 {category.category}
-<<<<<<< HEAD
-              </h3>;
-=======
-              
-
->>>>>>> origin/main
-              <div className="space - y-4">;
+              </h3>;              <div className="space - y-4">;
                 {category.technologies.map((tech, techIndex) => (<div key={tech.name} className="flex items - center justify -between">;
                     <div className="flex items - center gap-3">;
                       <span className="text-xl">{tech.icon}</span>;
@@ -88,24 +82,16 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
           transition = {;
   { "duration": "0.6",;
   "delay": "0.4;
-<<<<<<< HEAD
 "}}
         >";
           <h3 className="text-3xl font-bold text-white text-center mb-8">;
             Emerging Technologies;
-          </h3>;
-=======
-
->>>>>>> origin/main
-}}
+          </h3>;}}
         >"
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Emerging Technologies
-<<<<<<< HEAD
-=======
           
 
->>>>>>> origin/main
           <div className="grid grid - cols - 1 "md": "gri d - cols - 2 "lg": gri d - cols - 3 gap-6">;
             {emergingTech.map((tech", index) => (<motion.div;
                 key={tech.name}
@@ -133,26 +119,18 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
           transition = {;
   { "duration": "0.6",;
   "delay": "0.8;
-<<<<<<< HEAD
 "}}
         >";
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">";
             <h3 className="text-2xl font-bold text-white text-center mb-6">;
               Our Technology Philosophy;
-            </h3>;
-=======
-
->>>>>>> origin/main
-}}
+            </h3>;}}
         >"
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-white text-center mb-6">
               Our Technology Philosophy
-<<<<<<< HEAD
-=======
             
 
->>>>>>> origin/main
             <div className="grid grid - cols - 1 "md": "gri d - cols - 3 gap-6">;
               <div className="text-center">;
                 <div className="w-16 h-16 bg-gradient - to - br from - green - 500 to - emerald - 500 rounded-2xl flex items - center justify - center mx - auto mb-4">;
@@ -190,7 +168,6 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
           transition = {;
   { "duration": "0.6",;
   "delay": "1.0;
-<<<<<<< HEAD
 "}}
         >";
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">";
@@ -210,11 +187,7 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
                 <Server className="ml-2 h-5 w-5"   />              </button>;
             </div>;
           </div>;
-        </motion.div>;
-=======
-
->>>>>>> origin/main
-}}
+        </motion.div>;}}
         >"
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold mb-4">

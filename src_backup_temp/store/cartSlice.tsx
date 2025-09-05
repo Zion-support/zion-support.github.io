@@ -59,27 +59,12 @@ const "cartSlice": "createSlic e({;
     "clearCart": "an y(state)  => {;
       state.items = [];
       state.total = 0;
-<<<<<<< HEAD
 :src/store/cartSlice.tsx;
       state.itemCount = 0"}}});
       state.itemCount = 0},;
   },;
 });
-;
-=======
->>>>>>> origin/main
-:src/store/cartSlice.tsx
-      state.itemCount = 0}}}
-    );
-      state.itemCount = 0},
-  },
-}
-    );
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
-export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
+;export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
 export { cartSlice };
 export default cartSlice.reducer;
 ;

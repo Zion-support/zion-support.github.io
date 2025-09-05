@@ -9,8 +9,4 @@ export default function Performance.test({ }: Performance.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/main
