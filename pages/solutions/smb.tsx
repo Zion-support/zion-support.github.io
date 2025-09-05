@@ -1,39 +1,39 @@
-import React from 'react';''
-import Layout from "../../components/Layout";""
-import { motion } from 'framer-motion';''
-import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';'
+import React from 'react'
+import Layout from "../../components/Layout";"
+import { motion } from 'framer-motion'
+import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react
 export default function SMBSolutionsPage() {
   const smbServices = [
     {'
-      title: "Cost-Effective IT",""
-      description: "Affordable technology solutions for small and medium businesses","
-      icon: DollarSign,]"
-      features: ["Budget-Friendly", "Scalable Solutions", "ROI Focused"]"
+      title: "Cost-Effective IT",
+      description: "Affordable technology solutions for small and medium businesses",
+      icon: DollarSign,]
+      features: [Budget-Friendly", "Scalable Solutions", "ROI Focused"]
     },
-    {"
-      title: "Quick Setup",""
-      description: "Rapid deployment of essential business systems","
-      icon: Zap,"
-      features: ["Fast Implementation", "Minimal Downtime", "Easy Migration"]"
+    {
+      title: "Quick Setup",
+      description: "Rapid deployment of essential business systems",
+      icon: Zap,
+      features: [Fast Implementation", "Minimal Downtime", "Easy Migration"]
     },
-    {"
-      title: "Team Collaboration",""
-      description: "Tools and systems to enhance team productivity","
-      icon: Users,"
-      features: ["Communication Tools", "Project Management", "File Sharing"]"
+    {
+      title: "Team Collaboration",
+      description: "Tools and systems to enhance team productivity",
+      icon: Users,
+      features: [Communication Tools", "Project Management", "File Sharing"]
     },
-    {"
-      title: "Business Growth",""
-      description: "Technology solutions that grow with your business","
-      icon: Building2,"
-      features: ["Scalable Infrastructure", "Future-Proof", "Growth Support"]"
+    {
+      title: "Business Growth",
+      description: "Technology solutions that grow with your business",
+      icon: Building2,
+      features: [Scalable Infrastructure", "Future-Proof", "Growth Support"]
     }
   ];
 
   return (
     <Layout;"
-      title="SMB Solutions - Zion Tech Group"""
-      description="Tailored technology solutions for small and medium businesses to drive growth and efficiency.""
+      title="SMB Solutions - Zion Tech Group"
+      description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."
     >
 </Layout>"
       <div className="min-h-screen bg-gray-50">"
@@ -45,8 +45,8 @@ export default function SMBSolutionsPage() {
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
-              className="text-center""
+              transition={{ duration: 0.8 }}
+              className="text-center"
             >
 </motion>"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">"
@@ -65,8 +65,8 @@ export default function SMBSolutionsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
                   <motion.div;
-                    key={index}"
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
+                    key={index}
+                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -109,8 +109,8 @@ export default function SMBSolutionsPage() {
 </p>
             </p>
             <motion.a;"
-              href="/contact"""
-              className="inline-flex items-center px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold""
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
               whileHover={{ scale: 1.05 }}
             >
 </motion>"

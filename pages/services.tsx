@@ -26,7 +26,7 @@ const services = [
     "description": "Comprehensive artificial intelligence solutions including machine learning, natural language processing, computer vision, and AI-powered automation to transform your business operations.",
     "icon": Brain,
     "href": "/ai-services",
-    "features": ["Machine Learning", "Natural Language Processing", "Computer Vision", "AI Automation", "Predictive Analytics", "Chatbots", "Voice Recognition", "Deep Learning"],
+    "features": [Machine Learning", "Natural Language Processing", "Computer Vision", "AI Automation", "Predictive Analytics", "Chatbots", "Voice Recognition", "Deep Learning"],
     "pricing": "Starting at $5,000/project",
     "count": "25+ Solutions",
     "popular": true
@@ -36,7 +36,7 @@ const services = [
     "description": "Complete information technology solutions including cloud migration, cybersecurity, system integration, and IT consulting to modernize and secure your infrastructure.",
     "icon": Cpu,
     "href": "/it-services",
-    "features": ["Cloud Migration", "Cybersecurity", "System Integration", "IT Consulting", "Network Security", "Data Management", "Infrastructure Setup", "Technical Support"],
+    "features": [Cloud Migration", "Cybersecurity", "System Integration", "IT Consulting", "Network Security", "Data Management", "Infrastructure Setup", "Technical Support"],
     "pricing": "Starting at $2,500/month",
     "count": "30+ Services",
     "popular": true
@@ -46,7 +46,7 @@ const services = [
     description: "Scalable software as a service solutions designed for specific business needs, rapid deployment, and innovative functionality.",
     icon: Cloud,
     href: "/micro-saas",
-    features: ["Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management", "AI-Powered Tools", "Smart Contracts", "Content Moderation", "Energy Management"],
+    features: [Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management", "AI-Powered Tools", "Smart Contracts", "Content Moderation", "Energy Management"],
     pricing: "Starting at $29/month",
     count: "45+ Products",
     popular: true

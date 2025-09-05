@@ -23,25 +23,25 @@ const quantumServices = [
     title: "Quantum Algorithm Development",
     description: "Custom quantum algorithms for optimization, cryptography, and machine learning",
     icon: Brain,
-    features: ["Grover's Algorithm", "Shor's Algorithm", "QAOA", "VQE"]
+    features: [Grover's Algorithm", "Shor's Algorithm", "QAOA", "VQE"]
   },
   {
     title: "Quantum Computing Infrastructure",
     description: "Setup and management of quantum computing environments",
     icon: CpuIcon,
-    features: ["IBM Qiskit", "Google Cirq", "Rigetti Forest", "D-Wave Ocean"]
+    features: [IBM Qiskit", "Google Cirq", "Rigetti Forest", "D-Wave Ocean"]
   },
   {
     title: "Quantum Cryptography",
     description: "Unbreakable encryption using quantum principles",
     icon: Shield,
-    features: ["QKD Networks", "Quantum Key Distribution", "Post-Quantum Security"]
+    features: [QKD Networks", "Quantum Key Distribution", "Post-Quantum Security"]
   },
   {
     title: "Quantum Machine Learning",
     description: "ML algorithms enhanced with quantum computing power",
     icon: Atom,
-    features: ["Quantum Neural Networks", "Quantum SVM", "Quantum Clustering"]
+    features: [Quantum Neural Networks", "Quantum SVM", "Quantum Clustering"]
   }
 ];
 

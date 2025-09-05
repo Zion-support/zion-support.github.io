@@ -1,39 +1,39 @@
-import React from 'react';''
-import Layout from "../../components/Layout";""
-import { motion } from 'framer-motion';''
-import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';'
+import React from 'react'
+import Layout from "../../components/Layout";"
+import { motion } from 'framer-motion'
+import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react
 export default function CloudServicesPage() {
   const cloudServices = [
     {'
-      title: "Cloud Migration",""
-      description: "Seamless migration of your infrastructure to the cloud","
-      icon: Cloud,]"
-      features: ["Zero Downtime", "Data Integrity", "Cost Optimization"]"
+      title: "Cloud Migration",
+      description: "Seamless migration of your infrastructure to the cloud",
+      icon: Cloud,]
+      features: [Zero Downtime", "Data Integrity", "Cost Optimization"]
     },
-    {"
-      title: "Cloud Infrastructure",""
-      description: "Scalable and secure cloud infrastructure setup","
-      icon: Server,"
-      features: ["Auto Scaling", "High Availability", "Disaster Recovery"]"
+    {
+      title: "Cloud Infrastructure",
+      description: "Scalable and secure cloud infrastructure setup",
+      icon: Server,
+      features: [Auto Scaling", "High Availability", "Disaster Recovery"]
     },
-    {"
-      title: "Cloud Security",""
-      description: "Comprehensive security solutions for cloud environments","
-      icon: Shield,"
-      features: ["Identity Management", "Data Encryption", "Compliance"]"
+    {
+      title: "Cloud Security",
+      description: "Comprehensive security solutions for cloud environments",
+      icon: Shield,
+      features: [Identity Management", "Data Encryption", "Compliance"]
     },
-    {"
-      title: "Cloud Optimization",""
-      description: "Performance and cost optimization for cloud resources","
-      icon: Zap,"
-      features: ["Cost Analysis", "Performance Tuning", "Resource Management"]"
+    {
+      title: "Cloud Optimization",
+      description: "Performance and cost optimization for cloud resources",
+      icon: Zap,
+      features: [Cost Analysis", "Performance Tuning", "Resource Management"]
     }
   ];
 
   return (
     <Layout;"
-      title="Cloud Solutions - Zion Tech Group"""
-      description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services.""
+      title="Cloud Solutions - Zion Tech Group"
+      description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."
     >
 </Layout>"
       <div className="min-h-screen bg-gray-50">"
@@ -45,8 +45,8 @@ export default function CloudServicesPage() {
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
-              className="text-center""
+              transition={{ duration: 0.8 }}
+              className="text-center"
             >
 </motion>"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">"
@@ -65,8 +65,8 @@ export default function CloudServicesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
                   <motion.div;
-                    key={index}"
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
+                    key={index}
+                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -109,8 +109,8 @@ export default function CloudServicesPage() {
 </p>
             </p>
             <motion.a;"
-              href="/contact"""
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold""
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
               whileHover={{ scale: 1.05 }}
             >
 </motion>"

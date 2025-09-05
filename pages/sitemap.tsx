@@ -1,7 +1,7 @@
-import React from 'react';''
-import MainLayout from '../components/layout/MainLayout';''
-import Link from 'next/link';''
-import { motion } from 'framer-motion';'
+import React from 'react'
+import MainLayout from '../components/layout/MainLayout'
+import Link from 'next/link'
+import { motion } from 'framer-motion
 import {
   // TODO: Implement
 }
@@ -21,99 +21,99 @@ import {
   Shield,
   Lock,
   Search;'
-} from 'lucide-react';'
+} from 'lucide-react
 const siteStructure = [
   {'
-    category: "Main Pages","
+    category: "Main Pages",
     icon: Home,
-    pages: ["
-      { name: "Home", url: "/", description: "Main landing page with company overview" },""
-      { name: "About Us", url: "/about", description: "Company information, team, and mission" },""
-      { name: "Contact", url: "/contact", description: "Contact information and inquiry form" }"]
+    pages: [
+      { name: "Home", url: "/", description: "Main landing page with company overview" },
+      { name: "About Us", url: "/about", description: "Company information, team, and mission" },
+      { name: "Contact", url: "/contact", description: "Contact information and inquiry form" }]
     ]
   },
-  {"
-    category: "Services","
+  {
+    category: "Services",
     icon: Settings,
-    pages: ["
-      { name: "All Services", url: "/services", description: "Overview of all our services" },""
-      { name: "AI Services", url: "/ai-services", description: "Artificial intelligence solutions" },""
-      { name: "IT Services", url: "/it-services", description: "Information technology services" },""
-      { name: "Micro SaaS", url: "/micro-saas", description: "Software as a Service solutions" },""
-      { name: "Talent Solutions", url: "/talent", description: "Hiring and talent acquisition" }"]
+    pages: [
+      { name: "All Services", url: "/services", description: "Overview of all our services" },
+      { name: "AI Services", url: "/ai-services", description: "Artificial intelligence solutions" },
+      { name: "IT Services", url: "/it-services", description: "Information technology services" },
+      { name: "Micro SaaS", url: "/micro-saas", description: "Software as a Service solutions" },
+      { name: "Talent Solutions", url: "/talent", description: "Hiring and talent acquisition" }]
     ]
   },
-  {"
-    category: "Solutions","
+  {
+    category: "Solutions",
     icon: BarChart3,
-    pages: ["
-      { name: "All Solutions", url: "/solutions", description: "Overview of our solution categories" },""
-      { name: "Enterprise Solutions", url: "/solutions/enterprise", description: "Solutions for large organizations" },""
-      { name: "Startup Solutions", url: "/solutions/startup", description: "Solutions for startups and small businesses" },""
-      { name: "Industry Solutions", url: "/solutions/industry", description: "Industry-specific solutions" },""
-      { name: "Custom Development", url: "/solutions/custom", description: "Bespoke software development" }"]
+    pages: [
+      { name: "All Solutions", url: "/solutions", description: "Overview of our solution categories" },
+      { name: "Enterprise Solutions", url: "/solutions/enterprise", description: "Solutions for large organizations" },
+      { name: "Startup Solutions", url: "/solutions/startup", description: "Solutions for startups and small businesses" },
+      { name: "Industry Solutions", url: "/solutions/industry", description: "Industry-specific solutions" },
+      { name: "Custom Development", url: "/solutions/custom", description: "Bespoke software development" }]
     ]
   },
-  {"
-    category: "Resources","
+  {
+    category: "Resources",
     icon: BookOpen,
-    pages: ["
-      { name: "All Resources", url: "/resources", description: "Overview of all resources" },""
-      { name: "Documentation", url: "/docs", description: "Technical documentation and guides" },""
-      { name: "Case Studies", url: "/case-studies", description: "Client success stories and case studies" },""
-      { name: "Blog", url: "/blog", description: "Latest insights and industry news" },""
-      { name: "API Reference", url: "/api-docs", description: "API documentation and integration guides" },""
-      { name: "Tutorials", url: "/tutorials", description: "Step-by-step learning tutorials" },""
-      { name: "Guides", url: "/guides", description: "Comprehensive implementation guides" },""
-      { name: "FAQ", url: "/faq", description: "Frequently asked questions" }"]
+    pages: [
+      { name: "All Resources", url: "/resources", description: "Overview of all resources" },
+      { name: "Documentation", url: "/docs", description: "Technical documentation and guides" },
+      { name: "Case Studies", url: "/case-studies", description: "Client success stories and case studies" },
+      { name: "Blog", url: "/blog", description: "Latest insights and industry news" },
+      { name: "API Reference", url: "/api-docs", description: "API documentation and integration guides" },
+      { name: "Tutorials", url: "/tutorials", description: "Step-by-step learning tutorials" },
+      { name: "Guides", url: "/guides", description: "Comprehensive implementation guides" },
+      { name: "FAQ", url: "/faq", description: "Frequently asked questions" }]
     ]
   },
-  {"
-    category: "Company","
+  {
+    category: "Company",
     icon: Users,
-    pages: ["
-      { name: "About Us", url: "/about", description: "Company information and team" },""
-      { name: "Careers", url: "/careers", description: "Job opportunities and company culture" },""
-      { name: "News", url: "/news", description: "Company news and announcements" },""
-      { name: "Support", url: "/support", description: "Technical support and help center" }"]
+    pages: [
+      { name: "About Us", url: "/about", description: "Company information and team" },
+      { name: "Careers", url: "/careers", description: "Job opportunities and company culture" },
+      { name: "News", url: "/news", description: "Company news and announcements" },
+      { name: "Support", url: "/support", description: "Technical support and help center" }]
     ]
   },
-  {"
-    category: "Legal","
+  {
+    category: "Legal",
     icon: Shield,
-    pages: ["
-      { name: "Privacy Policy", url: "/privacy", description: "Data privacy and protection policy" },""
-      { name: "Terms of Service", url: "/terms", description: "Terms and conditions of service" },""
-      { name: "Cookie Policy", url: "/cookies", description: "Cookie usage and management" },""
-      { name: "Security", url: "/security", description: "Security measures and compliance" },""
-      { name: "Compliance", url: "/compliance", description: "Regulatory compliance information" },""
-      { name: "Accessibility", url: "/accessibility", description: "Accessibility statement and features" }"]
+    pages: [
+      { name: "Privacy Policy", url: "/privacy", description: "Data privacy and protection policy" },
+      { name: "Terms of Service", url: "/terms", description: "Terms and conditions of service" },
+      { name: "Cookie Policy", url: "/cookies", description: "Cookie usage and management" },
+      { name: "Security", url: "/security", description: "Security measures and compliance" },
+      { name: "Compliance", url: "/compliance", description: "Regulatory compliance information" },
+      { name: "Accessibility", url: "/accessibility", description: "Accessibility statement and features" }]
     ]
   }
 ];
 
-const quickLinks = ["
-  { name: "Get Started", url: "/contact", icon: ArrowRight },""
-  { name: "View Services", url: "/services", icon: Settings },""
-  { name: "Read Blog", url: "/blog", icon: MessageSquare },""
-  { name: "Browse Careers", url: "/careers", icon: Users },""
-  { name: "API Docs", url: "/api-docs", icon: Code },""
-  { name: "Support", url: "/support", icon: HelpCircle }"]
+const quickLinks = [
+  { name: "Get Started", url: "/contact", icon: ArrowRight },
+  { name: "View Services", url: "/services", icon: Settings },
+  { name: "Read Blog", url: "/blog", icon: MessageSquare },
+  { name: "Browse Careers", url: "/careers", icon: Users },
+  { name: "API Docs", url: "/api-docs", icon: Code },
+  { name: "Support", url: "/support", icon: HelpCircle }]
 ];
 
-const externalLinks = ["
-  { name: "LinkedIn", url: "https://linkedin.com/company/ziontechgroup", icon: ExternalLink },""
-  { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: ExternalLink },""
-  { name: "GitHub", url: "https://github.com/ziontechgroup", icon: ExternalLink },""
-  { name: "YouTube", url: "https://youtube.com/@ziontechgroup", icon: ExternalLink },""
-  { name: "Facebook", url: "https://facebook.com/ziontechgroup", icon: ExternalLink }"]
+const externalLinks = [
+  { name: "LinkedIn", url: "https://linkedin.com/company/ziontechgroup", icon: ExternalLink },
+  { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: ExternalLink },
+  { name: "GitHub", url: "https://github.com/ziontechgroup", icon: ExternalLink },
+  { name: "YouTube", url: "https://youtube.com/@ziontechgroup", icon: ExternalLink },
+  { name: "Facebook", url: "https://facebook.com/ziontechgroup", icon: ExternalLink }]
 ];
 
 export default function SitemapPage() {
   return (
     <MainLayout;"
-      title="Sitemap - Zion Tech Group"""
-      description="Complete sitemap of all pages and resources available on the Zion Tech Group website.""
+      title="Sitemap - Zion Tech Group"
+      description="Complete sitemap of all pages and resources available on the Zion Tech Group website."
     >
 </MainLayout>"
       <div className="min-h-screen bg-gray-50">"
@@ -125,8 +125,8 @@ export default function SitemapPage() {
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
-              className="text-center max-w-4xl mx-auto""
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
             >
 </motion>"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">"
@@ -146,14 +146,14 @@ export default function SitemapPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;"
-              className="text-center mb-8""
+              className="text-center mb-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
 </motion>"
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Quick Links</h2>""
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Quick Links</h2>"
               <p className="text-gray-600">Popular pages and resources</p>"
             </motion.div>
 "
@@ -168,8 +168,8 @@ export default function SitemapPage() {
                   >
 </motion>
                     <Link;
-                      href={link.url}"
-                      className="flex flex-col items-center p-4 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group""
+                      href={link.url}
+                      className="flex flex-col items-center p-4 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group"
                     >
 </Link>"
                       <IconComponent className="w-6 h-6 text-blue-600 mb-2 group-hover:text-blue-700" />"
@@ -189,7 +189,7 @@ export default function SitemapPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;"
-              className="text-center mb-16""
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -207,8 +207,8 @@ export default function SitemapPage() {
             <div className="space-y-12">"
 </div>
                   <motion.div;
-                    key={categoryIndex}"
-                    className="bg-white rounded-xl shadow-lg p-8""
+                    key={categoryIndex}
+                    className="bg-white rounded-xl shadow-lg p-8"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
@@ -230,8 +230,8 @@ export default function SitemapPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">"
 </div>
                         <motion.div;
-                          key={pageIndex}"
-                          className="border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:bg-blue-50 transition-all duration-300 group""
+                          key={pageIndex}
+                          className="border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:bg-blue-50 transition-all duration-300 group"
                           initial={{ opacity: 0, x: -20 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.5, delay: pageIndex * 0.05 }}
@@ -239,8 +239,8 @@ export default function SitemapPage() {
                         >
 </motion>
                           <Link;
-                            href={page.url}"
-                            className="block group-hover:text-blue-600 transition-colors""
+                            href={page.url}
+                            className="block group-hover:text-blue-600 transition-colors"
                           >
 </Link>"
                             <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600">"
@@ -267,7 +267,7 @@ export default function SitemapPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;"
-              className="text-center mb-12""
+              className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -286,10 +286,10 @@ export default function SitemapPage() {
 </div>
                   <motion.a;
                     key={index}
-                    href={link.url}"
-                    target="_blank"""
-                    rel="noopener noreferrer"""
-                    className="flex flex-col items-center p-4 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group""
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center p-4 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -331,9 +331,9 @@ export default function SitemapPage() {
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />"
 </Search>
                   <input;"
-                    type="text"""
-                    placeholder="Search the site..."""
-                    className="w-full pl-10 pr-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-300 focus:outline-none""
+                    type="text"
+                    placeholder="Search the site..."
+                    className="w-full pl-10 pr-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-300 focus:outline-none"
                   />
 </input>
                 </div>"

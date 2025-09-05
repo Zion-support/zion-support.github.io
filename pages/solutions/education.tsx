@@ -1,6 +1,6 @@
-import React from 'react';''
-import Layout from '../../components/Layout';''
-import { GraduationCap, Users, BookOpen, Laptop, Globe, CheckCircle, ArrowRight } from 'lucide-react';'
+import React from 'react'
+import Layout from '../../components/Layout'
+import { GraduationCap, Users, BookOpen, Laptop, Globe, CheckCircle, ArrowRight } from 'lucide-react
 const features = [
   {
     icon: GraduationCap,'
@@ -45,8 +45,8 @@ const solutions = ['
 export default function EducationSolutionsPage() {
   return (
     <Layout;'
-      title="Education Solutions - Zion Tech Group"""
-      description="Transform education with our comprehensive learning management systems, virtual classrooms, student information systems, and educational technology solutions.""
+      title="Education Solutions - Zion Tech Group"
+      description="Transform education with our comprehensive learning management systems, virtual classrooms, student information systems, and educational technology solutions."
     >
 </Layout>"
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
@@ -103,7 +103,7 @@ export default function EducationSolutionsPage() {
                     <feature.icon className="w-6 h-6 text-white" />"
 </feature>
                   </div>"
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>""
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
                   <p className="text-gray-300">{feature.description}</p>"
                 </div>
             </div>
@@ -155,7 +155,7 @@ export default function EducationSolutionsPage() {
                     <Globe className="w-8 h-8 text-white" />"
 </Globe>
                   </div>"
-                  <h3 className="text-xl font-semibold text-white mb-2">ADA Compliant</h3>""
+                  <h3 className="text-xl font-semibold text-white mb-2">ADA Compliant</h3>"
                   <p className="text-gray-300">Built to meet all ADA requirements for accessible educational technology.</p>"
                 </div>"
                 <div className="text-center">"
@@ -165,7 +165,7 @@ export default function EducationSolutionsPage() {
                     <Users className="w-8 h-8 text-white" />"
 </Users>
                   </div>"
-                  <h3 className="text-xl font-semibold text-white mb-2">Universal Design</h3>""
+                  <h3 className="text-xl font-semibold text-white mb-2">Universal Design</h3>"
                   <p className="text-gray-300">Solutions designed for diverse learning needs and abilities.</p>"
                 </div>"
                 <div className="text-center">"
@@ -175,7 +175,7 @@ export default function EducationSolutionsPage() {
                     <BookOpen className="w-8 h-8 text-white" />"
 </BookOpen>
                   </div>"
-                  <h3 className="text-xl font-semibold text-white mb-2">Multi-language Support</h3>""
+                  <h3 className="text-xl font-semibold text-white mb-2">Multi-language Support</h3>"
                   <p className="text-gray-300">Support for multiple languages and cultural contexts.</p>"
                 </div>
               </div>

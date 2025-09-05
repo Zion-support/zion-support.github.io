@@ -1,6 +1,6 @@
-import React from 'react';''
-import Layout from '../../components/Layout';''
-import { Heart, Shield, Database, Users, Activity, CheckCircle, ArrowRight } from 'lucide-react';'
+import React from 'react'
+import Layout from '../../components/Layout'
+import { Heart, Shield, Database, Users, Activity, CheckCircle, ArrowRight } from 'lucide-react
 const features = [
   {
     icon: Heart,'
@@ -45,8 +45,8 @@ const solutions = ['
 export default function HealthcareSolutionsPage() {
   return (
     <Layout;'
-      title="Healthcare Solutions - Zion Tech Group"""
-      description="Transform healthcare delivery with our HIPAA-compliant solutions, EHR systems, telemedicine platforms, and healthcare analytics.""
+      title="Healthcare Solutions - Zion Tech Group"
+      description="Transform healthcare delivery with our HIPAA-compliant solutions, EHR systems, telemedicine platforms, and healthcare analytics."
     >
 </Layout>"
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
@@ -103,7 +103,7 @@ export default function HealthcareSolutionsPage() {
                     <feature.icon className="w-6 h-6 text-white" />"
 </feature>
                   </div>"
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>""
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
                   <p className="text-gray-300">{feature.description}</p>"
                 </div>
             </div>
@@ -155,7 +155,7 @@ export default function HealthcareSolutionsPage() {
                     <Shield className="w-8 h-8 text-white" />"
 </Shield>
                   </div>"
-                  <h3 className="text-xl font-semibold text-white mb-2">HIPAA Compliant</h3>""
+                  <h3 className="text-xl font-semibold text-white mb-2">HIPAA Compliant</h3>"
                   <p className="text-gray-300">Built to meet all HIPAA requirements for healthcare data protection.</p>"
                 </div>"
                 <div className="text-center">"
@@ -165,7 +165,7 @@ export default function HealthcareSolutionsPage() {
                     <Database className="w-8 h-8 text-white" />"
 </Database>
                   </div>"
-                  <h3 className="text-xl font-semibold text-white mb-2">Secure Infrastructure</h3>""
+                  <h3 className="text-xl font-semibold text-white mb-2">Secure Infrastructure</h3>"
                   <p className="text-gray-300">Enterprise-grade security measures to protect sensitive healthcare data.</p>"
                 </div>"
                 <div className="text-center">"
@@ -175,7 +175,7 @@ export default function HealthcareSolutionsPage() {
                     <Activity className="w-8 h-8 text-white" />"
 </Activity>
                   </div>"
-                  <h3 className="text-xl font-semibold text-white mb-2">Real-time Monitoring</h3>""
+                  <h3 className="text-xl font-semibold text-white mb-2">Real-time Monitoring</h3>"
                   <p className="text-gray-300">Continuous monitoring and alerting for security and performance.</p>"
                 </div>
               </div>

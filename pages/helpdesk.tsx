@@ -208,7 +208,7 @@ export default function HelpdeskPage() {
                           onChange={handleInputChange}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         >
-                          <option value="">Select a category</option>
+                          <option value=">Select a category</option>
                           {ticketCategories.map((category) => (
                             <option key={category.id} value={category.id}>
                               {category.label}
@@ -228,7 +228,7 @@ export default function HelpdeskPage() {
                           onChange={handleInputChange}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         >
-                          <option value="">Select priority</option>
+                          <option value=">Select priority</option>
                           {priorityLevels.map((priority) => (
                             <option key={priority.id} value={priority.id}>
                               {priority.label}

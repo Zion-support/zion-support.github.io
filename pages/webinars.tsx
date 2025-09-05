@@ -1,7 +1,7 @@
-import React, { useState } from 'react';''
-import Head from 'next/head';''
-import Link from 'next/link';''
-import { motion } from 'framer-motion';'
+import React, { useState } from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion
 import {
   // TODO: Implement
 }
@@ -16,123 +16,123 @@ import {
   Users,
   Award,
   CheckCircle;'
-} from 'lucide-react';'
+} from 'lucide-react
 const webinars = [
   {
     id: 1,'
-    title: "The Future of AI in Business: 2025 Trends and Predictions",""
-    description: "Join our experts as they discuss the latest AI trends, emerging technologies, and how businesses can prepare for the future of artificial intelligence.",""
-    presenter: "Dr. Sarah Chen",""
-    presenterTitle: "Chief AI Officer",""
-    date: "2024-02-15",""
-    time: "2:00 PM EST",""
-    duration: "60 minutes",""
-    category: "Artificial Intelligence",""
-    attendees: "1,247","
-    featured: true,"
-    status: "upcoming",""
-    registrationUrl: "/webinars/register/ai-future-2025""
+    title: "The Future of AI in Business: 2025 Trends and Predictions",
+    description: "Join our experts as they discuss the latest AI trends, emerging technologies, and how businesses can prepare for the future of artificial intelligence.",
+    presenter: "Dr. Sarah Chen",
+    presenterTitle: "Chief AI Officer",
+    date: "2024-02-15",
+    time: "2:00 PM EST",
+    duration: "60 minutes",
+    category: "Artificial Intelligence",
+    attendees: "1,247",
+    featured: true,
+    status: "upcoming",
+    registrationUrl: "/webinars/register/ai-future-2025"
   },
   {
-    id: 2,"
-    title: "Cloud Migration Best Practices: A Complete Guide",""
-    description: "Learn the essential strategies and best practices for successful cloud migration, including planning, execution, and optimization.",""
-    presenter: "Michael Rodriguez",""
-    presenterTitle: "Cloud Solutions Architect",""
-    date: "2024-02-10",""
-    time: "3:00 PM EST",""
-    duration: "45 minutes",""
-    category: "Cloud Computing",""
-    attendees: "892","
-    featured: false,"
-    status: "upcoming",""
-    registrationUrl: "/webinars/register/cloud-migration-guide""
+    id: 2,
+    title: "Cloud Migration Best Practices: A Complete Guide",
+    description: "Learn the essential strategies and best practices for successful cloud migration, including planning, execution, and optimization.",
+    presenter: "Michael Rodriguez",
+    presenterTitle: "Cloud Solutions Architect",
+    date: "2024-02-10",
+    time: "3:00 PM EST",
+    duration: "45 minutes",
+    category: "Cloud Computing",
+    attendees: "892",
+    featured: false,
+    status: "upcoming",
+    registrationUrl: "/webinars/register/cloud-migration-guide"
   },
   {
-    id: 3,"
-    title: "Cybersecurity in the Age of AI: Threats and Solutions",""
-    description: "Explore the evolving cybersecurity landscape and how AI is both creating new threats and providing innovative solutions.",""
-    presenter: "Alex Thompson",""
-    presenterTitle: "Cybersecurity Expert",""
-    date: "2024-01-25",""
-    time: "1:00 PM EST",""
-    duration: "50 minutes",""
-    category: "Cybersecurity",""
-    attendees: "1,156","
-    featured: false,"
-    status: "recorded",""
-    recordingUrl: "/webinars/recordings/cybersecurity-ai-age""
+    id: 3,
+    title: "Cybersecurity in the Age of AI: Threats and Solutions",
+    description: "Explore the evolving cybersecurity landscape and how AI is both creating new threats and providing innovative solutions.",
+    presenter: "Alex Thompson",
+    presenterTitle: "Cybersecurity Expert",
+    date: "2024-01-25",
+    time: "1:00 PM EST",
+    duration: "50 minutes",
+    category: "Cybersecurity",
+    attendees: "1,156",
+    featured: false,
+    status: "recorded",
+    recordingUrl: "/webinars/recordings/cybersecurity-ai-age"
   },
   {
-    id: 4,"
-    title: "Building Scalable Micro SaaS Applications",""
-    description: "Discover how to design, develop, and scale micro SaaS applications for maximum growth and profitability.",""
-    presenter: "Jennifer Lee",""
-    presenterTitle: "SaaS Product Manager",""
-    date: "2024-01-20",""
-    time: "2:30 PM EST",""
-    duration: "55 minutes",""
-    category: "SaaS",""
-    attendees: "743","
-    featured: false,"
-    status: "recorded",""
-    recordingUrl: "/webinars/recordings/micro-saas-scalable""
+    id: 4,
+    title: "Building Scalable Micro SaaS Applications",
+    description: "Discover how to design, develop, and scale micro SaaS applications for maximum growth and profitability.",
+    presenter: "Jennifer Lee",
+    presenterTitle: "SaaS Product Manager",
+    date: "2024-01-20",
+    time: "2:30 PM EST",
+    duration: "55 minutes",
+    category: "SaaS",
+    attendees: "743",
+    featured: false,
+    status: "recorded",
+    recordingUrl: "/webinars/recordings/micro-saas-scalable"
   },
   {
-    id: 5,"
-    title: "Data Analytics and Business Intelligence: Advanced Techniques",""
-    description: "Learn advanced data analytics techniques and how to turn data into actionable business insights.",""
-    presenter: "David Kim",""
-    presenterTitle: "Data Science Lead",""
-    date: "2024-01-15",""
-    time: "4:00 PM EST",""
-    duration: "65 minutes",""
-    category: "Data Analytics",""
-    attendees: "1,089","
-    featured: false,"
-    status: "recorded",""
-    recordingUrl: "/webinars/recordings/data-analytics-bi""
+    id: 5,
+    title: "Data Analytics and Business Intelligence: Advanced Techniques",
+    description: "Learn advanced data analytics techniques and how to turn data into actionable business insights.",
+    presenter: "David Kim",
+    presenterTitle: "Data Science Lead",
+    date: "2024-01-15",
+    time: "4:00 PM EST",
+    duration: "65 minutes",
+    category: "Data Analytics",
+    attendees: "1,089",
+    featured: false,
+    status: "recorded",
+    recordingUrl: "/webinars/recordings/data-analytics-bi"
   },
   {
-    id: 6,"
-    title: "Digital Transformation: A Strategic Approach",""
-    description: "Understand the key principles of digital transformation and how to successfully lead organizational change.",""
-    presenter: "Emma Wilson",""
-    presenterTitle: "Digital Transformation Consultant",""
-    date: "2024-01-10",""
-    time: "11:00 AM EST",""
-    duration: "70 minutes",""
-    category: "Digital Transformation",""
-    attendees: "967","
-    featured: false,"
-    status: "recorded",""
-    recordingUrl: "/webinars/recordings/digital-transformation-strategy""
+    id: 6,
+    title: "Digital Transformation: A Strategic Approach",
+    description: "Understand the key principles of digital transformation and how to successfully lead organizational change.",
+    presenter: "Emma Wilson",
+    presenterTitle: "Digital Transformation Consultant",
+    date: "2024-01-10",
+    time: "11:00 AM EST",
+    duration: "70 minutes",
+    category: "Digital Transformation",
+    attendees: "967",
+    featured: false,
+    status: "recorded",
+    recordingUrl: "/webinars/recordings/digital-transformation-strategy"
   }]
 ];
 
-const categories = ["
-  "All Webinars",""
-  "Artificial Intelligence",""
-  "Cloud Computing",""
-  "Cybersecurity",""
-  "SaaS",""
-  "Data Analytics",""
-  "Digital Transformation""]
+const categories = [
+  "All Webinars",
+  "Artificial Intelligence",
+  "Cloud Computing",
+  "Cybersecurity",
+  "SaaS",
+  "Data Analytics",
+  "Digital Transformation"]
 ];
 
-const statuses = ["
-  "All Status",""
-  "Upcoming",""
-  "Recorded""]
+const statuses = [
+  "All Status",
+  "Upcoming",
+  "Recorded"]
 ];
 
-export default function WebinarsPage() {"
-  const [selectedCategory, setSelectedCategory] = useState("All Webinars");""
+export default function WebinarsPage() {
+  const [selectedCategory, setSelectedCategory] = useState("All Webinars");"
   const [selectedStatus, setSelectedStatus] = useState("All Status");"
-  const filteredWebinars = webinars.filter(webinar => {"
-    const categoryMatch = selectedCategory === "All Webinars" || webinar.category === selectedCategory;""
+  const filteredWebinars = webinars.filter(webinar => {
+    const categoryMatch = selectedCategory === "All Webinars" || webinar.category === selectedCategory;"
     const statusMatch = selectedStatus === "All Status" ||")"
-      (selectedStatus === "Upcoming" && webinar.status === "upcoming") ||""
+      (selectedStatus === "Upcoming" && webinar.status === "upcoming") ||"
       (selectedStatus === "Recorded" && webinar.status === "recorded");"
     return categoryMatch && statusMatch;
   });
@@ -169,8 +169,8 @@ export default function WebinarsPage() {"
 </div>"
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Webinar</h2>"
               <motion.article;
-                key={webinar.id}"
-                className="bg-white rounded-lg shadow-lg overflow-hidden mb-8""
+                key={webinar.id}
+                className="bg-white rounded-lg shadow-lg overflow-hidden mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -195,7 +195,7 @@ export default function WebinarsPage() {"
                       <span className="text-sm text-blue-600 font-medium">"
 </span>
                       </span>
-                      <span className={`text-xs px-2 py-1 rounded-full ${"
+                      <span className={`text-xs px-2 py-1 rounded-full ${
                         webinar.status === 'upcoming'''
                           ? 'bg-green-100 text-green-800'''
                           : 'bg-gray-100 text-gray-800''
@@ -216,14 +216,14 @@ export default function WebinarsPage() {"
 </div>
                       <div>
 </div>"
-                        <h3 className="font-semibold text-gray-900 mb-1">Presenter:</h3>""
-                        <p className="text-gray-600">{webinar.presenter}</p>""
+                        <h3 className="font-semibold text-gray-900 mb-1">Presenter:</h3>"
+                        <p className="text-gray-600">{webinar.presenter}</p>"
                         <p className="text-sm text-gray-500">{webinar.presenterTitle}</p>"
                       </div>
                       <div>
 </div>"
-                        <h3 className="font-semibold text-gray-900 mb-1">Date & Time:</h3>""
-                        <p className="text-gray-600">{webinar.date} at {webinar.time}</p>""
+                        <h3 className="font-semibold text-gray-900 mb-1">Date & Time:</h3>"
+                        <p className="text-gray-600">{webinar.date} at {webinar.time}</p>"
                         <p className="text-sm text-gray-500">{webinar.duration}</p>"
                       </div>
                     </div>
@@ -247,8 +247,8 @@ export default function WebinarsPage() {"
                       </div>
                     </div>
                       <Link;
-                        href={webinar.registrationUrl}"
-                        className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors""
+                        href={webinar.registrationUrl}
+                        className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
                       >
 </Link>"
                         <ArrowRight className="w-4 h-4" />"
@@ -257,8 +257,8 @@ export default function WebinarsPage() {"
                       <div className="flex gap-4">"
 </div>
                         <Link;
-                          href={webinar.recordingUrl}"
-                          className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors""
+                          href={webinar.recordingUrl}
+                          className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
                         >
 </Link>"
                           <Play className="w-4 h-4" />"
@@ -315,12 +315,12 @@ export default function WebinarsPage() {"
 </div>"
           <div className="max-w-6xl mx-auto">"
 </div>"
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">All Webinars</h2>""
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">All Webinars</h2>"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
                 <motion.article;
-                  key={webinar.id}"
-                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow""
+                  key={webinar.id}
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
@@ -341,7 +341,7 @@ export default function WebinarsPage() {"
                       <span className="text-sm text-blue-600 font-medium">"
 </span>
                       </span>
-                      <span className={`text-xs px-2 py-1 rounded-full ${"
+                      <span className={`text-xs px-2 py-1 rounded-full ${
                         webinar.status === 'upcoming'''
                           ? 'bg-green-100 text-green-800'''
                           : 'bg-gray-100 text-gray-800''
@@ -389,8 +389,8 @@ export default function WebinarsPage() {"
                     <div className="flex gap-2">"
 </div>
                         <Link;
-                          href={webinar.registrationUrl}"
-                          className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm""
+                          href={webinar.registrationUrl}
+                          className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
                         >
 </Link>"
                           <ArrowRight className="w-4 h-4" />"
@@ -398,8 +398,8 @@ export default function WebinarsPage() {"
                         </Link>
                         <>
                           <Link;
-                            href={webinar.recordingUrl}"
-                            className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm""
+                            href={webinar.recordingUrl}
+                            className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
                           >
 </Link>"
                             <Play className="w-4 h-4" />"
@@ -442,9 +442,9 @@ export default function WebinarsPage() {"
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">"
 </div>
               <input;"
-                type="email"""
-                placeholder="Enter your email"""
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300""
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
               />
 </input>"
               <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">"

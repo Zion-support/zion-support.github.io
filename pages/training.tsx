@@ -25,7 +25,7 @@ const trainingPrograms = [
     level: "Beginner",
     format: "Online + Hands-on",
     price: "$2,499",
-    features: ["Python for AI", "TensorFlow & PyTorch", "Real-world projects", "Certification"]
+    features: [Python for AI", "TensorFlow & PyTorch", "Real-world projects", "Certification"]
   },
   {
     title: "Cloud Architecture & DevOps",
@@ -34,7 +34,7 @@ const trainingPrograms = [
     level: "Intermediate",
     format: "Hybrid",
     price: "$1,999",
-    features: ["AWS/Azure/GCP", "Docker & Kubernetes", "CI/CD Pipelines", "Infrastructure as Code"]
+    features: [AWS/Azure/GCP", "Docker & Kubernetes", "CI/CD Pipelines", "Infrastructure as Code"]
   },
   {
     title: "Cybersecurity Essentials",
@@ -43,7 +43,7 @@ const trainingPrograms = [
     level: "Beginner",
     format: "Online",
     price: "$1,499",
-    features: ["Threat Analysis", "Security Tools", "Incident Response", "Compliance"]
+    features: [Threat Analysis", "Security Tools", "Incident Response", "Compliance"]
   },
   {
     title: "Quantum Computing Basics",
@@ -52,7 +52,7 @@ const trainingPrograms = [
     level: "Advanced",
     format: "Online",
     price: "$3,999",
-    features: ["Quantum Mechanics", "Quantum Algorithms", "Qiskit Programming", "Future Applications"]
+    features: [Quantum Mechanics", "Quantum Algorithms", "Qiskit Programming", "Future Applications"]
   }
 ];
 

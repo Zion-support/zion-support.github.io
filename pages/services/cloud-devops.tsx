@@ -1,6 +1,6 @@
-import React from 'react';''
-import Layout from '../../components/Layout';''
-import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';'
+import React from 'react'
+import Layout from '../../components/Layout'
+import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react
 const features = [
   {
     icon: Cloud,'
@@ -43,8 +43,8 @@ const services = ['
 export default function CloudDevOpsPage() {
   return (
     <Layout;'
-      title="Cloud & DevOps Services - Zion Tech Group"""
-      description="Expert cloud migration, infrastructure automation, and DevOps solutions. Transform your operations with scalable, secure cloud infrastructure.""
+      title="Cloud & DevOps Services - Zion Tech Group"
+      description="Expert cloud migration, infrastructure automation, and DevOps solutions. Transform your operations with scalable, secure cloud infrastructure."
     >
 </Layout>"
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
@@ -101,7 +101,7 @@ export default function CloudDevOpsPage() {
                     <feature.icon className="w-6 h-6 text-white" />"
 </feature>
                   </div>"
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>""
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
                   <p className="text-gray-300">{feature.description}</p>"
                 </div>
             </div>

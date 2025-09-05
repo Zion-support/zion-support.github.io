@@ -1,7 +1,7 @@
-import React from 'react';''
-import MainLayout from '../../components/layout/MainLayout';''
-import Link from 'next/link';''
-import { motion } from 'framer-motion';'
+import React from 'react'
+import MainLayout from '../../components/layout/MainLayout'
+import Link from 'next/link'
+import { motion } from 'framer-motion
 import {
   // TODO: Implement
 }
@@ -18,133 +18,133 @@ import {
   Zap,
   Globe,
   BarChart3;'
-} from 'lucide-react';'
+} from 'lucide-react
 const services = [
   {'
-    title: "Custom Web Applications",""
-    description: "Bespoke web applications built from scratch to meet your specific business requirements and workflows.","
-    icon: Globe,]"
-    features: ["Full-stack Development", "Responsive Design", "API Integration", "User Management", "Real-time Features"],""
-    timeline: "4-12 weeks",""
-    pricing: "Starting at $15,000""
+    title: "Custom Web Applications",
+    description: "Bespoke web applications built from scratch to meet your specific business requirements and workflows.",
+    icon: Globe,]
+    features: [Full-stack Development", "Responsive Design", "API Integration", "User Management", "Real-time Features"],
+    timeline: "4-12 weeks",
+    pricing: "Starting at $15,000"
   },
-  {"
-    title: "Mobile App Development",""
-    description: "Native and cross-platform mobile applications for iOS and Android with custom functionality.","
-    icon: Settings,"
-    features: ["iOS & Android Apps", "Cross-platform Solutions", "Push Notifications", "Offline Capabilities", "App Store Deployment"],""
-    timeline: "6-16 weeks",""
-    pricing: "Starting at $20,000""
+  {
+    title: "Mobile App Development",
+    description: "Native and cross-platform mobile applications for iOS and Android with custom functionality.",
+    icon: Settings,
+    features: [iOS & Android Apps", "Cross-platform Solutions", "Push Notifications", "Offline Capabilities", "App Store Deployment"],
+    timeline: "6-16 weeks",
+    pricing: "Starting at $20,000"
   },
-  {"
-    title: "API Development",""
-    description: "Custom RESTful APIs and microservices to power your applications and integrate with third-party services.","
-    icon: Code,"
-    features: ["RESTful APIs", "GraphQL APIs", "Microservices", "Authentication", "Rate Limiting", "Documentation"],""
-    timeline: "2-8 weeks",""
-    pricing: "Starting at $8,000""
+  {
+    title: "API Development",
+    description: "Custom RESTful APIs and microservices to power your applications and integrate with third-party services.",
+    icon: Code,
+    features: [RESTful APIs", "GraphQL APIs", "Microservices", "Authentication", "Rate Limiting", "Documentation"],
+    timeline: "2-8 weeks",
+    pricing: "Starting at $8,000"
   },
-  {"
-    title: "Database Solutions",""
-    description: "Custom database design, optimization, and migration services for your specific data requirements.","
-    icon: BarChart3,"
-    features: ["Database Design", "Performance Optimization", "Data Migration", "Backup Solutions", "Monitoring"],""
-    timeline: "2-6 weeks",""
-    pricing: "Starting at $5,000""
+  {
+    title: "Database Solutions",
+    description: "Custom database design, optimization, and migration services for your specific data requirements.",
+    icon: BarChart3,
+    features: [Database Design", "Performance Optimization", "Data Migration", "Backup Solutions", "Monitoring"],
+    timeline: "2-6 weeks",
+    pricing: "Starting at $5,000"
   }
 ];
 
-const technologies = []"
-  { category: "Frontend", items: ["React", "Next.js", "Vue.js", "Angular", "TypeScript"] },""
-  { category: "Backend", items: ["Node.js", "Python", "Java", "C#", "Go", "PHP"] },""
-  { category: "Mobile", items: ["React Native", "Flutter", "Swift", "Kotlin", "Xamarin"] },""
-  { category: "Database", items: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "Elasticsearch"] },""
-  { category: "Cloud", items: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes"] },""
-  { category: "DevOps", items: ["CI/CD", "Jenkins", "GitLab", "Terraform", "Monitoring"] }"
+const technologies = []
+  { category: "Frontend", items: [React", "Next.js", "Vue.js", "Angular", "TypeScript"] },
+  { category: "Backend", items: [Node.js", "Python", "Java", "C#", "Go", "PHP"] },
+  { category: "Mobile", items: [React Native", "Flutter", "Swift", "Kotlin", "Xamarin"] },
+  { category: "Database", items: [PostgreSQL", "MongoDB", "MySQL", "Redis", "Elasticsearch"] },
+  { category: "Cloud", items: [AWS", "Azure", "Google Cloud", "Docker", "Kubernetes"] },
+  { category: "DevOps", items: [CI/CD", "Jenkins", "GitLab", "Terraform", "Monitoring"] }
 ];
 
 const process = [
-  {"
-    step: "01",""
-    title: "Discovery & Planning",""
-    description: "We analyze your requirements, define project scope, and create a detailed development plan.",""
-    duration: "1-2 weeks""
+  {
+    step: "01",
+    title: "Discovery & Planning",
+    description: "We analyze your requirements, define project scope, and create a detailed development plan.",
+    duration: "1-2 weeks"
   },
-  {"
-    step: "02",""
-    title: "Design & Architecture",""
-    description: "Create wireframes, mockups, and technical architecture for your custom solution.",""
-    duration: "1-3 weeks""
+  {
+    step: "02",
+    title: "Design & Architecture",
+    description: "Create wireframes, mockups, and technical architecture for your custom solution.",
+    duration: "1-3 weeks"
   },
-  {"
-    step: "03",""
-    title: "Development & Testing",""
-    description: "Build your solution using agile methodology with regular testing and feedback cycles.",""
-    duration: "4-12 weeks""
+  {
+    step: "03",
+    title: "Development & Testing",
+    description: "Build your solution using agile methodology with regular testing and feedback cycles.",
+    duration: "4-12 weeks"
   },
-  {"
-    step: "04",""
-    title: "Deployment & Support",""
-    description: "Deploy your solution and provide ongoing maintenance and support services.",""
-    duration: "Ongoing""
+  {
+    step: "04",
+    title: "Deployment & Support",
+    description: "Deploy your solution and provide ongoing maintenance and support services.",
+    duration: "Ongoing"
   }]
 ];
 
 const benefits = [
-  {"
-    title: "Perfect Fit",""
-    description: "Solutions built specifically for your business needs and workflows","
+  {
+    title: "Perfect Fit",
+    description: "Solutions built specifically for your business needs and workflows",
     icon: Target;
   },
-  {"
-    title: "Full Ownership",""
-    description: "Complete ownership of source code and intellectual property","
+  {
+    title: "Full Ownership",
+    description: "Complete ownership of source code and intellectual property",
     icon: Award;
   },
-  {"
-    title: "Scalable Architecture",""
-    description: "Built to grow with your business and handle increased load","
+  {
+    title: "Scalable Architecture",
+    description: "Built to grow with your business and handle increased load",
     icon: Zap;
   },
-  {"
-    title: "Ongoing Support",""
-    description: "Continuous maintenance, updates, and feature enhancements","
+  {
+    title: "Ongoing Support",
+    description: "Continuous maintenance, updates, and feature enhancements",
     icon: Wrench;
   }]
 ];
 
 const caseStudies = [
-  {"
-    title: "E-commerce Platform",""
-    client: "Retail Chain",""
-    challenge: "Needed custom e-commerce platform with multi-vendor support and complex inventory management",""
-    solution: "Built full-stack platform with vendor management, inventory tracking, and payment processing",""
-    results: "300% increase in online sales, 50% reduction in operational costs","]"
-    technologies: ["React", "Node.js", "PostgreSQL", "Stripe"]"
+  {
+    title: "E-commerce Platform",
+    client: "Retail Chain",
+    challenge: "Needed custom e-commerce platform with multi-vendor support and complex inventory management",
+    solution: "Built full-stack platform with vendor management, inventory tracking, and payment processing",
+    results: "300% increase in online sales, 50% reduction in operational costs",]
+    technologies: [React", "Node.js", "PostgreSQL", "Stripe"]
   },
-  {"
-    title: "Healthcare Management System",""
-    client: "Medical Practice",""
-    challenge: "Required HIPAA-compliant patient management system with appointment scheduling",""
-    solution: "Developed secure platform with patient records, scheduling, and billing integration",""
-    results: "40% improvement in patient satisfaction, 100% HIPAA compliance",""
-    technologies: ["Vue.js", "Python", "MongoDB", "AWS"]"
+  {
+    title: "Healthcare Management System",
+    client: "Medical Practice",
+    challenge: "Required HIPAA-compliant patient management system with appointment scheduling",
+    solution: "Developed secure platform with patient records, scheduling, and billing integration",
+    results: "40% improvement in patient satisfaction, 100% HIPAA compliance",
+    technologies: [Vue.js", "Python", "MongoDB", "AWS"]
   },
-  {"
-    title: "IoT Monitoring Dashboard",""
-    client: "Manufacturing Company",""
-    challenge: "Needed real-time monitoring system for industrial equipment and predictive maintenance",""
-    solution: "Built IoT platform with real-time data collection, analytics, and alerting",""
-    results: "25% reduction in downtime, 30% improvement in equipment efficiency",""
-    technologies: ["React", "Node.js", "InfluxDB", "MQTT"]"
+  {
+    title: "IoT Monitoring Dashboard",
+    client: "Manufacturing Company",
+    challenge: "Needed real-time monitoring system for industrial equipment and predictive maintenance",
+    solution: "Built IoT platform with real-time data collection, analytics, and alerting",
+    results: "25% reduction in downtime, 30% improvement in equipment efficiency",
+    technologies: [React", "Node.js", "InfluxDB", "MQTT"]
   }
 ];
 
 export default function CustomSolutionsPage() {
   return (
     <MainLayout;"
-      title="Custom Development Solutions - Zion Tech Group"""
-      description="Bespoke software solutions built specifically for your unique business requirements. Full-stack development, mobile apps, and API development.""
+      title="Custom Development Solutions - Zion Tech Group"
+      description="Bespoke software solutions built specifically for your unique business requirements. Full-stack development, mobile apps, and API development."
     >
 </MainLayout>"
       <div className="min-h-screen bg-gray-50">"
@@ -156,8 +156,8 @@ export default function CustomSolutionsPage() {
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
-              className="text-center max-w-4xl mx-auto""
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
             >
 </motion>"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">"
@@ -186,7 +186,7 @@ export default function CustomSolutionsPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;"
-              className="text-center mb-16""
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -204,8 +204,8 @@ export default function CustomSolutionsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
 </div>
                   <motion.div;
-                    key={index}"
-                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""
+                    key={index}
+                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -245,19 +245,19 @@ export default function CustomSolutionsPage() {
 </div>
                           <div>
 </div>"
-                            <div className="text-sm text-gray-500">Timeline</div>""
+                            <div className="text-sm text-gray-500">Timeline</div>"
                             <div className="font-semibold text-gray-900">{service.timeline}</div>"
                           </div>
                           <div>
 </div>"
-                            <div className="text-sm text-gray-500">Starting at</div>""
+                            <div className="text-sm text-gray-500">Starting at</div>"
                             <div className="font-semibold text-purple-600">{service.pricing}</div>"
                           </div>
                         </div>
 
                         <Link;"
-                          href="/contact"""
-                          className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold group-hover:text-blue-600 transition-colors""
+                          href="/contact"
+                          className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold group-hover:text-blue-600 transition-colors"
                         >
 </Link>
                           <span>Get Quote</span>"
@@ -277,7 +277,7 @@ export default function CustomSolutionsPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;"
-              className="text-center mb-16""
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -295,15 +295,15 @@ export default function CustomSolutionsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
                 <motion.div;
-                  key={index}"
-                  className="bg-gray-50 p-6 rounded-lg""
+                  key={index}
+                  className="bg-gray-50 p-6 rounded-lg"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
 </motion>"
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">{category.category}</h3>""
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">{category.category}</h3>"
                   <div className="flex flex-wrap gap-2">"
 </div>"
                       <span key={idx} className="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">"
@@ -320,7 +320,7 @@ export default function CustomSolutionsPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;"
-              className="text-center mb-16""
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -338,8 +338,8 @@ export default function CustomSolutionsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
                 <motion.div;
-                  key={index}"
-                  className="text-center""
+                  key={index}
+                  className="text-center"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -369,7 +369,7 @@ export default function CustomSolutionsPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;"
-              className="text-center mb-16""
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -387,8 +387,8 @@ export default function CustomSolutionsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
                   <motion.div;
-                    key={index}"
-                    className="text-center""
+                    key={index}
+                    className="text-center"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -417,7 +417,7 @@ export default function CustomSolutionsPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;"
-              className="text-center mb-16""
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -435,37 +435,37 @@ export default function CustomSolutionsPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
 </div>
                 <motion.div;
-                  key={index}"
-                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300""
+                  key={index}
+                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
 </motion>"
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{study.title}</h3>""
-                  <p className="text-sm text-gray-600 mb-4">{study.client}</p>""
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{study.title}</h3>"
+                  <p className="text-sm text-gray-600 mb-4">{study.client}</p>"
                   <div className="mb-4">"
 </div>"
-                    <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>""
+                    <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>"
                     <p className="text-gray-600 text-sm">{study.challenge}</p>"
                   </div>
                   "
                   <div className="mb-4">"
 </div>"
-                    <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>""
+                    <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>"
                     <p className="text-gray-600 text-sm">{study.solution}</p>"
                   </div>
                   "
                   <div className="mb-4">"
 </div>"
-                    <h4 className="font-semibold text-gray-900 mb-2">Results:</h4>""
+                    <h4 className="font-semibold text-gray-900 mb-2">Results:</h4>"
                     <p className="text-green-600 text-sm font-semibold">{study.results}</p>"
                   </div>
                   
                   <div>
 </div>"
-                    <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>""
+                    <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>"
                     <div className="flex flex-wrap gap-1">"
 </div>"
                         <span key={idx} className="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">"

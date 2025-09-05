@@ -1,7 +1,7 @@
-import React from 'react';''
-import Head from 'next/head';''
-import Link from 'next/link';''
-import { motion } from 'framer-motion';'
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion
 import {
   // TODO: Implement
 }
@@ -21,7 +21,7 @@ import {
   Brain,
   Network,
   Cloud;'
-} from 'lucide-react';'
+} from 'lucide-react
 const industries = [
   {'
     title: 'Healthcare','
@@ -182,7 +182,7 @@ export default function IndustriesPage() {
 </section>"
         <div className="absolute inset-0">"
 </div>"
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>""
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>"
           <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>"
         </div>
 "
@@ -191,8 +191,8 @@ export default function IndustriesPage() {
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center""
+            transition={{ duration: 0.8 }}
+            className="text-center"
           >
 </motion>"
             <h1 className="text-4xl md:text-6xl font-bold mb-6">"
@@ -221,7 +221,7 @@ export default function IndustriesPage() {
         <div className="container mx-auto px-4">"
 </div>
           <motion.div;"
-            className="text-center mb-16""
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -239,8 +239,8 @@ export default function IndustriesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">"
 </div>
                 <motion.div;
-                  key={index}"
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""
+                  key={index}
+                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -264,7 +264,7 @@ export default function IndustriesPage() {
 "
                   <div className="mb-6">"
 </div>"
-                    <h4 className="font-semibold text-gray-900 mb-3">Key Services:</h4>""
+                    <h4 className="font-semibold text-gray-900 mb-3">Key Services:</h4>"
                     <ul className="space-y-2">"
 </ul>"
                         <li key={serviceIndex} className="flex items-center text-sm text-gray-600">"
@@ -277,7 +277,7 @@ export default function IndustriesPage() {
 "
                   <div className="mb-6">"
 </div>"
-                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>""
+                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>"
                     <ul className="space-y-2">"
 </ul>"
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-600">"
@@ -300,8 +300,8 @@ export default function IndustriesPage() {
 </div>"
                     <span className="text-lg font-semibold text-blue-600">{industry.pricing}</span>"
                     <Link;"
-                      href="/contact"""
-                      className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center group""
+                      href="/contact"
+                      className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center group"
                     >
 </Link>
                       <span>Learn More</span>"
@@ -320,7 +320,7 @@ export default function IndustriesPage() {
         <div className="container mx-auto px-4">"
 </div>
           <motion.div;"
-            className="text-center mb-16""
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -338,8 +338,8 @@ export default function IndustriesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
                 <motion.div;
-                  key={index}"
-                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors""
+                  key={index}
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}

@@ -1,8 +1,8 @@
-import React from 'react';''
-import Head from 'next/head';''
-import Link from 'next/link';''
-import { motion } from 'framer-motion';''
-import { Home, ArrowLeft, Search, HelpCircle } from 'lucide-react';'
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { Home, ArrowLeft, Search, HelpCircle } from 'lucide-react
 export default function Custom404() {
   return ('
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">"
@@ -25,15 +25,15 @@ export default function Custom404() {
           <div className="mb-8">"
 </div>
             <motion.div;"
-              className="text-9xl font-bold text-blue-600 mb-4""
+              className="text-9xl font-bold text-blue-600 mb-4"
               animate={{ 
                 scale: [1, 1.1, 1],
                 rotate: [0, 5, -5, 0]
               }}
               transition={{ 
                 duration: 2,
-                repeat: Infinity,"
-                repeatType: "reverse""
+                repeat: Infinity,
+                repeatType: "reverse"
               }}
             >
 </motion>
@@ -48,8 +48,8 @@ export default function Custom404() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
 </div>
             <Link;"
-              href="/"""
-              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors""
+              href="/"
+              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
             >
 </Link>"
               <Home className="w-5 h-5" />"
@@ -70,8 +70,8 @@ export default function Custom404() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">"
 </div>
               <Link;"
-                href="/services"""
-                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group""
+                href="/services"
+                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group"
               >
 </Link>"
                 <div className="text-center">"
@@ -91,8 +91,8 @@ export default function Custom404() {
               </Link>
 
               <Link;"
-                href="/about"""
-                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group""
+                href="/about"
+                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group"
               >
 </Link>"
                 <div className="text-center">"
@@ -112,8 +112,8 @@ export default function Custom404() {
               </Link>
 
               <Link;"
-                href="/contact"""
-                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group""
+                href="/contact"
+                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group"
               >
 </Link>"
                 <div className="text-center">"

@@ -1,6 +1,6 @@
-import React from 'react';''
-import Layout from '../../components/Layout';''
-import { Shield, Users, FileText, Globe, Database, CheckCircle, ArrowRight } from 'lucide-react';'
+import React from 'react'
+import Layout from '../../components/Layout'
+import { Shield, Users, FileText, Globe, Database, CheckCircle, ArrowRight } from 'lucide-react
 const features = [
   {
     icon: Shield,'
@@ -45,8 +45,8 @@ const solutions = ['
 export default function GovernmentSolutionsPage() {
   return (
     <Layout;'
-      title="Government Solutions - Zion Tech Group"""
-      description="Transform government operations with our secure, compliant solutions including citizen portals, cybersecurity, document management, and open data platforms.""
+      title="Government Solutions - Zion Tech Group"
+      description="Transform government operations with our secure, compliant solutions including citizen portals, cybersecurity, document management, and open data platforms."
     >
 </Layout>"
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
@@ -103,7 +103,7 @@ export default function GovernmentSolutionsPage() {
                     <feature.icon className="w-6 h-6 text-white" />"
 </feature>
                   </div>"
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>""
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
                   <p className="text-gray-300">{feature.description}</p>"
                 </div>
             </div>
@@ -155,7 +155,7 @@ export default function GovernmentSolutionsPage() {
                     <Shield className="w-8 h-8 text-white" />"
 </Shield>
                   </div>"
-                  <h3 className="text-xl font-semibold text-white mb-2">FISMA Compliant</h3>""
+                  <h3 className="text-xl font-semibold text-white mb-2">FISMA Compliant</h3>"
                   <p className="text-gray-300">Built to meet all FISMA requirements for federal information security.</p>"
                 </div>"
                 <div className="text-center">"
@@ -165,7 +165,7 @@ export default function GovernmentSolutionsPage() {
                     <Database className="w-8 h-8 text-white" />"
 </Database>
                   </div>"
-                  <h3 className="text-xl font-semibold text-white mb-2">FedRAMP Authorized</h3>""
+                  <h3 className="text-xl font-semibold text-white mb-2">FedRAMP Authorized</h3>"
                   <p className="text-gray-300">Cloud solutions that meet FedRAMP security requirements.</p>"
                 </div>"
                 <div className="text-center">"
@@ -175,7 +175,7 @@ export default function GovernmentSolutionsPage() {
                     <FileText className="w-8 h-8 text-white" />"
 </FileText>
                   </div>"
-                  <h3 className="text-xl font-semibold text-white mb-2">Section 508 Compliant</h3>""
+                  <h3 className="text-xl font-semibold text-white mb-2">Section 508 Compliant</h3>"
                   <p className="text-gray-300">Accessible solutions that meet Section 508 accessibility standards.</p>"
                 </div>
               </div>

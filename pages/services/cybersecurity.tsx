@@ -1,39 +1,39 @@
-import React from 'react';''
-import Layout from "../../components/Layout";""
-import { motion } from 'framer-motion';''
-import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';'
+import React from 'react'
+import Layout from "../../components/Layout";"
+import { motion } from 'framer-motion'
+import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react
 export default function CybersecurityPage() {
   const securityServices = [
     {'
-      title: "Security Assessment",""
-      description: "Comprehensive security evaluation of your systems","
-      icon: Eye,]"
-      features: ["Vulnerability Scanning", "Penetration Testing", "Risk Analysis"]"
+      title: "Security Assessment",
+      description: "Comprehensive security evaluation of your systems",
+      icon: Eye,]
+      features: [Vulnerability Scanning", "Penetration Testing", "Risk Analysis"]
     },
-    {"
-      title: "Threat Protection",""
-      description: "Advanced threat detection and prevention systems","
-      icon: Shield,"
-      features: ["Real-time Monitoring", "AI-Powered Detection", "Incident Response"]"
+    {
+      title: "Threat Protection",
+      description: "Advanced threat detection and prevention systems",
+      icon: Shield,
+      features: [Real-time Monitoring", "AI-Powered Detection", "Incident Response"]
     },
-    {"
-      title: "Data Encryption",""
-      description: "End-to-end encryption for sensitive data","
-      icon: Lock,"
-      features: ["Data at Rest", "Data in Transit", "Key Management"]"
+    {
+      title: "Data Encryption",
+      description: "End-to-end encryption for sensitive data",
+      icon: Lock,
+      features: [Data at Rest", "Data in Transit", "Key Management"]
     },
-    {"
-      title: "Compliance",""
-      description: "Ensure compliance with industry standards","
-      icon: AlertTriangle,"
-      features: ["GDPR", "HIPAA", "SOC 2", "ISO 27001"]"
+    {
+      title: "Compliance",
+      description: "Ensure compliance with industry standards",
+      icon: AlertTriangle,
+      features: [GDPR", "HIPAA", "SOC 2", "ISO 27001"]
     }
   ];
 
   return (
     <Layout;"
-      title="Cybersecurity Services - Zion Tech Group"""
-      description="Advanced cybersecurity solutions to protect your business from evolving threats and ensure compliance.""
+      title="Cybersecurity Services - Zion Tech Group"
+      description="Advanced cybersecurity solutions to protect your business from evolving threats and ensure compliance."
     >
 </Layout>"
       <div className="min-h-screen bg-gray-50">"
@@ -45,8 +45,8 @@ export default function CybersecurityPage() {
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
-              className="text-center""
+              transition={{ duration: 0.8 }}
+              className="text-center"
             >
 </motion>"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">"
@@ -65,8 +65,8 @@ export default function CybersecurityPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
                   <motion.div;
-                    key={index}"
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
+                    key={index}
+                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -109,8 +109,8 @@ export default function CybersecurityPage() {
 </p>
             </p>
             <motion.a;"
-              href="/contact"""
-              className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold""
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
               whileHover={{ scale: 1.05 }}
             >
 </motion>"

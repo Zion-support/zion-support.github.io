@@ -1,6 +1,6 @@
-import React from 'react';''
-import Layout from '../../components/Layout';''
-import { ShoppingCart, Users, BarChart, Smartphone, Package, CheckCircle, ArrowRight } from 'lucide-react';'
+import React from 'react'
+import Layout from '../../components/Layout'
+import { ShoppingCart, Users, BarChart, Smartphone, Package, CheckCircle, ArrowRight } from 'lucide-react
 const features = [
   {
     icon: ShoppingCart,'
@@ -45,8 +45,8 @@ const solutions = ['
 export default function RetailSolutionsPage() {
   return (
     <Layout;'
-      title="Retail Solutions - Zion Tech Group"""
-      description="Transform retail operations with our comprehensive e-commerce, inventory management, customer analytics, and omnichannel solutions.""
+      title="Retail Solutions - Zion Tech Group"
+      description="Transform retail operations with our comprehensive e-commerce, inventory management, customer analytics, and omnichannel solutions."
     >
 </Layout>"
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
@@ -103,7 +103,7 @@ export default function RetailSolutionsPage() {
                     <feature.icon className="w-6 h-6 text-white" />"
 </feature>
                   </div>"
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>""
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
                   <p className="text-gray-300">{feature.description}</p>"
                 </div>
             </div>
@@ -155,7 +155,7 @@ export default function RetailSolutionsPage() {
                     <ShoppingCart className="w-8 h-8 text-white" />"
 </ShoppingCart>
                   </div>"
-                  <h3 className="text-xl font-semibold text-white mb-2">Online Store</h3>""
+                  <h3 className="text-xl font-semibold text-white mb-2">Online Store</h3>"
                   <p className="text-gray-300">Custom e-commerce platforms with advanced features and integrations.</p>"
                 </div>"
                 <div className="text-center">"
@@ -165,7 +165,7 @@ export default function RetailSolutionsPage() {
                     <Smartphone className="w-8 h-8 text-white" />"
 </Smartphone>
                   </div>"
-                  <h3 className="text-xl font-semibold text-white mb-2">Mobile Commerce</h3>""
+                  <h3 className="text-xl font-semibold text-white mb-2">Mobile Commerce</h3>"
                   <p className="text-gray-300">Native mobile apps and progressive web applications for mobile shopping.</p>"
                 </div>"
                 <div className="text-center">"
@@ -175,7 +175,7 @@ export default function RetailSolutionsPage() {
                     <Package className="w-8 h-8 text-white" />"
 </Package>
                   </div>"
-                  <h3 className="text-xl font-semibold text-white mb-2">In-Store Integration</h3>""
+                  <h3 className="text-xl font-semibold text-white mb-2">In-Store Integration</h3>"
                   <p className="text-gray-300">POS systems and in-store technology that connects with online channels.</p>"
                 </div>
               </div>

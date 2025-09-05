@@ -19,7 +19,7 @@ const jobOpenings = [{
       "Experience with cloud platforms (AWS, Azure, GCP)",
       "Strong problem-solving and communication skills"
     ],
-    "benefits": ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
+    "benefits": [Competitive salary", "Health insurance", "Remote work", "Professional development"]
   },
   {
     "id": 2,
@@ -29,13 +29,13 @@ const jobOpenings = [{
     "type": "Full-time",
     "experience": "3+ years",
     "description": "Build scalable web applications and microservices for our SaaS solutions.",
-    "requirements": ["Bachelor's degree in Computer Science or related field",
+    "requirements": [Bachelor's degree in Computer Science or related field",
       "3+ years experience in full-stack development",
       "Proficiency in React, Node.js, TypeScript",
       "Experience with databases (PostgreSQL, MongoDB)",
       "Knowledge of cloud deployment and DevOps"
     ],
-    "benefits": ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
+    "benefits": [Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
   },
   {
     "id": 3,
@@ -45,13 +45,13 @@ const jobOpenings = [{
     "type": "Full-time",
     "experience": "7+ years",
     "description": "Design and implement cloud infrastructure solutions for enterprise clients.",
-    "requirements": ["Bachelor's degree in Computer Science or related field",
+    "requirements": [Bachelor's degree in Computer Science or related field",
       "7+ years experience in cloud architecture",
       "AWS/Azure/GCP certifications preferred",
       "Experience with containerization (Docker, Kubernetes)",
       "Strong understanding of security best practices"
     ],
-    "benefits": ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
+    "benefits": [Competitive salary", "Health insurance", "Remote work", "Certification support"]
   },
   {
     "id": 4,
@@ -61,13 +61,13 @@ const jobOpenings = [{
     "type": "Full-time",
     "experience": "4+ years",
     "description": "Protect our clients' digital assets and implement security best practices.",
-    "requirements": ["Bachelor's degree in Cybersecurity or related field",
+    "requirements": [Bachelor's degree in Cybersecurity or related field",
       "4+ years experience in cybersecurity",
       "Certifications (CISSP, CISM, CEH) preferred",
       "Experience with security tools and frameworks",
       "Knowledge of compliance standards (SOC 2, ISO 27001)"
     ],
-    "benefits": ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
+    "benefits": [Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
   },
   {
     "id": 5,
@@ -77,13 +77,13 @@ const jobOpenings = [{
     "type": "Full-time",
     "experience": "3+ years",
     "description": "Streamline our development and deployment processes with modern DevOps practices.",
-    "requirements": ["Bachelor's degree in Computer Science or related field",
+    "requirements": [Bachelor's degree in Computer Science or related field",
       "3+ years experience in DevOps",
       "Proficiency in CI/CD pipelines",
       "Experience with infrastructure as code (Terraform, CloudFormation)",
       "Knowledge of monitoring and logging tools"
     ],
-    "benefits": ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
+    "benefits": [Competitive salary", "Health insurance", "Remote work", "Learning budget"]
   },
   {
     "id": 6,
@@ -93,13 +93,13 @@ const jobOpenings = [{
     "type": "Full-time",
     "experience": "2+ years",
     "description": "Create intuitive and beautiful user experiences for our digital products.",
-    "requirements": ["Bachelor's degree in Design or related field",
+    "requirements": [Bachelor's degree in Design or related field",
       "2+ years experience in UX/UI design",
       "Proficiency in Figma, Sketch, Adobe Creative Suite",
       "Experience with user research and testing",
       "Strong portfolio demonstrating design skills"
     ],
-    "benefits": ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
+    "benefits": [Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
   }
 ];
 
@@ -125,7 +125,7 @@ const benefits = [{
   }
 ];
 
-const values = ["Innovation and creativity",
+const values = [Innovation and creativity",
   "Collaboration and teamwork",
   "Continuous learning",
   "Work-life balance",

@@ -1,6 +1,6 @@
-import React from 'react';''
-import Link from 'next/link';''
-import { motion } from 'framer-motion';'
+import React from 'react'
+import Link from 'next/link'
+import { motion } from 'framer-motion
 import {
   // TODO: Implement
 }
@@ -17,10 +17,10 @@ import {
   Lock,
   Smartphone,
   Brain;'
-} from 'lucide-react';''
+} from 'lucide-react'
 import Layout from "../../components/Layout";"
 const phases = [
-  {"
+  {
     title: 'Assessment & Planning',''
     description: 'Comprehensive analysis of current infrastructure and migration strategy development.','
     icon: BarChart3,
@@ -139,9 +139,9 @@ const benefits = [
 export default function CloudMigrationPage() {
   return (
     <Layout;'
-      title="Cloud Migration Solutions - Zion Tech Group"""
-      description="Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with our comprehensive cloud migration services."""
-      keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud services, infrastructure migration""
+      title="Cloud Migration Solutions - Zion Tech Group"
+      description="Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with our comprehensive cloud migration services."
+      keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud services, infrastructure migration"
     >
 </Layout>"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
@@ -150,8 +150,8 @@ export default function CloudMigrationPage() {
 </section>"
           <div className="absolute inset-0">"
 </div>"
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>""
-            <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>""
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>"
+            <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>"
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>"
           </div>
 "
@@ -160,8 +160,8 @@ export default function CloudMigrationPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
-              className="text-center max-w-4xl mx-auto""
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
             >
 </motion>"
               <div className="flex items-center justify-center mb-6">"
@@ -197,8 +197,8 @@ export default function CloudMigrationPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
-              className="text-center mb-16""
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
             >
 </motion>"
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">"
@@ -215,8 +215,8 @@ export default function CloudMigrationPage() {
                   key={phase.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}"
-                  className="text-center""
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
                 >
 </motion>"
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">"
@@ -224,8 +224,8 @@ export default function CloudMigrationPage() {
                     <phase.icon className="w-8 h-8 text-white" />"
 </phase>
                   </div>"
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{phase.title}</h3>""
-                  <p className="text-gray-600 mb-6 leading-relaxed">{phase.description}</p>""
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{phase.title}</h3>"
+                  <p className="text-gray-600 mb-6 leading-relaxed">{phase.description}</p>"
                   <ul className="space-y-2 text-left">"
 </ul>"
                       <li key={stepIndex} className="flex items-center text-sm text-gray-600">"
@@ -246,8 +246,8 @@ export default function CloudMigrationPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
-              className="text-center mb-16""
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
             >
 </motion>"
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">"
@@ -264,8 +264,8 @@ export default function CloudMigrationPage() {
                   key={service.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}"
-                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8""
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8"
                 >
 </motion>"
                   <div className="flex items-center mb-6">"
@@ -281,7 +281,7 @@ export default function CloudMigrationPage() {
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
                   <div>
 </div>"
-                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>""
+                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>"
                     <ul className="space-y-2">"
 </ul>"
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
@@ -303,8 +303,8 @@ export default function CloudMigrationPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
-              className="text-center mb-16""
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
             >
 </motion>"
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">"
@@ -321,8 +321,8 @@ export default function CloudMigrationPage() {
                   key={benefit.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}"
-                  className="text-center""
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
                 >
 </motion>"
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">"
@@ -330,7 +330,7 @@ export default function CloudMigrationPage() {
                     <benefit.icon className="w-8 h-8 text-white" />"
 </benefit>
                   </div>"
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>""
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>"
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>
               ))}

@@ -1,7 +1,7 @@
-import React from 'react';''
-import MainLayout from '../components/layout/MainLayout';''
-import Link from 'next/link';''
-import { motion } from 'framer-motion';'
+import React from 'react'
+import MainLayout from '../components/layout/MainLayout'
+import Link from 'next/link'
+import { motion } from 'framer-motion
 import {
   // TODO: Implement
 }
@@ -17,79 +17,79 @@ import {
   Zap,
   Target,
   Award;'
-} from 'lucide-react';'
+} from 'lucide-react
 const solutions = [
   {'
-    title: "Enterprise Solutions",""
-    description: "Comprehensive technology solutions for large organizations with complex requirements and enterprise-grade security.","
-    icon: Building,"
-    href: "/solutions/enterprise","]"
-    features: ["Scalable Architecture", "Enterprise Security", "24/7 Support", "Custom Integration"],""
-    benefits: ["Reduced IT Costs", "Improved Efficiency", "Enhanced Security", "Better Compliance"]"
+    title: "Enterprise Solutions",
+    description: "Comprehensive technology solutions for large organizations with complex requirements and enterprise-grade security.",
+    icon: Building,
+    href: "/solutions/enterprise",]
+    features: [Scalable Architecture", "Enterprise Security", "24/7 Support", "Custom Integration"],
+    benefits: [Reduced IT Costs", "Improved Efficiency", "Enhanced Security", "Better Compliance"]
   },
-  {"
-    title: "Startup Solutions",""
-    description: "Cost-effective technology solutions designed to help startups scale quickly and efficiently.","
-    icon: Rocket,"
-    href: "/solutions/startup",""
-    features: ["Rapid Deployment", "Cost Optimization", "Scalable Growth", "Expert Guidance"],""
-    benefits: ["Faster Time to Market", "Lower Initial Costs", "Flexible Scaling", "Competitive Advantage"]"
+  {
+    title: "Startup Solutions",
+    description: "Cost-effective technology solutions designed to help startups scale quickly and efficiently.",
+    icon: Rocket,
+    href: "/solutions/startup",
+    features: [Rapid Deployment", "Cost Optimization", "Scalable Growth", "Expert Guidance"],
+    benefits: [Faster Time to Market", "Lower Initial Costs", "Flexible Scaling", "Competitive Advantage"]
   },
-  {"
-    title: "Industry Solutions",""
-    description: "Specialized solutions tailored for specific industries with deep domain expertise.","
-    icon: BarChart3,"
-    href: "/solutions/industry",""
-    features: ["Industry Expertise", "Compliance Ready", "Best Practices", "Proven Results"],""
-    benefits: ["Industry Compliance", "Faster Implementation", "Reduced Risk", "Better ROI"]"
+  {
+    title: "Industry Solutions",
+    description: "Specialized solutions tailored for specific industries with deep domain expertise.",
+    icon: BarChart3,
+    href: "/solutions/industry",
+    features: [Industry Expertise", "Compliance Ready", "Best Practices", "Proven Results"],
+    benefits: [Industry Compliance", "Faster Implementation", "Reduced Risk", "Better ROI"]
   },
-  {"
-    title: "Custom Development",""
-    description: "Bespoke software solutions built specifically for your unique business requirements.","
-    icon: Settings,"
-    href: "/solutions/custom",""
-    features: ["Tailored Solutions", "Full Ownership", "Ongoing Support", "Future-Proof Design"],""
-    benefits: ["Perfect Fit", "Competitive Edge", "Full Control", "Long-term Value"]"
+  {
+    title: "Custom Development",
+    description: "Bespoke software solutions built specifically for your unique business requirements.",
+    icon: Settings,
+    href: "/solutions/custom",
+    features: [Tailored Solutions", "Full Ownership", "Ongoing Support", "Future-Proof Design"],
+    benefits: [Perfect Fit", "Competitive Edge", "Full Control", "Long-term Value"]
   }
 ];
 
-const industries = ["
-  { name: "Healthcare", icon: Shield, description: "HIPAA-compliant solutions for healthcare providers" },""
-  { name: "Finance", icon: BarChart3, description: "Secure financial technology solutions" },""
-  { name: "E-commerce", icon: Globe, description: "Scalable online retail platforms" },""
-  { name: "Manufacturing", icon: Settings, description: "IoT and automation solutions" },""
-  { name: "Education", icon: Users, description: "Learning management and student systems" },""
-  { name: "Real Estate", icon: Building, description: "Property management and listing platforms" }"]
+const industries = [
+  { name: "Healthcare", icon: Shield, description: "HIPAA-compliant solutions for healthcare providers" },
+  { name: "Finance", icon: BarChart3, description: "Secure financial technology solutions" },
+  { name: "E-commerce", icon: Globe, description: "Scalable online retail platforms" },
+  { name: "Manufacturing", icon: Settings, description: "IoT and automation solutions" },
+  { name: "Education", icon: Users, description: "Learning management and student systems" },
+  { name: "Real Estate", icon: Building, description: "Property management and listing platforms" }]
 ];
 
 const process = [
-  {"
-    step: "01",""
-    title: "Discovery & Analysis",""
-    description: "We analyze your business requirements, challenges, and goals to understand your needs.""
+  {
+    step: "01",
+    title: "Discovery & Analysis",
+    description: "We analyze your business requirements, challenges, and goals to understand your needs."
   },
-  {"
-    step: "02",""
-    title: "Solution Design",""
-    description: "Our experts design a tailored solution architecture that meets your specific requirements.""
+  {
+    step: "02",
+    title: "Solution Design",
+    description: "Our experts design a tailored solution architecture that meets your specific requirements."
   },
-  {"
-    step: "03",""
-    title: "Development & Testing",""
-    description: "We build and thoroughly test your solution using industry best practices and standards.""
+  {
+    step: "03",
+    title: "Development & Testing",
+    description: "We build and thoroughly test your solution using industry best practices and standards."
   },
-  {"
-    step: "04",""
-    title: "Deployment & Support",""
-    description: "We deploy your solution and provide ongoing support to ensure optimal performance.""
+  {
+    step: "04",
+    title: "Deployment & Support",
+    description: "We deploy your solution and provide ongoing support to ensure optimal performance."
   }]
 ];
 
 export default function SolutionsPage() {
   return (
     <MainLayout;"
-      title="Solutions - Zion Tech Group"""
-      description="Comprehensive technology solutions for enterprises, startups, and industry-specific needs. Custom development and consulting services.""
+      title="Solutions - Zion Tech Group"
+      description="Comprehensive technology solutions for enterprises, startups, and industry-specific needs. Custom development and consulting services."
     >
 </MainLayout>"
       <div className="min-h-screen bg-gray-50">"
@@ -101,8 +101,8 @@ export default function SolutionsPage() {
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
-              className="text-center max-w-4xl mx-auto""
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
             >
 </motion>"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">"
@@ -131,7 +131,7 @@ export default function SolutionsPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;"
-              className="text-center mb-16""
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -149,8 +149,8 @@ export default function SolutionsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
 </div>
                   <motion.div;
-                    key={index}"
-                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""
+                    key={index}
+                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -181,7 +181,7 @@ export default function SolutionsPage() {
 </div>
                           <div>
 </div>"
-                            <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>""
+                            <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>"
                             <ul className="space-y-1">"
 </ul>"
                                 <li key={idx} className="flex items-center text-sm text-gray-600">"
@@ -193,7 +193,7 @@ export default function SolutionsPage() {
                           </div>
                           <div>
 </div>"
-                            <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>""
+                            <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>"
                             <ul className="space-y-1">"
 </ul>"
                                 <li key={idx} className="flex items-center text-sm text-gray-600">"
@@ -206,8 +206,8 @@ export default function SolutionsPage() {
                         </div>
 
                         <Link;
-                          href={solution.href}"
-                          className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors""
+                          href={solution.href}
+                          className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
                         >
 </Link>
                           <span>Learn More</span>"
@@ -227,7 +227,7 @@ export default function SolutionsPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;"
-              className="text-center mb-16""
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -245,8 +245,8 @@ export default function SolutionsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"
 </div>
                   <motion.div;
-                    key={index}"
-                    className="bg-gray-50 p-6 rounded-lg hover:bg-blue-50 transition-colors group cursor-pointer""
+                    key={index}
+                    className="bg-gray-50 p-6 rounded-lg hover:bg-blue-50 transition-colors group cursor-pointer"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -275,7 +275,7 @@ export default function SolutionsPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;"
-              className="text-center mb-16""
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -293,8 +293,8 @@ export default function SolutionsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
                 <motion.div;
-                  key={index}"
-                  className="text-center""
+                  key={index}
+                  className="text-center"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}

@@ -17,7 +17,7 @@ const services = [
     description: "Cutting-edge artificial intelligence solutions for modern businesses",
     icon: Brain,
     href: "/ai-services",
-    features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
+    features: [Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
     pricing: "Starting at $2,000/month",
     count: "25+ AI Solutions",
     popular: true
@@ -27,7 +27,7 @@ const services = [
     description: "Comprehensive IT solutions to power your digital transformation",
     icon: Network,
     href: "/it-services",
-    features: ["Cloud Migration", "Cybersecurity", "Infrastructure Management", "Digital Transformation"],
+    features: [Cloud Migration", "Cybersecurity", "Infrastructure Management", "Digital Transformation"],
     pricing: "Starting at $1,500/month",
     count: "30+ IT Solutions",
     popular: true
@@ -37,7 +37,7 @@ const services = [
     description: "Innovative software as a service solutions for specialized business needs",
     icon: Cloud,
     href: "/micro-saas",
-    features: ["Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management", "AI-Powered Tools", "Smart Contracts", "Content Moderation", "Energy Management"],
+    features: [Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management", "AI-Powered Tools", "Smart Contracts", "Content Moderation", "Energy Management"],
     pricing: "Starting at $29/month",
     count: "45+ Products",
     popular: true

@@ -1,6 +1,6 @@
-import React from 'react';''
-import Link from 'next/link';''
-import { motion } from 'framer-motion';'
+import React from 'react'
+import Link from 'next/link'
+import { motion } from 'framer-motion
 import {
   // TODO: Implement
 }
@@ -16,8 +16,8 @@ import {
   Shield,
   Cloud,
   Brain;'
-} from 'lucide-react';''
-import Layout from '../../components/Layout';'
+} from 'lucide-react'
+import Layout from '../../components/Layout
 const industries = [
   {'
     name: 'Healthcare',''
@@ -79,9 +79,9 @@ const stats = ['
 export default function IndustriesPage() {
   return (
     <Layout;'
-      title="Industry Solutions - Zion Tech Group"""
-      description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors."""
-      keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services""
+      title="Industry Solutions - Zion Tech Group"
+      description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors."
+      keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services"
     >
 </Layout>"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
@@ -90,8 +90,8 @@ export default function IndustriesPage() {
 </section>"
           <div className="absolute inset-0">"
 </div>"
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>""
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>""
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>"
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>"
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>"
           </div>
 "
@@ -100,8 +100,8 @@ export default function IndustriesPage() {
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
-              className="text-center""
+              transition={{ duration: 0.8 }}
+              className="text-center"
             >
 </motion>"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">"
@@ -130,7 +130,7 @@ export default function IndustriesPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;"
-              className="text-center mb-16""
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -148,8 +148,8 @@ export default function IndustriesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
                   <motion.div;
-                    key={index}"
-                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""
+                    key={index}
+                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -173,12 +173,12 @@ export default function IndustriesPage() {
                     "
                     <div className="mb-6">"
 </div>"
-                      <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>""
+                      <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>"
                       <div className="flex flex-wrap gap-2">"
 </div>
                           <span;
-                            key={idx}"
-                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full""
+                            key={idx}
+                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
                           >
 </span>
                           </span>
@@ -186,8 +186,8 @@ export default function IndustriesPage() {
                     </div>
                     
                     <Link;
-                      href={industry.href}"
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors""
+                      href={industry.href}
+                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
                     >
 </Link>
                       <span>Learn More</span>"
@@ -205,7 +205,7 @@ export default function IndustriesPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;"
-              className="text-center mb-16""
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -223,7 +223,7 @@ export default function IndustriesPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
 </div>
               <motion.div;"
-                className="text-center p-8""
+                className="text-center p-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
@@ -235,14 +235,14 @@ export default function IndustriesPage() {
                   <Users className="w-8 h-8 text-blue-600" />"
 </Users>
                 </div>"
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Industry Expertise</h3>""
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Industry Expertise</h3>"
                 <p className="text-gray-600">"
 </p>
                 </p>
               </motion.div>
 
               <motion.div;"
-                className="text-center p-8""
+                className="text-center p-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -254,14 +254,14 @@ export default function IndustriesPage() {
                   <Shield className="w-8 h-8 text-green-600" />"
 </Shield>
                 </div>"
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Compliance & Security</h3>""
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Compliance & Security</h3>"
                 <p className="text-gray-600">"
 </p>
                 </p>
               </motion.div>
 
               <motion.div;"
-                className="text-center p-8""
+                className="text-center p-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
@@ -273,7 +273,7 @@ export default function IndustriesPage() {
                   <Cloud className="w-8 h-8 text-purple-600" />"
 </Cloud>
                 </div>"
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Scalable Solutions</h3>""
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Scalable Solutions</h3>"
                 <p className="text-gray-600">"
 </p>
                 </p>
@@ -288,8 +288,8 @@ export default function IndustriesPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">"
 </div>
                 <motion.div;
-                  key={index}"
-                  className="text-center""
+                  key={index}
+                  className="text-center"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
