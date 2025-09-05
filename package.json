@@ -4,12 +4,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    "ci:preflight": "node -e \"try{require('fs').accessSync('dist');console.log('dist exists')}catch(e){process.exit(0)}\" && echo prebuilt || echo building",
-    "ci:build-test": "npm run build && npm run test:smoke",
->>>>>>> 878d942794613d77e7906d7fb8891458141d2dcc
     "dev": "next dev",
     "build": "next build",
     "build:netlify": "node scripts/build-with-error-handling.js",
@@ -412,33 +406,4 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT"
-=======
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "type-check": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@supabase/supabase-js": "^2.57.0",
-    "autoprefixer": "^10.4.16",
-    "chokidar": "^3.5.3",
-    "framer-motion": "^10.16.0",
-    "lucide-react": "^0.300.0",
-    "next": "^14.0.0",
-    "postcss": "^8.4.32",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss": "^3.4.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.0.0",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^14.0.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "typescript": "^5.0.0"
-  }
->>>>>>> 4d15aa1ac9d (Fix project errors and implement PM2 automation system)
 }
