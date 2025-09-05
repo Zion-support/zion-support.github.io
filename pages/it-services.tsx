@@ -148,6 +148,151 @@ const itServices = [
     category: 'Support'
   },
   {
+    title: 'Zero Trust Security Architecture',
+    description: 'Implement zero trust security model with continuous verification and least privilege access.',
+    icon: Shield,
+    features: ['Identity Verification', 'Device Trust', 'Network Segmentation', 'Continuous Monitoring'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Security',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Deploy edge computing solutions for low-latency applications and IoT devices.',
+    icon: Cpu,
+    features: ['Edge Data Centers', 'IoT Integration', 'Low Latency Processing', 'Distributed Architecture'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Edge Computing'
+  },
+  {
+    title: 'Quantum-Safe Cryptography',
+    description: 'Implement quantum-resistant encryption to future-proof your security infrastructure.',
+    icon: Lock,
+    features: ['Post-Quantum Algorithms', 'Hybrid Cryptography', 'Migration Planning', 'Compliance'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Advanced Security'
+  },
+  {
+    title: '5G Network Implementation',
+    description: 'Design and deploy 5G networks for high-speed, low-latency connectivity.',
+    icon: Wifi,
+    features: ['5G Core Network', 'Network Slicing', 'Edge Computing Integration', 'Performance Optimization'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Telecommunications'
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Build and maintain blockchain networks for secure, decentralized applications.',
+    icon: Network,
+    features: ['Blockchain Deployment', 'Smart Contracts', 'Consensus Mechanisms', 'Node Management'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Blockchain'
+  },
+  {
+    title: 'AI Infrastructure Management',
+    description: 'Specialized infrastructure for AI/ML workloads with GPU clusters and data pipelines.',
+    icon: Brain,
+    features: ['GPU Clusters', 'ML Pipeline Management', 'Model Deployment', 'Performance Optimization'],
+    pricing: '$8,000 - $40,000/month',
+    category: 'AI Infrastructure'
+  },
+  {
+    title: 'Green IT Solutions',
+    description: 'Sustainable IT infrastructure with energy-efficient hardware and carbon footprint reduction.',
+    icon: Sprout,
+    features: ['Energy Efficiency', 'Carbon Tracking', 'Sustainable Hardware', 'Green Data Centers'],
+    pricing: '$5,000 - $30,000/project',
+    category: 'Sustainability'
+  },
+  {
+    title: 'Hybrid Cloud Orchestration',
+    description: 'Seamless management of multi-cloud and hybrid cloud environments.',
+    icon: Cloud,
+    features: ['Multi-cloud Management', 'Workload Migration', 'Cost Optimization', 'Unified Monitoring'],
+    pricing: '$12,000 - $60,000/project',
+    category: 'Cloud Management'
+  },
+  {
+    title: 'IoT Security & Management',
+    description: 'Comprehensive security and management for Internet of Things devices and networks.',
+    icon: Smartphone,
+    features: ['Device Authentication', 'Network Security', 'Firmware Updates', 'Threat Detection'],
+    pricing: '$6,000 - $35,000/project',
+    category: 'IoT Security'
+  },
+  {
+    title: 'Digital Twin Implementation',
+    description: 'Create digital replicas of physical systems for simulation, monitoring, and optimization.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Simulation', 'Predictive Analytics', 'Integration APIs'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Digital Twin'
+  },
+  {
+    title: 'API Gateway & Management',
+    description: 'Comprehensive API management platform with security, monitoring, and analytics.',
+    icon: Code,
+    features: ['API Gateway', 'Rate Limiting', 'Authentication', 'Analytics Dashboard'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'API Management'
+  },
+  {
+    title: 'Disaster Recovery as a Service',
+    description: 'Comprehensive disaster recovery solutions with automated failover and testing.',
+    icon: Shield,
+    features: ['Automated Failover', 'Regular Testing', 'RTO/RPO Optimization', 'Compliance'],
+    pricing: '$2,000 - $12,000/month',
+    category: 'Disaster Recovery'
+  },
+  {
+    title: 'IT Compliance & Governance',
+    description: 'Ensure compliance with industry regulations and implement governance frameworks.',
+    icon: CheckCircle,
+    features: ['Compliance Auditing', 'Policy Management', 'Risk Assessment', 'Reporting'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'Compliance'
+  },
+  {
+    title: 'Microservices Architecture',
+    description: 'Design and implement microservices architecture for scalable, maintainable applications.',
+    icon: Server,
+    features: ['Service Decomposition', 'Container Orchestration', 'Service Mesh', 'Monitoring'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Architecture'
+  },
+  {
+    title: 'IT Cost Optimization',
+    description: 'Comprehensive IT cost analysis and optimization across all technology investments.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'License Optimization', 'Resource Right-sizing', 'ROI Tracking'],
+    pricing: '$3,000 - $15,000/project',
+    category: 'Cost Management'
+  },
+  {
+    title: 'IT Training & Certification',
+    description: 'Comprehensive IT training programs and certification for your team.',
+    icon: BookOpen,
+    features: ['Custom Training Programs', 'Certification Paths', 'Hands-on Labs', 'Progress Tracking'],
+    pricing: '$500 - $2,500/person',
+    category: 'Training'
+  },
+  {
+    title: 'IT Vendor Management',
+    description: 'Strategic vendor relationship management and technology procurement optimization.',
+    icon: Users,
+    features: ['Vendor Assessment', 'Contract Negotiation', 'Performance Monitoring', 'Cost Optimization'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Vendor Management'
+  },
+  {
+    title: 'IT Innovation Lab',
+    description: 'Dedicated innovation lab for exploring emerging technologies and proof-of-concepts.',
+    icon: Rocket,
+    features: ['Technology Research', 'Proof of Concepts', 'Innovation Workshops', 'Technology Roadmaps'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Innovation'
+  },
+  {
     title: 'Software Development Services',
     description: 'Custom software development and application modernization services.',
     icon: Code,

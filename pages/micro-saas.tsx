@@ -198,6 +198,167 @@ const microSaaSProducts = [{
     category: 'Education'
   },
   {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review with security analysis and performance optimization.',
+    icon: Code,
+    features: ['Security Analysis', 'Performance Optimization', 'Code Quality Metrics', 'Automated Fixes'],
+    pricing: '$199 - $999/month',
+    category: 'Development',
+    popular: true
+  },
+  {
+    title: 'Blockchain Payment Gateway',
+    description: 'Cryptocurrency payment processing with multi-chain support and DeFi integration.',
+    icon: DollarSign,
+    features: ['Multi-chain Support', 'DeFi Integration', 'Smart Contracts', 'Real-time Settlement'],
+    pricing: '$299 - $1,999/month',
+    category: 'FinTech'
+  },
+  {
+    title: 'IoT Device Management Platform',
+    description: 'Comprehensive IoT device monitoring, management, and analytics platform.',
+    icon: Smartphone,
+    features: ['Device Monitoring', 'Firmware Updates', 'Data Analytics', 'Alert Management'],
+    pricing: '$149 - $799/month',
+    category: 'IoT'
+  },
+  {
+    title: 'AI-Powered SEO Optimizer',
+    description: 'Automated SEO optimization with AI content suggestions and ranking analysis.',
+    icon: Search,
+    features: ['Content Optimization', 'Keyword Research', 'Ranking Analysis', 'Competitor Tracking'],
+    pricing: '$99 - $599/month',
+    category: 'SEO'
+  },
+  {
+    title: 'Virtual Event Platform',
+    description: 'Complete virtual event hosting with networking, exhibitions, and analytics.',
+    icon: Video,
+    features: ['Virtual Booths', 'Networking Rooms', 'Live Streaming', 'Analytics Dashboard'],
+    pricing: '$199 - $1,499/month',
+    category: 'Events'
+  },
+  {
+    title: 'AI Customer Success Platform',
+    description: 'Predictive customer success management with churn prevention and growth insights.',
+    icon: TrendingUp,
+    features: ['Churn Prediction', 'Health Scoring', 'Automated Workflows', 'Growth Insights'],
+    pricing: '$299 - $1,999/month',
+    category: 'Customer Success'
+  },
+  {
+    title: 'Carbon Footprint Tracker',
+    description: 'Sustainability tracking and carbon footprint management for businesses.',
+    icon: Sprout,
+    features: ['Carbon Tracking', 'Sustainability Metrics', 'Reporting', 'Goal Setting'],
+    pricing: '$49 - $299/month',
+    category: 'Sustainability'
+  },
+  {
+    title: 'AI-Powered Legal Document Generator',
+    description: 'Automated legal document creation with compliance checking and customization.',
+    icon: FileText,
+    features: ['Document Templates', 'Compliance Checking', 'Customization', 'E-signature Integration'],
+    pricing: '$199 - $999/month',
+    category: 'Legal Tech'
+  },
+  {
+    title: 'Real Estate Investment Analyzer',
+    description: 'AI-powered real estate investment analysis and market prediction platform.',
+    icon: Home,
+    features: ['Market Analysis', 'Investment Scoring', 'ROI Prediction', 'Risk Assessment'],
+    pricing: '$149 - $799/month',
+    category: 'Real Estate'
+  },
+  {
+    title: 'AI-Powered Recruitment Platform',
+    description: 'Intelligent candidate screening and matching for HR teams.',
+    icon: Users,
+    features: ['Resume Screening', 'Skill Matching', 'Interview Scheduling', 'Bias Detection'],
+    pricing: '$199 - $1,299/month',
+    category: 'HR Tech'
+  },
+  {
+    title: 'Voice AI Assistant Platform',
+    description: 'Custom voice AI assistants with natural language processing and multi-language support.',
+    icon: Mic,
+    features: ['Voice Recognition', 'Natural Language Processing', 'Multi-language Support', 'Custom Training'],
+    pricing: '$399 - $2,499/month',
+    category: 'Voice AI'
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Automated content moderation for text, images, and videos using advanced AI.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'API Integration'],
+    pricing: '$299 - $1,999/month',
+    category: 'Content Safety'
+  },
+  {
+    title: 'Predictive Maintenance Platform',
+    description: 'IoT-based predictive maintenance for industrial equipment and machinery.',
+    icon: Settings,
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$499 - $2,999/month',
+    category: 'Industrial IoT'
+  },
+  {
+    title: 'AI-Powered Translation Platform',
+    description: 'Real-time translation services with context awareness and industry terminology.',
+    icon: Globe,
+    features: ['Multi-language Support', 'Context Awareness', 'Industry Terminology', 'Real-time Processing'],
+    pricing: '$99 - $599/month',
+    category: 'Language Services'
+  },
+  {
+    title: 'Digital Twin Management Platform',
+    description: 'Create and manage digital twins for physical assets and processes.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Simulation', 'Predictive Analytics', 'Integration APIs'],
+    pricing: '$599 - $3,999/month',
+    category: 'Digital Twin'
+  },
+  {
+    title: 'AI-Powered Energy Management',
+    description: 'Smart energy optimization for buildings and facilities using AI algorithms.',
+    icon: Zap,
+    features: ['Energy Consumption Analysis', 'Optimization Algorithms', 'Cost Reduction', 'Sustainability Metrics'],
+    pricing: '$199 - $1,299/month',
+    category: 'Energy Management'
+  },
+  {
+    title: 'Blockchain Supply Chain Tracker',
+    description: 'Transparent supply chain tracking using blockchain technology.',
+    icon: Network,
+    features: ['Supply Chain Mapping', 'Product Tracking', 'Quality Assurance', 'Transparency Reports'],
+    pricing: '$299 - $1,999/month',
+    category: 'Supply Chain'
+  },
+  {
+    title: 'AI-Powered Quality Control',
+    description: 'Automated quality inspection using computer vision and machine learning.',
+    icon: Eye,
+    features: ['Defect Detection', 'Quality Metrics', 'Real-time Monitoring', 'Process Optimization'],
+    pricing: '$399 - $2,499/month',
+    category: 'Manufacturing'
+  },
+  {
+    title: 'Voice Commerce Platform',
+    description: 'Voice-activated e-commerce platform with natural language processing.',
+    icon: ShoppingCart,
+    features: ['Voice Commands', 'Natural Language Processing', 'Payment Integration', 'Order Management'],
+    pricing: '$199 - $1,299/month',
+    category: 'E-commerce'
+  },
+  {
+    title: 'AI-Powered Financial Planning',
+    description: 'Personalized financial planning and investment advice using AI algorithms.',
+    icon: TrendingUp,
+    features: ['Financial Analysis', 'Investment Recommendations', 'Risk Assessment', 'Goal Tracking'],
+    pricing: '$49 - $299/month',
+    category: 'FinTech'
+  },
+  {
     title: 'Real Estate CRM',
     description: 'Specialized CRM for real estate agents and property management.',
     icon: Building,
