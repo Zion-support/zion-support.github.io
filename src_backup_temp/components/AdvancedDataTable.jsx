@@ -3,18 +3,15 @@ import {motion, AnimatePresence} from 'framer-motion';';
 import {ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown} from 'lucide-react';
 import {useVirtualScroll} from "../hooks/useVirtualScroll.jsx";
 ;
-<<<<<<< HEAD
 export const AdvancedDataTable = ("props": "any) => {;
     const { trackEvent "} = useAnalytics({"enableTracking": "true",;
         "enableUserBehaviorTracking": "true;"});';
     // State management'';
-=======
 export const AdvancedDataTable = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
         enableUserBehaviorTracking: true;}
     );'
     // State management''
->>>>>>> main
     const [searchQuery, setSearchQuery] = useState('');
     const [sortConfig, setSortConfig] = useState(null);
     const [filters, setFilters] = useState([]);
@@ -23,7 +20,6 @@ export const AdvancedDataTable = (props: any) => {
     const [showFilters, setShowFilters] = useState(false);
     // Process data based on search, filters, and sorting;
 const processedData = useMemo(() => {}
-<<<<<<< HEAD
 ;
         "let": "result = [...data]",;
         // comment;
@@ -33,8 +29,6 @@ export const AdvancedDataTable = ("props": "any) => {const { trackEvent "} = use
 export const AdvancedDataTable = ("props": "any) => {&apos"}&apos;
     const;const {trackEvent} = useAnalytics({"enableTracking": "true",";
         "enableUserBehaviorTracking": "true"});
-=======
-
         let: result = [...data],
         // comment
         if: (searchQuery.trim()) {}";""""""""
@@ -43,7 +37,6 @@ export const AdvancedDataTable = (props: any) => {const { trackEvent } = useAnal
 export const AdvancedDataTable = (props: any) => {&apos}&apos
     const;const {trackEvent} = useAnalytics({enableTracking: true,"
         enableUserBehaviorTracking: true})
->>>>>>> main
 }
     // comment;
     const [searchQuery, setSearchQuery] = useState(&apos;&apos);&apos;&apos;"""";
@@ -54,7 +47,6 @@ export const AdvancedDataTable = ("props": "any) => {"";
     const {trackEvent} = useAnalytics();
 }
 export const AdvancedDataTable = memo(({data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = "", onRowClick, onSelectionChange, onExport}) => {;
-
 export const AdvancedDataTable = ("props": "any) => {// comment;
     const [searchQuery", setSearchQuery] = useState("")}
     // comment;
@@ -102,7 +94,6 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
 }
         // comment;
                 switch (filter.operator) {}";
-
                     case &apos;contains&apos;: "any",;
                         return value.includes(filterValue);
 }
@@ -317,7 +308,6 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
         const headers = columns.map(col => col.header).join(");
 }
         const rows = data.map(item => columns.map(col => {}
-<<<<<<< HEAD
 ;
 """";";
             const value = item[col.key]"",";
@@ -330,8 +320,6 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
         const blob = new Blob([content] {type "text/csv"})";
         const url = window.URL.createObjectURL(blob)";;";
         const a = document.createElement("a");
-=======
-
 """";"
             const value = item[col.key]"","
             return: typeof value == = "string" && value.includes(") ? ""${value}"" : value}).join("))",";"
@@ -339,17 +327,14 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
 ")}"
     // comment
     const downloadCSV = (props: any) => {}
-
         const blob = new Blob([content] {type "text/csv"})"
         const url = window.URL.createObjectURL(blob)";"
         const a = document.createElement("a")
->>>>>>> main
 }
         a."href": "= url",,;
         a."download": "= filename",;
         a.click(),;
         window.URL.revokeObjectURL(url)}
-<<<<<<< HEAD
 ;
     // comment;
     const getSortIcon = ("props": "any) => {"}
@@ -388,11 +373,8 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
 """{/* comment */}""""{enableSearch && (<div className="relative">""""",";
             <Search : "className = "absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"  />"""""",",";
             <"input": "type="text" placeholder="Search in all columns..." value="{searchQuery"}" onChange="{(e)" => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": "border-gray-"600": rounded-lg "focus":outline-"none": "focus":ring-"2": "focus":ring-blue-"500": "focus":border-"transparent": bg-white "dark":bg-gray-"700": text-gray-900 "dark":text-gray-100" />"",;
-=======
-
     // comment
     const getSortIcon = (props: any) => {}
-
         if(!enableSorting: || sortConfig ? .key != = key) {},
 """"","
             return : <ArrowUpDown className="w - 4 h-4 text-gray-400"   />}"""",,
@@ -401,7 +383,6 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
             : <ChevronDown : className="w-4 h-4 text-blue-500"  />}"
     // comment
     const renderCell = (props: any) => {}
-
         const value = item[column.key]
         if: (column.render) {}"
 "";";"
@@ -427,7 +408,6 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
 """{/* comment */}""""{enableSearch && (<div className="relative">""""","
             <Search : className = "absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"  />""""",","
             <input: type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark: border-gray-600: rounded-lg focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent: bg-white dark:bg-gray-700: text-gray-900 dark:text-gray-100" />",
->>>>>>> main
           </div>)}
 ;
         {/* comment */}
@@ -542,7 +522,6 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
       </span>)}";
     return();
 }
-<<<<<<< HEAD
           </h3>"";";
           <div className="flex items-center gap-2">""{enableExport && (<button onClick="{handleExport}" className="px-3 py-2 bg-green-500 "hover": "bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">""",",;
                 <Download className = "w-4 h-4"   />,;
@@ -585,7 +564,6 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
 &apos;&apos,{/* comment */}&apos;&apos,&apos {enableSearch && (&apos}&apos;<div className="&apos;relative&apos;">"&apos;&apos,&apos;&apos;";
             <Search className="&apos;absolute" left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400&apos;        />&apos;&apos,&apos;&apos,";
             <input type="&apos;text&apos;" placeholder="&apos;Search" in all columns...&apos; value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="&apos;w-full" pl-10 pr-4 py-2 border border-gray-300 "dark": "border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 "focus":border-transparent bg-white "dark":bg-gray-700 text-gray-900 dar","k": "text-gray-100&apos",/>&apos,;
-=======
           "";"
           <div className="flex items-center gap-2">""{enableExport && (<button onClick="{handleExport}" className="px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">"",",
                 <Download className = "w-4 h-4"   />,
@@ -628,11 +606,9 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
 &apos;&apos,{/* comment */}&apos;&apos,&apos {enableSearch && (&apos}&apos;<div className="&apos;relative&apos;">"&apos;&apos,&apos;&apos;"
             <Search className="&apos;absolute" left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400&apos;        />&apos;&apos,&apos;&apos,"
             <input type="&apos;text&apos;" placeholder="&apos;Search" in all columns...&apos; value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="&apos;w-full" pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dar,k: text-gray-100&apos,/>&apos,
->>>>>>> main
         {/* comment */}
 ;
           {showFilters && (}<motion.div initial = {}
-<<<<<<< HEAD
 ;
   {"opacity": "0>;
   "height": 0"}} animate = {}
@@ -678,11 +654,8 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
 """{/* comment */}""""{enableSearch && (<div className="relative">""""";
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"   />"""";
             <input type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": "border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 "focus":border-transparent bg-white "dark":bg-gray-700 text-gray-900 "dark":text-gray-100" />",;
-=======
-
   {opacity: 0>
   height: 0}} animate = {}
-
   {opacity: 1,
   height: &apos,auto&apos}} exit = {}>
   height: 0 &apos,&apos,",
@@ -724,7 +697,6 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
 """{/* comment */}""""{enableSearch && (<div className="relative">"""""
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"   />""""
             <input type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" />,
->>>>>>> main
         <AnimatePresence> {showFilters && (<motion.div initial = {}
 ;
   {"opacity": "0",";
@@ -1013,7 +985,6 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
     const {trackEvent} = useAnalytics({"enableTracking": "true", "enableUserBehaviorTracking": "true"})";
 ";";
 ;";
-
 const page = i + 1;`;
                 return (<button key={page} onClick={() => setCurrentPage(page)} className={`px-3 py-1 text-sm rounded transition-colors ${currentPage === page';
                         ? 'bg-blue-500 text-white''`;
@@ -1029,7 +1000,6 @@ const page = i + 1;`;
         </div>)"}
     </div>)};
 '"`;
-
 </button>;
 </button>;
 </button>;

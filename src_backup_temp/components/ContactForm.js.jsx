@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {Button} from "./ui/Button.jsx";
-<<<<<<< HEAD
 const ContactForm = ("props": "any) => {;
     const [formData", setFormData] = useState({;
         "firstName": '',;
@@ -11,7 +10,6 @@ const ContactForm = ("props": "any) => {;
         "service": '',;
         "message": '';
     });
-=======
 const ContactForm = (props: any) => {
     const [formData, setFormData] = useState({
         firstName: '',
@@ -23,7 +21,6 @@ const ContactForm = (props: any) => {
         message: ''
     }
     );
->>>>>>> main
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState('idle');
     const handleInputChange = ("props": "any) => {;
@@ -37,7 +34,6 @@ const ContactForm = (props: any) => {
         try {;
             // Simulate API call;
             await new Promise(resolve => setTimeout(resolve, 2000));
-<<<<<<< HEAD
             // Reset form on success;
             setFormData({;
                 "firstName": '',;
@@ -48,7 +44,6 @@ const ContactForm = (props: any) => {
                 "service": '',;
                 "message": '';
             });
-=======
             // Reset form on success
             setFormData({
                 firstName: '',
@@ -60,7 +55,6 @@ const ContactForm = (props: any) => {
                 message: ''
             }
     );
->>>>>>> main
             setSubmitStatus('success');
             setTimeout(() => setSubmitStatus('idle'), 5000)}
         catch (error) {setSubmitStatus('error');
@@ -68,7 +62,6 @@ const ContactForm = (props: any) => {
         finally {setIsSubmitting(false)}
     };
     const isFormValid = formData.firstName && formData.lastName && formData.email && formData.message;
-<<<<<<< HEAD
     return (<div className="max-w-2xl mx-auto">;
       {submitStatus === 'success' && (<div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">;
           <div className="flex items-center">;
@@ -77,7 +70,6 @@ const ContactForm = (props: any) => {
             </svg>;
             Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.          </div>;
         </div>;
-=======
     return (
         <div className="max-w-2xl mx-auto">
       {submitStatus === 'success' && (<div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
@@ -87,7 +79,6 @@ const ContactForm = (props: any) => {
             </svg>
             Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.          </div>
         </div>
->>>>>>> main
       )}
 '""";
       {submitStatus === 'error' && ("""";
@@ -160,7 +151,6 @@ const ContactForm = (props: any) => {
               placeholder="Enter your email address""";
               />;
           </div>;
-
           <div>""";
             <label"""";
               htmlFor="phone"""";
@@ -179,7 +169,6 @@ const ContactForm = (props: any) => {
               />;
           </div>;
         </div>;
-
         <div>""";
           <label"""";
             htmlFor="comp"""";
@@ -197,7 +186,6 @@ const ContactForm = (props: any) => {
             placeholder="Enter your comp name""";
             />;
         </div>;
-
         <div>""";
           <label"""";
             htmlFor="service"""";
@@ -225,7 +213,6 @@ const ContactForm = (props: any) => {
             <option value="other">Other</option>;
           </select>;
         </div>;
-
         <div>""";
           <label"""";
             htmlFor="message"""";

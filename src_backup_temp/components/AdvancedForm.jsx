@@ -2,13 +2,11 @@ import {useState, useEffect, useCallback} from 'react';';
 import {motion, AnimatePresence} from 'framer-motion';';
 import {Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building} from 'lucide-react';
 ;
-<<<<<<< HEAD
 export const AdvancedForm = ("props": "any) => {;
     const { trackEvent", trackConversion } = useAnalytics({"enableTracking": "enableAnalytics",;
         "enableUserBehaviorTracking": "true;"}) ;
     const [formData, setFormData] = useState ({/* empty */}) ;
     const [validation, setValidation] = useState ({/* empty */}) ;
-=======
 export const AdvancedForm = (props: any) => {
     const { trackEvent, trackConversion } = useAnalytics({enableTracking: enableAnalytics,
         enableUserBehaviorTracking: true;}
@@ -17,7 +15,6 @@ export const AdvancedForm = (props: any) => {
     );
     const [validation, setValidation] = useState ({/* empty */}
     );
->>>>>>> main
     const [isSubmitting, setIsSubmitting] = useState (false) ;
     const [isSubmitted, setIsSubmitted] = useState (false) ;
     const [showPassword, setShowPassword] = useState ({/* empty */}
@@ -25,7 +22,6 @@ export const AdvancedForm = (props: any) => {
     const [progress, setProgress] = useState (0) ;
     // Initialize form data and validation;
     useEffect(() => {}        const initialValidation = {};
-<<<<<<< HEAD
         fields.forEach(field => {;
 import React from "react";
 import { useState, useEffect, useCallback } from "react";,"});,"})","});,"})","});,"})";
@@ -403,7 +399,6 @@ export const AdvancedForm = ("props": "any) => {;","});,"})";
 """"";,"});,"})"""""";
     const {trackEvent, trackConversion} = useAnalytics({"enableTracking": "enableAnalytics",;
 "enableUserBehaviorTracking": "true"});
-=======
         fields.forEach(field => {
 import React from "react"
 import { useState, useEffect, useCallback } from "react";,"}
@@ -1169,7 +1164,6 @@ export const AdvancedForm = (props: any) => {;,"}
     );,"})""""""
     const {trackEvent, trackConversion} = useAnalytics({enableTracking: enableAnalytics,
 enableUserBehaviorTracking: true})
->>>>>>> main
 }
     const [formData, setFormData] = useState({});
 }
@@ -1181,7 +1175,6 @@ enableUserBehaviorTracking: true})
 }
     const [showPassword, setShowPassword] = useState({});
 }
-<<<<<<< HEAD
     const [progress, setProgress] = useState(0);""""""";
 export const AdvancedForm = ("props": "any) => {";"""";
 export const AdvancedForm = memo(({ fields", onSubmit, title = "Contact Us", subtitle = "Get in touch with our team", submitText = "Send Message", className = "", enableAnalytics = true, showProgressBar = true }) => {;framer-motion";;react"framer - motion",lucide-react";&apos;&apos;
@@ -1190,7 +1183,6 @@ export const AdvancedForm = ("props": "any) => {";
 """}";
     const {trackEvent, trackConversion} = useAnalytics({"enableTracking": "enableAnalytics",;
         "enableUserBehaviorTracking": "true"});
-=======
     const [progress, setProgress] = useState(0);"""""""
 export const AdvancedForm = (props: any) => {";""""
 export const AdvancedForm = memo(({ fields, onSubmit, title = "Contact Us", subtitle = "Get in touch with our team", submitText = "Send Message", className = "", enableAnalytics = true, showProgressBar = true }) => {;framer-motion";react"framer - motion",lucide-react";&apos;&apos
@@ -1199,7 +1191,6 @@ export const AdvancedForm = (props: any) => {"
 ""}"
     const {trackEvent, trackConversion} = useAnalytics({enableTracking: enableAnalytics,
         enableUserBehaviorTracking: true})
->>>>>>> main
 }
     const [formData, setFormData] = useState({});
 }
@@ -1226,7 +1217,6 @@ const initialValidation = {}
                 "message": ",;
 "isTouched": "false"}});
 }
-<<<<<<< HEAD
 &apos;
 &apos;&apos;
             initialData[field.name] = field.type === &apos;checkbox&apos; ? false : "&apos;
@@ -1235,7 +1225,6 @@ const initialValidation = {}
 "message": '',;
                 "isTouched": "false;
             "}}) ;
-=======
 &apos
 &apos;&apos
             initialData[field.name] = field.type === &apos;checkbox&apos; ? false : &apos
@@ -1245,13 +1234,11 @@ message: '',
                 isTouched: false
             }}
     );
->>>>>>> main
         setFormData(initialData) ;
         setValidation(initialValidation) }, [fields]) ;
     // Update progress based on filled fields;
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -1263,7 +1250,6 @@ const;const;const field = fields.find(f => f.name === name);
             return null;
         // comment;
         if (field.required) {}";
-
             if (typeof value === &apos;boolean&apos; && !value) {}";
 ";
                 return "This field is required"}";
@@ -1272,7 +1258,6 @@ const;const;const field = fields.find(f => f.name === name);
                 return &apos;This field is required&apos}
 ;
             if (typeof value === &apos;string&apos; && value.trim() === &apos;&apos) {}";
-
                 return &apos;This field is required&apos}";
         }";
         // comment;
@@ -1295,7 +1280,6 @@ const;const;const field = fields.find(f => f.name === name);
             if (field.type === &apos;email&apos; && stringValue) {}&apos;&apos;
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailPattern.test(stringValue)) {}";
-
                     return &apos;Please enter a valid email address&apos}";
             }
 ;
@@ -1303,7 +1287,6 @@ const;const;const field = fields.find(f => f.name === name);
             if (field.type === &apos;tel&apos; && stringValue) {}&apos;&apos;
                 const phonePattern = /^[\+]?[1-9][\d]{0,15}$/;
                 if (!phonePattern.test(stringValue.replace(/[\s\-\(\)]/g))) {}";
-
 &apos;
 &apos;&apos;
                     return &apos;Please enter a valid phone number&apos}";
@@ -1474,7 +1457,6 @@ const;const;const field = fields.find(f => f.name === name);
 ;
             // comment;
             if (enableAnalytics) {}";
-
                 trackEvent(&apos;form&apos,validation_error&apos,form_submission_failed&apos, null, {}";
 ";"";
                 trackEvent("form", validation_error",form_submission_failed", null, {}
@@ -1541,13 +1523,11 @@ const;const;const field = fields.find(f => f.name === name);
 ;
             // comment;
             if (enableAnalytics) {}";
-
                 trackEvent(&apos;form&apos,submission_error&apos,form_failed&apos, null, {}";
 ";
 "";
                     "error": "error instanceof Error ? error.message  : "Unknown error"""})}"",;
             // comment;
-
 &apos;
 &apos;&apos,;
                     "error": "error instanceof Error ? error.message : &apos",Unknown error&apos,&apos,"})}&apos;&apos;
@@ -1815,7 +1795,6 @@ const;const;const field = fields.find(f => f.name === name);
 }    if(isSubmitted) {}
 ;
         return (<motion.div initial = {}
-<<<<<<< HEAD
 ;
   {"opacity": "0>;
 "scale": 0.9"}} animate = {}
@@ -1829,11 +1808,8 @@ const;const;const field = fields.find(f => f.name === name);
         </h3>"";";
         <p className="text-green-600 "dark": "text-green-300">"",",;
           Your message has been sent successfully. We"ll get back to you soon!,;
-=======
-
   {opacity: 0>
 scale: 0.9}} animate = {}
-
   {opacity: 1,
 scale: 1 "",">
 ""}} className="text-center p-8 bg-green-50 dark: bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">"","
@@ -1843,7 +1819,6 @@ scale: 1 "",">
         "";"
         <p className="text-green-600 dark:text-green-300">",",
           Your message has been sent successfully. We"ll get back to you soon!,
->>>>>>> main
         </p>,      </motion.div>)}
 ;
     return (<motion.div initial = {}
@@ -1883,7 +1858,6 @@ scale: 1 "",">
               <Send className="w-5 h-5"   />              {submitText"}
 ;
             </>) }
-<<<<<<< HEAD
 ;
         </motion.button>;
   {"opacity": "0", "scale": "0.9"}} animate = {}
@@ -1907,11 +1881,8 @@ scale: 1 "",">
           Your message has been sent successfully. We"ll get back to you soon!"",;
         <p className="text-green-600 "dark": "text-green-300">"","";
           Your message has been sent successfully. We&apos,ll get back to you soon!";
-=======
-
         </motion.button>
   {opacity: 0, scale: 0.9}} animate = {}
-
   {opacity: 1,
   scale: 1 &apos,&apos,",
 &apos,&apos,"&apos}} className="&apos;text-center" p-8 bg-green-50 dark: bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700&apos,>"&apos,&apos,&apos;&apos;"
@@ -1931,7 +1902,6 @@ scale: 1 "",">
           Your message has been sent successfully. We"ll get back to you soon!",
         <p className="text-green-600 dark:text-green-300">",""
           Your message has been sent successfully. We&apos,ll get back to you soon!"
->>>>>>> main
         </p>      </motion.div>)}
 ;
     return (<motion.div initial = {}
@@ -2066,10 +2036,8 @@ scale: 1 "",">
 ";
 }";
 ";
-
   } catch (error) {console.error(error);}
 export default Component;
-
 </motion>;
 </motion>;
 </motion>;
