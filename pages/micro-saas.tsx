@@ -822,7 +822,7 @@ const microSaaSProducts = [
     marketPrice: '$600 - $3,000/month',
     link: 'https://ziontechgroup.com/ai-multi-modal-intelligence',
     contact: '+1 302 464 0950'
-  }
+  },
 
   // Cloud & Infrastructure Solutions
   {
