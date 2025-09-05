@@ -15,7 +15,7 @@ class AutomatedTestingSuite {
   async runUnitTests() {
     try {
       // Run Jest tests
-      const result = execSync('npm test -- --passWithNoTests', { "encoding": 'utf8' };);
+      const result = execSync('npm test -- --passWithNoTests', { "encoding": 'utf8' });
       
       this.testResults.unit.passed = 1;
       this.testResults.unit.total = 1;
