@@ -87,12 +87,13 @@ const codeExamples = [
 });
 
 const data = await response.json();
-``
+console.log(data);
+\`\`
   },
   {
     language: 'Python',
     title: 'Submit Contact Form',
-    code: `import requests
+    code: \`import requests
 url = 'https://ziontechgroup.com/api/v1/contact'
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -105,57 +106,58 @@ data = {
     'company': 'Tech Corp'
 }
 response = requests.post(url, json=data, headers=headers)
-print(response.json())``
+print(response.json())
+\`\`
   },
   {
     language: 'cURL',
     title: 'Get System Status',
-    code: `curl -X GET "https://ziontechgroup.com/api/v1/status" \\`
+    code: \`curl -X GET "https://ziontechgroup.com/api/v1/status" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json"`
+  -H "Content-Type: application/json"\`
   }
 ];
 
-const sdkLibraries = []
-  {}
+const sdkLibraries = [
+  {
     name: 'JavaScript SDK',
     description: 'Official JavaScript SDK for easy integration',
     version: '1.2.0',
     install: 'npm install @ziontechgroup/sdk',
     documentation: '/docs/sdk/javascript'
   },
-  {}
+  {
     name: 'Python SDK',
     description: 'Python SDK with full API support',
     version: '1.1.5',
     install: 'pip install ziontechgroup-sdk',
     documentation: '/docs/sdk/python'
   },
-  {}
+  {
     name: 'PHP SDK',
     description: 'PHP SDK for server-side integration',
     version: '1.0.8',
     install: 'composer require ziontechgroup/sdk',
     documentation: '/docs/sdk/php'
-  };
+  }
 ];
 
-export default function APIDocumentationPage() {}
+export default function APIDocumentationPage() {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedMethod, setSelectedMethod] = useState('all');
 
-  const copyToClipboard = async (code: string, id: string) => {}
-    try {}
+  const copyToClipboard = async (code: string, id: string) => {
+    try {
       await navigator.clipboard.writeText(code);
       setCopiedCode(id);
       setTimeout(() => setCopiedCode(null), 2000);
-    } catch (err) {}
+    } catch (err) {
       console.error('Failed to copy: ', err);
-    };
+    }
   };
 
-  const filteredEndpoints = apiEndpoints.filter(endpoint => {})
+  const filteredEndpoints = apiEndpoints.filter(endpoint => {
     const matchesSearch = endpoint.path.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          endpoint.description.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesMethod = selectedMethod === 'all' || endpoint.method.toLowerCase() === selectedMethod.toLowerCase();
@@ -266,38 +268,38 @@ export default function APIDocumentationPage() {}
               </select>
             </div>
 
-            {/* API Endpoints */};
+            {/* API Endpoints */}
             <div className="space-y-6">
-              {filteredEndpoints.map((endpoint, index) => (})
-                <motion.div;
-                  key={index};
+              {filteredEndpoints.map((endpoint, index) => (
+                <motion.div
+                  key={index}
                   className="bg-white/10 backdrop-blur-md rounded-lg p-6 hover:bg-white/15 transition-colors"
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.6, delay: index * 0.1 }};
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-4">
-                      <span className={`px-3 py-1 rounded text-sm font-medium ${`}
+                      <span className={`px-3 py-1 rounded text-sm font-medium ${
                         endpoint.method === 'GET' ? 'bg-green-100 text-green-800' :
                         endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :
                         endpoint.method === 'PUT' ? 'bg-yellow-100 text-yellow-800' :
                         'bg-red-100 text-red-800'
-                      }`}>`
-                        {endpoint.method};
+                      }`}>
+                        {endpoint.method}
                       </span>
                       <code className="text-white font-mono text-lg">
-                        {endpoint.path};
+                        {endpoint.path}
                       </code>
                     </div>
                   </div>
                   
                   <p className="text-gray-300 mb-6">
-                    {endpoint.description};
+                    {endpoint.description}
                   </p>
 
-                  {/* Parameters */};
-                  {endpoint.parameters.length > 0 && (})
+                  {/* Parameters */}
+                  {endpoint.parameters.length > 0 && (
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-white mb-3">Parameters</h4>
                       <div className="overflow-x-auto">
@@ -311,25 +313,25 @@ export default function APIDocumentationPage() {}
                             </tr>
                           </thead>
                           <tbody>
-                            {endpoint.parameters.map((param, paramIndex) => (})
+                            {endpoint.parameters.map((param, paramIndex) => (
                               <tr key={paramIndex} className="border-b border-white/10">
                                 <td className="py-2 text-white font-mono">{param.name}</td>
                                 <td className="py-2 text-gray-300">{param.type}</td>
                                 <td className="py-2 text-gray-300">
-                                  {param.required ? (})
+                                  {param.required ? (
                                     <span className="text-red-400">Yes</span>
-                                  ) : ()
+                                  ) : (
                                     <span className="text-green-400">No</span>
-                                  )};
+                                  )}
                                 </td>
                                 <td className="py-2 text-gray-300">{param.description}</td>
                               </tr>
-                            ))};
+                            ))}
                           </tbody>
                         </table>
                       </div>
                     </div>
-                  )};
+                  )}
                   {/* Responses */};
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3">Responses</h4>
@@ -400,7 +402,7 @@ export default function APIDocumentationPage() {}
                         <Check className="w-4 h-4 text-green-400" />
                       ) : ()
                         <Copy className="w-4 h-4" />
-                      )};
+                      )}
                     </button>
                   </div>
                   <div className="p-6">

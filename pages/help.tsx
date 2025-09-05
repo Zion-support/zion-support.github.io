@@ -197,179 +197,154 @@ export default function HelpPage() {
             </div>
           </div>
         </div>
-      </section>"
-      <section className="py-16">"
-</section>"
-        <div className="container mx-auto px-4">"
-</div>"
-          <div className="max-w-6xl mx-auto">"
-</div>"
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">"
-</h2>
+      </section>
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+              Frequently Asked Questions
             </h2>
-            "
-            <div className="space-y-6">"
-</div>
-                <motion.div;
-                  key={categoryIndex};
+            <div className="space-y-6">
+              {faqCategories.map((category, categoryIndex) => (
+                <motion.div
+                  key={categoryIndex}
                   className="bg-white rounded-lg shadow-lg overflow-hidden"
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ delay: categoryIndex * 0.1 }};
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: categoryIndex * 0.1 }}
                 >
-</motion>
-                  <button;
-                    onClick={() => toggleCategory(category.title)};
-</button>"
-                    <div className="flex items-center gap-4">"
-</div>"
-                      <category.icon className="w-6 h-6 text-blue-600" />"
-</category>"
-                      <h3 className="text-xl font-semibold text-gray-900">"
-</h3>
+                  <button
+                    onClick={() => toggleCategory(category.title)}
+                    className="w-full px-6 py-4 text-left focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    <div className="flex items-center gap-4">
+                      <category.icon className="w-6 h-6 text-blue-600" />
+                      <h3 className="text-xl font-semibold text-gray-900">
+                        {category.title}
                       </h3>
-                    </div>"
-                      <ChevronDown className="w-5 h-5 text-gray-500" />"
-</ChevronDown>"
-                      <ChevronRight className="w-5 h-5 text-gray-500" />"
-</ChevronRight>
+                      {expandedCategories.includes(category.title) ? (
+                        <ChevronDown className="w-5 h-5 text-gray-500" />
+                      ) : (
+                        <ChevronRight className="w-5 h-5 text-gray-500" />
+                      )}
+                    </div>
                   </button>
                   
                   <AnimatePresence>
-</AnimatePresence>
-                      <motion.div;
-                        initial={{ height: 0, opacity: 0 }};
-                        animate={{ height: 'auto', opacity: 1 }}'
-                        exit={{ height: 0, opacity: 0 }};
-                        transition={{ duration: 0.3 }}'
+                    {expandedCategories.includes(category.title) && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-</motion>"
-                        <div className="px-6 pb-6">"
-</div>"
-                          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">"
-</div>
-                              <motion.div;
-                                key={articleIndex};
+                        <div className="px-6 pb-6">
+                          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {category.articles.map((article, articleIndex) => (
+                              <motion.div
+                                key={articleIndex}
                                 className="p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors group"
-                                whileHover={{ y: -2 }};
+                                whileHover={{ y: -2 }}
                               >
-</motion>"
-                                <div className="flex items-start justify-between mb-2">"
-</div>"
-                                  <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">"
-</span>
-                                  </span>"
-                                  <span className="text-xs text-gray-500">"
-</span>
+                                <div className="flex items-start justify-between mb-2">
+                                  <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
+                                    {article.category}
                                   </span>
-                                </div>"
-                                <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600">"
-</h4>
-                                </h4>"
-                                <p className="text-sm text-gray-600">"
-</p>
+                                  <span className="text-xs text-gray-500">
+                                    {article.readTime}
+                                  </span>
+                                </div>
+                                <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600">
+                                  {article.title}
+                                </h4>
+                                <p className="text-sm text-gray-600">
+                                  {article.excerpt}
                                 </p>
                               </motion.div>
-                            ))};
+                            ))}
                           </div>
                         </div>
                       </motion.div>
-                    )};
+                    )}
                   </AnimatePresence>
                 </motion.div>
-              ))};
+              ))}
             </div>
           </div>
         </div>
-      </section>"
-      <section className="py-16 bg-white">"
-</section>"
-        <div className="container mx-auto px-4">"
-</div>"
-          <div className="max-w-4xl mx-auto">"
-</div>"
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">"
-</h2>
+      </section>
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+              Contact Support
             </h2>
-            "
-            <div className="space-y-6">"
-</div>
-                <motion.div;
-                  key={index};
+            <div className="space-y-6">
+              {supportOptions.map((option, index) => (
+                <motion.div
+                  key={index}
                   className="bg-gray-50 rounded-lg p-6"
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ delay: index * 0.1 }};
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
                 >
-</motion>"
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">"
-</h3>
-                  </h3>"
-                  <p className="text-gray-600">"
-</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                    {option.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {option.description}
                   </p>
                 </motion.div>
-              ))};
+              ))}
             </div>
           </div>
         </div>
-      </section>"
-      <section className="py-16 bg-blue-600">"
-</section>"
-        <div className="container mx-auto px-4">"
-</div>"
-          <div className="max-w-4xl mx-auto text-center">"
-</div>"
-            <h2 className="text-3xl font-bold text-white mb-6">"
-</h2>
-            </h2>"
-            <p className="text-xl text-blue-100 mb-8">"
-</p>
+      </section>
+      <section className="py-16 bg-blue-600">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Still Need Help?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Our support team is here to help you succeed
             </p>
-            "
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">"
-</div>"
-              <div className="bg-white/10 rounded-lg p-6">"
-</div>"
-                <Mail className="w-8 h-8 text-white mx-auto mb-4" />"
-</Mail>"
-                <h3 className="text-lg font-semibold text-white mb-2">Email Support</h3>"
-                <p className="text-blue-100 mb-4">Get help via email</p>"
-                <a;"
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white/10 rounded-lg p-6">
+                <Mail className="w-8 h-8 text-white mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Email Support</h3>
+                <p className="text-blue-100 mb-4">Get help via email</p>
+                <a
                   href="mailto:support@ziontechgroup.com"
                   className="text-white hover:text-blue-200 font-medium"
                 >
-</a>
+                  support@ziontechgroup.com
                 </a>
               </div>
-              "
-              <div className="bg-white/10 rounded-lg p-6">"
-</div>"
-                <Phone className="w-8 h-8 text-white mx-auto mb-4" />"
-</Phone>"
-                <h3 className="text-lg font-semibold text-white mb-2">Phone Support</h3>"
-                <p className="text-blue-100 mb-4">Call us directly</p>"
-                <a;"
+              <div className="bg-white/10 rounded-lg p-6">
+                <Phone className="w-8 h-8 text-white mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Phone Support</h3>
+                <p className="text-blue-100 mb-4">Call us directly</p>
+                <a
                   href="tel:+15551234567"
                   className="text-white hover:text-blue-200 font-medium"
                 >
-</a>
+                  +1 (555) 123-4567
                 </a>
               </div>
-              "
-              <div className="bg-white/10 rounded-lg p-6">"
-</div>"
-                <MessageCircle className="w-8 h-8 text-white mx-auto mb-4" />"
-</MessageCircle>"
-                <h3 className="text-lg font-semibold text-white mb-2">Live Chat</h3>"
-                <p className="text-blue-100 mb-4">Chat with our team</p>"
-                <button className="text-white hover:text-blue-200 font-medium">"
-</button>
+              <div className="bg-white/10 rounded-lg p-6">
+                <MessageCircle className="w-8 h-8 text-white mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Live Chat</h3>
+                <p className="text-blue-100 mb-4">Chat with our team</p>
+                <button className="text-white hover:text-blue-200 font-medium">
+                  Start Chat
                 </button>
               </div>
             </div>
           </div>
         </div>
       </section>
-    </div>"
+    </div>
+  );
+}
