@@ -54,12 +54,10 @@ import {
   Zap,
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
-
 export default function Services() {
   const title = 'Services — Zion Tech Group';
   const description =
     'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
-
   return (
     <PageTransition>
       {/* Hero Section */}
@@ -2080,7 +2078,6 @@ export default function Services() {
               solutions, with transparent costs and exceptional ROI.
             </p>
           </div>
-
           {/* Pricing Tiers */}
           <div className="grid grid-cols-1 lg: gri d-cols-3 gap-8 mb-16">
             <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover: shado w-lg transition-all duration-300">
@@ -2120,7 +2117,6 @@ export default function Services() {
                 </div>
               </div>
             </div>
-
             <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover: shado w-lg transition-all duration-300 ring-2 ring-blue-500">
               <div className="text-center mb-6">
                 <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 mb-2">
@@ -2161,7 +2157,6 @@ export default function Services() {
                 </div>
               </div>
             </div>
-
             <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover: shado w-lg transition-all duration-300">
               <div className="text-center mb-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -2200,7 +2195,6 @@ export default function Services() {
               </div>
             </div>
           </div>
-
           {/* Market Positioning */}
           <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
             <div className="text-center mb-8">
@@ -2212,7 +2206,6 @@ export default function Services() {
                 deliver solutions that drive real business value.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">
               <div className="text-center">
                 <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 mb-4">
@@ -2262,7 +2255,6 @@ export default function Services() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm: p y-32">
         <div className="mx-auto max-w-7xl px-6 lg: p x-8">
@@ -2311,7 +2303,6 @@ import {
   ArrowRight, CheckCircle, Star, Clock, Users, Shield, Zap, TrendingUp, Award, Globe,
   Brain, Cloud, Cpu, Lock, Rocket, Heart, Code, Network, Database, Target
 } from 'lucide-react';
-
 export default function ServicesOverviewPage() {
   const stats = [
     { number: '100+', label: 'Services Available', icon: Globe },
@@ -2321,7 +2312,6 @@ export default function ServicesOverviewPage() {
     { number: '24/7', label: 'Support Available', icon: Clock },
     { number: '30-60%', label: 'Cost Savings', icon: Shield },
   ];
-
   const benefits = [
     {
       icon: Zap,
@@ -2354,7 +2344,6 @@ export default function ServicesOverviewPage() {
       description: 'Rigorous testing and quality control processes ensure reliable, scalable, and maintainable solutions.'
     }
   ];
-
   const serviceCategories = [
     {
       title: "AI & Machine Learning",
@@ -2477,7 +2466,6 @@ export default function ServicesOverviewPage() {
       href: "/services/micro-saas"
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -2486,7 +2474,6 @@ export default function ServicesOverviewPage() {
         <meta name="keywords" content="technology services, AI solutions, cybersecurity, cloud services, IoT, quantum computing, blockchain, digital transformation" />
         <link rel="canonical" href="https://ziontechgroup.com/services" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4">
@@ -2501,7 +2488,6 @@ export default function ServicesOverviewPage() {
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -2524,7 +2510,6 @@ export default function ServicesOverviewPage() {
             </div>
           </div>
         </section>
-
         {/* Service Categories Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -2573,7 +2558,6 @@ export default function ServicesOverviewPage() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -2602,7 +2586,6 @@ export default function ServicesOverviewPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -2630,4 +2613,3 @@ export default function ServicesOverviewPage() {
     </>
   );
 }
->>>>>>> origin/merge-pr-11195:pages/services-overview.tsx

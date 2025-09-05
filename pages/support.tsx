@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Headphones, MessageCircle, Mail, Phone, Clock, CheckCircle, ArrowRight, FileText, Video, Users } from 'lucide-react';
 import Layout from "../components/Layout";
-
 const supportOptions = [
   {
     title: 'Live Chat Support',
@@ -42,7 +41,6 @@ const supportOptions = [
     features: ['Screen sharing', 'Remote access', 'Recording', 'Collaboration tools']
   }
 ];
-
 const supportTiers = [
   {
     name: 'Basic Support',
@@ -87,7 +85,6 @@ const supportTiers = [
     channels: ['All Channels']
   }
 ];
-
 const resources = [
   {
     title: 'Documentation',
@@ -118,14 +115,12 @@ const resources = [
     count: '200+ articles'
   }
 ];
-
 const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   hours: '24/7 Support Available'
 };
-
 export default function SupportPage() {
   return (
     <Layout
@@ -140,7 +135,6 @@ export default function SupportPage() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -175,7 +169,6 @@ export default function SupportPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Contact Info */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -216,7 +209,6 @@ export default function SupportPage() {
             </div>
           </div>
         </section>
-
         {/* Support Options */}
         <section id="support-options" className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -233,7 +225,6 @@ export default function SupportPage() {
                 Choose the support option that works best for you
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {supportOptions.map((option, index) => (
                 <motion.div
@@ -248,7 +239,6 @@ export default function SupportPage() {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">{option.title}</h3>
                   <p className="text-gray-600 mb-4 text-center">{option.description}</p>
-                  
                   <div className="space-y-2 mb-6">
                     <div className="flex justify-between text-sm">
                       <span className="text-gray-500">Availability:</span>
@@ -259,7 +249,6 @@ export default function SupportPage() {
                       <span className="font-medium">{option.responseTime}</span>
                     </div>
                   </div>
-
                   <ul className="space-y-2 mb-6">
                     {option.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -268,7 +257,6 @@ export default function SupportPage() {
                       </li>
                     ))}
                   </ul>
-
                   <Link
                     href="/contact"
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
@@ -281,7 +269,6 @@ export default function SupportPage() {
             </div>
           </div>
         </section>
-
         {/* Support Tiers */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -298,7 +285,6 @@ export default function SupportPage() {
                 Choose the support level that matches your needs
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {supportTiers.map((tier, index) => (
                 <motion.div
@@ -315,11 +301,9 @@ export default function SupportPage() {
                       Most Popular
                     </div>
                   )}
-                  
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{tier.name}</h3>
                   <p className="text-gray-600 mb-4">{tier.description}</p>
                   <div className="text-3xl font-bold text-blue-600 mb-6">{tier.price}</div>
-
                   <div className="space-y-4 mb-8">
                     <div className="flex justify-between">
                       <span className="text-gray-500">SLA:</span>
@@ -330,7 +314,6 @@ export default function SupportPage() {
                       <span className="font-medium">{tier.channels}</span>
                     </div>
                   </div>
-
                   <ul className="space-y-3 mb-8">
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-600">
@@ -339,7 +322,6 @@ export default function SupportPage() {
                       </li>
                     ))}
                   </ul>
-
                   <Link
                     href="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
@@ -356,7 +338,6 @@ export default function SupportPage() {
             </div>
           </div>
         </section>
-
         {/* Resources */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -373,7 +354,6 @@ export default function SupportPage() {
                 Find answers quickly with our comprehensive self-service resources
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {resources.map((resource, index) => (
                 <motion.div
@@ -401,7 +381,6 @@ export default function SupportPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">

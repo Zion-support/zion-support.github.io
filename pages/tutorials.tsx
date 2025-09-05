@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { BookOpen, Clock, Users, ArrowRight, Play, Code, Database, Cloud, Shield } from 'lucide-react';
 import Layout from "../components/Layout";
-
 const tutorials = [
   {
     title: 'Building a Full-Stack Web Application with Next.js',
@@ -72,7 +71,6 @@ const tutorials = [
     students: 720
   }
 ];
-
 const categories = [
   { name: 'All', count: 24, active: true },
   { name: 'Web Development', count: 8, active: false },
@@ -82,13 +80,11 @@ const categories = [
   { name: 'Database', count: 2, active: false },
   { name: 'Mobile Development', count: 1, active: false }
 ];
-
 const difficultyLevels = [
   { name: 'Beginner', color: 'bg-green-500', description: 'No prior experience required' },
   { name: 'Intermediate', color: 'bg-yellow-500', description: 'Some programming experience needed' },
   { name: 'Advanced', color: 'bg-red-500', description: 'Strong technical background required' }
 ];
-
 export default function TutorialsPage() {
   return (
     <Layout
@@ -103,7 +99,6 @@ export default function TutorialsPage() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -138,7 +133,6 @@ export default function TutorialsPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Categories Filter */}
         <section className="py-8 bg-white border-b border-gray-200">
           <div className="container mx-auto px-4">
@@ -158,7 +152,6 @@ export default function TutorialsPage() {
             </div>
           </div>
         </section>
-
         {/* Difficulty Levels */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -175,7 +168,6 @@ export default function TutorialsPage() {
                 Tutorials designed for every skill level
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {difficultyLevels.map((level, index) => (
                 <motion.div
@@ -195,7 +187,6 @@ export default function TutorialsPage() {
             </div>
           </div>
         </section>
-
         {/* Tutorials Grid */}
         <section id="tutorials" className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -212,7 +203,6 @@ export default function TutorialsPage() {
                 Learn from our most popular tutorials covering the latest technologies and best practices
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {tutorials.map((tutorial, index) => (
                 <motion.div
@@ -228,7 +218,6 @@ export default function TutorialsPage() {
                       <div className="text-lg font-bold">{tutorial.category}</div>
                     </div>
                   </div>
-
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-4">
                       <span className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">
@@ -242,10 +231,8 @@ export default function TutorialsPage() {
                         {tutorial.difficulty}
                       </span>
                     </div>
-
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{tutorial.title}</h3>
                     <p className="text-gray-600 mb-4">{tutorial.description}</p>
-
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                       <div className="flex items-center">
                         <Clock className="w-4 h-4 mr-1" />
@@ -260,7 +247,6 @@ export default function TutorialsPage() {
                         {tutorial.students} students
                       </div>
                     </div>
-
                     <Link
                       href="#"
                       className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
@@ -274,7 +260,6 @@ export default function TutorialsPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
