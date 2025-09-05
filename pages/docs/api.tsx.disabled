@@ -1,7 +1,9 @@
+import React, { useState } from 'react';
+import Head from 'next/head';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Layout from '../components/Layout';
-import { Code, BookOpen, Shield, Zap, ChevronRight, ExternalLink, Copy, Check } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { Code, BookOpen, Shield, Zap, ChevronRight, ExternalLink, Copy, Check, Globe, Terminal, XCircle } from 'lucide-react';
 
 const endpoints = [
   {
@@ -815,9 +817,5 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
         </section>
       </div>
     </Layout>
-  );
-}
-      </div>
-    </MainLayout>
   );
 }

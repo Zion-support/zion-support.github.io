@@ -18,6 +18,7 @@ import {
   Lock,
   Cpu,
   Bot,
+  Database,
   FileText,
   Image,
   Video,
