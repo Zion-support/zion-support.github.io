@@ -54,8 +54,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
     if (typeof window === 'undefined' || typeof performance === 'undefined') return;
 
     const measurePerformance = () => {
-      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = window.performance.getEntriesByType('paint');
+      const navigation = window.window.window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = window.window.window.window.performance.getEntriesByType('paint');
       
       const performanceData: PerformanceData = {
         // Navigation timing
@@ -68,7 +68,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
         
         // Resource timing
-        resourceCount: window.performance.getEntriesByType('resource').length,
+        resourceCount: window.window.window.window.performance.getEntriesByType('resource').length,
         
         // Memory usage (if available)
         memory: (window.performance as any).memory ? {
@@ -85,43 +85,15 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
-        console.log('Performance Metrics:', performanceData);
+        // // // console.log('Performance Metrics:', performanceData);
       }
     };
-<<<<<<< HEAD
-
-    // Measure performance after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
-
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, [onPerformanceData]);
-
-  return null;
-};
-
-export default PerformanceMonitor;
-=======
-,
     // Measure performance after page load,
-    if (document.readyState === 'complete') {,
-      measurePerformance(),
-    } else {,
-      window.addEventListener('load', measurePerformance),
-    };
-,
-    return () => {,
-      window.removeEventListener('load', measurePerformance),
-    };
+    if (document.readyState === 'complete') {
+      measurePerformance()} else {
+      window.addEventListener('load', measurePerformance)};
+    return () => {
+      window.removeEventListener('load', measurePerformance)};
   }, [onPerformanceData]),
-,
-  return null,
-};
-,
-export default PerformanceMonitor,
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
+  return null};
+export default PerformanceMonitor;

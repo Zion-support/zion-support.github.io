@@ -7,16 +7,12 @@ export default defineConfig({
     react({
       include: '**/*.{jsx,js,ts,tsx}',
       fastRefresh: true,
-      jsxRuntime: 'automatic',
-    }),
-    splitVendorChunkPlugin(),
-  ],
+      jsxRuntime: 'automatic'}),
+    splitVendorChunkPlugin()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
-  },
+      '@': path.resolve(__dirname, './src')},
+    extensions: ['.js', '.jsx', '.ts', '.tsx']},
   build: {
     target: 'esnext',
     minify: 'terser',
@@ -78,20 +74,17 @@ export default defineConfig({
         unsafe_math: true,
         unsafe_proto: true,
         unsafe_regexp: true,
-        unsafe_undefined: true,
-      },
+        unsafe_undefined: true},
       mangle: {
         safari10: true,
         properties: {
-          regex: /^_/,
-        }
+          regex: /^_/}
       }
     },
     chunkSizeWarningLimit: 1000,
     reportCompressedSize: false,
     emptyOutDir: true,
-    assetsInlineLimit: 4096,
-  },
+    assetsInlineLimit: 4096},
   optimizeDeps: {
     include: [
       'react',
@@ -122,37 +115,30 @@ export default defineConfig({
     ],
     exclude: ['@radix-ui/react-icons'],
     esbuildOptions: {
-      target: 'esnext',
-    }
+      target: 'esnext'}
   },
   css: {
-    devSourcemap: false,
-  },
+    devSourcemap: false},
   esbuild: {
-    jsx: 'automatic',
-  },
+    jsx: 'automatic'},
   server: {
     port: 3000,
     host: true,
     open: true,
     cors: true,
     hmr: {
-      overlay: false,
-    },
+      overlay: false},
     fs: {
-      allow: ['..'],
-    }
+      allow: ['..']}
   },
   preview: {
     port: 4173,
     host: true,
-    open: true,
-  },
+    open: true},
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-  },
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)},
   envPrefix: ['VITE_', 'ZION_'],
   experimental: {
     renderBuiltUrl(filename, { hostType }) {

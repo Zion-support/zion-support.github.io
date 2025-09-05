@@ -35,12 +35,7 @@ const generateSitemap = () => {
   writeStream.write(sitemap);
   writeStream.end();
 
-  console.log('Sitemap generated successfully at:', sitemapPath);
+  // // // console.log('Sitemap generated successfully at:', sitemapPath);
 };
-<<<<<<< HEAD
-;
-generateSitemap();
-=======
 
 generateSitemap();
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2

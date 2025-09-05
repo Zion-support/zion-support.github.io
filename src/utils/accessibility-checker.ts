@@ -10,8 +10,7 @@ export const checkAccessibility = () => {
         type: 'missing-alt',
         element: img,
         message: 'Image missing alt text',
-        severity: 'error',
-      });
+        severity: 'error'});
     }
   });
 
@@ -25,8 +24,7 @@ export const checkAccessibility = () => {
         type: 'heading-hierarchy',
         element: heading,
         message: 'Heading level skipped',
-        severity: 'warning',
-      });
+        severity: 'warning'});
     }
     lastLevel = level;
   });

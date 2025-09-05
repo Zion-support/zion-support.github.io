@@ -16,8 +16,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   keywords = 'AI, artificial intelligence, web development, digital transformation, tech solutions',
   image = '/images/og-image.jpg',
   url = 'https://ziontechgroup.com',
-  type = 'website',
-}) => {
+  type = 'website'}) => {
   return (
     <Head>
       <title>{title}</title>
@@ -51,12 +50,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     </Head>
   );
 };
-<<<<<<< HEAD
-
-export default SEOHead;
-=======
-,
-const SEOHead: React.FC<SEOHeadProps> = ({,
+const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Technology Solutions',
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',
   keywords = 'AI services, IT solutions, micro SaaS, technology consulting, cloud migration, cybersecurity, blockchain, web development',
@@ -66,35 +60,30 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
   twitterCard = 'summary_large_image',
   structuredData,
   noindex = false,
-  nofollow = false,
-}) => {,
+  nofollow = false}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`,
   const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : ''),
   const imageUrl = ogImage.startsWith('http') ? ogImage : `https: //zion.app${ogImage}`,
-,
-  const defaultStructuredData = {,
+  const defaultStructuredData = {
     '@context': 'https: //schema.org@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://zion.app',
     logo: 'https://zion.app/logo.png',
     description: 'Leading provider of AI services, IT solutions, and micro SaaS development',
-    address: {,
+    address: {
       '@type': 'PostalAddress',
       addressCountry: 'US'
     },
-    contactPoint: {,
+    contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-555-123-4567',
       contactType: 'customer service'
     },
-    sameAs: [,
+    sameAs: [
       'https: //linkedin.com/company/zion-tech-grouphttps: //twitter.com/ziontechgroup'
-    ],
-  };
-,
+    ]};
   const mergedStructuredData = structuredData || defaultStructuredData,
-,
-  return (,
+  return (
     <Head>,
       {/* Basic Meta Tags */};
       <title>{fullTitle}</title>,
@@ -107,7 +96,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />,
       {/* Canonical URL */};
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />};
-,
       {/* Open Graph Tags */};
       <meta property="og: title" content={fullTitle} />,
       <meta property="og: description" content={description} />,
@@ -142,9 +130,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       <link rel="preconnect" href="https: //fonts.gstatic.com" crossOrigin="anonymous" />,
       <link rel="preconnect" href="https: //www.googletagmanager.com" />,
       {/* Structured Data */};
-      <script,
+      <script
         type="application/ld+json",
-        dangerouslySetInnerHTML={{,
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify(mergedStructuredData)
         }};
       />,
@@ -163,9 +151,5 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />,
       <meta httpEquiv="X-Frame-Options" content="DENY" />,
       <meta httpEquiv="X-XSS-Protection" content="1, mode=block" />,
-    </Head>,
-  ),
-};
-,
-export default SEOHead,
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
+    </Head>)};
+export default SEOHead;

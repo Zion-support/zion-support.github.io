@@ -1,54 +1,44 @@
-import Link from 'next/link';
-import Head from 'next/head';
-import { useState, useEffect, Suspense } from 'react';
-import { ContactInfo, AnimationState } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-import LoadingSpinner from '../components/LoadingSpinner';
-import PerformanceMonitor from '../components/PerformanceMonitor';
+import Link from 'next/link'
+import Head from 'next/head'
+import { useState, useEffect, Suspense } from 'react'
+import { ContactInfo, AnimationState } from '../types'
+import ErrorBoundary from '../components/ErrorBoundary'
+import LoadingSpinner from '../components/LoadingSpinner'
+import PerformanceMonitor from '../components/PerformanceMonitor'
 
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
-    hasError: false,
-  });
+    hasError: false})
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setAnimationState(prev => ({ ...prev, isLoaded: true }));
-    }, 100);
+      setAnimationState(prev => ({ ...prev, isLoaded: true }))
+    }, 100)
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer)
+  }, [])
 
-  if (animationState.hasError) {
-    return (
-      <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+  if(animationState.hasError) {
+    return(<div className="min-h-screen bg-slate-950 flex items-center justify-center">
         <div className="text-center text-white">
           <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
           <button
             onClick={() => window.location.reload()}
-            className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700"
+            className="px-4 py-2 bg-blue-600 rounded-lg hover: bg-blue-700"
           >
             Reload Page
           </button>
         </div>
       </div>
-    );
+    )
   }
 
-  const contact: ContactInfo = {
-    phone: '+1 302 464 0950',
+  const contact: ContactInfo = {phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-    site: 'https://ziontechgroup.com'
-};
-=======
-    site: 'https://ziontechgroup.com',
-  };
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
-  return (
-    <>
+    site: 'https://ziontechgroup.com'}
+  return(<>
       <Head>
         <title>
           Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions
@@ -108,17 +98,13 @@ export default function Home() {
                 addressLocality: 'Middletown',
                 addressRegion: 'DE',
                 postalCode: '19709',
-                addressCountry: 'US',
-              },
+                addressCountry: 'US'},
               contactPoint: {
                 '@type': 'ContactPoint',
                 telephone: contact.phone,
                 contactType: 'customer service',
-                email: contact.email,
-              },
-              sameAs: [contact.site],
-            }),
-          }}
+                email: contact.email},
+              sameAs: [contact.site]})}}
         />
       </Head>
 
@@ -362,10 +348,10 @@ export default function Home() {
           showMetrics={process.env.NODE_ENV === 'development'}
           logMetrics={true}
           onThresholdExceeded={metrics => {
-            console.warn('Performance thresholds exceeded:', metrics);
+            console.warn('Performance thresholds exceeded:', metrics)
           }}
         />
       </ErrorBoundary>
     </>
-  );
+  )
 }

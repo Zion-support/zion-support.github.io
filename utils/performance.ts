@@ -6,15 +6,15 @@ export const measurePerformance = (): PerformanceMetrics | null => {
   }
 
   try {
-    const navigation = performance.getEntriesByType(
+    const navigation = window.window.window.performance.getEntriesByType(
       'navigation'
     )[0] as PerformanceNavigationTiming;
-    const paintEntries = performance.getEntriesByType('paint');
+    const paintEntries = window.window.window.performance.getEntriesByType('paint');
 
     const fcp = paintEntries.find(
       entry => entry.name === 'first-contentful-paint'
     );
-    const lcp = performance.getEntriesByType(
+    const lcp = window.window.window.performance.getEntriesByType(
       'largest-contentful-paint'
     )[0] as PerformanceEntry;
 
@@ -24,7 +24,7 @@ export const measurePerformance = (): PerformanceMetrics | null => {
         return acc + (entry as any).value;
       }, 0);
 
-    const fid = performance.getEntriesByType(
+    const fid = window.window.window.performance.getEntriesByType(
       'first-input'
     )[0] as PerformanceEventTiming;
 
@@ -33,8 +33,7 @@ export const measurePerformance = (): PerformanceMetrics | null => {
       firstContentfulPaint: fcp ? fcp.startTime : 0,
       largestContentfulPaint: lcp ? lcp.startTime : 0,
       cumulativeLayoutShift: cls,
-      firstInputDelay: fid ? fid.processingStart - fid.startTime : 0,
-    };
+      firstInputDelay: fid ? fid.processingStart - fid.startTime : 0};
   } catch (error) {
     console.warn('Error measuring performance:', error);
     return null;
@@ -58,8 +57,7 @@ export const getPerformanceScore = (
     firstContentfulPaint: { good: 1000, needsImprovement: 2000 },
     largestContentfulPaint: { good: 1500, needsImprovement: 3000 },
     cumulativeLayoutShift: { good: 0.05, needsImprovement: 0.1 },
-    firstInputDelay: { good: 50, needsImprovement: 100 },
-  };
+    firstInputDelay: { good: 50, needsImprovement: 100 }};
 
   const getScore = (
     value: number,
@@ -98,8 +96,7 @@ export const getPerformanceScore = (
     firstInputDelay: getScore(
       metrics.firstInputDelay,
       thresholds.firstInputDelay
-    ),
-  };
+    )};
 
   const poorCount = Object.values(scores).filter(
     score => score === 'poor'
@@ -125,19 +122,19 @@ export const logPerformanceMetrics = (
   label = 'Performance Metrics'
 ) => {
   console.group(`🚀 ${label}`);
-  console.log('Load Time:', `${metrics.loadTime.toFixed(2)}ms`);
-  console.log(
+  // // // console.log('Load Time:', `${metrics.loadTime.toFixed(2)}ms`);
+  // // // console.log(
     'First Contentful Paint:',
     `${metrics.firstContentfulPaint.toFixed(2)}ms`
   );
-  console.log(
+  // // // console.log(
     'Largest Contentful Paint:',
     `${metrics.largestContentfulPaint.toFixed(2)}ms`
   );
-  console.log(
+  // // // console.log(
     'Cumulative Layout Shift:',
     metrics.cumulativeLayoutShift.toFixed(4)
   );
-  console.log('First Input Delay:', `${metrics.firstInputDelay.toFixed(2)}ms`);
+  // // // console.log('First Input Delay:', `${metrics.firstInputDelay.toFixed(2)}ms`);
   console.groupEnd();
 };

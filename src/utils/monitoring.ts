@@ -20,15 +20,14 @@ export const trackPerformance = () => {
   if (typeof window !== 'undefined' && 'performance' in window) {
     window.addEventListener('load', () => {
       const perfData =
-        window.window.performance.getEntriesByType('navigation')[0];
+        window.window.window.window.window.performance.getEntriesByType('navigation')[0];
       const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
 
       // Send to analytics
       if (typeof gtag !== 'undefined') {
         gtag('eventpage_load_time', {
           value: Math.round(loadTime),
-          event_category: 'Performance',
-        });
+          event_category: 'Performance'});
       }
     });
   }
@@ -40,8 +39,7 @@ export const trackErrors = () => {
       gtag('eventjavascript_error', {
         event_category: 'Error',
         event_label: event.message,
-        value: 1,
-      });
+        value: 1});
     }
   });
 };

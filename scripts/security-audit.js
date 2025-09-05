@@ -17,7 +17,7 @@ class SecurityAuditor {
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logMessage);
+    // // // console.log(logMessage);
 
     const logFile = path.join(this.logsDir, 'security-audit.log');
     fs.appendFileSync(logFile, logMessage + '\n');
@@ -29,8 +29,7 @@ class SecurityAuditor {
       const output = execSync(command, {
         encoding: 'utf8',
         cwd: '/workspace',
-        stdio: 'pipe',
-      });
+        stdio: 'pipe'});
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output };
     } catch (error) {
@@ -46,13 +45,10 @@ class SecurityAuditor {
       { command: 'npm audit', description: 'NPM security audit' },
       {
         command: 'npm audit --audit-level=moderate',
-        description: 'Moderate level audit',
-      },
+        description: 'Moderate level audit'},
       {
         command: 'npm audit fix --dry-run',
-        description: 'Dry run security fixes',
-      },
-    ];
+        description: 'Dry run security fixes'}];
 
     const results = [];
     for (const audit of audits) {
@@ -73,9 +69,7 @@ class SecurityAuditor {
       summary: {
         auditsRun: 3,
         successfulAudits: 0,
-        failedAudits: 0,
-      },
-    };
+        failedAudits: 0}};
 
     // Calculate summary
     report.security.results.forEach(result => {
@@ -111,7 +105,7 @@ if (require.main === module) {
   auditor
     .start()
     .then(report => {
-      console.log('Security audit completed:', report.summary);
+      // // // console.log('Security audit completed:', report.summary);
       process.exit(0);
     })
     .catch(error => {
