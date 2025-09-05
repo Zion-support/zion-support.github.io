@@ -7,7 +7,7 @@ const nextConfig = {
     ignoreBuildErrors: true
   },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-<<<<<<< HEAD
+  trailingSlash: true,
   
   // Performance optimizations
   experimental: {
@@ -17,9 +17,6 @@ const nextConfig = {
   },
   
   // Image optimization
-=======
-  trailingSlash: true,
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
   images: {
     domains: [
       'localhost',
@@ -30,7 +27,6 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-<<<<<<< HEAD
     minimumCacheTTL: 31536000, // 1 year
   },
   
@@ -48,10 +44,9 @@ const nextConfig = {
           },
         },
       };
-=======
-    minimumCacheTTL: 31536000
-  },
-  webpack: (config, { dev, isServer }) => {
+    }
+    
+    // Development optimizations
     if (dev) {
       config.watchOptions = {
         ignored: [
@@ -91,10 +86,10 @@ const nextConfig = {
         poll: 1000,
         aggregateTimeout: 300
       }
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     }
-    return config
+    
+    return config;
   }
 }
 
-export default nextConfig
+export default nextConfig;
