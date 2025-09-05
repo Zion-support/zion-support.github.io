@@ -99,104 +99,258 @@ const microSaaSServices = [
       "Process 1000+ documents/hour"
     ],
     marketPrice: "$300-500/month",
-    targetUsers: "Legal firms, Healthcare, Finance",
-    setupTime: "3-5 days"
+    targetUsers: "Legal, Finance, Healthcare, Real Estate",
+    setupTime: "1-2 weeks"
   },
   {
     id: 3,
-    title: "Customer Experience Platform",
-    description: "Omnichannel customer engagement with AI chatbots, sentiment analysis, and automated support workflows.",
-    icon: MessageSquare,
-    category: "Customer Service",
-    price: "$399/month",
+    title: "Quantum-Secure Communication Platform",
+    description: "Next-generation encrypted communication using quantum key distribution for ultra-secure messaging and file sharing.",
+    icon: Shield,
+    category: "Security & Privacy",
+    price: "$599/month",
     features: [
-      "AI-powered chatbots",
-      "Sentiment analysis",
-      "Multi-channel support (email, chat, social)",
-      "Automated ticket routing",
-      "Customer journey mapping",
-      "Real-time analytics dashboard"
+      "Quantum key distribution",
+      "End-to-end encryption",
+      "Secure file sharing",
+      "Multi-device synchronization",
+      "Compliance reporting",
+      "Zero-knowledge architecture"
     ],
     benefits: [
-      "Increase customer satisfaction by 35%",
-      "Reduce response time by 70%",
-      "Handle 80% of queries automatically"
+      "Military-grade security",
+      "Future-proof encryption",
+      "Regulatory compliance",
+      "Protect against quantum attacks"
     ],
-    marketPrice: "$500-800/month",
-    targetUsers: "E-commerce, SaaS, Service businesses",
-    setupTime: "1-2 weeks"
+    marketPrice: "$800-1200/month",
+    targetUsers: "Government, Defense, Finance, Healthcare",
+    setupTime: "2-3 weeks"
   },
   {
     id: 4,
-    title: "Inventory Management System",
-    description: "Smart inventory tracking with demand forecasting, automated reordering, and multi-location support.",
+    title: "AI-Powered Supply Chain Optimizer",
+    description: "Intelligent supply chain management with predictive analytics, demand forecasting, and automated optimization.",
     icon: Package,
-    category: "Operations",
-    price: "$249/month",
+    category: "Supply Chain",
+    price: "$449/month",
     features: [
-      "Real-time inventory tracking",
-      "AI demand forecasting",
-      "Automated reorder points",
-      "Multi-location management",
-      "Barcode scanning",
-      "Supplier integration"
+      "Demand forecasting AI",
+      "Inventory optimization",
+      "Supplier risk assessment",
+      "Route optimization",
+      "Real-time tracking",
+      "Sustainability metrics"
     ],
     benefits: [
-      "Reduce stockouts by 60%",
-      "Lower inventory costs by 25%",
-      "Improve order accuracy by 95%"
+      "Reduce inventory costs by 25%",
+      "Improve delivery times by 30%",
+      "Minimize supply chain disruptions",
+      "Enhance sustainability"
     ],
-    marketPrice: "$350-600/month",
-    targetUsers: "Retailers, Manufacturers, Distributors",
-    setupTime: "1-2 weeks"
+    marketPrice: "$600-900/month",
+    targetUsers: "Manufacturing, Retail, Logistics, E-commerce",
+    setupTime: "2-4 weeks"
   },
   {
     id: 5,
-    title: "Social Media Management Suite",
-    description: "AI-powered social media scheduling, content creation, and performance analytics across all platforms.",
-    icon: Globe,
-    category: "Marketing",
-    price: "$179/month",
+    title: "Neural Interface Development Kit",
+    description: "Cutting-edge brain-computer interface platform for accessibility, gaming, and medical applications.",
+    icon: Brain,
+    category: "Emerging Tech",
+    price: "$1,299/month",
     features: [
-      "Content scheduling across platforms",
-      "AI content suggestions",
-      "Performance analytics",
-      "Hashtag optimization",
-      "Competitor analysis",
-      "Team collaboration tools"
+      "EEG signal processing",
+      "Machine learning algorithms",
+      "Real-time neural feedback",
+      "Accessibility tools",
+      "Gaming integration",
+      "Medical monitoring"
     ],
     benefits: [
-      "Increase engagement by 45%",
-      "Save 10+ hours/week",
-      "Improve content performance by 30%"
+      "Enable accessibility solutions",
+      "Revolutionize gaming experiences",
+      "Advance medical research",
+      "Create new interaction paradigms"
     ],
-    marketPrice: "$250-400/month",
-    targetUsers: "Marketing agencies, SMBs, Influencers",
-    setupTime: "2-3 days"
+    marketPrice: "$1,500-2,500/month",
+    targetUsers: "Healthcare, Gaming, Research, Accessibility",
+    setupTime: "4-6 weeks"
   },
   {
     id: 6,
-    title: "Project Management Suite",
-    description: "Advanced project tracking with AI-powered resource allocation, timeline optimization, and team collaboration.",
-    icon: Calendar,
-    category: "Project Management",
-    price: "$329/month",
+    title: "Carbon Footprint Intelligence Platform",
+    description: "Comprehensive carbon tracking and reduction platform with AI-powered recommendations and ESG reporting.",
+    icon: Sprout,
+    category: "Sustainability",
+    price: "$349/month",
     features: [
-      "Task management & tracking",
-      "AI resource allocation",
-      "Timeline optimization",
-      "Team collaboration tools",
-      "Progress reporting",
-      "Integration with 100+ tools"
+      "Real-time carbon tracking",
+      "AI-powered reduction strategies",
+      "ESG reporting automation",
+      "Supply chain analysis",
+      "Carbon offset marketplace",
+      "Regulatory compliance"
     ],
     benefits: [
-      "Increase project delivery by 30%",
-      "Reduce project overruns by 50%",
-      "Improve team productivity by 25%"
+      "Reduce carbon footprint by 40%",
+      "Automate ESG reporting",
+      "Improve sustainability scores",
+      "Meet regulatory requirements"
     ],
     marketPrice: "$450-700/month",
-    targetUsers: "Agencies, Consultants, Enterprises",
-    setupTime: "1 week"
+    targetUsers: "Enterprises, Manufacturing, Retail, Government",
+    setupTime: "2-3 weeks"
+  },
+  {
+    id: 7,
+    title: "Holographic Meeting Platform",
+    description: "Next-generation 3D holographic video conferencing with spatial audio and immersive collaboration tools.",
+    icon: Video,
+    category: "Communication",
+    price: "$799/month",
+    features: [
+      "3D holographic projection",
+      "Spatial audio technology",
+      "Virtual whiteboards",
+      "Gesture recognition",
+      "Multi-user collaboration",
+      "AR/VR integration"
+    ],
+    benefits: [
+      "Revolutionize remote meetings",
+      "Enhance collaboration",
+      "Reduce travel costs",
+      "Improve engagement"
+    ],
+    marketPrice: "$1,000-1,500/month",
+    targetUsers: "Enterprises, Education, Healthcare, Design",
+    setupTime: "3-4 weeks"
+  },
+  {
+    id: 8,
+    title: "AI-Powered Legal Research Assistant",
+    description: "Intelligent legal research platform with case law analysis, contract review, and compliance monitoring.",
+    icon: BookOpen,
+    category: "Legal Tech",
+    price: "$399/month",
+    features: [
+      "Case law analysis",
+      "Contract review AI",
+      "Compliance monitoring",
+      "Legal document generation",
+      "Precedent research",
+      "Risk assessment"
+    ],
+    benefits: [
+      "Reduce research time by 70%",
+      "Improve accuracy by 85%",
+      "Automate routine tasks",
+      "Enhance legal outcomes"
+    ],
+    marketPrice: "$500-800/month",
+    targetUsers: "Law Firms, Corporate Legal, Government",
+    setupTime: "2-3 weeks"
+  },
+  {
+    id: 9,
+    title: "Autonomous Drone Fleet Management",
+    description: "Complete drone operations platform with autonomous flight, payload management, and data analytics.",
+    icon: Rocket,
+    category: "Aerial Solutions",
+    price: "$699/month",
+    features: [
+      "Autonomous flight planning",
+      "Payload management",
+      "Real-time monitoring",
+      "Weather integration",
+      "Data analytics",
+      "Regulatory compliance"
+    ],
+    benefits: [
+      "Reduce operational costs by 50%",
+      "Improve safety by 90%",
+      "Scale operations efficiently",
+      "Generate actionable insights"
+    ],
+    marketPrice: "$900-1,400/month",
+    targetUsers: "Agriculture, Construction, Security, Delivery",
+    setupTime: "3-5 weeks"
+  },
+  {
+    id: 10,
+    title: "Personalized Learning AI Platform",
+    description: "Adaptive learning system that personalizes education content and tracks progress using advanced AI algorithms.",
+    icon: BookOpen,
+    category: "EdTech",
+    price: "$249/month",
+    features: [
+      "Adaptive learning paths",
+      "Progress tracking",
+      "Skill assessment",
+      "Content personalization",
+      "Gamification",
+      "Multi-language support"
+    ],
+    benefits: [
+      "Improve learning outcomes by 60%",
+      "Reduce learning time by 40%",
+      "Personalize education",
+      "Track skill development"
+    ],
+    marketPrice: "$350-550/month",
+    targetUsers: "Schools, Universities, Corporate Training, Online Learning",
+    setupTime: "2-3 weeks"
+  },
+  {
+    id: 11,
+    title: "Smart City Infrastructure Monitor",
+    description: "IoT-powered city infrastructure monitoring with predictive maintenance and real-time optimization.",
+    icon: Building,
+    category: "Smart Cities",
+    price: "$899/month",
+    features: [
+      "IoT sensor integration",
+      "Predictive maintenance",
+      "Real-time monitoring",
+      "Traffic optimization",
+      "Energy management",
+      "Citizen engagement"
+    ],
+    benefits: [
+      "Reduce maintenance costs by 35%",
+      "Improve city efficiency",
+      "Enhance citizen services",
+      "Optimize resource usage"
+    ],
+    marketPrice: "$1,200-1,800/month",
+    targetUsers: "Municipalities, Government, Urban Planning",
+    setupTime: "4-6 weeks"
+  },
+  {
+    id: 12,
+    title: "AI-Powered Mental Health Assistant",
+    description: "Comprehensive mental health platform with AI therapy, mood tracking, and crisis intervention capabilities.",
+    icon: Heart,
+    category: "HealthTech",
+    price: "$199/month",
+    features: [
+      "AI therapy sessions",
+      "Mood tracking",
+      "Crisis intervention",
+      "Medication reminders",
+      "Progress monitoring",
+      "Professional referrals"
+    ],
+    benefits: [
+      "Improve mental health outcomes",
+      "Provide 24/7 support",
+      "Reduce healthcare costs",
+      "Increase accessibility"
+    ],
+    marketPrice: "$250-400/month",
+    targetUsers: "Healthcare, Corporate Wellness, Individuals",
+    setupTime: "1-2 weeks"
   }
 ];
 
@@ -204,10 +358,16 @@ const categories = [
   { name: "All", count: microSaaSServices.length },
   { name: "Analytics & BI", count: microSaaSServices.filter(s => s.category === "Analytics & BI").length },
   { name: "Productivity", count: microSaaSServices.filter(s => s.category === "Productivity").length },
-  { name: "Customer Service", count: microSaaSServices.filter(s => s.category === "Customer Service").length },
-  { name: "Operations", count: microSaaSServices.filter(s => s.category === "Operations").length },
-  { name: "Marketing", count: microSaaSServices.filter(s => s.category === "Marketing").length },
-  { name: "Project Management", count: microSaaSServices.filter(s => s.category === "Project Management").length }
+  { name: "Security & Privacy", count: microSaaSServices.filter(s => s.category === "Security & Privacy").length },
+  { name: "Supply Chain", count: microSaaSServices.filter(s => s.category === "Supply Chain").length },
+  { name: "Emerging Tech", count: microSaaSServices.filter(s => s.category === "Emerging Tech").length },
+  { name: "Sustainability", count: microSaaSServices.filter(s => s.category === "Sustainability").length },
+  { name: "Communication", count: microSaaSServices.filter(s => s.category === "Communication").length },
+  { name: "Legal Tech", count: microSaaSServices.filter(s => s.category === "Legal Tech").length },
+  { name: "Aerial Solutions", count: microSaaSServices.filter(s => s.category === "Aerial Solutions").length },
+  { name: "EdTech", count: microSaaSServices.filter(s => s.category === "EdTech").length },
+  { name: "Smart Cities", count: microSaaSServices.filter(s => s.category === "Smart Cities").length },
+  { name: "HealthTech", count: microSaaSServices.filter(s => s.category === "HealthTech").length }
 ];
 
 export default function MicroSAASPage() {

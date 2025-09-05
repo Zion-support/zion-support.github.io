@@ -98,122 +98,284 @@ const aiServices = [
       'Custom model fine-tuning'
     ],
     benefits: [
-      'Improve accuracy by 95%+ in visual tasks',
-      'Reduce inspection time by 90%',
+      'Improve accuracy by 95%',
+      'Reduce inspection time by 80%',
       'Enable 24/7 automated monitoring',
-      'Lower operational costs by 50%'
+      'Lower operational costs by 60%'
     ],
     marketPrice: '$4,000-8,000/month',
     setupTime: '2-4 weeks',
-    targetUsers: 'Manufacturing, Retail, Security, Healthcare'
+    targetUsers: 'Manufacturing, Security, Retail, Healthcare'
   },
   {
     id: 3,
-    title: 'Natural Language Processing',
-    description: 'Text analysis, sentiment analysis, language understanding, and automated content processing solutions.',
-    icon: MessageSquare,
-    category: 'NLP',
-    price: 'Starting at $2,200/month',
+    title: 'Quantum AI Processing',
+    description: 'Revolutionary quantum-enhanced AI algorithms for solving complex optimization problems and advanced machine learning.',
+    icon: Cpu,
+    category: 'Quantum AI',
+    price: 'Starting at $8,500/month',
     features: [
-      'Text analysis & sentiment detection',
-      'Language translation & localization',
-      'Chatbot & virtual assistant development',
-      'Document summarization & extraction',
-      'Content moderation & filtering',
-      'Voice-to-text & text-to-speech',
-      'Intent recognition & classification',
-      'Multi-language support'
+      'Quantum machine learning algorithms',
+      'Quantum optimization solutions',
+      'Quantum neural networks',
+      'Hybrid classical-quantum models',
+      'Quantum data processing',
+      'Advanced cryptography',
+      'Quantum simulation',
+      'Real-time quantum computing'
     ],
     benefits: [
-      'Process 10,000+ documents per hour',
-      'Improve customer satisfaction by 35%',
-      'Reduce content moderation costs by 70%',
-      'Enable multilingual operations'
+      'Solve previously intractable problems',
+      'Exponential speedup for specific tasks',
+      'Breakthrough optimization results',
+      'Future-proof AI architecture'
     ],
-    marketPrice: '$3,500-7,000/month',
-    setupTime: '2-3 weeks',
-    targetUsers: 'Customer service, Content platforms, E-learning, Legal'
+    marketPrice: '$12,000-25,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Research, Finance, Pharmaceuticals, Defense'
   },
   {
     id: 4,
-    title: 'AI-Powered Analytics',
-    description: 'Intelligent data analysis with predictive insights, anomaly detection, and automated reporting.',
-    icon: BarChart3,
-    category: 'Analytics',
-    price: 'Starting at $2,500/month',
+    title: 'Autonomous AI Agents',
+    description: 'Self-managing AI agents that can perform complex tasks, make decisions, and adapt to changing environments autonomously.',
+    icon: Bot,
+    category: 'Autonomous Systems',
+    price: 'Starting at $4,200/month',
     features: [
-      'Predictive analytics & forecasting',
-      'Anomaly detection & alerting',
-      'Automated report generation',
-      'Real-time data visualization',
-      'Pattern recognition & insights',
-      'Custom dashboard creation',
-      'Data quality assessment',
-      'Trend analysis & recommendations'
+      'Self-learning AI agents',
+      'Multi-agent coordination',
+      'Autonomous decision making',
+      'Environment adaptation',
+      'Task planning & execution',
+      'Human-AI collaboration',
+      'Continuous learning',
+      'Risk assessment & mitigation'
     ],
     benefits: [
-      'Increase decision speed by 60%',
-      'Identify opportunities 3x faster',
-      'Reduce false positives by 80%',
-      'Improve forecast accuracy by 40%'
+      'Reduce human intervention by 90%',
+      'Improve task completion by 75%',
+      'Enable 24/7 autonomous operations',
+      'Scale operations without limits'
     ],
-    marketPrice: '$4,000-9,000/month',
-    setupTime: '2-4 weeks',
-    targetUsers: 'Finance, Marketing, Operations, Sales teams'
+    marketPrice: '$6,000-12,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Manufacturing, Logistics, Customer Service, Finance'
   },
   {
     id: 5,
-    title: 'AI Chatbots & Virtual Assistants',
-    description: 'Intelligent conversational AI for customer service, sales, and internal operations automation.',
-    icon: Bot,
-    category: 'Conversational AI',
-    price: 'Starting at $1,800/month',
+    title: 'Neural Interface AI',
+    description: 'Brain-computer interface AI that enables direct neural control and communication with machines and systems.',
+    icon: Brain,
+    category: 'Neural Interfaces',
+    price: 'Starting at $6,500/month',
     features: [
-      'Multi-channel chatbot deployment',
-      'Natural language understanding',
-      'Context-aware conversations',
-      'Integration with CRM & databases',
-      'Voice & text capabilities',
-      'Escalation to human agents',
-      'Analytics & performance tracking',
-      'Custom personality & branding'
+      'EEG signal interpretation',
+      'Neural pattern recognition',
+      'Thought-to-action translation',
+      'Accessibility applications',
+      'Medical monitoring',
+      'Gaming interfaces',
+      'Prosthetic control',
+      'Cognitive enhancement'
     ],
     benefits: [
-      'Handle 80% of customer queries automatically',
-      'Reduce response time by 90%',
-      'Increase customer satisfaction by 40%',
-      'Lower support costs by 60%'
+      'Enable accessibility solutions',
+      'Revolutionize human-machine interaction',
+      'Advance medical treatments',
+      'Create new interaction paradigms'
     ],
-    marketPrice: '$3,000-6,000/month',
-    setupTime: '1-2 weeks',
-    targetUsers: 'E-commerce, SaaS, Healthcare, Education'
+    marketPrice: '$8,000-15,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Healthcare, Gaming, Accessibility, Research'
   },
   {
     id: 6,
-    title: 'AI Content Generation',
-    description: 'Automated content creation for marketing, documentation, and creative writing using advanced AI models.',
-    icon: FileText,
-    category: 'Content AI',
-    price: 'Starting at $1,500/month',
+    title: 'AI-Powered Drug Discovery',
+    description: 'Advanced AI platform for accelerating drug discovery, molecular design, and pharmaceutical research.',
+    icon: Heart,
+    category: 'Pharmaceutical AI',
+    price: 'Starting at $12,000/month',
     features: [
-      'Automated content writing',
-      'SEO-optimized content generation',
-      'Multi-language content creation',
-      'Brand voice customization',
-      'Content planning & scheduling',
-      'Plagiarism detection & originality',
-      'A/B testing for content performance',
-      'Integration with CMS platforms'
+      'Molecular design AI',
+      'Drug-target interaction prediction',
+      'Clinical trial optimization',
+      'Side effect prediction',
+      'Drug repurposing analysis',
+      'Biomarker discovery',
+      'Personalized medicine',
+      'Regulatory compliance'
     ],
     benefits: [
-      'Increase content production by 500%',
-      'Reduce content creation costs by 70%',
-      'Improve SEO rankings by 45%',
-      'Maintain consistent brand voice'
+      'Reduce drug discovery time by 70%',
+      'Lower development costs by 50%',
+      'Improve success rates by 40%',
+      'Enable personalized treatments'
     ],
-    marketPrice: '$2,500-5,000/month',
+    marketPrice: '$15,000-30,000/month',
+    setupTime: '12-24 weeks',
+    targetUsers: 'Pharmaceuticals, Biotech, Research, Healthcare'
+  },
+  {
+    id: 7,
+    title: 'AI Climate Modeling',
+    description: 'Advanced AI systems for climate prediction, environmental monitoring, and sustainability optimization.',
+    icon: Globe,
+    category: 'Environmental AI',
+    price: 'Starting at $5,500/month',
+    features: [
+      'Climate pattern prediction',
+      'Environmental impact analysis',
+      'Carbon footprint optimization',
+      'Renewable energy forecasting',
+      'Ecosystem monitoring',
+      'Disaster prediction',
+      'Sustainability planning',
+      'Policy impact modeling'
+    ],
+    benefits: [
+      'Improve climate predictions by 60%',
+      'Optimize sustainability efforts',
+      'Reduce environmental impact',
+      'Enable data-driven policy making'
+    ],
+    marketPrice: '$7,000-14,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Government, Environmental, Energy, Agriculture'
+  },
+  {
+    id: 8,
+    title: 'AI-Powered Space Exploration',
+    description: 'Advanced AI systems for space mission planning, satellite operations, and extraterrestrial research.',
+    icon: Rocket,
+    category: 'Space AI',
+    price: 'Starting at $15,000/month',
+    features: [
+      'Mission planning optimization',
+      'Satellite constellation management',
+      'Space debris tracking',
+      'Planetary exploration AI',
+      'Communication optimization',
+      'Resource utilization',
+      'Risk assessment',
+      'Autonomous navigation'
+    ],
+    benefits: [
+      'Improve mission success rates',
+      'Optimize space operations',
+      'Enable autonomous space systems',
+      'Advance space exploration'
+    ],
+    marketPrice: '$20,000-40,000/month',
+    setupTime: '12-24 weeks',
+    targetUsers: 'Space Agencies, Aerospace, Research, Defense'
+  },
+  {
+    id: 9,
+    title: 'AI-Powered Financial Trading',
+    description: 'Advanced AI trading systems with real-time market analysis, risk management, and automated trading strategies.',
+    icon: DollarSign,
+    category: 'FinTech AI',
+    price: 'Starting at $7,500/month',
+    features: [
+      'Real-time market analysis',
+      'Algorithmic trading strategies',
+      'Risk management systems',
+      'Portfolio optimization',
+      'Fraud detection',
+      'Regulatory compliance',
+      'High-frequency trading',
+      'Sentiment analysis'
+    ],
+    benefits: [
+      'Increase trading profits by 35%',
+      'Reduce risk exposure by 50%',
+      'Enable 24/7 trading',
+      'Improve decision speed'
+    ],
+    marketPrice: '$10,000-20,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Banks, Hedge Funds, Trading Firms, FinTech'
+  },
+  {
+    id: 10,
+    title: 'AI-Powered Creative Studio',
+    description: 'Comprehensive AI platform for content creation, design, music, and multimedia production.',
+    icon: Camera,
+    category: 'Creative AI',
+    price: 'Starting at $2,200/month',
+    features: [
+      'AI content generation',
+      'Image & video editing',
+      'Music composition',
+      '3D modeling & animation',
+      'Copywriting & storytelling',
+      'Brand design',
+      'Social media content',
+      'Multimedia production'
+    ],
+    benefits: [
+      'Reduce content creation time by 80%',
+      'Lower production costs by 60%',
+      'Enable unlimited creativity',
+      'Scale content production'
+    ],
+    marketPrice: '$3,000-6,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'Marketing, Media, Entertainment, Design'
+  },
+  {
+    id: 11,
+    title: 'AI-Powered Cybersecurity',
+    description: 'Advanced AI security systems with threat detection, automated response, and predictive security analytics.',
+    icon: Shield,
+    category: 'Security AI',
+    price: 'Starting at $4,800/month',
+    features: [
+      'Threat detection & prevention',
+      'Automated incident response',
+      'Behavioral analysis',
+      'Vulnerability assessment',
+      'Security orchestration',
+      'Compliance monitoring',
+      'Zero-trust architecture',
+      'Predictive security'
+    ],
+    benefits: [
+      'Detect threats 10x faster',
+      'Reduce false positives by 85%',
+      'Automate 90% of security tasks',
+      'Prevent 99.9% of attacks'
+    ],
+    marketPrice: '$6,500-13,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'Enterprises, Government, Healthcare, Finance'
+  },
+  {
+    id: 12,
+    title: 'AI-Powered Personal Assistant',
+    description: 'Advanced personal AI assistant with natural language processing, task automation, and intelligent scheduling.',
+    icon: Users,
+    category: 'Personal AI',
+    price: 'Starting at $199/month',
+    features: [
+      'Natural language understanding',
+      'Task automation',
+      'Intelligent scheduling',
+      'Email management',
+      'Research assistance',
+      'Voice interaction',
+      'Learning & adaptation',
+      'Multi-platform integration'
+    ],
+    benefits: [
+      'Increase productivity by 50%',
+      'Save 15+ hours per week',
+      'Improve task organization',
+      'Enable hands-free operation'
+    ],
+    marketPrice: '$300-600/month',
     setupTime: '1-2 weeks',
-    targetUsers: 'Marketing agencies, Publishers, E-commerce, Blogs'
+    targetUsers: 'Professionals, Executives, Entrepreneurs, Students'
   }
 ];
 
@@ -221,10 +383,16 @@ const categories = [
   { name: "All", count: aiServices.length },
   { name: "Machine Learning", count: aiServices.filter(s => s.category === "Machine Learning").length },
   { name: "Computer Vision", count: aiServices.filter(s => s.category === "Computer Vision").length },
-  { name: "NLP", count: aiServices.filter(s => s.category === "NLP").length },
-  { name: "Analytics", count: aiServices.filter(s => s.category === "Analytics").length },
-  { name: "Conversational AI", count: aiServices.filter(s => s.category === "Conversational AI").length },
-  { name: "Content AI", count: aiServices.filter(s => s.category === "Content AI").length }
+  { name: "Quantum AI", count: aiServices.filter(s => s.category === "Quantum AI").length },
+  { name: "Autonomous Systems", count: aiServices.filter(s => s.category === "Autonomous Systems").length },
+  { name: "Neural Interfaces", count: aiServices.filter(s => s.category === "Neural Interfaces").length },
+  { name: "Pharmaceutical AI", count: aiServices.filter(s => s.category === "Pharmaceutical AI").length },
+  { name: "Environmental AI", count: aiServices.filter(s => s.category === "Environmental AI").length },
+  { name: "Space AI", count: aiServices.filter(s => s.category === "Space AI").length },
+  { name: "FinTech AI", count: aiServices.filter(s => s.category === "FinTech AI").length },
+  { name: "Creative AI", count: aiServices.filter(s => s.category === "Creative AI").length },
+  { name: "Security AI", count: aiServices.filter(s => s.category === "Security AI").length },
+  { name: "Personal AI", count: aiServices.filter(s => s.category === "Personal AI").length }
 ];
 
 export default function AIServicesPage() {

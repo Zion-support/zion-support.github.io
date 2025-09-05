@@ -100,111 +100,273 @@ const itServices = [
   },
   {
     id: 3,
-    title: 'DevOps & CI/CD',
-    description: 'Automated deployment pipelines, infrastructure as code, and continuous integration for faster, more reliable releases.',
-    icon: Settings,
-    category: 'DevOps',
-    price: 'Starting at $2,200/month',
+    title: 'Quantum Computing Infrastructure',
+    description: 'Next-generation quantum computing solutions for complex problem-solving and advanced cryptography.',
+    icon: Cpu,
+    category: 'Quantum Computing',
+    price: 'Starting at $15,000/month',
     features: [
-      'CI/CD pipeline setup',
-      'Infrastructure as Code (Terraform, Ansible)',
-      'Container orchestration (Kubernetes, Docker)',
-      'Monitoring & logging (Prometheus, ELK)',
-      'Automated testing integration',
-      'Blue-green deployments',
-      'Performance optimization',
-      'Team training & documentation'
+      'Quantum algorithm development',
+      'Quantum hardware integration',
+      'Quantum software development',
+      'Quantum cryptography implementation',
+      'Quantum simulation services',
+      'Hybrid classical-quantum systems',
+      'Quantum machine learning',
+      'Quantum optimization solutions'
     ],
     benefits: [
-      'Deploy 10x faster with 90% fewer failures',
-      'Reduce manual deployment time by 80%',
-      'Improve code quality and reliability',
-      'Enable rapid feature delivery'
+      'Solve previously intractable problems',
+      'Exponential computational advantages',
+      'Future-proof security solutions',
+      'Breakthrough optimization results'
     ],
-    marketPrice: '$3,500-7,000/month',
-    setupTime: '2-3 weeks',
-    targetUsers: 'Software companies, Tech startups, Enterprises'
+    marketPrice: '$20,000-50,000/month',
+    setupTime: '12-24 weeks',
+    targetUsers: 'Research, Finance, Pharmaceuticals, Defense'
   },
   {
     id: 4,
-    title: 'Database Management',
-    description: 'Database design, optimization, migration, and management services for optimal performance and reliability.',
-    icon: Database,
-    category: 'Data Management',
-    price: 'Starting at $1,500/month',
+    title: 'Edge Computing Solutions',
+    description: 'Distributed computing infrastructure for real-time processing and reduced latency applications.',
+    icon: Network,
+    category: 'Edge Computing',
+    price: 'Starting at $3,200/month',
     features: [
-      'Database design & architecture',
-      'Performance tuning & optimization',
-      'Migration services (on-premise to cloud)',
-      'Backup & disaster recovery',
-      'Security hardening',
-      'Monitoring & alerting',
-      'Query optimization',
-      'Data archiving strategies'
+      'Edge server deployment',
+      'Real-time data processing',
+      'IoT device management',
+      'Content delivery optimization',
+      'Latency reduction strategies',
+      'Edge security implementation',
+      '5G network integration',
+      'Distributed analytics'
     ],
     benefits: [
-      'Improve database performance by 60%',
-      'Reduce downtime by 95%',
-      'Lower operational costs by 40%',
-      'Ensure data integrity and security'
+      'Reduce latency by 80%',
+      'Improve real-time performance',
+      'Enable IoT at scale',
+      'Optimize bandwidth usage'
     ],
-    marketPrice: '$2,500-5,000/month',
-    setupTime: '1-2 weeks',
-    targetUsers: 'E-commerce, SaaS, Enterprises, Data-heavy businesses'
+    marketPrice: '$4,500-9,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'Manufacturing, Healthcare, Automotive, Smart Cities'
   },
   {
     id: 5,
-    title: 'Network Infrastructure',
-    description: 'Design, implementation, and management of robust network infrastructure for optimal connectivity and security.',
-    icon: Network,
-    category: 'Networking',
-    price: 'Starting at $1,200/month',
+    title: 'Blockchain & Web3 Solutions',
+    description: 'Comprehensive blockchain development including smart contracts, DeFi, NFTs, and decentralized applications.',
+    icon: Lock,
+    category: 'Blockchain',
+    price: 'Starting at $4,500/month',
     features: [
-      'Network design & architecture',
-      'Wireless network setup',
-      'VPN configuration',
-      'Network security implementation',
-      'Performance monitoring',
-      'Troubleshooting & maintenance',
-      'Bandwidth optimization',
-      'Remote access solutions'
+      'Smart contract development',
+      'DeFi protocol creation',
+      'NFT marketplace development',
+      'DApp development',
+      'Token economics design',
+      'Blockchain integration',
+      'Cryptocurrency wallet development',
+      'Consensus mechanism implementation'
     ],
     benefits: [
-      'Improve network reliability by 99%',
-      'Increase network speed by 50%',
-      'Reduce connectivity issues by 90%',
-      'Enable secure remote work'
+      'Enable decentralized operations',
+      'Increase transparency and trust',
+      'Reduce transaction costs',
+      'Create new business models'
     ],
-    marketPrice: '$2,000-4,000/month',
-    setupTime: '1-2 weeks',
-    targetUsers: 'Offices, Retail chains, Healthcare facilities, Schools'
+    marketPrice: '$6,000-15,000/month',
+    setupTime: '4-12 weeks',
+    targetUsers: 'Finance, Gaming, Supply Chain, Real Estate'
   },
   {
     id: 6,
-    title: 'IT Support & Helpdesk',
-    description: '24/7 technical support and helpdesk services to keep your business running smoothly.',
-    icon: Monitor,
-    category: 'Support',
-    price: 'Starting at $800/month',
+    title: 'IoT & Smart Device Management',
+    description: 'Complete IoT solutions including device connectivity, data processing, and smart system integration.',
+    icon: Globe,
+    category: 'IoT Solutions',
+    price: 'Starting at $2,800/month',
     features: [
-      '24/7 technical support',
-      'Remote desktop assistance',
-      'Hardware & software troubleshooting',
-      'User training & onboarding',
-      'Ticket management system',
-      'Knowledge base maintenance',
-      'Proactive monitoring',
-      'IT asset management'
+      'IoT device development',
+      'Sensor network deployment',
+      'Real-time data collection',
+      'Device management platform',
+      'Predictive maintenance',
+      'Remote monitoring systems',
+      'IoT security implementation',
+      'Integration with existing systems'
     ],
     benefits: [
-      'Reduce IT downtime by 70%',
-      'Improve user productivity by 40%',
-      'Lower IT support costs by 50%',
-      'Ensure quick issue resolution'
+      'Enable smart operations',
+      'Improve efficiency by 40%',
+      'Reduce maintenance costs by 50%',
+      'Enable predictive insights'
     ],
-    marketPrice: '$1,500-3,000/month',
-    setupTime: '3-5 days',
-    targetUsers: 'SMBs, Remote teams, Growing companies'
+    marketPrice: '$4,000-8,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Manufacturing, Agriculture, Healthcare, Smart Cities'
+  },
+  {
+    id: 7,
+    title: 'Zero-Trust Security Architecture',
+    description: 'Advanced zero-trust security model implementation for comprehensive network and data protection.',
+    icon: Shield,
+    category: 'Zero-Trust Security',
+    price: 'Starting at $5,500/month',
+    features: [
+      'Identity verification systems',
+      'Micro-segmentation implementation',
+      'Continuous monitoring',
+      'Privileged access management',
+      'Multi-factor authentication',
+      'Device trust verification',
+      'Data encryption at rest and in transit',
+      'Security policy automation'
+    ],
+    benefits: [
+      'Eliminate security perimeters',
+      'Prevent lateral movement attacks',
+      'Ensure continuous verification',
+      'Comply with strict regulations'
+    ],
+    marketPrice: '$7,500-15,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Government, Finance, Healthcare, Critical Infrastructure'
+  },
+  {
+    id: 8,
+    title: 'AI Infrastructure & MLOps',
+    description: 'Complete AI infrastructure setup including model training, deployment, and monitoring at scale.',
+    icon: Brain,
+    category: 'AI Infrastructure',
+    price: 'Starting at $6,500/month',
+    features: [
+      'AI model training infrastructure',
+      'MLOps pipeline development',
+      'Model versioning & management',
+      'Automated model deployment',
+      'A/B testing frameworks',
+      'Model monitoring & alerting',
+      'GPU cluster management',
+      'Data pipeline automation'
+    ],
+    benefits: [
+      'Scale AI operations efficiently',
+      'Reduce model deployment time by 70%',
+      'Improve model performance monitoring',
+      'Enable rapid AI experimentation'
+    ],
+    marketPrice: '$8,500-18,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Tech Companies, Research, Finance, Healthcare'
+  },
+  {
+    id: 9,
+    title: 'Disaster Recovery & Business Continuity',
+    description: 'Comprehensive disaster recovery solutions ensuring business continuity and data protection.',
+    icon: HardDrive,
+    category: 'Disaster Recovery',
+    price: 'Starting at $2,200/month',
+    features: [
+      'Backup strategy development',
+      'Disaster recovery planning',
+      'Data replication systems',
+      'Failover automation',
+      'Recovery time optimization',
+      'Business continuity testing',
+      'Cloud backup solutions',
+      'Recovery point objectives (RPO)'
+    ],
+    benefits: [
+      'Minimize downtime to minutes',
+      'Protect critical business data',
+      'Ensure regulatory compliance',
+      'Reduce recovery costs by 60%'
+    ],
+    marketPrice: '$3,500-7,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'Enterprises, Healthcare, Finance, Government'
+  },
+  {
+    id: 10,
+    title: 'Network Infrastructure & SD-WAN',
+    description: 'Advanced networking solutions including SD-WAN, network optimization, and connectivity management.',
+    icon: Network,
+    category: 'Networking',
+    price: 'Starting at $1,900/month',
+    features: [
+      'SD-WAN implementation',
+      'Network performance optimization',
+      'Bandwidth management',
+      'Quality of Service (QoS)',
+      'Network monitoring & analytics',
+      'VPN solutions',
+      'Load balancing',
+      'Network security integration'
+    ],
+    benefits: [
+      'Improve network performance by 50%',
+      'Reduce connectivity costs by 40%',
+      'Enable flexible network management',
+      'Enhance security and reliability'
+    ],
+    marketPrice: '$3,000-6,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'Enterprises, Remote Work, Branch Offices, Cloud Migration'
+  },
+  {
+    id: 11,
+    title: 'Database & Data Management',
+    description: 'Comprehensive database solutions including design, optimization, migration, and management services.',
+    icon: Database,
+    category: 'Data Management',
+    price: 'Starting at $2,100/month',
+    features: [
+      'Database design & architecture',
+      'Performance tuning & optimization',
+      'Database migration services',
+      'Backup & recovery solutions',
+      'Data warehousing',
+      'ETL/ELT pipeline development',
+      'Database security implementation',
+      '24/7 database monitoring'
+    ],
+    benefits: [
+      'Improve database performance by 60%',
+      'Reduce data management costs by 35%',
+      'Ensure data integrity and security',
+      'Enable scalable data operations'
+    ],
+    marketPrice: '$3,500-7,500/month',
+    setupTime: '2-6 weeks',
+    targetUsers: 'Enterprises, E-commerce, Analytics, Healthcare'
+  },
+  {
+    id: 12,
+    title: 'IT Consulting & Digital Transformation',
+    description: 'Strategic IT consulting services for digital transformation, technology assessment, and implementation planning.',
+    icon: Settings,
+    category: 'IT Consulting',
+    price: 'Starting at $3,500/month',
+    features: [
+      'Technology strategy development',
+      'Digital transformation planning',
+      'IT infrastructure assessment',
+      'Technology roadmap creation',
+      'Vendor evaluation & selection',
+      'Change management support',
+      'IT governance implementation',
+      'Performance optimization consulting'
+    ],
+    benefits: [
+      'Align technology with business goals',
+      'Reduce IT costs by 25%',
+      'Improve operational efficiency',
+      'Enable digital innovation'
+    ],
+    marketPrice: '$5,000-12,000/month',
+    setupTime: '2-8 weeks',
+    targetUsers: 'Enterprises, SMBs, Startups, Government'
   }
 ];
 
@@ -212,10 +374,16 @@ const categories = [
   { name: "All", count: itServices.length },
   { name: "Cloud Services", count: itServices.filter(s => s.category === "Cloud Services").length },
   { name: "Security", count: itServices.filter(s => s.category === "Security").length },
-  { name: "DevOps", count: itServices.filter(s => s.category === "DevOps").length },
-  { name: "Data Management", count: itServices.filter(s => s.category === "Data Management").length },
+  { name: "Quantum Computing", count: itServices.filter(s => s.category === "Quantum Computing").length },
+  { name: "Edge Computing", count: itServices.filter(s => s.category === "Edge Computing").length },
+  { name: "Blockchain", count: itServices.filter(s => s.category === "Blockchain").length },
+  { name: "IoT Solutions", count: itServices.filter(s => s.category === "IoT Solutions").length },
+  { name: "Zero-Trust Security", count: itServices.filter(s => s.category === "Zero-Trust Security").length },
+  { name: "AI Infrastructure", count: itServices.filter(s => s.category === "AI Infrastructure").length },
+  { name: "Disaster Recovery", count: itServices.filter(s => s.category === "Disaster Recovery").length },
   { name: "Networking", count: itServices.filter(s => s.category === "Networking").length },
-  { name: "Support", count: itServices.filter(s => s.category === "Support").length }
+  { name: "Data Management", count: itServices.filter(s => s.category === "Data Management").length },
+  { name: "IT Consulting", count: itServices.filter(s => s.category === "IT Consulting").length }
 ];
 
 export default function ITServicesPage() {
