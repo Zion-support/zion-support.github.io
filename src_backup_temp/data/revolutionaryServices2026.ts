@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/revolutionaryServices2026.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -382,3 +384,4 @@ export interface RevolutionaryService { id: string; title: string; description: 
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/revolutionaryServices2026.ts

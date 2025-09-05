@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/revolutionaryServices2025.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2878,6 +2880,7 @@ export const "revolutionaryAIServices2025": AIService[] = [,"}),"})
 ],"}),"};)
   "email": string;
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/revolutionaryServices2025.ts
   websit
     e: string;
   addres

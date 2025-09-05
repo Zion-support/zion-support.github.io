@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/addedServices.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -195,3 +197,4 @@ export type ServiceTier = { name: string; price: string; includes: string[]}; ex
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/addedServices.ts

@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/innovativeCloudDevOpsServices2030.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -538,3 +540,4 @@ export default innovativeCloudDevOpsServices2030}}"
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/innovativeCloudDevOpsServices2030.ts

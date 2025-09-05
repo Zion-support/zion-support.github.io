@@ -13,7 +13,7 @@ import {
   Target,
   Zap
 } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from './components/Layout';
 
 const courses = [
   {
@@ -104,7 +104,7 @@ const features = [
 
 export default function TrainingPage() {
   return (
-    <MainLayout
+    <Layout
       title="Training & Education - Zion Tech Group"
       description="Enhance your skills with our comprehensive training programs in AI, IT services, and technology solutions."
       keywords="training, education, courses, AI, IT, micro SaaS, technology, certification"
@@ -246,6 +246,6 @@ export default function TrainingPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

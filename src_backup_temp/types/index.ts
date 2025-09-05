@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/types/index.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -58,3 +60,4 @@ export interface User { id: string; name: string; email: string; avatar?: string
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/types/index.ts
