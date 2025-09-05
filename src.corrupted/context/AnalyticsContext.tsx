@@ -1,1 +1,14 @@
-import React,{ createContext,useContext,ReactNode } from 'react'; interface AnalyticsContextType { "trackEvent": (event: string,properties?: Record<string,any>) => void; "trackPageView": (page: string) => void} } const "defaultContext": AnalyticsContextType = { trackEvent: () => {},"trackPageView": () => {}}; const AnalyticsContext = createContext<AnalyticsContextType>(defaultContext); export const useAnalytics = (): AnalyticsContextType => { const context = useContext(AnalyticsContext); if (!context) { throw new Error('useAnalytics must be used within an AnalyticsProvider')} return context}; export const AnalyticsProvider = ({ children }: { "children": 'ReactNode' }): JSX.Element => { const trackEvent = ("event": 'string',properties?: Record<string,any>) => { console.log('Analytics "event": ',event,properties)}; const trackPageView = ("page": string) => { console.log('Page view:',page)}; return ( <AnalyticsContext.Provider value={{ trackEvent,trackPageView }}> {children} </AnalyticsContext.Provider> )};
+import React from 'react';
+
+interface AnalyticsContextProps {
+  // Add props here as needed
+}
+
+export default function AnalyticsContext({ }: AnalyticsContextProps) {
+  return (
+    <div>
+      <h1>AnalyticsContext</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

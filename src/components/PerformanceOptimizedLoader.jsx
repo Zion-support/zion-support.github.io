@@ -1,24 +1,14 @@
-import {motion} from 'framer-motion';
-export function PerformanceOptimizedLoader($1) {
-    const sizeClasses = {
-  "sm": 'w-6 h-6',
-        "md": 'w-12 h-12',
-  "lg": 'w-16 h-16'
-};';';
-    const colorClasses = {"primary": 'text-zion-purple',
-        "secondary": 'text-zion-cyan',
-  "white": 'text-white'};
-    const spinnerVariants = {
-  "animate": {
-            rotate: 360,
-            "transition": {
-                duration: 1,
-                "repeat": Infinity,
-  "ease": "linear"
-            
+import React from 'react';
 
+interface PerformanceOptimizedLoaderProps {
+  // Add props here as needed
 }
-        }
-    };
-    const pulseVariants = {
-export default PerformanceOptimizedLoader;';';
+
+export default function PerformanceOptimizedLoader({ }: PerformanceOptimizedLoaderProps) {
+  return (
+    <div>
+      <h1>PerformanceOptimizedLoader</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

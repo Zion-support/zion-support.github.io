@@ -1,1 +1,14 @@
-<<<<<<< "HEAD": src.pages.disabled/AIAutonomousManufacturing.jsx import React from 'react'; export default AIAutonomousManufacturing; const AIAutonomousManufacturing = () => { return (<> <Helmet> <title > AI Autonomous Manufacturing Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous manufacturing platform that automates production processes,optimizes quality control,and provides intelligent manufacturing management with 24 / 7 efficiency." / / /> <meta name="keywords" content="AI manufacturing,autonomous manufacturing,smart factory,Industry 4.0,AI production,manufacturing automation" / / /> <link rel="canonical" href=""https": import React from 'react'; export default AIAutonomousManufacturing; const AIAutonomousManufacturing = () => { return (<> <Helmet> <title > AI Autonomous Manufacturing Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous manufacturing platform that automates production processes,optimizes quality control,and provides intelligent manufacturing management with 24 / 7 efficiency." / / / /> <meta name="keywords" content="AI manufacturing,autonomous manufacturing,smart factory,Industry 4.0,AI production,manufacturing automation" / / / /> <link rel="canonical" href=""https": "";
+import React from 'react';
+
+interface AIAutonomousManufacturingProps {
+  // Add props here as needed
+}
+
+export default function AIAutonomousManufacturing({ }: AIAutonomousManufacturingProps) {
+  return (
+    <div>
+      <h1>AIAutonomousManufacturing</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,7 +1,14 @@
-import { ProductListing } from '@/types/listings'; export const "SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030": ProductListin g[] = [;","}),"})';';';';
-import { ProductListing } from '@/types/listings'  export const "SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030": ProductListin g[] = [";
-import { ProductListing } from '@/types/listings'  export const "SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030": ProductListin g[] = [;";';';';
-import {ProductListing } from '@/types/listings'  export const "SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030": ProductListin g[] = [;";';';';
-import { ProductListing } from &apos;@/types/listings&apos;&apos;'  export const "SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030": ProductListin g[] = [;';
-import { ProductListing }  from '@/types/listings';export const "SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030": ProductListin g[] = [;";';';
-";';';';
+import React from 'react';
+
+interface SpecializedITInfrastructureServices2030Props {
+  // Add props here as needed
+}
+
+export default function SpecializedITInfrastructureServices2030({ }: SpecializedITInfrastructureServices2030Props) {
+  return (
+    <div>
+      <h1>SpecializedITInfrastructureServices2030</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,1 +1,14 @@
-<<<<<<< "HEAD": src.pages.disabled/MicroSaasServicesPage.jsx import React from 'react'; export default function MicroSAASServicesPage () { import {MICRO_SAAS_SERVICES,import {Star,const microSAASServices = [{ "id": "crm - saas","title": "ZionCRM Pro","description": "Complete customer relationship management solution with sales automation,lead tracking,and analytics.","icon": <Users className="h - 8 w - 8 text - blue - 500"/>,"price": '29',"currency": "$","features": [ "Contact Management","Sales Pipeline","Lead Scoring","Email Automation","Analytics Dashboard","Mobile App" ],"category": "Business Tools","badge": "Popular","link": "https: import React from 'react'; export default function MicroSAASServicesPage () { import {MICRO_SAAS_SERVICES,import {Star,const microSAASServices = [{ "id": "crm - saas","title": "ZionCRM Pro","description": "Complete customer relationship management solution with sales automation,lead tracking,and analytics.","icon": <Users className="h - 8 w - 8 text - blue - 500"/>,"price": '29',"currency": "$","features": [ "Contact Management","Sales Pipeline","Lead Scoring","Email Automation","Analytics Dashboard","Mobile App" ],"category": "Business Tools","badge": "Popular","link": "https:"";
+import React from 'react';
+
+interface MicroSaasServicesPageProps {
+  // Add props here as needed
+}
+
+export default function MicroSaasServicesPage({ }: MicroSaasServicesPageProps) {
+  return (
+    <div>
+      <h1>MicroSaasServicesPage</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

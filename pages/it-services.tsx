@@ -34,12 +34,8 @@ import {
   DollarSign,
   Code,
   Rocket,
-  Sprout,
-  Car,
   Brain,
-  Heart,
-  ShoppingCart,
-  FileText
+  Sprout
 } from 'lucide-react';
 
 const itServices = [
@@ -253,6 +249,70 @@ const itServices = [
     link: 'https://digitaltransformation.ziontechgroup.com'
   },
   {
+    title: 'Quantum Computing Solutions',
+    description: 'Cutting-edge quantum computing services for optimization, cryptography, and scientific research.',
+    icon: Cpu,
+    features: ['Quantum Optimization', 'Cryptography Solutions', 'Scientific Computing', 'Quantum Algorithms'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Quantum Computing',
+    popular: true,
+    link: 'https://quantum.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Distributed edge computing solutions for low-latency applications and IoT deployments.',
+    icon: Network,
+    features: ['Edge Deployment', 'IoT Integration', 'Low-latency Processing', 'Distributed Management'],
+    pricing: '$10,000 - $75,000/project',
+    category: 'Edge Computing',
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Implementation of zero trust security model with continuous verification and micro-segmentation.',
+    icon: Shield,
+    features: ['Zero Trust Implementation', 'Micro-segmentation', 'Continuous Verification', 'Identity Management'],
+    pricing: '$15,000 - $80,000/project',
+    category: 'Security',
+    link: 'https://zerotrust.ziontechgroup.com'
+  },
+  {
+    title: 'AI Infrastructure & ML Ops',
+    description: 'Complete AI infrastructure setup with MLOps pipelines and model deployment services.',
+    icon: Brain,
+    features: ['MLOps Pipelines', 'Model Deployment', 'AI Infrastructure', 'Model Monitoring'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'AI Infrastructure',
+    link: 'https://aiinfrastructure.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain & Web3 Solutions',
+    description: 'Blockchain development, smart contracts, and Web3 infrastructure implementation.',
+    icon: Globe,
+    features: ['Smart Contracts', 'DeFi Solutions', 'NFT Platforms', 'Web3 Infrastructure'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Blockchain',
+    link: 'https://blockchain.ziontechgroup.com'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, deployment, and optimization for enterprise and industrial applications.',
+    icon: Wifi,
+    features: ['5G Network Design', 'Private 5G Networks', 'Network Optimization', 'IoT Integration'],
+    pricing: '$50,000 - $500,000/project',
+    category: '5G Networks',
+    link: 'https://5gnetworks.ziontechgroup.com'
+  },
+  {
+    title: 'Green IT & Sustainability',
+    description: 'Sustainable IT solutions with carbon footprint reduction and energy efficiency optimization.',
+    icon: Sprout,
+    features: ['Carbon Footprint Analysis', 'Energy Optimization', 'Sustainable Hardware', 'Green Data Centers'],
+    pricing: '$8,000 - $50,000/project',
+    category: 'Sustainability',
+    link: 'https://greenit.ziontechgroup.com'
+  },
+  {
     title: 'IT Service Management (ITSM)',
     description: 'ITIL-based service management implementation and optimization.',
     icon: Settings,
@@ -332,6 +392,34 @@ const itServices = [
     pricing: '$10,000 - $60,000/project',
     category: 'Enterprise Mobility',
     link: 'https://enterprisemobility.ziontechgroup.com'
+  },
+  {
+    title: 'Hyperconverged Infrastructure (HCI)',
+    description: 'Modern hyperconverged infrastructure solutions combining compute, storage, and networking.',
+    icon: Server,
+    features: ['HCI Implementation', 'Software-defined Storage', 'Virtualization', 'Simplified Management'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Hyperconverged',
+    popular: true,
+    link: 'https://hci.ziontechgroup.com'
+  },
+  {
+    title: 'Container & Kubernetes Solutions',
+    description: 'Container orchestration and Kubernetes platform implementation and management.',
+    icon: Package,
+    features: ['Kubernetes Deployment', 'Container Management', 'Microservices Architecture', 'Auto-scaling'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Containers',
+    link: 'https://containers.ziontechgroup.com'
+  },
+  {
+    title: 'IoT & Industrial Automation',
+    description: 'Internet of Things solutions and industrial automation system implementation.',
+    icon: Settings,
+    features: ['IoT Platform Setup', 'Sensor Integration', 'Industrial Automation', 'Data Analytics'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'IoT',
+    link: 'https://iot.ziontechgroup.com'
   },
   {
     title: 'IT Performance Optimization',
@@ -422,259 +510,6 @@ const itServices = [
     pricing: '$12,000 - $80,000/project',
     category: 'Monitoring Solutions',
     link: 'https://enterprisemonitoring.ziontechgroup.com'
-  },
-  {
-    title: 'Zero Trust Security Architecture',
-    description: 'Complete zero trust security implementation with identity verification and micro-segmentation.',
-    icon: Shield,
-    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
-    pricing: '$25,000 - $150,000/project',
-    category: 'Zero Trust',
-    popular: true,
-    link: 'https://zerotrust.ziontechgroup.com'
-  },
-  {
-    title: 'Edge Computing Infrastructure',
-    description: 'Distributed edge computing infrastructure for low-latency applications and IoT.',
-    icon: Cpu,
-    features: ['Edge Nodes', 'Low Latency', 'IoT Integration', 'Distributed Processing'],
-    pricing: '$30,000 - $200,000/project',
-    category: 'Edge Computing',
-    link: 'https://edgecomputing.ziontechgroup.com'
-  },
-  {
-    title: '5G Network Implementation',
-    description: 'Complete 5G network design, implementation, and optimization services.',
-    icon: Network,
-    features: ['5G Core Network', 'RAN Optimization', 'Network Slicing', 'Performance Tuning'],
-    pricing: '$50,000 - $500,000/project',
-    category: '5G Networks',
-    link: 'https://5gnetworks.ziontechgroup.com'
-  },
-  {
-    title: 'Blockchain Infrastructure',
-    description: 'Enterprise blockchain infrastructure and distributed ledger technology implementation.',
-    icon: Network,
-    features: ['Blockchain Networks', 'Smart Contracts', 'Consensus Mechanisms', 'Security Implementation'],
-    pricing: '$40,000 - $300,000/project',
-    category: 'Blockchain',
-    link: 'https://blockchaininfra.ziontechgroup.com'
-  },
-  {
-    title: 'IoT Platform Management',
-    description: 'Comprehensive IoT platform design, implementation, and management services.',
-    icon: Smartphone,
-    features: ['Device Management', 'Data Processing', 'Security Implementation', 'Analytics Platform'],
-    pricing: '$35,000 - $250,000/project',
-    category: 'IoT',
-    link: 'https://iotplatform.ziontechgroup.com'
-  },
-  {
-    title: 'Digital Twin Technology',
-    description: 'Digital twin implementation for physical assets and process optimization.',
-    icon: Monitor,
-    features: ['3D Modeling', 'Real-time Simulation', 'Predictive Analytics', 'Process Optimization'],
-    pricing: '$60,000 - $400,000/project',
-    category: 'Digital Twins',
-    link: 'https://digitaltwins.ziontechgroup.com'
-  },
-  {
-    title: 'Green IT Solutions',
-    description: 'Sustainable IT infrastructure and energy-efficient technology implementation.',
-    icon: Sprout,
-    features: ['Energy Efficiency', 'Carbon Footprint Reduction', 'Sustainable Hardware', 'Green Data Centers'],
-    pricing: '$20,000 - $150,000/project',
-    category: 'Green IT',
-    link: 'https://greenit.ziontechgroup.com'
-  },
-  {
-    title: 'AI Infrastructure Services',
-    description: 'Complete AI infrastructure setup including GPU clusters, ML pipelines, and data processing.',
-    icon: Brain,
-    features: ['GPU Clusters', 'ML Pipelines', 'Data Processing', 'Model Deployment'],
-    pricing: '$45,000 - $350,000/project',
-    category: 'AI Infrastructure',
-    link: 'https://aiinfrastructure.ziontechgroup.com'
-  },
-  {
-    title: 'Quantum Computing Infrastructure',
-    description: 'Quantum computing infrastructure and hybrid quantum-classical systems implementation.',
-    icon: Cpu,
-    features: ['Quantum Hardware', 'Hybrid Systems', 'Quantum Algorithms', 'Security Implementation'],
-    pricing: '$100,000 - $1,000,000/project',
-    category: 'Quantum Computing',
-    link: 'https://quantuminfrastructure.ziontechgroup.com'
-  },
-  {
-    title: 'Autonomous Systems Infrastructure',
-    description: 'Infrastructure for autonomous vehicles, drones, and robotic systems.',
-    icon: Car,
-    features: ['Sensor Networks', 'Communication Systems', 'Control Infrastructure', 'Safety Systems'],
-    pricing: '$75,000 - $600,000/project',
-    category: 'Autonomous Systems',
-    link: 'https://autonomousinfra.ziontechgroup.com'
-  },
-  {
-    title: 'Space Technology Infrastructure',
-    description: 'Ground station infrastructure and satellite communication systems.',
-    icon: Rocket,
-    features: ['Ground Stations', 'Satellite Communication', 'Data Processing', 'Mission Control'],
-    pricing: '$150,000 - $1,500,000/project',
-    category: 'Space Technology',
-    link: 'https://spaceinfrastructure.ziontechgroup.com'
-  },
-  {
-    title: 'Neuromorphic Computing Infrastructure',
-    description: 'Neuromorphic computing hardware and software infrastructure implementation.',
-    icon: Brain,
-    features: ['Neuromorphic Chips', 'Spiking Neural Networks', 'Hardware Acceleration', 'Software Stack'],
-    pricing: '$80,000 - $700,000/project',
-    category: 'Neuromorphic Computing',
-    link: 'https://neuromorphicinfra.ziontechgroup.com'
-  },
-  {
-    title: 'Metaverse Infrastructure',
-    description: 'Complete metaverse infrastructure including VR/AR systems and virtual world hosting.',
-    icon: Monitor,
-    features: ['VR/AR Systems', 'Virtual World Hosting', 'Avatar Systems', 'Real-time Rendering'],
-    pricing: '$100,000 - $800,000/project',
-    category: 'Metaverse',
-    link: 'https://metaverseinfra.ziontechgroup.com'
-  },
-  {
-    title: 'Biometric Security Systems',
-    description: 'Advanced biometric authentication and security systems implementation.',
-    icon: Shield,
-    features: ['Facial Recognition', 'Fingerprint Scanning', 'Iris Recognition', 'Voice Authentication'],
-    pricing: '$25,000 - $200,000/project',
-    category: 'Biometric Security',
-    link: 'https://biometricsecurity.ziontechgroup.com'
-  },
-  {
-    title: 'Smart City Infrastructure',
-    description: 'Complete smart city infrastructure including sensors, networks, and data platforms.',
-    icon: Building,
-    features: ['Sensor Networks', 'Data Platforms', 'Traffic Management', 'Energy Systems'],
-    pricing: '$200,000 - $2,000,000/project',
-    category: 'Smart Cities',
-    link: 'https://smartcityinfra.ziontechgroup.com'
-  },
-  {
-    title: 'Industrial IoT Infrastructure',
-    description: 'Industrial IoT infrastructure for manufacturing and industrial automation.',
-    icon: Settings,
-    features: ['Industrial Sensors', 'PLC Integration', 'SCADA Systems', 'Predictive Maintenance'],
-    pricing: '$50,000 - $400,000/project',
-    category: 'Industrial IoT',
-    link: 'https://industrialiotinfra.ziontechgroup.com'
-  },
-  {
-    title: 'Healthcare IT Infrastructure',
-    description: 'Specialized IT infrastructure for healthcare organizations and medical facilities.',
-    icon: Heart,
-    features: ['HIPAA Compliance', 'Medical Device Integration', 'Patient Data Security', 'Telemedicine Systems'],
-    pricing: '$40,000 - $300,000/project',
-    category: 'Healthcare IT',
-    link: 'https://healthcareitinfra.ziontechgroup.com'
-  },
-  {
-    title: 'Financial Services Infrastructure',
-    description: 'High-security IT infrastructure for financial institutions and fintech companies.',
-    icon: DollarSign,
-    features: ['High-Frequency Trading', 'Regulatory Compliance', 'Risk Management', 'Payment Processing'],
-    pricing: '$60,000 - $500,000/project',
-    category: 'FinTech Infrastructure',
-    link: 'https://fintechinfra.ziontechgroup.com'
-  },
-  {
-    title: 'Educational Technology Infrastructure',
-    description: 'IT infrastructure for educational institutions and e-learning platforms.',
-    icon: BookOpen,
-    features: ['Learning Management Systems', 'Virtual Classrooms', 'Student Information Systems', 'Assessment Tools'],
-    pricing: '$30,000 - $250,000/project',
-    category: 'EdTech Infrastructure',
-    link: 'https://edtechinfra.ziontechgroup.com'
-  },
-  {
-    title: 'Retail Technology Infrastructure',
-    description: 'Omnichannel retail technology infrastructure and point-of-sale systems.',
-    icon: ShoppingCart,
-    features: ['POS Systems', 'Inventory Management', 'Customer Analytics', 'E-commerce Integration'],
-    pricing: '$35,000 - $300,000/project',
-    category: 'Retail IT',
-    link: 'https://retailitinfra.ziontechgroup.com'
-  },
-  {
-    title: 'Government IT Infrastructure',
-    description: 'Secure IT infrastructure for government agencies and public sector organizations.',
-    icon: Building,
-    features: ['Security Clearance', 'Compliance Requirements', 'Citizen Services', 'Data Sovereignty'],
-    pricing: '$100,000 - $1,000,000/project',
-    category: 'Government IT',
-    link: 'https://governmentitinfra.ziontechgroup.com'
-  },
-  {
-    title: 'Energy Sector Infrastructure',
-    description: 'IT infrastructure for energy companies, utilities, and renewable energy providers.',
-    icon: Zap,
-    features: ['Smart Grid Systems', 'Energy Management', 'Renewable Integration', 'Grid Optimization'],
-    pricing: '$50,000 - $400,000/project',
-    category: 'Energy IT',
-    link: 'https://energyitinfra.ziontechgroup.com'
-  },
-  {
-    title: 'Transportation IT Infrastructure',
-    description: 'IT infrastructure for transportation companies and logistics providers.',
-    icon: Car,
-    features: ['Fleet Management', 'Route Optimization', 'Real-time Tracking', 'Safety Systems'],
-    pricing: '$40,000 - $350,000/project',
-    category: 'Transportation IT',
-    link: 'https://transportationitinfra.ziontechgroup.com'
-  },
-  {
-    title: 'Environmental Monitoring Infrastructure',
-    description: 'IT infrastructure for environmental monitoring and climate data collection.',
-    icon: Globe,
-    features: ['Sensor Networks', 'Data Collection', 'Climate Modeling', 'Environmental Analytics'],
-    pricing: '$35,000 - $300,000/project',
-    category: 'Environmental IT',
-    link: 'https://environmentalitinfra.ziontechgroup.com'
-  },
-  {
-    title: 'Research & Development Infrastructure',
-    description: 'High-performance computing infrastructure for research institutions and R&D organizations.',
-    icon: Cpu,
-    features: ['HPC Clusters', 'Research Data Management', 'Collaboration Tools', 'Simulation Platforms'],
-    pricing: '$60,000 - $500,000/project',
-    category: 'R&D Infrastructure',
-    link: 'https://rdinfra.ziontechgroup.com'
-  },
-  {
-    title: 'Disaster Recovery Infrastructure',
-    description: 'Comprehensive disaster recovery infrastructure and business continuity solutions.',
-    icon: Shield,
-    features: ['Multi-site Replication', 'Automated Failover', 'Data Recovery', 'Business Continuity'],
-    pricing: '$40,000 - $400,000/project',
-    category: 'Disaster Recovery',
-    link: 'https://disasterrecoveryinfra.ziontechgroup.com'
-  },
-  {
-    title: 'Compliance & Governance Infrastructure',
-    description: 'IT infrastructure designed for regulatory compliance and governance requirements.',
-    icon: FileText,
-    features: ['Audit Trails', 'Compliance Monitoring', 'Data Governance', 'Regulatory Reporting'],
-    pricing: '$30,000 - $250,000/project',
-    category: 'Compliance Infrastructure',
-    link: 'https://complianceinfra.ziontechgroup.com'
-  },
-  {
-    title: 'Future-Ready Infrastructure',
-    description: 'Next-generation IT infrastructure designed for emerging technologies and future scalability.',
-    icon: Star,
-    features: ['Future Technology Integration', 'Scalable Architecture', 'Innovation Platform', 'Technology Evolution'],
-    pricing: 'Custom Pricing',
-    category: 'Future Infrastructure',
-    link: 'https://futureinfra.ziontechgroup.com'
   }
 ];
 

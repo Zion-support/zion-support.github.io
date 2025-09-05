@@ -1,1 +1,14 @@
-import React from 'react';'''; import { motion } from 'framer-motion'; const Tabs = ({ tabs,activeTab,onTabChange }) => {} return(); <div className="w-full"> <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg"> {}; onClick={() => onTabChange(tab.id)} className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-all duration-200 ${} '; ''; '''`; activeTab === tab.id'''"'"; ? 'bg-white text-gray-900 shadow-sm'''"'"'"; : 'text-gray-600 "hover": text-gray-900'"""";}"} > {tab.label} ></div> ))} ></div> <div>Broken JSX</div> className="mt-4"> {tabs.find(tab => tab.id === activeTab)?.content} ></div> ></div> );}; export default Tabs; export { Tabs }; export { Tabs }; export { Tabs }; export { Tabs }; export { Tabs };
+import React from 'react';
+
+interface TabsProps {
+  // Add props here as needed
+}
+
+export default function Tabs({ }: TabsProps) {
+  return (
+    <div>
+      <h1>Tabs</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

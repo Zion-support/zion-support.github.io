@@ -1,5 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD:pages-quarantine/services-overview.tsx.disabled
+:pages-quarantine/services-overview.tsx.disabled
 import Head from 'next/head';
 import Link from 'next/link';
 import {
@@ -2304,7 +2304,6 @@ export default function Services() {
     </>
   );
 }
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
