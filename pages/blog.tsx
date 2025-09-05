@@ -97,8 +97,7 @@ export default function BlogPage() {
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Stay updated with the latest insights, trends, and best practices in technology
               </p>
-              </motion.div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
