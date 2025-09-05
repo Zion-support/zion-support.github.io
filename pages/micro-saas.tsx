@@ -49,7 +49,8 @@ import {
   HardDrive
 } from 'lucide-react';
 
-const microSaaSProducts = [{ursor/add-new-services-and-deploy-updates-1b90
+const microSaaSProducts = [
+  {
     title: 'Cloud Cost Guard (FinOps Assistant)',
     description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
     icon: DollarSign,
@@ -426,7 +427,8 @@ description: 'Automated code review with security scanning, performance optimiza
   }
 ];
 
-const features = [{ursor/add-new-services-and-deploy-updates-1b90
+const features = [
+  {
     icon: Zap,
     title: 'Rapid Deployment',
     description: 'Get up and running in days, not months'

@@ -11,7 +11,7 @@ const services = [{
     href: "/ai-services",
     features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics", "AI Fraud Detection", "Voice AI", "Content Generation"],
     pricing: "Starting at $1,000/month",
-    count: "20+ Services",ursor/add-new-services-and-deploy-updates-1b90
+    count: "20+ Services",
     popular: true
   },
   {
@@ -21,7 +21,7 @@ description: "Comprehensive information technology services including cloud infr
     href: "/it-services",
     features: ["Cloud Infrastructure", "Cybersecurity", "System Administration", "Network Management", "DevOps & CI/CD", "Data Center Migration"],
     pricing: "Starting at $120/hour",
-    count: "20+ Services",ursor/add-new-services-and-deploy-updates-1b90
+    count: "20+ Services",
     popular: true
   },
   {
@@ -31,12 +31,13 @@ description: "Scalable software as a service solutions designed for specific bus
     href: "/micro-saas",
     features: ["Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management"],
     pricing: "Starting at $29/month",
-    count: "25+ Products",ursor/add-new-services-and-deploy-updates-1b90
+    count: "25+ Products",
     popular: true
   }
 ];
 
-const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
+const benefits = [
+  {
     icon: CheckCircle,
     title: "Expert Team",
     description: "50+ certified professionals with years of experience"

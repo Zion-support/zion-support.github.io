@@ -36,7 +36,8 @@ import {
   Rocket
 } from 'lucide-react';
 
-const itServices = [{ursor/add-new-services-and-deploy-updates-1b90
+const itServices = [
+  {
     title: 'Cloud Infrastructure Management',
     description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.',
     icon: Cloud,
@@ -380,7 +381,8 @@ title: 'AI-Powered IT Operations (AIOps)',
   }
 ];
 
-const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },ursor/add-new-services-and-deploy-updates-1b90
+const technologies = [
+  { name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
   { name: 'Containerization', icon: Server, description: 'Docker, Kubernetes, OpenShift' },
   { name: 'Security Tools', icon: Shield, description: 'SIEM, WAF, IAM, Encryption' },
   { name: 'Monitoring', icon: BarChart3, description: 'Prometheus, Grafana, ELK Stack' },

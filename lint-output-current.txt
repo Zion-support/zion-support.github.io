@@ -89,27 +89,25 @@ Warning: React version not specified in eslint-plugin-react settings. See https:
   11:1  warning  Unexpected console statement  no-console
 
 /workspace/commit-and-push.js
-    3:9  warning  'execSync' is assigned a value but never used  no-unused-vars
-   21:5  warning  Unexpected console statement                   no-console
-  152:5  warning  Unexpected console statement                   no-console
+  158:1  error  Parsing error: Unexpected character '#'
 
 /workspace/components/Footer.tsx
-  398:6  error  Parsing error: Expected corresponding JSX closing tag for 'div'
+  348:12  error  Parsing error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
 
 /workspace/components/Header.tsx
-  392:16  error  Parsing error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  267:36  error  Parsing error: ')' expected
 
 /workspace/components/Layout.tsx
-  71:29  error  Parsing error: ',' expected
+  8:20  error  Parsing error: Property or signature expected
 
 /workspace/components/layout/EnhancedNavigation.tsx
-  21:25  error  Parsing error: '>' expected
+  5:6  error  Parsing error: Variable declaration expected
 
 /workspace/components/layout/Header.tsx
-  57:21  error  Parsing error: '>' expected
+  34:6  error  Parsing error: Variable declaration expected
 
 /workspace/components/layout/MainLayout.tsx
-  16:20  error  Parsing error: '=>' expected
+  11:53  error  Parsing error: ',' expected
 
 /workspace/components/performance/LazyComponent.tsx
   5:29  error  Parsing error: ';' expected
@@ -168,7 +166,7 @@ Warning: React version not specified in eslint-plugin-react settings. See https:
   55:39  error  Parsing error: Identifier expected
 
 /workspace/pages/ai-services.tsx
-  558:125  error  Parsing error: Expression expected
+  219:48  error  Parsing error: ',' expected
 
 /workspace/pages/api-docs.tsx
   150:60  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
@@ -212,7 +210,7 @@ Warning: React version not specified in eslint-plugin-react settings. See https:
   15:3  warning  'ExternalLink' is defined but never used  @typescript-eslint/no-unused-vars
 
 /workspace/pages/index.tsx
-  48:35  error  Parsing error: '>' expected
+  28:24  error  Parsing error: ',' expected
 
 /workspace/pages/industries.tsx
    15:3   warning  'Zap' is defined but never used                                  @typescript-eslint/no-unused-vars
@@ -254,10 +252,10 @@ Warning: React version not specified in eslint-plugin-react settings. See https:
   12:3  warning  'CreditCard' is defined but never used  @typescript-eslint/no-unused-vars
 
 /workspace/pages/it-services.tsx
-  393:24  error  Parsing error: ',' expected
+  384:122  error  Parsing error: Expression expected
 
 /workspace/pages/micro-saas.tsx
-  463:24  error  Parsing error: ',' expected
+  430:24  error  Parsing error: ',' expected
 
 /workspace/pages/news.tsx
   5:43  warning  'ExternalLink' is defined but never used  @typescript-eslint/no-unused-vars
@@ -294,7 +292,7 @@ Warning: React version not specified in eslint-plugin-react settings. See https:
   350:20  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
 
 /workspace/pages/services.tsx
-  80:35  error  Parsing error: '>' expected
+  34:31  error  Parsing error: ',' expected
 
 /workspace/pages/services/cloud.tsx
   4:25  warning  'Database' is defined but never used  @typescript-eslint/no-unused-vars
@@ -346,7 +344,7 @@ Warning: React version not specified in eslint-plugin-react settings. See https:
   216:20  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
 
 /workspace/pages/talent.tsx
-  50:85  error  Parsing error: Expression expected
+  33:85  error  Parsing error: Expression expected
 
 /workspace/pages/team.tsx
     4:39  warning  'Award' is defined but never used                                @typescript-eslint/no-unused-vars
@@ -395,5 +393,5 @@ Warning: React version not specified in eslint-plugin-react settings. See https:
 /workspace/utils/validation.ts
   22:31  error  Parsing error: Identifier expected
 
-✖ 213 problems (69 errors, 144 warnings)
+✖ 211 problems (70 errors, 141 warnings)
 

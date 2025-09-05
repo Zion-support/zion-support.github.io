@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, ArrowRight } from 'lucide-react';
 import Layout from '../components/Layout';
 
-const stats = [{ number: '99.9%', label: 'Uptime Guarantee' },ursor/add-new-services-and-deploy-updates-1b90
+const stats = [
+  { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
   { number: '500+', label: 'Projects Completed' },
   { number: '50+', label: 'Expert Team Members' }
@@ -24,14 +25,15 @@ const services = [{
     title: "Micro SaaS",
     description: "Scalable software as a service solutions",
     icon: Cloud,
-    href: "/micro-saas"}ursor/add-new-services-and-deploy-updates-1b90
+    href: "/micro-saas"
+  }
 ];
 
 export default function HomePage() {
   return (
 <MainLayout>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">ursor/add-new-services-and-deploy-updates-1b90
-      {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         {/* Background Animation */}
         <div className="absolute inset-0">
