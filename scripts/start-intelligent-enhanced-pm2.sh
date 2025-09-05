@@ -263,7 +263,7 @@ EOF
 # AI Learning Status Script
 cd "$(dirname "$0")/.."
 echo "🤖 AI Learning Status"
-echo "===================="
+echo "======"
 if [ -f "logs/ai-learning-data.json" ]; then
     echo "Learning data file exists"
     echo "Last updated: $(jq -r '.lastUpdated' logs/ai-learning-data.json 2>/dev/null || echo 'Unknown')"
@@ -279,7 +279,7 @@ EOF
 # Deployment Status Script
 cd "$(dirname "$0")/.."
 echo "🚀 Deployment Status"
-echo "==================="
+echo "====="
 if [ -f "logs/deployment-data.json" ]; then
     echo "Deployment data file exists"
     echo "Last deployment: $(jq -r '.lastDeployment.timestamp' logs/deployment-data.json 2>/dev/null || echo 'Unknown')"
@@ -351,7 +351,7 @@ display_intelligent_system_status() {
 # Main execution
 main() {
     echo -e "${PURPLE}🚀 Intelligent Enhanced PM2 Automation System Startup${NC}"
-    echo "=================================================================="
+    echo "==="
     echo
     
     # Check prerequisites

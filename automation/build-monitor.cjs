@@ -21,9 +21,9 @@ class BuildMonitor {
   }
 
   async runBuild() {
+    const startTime = Date.now();
     try {
       this.log('Starting build process...');
-      const startTime = Date.now();
 
       const { stdout, stderr } = await execAsync('npm run build', {
         "cwd": process.cwd(),

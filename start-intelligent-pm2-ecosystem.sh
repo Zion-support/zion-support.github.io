@@ -410,7 +410,7 @@ run_initial_health_check() {
 # Main execution
 main() {
     echo -e "${PURPLE}🧠 Intelligent PM2 Ecosystem Startup${NC}"
-    echo "============================================="
+    echo "==="
     echo
     
     # Check prerequisites

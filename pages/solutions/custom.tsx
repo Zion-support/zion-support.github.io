@@ -1,295 +1,511 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
-
-const features = [
+import React from 'react'
+import MainLayout from '../../components/layout/MainLayout'
+import Link from 'next/link'
+import { motion } from 'framer-motion
+import {
+  // TODO: Implement
+}
+  Settings, 
+  Code, 
+  Wrench, 
+  CheckCircle, 
+  ArrowRight,
+  Target,
+  Users,
+  Clock,
+  Award,
+  Shield,
+  Zap,
+  Globe,
+  BarChart3;'
+} from 'lucide-react
+const services = [
+  {'
+    title: "Custom Web Applications",
+    description: "Bespoke web applications built from scratch to meet your specific business requirements and workflows.",
+    icon: Globe,]
+    features: [Full-stack Development", "Responsive Design", "API Integration", "User Management", "Real-time Features"],
+    timeline: "4-12 weeks",
+    pricing: "Starting at $15,000"
+  },
   {
-    title: 'Tailored Solutions',
-    description: 'Bespoke software solutions designed specifically for your unique business needs',
+    title: "Mobile App Development",
+    description: "Native and cross-platform mobile applications for iOS and Android with custom functionality.",
     icon: Settings,
-    benefits: ['Custom Architecture', 'Unique Features', 'Business Logic Integration', 'Scalable Design']
+    features: [iOS & Android Apps", "Cross-platform Solutions", "Push Notifications", "Offline Capabilities", "App Store Deployment"],
+    timeline: "6-16 weeks",
+    pricing: "Starting at $20,000"
   },
   {
-    title: 'Full Stack Development',
-    description: 'Complete end-to-end development from frontend to backend and everything in between',
+    title: "API Development",
+    description: "Custom RESTful APIs and microservices to power your applications and integrate with third-party services.",
     icon: Code,
-    benefits: ['Frontend Development', 'Backend APIs', 'Database Design', 'Cloud Integration']
+    features: [RESTful APIs", "GraphQL APIs", "Microservices", "Authentication", "Rate Limiting", "Documentation"],
+    timeline: "2-8 weeks",
+    pricing: "Starting at $8,000"
   },
   {
-    title: 'API Integration',
-    description: 'Seamless integration with existing systems and third-party services',
-    icon: Zap,
-    benefits: ['RESTful APIs', 'GraphQL', 'Third-party Integrations', 'Data Synchronization']
-  },
-  {
-    title: 'Ongoing Support',
-    description: 'Continuous support and maintenance to ensure your solution remains optimal',
-    icon: Users,
-    benefits: ['24/7 Support', 'Regular Updates', 'Performance Monitoring', 'Bug Fixes']
+    title: "Database Solutions",
+    description: "Custom database design, optimization, and migration services for your specific data requirements.",
+    icon: BarChart3,
+    features: [Database Design", "Performance Optimization", "Data Migration", "Backup Solutions", "Monitoring"],
+    timeline: "2-6 weeks",
+    pricing: "Starting at $5,000"
   }
 ];
 
-const technologies = [
-  { category: 'Frontend', techs: ['React', 'Next.js', 'Vue.js', 'Angular', 'TypeScript'] },
-  { category: 'Backend', techs: ['Node.js', 'Python', 'Java', 'C#', 'Go'] },
-  { category: 'Database', techs: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch'] },
-  { category: 'Cloud', techs: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes'] },
-  { category: 'Mobile', techs: ['React Native', 'Flutter', 'iOS', 'Android', 'PWA'] }
+const technologies = []
+  { category: "Frontend", items: [React", "Next.js", "Vue.js", "Angular", "TypeScript"] },
+  { category: "Backend", items: [Node.js", "Python", "Java", "C#", "Go", "PHP"] },
+  { category: "Mobile", items: [React Native", "Flutter", "Swift", "Kotlin", "Xamarin"] },
+  { category: "Database", items: [PostgreSQL", "MongoDB", "MySQL", "Redis", "Elasticsearch"] },
+  { category: "Cloud", items: [AWS", "Azure", "Google Cloud", "Docker", "Kubernetes"] },
+  { category: "DevOps", items: [CI/CD", "Jenkins", "GitLab", "Terraform", "Monitoring"] }
 ];
 
 const process = [
-  { step: 'Discovery', description: 'Understanding your requirements and business goals' },
-  { step: 'Planning', description: 'Creating detailed project roadmap and architecture' },
-  { step: 'Development', description: 'Agile development with regular feedback and iterations' },
-  { step: 'Testing', description: 'Comprehensive testing and quality assurance' },
-  { step: 'Deployment', description: 'Smooth deployment and go-live support' },
-  { step: 'Maintenance', description: 'Ongoing support and continuous improvement' }
+  {
+    step: "01",
+    title: "Discovery & Planning",
+    description: "We analyze your requirements, define project scope, and create a detailed development plan.",
+    duration: "1-2 weeks"
+  },
+  {
+    step: "02",
+    title: "Design & Architecture",
+    description: "Create wireframes, mockups, and technical architecture for your custom solution.",
+    duration: "1-3 weeks"
+  },
+  {
+    step: "03",
+    title: "Development & Testing",
+    description: "Build your solution using agile methodology with regular testing and feedback cycles.",
+    duration: "4-12 weeks"
+  },
+  {
+    step: "04",
+    title: "Deployment & Support",
+    description: "Deploy your solution and provide ongoing maintenance and support services.",
+    duration: "Ongoing"
+  }]
 ];
 
-const stats = [
-  { number: '150+', label: 'Custom Projects' },
-  { number: '98%', label: 'Client Satisfaction' },
-  { number: 'On Time', label: 'Delivery Rate' },
-  { number: '5+', label: 'Years Experience' }
+const benefits = [
+  {
+    title: "Perfect Fit",
+    description: "Solutions built specifically for your business needs and workflows",
+    icon: Target;
+  },
+  {
+    title: "Full Ownership",
+    description: "Complete ownership of source code and intellectual property",
+    icon: Award;
+  },
+  {
+    title: "Scalable Architecture",
+    description: "Built to grow with your business and handle increased load",
+    icon: Zap;
+  },
+  {
+    title: "Ongoing Support",
+    description: "Continuous maintenance, updates, and feature enhancements",
+    icon: Wrench;
+  }]
 ];
 
-export default function CustomDevelopmentPage() {
+const caseStudies = [
+  {
+    title: "E-commerce Platform",
+    client: "Retail Chain",
+    challenge: "Needed custom e-commerce platform with multi-vendor support and complex inventory management",
+    solution: "Built full-stack platform with vendor management, inventory tracking, and payment processing",
+    results: "300% increase in online sales, 50% reduction in operational costs",]
+    technologies: [React", "Node.js", "PostgreSQL", "Stripe"]
+  },
+  {
+    title: "Healthcare Management System",
+    client: "Medical Practice",
+    challenge: "Required HIPAA-compliant patient management system with appointment scheduling",
+    solution: "Developed secure platform with patient records, scheduling, and billing integration",
+    results: "40% improvement in patient satisfaction, 100% HIPAA compliance",
+    technologies: [Vue.js", "Python", "MongoDB", "AWS"]
+  },
+  {
+    title: "IoT Monitoring Dashboard",
+    client: "Manufacturing Company",
+    challenge: "Needed real-time monitoring system for industrial equipment and predictive maintenance",
+    solution: "Built IoT platform with real-time data collection, analytics, and alerting",
+    results: "25% reduction in downtime, 30% improvement in equipment efficiency",
+    technologies: [React", "Node.js", "InfluxDB", "MQTT"]
+  }
+];
+
+export default function CustomSolutionsPage() {
   return (
-    <MainLayout
-      title="Custom Development - Zion Tech Group"
-      description="Bespoke software solutions designed for your unique needs. Full stack development, API integration, and ongoing support for custom applications."
-      keywords="custom development, bespoke software, full stack development, API integration, custom applications"
+    <MainLayout;"
+      title="Custom Development Solutions - Zion Tech Group"
+      description="Bespoke software solutions built specifically for your unique business requirements. Full-stack development, mobile apps, and API development."
     >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-          </div>
-
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
+</MainLayout>"
+      <div className="min-h-screen bg-gray-50">"
+</div>"
+        <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20">"
+</section>"
+          <div className="container mx-auto px-4">"
+</div>
+            <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
-              <div className="flex items-center justify-center mb-6">
-                <Settings className="w-16 h-16 text-purple-400 mr-4" />
-                <h1 className="text-5xl md:text-6xl font-bold">
-                  Custom <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Development</span>
-                </h1>
-              </div>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Bespoke software solutions designed specifically for your unique business needs and requirements
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
-                >
-                  Start Your Project
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  href="/case-studies"
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"
-                >
-                  View Portfolio
+</motion>"
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">"
+</h1>"
+                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">"
+</span>
+                </span>
+              </h1>"
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">"
+</p>
+              </p>"
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+</div>"
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">"
+</Link>
+                </Link>"
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">"
+</Link>
                 </Link>
               </div>
             </motion.div>
           </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="text-4xl md:text-5xl font-bold text-purple-600 mb-2">{stat.number}</div>
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
+        </section>"
+        <section className="py-20">"
+</section>"
+          <div className="container mx-auto px-4">"
+</div>
+            <motion.div;"
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+              viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Custom <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Capabilities</span>
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We build custom solutions that perfectly match your business requirements and integrate seamlessly with your existing systems
+</motion>"
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
+</h2>
+              </h2>"
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
+</p>
               </p>
             </motion.div>
+"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
+</div>
+                  <motion.div;
+                    key={index}
+                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ y: -5 }}
+                  >
+</motion>"
+                    <div className="flex items-start space-x-4">"
+</div>"
+                      <div className="flex-shrink-0">"
+</div>"
+                        <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">"
+</div>"
+                          <IconComponent className="w-8 h-8 text-white" />"
+</IconComponent>
+                        </div>
+                      </div>"
+                      <div className="flex-1">"
+</div>"
+                        <h3 className="text-2xl font-bold text-gray-900 mb-3">"
+</h3>
+                        </h3>"
+                        <p className="text-gray-600 mb-6 leading-relaxed">"
+</p>
+                        </p>
+                        "
+                        <ul className="space-y-2 mb-6">"
+</ul>"
+                            <li key={idx} className="flex items-center text-sm text-gray-600">"
+</li>"
+                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />"
+</CheckCircle>
+                            </li>
+                        </ul>
+"
+                        <div className="flex items-center justify-between mb-4">"
+</div>
+                          <div>
+</div>"
+                            <div className="text-sm text-gray-500">Timeline</div>"
+                            <div className="font-semibold text-gray-900">{service.timeline}</div>"
+                          </div>
+                          <div>
+</div>"
+                            <div className="text-sm text-gray-500">Starting at</div>"
+                            <div className="font-semibold text-purple-600">{service.pricing}</div>"
+                          </div>
+                        </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  className="bg-white rounded-2xl shadow-xl p-8"
-                >
-                  <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl flex items-center justify-center mr-4">
-                      <feature.icon className="w-8 h-8 text-white" />
+                        <Link;"
+                          href="/contact"
+                          className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold group-hover:text-blue-600 transition-colors"
+                        >
+</Link>
+                          <span>Get Quote</span>"
+                          <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />"
+</ArrowRight>
+                        </Link>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>
-                      <p className="text-gray-600">{feature.description}</p>
-                    </div>
-                  </div>
-
-                  <ul className="space-y-3">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-gray-600">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
+                  </motion.div>)
+                );
+              })}
             </div>
           </div>
-        </section>
-
-        {/* Technologies Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
+        </section>"
+        <section className="py-20 bg-white">"
+</section>"
+          <div className="container mx-auto px-4">"
+</div>
+            <motion.div;"
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+              viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Stack</span>
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We use the latest technologies and frameworks to build robust, scalable, and maintainable custom solutions
+</motion>"
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
+</h2>
+              </h2>"
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
+</p>
               </p>
             </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {technologies.map((category, index) => (
-                <motion.div
-                  key={category.category}
+"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
+</div>
+                <motion.div;
+                  key={index}
+                  className="bg-gray-50 p-6 rounded-lg"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6"
+                  viewport={{ once: true }}
                 >
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{category.category}</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {category.techs.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm"
-                      >
-                        {tech}
+</motion>"
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">{category.category}</h3>"
+                  <div className="flex flex-wrap gap-2">"
+</div>"
+                      <span key={idx} className="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">"
+</span>
                       </span>
-                    ))}
                   </div>
                 </motion.div>
               ))}
             </div>
           </div>
-        </section>
-
-        {/* Process Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
+        </section>"
+        <section className="py-20">"
+</section>"
+          <div className="container mx-auto px-4">"
+</div>
+            <motion.div;"
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+              viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Process</span>
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our proven development process ensures your custom solution is delivered on time, on budget, and exceeds expectations
+</motion>"
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
+</h2>
+              </h2>"
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
+</p>
               </p>
             </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {process.map((step, index) => (
-                <motion.div
-                  key={step.step}
+"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
+</div>
+                <motion.div;
+                  key={index}
+                  className="text-center"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  viewport={{ once: true }}
                 >
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center mr-4">
-                      <span className="text-white font-bold text-lg">{index + 1}</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900">{step.step}</h3>
+</motion>"
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">"
+</div>"
+                    <span className="text-white font-bold text-xl">{step.step}</span>"
+                  </div>"
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">"
+</h3>
+                  </h3>"
+                  <p className="text-gray-600 mb-2">"
+</p>
+                  </p>"
+                  <div className="text-sm text-purple-600 font-semibold">"
+</div>
                   </div>
-                  <p className="text-gray-600">{step.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
+        </section>"
+        <section className="py-20 bg-white">"
+</section>"
+          <div className="container mx-auto px-4">"
+</div>
+            <motion.div;"
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Ready to Build Something Custom?
-              </h2>
-              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-                Let's discuss your unique requirements and create a custom solution that perfectly fits your business needs
+</motion>"
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
+</h2>
+              </h2>"
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
+</p>
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="px-8 py-4 bg-white text-purple-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
+            </motion.div>
+"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
+</div>
+                  <motion.div;
+                    key={index}
+                    className="text-center"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+</motion>"
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
+</div>"
+                      <IconComponent className="w-8 h-8 text-white" />"
+</IconComponent>
+                    </div>"
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">"
+</h3>
+                    </h3>"
+                    <p className="text-gray-600">"
+</p>
+                    </p>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>"
+        <section className="py-20">"
+</section>"
+          <div className="container mx-auto px-4">"
+</div>
+            <motion.div;"
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+</motion>"
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
+</h2>
+              </h2>"
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
+</p>
+              </p>
+            </motion.div>
+"
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
+</div>
+                <motion.div;
+                  key={index}
+                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
-                  Start Custom Project
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  href="/solutions"
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-purple-600 rounded-lg font-semibold transition-colors"
-                >
-                  View All Solutions
+</motion>"
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{study.title}</h3>"
+                  <p className="text-sm text-gray-600 mb-4">{study.client}</p>"
+                  <div className="mb-4">"
+</div>"
+                    <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>"
+                    <p className="text-gray-600 text-sm">{study.challenge}</p>"
+                  </div>
+                  "
+                  <div className="mb-4">"
+</div>"
+                    <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>"
+                    <p className="text-gray-600 text-sm">{study.solution}</p>"
+                  </div>
+                  "
+                  <div className="mb-4">"
+</div>"
+                    <h4 className="font-semibold text-gray-900 mb-2">Results:</h4>"
+                    <p className="text-green-600 text-sm font-semibold">{study.results}</p>"
+                  </div>
+                  
+                  <div>
+</div>"
+                    <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>"
+                    <div className="flex flex-wrap gap-1">"
+</div>"
+                        <span key={idx} className="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">"
+</span>
+                        </span>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>"
+        <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">"
+</section>"
+          <div className="container mx-auto px-4 text-center">"
+</div>
+            <motion.div;
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+</motion>"
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">"
+</h2>
+              </h2>"
+              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">"
+</p>
+              </p>"
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+</div>"
+                <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">"
+</Link>
+                </Link>"
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">"
+</Link>
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-    </MainLayout>
-  );
-}
+    </MainLayout>"
