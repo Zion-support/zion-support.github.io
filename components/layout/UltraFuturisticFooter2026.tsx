@@ -1,18 +1,18 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, 
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap,
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -55,7 +55,7 @@ const serviceCategories = [
       { name: 'AI Autonomous Clinical Trials', href: '/ai-autonomous-clinical-trials' }
     ]
   }
-];
+],
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
@@ -66,7 +66,7 @@ const companyLinks = [
   { name: 'Investors', href: '/investors' },
   { name: 'Contact Us', href: '/contact' },
   { name: 'Locations', href: '/locations' }
-];
+],
 
 const resourceLinks = [
   { name: 'Documentation', href: '/docs' },
@@ -77,7 +77,7 @@ const resourceLinks = [
   { name: 'Training & Certification', href: '/training' },
   { name: 'Community Forum', href: '/community' },
   { name: 'Developer Resources', href: '/developer-resources' }
-];
+],
 
 const socialLinks = [
   { name: 'Facebook', href: '#', icon: Facebook },
@@ -86,7 +86,7 @@ const socialLinks = [
   { name: 'Instagram', href: '#', icon: Instagram },
   { name: 'YouTube', href: '#', icon: Youtube },
   { name: 'GitHub', href: '#', icon: Github }
-];
+],
 
 export default function UltraFuturisticFooter2026() {
   return (
@@ -283,7 +283,7 @@ export default function UltraFuturisticFooter2026() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="border-t border-gray-800 pt-8"
         >
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md: flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © 2026 Zion Tech Group. All rights reserved. | 
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300 ml-2">
@@ -308,5 +308,5 @@ export default function UltraFuturisticFooter2026() {
         </motion.div>
       </div>
     </footer>
-  );
+  )
 }

@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
+import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react',
 
 export default function WebsitePerformanceMonitorPage() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState(null);
+  const [isAnalyzing, setIsAnalyzing] = useState(false),
+  const [analysisResults, setAnalysisResults] = useState(null),
 
   const features = [
     {
@@ -32,7 +32,7 @@ export default function WebsitePerformanceMonitorPage() {
       title: 'Performance Optimization',
       description: 'AI-powered recommendations to improve your website speed and user experience.',
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-      gradient: 'from-purple-400 to-indigo-500'}];
+      gradient: 'from-purple-400 to-indigo-500'}],
 
   const metrics = [
     {
@@ -71,7 +71,7 @@ export default function WebsitePerformanceMonitorPage() {
       icon: '👥',
       color: 'text-pink-400'
     }
-  ];
+  ],
 
   const pricing = [
     {
@@ -80,12 +80,9 @@ export default function WebsitePerformanceMonitorPage() {
       period: '/month',
       description: 'Perfect for small websites and blogs',
       features: [
-        '5 websites monitored',
-        'Basic performance metrics',
-        'Daily monitoring',
-        'Email alerts',
-        'Basic reporting',
-        'Core Web Vitals tracking'
+        '5 websites monitoredBasic performance metrics',
+        'Daily monitoringEmail alerts',
+        'Basic reportingCore Web Vitals tracking'
       ],
       popular: false
     },
@@ -95,14 +92,10 @@ export default function WebsitePerformanceMonitorPage() {
       period: '/month',
       description: 'Ideal for growing businesses and e-commerce sites',
       features: [
-        '25 websites monitored',
-        'Advanced performance metrics',
-        'Real-time monitoring',
-        'SMS & email alerts',
-        'Advanced reporting',
-        'Performance optimization tips',
-        'API access',
-        'Team collaboration'
+        '25 websites monitoredAdvanced performance metrics',
+        'Real-time monitoringSMS & email alerts',
+        'Advanced reportingPerformance optimization tips',
+        'API accessTeam collaboration'
       ],
       popular: true
     },
@@ -112,21 +105,17 @@ export default function WebsitePerformanceMonitorPage() {
       period: '/month',
       description: 'For large organizations with critical performance requirements',
       features: [
-        'Unlimited websites',
-        'Enterprise-grade monitoring',
-        'Custom alerting rules',
-        '24/7 support',
-        'Custom integrations',
-        'White-label reporting',
-        'SLA guarantees',
-        'On-premise options'
+        'Unlimited websitesEnterprise-grade monitoring',
+        'Custom alerting rules24/7 support',
+        'Custom integrationsWhite-label reporting',
+        'SLA guaranteesOn-premise options'
       ],
       popular: false
     }
-  ];
+  ],
 
   const handleAnalyzeWebsite = async () => {
-    setIsAnalyzing(true);
+    setIsAnalyzing(true),
     // Simulate website analysis
     setTimeout(() => {
       setAnalysisResults({
@@ -137,15 +126,13 @@ export default function WebsitePerformanceMonitorPage() {
         cls: '0.08',
         loadTime: '1.8s',
         recommendations: [
-          'Optimize images and implement lazy loading',
-          'Minimize render-blocking resources',
-          'Enable compression and caching',
-          'Consider using a CDN for global performance'
+          'Optimize images and implement lazy loadingMinimize render-blocking resources',
+          'Enable compression and cachingConsider using a CDN for global performance'
         ]
-      });
-      setIsAnalyzing(false);
-    }, 4000);
-  };
+      }),
+      setIsAnalyzing(false),
+    }, 4000),
+  },
 
   return (
     <>
@@ -417,7 +404,7 @@ export default function WebsitePerformanceMonitorPage() {
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="container-cursor text-center relative z-10">
           <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">
             Ready to Monitor Your Website Performance?
@@ -446,5 +433,5 @@ export default function WebsitePerformanceMonitorPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

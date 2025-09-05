@@ -1,4 +1,4 @@
-import FeatureCard from './components/FeatureCard';
+import FeatureCard from './components/FeatureCard',
 
 export default function HomePage() {
   const features = [
@@ -74,7 +74,7 @@ export default function HomePage() {
       ],
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen">
@@ -181,5 +181,5 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  );
+  ),
 }

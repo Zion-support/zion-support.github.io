@@ -1,2 +1,2 @@
 // JavaScript file
-module.exports = {};
+module.exports = {},

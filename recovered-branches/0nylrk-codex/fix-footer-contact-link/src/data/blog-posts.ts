@@ -1,5 +1,5 @@
 
-import { BlogPost } from "@/types/blog";
+import { BlogPost } from "@/types/blog",
 
 // Sample blog data - in a real app this would come from an API or CMS
 export const BLOG_POSTS: BlogPost[] = [
@@ -73,7 +73,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Green IT: Reducing Your Data Center's Carbon Footprint",
     slug: "green-it",
     excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.",
-    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>
+    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.window.window.performance.</p>
 
 <h2>Energy-Efficient Hardware Selection</h2>
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>
@@ -196,4 +196,4 @@ export const BLOG_POSTS: BlogPost[] = [
     tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"],
     featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"
   }
-];
+],

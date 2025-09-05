@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 
 type EnhancedLoadingProps = {
-  lines?: number;
-};
+  lines?: number,
+},
 
 export default function EnhancedLoading({ lines = 3 }: EnhancedLoadingProps) {
   return (
@@ -11,5 +11,5 @@ export default function EnhancedLoading({ lines = 3 }: EnhancedLoadingProps) {
         <div key={idx} className="skeleton h-4 rounded" />
       ))}
     </div>
-  );
+  ),
 }

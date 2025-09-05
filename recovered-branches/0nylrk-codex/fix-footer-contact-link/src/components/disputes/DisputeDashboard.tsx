@@ -1,21 +1,21 @@
 
-import React, { useEffect } from "react";
-import { useDisputes } from "@/hooks/useDisputes";
-import { DisputesList } from "./DisputesList";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ShieldAlert } from "lucide-react";
+import React, { useEffect } from "react",
+import { useDisputes } from "@/hooks/useDisputes",
+import { DisputesList } from "./DisputesList",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { ShieldAlert } from "lucide-react",
 
 export function DisputeDashboard() {
-  const { disputes, isLoading, refetch } = useDisputes();
+  const { disputes, isLoading, refetch } = useDisputes(),
 
   useEffect(() => {
-    refetch();
-  }, [refetch]);
+    refetch(),
+  }, [refetch]),
 
-  const openDisputes = disputes.filter(d => d.status === 'open');
-  const underReviewDisputes = disputes.filter(d => d.status === 'under_review');
-  const resolvedDisputes = disputes.filter(d => d.status === 'resolved');
+  const openDisputes = disputes.filter(d => d.status === 'open'),
+  const underReviewDisputes = disputes.filter(d => d.status === 'under_review'),
+  const resolvedDisputes = disputes.filter(d => d.status === 'resolved'),
 
   return (
     <div className="container mx-auto p-4 space-y-6">
@@ -85,5 +85,5 @@ export function DisputeDashboard() {
       
       <DisputesList disputes={disputes} isLoading={isLoading} />
     </div>
-  );
+  ),
 }

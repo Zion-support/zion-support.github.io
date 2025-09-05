@@ -1,25 +1,25 @@
-import React, { useState } from "react";
-import { useForm, useFieldArray } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { useRouter } from 'next/router';
-import {logErrorToProduction} from '@/utils/productionLogger';
+import React, { useState } from "react",
+import { useForm, useFieldArray } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { useRouter } from 'next/router',
+import {logErrorToProduction} from '@/utils/productionLogger',
 import {
   Form, FormControl, FormField, FormItem, FormLabel, FormMessage 
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
+} from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Button } from "@/components/ui/button",
 import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue 
-} from "@/components/ui/select";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Separator } from "@/components/ui/separator";
-import { toast } from "@/components/ui/use-toast";
+} from "@/components/ui/select",
+import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { Separator } from "@/components/ui/separator",
+import { toast } from "@/components/ui/use-toast",
 import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, Trash2, Plus, CheckCircle2 } from 'lucide-react'
-import { useAuth } from "@/hooks/useAuth";
-import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
-import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/useAuth",
+import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
+import { supabase } from "@/integrations/supabase/client",
 
 // Define the form schema with validation
 const talentSchema = z.object({
@@ -53,22 +53,22 @@ const talentSchema = z.object({
       z.object({
         url: z.string().url("Must be a valid URL").min(5, "URL is required")})
     ).optional().default([]),
-    cv: z.any().optional()})});
+    cv: z.any().optional()})}),
 
-type TalentFormValues = z.infer<typeof talentSchema>;
+type TalentFormValues = z.infer<typeof talentSchema>,
 
 export function TalentOnboardingForm() {
-  const { user } = useAuth();
-  const router = useRouter();
-  const [currentStep, setCurrentStep] = useState(1);
-  const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null);
-  const [cvFileName, setCvFileName] = useState<string | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showSuccessScreen, setShowSuccessScreen] = useState(false);
+  const { user } = useAuth(),
+  const router = useRouter(),
+  const [currentStep, setCurrentStep] = useState(1),
+  const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null),
+  const [cvFileName, setCvFileName] = useState<string | null>(null),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [showSuccessScreen, setShowSuccessScreen] = useState(false),
   
-  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
+  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),
   
-  const totalSteps = 4;
+  const totalSteps = 4,
   
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentSchema),
@@ -90,56 +90,56 @@ export function TalentOnboardingForm() {
         hourlyRate: "",
         portfolioLinks: [{ url: "" }],
         cv: undefined}},
-    mode: "onChange"});
+    mode: "onChange"}),
   
   const { fields: projectFields, append: appendProject, remove: removeProject } = 
     useFieldArray({
       name: "experience.keyProjects",
-      control: form.control});
+      control: form.control}),
     
   const { fields: linkFields, append: appendLink, remove: removeLink } = 
     useFieldArray({
       name: "availability.portfolioLinks",
-      control: form.control});
+      control: form.control}),
 
   // Handle profile picture upload
   const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
+    const file = e.target.files?.[0],
+    if (!file) return,
     
     // Preview the image
-    const reader = new FileReader();
+    const reader = new FileReader(),
     reader.onloadend = () => {
-      setProfilePictureUrl(reader.result as string);
-    };
-    reader.readAsDataURL(file);
+      setProfilePictureUrl(reader.result as string)
+    },
+    reader.readAsDataURL(file),
     
     // Store the file in the form data
-    form.setValue("basicInfo.profilePicture", file);
-  };
+    form.setValue("basicInfo.profilePicture", file),
+  },
 
   // Handle CV upload
   const handleCvUpload = async (file: File) => {
-    const fileName = `cv-${user?.id}-${Date.now()}`;
+    const fileName = `cv-${user?.id}-${Date.now()}`,
     const { error: cvError } = await supabase.storage
       .from('resumes')
-      .upload(fileName, file);
+      .upload(fileName, file),
       
     if (cvError) {
-      logErrorToProduction('Error uploading CV:', { data: cvError });
-      throw new Error("Failed to upload CV");
+      logErrorToProduction('Error uploading CV:', { data: cvError }),
+      throw new Error("Failed to upload CV"),
     }
     
     // Get the public URL
     const { data: { publicUrl } } = supabase.storage
       .from('resumes')
-      .getPublicUrl(fileName);
+      .getPublicUrl(fileName),
     
-    return publicUrl;
-  };
+    return publicUrl,
+  },
 
   // Rest of the file remains unchanged...
   // [Previous implementation continues...]
 
-  return null;
+  return null,
 }

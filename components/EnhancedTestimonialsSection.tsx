@@ -1,15 +1,15 @@
-import React from 'react';
-import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react';
+import React from 'react',
+import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react',
 
 interface Testimonial {
-  id: string;
-  name: string;
-  title: string;
-  company: string;
-  content: string;
-  rating: number;
-  avatar: string;
-  category: string;
+  id: string,
+  name: string,
+  title: string,
+  company: string,
+  content: string,
+  rating: number,
+  avatar: string,
+  category: string
 }
 
 const EnhancedTestimonialsSection: React.FC = () => {
@@ -74,14 +74,14 @@ const EnhancedTestimonialsSection: React.FC = () => {
       avatar: 'RK',
       category: 'AI & Analytics'
     }
-  ];
+  ],
 
   const stats = [
     { number: '500+', label: 'Projects Delivered', icon: CheckCircle },
     { number: '50+', label: 'Enterprise Clients', icon: Users },
     { number: '99.9%', label: 'Client Satisfaction', icon: Award },
     { number: '4.9/5', label: 'Average Rating', icon: Star }
-  ];
+  ],
 
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
@@ -91,8 +91,8 @@ const EnhancedTestimonialsSection: React.FC = () => {
           i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'
         }`}
       />
-    ));
-  };
+    )),
+  },
 
   return (
     <section className="py-24 px-6 relative overflow-hidden">
@@ -224,7 +224,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
         </div>
       </div>
     </section>
-  );
-};
+  ),
+},
 
-export default EnhancedTestimonialsSection;
+export default EnhancedTestimonialsSection,

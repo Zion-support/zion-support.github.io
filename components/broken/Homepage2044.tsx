@@ -1,33 +1,33 @@
-import React, { useEffect, useState, useCallback, useMemo } from 'react';
-import Layout from './layout/Layout';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState, useCallback, useMemo } from 'react',
+import Layout from './layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon,
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity,
   ChevronDown, CheckCircle, Users, Award, Clock
-} from 'lucide-react';
-import { Service } from '../types';
+} from 'lucide-react',
+import { Service } from '../types',
 
 // Import our new revolutionary services
-import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas';
-import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services';
-import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services';
-import { innovative2025AIAutonomousEcosystemV3 } from '../data/2025-innovative-ai-autonomous-ecosystem-v3';
-import { emerging2025TechBreakthroughsV4 } from '../data/2025-emerging-tech-breakthroughs-v4';
-import { advanced2025ITInfrastructureServicesV2 } from '../data/2025-advanced-it-infrastructure-services-v2';
+import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas',
+import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services',
+import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services',
+import { innovative2025AIAutonomousEcosystemV3 } from '../data/2025-innovative-ai-autonomous-ecosystem-v3',
+import { emerging2025TechBreakthroughsV4 } from '../data/2025-emerging-tech-breakthroughs-v4',
+import { advanced2025ITInfrastructureServicesV2 } from '../data/2025-advanced-it-infrastructure-services-v2',
 
 // Import our new 2025 real enterprise AI services
-import { realEnterpriseAIServices2025 } from '../data/2025-real-enterprise-ai-services';
-import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
-import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
+import { realEnterpriseAIServices2025 } from '../data/2025-real-enterprise-ai-services',
+import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services',
+import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions',
 
 // Lazy load new components for better performance
-const ServiceCard = lazy(() => import('./ServiceCard'));
-const TestimonialsSection = lazy(() => import('./TestimonialsSection'));
-const LiveChatWidget = lazy(() => import('./LiveChatWidget'));
+const ServiceCard = lazy(() => import('./ServiceCard')),
+const TestimonialsSection = lazy(() => import('./TestimonialsSection')),
+const LiveChatWidget = lazy(() => import('./LiveChatWidget')),
 
 // Lazy load heavy components
-const ServiceCard = lazy(() => import('./ServiceCard'));
+const ServiceCard = lazy(() => import('./ServiceCard')),
 
 // Loading skeleton component
 const LoadingSkeleton = () => (
@@ -36,46 +36,46 @@ const LoadingSkeleton = () => (
     <div className="h-4 bg-gray-700 rounded mb-2"></div>
     <div className="h-4 bg-gray-700 rounded w-3/4"></div>
   </div>
-);
+),
 
 interface Service {
-  id: string;
-  name: string;
-  description: string;
-  type: string;
-  category: string;
+  id: string,
+  name: string,
+  description: string,
+  type: string,
+  category: string,
   pricing: {
-    starter: string;
-  };
-  slug: string;
+    starter: string
+  },
+  slug: string
 }
 
 const Homepage2044: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isLoading, setIsLoading] = useState(true);
-  const [scrollProgress, setScrollProgress] = useState(0);
+  const [isVisible, setIsVisible] = useState(false),
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
+  const [isLoading, setIsLoading] = useState(true),
+  const [scrollProgress, setScrollProgress] = useState(0),
   
   // Memoize expensive computations
   const allRevolutionaryServices = useMemo(() => [
     ...revolutionary2044AdvancedMicroSaas,
     ...revolutionary2044ITServices,
     ...revolutionary2044AIServices
-  ], []);
+  ], []),
 
   const featuredServices = useMemo(() => 
     allRevolutionaryServices.slice(0, 6), [allRevolutionaryServices]
-  );
+  ),
 
   const getFilteredServices = useCallback(() => {
-    if (selectedCategory === 'all') return allRevolutionaryServices;
+    if (selectedCategory === 'all') return allRevolutionaryServices,
     return allRevolutionaryServices.filter(service => 
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
       service.type.toLowerCase().includes(selectedCategory.toLowerCase())
-    );
-  }, [selectedCategory, allRevolutionaryServices]);
+    ),
+  }, [selectedCategory, allRevolutionaryServices]),
 
   const categories = useMemo(() => [
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500' },
@@ -84,7 +84,7 @@ const Homepage2044: React.FC = () => {
     { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-500 to-orange-500' },
     { id: 'space', name: 'Space Technology', icon: RocketIcon, color: 'from-indigo-500 to-purple-500' },
     { id: 'business', name: 'Business Solutions', icon: Target, color: 'from-emerald-500 to-teal-500' }
-  ], []);
+  ], []),
 
   const features = useMemo(() => [
     { icon: Brain, title: "AI Consciousness Evolution 2044", description: "Next-generation AI consciousness with emotional intelligence", href: "/ai-consciousness-evolution-2044", color: "from-purple-500 to-pink-500" },
@@ -93,95 +93,95 @@ const Homepage2044: React.FC = () => {
     { icon: Rocket, title: "Space Resource Intelligence 2044", description: "AI-powered space exploration with consciousness", href: "/space-resource-intelligence-2044", color: "from-indigo-500 to-purple-500" },
     { icon: Cpu, title: "Autonomous Business Intelligence 2044", description: "Fully autonomous AI business intelligence", href: "/ai-autonomous-business-intelligence-2044", color: "from-emerald-500 to-teal-500" },
     { icon: Database, title: "Quantum Cloud Infrastructure 2044", description: "Quantum-powered cloud with consciousness", href: "/quantum-cloud-infrastructure-2044", color: "from-yellow-500 to-orange-500" }
-  ];
+  ],
 
   const stats = useMemo(() => [
     { number: "2000+", label: "Revolutionary Services", icon: Star, description: "Cutting-edge solutions" },
     { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp, description: "Reliable performance" },
     { number: "24/7", label: "AI Support Available", icon: Brain, description: "Always there for you" },
     { number: "200+", label: "Countries Served", icon: Globe, description: "Global reach" }
-  ], []);
+  ], []),
 
   const handleGetStarted = useCallback(() => {
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'cta_click', { cta_type: 'get_started' });
+      (window as any).gtag('eventcta_click', { cta_type: 'get_started' }),
     }
-    window.location.href = '/revolutionary-2044-pricing-showcase';
-  }, []);
+    window.location.href = '/revolutionary-2044-pricing-showcase',
+  }, []),
 
   const handleWatchDemo = useCallback(() => {
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'cta_click', { cta_type: 'explore_services' });
+      (window as any).gtag('eventcta_click', { cta_type: 'explore_services' }),
     }
-    window.location.href = '/services';
-  }, []);
+    window.location.href = '/services',
+  }, []),
 
   const handleServiceClick = useCallback((service: any) => {
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'service_click', { service_name: service.name });
+      (window as any).gtag('eventservice_click', { service_name: service.name }),
     }
-    window.location.href = service.slug;
-  }, []);
+    window.location.href = service.slug,
+  }, []),
 
   const handleCategoryChange = useCallback((categoryId: string) => {
-    setSelectedCategory(categoryId);
+    setSelectedCategory(categoryId),
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'category_filter', { category: categoryId });
+      (window as any).gtag('eventcategory_filter', { category: categoryId }),
     }
-  }, []);
+  }, []),
 
   useEffect(() => {
     // Performance optimization: Use requestIdleCallback for non-critical operations
     const initializePage = () => {
-      setIsVisible(true);
-      setIsLoading(false);
-    };
+      setIsVisible(true),
+      setIsLoading(false)
+    },
 
     if ('requestIdleCallback' in window) {
-      (window as any).requestIdleCallback(initializePage);
+      (window as any).requestIdleCallback(initializePage),
     } else {
-      setTimeout(initializePage, 100);
+      setTimeout(initializePage, 100),
     }
     
     // Auto-rotate featured services with better performance
     const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % 6);
-    }, 6000);
+      setCurrentServiceIndex((prev) => (prev + 1) % 6),
+    }, 6000),
     
     // Track mouse movement for parallax effects with throttling
-    let ticking = false;
+    let ticking = false,
     const handleMouseMove = (e: MouseEvent) => {
       if (!ticking) {
         requestAnimationFrame(() => {
-          setMousePosition({ x: e.clientX, y: e.clientY });
-          ticking = false;
-        });
-        ticking = true;
+          setMousePosition({ x: e.clientX, y: e.clientY }),
+          ticking = false,
+        }),
+        ticking = true,
       }
-    };
+    },
     
-    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    window.addEventListener('mousemove', handleMouseMove, { passive: true }),
     
     // Track scroll progress for performance monitoring
     const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-      const docHeight = document.body.offsetHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
-      setScrollProgress(scrollPercent);
-    };
+      const scrollTop = window.pageYOffset,
+      const docHeight = document.body.offsetHeight - window.innerHeight,
+      const scrollPercent = (scrollTop / docHeight) * 100,
+      setScrollProgress(scrollPercent),
+    },
     
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll, { passive: true }),
     
     return () => {
-      clearInterval(interval);
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+      clearInterval(interval),
+      window.removeEventListener('mousemove', handleMouseMove),
+      window.removeEventListener('scroll', handleScroll),
+    },
+  }, []),
 
   // Loading state
   if (isLoading) {
@@ -198,7 +198,7 @@ const Homepage2044: React.FC = () => {
           </motion.div>
         </div>
       </Layout>
-    );
+    ),
   }
 
   return (
@@ -285,7 +285,7 @@ const Homepage2044: React.FC = () => {
           </div>
         </div>
       </Layout>
-    );
+    ),
   }
 
   return (
@@ -598,7 +598,7 @@ const Homepage2044: React.FC = () => {
         </main>
       </Layout>
     </>
-  );
-};
+  ),
+},
 
-export default Homepage2044;
+export default Homepage2044,

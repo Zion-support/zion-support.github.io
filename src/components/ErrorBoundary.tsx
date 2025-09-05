@@ -1,19 +1,17 @@
-    return { hasError: true, error };
+    return { hasError: true, error },
 
-export { ErrorBoundary };
-  };
-,
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
+export { ErrorBoundary },
+  },
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo),
-    this.setState({,
+    this.setState({
       error,
       errorInfo
     })
-  };
-,
-  render() {,
-    if (this.state.hasError) {,
-      return (,
+  },
+  render() {
+    if (this.state.hasError) {
+      return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">,
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">,
             <div className="flex items-center mb-4">,
@@ -28,74 +26,68 @@ export { ErrorBoundary };
               We're sorry, but something unexpected happened. Please try refreshing the page.,
             </p>,
             <div className="space-y-3">,
-              <button,
-                onClick={() => window.location.reload()};
-                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover: bg-blue-700 transition-colors",
-              >,
+              <button
+                onClick={() => window.location.reload()},
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover: bg-blue-700 transition-colors">,
                 Refresh Page,
               </button>,
-              <button,
-                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })};
-                className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover: bg-gray-200 transition-colors",
-              >,
+              <button
+                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })},
+                className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover: bg-gray-200 transition-colors">,
                 Try Again,
               </button>,
             </div>,
-            {process.env.NODE_ENV === 'development' && this.state.error && (,
+            {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-4 p-4 bg-gray-100 rounded-lg">,
                 <summary className="cursor-pointer text-sm font-medium text-gray-700">,
                   Error Details (Development),
                 </summary>,
                 <pre className="mt-2 text-xs text-gray-600 overflow-auto">,
-                  {this.state.error.toString()};
-                  {this.state.errorInfo?.componentStack};
+                  {this.state.error.toString()},
+                  {this.state.errorInfo?.componentStack},
                 </pre>,
-              </details>,
-            )};
+              </details>)},
           </div>,
-        </div>,
-      )
-    };
-,
+        </div>)
+    },
     return this.props.children
-  };
-};
-,
-export { ErrorBoundary };
-import React, { Component, ReactNode } from 'react';
-import { Button } from './ui/button';
+  },
+},
+export { ErrorBoundary },
+import React, { Component, ReactNode } from 'react',
+import { Button } from './ui/button',
 import { AlertTriangle } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
+import {logErrorToProduction} from '@/utils/productionLogger',
 
 
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
+  children: ReactNode,
+  fallback?: ReactNode
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
+  hasError: boolean,
+  error?: Error
 }
 
-export class ErrorBoundary extends Component<Props, State> {
+export class ErrorBoundary extends Component<Props State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props),
+    this.state = { hasError: false },
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error },
   }
 
   componentDidCatch(error: Error, errorInfo: any) {
-    logErrorToProduction('ErrorBoundary caught an error:', error, errorInfo);
+    logErrorToProduction('ErrorBoundary caught an error:', error, errorInfo),
   }
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback,
       }
 
       return (
@@ -106,9 +98,9 @@ export class ErrorBoundary extends Component<Props, State> {
           <button onClick={() => window.location.reload()}>Refresh Page</button>
           <button onClick={() => window.location.href = '/'}>Go Home</button>
         </div>
-      );
+      ),
     }
 
-    return this.props.children;
+    return this.props.children,
   }
 }

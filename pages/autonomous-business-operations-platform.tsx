@@ -1,13 +1,13 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Bot, Brain, Cpu, Zap, Shield, Globe, 
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign,
   Building2, Gauge, BarChart3, Settings, Workflow
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AutonomousBusinessOperationsPlatform = () => {
   const features = [
@@ -35,7 +35,7 @@ const AutonomousBusinessOperationsPlatform = () => {
       description: "AI-powered security monitoring and threat prevention",
       color: "from-red-500 to-orange-500"
     }
-  ];
+  ],
 
   const capabilities = [
     "24/7 autonomous operation",
@@ -46,7 +46,7 @@ const AutonomousBusinessOperationsPlatform = () => {
     "Performance monitoring",
     "Risk assessment",
     "Compliance automation"
-  ];
+  ],
 
   const industries = [
     {
@@ -65,7 +65,7 @@ const AutonomousBusinessOperationsPlatform = () => {
       title: "Retail",
       description: "Inventory management, customer service, and sales optimization"
     }
-  ];
+  ],
 
   const benefits = [
     {
@@ -92,7 +92,7 @@ const AutonomousBusinessOperationsPlatform = () => {
       value: "250%",
       description: "Increase in team productivity"
     }
-  ];
+  ],
 
   return (
     <>
@@ -306,7 +306,7 @@ const AutonomousBusinessOperationsPlatform = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Automate Your Business?
               </h2>
               <p className="text-xl text-gray-400 mb-8">
@@ -326,7 +326,7 @@ const AutonomousBusinessOperationsPlatform = () => {
         </section>
       </div>
     </>
-  );
-};
+  )
+},
 
-export default AutonomousBusinessOperationsPlatform;
+export default AutonomousBusinessOperationsPlatform,

@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Brain, BarChart3, TrendingUp, Users, Target, Zap, 
   Shield, Database, Globe, ArrowRight, CheckCircle, Star
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 export default function AIBusinessIntelligencePage() {
   const features = [
@@ -46,7 +46,7 @@ export default function AIBusinessIntelligencePage() {
       description: "Generate comprehensive reports automatically, saving hours of manual work each week.",
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ],
 
   const benefits = [
     "Increase revenue by 25-40% through data-driven insights",
@@ -55,7 +55,7 @@ export default function AIBusinessIntelligencePage() {
     "Accelerate decision-making by 60% with real-time data",
     "Reduce manual reporting time by 80% with automation",
     "Achieve 99.9% data accuracy with AI-powered validation"
-  ];
+  ],
 
   const useCases = [
     {
@@ -78,7 +78,7 @@ export default function AIBusinessIntelligencePage() {
       description: "Predictive maintenance, quality control, and supply chain optimization",
       results: "45% reduction in downtime, 35% improvement in product quality"
     }
-  ];
+  ],
 
   const pricing = [
     {
@@ -127,7 +127,7 @@ export default function AIBusinessIntelligencePage() {
       ],
       popular: false
     }
-  ];
+  ],
 
   return (
     <>
@@ -381,7 +381,7 @@ export default function AIBusinessIntelligencePage() {
             <p className="text-xl text-blue-100 mb-8">
               Join hundreds of businesses already using AI to drive growth and efficiency.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
@@ -401,5 +401,5 @@ export default function AIBusinessIntelligencePage() {
 
       <EnhancedFooter />
     </>
-  );
+  )
 }

@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from "next/link",
 
 export const metadata = {
   title: "AI Automation Services - Zion Tech Group",
   description: "Transform your business with intelligent AI automation solutions. Streamline operations, reduce costs, and enhance productivity with our cutting-edge automation technology.",
-  keywords: "AI automation, business process automation, intelligent automation, workflow automation, Zion Tech Group"};
+  keywords: "AI automation, business process automation, intelligent automation, workflow automation, Zion Tech Group"},
 
 export default function AIAutomationServicesPage() {
   return (
@@ -205,7 +205,7 @@ export default function AIAutomationServicesPage() {
             <p className="text-xl text-gray-300 mb-8">
               Join hundreds of companies that have transformed their operations with our AI automation solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary">
                 Start Your Automation Journey
               </Link>
@@ -217,5 +217,5 @@ export default function AIAutomationServicesPage() {
         </section>
       </div>
     </div>
-  );
+  )
 }

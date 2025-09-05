@@ -1,53 +1,53 @@
-import { innovativeAIServices } from '../data/innovative-ai-services';
-import { quantumSpaceServices } from '../data/quantum-space-services';
-import { enterpriseITServices } from '../data/enterprise-it-services';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import { additionalEnhancedServices } from '../data/additional-real-services';
-import { newRealServices } from '../data/new-real-services';
-import { industryRealServices } from '../data/industry-real-services';
-import { professionalServices } from '../data/professional-services';
-import { nextGenerationAIServices } from '../data/next-generation-ai-services';
-import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
-import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
-import { marketValidatedServices } from '../data/market-validated-services';
-import { emergingTechnologyServices } from '../data/emerging-technology-services';
-import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
-import { curatedMarketServices } from '../data/curated-market-services';
-import { realMarketServices } from '../data/real-market-services';
-import { new2025Services } from '../data/new-2025-services';
-import { newRealInnovations } from '../data/new-real-innovations';
-import { serviceExpansions2025 } from '../data/service-expansions-2025';
-import { newOperationalServices2025 } from '../data/new-operational-services-2025';
-import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
-import { innovative2025Services } from '../data/innovative-2025-services';
-import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
-import { extraServices } from '../data/extra-services';
-import { newlyAddedServices } from '../data/newly-added-services';
-import { moreRealServices2025 } from '../data/more-real-services-2025';
-import { verified2025Additions } from '../data/verified-2025-additions';
-import { realServicesQ12025 } from '../data/real-services-q1-2025';
-import { realEnterpriseServices2025 } from '../data/real-enterprise-services-2025';
-import { realMarketAugmentations2025 } from '../data/real-market-augmentations-2025';
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
-import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
-import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
-import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
-import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
-import { aiAutonomousServices2026 } from '../data/2026-ai-autonomous-services';
-import { quantumSpaceTechServices2026 } from '../data/2026-quantum-space-tech-services';
-import { metaverseDigitalRealityServices2026 } from '../data/2026-metaverse-digital-reality-services';
-import { ultimate2026Services } from '../data/ultimate-2026-services';
-import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
-import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
-import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
-import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
-import { innovative2026AIServicesV4 } from '../data/innovative-2026-ai-services-v4';
+import { innovativeAIServices } from '../data/innovative-ai-services',
+import { quantumSpaceServices } from '../data/quantum-space-services',
+import { enterpriseITServices } from '../data/enterprise-it-services',
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
+import { additionalEnhancedServices } from '../data/additional-real-services',
+import { newRealServices } from '../data/new-real-services',
+import { industryRealServices } from '../data/industry-real-services',
+import { professionalServices } from '../data/professional-services',
+import { nextGenerationAIServices } from '../data/next-generation-ai-services',
+import { cuttingEdgeITServices } from '../data/cutting-edge-it-services',
+import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2',
+import { marketValidatedServices } from '../data/market-validated-services',
+import { emergingTechnologyServices } from '../data/emerging-technology-services',
+import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions',
+import { curatedMarketServices } from '../data/curated-market-services',
+import { realMarketServices } from '../data/real-market-services',
+import { new2025Services } from '../data/new-2025-services',
+import { newRealInnovations } from '../data/new-real-innovations',
+import { serviceExpansions2025 } from '../data/service-expansions-2025',
+import { newOperationalServices2025 } from '../data/new-operational-services-2025',
+import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2',
+import { innovative2025Services } from '../data/innovative-2025-services',
+import { emergingTech2025Services } from '../data/emerging-tech-2025-services',
+import { extraServices } from '../data/extra-services',
+import { newlyAddedServices } from '../data/newly-added-services',
+import { moreRealServices2025 } from '../data/more-real-services-2025',
+import { verified2025Additions } from '../data/verified-2025-additions',
+import { realServicesQ12025 } from '../data/real-services-q1-2025',
+import { realEnterpriseServices2025 } from '../data/real-enterprise-services-2025',
+import { realMarketAugmentations2025 } from '../data/real-market-augmentations-2025',
+import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2',
+import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4',
+import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2',
+import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4',
+import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2',
+import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4',
+import { aiAutonomousServices2026 } from '../data/2026-ai-autonomous-services',
+import { quantumSpaceTechServices2026 } from '../data/2026-quantum-space-tech-services',
+import { metaverseDigitalRealityServices2026 } from '../data/2026-metaverse-digital-reality-services',
+import { ultimate2026Services } from '../data/ultimate-2026-services',
+import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations',
+import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4',
+import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4',
+import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4',
+import { innovative2026AIServicesV4 } from '../data/innovative-2026-ai-services-v4',
 
 export default function ServicesPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
   // Combine all services
   const allServices = [
@@ -106,7 +106,7 @@ export default function ServicesPage() {
     ...emergingTech2026ServicesV4,
     ...enterpriseIT2026ServicesV4,
     ...innovative2026AIServicesV4
-  ];
+  ],
 
   // Categories for filtering
   const categories = [
@@ -121,76 +121,76 @@ export default function ServicesPage() {
     { id: 'biotech', name: 'Biotech & Healthcare', icon: <Dna className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Biotech') || s.category.includes('Healthcare')).length },
     { id: 'finance', name: 'Financial Technology', icon: <DollarSign className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length },
     { id: 'iot', name: 'IoT & Edge Computing', icon: <Wifi className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('IoT') || s.category.includes('Edge')).length }
-  ];
-import React, { useState, useMemo } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+  ],
+import React, { useState, useMemo } from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Search, Filter, Grid, List, Star, 
   TrendingUp, Zap, Brain, Shield, Globe,
   ArrowRight, ExternalLink, Check, Cpu
-} from 'lucide-react';
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import { extraServices } from '../data/extra-services';
-import { additionalEnhancedServices } from '../data/additional-real-services';
-import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
-import { advancedAIServices } from '../data/advanced-ai-services';
-import { blockchainEmergingTechServices } from '../data/blockchain-emerging-tech-services';
+} from 'lucide-react',
+import Button from '../components/ui/Button',
+import Card from '../components/ui/Card',
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
+import { extraServices } from '../data/extra-services',
+import { additionalEnhancedServices } from '../data/additional-real-services',
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services',
+import { advancedAIServices } from '../data/advanced-ai-services',
+import { blockchainEmergingTechServices } from '../data/blockchain-emerging-tech-services',
 
 // Import our new service data
-import { enterpriseITSolutions } from '../data/2034-enterprise-it-solutions';
-import { innovativeMicroSaasSolutions } from '../data/2034-innovative-micro-saas-solutions';
-import { cuttingEdgeAIServices } from '../data/2034-cutting-edge-ai-services';
-import { real2026Q2Services } from '../data/real-2026-q2-services';
+import { enterpriseITSolutions } from '../data/2034-enterprise-it-solutions',
+import { innovativeMicroSaasSolutions } from '../data/2034-innovative-micro-saas-solutions',
+import { cuttingEdgeAIServices } from '../data/2034-cutting-edge-ai-services',
+import { real2026Q2Services } from '../data/real-2026-q2-services',
 
 // Import existing service data
-import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
-import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
-import { innovativeITServices2025 } from '../data/2025-innovative-it-services';
-import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
-import { newRealServices2026 } from '../data/2025-2026-new-real-services';
-import { additionalRealMicroSaas2026 } from '../data/2026-additional-real-micro-saas';
+import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services',
+import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services',
+import { innovativeITServices2025 } from '../data/2025-innovative-it-services',
+import { emergingTechServices2025 } from '../data/2025-emerging-tech-services',
+import { newRealServices2026 } from '../data/2025-2026-new-real-services',
+import { additionalRealMicroSaas2026 } from '../data/2026-additional-real-micro-saas',
 
 // Helper function to get service category
 const getServiceCategory = (service: any) => {
-  if (service.category) return service.category;
-  if (service.type) return service.type;
-  return 'Other';
-};
+  if (service.category) return service.category,
+  if (service.type) return service.type,
+  return 'Other'
+},
 
 // Helper function to get service pricing
 const getServicePricing = (service: any) => {
-  if (service.pricing?.starter) return service.pricing.starter;
-  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
-  if (service.price?.monthly) return `$${service.price.monthly}/month`;
-  return 'Contact for pricing';
-};
+  if (service.pricing?.starter) return service.pricing.starter,
+  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`,
+  if (service.price?.monthly) return `$${service.price.monthly}/month`,
+  return 'Contact for pricing',
+},
 
 // Helper function to get service features
 const getServiceFeatures = (service: any) => {
-  if (service.features) return service.features;
-  if (service.keyFeatures) return service.keyFeatures;
-  return [];
-};
+  if (service.features) return service.features,
+  if (service.keyFeatures) return service.keyFeatures,
+  return []
+},
 
 // Helper function to get service description
 const getServiceDescription = (service: any) => {
-  if (service.description) return service.description;
-  if (service.tagline) return service.tagline;
-  return 'No description available';
-};
+  if (service.description) return service.description,
+  if (service.tagline) return service.tagline,
+  return 'No description available'
+},
 
 // Helper function to get service launch date
 const getServiceLaunchDate = (service: any) => {
-  return service.launchDate || service.releasedAt || service.updatedAt || '2020-01-01';
-};
+  return service.launchDate || service.releasedAt || service.updatedAt || '2020-01-01'
+},
 
 // Helper function to get service rating
 const getServiceRating = (service: any) => {
-  return service.rating || 0;
-};
+  return service.rating || 0
+},
 
 // Create unified services array
 const allServices = [
@@ -203,7 +203,7 @@ const allServices = [
   ...emergingTechServices2025,
   ...newRealServices2026,
   ...additionalRealMicroSaas2026
-];
+],
 
 const categories = [
   {
@@ -276,7 +276,7 @@ const categories = [
     color: 'from-yellow-500 to-amber-500',
     description: 'Education platforms and training'
   }
-];
+],
 
 const sortOptions = [
   { value: 'name', label: 'Name A-Z' },
@@ -285,16 +285,16 @@ const sortOptions = [
   { value: 'popular', label: 'Most Popular' },
   { value: 'newest', label: 'Newest First' },
   { value: 'rating', label: 'Highest Rated' }
-];
+],
 
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router',
 
 export default function Services() {
-  const router = useRouter();
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
+  const router = useRouter(),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity'),
 
   // Combine all services
   const allServices = useMemo(() => [
@@ -304,61 +304,60 @@ export default function Services() {
     ...innovativeMicroSaasServices,
     ...advancedAIServices,
     ...blockchainEmergingTechServices
-  ], []);
+  ], []),
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
-        return a.name.localeCompare(b.name);
+        return a.name.localeCompare(b.name),
       case 'price-low':
         return (parseInt(getServicePricing(a).replace(/[^0-9]/g, '')) || 0) - 
-               (parseInt(getServicePricing(b).replace(/[^0-9]/g, '')) || 0);
+               (parseInt(getServicePricing(b).replace(/[^0-9]/g, '')) || 0),
       case 'price-high':
         return (parseInt(getServicePricing(b).replace(/[^0-9]/g, '')) || 0) - 
-               (parseInt(getServicePricing(a).replace(/[^0-9]/g, '')) || 0);
+               (parseInt(getServicePricing(a).replace(/[^0-9]/g, '')) || 0),
       case 'newest':
         return new Date(getServiceLaunchDate(b)).getTime() - 
-               new Date(getServiceLaunchDate(a)).getTime();
+               new Date(getServiceLaunchDate(a)).getTime(),
       case 'rating':
-        return getServiceRating(b) - getServiceRating(a);
-      default:
-        return 0;
+        return getServiceRating(b) - getServiceRating(a),
+      default: return 0
     }
 
   // Pagination helpers
-  const totalPages = Math.max(1, Math.ceil(sortedServices.length / pageSize));
-  const currentPageClamped = Math.min(currentPage, totalPages);
+  const totalPages = Math.max(1, Math.ceil(sortedServices.length / pageSize)),
+  const currentPageClamped = Math.min(currentPage, totalPages),
   const paginatedServices = sortedServices.slice(
     (currentPageClamped - 1) * pageSize,
     currentPageClamped * pageSize
-  );
+  ),
 
   // Reset to first page when filters/sort change
   React.useEffect(() => {
-    setCurrentPage(1);
-  }, [searchQuery, selectedCategory, sortBy]);
+    setCurrentPage(1),
+  }, [searchQuery, selectedCategory, sortBy]),
 
   React.useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const q = (router.query.q as string) || '';
-    const filter = (router.query.filter as string) || (router.query.category as string) || '';
-    const sort = (router.query.sort as string) || '';
+    if (typeof window === 'undefined') return,
+    const q = (router.query.q as string) || '',
+    const filter = (router.query.filter as string) || (router.query.category as string) || '',
+    const sort = (router.query.sort as string) || '',
 
-    if (q) setSearchQuery(q);
-    if (sort) setSortBy(sort);
+    if (q) setSearchQuery(q),
+    if (sort) setSortBy(sort),
 
     if (filter) {
       // accept id or category name
-      const byId = categories.find(c => c.id.toLowerCase() === filter.toLowerCase());
+      const byId = categories.find(c => c.id.toLowerCase() === filter.toLowerCase()),
       if (byId) {
-        setSelectedCategory(byId.id);
+        setSelectedCategory(byId.id),
       } else {
-        const byName = categories.find(c => c.name.toLowerCase() === decodeURIComponent(filter.toLowerCase()));
-        if (byName) setSelectedCategory(byName.id);
+        const byName = categories.find(c => c.name.toLowerCase() === decodeURIComponent(filter.toLowerCase())),
+        if (byName) setSelectedCategory(byName.id),
       }
     }
-  }, [router.query.q, router.query.filter, router.query.category, router.query.sort]);
+  }, [router.query.q, router.query.filter, router.query.category, router.query.sort]),
 
   const getCategoryIcon = (category: string) => {
     switch (category.toLowerCase()) {
@@ -368,74 +367,73 @@ export default function Services() {
       case 'data & analytics':
       case 'cloud services':
       case 'cybersecurity':
-        return <Building className="w-6 h-6 text-blue-400" />;
+        return <Building className="w-6 h-6 text-blue-400" />,
       case 'ai & consciousness':
       case 'ai services':
       case 'artificial intelligence':
-        return <Brain className="w-6 h-6 text-cyan-400" />;
+        return <Brain className="w-6 h-6 text-cyan-400" />,
       case 'quantum':
       case 'quantum & emerging tech':
-        return <Atom className="w-6 h-6 text-purple-400" />;
+        return <Atom className="w-6 h-6 text-purple-400" />,
       case 'space':
       case 'space & metaverse':
-        return <Rocket className="w-6 h-6 text-pink-400" />;
+        return <Rocket className="w-6 h-6 text-pink-400" />,
       case 'micro saas':
       case 'micro saas solutions':
-        return <Target className="w-6 h-6 text-orange-400" />;
+        return <Target className="w-6 h-6 text-orange-400" />,
       case 'creative':
       case 'creative & media':
-        return <Palette className="w-6 h-6 text-indigo-400" />;
+        return <Palette className="w-6 h-6 text-indigo-400" />,
       case 'healthcare':
       case 'healthcare & biotech':
-        return <Heart className="w-6 h-6 text-red-400" />;
+        return <Heart className="w-6 h-6 text-red-400" />,
       case 'transportation':
       case 'transportation & logistics':
-        return <Truck className="w-6 h-6 text-blue-400" />;
+        return <Truck className="w-6 h-6 text-blue-400" />,
       case 'education':
       case 'education & research':
-        return <GraduationCap className="w-6 h-6 text-yellow-400" />;
+        return <GraduationCap className="w-6 h-6 text-yellow-400" />,
       default:
-        return <Shield className="w-6 h-6 text-gray-400" />;
+        return <Shield className="w-6 h-6 text-gray-400" />
     }
 
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'name':
-          return a.name.localeCompare(b.name);
+          return a.name.localeCompare(b.name),
         case 'price': {
-          const priceA = parseFloat(a.price.replace(/[^0-9.]/g, ''));
-          const priceB = parseFloat(b.price.replace(/[^0-9.]/g, ''));
-          return priceA - priceB;
+          const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')),
+          const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')),
+          return priceA - priceB,
         }
         case 'rating':
-          return (b.rating || 0) - (a.rating || 0);
+          return (b.rating || 0) - (a.rating || 0),
         case 'popularity':
-        default:
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+        default: return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
       }
-    });
+    }),
 
-    return filtered;
-  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
+    return filtered,
+  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const filteredServices = activeCategory === 'all' 
     ? allServices 
-    : allServices.filter(service => service.category === activeCategory);
+    : allServices.filter(service => service.category === activeCategory),
 
   const stats = [
     { number: '500+', label: 'Services Delivered', icon: CheckCircle, color: 'text-cyan-400' },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield, color: 'text-green-400' },
     { number: '24/7', label: 'Global Support', icon: Clock, color: 'text-purple-400' },
     { number: '2500%', label: 'Average ROI', icon: TrendingUp, color: 'text-yellow-400' }
-  ];
+  ],
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {microServices.map((service, index) => (
@@ -632,8 +630,8 @@ export default function Services() {
                 </p>
                 <button
                   onClick={() => {
-                    setSearchTerm('');
-                    setSelectedCategory('all');
+                    setSearchTerm(''),
+                    setSelectedCategory('all'),
                   }}
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
                 >
@@ -908,8 +906,8 @@ export default function Services() {
               </p>
               <Button
                 onClick={() => {
-                  setSearchTerm('');
-                  setSelectedCategory('all');
+                  setSearchTerm(''),
+                  setSelectedCategory('all'),
                 }}
                 variant="primary"
               >
@@ -954,7 +952,7 @@ export default function Services() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Button
                 href="/contact"
                 variant="primary"
@@ -976,7 +974,7 @@ export default function Services() {
         </div>
       </section>
     </div>
-  );
-};
+  )
+},
 
-export default ServicesPage;
+export default ServicesPage,

@@ -1,73 +1,67 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 
 interface ContactFormData {
-  name: string;
-  email: string;
-  company: string;
-  phone: string;
-  service: string;
-  message: string;
-}
-
-const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<ContactFormData>({
-import React, { useState } from 'react',
-import LoadingSpinner from './LoadingSpinner';
-,
-interface FormData {,
   name: string,
   email: string,
   company: string,
   phone: string,
   service: string,
   message: string
-};
-,
-const ContactForm: React.FC = () => {,
-  const [formData, setFormData] = useState<FormData>({,
+}
+
+const ContactForm: React.FC = () => {
+  const [formData, setFormData] = useState<ContactFormData>({
+import React, { useState } from 'react',
+import LoadingSpinner from './LoadingSpinner',
+interface FormData {
+  name: string,
+  email: string,
+  company: string,
+  phone: string,
+  service: string,
+  message: string
+},
+const ContactForm: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     company: '',
     phone: '',
     service: '',
     message: ''
-  });
+  }),
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target,
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    })),
+  },
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     // Handle form submission here
-    console.log('Form submitted:', formData);
+    // // // console.log('Form submitted:', formData),
   }),
-,
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle'),
-,
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target,
-    setFormData(prev => ({,
+    setFormData(prev => ({
       ...prev,
       [name]: value
     }))
-  };
-,
-  const handleSubmit = async (e: React.FormEvent) => {,
+  },
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setIsSubmitting(true),
     setSubmitStatus('idle'),
-,
-    try {,
+    try {
       // Simulate form submission,
       await new Promise(resolve => setTimeout(resolve, 2000)),
       setSubmitStatus('success'),
-      setFormData({,
+      setFormData({
         name: '',
         email: '',
         company: '',
@@ -75,12 +69,12 @@ const ContactForm: React.FC = () => {,
         service: '',
         message: ''
       })
-    } catch {,
+    } catch {
       setSubmitStatus('error')
-    } finally {,
+    } finally {
       setIsSubmitting(false)
-    };
-  };
+    },
+  },
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -175,7 +169,7 @@ const ContactForm: React.FC = () => {,
           onChange={handleChange}
           required
           rows={4}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
           placeholder="Tell us about your project requirements..."
         />
       </div>
@@ -187,9 +181,8 @@ const ContactForm: React.FC = () => {,
         Send Message
       </button>
     </form>
-  );
-};
+  )
+},
 
-export default ContactForm;
-,
+export default ContactForm,
 export default ContactForm,

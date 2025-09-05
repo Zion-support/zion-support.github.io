@@ -1,16 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
-import Link from 'next/link';
-import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
-import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react',
+import Link from 'next/link',
+import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services',
+import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services',
+import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services',
 
 export default function Revolutionary2026ServicesShowcase() {
   // Get featured services from each category
-  const featuredAIServices = aiAutonomousServices2026.slice(0, 3);
-  const featuredQuantumServices = quantumSpaceTechServices2026.slice(0, 3);
-  const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(0, 3);
+  const featuredAIServices = aiAutonomousServices2026.slice(0, 3),
+  const featuredQuantumServices = quantumSpaceTechServices2026.slice(0, 3),
+  const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(0, 3),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -20,7 +20,7 @@ export default function Revolutionary2026ServicesShowcase() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -31,7 +31,7 @@ export default function Revolutionary2026ServicesShowcase() {
         duration: 0.6
       }
     }
-  };
+  },
 
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -349,7 +349,7 @@ export default function Revolutionary2026ServicesShowcase() {
               <span className="text-purple-400 font-semibold"> Contact us today</span> to start your transformation.
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+            <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <Link 
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
@@ -379,5 +379,5 @@ export default function Revolutionary2026ServicesShowcase() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

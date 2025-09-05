@@ -1,34 +1,34 @@
 
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { useAuth } from '@/hooks/useAuth';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { useState, useEffect } from 'react',
+import { useRouter } from 'next/router',
+import { useAuth } from '@/hooks/useAuth',
+import { Button } from '@/components/ui/button',
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils',
 
 interface WizardStep {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
+  title: string,
+  description: string,
+  icon: React.ReactNode,
   action: {
-    text: string;
-    url: string;
-  };
-  skipText?: string;
+    text: string,
+    url: string
+  },
+  skipText?: string,
 }
 
 interface OnboardingWizardProps {
-  type: 'client' | 'talent';
-  onComplete: () => void;
-  onSkip: () => void;
-  className?: string;
+  type: 'client' | 'talent',
+  onComplete: () => void,
+  onSkip: () => void,
+  className?: string
 }
 
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
-  const [currentStep, setCurrentStep] = useState(0);
-  const router = useRouter(); // Changed from useNavigate to useRouter
-  const { user } = useAuth();
+  const [currentStep, setCurrentStep] = useState(0),
+  const router = useRouter(), // Changed from useNavigate to useRouter
+  const { user } = useAuth(),
   
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
@@ -61,7 +61,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         url: "/talent"
       }
     }
-  ];
+  ],
 
   const talentSteps: WizardStep[] = [
     {
@@ -103,34 +103,34 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         url: "/talent-dashboard"
       }
     }
-  ];
+  ],
   
-  const steps = type === 'client' ? clientSteps : talentSteps;
+  const steps = type === 'client' ? clientSteps : talentSteps,
 
   // Navigate to the specified URL
   const handleAction = () => {
-    const currentStepData = steps[currentStep];
-    if (!currentStepData) return;
+    const currentStepData = steps[currentStep],
+    if (!currentStepData) return,
     
     if (currentStep < steps.length - 1) {
-      router.push(currentStepData.action.url); // Changed to router.push
-      setCurrentStep(currentStep + 1);
+      router.push(currentStepData.action.url), // Changed to router.push
+      setCurrentStep(currentStep + 1),
     } else {
       // Last step
-      router.push(currentStepData.action.url); // Changed to router.push
-      onComplete();
+      router.push(currentStepData.action.url), // Changed to router.push
+      onComplete(),
     }
-  };
+  },
   
   // Skip the current step
   const handleSkip = () => {
     if (currentStep < steps.length - 1) {
-      setCurrentStep(currentStep + 1);
+      setCurrentStep(currentStep + 1),
     } else {
       // Last step
-      onSkip();
+      onSkip(),
     }
-  };
+  },
   
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
@@ -188,5 +188,5 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         )}
       </CardFooter>
     </Card>
-  );
+  ),
 }

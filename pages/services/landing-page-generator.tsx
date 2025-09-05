@@ -1,7 +1,7 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import UseTokensButton from '../../components/tokens/UseTokensButton';
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import Link from 'next/link',
+import UseTokensButton from '../../components/tokens/UseTokensButton',
 
 const LandingPageGenerator: NextPage = () => {
   return (
@@ -18,7 +18,7 @@ const LandingPageGenerator: NextPage = () => {
         <Link href="/services">Back to Services</Link>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default LandingPageGenerator;
+export default LandingPageGenerator,

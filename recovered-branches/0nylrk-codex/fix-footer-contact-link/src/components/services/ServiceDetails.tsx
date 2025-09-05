@@ -1,16 +1,16 @@
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Server, Clock, MapPin } from "lucide-react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Server, Clock, MapPin } from "lucide-react",
 
 interface ServiceDetailsProps {
-  country: string;
+  country: string
 }
 
 // Component to show service details for the selected country
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
   const getDatacenters = (country: string): string[] => {
-    const dataCenters: Record<string, string[]> = {
+    const dataCenters: Record<string string[]> = {
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
       "United Kingdom": ["London", "Manchester", "Birmingham"],
       "Germany": ["Frankfurt", "Berlin", "Munich"],
@@ -20,15 +20,15 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       "Canada": ["Toronto", "Montreal", "Vancouver"],
       // Default for other countries
       "default": ["Major metropolitan areas"]
-    };
+    },
     
-    return dataCenters[country] || dataCenters["default"];
-  };
+    return dataCenters[country] || dataCenters["default"],
+  },
   
   // Get region-specific image
   const getRegionalImage = (country: string): string => {
     // In a real app, you'd have specific images for each region
-    const regions: Record<string, string> = {
+    const regions: Record<string string> = {
       "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa",
       "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk",
       "Germany": "https://source.unsplash.com/featured/900x700/?datacenter,germany",
@@ -37,15 +37,15 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
       // Default placeholder
       "default": "https://source.unsplash.com/featured/900x700/?datacenter"
-    };
+    },
     
-    return regions[country] || regions["default"];
-  };
+    return regions[country] || regions["default"],
+  },
   
   // Get region-specific instructions
   const getRegionalInstructions = (country: string): string => {
     // In a real implementation, this would be much more detailed and specific
-    const timeZones: Record<string, string> = {
+    const timeZones: Record<string string> = {
       "United States": "EST/CST/PST depending on location",
       "United Kingdom": "GMT/BST",
       "Germany": "CET/CEST",
@@ -53,17 +53,17 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       "Australia": "AEST/ACDT/AWST depending on location",
       "Singapore": "SGT",
       "default": "Local timezone"
-    };
+    },
     
-    const timezone = timeZones[country] || timeZones["default"];
+    const timezone = timeZones[country] || timeZones["default"],
     
     return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
            `Response times are typically within 4 hours for metropolitan areas. ` +
            `Please have site access permissions and contact details ready for our technicians. ` +
-           `For remote locations, additional travel fees may apply.`;
-  };
+           `For remote locations, additional travel fees may apply.`,
+  },
   
-  const datacenters = getDatacenters(country);
+  const datacenters = getDatacenters(country),
   
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -131,5 +131,5 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
         </p>
       </CardFooter>
     </Card>
-  );
+  ),
 }

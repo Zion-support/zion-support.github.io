@@ -1,42 +1,42 @@
 export interface InnovativeAIAutomationService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] = [
@@ -49,16 +49,11 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     period: '/month',
     description: 'Revolutionary AI platform that autonomously manages, optimizes, and executes complex business processes without human oversight. Uses advanced machine learning to continuously improve operations.',
     features: [
-      'Fully autonomous process execution',
-      'Self-learning workflow optimization',
-      'Predictive process failure prevention',
-      'Intelligent resource allocation',
-      'Real-time process monitoring & alerting',
-      'Cross-departmental process coordination',
-      'Automated compliance monitoring',
-      'Dynamic process adaptation',
-      'Advanced analytics & reporting',
-      'Enterprise-grade security & audit trails'
+      'Fully autonomous process executionSelf-learning workflow optimization',
+      'Predictive process failure preventionIntelligent resource allocation',
+      'Real-time process monitoring & alertingCross-departmental process coordination',
+      'Automated compliance monitoringDynamic process adaptation',
+      'Advanced analytics & reportingEnterprise-grade security & audit trails'
     ],
     popular: true,
     icon: '🚀',
@@ -102,16 +97,11 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     period: '/month',
     description: 'Advanced AI platform that predicts customer behavior, churn risk, and lifetime value with unprecedented accuracy. Uses behavioral analysis, predictive modeling, and real-time data processing.',
     features: [
-      '95% accurate customer behavior prediction',
-      'Real-time churn risk assessment',
-      'Predictive lifetime value calculation',
-      'Behavioral pattern recognition',
-      'Automated customer segmentation',
-      'Predictive marketing campaign optimization',
-      'Customer journey prediction',
-      'Real-time alerting & notifications',
-      'Advanced analytics dashboard',
-      'API for custom integrations'
+      '95% accurate customer behavior predictionReal-time churn risk assessment',
+      'Predictive lifetime value calculationBehavioral pattern recognition',
+      'Automated customer segmentationPredictive marketing campaign optimization',
+      'Customer journey predictionReal-time alerting & notifications',
+      'Advanced analytics dashboardAPI for custom integrations'
     ],
     popular: true,
     icon: '🔮',
@@ -155,16 +145,11 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     period: '/month',
     description: 'Revolutionary AI platform that autonomously generates, tests, and deploys production-ready code based on natural language requirements. Includes automated testing, security scanning, and deployment.',
     features: [
-      'Natural language to code generation',
-      'Automated code testing & validation',
-      'Security vulnerability scanning',
-      'Automated deployment pipeline',
-      'Code quality optimization',
-      'Multi-language support (Python, JavaScript, Java, C#, Go)',
-      'Real-time collaboration tools',
-      'Version control integration',
-      'Performance optimization',
-      'Comprehensive documentation generation'
+      'Natural language to code generationAutomated code testing & validation',
+      'Security vulnerability scanningAutomated deployment pipeline',
+      'Code quality optimizationMulti-language support (Python, JavaScript, Java, C#, Go)',
+      'Real-time collaboration toolsVersion control integration',
+      'Performance optimizationComprehensive documentation generation'
     ],
     popular: true,
     icon: '⚡',
@@ -208,16 +193,11 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     period: '/month',
     description: 'Advanced AI-powered trading platform that autonomously executes trades based on sophisticated algorithms, market analysis, and risk management protocols. Includes real-time monitoring and compliance tools.',
     features: [
-      'Fully autonomous trading execution',
-      'Advanced risk management algorithms',
-      'Real-time market analysis',
-      'Multi-asset trading support',
-      'Portfolio optimization',
-      'Compliance monitoring & reporting',
-      'Performance analytics dashboard',
-      'Custom strategy builder',
-      'Real-time alerts & notifications',
-      'API for custom integrations'
+      'Fully autonomous trading executionAdvanced risk management algorithms',
+      'Real-time market analysisMulti-asset trading support',
+      'Portfolio optimizationCompliance monitoring & reporting',
+      'Performance analytics dashboardCustom strategy builder',
+      'Real-time alerts & notificationsAPI for custom integrations'
     ],
     popular: true,
     icon: '📈',
@@ -261,16 +241,11 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     period: '/month',
     description: 'Revolutionary AI platform that provides autonomous medical diagnosis, patient monitoring, and treatment recommendations. Uses advanced medical AI models trained on millions of patient records.',
     features: [
-      '98% accurate medical diagnosis',
-      'Autonomous patient monitoring',
-      'Treatment recommendation engine',
-      'Medical image analysis (X-ray, MRI, CT)',
-      'Symptom analysis & triage',
-      'Drug interaction checking',
-      'Patient history analysis',
-      'Real-time health alerts',
-      'Comprehensive medical reports',
-      'HIPAA-compliant security'
+      '98% accurate medical diagnosisAutonomous patient monitoring',
+      'Treatment recommendation engineMedical image analysis (X-ray, MRI, CT)',
+      'Symptom analysis & triageDrug interaction checking',
+      'Patient history analysisReal-time health alerts',
+      'Comprehensive medical reportsHIPAA-compliant security'
     ],
     popular: true,
     icon: '🏥',
@@ -304,4 +279,4 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     rating: 4.9,
     reviews: 28
   }
-];
+],

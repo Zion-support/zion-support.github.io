@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 export default function NewPost() {
   return (
@@ -6,5 +6,5 @@ export default function NewPost() {
       <h1>NewPost</h1>
       <p>Component placeholder - needs implementation</p>
     </div>
-  );
+  ),
 }

@@ -12,7 +12,7 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
   collapsible?: "offcanvas" | "icon" | "none"
 }
 
-export const Sidebar = React.forwardRef<HTMLDivElement, SidebarProps>((props, ref) => {
+export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
 
   if (props.collapsible === "none") {

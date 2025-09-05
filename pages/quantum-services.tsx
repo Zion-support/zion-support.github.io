@@ -1,20 +1,18 @@
-import React from 'react';
-import Head from 'next/head';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { Atom, CheckCircle, Shield, Sparkles } from 'lucide-react';
+import React from 'react',
+import Head from 'next/head',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Button from '../components/ui/Button',
+import { Atom, CheckCircle, Shield, Sparkles } from 'lucide-react',
 
 export default function QuantumServicesPage() {
   const features = [
-    'Quantum-inspired optimization & annealing strategies',
-    'Hybrid quantum-classical pipelines (QAOA, VQE) where applicable',
-    'Quantum-safe cryptography assessments and roadmaps',
-    'R&D ideation for quantum-ready workloads'];
+    'Quantum-inspired optimization & annealing strategiesHybrid quantum-classical pipelines (QAOA, VQE) where applicable',
+    'Quantum-safe cryptography assessments and roadmapsR&D ideation for quantum-ready workloads'],
 
   const solutions = [
     { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
     { name: 'Quantum AI Cognitive', href: '/quantum-ai-cognitive' },
-    { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' }];
+    { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' }],
 
   return (
     <UltraAdvancedFuturisticBackground colorScheme="quantum" intensity="high">
@@ -70,5 +68,5 @@ export default function QuantumServicesPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  ),
 }

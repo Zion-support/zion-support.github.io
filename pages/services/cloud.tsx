@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Cloud, Cpu, Database, Zap, Shield, Rocket, 
   ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
-} from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../../components/EnhancedNavigation',
+import EnhancedFooter from '../../components/EnhancedFooter',
 
 export default function CloudServicesPage() {
   const services = [
@@ -42,14 +42,14 @@ export default function CloudServicesPage() {
       icon: Shield,
       color: "from-red-500 to-orange-500"
     }
-  ];
+  ],
 
   const stats = [
     { number: "99.99%", label: "Uptime Guarantee", icon: Cloud },
     { number: "50%", label: "Cost Reduction", icon: TrendingUp },
     { number: "24/7", label: "Support Available", icon: Clock },
     { number: "100+", label: "Cloud Projects", icon: CheckCircle }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -188,7 +188,7 @@ export default function CloudServicesPage() {
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Let's discuss how our cloud infrastructure solutions can modernize your business and drive digital transformation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
                 Infrastructure Assessment
               </button>
@@ -202,5 +202,5 @@ export default function CloudServicesPage() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

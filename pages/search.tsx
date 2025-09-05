@@ -1,29 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Head from 'next/head',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Search, Filter, Grid, List, ArrowRight, ExternalLink, 
   Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon,
   X, Sliders, SortAsc, SortDesc
-} from 'lucide-react';
-import SmartHeader from '../components/SmartHeader';
-import SmartFooter from '../components/SmartFooter';
+} from 'lucide-react',
+import SmartHeader from '../components/SmartHeader',
+import SmartFooter from '../components/SmartFooter',
 
 export default function SearchPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [searchResults, setSearchResults] = useState<any[]>([]);
-  const [isSearching, setIsSearching] = useState(false);
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [searchResults, setSearchResults] = useState<any[]>([]),
+  const [isSearching, setIsSearching] = useState(false),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [filters, setFilters] = useState({
     category: 'all',
     status: 'all',
     priceRange: 'all',
     technology: 'all'
-  });
-  const [sortBy, setSortBy] = useState('relevance');
-  const [showFilters, setShowFilters] = useState(false);
+  }),
+  const [sortBy, setSortBy] = useState('relevance'),
+  const [showFilters, setShowFilters] = useState(false),
 
   // Mock data for search
   const allServices = [
@@ -35,7 +35,7 @@ export default function SearchPage() {
       status: 'active',
       price: '$499/month',
       technology: 'AI/ML',
-      features: ['AI-powered dashboards', 'Predictive analytics', 'Real-time insights', 'Custom reporting'],
+      features: ['AI-powered dashboardsPredictive analytics', 'Real-time insightsCustom reporting'],
       link: '/ai-business-intelligence',
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
@@ -49,7 +49,7 @@ export default function SearchPage() {
       status: 'active',
       price: '$799/month',
       technology: 'Quantum',
-      features: ['Quantum-resistant encryption', 'AI threat detection', 'Zero-trust architecture', '24/7 monitoring'],
+      features: ['Quantum-resistant encryptionAI threat detection', 'Zero-trust architecture24/7 monitoring'],
       link: '/quantum-cybersecurity',
       icon: Shield,
       color: 'from-red-500 to-orange-500',
@@ -63,7 +63,7 @@ export default function SearchPage() {
       status: 'active',
       price: '$399/month',
       technology: 'AI/ML',
-      features: ['Customer journey mapping', 'AI personalization', 'Sentiment analysis', 'Predictive support'],
+      features: ['Customer journey mappingAI personalization', 'Sentiment analysisPredictive support'],
       link: '/ai-customer-experience',
       icon: Users,
       color: 'from-green-500 to-teal-500',
@@ -77,7 +77,7 @@ export default function SearchPage() {
       status: 'active',
       price: '$349/month',
       technology: 'Edge',
-      features: ['Edge node management', 'IoT device management', 'Real-time monitoring', 'Auto-scaling'],
+      features: ['Edge node managementIoT device management', 'Real-time monitoringAuto-scaling'],
       link: '/edge-computing-orchestration',
       icon: Network,
       color: 'from-purple-500 to-pink-500',
@@ -91,7 +91,7 @@ export default function SearchPage() {
       status: 'beta',
       price: '$2,499/month',
       technology: 'Space',
-      features: ['Satellite management', 'AI mission planning', 'Quantum communication', 'Resource optimization'],
+      features: ['Satellite managementAI mission planning', 'Quantum communicationResource optimization'],
       link: '/space-technology',
       icon: Rocket,
       color: 'from-violet-500 to-purple-500',
@@ -105,7 +105,7 @@ export default function SearchPage() {
       status: 'beta',
       price: '$899/month',
       technology: 'Biotech',
-      features: ['BCI development tools', 'Neural signal processing', 'AI pattern recognition', 'Safety protocols'],
+      features: ['BCI development toolsNeural signal processing', 'AI pattern recognitionSafety protocols'],
       link: '/neural-interface',
       icon: Brain,
       color: 'from-pink-500 to-rose-500',
@@ -119,7 +119,7 @@ export default function SearchPage() {
       status: 'beta',
       price: '$1,299/month',
       technology: 'Quantum',
-      features: ['Quantum algorithms', 'Neural optimization', 'Consciousness simulation', 'Research tools'],
+      features: ['Quantum algorithmsNeural optimization', 'Consciousness simulationResearch tools'],
       link: '/quantum-neural-networks',
       icon: Atom,
       color: 'from-blue-500 to-cyan-500',
@@ -133,7 +133,7 @@ export default function SearchPage() {
       status: 'active',
       price: '$599/month',
       technology: 'DevOps',
-      features: ['Auto-deployment', 'Performance monitoring', 'Security scanning', 'Cost optimization'],
+      features: ['Auto-deploymentPerformance monitoring', 'Security scanningCost optimization'],
       link: '/autonomous-devops',
       icon: Cpu,
       color: 'from-emerald-500 to-teal-500',
@@ -147,7 +147,7 @@ export default function SearchPage() {
       status: 'beta',
       price: '$1,999/month',
       technology: 'AI/ML',
-      features: ['Business automation', 'Decision making', 'Resource allocation', 'Performance optimization'],
+      features: ['Business automationDecision making', 'Resource allocationPerformance optimization'],
       link: '/ai-autonomous-business',
       icon: Target,
       color: 'from-indigo-500 to-purple-500',
@@ -161,13 +161,13 @@ export default function SearchPage() {
       status: 'beta',
       price: '$3,999/month',
       technology: 'Quantum',
-      features: ['Quantum algorithms', 'Risk assessment', 'Portfolio optimization', 'Real-time analysis'],
+      features: ['Quantum algorithmsRisk assessment', 'Portfolio optimizationReal-time analysis'],
       link: '/quantum-financial-trading',
       icon: TrendingUp,
       color: 'from-emerald-500 to-green-500',
       relevance: 68
     }
-  ];
+  ],
 
   const categories = [
     { id: 'all', name: 'All Categories', icon: '📂' },
@@ -179,14 +179,14 @@ export default function SearchPage() {
     { id: 'Space Technology', name: 'Space Technology', icon: '🚀' },
     { id: 'Biotechnology', name: 'Biotechnology', icon: '🧬' },
     { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' }
-  ];
+  ],
 
   const statuses = [
     { id: 'all', name: 'All Statuses', icon: '📊' },
     { id: 'active', name: 'Active', icon: '✅' },
     { id: 'beta', name: 'Beta', icon: '🧪' },
     { id: 'coming-soon', name: 'Coming Soon', icon: '🚧' }
-  ];
+  ],
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', icon: '💰' },
@@ -194,7 +194,7 @@ export default function SearchPage() {
     { id: '500-1000', name: '$500 - $1,000/month', icon: '💵' },
     { id: '1000-2500', name: '$1,000 - $2,500/month', icon: '💵' },
     { id: 'over-2500', name: 'Over $2,500/month', icon: '💵' }
-  ];
+  ],
 
   const technologies = [
     { id: 'all', name: 'All Technologies', icon: '🔧' },
@@ -204,16 +204,16 @@ export default function SearchPage() {
     { id: 'Space', name: 'Space', icon: '🚀' },
     { id: 'Biotech', name: 'Biotech', icon: '🧬' },
     { id: 'DevOps', name: 'DevOps', icon: '⚙️' }
-  ];
+  ],
 
   // Search function
   const performSearch = () => {
     if (!searchTerm.trim()) {
-      setSearchResults([]);
-      return;
+      setSearchResults([]),
+      return,
     }
 
-    setIsSearching(true);
+    setIsSearching(true),
     
     // Simulate search delay
     setTimeout(() => {
@@ -221,70 +221,69 @@ export default function SearchPage() {
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                             service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            service.technology.toLowerCase().includes(searchTerm.toLowerCase());
+                            service.technology.toLowerCase().includes(searchTerm.toLowerCase()),
         
-        const matchesCategory = filters.category === 'all' || service.category === filters.category;
-        const matchesStatus = filters.status === 'all' || service.status === filters.status;
-        const matchesTechnology = filters.technology === 'all' || service.technology === filters.technology;
+        const matchesCategory = filters.category === 'all' || service.category === filters.category,
+        const matchesStatus = filters.status === 'all' || service.status === filters.status,
+        const matchesTechnology = filters.technology === 'all' || service.technology === filters.technology,
         
-        let matchesPrice = true;
+        let matchesPrice = true,
         if (filters.priceRange !== 'all') {
-          const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+          const price = parseInt(service.price.replace(/[^0-9]/g, '')),
           switch (filters.priceRange) {
             case 'under-500':
-              matchesPrice = price < 500;
-              break;
+              matchesPrice = price < 500,
+              break,
             case '500-1000':
-              matchesPrice = price >= 500 && price < 1000;
-              break;
+              matchesPrice = price >= 500 && price < 1000,
+              break,
             case '1000-2500':
-              matchesPrice = price >= 1000 && price < 2500;
-              break;
+              matchesPrice = price >= 1000 && price < 2500,
+              break,
             case 'over-2500':
-              matchesPrice = price >= 2500;
-              break;
+              matchesPrice = price >= 2500,
+              break,
           }
         }
         
-        return matchesSearch && matchesCategory && matchesStatus && matchesTechnology && matchesPrice;
-      });
+        return matchesSearch && matchesCategory && matchesStatus && matchesTechnology && matchesPrice,
+      }),
 
       // Sort results
       const sortedResults = results.sort((a, b) => {
         switch (sortBy) {
           case 'relevance':
-            return b.relevance - a.relevance;
+            return b.relevance - a.relevance,
           case 'price-low':
-            return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
+            return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, '')),
           case 'price-high':
-            return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, ''));
+            return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, '')),
           case 'name':
-            return a.title.localeCompare(b.title);
+            return a.title.localeCompare(b.title),
           case 'status':
-            return a.status.localeCompare(b.status);
-          default:
-            return 0;
+            return a.status.localeCompare(b.status),
+          default: return 0
         }
-      });
+      }),
 
-      setSearchResults(sortedResults);
-      setIsSearching(false);
-    }, 500);
-  };
+      setSearchResults(sortedResults),
+      setIsSearching(false),
+    }, 500),
+  },
 
   // Handle search on Enter key
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
-      performSearch();
+      performSearch()
     }
-  };
+  },
 
   // Update search when filters change
   useEffect(() => {
     if (searchTerm.trim()) {
-      performSearch();
+      performSearch(),
     }
-  }, [filters, sortBy]);
+  }, [filters, sortBy]),
 
   // Clear all filters
   const clearFilters = () => {
@@ -293,9 +292,9 @@ export default function SearchPage() {
       status: 'all',
       priceRange: 'all',
       technology: 'all'
-    });
-    setSortBy('relevance');
-  };
+    }),
+    setSortBy('relevance'),
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -624,12 +623,12 @@ export default function SearchPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-2">
                 <span className="text-sm text-white/40">Popular searches:</span>
-                {['AI', 'Cybersecurity', 'Quantum Computing', 'Edge Computing'].map((term) => (
+                {['AICybersecurity', 'Quantum ComputingEdge Computing'].map((term) => (
                   <button
                     key={term}
                     onClick={() => {
-                      setSearchTerm(term);
-                      performSearch();
+                      setSearchTerm(term),
+                      performSearch(),
                     }}
                     className="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors"
                   >
@@ -644,5 +643,5 @@ export default function SearchPage() {
 
       <SmartFooter />
     </div>
-  );
+  ),
 }

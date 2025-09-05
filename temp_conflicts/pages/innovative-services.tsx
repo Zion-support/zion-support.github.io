@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
-import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
-import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
-import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
-import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
-import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react',
+import Button from '../components/ui/Button',
+import Card from '../components/ui/Card',
+import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground',
+import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard',
+import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground',
+import QuantumHolographicCard from '../components/ui/QuantumHolographicCard',
+import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services',
 
 export default function InnovativeServicesPage() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [priceRange, setPriceRange] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('innovation');
-  const [showFilters, setShowFilters] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [priceRange, setPriceRange] = useState('All'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [sortBy, setSortBy] = useState('innovation'),
+  const [showFilters, setShowFilters] = useState(false),
 
   const priceRanges = [
     { value: 'All', label: 'All Prices' },
@@ -24,7 +24,7 @@ export default function InnovativeServicesPage() {
     { value: '2001-3000', label: '$2,001 - $3,000' },
     { value: '3001-5000', label: '$3,001 - $5,000' },
     { value: '5001+', label: '$5,001+' }
-  ];
+  ],
 
   const sortOptions = [
     { value: 'innovation', label: 'Innovation Level' },
@@ -32,20 +32,20 @@ export default function InnovativeServicesPage() {
     { value: 'popularity', label: 'Most Popular' },
     { value: 'category', label: 'Category' },
     { value: 'roi', label: 'Highest ROI' }
-  ];
+  ],
 
   // Filter and sort services
-  let filteredServices = innovativeMicroSaasServices;
+  let filteredServices = innovativeMicroSaasServices,
 
   // Category filter
   if (selectedCategory !== 'All') {
-    filteredServices = getInnovativeServicesByCategory(selectedCategory);
+    filteredServices = getInnovativeServicesByCategory(selectedCategory),
   }
 
   // Price range filter
   if (priceRange !== 'All') {
-    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
-    filteredServices = getInnovativeServicesByPriceRange(min, max);
+    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p)),
+    filteredServices = getInnovativeServicesByPriceRange(min, max),
   }
 
   // Search filter
@@ -55,42 +55,42 @@ export default function InnovativeServicesPage() {
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+    ),
   }
 
   // Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
-        return a.price.monthly - b.price.monthly;
+        return a.price.monthly - b.price.monthly,
       case 'popularity':
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
       case 'category':
-        return a.category.localeCompare(b.category);
+        return a.category.localeCompare(b.category),
       case 'roi': {
-        const aRoi = parseInt(a.roi.match(/\d+/)?.[0] || '0');
-        const bRoi = parseInt(b.roi.match(/\d+/)?.[0] || '0');
-        return bRoi - aRoi;
+        const aRoi = parseInt(a.roi.match(/\d+/)?.[0] || '0'),
+        const bRoi = parseInt(b.roi.match(/\d+/)?.[0] || '0'),
+        return bRoi - aRoi,
       }
               default: {
           // Innovation level sorting
-          const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 };
-          const aLevel = a.innovationLevel.split(' - ')[0];
-          const bLevel = b.innovationLevel.split(' - ')[0];
-          return (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[bLevel as keyof typeof innovationOrder] || 0);
+          const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 },
+          const aLevel = a.innovationLevel.split(' - ')[0],
+          const bLevel = b.innovationLevel.split(' - ')[0],
+          return (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[bLevel as keyof typeof innovationOrder] || 0),
         }
     }
-  });
+  }),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
-  const popularServices = getPopularInnovativeServices();
-  const categories = getInnovativeServiceCategories();
+  const popularServices = getPopularInnovativeServices(),
+  const categories = getInnovativeServiceCategories(),
 
   return (
     <>
@@ -414,5 +414,5 @@ export default function InnovativeServicesPage() {
         </div>
       </QuantumHolographicBackground>
     </>
-  );
+  ),
 }

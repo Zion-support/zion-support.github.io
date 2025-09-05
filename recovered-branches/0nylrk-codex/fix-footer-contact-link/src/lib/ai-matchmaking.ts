@@ -2,20 +2,20 @@
 // AI Matchmaking utility functions
 
 export interface MatchResultItem {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  price?: number;
-  skills?: string[];
-  image?: string;
+  id: string,
+  title: string,
+  description: string,
+  category: string,
+  price?: number,
+  skills?: string[],
+  image?: string
 }
 
 export interface MatchResult {
-  item: MatchResultItem;
-  score: number;
-  matchedSkills: string[];
-  reason: string;
+  item: MatchResultItem,
+  score: number,
+  matchedSkills: string[],
+  reason: string
 }
 
 // Sample data for testing when API is not available
@@ -44,7 +44,7 @@ const sampleData: MatchResultItem[] = [
     price: 15000,
     skills: ["GPU Computing", "High Performance", "AI Hardware"]
   }
-];
+],
 
 // Function to find matches based on query and type
 export async function findMatches(
@@ -57,14 +57,14 @@ export async function findMatches(
     // For now, we'll simulate a response with sample data
     
     // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 1000)),
     
     // Filter by type if provided
-    let filteredItems = sampleData;
+    let filteredItems = sampleData,
     if (type && type !== "all") {
       filteredItems = sampleData.filter(item => 
         item.category.toLowerCase().includes(type.toLowerCase())
-      );
+      ),
     }
     
     // Sort by simulated relevance (random for now)
@@ -73,12 +73,12 @@ export async function findMatches(
       score: Math.floor(Math.random() * 40) + 60, // Random score between 60 and 99
       matchedSkills: item.skills?.slice(0, 2) || [],
       reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
-    }));
+    })),
     
     // Sort by score
-    return matches.sort((a, b) => b.score - a.score).slice(0, limit);
+    return matches.sort((a, b) => b.score - a.score).slice(0, limit),
   } catch (error) {
-    console.error("Error in matchmaking:", error);
-    return [];
+    console.error("Error in matchmaking:", error),
+    return [],
   }
 }

@@ -1,27 +1,23 @@
 
 import React, { ReactNode } from "react",
-,
-interface LayoutProps {,
+interface LayoutProps {
   children: ReactNode
-};
-,
-const Layout: React.FC<LayoutProps> = ({ children }) => {,
-  return (,
+},
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
     <main className="min-h-screen">,
-      {children};
+      {children},
     </main>)
-};
-,
+},
 export default Layout,
-,
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 interface LayoutProps {
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
+  children: React.ReactNode,
+  title?: string,
+  description?: string
 }
 
 export default function Layout({ children, title = 'Zion Tech Group', description = 'Autonomous, cloud-native app with self-running automations' }: LayoutProps) {
@@ -79,7 +75,7 @@ export default function Layout({ children, title = 'Zion Tech Group', descriptio
             <div>
               <h4 className="text-white font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
-                <li><Link href="/about" className="text-white/70 hover:text-white transition-colors">About</Link></li>
+                <li><Link href="/about" className="text-white/70 hover: text-white transition-colors">About</Link></li>
                 <li><Link href="/services" className="text-white/70 hover:text-white transition-colors">Services</Link></li>
                 <li><Link href="/resources" className="text-white/70 hover:text-white transition-colors">Resources</Link></li>
                 <li><Link href="/blog" className="text-white/70 hover:text-white transition-colors">Blog</Link></li>
@@ -117,5 +113,5 @@ export default function Layout({ children, title = 'Zion Tech Group', descriptio
         </div>
       </footer>
     </>
-  );
+  )
 }

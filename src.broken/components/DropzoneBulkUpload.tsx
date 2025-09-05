@@ -1,59 +1,59 @@
-import { useCallback, useState } from 'react';
-import { useDropzone } from 'react-dropzone';
-import { Button } from './ui/button';
-import { Progress } from './ui/progress';
+import { useCallback, useState } from 'react',
+import { useDropzone } from 'react-dropzone',
+import { Button } from './ui/button',
+import { Progress } from './ui/progress',
 
 interface UploadError {
-  row: number;
-  error: string;
+  row: number,
+  error: string
 }
 
 interface UploadReport {
-  created: number;
-  errors: UploadError[];
+  created: number,
+  errors: UploadError[]
 }
 
 export function DropzoneBulkUpload() {
-  const [file, setFile] = useState<File | null>(null);
-  const [progress, setProgress] = useState(0);
-  const [report, setReport] = useState<UploadReport | null>(null);
-  const [errorUrl, setErrorUrl] = useState<string | null>(null);
+  const [file, setFile] = useState<File | null>(null),
+  const [progress, setProgress] = useState(0),
+  const [report, setReport] = useState<UploadReport | null>(null),
+  const [errorUrl, setErrorUrl] = useState<string | null>(null),
 
   const onDrop = useCallback((accepted: File[]) => {
     if (accepted.length) {
-      setFile(accepted[0]);
-      setReport(null);
-      setErrorUrl(null);
+      setFile(accepted[0]),
+      setReport(null),
+      setErrorUrl(null)
     }
-  }, []);
+  }, []),
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
-    accept: { 'text/csv': ['.csv'] }});
+    accept: { 'text/csv': ['.csv'] }}),
 
   const handleUpload = async () => {
-    if (!file) return;
-    setProgress(10);
-    const formData = new FormData();
-    formData.append('file', file);
+    if (!file) return,
+    setProgress(10),
+    const formData = new FormData(),
+    formData.append('file', file),
     try {
       const res = await fetch('/products/bulk-upload', {
         method: 'POST',
-        body: formData});
-      setProgress(70);
-      const data = await res.json();
-      setReport(data);
+        body: formData}),
+      setProgress(70),
+      const data = await res.json(),
+      setReport(data),
       if (data.errors && data.errors.length) {
-        const csv = ['row,error', ...data.errors.map((e: UploadError) => `${e.row},"${e.error}"`)].join('\n');
-        const blob = new Blob([csv], { type: 'text/csv' });
-        setErrorUrl(URL.createObjectURL(blob));
+        const csv = ['row,error', ...data.errors.map((e: UploadError) => `${e.row},"${e.error}"`)].join('\n'),
+        const blob = new Blob([csv], { type: 'text/csv' }),
+        setErrorUrl(URL.createObjectURL(blob)),
       }
     } catch (err) {
-      console.error(err);
+      console.error(err),
     } finally {
-      setProgress(100);
+      setProgress(100),
     }
-  };
+  },
 
   return (
     <div className="space-y-4">
@@ -88,5 +88,5 @@ export function DropzoneBulkUpload() {
         </div>
       )}
     </div>
-  );
+  ),
 }

@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
 
 export default function SsoUserLifecycleAutomationPage() {
   return (
@@ -15,7 +15,7 @@ export default function SsoUserLifecycleAutomationPage() {
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent">SSO User Lifecycle Automation</h1>
           <p className="text-slate-300">SCIM connectors with approvals, deprovisioning, audit trails, and role change workflows.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[ 'SCIM connectors with approvals', 'Role change workflows', 'Deprovisioning with evidence', 'Audit trails and reports' ].map((f) => (
+            {[ 'SCIM connectors with approvalsRole change workflows', 'Deprovisioning with evidenceAudit trails and reports' ].map((f) => (
               <div key={f} className="p-4 rounded-xl bg-black/40 border border-emerald-500/30 text-slate-200">{f}</div>
             ))}
           </div>
@@ -26,6 +26,6 @@ export default function SsoUserLifecycleAutomationPage() {
         </div>
       </div>
     </Layout>
-  );
+  ),
 }
 

@@ -1,23 +1,23 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
+import { useState } from 'react',
+import { Button } from '@/components/ui/button',
 import { Facebook } from 'lucide-react'
-import { signIn } from 'next-auth/react';
+import { signIn } from 'next-auth/react',
 
-type Provider = 'google' | 'github' | 'facebook' | 'credentials';
+type Provider = 'google' | 'github' | 'facebook' | 'credentials',
 
 interface AuthButtonsProps {
-  providers?: Provider[];
+  providers?: Provider[],
 }
 
-export function AuthButtons({ providers = ['google', 'github', 'facebook', 'credentials'] }: AuthButtonsProps) {
-  const [loadingProvider, setLoadingProvider] = useState<string | null>(null);
+export function AuthButtons({ providers = ['googlegithub', 'facebookcredentials'] }: AuthButtonsProps) {
+  const [loadingProvider, setLoadingProvider] = useState<string | null>(null),
 
   const handleSignIn = async (provider: Provider) => {
-    setLoadingProvider(provider);
-    await signIn(provider);
-  };
+    setLoadingProvider(provider),
+    await signIn(provider)
+  },
 
-  const gridCols = `grid-cols-${providers.length}`;
+  const gridCols = `grid-cols-${providers.length}`,
 
   return (
     <div className={`mt-6 grid ${gridCols} gap-3`}>
@@ -92,5 +92,5 @@ export function AuthButtons({ providers = ['google', 'github', 'facebook', 'cred
         </Button>
       )}
     </div>
-  );
+  ),
 }

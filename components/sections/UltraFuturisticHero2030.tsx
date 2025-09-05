@@ -1,18 +1,18 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   ArrowRight, Zap, Brain, Atom, Rocket, Star, 
   TrendingUp, Shield, Globe, Cpu, Sparkles,
   Play, CheckCircle, Award, Users, Clock, Phone, Mail
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const features = [
   {
@@ -35,14 +35,14 @@ const features = [
     title: 'Quantum Security',
     description: 'Unbreakable encryption with quantum key distribution'
   }
-];
+],
 
 const stats = [
   { number: '500+', label: 'Active Clients', icon: Users },
   { number: '99.9%', label: 'Uptime SLA', icon: Clock },
   { number: '24/7', label: 'Support', icon: Shield },
   { number: '2030', label: 'Future Ready', icon: Star }
-];
+],
 
 export default function UltraFuturisticHero2030() {
   return (
@@ -277,5 +277,5 @@ export default function UltraFuturisticHero2030() {
         />
       </div>
     </section>
-  );
+  ),
 }

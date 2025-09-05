@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
-import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
-import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
-import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
+} from 'lucide-react',
+import Layout from '../components/layout/Layout',
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services',
+import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services',
+import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it',
+import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const pricingTiers = [
   {
@@ -24,12 +24,9 @@ const pricingTiers = [
     period: 'month',
     description: 'Perfect for small businesses and startups',
     features: [
-      'Up to 5 team members',
-      'Basic AI content generation',
-      'Standard support',
-      'Core integrations',
-      'Basic analytics',
-      'Email support'
+      'Up to 5 team membersBasic AI content generation',
+      'Standard supportCore integrations',
+      'Basic analyticsEmail support'
     ],
     icon: <Target className="w-6 h-6" />,
     color: 'from-blue-500 to-cyan-500',
@@ -43,14 +40,10 @@ const pricingTiers = [
     period: 'month',
     description: 'Ideal for growing businesses and teams',
     features: [
-      'Up to 25 team members',
-      'Advanced AI features',
-      'Priority support',
-      'Advanced integrations',
-      'Advanced analytics',
-      'Phone & email support',
-      'Custom branding',
-      'API access'
+      'Up to 25 team membersAdvanced AI features',
+      'Priority supportAdvanced integrations',
+      'Advanced analyticsPhone & email support',
+      'Custom brandingAPI access'
     ],
     icon: <Zap className="w-6 h-6" />,
     color: 'from-purple-500 to-pink-500',
@@ -64,16 +57,11 @@ const pricingTiers = [
     period: 'month',
     description: 'For large organizations with complex needs',
     features: [
-      'Unlimited team members',
-      'Full AI suite access',
-      '24/7 dedicated support',
-      'Custom integrations',
-      'Advanced analytics & reporting',
-      'Dedicated account manager',
-      'Custom development',
-      'SLA guarantees',
-      'On-premise options',
-      'Compliance certifications'
+      'Unlimited team membersFull AI suite access',
+      '24/7 dedicated supportCustom integrations',
+      'Advanced analytics & reportingDedicated account manager',
+      'Custom developmentSLA guarantees',
+      'On-premise optionsCompliance certifications'
     ],
     icon: <Shield className="w-6 h-6" />,
     color: 'from-green-500 to-emerald-500',
@@ -81,7 +69,7 @@ const pricingTiers = [
     ctaLink: '/contact',
     popular: false
   }
-];
+],
 
 const serviceCategories = [
   {
@@ -112,28 +100,28 @@ const serviceCategories = [
     services: cuttingEdgeMicroSaasServices2025.slice(0, 6),
     description: 'Innovative business solutions for modern enterprises'
   }
-];
+],
 
 const stats = [
   { number: '25+', label: 'Cutting-Edge Services', icon: Star, color: 'text-cyan-400' },
   { number: '$500B+', label: 'Market Coverage', icon: TrendingUp, color: 'text-purple-400' },
   { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },
   { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
-];
+],
 
 export default function CuttingEdgePricing2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
 
   const allServices = [
     ...cuttingEdgeAIServices2025,
     ...cuttingEdgeQuantumServices2025,
     ...cuttingEdgeEnterpriseITServices2025,
     ...cuttingEdgeMicroSaasServices2025
-  ];
+  ],
 
   const filteredServices = selectedCategory === 'all' 
     ? allServices 
-    : allServices.filter(service => service.category === selectedCategory);
+    : allServices.filter(service => service.category === selectedCategory),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -143,7 +131,7 @@ export default function CuttingEdgePricing2025() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -154,7 +142,7 @@ export default function CuttingEdgePricing2025() {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <>
@@ -509,5 +497,5 @@ export default function CuttingEdgePricing2025() {
         </section>
       </Layout>
     </>
-  );
+  ),
 }

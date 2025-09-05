@@ -1,30 +1,28 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react',
 
-interface Message { role: 'user' | 'assistant'; content: string }
+interface Message { role: 'user' | 'assistant', content: string }
 
 export default function Assistant() {
-  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
-  const tenantId = params.get('tenantId') || '';
-  const brand = params.get('brand') || 'Zion AI';
+  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams(),
+  const tenantId = params.get('tenantId') || '',
+  const brand = params.get('brand') || 'Zion AI',
 
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]);
-  const [input, setInput] = useState('');
+    { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]),
+  const [input, setInput] = useState(''),
 
-  const faqs: Record<string, string> = useMemo(() => ({
-    'is this role remote': 'Many roles support remote or hybrid work. Check the job description for specifics.',
-    'how soon do you hire': 'Typical timelines range from 2-4 weeks depending on role and interview availability.',
-    'what is the interview process': 'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'}), []);
+  const faqs: Record<string string> = useMemo(() => ({
+    'is this role remote': 'Many roles support remote or hybrid work. Check the job description for specifics.how soon do you hire': 'Typical timelines range from 2-4 weeks depending on role and interview availability.what is the interview process': 'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'}), []),
 
   async function handleAsk(question: string) {
-    const lower = question.toLowerCase();
-    const faq = Object.keys(faqs).find(key => lower.includes(key));
+    const lower = question.toLowerCase(),
+    const faq = Object.keys(faqs).find(key => lower.includes(key)),
     if (faq) {
-      setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: faqs[faq] }]);
-      return;
+      setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: faqs[faq] }]),
+      return,
     }
     // Basic fallback
-    setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }]);
+    setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }]),
   }
 
   return (
@@ -43,7 +41,7 @@ export default function Assistant() {
       </div>
       <form
         className="p-3 border-t flex gap-2"
-        onSubmit={(e) => { e.preventDefault(); if (input.trim()) { handleAsk(input.trim()); setInput(''); } }}
+        onSubmit={(e) => { e.preventDefault(), if (input.trim()) { handleAsk(input.trim()), setInput(''), } }}
       >
         <input
           className="flex-1 border rounded px-3 py-2 text-sm"
@@ -54,5 +52,5 @@ export default function Assistant() {
         <button type="submit" className="bg-gray-900 text-white text-sm rounded px-3 py-2">Send</button>
       </form>
     </div>
-  );
+  ),
 }

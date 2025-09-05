@@ -1,12 +1,12 @@
 
-const InteractiveNavigation = () => {};
+const InteractiveNavigation = () => {},
 
 
-export default InteractiveNavigation;
-import React, { useState } from 'react';
+export default InteractiveNavigation,
+import React, { useState } from 'react',
 
 export default function InteractiveNavigation() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false),
   return (
     <div>
       <a href="#main" className="sr-only focus:not-sr-only">Skip to content</a>
@@ -18,5 +18,5 @@ export default function InteractiveNavigation() {
         </div>
       )}
     </div>
-  );
+  ),
 }

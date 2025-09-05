@@ -1,14 +1,14 @@
-          {/* Backdrop */};
+          {/* Backdrop */},
 
           <motion.div,
-            initial={{ opacity: 0 }};
-            animate={{ opacity: 1 }};
-            exit={{ opacity: 0 }};
+            initial={{ opacity: 0 }},
+            animate={{ opacity: 1 }},
+            exit={{ opacity: 0 }},
             className="fixed inset-0 bg-black bg-opacity-50 z-40",
-            onClick={onClose};
+            onClick={onClose},
           />,
-          {/* Sidebar */};
-              {/* Header */};
+          {/* Sidebar */},
+              {/* Header */},
               <div className="flex items-center justify-between mb-8">,
                 <div className="flex items-center space-x-2">,
                   <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">,
@@ -16,57 +16,57 @@
                   </div>,
                   <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>,
                 </div>,
-                <button,
-                  onClick={onClose};
-              {/* Navigation */};
+                <button
+                  onClick={onClose},
+              {/* Navigation */},
               <nav className="space-y-4">,
-                {Object.entries(navigation).map(([title, links]) => (,
+                {Object.entries(navigation).map(([title, links]) => (
                   <div key={title}>,
-                    <button,
-                      onClick={() => handleDropdownToggle(title)};
-                            key={link.name};
-                            href={link.href};
+                    <button
+                      onClick={() => handleDropdownToggle(title)},
+                            key={link.name},
+                            href={link.href},
                             className="block text-gray-600 hover: text-blue-600 transition-colors py-1",
-                            onClick={onClose};
+                            onClick={onClose},
                           >,
-                            {link.name};
-                          </Link>))};
-              {/* Quick Links */};
+                            {link.name},
+                          </Link>))},
+              {/* Quick Links */},
               <div className="mt-8 pt-8 border-t border-gray-200">,
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>,
                 <div className="space-y-2">,
-                  {quickLinks.map((link) => (,
-                    <Link,
-                      key={link.name};
-                      href={link.href};
+                  {quickLinks.map((link) => (
+                    <Link
+                      key={link.name},
+                      href={link.href},
                       className="block text-gray-600 hover: text-blue-600 transition-colors py-1",
-                      onClick={onClose};
+                      onClick={onClose},
                     >,
-                      {link.name};
-                    </Link>))};
+                      {link.name},
+                    </Link>))},
                 </div>,
               </div>,
-              {/* Contact Info */};
-import Link from 'next/link';
-import { useMemo } from 'react';
+              {/* Contact Info */},
+import Link from 'next/link',
+import { useMemo } from 'react',
 import { 
   Home, Rocket, Brain, Atom, Monitor, Shield, 
   Users, FileText, Settings, Cog, Database, 
   Network, Cloud, Lock, Code, Globe, Star,
   TrendingUp, BarChart3, Zap, Target, CheckCircle
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface NavLink {
-  href: string;
-  label: string;
-  icon?: React.ComponentType<{ className?: string }>;
-  description?: string;
-  badge?: string;
+  href: string,
+  label: string,
+  icon?: React.ComponentType<{ className?: string }>,
+  description?: string,
+  badge?: string,
 }
 
 interface NavSection {
-  title: string;
-  links: NavLink[];
+  title: string,
+  links: NavLink[]
 }
 
 export default function Sidebar() {
@@ -127,7 +127,7 @@ export default function Sidebar() {
       }
     ],
     []
-  );
+  ),
 
   const utilityLinks: NavLink[] = useMemo(
     () => [
@@ -136,7 +136,7 @@ export default function Sidebar() {
       { href: '/search', label: 'Search', icon: BarChart3, description: 'Search functionality' }
     ],
     []
-  );
+  ),
 
   return (
     <aside className="fixed left-0 top-0 z-40 h-screen w-80 overflow-y-auto border-r border-white/10 bg-slate-950/90 px-4 py-6 backdrop-blur-md">
@@ -245,7 +245,7 @@ export default function Sidebar() {
               </div>
               <Link 
                 href="/contact" 
-                className="text-purple-400 hover:text-purple-300 transition-colors"
+                className="text-purple-400 hover: text-purple-300 transition-colors"
               >
                 Contact Us →
               </Link>
@@ -254,5 +254,5 @@ export default function Sidebar() {
         </div>
       </div>
     </aside>
-  );
+  )
 }

@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Atom, Brain, Cpu, Zap, Shield, Globe, 
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign
-} from 'lucide-react';
+} from 'lucide-react',
 
 const QuantumNeuralNetworkPlatform = () => {
   const features = [
@@ -34,7 +34,7 @@ const QuantumNeuralNetworkPlatform = () => {
       description: "Unbreakable encryption using quantum cryptography",
       color: "from-red-500 to-orange-500"
     }
-  ];
+  ],
 
   const benefits = [
     "1000x faster neural network training",
@@ -43,7 +43,7 @@ const QuantumNeuralNetworkPlatform = () => {
     "Real-time quantum decision making",
     "Advanced pattern recognition",
     "Future-proof technology foundation"
-  ];
+  ],
 
   const useCases = [
     {
@@ -62,7 +62,7 @@ const QuantumNeuralNetworkPlatform = () => {
       title: "Financial Modeling",
       description: "Advanced risk assessment and market prediction algorithms"
     }
-  ];
+  ],
 
   return (
     <>
@@ -234,7 +234,7 @@ const QuantumNeuralNetworkPlatform = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Experience the Future?
               </h2>
               <p className="text-xl text-gray-400 mb-8">
@@ -254,7 +254,7 @@ const QuantumNeuralNetworkPlatform = () => {
         </section>
       </div>
     </>
-  );
-};
+  )
+},
 
-export default QuantumNeuralNetworkPlatform;
+export default QuantumNeuralNetworkPlatform,

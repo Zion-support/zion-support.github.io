@@ -1,21 +1,21 @@
-import Link from 'next/link';
-import Head from 'next/head';
-import { useState, useEffect, Suspense } from 'react';
-import { ContactInfo, AnimationState } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-import LoadingSpinner from '../components/LoadingSpinner';
-// import PerformanceMonitor from '../components/PerformanceMonitor';
+import Link from 'next/link',
+import Head from 'next/head',
+import { useState, useEffect, Suspense } from 'react',
+import { ContactInfo, AnimationState } from '../types',
+import ErrorBoundary from '../components/ErrorBoundary',
+import LoadingSpinner from '../components/LoadingSpinner',
+// import PerformanceMonitor from '../components/PerformanceMonitor',
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
     hasError: false
-  });
+  }),
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimationState(prev => ({ ...prev, isLoaded: true }))
-    }, 100);
+    }, 100),
     return () => clearTimeout(timer)
-  }, []);
+  }, []),
   if (animationState.hasError) {
     return (
       <div className="min-h-screen bg-slate-950 flex items-center justify-center">
@@ -29,14 +29,14 @@ export default function Home() {
           </button>
         </div>
       </div>
-    );
+    )
   }
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+  },
   return (
     <>
       <Head>
@@ -253,10 +253,10 @@ export default function Home() {
       </ErrorBoundary>
     </>
   )
-  );
-import React from 'react';
-import Homepage2025 from '../components/Homepage2025';
+  ),
+import React from 'react',
+import Homepage2025 from '../components/Homepage2025',
 
 export default function HomePage() {
-  return <Homepage2025 />;
+  return <Homepage2025 />,
 }

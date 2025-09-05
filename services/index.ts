@@ -1,9 +1,9 @@
 // Export all micro SaaS services
-export { urlShortenerService } from './urlShortenerService';
-export { passwordGeneratorService } from './passwordGeneratorService';
-export { qrCodeService } from './qrCodeService';
-export { fileConverterService } from './fileConverterService';
-export { textAnalysisService } from './textAnalysisService';
+export { urlShortenerService } from './urlShortenerService',
+export { passwordGeneratorService } from './passwordGeneratorService',
+export { qrCodeService } from './qrCodeService',
+export { fileConverterService } from './fileConverterService',
+export { textAnalysisService } from './textAnalysisService',
 
 // Export service types and interfaces
 export type {
@@ -11,26 +11,26 @@ export type {
   UrlAnalytics,
   ClickEvent,
   CreateShortUrlRequest
-} from './urlShortenerService';
+} from './urlShortenerService',
 
 export type {
   PasswordOptions,
   PasswordStrength,
   GeneratedPassword
-} from './passwordGeneratorService';
+} from './passwordGeneratorService',
 
 export type {
   QRCodeOptions,
   QRCodeResult,
   QRCodeTemplate
-} from './qrCodeService';
+} from './qrCodeService',
 
 export type {
   ConversionOptions,
   ConversionResult,
   SupportedFormat,
   FileInfo
-} from './fileConverterService';
+} from './fileConverterService',
 
 export type {
   TextAnalysisResult,
@@ -41,14 +41,14 @@ export type {
   LanguageDetection,
   EntityExtraction,
   TextSummary
-} from './textAnalysisService';
+} from './textAnalysisService',
 
 // Service categories for easy discovery
 export const SERVICE_CATEGORIES = {
   UTILITIES: {
     name: 'Utility Tools',
     description: 'Essential tools for everyday tasks',
-    services: ['urlShortener', 'passwordGenerator', 'qrCodeGenerator']
+    services: ['urlShortenerpasswordGenerator', 'qrCodeGenerator']
   },
   MEDIA: {
     name: 'Media & Files',
@@ -60,7 +60,7 @@ export const SERVICE_CATEGORIES = {
     description: 'Text analysis and content insights',
     services: ['textAnalysis']
   }
-} as const;
+} as const,
 
 // Service metadata for the application
 export const SERVICES_METADATA = {
@@ -70,10 +70,8 @@ export const SERVICES_METADATA = {
     icon: '🔗',
     category: 'UTILITIES',
     features: [
-      'Custom short codes',
-      'Click tracking',
-      'Analytics dashboard',
-      'Expiration dates',
+      'Custom short codesClick tracking',
+      'Analytics dashboardExpiration dates',
       'QR code generation'
     ],
     pricing: 'Free',
@@ -85,10 +83,8 @@ export const SERVICES_METADATA = {
     icon: '🔐',
     category: 'UTILITIES',
     features: [
-      'Multiple generation modes',
-      'Strength analysis',
-      'Custom character sets',
-      'Password history',
+      'Multiple generation modesStrength analysis',
+      'Custom character setsPassword history',
       'Security recommendations'
     ],
     pricing: 'Free',
@@ -100,10 +96,8 @@ export const SERVICES_METADATA = {
     icon: '📱',
     category: 'UTILITIES',
     features: [
-      'Multiple QR code types',
-      'Custom styling',
-      'Logo integration',
-      'Error correction',
+      'Multiple QR code typesCustom styling',
+      'Logo integrationError correction',
       'Template library'
     ],
     pricing: 'Free',
@@ -115,10 +109,8 @@ export const SERVICES_METADATA = {
     icon: '🔄',
     category: 'MEDIA',
     features: [
-      'Multiple file formats',
-      'Batch conversion',
-      'Quality settings',
-      'Metadata preservation',
+      'Multiple file formatsBatch conversion',
+      'Quality settingsMetadata preservation',
       'Cloud processing'
     ],
     pricing: 'Free (Basic) / $9.99/month (Pro)',
@@ -130,16 +122,14 @@ export const SERVICES_METADATA = {
     icon: '📊',
     category: 'ANALYSIS',
     features: [
-      'Readability metrics',
-      'Sentiment analysis',
-      'Keyword extraction',
-      'Entity recognition',
+      'Readability metricsSentiment analysis',
+      'Keyword extractionEntity recognition',
       'Language detection'
     ],
     pricing: 'Free (Basic) / $19.99/month (Pro)',
     apiEndpoint: '/api/text-analysis'
   }
-} as const;
+} as const,
 
 // Service availability and status
 export const getServiceStatus = () => {
@@ -149,8 +139,8 @@ export const getServiceStatus = () => {
     qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
     fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-  };
-};
+  },
+},
 
 // Service usage statistics
 export const getServiceStats = () => {
@@ -165,5 +155,5 @@ export const getServiceStats = () => {
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 },
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
     }
-  };
-};
+  },
+},

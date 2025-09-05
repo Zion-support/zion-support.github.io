@@ -1,7 +1,7 @@
 
-import { GradientHeading } from "./GradientHeading";
-import { Link } from "react-router-dom";
-import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
+import { GradientHeading } from "./GradientHeading",
+import { Link } from "react-router-dom",
+import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
 
 const categories = [
   {
@@ -27,17 +27,17 @@ const categories = [
     description: "Discover cutting-edge solutions and tech breakthroughs",
     icon: <Lightbulb className="w-10 h-10" />,
     link: "/category/innovation",
-    color: "from-emerald-500 to-green-600"}];
+    color: "from-emerald-500 to-green-600"}],
 
 const specialServices = [
   {
     title: "IT Onsite Services",
     link: "/it-onsite-services"
   }
-];
+],
 
 interface CategoriesSectionProps {
-  showTitle?: boolean;
+  showTitle?: boolean,
 }
 
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
@@ -91,12 +91,12 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         <div className="mt-12 flex justify-center">
           <Link 
             to="/categories" 
-            className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
+            className="text-zion-cyan border-b border-zion-cyan hover: border-zion-cyan-dark transition-colors"
           >
             View All Categories →
           </Link>
         </div>
       </div>
     </section>
-  );
+  )
 }

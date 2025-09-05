@@ -1,42 +1,42 @@
 export interface EmergingTechService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk';
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk',
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 export const emergingTechServices: EmergingTechService[] = [
@@ -49,16 +49,11 @@ export const emergingTechServices: EmergingTechService[] = [
     period: '/month',
     description: 'Revolutionary quantum internet platform providing unhackable communication channels, quantum key distribution, and post-quantum cryptography. Enables secure government, military, and enterprise communications.',
     features: [
-      'Quantum key distribution (QKD)',
-      'Post-quantum cryptography algorithms',
-      'Quantum entanglement-based security',
-      'Real-time quantum threat detection',
-      'Multi-node quantum network',
-      'Quantum-resistant encryption',
-      'Government compliance (FIPS 140-3)',
-      'Quantum network monitoring',
-      'API for enterprise integration',
-      '24/7 quantum security operations'
+      'Quantum key distribution (QKD)Post-quantum cryptography algorithms',
+      'Quantum entanglement-based securityReal-time quantum threat detection',
+      'Multi-node quantum networkQuantum-resistant encryption',
+      'Government compliance (FIPS 140-3)Quantum network monitoring',
+      'API for enterprise integration24/7 quantum security operations'
     ],
     popular: true,
     icon: '🌐',
@@ -71,11 +66,11 @@ export const emergingTechServices: EmergingTechService[] = [
     setupTime: '2-4 weeks',
     category: 'Quantum Internet & Security',
     realService: true,
-    technology: ['Quantum computing', 'QKD protocols', 'Post-quantum cryptography', 'Quantum entanglement', 'Quantum networks', 'AWS Quantum', 'IBM Quantum'],
-    integrations: ['Government systems', 'Military networks', 'Financial platforms', 'Healthcare systems', 'Energy grids', 'Defense systems'],
-    useCases: ['Secure government communications', 'Military command systems', 'Financial transactions', 'Healthcare data exchange', 'Critical infrastructure protection', 'Defense intelligence'],
+    technology: ['Quantum computingQKD protocols', 'Post-quantum cryptographyQuantum entanglement', 'Quantum networksAWS Quantum', 'IBM Quantum'],
+    integrations: ['Government systemsMilitary networks', 'Financial platformsHealthcare systems', 'Energy gridsDefense systems'],
+    useCases: ['Secure government communicationsMilitary command systems', 'Financial transactionsHealthcare data exchange', 'Critical infrastructure protectionDefense intelligence'],
     roi: 'Prevents cyber attacks worth $6M+ annually, 500% ROI through security cost avoidance',
-    competitors: ['Traditional cybersecurity (Palo Alto, CrowdStrike)', 'No direct quantum internet competitors'],
+    competitors: ['Traditional cybersecurity (Palo Alto, CrowdStrike)No direct quantum internet competitors'],
     marketSize: '$150B cybersecurity market, quantum segment growing 400% annually',
     growthRate: '400% annual growth',
     variant: 'quantum-advanced',
@@ -102,16 +97,11 @@ export const emergingTechServices: EmergingTechService[] = [
     period: '/month',
     description: 'Advanced AI-powered robotics platform that automates complex manufacturing processes, warehouse operations, and logistics. Features computer vision, predictive maintenance, and adaptive learning.',
     features: [
-      'Computer vision-based object recognition',
-      'Predictive maintenance algorithms',
-      'Adaptive learning robotics',
-      'Multi-robot coordination',
-      'Real-time process optimization',
-      'Quality control automation',
-      'Safety monitoring systems',
-      'Performance analytics dashboard',
-      'API for system integration',
-      '24/7 robotic operations support'
+      'Computer vision-based object recognitionPredictive maintenance algorithms',
+      'Adaptive learning roboticsMulti-robot coordination',
+      'Real-time process optimizationQuality control automation',
+      'Safety monitoring systemsPerformance analytics dashboard',
+      'API for system integration24/7 robotic operations support'
     ],
     popular: true,
     icon: '🤖',
@@ -124,11 +114,11 @@ export const emergingTechServices: EmergingTechService[] = [
     setupTime: '4-6 weeks',
     category: 'AI Robotics & Automation',
     realService: true,
-    technology: ['Computer vision', 'Machine learning', 'Robotics control systems', 'IoT sensors', 'Edge computing', 'Cloud robotics', '5G connectivity'],
-    integrations: ['Manufacturing execution systems', 'ERP systems', 'Warehouse management', 'Quality management', 'Maintenance systems', 'Safety systems'],
-    useCases: ['Manufacturing automation', 'Warehouse robotics', 'Quality inspection', 'Material handling', 'Assembly line automation', 'Logistics optimization'],
+    technology: ['Computer visionMachine learning', 'Robotics control systemsIoT sensors', 'Edge computingCloud robotics', '5G connectivity'],
+    integrations: ['Manufacturing execution systemsERP systems', 'Warehouse managementQuality management', 'Maintenance systemsSafety systems'],
+    useCases: ['Manufacturing automationWarehouse robotics', 'Quality inspectionMaterial handling', 'Assembly line automationLogistics optimization'],
     roi: 'Reduces labor costs by 60%, increases productivity by 200%, 400% ROI within 18 months',
-    competitors: ['ABB Robotics', 'KUKA', 'FANUC', 'Yaskawa', 'Universal Robots'],
+    competitors: ['ABB RoboticsKUKA', 'FANUCYaskawa', 'Universal Robots'],
     marketSize: '$45B robotics market, 25% annual growth',
     growthRate: '25% annual growth',
     variant: 'ai-futuristic',
@@ -155,16 +145,11 @@ export const emergingTechServices: EmergingTechService[] = [
     period: '/month',
     description: 'Revolutionary quantum AI platform that optimizes energy grids, manages renewable energy sources, and predicts energy demand with unprecedented accuracy. Enables smart cities and sustainable energy systems.',
     features: [
-      'Quantum AI energy demand prediction',
-      'Renewable energy optimization',
-      'Smart grid management',
-      'Energy storage optimization',
-      'Carbon footprint reduction',
-      'Real-time energy analytics',
-      'Predictive maintenance',
-      'Energy trading algorithms',
-      'API for utility integration',
-      '24/7 energy operations center'
+      'Quantum AI energy demand predictionRenewable energy optimization',
+      'Smart grid managementEnergy storage optimization',
+      'Carbon footprint reductionReal-time energy analytics',
+      'Predictive maintenanceEnergy trading algorithms',
+      'API for utility integration24/7 energy operations center'
     ],
     popular: true,
     icon: '⚡',
@@ -177,11 +162,11 @@ export const emergingTechServices: EmergingTechService[] = [
     setupTime: '6-8 weeks',
     category: 'Quantum Energy & Sustainability',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'IoT sensors', 'Smart grid technology', 'Renewable energy systems', 'Energy storage', 'Blockchain'],
-    integrations: ['SCADA systems', 'Energy management systems', 'Renewable energy platforms', 'Smart city infrastructure', 'Energy trading platforms', 'Government systems'],
-    useCases: ['Smart grid optimization', 'Renewable energy management', 'Energy demand forecasting', 'Carbon reduction', 'Energy trading', 'Smart city energy'],
+    technology: ['Quantum computingAI algorithms', 'IoT sensorsSmart grid technology', 'Renewable energy systemsEnergy storage', 'Blockchain'],
+    integrations: ['SCADA systemsEnergy management systems', 'Renewable energy platformsSmart city infrastructure', 'Energy trading platformsGovernment systems'],
+    useCases: ['Smart grid optimizationRenewable energy management', 'Energy demand forecastingCarbon reduction', 'Energy tradingSmart city energy'],
     roi: 'Reduces energy costs by 30%, increases renewable energy efficiency by 40%, 600% ROI through energy savings',
-    competitors: ['Traditional energy management (Siemens, GE)', 'No direct quantum energy competitors'],
+    competitors: ['Traditional energy management (Siemens, GE)No direct quantum energy competitors'],
     marketSize: '$200B energy management market, smart grid segment growing 300% annually',
     growthRate: '300% annual growth',
     variant: 'quantum-advanced',
@@ -208,16 +193,11 @@ export const emergingTechServices: EmergingTechService[] = [
     period: '/month',
     description: 'Comprehensive metaverse development platform with AI-powered content generation, virtual reality experiences, and immersive 3D environments. Enables businesses to create engaging virtual worlds.',
     features: [
-      'AI-powered 3D content generation',
-      'Virtual reality experience creation',
-      'Metaverse world building tools',
-      'Avatar customization AI',
-      'Real-time collaboration spaces',
-      'Virtual event platforms',
-      '3D asset marketplace',
-      'Performance analytics',
-      'API for custom integrations',
-      '24/7 metaverse support'
+      'AI-powered 3D content generationVirtual reality experience creation',
+      'Metaverse world building toolsAvatar customization AI',
+      'Real-time collaboration spacesVirtual event platforms',
+      '3D asset marketplacePerformance analytics',
+      'API for custom integrations24/7 metaverse support'
     ],
     popular: true,
     icon: '🌌',
@@ -230,11 +210,11 @@ export const emergingTechServices: EmergingTechService[] = [
     setupTime: '2-3 weeks',
     category: 'Metaverse & AR/VR',
     realService: true,
-    technology: ['AI content generation', '3D graphics engines', 'Virtual reality', 'Augmented reality', 'WebGL', 'WebXR', 'Cloud computing', 'Blockchain'],
-    integrations: ['Unity', 'Unreal Engine', 'VR headsets', 'AR devices', 'Social media platforms', 'E-commerce systems', 'Learning management systems'],
-    useCases: ['Virtual real estate tours', 'Virtual events and conferences', 'Educational simulations', 'Gaming experiences', 'Virtual shopping', 'Virtual training'],
+    technology: ['AI content generation3D graphics engines', 'Virtual realityAugmented reality', 'WebGLWebXR', 'Cloud computingBlockchain'],
+    integrations: ['UnityUnreal Engine', 'VR headsetsAR devices', 'Social media platformsE-commerce systems', 'Learning management systems'],
+    useCases: ['Virtual real estate toursVirtual events and conferences', 'Educational simulationsGaming experiences', 'Virtual shoppingVirtual training'],
     roi: 'Increases customer engagement by 300%, reduces physical event costs by 70%, 350% ROI through virtual experiences',
-    competitors: ['Unity', 'Unreal Engine', 'Roblox Studio', 'VRChat', 'AltspaceVR'],
+    competitors: ['UnityUnreal Engine', 'Roblox StudioVRChat', 'AltspaceVR'],
     marketSize: '$800B metaverse market, 400% annual growth',
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
@@ -261,16 +241,11 @@ export const emergingTechServices: EmergingTechService[] = [
     period: '/month',
     description: 'Advanced quantum AI platform that optimizes supply chains, logistics operations, and transportation networks with unprecedented efficiency. Reduces costs and improves delivery times.',
     features: [
-      'Quantum AI route optimization',
-      'Supply chain risk prediction',
-      'Real-time logistics tracking',
-      'Inventory optimization',
-      'Demand forecasting',
-      'Transportation optimization',
-      'Warehouse automation',
-      'Performance analytics',
-      'API for system integration',
-      '24/7 logistics operations'
+      'Quantum AI route optimizationSupply chain risk prediction',
+      'Real-time logistics trackingInventory optimization',
+      'Demand forecastingTransportation optimization',
+      'Warehouse automationPerformance analytics',
+      'API for system integration24/7 logistics operations'
     ],
     popular: true,
     icon: '🚚',
@@ -283,11 +258,11 @@ export const emergingTechServices: EmergingTechService[] = [
     setupTime: '4-6 weeks',
     category: 'Quantum Logistics & Supply Chain',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'IoT sensors', 'GPS tracking', 'Blockchain', 'Cloud computing', 'Machine learning'],
-    integrations: ['ERP systems', 'WMS systems', 'TMS systems', 'E-commerce platforms', 'Manufacturing systems', 'Retail systems'],
-    useCases: ['Route optimization', 'Supply chain optimization', 'Inventory management', 'Demand forecasting', 'Transportation optimization', 'Warehouse automation'],
+    technology: ['Quantum computingAI algorithms', 'IoT sensorsGPS tracking', 'BlockchainCloud computing', 'Machine learning'],
+    integrations: ['ERP systemsWMS systems', 'TMS systemsE-commerce platforms', 'Manufacturing systemsRetail systems'],
+    useCases: ['Route optimizationSupply chain optimization', 'Inventory managementDemand forecasting', 'Transportation optimizationWarehouse automation'],
     roi: 'Reduces logistics costs by 25%, improves delivery times by 40%, 450% ROI through operational efficiency',
-    competitors: ['SAP SCM', 'Oracle SCM', 'Manhattan Associates', 'JDA Software', 'Blue Yonder'],
+    competitors: ['SAP SCMOracle SCM', 'Manhattan AssociatesJDA Software', 'Blue Yonder'],
     marketSize: '$30B supply chain management market, 20% annual growth',
     growthRate: '20% annual growth',
     variant: 'quantum-advanced',
@@ -314,16 +289,11 @@ export const emergingTechServices: EmergingTechService[] = [
     period: '/month',
     description: 'Next-generation cybersecurity platform combining quantum-resistant encryption, AI-powered threat detection, and advanced security analytics. Protects against current and future cyber threats.',
     features: [
-      'Quantum-resistant encryption',
-      'AI-powered threat detection',
-      'Real-time security monitoring',
-      'Advanced threat hunting',
-      'Incident response automation',
-      'Security analytics dashboard',
-      'Compliance reporting',
-      'Security awareness training',
-      'API for system integration',
-      '24/7 security operations center'
+      'Quantum-resistant encryptionAI-powered threat detection',
+      'Real-time security monitoringAdvanced threat hunting',
+      'Incident response automationSecurity analytics dashboard',
+      'Compliance reportingSecurity awareness training',
+      'API for system integration24/7 security operations center'
     ],
     popular: true,
     icon: '🔒',
@@ -336,11 +306,11 @@ export const emergingTechServices: EmergingTechService[] = [
     setupTime: '2-4 weeks',
     category: 'Quantum Cybersecurity',
     realService: true,
-    technology: ['Quantum-resistant cryptography', 'AI algorithms', 'Machine learning', 'Threat intelligence', 'Security analytics', 'Cloud security', 'Endpoint protection'],
-    integrations: ['SIEM systems', 'EDR platforms', 'Firewalls', 'Identity management', 'Vulnerability scanners', 'Compliance tools'],
-    useCases: ['Threat detection and response', 'Vulnerability management', 'Incident response', 'Security monitoring', 'Compliance reporting', 'Security training'],
+    technology: ['Quantum-resistant cryptographyAI algorithms', 'Machine learningThreat intelligence', 'Security analyticsCloud security', 'Endpoint protection'],
+    integrations: ['SIEM systemsEDR platforms', 'FirewallsIdentity management', 'Vulnerability scannersCompliance tools'],
+    useCases: ['Threat detection and responseVulnerability management', 'Incident responseSecurity monitoring', 'Compliance reportingSecurity training'],
     roi: 'Prevents cyber attacks worth $4M+ annually, reduces security incidents by 80%, 400% ROI through security cost avoidance',
-    competitors: ['CrowdStrike', 'Palo Alto Networks', 'SentinelOne', 'Carbon Black', 'Cylance'],
+    competitors: ['CrowdStrikePalo Alto Networks', 'SentinelOneCarbon Black', 'Cylance'],
     marketSize: '$200B cybersecurity market, 15% annual growth',
     growthRate: '15% annual growth',
     variant: 'quantum-cyberpunk',
@@ -367,16 +337,11 @@ export const emergingTechServices: EmergingTechService[] = [
     period: '/month',
     description: 'Revolutionary quantum AI trading platform that processes market data at quantum speeds, enabling algorithmic trading with unprecedented accuracy and execution speed.',
     features: [
-      'Quantum AI trading algorithms',
-      'Nanosecond execution speed',
-      'Real-time market analysis',
-      'Risk management tools',
-      'Portfolio optimization',
-      'Multi-asset trading',
-      'Advanced backtesting',
-      'Regulatory compliance',
-      'Performance analytics',
-      'API for integration'
+      'Quantum AI trading algorithmsNanosecond execution speed',
+      'Real-time market analysisRisk management tools',
+      'Portfolio optimizationMulti-asset trading',
+      'Advanced backtestingRegulatory compliance',
+      'Performance analyticsAPI for integration'
     ],
     popular: true,
     icon: '💰',
@@ -389,11 +354,11 @@ export const emergingTechServices: EmergingTechService[] = [
     setupTime: '6-8 weeks',
     category: 'Quantum Financial Trading',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'High-frequency trading', 'Market data processing', 'Risk management', 'Portfolio optimization', 'Blockchain'],
-    integrations: ['Bloomberg Terminal', 'Reuters Eikon', 'Trading platforms', 'Risk management systems', 'Portfolio management systems', 'Regulatory reporting'],
-    useCases: ['Algorithmic trading', 'High-frequency trading', 'Portfolio optimization', 'Risk management', 'Market analysis', 'Trading automation'],
+    technology: ['Quantum computingAI algorithms', 'High-frequency tradingMarket data processing', 'Risk managementPortfolio optimization', 'Blockchain'],
+    integrations: ['Bloomberg TerminalReuters Eikon', 'Trading platformsRisk management systems', 'Portfolio management systemsRegulatory reporting'],
+    useCases: ['Algorithmic tradingHigh-frequency trading', 'Portfolio optimizationRisk management', 'Market analysisTrading automation'],
     roi: 'Increases trading profits by 200%, reduces execution costs by 60%, 800% ROI through trading performance',
-    competitors: ['Renaissance Technologies', 'Two Sigma', 'Citadel', 'Bridgewater Associates', 'AQR Capital'],
+    competitors: ['Renaissance TechnologiesTwo Sigma', 'CitadelBridgewater Associates', 'AQR Capital'],
     marketSize: '$15T algorithmic trading market, 150% annual growth',
     growthRate: '150% annual growth',
     variant: 'quantum-advanced',
@@ -420,16 +385,11 @@ export const emergingTechServices: EmergingTechService[] = [
     period: '/month',
     description: 'Comprehensive AI-powered IoT platform that manages smart city infrastructure, monitors environmental conditions, and optimizes urban services. Enables sustainable and efficient cities.',
     features: [
-      'Smart city infrastructure management',
-      'Environmental monitoring',
-      'Traffic optimization',
-      'Energy management',
-      'Waste management',
-      'Public safety monitoring',
-      'Citizen engagement platform',
-      'Data analytics dashboard',
-      'API for city systems',
-      '24/7 smart city operations'
+      'Smart city infrastructure managementEnvironmental monitoring',
+      'Traffic optimizationEnergy management',
+      'Waste managementPublic safety monitoring',
+      'Citizen engagement platformData analytics dashboard',
+      'API for city systems24/7 smart city operations'
     ],
     popular: true,
     icon: '🏙️',
@@ -442,11 +402,11 @@ export const emergingTechServices: EmergingTechService[] = [
     setupTime: '8-12 weeks',
     category: 'AI IoT & Smart Cities',
     realService: true,
-    technology: ['IoT sensors', 'AI algorithms', 'Machine learning', 'Big data analytics', 'Cloud computing', '5G connectivity', 'Edge computing'],
-    integrations: ['City management systems', 'Utility systems', 'Transportation systems', 'Public safety systems', 'Environmental monitoring', 'Citizen services'],
-    useCases: ['Smart city management', 'Environmental monitoring', 'Traffic optimization', 'Energy optimization', 'Waste management', 'Public safety'],
+    technology: ['IoT sensorsAI algorithms', 'Machine learningBig data analytics', 'Cloud computing5G connectivity', 'Edge computing'],
+    integrations: ['City management systemsUtility systems', 'Transportation systemsPublic safety systems', 'Environmental monitoringCitizen services'],
+    useCases: ['Smart city managementEnvironmental monitoring', 'Traffic optimizationEnergy optimization', 'Waste managementPublic safety'],
     roi: 'Reduces city operational costs by 25%, improves citizen services by 40%, 500% ROI through efficiency gains',
-    competitors: ['Cisco Smart Cities', 'Siemens City Performance', 'IBM Smart Cities', 'Microsoft CityNext', 'Oracle Smart Cities'],
+    competitors: ['Cisco Smart CitiesSiemens City Performance', 'IBM Smart CitiesMicrosoft CityNext', 'Oracle Smart Cities'],
     marketSize: '$400B smart city market, 300% annual growth',
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
@@ -471,16 +431,11 @@ export const emergingTechServices: EmergingTechService[] = [
     period: '/month',
     description: 'World\'s first quantum-secured space communication network that provides unhackable communication between Earth, satellites, and space stations. Enables secure space exploration and commercial space operations.',
     features: [
-      'Quantum-secured space communication',
-      'Satellite quantum key distribution',
-      'Interplanetary communication protocols',
-      'Quantum encryption for space data',
-      'Real-time space communication monitoring',
-      'Quantum-secured satellite networks',
-      'Space debris tracking and avoidance',
-      'Quantum communication ground stations',
-      'Advanced space analytics dashboard',
-      '24/7 quantum space operations center'
+      'Quantum-secured space communicationSatellite quantum key distribution',
+      'Interplanetary communication protocolsQuantum encryption for space data',
+      'Real-time space communication monitoringQuantum-secured satellite networks',
+      'Space debris tracking and avoidanceQuantum communication ground stations',
+      'Advanced space analytics dashboard24/7 quantum space operations center'
     ],
     popular: true,
     icon: '🛰️',
@@ -493,11 +448,11 @@ export const emergingTechServices: EmergingTechService[] = [
     setupTime: '1 month',
     category: 'Quantum Space Technology',
     realService: true,
-    technology: ['Quantum communication', 'Satellite technology', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Custom quantum hardware'],
-    integrations: ['Satellite systems', 'Ground stations', 'Space mission control', 'Communication protocols', 'Space analytics tools'],
-    useCases: ['Satellite communication', 'Space exploration', 'Interplanetary missions', 'Commercial space operations', 'Space research', 'Space security'],
+    technology: ['Quantum communicationSatellite technology', 'ReactNode.js', 'PostgreSQLRedis', 'AWSCustom quantum hardware'],
+    integrations: ['Satellite systemsGround stations', 'Space mission controlCommunication protocols', 'Space analytics tools'],
+    useCases: ['Satellite communicationSpace exploration', 'Interplanetary missionsCommercial space operations', 'Space researchSpace security'],
     roi: 'Space organizations report 600% ROI through enhanced communication security and operational efficiency.',
-    competitors: ['Traditional space communication', 'Basic satellite networks', 'Manual space operations'],
+    competitors: ['Traditional space communicationBasic satellite networks', 'Manual space operations'],
     marketSize: '$350B space market, quantum segment growing 500% annually',
     growthRate: '500% annual growth',
     variant: 'quantum-space',
@@ -522,16 +477,11 @@ export const emergingTechServices: EmergingTechService[] = [
     period: '/month',
     description: 'Breakthrough AI platform that accelerates drug discovery by 1000x through quantum computing, machine learning, and advanced biotechnology. Perfect for pharmaceutical companies and research institutions.',
     features: [
-      'AI-powered drug molecule design',
-      'Quantum computing drug simulation',
-      'Predictive drug efficacy modeling',
-      'Automated clinical trial design',
-      'Real-time drug development tracking',
-      'AI-driven target identification',
-      'Quantum molecular dynamics',
-      'Advanced biotech analytics',
-      'Regulatory compliance automation',
-      '24/7 AI drug discovery operations'
+      'AI-powered drug molecule designQuantum computing drug simulation',
+      'Predictive drug efficacy modelingAutomated clinical trial design',
+      'Real-time drug development trackingAI-driven target identification',
+      'Quantum molecular dynamicsAdvanced biotech analytics',
+      'Regulatory compliance automation24/7 AI drug discovery operations'
     ],
     popular: true,
     icon: '🧬',
@@ -544,11 +494,11 @@ export const emergingTechServices: EmergingTechService[] = [
     setupTime: '2 months',
     category: 'AI & Biotech',
     realService: true,
-    technology: ['AI algorithms', 'Quantum computing', 'Machine learning', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Biotech tools'],
-    integrations: ['Lab equipment', 'Research databases', 'Clinical trial systems', 'Regulatory databases', 'Biotech platforms'],
-    useCases: ['Drug discovery', 'Clinical trial optimization', 'Target identification', 'Drug efficacy prediction', 'Regulatory compliance', 'Biotech research'],
+    technology: ['AI algorithmsQuantum computing', 'Machine learningReact', 'Node.jsPostgreSQL', 'RedisAWS', 'Biotech tools'],
+    integrations: ['Lab equipmentResearch databases', 'Clinical trial systemsRegulatory databases', 'Biotech platforms'],
+    useCases: ['Drug discoveryClinical trial optimization', 'Target identificationDrug efficacy prediction', 'Regulatory complianceBiotech research'],
     roi: 'Pharmaceutical companies report 1000% ROI through accelerated drug discovery and reduced development costs.',
-    competitors: ['Traditional drug discovery', 'Basic AI drug tools', 'Manual research methods'],
+    competitors: ['Traditional drug discoveryBasic AI drug tools', 'Manual research methods'],
     marketSize: '$1.5T pharmaceutical market, AI segment growing 600% annually',
     growthRate: '600% annual growth',
     variant: 'ai-futuristic',
@@ -573,16 +523,11 @@ export const emergingTechServices: EmergingTechService[] = [
     period: '/month',
     description: 'Revolutionary autonomous AI factory platform that operates manufacturing facilities without human intervention. Achieves 24/7 production with 99.99% efficiency and zero downtime.',
     features: [
-      'Fully autonomous manufacturing',
-      'AI-powered quality control',
-      'Predictive maintenance automation',
-      'Smart inventory management',
-      'Real-time production optimization',
-      'AI-driven supply chain management',
-      'Automated quality assurance',
-      'Predictive analytics dashboard',
-      'Energy optimization',
-      '24/7 autonomous operations'
+      'Fully autonomous manufacturingAI-powered quality control',
+      'Predictive maintenance automationSmart inventory management',
+      'Real-time production optimizationAI-driven supply chain management',
+      'Automated quality assurancePredictive analytics dashboard',
+      'Energy optimization24/7 autonomous operations'
     ],
     popular: true,
     icon: '🏭',
@@ -595,11 +540,11 @@ export const emergingTechServices: EmergingTechService[] = [
     setupTime: '3 weeks',
     category: 'AI & Autonomous Manufacturing',
     realService: true,
-    technology: ['AI algorithms', 'Robotics', 'IoT sensors', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Manufacturing systems'],
-    integrations: ['ERP systems', 'MES systems', 'SCADA systems', 'Robotics platforms', 'IoT devices', 'Quality control systems'],
-    useCases: ['Manufacturing automation', 'Quality control', 'Predictive maintenance', 'Supply chain optimization', 'Energy optimization', 'Production planning'],
+    technology: ['AI algorithmsRobotics', 'IoT sensorsReact', 'Node.jsPostgreSQL', 'RedisAWS', 'Manufacturing systems'],
+    integrations: ['ERP systemsMES systems', 'SCADA systemsRobotics platforms', 'IoT devicesQuality control systems'],
+    useCases: ['Manufacturing automationQuality control', 'Predictive maintenanceSupply chain optimization', 'Energy optimizationProduction planning'],
     roi: 'Manufacturing companies report 400% ROI through increased production efficiency and reduced operational costs.',
-    competitors: ['Traditional manufacturing', 'Basic automation', 'Manual production processes'],
+    competitors: ['Traditional manufacturingBasic automation', 'Manual production processes'],
     marketSize: '$12T manufacturing market, AI segment growing 350% annually',
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
@@ -616,4 +561,4 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4.8,
     reviews: 28
   }
-];
+],

@@ -5,6 +5,6 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-};
+},
 
 

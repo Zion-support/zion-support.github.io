@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, X, Search, ChevronDown, ChevronRight,
   Home, Users, Settings, HelpCircle, Mail, Phone, MapPin,
@@ -12,14 +12,14 @@ import {
   Code, Wrench, Smartphone, BarChart3, Eye, Globe2,
   Zap, Rocket, Brain, Sparkles, ShieldCheck, Target,
   Users2, Briefcase, Lightbulb, Award, Clock, CheckCircle
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -88,13 +88,11 @@ const serviceCategories = [
     color: 'from-orange-600 via-red-600 to-pink-600',
     description: 'Breakthrough research solutions',
     services: [
-      'Advanced Research Automation',
-      'Quantum Research Platform',
-      'AI Research Assistant',
-      'Biotech Research Suite'
+      'Advanced Research AutomationQuantum Research Platform',
+      'AI Research AssistantBiotech Research Suite'
     ]
   }
-];
+],
 
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
@@ -107,7 +105,7 @@ const mainNavigation = [
   { name: 'Innovations', href: '/innovations', icon: Sparkles },
   { name: 'About', href: '/about', icon: Users },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
+],
 
 const quickLinks = [
   { name: 'About Us', href: '/about', icon: Users },
@@ -116,15 +114,15 @@ const quickLinks = [
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Careers', href: '/careers', icon: GraduationCap },
   { name: 'Support', href: '/support', icon: MessageCircle }
-];
+],
 
 export default function UltraFuturisticNavigation2029V2() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeCategory, setActiveCategory] = useState<string | null>(null),
+  const [searchQuery, setSearchQuery] = useState(''),
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const toggleMenu = () => setIsOpen(!isOpen),
+  const closeMenu = () => setIsOpen(false),
 
   return (
     <nav className="relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20">
@@ -350,5 +348,5 @@ export default function UltraFuturisticNavigation2029V2() {
         )}
       </AnimatePresence>
     </nav>
-  );
+  ),
 }

@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from "next/link",
 
 export const metadata = {
   title: "News & Insights - Zion Tech Group | Latest Technology Updates",
   description: "Stay updated with the latest news, insights, and thought leadership from Zion Tech Group. Discover industry trends, company updates, and technology innovations.",
-  keywords: "news, insights, technology updates, AI news, quantum computing, cybersecurity, Zion Tech Group"};
+  keywords: "news, insights, technology updates, AI news, quantum computing, cybersecurity, Zion Tech Group"},
 
 export default function NewsPage() {
   return (
@@ -312,7 +312,7 @@ export default function NewsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="card">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -334,5 +334,5 @@ export default function NewsPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

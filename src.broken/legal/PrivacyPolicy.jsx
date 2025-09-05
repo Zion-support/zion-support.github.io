@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 export export export default function PrivacyPolicy()   {
   return (
@@ -6,5 +6,5 @@ export export export default function PrivacyPolicy()   {
       <h1>PrivacyPolicy</h1>
       <p>Component placeholder - needs implementation</p>
     </div>
-  );
+  ),
 }

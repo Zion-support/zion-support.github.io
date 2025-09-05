@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion } from 'framer-motion',
 
 export default function InteractiveSearch({ placeholder = 'Search talent, skills, or jobs...' }: { placeholder?: string }) {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState(''),
   return (
     <motion.div initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} className="relative">
       <input
@@ -20,5 +20,5 @@ export default function InteractiveSearch({ placeholder = 'Search talent, skills
         </button>
       )}
     </motion.div>
-  );
+  ),
 }

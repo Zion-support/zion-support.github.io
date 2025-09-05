@@ -1,22 +1,22 @@
 
-import React, { useEffect } from 'react';
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
-import { toast } from "sonner";
+import React, { useEffect } from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { useNavigate } from "react-router-dom",
+import { toast } from "sonner",
 
 export default function Profile() {
-  const { user, isLoading, logout } = useAuth();
-  const navigate = useNavigate();
+  const { user, isLoading, logout } = useAuth(),
+  const navigate = useNavigate(),
 
   useEffect(() => {
     if (!isLoading && !user) {
-      toast.error("Please log in to view your profile");
-      navigate("/login?redirect=/profile");
+      toast.error("Please log in to view your profile"),
+      navigate("/login?redirect=/profile"),
     }
-  }, [user, isLoading, navigate]);
+  }, [user, isLoading, navigate]),
 
   if (isLoading) {
     return (
@@ -27,7 +27,7 @@ export default function Profile() {
         </div>
         <Footer />
       </>
-    );
+    ),
   }
 
   if (!user) {
@@ -40,7 +40,7 @@ export default function Profile() {
             <p className="text-zion-slate mb-4">You need to be logged in to view your profile.</p>
             <Button 
               onClick={() => navigate("/login?redirect=/profile")}
-              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
             >
               Go to Login
             </Button>
@@ -48,7 +48,7 @@ export default function Profile() {
         </div>
         <Footer />
       </>
-    );
+    )
   }
 
   return (
@@ -69,11 +69,11 @@ export default function Profile() {
                 <p className="text-zion-slate-light mb-4">{user.email}</p>
                 <Button
                   onClick={() => {
-                    logout();
-                    navigate("/");
+                    logout(),
+                    navigate("/"),
                   }}
                   variant="outline"
-                  className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+                  className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
                 >
                   Logout
                 </Button>
@@ -84,5 +84,5 @@ export default function Profile() {
       </div>
       <Footer />
     </>
-  );
+  )
 }

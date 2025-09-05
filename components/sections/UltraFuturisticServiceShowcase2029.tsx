@@ -1,22 +1,22 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react',
 
 interface Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string
 }
 
 interface UltraFuturisticServiceShowcase2029Props {
-  services: Service[];
-  title?: string;
-  subtitle?: string;
+  services: Service[],
+  title?: string,
+  subtitle?: string
 }
 
 export default function UltraFuturisticServiceShowcase2029({ 
@@ -95,7 +95,7 @@ export default function UltraFuturisticServiceShowcase2029({
         >
           <Link
             href="/services"
-            className="inline-flex items-center justify-center bg-transparent border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
+            className="inline-flex items-center justify-center bg-transparent border-2 border-cyan-500 text-cyan-400 hover: bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
           >
             View All Services
             <ArrowRight className="w-4 h-4 ml-2" />
@@ -103,5 +103,5 @@ export default function UltraFuturisticServiceShowcase2029({
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

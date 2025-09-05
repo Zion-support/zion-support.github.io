@@ -64,7 +64,7 @@ const PaginationLink = ({
 )
 PaginationLink.displayName = "PaginationLink"
 
-const PaginationButton = React.forwardRef<HTMLButtonElement, PaginationButtonProps>(
+const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProps>(
   ({ page, isActive, className, ...props }, ref) => (
     <button
       ref={ref}
@@ -87,7 +87,7 @@ PaginationButton.displayName = 'PaginationButton'
 const PaginationPrevious = ({
   className,
   ...props
-}: Omit<PaginationLinkProps, 'size'>) => (
+}: Omit<PaginationLinkProps 'size'>) => (
   <PaginationLink
     aria-label="Go to previous page"
     size="default"
@@ -103,7 +103,7 @@ PaginationPrevious.displayName = "PaginationPrevious"
 const PaginationNext = ({
   className,
   ...props
-}: Omit<PaginationLinkProps, 'size'>) => (
+}: Omit<PaginationLinkProps 'size'>) => (
   <PaginationLink
     aria-label="Go to next page"
     size="default"

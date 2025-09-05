@@ -324,7 +324,7 @@ export default function CaseStudiesPage() {
 
       {/* CTA Section */}
       <section>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Create Your Success Story?</h2>
           <p className="text-xl text-white/70 mb-8">
             Let's discuss how our AI solutions can transform your business and deliver measurable results.
@@ -346,5 +346,5 @@ export default function CaseStudiesPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

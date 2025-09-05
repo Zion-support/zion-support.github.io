@@ -1,8 +1,8 @@
-import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
+import React from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
+import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react',
 
 export default function BusinessToolsPage() {
   const businessTools = [
@@ -12,7 +12,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Notion',
           description: 'All-in-one workspace for notes, docs, projects, and team collaboration.',
-          features: ['Templates', 'Database views', 'Real-time editing', 'Integrations', 'Team spaces'],
+          features: ['TemplatesDatabase views', 'Real-time editingIntegrations', 'Team spaces'],
           pricing: 'Free - $8/month',
           website: 'https://notion.so',
           icon: <FileText className="w-6 h-6" />,
@@ -22,7 +22,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Asana',
           description: 'Work management platform for teams to organize, track, and manage their work.',
-          features: ['Task management', 'Project timelines', 'Team collaboration', 'Workflow automation', 'Reporting'],
+          features: ['Task managementProject timelines', 'Team collaborationWorkflow automation', 'Reporting'],
           pricing: 'Free - $10.99/month',
           website: 'https://asana.com',
           icon: <CheckCircle className="w-6 h-6" />,
@@ -31,7 +31,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Monday.com',
           description: 'Visual project management platform with customizable workflows and automation.',
-          features: ['Visual boards', 'Automation', 'Time tracking', 'Integrations', 'Analytics'],
+          features: ['Visual boardsAutomation', 'Time trackingIntegrations', 'Analytics'],
           pricing: '$8/month - $16/month',
           website: 'https://monday.com',
           icon: <Calendar className="w-6 h-6" />,
@@ -45,7 +45,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Slack',
           description: 'Team communication platform for modern businesses with channels and integrations.',
-          features: ['Channels', 'Direct messages', 'File sharing', 'Integrations', 'Search'],
+          features: ['ChannelsDirect messages', 'File sharingIntegrations', 'Search'],
           pricing: 'Free - $7.25/month',
           website: 'https://slack.com',
           icon: <MessageSquare className="w-6 h-6" />,
@@ -55,7 +55,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Microsoft Teams',
           description: 'Unified communication platform with chat, video meetings, and file collaboration.',
-          features: ['Chat', 'Video meetings', 'File sharing', 'Office integration', 'Security'],
+          features: ['ChatVideo meetings', 'File sharingOffice integration', 'Security'],
           pricing: 'Free - $6/month',
           website: 'https://teams.microsoft.com',
           icon: <Users className="w-6 h-6" />,
@@ -64,7 +64,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Zoom',
           description: 'Video conferencing platform for meetings, webinars, and team collaboration.',
-          features: ['HD video', 'Screen sharing', 'Recording', 'Webinars', 'Breakout rooms'],
+          features: ['HD videoScreen sharing', 'RecordingWebinars', 'Breakout rooms'],
           pricing: 'Free - $14.99/month',
           website: 'https://zoom.us',
           icon: <Video className="w-6 h-6" />,
@@ -78,7 +78,7 @@ export default function BusinessToolsPage() {
         {
           name: 'HubSpot',
           description: 'All-in-one inbound marketing, sales, and customer service platform.',
-          features: ['CRM', 'Email marketing', 'Lead generation', 'Analytics', 'Automation'],
+          features: ['CRMEmail marketing', 'Lead generationAnalytics', 'Automation'],
           pricing: 'Free - $45/month',
           website: 'https://hubspot.com',
           icon: <Target className="w-6 h-6" />,
@@ -88,7 +88,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Mailchimp',
           description: 'Email marketing platform for growing businesses and creators.',
-          features: ['Email templates', 'Automation', 'Analytics', 'Audience segmentation', 'A/B testing'],
+          features: ['Email templatesAutomation', 'AnalyticsAudience segmentation', 'A/B testing'],
           pricing: 'Free - $13/month',
           website: 'https://mailchimp.com',
           icon: <Mail className="w-6 h-6" />,
@@ -97,7 +97,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Salesforce',
           description: 'Customer relationship management platform for sales, service, and marketing.',
-          features: ['Sales CRM', 'Service cloud', 'Marketing automation', 'Analytics', 'AppExchange'],
+          features: ['Sales CRMService cloud', 'Marketing automationAnalytics', 'AppExchange'],
           pricing: '$25/month - $300/month',
           website: 'https://salesforce.com',
           icon: <TrendingUp className="w-6 h-6" />,
@@ -111,7 +111,7 @@ export default function BusinessToolsPage() {
         {
           name: 'QuickBooks',
           description: 'Small business accounting software for invoicing, expenses, and financial reporting.',
-          features: ['Invoicing', 'Expense tracking', 'Financial reports', 'Tax preparation', 'Bank integration'],
+          features: ['InvoicingExpense tracking', 'Financial reportsTax preparation', 'Bank integration'],
           pricing: '$30/month - $200/month',
           website: 'https://quickbooks.intuit.com',
           icon: <CreditCard className="w-6 h-6" />,
@@ -121,7 +121,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Stripe',
           description: 'Payment processing platform for internet businesses.',
-          features: ['Global payments', 'Subscription billing', 'Fraud prevention', 'Developer APIs', 'Analytics'],
+          features: ['Global paymentsSubscription billing', 'Fraud preventionDeveloper APIs', 'Analytics'],
           pricing: '2.9% + 30¢ per transaction',
           website: 'https://stripe.com',
           icon: <CreditCard className="w-6 h-6" />,
@@ -130,7 +130,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Xero',
           description: 'Cloud-based accounting software for small businesses and accountants.',
-          features: ['Bank reconciliation', 'Invoicing', 'Expense claims', 'Multi-currency', 'Payroll'],
+          features: ['Bank reconciliationInvoicing', 'Expense claimsMulti-currency', 'Payroll'],
           pricing: '$13/month - $70/month',
           website: 'https://xero.com',
           icon: <ChartBar className="w-6 h-6" />,
@@ -144,7 +144,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Figma',
           description: 'Collaborative interface design tool for teams building digital products.',
-          features: ['Real-time collaboration', 'Design systems', 'Prototyping', 'Developer handoff', 'Plugins'],
+          features: ['Real-time collaborationDesign systems', 'PrototypingDeveloper handoff', 'Plugins'],
           pricing: 'Free - $12/month',
           website: 'https://figma.com',
           icon: <Palette className="w-6 h-6" />,
@@ -154,7 +154,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Canva',
           description: 'Create professional designs with drag-and-drop simplicity.',
-          features: ['Templates library', 'Stock photos', 'Brand kit', 'Team collaboration', 'Video editing'],
+          features: ['Templates libraryStock photos', 'Brand kitTeam collaboration', 'Video editing'],
           pricing: 'Free - $12.99/month',
           website: 'https://canva.com',
           icon: <Image className="w-6 h-6" />,
@@ -163,7 +163,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Adobe Creative Cloud',
           description: 'Complete creative software suite for design, photography, and video.',
-          features: ['Photoshop', 'Illustrator', 'InDesign', 'Premiere Pro', 'After Effects'],
+          features: ['PhotoshopIllustrator', 'InDesignPremiere Pro', 'After Effects'],
           pricing: '$52.99/month',
           website: 'https://adobe.com/creativecloud',
           icon: <Palette className="w-6 h-6" />,
@@ -177,7 +177,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Google Analytics',
           description: 'Free web analytics service that tracks and reports website traffic.',
-          features: ['Real-time data', 'Audience insights', 'Conversion tracking', 'E-commerce', 'Goals'],
+          features: ['Real-time dataAudience insights', 'Conversion trackingE-commerce', 'Goals'],
           pricing: 'Free',
           website: 'https://analytics.google.com',
           icon: <BarChart3 className="w-6 h-6" />,
@@ -187,7 +187,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Tableau',
           description: 'Data visualization and business intelligence platform for analytics.',
-          features: ['Interactive dashboards', 'Data blending', 'Real-time analytics', 'Mobile support', 'Collaboration'],
+          features: ['Interactive dashboardsData blending', 'Real-time analyticsMobile support', 'Collaboration'],
           pricing: '$70/month - $35/month',
           website: 'https://tableau.com',
           icon: <ChartBar className="w-6 h-6" />,
@@ -196,7 +196,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Mixpanel',
           description: 'Product analytics platform for understanding user behavior and product usage.',
-          features: ['Event tracking', 'Funnel analysis', 'Cohort analysis', 'A/B testing', 'Real-time data'],
+          features: ['Event trackingFunnel analysis', 'Cohort analysisA/B testing', 'Real-time data'],
           pricing: 'Free - $25/month',
           website: 'https://mixpanel.com',
           icon: <TrendingUp className="w-6 h-6" />,
@@ -204,7 +204,7 @@ export default function BusinessToolsPage() {
         }
       ]
     }
-  ];
+  ],
 
   const businessInsights = [
     {
@@ -231,7 +231,7 @@ export default function BusinessToolsPage() {
       trend: '🔒 Critical',
       color: 'text-orange-400'
     }
-  ];
+  ],
 
   const productivityTips = [
     {
@@ -254,7 +254,7 @@ export default function BusinessToolsPage() {
         description: 'Invest in proper training to maximize the value of your chosen tools.',
         icon: <Users className="w-6 h-6 text-orange-400" />
     }
-  ];
+  ],
 
   return (
     <>
@@ -434,7 +434,7 @@ export default function BusinessToolsPage() {
             These business tools can streamline your operations, improve team collaboration, and drive growth. 
             Start with the essentials and build your tech stack strategically.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm: flex-row gap-6 justify-center">
             <Button
               href="/micro-saas"
               variant="secondary"
@@ -455,5 +455,5 @@ export default function BusinessToolsPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

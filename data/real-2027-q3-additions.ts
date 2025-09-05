@@ -7,10 +7,8 @@ export const real2027Q3Additions = [
     period: '/month',
     description: 'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.',
     features: [
-      'Agentless subnet scanning and SaaS discovery',
-      'OS, version, and CVE enrichment',
-      'CMDB, ServiceNow, and Jira export',
-      'Change detection and drift alerts'
+      'Agentless subnet scanning and SaaS discoveryOS, version, and CVE enrichment',
+      'CMDB, ServiceNow, and Jira exportChange detection and drift alerts'
     ],
     category: 'Enterprise IT',
     link: '/it-asset-discovery-agent',
@@ -25,10 +23,8 @@ export const real2027Q3Additions = [
     period: '/month',
     description: 'Turnkey HA architecture with PITR backups, automatic failover, and expert tuning backed by SRE playbooks.',
     features: [
-      'Streaming replication and automatic failover',
-      'PITR backups with retention policies',
-      'Performance tuning and query insights',
-      'Security hardening and auditing'
+      'Streaming replication and automatic failoverPITR backups with retention policies',
+      'Performance tuning and query insightsSecurity hardening and auditing'
     ],
     category: 'Cloud & Infrastructure',
     link: '/managed-postgres-ha',
@@ -43,10 +39,8 @@ export const real2027Q3Additions = [
     period: '/month',
     description: 'Deploy a proven RAG baseline with embeddings, chunking, evaluation harness, and observability for fast iteration.',
     features: [
-      'Pinecone/Weaviate/Elastic integrations',
-      'Chunking strategies and deduplication',
-      'Eval harness with regression tests',
-      'Tracing, metrics, and dashboards'
+      'Pinecone/Weaviate/Elastic integrationsChunking strategies and deduplication',
+      'Eval harness with regression testsTracing, metrics, and dashboards'
     ],
     category: 'AI & Data',
     link: '/vector-search-starter',
@@ -61,10 +55,8 @@ export const real2027Q3Additions = [
     period: '/month',
     description: 'Schedule and run serverless jobs at scale with observability, concurrency controls, and guaranteed delivery semantics.',
     features: [
-      'Idempotent job execution',
-      'Per-job concurrency and rate limits',
-      'DLQ, retries, and exponential backoff',
-      'Metrics, logs, and alerting'
+      'Idempotent job executionPer-job concurrency and rate limits',
+      'DLQ, retries, and exponential backoffMetrics, logs, and alerting'
     ],
     category: 'Developer Tools',
     link: '/serverless-cron-manager',
@@ -79,10 +71,8 @@ export const real2027Q3Additions = [
     period: '/month',
     description: 'Monitor WHOIS, DNS records, TLS health, and name server changes with instant alerts and audit trails.',
     features: [
-      'WHOIS expiry and registrar checks',
-      'NS, MX, TXT, and CAA drift detection',
-      'TLS expiry and configuration health',
-      'Slack, Email, and Webhook alerts'
+      'WHOIS expiry and registrar checksNS, MX, TXT, and CAA drift detection',
+      'TLS expiry and configuration healthSlack, Email, and Webhook alerts'
     ],
     category: 'Quality & Monitoring',
     link: '/domain-dns-monitor',
@@ -97,10 +87,8 @@ export const real2027Q3Additions = [
     period: '/month',
     description: 'Track service uptime with user-centric SLOs, burn rates, and multi-location synthetic checks.',
     features: [
-      'SLO templates and burn-rate alerts',
-      'Multi-region synthetic and API checks',
-      'Status pages and dashboards',
-      'Change annotations and incident links'
+      'SLO templates and burn-rate alertsMulti-region synthetic and API checks',
+      'Status pages and dashboardsChange annotations and incident links'
     ],
     category: 'Observability',
     link: '/uptime-slo-monitor',
@@ -115,10 +103,8 @@ export const real2027Q3Additions = [
     period: '/month',
     description: 'Automate SCIM provisioning, offboarding, and periodic access reviews across Okta/Auth0/WorkOS.',
     features: [
-      'Just-in-time provisioning',
-      'SCIM connectors and custom mappers',
-      'Access review workflows',
-      'Audit logs and exports'
+      'Just-in-time provisioningSCIM connectors and custom mappers',
+      'Access review workflowsAudit logs and exports'
     ],
     category: 'Security & Identity',
     link: '/sso-user-lifecycle-automation',
@@ -133,10 +119,8 @@ export const real2027Q3Additions = [
     period: '/month',
     description: 'One-click OpenTelemetry setup with golden signals, latency SLOs, and dashboards for REST and gRPC APIs.',
     features: [
-      'Automatic instrumentation presets',
-      'Latency percentiles and error rates',
-      'SLO burn and dependency graphs',
-      'Alert templates and runbooks'
+      'Automatic instrumentation presetsLatency percentiles and error rates',
+      'SLO burn and dependency graphsAlert templates and runbooks'
     ],
     category: 'Observability',
     link: '/api-observability-starter',
@@ -151,10 +135,8 @@ export const real2027Q3Additions = [
     period: '/month',
     description: 'Continuously analyze RBAC bindings, detect excessive privileges, and auto-generate least-privilege policies.',
     features: [
-      'RBAC graph analysis and reports',
-      'Policy suggestions and PRs',
-      'Audit trails and drift alerts',
-      'Multi-cluster support'
+      'RBAC graph analysis and reportsPolicy suggestions and PRs',
+      'Audit trails and drift alertsMulti-cluster support'
     ],
     category: 'Security & Identity',
     link: '/kubernetes-rbac-auditor',
@@ -169,10 +151,8 @@ export const real2027Q3Additions = [
     period: '/month',
     description: 'Detects drift between IaC (Terraform) and live cloud state, with approvals and auto-remediation.',
     features: [
-      'Terraform plan diffs as PR comments',
-      'Change approval workflows',
-      'Selective auto-remediation',
-      'Multi-cloud support'
+      'Terraform plan diffs as PR commentsChange approval workflows',
+      'Selective auto-remediationMulti-cloud support'
     ],
     category: 'Cloud & Infrastructure',
     link: '/infrastructure-drift-detector',
@@ -187,10 +167,8 @@ export const real2027Q3Additions = [
     period: '/month',
     description: 'Triage, summarize, and coordinate incidents with auto-generated timelines and draft postmortems.',
     features: [
-      'Auto triage and severity suggestion',
-      'Channel orchestration (Slack/Teams)',
-      'Timeline and comms templates',
-      'Postmortem drafts and actions'
+      'Auto triage and severity suggestionChannel orchestration (Slack/Teams)',
+      'Timeline and comms templatesPostmortem drafts and actions'
     ],
     category: 'Operations',
     link: '/incident-copilot',
@@ -205,10 +183,8 @@ export const real2027Q3Additions = [
     period: '/month',
     description: 'Automate competitor tracking, category mapping, and trend detection with exportable insight briefs.',
     features: [
-      'Web and doc ingestion with citations',
-      'Competitor profiles and matrices',
-      'Alerts for launches and pricing changes',
-      'Export to Slides/Docs'
+      'Web and doc ingestion with citationsCompetitor profiles and matrices',
+      'Alerts for launches and pricing changesExport to Slides/Docs'
     ],
     category: 'AI & Data',
     link: '/ai-market-research',
@@ -223,10 +199,8 @@ export const real2027Q3Additions = [
     period: '/month',
     description: 'Automate prospecting, enrichment, and multi-channel outreach with AI-drafted replies and meeting booking.',
     features: [
-      'Lead enrichment and routing',
-      'Multichannel sequences',
-      'AI-generated replies with approvals',
-      'Pipeline analytics'
+      'Lead enrichment and routingMultichannel sequences',
+      'AI-generated replies with approvalsPipeline analytics'
     ],
     category: 'Sales & Marketing',
     link: '/ai-sales-automation',
@@ -241,10 +215,8 @@ export const real2027Q3Additions = [
     period: '/month',
     description: 'Extract key clauses, flag risks, and align to your negotiation playbooks with redlines and exports.',
     features: [
-      'Smart clause detection and summaries',
-      'Risk scoring and deviations',
-      'Playbook alignment and suggestions',
-      'Export to Word/PDF'
+      'Smart clause detection and summariesRisk scoring and deviations',
+      'Playbook alignment and suggestionsExport to Word/PDF'
     ],
     category: 'Legal & Compliance',
     link: '/ai-legal-contract-analyzer',
@@ -259,10 +231,8 @@ export const real2027Q3Additions = [
     period: '/month',
     description: 'High-quality SEO content in your brand voice with templates, approvals, and CMS integrations.',
     features: [
-      'Templates and brand voices',
-      'SEO scoring and suggestions',
-      'Collaboration and approvals',
-      'WordPress/Shopify integrations'
+      'Templates and brand voicesSEO scoring and suggestions',
+      'Collaboration and approvalsWordPress/Shopify integrations'
     ],
     category: 'Content & Marketing',
     link: '/ai-content-generator',
@@ -277,10 +247,8 @@ export const real2027Q3Additions = [
     period: '/month',
     description: 'Aggregate and analyze DMARC reports with actionable guidance to reach enforcement safely.',
     features: [
-      'Aggregate and forensic reports',
-      'Source identification and alignment',
-      'Policy simulation and enforcement guides',
-      'Alerts and exports'
+      'Aggregate and forensic reportsSource identification and alignment',
+      'Policy simulation and enforcement guidesAlerts and exports'
     ],
     category: 'Security & Identity',
     link: '/email-dmarc-analyzer',
@@ -295,14 +263,12 @@ export const real2027Q3Additions = [
     period: '/month',
     description: 'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.',
     features: [
-      'Discovery via traffic/specs',
-      'OWASP API Top 10 checks',
-      'PR annotations and CI gating',
-      'Change detection and drift alerts'
+      'Discovery via traffic/specsOWASP API Top 10 checks',
+      'PR annotations and CI gatingChange detection and drift alerts'
     ],
     category: 'Security & Identity',
     link: '/api-security-scanner',
     realService: true,
     roi: 'Prevent high-severity API incidents and cut MTTR.'
   }
-];
+],

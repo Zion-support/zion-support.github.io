@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
   Rocket, Shield, Cpu, Target, Microscope, Users,
@@ -10,14 +10,14 @@ import {
   TrendingUp, Target as TargetIcon, Users as UsersIcon,
   Briefcase as BriefcaseIcon, BookOpen as BookOpenIcon,
   MessageCircle as MessageCircleIcon, Star as StarIcon
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const mainNavigationRoutes = [
   { name: 'Home', href: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
@@ -28,7 +28,7 @@ const mainNavigationRoutes = [
   { name: 'Case Studies', href: '/case-studies', icon: Users, description: 'Success stories and implementations' },
   { name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and updates' },
   { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' }
-];
+],
 
 const serviceCategories = [
   {
@@ -85,7 +85,7 @@ const serviceCategories = [
       { name: 'Swarm Robotics', href: '/swarm-robotics-orchestration' }
     ]
   }
-];
+],
 
 const quickLinks = [
   { name: '2032 Services', href: '/2032-futuristic-services-showcase', icon: Star, description: 'Revolutionary 2032 services' },
@@ -96,7 +96,7 @@ const quickLinks = [
   { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', icon: Target, description: 'Ultimate service portfolio' },
   { name: 'News & Updates', href: '/news', icon: MessageCircle, description: 'Latest company news' },
   { name: 'Support', href: '/support', icon: Users, description: 'Technical support and help' }
-];
+],
 
 const companyInfo = [
   { name: 'About Us', href: '/about' },
@@ -105,7 +105,7 @@ const companyInfo = [
   { name: 'Partners', href: '/partners' },
   { name: 'Support', href: '/support' },
   { name: 'Status', href: '/status' }
-];
+],
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
@@ -114,7 +114,7 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
   { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
-];
+],
 
 const footerVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -126,12 +126,12 @@ const footerVariants = {
       staggerChildren: 0.1
     }
   }
-};
+},
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 }
-};
+},
 
 export default function UltraFuturisticFooter2032() {
   return (
@@ -346,5 +346,5 @@ export default function UltraFuturisticFooter2032() {
         </motion.button>
       </div>
     </footer>
-  );
+  ),
 }

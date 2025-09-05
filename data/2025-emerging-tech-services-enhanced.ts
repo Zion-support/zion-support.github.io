@@ -1,44 +1,44 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 
 export interface EmergingTechService2025 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string[],
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
@@ -51,16 +51,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     period: '/month',
     description: 'Advanced space mining platform that enables automated asteroid mining, resource extraction, and space resource management. Provides access to rare minerals and materials from space.',
     features: [
-      'Automated asteroid detection',
-      'Resource extraction algorithms',
-      'Space logistics management',
-      'Real-time monitoring systems',
-      'Resource processing automation',
-      'Safety and compliance protocols',
-      'Cost optimization algorithms',
-      'Performance analytics',
-      'Integration with space agencies',
-      'Global space network'
+      'Automated asteroid detectionResource extraction algorithms',
+      'Space logistics managementReal-time monitoring systems',
+      'Resource processing automationSafety and compliance protocols',
+      'Cost optimization algorithmsPerformance analytics',
+      'Integration with space agenciesGlobal space network'
     ],
     popular: true,
     icon: '🚀',
@@ -68,7 +63,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/space-mining-platform',
     marketPosition: 'First-to-market space mining platform. Competes with space agencies ($100M+ projects). Our advantage: Automated mining and cost-effective operations.',
-    targetAudience: ['Space agencies', 'Mining companies', 'Technology companies', 'Government agencies', 'Research institutions'],
+    targetAudience: ['Space agenciesMining companies', 'Technology companiesGovernment agencies', 'Research institutions'],
     trialDays: 30,
     setupTime: '2-4 weeks',
     category: 'Space Technology & Mining',
@@ -104,16 +99,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     period: '/month',
     description: 'Breakthrough quantum bio-computing platform that integrates quantum computing with biological systems for unprecedented computational power and biological insights.',
     features: [
-      'Quantum-biological hybrid processing',
-      'DNA computing integration',
-      'Biological algorithm optimization',
-      'Real-time bio-monitoring',
-      'Quantum bio-simulation',
-      'Performance analytics',
-      'Integration with lab systems',
-      'Research collaboration tools',
-      'Compliance and safety protocols',
-      'Global research network'
+      'Quantum-biological hybrid processingDNA computing integration',
+      'Biological algorithm optimizationReal-time bio-monitoring',
+      'Quantum bio-simulationPerformance analytics',
+      'Integration with lab systemsResearch collaboration tools',
+      'Compliance and safety protocolsGlobal research network'
     ],
     popular: true,
     icon: '🧬',
@@ -121,7 +111,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/quantum-bio-computing',
     marketPosition: 'First-to-market quantum bio-computing platform. Competes with quantum computing ($10,000/month), bio-computing ($5,000/month). Our advantage: Hybrid approach and biological integration.',
-    targetAudience: ['Research institutions', 'Biotechnology companies', 'Pharmaceutical companies', 'Universities', 'Government agencies'],
+    targetAudience: ['Research institutionsBiotechnology companies', 'Pharmaceutical companiesUniversities', 'Government agencies'],
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Quantum Biology & Computing',
@@ -157,16 +147,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     period: '/month',
     description: 'Advanced brain-computer interface platform that enables direct communication between the human brain and computers. Provides unprecedented control and interaction capabilities.',
     features: [
-      'Neural signal processing',
-      'Brain activity monitoring',
-      'Thought-to-action conversion',
-      'Real-time feedback systems',
-      'Multi-modal interface support',
-      'Safety and compliance protocols',
-      'Performance analytics',
-      'Integration with applications',
-      'Research collaboration tools',
-      '24/7 neural support'
+      'Neural signal processingBrain activity monitoring',
+      'Thought-to-action conversionReal-time feedback systems',
+      'Multi-modal interface supportSafety and compliance protocols',
+      'Performance analyticsIntegration with applications',
+      'Research collaboration tools24/7 neural support'
     ],
     popular: true,
     icon: '🧠',
@@ -174,7 +159,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/brain-computer-interface',
     marketPosition: 'Competes with Neuralink ($10,000+), Kernel ($50,000+). Our advantage: Advanced algorithms and 90% cost reduction.',
-    targetAudience: ['Research institutions', 'Medical centers', 'Gaming companies', 'VR/AR developers', 'Technology companies'],
+    targetAudience: ['Research institutionsMedical centers', 'Gaming companiesVR/AR developers', 'Technology companies'],
     trialDays: 14,
     setupTime: '2-4 weeks',
     category: 'Neural Interface & BCI',
@@ -210,16 +195,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     period: '/month',
     description: 'Advanced quantum energy platform that optimizes energy production, distribution, and consumption using quantum algorithms. Enables breakthrough energy efficiency and sustainability.',
     features: [
-      'Quantum energy optimization',
-      'Fusion power simulation',
-      'Grid optimization algorithms',
-      'Energy storage optimization',
-      'Real-time monitoring',
-      'Predictive analytics',
-      'Sustainability reporting',
-      'Cost optimization',
-      'Integration with power systems',
-      'Global energy network'
+      'Quantum energy optimizationFusion power simulation',
+      'Grid optimization algorithmsEnergy storage optimization',
+      'Real-time monitoringPredictive analytics',
+      'Sustainability reportingCost optimization',
+      'Integration with power systemsGlobal energy network'
     ],
     popular: true,
     icon: '⚡',
@@ -227,7 +207,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-energy-platform',
     marketPosition: 'Competes with energy consulting ($500/hour), energy management ($1,000/month). Our advantage: Quantum optimization and automated energy management.',
-    targetAudience: ['Energy companies', 'Utilities', 'Government agencies', 'Manufacturing companies', 'Technology companies'],
+    targetAudience: ['Energy companiesUtilities', 'Government agenciesManufacturing companies', 'Technology companies'],
     trialDays: 30,
     setupTime: '2-4 weeks',
     category: 'Quantum Energy & Sustainability',
@@ -263,16 +243,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     period: '/month',
     description: 'Comprehensive autonomous vehicle AI platform that provides advanced perception, decision-making, and control systems for self-driving vehicles. Ensures safety and reliability.',
     features: [
-      'Advanced perception systems',
-      'AI decision making',
-      'Real-time control algorithms',
-      'Safety monitoring',
-      'Performance optimization',
-      'Integration with vehicles',
-      'Compliance reporting',
-      'Analytics dashboard',
-      'Update and maintenance',
-      '24/7 support'
+      'Advanced perception systemsAI decision making',
+      'Real-time control algorithmsSafety monitoring',
+      'Performance optimizationIntegration with vehicles',
+      'Compliance reportingAnalytics dashboard',
+      'Update and maintenance24/7 support'
     ],
     popular: true,
     icon: '🚗',
@@ -280,7 +255,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai',
     marketPosition: 'Competes with Waymo ($50,000+), Tesla Autopilot ($10,000+). Our advantage: Advanced AI and affordable pricing.',
-    targetAudience: ['Automotive companies', 'Transportation companies', 'Logistics companies', 'Technology companies', 'Government agencies'],
+    targetAudience: ['Automotive companiesTransportation companies', 'Logistics companiesTechnology companies', 'Government agencies'],
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Autonomous Vehicles & AI',
@@ -316,16 +291,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     period: '/month',
     description: 'Revolutionary quantum materials discovery platform that accelerates the development of new materials using quantum computing and AI. Enables breakthrough discoveries in materials science.',
     features: [
-      'Quantum materials simulation',
-      'AI-powered discovery',
-      'Property prediction algorithms',
-      'Real-time analysis',
-      'Collaboration tools',
-      'Performance monitoring',
-      'Integration with lab systems',
-      'Compliance reporting',
-      'Research analytics',
-      'Global materials database'
+      'Quantum materials simulationAI-powered discovery',
+      'Property prediction algorithmsReal-time analysis',
+      'Collaboration toolsPerformance monitoring',
+      'Integration with lab systemsCompliance reporting',
+      'Research analyticsGlobal materials database'
     ],
     popular: true,
     icon: '🔬',
@@ -333,7 +303,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-materials-discovery',
     marketPosition: 'Competes with materials consulting ($300/hour), simulation tools ($2,000/month). Our advantage: Quantum simulation and AI discovery.',
-    targetAudience: ['Materials science companies', 'Research institutions', 'Universities', 'Manufacturing companies', 'Technology companies'],
+    targetAudience: ['Materials science companiesResearch institutions', 'UniversitiesManufacturing companies', 'Technology companies'],
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Quantum Materials & Science',
@@ -369,24 +339,19 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     period: '/month',
     description: 'Advanced quantum robotics platform that combines quantum computing with robotics for unprecedented performance, intelligence, and capabilities. Enables breakthrough robotic applications.',
     features: [
-      'Quantum-enhanced robotics',
-      'AI-powered control systems',
-      'Advanced perception',
-      'Real-time optimization',
-      'Safety protocols',
-      'Performance monitoring',
-      'Integration frameworks',
-      'Analytics dashboard',
-      'Update and maintenance',
-      '24/7 support'
+      'Quantum-enhanced roboticsAI-powered control systems',
+      'Advanced perceptionReal-time optimization',
+      'Safety protocolsPerformance monitoring',
+      'Integration frameworksAnalytics dashboard',
+      'Update and maintenance24/7 support'
     ],
     popular: true,
     icon: '🤖',
     color: 'from-gray-600 to-slate-700',
     textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/quantum-robotics',
-    marketPosition: 'Competes with robotics platforms ($5,000/month), AI robotics ($3,000/month). Our advantage: Quantum enhancement and superior performance.',
-    targetAudience: ['Manufacturing companies', 'Healthcare organizations', 'Research institutions', 'Technology companies', 'Government agencies'],
+    marketPosition: 'Competes with robotics platforms ($5,000/month), AI robotics ($3,000/month). Our advantage: Quantum enhancement and superior window.window.window.performance.',
+    targetAudience: ['Manufacturing companiesHealthcare organizations', 'Research institutionsTechnology companies', 'Government agencies'],
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Quantum Robotics & AI',
@@ -422,16 +387,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     period: '/month',
     description: 'Revolutionary quantum internet security platform that provides unbreakable encryption and security for internet communications. Ensures absolute security in the quantum era.',
     features: [
-      'Quantum encryption protocols',
-      'Unbreakable security',
-      'Real-time monitoring',
-      'Threat detection',
-      'Compliance reporting',
-      'Performance analytics',
-      'Integration APIs',
-      'Global security network',
-      '24/7 monitoring',
-      'Expert support'
+      'Quantum encryption protocolsUnbreakable security',
+      'Real-time monitoringThreat detection',
+      'Compliance reportingPerformance analytics',
+      'Integration APIsGlobal security network',
+      '24/7 monitoringExpert support'
     ],
     popular: true,
     icon: '🌐',
@@ -439,7 +399,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/quantum-internet-security',
     marketPosition: 'Competes with cybersecurity platforms ($500/month), encryption tools ($200/month). Our advantage: Quantum security and unbreakable encryption.',
-    targetAudience: ['Financial institutions', 'Government agencies', 'Healthcare organizations', 'Technology companies', 'Enterprise businesses'],
+    targetAudience: ['Financial institutionsGovernment agencies', 'Healthcare organizationsTechnology companies', 'Enterprise businesses'],
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'Quantum Internet & Security',
@@ -475,24 +435,19 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     period: '/month',
     description: 'Advanced quantum logistics platform that optimizes supply chains, routes, and logistics operations using quantum computing. Provides unprecedented efficiency and cost savings.',
     features: [
-      'Quantum route optimization',
-      'Supply chain optimization',
-      'Real-time tracking',
-      'Cost optimization',
-      'Performance analytics',
-      'Integration APIs',
-      'Compliance reporting',
-      'Global logistics network',
-      '24/7 monitoring',
-      'Expert support'
+      'Quantum route optimizationSupply chain optimization',
+      'Real-time trackingCost optimization',
+      'Performance analyticsIntegration APIs',
+      'Compliance reportingGlobal logistics network',
+      '24/7 monitoringExpert support'
     ],
     popular: true,
     icon: '🚚',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/quantum-logistics-optimization',
-    marketPosition: 'Competes with logistics platforms ($500/month), optimization tools ($300/month). Our advantage: Quantum optimization and superior performance.',
-    targetAudience: ['Logistics companies', 'Manufacturing companies', 'Retail businesses', 'E-commerce companies', 'Transportation companies'],
+    marketPosition: 'Competes with logistics platforms ($500/month), optimization tools ($300/month). Our advantage: Quantum optimization and superior window.window.window.performance.',
+    targetAudience: ['Logistics companiesManufacturing companies', 'Retail businessesE-commerce companies', 'Transportation companies'],
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'Quantum Logistics & Supply Chain',
@@ -528,16 +483,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     period: '/month',
     description: 'Comprehensive metaverse AI development platform that enables creation of intelligent, interactive, and immersive virtual worlds. Combines AI with metaverse technology for breakthrough experiences.',
     features: [
-      'AI-powered metaverse creation',
-      'Intelligent NPCs and avatars',
-      'Real-time interaction systems',
-      'Content generation',
-      'Performance optimization',
-      'Integration frameworks',
-      'Analytics dashboard',
-      'Multi-platform support',
-      'Developer tools',
-      '24/7 support'
+      'AI-powered metaverse creationIntelligent NPCs and avatars',
+      'Real-time interaction systemsContent generation',
+      'Performance optimizationIntegration frameworks',
+      'Analytics dashboardMulti-platform support',
+      'Developer tools24/7 support'
     ],
     popular: true,
     icon: '🌍',
@@ -545,7 +495,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/metaverse-ai-development',
     marketPosition: 'Competes with metaverse platforms ($200/month), AI development ($500/month). Our advantage: AI integration and comprehensive development tools.',
-    targetAudience: ['Gaming companies', 'VR/AR developers', 'Technology companies', 'Educational institutions', 'Entertainment companies'],
+    targetAudience: ['Gaming companiesVR/AR developers', 'Technology companiesEducational institutions', 'Entertainment companies'],
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'Metaverse & AI Development',
@@ -581,16 +531,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     period: '/month',
     description: 'Advanced quantum machine learning platform that combines quantum computing with classical ML algorithms to solve complex problems faster than classical computers.',
     features: [
-      'Quantum algorithms for ML',
-      'Hybrid quantum-classical training',
-      'Quantum feature mapping',
-      'Quantum neural networks',
-      'Performance benchmarking',
-      'Multi-qubit support',
-      'Cloud quantum access',
-      'Expert consultation',
-      'Custom algorithm development',
-      'Research collaboration'
+      'Quantum algorithms for MLHybrid quantum-classical training',
+      'Quantum feature mappingQuantum neural networks',
+      'Performance benchmarkingMulti-qubit support',
+      'Cloud quantum accessExpert consultation',
+      'Custom algorithm developmentResearch collaboration'
     ],
     popular: true,
     icon: '🧠',
@@ -598,7 +543,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-machine-learning-platform',
     marketPosition: 'Competes with IBM Quantum ($custom), Google Quantum AI ($custom). Our advantage: Hybrid quantum-classical approach and comprehensive ML tools.',
-    targetAudience: ['Research institutions', 'Pharmaceutical companies', 'Financial services', 'AI research labs', 'Quantum computing companies'],
+    targetAudience: ['Research institutionsPharmaceutical companies', 'Financial servicesAI research labs', 'Quantum computing companies'],
     trialDays: 60,
     setupTime: '4-6 weeks',
     category: 'Quantum Computing & AI',
@@ -634,16 +579,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     period: '/month',
     description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure for efficient, low-power AI processing.',
     features: [
-      'Spiking neural networks',
-      'Neuromorphic hardware support',
-      'Low-power AI processing',
-      'Real-time learning',
-      'Adaptive algorithms',
-      'Hardware acceleration',
-      'Performance optimization',
-      'Research tools',
-      'Custom network design',
-      'Expert consultation'
+      'Spiking neural networksNeuromorphic hardware support',
+      'Low-power AI processingReal-time learning',
+      'Adaptive algorithmsHardware acceleration',
+      'Performance optimizationResearch tools',
+      'Custom network designExpert consultation'
     ],
     popular: true,
     icon: '⚡',
@@ -651,7 +591,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/neuromorphic-computing-platform',
     marketPosition: 'Competes with Intel Loihi ($custom), BrainChip ($custom). Our advantage: Comprehensive software platform and hardware agnostic approach.',
-    targetAudience: ['AI research labs', 'Robotics companies', 'IoT device manufacturers', 'Edge computing companies', 'Research institutions'],
+    targetAudience: ['AI research labsRobotics companies', 'IoT device manufacturersEdge computing companies', 'Research institutions'],
     trialDays: 45,
     setupTime: '3-4 weeks',
     category: 'Neuromorphic Computing & AI',
@@ -687,16 +627,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     period: '/month',
     description: 'Advanced synthetic biology platform that provides tools for designing, simulating, and engineering biological systems for various applications.',
     features: [
-      'DNA sequence design',
-      'Biological circuit design',
-      'Simulation and modeling',
-      'Protocol automation',
-      'Strain engineering',
-      'Metabolic pathway design',
-      'Safety and compliance',
-      'Research collaboration',
-      'Custom design tools',
-      'Expert consultation'
+      'DNA sequence designBiological circuit design',
+      'Simulation and modelingProtocol automation',
+      'Strain engineeringMetabolic pathway design',
+      'Safety and complianceResearch collaboration',
+      'Custom design toolsExpert consultation'
     ],
     popular: true,
     icon: '🧬',
@@ -704,7 +639,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/synthetic-biology-platform',
     marketPosition: 'Competes with Benchling ($custom), SnapGene ($custom). Our advantage: Comprehensive design tools and automation capabilities.',
-    targetAudience: ['Biotechnology companies', 'Pharmaceutical companies', 'Research institutions', 'Agricultural companies', 'Biofuel companies'],
+    targetAudience: ['Biotechnology companiesPharmaceutical companies', 'Research institutionsAgricultural companies', 'Biofuel companies'],
     trialDays: 90,
     setupTime: '4-6 weeks',
     category: 'Synthetic Biology & Biotechnology',
@@ -740,16 +675,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     period: '/month',
     description: 'Revolutionary quantum metaverse platform that provides quantum-enhanced virtual experiences, improved graphics, and advanced AI interactions.',
     features: [
-      'Quantum-enhanced graphics',
-      'AI-powered interactions',
-      'Real-time quantum processing',
-      'Advanced physics simulation',
-      'Multi-user experiences',
-      'VR/AR integration',
-      'Performance optimization',
-      'Custom world creation',
-      'API for developers',
-      '24/7 quantum metaverse access'
+      'Quantum-enhanced graphicsAI-powered interactions',
+      'Real-time quantum processingAdvanced physics simulation',
+      'Multi-user experiencesVR/AR integration',
+      'Performance optimizationCustom world creation',
+      'API for developers24/7 quantum metaverse access'
     ],
     popular: true,
     icon: '🌌',
@@ -783,4 +713,4 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 11
   }
-];
+],

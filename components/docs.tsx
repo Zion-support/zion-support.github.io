@@ -1,7 +1,7 @@
-import Head from 'next/head';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
+import Head from 'next/head',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
 
 export default function DocsPage() {
   const contact = {
@@ -9,7 +9,7 @@ export default function DocsPage() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const sections = [
     {
@@ -32,13 +32,13 @@ export default function DocsPage() {
         { name: 'API Observability', href: '/api-observability' },
         { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
         { name: 'Status Pages & SLO', href: '/status-pages-slo' }]
-    }];
+    }],
 
   const external = [
     { name: 'OpenAI API pricing', url: 'https://openai.com/api/pricing' },
     { name: 'Anthropic pricing', url: 'https://www.anthropic.com/pricing' },
     { name: 'Pinecone pricing', url: 'https://www.pinecone.io/pricing/' },
-    { name: 'Snowflake pricing', url: 'https://www.snowflake.com/pricing/' }];
+    { name: 'Snowflake pricing', url: 'https://www.snowflake.com/pricing/' }],
 
   const quickLinks = [
     {
@@ -69,31 +69,31 @@ export default function DocsPage() {
       href: '/community',
       color: 'text-yellow-400'
     }
-  ];
+  ],
 
   const filteredDocs = documentationItems.filter(doc => {
     const matchesSearch = doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         doc.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || doc.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+                         doc.description.toLowerCase().includes(searchTerm.toLowerCase()),
+    const matchesCategory = selectedCategory === 'all' || doc.category === selectedCategory,
+    return matchesSearch && matchesCategory,
+  }),
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case 'Beginner': return 'bg-green-500/20 text-green-400';
-      case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
-      case 'Advanced': return 'bg-red-500/20 text-red-400';
-      default: return 'bg-gray-500/20 text-gray-400';
+      case 'Beginner': return 'bg-green-500/20 text-green-400',
+      case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400',
+      case 'Advanced': return 'bg-red-500/20 text-red-400',
+      default: return 'bg-gray-500/20 text-gray-400'
     }
-  };
+  },
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short',
       day: 'numeric'
-    });
-  };
+    }),
+  },
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -146,5 +146,5 @@ export default function DocsPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  ),
 }

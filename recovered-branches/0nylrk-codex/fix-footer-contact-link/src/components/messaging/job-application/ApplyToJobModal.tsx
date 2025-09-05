@@ -1,13 +1,13 @@
 
-import React from 'react';
+import React from 'react',
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
-  DialogTitle} from '@/components/ui/dialog';
-import { ApplyForm } from './ApplyForm';
-import { ApplyToJobModalProps } from './types';
+  DialogTitle} from '@/components/ui/dialog',
+import { ApplyForm } from './ApplyForm',
+import { ApplyToJobModalProps } from './types',
 
 export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess }: ApplyToJobModalProps) {
   return (
@@ -27,5 +27,5 @@ export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess }: ApplyT
         />
       </DialogContent>
     </Dialog>
-  );
+  ),
 }

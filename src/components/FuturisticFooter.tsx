@@ -1,37 +1,34 @@
-};
-  ];
-  const socialLinks = ['];
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },'';
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },'';
-    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }'];
-  ];
-  return (');
-    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">";
-</footer>";
-      <div className="absolute inset-0 opacity-30">";
-</div>";
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-slate-900/20"></div>"";
-        <div className="absolute top-20 left-10 w-4 h-4 bg-cyan-400 rounded-full opacity-60 animate-pulse"></div>"";
-        <div className="absolute top-40 right-20 w-3 h-3 bg-blue-400 rounded-full opacity-60 animate-pulse"></div>"";
-        <div className="absolute bottom-40 left-20 w-2 h-2 bg-purple-400 rounded-full opacity-60 animate-pulse"></div>";
-      </div>;
-";
-      <div className="relative">";
-</div>";
-        <div className="container mx-auto px-4 py-16">";
-</div>;
-          <motion.div,";
-            className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"";
-    };
+},
   ],
-
-,
+  const socialLinks = ['],
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },'',
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },'',
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }'],
+  ],
+  return ('),
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">",
+</footer>",
+      <div className="absolute inset-0 opacity-30">",
+</div>",
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-slate-900/20"></div>"",
+        <div className="absolute top-20 left-10 w-4 h-4 bg-cyan-400 rounded-full opacity-60 animate-pulse"></div>"",
+        <div className="absolute top-40 right-20 w-3 h-3 bg-blue-400 rounded-full opacity-60 animate-pulse"></div>"",
+        <div className="absolute bottom-40 left-20 w-2 h-2 bg-purple-400 rounded-full opacity-60 animate-pulse"></div>",
+      </div>,
+",
+      <div className="relative">",
+</div>",
+        <div className="container mx-auto px-4 py-16">",
+</div>,
+          <motion.div,",
+            className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16""
+    },
+  ],
   const socialLinks = ['],
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },'',
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },'',
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }']
   ],
-,
   return ('),
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">",
 </footer>",
@@ -49,19 +46,19 @@
 </div>,
           <motion.div,",
             className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"",
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }};
-            viewport={{ once: true }};
-            transition={{ duration: 0.6, staggerChildren: 0.1 }};
+            initial={{ opacity: 0, y: 20 }},
+            whileInView={{ opacity: 1, y: 0 }},
+            viewport={{ once: true }},
+            transition={{ duration: 0.6, staggerChildren: 0.1 }},
           >,
 </motion>,
               <motion.div,
                 key={stat.label}",
                 className="text-center"",
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }};
-                viewport={{ once: true }};
-                transition={{ duration: 0.6, delay: index * 0.1 }};
+                initial={{ opacity: 0, y: 20 }},
+                whileInView={{ opacity: 1, y: 0 }},
+                viewport={{ once: true }},
+                transition={{ duration: 0.6, delay: index * 0.1 }},
               >,
 </motion>",
                 <div className="flex justify-center mb-3">",
@@ -77,11 +74,10 @@
             <div className="lg: col-span-2">",
 </div>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }};
+                initial={{ opacity: 0, y: 20 }},
+                whileInView={{ opacity: 1, y: 0 }},
                 transition={{ duration: 0.6 }}",
-                className="flex items-center space-x-3 mb-6"",
-              >,
+                className="flex items-center space-x-3 mb-6"">,
 </motion>",
                 <div className="relative">",
 </div>",
@@ -139,10 +135,9 @@
 </ul>,
                     <li key={link.name}>,
 </li>,
-                      <Link,
+                      <Link
                         href={link.href}",
-                        className="flex items-center text-slate-400 hover: text-cyan-400 transition-colors duration-200 group"",
-                      >,
+                        className="flex items-center text-slate-400 hover: text-cyan-400 transition-colors duration-200 group"">,
 </Link>",
                         <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hover: bg-cyan-400 transition-colors duration-200"></div>"",
                         <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover: opacity-100 group-hover:translate-x-1 transition-all duration-200" />",
