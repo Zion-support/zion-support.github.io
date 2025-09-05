@@ -1,23 +1,23 @@
-// Performance optimizations
 const nextConfig = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
-  eslint: { 
-    ignoreDuringBuilds: false,
-    dirs: ['pages', 'src/components', 'src/lib', 'src/hooks']
-  },
-  typescript: { 
-    ignoreBuildErrors: true 
-  },
-  trailingSlash: true,
   output: 'export',
-  generateBuildId: async () => 'build-' + Date.now(),
-  // Include all page types
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'page.tsx'],
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  trailingSlash: true,
+  
+  // Performance optimizations
+  experimental: {
+    scrollRestoration: true,
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'framer-motion']
+  },
   
   // Image optimization
   images: {
+    unoptimized: true,
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -27,19 +27,8 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   
-  // Performance optimizations
-  experimental: {
-    optimizeCss: true,
-    scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-accordion'],
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
   },
   
   // Webpack optimizations
@@ -50,7 +39,7 @@ const nextConfig = {
         chunks: 'all',
         cacheGroups: {
           vendor: {
-            test: /[\\/]node_modules[\\/]/,
+            test: /[\/]node_modules[\/]/,
             name: 'vendors',
             chunks: 'all',
           },
@@ -63,60 +52,10 @@ const nextConfig = {
         },
       };
     }
-    
     return config;
   },
   
-  // Security headers
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'X-Frame-Options', value: 'DENY' },
-          { key: 'X-XSS-Protection', value: '1; mode=block' },
-          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
-          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
-          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' }
-        ]
-      },
-      {
-        source: '/static/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-      {
-        source: '/_next/static/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-    ];
-  },
-  
-  // Redirects for SEO
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      },
-    ];
-  },
-
-  // Generate sitemap
-  async rewrites() {
-    return [];
-  },
+  // Note: Headers, redirects, and rewrites are not supported with static export
 };
 
 export default nextConfig;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -500,24 +499,5 @@ export default function Layout({ title, description, children, keywords }: Layou
         </footer>
       </div>
     </>
-=======
-import React from 'react';
-import Navigation from './Navigation';
-import Footer from './Footer';
-
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-export default function Layout({ children }: LayoutProps) {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
-      <main className="flex-1">
-        {children}
-      </main>
-      <Footer />
-    </div>
->>>>>>> pr-11913
   );
 }
