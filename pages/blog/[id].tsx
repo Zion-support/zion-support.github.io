@@ -1,314 +1,310 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import Layout from '../../src/components/Layout';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Calendar, User, ArrowRight, Tag, Clock, Share2, BookOpen } from 'lucide-react';
+import { Calendar, User, ArrowLeft, Tag, Clock, Share2 } from 'lucide-react';
+import MainLayout from '../../components/layout/MainLayout';
 
-const BlogPost = () => {
+// Mock blog data - in a real app, this would come from a CMS or API
+const blogPosts = {
+  'ai-transformation-business': {
+    title: 'How AI is Transforming Business Operations in 2024',
+    content: `
+      <p>Artificial Intelligence has become the cornerstone of modern business transformation. In 2024, we're witnessing unprecedented changes in how organizations operate, compete, and deliver value to their customers.</p>
+      
+      <h2>The Current AI Landscape</h2>
+      <p>Today's AI technologies are more accessible and powerful than ever before. From machine learning algorithms to natural language processing, businesses are leveraging AI to:</p>
+      
+      <ul>
+        <li>Automate repetitive tasks and processes</li>
+        <li>Enhance customer experience through personalization</li>
+        <li>Improve decision-making with data-driven insights</li>
+        <li>Optimize supply chain and operations</li>
+        <li>Develop innovative products and services</li>
+      </ul>
+      
+      <h2>Key AI Technologies Driving Change</h2>
+      
+      <h3>Machine Learning and Predictive Analytics</h3>
+      <p>Machine learning algorithms are enabling businesses to predict customer behavior, optimize pricing strategies, and identify potential risks before they materialize. This predictive capability is revolutionizing industries from healthcare to finance.</p>
+      
+      <h3>Natural Language Processing (NLP)</h3>
+      <p>NLP technologies are transforming customer service through chatbots, virtual assistants, and automated content generation. These tools are making businesses more responsive and efficient in their customer interactions.</p>
+      
+      <h3>Computer Vision</h3>
+      <p>Computer vision is being used in quality control, inventory management, and security systems. Retailers are using it for cashier-less stores, while manufacturers are implementing it for defect detection.</p>
+      
+      <h2>Real-World Applications</h2>
+      
+      <h3>Healthcare</h3>
+      <p>AI is revolutionizing healthcare with diagnostic tools, drug discovery, and personalized treatment plans. Machine learning models can analyze medical images with accuracy that often exceeds human radiologists.</p>
+      
+      <h3>Finance</h3>
+      <p>Financial institutions are using AI for fraud detection, algorithmic trading, and credit scoring. These applications are making financial services more secure and accessible.</p>
+      
+      <h3>Manufacturing</h3>
+      <p>Smart factories are using AI for predictive maintenance, quality control, and supply chain optimization. This is leading to increased efficiency and reduced downtime.</p>
+      
+      <h2>Challenges and Considerations</h2>
+      
+      <p>While AI offers tremendous opportunities, businesses must also consider:</p>
+      
+      <ul>
+        <li>Data privacy and security concerns</li>
+        <li>Ethical implications of AI decisions</li>
+        <li>Need for skilled AI professionals</li>
+        <li>Integration with existing systems</li>
+        <li>Regulatory compliance requirements</li>
+      </ul>
+      
+      <h2>Getting Started with AI Implementation</h2>
+      
+      <p>For businesses looking to implement AI solutions:</p>
+      
+      <ol>
+        <li>Identify specific use cases where AI can add value</li>
+        <li>Ensure you have quality data to train AI models</li>
+        <li>Start with pilot projects to test and learn</li>
+        <li>Invest in training your team on AI technologies</li>
+        <li>Partner with experienced AI solution providers</li>
+      </ol>
+      
+      <h2>The Future of AI in Business</h2>
+      
+      <p>As we look ahead, AI will continue to evolve and become even more integrated into business operations. The companies that successfully adopt and adapt to these technologies will have a significant competitive advantage.</p>
+      
+      <p>At Zion Tech Group, we're committed to helping businesses navigate this AI transformation journey. Our team of experts can help you identify opportunities, develop strategies, and implement solutions that drive real business value.</p>
+    `,
+    author: 'Zion Tech Team',
+    date: '2024-01-15',
+    category: 'AI & Technology',
+    readTime: '5 min read',
+    featured: true
+  },
+  'micro-saas-trends': {
+    title: 'The Rise of Micro SaaS: Small Solutions, Big Impact',
+    content: `
+      <p>Micro SaaS applications are revolutionizing the software industry by offering focused, specialized solutions that address specific business needs. These small but powerful applications are changing how businesses approach software adoption and digital transformation.</p>
+      
+      <h2>What is Micro SaaS?</h2>
+      <p>Micro SaaS refers to small, focused software-as-a-service applications that solve specific problems for niche markets. Unlike traditional enterprise software, these applications are typically:</p>
+      
+      <ul>
+        <li>Built by small teams or individual developers</li>
+        <li>Focused on solving one specific problem well</li>
+        <li>Offered at lower price points</li>
+        <li>Quick to implement and use</li>
+        <li>Highly specialized for specific industries or use cases</li>
+      </ul>
+      
+      <h2>Why Micro SaaS is Gaining Traction</h2>
+      
+      <h3>Cost-Effectiveness</h3>
+      <p>Micro SaaS applications typically cost much less than enterprise solutions, making them accessible to small and medium-sized businesses that previously couldn't afford specialized software.</p>
+      
+      <h3>Ease of Implementation</h3>
+      <p>These applications are designed to be plug-and-play, requiring minimal setup and configuration. This reduces the time and resources needed for implementation.</p>
+      
+      <h3>Specialized Functionality</h3>
+      <p>By focusing on specific problems, micro SaaS applications often provide better functionality than general-purpose software for their target use cases.</p>
+      
+      <h2>Popular Micro SaaS Categories</h2>
+      
+      <h3>Marketing Tools</h3>
+      <p>Email marketing automation, social media scheduling, and lead generation tools are popular micro SaaS categories.</p>
+      
+      <h3>Productivity Tools</h3>
+      <p>Time tracking, project management, and collaboration tools help teams work more efficiently.</p>
+      
+      <h3>Analytics and Reporting</h3>
+      <p>Specialized analytics tools for specific platforms or industries provide insights that general analytics tools might miss.</p>
+      
+      <h2>Benefits for Businesses</h2>
+      
+      <p>Micro SaaS applications offer several advantages:</p>
+      
+      <ul>
+        <li>Lower total cost of ownership</li>
+        <li>Faster time to value</li>
+        <li>Better user experience</li>
+        <li>Regular updates and improvements</li>
+        <li>Direct access to developers for support</li>
+      </ul>
+      
+      <h2>Challenges and Considerations</h2>
+      
+      <p>While micro SaaS offers many benefits, businesses should consider:</p>
+      
+      <ul>
+        <li>Integration with existing systems</li>
+        <li>Data security and compliance</li>
+        <li>Vendor reliability and support</li>
+        <li>Scalability as the business grows</li>
+        <li>Managing multiple small subscriptions</li>
+      </ul>
+      
+      <h2>The Future of Micro SaaS</h2>
+      
+      <p>The micro SaaS trend is expected to continue growing as more developers and entrepreneurs recognize the opportunity to build focused solutions for specific markets. This trend is also being supported by:</p>
+      
+      <ul>
+        <li>Cloud infrastructure becoming more accessible</li>
+        <li>No-code and low-code development platforms</li>
+        <li>API-first development approaches</li>
+        <li>Growing demand for specialized solutions</li>
+      </ul>
+      
+      <p>At Zion Tech Group, we specialize in developing custom micro SaaS solutions that address specific business challenges. Our team can help you identify opportunities and build applications that provide real value to your customers.</p>
+    `,
+    author: 'Sarah Johnson',
+    date: '2024-01-10',
+    category: 'Micro SaaS',
+    readTime: '4 min read'
+  }
+};
+
+export default function BlogPost() {
   const router = useRouter();
   const { id } = router.query;
 
-  // Mock blog post data - in a real app, this would come from an API
-  const blogPost = {
-    id: 1,
-    title: "The Future of AI in Business: Trends and Predictions for 2025",
-    content: `
-      <p>Artificial Intelligence is no longer a futuristic concept—it's a present reality that's transforming how businesses operate, compete, and deliver value to customers. As we move through 2025, we're witnessing unprecedented advancements in AI technology that are reshaping entire industries.</p>
-      
-      <h2>The Current State of AI in Business</h2>
-      <p>Today's businesses are leveraging AI across multiple domains, from customer service automation to predictive analytics and process optimization. The integration of AI has become a critical differentiator for companies looking to maintain competitive advantage.</p>
-      
-      <h3>Key Areas of AI Implementation</h3>
-      <ul>
-        <li><strong>Customer Experience:</strong> AI-powered chatbots and virtual assistants are providing 24/7 customer support, while personalization engines deliver tailored experiences at scale.</li>
-        <li><strong>Operational Efficiency:</strong> Machine learning algorithms are optimizing supply chains, predicting maintenance needs, and automating routine tasks.</li>
-        <li><strong>Decision Making:</strong> Advanced analytics and AI-driven insights are enabling data-driven decision making across all business functions.</li>
-        <li><strong>Product Development:</strong> AI is accelerating innovation cycles and enabling the creation of more intelligent, adaptive products.</li>
-      </ul>
-      
-      <h2>Emerging Trends for 2025</h2>
-      <p>Several key trends are emerging that will define the AI landscape in 2025 and beyond:</p>
-      
-      <h3>1. Generative AI Goes Mainstream</h3>
-      <p>Generative AI technologies, including large language models and image generation tools, are becoming standard business tools. Companies are using these technologies for content creation, code generation, and creative problem-solving.</p>
-      
-      <h3>2. AI Ethics and Governance</h3>
-      <p>As AI becomes more pervasive, businesses are prioritizing ethical AI practices and governance frameworks. This includes ensuring fairness, transparency, and accountability in AI systems.</p>
-      
-      <h3>3. Edge AI and Real-time Processing</h3>
-      <p>The shift toward edge computing is enabling real-time AI processing, reducing latency and improving performance for applications that require immediate responses.</p>
-      
-      <h3>4. AI-Human Collaboration</h3>
-      <p>Rather than replacing human workers, AI is increasingly being designed to augment human capabilities, creating more effective human-AI collaborative workflows.</p>
-      
-      <h2>Industry-Specific Applications</h2>
-      <p>Different industries are adopting AI in unique ways that align with their specific challenges and opportunities:</p>
-      
-      <h3>Healthcare</h3>
-      <p>AI is revolutionizing healthcare through diagnostic imaging, drug discovery, personalized medicine, and predictive analytics for patient outcomes.</p>
-      
-      <h3>Financial Services</h3>
-      <p>Banks and financial institutions are using AI for fraud detection, algorithmic trading, credit scoring, and personalized financial advice.</p>
-      
-      <h3>Manufacturing</h3>
-      <p>Smart manufacturing powered by AI is optimizing production processes, predicting equipment failures, and enabling mass customization.</p>
-      
-      <h3>Retail and E-commerce</h3>
-      <p>AI is transforming retail through personalized recommendations, inventory optimization, dynamic pricing, and enhanced customer experiences.</p>
-      
-      <h2>Challenges and Considerations</h2>
-      <p>While the potential of AI is immense, businesses must navigate several challenges:</p>
-      
-      <ul>
-        <li><strong>Data Quality and Privacy:</strong> Ensuring high-quality data while maintaining privacy and security standards</li>
-        <li><strong>Skills Gap:</strong> Finding and developing talent with the necessary AI expertise</li>
-        <li><strong>Integration Complexity:</strong> Successfully integrating AI systems with existing business processes</li>
-        <li><strong>Regulatory Compliance:</strong> Keeping up with evolving AI regulations and standards</li>
-        <li><strong>ROI Measurement:</strong> Demonstrating clear return on investment for AI initiatives</li>
-      </ul>
-      
-      <h2>Future Predictions</h2>
-      <p>Looking ahead, we can expect to see:</p>
-      
-      <ul>
-        <li>More sophisticated AI models that can understand and generate multimodal content</li>
-        <li>Increased automation of complex business processes</li>
-        <li>Greater emphasis on explainable AI and transparency</li>
-        <li>New business models enabled by AI capabilities</li>
-        <li>Enhanced human-AI collaboration tools and interfaces</li>
-      </ul>
-      
-      <h2>Conclusion</h2>
-      <p>The future of AI in business is bright, but success requires careful planning, ethical consideration, and a commitment to continuous learning and adaptation. Companies that embrace AI thoughtfully and strategically will be best positioned to thrive in the digital economy.</p>
-      
-      <p>As we continue to explore the possibilities of AI, it's clear that the businesses that will succeed are those that view AI not as a replacement for human intelligence, but as a powerful tool for augmenting human capabilities and creating new opportunities for innovation and growth.</p>
-    `,
-    author: "Dr. Sarah Chen",
-    authorBio: "Dr. Sarah Chen is a leading AI researcher and consultant with over 15 years of experience in machine learning and artificial intelligence. She has worked with Fortune 500 companies to implement AI solutions and is a frequent speaker at international technology conferences.",
-    authorImage: "/api/placeholder/100/100",
-    date: "2025-01-15",
-    readTime: "8 min read",
-    category: "AI & Machine Learning",
-    tags: ["Artificial Intelligence", "Machine Learning", "Business Strategy", "Technology Trends", "Digital Transformation"],
-    featured: true
-  };
+  if (!id || typeof id !== 'string') {
+    return (
+      <MainLayout title="Blog Post Not Found">
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Post Not Found</h1>
+            <p className="text-gray-600 mb-8">The blog post you're looking for doesn't exist.</p>
+            <Link href="/blog" className="text-blue-600 hover:text-blue-700 font-semibold">
+              ← Back to Blog
+            </Link>
+          </div>
+        </div>
+      </MainLayout>
+    );
+  }
 
-  const relatedPosts = [
-    {
-      id: 2,
-      title: "Cybersecurity Best Practices for Remote Work Environments",
-      category: "Cybersecurity",
-      readTime: "6 min read",
-      date: "2025-01-12"
-    },
-    {
-      id: 3,
-      title: "Cloud Migration Strategies: A Complete Guide for Enterprises",
-      category: "Cloud Computing",
-      readTime: "10 min read",
-      date: "2025-01-10"
-    },
-    {
-      id: 4,
-      title: "Micro SaaS: Building Profitable Niche Software Solutions",
-      category: "SaaS Development",
-      readTime: "7 min read",
-      date: "2025-01-08"
-    }
-  ];
+  const post = blogPosts[id as keyof typeof blogPosts];
 
-  if (router.isFallback) {
-    return <div>Loading...</div>;
+  if (!post) {
+    return (
+      <MainLayout title="Blog Post Not Found">
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Post Not Found</h1>
+            <p className="text-gray-600 mb-8">The blog post you're looking for doesn't exist.</p>
+            <Link href="/blog" className="text-blue-600 hover:text-blue-700 font-semibold">
+              ← Back to Blog
+            </Link>
+          </div>
+        </div>
+      </MainLayout>
+    );
   }
 
   return (
-    <Layout 
-      title={`${blogPost.title} - Zion Tech Group Blog`}
-      description={blogPost.content.replace(/<[^>]*>/g, '').substring(0, 160)}
-      keywords={blogPost.tags.join(', ')}
+    <MainLayout
+      title={`${post.title} - Zion Tech Group Blog`}
+      description={post.content.replace(/<[^>]*>/g, '').substring(0, 160)}
+      keywords={`${post.category.toLowerCase()}, blog, zion tech group`}
     >
       <div className="min-h-screen bg-gray-50">
         {/* Article Header */}
-        <section className="bg-white py-16">
-          <div className="container mx-auto px-4">
+        <section className="bg-white border-b border-gray-200 py-12">
+          <div className="container mx-auto px-4 max-w-4xl">
             <motion.div
-              className="max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              {/* Breadcrumb */}
-              <nav className="mb-8">
-                <Link href="/blog" className="text-blue-600 hover:text-blue-700 font-medium">
-                  ← Back to Blog
-                </Link>
-              </nav>
-
-              {/* Category and Featured Badge */}
-              <div className="flex items-center space-x-4 mb-6">
-                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
-                  {blogPost.category}
-                </span>
-                {blogPost.featured && (
-                  <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">
-                    Featured
-                  </span>
-                )}
+              <Link
+                href="/blog"
+                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold mb-6"
+              >
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Back to Blog
+              </Link>
+              
+              <div className="flex items-center mb-4">
+                <Tag className="w-4 h-4 text-blue-600 mr-2" />
+                <span className="text-blue-600 font-semibold">{post.category}</span>
               </div>
-
-              {/* Title */}
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                {blogPost.title}
+              
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                {post.title}
               </h1>
-
-              {/* Meta Information */}
-              <div className="flex flex-wrap items-center space-x-6 text-gray-600 mb-8">
-                <div className="flex items-center space-x-2">
-                  <User className="w-5 h-5" />
-                  <span>{blogPost.author}</span>
+              
+              <div className="flex flex-wrap items-center justify-between mb-8">
+                <div className="flex items-center space-x-6 text-gray-600">
+                  <div className="flex items-center">
+                    <User className="w-4 h-4 mr-2" />
+                    <span>{post.author}</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    <span>{new Date(post.date).toLocaleDateString()}</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Clock className="w-4 h-4 mr-2" />
+                    <span>{post.readTime}</span>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <Calendar className="w-5 h-5" />
-                  <span>{new Date(blogPost.date).toLocaleDateString()}</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Clock className="w-5 h-5" />
-                  <span>{blogPost.readTime}</span>
-                </div>
-                <button className="flex items-center space-x-2 text-blue-600 hover:text-blue-700">
-                  <Share2 className="w-5 h-5" />
-                  <span>Share</span>
+                <button className="flex items-center text-gray-600 hover:text-blue-600 transition-colors">
+                  <Share2 className="w-4 h-4 mr-2" />
+                  Share
                 </button>
-              </div>
-
-              {/* Featured Image */}
-              <div className="w-full h-96 bg-gradient-to-br from-blue-400 to-purple-500 rounded-xl mb-8 flex items-center justify-center">
-                <span className="text-white text-2xl font-semibold">Featured Article Image</span>
               </div>
             </motion.div>
           </div>
         </section>
 
         {/* Article Content */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="prose prose-lg max-w-none">
-                <div dangerouslySetInnerHTML={{ __html: blogPost.content }} />
-              </div>
-
-              {/* Tags */}
-              <div className="mt-12 pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Tags</h3>
-                <div className="flex flex-wrap gap-2">
-                  {blogPost.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm hover:bg-gray-200 transition-colors duration-200"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Author Bio */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-xl p-8 shadow-lg">
-                <div className="flex items-start space-x-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-2xl font-bold">SC</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{blogPost.author}</h3>
-                    <p className="text-gray-600 leading-relaxed">{blogPost.authorBio}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Related Posts */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Related Articles</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {relatedPosts.map((post, index) => (
-                  <motion.article
-                    key={post.id}
-                    className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="flex items-center space-x-2 mb-3">
-                      <Tag className="w-4 h-4 text-blue-600" />
-                      <span className="text-blue-600 text-sm font-semibold">{post.category}</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">{post.title}</h3>
-                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                      <div className="flex items-center space-x-2">
-                        <Clock className="w-4 h-4" />
-                        <span>{post.readTime}</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <Calendar className="w-4 h-4" />
-                        <span>{new Date(post.date).toLocaleDateString()}</span>
-                      </div>
-                    </div>
-                    <Link
-                      href={`/blog/${post.id}`}
-                      className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200"
-                    >
-                      <span>Read More</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </motion.article>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Newsletter Signup */}
-        <section className="py-16 bg-blue-900 text-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="max-w-4xl mx-auto text-center"
+        <section className="py-12">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <motion.article
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl font-bold mb-4">Enjoyed This Article?</h2>
-              <p className="text-xl text-blue-200 mb-8">
-                Subscribe to our newsletter for more insights on AI, technology, and digital transformation
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
-                />
-                <button className="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg font-semibold transition-colors duration-200">
-                  Subscribe
-                </button>
-              </div>
-            </motion.div>
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="prose prose-lg max-w-none"
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
+          </div>
+        </section>
+
+        {/* Related Articles */}
+        <section className="bg-gray-100 py-16">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {Object.entries(blogPosts)
+                .filter(([key]) => key !== id)
+                .slice(0, 3)
+                .map(([key, relatedPost]) => (
+                  <Link
+                    key={key}
+                    href={`/blog/${key}`}
+                    className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                  >
+                    <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                      <div className="text-white text-center">
+                        <div className="text-4xl mb-2">📊</div>
+                        <p className="text-sm">{relatedPost.category}</p>
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                        {relatedPost.title}
+                      </h3>
+                      <div className="flex items-center justify-between text-sm text-gray-500">
+                        <span>{relatedPost.author}</span>
+                        <span>{relatedPost.readTime}</span>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+            </div>
           </div>
         </section>
       </div>
-    </Layout>
+    </MainLayout>
   );
-};
-
-export default BlogPost;
+}
