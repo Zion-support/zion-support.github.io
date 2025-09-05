@@ -77,8 +77,12 @@ const codeExamples = [{
 }
 })
 const data = await response.json()
+<<<<<<< HEAD
+`},
+=======
 `
   },
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
   {
     language: 'Python',
     title: 'Submit Contact Form',
@@ -95,6 +99,12 @@ data = {
     'company': 'Tech Corp'
 }
 response = requests.post(url, json=data, headers=headers)
+<<<<<<< HEAD
+print(response.json())
+`}
+]
+
+=======
 print(response.json())`
   },
   {
@@ -126,6 +136,7 @@ const sdkLibraries = [
     install: 'composer require ziontechgroup/sdk',
     documentation: '/docs/sdk/php'
   }]
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
 export default function APIDocumentationPage() {
   const [copiedCode, setCopiedCode] = useState<string | null>(null)
   const [searchQuery, setSearchQuery] = useState('')
