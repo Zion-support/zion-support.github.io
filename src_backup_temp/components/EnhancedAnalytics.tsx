@@ -1,5 +1,6 @@
 import React from 'react';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
+<<<<<<< HEAD
 export default function Page("props": "any) {;
 ;
   "performance": {;
@@ -22,6 +23,12 @@ export const EnhancedAnalytics: Reac t.FC<EnhancedAnalyticsProps> = ({
 export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
   enabled = true,: any;
   showDashboard = false,: any;
+=======
+export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
+  enabled = true,: any;
+  showDashboard = false,: any;
+=======
+>>>>>>> origin/main
 export const "EnhancedAnalytics": React.FC<EnhancedAnalyticsProps> = ({;
   enabled = true",: "any;
   showDashboard = false",: "any;
@@ -57,6 +64,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   const [userInteractions, setUserInteractions] = useState<any>(0);
   const [scrollDepth, setScrollDepth] = useState<any>(0);
   const [timeOnPage, setTimeOnPage] = useState<any>(0);
+<<<<<<< HEAD
 ;
   // Initialize analytics;
   useEffect(() => {;
@@ -64,6 +72,9 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   return () => {;
     // Cleanup function;
   "};
+=======
+
+>>>>>>> origin/main
   // Initialize analytics
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -72,15 +83,23 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   };
 }, []);, []);
     if(!enabled) return;
+<<<<<<< HEAD
 ';
     // Initialize Google Analytics(if tracking ID provided)';';
     if(trackingId && trackingId !== 'G-XXXXXXXXXX') {';
 ';';
       // Google Analytics 4 initialization'';';
+=======
+>>>>>>> origin/main
 ;
     // Initialize Google Analytics(if tracking ID provided);
     if(trackingId && trackingId !== 'G-XXXXXXXXXX') {;
       // Google Analytics 4 initialization';
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/main
     // Initialize Google Analytics(if tracking ID provided)
     if(trackingId && trackingId !== 'G-XXXXXXXXXX') {
       // Google Analytics 4 initialization'
@@ -89,6 +108,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       document.head.appendChild(script) ;
       window.dataLayer = window.dataLayer || [];
       function gtag("props": "any) {;
+<<<<<<< HEAD
       function gtag(props: any) {
         window.dataLayer.push(args);
       "}
@@ -137,6 +157,14 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           "previous_page": "currentPag e",;
           "time_on_previous_page": "timeOnPag e"});
 ;
+=======
+=======
+      function gtag(props: any) {
+
+        window.dataLayer.push(args);
+      "}
+      gtag('js', new Date());
+>>>>>>> origin/main
       gtag('config', trackingId, {
         page_title: documen t.title,
         page_location: windo w.location.href,
@@ -188,6 +216,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     );
     return : unknown {
       if(script) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
         document.head.removeChild(script)}
     }}, [enabled, trackingId]) ;
   // Track page changes
@@ -198,6 +230,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   };
 }, []);, []);
     if(!enabled) return;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
     const handleRouteChange = (...args: unknow n[]): unknown => {
       const newPage = window.location.pathname;      if(newPage !== currentPage) {
         // Track page view'
@@ -217,10 +253,15 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 ;
           time_on_previous_page: timeOnPag e}
     );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
         setCurrentPage(newPage) ;
         setTimeOnPage(0) ;
         setScrollDepth(0) ;
         setUserInteractions(0) }    };
+<<<<<<< HEAD
 ';
     // Listen for route changes(for SPA)';';
     window.addEventListener('popstate', handleRouteChange);';
@@ -232,10 +273,13 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       is_initial_page: tru e});
     return () => {';
 ';';
+=======
+>>>>>>> origin/main
 ;
     // Listen for route changes(for SPA);
     // Listen for route changes(for SPA)
     window.addEventListener('popstate', handleRouteChange);
+<<<<<<< HEAD
 ;
     // Track initial page';
     trackEvent('page_view', {;
@@ -244,6 +288,8 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       "is_initial_page": "tru e"});
 ;
     return () => {;
+=======
+>>>>>>> origin/main
       window.removeEventListener('popstate', handleRouteChange)}}, [enabled, currentPage, timeOnPage]) ;
   // Track user interactions;
   useEffect(() => {;
@@ -252,6 +298,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Cleanup function;
   "};
 }, []);, []);
+<<<<<<< HEAD
     if(!enabled) return;';
 ';';
       trackEvent('user_interaction', {';
@@ -260,11 +307,15 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 '';';
         interaction_type: 'click',
         page_path: currentPag e,
+=======
+=======
+>>>>>>> origin/main
     if(!enabled) return;
 ;
       trackEvent('user_interaction', {;
       setUserInteractions(prev => prev + 1);'      trackEvent('user_interaction', {;
 ';
+<<<<<<< HEAD
         interaction_type: 'click',;
         page_path: currentPag e,;
         timestamp: Dat e.now()})};
@@ -293,6 +344,9 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     }};';';
     // Set up event listeners'';';
     document.addEventListener('click', trackInteraction);';';
+=======
+=======
+>>>>>>> origin/main
         "interaction_type": 'click',;
         "page_path": "currentPag e",;
         "timestamp": "Dat e.now()"})};
@@ -312,6 +366,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             "milestone": "7 5",;
             "page_path": "currentPag e"})} else if(scrollPercent >= 90 && scrollDepth < 90) {;
           trackEvent('scroll_milestone', {;
+<<<<<<< HEAD
             milestone: 9 0,;
             page_path: currentPag e})}
       }
@@ -325,6 +380,8 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     return () => {';
 ';';
       document.removeEventListener('click', trackInteraction);';';
+=======
+>>>>>>> origin/main
 ;
     return () => {;
       document.removeEventListener('click', trackInteraction);
@@ -339,6 +396,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Cleanup function;
   };
 }, []);, []);
+<<<<<<< HEAD
     if(!enabled) return;';
 ';';
         trackEvent('performance_metrics', {
@@ -352,6 +410,9 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       trackPerformance()} else {';
 ';';
       window.addEventListener('load', trackPerformance);';';
+=======
+=======
+>>>>>>> origin/main
             "milestone": "9 0",;
             "page_path": "currentPag e"})}
     // Track initial page'
@@ -405,6 +466,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       if(sessionRef.current) {
         clearInterval(sessionRef.current)}
     }}, [enabled, currentPage, scrollDepth]) ;
+<<<<<<< HEAD
   // Track performance metrics;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
@@ -424,6 +486,8 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     if(document.readyState === 'complete') {;
       trackPerformance()} else {;
       window.addEventListener('load', trackPerformance);
+=======
+>>>>>>> origin/main
       return () => window.removeEventListener('load', trackPerformance)}
   }, [enabled, currentPage]) ;
   // Track session end;
@@ -448,8 +512,11 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Cleanup function
   };
 }, []);, []);
+<<<<<<< HEAD
     if(!enabled) return;';
 ';';
+=======
+>>>>>>> origin/main
     if(!enabled) return;
         trackEvent('performance_metrics', {
           load_time: loadTim e,
@@ -470,16 +537,25 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   };
 }, []);, []);
     if(!enabled) return;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
       trackEvent('session_end', {
         session_duration: sessionDuratio n,
         pages_viewed: 1, // Simplified
         total_interactions: userInteraction s,
         average_time_on_page: timeOnPag e})};
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
     window.addEventListener('beforeunload', handleBeforeUnload);
     return () => window.removeEventListener('beforeunload', handleBeforeUnload)}, [enabled, sessionStart, userInteractions, timeOnPage]);
   // Track event function
       // Google Analytics 4
       if(window.gtag) {
+<<<<<<< HEAD
       // Custom analytics tracking
       // Send to analytics endpoint(if configured)
       if(process.env.REACT_APP_ANALYTICS_ENDPOINT) {
@@ -487,6 +563,9 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 ';';
           method: 'POST',';';
           headers: { 'Content-Type': 'application/json' },
+=======
+
+>>>>>>> origin/main
     if(!enabled) return;
 ;
       trackEvent('session_end', {;
@@ -501,6 +580,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   // Track event function;
       // Google Analytics 4;
       if(window.gtag) {;
+<<<<<<< HEAD
         window.gtag('event', eventName, parameters)}
 ;
       // Custom analytics tracking;
@@ -510,6 +590,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           method: 'POST',;
           headers: { 'Content-Type': 'application/json' },;
           body: JSO N.stringify(eventData)}).catch(console.error)}
+=======
+=======
+        window.gtag('event', eventName, parameters)}
+>>>>>>> origin/main
           "method": 'POST',;
           "headers": "{ 'Content-Type': 'application/json' "},;
           "body": "JSO N.stringify(eventData)"}).catch(console.error)}
@@ -517,6 +601,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       // Store locally for dashboard;
       setAnalyticsData(prev => {;
         if (!prev) return null;
+<<<<<<< HEAD
         return {
 ';
           ...prev,';';
@@ -525,6 +610,8 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             ...prev.userEngagement,
             scrollDepth: Mat h.max(prev.userEngagement.scrollDepth, scrollDepth),
             timeOnPage: Mat h.max(prev.userEngagement.timeOnPage, timeOnPage),
+=======
+>>>>>>> origin/main
 ;
         return {;
           ...prev,;
@@ -662,12 +749,17 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             fcp: 80 0,;
             lcp: 150 0,;
             fid: 5 0,;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
             cls: 0.05}}})}
   }, [showDashboard, scrollDepth, timeOnPage, userInteractions]) ;
   if(!enabled) return null;
   return ()
     <>
       {/* Analytics Toggle Button */}
+<<<<<<< HEAD
       {showDashboard && (<motion.button;
           initial={{ "opacity": "0", "scale": "0.8 "}}
           animate={{ "opacity": "1", "scale": "1 "}}
@@ -859,6 +951,8 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                         {page.views"}
                       </span>;
                     </div>;
+=======
+>>>>>>> origin/main
       {showDashboard && (<motion.button
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -1121,8 +1215,11 @@ export default EnhancedAnalytics;
 </motion>
 </any>
 </any>
+<<<<<<< HEAD
 </AnalyticsData>';
 </EnhancedAnalyticsProps>;';;';
+=======
+>>>>>>> origin/main
       </AnimatePresence>;
     </>) };
 export default EnhancedAnalytics;
@@ -1137,9 +1234,17 @@ export default EnhancedAnalytics;
 </any>;
 </AnalyticsData>;
 </EnhancedAnalyticsProps>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
 </any>
 </any>
 </any>
 </any>
 </AnalyticsData>
+<<<<<<< HEAD
 </EnhancedAnalyticsProps>
+=======
+</EnhancedAnalyticsProps>
+>>>>>>> origin/main

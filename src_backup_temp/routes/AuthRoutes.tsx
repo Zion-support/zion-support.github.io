@@ -20,6 +20,7 @@ const Onboarding = lazy(() => import('../pages/Onboarding'));',';';
 const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'));',';';
     ';';';
 const ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'));
+<<<<<<< HEAD
 const "AuthRoutes": "React.FC = () => {;
   return (<Suspense fallback={<LoadingSpinner  />"}>;
       <Routes>;
@@ -47,6 +48,8 @@ const "AuthRoutes": "React.FC = () => {;
         } />;
       </Routes>;
     </Suspense>;
+=======
+>>>>>>> origin/main
 const AuthRoutes: React.FC = () => {
   return (<Suspense fallback={<LoadingSpinner  />}>
       <Routes>
@@ -76,15 +79,27 @@ const AuthRoutes: React.FC = () => {
     </Suspense>
   );
 };
+<<<<<<< HEAD
 ;
 export default AuthRoutes;
 </Route>';
 </Route>;';;';
+=======
+>>>>>>> origin/main
 ;
 </Route>;
 </Route>;
 </Route>;
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/main
 export default AuthRoutes;
 </Route>
 </Route>
+<<<<<<< HEAD
 </Route>
+=======
+</Route>
+>>>>>>> origin/main

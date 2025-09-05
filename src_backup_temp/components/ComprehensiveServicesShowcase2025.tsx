@@ -7,11 +7,18 @@ export default function Page("props": "any) {;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+<<<<<<< HEAD
     ;
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}) ;
 ;
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}
     );
+=======
+    
+    return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}
+    );
+
+>>>>>>> origin/main
     switch(sortBy) {;
       case 'price': ";
         return a.price - b.price;      case 'name':;
@@ -31,6 +38,7 @@ export default function Page("props": "any) {;
         return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
                (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);      case 'category': ";
         return a.category.localeCompare(b.category) ;
+<<<<<<< HEAD
       "default":;
         return 0"}) ;
 ;
@@ -40,6 +48,8 @@ export default function Page("props": "any) {;
       "transition": "{;
         "staggerChildren": 0.1;
       "};
+=======
+>>>>>>> origin/main
       default:;
         return 0}
     );
@@ -186,6 +196,7 @@ export default function Page("props": "any) {;
                     <div className="flex items-start justify-between mb-4">";
                       <div className="flex items-center gap-3">;
                         {getCategoryIcon(service.category)}
+<<<<<<< HEAD
                         <div>";
                           <h3 className="text-lg font-semibold text-white group-"hover": "tex t-zion-cyan transition-colors">;
                             {service.title"}
@@ -193,6 +204,8 @@ export default function Page("props": "any) {;
                           <p className="text-sm text-zion-slate-400">{service.category}</p>;
                         </div>;
                       </div>;
+=======
+>>>>>>> origin/main
                         <div>"
                           <h3 className="text-lg font-semibold text-white group-hover: tex t-zion-cyan transition-colors">
                             {service.title}
@@ -238,6 +251,7 @@ export default function Page("props": "any) {;
                       Learn More";
                       <ArrowRight className="w-4 h-4"   />                    </button>;
                   </>) : (;
+<<<<<<< HEAD
                   // List View;
                   <>";
                     <div className="flex-1">";
@@ -251,6 +265,8 @@ export default function Page("props": "any) {;
                             <p className="text-zion-slate-400">{service.category}</p>;
                           </div>;
                         </div>;
+=======
+>>>>>>> origin/main
                   // List View
                   <>"
                     <div className="flex-1">"
@@ -294,6 +310,7 @@ export default function Page("props": "any) {;
               </motion.div>) ) }
           </motion.div>;
           {/* No Results */}
+<<<<<<< HEAD
           {filteredServices.length === 0 && (<motion.div;
               initial={{ "opacity": "0 "}}
               animate={{ "opacity": "1 "}}";
@@ -304,6 +321,8 @@ export default function Page("props": "any) {;
               <p className="text-zion-slate-400 mb-6">;
                 Try adjusting your search criteria or filters;
               </p>;
+=======
+>>>>>>> origin/main
           {filteredServices.length === 0 && (<motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}"
@@ -397,6 +416,7 @@ export default function Page("props": "any) {;
                     <div className="text-zion-slate-400">ROI</div>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
                 {/* Features and Benefits */}";
                 <div className="grid grid-cols-1 "md": "gri d-cols-2 gap-8 mb-8">;
                   <div>";
@@ -419,6 +439,9 @@ export default function Page("props": "any) {;
                       {selectedService.benefits.map((benefit, index) => (";
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">";
                           <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mt-2 flex-shrink-0"  />;
+=======
+
+>>>>>>> origin/main
                 {/* Features and Benefits */}"
                 <div className="grid grid-cols-1 md: gri d-cols-2 gap-8 mb-8">
                   <div>"
@@ -446,6 +469,7 @@ export default function Page("props": "any) {;
                     </ul>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
                 {/* Use Cases and Target Audience */}";
                 <div className="grid grid-cols-1 "md": "gri d-cols-2 gap-8 mb-8">;
                   <div>";
@@ -468,6 +492,9 @@ export default function Page("props": "any) {;
                       {selectedService.targetAudience.map((audience, index) => (";
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">";
                           <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mt-2 flex-shrink-0"  />;
+=======
+
+>>>>>>> origin/main
                 {/* Use Cases and Target Audience */}"
                 <div className="grid grid-cols-1 md: gri d-cols-2 gap-8 mb-8">
                   <div>"
@@ -496,6 +523,7 @@ export default function Page("props": "any) {;
                   </div>;
                 </div>;
                 {/* Technical Specs */}
+<<<<<<< HEAD
                 {selectedService.technicalSpecs && (";
                   <div className="mb-8">";
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">";
@@ -507,6 +535,8 @@ export default function Page("props": "any) {;
                         <div className="flex flex-wrap gap-2">;
                           {selectedService.technicalSpecs.technology.map((tech", index) => (";
                             <span key={index} className="px-3 py-1 bg-zion-slate-800 text-zion-cyan text-sm rounded-lg">;
+=======
+>>>>>>> origin/main
                 {selectedService.technicalSpecs && ("
                   <div className="mb-8">"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"

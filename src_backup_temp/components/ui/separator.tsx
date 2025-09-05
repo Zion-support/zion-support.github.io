@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import * as SeparatorPrimitive from "@radix-ui/react-separator";
 import { cn  } from "../../utils/cn";
@@ -19,6 +20,8 @@ const Separator = React.forwardRef<;
         orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",;
   className;
       );
+=======
+>>>>>>> origin/main
 ;
 ;
 ;
@@ -30,6 +33,7 @@ const Separator = React.forwardRef<;
 Separator.displayName = SeparatorPrimitive.Root.displayName;
 ;
 export { Separator };
+<<<<<<< HEAD
 </SeparatorPrimitive>
 </typeof>';
 </typeof>;';;';
@@ -39,3 +43,12 @@ export { Separator }
 </typeof>
 export { Separator }
 export { Separator }
+=======
+export { Separator }
+=======
+</SeparatorPrimitive>;
+</typeof>;
+</typeof>
+=======
+export { Separator }
+>>>>>>> origin/main

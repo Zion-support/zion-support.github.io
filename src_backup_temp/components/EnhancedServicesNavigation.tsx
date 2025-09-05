@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const Component = ("props": "any) => {;
 import React from "react";
 """;","});,"})";
@@ -325,6 +326,8 @@ export { EnhancedServicesNavigation };,"});,"})";
 export { EnhancedServicesNavigation };,"});,"})";
 ;,"});,"})";
 export { EnhancedServicesNavigation };,"});,"});
+=======
+>>>>>>> origin/main
 const Component = (props: any) => {
 import React from "react"
 """;,"}

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/data/microSaasServicesData.ts
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
 export interface MicroSaasService {;
   "id": "string;
   "title": string;
@@ -2948,5 +2954,12 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     marketSize: &quot;$5.9 billion by 2025&quot;
     competitors: ["BambooHR", "Workday", "ADP", "Zenefits", "Gusto"],
     marketSize: "$5.9 billion by 2025"
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main:src_backup_temp/data/microSaasServicesData.ts
+>>>>>>> main
+>>>>>>> main
+>>>>>>> origin/main
   }
 ];

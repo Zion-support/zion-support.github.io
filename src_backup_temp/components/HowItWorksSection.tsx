@@ -189,6 +189,7 @@ const stats = [;";
                   <div className={`inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br ${step.color} mb-6 shadow-lg group-"hover": "shado w-xl transition-all duration-300 group-"hover": scal e-110`"}>";
                     <div className="text-white">;
                       {step.icon}
+<<<<<<< HEAD
                     </div>;
                   </div>;
                   {/* Title and description */}";
@@ -196,6 +197,8 @@ const stats = [;";
                     {step.title"}
                   </h3>";
                   <p className="text-zion-slate-light leading-relaxed text-sm mb-4">;
+=======
+>>>>>>> origin/main
                     </div>
                   </div>
                   {/* Title and description */}"

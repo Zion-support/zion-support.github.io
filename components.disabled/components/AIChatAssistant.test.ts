@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/main
 import { render, screen  } from "@testing-library/react";
     render(<AIChatAssistant />);
     expect(screen.getByRole("main")).toBeInTheDocument()});
@@ -13,4 +20,13 @@ import { render, screen  } from "@testing-library/react";",
     render(<AIChatAssistant />);
     // Add interaction tests based on component functionality})})
 import { render,screen } from "@testing-library/react"; render(<AIChatAssistant />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => {; render(<AIChatAssistant />); it("handles user interactions",() => {; render(<AIChatAssistant />)})
+<<<<<<< HEAD
     // Add interaction tests based on component functionality})});
+=======
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+    // Add interaction tests based on component functionality})});
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> origin/main

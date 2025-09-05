@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 '';,"}
     );,"})';';
 ';';';
@@ -14,3 +15,7 @@ import React from 'react';';';
 &apos;";";
 import _React from "react";";
 ';";';';';
+=======
+>>>>>>> main
+>>>>>>> main
+>>>>>>> origin/main

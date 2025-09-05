@@ -1,18 +1,26 @@
+<<<<<<< HEAD
 ;export function ITServiceRequestHero(...args[]): "{;
   const [location", setLocation] = useState<any>("");
   const [isSubmitting, setIsSubmitting] = useState<any>(false);
 ;
   const handleSubmit = async "e": "React.FormEvent {;    e.preventDefault();
     if(location.trim()) {;
+=======
+>>>>>>> origin/main
 ;export function ITServiceRequestHero(...args[]):  {
   const [location, setLocation] = useState<any>("");
   const [isSubmitting, setIsSubmitting] = useState<any>(false);
   const handleSubmit = async e: React.FormEvent {;    e.preventDefault();
     if(location.trim()) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
       setIsSubmitting(true);
       // Simulate API call
       setTimeout(: unknown {
         setIsSubmitting(false);
+<<<<<<< HEAD
         router(`/it-onsite-services?location = ${encodeURIComponent(location)"}`)}, 1000)}}}}}}}}}};
 ;
   const containerVariants = {;
@@ -49,6 +57,12 @@ import { motion  } from 'framer-motion';';';
 ;
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
+=======
+;
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+=======
+>>>>>>> origin/main
   const features = [{ "icon": "Cloc k", "text": "24/7 Availability", "color": "text-zion-cyan" },;
     { "icon": "Glob e", "text": "Global Coverage", "color": "text-zion-purple" },;
     { "icon": "Shiel d", "text": "Certified Technicians", "color": "text-zion-cyan-light" }, { "icon": "Za p", "text": "Fast Response", "color": "text-zion-purple-light" };
@@ -83,6 +97,7 @@ import { motion  } from 'framer-motion';
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 import { Link  } from 'react-router-dom';
+<<<<<<< HEAD
 ;
 ,";
     { "icon": "Glob e", "text": "Global Coverage", "color": "text-zion-purple" },";
@@ -162,6 +177,9 @@ export function ITServiceRequestHero("props": "any) {;
             initial = {
   { opacity: 0,
   x: 3 0
+=======
+=======
+>>>>>>> origin/main
         viewport={{ "once": "tru e "}}
 ";
         <div className="grid grid-cols-1 "lg": "gri d-cols-2 gap-16 items-center">;
@@ -219,9 +237,12 @@ export function ITServiceRequestHero("props": "any) {;
           </motion.div>;
           <motion.div;
             initial = {;
+<<<<<<< HEAD
   { opacity: 0,;
   x: 3 0;
 }}
+=======
+>>>>>>> origin/main
   { "opacity": 0",;
   "x": "3 0;
 "}}
@@ -419,16 +440,22 @@ export function ITServiceRequestHero(props: any) {
           </motion.div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </section>;';
   )}';';
+=======
+>>>>>>> origin/main
     </section>;
   )}
 '"`
 </motion>
 </Button>
 </motion>
+<<<<<<< HEAD
 </any>';
 </any>;';;';
+=======
+>>>>>>> origin/main
     </section>;
   )}
 '"`;
@@ -438,6 +465,13 @@ export function ITServiceRequestHero(props: any) {
 </motion>;
 </any>;
 </any>;
+<<<<<<< HEAD
 </motion>
 </any>
 </any>
+=======
+=======
+</motion>
+</any>
+</any>
+>>>>>>> origin/main

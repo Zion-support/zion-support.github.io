@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 :src/pages/Contact.tsx
 import { 
   Mail, 
@@ -11,11 +12,15 @@ import {
   MessageCircle
 } from 'lucide-react';
 export function Contact() {
+=======
+
+>>>>>>> origin/main
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
+<<<<<<< HEAD
 :src/pages/Contact.tsx
     phone: '',
     service: '',
@@ -23,6 +28,8 @@ export default function Contact() {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+=======
+>>>>>>> origin/main
     message: ''
   });
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -33,6 +40,7 @@ export default function Contact() {
   };
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+<<<<<<< HEAD
 :src/pages/Contact.tsx
     // Handle form submission here
     setIsSubmitted(true);
@@ -311,6 +319,8 @@ export default function Contact() {
           </div>
         </div>
       </section>
+=======
+>>>>>>> origin/main
     // Handle form submission
   };
   return (

@@ -1,6 +1,7 @@
 module.exports = {
   apps: [
     {
+<<<<<<< HEAD
       name: 'auto-fix',
       script: 'scripts/pm2/auto-fix.js',
       instances: 1,
@@ -31,6 +32,8 @@ module.exports = {
     {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.js',
+=======
+>>>>>>> origin/main
       name: 'bolt-zion-app',
       script: 'npm',
       args: 'run start',
@@ -40,6 +43,7 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
+<<<<<<< HEAD
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
@@ -52,6 +56,8 @@ module.exports = {
     {
       name: 'auto-commit-fixes',
       script: 'scripts/pm2/auto-commit-fixes.js',
+=======
+>>>>>>> origin/main
         NODE_ENV: 'production',
       },
       log_file: 'logs/pm2/preview.log',
@@ -92,6 +98,7 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
+<<<<<<< HEAD
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'auto-commit-fixes',
         COMMIT_FREQUENCY: 'hourly',
@@ -104,6 +111,9 @@ module.exports = {
     {
       name: 'dependency-monitor',
       script: 'scripts/pm2/dependency-monitor.js',
+=======
+        NODE_ENV: 'production',
+>>>>>>> origin/main
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
@@ -112,6 +122,7 @@ module.exports = {
       log_file: 'logs/pm2/code-quality-monitor.log',
       error_file: 'logs/pm2/code-quality-monitor-error.log',
       out_file: 'logs/pm2/code-quality-monitor-out.log',
+<<<<<<< HEAD
     },
     {
       name: 'auto-commit-fixes',
@@ -529,4 +540,8 @@ module.exports = {}
       "error_file": 'logs/pm2/type-checker-error.log',
       "out_file": 'logs/pm2/type-checker-out.log'};
   ];
+=======
+    }
+  ]
+>>>>>>> origin/main
 };

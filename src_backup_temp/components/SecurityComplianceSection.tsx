@@ -62,6 +62,7 @@ function SecurityComplianceSection("props": "any) {];
               transition = {;
   { "duration": "0.6",;
   "delay": "inde x * 0.1;
+<<<<<<< HEAD
 "}}
             >";
               <div className="flex items-start gap-4">;
@@ -79,6 +80,9 @@ function SecurityComplianceSection("props": "any) {];
                   </div>;
                 </div>;
               </div>;
+=======
+
+>>>>>>> origin/main
 }}
               viewport={{ once: tru e }}
               transition = {
@@ -117,15 +121,24 @@ function SecurityComplianceSection("props": "any) {];
           transition = {;
   { "duration": "0.6",;
   "delay": "0.4;
+<<<<<<< HEAD
 "}}
         >";
           <h3 className="text-3xl font-bold text-white text-center mb-8">;
             Comprehensive Security Features;
           </h3>;
+=======
+
+>>>>>>> origin/main
 }}
         >"
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Comprehensive Security Features
+<<<<<<< HEAD
+=======
+          
+
+>>>>>>> origin/main
           <div className="grid grid - cols - 1 "md": "gri d - cols - 3 gap-8">;
             {complianceFeatures.map((category", index) => (<div key={category.category} className="bg-slate - 800 border border-slate - 700 rounded-xl p -6">;
                 <h4 className="text-xl font - bold text-white mb-4 text-center">                  {category.category}
@@ -155,6 +168,7 @@ function SecurityComplianceSection("props": "any) {];
           transition = {;
   { "duration": "0.6",;
   "delay": "0.6;
+<<<<<<< HEAD
 "}}
         >";
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">";
@@ -165,6 +179,9 @@ function SecurityComplianceSection("props": "any) {];
             <div className="grid grid-cols-1 "md": "gri d-cols-4 gap-6">;";
               <div className="text-center">;";
                 <div className="text-4xl font-bold text-blue-400 mb-2">99.99%</div>;";
+=======
+
+>>>>>>> origin/main
 }}
         >"
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">"
@@ -205,6 +222,7 @@ function SecurityComplianceSection("props": "any) {];
           transition = {;
   { "duration": "0.6",;
   "delay": "0.8;
+<<<<<<< HEAD
 "}}
         >";
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">";
@@ -224,6 +242,9 @@ function SecurityComplianceSection("props": "any) {];
             </div>;
           </div>;
         </motion.div>;
+=======
+
+>>>>>>> origin/main
 }}
         >"
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">"

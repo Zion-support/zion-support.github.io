@@ -83,6 +83,7 @@ export function ClientSuccessStoriesSection("props": any) {;
                 <div>";
                   <h3 className="text-xl font-bold text-gray-900">;
                     {testimonial.name}
+<<<<<<< HEAD
                   </h3>";
                   <p className="text-gray-600">{testimonial.role}</p>";
                   <p className="text-blue-600 font-medium">{testimonial.comp}</p>;
@@ -91,6 +92,8 @@ export function ClientSuccessStoriesSection("props": any) {;
                   <div className="flex items-center gap-1">;
                     {[...Array(story.rating)].map((_, i) => (";
                       <span key={i} className="text-yellow-400 text-sm">★</span>;
+=======
+>>>>>>> origin/main
                   "
                   <p className="text-gray-600">{testimonial.role}</p>"
                   <p className="text-blue-600 font-medium">{testimonial.comp}</p>
@@ -106,7 +109,12 @@ export function ClientSuccessStoriesSection("props": any) {;
               <div className="p -6">;
                 <h3 className="text-xl font - bold text-white mb-2">;
                   {story.client}
+<<<<<<< HEAD
                 </h3>;
+=======
+                
+
+>>>>>>> origin/main
                 <div className="mb-4">;
                   <h4 className="text-sm font - semibold text-gray - 300 mb-2">"Challenge": "</h4>;
                   <p className="text-gray - 400 text-sm">{story.challenge"}</p>;
@@ -156,17 +164,26 @@ export function ClientSuccessStoriesSection("props": any) {;
           transition = {;
   { "duration": "0.6",;
   "delay": "0.4;
+<<<<<<< HEAD
 "}}
         >";
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">";
             <h3 className="text-2xl font-bold text-white text-center mb-8">;
               Success by the Numbers;
             </h3>;
+=======
+
+>>>>>>> origin/main
 }}
         >"
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-white text-center mb-8">
               Success by the Numbers
+<<<<<<< HEAD
+=======
+            
+
+>>>>>>> origin/main
             <div className="grid grid - cols - 2 "md": "gri d - cols - 4 gap-8">;
               <div className="text-center">;
                 <div className="text-4xl font - bold text-blue - 400 mb-2">98%</div>;
@@ -199,6 +216,7 @@ export function ClientSuccessStoriesSection("props": any) {;
           transition = {;
   { "duration": "0.6",;
   "delay": "0.6;
+<<<<<<< HEAD
 "}}
         >";
           <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white">";
@@ -219,6 +237,9 @@ export function ClientSuccessStoriesSection("props": any) {;
             </div>;
           </div>;
         </motion.div>;
+=======
+
+>>>>>>> origin/main
 }}
         >"
           <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white">"

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 :src/pages/Home.tsx
 import { Link } from 'react-router-dom';
 import { 
@@ -194,6 +195,8 @@ export function Home() {
     </div>
   );
 }
+=======
+>>>>>>> origin/main
 ;
 const "Home": "React.FC = () => {;
   return (;
@@ -220,4 +223,8 @@ const "Home": "React.FC = () => {;
   );
 "};
 ;
+<<<<<<< HEAD
 export default Home;
+=======
+export default Home;
+>>>>>>> origin/main

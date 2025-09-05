@@ -100,12 +100,16 @@ export default function Page("props": "any) {;
                 >";
                   <ChevronRight className="w-5 h-5 text-gray-400 group-"hover": "tex t-zion-cyan transition-colors"   />                </motion.div>;
               </div>;
+<<<<<<< HEAD
               {/* Content */"}";
               <div className="mb-4">";
                 <h3 className="text-xl font-bold text-white mb-2 group-"hover": "tex t-zion-cyan transition-colors">;
                   {link.title"}
                 </h3>";
                 <p className="text-gray-300 text-sm leading-relaxed">;
+=======
+
+>>>>>>> origin/main
               {/* Content */}"
               <div className="mb-4">"
                 <h3 className="text-xl font-bold text-white mb-2 group-hover: tex t-zion-cyan transition-colors">
@@ -186,6 +190,7 @@ export default function Page("props": "any) {;
           ))"}
         </div>;
         {/* Service Categories Overview */}
+<<<<<<< HEAD
         <motion.div;
           initial={{ "opacity": "0", "y": "2 0 "}}
           whileInView={{ "opacity": "1", "y": "0 "}}
@@ -212,6 +217,8 @@ export default function Page("props": "any) {;
                 <div className="text-sm font-medium text-white group-"hover": "tex t-cyan-400 transition-colors duration-300">;
                   {category.name"}
                 </div>;
+=======
+>>>>>>> origin/main
         <motion.div
           initial={{ opacity: 0, y: 2 0 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -242,6 +249,7 @@ export default function Page("props": "any) {;
             ))}
           </div>;
         </motion.div> {/* CTA Section */}
+<<<<<<< HEAD
         <motion.div;
           initial={{ "opacity": "0", "y": "2 0 "}}
           whileInView={{ "opacity": "1", "y": "0 "}}
@@ -269,6 +277,8 @@ export default function Page("props": "any) {;
             </div>;
           </div>;
         </motion.div>;
+=======
+>>>>>>> origin/main
         <motion.div
           initial={{ opacity: 0, y: 2 0 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -296,6 +306,10 @@ export default function Page("props": "any) {;
             </div>
           </div>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
         {/* Enhanced CTA Section */"}
         <motion.div;
           initial = {;
@@ -326,8 +340,12 @@ export default function Page("props": "any) {;
               <Link";
                 to="/services";
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full "hover": b g-cyan-500 "hover": tex t-white transition-all duration-300";
+<<<<<<< HEAD
                 Browse All Services;
               </Link>;
+=======
+
+>>>>>>> origin/main
   { duration: 0.8,
   delay: 0.4 ;
 }}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { render, screen  } from '@testing-library/reactimport CaseStudies from ./CaseStudiesdescribe(CaseStudies, () => {it(renders without crashing, () => {';';
     render(<CaseStudies  />)';';
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
@@ -5,3 +6,6 @@ import { render, screen  } from '@testing-library/reactimport CaseStudies from .
     render(<CaseStudies  />)';
     // Add specific test assertions based on component content})});';;';
 import { render,screen } from '@testing-library/reactimport CaseStudies from ./CaseStudiesdescribe(CaseStudies,() => {it(renders without crashing,() => {'; render(<CaseStudies />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<CaseStudies />)
+=======
+import { render,screen } from '@testing-library/reactimport CaseStudies from ./CaseStudiesdescribe(CaseStudies,() => {it(renders without crashing,() => {'; render(<CaseStudies />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<CaseStudies />)
+>>>>>>> origin/main
