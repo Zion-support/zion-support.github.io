@@ -1,39 +1,37 @@
-<<<<<<< HEAD
-import React from 'react',
-import clsx from 'clsx',
-export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: 'primary' | 'secondary' | 'ghost',
-  size?: 'sm' | 'md' | 'lg',
-  fullWidth?: boolean
-},
+import React from 'react';
+import clsx from 'clsx';
 
-const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-md transition focus: outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]',
+export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  variant?: 'primary' | 'secondary' | 'ghost';
+  size?: 'sm' | 'md' | 'lg';
+  fullWidth?: boolean;
+};
+
+const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]';
+
 const sizeStyles: Record<NonNullable<EnhancedButtonProps['size']>, string> = {
   sm: 'text-sm px-3 py-2',
   md: 'text-sm px-4 py-3',
   lg: 'text-base px-5 py-3'
 };
+
 const variantStyles: Record<NonNullable<EnhancedButtonProps['variant']>, string> = {
   primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-400',
   secondary: 'bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100',
-  ghost: 'bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100'},
-=======
-import React from 'react';
-import clsx from 'clsx';
+  ghost: 'bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100'
+};
 
-export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {_variant?: 'primary' | 'secondary' | 'ghost';
-  size?: 'sm' | 'md' | 'lg';
-  fullWidth?: boolean;};
-
-const _baseStyles = 'inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]';
-const sizeStyles: Record<NonNullable<EnhancedButtonProps['size']>, string> = {_sm: 'text-sm px-3 py-2', _md: 'text-sm px-4 py-3', _lg: 'text-base px-5 py-3'};
-const variantStyles: Record<NonNullable<EnhancedButtonProps['variant']>, string> = {_primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-400', _secondary: 'bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100', _ghost: 'bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100'};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-export default function EnhancedButton(_{_className, _variant = 'primary', _size = 'md', _fullWidth, _...props}: EnhancedButtonProps) {_return (
+export default function EnhancedButton({
+  className,
+  variant = 'primary',
+  size = 'md',
+  fullWidth,
+  ...props
+}: EnhancedButtonProps) {
+  return (
     <button
-      className={clsx(baseStyles, _sizeStyles[size], _variantStyles[variant], _fullWidth && 'w-full', _className)}
-      {_...props}
+      className={clsx(baseStyles, sizeStyles[size], variantStyles[variant], fullWidth && 'w-full', className)}
+      {...props}
     />
-  )
+  );
 }
