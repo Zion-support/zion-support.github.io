@@ -28,6 +28,7 @@ import {
   Mic,
   Code,
   Settings,
+  Database,
   Monitor,
   Smartphone,
   Server,
