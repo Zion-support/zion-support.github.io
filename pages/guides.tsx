@@ -20,7 +20,8 @@ import {
   Zap,
   Code,
   Database,
-  Cloud
+  Cloud,
+  Brain
 } from 'lucide-react';
 
 const guides = [

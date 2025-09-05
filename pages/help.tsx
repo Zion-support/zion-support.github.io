@@ -14,7 +14,9 @@ import {
   PlayCircle,
   Phone,
   Mail,
-  Clock
+  Clock,
+  Cloud,
+  Settings
 } from 'lucide-react';
 
 const helpCategories = [

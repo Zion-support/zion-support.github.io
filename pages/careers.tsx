@@ -15,7 +15,8 @@ import {
   Globe, 
   ArrowRight, 
   CheckCircle,
-  DollarSign
+  DollarSign,
+  GraduationCap
 } from 'lucide-react';
 
 const jobOpenings = [

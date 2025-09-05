@@ -50,8 +50,7 @@ import {
   Activity,
   RefreshCw,
   Layers,
-  Compass,
-  Zap
+  Compass
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
