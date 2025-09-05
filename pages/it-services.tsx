@@ -49,7 +49,9 @@ import {
   Bell,
   Home,
   BookOpen,
-  Database
+  Database,
+  Phone,
+  MapPin
 } from 'lucide-react';
 
 const itServices = [
@@ -225,6 +227,134 @@ const itServices = [
     pricing: '$2,000 - $10,000/session',
     category: 'Training',
     link: 'https://ittraining.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Development Services',
+    description: 'Complete blockchain solutions including smart contracts, DApps, and cryptocurrency integration.',
+    icon: Shield,
+    features: ['Smart Contract Development', 'DApp Creation', 'Cryptocurrency Integration', 'Blockchain Consulting'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Blockchain',
+    popular: true,
+    link: 'https://blockchaindev.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Solutions & Implementation',
+    description: 'Internet of Things solutions for smart devices, sensors, and connected systems.',
+    icon: Network,
+    features: ['IoT Device Integration', 'Sensor Networks', 'Data Collection', 'Remote Monitoring'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'IoT',
+    link: 'https://iot.ziontechgroup.com'
+  },
+  {
+    title: 'Augmented Reality (AR) Development',
+    description: 'AR applications and solutions for mobile and enterprise environments.',
+    icon: Monitor,
+    features: ['AR App Development', '3D Modeling', 'Marker-based AR', 'Enterprise AR Solutions'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'AR/VR',
+    link: 'https://ar.ziontechgroup.com'
+  },
+  {
+    title: 'Virtual Reality (VR) Solutions',
+    description: 'Immersive VR experiences and applications for training, entertainment, and business.',
+    icon: Monitor,
+    features: ['VR App Development', '3D Environments', 'VR Training Solutions', 'Enterprise VR'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'AR/VR',
+    link: 'https://vr.ziontechgroup.com'
+  },
+  {
+    title: 'Machine Learning Model Development',
+    description: 'Custom machine learning models and AI solutions for business applications.',
+    icon: Brain,
+    features: ['Model Development', 'Data Preprocessing', 'Model Training', 'Deployment & Monitoring'],
+    pricing: '$12,000 - $60,000/project',
+    category: 'Machine Learning',
+    link: 'https://mlmodels.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Edge computing infrastructure and applications for real-time processing.',
+    icon: Cpu,
+    features: ['Edge Infrastructure', 'Real-time Processing', 'Data Analytics', 'IoT Integration'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Edge Computing',
+    link: 'https://edge.ziontechgroup.com'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, implementation, and optimization for enterprise environments.',
+    icon: Network,
+    features: ['5G Network Design', 'Infrastructure Setup', 'Performance Optimization', 'Security Implementation'],
+    pricing: '$30,000 - $150,000/project',
+    category: '5G Networks',
+    link: 'https://5g.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum Computing Consulting',
+    description: 'Quantum computing solutions and consulting for advanced computational problems.',
+    icon: Cpu,
+    features: ['Quantum Algorithm Development', 'Quantum Hardware Integration', 'Optimization Problems', 'Research & Development'],
+    pricing: '$50,000 - $250,000/project',
+    category: 'Quantum Computing',
+    link: 'https://quantum.ziontechgroup.com'
+  },
+  {
+    title: 'Digital Transformation Services',
+    description: 'Complete digital transformation strategy and implementation for modern businesses.',
+    icon: Settings,
+    features: ['Digital Strategy', 'Process Automation', 'Technology Integration', 'Change Management'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'Digital Transformation',
+    popular: true,
+    link: 'https://digitaltransform.ziontechgroup.com'
+  },
+  {
+    title: 'Robotic Process Automation (RPA)',
+    description: 'Automation of repetitive business processes using software robots.',
+    icon: Bot,
+    features: ['Process Analysis', 'Bot Development', 'Workflow Automation', 'Monitoring & Maintenance'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'RPA',
+    link: 'https://rpa.ziontechgroup.com'
+  },
+  {
+    title: 'Microservices Architecture',
+    description: 'Design and implementation of microservices-based applications and systems.',
+    icon: Server,
+    features: ['Architecture Design', 'Service Development', 'API Gateway', 'Container Orchestration'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Microservices',
+    link: 'https://microservices.ziontechgroup.com'
+  },
+  {
+    title: 'Serverless Computing Solutions',
+    description: 'Serverless application development and cloud function implementation.',
+    icon: Cloud,
+    features: ['Function Development', 'Event-driven Architecture', 'Auto-scaling', 'Cost Optimization'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Serverless',
+    link: 'https://serverless.ziontechgroup.com'
+  },
+  {
+    title: 'API Gateway & Management',
+    description: 'Comprehensive API gateway solutions with security, monitoring, and analytics.',
+    icon: Code,
+    features: ['API Gateway Setup', 'Security Implementation', 'Rate Limiting', 'Analytics & Monitoring'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'API Management',
+    link: 'https://apigateway.ziontechgroup.com'
+  },
+  {
+    title: 'Container Orchestration (Kubernetes)',
+    description: 'Kubernetes cluster setup, management, and optimization for containerized applications.',
+    icon: Server,
+    features: ['Cluster Setup', 'Service Mesh', 'Auto-scaling', 'Monitoring & Logging'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Container Orchestration',
+    link: 'https://kubernetes.ziontechgroup.com'
   }
 ];
 
@@ -248,7 +378,19 @@ const categories = [
   { name: 'Cloud Migration', count: itServices.filter(s => s.category === 'Cloud Migration').length },
   { name: 'Security Auditing', count: itServices.filter(s => s.category === 'Security Auditing').length },
   { name: 'Business Intelligence', count: itServices.filter(s => s.category === 'Business Intelligence').length },
-  { name: 'Training', count: itServices.filter(s => s.category === 'Training').length }
+  { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
+  { name: 'Blockchain', count: itServices.filter(s => s.category === 'Blockchain').length },
+  { name: 'IoT', count: itServices.filter(s => s.category === 'IoT').length },
+  { name: 'AR/VR', count: itServices.filter(s => s.category === 'AR/VR').length },
+  { name: 'Machine Learning', count: itServices.filter(s => s.category === 'Machine Learning').length },
+  { name: 'Edge Computing', count: itServices.filter(s => s.category === 'Edge Computing').length },
+  { name: '5G Networks', count: itServices.filter(s => s.category === '5G Networks').length },
+  { name: 'Quantum Computing', count: itServices.filter(s => s.category === 'Quantum Computing').length },
+  { name: 'Digital Transformation', count: itServices.filter(s => s.category === 'Digital Transformation').length },
+  { name: 'RPA', count: itServices.filter(s => s.category === 'RPA').length },
+  { name: 'Microservices', count: itServices.filter(s => s.category === 'Microservices').length },
+  { name: 'Serverless', count: itServices.filter(s => s.category === 'Serverless').length },
+  { name: 'Container Orchestration', count: itServices.filter(s => s.category === 'Container Orchestration').length }
 ];
 
 export default function ITServicesPage() {
@@ -432,6 +574,67 @@ export default function ITServicesPage() {
                 <p className="text-gray-600">Try adjusting your search or filter criteria.</p>
               </div>
             )}
+          </div>
+        </section>
+
+        {/* Contact Information Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                Contact our IT experts to discuss your technology needs and get a custom solution.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <motion.div
+                className="text-center p-6 bg-white rounded-lg shadow-sm"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Phone className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>
+                <p className="text-gray-600 mb-2">+1 302 464 0950</p>
+                <p className="text-sm text-gray-500">Mon-Fri 9AM-6PM EST</p>
+              </motion.div>
+
+              <motion.div
+                className="text-center p-6 bg-white rounded-lg shadow-sm"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Mail className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
+                <p className="text-gray-600 mb-2">kleber@ziontechgroup.com</p>
+                <p className="text-sm text-gray-500">24/7 Support</p>
+              </motion.div>
+
+              <motion.div
+                className="text-center p-6 bg-white rounded-lg shadow-sm"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <MapPin className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Address</h3>
+                <p className="text-gray-600 mb-2">364 E Main St STE 1008</p>
+                <p className="text-sm text-gray-500">Middletown, DE 19709</p>
+              </motion.div>
+            </div>
           </div>
         </section>
 

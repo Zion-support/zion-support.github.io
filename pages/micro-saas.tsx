@@ -49,9 +49,13 @@ import {
   Bell,
   Home,
   BookOpen,
-  Brain
+  Brain,
+  Phone,
+  MapPin
 } from 'lucide-react';
 
+const microSaasServices = [
+  {
     title: 'Cloud Cost Guard (FinOps Assistant)',
     description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
     icon: DollarSign,
@@ -400,36 +404,152 @@ import {
     title: 'Smart Home Automation',
     description: 'IoT platform for smart home device management and automation rules.',
     icon: Home,
-    title: 'Rapid Deployment',
-    description: 'Get up and running in days, not months'
+    features: ['Device Management', 'Automation Rules', 'Energy Monitoring', 'Security Integration'],
+    pricing: '$99 - $499/month',
+    category: 'IoT',
+    link: 'https://smarthome.ziontechgroup.com'
   },
   {
-    icon: Shield,
-    title: 'Enterprise Security',
-    description: 'Bank-level security and compliance'
+    title: 'AI-Powered Legal Document Generator',
+    description: 'Automated legal document creation with contract templates and compliance checking.',
+    icon: FileText,
+    features: ['Document Templates', 'Compliance Checking', 'Version Control', 'E-signature Integration'],
+    pricing: '$299 - $1,499/month',
+    category: 'Legal Tech',
+    popular: true,
+    link: 'https://legaldocs.ziontechgroup.com'
   },
   {
+    title: 'Advanced CRM with AI Insights',
+    description: 'Customer relationship management with AI-powered sales forecasting and lead scoring.',
     icon: Users,
-    title: 'Scalable Architecture',
-    description: 'Grows with your business needs'
+    features: ['AI Lead Scoring', 'Sales Forecasting', 'Pipeline Management', 'Customer Analytics'],
+    pricing: '$199 - $999/month',
+    category: 'CRM',
+    link: 'https://aicrm.ziontechgroup.com'
   },
   {
-    icon: Globe,
-    title: 'Multi-tenant Ready',
-    description: 'Built for SaaS from the ground up'
+    title: 'Blockchain Document Verification',
+    description: 'Secure document verification and notarization using blockchain technology.',
+    icon: Shield,
+    features: ['Blockchain Verification', 'Document Notarization', 'Tamper Detection', 'Audit Trail'],
+    pricing: '$149 - $799/month',
+    category: 'Blockchain',
+    link: 'https://blockchaindocs.ziontechgroup.com'
   },
   {
+    title: 'AI-Powered Video Editor',
+    description: 'Automated video editing with AI-driven content creation and optimization.',
+    icon: Video,
+    features: ['Auto Editing', 'Content Optimization', 'Voice Synthesis', 'Multi-format Export'],
+    pricing: '$99 - $499/month',
+    category: 'Video Production',
+    link: 'https://aivideoeditor.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Development Platform',
+    description: 'No-code smart contract creation and deployment for blockchain applications.',
+    icon: Code,
+    features: ['Visual Builder', 'Multi-blockchain Support', 'Testing Suite', 'Deployment Tools'],
+    pricing: '$399 - $1,999/month',
+    category: 'Blockchain Development',
+    link: 'https://smartcontracts.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Market Research',
+    description: 'Automated market research and competitive analysis with real-time insights.',
+    icon: Search,
+    features: ['Market Analysis', 'Competitor Tracking', 'Trend Detection', 'Report Generation'],
+    pricing: '$299 - $1,499/month',
+    category: 'Market Research',
+    link: 'https://marketresearch.ziontechgroup.com'
+  },
+  {
+    title: 'Advanced Email Security Suite',
+    description: 'Comprehensive email security with threat detection and phishing prevention.',
+    icon: Mail,
+    features: ['Threat Detection', 'Phishing Prevention', 'Email Encryption', 'Compliance Monitoring'],
+    pricing: '$149 - $799/month',
+    category: 'Email Security',
+    link: 'https://emailsecurity.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered HR Management',
+    description: 'Human resources management with AI-driven recruitment and employee analytics.',
+    icon: Users,
+    features: ['AI Recruitment', 'Employee Analytics', 'Performance Tracking', 'Compliance Management'],
+    pricing: '$199 - $999/month',
+    category: 'HR Tech',
+    link: 'https://aihr.ziontechgroup.com'
+  },
+  {
+    title: 'Real-Time Collaboration Platform',
+    description: 'Advanced collaboration tools with real-time editing and video conferencing.',
+    icon: Users,
+    features: ['Real-time Editing', 'Video Conferencing', 'File Sharing', 'Project Management'],
+    pricing: '$99 - $499/month',
+    category: 'Collaboration',
+    link: 'https://collaboration.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimizer',
+    description: 'Intelligent supply chain management with demand forecasting and logistics optimization.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Logistics Optimization', 'Inventory Management', 'Risk Assessment'],
+    pricing: '$399 - $1,999/month',
+    category: 'Supply Chain',
+    link: 'https://supplychain.ziontechgroup.com'
+  },
+  {
+    title: 'Advanced Analytics Dashboard',
+    description: 'Comprehensive business intelligence with custom dashboards and real-time reporting.',
     icon: BarChart3,
-    title: 'Analytics Built-in',
-    description: 'Comprehensive usage and performance metrics'
+    features: ['Custom Dashboards', 'Real-time Reporting', 'Data Visualization', 'Predictive Analytics'],
+    pricing: '$199 - $999/month',
+    category: 'Analytics',
+    link: 'https://analytics.ziontechgroup.com'
   },
   {
-    icon: Lock,
-    title: 'Data Privacy',
-    description: 'GDPR and SOC 2 compliant by default'
+    title: 'AI-Powered Content Creation',
+    description: 'Automated content creation for blogs, social media, and marketing materials.',
+    icon: FileText,
+    features: ['Blog Writing', 'Social Media Content', 'Marketing Copy', 'SEO Optimization'],
+    pricing: '$149 - $799/month',
+    category: 'Content Creation',
+    link: 'https://contentcreation.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Energy Management',
+    description: 'IoT-based energy monitoring and optimization for buildings and facilities.',
+    icon: Zap,
+    features: ['Energy Monitoring', 'Cost Optimization', 'Predictive Maintenance', 'Carbon Tracking'],
+    pricing: '$199 - $999/month',
+    category: 'Energy Management',
+    link: 'https://energy.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Fraud Detection',
+    description: 'Advanced fraud detection and prevention using machine learning algorithms.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Pattern Recognition', 'Risk Scoring', 'Automated Alerts'],
+    pricing: '$299 - $1,499/month',
+    category: 'Fraud Prevention',
+    link: 'https://frauddetection.ziontechgroup.com'
+  },
+  {
+    title: 'Voice Commerce Platform',
+    description: 'Voice-activated e-commerce platform with AI-powered shopping assistance.',
+    icon: Mic,
+    features: ['Voice Shopping', 'AI Assistant', 'Order Management', 'Payment Processing'],
+    pricing: '$399 - $1,999/month',
+    category: 'Voice Commerce',
+    link: 'https://voicecommerce.ziontechgroup.com'
   }
 ];
 
+const benefits = [
+  {
+    icon: Rocket,
     title: 'Fast Time to Market',
     description: 'Launch your SaaS in weeks, not months',
     stat: '80%'
@@ -454,6 +574,9 @@ import {
   }
 ];
 
+const pricingPlans = [
+  {
+    name: 'Starter',
     description: 'Perfect for small teams and MVPs',
     price: '$299',
     period: '/month',
@@ -471,6 +594,9 @@ import {
     description: 'Ideal for growing businesses',
     price: '$799',
     period: '/month',
+    features: [
+      'Up to 10,000 users',
+      'Advanced analytics',
       'Priority support',
       'Enhanced security',
       '5 custom integrations',
@@ -483,6 +609,9 @@ import {
     description: 'For large organizations',
     price: 'Custom',
     period: '',
+    features: [
+      'Unlimited users',
+      'Custom analytics',
       'Dedicated support',
       'Enterprise security',
       'Unlimited integrations',
@@ -520,6 +649,11 @@ export default function MicroSaaSPage() {
               Scalable software solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
+              >
+                Get Started
               </Link>
               <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                 View All Services
@@ -544,7 +678,7 @@ export default function MicroSaaSPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaaSProducts.map((product, index) => {
+            {microSaasServices.map((product, index) => {
               const IconComponent = product.icon;
               return (
                 <motion.div
@@ -755,6 +889,67 @@ export default function MicroSaaSPage() {
                 </Link>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+              Contact our team to discuss your Micro SaaS needs and get a custom quote.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <motion.div
+              className="text-center p-6 bg-gray-50 rounded-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <Phone className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>
+              <p className="text-gray-600 mb-2">+1 302 464 0950</p>
+              <p className="text-sm text-gray-500">Mon-Fri 9AM-6PM EST</p>
+            </motion.div>
+
+            <motion.div
+              className="text-center p-6 bg-gray-50 rounded-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Mail className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
+              <p className="text-gray-600 mb-2">kleber@ziontechgroup.com</p>
+              <p className="text-sm text-gray-500">24/7 Support</p>
+            </motion.div>
+
+            <motion.div
+              className="text-center p-6 bg-gray-50 rounded-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <MapPin className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Address</h3>
+              <p className="text-gray-600 mb-2">364 E Main St STE 1008</p>
+              <p className="text-sm text-gray-500">Middletown, DE 19709</p>
+            </motion.div>
           </div>
         </div>
       </section>
