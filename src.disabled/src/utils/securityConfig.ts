@@ -1,1 +1,5 @@
- export const securityConfig = {    }
+<<<<<<< HEAD
+module.exports = const securityConfig = {}
+=======
+export const securityConfig = { };
+>>>>>>> main

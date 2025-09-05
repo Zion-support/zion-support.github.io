@@ -89,3 +89,4 @@ automation/data/*.json
 automation-reports/
 health-check-report-*.json
 security-scan-report-*.json
+link-reports/

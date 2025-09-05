@@ -24,6 +24,12 @@ export default function Solutions() {
           description: "Advanced analytics and business intelligence platform",
           price: "$499/month",
           features: ["Real-time dashboards", "Predictive analytics", "Custom reports", "Data visualization"]
+        },
+        {
+          name: "Cybersecurity Solutions",
+          description: "Comprehensive cybersecurity platform with advanced threat detection",
+          price: "$799/month",
+          features: ["24/7 threat monitoring", "Vulnerability scanning", "Incident response", "Compliance management"]
         }
       ]
     },
@@ -48,6 +54,42 @@ export default function Solutions() {
           description: "Intelligent project management and team collaboration",
           price: "$199/month",
           features: ["Smart task assignment", "Progress tracking", "Resource optimization", "Team collaboration"]
+        },
+        {
+          name: "IT Infrastructure Management",
+          description: "Complete IT infrastructure management and optimization",
+          price: "$1,299/month",
+          features: ["Network setup", "Server maintenance", "Backup solutions", "Performance monitoring"]
+        }
+      ]
+    },
+    {
+      category: "Micro SAAS Solutions",
+      description: "Affordable, AI-powered micro SAAS tools for immediate productivity gains",
+      solutions: [
+        {
+          name: "AI Invoice Generator",
+          description: "Intelligent invoice creation and payment tracking platform",
+          price: "$29/month",
+          features: ["AI-powered generation", "Payment tracking", "Client management", "Multi-currency support"]
+        },
+        {
+          name: "Smart Meeting Scheduler",
+          description: "AI-powered meeting scheduling that eliminates back-and-forth emails",
+          price: "$19/month",
+          features: ["Time optimization", "Calendar integration", "Automatic reminders", "Time zone handling"]
+        },
+        {
+          name: "Social Media Scheduler",
+          description: "AI-powered social media management with content suggestions",
+          price: "$39/month",
+          features: ["AI content suggestions", "Multi-platform posting", "Hashtag optimization", "Engagement analytics"]
+        },
+        {
+          name: "Smart Password Manager",
+          description: "Enterprise-grade password management with AI security recommendations",
+          price: "$15/month",
+          features: ["AI security tips", "Team sharing", "Breach monitoring", "Multi-factor auth"]
         }
       ]
     },
@@ -58,8 +100,8 @@ export default function Solutions() {
         {
           name: "E-commerce Solutions",
           description: "Complete e-commerce technology stack and management",
-          price: "$399/month",
-          features: ["Return management", "Inventory tracking", "Customer analytics", "Payment processing"]
+          price: "$1,899/month",
+          features: ["Custom platform", "Payment integration", "Inventory management", "Analytics"]
         },
         {
           name: "Healthcare IT",
@@ -72,6 +114,162 @@ export default function Solutions() {
           description: "Secure financial technology and analytics solutions",
           price: "$699/month",
           features: ["Financial analytics", "Risk assessment", "Compliance reporting", "Fraud detection"]
+        },
+        {
+          name: "Legal Document Analysis",
+          description: "AI-powered legal document analysis and contract review",
+          price: "$599/month",
+          features: ["Contract analysis", "Compliance monitoring", "Risk assessment", "Legal research"]
+        }
+      ]
+    },
+    {
+      category: "AI-Powered Solutions",
+      description: "Cutting-edge artificial intelligence solutions for modern businesses",
+      solutions: [
+        {
+          name: "AI Customer Experience Platform",
+          description: "Comprehensive AI platform for personalized customer experiences across all touchpoints",
+          price: "$1,299/month",
+          features: ["Personalized recommendations", "Predictive analytics", "Omnichannel support", "Real-time insights"]
+        },
+        {
+          name: "AI Process Automation Suite",
+          description: "End-to-end business process automation with AI-powered decision making",
+          price: "$899/month",
+          features: ["Workflow automation", "Document processing", "Decision automation", "Performance monitoring"]
+        },
+        {
+          name: "AI Data Intelligence Hub",
+          description: "Advanced data analytics and intelligence platform with AI-powered insights",
+          price: "$1,499/month",
+          features: ["Data integration", "Predictive modeling", "Real-time analytics", "Automated reporting"]
+        },
+        {
+          name: "AI Security & Compliance",
+          description: "AI-powered security monitoring and compliance management system",
+          price: "$1,199/month",
+          features: ["Threat detection", "Compliance monitoring", "Risk assessment", "Automated responses"]
+        }
+      ]
+    },
+    {
+      category: "Cloud & Infrastructure Solutions",
+      description: "Scalable cloud and infrastructure solutions for any business size",
+      solutions: [
+        {
+          name: "Multi-Cloud Management Platform",
+          description: "Unified management platform for AWS, Azure, and Google Cloud environments",
+          price: "$1,799/month",
+          features: ["Multi-cloud orchestration", "Cost optimization", "Security management", "Performance monitoring"]
+        },
+        {
+          name: "Hybrid Cloud Infrastructure",
+          description: "Seamless integration between on-premises and cloud environments",
+          price: "$2,299/month",
+          features: ["Hybrid connectivity", "Data synchronization", "Workload portability", "Unified management"]
+        },
+        {
+          name: "Edge Computing Solutions",
+          description: "Edge computing infrastructure for low-latency applications and IoT",
+          price: "$1,599/month",
+          features: ["Edge deployment", "IoT integration", "Real-time processing", "Distributed management"]
+        },
+        {
+          name: "Container & Microservices Platform",
+          description: "Complete container orchestration and microservices management platform",
+          price: "$1,399/month",
+          features: ["Kubernetes management", "Service mesh", "CI/CD pipelines", "Monitoring & logging"]
+        }
+      ]
+    },
+    {
+      category: "Digital Transformation Solutions",
+      description: "Complete digital transformation services for modern businesses",
+      solutions: [
+        {
+          name: "Legacy System Modernization",
+          description: "Modernize legacy systems with cloud-native architectures and microservices",
+          price: "$4,999/project",
+          features: ["System assessment", "Architecture redesign", "Data migration", "Performance optimization"]
+        },
+        {
+          name: "API-First Integration Platform",
+          description: "Comprehensive API management and integration platform for digital ecosystems",
+          price: "$1,299/month",
+          features: ["API gateway", "Integration services", "Developer portal", "Analytics & monitoring"]
+        },
+        {
+          name: "Mobile-First Solutions",
+          description: "Cross-platform mobile applications with native performance and cloud backend",
+          price: "$2,999/project",
+          features: ["Native mobile apps", "Cross-platform development", "Cloud backend", "Push notifications"]
+        },
+        {
+          name: "E-commerce & Digital Commerce",
+          description: "Complete e-commerce platform with AI-powered personalization and analytics",
+          price: "$1,899/month",
+          features: ["Online storefront", "Payment processing", "Inventory management", "Customer analytics"]
+        }
+      ]
+    },
+    {
+      category: "Security & Compliance Solutions",
+      description: "Comprehensive security and compliance solutions for enterprise protection",
+      solutions: [
+        {
+          name: "Zero Trust Security Architecture",
+          description: "Complete zero trust security implementation with identity and access management",
+          price: "$1,599/month",
+          features: ["Identity verification", "Access controls", "Network segmentation", "Continuous monitoring"]
+        },
+        {
+          name: "Data Privacy & GDPR Compliance",
+          description: "Comprehensive data privacy management and GDPR compliance platform",
+          price: "$1,299/month",
+          features: ["Data mapping", "Consent management", "Privacy controls", "Compliance reporting"]
+        },
+        {
+          name: "Advanced Threat Protection",
+          description: "AI-powered threat detection and response platform with 24/7 monitoring",
+          price: "$1,799/month",
+          features: ["Threat hunting", "Incident response", "Forensic analysis", "Threat intelligence"]
+        },
+        {
+          name: "Security Operations Center (SOC)",
+          description: "Managed security operations center with expert analysts and advanced tools",
+          price: "$2,499/month",
+          features: ["24/7 monitoring", "Expert analysts", "Incident response", "Threat hunting"]
+        }
+      ]
+    },
+    {
+      category: "Industry-Specific Solutions",
+      description: "Specialized solutions tailored for specific industries and use cases",
+      solutions: [
+        {
+          name: "Healthcare IT Solutions",
+          description: "HIPAA-compliant healthcare technology solutions with patient data management",
+          price: "$2,199/month",
+          features: ["EHR integration", "Patient portals", "Telemedicine", "Compliance management"]
+        },
+        {
+          name: "Financial Services Platform",
+          description: "Secure financial services platform with fraud detection and compliance",
+          price: "$2,999/month",
+          features: ["Payment processing", "Fraud detection", "Regulatory compliance", "Risk management"]
+        },
+        {
+          name: "Manufacturing IoT Solutions",
+          description: "Industrial IoT platform for smart manufacturing and predictive maintenance",
+          price: "$1,899/month",
+          features: ["Sensor integration", "Predictive maintenance", "Quality control", "Supply chain optimization"]
+        },
+        {
+          name: "Retail & E-commerce Solutions",
+          description: "Complete retail technology stack with omnichannel capabilities",
+          price: "$1,599/month",
+          features: ["Inventory management", "Customer analytics", "Omnichannel retail", "Personalization"]
         }
       ]
     }
@@ -125,7 +323,7 @@ export default function Solutions() {
                       ))}
                     </ul>
                     <Link
-                      to="/contact"
+                      href="/contact"
                       className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
                     >
                       Learn More
@@ -163,13 +361,13 @@ export default function Solutions() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+              href="/contact"
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Contact Us
             </Link>
             <Link
-              to="/request-quote"
+              href="/request-quote"
               className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Request Quote

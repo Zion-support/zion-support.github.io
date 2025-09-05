@@ -1,9 +1,0 @@
-{
-  "features": [
-    "ARIA labels",
-    "Keyboard navigation",
-    "Screen reader support",
-    "High contrast mode",
-    "Focus indicators"
-  ]
-}

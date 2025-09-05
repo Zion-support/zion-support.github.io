@@ -1,10 +1,9 @@
-import React from "react";
-type Props = { children: React.ReactNode }
-;
-export default function UltraQuantumHolographicBackgroundV4({;
-:components/ui/UltraQuantumHolographicBackgroundV4.tsx,;
-children,;,
-}: Props) {  return <>{children}</>;
-  children}: Props) {;
-  return <>{children}</>;
-:components/disabled/ui/UltraQuantumHolographicBackgroundV4.tsx}';
+<<<<<<< HEAD
+import React from \"react\"; type Props = { children: \'React.ReactNode\' } ; export default function UltraQuantumHolographicBackgroundV4({; :components/ui/UltraQuantumHolographicBackgroundV4.tsx,; children,;,}: Props) { return <>{children}></div> children}: Props) {; return <>{children}></div> :components/disabled/ui/UltraQuantumHolographicBackgroundV4.tsx}\';
+=======
+<<<<<<< HEAD
+const React from "react"; type Props = { children: "React.ReactNode" } ; export default function UltraQuantumHolographicBackgroundV4({; :components/ui/UltraQuantumHolographicBackgroundV4.tsx,; children,;,}: Props) { return <>{children}></div> children}: Props) {; return <>{children}></div> :components/disabled/ui/UltraQuantumHolographicBackgroundV4.tsx}";"""
+=======
+import _React from "react"; type Props = { children: '_React.ReactNode' } ; export default function UltraQuantumHolographicBackgroundV4({; :components/ui/UltraQuantumHolographicBackgroundV4.tsx,; children,;,}: Props) { return <>{children}></div> children}: Props) {; return <>{children}></div> :components/disabled/ui/UltraQuantumHolographicBackgroundV4.tsx}';
+>>>>>>> main
+>>>>>>> main
