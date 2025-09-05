@@ -1,18 +1,4 @@
 import js from '@eslint/js';
-<<<<<<< HEAD
-
-export default [js.configs.recommended,
-  {
-    "files": ['**/*.{js,jsx,ts,tsx}'],
-    "rules": {
-      'no-unused-vars': ['warn',
-        { "argsIgnorePattern": '^_' }
-      ],
-      'no-console': 'warn',
-      'prefer-const': 'warn',
-      'no-var': 'error'
-    },
-=======
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import tseslint from '@typescript-eslint/eslint-plugin';
@@ -194,16 +180,10 @@ export default [{
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off'
     }
->>>>>>> 86e2a4cca918c6ff376b51aa8638f7a375ebfe57
   },
   {
     "ignores": ['node_modules/**',
       '.next/**',
-<<<<<<< HEAD
-      'out/**',
-      'build/**',
-      'dist/**'
-=======
       'dist/**',
       'build/**',
       'out/**',
@@ -455,7 +435,6 @@ export default [{
       '*.ear',
       '*.sar',
       '*.nar'
->>>>>>> 86e2a4cca918c6ff376b51aa8638f7a375ebfe57
     ]
   }
 ];
