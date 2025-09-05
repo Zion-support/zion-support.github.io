@@ -239,7 +239,7 @@ export default function BlogPage() {
                     </button>
                   </form>
                 </div>
-              </div>ursor/add-new-services-and-deploy-updates-1b90
+              </div>
             </div>
           </div>
         </div>

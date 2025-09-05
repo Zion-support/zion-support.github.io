@@ -477,7 +477,6 @@ export default function HomePage() {
             </motion.div>
           </div>
         </section>
->>>>>>> 87bd6421ab0886afe7f98cfd20d727a180a1a8d4
       </div>
     </Layout>
   );
