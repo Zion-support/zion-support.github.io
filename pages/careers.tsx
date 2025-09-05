@@ -14,7 +14,8 @@ import {
   Laptop, 
   Globe, 
   ArrowRight, 
-  CheckCircle 
+  CheckCircle,
+  DollarSign
 } from 'lucide-react';
 
 const jobOpenings = [

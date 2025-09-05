@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Layout from '../Layout';
+import Layout from '../../../components/Layout';
 
 interface MainLayoutProps {
   title: string;
