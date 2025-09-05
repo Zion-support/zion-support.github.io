@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/ui/use-toast.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { toast   } from 'react-hot-toast';
@@ -15,6 +17,7 @@ import { toast } from 'react-hot-toast' interface ToastOptions { duration?: "num
 =======
 <<<<<<< HEAD
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/use-toast.ts
 
 =======
 import { toast } from 'react-hot-toast'
@@ -29,9 +32,6 @@ export function useToast() {
   };
   return { showToast };
 };
-<<<<<<< HEAD
-=======
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

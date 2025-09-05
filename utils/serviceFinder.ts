@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export interface Service {
   id: string;
   name: string;
@@ -35,6 +37,7 @@ export const findService = ("_serviceName": string) => {
   // Implementation placeholder
   return null;
 };
+>>>>>>> main
 >>>>>>> main
 export const findService = (_serviceName: string) => { return null};
 >>>>>>> main

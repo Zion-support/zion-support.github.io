@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/specializedFinancialAIServices2028.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -357,3 +359,4 @@ export interface FinancialAIService2028 { id: string; title: string; description
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/specializedFinancialAIServices2028.ts

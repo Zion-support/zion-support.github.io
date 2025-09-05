@@ -1,195 +1,328 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Check, X, Star, Zap, Shield, Users, ArrowRight } from 'lucide-react';
 import Layout from '../components/Layout';
-import { 
-  CheckCircle, 
-  Star, 
-  ArrowRight, 
-  Phone, 
-  Mail, 
-  DollarSign,
-  Clock,
-  Users,
-  Zap,
-  Shield,
-  Brain,
-  Cloud,
-  Network
-} from 'lucide-react';
 
-const pricingPlans = [
+const plans = [
   {
-    name: 'AI Services',
-    icon: Brain,
-    description: 'Machine Learning, Computer Vision, NLP',
-    plans: [
-      {
-        name: 'Starter',
-        price: '$1,000',
-        period: '/month',
-        description: 'Perfect for small businesses',
-        features: [
-          'Basic ML model development',
-          'Data preprocessing',
-          'Model deployment',
-          'Email support',
-          'Monthly reports'
-        ],
-        popular: false
-      },
-      {
-        name: 'Professional',
-        price: '$3,500',
-        period: '/month',
-        description: 'Ideal for growing companies',
-        features: [
-          'Advanced ML models',
-          'Custom model training',
-          'Real-time predictions',
-          'Priority support',
-          'Weekly reports',
-          'A/B testing'
-        ],
-        popular: true
-      },
-      {
-        name: 'Enterprise',
-        price: '$10,000',
-        period: '/month',
-        description: 'For large organizations',
-        features: [
-          'Custom AI solutions',
-          'Dedicated team',
-          '24/7 support',
-          'Custom integrations',
-          'Real-time monitoring',
-          'Unlimited models'
-        ],
-        popular: false
-      }
-    ]
+    name: "Starter",
+    price: "$2,000",
+    period: "per month",
+    description: "Perfect for small businesses getting started",
+    features: [
+      "Up to 5 users",
+      "Basic AI services",
+      "Email support",
+      "Standard security",
+      "Basic analytics"
+    ],
+    limitations: [
+      "Limited customization",
+      "No priority support",
+      "Basic integrations"
+    ],
+    popular: false,
+    icon: Users
   },
   {
-    name: 'IT Services',
-    icon: Network,
-    description: 'Cloud, DevOps, Cybersecurity',
-    plans: [
-      {
-        name: 'Basic',
-        price: '$120',
-        period: '/hour',
-        description: 'Consulting and support',
-        features: [
-          'IT consulting',
-          'System maintenance',
-          'Security audits',
-          'Email support',
-          'Basic monitoring'
-        ],
-        popular: false
-      },
-      {
-        name: 'Standard',
-        price: '$200',
-        period: '/hour',
-        description: 'Comprehensive IT services',
-        features: [
-          'Cloud migration',
-          'DevOps implementation',
-          'Security hardening',
-          'Priority support',
-          'Advanced monitoring',
-          'Backup solutions'
-        ],
-        popular: true
-      },
-      {
-        name: 'Premium',
-        price: '$350',
-        period: '/hour',
-        description: 'Full-service IT management',
-        features: [
-          'Dedicated team',
-          '24/7 monitoring',
-          'Custom solutions',
-          'Emergency support',
-          'Compliance management',
-          'Performance optimization'
-        ],
-        popular: false
-      }
-    ]
+    name: "Professional",
+    price: "$5,000",
+    period: "per month",
+    description: "Ideal for growing businesses with advanced needs",
+    features: [
+      "Up to 25 users",
+      "Advanced AI services",
+      "Priority support",
+      "Enhanced security",
+      "Advanced analytics",
+      "Custom integrations",
+      "API access"
+    ],
+    limitations: [
+      "Limited custom development"
+    ],
+    popular: true,
+    icon: Zap
   },
   {
-    name: 'Micro SaaS',
-    icon: Cloud,
-    description: 'Custom SaaS solutions',
-    plans: [
-      {
-        name: 'Startup',
-        price: '$19',
-        period: '/month',
-        description: 'For new businesses',
-        features: [
-          'Basic SaaS platform',
-          'User management',
-          'Basic analytics',
-          'Email support',
-          'Standard hosting'
-        ],
-        popular: false
-      },
-      {
-        name: 'Growth',
-        price: '$99',
-        period: '/month',
-        description: 'For growing businesses',
-        features: [
-          'Advanced features',
-          'Custom integrations',
-          'Advanced analytics',
-          'Priority support',
-          'Scalable hosting',
-          'API access'
-        ],
-        popular: true
-      },
-      {
-        name: 'Enterprise',
-        price: '$499',
-        period: '/month',
-        description: 'For large organizations',
-        features: [
-          'Custom development',
-          'White-label solution',
-          'Dedicated support',
-          'Custom hosting',
-          'Advanced security',
-          'Unlimited users'
-        ],
-        popular: false
-      }
-    ]
+    name: "Enterprise",
+    price: "$15,000",
+    period: "per month",
+    description: "Complete solution for large organizations",
+    features: [
+      "Unlimited users",
+      "Full AI suite",
+      "24/7 dedicated support",
+      "Enterprise security",
+      "Custom analytics",
+      "Full customization",
+      "White-label options",
+      "Dedicated account manager"
+    ],
+    limitations: [],
+    popular: false,
+    icon: Shield
   }
 ];
 
-const contactInfo = {
-  phone: "+1 302 464 0950",
-  email: "kleber@ziontechgroup.com",
-  address: "364 E Main St STE 1008, Middletown DE 19709"
-};
+const addOns = [
+  {
+    name: "Additional Users",
+    price: "$100",
+    period: "per user/month",
+    description: "Add more users to your plan"
+  },
+  {
+    name: "Premium Support",
+    price: "$500",
+    period: "per month",
+    description: "24/7 priority support with dedicated team"
+  },
+  {
+    name: "Custom Development",
+    price: "$200",
+    period: "per hour",
+    description: "Custom features and integrations"
+  },
+  {
+    name: "Training & Onboarding",
+    price: "$1,000",
+    period: "per session",
+    description: "Comprehensive training for your team"
+  }
+];
 
 export default function PricingPage() {
+  const [billingPeriod, setBillingPeriod] = useState('monthly');
+
   return (
-    <Layout 
-      title="Pricing - Zion Tech Group | Transparent Pricing for AI, IT & SaaS Services"
-      description="View our transparent pricing for AI services, IT solutions, and Micro SaaS platforms. No hidden fees, flexible plans for businesses of all sizes."
-      keywords="pricing, AI services pricing, IT services cost, SaaS pricing, transparent pricing, business solutions"
+    <Layout
+      title="Pricing - Zion Tech Group"
+      description="Transparent pricing for our comprehensive technology solutions. Choose the plan that fits your business needs."
+      keywords="pricing, plans, subscription, technology solutions, AI services, IT services"
     >
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
+          
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Simple, <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Transparent</span> Pricing
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Choose the plan that fits your business needs. All plans include our core features with no hidden fees.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Billing Toggle */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="flex justify-center mb-8">
+              <div className="bg-gray-100 rounded-lg p-1">
+                <button
+                  onClick={() => setBillingPeriod('monthly')}
+                  className={`px-6 py-3 rounded-md font-medium transition-colors ${
+                    billingPeriod === 'monthly'
+                      ? 'bg-white text-gray-900 shadow-sm'
+                      : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                >
+                  Monthly
+                </button>
+                <button
+                  onClick={() => setBillingPeriod('yearly')}
+                  className={`px-6 py-3 rounded-md font-medium transition-colors ${
+                    billingPeriod === 'yearly'
+                      ? 'bg-white text-gray-900 shadow-sm'
+                      : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                >
+                  Yearly
+                  <span className="ml-2 px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">
+                    Save 20%
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Plans */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+              {plans.map((plan, index) => (
+                <motion.div
+                  key={plan.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden ${
+                    plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
+                  }`}
+                >
+                  {plan.popular && (
+                    <div className="bg-blue-600 text-white text-center py-2 text-sm font-semibold">
+                      Most Popular
+                    </div>
+                  )}
+                  
+                  <div className="p-8">
+                    <div className="text-center mb-8">
+                      <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <plan.icon className="w-8 h-8 text-blue-600" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                      <p className="text-gray-600 mb-4">{plan.description}</p>
+                      <div className="flex items-baseline justify-center">
+                        <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                        <span className="text-gray-600 ml-2">{plan.period}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-4 mb-8">
+                      <h4 className="font-semibold text-gray-900">What's included:</h4>
+                      <ul className="space-y-3">
+                        {plan.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-center">
+                            <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                            <span className="text-gray-700">{feature}</span>
+                          </li>
+                        ))}
+                        {plan.limitations.map((limitation, idx) => (
+                          <li key={idx} className="flex items-center">
+                            <X className="w-5 h-5 text-red-500 mr-3 flex-shrink-0" />
+                            <span className="text-gray-500 line-through">{limitation}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+                      plan.popular
+                        ? 'bg-blue-600 text-white hover:bg-blue-700'
+                        : 'bg-gray-900 text-white hover:bg-gray-800'
+                    }`}>
+                      Get Started
+                      <ArrowRight className="w-4 h-4 ml-2 inline" />
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Add-ons */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Add-ons & Extras
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Enhance your plan with additional services and features tailored to your needs.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+              {addOns.map((addOn, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors"
+                >
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{addOn.name}</h3>
+                  <div className="text-2xl font-bold text-blue-600 mb-2">
+                    {addOn.price}
+                    <span className="text-sm font-normal text-gray-600">{addOn.period}</span>
+                  </div>
+                  <p className="text-gray-600 text-sm">{addOn.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Common questions about our pricing and plans.
+              </p>
+            </motion.div>
+
+            <div className="max-w-3xl mx-auto space-y-8">
+              <div className="bg-white rounded-xl p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">
+                  Can I change my plan later?
+                </h3>
+                <p className="text-gray-600">
+                  Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, 
+                  and we'll prorate any billing differences.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">
+                  Is there a free trial available?
+                </h3>
+                <p className="text-gray-600">
+                  Yes, we offer a 14-day free trial for all plans. No credit card required to get started.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">
+                  What payment methods do you accept?
+                </h3>
+                <p className="text-gray-600">
+                  We accept all major credit cards, PayPal, and bank transfers for annual plans.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">
+                  Do you offer custom pricing for large organizations?
+                </h3>
+                <p className="text-gray-600">
+                  Yes, we offer custom pricing and enterprise solutions for large organizations with specific needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div
@@ -197,189 +330,20 @@ export default function PricingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Transparent Pricing</h1>
-              <p className="text-xl mb-8 max-w-3xl mx-auto">
-                Choose the perfect plan for your business needs. No hidden fees, no surprises. 
-                All plans include our commitment to quality and support.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-                >
-                  Get Custom Quote
-                </Link>
-                <a 
-                  href={`tel:${contactInfo.phone}`}
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
-                >
-                  Call {contactInfo.phone}
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Pricing Plans */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            {pricingPlans.map((service, serviceIndex) => (
-              <motion.div
-                key={serviceIndex}
-                className="mb-16"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: serviceIndex * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <div className="text-center mb-12">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <service.icon className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{service.name}</h2>
-                  <p className="text-lg text-gray-600 max-w-2xl mx-auto">{service.description}</p>
-                </div>
-
-                <div className="grid md:grid-cols-3 gap-8">
-                  {service.plans.map((plan, planIndex) => (
-                    <motion.div
-                      key={planIndex}
-                      className={`bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow relative ${
-                        plan.popular ? 'ring-2 ring-blue-500' : ''
-                      }`}
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: planIndex * 0.1 }}
-                      viewport={{ once: true }}
-                    >
-                      {plan.popular && (
-                        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                          <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                            Most Popular
-                          </span>
-                        </div>
-                      )}
-                      
-                      <div className="text-center mb-6">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                        <p className="text-gray-600 mb-4">{plan.description}</p>
-                        <div className="flex items-baseline justify-center">
-                          <span className="text-4xl font-bold text-blue-600">{plan.price}</span>
-                          <span className="text-gray-500 ml-1">{plan.period}</span>
-                        </div>
-                      </div>
-
-                      <ul className="space-y-3 mb-8">
-                        {plan.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center">
-                            <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                            <span className="text-gray-700">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-
-                      <Link
-                        href="/contact"
-                        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-                          plan.popular
-                            ? 'bg-blue-600 text-white hover:bg-blue-700'
-                            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                        }`}
-                      >
-                        Get Started
-                      </Link>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
-        {/* Why Choose Us */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                We're committed to delivering exceptional value and results for every client
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  icon: DollarSign,
-                  title: 'Transparent Pricing',
-                  description: 'No hidden fees or surprises. What you see is what you pay.'
-                },
-                {
-                  icon: Clock,
-                  title: 'Fast Delivery',
-                  description: 'Quick turnaround times without compromising on quality.'
-                },
-                {
-                  icon: Users,
-                  title: 'Expert Team',
-                  description: 'Experienced professionals with proven track records.'
-                },
-                {
-                  icon: Shield,
-                  title: 'Quality Guarantee',
-                  description: '100% satisfaction guarantee on all our services.'
-                }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Get Started?
+              </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Contact us today for a free consultation and custom quote tailored to your specific needs.
+                Choose your plan and start transforming your business with our technology solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-                >
-                  Get Free Consultation
-                </Link>
-                <a 
-                  href={`tel:${contactInfo.phone}`}
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
-                >
-                  Call {contactInfo.phone}
-                </a>
+                <button className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center">
+                  <ArrowRight className="w-5 h-5 mr-2" />
+                  Start Free Trial
+                </button>
+                <button className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
+                  Contact Sales
+                </button>
               </div>
             </motion.div>
           </div>

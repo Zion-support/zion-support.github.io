@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-export default function App(): JSX.Element {
-  return (
-    <main>
-      {' '}
-      <h1>Hello App</h1>{' '}
-    </main>
-  );
-}
-=======
-<<<<<<< HEAD
-import React from \'react\'; export default function App(): React.JSX.Element { return ( <main> {\' \'} <h1>Hello App</h1>{\' \'} </main> )}
-=======
-<<<<<<< HEAD
-const React from "react"; export default function App(): React.JSX.Element { return ( <main> {" "} <h1>Hello App</h1>{" "} </main> )}''"
-=======
 import React from 'react';
 
 export default function App(): React.JSX.Element {
@@ -24,6 +7,3 @@ export default function App(): React.JSX.Element {
     </main>
   );
 }
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/comprehensivePricingGuide2026.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -789,3 +791,4 @@ export interface PricingTier { name: string; price: number; currency: string; bi
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/comprehensivePricingGuide2026.ts

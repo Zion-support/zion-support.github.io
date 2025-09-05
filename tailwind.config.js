@@ -29,11 +29,11 @@ export default {
           '100%': { transform: 'translateY(0)', opacity: '1' }
         },
         bounceGentle: {
-          '0%,100%': { transform: 'translateY(0)' },
+          '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-5px)' }
         }
       }
     }
   },
-  plugins: [forms, typography, aspectRatio]
+  plugins: [forms, typography, aspectRatio],
 };
