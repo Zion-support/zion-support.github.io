@@ -640,6 +640,163 @@ const aiServices = [
     pricing: '$5,000 - $40,000/month',
     category: 'Blockchain AI',
     popular: true
+  },
+  {
+    title: 'AI-Powered Quantum Computing',
+    description: 'Quantum machine learning algorithms and quantum AI optimization services.',
+    icon: Cpu,
+    features: ['Quantum ML Algorithms', 'Optimization Problems', 'Quantum Neural Networks', 'Hybrid Classical-Quantum'],
+    pricing: '$25,000 - $100,000/project',
+    category: 'Quantum AI',
+    popular: true
+  },
+  {
+    title: 'AI Edge Computing Intelligence',
+    description: 'Deploy AI models at the edge for real-time processing and reduced latency.',
+    icon: Server,
+    features: ['Edge Model Deployment', 'Real-time Processing', 'Bandwidth Optimization', 'Offline Capability'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Edge AI'
+  },
+  {
+    title: 'AI-Powered Cybersecurity',
+    description: 'Advanced AI-driven cybersecurity solutions for threat detection and prevention.',
+    icon: Shield,
+    features: ['Threat Hunting', 'Anomaly Detection', 'Automated Response', 'Behavioral Analysis'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Cybersecurity AI',
+    popular: true
+  },
+  {
+    title: 'AI Climate Change Solutions',
+    description: 'AI-powered climate modeling, carbon tracking, and environmental optimization.',
+    icon: Sprout,
+    features: ['Climate Modeling', 'Carbon Footprint Analysis', 'Renewable Energy Optimization', 'Environmental Monitoring'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Climate AI'
+  },
+  {
+    title: 'AI-Powered Space Technology',
+    description: 'AI solutions for satellite operations, space exploration, and orbital mechanics.',
+    icon: Rocket,
+    features: ['Satellite Operations', 'Orbital Prediction', 'Space Debris Tracking', 'Mission Planning'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Space AI'
+  },
+  {
+    title: 'AI Autonomous Vehicle Systems',
+    description: 'Advanced AI systems for autonomous vehicles and smart transportation.',
+    icon: Car,
+    features: ['Computer Vision', 'Path Planning', 'Sensor Fusion', 'Safety Systems'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Autonomous Vehicles'
+  },
+  {
+    title: 'AI-Powered Metaverse Solutions',
+    description: 'AI-driven virtual world creation, avatars, and immersive experiences.',
+    icon: Monitor,
+    features: ['Virtual World Generation', 'AI Avatars', 'Behavioral Simulation', 'Immersive Experiences'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Metaverse AI'
+  },
+  {
+    title: 'AI Brain-Computer Interface',
+    description: 'AI-powered brain-computer interface for medical and assistive technologies.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'Motor Control', 'Cognitive Enhancement', 'Medical Applications'],
+    pricing: '$75,000 - $300,000/project',
+    category: 'BCI AI'
+  },
+  {
+    title: 'AI-Powered Digital Twin',
+    description: 'Create intelligent digital twins with AI-driven simulation and prediction.',
+    icon: Building,
+    features: ['Real-time Simulation', 'Predictive Maintenance', 'Performance Optimization', 'Virtual Testing'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Digital Twin AI',
+    popular: true
+  },
+  {
+    title: 'AI Synthetic Data Generation',
+    description: 'Generate high-quality synthetic data for training and testing AI models.',
+    icon: Database,
+    features: ['Privacy-Preserving Data', 'Model Training Data', 'Data Augmentation', 'Quality Validation'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'Synthetic Data'
+  },
+  {
+    title: 'AI-Powered Robotic Process Automation',
+    description: 'Intelligent RPA with AI decision-making and learning capabilities.',
+    icon: Bot,
+    features: ['Intelligent Automation', 'Process Learning', 'Exception Handling', 'Continuous Improvement'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'Intelligent RPA',
+    popular: true
+  },
+  {
+    title: 'AI Federated Learning Platform',
+    description: 'Distributed AI training while preserving data privacy and security.',
+    icon: Network,
+    features: ['Privacy-Preserving Training', 'Distributed Models', 'Secure Aggregation', 'Compliance Tools'],
+    pricing: '$30,000 - $150,000/setup',
+    category: 'Federated Learning'
+  },
+  {
+    title: 'AI-Powered Graph Analytics',
+    description: 'Advanced graph neural networks for complex relationship analysis.',
+    icon: Network,
+    features: ['Graph Neural Networks', 'Relationship Mining', 'Pattern Discovery', 'Network Analysis'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Graph AI'
+  },
+  {
+    title: 'AI Multi-Modal Learning',
+    description: 'AI systems that process and learn from multiple data types simultaneously.',
+    icon: Eye,
+    features: ['Text-Image Processing', 'Audio-Visual Learning', 'Cross-Modal Understanding', 'Unified Models'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'Multi-Modal AI'
+  },
+  {
+    title: 'AI Explainable AI (XAI) Platform',
+    description: 'Make AI decisions transparent and interpretable for business users.',
+    icon: FileText,
+    features: ['Decision Explanation', 'Model Interpretability', 'Bias Detection', 'Trust Metrics'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Explainable AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Neuromorphic Computing',
+    description: 'Brain-inspired AI computing for ultra-efficient processing and learning.',
+    icon: Cpu,
+    features: ['Spiking Neural Networks', 'Event-Driven Processing', 'Ultra-Low Power', 'Real-time Learning'],
+    pricing: '$50,000 - $250,000/project',
+    category: 'Neuromorphic AI'
+  },
+  {
+    title: 'AI Swarm Intelligence',
+    description: 'Coordinated AI systems for distributed problem-solving and optimization.',
+    icon: Users,
+    features: ['Distributed Decision Making', 'Collective Intelligence', 'Emergent Behavior', 'Scalable Coordination'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Swarm AI'
+  },
+  {
+    title: 'AI-Powered Augmented Reality',
+    description: 'AI-enhanced AR experiences with intelligent object recognition and interaction.',
+    icon: Monitor,
+    features: ['Object Recognition', 'Spatial Understanding', 'Intelligent Overlays', 'Context Awareness'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'AR AI'
+  },
+  {
+    title: 'AI Continuous Learning Systems',
+    description: 'AI systems that continuously learn and adapt without forgetting previous knowledge.',
+    icon: Brain,
+    features: ['Lifelong Learning', 'Catastrophic Forgetting Prevention', 'Knowledge Retention', 'Adaptive Learning'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'Continuous Learning AI'
   }
 ];
 

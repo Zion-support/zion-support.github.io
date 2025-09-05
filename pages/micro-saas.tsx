@@ -45,7 +45,8 @@ import {
   ShoppingCart,
   Home,
   Database,
-  Vote
+  Vote,
+  Brain
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -195,6 +196,172 @@ const microSaaSProducts = [
     features: ['Course Creation', 'Student Management', 'Progress Tracking', 'Certificates'],
     pricing: '$79 - $399/month',
     category: 'Education'
+  },
+  {
+    title: 'Real Estate CRM',
+    description: 'Comprehensive CRM solution for real estate professionals and agencies.',
+    icon: Home,
+    features: ['Lead Management', 'Property Listings', 'Client Communication', 'Transaction Tracking'],
+    pricing: '$99 - $499/month',
+    category: 'Real Estate'
+  },
+  {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review with security, performance, and best practice analysis.',
+    icon: Code,
+    features: ['Security Scanning', 'Performance Analysis', 'Code Quality Metrics', 'Learning Recommendations'],
+    pricing: '$199 - $999/month',
+    category: 'Development Tools',
+    popular: true
+  },
+  {
+    title: 'Blockchain Transaction Monitor',
+    description: 'Real-time blockchain transaction monitoring and analytics across multiple networks.',
+    icon: Network,
+    features: ['Multi-chain Support', 'Transaction Tracking', 'Smart Contract Monitoring', 'Alert System'],
+    pricing: '$299 - $1,499/month',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'IoT Device Management Platform',
+    description: 'Centralized management and monitoring for IoT devices and sensors.',
+    icon: Cpu,
+    features: ['Device Registration', 'Remote Monitoring', 'Firmware Updates', 'Data Analytics'],
+    pricing: '$149 - $799/month',
+    category: 'IoT'
+  },
+  {
+    title: 'Quantum Computing Simulator',
+    description: 'Cloud-based quantum computing simulation and algorithm development platform.',
+    icon: Cpu,
+    features: ['Quantum Circuit Design', 'Algorithm Testing', 'Performance Simulation', 'Educational Tools'],
+    pricing: '$499 - $2,999/month',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'AR/VR Content Creation Studio',
+    description: 'No-code AR/VR content creation and deployment platform for businesses.',
+    icon: Monitor,
+    features: ['Visual Editor', '3D Asset Library', 'Multi-platform Deployment', 'Analytics Dashboard'],
+    pricing: '$199 - $1,299/month',
+    category: 'AR/VR'
+  },
+  {
+    title: 'Edge Computing Orchestrator',
+    description: 'Intelligent edge computing resource management and application deployment.',
+    icon: Server,
+    features: ['Edge Node Management', 'Load Balancing', 'Auto-scaling', 'Performance Monitoring'],
+    pricing: '$399 - $1,999/month',
+    category: 'Edge Computing'
+  },
+  {
+    title: 'Digital Twin Platform',
+    description: 'Create and manage digital twins of physical assets and processes.',
+    icon: Building,
+    features: ['3D Modeling', 'Real-time Sync', 'Predictive Analytics', 'Simulation Engine'],
+    pricing: '$599 - $3,999/month',
+    category: 'Digital Twin',
+    popular: true
+  },
+  {
+    title: 'AI Model Marketplace',
+    description: 'Marketplace for buying, selling, and deploying pre-trained AI models.',
+    icon: ShoppingCart,
+    features: ['Model Discovery', 'API Integration', 'Performance Metrics', 'Revenue Sharing'],
+    pricing: '$99 - $999/month',
+    category: 'AI Marketplace'
+  },
+  {
+    title: 'Cybersecurity Threat Intelligence',
+    description: 'Real-time threat intelligence and security monitoring for organizations.',
+    icon: Shield,
+    features: ['Threat Detection', 'Vulnerability Scanning', 'Incident Response', 'Compliance Reporting'],
+    pricing: '$299 - $1,999/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'Sustainable Tech Carbon Tracker',
+    description: 'Track and optimize carbon footprint of digital operations and cloud usage.',
+    icon: Sprout,
+    features: ['Carbon Footprint Tracking', 'Optimization Recommendations', 'Sustainability Reporting', 'Green Energy Integration'],
+    pricing: '$149 - $799/month',
+    category: 'Sustainability'
+  },
+  {
+    title: 'Voice Commerce Platform',
+    description: 'Voice-activated e-commerce and customer service platform.',
+    icon: Mic,
+    features: ['Voice Shopping', 'Order Management', 'Payment Processing', 'Customer Analytics'],
+    pricing: '$199 - $1,299/month',
+    category: 'Voice Commerce'
+  },
+  {
+    title: 'Neural Network Visualizer',
+    description: 'Interactive visualization and debugging tools for machine learning models.',
+    icon: Brain,
+    features: ['Model Visualization', 'Layer Analysis', 'Training Monitoring', 'Debugging Tools'],
+    pricing: '$99 - $599/month',
+    category: 'ML Tools'
+  },
+  {
+    title: 'Smart Contract Auditor',
+    description: 'Automated smart contract security analysis and vulnerability detection.',
+    icon: Lock,
+    features: ['Security Analysis', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Checks'],
+    pricing: '$199 - $1,499/month',
+    category: 'Blockchain Security'
+  },
+  {
+    title: '5G Network Optimizer',
+    description: 'AI-powered 5G network optimization and performance monitoring platform.',
+    icon: Network,
+    features: ['Network Analysis', 'Performance Optimization', 'Predictive Maintenance', 'Quality Metrics'],
+    pricing: '$399 - $2,499/month',
+    category: '5G Technology'
+  },
+  {
+    title: 'Robotic Process Automation (RPA) Studio',
+    description: 'Visual RPA development platform for automating business processes.',
+    icon: Bot,
+    features: ['Visual Designer', 'Process Recording', 'Bot Management', 'Analytics Dashboard'],
+    pricing: '$149 - $999/month',
+    category: 'RPA',
+    popular: true
+  },
+  {
+    title: 'Federated Learning Platform',
+    description: 'Distributed machine learning platform that preserves data privacy.',
+    icon: Database,
+    features: ['Privacy-Preserving ML', 'Distributed Training', 'Model Aggregation', 'Compliance Tools'],
+    pricing: '$299 - $1,999/month',
+    category: 'Privacy-Preserving AI'
+  },
+  {
+    title: 'Graph Database Analytics',
+    description: 'Advanced graph database analytics and relationship mapping platform.',
+    icon: Network,
+    features: ['Graph Visualization', 'Relationship Analysis', 'Pattern Detection', 'Query Optimization'],
+    pricing: '$199 - $1,299/month',
+    category: 'Graph Analytics'
+  },
+  {
+    title: 'Microservices Orchestrator',
+    description: 'Intelligent microservices management and orchestration platform.',
+    icon: Server,
+    features: ['Service Discovery', 'Load Balancing', 'Circuit Breakers', 'Health Monitoring'],
+    pricing: '$299 - $1,999/month',
+    category: 'Microservices'
+  },
+  {
+    title: 'AI Ethics Compliance Monitor',
+    description: 'Automated AI ethics compliance monitoring and bias detection platform.',
+    icon: Shield,
+    features: ['Bias Detection', 'Fairness Metrics', 'Compliance Reporting', 'Ethics Guidelines'],
+    pricing: '$199 - $1,499/month',
+    category: 'AI Ethics'
   },
   {
     title: 'Real Estate CRM',

@@ -19,7 +19,11 @@ import {
   Star, 
   Phone, 
   MapPin,
-  ShoppingCart
+  ShoppingCart,
+  Mail,
+  Package,
+  DollarSign,
+  Settings
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -131,6 +135,168 @@ const itServices = [
     pricing: '$50,000 - $250,000/project',
     category: 'Quantum',
     popular: false
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Deploy and manage edge computing infrastructure for low-latency applications.',
+    icon: Server,
+    features: ['Edge Node Deployment', 'Content Delivery Networks', 'IoT Integration', 'Real-time Processing'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: 'Blockchain Infrastructure Services',
+    description: 'Complete blockchain infrastructure setup and management for enterprise applications.',
+    icon: Network,
+    features: ['Blockchain Deployment', 'Smart Contract Development', 'Node Management', 'Security Hardening'],
+    pricing: '$30,000 - $150,000/setup',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network infrastructure design, deployment, and optimization services.',
+    icon: Network,
+    features: ['5G Core Network', 'RAN Implementation', 'Network Slicing', 'Performance Optimization'],
+    pricing: '$100,000 - $500,000/project',
+    category: '5G Technology'
+  },
+  {
+    title: 'IoT Platform Development',
+    description: 'Comprehensive IoT platform development and device management solutions.',
+    icon: Cpu,
+    features: ['Device Management', 'Data Analytics', 'Real-time Monitoring', 'Security Framework'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'IoT',
+    popular: true
+  },
+  {
+    title: 'Digital Transformation Consulting',
+    description: 'Strategic digital transformation consulting and implementation services.',
+    icon: Zap,
+    features: ['Technology Assessment', 'Digital Strategy', 'Change Management', 'Implementation Support'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Consulting',
+    popular: true
+  },
+  {
+    title: 'DevOps & CI/CD Implementation',
+    description: 'Complete DevOps culture implementation with CI/CD pipelines and automation.',
+    icon: Settings,
+    features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Automated Testing', 'Deployment Automation'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'DevOps',
+    popular: true
+  },
+  {
+    title: 'Microservices Architecture',
+    description: 'Design and implement microservices architecture for scalable applications.',
+    icon: Server,
+    features: ['Service Design', 'API Gateway', 'Service Mesh', 'Container Orchestration'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Architecture'
+  },
+  {
+    title: 'Data Center Migration Services',
+    description: 'Complete data center migration and consolidation services.',
+    icon: Server,
+    features: ['Migration Planning', 'Data Transfer', 'Downtime Minimization', 'Testing & Validation'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Migration'
+  },
+  {
+    title: 'Disaster Recovery Solutions',
+    description: 'Comprehensive disaster recovery and business continuity solutions.',
+    icon: Shield,
+    features: ['Backup Strategies', 'Recovery Testing', 'Failover Systems', 'RTO/RPO Optimization'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'Disaster Recovery',
+    popular: true
+  },
+  {
+    title: 'API Management Platform',
+    description: 'Complete API management platform with security, monitoring, and analytics.',
+    icon: Network,
+    features: ['API Gateway', 'Rate Limiting', 'Authentication', 'Analytics Dashboard'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'API Management'
+  },
+  {
+    title: 'Identity & Access Management (IAM)',
+    description: 'Comprehensive identity and access management solutions for enterprise security.',
+    icon: Lock,
+    features: ['Single Sign-On', 'Multi-Factor Authentication', 'Role-Based Access', 'Compliance Reporting'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Security',
+    popular: true
+  },
+  {
+    title: 'Performance Testing & Optimization',
+    description: 'Comprehensive performance testing and optimization services for applications.',
+    icon: Zap,
+    features: ['Load Testing', 'Stress Testing', 'Performance Profiling', 'Optimization Recommendations'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'Performance'
+  },
+  {
+    title: 'Cloud Cost Optimization',
+    description: 'Optimize cloud infrastructure costs and resource utilization.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Resource Rightsizing', 'Reserved Instances', 'Cost Monitoring'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Cloud Optimization',
+    popular: true
+  },
+  {
+    title: 'IT Service Management (ITSM)',
+    description: 'Implement IT service management processes and tools for better service delivery.',
+    icon: Settings,
+    features: ['Incident Management', 'Change Management', 'Service Catalog', 'SLA Monitoring'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'ITSM'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Implement zero trust security model for enhanced enterprise security.',
+    icon: Shield,
+    features: ['Identity Verification', 'Device Trust', 'Network Segmentation', 'Continuous Monitoring'],
+    pricing: '$30,000 - $150,000/setup',
+    category: 'Security Architecture',
+    popular: true
+  },
+  {
+    title: 'Hybrid Cloud Solutions',
+    description: 'Design and implement hybrid cloud solutions for seamless cloud integration.',
+    icon: Cloud,
+    features: ['Multi-cloud Strategy', 'Data Synchronization', 'Workload Migration', 'Security Integration'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Hybrid Cloud'
+  },
+  {
+    title: 'IT Asset Management',
+    description: 'Complete IT asset lifecycle management and optimization services.',
+    icon: Package,
+    features: ['Asset Discovery', 'License Management', 'Lifecycle Tracking', 'Cost Optimization'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Asset Management'
+  },
+  {
+    title: 'Network Security Operations Center (SOC)',
+    description: '24/7 security monitoring and incident response services.',
+    icon: Shield,
+    features: ['Threat Monitoring', 'Incident Response', 'Security Analytics', 'Compliance Reporting'],
+    pricing: '$50,000 - $250,000/month',
+    category: 'SOC Services',
+    popular: true
+  },
+  {
+    title: 'IT Governance & Risk Management',
+    description: 'Comprehensive IT governance and risk management framework implementation.',
+    icon: Lock,
+    features: ['Risk Assessment', 'Policy Development', 'Compliance Monitoring', 'Audit Support'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'Governance'
   }
 ];
 
@@ -427,6 +593,76 @@ export default function ITServicesPage() {
               >
                 View All Services
               </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-20 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Ready to Transform Your IT Infrastructure?
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+              Our expert team is ready to help you implement cutting-edge IT solutions. 
+              Contact us today for a free consultation and custom quote tailored to your needs.
+            </p>
+            
+            <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
+              <div className="space-y-4 text-left">
+                <div className="flex items-center">
+                  <Phone className="w-6 h-6 text-blue-600 mr-3" />
+                  <div>
+                    <p className="font-semibold text-gray-900">Phone</p>
+                    <p className="text-gray-600">+1 302 464 0950</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <Mail className="w-6 h-6 text-blue-600 mr-3" />
+                  <div>
+                    <p className="font-semibold text-gray-900">Email</p>
+                    <p className="text-gray-600">kleber@ziontechgroup.com</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <MapPin className="w-6 h-6 text-blue-600 mr-3" />
+                  <div>
+                    <p className="font-semibold text-gray-900">Address</p>
+                    <p className="text-gray-600">364 E Main St STE 1008, Middletown DE 19709</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">Why Choose Zion Tech Group?</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600">
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <span>24/7 Expert Support</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <span>Competitive Pricing</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <span>Rapid Implementation</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <span>Proven Track Record</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
