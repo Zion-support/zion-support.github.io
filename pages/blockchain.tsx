@@ -14,7 +14,7 @@ import {
   Mail, 
   MapPin 
 } from 'lucide-react';
-import Layout from './components/Layout';
+import MainLayout from '../src/components/layout/MainLayout';
 
 const features = [
   {
@@ -75,7 +75,7 @@ const stats = [
 
 export default function BlockchainPage() {
   return (
-    <Layout
+    <MainLayout
       title="Blockchain Solutions - Zion Tech Group"
       description="Expert blockchain development services including smart contracts, DeFi platforms, NFT marketplaces, and blockchain integration solutions."
       keywords="blockchain development, smart contracts, DeFi, NFT marketplace, cryptocurrency, blockchain integration"
@@ -257,6 +257,6 @@ export default function BlockchainPage() {
           </motion.div>
         </div>
       </section>
-    </Layout>
+    </MainLayout>
   );
 }

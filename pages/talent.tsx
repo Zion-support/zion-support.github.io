@@ -14,7 +14,8 @@ import {
   Globe,
   Award,
   Heart,
-  Zap
+  Zap,
+  Calendar
 } from 'lucide-react';
 
 export default function TalentPage() {
