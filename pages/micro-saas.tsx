@@ -57,7 +57,8 @@ import {
   Truck,
   GraduationCap,
   ClipboardList,
-  TreePine
+  TreePine,
+  Gamepad2
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -388,6 +389,323 @@ const microSaaSProducts = [
     benefits: ['Immersive Learning', 'Better Retention', 'Cost Savings', 'Scalable Training', 'Performance Tracking'],
     marketPrice: '$150 - $800/month',
     link: 'https://ziontechgroup.com/virtual-training-platform',
+    contact: '+1 302 464 0950'
+  },
+
+  // Advanced AI & Machine Learning Solutions
+  {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Intelligent code review platform that automatically detects bugs, security vulnerabilities, and suggests optimizations.',
+    icon: Code,
+    features: ['Automated Code Review', 'Security Vulnerability Detection', 'Performance Optimization', 'Best Practice Suggestions', 'Integration Support', 'Team Collaboration'],
+    pricing: '$39 - $199/month',
+    category: 'AI Development',
+    popular: true,
+    benefits: ['Faster Code Reviews', 'Better Code Quality', 'Security Enhancement', 'Learning Opportunities', 'Team Productivity'],
+    marketPrice: '$60 - $300/month',
+    link: 'https://ziontechgroup.com/ai-code-review-assistant',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Smart Contract Development Platform',
+    description: 'No-code blockchain smart contract creation with automated testing, deployment, and monitoring capabilities.',
+    icon: Database,
+    features: ['No-code Interface', 'Smart Contract Templates', 'Automated Testing', 'Deployment Tools', 'Monitoring Dashboard', 'Security Auditing'],
+    pricing: '$79 - $399/month',
+    category: 'Blockchain',
+    popular: true,
+    benefits: ['Faster Development', 'Reduced Costs', 'Enhanced Security', 'Easy Deployment', 'No Coding Required'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/smart-contract-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI-Powered Legal Document Analyzer',
+    description: 'Intelligent legal document analysis with contract review, risk assessment, and compliance checking.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction', 'Legal Research', 'Document Comparison'],
+    pricing: '$149 - $699/month',
+    category: 'LegalTech',
+    popular: true,
+    benefits: ['Time Savings', 'Risk Reduction', 'Better Accuracy', 'Cost Efficiency', 'Compliance Assurance'],
+    marketPrice: '$250 - $1,000/month',
+    link: 'https://ziontechgroup.com/ai-legal-document-analyzer',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Predictive Maintenance System',
+    description: 'AI-driven equipment maintenance prediction with IoT integration, failure forecasting, and cost optimization.',
+    icon: Settings,
+    features: ['Failure Prediction', 'IoT Integration', 'Cost Optimization', 'Maintenance Scheduling', 'Performance Monitoring', 'Alert System'],
+    pricing: '$199 - $999/month',
+    category: 'IoT & Maintenance',
+    popular: true,
+    benefits: ['Reduced Downtime', 'Cost Savings', 'Extended Equipment Life', 'Predictive Insights', 'Operational Efficiency'],
+    marketPrice: '$300 - $1,500/month',
+    link: 'https://ziontechgroup.com/predictive-maintenance-system',
+    contact: '+1 302 464 0950'
+  },
+
+  // Advanced Analytics & Business Intelligence
+  {
+    title: 'Real-Time Customer Analytics',
+    description: 'Advanced customer behavior analytics with real-time insights, segmentation, and personalized recommendations.',
+    icon: Users,
+    features: ['Real-time Analytics', 'Customer Segmentation', 'Behavior Tracking', 'Personalization Engine', 'Predictive Modeling', 'ROI Tracking'],
+    pricing: '$89 - $449/month',
+    category: 'Customer Analytics',
+    popular: true,
+    benefits: ['Better Customer Understanding', 'Increased Sales', 'Personalized Experiences', 'Data-Driven Decisions', 'Higher Retention'],
+    marketPrice: '$140 - $700/month',
+    link: 'https://ziontechgroup.com/real-time-customer-analytics',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI-Powered Financial Forecasting',
+    description: 'Intelligent financial forecasting with scenario planning, risk analysis, and automated reporting.',
+    icon: TrendingUp,
+    features: ['Financial Forecasting', 'Scenario Planning', 'Risk Analysis', 'Automated Reporting', 'Cash Flow Prediction', 'Investment Analysis'],
+    pricing: '$129 - $599/month',
+    category: 'FinTech',
+    popular: true,
+    benefits: ['Better Financial Planning', 'Risk Mitigation', 'Improved Accuracy', 'Time Savings', 'Strategic Insights'],
+    marketPrice: '$200 - $900/month',
+    link: 'https://ziontechgroup.com/ai-financial-forecasting',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Social Media Intelligence Platform',
+    description: 'Comprehensive social media monitoring with sentiment analysis, competitor tracking, and influencer identification.',
+    icon: Globe,
+    features: ['Sentiment Analysis', 'Competitor Tracking', 'Influencer Identification', 'Trend Analysis', 'Brand Monitoring', 'Crisis Management'],
+    pricing: '$59 - $299/month',
+    category: 'Social Media',
+    popular: true,
+    benefits: ['Brand Protection', 'Competitive Advantage', 'Better Engagement', 'Crisis Prevention', 'ROI Measurement'],
+    marketPrice: '$90 - $450/month',
+    link: 'https://ziontechgroup.com/social-media-intelligence',
+    contact: '+1 302 464 0950'
+  },
+
+  // E-commerce & Retail Solutions
+  {
+    title: 'AI-Powered Product Recommendation Engine',
+    description: 'Advanced product recommendation system with machine learning, personalization, and conversion optimization.',
+    icon: ShoppingCart,
+    features: ['ML Recommendations', 'Personalization', 'A/B Testing', 'Conversion Optimization', 'Real-time Updates', 'Analytics Dashboard'],
+    pricing: '$79 - $399/month',
+    category: 'E-commerce',
+    popular: true,
+    benefits: ['Increased Sales', 'Better Customer Experience', 'Higher Conversion', 'Personalized Shopping', 'Revenue Growth'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/ai-product-recommendations',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Dynamic Pricing Optimization',
+    description: 'AI-driven dynamic pricing with competitor analysis, demand forecasting, and profit maximization.',
+    icon: DollarSign,
+    features: ['Dynamic Pricing', 'Competitor Analysis', 'Demand Forecasting', 'Profit Optimization', 'Price Testing', 'Market Intelligence'],
+    pricing: '$99 - $499/month',
+    category: 'E-commerce',
+    popular: true,
+    benefits: ['Increased Profits', 'Competitive Advantage', 'Better Margins', 'Market Responsiveness', 'Revenue Optimization'],
+    marketPrice: '$150 - $750/month',
+    link: 'https://ziontechgroup.com/dynamic-pricing-optimization',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Omnichannel Customer Experience Platform',
+    description: 'Unified customer experience across all channels with seamless integration and personalized interactions.',
+    icon: Smartphone,
+    features: ['Omnichannel Integration', 'Customer Journey Mapping', 'Personalization', 'Unified Analytics', 'Cross-channel Messaging', 'Loyalty Programs'],
+    pricing: '$149 - $699/month',
+    category: 'Customer Experience',
+    popular: true,
+    benefits: ['Consistent Experience', 'Higher Satisfaction', 'Increased Loyalty', 'Better Engagement', 'Unified Management'],
+    marketPrice: '$250 - $1,000/month',
+    link: 'https://ziontechgroup.com/omnichannel-customer-experience',
+    contact: '+1 302 464 0950'
+  },
+
+  // Healthcare & Life Sciences
+  {
+    title: 'AI-Powered Medical Image Analysis',
+    description: 'Advanced medical image analysis with AI diagnosis assistance, anomaly detection, and clinical decision support.',
+    icon: Eye,
+    features: ['Medical Image Analysis', 'AI Diagnosis Support', 'Anomaly Detection', 'Clinical Decision Support', 'Integration APIs', 'Compliance Tools'],
+    pricing: '$299 - $1,499/month',
+    category: 'Healthcare AI',
+    popular: true,
+    benefits: ['Faster Diagnosis', 'Improved Accuracy', 'Better Patient Care', 'Reduced Errors', 'Clinical Efficiency'],
+    marketPrice: '$500 - $2,000/month',
+    link: 'https://ziontechgroup.com/ai-medical-image-analysis',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Telemedicine Platform',
+    description: 'Comprehensive telemedicine solution with video consultations, patient management, and prescription management.',
+    icon: Video,
+    features: ['Video Consultations', 'Patient Management', 'Prescription Management', 'Appointment Scheduling', 'Health Records', 'Payment Processing'],
+    pricing: '$199 - $999/month',
+    category: 'Healthcare',
+    popular: true,
+    benefits: ['Remote Healthcare', 'Better Access', 'Cost Efficiency', 'Patient Convenience', 'Scalable Care'],
+    marketPrice: '$300 - $1,500/month',
+    link: 'https://ziontechgroup.com/telemedicine-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Clinical Trial Management System',
+    description: 'End-to-end clinical trial management with patient recruitment, data collection, and regulatory compliance.',
+    icon: ClipboardList,
+    features: ['Patient Recruitment', 'Data Collection', 'Regulatory Compliance', 'Trial Monitoring', 'Document Management', 'Analytics'],
+    pricing: '$399 - $1,999/month',
+    category: 'Clinical Research',
+    popular: true,
+    benefits: ['Faster Trials', 'Better Compliance', 'Reduced Costs', 'Improved Data Quality', 'Streamlined Processes'],
+    marketPrice: '$600 - $3,000/month',
+    link: 'https://ziontechgroup.com/clinical-trial-management',
+    contact: '+1 302 464 0950'
+  },
+
+  // Manufacturing & Industrial Solutions
+  {
+    title: 'Smart Manufacturing Dashboard',
+    description: 'Real-time manufacturing monitoring with IoT integration, quality control, and production optimization.',
+    icon: Building,
+    features: ['Real-time Monitoring', 'IoT Integration', 'Quality Control', 'Production Optimization', 'Predictive Analytics', 'Alert System'],
+    pricing: '$249 - $1,249/month',
+    category: 'Manufacturing',
+    popular: true,
+    benefits: ['Increased Efficiency', 'Quality Improvement', 'Cost Reduction', 'Predictive Maintenance', 'Better Visibility'],
+    marketPrice: '$400 - $2,000/month',
+    link: 'https://ziontechgroup.com/smart-manufacturing-dashboard',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Supply Chain Visibility Platform',
+    description: 'End-to-end supply chain tracking with real-time visibility, risk management, and optimization recommendations.',
+    icon: Truck,
+    features: ['End-to-end Tracking', 'Real-time Visibility', 'Risk Management', 'Optimization Recommendations', 'Supplier Management', 'Analytics'],
+    pricing: '$179 - $899/month',
+    category: 'Supply Chain',
+    popular: true,
+    benefits: ['Better Visibility', 'Risk Mitigation', 'Cost Optimization', 'Improved Planning', 'Supplier Management'],
+    marketPrice: '$300 - $1,400/month',
+    link: 'https://ziontechgroup.com/supply-chain-visibility',
+    contact: '+1 302 464 0950'
+  },
+
+  // Real Estate & Property Management
+  {
+    title: 'AI-Powered Property Valuation',
+    description: 'Automated property valuation with market analysis, comparable sales, and investment potential assessment.',
+    icon: Home,
+    features: ['Automated Valuation', 'Market Analysis', 'Comparable Sales', 'Investment Analysis', 'Risk Assessment', 'Report Generation'],
+    pricing: '$49 - $249/month',
+    category: 'Real Estate',
+    popular: true,
+    benefits: ['Accurate Valuations', 'Time Savings', 'Better Decisions', 'Market Insights', 'Investment Guidance'],
+    marketPrice: '$80 - $400/month',
+    link: 'https://ziontechgroup.com/ai-property-valuation',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Smart Building Management System',
+    description: 'IoT-powered building management with energy optimization, tenant services, and predictive maintenance.',
+    icon: Building,
+    features: ['Energy Optimization', 'Tenant Services', 'Predictive Maintenance', 'IoT Integration', 'Analytics Dashboard', 'Mobile App'],
+    pricing: '$199 - $999/month',
+    category: 'Property Management',
+    popular: true,
+    benefits: ['Energy Savings', 'Better Tenant Experience', 'Reduced Maintenance', 'Operational Efficiency', 'Cost Optimization'],
+    marketPrice: '$300 - $1,500/month',
+    link: 'https://ziontechgroup.com/smart-building-management',
+    contact: '+1 302 464 0950'
+  },
+
+  // Environmental & Sustainability Solutions
+  {
+    title: 'Carbon Footprint Tracking Platform',
+    description: 'Comprehensive carbon footprint monitoring with reduction strategies, reporting, and sustainability analytics.',
+    icon: TreePine,
+    features: ['Carbon Tracking', 'Reduction Strategies', 'Sustainability Reporting', 'Benchmarking', 'Goal Setting', 'Analytics'],
+    pricing: '$79 - $399/month',
+    category: 'Sustainability',
+    popular: true,
+    benefits: ['Environmental Impact', 'Compliance', 'Cost Savings', 'Brand Reputation', 'Sustainability Goals'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/carbon-footprint-tracking',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Renewable Energy Management System',
+    description: 'Smart renewable energy monitoring with optimization, storage management, and grid integration.',
+    icon: Zap,
+    features: ['Energy Monitoring', 'Optimization', 'Storage Management', 'Grid Integration', 'Predictive Analytics', 'Cost Analysis'],
+    pricing: '$149 - $699/month',
+    category: 'Renewable Energy',
+    popular: true,
+    benefits: ['Energy Optimization', 'Cost Savings', 'Grid Integration', 'Better ROI', 'Environmental Impact'],
+    marketPrice: '$250 - $1,000/month',
+    link: 'https://ziontechgroup.com/renewable-energy-management',
+    contact: '+1 302 464 0950'
+  },
+
+  // Gaming & Entertainment Solutions
+  {
+    title: 'AI-Powered Game Analytics',
+    description: 'Advanced gaming analytics with player behavior analysis, monetization optimization, and retention strategies.',
+    icon: Gamepad2,
+    features: ['Player Analytics', 'Behavior Analysis', 'Monetization Optimization', 'Retention Strategies', 'A/B Testing', 'Real-time Dashboards'],
+    pricing: '$99 - $499/month',
+    category: 'Gaming',
+    popular: true,
+    benefits: ['Better Player Experience', 'Increased Revenue', 'Higher Retention', 'Data-Driven Decisions', 'Competitive Advantage'],
+    marketPrice: '$150 - $750/month',
+    link: 'https://ziontechgroup.com/ai-game-analytics',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Content Streaming Optimization',
+    description: 'AI-powered content delivery optimization with adaptive streaming, quality management, and viewer analytics.',
+    icon: Video,
+    features: ['Adaptive Streaming', 'Quality Management', 'Viewer Analytics', 'CDN Optimization', 'Bandwidth Management', 'Performance Monitoring'],
+    pricing: '$199 - $999/month',
+    category: 'Streaming',
+    popular: true,
+    benefits: ['Better Streaming Quality', 'Reduced Costs', 'Improved Viewer Experience', 'Optimized Delivery', 'Analytics Insights'],
+    marketPrice: '$300 - $1,500/month',
+    link: 'https://ziontechgroup.com/content-streaming-optimization',
+    contact: '+1 302 464 0950'
+  },
+
+  // Agriculture & Food Tech
+  {
+    title: 'Precision Agriculture Platform',
+    description: 'IoT-powered precision farming with crop monitoring, yield prediction, and resource optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Resource Optimization', 'Weather Integration', 'Pest Detection', 'Analytics'],
+    pricing: '$149 - $699/month',
+    category: 'Agriculture',
+    popular: true,
+    benefits: ['Increased Yields', 'Resource Efficiency', 'Cost Reduction', 'Better Planning', 'Environmental Impact'],
+    marketPrice: '$250 - $1,000/month',
+    link: 'https://ziontechgroup.com/precision-agriculture',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Food Safety Management System',
+    description: 'Comprehensive food safety monitoring with traceability, compliance tracking, and quality assurance.',
+    icon: Package,
+    features: ['Traceability', 'Compliance Tracking', 'Quality Assurance', 'Temperature Monitoring', 'Documentation', 'Alert System'],
+    pricing: '$99 - $499/month',
+    category: 'Food Safety',
+    popular: true,
+    benefits: ['Food Safety', 'Compliance', 'Risk Reduction', 'Quality Assurance', 'Brand Protection'],
+    marketPrice: '$150 - $750/month',
+    link: 'https://ziontechgroup.com/food-safety-management',
     contact: '+1 302 464 0950'
   }
 ];
