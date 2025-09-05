@@ -79,15 +79,24 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
           transition = {;
   { "duration": "0.6",;
   "delay": "0.4;
+<<<<<<< HEAD
 "}}
         >";
           <h3 className="text-3xl font-bold text-white text-center mb-12">;
             Strategic Global Locations;
           </h3>;
+=======
+
+>>>>>>> origin/main
 }}
         >"
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Strategic Global Locations
+<<<<<<< HEAD
+=======
+          
+
+>>>>>>> origin/main
           <div className="grid grid - cols - 1 "md": "gri d - cols - 2 "lg": gri d - cols - 4 gap-8">;
             {globalOffices.map((office", index) => (<motion.div;
                 key={office.city}
@@ -132,6 +141,7 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
           transition = {;
   { "duration": "0.6",;
   "delay": "0.8;
+<<<<<<< HEAD
 "}}
         >;
           <div className="bg-slate - 800 border border-slate - 700 rounded-2xl p -8">;
@@ -143,6 +153,9 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
               Our distributed team and cloud infrastructure ensure seamless service delivery              across all time zones and regions, with local expertise and global capabilities.</p>;
           </div>;
         </motion.div>;
+=======
+
+>>>>>>> origin/main
 }}
         >
           <div className="bg-slate - 800 border border-slate - 700 rounded-2xl p -8">
@@ -154,6 +167,10 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
               Our distributed team and cloud infrastructure ensure seamless service delivery              across all time zones and regions, with local expertise and global capabilities.</p>
           </div>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
         <motion.div;
           className="text-center"          initial = {;
   { "opacity": "0",;
@@ -167,6 +184,7 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
           transition = {;
   { "duration": "0.6",;
   "delay": "1.0;
+<<<<<<< HEAD
 "}}
         >";
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">";
@@ -187,6 +205,9 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
             </div>;
           </div>;
         </motion.div>;
+=======
+
+>>>>>>> origin/main
 }}
         >"
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">"

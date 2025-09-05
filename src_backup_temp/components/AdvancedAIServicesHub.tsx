@@ -61,6 +61,7 @@ export default function Page("props": "any) {;
       "status": 'coming-soon';
     }
   ];
+<<<<<<< HEAD
 ;
     return matchesCategory && matchesSearch});
 ;
@@ -72,6 +73,9 @@ export default function Page("props": "any) {;
   });
 ;
       case 'beta': ";
+=======
+
+>>>>>>> origin/main
     return matchesCategory && matchesSearch}
     );
       case 'price':
@@ -102,10 +106,14 @@ export default function Page("props": "any) {;
           initial = {;
   { "opacity": "0",;
   "y": "2 0;
+<<<<<<< HEAD
 "}}
           animate = {;
   { "opacity": "1",;
   "y": "0;
+=======
+
+>>>>>>> origin/main
   return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-12">
       <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
@@ -114,6 +122,10 @@ export default function Page("props": "any) {;
           initial = {
   { opacity: 0,
   y: 2 0
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 "}}
           className="text-center mb-16";
         >;

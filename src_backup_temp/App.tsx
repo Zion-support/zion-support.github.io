@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Suspense, lazy, useEffect, memo, useCallback } from 'react';
 import React, { Suspense, lazy } from 'react';';';
 import { Routes, Route } from 'react-router-dom';';';
@@ -12,6 +13,8 @@ import PerformanceOptimizer from './src/components/PerformanceOptimizer.tsx';';'
 import EnhancedAccessibilityEnhancer from './src/components/EnhancedAccessibilityEnhancer.tsx';';';
 import { MobileExperienceEnhancer } from './src/components/MobileExperienceEnhancer.tsx';';';
 import { ChatAssistant } from './components/ChatAssistant';
+=======
+>>>>>>> origin/main
 import React, { Suspense, lazy, useState } from 'react';
 import React, { Suspense, lazy, useState, useEffect, memo, useCallback } from 'react';
 import React, { Suspense, lazy } from 'react';
@@ -21,8 +24,11 @@ import Footer from './components/Footer';
 import { Sidebar } from './components/Sidebar';
 import { ErrorBoundary } from 'react-error-boundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
+<<<<<<< HEAD
 import { AccessibilityControls } from './components/AccessibilityEnhancer';
 // import { preloadCriticalResources, enableLazyLoading } from './utils/performance';
+=======
+>>>>>>> origin/main
 import { preloadCriticalResources, enableLazyLoading } from './utils/performance.ts';
 import './styles/accessibility.css';
 ;
@@ -31,8 +37,11 @@ import './styles/accessibility.css';
 // import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
 // import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 // import { ChatAssistant } from './components/ChatAssistant';
+<<<<<<< HEAD
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
+=======
+>>>>>>> origin/main
 ;
 // Enhanced lazy loading with preloading hints;
 const createLazyComponent = ("importFn": "() => Promise<any>", fallback?: "React.ReactNode) => {;
@@ -43,6 +52,7 @@ const createLazyComponent = ("importFn": "() => Promise<any>", fallback?: "React
     </Suspense>;
   );
 };
+<<<<<<< HEAD
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
 const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));
@@ -62,10 +72,13 @@ const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices20
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveServicesShowcase').then(module => ({ default: module.default })));
 const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServicesShowcase2025').then(module => ({ default: module.default })));
+=======
+>>>>>>> origin/main
 const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025').then(module => ({ default: module.EnhancedServicesShowcase2025 })));
 const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.default })));
 const ComprehensiveNewServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveNewServicesShowcase2025').then(module => ({ default: module.default })));
 const EnhancedServicesShowcase2025 = lazy(() => import('./components/EnhancedServicesShowcase2025').then(module => ({ default: module.EnhancedServicesShowcase2025 })));
+<<<<<<< HEAD
 ';
 // Lazy load pages for better performance';';
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));';';
@@ -90,6 +103,10 @@ const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveSe
 // Service Pages';';
 const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ default: module.AISolutions })));';';
 const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ default: module.QuantumComputing })));';';
+=======
+
+=======
+>>>>>>> origin/main
 ;
 // Lazy load pages for better performance;
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ "default": "module.HomePage "})));
@@ -137,6 +154,7 @@ import { ChatAssistant } from './components/ChatAssistant';
 // Lazy load pages for better performance - only import existing pages
 const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ default: module.default })));
 // Service Pages
+<<<<<<< HEAD
 const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ default: module.AISolutions })));
 const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ default: module.QuantumComputing })));
 const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity').then(module => ({ default: module.Cybersecurity })));
@@ -339,6 +357,9 @@ export default function App(props: any) {
               <Route path="/services" element={<Services />} />
               <Route path="/comprehensive-services" element={<ComprehensiveServicesShowcase />} />
               <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
+=======
+    <ErrorBoundary>
+>>>>>>> origin/main
               <Route path="/enhanced-services-2025" element={<EnhancedServicesShowcase2025 />} />
               <Route path="/solutions" element={<Solutions />} />
               <Route path="/resources" element={<Services />} />
@@ -456,6 +477,7 @@ const ComprehensivePricing = lazy(() => import('./pages/ComprehensivePricing').t
 const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServicesShowcase2025').then(module => ({ default: module.default })));
 // New innovative services pages
 // Additional service components
+<<<<<<< HEAD
 ;
 // Additional service components;
 const AIServices = createLazyComponent(() => import('./pages/AIServices'));
@@ -490,6 +512,9 @@ const "App": "React.FC = memo(() => {;
       showDetails={process.env.NODE_ENV === 'development'}
       enableReporting={true}
     >
+=======
+=======
+>>>>>>> origin/main
     >;
       <Router>;
         <div className="min-h-screen bg-gray-50 flex">;
@@ -633,7 +658,12 @@ const "App": "React.FC = memo(() => {;
 });
 ;
 export default App;
+<<<<<<< HEAD
 export default App;
+=======
+=======
+
+>>>>>>> origin/main
 export default function App(props: any) {
 const AISolutions = lazy(() => import('./pages/AIServices').then(module => ({ default: module.default })));
 const ITServices = lazy(() => import('./pages/ITServices').then(module => ({ default: module.default })));
@@ -792,6 +822,7 @@ export default function App() {
           <ChatAssistant />
         </div>
       </Router>
+<<<<<<< HEAD
     </ErrorBoundary>
   );';
 };';;';
@@ -801,3 +832,12 @@ export default function App() {
     </ErrorBoundary>
   );
 }
+=======
+    </EnhancedErrorBoundary>
+  );
+}
+=======
+    </ErrorBoundary>
+  );
+}
+>>>>>>> origin/main

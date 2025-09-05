@@ -209,13 +209,21 @@ export function SecurityEnhancer("props": any) {;
   }, [logSecurityEvent]) ;
 ;
   // Filter events;
+<<<<<<< HEAD
     return matchesSearch && matchesFilter}) ;
 ;
   // Get status icon;
   ;
+=======
+
+>>>>>>> origin/main
     return matchesSearch && matchesFilter}
     );
   // Get status icon
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/main
   };
 ;
   // Get event icon;
@@ -290,6 +298,7 @@ export function SecurityEnhancer("props": any) {;
                     <X className="w-5 h-5"   />                  </button>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               {/* Security Status */"}
               {securityStatus && (";
                 <div className="mb-6">";
@@ -315,6 +324,9 @@ export function SecurityEnhancer("props": any) {;
                         </span>;
                         {getStatusIcon();
                           securityStatus[item.key as keyof SecurityStatus];
+=======
+
+>>>>>>> origin/main
               {/* Security Status */}
               {securityStatus && ("
                 <div className="mb-6">"
@@ -347,6 +359,7 @@ export function SecurityEnhancer("props": any) {;
                 </div>) }
 ;
               {/* Security Metrics */}
+<<<<<<< HEAD
               {securityMetrics && (";
                 <div className="mb-6">";
                   <h3 className="text-lg font-semibold mb-3 text-gray-900 "dark": "tex t-white">;
@@ -386,6 +399,8 @@ export function SecurityEnhancer("props": any) {;
                       </p>;
                     </div>;
                   </div>;
+=======
+>>>>>>> origin/main
               {securityMetrics && ("
                 <div className="mb-6">"
                   <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: tex t-white">
@@ -450,11 +465,15 @@ export function SecurityEnhancer("props": any) {;
                     )"}
                   </button>;
                 </div>;
+<<<<<<< HEAD
                 {/* Filters and Search */}";
                 <div className="mb-3 space-y-2">";
                   <div className="flex space-x-2">;
                     {['info',warning',error',success'].map(type => (;
                       <button;
+=======
+
+>>>>>>> origin/main
               {/* Security Events */}"
               <div className="mb-6">"
                 <div className="flex items-center justify-between mb-3">"
@@ -543,6 +562,7 @@ export function SecurityEnhancer("props": any) {;
                     </div>) "}
                 </div>;
               </div>;
+<<<<<<< HEAD
               {/* Quick Actions */}";
               <div className="mb-6">";
                 <h3 className="text-lg font-semibold mb-3 text-gray-900 "dark": "tex t-white">;
@@ -559,6 +579,9 @@ export function SecurityEnhancer("props": any) {;
                   >";
                     <Activity className="w-4 h-4"   />"                    <span className="text-sm">Check Status</span>;
                   </button>;
+=======
+
+>>>>>>> origin/main
               {/* Quick Actions */}"
               <div className="mb-6">"
                 <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: tex t-white">
@@ -575,6 +598,10 @@ export function SecurityEnhancer("props": any) {;
                   >"
                     <Activity className="w-4 h-4"   />"                    <span className="text-sm">Check Status</span>
                   </button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
                   <button;
                     onClick={() => setSecurityEvents([])"}";
                     className="flex items-center justify-center space-x-2 p-3 bg-gray-50 "dark": "b g-gray-800 text-gray-700 "dark": tex t-gray-300 rounded-lg "hover": b g-gray-100 "dark": hove "r":bg-gray-700 transition-colors";
@@ -584,6 +611,7 @@ export function SecurityEnhancer("props": any) {;
                   </button>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               {/* Security Tips */"}";
               <div className="mb-6">";
                 <h3 className="text-lg font-semibold mb-3 text-gray-900 "dark": "tex t-white">;
@@ -598,6 +626,9 @@ export function SecurityEnhancer("props": any) {;
                 </div>;
               </div>;
             </div>;
+=======
+
+>>>>>>> origin/main
               {/* Security Tips */}"
               <div className="mb-6">"
                 <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: tex t-white">

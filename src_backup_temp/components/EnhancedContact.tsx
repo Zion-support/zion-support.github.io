@@ -16,6 +16,7 @@ interface ContactFormErrors {;
 ;
 export function EnhancedContact(...args[]): "{;
   const [formData", setFormData] = useState<any>({;
+<<<<<<< HEAD
     "name": '',;
     "email": '',;
     "phone": '',;
@@ -25,6 +26,9 @@ export function EnhancedContact(...args[]): "{;
   }) ;
 ;
   const [errors, setErrors] = useState<any> ({}) ;
+=======
+
+>>>>>>> origin/main
 interface ContactFormErrors {
   [key: string]: string}
 export function EnhancedContact(...args[]):  {
@@ -168,6 +172,7 @@ export function EnhancedContact(...args[]):  {
                   animate = {;
   { "opacity": "1",;
   "x": "0;
+<<<<<<< HEAD
 "}}
                   transition={{ "delay": "0.3 + index * 0.1 "}}";
                   className="flex items-start space-x-4";
@@ -180,6 +185,9 @@ export function EnhancedContact(...args[]):  {
                     <p className="text-zion-cyan font-medium mb-1">{info.value}</p>";
                     <p className="text-zion-slate-light text-sm">{info.description}</p>;
                   </div>;
+=======
+
+>>>>>>> origin/main
 }}
                   transition={{ delay: 0.3 + index * 0.1 }}"
                   className="flex items-start space-x-4"
@@ -203,6 +211,7 @@ export function EnhancedContact(...args[]):  {
               animate = {;
   { "opacity": "1",;
   "y": "0;
+<<<<<<< HEAD
 "}}
               transition={{ "delay": "0.6 "}}";
               className="mt-12 p-6 bg-zion-blue-light/10 rounded-xl border border-zion-blue-light/20";
@@ -228,6 +237,9 @@ export function EnhancedContact(...args[]):  {
               </div>;
             </motion.div>;
           </motion.div>;
+=======
+
+>>>>>>> origin/main
 }}
               transition={{ delay: 0.6 }}"
               className="mt-12 p-6 bg-zion-blue-light/10 rounded-xl border border-zion-blue-light/20"
@@ -253,6 +265,10 @@ export function EnhancedContact(...args[]):  {
               </div>
             </motion.div>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
           {/* Contact Form */}
           <motion.div;
             initial = {;

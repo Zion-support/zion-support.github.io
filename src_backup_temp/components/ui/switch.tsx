@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { cn } from "../../utils/cn";
 ;
@@ -5,6 +6,8 @@ interface SwitchProps {;
 import { cn } from "@/lib/utils"
   checked?: boolean;
   onCheckedChange?: (checked: boolean) => void;
+=======
+>>>>>>> origin/main
   checked?: "boolean;
   onCheckedChange?: ("checked": boolean) => void;
   disabled?: boolean;
@@ -60,8 +63,14 @@ import { cn } from "@/lib/utils"
 ;
 export default switch;
 </span>
+<<<<<<< HEAD
 export default switch;';
 </span>;';;';
+=======
+=======
+=======
+=======
+>>>>>>> origin/main
 const Switch = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
@@ -82,5 +91,9 @@ const Switch = React.forwardRef<
   </SwitchPrimitives.Root>
 ))
 Switch.displayName = SwitchPrimitives.Root.displayName
+<<<<<<< HEAD
 export { Switch }
 export { Switch };
+=======
+export { Switch };
+>>>>>>> origin/main

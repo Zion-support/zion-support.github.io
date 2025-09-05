@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Toaster as HotToaster   } from 'react-hot-toast';
 export function Toaster(...args[]):  {
   return <HotToaster  />;';
@@ -8,3 +9,11 @@ import { Toaster as HotToaster } from &apos;react-hot-toast&apos;; export functi
 const { Toaster as HotToaster } from "react-hot-toast"; export function Toaster(.args[]): { return <HotToaster />};";";''"
 import { Toaster as HotToaster } from 'react-hot-toast'; export function Toaster(...args[]): { return <HotToaster />};';';'
 </HotToaster>'
+=======
+import { Toaster as HotToaster } from 'react-hot-toast' export function Toaster(...args[]): { return <HotToaster /> }
+=======
+import { Toaster as HotToaster } from 'react-hot-toast' export function Toaster(...args[]): "{ return <HotToaster /> "}
+=======
+import { Toaster as HotToaster } from 'react-hot-toast'; export function Toaster(...args[]): { return <HotToaster />};';';'
+</HotToaster>'
+>>>>>>> origin/main

@@ -195,6 +195,7 @@ export function UserExperienceOptimizer("props": "any) {;
                     <X className="w-5 h-5"   />                  </button>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               {/* Content */"}";
               <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">;
                 {isAnalyzing ? (";
@@ -257,6 +258,9 @@ export function UserExperienceOptimizer("props": "any) {;
                         </div>;
                       </div>;
                     </div>;
+=======
+
+>>>>>>> origin/main
               {/* Content */}"
               <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
                 {isAnalyzing ? ("
@@ -319,6 +323,10 @@ export function UserExperienceOptimizer("props": "any) {;
                         </div>
                       </div>
                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
                     {/* Navigation Tabs */}";
                     <div className="flex space-x-1 bg-gray-100 "dark": "b g-gray-800 rounded-lg p-1">;
                       {[{;
@@ -352,6 +360,7 @@ export function UserExperienceOptimizer("props": "any) {;
                         </button>) ) }
                     </div>;
                     {/* UX Metrics View */}
+<<<<<<< HEAD
                     {selectedView === 'metrics' && (";
                       <div className="space-y-4">";
                         <div className="flex items-center justify-between">";
@@ -388,6 +397,8 @@ export function UserExperienceOptimizer("props": "any) {;
                                 <h4 className="font-medium text-gray-900 "dark": "tex t-white">;
                                   {metric.name"}
                                 </h4>;
+=======
+>>>>>>> origin/main
                     {selectedView === 'metrics' && ("
                       <div className="space-y-4">"
                         <div className="flex items-center justify-between">"
@@ -455,6 +466,7 @@ export function UserExperienceOptimizer("props": "any) {;
                         </div>;
                       </div>) }
                     {/* User Behaviors View */}
+<<<<<<< HEAD
                     {selectedView === 'behaviors' && (";
                       <div className="space-y-4">";
                         <div className="flex items-center justify-between">";
@@ -495,6 +507,8 @@ export function UserExperienceOptimizer("props": "any) {;
                                         <AlertTriangle className="w-4 h-4 text-red-600"   />;
                                       )"}
                                     </div>;
+=======
+>>>>>>> origin/main
                     {selectedView === 'behaviors' && ("
                       <div className="space-y-4">"
                         <div className="flex items-center justify-between">"
@@ -534,6 +548,10 @@ export function UserExperienceOptimizer("props": "any) {;
                                         <AlertTriangle className="w-4 h-4 text-red-600"   />
                                       )}
                                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
                                     <div>";
                                       <h4 className="font-medium text-gray-900 "dark": "tex t-white">;
                                         {behavior.action"}
@@ -564,6 +582,7 @@ export function UserExperienceOptimizer("props": "any) {;
                         </div>;
                       </div>) }
                     {/* Optimization Suggestions View */}
+<<<<<<< HEAD
                     {selectedView === 'suggestions' && (";
                       <div className="space-y-4">";
                         <h3 className="text-lg font-semibold text-gray-900 "dark": "tex t-white">;
@@ -586,6 +605,8 @@ export function UserExperienceOptimizer("props": "any) {;
                                   <div className="flex-1">";
                                     <div className="flex items-center space-x-3 mb-2">;
                                       <div`;
+=======
+>>>>>>> origin/main
                     {selectedView === 'suggestions' && ("
                       <div className="space-y-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
@@ -663,6 +684,7 @@ export function UserExperienceOptimizer("props": "any) {;
                             ))"}
                         </div>;
                       </div>) }
+<<<<<<< HEAD
                     {/* Action Buttons */}";
                     <div className="flex items-center justify-center space-x-4 pt-6">";
                       <button className="flex items-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg "hover": "b g-green-700 transition-colors">";
@@ -697,6 +719,9 @@ export function UserExperienceOptimizer("props": "any) {;
                   </div>) "}
               </div>;
             </motion.div>;
+=======
+
+>>>>>>> origin/main
                     {/* Action Buttons */}"
                     <div className="flex items-center justify-center space-x-4 pt-6">"
                       <button className="flex items-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg hover: b g-green-700 transition-colors">"

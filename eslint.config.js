@@ -1,12 +1,16 @@
 import js from '@eslint/js';
+<<<<<<< HEAD
 import globals from 'globals';
+=======
+import react from 'eslint-plugin-react';
+>>>>>>> origin/main
 import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 export default [
   {
     ignores: [
+<<<<<<< HEAD
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
@@ -89,6 +93,8 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 export default [{
     "ignores": [
+=======
+>>>>>>> origin/main
       'node_modules/',
       '.next/',
       'out/',
@@ -98,6 +104,7 @@ export default [{
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
+<<<<<<< HEAD
       'fix-critical-files.js',
       'fix-*.js',
       'fix-*.cjs',
@@ -200,6 +207,8 @@ export default [{
       'no-undef': 'off',
     },
   },
+=======
+>>>>>>> origin/main
       '.prettierrc.js',
       '.eslintrc.*',
       '*.min.js',
@@ -226,77 +235,104 @@ export default [{
       '*.test.tsx',
       '*.spec.js',
       '*.spec.ts',
-      '*.spec.tsx'
+      '*.spec.tsx',
+      'src_backup_temp/',
+      'temp-backup/',
+      'temp_backup/',
+      'temp_broken_files/',
+      'temp_working/',
+      'tests.disabled/',
+      'tests/',
+      'test_build/',
+      'zion-os.disabled/',
+      'zion_academy/',
+      'ultimate-*.js',
+      'ultimate-*.cjs',
+      'targeted-*.cjs',
+      'test-*.js',
+      'test-*.cjs',
+      'ux-enhancer.cjs',
+      'tools/',
+      'structural-fix.js',
+      'types/empty.ts',
+      'src.pages.disabled/',
+      'src/',
+      'types/',
+      'utils/',
+      'supabase/',
+      'vite.config-backup.ts',
+      'vite.config.ts'
     ]
   },
   {
-    "files": ['**/*.{js,jsx}'],
-    "languageOptions": {
+    files: ['**/*.{js,jsx}'],
+    languageOptions: {
       ecmaVersion: 2021,
-      "sourceType": 'module',
-      "globals": {
+      sourceType: 'module',
+      globals: {
         window: 'readonly',
-        "document": 'readonly',
-        "navigator": 'readonly',
-        "localStorage": 'readonly',
-        "sessionStorage": 'readonly',
-        "console": 'readonly',
-        "setTimeout": 'readonly',
-        "setInterval": 'readonly',
-        "clearTimeout": 'readonly',
-        "clearInterval": 'readonly',
-        "requestAnimationFrame": 'readonly',
-        "cancelAnimationFrame": 'readonly',
-        "fetch": 'readonly',
-        "URL": 'readonly',
-        "URLSearchParams": 'readonly',
-        "Blob": 'readonly',
-        "CustomEvent": 'readonly',
-        "Intl": 'readonly',
-        "performance": 'readonly',
-        "caches": 'readonly',
-        "Notification": 'readonly',
-        "ServiceWorker": 'readonly',
-        "ServiceWorkerRegistration": 'readonly',
-        "PushSubscription": 'readonly',
-        "NotificationPermission": 'readonly',
-        "process": 'readonly',
-        "global": 'readonly',
-        "jest": 'readonly',
-        "describe": 'readonly',
-        "it": 'readonly',
-        "test": 'readonly',
-        "expect": 'readonly',
-        "vi": 'readonly',
-        "Deno": 'readonly',
-        "React": 'readonly',
-        "require": 'readonly',
-        "module": 'readonly',
-        "__dirname": 'readonly',
-        "__filename": 'readonly',
-        "exports": 'readonly'
+        document: 'readonly',
+        navigator: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly',
+        requestAnimationFrame: 'readonly',
+        cancelAnimationFrame: 'readonly',
+        fetch: 'readonly',
+        URL: 'readonly',
+        URLSearchParams: 'readonly',
+        Blob: 'readonly',
+        CustomEvent: 'readonly',
+        Intl: 'readonly',
+        performance: 'readonly',
+        caches: 'readonly',
+        Notification: 'readonly',
+        ServiceWorker: 'readonly',
+        ServiceWorkerRegistration: 'readonly',
+        PushSubscription: 'readonly',
+        NotificationPermission: 'readonly',
+        process: 'readonly',
+        global: 'readonly',
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        vi: 'readonly',
+        Deno: 'readonly',
+        React: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        exports: 'readonly'
       },
-      "parserOptions": {
+      parserOptions: {
         ecmaFeatures: {
           jsx: true
         }
       }
     },
-    "plugins": {
+    plugins: {
       react,
       'react-hooks': reactHooks
     },
-    "rules": {
+    rules: {
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+      'react/react-in-jsx-scope': 'off',
       'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
+      'no-undef': 'off'
     }
   },
   {
+<<<<<<< HEAD
     "files": ['**/*.{ts,tsx}'],
     "languageOptions": {
       parser: tsparser,
@@ -604,26 +640,75 @@ export default [{
   }
 ];
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
+=======
+    files: ['**/*.{ts,tsx}'],
+>>>>>>> origin/main
     languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      parser: tsparser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      },
       globals: {
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly',
+        requestAnimationFrame: 'readonly',
+        cancelAnimationFrame: 'readonly',
+        fetch: 'readonly',
+        URL: 'readonly',
+        URLSearchParams: 'readonly',
+        Blob: 'readonly',
+        CustomEvent: 'readonly',
+        Intl: 'readonly',
+        performance: 'readonly',
+        caches: 'readonly',
+        Notification: 'readonly',
+        ServiceWorker: 'readonly',
+        ServiceWorkerRegistration: 'readonly',
+        PushSubscription: 'readonly',
+        NotificationPermission: 'readonly',
+        process: 'readonly',
+        global: 'readonly',
+        jest: 'readonly',
         describe: 'readonly',
         it: 'readonly',
         test: 'readonly',
         expect: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly',
-        jest: 'readonly',
-        fireEvent: 'readonly',
-        render: 'readonly',
-        screen: 'readonly',
-      },
+        vi: 'readonly',
+        Deno: 'readonly',
+        React: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        exports: 'readonly'
+      }
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
+      react,
+      'react-hooks': reactHooks
     },
     rules: {
-      'no-console': 'off',
-      'no-unused-vars': 'warn',
+      ...js.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...tseslint.configs.recommended.rules,
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+      'react/react-in-jsx-scope': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
+<<<<<<< HEAD
     },
   },
   {
@@ -637,4 +722,13 @@ export default [{
       'coverage/',
     ],
   },
+=======
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'no-undef': 'off',
+      'react/no-unescaped-entities': 'off',
+      '@next/next/no-html-link-for-pages': 'off',
+      '@next/next/no-img-element': 'off'
+    }
+  }
+>>>>>>> origin/main
 ];

@@ -139,6 +139,7 @@ import React from 'react';
                   <div key={index}>";
                     <h3 className="text-sm font-semibold text-cyan-400 mb-2">;
                       {category.category}
+<<<<<<< HEAD
                     </h3>";
                     <div className="space-y-2 ml-4">;
                       {category.items.map(("service": "unknow n", "serviceIndex": "unknow n ;
@@ -148,6 +149,8 @@ import React from 'react';
                           className="block text-gray-300 "hover": "tex t-white transition-colors duration-200";
                           onClick={( setIsOpen(false)"}
                         >;
+=======
+>>>>>>> origin/main
                     "
                     <div className="space-y-2 ml-4">
                       {category.items.map((service: unknow n, serviceIndex: unknow n 

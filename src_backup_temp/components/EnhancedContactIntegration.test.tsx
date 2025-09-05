@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { render, screen  } from '@testing-library/reactimport EnhancedContactIntegration from ./EnhancedContactIntegrationdescribe(EnhancedContactIntegration, () => {';';';
   it(renders without crashing', () => {'';
     render(<EnhancedContactIntegration  />)';';
@@ -6,3 +7,6 @@ import { render, screen  } from '@testing-library/reactimport EnhancedContactInt
     render(<EnhancedContactIntegration  />)';
     // Add specific test assertions based on component content})});';;';
 import { render,screen } from '@testing-library/reactimport EnhancedContactIntegration from ./EnhancedContactIntegrationdescribe(EnhancedContactIntegration,() => {' it(renders without crashing',() => {' render(<EnhancedContactIntegration />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<EnhancedContactIntegration />)
+=======
+import { render,screen } from '@testing-library/reactimport EnhancedContactIntegration from ./EnhancedContactIntegrationdescribe(EnhancedContactIntegration,() => {' it(renders without crashing',() => {' render(<EnhancedContactIntegration />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<EnhancedContactIntegration />)
+>>>>>>> origin/main

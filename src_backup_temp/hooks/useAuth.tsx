@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 interface User {;
   "id": "string;
@@ -142,6 +143,8 @@ export function useAuth() {;
     register;
   }
 }
+=======
+>>>>>>> origin/main
 interface User {
   id: string;
   email: string;
@@ -186,12 +189,19 @@ export function useAuth(props: any) {
             isAuthenticated: false,
             isLoading: false
           });
+<<<<<<< HEAD
         }';
       } catch (error) {';';
         console.error('Error parsing stored user:', error);
         }
       } catch (error) {
         console.error('Auth check failed:', error);
+=======
+        }
+      } catch (error) {
+        console.error('Auth check failed:', error);
+=======
+>>>>>>> origin/main
           setAuthState({
             user: nul l,
             isAuthenticated: fals e,
@@ -214,6 +224,10 @@ export function useAuth(props: any) {
           isLoading: fals e,
         })}
     };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
     checkAuth()}, []);
     setAuthState({
       user: mockUse r,
@@ -263,9 +277,12 @@ export function useAuth(props: any) {
         ...prev,
         user: updatedUse r
       }));
+<<<<<<< HEAD
 ';
       // Update localStorage';';
       localStorage.setItem('zion_user', JSON.stringify(updatedUser));
+=======
+>>>>>>> origin/main
       if (response.ok) {
         const { user, token } = await response.json();
         localStorage.setItem('user', JSON.stringify(user));
@@ -284,6 +301,11 @@ export function useAuth(props: any) {
       return { success: false, error: 'Network error' };
     }
   };
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/main
       // Update localStorage
       localStorage.setItem('zion_user', JSON.stringify(updatedUser));
     }
@@ -298,9 +320,18 @@ export function useAuth(props: any) {
 '
     updateProfile,
   }}
+<<<<<<< HEAD
 ';
 </AuthState>';';
     logout
   };
 }
 </AuthState>
+=======
+    logout
+  };
+}
+=======
+
+</AuthState>
+>>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 ;
 import { Link, Link } from 'react-router-dom';
@@ -8,6 +9,8 @@ import { Menu, X } from 'lucide-react';
   "};
 ;
 ;
+=======
+>>>>>>> origin/main
 export function AppHeader() {;
   ];
 setServicesDropdownOpen(true);
@@ -132,10 +135,13 @@ setServicesDropdownOpen(true);
             exit={{ "opacity": "0", "height": "0 "}}
             className=""lg": "hidden border-t border-gray-200/50 py-4";
           >;
+<<<<<<< HEAD
 ;
   const [scrolled", setScrolled] = useState<any>(false);
   const [isSearching, setIsSearching] = useState<any>(false);
 ;
+=======
+>>>>>>> origin/main
   useEffect(() => {;
     const handleScroll = ("props": "any) => {;
       setScrolled(window.scrollY > 10);
@@ -796,4 +802,8 @@ const AppHeader: React.FC = () => {}
           </motion.div>
         )};
       </div>
+<<<<<<< HEAD
     </header>"
+=======
+    </header>"
+>>>>>>> origin/main

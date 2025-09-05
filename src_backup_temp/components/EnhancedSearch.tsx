@@ -16,10 +16,14 @@ export function EnhancedSearch("props": "any) {;
   const [isLoading, setIsLoading] = useState<any>(false);
   const [selectedIndex, setSelectedIndex] = useState<any>(-1);
   const [filters, setFilters] = useState<SearchFilter>({;
+<<<<<<< HEAD
     "type": "[]",;
     "category": "[]",;
     "tags": "[];
   "}) ;
+=======
+
+>>>>>>> origin/main
     type: [],
     category: [],
     tags: []
@@ -43,13 +47,20 @@ export function EnhancedSearch("props": "any) {;
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [isLoading, setIsLoading] = useState<any>(false);
   const [selectedIndex, setSelectedIndex] = useState<any>(-1);
+<<<<<<< HEAD
   const [filters, setFilters] = useState<SearchFilter>({;
+=======
+>>>>>>> origin/main
   const [filters, setFilters] = useState<SearchFilter>({
     type: [],
     category: [],
     tags: []
   }
     );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
     "type": "[]",;
     "category": "[]",;
     "tags": "[];
@@ -202,11 +213,18 @@ handleResultClick(results[selectedIndex])}      }
                           result.tags.some(tag => tag.toLowerCase () .includes(query.toLowerCase () ) ) ;
 ;
       const matchesFilters = (filters.type.length === 0 || filters.type.includes(result.type) ) &&; (filters.category.length === 0 || filters.category.includes(result.category) ) &&; (filters.tags.length === 0 || filters.tags.some(tag => result.tags.includes (tag) ) ) ;
+<<<<<<< HEAD
 ;
       return matchesQuery && matchesFilters}) ;
 ;
       return matchesQuery && matchesFilters}
     );
+=======
+
+      return matchesQuery && matchesFilters}
+    );
+
+>>>>>>> origin/main
     setIsOpen(false);
     setQuery('')};
 ;
@@ -462,6 +480,7 @@ setFilters("prev": "> ({;
                       </div>;
                     </button>;
                   ))}
+<<<<<<< HEAD
                 </div>;
               ) : "(";
                 <div className="p-8 text-center">";
@@ -472,6 +491,8 @@ setFilters("prev": "> ({;
                     Try adjusting your search terms or filters;
                   </p>;
                 </div>) "}
+=======
+>>>>>>> origin/main
                 </div>
               ) : ("
                 <div className="p-8 text-center">"
@@ -486,6 +507,7 @@ setFilters("prev": "> ({;
           </motion.div>;) };
       </AnimatePresence>;
     </div>;) }
+<<<<<<< HEAD
 '"`;
 ;,"});})";
 ;
@@ -507,6 +529,8 @@ setFilters("prev": "> ({;
 </SearchSuggestion>;
 </SearchResult>;
 </any>;
+=======
+>>>>>>> origin/main
 '"`
 ;,"}
     );,})";

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 :src/pages/Services.tsx
 import { 
   Brain, 
@@ -94,6 +95,9 @@ export function Services() {
       title: 'AI Business Intelligence',
       description: 'Get insights from your data with AI-powered analytics',
       href: '/services/ai-business-intelligence'
+=======
+
+>>>>>>> origin/main
 export default function Services() {
   const services = [
     {
@@ -134,6 +138,7 @@ export default function Services() {
     }
   ];
   return (
+<<<<<<< HEAD
 :src/pages/Services.tsx
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
@@ -296,6 +301,8 @@ export default function Services() {
       </section>
     </div>
   );
+=======
+>>>>>>> origin/main
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h1>

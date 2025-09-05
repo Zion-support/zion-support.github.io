@@ -1,6 +1,7 @@
 import React from 'react',;',';';
     ;
 import {SEO } from '@/components/SEO';
+<<<<<<< HEAD
 ,"});,"});
 export default function ComprehensiveOptimizer("props": "any) {return (;
     <div className="min-h-screen bg-white">;
@@ -11,6 +12,8 @@ export default function ComprehensiveOptimizer("props": "any) {return (;
           Professional ComprehensiveOptimizer services to help your business grow.;
         </p>;
       </div>;
+=======
+>>>>>>> origin/main
 ,"}
     );,"})
 export default function ComprehensiveOptimizer(props: any) {return (

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // Security headers configuration
 export const securityHeaders = [
@@ -36,3 +37,6 @@ export const securityHeaders = [
 ];
 
 export const getSecurityHeaders = () => securityHeaders;
+=======
+>>>>>>> main
+>>>>>>> origin/main

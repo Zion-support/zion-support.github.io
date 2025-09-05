@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 ;
 interface MobileExperienceEnhancerProps {;
@@ -67,6 +68,8 @@ useEffect(() => {;
       const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
 "}
       const isTabletDevice = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(userAgent);
+=======
+>>>>>>> origin/main
 import React from "react"
 ;,"}
     );,"})framer-motion";react
@@ -133,6 +136,7 @@ if (window.innerHeight > window.innerWidth) {";
 export const "MobileExperienceEnhancer": "Reac t.FC<MobileExperienceEnhancerProps> = ({enabled = true", showGestures = false,;
 }) => {const [isMobile, setIsMobile] = useState<any>(false);
 }
+<<<<<<< HEAD
 export const "MobileExperienceEnhancer": "Reac t.FC<MobileExperienceEnhancerProps> = ({",;
   enabled = true, showGestures = false,;
   enableSwipeNavigation = true}) => {";
@@ -142,6 +146,8 @@ export const "MobileExperienceEnhancer": "Reac t.FC<MobileExperienceEnhancerProp
   const [deviceOrientation, setDeviceOrientation] = useState<"portrait" | "landscape">("portrait");
 }
   const [touchStart, setTouchStart] = useState<{ "x": "number", "y": "number", "time": "number   "} | null>(null);
+=======
+>>>>>>> origin/main
       // comment
 if (window.innerHeight > window.innerWidth) {"
         setDeviceOrientation("portrait"),"} else: {",
@@ -483,6 +489,7 @@ const searchInput = document.querySelector("input[type="search"]") as HTMLInputE
 }
       document.removeEventListener(&apos;touchend&apos, handleTouchEnd)}}, [enabled, enableSwipeNavigation, touchStart]);
 }
+<<<<<<< HEAD
   // comment;
       setTouchEnd(null)};""";
     document.addEventListener("touchstart", handleTouchStart { "passive": "fals e "});""";
@@ -490,6 +497,8 @@ const searchInput = document.querySelector("input[type="search"]") as HTMLInputE
       document.removeEventListener("touchstart", handleTouchStart);""";
       document.removeEventListener("touchmove", handleTouchMove);"";
       document.removeEventListener("touchend", handleTouchEnd)}}, [enabled, enableSwipeNavigation, touchStart]);
+=======
+>>>>>>> origin/main
   // comment
       setTouchEnd(null)};"""
     document.addEventListener("touchstart", handleTouchStart { passive: fals e }
@@ -731,6 +740,7 @@ initial = "{{" "y": "-100 "}}";
         </motion.div>      )}
  {/*   */}
       <AnimatePresence> {showMobileMenu && isMobile && (";
+<<<<<<< HEAD
             initial = "{{" "opacity": ",0", "x": "100%"}}",";
             animate = "{{" "opacity": ",1", "x": "0"}}";
             exit = "{{" "opacity": ",0", "x": "100%"}}",";
@@ -741,6 +751,8 @@ initial = "{{" "y": "-100 "}}";
                 className="p-2 rounded-lg bg-slate-100 "dark": "b g-slate-"700": hove "r":bg-slate-"200": dar "k":"hover": b g-slate-"600": transitio n-colors""",";";";
                 aria-label=""Close": "men u""",",",",;
                 <"X": "classNam e="w-5 h-5" />"",",",;
+=======
+>>>>>>> origin/main
             initial = "{{" opacity:  ,0, x: "100%"}}",";
             animate = "{{" opacity:  ,1, x: 0}}";
             exit = "{{" opacity:  ,0, x: "100%"}}",";
@@ -760,6 +772,7 @@ initial = "{{" "y": "-100 "}}";
             <div className="flex items-center justify-between p-4 border-b border-slate-200 dar,";
     "k": "borde r-slate-700">"""",;
               <h3 className="text-lg font-semibold text-slate-900 dar,";
+<<<<<<< HEAD
     "k": "tex t-white">Menu</h3>"",;
                 onClick="{()" => setShowMobileMenu(false)}"";
                 className="p-2 rounded-lg bg-slate-100 "dark": "b g-slate-700 "hover": b g-slate-200 "dark": hove "r":bg-slate-600 transition-colors""";
@@ -776,6 +789,8 @@ initial = "{{" "y": "-100 "}}";
             className="&quot;fixed" top-0 right-0 bottom-0 w-80 bg-white "dark": "b g-slate-800 border-l border-slate-200 "dark": borde r-slate-700 shadow-xl z-50&quot",",;
             <div className="&quot;flex" items-center justify-between p-4 border-b border-slate-200 "dark": "borde r-slate-700&quot",>&quot,"";
               <h3 className = "&quot,text-lg" font-semibold text-slate-900 dar,"k": "tex t-white&quot",>Menu&quot,</h3>";
+=======
+>>>>>>> origin/main
     k: tex t-white">Menu",;
                 onClick="{()" => setShowMobileMenu(false)}"";
                 className="p-2 rounded-lg bg-slate-100 dark: b g-slate-700 hover: b g-slate-200 dark: hove r:bg-slate-600 transition-colors""";
@@ -873,6 +888,7 @@ initial="{{" "opacity": ",0", "scale": "0.8"}}";
           title=""Gesture": Guid e""",",",",;
           <"Touch": "classNam e="w-6 h-6" />"",",",;
         </motion.button> {/* comment */}
+<<<<<<< HEAD
 ;
       <AnimatePresence>;
         {showMobileMenu && isMobile && (";
@@ -984,6 +1000,9 @@ initial="{{" "opacity": ",0", "scale": "0.8"}}";
                   <span className="text-slate-900 "dark": tex t-white">Contact</span>;
       </AnimatePresence>;
 ",;
+=======
+
+>>>>>>> origin/main
       <AnimatePresence>
         {showMobileMenu && isMobile && ("
             initial = "{{" opacity:  ,0, x: "100%"}}","
@@ -1140,6 +1159,7 @@ initial="{{" "opacity": "0", "scale": "0.8 "}}";
           title="Gesture Guide"";
           <Touch className="w-6 h-6" /"" >",;
       )} {/* comment */}
+<<<<<<< HEAD
 ;
         {showGestureGuide && isMobile && (}";
             initial="{{" "opacity": ",0", "scale": "0.9"}}";
@@ -1259,6 +1279,9 @@ initial="{{" "opacity": "0", "scale": "0.8 "}}";
               <button onClick = "{()" =" > setShowGestureGuide(false)}"";
                 className="w-full mt-6 px-4 py-2 bg-blue-600 text-white rounded-lg "hover": "b g-blue-700 transition-colors"",;
                 Got it!&quot,;
+=======
+
+>>>>>>> origin/main
         {showGestureGuide && isMobile && (}"
             initial="{{" opacity:  ,0, scale: 0.9}}"
             exit="{{" opacity:  ,0, scale: 0.9}}"

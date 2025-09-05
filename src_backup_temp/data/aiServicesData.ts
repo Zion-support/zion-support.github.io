@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/data/aiServicesData.ts
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
 export interface AIService {;
   "id": "string;
   "title": string;
@@ -2688,5 +2694,12 @@ export const AI_SERVICES: AIService[] = [
     marketSize: &quot;$22.1 billion by 2025&quot;
     competitors: ["CrowdStrike", "Palo Alto Networks", "IBM Security", "Microsoft Sentinel"],
     marketSize: "$22.1 billion by 2025"
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main:src_backup_temp/data/aiServicesData.ts
+>>>>>>> main
+>>>>>>> main
+>>>>>>> origin/main
   }
 ];

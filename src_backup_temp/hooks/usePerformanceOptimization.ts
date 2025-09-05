@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/hooks/usePerformanceOptimization.ts
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 import { useEffect, useRef, useCallback, useMemo  } from 'react';
 ;
 interface PerformanceMetrics {;
@@ -130,6 +137,11 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
     "renderTime": 0,
     "memoryUsage": 0,
     "fps": 0});
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main:src_backup_temp/hooks/usePerformanceOptimization.ts
+>>>>>>> origin/main
   const observerRef = useRef<IntersectionObserver | null>(null);
   const frameCountRef = useRef(0);
   const lastTimeRef = useRef(performance.now());
@@ -197,6 +209,12 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
           if (observerRef.current) {;
             observerRef.current.unobserve(entry.target)}
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/hooks/usePerformanceOptimization.ts
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
       })});
 ;
     if (observerRef.current) {;
@@ -228,6 +246,11 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
       })}
     );
       })});
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main:src_backup_temp/hooks/usePerformanceOptimization.ts
+>>>>>>> origin/main
     if (observerRef.current) {
       observerRef.current.observe(element)}
   }, [enableLazyLoading, createIntersectionObserver]);

@@ -37,6 +37,7 @@ export function SuggestedTalents("props": "any) {;
 ;
       if(error) throw error;
       setTalents(data || []);
+<<<<<<< HEAD
     } catch(error) {;
       console.error("Error fetching suggested "talents":", error);
       toast({;
@@ -45,6 +46,8 @@ export function SuggestedTalents("props": "any) {;
         "variant": "destructive",;
       });
     } finally {;
+=======
+>>>>>>> origin/main
     } catch(error) {
       console.error("Error fetching suggested talents:", error);
       toast({
@@ -57,6 +60,7 @@ export function SuggestedTalents("props": "any) {;
       setIsLoading(false);
     }
   }, [jobId]); // jobId is a dependency of fetchSuggestedTalents;
+<<<<<<< HEAD
   const handleViewProfile = ("props": "any) => {;
     ;
     toast({;
@@ -71,6 +75,9 @@ export function SuggestedTalents("props": "any) {;
       "title": "Invite Talent"",;
       "description": "`Inviting "talent": ${talentId"}`,;
     });
+=======
+
+>>>>>>> origin/main
   const handleViewProfile = (props: any) => {
     toast({
       title: "View Profile",
@@ -90,7 +97,10 @@ export function SuggestedTalents("props": "any) {;
     setIsProcessing(true);
     fetchSuggestedTalents().finally(() => {;
       setIsProcessing(false);
+<<<<<<< HEAD
     "});
+=======
+>>>>>>> origin/main
     }
     );
   };
@@ -118,6 +128,7 @@ export function SuggestedTalents("props": "any) {;
       "matchPercent": "talen t.match_score || 85",;
       "skills": "talen t.talent_profile?.skills || []",;
     };
+<<<<<<< HEAD
   });
 ;
   return (<Card className="border-zion-blue-light bg-zion-blue">;
@@ -135,6 +146,8 @@ export function SuggestedTalents("props": "any) {;
             {transformedTalents.map((talent) => (;
               <JobMatchCard;
                 key={talent.id"}
+=======
+>>>>>>> origin/main
   }
     );
   return (<Card className="border-zion-blue-light bg-zion-blue">

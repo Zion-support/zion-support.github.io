@@ -106,11 +106,15 @@ export function AnalyticsManager("props": "any) {;
     if(currentSession) {;
       saveSessionData(currentSession)}
   }, [currentSession]) };
+<<<<<<< HEAD
 ;
     // Scroll tracking';
     document.addEventListener('scroll', handleScroll, { "passive": "tru e "});
 ;
     // Page unload tracking';
+=======
+
+>>>>>>> origin/main
     // Scroll tracking'
     document.addEventListener('scroll', handleScroll, { passive: tru e }
     );
@@ -150,41 +154,65 @@ export function AnalyticsManager("props": "any) {;
 ;
         if(fcp) {;
           trackPerformance('fcp', fcp.startTime)}
+<<<<<<< HEAD
       });
       fcpObserver.observe({ "entryTypes": "['paint'] "});
 ;
       // Largest Contentful Paint;
+=======
+>>>>>>> origin/main
       }
     );
       fcpObserver.observe({ entryTypes: ['paint'] }
     );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
         if(lcp) {;
           trackPerformance('lcp', lcp.startTime)}
+<<<<<<< HEAD
       });
       lcpObserver.observe({ "entryTypes": "['largest-contentful-paint'] "});
 ;
       // First Input Delay;
+=======
+>>>>>>> origin/main
       }
     );
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
     );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
         if(fid) {;
           trackPerformance('fid', fid.processingStart - fid.startTime)}
+<<<<<<< HEAD
       });
       fidObserver.observe({ "entryTypes": "['first-input'] "});
 ;
       // Cumulative Layout Shift;
       const clsObserver = new PerformanceObserver(list => {;
+=======
+>>>>>>> origin/main
       }
     );
       fidObserver.observe({ entryTypes: ['first-input'] }
     );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
         let clsValue = 0;        for (const entry of list.getEntries()) {;
           if(!entry.hadRecentInput) {;
             clsValue += (entry as any).value}
         }
+<<<<<<< HEAD
         trackPerformance('cls', clsValue)});
       clsObserver.observe({ "entryTypes": "['layout-shift'] "})}
+=======
+>>>>>>> origin/main
         trackPerformance('cls', clsValue)}
     );
       clsObserver.observe({ entryTypes: ['layout-shift'] })}
@@ -192,6 +220,7 @@ export function AnalyticsManager("props": "any) {;
     }, 30000) ;
 ;
     return () => clearInterval(activityInterval) }, [currentSession]) ;
+<<<<<<< HEAD
 ;
         trackEvent('page_view', { path });
 ;
@@ -199,6 +228,9 @@ export function AnalyticsManager("props": "any) {;
         sendAnalyticsData('page_view', { path, "timestamp": "Dat e.now() "})}
     },;
     [currentSession];
+=======
+
+>>>>>>> origin/main
         trackEvent('page_view', { path }
     );
         // Send to analytics endpoint'

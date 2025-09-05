@@ -1,6 +1,7 @@
 import React from 'react',;',';';
     ;
 import {SEO } from '@/components/SEO';
+<<<<<<< HEAD
 export default function SmartContractBuilder("props": "any) {return (;
     <div className="min-h-screen bg-white">;
       <SEO title="SmartContractBuilder - Zion Tech Group" description="Professional SmartContractBuilder services by Zion Tech Group"  />;
@@ -9,6 +10,8 @@ export default function SmartContractBuilder("props": "any) {return (;
         <p className="text-gray-300 text-lg">;
           Professional SmartContractBuilder services to help your business grow.;
         </p>;
+=======
+>>>>>>> origin/main
 export default function SmartContractBuilder(props: any) {return (
         <div className="min-h-screen bg-white">
       <SEO title="SmartContractBuilder - Zion Tech Group" description="Professional SmartContractBuilder services by Zion Tech Group"  />

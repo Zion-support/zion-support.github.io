@@ -1,4 +1,5 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
+<<<<<<< HEAD
 ;
 export default function Page("props": "any) {;
 interface Comment {;
@@ -44,6 +45,9 @@ interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {;
 export const "TeamCollaborationTools": "React.FC<TeamCollaborationToolsProps> = ({;
   showTeamMembers = true",;
 "showProjects": "tru e",;
+=======
+
+>>>>>>> origin/main
 export default function Page(props: any) {
 interface Comment {
   id: string;
@@ -62,13 +66,21 @@ interface Message {
   attachments?: string[];
   reactions: { type: string; count: number}[];
   isRead: boolean}
+<<<<<<< HEAD
 interface FileItem {
   id: string;';
   name: string;';';
+=======
+>>>>>>> origin/main
 ;
 interface FileItem {;
   id: string;
   name: string;
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/main
 interface FileItem {
   id: string;
   name: string;
@@ -105,6 +117,7 @@ showProjects: tru e,;
   const [searchQuery, setSearchQuery] = useState<any>('');
   const [selectedDepartment, setSelectedDepartment] = useState<any>('all');
   const [selectedStatus, setSelectedStatus] = useState<any>('all');
+<<<<<<< HEAD
 ;
   // Sample data;
   useEffect(() => {;
@@ -154,6 +167,8 @@ showProjects: tru e,;
         sharedWith['Lisa Thompson'],;';';
         permissions: 'view',';';
         version: '1.0'
+=======
+>>>>>>> origin/main
     const sampleFiles: FileIte m[] = [{;
         id: '1',;
         name: 'AI_Platform_Architecture.pdf',;
@@ -198,8 +213,11 @@ showProjects: tru e,;
         "lastModified": '2024-01-13',;
         tags['Security',Audit',Report'],;
         sharedWith['Lisa Thompson'],;
+<<<<<<< HEAD
         permissions: 'view',;
         version: '1.0';
+=======
+>>>>>>> origin/main
         "permissions": 'view',;
         "version": '1.0';
   // Sample data
@@ -247,10 +265,15 @@ showProjects: tru e,;
         sharedWith['Lisa Thompson'],;
         permissions: 'view',
         version: '1.0'
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
     ];
     setTeamMembers(sampleTeamMembers) ;
     setProjects(sampleProjects) ;
     setMessages(sampleMessages) ;
+<<<<<<< HEAD
     setFiles(sampleFiles) }, []) ;';
 ';';
   // Get status color and icon'';';
@@ -273,6 +296,13 @@ showProjects: tru e,;
       "default": "retur n 'text-zinc-400 bg-zinc-400/20'"}
   };
 ;
+=======
+=======
+    setFiles(sampleFiles) }, []) ;
+      "default": "retur n 'text-zinc-400 bg-zinc-400/20'"}
+  };
+;
+>>>>>>> origin/main
   // Get file type icon";
       "default": "retur n <File className="w-5 h-5"   />"}};
   // Format file size;
@@ -280,6 +310,7 @@ showProjects: tru e,;
           msg.reactions.push({ "type": "reactionTyp e", "count": "1 "})}
       }
       return msg}) ) };
+<<<<<<< HEAD
   return ("
     <div className="w-full max-w-7xl mx-auto p-6">
       {/* Header */}"
@@ -301,6 +332,9 @@ showProjects: tru e,;
               className={`flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${activeTab === tab.id'';';
                   ? 'bg-zion-cyan text-white''';';
                   : 'text-zinc-400 hover: tex t-white hover: b g-zinc-800/50'`
+=======
+=======
+>>>>>>> origin/main
 ;
   return (";
     <div className="w-full max-w-7xl mx-auto p-6">;
@@ -322,8 +356,11 @@ showProjects: tru e,;
               onClick={() => setActiveTab(tab.id as )}
               className={`flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${activeTab === tab.id';
                   ? 'bg-zion-cyan text-white'';
+<<<<<<< HEAD
                   : 'text-zinc-400 hover: tex t-white hover: b g-zinc-800/50'`;
               }`}
+=======
+>>>>>>> origin/main
                   : 'text-zinc-400 "hover": "tex t-white "hover": b g-zinc-800/50'`;
               "}`}
 ;
@@ -364,12 +401,17 @@ showProjects: tru e,;
                   ? 'bg-zion-cyan text-white''
                   : 'text-zinc-400 hover: tex t-white hover: b g-zinc-800/50'`
               }`}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
               {tab.icon}
               {tab.label}
             </button>) ) }
         </div>
       </div>
       {/* Team Members Tab */}
+<<<<<<< HEAD
       {activeTab === 'team' && showTeamMembers && (;
         <motion.div;
           initial = {;
@@ -410,11 +452,17 @@ showProjects: tru e,;
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
               <div className="text-3xl font-bold text-green-400 mb-2">;
+=======
+>>>>>>> origin/main
       {activeTab === 'team' && showTeamMembers && (
         <motion.div
           initial = {
   { opacity: 0,
   y: 2 0
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
         </div>;
       </div>;
       {/* Team Members Tab */}
@@ -423,6 +471,10 @@ showProjects: tru e,;
           initial = {;
   { opacity: 0,;
   y: 2 0;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
 }}
           animate = {
   { opacity: 1,
@@ -479,10 +531,13 @@ showProjects: tru e,;
   { opacity: 1,;
   y: 0;
 }}
+<<<<<<< HEAD
               transition={{ delay: 0.2 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 "';
               <div className="text-3xl font-bold text-blue-400 mb-2">';';
+=======
+>>>>>>> origin/main
               transition={{ delay: 0.1 }}";
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
@@ -490,6 +545,7 @@ showProjects: tru e,;
                 {teamMembers.filter(m => m.status === 'online').length}
               </div>";
               <div className="text-zinc-400">Online Now</div>;
+<<<<<<< HEAD
             </motion.div>;
 ;
             <motion.div;
@@ -505,6 +561,10 @@ showProjects: tru e,;
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
               <div className="text-3xl font-bold text-blue-400 mb-2">;
+=======
+=======
+            </motion.div>;
+>>>>>>> origin/main
                 {teamMembers.filter(m => m.availability === 'available').length}
               </div>";
               <div className="text-zinc-400">Available</div>;
@@ -636,6 +696,10 @@ showProjects: tru e,;
                     member.availability === 'busy' ? 'text-yellow-400 bg-yellow-400/20' :';
                     'text-red-400 bg-red-400/20'`;
                   }`}>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
                     {member.availability.charAt(0) .toUpperCase () + member.availability.slice(1) }
                   </span>
                 </div> {/* Skills */}"
@@ -663,6 +727,7 @@ showProjects: tru e,;
                       <div key={project} className="text-xs text-zinc-400">
                         • {project}
                       </div>) ) }
+<<<<<<< HEAD
                   </div>;
                 </div>;
                 {/* Actions */}";
@@ -683,6 +748,8 @@ showProjects: tru e,;
                 </div>;
               </motion.div>) ) "}
           </div>;
+=======
+>>>>>>> origin/main
                   </div>
                 </div>
                 {/* Actions */}"
@@ -704,6 +771,7 @@ showProjects: tru e,;
               </motion.div>) ) }
           </div>
         </motion.div>) }
+<<<<<<< HEAD
 ';
       {/* Projects Tab */}';';
       {/* Projects Tab */}
@@ -747,11 +815,19 @@ showProjects: tru e,;
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
               <div className="text-3xl font-bold text-green-400 mb-2">;
+=======
+
+      {/* Projects Tab */}
+>>>>>>> origin/main
       {activeTab === 'projects' && showProjects && (
         <motion.div
           initial = {
   { opacity: 0,
   y: 2 0
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 ;
       {/* Projects Tab */}
       {activeTab === 'projects' && showProjects && (;
@@ -759,6 +835,10 @@ showProjects: tru e,;
           initial = {;
   { opacity: 0,;
   y: 2 0;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
 }}
           animate = {
   { opacity: 1,
@@ -815,10 +895,13 @@ showProjects: tru e,;
   { opacity: 1,;
   y: 0;
 }}
+<<<<<<< HEAD
               transition={{ delay: 0.2 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 "';
               <div className="text-3xl font-bold text-blue-400 mb-2">';';
+=======
+>>>>>>> origin/main
               transition={{ delay: 0.1 }}";
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
@@ -826,6 +909,7 @@ showProjects: tru e,;
                 {projects.filter(p => p.status === 'active').length}
               </div>";
               <div className="text-zinc-400">Active</div>;
+<<<<<<< HEAD
             </motion.div>;
 ;
             <motion.div;
@@ -841,6 +925,10 @@ showProjects: tru e,;
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
               <div className="text-3xl font-bold text-blue-400 mb-2">;
+=======
+=======
+            </motion.div>;
+>>>>>>> origin/main
                 {projects.filter(p => p.status === 'completed').length}
               </div>";
               <div className="text-zinc-400">Completed</div>;
@@ -903,6 +991,7 @@ showProjects: tru e,;
           <div className="space-y-6"> {projects.map((project, index) => (;
               <motion.div
                 key={project.id}
+<<<<<<< HEAD
                 initial = {;
   { "opacity": "0",;
   "y": "2 0;
@@ -923,6 +1012,8 @@ showProjects: tru e,;
 ";
                     <div className="flex flex-wrap items-center gap-3">`;
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${getProjectStatusColor(project.status)}`}>;
+=======
+>>>>>>> origin/main
                 initial = {
   { opacity: 0,
   y: 2 0
@@ -949,6 +1040,7 @@ showProjects: tru e,;
                       </span>"
                       <span className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full">
                         {project.client}
+<<<<<<< HEAD
                       </span>;
                     </div>;
                   </div>;
@@ -1000,6 +1092,8 @@ showProjects: tru e,;
                     <div className="text-white font-medium">{project.teamMembers.length} members</div>;
                   </div>;
                 </div> {/* Tags */}";
+=======
+>>>>>>> origin/main
                       </span>
                     </div>
                   </div>
@@ -1062,6 +1156,7 @@ showProjects: tru e,;
           </div>
           {/* Add Project Button */}"
           <div className="text-center">;
+<<<<<<< HEAD
             <button;
               onClick={() => setShowProjectForm(true)}";
               className="px-8 py-3 bg-zion-cyan text-white rounded-lg "hover": "b g-zion-cyan/80 transition-colors flex items-center gap-2 mx-auto";
@@ -1077,15 +1172,21 @@ showProjects: tru e,;
           initial = {
   { opacity: 0,
   y: 2 0
+=======
+=======
+>>>>>>> origin/main
         </motion.div>) "}
 ;
       {/* Communication Tab */}
       {activeTab === 'communication' && showCommunication && (;
         <motion.div;
           initial = {;
+<<<<<<< HEAD
   { opacity: 0,;
   y: 2 0;
 }}
+=======
+>>>>>>> origin/main
   { "opacity": "0",;
   "y": "2 0;
 "}}
@@ -1176,6 +1277,7 @@ showProjects: tru e,;
               </div>"
               <div className="text-zinc-400">Read</div>
             </motion.div>;
+<<<<<<< HEAD
 ;
             <motion.div;
               initial = {;
@@ -1190,6 +1292,9 @@ showProjects: tru e,;
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
               <div className="text-3xl font-bold text-blue-400 mb-2">;
+=======
+
+>>>>>>> origin/main
             <motion.div
               initial = {
   { opacity: 0,
@@ -1212,6 +1317,7 @@ showProjects: tru e,;
           <div className="space-y-4"> {messages.map((message, index) => (;
               <motion.div
                 key={message.id}
+<<<<<<< HEAD
                 initial = {;
   { "opacity": "0",;
   "y": "2 0;
@@ -1226,6 +1332,8 @@ showProjects: tru e,;
 ";
                 <div className="flex items-start gap-4">";
                   <div className="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold">;
+=======
+>>>>>>> origin/main
                 initial = {
   { opacity: 0,
   y: 2 0
@@ -1238,8 +1346,11 @@ showProjects: tru e,;
                 className={`p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover: b g-zinc-900/50 transition-all duration-300 ${!message.isRead ? 'border-zion-cyan/50 bg-zion-cyan/5' : ''`
                 }`}
 "
+<<<<<<< HEAD
                 <div className="flex items-start gap-4">"';
                   <div className="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold">';';
+=======
+>>>>>>> origin/main
                 animate = {;
   { opacity: 1,;
   y: 0;
@@ -1250,6 +1361,10 @@ showProjects: tru e,;
 ";
                 <div className="flex items-start gap-4">";
                   <div className="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
                 <div className="flex items-start gap-4">"
                   <div className="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold">
                     {message.sender.split(' ').map(n => n[0]).join('')}
@@ -1271,6 +1386,7 @@ showProjects: tru e,;
                       {message.reactions.map((reaction, idx) => (
                         <button
                           key={idx}
+<<<<<<< HEAD
                           onClick={
   () => handleMessageReaction(message.id,
   reaction.type)
@@ -1279,6 +1395,9 @@ showProjects: tru e,;
 '"';';
                           {reaction.type === 'thumbsUp' && <ThumbsUp className="w-3 h-3 inline mr-1"   />}'"';';
                           {reaction.type === 'check' && <CheckCircle className="w-3 h-3 inline mr-1"   />}'"';';
+=======
+=======
+>>>>>>> origin/main
                           onClick={;
   () => handleMessageReaction(message.id,;
   reaction.type);
@@ -1415,14 +1534,22 @@ showProjects: tru e,;
             </div>
           </div>
         </motion.div>) }
+<<<<<<< HEAD
 ';
       {/* File Sharing Tab */}';';
+=======
+
+>>>>>>> origin/main
       {/* File Sharing Tab */}
       {activeTab === 'files' && showFileSharing && (
         <motion.div
           initial = {
   { opacity: 0,
   y: 2 0
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 ;
       {/* File Sharing Tab */}
       {activeTab === 'files' && showFileSharing && (;
@@ -1430,6 +1557,10 @@ showProjects: tru e,;
           initial = {;
   { opacity: 0,;
   y: 2 0;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
 }}
           animate = {
   { opacity: 1,
@@ -1486,10 +1617,13 @@ showProjects: tru e,;
   { opacity: 1,;
   y: 0;
 }}
+<<<<<<< HEAD
               transition={{ delay: 0.2 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 "';
               <div className="text-3xl font-bold text-blue-400 mb-2">';';
+=======
+>>>>>>> origin/main
               transition={{ delay: 0.1 }}";
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
@@ -1497,6 +1631,7 @@ showProjects: tru e,;
                 {files.filter(f => f.type === 'document').length}
               </div>";
               <div className="text-zinc-400">Documents</div>;
+<<<<<<< HEAD
             </motion.div>;
 ;
             <motion.div;
@@ -1512,6 +1647,10 @@ showProjects: tru e,;
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
               <div className="text-3xl font-bold text-blue-400 mb-2">;
+=======
+=======
+            </motion.div>;
+>>>>>>> origin/main
                 {files.filter(f => f.type === 'image').length}
               </div>";
               <div className="text-zinc-400">Images</div>;
@@ -1568,6 +1707,7 @@ showProjects: tru e,;
           <div className="space-y-4"> {files.map((file, index) => (;
               <motion.div
                 key={file.id}
+<<<<<<< HEAD
                 initial = {;
   { "opacity": "0",;
   "y": "2 0;
@@ -1624,6 +1764,8 @@ showProjects: tru e,;
               <p className="text-zinc-400 mb-4">Drag and drop files here or click to browse</p>"              <button className="px-6 py-2 bg-zion-cyan text-white rounded-lg "hover": "b g-zion-cyan/80 transition-colors">;
                 Choose Files;
               </button>;
+=======
+>>>>>>> origin/main
                 initial = {
   { opacity: 0,
   y: 2 0
@@ -1682,8 +1824,11 @@ showProjects: tru e,;
               </button>
             </div>;
           </div>;
+<<<<<<< HEAD
         </motion.div>;) };';
     </div>;) };';';
+=======
+>>>>>>> origin/main
         </motion.div>;) "};
     </div>;) };
 '"`
@@ -1720,8 +1865,11 @@ showProjects: tru e,;
 </FileItem>
 </Message>
 </Project>
+<<<<<<< HEAD
 </TeamMember>';
 </TeamCollaborationToolsProps>;';;';
+=======
+>>>>>>> origin/main
         </motion.div>;) };
     </div>;) };
 '"`;
@@ -1760,5 +1908,11 @@ showProjects: tru e,;
 </Project>;
 </TeamMember>;
 </TeamCollaborationToolsProps>;
+<<<<<<< HEAD
 </TeamMember>
 </TeamCollaborationToolsProps>
+=======
+=======
+</TeamMember>
+</TeamCollaborationToolsProps>
+>>>>>>> origin/main

@@ -1,398 +1,229 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Building, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  Globe, 
-  CheckCircle, 
-  ArrowRight,
-  Award,
-  Clock,
-  DollarSign,
-  Target,
-  Settings,
-  Database,
-  Cloud,
-  Lock,
-  TrendingUp
-} from 'lucide-react';
+import { Building, Shield, Users, BarChart3, ArrowRight, CheckCircle, Clock, Globe, Database, Lock } from 'lucide-react';
+import Layout from '../../components/Layout';
 
-const enterpriseFeatures = [
+const features = [
   {
-    icon: Building,
-    title: 'Scalable Infrastructure',
+    title: 'Scalable Architecture',
     description: 'Enterprise-grade infrastructure that grows with your business',
-    features: [
-      'Auto-scaling cloud resources',
-      'High availability architecture',
-      'Disaster recovery solutions',
-      'Global data centers'
-    ]
+    icon: Building,
+    details: ['Auto-scaling capabilities', 'Load balancing', 'High availability', 'Global deployment']
   },
   {
+    title: 'Advanced Security',
+    description: 'Comprehensive security measures to protect your enterprise data',
     icon: Shield,
-    title: 'Enterprise Security',
-    description: 'Comprehensive security solutions for large organizations',
-    features: [
-      'Zero-trust architecture',
-      'Advanced threat protection',
-      'Compliance management',
-      'Security monitoring'
-    ]
+    details: ['Multi-layer security', 'Access controls', 'Data encryption', 'Compliance management']
   },
   {
-    icon: Zap,
-    title: 'Process Automation',
-    description: 'Intelligent automation for complex enterprise processes',
-    features: [
-      'Workflow automation',
-      'AI-powered decision making',
-      'Integration capabilities',
-      'Performance optimization'
-    ]
-  },
-  {
-    icon: BarChart3,
-    title: 'Advanced Analytics',
-    description: 'Data-driven insights for enterprise decision making',
-    features: [
-      'Real-time dashboards',
-      'Predictive analytics',
-      'Custom reporting',
-      'Data visualization'
-    ]
-  }
-];
-
-const industries = [
-  {
-    name: 'Financial Services',
-    description: 'Banking, insurance, and fintech solutions',
-    icon: DollarSign,
-    features: ['Risk management', 'Compliance automation', 'Fraud detection', 'Customer analytics']
-  },
-  {
-    name: 'Healthcare',
-    description: 'Medical technology and health data solutions',
+    title: 'Team Collaboration',
+    description: 'Tools and platforms for seamless team collaboration',
     icon: Users,
-    features: ['Patient management', 'Medical AI', 'Data security', 'Interoperability']
+    details: ['Real-time collaboration', 'Project management', 'Communication tools', 'Document sharing']
   },
   {
-    name: 'Manufacturing',
-    description: 'Industrial automation and smart manufacturing',
-    icon: Settings,
-    features: ['IoT integration', 'Predictive maintenance', 'Quality control', 'Supply chain optimization']
+    title: 'Analytics & Insights',
+    description: 'Advanced analytics to drive data-driven decisions',
+    icon: BarChart3,
+    details: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Business intelligence']
   },
   {
-    name: 'Retail & E-commerce',
-    description: 'Omnichannel retail and e-commerce platforms',
+    title: '24/7 Support',
+    description: 'Round-the-clock support for your enterprise needs',
+    icon: Clock,
+    details: ['Dedicated support team', 'Priority response', 'On-site assistance', 'Training programs']
+  },
+  {
+    title: 'Global Reach',
+    description: 'Worldwide deployment and support capabilities',
     icon: Globe,
-    features: ['Inventory management', 'Customer experience', 'Personalization', 'Analytics']
+    details: ['Multi-region deployment', 'Local support teams', 'Compliance across regions', 'Scalable infrastructure']
   }
 ];
 
 const benefits = [
   {
-    icon: TrendingUp,
-    title: 'Increased Efficiency',
-    description: '40% improvement in operational efficiency',
-    value: '40%'
+    title: 'Increased Productivity',
+    description: 'Streamlined processes and automation boost team productivity',
+    icon: ArrowRight
   },
   {
-    icon: DollarSign,
-    title: 'Cost Reduction',
-    description: 'Average 30% reduction in operational costs',
-    value: '30%'
+    title: 'Cost Optimization',
+    description: 'Efficient resource utilization reduces operational costs',
+    icon: Database
   },
   {
-    icon: Clock,
-    title: 'Faster Deployment',
-    description: '50% faster time to market for new initiatives',
-    value: '50%'
+    title: 'Enhanced Security',
+    description: 'Enterprise-grade security protects your valuable data',
+    icon: Lock
   },
   {
-    icon: Award,
-    title: 'Higher ROI',
-    description: 'Average 3x return on investment',
-    value: '3x'
+    title: 'Better Decision Making',
+    description: 'Data-driven insights enable informed business decisions',
+    icon: BarChart3
   }
 ];
 
 export default function EnterpriseSolutionsPage() {
   return (
-    <>
-      <Head>
-        <title>Enterprise Solutions - Zion Tech Group | Large Scale Technology Solutions</title>
-        <meta name="description" content="Comprehensive enterprise technology solutions for large organizations. Scalable, secure, and intelligent solutions that drive business growth." />
-        <meta name="keywords" content="enterprise solutions, large scale technology, enterprise software, business transformation, enterprise AI" />
-      </Head>
-
+    <Layout
+      title="Enterprise Solutions - Zion Tech Group"
+      description="Comprehensive enterprise solutions designed to transform large organizations with scalable, secure, and innovative technology."
+      keywords="enterprise solutions, large organizations, scalable technology, enterprise security, business transformation"
+    >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="text-center"
-              >
-                <Building className="w-16 h-16 mx-auto mb-6" />
-                <h1 className="text-5xl font-bold mb-6">
-                  Enterprise Solutions
-                </h1>
-                <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                  Comprehensive technology solutions designed for large organizations. 
-                  Scale your business with intelligent, secure, and efficient enterprise-grade systems.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link
-                    href="/contact"
-                    className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                  >
-                    Get Enterprise Consultation
-                  </Link>
-                  <Link
-                    href="/pricing"
-                    className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors"
-                  >
-                    View Enterprise Pricing
-                  </Link>
-                </div>
-              </motion.div>
-            </div>
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
+          
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Comprehensive enterprise solutions designed to transform large organizations with scalable, 
+                secure, and innovative technology solutions.
+              </p>
+            </motion.div>
           </div>
         </section>
 
-        {/* Enterprise Features */}
+        {/* Features Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-center mb-12"
-              >
-                <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                  Enterprise-Grade Solutions
-                </h2>
-                <p className="text-xl text-gray-600">
-                  Built for scale, security, and performance
-                </p>
-              </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Enterprise Features
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our enterprise solutions are designed to meet the complex needs of large organizations.
+              </p>
+            </motion.div>
 
-              <div className="grid md:grid-cols-2 gap-8">
-                {enterpriseFeatures.map((feature, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                    className="bg-white rounded-lg shadow-lg p-8"
-                  >
-                    <div className="flex items-center mb-4">
-                      <feature.icon className="w-8 h-8 text-blue-600 mr-3" />
-                      <h3 className="text-xl font-bold text-gray-900">{feature.title}</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                      <feature.icon className="w-6 h-6 text-blue-600" />
                     </div>
-                    <p className="text-gray-600 mb-4">{feature.description}</p>
-                    <ul className="space-y-2">
-                      {feature.features.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-center text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Industry Solutions */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="text-center mb-12"
-              >
-                <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                  Industry-Specific Solutions
-                </h2>
-                <p className="text-xl text-gray-600">
-                  Tailored solutions for different industries
-                </p>
-              </motion.div>
-
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {industries.map((industry, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-                    className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow"
-                  >
-                    <industry.icon className="w-8 h-8 text-blue-600 mb-4" />
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">{industry.name}</h3>
-                    <p className="text-gray-600 text-sm mb-4">{industry.description}</p>
+                    <h3 className="text-xl font-bold text-gray-900">{feature.title}</h3>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    {feature.description}
+                  </p>
+                  
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>
                     <ul className="space-y-1">
-                      {industry.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="text-sm text-gray-600 flex items-center">
-                          <CheckCircle className="w-3 h-3 text-green-500 mr-2" />
-                          {feature}
+                      {feature.details.map((detail, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+                          {detail}
                         </li>
                       ))}
                     </ul>
-                  </motion.div>
-                ))}
-              </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Benefits */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.0 }}
-                className="text-center mb-12"
-              >
-                <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                  Proven Results
-                </h2>
-                <p className="text-xl text-gray-600">
-                  Measurable benefits for enterprise clients
-                </p>
-              </motion.div>
-
-              <div className="grid md:grid-cols-4 gap-8">
-                {benefits.map((benefit, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
-                    className="text-center"
-                  >
-                    <div className="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                      <benefit.icon className="w-8 h-8 text-blue-600" />
-                    </div>
-                    <div className="text-3xl font-bold text-blue-600 mb-2">{benefit.value}</div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
-                    <p className="text-gray-600 text-sm">{benefit.description}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Technology Stack */}
+        {/* Benefits Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.4 }}
-                className="text-center mb-12"
-              >
-                <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                  Enterprise Technology Stack
-                </h2>
-                <p className="text-xl text-gray-600">
-                  Built on proven enterprise technologies
-                </p>
-              </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Enterprise Benefits
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Transform your enterprise with our comprehensive technology solutions.
+              </p>
+            </motion.div>
 
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <Cloud className="w-8 h-8 text-blue-600 mb-4" />
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">Cloud Infrastructure</h3>
-                  <ul className="space-y-2 text-gray-600">
-                    <li>• AWS, Azure, GCP</li>
-                    <li>• Kubernetes orchestration</li>
-                    <li>• Microservices architecture</li>
-                    <li>• Auto-scaling capabilities</li>
-                  </ul>
-                </div>
-
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <Database className="w-8 h-8 text-blue-600 mb-4" />
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">Data & Analytics</h3>
-                  <ul className="space-y-2 text-gray-600">
-                    <li>• Big data processing</li>
-                    <li>• Real-time analytics</li>
-                    <li>• Machine learning pipelines</li>
-                    <li>• Data governance</li>
-                  </ul>
-                </div>
-
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <Lock className="w-8 h-8 text-blue-600 mb-4" />
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">Security & Compliance</h3>
-                  <ul className="space-y-2 text-gray-600">
-                    <li>• Zero-trust security</li>
-                    <li>• SOC 2 compliance</li>
-                    <li>• GDPR compliance</li>
-                    <li>• Advanced threat protection</li>
-                  </ul>
-                </div>
-              </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.6 }}
-              >
-                <Target className="w-12 h-12 mx-auto mb-6" />
-                <h2 className="text-3xl font-bold mb-4">
-                  Ready to Transform Your Enterprise?
-                </h2>
-                <p className="text-xl text-blue-100 mb-8">
-                  Let's discuss how our enterprise solutions can drive your business forward
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link
-                    href="/contact"
-                    className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                  >
-                    Schedule Consultation
-                  </Link>
-                  <Link
-                    href="/case-studies"
-                    className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors"
-                  >
-                    View Case Studies
-                  </Link>
-                </div>
-              </motion.div>
-            </div>
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Transform Your Enterprise?
+              </h2>
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Let's discuss how our enterprise solutions can help your organization achieve its goals.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center"
+                >
+                  <ArrowRight className="w-5 h-5 mr-2" />
+                  Contact Sales
+                </Link>
+                <Link
+                  href="/case-studies"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
+                  View Case Studies
+                </Link>
+              </div>
+            </motion.div>
           </div>
         </section>
       </div>
-    </>
+    </Layout>
   );
 }

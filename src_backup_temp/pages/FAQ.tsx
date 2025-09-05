@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/pages/FAQ.tsx
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, HelpCircle, Search } from 'lucide-react';
@@ -231,6 +232,8 @@ export function FAQ() {
     </div>
   );
 }
+=======
+>>>>>>> origin/main
 import React from 'react';
 ;
 const "FAQ": "React.FC = () => {;
@@ -246,4 +249,8 @@ const "FAQ": "React.FC = () => {;
   );
 "};
 ;
+<<<<<<< HEAD
 export default FAQ;
+=======
+export default FAQ;
+>>>>>>> origin/main
