@@ -41,11 +41,10 @@ export default [
         KeyboardEvent: 'readonly',
         Node: 'readonly',
         PerformanceObserver: 'readonly',
+        URL: 'readonly',
         // React
         React: 'readonly',
         // Node.js globals
-        console: 'readonly',
-        process: 'readonly',
         require: 'readonly',
         module: 'readonly',
         exports: 'readonly',
