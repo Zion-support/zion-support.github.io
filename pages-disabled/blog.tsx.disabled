@@ -1,11 +1,15 @@
 import React from 'react'
 import Head from 'next/head'
+import { motion } from 'framer-motion'
+import Layout from '../components/Layout'
 import Link from 'next/link'
 
 const blogPosts = [
   { id: 1, title: 'The Future of AI in Business: 2025 Trends', excerpt: 'Explore AI trends transforming businesses.', author: 'Dr. Sarah Chen', date: '2024-01-15', readTime: '5 min read' },
   { id: 2, title: 'Micro SaaS: Building Scalable Solutions', excerpt: 'Build and scale micro SaaS apps.', author: 'Michael Rodriguez', date: '2024-01-12', readTime: '7 min read' }
 ]
+
+import { ArrowRight, Calendar, Filter, Search, User } from 'lucide-react'
 
 export default function BlogPage() {
   return (

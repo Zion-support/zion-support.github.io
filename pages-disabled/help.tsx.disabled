@@ -2,32 +2,30 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  // TODO: Implement
-}
-  Search, 
-  HelpCircle, 
-  BookOpen, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  FileText, 
+import { 
+  Search,
+  HelpCircle,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  FileText,
   Video,
   Download,
   ExternalLink,
   ChevronDown,
-  ChevronRight;'
+  ChevronRight
 } from 'lucide-react';
 const helpCategories = [
-  {'
+  {
     title: "Getting Started",
     icon: BookOpen,
     articles: [
-      {"
-        title: "Welcome to Zion Tech Group"
-        description: "Learn the basics of our platform and services"
-        type: "Guide"
-        readTime: "5 min""
+      {
+        title: "Welcome to Zion Tech Group",
+        description: "Learn the basics of our platform and services",
+        type: "Guide",
+        readTime: "5 min"
       },
       {"
         title: "Setting Up Your Account"
