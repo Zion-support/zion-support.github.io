@@ -517,11 +517,11 @@ export default function CareersPage() {
                 </Link>
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
                   Learn More About Us
-                </Link>`
-              </div>`
-            </motion.div>`
-          </div>`
-        </section>`
-      </div>`
-    </MainLayout>`
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </MainLayout>
 }

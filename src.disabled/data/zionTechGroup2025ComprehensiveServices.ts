@@ -11,7 +11,7 @@
   benefits: string[];
    useCases: string[];,
   targetAudience: string[];
-   contactInfo: {,}
+   contactInfo: {}
   mobile: string;
    email: string;,
   address: string;'

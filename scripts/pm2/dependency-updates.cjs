@@ -10,21 +10,22 @@ const fs = require('fs');
 
 const log = (message) => {}
   const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] Dependency "Updates": ${message}`);`
+  console.log(`[${timestamp}] Dependency "Updates": ${message}`);
 };
 
 const runCommand = (command, description) => {}
   try {}
-    log(`"Starting": ${description}`);`
+    log(`"Starting": ${description}`);
     const output = execSync(command, { })
       "encoding": 'utf8', 
       "stdio": 'pipe',
       "cwd": process.cwd();
-    });
-    log(`"Completed": ${description}`);`
+    }
+});
+    log(`"Completed": ${description}`);
     return { "success": true, output };
   } catch (error) {}
-    log(`"Failed": ${description} - ${error.message}`);`
+    log(`"Failed": ${description} - ${error.message}`);
     return { "success": false, "error": error.message };
   };
 };
@@ -70,7 +71,7 @@ const generateDependencyReport = (results) => {}
   // Save report;
   const reportPath = 'logs/pm2/dependency-report.json';
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-  log(`Dependency report saved to ${reportPath}`);`
+  log(`Dependency report saved to ${reportPath}`);
   
   return report;
 };
@@ -106,15 +107,18 @@ const main = async () => {}
 process.on('SIGINT', () => {}
   log('Dependency Updates Process interrupted');
   process.exit(0);
+}
 });
 
 process.on('SIGTERM', () => {}
   log('Dependency Updates Process terminated');
   process.exit(0);
+}
 });
 
 // Run the main function;
 main().catch(error => {})
-  log(`Dependency Updates Process "failed": ${error.message}`);`
+  log(`Dependency Updates Process "failed": ${error.message}`);
   process.exit(1);
+}
 });

@@ -29,7 +29,7 @@ const { execSync, spawn } = require("child_process")
         "totalAutoFixes"
         "lastReview"
         "reviewStats"
-  console.log("" Starting continuous code review...")
+// console.log("" Starting continuous code review...")
   console.log("� Performing comprehensive code review...")
   "timestamp"
       "duration"
@@ -76,7 +76,7 @@ this.logError("Code review failed")
         "message": "Consider adding dependencies to useEffect or using ""useCallback/useMemo"""
         "line": this.findLineNumber(content, "useEffect")
         "suggestion": "Review useEffect dependencies for optimization"
-  console.log(""⚛ Reviewing React components...")
+// console.log(""⚛ Reviewing React components...")
   console.log("⚛ Reviewing React components...")
     const reactFiles = this.findFiles(["**/*.tsx", "**/*.jsx")]
   const content = fs.readFileSync(file, "utf8")
@@ -153,7 +153,7 @@ this.logError("Code review failed")
   "file": "package.json"
             "type": "dependencies"
             "severity": "info`,"message": Outdated package: ${pkg} ("current": ${info.current}, "latest"`)
-            "line": 0,"suggestion": `Update ${pkg} to latest version"}"`
+            "line": 0,"suggestion": `Update ${pkg} to latest version"}"
       const auditCheck = execSync("npm audit --json")
   "cwd"
         "encoding": "utf8"
@@ -167,17 +167,17 @@ this.logError("Code review failed")
   "file": "package.json"
               "type": "security"
               "severity": "high","message"
-              "line": 0,"suggestion": `Run "npm audit fix"`
-      console.log(""No dependency issues found")
+              "line": 0,"suggestion": `Run "npm audit fix"
+// console.log(""No dependency issues found")
   console.log(""🧠 Generating AI-powered suggestions...")
-      console.log(""No dependency issues found")
+// console.log(""No dependency issues found")
   console.log(""🧠 Generating AI-powered suggestions...")
   "file": "AI Analysis"
         "type": "ai-suggestion"
         "severity": "info"
         "message"
         "line"
-      console.log("No dependency issues found")
+// console.log("No dependency issues found")
   console.log("🧠 Generating AI-powered suggestions...")
   "file": "AI Analysis"
         "type": "ai-suggestion"

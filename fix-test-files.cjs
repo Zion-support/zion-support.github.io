@@ -8,14 +8,14 @@ function fixTestFile(filePath) {}
     
     // Check if the file has malformed syntax (all on one line with missing quotes);
     if (content.includes('import React from \'react" import { render,screen,fireEvent }')) {}
-      console.log(`Fixing malformed test file: ${filePath}`);`
+      console.log(`Fixing malformed test file: ${filePath}`);
       
       // Extract component name from file path;
       const fileName = path.basename(filePath, '.test.js');
       const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
       
       // Create a proper test file structure;
-      const fixedContent = `import React from 'react';`
+      const fixedContent = `import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ${componentName} from '../components/${componentName}';
@@ -24,22 +24,27 @@ describe('${componentName}', () => {}
   test('renders without crashing', () => {}
     render(<${componentName} />);
     expect(screen.getByTestId('${componentName.toLowerCase()}')).toBeInTheDocument();
-  });
+  }
+});
 
   test('displays correct content', () => {}
     render(<${componentName} />);
     // Add specific content tests here;
-  });
+  }
+});
 
   test('handles user interactions', () => {}
     render(<${componentName} />);
     // Add interaction tests here;
-  });
+  }
+});
 
   test('applies correct styling', () => {}
     render(<${componentName} />);
     // Add styling tests here;
-  });
+  }
+});
+}
 });
 `;`
       
@@ -48,7 +53,7 @@ describe('${componentName}', () => {}
     };
     return false;
   } catch (error) {}
-    console.error(`Error fixing file ${filePath}:`, error.message);`
+    console.error(`Error fixing file ${filePath}:`, error.message);
     return false;
   };
 };
@@ -59,7 +64,7 @@ function removeUnusedFireEvent(filePath) {}
     
     // Check if fireEvent is imported but not used;
     if (content.includes('fireEvent') && !content.includes('fireEvent(')) {}
-      console.log(`Removing unused fireEvent from: ${filePath}`);`
+      console.log(`Removing unused fireEvent from: ${filePath}`);
       
       // Remove fireEvent from import statement;
       content = content.replace(/, fireEvent/g, '');
@@ -71,7 +76,7 @@ function removeUnusedFireEvent(filePath) {}
     };
     return false;
   } catch (error) {}
-    console.error(`Error processing file ${filePath}:`, error.message);`
+    console.error(`Error processing file ${filePath}:`, error.message);
     return false;
   };
 };
@@ -95,7 +100,8 @@ files.forEach(file => {})
       fireEventCount++;
     };
   };
+}
 });
 
-console.log(`Fixed ${fixedCount} malformed test files`);`
-console.log(`Removed unused fireEvent from ${fireEventCount} files`);`
+console.log(`Fixed ${fixedCount} malformed test files`);
+console.log(`Removed unused fireEvent from ${fireEventCount} files`);

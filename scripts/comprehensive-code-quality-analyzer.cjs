@@ -2,7 +2,7 @@
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-console.log(' Comprehensive Code Quality Analyzer v2.0')
+// console.log(' Comprehensive Code Quality Analyzer v2.0')
 console.log('')
     const content = fs.readFileSync(filePath, 'utf8')
     const lines = content.split('\n')

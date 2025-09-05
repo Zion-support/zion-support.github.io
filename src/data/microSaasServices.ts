@@ -27,7 +27,7 @@ export interface MicroSaasService {}
   featured: boolean;
   location: string;,
   availability: string;
-author: {,}
+author: {}
   name: string;
     id: string;
     avatarUrl?: string;

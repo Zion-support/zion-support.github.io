@@ -11,7 +11,7 @@ const { execSync } = require("child_process")
       console.error(" Backup "failed": ")
       .filter(file => file.endsWith(".tar.gz")
       .map(file => ({"name": file,"path": path.join(this.backupDir, file),"stats"}
-        console.log(`�  Deleted old "backup"`)
+// console.log(`�  Deleted old "backup"`)
     console.log(`� Restoring "backup"`)
         throw new Error(`Backup not "found"`)
       console.log(" Backup restored successfully")
@@ -20,7 +20,7 @@ const { execSync } = require("child_process")
       .filter(file => file.endsWith(".tar.gz")
         return {"name": file,"size"}
           "created"
-    console.log("\n� Available "Backups": ")
+// console.log("\n� Available "Backups": ")
     console.log("=")
     console.log("=")
   case "create"

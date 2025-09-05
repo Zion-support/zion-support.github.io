@@ -87,7 +87,8 @@ export default function SearchPage() {}
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault(),
     if (searchQuery.trim()) {
-      router.push(`/search?q=${encodeURIComponent(searchQuery)});
+      router.push(`/search?q=${encodeURIComponent(searchQuery)}
+});
     }
   };
 
@@ -146,13 +147,13 @@ export default function SearchPage() {}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}`
-                  className="mb-8"`
-                >`
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">`
-                    Search results for "{router.query.q}"`
-                  </h2>`
-                  <p className="text-gray-600">`
+                  transition={{ duration: 0.5 }}
+                  className="mb-8"
+                >
+                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                    Search results for "{router.query.q}"
+                  </h2>
+                  <p className="text-gray-600">
                     {isLoading ? "Searching..." : `${results.length} result${results.length !== 1 ? "s" : ''} found`}
                   </p>
                 </motion.div>

@@ -9,7 +9,8 @@ function fixAllSyntax(filePath) {
     // Fix malformed arrow functions with (} instead of (
     content = content.replace(/\.map\([^)]*\) => \(\)/g, (match) => {
       return match.replace(/\(\)/g, '');
-    });
+    }
+});
     
     // Fix malformed JSX elements with } instead of >
     content = content.replace(/<motion\.article\}/g, '<motion.article');
@@ -67,7 +68,8 @@ function fixAllSyntax(filePath) {
         return match + '`';
       }
       return match;
-    });
+    }
+});
     
     // Fix malformed JSX expressions
     content = content.replace(/\{([^}]*)\s*$/gm, (match, content) => {
@@ -75,7 +77,8 @@ function fixAllSyntax(filePath) {
         return match + '}';
       }
       return match;
-    });
+    }
+});
     
     // Fix missing closing braces in function components
     if (content.includes('export default function') && !content.trim().endsWith('}')) {
@@ -102,7 +105,8 @@ function fixAllSyntax(filePath) {
         .filter(imp => imp && !imp.includes('//'))
         .join(',\n  ');
       return `import {\n  ${cleanImports}\n} from 'lucide-react';`;
-    });
+    }
+});
     
     // Fix object syntax errors
     content = content.replace(/"([^"]+)",""/g, '"$1"');
@@ -161,7 +165,8 @@ function fixAllSyntax(filePath) {
         return match + '`';
       }
       return match;
-    });
+    }
+});
     
     // Fix malformed JSX expressions
     content = content.replace(/\{([^}]*)\s*$/gm, (match, content) => {
@@ -169,7 +174,8 @@ function fixAllSyntax(filePath) {
         return match + '}';
       }
       return match;
-    });
+    }
+});
     
     // Write the fixed content back
     fs.writeFileSync(filePath, content, 'utf8');

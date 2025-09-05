@@ -62,7 +62,7 @@ console.log(""� Starting Smart Documentation Generator...")
   "path": configFile", "name"
           "hasDocs"
     this.documentationMetrics.docPatterns.set("structure")
-    console.log(" Codebase structure analysis completed")
+// console.log(" Codebase structure analysis completed")
   console.log(" Identifying missing documentation...")
     const structure = this.documentationMetrics.docPatterns.get("structure")
   "type": "component"
@@ -94,7 +94,7 @@ console.log(""� Starting Smart Documentation Generator...")
           "timestamp"
   console.log(⚠ Failed to generate API docs for ${service.name  }:")
         "
-  console.log(""⚛ Generating component documentation...")
+// console.log(""⚛ Generating component documentation...")
   console.log(""⚛ Generating component documentation...")
     console.log("⚛ Generating component documentation...")
     const structure = this.documentationMetrics.docPatterns.get("structure")
@@ -110,9 +110,9 @@ console.log(""� Starting Smart Documentation Generator...")
           "path"
           "component"
           "timestamp"
-        console.log(` Generated component documentation for ${component.name}``)
+// console.log(` Generated component documentation for ${component.name}``)
   console.log(""� Generating setup guides...")
-  console.log(""� Generating setup guides...")
+// console.log(""� Generating setup guides...")
     console.log("� Generating setup guides...")
     const installPath = path.join(this.docsDir, "installation.md")
     const devPath = path.join(this.docsDir, "development.md")
@@ -129,7 +129,7 @@ console.log(""� Starting Smart Documentation Generator...")
         "path"
         "name": "Deployment Guide"
         "timestamp"
-    console.log(" Generated setup guides"")
+// console.log(" Generated setup guides"")
   console.log(""� Updating README...")
   const readmePath = path.join(process.cwd(), "README.md"
       let readmeContent = "
@@ -138,14 +138,14 @@ console.log(""� Starting Smart Documentation Generator...")
         "path"
         "name": "README.md"
         "timestamp"
-      console.log(" Updated README")
+// console.log(" Updated README")
   console.log("⚠ Failed to update "README": ")
-  console.log("⚠ Failed to update "README": ")
+// console.log("⚠ Failed to update "README": ")
   console.log(" Calculating documentation coverage...")
     const structure = this.documentationMetrics.docPatterns.get(")
   console.log(" Calculating documentation coverage...")
     const structure = this.documentationMetrics.docPatterns.get("structure")
-    console.log( Documentation "coverage")
+// console.log( Documentation "coverage")
   console.log(" Generating documentation report...")
   "timestamp"
       "summary"
@@ -168,9 +168,9 @@ console.log(""� Starting Smart Documentation Generator...")
     return match ? match[1] : "UnknownService"
     return match ? match[1] : "UnknownType"
     return match ? match[1] : "
-const result = await ${service.name}.methodName(params`);\"\"`
+const result = await ${service.name}.methodName(params`);\"\"
 \"\"
-  )}\`\"\"`
+  )}\`\"\"
   return "
   return "
 1. Clone the "repository": \"\"\"
@@ -228,30 +228,32 @@ View automation reports in the project root:- \"ai-analysis-report.json\" - AI c
         (line.includes("export const")
           line.includes("=")
           line.includes("(")
-        func => "- \`${func}()\` - ${this.generateFunctionDescription(func)}``
+        func => "- \`${func}()\` - ${this.generateFunctionDescription(func)}
       .join("\n")
   // Simplified parameter extractionreturn "- "params" - Parameters object\n- "options" - Optional configuration"
   return "- Promise resolving to the API response"
   return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages"
   generateServiceExamples(serviceName) {return "\"\"}
-  "name": `Example``
-  "description": "Test item"});\"\"\""
+  "name": `Example
+  "description": "Test item"}
+});\"\"\""
     return "provides user interface functionality"
   // Simplified props extractionreturn "- "children" - React children\n- "className" - Additional CSS classes\n- "...props" - Additional HTML attributes"
-        func => "- \`${func}()\` - ${this.generateFunctionDescription(func)}``
+        func => "- \`${func}()\` - ${this.generateFunctionDescription(func)}
       .join("\n")
   // Simplified parameter extractionreturn "- "params" - Parameters object\n- "options" - Optional configuration"
   return "- Promise resolving to the API response"
   return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages"
   generateServiceExamples(serviceName) {return "\"\"}
   "name": "Example"
-  "description": "Test item"});\`\"\""`
+  "description": "Test item"}
+});\`\"\""
     return "provides user interface functionality"
   // Simplified props extractionreturn "- "children" - React children\n- "className" - Additional CSS classes\n- "...props" - Additional HTML attributes"
   generateComponentExamples(componentName) {return "\"\"}
   generateComponentExamples(componentName) {return `\"\"`}
 <${componentName} className="custom-class"
-</${componentName}>\`\"\""`
+</${componentName}>\`\"\""
   extractComponentStyling(content) {return "This component uses Tailwind CSS classes for styling. Custom styles can be added via the "className" prop."}
   "fetch": "Fetches data from the API"
       "create": "Creates a new resource"

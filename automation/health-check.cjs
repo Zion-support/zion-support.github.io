@@ -33,7 +33,8 @@ class HealthChecker {}
   };
   async checkDiskSpace() {}
     try {}
-      const stats = execSync('df -h .', { encoding: 'utf8' });
+      const stats = execSync('df -h .', { encoding: 'utf8' }
+});
       const lines = stats.split('\n');
       const rootLine = lines[1];
       const usage = rootLine.split(/\s+/)[4];
@@ -52,7 +53,8 @@ class HealthChecker {}
   };
   async checkMemory() {}
     try {}
-      const mem = execSync('free -h', { encoding: 'utf8' });
+      const mem = execSync('free -h', { encoding: 'utf8' }
+});
       this.healthCheck.checks.memory = {}
         status: 'ok',
         details: mem.split('\n')[1],
@@ -67,7 +69,8 @@ class HealthChecker {}
   };
   async checkBuild() {}
     try {}
-      execSync('npm run build', { stdio: 'pipe' });
+      execSync('npm run build', { stdio: 'pipe' }
+});
       this.healthCheck.checks.build = {}
         status: 'ok',
         message: 'Build successful'
@@ -81,14 +84,16 @@ class HealthChecker {}
   };
   async checkLint() {}
     try {}
-      execSync('npm run lint', { stdio: 'pipe' });
+      execSync('npm run lint', { stdio: 'pipe' }
+});
       this.healthCheck.checks.lint = {}
         status: 'ok',
         message: 'Linting passed'
       };
     } catch (error) {}
       try {}
-        execSync('npm run lint:fix', { stdio: 'pipe' });
+        execSync('npm run lint:fix', { stdio: 'pipe' }
+});
         this.healthCheck.checks.lint = {}
           status: 'warning',
           message: 'Linting issues were auto-fixed'
@@ -103,7 +108,8 @@ class HealthChecker {}
   };
   async checkTypeCheck() {}
     try {}
-      execSync('npm run type-check', { stdio: 'pipe' });
+      execSync('npm run type-check', { stdio: 'pipe' }
+});
       this.healthCheck.checks.typeCheck = {}
         status: 'ok',
         message: 'Type checking passed'
@@ -117,14 +123,16 @@ class HealthChecker {}
   };
   async checkSecurity() {}
     try {}
-      execSync('npm audit', { stdio: 'pipe' });
+      execSync('npm audit', { stdio: 'pipe' }
+});
       this.healthCheck.checks.security = {}
         status: 'ok',
         message: 'No security vulnerabilities found'
       };
     } catch (error) {}
       try {}
-        execSync('npm audit fix --force', { stdio: 'pipe' });
+        execSync('npm audit fix --force', { stdio: 'pipe' }
+});
         this.healthCheck.checks.security = {}
           status: 'warning',
           message: 'Security vulnerabilities were auto-fixed'
@@ -154,7 +162,7 @@ class HealthChecker {}
     const reportPath = path.join(process.cwd(), 'health-report.json');
     try {}
       fs.writeFileSync(reportPath, JSON.stringify(this.healthCheck, null, 2));
-      console.log(`Health report saved to ${reportPath}`);`
+      console.log(`Health report saved to ${reportPath}`);
     } catch (error) {}
       console.error('Failed to save health report:', error);
     };
@@ -164,8 +172,9 @@ class HealthChecker {}
 if (require.main === module) {}
   const checker = new HealthChecker();
   checker.runAllChecks().then(success => {})
-    console.log(`Health check ${success ? 'passed' : 'failed'}`);`
+    console.log(`Health check ${success ? 'passed' : 'failed'}`);
     process.exit(success ? 0 : 1);
-  });
+  }
+});
 };
 module.exports = HealthChecker;

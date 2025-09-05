@@ -104,7 +104,8 @@ console.log(`\n✅ Fixed ${totalFixed} files`);
 // Try to build
 console.log('\n🔨 Testing build...');
 try {
-  execSync('npm run build', { cwd: '/workspace', stdio: 'pipe' });
+  execSync('npm run build', { cwd: '/workspace', stdio: 'pipe' }
+});
   console.log('✅ Build successful!');
 } catch (error) {
   console.log('⚠️  Build still has issues, but syntax was fixed');
@@ -114,8 +115,10 @@ try {
 // Commit the fixes
 console.log('\n📝 Committing syntax fixes...');
 try {
-  execSync('git add .', { cwd: '/workspace' });
-  execSync('git commit -m "fix: Final critical syntax fix for all remaining errors"', { cwd: '/workspace' });
+  execSync('git add .', { cwd: '/workspace' }
+});
+  execSync('git commit -m "fix: Final critical syntax fix for all remaining errors"', { cwd: '/workspace' }
+});
   console.log('✅ Syntax fixes committed');
 } catch (error) {
   console.log('⚠️  Failed to commit syntax fixes:', error.message);
@@ -124,7 +127,8 @@ try {
 // Push changes
 console.log('\n🚀 Pushing syntax fixes to main branch...');
 try {
-  execSync('git push origin main', { cwd: '/workspace' });
+  execSync('git push origin main', { cwd: '/workspace' }
+});
   console.log('✅ Syntax fixes pushed to main branch');
 } catch (error) {
   console.log('⚠️  Failed to push syntax fixes:', error.message);

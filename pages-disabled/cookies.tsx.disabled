@@ -82,7 +82,8 @@ export default function CookiesPage() {
     analytics: false,
     functional: false,
     marketing: false
-  });
+  }
+});
   const [showPreferences, setShowPreferences] = useState(false);
 
   const handlePreferenceChange = (type: string, value: boolean) => {
@@ -106,7 +107,8 @@ export default function CookiesPage() {
       analytics: true,
       functional: true,
       marketing: true
-    });
+    }
+});
     savePreferences();
   };
 
@@ -116,7 +118,8 @@ export default function CookiesPage() {
       analytics: false,
       functional: false,
       marketing: false
-    });
+    }
+});
     savePreferences();
   };
 
@@ -398,11 +401,11 @@ export default function CookiesPage() {
                 </a>
                 <a href="/privacy" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300 font-semibold">
                   Privacy Policy
-                </a>`
-              </div>`
-            </motion.div>`
-          </div>`
-        </section>`
-      </div>`
-    </MainLayout>`
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </MainLayout>
 }

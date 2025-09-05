@@ -9,6 +9,7 @@ const { execSync, spawn } = require("child_process")
         { "pattern"}
   vendor: ["react", "react-dom"]
           "ui": ["@radix-"ui/react-accordion"", "@radix-"ui/react-alert-dialog""]
+}
 });"
     if (!content.includes(""type": module")
   content = content.replace(/private":\s*true,/, """private": true,\n  "type": module",")

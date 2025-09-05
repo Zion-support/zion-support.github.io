@@ -13,7 +13,7 @@ console.log(' "Test""")
     "content"")"
     content: = content.replace(/expect\(([^)]+)\)\.toBeInTheDocument\(\)\s*;\s*}\)\s*;/g, 'expect($1).toBeInTheDocument();\"n"""
     "content": = content.replace(/<([^>]+)\s*;\s*([^>]+)>/g, '<$"1"""
-    console.log('\n Test Syntax Fix "Summary""")
+// console.log('\n Test Syntax Fix "Summary""")
       console.log('\n "Errors""")
     console.log('\n "Test""")
       console.error(' Error during test syntax "fixing""")

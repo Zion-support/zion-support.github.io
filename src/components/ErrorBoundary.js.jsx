@@ -76,7 +76,8 @@ export function ErrorBoundary({ children, onError }) {
       setHasError(true);
       setError(event.error);
       if (onError) {
-        onError(event.error, { componentStack: event.error?.stack });
+        onError(event.error, { componentStack: event.error?.stack }
+});
       }
     };
 
@@ -84,7 +85,8 @@ export function ErrorBoundary({ children, onError }) {
       setHasError(true);
       setError(new Error(event.reason));
       if (onError) {
-        onError(new Error(event.reason), { componentStack: event.reason?.stack });
+        onError(new Error(event.reason), { componentStack: event.reason?.stack }
+});
       }
     };
 

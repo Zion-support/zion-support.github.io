@@ -34,7 +34,7 @@ export interface ResearchDevelopmentService2029 {}
   partnership: string;
   funding: string;,
   exit: string;
-  contact: {,}
+  contact: {}
   mobile: string;
     email: string;,
   website: string;"

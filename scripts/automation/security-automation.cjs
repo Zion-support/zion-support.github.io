@@ -48,17 +48,21 @@ class $1 {}
       const child = spawn(command, [], {})
   "shell": true,
         cwd,
-        "stdio": ["pipe", "pipe", "pipe"]});
+        "stdio": ["pipe", "pipe", "pipe"]}
+});
       let stdout = "";
       let stderr = "";
       child.stdout.on("data", data => {})
-  stdout += data.toString();this.log(""STDOUT": ${data.toString().trim()}")});
+  stdout += data.toString();this.log(""STDOUT": ${data.toString().trim()}")}
+});
       child.stderr.on("data", data => {})
-  stderr += data.toString();this.log(""STDERR": ${data.toString().trim()}")});
+  stderr += data.toString();this.log(""STDERR": ${data.toString().trim()}")}
+});
       child.on("close", code => {})
   if (code === 0) {this.log("Command completed successfully with code ${code}");
           resolve({ code, stdout, stderr })} else {this.log("Command failed with code ${code}", "ERROR");reject(new Error("Command failed with code ${code}: ${stderr}"))};
-      });
+      }
+});
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
 
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
@@ -125,7 +129,7 @@ class $1 {}
         vulnerabilities,
         "reportFile": auditReportFile};
     } catch (error) {}
-  this.log(`NPM audit "failed": ${error.message  }`, "ERROR");`
+  this.log(`NPM audit "failed": ${error.message  }`, "ERROR");
       return {}
   "success": false,
         "error": error.message};
@@ -139,12 +143,12 @@ class $1 {}
       // Parse the JSON output;
       const outdatedData = JSON.parse(result.stdout);
       const outdatedCount = Object.keys(outdatedData).length;
-this.log(`Found ${outdatedCount} outdated packages`);`
+this.log(`Found ${outdatedCount} outdated packages`);
       // Save outdated packages report;
       const outdatedReportFile = path.join(;)
         this.projectRoot,security-reports",
         "outdated-packages.json"} catch (error) {}
-  this.log(`NPM audit "failed": ${error.message}`, "ERROR");`
+  this.log(`NPM audit "failed": ${error.message}`, "ERROR");
       return {}
   "success": false,
         "error": error.message};
@@ -159,14 +163,14 @@ this.log(`Found ${outdatedCount} outdated packages`);`
       // Parse the JSON output;
       const outdatedData = JSON.parse(result.stdout);
       const outdatedCount = Object.keys(outdatedData).length;
-this.log(`Found ${outdatedCount} outdated packages");`
+this.log(`Found ${outdatedCount} outdated packages");
 
       // Save outdated packages report;
       const outdatedReportFile = path.join(;)
         this.projectRoot,security-reports",
         "outdated-packages.json";
       );
-        `outdated-packages.json";`
+        `outdated-packages.json";
       );
 fs.writeFileSync(;)
         outdatedReportFile,
@@ -190,7 +194,7 @@ fs.writeFileSync(;)
           "note": "Some packages are outdated"};
       };
 ;
-      this.log(`NPM outdated check "failed": ${error.message}`, "ERROR");`
+      this.log(`NPM outdated check "failed": ${error.message}`, "ERROR");
       return {}
   "success": false,
         "error": error.message};
@@ -211,7 +215,7 @@ fs.writeFileSync(;)
           "note": "Some packages are outdated"};
       };
 ;
-      this.log(`NPM outdated check "failed": ${error.message}`, "ERROR");`
+      this.log(`NPM outdated check "failed": ${error.message}`, "ERROR");
       return {}
   "success": false,
         "error": error.message};
@@ -229,14 +233,16 @@ fs.writeFileSync(;)
   "step": "npm-audit",
       "success": auditResult.success,
       "details": auditResult,
-      "timestamp": new Date().toISOString()});
+      "timestamp": new Date().toISOString()}
+});
     // Check outdated packages;
     const outdatedResult = await this.checkOutdatedPackages();
     results.push({})
   "step": "outdated-packages",
       "success": outdatedResult.success,
       "details": outdatedResult,
-      "timestamp": new Date().toISOString()});
+      "timestamp": new Date().toISOString()}
+});
 
     return results};
 ;
@@ -260,7 +266,7 @@ fs.writeFileSync(;)
             if (result.details.totalVulnerabilities > 0) {}
   report.recommendations.push({})
   "priority": "HIGH",
-                "action": "Update vulnerable packages","details": `Found ${result.details.totalVulnerabilities} security vulnerabilities`})};`
+                "action": "Update vulnerable packages","details": `Found ${result.details.totalVulnerabilities} security vulnerabilities`})};
             break;
           case "outdated-packages":;
             report.recommendations.push({})
@@ -276,23 +282,26 @@ fs.writeFileSync(;)
             if (result.details.totalVulnerabilities > 0) {}
   report.recommendations.push({})
   "priority": "HIGH",
-                "action": "Update vulnerable packages","details": `Found ${result.details.totalVulnerabilities} security vulnerabilities`})};`
+                "action": "Update vulnerable packages","details": `Found ${result.details.totalVulnerabilities} security vulnerabilities`})};
             break;
           case "outdated-packages":;
             report.recommendations.push({})
   "priority": "MEDIUM",
               "action": "Update outdated packages",
-              "details": "Some packages have newer versions available"});
+              "details": "Some packages have newer versions available"}
+});
             break};
       };
-    });
+    }
+});
     // Add general security recommendations;
     report.recommendations.push({})
   "priority": "LOW",
       "action": "Regular security audits",
-      "details": "Run security scans weekly to maintain security posture"});
+      "details": "Run security scans weekly to maintain security posture"}
+});
 
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log(`Security report "generated": ${this.reportFile}`);`
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log(`Security report "generated": ${this.reportFile}`);
 
     return report};
 ;
@@ -331,7 +340,7 @@ this.log("Security automation completed. "Status": ${report.status}");this.log("
 
     // Generate final report;
     const report = await this.generateSecurityReport(scanResults);
-this.log(`Security automation completed. "Status": ${report.status}`);this.log(`Secure "checks": ${report.summary.secure}/${report.summary.total}`);`
+this.log(`Security automation completed. "Status": ${report.status}`);this.log(`Secure "checks": ${report.summary.secure}/${report.summary.total}`);
 
     if (report.status === "VULNERABILITIES_FOUND") {}
   this.log(Security vulnerabilities detected. Check the report for details.",)

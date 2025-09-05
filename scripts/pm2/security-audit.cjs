@@ -11,21 +11,22 @@ const path = require('path');
 
 const log = (message) => {}
   const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] Security Audit: ${message}`);`
+  console.log(`[${timestamp}] Security Audit: ${message}`);
 };
 
 const runCommand = (command, description) => {}
   try {}
-    log(`Starting: ${description}`);`
+    log(`Starting: ${description}`);
     const output = execSync(command, { })
       encoding: 'utf8', 
       stdio: 'pipe',
       cwd: process.cwd();
-    });
-    log(`Completed: ${description}`);`
+    }
+});
+    log(`Completed: ${description}`);
     return { success: true, output };
   } catch (error) {}
-    log(`Failed: ${description} - ${error.message}`);`
+    log(`Failed: ${description} - ${error.message}`);
     return { success: false, error: error.message };
   };
 };
@@ -88,19 +89,21 @@ const checkForSecrets = () => {}
       const result = execSync(`grep -r "${pattern}" . --exclude-dir=node_modules --exclude-dir=.git`, { `})
         encoding: 'utf8',
         stdio: 'pipe'
-      });
+      }
+});
       
       if (result.trim()) {}
-        log(`Potential secret found: ${pattern}`);`
+        log(`Potential secret found: ${pattern}`);
         secretsFound++;
       };
     } catch (error) {}
       // No matches found, which is good;
     };
-  });
+  }
+});
   
   if (secretsFound > 0) {}
-    log(`Warning: ${secretsFound} potential secrets found`);`
+    log(`Warning: ${secretsFound} potential secrets found`);
     return { success: false, secrets: secretsFound };
   } else {}
     log('No exposed secrets found');
@@ -116,7 +119,8 @@ const checkFilePermissions = () => {}
     const result = execSync('find . -type f -perm 777 -not -path "./node_modules/*" -not -path "./.git/*"', { })
       encoding: 'utf8',
       stdio: 'pipe'
-    });
+    }
+});
     
     if (result.trim()) {}
       log('Warning: Files with overly permissive permissions found');
@@ -153,7 +157,7 @@ const generateSecurityReport = (results) => {}
   // Save report;
   const reportPath = 'logs/pm2/security-report.json';
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-  log(`Security report saved to ${reportPath}`);`
+  log(`Security report saved to ${reportPath}`);
   
   return report;
 };
@@ -179,7 +183,7 @@ const main = async () => {}
   
   // Handle security issues;
   if (report.overall.status === 'FAIL') {}
-    log(`Security audit failed: ${report.overall.vulnerabilities} issues found`);`
+    log(`Security audit failed: ${report.overall.vulnerabilities} issues found`);
     
     // Attempt to fix issues;
     if (npmAuditResults.vulnerabilities > 0) {}
@@ -200,15 +204,18 @@ const main = async () => {}
 process.on('SIGINT', () => {}
   log('Security Audit Process interrupted');
   process.exit(0);
+}
 });
 
 process.on('SIGTERM', () => {}
   log('Security Audit Process terminated');
   process.exit(0);
+}
 });
 
 // Run the main function;
 main().catch(error => {})
-  log(`Security Audit Process failed: ${error.message}`);`
+  log(`Security Audit Process failed: ${error.message}`);
   process.exit(1);
+}
 });

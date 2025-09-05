@@ -10,7 +10,7 @@ export interface QuantumSpaceService {}
   link: string;
   category: string;,
   realImplementation: boolean;
-  contactInfo: {,}
+  contactInfo: {}
   mobile: string;
     email: string;,"
   address: string};export const "quantumSpaceServices": QuantumSpaceService[] = [{""}]

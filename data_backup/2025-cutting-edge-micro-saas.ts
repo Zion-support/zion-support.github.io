@@ -16,7 +16,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{}]
   'Custom AI model training''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 199,
         period:,"
   month',''
@@ -95,7 +95,7 @@ starter: {,}
   'Real-time collaboration tools''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 299,
         period:,"
   month',''
@@ -172,7 +172,7 @@ starter: {,}
   'White-label solutions''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 149,
         period:,"
   month',''
@@ -251,7 +251,7 @@ starter: {,}
   'Predictive modeling capabilities''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 249,
         period:,"
   month',''
@@ -329,7 +329,7 @@ starter: {,}
   'Comprehensive risk reporting''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 399,
         period:,"
   month',''

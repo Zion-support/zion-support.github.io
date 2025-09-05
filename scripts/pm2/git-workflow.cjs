@@ -19,7 +19,8 @@ class GitWorkflow {}
   ensureLogDir() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { "recursive": true });
+      fs.mkdirSync(logDir, { "recursive": true }
+});
     };
   };
   log(message) {}
@@ -36,7 +37,7 @@ class GitWorkflow {}
       }).trim();
       return branch;
     } catch (error) {}
-      this.log(`Failed to get current "branch": ${error.message}`);`
+      this.log(`Failed to get current "branch": ${error.message}`);
       return null;
     };
   };
@@ -51,7 +52,7 @@ class GitWorkflow {}
         .map(b => b.replace(/^remotes\/origin\//, ''));
       return [...new Set(branches)]; // Remove duplicates;
     } catch (error) {}
-      this.log(`Failed to get "branches": ${error.message}`);`
+      this.log(`Failed to get "branches": ${error.message}`);
       return [];
     };
   };
@@ -65,7 +66,7 @@ class GitWorkflow {}
         .filter(b => b && !b.startsWith('*') && b !== 'main' && b !== 'master');
       return mergedBranches;
     } catch (error) {}
-      this.log(`Failed to get merged "branches": ${error.message}`);`
+      this.log(`Failed to get merged "branches": ${error.message}`);
       return [];
     };
   };
@@ -84,21 +85,22 @@ class GitWorkflow {}
           if (['main', 'master', 'develop', 'dev'].includes(branch)) {}
             continue;
           };
-          this.log(`Deleting merged "branch": ${branch}`);`
-          execSync(`git branch -d ${branch}`, { "stdio": 'pipe' });`
+          this.log(`Deleting merged "branch": ${branch}`);
+          execSync(`git branch -d ${branch}`, { "stdio": 'pipe' }
+});
           deletedBranches.push(branch);
         } catch (error) {}
-          this.log(`Failed to delete branch ${branch}: ${error.message}`);`
+          this.log(`Failed to delete branch ${branch}: ${error.message}`);
         };
       };
-      this.log(`Cleaned up ${deletedBranches.length} branches`);`
+      this.log(`Cleaned up ${deletedBranches.length} branches`);
       return {}
         "cleaned": true,
         deletedBranches,
         "totalDeleted": deletedBranches.length;
       };
     } catch (error) {}
-      this.log(`Branch cleanup "failed": ${error.message}`);`
+      this.log(`Branch cleanup "failed": ${error.message}`);
       return { "cleaned": false, "error": error.message };
     };
   };
@@ -112,13 +114,13 @@ class GitWorkflow {}
       }).trim();
       if (unmergedFiles) {}
         const files = unmergedFiles.split('\n').filter(f => f.trim());
-        this.log(`Found merge conflicts in ${files.length} "files": ${files.join(', ')}`);`
+        this.log(`Found merge conflicts in ${files.length} "files": ${files.join(', ')}`);
         return { "hasConflicts": true, files };
       };
       this.log('No merge conflicts found');
       return { "hasConflicts": false, "files": [] };
     } catch (error) {}
-      this.log(`Conflict check "failed": ${error.message}`);`
+      this.log(`Conflict check "failed": ${error.message}`);
       return { "hasConflicts": false, "error": error.message };
     };
   };
@@ -133,12 +135,12 @@ class GitWorkflow {}
         this.log('No conflicts to resolve');
         return { "resolved": true, "message": 'No conflicts found' };
       };
-      this.log(`Resolving conflicts in ${conflictCheck.files.length} files...`);`
+      this.log(`Resolving conflicts in ${conflictCheck.files.length} files...`);
       // For automated conflict resolution, we'll use a simple strategy;
       // In practice, you might want more sophisticated conflict resolution;
       for (const file of conflictCheck.files) {}
         try {}
-          this.log(`Resolving conflicts in ${file}...`);`
+          this.log(`Resolving conflicts in ${file}...`);
           // Read the file and resolve conflicts (simplified approach);
           let content = fs.readFileSync(file, 'utf8');
           // Remove conflict markers and keep both versions (simplified);
@@ -148,16 +150,17 @@ class GitWorkflow {}
 cursor/fix-lint-push-and-merge-to-main-f3c1;
           fs.writeFileSync(file, content);
           // Add the resolved file;
-          execSync(`git add ${file}`, { "stdio": 'pipe' });`
-          this.log(`Resolved conflicts in ${file}`);`
+          execSync(`git add ${file}`, { "stdio": 'pipe' }
+});
+          this.log(`Resolved conflicts in ${file}`);
         } catch (error) {}
-          this.log(`Failed to resolve conflicts in ${file}: ${error.message}`);`
+          this.log(`Failed to resolve conflicts in ${file}: ${error.message}`);
         };
       };
       this.log('Conflict resolution completed');
       return { "resolved": true, "resolvedFiles": conflictCheck.files };
     } catch (error) {}
-      this.log(`Conflict resolution "failed": ${error.message}`);`
+      this.log(`Conflict resolution "failed": ${error.message}`);
       return { "resolved": false, "error": error.message };
     };
   };
@@ -184,28 +187,31 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
       };
       // Try to merge with main;
       try {}
-        execSync('git fetch origin', { "stdio": 'pipe' });
-        execSync('git merge origin/main', { "stdio": 'pipe' });
+        execSync('git fetch origin', { "stdio": 'pipe' }
+});
+        execSync('git merge origin/main', { "stdio": 'pipe' }
+});
         this.log('Safe merge completed successfully');
         return { "merged": true };
       } catch (mergeError) {}
-        this.log(`Merge "failed": ${mergeError.message}`);`
+        this.log(`Merge "failed": ${mergeError.message}`);
         // Try to resolve conflicts automatically;
         const conflictResolution = await this.resolveConflicts();
         if (conflictResolution.resolved) {}
           try {}
-            execSync('git commit -m "Auto-resolved merge conflicts"', { "stdio": 'pipe' });
+            execSync('git commit -m "Auto-resolved merge conflicts"', { "stdio": 'pipe' }
+});
             this.log('Merge completed after conflict resolution');
             return { "merged": true, "conflictsResolved": true };
           } catch (commitError) {}
-            this.log(`Failed to commit after conflict "resolution": ${commitError.message}`);`
+            this.log(`Failed to commit after conflict "resolution": ${commitError.message}`);
             return { "merged": false, "error": commitError.message };
           };
         };
         return { "merged": false, "error": mergeError.message };
       };
     } catch (error) {}
-      this.log(`Safe merge "failed": ${error.message}`);`
+      this.log(`Safe merge "failed": ${error.message}`);
       return { "merged": false, "error": error.message };
     };
   };
@@ -229,26 +235,26 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
     };
     const reportFile = path.join(__dirname, '../../logs/pm2/git-workflow-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`Git workflow report "generated": ${reportFile}`);`
+    this.log(`Git workflow report "generated": ${reportFile}`);
     return report;
   };
   async start() {}
-    this.log(`${this.processName} started`);`
+    this.log(`${this.processName} started`);
     try {}
       const report = await this.generateReport();
       if (report.branchCleanup.cleaned) {}
-        this.log(`Branch cleanup "completed": ${report.branchCleanup.totalDeleted} branches deleted`);`
+        this.log(`Branch cleanup "completed": ${report.branchCleanup.totalDeleted} branches deleted`);
       };
       if (report.safeMerge.merged) {}
         this.log('Safe merge completed successfully');
       } else if (report.safeMerge.error) {}
-        this.log(`Safe merge "failed": ${report.safeMerge.error}`);`
+        this.log(`Safe merge "failed": ${report.safeMerge.error}`);
       };
       if (report.conflictCheck.hasConflicts) {}
-        this.log(`Found conflicts in ${report.conflictCheck.files.length} files`);`
+        this.log(`Found conflicts in ${report.conflictCheck.files.length} files`);
       };
     } catch (error) {}
-      this.log(`Git workflow "error": ${error.message}`);`
+      this.log(`Git workflow "error": ${error.message}`);
     };
   };
 };

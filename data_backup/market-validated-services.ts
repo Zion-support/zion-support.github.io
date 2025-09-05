@@ -16,7 +16,7 @@ export interface MarketValidatedService {}
 	customers?: number;
 	trialDays?: number;
 	setupTime?: string;
-	contactInfo: {,}
+	contactInfo: {}
   mobile: string;
 		email: string;,
   address: string;

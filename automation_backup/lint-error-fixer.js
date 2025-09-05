@@ -24,7 +24,7 @@ const __dirname = dirname(__filename);'
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(message);
-    fs.appendFileSync(this.logFile, logMessage)}``
+    fs.appendFileSync(this.logFile, logMessage)}
   "async": fixUnusedImports(filePath) {"}
     try {}
   // TODO: Implement;

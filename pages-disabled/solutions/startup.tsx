@@ -296,7 +296,7 @@ export default function StartupSolutionsPage() {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-</motion>``
+</motion>
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
 </div>
                       <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">"
@@ -323,13 +323,13 @@ export default function StartupSolutionsPage() {
 </ul>"
                       <li key={idx} className="flex items-center text-sm text-gray-600">"
 </li>"
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />"`
-</CheckCircle>`
-                      </li>`
-                  </ul>`
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />"
+</CheckCircle>
+                      </li>
+                  </ul>
 `
-                  <Link"`
-                    href="/contact"`
+                  <Link"
+                    href="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
                       pkg.popular;"
                         ? 'bg-green-600 text-white hover:bg-green-700'''
@@ -342,7 +342,7 @@ export default function StartupSolutionsPage() {
               ))};
             </div>
           </div>
-        </section>``
+        </section>
         <section className="py-20">"
 </section>
           <div className="container mx-auto px-4">"
@@ -458,11 +458,11 @@ export default function StartupSolutionsPage() {
                 </$1>
                 <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">"
 </Link>
-                </Link>`
-              </div>`
-            </motion.div>`
-          </div>`
-        </section>`
-      </div>`
-    </$1>`
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </$1>
 }
