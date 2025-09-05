@@ -233,14 +233,42 @@
     "analyze": "ANALYZE=true npm run build",
     "build:production": "NODE_ENV=production npm run build",
     "dev:fast": "npm run dev -- --turbo",
+<<<<<<< HEAD
     "lint:check": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0"
 >>>>>>> origin/automation-fixes
+=======
+    "build:analyze": "ANALYZE=true npm run build",
+    "build:clean": "npm run clean && npm run build",
+    "lint:check": "eslint . --max-warnings 0",
+    "automation:master": "node automation/master-orchestrator.cjs",
+    "automation:performance": "node automation/performance-optimizer.cjs",
+    "automation:seo": "node automation/seo-optimizer.cjs",
+    "automation:health": "node automation/health-check.cjs",
+    "automation:security": "node automation/security-scanner.cjs",
+    "pr:merge-open": "node scripts/merge-open-prs.cjs",
+    "pr:auto-resolve-and-merge": "node scripts/auto-resolve-merge-prs.cjs",
+    "pr:force-merge-heads": "node scripts/force-merge-open-pr-heads-into-main.cjs",
+    "optimize:performance": "node scripts/performance-optimizer.cjs",
+    "monitor:health": "node scripts/health-monitor-enhanced.cjs",
+    "audit:security": "node scripts/security-audit-enhanced.cjs",
+    "optimize:ux": "node scripts/ux-optimizer.cjs",
+    "improve:all": "npm run optimize:performance && npm run monitor:health && npm run audit:security && npm run optimize:ux",
+    "automation:safe": "bash scripts/run-safe-automations.sh",
+    "automation:meta": "node scripts/run-all-automations.cjs"
+  },
+  "pm2": {
+    "ecosystem": "ecosystem.maintenance.cjs"
+>>>>>>> origin/automation-improvements
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
+<<<<<<< HEAD
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.39.0",
+=======
+    "@heroicons/react": "^2.2.0",
+>>>>>>> origin/automation-improvements
     "@hookform/resolvers": "^5.2.1",
     "@modelcontextprotocol/sdk": "^1.17.1",
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
@@ -329,11 +357,17 @@
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@babel/eslint-parser": "^7.28.0",
     "@babel/plugin-transform-class-properties": "^7.27.1",
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
+=======
+    "@babel/core": "^7.28.3",
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-react": "^7.27.1",
+>>>>>>> origin/automation-improvements
     "@esbuild/linux-x64": "^0.25.9",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.34.0",
@@ -344,6 +378,7 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
+<<<<<<< HEAD
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/react": "^16.3.0",
     "@types/jest": "^29.5.8",
@@ -356,6 +391,20 @@
     "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@typescript-eslint/parser": "^8.39.0",
     "@vitejs/plugin-react": "^5.0.2",
+=======
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20.8.10",
+    "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.14",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "autoprefixer": "^10.4.21",
+    "babel-jest": "^30.1.2",
+>>>>>>> origin/automation-improvements
     "concurrently": "^8.2.2",
     "cssnano": "^7.1.1",
     "esbuild": "^0.25.9",

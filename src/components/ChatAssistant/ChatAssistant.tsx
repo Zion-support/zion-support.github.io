@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface Message {
   id: string;
   role: 'user' | 'assistant';
@@ -58,3 +59,6 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
         </button>;
       </div>;
   );"}";
+=======
+import React from 'react',;',';'; ';';';'; import {SEO } from '@/components/SEO'; export default function ChatAssistant(props: any) {return ( <div className="min-h-screen bg-white"> <SEO title="ChatAssistant - Zion Tech Group" description="Professional ChatAssistant services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">ChatAssistant</h1> <p className="text-gray-300 text-lg"> Professional ChatAssistant services to help your business grow. </p> </div>'; </div>';'; );';';'}"';';';';
+>>>>>>> origin/automation-improvements

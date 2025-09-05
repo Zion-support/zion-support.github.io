@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**;
  * Production logging utility for error tracking and monitoring;
  */;
@@ -32,3 +33,6 @@ export function logInfoToProduction(message, context = {}) {;
 
   // TODO: Implement actual production logging service integration;
 }}
+=======
+if(process.env.NODE_ENV === 'development') { export function logWarningToProduction(message,context = {}) { if (process.env.NODE_ENV === 'development') { } } export function logInfoToProduction(message,context = {}) { if (process.env.NODE_ENV === 'development') { } }
+>>>>>>> origin/automation-improvements
