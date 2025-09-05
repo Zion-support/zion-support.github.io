@@ -1,37 +1,12 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Header from './Header';
-=======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Header from './Header';
-import { Sidebar } from './Sidebar';
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 import Footer from './Footer';
 
 interface LayoutProps {
   title?: string;
   description?: string;
-<<<<<<< HEAD
   children: React.ReactNode;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
-  return (
-    <>
-      <Head>
-        <title>{title || 'Zion Tech Group'}</title>
-        <meta name="description" content={description || 'Leading technology solutions provider'} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
-        <Header />
-        <main className="flex-1">
-          {children}
-        </main>
-=======
   keywords?: string;
   ogImage?: string;
   noIndex?: boolean;
@@ -39,18 +14,12 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
 
 export default function Layout({
   children,
-  title = 'Zion Tech Group - Leading AI & Technology Solutions',
-  description = 'Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results.',
-  keywords = 'AI solutions, technology consulting, cloud services, automation, cybersecurity, web development, mobile development',
+  title = 'Zion Tech Group - Leading Technology Solutions',
+  description = 'Comprehensive AI, IT, and Micro SAAS services for modern businesses. Expert solutions for digital transformation, cloud computing, and innovation.',
+  keywords = 'AI services, IT solutions, Micro SAAS, cloud computing, digital transformation, technology consulting',
   ogImage = '/og-image.jpg',
   noIndex = false
 }: LayoutProps) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
-  };
-
   return (
     <>
       <Head>
@@ -58,62 +27,64 @@ export default function Layout({
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content={noIndex ? "noindex,nofollow" : "index,follow"} />
+        <link rel="icon" href="/favicon.ico" />
         
-        {/* Open Graph */}
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Zion Tech Group" />
         
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://ziontechgroup.com" />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={ogImage} />
         
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
+        {/* SEO */}
+        {noIndex && <meta name="robots" content="noindex,nofollow" />}
         
-        {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
-        {/* Security headers */}
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta httpEquiv="X-Frame-Options" content="DENY" />
-        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-        
-        {/* Performance hints */}
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/logo.png",
+              "description": description,
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "364 E Main St STE 1008",
+                "addressLocality": "Middletown",
+                "addressRegion": "DE",
+                "postalCode": "19709",
+                "addressCountry": "US"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-302-464-0950",
+                "contactType": "customer service",
+                "email": "kleber@ziontechgroup.com"
+              },
+              "sameAs": [
+                "https://ziontechgroup.com"
+              ]
+            })
+          }}
+        />
       </Head>
-      
-      <div className="min-h-screen bg-gray-50 flex flex-col">
-        <Header onMenuClick={toggleSidebar} />
-        
-        <div className="flex flex-1">
-          <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-          
-          <main className="flex-1 overflow-x-hidden">
-            {children}
-          </main>
-        </div>
-        
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        <main className="flex-1">
+          {children}
+        </main>
         <Footer />
       </div>
     </>
   );
-<<<<<<< HEAD
-};
-
-export default Layout;
-=======
 }
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
