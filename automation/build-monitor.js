@@ -1,8 +1,12 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /**
  * Build Monitor - Continuously monitors build health and reports issues
@@ -51,7 +55,7 @@ class BuildMonitor {
         this.log('Build check: SUCCESS')} catch (error) {
         results.build.status = 'failed';
         results.build.duration = Date.now() - buildStart;
-        results.build.errors = this.parseErrors(error.stdout || error.message);
+        results.build.errors = this.parseErrors(String(error.stdout || error.message));
         this.consecutiveFailures++;
         this.log(`Build check: FAILED (${this.consecutiveFailures} consecutive failures)`, 'ERROR')}
 
@@ -61,7 +65,7 @@ class BuildMonitor {
         results.lint.status = 'success';
         this.log('Lint check: SUCCESS')} catch (error) {
         results.lint.status = 'failed';
-        results.lint.issues = this.parseLintIssues(error.stdout || error.message);
+        results.lint.issues = this.parseLintIssues(String(error.stdout || error.message));
         this.log('Lint check: ISSUES FOUND', 'WARN')}
 
       // Check TypeScript (non-blocking)
@@ -70,7 +74,7 @@ class BuildMonitor {
         results.typeCheck.status = 'success';
         this.log('TypeScript check: SUCCESS')} catch (error) {
         results.typeCheck.status = 'failed';
-        results.typeCheck.errors = this.parseTypeErrors(error.stdout || error.message);
+        results.typeCheck.errors = this.parseTypeErrors(String(error.stdout || error.message));
         this.log('TypeScript check: ERRORS FOUND', 'WARN')}
 
       // Check dependencies
@@ -226,8 +230,9 @@ class BuildMonitor {
 }
 
 // Main execution
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   const monitor = new BuildMonitor();
-  monitor.run().catch(console.error)}
+  monitor.run().catch(console.error);
+}
 
-module.exports = BuildMonitor;
+export default BuildMonitor;
