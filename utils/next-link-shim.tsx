@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+}}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
+=======
+<<<<<<< HEAD
 };
 };
   return (;
@@ -13,3 +16,4 @@
 };
 };
 };
+>>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31

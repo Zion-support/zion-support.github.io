@@ -1,8 +1,12 @@
 const nextConfig = {
   reactStrictMode: true,
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  pageExtensions: ['tsxtsjsxjs'],
+  eslint: {
+    ignoreDuringBuilds: true
+  },
+  typescript: {
+    ignoreBuildErrors: true
+  },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   trailingSlash: true,
   images: {
     domains: [
@@ -20,6 +24,47 @@ const nextConfig = {
     if (dev) {
       config.watchOptions = {
         ignored: [
+<<<<<<< HEAD
+          '**/node_modules/**',
+          '**/.git/**',
+          '**/pages_backup*/**',
+          '**/pages.*/**',
+          '**/pages-*/**',
+          '**/pages_disabled*/**',
+          '**/pages.disabled*/**',
+          '**/pages.broken*/**',
+          '**/pages.corrupted*/**',
+          '**/pages.old*/**',
+          '**/pages._*/**',
+          '**/pages.__*/**',
+          '**/backup-pages/**',
+          '**/src.pages.disabled/**',
+          '**/lib_backup*/**',
+          '**/src_backup*/**',
+          '**/corrupted-files-backup*/**',
+          '**/performance-reports*/**',
+          '**/log-analysis-reports*/**',
+          '**/link-reports*/**',
+          '**/lint-target*/**',
+          '**/monitoring*/**',
+          '**/pm2-automation*/**',
+          '**/automation/logs*/**',
+          '**/automation/backup*/**',
+          '**/performance-*.json',
+          '**/performance-*.js',
+          '**/performance-*.cjs',
+          '**/performance-*.sh',
+          '**/performance-*.html',
+          '**/performance-*.md',
+          '**/performance-*.txt'
+        ],
+        poll: 1000,
+        aggregateTimeout: 300
+      }
+    }
+    return config
+  }
+=======
           '**/node_modules/****/.git/****/pages_backup*/****/pages.*/****/pages-*/****/pages_disabled*/****/pages.disabled*/****/pages.broken*/****/pages.corrupted*/****/pages.old*/****/pages._*/****/pages.__*/****/backup-pages/****/src.pages.disabled/****/lib_backup*/****/src_backup*/****/corrupted-files-backup*/****/performance-reports*/****/log-analysis-reports*/****/link-reports*/****/lint-target*/****/monitoring*/****/pm2-automation*/****/automation/logs*/****/automation/backup*/****/performance-*.json**/performance-*.js**/performance-*.cjs**/performance-*.sh**/performance-*.html**/performance-*.md**/performance-*.txt',
         ],
         poll: 1000,
@@ -28,6 +73,7 @@ const nextConfig = {
     }
     return config;
   },
+>>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 };
 
 export default nextConfig;
