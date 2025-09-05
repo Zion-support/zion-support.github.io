@@ -3,13 +3,9 @@ import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
   ArrowRight,
-  TrendingUp,
   CheckCircle,
   Users,
   Building,
-  Globe,
-  Award,
-  Clock,
   BarChart3,
   Cloud,
   Shield
