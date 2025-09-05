@@ -133,13 +133,11 @@ const TrustIndicators: React.FC = () => {
             </div>;
           </div>;
         </div>;
-=======
           </div>
         </div>
       </div>';
     </section>';';
   );};';';';
-=======
 export default TrustIndicators;"`""';';';';
 </CheckCircle>
 </CheckCircle>

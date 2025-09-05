@@ -31,7 +31,6 @@
 
   generateRecommendations() {
 =======;
-=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -122,7 +121,6 @@ try {
     // // // // // // // // }
 
 })}}}}}}}}}}}}}}}
-=======
 return ['Implement code splitting for better performance',
       'Optimize images using WebP format',
       'Remove unused dependencies',

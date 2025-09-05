@@ -4,7 +4,6 @@ import { ProtectedRoute } from '../components/ProtectedRoute';
 import LoadingSpinner from '../components/LoadingSpinner';
 ;
 // Lazy load dashboard pages;
-=======
 
 // Lazy load dashboard pages
 const Dashboard = lazy(() => import('../pages/Dashboard'));
@@ -74,7 +73,6 @@ export default DashboardRoutes;
 </Route>;
 </Route>;
 </Route>;
-=======
 
 </Route>
 </Route>

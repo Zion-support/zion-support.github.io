@@ -83,7 +83,6 @@ export default function Page("props": "any) {;
         // Update stats;
         setStats({;
 
-<<<<<<< HEAD
             "total": "allLinks.length",;
             "healthy": "0",;
             "broken": "0",;
@@ -91,7 +90,6 @@ export default function Page("props": "any) {;
             "unknown": "allLinks.length;
         "});
         // Check links in batches to avoid overwhelming the system;
-=======
             total: allLinks.length,
             healthy: 0,
             broken: 0,
@@ -100,7 +98,6 @@ export default function Page("props": "any) {;
         }
     );
         // Check links in batches to avoid overwhelming the system
->>>>>>> main
         const batchSize = 5;
         for(let i = 0; i < allLinks.length; i += batchSize) {;
 
@@ -123,17 +120,14 @@ export default function Page("props": "any) {;
                     else if(checkedLink.status === 'broken');
                         newStats.broken++;
                     newStats.checking--;
-<<<<<<< HEAD
                     newStats.unknown--});
                 return newStats});
             // Small delay between batches;
-=======
                     newStats.unknown--}
     );
                 return newStats}
     );
             // Small delay between batches
->>>>>>> main
             if(i + batchSize < allLinks.length) {await new Promise(resolve => setTimeout(resolve, 100))}
         }
         setIsChecking(false)}, [findAllLinks, checkLink]);
@@ -171,14 +165,11 @@ export default function Page("props": "any) {;
                     link.element.setAttribute('title', `Redirected from ${link.url} to working page`);
                     fixedCount++}
             }
-<<<<<<< HEAD
         });
         if(fixedCount > 0) {// Re-check links after fixes;
-=======
         }
     );
         if(fixedCount > 0) {// Re-check links after fixes
->>>>>>> main
             setTimeout(checkAllLinks, 1000)}
         return fixedCount}, [links, checkAllLinks]);
     // Highlight broken link in page;
@@ -189,14 +180,12 @@ export default function Page("props": "any) {;
         // Remove previous highlights';
         document.querySelectorAll('.broken-link-highlight').forEach(el => {;
 
-<<<<<<< HEAD
             el.classList.remove('broken-link-highlight')});
         // Add highlight to selected element';
         link.element.classList.add('broken-link-highlight');
         // Scroll to element';
         link.element.scrollIntoView({"behavior": 'smooth', "block": 'center'});
         // Remove highlight after 3 seconds;
-=======
             el.classList.remove('broken-link-highlight')}
     );
         // Add highlight to selected element'
@@ -205,7 +194,6 @@ export default function Page("props": "any) {;
         link.element.scrollIntoView({behavior: 'smooth', block: 'center'}
     );
         // Remove highlight after 3 seconds
->>>>>>> main
         setTimeout(() => {link.element?.classList.remove('broken-link-highlight')}, 3000)}, []);
     // Auto-check links;
     useEffect(() => {// "TODO": "Add dependencies if needed"}, []);
@@ -437,12 +425,9 @@ export default function Page("props": "any) {;
 
 "}));
                         };
-<<<<<<< HEAD
                         const blob = new Blob([JSON.stringify(report, null, 2)], {"type": 'application/json'});
-=======
                         const blob = new Blob([JSON.stringify(report, null, 2)], {type: 'application/json'}
     );
->>>>>>> main
                         const url = URL.createObjectURL(blob);
                         const a = document.createElement('a');
                         a.href = url;

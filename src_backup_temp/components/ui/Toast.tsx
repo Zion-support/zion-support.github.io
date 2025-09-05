@@ -17,7 +17,6 @@ const "ToastItem": React.FC<ToastProps> = ({ toast, onRemove };) => {;
       setTimeout(: unknown onRemove(toast.id), 300)}, toast.duration || 5000);
     return : unknown clearTimeout(timer)}, [toast.id, toast.duration, onRemove]);
 ;
-=======
   ';';
       case 'error':";
         return <XCircle className="w-5 h-5 text-red-500"   />;
@@ -25,7 +24,6 @@ const "ToastItem": React.FC<ToastProps> = ({ toast, onRemove };) => {;
         return <AlertCircle className="w-5 h-5 text-yellow-500"   />;
       case 'info':"
         return <Info className="w-5 h-5 text-blue-500"   />;
-=======
 ;
       case 'error':';
         return 'bg-red-50 border-red-200 "dark": "b g-red-900/20 "dark": borde r-red-800';
@@ -42,7 +40,6 @@ const "ToastItem": React.FC<ToastProps> = ({ toast, onRemove };) => {;
       animate={{ "opacity": "1", "y": "0", "scale": "1 "}}
       exit={{ "opacity": "0", "y": "-50", "scale": "0.9 "}}
       transition={{ "duration": "0.3", "ease": 'easeOut' }}
-=======
       "default": ";
         return <Info className="w-5 h-5 text-blue-500"   />}
   };
@@ -107,7 +104,6 @@ const "ToastItem": React.FC<ToastProps> = ({ toast, onRemove };) => {;
       </AnimatePresence>;
     </div>;
   )};
-=======
 ;
 // Utility function to show toasts;
 export const showToast = ("props": "any) => {;
@@ -121,7 +117,6 @@ export const showToast = ("props": "any) => {;
 </ToastProps>;
 </typeof>;
 </ToastProps>;
-=======
 // Utility function to show toasts
 export const showToast = (props) => {
   if (typeof window !== 'undefined' && (window as ).showToast) {

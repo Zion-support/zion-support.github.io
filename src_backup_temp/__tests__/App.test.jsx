@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {render, screen} from "@testing-library/react";,"});,"})","});,"})";
 ,"});,"})";
 ";,"});,"})";
@@ -82,7 +81,6 @@ const renderWithRouter = ("props": "any) => {;
     <BrowserRouter></BrowserRoute></BrowserRouter>;
       {component"}
     </BrowserRouter>;
-=======
 import {render, screen} from "@testing-library/react";,"}
     );,"})","}
     );,"})"
@@ -241,20 +239,16 @@ const renderWithRouter = (props: any) => {
     <BrowserRouter></BrowserRoute></BrowserRouter>
       {component}
     </BrowserRouter>
->>>>>>> main
   )};
 ;
 describe('App Component', () => {;
   test('renders without crashing', () => {;
     renderWithRouter(<App  />);
-<<<<<<< HEAD
     expect(screen.getByTestId('index-page')).toBeInTheDocument()})});
 ;
-=======
     expect(screen.getByTestId('index-page')).toBeInTheDocument()})}
     );
 
->>>>>>> main
 export {MockIndex, MockAbout, MockContact};
 ;
 export {MockIndex, MockAbout, MockContact};

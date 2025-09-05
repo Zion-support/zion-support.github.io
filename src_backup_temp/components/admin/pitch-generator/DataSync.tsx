@@ -1,6 +1,5 @@
 import React from 'react';
 interface DataSyncProps {;
-=======
 "}
 ;
 const "DataSync": "React.FC<DataSyncProps> = ({ syncedData", onNext, onBack }) => {;
@@ -54,7 +53,6 @@ const "DataSync": "React.FC<DataSyncProps> = ({ syncedData", onNext, onBack }) =
           </div>;
           <div className="text-center">;
             <div className="text-2xl font-bold text-green-600">;
-=======
   "syncedData": an y;
   onNext: () => void;
   onBack: () => void;
@@ -121,7 +119,6 @@ const "DataSync": Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack };) =
               {syncedData?.marketplaceConversionFunnel?.completedTransactions?.toLocaleString() || 'N/A'}
           onClick={onBack}
           className="px-6 py-3 border border-gray-300 rounded-lg "hover": "b g-gray-50 transition-colors";
-=======
             </div>
             <div className="text-sm text-gray-600">Transactions</div>
           </div>
@@ -162,7 +159,6 @@ const "DataSync": Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack };) =
 ;
 export default DataSync;
 </DataSyncProps>;
-=======
 };
 export default DataSync;';
 </DataSyncProps>;';';

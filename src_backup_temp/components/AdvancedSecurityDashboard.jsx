@@ -102,7 +102,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
             "default":;
                 return <Server className="w-5 h-5 text-gray-500" />"}
     };
-<<<<<<< HEAD
     if (!isOpen) {;
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 rounded-full shadow-2xl "hover": "shadow-3xl transition-all duration-300 "hover":scale-110 z-40" title="Open Security Dashboard">;
         <Shield className="w-6 h-6" />;
@@ -118,7 +117,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
         </div>;
       </div>)"}
     return (<div className={`fixed bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'"}`} ref={containerRef}>;
-=======
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Security Dashboard">
         <Shield className="w-6 h-6" />
@@ -136,7 +134,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
       </div>)}
     return (
         <div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
->>>>>>> main
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 flex items-center justify-between">;
         <div className="flex items-center gap-3">;
@@ -216,17 +213,14 @@ export function AdvancedSecurityDashboard("props": "any) {;
       <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">;
         {activeTab === 'overview' && (<div className="space-y-6">;
             {/* Security Metrics Grid */}
-<<<<<<< HEAD
             <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-4 gap-4">;
               {securityMetrics.map(metric => (<div key={metric.id"} className="p-4 rounded-xl border border-zion-slate-light bg-white "dark": "bg-zion-slate "hover":shadow-lg transition-all duration-300">;
                   <div className="flex items-center justify-between mb-3">;
                     <h3 className="font-semibold text-zion-slate">{metric.name"}</h3>;
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {securityMetrics.map(metric => (<div key={metric.id} className="p-4 rounded-xl border border-zion-slate-light bg-white dark:bg-zion-slate hover:shadow-lg transition-all duration-300">
                   <div className="flex items-center justify-between mb-3">
                     <h3 className="font-semibold text-zion-slate">{metric.name}
->>>>>>> main
                     {getTrendIcon(metric.trend)}
                   </div>;
                   <div className="text-2xl font-bold text-zion-slate mb-2">;
@@ -245,7 +239,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
             </div>;
 
             {/* Quick Security Status */}
-<<<<<<< HEAD
             <div className="grid grid-cols-1 "lg": "grid-cols-2 gap-6">;
               <div className="bg-gradient-to-r from-zion-red/10 to-zion-orange/10 p-6 rounded-xl border border-zion-red/20">;
                 <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">;
@@ -260,7 +253,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
                         <p className="text-xs text-zion-slate-light">{event.description}</p>;
                       </div>;
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(event.severity)}`}>;
-=======
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="bg-gradient-to-r from-zion-red/10 to-zion-orange/10 p-6 rounded-xl border border-zion-red/20">
                 <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">
@@ -275,14 +267,12 @@ export function AdvancedSecurityDashboard("props": "any) {;
                         <p className="text-xs text-zion-slate-light">{event.description}</p>
                       </div>
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(event.severity)}`}>
->>>>>>> main
                         {event.severity}
                       </span>;
                     </div>))}
                 </div>;
               </div>;
 
-<<<<<<< HEAD
               <div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">;
                 <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">;
                   <CheckCircle className="w-5 h-5 text-zion-blue" />;
@@ -298,7 +288,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
                         <p className="text-xs text-zion-slate-light">{req.framework}</p>;
                       </div>;
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>;
-=======
               <div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">
                 <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-zion-blue" />
@@ -314,7 +303,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
                         <p className="text-xs text-zion-slate-light">{req.framework}</p>
                       </div>
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>
->>>>>>> main
                         {req.status.replace('_', ' ')}
                       </span>;
                     </div>))}
@@ -322,7 +310,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
               </div>;
             </div>;
           </div>)}
-<<<<<<< HEAD
 ;
         {activeTab === 'events' && (<div className="space-y-4">;
             {filteredEvents.map(event => (<div key={event.id} className="p-4 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-xl "hover":shadow-lg transition-shadow">;
@@ -332,7 +319,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
                     <div className="flex items-center gap-3 mb-2">;
                       <h3 className="font-semibold text-zion-slate">{event.title}</h3>;
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(event.severity)}`}>;
-=======
 
         {activeTab === 'events' && (<div className="space-y-4">
             {filteredEvents.map(event => (<div key={event.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
@@ -342,7 +328,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
                     <div className="flex items-center gap-3 mb-2">
                       <h3 className="font-semibold text-zion-slate">{event.title}
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(event.severity)}`}>
->>>>>>> main
                         {event.severity}
                       </span>;
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${event.priority === 'immediate' ? 'bg-red-100 text-red-700 "dark": "bg-red-900/30 "dark":text-red-300' :;
@@ -362,7 +347,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
                 </div>;
               </div>))}
           </div>)}
-<<<<<<< HEAD
 ;
         {activeTab === 'compliance' && (<div className="space-y-4">;
             {filteredCompliance.map(req => (<div key={req.id} className="p-4 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-xl "hover":shadow-lg transition-shadow">;
@@ -374,7 +358,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
                     <div className="flex items-center gap-3 mb-2">;
                       <h3 className="font-semibold text-zion-slate">{req.requirement"}</h3>;
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>;
-=======
 
         {activeTab === 'compliance' && (<div className="space-y-4">
             {filteredCompliance.map(req => (<div key={req.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
@@ -386,7 +369,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
                     <div className="flex items-center gap-3 mb-2">
                       <h3 className="font-semibold text-zion-slate">{req.requirement}
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>
->>>>>>> main
                         {req.status.replace('_', ' ')}
                       </span>;
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getRiskLevelColor(req.riskLevel)}`}>;
@@ -411,7 +393,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
                 </div>;
               </div>))}
           </div>)}
-<<<<<<< HEAD
 ;
         {activeTab === 'threats' && (<div className="space-y-4">;
             {threatIntelligence.map(threat => (<div key={threat.id} className="p-4 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-xl "hover":shadow-lg transition-shadow">;
@@ -433,7 +414,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
                       <h4 className="font-medium text-zion-slate mb-2">Affected "Systems": "</h4>;
                       <div className="flex flex-wrap gap-2">;
                         {threat.affectedSystems.map((system", index) => (<span key={index} className="px-2 py-1 bg-zion-red/10 text-zion-red rounded-full text-xs border border-zion-red/20">;
-=======
 
         {activeTab === 'threats' && (<div className="space-y-4">
             {threatIntelligence.map(threat => (<div key={threat.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
@@ -455,7 +435,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
                       <h4 className="font-medium text-zion-slate mb-2">Affected Systems:</h4>
                       <div className="flex flex-wrap gap-2">
                         {threat.affectedSystems.map((system, index) => (<span key={index} className="px-2 py-1 bg-zion-red/10 text-zion-red rounded-full text-xs border border-zion-red/20">
->>>>>>> main
                             {system}
                           </span>))}
                       </div>;
@@ -477,7 +456,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
                 </div>;
               </div>))}
           </div>)}
-<<<<<<< HEAD
 ;
         {activeTab === 'analytics' && (<div className="space-y-6">;
             <div className="text-center text-zion-slate-light">;
@@ -485,7 +463,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
               <h3 className="text-lg font-semibold mb-2">Security Analytics</h3>;
               <p>Advanced security analytics and threat intelligence reports coming soon...</p>;
             </div>;
-=======
 
         {activeTab === 'analytics' && (<div className="space-y-6">
             <div className="text-center text-zion-slate-light">
@@ -493,7 +470,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
               <h3 className="text-lg font-semibold mb-2">Security Analytics
               <p>Advanced security analytics and threat intelligence reports coming soon...</p>
             </div>
->>>>>>> main
           </div>)}
       </div>;
     </div>)}

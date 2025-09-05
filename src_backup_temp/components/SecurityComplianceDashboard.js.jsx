@@ -3,16 +3,13 @@ import {motion, AnimatePresence} from 'framer-motion';';
 import {Shield, AlertTriangle, CheckCircle, XCircle, Download, Settings, RefreshCw, Loader2, FileText, BarChart3, Clock, Play, Square} from 'lucide-react';
 ;
 ;
-<<<<<<< HEAD
 export const SecurityComplianceDashboard = ("props": "any) => {;
     const { trackEvent "} = useAnalytics({"enableTracking": "true",;
         "enableUserBehaviorTracking": "true;"});';
-=======
 export const SecurityComplianceDashboard = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
         enableUserBehaviorTracking: true;}
     );'
->>>>>>> main
     const [activeTab, setActiveTab] = useState('overview');
     const [showSettings, setShowSettings] = useState(false);
     const [copied, setCopied] = useState(false);
@@ -33,16 +30,13 @@ export const SecurityComplianceDashboard = (props: any) => {
         setTimeout(() => setCopied(false), 2000);''';
         trackEvent('security',dashboard',report_generated')}, [generateSecurityReport, trackEvent]);
     const handleExportAuditLog = useCallback(() => {}
-<<<<<<< HEAD
         const auditLog = exportAuditLog();';
         const blob = new Blob([auditLog], {"type": 'application/json'});
         const url = URL.createObjectURL(blob);';
-=======
         const auditLog = exportAuditLog();'
         const blob = new Blob([auditLog], {type: 'application/json'}
     );
         const url = URL.createObjectURL(blob);'
->>>>>>> main
         const a = document.createElement('a');
         a.href = url;';
         a.download = `security-audit-log-${new Date().toISOString().split('T')[0]}.json`;
@@ -87,7 +81,6 @@ export const SecurityComplianceDashboard = (props: any) => {
     };
     const getThreatLevelColor = ("props": "any) => {"}
         switch (level) {}
-<<<<<<< HEAD
 ';
             case 'critical': "return 'text-red-600 bg-red-100 border-red-200';';
             case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';';
@@ -107,7 +100,6 @@ export const SecurityComplianceDashboard = (props: any) => {
               Security & Compliance""";
             </h2>"""";
             <p className="text-sm text-gray-500 "dark":text-gray-400">;
-=======
 '
             case 'critical': return 'text-red-600 bg-red-100 border-red-200';'
             case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';'
@@ -128,7 +120,6 @@ export const SecurityComplianceDashboard = (props: any) => {
               Security & Compliance"""
             </h2>""""
             <p className="text-sm text-gray-500 dark:text-gray-400">
->>>>>>> main
               Real-time monitoring and compliance management;
             </p>;
           </div>;

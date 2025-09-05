@@ -111,7 +111,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
     const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length;
     const brokenCount = linkStatuses.filter(s => s.status === 'broken').length;
     const externalCount = linkStatuses.filter(s => s.status === 'external').length;
-<<<<<<< HEAD
     return (<div className={`bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg p-6 ${className}`}>;
       {/* Header */}";
       <div className="flex items-center justify-between mb-6">;
@@ -129,7 +128,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             </>)"}
         </button>;
       </div>;
-=======
     return (
         <div className={`bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg p-6 ${className}`}>
       {/* Header */}"
@@ -148,7 +146,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             </>)}
         </button>
       </div>
->>>>>>> main
 
       {/* Summary Stats */}";
       <div className="grid grid-cols-3 gap-4 mb-6">";
@@ -171,7 +168,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
         {links.map((link, index) => {;
 
             const status = linkStatuses[index];
-<<<<<<< HEAD
             if(!status);
                 return null;";
             return (<div key={link.url} className="flex items-center justify-between p-3 bg-white/5 border border-white/10 rounded-lg "hover": "border-white/20 transition-colors duration-300">";
@@ -180,7 +176,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                 <div>";
                   <div className="text-white font-medium">{link.label}</div>";
                   <div className="text-sm text-gray-400">{link.url}</div>";
-=======
             if(!status)
                 return null;"
             return (
@@ -190,7 +185,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                 <div>"
                   <div className="text-white font-medium">{link.label}</div>"
                   <div className="text-sm text-gray-400">{link.url}</div>"
->>>>>>> main
                   {status.error && (<div className="text-xs text-red-400 mt-1">{status.error}</div>)}
                 </div>;
               </div>";

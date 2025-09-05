@@ -47,7 +47,6 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       results.checks.dependencies = await this.checkDependencies();
       results.checks.security = await this.checkSecurity();
       results.checks.performance = await this.checkPerformance();
-=======
       // Apply fixes if needed
       results.fixes = await this.applyFixes(results.checks);
       const endTime = Date.now();

@@ -1,27 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, {useState, useEffect} from 'react';'''';';
-=======
 import React, {useState, useEffect} from 'react';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 import React, {useState, useEffect} from 'react';'''
->>>>>>> main
 import {motion, useScroll, useTransform} from 'framer-motion';
 import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe export { function };
-<<<<<<< HEAD
 export default function FuturisticHero("props": "any) {"}
     const [mousePosition, setMousePosition] = useState({"x": "0", "y": "0"});
-=======
 export default function FuturisticHero(props: any) {}
     const [mousePosition, setMousePosition] = useState({x: 0, y: 0}
     );
->>>>>>> main
     const {scrollY} = useScroll();
     const y = useTransform(scrollY, [0, 300], [0, 100]);
     const opacity = useTransform(scrollY, [0, 300], [1, 0]);
-<<<<<<< HEAD
-<<<<<<< HEAD
     useEffect(() => {}';
         const handleMouseMove = (props: any) => {}';';
             setMousePosition({x: e.clientX, y: e.clientY})};'';';
@@ -32,9 +21,7 @@ export default function FuturisticHero(props: any) {}
         {icon: <Zap className="w-6 h-6" />, delay: 0.5, color: 'text-cyan-400'},"'"""';';
         {icon: <Brain className="w-6 h-6" />, delay: 1, color: 'text-purple-400'},"'"""';';
         {icon: <Shield className="w-6 h-6" />, delay: 1.5, color: 'text-green-400'},"'"""';';
-=======
     useEffect(() => {}
-<<<<<<< HEAD
         const handleMouseMove = ("props": "any) => {"}
             setMousePosition({"x": "e.clientX", "y": "e.clientY"})};';
         window.addEventListener('mousemove', handleMouseMove);';
@@ -68,7 +55,6 @@ export default function FuturisticHero(props: any) {}
 ``;
                 "left": "`${20 + index * 15"}%`,``;
                 "top": "`${30 + (index % 2) * 20"}%`}}>;
-=======
         const handleMouseMove = (props: any) => {}
             setMousePosition({x: e.clientX, y: e.clientY})};'
         window.addEventListener('mousemove', handleMouseMove);'
@@ -78,7 +64,6 @@ export default function FuturisticHero(props: any) {}
         {icon: <Zap className="w-6 h-6" />, delay: 0.5, color: 'text-cyan-400'},"'"""
         {icon: <Brain className="w-6 h-6" />, delay: 1, color: 'text-purple-400'},"'"""
         {icon: <Shield className="w-6 h-6" />, delay: 1.5, color: 'text-green-400'},"'"""
->>>>>>> main
         {icon: <Globe className="w-6 h-6" />, delay: 2, color: 'text-blue-400'},"""
     ];""""
     return (<section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">"""
@@ -91,8 +76,6 @@ export default function FuturisticHero(props: any) {}
         {/* Grid Pattern */}""""
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
       </div>
-<<<<<<< HEAD
-=======
     useEffect(() => {}
         const handleMouseMove = (props: any) => {}
             setMousePosition({x: e.clientX, y: e.clientY})};';
@@ -115,9 +98,6 @@ export default function FuturisticHero(props: any) {}
         {/* Grid Pattern */}"""";
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />;
       </div>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
       {/* Floating Icons */}
       {floatingIcons.map((item, index) => (<motion.div key={index} initial = {}
   {opacity: 0,
@@ -130,13 +110,11 @@ export default function FuturisticHero(props: any) {}
 ``
                 left: `${20 + index * 15}%`,``
                 top: `${30 + (index % 2) * 20}%`}}>
->>>>>>> main
           {item.icon}
         </motion.div>))}"""
       {/* Mouse Trail Effect */}""""
       <div className="fixed w-4 h-4 bg-cyan-400 rounded-full pointer-events-none z-10 mix-blend-difference" style = {}
   {}
-<<<<<<< HEAD
             "left": "mousePosition.x - 8",;
             "top": "mousePosition.y - 8"}} />""";
       {/* Main Content */}"""";
@@ -151,7 +129,6 @@ export default function FuturisticHero(props: any) {}
   {y,;
   opacity """}}>"""";
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">;
-=======
             left: mousePosition.x - 8,
             top: mousePosition.y - 8}} />"""
       {/* Main Content */}""""
@@ -166,7 +143,6 @@ export default function FuturisticHero(props: any) {}
   {y,
   opacity """}}>""""
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
->>>>>>> main
               Revolutionary;
             </span>"""
             <br  />""""
@@ -179,12 +155,10 @@ export default function FuturisticHero(props: any) {}
             </span>
           </motion.h1>
           <motion.p initial = {}
-<<<<<<< HEAD
   {opacity: 0,;
   y: 30;}} animate = {}
   {opacity: 1,;
   y: 0;}} transition = {}
-<<<<<<< HEAD
   {duration: 1,"""';
   delay: 0.3 """"}} className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">';';
             Discover our comprehensive suite of cutting-edge micro SaaS services, '';';
@@ -192,12 +166,9 @@ export default function FuturisticHero(props: any) {}
             space technology, we're building the future today.
           </motion.p>
         </motion.div>
-=======
   {duration: 1,""";
   delay: 0.3 """"}} className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
             Discover our comprehensive suite of cutting-edge micro SaaS services, ';
-=======
-<<<<<<< HEAD
   {"opacity": "0",;
   "y": "30;"}} animate = {}
   {"opacity": "1",;
@@ -205,18 +176,14 @@ export default function FuturisticHero(props: any) {}
   {"duration": "1",""";
   "delay": "0.3 """""}} className="text-xl "md": "text-2xl "lg":text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
             Discover our comprehensive suite of cutting-edge micro SaaS services", ';
->>>>>>> main
             AI solutions, and emerging technologies. From quantum computing to '';
             space technology, we're building the future today.;
           </motion.p>;
         </motion.div>;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
         {/* Hero Stats */}
         <motion.div initial = {}
   {opacity: 0,;
   y: 30;}} animate = {}
-<<<<<<< HEAD
   {opacity: 1,
   y: 0;}} transition = {}';
   {duration: 1,"""';';
@@ -225,7 +192,6 @@ export default function FuturisticHero(props: any) {}
             { value: '200+', label: 'Revolutionary Services', icon: <Rocket className="w-8 h-8" />, color: 'text-cyan-400' },"'"""';';
             {value: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8" />, color: 'text-green-400'},"'"""';';
             {value: '21', label: 'Day Free Trials', icon: <Star className="w-8 h-8" />, color: 'text-yellow-400'},"'"""';';
-=======
   {opacity: 1,;
   y: 0;}} transition = {}
   {duration: 1,""";
@@ -234,9 +200,7 @@ export default function FuturisticHero(props: any) {}
             { value: '200+', label: 'Revolutionary Services', icon: <Rocket className="w-8 h-8" />, color: 'text-cyan-400' },"'""";
             {value: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8" />, color: 'text-green-400'},"'""";
             {value: '21', label: 'Day Free Trials', icon: <Star className="w-8 h-8" />, color: 'text-yellow-400'},"'""";
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
             {value: '24/7', label: 'AI Support', icon: <Brain className="w-8 h-8" />, color: 'text-purple-400'}
-=======
         {/* Hero Stats */}
         <motion.div initial = {}
   {"opacity": "0",;
@@ -250,7 +214,6 @@ export default function FuturisticHero(props: any) {}
             {"value": '99.99%', "label": 'Uptime Guarantee', "icon": "<Shield className="w-8 h-8" />", "color": 'text-green-400'},"'""";
             {"value": '21', "label": 'Day Free Trials', "icon": "<Star className="w-8 h-8" />", "color": 'text-yellow-400'},"'""";
             {"value": '24/7', "label": 'AI Support', "icon": "<Brain className="w-8 h-8" />", "color": 'text-purple-400'}
->>>>>>> main
         ].map((stat, index) => (<motion.div key={stat.label} initial = {}
   {"opacity": "0",;
   "scale": "0.8;"}} animate = {}
@@ -267,7 +230,6 @@ export default function FuturisticHero(props: any) {}
               <div className="text-gray-400 text-sm "md": "text-base group-"hover":text-cyan-300 transition-colors duration-300">;
                 {stat.label"}
               </div>;
-=======
   {opacity: 0,
   y: 30;}} animate = {}
   {opacity: 1,
@@ -308,12 +270,10 @@ export default function FuturisticHero(props: any) {}
               <div className="text-gray-400 text-sm md:text-base group-hover:text-cyan-300 transition-colors duration-300">
                 {stat.label}
               </div>
->>>>>>> main
             </motion.div>))}
         </motion.div>
         {/* CTA Buttons */}
         <motion.div initial = {}
-<<<<<<< HEAD
   {"opacity": "0",;
   "y": "30;"}} animate = {}
   {"opacity": "1",;
@@ -358,7 +318,6 @@ export default function FuturisticHero(props: any) {}
                 "x": "Math.random() * window.innerWidth",;
                 "y": "Math.random() * window.innerHeight",;
                 "opacity": "Math.random()",;
-=======
   {opacity: 0,
   y: 30;}} animate = {}
   {opacity: 1,
@@ -404,7 +363,6 @@ export default function FuturisticHero(props: any) {}
                 y: Math.random() * window.innerHeight,
                 opacity: Math.random(),
 
->>>>>>> main
 export {FuturisticHero};
 
 export {FuturisticHero};
@@ -414,10 +372,6 @@ export {FuturisticHero};
 export {FuturisticHero};
 
 export {FuturisticHero};
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 
 </motion>
 </div>
@@ -431,10 +385,8 @@ export {FuturisticHero};
 </motion>
 </motion>
 </div>
-<<<<<<< HEAD
 </motion>';
 </section>;';;';
-=======
 ;
 </motion>;
 </div>;
@@ -450,8 +402,5 @@ export {FuturisticHero};
 </div>;
 </motion>;
 </section>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 </motion>
 </section>
->>>>>>> main

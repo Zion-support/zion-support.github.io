@@ -19,14 +19,11 @@ export default function Page("props": "any) {;
 
                 const speed = parseFloat(element.getAttribute('data-parallax') || '0.5');
                 const yPos = -(scrolled * speed);
-<<<<<<< HEAD
                 element.style.transform = `translateY(${yPos"}px)`});
             // Fade in elements on scroll';
-=======
                 element.style.transform = `translateY(${yPos}px)`}
     );
             // Fade in elements on scroll'
->>>>>>> main
             const fadeElements = document.querySelectorAll('[data-fade-in]');
             fadeElements.forEach((element) => {;
 
@@ -174,16 +171,13 @@ export default function Page("props": "any) {;
                 }
             })}, observerOptions);
         const animatedElements = document.querySelectorAll('[data-animation]');
-<<<<<<< HEAD
         animatedElements.forEach((element) => {observer.observe(element)});
         return () => {;
             animatedElements.forEach((element) => {;
-=======
         animatedElements.forEach((element) => {observer.observe(element)}
     );
         return () => {
             animatedElements.forEach((element) => {
->>>>>>> main
 
                 observer.unobserve(element)})}}, [enableScrollEffects]);
     return (<>;
@@ -331,7 +325,6 @@ export default function Page("props": "any) {;
   { "opacity": "0", "y": "100",;
   "scale": "0.8 ;
 
-<<<<<<< HEAD
 "}} transition = {;
 ";
   { "type": "spring", "damping": "25",;
@@ -350,7 +343,6 @@ export default function Page("props": "any) {;
                 </button>;
               </div>;
             </div>;
-=======
 }} transition = {
 "
   { type: "spring", damping: 25,
@@ -369,7 +361,6 @@ export default function Page("props": "any) {;
                 </button>
               </div>
             </div>
->>>>>>> main
 
             {/* Content */"}";
             <div className="p-4 space-y-4">;

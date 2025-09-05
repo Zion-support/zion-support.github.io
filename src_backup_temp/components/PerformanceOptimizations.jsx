@@ -20,7 +20,6 @@ import {LoadingSpinner} from './ui / loading -spinner';
       {processedData.map((item", index) => (;
         <div;
           key={item.id || index}
-<<<<<<< HEAD
           onClick={() => handleClick(item)}";
           className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl "hover": "border-zion-cyan/40 transition-all duration-300 cursor-pointer";
         >";
@@ -36,7 +35,6 @@ import {LoadingSpinner} from './ui / loading -spinner';
     </div>;
   );
 });
-=======
           onClick={() => handleClick(item)}"
           className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
         >"
@@ -53,7 +51,6 @@ import {LoadingSpinner} from './ui / loading -spinner';
     );
 }
     );
->>>>>>> main
 MemoizedDataGrid.displayName = 'MemoizedDataGrid';
 // Virtual scrolling component for large lists;
 const VirtualList = ("props": "any) => {;
@@ -72,16 +69,13 @@ const VirtualList = ("props": "any) => {;
             }
         }) ) }, [items, scrollTop, itemHeight, containerHeight]) ;
     const handleScroll = useCallback((e) => {setScrollTop(e.currentTarget.scrollTop) ;}, []) ;
-<<<<<<< HEAD
     return (<div style="{{{ "height": "containerHeight; "overflow": 'auto'"}}"} onScroll={handleScroll} className="border border-zion - slate / 20 rounded-lg">;
       <div style="{{{ "height": "items.length * itemHeight; "position": 'relative';
       ...item; "index": startIndex + index; "style": {;
-=======
     return (
         <div style="{{{ height: containerHeight; overflow: 'auto'}}"} onScroll={handleScroll} className="border border-zion - slate / 20 rounded-lg">
       <div style="{{{ height: items.length * itemHeight; position: 'relative'
       ...item; index: startIndex + index; style: {
->>>>>>> main
 
         position; "top": (startIndex + index) * itemHeight; "height": itemHeight; "width": '100%'"}}"}));
   }, [items, scrollTop, itemHeight, containerHeight]);
@@ -105,15 +99,12 @@ const VirtualList = ("props": "any) => {;
             </div>;
           </div>;
         ))}
-<<<<<<< HEAD
       </div>;
     </div>;
   );
-=======
       </div>
     </div>
     );
->>>>>>> main
 };
 // Main performance optimizations component;
 export function PerformanceOptimizations("props": "any) {;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;,"});,"});";
 }) }"});,"})";
         catch (error) {}"});,"})";
@@ -272,7 +271,6 @@ export {SEOOptimizer};,"});,"})";
  const SEOOptimizer = ("props": "any) => { const [isOpen", setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {";import React { useState, useEffect, useCallback } from "react";
  const SEOOptimizer = ("props": "any) => {const [isOpen", setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback } from "react"";""const;const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {&apos;import React { useState, useEffect, useCallback } from &apos;react&apos,lucide-react";&apos;&apos,;
  const SEOOptimizer = ("props": "any) => { const [isOpen", setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback } from "react"";""";
-=======
 ;,"}
     );,"}
     );"
@@ -808,7 +806,6 @@ export {SEOOptimizer};,"}
  const SEOOptimizer = (props: any) => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {";import React { useState, useEffect, useCallback } from "react"
  const SEOOptimizer = (props: any) => {const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback } from "react"";""const;const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {&apos;import React { useState, useEffect, useCallback } from &apos;react&apos,lucide-react";&apos;&apos,
  const SEOOptimizer = (props: any) => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback } from "react"";"""
->>>>>>> main
 ""}}}
 ;
 const SEOOptimizer = ("props": "any) => {"}
@@ -987,7 +984,6 @@ issues,;
         analyzeSEO()}, [analyzeSEO]);
     const calculateSEOScore = ("props": "any) => {;
 
-<<<<<<< HEAD
 </button>;
 </div>;
 </div>;
@@ -1011,7 +1007,6 @@ issues,;
 </div>;
 </div>;
 </div>"
-=======
 </button>
 </div>
 </div>
@@ -1035,4 +1030,3 @@ issues,;
 </div>
 </div>
 </div>
->>>>>>> main

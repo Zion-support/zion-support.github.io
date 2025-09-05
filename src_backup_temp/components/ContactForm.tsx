@@ -1,4 +1,3 @@
-=======
 import React, { useState } from 'react',;',';';
     ;
 import { motion } from 'framer-motion';
@@ -27,7 +26,6 @@ export const "ContactForm": "React.FC = () => {';';';
       ...prev, [name]: "value"}));
   };
   const handleSubmit = async ("e": "React.FormEvent) => {;
-=======
     timeline: ''}
     );';';';
   const [isSubmitting, setIsSubmitting] = useState<any>(false);',';';
@@ -39,7 +37,6 @@ export const "ContactForm": "React.FC = () => {';';';
       ...prev, [name]: value}));
   };
   const handleSubmit = async (e: React.FormEvent) => {;
-=======
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);';
@@ -102,8 +99,6 @@ export const "ContactForm": "React.FC = () => {';';';
     ';';';
           onClick={() => setSubmitStatus('idle')
       )}
-=======
-=======
     </div>
     );
 }
@@ -251,7 +246,6 @@ export const "ContactForm": "React.FC = () => {';';';
                 { services.map((service) => (;
                   <option key={service"} value={service}>{service}</option>;
                 ));
-=======
           Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.''
         </p>
       </div>
@@ -441,13 +435,11 @@ export const "ContactForm": "React.FC = () => {';';';
               value={formData.message}
               onChange={handleInputChange}
               required;
-=======
               required
               rows={4}
               className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light "focus": "outlin e-none "focus": borde r-zion-cyan/50 transition-colors resize-none"';
               placeholder="Tell us about your project and how we can help..."';';
              />';';';
-=======
           </div>',';';
     ';';' {submitStatus === 'error' && (
             <div className="flex items-center gap-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-3">
@@ -483,13 +475,11 @@ export const "ContactForm": "React.FC = () => {';';';
 }
           </motion.button>;
         </form>;
-=======
           </motion.button>
         </form>
       </div>';
     </div>';';
   );';';';
-=======
 };"';';';';
 </motion>
 </textarea>

@@ -1,31 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, {useState, useCallback} from 'react';'''';';
 import {motion, AnimatePresence} from 'framer-motion';'''';';
-=======
 import React, {useState, useCallback} from 'react';'''
 import {motion, AnimatePresence} from 'framer-motion';'''
->>>>>>> main
 import {Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2} from 'lucide-react';
 import {useAICodeGeneration} from "../hooks/useAICodeGeneration.jsx";
 ;
-<<<<<<< HEAD
 export const AICodeGenerator = ("props": "any) => {;
     const { trackEvent "} = useAnalytics({"enableTracking": "true",;
         "enableUserBehaviorTracking": "true;"});';
-=======
 export const AICodeGenerator = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
         enableUserBehaviorTracking: true;}
     );'
->>>>>>> main
     const [activeTab, setActiveTab] = useState('generate');
     const [showAdvanced, setShowAdvanced] = useState(false);'
     const [customCode, setCustomCode] = useState('');
     const [copied, setCopied] = useState(false);
     const {isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode} = useAICodeGeneration();
     const [form, setForm] = useState({}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -52,7 +44,6 @@ export const AICodeGenerator = (props: any) => {
         "quality": "development", "includeTests": "false",;
         "includeDocs": "false", "includeErrorHandling": "false",;
         "includeLogging": "false", "includeMetrics": "false"});
-=======
 '
 ''
 '''
@@ -67,8 +58,6 @@ includeTests: false,
         includeErrorHandling: false,
         includeLogging: false,
         includeMetrics: false})
-<<<<<<< HEAD
-=======
 import React, {useState, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2} from 'lucide-react';
@@ -97,9 +86,6 @@ includeTests: false,;
         includeErrorHandling: false,;
         includeLogging: false,;
         includeMetrics: false});
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
 }
     // comment
 ";""
@@ -112,14 +98,12 @@ includeTests: false,;
         quality: "development", includeTests: false,
         includeDocs: false, includeErrorHandling: false,
         includeLogging: false, includeMetrics: false})
->>>>>>> main
 }
     // comment
     const handleSubmit = useCallback(async (e) => {}
 
         await generateCode(form.prompt, form)"
         trackEvent("ai_code_generator",form_submitted", form.language, null {}
-<<<<<<< HEAD
 ;
             "framework": "form.framework",;
 "style": "form.style",;
@@ -130,7 +114,6 @@ trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null
             "style": "form.style",;
             "target": "form.target",;
             "quality": "form.quality"})}, [form, generateCode, trackEvent]);
-=======
 
             framework: form.framework,
 style: form.style,
@@ -141,7 +124,6 @@ trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null
             style: form.style,
             target: form.target,
             quality: form.quality})}, [form, generateCode, trackEvent])
->>>>>>> main
 }
     // comment
     const handleAnalyzeCustomCode = useCallback(async () => {}
@@ -150,19 +132,16 @@ trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null
 }
         trackEvent(&apos;ai_code_generator&apos,custom_code_analyzed&apos, form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent])
 }
-<<<<<<< HEAD
     // comment;
         await generateCode(form.prompt, form)";"";
         trackEvent("ai_code_generator", form_submitted", form.language, null {}";
             "framework": "form.framework", "style": "form.style",;
             "target": "form.target", "quality": "form.quality"})}, [form, generateCode, trackEvent]);
-=======
     // comment
         await generateCode(form.prompt, form)";""
         trackEvent("ai_code_generator", form_submitted", form.language, null {}"
             framework: form.framework, style: form.style,
             target: form.target, quality: form.quality})}, [form, generateCode, trackEvent])
->>>>>>> main
 }
     // comment
         await analyzeCode(customCode, form.language)";""
@@ -243,25 +222,21 @@ trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null
 
         applySuggestion(suggestion)"
         trackEvent("ai_code_generator",suggestion_applied", suggestion.type, null {}
-<<<<<<< HEAD
 ;
             "suggestionId": "suggestion.id",;
 trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type, null {}
 ;
             "suggestionId": "suggestion.id",;
             "impact": "suggestion.impact"})}, [applySuggestion, trackEvent]);
-=======
 
             suggestionId: suggestion.id,
 trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type, null {}
 
             suggestionId: suggestion.id,
             impact: suggestion.impact})}, [applySuggestion, trackEvent])
->>>>>>> main
 }
     // comment
     const handleClearHistory = useCallback(() => {}
-<<<<<<< HEAD
 ;
         clearHistory()&apos,;
         trackEvent(&apos;ai_code_generator&apos,history_cleared&apos,manual&apos)}, [clearHistory, trackEvent])";&apos;&apos;";
@@ -283,7 +258,6 @@ trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type
         applySuggestion(suggestion)","";
         trackEvent("ai_code_generator", suggestion_applied", suggestion.type, null {}";
             "suggestionId": "suggestion.id", "impact": "suggestion.impact"})}, [applySuggestion, trackEvent]);
-=======
 
         clearHistory()&apos,
         trackEvent(&apos;ai_code_generator&apos,history_cleared&apos,manual&apos)}, [clearHistory, trackEvent])";&apos;&apos;"
@@ -305,13 +279,11 @@ trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type
         applySuggestion(suggestion)",""
         trackEvent("ai_code_generator", suggestion_applied", suggestion.type, null {}"
             suggestionId: suggestion.id, impact: suggestion.impact})}, [applySuggestion, trackEvent])
->>>>>>> main
 }
     // comment
         clearHistory()"
         trackEvent("ai_code_generator",history_cleared",manual")}, [clearHistory, trackEvent])
 }
-<<<<<<< HEAD
     return (";
     <div className="bg-white "dark": "bg-gray-800 rounded-xl shadow-lg border border-gray-200 "dark":border-gray-700 overflow-hidden">""{/* comment */"}"";";
       <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white">"";";
@@ -336,7 +308,6 @@ trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type
         ].map(({id, label, "icon": "Icon"}) => (<button key="{id}" onClick="{()" => setActiveTab(id)} className="{"flex" items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab == = id"",;
                 ? "border-purple-500 text-purple-600 "dark": "text-purple-400""""",";
                 : "border-transparent text-gray-500 "hover": "text-gray-700 "dark":text-gray-400 "dark":"hover":text-gray-300""}"}>"";";
-=======
     return ("
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">""{/* comment */}"";"
       <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white">"";"
@@ -361,7 +332,6 @@ trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type
         ].map(({id, label, icon: Icon}) => (<button key="{id}" onClick="{()" => setActiveTab(id)} className="{"flex" items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab == = id"",
                 ? "border-purple-500 text-purple-600 dark: text-purple-400"""","
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>"";"
->>>>>>> main
               <Icon className = "w-4 h-4"   /> {label}
 
             </button>) ) }
@@ -370,7 +340,6 @@ trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type
 ""{/* comment */}"";"
       <div className="p - 6">""",
         <AnimatePresence mode = "wait">"""{activeTab === "generate" && (<motion.div key="generate" initial = {}
-<<<<<<< HEAD
 ;
   {"opacity": "0",;
 "y": "20"}} animate = {}
@@ -455,7 +424,6 @@ trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type
                     </>) : "(<>""",",;
                       <Sparkles className = "w-5 h-5"   />,;
                       Generate Code,;
-=======
 
   {opacity: 0,
 y: 20}} animate = {}
@@ -540,13 +508,9 @@ y: 0}} exit = {}"
                     </>) : (<>"",",
                       <Sparkles className = "w-5 h-5"   />,
                       Generate Code,
->>>>>>> main
                     </>)}
 
               </form> {/* comment */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ;
               {generatedCode && (<motion.div initial = {}";
   "y": "0 """,">;
@@ -652,8 +616,6 @@ y: 0}} exit = {}"
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,";
                 <button type="&apos;button&apos;" onClick="{()" => setShowAdvanced(!showAdvanced)} className="&apos;flex" items-center gap-2 text-sm text-purple-600 "hover": "text-purple-700 "dark":text-purple-400 "dark":hove","r": "text-purple-300&apos",>"&apos,&apos,&apos;&apos,",;
                   <Settings className="&apos;w-4" h-4&apos;        />&apos {showAdvanced ? &apos;Hide&apos, : "&apos",Show&apos} Advanced Options&apos;
-=======
->>>>>>> main
 
               {generatedCode && (<motion.div initial = {}"
   y: 0 "",">
@@ -759,8 +721,6 @@ quality: e.target.value &apos,&apos,",
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
                 <button type="&apos;button&apos;" onClick="{()" => setShowAdvanced(!showAdvanced)} className="&apos;flex" items-center gap-2 text-sm text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hove,r: text-purple-300&apos,>"&apos,&apos,&apos;&apos,",
                   <Settings className="&apos;w-4" h-4&apos;        />&apos {showAdvanced ? &apos;Hide&apos, : &apos,Show&apos} Advanced Options&apos
-<<<<<<< HEAD
-=======
 ;
               {generatedCode && (<motion.div initial = {}";
   y: 0 "",">;
@@ -866,14 +826,9 @@ quality: e.target.value &apos,&apos,",;
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,";
                 <button type="&apos;button&apos;" onClick="{()" => setShowAdvanced(!showAdvanced)} className="&apos;flex" items-center gap-2 text-sm text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hove,r: text-purple-300&apos,>"&apos,&apos,&apos;&apos,",;
                   <Settings className="&apos;w-4" h-4&apos;        />&apos {showAdvanced ? &apos;Hide&apos, : &apos,Show&apos} Advanced Options&apos;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
->>>>>>> main
                 {/* comment */}
 
                 {showAdvanced && (}<motion.div initial = {}
-<<<<<<< HEAD
 ;
   "height": "&apos",auto&apos}} exit = {}>;
   "height": "0 &apos",&apos,",;
@@ -893,9 +848,6 @@ quality: e.target.value &apos,&apos,",;
                       Generate Code&apos;
               </form>;
               {/* comment */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ;
               {generatedCode && (}<motion.div initial = {}>;
   "y": "0 &apos",&apos,",;
@@ -1253,7 +1205,6 @@ quality: e.target.value &apos,&apos,",;
                                 {issue.message}"""";
                               </div>""""{issue.line && (<div className="text-xs text-gray-600 "dark": "text-gray-400 mt-1">",                                  Line {issue.line}
 ;
-=======
 
   height: &apos,auto&apos}} exit = {}>
   height: 0 &apos,&apos,",
@@ -1273,7 +1224,6 @@ quality: e.target.value &apos,&apos,",;
                       Generate Code&apos
               </form>
               {/* comment */}
->>>>>>> main
 
               {generatedCode && (}<motion.div initial = {}>
   y: 0 &apos,&apos,",
@@ -1295,8 +1245,6 @@ quality: e.target.value &apos,&apos,",;
                 ? "border-purple-500 text-purple-600 dark: text-purple-400"""""""",
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>""""
               <Icon className = "w-4 h-4"   />
-<<<<<<< HEAD
-=======
 ;
               {generatedCode && (}<motion.div initial = {}>;
   y: 0 &apos,&apos,",;
@@ -1318,9 +1266,6 @@ quality: e.target.value &apos,&apos,",;
                 ? "border-purple-500 text-purple-600 dark: text-purple-400"""""""",;
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>"""";
               <Icon className = "w-4 h-4"   />;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
               {label}
 
 """{/* comment */}""""";";"
@@ -1511,10 +1456,6 @@ y: 0: """,",";"
                     <Eye : className = "w-5 h-5"  />",",
                     Analyze: Code,
               {/* comment */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 
               {codeAnalysis && (<motion.div initial = {}">
 """"}} className="space - y-6">"""{/* comment */}""""","
@@ -1557,8 +1498,6 @@ y: 0: """,",";"
                     Analyze Code&apos
               </button> {/* comment */}"
 ""}} className="space-y-6">""{/* comment */}"";"
-<<<<<<< HEAD
-=======
 ;
               {codeAnalysis && (<motion.div initial = {}">;
 """"}} className="space - y-6">"""{/* comment */}""""",";
@@ -1601,27 +1540,18 @@ y: 0: """,",";"
                     Analyze Code&apos;
               </button> {/* comment */}";
 ""}} className="space-y-6">""{/* comment */}"";";
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
                   <div className = "grid grid-cols-2 md:grid-cols-5 gap-4">"{["{ key: "complexity", label: "Complexity", icon: Code, color: "red" },"{key: "maintainability", label: "Maintainability", icon: Wrench, color: "blue"},"{key: "security", label: "Security", icon: Shield, color: "green"},"{key: "performance", label: "Performance", icon: Gauge, color: "yellow"},"{key: "accessibility", label: "Accessibility", icon: Eye, color: "purple"}
 
                 ].map(({key, label, icon: Icon, color}) => {}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               {codeAnalysis && (}<motion.div initial = {}">
 &apos;&apos,&apos}} className="&apos;space-y-6&apos">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
-=======
 ;
               {codeAnalysis && (}<motion.div initial = {}">;
 &apos;&apos,&apos}} className="&apos;space-y-6&apos;">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,";
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 
               {codeAnalysis && (}<motion.div initial = {}">
 &apos;&apos,&apos}} className="&apos;space-y-6&apos;">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
->>>>>>> main
                   <div className="&apos;grid" grid-cols-2 md: grid-cols-5 gap-4&apos,>&apos {[&apos,&apos { ke,y: &apos,complexity&apos, label: &apos,Complexity&apos, icon: Code, color: &apos,red&apos},&apos {key: &apos,maintainability&apos, label: &apos,Maintainability&apos, icon: Wrench, color: &apos,blue&apos},&apos {key: &apos,security&apos, label: &apos,Security&apos, icon: Shield, color: &apos,green&apos},&apos {key: &apos,performance&apos, label: &apos,Performance&apos, icon: Gauge, color: &apos,yellow&apos},&apos {key: &apos,accessibility&apos, label: &apos,Accessibility&apos, icon: Eye, color: &apos,purple&apos}
 
                 ].map(({key, label, icon: Icon, color}) => {}&apos;&apos,
@@ -1636,10 +1566,6 @@ y: 0: """,",";"
                             </div>&apos;&apos,&apos;&apos,"
                             <div className="&apos;text-sm" text-gray-600 dark: text-gray-400&apos,>{label}&apos;</div>
                     return null})}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
                   <div className="&apos;bg-gray-50" dark: bg-gray-700 rounded-lg p-4&apos,>"&apos,&apos,&apos;&apos,",
@@ -1659,8 +1585,6 @@ y: 0: """,",";"
 """"}} className="space-y-6">"""{/* comment */}"""""
                   <div className="grid grid-cols-2 md: grid-cols-5 gap-4">"{[""{ key: "complexity", label: "Complexity", icon: Code, color: "red" },"{key: "maintainability", label: "Maintainability", icon: Wrench, color: "blue"},"{key: "security", label: "Security", icon: Shield, color: "green"},"{key: "performance", label: "Performance", icon: Gauge, color: "yellow"},"{key: "accessibility", label: "Accessibility", icon: Eye, color: "purple"}"
                     const value = codeAnalysis[key]"
-<<<<<<< HEAD
-=======
 ;
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
                   <div className="&apos;bg-gray-50" dark: bg-gray-700 rounded-lg p-4&apos,>"&apos,&apos,&apos;&apos,",;
@@ -1680,9 +1604,6 @@ y: 0: """,",";"
 """"}} className="space-y-6">"""{/* comment */}""""";
                   <div className="grid grid-cols-2 md: grid-cols-5 gap-4">"{[""{ key: "complexity", label: "Complexity", icon: Code, color: "red" },"{key: "maintainability", label: "Maintainability", icon: Wrench, color: "blue"},"{key: "security", label: "Security", icon: Shield, color: "green"},"{key: "performance", label: "Performance", icon: Gauge, color: "yellow"},"{key: "accessibility", label: "Accessibility", icon: Eye, color: "purple"}";
                     const value = codeAnalysis[key]";
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
                     if (typeof value = == "number") {}
 
 ""
@@ -1697,10 +1618,6 @@ y: 0: """,",";"
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm">""{Object.entries(codeAnalysis.metrics).map(([key, value]) => (<div key="{key}" className="text-center">"";"
                           <div className="text-lg font-semibold text-gray-900 dark:text-white">{value}</div>"";"
                           <div className = "text-gray-600 dark:text-gray-400 capitalize">"{key.replace(/([A-Z])/g, $1").trim()}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 
                         </div>))}"
 ""{/* comment */}""{codeAnalysis.issues.length > 0 && (<div className="bg-gray-50 dark: bg-gray-700 rounded-lg p-4">"","
@@ -1752,11 +1669,9 @@ y: 0: """,",";"
                                 {issue.message}""""
                               </div>""""{issue.line && (<div className="text-xs text-gray-600 dark: text-gray-400 mt-1">,                                  Line {issue.line}
 
->>>>>>> main
                                 </div>) }
 
                           </div>) ) }
-<<<<<<< HEAD
 ;
 """"""{"activeTab": "=== "optimize" && (<motion.div key = "optimize" initial = {"}", {"opacity": ",0",";
 """"}} className="space - y-6">""""",";
@@ -1873,7 +1788,6 @@ y: 0: """,",";"
               <button onClick="{handleGenerateDocs}" disabled="{!generatedCode" && !customCode} className="w-full py-4 px-6 bg-indigo-600 "hover": "bg-indigo-700 "disabled":bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 "disabled":cursor-not-allowed">"""";
                 <FileText className="w-5 h-5"   />;
                 Generate Documentation",;
-=======
 
 """"""{activeTab: === "optimize" && (<motion.div key = "optimize" initial = {}", {opacity:  ,0,"
 """"}} className="space - y-6">""""","
@@ -1990,8 +1904,6 @@ Generate: Documentation"""",",
               <button onClick="{handleGenerateDocs}" disabled="{!generatedCode" && !customCode} className="w-full py-4 px-6 bg-indigo-600 hover: bg-indigo-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">""""
                 <FileText className="w-5 h-5"   />
                 Generate Documentation,
-<<<<<<< HEAD
-=======
 ;
                         </div>))}";
 ""{/* comment */}""{codeAnalysis.issues.length > 0 && (<div className="bg-gray-50 dark: bg-gray-700 rounded-lg p-4">"",";
@@ -2162,14 +2074,9 @@ Generate: Documentation"""",",;
               <button onClick="{handleGenerateDocs}" disabled="{!generatedCode" && !customCode} className="w-full py-4 px-6 bg-indigo-600 hover: bg-indigo-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">"""";
                 <FileText className="w-5 h-5"   />;
                 Generate Documentation,;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
->>>>>>> main
             </motion.div>) }
 
         </AnimatePresence> {/* comment */}
-<<<<<<< HEAD
 ;
         {suggestions.length > 0 && (<motion.div initial = {}">;
 """"}} className="mt-"8": "border-t border-gray-200 "dark": border-gray-"700": pt-6">"""""",";";
@@ -2304,7 +2211,6 @@ Generate: Documentation"""",",;
                     </button>""""",;
                     <button onClick="{()" => copyToClipboard(suggestion.code)} className="px-3 py-1 bg-gray-100 "hover": "bg-gray-200 "dark":bg-gray-600 "dark":"hover":bg-gray-500 text-gray-700 "dark":text-gray-300 text-sm rounded transition-colors">;
                       Copy Code",;
-=======
 
         {suggestions.length > 0 && (<motion.div initial = {}">
 """"}} className="mt-8: border-t border-gray-200 dark: border-gray-700: pt-6">""""",";"
@@ -2439,13 +2345,9 @@ Generate: Documentation"""",",;
                     </button>"""",
                     <button onClick="{()" => copyToClipboard(suggestion.code)} className="px-3 py-1 bg-gray-100 hover: bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-700 dark:text-gray-300 text-sm rounded transition-colors">
                       Copy Code,
->>>>>>> main
                 </motion.div>) ) }
 
         {/* comment */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ;
         {history.length > 0 && (<motion.div initial = {}";
             <"div": "className="flex items-center justify-between mb-4">"""""",",;
@@ -2525,8 +2427,6 @@ Generate: Documentation"""",",;
 &apos;&apos;"&apos;&apos;"""";
     </div>)}"'`";
 ;";
-=======
->>>>>>> main
 
         {history.length > 0 && (<motion.div initial = {}"
             <div: className="flex items-center justify-between mb-4">""""",",
@@ -2607,7 +2507,6 @@ Generate: Documentation"""",",;
     </div>)}"'`"
 ;"
 
->>>>>>> main
   } catch (error) {console.error(error);}
 export default Component
 
@@ -2839,10 +2738,8 @@ export default Component
 </div>
 </button>
 </div>
-<<<<<<< HEAD
 </div>';
 </div>;';;';
-=======
 ;
         {history.length > 0 && (<motion.div initial = {}";
             <div: className="flex items-center justify-between mb-4">""""",",;
@@ -3146,10 +3043,7 @@ export default Component;
 </div>;
 </div>;
 </div>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 </div>
 </div>
 </div>
 </div>
->>>>>>> main
