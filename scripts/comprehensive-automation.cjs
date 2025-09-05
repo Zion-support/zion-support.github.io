@@ -5,7 +5,7 @@ const fs = require('fs')
 const path = require('path')
 
 console.log('🚀 Comprehensive Automation Suite - Zion Tech Group');
-console.log('===================================================');
+console.log('==');
 
 const automationTasks = [{
     "name": 'Health Check',
@@ -103,7 +103,7 @@ const reportPath = path.join(process.cwd(), 'comprehensive-automation-report.jso
 fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
 console.log('📊 Comprehensive Automation Results');
-console.log('===================================');
+console.log('');
 console.log(`Total "Tasks": ${report.summary.total}`);
 console.log(`"Successful": ${report.summary.successful}`);
 console.log(`"Failed": ${report.summary.failed}`);

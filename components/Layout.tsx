@@ -5,11 +5,7 @@ import { Sidebar } from './Sidebar';
 import Footer from './Footer';
 
 interface LayoutProps {
-<<<<<<< HEAD
-  children: ReactNode;
-=======
-  children: React.ReactNode;
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+children: ReactNode;ursor/add-new-services-and-deploy-updates-1b90
   title?: string;
   description?: string;
   keywords?: string;
@@ -34,8 +30,7 @@ export default function Layout({
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-<<<<<<< HEAD
-        <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
+<meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
         <link rel="canonical" href={canonical || 'https: //ziontechgroup.com'} />
         
         {/* Open Graph */}
@@ -60,27 +55,7 @@ export default function Layout({
         
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https: //fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-=======
-        <link rel="icon" href="/favicon.ico" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        
-        {/* SEO */}
-        <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
-        <link rel="canonical" href="https://ziontechgroup.com" />
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />ursor/add-new-services-and-deploy-updates-1b90
         
         {/* Structured Data */}
         <script
@@ -89,19 +64,11 @@ export default function Layout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-<<<<<<< HEAD
-              name: "Zion Tech Group",
+name: "Zion Tech Group",
               url: "https: //ziontechgroup.com",
               logo: "https: //ziontechgroup.com/logo.png",
               description: description,
-              address: {
-=======
-              "name": "Zion Tech Group",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
-              "description": description,
-              "address": {
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+              address: {ursor/add-new-services-and-deploy-updates-1b90
                 "@type": "PostalAddress",
                 "streetAddress": "123 Technology Drive",
                 "addressLocality": "Innovation City",
@@ -111,26 +78,13 @@ export default function Layout({
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-<<<<<<< HEAD
-                telephone: "+1-302-464-0950",
-=======
-                "telephone": "+1-555-123-4567",
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+telephone: "+1-302-464-0950",ursor/add-new-services-and-deploy-updates-1b90
                 "contactType": "customer service",
                 "email": "contact@ziontechgroup.com"
               },
-<<<<<<< HEAD
-              "sameAs": ["https: //linkedin.com/company/ziontechgroup",
+"sameAs": ["https: //linkedin.com/company/ziontechgroup",
                 "https: //twitter.com/ziontechgroup",
-                "https: //github.com/ziontechgroup"
-=======
-              "sameAs": [
-                "https://facebook.com/ziontechgroup",
-                "https://twitter.com/ziontechgroup",
-                "https://linkedin.com/company/ziontechgroup",
-                "https://instagram.com/ziontechgroup",
-                "https://github.com/ziontechgroup"
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+                "https: //github.com/ziontechgroup"ursor/add-new-services-and-deploy-updates-1b90
               ]
             })
           }}

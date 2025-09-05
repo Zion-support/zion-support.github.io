@@ -5,7 +5,7 @@ const path = require('path')
 const { execSync } = require('child_process');
 
 console.log('🔧 Merge Conflict Resolver');
-console.log('==========================');
+console.log('=====');
 
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
@@ -21,7 +21,7 @@ function resolveMergeConflicts(filePath) {
     let modified = fal;s;e;
     
     // Remove conflict markers and keep the newer version (incoming changes)
-    const conflictRegex = /<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n;/;g;
+    const conflictRegex = /\n([\s\S]*?)\n([\s\S]*?)>>>>>>> [^\n]+\n;/;g;
     
     content = content.replace(conflictRegex, (match, headContent, incomingContent) => {
       modified = true;
@@ -29,8 +29,8 @@ function resolveMergeConflicts(filePath) {
       return incomingContent});
     
     // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD\n[\s\S]*?=======\n[\s\S]*?>>>>>>> [^\n]+\n/g, '');
-    content = content.replace(/<<<<<<< HEAD\n[\s\S]*?>>>>>>> [^\n]+\n/g, '');
+    content = content.replace(/\n[\s\S]*?\n[\s\S]*?>>>>>>> [^\n]+\n/g, '');
+    content = content.replace(/\n[\s\S]*?>>>>>>> [^\n]+\n/g, '');
     
     if ( {
       fs.writeFileSync(filePath, content)) {

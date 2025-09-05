@@ -49,12 +49,7 @@ import {
   HardDrive
 } from 'lucide-react';
 
-<<<<<<< HEAD
-const microSaaSProducts = [{
-=======
-const microSaaSProducts = [
-  {
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+const microSaaSProducts = [{ursor/add-new-services-and-deploy-updates-1b90
     title: 'Cloud Cost Guard (FinOps Assistant)',
     description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
     icon: DollarSign,
@@ -251,8 +246,7 @@ const microSaaSProducts = [
   },
   {
     title: 'AI-Powered Code Review Assistant',
-<<<<<<< HEAD
-    description: 'Automated code review with security scanning, performance optimization, and best practices enforcement.',
+description: 'Automated code review with security scanning, performance optimization, and best practices enforcement.',
     icon: Code,
     features: ['Automated Reviews', 'Security Scanning', 'Performance Analysis', 'Best Practices Check'],
     pricing: '$299 - $1,999/month',
@@ -432,326 +426,7 @@ const microSaaSProducts = [
   }
 ];
 
-const features = [{
-=======
-    description: 'Automated code review and quality assurance using advanced AI analysis.',
-    icon: Code,
-    features: ['Automated Code Review', 'Security Vulnerability Detection', 'Performance Analysis', 'Best Practice Suggestions'],
-    pricing: '$199 - $999/month',
-    category: 'Development Tools',
-    popular: true
-  },
-  {
-    title: 'Smart Contract Auditor',
-    description: 'Automated smart contract security analysis and vulnerability detection.',
-    icon: Shield,
-    features: ['Security Analysis', 'Gas Optimization', 'Vulnerability Detection', 'Compliance Checking'],
-    pricing: '$299 - $1,499/month',
-    category: 'Blockchain'
-  },
-  {
-    title: 'AI-Powered SEO Optimizer',
-    description: 'Intelligent SEO analysis and optimization recommendations for websites.',
-    icon: Search,
-    features: ['Keyword Research', 'Content Optimization', 'Technical SEO', 'Competitor Analysis'],
-    pricing: '$79 - $399/month',
-    category: 'Marketing'
-  },
-  {
-    title: 'Automated Testing Platform',
-    description: 'AI-driven automated testing for web and mobile applications.',
-    icon: Monitor,
-    features: ['Visual Testing', 'API Testing', 'Performance Testing', 'Cross-browser Testing'],
-    pricing: '$149 - $799/month',
-    category: 'Quality Assurance'
-  },
-  {
-    title: 'AI Customer Sentiment Analyzer',
-    description: 'Real-time customer sentiment analysis across multiple channels.',
-    icon: MessageSquare,
-    features: ['Multi-channel Analysis', 'Real-time Monitoring', 'Trend Analysis', 'Alert System'],
-    pricing: '$99 - $499/month',
-    category: 'Analytics'
-  },
-  {
-    title: 'Smart Energy Management',
-    description: 'AI-powered energy consumption optimization for buildings and facilities.',
-    icon: Zap,
-    features: ['Energy Monitoring', 'Predictive Analytics', 'Cost Optimization', 'Sustainability Reporting'],
-    pricing: '$199 - $999/month',
-    category: 'Sustainability'
-  },
-  {
-    title: 'AI-Powered Legal Document Analyzer',
-    description: 'Automated legal document analysis and contract review using AI.',
-    icon: FileText,
-    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
-    pricing: '$299 - $1,499/month',
-    category: 'Legal Tech'
-  },
-  {
-    title: 'Intelligent Inventory Forecasting',
-    description: 'AI-driven demand forecasting and inventory optimization for retail.',
-    icon: Package,
-    features: ['Demand Forecasting', 'Stock Optimization', 'Supplier Management', 'Seasonal Analysis'],
-    pricing: '$149 - $799/month',
-    category: 'Retail'
-  },
-  {
-    title: 'AI-Powered Medical Diagnosis Assistant',
-    description: 'AI assistant for medical professionals with diagnostic support and analysis.',
-    icon: Heart,
-    features: ['Symptom Analysis', 'Diagnostic Support', 'Medical Image Analysis', 'Treatment Recommendations'],
-    pricing: '$499 - $2,499/month',
-    category: 'Healthcare'
-  },
-  {
-    title: 'Smart Agriculture Monitor',
-    description: 'IoT and AI-powered agricultural monitoring and optimization system.',
-    icon: Sprout,
-    features: ['Crop Monitoring', 'Weather Analysis', 'Pest Detection', 'Yield Prediction'],
-    pricing: '$199 - $999/month',
-    category: 'Agriculture'
-  },
-  {
-    title: 'AI-Powered Financial Advisor',
-    description: 'Personalized financial planning and investment advice using AI.',
-    icon: TrendingUp,
-    features: ['Portfolio Analysis', 'Risk Assessment', 'Investment Recommendations', 'Goal Tracking'],
-    pricing: '$29 - $199/month',
-    category: 'FinTech'
-  },
-  {
-    title: 'Intelligent Meeting Scheduler',
-    description: 'AI-powered meeting scheduling with optimal time slot recommendations.',
-    icon: Calendar,
-    features: ['Smart Scheduling', 'Conflict Resolution', 'Time Zone Management', 'Integration APIs'],
-    pricing: '$19 - $99/month',
-    category: 'Productivity'
-  },
-  {
-    title: 'AI-Powered Language Learning',
-    description: 'Personalized language learning platform with AI tutoring and assessment.',
-    icon: BookOpen,
-    features: ['Adaptive Learning', 'Speech Recognition', 'Progress Tracking', 'Cultural Context'],
-    pricing: '$9 - $49/month',
-    category: 'Education'
-  },
-  {
-    title: 'Smart Home Automation Hub',
-    description: 'Centralized smart home control with AI-powered automation and energy management.',
-    icon: Home,
-    features: ['Device Control', 'Energy Management', 'Security Monitoring', 'Voice Commands'],
-    pricing: '$49 - $299/month',
-    category: 'Smart Home'
-  },
-  {
-    title: 'AI-Powered Content Moderation',
-    description: 'Advanced content moderation using AI for text, images, and videos.',
-    icon: Eye,
-    features: ['Multi-modal Detection', 'Real-time Processing', 'Custom Rules', 'API Integration'],
-    pricing: '$199 - $999/month',
-    category: 'Content Safety'
-  },
-  {
-    title: 'Intelligent Supply Chain Optimizer',
-    description: 'AI-powered supply chain optimization and logistics management.',
-    icon: Network,
-    features: ['Route Optimization', 'Demand Forecasting', 'Supplier Management', 'Risk Analysis'],
-    pricing: '$299 - $1,499/month',
-    category: 'Logistics'
-  },
-  {
-    title: 'AI-Powered Personal Assistant',
-    description: 'Intelligent personal assistant for task management and productivity.',
-    icon: Bot,
-    features: ['Task Management', 'Email Organization', 'Schedule Optimization', 'Voice Commands'],
-    pricing: '$19 - $99/month',
-    category: 'Productivity'
-  },
-  {
-    title: 'Smart Waste Management',
-    description: 'IoT and AI-powered waste management and recycling optimization.',
-    icon: Trash2,
-    features: ['Waste Tracking', 'Recycling Optimization', 'Route Planning', 'Sustainability Metrics'],
-    pricing: '$149 - $799/month',
-    category: 'Sustainability'
-  },
-  {
-    title: 'AI-Powered Cybersecurity Monitor',
-    description: 'Real-time cybersecurity monitoring and threat detection using AI.',
-    icon: Shield,
-    features: ['Threat Detection', 'Anomaly Analysis', 'Incident Response', 'Compliance Monitoring'],
-    pricing: '$399 - $1,999/month',
-    category: 'Cybersecurity'
-  },
-  {
-    title: 'AI Video Content Generator',
-    description: 'Automated video creation from text prompts with AI-generated visuals and voiceovers.',
-    icon: Video,
-    features: ['Text-to-Video', 'AI Voice Synthesis', 'Template Library', 'Brand Customization'],
-    pricing: '$199 - $999/month',
-    category: 'Content Creation',
-    popular: true
-  },
-  {
-    title: 'Smart Contract Generator',
-    description: 'AI-powered smart contract creation and deployment for blockchain applications.',
-    icon: Code,
-    features: ['Contract Templates', 'Security Auditing', 'Gas Optimization', 'Multi-chain Support'],
-    pricing: '$299 - $1,499/month',
-    category: 'Blockchain'
-  },
-  {
-    title: 'AI-Powered Email Signature Generator',
-    description: 'Professional email signature creation with branding and compliance features.',
-    icon: Mail,
-    features: ['Template Library', 'Brand Integration', 'Compliance Checking', 'Analytics'],
-    pricing: '$9 - $49/month',
-    category: 'Productivity'
-  },
-  {
-    title: 'Intelligent Password Manager',
-    description: 'AI-enhanced password management with breach monitoring and security recommendations.',
-    icon: Lock,
-    features: ['Password Generation', 'Breach Monitoring', 'Security Scoring', 'Team Sharing'],
-    pricing: '$19 - $99/month',
-    category: 'Security'
-  },
-  {
-    title: 'AI-Powered Resume Builder',
-    description: 'Intelligent resume creation with ATS optimization and industry-specific templates.',
-    icon: FileText,
-    features: ['ATS Optimization', 'Industry Templates', 'Skills Matching', 'Cover Letter Generator'],
-    pricing: '$29 - $149/month',
-    category: 'Career Tools'
-  },
-  {
-    title: 'Smart Meeting Transcription',
-    description: 'AI-powered meeting transcription with action item extraction and follow-up automation.',
-    icon: Mic,
-    features: ['Real-time Transcription', 'Action Item Extraction', 'Speaker Identification', 'Integration APIs'],
-    pricing: '$49 - $299/month',
-    category: 'Productivity'
-  },
-  {
-    title: 'AI-Powered Logo Generator',
-    description: 'Professional logo creation using AI with brand guidelines and multiple formats.',
-    icon: Image,
-    features: ['AI Design', 'Brand Guidelines', 'Multiple Formats', 'Trademark Checking'],
-    pricing: '$39 - $199/month',
-    category: 'Design'
-  },
-  {
-    title: 'Intelligent Expense Tracker',
-    description: 'AI-powered expense management with receipt scanning and categorization.',
-    icon: DollarSign,
-    features: ['Receipt Scanning', 'Auto Categorization', 'Tax Preparation', 'Team Management'],
-    pricing: '$19 - $99/month',
-    category: 'Finance'
-  },
-  {
-    title: 'AI-Powered Social Media Content Calendar',
-    description: 'Intelligent social media planning with content suggestions and optimal posting times.',
-    icon: Calendar,
-    features: ['Content Planning', 'Optimal Timing', 'Hashtag Suggestions', 'Performance Analytics'],
-    pricing: '$29 - $149/month',
-    category: 'Social Media'
-  },
-  {
-    title: 'Smart Contract Testing Platform',
-    description: 'Automated testing and simulation environment for smart contracts across multiple blockchains.',
-    icon: Code,
-    features: ['Automated Testing', 'Gas Analysis', 'Security Auditing', 'Multi-chain Support'],
-    pricing: '$199 - $999/month',
-    category: 'Blockchain'
-  },
-  {
-    title: 'AI-Powered Voice Cloning',
-    description: 'High-quality voice cloning and text-to-speech synthesis for content creators.',
-    icon: Mic,
-    features: ['Voice Cloning', 'Multi-language Support', 'Emotion Control', 'API Integration'],
-    pricing: '$99 - $499/month',
-    category: 'Voice Technology',
-    popular: true
-  },
-  {
-    title: 'Intelligent Document Parser',
-    description: 'AI-powered document extraction and data parsing from PDFs, images, and forms.',
-    icon: FileText,
-    features: ['OCR Technology', 'Data Extraction', 'Form Processing', 'API Integration'],
-    pricing: '$49 - $299/month',
-    category: 'Document Processing'
-  },
-  {
-    title: 'AI-Powered Website Builder',
-    description: 'Intelligent website creation with AI-generated content and design optimization.',
-    icon: Globe,
-    features: ['AI Design', 'Content Generation', 'SEO Optimization', 'Mobile Responsive'],
-    pricing: '$79 - $399/month',
-    category: 'Web Development'
-  },
-  {
-    title: 'Smart Inventory Photography',
-    description: 'AI-powered product photography and image optimization for e-commerce.',
-    icon: Camera,
-    features: ['Auto Photography', 'Background Removal', 'Image Enhancement', 'Batch Processing'],
-    pricing: '$29 - $149/month',
-    category: 'E-commerce'
-  },
-  {
-    title: 'AI-Powered Translation Service',
-    description: 'Real-time translation with context awareness and industry-specific terminology.',
-    icon: Globe,
-    features: ['Real-time Translation', 'Context Awareness', 'Industry Terms', 'API Integration'],
-    pricing: '$19 - $99/month',
-    category: 'Language Services'
-  },
-  {
-    title: 'Intelligent Email Warm-up',
-    description: 'AI-powered email deliverability optimization and sender reputation management.',
-    icon: Mail,
-    features: ['Deliverability Optimization', 'Reputation Management', 'A/B Testing', 'Analytics'],
-    pricing: '$39 - $199/month',
-    category: 'Email Marketing'
-  },
-  {
-    title: 'AI-Powered Code Documentation',
-    description: 'Automated code documentation generation with intelligent comments and API docs.',
-    icon: Code,
-    features: ['Auto Documentation', 'API Generation', 'Code Comments', 'Integration Guides'],
-    pricing: '$49 - $249/month',
-    category: 'Development Tools'
-  },
-  {
-    title: 'Smart Contract Analytics',
-    description: 'Comprehensive analytics and monitoring for smart contract performance and security.',
-    icon: BarChart3,
-    features: ['Performance Analytics', 'Security Monitoring', 'Gas Optimization', 'Alert System'],
-    pricing: '$99 - $499/month',
-    category: 'Blockchain'
-  },
-  {
-    title: 'AI-Powered Lead Qualification',
-    description: 'Intelligent lead scoring and qualification using behavioral analysis and intent signals.',
-    icon: Target,
-    features: ['Behavioral Analysis', 'Intent Scoring', 'Lead Prioritization', 'CRM Integration'],
-    pricing: '$79 - $399/month',
-    category: 'Sales'
-  },
-  {
-    title: 'Intelligent Data Backup',
-    description: 'AI-powered automated backup with intelligent scheduling and recovery optimization.',
-    icon: HardDrive,
-    features: ['Automated Backup', 'Smart Scheduling', 'Recovery Optimization', 'Version Control'],
-    pricing: '$19 - $99/month',
-    category: 'Data Management'
-  }
-];
-
-const features = [
-  {
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+const features = [{ursor/add-new-services-and-deploy-updates-1b90
     icon: Zap,
     title: 'Rapid Deployment',
     description: 'Get up and running in days, not months'
@@ -783,12 +458,7 @@ const features = [
   }
 ];
 
-<<<<<<< HEAD
-const benefits = [{
-=======
-const benefits = [
-  {
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
     icon: Clock,
     title: 'Fast Time to Market',
     description: 'Launch your SaaS in weeks, not months',
@@ -814,12 +484,7 @@ const benefits = [
   }
 ];
 
-<<<<<<< HEAD
-const pricingTiers = [{
-=======
-const pricingTiers = [
-  {
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+const pricingTiers = [{ursor/add-new-services-and-deploy-updates-1b90
     name: 'Starter',
     description: 'Perfect for small teams and MVPs',
     price: '$299',
@@ -838,12 +503,7 @@ const pricingTiers = [
     description: 'Ideal for growing businesses',
     price: '$799',
     period: '/month',
-<<<<<<< HEAD
-    features: ['Up to 10,000 users',
-=======
-    features: [
-      'Up to 10,000 users',
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+features: ['Up to 10,000 users',ursor/add-new-services-and-deploy-updates-1b90
       'Advanced analytics',
       'Priority support',
       'Enhanced security',
@@ -857,12 +517,7 @@ const pricingTiers = [
     description: 'For large organizations',
     price: 'Custom',
     period: '',
-<<<<<<< HEAD
-    features: ['Unlimited users',
-=======
-    features: [
-      'Unlimited users',
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+features: ['Unlimited users',ursor/add-new-services-and-deploy-updates-1b90
       'Custom analytics',
       'Dedicated support',
       'Enterprise security',
@@ -884,31 +539,20 @@ export default function MicroSaaSPage() {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden">
-<<<<<<< HEAD
-                  <div className="absolute inset-0">
+<div className="absolute inset-0">
                   <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
                   </div>
                   <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
                   </div>
                   </div>
                   <div className="container mx-auto px-4 relative z-10">
-                  <motion.div
-=======
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+                  <motion.divursor/add-new-services-and-deploy-updates-1b90
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-<<<<<<< HEAD
-                  <div className="flex items-center justify-center mb-6">
+<div className="flex items-center justify-center mb-6">
                   <Cloud className="h-16 w-16 text-purple-400 mr-4" />
                   <h1 className="text-4xl md:text-6xl font-bold">
                 Micro{' '} <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
@@ -918,23 +562,7 @@ export default function MicroSaaSPage() {
                   </div>
                   <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">Scalable software solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-=======
-            <div className="flex items-center justify-center mb-6">
-              <Cloud className="h-16 w-16 text-purple-400 mr-4" />
-              <h1 className="text-4xl md:text-6xl font-bold">
-                Micro{' '}
-                <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-                  SaaS
-                </span>
-              </h1>
-            </div>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Scalable software solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">ursor/add-new-services-and-deploy-updates-1b90
                 Start Your SaaS
               </Link>
                   <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
@@ -955,13 +583,7 @@ export default function MicroSaaSPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Micro SaaS Products</h2>
-=======
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Micro SaaS Products
-            </h2>
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Micro SaaS Products</h2>ursor/add-new-services-and-deploy-updates-1b90
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Ready-to-deploy SaaS solutions that solve specific business problems with minimal setup time.
             </p>
@@ -972,11 +594,7 @@ export default function MicroSaaSPage() {
               return (
                 <motion.div
                   key={index}
-<<<<<<< HEAD
-                  className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 group relative ${
-=======
-                  className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative ${
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 group relative ${ursor/add-new-services-and-deploy-updates-1b90
                     product.popular ? 'ring-2 ring-purple-200' : ''
                   }`}
                   initial={{ opacity: 0, y: 30 }}
@@ -994,17 +612,10 @@ export default function MicroSaaSPage() {
                   )}
                   
                   <div className="flex items-center justify-between mb-4">
-<<<<<<< HEAD
-                  <div className="text-purple-600 group-hover:text-indigo-600 transition-colors">
+<div className="text-purple-600 group-hover:text-indigo-600 transition-colors">
                   <IconComponent className="w-10 h-10" />
                   </div>
-                  <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded-full">
-=======
-                    <div className="text-purple-600 group-hover:text-indigo-600 transition-colors">
-                      <IconComponent className="w-10 h-10" />
-                    </div>
-                    <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded-full">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+                  <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded-full">ursor/add-new-services-and-deploy-updates-1b90
                       {product.category}
                     </span>
                   </div>
@@ -1015,13 +626,8 @@ export default function MicroSaaSPage() {
                     {product.description}
                   </p>
                   <div className="mb-4">
-<<<<<<< HEAD
-                  <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
-                  <ul className="space-y-1">
-=======
-                    <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
-                    <ul className="space-y-1">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+<h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
+                  <ul className="space-y-1">ursor/add-new-services-and-deploy-updates-1b90
                       {product.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">
                   <CheckCircle className="w-3 h-3 text-purple-500 mr-2 flex-shrink-0" />
@@ -1057,35 +663,18 @@ export default function MicroSaaSPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
-                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Micro SaaS?</h2>
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Micro SaaS?</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Built for modern businesses that need fast, reliable, and scalable solutions.
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {features.map((feature, index) => {
-=======
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Micro SaaS?
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Built for modern businesses that need fast, reliable, and scalable solutions.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+                    {features.map((feature, index) => {ursor/add-new-services-and-deploy-updates-1b90
               const IconComponent = feature.icon;
               return (
                 <motion.div
                   key={index}
-<<<<<<< HEAD
-                  className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
-=======
-                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/add-new-services-and-deploy-updates-1b90
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -1117,13 +706,7 @@ export default function MicroSaaSPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
-                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Proven Results</h2>
-=======
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Proven Results
-            </h2>
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Proven Results</h2>ursor/add-new-services-and-deploy-updates-1b90
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Our Micro SaaS solutions deliver measurable business impact.
             </p>
@@ -1169,26 +752,13 @@ export default function MicroSaaSPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
-                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Choose the plan that fits your business needs. No hidden fees, no surprises.
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {pricingTiers.map((tier, index) => (
-=======
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose the plan that fits your business needs. No hidden fees, no surprises.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+                    {pricingTiers.map((tier, index) => (ursor/add-new-services-and-deploy-updates-1b90
               <motion.div
                 key={index}
                 className={`p-8 rounded-xl shadow-lg ${
@@ -1229,11 +799,7 @@ export default function MicroSaaSPage() {
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     tier.popular
-<<<<<<< HEAD
-                      ? 'bg-purple-600 hover: bg-purple-700 text-white'
-=======
-                      ? 'bg-purple-600 hover:bg-purple-700 text-white'
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+? 'bg-purple-600 hover: bg-purple-700 text-white'ursor/add-new-services-and-deploy-updates-1b90
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                   }`}
                 >
@@ -1352,57 +918,28 @@ export default function MicroSaaSPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-<<<<<<< HEAD
-                  <div className="container mx-auto px-4 text-center">
-                  <motion.div
-=======
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+<div className="container mx-auto px-4 text-center">
+                  <motion.divursor/add-new-services-and-deploy-updates-1b90
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Launch Your Micro SaaS?</h2>
-=======
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Launch Your Micro SaaS?
-            </h2>
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Launch Your Micro SaaS?</h2>ursor/add-new-services-and-deploy-updates-1b90
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Join 500+ successful businesses that trust Zion Tech Group for their micro SaaS development needs. Let&apos;s build the perfect solution for your business.
             </p>
-<<<<<<< HEAD
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                Start Building
-=======
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                Start Building Today
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+                Start Buildingursor/add-new-services-and-deploy-updates-1b90
               </Link>
                   <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
                 View All Services
               </Link>
-<<<<<<< HEAD
-                  </div>
+</div>
                   </motion.div>
                   </div>
                   </section>
-                  </div>
-=======
-            </div>
-            <div className="mt-8 text-sm opacity-90">
-              <p>📞 Call: +1 302 464 0950 | ✉️ Email: kleber@ziontechgroup.com</p>
-              <p>📍 364 E Main St STE 1008, Middletown, DE 19709</p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+                  </div>ursor/add-new-services-and-deploy-updates-1b90
   );
 }

@@ -152,8 +152,8 @@ class MergeConflictResolver {
     let resolved = conte;n;t;
     
     // Remove conflict markers
-    resolved = resolved.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    resolved = resolved.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    resolved = resolved.replace(/[\s\S]*?[\s\S]*?>>>>>>> [^\n]+/g, '');
+    resolved = resolved.replace(/<<<<<<< [^\n]+[\s\S]*?[\s\S]*?>>>>>>> [^\n]+/g, '');
     
     // Clean up any remaining conflict artifacts
     resolved = resolved.replace(/^[=]{7}$/gm, '');

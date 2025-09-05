@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**;
  * Production logging utility for error tracking and monitoring;
  */;
@@ -26,6 +25,5 @@ export function logInfoToProduction(message, context = {}) {};
 }
   ;
   // "TODO": Implement actual production logging service integration}}
-=======
 ; if(process.env.NODE_ENV === 'development') {}; * @param {string} message - Warning message; * @param {Object} context - Additional context data; */; export function logWarningToProduction(message,context = {}) {}; return null} } } ; ; export function logInfoToProduction(message,context = {}) {}; return null} } }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe

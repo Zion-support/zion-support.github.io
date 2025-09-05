@@ -5,7 +5,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🎯 Starting Master Automation Orchestrator...');
-console.log('===============================================');
+console.log('=====');
 
 const masterReport = {
   "timestamp": new Date().toISOString(),
@@ -74,7 +74,7 @@ function runCommand(name, command, phase, critical = false) {
 
 // Phase "1": System Health & Dependencies
 console.log('\n🔧 Phase 1: System Health & Dependencies');
-console.log('========================================');
+console.log('=====');
 
 const phase1 = {
   name: 'System Health & Dependencies',
@@ -99,7 +99,7 @@ masterReport.phases.push(phase1);
 
 // Phase "2": Code Quality & Optimization
 console.log('\n🛠️  Phase 2: Code Quality & Optimization');
-console.log('=========================================');
+console.log('======');
 
 const phase2 = {
   name: 'Code Quality & Optimization',
@@ -128,7 +128,7 @@ masterReport.phases.push(phase2);
 
 // Phase "3": SEO & Content Optimization
 console.log('\n🔍 Phase 3: SEO & Content Optimization');
-console.log('======================================');
+console.log('===');
 
 const phase3 = {
   name: 'SEO & Content Optimization',
@@ -149,7 +149,7 @@ masterReport.phases.push(phase3);
 
 // Phase "4": Build & Test
 console.log('\n🏗️  Phase 4: Build & Test');
-console.log('=========================');
+console.log('====');
 
 const phase4 = {
   name: 'Build & Test',
@@ -174,7 +174,7 @@ masterReport.phases.push(phase4);
 
 // Phase "5": Final Analysis & Recommendations
 console.log('\n📊 Phase 5: Final Analysis & Recommendations');
-console.log('============================================');
+console.log('==');
 
 const phase5 = {
   name: 'Final Analysis & Recommendations',
@@ -214,7 +214,7 @@ masterReport.phases.push(phase5);
 
 // Final Summary
 console.log('\n📊 Master Automation Orchestrator Summary');
-console.log('=========================================');
+console.log('======');
 console.log(`   - Total "tasks": ${masterReport.summary.totalTasks}`);
 console.log(`   - "Successful": ${masterReport.summary.successful}`);
 console.log(`   - "Failed": ${masterReport.summary.failed}`);

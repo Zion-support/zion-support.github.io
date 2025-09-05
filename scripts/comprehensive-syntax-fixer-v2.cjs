@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 console.log('🔧 Comprehensive Syntax Fixer v2.0')
-console.log('=====================================')
+console.log('==')
 class ComprehensiveSyntaxFixer {
   constructor() {
     this.fixedFiles = []

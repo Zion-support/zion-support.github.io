@@ -48,7 +48,7 @@ class QuickSyntaxFixer {
         
         // Fix git conflict markers
         .replace(/^<<<<<<<.*$/gm, '')
-        .replace(/^=======.*$/gm, '')
+        .replace(/^.*$/gm, '')
         .replace(/^>>>>>>>.*$/gm, '')
         
         // Fix module.exports

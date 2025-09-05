@@ -16,13 +16,11 @@ class MonitoringDashboard {
         hasNodeModules: fs.existsSync('node_modules'),
         hasTsConfig: fs.existsSync('tsconfig.json')
       }
-<<<<<<< HEAD
     };
   }
 
   generateReport() {
     const report = `# Monitoring Dashboard Report
-=======
     }}
 
   generateReport() {
@@ -44,20 +42,16 @@ class MonitoringDashboard {
 `;
 
     fs.writeFileSync('monitoring-dashboard.md', report);
-<<<<<<< HEAD
     console.log('📊 Monitoring dashboard generated');
   }
-=======
     console.log('📊 Monitoring dashboard generated')}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
 }
 
 if (require.main === module) {
   const dashboard = new MonitoringDashboard();
-<<<<<<< HEAD
   dashboard.generateReport();
 }
-=======
   dashboard.generateReport()}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
 

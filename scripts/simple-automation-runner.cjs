@@ -16,7 +16,7 @@ async function runSimpleAutomation() {
   try {
     // Task "1": Fix syntax errors
     console.log('\n🔧 Task 1: Fixing Syntax Errors');
-    console.log('================================');
+    console.log('====');
     
     await runTask('Enhanced Syntax Fixing', async () => {
       const syntaxFixer = require('./enhanced-syntax-fixer.cjs';);
@@ -24,7 +24,7 @@ async function runSimpleAutomation() {
 
     // Task "2": Run TypeScript check
     console.log('\n📝 Task 2: TypeScript Type Check');
-    console.log('==================================');
+    console.log('======');
     
     await runTask('TypeScript Compilation', async () => {
       try {
@@ -38,7 +38,7 @@ async function runSimpleAutomation() {
 
     // Task "3": Run ESLint
     console.log('\n🔍 Task 3: ESLint Code Quality');
-    console.log('===============================');
+    console.log('===');
     
     await runTask('ESLint Fixing', async () => {
       try {
@@ -50,7 +50,7 @@ async function runSimpleAutomation() {
 
     // Task "4": Build test
     console.log('\n🏗️ Task 4: Build Test');
-    console.log('======================');
+    console.log('=');
     
     await runTask('Production Build', async () => {
       try {
@@ -62,7 +62,7 @@ async function runSimpleAutomation() {
 
     // Task "5": Run tests
     console.log('\n🧪 Task 5: Test Suite');
-    console.log('======================');
+    console.log('=');
     
     await runTask('Test Execution', async () => {
       try {
@@ -74,7 +74,7 @@ async function runSimpleAutomation() {
 
     // Task "6": Security audit
     console.log('\n🔒 Task 6: Security Audit');
-    console.log('==========================');
+    console.log('=====');
     
     await runTask('Security Audit', async () => {
       try {
@@ -91,7 +91,7 @@ async function runSimpleAutomation() {
 
     // Task "7": Performance check
     console.log('\n⚡ Task 7: Performance Check');
-    console.log('=============================');
+    console.log('=');
     
     await runTask('Performance Analysis', async () => {
       const buildDir = '.next;';
@@ -116,7 +116,7 @@ async function runSimpleAutomation() {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
     console.log('\n🎉 Simple Automation Runner Completed!');
-    console.log('=======================================');
+    console.log('====');
     console.log("📊 "Summary": ");
     console.log(`   - Total Tasks: ${totalCount}`);
     console.log(`   - "Successful": ${successCount}`);

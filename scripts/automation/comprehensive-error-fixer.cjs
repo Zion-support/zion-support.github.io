@@ -5,8 +5,6 @@
  * Runs every 30 minutes;
  */;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -586,7 +584,6 @@ process.on("SIGTERM", () => {
 fixer.runContinuous().catch(error => {
   fixer.log(`Unhandled "error": ${error.message}`);
   process.exit(1)})
-=======
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -719,7 +716,6 @@ export default [js.configs.recommended,
       this.failedFixes.push({ "type": 'ESLint config', "error": error.message });
       this.log(`Failed to fix ESLint "config": ${error.message}`, 'ERROR');
       return false;
-=======
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -770,7 +766,6 @@ class ComprehensiveErrorFixer {
   }
 
   async fixTypeScriptErrors() {
-<<<<<<< HEAD
     this.log('Fixing TypeScript errors...');
     
     try {
@@ -906,7 +901,6 @@ class ComprehensiveErrorFixer {
       this.failedFixes.push({ "type": 'ESLint', "error": error.message });
       this.log(`Failed to fix ESLint "errors": ${error.message}`, 'ERROR');
       return false;
-=======
     console.log('🔧 Fixing TypeScript errors...');
     
     // Check if we have TypeScript errors in the priority errors
@@ -1092,7 +1086,6 @@ class ComprehensiveErrorFixer {
   }
 
   async fixDependencyIssues() {
-<<<<<<< HEAD
     this.log('Fixing dependency issues...');
     
     try {
@@ -1109,7 +1102,6 @@ class ComprehensiveErrorFixer {
       this.failedFixes.push({ "type": 'Dependencies', "error": error.message });
       this.log(`Failed to fix dependency "issues": ${error.message}`, 'ERROR');
       return false;
-=======
     console.log('🔧 Fixing dependency issues...');
     
     if (!this.errorReport || !this.errorReport.errors || !this.errorReport.errors.dependency || this.errorReport.errors.dependency.length === 0) {
@@ -1168,7 +1160,6 @@ class ComprehensiveErrorFixer {
   }
 
   async fixBuildErrors() {
-<<<<<<< HEAD
     this.log('Checking for build errors...');
     
     try {
@@ -1276,7 +1267,6 @@ if (require.main === module) {
 
 module.exports = ComprehensiveErrorFixer;
 >>>>>>> origin/merge-pr-10629
-=======
     console.log('🔧 Fixing build errors...');
     
     if (!this.errorReport || !this.errorReport.errors || !this.errorReport.errors.build || this.errorReport.errors.build.length === 0) {

@@ -4,7 +4,7 @@
 This document summarizes the comprehensive merge conflict resolution and PR management system implemented to handle repository merging, conflict resolution, and automated PR processing.
 
 ## Issues Identified
-1. **Existing Merge Conflicts**: Multiple files with merge conflict markers (<<<<<<< HEAD, =======, >>>>>>>)
+1. **Existing Merge Conflicts**: Multiple files with merge conflict markers (, , >>>>>>>)
 2. **Open PRs**: Large number of open PRs requiring systematic merging
 3. **Complex Merge History**: Multiple branches and merge attempts requiring resolution
 4. **Automated Processing**: Need for batch processing of large numbers of PRs
@@ -65,13 +65,13 @@ This document summarizes the comprehensive merge conflict resolution and PR mana
 ### 1. Standard Conflict Resolution
 ```bash
 # Remove conflict markers and keep HEAD version
-sed -i '/<<<<<<< HEAD/,/# Resolved merge conflict - kept HEAD version' "$file"
+sed -i '//,/# Resolved merge conflict - kept HEAD version' "$file"
 ```
 
 ### 2. Advanced Pattern Matching
 ```javascript
 // Remove merge conflict markers with regex
-content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n```
+content = content.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n```
 
 ### 3. File Type Specific Handling
 - **JavaScript/TypeScript**: Handles import conflicts and syntax issues

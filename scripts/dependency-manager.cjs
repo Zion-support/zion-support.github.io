@@ -21,10 +21,8 @@ class DependencyManager {
       // Check for outdated packages
       let outdatedPackages = [];
       try {
-<<<<<<< HEAD
         const outdatedResult = execSync('npm outdated --json', {"stdio": 'pipe',"cwd": this.projectRoot;
           encoding: 'utf8'});
-=======
         const outdatedResult = execSync('npm outdated --json', {
           stdio: 'pipe',
           cwd: this.projectRoot,

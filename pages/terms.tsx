@@ -34,8 +34,7 @@ export default function TermsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-lg shadow-lg p-8">
-<<<<<<< HEAD
-              <p className="text-gray-600 mb-6">
+<p className="text-gray-600 mb-6">
                 <strong>Last updated: </strong> January 15, 2024
               </p>
               
@@ -99,17 +98,7 @@ export default function TermsPage() {
                   <p className="text-gray-600">
                     <strong>Email:</strong> legal@ziontechgroup.com<br />
                     <strong>Phone:</strong> +1 (302) 464-0950<br />
-                    <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
-=======
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <div className="mb-8 p-4 bg-blue-50 border-l-4 border-blue-400">
-                  <p className="text-blue-800">
-                    <strong>Important:</strong> By accessing or using our services, you agree to be bound by these Terms of Service.
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+                    <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709ursor/add-new-services-and-deploy-updates-1b90
                   </p>
                 </div>
 

@@ -5,7 +5,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🚀 Comprehensive Test & Deploy Suite');
-console.log('====================================');
+console.log('=');
 
 class ComprehensiveTestDeploy {
   constructor() {
@@ -177,7 +177,7 @@ class ComprehensiveTestDeploy {
     await this.generateReports();
 
     this.log('\\n📊 COMPREHENSIVE SUITE SUMMARY');
-    this.log('===============================');
+    this.log('===');
     this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);
     this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`);
     this.log(`Errors: ${this.results.errors.length}`);

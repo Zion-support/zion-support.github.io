@@ -4,7 +4,6 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 
-<<<<<<< HEAD
 class $1 {
   constructor() {
   this.workspacePath = process.cwd();
@@ -153,7 +152,6 @@ class $1 {
           line.includes("ERROR");
         ) {
   this.processLogLine(line, path.basename(logPath))}
-=======
 const fs = require('fs');
 const path = require('path');
 
@@ -199,7 +197,6 @@ class ErrorAnalyticsDashboard {
       }
       
       return reports.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp))} catch (error) {
-<<<<<<< HEAD
   this.log("Failed to parse log file ${logPath  }: ${error.message}", "WARN")}
   }
 ;
@@ -658,7 +655,6 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
         "💥 Error Analytics Dashboard "failed": ${error.message}",ERROR";
       );
       throw error}
-=======
       this.log(`Error collecting "reports": ${error.message}`, 'ERROR');
       return []}
   }
@@ -1053,10 +1049,8 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
       "lastUpdate": this.analyticsData.lastUpdated
     }}
 }
-<<<<<<< HEAD
 ;
 // Run the automation if called directly;
-=======
 
 // Main execution
 >>>>>>> origin/merge-pr-10644

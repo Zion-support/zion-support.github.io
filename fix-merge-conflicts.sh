@@ -3,7 +3,7 @@
 echo "🔧 Fixing merge conflicts in source files..."
 
 # Find all files with merge conflicts
-files_with_conflicts=$(grep -r "<<<<<<< HEAD" src/ --include="*.js" --include="*.jsx" --include="*.ts" --include="*.tsx" -l)
+files_with_conflicts=$(grep -r "" src/ --include="*.js" --include="*.jsx" --include="*.ts" --include="*.tsx" -l)
 
 for file in $files_with_conflicts; do
     echo "Fixing: $file"
@@ -12,10 +12,10 @@ for file in $files_with_conflicts; do
     cp "$file" "$file.backup"
     
     # Use sed to remove merge conflict markers and keep HEAD version
-    sed -i '/^<<<<<<< HEAD/,/^=======/!d' "$file"
-    sed -i '/^=======/,/^>>>>>>> /d' "$file"
-    sed -i '/^<<<<<<< HEAD/d' "$file"
-    sed -i '/^=======/d' "$file"
+    sed -i '/^/,/^/!d' "$file"
+    sed -i '/^/,/^>>>>>>> /d' "$file"
+    sed -i '/^/d' "$file"
+    sed -i '/^/d' "$file"
     sed -i '/^>>>>>>> /d' "$file"
     
     # Clean up any remaining syntax issues

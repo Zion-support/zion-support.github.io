@@ -4,7 +4,6 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 
-<<<<<<< HEAD
 class $1 {
   constructor() {
   this.workspacePath = process.cwd();
@@ -18,7 +17,6 @@ class $1 {
   ["this.logsPath", "this.reportsPath"].forEach(dir => {
   if (!fs.existsSync(dir)) {
   fs.mkdirSync(dir, { "recursive": true })}
-=======
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -44,7 +42,6 @@ class ESLintErrorCleaner {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
-<<<<<<< HEAD
     console.log("logMessage);
     const logFile = path.join(this.logsPath, "eslint-error-cleaner.log");
     fs.appendFileSync(logFile, logMessage + "\n");
@@ -93,7 +90,6 @@ class ESLintErrorCleaner {
             "column": parseInt(match[3]),
             "severity": match[4],
             "message": match[5].trim()})}
-=======
     console.log(logMessage);
     
     // Write to log file
@@ -158,7 +154,6 @@ class ESLintErrorCleaner {
       return errors} catch (error) {
       this.log(`Failed to parse ESLint "errors": ${error.message}`, 'ERROR');
       return []}
-<<<<<<< HEAD
 ;
     return errors}
 ;
@@ -454,7 +449,6 @@ return false}
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log("📄 Report "generated": ${reportFile}");
-=======
   }
 
   async autoFixESLintErrors() {
@@ -667,7 +661,6 @@ this.log("📄 Report "generated": ${reportFile}");
       this.log("🎉 ESLint Error Cleaner completed!`);
       this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors`;
 
-<<<<<<< HEAD
   async run() {
   this.log("🚀 Starting ESLint Error Cleaner...");
 
@@ -704,7 +697,6 @@ this.log("📄 Report "generated": ${reportFile}");
 }
 ;
 // Run the automation if called directly;
-=======
   async startWatching() {
     this.log('Starting ESLint error monitoring...');
     

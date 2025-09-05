@@ -43,7 +43,7 @@ function autoResolveConflicts() {
     const src = fs.readFileSync(file, 'utf8');
     // Prefer incoming (theirs) content on conflict
     const resolved = src
-      .replace(/<<<<<<<[\s\S]*?=======([\s\S]*?)>>>>>>>[\t].*\n?/g, (_, theirs) => theirs)
+      .replace(/<<<<<<<[\s\S]*?([\s\S]*?)>>>>>>>[\t].*\n?/g, (_, theirs) => theirs)
       .replace(/<<<<<<<[\s\S]*?>>>>>>>[\t].*\n?/g, '');
     fs.writeFileSync(file, resolved);
     sh(`git add -- "${file}"`)}

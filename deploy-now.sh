@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "🚀 DEPLOY NOW - Zion Tech Group Website"
-echo "======================================="
+echo "===="
 echo ""
 echo "This script will complete the entire deployment process:"
 echo "1. Resolve any merge conflicts"
@@ -49,10 +49,10 @@ else
     log "Running manual conflict resolution..."
     
     # Find and resolve conflicts
-    find src pages components -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null | while read file; do
+    find src pages components -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" | xargs grep -l "" 2>/dev/null | while read file; do
         log "Resolving: $file"
         # Keep HEAD version, remove conflict markers
-        sed -i.bak '/<<<<<<< HEAD/,/=======/d; />>>>>>> /d' "$file" 2>/dev/null
+        sed -i.bak '//,//d; />>>>>>> /d' "$file" 2>/dev/null
         rm -f "$file.bak"
     done
     
@@ -143,7 +143,7 @@ log "🔍 Step 6: Deployment verification..."
 
 echo ""
 echo "📊 DEPLOYMENT SUMMARY"
-echo "===================="
+echo "======"
 echo "✅ Merge conflicts resolved"
 echo "✅ Open PRs processed"
 echo "✅ Dependencies installed" 

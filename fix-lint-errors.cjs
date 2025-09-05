@@ -11,12 +11,12 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, "utf8");
     
     // Remove merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, "");
-    content = content.replace(/<<<<<<< [^\n]*[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, "");
+    content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>> [^\n]*/g, "");
+    content = content.replace(/<<<<<<< [^\n]*[\s\S]*?[\s\S]*?>>>>>>> [^\n]*/g, "");
     
     // Clean up any remaining conflict markers
     content = content.replace(/^<<<<<<< .*$/gm, "");
-    content = content.replace(/^=======.*$/gm, "");
+    content = content.replace(/^.*$/gm, "");
     content = content.replace(/^>>>>>>> .*$/gm, "");
     
     // Remove empty lines that might be left behind
@@ -99,7 +99,7 @@ function findFilesWithIssues(dir) {
         )) {
           try {
             const content = fs.readFileSync(fullPath, "utf8");
-            if (content.includes("<<<<<<<") || content.includes("=======") || content.includes(">>>>>>>")) {
+            if (content.includes("<<<<<<<") || content.includes("") || content.includes(">>>>>>>")) {
               files.push(fullPath)}
           } catch (error) {
             // Skip files that can't be read

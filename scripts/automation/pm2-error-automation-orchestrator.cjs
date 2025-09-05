@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -65,7 +64,6 @@ class PM2ErrorAutomationOrchestrator {
     this.log('Starting PM2 Error Automation Orchestrator...', 'info');
     this.isRunning = true;
 
-=======
 #!/usr/bin/env node
 
 const { execSync, spawn } = require('child_process');
@@ -110,7 +108,6 @@ class PM2ErrorAutomationOrchestrator {
       // Initialize PM2 if not already running
       await this.initializePM2();
       
-<<<<<<< HEAD
       // Start scheduled jobs
       await this.startScheduledJobs();
       
@@ -124,7 +121,6 @@ class PM2ErrorAutomationOrchestrator {
       this.log(`Error starting "orchestrator": ${error.message}`, 'error');
       this.isRunning = false;
       process.exit(1);
-=======
       // Start all automation processes
       await this.startAllAutomations();
       
@@ -142,7 +138,6 @@ class PM2ErrorAutomationOrchestrator {
   }
 
   async initializePM2() {
-<<<<<<< HEAD
     this.log('Initializing PM2...', 'info');
     
     try {
@@ -443,7 +438,6 @@ class PM2ErrorAutomationOrchestrator {
     this.isRunning = false;
     this.log('PM2 Error Automation Orchestrator stopped', 'info');
     process.exit(0);
-=======
     console.log('🔧 Initializing PM2...');
     
     try {
@@ -743,7 +737,6 @@ class PM2ErrorAutomationOrchestrator {
 
   getStatus() {
     return {
-<<<<<<< HEAD
       "isRunning": this.isRunning,
       "scheduledJobs": this.scheduledJobs.map(({ name, schedule }) => ({ name, schedule })),
       "config": this.config
@@ -1361,7 +1354,6 @@ module.exports = {
   runErrorAutomationOrchestrator,
   startContinuousMonitoring
 };
-=======
       "status": this.status,
       "automations": this.automations,
       "config": this.config

@@ -14,7 +14,6 @@ import {
   ExternalLink
 } from 'lucide-react';
 
-<<<<<<< HEAD
 const services = {
   'AI Solutions': [
     { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
@@ -96,10 +95,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   hours: '24/7 Support Available'
-};
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+};ursor/add-new-services-and-deploy-updates-1b90
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -193,15 +189,9 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
-=======
-        <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+          <div className="lg:col-span-1">ursor/add-new-services-and-deploy-updates-1b90
             <Link href="/" className="flex items-center space-x-2 mb-6">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <Zap className="w-5 h-5 text-white" />
@@ -229,8 +219,7 @@ export default function Footer() {
                 <span className="text-gray-300">123 Technology Drive, Innovation City, IC 12345</span>
               </div>
             </div>
-<<<<<<< HEAD
-          </div>
+</div>
 
           {/* Services */}
           <div>
@@ -341,29 +330,11 @@ export default function Footer() {
                     </a>
                   );
                 })}
-              </div>
-=======
-
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"
-                  aria-label={social.label}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+              </div>ursor/add-new-services-and-deploy-updates-1b90
             </div>
           </div>
 
-<<<<<<< HEAD
-      {/* Newsletter Signup */}
+{/* Newsletter Signup */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-8">
                       <div className="flex flex-col md:flex-row items-center justify-between">
@@ -371,28 +342,7 @@ export default function Footer() {
               <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
               <p className="text-gray-400 text-sm">
                 Get the latest technology insights and company updates delivered to your inbox.
-              </p>
-=======
-          {/* Footer Links */}
-          {footerSections.map((section, index) => (
-            <div key={index}>
-              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
-              <ul className="space-y-3">
-                {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
-                    <Link
-                      href={link.href}
-                      className="text-gray-300 hover:text-blue-400 transition-colors flex items-center group"
-                    >
-                      <span>{link.label}</span>
-                      {link.href.startsWith('http') && (
-                        <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      )}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+              </p>ursor/add-new-services-and-deploy-updates-1b90
             </div>
           ))}
         </div>
@@ -426,16 +376,10 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
-<<<<<<< HEAD
-                      <div className="flex flex-col md:flex-row items-center justify-between">
+<div className="flex flex-col md:flex-row items-center justify-between">
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
               © 2024 Zion Tech Group. All rights reserved. | 
-              <span className="ml-2">Delaware, United States</span>
-=======
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} Zion Tech Group. All rights reserved.
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+              <span className="ml-2">Delaware, United States</span>ursor/add-new-services-and-deploy-updates-1b90
             </div>
             
             <div className="flex flex-wrap items-center space-x-6">

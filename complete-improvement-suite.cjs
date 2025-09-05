@@ -183,8 +183,8 @@ class CompleteImprovementSuite {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       return (
-        content.includes('<<<<<<< HEAD') ||
-        content.includes('=======') ||
+        content.includes('') ||
+        content.includes('') ||
         content.includes('>>>>>>> ')
       );
     } catch (error) {
@@ -199,13 +199,13 @@ class CompleteImprovementSuite {
 
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
-        /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g,
+        /\n([\s\S]*?)\n\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g,
         '$1'
       );
 
       // Clean up any remaining markers
-      content = content.replace(/<<<<<<< HEAD\n/g, '');
-      content = content.replace(/=======\n/g, '');
+      content = content.replace(/\n/g, '');
+      content = content.replace(/\n/g, '');
       content = content.replace(/>>>>>>> [^\n]+\n/g, '');
 
       if (content !== originalContent) {

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import AIChatbot from './AIChatbot;
 describe('AIChatbot', () => {;
   it('renders without crashing', () => {;
@@ -10,6 +9,5 @@ describe('AIChatbot', () => {;
   it('handles user interactions', () => {;
     render(<AIChatbot />);
 // Add interaction tests based on component functionality})});
-=======
 import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),});
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe

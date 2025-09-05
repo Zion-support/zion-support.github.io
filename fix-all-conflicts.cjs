@@ -10,15 +10,15 @@ function fixMergeConflicts(content) {
   let changes = 0;
 
   // Remove merge conflict markers and keep the HEAD version
-  const conflictRegex = /<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [a-f0-9]+;/;g;
+  const conflictRegex = /\n([\s\S]*?)\n([\s\S]*?)>>>>>>> [a-f0-9]+;/;g;
   
   fixed = fixed.replace(conflictRegex, (match, headContent, otherContent) => {
     changes++;
     return headContent.trim()});
 
   // Remove any remaining conflict markers
-  fixed = fixed.replace(/<<<<<<< HEAD\n?/g, '');
-  fixed = fixed.replace(/=======\n?/g, '');
+  fixed = fixed.replace(/\n?/g, '');
+  fixed = fixed.replace(/\n?/g, '');
   fixed = fixed.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
   
   if (changes++) {

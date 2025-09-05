@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src/components/developers/CodeBlock.jsx.disabled
+:src/components/developers/CodeBlock.jsx.disabled
 import React from "react";
 
 export default function CodeBlock($1) {
@@ -26,6 +26,5 @@ export default function CodeBlock($1) {
   );
 }
 ;
-=======
 import React from "react"; export default function CodeBlock($1) { const content = code || children || "; const text = typeof content === "string" ? content : String(content); const handleCopy = (props) => { try { navigator.clipboard.writeText(text)} catch (_) {} }; return ( <div className="min-h-screen bg-white"> <div className="flex items-center justify-between mb-2"> <span className="text-xs text-gray-400 uppercase tracking-wide">{language}</span> <button onClick={handleCopy} className="text-xs text-gray-400 hover:text-white transition-colors"> Copy </button> </div> <pre className="text-sm text-gray-100"> <code>{text}</code> </pre> </div> )} ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe:src/components/developers/CodeBlock.jsx

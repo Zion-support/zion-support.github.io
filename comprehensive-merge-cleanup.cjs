@@ -7,10 +7,10 @@ function cleanMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove all merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> origin\/cursor[^\n]*\n?/g, '');
+    content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>> origin\/cursor[^\n]*\n?/g, '');
     content = content.replace(/>>>>>>> origin\/cursor[^\n]*\n?/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> origin\/cursor[^\n]*\n?/g, '');
+    content = content.replace(/[\s\S]*?/g, '');
+    content = content.replace(/[\s\S]*?>>>>>>> origin\/cursor[^\n]*\n?/g, '');
     
     // Remove duplicate category lines
     content = content.replace(/"category": '[^']*'},\s*"category": '[^']*'\s*}/g, (match) => {
@@ -30,7 +30,7 @@ function cleanMergeConflicts(filePath) {
     
     // Remove any remaining merge conflict markers
     content = content.replace(/>>>>>>> origin\/cursor[^\n]*\n?/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
+    content = content.replace(/[\s\S]*?/g, '');
     
     fs.writeFileSync(filePath, content);
     console.log(`Cleaned merge conflicts "in": ${filePath}`)} catch (error) {

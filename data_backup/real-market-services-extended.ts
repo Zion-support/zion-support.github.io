@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface RealMarketServiceExtended {
   "id": string;
   name: string;
@@ -12,6 +11,5 @@ export const "realMarketServicesExtended": RealMarketServiceExtended[] = [{
     "price": '$599',
     "features": ['Extended features', 'Market coverage', 'Advanced analytics']},
 ];
-=======
 export interface RealMarketServiceExtended { id: string; name: string; tagline: string; price: string; features: string[]} export const realMarketServicesExtended: RealMarketServiceExtended[] = [ { id: 'extended-service-1',name: 'Extended Market Service 1',tagline: 'Extended market coverage',price: '$599',features: ['Extended features','Market coverage','Advanced analytics'],},];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe

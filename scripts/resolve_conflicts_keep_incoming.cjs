@@ -12,20 +12,20 @@ function getAllFiles(dir) {
 
 function resolveConflictsKeepIncoming(filePath) {
   const text = fs.readFileSync(filePath, 'utf8');
-  if (!text.includes('<<<<<<< HEAD')) return false;
+  if (!text.includes('')) return false;
 
   const lines = text.split('\n');
   const out = [];
   let i = 0;
   let changed = false;
   while (i < lines.length) {
-    if (lines[i].startsWith('<<<<<<< HEAD')) {
+    if (lines[i].startsWith('')) {
       changed = true;
-      // skip until separator '======='
+      // skip until separator ''
       i++;
-      while (i < lines.length && !lines[i].startsWith('=======')) i++;
+      while (i < lines.length && !lines[i].startsWith('')) i++;
       // skip the separator
-      if (i < lines.length && lines[i].startsWith('=======')) i++;
+      if (i < lines.length && lines[i].startsWith('')) i++;
       // copy incoming until '>>>>>>> '
       while (i < lines.length && !lines[i].startsWith('>>>>>>> ')) {
         out.push(lines[i]);

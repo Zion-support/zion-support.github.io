@@ -61,8 +61,8 @@ class ErrorMonitorFixer {
       const relativePath = path.relative(this.projectRoot, filePath);
 
       // Check for common syntax errors
-      const syntaxIssues = [{ "pattern": /<<<<<<< HEAD/, "message": 'Merge conflict markers found' },
-        { "pattern": /=======/, "message": 'Merge conflict markers found' },
+      const syntaxIssues = [{ "pattern": //, "message": 'Merge conflict markers found' },
+        { "pattern": //, "message": 'Merge conflict markers found' },
         { "pattern": />>>>>>>/, "message": 'Merge conflict markers found' },
         { "pattern": /import\s+.*?from\s+['"][^'"]*?['"]\s*['"]/, "message": 'Unterminated import string' },
         { "pattern": /className=\{"[^"]*\$\{[^}]*\}[^"]*$/, "message": 'Unterminated template literal' },
@@ -134,7 +134,7 @@ class ErrorMonitorFixer {
 
       // Fix merge conflict markers
       if (error.message.includes('Merge conflict')) {
-        content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>>.*$/gm, '');
+        content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>>.*$/gm, '');
         fixed = true}
 
       // Fix unterminated strings

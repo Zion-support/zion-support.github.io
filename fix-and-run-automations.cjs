@@ -19,8 +19,8 @@ class AutomationScriptFixer {
       const content = fs.readFileSync(filePath, 'utf8');
 
       if (
-        content.includes('<<<<<<< HEAD') ||
-        content.includes('=======') ||
+        content.includes('') ||
+        content.includes('') ||
         content.includes('>>>>>>>')
       ) {
         this.log(`Fixing merge conflicts "in": ${filePath}`);
@@ -28,11 +28,11 @@ class AutomationScriptFixer {
         // Simple merge conflict resolution - take the HEAD version
         let fixedContent = content
           .replace(
-            /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]*\n/g,
+            /\n([\s\S]*?)\n\n([\s\S]*?)\n>>>>>>> [^\n]*\n/g,
             '$1'
           )
           .replace(
-            /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]*/g,
+            /\n([\s\S]*?)\n\n([\s\S]*?)\n>>>>>>> [^\n]*/g,
             '$1'
           );
 

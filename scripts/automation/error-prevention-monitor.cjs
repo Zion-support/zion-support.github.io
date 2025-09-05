@@ -13,7 +13,6 @@ console.log('🛡️ Starting error prevention monitor...');
 class ErrorPreventionMonitor {
   constructor() {
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.logFile = path.join(this.projectRoot, 'logs', 'error-prevention-monitor.log')}
 
   log(message) {
@@ -229,7 +228,6 @@ class ErrorPreventionMonitor {
       this.log(`Build check "failed": ${error.message}`);
       this.triggerAutoFix()}
   }
-=======
     this.reportsDir = path.join(this.projectRoot, 'error-reports');
     this.logsDir = path.join(this.projectRoot, 'automation/logs');
     this.checkInterval = parseInt(process.env.PREVENTION_CHECK_INTERVAL) || 600000; // 10 minutes

@@ -5,9 +5,8 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🚀 Advanced Automation Suite');
-console.log('============================');
+console.log('');
 
-<<<<<<< HEAD
 // Function to create ESLint configuration fix
 function fixESLintConfiguration() {
   console.log('\n🔧 Fixing ESLint Configuration...');
@@ -38,7 +37,6 @@ module.exports = {
   }
 };
 ";
-=======
 class AdvancedAutomationSuite {
   constructor() {
     this.results = {
@@ -59,13 +57,11 @@ class AdvancedAutomationSuite {
     console.log(logEntry);
   }
 
-<<<<<<< HEAD
 // Function to create deployment automation
 function createDeploymentAutomation() {
   console.log('\n🚀 Creating Deployment Automation...');
   
   const deploymentScript = "#!/bin/bash
-=======
   async runCommand(command, description) {
     try {
       this.log(`Running: ${description}`);
@@ -338,7 +334,6 @@ echo "🌐 Deploying to production..."
 
 echo "✅ Deployment completed successfully!"`;
 
-<<<<<<< HEAD
 echo "✅ Deployment completed successfully!";";
 
   fs.writeFileSync('deploy.sh', deploymentScript);
@@ -626,7 +621,6 @@ module.exports = nextConfig;
       'lighthouse': 'lighthouse "http": //localhost:3000 --output=html --output-path=./lighthouse-report.html',
       '"perf": audit': 'npm run build && npm run lighthouse'
     }
-=======
     const deployPath = path.join(process.cwd(), 'scripts', 'deploy.sh');
     fs.writeFileSync(deployPath, deploymentScript);
     fs.chmodSync(deployPath, '755');
@@ -647,7 +641,7 @@ module.exports = nextConfig;
     this.results.scriptsRun = this.results.improvements.length;
     
     this.log('\\n📊 ADVANCED AUTOMATION SUITE SUMMARY');
-    this.log('=====================================');
+    this.log('==');
     this.log(`Scripts created: ${this.results.scriptsRun}`);
     this.log(`Improvements: ${this.results.improvements.length}`);
     this.log(`Errors: ${this.results.errors.length}`);
@@ -666,10 +660,8 @@ module.exports = nextConfig;
       });
     }
 
-<<<<<<< HEAD
 console.log('⚡ Performance optimization completed!');
 ";
-=======
     // Save results
     const resultsPath = path.join(process.cwd(), 'automation-reports', 'advanced-automation-results.json');
     if (!fs.existsSync(path.dirname(resultsPath))) {
@@ -682,7 +674,6 @@ console.log('⚡ Performance optimization completed!');
   }
 }
 
-<<<<<<< HEAD
 // Main execution
 async function main() {
   const startTime = Date.now(;);
@@ -730,7 +721,6 @@ async function main() {
   console.log('\n🎉 Advanced automation suite completed!')}
 
 main().catch(console.error);
-=======
 // Run the automation suite
 const automation = new AdvancedAutomationSuite();
 automation.runAllAutomations().catch(console.error);

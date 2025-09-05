@@ -13,10 +13,8 @@ class SEOOptimizer {
     console.log(`[${timestamp}] [${level}] ${message}`);
   }
 
-<<<<<<< HEAD
   async optimizeSEO() {
     this.log('🔍 Starting SEO optimization...');
-=======
 // File extensions to analyze
 const fileExtensions = ['.js', '.jsx', '.ts', '.tsx'];
 

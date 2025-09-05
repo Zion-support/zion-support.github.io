@@ -6,7 +6,6 @@ const { execSync } = require("child_process");
 
 class $1 {
   constructor() {
-<<<<<<< HEAD
   this.workspacePath = process.cwd();
     this.logsPath = path.join(this.workspacePath, "logs");
     this.reportsPath = path.join(this.workspacePath, "automation-reports");
@@ -277,7 +276,6 @@ this.log(`📄 Report "generated": ${reportFile}`);
       this.log( `💥 Dependency Error Resolver "failed": ${error.message  }",ERROR";
       );
 throw error}
-=======
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'error-reports');
     this.logsDir = path.join(this.projectRoot, 'automation/logs');
@@ -545,12 +543,10 @@ throw error}
       "autoUpdateEnabled": this.autoUpdateEnabled
     }}
 }
-<<<<<<< HEAD
 ;
 // Run the automation if called directly;
 if (require.main === module) {
   // Run the automation if called directly;
-=======
 
 // Main execution
 >>>>>>> origin/merge-pr-10644

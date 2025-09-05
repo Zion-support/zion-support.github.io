@@ -5,7 +5,7 @@ const path = require('path')
 const { execSync } = require('child_process');
 
 console.log('🔄 Comprehensive PR Merger & Conflict Resolver');
-console.log('==============================================');
+console.log('====');
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
 if (!GITHUB_TOKEN) {
@@ -97,13 +97,13 @@ async function resolveMergeConflicts(prNumber) {
           let content = fs.readFileSync(file, 'utf8';);
           
           // Remove conflict markers and keep both versions where possible
-          content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, (match, headContent, incomingContent) => {
+          content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)>>>>>>> [^\n]+\n/g, (match, headContent, incomingContent) => {
             // For most files, prefer the incoming content (newer changes)
             return incomingContent});
           
           // Remove any remaining conflict markers
-          content = content.replace(/<<<<<<< HEAD\n[\s\S]*?=======\n[\s\S]*?>>>>>>> [^\n]+\n/g, '');
-          content = content.replace(/<<<<<<< HEAD\n[\s\S]*?>>>>>>> [^\n]+\n/g, '');
+          content = content.replace(/\n[\s\S]*?\n[\s\S]*?>>>>>>> [^\n]+\n/g, '');
+          content = content.replace(/\n[\s\S]*?>>>>>>> [^\n]+\n/g, '');
           
           fs.writeFileSync(file, content);
           

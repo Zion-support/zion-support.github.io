@@ -13,11 +13,11 @@ class QuickMergeFix {
 
   fixMergeConflicts(content) {
     // Remove merge conflict markers and keep HEAD version
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g, '$1');
+    content = content.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g, '$1');
     
     // Clean up any remaining markers
-    content = content.replace(/<<<<<<< HEAD\n/g, '');
-    content = content.replace(/=======\n/g, '');
+    content = content.replace(/\n/g, '');
+    content = content.replace(/\n/g, '');
     content = content.replace(/>>>>>>> [^\n]+\n/g, '');
     
     return content}
@@ -40,7 +40,7 @@ class QuickMergeFix {
           let content = fs.readFileSync(filePath, 'utf8');
           const originalContent = content;
           
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>> ')) {
+          if (content.includes('') || content.includes('') || content.includes('>>>>>>> ')) {
             content = this.fixMergeConflicts(content);
             
             if (content !== originalContent) {

@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Error Automation System Startup Script
-<<<<<<< HEAD
 # This script initializes and starts the complete error fixing automation system
 
 set -e
@@ -70,7 +69,6 @@ mkdir -p scripts/automation
 # Step 5: Set up PM2 logrotate
 log "Configuring PM2 logrotate..."
 pm2 install pm2-logrotate || true
-=======
 # This script starts the comprehensive PM2 error automation system
 
 set -e
@@ -102,7 +100,6 @@ print_error() {
     echo -e "${RED}❌ $1${NC}"
 }
 
-<<<<<<< HEAD
 # Check if we're in the right directory
 if [ ! -f "package.json" ]; then
     print_error "package.json not found. Please run this script from the project root."
@@ -266,7 +263,6 @@ else
     print_error "ecosystem.error-automation.config.cjs not found"
     exit 1
 fi
-=======
 # Check if PM2 is installed
 if ! command -v pm2 &> /dev/null; then
     print_error "PM2 is not installed. Installing PM2..."
@@ -327,10 +323,8 @@ print_status "Checking PM2 status..."
 pm2 status
 
 # Show logs
-<<<<<<< HEAD
 print_status "Recent logs:"
 pm2 logs --lines 10
-=======
 print_status "Recent logs from error automation processes:"
 pm2 logs --lines 20
 >>>>>>> origin/merge-pr-10644
@@ -338,7 +332,6 @@ pm2 logs --lines 20
 # Create a monitoring script
 cat > monitor-error-automation.sh << 'EOF'
 #!/bin/bash
-<<<<<<< HEAD
 
 echo "🔍 Error Automation System Monitor"
 echo "======"
@@ -374,9 +367,8 @@ echo "  pm2 stop all                  - Stop all processes"
 echo "  pm2 delete all                - Delete all processes"
 echo "  node scripts/automation/project-error-automation.cjs  - Run manual error check"
 echo "  node scripts/automation/master-error-coordinator.cjs  - Run manual coordination"
-=======
 echo "🔍 Error Automation System Status:"
-echo "=================================="
+echo "======"
 pm2 status
 echo ""
 echo "📊 Recent Error Reports:"
@@ -391,7 +383,6 @@ EOF
 
 chmod +x monitor-error-automation.sh
 
-<<<<<<< HEAD
 # Create a quick fix script
 cat > quick-fix-errors.sh << 'EOF'
 #!/bin/bash
@@ -413,7 +404,6 @@ node scripts/automation/linting-error-fixer.cjs
 
 echo ""
 echo "✅ System is ready!"
-=======
 # Create a stop script
 cat > stop-error-automation.sh << 'EOF'
 #!/bin/bash

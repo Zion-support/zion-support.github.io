@@ -32,11 +32,11 @@ class SimpleMergeResolver {
       let resolvedContent = content;
       
       // Remove merge conflict markers and keep HEAD version
-      resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1');
+      resolvedContent = resolvedContent.replace(/\n([\s\S]*?)\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1');
       
       // Remove any remaining conflict markers
-      resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n/g, '');
-      resolvedContent = resolvedContent.replace(/=======\n/g, '');
+      resolvedContent = resolvedContent.replace(/\n/g, '');
+      resolvedContent = resolvedContent.replace(/\n/g, '');
       resolvedContent = resolvedContent.replace(/>>>>>>> [^\n]+\n/g, '');
       
       if (resolvedContent !== content) {

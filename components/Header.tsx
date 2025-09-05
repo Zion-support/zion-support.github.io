@@ -21,7 +21,6 @@ import {
   DollarSign
 } from 'lucide-react';
 
-<<<<<<< HEAD
 const navigation = [{
     name: 'Services',
     href: '/services',
@@ -69,24 +68,7 @@ const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709'
-};
-=======
-interface HeaderProps {
-  className?: string;
-  onMenuClick?: () => void;
-}
-
-export function Header({ className, onMenuClick }: HeaderProps) {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
-  const [searchQuery, setSearchQuery] = useState('');
-  const router = useRouter();
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+};ursor/add-new-services-and-deploy-updates-1b90
 
   useEffect(() => {
     const handleScroll = () => {
@@ -191,15 +173,9 @@ export function Header({ className, onMenuClick }: HeaderProps) {
       {/* Top Bar */}
       <div className="bg-gray-900 text-gray-300 text-sm py-2">
         <div className="container mx-auto px-4">
-<<<<<<< HEAD
-          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
+<div className="flex flex-col sm:flex-row justify-between items-center text-sm">
             <div className="flex flex-col sm:flex-row gap-4 mb-2 sm:mb-0">
-              <div className="flex items-center gap-2">
-=======
-          <div className="flex items-center justify-between">
-            <div className="hidden lg:flex items-center space-x-6">
-              <div className="flex items-center space-x-2">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+              <div className="flex items-center gap-2">ursor/add-new-services-and-deploy-updates-1b90
                 <Phone className="w-4 h-4" />
                 <span>+1 (555) 123-4567</span>
               </div>
@@ -238,8 +214,7 @@ export function Header({ className, onMenuClick }: HeaderProps) {
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
 
-<<<<<<< HEAD
-          {/* Desktop Navigation */}
+{/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
@@ -285,104 +260,7 @@ export function Header({ className, onMenuClick }: HeaderProps) {
                         ))}
                       </motion.div>
                     )}
-                  </AnimatePresence>
-=======
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
-              {navigationItems.map((item, index) => (
-                <div key={index} className="relative group">
-                  <Link
-                    href={item.href}
-                    className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors font-medium"
-                    onMouseEnter={() => {
-                      if (item.hasDropdown) {
-                        if (item.label === 'Services') setIsServicesOpen(true);
-                        if (item.label === 'Company') setIsCompanyOpen(true);
-                      }
-                    }}
-                    onMouseLeave={() => {
-                      if (item.hasDropdown) {
-                        if (item.label === 'Services') setIsServicesOpen(false);
-                        if (item.label === 'Company') setIsCompanyOpen(false);
-                      }
-                    }}
-                  >
-                    <span>{item.label}</span>
-                    {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
-                  </Link>
-
-                  {/* Dropdown Menus */}
-                  {item.hasDropdown && item.dropdownItems && (
-                    <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ${
-                      item.label === 'Services' && isServicesOpen ? 'opacity-100 visible' : ''
-                    } ${item.label === 'Company' && isCompanyOpen ? 'opacity-100 visible' : ''}`}>
-                      {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
-                        <Link
-                          key={dropdownIndex}
-                          href={dropdownItem.href}
-                          className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                        >
-                          {dropdownItem.label === 'AI Services' && <Brain className="w-4 h-4" />}
-                          {dropdownItem.label === 'IT Services' && <Shield className="w-4 h-4" />}
-                          {dropdownItem.label === 'Micro SaaS' && <Cloud className="w-4 h-4" />}
-                          {dropdownItem.label === 'About Us' && <Users className="w-4 h-4" />}
-                          {dropdownItem.label === 'Blog' && <FileText className="w-4 h-4" />}
-                          {dropdownItem.label === 'Help Center' && <HelpCircle className="w-4 h-4" />}
-                          <span>{dropdownItem.label}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </nav>
-
-            {/* Right side actions */}
-            <div className="flex items-center space-x-4">
-              {/* Search */}
-              <button
-                onClick={() => setIsSearchOpen(!isSearchOpen)}
-                className="p-2 text-gray-600 hover:text-blue-600 transition-colors"
-              >
-                <Search className="w-5 h-5" />
-              </button>
-
-              {/* Theme toggle */}
-              <button
-                onClick={toggleTheme}
-                className="p-2 text-gray-600 hover:text-blue-600 transition-colors"
-              >
-                {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-              </button>
-
-              {/* User menu */}
-              <div className="relative">
-                <button
-                  onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
-                  className="flex items-center space-x-2 p-2 text-gray-600 hover:text-blue-600 transition-colors"
-                >
-                  <User className="w-5 h-5" />
-                  <span className="hidden sm:block">Account</span>
-                </button>
-                
-                {isUserMenuOpen && (
-                  <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
-                    <Link
-                      href="/login"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600"
-                      onClick={() => setIsUserMenuOpen(false)}
-                    >
-                      Sign In
-                    </Link>
-                    <Link
-                      href="/register"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600"
-                      onClick={() => setIsUserMenuOpen(false)}
-                    >
-                      Sign Up
-                    </Link>
-                  </div>
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+                  </AnimatePresence>ursor/add-new-services-and-deploy-updates-1b90
                 )}
               </div>
 
@@ -404,8 +282,7 @@ export function Header({ className, onMenuClick }: HeaderProps) {
             </div>
           </div>
 
-<<<<<<< HEAD
-          {/* CTA Buttons */}
+{/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/contact"
@@ -489,43 +366,7 @@ export function Header({ className, onMenuClick }: HeaderProps) {
                     className="block w-full px-4 py-3 text-center bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors font-medium"
                     onClick={closeMenu}
                   >
-                    Free Consultation
-=======
-          {/* Search Bar */}
-          {isSearchOpen && (
-            <div className="pb-4">
-              <form onSubmit={handleSearch} className="relative">
-                <input
-                  type="text"
-                  placeholder="Search services, solutions, or resources..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-                <button
-                  type="submit"
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-blue-600"
-                >
-                  <Search className="w-5 h-5" />
-                </button>
-              </form>
-            </div>
-          )}
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 bg-white">
-            <div className="px-4 py-6 space-y-4">
-              {navigationItems.map((item, index) => (
-                <div key={index}>
-                  <Link
-                    href={item.href}
-                    className="block py-2 text-gray-700 hover:text-blue-600 font-medium"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {item.label}
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+                    Free Consultationursor/add-new-services-and-deploy-updates-1b90
                   </Link>
                   {item.hasDropdown && item.dropdownItems && (
                     <div className="ml-4 space-y-2 mt-2">
