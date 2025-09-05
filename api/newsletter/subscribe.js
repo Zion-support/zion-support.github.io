@@ -6,7 +6,7 @@ export default withErrorLogging(async (req, res) => {
   }
 
   try {
-    const { email, name } = req.body;
+    const { email } = req.body;
 
     if (!email || !email.includes('@')) {
       return res.status(400).json({ error: 'Valid email is required' });

@@ -6,7 +6,7 @@ export default withErrorLogging(async (req, res) => {
   }
 
   try {
-    const { country, weight, dimensions } = req.body;
+    const { country, weight } = req.body;
 
     if (!country) {
       return res.status(400).json({ error: 'Country is required' });
