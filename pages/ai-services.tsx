@@ -1447,9 +1447,12 @@ const aiServices = [
       ]
     },
     {
+      id: 100,
+      title: 'AI-Powered Autonomous Vehicle Systems',
       icon: Eye,
-      name: 'AI-Powered Autonomous Vehicle Systems',
+      category: 'Automotive AI',
       description: 'Advanced AI systems for autonomous vehicle navigation, safety, and fleet management.',
+      price: '$100,000 – $1,000,000 project',
       features: [
         'Autonomous navigation and path planning',
         'Object detection and collision avoidance',
@@ -1458,9 +1461,6 @@ const aiServices = [
         'Predictive maintenance and diagnostics',
         'Safety monitoring and compliance'
       ],
-      pricing: '$100,000 – $1,000,000 project',
-      perUnit: 'Custom pricing based on fleet size',
-      timeline: '24–48 weeks',
       benefits: [
         'Enhanced vehicle safety',
         'Reduced transportation costs',
@@ -1492,8 +1492,9 @@ export default function AIServicesPage() {
 
   const filteredServices = aiServices.filter(service => {
     const matchesCategory = selectedCategory === "All" || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch = (service.title && service.description) ? 
+      service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) : false;
     return matchesCategory && matchesSearch;
   });
 
@@ -1635,11 +1636,13 @@ export default function AIServicesPage() {
                     <div className="mb-4">
                       <div className="flex items-center gap-2 mb-2">
                         <span className="text-lg font-bold text-green-600">
-                          {service.price}
+                          {service.price || 'Contact for pricing'}
                         </span>
-                        <span className="text-sm text-gray-500 line-through">
-                          {service.marketPrice}
-                        </span>
+                        {service.marketPrice && (
+                          <span className="text-sm text-gray-500 line-through">
+                            {service.marketPrice}
+                          </span>
+                        )}
                       </div>
                       <div className="text-xs text-green-600 font-medium">
                         Save up to 40% vs market rate
@@ -1649,7 +1652,7 @@ export default function AIServicesPage() {
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
                       <ul className="text-xs text-gray-600 space-y-1">
-                        {service.features.slice(0, 4).map((feature, idx) => (
+                        {(service.features || []).slice(0, 4).map((feature, idx) => (
                           <li key={idx} className="flex items-center">
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                             {feature}
@@ -1661,7 +1664,7 @@ export default function AIServicesPage() {
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-900 mb-2">Benefits:</h4>
                       <div className="flex flex-wrap gap-1">
-                        {service.benefits.slice(0, 2).map((benefit, idx) => (
+                        {(service.benefits || []).slice(0, 2).map((benefit, idx) => (
                           <span key={idx} className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded">
                             {benefit}
                           </span>
@@ -1670,8 +1673,8 @@ export default function AIServicesPage() {
                     </div>
                     
                     <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
-                      <span>Setup: {service.setupTime}</span>
-                      <span>Target: {service.targetUsers.split(',')[0]}</span>
+                      <span>Setup: {service.setupTime || 'N/A'}</span>
+                      <span>Target: {service.targetUsers ? service.targetUsers.split(',')[0] : 'N/A'}</span>
                     </div>
                     
                     <div className="flex gap-2">
