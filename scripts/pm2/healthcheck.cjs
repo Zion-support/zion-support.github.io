@@ -175,7 +175,6 @@ class HealthChecker {
 
   calculateOverallHealth(diskUsage, memoryUsage, pm2Status, buildStatus) {
     let score = 100;
-    let issues = [];
 
     // Check disk space
     if (diskUsage.percentage) {

@@ -3,7 +3,6 @@ const path = require('path');
 
 function fixMergeConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
 
     // Check if file has merge conflict markers
     if (
@@ -15,7 +14,7 @@ function fixMergeConflicts(filePath) {
 
       // Remove merge conflict markers and keep the content after =======
       const lines = content.split('\n');
-      let fixedLines = [];
+      const fixedLines = [];
       let inConflict = false;
       let keepContent = false;
 

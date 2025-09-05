@@ -3,15 +3,11 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix syntax errors in a file
-function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+
     
     // Fix common syntax errors
     // Remove extra commas and semicolons
-    content = content.replace(/,;/g, ';');
+    content = content.replace(/;/g, ';');
     content = content.replace(/,(\s*[;}])/g, '$1');
     content = content.replace(/,(\s*\/\/)/g, '$1');
     content = content.replace(/,(\s*\/\*)/g, '$1');
