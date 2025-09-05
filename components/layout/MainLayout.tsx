@@ -1,11 +1,15 @@
-import React from "react"
-import Head from 'next/head'
+import React from 'react';
+import Head from 'next/head';
+import Header from '../Header';
+import Footer from '../Footer';
+
 interface MainLayoutProps {
-  children: React.ReactNode
-  title?: string
-  description?: string
-  keywords?: string
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
 }
+
 const MainLayout: React.FC<MainLayoutProps> = ({
   children,
   title = "Zion Tech Group",
@@ -21,8 +25,15 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {children}
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer />
+      </div>
     </>
-  )
+  );
 }
-export default MainLayout
+
+export default MainLayout;

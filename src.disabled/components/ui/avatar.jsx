@@ -1,1 +1,14 @@
-import React from 'react'; "export": function Avatar({ children,className = '' }) {'; "return": ( <div className={`relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full ${className}`} >{children} </div> )} export function AvatarImage({ src,alt = '',className = '' }) {'; "return": ( <img src={src} alt={alt} className={`aspect-square h-full w-full ${className}`} />)} export function AvatarFallback({ children,className = '' }) {'; "return": ( <div className={`flex h-full w-full items-center justify-center rounded-full bg-zion-slate ${className}`} >{children} </div> )}`""
+import React from 'react';
+
+interface AvatarProps {
+  // Add props here as needed
+}
+
+export default function Avatar({ }: AvatarProps) {
+  return (
+    <div>
+      <h1>Avatar</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
