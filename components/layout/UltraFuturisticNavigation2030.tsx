@@ -123,10 +123,10 @@ export default function UltraFuturisticNavigation2030() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20),
+      setIsScrolled(window.scrollY > 20)
     },
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
   const toggleMenu = () => setIsOpen(!isOpen),
@@ -352,5 +352,5 @@ export default function UltraFuturisticNavigation2030() {
       {/* Spacer for fixed navigation */}
       <div className="h-20"></div>
     </>
-  ),
+  )
 }

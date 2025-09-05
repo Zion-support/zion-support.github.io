@@ -107,19 +107,16 @@ const services: Service[] = [
     icon: <FaRobot className="w-6 h-6" />,
     category: 'automation',
     features: [
-      'Intelligent workflow automationNatural language processing',
-      'Predictive analyticsReal-time decision making',
-      'Custom AI model trainingMulti-platform integration'
+      'Intelligent workflow automationNatural language processingPredictive analyticsReal-time decision makingCustom AI model trainingMulti-platform integration'
     ],
     pricing: {
       starter: 299,
       professional: 799,
       enterprise: 1999
     },
-    technologies: ['TensorFlowPyTorch', 'OpenAILangChain', 'ReactNode.js'],
+    technologies: ['TensorFlowPyTorchOpenAILangChainReactNode.js'],
     benefits: [
-      'Reduce manual tasks by 80%Improve accuracy by 95%',
-      '24/7 automated operationsScalable AI infrastructure'
+      'Reduce manual tasks by 80%Improve accuracy by 95%24/7 automated operationsScalable AI infrastructure'
     ]
   },
   {
@@ -129,19 +126,16 @@ const services: Service[] = [
     icon: <FaBrain className="w-6 h-6" />,
     category: 'ai-ml',
     features: [
-      'Quantum algorithm optimizationHybrid classical-quantum computing',
-      'Quantum machine learningCryptographic solutions',
-      'Quantum simulation toolsAPI access to quantum hardware'
+      'Quantum algorithm optimizationHybrid classical-quantum computingQuantum machine learningCryptographic solutionsQuantum simulation toolsAPI access to quantum hardware'
     ],
     pricing: {
       starter: 999,
       professional: 2499,
       enterprise: 4999
     },
-    technologies: ['QiskitCirq', 'PennyLanePython', 'C++CUDA'],
+    technologies: ['QiskitCirqPennyLanePythonC++CUDA'],
     benefits: [
-      'Solve previously impossible problemsExponential speed improvements',
-      'Future-proof technologyResearch and development support'
+      'Solve previously impossible problemsExponential speed improvementsFuture-proof technologyResearch and development support'
     ]
   },
   {
@@ -151,19 +145,16 @@ const services: Service[] = [
     icon: <FaNetworkWired className="w-6 h-6" />,
     category: 'iot',
     features: [
-      'Edge device optimizationReal-time AI inference',
-      'Distributed learningLow-latency processing',
-      'Offline AI capabilitiesEdge-to-cloud synchronization'
+      'Edge device optimizationReal-time AI inferenceDistributed learningLow-latency processingOffline AI capabilitiesEdge-to-cloud synchronization'
     ],
     pricing: {
       starter: 199,
       professional: 599,
       enterprise: 1499
     },
-    technologies: ['TensorFlow LiteONNX Runtime', 'Edge TPURaspberry Pi', 'Arduino'],
+    technologies: ['TensorFlow LiteONNX RuntimeEdge TPURaspberry PiArduino'],
     benefits: [
-      'Reduced latency by 90%Lower bandwidth costs',
-      'Enhanced privacyScalable edge deployment'
+      'Reduced latency by 90%Lower bandwidth costsEnhanced privacyScalable edge deployment'
     ]
   },
   {
@@ -173,19 +164,16 @@ const services: Service[] = [
     icon: <FaShieldAlt className="w-6 h-6" />,
     category: 'security',
     features: [
-      'Post-quantum cryptographyQuantum key distribution',
-      'Advanced threat detectionZero-trust architecture',
-      'Compliance frameworksReal-time monitoring'
+      'Post-quantum cryptographyQuantum key distributionAdvanced threat detectionZero-trust architectureCompliance frameworksReal-time monitoring'
     ],
     pricing: {
       starter: 399,
       professional: 999,
       enterprise: 2499
     },
-    technologies: ['NIST PQCQKD protocols', 'Zero TrustSIEM', 'SOAR'],
+    technologies: ['NIST PQCQKD protocolsZero TrustSIEMSOAR'],
     benefits: [
-      'Future-proof securityQuantum-resistant encryption',
-      'Comprehensive complianceAdvanced threat protection'
+      'Future-proof securityQuantum-resistant encryptionComprehensive complianceAdvanced threat protection'
     ]
   },
   {
@@ -195,19 +183,16 @@ const services: Service[] = [
     icon: <FaDatabase className="w-6 h-6" />,
     category: 'data',
     features: [
-      'Unified data accessReal-time analytics',
-      'Data governanceAI-powered insights',
-      'Multi-cloud supportData lineage tracking'
+      'Unified data accessReal-time analyticsData governanceAI-powered insightsMulti-cloud supportData lineage tracking'
     ],
     pricing: {
       starter: 299,
       professional: 799,
       enterprise: 1999
     },
-    technologies: ['Apache KafkaApache Spark', 'SnowflakeDatabricks', 'Airflow'],
+    technologies: ['Apache KafkaApache SparkSnowflakeDatabricksAirflow'],
     benefits: [
-      'Unified data viewReal-time insights',
-      'Improved data qualityReduced integration costs'
+      'Unified data viewReal-time insightsImproved data qualityReduced integration costs'
     ]
   },
   {
@@ -217,19 +202,16 @@ const services: Service[] = [
     icon: <FaCloud className="w-6 h-6" />,
     category: 'cloud',
     features: [
-      'Kubernetes orchestrationMicroservices architecture',
-      'CI/CD pipelinesAuto-scaling',
-      'Multi-cloud deploymentDevOps automation'
+      'Kubernetes orchestrationMicroservices architectureCI/CD pipelinesAuto-scalingMulti-cloud deploymentDevOps automation'
     ],
     pricing: {
       starter: 199,
       professional: 599,
       enterprise: 1499
     },
-    technologies: ['KubernetesDocker', 'HelmArgoCD', 'PrometheusGrafana'],
+    technologies: ['KubernetesDockerHelmArgoCDPrometheusGrafana'],
     benefits: [
-      'Faster deploymentImproved scalability',
-      'Better resource utilizationEnhanced reliability'
+      'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability'
     ]
   }
 ],
@@ -244,7 +226,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
     let filtered = services,
     
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory),
+      filtered = filtered.filter(service => service.category === selectedCategory)
     }
     
     if (searchTerm) {
@@ -252,7 +234,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()))
-      ),
+      )
     }
     
     return filtered.sort((a, b) => {
@@ -263,7 +245,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           return a.category.localeCompare(b.category),
         default: return a.title.localeCompare(b.title)
       }
-    }),
+    })
   }, [selectedCategory, searchTerm, sortBy]),
 
   const handleServiceSelect = (service: Service) => {
@@ -271,7 +253,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
   },
 
   const closeModal = () => {
-    setSelectedService(null),
+    setSelectedService(null)
   },
 
   return (
@@ -537,7 +519,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         )}
       </AnimatePresence>
     </div>
-  ),
+  )
 },
 
 export default EnhancedServicesShowcase2025,

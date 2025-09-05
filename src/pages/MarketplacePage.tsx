@@ -15,8 +15,6 @@ import { MARKETPLACE_LISTINGS } from '@/data/listingData',
 import { INITIAL_MARKETPLACE_PRODUCTS } from '@/data/initialMarketplaceProducts',
 import { useCurrency } from '@/hooks/useCurrency',
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 // Market insights component
 const MarketplaceInsights = ({ stats }: { stats: any }) => (
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
@@ -83,7 +81,6 @@ import type { AppDispatch } from '@/store',
 import { addItem } from '@/store/cartSlice',
 import { useAuth } from '@/context/auth/AuthProvider',
 import { toast } from '@/hooks/use-toast',
-
 // Product card
 const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: () => void, onAddToCart: () => void }) => {
   const { formatPrice } = useCurrency(),
@@ -136,7 +133,7 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
       </div>
     </CardContent>
   </Card>
-  ),
+  )
 },
 
 // Loading grid
@@ -167,12 +164,12 @@ function MarketplacePageContent() {
       // Apply category filtering
       let processedDataset = fullDataset,
       if (filterCategory) {
-        processedDataset = processedDataset.filter(p => p.category === filterCategory),
+        processedDataset = processedDataset.filter(p => p.category === filterCategory)
       }
 
       // Apply recommended filtering
       if (showRecommended) {
-        processedDataset = processedDataset.filter(p => (p.rating || 0) >= 4.5 || (p.aiScore || 0) >= 85),
+        processedDataset = processedDataset.filter(p => (p.rating || 0) >= 4.5 || (p.aiScore || 0) >= 85)
       }
 
       // Sort the processed dataset
@@ -202,10 +199,10 @@ function MarketplacePageContent() {
         items,
         hasMore: endIndex < processedDataset.length,
         total: processedDataset.length
-      },
+      }
     } catch (error) {
       logErrorToProduction('Error in fetchProducts:', { data: error }),
-      throw new Error('Failed to load marketplace data. Please try again.'),
+      throw new Error('Failed to load marketplace data. Please try again.')
     }
   }, [sortBy, filterCategory, showRecommended]),
 
@@ -225,10 +222,10 @@ function MarketplacePageContent() {
   // Refresh when filters change
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      refresh(),
+      refresh()
     }, 100),
 
-    return () => clearTimeout(timeoutId),
+    return () => clearTimeout(timeoutId)
   }, [sortBy, filterCategory, showRecommended, refresh]),
 
   const marketStats = useMemo(() => {
@@ -238,18 +235,18 @@ function MarketplacePageContent() {
       averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
       totalProducts: products.length,
       availableCount: products.filter(p => p.availability === "Available").length
-    },
+    }
   }, [products]),
 
   const categories = useMemo(() => {
-    return ["AI & Machine Learning", "Cloud Services", "Software Development", "Professional Services", "Hardware & Infrastructure"],
+    return ["AI & Machine Learning", "Cloud Services", "Software Development", "Professional Services", "Hardware & Infrastructure"]
   }, []),
 
   const [showScrollTop, setShowScrollTop] = useState(false),
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800),
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
   // Loading state
@@ -271,7 +268,7 @@ function MarketplacePageContent() {
         <MarketplaceLoadingGrid />
       </div>
       </>
-    ),
+    )
   }
 
   // Error state
@@ -300,7 +297,7 @@ function MarketplacePageContent() {
         </div>
       </div>
       </>
-    ),
+    )
   }
 
   return (
@@ -354,12 +351,12 @@ function MarketplacePageContent() {
                 onViewDetails={() => {
                   if (typeof window !== 'undefined') {
                     try {
-                      sessionStorage.setItem(`product:${item.id}`, JSON.stringify(item)),
+                      sessionStorage.setItem(`product:${item.id}`, JSON.stringify(item))
                     } catch {
                       // ignore storage errors
                     }
                   }
-                  router.push(`/marketplace/listing/${item.id}`),
+                  router.push(`/marketplace/listing/${item.id}`)
                 }}
                 onAddToCart={() => {
                   dispatch(addItem({ id: item.id, title: item.title, price: item.price ?? 0 })),
@@ -368,7 +365,7 @@ function MarketplacePageContent() {
                     description: `${item.title} has been added to your cart`,
                     action: {
                       label: 'View Cart',
-                      onClick: () => router.push('/cart')}}),
+                      onClick: () => router.push('/cart')}})
                 }}
               />
             </motion.div>
@@ -423,10 +420,10 @@ function MarketplacePageContent() {
       </AnimatePresence>
     </div>
     </>
-  ),
+  )
 }
 
 // Main export
 export default function MarketplacePage() {
-  return <MarketplacePageContent />,
+  return <MarketplacePageContent />
 }

@@ -7,7 +7,6 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
-
 export default function TermsPage() {
   const lastUpdated = 'January 15, 2025',
 
@@ -16,53 +15,42 @@ export default function TermsPage() {
       title: 'Acceptance of Terms',
       icon: <CheckCircle className="w-6 h-6" />,
       content: [
-        'By accessing or using our services, you agree to be bound by these termsIf you do not agree to these terms, do not use our services',
-        'We may modify these terms at any time with noticeContinued use after changes constitutes acceptance of new terms'
+        'By accessing or using our services, you agree to be bound by these termsIf you do not agree to these terms, do not use our servicesWe may modify these terms at any time with noticeContinued use after changes constitutes acceptance of new terms'
       ]
     },
     {
       title: 'Service Description',
       icon: <Info className="w-6 h-6" />,
       content: [
-        'AI and machine learning platforms and servicesQuantum computing solutions and infrastructure',
-        'Cybersecurity and data protection servicesConsulting and professional services',
-        'Technical support and maintenance'
+        'AI and machine learning platforms and servicesQuantum computing solutions and infrastructureCybersecurity and data protection servicesConsulting and professional servicesTechnical support and maintenance'
       ]
     },
     {
       title: 'User Responsibilities',
       icon: <Users className="w-6 h-6" />,
       content: [
-        'Provide accurate and complete informationMaintain security of your account credentials',
-        'Comply with applicable laws and regulationsUse services for lawful purposes only',
-        'Respect intellectual property rights'
+        'Provide accurate and complete informationMaintain security of your account credentialsComply with applicable laws and regulationsUse services for lawful purposes onlyRespect intellectual property rights'
       ]
     },
     {
       title: 'Intellectual Property',
       icon: <Shield className="w-6 h-6" />,
       content: [
-        'Our services and content are protected by copyrightYou retain rights to your data and content',
-        'You grant us license to use your content for service provisionNo transfer of intellectual property rights',
-        'Respect for third-party intellectual property'
+        'Our services and content are protected by copyrightYou retain rights to your data and contentYou grant us license to use your content for service provisionNo transfer of intellectual property rightsRespect for third-party intellectual property'
       ]
     },
     {
       title: 'Privacy and Data',
       icon: <Lock className="w-6 h-6" />,
       content: [
-        'Collection and use of data as described in Privacy PolicyImplementation of appropriate security measures',
-        'Compliance with data protection regulationsData retention and deletion policies',
-        'Your rights regarding your personal data'
+        'Collection and use of data as described in Privacy PolicyImplementation of appropriate security measuresCompliance with data protection regulationsData retention and deletion policiesYour rights regarding your personal data'
       ]
     },
     {
       title: 'Limitation of Liability',
       icon: <AlertTriangle className="w-6 h-6" />,
       content: [
-        'Services provided "as is" without warrantiesLimitation of liability to extent permitted by law',
-        'No liability for indirect or consequential damagesForce majeure events and circumstances',
-        'Your responsibility for backup and data protection'
+        'Services provided "as is" without warrantiesLimitation of liability to extent permitted by lawNo liability for indirect or consequential damagesForce majeure events and circumstancesYour responsibility for backup and data protection'
       ]
     }
   ],
@@ -297,5 +285,5 @@ export default function TermsPage() {
 
       <EnhancedFooter />
     </div>
-  ),
+  )
 }

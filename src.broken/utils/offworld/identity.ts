@@ -6,7 +6,7 @@ async function lazyLoadDeps() {
     DIDKit = await import('@spruceid/didkit-wasm-node')
   } catch {}
   try {
-    ethers = await import('ethers'),
+    ethers = await import('ethers')
   } catch {}
 }
 
@@ -14,7 +14,7 @@ export interface IdentityProfile {
   did?: string,
   ens?: string | null,
   lens?: string | null,
-  address?: string | null,
+  address?: string | null
 }
 
 export async function generateDIDKey(): Promise<string | null> {
@@ -23,9 +23,9 @@ export async function generateDIDKey(): Promise<string | null> {
   try {
     const key = await DIDKit.generateEd25519Key(),
     const did = await DIDKit.keyToDID('key', key),
-    return did,
+    return did
   } catch {
-    return null,
+    return null
   }
 }
 
@@ -36,7 +36,7 @@ export async function resolveENS(address: string): Promise<string | null> {
     const provider = ethers.getDefaultProvider(),
     return await provider.lookupAddress(address)
   } catch {
-    return null,
+    return null
   }
 }
 
@@ -49,5 +49,5 @@ export async function buildIdentityProfile(address?: string): Promise<IdentityPr
   const did = await generateDIDKey(),
   const ens = address ? await resolveENS(address) : null,
   const lens = address ? await resolveLens(address) : null,
-  return { did: did || undefined, ens, lens, address: address || null },
+  return { did: did || undefined, ens, lens, address: address || null }
 }

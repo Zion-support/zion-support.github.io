@@ -1,12 +1,11 @@
 import React, { useCallback, useEffect, useState } from 'react',
 import dynamic from 'next/dynamic',
-
 const isClient = typeof window !== 'undefined',
 
 type Web3LoginModalProps = {
   isOpen: boolean,
   onClose: () => void,
-  onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void,
+  onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void
 },
 
 function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
@@ -16,7 +15,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   useEffect(() => {
     if (!isOpen) {
       setError(null),
-      setLoading(false),
+      setLoading(false)
     }
   }, [isOpen]),
 
@@ -60,12 +59,12 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       if (!verifyRes.ok) throw new Error('Failed to verify signature'),
 
       onLoggedIn?.({ address, chain: 'evm' }),
-      onClose(),
+      onClose()
     } catch (e: any) {
       console.error(e),
       setError(e?.message || 'Wallet connection failed')
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }, [onClose, onLoggedIn]),
 
@@ -75,7 +74,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
     try {
       const provider = (window as any)?.solana,
       if (!provider || !provider.isPhantom) {
-        throw new Error('Phantom not found. Install the Phantom extension'),
+        throw new Error('Phantom not found. Install the Phantom extension')
       }
       const resp = await provider.connect(),
       const publicKey: string = resp.publicKey.toString(),
@@ -96,12 +95,12 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature'),
 
       onLoggedIn?.({ address: publicKey, chain: 'sol' }),
-      onClose(),
+      onClose()
     } catch (e: any) {
       console.error(e),
       setError(e?.message || 'Phantom connection failed')
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }, [onClose, onLoggedIn]),
 
@@ -135,5 +134,5 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
 
 export default function Web3LoginModal(props: Web3LoginModalProps) {
   if (!isClient) return null,
-  return <ModalInner {...props} />,
+  return <ModalInner {...props} />
 }

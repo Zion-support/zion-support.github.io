@@ -15,7 +15,6 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
 import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
 import { useIsMobile } from "@/hooks/use-mobile",
-
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
   const { jobs, isLoading } = useJobs(),
@@ -34,7 +33,7 @@ function ClientDashboardContent() {
       const firstJob = jobs[0],
       if (firstJob) {
         setSelectedJobId(firstJob.id),
-        setSelectedJobTitle(firstJob.title),
+        setSelectedJobTitle(firstJob.title)
       }
     }
   }, [jobs, selectedJobId]),
@@ -139,7 +138,7 @@ function ClientDashboardContent() {
         </div>
       </main>
     </>
-  ),
+  )
 }
 
 export default function ClientDashboard() {
@@ -147,5 +146,5 @@ export default function ClientDashboard() {
     <ProtectedRoute>
       <ClientDashboardContent />
     </ProtectedRoute>
-  ),
+  )
 }

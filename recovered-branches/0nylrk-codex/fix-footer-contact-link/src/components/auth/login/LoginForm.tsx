@@ -16,7 +16,6 @@ import {
   FormLabel,
   FormMessage} from "@/components/ui/form",
 import { Link } from "react-router-dom",
-
 // Form validation schema
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
@@ -40,9 +39,9 @@ export function LoginForm() {
     
     try {
       setIsSubmitting(true),
-      await login(data.email, data.password),
+      await login(data.email, data.password)
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
@@ -131,5 +130,5 @@ export function LoginForm() {
         </Button>
       </form>
     </Form>
-  ),
+  )
 }

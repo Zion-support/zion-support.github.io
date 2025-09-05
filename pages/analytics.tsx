@@ -28,9 +28,7 @@ export default function AnalyticsPage() {
   ],
 
   const benefits = [
-    'Make data-driven decisionsIdentify growth opportunities',
-    'Optimize user experienceMonitor system health',
-    'Track business metricsGenerate actionable insights'
+    'Make data-driven decisionsIdentify growth opportunitiesOptimize user experienceMonitor system healthTrack business metricsGenerate actionable insights'
   ],
 
   return (

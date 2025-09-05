@@ -25,7 +25,7 @@ export default function LanguageSwitcher() {
     localStorage.setItem('preferredLanguage', lng),
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr'),
     document.documentElement.setAttribute('lang', lng),
-    setOpen(false),
+    setOpen(false)
   },
 
   return (
@@ -58,5 +58,5 @@ export default function LanguageSwitcher() {
         </ul>
       )}
     </div>
-  ),
+  )
 }

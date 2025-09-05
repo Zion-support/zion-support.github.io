@@ -10,7 +10,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge",
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
 import { HireNowCTA } from "@/components/profile/HireNowCTA",
-
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
@@ -27,7 +26,7 @@ export default function ProfileDetail() {
       try {
         if (!profileId) {
           setError("Profile ID is missing."),
-          return,
+          return
         }
 
         const { data, error } = await supabase
@@ -37,27 +36,27 @@ export default function ProfileDetail() {
           .single(),
 
         if (error) {
-          throw new Error(error.message),
+          throw new Error(error.message)
         }
 
         if (!data) {
           setError("Profile not found."),
-          return,
+          return
         }
 
-        setProfileData(data),
+        setProfileData(data)
       } catch (err: any) {
         setError(err.message || "Failed to fetch profile."),
         toast({
           title: "Error",
           description: err.message || "Failed to fetch profile.",
-          variant: "destructive"}),
+          variant: "destructive"})
       } finally {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     },
 
-    fetchProfile(),
+    fetchProfile()
   }, [profileId]),
 
   if (isLoading) {
@@ -65,7 +64,7 @@ export default function ProfileDetail() {
       <div className="min-h-screen flex items-center justify-center">
         <p>Loading profile...</p>
       </div>
-    ),
+    )
   }
 
   if (error) {
@@ -73,7 +72,7 @@ export default function ProfileDetail() {
       <div className="min-h-screen flex items-center justify-center">
         <p>Error: {error}</p>
       </div>
-    ),
+    )
   }
 
   if (!profileData) {
@@ -81,7 +80,7 @@ export default function ProfileDetail() {
       <div className="min-h-screen flex items-center justify-center">
         <p>Profile not found.</p>
       </div>
-    ),
+    )
   }
 
   return (
@@ -300,5 +299,5 @@ export default function ProfileDetail() {
         </div>
       </div>
     </>
-  ),
+  )
 }

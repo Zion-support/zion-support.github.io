@@ -1,7 +1,6 @@
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
-
 export default function TechnologyInsightsPage() {
   const technologyTrends = [
     {
@@ -34,19 +33,19 @@ export default function TechnologyInsightsPage() {
     {
       title: 'Autonomous Systems Research',
       description: 'Pioneering research in building truly autonomous systems that can operate independently.',
-      focus: ['Decision MakingSelf-Learning', 'Adaptive BehaviorSystem Integration'],
+      focus: ['Decision MakingSelf-LearningAdaptive BehaviorSystem Integration'],
       icon: '🔬'
     },
     {
       title: 'AI Ethics & Governance',
       description: 'Research into responsible AI development and ethical considerations for autonomous systems.',
-      focus: ['Ethical AIBias Detection', 'TransparencyAccountability'],
+      focus: ['Ethical AIBias DetectionTransparencyAccountability'],
       icon: '⚖️'
     },
     {
       title: 'Human-AI Collaboration',
       description: 'Exploring how humans and AI can work together effectively and safely.',
-      focus: ['Human-AI InterfaceCollaborative Decision Making', 'Safety ProtocolsTrust Building'],
+      focus: ['Human-AI InterfaceCollaborative Decision MakingSafety ProtocolsTrust Building'],
       icon: '🤝'
     }
   ],

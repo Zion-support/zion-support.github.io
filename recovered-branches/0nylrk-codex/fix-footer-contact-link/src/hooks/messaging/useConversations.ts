@@ -3,7 +3,6 @@ import { UserProfile, UserDetails } from '@/types/auth',
 import { supabase } from '@/integrations/supabase/client',
 import { Conversation, ConversationContextData } from '@/types/messaging',
 import { toast } from '@/hooks/use-toast',
-
 // Allow either UserProfile or UserDetails
 type UserWithProfile = UserProfile | UserDetails | null,
 
@@ -58,7 +57,7 @@ export function useConversations(
           context_type: conv.context_type,
           context_id: conv.context_id,
           context_data: conv.context_data
-        },
+        }
       }),
       
       setConversations(formattedConversations),
@@ -68,11 +67,11 @@ export function useConversations(
         (total, conv) => total + (conv.unread_count || 0), 
         0
       ),
-      setUnreadCount(totalUnread),
+      setUnreadCount(totalUnread)
     } catch (error) {
-      console.error('Error fetching conversations:', error),
+      console.error('Error fetching conversations:', error)
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -113,7 +112,7 @@ export function useConversations(
               context_data: contextData,
               updated_at: new Date().toISOString()
             })
-            .eq('id', conversationId),
+            .eq('id', conversationId)
         }
       } else {
         // Get recipient information
@@ -150,7 +149,7 @@ export function useConversations(
           
         if (createError) throw createError,
         
-        conversationId = newConversation.id,
+        conversationId = newConversation.id
       }
       
       // Send the initial message
@@ -169,18 +168,18 @@ export function useConversations(
       await fetchConversations(),
       
       // Return the conversation ID
-      return conversationId,
+      return conversationId
     } catch (error) {
       console.error('Error creating conversation:', error),
       toast({
         title: "Failed to create conversation",
         description: "Please try again later",
         variant: "destructive"
-      }),
+      })
     }
   },
 
   return {
     fetchConversations,
-    createConversation},
+    createConversation}
 }

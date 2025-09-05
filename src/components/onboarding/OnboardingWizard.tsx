@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button',
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
 import { cn } from '@/lib/utils',
-
 interface WizardStep {
   title: string,
   description: string,
@@ -15,7 +14,7 @@ interface WizardStep {
     text: string,
     url: string
   },
-  skipText?: string,
+  skipText?: string
 }
 
 interface OnboardingWizardProps {
@@ -114,21 +113,21 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
     
     if (currentStep < steps.length - 1) {
       router.push(currentStepData.action.url), // Changed to router.push
-      setCurrentStep(currentStep + 1),
+      setCurrentStep(currentStep + 1)
     } else {
       // Last step
       router.push(currentStepData.action.url), // Changed to router.push
-      onComplete(),
+      onComplete()
     }
   },
   
   // Skip the current step
   const handleSkip = () => {
     if (currentStep < steps.length - 1) {
-      setCurrentStep(currentStep + 1),
+      setCurrentStep(currentStep + 1)
     } else {
       // Last step
-      onSkip(),
+      onSkip()
     }
   },
   
@@ -188,5 +187,5 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         )}
       </CardFooter>
     </Card>
-  ),
+  )
 }

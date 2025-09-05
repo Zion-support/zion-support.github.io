@@ -1,24 +1,23 @@
-import Link from 'next/link';
-import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import { ContactInfo } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-
+import Link from 'next/link',
+import Head from 'next/head',
+import { useState, useEffect } from 'react',
+import { ContactInfo } from '../types',
+import ErrorBoundary from '../components/ErrorBoundary',
 export default function ITServices() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [isLoaded, setIsLoaded] = useState(false),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
   
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
+    const timer = setTimeout(() => setIsLoaded(true), 100),
+    return () => clearTimeout(timer)
+  }, []),
 
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+  },
 
   const categories = [
     { id: 'all', name: 'All IT Services', count: 100 },
@@ -28,7 +27,7 @@ export default function ITServices() {
     { id: 'blockchain', name: 'Blockchain & Web3', count: 15 },
     { id: 'quantum', name: 'Quantum Computing', count: 10 },
     { id: 'enterprise', name: 'Enterprise Solutions', count: 15 }
-  ];
+  ],
 
   const services = [
     {
@@ -36,126 +35,126 @@ export default function ITServices() {
       name: 'Quantum Computing Consulting',
       description: 'Expert guidance on quantum computing implementation and optimization for enterprise applications.',
       category: 'quantum',
-      features: ['Quantum Algorithm Design', 'Hardware Selection', 'Performance Optimization', 'Security Implementation'],
+      features: ['Quantum Algorithm DesignHardware SelectionPerformance OptimizationSecurity Implementation'],
       price: 'Custom Pricing',
       popular: true,
-      benefits: ['Exponential Speedup', 'Advanced Cryptography', 'Optimization Solutions', 'Future-Proof Technology']
+      benefits: ['Exponential SpeedupAdvanced CryptographyOptimization SolutionsFuture-Proof Technology']
     },
     {
       id: 2,
       name: 'Blockchain & Web3 Solutions',
       description: 'Comprehensive blockchain development and Web3 integration services for modern businesses.',
       category: 'blockchain',
-      features: ['Smart Contract Development', 'DApp Creation', 'DeFi Integration', 'NFT Platforms'],
+      features: ['Smart Contract DevelopmentDApp CreationDeFi IntegrationNFT Platforms'],
       price: 'Custom Pricing',
       popular: true,
-      benefits: ['Decentralized Solutions', 'Enhanced Security', 'Transparency', 'Innovation']
+      benefits: ['Decentralized SolutionsEnhanced SecurityTransparencyInnovation']
     },
     {
       id: 3,
       name: 'DevSecOps & Security Automation',
       description: 'Integrated development, security, and operations with automated security testing and deployment.',
       category: 'devops',
-      features: ['CI/CD Pipelines', 'Security Scanning', 'Automated Testing', 'Infrastructure as Code'],
+      features: ['CI/CD PipelinesSecurity ScanningAutomated TestingInfrastructure as Code'],
       price: '$199/month',
       popular: false,
-      benefits: ['Faster Deployment', 'Enhanced Security', 'Reduced Risk', 'Automated Compliance']
+      benefits: ['Faster DeploymentEnhanced SecurityReduced RiskAutomated Compliance']
     },
     {
       id: 4,
       name: 'Enterprise Data Platform',
       description: 'Comprehensive data management and analytics platform for enterprise-scale operations.',
       category: 'enterprise',
-      features: ['Data Warehousing', 'Real-time Analytics', 'Data Governance', 'Machine Learning Integration'],
+      features: ['Data WarehousingReal-time AnalyticsData GovernanceMachine Learning Integration'],
       price: '$299/month',
       popular: true,
-      benefits: ['Data-Driven Insights', 'Scalable Architecture', 'Compliance Ready', 'Advanced Analytics']
+      benefits: ['Data-Driven InsightsScalable ArchitectureCompliance ReadyAdvanced Analytics']
     },
     {
       id: 5,
       name: 'High-Performance Computing Solutions',
       description: 'Optimized computing infrastructure for demanding computational workloads and research.',
       category: 'cloud',
-      features: ['GPU Computing', 'Parallel Processing', 'Distributed Computing', 'Performance Monitoring'],
+      features: ['GPU ComputingParallel ProcessingDistributed ComputingPerformance Monitoring'],
       price: '$399/month',
       popular: false,
-      benefits: ['Massive Processing Power', 'Scalable Resources', 'Cost Optimization', 'Advanced Capabilities']
+      benefits: ['Massive Processing PowerScalable ResourcesCost OptimizationAdvanced Capabilities']
     },
     {
       id: 6,
       name: 'Cloud Migration Services',
       description: 'Seamless migration of applications and infrastructure to cloud platforms with zero downtime.',
       category: 'cloud',
-      features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Performance Optimization'],
+      features: ['Assessment & PlanningData MigrationApplication ModernizationPerformance Optimization'],
       price: 'Custom Pricing',
       popular: true,
-      benefits: ['Reduced Costs', 'Enhanced Scalability', 'Improved Security', 'Better Performance']
+      benefits: ['Reduced CostsEnhanced ScalabilityImproved SecurityBetter Performance']
     },
     {
       id: 7,
       name: 'Infrastructure as Code',
       description: 'Automated infrastructure provisioning and management using modern DevOps practices.',
       category: 'devops',
-      features: ['Terraform Automation', 'Configuration Management', 'Version Control', 'Environment Provisioning'],
+      features: ['Terraform AutomationConfiguration ManagementVersion ControlEnvironment Provisioning'],
       price: '$149/month',
       popular: false,
-      benefits: ['Consistent Environments', 'Faster Provisioning', 'Version Control', 'Reduced Errors']
+      benefits: ['Consistent EnvironmentsFaster ProvisioningVersion ControlReduced Errors']
     },
     {
       id: 8,
       name: 'Disaster Recovery Solutions',
       description: 'Comprehensive backup and disaster recovery strategies to ensure business continuity.',
       category: 'security',
-      features: ['Automated Backups', 'Multi-site Replication', 'Recovery Testing', 'RTO/RPO Optimization'],
+      features: ['Automated BackupsMulti-site ReplicationRecovery TestingRTO/RPO Optimization'],
       price: '$179/month',
       popular: true,
-      benefits: ['Business Continuity', 'Data Protection', 'Minimal Downtime', 'Compliance Ready']
+      benefits: ['Business ContinuityData ProtectionMinimal DowntimeCompliance Ready']
     },
     {
       id: 9,
       name: 'Cybersecurity Assessment',
       description: 'Comprehensive security evaluation and penetration testing for enterprise systems.',
       category: 'security',
-      features: ['Vulnerability Assessment', 'Penetration Testing', 'Compliance Auditing', 'Security Recommendations'],
+      features: ['Vulnerability AssessmentPenetration TestingCompliance AuditingSecurity Recommendations'],
       price: '$249/month',
       popular: false,
-      benefits: ['Risk Identification', 'Compliance Assurance', 'Security Hardening', 'Threat Mitigation']
+      benefits: ['Risk IdentificationCompliance AssuranceSecurity HardeningThreat Mitigation']
     },
     {
       id: 10,
       name: 'API Development & Integration',
       description: 'Custom API development and third-party integration services for seamless connectivity.',
       category: 'enterprise',
-      features: ['RESTful APIs', 'GraphQL Services', 'Third-party Integration', 'API Documentation'],
+      features: ['RESTful APIsGraphQL ServicesThird-party IntegrationAPI Documentation'],
       price: '$129/month',
       popular: true,
-      benefits: ['System Integration', 'Improved Efficiency', 'Scalable Architecture', 'Developer Experience']
+      benefits: ['System IntegrationImproved EfficiencyScalable ArchitectureDeveloper Experience']
     },
     {
       id: 11,
       name: 'Microservices Architecture',
       description: 'Design and implementation of microservices-based applications for scalable systems.',
       category: 'enterprise',
-      features: ['Service Design', 'Container Orchestration', 'Service Mesh', 'Monitoring & Logging'],
+      features: ['Service DesignContainer OrchestrationService MeshMonitoring & Logging'],
       price: '$199/month',
       popular: false,
-      benefits: ['Scalable Architecture', 'Independent Deployment', 'Technology Diversity', 'Fault Isolation']
+      benefits: ['Scalable ArchitectureIndependent DeploymentTechnology DiversityFault Isolation']
     },
     {
       id: 12,
       name: 'Edge Computing Solutions',
       description: 'Distributed computing infrastructure for low-latency applications and IoT systems.',
       category: 'cloud',
-      features: ['Edge Deployment', 'IoT Integration', 'Real-time Processing', 'Bandwidth Optimization'],
+      features: ['Edge DeploymentIoT IntegrationReal-time ProcessingBandwidth Optimization'],
       price: '$159/month',
       popular: true,
-      benefits: ['Reduced Latency', 'Bandwidth Savings', 'Offline Capability', 'Enhanced Performance']
+      benefits: ['Reduced LatencyBandwidth SavingsOffline CapabilityEnhanced Performance']
     }
-  ];
+  ],
 
   const filteredServices = selectedCategory === 'all' 
     ? services 
-    : services.filter(service => service.category === selectedCategory);
+    : services.filter(service => service.category === selectedCategory),
 
   return (
     <>
@@ -254,7 +253,7 @@ export default function ITServices() {
                     
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-2xl font-bold text-green-400">{service.price}</span>
-                      <span className="text-xs text-slate-500 capitalize">{service.category.replace('-', ' ')}</span>
+                      <span className="text-xs text-slate-500 capitalize">{service.category.replace('- ')}</span>
                     </div>
                     
                     <button className="w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors">
@@ -344,7 +343,7 @@ export default function ITServices() {
                 </a>
                 <a 
                   href={`mailto:${contact.email}`} 
-                  className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
+                  className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
                 >
                   Email Us
                 </a>
@@ -354,5 +353,5 @@ export default function ITServices() {
         </main>
       </ErrorBoundary>
     </>
-  );
+  )
 }

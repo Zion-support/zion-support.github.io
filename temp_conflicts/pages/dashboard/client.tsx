@@ -133,18 +133,18 @@ export default function ClientDashboardSuggestedTalents() {
         if (!currentUserId) {
           setGroups([]),
           setLoading(false),
-          return,
+          return
         }
         await fetchSuggestions(currentUserId),
-        setupRealtime(currentUserId),
+        setupRealtime(currentUserId)
       } finally {
-        if (mounted) setLoading(false),
+        if (mounted) setLoading(false)
       }
     }
 
     init(),
     return () => {
-      mounted = false,
+      mounted = false
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []),
@@ -180,12 +180,12 @@ export default function ClientDashboardSuggestedTalents() {
       // fail softly
       setGroups([]),
       setLoading(false),
-      return,
+      return
     }
 
     const grouped = groupByJob(data || []),
     setGroups(grouped),
-    setLoading(false),
+    setLoading(false)
   },
 
   const setupRealtime = (currentUserId: string) => {
@@ -217,8 +217,8 @@ export default function ClientDashboardSuggestedTalents() {
       .subscribe(),
 
     return () => {
-      supabase.removeChannel(channel),
-    },
+      supabase.removeChannel(channel)
+    }
   },
 
   const groupByJob = (rows: TalentSuggestion[]): JobGroup[] => {
@@ -231,11 +231,11 @@ export default function ClientDashboardSuggestedTalents() {
         jobTitle: row.job_title || "Untitled Job",
         suggestions: []},
       if (group.suggestions.length < MAX_SUGGESTIONS_PER_JOB) {
-        group.suggestions.push(row),
+        group.suggestions.push(row)
       }
-      byJob.set(key, group),
+      byJob.set(key, group)
     }
-    return Array.from(byJob.values()),
+    return Array.from(byJob.values())
   },
 
   const content = useMemo(() => {
@@ -252,7 +252,7 @@ export default function ClientDashboardSuggestedTalents() {
             ))}
           </div>
         </div>
-      ),
+      )
     }
 
     if (!userId) {
@@ -260,7 +260,7 @@ export default function ClientDashboardSuggestedTalents() {
         <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-amber-800">
           Please sign in to view AI-suggested talents for your jobs.
         </div>
-      ),
+      )
     }
 
     if (!groups.length) {
@@ -273,7 +273,7 @@ export default function ClientDashboardSuggestedTalents() {
             Our AI will populate matches as candidates align with your jobs.
           </div>
         </div>
-      ),
+      )
     }
 
     return (
@@ -343,7 +343,7 @@ export default function ClientDashboardSuggestedTalents() {
                         onClick={() => {
                           setInviteTalent(s),
                           setInviteJobTitle(group.jobTitle),
-                          setInviteOpen(true),
+                          setInviteOpen(true)
                         }}
                         className="rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-indigo-700"
                       >
@@ -357,7 +357,7 @@ export default function ClientDashboardSuggestedTalents() {
           </section>
         ))}
       </div>
-    ),
+    )
   }, [badge, groups, loading, userId]),
 
   return (
@@ -377,5 +377,5 @@ export default function ClientDashboardSuggestedTalents() {
         jobTitle={inviteJobTitle}
       />
     </div>
-  ),
+  )
 }

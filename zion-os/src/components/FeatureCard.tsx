@@ -2,7 +2,6 @@
 
 import Link from "next/link",
 import { ReactNode } from "react",
-
 interface FeatureCardProps {
   id: number,
   title: string,
@@ -41,7 +40,7 @@ export function FeatureCard({
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault(),
-          onClick(),
+          onClick()
         }
       }}
       tabIndex={0}
@@ -68,5 +67,5 @@ export function FeatureCard({
         </Link>
       </div>
     </div>
-  ),
+  )
 }

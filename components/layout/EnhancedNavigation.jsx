@@ -1,6 +1,5 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
-
 const EnhancedNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
 
@@ -82,7 +81,7 @@ const EnhancedNavigation = () => {
         )}
       </div>
     </nav>
-  ),
+  )
 },
 
 export default EnhancedNavigation,

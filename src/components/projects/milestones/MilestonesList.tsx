@@ -9,7 +9,6 @@ import { Card, CardContent } from '@/components/ui/card',
 // lucide-react doesn't export PlusIcon, use our icon wrapper
 import { Plus } from 'lucide-react'
 import { EmptyState } from '@/components/ui/empty-state',
-
 interface MilestonesListProps {
   milestones: Milestone[],
   activities: Record<string MilestoneActivity[]>,
@@ -57,7 +56,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
           </Card>
         ))}
       </div>
-    ),
+    )
   }
   
   if (milestones.length === 0 && !showAddForm) {
@@ -75,7 +74,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
           } : undefined
         }
       />
-    ),
+    )
   }
 
   return (
@@ -119,5 +118,5 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
         ))}
       </div>
     </div>
-  ),
+  )
 },

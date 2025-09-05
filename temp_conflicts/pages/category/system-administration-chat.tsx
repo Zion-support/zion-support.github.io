@@ -1,7 +1,6 @@
 
 import Head from 'next/head',
 import Link from 'next/link',
-
 const SystemAdministrationChat = () => {
   return (
     <div>
@@ -16,7 +15,7 @@ const SystemAdministrationChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  ),
+  )
 },
 
 export default SystemAdministrationChat,

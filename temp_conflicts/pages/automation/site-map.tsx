@@ -1,6 +1,5 @@
 import fs from 'fs',
 import path from 'path',
-
 type RouteInfo = { path: string, lastModified: string },
 
 export async function getServerSideProps() {
@@ -11,9 +10,9 @@ export async function getServerSideProps() {
     const raw = fs.readFileSync(file, 'utf-8'),
     const json = JSON.parse(raw),
     routes = json.routes || [],
-    generatedAt = json.generatedAt || '',
+    generatedAt = json.generatedAt || ''
   } catch {}
-  return { props: { routes, generatedAt } },
+  return { props: { routes, generatedAt } }
 }
 
 export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {
@@ -40,5 +39,5 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
         </table>
       </div>
     </div>
-  ),
+  )
 }

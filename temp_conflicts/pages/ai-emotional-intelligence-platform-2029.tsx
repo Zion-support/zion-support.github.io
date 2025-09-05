@@ -10,7 +10,6 @@ import {
 } from 'lucide-react',
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',
-
 const AIEmotionalIntelligencePlatform2029 = () => {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -59,9 +58,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
   ],
 
   const benefits = [
-    'Improve customer satisfaction by 85%Reduce customer churn by 60%',
-    'Enhance team collaboration and communicationOptimize marketing campaigns with emotional insights',
-    'Improve mental health support and monitoringCreate empathetic AI interactions and experiences'
+    'Improve customer satisfaction by 85%Reduce customer churn by 60%Enhance team collaboration and communicationOptimize marketing campaigns with emotional insightsImprove mental health support and monitoringCreate empathetic AI interactions and experiences'
   ],
 
   const useCases = [
@@ -110,9 +107,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       period: '/month',
       description: 'Perfect for small teams and startups',
       features: [
-        'Up to 1,000 emotional interactions/monthBasic emotion detection (5 emotions)',
-        'Email supportStandard API access',
-        'Basic analytics dashboard'
+        'Up to 1,000 emotional interactions/monthBasic emotion detection (5 emotions)Email supportStandard API accessBasic analytics dashboard'
       ],
       popular: false
     },
@@ -122,10 +117,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 10,000 emotional interactions/monthAdvanced emotion detection (15+ emotions)',
-        'Priority supportFull API access with webhooks',
-        'Advanced analytics and reportingCustom emotion models',
-        'Multi-language support'
+        'Up to 10,000 emotional interactions/monthAdvanced emotion detection (15+ emotions)Priority supportFull API access with webhooksAdvanced analytics and reportingCustom emotion modelsMulti-language support'
       ],
       popular: true
     },
@@ -135,10 +127,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       period: '/month',
       description: 'For large organizations with custom needs',
       features: [
-        'Unlimited emotional interactionsCustom emotion detection models',
-        '24/7 dedicated supportCustom integrations',
-        'Advanced security featuresWhite-label options',
-        'On-premise deploymentCustom training and consulting'
+        'Unlimited emotional interactionsCustom emotion detection models24/7 dedicated supportCustom integrationsAdvanced security featuresWhite-label optionsOn-premise deploymentCustom training and consulting'
       ],
       popular: false
     }

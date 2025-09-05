@@ -11,7 +11,7 @@ function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
   const url = new URL(window.location.href),
   const r = url.searchParams.get('role'),
   if (r === 'talent' || r === 'admin') return r,
-  return 'client',
+  return 'client'
 }
 
 export default function ProjectMilestonesPage() {
@@ -24,7 +24,7 @@ export default function ProjectMilestonesPage() {
   const [error, setError] = useState<string | null>(null),
 
   useEffect(() => {
-    setRole(getRoleFromEnvOrQuery()),
+    setRole(getRoleFromEnvOrQuery())
   }, []),
 
   // Demo cookie-based auth to hit API successfully
@@ -33,7 +33,7 @@ export default function ProjectMilestonesPage() {
     try {
       const userId = role === 'talent' ? 'talent-1' : role === 'client' ? 'client-1' : 'client-1',
       document.cookie = `x-user-id=${userId}, path=/`,
-      document.cookie = `x-user-role=${role}, path=/`,
+      document.cookie = `x-user-role=${role}, path=/`
     } catch {}
   }, [role]),
 
@@ -45,22 +45,22 @@ export default function ProjectMilestonesPage() {
       setError(null),
       try {
         const data = await fetchMilestones(projectId as string),
-        if (!cancelled) setMilestones(data.milestones || []),
+        if (!cancelled) setMilestones(data.milestones || [])
       } catch (e: any) {
         if (!cancelled) setError(e?.message || 'Failed to load milestones')
       } finally {
-        if (!cancelled) setLoading(false),
+        if (!cancelled) setLoading(false)
       }
     })(),
     return () => {
-      cancelled = true,
-    },
+      cancelled = true
+    }
   }, [projectId]),
 
   const handleCreate = async (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => {
     if (!projectId) return,
     const res = await createMilestone(projectId as string, payload),
-    setMilestones((prev) => [res.milestone, ...prev]),
+    setMilestones((prev) => [res.milestone, ...prev])
   },
 
   const handleAction = async (
@@ -75,7 +75,7 @@ export default function ProjectMilestonesPage() {
       paid: 'Paid'},
     const status = map[action],
     const res = await updateMilestoneStatus(projectId as string, milestoneId, { status }),
-    setMilestones((prev) => prev.map((m) => (m.id === milestoneId ? res.milestone : m))),
+    setMilestones((prev) => prev.map((m) => (m.id === milestoneId ? res.milestone : m)))
   },
 
   return (

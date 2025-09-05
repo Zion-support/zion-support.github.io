@@ -17,8 +17,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const reqs = readJson<any[]>('support/requests.json', []),
     const srid = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`,
     reqs.push({ id: srid, sessionId: account, reason: 'Premium support redemption', tag: 'premium_support', status: 'open', createdAt: Date.now() }),
-    writeJson('support/requests.json', reqs),
+    writeJson('support/requests.json', reqs)
   }
 
-  return res.status(200).json({ ok: true, id }),
+  return res.status(200).json({ ok: true, id })
 }

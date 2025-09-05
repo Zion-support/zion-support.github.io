@@ -1,6 +1,5 @@
 import React, { useState } from 'react',
 import { Milestone } from '../../utils/types/milestones',
-
 type Props = {
   milestone: Milestone,
   projectId: string,
@@ -8,7 +7,7 @@ type Props = {
   onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void
 },
 
-const statusSteps = ['PendingIn Progress', 'SubmittedApproved', 'Paid'] as const,
+const statusSteps = ['PendingIn ProgressSubmittedApprovedPaid'] as const,
 
 export default function MilestoneCard({ milestone, projectId, role, onAction }: Props) {
   const [expanded, setExpanded] = useState(false),
@@ -107,5 +106,5 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
         )}
       </div>
     </div>
-  ),
+  )
 }

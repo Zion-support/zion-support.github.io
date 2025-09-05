@@ -6,12 +6,11 @@ import { AuthButtons } from '@/components/AuthButtons',
 import { fireEvent } from '@/lib/analytics',
 import { logInfo } from '@/utils/productionLogger',
 import { useRouter } from 'next/router',
-
 const RegisterPage = () => {
   const router = useRouter(),
 
   useEffect(() => {
-    fireEvent('signup_page_view'),
+    fireEvent('signup_page_view')
   }, []),
 
   const handleSuccess = ({ email, emailVerificationRequired }: {
@@ -19,9 +18,9 @@ const RegisterPage = () => {
     emailVerificationRequired: boolean
   }) => {
     if (emailVerificationRequired) {
-      router.push(`/verify-status?email=${encodeURIComponent(email)}`),
+      router.push(`/verify-status?email=${encodeURIComponent(email)}`)
     } else {
-      router.push('/auth/login?registrationSuccess=true'),
+      router.push('/auth/login?registrationSuccess=true')
     }
   },
 
@@ -43,7 +42,7 @@ const RegisterPage = () => {
               height={48}
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement,
-                target.style.display = 'none',
+                target.style.display = 'none'
               }}
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">

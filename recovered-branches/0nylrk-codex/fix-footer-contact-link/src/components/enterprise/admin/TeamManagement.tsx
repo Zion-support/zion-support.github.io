@@ -21,7 +21,6 @@ import { Label } from "@/components/ui/label",
 import { Badge } from "@/components/ui/badge",
 import { PlusCircle, Trash, Mail, UserPlus } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
-
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false),
   const [newMemberEmail, setNewMemberEmail] = useState(""),
@@ -64,7 +63,7 @@ export function TeamManagement() {
         title: "Email required",
         description: "Please enter an email address for the new team member.",
         variant: "destructive"}),
-      return,
+      return
     }
 
     toast({
@@ -72,21 +71,21 @@ export function TeamManagement() {
       description: `An invitation has been sent to ${newMemberEmail}`}),
 
     setNewMemberEmail(""),
-    setIsAddingMember(false),
+    setIsAddingMember(false)
   },
 
   const handleRemoveMember = (memberId: number) => {
     // In a real app, this would make an API call to remove the member
     toast({
       title: "Team member removed",
-      description: "The team member has been removed from your workspace."}),
+      description: "The team member has been removed from your workspace."})
   },
 
   const handleResendInvite = (memberEmail: string) => {
     // In a real app, this would make an API call to resend the invitation
     toast({
       title: "Invitation resent",
-      description: `A new invitation has been sent to ${memberEmail}`}),
+      description: `A new invitation has been sent to ${memberEmail}`})
   },
 
   return (
@@ -216,5 +215,5 @@ export function TeamManagement() {
         </Table>
       </div>
     </div>
-  ),
+  )
 }

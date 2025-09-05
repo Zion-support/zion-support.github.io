@@ -5,7 +5,6 @@ import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
 import { cn } from "@/lib/utils",
 import { useTranslation } from "react-i18next",
-
 // This is the type definition copied from Categories.tsx for consistency.
 // Ideally, this would be in a shared types file.
 interface CategoryType {
@@ -15,7 +14,7 @@ interface CategoryType {
   iconName?: string, // Example field if categories have icons
   itemCount?: number, // Example field for number of items in a category
   // Add a 'link' property if your API provides it, or construct it.
-  link?: string,
+  link?: string
 }
 
 // Default static categories with translation keys
@@ -113,7 +112,7 @@ export function CategoriesSection({
           </p>
         </div>
       </section>
-    ),
+    )
   }
 
   return (
@@ -174,5 +173,5 @@ export function CategoriesSection({
         </div>
       </div>
     </section>
-  ),
+  )
 }

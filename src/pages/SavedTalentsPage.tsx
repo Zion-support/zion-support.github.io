@@ -21,7 +21,7 @@ export default function SavedTalentsPage() {
 
   useEffect(() => {
     if (!user) {
-      router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`),
+      router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`)
     }
   }, [user, router]),
 
@@ -31,7 +31,7 @@ export default function SavedTalentsPage() {
       try {
         if (!user) {
           logWarn("User not authenticated."),
-          return,
+          return
         }
 
         const { data, error } = await supabase
@@ -58,7 +58,7 @@ export default function SavedTalentsPage() {
           .eq("user_id", user.id),
 
         if (error) {
-          throw error,
+          throw error
         }
 
         if (data) {
@@ -73,24 +73,24 @@ export default function SavedTalentsPage() {
         toast({
           title: "Error",
           description: "Failed to load saved talents. Please try again later.",
-          variant: "destructive"}),
+          variant: "destructive"})
       } finally {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     },
 
-    fetchSavedTalents(),
+    fetchSavedTalents()
   }, [user]),
 
   const handleViewProfile = (talentId: string) => {
-    router.push(`/talent/${talentId}`),
+    router.push(`/talent/${talentId}`)
   },
 
   const handleRequestHire = (talent: TalentProfile) => {
     logInfo('Request to hire:', { data: talent }),
     toast({
       title: "Hire Request Sent",
-      description: `A hire request has been sent to ${talent.full_name}.`}),
+      description: `A hire request has been sent to ${talent.full_name}.`})
   },
 
   const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {
@@ -109,7 +109,7 @@ export default function SavedTalentsPage() {
           .eq('talent_id', talentId),
   
         if (error) {
-          throw error,
+          throw error
         }
   
         setSavedTalents(prevTalents =>
@@ -117,7 +117,7 @@ export default function SavedTalentsPage() {
         ),
         toast({
           title: "Talent Removed",
-          description: "Talent removed from saved list."}),
+          description: "Talent removed from saved list."})
       } else {
         // Add to saved talents
         const { error } = await supabase
@@ -125,7 +125,7 @@ export default function SavedTalentsPage() {
           .insert([{ user_id: user.id, talent_id: talentId }]),
   
         if (error) {
-          throw error,
+          throw error
         }
   
         // Fetch the updated talent profile and add it to the list
@@ -141,14 +141,14 @@ export default function SavedTalentsPage() {
             title: "Error",
             description: "Failed to update saved talents. Please try again later.",
             variant: "destructive"}),
-          return,
+          return
         }
   
         if (talentData) {
           setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
           toast({
             title: "Talent Saved",
-            description: "Talent saved to your list."}),
+            description: "Talent saved to your list."})
         }
       }
     } catch (error) {
@@ -156,7 +156,7 @@ export default function SavedTalentsPage() {
       toast({
         title: "Error",
         description: "Failed to update saved talents. Please try again later.",
-        variant: "destructive"}),
+        variant: "destructive"})
     }
   },
 
@@ -199,5 +199,5 @@ export default function SavedTalentsPage() {
         )}
       </div>
     </>
-  ),
+  )
 }

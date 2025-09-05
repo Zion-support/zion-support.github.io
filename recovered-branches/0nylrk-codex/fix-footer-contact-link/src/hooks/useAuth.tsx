@@ -2,7 +2,6 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 import { supabase } from "@/integrations/supabase/client",
 import { AuthContext } from "@/context/auth/AuthContext",
 import type { UserDetails as AuthUserDetails } from "@/types/auth",
-
 // Define types for our context
 export interface UserDetails {
   id?: string,
@@ -18,7 +17,7 @@ export interface UserDetails {
   companyId?: string,
   bio?: string,
   createdAt?: string,
-  updatedAt?: string,
+  updatedAt?: string
 }
 
 export interface AuthContextType {
@@ -61,13 +60,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       permissions: ["billing_access", "admin_access", "team_management"],
       companyId: "company-123"
     }),
-    return { error: null },
+    return { error: null }
   },
 
   const signOut = async () => {
     // This would be replaced with actual Supabase auth
     // // // console.log("Sign out attempted"),
-    setUser(null),
+    setUser(null)
   },
 
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {
@@ -82,22 +81,22 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       userType: userData?.userType,
       profileComplete: false
     }),
-    return { error: null },
+    return { error: null }
   },
 
   const resetPassword = async (email: string) => {
     // Mock implementation
     // // // console.log("Password reset requested for:", email),
-    return { error: null },
+    return { error: null }
   },
 
   const updateProfile = async (data: Partial<UserDetails>) => {
     // Mock implementation
     // // // console.log("Profile update requested with:", data),
     if (user) {
-      setUser({ ...user, ...data }),
+      setUser({ ...user, ...data })
     }
-    return { error: null },
+    return { error: null }
   },
 
   const loginWithGoogle = async () => {
@@ -109,7 +108,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       displayName: "Google User",
       name: "Google User",
       profileComplete: true
-    }),
+    })
   },
 
   const loginWithFacebook = async () => {
@@ -121,7 +120,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       displayName: "Facebook User", 
       name: "Facebook User",
       profileComplete: true
-    }),
+    })
   },
 
   const loginWithTwitter = async () => {
@@ -133,7 +132,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       displayName: "Twitter User",
       name: "Twitter User",
       profileComplete: true
-    }),
+    })
   },
 
   const loginWithWeb3 = async () => {
@@ -141,7 +140,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const ethereum = (window as any).ethereum,
     if (!ethereum) {
       console.warn("No wallet detected"),
-      return,
+      return
     }
     try {
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
@@ -154,9 +153,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         id: address,
         displayName: address,
         profileComplete: true
-      }),
+      })
     } catch (err) {
-      console.error('Web3 login failed', err),
+      console.error('Web3 login failed', err)
     }
   },
 
@@ -166,8 +165,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setIsLoading(true),
     setTimeout(() => {
       setUser(null),
-      setIsLoading(false),
-    }, 100),
+      setIsLoading(false)
+    }, 100)
   }, []),
 
   const value = {
@@ -189,14 +188,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     loginWithWeb3
   },
 
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>,
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }
 
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {
   const context = useContext(AuthContext),
   if (context === undefined) {
-    throw new Error("useAuth must be used within an AuthProvider"),
+    throw new Error("useAuth must be used within an AuthProvider")
   }
-  return context,
+  return context
 }

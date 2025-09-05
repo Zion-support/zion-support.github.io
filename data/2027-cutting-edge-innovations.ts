@@ -12,7 +12,7 @@ export interface CuttingEdgeInnovation2027 {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const cuttingEdge2027Innovations: CuttingEdgeInnovation2027[] = [

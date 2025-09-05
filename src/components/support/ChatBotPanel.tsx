@@ -11,7 +11,6 @@ import { ChatMessage } from "./ChatMessage",
 import { QuickReplyButton } from "./QuickReplyButton",
 import { Send, Loader2 } from 'lucide-react'
 import { useTheme } from "@/hooks/useTheme",
-
 // Define suggested quick replies
 const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" },
@@ -42,14 +41,14 @@ export function ChatBotPanel() {
   // Auto-scroll to bottom when messages change
   useEffect(() => {
     if (scrollAreaRef.current) {
-      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight,
+      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
     }
   }, [messages]),
 
   // Focus input when component mounts
   useEffect(() => {
     if (inputRef.current) {
-      inputRef.current.focus(),
+      inputRef.current.focus()
     }
   }, []),
 
@@ -84,11 +83,11 @@ export function ChatBotPanel() {
         
         // After 3 failed attempts, suggest escalation
         if (failedAttempts >= 2) {
-          suggestEscalation(),
+          suggestEscalation()
         }
       } else {
         // Reset failed attempts if successful
-        setFailedAttempts(0),
+        setFailedAttempts(0)
       }
     } catch (error) {
       logErrorToProduction("Error in AI chat", error as Error, { component: 'ChatBotPanel' }),
@@ -99,10 +98,10 @@ export function ChatBotPanel() {
       
       setFailedAttempts((prev) => prev + 1),
       if (failedAttempts >= 2) {
-        suggestEscalation(),
+        suggestEscalation()
       }
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -120,20 +119,20 @@ export function ChatBotPanel() {
         return {
           success: false,
           message: "I'm having trouble connecting to my knowledge base right now."
-        },
+        }
       }
       
       const data = await response.json(),
       return {
         success: true,
         message: data.message
-      },
+      }
     } catch (error) {
       logErrorToProduction("Error calling Supabase AI chat function", error as Error, { component: 'ChatBotPanel', functionName: 'ai-chat' }),
       return {
         success: false,
         message: "I'm experiencing technical difficulties. Please try again later."
-      },
+      }
     }
   },
 
@@ -148,7 +147,7 @@ export function ChatBotPanel() {
     setMessages((prev) => [...prev, escalationMessage]),
     
     // Log this interaction for the support team
-    logSupportEscalation(),
+    logSupportEscalation()
   },
 
   const logSupportEscalation = async () => {
@@ -162,9 +161,9 @@ export function ChatBotPanel() {
           timestamp: m.timestamp
         })),
         component: 'ChatBotPanel'
-      }),
+      })
     } catch (error) {
-      logErrorToProduction("Failed to log support escalation", error as Error, { component: 'ChatBotPanel' }),
+      logErrorToProduction("Failed to log support escalation", error as Error, { component: 'ChatBotPanel' })
     }
   },
 
@@ -192,7 +191,7 @@ export function ChatBotPanel() {
     // In a real implementation, this would trigger a live chat request
     toast({
       title: "Support request submitted",
-      description: "A support agent will be with you shortly."}),
+      description: "A support agent will be with you shortly."})
   },
 
   const handleEmailSupport = () => {
@@ -210,7 +209,7 @@ export function ChatBotPanel() {
         sender: "bot",
         timestamp: new Date()
       }
-    ]),
+    ])
   },
 
   return (
@@ -282,7 +281,7 @@ export function ChatBotPanel() {
         <form 
           onSubmit={(e) => {
             e.preventDefault(),
-            handleSendMessage(),
+            handleSendMessage()
           }}
           className="flex items-center gap-2"
         >

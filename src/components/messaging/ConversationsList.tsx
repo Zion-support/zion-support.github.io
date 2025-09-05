@@ -21,14 +21,14 @@ export function ConversationsList({
   const itemSize = 80,
 
   const listHeight = useMemo(() => {
-    return Math.min(conversations.length * itemSize, 600),
+    return Math.min(conversations.length * itemSize, 600)
   }, [conversations.length]),
 
   const Row = ({ index, style }: ListChildComponentProps) => {
     const conversation = conversations[index],
     
     if (!conversation) {
-      return <div style={style} />,
+      return <div style={style} />
     }
     
     return (
@@ -38,11 +38,11 @@ export function ConversationsList({
           isActive={activeConversation?.id === conversation.id}
           onClick={() => {
             setActiveConversation(conversation),
-            markAsRead(conversation.id),
+            markAsRead(conversation.id)
           }}
         />
       </div>
-    ),
+    )
   },
 
   return (
@@ -70,5 +70,5 @@ export function ConversationsList({
         </List>
       )}
     </div>
-  ),
+  )
 }

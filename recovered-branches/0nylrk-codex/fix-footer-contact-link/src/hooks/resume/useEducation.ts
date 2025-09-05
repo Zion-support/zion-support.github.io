@@ -37,11 +37,11 @@ export function useEducation() {
       
       if (error) throw error,
       
-      return showSuccessToast("Education added", "Your education has been added to your resume"),
+      return showSuccessToast("Education added", "Your education has been added to your resume")
     } catch (e: any) {
-      return handleResumeError(e, 'Could not add education'),
+      return handleResumeError(e, 'Could not add education')
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
@@ -72,11 +72,11 @@ export function useEducation() {
       
       if (error) throw error,
       
-      return showSuccessToast("Education updated", "Your education has been updated"),
+      return showSuccessToast("Education updated", "Your education has been updated")
     } catch (e: any) {
-      return handleResumeError(e, 'Could not update education'),
+      return handleResumeError(e, 'Could not update education')
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
@@ -97,11 +97,11 @@ export function useEducation() {
       
       if (error) throw error,
       
-      return showSuccessToast("Education deleted", "Your education has been removed from your resume"),
+      return showSuccessToast("Education deleted", "Your education has been removed from your resume")
     } catch (e: any) {
-      return handleResumeError(e, 'Could not delete education'),
+      return handleResumeError(e, 'Could not delete education')
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -111,5 +111,5 @@ export function useEducation() {
     addEducation,
     updateEducation,
     deleteEducation
-  },
+  }
 }

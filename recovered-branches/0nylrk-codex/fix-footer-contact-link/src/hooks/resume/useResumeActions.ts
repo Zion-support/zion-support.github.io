@@ -35,11 +35,11 @@ export function useResumeActions() {
       
       showSuccessToast("Resume created", "Your resume has been created successfully"),
       
-      return data.id,
+      return data.id
     } catch (e: any) {
-      return handleResumeError(e, 'Could not create resume') ? null : null,
+      return handleResumeError(e, 'Could not create resume') ? null : null
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
@@ -65,11 +65,11 @@ export function useResumeActions() {
       
       if (error) throw error,
       
-      return showSuccessToast("Resume updated", "Your resume information has been updated"),
+      return showSuccessToast("Resume updated", "Your resume information has been updated")
     } catch (e: any) {
-      return handleResumeError(e, 'Could not update resume'),
+      return handleResumeError(e, 'Could not update resume')
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
@@ -100,11 +100,11 @@ export function useResumeActions() {
       
       if (error) throw error,
       
-      return showSuccessToast("Active resume set", "Your selected resume is now marked as active"),
+      return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
     } catch (e: any) {
-      return handleResumeError(e, 'Could not set active resume'),
+      return handleResumeError(e, 'Could not set active resume')
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -113,5 +113,5 @@ export function useResumeActions() {
     error,
     createResume,
     updateBasicInfo,
-    setActiveResume},
+    setActiveResume}
 }

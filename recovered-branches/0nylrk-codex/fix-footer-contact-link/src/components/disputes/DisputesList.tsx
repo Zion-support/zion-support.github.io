@@ -14,7 +14,6 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { formatDistanceToNow } from "date-fns",
 import { ShieldAlert } from "lucide-react",
 import { Link } from "react-router-dom",
-
 type DisputesListProps = {
   disputes: Dispute[],
   isLoading: boolean
@@ -76,7 +75,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
           </Table>
         </div>
       </div>
-    ),
+    )
   }
 
   if (disputes.length === 0) {
@@ -88,7 +87,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
           No active disputes match the selected filter
         </p>
       </div>
-    ),
+    )
   }
 
   return (
@@ -181,5 +180,5 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
         </Table>
       </div>
     </div>
-  ),
+  )
 }

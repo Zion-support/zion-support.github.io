@@ -4,7 +4,6 @@ import path from 'path',
 import mime from 'mime-types',
 import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage',
 import { requireSuperadminApi } from '../../../../utils/api/auth',
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return,
   const section = String(req.query.section || 'General'),
@@ -16,5 +15,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Type', contentType),
   res.setHeader('Content-Disposition', `attachment, filename="${path.basename(fullPath)}"`),
   appendAuditLog({ type: 'file_download', section, name: file }),
-  fs.createReadStream(fullPath).pipe(res),
+  fs.createReadStream(fullPath).pipe(res)
 }

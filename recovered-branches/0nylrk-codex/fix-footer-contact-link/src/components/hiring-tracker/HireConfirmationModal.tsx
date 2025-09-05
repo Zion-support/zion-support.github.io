@@ -15,7 +15,6 @@ import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 import { useAuth } from "@/hooks/useAuth",
 import { JobApplication } from "@/types/jobs",
-
 export interface HireConfirmationModalProps {
   isOpen: boolean,
   onClose: () => void,
@@ -48,7 +47,7 @@ export function HireConfirmationModal({
         title: 'Required fields missing',
         description: 'Please fill in both project name and description.',
         variant: 'destructive'}),
-      return,
+      return
     }
 
     if (!user) {
@@ -56,7 +55,7 @@ export function HireConfirmationModal({
         title: 'Not authenticated',
         description: 'You must be logged in to hire a candidate.',
         variant: 'destructive'}),
-      return,
+      return
     }
 
     if (!talentData) {
@@ -64,7 +63,7 @@ export function HireConfirmationModal({
         title: 'Missing talent data',
         description: 'Talent information is missing.',
         variant: 'destructive'}),
-      return,
+      return
     }
 
     setIsLoading(true),
@@ -91,7 +90,7 @@ export function HireConfirmationModal({
           description: projectError.message,
           variant: 'destructive'}),
         setIsLoading(false),
-        return,
+        return
       }
 
       // Create a new hiring record
@@ -111,7 +110,7 @@ export function HireConfirmationModal({
           description: hiringError.message,
           variant: 'destructive'}),
         setIsLoading(false),
-        return,
+        return
       }
 
       // Update the availability status
@@ -128,7 +127,7 @@ export function HireConfirmationModal({
               description: availabilityError.message,
               variant: 'destructive'}),
             setIsLoading(false),
-            return,
+            return
           }
         } catch (error) {
           console.error('Error updating availability:', error),
@@ -137,7 +136,7 @@ export function HireConfirmationModal({
             description: 'Failed to update candidate availability status.',
             variant: 'destructive'}),
           setIsLoading(false),
-          return,
+          return
         }
       }
 
@@ -145,15 +144,15 @@ export function HireConfirmationModal({
         title: 'Candidate hired successfully',
         description: `${talentData.full_name} has been hired for the project.`}),
       onConfirm(),
-      onClose(),
+      onClose()
     } catch (error) {
       console.error('Error hiring candidate:', error),
       toast({
         title: 'Error hiring candidate',
         description: 'Failed to hire candidate. Please try again.',
-        variant: 'destructive'}),
+        variant: 'destructive'})
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -215,5 +214,5 @@ export function HireConfirmationModal({
         </div>
       </DialogContent>
     </Dialog>
-  ),
+  )
 }

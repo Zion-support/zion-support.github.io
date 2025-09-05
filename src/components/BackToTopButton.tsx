@@ -6,18 +6,18 @@ export function BackToTopButton() {
 
   useEffect(() => {
     const updateVisibility = () => {
-      setVisible(window.scrollY > 400),
+      setVisible(window.scrollY > 400)
     },
     updateVisibility(),
     window.addEventListener("scroll", updateVisibility),
-    return () => window.removeEventListener("scroll", updateVisibility),
+    return () => window.removeEventListener("scroll", updateVisibility)
   }, []),
 
   const scrollToTop = () => {
     const opts: ScrollToOptions = { top: 0, behavior: "smooth" },
     window.scrollTo(opts),
     document.documentElement.scrollTo(opts),
-    document.body.scrollTo(opts),
+    document.body.scrollTo(opts)
   },
 
   return (
@@ -30,5 +30,5 @@ export function BackToTopButton() {
     >
       <ArrowUp className="h-5 w-5" />
     </button>
-  ),
+  )
 }

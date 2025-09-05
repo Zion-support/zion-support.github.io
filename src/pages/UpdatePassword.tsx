@@ -19,7 +19,6 @@ import {
 import { toast } from "@/hooks/use-toast",
 import { cleanupAuthState } from "@/utils/authUtils",
 import { logErrorToProduction } from '@/utils/productionLogger',
-
 // Form validation schema
 const updatePasswordSchema = z
   .object({
@@ -55,13 +54,13 @@ export default function UpdatePassword() {
     const token = hashParams.get("access_token"),
     
     if (token) {
-      setAccessToken(token),
+      setAccessToken(token)
     } else {
-      setError("No access token found. Please request a new password reset link."),
+      setError("No access token found. Please request a new password reset link.")
     }
 
     // Clean up auth state to prevent issues
-    cleanupAuthState(),
+    cleanupAuthState()
   }, []),
 
   // Form submission handler
@@ -88,7 +87,7 @@ export default function UpdatePassword() {
           description: error.message,
           variant: "destructive"}),
         setError(error.message),
-        return,
+        return
       }
 
       // Show success message and clean up auth state
@@ -100,17 +99,17 @@ export default function UpdatePassword() {
       // Clean auth state and redirect after a delay
       cleanupAuthState(),
       setTimeout(() => {
-        router.push("/login"),
-      }, 3000),
+        router.push("/login")
+      }, 3000)
     } catch (error: any) {
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Password update error' }),
       toast({
         title: "Password update failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"}),
-      setError(error.message || "An unexpected error occurred"),
+      setError(error.message || "An unexpected error occurred")
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 

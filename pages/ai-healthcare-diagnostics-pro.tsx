@@ -11,7 +11,6 @@ import {
   Activity, Zap, Pill, Syringe, Hospital, Ambulance
 } from 'lucide-react',
 import Link from 'next/link',
-
 const AIHealthcareDiagnosticsPro: React.FC = () => {
   const features = [
     {

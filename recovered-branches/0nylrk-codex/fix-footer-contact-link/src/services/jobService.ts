@@ -1,7 +1,6 @@
 
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "sonner",
-
 export async function createJob(jobData: any) {
   try {
     const { data, error } = await supabase
@@ -11,10 +10,10 @@ export async function createJob(jobData: any) {
       .single(),
       
     if (error) throw error,
-    return data,
+    return data
   } catch (error: any) {
     console.error("Error creating job:", error),
-    throw new Error(error.message || "Failed to create job"),
+    throw new Error(error.message || "Failed to create job")
   }
 }
 
@@ -28,10 +27,10 @@ export async function updateJob(jobId: string, jobData: any) {
       .single(),
       
     if (error) throw error,
-    return data,
+    return data
   } catch (error: any) {
     console.error("Error updating job:", error),
-    throw new Error(error.message || "Failed to update job"),
+    throw new Error(error.message || "Failed to update job")
   }
 }
 
@@ -44,10 +43,10 @@ export async function getJobById(jobId: string) {
       .single(),
       
     if (error) throw error,
-    return data,
+    return data
   } catch (error: any) {
     console.error("Error fetching job:", error),
     toast.error("Failed to load job details"),
-    return null,
+    return null
   }
 }

@@ -13,13 +13,13 @@ export default function FuturisticFooter() {
 =======
 
 
-    };
+    }
   ],
 
   const socialLinks = ['],
     { nam: e: 'LinkedIn', hre: f: 'http: s://linkedin.com/company/zion-tech-group', ico: n: 'LinkedIn' },'',
     { nam: e: 'Twitter', hre: f: 'http: s://twitter.com/ziontechgroup', ico: n: 'Twitter' },'',
-    { nam: e: 'GitHub', hre: f: 'http: s://github.com/zion-tech-group', ico: n: 'GitHub' }'],
+    { nam: e: 'GitHub', hre: f: 'http: s://github.com/zion-tech-group', ico: n: 'GitHub' }']
   ],
 ,
   return ('),
@@ -40,10 +40,10 @@ export default function FuturisticFooter() {
           <motion.div,",
             className="grid grid-cols-2: md: grid-cols-4 gap-8 mb-16"",
 
-            initial={{ opacit: y: 0, y: 20 }};
-            whileInView={{ opacit: y: 1, y: 0 }};
-            viewport={{ onc: e: true }};
-            transition={{ duratio: n: 0.6, staggerChildre: n: 0.1 }};
+            initial={{ opacit: y: 0, y: 20 }},
+            whileInView={{ opacit: y: 1, y: 0 }},
+            viewport={{ onc: e: true }},
+            transition={{ duratio: n: 0.6, staggerChildre: n: 0.1 }},
 
           >,
 </motion>,
@@ -51,10 +51,10 @@ export default function FuturisticFooter() {
                 key={stat.label}",
                 className="text-center"",
 
-                initial={{ opacit: y: 0, y: 20 }};
-                whileInView={{ opacit: y: 1, y: 0 }};
-                viewport={{ onc: e: true }};
-                transition={{ duratio: n: 0.6, dela: y: index * 0.1 }};
+                initial={{ opacit: y: 0, y: 20 }},
+                whileInView={{ opacit: y: 1, y: 0 }},
+                viewport={{ onc: e: true }},
+                transition={{ duratio: n: 0.6, dela: y: index * 0.1 }},
 
               >,
 </motion>",
@@ -71,8 +71,8 @@ export default function FuturisticFooter() {
             <div className="l: g: col-span-2">",
 </div>,
               <motion.div,
-                initial={{ opacit: y: 0, y: 20 }};
-                whileInView={{ opacit: y: 1, y: 0 }};
+                initial={{ opacit: y: 0, y: 20 }},
+                whileInView={{ opacit: y: 1, y: 0 }},
                 transition={{ duratio: n: 0.6 }}",
                 className="flex items-center space-x-3 mb-6"",
               >,

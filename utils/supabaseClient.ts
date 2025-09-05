@@ -12,13 +12,13 @@ export function getSupabaseClient(): ZionSupabase {
     if (!SUPABASE_URL || !SUPABASE_ANON_KEY) return undefined,
     if (typeof window !== 'undefined') {
       if (!browserClient) {
-        browserClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY),
+        browserClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
       }
-      return browserClient,
+      return browserClient
     }
     // Server-side: create a new client per call to avoid cross-request state
-    return createClient(SUPABASE_URL, SUPABASE_ANON_KEY),
+    return createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
   } catch {
-    return undefined,
+    return undefined
   }
 }

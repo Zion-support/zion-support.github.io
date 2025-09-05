@@ -4,7 +4,6 @@ import { Message, Conversation, ConversationContextData } from '@/types/messagin
 import { useConversationState } from './useConversationState',
 import { useConversations } from './useConversations',
 import { useMessages } from './useMessages',
-
 // Allow either UserProfile or UserDetails
 type UserWithProfile = UserProfile | UserDetails | null,
 
@@ -75,5 +74,5 @@ export function useMessagingOperations(user: UserWithProfile) {
     markAsRead,
     fetchConversations,
     loadMessages
-  },
+  }
 }

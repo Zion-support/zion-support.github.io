@@ -15,7 +15,7 @@ export function ZapierIntegration() {
     navigator.clipboard.writeText(apiKey),
     setCopied(true),
     setTimeout(() => setCopied(false), 2000),
-    toast.success("API key copied to clipboard"),
+    toast.success("API key copied to clipboard")
   },
   
   return (

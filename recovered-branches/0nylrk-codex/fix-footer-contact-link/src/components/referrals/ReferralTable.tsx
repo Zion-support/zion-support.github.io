@@ -2,7 +2,6 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Referral, ReferralStatus } from "@/types/referrals",
 import { Badge } from "@/components/ui/badge",
 import { formatDate } from "@/utils/referralUtils",
-
 interface ReferralTableProps {
   referrals: Referral[],
   isLoading: boolean
@@ -27,7 +26,7 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
       <div className="flex items-center justify-center p-8">
         <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
       </div>
-    ),
+    )
   }
 
   if (referrals.length === 0) {
@@ -38,7 +37,7 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
           Share your referral link with friends and colleagues to start earning rewards
         </p>
       </div>
-    ),
+    )
   }
 
   return (
@@ -82,5 +81,5 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
         ))}
       </TableBody>
     </Table>
-  ),
+  )
 }

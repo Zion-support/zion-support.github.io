@@ -8,7 +8,6 @@ import { SearchSuggestion } from '@/types/search',
 import { slugify } from '@/lib/slugify',
 import { useDebounce } from '@/hooks/useDebounce',
 import { useOnClickOutside } from '@/hooks/useOnClickOutside',
-
 /**
  * SearchBar component props
  */
@@ -50,29 +49,29 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
     if (!debounced) {
       setSuggestions([]),
       setHighlightedIndex(-1),
-      return,
+      return
     }
     const controller = new AbortController(),
     fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, { signal: controller.signal })
       .then(res => {
         if (!res.ok) throw new Error('Failed to fetch suggestions'),
-        return res.json(),
+        return res.json()
       })
       .then(data => {
         if (Array.isArray(data)) {
-          setSuggestions(data.slice(0, 5)),
+          setSuggestions(data.slice(0, 5))
         } else {
-          setSuggestions([]),
+          setSuggestions([])
         }
-        setHighlightedIndex(-1),
+        setHighlightedIndex(-1)
       })
       .catch(() => setSuggestions([])),
-    return () => controller.abort(),
+    return () => controller.abort()
   }, [debounced]),
 
   useOnClickOutside(containerRef, () => {
     setFocused(false),
-    setHighlightedIndex(-1),
+    setHighlightedIndex(-1)
   }),
 
   const handleSelect = (suggestion: SearchSuggestion) => {
@@ -84,7 +83,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
     fireEvent('search', { search_term: suggestion.text }),
     setFocused(false),
     setHighlightedIndex(-1),
-    inputRef.current?.blur(),
+    inputRef.current?.blur()
   },
 
   return (
@@ -109,14 +108,14 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
           onFocus={(e) => {
             setFocused(true),
             // Ensure the input receives focus properly
-            e.target.setSelectionRange(e.target.value.length, e.target.value.length),
+            e.target.setSelectionRange(e.target.value.length, e.target.value.length)
           }}
           onBlur={(e) => {
             // Only blur if not clicking on suggestions
             const relatedTarget = e.relatedTarget as HTMLElement,
             if (!relatedTarget || !containerRef.current?.contains(relatedTarget)) {
               setFocused(false),
-              setHighlightedIndex(-1),
+              setHighlightedIndex(-1)
             }
           }}
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
@@ -129,7 +128,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
                 e.preventDefault(),
                 setFocused(false),
                 setHighlightedIndex(-1),
-                inputRef.current?.blur(),
+                inputRef.current?.blur()
               }
               // If Enter is pressed and there's a value, navigate with query parameter
               if (e.key === 'Enter' && value.trim()) {
@@ -137,9 +136,9 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
                 fireEvent('search', { search_term: value }),
                 router.push(`/search?q=${encodeURIComponent(value)}`),
                 setFocused(false),
-                inputRef.current?.blur(),
+                inputRef.current?.blur()
               }
-              return,
+              return
             }
 
             switch (e.key) {
@@ -154,7 +153,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
               case 'Enter':
                 if (highlightedIndex !== -1 && suggestions[highlightedIndex]) {
                   e.preventDefault(),
-                  handleSelect(suggestions[highlightedIndex]),
+                  handleSelect(suggestions[highlightedIndex])
                 } else if (value.trim()) {
                   // This case should ideally be handled by the form's onSubmit,
                   // but if SearchBar is used standalone, this provides a fallback.
@@ -162,7 +161,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
                   fireEvent('search', { search_term: value }),
                   router.push(`/search?q=${encodeURIComponent(value)}`),
                   setFocused(false),
-                  inputRef.current?.blur(),
+                  inputRef.current?.blur()
                 }
                 break,
               case 'Escape':
@@ -194,5 +193,5 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
         listId={listId}
       />
     </div>
-  ),
+  )
 }

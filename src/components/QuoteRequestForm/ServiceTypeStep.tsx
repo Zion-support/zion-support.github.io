@@ -10,8 +10,6 @@ import { useDebounce } from "@/hooks/useDebounce",
 import { useIsMounted } from "@/hooks/useIsMounted",
 import { z } from "zod",
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 const listingSchema = z.object({
   id: z.string(),
   title: z.string(),
@@ -38,7 +36,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
   useEffect(() => {
     if (!formData.serviceType) {
       setListings([]),
-      return,
+      return
     }
 
     const fetchServices = async () => {
@@ -58,34 +56,34 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           if (!parsed.success) throw new Error('Invalid response'),
           if (isMounted.current) {
             setListings(parsed.data as ListingItem[]),
-            setError(null),
+            setError(null)
           }
-          return,
+          return
         } catch (err) {
           if (attempt === maxRetries - 1) {
             if (process.env.NODE_ENV === 'development') {
-              logErrorToProduction('Failed to load services:', { data: err }),
+              logErrorToProduction('Failed to load services:', { data: err })
             } else {
-              captureException(err),
+              captureException(err)
             }
             if (isMounted.current) {
               setListings([]),
-              setError('Failed to load services'),
+              setError('Failed to load services')
             }
           } else {
-            await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500)),
+            await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500))
           }
         } finally {
-          if (isMounted.current) setLoading(false),
+          if (isMounted.current) setLoading(false)
         }
       }
     },
 
-    fetchServices(),
+    fetchServices()
   }, [formData.serviceType, debouncedQuery, isMounted]),
   
   const handleTypeSelect = (type: ServiceType) => {
-    updateFormData({ serviceType: type }),
+    updateFormData({ serviceType: type })
   },
   
   const handleItemSelect = (item: ListingItem) => {
@@ -93,7 +91,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       specificItem: item,
       serviceCategory: item.category,
       serviceType: item.category.toLowerCase() as ServiceType
-    }),
+    })
   },
   
   const sourceListings = listings,
@@ -102,12 +100,12 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     // Filter by category only when a service type has been selected
     if (formData.serviceType !== "") {
       const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase(),
-      if (!categoryMatch) return false,
+      if (!categoryMatch) return false
     }
     
     if (searchQuery.trim() === "") return true,
     return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-           item.category.toLowerCase().includes(searchQuery.toLowerCase()),
+           item.category.toLowerCase().includes(searchQuery.toLowerCase())
   }),
 
   return (
@@ -207,5 +205,5 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
         </div>
       )}
     </div>
-  ),
+  )
 }

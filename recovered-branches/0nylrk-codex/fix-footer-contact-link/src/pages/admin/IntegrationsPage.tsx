@@ -5,7 +5,6 @@ import { Footer } from "@/components/Footer",
 import { IntegrationsHub } from "@/components/integrations/IntegrationsHub",
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
-
 export default function IntegrationsPage() {
   return (
     <ProtectedRoute adminOnly={true}>
@@ -19,5 +18,5 @@ export default function IntegrationsPage() {
       </main>
       <Footer />
     </ProtectedRoute>
-  ),
+  )
 }

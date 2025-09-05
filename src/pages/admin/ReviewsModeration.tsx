@@ -8,7 +8,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Star, AlertTriangle } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast",
 import { logErrorToProduction } from '@/utils/productionLogger',
-
 function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending"),
   const [reviews, setReviews] = useState([]),
@@ -21,23 +20,23 @@ function ReviewsModerationContent() {
       // For now, let's simulate a delay and return empty data
       await new Promise(resolve => setTimeout(resolve, 1000)),
       setReviews([]),
-      setIsLoading(false),
+      setIsLoading(false)
     } catch (error) {
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching reviews' }),
       toast({
         title: "Error",
         description: "Failed to load reviews. Please try again later.",
         variant: "destructive"}),
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
   useEffect(() => {
-    fetchReviews(),
+    fetchReviews()
   }, [activeTab]),
 
   const handleRefresh = () => {
-    fetchReviews(),
+    fetchReviews()
   },
   
   return (
@@ -93,7 +92,7 @@ function ReviewsModerationContent() {
         </Card>
       </main>
     </>
-  ),
+  )
 }
 
 export default function ReviewsModeration() {
@@ -101,5 +100,5 @@ export default function ReviewsModeration() {
     <ProtectedRoute>
       <ReviewsModerationContent />
     </ProtectedRoute>
-  ),
+  )
 }

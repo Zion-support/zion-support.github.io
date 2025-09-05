@@ -8,7 +8,6 @@ import {
   Cpu, Eye, Target, Users, BarChart3
 } from 'lucide-react',
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch',
-
 const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
   const categories = [
     { name: 'AI & Marketing', icon: Brain, color: 'from-purple-500 to-pink-500' },
@@ -24,7 +23,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
 
 // Import existing services for comprehensive showcase
 import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services',
-
 // Combine all services
 const allServices = [
   ...innovativeMicroSaas2025ExpansionV2,
@@ -34,14 +32,8 @@ const allServices = [
 
 // Service categories
 const serviceCategories = [
-  'All ServicesAI & Machine Learning',
-  'Quantum ComputingCybersecurity',
-  'Healthcare & BiotechFinance & Investment',
-  'Supply Chain & LogisticsManufacturing & Industry 4.0',
-  'Space TechnologyBlockchain & Web3',
-  'Education & LearningLegal & Compliance',
-  'Energy & SustainabilityAutonomous Vehicles',
-  'IoT & Edge ComputingMetaverse & VR',
+  'All ServicesAI & Machine LearningQuantum ComputingCybersecurityHealthcare & BiotechFinance & InvestmentSupply Chain & LogisticsManufacturing & Industry 4.0',
+  'Space TechnologyBlockchain & Web3Education & LearningLegal & ComplianceEnergy & SustainabilityAutonomous VehiclesIoT & Edge ComputingMetaverse & VR',
   'Neuroscience & BCI'
 ],
 
@@ -57,7 +49,7 @@ const getServicePricing = (service: any) => {
   if (service.pricing?.starter) return service.pricing.starter,
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`,
   if (service.price?.monthly) return `$${service.price.monthly}/month`,
-  return 'Contact for pricing',
+  return 'Contact for pricing'
 },
 
 // Helper function to get service features
@@ -89,7 +81,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                            (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase()) || false,
       const matchesCategory = selectedCategory === 'All Services' || 
                              getServiceCategory(service).includes(selectedCategory.split(' ')[0]),
-      return matchesSearch && matchesCategory,
+      return matchesSearch && matchesCategory
     })
     .sort((a, b) => {
       const aName = (a as any).title || (a as any).name || '',
@@ -134,9 +126,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
         title="2025 Innovative Services Showcase | Zion Tech Group"
         description="Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems."
         keywords={[
-          'innovative services 2025micro SAAS',
-          'quantum computingspace technology',
-          'AI platformsautonomous systems'
+          'innovative services 2025micro SAASquantum computingspace technologyAI platformsautonomous systems'
         ]}
       />
       
@@ -247,7 +237,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                     </div>
                   </div>
                 </motion.div>
-              ),
+              )
             })}
           </div>
         </div>
@@ -355,7 +345,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                     </div>
                   </div>
                 </motion.div>
-              ),
+              )
             })}
           </div>
         </div>
@@ -410,7 +400,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                     </div>
                   </div>
                 </motion.div>
-              ),
+              )
             })}
           </div>
         </div>

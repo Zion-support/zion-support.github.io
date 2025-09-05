@@ -1,5 +1,4 @@
 import Head from 'next/head',
-
 export default function ComprehensiveRedundancyRedirect() {
   return (
     <>
@@ -10,6 +9,6 @@ export default function ComprehensiveRedundancyRedirect() {
         <p>Redirecting to Comprehensive Redundancy docs…</p>
       </main>
     </>
-  ),
+  )
 }
 

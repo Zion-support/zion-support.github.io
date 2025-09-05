@@ -9,7 +9,6 @@ import { JobApplication, ApplicationStatus } from "@/types/jobs",
 import { StatusBadge } from "./StatusBadge",
 import { ScoreBadge } from "./ScoreBadge",
 import { ApplicationActions } from "./ApplicationActions",
-
 interface ApplicationRowProps {
   application: JobApplication,
   processingId: string | null,
@@ -89,5 +88,5 @@ export function ApplicationRow({
         />
       </TableCell>
     </TableRow>
-  ),
+  )
 }

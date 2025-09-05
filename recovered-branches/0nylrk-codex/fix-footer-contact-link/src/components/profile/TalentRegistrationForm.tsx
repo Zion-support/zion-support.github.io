@@ -22,7 +22,6 @@ import { toast } from "@/components/ui/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { useAuth } from "@/hooks/useAuth",
-
 // Define form schema
 const talentProfileSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters long"),
@@ -79,7 +78,7 @@ export function TalentRegistrationForm() {
     const skillInput = form.getValues("skills"),
     if (skillInput && !skillTags.includes(skillInput)) {
       setSkillTags([...skillTags, skillInput]),
-      form.setValue("skills", ""),
+      form.setValue("skills", "")
     }
   },
 
@@ -104,7 +103,7 @@ export function TalentRegistrationForm() {
       reader.onloadend = () => {
         setUploadedAvatar(reader.result as string)
       },
-      reader.readAsDataURL(file),
+      reader.readAsDataURL(file)
     }
   },
 
@@ -115,7 +114,7 @@ export function TalentRegistrationForm() {
       toast({
         title: "More information needed",
         description: "Please provide at least a detailed bio before generating enhanced content."}),
-      return,
+      return
     }
 
     try {
@@ -135,23 +134,23 @@ export function TalentRegistrationForm() {
       }),
 
       if (error) {
-        throw new Error(error.message),
+        throw new Error(error.message)
       }
 
       setGeneratedContent(data as EnhancedProfile),
       
       toast({
         title: "Enhanced Profile Generated",
-        description: "AI has created a professional bio and suggested additional skills for your profile."}),
+        description: "AI has created a professional bio and suggested additional skills for your profile."})
       
     } catch (error: any) {
       console.error("Error generating enhanced profile:", error),
       toast({
         title: "Generation failed",
         description: error.message || "There was an error generating your enhanced profile. Please try again.",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
-      setIsGenerating(false),
+      setIsGenerating(false)
     }
   },
 
@@ -171,12 +170,12 @@ export function TalentRegistrationForm() {
             if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
               newSkills.push(skill)
             }
-          }),
+          })
         }
       }),
         
       if (newSkills.length > 0) {
-        setSkillTags([...skillTags, ...newSkills]),
+        setSkillTags([...skillTags, ...newSkills])
       }
     }
   },
@@ -212,9 +211,9 @@ export function TalentRegistrationForm() {
           </div>
           `
         }
-      }),
+      })
     } catch (error) {
-      console.error("Failed to send notification email:", error),
+      console.error("Failed to send notification email:", error)
     }
   },
 
@@ -225,7 +224,7 @@ export function TalentRegistrationForm() {
         title: "Skills required",
         description: "Please add at least one skill to your profile.",
         variant: "destructive"}),
-      return,
+      return
     }
 
     setIsSubmitting(true),
@@ -233,7 +232,7 @@ export function TalentRegistrationForm() {
     try {
       // For actual implementation with Supabase
       if (!user?.id) {
-        throw new Error("User not authenticated"),
+        throw new Error("User not authenticated")
       }
       
       // Enhance profile if not already done
@@ -267,20 +266,20 @@ export function TalentRegistrationForm() {
                   if (typeof skill === 'string' && skill) {
                     aiSkills.push(skill)
                   }
-                }),
+                })
               }
             }),
             
             // Create a unique set of skills
-            finalSkills = [...new Set([...skillTags, ...aiSkills])],
+            finalSkills = [...new Set([...skillTags, ...aiSkills])]
           }
         } catch (error) {
           console.error("Error enhancing profile:", error),
           // Continue with submission even if enhancement fails
-          finalSummary = "",
+          finalSummary = ""
         }
       } else if (generatedContent) {
-        finalSummary = generatedContent.summary,
+        finalSummary = generatedContent.summary
       }
 
       // Get user email for notification
@@ -296,10 +295,10 @@ export function TalentRegistrationForm() {
         
         // Send notification email if we have user email
         if (userEmail && values.enhancedProfile) {
-          sendEnhancementNotification(user.id, userEmail),
+          sendEnhancementNotification(user.id, userEmail)
         }
         
-        setIsSubmitting(false),
+        setIsSubmitting(false)
       }, 1500),
 
       // Here would be the actual code to save the profile to Supabase
@@ -328,7 +327,7 @@ export function TalentRegistrationForm() {
         title: "Error Creating Profile",
         description: error.message || "There was an error creating your profile. Please try again.",
         variant: "destructive"}),
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
@@ -760,5 +759,5 @@ export function TalentRegistrationForm() {
         </Form>
       </Card>
     </div>
-  ),
+  )
 }

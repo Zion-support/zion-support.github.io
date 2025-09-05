@@ -49,12 +49,12 @@ export interface RegionFilterProps extends FilterComponentProps {
 
 export interface ExperienceFilterProps extends FilterComponentProps {
   experienceRange: [number, number],
-  setExperienceRange: (range: [number, number]) => void,
+  setExperienceRange: (range: [number, number]) => void
 }
 
 export interface PriceFilterProps extends FilterComponentProps {
   priceRange: [number, number],
-  setPriceRange: (range: [number, number]) => void,
+  setPriceRange: (range: [number, number]) => void
 }
 
 export interface SearchFilterProps {

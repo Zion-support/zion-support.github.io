@@ -11,7 +11,6 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',
 import { toast } from '@/hooks/use-toast',
 import { supabase } from '@/integrations/supabase/client',
-
 // Form schema
 const formSchema = z.object({
   brand_name: z.string().min(2, { message: 'Brand name must be at least 2 characters' }),
@@ -21,7 +20,7 @@ const formSchema = z.object({
     .regex(/^[a-z0-9-]+$/, { message: 'Subdomain can only contain lowercase letters, numbers, and hyphens' }),
   custom_domain: z.string().optional(),
   primary_color: z.string().regex(/^#([0-9A-F]{6})$/i, { message: 'Must be a valid hex color' }),
-  theme_preset: z.enum(['lightdark', 'neoncorporate', 'startup']),
+  theme_preset: z.enum(['lightdarkneoncorporatestartup']),
   headline: z.string().min(5, { message: 'Headline must be at least 5 characters' }),
   subtitle: z.string().min(5, { message: 'Subtitle must be at least 5 characters' }),
   cta: z.string().min(2, { message: 'CTA text must be at least 2 characters' })}),
@@ -70,12 +69,12 @@ export function WhitelabelRequestForm() {
         description: `${values.brand_name} has been set up with subdomain ${values.subdomain}`}),
       
       // Reset form
-      form.reset(),
+      form.reset()
     } catch (error: any) {
       toast({
         variant: 'destructive',
         title: 'Error creating tenant',
-        description: error.message || 'Something went wrong'}),
+        description: error.message || 'Something went wrong'})
     }
   },
 
@@ -238,5 +237,5 @@ export function WhitelabelRequestForm() {
         </p>
       </CardFooter>
     </Card>
-  ),
+  )
 }

@@ -11,7 +11,7 @@ export function SkipLink({ targetId, children }: { targetId: string, children: R
     >
       {children}
     </a>
-  ),
+  )
 }
 
 // Live region for screen reader announcements
@@ -33,7 +33,7 @@ export function LiveRegion({
     >
       {message}
     </div>
-  ),
+  )
 }
 
 // Focus trap for modals and dialogs
@@ -60,17 +60,17 @@ export function useFocusTrap(enabled: boolean = true) {
         } else {
           if (document.activeElement === lastElement) {
             e.preventDefault(),
-            firstElement.focus(),
+            firstElement.focus()
           }
         }
       }
     },
 
     container.addEventListener("keydown", handleKeyDown),
-    return () => container.removeEventListener("keydown", handleKeyDown),
+    return () => container.removeEventListener("keydown", handleKeyDown)
   }, [enabled]),
 
-  return containerRef,
+  return containerRef
 }
 
 // Keyboard navigation hook
@@ -100,10 +100,10 @@ export function useKeyboardNavigation(items: any[], onSelect: (item: any) => voi
 
   useEffect(() => {
     document.addEventListener("keydown", handleKeyDown),
-    return () => document.removeEventListener("keydown", handleKeyDown),
+    return () => document.removeEventListener("keydown", handleKeyDown)
   }, [items, selectedIndex, onSelect]),
 
-  return { selectedIndex, setSelectedIndex },
+  return { selectedIndex, setSelectedIndex }
 }
 
 // Announcement component for screen readers
@@ -122,10 +122,10 @@ export function Announcement({
       
       // Clear announcement after a delay
       const timer = setTimeout(() => {
-        setAnnouncements(prev => prev.slice(1)),
+        setAnnouncements(prev => prev.slice(1))
       }, 1000),
 
-      return () => clearTimeout(timer),
+      return () => clearTimeout(timer)
     }
   }, [message]),
 
@@ -135,7 +135,7 @@ export function Announcement({
         <div key={index}>{announcement}</div>
       ))}
     </div>
-  ),
+  )
 }
 
 // Progress indicator component
@@ -168,7 +168,7 @@ export function ProgressIndicator({
         />
       </div>
     </div>
-  ),
+  )
 }
 
 // Collapsible section component
@@ -211,7 +211,7 @@ export function CollapsibleSection({
         </div>
       </div>
     </div>
-  ),
+  )
 }
 
 // Tooltip component with proper accessibility
@@ -258,5 +258,5 @@ export function Tooltip({
         </div>
       )}
     </div>
-  ),
+  )
 }

@@ -3,7 +3,6 @@ import React, { createContext, useState, useContext, useEffect, ReactNode } from
 import { useLocation } from 'react-router-dom',
 import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
-
 // Analytics event types
 export type AnalyticsEventType = 
   | 'page_view'
@@ -80,9 +79,9 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
         metadata: metadata
       }]),
       
-      // // // console.log(`Analytics event tracked: ${type}`, metadata),
+      // // // console.log(`Analytics event tracked: ${type}`, metadata)
     } catch (error) {
-      console.error('Error logging analytics event:', error),
+      console.error('Error logging analytics event:', error)
     }
   },
 
@@ -92,13 +91,13 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
       conversionType, 
       value, 
       ...metadata 
-    }),
+    })
   },
   
   // Clear events (for development or testing)
   const clearEvents = () => {
     setEvents([]),
-    setLastEvent(null),
+    setLastEvent(null)
   },
 
   return (
@@ -114,15 +113,15 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
     >
       {children}
     </AnalyticsContext.Provider>
-  ),
+  )
 }
 
 export const useAnalytics = (): AnalyticsContextType => {
   const context = useContext(AnalyticsContext),
   if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider'),
+    throw new Error('useAnalytics must be used within an AnalyticsProvider')
   }
   // Cast is used here because the context default is undefined until provided
   // by `AnalyticsProvider`. The runtime check above ensures it's defined.
-  return context as AnalyticsContextType,
+  return context as AnalyticsContextType
 },

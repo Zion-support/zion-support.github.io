@@ -10,7 +10,6 @@ import {
 import { innovativeMicroSaasExpansionV32025 } from '../data/2025-innovative-micro-saas-expansion-v3',
 import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3',
 import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3',
-
 const Innovative2025ServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
@@ -44,7 +43,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase()),
     
-    return matchesCategory && matchesSearch,
+    return matchesCategory && matchesSearch
   }),
 
   const stats = [
@@ -280,7 +279,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                   <button
                     onClick={() => {
                       setSearchTerm(''),
-                      setSelectedCategory('all'),
+                      setSelectedCategory('all')
                     }}
                     className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
                   >

@@ -4,7 +4,6 @@ import path from 'path',
 import mime from 'mime-types',
 import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage',
 import { requireSuperadminApi } from '../../../../utils/api/auth',
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return,
   const section = String(req.query.section || 'General'),
@@ -15,5 +14,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const contentType = (mime.lookup(fullPath) as string) || 'application/octet-stream',
   res.setHeader('Content-Type', contentType),
   appendAuditLog({ type: 'file_open', section, name: file }),
-  fs.createReadStream(fullPath).pipe(res),
+  fs.createReadStream(fullPath).pipe(res)
 }

@@ -7,7 +7,6 @@ import {
 } from 'lucide-react',
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion',
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025',
-
 export default function ComprehensiveServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [selectedService, setSelectedService] = useState<string | null>(null),
@@ -45,7 +44,7 @@ export default function ComprehensiveServicesShowcase() {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
-      return matchesCategory && matchesSearch,
+      return matchesCategory && matchesSearch
     })
     .sort((a, b) => {
       switch (sortBy) {
@@ -67,7 +66,7 @@ export default function ComprehensiveServicesShowcase() {
   },
 
   const formatPrice = (price: string) => {
-    return price.replace('$', '').replace(, ''),
+    return price.replace('$', '').replace(, '')
   },
 
   return (

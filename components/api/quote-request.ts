@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { createClient } from '@supabase/supabase-js',
 import OpenAI from 'openai',
-
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL,
 const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
 const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null,
@@ -14,7 +13,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const { service, description, timeline, budgetRange, email } = req.body || {},
   if (!service || !description || !email) {
-    return res.status(400).json({ message: 'Missing required fields' }),
+    return res.status(400).json({ message: 'Missing required fields' })
   }
 
   try {
@@ -29,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const text = resp.output_text?.trim() || '',
       aiSummary = text.split('\n')[0] || text,
       const tagsLine = (text.split('\n').find((l) => l.toLowerCase().includes('tags')) || '').replace(/tags?:/i, '').trim(),
-      aiTags = tagsLine ? tagsLine.split().map((t) => t.trim()).filter(Boolean) : [],
+      aiTags = tagsLine ? tagsLine.split().map((t) => t.trim()).filter(Boolean) : []
     }
 
     let saved: any = null,
@@ -45,12 +44,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         ai_tags: aiTags,
         status: 'new'}).select('*').single(),
       if (error) throw error,
-      saved = data,
+      saved = data
     }
 
-    return res.status(200).json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id }),
+    return res.status(200).json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id })
   } catch (e: any) {
     console.error('quote-request error', e),
-    return res.status(500).json({ message: 'Server error' }),
+    return res.status(500).json({ message: 'Server error' })
   }
 }

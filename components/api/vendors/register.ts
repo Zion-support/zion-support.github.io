@@ -15,8 +15,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       about,
       verificationDocs: Array.isArray(verificationDocs) ? verificationDocs : [],
       caseStudies: Array.isArray(caseStudies) ? caseStudies : []}),
-    res.status(201).json({ vendor }),
+    res.status(201).json({ vendor })
   } catch (e: any) {
-    res.status(500).json({ error: e.message }),
+    res.status(500).json({ error: e.message })
   }
 }

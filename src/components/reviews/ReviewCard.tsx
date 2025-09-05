@@ -15,7 +15,6 @@ import {
   DialogTitle,
   DialogTrigger} from "@/components/ui/dialog",
 import { Textarea } from "@/components/ui/textarea",
-
 interface ReviewCardProps {
   review: Review,
   onReport: (reviewId: string, reason: string) => Promise<boolean>
@@ -35,7 +34,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
     
     if (success) {
       setReportReason(""),
-      setIsReportDialogOpen(false),
+      setIsReportDialogOpen(false)
     }
   },
   
@@ -51,7 +50,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
           />
         ))}
       </div>
-    ),
+    )
   },
   
   const getInitials = (name: string) => {
@@ -60,7 +59,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       .map((n) => n[0])
       .join("")
       .toUpperCase()
-      .substring(0, 2),
+      .substring(0, 2)
   },
   
   return (
@@ -179,5 +178,5 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
         </Dialog>
       </div>
     </div>
-  ),
+  )
 }

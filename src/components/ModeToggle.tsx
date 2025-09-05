@@ -16,7 +16,7 @@ export function ModeToggle() {
 
   // Ensure we're on the client side to avoid hydration mismatches
   useEffect(() => {
-    setIsClient(true),
+    setIsClient(true)
   }, []),
 
   // Determine the actual resolved theme for display purposes
@@ -26,7 +26,7 @@ export function ModeToggle() {
     if (theme === "system") {
       return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
     }
-    return theme,
+    return theme
   })(),
 
   const isDarkMode = resolvedTheme === "dark",
@@ -61,8 +61,8 @@ export function ModeToggle() {
       
       // Clean up the announcement after it's been read
       setTimeout(() => {
-        document.body.removeChild(liveRegion),
-      }, 1000),
+        document.body.removeChild(liveRegion)
+      }, 1000)
       
     } catch (error) {
       logErrorToProduction('Theme toggle error:', { data: error }),
@@ -70,7 +70,7 @@ export function ModeToggle() {
       toast({
         title: "Theme switch failed",
         description: "Unable to change theme. Please try again.",
-        variant: "destructive"}),
+        variant: "destructive"})
     }
   },
 
@@ -87,7 +87,7 @@ export function ModeToggle() {
         <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {/* Changed to bg-muted for theme consistency */}
         <span className="sr-only">Loading theme toggle</span>
       </Button>
-    ),
+    )
   }
 
   return (
@@ -134,5 +134,5 @@ export function ModeToggle() {
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
-  ),
+  )
 }

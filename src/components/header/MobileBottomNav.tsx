@@ -9,7 +9,7 @@ import { logWarn } from '@/utils/productionLogger',
 import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
 
 interface MobileBottomNavProps {
-  unreadCount?: number,
+  unreadCount?: number
 }
 
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
@@ -22,9 +22,9 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const cartContextValue = useCart(), // Call hook at top level
   let cartCount = 0,
   if (cartContextValue && cartContextValue.items) {
-    cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0),
+    cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0)
   } else {
-    // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0."),
+    // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
   }
 
   const navItems = [
@@ -111,5 +111,5 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
         ))}
       </div>
     </nav>
-  ),
+  )
 }

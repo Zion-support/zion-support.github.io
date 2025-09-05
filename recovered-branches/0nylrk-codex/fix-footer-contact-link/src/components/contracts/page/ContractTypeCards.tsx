@@ -70,5 +70,5 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         </CardFooter>
       </Card>
     </div>
-  ),
+  )
 }

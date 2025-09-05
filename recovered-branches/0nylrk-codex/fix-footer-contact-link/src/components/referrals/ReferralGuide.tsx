@@ -38,5 +38,5 @@ export function ReferralGuide() {
         </div>
       </CardContent>
     </Card>
-  ),
+  )
 }

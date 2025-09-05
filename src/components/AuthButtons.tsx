@@ -2,14 +2,13 @@ import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Facebook } from 'lucide-react'
 import { signIn } from 'next-auth/react',
-
 type Provider = 'google' | 'github' | 'facebook' | 'credentials',
 
 interface AuthButtonsProps {
-  providers?: Provider[],
+  providers?: Provider[]
 }
 
-export function AuthButtons({ providers = ['googlegithub', 'facebookcredentials'] }: AuthButtonsProps) {
+export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }: AuthButtonsProps) {
   const [loadingProvider, setLoadingProvider] = useState<string | null>(null),
 
   const handleSignIn = async (provider: Provider) => {
@@ -92,5 +91,5 @@ export function AuthButtons({ providers = ['googlegithub', 'facebookcredentials'
         </Button>
       )}
     </div>
-  ),
+  )
 }

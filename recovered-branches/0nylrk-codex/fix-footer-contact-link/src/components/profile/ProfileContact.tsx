@@ -5,7 +5,6 @@ import { Textarea } from "@/components/ui/textarea",
 import { Mail, Send } from "lucide-react",
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
-
 interface ProfileContactProps {
   email?: string,
   profileName: string,
@@ -28,8 +27,8 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
       setSubject(""),
       toast({
         title: "Message Sent",
-        description: `Your message has been sent to ${profileName}.`}),
-    }, 1000),
+        description: `Your message has been sent to ${profileName}.`})
+    }, 1000)
   },
 
   return (
@@ -82,5 +81,5 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         </div>
       </form>
     </div>
-  ),
+  )
 }

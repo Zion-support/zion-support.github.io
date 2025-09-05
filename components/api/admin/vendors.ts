@@ -11,8 +11,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     else if (action === 'unsuspend') suspendVendor(String(vendorId), false),
     else if (action === 'commission') setVendorCommission(String(vendorId), Number(value)),
     else return res.status(400).json({ error: 'Unknown action' }),
-    res.status(200).json({ ok: true }),
+    res.status(200).json({ ok: true })
   } catch (e: any) {
-    res.status(500).json({ error: e.message }),
+    res.status(500).json({ error: e.message })
   }
 }

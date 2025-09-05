@@ -9,12 +9,10 @@ import {
   Eye, Clock, DollarSign, CheckCircle, ArrowUpRight
 } from 'lucide-react',
 import Link from 'next/link',
-
 // Import our new innovative services
 import { innovative2046AIServices } from '../data/innovative-2046-ai-services',
 import { innovative2046ITServices } from '../data/innovative-2046-it-services',
 import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services',
-
 // Enhanced loading component with quantum effects
 const QuantumLoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden">
@@ -105,10 +103,10 @@ const Homepage2046: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false),
-      setIsVisible(true),
+      setIsVisible(true)
     }, 2000),
 
-    return () => clearTimeout(timer),
+    return () => clearTimeout(timer)
   }, []),
 
   // Intersection Observer for better performance
@@ -120,7 +118,7 @@ const Homepage2046: React.FC = () => {
             if (entry.isIntersecting) {
               setActiveSection(entry.target.id)
             }
-          }),
+          })
         },
         { threshold: 0.3 }
       ),
@@ -128,12 +126,12 @@ const Homepage2046: React.FC = () => {
       const sections = document.querySelectorAll('section[id]'),
       sections.forEach((section) => observer.observe(section)),
 
-      return () => observer.disconnect(),
+      return () => observer.disconnect()
     }
   }, []),
 
   if (isLoading) {
-    return <QuantumLoadingFallback />,
+    return <QuantumLoadingFallback />
   }
 
   const allServices = [
@@ -146,7 +144,7 @@ const Homepage2046: React.FC = () => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()),
-    return matchesCategory && matchesSearch,
+    return matchesCategory && matchesSearch
   }),
 
   const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))],

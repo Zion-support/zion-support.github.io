@@ -5,8 +5,6 @@ import { Button } from "@/components/ui/button",
 import Link from "next/link",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { logWarn } from '@/utils/productionLogger',
-
-
 interface ServiceStatus {
   name: string,
   status: 'operational' | 'degraded' | 'outage' | 'maintenance',
@@ -51,11 +49,11 @@ export default function Status() {
     // Try to load external status page, fallback after timeout
     const timeout = setTimeout(() => {
       if (!externalStatusLoaded) {
-        setShowFallback(true),
+        setShowFallback(true)
       }
     }, 5000), // 5 second timeout
 
-    return () => clearTimeout(timeout),
+    return () => clearTimeout(timeout)
   }, [externalStatusLoaded]),
 
   useEffect(() => {
@@ -65,13 +63,13 @@ export default function Status() {
         if (!res.ok) return,
         const data = await res.json(),
         if (typeof data.uptime === 'number') {
-          setUptime(data.uptime),
+          setUptime(data.uptime)
         }
       } catch (err) {
-        logWarn('Failed to fetch uptime', { data: err }),
+        logWarn('Failed to fetch uptime', { data: err })
       }
     }
-    fetchUptime(),
+    fetchUptime()
   }, []),
 
   const getStatusIcon = (status: ServiceStatus['status']) => {
@@ -127,7 +125,7 @@ export default function Status() {
     if (days > 0) parts.push(`${days}d`),
     if (hours > 0) parts.push(`${hours}h`),
     parts.push(`${minutes}m`),
-    return parts.join(' '),
+    return parts.join(' ')
   },
 
   return (

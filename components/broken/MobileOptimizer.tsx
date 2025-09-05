@@ -60,17 +60,17 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       
       // Apply mobile-specific optimizations
       if (isMobileDevice && enableMobileLayout) {
-        applyMobileLayout(),
+        applyMobileLayout()
       }
       
       if (isMobileDevice && enablePerformanceMode) {
-        enableMobilePerformanceMode(),
+        enableMobilePerformanceMode()
       }
     },
 
     checkDevice(),
     window.addEventListener('resize', checkDevice),
-    return () => window.removeEventListener('resize', checkDevice),
+    return () => window.removeEventListener('resize', checkDevice)
   }, [enableMobileLayout, enablePerformanceMode]),
 
   // Detect orientation changes
@@ -81,9 +81,9 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       
       // Apply orientation-specific optimizations
       if (newOrientation === 'landscape') {
-        applyLandscapeOptimizations(),
+        applyLandscapeOptimizations()
       } else {
-        applyPortraitOptimizations(),
+        applyPortraitOptimizations()
       }
     },
 
@@ -93,8 +93,8 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     
     return () => {
       window.removeEventListener('orientationchange', checkOrientation),
-      window.removeEventListener('resize', checkOrientation),
-    },
+      window.removeEventListener('resize', checkOrientation)
+    }
   }, []),
 
   // Touch gesture handling
@@ -107,7 +107,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
           x: e.touches[0].clientX,
           y: e.touches[0].clientY,
           time: Date.now()
-        },
+        }
       }
     },
 
@@ -117,11 +117,11 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
           x: e.touches[0].clientX,
           y: e.touches[0].clientY,
           time: Date.now()
-        },
+        }
       }
     }),
     
-    setTimeout(() => setIsOptimizing(false), 2000),
+    setTimeout(() => setIsOptimizing(false), 2000)
   }, []),
 
   // Touch gesture optimization
@@ -133,19 +133,19 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         const gesture = detectTouchGesture(touchStartRef.current, touchMoveRef.current),
         if (gesture) {
           setTouchGestures(prev => [...prev.slice(-4), gesture]),
-          handleGestureAction(gesture),
+          handleGestureAction(gesture)
         }
         
         touchStartRef.current = null,
-        touchMoveRef.current = null,
+        touchMoveRef.current = null
       }
     }),
     
     // Optimize fonts for high DPI
     const fonts = document.querySelectorAll('link[rel="preload"][as="font"]'),
     fonts.forEach(font => {
-      font.setAttribute('crossoriginanonymous'),
-    }),
+      font.setAttribute('crossoriginanonymous')
+    })
   }, []),
 
     const handleLongPress = (e: TouchEvent) => {
@@ -155,13 +155,13 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
           duration: 1000
         },
         setTouchGestures(prev => [...prev.slice(-4), gesture]),
-        handleGestureAction(gesture),
+        handleGestureAction(gesture)
       }, 1000),
 
       const clearLongPress = () => clearTimeout(longPressTimer),
       
       e.target?.addEventListener('touchend', clearLongPress, { once: true }),
-      e.target?.addEventListener('touchmove', clearLongPress, { once: true }),
+      e.target?.addEventListener('touchmove', clearLongPress, { once: true })
     },
 
     document.addEventListener('touchstart', handleTouchStart, { passive: true }),
@@ -173,8 +173,8 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       document.removeEventListener('touchstart', handleTouchStart),
       document.removeEventListener('touchmove', handleTouchMove),
       document.removeEventListener('touchend', handleTouchEnd),
-      document.removeEventListener('touchstart', handleLongPress),
-    },
+      document.removeEventListener('touchstart', handleLongPress)
+    }
   }, [enableTouchGestures, isMobile]),
 
   // Performance monitoring
@@ -195,10 +195,10 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         setPerformanceMetrics(prev => ({
           ...prev,
           fps: fpsRef.current
-        })),
+        }))
       }
       
-      animationFrameId = requestAnimationFrame(measurePerformance),
+      animationFrameId = requestAnimationFrame(measurePerformance)
     },
 
     animationFrameId = requestAnimationFrame(measurePerformance),
@@ -210,7 +210,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         setPerformanceMetrics(prev => ({
           ...prev,
           memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024) // MB
-        })),
+        }))
       }
     }, 2000),
 
@@ -221,14 +221,14 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
           setPerformanceMetrics(prev => ({
             ...prev,
             batteryLevel: Math.round(battery.level * 100)
-          })),
+          }))
         },
         
         updateBatteryLevel(),
         battery.addEventListener('levelchange', updateBatteryLevel),
         
-        return () => battery.removeEventListener('levelchange', updateBatteryLevel),
-      }),
+        return () => battery.removeEventListener('levelchange', updateBatteryLevel)
+      })
     }
 
     // Monitor network speed
@@ -237,27 +237,27 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       const updateNetworkSpeed = () => {
         let speed = 'unknown',
         if (connection.effectiveType) {
-          speed = connection.effectiveType,
+          speed = connection.effectiveType
         } else if (connection.downlink) {
-          speed = `${connection.downlink} Mbps`,
+          speed = `${connection.downlink} Mbps`
         }
         
         setPerformanceMetrics(prev => ({
           ...prev,
           networkSpeed: speed
-        })),
+        }))
       },
       
       updateNetworkSpeed(),
       connection.addEventListener('change', updateNetworkSpeed),
       
-      return () => connection.removeEventListener('change', updateNetworkSpeed),
+      return () => connection.removeEventListener('change', updateNetworkSpeed)
     }
 
     return () => {
       cancelAnimationFrame(animationFrameId),
-      clearInterval(memoryInterval),
-    },
+      clearInterval(memoryInterval)
+    }
   }, [enablePerformanceMode]),
 
   const detectTouchGesture = (start: { x: number, y: number, time: number }, end: { x: number, y: number, time: number }): TouchGesture | null => {
@@ -276,14 +276,14 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         direction: deltaX > 0 ? 'right' : 'left',
         distance: Math.abs(deltaX),
         duration
-      },
+      }
     } else {
       return {
         type: 'swipe',
         direction: deltaY > 0 ? 'down' : 'up',
         distance: Math.abs(deltaY),
         duration
-      },
+      }
     }
   },
 
@@ -298,20 +298,20 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         } else if (gesture.direction === 'right') {
           // Navigate back
           if (window.history.length > 1) {
-            window.history.back(),
+            window.history.back()
           }
         } else if (gesture.direction === 'up') {
           // Scroll to top
-          window.scrollTo({ top: 0, behavior: 'smooth' }),
+          window.scrollTo({ top: 0, behavior: 'smooth' })
         } else if (gesture.direction === 'down') {
           // Scroll to bottom
-          window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }),
+          window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
         }
         break,
       case 'longPress':
         // Show context menu or additional options
         // // // console.log('Long press detected'),
-        break,
+        break
     }
   },
 
@@ -322,7 +322,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     // Optimize viewport
     const viewport = document.querySelector('meta[name="viewport"]'),
     if (viewport) {
-      viewport.setAttribute('contentwidth=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'),
+      viewport.setAttribute('contentwidth=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
     }
     
     // Add touch-action CSS
@@ -345,7 +345,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         font-size: 16px, /* Prevents zoom on iOS */
       }
     `,
-    document.head.appendChild(style),
+    document.head.appendChild(style)
   },
 
   const enableMobilePerformanceMode = () => {
@@ -356,7 +356,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     const images = document.querySelectorAll('img'),
     images.forEach(img => {
       img.loading = 'lazy',
-      img.decoding = 'async',
+      img.decoding = 'async'
     }),
     
     // Reduce motion for better performance
@@ -377,12 +377,12 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         height: 100vh
       }
     `,
-    document.head.appendChild(style),
+    document.head.appendChild(style)
   },
 
   const applyPortraitOptimizations = () => {
     // Portrait-specific optimizations
-    document.documentElement.classList.remove('landscape-mode'),
+    document.documentElement.classList.remove('landscape-mode')
   },
 
   const optimizeForMobile = useCallback(() => {
@@ -392,22 +392,22 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     const images = document.querySelectorAll('img'),
     images.forEach(img => {
       if (!img.loading) img.loading = 'lazy',
-      if (!img.decoding) img.decoding = 'async',
+      if (!img.decoding) img.decoding = 'async'
     }),
 
     // Optimize fonts
     const fonts = document.querySelectorAll('link[rel="preload"][as="font"]'),
     fonts.forEach(font => {
-      font.setAttribute('crossoriginanonymous'),
+      font.setAttribute('crossoriginanonymous')
     }),
 
     // Add mobile-specific event listeners
     document.addEventListener('touchstart', () => {}, { passive: true }),
-    document.addEventListener('touchmove', () => {}, { passive: true }),
+    document.addEventListener('touchmove', () => {}, { passive: true })
   }, [isMobile]),
 
   useEffect(() => {
-    optimizeForMobile(),
+    optimizeForMobile()
   }, [optimizeForMobile]),
 
   useEffect(() => {
@@ -428,8 +428,8 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     return () => {
       window.removeEventListener('orientationchange', handleOrientationChange),
       window.removeEventListener('resize', handleResize),
-      mediaQuery.removeEventListener('change', handleMediaQueryChange),
-    },
+      mediaQuery.removeEventListener('change', handleMediaQueryChange)
+    }
   }, [handleOrientationChange, handleResize]),
 
   if (!showPanel || !isVisible) return null,
@@ -602,7 +602,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         }
       `}</style>
     </>
-  ),
+  )
 },
 
 export default MobileOptimizer,

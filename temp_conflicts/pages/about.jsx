@@ -1,7 +1,6 @@
 
 import Head from 'next/head',
 import EnhancedLayout from '../components/layout/EnhancedLayout',
-
 const About = () => {
   const values = [
     {

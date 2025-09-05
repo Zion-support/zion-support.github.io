@@ -10,7 +10,6 @@ import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services',
 import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034',
 import Link from 'next/link',
-
 const Services2024Page: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
@@ -37,7 +36,7 @@ const Services2024Page: React.FC = () => {
                              (selectedCategory === 'project' && service.variant.includes('project')) ||
                              (selectedCategory === 'customer' && service.variant.includes('customer')),
       
-      return matchesSearch && matchesCategory,
+      return matchesSearch && matchesCategory
     }),
 
     // Sort services
@@ -62,13 +61,13 @@ const Services2024Page: React.FC = () => {
       }
       
       if (sortOrder === 'asc') {
-        return aValue > bValue ? 1 : -1,
+        return aValue > bValue ? 1 : -1
       } else {
-        return aValue < bValue ? 1 : -1,
+        return aValue < bValue ? 1 : -1
       }
     }),
 
-    return filtered,
+    return filtered
   }, [allServices, searchQuery, selectedCategory, sortBy, sortOrder]),
 
   const categories = [

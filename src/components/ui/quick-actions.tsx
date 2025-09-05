@@ -22,7 +22,7 @@ export function QuickActions() {
   const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin,
 
   if (!isAllowed) {
-    return null,
+    return null
   }
 
   const [isVisible, setIsVisible] = useState(false),
@@ -33,9 +33,9 @@ export function QuickActions() {
     try {
       await action()
     } catch (error) {
-      logErrorToProduction(`Failed to execute action ${actionId}:`, { data: error }),
+      logErrorToProduction(`Failed to execute action ${actionId}:`, { data: error })
     } finally {
-      setIsProcessing(null),
+      setIsProcessing(null)
     }
   },
 
@@ -49,7 +49,7 @@ export function QuickActions() {
       category: 'performance',
       action: () => {
         localStorage.setItem('performance-monitoringtrue'),
-        window.location.reload(),
+        window.location.reload()
       }},
     {
       id: 'enable-bundle-analyzer',
@@ -59,7 +59,7 @@ export function QuickActions() {
       category: 'performance',
       action: () => {
         localStorage.setItem('bundle-analyzertrue'),
-        window.location.reload(),
+        window.location.reload()
       }},
     {
       id: 'clear-cache',
@@ -72,11 +72,11 @@ export function QuickActions() {
         if ('caches' in window) {
           caches.keys().then(names => {
             names.forEach(name => caches.delete(name))
-          }),
+          })
         }
         localStorage.clear(),
         sessionStorage.clear(),
-        window.location.reload(),
+        window.location.reload()
       }},
     {
       id: 'preload-critical-resources',
@@ -97,7 +97,7 @@ export function QuickActions() {
           link.type = 'font/woff2',
           link.crossOrigin = 'anonymous',
           link.href = font,
-          document.head.appendChild(link),
+          document.head.appendChild(link)
         }),
 
         // Preload critical images
@@ -110,8 +110,8 @@ export function QuickActions() {
           link.rel = 'preload',
           link.as = 'image',
           link.href = img,
-          document.head.appendChild(link),
-        }),
+          document.head.appendChild(link)
+        })
       }},
     {
       id: 'download-performance-report',
@@ -144,7 +144,7 @@ export function QuickActions() {
         document.body.appendChild(a),
         a.click(),
         document.body.removeChild(a),
-        URL.revokeObjectURL(url),
+        URL.revokeObjectURL(url)
       }},
     {
       id: 'test-error-boundary',
@@ -189,7 +189,7 @@ export function QuickActions() {
           Quick Actions
         </Button>
       </div>
-    ),
+    )
   }
 
   return (
@@ -253,5 +253,5 @@ export function QuickActions() {
         </CardContent>
       </Card>
     </div>
-  ),
+  )
 } 

@@ -5,7 +5,6 @@ import { ProfileData } from "@/types/profile",
 import { MOCK_TALENTS } from "@/data/mockTalents",
 import { MOCK_PROFILES } from "@/data/mockProfiles",
 import { convertProfileToTalentProfile } from "@/utils/profileConverter",
-
 export function useTalentProfile(id: string | undefined) {
   const [profile, setProfile] = useState<TalentProfileType | null>(null),
   const [isLoading, setIsLoading] = useState(true),
@@ -17,7 +16,7 @@ export function useTalentProfile(id: string | undefined) {
       if (!id) {
         setError("No profile ID provided"),
         setIsLoading(false),
-        return,
+        return
       }
 
       setIsLoading(true),
@@ -30,7 +29,7 @@ export function useTalentProfile(id: string | undefined) {
           const foundProfile = MOCK_TALENTS.find(talent => talent.id === id),
           
           if (foundProfile) {
-            setProfile(convertProfileToTalentProfile(foundProfile)),
+            setProfile(convertProfileToTalentProfile(foundProfile))
           } else {
             // Try fetching from ProfileData mock as fallback
             // This is just for development purposes
@@ -39,22 +38,22 @@ export function useTalentProfile(id: string | undefined) {
               setMockProfileData(mockProfile),
               // Convert the ProfileData to TalentProfileType
               const convertedProfile = convertProfileToTalentProfile(mockProfile),
-              setProfile(convertedProfile),
+              setProfile(convertedProfile)
             } else {
-              setError("Profile not found"),
+              setError("Profile not found")
             }
           }
-          setIsLoading(false),
-        }, 800),
+          setIsLoading(false)
+        }, 800)
       } catch (err) {
         console.error("Error fetching profile:", err),
         setError("Failed to load profile data"),
-        setIsLoading(false),
+        setIsLoading(false)
       }
     },
 
-    fetchProfile(),
+    fetchProfile()
   }, [id]),
 
-  return { profile, isLoading, error, mockProfileData },
+  return { profile, isLoading, error, mockProfileData }
 }

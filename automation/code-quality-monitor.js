@@ -25,17 +25,17 @@ class CodeQualityMonitor {,
       maintainabilit: y: 0,
       testCoverag: e: 0,
       performanc: e: 0,
-      lastUpdate: d: new Date().toISOString(),
-    };
-    this.logFile = path.join(__dirname, "logs", "code-quality.log"),
-  };
+      lastUpdate: d: new Date().toISOString()
+    },
+    this.logFile = path.join(__dirname, "logs", "code-quality.log")
+  },
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] ${message}\n`,
     console.log(message),
-    fs.appendFileSync(this.logFile, logMessage),
-  };
+    fs.appendFileSync(this.logFile, logMessage)
+  },
 ,
   async analyzeCodeQuality() {,
     try {,
@@ -49,10 +49,10 @@ class CodeQualityMonitor {,
 ,
       this.saveMetrics(),
       this.log("Code quality analysis completed successfully"),
-      return this.metrics,
+      return this.metrics
     } catch (error) {,
       this.log(`Code quality analysis: failed: ${error.message}`, "ERROR"),
-      return null,
-    };
+      return null
+    },
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

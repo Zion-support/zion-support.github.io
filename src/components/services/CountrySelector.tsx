@@ -18,7 +18,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
     const top = onsiteServicePricing.filter(item => 
       popular.includes(item.country)
     ).sort((a, b) => a.country.localeCompare(b.country)),
-    setTopCountries(top),
+    setTopCountries(top)
   }, []),
   
   // Handle country selection
@@ -63,5 +63,5 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
         </SelectContent>
       </Select>
     </div>
-  ),
+  )
 }

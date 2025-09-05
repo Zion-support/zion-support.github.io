@@ -1,7 +1,6 @@
 import type { GetServerSideProps } from 'next',
 import { FormEvent, useEffect, useState } from 'react',
 import type { Vendor } from '../utils/vendor-types',
-
 type Props = { vendor: Vendor | null },
 
 export default function AgencyDashboardPage({ vendor }: Props) {
@@ -24,7 +23,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
         .map(s => s.trim())
         .filter(Boolean)} as Vendor,
     // For MVP, update via direct API not implemented, keep local preview only
-    setActiveVendor(updated),
+    setActiveVendor(updated)
   }
 
   function addPackage() {
@@ -37,7 +36,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
     setActiveVendor({ ...activeVendor, packages }),
     setPkgTitle(''),
     setPkgDesc(''),
-    setPkgPrice(''),
+    setPkgPrice('')
   }
 
   return (
@@ -96,7 +95,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
 
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
-  ),
+  )
 }
 
 function Pipeline({ vendorId }: { vendorId: string }) {
@@ -105,7 +104,7 @@ function Pipeline({ vendorId }: { vendorId: string }) {
   async function fetchItems() {
     const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`),
     const data = await res.json(),
-    setItems(data.items || []),
+    setItems(data.items || [])
   }
 
   async function changeStatus(itemId: string, status: string) {
@@ -113,10 +112,10 @@ function Pipeline({ vendorId }: { vendorId: string }) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ itemId, status })}),
-    fetchItems(),
+    fetchItems()
   }
 
-  useEffect(() => { fetchItems(), }, []),
+  useEffect(() => { fetchItems() }, []),
 
   return (
     <div className="space-y-2">
@@ -138,11 +137,11 @@ function Pipeline({ vendorId }: { vendorId: string }) {
         </div>
       ))}
     </div>
-  ),
+  )
 }
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const { listVendors } = await import('../utils/vendor-store'),
   const vendor = listVendors()[0] || null, // tie to auth later
-  return { props: { vendor } },
+  return { props: { vendor } }
 },

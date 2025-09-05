@@ -9,7 +9,6 @@ import {
 } from 'lucide-react',
 import { ultimate2026Services } from '../data/ultimate-2026-services',
 import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations',
-
 export default function Ultimate2026ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
@@ -79,7 +78,7 @@ export default function Ultimate2026ServicesShowcase() {
         (selectedPriceRange === 'high' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) > 5000) ||
         (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing'),
 
-      return matchesSearch && matchesCategory && matchesPrice,
+      return matchesSearch && matchesCategory && matchesPrice
     }),
 
     // Sort services
@@ -91,7 +90,7 @@ export default function Ultimate2026ServicesShowcase() {
         filtered.sort((a, b) => {
           const priceA = a.price === 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g, '')),
           const priceB = b.price === 'Custom pricing' ? 999999 : parseInt(b.price.replace(/[^0-9]/g, '')),
-          return priceA - priceB,
+          return priceA - priceB
         }),
         break,
       case 'popularity':
@@ -103,7 +102,7 @@ export default function Ultimate2026ServicesShowcase() {
       default: break
     }
 
-    return filtered,
+    return filtered
   }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
 
   const featuredServices = allServices.filter(service => service.popular).slice(0, 6),
@@ -591,5 +590,5 @@ export default function Ultimate2026ServicesShowcase() {
         </div>
       </section>
     </>
-  ),
+  )
 }

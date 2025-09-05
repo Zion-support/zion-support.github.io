@@ -5,14 +5,13 @@ import { Button } from '@/components/ui/button',
 import { Card, CardContent } from '@/components/ui/card',
 import { Badge } from '@/components/ui/badge',
 import { cn } from '@/lib/utils',
-
 // Enhanced loading spinner with different variants
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl',
   variant?: 'default' | 'primary' | 'success' | 'warning' | 'error',
   className?: string,
   showText?: boolean,
-  text?: string,
+  text?: string
 }
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
@@ -42,7 +41,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       <Loader2 className={cn('animate-spin', sizeClasses[size], variantClasses[variant])} />
       {showText && <span className="text-sm text-muted-foreground">{text}</span>}
     </div>
-  ),
+  )
 },
 
 // Progressive loading component
@@ -50,7 +49,7 @@ interface ProgressiveLoadingProps {
   steps: Array<{ id: string, label: string, duration?: number }>,
   currentStep?: number,
   showProgress?: boolean,
-  onComplete?: () => void,
+  onComplete?: () => void
 }
 
 export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
@@ -64,13 +63,13 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
 
   useEffect(() => {
     if (currentStep !== undefined) {
-      setActiveStep(currentStep),
+      setActiveStep(currentStep)
     }
   }, [currentStep]),
 
   useEffect(() => {
     if (activeStep === steps.length - 1 && onComplete) {
-      setTimeout(onComplete, 500),
+      setTimeout(onComplete, 500)
     }
   }, [activeStep, steps.length, onComplete]),
 
@@ -113,7 +112,7 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
         ))}
       </div>
     </div>
-  ),
+  )
 },
 
 // Enhanced skeleton loader
@@ -121,7 +120,7 @@ interface SkeletonProps {
   className?: string,
   variant?: 'text' | 'circular' | 'rectangular' | 'card',
   animation?: 'pulse' | 'wave' | 'none',
-  lines?: number,
+  lines?: number
 }
 
 export const Skeleton: React.FC<SkeletonProps> = ({
@@ -161,7 +160,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
           />
         ))}
       </div>
-    ),
+    )
   }
 
   return (
@@ -173,7 +172,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
         className
       )}
     />
-  ),
+  )
 },
 
 // Enhanced error state component
@@ -194,7 +193,7 @@ interface ErrorStateProps {
   retryCount?: number,
   maxRetries?: number,
   onRetry?: () => void,
-  className?: string,
+  className?: string
 }
 
 export const ErrorState: React.FC<ErrorStateProps> = ({
@@ -223,11 +222,11 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
 
       return () => {
         window.removeEventListener('online', handleOnline),
-        window.removeEventListener('offline', handleOffline),
-      },
+        window.removeEventListener('offline', handleOffline)
+      }
     }
     
-    return undefined,
+    return undefined
   }, []),
 
   const getErrorConfig = () => {
@@ -262,7 +261,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
           title: title || 'Something went wrong',
           description: description || 'An unexpected error occurred. Please try again.',
           color: 'text-red-500'
-        },
+        }
     }
   },
 
@@ -325,7 +324,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
         </motion.div>
       </CardContent>
     </Card>
-  ),
+  )
 },
 
 // Loading state for lists/grids
@@ -333,7 +332,7 @@ interface LoadingGridProps {
   count?: number,
   columns?: number,
   variant?: 'card' | 'list' | 'table',
-  className?: string,
+  className?: string
 }
 
 export const LoadingGrid: React.FC<LoadingGridProps> = ({
@@ -395,7 +394,7 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
         </Card>
       ))}
     </div>
-  ),
+  )
 },
 
 // Performance indicator
@@ -403,7 +402,7 @@ interface PerformanceIndicatorProps {
   isLoading?: boolean,
   loadTime?: number,
   itemCount?: number,
-  className?: string,
+  className?: string
 }
 
 export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
@@ -424,7 +423,7 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
         <LoadingSpinner size="sm" />
         <span className="ml-1">Loading...</span>
       </Badge>
-    ),
+    )
   }
 
   return (
@@ -439,5 +438,5 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
         <span>{itemCount} items loaded</span>
       )}
     </div>
-  ),
+  )
 }, 

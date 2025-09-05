@@ -8,7 +8,6 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
-
 export default function CareersPage() {
   const [selectedDepartment, setSelectedDepartment] = useState('all'),
 

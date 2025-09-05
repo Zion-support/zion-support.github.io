@@ -4,7 +4,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { cn } from "@/lib/utils",
 import { format } from "date-fns",
 import { useTheme } from "@/hooks/useTheme",
-
 interface ChatMessageProps {
   message: string,
   isUser: boolean,
@@ -54,7 +53,7 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
         </div>
       </div>
     </div>
-  ),
+  )
 }
 
 // Function to convert URLs and help links to actual clickable links

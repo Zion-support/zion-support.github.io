@@ -11,7 +11,6 @@ import {
 import { innovative2025Services } from '../data/innovative-2025-services',
 import { emergingTech2025Services } from '../data/emerging-tech-2025-services',
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground',
-
 export default function EnhancedServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
@@ -64,9 +63,9 @@ export default function EnhancedServicesShowcase2025() {
       if (typeof price === 'string') {
         const match = price.replace(/[^0-9.]/g, ''),
         const parsed = parseFloat(match || '0'),
-        return isNaN(parsed) ? 0 : parsed,
+        return isNaN(parsed) ? 0 : parsed
       }
-      return 0,
+      return 0
     },
 
     let filtered = allServices.filter(service => {
@@ -88,7 +87,7 @@ export default function EnhancedServicesShowcase2025() {
                           (selectedPriceRange === 'high' && parsePriceToNumber(service.price) >= 8000 && parsePriceToNumber(service.price) < 20000) ||
                           (selectedPriceRange === 'premium' && parsePriceToNumber(service.price) >= 20000),
 
-      return matchesSearch && matchesCategory && matchesPrice,
+      return matchesSearch && matchesCategory && matchesPrice
     }),
 
     // Sort services
@@ -106,10 +105,10 @@ export default function EnhancedServicesShowcase2025() {
         filtered.sort((a, b) => b.customers - a.customers),
         break,
       default:
-        filtered.sort((a, b) => a.name.localeCompare(b.name)),
+        filtered.sort((a, b) => a.name.localeCompare(b.name))
     }
 
-    return filtered,
+    return filtered
   }, [searchTerm, selectedCategory, selectedPriceRange, sortBy, allServices]),
 
   const containerVariants = {

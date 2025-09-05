@@ -18,7 +18,6 @@ import {
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -117,7 +116,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()),
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
-    return matchesSearch && matchesCategory,
+    return matchesSearch && matchesCategory
   }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -433,7 +432,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
               <button
                 onClick={() => {
                   setSearchTerm(''),
-                  setSelectedCategory('all'),
+                  setSelectedCategory('all')
                 }}
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
               >

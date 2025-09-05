@@ -24,8 +24,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         talent: results.talent.length,
         jobs: results.jobs.length,
         projects: results.projects.length},
-      results}),
+      results})
   } catch (e: any) {
-    res.status(500).json({ ok: false, error: e?.message || 'Search failed' }),
+    res.status(500).json({ ok: false, error: e?.message || 'Search failed' })
   }
 }

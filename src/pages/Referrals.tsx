@@ -91,5 +91,5 @@ export default function ReferralsPage() {
         </div>
       </div>
     </div>
-  ),
+  )
 }

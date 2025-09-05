@@ -1,7 +1,6 @@
 
 import Head from 'next/head',
 import Link from 'next/link',
-
 const QualityAssuranceTestingChat = () => {
   return (
     <div>
@@ -16,7 +15,7 @@ const QualityAssuranceTestingChat = () => {
         <Link href="/services">Back to Services</Link>
       </main>
     </div>
-  ),
+  )
 },
 
 export default QualityAssuranceTestingChat,

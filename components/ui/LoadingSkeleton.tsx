@@ -1,11 +1,10 @@
 import React from 'react',
 import { motion } from 'framer-motion',
-
 interface SkeletonProps {
   className?: string,
   height?: string,
   width?: string,
-  rounded?: string,
+  rounded?: string
 }
 
 const Skeleton: React.FC<SkeletonProps> = ({ 
@@ -24,11 +23,11 @@ const Skeleton: React.FC<SkeletonProps> = ({
         repeat: Infinity,
         ease: "easeInOut"}}
     />
-  ),
+  )
 },
 
 interface ServiceCardSkeletonProps {
-  className?: string,
+  className?: string
 }
 
 export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '' }) => {
@@ -45,11 +44,11 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
       <Skeleton className="h-4 w-5/6 mb-2" />
       <Skeleton className="h-4 w-4/6" />
     </div>
-  ),
+  )
 },
 
 interface HeroSkeletonProps {
-  className?: string,
+  className?: string
 }
 
 export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) => {
@@ -69,7 +68,7 @@ export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) =>
 },
 
 interface StatsSkeletonProps {
-  className?: string,
+  className?: string
 }
 
 export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) => {
@@ -87,7 +86,7 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
         </div>
       </div>
     </div>
-  ),
+  )
 },
 
 export default Skeleton,

@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react',
 import { useRouter } from 'next/router',
-
 export default function GlobalSearchBar() {
   const router = useRouter(),
   const [query, setQuery] = useState(''),
@@ -11,7 +10,7 @@ export default function GlobalSearchBar() {
   useEffect(() => {
     if (!query) {
       setSuggestions([]),
-      return,
+      return
     }
     controller.current?.abort(),
     controller.current = new AbortController(),
@@ -20,11 +19,11 @@ export default function GlobalSearchBar() {
         const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, { signal: controller.current!.signal }),
         const j = await r.json(),
         setSuggestions(j.suggestions || []),
-        setOpen(true),
+        setOpen(true)
       } catch {}
     },
     const id = setTimeout(run, 150),
-    return () => clearTimeout(id),
+    return () => clearTimeout(id)
   }, [query]),
 
   const onSubmit = (e?: React.FormEvent) => {
@@ -32,7 +31,7 @@ export default function GlobalSearchBar() {
     if (!query.trim()) return,
     fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch(() => {}),
     router.push(`/search?q=${encodeURIComponent(query)}`),
-    setOpen(false),
+    setOpen(false)
   },
 
   const startVoice = () => {
@@ -45,7 +44,7 @@ export default function GlobalSearchBar() {
       const transcript = e.results?.[0]?.[0]?.transcript || '',
       if (transcript) setQuery((q) => (q ? q + ' ' + transcript : transcript))
     },
-    rec.start(),
+    rec.start()
   },
 
   return (
@@ -72,7 +71,7 @@ export default function GlobalSearchBar() {
                   onClick={() => {
                     setQuery(s),
                     setOpen(false),
-                    router.push(`/search?q=${encodeURIComponent(s)}`),
+                    router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
                 >
@@ -84,5 +83,5 @@ export default function GlobalSearchBar() {
         </div>
       )}
     </form>
-  ),
+  )
 }

@@ -31,7 +31,7 @@ function generateShortCode(length: number = 6): string {
   for (let i = 0, i < length, i++) {
     result += chars.charAt(Math.floor(Math.random() * chars.length))
   }
-  return result,
+  return result
 }
 
 // Validate URL format
@@ -40,7 +40,7 @@ function isValidUrl(url: string): boolean {
     new URL(url),
     return true
   } catch {
-    return false,
+    return false
   }
 }
 
@@ -57,14 +57,14 @@ export default async function handler(
         return res.status(400).json({
           success: false,
           error: 'Original URL is required'
-        }),
+        })
       }
 
       if (!isValidUrl(originalUrl)) {
         return res.status(400).json({
           success: false,
           error: 'Invalid URL format'
-        }),
+        })
       }
 
       // Check if URL already exists
@@ -76,7 +76,7 @@ export default async function handler(
         return res.status(200).json({
           success: true,
           data: existingUrl
-        }),
+        })
       }
 
       // Generate short code
@@ -84,7 +84,7 @@ export default async function handler(
       
       // Ensure unique short code
       while (urlStorage.has(shortCode)) {
-        shortCode = generateShortCode(),
+        shortCode = generateShortCode()
       }
 
       const shortUrl: ShortUrl = {
@@ -102,13 +102,13 @@ export default async function handler(
       res.status(201).json({
         success: true,
         data: shortUrl
-      }),
+      })
     } catch (error) {
       console.error('URL shortening error:', error),
       res.status(500).json({
         success: false,
         error: 'Internal server error'
-      }),
+      })
     }
   } else if (req.method === 'GET') {
     // Get all URLs (for demo purposes)
@@ -116,12 +116,12 @@ export default async function handler(
     res.status(200).json({
       success: true,
       data: urls as any
-    }),
+    })
   } else {
     res.status(405).json({
       success: false,
       error: 'Method not allowed'
-    }),
+    })
   }
 }
 
@@ -133,7 +133,7 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
   if (!shortUrl || !shortUrl.isActive) {
     return {
       notFound: true
-    },
+    }
   }
 
   // Increment click count
@@ -146,5 +146,5 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
       destination: shortUrl.originalUrl,
       permanent: false
     }
-  },
+  }
 }

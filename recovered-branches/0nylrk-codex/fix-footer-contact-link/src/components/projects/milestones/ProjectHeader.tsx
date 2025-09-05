@@ -3,7 +3,6 @@ import React from 'react',
 import { useNavigate } from 'react-router-dom',
 import { Button } from '@/components/ui/button',
 import { ArrowLeft } from 'lucide-react',
-
 interface ProjectHeaderProps {
   title: string
 }
@@ -26,5 +25,5 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
         <h1 className="text-2xl md:text-3xl font-bold truncate max-w-xl">{title}</h1>
       </div>
     </div>
-  ),
+  )
 }

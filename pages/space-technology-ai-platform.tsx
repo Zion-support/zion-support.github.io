@@ -9,7 +9,6 @@ import {
 } from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026',
-
 export default function SpaceTechnologyAIPlatform() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -19,26 +18,20 @@ export default function SpaceTechnologyAIPlatform() {
   },
 
   const features = [
-    'AI-powered satellite operationsAutonomous space exploration',
-    'Space data analyticsSatellite constellation management',
-    'Space debris trackingReal-time monitoring',
-    'Predictive maintenanceMission planning tools',
+    'AI-powered satellite operationsAutonomous space explorationSpace data analyticsSatellite constellation managementSpace debris trackingReal-time monitoringPredictive maintenanceMission planning tools',
     'API accessExpert consultation'
   ],
 
   const useCases = [
-    'Satellite operationsSpace exploration',
-    'Earth observationSpace debris monitoring',
-    'Mission planningSpace research'
+    'Satellite operationsSpace explorationEarth observationSpace debris monitoringMission planningSpace research'
   ],
 
   const integrations = [
-    'NASA APIsESA APIs', 'Satellite ground stationsGIS systems', 'SlackMicrosoft Teams', 'Custom applications'
+    'NASA APIsESA APIsSatellite ground stationsGIS systemsSlackMicrosoft TeamsCustom applications'
   ],
 
   const competitors = [
-    'Maxar ($5000-50000/month)Planet Labs ($1000-10000/month)',
-    'Airbus Defence ($10000-100000/month)Lockheed Martin', 'BoeingNorthrop Grumman'
+    'Maxar ($5000-50000/month)Planet Labs ($1000-10000/month)Airbus Defence ($10000-100000/month)Lockheed MartinBoeingNorthrop Grumman'
   ],
 
   return (
@@ -360,6 +353,6 @@ export default function SpaceTechnologyAIPlatform() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  ),
+  )
 }
 

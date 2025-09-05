@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ForumReply } from "@/types/community",
 import { cn } from "@/lib/utils",
-
 interface ReplyCardProps {
   reply: ForumReply,
   onMarkAnswer?: () => void,
@@ -81,7 +80,7 @@ export const ReplyCard = ({
         )}
       </CardFooter>
     </Card>
-  ),
+  )
 },
 
 export default ReplyCard,

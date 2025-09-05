@@ -2,7 +2,6 @@
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
 import { Link } from "react-router-dom",
-
 interface ListingCardProps {
   id?: string,
   title: string,
@@ -80,5 +79,5 @@ export function ListingCard({
         )}
       </div>
     </Link>
-  ),
+  )
 }

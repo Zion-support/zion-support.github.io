@@ -55,17 +55,17 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
           body: JSON.stringify({ fromAddress, toAddress, parcel })}),
         const data = await res.json(),
         if (res.ok) {
-          setRates(data.rates || []),
+          setRates(data.rates || [])
         } else {
-          console.error('Rates error', data),
+          console.error('Rates error', data)
         }
       } catch (err) {
-        console.error('Rates error', err),
+        console.error('Rates error', err)
       } finally {
-        setLoading(false),
+        setLoading(false)
       }
     },
-    fetchRates(),
+    fetchRates()
   }, [toAddress]),
 
   const handleChange = (value: string) => {
@@ -97,7 +97,7 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
         </RadioGroup>
       )}
     </div>
-  ),
+  )
 }
 
 export type { ShippingRate },

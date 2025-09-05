@@ -43,7 +43,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
       title: "Notes saved",
       description: "Your notes have been saved"
     }),
-    setShowNotes(false),
+    setShowNotes(false)
   },
   
   const handleHireConfirmed = () => {
@@ -51,7 +51,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     toast({
       title: "Hiring process initiated",
       description: "Offer has been sent to the talent."
-    }),
+    })
   },
 
   const candidateName = application.talent_profile?.full_name || "Candidate",
@@ -213,5 +213,5 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
         onConfirm={handleHireConfirmed}
       />
     </>
-  ),
+  )
 }

@@ -62,11 +62,11 @@ export default function QuoteManager() {
     setStatusFilter('all'),
     setArchiveFilter('all'),
     setSearchQuery(''),
-    setDateRange({ from: undefined, to: undefined }),
+    setDateRange({ from: undefined, to: undefined })
   },
 
   if (!isAdmin) {
-    return <Navigate to="/unauthorized" replace />,
+    return <Navigate to="/unauthorized" replace />
   }
 
   return (
@@ -143,12 +143,12 @@ export default function QuoteManager() {
           isOpen={showDetails}
           onClose={() => {
             setShowDetails(false),
-            setSelectedQuote(null),
+            setSelectedQuote(null)
           }}
         />
         
         <Footer />
       </div>
     </ProtectedRoute>
-  ),
+  )
 }

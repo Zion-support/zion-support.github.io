@@ -7,7 +7,6 @@ import { useJobDetails } from '@/hooks/useJobDetails',
 import { useAuth } from '@/hooks/useAuth',
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
 import { useDisputeCheck } from '@/hooks/useDisputeCheck',
-
 import { 
   MilestoneActivities,
   MilestoneManager,
@@ -46,21 +45,21 @@ export function ProjectMilestonesContent() {
       try {
         const projectData = await getProjectById(projectId),
         if (projectData) {
-          setProject(projectData),
+          setProject(projectData)
         }
       } catch (error) {
-        console.error("Error loading project:", error),
+        console.error("Error loading project:", error)
       } finally {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     }
     
     loadProject(),
-    refetch(),
+    refetch()
   }, [projectId, getProjectById, refetch]),
 
   const handleMilestoneCreated = async () => {
-    await refetch(),
+    await refetch()
   },
   
   // Determine if the user is the client or talent
@@ -77,7 +76,7 @@ export function ProjectMilestonesContent() {
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
         </div>
       </div>
-    ),
+    )
   }
 
   const handleMilestoneSubmit = async (data: any) => {
@@ -95,7 +94,7 @@ export function ProjectMilestonesContent() {
     
     await createMilestone(milestoneData),
     setActiveTab('milestones'),
-    await handleMilestoneCreated(),
+    await handleMilestoneCreated()
   },
 
   return (
@@ -159,5 +158,5 @@ export function ProjectMilestonesContent() {
         </TabsContent>
       </Tabs>
     </div>
-  ),
+  )
 }

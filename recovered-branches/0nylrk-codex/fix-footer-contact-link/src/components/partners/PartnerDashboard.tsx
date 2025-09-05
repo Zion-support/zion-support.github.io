@@ -92,5 +92,5 @@ export function PartnerDashboard() {
         </CardContent>
       </Card>
     </div>
-  ),
+  )
 }

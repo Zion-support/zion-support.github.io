@@ -1,5 +1,4 @@
 import useSWR from 'swr',
-
 const fetcher = (url: string) => fetch(url).then((r) => (r.ok ? r.json() : null)),
 
 export function useCurrentUser() {
@@ -8,5 +7,5 @@ export function useCurrentUser() {
     user: data?.user || null,
     loading: !data && !error,
     error,
-    mutate},
+    mutate}
 }

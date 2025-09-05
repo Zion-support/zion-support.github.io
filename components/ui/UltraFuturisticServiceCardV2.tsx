@@ -66,7 +66,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
     if (color.includes('from-') && color.includes('to-')) {
       return color
     }
-    return 'from-cyan-500 to-blue-500',
+    return 'from-cyan-500 to-blue-500'
   },
 
   return (
@@ -265,7 +265,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
         />
       </div>
     </motion.div>
-  ),
+  )
 },
 
 export default UltraFuturisticServiceCardV2,

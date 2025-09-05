@@ -1,5 +1,4 @@
 import React from 'react',
-
 export default function AnimatedBackground() {
   return (
     <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
@@ -14,5 +13,5 @@ export default function AnimatedBackground() {
         }
       `}</style>
     </div>
-  ),
+  )
 }

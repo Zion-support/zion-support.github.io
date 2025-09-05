@@ -1,12 +1,12 @@
 
 // Type declarations for modules used in Vite configuration
 declare module 'vitest/config' {
-  export { defineConfig } from 'vite',
+  export { defineConfig } from 'vite'
 }
 
 declare module '@vitejs/plugin-react-swc' {
   import { Plugin } from 'vite',
-  export default function reactSWC(): Plugin,
+  export default function reactSWC(): Plugin
 }
 
 declare module 'path' {
@@ -17,5 +17,5 @@ declare module 'path' {
 
 declare module 'lovable-tagger' {
   import { Plugin } from 'vite',
-  export function componentTagger(): Plugin,
+  export function componentTagger(): Plugin
 }

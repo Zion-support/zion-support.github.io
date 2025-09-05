@@ -7,7 +7,6 @@ import { SEO } from '@/components/SEO',
 import { VideoCallRoom } from '@/components/video/VideoCallRoom',
 import { Button } from '@/components/ui/button',
 import { toast } from 'sonner',
-
 export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
@@ -40,8 +39,8 @@ export default function VideoCall() {
       setIsJoining(false),
       toast.success("Call joined", {
         description: `You have joined meeting room ${roomId}`
-      }),
-    }, 1500),
+      })
+    }, 1500)
   },
 
   const handleLeaveCall = () => {
@@ -52,8 +51,8 @@ export default function VideoCall() {
     
     // Navigate back after a short delay
     setTimeout(() => {
-      navigate(-1),
-    }, 1500),
+      navigate(-1)
+    }, 1500)
   },
   
   const simulateUserJoining = () => {
@@ -68,7 +67,7 @@ export default function VideoCall() {
     
     if (!participants.find(p => p.id === randomUser.id)) {
       setParticipants(prev => [...prev, randomUser]),
-      toast(`${randomUser.name} joined the call`),
+      toast(`${randomUser.name} joined the call`)
     }
   },
 
@@ -109,5 +108,5 @@ export default function VideoCall() {
       </main>
       <Footer />
     </>
-  ),
+  )
 }

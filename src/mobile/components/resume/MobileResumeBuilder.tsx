@@ -74,7 +74,7 @@ export function MobileResumeBuilder() {
         Save & Preview
       </Button>
     </div>
-  ),
+  )
 }
 
 function BasicsStep() {
@@ -111,7 +111,7 @@ function BasicsStep() {
         </div>
       </CardContent>
     </Card>
-  ),
+  )
 }
 
 function ExperienceStep() {
@@ -119,7 +119,7 @@ function ExperienceStep() {
   
   const addExperience = () => {
     const newId = (experiences.length + 1).toString(),
-    setExperiences([...experiences, { id: newId }]),
+    setExperiences([...experiences, { id: newId }])
   },
   
   const removeExperience = (id: string) => {
@@ -183,7 +183,7 @@ function ExperienceStep() {
         <Plus className="h-4 w-4" /> Add Another Experience
       </Button>
     </div>
-  ),
+  )
 }
 
 function EducationStep() {
@@ -191,7 +191,7 @@ function EducationStep() {
   
   const addEducation = () => {
     const newId = (educations.length + 1).toString(),
-    setEducations([...educations, { id: newId }]),
+    setEducations([...educations, { id: newId }])
   },
   
   const removeEducation = (id: string) => {
@@ -251,7 +251,7 @@ function EducationStep() {
         <Plus className="h-4 w-4" /> Add Another Education
       </Button>
     </div>
-  ),
+  )
 }
 
 function SkillsStep() {
@@ -261,7 +261,7 @@ function SkillsStep() {
   
   const addSkill = () => {
     const newId = (skills.length + 1).toString(),
-    setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }]),
+    setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }])
   },
   
   const removeSkill = (id: string) => {
@@ -271,7 +271,7 @@ function SkillsStep() {
   const updateSkill = (id: string, field: string, value: string) => {
     setSkills(skills.map(skill => 
       skill.id === id ? { ...skill, [field]: value } : skill
-    )),
+    ))
   },
   
   return (
@@ -341,5 +341,5 @@ function SkillsStep() {
         </CardContent>
       </Card>
     </div>
-  ),
+  )
 }

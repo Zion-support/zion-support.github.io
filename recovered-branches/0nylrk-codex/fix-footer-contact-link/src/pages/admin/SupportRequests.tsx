@@ -10,7 +10,6 @@ import { Badge } from "@/components/ui/badge",
 import { Search, Filter } from "lucide-react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
-
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
   {
@@ -105,25 +104,25 @@ export default function SupportRequests() {
         !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
-      return false,
+      return false
     }
     
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
-      return false,
+      return false
     }
     
     // Apply priority filter
     if (priorityFilter && request.priority !== priorityFilter) {
-      return false,
+      return false
     }
     
     // Apply category filter
     if (categoryFilter && request.category !== categoryFilter) {
-      return false,
+      return false
     }
     
-    return true,
+    return true
   }),
   
   // Count by status for the summary dashboard
@@ -136,7 +135,7 @@ export default function SupportRequests() {
     setSearchQuery(""),
     setStatusFilter(null),
     setPriorityFilter(null),
-    setCategoryFilter(null),
+    setCategoryFilter(null)
   },
   
   return (
@@ -348,5 +347,5 @@ export default function SupportRequests() {
         </Tabs>
       </div>
     </AppLayout>
-  ),
+  )
 }

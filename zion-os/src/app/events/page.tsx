@@ -1,5 +1,4 @@
 import Link from "next/link",
-
 export const metadata = {
   title: "Events - Zion Tech Group | Conferences, Webinars & Workshops",
   description: "Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.",

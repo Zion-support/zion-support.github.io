@@ -3,9 +3,9 @@
 export const placeholder = 'placeholder';
 =======
 
-};
-          observer.unobserve(image)};
-      };
+},
+          observer.unobserve(image)}
+      }
 
 }})),
 

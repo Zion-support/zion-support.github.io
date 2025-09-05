@@ -1,6 +1,5 @@
 import Head from 'next/head',
 import React from 'react',
-
 export default function ManifestoPage(): JSX.Element {
   return (
     <>
@@ -57,5 +56,5 @@ export default function ManifestoPage(): JSX.Element {
         </div>
       </main>
     </>
-  ),
+  )
 }

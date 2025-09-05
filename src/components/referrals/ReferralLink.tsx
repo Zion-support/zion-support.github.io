@@ -17,7 +17,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
   const handleCopy = () => {
     onCopy(),
     setCopied(true),
-    setTimeout(() => setCopied(false), 2000),
+    setTimeout(() => setCopied(false), 2000)
   },
 
   return (
@@ -87,5 +87,5 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
         </div>
       </CardFooter>
     </Card>
-  ),
+  )
 }

@@ -1,6 +1,5 @@
 import { useState } from "react",
 import FeedbackModal from "../../components/ui/FeedbackModal",
-
 export default function ClientHirePage() {
   const [talentSlug, setTalentSlug] = useState("ava-chen"),
   const [startDateIso, setStartDateIso] = useState<string>(new Date().toISOString().slice(0, 10)),
@@ -30,10 +29,10 @@ export default function ClientHirePage() {
     const json = await res.json(),
     setLoading(false),
     if (!json.ok) {
-      alert(json.error || "Failed to send offer"),
+      alert(json.error || "Failed to send offer")
     } else {
       setResult(json.offer),
-      setShowFeedback(true),
+      setShowFeedback(true)
     }
   }
 
@@ -106,5 +105,5 @@ export default function ClientHirePage() {
         userHeaders={{ 'x-demo-user-role': 'clientx-demo-user-id': 'client-1' }}
       />
     </div>
-  ),
+  )
 }

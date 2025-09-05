@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react",
 import { useAuth } from "./useAuth",
 import { supabase } from "@/integrations/supabase/client",
-
 interface OnboardingStatus {
   profileCompleted: boolean,
   skillsAdded: boolean,
@@ -39,7 +38,7 @@ export function useOnboardingStatus() {
           
         if (error) {
           console.error("Error fetching onboarding status:", error),
-          return,
+          return
         }
         
         if (data) {
@@ -51,15 +50,15 @@ export function useOnboardingStatus() {
             jobPosted: data.job_posted || false,
             inviteSent: data.talent_invited || false,
             responseReceived: data.quote_received || false
-          }),
+          })
         }
       } catch (err) {
-        console.error("Error in onboarding status hook:", err),
+        console.error("Error in onboarding status hook:", err)
       }
     },
     
-    fetchOnboardingStatus(),
+    fetchOnboardingStatus()
   }, [user]),
   
-  return status,
+  return status
 }

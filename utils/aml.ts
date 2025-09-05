@@ -15,7 +15,7 @@ export type AmlCheckResult = {
 
 export interface AmlProvider {
   checkPerson(input: { fullLegalName: string, country?: string, dob?: string }): Promise<AmlCheckResult>,
-  checkBusiness(input: { businessName: string, country?: string, registrationNumber?: string }): Promise<AmlCheckResult>,
+  checkBusiness(input: { businessName: string, country?: string, registrationNumber?: string }): Promise<AmlCheckResult>
 }
 
 class MockAmlProvider implements AmlProvider {
@@ -30,7 +30,7 @@ class MockAmlProvider implements AmlProvider {
       status: matches.length ? 'review' : 'clear',
       matches,
       checkedAt: new Date().toISOString(),
-      provider: 'mock'},
+      provider: 'mock'}
   }
 
   async checkBusiness({ businessName }: { businessName: string }): Promise<AmlCheckResult> {
@@ -40,7 +40,7 @@ class MockAmlProvider implements AmlProvider {
       status: isSanction ? 'review' : 'clear',
       matches: isSanction ? [{ list: 'Sanctions', name: businessName, score: 0.8 }] : [],
       checkedAt: new Date().toISOString(),
-      provider: 'mock'},
+      provider: 'mock'}
   }
 }
 
@@ -51,5 +51,5 @@ export function setAmlProvider(custom: AmlProvider) {
 }
 
 export function getAmlProvider(): AmlProvider {
-  return provider,
+  return provider
 }

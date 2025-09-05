@@ -4,7 +4,7 @@ const { spawnSync } = require('child_process'),
 function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true }),
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' },
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
 }
 
 exports.config = {
@@ -18,7 +18,7 @@ exports.handler = async () => {
     if (stdout) logs.push(stdout),
     if (stderr) logs.push(stderr),
     logs.push(`exit=${status}`),
-    return status,
+    return status
   }
 
   // Generate sitemap for crawling
@@ -26,9 +26,9 @@ exports.handler = async () => {
 
   // Build search index if available
   try {
-    logStep('search:index', () => runNode('scripts/generate-search-index.js')),
+    logStep('search:index', () => runNode('scripts/generate-search-index.js'))
   } catch (error) {
-    logs.push(`Search index generation skipped: ${String(error)}`),
+    logs.push(`Search index generation skipped: ${String(error)}`)
   }
 
   // Commit and push
@@ -39,5 +39,5 @@ exports.handler = async () => {
   // Attempt to push any changes
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
 
-  return { statusCode: 200, body: logs.join('\n') },
+  return { statusCode: 200, body: logs.join('\n') }
 },

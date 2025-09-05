@@ -75,5 +75,5 @@ export function PaymentMethods() {
         </Button>
       </CardFooter>
     </Card>
-  ),
+  )
 }

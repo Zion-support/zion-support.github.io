@@ -9,8 +9,6 @@ import { Sparkles, ArrowRight } from 'lucide-react'
 import { supabase } from "@/integrations/supabase/client",
 import { Badge } from "@/components/ui/badge",
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -28,7 +26,7 @@ interface AIListingGeneratorProps {
     category?: string,
     keyFeatures?: string,
     targetAudience?: string
-  },
+  }
 }
 
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
@@ -64,7 +62,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: "Please provide at least a title and category.",
         variant: "destructive"
       }),
-      return,
+      return
     }
 
     setIsLoading(true),
@@ -75,27 +73,27 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       }),
 
       if (error) {
-        throw new Error(error.message),
+        throw new Error(error.message)
       }
       
       if ((data as any)?.error) {
-        throw new Error((data as any).error),
+        throw new Error((data as any).error)
       }
 
       setGeneratedContent((data as any)?.generated || null),
       toast({
         title: "Content Generated",
         description: "AI has created optimized listing content for you."
-      }),
+      })
     } catch (error) {
       logErrorToProduction('Error generating content:', { data: error }),
       toast({
         title: "Generation Failed",
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
         variant: "destructive"
-      }),
+      })
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -105,7 +103,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       toast({
         title: "Content Applied",
         description: "The generated content has been applied to your listing."
-      }),
+      })
     }
   },
 
@@ -251,5 +249,5 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         </Card>
       )}
     </div>
-  ),
+  )
 }

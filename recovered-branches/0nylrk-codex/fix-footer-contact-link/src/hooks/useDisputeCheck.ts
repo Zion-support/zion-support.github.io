@@ -1,7 +1,6 @@
 
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
-
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {
   const [isUnderDispute, setIsUnderDispute] = useState(false),
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
@@ -12,7 +11,7 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
     const checkDispute = async () => {
       if (!projectId && !milestoneId) {
         setIsLoading(false),
-        return,
+        return
       }
 
       try {
@@ -25,7 +24,7 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
         
         // If milestone ID is provided, filter by that too
         if (milestoneId) {
-          query = query.eq("milestone_id", milestoneId),
+          query = query.eq("milestone_id", milestoneId)
         }
         
         // Order by status priority: open, under_review, resolved, closed
@@ -39,23 +38,23 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
           // Get the first dispute (highest priority based on status)
           setIsUnderDispute(true),
           setDisputeStatus(data[0].status as any),
-          setDisputeId(data[0].id),
+          setDisputeId(data[0].id)
         } else {
           setIsUnderDispute(false),
           setDisputeStatus(null),
-          setDisputeId(null),
+          setDisputeId(null)
         }
       } catch (err) {
         console.error("Error checking dispute status:", err),
         setIsUnderDispute(false),
         setDisputeStatus(null),
-        setDisputeId(null),
+        setDisputeId(null)
       } finally {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     },
     
-    checkDispute(),
+    checkDispute()
   }, [projectId, milestoneId]),
 
   return { 
@@ -63,5 +62,5 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
     disputeStatus, 
     disputeId,
     isLoading 
-  },
+  }
 }

@@ -9,7 +9,6 @@ import { Badge } from "@/components/ui/badge",
 import { Loader2, Edit, X, Eye } from "lucide-react",
 import { format } from "date-fns",
 import { Link } from "react-router-dom",
-
 interface JobsListProps {
   filter?: JobStatus,
   onSelectJob?: (jobId: string, jobTitle: string) => void
@@ -32,21 +31,21 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
           .order("created_at", { ascending: false }),
 
         if (filter) {
-          query = query.eq("status", filter),
+          query = query.eq("status", filter)
         }
 
         const { data, error } = await query,
 
         if (error) throw error,
-        setJobs(data as Job[]),
+        setJobs(data as Job[])
       } catch (error) {
-        console.error("Error fetching jobs:", error),
+        console.error("Error fetching jobs:", error)
       } finally {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     },
 
-    fetchJobs(),
+    fetchJobs()
   }, [user, filter]),
 
   if (isLoading) {
@@ -54,7 +53,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
       <div className="flex justify-center items-center p-8">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
-    ),
+    )
   }
 
   if (jobs.length === 0) {
@@ -70,7 +69,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
           <Link to="/post-job">Post Your First Job</Link>
         </Button>
       </div>
-    ),
+    )
   }
 
   const getStatusColor = (status: JobStatus) => {
@@ -153,5 +152,5 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
         </Card>
       ))}
     </div>
-  ),
+  )
 }

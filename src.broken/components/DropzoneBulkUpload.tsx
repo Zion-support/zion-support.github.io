@@ -2,7 +2,6 @@ import { useCallback, useState } from 'react',
 import { useDropzone } from 'react-dropzone',
 import { Button } from './ui/button',
 import { Progress } from './ui/progress',
-
 interface UploadError {
   row: number,
   error: string
@@ -46,12 +45,12 @@ export function DropzoneBulkUpload() {
       if (data.errors && data.errors.length) {
         const csv = ['row,error', ...data.errors.map((e: UploadError) => `${e.row},"${e.error}"`)].join('\n'),
         const blob = new Blob([csv], { type: 'text/csv' }),
-        setErrorUrl(URL.createObjectURL(blob)),
+        setErrorUrl(URL.createObjectURL(blob))
       }
     } catch (err) {
-      console.error(err),
+      console.error(err)
     } finally {
-      setProgress(100),
+      setProgress(100)
     }
   },
 
@@ -88,5 +87,5 @@ export function DropzoneBulkUpload() {
         </div>
       )}
     </div>
-  ),
+  )
 }

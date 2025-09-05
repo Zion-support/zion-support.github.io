@@ -7,13 +7,11 @@ import {
   Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
 } from 'lucide-react',
 import Link from 'next/link',
-
 // Import our new innovative services
 import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services',
 import { innovative2040ITServices } from '../data/innovative-2040-it-services',
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services',
 import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services',
-
 // Loading fallback component
 const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-900">
@@ -42,10 +40,10 @@ const Homepage2045: React.FC = () => {
     // Simulate content loading with better timing
     const timer = setTimeout(() => {
       setIsLoading(false),
-      setIsVisible(true),
+      setIsVisible(true)
     }, 800),
 
-    return () => clearTimeout(timer),
+    return () => clearTimeout(timer)
   }, []),
 
   // Intersection Observer for better performance
@@ -57,7 +55,7 @@ const Homepage2045: React.FC = () => {
             if (entry.isIntersecting) {
               setActiveSection(entry.target.id)
             }
-          }),
+          })
         },
         { threshold: 0.3, rootMargin: '-100px' }
       ),
@@ -65,7 +63,7 @@ const Homepage2045: React.FC = () => {
       const sections = document.querySelectorAll('section[id]'),
       sections.forEach((section) => observer.observe(section)),
 
-      return () => observer.disconnect(),
+      return () => observer.disconnect()
     }
   }, []),
 
@@ -92,11 +90,9 @@ const Homepage2045: React.FC = () => {
 
   const getColorClasses = (index: number) => {
     const colors = [
-      'from-cyan-400 to-blue-500from-purple-400 to-pink-500',
-      'from-emerald-400 to-teal-500from-orange-400 to-red-500',
-      'from-indigo-400 to-purple-500from-yellow-400 to-orange-500'
+      'from-cyan-400 to-blue-500from-purple-400 to-pink-500from-emerald-400 to-teal-500from-orange-400 to-red-500from-indigo-400 to-purple-500from-yellow-400 to-orange-500'
     ],
-    return colors[index % colors.length],
+    return colors[index % colors.length]
   },
 
   if (isLoading) {
@@ -107,7 +103,7 @@ const Homepage2045: React.FC = () => {
           <p className="text-cyan-400 text-xl">Loading Zion Tech Group...</p>
         </div>
       </div>
-    ),
+    )
   }
 
   return (

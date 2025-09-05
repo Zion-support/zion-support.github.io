@@ -243,9 +243,9 @@ const supportLinks = [
     if (newExpanded.has(title)) {
       newExpanded.delete(title)
     } else {
-      newExpanded.add(title),
+      newExpanded.add(title)
     }
-    setExpandedSections(newExpanded),
+    setExpandedSections(newExpanded)
   },
 
   const filteredServices = sidebarItems.flatMap(item =>
@@ -589,7 +589,7 @@ const supportLinks = [
       <div className="absolute top-1/2 right-4 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000"></div>
       <div className="absolute bottom-1/4 left-4 w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-2000"></div>
     </motion.aside>
-  ),
+  )
 },
 
 export default EnhancedSidebar2025,

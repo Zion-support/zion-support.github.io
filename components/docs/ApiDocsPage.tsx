@@ -21,7 +21,7 @@ export default function ApiDocsPage() {
         activeEndpointId={activeEndpoint?.id}
         onSelectEndpoint={setActiveEndpointId}
         selectedVersion={selectedVersion}
-        onChangeVersion={(v) => { setSelectedVersion(v), setActiveEndpointId(undefined), }}
+        onChangeVersion={(v) => { setSelectedVersion(v), setActiveEndpointId(undefined) }}
         visibilityFilter={visibility}
         onChangeVisibility={setVisibility}
       />
@@ -50,7 +50,7 @@ export default function ApiDocsPage() {
         </section>
       </main>
     </div>
-  ),
+  )
 }
 
 function ChangelogWidget() {
@@ -61,13 +61,13 @@ function ChangelogWidget() {
     setMessage(''),
     const res = await fetch('/api/docs/changelog'),
     const data = await res.json(),
-    setContent(data.content || ''),
+    setContent(data.content || '')
   }
 
   async function save() {
     setMessage(''),
     await fetch('/api/docs/changelog', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content }) }),
-    setMessage('Saved'),
+    setMessage('Saved')
   }
 
   return (
@@ -79,5 +79,5 @@ function ChangelogWidget() {
       </div>
       <textarea className="w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm" value={content} onChange={(e) => setContent(e.target.value)} placeholder="Add changelog entries here..." />
     </div>
-  ),
+  )
 }

@@ -7,7 +7,6 @@ import {
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -16,10 +15,7 @@ const contactInfo = {
 },
 
 const features = [
-  'AI-powered medical image analysisSymptom assessment algorithms',
-  'Treatment recommendation enginePatient history integration',
-  'Real-time diagnostic updatesMulti-specialty coverage',
-  'Mobile app integrationHIPAA-compliant platform'
+  'AI-powered medical image analysisSymptom assessment algorithmsTreatment recommendation enginePatient history integrationReal-time diagnostic updatesMulti-specialty coverageMobile app integrationHIPAA-compliant platform'
 ],
 
 const pricingPlans = [
@@ -27,21 +23,21 @@ const pricingPlans = [
     name: 'Starter',
     price: 299,
     period: 'month',
-    features: ['Basic diagnostic tools3 medical specialties', 'Standard reportingStandard support'],
+    features: ['Basic diagnostic tools3 medical specialtiesStandard reportingStandard support'],
     popular: false
   },
   {
     name: 'Professional',
     price: 799,
     period: 'month',
-    features: ['Advanced AI diagnosticsAll specialties', 'Custom reportingAPI access', 'Priority support'],
+    features: ['Advanced AI diagnosticsAll specialtiesCustom reportingAPI accessPriority support'],
     popular: true
   },
   {
     name: 'Enterprise',
     price: 1999,
     period: 'month',
-    features: ['Custom AI modelsWhite-label solution', 'Dedicated supportCustom integrations', 'Training included'],
+    features: ['Custom AI modelsWhite-label solutionDedicated supportCustom integrationsTraining included'],
     popular: false
   }
 ],
@@ -285,5 +281,5 @@ export default function AIDiagnosticPlatform() {
         </div>
       </section>
     </Layout>
-  ),
+  )
 }

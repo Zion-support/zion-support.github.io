@@ -1,12 +1,11 @@
 import { Package, RefreshCw } from 'lucide-react'
 import { Button } from './button',
-
 interface EmptyStateProps {
   text?: string,
   description?: string,
   onRetry?: () => void,
   showRetry?: boolean,
-  icon?: React.ReactNode,
+  icon?: React.ReactNode
 }
 
 export function EmptyState({ 
@@ -40,5 +39,5 @@ export function EmptyState({
         </Button>
       )}
     </div>
-  ),
+  )
 } 

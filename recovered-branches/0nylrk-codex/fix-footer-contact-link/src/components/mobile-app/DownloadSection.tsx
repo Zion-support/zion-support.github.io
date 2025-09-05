@@ -2,7 +2,6 @@
 import React from "react",
 import { QrCodeIcon } from "lucide-react",
 import { AppStoreButtons } from "./AppStoreButtons",
-
 export const DownloadSection: React.FC = () => {
   // These would typically come from environment variables or a config
   const appStoreUrl = "#", // Replace with actual App Store URL when available
@@ -44,5 +43,5 @@ export const DownloadSection: React.FC = () => {
         </div>
       </div>
     </section>
-  ),
+  )
 },

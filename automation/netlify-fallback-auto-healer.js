@@ -17,7 +17,7 @@ exports.handler = async (_event, _context) => {
             })
         },
         
-        return result,
+        return result
     } catch (error) {
         console.error('Fallback execution error:', error),
         return {
@@ -26,6 +26,6 @@ exports.handler = async (_event, _context) => {
                 error: 'Fallback execution failed',
                 message: error.message
             })
-        },
+        }
     }
 },

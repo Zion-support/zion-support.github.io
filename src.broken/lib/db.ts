@@ -9,15 +9,15 @@ function openDB(): Promise<IDBDatabase> {
     request.onupgradeneeded = () => {
       const db = request.result,
       if (!db.objectStoreNames.contains(CART_STORE)) {
-        db.createObjectStore(CART_STORE),
+        db.createObjectStore(CART_STORE)
       }
       if (!db.objectStoreNames.contains(WISHLIST_STORE)) {
-        db.createObjectStore(WISHLIST_STORE),
+        db.createObjectStore(WISHLIST_STORE)
       }
     },
     request.onsuccess = () => resolve(request.result),
-    request.onerror = () => reject(request.error),
-  }),
+    request.onerror = () => reject(request.error)
+  })
 }
 
 async function getList(storeName: string): Promise<any[]> {
@@ -27,8 +27,8 @@ async function getList(storeName: string): Promise<any[]> {
     const store = tx.objectStore(storeName),
     const req = store.get('items'),
     req.onsuccess = () => resolve(req.result || []),
-    req.onerror = () => resolve([]),
-  }),
+    req.onerror = () => resolve([])
+  })
 }
 
 async function setList(storeName: string, items: any[]): Promise<void> {
@@ -37,19 +37,19 @@ async function setList(storeName: string, items: any[]): Promise<void> {
     const tx = db.transaction(storeName, 'readwrite'),
     tx.objectStore(storeName).put(items, 'items'),
     tx.oncomplete = () => resolve(),
-    tx.onerror = () => reject(tx.error),
-  }),
+    tx.onerror = () => reject(tx.error)
+  })
 }
 
 export async function getCart() {
-  return getList(CART_STORE),
+  return getList(CART_STORE)
 }
 export async function saveCart(items: any[]) {
-  await setList(CART_STORE, items),
+  await setList(CART_STORE, items)
 }
 export async function getWishlist() {
-  return getList(WISHLIST_STORE),
+  return getList(WISHLIST_STORE)
 }
 export async function saveWishlist(items: any[]) {
-  await setList(WISHLIST_STORE, items),
+  await setList(WISHLIST_STORE, items)
 }

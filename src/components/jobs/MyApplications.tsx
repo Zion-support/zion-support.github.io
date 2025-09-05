@@ -8,7 +8,6 @@ import { Loader2, MessageSquare, ExternalLink } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",
 import Link from "next/link",
 import { ApplicationStatus } from "@/types/jobs",
-
 export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications(),
   
@@ -26,7 +25,7 @@ export function MyApplications() {
       case "rejected":
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>,
       default:
-        return <Badge variant="outline">{status}</Badge>,
+        return <Badge variant="outline">{status}</Badge>
     }
   },
   
@@ -35,7 +34,7 @@ export function MyApplications() {
       <div className="flex justify-center items-center p-8">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
-    ),
+    )
   }
   
   if (error) {
@@ -43,7 +42,7 @@ export function MyApplications() {
       <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">
         <p>{error}</p>
       </div>
-    ),
+    )
   }
   
   if (applications.length === 0) {
@@ -58,7 +57,7 @@ export function MyApplications() {
           </Button>
         </CardContent>
       </Card>
-    ),
+    )
   }
   
   return (
@@ -112,5 +111,5 @@ export function MyApplications() {
         </Card>
       ))}
     </div>
-  ),
+  )
 }

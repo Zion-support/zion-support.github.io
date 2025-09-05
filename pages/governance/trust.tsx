@@ -1,6 +1,5 @@
 import Head from 'next/head',
 import Link from 'next/link',
-
 export default function GovernanceTrustPage() {
   return (
     <>
@@ -68,5 +67,5 @@ export default function GovernanceTrustPage() {
         </section>
       </div>
     </>
-  ),
+  )
 }

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react',
 import Head from 'next/head',
 import type { KycProfile } from '../../utils/kyc',
-
 export default function AdminKycPage() {
   const [queue, setQueue] = useState<KycProfile[]>([]),
   const [reason, setReason] = useState<string>(''),
@@ -9,11 +8,11 @@ export default function AdminKycPage() {
   async function load() {
     const res = await fetch('/api/admin/kyc-queue'),
     const data = await res.json(),
-    if (data.ok) setQueue(data.queue),
+    if (data.ok) setQueue(data.queue)
   }
 
   useEffect(() => {
-    load(),
+    load()
   }, []),
 
   async function act(userId: string, action: 'approve' | 'reject' | 'needs_more_info') {
@@ -22,7 +21,7 @@ export default function AdminKycPage() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, action, reason: reason || undefined })}),
     const data = await res.json(),
-    if (data.ok) load(),
+    if (data.ok) load()
   }
 
   return (
@@ -74,5 +73,5 @@ export default function AdminKycPage() {
         </div>
       </main>
     </>
-  ),
+  )
 }

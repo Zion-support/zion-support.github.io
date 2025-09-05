@@ -4,7 +4,6 @@ import { Navigate } from 'react-router-dom',
 import { useAuth } from '@/hooks/useAuth',
 import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant',
 import { useWhitelabel } from '@/context/WhitelabelContext',
-
 export interface ProtectedRouteProps {
   children: React.ReactNode,
   adminOnly?: boolean,
@@ -28,12 +27,12 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   if (isCheckingPermissions) {
     return <div className="flex h-screen w-full items-center justify-center">
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>
-    </div>,
+    </div>
   }
 
   // Redirect to login if not authenticated
   if (!user) {
-    return <Navigate to="/login" />,
+    return <Navigate to="/login" />
   }
 
   // Check for admin access if required
@@ -41,16 +40,16 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
     const hasAdminAccess = user.userType === 'admin' || user.role === 'admin' || (tenantAdminAllowed && isTenantAdmin),
     
     if (!hasAdminAccess) {
-      return <Navigate to="/unauthorized" />,
+      return <Navigate to="/unauthorized" />
     }
   }
   
   // Check for specific user type if required
   if (requiredUserType && user.userType !== requiredUserType) {
-    return <Navigate to="/unauthorized" />,
+    return <Navigate to="/unauthorized" />
   }
 
-  return <>{children}</>,
+  return <>{children}</>
 },
 
 export default ProtectedRoute,

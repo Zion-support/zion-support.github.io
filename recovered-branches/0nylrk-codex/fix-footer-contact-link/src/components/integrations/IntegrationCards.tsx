@@ -64,7 +64,7 @@ export function IntegrationCard({
         )}
       </CardFooter>
     </Card>
-  ),
+  )
 }
 
 export function IntegrationCards() {
@@ -72,5 +72,5 @@ export function IntegrationCards() {
     <div className="grid md:grid-cols-3 gap-6">
       {/* Integration cards would go here */}
     </div>
-  ),
+  )
 }

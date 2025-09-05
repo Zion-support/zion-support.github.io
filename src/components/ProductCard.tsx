@@ -19,7 +19,6 @@ import { Product } from '@/services/marketplace',
 import { useMediaQuery } from 'usehooks-ts',
 import { toast } from '@/hooks/use-toast',
 import { captureException } from '@/utils/sentry',
-
 interface ProductCardProps {
   product: Product,
   onBuy?: () => Promise<void>, // Changed to allow async and signal completion/failure
@@ -55,8 +54,8 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
   // Reset redirecting state if component unmounts (e.g., navigation cancelled by user)
   useEffect(() => {
     return () => {
-      setIsRedirecting(false),
-    },
+      setIsRedirecting(false)
+    }
   }, []),
 
   if (!product || typeof product.id !== 'string' || typeof product.title !== 'string' || product.title.trim() === '') {
@@ -68,7 +67,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
         {/* Optionally, provide more details if product ID is known */}
         {/* {product && product.id && <p className="text-xs text-muted-foreground">ID: {product.id}</p>} */}
       </div>
-    ),
+    )
   }
 
   const active = isWishlisted(product.id),
@@ -84,7 +83,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
         description: 'Please log in to add items to your cart.',
         variant: 'destructive'}),
       router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`),
-      return,
+      return
     }
     dispatch(addItem({ id: product.id, title: productTitle, price: product.price ?? 0 })),
     toast({
@@ -92,7 +91,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
       description: `${productTitle} has been added to your cart`,
       action: {
         label: 'View Cart',
-        onClick: () => router.push('/cart')}}),
+        onClick: () => router.push('/cart')}})
   },
 
   const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null,
@@ -103,7 +102,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
       setImageError(true),
       captureException(error, {
         product: product.id,
-        imageUrl}),
+        imageUrl})
     }
   },
 
@@ -198,7 +197,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
                           if (onBuyAttemptComplete) {
                             onBuyAttemptComplete(), // Notify parent if it provided this callback
                           }
-                        }),
+                        })
                     }
                   }}
                   size="sm"
@@ -225,5 +224,5 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
         )}
       </div>
     </div>
-  ),
+  )
 }

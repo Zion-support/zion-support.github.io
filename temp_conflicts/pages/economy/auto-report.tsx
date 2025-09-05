@@ -2,9 +2,8 @@ import fs from 'fs',
 import path from 'path',
 import Link from 'next/link',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
-
 export async function getStaticProps() {
-  const reportsDir = path.join(process.cwd(), 'datareports', 'economy'),
+  const reportsDir = path.join(process.cwd(), 'datareportseconomy'),
   let latest: string | null = null,
   let summaries: { runId: string, createdAt: string, endingSupply: number, endingTreasury: number, avgInflationPct: number }[] = [],
 
@@ -13,7 +12,7 @@ export async function getStaticProps() {
     if (fs.existsSync(latestPath)) {
       try {
         const latestData = JSON.parse(fs.readFileSync(latestPath, 'utf8')),
-        latest = latestData.latest || null,
+        latest = latestData.latest || null
       } catch {}
     }
 
@@ -22,9 +21,9 @@ export async function getStaticProps() {
       .map((f) => {
         try {
           const data = JSON.parse(fs.readFileSync(path.join(reportsDir, f), 'utf8')),
-          return data,
+          return data
         } catch {
-          return null,
+          return null
         }
       })
       .filter(Boolean)
@@ -36,12 +35,12 @@ export async function getStaticProps() {
     const p = path.join(reportsDir, `${latest}.json`),
     if (fs.existsSync(p)) {
       try {
-        latestReport = JSON.parse(fs.readFileSync(p, 'utf8')),
+        latestReport = JSON.parse(fs.readFileSync(p, 'utf8'))
       } catch {}
     }
   }
 
-  return { props: { latest, latestReport, summaries } },
+  return { props: { latest, latestReport, summaries } }
 }
 
 export default function EconomyAutoReportPage({ latest, latestReport, summaries }: any) {
@@ -88,5 +87,5 @@ export default function EconomyAutoReportPage({ latest, latestReport, summaries 
         </div>
       </div>
     </EnhancedLayout>
-  ),
+  )
 }

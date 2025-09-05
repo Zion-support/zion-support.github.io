@@ -59,7 +59,7 @@ export function DisputeForm({
     if (e.target.files) {
       const newFiles = Array.from(e.target.files),
       setFiles(prev => [...prev, ...newFiles]),
-      form.setValue("attachments", [...files, ...newFiles]),
+      form.setValue("attachments", [...files, ...newFiles])
     }
   },
 
@@ -67,7 +67,7 @@ export function DisputeForm({
     const newFiles = [...files],
     newFiles.splice(index, 1),
     setFiles(newFiles),
-    form.setValue("attachments", newFiles),
+    form.setValue("attachments", newFiles)
   },
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
@@ -84,20 +84,20 @@ export function DisputeForm({
         // Future enhancement: Upload attachments
         // For now we just log the files that would be uploaded
         if (files.length > 0) {
-          // logInfo(`Would upload ${files.length} files for dispute ${dispute.id}`),
+          // logInfo(`Would upload ${files.length} files for dispute ${dispute.id}`)
         }
         
         toast.success("Your dispute has been submitted"),
         
         if (onDisputeCreated) {
-          onDisputeCreated(dispute.id),
+          onDisputeCreated(dispute.id)
         }
       }
     } catch (error) {
       logErrorToProduction('Error submitting dispute:', { data: error }),
-      toast.error("Failed to submit dispute. Please try again."),
+      toast.error("Failed to submit dispute. Please try again.")
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   }
 
@@ -200,5 +200,5 @@ export function DisputeForm({
         </form>
       </Form>
     </div>
-  ),
+  )
 }

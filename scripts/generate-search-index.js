@@ -9,18 +9,18 @@ const fs = require('fs'),
 const path = require('path'),
 
 const PAGES_DIR = path.join(__dirname, '..pages'),
-const OUTPUT_DIR = path.join(__dirname, '..public', 'search'),
+const OUTPUT_DIR = path.join(__dirname, '..publicsearch'),
 
 // Content types to index
 const CONTENT_TYPES = {
   'pages': {
     path: PAGES_DIR,
-    extensions: ['.tsx.ts', '.jsx.js'],
-    exclude: ['_app_document', 'api']
+    extensions: ['.tsx.ts.jsx.js'],
+    exclude: ['_app_documentapi']
   },
   'blog': {
     path: path.join(PAGES_DIR, 'blog'),
-    extensions: ['.tsx.ts', '.jsx.js'],
+    extensions: ['.tsx.ts.jsx.js'],
     exclude: []
   }
 },
@@ -33,7 +33,7 @@ function extractTextFromJSX(content) {
     .replace(/export.*?function.*?{/g, '') // Remove function declarations
     .replace(/[{}()]/g, ' ') // Remove brackets
     .replace(/\s+/g, ' ') // Normalize whitespace
-    .trim(),
+    .trim()
 }
 
 function generateSearchIndex() {
@@ -61,7 +61,7 @@ function generateSearchIndex() {
             
             // Skip excluded files
             if (config.exclude.some(excluded => fileName.startsWith(excluded))) {
-              return,
+              return
             }
 
             try {
@@ -77,19 +77,19 @@ function generateSearchIndex() {
                 lastModified: stats.mtime.toISOString()
               },
 
-              searchIndex[type].push(entry),
+              searchIndex[type].push(entry)
             } catch (error) {
-              console.warn(`⚠️  Could not process ${filePath}:`, error.message),
+              console.warn(`⚠️  Could not process ${filePath}:`, error.message)
             }
           }
         }
       }
-    }),
+    })
   }),
 
   // Ensure output directory exists
   if (!fs.existsSync(OUTPUT_DIR)) {
-    fs.mkdirSync(OUTPUT_DIR, { recursive: true }),
+    fs.mkdirSync(OUTPUT_DIR, { recursive: true })
   }
 
   // Write search index
@@ -97,11 +97,11 @@ function generateSearchIndex() {
   fs.writeFileSync(indexPath, JSON.stringify(searchIndex, null, 2)),
   
   // // // console.log(`✅ Search index generated at: ${indexPath}`),
-  // // // console.log(`📊 Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`),
+  // // // console.log(`📊 Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`)
 }
 
 if (require.main === module) {
-  generateSearchIndex(),
+  generateSearchIndex()
 }
 
 module.exports = { generateSearchIndex },

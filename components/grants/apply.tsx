@@ -2,8 +2,7 @@ import { useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 import { useRouter } from 'next/router',
 import type { GrantCategory } from '../../types/grants',
-
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent Development', 'Regional ExpansionResearch Grants'],
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 
 export default function ApplyGrantPage() {
   const router = useRouter(),
@@ -46,11 +45,11 @@ export default function ApplyGrantPage() {
           submit})}),
       const data = await resp.json(),
       if (!resp.ok) throw new Error(data?.error || 'Failed'),
-      router.push(`/grants/${data.id}`),
+      router.push(`/grants/${data.id}`)
     } catch (e: any) {
       setError(e.message)
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   },
 

@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { useState } from "react",
 import { Mail } from "lucide-react",
-
 export function EnhancedNewsletterForm() {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -17,7 +16,7 @@ export function EnhancedNewsletterForm() {
       setIsSubmitting(false),
       setIsSubmitted(true),
       setEmail("")
-    }, 1000),
+    }, 1000)
   },
 
   return (
@@ -68,5 +67,5 @@ export function EnhancedNewsletterForm() {
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
-  ),
+  )
 }

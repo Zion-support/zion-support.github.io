@@ -87,7 +87,7 @@ const App = () => {
         <InstallPrompt />
       </ThemeProvider>
     </WhitelabelProvider>
-  ),
+  )
 },
 
 export default App,

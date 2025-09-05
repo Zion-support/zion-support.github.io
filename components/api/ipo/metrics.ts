@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { appendAuditLog } from '../../../utils/api/storage',
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   appendAuditLog({ type: 'metrics_view' }),
   const data = [
@@ -10,5 +9,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     { label: 'Active users (TTM)', value: 162340, trend: 12.4 },
     { label: 'Churn rate', value: '2.4%', trend: -0.3 },
     { label: 'CAC/LTV ratio', value: '1:5.6', trend: 0.4 }],
-  res.status(200).json(data),
+  res.status(200).json(data)
 }

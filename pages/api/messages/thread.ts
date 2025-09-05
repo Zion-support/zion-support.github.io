@@ -11,10 +11,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!id || typeof id !== 'string') return res.status(400).json({ error: 'Missing id' }),
     const conversation = getConversationById(id),
     if (!conversation || !conversation.participants.includes(user.id)) {
-      return res.status(404).json({ error: 'Conversation not found' }),
+      return res.status(404).json({ error: 'Conversation not found' })
     }
     const messages = getMessages(id),
-    res.status(200).json({ conversation, messages }),
+    res.status(200).json({ conversation, messages })
   } else if (req.method === 'POST') {
     const { conversationId, recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body || {},
     if (!recipientId || !body) return res.status(400).json({ error: 'Missing fields' }),
@@ -27,8 +27,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       attachmentBase64,
       attachmentName,
       context}),
-    res.status(200).json({ conversation, message }),
+    res.status(200).json({ conversation, message })
   } else {
-    res.status(405).json({ error: 'Method not allowed' }),
+    res.status(405).json({ error: 'Method not allowed' })
   }
 }

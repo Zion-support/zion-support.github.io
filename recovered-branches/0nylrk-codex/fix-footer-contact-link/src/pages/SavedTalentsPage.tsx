@@ -9,7 +9,6 @@ import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 import { toast } from "@/components/ui/use-toast",
 import { useNavigate } from "react-router-dom",
-
 export default function SavedTalentsPage() {
   const { user } = useAuth(),
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
@@ -22,7 +21,7 @@ export default function SavedTalentsPage() {
       try {
         if (!user) {
           console.warn("User not authenticated."),
-          return,
+          return
         }
 
         const { data, error } = await supabase
@@ -49,7 +48,7 @@ export default function SavedTalentsPage() {
           .eq("user_id", user.id),
 
         if (error) {
-          throw error,
+          throw error
         }
 
         if (data) {
@@ -57,31 +56,31 @@ export default function SavedTalentsPage() {
           const talentProfiles = data.map(
             item => item.talent_profile as unknown as TalentProfile
           ),
-          setSavedTalents(talentProfiles),
+          setSavedTalents(talentProfiles)
         }
       } catch (error) {
         console.error("Error fetching saved talents:", error),
         toast({
           title: "Error",
           description: "Failed to load saved talents. Please try again later.",
-          variant: "destructive"}),
+          variant: "destructive"})
       } finally {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     },
 
-    fetchSavedTalents(),
+    fetchSavedTalents()
   }, [user]),
 
   const handleViewProfile = (talentId: string) => {
-    navigate(`/talent/${talentId}`),
+    navigate(`/talent/${talentId}`)
   },
 
   const handleRequestHire = (talent: TalentProfile) => {
     // // // console.log("Request to hire:", talent),
     toast({
       title: "Hire Request Sent",
-      description: `A hire request has been sent to ${talent.full_name}.`}),
+      description: `A hire request has been sent to ${talent.full_name}.`})
   },
 
   const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {
@@ -100,7 +99,7 @@ export default function SavedTalentsPage() {
           .eq('talent_id', talentId),
   
         if (error) {
-          throw error,
+          throw error
         }
   
         setSavedTalents(prevTalents =>
@@ -108,7 +107,7 @@ export default function SavedTalentsPage() {
         ),
         toast({
           title: "Talent Removed",
-          description: "Talent removed from saved list."}),
+          description: "Talent removed from saved list."})
       } else {
         // Add to saved talents
         const { error } = await supabase
@@ -116,7 +115,7 @@ export default function SavedTalentsPage() {
           .insert([{ user_id: user.id, talent_id: talentId }]),
   
         if (error) {
-          throw error,
+          throw error
         }
   
         // Fetch the updated talent profile and add it to the list
@@ -132,14 +131,14 @@ export default function SavedTalentsPage() {
             title: "Error",
             description: "Failed to update saved talents. Please try again later.",
             variant: "destructive"}),
-          return,
+          return
         }
   
         if (talentData) {
           setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
           toast({
             title: "Talent Saved",
-            description: "Talent saved to your list."}),
+            description: "Talent saved to your list."})
         }
       }
     } catch (error) {
@@ -147,7 +146,7 @@ export default function SavedTalentsPage() {
       toast({
         title: "Error",
         description: "Failed to update saved talents. Please try again later.",
-        variant: "destructive"}),
+        variant: "destructive"})
     }
   },
 
@@ -186,5 +185,5 @@ export default function SavedTalentsPage() {
       </div>
       <Footer />
     </>
-  ),
+  )
 }

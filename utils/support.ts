@@ -22,7 +22,7 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentResul
     for (const kw of art.keywords ?? []) {
       const list = keywordToArticle.get(kw) ?? [],
       list.push(art.id),
-      keywordToArticle.set(kw, list),
+      keywordToArticle.set(kw, list)
     }
   }
 
@@ -40,16 +40,16 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentResul
     if (re.test(q)) {
       heuristicHit = true,
       for (const [kw, ids] of keywordToArticle.entries()) {
-        if (q.includes(kw)) ids.forEach((id) => matched.add(id)),
+        if (q.includes(kw)) ids.forEach((id) => matched.add(id))
       }
     }
   }
 
   // Keyword fallback
   for (const [kw, ids] of keywordToArticle.entries()) {
-    if (q.includes(kw)) ids.forEach((id) => matched.add(id)),
+    if (q.includes(kw)) ids.forEach((id) => matched.add(id))
   }
 
   const matchedIds = Array.from(matched),
-  return { intentMatched: heuristicHit || matchedIds.length > 0, matchedArticleIds: matchedIds.slice(0, 3) },
+  return { intentMatched: heuristicHit || matchedIds.length > 0, matchedArticleIds: matchedIds.slice(0, 3) }
 }

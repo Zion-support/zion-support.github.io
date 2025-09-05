@@ -1,7 +1,6 @@
 
 import { useState, useEffect } from 'react',
 import { supabase } from '@/integrations/supabase/client',
-
 export function useJobDetails(jobId: string | undefined) {
   const [job, setJob] = useState(null),
   const [isLoading, setIsLoading] = useState(true),
@@ -10,7 +9,7 @@ export function useJobDetails(jobId: string | undefined) {
   async function loadJobDetails() {
     if (!jobId) {
       setIsLoading(false),
-      return,
+      return
     }
     
     try {
@@ -23,18 +22,18 @@ export function useJobDetails(jobId: string | undefined) {
         
       if (error) throw error,
       setJob(data),
-      setError(null),
+      setError(null)
     } catch (err) {
       console.error('Error loading job details:', err),
-      setError(err.message),
+      setError(err.message)
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   }
 
   // Load job details when component mounts or jobId changes
   useEffect(() => {
-    loadJobDetails(),
+    loadJobDetails()
   }, [jobId]),
 
   return {
@@ -42,7 +41,7 @@ export function useJobDetails(jobId: string | undefined) {
     isLoading,
     error,
     loadJobDetails
-  },
+  }
 }
 
 export default useJobDetails,

@@ -11,7 +11,6 @@ import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackg
 import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2',
 import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2',
 import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -140,28 +139,28 @@ export default function InnovationsPage() {
                   title: 'AI Consciousness',
                   description: 'Revolutionary AI consciousness development and emotional intelligence platforms',
                   color: 'from-violet-600 via-purple-600 to-indigo-600',
-                  features: ['Consciousness EvolutionEmotional Intelligence', 'Creative OrchestrationAutonomous Business Management']
+                  features: ['Consciousness EvolutionEmotional IntelligenceCreative OrchestrationAutonomous Business Management']
                 },
                 {
                   icon: Globe,
                   title: 'Quantum Technology',
                   description: 'Quantum-AI fusion and breakthrough quantum computing solutions',
                   color: 'from-indigo-600 via-blue-600 to-cyan-600',
-                  features: ['Quantum-AI FusionQuantum Internet Security', 'DNA ComputingQuantum Financial Trading']
+                  features: ['Quantum-AI FusionQuantum Internet SecurityDNA ComputingQuantum Financial Trading']
                 },
                 {
                   icon: Rocket,
                   title: 'Space Technology',
                   description: 'Next-generation space exploration and metaverse digital reality',
                   color: 'from-teal-600 via-emerald-600 to-green-600',
-                  features: ['Space Mining AutomationMetaverse Digital Reality', 'AI Health AnalyticsHolographic Events']
+                  features: ['Space Mining AutomationMetaverse Digital RealityAI Health AnalyticsHolographic Events']
                 },
                 {
                   icon: Cpu,
                   title: 'Enterprise IT',
                   description: 'AI-powered enterprise solutions and intelligent business optimization',
                   color: 'from-blue-600 via-cyan-600 to-teal-600',
-                  features: ['Business IntelligenceSupply Chain Optimization', 'HR AnalyticsCybersecurity']
+                  features: ['Business IntelligenceSupply Chain OptimizationHR AnalyticsCybersecurity']
                 }
               ].map((category, index) => (
                 <motion.div
@@ -319,5 +318,5 @@ export default function InnovationsPage() {
         <UltraFuturisticFooter2029V2 />
       </div>
     </UltraFuturisticBackground2029>
-  ),
+  )
 }

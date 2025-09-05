@@ -38,7 +38,7 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
     const data = await response.json(),
     
     if (!data.choices || !data.choices[0] || !data.choices[0].message) {
-      throw new Error("Failed to normalize skills with AI"),
+      throw new Error("Failed to normalize skills with AI")
     }
     
     // Extract and clean the normalized skills
@@ -49,7 +49,7 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
   } catch (error) {
     console.error("Error in normalizeSkillsWithAI:", error),
     // If AI normalization fails, return the original skills
-    return skills,
+    return skills
   }
 }
 
@@ -81,7 +81,7 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
         Experience: ${talent.years_experience} years
         Hourly Rate: ${talent.hourly_rate ? "$" + talent.hourly_rate : "Not specified"}
         Availability: ${talent.availability_type || "Not specified"}
-      `,
+      `
     }).join("\n\n"),
     
     // Send request to OpenAI for matching
@@ -127,7 +127,7 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
     const data = await response.json(),
     
     if (!data.choices || !data.choices[0] || !data.choices[0].message) {
-      throw new Error("Failed to match talents with AI"),
+      throw new Error("Failed to match talents with AI")
     }
     
     // Parse the AI response
@@ -135,15 +135,15 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
     
     // Check if the response is in the expected format
     if (!Array.isArray(aiResponse)) {
-      throw new Error("AI response format is invalid"),
+      throw new Error("AI response format is invalid")
     }
     
-    return aiResponse,
+    return aiResponse
   } catch (error) {
     console.error("Error in findBestMatches:", error),
     
     // If AI matching fails, perform a basic skill matching
-    return performBasicSkillMatching(jobDetails, talents),
+    return performBasicSkillMatching(jobDetails, talents)
   }
 }
 
@@ -174,7 +174,7 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
       score: matchScore,
       matchedSkills: matchedSkills,
       reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`
-    },
+    }
   })
   .filter(match => match.score > 30) // Only include matches with at least 30% score
   .sort((a, b) => b.score - a.score) // Sort by score (highest first)

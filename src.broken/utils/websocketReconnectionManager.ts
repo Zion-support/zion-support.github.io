@@ -16,8 +16,8 @@ export function useWebSocketReconnection(options: unknown =  {}) {,
         (options.delay || 1000) *,
         Math.pow(options.backoffMultiplier || 2, attemptCount),
       timeoutRef.current = setTimeout(() => {,
-        callback(),
-      }, delay),
+        callback()
+      }, delay)
     },
     [attemptCount, options],
   ),
@@ -27,12 +27,12 @@ export function useWebSocketReconnection(options: unknown =  {}) {,
       timeoutRef.current = null
     },
     setIsReconnecting(false),
-    setAttemptCount(0),
+    setAttemptCount(0)
   }, []),
   return {,
     isReconnecting,
     attemptCount,
     attemptReconnection,
-    resetReconnection,
-  },
+    resetReconnection
+  }
 }

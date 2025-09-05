@@ -6,7 +6,6 @@ import { FraudFlag } from "@/types/fraud",
 import { SeverityDisplay } from "./SeverityDisplay",
 import { ActionButtons } from "./ActionButtons",
 import { EmptyFraudState } from "./EmptyFraudState",
-
 interface FraudFlagsTableProps {
   flags: FraudFlag[],
   isLoading: boolean,
@@ -27,11 +26,11 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
       <div className="flex justify-center items-center h-64">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
       </div>
-    ),
+    )
   }
 
   if (flags.length === 0) {
-    return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />,
+    return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
   }
 
   return (
@@ -97,5 +96,5 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
         ))}
       </TableBody>
     </Table>
-  ),
+  )
 },

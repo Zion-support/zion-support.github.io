@@ -14,9 +14,7 @@ export default function AuditLogVaultPage() {
   },
 
   const features = [
-    'Append-only, tamper-evident storageFlexible retention and legal holds',
-    'Cryptographic digests and attestationsFine-grained search and export bundles',
-    'Chain-of-custody and access reviewsAlerts for risky access patterns'
+    'Append-only, tamper-evident storageFlexible retention and legal holdsCryptographic digests and attestationsFine-grained search and export bundlesChain-of-custody and access reviewsAlerts for risky access patterns'
   ],
 
   return (
@@ -65,6 +63,6 @@ export default function AuditLogVaultPage() {
         </div>
       </div>
     </UltraFuturisticBackground>
-  ),
+  )
 }
 

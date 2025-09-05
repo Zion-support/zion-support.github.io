@@ -18,7 +18,7 @@ export default function EditJobPage() {
     if (job) {
       setTitle(job.title || ''),
       setDescription(job.description || ''),
-      setCategory(job.category || ''),
+      setCategory(job.category || '')
     }
   }, [job]),
 
@@ -27,7 +27,7 @@ export default function EditJobPage() {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title, description, category })}),
-    router.push('/client/dashboard'),
+    router.push('/client/dashboard')
   }
 
   if (!job) return <div>Loading…</div>,
@@ -51,5 +51,5 @@ export default function EditJobPage() {
         <button className="px-4 py-2 rounded bg-black text-white" onClick={save}>Save</button>
       </div>
     </div>
-  ),
+  )
 }

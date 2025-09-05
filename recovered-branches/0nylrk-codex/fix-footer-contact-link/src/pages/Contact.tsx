@@ -12,7 +12,6 @@ import z from "zod",
 import { ChatAssistant } from "@/components/ChatAssistant",
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react",
 import { AppLayout } from "@/layout/AppLayout",
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -25,7 +24,7 @@ export default function Contact() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target,
-    setFormData(prev => ({ ...prev, [name]: value })),
+    setFormData(prev => ({ ...prev, [name]: value }))
   },
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -57,21 +56,21 @@ export default function Contact() {
           email: "",
           subject: "",
           message: ""
-        }),
-      }, 1500),
+        })
+      }, 1500)
     } catch (error) {
       if (error instanceof z.ZodError) {
         toast({
           title: "Form Validation Error",
           description: error.errors[0].message,
           variant: "destructive"
-        }),
+        })
       } else {
         toast({
           title: "An error occurred",
           description: "Please try again later",
           variant: "destructive"
-        }),
+        })
       }
     }
   },
@@ -88,10 +87,10 @@ export default function Contact() {
         })}),
       
       if (!response.ok) {
-        throw new Error("Failed to get response from AI assistant"),
+        throw new Error("Failed to get response from AI assistant")
       }
       
-      return Promise.resolve(),
+      return Promise.resolve()
     } catch (error) {
       console.error("Error in AI chat:", error),
       toast({
@@ -99,7 +98,7 @@ export default function Contact() {
         description: "There was an error communicating with our AI assistant. Please try again.",
         variant: "destructive"
       }),
-      return Promise.resolve(),
+      return Promise.resolve()
     }
   },
 
@@ -312,5 +311,5 @@ export default function Contact() {
         />
       )}
     </AppLayout>
-  ),
+  )
 }

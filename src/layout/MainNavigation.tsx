@@ -11,11 +11,10 @@ import { LanguageSelector } from '@/components/header/LanguageSelector',
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card',
 import { MiniCartPreview } from '@/components/cart/MiniCartPreview',
 import { LoginModal } from '@/components/auth/LoginModal',
-
 interface MainNavigationProps {
   isAdmin?: boolean,
   unreadCount?: number,
-  className?: string,
+  className?: string
 }
 
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
@@ -35,7 +34,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       setLoginOpen(true),
       return
     }
-    setIsMobileMenuOpen(false),
+    setIsMobileMenuOpen(false)
   },
 
   const baseLinks = [
@@ -80,7 +79,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       name: t('nav.dashboard'),
       href: '/dashboard',
       matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard'
-    }),
+    })
   }
   
   // Add admin-only links
@@ -90,7 +89,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       name: t('nav.analytics'),
       href: '/analytics',
       matches: (path: string) => path.startsWith('/analytics')
-    }),
+    })
   }
   
   return (
@@ -245,5 +244,5 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-  ),
+  )
 }

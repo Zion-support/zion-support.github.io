@@ -1,7 +1,6 @@
 
 import { useState } from 'react',
 import { TalentProfile } from '@/types/talent',
-
 export function useUIState() {
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false),
   const [isHireModalOpen, setIsHireModalOpen] = useState(false),
@@ -18,12 +17,12 @@ export function useUIState() {
     setExpandedSections(prev => ({
       ...prev,
       [sectionName]: !prev[sectionName]
-    })),
+    }))
   },
   
   // Handler for closing mobile filter sidebar
   const closeMobileFilter = () => {
-    setIsMobileFilterOpen(false),
+    setIsMobileFilterOpen(false)
   },
   
   // Effect to listen for the custom event to close mobile filter
@@ -38,5 +37,5 @@ export function useUIState() {
     setSelectedTalent,
     expandedSections,
     toggleSection,
-    closeMobileFilter},
+    closeMobileFilter}
 }

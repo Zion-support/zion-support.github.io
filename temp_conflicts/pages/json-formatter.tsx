@@ -18,7 +18,7 @@ export default function JSONFormatterPage() {
       setFormattedJson(''),
       setIsValid(true),
       setErrorMessage(''),
-      return,
+      return
     }
 
     try {
@@ -29,11 +29,11 @@ export default function JSONFormatterPage() {
       
       setFormattedJson(formatted),
       setIsValid(true),
-      setErrorMessage(''),
+      setErrorMessage('')
     } catch (error) {
       setIsValid(false),
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON'),
-      setFormattedJson(''),
+      setFormattedJson('')
     }
   },
 
@@ -45,10 +45,10 @@ export default function JSONFormatterPage() {
       const minified = JSON.stringify(parsed),
       setFormattedJson(minified),
       setIsValid(true),
-      setErrorMessage(''),
+      setErrorMessage('')
     } catch (error) {
       setIsValid(false),
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON'),
+      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')
     }
   },
 
@@ -56,16 +56,16 @@ export default function JSONFormatterPage() {
     if (!inputJson.trim()) {
       setIsValid(true),
       setErrorMessage(''),
-      return,
+      return
     }
 
     try {
       JSON.parse(inputJson),
       setIsValid(true),
-      setErrorMessage(''),
+      setErrorMessage('')
     } catch (error) {
       setIsValid(false),
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON'),
+      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')
     }
   },
 
@@ -73,7 +73,7 @@ export default function JSONFormatterPage() {
     setInputJson(''),
     setFormattedJson(''),
     setIsValid(true),
-    setErrorMessage(''),
+    setErrorMessage('')
   },
 
   const copyToClipboard = (text: string) => {
@@ -89,7 +89,7 @@ export default function JSONFormatterPage() {
     document.body.appendChild(a),
     a.click(),
     document.body.removeChild(a),
-    URL.revokeObjectURL(url),
+    URL.revokeObjectURL(url)
   },
 
   const loadSampleJSON = () => {
@@ -121,12 +121,12 @@ export default function JSONFormatterPage() {
     setInputJson(JSON.stringify(sample, null, 2)),
     setFormattedJson(''),
     setIsValid(true),
-    setErrorMessage(''),
+    setErrorMessage('')
   },
 
   const getLineNumbers = (text: string) => {
     const lines = text.split('\n'),
-    return lines.map((_, index) => index + 1).join('\n'),
+    return lines.map((_, index) => index + 1).join('\n')
   },
 
   return (

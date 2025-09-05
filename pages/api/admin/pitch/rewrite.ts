@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { ensureAdminFromApi } from '../../../../utils/auth',
 import OpenAI from 'openai',
-
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY }),
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -30,13 +29,13 @@ Title: ${slide.title}\nContent:\n${slide.content}`,
       const raw = chat.choices?.[0]?.message?.content || '{}',
       const parsed = JSON.parse(raw),
       title = parsed.title || title,
-      content = parsed.content || content,
+      content = parsed.content || content
     } catch (err) {
       // keep original if AI fails
     }
 
-    res.status(200).json({ title, content }),
+    res.status(200).json({ title, content })
   } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Rewrite failed' }),
+    res.status(500).json({ error: e?.message || 'Rewrite failed' })
   }
 }

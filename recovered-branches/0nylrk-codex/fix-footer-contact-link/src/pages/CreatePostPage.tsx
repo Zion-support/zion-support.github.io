@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button",
 import PostForm from "@/components/community/PostForm",
 import { useToast } from "@/hooks/use-toast",
 import { ForumCategory } from "@/types/community",
-
 interface PostFormValues {
   title: string,
   content: string,
@@ -41,13 +40,13 @@ export default function CreatePostPage() {
       }),
       
       // Redirect to the forum category
-      navigate(`/community/category/${values.categoryId}`),
+      navigate(`/community/category/${values.categoryId}`)
     } catch (error) {
       toast({
         title: "Error",
         description: "There was a problem creating your post",
         variant: "destructive"
-      }),
+      })
     }
   },
 
@@ -73,5 +72,5 @@ export default function CreatePostPage() {
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} />
       </div>
     </AppLayout>
-  ),
+  )
 }

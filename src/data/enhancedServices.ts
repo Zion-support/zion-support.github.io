@@ -4,7 +4,7 @@ export const placeholder = 'placeholder';
 =======
 
 
-  };
+  }
 ],
 ,
 

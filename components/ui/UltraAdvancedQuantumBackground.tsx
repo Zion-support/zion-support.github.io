@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
-
 interface UltraAdvancedQuantumBackgroundProps {
   children: React.ReactNode,
   className?: string
@@ -45,7 +44,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         this.size = Math.random() * 3 + 1,
         this.color = `hsl(${Math.random() * 360}, 70%, 60%)`,
         this.life = Math.random() * 100,
-        this.maxLife = 100,
+        this.maxLife = 100
       }
 
       update() {
@@ -59,7 +58,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         if (this.life <= 0) {
           this.life = this.maxLife,
           this.x = Math.random() * canvas.width,
-          this.y = Math.random() * canvas.height,
+          this.y = Math.random() * canvas.height
         }
       }
 
@@ -71,7 +70,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         ctx.beginPath(),
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2),
         ctx.fill(),
-        ctx.restore(),
+        ctx.restore()
       }
     }
 
@@ -89,11 +88,11 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         this.radius = Math.random() * 100 + 50,
         this.intensity = Math.random() * 0.5 + 0.5,
         this.phase = Math.random() * Math.PI * 2,
-        this.color = `hsl(${200 + Math.random() * 60}, 80%, 60%)`,
+        this.color = `hsl(${200 + Math.random() * 60}, 80%, 60%)`
       }
 
       update() {
-        this.phase += 0.02,
+        this.phase += 0.02
       }
 
       draw() {
@@ -105,7 +104,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         ctx.beginPath(),
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2),
         ctx.stroke(),
-        ctx.restore(),
+        ctx.restore()
       }
     }
 
@@ -136,20 +135,20 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
                   from: prevLayerStart + j,
                   to: nodeIndex,
                   weight: Math.random()
-                }),
+                })
               }
             }
-            nodeIndex++,
+            nodeIndex++
           }
-        }),
+        })
       }
 
       update() {
         // Animate neural network
         this.nodes.forEach((node, index) => {
           node.x += (Math.random() - 0.5) * 0.5,
-          node.y += (Math.random() - 0.5) * 0.5,
-        }),
+          node.y += (Math.random() - 0.5) * 0.5
+        })
       }
 
       draw() {
@@ -165,7 +164,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
           ctx.beginPath(),
           ctx.moveTo(from.x, from.y),
           ctx.lineTo(to.x, to.y),
-          ctx.stroke(),
+          ctx.stroke()
         }),
 
         // Draw nodes
@@ -173,20 +172,20 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         this.nodes.forEach(node => {
           ctx.beginPath(),
           ctx.arc(node.x, node.y, 3, 0, Math.PI * 2),
-          ctx.fill(),
+          ctx.fill()
         }),
 
-        ctx.restore(),
+        ctx.restore()
       }
     }
 
     // Initialize
     for (let i = 0, i < 100, i++) {
-      particles.push(new Particle()),
+      particles.push(new Particle())
     }
 
     for (let i = 0, i < 8, i++) {
-      quantumFields.push(new QuantumField()),
+      quantumFields.push(new QuantumField())
     }
 
     neuralNetworks.push(new NeuralNetwork()),
@@ -198,19 +197,19 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       // Update and draw quantum fields
       quantumFields.forEach(field => {
         field.update(),
-        field.draw(),
+        field.draw()
       }),
 
       // Update and draw neural networks
       neuralNetworks.forEach(network => {
         network.update(),
-        network.draw(),
+        network.draw()
       }),
 
       // Update and draw particles
       particles.forEach(particle => {
         particle.update(),
-        particle.draw(),
+        particle.draw()
       }),
 
       // Draw quantum entanglement effects
@@ -226,28 +225,28 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
             ctx.beginPath(),
             ctx.moveTo(p1.x, p1.y),
             ctx.lineTo(p2.x, p2.y),
-            ctx.stroke(),
+            ctx.stroke()
           }
         }
       }
       ctx.restore(),
 
-      animationFrameId = requestAnimationFrame(animate),
+      animationFrameId = requestAnimationFrame(animate)
     },
 
     animate(),
 
     const handleResize = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight,
+      canvas.height = window.innerHeight
     },
 
     window.addEventListener('resize', handleResize),
 
     return () => {
       window.removeEventListener('resize', handleResize),
-      cancelAnimationFrame(animationFrameId),
-    },
+      cancelAnimationFrame(animationFrameId)
+    }
   }, []),
 
   return (
@@ -341,7 +340,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         />
       </div>
     </div>
-  ),
+  )
 },
 
 export default UltraAdvancedQuantumBackground,

@@ -14,7 +14,7 @@ interface SearchResult {
   pricing?: {
     starter?: string,
     enterprise?: string
-  },
+  }
 }
 
 interface SearchProps {
@@ -39,9 +39,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]),
   const [searchHistory, setSearchHistory] = useState<string[]>([]),
   const [popularSearches] = useState([
-    'AI ConsciousnessQuantum Computing',
-    'CybersecurityBusiness Intelligence',
-    'Space TechnologyAutonomous Systems'
+    'AI ConsciousnessQuantum ComputingCybersecurityBusiness IntelligenceSpace TechnologyAutonomous Systems'
   ]),
 
   // Mock search results - in real app, this would come from API
@@ -54,7 +52,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       type: 'Platform',
       slug: '/ai-consciousness-evolution-platform-2045',
       relevance: 95,
-      features: ['Emotional IntelligenceSelf-Awareness', 'Consciousness Evolution'],
+      features: ['Emotional IntelligenceSelf-AwarenessConsciousness Evolution'],
       pricing: { starter: '$999/month', enterprise: 'Contact Sales' }
     },
     {
@@ -65,7 +63,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       type: 'Platform',
       slug: '/quantum-ai-hybrid-computing',
       relevance: 92,
-      features: ['Quantum SupremacyAI Integration', 'Hybrid Computing'],
+      features: ['Quantum SupremacyAI IntegrationHybrid Computing'],
       pricing: { starter: '$1,499/month', enterprise: 'Contact Sales' }
     },
     {
@@ -76,7 +74,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       type: 'Platform',
       slug: '/quantum-cybersecurity-intelligence',
       relevance: 88,
-      features: ['Quantum ResistanceThreat Prediction', 'AI Security'],
+      features: ['Quantum ResistanceThreat PredictionAI Security'],
       pricing: { starter: '$799/month', enterprise: 'Contact Sales' }
     }
   ],
@@ -113,7 +111,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                                    result.type.toLowerCase().includes(filter.toLowerCase())
                                  ),
             
-            return matchesQuery && matchesFilters,
+            return matchesQuery && matchesFilters
           }),
 
           // Sort by relevance
@@ -121,8 +119,8 @@ const EnhancedSearch: React.FC<SearchProps> = ({
           
           setResults(sortedResults),
           setShowResults(true),
-          setIsSearching(false),
-        }, 300),
+          setIsSearching(false)
+        }, 300)
       }, 300),
       [selectedFilters]
     ),
@@ -130,7 +128,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   ),
 
   useEffect(() => {
-    debouncedSearch(query),
+    debouncedSearch(query)
   }, [query, debouncedSearch]),
 
   // Handle search input change
@@ -172,7 +170,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   const addToSearchHistory = (searchTerm: string) => {
     const newHistory = [searchTerm, ...searchHistory.filter(item => item !== searchTerm)].slice(0, 5),
     setSearchHistory(newHistory),
-    localStorage.setItem('zion-search-history', JSON.stringify(newHistory)),
+    localStorage.setItem('zion-search-history', JSON.stringify(newHistory))
   },
 
   // Load search history from localStorage
@@ -180,9 +178,9 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     const savedHistory = localStorage.getItem('zion-search-history'),
     if (savedHistory) {
       try {
-        setSearchHistory(JSON.parse(savedHistory)),
+        setSearchHistory(JSON.parse(savedHistory))
       } catch (error) {
-        console.error('Failed to parse search history:', error),
+        console.error('Failed to parse search history:', error)
       }
     }
   }, []),
@@ -193,7 +191,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       prev.includes(filterId) 
         ? prev.filter(id => id !== filterId)
         : [...prev, filterId]
-    ),
+    )
   },
 
   // Handle result selection
@@ -207,7 +205,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   const clearSearch = () => {
     setQuery(''),
     setShowResults(false),
-    setResults([]),
+    setResults([])
   },
 
   return (
@@ -434,7 +432,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
         )}
       </AnimatePresence>
     </div>
-  ),
+  )
 },
 
 // Debounce utility function
@@ -445,8 +443,8 @@ function debounce<T extends (...args: any[]) => any>(
   let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {
     clearTimeout(timeout),
-    timeout = setTimeout(() => func(...args), wait),
-  },
+    timeout = setTimeout(() => func(...args), wait)
+  }
 }
 
 export default EnhancedSearch,

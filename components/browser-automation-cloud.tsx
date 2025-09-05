@@ -4,9 +4,7 @@ import { Check, ExternalLink } from 'lucide-react',
 
 export default function BrowserAutomationCloudPage() {
 	const features = [
-		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limits',
-		'Artifacts: HAR, traces, screenshots, videosRotating proxies and geo targeting',
-		'Webhook callbacks and REST API'
+		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
 	],
 
 	return (

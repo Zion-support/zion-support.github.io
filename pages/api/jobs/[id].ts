@@ -14,12 +14,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (idx === -1) {
     res.status(404).json({ error: 'Job not found' }),
-    return,
+    return
   }
 
   if (req.method === 'GET') {
     res.status(200).json({ job: jobs[idx] }),
-    return,
+    return
   }
 
   if (req.method === 'PATCH') {
@@ -28,7 +28,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const isOwner = userEmail && userEmail === job.clientEmail,
     if (!isOwner && !isAdminEmail(userEmail)) {
       res.status(403).json({ error: 'Forbidden' }),
-      return,
+      return
     }
 
     const { title, description, category, requiredSkills, budgetMinUsd, budgetMaxUsd, deliveryDeadlineIso, status } = req.body || {},
@@ -47,9 +47,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     writeJsonFile<Job[]>(FILE, jobs),
 
     res.status(200).json({ job }),
-    return,
+    return
   }
 
   res.setHeader('AllowGET, PATCH'),
-  res.status(405).end('Method Not Allowed'),
+  res.status(405).end('Method Not Allowed')
 }

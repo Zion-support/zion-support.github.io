@@ -25,11 +25,11 @@ export default function HelpCenter() {
   
   const handleBackToCategories = () => {
     setSelectedCategory(null),
-    setSelectedArticle(null),
+    setSelectedArticle(null)
   },
   
   const handleBackToArticles = () => {
-    setSelectedArticle(null),
+    setSelectedArticle(null)
   },
   
   return (

@@ -6,7 +6,6 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Loader2, Info, ThumbsUp } from 'lucide-react'
 import { PricingSuggestion } from "@/services/pricingSuggestionService",
-
 interface PricingSuggestionBoxProps {
   suggestion: PricingSuggestion | null,
   isLoading: boolean,
@@ -31,11 +30,11 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
           </div>
         </CardContent>
       </Card>
-    ),
+    )
   }
 
   if (!suggestion) {
-    return null,
+    return null
   }
 
   const confidenceColor = {
@@ -91,5 +90,5 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
         </p>
       </CardContent>
     </Card>
-  ),
+  )
 },

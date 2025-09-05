@@ -3,7 +3,6 @@ import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { useToast } from "@/hooks/use-toast",
-
 export function ExportPanel() {
   const { toast } = useToast(),
   
@@ -17,8 +16,8 @@ export function ExportPanel() {
     setTimeout(() => {
       toast({
         title: `${format.toUpperCase()} Export Ready`,
-        description: "Your export has been downloaded."}),
-    }, 1500),
+        description: "Your export has been downloaded."})
+    }, 1500)
   },
   
   return (
@@ -49,5 +48,5 @@ export function ExportPanel() {
         </div>
       </CardContent>
     </Card>
-  ),
+  )
 }

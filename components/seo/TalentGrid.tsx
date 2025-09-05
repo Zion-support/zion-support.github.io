@@ -1,22 +1,21 @@
 import React from 'react',
 import { TALENT_PROFILES } from '../../data/talent',
 import type { TalentProfile } from '../../data/talent',
-
 type Props = {
   region?: string,
-  service?: string,
+  service?: string
 },
 
 function matchesRegion(profile: TalentProfile, region?: string) {
   if (!region) return true,
   const r = region.toLowerCase(),
-  return profile.location.toLowerCase().includes(r),
+  return profile.location.toLowerCase().includes(r)
 }
 
 function matchesService(profile: TalentProfile, service?: string) {
   if (!service) return true,
   const s = service.toLowerCase(),
-  return profile.title.toLowerCase().includes(s) || profile.skills.some((sk) => sk.toLowerCase().includes(s)),
+  return profile.title.toLowerCase().includes(s) || profile.skills.some((sk) => sk.toLowerCase().includes(s))
 }
 
 export default function TalentGrid({ region, service }: Props) {
@@ -26,7 +25,7 @@ export default function TalentGrid({ region, service }: Props) {
   ),
 
   if (items.length === 0) {
-    return <div className="text-sm text-gray-400">No matching talent found. Try broadening filters.</div>,
+    return <div className="text-sm text-gray-400">No matching talent found. Try broadening filters.</div>
   }
 
   return (
@@ -50,5 +49,5 @@ export default function TalentGrid({ region, service }: Props) {
         </div>
       ))}
     </div>
-  ),
+  )
 }

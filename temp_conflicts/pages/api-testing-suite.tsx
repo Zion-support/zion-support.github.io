@@ -40,22 +40,22 @@ export default function APITestingSuitePage() {
     {
       name: 'Functional Testing',
       description: 'Verify that your API endpoints work correctly and return expected responses.',
-      tests: ['Request/response validationStatus code verification', 'Data format checkingError handling']
+      tests: ['Request/response validationStatus code verificationData format checkingError handling']
     },
     {
       name: 'Performance Testing',
       description: 'Ensure your APIs can handle expected load and perform under pressure.',
-      tests: ['Load testingStress testing', 'Response time analysisThroughput measurement']
+      tests: ['Load testingStress testingResponse time analysisThroughput measurement']
     },
     {
       name: 'Security Testing',
       description: 'Identify security vulnerabilities and ensure proper authentication and authorization.',
-      tests: ['Authentication testingAuthorization checks', 'Input validationSQL injection testing']
+      tests: ['Authentication testingAuthorization checksInput validationSQL injection testing']
     },
     {
       name: 'Integration Testing',
       description: 'Test how your APIs integrate with other systems and services.',
-      tests: ['End-to-end workflowsThird-party integrations', 'Data flow validationError propagation']
+      tests: ['End-to-end workflowsThird-party integrationsData flow validationError propagation']
     }
   ],
 
@@ -66,9 +66,7 @@ export default function APITestingSuitePage() {
       period: '/month',
       description: 'Perfect for developers and small teams',
       features: [
-        '100 API tests/monthBasic test scenarios',
-        'Email notificationsBasic reporting',
-        '5 API endpointsCommunity support'
+        '100 API tests/monthBasic test scenariosEmail notificationsBasic reporting5 API endpointsCommunity support'
       ],
       popular: false
     },
@@ -78,10 +76,7 @@ export default function APITestingSuitePage() {
       period: '/month',
       description: 'Ideal for growing businesses and development teams',
       features: [
-        '500 API tests/monthAdvanced test scenarios',
-        'SMS & email alertsAdvanced reporting',
-        '25 API endpointsPerformance testing',
-        'API accessPriority support'
+        '500 API tests/monthAdvanced test scenariosSMS & email alertsAdvanced reporting25 API endpointsPerformance testingAPI accessPriority support'
       ],
       popular: true
     },
@@ -91,10 +86,7 @@ export default function APITestingSuitePage() {
       period: '/month',
       description: 'For large organizations with complex API requirements',
       features: [
-        'Unlimited API testsCustom test scenarios',
-        'Custom alerting rules24/7 dedicated support',
-        'Unlimited endpointsAdvanced security testing',
-        'White-label optionsCustom integrations'
+        'Unlimited API testsCustom test scenariosCustom alerting rules24/7 dedicated supportUnlimited endpointsAdvanced security testingWhite-label optionsCustom integrations'
       ],
       popular: false
     }
@@ -119,12 +111,11 @@ export default function APITestingSuitePage() {
           { name: 'Rate Limiting', status: 'pass', value: 'Within limits', threshold: 'No throttling' }
         ],
         recommendations: [
-          'Consider implementing response caching for better performanceMonitor response times during peak usage',
-          'Implement rate limiting headers for better API documentation'
+          'Consider implementing response caching for better performanceMonitor response times during peak usageImplement rate limiting headers for better API documentation'
         ]
       }),
-      setIsTesting(false),
-    }, 3000),
+      setIsTesting(false)
+    }, 3000)
   },
 
   return (

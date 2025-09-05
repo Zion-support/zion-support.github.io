@@ -1,5 +1,4 @@
 import Head from 'next/head',
-
 export default function UltimateRedundancyRedirect() {
   return (
     <>
@@ -10,6 +9,6 @@ export default function UltimateRedundancyRedirect() {
         <p>Redirecting to Ultimate Redundancy docs…</p>
       </main>
     </>
-  ),
+  )
 }
 

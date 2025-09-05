@@ -12,7 +12,7 @@ export interface QuantumSpaceService {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const quantumSpaceServices: QuantumSpaceService[] = [

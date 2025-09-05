@@ -17,7 +17,6 @@ import {
   Zap
 } from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-
 const NewsPage: React.FC = () => {
   const newsArticles = [
     {
@@ -29,7 +28,7 @@ const NewsPage: React.FC = () => {
       readTime: '5 min read',
       featured: true,
       image: '/images/news/ai-consciousness-breakthrough.jpg',
-      tags: ['AI ConsciousnessBreakthrough', 'ResearchInnovation']
+      tags: ['AI ConsciousnessBreakthroughResearchInnovation']
     },
     {
       id: 2,
@@ -41,7 +40,7 @@ const NewsPage: React.FC = () => {
       readTime: '3 min read',
       featured: true,
       image: '/images/news/series-c-funding.jpg',
-      tags: ['FundingInvestment', 'GrowthExpansion']
+      tags: ['FundingInvestmentGrowthExpansion']
     },
     {
       id: 3,
@@ -53,7 +52,7 @@ const NewsPage: React.FC = () => {
       readTime: '4 min read',
       featured: true,
       image: '/images/news/quantum-azure-partnership.jpg',
-      tags: ['Quantum ComputingMicrosoft Azure', 'SecurityPartnership']
+      tags: ['Quantum ComputingMicrosoft AzureSecurityPartnership']
     }
   ],
 
@@ -68,7 +67,7 @@ const NewsPage: React.FC = () => {
       readTime: '4 min read',
       featured: false,
       image: '/images/news/ai-customer-success.jpg',
-      tags: ['AICustomer Success', 'RetentionPlatform']
+      tags: ['AICustomer SuccessRetentionPlatform']
     },
     {
       id: 5,
@@ -80,7 +79,7 @@ const NewsPage: React.FC = () => {
       readTime: '2 min read',
       featured: false,
       image: '/images/news/forbes-ai-50.jpg',
-      tags: ['RecognitionForbes', 'AI LeadershipInnovation']
+      tags: ['RecognitionForbesAI LeadershipInnovation']
     },
     {
       id: 6,
@@ -92,7 +91,7 @@ const NewsPage: React.FC = () => {
       readTime: '8 min read',
       featured: false,
       image: '/images/news/quantum-drug-discovery.jpg',
-      tags: ['Quantum ComputingDrug Discovery', 'ResearchHealthcare']
+      tags: ['Quantum ComputingDrug DiscoveryResearchHealthcare']
     },
     {
       id: 7,
@@ -104,7 +103,7 @@ const NewsPage: React.FC = () => {
       readTime: '3 min read',
       featured: false,
       image: '/images/news/deloitte-partnership.jpg',
-      tags: ['PartnershipDeloitte', 'EnterpriseAI Implementation']
+      tags: ['PartnershipDeloitteEnterpriseAI Implementation']
     },
     {
       id: 8,
@@ -116,7 +115,7 @@ const NewsPage: React.FC = () => {
       readTime: '6 min read',
       featured: false,
       image: '/images/news/ai-autonomous-business.jpg',
-      tags: ['AIAutonomous Operations', 'BusinessPlatform']
+      tags: ['AIAutonomous OperationsBusinessPlatform']
     },
     {
       id: 9,
@@ -128,7 +127,7 @@ const NewsPage: React.FC = () => {
       readTime: '3 min read',
       featured: false,
       image: '/images/news/european-expansion.jpg',
-      tags: ['ExpansionEurope', 'InternationalGrowth']
+      tags: ['ExpansionEuropeInternationalGrowth']
     }
   ],
 
@@ -187,7 +186,7 @@ const NewsPage: React.FC = () => {
       news.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       news.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
       news.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
-    return categoryMatch && searchMatch,
+    return categoryMatch && searchMatch
   }),
 
   const formatDate = (dateString: string) => {
@@ -196,11 +195,10 @@ const NewsPage: React.FC = () => {
       year: 'numeric', 
       month: 'long', 
       day: 'numeric' 
-    }),
+    })
   },
 import React from 'react',
 import SEO from '../components/SEO',
-
 export default function NewsPage() {
   return (
     <UltraAdvancedFuturisticBackground>
@@ -258,7 +256,6 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
-
 export default function NewsPage() {
   const newsItems = [
     {
@@ -1103,5 +1100,5 @@ export default function NewsPage() {
 
       <EnhancedFooter />
     </div>
-  ),
+  )
 }

@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react',
 import Cookies from 'js-cookie',
-
 export type ConsentState = {
   analytics: boolean,
   ads: boolean
@@ -30,7 +29,7 @@ function loadAnalytics() {
   document.body.appendChild(s),
   const inline = document.createElement('script'),
   inline.text = `window.dataLayer=window.dataLayer||[],function gtag(){dataLayer.push(arguments)}gtag('js',new Date()),gtag('configGA_MEASUREMENT_ID'),`,
-  document.body.appendChild(inline),
+  document.body.appendChild(inline)
 }
 
 function loadAds() {
@@ -45,16 +44,16 @@ function loadAds() {
 export function ConsentProvider({ children }: { children: ReactNode }) {
   const [consent, setConsent] = useState<ConsentState>(() => {
     const stored = Cookies.get('consent_preferences'),
-    return stored ? (JSON.parse(stored) as ConsentState) : defaultState,
+    return stored ? (JSON.parse(stored) as ConsentState) : defaultState
   }),
 
   useEffect(() => {
-    Cookies.set('consent_preferences', JSON.stringify(consent), { expires: 365 }),
+    Cookies.set('consent_preferences', JSON.stringify(consent), { expires: 365 })
   }, [consent]),
 
   useEffect(() => {
     if (consent.analytics) loadAnalytics(),
-    if (consent.ads) loadAds(),
+    if (consent.ads) loadAds()
   }, [consent]),
 
   const acceptAll = () => setConsent({ analytics: true, ads: true }),
@@ -65,7 +64,7 @@ export function ConsentProvider({ children }: { children: ReactNode }) {
     <ConsentContext.Provider value={{ consent, acceptAll, rejectNonEssential, updateConsent }}>
       {children}
     </ConsentContext.Provider>
-  ),
+  )
 }
 
 export const useConsent = () => useContext(ConsentContext),

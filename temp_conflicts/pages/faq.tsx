@@ -1,7 +1,6 @@
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
-
 export default function FAQPage() {
   const [openCategory, setOpenCategory] = useState('general'),
 
@@ -237,9 +236,7 @@ export default function FAQPage() {
   ),
 import React from 'react',
 import Head from 'next/head',
-  return (
-    <>
+  return (<>
       <Head><title>faq - Zion App</title><meta name="description" content="faq page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">faq</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">,
-            ← Back to Home</a></div></div></>,
-  )
+            ← Back to Home</a></div></div></>)
 }

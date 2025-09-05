@@ -44,11 +44,11 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 
   const handleClick = () => {
     if (!notification.read) {
-      onMarkAsRead(notification.id),
+      onMarkAsRead(notification.id)
     }
     // If there's an action URL, navigate to it
     if (notification.action_url) {
-      navigate(notification.action_url),
+      navigate(notification.action_url)
     }
   },
 
@@ -121,7 +121,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 className="h-6 w-6"
                 onClick={(e) => {
                   e.stopPropagation(),
-                  onDismiss(notification.id),
+                  onDismiss(notification.id)
                 }}
               >
                 <Trash2 className="h-3.5 w-3.5 text-red-400" />
@@ -134,5 +134,5 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
         </TooltipProvider>
       </div>
     </div>
-  ),
+  )
 },

@@ -19,7 +19,6 @@ import {
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 import { formatDate } from "@/utils/dateUtils",
-
 interface QuotesTableProps {
   quotes: QuoteRequest[],
   isArchived?: boolean,
@@ -127,7 +126,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                           className="text-red-500"
                           onClick={() => {
                             if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
-                              deleteQuote(quote.id),
+                              deleteQuote(quote.id)
                             }
                           }}
                         >
@@ -166,7 +165,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                           <DropdownMenuItem 
                             onClick={() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
-                                deleteQuote(quote.id),
+                                deleteQuote(quote.id)
                               }
                             }}
                             className="text-red-500"
@@ -185,5 +184,5 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
         </TableBody>
       </Table>
     </div>
-  ),
+  )
 },

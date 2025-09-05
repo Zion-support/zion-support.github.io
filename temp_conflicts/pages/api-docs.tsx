@@ -7,7 +7,6 @@ import {
   Zap, Lock, Globe2, Cpu
 } from 'lucide-react',
 import Link from 'next/link',
-
 const APIDocs: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState(''),
   const [selectedAPI, setSelectedAPI] = useState('all'),
@@ -180,16 +179,16 @@ const headers = {
 
 const data = {
     qubits: 2,
-    gates: ['HCNOT', 'H'],
+    gates: ['HCNOTH'],
     measurements: [0, 1]
 },
 
 axios.post(url, data, { headers })
     .then(response => {
-        // // // console.log('Result:', response.data.result),
+        // // // console.log('Result:', response.data.result)
     })
     .catch(error => {
-        console.error('Error:', error.response.data),
+        console.error('Error:', error.response.data)
     }),`
     },
     {
@@ -211,13 +210,13 @@ axios.post(url, data, { headers })
 
   const filteredAPIs = apis.filter(api => {
     if (selectedAPI === 'all') return true,
-    return api.category === selectedAPI,
+    return api.category === selectedAPI
   }),
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text),
     setCopiedEndpoint(text),
-    setTimeout(() => setCopiedEndpoint(''), 2000),
+    setTimeout(() => setCopiedEndpoint(''), 2000)
   },
 
 export default function ApiDocs() {

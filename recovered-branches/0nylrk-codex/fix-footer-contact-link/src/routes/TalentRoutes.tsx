@@ -6,7 +6,6 @@ import TalentProfilePage from "../pages/TalentProfilePage",
 import SavedTalentsPage from "../pages/SavedTalentsPage",
 import CreateTalentProfile from "../pages/CreateTalentProfile",
 import ProfilePage from "../pages/ProfilePage",
-
 const TalentRoutes = () => {
   return (
     <Routes>
@@ -32,7 +31,7 @@ const TalentRoutes = () => {
       />
       <Route path="/profile/:id" element={<ProfilePage />} />
     </Routes>
-  ),
+  )
 },
 
 export default TalentRoutes,

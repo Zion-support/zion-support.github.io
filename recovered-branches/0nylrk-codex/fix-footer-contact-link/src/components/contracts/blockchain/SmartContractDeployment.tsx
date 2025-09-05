@@ -9,7 +9,6 @@ import { Switch } from "@/components/ui/switch",
 import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",
 import { Loader2, ShieldCheck, Download } from "lucide-react",
 import { toast } from "sonner",
-
 interface SmartContractDeploymentProps {
   solidityCode: string,
   onDeploy: (options: DeploymentOptions) => Promise<void>,
@@ -31,13 +30,13 @@ export function SmartContractDeployment({
   const handleDeployContract = async () => {
     if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {
       toast.error("Please enter a wallet address for blockchain deployment"),
-      return,
+      return
     }
     
     try {
-      await onDeploy(deploymentOptions),
+      await onDeploy(deploymentOptions)
     } catch (error) {
-      console.error("Deployment error:", error),
+      console.error("Deployment error:", error)
     }
   },
   
@@ -57,7 +56,7 @@ export function SmartContractDeployment({
     URL.revokeObjectURL(url),
     document.body.removeChild(a),
     
-    toast.success("Solidity contract downloaded"),
+    toast.success("Solidity contract downloaded")
   },
 
   return (
@@ -163,5 +162,5 @@ export function SmartContractDeployment({
         </Button>
       </CardFooter>
     </Card>
-  ),
+  )
 }

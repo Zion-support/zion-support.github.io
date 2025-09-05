@@ -1,5 +1,4 @@
 import type { BookProject } from '../book/bookTypes',
-
 export function buildPrintableHtml(project: BookProject): string {
   const { meta, chapters, visuals } = project,
   const quotesHtml = visuals.quoteCallouts
@@ -59,7 +58,7 @@ export function buildPrintableHtml(project: BookProject): string {
   ${chapterHtml}
   ${visualsHtml}
 </body>
-</html>`,
+</html>`
 }
 
 function paragraphize(text: string): string {
@@ -67,7 +66,7 @@ function paragraphize(text: string): string {
   return text
     .split(/\n\n+/)
     .map((p) => `<p>${escapeHtml(p)}</p>`)
-    .join('\n'),
+    .join('\n')
 }
 
 function escapeHtml(s: string): string {
@@ -76,5 +75,5 @@ function escapeHtml(s: string): string {
     .replace(/</g, '<')
     .replace(/>/g, '>')
     .replace(/"/g, '"')
-    .replace(/'/g, '&#039,'),
+    .replace(/'/g, '&#039,')
 }

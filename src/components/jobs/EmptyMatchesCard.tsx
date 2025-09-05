@@ -36,5 +36,5 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
         )}
       </Button>
     </Card>
-  ),
+  )
 }

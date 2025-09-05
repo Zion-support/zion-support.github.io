@@ -17,7 +17,6 @@ import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react',
 import { PortfolioProject } from '@/types/resume',
 import { usePortfolio } from '@/hooks/usePortfolio',
 import { useAuth } from '@/hooks/useAuth',
-
 // Define schema for form validation
 const projectSchema = z.object({
   title: z.string().min(1, 'Project title is required'),
@@ -77,20 +76,20 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       let success = false,
       
       if (isEditing && project?.id) {
-        success = await updateProject(project.id, projectData),
+        success = await updateProject(project.id, projectData)
       } else {
         const projectId = await addProject(projectData),
-        success = !!projectId,
+        success = !!projectId
       }
       
       if (success) {
         onSuccess(),
-        form.reset(),
+        form.reset()
       }
     } catch (error) {
-      console.error('Error saving project:', error),
+      console.error('Error saving project:', error)
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
@@ -209,5 +208,5 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         </div>
       </form>
     </Form>
-  ),
+  )
 }

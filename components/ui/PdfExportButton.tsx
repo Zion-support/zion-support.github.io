@@ -1,5 +1,4 @@
 import React from 'react',
-
 export type PdfExportButtonProps = {
   targetRef: React.RefObject<HTMLDivElement>,
   fileName?: string,
@@ -21,7 +20,7 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
     } as any,
 
-    html2pdf().set(opt).from(element).save(),
+    html2pdf().set(opt).from(element).save()
   },
 
   return (

@@ -17,7 +17,6 @@ import { format, addDays } from "date-fns",
 import { CalendarIcon, Check, Clock } from "lucide-react",
 import { toast } from "@/components/ui/use-toast",
 import { useInterviews } from "@/hooks/useInterviews",
-
 interface InterviewRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
@@ -55,7 +54,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         title: "Authentication required",
         description: "Please log in to schedule an interview",
         variant: "destructive"}),
-      return,
+      return
     }
 
     setIsSubmitting(true),
@@ -83,15 +82,15 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       toast({
         title: "Interview requested",
         description: `Your interview request with ${talent.full_name} has been sent.`}),
-      onClose(),
+      onClose()
     } catch (error) {
       console.error("Failed to schedule interview:", error),
       toast({
         title: "Failed to schedule interview",
         description: "An error occurred while scheduling the interview. Please try again.",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   }
 
@@ -298,5 +297,5 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         </div>
       </form>
     </Form>
-  ),
+  )
 }

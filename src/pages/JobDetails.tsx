@@ -13,7 +13,6 @@ import { ApplyToJobModal } from '@/components/messaging/job-application',
 import { SEO } from '@/components/SEO',
 import { useWhitelabel } from '@/context/WhitelabelContext',
 import { JobDetailsSkeleton } from '@/components/jobs',
-
 interface Job {
   id: string,
   title: string,
@@ -40,11 +39,11 @@ export default function JobDetails() {
 
   const formatBudget = (budget: any) => {
     if (!budget) return "Not specified",
-    return `$${budget.min} - $${budget.max}`,
+    return `$${budget.min} - $${budget.max}`
   },
 
   if (isLoading) {
-    return <JobDetailsSkeleton />,
+    return <JobDetailsSkeleton />
   }
 
   if (error || !job) {
@@ -57,22 +56,22 @@ export default function JobDetails() {
           <Button onClick={() => router.push('/careers')}>View All Jobs</Button>
         </div>
       </>
-    ),
+    )
   }
 
   const handleApply = () => {
     if (!isAuthenticated) {
       toast.error("Please log in to apply for this job"),
       router.push(`/login?redirect=${encodeURIComponent(`/jobs/${jobId || ''}`)}`), // Added null check for jobId
-      return,
+      return
     }
 
     if (user?.userType !== "talent" && user?.userType !== "admin" && user?.userType !== "client") {
       toast.error("Only job seekers can apply for jobs"),
-      return,
+      return
     }
     
-    setIsApplyModalOpen(true),
+    setIsApplyModalOpen(true)
   },
 
   const handleApplySuccess = async (appliedJobId: string) => {
@@ -203,5 +202,5 @@ export default function JobDetails() {
         />
       )}
     </>
-  ),
+  )
 }

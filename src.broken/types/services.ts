@@ -38,7 +38,7 @@ export interface ServicePricing {
     period: string,
     features: string[],
     popular?: boolean
-  },
+  }
 }
 
 export interface ServiceSolution {

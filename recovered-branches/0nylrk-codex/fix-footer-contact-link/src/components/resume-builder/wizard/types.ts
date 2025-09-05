@@ -1,6 +1,5 @@
 
 import { Resume } from "@/types/resume",
-
 export interface StepProps {
   id: string,
   label: string
@@ -12,7 +11,7 @@ export interface NavigationButtonsProps {
   isNextDisabled?: boolean,
   backLabel?: string,
   nextLabel?: string,
-  isLoading?: boolean,
+  isLoading?: boolean
 }
 
 export interface ResumeProgressProps {

@@ -22,7 +22,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       "default": ["Major metropolitan areas"]
     },
     
-    return dataCenters[country] || dataCenters["default"],
+    return dataCenters[country] || dataCenters["default"]
   },
   
   // Get region-specific image
@@ -39,7 +39,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       "default": "https://source.unsplash.com/featured/900x700/?datacenter"
     },
     
-    return regions[country] || regions["default"],
+    return regions[country] || regions["default"]
   },
   
   // Get region-specific instructions
@@ -60,7 +60,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
     return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
            `Response times are typically within 4 hours for metropolitan areas. ` +
            `Please have site access permissions and contact details ready for our technicians. ` +
-           `For remote locations, additional travel fees may apply.`,
+           `For remote locations, additional travel fees may apply.`
   },
   
   const datacenters = getDatacenters(country),
@@ -131,5 +131,5 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
         </p>
       </CardFooter>
     </Card>
-  ),
+  )
 }

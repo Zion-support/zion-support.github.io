@@ -103,12 +103,12 @@ function CategoryContent({
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
-      return,
+      return
     }
     if (isFollowed(categoryId)) {
-      unfollow(categoryId),
+      unfollow(categoryId)
     } else {
-      follow(categoryId),
+      follow(categoryId)
     }
   },
 
@@ -192,7 +192,7 @@ function CategoryContent({
         )}
       </div>
     </div>
-  ),
+  )
 }
 
 export default function ForumCategoryPage() {
@@ -213,12 +213,12 @@ export default function ForumCategoryPage() {
   useEffect(() => {
     // Add a small delay to ensure router is ready
     if (categoryId && category) {
-      logInfo('ForumCategoryPage - categoryId changed:', { data: categoryId }),
+      logInfo('ForumCategoryPage - categoryId changed:', { data: categoryId })
     }
   }, [categoryId, category]),
 
   if (!categoryId || !category) {
-    return <NotFound />,
+    return <NotFound />
   }
 
   if (!hasAccess) {
@@ -234,11 +234,11 @@ export default function ForumCategoryPage() {
           </Button>
         </div>
       </div>
-    ),
+    )
   }
 
   if (!IconComponent) {
-    return <NotFound />,
+    return <NotFound />
   }
 
   return (
@@ -257,5 +257,5 @@ export default function ForumCategoryPage() {
         user={user}
       />
     </>
-  ),
+  )
 }

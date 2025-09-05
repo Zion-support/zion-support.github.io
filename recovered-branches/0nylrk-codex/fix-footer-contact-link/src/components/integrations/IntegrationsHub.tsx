@@ -8,7 +8,6 @@ import { ZapierIntegration } from "./ZapierIntegration",
 import { Badge } from "@/components/ui/badge",
 import { WebhookManager } from "./WebhookManager",
 import { IntegrationsSyncLog } from "./IntegrationsSyncLog",
-
 export function IntegrationsHub() {
   const [activeTab, setActiveTab] = useState("marketplace"),
   

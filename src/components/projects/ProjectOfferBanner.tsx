@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { useProjects } from "@/hooks/useProjects",
 import { Project } from "@/types/projects",
-
 export function ProjectOfferBanner() {
   const router = useRouter(),
   const { projects, isLoading } = useProjects(),
@@ -16,7 +15,7 @@ export function ProjectOfferBanner() {
   useEffect(() => {
     if (projects && !isLoading) {
       const offers = projects.filter(p => p.status === 'offer_sent'),
-      setPendingOffers(offers),
+      setPendingOffers(offers)
     }
   }, [projects, isLoading]),
   
@@ -26,15 +25,15 @@ export function ProjectOfferBanner() {
       const updated = new Set(prev),
       updated.add(projectId),
       return updated
-    }),
+    })
   },
   
   const handleViewOffer = (projectId: string) => {
-    router.push(`/project/${projectId}`),
+    router.push(`/project/${projectId}`)
   },
   
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {
-    return null,
+    return null
   }
   
   return (
@@ -76,5 +75,5 @@ export function ProjectOfferBanner() {
           </Card>
         ))}
     </div>
-  ),
+  )
 }

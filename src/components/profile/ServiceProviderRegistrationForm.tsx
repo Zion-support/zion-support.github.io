@@ -24,7 +24,6 @@ import { toast } from "@/components/ui/use-toast",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
-
 // Define form schema
 const serviceProfileSchema = z.object({
   name: z.string().min(2, "Full Name must be at least 2 characters long"),
@@ -68,7 +67,7 @@ export function ServiceProviderRegistrationForm() {
     const serviceInput = form.getValues("services"),
     if (serviceInput && !serviceTags.includes(serviceInput)) {
       setServiceTags([...serviceTags, serviceInput]),
-      form.setValue("services", ""),
+      form.setValue("services", "")
     }
   },
 
@@ -93,7 +92,7 @@ export function ServiceProviderRegistrationForm() {
       reader.onloadend = () => {
         setUploadedAvatar(reader.result as string)
       },
-      reader.readAsDataURL(file),
+      reader.readAsDataURL(file)
     }
   },
 
@@ -104,7 +103,7 @@ export function ServiceProviderRegistrationForm() {
       toast({
         title: "More information needed",
         description: "Please provide at least a detailed bio before generating enhanced content."}),
-      return,
+      return
     }
 
     try {
@@ -124,7 +123,7 @@ export function ServiceProviderRegistrationForm() {
       }),
 
       if (error) {
-        throw new Error(error.message),
+        throw new Error(error.message)
       }
 
       // Check if data exists before type assertion
@@ -133,7 +132,7 @@ export function ServiceProviderRegistrationForm() {
         
         toast({
           title: "Enhanced Profile Generated",
-          description: "AI has created a professional bio and suggested additional services for your profile."}),
+          description: "AI has created a professional bio and suggested additional services for your profile."})
       } else {
         // Fallback for mock/development mode
         logWarn('Mock AI response - using fallback content'),
@@ -144,7 +143,7 @@ export function ServiceProviderRegistrationForm() {
         
         toast({
           title: "Enhanced Profile Generated",
-          description: "AI has created a professional bio and suggested additional services for your profile."}),
+          description: "AI has created a professional bio and suggested additional services for your profile."})
       }
       
     } catch (error: any) {
@@ -152,9 +151,9 @@ export function ServiceProviderRegistrationForm() {
       toast({
         title: "Generation failed",
         description: error.message || "There was an error generating your enhanced profile. Please try again.",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
-      setIsGenerating(false),
+      setIsGenerating(false)
     }
   },
 
@@ -169,7 +168,7 @@ export function ServiceProviderRegistrationForm() {
         ),
         
         if (newServices.length > 0) {
-          setServiceTags([...serviceTags, ...newServices]),
+          setServiceTags([...serviceTags, ...newServices])
         }
       }
     }
@@ -182,7 +181,7 @@ export function ServiceProviderRegistrationForm() {
         title: "Services required",
         description: "Please add at least one service to your profile.",
         variant: "destructive"}),
-      return,
+      return
     }
 
     setIsSubmitting(true),
@@ -190,7 +189,7 @@ export function ServiceProviderRegistrationForm() {
     try {
       // For actual implementation with Supabase
       if (!user?.id) {
-        throw new Error("User not authenticated"),
+        throw new Error("User not authenticated")
       }
       
       // Enhance profile if not already done
@@ -215,7 +214,7 @@ export function ServiceProviderRegistrationForm() {
             finalSummary = (aiData as any).summary || values.bio,
             // Merge AI suggested services with user-provided services
             const aiServices = (aiData as any).services || [],
-            finalServices = [...new Set([...serviceTags, ...aiServices])],
+            finalServices = [...new Set([...serviceTags, ...aiServices])]
           }
         } catch (error) {
           logErrorToProduction('Error enhancing profile:', { data: error }),
@@ -223,7 +222,7 @@ export function ServiceProviderRegistrationForm() {
         }
       } else if (generatedContent) {
         finalSummary = generatedContent.summary,
-        finalServices = [...new Set([...serviceTags, ...generatedContent.services])],
+        finalServices = [...new Set([...serviceTags, ...generatedContent.services])]
       }
 
       // Get user email for notification
@@ -283,7 +282,7 @@ export function ServiceProviderRegistrationForm() {
               </div>
               `
             }
-          }),
+          })
         } catch (emailError) {
           logErrorToProduction('Failed to send notification email:', { data: emailError }),
           // Continue with submission even if email fails
@@ -296,17 +295,17 @@ export function ServiceProviderRegistrationForm() {
 
       // Redirect to service provider dashboard or profile page
       setTimeout(() => {
-        router.push('/service-dashboard'),
-      }, 1500),
+        router.push('/service-dashboard')
+      }, 1500)
       
     } catch (error: any) {
       logErrorToProduction('Error creating profile:', { data: error }),
       toast({
         title: "Error Creating Profile",
         description: error.message || "There was an error creating your profile. Please try again.",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
@@ -742,5 +741,5 @@ export function ServiceProviderRegistrationForm() {
         </Form>
       </Card>
     </div>
-  ),
+  )
 }

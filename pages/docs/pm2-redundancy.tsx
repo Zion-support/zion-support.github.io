@@ -1,5 +1,4 @@
 import Head from 'next/head',
-
 export default function Pm2RedundancyRedirect() {
   return (
     <>
@@ -10,6 +9,6 @@ export default function Pm2RedundancyRedirect() {
         <p>Redirecting to PM2 Redundancy docs…</p>
       </main>
     </>
-  ),
+  )
 }
 

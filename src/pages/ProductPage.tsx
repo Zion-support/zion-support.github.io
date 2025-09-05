@@ -7,7 +7,6 @@ import { useCart } from '@/context/CartContext',
 import { toast } from '@/hooks/use-toast',
 import { SEO } from '@/components/SEO',
 import {logErrorToProduction} from '@/utils/productionLogger',
-
 export default function ProductPage() {
 
   const router = useRouter(),
@@ -23,7 +22,7 @@ export default function ProductPage() {
     // Update product if id changes and is available from router.query
     if (id) {
       const foundProduct = NEW_PRODUCTS.find((p) => p.id === id),
-      setProduct(foundProduct || null),
+      setProduct(foundProduct || null)
     }
   }, [id]),
 
@@ -34,26 +33,26 @@ export default function ProductPage() {
         const res = await fetch(`/api/products/${id}`),
         if (res.ok) {
           const data = await res.json(),
-          setProduct(data),
+          setProduct(data)
         }
       } catch (err) {
         // Fail silently and fall back to local data
-        logErrorToProduction('Error fetching product', { data: err }),
+        logErrorToProduction('Error fetching product', { data: err })
       }
     },
 
     // Only fetch if id is available (from router)
     if (id) {
-      fetchProduct(),
+      fetchProduct()
     }
   }, [id]), // id is now from router.query
 
   if (!product && !id) { // If no id from router yet, it might still be loading
-    return <div className="p-6 text-white">Loading product details...</div>,
+    return <div className="p-6 text-white">Loading product details...</div>
   }
 
   if (!product) {
-    return <div className="p-6 text-white">Product not found</div>,
+    return <div className="p-6 text-white">Product not found</div>
   }
 
   const inCart = items.some(i => i.id === product.id),
@@ -66,7 +65,7 @@ export default function ProductPage() {
       payload: { id: product.id, name: product.title, price: product.price ?? 0, quantity: 1 }
     }),
     toast.success(`1× ${product.title} added`),
-    setTimeout(() => setAdding(false), 500),
+    setTimeout(() => setAdding(false), 500)
   },
 
   return (
@@ -93,5 +92,5 @@ export default function ProductPage() {
         </Button>
       </div>
     </>
-  ),
+  )
 }

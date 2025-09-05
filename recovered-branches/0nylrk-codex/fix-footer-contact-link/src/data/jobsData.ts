@@ -1,5 +1,4 @@
 import { Job } from "@/types/jobs",
-
 export const JOB_POSTS: Job[] = [
   {
     id: "job-1",

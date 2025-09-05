@@ -28,7 +28,7 @@ export default function Contact() {
   const [errors, setErrors] = useState<{
     name?: string,
     email?: string,
-    message?: string,
+    message?: string
   }>({}),
   const [isChatOpen, setIsChatOpen] = useState(false),
   const [submitted, setSubmitted] = useState(false),
@@ -37,7 +37,7 @@ export default function Contact() {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target,
     setFormData((prev) => ({ ...prev, [name]: value })),
-    setErrors((prev) => ({ ...prev, [name]: undefined })),
+    setErrors((prev) => ({ ...prev, [name]: undefined }))
   },
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -57,7 +57,7 @@ export default function Contact() {
       const fieldErrors: Record<string string> = {},
       for (const err of result.error.errors) {
         if (err.path[0]) {
-          fieldErrors[err.path[0] as string] = err.message,
+          fieldErrors[err.path[0] as string] = err.message
         }
       }
       setErrors(fieldErrors),
@@ -67,7 +67,7 @@ export default function Contact() {
         title: 'Form Validation Error',
         description: validationErrorMsg,
         variant: 'destructive'}),
-      return,
+      return
     }
 
     setErrors({}),
@@ -91,13 +91,13 @@ export default function Contact() {
           if (!res.ok) {
             let errorData = { error: `Request failed with status ${res.status}` },
             try {
-              errorData = JSON.parse(responseBody),
+              errorData = JSON.parse(responseBody)
             } catch (parseError) {
-              logWarn('[ContactForm] Could not parse error response as JSON.', { data: parseError }),
+              logWarn('[ContactForm] Could not parse error response as JSON.', { data: parseError })
             }
             logErrorToProduction('[ContactForm] API error response:', { data: errorData }),
             // This throw will be caught by the .catch block below
-            throw new Error(errorData.error || 'Failed to send message'),
+            throw new Error(errorData.error || 'Failed to send message')
           }
 
           setIsSubmitting(false), // Moved here for success path
@@ -108,7 +108,7 @@ export default function Contact() {
               "We've received your message and will get back to you soon."}),
           setSubmitted(true),
           setTimeout(() => setSubmitted(false), 2000),
-          setFormData({ name: '', email: '', message: '' }),
+          setFormData({ name: '', email: '', message: '' })
         })
         .catch((err) => {
           // This catches errors from the fetch promise (network, res.ok is false, or manual throw)
@@ -117,8 +117,8 @@ export default function Contact() {
           toast({
             title: 'Submission Error',
             description: err.message || 'An unexpected error occurred during submission.',
-            variant: 'destructive'}),
-        }),
+            variant: 'destructive'})
+        })
     } catch (error) {
       // This catches synchronous errors that might occur when initiating fetch or in its direct vicinity
       // if not caught by the promise's .catch (less common for typical fetch issues but good for safety)
@@ -127,7 +127,7 @@ export default function Contact() {
       toast({
         title: 'Critical Submission Error',
         description: error instanceof Error ? error.message : 'An unexpected critical error occurred.',
-        variant: 'destructive'}),
+        variant: 'destructive'})
     }
   },
 
@@ -144,10 +144,10 @@ export default function Contact() {
             messages: [{ role: 'user', content: message }]})}),
 
       if (!response.ok) {
-        throw new Error('Failed to get response from AI assistant'),
+        throw new Error('Failed to get response from AI assistant')
       }
 
-      return Promise.resolve(),
+      return Promise.resolve()
     } catch (error) {
       logErrorToProduction('Error in AI chat', error),
       toast({
@@ -155,7 +155,7 @@ export default function Contact() {
         description:
           'There was an error communicating with our AI assistant. Please try again.',
         variant: 'destructive'}),
-      return Promise.resolve(),
+      return Promise.resolve()
     }
   },
 
@@ -434,11 +434,9 @@ export default function Contact() {
             role: 'Support Bot'}}
           onSendMessage={handleSendMessage}
           starterQuestions={[
-            'How do I list a product?What services does Zion offer?',
-            'Where can I view pricing plans?How do I create an account?',
-            'Can I talk to a human representative?']}
+            'How do I list a product?What services does Zion offer?Where can I view pricing plans?How do I create an account?Can I talk to a human representative?']}
         />
       )}
     </>
-  ),
+  )
 }

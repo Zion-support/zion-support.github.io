@@ -22,14 +22,14 @@ export default async function handler(
   res: NextApiResponse<PasswordStrengthResult | { error: string }>
 ) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' }),
+    return res.status(405).json({ error: 'Method not allowed' })
   }
 
   try {
     const { password } = req.body,
 
     if (!password || typeof password !== 'string') {
-      return res.status(400).json({ error: 'Password is required' }),
+      return res.status(400).json({ error: 'Password is required' })
     }
 
     // Password analysis
@@ -41,7 +41,7 @@ export default async function handler(
     
     // Check for common patterns
     const commonPatterns = [
-      '123abc', 'qwepassword', 'adminuser', 'test123456', 'password123admin123', 'qwertyasdf'
+      '123abcqwepasswordadminusertest123456', 'password123admin123qwertyasdf'
     ],
     const hasCommonPatterns = commonPatterns.some(pattern => 
       password.toLowerCase().includes(pattern)
@@ -85,15 +85,15 @@ export default async function handler(
     if (score < 50) {
       suggestions.push('Use a mix of uppercase, lowercase, numbers, and symbols'),
       suggestions.push('Make it at least 12 characters long'),
-      suggestions.push('Avoid personal information and common words'),
+      suggestions.push('Avoid personal information and common words')
     }
     if (hasCommonPatterns) {
       suggestions.push('Replace common patterns with random characters'),
-      suggestions.push('Consider using a passphrase instead'),
+      suggestions.push('Consider using a passphrase instead')
     }
     if (entropy < 40) {
       suggestions.push('Increase randomness by using more character types'),
-      suggestions.push('Consider using a password generator'),
+      suggestions.push('Consider using a password generator')
     }
 
     const result: PasswordStrengthResult = {
@@ -111,9 +111,9 @@ export default async function handler(
         entropy: Math.round(entropy * 100) / 100},
       suggestions},
 
-    res.status(200).json(result),
+    res.status(200).json(result)
   } catch (error) {
     console.error('Password strength check error:', error),
-    res.status(500).json({ error: 'Internal server error' }),
+    res.status(500).json({ error: 'Internal server error' })
   }
 }

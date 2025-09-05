@@ -7,7 +7,6 @@ import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
-
 export default function EnterpriseAdmin() {
   const { user } = useAuth(),
   
@@ -15,7 +14,7 @@ export default function EnterpriseAdmin() {
   const isEnterpriseAdmin = user?.role === "enterprise_admin",
   
   if (!isEnterpriseAdmin) {
-    return <Navigate to="/unauthorized" />,
+    return <Navigate to="/unauthorized" />
   }
 
   return (
@@ -30,5 +29,5 @@ export default function EnterpriseAdmin() {
       </main>
       <Footer />
     </ProtectedRoute>
-  ),
+  )
 }

@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react',
 import Link from 'next/link',
-
 interface InteractiveCardProps {
   title: string,
   description: string,
@@ -79,7 +78,7 @@ export default function InteractiveCard({
         />
       </div>
     </Link>
-  ),
+  )
 }
 
 export function FeatureCard({
@@ -111,7 +110,7 @@ export function FeatureCard({
         </div>
       )}
     </InteractiveCard>
-  ),
+  )
 }
 
 export function TestimonialCard({
@@ -155,5 +154,5 @@ export function TestimonialCard({
         <div className="text-purple-400 text-sm">{company}</div>
       </div>
     </div>
-  ),
+  )
 }

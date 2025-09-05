@@ -6,5 +6,5 @@ export export export default function [id]()      {,
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  ),
+  )
 }

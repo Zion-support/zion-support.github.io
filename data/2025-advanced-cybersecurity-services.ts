@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants',
-
 export interface AdvancedCybersecurityService {
   id: string,
   name: string,
@@ -51,10 +50,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     period: '/month',
     description: 'Comprehensive zero trust security platform that implements continuous verification, micro-segmentation, and adaptive access controls to protect against modern cyber threats.',
     features: [
-      'Continuous identity verification and authenticationMicro-segmentation and network isolation',
-      'Adaptive access controls and policiesReal-time threat detection and response',
-      'Multi-factor authentication (MFA)Privileged access management (PAM)',
-      'API security and monitoringCloud security posture management',
+      'Continuous identity verification and authenticationMicro-segmentation and network isolationAdaptive access controls and policiesReal-time threat detection and responseMulti-factor authentication (MFA)Privileged access management (PAM)API security and monitoringCloud security posture management',
       'Compliance reporting and auditingSecurity analytics and insights'
     ],
     popular: true,
@@ -99,10 +95,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     period: '/month',
     description: 'Advanced AI-powered threat intelligence platform that provides real-time threat detection, predictive analytics, and automated response capabilities to stay ahead of cyber attacks.',
     features: [
-      'Real-time threat detection and analysisAI-powered threat prediction and modeling',
-      'Automated threat response and mitigationGlobal threat intelligence sharing',
-      'Vulnerability assessment and prioritizationThreat hunting and investigation tools',
-      'Security metrics and reportingIntegration with security tools',
+      'Real-time threat detection and analysisAI-powered threat prediction and modelingAutomated threat response and mitigationGlobal threat intelligence sharingVulnerability assessment and prioritizationThreat hunting and investigation toolsSecurity metrics and reportingIntegration with security tools',
       'Custom threat feeds and alerts24/7 security monitoring'
     ],
     popular: true,
@@ -147,10 +140,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     period: '/month',
     description: 'Comprehensive cloud security platform that continuously monitors, assesses, and improves the security posture of multi-cloud environments with automated compliance and risk management.',
     features: [
-      'Multi-cloud security monitoring (AWS, Azure, GCP)Continuous compliance assessment and reporting',
-      'Automated risk identification and remediationIdentity and access management (IAM)',
-      'Data protection and encryptionNetwork security and segmentation',
-      'Security configuration managementVulnerability scanning and assessment',
+      'Multi-cloud security monitoring (AWS, Azure, GCP)Continuous compliance assessment and reportingAutomated risk identification and remediationIdentity and access management (IAM)Data protection and encryptionNetwork security and segmentationSecurity configuration managementVulnerability scanning and assessment',
       'Incident detection and responseSecurity metrics and dashboards'
     ],
     popular: true,
@@ -195,10 +185,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     period: '/month',
     description: 'Comprehensive DevSecOps platform that integrates security testing, vulnerability scanning, and compliance checks into CI/CD pipelines for secure software development.',
     features: [
-      'Automated security testing in CI/CDStatic application security testing (SAST)',
-      'Dynamic application security testing (DAST)Software composition analysis (SCA)',
-      'Container security scanningInfrastructure as code security',
-      'Secrets management and scanningCompliance automation and reporting',
+      'Automated security testing in CI/CDStatic application security testing (SAST)Dynamic application security testing (DAST)Software composition analysis (SCA)Container security scanningInfrastructure as code securitySecrets management and scanningCompliance automation and reporting',
       'Security metrics and dashboardsIntegration with DevOps tools'
     ],
     popular: true,
@@ -243,10 +230,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     period: '/month',
     description: 'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.',
     features: [
-      'IoT device authentication and managementNetwork traffic monitoring and analysis',
-      'Threat detection and responseDevice vulnerability assessment',
-      'Secure firmware updatesData encryption and protection',
-      'Compliance monitoring and reportingReal-time security alerts',
+      'IoT device authentication and managementNetwork traffic monitoring and analysisThreat detection and responseDevice vulnerability assessmentSecure firmware updatesData encryption and protectionCompliance monitoring and reportingReal-time security alerts',
       'Integration with IoT platformsMobile security management'
     ],
     popular: true,

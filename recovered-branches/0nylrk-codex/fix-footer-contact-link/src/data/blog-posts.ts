@@ -1,6 +1,5 @@
 
 import { BlogPost } from "@/types/blog",
-
 // Sample blog data - in a real app this would come from an API or CMS
 export const BLOG_POSTS: BlogPost[] = [
   {

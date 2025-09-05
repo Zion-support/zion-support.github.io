@@ -12,7 +12,7 @@ export interface ProfessionalService {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const professionalServices: ProfessionalService[] = [

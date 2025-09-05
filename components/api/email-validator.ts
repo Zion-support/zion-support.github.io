@@ -12,7 +12,7 @@ interface EmailValidationResult {
     isDisposable: boolean,
     isRoleBased: boolean,
     isFreeProvider: boolean
-  },
+  }
 }
 
 export default async function handler(
@@ -20,14 +20,14 @@ export default async function handler(
   res: NextApiResponse<EmailValidationResult | { error: string }>
 ) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' }),
+    return res.status(405).json({ error: 'Method not allowed' })
   }
 
   try {
     const { email } = req.body,
 
     if (!email || typeof email !== 'string') {
-      return res.status(400).json({ error: 'Email is required' }),
+      return res.status(400).json({ error: 'Email is required' })
     }
 
     // Basic email format validation
@@ -40,21 +40,19 @@ export default async function handler(
 
     // Check for common disposable email providers
     const disposableDomains = [
-      'tempmail.orgguerrillamail.com', 'mailinator.com10minutemail.com',
-      'temp-mail.orgsharklasers.com', 'getairmail.commailnesia.com'
+      'tempmail.orgguerrillamail.commailinator.com10minutemail.comtemp-mail.orgsharklasers.comgetairmail.commailnesia.com'
     ],
     const isDisposable = disposableDomains.some(d => domain?.includes(d)),
 
     // Check for role-based emails
     const roleBasedPatterns = [
-      'admin@info@', 'support@contact@', 'sales@help@',
-      'noreply@no-reply@', 'donotreply@do-not-reply@'
+      'admin@info@support@contact@sales@help@noreply@no-reply@', 'donotreply@do-not-reply@'
     ],
     const isRoleBased = roleBasedPatterns.some(pattern => email.startsWith(pattern)),
 
     // Check for free email providers
     const freeProviders = [
-      'gmail.comyahoo.com', 'hotmail.comoutlook.com', 'aol.comicloud.com', 'protonmail.commail.com', 'yandex.com'
+      'gmail.comyahoo.comhotmail.comoutlook.comaol.comicloud.comprotonmail.commail.com', 'yandex.com'
     ],
     const isFreeProvider = freeProviders.some(provider => domain === provider),
 
@@ -72,13 +70,13 @@ export default async function handler(
       suggestions.push('Check email format (should be user@domain.com)')
     }
     if (isDisposable) {
-      suggestions.push('Consider using a permanent email address'),
+      suggestions.push('Consider using a permanent email address')
     }
     if (isRoleBased) {
-      suggestions.push('Role-based emails may have delivery issues'),
+      suggestions.push('Role-based emails may have delivery issues')
     }
     if (score < 50) {
-      suggestions.push('This email may not be suitable for business use'),
+      suggestions.push('This email may not be suitable for business use')
     }
 
     const result: EmailValidationResult = {
@@ -95,9 +93,9 @@ export default async function handler(
         isFreeProvider}
     },
 
-    res.status(200).json(result),
+    res.status(200).json(result)
   } catch (error) {
     console.error('Email validation error:', error),
-    res.status(500).json({ error: 'Internal server error' }),
+    res.status(500).json({ error: 'Internal server error' })
   }
 }

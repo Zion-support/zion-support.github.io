@@ -28,9 +28,7 @@ export default function CloudPlatformPage() {
   ],
 
   const benefits = [
-    '99.99% uptime guaranteeGlobal edge locations',
-    'Real-time monitoringAutomated scaling',
-    'Pay-as-you-go pricing24/7 expert support'
+    '99.99% uptime guaranteeGlobal edge locationsReal-time monitoringAutomated scalingPay-as-you-go pricing24/7 expert support'
   ],
 
   return (

@@ -7,7 +7,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge",
 import { useProjects } from "@/hooks/useProjects",
 import { Project } from "@/types/projects",
-
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects(),
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
@@ -17,7 +16,7 @@ export function ActiveProjectsCard() {
       const active = projects.filter(p => 
         ['offer_acceptedin_progress'].includes(p.status)
       ).slice(0, 3), // Limit to 3 most recent projects
-      setActiveProjects(active),
+      setActiveProjects(active)
     }
   }, [projects, isLoading]),
   
@@ -39,7 +38,7 @@ export function ActiveProjectsCard() {
           </div>
         </CardContent>
       </Card>
-    ),
+    )
   }
   
   if (activeProjects.length === 0) {
@@ -59,7 +58,7 @@ export function ActiveProjectsCard() {
           </Button>
         </CardContent>
       </Card>
-    ),
+    )
   }
   
   return (
@@ -101,5 +100,5 @@ export function ActiveProjectsCard() {
         </CardFooter>
       )}
     </Card>
-  ),
+  )
 }

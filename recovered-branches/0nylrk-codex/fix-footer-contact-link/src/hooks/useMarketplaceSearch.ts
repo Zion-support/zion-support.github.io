@@ -51,8 +51,8 @@ export function useMarketplaceSearch() {
         matchesProductType && 
         matchesLocation && 
         matchesAvailability && 
-        matchesRating,
-    }),
+        matchesRating
+    })
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
   
   // Handle filter changes
@@ -83,7 +83,7 @@ export function useMarketplaceSearch() {
     setSelectedProductTypes([]),
     setSelectedLocations([]),
     setSelectedAvailability([]),
-    setSelectedRating(null),
+    setSelectedRating(null)
   },
   
   return {
@@ -99,5 +99,5 @@ export function useMarketplaceSearch() {
     handleFilterChange,
     clearAllFilters,
     filterOptions
-  },
+  }
 }

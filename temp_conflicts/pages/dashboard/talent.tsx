@@ -40,17 +40,17 @@ export default function TalentDashboardSuggestedJobs() {
         if (!currentUserId) {
           setSuggestions([]),
           setLoading(false),
-          return,
+          return
         }
         await fetchSuggestions(currentUserId),
-        setupRealtime(currentUserId),
+        setupRealtime(currentUserId)
       } finally {
-        if (mounted) setLoading(false),
+        if (mounted) setLoading(false)
       }
     }
     init(),
     return () => {
-      mounted = false,
+      mounted = false
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []),
@@ -86,11 +86,11 @@ export default function TalentDashboardSuggestedJobs() {
     if (error) {
       setSuggestions([]),
       setLoading(false),
-      return,
+      return
     }
 
     setSuggestions(data || []),
-    setLoading(false),
+    setLoading(false)
   },
 
   const setupRealtime = (currentUserId: string) => {
@@ -121,8 +121,8 @@ export default function TalentDashboardSuggestedJobs() {
       .subscribe(),
 
     return () => {
-      supabase.removeChannel(channel),
-    },
+      supabase.removeChannel(channel)
+    }
   },
 
   const newMatches = useMemo(
@@ -139,7 +139,7 @@ export default function TalentDashboardSuggestedJobs() {
       .from(SUGGESTION_TABLE_ENV)
       .update({ status: "applied" })
       .eq("id", s.id),
-    await fetchSuggestions(userId as string),
+    await fetchSuggestions(userId as string)
   },
 
   const handleDecline = async (s: JobSuggestion) => {
@@ -147,7 +147,7 @@ export default function TalentDashboardSuggestedJobs() {
       .from(SUGGESTION_TABLE_ENV)
       .update({ status: "declined" })
       .eq("id", s.id),
-    await fetchSuggestions(userId as string),
+    await fetchSuggestions(userId as string)
   },
 
   const Section = ({
@@ -267,7 +267,7 @@ export default function TalentDashboardSuggestedJobs() {
             ))}
           </div>
         </div>
-      ),
+      )
     }
 
     if (!userId) {
@@ -275,7 +275,7 @@ export default function TalentDashboardSuggestedJobs() {
         <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-amber-800">
           Please sign in to view AI-suggested jobs.
         </div>
-      ),
+      )
     }
 
     return (
@@ -283,7 +283,7 @@ export default function TalentDashboardSuggestedJobs() {
         <Section title="New Matches" items={newMatches} highlightNew />
         <Section title="Previously Viewed" items={viewedMatches} />
       </div>
-    ),
+    )
   }, [loading, newMatches, userId, viewedMatches]),
 
   return (
@@ -296,5 +296,5 @@ export default function TalentDashboardSuggestedJobs() {
       </div>
       {content}
     </div>
-  ),
+  )
 }

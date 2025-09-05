@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react',
 import { motion } from 'framer-motion',
-
 interface UltraQuantumHolographicBackgroundProps {
   children: React.ReactNode,
   intensity?: 'low' | 'medium' | 'high' | 'ultra',
@@ -66,14 +65,14 @@ export default function UltraQuantumHolographicBackground({
       setDimensions({
         width: window.innerWidth,
         height: window.innerHeight
-      }),
+      })
     },
 
     updateDimensions(),
     window.addEventListener('resize', updateDimensions),
     setIsVisible(true),
 
-    return () => window.removeEventListener('resize', updateDimensions),
+    return () => window.removeEventListener('resize', updateDimensions)
   }, []),
 
   useEffect(() => {
@@ -107,7 +106,7 @@ export default function UltraQuantumHolographicBackground({
         this.color = [colors.primary, colors.secondary, colors.tertiary, colors.accent][Math.floor(Math.random() * 4)],
         this.life = Math.random() * 100,
         this.maxLife = 100,
-        this.type = ['quantumholographic', 'energymatrix'][Math.floor(Math.random() * 4)] as any,
+        this.type = ['quantumholographicenergymatrix'][Math.floor(Math.random() * 4)] as any
       }
 
       update() {
@@ -122,17 +121,17 @@ export default function UltraQuantumHolographicBackground({
         // Quantum tunneling effect
         if (Math.random() < 0.001 * intensityMultiplier) {
           this.x = Math.random() * dimensions.width,
-          this.y = Math.random() * dimensions.height,
+          this.y = Math.random() * dimensions.height
         }
 
         // Holographic flicker
         if (this.type === 'holographic' && Math.random() < 0.1) {
-          this.size *= 0.8,
+          this.size *= 0.8
         }
 
         // Energy pulse
         if (this.type === 'energy') {
-          this.size = Math.sin(Date.now() * 0.01) * 2 + 3,
+          this.size = Math.sin(Date.now() * 0.01) * 2 + 3
         }
 
         // Matrix rain effect
@@ -140,7 +139,7 @@ export default function UltraQuantumHolographicBackground({
           this.vy += 0.1,
           if (this.y > dimensions.height) {
             this.y = -10,
-            this.vy = Math.random() * 2 + 1,
+            this.vy = Math.random() * 2 + 1
           }
         }
       }
@@ -167,7 +166,7 @@ export default function UltraQuantumHolographicBackground({
               ctx.strokeStyle = this.color,
               ctx.lineWidth = 0.5,
               ctx.globalAlpha = alpha * (0.3 / i),
-              ctx.stroke(),
+              ctx.stroke()
             }
             break,
 
@@ -204,10 +203,10 @@ export default function UltraQuantumHolographicBackground({
             ctx.fillStyle = this.color,
             ctx.font = `${this.size * 2}px monospace`,
             ctx.fillText('01', this.x, this.y),
-            break,
+            break
         }
 
-        ctx.restore(),
+        ctx.restore()
       }
     }
 
@@ -243,7 +242,7 @@ export default function UltraQuantumHolographicBackground({
 
         // Remove dead particles and create new ones
         if (particle.life <= 0) {
-          particles[index] = new Particle(),
+          particles[index] = new Particle()
         }
       }),
 
@@ -262,7 +261,7 @@ export default function UltraQuantumHolographicBackground({
             ctx.beginPath(),
             ctx.moveTo(p1.x, p1.y),
             ctx.lineTo(p2.x, p2.y),
-            ctx.stroke(),
+            ctx.stroke()
           }
         }
       }
@@ -277,25 +276,25 @@ export default function UltraQuantumHolographicBackground({
         ctx.beginPath(),
         ctx.moveTo(x, 0),
         ctx.lineTo(x, dimensions.height),
-        ctx.stroke(),
+        ctx.stroke()
       }
       for (let y = 0, y < dimensions.height, y += gridSize) {
         ctx.beginPath(),
         ctx.moveTo(0, y),
         ctx.lineTo(dimensions.width, y),
-        ctx.stroke(),
+        ctx.stroke()
       }
 
-      animationId = requestAnimationFrame(animate),
+      animationId = requestAnimationFrame(animate)
     },
 
     animate(),
 
     return () => {
       if (animationId) {
-        cancelAnimationFrame(animationId),
+        cancelAnimationFrame(animationId)
       }
-    },
+    }
   }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]),
 
   return (
@@ -396,5 +395,5 @@ export default function UltraQuantumHolographicBackground({
         />
       </div>
     </div>
-  ),
+  )
 }

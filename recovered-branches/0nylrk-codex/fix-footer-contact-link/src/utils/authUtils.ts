@@ -1,7 +1,6 @@
 
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
-
 /**
  * Utility function to clean up authentication state
  * This helps prevent auth state inconsistencies and "limbo" states
@@ -13,16 +12,16 @@ export const cleanupAuthState = () => {
   // Remove all Supabase auth keys from localStorage
   Object.keys(localStorage).forEach((key) => {
     if (key.startsWith('supabase.auth.') || key.includes('sb-')) {
-      localStorage.removeItem(key),
+      localStorage.removeItem(key)
     }
   }),
   
   // Remove from sessionStorage if in use
   Object.keys(sessionStorage || {}).forEach((key) => {
     if (key.startsWith('supabase.auth.') || key.includes('sb-')) {
-      sessionStorage.removeItem(key),
+      sessionStorage.removeItem(key)
     }
-  }),
+  })
 },
 
 /**
@@ -68,9 +67,9 @@ export const checkNewRegistration = async (user: UserDetails) => {
             user_type: user.userType || "unknown",
             display_name: user.displayName || user.email?.split("@")[0] || "User"
           }
-        }),
+        })
     }
   } catch (error) {
-    console.error("Error checking or scheduling welcome email:", error),
+    console.error("Error checking or scheduling welcome email:", error)
   }
 },

@@ -7,8 +7,6 @@ import { supabase } from "@/integrations/supabase/client",
 import { Loader2 } from 'lucide-react'
 import { useRouter } from 'next/router',
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 interface PaymentButtonProps {
   amount: number,
   serviceId: string,
@@ -39,14 +37,14 @@ export function PaymentButton({
 
       const returnTo = encodeURIComponent(`/checkout?sku=${serviceId}`),
       router.push(`/auth/login?returnTo=${returnTo}`),
-      return,
+      return
     }
     
     try {
       setIsProcessing(true),
       
       if (onPaymentInitiated) {
-        onPaymentInitiated(),
+        onPaymentInitiated()
       }
       
       // Call the create-checkout edge function
@@ -60,15 +58,15 @@ export function PaymentButton({
           cancelUrl: window.location.href}}),
       
       if (error) {
-        throw error,
+        throw error
       }
       
       // Type assertion needed for mock Supabase client compatibility
       if ((data as any)?.url) {
         // Open Stripe checkout in a new tab
-        window.open((data as any).url, '_blank'),
+        window.open((data as any).url, '_blank')
       } else {
-        throw new Error("No checkout URL returned"),
+        throw new Error("No checkout URL returned")
       }
       
     } catch (error) {
@@ -76,12 +74,12 @@ export function PaymentButton({
       toast({
         title: "Payment error",
         description: "There was a problem initiating your payment. Please try again.",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
       // Reset button state after a short delay
       setTimeout(() => {
-        setIsProcessing(false),
-      }, 1500),
+        setIsProcessing(false)
+      }, 1500)
     }
   },
   
@@ -103,5 +101,5 @@ export function PaymentButton({
         buttonText
       )}
     </Button>
-  ),
+  )
 }

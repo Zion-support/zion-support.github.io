@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 import { useFeatureUsage } from "@/hooks/useFeatureUsage",
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus",
-
 export default function AIPoweredContent() {
   useFeatureUsage('ZionGPT'),
   const schema = {
@@ -20,7 +19,7 @@ export default function AIPoweredContent() {
   const { markAiExplored } = useAdvancedOnboardingStatus(),
 
   useEffect(() => {
-    markAiExplored(),
+    markAiExplored()
   }, [markAiExplored]),
 
   return (
@@ -75,5 +74,5 @@ export default function AIPoweredContent() {
         </div>
       </main>
     </>
-  ),
+  )
 }

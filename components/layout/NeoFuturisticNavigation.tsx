@@ -53,7 +53,6 @@ import {
 	Link as LinkIcon
 } from 'lucide-react',
 import Button from '../ui/Button',
-
 export default function NeoFuturisticNavigation() {
 	const [isOpen, setIsOpen] = useState(false),
 	const [isScrolled, setIsScrolled] = useState(false),
@@ -69,11 +68,11 @@ export default function NeoFuturisticNavigation() {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			setIsScrolled(window.scrollY > 20),
+			setIsScrolled(window.scrollY > 20)
 		},
 
 		window.addEventListener('scroll', handleScroll),
-		return () => window.removeEventListener('scroll', handleScroll),
+		return () => window.removeEventListener('scroll', handleScroll)
 	}, []),
 
 	const toggleDropdown = (dropdown: string) => {
@@ -82,7 +81,7 @@ export default function NeoFuturisticNavigation() {
 
 	const closeMobileMenu = () => {
 		setIsOpen(false),
-		setActiveDropdown(null),
+		setActiveDropdown(null)
 	},
 
 	const isActive = (path: string) => router.pathname === path,
@@ -503,5 +502,5 @@ export default function NeoFuturisticNavigation() {
 				</div>
 			)}
 		</nav>
-	),
+	)
 }

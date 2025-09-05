@@ -4,7 +4,6 @@ import { MilestonesList } from '../MilestonesList',
 import { PaymentSummary } from '../PaymentSummary',
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',
 import { toast } from "sonner",
-
 interface MilestoneManagerProps {
   projectId: string,
   milestones: Milestone[],
@@ -40,10 +39,10 @@ export function MilestoneManager({
     try {
       await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),
       toast.success("Milestone approved"),
-      await refetch(),
+      await refetch()
     } catch (error) {
       console.error("Error approving milestone:", error),
-      toast.error("Failed to approve milestone"),
+      toast.error("Failed to approve milestone")
     }
   },
   
@@ -51,10 +50,10 @@ export function MilestoneManager({
     try {
       await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus),
       toast.success("Milestone rejected"),
-      await refetch(),
+      await refetch()
     } catch (error) {
       console.error("Error rejecting milestone:", error),
-      toast.error("Failed to reject milestone"),
+      toast.error("Failed to reject milestone")
     }
   },
 
@@ -82,5 +81,5 @@ export function MilestoneManager({
         />
       </div>
     </div>
-  ),
+  )
 }

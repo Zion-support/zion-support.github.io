@@ -1,7 +1,6 @@
 import fs from 'fs',
 import path from 'path',
 import type { GetStaticProps } from 'next',
-
 type Broken = { url: string, page: string, status: number },
 interface Report { generatedAt: string, pagesScanned: number, brokenLinks: Broken[], pagesWithOgIssues: number, ogIssues: { page: string, missing: string[] }[] }
 
@@ -9,12 +8,12 @@ type Props = { report: Report | null },
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
-    const file = path.join(process.cwd(), 'publicautomation', 'site-validator.json'),
+    const file = path.join(process.cwd(), 'publicautomationsite-validator.json'),
     const raw = fs.readFileSync(file, 'utf8'),
     const data = JSON.parse(raw),
-    return { props: { report: data }, revalidate: 21600 },
+    return { props: { report: data }, revalidate: 21600 }
   } catch {
-    return { props: { report: null }, revalidate: 21600 },
+    return { props: { report: null }, revalidate: 21600 }
   }
 },
 
@@ -52,5 +51,5 @@ export default function SiteValidator({ report }: Props) {
         </section>
       )}
     </div>
-  ),
+  )
 }

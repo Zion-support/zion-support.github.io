@@ -18,9 +18,7 @@ const PrivacyPage: React.FC = () => {
       icon: <Database className="w-8 h-8" />,
       color: 'from-cyan-500 to-blue-500',
       content: [
-        'Personal information (name, email, phone number, company)Business information (company size, industry, project requirements)',
-        'Technical information (IP address, browser type, device information)Usage data (website interactions, service usage patterns)',
-        'Communication records (emails, phone calls, support tickets)'
+        'Personal information (name, email, phone number, company)Business information (company size, industry, project requirements)Technical information (IP address, browser type, device information)Usage data (website interactions, service usage patterns)Communication records (emails, phone calls, support tickets)'
       ]
     },
     {
@@ -28,9 +26,7 @@ const PrivacyPage: React.FC = () => {
       icon: <Settings className="w-8 h-8" />,
       color: 'from-purple-500 to-pink-500',
       content: [
-        'Provide and improve our servicesCommunicate with you about our services',
-        'Process payments and manage accountsSend marketing communications (with consent)',
-        'Analyze usage patterns and improve user experienceComply with legal obligations'
+        'Provide and improve our servicesCommunicate with you about our servicesProcess payments and manage accountsSend marketing communications (with consent)Analyze usage patterns and improve user experienceComply with legal obligations'
       ]
     },
     {
@@ -38,9 +34,7 @@ const PrivacyPage: React.FC = () => {
       icon: <Globe className="w-8 h-8" />,
       color: 'from-green-500 to-emerald-500',
       content: [
-        'We do not sell, trade, or rent your personal informationShare with trusted service providers under strict confidentiality',
-        'Comply with legal requirements and court ordersProtect our rights, property, and safety',
-        'Business transfers (with notice and choice)'
+        'We do not sell, trade, or rent your personal informationShare with trusted service providers under strict confidentialityComply with legal requirements and court ordersProtect our rights, property, and safetyBusiness transfers (with notice and choice)'
       ]
     },
     {
@@ -48,9 +42,7 @@ const PrivacyPage: React.FC = () => {
       icon: <Lock className="w-8 h-8" />,
       color: 'from-orange-500 to-red-500',
       content: [
-        'Industry-standard encryption for data in transit and at restRegular security audits and vulnerability assessments',
-        'Access controls and authentication measuresEmployee training on data protection',
-        'Incident response and breach notification procedures'
+        'Industry-standard encryption for data in transit and at restRegular security audits and vulnerability assessmentsAccess controls and authentication measuresEmployee training on data protectionIncident response and breach notification procedures'
       ]
     }
   ],

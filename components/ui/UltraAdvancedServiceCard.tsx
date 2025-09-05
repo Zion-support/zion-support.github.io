@@ -46,7 +46,7 @@ interface UltraAdvancedServiceCardProps {
     customers: number,
     rating: number,
     reviews: number
-  },
+  }
 }
 
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {
@@ -289,7 +289,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         </div>
       </div>
     </motion.div>
-  ),
+  )
 },
 
 export default UltraAdvancedServiceCard,

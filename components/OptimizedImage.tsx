@@ -1,14 +1,13 @@
-import React from 'react';
-import Image from 'next/image';
-
+import React from 'react',
+import Image from 'next/image',
 interface OptimizedImageProps {
-  sr: c: string;
-  al: t: string;
-  widt: h: number;
-  heigh: t: number;
-  className?: string;
-  priority?: boolean;
-  quality?: number;
+  sr: c: string,
+  al: t: string,
+  widt: h: number,
+  heigh: t: number,
+  className?: string,
+  priority?: boolean,
+  quality?: number
 }
 
 const: OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -18,7 +17,7 @@ const: OptimizedImage: React.FC<OptimizedImageProps> = ({
   height,
   className,
   priority = false,
-  quality = 75,
+  quality = 75
 }) => {
   return (
     <Image
@@ -30,7 +29,7 @@ const: OptimizedImage: React.FC<OptimizedImageProps> = ({
       priority={priority}
       quality={quality}
     />
-  );
-};
+  )
+},
 
-export default OptimizedImage;
+export default OptimizedImage,

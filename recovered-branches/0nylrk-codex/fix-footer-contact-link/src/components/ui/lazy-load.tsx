@@ -2,7 +2,6 @@
 import { useEffect, useState, useRef, ReactNode } from "react",
 import { cn } from "@/lib/utils",
 import { Skeleton } from "@/components/ui/skeleton",
-
 interface LazyLoadProps {
   height?: string | number,
   width?: string | number,
@@ -26,7 +25,7 @@ export function LazyLoad({
       (entries) => {
         if (entries[0].isIntersecting) {
           setIsVisible(true),
-          observer.disconnect(),
+          observer.disconnect()
         }
       },
       {
@@ -35,24 +34,24 @@ export function LazyLoad({
     ),
 
     if (containerRef.current) {
-      observer.observe(containerRef.current),
+      observer.observe(containerRef.current)
     }
 
     return () => {
       if (containerRef.current) {
-        observer.unobserve(containerRef.current),
+        observer.unobserve(containerRef.current)
       }
-    },
+    }
   }, []),
 
   useEffect(() => {
     if (isVisible) {
       // Simulate loading delay (remove in production)
       const timer = setTimeout(() => {
-        setIsLoaded(true),
+        setIsLoaded(true)
       }, 500),
 
-      return () => clearTimeout(timer),
+      return () => clearTimeout(timer)
     }
   }, [isVisible]),
 
@@ -80,5 +79,5 @@ export function LazyLoad({
         loadingComponent || defaultLoadingComponent
       )}
     </div>
-  ),
+  )
 }

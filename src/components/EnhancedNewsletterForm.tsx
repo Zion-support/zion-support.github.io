@@ -4,7 +4,6 @@ import { useState, useRef } from "react",
 import { Mail } from 'lucide-react'
 import { useToast } from "@/hooks/use-toast",
 import {logErrorToProduction} from '@/utils/productionLogger',
-
 export function EnhancedNewsletterForm() {
 
   const [email, setEmail] = useState(""),
@@ -39,22 +38,22 @@ export function EnhancedNewsletterForm() {
       if (res.ok) {
         // Handle different success statuses
         if (data.status === 'already_subscribed') {
-          toast.success(data.message || "You're already subscribed!"),
+          toast.success(data.message || "You're already subscribed!")
         } else {
-          toast.success(data.message || "Thanks for subscribing!"),
+          toast.success(data.message || "Thanks for subscribing!")
         }
         setIsSubmitted(true),
-        setEmail(""),
+        setEmail("")
       } else {
         // Handle error responses
         logErrorToProduction('Newsletter subscription failed:', { data: data }),
-        toast.error(data.error || "Subscription failed. Please try again."),
+        toast.error(data.error || "Subscription failed. Please try again.")
       }
     } catch (err: any) {
       logErrorToProduction('Newsletter subscription error:', { data: err }),
-      toast.error("Unable to subscribe right now. Please try again later."),
+      toast.error("Unable to subscribe right now. Please try again later.")
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
@@ -112,5 +111,5 @@ export function EnhancedNewsletterForm() {
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
-  ),
+  )
 }

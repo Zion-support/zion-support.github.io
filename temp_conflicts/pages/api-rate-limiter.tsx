@@ -28,7 +28,7 @@ export default function APIRateLimiterPage() {
 
   const generateApiKey = () => {
     const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString(36),
-    setApiKey(key),
+    setApiKey(key)
   },
 
   const testRateLimiting = async () => {
@@ -61,11 +61,11 @@ export default function APIRateLimiterPage() {
         }
       }),
       
-      if (!isAllowed) break,
+      if (!isAllowed) break
     }
     
     setTestResults(results),
-    setIsTesting(false),
+    setIsTesting(false)
   },
 
   const copyToClipboard = (text: string) => {

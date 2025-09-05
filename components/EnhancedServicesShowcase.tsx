@@ -37,8 +37,8 @@ const EnhancedServicesShowcase: React.FC = () => {
       period: '/month',
       setupTime: '2-3 weeks',
       customers: '150+',
-      features: ['AI-powered dashboardsPredictive analytics', 'Real-time insightsCustom reporting'],
-      benefits: ['30% faster decision makingImproved data accuracy', 'Cost reduction'],
+      features: ['AI-powered dashboardsPredictive analyticsReal-time insightsCustom reporting'],
+      benefits: ['30% faster decision makingImproved data accuracyCost reduction'],
       roi: 'Average 3.2x ROI within 6 months',
       marketSize: '$25B',
       growthRate: '25% YoY',
@@ -55,8 +55,8 @@ const EnhancedServicesShowcase: React.FC = () => {
       period: '/month',
       setupTime: '4-6 weeks',
       customers: '75+',
-      features: ['Quantum-resistant encryptionAI threat detection', 'Zero-trust architecture24/7 monitoring'],
-      benefits: ['99.99% threat preventionCompliance ready', 'Reduced security incidents'],
+      features: ['Quantum-resistant encryptionAI threat detectionZero-trust architecture24/7 monitoring'],
+      benefits: ['99.99% threat preventionCompliance readyReduced security incidents'],
       roi: 'Average 4.1x ROI within 8 months',
       marketSize: '$18B',
       growthRate: '32% YoY',
@@ -73,8 +73,8 @@ const EnhancedServicesShowcase: React.FC = () => {
       period: '/month',
       setupTime: '1-2 weeks',
       customers: '200+',
-      features: ['Edge node managementIoT device management', 'Real-time monitoringAuto-scaling'],
-      benefits: ['50% latency reductionImproved reliability', 'Cost optimization'],
+      features: ['Edge node managementIoT device managementReal-time monitoringAuto-scaling'],
+      benefits: ['50% latency reductionImproved reliabilityCost optimization'],
       roi: 'Average 2.8x ROI within 4 months',
       marketSize: '$12B',
       growthRate: '28% YoY',
@@ -91,8 +91,8 @@ const EnhancedServicesShowcase: React.FC = () => {
       period: '/month',
       setupTime: '8-12 weeks',
       customers: '25+',
-      features: ['Satellite managementAI mission planning', 'Quantum communicationSpace analytics'],
-      benefits: ['Mission success rate 95%+Reduced launch costs', 'Advanced capabilities'],
+      features: ['Satellite managementAI mission planningQuantum communicationSpace analytics'],
+      benefits: ['Mission success rate 95%+Reduced launch costsAdvanced capabilities'],
       roi: 'Average 5.2x ROI within 12 months',
       marketSize: '$8B',
       growthRate: '45% YoY',
@@ -109,8 +109,8 @@ const EnhancedServicesShowcase: React.FC = () => {
       period: '/month',
       setupTime: '6-8 weeks',
       customers: '40+',
-      features: ['BCI development toolsNeural signal processing', 'AI pattern recognitionSafety protocols'],
-      benefits: ['Revolutionary UXAccessibility improvements', 'Research advancement'],
+      features: ['BCI development toolsNeural signal processingAI pattern recognitionSafety protocols'],
+      benefits: ['Revolutionary UXAccessibility improvementsResearch advancement'],
       roi: 'Average 6.8x ROI within 18 months',
       marketSize: '$3B',
       growthRate: '67% YoY',
@@ -127,8 +127,8 @@ const EnhancedServicesShowcase: React.FC = () => {
       period: '/month',
       setupTime: '10-14 weeks',
       customers: '15+',
-      features: ['Quantum neural networksConsciousness simulation', 'Advanced learningQuantum optimization'],
-      benefits: ['Unprecedented AI capabilitiesBreakthrough research', 'Competitive advantage'],
+      features: ['Quantum neural networksConsciousness simulationAdvanced learningQuantum optimization'],
+      benefits: ['Unprecedented AI capabilitiesBreakthrough researchCompetitive advantage'],
       roi: 'Average 8.5x ROI within 24 months',
       marketSize: '$2B',
       growthRate: '89% YoY',
@@ -144,7 +144,7 @@ const EnhancedServicesShowcase: React.FC = () => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
-    return matchesCategory && matchesSearch,
+    return matchesCategory && matchesSearch
   }),
 
   const getCategoryIcon = (category: string) => {
@@ -156,7 +156,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       'Emerging Tech': Brain,
       'Quantum AI': Atom
     },
-    return iconMap[category] || Brain,
+    return iconMap[category] || Brain
   },
 
   return (

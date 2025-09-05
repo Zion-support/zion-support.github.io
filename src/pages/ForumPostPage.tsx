@@ -16,7 +16,6 @@ import { useAuth } from "@/hooks/useAuth",
 import ReplyCard from "@/components/community/ReplyCard",
 import ReplyForm from "@/components/community/ReplyForm",
 import { useToast } from "@/hooks/use-toast",
-
 // Mock data for a forum post
 const mockPost: ForumPost = {
   id: "1",
@@ -115,7 +114,7 @@ export default function ForumPostPage() {
           <Link href="/community">Back to Community</Link>
         </Button>
       </div>
-    ),
+    )
   }
 
   const handleUpvote = () => {
@@ -125,13 +124,13 @@ export default function ForumPostPage() {
         description: "Please sign in to vote on posts"}),
       const returnTo = encodeURIComponent(router.asPath),
       router.push(`/auth/login?returnTo=${returnTo}`),
-      return,
+      return
     }
     
     setPost({ ...post, upvotes: post.upvotes + 1 }),
     toast({
       title: "Vote recorded",
-      description: "You upvoted this post"}),
+      description: "You upvoted this post"})
   },
 
   const handleDownvote = () => {
@@ -141,13 +140,13 @@ export default function ForumPostPage() {
         description: "Please sign in to vote on posts"}),
       const returnTo = encodeURIComponent(router.asPath),
       router.push(`/auth/login?returnTo=${returnTo}`),
-      return,
+      return
     }
     
     setPost({ ...post, downvotes: post.downvotes + 1 }),
     toast({
       title: "Vote recorded",
-      description: "You downvoted this post"}),
+      description: "You downvoted this post"})
   },
 
   const handleSubmitReply = async (content: string) => {
@@ -157,7 +156,7 @@ export default function ForumPostPage() {
         description: "Please sign in to reply"}),
       const returnTo = encodeURIComponent(router.asPath),
       router.push(`/auth/login?returnTo=${returnTo}`),
-      return,
+      return
     }
     
     // Create a new reply
@@ -179,7 +178,7 @@ export default function ForumPostPage() {
     
     toast({
       title: "Reply posted",
-      description: "Your reply has been added to the discussion"}),
+      description: "Your reply has been added to the discussion"})
   },
 
   const handleMarkAsAnswer = (replyId: string) => {
@@ -190,7 +189,7 @@ export default function ForumPostPage() {
         description: "Only the original poster or moderators can mark answers",
         variant: "destructive"
       }),
-      return,
+      return
     }
     
     // Update the replies
@@ -204,7 +203,7 @@ export default function ForumPostPage() {
     
     toast({
       title: "Answer marked",
-      description: "The reply has been marked as the accepted answer"}),
+      description: "The reply has been marked as the accepted answer"})
   },
 
   const handleReportPost = () => {
@@ -214,12 +213,12 @@ export default function ForumPostPage() {
         description: "Please sign in to report content"}),
       const returnTo = encodeURIComponent(router.asPath),
       router.push(`/auth/login?returnTo=${returnTo}`),
-      return,
+      return
     }
     
     toast({
       title: "Report submitted",
-      description: "A moderator will review this content"}),
+      description: "A moderator will review this content"})
   },
 
   const handlePinPost = () => {
@@ -229,7 +228,7 @@ export default function ForumPostPage() {
     
     toast({
       title: post.isPinned ? "Post unpinned" : "Post pinned",
-      description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"}),
+      description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})
   },
 
   const handleLockPost = () => {
@@ -239,7 +238,7 @@ export default function ForumPostPage() {
     
     toast({
       title: post.isLocked ? "Post unlocked" : "Post locked",
-      description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"}),
+      description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
   },
   
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
@@ -429,5 +428,5 @@ export default function ForumPostPage() {
         </div>
       </div>
     </>
-  ),
+  )
 }

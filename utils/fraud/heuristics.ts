@@ -1,27 +1,16 @@
 import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types',
 
 const suspiciousLinkHosts = [
-  'paypal.mecash.app',
-  'venmo.comwa.me',
-  't.metelegram.me',
-  'whatsapp.comwesternunion.com',
+  'paypal.mecash.appvenmo.comwa.met.metelegram.mewhatsapp.comwesternunion.com',
   'moneygram.com'],
 
 const suspiciousPhrases = [
-  'whatsapp metelegram me',
-  'contact me on whatsappcashapp only',
-  'crypto onlysend crypto',
-  'wire transfergift card',
-  'western unionoff-platform payment',
-  'outside paymentpay outside',
-  'pay me directlydm me on',
-  'reach me on whatsappskype me',
+  'whatsapp metelegram mecontact me on whatsappcashapp onlycrypto onlysend cryptowire transfergift card',
+  'western unionoff-platform paymentoutside paymentpay outsidepay me directlydm me onreach me on whatsappskype me',
   'email me at'],
 
 const vagueScammyJobPhrases = [
-  'easy workquick money',
-  'no experience neededwork from home and earn fast',
-  'daily payoutsearn $\\d+ per day'],
+  'easy workquick moneyno experience neededwork from home and earn fastdaily payoutsearn $\\d+ per day'],
 
 function containsSuspiciousHost(text: string): boolean {
   const lower = text.toLowerCase(),
@@ -38,9 +27,9 @@ function containsVagueJobClaims(text: string): string[] {
   const reasons: string[] = [],
   for (const pattern of vagueScammyJobPhrases) {
     const re = new RegExp(pattern, 'i'),
-    if (re.test(lower)) reasons.push(`job_vague_claim:"${pattern}"`),
+    if (re.test(lower)) reasons.push(`job_vague_claim:"${pattern}"`)
   }
-  return reasons,
+  return reasons
 }
 
 export interface HeuristicDeps {
@@ -55,19 +44,19 @@ export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps)
     const recent = await deps.countEventsByIp(event.ipAddress, 'signup', 10),
     if (recent >= 3) {
       reasons.push(`rapid_fire_signups_from_ip:${event.ipAddress}:${recent}in10m`),
-      severity = recent >= 10 ? 'high' : 'medium',
+      severity = recent >= 10 ? 'high' : 'medium'
     }
   }
 
   if ((event.source === 'message' || event.source === 'job_post' || event.source === 'quote' || event.source === 'review') && event.content) {
     if (containsSuspiciousHost(event.content)) {
       reasons.push('outside_payment_link_detected'),
-      severity = 'high',
+      severity = 'high'
     }
     const phrases = containsSuspiciousPhrase(event.content),
     if (phrases.length > 0) {
       reasons.push(...phrases.map((p) => `suspicious_phrase:"${p}"`)),
-      if (severity === 'low') severity = 'medium',
+      if (severity === 'low') severity = 'medium'
     }
   }
 
@@ -75,12 +64,12 @@ export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps)
     const vague = containsVagueJobClaims(event.content),
     if (vague.length > 0) {
       reasons.push(...vague),
-      if (severity === 'low') severity = 'medium',
+      if (severity === 'low') severity = 'medium'
     }
   }
 
   return {
     flagged: reasons.length > 0,
     reasons,
-    severity},
+    severity}
 }

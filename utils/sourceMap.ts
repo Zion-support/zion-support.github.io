@@ -1,6 +1,5 @@
 import fs from "fs",
 import path from "path",
-
 export type SourceNodeType = "folder" | "file",
 
 export interface SourceNode {
@@ -25,7 +24,7 @@ const ROOT = process.cwd(),
 
 function withPath(base: string, segment: string): string {
   if (base === "/") return `/${segment}`,
-  return `${base}/${segment}`,
+  return `${base}/${segment}`
 }
 
 function folder(name: string, basePath: string, children: string[] = []): SourceNode {
@@ -34,7 +33,7 @@ function folder(name: string, basePath: string, children: string[] = []): Source
     name,
     path: fullPath,
     type: "folder",
-    children: children.map((child) => ({ name: child, path: withPath(fullPath, child), type: "folder" }))},
+    children: children.map((child) => ({ name: child, path: withPath(fullPath, child), type: "folder" }))}
 }
 
 export function buildZionSourceMap(): SourceNode[] {
@@ -130,7 +129,7 @@ export function buildZionSourceMap(): SourceNode[] {
         { name: "integrations", path: "/api/integrations", type: "folder" },
         { name: "webhooks", path: "/api/webhooks", type: "folder" }]}],
 
-  return map,
+  return map
 }
 
 function markExistenceRecursive(node: SourceNode): SourceNode {
@@ -140,14 +139,14 @@ function markExistenceRecursive(node: SourceNode): SourceNode {
     ...node,
     exists},
   if (node.children && node.children.length > 0) {
-    withExists.children = node.children.map(markExistenceRecursive),
+    withExists.children = node.children.map(markExistenceRecursive)
   }
-  return withExists,
+  return withExists
 }
 
 export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap(),
-  return nodes.map(markExistenceRecursive),
+  return nodes.map(markExistenceRecursive)
 }
 
 export interface DeployTemplateResult {
@@ -157,7 +156,7 @@ export interface DeployTemplateResult {
 
 export function ensureDirectory(dirPath: string): void {
   if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true }),
+    fs.mkdirSync(dirPath, { recursive: true })
   }
 }
 
@@ -171,19 +170,19 @@ export function deployBasicTemplateForPath(repoRelativePath: string): DeployTemp
   const keepFile = path.join(absoluteDir, ".keep"),
   if (!fs.existsSync(keepFile)) {
     fs.writeFileSync(keepFile, ""),
-    createdPaths.push(keepFile),
+    createdPaths.push(keepFile)
   } else {
-    skippedPaths.push(keepFile),
+    skippedPaths.push(keepFile)
   }
 
   const readmeFile = path.join(absoluteDir, "README.md"),
   if (!fs.existsSync(readmeFile)) {
     const readme = `# ${path.basename(absoluteDir)}\n\nThis module is part of the Zion OS modular source tree. Customize as needed.\n`,
     fs.writeFileSync(readmeFile, readme),
-    createdPaths.push(readmeFile),
+    createdPaths.push(readmeFile)
   } else {
-    skippedPaths.push(readmeFile),
+    skippedPaths.push(readmeFile)
   }
 
-  return { createdPaths, skippedPaths },
+  return { createdPaths, skippedPaths }
 }

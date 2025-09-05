@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react',
 import { useWallet } from '../../hooks/useWallet',
 import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins',
 import { CHAINS } from '../../utils/chains',
-
 const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
 
 export default function TokenIntegrationsPage() {
@@ -17,13 +16,13 @@ export default function TokenIntegrationsPage() {
   async function syncDepin() {
     if (!account) {
       await connect(),
-      return,
+      return
     }
     setDepinsSyncing(true),
     const acts = await fetchDepinActivities(account),
     const r = calculateRewards(acts),
     setRewards(r),
-    setDepinsSyncing(false),
+    setDepinsSyncing(false)
   }
 
   async function runOperator() {
@@ -32,7 +31,7 @@ export default function TokenIntegrationsPage() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ region, stakeUsd: stake })}),
     const data = await res.json(),
-    setSuggestion(data),
+    setSuggestion(data)
   }
 
   return (
@@ -100,5 +99,5 @@ export default function TokenIntegrationsPage() {
         </ul>
       </section>
     </div>
-  ),
+  )
 }

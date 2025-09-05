@@ -9,7 +9,6 @@ import { createTestNotification, createOnboardingNotification, createSystemNotif
 import { NotificationCenter } from "@/components/NotificationCenter",
 import { useToast } from "@/hooks/use-toast",
 import { Link } from "react-router-dom",
-
 export default function Dashboard() {
   const { user, logout } = useAuth(),
   const { toast } = useToast(),
@@ -21,12 +20,12 @@ export default function Dashboard() {
     if (result.success) {
       toast({
         title: "Test notification created",
-        description: "Check your notification center"}),
+        description: "Check your notification center"})
     } else {
       toast({
         title: "Error creating test notification",
         description: "Something went wrong",
-        variant: "destructive"}),
+        variant: "destructive"})
     }
   },
 
@@ -113,7 +112,7 @@ export default function Dashboard() {
                         toast({
                           title: "Onboarding notification sent",
                           description: "Check your notification center"
-                        }),
+                        })
                       }}
                     >
                       <Settings size={16} className="text-zion-purple" />
@@ -134,7 +133,7 @@ export default function Dashboard() {
                         toast({
                           title: "System notification sent",
                           description: "Check your notification center"
-                        }),
+                        })
                       }}
                     >
                       <Bell size={16} className="text-yellow-500" />
@@ -233,5 +232,5 @@ export default function Dashboard() {
       </div>
       <Footer />
     </>
-  ),
+  )
 }

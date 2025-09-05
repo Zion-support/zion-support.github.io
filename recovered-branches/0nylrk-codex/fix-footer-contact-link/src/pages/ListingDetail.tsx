@@ -39,11 +39,11 @@ export default function ListingDetail() {
           </div>
         </div>
       </AppLayout>
-    ),
+    )
   }
 
   const handleContact = () => {
-    setIsContactDialogOpen(true),
+    setIsContactDialogOpen(true)
   },
 
   return (
@@ -62,7 +62,7 @@ export default function ListingDetail() {
                       className="w-full h-full object-cover"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement,
-                        target.src = "/placeholder.svg",
+                        target.src = "/placeholder.svg"
                       }}
                     />
                   ) : (
@@ -89,7 +89,7 @@ export default function ListingDetail() {
                           className="w-full h-full object-cover"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement,
-                            target.src = "/placeholder.svg",
+                            target.src = "/placeholder.svg"
                           }}
                         />
                       </div>
@@ -203,7 +203,7 @@ export default function ListingDetail() {
                         toast({
                           title: "Payment Processing",
                           description: "Redirecting to secure checkout..."
-                        }),
+                        })
                       }}
                     />
                   ) : (
@@ -284,5 +284,5 @@ export default function ListingDetail() {
         </DialogContent>
       </Dialog>
     </AppLayout>
-  ),
+  )
 }

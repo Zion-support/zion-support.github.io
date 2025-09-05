@@ -8,7 +8,6 @@ import { ChangelogManager } from "./ChangelogManager",
 import { ExportPanel } from "./ExportPanel",
 import { Button } from "@/components/ui/button",
 import { toast } from "sonner",
-
 export type AppPlatform = "ios" | "android",
 
 export type AppMetadataValues = {
@@ -49,12 +48,12 @@ export const MetadataManager: React.FC = () => {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000)),
       
-      toast.success(`${currentPlatform === "ios" ? "iOS" : "Android"} metadata saved successfully!`),
+      toast.success(`${currentPlatform === "ios" ? "iOS" : "Android"} metadata saved successfully!`)
     } catch (error) {
       toast.error("Failed to save metadata"),
-      console.error(error),
+      console.error(error)
     } finally {
-      setIsSaving(false),
+      setIsSaving(false)
     }
   },
   
@@ -108,5 +107,5 @@ export const MetadataManager: React.FC = () => {
         </TabsContent>
       </Tabs>
     </div>
-  ),
+  )
 },

@@ -8,7 +8,7 @@ import React from 'react',
       author: 'Dr. Kleber',
       featured: true,
       image: '/api/placeholder/600/400',
-      tags: ['AI ConsciousnessBreakthrough', 'Innovation'],
+      tags: ['AI ConsciousnessBreakthroughInnovation'],
       readTime: '5 min read'
     },
     {
@@ -19,7 +19,7 @@ import React from 'react',
       category: 'Research',
       readTime: '6 min read',
       image: '/news/quantum-breakthrough.jpg',
-      tags: ['Quantum ComputingResearch', 'Breakthrough'],
+      tags: ['Quantum ComputingResearchBreakthrough'],
       icon: <Atom className="w-6 h-6" />,
       featured: true
     },
@@ -135,9 +135,8 @@ export default function News() {
       date: '2024-01-15',
       readTime: '5 min read',
       image: '/api/placeholder/600/400',
-      tags: ['AIQuantum Computing', 'Innovation'],
+      tags: ['AIQuantum ComputingInnovation'],
 import Head from 'next/head',
-
 export default function NewsPage() {
   const newsArticles = [
     {
@@ -379,7 +378,6 @@ import {
   BookOpen, Globe, Video
 } from 'lucide-react',
 import Link from 'next/link',
-
 export default function News() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -404,7 +402,7 @@ export default function News() {
       readTime: '5 min read',
       image: '/images/news/ai-consciousness-launch.jpg',
       featured: true,
-      tags: ['AI ConsciousnessPlatform Launch', 'Innovation']
+      tags: ['AI ConsciousnessPlatform LaunchInnovation']
     },
     {
       id: 2,
@@ -416,7 +414,7 @@ export default function News() {
       readTime: '7 min read',
       image: '/images/news/quantum-breakthrough.jpg',
       featured: true,
-      tags: ['Quantum ComputingResearch', 'Breakthrough']
+      tags: ['Quantum ComputingResearchBreakthrough']
     }
   ],
 
@@ -430,7 +428,7 @@ export default function News() {
       date: '2024-01-10',
       readTime: '4 min read',
       image: '/images/news/enterprise-ai-trends.jpg',
-      tags: ['Enterprise AIBest Practices', '2024 Trends']
+      tags: ['Enterprise AIBest Practices2024 Trends']
     },
     {
       id: 4,
@@ -441,7 +439,7 @@ export default function News() {
       date: '2024-01-08',
       readTime: '6 min read',
       image: '/images/news/autonomous-systems.jpg',
-      tags: ['Autonomous SystemsFuture of Work', 'Innovation']
+      tags: ['Autonomous SystemsFuture of WorkInnovation']
     },
     {
       id: 5,
@@ -452,7 +450,7 @@ export default function News() {
       date: '2024-01-05',
       readTime: '5 min read',
       image: '/images/news/ai-cybersecurity.jpg',
-      tags: ['CybersecurityAI Security', 'Digital Protection']
+      tags: ['CybersecurityAI SecurityDigital Protection']
     },
     {
       id: 6,
@@ -463,7 +461,7 @@ export default function News() {
       date: '2024-01-03',
       readTime: '8 min read',
       image: '/images/news/quantum-ml.jpg',
-      tags: ['Quantum MLResearch', 'Technology Convergence']
+      tags: ['Quantum MLResearchTechnology Convergence']
     }
   ],
 
@@ -476,7 +474,7 @@ export default function News() {
       author: 'Dr. Robert Chang',
       date: '2024-01-01',
       readTime: '6 min read',
-      tags: ['AI EthicsBusiness Impact', 'Consciousness']
+      tags: ['AI EthicsBusiness ImpactConsciousness']
     },
     {
       id: 8,
@@ -486,7 +484,7 @@ export default function News() {
       author: 'Lisa Wang',
       date: '2023-12-28',
       readTime: '4 min read',
-      tags: ['Micro-SaaSStartups', 'Software Industry']
+      tags: ['Micro-SaaSStartupsSoftware Industry']
     }
   ],
 
@@ -518,7 +516,7 @@ export default function News() {
                          article.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          article.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
     const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory,
-    return matchesSearch && matchesCategory,
+    return matchesSearch && matchesCategory
   }),
 
   const formatDate = (dateString: string) => {
@@ -526,7 +524,7 @@ export default function News() {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
-    }),
+    })
   },
 
   const getCategoryColor = (category: string) => {
@@ -537,7 +535,7 @@ export default function News() {
       research: 'from-orange-500 to-red-500',
       industry: 'from-indigo-500 to-purple-500'
     },
-    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600',
+    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600'
   },
 
   return (
@@ -604,10 +602,7 @@ export default function News() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
-    'All NewsCompany News',
-    'PartnershipsAI & Ethics',
-    'Quantum TechnologySpace Technology',
-    'Micro SAASIT Services',
+    'All NewsCompany NewsPartnershipsAI & EthicsQuantum TechnologySpace TechnologyMicro SAASIT Services',
     'MetaverseIndustry Insights'
   ],
 
@@ -617,7 +612,7 @@ export default function News() {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
-    }),
+    })
   },
 
   return (

@@ -4,7 +4,6 @@ import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
 import { Review, ReviewReport } from "@/types/reviews",
 import { toast } from "@/hooks/use-toast",
-
 export function useReviews(projectId?: string) {
   const { user } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
@@ -43,7 +42,7 @@ export function useReviews(projectId?: string) {
           .single(),
           
         if (!userReviewError && userReviewData) {
-          setUserReview(userReviewData),
+          setUserReview(userReviewData)
         }
       }
     } catch (err: any) {
@@ -51,9 +50,9 @@ export function useReviews(projectId?: string) {
       toast({
         title: "Error",
         description: "Failed to load reviews",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
@@ -77,15 +76,15 @@ export function useReviews(projectId?: string) {
         
       if (error) throw error,
       
-      setReviews(data || []),
+      setReviews(data || [])
     } catch (err: any) {
       console.error("Error fetching user reviews:", err),
       toast({
         title: "Error",
         description: "Failed to load reviews",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
@@ -106,7 +105,7 @@ export function useReviews(projectId?: string) {
         title: "Error",
         description: "You must be logged in to submit a review",
         variant: "destructive"}),
-      return false,
+      return false
     }
     
     setIsSubmitting(true),
@@ -127,7 +126,7 @@ export function useReviews(projectId?: string) {
         description: "Your review has been submitted and is pending approval"}),
       
       setUserReview(data),
-      return true,
+      return true
     } catch (err: any) {
       console.error("Error submitting review:", err),
       
@@ -136,16 +135,16 @@ export function useReviews(projectId?: string) {
         toast({
           title: "Error",
           description: "You have already submitted a review for this project",
-          variant: "destructive"}),
+          variant: "destructive"})
       } else {
         toast({
           title: "Error",
           description: "Failed to submit review",
-          variant: "destructive"}),
+          variant: "destructive"})
       }
-      return false,
+      return false
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
   
@@ -170,19 +169,19 @@ export function useReviews(projectId?: string) {
         description: "Your review has been updated"}),
       
       if (userReview) {
-        setUserReview({ ...userReview, ...updates }),
+        setUserReview({ ...userReview, ...updates })
       }
       
-      return true,
+      return true
     } catch (err: any) {
       console.error("Error updating review:", err),
       toast({
         title: "Error",
         description: "Failed to update review",
         variant: "destructive"}),
-      return false,
+      return false
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
   
@@ -204,30 +203,30 @@ export function useReviews(projectId?: string) {
           toast({
             title: "Error",
             description: "You have already reported this review",
-            variant: "destructive"}),
+            variant: "destructive"})
         } else {
-          throw error,
+          throw error
         }
       } else {
         toast({
           title: "Report Submitted",
           description: "Thank you. Our team will review your report"}),
-        return true,
+        return true
       }
     } catch (err: any) {
       console.error("Error reporting review:", err),
       toast({
         title: "Error",
         description: "Failed to report review",
-        variant: "destructive"}),
+        variant: "destructive"})
     }
     
-    return false,
+    return false
   },
   
   // Initialize by fetching reviews if projectId is provided
   if (projectId && reviews.length === 0 && !isLoading) {
-    fetchProjectReviews(projectId),
+    fetchProjectReviews(projectId)
   }
   
   return {
@@ -239,5 +238,5 @@ export function useReviews(projectId?: string) {
     fetchUserReviews,
     submitReview,
     updateReview,
-    reportReview},
+    reportReview}
 }

@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants',
-
 export interface AdvancedAIAutomationService {
   id: string,
   name: string,
@@ -51,10 +50,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     period: '/month',
     description: 'Advanced AI platform that generates production-ready code, performs automated code reviews, identifies security vulnerabilities, and suggests optimizations across multiple programming languages.',
     features: [
-      'Multi-language code generation (Python, JavaScript, Java, Go, Rust)Automated code review and quality analysis',
-      'Security vulnerability detectionPerformance optimization suggestions',
-      'Code documentation generationGit integration and version control',
-      'Team collaboration toolsCustom coding standards enforcement',
+      'Multi-language code generation (Python, JavaScript, Java, Go, Rust)Automated code review and quality analysisSecurity vulnerability detectionPerformance optimization suggestionsCode documentation generationGit integration and version controlTeam collaboration toolsCustom coding standards enforcement',
       'API endpoint generationDatabase schema optimization'
     ],
     popular: true,
@@ -99,10 +95,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     period: '/month',
     description: 'Comprehensive AI-powered DevOps platform that automates deployment, monitoring, scaling, and incident response with predictive analytics and self-healing capabilities.',
     features: [
-      'Intelligent CI/CD pipeline optimizationPredictive deployment scheduling',
-      'Automated incident detection and responseSelf-healing infrastructure',
-      'Performance monitoring and alertingCost optimization recommendations',
-      'Security compliance automationMulti-cloud deployment management',
+      'Intelligent CI/CD pipeline optimizationPredictive deployment schedulingAutomated incident detection and responseSelf-healing infrastructurePerformance monitoring and alertingCost optimization recommendationsSecurity compliance automationMulti-cloud deployment management',
       'Team collaboration and approval workflowsAdvanced analytics and reporting'
     ],
     popular: true,
@@ -147,10 +140,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     period: '/month',
     description: 'Advanced AI platform that automates customer support through intelligent chatbots, ticket routing, sentiment analysis, and predictive issue resolution.',
     features: [
-      'Intelligent chatbot with natural language processingAutomated ticket classification and routing',
-      'Sentiment analysis and emotion detectionPredictive issue resolution',
-      'Multi-language support (50+ languages)Integration with CRM and help desk systems',
-      'Real-time analytics and reportingCustomer satisfaction tracking',
+      'Intelligent chatbot with natural language processingAutomated ticket classification and routingSentiment analysis and emotion detectionPredictive issue resolutionMulti-language support (50+ languages)Integration with CRM and help desk systemsReal-time analytics and reportingCustomer satisfaction tracking',
       'Knowledge base automationEscalation management'
     ],
     popular: true,
@@ -195,10 +185,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     period: '/month',
     description: 'Comprehensive AI-powered marketing automation platform that optimizes campaigns, personalizes content, predicts customer behavior, and maximizes ROI through intelligent automation.',
     features: [
-      'Predictive customer behavior analysisIntelligent campaign optimization',
-      'Personalized content generationMulti-channel marketing automation',
-      'A/B testing with AI insightsCustomer segmentation automation',
-      'Lead scoring and qualificationROI tracking and optimization',
+      'Predictive customer behavior analysisIntelligent campaign optimizationPersonalized content generationMulti-channel marketing automationA/B testing with AI insightsCustomer segmentation automationLead scoring and qualificationROI tracking and optimization',
       'Social media automationEmail marketing optimization'
     ],
     popular: true,
@@ -243,10 +230,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     period: '/month',
     description: 'Intelligent sales platform that provides predictive lead scoring, customer behavior analysis, sales forecasting, and automated follow-up sequences to maximize conversion rates.',
     features: [
-      'Predictive lead scoring and qualificationCustomer behavior analysis and insights',
-      'Sales forecasting and pipeline managementAutomated follow-up sequences',
-      'Competitor analysis and monitoringSales performance analytics',
-      'Customer relationship insightsRevenue optimization recommendations',
+      'Predictive lead scoring and qualificationCustomer behavior analysis and insightsSales forecasting and pipeline managementAutomated follow-up sequencesCompetitor analysis and monitoringSales performance analyticsCustomer relationship insightsRevenue optimization recommendations',
       'Integration with CRM systemsMobile sales app'
     ],
     popular: true,

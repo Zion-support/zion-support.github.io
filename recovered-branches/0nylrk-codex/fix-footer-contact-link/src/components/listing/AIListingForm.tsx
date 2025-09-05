@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Sparkles } from "lucide-react",
-
 interface AIListingFormProps {
   onSubmit: (formData: {
     title: string,
@@ -19,7 +18,7 @@ interface AIListingFormProps {
     category?: string,
     keyFeatures?: string,
     targetAudience?: string
-  },
+  }
 }
 
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
@@ -36,7 +35,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         description: "Please provide at least a title and category.",
         variant: "destructive"
       }),
-      return,
+      return
     }
 
     onSubmit({
@@ -44,7 +43,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       category,
       keyFeatures,
       targetAudience
-    }),
+    })
   },
 
   return (
@@ -108,5 +107,5 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         )}
       </Button>
     </div>
-  ),
+  )
 }

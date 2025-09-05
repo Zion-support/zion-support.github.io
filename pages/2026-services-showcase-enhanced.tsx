@@ -13,7 +13,6 @@ import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-
 import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3',
 import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3',
 import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3',
-
 export default function Services2026ShowcaseEnhancedPage() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
@@ -111,25 +110,25 @@ export default function Services2026ShowcaseEnhancedPage() {
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      ),
+      )
     }
 
     // Category filter
     if (selectedCategory !== 'all') {
       if (selectedCategory === 'ai') {
-        filtered = filtered.filter(service => service.category.includes('AI')),
+        filtered = filtered.filter(service => service.category.includes('AI'))
       } else if (selectedCategory === 'quantum') {
-        filtered = filtered.filter(service => service.category.includes('Quantum') || service.category.includes('Emerging')),
+        filtered = filtered.filter(service => service.category.includes('Quantum') || service.category.includes('Emerging'))
       } else if (selectedCategory === 'enterprise') {
-        filtered = filtered.filter(service => service.category.includes('Enterprise') || service.category.includes('IT')),
+        filtered = filtered.filter(service => service.category.includes('Enterprise') || service.category.includes('IT'))
       } else if (selectedCategory === 'micro-saas') {
-        filtered = filtered.filter(service => service.category.includes('SaaS')),
+        filtered = filtered.filter(service => service.category.includes('SaaS'))
       } else if (selectedCategory === 'healthcare') {
-        filtered = filtered.filter(service => service.category.includes('Healthcare') || service.category.includes('Biotech')),
+        filtered = filtered.filter(service => service.category.includes('Healthcare') || service.category.includes('Biotech'))
       } else if (selectedCategory === 'financial') {
-        filtered = filtered.filter(service => service.category.includes('Financial') || service.category.includes('Trading')),
+        filtered = filtered.filter(service => service.category.includes('Financial') || service.category.includes('Trading'))
       } else if (selectedCategory === 'manufacturing') {
-        filtered = filtered.filter(service => service.category.includes('Manufacturing') || service.category.includes('IoT')),
+        filtered = filtered.filter(service => service.category.includes('Manufacturing') || service.category.includes('IoT'))
       }
     }
 
@@ -141,8 +140,8 @@ export default function Services2026ShowcaseEnhancedPage() {
         if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000,
         if (selectedPriceRange === 'high') return price >= 5000 && price < 20000,
         if (selectedPriceRange === 'premium') return price >= 20000,
-        return true,
-      }),
+        return true
+      })
     }
 
     // Sort services
@@ -162,7 +161,7 @@ export default function Services2026ShowcaseEnhancedPage() {
       }
     }),
 
-    return filtered,
+    return filtered
   }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
 
   // Service statistics
@@ -525,5 +524,5 @@ export default function Services2026ShowcaseEnhancedPage() {
         </section>
       </div>
     </UltraFuturisticBackground>
-  ),
+  )
 }

@@ -17,7 +17,7 @@ interface HeroProps {
     value: string,
     label: string,
     color: string
-  }>,
+  }>
 }
 
 const Hero: React.FC<HeroProps> = ({
@@ -140,7 +140,7 @@ const Hero: React.FC<HeroProps> = ({
       <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
       <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
     </section>
-  ),
+  )
 },
 
 export default Hero,

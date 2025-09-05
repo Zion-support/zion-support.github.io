@@ -12,7 +12,7 @@ export interface FuturisticAiService2029 {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const futuristicAIServices2029: FuturisticAiService2029[] = [

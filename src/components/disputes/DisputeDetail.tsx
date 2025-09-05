@@ -19,7 +19,6 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
 import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react'
 import { useAuth } from "@/hooks/useAuth",
 import { toast } from "sonner",
-
 export function DisputeDetail() {
   const router = useRouter(),
   const { disputeId } = router.query as { disputeId?: string },
@@ -51,21 +50,21 @@ export function DisputeDetail() {
         if (!disputeData) {
           toast.error("Dispute not found"),
           router.push("/dashboard/disputes"),
-          return,
+          return
         }
         setDispute(disputeData),
         
         const messagesData = await getDisputeMessages(disputeId),
-        setMessages(messagesData),
+        setMessages(messagesData)
       } catch (error) {
         logErrorToProduction('Error loading dispute data:', { data: error }),
-        toast.error("Failed to load dispute"),
+        toast.error("Failed to load dispute")
       } finally {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     },
     
-    loadDisputeData(),
+    loadDisputeData()
   }, [disputeId, getDisputeById, getDisputeMessages, router]),
 
   const handleStatusChange = async (status: DisputeStatus) => {
@@ -74,9 +73,9 @@ export function DisputeDetail() {
     const success = await updateDisputeStatus(disputeId, status),
     if (success) {
       // Update the dispute object with the new status
-      setDispute({ ...dispute!, status: status }),
+      setDispute({ ...dispute!, status: status })
     } else {
-      toast.error("Failed to update dispute status"),
+      toast.error("Failed to update dispute status")
     }
   },
 
@@ -85,7 +84,7 @@ export function DisputeDetail() {
     
     if (!resolution.summary) {
       toast.error("Please provide a resolution summary"),
-      return,
+      return
     }
     
     const success = await resolveDispute(disputeId, {
@@ -96,9 +95,9 @@ export function DisputeDetail() {
         ...dispute,
         resolution_summary: resolution.summary,
         resolution_type: resolution.resolution_type,
-        resolved_at: new Date().toISOString()}),
+        resolved_at: new Date().toISOString()})
     } else {
-      toast.error("Failed to resolve dispute"),
+      toast.error("Failed to resolve dispute")
     }
   },
 
@@ -112,12 +111,12 @@ export function DisputeDetail() {
         // Refresh messages
         const updatedMessages = await getDisputeMessages(disputeId),
         setMessages(updatedMessages),
-        setMessage(""),
+        setMessage("")
       }
     } catch (error) {
-      logErrorToProduction('Error sending message:', { data: error }),
+      logErrorToProduction('Error sending message:', { data: error })
     } finally {
-      setIsSending(false),
+      setIsSending(false)
     }
   },
 
@@ -127,7 +126,7 @@ export function DisputeDetail() {
         <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>
         <p>Loading dispute details...</p>
       </div>
-    ),
+    )
   }
 
   if (!dispute) {
@@ -138,7 +137,7 @@ export function DisputeDetail() {
           Back to Disputes
         </Button>
       </div>
-    ),
+    )
   }
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {
@@ -327,7 +326,7 @@ export function DisputeDetail() {
                                 <p className="whitespace-pre-wrap">{msg.message}</p>
                               </div>
                             </div>
-                          ),
+                          )
                         })
                     )}
                   </div>
@@ -479,8 +478,8 @@ export function DisputeDetail() {
                             if (adminNote.trim()) {
                               addDisputeMessage(disputeId!, adminNote, true).then(() => {
                                 getDisputeMessages(disputeId!).then(setMessages),
-                                setAdminNote(""),
-                              }),
+                                setAdminNote("")
+                              })
                             }
                           }}
                         >
@@ -561,5 +560,5 @@ export function DisputeDetail() {
         </div>
       </div>
     </div>
-  ),
+  )
 }

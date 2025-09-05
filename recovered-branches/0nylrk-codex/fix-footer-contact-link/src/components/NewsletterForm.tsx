@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { useState } from "react",
-
 export function NewsletterForm() {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -16,7 +15,7 @@ export function NewsletterForm() {
       setIsSubmitting(false),
       setIsSubmitted(true),
       setEmail("")
-    }, 1000),
+    }, 1000)
   },
 
   return (
@@ -46,5 +45,5 @@ export function NewsletterForm() {
         </form>
       )}
     </div>
-  ),
+  )
 }

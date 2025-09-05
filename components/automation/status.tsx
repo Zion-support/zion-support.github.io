@@ -7,7 +7,7 @@ export default function AutomationStatusPage() {
     fetch('/automation/status.json')
       .then((r) => r.json())
       .then((j) => setStatus(j))
-      .catch(() => setStatus(null)),
+      .catch(() => setStatus(null))
   }, []),
 
   return (
@@ -23,5 +23,5 @@ export default function AutomationStatusPage() {
         <div className="text-sm text-gray-500">No status available yet.</div>
       )}
     </div>
-  ),
+  )
 }

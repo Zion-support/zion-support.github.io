@@ -7,7 +7,7 @@ import { logInfo, logErrorToProduction as prodLogError } from '@/utils/productio
 
 
 interface PageErrorFallbackProps extends FallbackProps {
-  pageName?: string,
+  pageName?: string
 }
 
 function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFallbackProps) {
@@ -18,9 +18,9 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
 
   const handleRefresh = () => {
     if (resetErrorBoundary) {
-      resetErrorBoundary(),
+      resetErrorBoundary()
     } else {
-      window.location.reload(),
+      window.location.reload()
     }
   },
 
@@ -148,7 +148,7 @@ export default function PageErrorBoundary({
       componentStack: errorInfo.componentStack || undefined,
       errorBoundary: 'PageErrorBoundary',
       timestamp: new Date().toISOString()
-    }),
+    })
   },
 
   const FallbackComponent = fallback || ((props: FallbackProps) => (
@@ -161,10 +161,10 @@ export default function PageErrorBoundary({
       onError={handleError}
       onReset={() => {
         // Reset any application state if needed
-        logInfo(`Resetting error boundary for ${pageName || 'page'}`),
+        logInfo(`Resetting error boundary for ${pageName || 'page'}`)
       }}
     >
       {children}
     </ErrorBoundary>
-  ),
+  )
 } 

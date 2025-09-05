@@ -7,7 +7,6 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Calendar } from "@/components/ui/calendar",
 import { FormControl } from "@/components/ui/form",
 import { cn } from "@/lib/utils",
-
 interface DateFieldsProps {
   startDate: Date | undefined,
   setStartDate: (date: Date | undefined) => void,
@@ -86,5 +85,5 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
         </Popover>
       </div>
     </div>
-  ),
+  )
 }

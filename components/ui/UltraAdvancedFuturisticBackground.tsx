@@ -46,7 +46,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       if (containerRef.current) {
         const rect = containerRef.current.getBoundingClientRect(),
         canvas.width = rect.width,
-        canvas.height = rect.height,
+        canvas.height = rect.height
       }
     },
 
@@ -106,7 +106,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
                  type === 'holographic' ? colors.holographic :
                  type === 'neon' ? colors.primary : colors.secondary,
           type
-        }),
+        })
       }
     },
 
@@ -126,7 +126,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
             ctx.lineWidth = 1,
             ctx.moveTo(particles[i].x, particles[i].y),
             ctx.lineTo(particles[j].x, particles[j].y),
-            ctx.stroke(),
+            ctx.stroke()
           }
         }
       }
@@ -147,7 +147,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         ctx.beginPath(),
         ctx.moveTo(x, 0),
         ctx.lineTo(x, canvas.height),
-        ctx.stroke(),
+        ctx.stroke()
       }
       
       // Horizontal lines
@@ -155,7 +155,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         ctx.beginPath(),
         ctx.moveTo(0, y),
         ctx.lineTo(canvas.width, y),
-        ctx.stroke(),
+        ctx.stroke()
       }
     },
 
@@ -178,7 +178,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
             ctx.lineWidth = strength * 2,
             ctx.moveTo(nodes[i].x, nodes[i].y),
             ctx.lineTo(nodes[j].x, nodes[j].y),
-            ctx.stroke(),
+            ctx.stroke()
           }
         }
       }
@@ -242,7 +242,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2),
           ctx.strokeStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`,
           ctx.lineWidth = 2,
-          ctx.stroke(),
+          ctx.stroke()
         }
       }),
       
@@ -256,11 +256,11 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           ctx.arc(canvas.width / 2, canvas.height / 2, waveRadius, 0, Math.PI * 2),
           ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - waveRadius / (Math.max(canvas.width, canvas.height) * 2))})`,
           ctx.lineWidth = 2,
-          ctx.stroke(),
+          ctx.stroke()
         }
       }
       
-      animationFrameId = requestAnimationFrame(animate),
+      animationFrameId = requestAnimationFrame(animate)
     },
 
     initParticles(),
@@ -268,8 +268,8 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
 
     return () => {
       window.removeEventListener('resize', resizeCanvas),
-      cancelAnimationFrame(animationFrameId),
-    },
+      cancelAnimationFrame(animationFrameId)
+    }
   }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects]),
 
   return (
@@ -307,7 +307,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       
       {children}
     </div>
-  ),
+  )
 },
 
 export default UltraAdvancedFuturisticBackground,

@@ -12,7 +12,7 @@ export interface ComprehensiveItSolution {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const comprehensiveITSolutions: ComprehensiveItSolution[] = [

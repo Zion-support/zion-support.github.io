@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants',
-
 export interface CuttingEdgeITInfrastructureService {
   id: string,
   name: string,
@@ -51,10 +50,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     period: '/month',
     description: 'Revolutionary cloud infrastructure platform featuring quantum-resistant encryption, zero-trust architecture, and autonomous security management for enterprise-grade applications.',
     features: [
-      'Quantum-resistant encryption algorithmsZero-trust security architecture',
-      'Autonomous security managementMulti-cloud orchestration',
-      'Real-time threat detectionCompliance automation (SOC2, ISO27001)',
-      'AI-powered resource optimizationGlobal edge computing network',
+      'Quantum-resistant encryption algorithmsZero-trust security architectureAutonomous security managementMulti-cloud orchestrationReal-time threat detectionCompliance automation (SOC2, ISO27001)AI-powered resource optimizationGlobal edge computing network',
       '99.999% uptime guarantee24/7 security monitoring'
     ],
     popular: true,
@@ -99,10 +95,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     period: '/month',
     description: 'Advanced edge computing platform that orchestrates distributed computing resources across global edge locations with AI-powered optimization and real-time performance monitoring.',
     features: [
-      'Global edge computing networkAI-powered resource optimization',
-      'Real-time performance monitoringAutomatic load balancing',
-      'Edge-to-cloud synchronizationLatency optimization algorithms',
-      'Multi-region deploymentEdge security management',
+      'Global edge computing networkAI-powered resource optimizationReal-time performance monitoringAutomatic load balancingEdge-to-cloud synchronizationLatency optimization algorithmsMulti-region deploymentEdge security management',
       'Cost optimization analyticsAPI for edge application development'
     ],
     popular: true,
@@ -147,10 +140,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     period: '/month',
     description: 'Revolutionary DevOps platform that autonomously manages software development, testing, deployment, and operations using advanced AI and machine learning algorithms.',
     features: [
-      'AI-powered code review and testingAutonomous deployment optimization',
-      'Intelligent monitoring and alertingAutomated incident response',
-      'Performance optimization algorithmsSecurity vulnerability scanning',
-      'Cost optimization analyticsMulti-environment management',
+      'AI-powered code review and testingAutonomous deployment optimizationIntelligent monitoring and alertingAutomated incident responsePerformance optimization algorithmsSecurity vulnerability scanningCost optimization analyticsMulti-environment management',
       'GitOps workflow automationReal-time collaboration tools'
     ],
     popular: true,
@@ -195,10 +185,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     period: '/month',
     description: 'Enterprise-grade blockchain platform featuring scalable infrastructure, AI-powered consensus mechanisms, and automated smart contract management for business applications.',
     features: [
-      'Scalable blockchain infrastructureAI-powered consensus algorithms',
-      'Smart contract automationEnterprise-grade security',
-      'Multi-chain interoperabilityReal-time transaction monitoring',
-      'Compliance and audit toolsAPI for business integration',
+      'Scalable blockchain infrastructureAI-powered consensus algorithmsSmart contract automationEnterprise-grade securityMulti-chain interoperabilityReal-time transaction monitoringCompliance and audit toolsAPI for business integration',
       'Performance analytics dashboard24/7 blockchain monitoring'
     ],
     popular: true,
@@ -243,10 +230,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     period: '/month',
     description: 'Revolutionary networking platform featuring quantum encryption, AI-powered traffic optimization, and autonomous network management for ultra-secure, high-performance communications.',
     features: [
-      'Quantum encryption protocolsAI-powered traffic optimization',
-      'Autonomous network managementZero-latency routing',
-      'Quantum key distributionReal-time security monitoring',
-      'Global network optimizationAPI for network integration',
+      'Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration',
       'Performance analytics24/7 network monitoring'
     ],
     popular: true,

@@ -108,7 +108,7 @@ export interface Feature {
 export interface Stat {
   number: string,
   label: string,
-  icon: React.ComponentType<{ className?: string }>,
+  icon: React.ComponentType<{ className?: string }>
 }
 
 export interface FormData {

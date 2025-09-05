@@ -10,7 +10,6 @@ import { AlertCircle } from 'lucide-react'
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter",
 import {logErrorToProduction} from '@/utils/productionLogger',
-
 export function SignUpForm() {
 
   const router = useRouter(),
@@ -30,7 +29,7 @@ export function SignUpForm() {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value })),
     setError(""),
-    setFieldErrors(prev => ({ ...prev, [name]: "" })),
+    setFieldErrors(prev => ({ ...prev, [name]: "" }))
   },
   
   const handleSubmit = async (e: React.FormEvent) => {
@@ -44,25 +43,25 @@ export function SignUpForm() {
     const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/,
 
     if (signupMode && !formData.name.trim()) {
-      errors.name = 'Full name is required',
+      errors.name = 'Full name is required'
     }
 
     if (!formData.email.trim()) {
-      errors.email = 'Email is required',
+      errors.email = 'Email is required'
     } else if (!emailRegex.test(formData.email)) {
-      errors.email = 'Invalid email address',
+      errors.email = 'Invalid email address'
     }
 
     if (!formData.password) {
-      errors.password = 'Password is required',
+      errors.password = 'Password is required'
     } else if (!strongPasswordRegex.test(formData.password)) {
-      errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.',
+      errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.'
     }
 
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors),
       setIsLoading(false),
-      return,
+      return
     }
     
     try {
@@ -76,31 +75,31 @@ export function SignUpForm() {
         }
 
         if (result?.emailVerificationRequired) {
-          setShowVerificationMessage(true),
+          setShowVerificationMessage(true)
         } else {
           // Only navigate if email verification is not required
-          router.push("/mobile"),
+          router.push("/mobile")
         }
       } else {
         const { error } = await login(formData.email, formData.password),
         
         if (error) {
-          throw new Error(error),
+          throw new Error(error)
         }
         
-        router.push("/mobile"),
+        router.push("/mobile")
       }
     } catch (err: any) {
       logErrorToProduction('Signup/Login error:', { data: err }),
-      setError(err.message || 'An unexpected error occurred. Please try again.'),
+      setError(err.message || 'An unexpected error occurred. Please try again.')
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
   const handleGoogleLogin = async () => {
     try {
-      await loginWithGoogle(),
+      await loginWithGoogle()
     } catch (err: any) {
       setError(err.message)
     }

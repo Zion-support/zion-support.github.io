@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
-
 interface UltraAdvancedFuturisticBackgroundV2Props {
   children: React.ReactNode,
   className?: string
@@ -35,7 +34,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
     }> = [],
 
     const colors = [
-      '#00ffff#ff00ff', '#ffff00#00ff00', '#ff0080#8000ff', '#ff8000#0080ff', '#ff0080#80ff00'
+      '#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#ff8000#0080ff', '#ff0080#80ff00'
     ],
 
     // Initialize particles
@@ -51,7 +50,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
           color: colors[Math.floor(Math.random() * colors.length)],
           life: Math.random() * 100,
           maxLife: 100
-        }),
+        })
       }
     },
 
@@ -85,7 +84,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
           particle.x = Math.random() * canvas.width,
           particle.y = Math.random() * canvas.height,
           particle.life = particle.maxLife,
-          particle.color = colors[Math.floor(Math.random() * colors.length)],
+          particle.color = colors[Math.floor(Math.random() * colors.length)]
         }
 
         // Draw particle
@@ -109,10 +108,10 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
               ctx.beginPath(),
               ctx.moveTo(particle.x, particle.y),
               ctx.lineTo(otherParticle.x, otherParticle.y),
-              ctx.stroke(),
+              ctx.stroke()
             }
           }
-        }),
+        })
       }),
 
       // Draw quantum matrix overlay
@@ -125,7 +124,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
         ctx.beginPath(),
         ctx.moveTo(x, 0),
         ctx.lineTo(x, canvas.height),
-        ctx.stroke(),
+        ctx.stroke()
       }
       
       // Horizontal lines
@@ -133,7 +132,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
         ctx.beginPath(),
         ctx.moveTo(0, y),
         ctx.lineTo(canvas.width, y),
-        ctx.stroke(),
+        ctx.stroke()
       }
 
       // Draw holographic circles
@@ -147,17 +146,17 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
         ctx.lineWidth = 2,
         ctx.beginPath(),
         ctx.arc(centerX, centerY, radius, 0, Math.PI * 2),
-        ctx.stroke(),
+        ctx.stroke()
       }
 
-      animationFrameId = requestAnimationFrame(updateParticles),
+      animationFrameId = requestAnimationFrame(updateParticles)
     },
 
     // Handle resize
     const handleResize = () => {
       canvas.width = window.innerWidth,
       canvas.height = window.innerHeight,
-      initParticles(),
+      initParticles()
     },
 
     window.addEventListener('resize', handleResize),
@@ -167,9 +166,9 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
     return () => {
       window.removeEventListener('resize', handleResize),
       if (animationFrameId) {
-        cancelAnimationFrame(animationFrameId),
+        cancelAnimationFrame(animationFrameId)
       }
-    },
+    }
   }, []),
 
   return (
@@ -304,7 +303,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
         {children}
       </div>
     </div>
-  ),
+  )
 },
 
 export default UltraAdvancedFuturisticBackgroundV2,

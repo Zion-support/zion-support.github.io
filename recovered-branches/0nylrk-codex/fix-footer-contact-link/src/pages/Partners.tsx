@@ -11,7 +11,6 @@ import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
 import { PartnerResources } from "@/components/partners/PartnerResources",
 import { useAuth } from "@/hooks/useAuth",
 import { useNavigate } from "react-router-dom",
-
 export default function Partners() {
   const [activeTab, setActiveTab] = useState("overview"),
   const { user, isAuthenticated } = useAuth(),
@@ -147,7 +146,7 @@ export default function Partners() {
           </Button>
         </div>
       </div>
-    ),
+    )
   }
 
   // Authenticated user view - Partner Dashboard
@@ -205,5 +204,5 @@ export default function Partners() {
         </TabsContent>
       </Tabs>
     </div>
-  ),
+  )
 }

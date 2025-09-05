@@ -313,7 +313,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
   return suggestions.map(text => ({
     text,
     type: 'product' // Use a valid type from the updated SearchSuggestion interface
-  })),
+  }))
 },
 
 // Generate filter options for sidebar
@@ -337,7 +337,7 @@ export const generateFilterOptions = (): FilterOptions => {
       value: item
     })),
     ratingOptions: [1, 2, 3, 4, 5] // Add rating options
-  },
+  }
 },
 
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0)),

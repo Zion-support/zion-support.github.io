@@ -14,7 +14,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { toast } from "sonner",
 import { supabase } from "@/integrations/supabase/client",
 import { Switch } from "@/components/ui/switch",
-
 export default function TenantOnboarding() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("company"),
@@ -35,20 +34,20 @@ export default function TenantOnboarding() {
   const isAdmin = user?.role === "admin",
   
   if (!isAdmin) {
-    return <Navigate to="/unauthorized" />,
+    return <Navigate to="/unauthorized" />
   }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target,
-    setFormData(prev => ({ ...prev, [name]: value })),
+    setFormData(prev => ({ ...prev, [name]: value }))
   },
   
   const handleSelectChange = (name: string, value: string) => {
-    setFormData(prev => ({ ...prev, [name]: value })),
+    setFormData(prev => ({ ...prev, [name]: value }))
   },
   
   const handleSwitchChange = (name: string, checked: boolean) => {
-    setFormData(prev => ({ ...prev, [name]: checked })),
+    setFormData(prev => ({ ...prev, [name]: checked }))
   },
   
   const handleSubmit = async (e: React.FormEvent) => {
@@ -102,15 +101,15 @@ export default function TenantOnboarding() {
         industry: "",
         custom_domain: "",
         is_co_branded: true
-      }),
+      })
       
     } catch (error: any) {
       console.error("Error creating tenant:", error),
       toast.error("Failed to create tenant", { 
         description: error.message 
-      }),
+      })
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
@@ -326,5 +325,5 @@ export default function TenantOnboarding() {
       </main>
       <Footer />
     </>
-  ),
+  )
 }

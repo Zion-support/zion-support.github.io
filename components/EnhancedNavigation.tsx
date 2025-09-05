@@ -23,11 +23,11 @@ const EnhancedNavigation: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20),
+      setIsScrolled(window.scrollY > 20)
     },
 
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
 <<<<<<< HEAD
@@ -55,7 +55,7 @@ const EnhancedNavigation: React.FC = () => {
 
   const closeAllDropdowns = () => {
     setActiveDropdown(null),
-    setIsOpen(false),
+    setIsOpen(false)
   },
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
@@ -88,7 +88,7 @@ const EnhancedNavigation: React.FC = () => {
         </div>
       </div>
     </nav>
-  ),
+  )
 },
 
 <<<<<<< HEAD

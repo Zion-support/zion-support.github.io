@@ -12,7 +12,7 @@ export interface PracticalMicroSaas2027 {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [

@@ -12,7 +12,7 @@ export interface NewOperationalService2025 {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const newOperationalServices2025: NewOperationalService2025[] = [

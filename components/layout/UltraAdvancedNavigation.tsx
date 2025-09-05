@@ -7,7 +7,6 @@ import {
   Cpu, Zap, Atom, Database, Cloud, Lock, Code
 } from 'lucide-react',
 import Link from 'next/link',
-
 const UltraAdvancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
   const [isScrolled, setIsScrolled] = useState(false),
@@ -15,11 +14,11 @@ const UltraAdvancedNavigation: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50),
+      setIsScrolled(window.scrollY > 50)
     },
 
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
   const navigationItems = [
@@ -442,7 +441,7 @@ const UltraAdvancedNavigation: React.FC = () => {
         )}
       </AnimatePresence>
     </nav>
-  ),
+  )
 },
 
 export default UltraAdvancedNavigation,

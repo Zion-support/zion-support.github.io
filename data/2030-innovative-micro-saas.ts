@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants',
-
 export interface InnovativeMicroSaas2030 {
   id: string,
   name: string,
@@ -51,10 +50,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     period: '/month',
     description: 'Revolutionary 2030 platform for AI-powered business intelligence, providing real-time insights, predictive analytics, and autonomous decision-making.',
     features: [
-      'AI-powered analyticsReal-time insights',
-      'Predictive analyticsAutonomous decision making',
-      'Business intelligence APIsAI-driven reporting',
-      'Intelligent dashboardsBusiness optimization',
+      'AI-powered analyticsReal-time insightsPredictive analyticsAutonomous decision makingBusiness intelligence APIsAI-driven reportingIntelligent dashboardsBusiness optimization',
       'AI business insightsAutonomous business intelligence'
     ],
     popular: true,
@@ -98,10 +94,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     period: '/month',
     description: 'Revolutionary 2030 platform for quantum-secure communication, providing unbreakable encryption and secure communication channels.',
     features: [
-      'Quantum encryptionUnbreakable security',
-      'Quantum key distributionSecure communication',
-      'Quantum security APIsReal-time encryption',
-      'Quantum security validationSecure communication networks',
+      'Quantum encryptionUnbreakable securityQuantum key distributionSecure communicationQuantum security APIsReal-time encryptionQuantum security validationSecure communication networks',
       'Quantum security protocolsAdvanced quantum security'
     ],
     popular: true,
@@ -145,10 +138,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     period: '/month',
     description: 'Revolutionary 2030 platform for AI-powered customer success automation, enabling autonomous customer service and success optimization.',
     features: [
-      'AI customer serviceAutonomous customer success',
-      'Customer optimizationAI-driven insights',
-      'Customer success APIsIntelligent customer service',
-      'Customer success automationAI customer insights',
+      'AI customer serviceAutonomous customer successCustomer optimizationAI-driven insightsCustomer success APIsIntelligent customer serviceCustomer success automationAI customer insights',
       'Autonomous customer supportCustomer success optimization'
     ],
     popular: true,
@@ -192,10 +182,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     period: '/month',
     description: 'Revolutionary 2030 platform for blockchain-powered supply chain transparency, providing end-to-end traceability and verification.',
     features: [
-      'Blockchain traceabilityEnd-to-end verification',
-      'Supply chain transparencyBlockchain validation',
-      'Supply chain APIsReal-time tracking',
-      'Blockchain securitySupply chain optimization',
+      'Blockchain traceabilityEnd-to-end verificationSupply chain transparencyBlockchain validationSupply chain APIsReal-time trackingBlockchain securitySupply chain optimization',
       'Blockchain verificationAdvanced supply chain transparency'
     ],
     popular: true,
@@ -239,10 +226,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     period: '/month',
     description: 'Revolutionary 2030 platform for AI-powered marketing automation, enabling autonomous marketing campaigns and optimization.',
     features: [
-      'AI marketing campaignsAutonomous marketing',
-      'Marketing optimizationAI-driven insights',
-      'Marketing automation APIsIntelligent marketing',
-      'Marketing automationAI marketing insights',
+      'AI marketing campaignsAutonomous marketingMarketing optimizationAI-driven insightsMarketing automation APIsIntelligent marketingMarketing automationAI marketing insights',
       'Autonomous marketing optimizationMarketing performance optimization'
     ],
     popular: true,

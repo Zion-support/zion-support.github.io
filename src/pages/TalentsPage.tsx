@@ -11,7 +11,6 @@ import { Button } from '@/components/ui/button',
 import { Badge } from '@/components/ui/badge',
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
 import Spinner from '@/components/ui/spinner',
-
 // Market insights component for talents
 const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
@@ -248,15 +247,15 @@ export default function TalentsPage() {
     if (filterSpecialization) {
       filteredTalents = filteredTalents.filter(t => 
         t.professional_title?.toLowerCase().includes(filterSpecialization.toLowerCase())
-      ),
+      )
     }
 
     if (filterAvailability) {
-      filteredTalents = filteredTalents.filter(t => t.availability_type === filterAvailability),
+      filteredTalents = filteredTalents.filter(t => t.availability_type === filterAvailability)
     }
     
     if (showRecommended) {
-      filteredTalents = getRecommendedTalents(filteredTalents),
+      filteredTalents = getRecommendedTalents(filteredTalents)
     }
     
     // Apply sorting
@@ -286,7 +285,7 @@ export default function TalentsPage() {
       items,
       hasMore: endIndex < filteredTalents.length || page < 12, // Allow up to 12 pages
       total: filteredTalents.length
-    },
+    }
   }, [sortBy, filterSpecialization, filterAvailability, showRecommended, totalGenerated]),
 
   // Use infinite scroll hook
@@ -306,28 +305,28 @@ export default function TalentsPage() {
   // Refresh when filters change
   useEffect(() => {
     refresh(),
-    setTotalGenerated(0),
+    setTotalGenerated(0)
   }, [sortBy, filterSpecialization, filterAvailability, showRecommended]),
 
   // Calculate market stats
   const marketStats = useMemo(() => {
     if (talents.length === 0) return null,
-    return getTalentMarketStats(talents),
+    return getTalentMarketStats(talents)
   }, [talents]),
 
   // Get unique specializations
   const specializations = useMemo(() => {
-    return Array.from(new Set(talents.map(t => t.professional_title?.split(' ')[0] || '').filter(Boolean))),
+    return Array.from(new Set(talents.map(t => t.professional_title?.split(' ')[0] || '').filter(Boolean)))
   }, [talents]),
 
   // Show scroll to top button
   const [showScrollTop, setShowScrollTop] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 800),
+      setShowScrollTop(window.scrollY > 800)
     },
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
   // Loading state
@@ -348,7 +347,7 @@ export default function TalentsPage() {
         </motion.div>
         <TalentLoadingGrid />
       </div>
-    ),
+    )
   }
 
   // Error state
@@ -361,7 +360,7 @@ export default function TalentsPage() {
           <Button onClick={refresh}>Try Again</Button>
         </div>
       </div>
-    ),
+    )
   }
 
   // Main render
@@ -498,5 +497,5 @@ export default function TalentsPage() {
         )}
       </AnimatePresence>
     </div>
-  ),
+  )
 }

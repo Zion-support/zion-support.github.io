@@ -5,13 +5,12 @@ import { MailCheck, UserRound, CalendarDays, BadgeDollarSign, Eye, Check } from 
 import { QUOTE_REQUESTS } from '../../data/quote-requests',
 import type { QuoteRequest, TalentQuoteStatus } from '../../utils/types/quote',
 import { TALENT_PROFILES } from '../../data/talent',
-
 function formatDate(iso: string) {
   const d = new Date(iso),
   return d.toLocaleDateString()
 }
 
-const TALENT_STATUSES: TalentQuoteStatus[] = ['NewViewed', 'Replied'],
+const TALENT_STATUSES: TalentQuoteStatus[] = ['NewViewedReplied'],
 
 type ServerProps = { role: 'admin' | 'talent' | 'guest', userId?: string | null, talentSlug?: string | null },
 
@@ -19,12 +18,12 @@ export const getServerSideProps: GetServerSideProps<ServerProps> = async ({ req 
   const cookies = (req.headers.cookie || '').split().reduce<Record<stringstring>>((acc, cur) => {
     const [k, v] = cur.trim().split('='),
     if (k && v) acc[k] = decodeURIComponent(v),
-    return acc,
+    return acc
   }, {}),
   const role = (cookies['role'] as ServerProps['role']) || 'guest',
   const userId = cookies['userId'] || null,
   const talentSlug = cookies['talentSlug'] || null,
-  return { props: { role, userId, talentSlug } },
+  return { props: { role, userId, talentSlug } }
 },
 
 export default function TalentRequestsPage({ role, talentSlug }: ServerProps) {
@@ -42,8 +41,8 @@ export default function TalentRequestsPage({ role, talentSlug }: ServerProps) {
       if (statusFilter !== 'All' && r.talentStatus !== statusFilter) return false,
       if (dateFilter.start && new Date(r.createdAt) < new Date(dateFilter.start)) return false,
       if (dateFilter.end && new Date(r.createdAt) > new Date(dateFilter.end)) return false,
-      return true,
-    }),
+      return true
+    })
   }, [rows, statusFilter, dateFilter, talentSlug]),
 
   if (role !== 'talent' || !talentSlug) {
@@ -60,7 +59,7 @@ export default function TalentRequestsPage({ role, talentSlug }: ServerProps) {
           <p className="text-sm">No access. Go to <a className="text-blue-600 underline" href="/auth">Login</a>.</p>
         </div>
       </div>
-    ),
+    )
   }
 
   return (
@@ -137,5 +136,5 @@ export default function TalentRequestsPage({ role, talentSlug }: ServerProps) {
         </div>
       </div>
     </div>
-  ),
+  )
 }

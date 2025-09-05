@@ -1,6 +1,5 @@
 import React from 'react',
 import Link from 'next/link',
-
 interface ButtonProps {
   children: React.ReactNode,
   variant?: 'primary' | 'secondary' | 'ghost' | 'outline',
@@ -60,7 +59,7 @@ const Button: React.FC<ButtonProps> = ({
       <Link href={href} className={classes} style={style}>
         {content}
       </Link>
-    ),
+    )
   }
 
   return (
@@ -73,7 +72,7 @@ const Button: React.FC<ButtonProps> = ({
     >
       {content}
     </button>
-  ),
+  )
 },
 
 export default Button,

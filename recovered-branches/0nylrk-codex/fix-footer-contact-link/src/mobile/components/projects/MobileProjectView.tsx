@@ -9,7 +9,6 @@ import { Progress } from "@/components/ui/progress",
 import { SeverityIndicator } from "../common/SeverityIndicator",
 import { useNavigate } from "react-router-dom",
 import { toast } from "sonner",
-
 interface Milestone {
   id: string,
   title: string,
@@ -46,7 +45,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
       description: "Initializing video connection..."
     }),
     
-    navigate(`/call/${roomId}`),
+    navigate(`/call/${roomId}`)
   },
   
   const messageClient = () => {
@@ -183,5 +182,5 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
         </div>
       </section>
     </div>
-  ),
+  )
 }

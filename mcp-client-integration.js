@@ -11,16 +11,16 @@
 // Placeholder functionality
 class MCPClientIntegration {
   constructor() {
-    this.status = 'placeholder',
+    this.status = 'placeholder'
   }
 
   connect() {
     // // // console.log('MCP client would connect here'),
-    return { success: true, message: 'Placeholder connection' },
+    return { success: true, message: 'Placeholder connection' }
   }
 
   status() {
-    return { status: 'placeholder', message: 'Not implemented yet' },
+    return { status: 'placeholder', message: 'Not implemented yet' }
   }
 }
 
@@ -30,5 +30,5 @@ module.exports = MCPClientIntegration,
 // Run if called directly
 if (require.main === module) {
   const client = new MCPClientIntegration(),
-  client.connect(),
+  client.connect()
 }

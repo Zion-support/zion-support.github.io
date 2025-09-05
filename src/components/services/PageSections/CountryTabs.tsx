@@ -12,7 +12,6 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
 import { CountryServiceCard } from '@/components/services/CountryServiceCard',
 import { CountryPricing } from '@/data/onsiteServicePricing',
-
 interface CountryTabsProps {
   popularCountries: string[],
   filteredCountries: CountryPricing[],
@@ -33,7 +32,7 @@ export function CountryTabs({
   const countriesPerPage = 50,
 
   useEffect(() => {
-    setCurrentPage(1),
+    setCurrentPage(1)
   }, [searchQuery]),
 
   const totalPages = Math.ceil(filteredCountries.length / countriesPerPage),
@@ -115,7 +114,7 @@ export function CountryTabs({
                     href={`?page=${currentPage - 1}`}
                     onClick={(e) => {
                       e.preventDefault(),
-                      setCurrentPage(Math.max(1, currentPage - 1)),
+                      setCurrentPage(Math.max(1, currentPage - 1))
                     }}
                   />
                 </PaginationItem>
@@ -127,7 +126,7 @@ export function CountryTabs({
                         isActive={page === currentPage}
                         onClick={(e) => {
                           e.preventDefault(),
-                          setCurrentPage(page),
+                          setCurrentPage(page)
                         }}
                       />
                     </PaginationItem>
@@ -138,7 +137,7 @@ export function CountryTabs({
                     href={`?page=${currentPage + 1}`}
                     onClick={(e) => {
                       e.preventDefault(),
-                      setCurrentPage(Math.min(totalPages, currentPage + 1)),
+                      setCurrentPage(Math.min(totalPages, currentPage + 1))
                     }}
                   />
                 </PaginationItem>
@@ -148,5 +147,5 @@ export function CountryTabs({
         )}
       </TabsContent>
     </Tabs>
-  ),
+  )
 }

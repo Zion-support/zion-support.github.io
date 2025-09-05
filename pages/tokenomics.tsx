@@ -1,6 +1,5 @@
 import React, { useMemo, useState } from 'react',
 import Head from 'next/head',
-
 type DistributionItem = { label: string, percent: number },
 
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,
@@ -41,7 +40,7 @@ export default function TokenomicsWhitepaperBuilder() {
       distribution,
       governance,
       jurisdiction,
-      legalReview}),
+      legalReview})
   }, [generatedMarkdown, tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview]),
 
   async function handleGenerate() {
@@ -62,12 +61,12 @@ export default function TokenomicsWhitepaperBuilder() {
           legalReview})}),
       if (!res.ok) throw new Error('Failed to generate'),
       const data = await res.json(),
-      setGeneratedMarkdown(data.markdown || ''),
+      setGeneratedMarkdown(data.markdown || '')
     } catch (e) {
       console.error(e),
-      alert('Generation failed'),
+      alert('Generation failed')
     } finally {
-      setIsGenerating(false),
+      setIsGenerating(false)
     }
   }
 
@@ -81,7 +80,7 @@ export default function TokenomicsWhitepaperBuilder() {
       document.body.appendChild(a),
       a.click(),
       document.body.removeChild(a),
-      URL.revokeObjectURL(url),
+      URL.revokeObjectURL(url)
     } else {
       const res = await fetch('/api/whitepaper/export', {
         method: 'POST',
@@ -89,10 +88,10 @@ export default function TokenomicsWhitepaperBuilder() {
         body: JSON.stringify({ markdown: previewMarkdown, tokenName })}),
       if (!res.ok) {
         alert('PDF export failed'),
-        return,
+        return
       }
       const { url } = await res.json(),
-      window.open(url, '_blank'),
+      window.open(url, '_blank')
     }
   }
 
@@ -103,16 +102,16 @@ export default function TokenomicsWhitepaperBuilder() {
       if (key === 'percent') item.percent = Number(value),
       if (key === 'label') item.label = value,
       copy[index] = item,
-      return copy,
-    }),
+      return copy
+    })
   }
 
   function addDistributionItem() {
-    setDistribution((prev) => [...prev, { label: 'New Allocation', percent: 0 }]),
+    setDistribution((prev) => [...prev, { label: 'New Allocation', percent: 0 }])
   }
 
   function removeDistributionItem(index: number) {
-    setDistribution((prev) => prev.filter((_, i) => i !== index)),
+    setDistribution((prev) => prev.filter((_, i) => i !== index))
   }
 
   async function handleShareableLink() {
@@ -122,14 +121,14 @@ export default function TokenomicsWhitepaperBuilder() {
       body: JSON.stringify({ markdown: previewMarkdown, publicPreview })}),
     if (!res.ok) {
       alert('Failed to create share link'),
-      return,
+      return
     }
     const { url } = await res.json(),
     await navigator.clipboard.writeText(url),
-    alert('Shareable link copied to clipboard'),
+    alert('Shareable link copied to clipboard')
   }
 
-  const sections = ['Executive SummaryMarket Context', 'Utility & UsageRewards System', 'DistributionGovernance Model', 'Risks + Disclaimers'],
+  const sections = ['Executive SummaryMarket ContextUtility & UsageRewards SystemDistributionGovernance ModelRisks + Disclaimers'],
 
   return (
     <>
@@ -247,7 +246,7 @@ export default function TokenomicsWhitepaperBuilder() {
         </div>
       </div>
     </>
-  ),
+  )
 }
 
 function buildLocalMarkdown(input: {
@@ -262,7 +261,7 @@ function buildLocalMarkdown(input: {
 }) {
   const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n'),
   const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '',
-  return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`,
+  return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`
 }
 
 function jurisdictionalNote(j: string) {
@@ -294,7 +293,7 @@ function DistributionDonut({ data }: { data: DistributionItem[] }) {
         </div>
       ))}
     </div>
-  ),
+  )
 }
 
 function MarkdownPreview({ markdown, activeSection }: { markdown: string, activeSection: string }) {
@@ -305,14 +304,14 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
     sections.forEach((s, i) => {
       if (i === 0) return, // first is H1
       const [titleLine, ...rest] = s.split('\n'),
-      map[titleLine.trim()] = rest.join('\n'),
+      map[titleLine.trim()] = rest.join('\n')
     }),
-    return map,
+    return map
   }, [markdown]),
 
   const content = parts[activeSection] || '',
 
   return (
     <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>
-  ),
+  )
 }

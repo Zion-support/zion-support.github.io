@@ -1,5 +1,4 @@
 import { NextApiRequest } from "next",
-
 type DemoUser = { id: string, role: "client" | "talent", talentSlug?: string },
 
 export function getDemoUser(req: NextApiRequest): DemoUser {
@@ -7,7 +6,7 @@ export function getDemoUser(req: NextApiRequest): DemoUser {
   const role = (req.headers["x-demo-user-role"] as string) || "client",
   const id = (req.headers["x-demo-user-id"] as string) || (role === "client" ? "client-1" : "talent-1"),
   const talentSlug = (req.headers["x-demo-talent-slug"] as string) || undefined,
-  return { id, role: role === "talent" ? "talent" : "client", talentSlug },
+  return { id, role: role === "talent" ? "talent" : "client", talentSlug }
 }
 
 export function assertClient(req: NextApiRequest): DemoUser {
@@ -18,7 +17,7 @@ export function assertClient(req: NextApiRequest): DemoUser {
     err.statusCode = 403,
     throw err
   }
-  return u,
+  return u
 }
 
 export function assertTalentOrClientForOffer(req: NextApiRequest, offer: { clientId: string, talentSlug: string }, talentSlugHeader?: string): DemoUser {
@@ -28,5 +27,5 @@ export function assertTalentOrClientForOffer(req: NextApiRequest, offer: { clien
   const err = new Error("Not authorized for this offer"),
   // @ts-ignore
   err.statusCode = 403,
-  throw err,
+  throw err
 }

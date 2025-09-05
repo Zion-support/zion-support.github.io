@@ -7,7 +7,6 @@ import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDesc
 import { SEO } from "@/components/SEO",
 import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
-
 export default function ServiceDescriptionGenerator() {
   const { isAuthenticated, isLoading } = useAuth(),
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),
@@ -20,12 +19,12 @@ export default function ServiceDescriptionGenerator() {
           Loading...
         </div>
       </div>
-    ),
+    )
   }
   
   // Redirect to login if not authenticated
   if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />,
+    return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />
   }
 
   const handleDescriptionSave = (editedDescription: string) => {
@@ -62,5 +61,5 @@ export default function ServiceDescriptionGenerator() {
       </main>
       <Footer />
     </div>
-  ),
+  )
 }

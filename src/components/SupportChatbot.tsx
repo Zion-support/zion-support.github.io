@@ -3,8 +3,6 @@ import { MessageSquare, X } from 'lucide-react'
 import { Button } from '@/components/ui/button',
 import { ChatMessage, ChatInput } from '@/components/ChatAssistant',
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 interface Msg { id: string, role: 'user' | 'assistant', message: string }
 
 // Fallback responses when API is unavailable
@@ -23,7 +21,7 @@ export function SupportChatbot() {
   const [typing, setTyping] = useState(false),
   const endRef = useRef<HTMLDivElement | null>(null),
 
-  useEffect(() => { endRef.current?.scrollIntoView({ behavior: 'smooth' }), }, [messages]),
+  useEffect(() => { endRef.current?.scrollIntoView({ behavior: 'smooth' }) }, [messages]),
 
   const sendMessage = async (text: string) => {
     const userMsg: Msg = { id: Date.now().toString(), role: 'user', message: text },
@@ -59,7 +57,7 @@ export function SupportChatbot() {
         const message = data.message || data.choices?.[0]?.message?.content || data.choices?.[0]?.text || data.completion || '',
         const finalMsg = message.trim() ||
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),
-        setMessages(prev => [...prev, { id: Date.now().toString() + '-a', role: 'assistant', message: finalMsg }]),
+        setMessages(prev => [...prev, { id: Date.now().toString() + '-a', role: 'assistant', message: finalMsg }])
       } else if (res.body) {
         const botId = Date.now().toString() + '-a',
         setMessages(prev => [...prev, { id: botId, role: 'assistant', message: '' }]),
@@ -80,25 +78,25 @@ export function SupportChatbot() {
               line = line.replace(/^data:\s*/, ''),
               if (line === '[DONE]') {
                 done = true,
-                break,
+                break
               }
               try {
                 const json = JSON.parse(line),
                 const token = json.choices?.[0]?.delta?.content || json.choices?.[0]?.text || '',
                 if (token) {
                   accumulated += token,
-                  setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: accumulated } : m)),
+                  setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: accumulated } : m))
                 }
               } catch (_) {
                 // ignore parse errors
               }
             }
           }
-          buffer = lines[lines.length - 1] || '',
+          buffer = lines[lines.length - 1] || ''
         }
         const final = accumulated.trim() ||
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),
-        setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m)),
+        setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m))
       }
     } catch (err) {
       logErrorToProduction('Chatbot error:', { data: err }),
@@ -110,10 +108,10 @@ export function SupportChatbot() {
         role: 'assistant', 
         message: fallbackResponse
       },
-      setMessages(prev => [...prev, errorMsg]),
+      setMessages(prev => [...prev, errorMsg])
     } finally {
       setLoading(false),
-      setTyping(false),
+      setTyping(false)
     }
   },
 
@@ -164,5 +162,5 @@ export function SupportChatbot() {
         <ChatInput onSend={sendMessage} disabled={loading} />
       </div>
     </div>
-  ),
+  )
 }

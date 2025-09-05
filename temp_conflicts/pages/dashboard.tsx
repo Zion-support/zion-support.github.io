@@ -12,12 +12,12 @@ export default function Dashboard() {
         const resp = await fetch('/api/tenants'),
         const data = await resp.json(),
         const t = (data.tenants || []).find((x: any) => x.id === tenantId),
-        setBranding(t?.branding || { name: 'Zion Hire AI' }),
+        setBranding(t?.branding || { name: 'Zion Hire AI' })
       } catch {
-        setBranding({ name: 'Zion Hire AI' }),
+        setBranding({ name: 'Zion Hire AI' })
       }
     }
-    fetchBranding(),
+    fetchBranding()
   }, [tenantId]),
 
   const accent = branding?.primaryColor || '#111827',

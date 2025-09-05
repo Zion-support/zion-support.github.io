@@ -19,7 +19,6 @@ import { ProductListing, ListingView } from "@/types/listings",
 import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react'
 import { toast } from "@/hooks/use-toast",
 import { captureException } from "@/utils/sentry",
-
 interface PriceRange {
   min: number,
   max: number
@@ -35,7 +34,7 @@ interface DynamicListingPageProps {
   /**
    * Base path for listing detail pages. Defaults to `/marketplace/listing`.
    */
-  detailBasePath?: string,
+  detailBasePath?: string
 }
 
 export function DynamicListingPage({
@@ -54,7 +53,7 @@ export function DynamicListingPage({
       prev.includes(category)
         ? prev.filter(c => c !== category)
         : [...prev, category]
-    ),
+    )
   },
   const clearCategories = () => setSelectedCategories([]),
   const [view, setView] = useState<ListingView>("grid"),
@@ -86,7 +85,7 @@ export function DynamicListingPage({
     if (listingsWithPrice.length > 0) {
       const max = Math.max(...listingsWithPrice.map((l) => l.price || 0)),
       setPriceRange({ min: 0, max }),
-      setCurrentPriceFilter([0, max]),
+      setCurrentPriceFilter([0, max])
     }
   }, [allListings]),
 
@@ -97,7 +96,7 @@ export function DynamicListingPage({
   const handleSliderChange = (values: number[]) => {
     const [min, max] = values.map(Number),
     if (min == null || max == null || isNaN(min) || isNaN(max)) return,
-    setCurrentPriceFilter([min, max]),
+    setCurrentPriceFilter([min, max])
   },
 
   let filteredListings: ProductListing[] = [],
@@ -165,10 +164,10 @@ export function DynamicListingPage({
             new Date(a.createdAt).getTime()
           )
       }
-    }),
+    })
   } catch (error) {
     captureException(error),
-    logErrorToProduction('Listing filter error:', { data: error }),
+    logErrorToProduction('Listing filter error:', { data: error })
   }
 
   const handleRequestQuote = (listingId: string) => {
@@ -193,12 +192,12 @@ export function DynamicListingPage({
             image: listing.images?.[0]}},
         
         if (typeof window !== 'undefined') {
-          sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData)),
+          sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData))
         }
 
-        router.push("/request-quote"),
+        router.push("/request-quote")
       }
-    }, 500),
+    }, 500)
   },
 
   return (
@@ -345,7 +344,7 @@ export function DynamicListingPage({
                       size="sm"
                       onClick={() => {
                         logInfo('Rating selected:', { data: rating }),
-                        setSelectedRating(rating),
+                        setSelectedRating(rating)
                       }}
                       aria-pressed={selectedRating === rating}
                       className={`{
@@ -383,7 +382,7 @@ export function DynamicListingPage({
                   setSelectedRating(null),
                   setSelectedBrand("all"),
                   setSpecQuery(""),
-                  setSelectedAvailability("all"),
+                  setSelectedAvailability("all")
                 }}
               >
                 Clear All
@@ -402,7 +401,7 @@ export function DynamicListingPage({
                     value={searchQuery}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                       logInfo('Search query:', { data: e.target.value }),
-                      setSearchQuery(e.target.value),
+                      setSearchQuery(e.target.value)
                     }}
                     className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
                   />
@@ -508,7 +507,7 @@ export function DynamicListingPage({
                     setSelectedRating(null),
                     setSelectedBrand("all"),
                     setSpecQuery(""),
-                    setSelectedAvailability("all"),
+                    setSelectedAvailability("all")
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                 >
@@ -520,5 +519,5 @@ export function DynamicListingPage({
         </div>
       </div>
     </div>
-  ),
+  )
 }

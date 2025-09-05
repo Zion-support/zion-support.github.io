@@ -226,7 +226,7 @@ const client = new ZionOS('YOUR_API_KEY'),
 const economy = await client.economies.create({
   name: 'My Digital Economy',
   description: 'A sovereign digital economy',
-  features: ['marketplacegovernance', 'tokens'],
+  features: ['marketplacegovernancetokens'],
   blockchain: 'ethereum'
 }),
 

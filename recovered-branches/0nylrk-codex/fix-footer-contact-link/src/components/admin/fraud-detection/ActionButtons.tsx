@@ -57,5 +57,5 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         </Button>
       )}
     </div>
-  ),
+  )
 },

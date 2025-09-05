@@ -65,7 +65,7 @@ export interface JobMatch {
     location?: string,
     category?: string,
     company_name?: string
-  },
+  }
 }
 
 export interface ResumeAttachment {
@@ -117,7 +117,7 @@ export interface JobApplication {
     education_match?: {
       score: number,
       analysis: string
-    },
+    }
   },
   match_suggestion?: string,
   scored_at?: string,

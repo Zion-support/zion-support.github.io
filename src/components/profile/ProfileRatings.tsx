@@ -24,17 +24,17 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
       
       reviews.forEach((review) => {
         if (review.rating >= 1 && review.rating <= 5) {
-          distribution[review.rating] = (distribution[review.rating] || 0) + 1,
+          distribution[review.rating] = (distribution[review.rating] || 0) + 1
         }
       }),
       
-      setRatingDistribution(distribution),
+      setRatingDistribution(distribution)
     }
   }, [reviews]),
   
   // Fetch reviews when component mounts
   useEffect(() => {
-    fetchUserReviews(userId),
+    fetchUserReviews(userId)
   }, [userId]),
   
   return (
@@ -83,5 +83,5 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
         </div>
       </div>
     </div>
-  ),
+  )
 }

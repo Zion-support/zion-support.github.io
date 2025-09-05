@@ -25,7 +25,6 @@ import {
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
 import { toast } from "@/hooks/use-toast",
 import { HireConfirmationModal } from "./HireConfirmationModal",
-
 interface CandidateCardProps {
   application: JobApplication,
   index: number
@@ -48,7 +47,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
       title: "Notes saved",
       description: "Your notes have been saved"
     }),
-    setShowNotes(false),
+    setShowNotes(false)
   },
   
   const handleHireConfirmed = () => {
@@ -56,7 +55,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     toast({
       title: "Hiring process initiated",
       description: "Offer has been sent to the talent."
-    }),
+    })
   },
   
   return (
@@ -211,5 +210,5 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
         onConfirm={handleHireConfirmed}
       />
     </>
-  ),
+  )
 }

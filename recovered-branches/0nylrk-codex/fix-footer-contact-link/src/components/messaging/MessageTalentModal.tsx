@@ -14,7 +14,6 @@ import { useMessaging } from "@/context/MessagingContext",
 import { TalentProfile } from "@/types/talent",
 import { toast } from "@/components/ui/use-toast",
 import { useNavigate } from "react-router-dom",
-
 export interface MessageTalentModalProps {
   talent: TalentProfile,
   isOpen: boolean,
@@ -44,7 +43,7 @@ export function MessageTalentModal({
         description: "Please enter a message before sending.",
         variant: "destructive"
       }),
-      return,
+      return
     }
     
     try {
@@ -73,16 +72,16 @@ export function MessageTalentModal({
       onClose(),
       
       // Navigate to messages inbox
-      navigate("/messages"),
+      navigate("/messages")
     } catch (error) {
       console.error("Failed to send message:", error),
       toast({
         title: "Message not sent",
         description: "There was an error sending your message. Please try again.",
         variant: "destructive"
-      }),
+      })
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
@@ -142,5 +141,5 @@ export function MessageTalentModal({
         </DialogFooter>
       </DialogContent>
     </Dialog>
-  ),
+  )
 }

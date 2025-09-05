@@ -33,7 +33,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
       prev.includes(id) 
         ? prev.filter(itemId => itemId !== id)
         : [...prev, id]
-    ),
+    )
   },
   
   return (
@@ -129,5 +129,5 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
         </Card>
       ))}
     </div>
-  ),
+  )
 }

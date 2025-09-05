@@ -14,7 +14,6 @@ import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'
 import { supabase } from "@/integrations/supabase/client",
 import { logErrorToProduction } from '@/utils/productionLogger',
 import { EmptyState } from "@/components/ui/empty-state",
-
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -47,10 +46,10 @@ export default function PartnerManager() {
   useEffect(() => {
     if (!isAuthenticated) {
       router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners')),
-      return,
+      return
     }
 
-    fetchPartners(),
+    fetchPartners()
   }, [isAuthenticated, router]),
 
   const fetchPartners = async () => {
@@ -146,19 +145,19 @@ export default function PartnerManager() {
         ],
         
         setPartners(mockData),
-        filterPartners(mockData, activeTab, searchQuery),
+        filterPartners(mockData, activeTab, searchQuery)
       } else {
         setPartners(data as PartnerProfile[]),
-        filterPartners(data as PartnerProfile[], activeTab, searchQuery),
+        filterPartners(data as PartnerProfile[], activeTab, searchQuery)
       }
     } catch (error) {
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching partners' }),
       toast({
         title: "Error",
         description: "Failed to load partner data",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -178,20 +177,20 @@ export default function PartnerManager() {
         p.niche.toLowerCase().includes(lowerQuery) ||
         p.bio?.toLowerCase().includes(lowerQuery) ||
         p.website?.toLowerCase().includes(lowerQuery)
-      ),
+      )
     }
     
-    setFilteredPartners(filtered),
+    setFilteredPartners(filtered)
   },
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value),
-    filterPartners(partners, activeTab, e.target.value),
+    filterPartners(partners, activeTab, e.target.value)
   },
 
   const handleTabChange = (value: string) => {
     setActiveTab(value),
-    filterPartners(partners, value, searchQuery),
+    filterPartners(partners, value, searchQuery)
   },
 
   const handleViewDetails = (partner: PartnerProfile) => {
@@ -225,14 +224,14 @@ export default function PartnerManager() {
       
       // Close the dialog if open
       if (isDetailsOpen && selectedPartner?.id === partnerId) {
-        setIsDetailsOpen(false),
+        setIsDetailsOpen(false)
       }
     } catch (error) {
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner status' }),
       toast({
         title: "Error",
         description: "Failed to update partner status",
-        variant: "destructive"}),
+        variant: "destructive"})
     }
   },
 
@@ -256,13 +255,13 @@ export default function PartnerManager() {
         description: "Partner settings have been updated successfully.",
         variant: "default"}),
       
-      setIsSettingsOpen(false),
+      setIsSettingsOpen(false)
     } catch (error) {
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner settings' }),
       toast({
         title: "Error",
         description: "Failed to update partner settings",
-        variant: "destructive"}),
+        variant: "destructive"})
     }
   },
 
@@ -286,7 +285,7 @@ export default function PartnerManager() {
       case 'rejected':
         return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>,
       default:
-        return <Badge variant="outline">{status}</Badge>,
+        return <Badge variant="outline">{status}</Badge>
     }
   },
 
@@ -298,7 +297,7 @@ export default function PartnerManager() {
         <Flag className="h-3 w-3" />
         {flags}
       </Badge>
-    ),
+    )
   },
 
   return (
@@ -598,7 +597,7 @@ export default function PartnerManager() {
         </DialogContent>
       </Dialog>
     </div>
-  ),
+  )
 }
 
 interface PartnerTableProps {
@@ -625,7 +624,7 @@ function PartnerTable({
       <div className="text-center py-8">
         <p className="text-zion-slate-light">Loading partner data...</p>
       </div>
-    ),
+    )
   }
   
   if (partners.length === 0) {
@@ -638,7 +637,7 @@ function PartnerTable({
           className="border-none bg-transparent text-center"
         />
       </div>
-    ),
+    )
   }
   
   return (
@@ -718,5 +717,5 @@ function PartnerTable({
         ))}
       </TableBody>
     </Table>
-  ),
+  )
 }

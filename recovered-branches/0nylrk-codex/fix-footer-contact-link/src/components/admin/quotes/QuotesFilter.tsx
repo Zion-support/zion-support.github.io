@@ -9,7 +9,6 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar",
 import { format } from "date-fns",
 import type { DateRange } from "@/types/dateRange",
 import type { QuoteStatus } from "@/types/quotes",
-
 interface QuotesFilterProps {
   searchQuery: string,
   setSearchQuery: (value: string) => void,
@@ -125,5 +124,5 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
         </div>
       </CardContent>
     </Card>
-  ),
+  )
 },

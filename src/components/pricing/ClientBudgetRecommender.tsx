@@ -34,7 +34,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 
   const generateSuggestion = async () => {
     if (!jobTitle || !category) {
-      return,
+      return
     }
 
     setIsLoading(true),
@@ -48,11 +48,11 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       if (experienceLevel) params.experienceLevel = experienceLevel,
 
       const result = await getClientBudgetSuggestion(params),
-      setSuggestion(result),
+      setSuggestion(result)
     } catch (error) {
-      logErrorToProduction('Error generating budget suggestion:', { data: error }),
+      logErrorToProduction('Error generating budget suggestion:', { data: error })
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -68,7 +68,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
           accepted: true
-        }),
+        })
       }
     }
   },
@@ -96,5 +96,5 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
         )}
       </div>
     </div>
-  ),
+  )
 },

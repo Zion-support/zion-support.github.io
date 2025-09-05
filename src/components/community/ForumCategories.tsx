@@ -3,7 +3,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { useAuth } from "@/hooks/useAuth",
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react'
 import { ForumCategoryInfo } from "@/types/community",
-
 const categories: ForumCategoryInfo[] = [
   {
     id: "getting-hired",
@@ -76,10 +75,10 @@ export const ForumCategories = () => {
               </CardContent>
             </Card>
           </Link>
-        ),
+        )
       })}
     </div>
-  ),
+  )
 },
 
 export default ForumCategories,

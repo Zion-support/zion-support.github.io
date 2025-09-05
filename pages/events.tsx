@@ -1,6 +1,5 @@
 import React from 'react',
 import SEO from '../components/SEO',
-
 export default function EventsPage() {
 	return (
 		<>
@@ -10,5 +9,5 @@ export default function EventsPage() {
 				<p className="text-gray-300">No upcoming events at this time. Check back soon.</p>
 			</div>
 		</>
-	),
+	)
 }

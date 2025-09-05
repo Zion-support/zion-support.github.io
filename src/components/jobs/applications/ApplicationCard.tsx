@@ -9,7 +9,6 @@ import Link from "next/link",
 import { StatusBadge } from "./StatusBadge",
 import { ApplicationProgress } from "./ApplicationProgress",
 import { toast } from "sonner",
-
 interface ApplicationCardProps {
   application: JobApplication
 }
@@ -19,7 +18,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 
   const handleDownloadResume = () => {
     // This would typically download the resume file
-    toast.info("Resume download functionality will be implemented soon"),
+    toast.info("Resume download functionality will be implemented soon")
   },
 
   const renderActionButtons = () => {
@@ -138,5 +137,5 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
         </Button>
       </CardFooter>
     </Card>
-  ),
+  )
 }

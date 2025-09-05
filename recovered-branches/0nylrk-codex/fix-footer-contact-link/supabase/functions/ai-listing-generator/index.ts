@@ -8,7 +8,7 @@ const corsHeaders = {
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders }),
+    return new Response(null, { headers: corsHeaders })
   }
 
   try {
@@ -23,7 +23,7 @@ serve(async (req) => {
           status: 400, 
           headers: { ...corsHeaders, "Content-Type": "application/json" } 
         }
-      ),
+      )
     }
 
     const configuration = new Configuration({
@@ -67,7 +67,7 @@ Format the response as a JSON object with the following structure:
                         [null, responseText],
       
       const jsonString = jsonMatch[1].trim(),
-      parsedResponse = JSON.parse(jsonString),
+      parsedResponse = JSON.parse(jsonString)
     } catch (error) {
       console.error("Failed to parse AI response as JSON:", error),
       // // // console.log("Raw response:", responseText),
@@ -78,7 +78,7 @@ Format the response as a JSON object with the following structure:
         tags: [],
         suggestedPrice: { min: 0, max: 0 },
         keyPoints: []
-      },
+      }
     }
 
     return new Response(
@@ -88,7 +88,7 @@ Format the response as a JSON object with the following structure:
       { 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
       }
-    ),
+    )
   } catch (error) {
     console.error("Error in AI listing generator:", error),
     
@@ -101,6 +101,6 @@ Format the response as a JSON object with the following structure:
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
       }
-    ),
+    )
   }
 }),

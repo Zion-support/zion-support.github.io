@@ -15,8 +15,6 @@ import { ProjectDetailsFields } from "./ProjectDetailsFields",
 import { PaymentTermsFields } from "./PaymentTermsFields",
 import { AdditionalClausesFields } from "./AdditionalClausesFields",
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required"),
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters"),
@@ -62,8 +60,8 @@ export function ContractForm({
     if (initialValues) {
       Object.keys(initialValues).forEach((key) => {
         const typedKey = key as keyof ContractFormValues,
-        form.setValue(typedKey, initialValues[typedKey]),
-      }),
+        form.setValue(typedKey, initialValues[typedKey])
+      })
     }
   }, [initialValues, form]),
   
@@ -71,12 +69,12 @@ export function ContractForm({
   useEffect(() => {
     if (onFormValuesChange) {
       const subscription = form.watch((value) => {
-        onFormValuesChange(value as ContractFormValues),
+        onFormValuesChange(value as ContractFormValues)
       }),
       
-      return () => subscription.unsubscribe(),
+      return () => subscription.unsubscribe()
     }
-    return undefined,
+    return undefined
   }, [form, onFormValuesChange]),
   
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
@@ -84,12 +82,12 @@ export function ContractForm({
     
     // If payment terms isn't already set to milestone, update it
     if (form.getValues("paymentTerms") !== "milestone") {
-      form.setValue("paymentTerms", "milestone"),
+      form.setValue("paymentTerms", "milestone")
     }
     
     toast({
       title: "Milestones Generated",
-      description: `${milestones.length} milestones have been generated and will be included in the contract.`}),
+      description: `${milestones.length} milestones have been generated and will be included in the contract.`})
   },
   
   const onSubmit = async (values: ContractFormValues) => {
@@ -102,15 +100,15 @@ export function ContractForm({
         generatedMilestones
       ),
       
-      onContractGenerated(contract),
+      onContractGenerated(contract)
     } catch (error) {
       logErrorToProduction('Error generating contract:', { data: error }),
       toast({
         title: "Contract Generation Failed",
         description: error instanceof Error ? error.message : "Something went wrong. Please try again.",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
-      setIsGenerating(false),
+      setIsGenerating(false)
     }
   },
   
@@ -165,5 +163,5 @@ export function ContractForm({
         </Button>
       </DialogFooter>
     </>
-  ),
+  )
 }

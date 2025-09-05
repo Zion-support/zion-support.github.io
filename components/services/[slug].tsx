@@ -13,7 +13,6 @@ import { moreRealServices2025 } from '../../data/more-real-services-2025',
 import { verified2025Additions } from '../../data/verified-2025-additions',
 import { realServicesQ12025 } from '../../data/real-services-q1-2025',
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025',
-
 type Service = typeof enhancedRealMicroSaasServices[number],
 
 const contactInfo = {
@@ -28,9 +27,9 @@ function getPriceValue(price: Service['price']): string {
 		return price.monthly.toString()
 	}
 	if (typeof price === 'string') {
-		return price,
+		return price
 	}
-	return '99',
+	return '99'
 }
 
 function getAllServices(): Service[] {
@@ -44,11 +43,11 @@ function getAllServices(): Service[] {
 		.concat(verified2025Additions as unknown as Service[])
 		.concat(realServicesQ12025 as unknown as Service[])
 		.concat(realServicesQ32025 as unknown as Service[]),
-		.concat(newVerifiedServicesQ22025 as unknown as Service[]),
+		.concat(newVerifiedServicesQ22025 as unknown as Service[])
 }
 
 function toSlug(value: string): string {
-	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
+	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 }
 
 function extractServiceSlugFromLink(link: string): string | null {
@@ -56,11 +55,11 @@ function extractServiceSlugFromLink(link: string): string | null {
 		const url = new URL(link),
 		const path = url.pathname.replace(/^\/+|\/+$/g, ''),
 		if (path.startsWith('services/')) {
-			return path.substring('services/'.length),
+			return path.substring('services/'.length)
 		}
-		return null,
+		return null
 	} catch {
-		return null,
+		return null
 	}
 }
 
@@ -70,8 +69,7 @@ export async function getStaticPaths() {
 
 	// Define static service slugs that should not be handled by this dynamic route
 	const staticServiceSlugs = [
-		'ai-evaluation-orchestratorai-support-triage-router', 
-		'ai-code-review-assistant-proai-revenue-forecasting-copilot'
+		'ai-evaluation-orchestratorai-support-triage-routerai-code-review-assistant-proai-revenue-forecasting-copilot'
 	],
 
 	for (const s of services) {
@@ -79,24 +77,24 @@ export async function getStaticPaths() {
 		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null,
 		if (fromLink && !staticServiceSlugs.includes(fromLink)) {
 			slugs.add(fromLink),
-			continue,
+			continue
 		}
 		// Fall back to normalized id or name to provide a stable URL under /services/*
 		const idSlug = s.id ? toSlug(s.id) : '',
 		const nameSlug = s.name ? toSlug(s.name) : '',
 		
 		if (idSlug && !staticServiceSlugs.includes(idSlug)) {
-			slugs.add(idSlug),
+			slugs.add(idSlug)
 		}
 		if (nameSlug && !staticServiceSlugs.includes(nameSlug)) {
-			slugs.add(nameSlug),
+			slugs.add(nameSlug)
 		}
 	}
 
 	return {
 		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
 		fallback: false
-	},
+	}
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
@@ -110,16 +108,16 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 	}),
 
 	if (!service) {
-		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug),
+		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug)
 	}
 
 	if (!service) {
-		return { notFound: true },
+		return { notFound: true }
 	}
 
 	return {
 		props: { service }
-	},
+	}
 }
 
 export default function ServiceDetailPage({ service }: { service: Service }) {
@@ -252,7 +250,6 @@ import { useRouter } from 'next/router',
 import Link from 'next/link',
 import EnhancedLayout from '@/components/layout/EnhancedLayout',
 import services from '@/data/services/services.json',
-
 const ServiceDetail: NextPage = () => {
   const router = useRouter(),
   const { slug } = router.query as { slug?: string },
@@ -305,5 +302,5 @@ const ServiceDetail: NextPage = () => {
   )
 },
 
-export default ServiceDetail,
+export default ServiceDetail
 }

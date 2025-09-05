@@ -13,7 +13,6 @@ import { AlertCircle, FileText, Loader2 } from "lucide-react",
 import { formatDistanceToNow } from "date-fns",
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
-
 interface ApplyToJobFormProps {
   job: Job,
   onSuccess?: () => void
@@ -36,12 +35,12 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     if (!user) {
       toast.error("You must be logged in to apply"),
       navigate("/login", { state: { returnTo: `/jobs/${job.id}` } }),
-      return,
+      return
     }
     
     if (!coverLetter.trim()) {
       setError("Please provide a cover letter"),
-      return,
+      return
     }
     
     setIsSubmitting(true),
@@ -53,14 +52,14 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       if (success) {
         toast.success("Your application has been submitted!"),
         if (onSuccess) {
-          onSuccess(),
+          onSuccess()
         }
       }
     } catch (err: any) {
       setError(err.message || "Failed to submit application"),
       toast.error("Failed to submit application")
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
   
@@ -145,7 +144,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           variant="outline"
           disabled={isSubmitting}
           onClick={() => {
-            if (onSuccess) onSuccess(),
+            if (onSuccess) onSuccess()
           }}
         >
           Cancel
@@ -162,5 +161,5 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         </Button>
       </div>
     </form>
-  ),
+  )
 }

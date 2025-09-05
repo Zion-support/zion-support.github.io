@@ -115,7 +115,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
           textColor: 'text-gray-400',
           iconBg: 'bg-gray-500/20',
           iconBorder: 'border-gray-400/30'
-        },
+        }
     }
   },
 
@@ -229,7 +229,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             {service.useCases && (
               <div className="text-xs mt-3">
                 <div className="text-gray-400 mb-2">Use Cases:</div>
-                <div className="text-gray-300">{service.useCases.slice(0, 3).join(', ')}</div>
+                <div className="text-gray-300">{service.useCases.slice(0, 3).join()}</div>
               </div>
             )}
           </div>

@@ -1,7 +1,6 @@
 import Image from 'next/image',
 import { Loader2 } from 'lucide-react'
 import { useState } from 'react',
-
 interface YoutubeEmbedProps {
   videoId: string,
   title: string,
@@ -32,5 +31,5 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
         allowFullScreen
       />
     </div>
-  ),
+  )
 }

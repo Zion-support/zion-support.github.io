@@ -2,7 +2,7 @@ export const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID,
 
 export function initGA() {
   if (!GA_MEASUREMENT_ID || typeof window === 'undefined' || window.gtag) {
-    return,
+    return
   }
 
   const script = document.createElement('script'),
@@ -16,18 +16,18 @@ export function initGA() {
   }
   window.gtag = gtag as any,
   gtag('js', new Date()),
-  gtag('config', GA_MEASUREMENT_ID),
+  gtag('config', GA_MEASUREMENT_ID)
 }
 
 export function pageview(path: string) {
   if (typeof window !== 'undefined' && window.gtag && GA_MEASUREMENT_ID) {
-    window.gtag('config', GA_MEASUREMENT_ID, { page_path: path }),
+    window.gtag('config', GA_MEASUREMENT_ID, { page_path: path })
   }
 }
 
 export function event(action: string, params?: Record<string any>) {
   if (typeof window !== 'undefined' && window.gtag && GA_MEASUREMENT_ID) {
-    window.gtag('event', action, params),
+    window.gtag('event', action, params)
   }
 }
 

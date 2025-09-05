@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react",
 import { useAuth } from "@/contexts/AuthContext",
-
 interface WalkthroughStep {
   id: string,
   title: string,
@@ -56,43 +55,43 @@ export function OnboardingWalkthrough() {
   useEffect(() => {
     // Show walkthrough for new users who haven't completed onboarding
     if (user && !user.onboardingCompleted) {
-      setIsVisible(true),
+      setIsVisible(true)
     }
   }, [user]),
 
   const handleNext = () => {
     if (currentStep < walkthroughSteps.length - 1) {
-      setCurrentStep(currentStep + 1),
+      setCurrentStep(currentStep + 1)
     } else {
-      handleComplete(),
+      handleComplete()
     }
   },
 
   const handlePrevious = () => {
     if (currentStep > 0) {
-      setCurrentStep(currentStep - 1),
+      setCurrentStep(currentStep - 1)
     }
   },
 
   const handleSkip = () => {
     setIsVisible(false),
-    setIsCompleted(true),
+    setIsCompleted(true)
   },
 
   const handleComplete = async () => {
     try {
       await completeOnboarding(),
       setIsVisible(false),
-      setIsCompleted(true),
+      setIsCompleted(true)
     } catch (error) {
-      console.error("Failed to complete onboarding:", error),
+      console.error("Failed to complete onboarding:", error)
     }
   },
 
   const currentStepData = walkthroughSteps[currentStep],
 
   if (!isVisible || isCompleted) {
-    return null,
+    return null
   }
 
   return (
@@ -176,12 +175,12 @@ export function OnboardingWalkthrough() {
         </div>
       )}
     </>
-  ),
+  )
 }
 
 // Hook to add data attributes for walkthrough targeting
 export function useWalkthroughTarget(id: string) {
   return {
     "data-walkthrough-target": id,
-    id},
+    id}
 }

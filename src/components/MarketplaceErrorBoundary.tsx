@@ -6,8 +6,6 @@ import { Button } from '@/components/ui/button',
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert',
 import { RefreshCcw, AlertCircle } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 interface MarketplaceErrorFallbackProps extends FallbackProps {
   // Additional props if needed
 }
@@ -17,10 +15,10 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
     try {
       // Re-call SWR mutate('*') to refresh all cached data
       await mutate(() => true, undefined, { revalidate: true }),
-      resetErrorBoundary(),
+      resetErrorBoundary()
     } catch (retryError) {
       logErrorToProduction('Error during retry:', { data: retryError }),
-      Sentry.captureException(retryError),
+      Sentry.captureException(retryError)
     }
   },
 
@@ -82,8 +80,8 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
       scope.setContext('errorInfo', {
         componentStack: errorInfo.componentStack || undefined}),
       scope.setLevel('error'),
-      Sentry.captureException(error),
-    }),
+      Sentry.captureException(error)
+    })
   },
 
   return (
@@ -93,5 +91,5 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
     >
       {children}
     </ErrorBoundary>
-  ),
+  )
 } 

@@ -8,7 +8,6 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert',
 import { AlertCircle, FilePlus, Loader2 } from 'lucide-react'
 import { Button } from '@/components/ui/button',
 import { Resume } from '@/types/resume',
-
 // Import components
 import { ResumeProgress } from './ResumeProgress',
 import { EmptyResumeState } from './EmptyResumeState',
@@ -18,7 +17,6 @@ import { ResumeStepContent } from './ResumeStepContent',
 import { useResumeProgress } from './useResumeProgress',
 import { ResumeVersionSelector } from './ResumeVersionSelector',
 import { RESUME_STEPS } from './constants',
-
 export function ResumeWizard() {
   const { user } = useAuth(),
   const { 
@@ -37,7 +35,7 @@ export function ResumeWizard() {
   
   useEffect(() => {
     if (user) {
-      fetchResume(),
+      fetchResume()
     }
   }, [user, fetchResume]),
   
@@ -45,7 +43,7 @@ export function ResumeWizard() {
     const resumeId = await createResume({ title: title.trim() }),
     if (resumeId) {
       await fetchResume(resumeId),
-      setShowNewResumeForm(false),
+      setShowNewResumeForm(false)
     }
   },
   
@@ -54,7 +52,7 @@ export function ResumeWizard() {
     if (currentIndex < RESUME_STEPS.length - 1) {
       const nextStep = RESUME_STEPS[currentIndex + 1],
       if (nextStep) {
-        setActiveTab(nextStep.id),
+        setActiveTab(nextStep.id)
       }
     }
   },
@@ -64,7 +62,7 @@ export function ResumeWizard() {
     if (currentIndex > 0) {
       const prevStep = RESUME_STEPS[currentIndex - 1],
       if (prevStep) {
-        setActiveTab(prevStep.id),
+        setActiveTab(prevStep.id)
       }
     }
   },
@@ -78,7 +76,7 @@ export function ResumeWizard() {
       <div className="flex justify-center items-center h-64">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
-    ),
+    )
   }
   
   if (error) {
@@ -88,11 +86,11 @@ export function ResumeWizard() {
         <AlertTitle>Error</AlertTitle>
         <AlertDescription>{error}</AlertDescription>
       </Alert>
-    ),
+    )
   }
   
   if (!resume && !showNewResumeForm) {
-    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />,
+    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
   }
   
   if (showNewResumeForm) {
@@ -102,7 +100,7 @@ export function ResumeWizard() {
         onCancel={() => setShowNewResumeForm(false)}
         isLoading={isLoading}
       />
-    ),
+    )
   }
   
   return (
@@ -149,5 +147,5 @@ export function ResumeWizard() {
         </CardContent>
       </Card>
     </div>
-  ),
+  )
 }

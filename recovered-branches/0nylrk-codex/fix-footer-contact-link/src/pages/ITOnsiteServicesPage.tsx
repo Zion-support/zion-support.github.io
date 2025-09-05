@@ -14,7 +14,6 @@ import { ServiceDetailsSection } from "@/components/services/PageSections/Servic
 import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",
 import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes",
 import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction",
-
 export default function ITOnsiteServicesPage() {
   const [searchParams] = useSearchParams(),
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
@@ -28,7 +27,7 @@ export default function ITOnsiteServicesPage() {
     if (success === "true") {
       toast({
         title: "Payment Successful",
-        description: "Your IT onsite service request has been received. Our team will contact you shortly."}),
+        description: "Your IT onsite service request has been received. Our team will contact you shortly."})
     }
   }, [success]),
   
@@ -49,7 +48,7 @@ export default function ITOnsiteServicesPage() {
       if (!aIsPopular && bIsPopular) return 1,
       
       // Then sort alphabetically
-      return a.country.localeCompare(b.country),
+      return a.country.localeCompare(b.country)
     }),
   
   const handleCountrySelect = (country: CountryPricing) => {
@@ -57,8 +56,8 @@ export default function ITOnsiteServicesPage() {
     
     // Scroll to the service details section
     setTimeout(() => {
-      document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' }),
-    }, 100),
+      document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })
+    }, 100)
   },
   
   return (
@@ -112,5 +111,5 @@ export default function ITOnsiteServicesPage() {
       <TrustedBySection />
       <QuoteFormSection />
     </AppLayout>
-  ),
+  )
 }

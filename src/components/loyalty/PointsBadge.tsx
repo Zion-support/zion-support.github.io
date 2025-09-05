@@ -7,7 +7,6 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { LoginModal } from '@/components/auth/LoginModal',
 import { Button } from '@/components/ui/button',
 import {logErrorToProduction} from '@/utils/productionLogger',
-
 export function PointsBadge() {
 
   const { isAuthenticated } = useAuth(),
@@ -22,7 +21,7 @@ export function PointsBadge() {
       if (e.reason === 'purchase') acc.purchase += e.delta,
       if (e.reason === 'post') acc.post += e.delta,
       if (e.reason === 'referral') acc.referral += e.delta,
-      return acc,
+      return acc
     },
     { purchase: 0, post: 0, referral: 0 }
   ),
@@ -43,9 +42,9 @@ export function PointsBadge() {
     try {
       await fetchLedger()
     } catch (error) {
-      logErrorToProduction('Failed to refresh points:', { data: error }),
+      logErrorToProduction('Failed to refresh points:', { data: error })
     } finally {
-      setIsRefreshing(false),
+      setIsRefreshing(false)
     }
   },
 
@@ -127,5 +126,5 @@ export function PointsBadge() {
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
       )}
     </TooltipProvider>
-  ),
+  )
 }

@@ -6,8 +6,6 @@ import { Button } from '@/components/ui/button',
 import { Progress } from '@/components/ui/progress',
 import { AlertTriangle, Package, Zap } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 interface BundleInfo {
   totalSize: number,
   gzippedSize: number,
@@ -29,7 +27,7 @@ export function BundleAnalyzer() {
   const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin,
 
   if (!isAllowed) {
-    return null,
+    return null
   }
 
   const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null),
@@ -49,7 +47,7 @@ export function BundleAnalyzer() {
     if (!show) return,
 
     setIsVisible(true),
-    collectBundleInfo(),
+    collectBundleInfo()
   }, []),
 
   const collectBundleInfo = async () => {
@@ -82,7 +80,7 @@ export function BundleAnalyzer() {
           name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',
           size,
           loadTime,
-          cached}),
+          cached})
       }),
 
       // Estimate gzipped size (roughly 70% of original)
@@ -98,18 +96,18 @@ export function BundleAnalyzer() {
 
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)), // Top 5 largest chunks
     } catch (error) {
-      logErrorToProduction('Failed to collect bundle info:', { data: error }),
+      logErrorToProduction('Failed to collect bundle info:', { data: error })
     } finally {
-      setIsCollecting(false),
+      setIsCollecting(false)
     }
   },
 
   const formatSize = (bytes: number): string => {
     if (bytes === 0) return '0 B',
     const k = 1024,
-    const sizes = ['BKB', 'MBGB'],
+    const sizes = ['BKBMBGB'],
     const i = Math.floor(Math.log(bytes) / Math.log(k)),
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i],
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]
   },
 
   const getSizeColor = (size: number) => {
@@ -123,12 +121,12 @@ export function BundleAnalyzer() {
     localStorage.setItem('bundle-analyzer', (!current).toString()),
     setIsVisible(!current),
     if (!current) {
-      collectBundleInfo(),
+      collectBundleInfo()
     }
   },
 
   if (!shouldShow) {
-    return null,
+    return null
   }
 
   if (!isVisible) {
@@ -144,7 +142,7 @@ export function BundleAnalyzer() {
           Bundle Analyzer
         </Button>
       </div>
-    ),
+    )
   }
 
   return (
@@ -252,5 +250,5 @@ export function BundleAnalyzer() {
         </CardContent>
       </Card>
     </div>
-  ),
+  )
 } 

@@ -37,13 +37,13 @@ export default function RevolutionaryServicesPage() {
 
   // Category filter
   if (selectedCategory !== 'All') {
-    filteredServices = getRevolutionaryServicesByCategory(selectedCategory),
+    filteredServices = getRevolutionaryServicesByCategory(selectedCategory)
   }
 
   // Price range filter
   if (priceRange !== 'All') {
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p)),
-    filteredServices = getRevolutionaryServicesByPriceRange(min, max),
+    filteredServices = getRevolutionaryServicesByPriceRange(min, max)
   }
 
   // Search filter
@@ -53,7 +53,7 @@ export default function RevolutionaryServicesPage() {
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
-    ),
+    )
   }
 
   // Sort services
@@ -611,7 +611,7 @@ export default function RevolutionaryServicesPage() {
                            onClick={() => {
                              setSearchQuery(''),
                              setSelectedCategory('All'),
-                             setPriceRange('All'),
+                             setPriceRange('All')
                            }}
                          >
                            Clear Filters
@@ -810,5 +810,5 @@ export default function RevolutionaryServicesPage() {
         </section>
       </div>
     </UltraFuturisticBackground>
-  ),
+  )
 }

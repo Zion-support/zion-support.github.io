@@ -19,7 +19,7 @@ function findBestBackup(pagePath) {
   files.sort((a, b) => {
     const timestampA = parseInt(a.match(/\.backup\.(\d+)$/)[1]),
     const timestampB = parseInt(b.match(/\.backup\.(\d+)$/)[1]),
-    return timestampB - timestampA,
+    return timestampB - timestampA
   }),
   
   for (const backupFile of files) {
@@ -32,14 +32,14 @@ function findBestBackup(pagePath) {
           (content.includes('function') || content.includes('const') || content.includes('class')) &&
           content.includes('return') &&
           content.length > 100) {
-        return backupPath,
+        return backupPath
       }
     } catch (error) {
-      // // // console.log(`Error reading backup ${backupPath}:`, error.message),
+      // // // console.log(`Error reading backup ${backupPath}:`, error.message)
     }
   }
   
-  return null,
+  return null
 }
 
 // Function to restore a corrupted page
@@ -53,13 +53,13 @@ function restorePage(pagePath) {
                         !currentContent.includes('return'),
     
     if (!isCorrupted) {
-      return { restored: false, reason: 'Page is not corrupted' },
+      return { restored: false, reason: 'Page is not corrupted' }
     }
     
     // Find backup
     const backupPath = findBestBackup(pagePath),
     if (!backupPath) {
-      return { restored: false, reason: 'No valid backup found' },
+      return { restored: false, reason: 'No valid backup found' }
     }
     
     // Read backup content
@@ -70,7 +70,7 @@ function restorePage(pagePath) {
       const parts = backupContent.split('======='),
       if (parts.length > 1) {
         // Take the content after the conflict resolution
-        backupContent = parts[1].split('>>>>>>>')[0],
+        backupContent = parts[1].split('>>>>>>>')[0]
       }
     }
     
@@ -79,7 +79,7 @@ function restorePage(pagePath) {
     
     // Ensure it has proper structure
     if (!backupContent.includes('export default')) {
-      return { restored: false, reason: 'Backup content is also corrupted' },
+      return { restored: false, reason: 'Backup content is also corrupted' }
     }
     
     // Create a backup of the current corrupted file
@@ -94,10 +94,10 @@ function restorePage(pagePath) {
       restored: true, 
       backupUsed: backupPath,
       corruptedBackup: corruptedBackupPath
-    },
+    }
     
   } catch (error) {
-    return { restored: false, reason: `Error: ${error.message}` },
+    return { restored: false, reason: `Error: ${error.message}` }
   }
 }
 
@@ -119,7 +119,7 @@ function restoreAllCorruptedPages() {
       
       if (entry.isDirectory()) {
         if (entry.name !== 'node_modules' && entry.name !== '.git' && entry.name !== '.next') {
-          scanDirectory(fullPath),
+          scanDirectory(fullPath)
         }
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
         results.total++,
@@ -131,17 +131,17 @@ function restoreAllCorruptedPages() {
           results.restored++,
           // // // console.log(`✅ Restored: ${fullPath}`),
           // // // console.log(`   Used backup: ${result.backupUsed}`),
-          // // // console.log(`   Corrupted backup: ${result.corruptedBackup}`),
+          // // // console.log(`   Corrupted backup: ${result.corruptedBackup}`)
         } else {
           results.failed++,
           // // // console.log(`❌ Failed: ${fullPath}`),
-          // // // console.log(`   Reason: ${result.reason}`),
+          // // // console.log(`   Reason: ${result.reason}`)
         }
         
         results.details.push({
           file: fullPath,
           ...result
-        }),
+        })
       }
     }
   }
@@ -161,12 +161,12 @@ function restoreAllCorruptedPages() {
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),
   // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),
   
-  return results,
+  return results
 }
 
 // Run the restoration if this script is executed directly
 if (require.main === module) {
-  restoreAllCorruptedPages(),
+  restoreAllCorruptedPages()
 }
 
 module.exports = {

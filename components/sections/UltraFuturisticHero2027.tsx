@@ -196,7 +196,7 @@ export default function UltraFuturisticHero2027() {
               Trusted by Industry Leaders
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {['Fortune 500Tech Giants', 'Research LabsGovernment'].map((trust, index) => (
+              {['Fortune 500Tech GiantsResearch LabsGovernment'].map((trust, index) => (
                 <motion.div
                   key={trust}
                   initial={{ opacity: 0, x: -20 }}
@@ -218,5 +218,5 @@ export default function UltraFuturisticHero2027() {
       {/* Bottom Glow */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none" />
     </section>
-  ),
+  )
 }

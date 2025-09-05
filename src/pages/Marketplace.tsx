@@ -250,7 +250,7 @@ export default function Marketplace() {
   const handleAddProduct = useCallback(() => {
     if (!isAuthenticated) {
       setIsAuthModalOpen(true), // Use the new auth modal
-      return,
+      return
     }
 
     // Check if user has permission to add products (simplified to admin check)
@@ -259,11 +259,11 @@ export default function Marketplace() {
         title: "Admin Access Required",
         description: "Only administrators can add products to the marketplace. Please contact an administrator.",
         variant: "destructive"}),
-      return,
+      return
     }
 
     // Navigate to admin products page
-    router.push('/admin/products'),
+    router.push('/admin/products')
   }, [isAuthenticated, user, router, toast]),
 
   // Fetch function for infinite scroll with AI product generation
@@ -292,7 +292,7 @@ export default function Marketplace() {
       logInfo('Marketplace.tsx: Raw items from static data before filtering/sorting:', { data: JSON.stringify(items.slice(0, 5), null, 2) }),
 
       if (showRecommended) {
-        items = items.filter((p) => p.rating != null && p.rating >= 4.3),
+        items = items.filter((p) => p.rating != null && p.rating >= 4.3)
       }
 
       items = items.filter((p) => {
@@ -308,7 +308,7 @@ export default function Marketplace() {
           rating >= minRating &&
           (!filterLocation || location.includes(filterLocation.toLowerCase())) &&
           (!filterAvailability || availability === filterAvailability.toLowerCase())
-        ),
+        )
       }),
 
       items.sort((a, b) => {
@@ -346,7 +346,7 @@ export default function Marketplace() {
         items: paginatedItems,
         hasMore: endIndex < items.length,
         total: items.length
-      },
+      }
     } catch (err: any) {
       // Log the error and allow useInfiniteScrollPagination to handle it
       logErrorToProduction('Error in Marketplace fetchProducts:', { data: err }),
@@ -360,7 +360,7 @@ export default function Marketplace() {
         toast({
           title: "Server Error", 
           description: "The marketplace is temporarily unavailable. Please try again later.",
-          variant: "destructive"}),
+          variant: "destructive"})
       } else {
         handleApiError(err), // This might show a toast or log to Sentry
       }
@@ -388,7 +388,7 @@ export default function Marketplace() {
       // On initial mount, useInfiniteScrollPagination handles the first load.
       // We don't want to call refresh() here immediately if it's the very first render
       // unless specifically needed. The new effect below handles re-mounts.
-      return,
+      return
     }
     logInfo('Filters changed, initiating refresh. Filters:', { filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation }),
     isRefreshingAfterFilterChange.current = true, // Set flag before refresh
@@ -403,7 +403,7 @@ export default function Marketplace() {
     // The useInfiniteScrollPagination hook's internal logic will manage its state.
     refresh(),
     // Reset firstRenderRef for the new instance of the component, so filter changes behave as expected.
-    firstRenderRef.current = true,
+    firstRenderRef.current = true
   }, [refresh]), // `refresh` is a dependency. Ensure it's stable.
 
   // New effect to scroll to top AFTER products have been updated and refresh flag is set
@@ -413,7 +413,7 @@ export default function Marketplace() {
       scrollToTop(),
       isRefreshingAfterFilterChange.current = false, // Reset flag
       // Optionally, provide user feedback about the filter change
-      // toast({ title: 'Filters updated', description: 'Displaying products based on new criteria.' }),
+      // toast({ title: 'Filters updated', description: 'Displaying products based on new criteria.' })
     }
   }, [products, loading, scrollToTop, toast]), // Depends on products and loading state
 
@@ -425,28 +425,28 @@ export default function Marketplace() {
       averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
       totalProducts: products.length,
       categoriesCount: Array.from(new Set(products.map(p => p.category))).length
-    },
+    }
   }, [products]),
 
   // Get unique categories and other filter values
   const categories = useMemo(() => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.category))),
+    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.category)))
   }, []),
   const locations = useMemo(() => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.location).filter(Boolean))),
+    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.location).filter(Boolean)))
   }, []).filter(Boolean) as string[],
   const availabilityOptions = useMemo(() => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.availability).filter(Boolean))),
+    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.availability).filter(Boolean)))
   }, []).filter(Boolean) as string[],
 
   // Show scroll to top button
   const [showScrollTop, setShowScrollTop] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 800),
+      setShowScrollTop(window.scrollY > 800)
     },
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
   // Loading state with skeleton
@@ -471,7 +471,7 @@ export default function Marketplace() {
           ))}
         </div>
       </div>
-    ),
+    )
   }
 
   // Error state with retry
@@ -485,7 +485,7 @@ export default function Marketplace() {
           </Button>
         </div>
       </div>
-    ),
+    )
   }
 
   // Empty state (only show when not loading and no products)
@@ -507,7 +507,7 @@ export default function Marketplace() {
         
         <ProductsEmptyState />
       </div>
-    ),
+    )
   }
 
   // Main marketplace render
@@ -616,7 +616,7 @@ export default function Marketplace() {
                     return, // Stop further execution
                   }
                   try {
-                    await router.push(`/checkout/${product.id}`),
+                    await router.push(`/checkout/${product.id}`)
                   } catch (error) {
                     logErrorToProduction('Failed to navigate to checkout:', { data: error }),
                     toast({
@@ -625,7 +625,7 @@ export default function Marketplace() {
                       variant: "destructive"}),
                     // Re-throw to allow ProductCard's catch to also run if needed,
                     // though ProductCard will reset its state in .finally() regardless.
-                    throw error,
+                    throw error
                   }
                 }}
                 buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth
@@ -699,5 +699,5 @@ export default function Marketplace() {
         )}
       </AnimatePresence>
     </div>
-  ),
+  )
 }

@@ -42,10 +42,7 @@ export default function AIFinancialPlanningPlatform() {
   ],
 
   const benefits = [
-    'Increase investment returns by 25%Reduce financial planning time by 70%',
-    'Improve risk-adjusted returns by 40%Optimize tax efficiency by 30%',
-    'Reduce portfolio volatility by 35%Improve financial goal achievement by 50%',
-    'Reduce financial planning costs by 60%Gain professional-grade financial insights'
+    'Increase investment returns by 25%Reduce financial planning time by 70%Improve risk-adjusted returns by 40%Optimize tax efficiency by 30%Reduce portfolio volatility by 35%Improve financial goal achievement by 50%Reduce financial planning costs by 60%Gain professional-grade financial insights'
   ],
 
 					<div className="mt-12">

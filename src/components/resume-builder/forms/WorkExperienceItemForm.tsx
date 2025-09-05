@@ -15,7 +15,6 @@ import { format } from "date-fns",
 import { CalendarIcon, Loader2 } from 'lucide-react'
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
-
 // Define form schema
 const formSchema = z.object({
   company_name: z.string().min(1, "Company name is required"),
@@ -71,12 +70,12 @@ export function WorkExperienceItemForm({
       location: values.location,          // Optional
     },
     
-    await onSubmit(workExperience),
+    await onSubmit(workExperience)
   },
 
   const handleAIEnhancement = (content: string) => {
     form.setValue("description", content, { shouldDirty: true }),
-    setIsEnhancementDialogOpen(false),
+    setIsEnhancementDialogOpen(false)
   },
 
   return (
@@ -310,5 +309,5 @@ export function WorkExperienceItemForm({
         initialContent={form.getValues("description") || ""}
       />
     </>
-  ),
+  )
 }

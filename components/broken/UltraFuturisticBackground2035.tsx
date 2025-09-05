@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
-
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode
 }
@@ -20,7 +19,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
     canvas.width = window.innerWidth * (window.devicePixelRatio || 1),
     canvas.height = window.innerHeight * (window.devicePixelRatio || 1),
     if (ctx) {
-      ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1),
+      ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
     }
 
     let animationFrameId: number,
@@ -44,7 +43,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
       const particleCount = prefersReducedMotion ? 15 : (isSmallScreen ? 60 : 150),
       
       for (let i = 0, i < particleCount, i++) {
-        const type = ['quantumhologram', 'neonenergy'][Math.floor(Math.random() * 4)] as any,
+        const type = ['quantumhologramneonenergy'][Math.floor(Math.random() * 4)] as any,
         const maxLife = Math.random() * 200 + 100,
         
         particles.push({
@@ -58,7 +57,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
           type,
           life: maxLife,
           maxLife
-        }),
+        })
       }
     },
 
@@ -66,13 +65,13 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
     const getColorForType = (type: string) => {
       switch (type) {
         case 'quantum':
-          return ['#8b5cf6#06b6d4', '#ec4899'][Math.floor(Math.random() * 3)],
+          return ['#8b5cf6#06b6d4#ec4899'][Math.floor(Math.random() * 3)],
         case 'hologram':
-          return ['#10b981#f59e0b', '#ef4444'][Math.floor(Math.random() * 3)],
+          return ['#10b981#f59e0b#ef4444'][Math.floor(Math.random() * 3)],
         case 'neon':
-          return ['#f97316#eab308', '#a855f7'][Math.floor(Math.random() * 3)],
+          return ['#f97316#eab308#a855f7'][Math.floor(Math.random() * 3)],
         case 'energy':
-          return ['#dc2626#7c3aed', '#059669'][Math.floor(Math.random() * 3)],
+          return ['#dc2626#7c3aed#059669'][Math.floor(Math.random() * 3)],
         default: return '#8b5cf6'
       }
     },
@@ -87,7 +86,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
         if (particle.life <= 0) {
           particle.life = particle.maxLife,
           particle.x = Math.random() * canvas.width / (window.devicePixelRatio || 1),
-          particle.y = Math.random() * canvas.height / (window.devicePixelRatio || 1),
+          particle.y = Math.random() * canvas.height / (window.devicePixelRatio || 1)
         }
 
         // Update position
@@ -110,12 +109,12 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
         // Draw connections with enhanced effects
         const maxDistance = prefersReducedMotion ? 0 : (window.innerWidth < 768 ? 120 : 180),
         if (maxDistance > 0) {
-          drawConnections(ctx, particles, index, maxDistance, currentOpacity),
+          drawConnections(ctx, particles, index, maxDistance, currentOpacity)
         }
       }),
 
       if (!prefersReducedMotion) {
-        animationFrameId = requestAnimationFrame(updateParticles),
+        animationFrameId = requestAnimationFrame(updateParticles)
       }
     },
 
@@ -136,10 +135,10 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
           break,
         case 'energy':
           drawEnergyParticle(ctx, particle),
-          break,
+          break
       }
 
-      ctx.restore(),
+      ctx.restore()
     },
 
     // Quantum particle with wave-like effects
@@ -158,7 +157,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
       ctx.beginPath(),
       ctx.arc(particle.x, particle.y + wave, particle.size * 0.5, 0, Math.PI * 2),
       ctx.fill(),
-      ctx.shadowBlur = 0,
+      ctx.shadowBlur = 0
     },
 
     // Hologram particle with transparency and distortion
@@ -178,7 +177,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
       ctx.arc(particle.x + distortion, particle.y, particle.size * 1.5, 0, Math.PI * 2),
       ctx.strokeStyle = particle.color,
       ctx.lineWidth = 1,
-      ctx.stroke(),
+      ctx.stroke()
     },
 
     // Neon particle with bright glow
@@ -196,7 +195,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
       ctx.arc(particle.x, particle.y, particle.size * 0.8, 0, Math.PI * 2),
       ctx.fillStyle = particle.color,
       ctx.fill(),
-      ctx.shadowBlur = 0,
+      ctx.shadowBlur = 0
     },
 
     // Energy particle with pulsing effect
@@ -215,7 +214,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
       ctx.beginPath(),
       ctx.arc(particle.x, particle.y, size * 2, 0, Math.PI * 2),
       ctx.fillStyle = particle.color,
-      ctx.fill(),
+      ctx.fill()
     },
 
     // Enhanced connection drawing with different effects
@@ -234,21 +233,21 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
               // Same type - stronger connection
               ctx.globalAlpha = connectionOpacity * 1.5,
               ctx.strokeStyle = particles[currentIndex].color,
-              ctx.lineWidth = 2,
+              ctx.lineWidth = 2
             } else {
               // Different types - weaker connection
               ctx.globalAlpha = connectionOpacity * 0.7,
               ctx.strokeStyle = '#ffffff',
-              ctx.lineWidth = 1,
+              ctx.lineWidth = 1
             }
 
             ctx.beginPath(),
             ctx.moveTo(particles[currentIndex].x, particles[currentIndex].y),
             ctx.lineTo(otherParticle.x, otherParticle.y),
-            ctx.stroke(),
+            ctx.stroke()
           }
         }
-      }),
+      })
     },
 
     // Handle window resize
@@ -256,9 +255,9 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
       canvas.width = window.innerWidth * (window.devicePixelRatio || 1),
       canvas.height = window.innerHeight * (window.devicePixelRatio || 1),
       if (ctx) {
-        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1),
+        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
       }
-      initParticles(),
+      initParticles()
     },
 
     window.addEventListener('resize', handleResize),
@@ -268,9 +267,9 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
     return () => {
       window.removeEventListener('resize', handleResize),
       if (animationFrameId) {
-        cancelAnimationFrame(animationFrameId),
+        cancelAnimationFrame(animationFrameId)
       }
-    },
+    }
   }, []),
 
   return (
@@ -284,8 +283,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
           className="absolute inset-0 opacity-30"
           animate={{
             background: [
-              'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.3) 0%, transparent 50%)',
-              'radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)'
+              'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)'
             ]
           }}
           transition={{
@@ -374,5 +372,5 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
       {/* Render children */}
       {children}
     </>
-  ),
+  )
 }

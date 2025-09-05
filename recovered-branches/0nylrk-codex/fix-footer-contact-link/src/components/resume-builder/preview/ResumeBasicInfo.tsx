@@ -1,6 +1,5 @@
 
 import { ResumeBasicInfo } from '@/types/resume',
-
 interface ResumeBasicInfoSectionProps {
   basicInfo: ResumeBasicInfo
 }
@@ -13,5 +12,5 @@ export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProp
         <p className="text-sm">{basicInfo.summary}</p>
       )}
     </div>
-  ),
+  )
 }

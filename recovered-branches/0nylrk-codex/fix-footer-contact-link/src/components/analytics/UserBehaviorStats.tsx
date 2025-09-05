@@ -6,7 +6,6 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { useState } from "react",
 import { AnalyticsChart } from "./AnalyticsChart",
-
 type TimeRange = '7d' | '30d' | '90d' | '365d',
 
 export function UserBehaviorStats() {
@@ -43,17 +42,17 @@ export function UserBehaviorStats() {
           const date = new Date(event.created_at).toISOString().split('T')[0],
           if (!eventsByDate[date]) eventsByDate[date] = {},
           if (!eventsByDate[date][event.event_type]) eventsByDate[date][event.event_type] = 0,
-          eventsByDate[date][event.event_type]++,
+          eventsByDate[date][event.event_type]++
         }),
         
         // Convert to array format for the chart
         return Object.entries(eventsByDate).map(([date, events]) => ({
           date,
           ...events
-        })),
+        }))
       }
       
-      return data || [],
+      return data || []
     }
   }),
 
@@ -64,11 +63,11 @@ export function UserBehaviorStats() {
     const allKeys = new Set<string>(),
     behaviorData.forEach(item => {
       Object.keys(item).forEach(key => {
-        if (key !== 'date') allKeys.add(key),
-      }),
+        if (key !== 'date') allKeys.add(key)
+      })
     }),
     
-    return Array.from(allKeys),
+    return Array.from(allKeys)
   },
   
   // Format event type names for better display
@@ -127,7 +126,7 @@ export function UserBehaviorStats() {
         onTimeRangeChange={(range: TimeRange) => setTimeRange(range)}
       />
     </div>
-  ),
+  )
 }
 
 interface EventTypeCardProps {
@@ -160,5 +159,5 @@ function EventTypeCard({ title, description, count, icon, isLoading }: EventType
         </div>
       </CardContent>
     </Card>
-  ),
+  )
 }

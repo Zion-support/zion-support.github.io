@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react',
 import Head from 'next/head',
-
 export default function AccountSettingsPage() {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false),
@@ -17,12 +16,12 @@ export default function AccountSettingsPage() {
     const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null,
     if (saved) setUser(JSON.parse(saved)),
     const pref = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-display') : null,
-    setDisplayWeb3(pref === 'true'),
+    setDisplayWeb3(pref === 'true')
   }, []),
 
   const saveDisplayPref = (val: boolean) => {
     setDisplayWeb3(val),
-    if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-display', String(val)),
+    if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-display', String(val))
   },
 
   const linkDID = async () => {
@@ -46,7 +45,7 @@ export default function AccountSettingsPage() {
           const enc = new TextEncoder().encode(msg),
           const { signature: sig } = await (window as any).solana.signMessage(enc, 'utf8'),
           const bs58 = (await import('bs58')).default,
-          signature = bs58.encode(sig),
+          signature = bs58.encode(sig)
         }
       } catch {}
 
@@ -55,11 +54,11 @@ export default function AccountSettingsPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ payload, message: msg, signature })}),
       if (!res.ok) throw new Error('Failed to link DIDs'),
-      setStatus('Linked successfully'),
+      setStatus('Linked successfully')
     } catch (e: any) {
       setStatus(e?.message || 'Linking failed')
     } finally {
-      setLinking(false),
+      setLinking(false)
     }
   },
 
@@ -80,7 +79,7 @@ export default function AccountSettingsPage() {
       const data = await res.json(),
       if (!res.ok) throw new Error(data?.error || 'Backup failed'),
       setBackupCid(data.cid),
-      setStatus('Backup saved to decentralized storage'),
+      setStatus('Backup saved to decentralized storage')
     } catch (e: any) {
       setStatus(e?.message || 'Backup failed')
     }
@@ -99,9 +98,9 @@ export default function AccountSettingsPage() {
         setEns(did.ens || ''),
         setLens(did.lens || ''),
         setCeramic(did.ceramic || ''),
-        setFarcaster(did.farcaster || ''),
+        setFarcaster(did.farcaster || '')
       }
-      setStatus('Profile restored from backup'),
+      setStatus('Profile restored from backup')
     } catch (e: any) {
       setStatus(e?.message || 'Restore failed')
     }
@@ -157,5 +156,5 @@ export default function AccountSettingsPage() {
         {status && <div className="text-sm text-gray-600">{status}</div>}
       </div>
     </>
-  ),
+  )
 }

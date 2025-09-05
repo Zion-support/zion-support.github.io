@@ -19,10 +19,10 @@ export default function Assistant() {
     const faq = Object.keys(faqs).find(key => lower.includes(key)),
     if (faq) {
       setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: faqs[faq] }]),
-      return,
+      return
     }
     // Basic fallback
-    setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }]),
+    setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }])
   }
 
   return (
@@ -41,7 +41,7 @@ export default function Assistant() {
       </div>
       <form
         className="p-3 border-t flex gap-2"
-        onSubmit={(e) => { e.preventDefault(), if (input.trim()) { handleAsk(input.trim()), setInput(''), } }}
+        onSubmit={(e) => { e.preventDefault(), if (input.trim()) { handleAsk(input.trim()), setInput('') } }}
       >
         <input
           className="flex-1 border rounded px-3 py-2 text-sm"
@@ -52,5 +52,5 @@ export default function Assistant() {
         <button type="submit" className="bg-gray-900 text-white text-sm rounded px-3 py-2">Send</button>
       </form>
     </div>
-  ),
+  )
 }

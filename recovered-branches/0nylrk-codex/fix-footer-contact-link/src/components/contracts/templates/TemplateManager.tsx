@@ -8,7 +8,6 @@ import { TemplateList } from "./TemplateList",
 import { TemplateSaveForm } from "./TemplateSaveForm",
 import { ContractFormValues } from "@/components/contracts/components/ContractForm",
 import { useToast } from "@/hooks/use-toast",
-
 interface TemplateManagerProps {
   isOpen: boolean,
   onClose: () => void,
@@ -33,13 +32,13 @@ export function TemplateManager({
       onClose(),
       toast({
         title: "Template loaded",
-        description: `Template "${template.title}" has been loaded.`}),
+        description: `Template "${template.title}" has been loaded.`})
     }
   },
 
   const handleSaveComplete = () => {
     setMode("list"),
-    setSelectedTemplate(null),
+    setSelectedTemplate(null)
   },
 
   return (
@@ -69,7 +68,7 @@ export function TemplateManager({
               onSelect={handleSelectTemplate}
               onEdit={(template) => {
                 setSelectedTemplate(template),
-                setMode("save"),
+                setMode("save")
               }}
             />
           </div>
@@ -77,7 +76,7 @@ export function TemplateManager({
           <TemplateSaveForm 
             onCancel={() => {
               setMode("list"),
-              setSelectedTemplate(null),
+              setSelectedTemplate(null)
             }}
             onComplete={handleSaveComplete}
             editTemplate={selectedTemplate}
@@ -86,5 +85,5 @@ export function TemplateManager({
         )}
       </DialogContent>
     </Dialog>
-  ),
+  )
 }

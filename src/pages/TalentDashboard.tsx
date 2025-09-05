@@ -17,7 +17,6 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
 import { MyApplications } from "@/components/jobs/MyApplications",
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
-
 function TalentDashboardContent() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("job-matches"),
@@ -190,7 +189,7 @@ function TalentDashboardContent() {
         </div>
       </main>
     </>
-  ),
+  )
 }
 
 export default function TalentDashboard() {
@@ -198,5 +197,5 @@ export default function TalentDashboard() {
     <ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>
-  ),
+  )
 }

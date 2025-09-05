@@ -258,12 +258,12 @@ const UltraFuturisticNavigation2047 = () => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false),
-        setActiveDropdown(null),
+        setActiveDropdown(null)
       }
     },
 
     window.addEventListener('resize', handleResize),
-    return () => window.removeEventListener('resize', handleResize),
+    return () => window.removeEventListener('resize', handleResize)
   }, []),
 
   return (
@@ -456,7 +456,7 @@ const UltraFuturisticNavigation2047 = () => {
         )}
       </AnimatePresence>
     </nav>
-  ),
+  )
 },
 
 export default UltraFuturisticNavigation2047,

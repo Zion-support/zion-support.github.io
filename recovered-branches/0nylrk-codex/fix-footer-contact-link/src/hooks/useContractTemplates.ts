@@ -5,7 +5,6 @@ import { useToast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
 import { ContractTemplate } from "@/types/contracts",
 import { ContractFormValues } from "@/components/contracts/components/ContractForm",
-
 export function useContractTemplates() {
   const { user, isAuthenticated } = useAuth(),
   const queryClient = useQueryClient(),
@@ -31,10 +30,10 @@ export function useContractTemplates() {
         .order('created_at', { ascending: false }),
       
       if (error) {
-        throw error,
+        throw error
       }
       
-      return data as ContractTemplate[],
+      return data as ContractTemplate[]
     },
     enabled: isAuthenticated && !!user
   }),
@@ -61,7 +60,7 @@ export function useContractTemplates() {
             .from('contract_templates')
             .update({ is_default: false })
             .eq('user_id', user.id)
-            .eq('is_default', true),
+            .eq('is_default', true)
         }
         
         // Insert the new template
@@ -77,23 +76,23 @@ export function useContractTemplates() {
           .single(),
         
         if (error) throw error,
-        return data as ContractTemplate,
+        return data as ContractTemplate
       } finally {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] }),
       toast({
         title: "Template saved",
-        description: "Contract template has been successfully saved."}),
+        description: "Contract template has been successfully saved."})
     },
     onError: (error: Error) => {
       console.error("Error saving template:", error),
       toast({
         title: "Failed to save template",
         description: "There was an error saving your contract template.",
-        variant: "destructive"}),
+        variant: "destructive"})
     }
   }),
 
@@ -122,7 +121,7 @@ export function useContractTemplates() {
             .update({ is_default: false })
             .eq('user_id', user.id)
             .eq('is_default', true)
-            .neq('id', templateId),
+            .neq('id', templateId)
         }
         
         // Update the template
@@ -140,23 +139,23 @@ export function useContractTemplates() {
           .single(),
         
         if (error) throw error,
-        return data as ContractTemplate,
+        return data as ContractTemplate
       } finally {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] }),
       toast({
         title: "Template updated",
-        description: "Contract template has been successfully updated."}),
+        description: "Contract template has been successfully updated."})
     },
     onError: (error: Error) => {
       console.error("Error updating template:", error),
       toast({
         title: "Failed to update template",
         description: "There was an error updating your contract template.",
-        variant: "destructive"}),
+        variant: "destructive"})
     }
   }),
 
@@ -174,23 +173,23 @@ export function useContractTemplates() {
           .eq('id', templateId)
           .eq('user_id', user.id),
         
-        if (error) throw error,
+        if (error) throw error
       } finally {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] }),
       toast({
         title: "Template deleted",
-        description: "Contract template has been successfully deleted."}),
+        description: "Contract template has been successfully deleted."})
     },
     onError: (error: Error) => {
       console.error("Error deleting template:", error),
       toast({
         title: "Failed to delete template",
         description: "There was an error deleting your contract template.",
-        variant: "destructive"}),
+        variant: "destructive"})
     }
   }),
 
@@ -216,23 +215,23 @@ export function useContractTemplates() {
           .eq('id', templateId)
           .eq('user_id', user.id),
         
-        if (error) throw error,
+        if (error) throw error
       } finally {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] }),
       toast({
         title: "Default template set",
-        description: "Default contract template has been updated."}),
+        description: "Default contract template has been updated."})
     },
     onError: (error: Error) => {
       console.error("Error setting default template:", error),
       toast({
         title: "Failed to set default template",
         description: "There was an error setting your default contract template.",
-        variant: "destructive"}),
+        variant: "destructive"})
     }
   }),
 
@@ -244,5 +243,5 @@ export function useContractTemplates() {
     updateTemplate,
     deleteTemplate,
     setDefaultTemplate
-  },
+  }
 }

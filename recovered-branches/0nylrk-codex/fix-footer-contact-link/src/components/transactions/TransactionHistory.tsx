@@ -10,7 +10,6 @@ import { Badge } from "@/components/ui/badge",
 import { Skeleton } from "@/components/ui/skeleton",
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",
 import { formatDistanceToNow } from "date-fns",
-
 interface Transaction {
   id: string,
   user_id: string,
@@ -28,8 +27,8 @@ interface Transaction {
     display_name?: string
   },
   service?: {
-    title?: string,
-  },
+    title?: string
+  }
 }
 
 export function TransactionHistory() {
@@ -53,11 +52,11 @@ export function TransactionHistory() {
         .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`),
       
       if (filter === 'pending') {
-        query = query.eq('statuspending'),
+        query = query.eq('statuspending')
       } else if (filter === 'completed') {
-        query = query.eq('statuscompleted'),
+        query = query.eq('statuscompleted')
       } else if (filter === 'escrow') {
-        query = query.eq('in_escrow', true),
+        query = query.eq('in_escrow', true)
       }
       
       query = query.order('created_at', { ascending: false }),
@@ -65,7 +64,7 @@ export function TransactionHistory() {
       const { data, error } = await query,
       
       if (error) throw error,
-      return data as Transaction[],
+      return data as Transaction[]
     },
     enabled: !!user}),
 
@@ -81,13 +80,13 @@ export function TransactionHistory() {
         title: "Success",
         description: data.message || "Transaction updated successfully"}),
       
-      refetch(),
+      refetch()
     } catch (error) {
       console.error("Error managing transaction:", error),
       toast({
         title: "Error",
         description: error.message || "Failed to update transaction",
-        variant: "destructive"}),
+        variant: "destructive"})
     }
   },
   
@@ -134,7 +133,7 @@ export function TransactionHistory() {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: currency.toUpperCase()
-    }).format(amount),
+    }).format(amount)
   },
 
   if (error) {
@@ -150,7 +149,7 @@ export function TransactionHistory() {
           </Button>
         </div>
       </div>
-    ),
+    )
   }
 
   return (
@@ -316,7 +315,7 @@ export function TransactionHistory() {
                     )}
                   </CardFooter>
                 </Card>
-              ),
+              )
             })}
           </div>
         ) : (
@@ -335,5 +334,5 @@ export function TransactionHistory() {
         )}
       </div>
     </div>
-  ),
+  )
 }

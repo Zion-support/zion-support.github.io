@@ -244,5 +244,5 @@ export default function UltraFuturisticHero2028() {
         </motion.div>
       </motion.div>
     </section>
-  ),
+  )
 }

@@ -91,10 +91,7 @@ const socialLinks = [
 ],
 
 const certifications = [
-  'ISO 27001 CertifiedSOC 2 Type II Compliant',
-  'GDPR CompliantHIPAA Compliant',
-  'PCI DSS Level 1FedRAMP Authorized',
-  'Quantum Security CertifiedAI Ethics Compliant'
+  'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
 ],
 
 const stats = [

@@ -4,7 +4,6 @@ import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 import { toast } from "@/hooks/use-toast",
 import { useAuthStatus } from "@/hooks/talent",
-
 export function useSavedTalents() {
   const { isAuthenticated, userDetails } = useAuthStatus(),
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
@@ -16,7 +15,7 @@ export function useSavedTalents() {
     const fetchSavedTalents = async () => {
       if (!isAuthenticated || !userDetails.id) {
         setIsLoading(false),
-        return,
+        return
       }
 
       setIsLoading(true),
@@ -43,9 +42,9 @@ export function useSavedTalents() {
               
             if (talentError) throw talentError,
             
-            setSavedTalents(talentData || []),
+            setSavedTalents(talentData || [])
           } else {
-            setSavedTalents([]),
+            setSavedTalents([])
           }
         }
       } catch (error) {
@@ -54,13 +53,13 @@ export function useSavedTalents() {
           title: "Error loading favorites",
           description: "There was a problem loading your saved talents.",
           variant: "destructive"
-        }),
+        })
       } finally {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     },
     
-    fetchSavedTalents(),
+    fetchSavedTalents()
   }, [isAuthenticated, userDetails.id]),
 
   // Toggle save talent
@@ -71,7 +70,7 @@ export function useSavedTalents() {
         description: "Please log in to save talents to your favorites",
         variant: "destructive"
       }),
-      return,
+      return
     }
     
     const isSaved = savedTalentIds.includes(talent.id),
@@ -92,7 +91,7 @@ export function useSavedTalents() {
         
         toast({
           title: "Removed from favorites",
-          description: `${talent.full_name} has been removed from your favorites`}),
+          description: `${talent.full_name} has been removed from your favorites`})
       } else {
         // Add to saved_talents
         const { error } = await supabase
@@ -108,7 +107,7 @@ export function useSavedTalents() {
         
         toast({
           title: "Added to favorites",
-          description: `${talent.full_name} has been added to your favorites`}),
+          description: `${talent.full_name} has been added to your favorites`})
       }
     } catch (error) {
       console.error('Error toggling saved talent:', error),
@@ -116,7 +115,7 @@ export function useSavedTalents() {
         title: "Error",
         description: "There was a problem updating your favorites. Please try again.",
         variant: "destructive"
-      }),
+      })
     }
   },
 
@@ -131,5 +130,5 @@ export function useSavedTalents() {
     isLoading,
     toggleSaveTalent,
     isTalentSaved
-  },
+  }
 }

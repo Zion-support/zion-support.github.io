@@ -153,7 +153,7 @@ const socialLinks = [
 
 const UltraFuturisticFooter2035: React.FC = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' }),
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   },
 
   return (

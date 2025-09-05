@@ -2,8 +2,7 @@ import type { NextPage } from 'next',
 import Head from 'next/head',
 import { useState } from 'react',
 import EnhancedButton from '../../components/ui/EnhancedButton',
-
-const steps = ['AccountProfile', 'PreferencesPreview'],
+const steps = ['AccountProfilePreferencesPreview'],
 
 const Onboarding: NextPage = () => {
   const [step, setStep] = useState(0),
@@ -39,7 +38,7 @@ const Onboarding: NextPage = () => {
         <EnhancedButton onClick={next} disabled={step === steps.length - 1}>{step === steps.length - 1 ? 'Done' : 'Next'}</EnhancedButton>
       </div>
     </div>
-  ),
+  )
 },
 
 export default Onboarding,

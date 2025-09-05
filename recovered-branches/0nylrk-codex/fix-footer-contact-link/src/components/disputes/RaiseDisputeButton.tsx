@@ -12,7 +12,6 @@ import {
 import { DisputeForm } from "./DisputeForm",
 import { useNavigate } from "react-router-dom",
 import { ShieldAlert } from "lucide-react",
-
 interface RaiseDisputeButtonProps {
   projectId: string,
   milestoneId?: string,
@@ -33,7 +32,7 @@ export function RaiseDisputeButton({
   
   const handleDisputeCreated = (disputeId: string) => {
     setIsDialogOpen(false),
-    navigate(`/dashboard/disputes/${disputeId}`),
+    navigate(`/dashboard/disputes/${disputeId}`)
   },
   
   return (
@@ -66,5 +65,5 @@ export function RaiseDisputeButton({
         </DialogContent>
       </Dialog>
     </>
-  ),
+  )
 }

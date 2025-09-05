@@ -10,7 +10,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
 import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react',
 import { VideoCallRoom } from '@/components/video/VideoCallRoom',
 import { toast } from 'sonner',
-
 export default function ProjectRoom() {
   const { projectId } = useParams() as { projectId: string },
   const [activeTab, setActiveTab] = useState('chat'),
@@ -40,7 +39,7 @@ export default function ProjectRoom() {
     }),
     // Switch to video tab if not already there
     if (activeTab !== 'video') {
-      setActiveTab('video'),
+      setActiveTab('video')
     }
   },
   
@@ -48,7 +47,7 @@ export default function ProjectRoom() {
     setIsInCall(false),
     toast.info("Video call ended", {
       description: "Call duration and participants will be logged"
-    }),
+    })
   },
   
   const simulateUserJoining = () => {
@@ -63,7 +62,7 @@ export default function ProjectRoom() {
     
     if (!callParticipants.find(p => p.id === randomUser.id)) {
       setCallParticipants(prev => [...prev, randomUser]),
-      toast(`${randomUser.name} joined the call`),
+      toast(`${randomUser.name} joined the call`)
     }
   },
   
@@ -233,5 +232,5 @@ export default function ProjectRoom() {
       </main>
       <Footer />
     </>
-  ),
+  )
 }

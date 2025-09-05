@@ -1,7 +1,6 @@
 import React from 'react',
 import StarRating from './StarRating',
 import type { PublicReview } from '../../types/reviews',
-
 type Props = {
   review: PublicReview,
   onReport?: (id: string) => void
@@ -42,7 +41,7 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
         )}
       </div>
     </div>
-  ),
+  )
 },
 
 export default ReviewCard,

@@ -13,7 +13,6 @@ import { BudgetStep } from "@/components/QuoteRequestForm/BudgetStep",
 import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep",
 import { QuoteFormData } from "@/types/quotes",
 import { Sparkles } from "lucide-react",
-
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary",
 
 export function QuoteRequestForm() {
@@ -47,7 +46,7 @@ export function QuoteRequestForm() {
     setFormData(prev => ({
       ...prev,
       ...data
-    })),
+    }))
   },
   
   const handleNext = () => {
@@ -101,14 +100,14 @@ export function QuoteRequestForm() {
         description: "We've received your request and will get back to you soon."}),
       
       // Redirect to confirmation page or homepage
-      navigate("/"),
+      navigate("/")
     } catch (error) {
       toast({
         title: "Submission Failed",
         description: "There was an error submitting your request. Please try again.",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
   
@@ -182,5 +181,5 @@ export function QuoteRequestForm() {
         </Card>
       </div>
     </div>
-  ),
+  )
 }

@@ -7,7 +7,7 @@ import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartpho
 
 interface QuickAccessProps {
   className?: string,
-  style?: React.CSSProperties,
+  style?: React.CSSProperties
 }
 
 export function QuickAccess({ className, style }: QuickAccessProps) {
@@ -84,7 +84,7 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
         </div>
       </div>
     </section>
-  ),
+  )
 }
 
 export default QuickAccess,

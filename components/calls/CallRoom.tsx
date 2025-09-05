@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react',
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets } from 'livekit-client',
 import ParticipantTile from './ParticipantTile',
 import Controls from './Controls',
-
 export type StartMode = 'video' | 'audio',
 
 type Props = {
@@ -33,9 +32,9 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     // create local tracks per start mode
     let localTracks: any[] = [],
     if (startMode === 'video') {
-      localTracks = await createLocalTracks({ audio: true, video: VideoPresets.h720 }),
+      localTracks = await createLocalTracks({ audio: true, video: VideoPresets.h720 })
     } else {
-      localTracks = await createLocalTracks({ audio: true, video: false }),
+      localTracks = await createLocalTracks({ audio: true, video: false })
     }
 
     await r.connect(serverUrl, token, {
@@ -43,7 +42,7 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
 
     // publish local tracks
     for (const t of localTracks) {
-      await r.localParticipant.publishTrack(t),
+      await r.localParticipant.publishTrack(t)
     }
 
     setRoom(r),
@@ -56,24 +55,24 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     const r = current || room,
     if (!r) return,
     const list: Array<RemoteParticipant | LocalParticipant> = [r.localParticipant, ...Array.from(r.participants.values())],
-    setParticipants(list),
+    setParticipants(list)
   },
 
   useEffect(() => {
     connect(),
     return () => {
       if (room) {
-        room.disconnect(),
+        room.disconnect()
       }
-    },
+    }
   }, [connect]),
 
   const handleLeave = () => {
     if (room) {
-      room.disconnect(),
+      room.disconnect()
     }
     const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0,
-    onLeave?.(durationSec),
+    onLeave?.(durationSec)
   },
 
   const gridCols = useMemo(() => {
@@ -101,5 +100,5 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
         ))}
       </div>
     </div>
-  ),
+  )
 }

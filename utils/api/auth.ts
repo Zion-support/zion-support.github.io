@@ -19,7 +19,7 @@ export function getCurrentUser(req: NextApiRequest): CurrentUser | null {
   if (!userId || !role) return null,
   if (role !== 'client' && role !== 'talent' && role !== 'admin') return null,
 
-  return { userId, role },
+  return { userId, role }
 }
 
 export function requireUser(
@@ -29,7 +29,7 @@ export function requireUser(
   const user = getCurrentUser(req),
   if (!user) {
     res.status(401).json({ error: 'Unauthorized' }),
-    return null,
+    return null
   }
-  return user,
+  return user
 }

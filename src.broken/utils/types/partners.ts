@@ -14,7 +14,7 @@ export interface PartnerPointOfContact {
 
 export interface PartnerBrand {
   primaryColorHex?: string,
-  logoUrl?: string,
+  logoUrl?: string
 }
 
 export interface PartnerRecord {

@@ -2,7 +2,6 @@ import React from 'react',
 import { motion } from 'framer-motion',
 import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react',
 import Link from 'next/link',
-
 const Enhanced2026ServicesShowcase = () => {
   const featuredServices = [
     {
@@ -14,7 +13,7 @@ const Enhanced2026ServicesShowcase = () => {
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
       category: 'AI & Analytics',
-      features: ['Predictive AnalyticsReal-time Insights', 'Custom DashboardsAI-powered Reports']
+      features: ['Predictive AnalyticsReal-time InsightsCustom DashboardsAI-powered Reports']
     },
     {
       id: 'autonomous-ai-agents-platform-2026',
@@ -25,7 +24,7 @@ const Enhanced2026ServicesShowcase = () => {
       icon: Zap,
       color: 'from-blue-500 to-cyan-500',
       category: 'AI & Automation',
-      features: ['Task AutomationProcess Optimization', '24/7 OperationScalable Architecture']
+      features: ['Task AutomationProcess Optimization24/7 OperationScalable Architecture']
     },
     {
       id: 'quantum-cybersecurity-suite-2026',
@@ -36,7 +35,7 @@ const Enhanced2026ServicesShowcase = () => {
       icon: Shield,
       color: 'from-red-500 to-orange-500',
       category: 'Security',
-      features: ['Quantum EncryptionThreat Detection', 'Zero TrustCompliance Ready']
+      features: ['Quantum EncryptionThreat DetectionZero TrustCompliance Ready']
     },
     {
       id: 'neuromorphic-computing-platform-2026',
@@ -47,7 +46,7 @@ const Enhanced2026ServicesShowcase = () => {
       icon: Cpu,
       color: 'from-green-500 to-emerald-500',
       category: 'Emerging Tech',
-      features: ['Brain-like ProcessingLow Power', 'Real-time LearningCognitive Computing']
+      features: ['Brain-like ProcessingLow PowerReal-time LearningCognitive Computing']
     },
     {
       id: 'dna-computing-platform-2026',
@@ -58,7 +57,7 @@ const Enhanced2026ServicesShowcase = () => {
       icon: Globe,
       color: 'from-indigo-500 to-purple-500',
       category: 'Emerging Tech',
-      features: ['Molecular ProcessingExponential Speed', 'Complex AlgorithmsResearch Ready']
+      features: ['Molecular ProcessingExponential SpeedComplex AlgorithmsResearch Ready']
     },
     {
       id: 'space-debris-tracking-system',
@@ -69,7 +68,7 @@ const Enhanced2026ServicesShowcase = () => {
       icon: Rocket,
       color: 'from-yellow-500 to-orange-500',
       category: 'Space Tech',
-      features: ['Real-time TrackingCollision Prediction', 'Satellite SafetySpace Traffic Management']
+      features: ['Real-time TrackingCollision PredictionSatellite SafetySpace Traffic Management']
     }
   ],
 

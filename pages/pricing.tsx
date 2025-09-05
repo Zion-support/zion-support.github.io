@@ -9,7 +9,6 @@ import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularService
 import { nextGenerationAIServices } from '../data/next-generation-ai-services',
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services',
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2',
-
 export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null),
@@ -36,35 +35,35 @@ export default function PricingPage() {
     {
       name: 'Next-Generation AI',
       description: 'Revolutionary AI platforms',
-      services: ['AI Multimodal FusionAI Autonomous Decision Engine', 'AI Emotional Intelligence'],
+      services: ['AI Multimodal FusionAI Autonomous Decision EngineAI Emotional Intelligence'],
       avgPrice: '$3,199/month',
       savings: 'Save 60-80% vs. competitors'
     },
     {
       name: 'Cutting-Edge IT Infrastructure',
       description: 'Advanced infrastructure solutions',
-      services: ['Zero Trust ArchitectureEdge Computing Orchestration', '5G Private Networks'],
+      services: ['Zero Trust ArchitectureEdge Computing Orchestration5G Private Networks'],
       avgPrice: '$4,999/month',
       savings: 'Save 50-70% vs. competitors'
     },
     {
       name: 'Innovative Micro SaaS',
       description: 'Creative and practical SaaS tools',
-      services: ['AI Brand PersonalityVirtual Event Holograms', 'AI Meeting Transcriber'],
+      services: ['AI Brand PersonalityVirtual Event HologramsAI Meeting Transcriber'],
       avgPrice: '$199/month',
       savings: 'Save 40-60% vs. competitors'
     },
     {
       name: 'Quantum & Space Technology',
       description: 'Quantum computing and space solutions',
-      services: ['Quantum AI HybridSpace Technology Platform', 'Quantum Cybersecurity'],
+      services: ['Quantum AI HybridSpace Technology PlatformQuantum Cybersecurity'],
       avgPrice: '$5,999/month',
       savings: 'Save 70-85% vs. competitors'
     },
     {
       name: 'Enterprise IT Services',
       description: 'Comprehensive enterprise solutions',
-      services: ['Cloud MigrationDevOps Automation', 'Security Hardening'],
+      services: ['Cloud MigrationDevOps AutomationSecurity Hardening'],
       avgPrice: '$2,999/month',
       savings: 'Save 45-65% vs. competitors'
     }
@@ -79,10 +78,7 @@ export default function PricingPage() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 50+ Core ServicesBasic AI Integration',
-        'Standard Support (24/7)30-Day Free Trial',
-        'Basic Analytics DashboardEmail Support',
-        '99.5% Uptime GuaranteeStandard Security Features'
+        'Access to 50+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
       ],
       icon: <Sparkles className="w-8 h-8" />,
       variant: 'quantum' as const,
@@ -97,12 +93,8 @@ export default function PricingPage() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 200+ Premium ServicesAdvanced AI & Quantum Computing',
-        'Priority Support (24/7)60-Day Free Trial',
-        'Advanced Analytics & ReportingPhone & Email Support',
-        '99.9% Uptime GuaranteeEnhanced Security & Compliance',
-        'Custom IntegrationsTeam Collaboration Tools',
-        'API AccessWhite-label Options'
+        'Access to 200+ Premium ServicesAdvanced AI & Quantum ComputingPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security & Compliance',
+        'Custom IntegrationsTeam Collaboration ToolsAPI AccessWhite-label Options'
       ],
       icon: <Crown className="w-8 h-8" />,
       variant: 'holographic' as const,
@@ -117,14 +109,8 @@ export default function PricingPage() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to ALL 500+ ServicesFull Quantum AI & Autonomous Systems',
-        'Dedicated Support Team (24/7)90-Day Free Trial',
-        'Enterprise Analytics & AI InsightsDedicated Account Manager',
-        '99.99% Uptime SLAEnterprise Security & Compliance',
-        'Custom Development ServicesAdvanced Team Management',
-        'Full API & SDK AccessCustom Branding & White-label',
-        'On-premise Deployment OptionsAdvanced AI Training & Customization',
-        'Priority Feature DevelopmentGlobal Infrastructure Access'
+        'Access to ALL 500+ ServicesFull Quantum AI & Autonomous SystemsDedicated Support Team (24/7)90-Day Free TrialEnterprise Analytics & AI InsightsDedicated Account Manager99.99% Uptime SLAEnterprise Security & Compliance',
+        'Custom Development ServicesAdvanced Team ManagementFull API & SDK AccessCustom Branding & White-labelOn-premise Deployment OptionsAdvanced AI Training & CustomizationPriority Feature DevelopmentGlobal Infrastructure Access'
       ],
       icon: <Rocket className="w-8 h-8" />,
       variant: 'neural' as const,
@@ -138,37 +124,37 @@ export default function PricingPage() {
   const serviceCategoryPricing = [
     {
       category: 'Quantum AI & Computing',
-      services: ['Quantum AI PlatformNeural Network Training', 'Quantum Optimization'],
+      services: ['Quantum AI PlatformNeural Network TrainingQuantum Optimization'],
       startingPrice: '$99/month',
       icon: <Brain className="w-6 h-6" />
     },
     {
       category: 'Autonomous Systems',
-      services: ['AI Factory ManagementRobotic Process Automation', 'Smart Manufacturing'],
+      services: ['AI Factory ManagementRobotic Process AutomationSmart Manufacturing'],
       startingPrice: '$149/month',
       icon: <Factory className="w-6 h-6" />
     },
     {
       category: 'Healthcare & Biotech',
-      services: ['Drug Discovery AIMedical Imaging Analysis', 'Genomic Research Platform'],
+      services: ['Drug Discovery AIMedical Imaging AnalysisGenomic Research Platform'],
       startingPrice: '$199/month',
       icon: <FlaskConical className="w-6 h-6" />
     },
     {
       category: 'Cybersecurity',
-      services: ['Quantum EncryptionThreat Intelligence', 'Zero-Trust Security'],
+      services: ['Quantum EncryptionThreat IntelligenceZero-Trust Security'],
       startingPrice: '$129/month',
       icon: <Shield className="w-6 h-6" />
     },
     {
       category: 'Financial Technology',
-      services: ['AI Trading PlatformRisk Management', 'Portfolio Optimization'],
+      services: ['AI Trading PlatformRisk ManagementPortfolio Optimization'],
       startingPrice: '$179/month',
       icon: <DollarSign className="w-6 h-6" />
     },
     {
       category: 'Space Technology',
-      services: ['Satellite ManagementSpace Data Analytics', 'Mission Planning AI'],
+      services: ['Satellite ManagementSpace Data AnalyticsMission Planning AI'],
       startingPrice: '$299/month',
       icon: <Rocket className="w-6 h-6" />
     }

@@ -1,6 +1,5 @@
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
-
 // Sample talent listings
 const TALENT_LISTINGS: ProductListing[] = [
   {
@@ -123,5 +122,5 @@ export default function TalentsPage() {
       categoryFilters={TALENT_FILTERS}
       initialPrice={{ min: 100, max: 200 }}
     />
-  ),
+  )
 }

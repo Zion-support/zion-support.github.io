@@ -53,5 +53,5 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
         </div>
       )}
     </div>
-  ),
+  )
 }

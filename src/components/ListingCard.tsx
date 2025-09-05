@@ -3,7 +3,6 @@ import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
 import Link from "next/link",
 import Image from "next/image",
-
 interface ListingCardProps {
   id?: string,
   title: string,
@@ -13,7 +12,7 @@ interface ListingCardProps {
   tags?: string[],
   author?: { name: string, id?: string, avatarUrl?: string, email?: string },
   className?: string,
-  profileType?: 'service' | 'talent',
+  profileType?: 'service' | 'talent'
 }
 
 export function ListingCard({ 
@@ -81,5 +80,5 @@ export function ListingCard({
         )}
       </div>
     </Link>
-  ),
+  )
 }

@@ -1,9 +1,8 @@
 import React, { useMemo, useState } from 'react',
 import { v4 as uuidv4 } from 'uuid',
-
 export type FeedbackWidgetProps = {
   responseId?: string,
-  aiModel?: string,
+  aiModel?: string
 },
 
 export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
@@ -18,7 +17,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
   const submit = async () => {
     if (!rating) {
       setError('Please choose 👍 or 👎'),
-      return,
+      return
     }
     setError(null),
     setSubmitting(true),
@@ -33,11 +32,11 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
           pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined,
           aiModel})}),
       if (!res.ok) throw new Error('Failed to submit feedback'),
-      setSubmitted(true),
+      setSubmitted(true)
     } catch (e: any) {
       setError(e?.message || 'Something went wrong')
     } finally {
-      setSubmitting(false),
+      setSubmitting(false)
     }
   },
 
@@ -84,5 +83,5 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
         </div>
       )}
     </div>
-  ),
+  )
 }

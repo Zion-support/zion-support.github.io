@@ -2,7 +2,6 @@
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { useNavigate } from 'react-router-dom',
-
 interface NotificationFooterProps {
   onClose: () => void
 }
@@ -12,7 +11,7 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
   
   const handleViewAll = () => {
     onClose(),
-    navigate('/notifications'),
+    navigate('/notifications')
   },
   
   return (
@@ -26,5 +25,5 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
         View all notifications
       </Button>
     </div>
-  ),
+  )
 },

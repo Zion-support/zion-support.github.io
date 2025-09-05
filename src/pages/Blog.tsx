@@ -28,7 +28,7 @@ const CATEGORIES = [
 ],
 
 export interface BlogProps {
-  posts?: BlogPost[],
+  posts?: BlogPost[]
 }
 
 export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
@@ -45,8 +45,8 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
     return () => {
       setSearchQuery(""),
       setSelectedCategory("All Categories"),
-      setPosts([...initialPosts]),
-    },
+      setPosts([...initialPosts])
+    }
   }, [router.asPath, initialPosts]),
 
   // useEffect(() => {
@@ -63,15 +63,15 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         const data: BlogPost[] = await fetchWithRetry(
           `/api/blog?query=${encodeURIComponent(query)}`
         ),
-        setPosts(data),
+        setPosts(data)
       } catch (err) {
-        logErrorToProduction('Failed to fetch blog posts', { data: err }),
+        logErrorToProduction('Failed to fetch blog posts', { data: err })
       } finally {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     },
 
-    fetchPosts(),
+    fetchPosts()
   }, [query]),
 
   // Filter blog posts based on selected category only.
@@ -80,7 +80,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
     const matchesCategory =
       selectedCategory === "All Categories" || post.category === selectedCategory,
 
-    return matchesCategory,
+    return matchesCategory
   }),
   
   // Get featured posts
@@ -143,7 +143,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                       className="w-10 h-10 rounded-full mr-3"
                       onError={(e) => {
                         const target = e.currentTarget as HTMLImageElement,
-                        target.src = "/images/blog-placeholder.svg",
+                        target.src = "/images/blog-placeholder.svg"
                       }}
                     />
                     <div>
@@ -164,7 +164,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                 </div>
               </div>
             </div>
-            ),
+            )
           })()}
         
           {/* Filters and Search */}
@@ -244,7 +244,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                         className="w-8 h-8 rounded-full mr-2"
                         onError={(e) => {
                           const target = e.currentTarget as HTMLImageElement,
-                          target.src = "/images/blog-placeholder.svg",
+                          target.src = "/images/blog-placeholder.svg"
                         }}
                       />
                       <span className="text-sm text-white">{post.author.name}</span>
@@ -268,7 +268,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                 variant="outline"
                 onClick={() => {
                   setSearchQuery(""),
-                  setSelectedCategory("All Categories"),
+                  setSelectedCategory("All Categories")
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
@@ -279,5 +279,5 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         </div>
       </div>
     </>
-  ),
+  )
 }

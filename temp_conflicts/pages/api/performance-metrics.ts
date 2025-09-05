@@ -1,7 +1,6 @@
 // API endpoint for performance metrics collection
 import type { NextApiRequest, NextApiResponse } from 'next',
 import type { PerformanceReport } from '@/utils/performance-monitor',
-
 interface PerformanceData {
   timestamp: string,
   url: string,
@@ -39,7 +38,7 @@ export default async function handler(
       // Validate the report structure
       if (!performanceReport.metrics || !Array.isArray(performanceReport.metrics)) {
         res.status(400).json({ error: 'Invalid performance report format' }),
-        return,
+        return
       }
 
       // Log performance metrics (in production, you would store these in a database)
@@ -50,7 +49,7 @@ export default async function handler(
       if (poorMetrics.length > 0) {
         console.warn('⚠️ Poor Performance Metrics Detected:', poorMetrics.map(m => 
           `${m.name}: ${m.value}ms`
-        )),
+        ))
       }
 
       // In production, you would:
@@ -72,19 +71,19 @@ export default async function handler(
               data: performanceReport,
               timestamp: Date.now()
             })
-          }),
+          })
         } catch (error) {
-          console.error('Error sending to analytics:', error),
+          console.error('Error sending to analytics:', error)
         }
       }
 
-      res.status(200).json({ success: true, message: 'Performance data recorded' }),
+      res.status(200).json({ success: true, message: 'Performance data recorded' })
     } catch (error) {
       console.error('Error processing request:', error),
       res.status(500).json({ 
         success: false, 
         message: 'Internal server error' 
-      }),
+      })
     }
   } catch (error) {
     console.error('Error processing request:', error),
@@ -92,7 +91,7 @@ export default async function handler(
       success: false, 
       message: 'Internal server error' 
     }),
-    return,
+    return
   }
   
   if (req.method === 'GET') {
@@ -112,7 +111,7 @@ export default async function handler(
           data: limitedMetrics,
           total: performanceMetrics.length,
           average: calculateAverages(performanceMetrics)
-        }),
+        })
       } else if (type === 'error') {
         const limitedErrors = errorLogs
           .slice(-Number(limit))
@@ -125,7 +124,7 @@ export default async function handler(
           success: true,
           data: limitedErrors,
           total: errorLogs.length
-        }),
+        })
       } else if (type === 'summary') {
         res.status(200).json({
           success: true,
@@ -140,26 +139,26 @@ export default async function handler(
               recent: errorLogs.slice(-10).length
             }
           }
-        }),
+        })
       } else {
         res.status(400).json({ 
           success: false, 
           message: 'Invalid type parameter' 
-        }),
+        })
       }
     } catch (error) {
       console.error('Error retrieving data:', error),
       res.status(500).json({ 
         success: false, 
         message: 'Internal server error' 
-      }),
+      })
     }
   } else {
     res.setHeader('Allow', ['POSTGET']),
     res.status(405).json({ 
       success: false, 
       message: `Method ${req.method} Not Allowed` 
-    }),
+    })
   }
 }
 
@@ -180,5 +179,5 @@ function calculateAverages(metrics: PerformanceData[]) {
     fid: Math.round(sums.fid / metrics.length),
     cls: Math.round((sums.cls / metrics.length) * 1000) / 1000,
     ttfb: Math.round(sums.ttfb / metrics.length)
-  },
+  }
 }

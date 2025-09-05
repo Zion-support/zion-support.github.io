@@ -16,7 +16,6 @@ import {
   RadioGroupItem} from "@/components/ui/radio-group",
 import { Switch } from "@/components/ui/switch",
 import { Review } from "@/types/reviews",
-
 interface ReviewFormValues {
   rating?: number,
   review_text?: string,
@@ -24,7 +23,7 @@ interface ReviewFormValues {
   quality_rating?: number,
   timeliness_rating?: number,
   would_work_again?: boolean,
-  is_anonymous?: boolean,
+  is_anonymous?: boolean
 }
 
 interface ReviewFormProps {
@@ -71,7 +70,7 @@ export function ReviewForm({
     
     const success = await onSubmit(formattedData),
     if (success) {
-      form.reset(),
+      form.reset()
     }
   },
   
@@ -311,5 +310,5 @@ export function ReviewForm({
         </Button>
       </form>
     </Form>
-  ),
+  )
 }

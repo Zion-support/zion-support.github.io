@@ -25,7 +25,7 @@ export function PartnerReferralLinks() {
       title: "Link copied!",
       description: "The referral link has been copied to your clipboard",
       variant: "default"
-    }),
+    })
   },
   
   const handleGenerateLink = () => {
@@ -34,12 +34,12 @@ export function PartnerReferralLinks() {
       
       // Add custom campaign parameter if selected
       if (selectedCampaign !== "default") {
-        url.searchParams.append("campaign", selectedCampaign),
+        url.searchParams.append("campaign", selectedCampaign)
       }
       
       // Add custom parameter if provided
       if (customParam) {
-        url.searchParams.append("source", customParam),
+        url.searchParams.append("source", customParam)
       }
       
       const newLink = {
@@ -49,7 +49,7 @@ export function PartnerReferralLinks() {
       
       setGeneratedLinks(prev => [...prev, newLink]),
       setIsDialogOpen(false),
-      setCustomParam(""),
+      setCustomParam("")
     }
   },
   
@@ -72,7 +72,7 @@ export function PartnerReferralLinks() {
     link.style.visibility = 'hidden',
     document.body.appendChild(link),
     link.click(),
-    document.body.removeChild(link),
+    document.body.removeChild(link)
   },
 
   return (
@@ -224,5 +224,5 @@ export function PartnerReferralLinks() {
         )}
       </div>
     </div>
-  ),
+  )
 }

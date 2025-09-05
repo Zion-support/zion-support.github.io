@@ -2,7 +2,6 @@ import type { NextPage } from 'next',
 import Head from 'next/head',
 import React, { useMemo, useState } from 'react',
 import AIAssistant from '../../components/ui/AIAssistant',
-
 const ResumeBuilder: NextPage = () => {
   const [role, setRole] = useState('Data Scientist'),
   const [experienceYears, setExperienceYears] = useState(5),
@@ -100,7 +99,7 @@ const ResumeBuilder: NextPage = () => {
         <textarea value={skillsText} onChange={e => setSkillsText(e.target.value)} rows={6} className="w-full rounded-md border p-3" />
       </section>
     </div>
-  ),
+  )
 },
 
 export default ResumeBuilder,

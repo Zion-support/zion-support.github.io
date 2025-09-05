@@ -7,8 +7,6 @@ import { Folder } from 'lucide-react'
 import { CATEGORIES } from '@/data/categories',
 import { NextSeo } from '@/components/NextSeo',
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 interface CategoryType {
   id: string,
   name: string,
@@ -21,18 +19,18 @@ const fetcher = async (url: string): Promise<CategoryType[]> => {
     const response = await fetch(url),
     if (!response.ok) {
       logErrorToProduction('Categories API error:', { data: response.statusText }),
-      return CATEGORIES as CategoryType[],
+      return CATEGORIES as CategoryType[]
     }
     const data = await response.json(),
-    return Array.isArray(data) && data.length > 0 ? data : CATEGORIES as CategoryType[],
+    return Array.isArray(data) && data.length > 0 ? data : CATEGORIES as CategoryType[]
   } catch (err) {
     logErrorToProduction('Categories API fetch failed:', { data: err }),
-    return CATEGORIES as CategoryType[],
+    return CATEGORIES as CategoryType[]
   }
 },
 
 export interface CategoriesProps {
-  categories?: CategoryType[],
+  categories?: CategoryType[]
 }
 
 export default function Categories({ categories: initialCategories = [] }: CategoriesProps) {
@@ -89,7 +87,7 @@ export default function Categories({ categories: initialCategories = [] }: Categ
                     description={`Explore ${category.name.toLowerCase()} in our marketplace`}
                     icon={<Folder className="w-6 h-6" />}
                   />
-                ),
+                )
               })}
             </div>
           )}
@@ -97,5 +95,5 @@ export default function Categories({ categories: initialCategories = [] }: Categ
       </div>
     </div>
     </>
-  ),
+  )
 }

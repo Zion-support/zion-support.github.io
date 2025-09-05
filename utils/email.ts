@@ -1,6 +1,5 @@
 import fs from 'fs-extra',
 import path from 'path',
-
 export interface WarningEmailPayload {
   toUserId: string,
   toAddress?: string | null,
@@ -14,5 +13,5 @@ export async function sendWarningEmail(payload: WarningEmailPayload): Promise<vo
   await fs.ensureDir(logDir),
 
   const line = `[${new Date().toISOString()}] toUserId=${payload.toUserId} to=${payload.toAddress || 'unknown'} subject=${payload.subject} body=${payload.body}\n`,
-  await fs.appendFile(logPath, line, 'utf8'),
+  await fs.appendFile(logPath, line, 'utf8')
 }

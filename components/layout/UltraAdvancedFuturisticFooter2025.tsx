@@ -8,7 +8,6 @@ import {
 } from 'lucide-react',
 import Link from 'next/link',
 import { AnimatePresence } from 'framer-motion',
-
 interface FooterLink {
   label: string,
   href: string,
@@ -95,7 +94,7 @@ const quickLinks = [
 
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' }),
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   },
 
   const footerSections = [
@@ -394,7 +393,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         <ArrowUp className="w-6 h-6 mx-auto" />
       </motion.button>
     </footer>
-  ),
+  )
 },
 
 export default UltraAdvancedFuturisticFooter2025,

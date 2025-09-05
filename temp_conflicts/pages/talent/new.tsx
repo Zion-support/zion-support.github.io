@@ -1,6 +1,5 @@
 import { FormEvent, useState } from 'react',
 import type { TalentProfile } from '@/utils/types/talent',
-
 export default function NewTalentPage() {
   const [form, setForm] = useState({
     name: '',
@@ -37,11 +36,11 @@ export default function NewTalentPage() {
           skills: form.skills})}),
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Generation failed'),
-      setGenerated(data),
+      setGenerated(data)
     } catch (err: any) {
       setError(err.message)
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   },
 
@@ -64,7 +63,7 @@ export default function NewTalentPage() {
         portfolio: form.portfolio
           ? form.portfolio.split('\n').map((line) => {
               const [title, url] = line.split('|').map((s) => s.trim()),
-              return { title: title || url, url },
+              return { title: title || url, url }
             })
           : [],
         videoUrl: form.videoUrl || undefined},
@@ -75,11 +74,11 @@ export default function NewTalentPage() {
         body: JSON.stringify(payload)}),
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Save failed'),
-      window.location.href = `/talent/${data.slug}`,
+      window.location.href = `/talent/${data.slug}`
     } catch (err: any) {
       setError(err.message)
     } finally {
-      setSaving(false),
+      setSaving(false)
     }
   },
 
@@ -181,5 +180,5 @@ export default function NewTalentPage() {
         </div>
       )}
     </div>
-  ),
+  )
 }

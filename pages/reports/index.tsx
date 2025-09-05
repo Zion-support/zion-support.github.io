@@ -16,7 +16,7 @@ export default function Reports() {
       fetch('/api/reports/deps').then((r) => r.json()).then(setDeps),
       fetch('/api/reports/changelog').then((r) => r.json()).then(setChangelog),
       fetch('/api/reports/pagespeed').then((r) => r.json()).then(setPagespeed)
-    ]).catch(() => {}),
+    ]).catch(() => {})
   }, []),
 
   const lastUptime = uptime[uptime.length - 1],
@@ -64,5 +64,5 @@ export default function Reports() {
         </div>
       </section>
     </div>
-  ),
+  )
 }

@@ -21,7 +21,6 @@ import Referrals from "@/pages/Referrals",
 import DeveloperPortal from "@/pages/DeveloperPortal",
 import WalletPage from "@/pages/Wallet",
 import ContractBuilder from "@/pages/ContractBuilder",
-
 const DashboardRoutes = () => {
   return (
     <Routes>
@@ -195,7 +194,7 @@ const DashboardRoutes = () => {
         } 
       />
     </Routes>
-  ),
+  )
 },
 
 export default DashboardRoutes,

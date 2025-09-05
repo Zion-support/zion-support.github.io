@@ -5,14 +5,13 @@ import { SEO } from '@/components/SEO',
 import { Switch } from '@/components/ui/switch',
 import { Button } from '@/components/ui/button',
 import { useConsent } from '@/context/ConsentContext',
-
 export default function PrivacySettings() {
   const { consent, updateConsent } = useConsent(),
   const [analytics, setAnalytics] = useState(consent.analytics),
   const [ads, setAds] = useState(consent.ads),
 
   const handleSave = () => {
-    updateConsent({ analytics, ads }),
+    updateConsent({ analytics, ads })
   },
 
   return (
@@ -35,5 +34,5 @@ export default function PrivacySettings() {
       </main>
       <Footer />
     </>
-  ),
+  )
 }

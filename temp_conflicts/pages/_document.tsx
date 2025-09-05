@@ -26,5 +26,5 @@ export default function MyDocument() {
         <NextScript />
       </body>
     </Html>
-  ),
+  )
 }
