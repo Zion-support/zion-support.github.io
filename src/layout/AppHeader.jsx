@@ -2,7 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MainNavigation } from './MainNavigation';
 export function AppHeader() {
+<<<<<<< HEAD
     return (<header className="bg-white shadow-sm border-b border-gray-200">
+=======
+  return (
+    <header className="bg-white shadow-sm border-b border-gray-200">
+>>>>>>> origin/chore/resolve-conflicts-1756215853
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
@@ -13,5 +18,11 @@ export function AppHeader() {
           <MainNavigation />
         </div>
       </div>
+<<<<<<< HEAD
     </header>);
 }
+=======
+    </header>
+  );
+}
+>>>>>>> origin/chore/resolve-conflicts-1756215853
