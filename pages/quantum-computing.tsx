@@ -1,7 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
+import { Atom, Cpu, Zap, Lock, Brain, Target, Award, DollarSign, Clock } from 'lucide-react';
 
 export default function QuantumComputing() {
   const contact = {

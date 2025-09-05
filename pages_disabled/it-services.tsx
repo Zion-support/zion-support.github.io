@@ -29,7 +29,8 @@ import {
   Rocket,
   Target,
   Clock,
-  Mail
+  Mail,
+  Brain
 } from 'lucide-react';
 
 import Layout from '../components/Layout';
