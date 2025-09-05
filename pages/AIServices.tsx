@@ -1,1281 +1,653 @@
-import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
-
-export default function AIServices() {
-  const aiServices = [
-    {
-      name: "AI Content Creation Studio",
-      description: "Revolutionary AI-powered content creation platform that generates high-quality, brand-consistent content across multiple channels.",
-      price: "$299/month",
-      features: [
-        "Automated blog post generation",
-        "Social media content creation",
-        "Email marketing campaigns",
-        "SEO-optimized content",
-        "Multi-language support",
-        "Brand voice customization",
-        "Content calendar management",
-        "Performance analytics"
-      ],
-      benefits: [
-        "Reduce content creation time by 80%",
-        "Maintain consistent brand voice",
-        "Scale content production effortlessly",
-        "Improve SEO rankings"
-      ],
-      marketPrice: "$500-800/month",
-      savings: "Save up to $500/month"
-    },
-    {
-      name: "AI Email Automation Platform",
-      description: "Intelligent email management system that reads, categorizes, and responds to emails automatically while learning from your preferences.",
-      price: "$199/month",
-      features: [
-        "Smart email categorization",
-        "Automated response generation",
-        "Priority message flagging",
-        "Sentiment analysis",
-        "Follow-up automation",
-        "Email analytics dashboard",
-        "Integration with CRM systems",
-        "Custom response templates"
-      ],
-      benefits: [
-        "Handle 90% of routine emails automatically",
-        "Never miss important messages",
-        "Improve response time by 70%",
-        "Reduce email management overhead"
-      ],
-      marketPrice: "$300-500/month",
-      savings: "Save up to $300/month"
-    },
-    {
-      name: "AI Business Intelligence Suite",
-      description: "Advanced analytics platform that provides real-time insights, predictive analytics, and automated reporting for data-driven decision making.",
-      price: "$499/month",
-      features: [
-        "Real-time data visualization",
-        "Predictive analytics models",
-        "Automated report generation",
-        "Custom dashboard creation",
-        "Data integration from multiple sources",
-        "Anomaly detection",
-        "Trend analysis",
-        "Executive summary reports"
-      ],
-      benefits: [
-        "Make data-driven decisions faster",
-        "Identify opportunities and risks early",
-        "Reduce manual reporting by 85%",
-        "Improve business performance metrics"
-      ],
-      marketPrice: "$800-1200/month",
-      savings: "Save up to $700/month"
-    },
-    {
-      name: "AI Customer Support Automation",
-      description: "Comprehensive customer support platform with AI-powered chatbots, ticket routing, and automated resolution capabilities.",
-      price: "$399/month",
-      features: [
-        "Intelligent chatbot system",
-        "Automatic ticket routing",
-        "Knowledge base integration",
-        "Sentiment analysis",
-        "Multi-language support",
-        "Escalation management",
-        "Performance analytics",
-        "Custom workflow automation"
-      ],
-      benefits: [
-        "Reduce support response time by 60%",
-        "Handle 70% of inquiries automatically",
-        "Improve customer satisfaction scores",
-        "Scale support without additional staff"
-      ],
-      marketPrice: "$600-900/month",
-      savings: "Save up to $500/month"
-    },
-    {
-      name: "AI Marketing Automation Platform",
-      description: "End-to-end marketing automation with AI-driven personalization, campaign optimization, and customer journey mapping.",
-      price: "$599/month",
-      features: [
-        "AI-powered personalization",
-        "Automated campaign optimization",
-        "Customer journey mapping",
-        "A/B testing automation",
-        "Lead scoring and nurturing",
-        "Cross-channel marketing",
-        "ROI tracking and analytics",
-        "Integration with major platforms"
-      ],
-      benefits: [
-        "Increase conversion rates by 40%",
-        "Reduce marketing costs by 30%",
-        "Improve customer engagement",
-        "Automate complex marketing workflows"
-      ],
-      marketPrice: "$1000-1500/month",
-      savings: "Save up to $900/month"
-    },
-    {
-      name: "AI Financial Analytics Platform",
-      description: "Advanced financial analysis tool with AI-powered forecasting, risk assessment, and automated financial reporting.",
-      price: "$699/month",
-      features: [
-        "Financial forecasting models",
-        "Risk assessment algorithms",
-        "Automated financial reporting",
-        "Cash flow optimization",
-        "Investment analysis",
-        "Compliance monitoring",
-        "Fraud detection",
-        "Real-time financial dashboards"
-      ],
-      benefits: [
-        "Improve financial forecasting accuracy",
-        "Reduce financial risk exposure",
-        "Automate compliance reporting",
-        "Optimize cash flow management"
-      ],
-      marketPrice: "$1200-2000/month",
-      savings: "Save up to $1300/month"
-    },
-    {
-      name: "AI Document Intelligence Platform",
-      description: "Advanced document processing and analysis system that extracts insights, automates workflows, and ensures compliance across all document types.",
-      price: "$449/month",
-      features: [
-        "Intelligent document parsing",
-        "Automated data extraction",
-        "Contract analysis and review",
-        "Compliance monitoring",
-        "Document classification",
-        "Version control and tracking",
-        "OCR and text recognition",
-        "Workflow automation"
-      ],
-      benefits: [
-        "Reduce document processing time by 90%",
-        "Eliminate manual data entry errors",
-        "Ensure regulatory compliance",
-        "Improve document searchability"
-      ],
-      marketPrice: "$800-1200/month",
-      savings: "Save up to $750/month"
-    },
-    {
-      name: "AI Voice Assistant Platform",
-      description: "Enterprise-grade voice AI platform with natural language processing, voice analytics, and multi-channel voice automation.",
-      price: "$399/month",
-      features: [
-        "Natural language understanding",
-        "Voice command processing",
-        "Multi-language support",
-        "Voice analytics and insights",
-        "Integration with business systems",
-        "Custom voice training",
-        "Real-time transcription",
-        "Voice biometric authentication"
-      ],
-      benefits: [
-        "Improve customer experience with voice",
-        "Reduce call center costs by 50%",
-        "Enable hands-free operations",
-        "Enhance accessibility"
-      ],
-      marketPrice: "$700-1000/month",
-      savings: "Save up to $600/month"
-    },
-    {
-      name: "AI Predictive Maintenance System",
-      description: "IoT-powered predictive maintenance platform that uses AI to predict equipment failures and optimize maintenance schedules.",
-      price: "$599/month",
-      features: [
-        "IoT sensor integration",
-        "Machine learning algorithms",
-        "Failure prediction models",
-        "Maintenance scheduling optimization",
-        "Real-time monitoring dashboards",
-        "Cost-benefit analysis",
-        "Integration with existing systems",
-        "Mobile alerts and notifications"
-      ],
-      benefits: [
-        "Reduce unplanned downtime by 70%",
-        "Lower maintenance costs by 40%",
-        "Extend equipment lifespan",
-        "Improve operational efficiency"
-      ],
-      marketPrice: "$1000-1500/month",
-      savings: "Save up to $900/month"
-    },
-    {
-      name: "AI Code Generation Platform",
-      description: "Advanced AI-powered code generation and development assistance platform that accelerates software development and improves code quality.",
-      price: "$299/month",
-      features: [
-        "Intelligent code generation",
-        "Bug detection and fixing",
-        "Code optimization suggestions",
-        "Multi-language support",
-        "Integration with IDEs",
-        "Code review automation",
-        "Documentation generation",
-        "Testing assistance"
-      ],
-      benefits: [
-        "Accelerate development by 60%",
-        "Reduce bugs and technical debt",
-        "Improve code quality and consistency",
-        "Enable faster time-to-market"
-      ],
-      marketPrice: "$500-800/month",
-      savings: "Save up to $500/month"
-    },
-    {
-      name: "AI Social Media Management",
-      description: "Comprehensive AI-powered social media management platform with automated posting, engagement, and analytics across all major platforms.",
-      price: "$199/month",
-      features: [
-        "Automated content scheduling",
-        "AI-powered engagement responses",
-        "Sentiment analysis and monitoring",
-        "Hashtag optimization",
-        "Influencer identification",
-        "Crisis management alerts",
-        "Performance analytics",
-        "Multi-platform management"
-      ],
-      benefits: [
-        "Increase social media engagement by 80%",
-        "Reduce social media management time",
-        "Improve brand reputation monitoring",
-        "Optimize social media ROI"
-      ],
-      marketPrice: "$300-500/month",
-      savings: "Save up to $300/month"
-    },
-    {
-      name: "AI HR Analytics Platform",
-      description: "Advanced human resources analytics platform with AI-powered insights for recruitment, employee engagement, and workforce optimization.",
-      price: "$399/month",
-      features: [
-        "Resume screening and matching",
-        "Employee performance analytics",
-        "Retention prediction models",
-        "Skills gap analysis",
-        "Diversity and inclusion metrics",
-        "Recruitment optimization",
-        "Employee sentiment analysis",
-        "Workforce planning tools"
-      ],
-      benefits: [
-        "Improve hiring success rates by 50%",
-        "Reduce employee turnover by 30%",
-        "Optimize workforce planning",
-        "Enhance employee satisfaction"
-      ],
-      marketPrice: "$600-900/month",
-      savings: "Save up to $500/month"
-    },
-    {
-      name: "AI Supply Chain Optimization",
-      description: "Intelligent supply chain management platform with AI-powered demand forecasting, inventory optimization, and logistics automation.",
-      price: "$799/month",
-      features: [
-        "Demand forecasting algorithms",
-        "Inventory optimization",
-        "Supplier performance analytics",
-        "Risk assessment and mitigation",
-        "Route optimization",
-        "Cost analysis and reduction",
-        "Sustainability tracking",
-        "Real-time supply chain visibility"
-      ],
-      benefits: [
-        "Reduce inventory costs by 25%",
-        "Improve demand forecasting accuracy",
-        "Minimize supply chain disruptions",
-        "Optimize logistics operations"
-      ],
-      marketPrice: "$1200-2000/month",
-      savings: "Save up to $1200/month"
-    },
-    {
-      name: "AI Legal Document Analysis",
-      description: "Specialized AI platform for legal document analysis, contract review, and compliance monitoring with advanced natural language processing.",
-      price: "$599/month",
-      features: [
-        "Contract analysis and review",
-        "Legal document search",
-        "Compliance monitoring",
-        "Risk assessment",
-        "Clause extraction and comparison",
-        "Legal research assistance",
-        "Document summarization",
-        "Deadline tracking and alerts"
-      ],
-      benefits: [
-        "Reduce legal review time by 80%",
-        "Improve contract accuracy",
-        "Ensure regulatory compliance",
-        "Lower legal costs significantly"
-      ],
-      marketPrice: "$1000-1500/month",
-      savings: "Save up to $900/month"
-    },
-    {
-      name: "AI Video Analytics Platform",
-      description: "Advanced video analysis platform with AI-powered content recognition, sentiment analysis, and automated video processing capabilities.",
-      price: "$349/month",
-      features: [
-        "Video content analysis",
-        "Object and face recognition",
-        "Sentiment analysis from video",
-        "Automated video editing",
-        "Content moderation",
-        "Video search and indexing",
-        "Real-time video processing",
-        "Custom model training"
-      ],
-      benefits: [
-        "Automate video content processing",
-        "Improve content moderation efficiency",
-        "Enhance video search capabilities",
-        "Reduce manual video review time"
-      ],
-      marketPrice: "$600-900/month",
-      savings: "Save up to $550/month"
-    },
-    {
-      name: "AI Computer Vision Platform",
-      description: "Advanced computer vision platform with object detection, facial recognition, and image analysis capabilities for various industries.",
-      price: "$599/month",
-      features: [
-        "Real-time object detection and classification",
-        "Facial recognition and verification",
-        "OCR and text extraction from images",
-        "Quality control and defect detection",
-        "Medical image analysis",
-        "Security and surveillance monitoring",
-        "Custom model training",
-        "API integration and SDK"
-      ],
-      benefits: [
-        "Automate visual inspection processes",
-        "Improve accuracy by 95%",
-        "Reduce manual inspection costs",
-        "Enable 24/7 monitoring capabilities"
-      ],
-      marketPrice: "$1000-1500/month",
-      savings: "Save up to $900/month"
-    },
-    {
-      name: "AI Natural Language Processing Suite",
-      description: "Comprehensive NLP platform with sentiment analysis, language translation, text summarization, and chatbot development tools.",
-      price: "$449/month",
-      features: [
-        "Sentiment analysis and emotion detection",
-        "Multi-language translation (100+ languages)",
-        "Text summarization and extraction",
-        "Named entity recognition",
-        "Intent classification and understanding",
-        "Chatbot and virtual assistant development",
-        "Document analysis and processing",
-        "Custom model fine-tuning"
-      ],
-      benefits: [
-        "Understand customer sentiment in real-time",
-        "Break language barriers globally",
-        "Automate text processing workflows",
-        "Improve customer service automation"
-      ],
-      marketPrice: "$700-1200/month",
-      savings: "Save up to $750/month"
-    },
-    {
-      name: "AI Predictive Analytics Engine",
-      description: "Advanced predictive analytics platform with machine learning models for forecasting, risk assessment, and decision optimization.",
-      price: "$699/month",
-      features: [
-        "Time series forecasting",
-        "Risk assessment and scoring",
-        "Customer lifetime value prediction",
-        "Churn prediction and prevention",
-        "Market trend analysis",
-        "Anomaly detection",
-        "Recommendation engines",
-        "Automated model deployment"
-      ],
-      benefits: [
-        "Make data-driven predictions with 90% accuracy",
-        "Reduce business risks significantly",
-        "Optimize customer retention strategies",
-        "Improve strategic decision making"
-      ],
-      marketPrice: "$1200-2000/month",
-      savings: "Save up to $1300/month"
-    },
-    {
-      name: "AI Voice Recognition & Processing",
-      description: "Advanced voice AI platform with speech-to-text, voice commands, and intelligent voice analytics for business applications.",
-      price: "$399/month",
-      features: [
-        "Real-time speech-to-text conversion",
-        "Voice command recognition",
-        "Speaker identification and verification",
-        "Voice emotion analysis",
-        "Multi-language voice support",
-        "Custom wake word training",
-        "Voice biometrics authentication",
-        "Call center analytics"
-      ],
-      benefits: [
-        "Enable hands-free operations",
-        "Improve accessibility for all users",
-        "Enhance security with voice biometrics",
-        "Automate voice-based workflows"
-      ],
-      marketPrice: "$600-1000/month",
-      savings: "Save up to $600/month"
-    },
-    {
-      name: "AI Recommendation Engine",
-      description: "Intelligent recommendation system that personalizes content, products, and services based on user behavior and preferences.",
-      price: "$349/month",
-      features: [
-        "Collaborative filtering algorithms",
-        "Content-based recommendations",
-        "Hybrid recommendation models",
-        "Real-time personalization",
-        "A/B testing for recommendations",
-        "Cold start problem solutions",
-        "Multi-armed bandit optimization",
-        "Performance analytics dashboard"
-      ],
-      benefits: [
-        "Increase conversion rates by 40%",
-        "Improve user engagement significantly",
-        "Boost revenue through better targeting",
-        "Enhance customer satisfaction"
-      ],
-      marketPrice: "$500-800/month",
-      savings: "Save up to $450/month"
-    },
-    {
-      name: "AI Fraud Detection System",
-      description: "Advanced fraud detection platform with real-time monitoring, pattern recognition, and automated response capabilities.",
-      price: "$799/month",
-      features: [
-        "Real-time transaction monitoring",
-        "Machine learning fraud models",
-        "Behavioral pattern analysis",
-        "Risk scoring and assessment",
-        "Automated fraud prevention",
-        "False positive reduction",
-        "Multi-channel fraud detection",
-        "Compliance reporting tools"
-      ],
-      benefits: [
-        "Detect fraud with 99.5% accuracy",
-        "Reduce false positives by 80%",
-        "Prevent financial losses",
-        "Ensure regulatory compliance"
-      ],
-      marketPrice: "$1200-2000/month",
-      savings: "Save up to $1200/month"
-    },
-    {
-      name: "AI Chatbot Development Platform",
-      description: "Comprehensive chatbot development platform with natural language understanding, multi-channel deployment, and analytics.",
-      price: "$299/month",
-      features: [
-        "Visual chatbot builder",
-        "Natural language understanding",
-        "Multi-channel deployment (web, mobile, social)",
-        "Integration with CRM and databases",
-        "Conversation analytics",
-        "A/B testing capabilities",
-        "Human handoff functionality",
-        "Custom training data management"
-      ],
-      benefits: [
-        "Reduce customer service costs by 60%",
-        "Provide 24/7 customer support",
-        "Improve response time to seconds",
-        "Scale customer service efficiently"
-      ],
-      marketPrice: "$500-800/month",
-      savings: "Save up to $500/month"
-    },
-    {
-      name: "AI Data Labeling & Annotation",
-      description: "Automated data labeling platform with AI-powered annotation tools for machine learning model training and validation.",
-      price: "$249/month",
-      features: [
-        "Automated data annotation",
-        "Human-in-the-loop validation",
-        "Multi-modal data support",
-        "Quality assurance tools",
-        "Collaborative annotation workflows",
-        "Custom annotation schemas",
-        "Progress tracking and reporting",
-        "API integration for ML pipelines"
-      ],
-      benefits: [
-        "Reduce labeling time by 70%",
-        "Improve annotation accuracy",
-        "Scale data preparation processes",
-        "Accelerate ML model development"
-      ],
-      marketPrice: "$400-700/month",
-      savings: "Save up to $450/month"
-    },
-    {
-      name: "AI Edge Computing Platform",
-      description: "Edge AI platform for deploying machine learning models on edge devices with real-time inference and optimization.",
-      price: "$599/month",
-      features: [
-        "Model optimization for edge devices",
-        "Real-time inference capabilities",
-        "Edge device management",
-        "Offline operation support",
-        "Model versioning and updates",
-        "Performance monitoring",
-        "Security and encryption",
-        "Multi-device synchronization"
-      ],
-      benefits: [
-        "Reduce latency to milliseconds",
-        "Enable offline AI capabilities",
-        "Lower bandwidth requirements",
-        "Improve privacy and security"
-      ],
-      marketPrice: "$900-1500/month",
-      savings: "Save up to $900/month"
-    },
-    {
-      name: "AI Model Monitoring & MLOps",
-      description: "Comprehensive MLOps platform for monitoring, managing, and maintaining machine learning models in production.",
-      price: "$499/month",
-      features: [
-        "Model performance monitoring",
-        "Data drift detection",
-        "Model versioning and management",
-        "Automated retraining pipelines",
-        "A/B testing for models",
-        "Model governance and compliance",
-        "Alert and notification system",
-        "Integration with CI/CD pipelines"
-      ],
-      benefits: [
-        "Ensure model reliability and accuracy",
-        "Automate model lifecycle management",
-        "Reduce model degradation risks",
-        "Improve operational efficiency"
-      ],
-      marketPrice: "$800-1200/month",
-      savings: "Save up to $700/month"
-    }
-  ];
-
-import { Star } from 'lucide-react';
-import Head from 'next/head';
-import Link from 'next/link';
-
-import Layout from '../components/Layout';
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
-import { 
-  Brain, 
-  Bot, 
-  Eye, 
-  MessageSquare, 
-  BarChart3, 
-  Zap, 
-  Shield, 
-  ArrowRight, 
-  CheckCircle, 
-  Star,
-  Clock,
+import Head from 'next/head';
+import Link from 'next/link';
+import {
+  Brain,
+  Bot,
+  BarChart3,
+  FileText,
+  Mail,
   Users,
+  Target,
+  Zap,
+  Shield,
   Globe,
+  Camera,
+  Mic,
+  Video,
+  Code,
   Database,
   Cpu,
-  Target,
+  Network,
+  Eye,
+  Search,
   TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Clock,
+  Star,
+  DollarSign,
+  Award,
+  Lock,
+  Phone,
+  MapPin,
+  MessageSquare,
+  PieChart,
+  Settings,
+  Monitor,
   Smartphone,
-  FileText,
-  Image,
-  Mic,
-  Code,
-  Layers
+  Laptop,
+  Server,
+  Cloud,
+  Heart,
+  Building,
+  Truck,
+  CreditCard,
+  GraduationCap,
+  ClipboardList,
+  Package,
+  Calendar,
+  BookOpen,
+  ShoppingCart,
+  Home,
+  Trash2,
+  Camera as CameraIcon,
+  HardDrive,
+  Wifi,
+  Rocket,
+  Sprout,
+  TreePine,
+  Droplets
 } from 'lucide-react';
 
 const aiServices = [
+  // AI Content & Marketing Solutions
   {
-    category: "Natural Language Processing",
-    icon: MessageSquare,
-    color: "from-blue-500 to-cyan-500",
-    services: [
-      {
-        name: "AI Chatbots & Virtual Assistants",
-        description: "Intelligent conversational AI that understands context and provides human-like responses",
-        features: ["24/7 customer support", "Multi-language support", "Integration with CRM", "Sentiment analysis"],
-        pricing: "Starting at $2,500/month",
-        delivery: "4-8 weeks"
-      },
-      {
-        name: "Document Processing & Analysis",
-        description: "Automated document understanding, extraction, and intelligent analysis",
-        features: ["PDF/Word processing", "Data extraction", "Content summarization", "Classification"],
-        pricing: "Starting at $1,800/month",
-        delivery: "3-6 weeks"
-      },
-      {
-        name: "Content Generation & Copywriting",
-        description: "AI-powered content creation for marketing, blogs, and business communications",
-        features: ["Blog posts", "Marketing copy", "Email campaigns", "Social media content"],
-        pricing: "Starting at $1,200/month",
-        delivery: "2-4 weeks"
-      },
-      {
-        name: "AI Code Generation & Review",
-        description: "Automated code generation, review, and optimization using advanced AI models",
-        features: ["Code generation", "Bug detection", "Performance optimization", "Security analysis"],
-        pricing: "Starting at $3,000/month",
-        delivery: "4-8 weeks"
-      },
-      {
-        name: "AI-Powered Search & Discovery",
-        description: "Intelligent search engines that understand context and provide relevant results",
-        features: ["Semantic search", "Context understanding", "Personalized results", "Multi-modal search"],
-        pricing: "Starting at $2,800/month",
-        delivery: "6-10 weeks"
-      }
-    ]
+    title: 'AI Content Creation Studio',
+    description: 'Revolutionary AI-powered content creation platform that generates high-quality, brand-consistent content across multiple channels with advanced natural language processing.',
+    icon: FileText,
+    features: ['Automated Blog Generation', 'Social Media Content', 'Email Marketing Campaigns', 'SEO Optimization', 'Multi-language Support', 'Brand Voice Training', 'Content Calendar Management', 'Performance Analytics'],
+    pricing: '$299 - $1,499/month',
+    category: 'AI Content',
+    popular: true,
+    benefits: ['80% Time Reduction', 'Consistent Brand Voice', 'Scalable Production', 'SEO Boost', 'Multi-channel Reach'],
+    marketPrice: '$500 - $2,000/month',
+    link: 'https://ziontechgroup.com/ai-content-creation-studio',
+    contact: '+1 302 464 0950'
   },
   {
-    category: "Computer Vision",
-    icon: Eye,
-    color: "from-purple-500 to-pink-500",
-    services: [
-      {
-        name: "Image Recognition & Classification",
-        description: "Advanced image analysis for object detection, classification, and visual search",
-        features: ["Object detection", "Image classification", "Visual search", "Quality assessment"],
-        pricing: "Starting at $3,500/month",
-        delivery: "6-10 weeks"
-      },
-      {
-        name: "OCR & Document Scanning",
-        description: "Optical Character Recognition for digitizing printed documents and forms",
-        features: ["Text extraction", "Form processing", "Handwriting recognition", "Multi-language OCR"],
-        pricing: "Starting at $2,200/month",
-        delivery: "4-8 weeks"
-      },
-      {
-        name: "Facial Recognition & Biometrics",
-        description: "Secure identity verification and access control systems",
-        features: ["Face detection", "Identity verification", "Access control", "Privacy compliance"],
-        pricing: "Starting at $4,500/month",
-        delivery: "8-12 weeks"
-      }
-    ]
+    title: 'AI Marketing Automation Platform',
+    description: 'Comprehensive marketing automation with AI-powered personalization, predictive analytics, and automated campaign optimization.',
+    icon: Target,
+    features: ['Predictive Analytics', 'Personalized Campaigns', 'Automated A/B Testing', 'Customer Segmentation', 'Lead Scoring', 'ROI Optimization', 'Multi-channel Integration', 'Real-time Optimization'],
+    pricing: '$399 - $1,999/month',
+    category: 'AI Marketing',
+    popular: true,
+    benefits: ['Higher Conversion Rates', 'Personalized Experiences', 'Automated Optimization', 'Better ROI', 'Scalable Marketing'],
+    marketPrice: '$600 - $3,000/month',
+    link: 'https://ziontechgroup.com/ai-marketing-automation',
+    contact: '+1 302 464 0950'
   },
   {
-    category: "Machine Learning & Analytics",
+    title: 'AI Email Intelligence System',
+    description: 'Intelligent email management system that reads, categorizes, and responds to emails automatically while learning from your preferences and context.',
+    icon: Mail,
+    features: ['Smart Categorization', 'Automated Responses', 'Priority Flagging', 'Sentiment Analysis', 'Follow-up Automation', 'CRM Integration', 'Custom Templates', 'Performance Analytics'],
+    pricing: '$199 - $999/month',
+    category: 'AI Communication',
+    popular: true,
+    benefits: ['90% Email Automation', 'Never Miss Important Messages', '70% Faster Response', 'Reduced Overhead'],
+    marketPrice: '$300 - $1,500/month',
+    link: 'https://ziontechgroup.com/ai-email-intelligence',
+    contact: '+1 302 464 0950'
+  },
+
+  // AI Analytics & Business Intelligence
+  {
+    title: 'AI Business Intelligence Suite',
+    description: 'Advanced analytics platform that provides real-time insights, predictive analytics, and automated reporting for data-driven decision making.',
     icon: BarChart3,
-    color: "from-green-500 to-emerald-500",
-    services: [
-      {
-        name: "Predictive Analytics",
-        description: "Data-driven insights and forecasting for business decision making",
-        features: ["Sales forecasting", "Customer behavior prediction", "Risk assessment", "Trend analysis"],
-        pricing: "Starting at $3,000/month",
-        delivery: "6-12 weeks"
-      },
-      {
-        name: "Recommendation Engines",
-        description: "Personalized content and product recommendations for enhanced user experience",
-        features: ["Product recommendations", "Content personalization", "Cross-selling", "A/B testing"],
-        pricing: "Starting at $2,800/month",
-        delivery: "5-10 weeks"
-      },
-      {
-        name: "Fraud Detection & Security",
-        description: "AI-powered fraud prevention and security monitoring systems",
-        features: ["Real-time monitoring", "Anomaly detection", "Risk scoring", "Alert systems"],
-        pricing: "Starting at $4,000/month",
-        delivery: "8-14 weeks"
-      }
-    ]
+    features: ['Real-time Visualization', 'Predictive Analytics', 'Automated Reporting', 'Custom Dashboards', 'Multi-source Integration', 'Anomaly Detection', 'Trend Analysis', 'Executive Summaries'],
+    pricing: '$499 - $2,499/month',
+    category: 'AI Analytics',
+    popular: true,
+    benefits: ['Faster Decision Making', 'Early Risk Detection', '85% Less Manual Reporting', 'Better Performance Metrics'],
+    marketPrice: '$800 - $4,000/month',
+    link: 'https://ziontechgroup.com/ai-business-intelligence',
+    contact: '+1 302 464 0950'
   },
   {
-    category: "Voice & Audio AI",
+    title: 'AI Predictive Analytics Engine',
+    description: 'Machine learning-powered predictive analytics platform for forecasting trends, customer behavior, and business outcomes.',
+    icon: TrendingUp,
+    features: ['Trend Forecasting', 'Customer Behavior Prediction', 'Demand Forecasting', 'Risk Assessment', 'Scenario Modeling', 'Real-time Predictions', 'Model Training', 'Performance Monitoring'],
+    pricing: '$799 - $3,999/month',
+    category: 'AI Analytics',
+    popular: true,
+    benefits: ['Accurate Predictions', 'Risk Mitigation', 'Better Planning', 'Competitive Advantage', 'Data-Driven Insights'],
+    marketPrice: '$1,200 - $6,000/month',
+    link: 'https://ziontechgroup.com/ai-predictive-analytics',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Data Mining & Insights',
+    description: 'Advanced data mining platform that discovers hidden patterns, correlations, and insights from large datasets using machine learning.',
+    icon: Database,
+    features: ['Pattern Recognition', 'Correlation Analysis', 'Anomaly Detection', 'Data Visualization', 'Automated Insights', 'Custom Algorithms', 'Real-time Processing', 'Scalable Architecture'],
+    pricing: '$599 - $2,999/month',
+    category: 'AI Data Science',
+    popular: true,
+    benefits: ['Hidden Pattern Discovery', 'Automated Insights', 'Better Data Understanding', 'Competitive Intelligence', 'Scalable Analysis'],
+    marketPrice: '$900 - $4,500/month',
+    link: 'https://ziontechgroup.com/ai-data-mining-insights',
+    contact: '+1 302 464 0950'
+  },
+
+  // AI Customer Experience Solutions
+  {
+    title: 'AI Customer Support Automation',
+    description: 'Comprehensive customer support platform with AI-powered chatbots, ticket routing, and automated resolution capabilities.',
+    icon: Bot,
+    features: ['Intelligent Chatbots', 'Automatic Ticket Routing', 'Knowledge Base Integration', 'Sentiment Analysis', 'Multi-language Support', 'Escalation Management', 'Performance Analytics', 'Custom Workflows'],
+    pricing: '$399 - $1,999/month',
+    category: 'AI Support',
+    popular: true,
+    benefits: ['60% Faster Response', '70% Auto-resolution', 'Higher Satisfaction', 'Scalable Support'],
+    marketPrice: '$600 - $3,000/month',
+    link: 'https://ziontechgroup.com/ai-customer-support',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Voice Assistant Platform',
+    description: 'Advanced voice AI platform with natural language processing, speech recognition, and conversational AI capabilities.',
     icon: Mic,
-    color: "from-orange-500 to-red-500",
-    services: [
-      {
-        name: "Speech Recognition & Transcription",
-        description: "Convert speech to text with high accuracy across multiple languages",
-        features: ["Real-time transcription", "Multi-language support", "Speaker identification", "Noise reduction"],
-        pricing: "Starting at $1,500/month",
-        delivery: "3-6 weeks"
-      },
-      {
-        name: "Voice Synthesis & Text-to-Speech",
-        description: "Natural-sounding voice generation for applications and services",
-        features: ["Natural voices", "Multiple languages", "Emotion control", "Custom voice training"],
-        pricing: "Starting at $2,000/month",
-        delivery: "4-8 weeks"
-      },
-      {
-        name: "Voice Assistants & IVR Systems",
-        description: "Interactive voice response systems with AI-powered conversation handling",
-        features: ["Call routing", "Voice commands", "Natural conversations", "Integration APIs"],
-        pricing: "Starting at $3,200/month",
-        delivery: "6-10 weeks"
-      }
-    ]
+    features: ['Natural Language Processing', 'Speech Recognition', 'Voice Synthesis', 'Conversational AI', 'Multi-language Support', 'Custom Voice Training', 'Integration APIs', 'Analytics Dashboard'],
+    pricing: '$299 - $1,499/month',
+    category: 'AI Voice',
+    popular: true,
+    benefits: ['Natural Conversations', 'Multi-language Support', 'Custom Voice Training', 'Seamless Integration', 'Enhanced User Experience'],
+    marketPrice: '$500 - $2,500/month',
+    link: 'https://ziontechgroup.com/ai-voice-assistant',
+    contact: '+1 302 464 0950'
   },
   {
-    category: "Emerging AI Technologies",
+    title: 'AI Customer Journey Analytics',
+    description: 'Comprehensive customer journey mapping and analytics platform that tracks and optimizes every touchpoint using AI.',
+    icon: Eye,
+    features: ['Journey Mapping', 'Touchpoint Analysis', 'Behavior Tracking', 'Optimization Recommendations', 'Real-time Monitoring', 'Predictive Insights', 'A/B Testing', 'ROI Measurement'],
+    pricing: '$599 - $2,999/month',
+    category: 'AI Analytics',
+    popular: true,
+    benefits: ['Complete Journey Visibility', 'Optimized Touchpoints', 'Better Customer Experience', 'Higher Conversion', 'Data-Driven Optimization'],
+    marketPrice: '$900 - $4,500/month',
+    link: 'https://ziontechgroup.com/ai-customer-journey',
+    contact: '+1 302 464 0950'
+  },
+
+  // AI Computer Vision Solutions
+  {
+    title: 'AI Computer Vision Platform',
+    description: 'Advanced computer vision platform with image recognition, object detection, and visual analytics capabilities.',
+    icon: Camera,
+    features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'OCR Processing', 'Visual Analytics', 'Real-time Processing', 'Custom Model Training', 'API Integration'],
+    pricing: '$499 - $2,499/month',
+    category: 'AI Vision',
+    popular: true,
+    benefits: ['Accurate Image Analysis', 'Real-time Processing', 'Custom Model Training', 'Scalable Vision AI', 'Multiple Applications'],
+    marketPrice: '$800 - $4,000/month',
+    link: 'https://ziontechgroup.com/ai-computer-vision',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Video Analytics Suite',
+    description: 'Comprehensive video analytics platform with real-time analysis, object tracking, and behavioral insights.',
+    icon: Video,
+    features: ['Real-time Analysis', 'Object Tracking', 'Behavioral Analysis', 'Motion Detection', 'Facial Recognition', 'Scene Understanding', 'Custom Alerts', 'Analytics Dashboard'],
+    pricing: '$699 - $3,499/month',
+    category: 'AI Vision',
+    popular: true,
+    benefits: ['Real-time Video Analysis', 'Advanced Object Tracking', 'Behavioral Insights', 'Security Enhancement', 'Automated Monitoring'],
+    marketPrice: '$1,100 - $5,500/month',
+    link: 'https://ziontechgroup.com/ai-video-analytics',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Document Processing System',
+    description: 'Intelligent document processing platform with OCR, data extraction, and automated document classification.',
+    icon: FileText,
+    features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Form Processing', 'Handwriting Recognition', 'Multi-language Support', 'Automated Workflows', 'Quality Assurance'],
+    pricing: '$399 - $1,999/month',
+    category: 'AI Document',
+    popular: true,
+    benefits: ['Automated Processing', 'High Accuracy', 'Multi-format Support', 'Cost Reduction', 'Faster Processing'],
+    marketPrice: '$600 - $3,000/month',
+    link: 'https://ziontechgroup.com/ai-document-processing',
+    contact: '+1 302 464 0950'
+  },
+
+  // AI Machine Learning Solutions
+  {
+    title: 'AI Machine Learning Platform',
+    description: 'Comprehensive ML platform with automated model training, deployment, and monitoring capabilities.',
     icon: Cpu,
-    color: "from-green-500 to-teal-500",
-    services: [
-      {
-        name: "Quantum Machine Learning",
-        description: "Leverage quantum computing for advanced machine learning algorithms",
-        features: ["Quantum algorithms", "Faster processing", "Complex optimization", "Quantum advantage"],
-        pricing: "Starting at $15,000/month",
-        delivery: "12-20 weeks"
-      },
-      {
-        name: "AI-Powered Blockchain Solutions",
-        description: "Integrate AI with blockchain for smart contracts and decentralized applications",
-        features: ["Smart contracts", "DeFi integration", "NFT generation", "Decentralized AI"],
-        pricing: "Starting at $8,500/month",
-        delivery: "10-16 weeks"
-      },
-      {
-        name: "Edge AI & IoT Integration",
-        description: "Deploy AI models on edge devices for real-time processing",
-        features: ["Edge deployment", "Real-time processing", "IoT integration", "Low latency"],
-        pricing: "Starting at $5,500/month",
-        delivery: "8-12 weeks"
-      },
-      {
-        name: "AI Ethics & Bias Detection",
-        description: "Ensure AI systems are fair, transparent, and ethically compliant",
-        features: ["Bias detection", "Fairness metrics", "Explainable AI", "Ethics compliance"],
-        pricing: "Starting at $4,200/month",
-        delivery: "6-10 weeks"
-      }
-    ]
+    features: ['Automated Model Training', 'Model Deployment', 'Performance Monitoring', 'A/B Testing', 'Feature Engineering', 'Hyperparameter Optimization', 'Model Versioning', 'Scalable Infrastructure'],
+    pricing: '$999 - $4,999/month',
+    category: 'AI ML Platform',
+    popular: true,
+    benefits: ['Automated ML Pipeline', 'Faster Model Development', 'Better Model Performance', 'Scalable Infrastructure', 'Reduced Development Time'],
+    marketPrice: '$1,500 - $7,500/month',
+    link: 'https://ziontechgroup.com/ai-machine-learning-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Deep Learning Framework',
+    description: 'Advanced deep learning framework with pre-trained models, custom model development, and GPU acceleration.',
+    icon: Brain,
+    features: ['Pre-trained Models', 'Custom Model Development', 'GPU Acceleration', 'Transfer Learning', 'Model Optimization', 'Distributed Training', 'Model Serving', 'Performance Monitoring'],
+    pricing: '$1,499 - $7,499/month',
+    category: 'AI Deep Learning',
+    popular: true,
+    benefits: ['Advanced AI Capabilities', 'Faster Training', 'Better Performance', 'Scalable Computing', 'Pre-trained Models'],
+    marketPrice: '$2,500 - $12,000/month',
+    link: 'https://ziontechgroup.com/ai-deep-learning-framework',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Natural Language Processing',
+    description: 'Advanced NLP platform with text analysis, sentiment analysis, and language understanding capabilities.',
+    icon: MessageSquare,
+    features: ['Text Analysis', 'Sentiment Analysis', 'Language Understanding', 'Entity Recognition', 'Text Classification', 'Language Translation', 'Summarization', 'Question Answering'],
+    pricing: '$299 - $1,499/month',
+    category: 'AI NLP',
+    popular: true,
+    benefits: ['Advanced Text Understanding', 'Multi-language Support', 'Accurate Analysis', 'Scalable Processing', 'Custom Models'],
+    marketPrice: '$500 - $2,500/month',
+    link: 'https://ziontechgroup.com/ai-natural-language-processing',
+    contact: '+1 302 464 0950'
+  },
+
+  // AI Industry-Specific Solutions
+  {
+    title: 'AI Healthcare Diagnostics',
+    description: 'AI-powered healthcare diagnostic platform with medical image analysis, symptom analysis, and treatment recommendations.',
+    icon: Heart,
+    features: ['Medical Image Analysis', 'Symptom Analysis', 'Treatment Recommendations', 'Drug Interaction Check', 'Patient Risk Assessment', 'Clinical Decision Support', 'HIPAA Compliance', 'Integration APIs'],
+    pricing: '$2,999 - $14,999/month',
+    category: 'AI Healthcare',
+    popular: true,
+    benefits: ['Improved Diagnostics', 'Faster Analysis', 'Better Patient Care', 'Reduced Errors', 'Compliance Ready'],
+    marketPrice: '$4,500 - $22,500/month',
+    link: 'https://ziontechgroup.com/ai-healthcare-diagnostics',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Financial Risk Assessment',
+    description: 'AI-powered financial risk assessment platform with fraud detection, credit scoring, and market analysis.',
+    icon: CreditCard,
+    features: ['Fraud Detection', 'Credit Scoring', 'Market Analysis', 'Risk Assessment', 'Anomaly Detection', 'Real-time Monitoring', 'Regulatory Compliance', 'Predictive Modeling'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'AI FinTech',
+    popular: true,
+    benefits: ['Enhanced Security', 'Better Risk Management', 'Faster Processing', 'Compliance Assurance', 'Cost Reduction'],
+    marketPrice: '$3,000 - $15,000/month',
+    link: 'https://ziontechgroup.com/ai-financial-risk-assessment',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Manufacturing Optimization',
+    description: 'AI-powered manufacturing optimization platform with predictive maintenance, quality control, and process optimization.',
+    icon: Building,
+    features: ['Predictive Maintenance', 'Quality Control', 'Process Optimization', 'Supply Chain Analytics', 'Demand Forecasting', 'Energy Optimization', 'Safety Monitoring', 'Performance Analytics'],
+    pricing: '$1,499 - $7,499/month',
+    category: 'AI Manufacturing',
+    popular: true,
+    benefits: ['Reduced Downtime', 'Better Quality', 'Cost Optimization', 'Improved Safety', 'Higher Efficiency'],
+    marketPrice: '$2,500 - $12,000/month',
+    link: 'https://ziontechgroup.com/ai-manufacturing-optimization',
+    contact: '+1 302 464 0950'
+  },
+
+  // AI Emerging Technologies
+  {
+    title: 'AI Quantum Computing Interface',
+    description: 'AI-powered quantum computing interface that bridges classical and quantum computing for advanced problem solving.',
+    icon: Cpu,
+    features: ['Quantum Algorithm Development', 'Hybrid Computing', 'Quantum Simulation', 'Optimization Problems', 'Machine Learning Integration', 'Performance Monitoring', 'API Access', 'Expert Support'],
+    pricing: '$4,999 - $24,999/month',
+    category: 'AI Quantum',
+    popular: true,
+    benefits: ['Quantum Advantage', 'Advanced Problem Solving', 'Future-Proof Technology', 'Competitive Edge', 'Innovation Leadership'],
+    marketPrice: '$7,500 - $37,500/month',
+    link: 'https://ziontechgroup.com/ai-quantum-computing-interface',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Blockchain Analytics',
+    description: 'AI-powered blockchain analytics platform with transaction analysis, smart contract auditing, and compliance monitoring.',
+    icon: Network,
+    features: ['Transaction Analysis', 'Smart Contract Auditing', 'Compliance Monitoring', 'Risk Assessment', 'Pattern Recognition', 'Real-time Alerts', 'Regulatory Reporting', 'API Integration'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'AI Blockchain',
+    popular: true,
+    benefits: ['Enhanced Security', 'Compliance Assurance', 'Risk Mitigation', 'Transparency', 'Audit Readiness'],
+    marketPrice: '$3,000 - $15,000/month',
+    link: 'https://ziontechgroup.com/ai-blockchain-analytics',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI IoT Intelligence Platform',
+    description: 'AI-powered IoT platform with device management, data processing, and intelligent automation capabilities.',
+    icon: Wifi,
+    features: ['Device Management', 'Data Processing', 'Intelligent Automation', 'Predictive Maintenance', 'Anomaly Detection', 'Real-time Analytics', 'Edge Computing', 'Security Monitoring'],
+    pricing: '$799 - $3,999/month',
+    category: 'AI IoT',
+    popular: true,
+    benefits: ['Intelligent Automation', 'Predictive Insights', 'Cost Optimization', 'Enhanced Security', 'Scalable Platform'],
+    marketPrice: '$1,200 - $6,000/month',
+    link: 'https://ziontechgroup.com/ai-iot-intelligence-platform',
+    contact: '+1 302 464 0950'
+  },
+
+  // AI Education & Training Solutions
+  {
+    title: 'AI Learning Management System',
+    description: 'AI-powered LMS with personalized learning paths, automated assessments, and intelligent tutoring capabilities.',
+    icon: GraduationCap,
+    features: ['Personalized Learning', 'Automated Assessments', 'Intelligent Tutoring', 'Progress Tracking', 'Content Recommendation', 'Adaptive Learning', 'Performance Analytics', 'Multi-language Support'],
+    pricing: '$399 - $1,999/month',
+    category: 'AI Education',
+    popular: true,
+    benefits: ['Personalized Learning', 'Better Outcomes', 'Automated Assessment', 'Scalable Education', 'Cost Efficiency'],
+    marketPrice: '$600 - $3,000/month',
+    link: 'https://ziontechgroup.com/ai-learning-management-system',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Virtual Training Assistant',
+    description: 'AI-powered virtual training assistant with interactive simulations, personalized coaching, and performance tracking.',
+    icon: Monitor,
+    features: ['Interactive Simulations', 'Personalized Coaching', 'Performance Tracking', 'Skill Assessment', 'Progress Monitoring', 'Adaptive Training', 'Real-time Feedback', 'Certification Management'],
+    pricing: '$599 - $2,999/month',
+    category: 'AI Training',
+    popular: true,
+    benefits: ['Interactive Learning', 'Personalized Coaching', 'Better Retention', 'Scalable Training', 'Performance Tracking'],
+    marketPrice: '$900 - $4,500/month',
+    link: 'https://ziontechgroup.com/ai-virtual-training-assistant',
+    contact: '+1 302 464 0950'
   }
 ];
 
-const microSaaS = [
-  {
-    name: "AI Email Assistant",
-    description: "Smart email management with automated responses and scheduling",
-    features: ["Auto-reply generation", "Email prioritization", "Meeting scheduling", "Sentiment analysis"],
-    pricing: "$99/month per user",
-    icon: MessageSquare
-  },
-  {
-    name: "AI Social Media Manager",
-    description: "Automated social media content creation and posting",
-    features: ["Content generation", "Post scheduling", "Engagement analysis", "Hashtag optimization"],
-    pricing: "$149/month per account",
-    icon: Globe
-  },
-  {
-    name: "AI Meeting Transcriber",
-    description: "Real-time meeting transcription with action item extraction",
-    features: ["Live transcription", "Action items", "Meeting summaries", "Speaker identification"],
-    pricing: "$79/month per user",
-    icon: Mic
-  },
-  {
-    name: "AI Code Reviewer",
-    description: "Automated code review and bug detection for development teams",
-    features: ["Code analysis", "Bug detection", "Security scanning", "Performance optimization"],
-    pricing: "$199/month per team",
-    icon: Code
-  },
-  {
-    name: "AI Customer Support Bot",
-    description: "Intelligent customer support with ticket routing and resolution",
-    features: ["Ticket classification", "Auto-responses", "Escalation management", "Knowledge base"],
-    pricing: "$299/month per 1000 tickets",
-    icon: Bot
-  },
-  {
-    name: "AI Data Analyzer",
-    description: "Automated data analysis and visualization for business insights",
-    features: ["Data processing", "Chart generation", "Insight extraction", "Report automation"],
-    pricing: "$179/month per dataset",
-    icon: BarChart3
-  },
-  {
-    name: "AI Legal Document Analyzer",
-    description: "Automated legal document review and contract analysis",
-    features: ["Contract analysis", "Risk assessment", "Clause extraction", "Compliance checking"],
-    pricing: "$399/month per 100 documents",
-    icon: FileText
-  },
-  {
-    name: "AI Video Content Creator",
-    description: "Automated video creation and editing using AI",
-    features: ["Video generation", "Auto-editing", "Voice synthesis", "Subtitle generation"],
-    pricing: "$249/month per 10 videos",
-    icon: Image
-  },
-  {
-    name: "AI Financial Advisor",
-    description: "Personalized financial advice and investment recommendations",
-    features: ["Portfolio analysis", "Risk assessment", "Investment suggestions", "Market insights"],
-    pricing: "$199/month per user",
-    icon: TrendingUp
-  },
-  {
-    name: "AI HR Assistant",
-    description: "Automated HR processes including recruitment and employee management",
-    features: ["Resume screening", "Interview scheduling", "Performance tracking", "Employee insights"],
-    pricing: "$299/month per 50 employees",
-    icon: Users
-  },
-  {
-    name: "AI Supply Chain Optimizer",
-    description: "Optimize supply chain operations with AI-powered predictions",
-    features: ["Demand forecasting", "Inventory optimization", "Route planning", "Risk management"],
-    pricing: "$599/month per location",
-    icon: Target
-  }
-];
-
-const processSteps = [
-  {
-    step: "01",
-    title: "Discovery & Assessment",
-    description: "We analyze your business needs and current AI readiness to design the perfect solution."
-  },
-  {
-    step: "02",
-    title: "Strategy & Planning",
-    description: "Our AI experts develop a comprehensive implementation strategy tailored to your goals."
-  },
-  {
-    step: "03",
-    title: "Development & Training",
-    description: "We build and train your AI models using cutting-edge algorithms and your data."
-  },
-  {
-    step: "04",
-    title: "Testing & Optimization",
-    description: "Rigorous testing ensures your AI solution performs optimally in real-world scenarios."
-  },
-  {
-    step: "05",
-    title: "Deployment & Support",
-    description: "We launch your AI solution and provide ongoing monitoring, maintenance, and support."
-  }
-];
-
-const stats = [
-  { number: "500+", label: "AI Projects Delivered" },
-  { number: "99.2%", label: "Accuracy Rate" },
-  { number: "24/7", label: "AI Monitoring" },
-  { number: "48hrs", label: "Average Response Time" }
-];
->>>>>>> main
-
-export default function AIServices() {
->>>>>>> main
+export default function AIServicesPage() {
   return (
-    <Layout 
-      title="AI Services - Zion Tech Group" 
-      description="Comprehensive AI services including machine learning, natural language processing, computer vision, and custom AI solutions. Transform your business with cutting-edge artificial intelligence."
-      keywords="AI services, machine learning, natural language processing, computer vision, AI chatbots, predictive analytics, AI consulting"
-    >
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Services & Solutions
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your business with cutting-edge artificial intelligence. From chatbots and computer vision 
-              to predictive analytics and custom AI solutions - we deliver intelligent automation that drives results.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-              >
-                Get Free AI Consultation
-              </Link>
-              <Link 
-                href="#services" 
-                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold"
-              >
-                Explore Our Services
-              </Link>
     <>
       <Head>
-        <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI services including content creation, customer support automation, and business intelligence solutions." />
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation, content creation" />
+        <title>AI Services & Solutions - Zion Tech Group | 80+ Cutting-Edge AI Platforms</title>
+        <meta name="description" content="Discover 80+ cutting-edge AI services from Zion Tech Group. Machine learning, computer vision, NLP, predictive analytics, and AI automation tools starting at $199/month. Transform your business with AI!" />
+        <meta name="keywords" content="AI services, machine learning, computer vision, NLP, predictive analytics, AI automation, artificial intelligence, AI platforms" />
+        <meta property="og:title" content="AI Services & Solutions - Zion Tech Group" />
+        <meta property="og:description" content="80+ cutting-edge AI services and solutions. From machine learning to computer vision, we provide advanced AI capabilities for modern enterprises." />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-services" />
+        <meta property="og:type" content="website" />
       </Head>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Header */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Services
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Revolutionary artificial intelligence solutions that transform your business operations and drive growth
-          </p>
-          <div className="bg-cyan-500/20 border border-cyan-500/30 rounded-lg p-6 max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-cyan-400 mb-4">Why Choose Our AI Services?</h2>
-            <div className="grid md:grid-cols-3 gap-6 text-left">
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-2">Cost Effective</h3>
-                <p className="text-gray-300">Save up to 70% compared to market rates</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-2">Proven Results</h3>
-                <p className="text-gray-300">Average 40% improvement in efficiency</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-2">24/7 Support</h3>
-                <p className="text-gray-300">Round-the-clock technical assistance</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* AI Services Categories */}
-      <section id="services" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              AI Service Categories
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              Comprehensive AI solutions across multiple domains to address every aspect of your business needs.
-            </p>
-          </motion.div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
 
-          {aiServices.map((category, categoryIndex) => (
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              key={categoryIndex}
-              className="mb-16"
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
             >
-              <div className="flex items-center mb-8">
-                <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center mr-4`}>
-                  <category.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-3xl font-bold text-gray-900">
-                  {category.category}
-                </h3>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                AI Services & Solutions
+                <span className="block text-blue-400">80+ Cutting-Edge AI Platforms</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Transform your business with our comprehensive AI services. From machine learning to computer vision, we provide advanced artificial intelligence capabilities for modern enterprises.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Get Free Consultation
+                </Link>
+                <a href="tel:+13024640950" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition-all duration-300 font-semibold">
+                  Call +1 302 464 0950
+                </a>
               </div>
-
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                {category.services.map((service, serviceIndex) => (
-                  <motion.div
-                    key={serviceIndex}
-                    className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-all duration-300 group"
-                    whileHover={{ y: -5 }}
-                  >
-                    <h4 className="text-xl font-bold text-gray-900 mb-3">
-                      {service.name}
-                    </h4>
-                    <p className="text-gray-600 mb-4">
-                      {service.description}
-                    </p>
-                    
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="flex justify-between items-center">
-                      <div>
-                        <div className="text-lg font-bold text-blue-600">
-                          {service.pricing}
-                        </div>
-                        <div className="text-sm text-gray-500">
-                          Delivery: {service.delivery}
-                        </div>
-                      </div>
-                      <Link
-                        href="/contact"
-                        className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 text-sm font-semibold"
-                      >
-                        Get Quote
-                      </Link>
-                    </div>
-                  </motion.div>
-                ))}
+              
+              {/* Contact Information */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
+                <h3 className="text-xl font-bold mb-4">Ready to Get Started?</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                  <div className="flex items-center justify-center">
+                    <Phone className="w-5 h-5 mr-2" />
+                    <span>+1 302 464 0950</span>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <Mail className="w-5 h-5 mr-2" />
+                    <span>kleber@ziontechgroup.com</span>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <MapPin className="w-5 h-5 mr-2" />
+                    <span>Middletown, DE</span>
+                  </div>
+                </div>
               </div>
             </motion.div>
-          ))}
-        </div>
-      </section>
+          </div>
+        </section>
 
-      {/* Micro SaaS Solutions */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              AI-Powered Micro SaaS Solutions
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              Ready-to-deploy AI solutions that can be implemented quickly and scaled as your business grows.
-            </p>
-          </motion.div>
+        {/* Services Grid */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our AI Services & Solutions
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Choose from 80+ cutting-edge AI services designed to solve complex business challenges with advanced artificial intelligence and competitive pricing.
+              </p>
+            </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaaS.map((solution, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {aiServices.map((service, index) => {
+                const IconComponent = service.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="p-6">
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="text-blue-600 group-hover:text-purple-600 transition-colors">
+                          <IconComponent className="w-8 h-8" />
+                        </div>
+                        {service.popular && (
+                          <span className="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">
+                            Popular
+                          </span>
+                        )}
+                      </div>
+                      
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+                      <p className="text-gray-600 text-sm mb-4 leading-relaxed">{service.description}</p>
+                      
+                      <div className="mb-4">
+                        <span className="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-1 rounded-full">
+                          {service.category}
+                        </span>
+                      </div>
+                      
+                      <div className="mb-4">
+                        <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
+                        <ul className="text-xs text-gray-600 space-y-1">
+                          {service.features.slice(0, 4).map((feature, idx) => (
+                            <li key={idx} className="flex items-center">
+                              <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div className="mb-4">
+                        <h4 className="text-sm font-semibold text-gray-900 mb-2">Benefits:</h4>
+                        <div className="flex flex-wrap gap-1">
+                          {service.benefits.slice(0, 3).map((benefit, idx) => (
+                            <span key={idx} className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded">
+                              {benefit}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      
+                      <div className="border-t pt-4">
+                        <div className="flex justify-between items-center mb-2">
+                          <span className="text-lg font-bold text-green-600">{service.pricing}</span>
+                          <span className="text-sm text-gray-500 line-through">{service.marketPrice}</span>
+                        </div>
+                        <p className="text-xs text-gray-500 mb-4">You save up to 40% vs market price</p>
+                        
+                        <div className="flex gap-2">
+                          <a
+                            href={service.link}
+                            className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg text-sm font-semibold transition-colors"
+                          >
+                            Learn More
+                          </a>
+                          <a
+                            href={`tel:${service.contact}`}
+                            className="bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-4 rounded-lg text-sm font-semibold transition-colors"
+                          >
+                            Call Now
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Comparison */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Competitive Pricing & Value
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Our AI services offer exceptional value with transparent pricing and no hidden fees.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
-                key={index}
-                className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 group"
+                className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
               >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                    <solution.icon className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">
-                    {solution.name}
-                  </h3>
-                </div>
-                
-                <p className="text-gray-600 mb-4">
-                  {solution.description}
-                </p>
-
-                <ul className="space-y-2 mb-6">
-                  {solution.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
+                <h3 className="text-xl font-bold text-gray-900 mb-4">💰 Cost Savings</h3>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Up to 40% savings vs market rates</li>
+                  <li>• No setup or hidden fees</li>
+                  <li>• Transparent pricing</li>
+                  <li>• Volume discounts available</li>
+                  <li>• Free consultation included</li>
                 </ul>
-
-                <div className="flex justify-between items-center">
-                  <div className="text-2xl font-bold text-green-600">
-                    {solution.pricing}
-                  </div>
-                  <Link
-                    href="/contact"
-                    className="px-4 py-2 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 text-sm font-semibold"
-                  >
-                    Start Free Trial
-                    className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors flex-1 text-center"
-                  >
-                    Get Started
-                  </Link>
-                  <Link
-                    href="/request-quote"
-                    className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-6 py-2 rounded-lg font-semibold transition-colors flex-1 text-center"
-                  >
-                    Request Quote
-                  </Link>
-                </div>
               </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Process Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our AI Development Process
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              A proven methodology that ensures successful AI implementation and maximum value for your investment.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-            {processSteps.map((step, index) => (
               <motion.div
-                key={index}
-                className="text-center relative"
+                className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                  {step.step}
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  {step.description}
-                </p>
-                {index < processSteps.length - 1 && (
-                  <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gray-300 transform translate-x-4"></div>
-                )}
+                <h3 className="text-xl font-bold text-gray-900 mb-4">🚀 Advanced AI Capabilities</h3>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• State-of-the-art AI models</li>
+                  <li>• Custom model training</li>
+                  <li>• Real-time processing</li>
+                  <li>• Scalable infrastructure</li>
+                  <li>• Expert AI support</li>
+                </ul>
               </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
               <motion.div
-                key={index}
-                className="text-center"
+                className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-lg"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                <div className="text-3xl md:text-4xl font-bold mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-200 font-medium">
-                  {stat.label}
-                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">🎯 Proven Results</h3>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• 80% efficiency improvement</li>
+                  <li>• 60% cost reduction</li>
+                  <li>• 90% accuracy rates</li>
+                  <li>• 95% customer satisfaction</li>
+                  <li>• ROI within 30 days</li>
+                </ul>
               </motion.div>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-              Ready to Transform Your Business with AI?
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-600">
-              Let's discuss your AI needs and create a custom solution that drives real business value. 
-              Get a free consultation and discover the potential of AI for your organization.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-              >
-                Get Free AI Consultation
-              </Link>
-              <Link 
-                href="tel:+13024640950" 
-                className="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold"
-              >
-                Call: +1 302 464 0950
-              </Link>
-            </div>
-            <div className="mt-8 text-gray-600">
-              <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:underline">kleber@ziontechgroup.com</a></p>
-              <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </Layout>
-      {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-            Ready to Transform Your Business with AI?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Contact us today to discuss your AI needs and get a customized solution
-          </p>
-          <div className="grid md:grid-cols-3 gap-8 text-gray-300 mb-8">
-            <div>
-              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Phone</h3>
-              <p>+1 302 464 0950</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Email</h3>
-              <p>kleber@ziontechgroup.com</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Address</h3>
-              <p>364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              Contact Us Now
-            </Link>
-            <Link
-              href="/request-quote"
-              className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Get Free Consultation
-            </Link>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Transform Your Business with AI?
+              </h2>
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Get started with our cutting-edge AI services today and experience the power of artificial intelligence.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  Get Free Consultation
+                </Link>
+                <a href="tel:+13024640950" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
+                  Call +1 302 464 0950
+                </a>
+              </div>
+            </motion.div>
           </div>
-        </div>
-      </section>
+        </section>
       </div>
     </>
   );
