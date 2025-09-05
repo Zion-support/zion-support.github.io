@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -156,14 +155,6 @@ export default function HelpPage() {
       [categoryTitle]: !prev[categoryTitle]
     }))
   }
-=======
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-
-export default function Help() {
->>>>>>> cursor/expand-services-advertise-and-build-project-cac2
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Head>
