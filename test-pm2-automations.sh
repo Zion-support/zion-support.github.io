@@ -53,17 +53,15 @@ test_individual_processes() {
     log "Testing individual automation processes..."
     
     local processes=(
-        "ai-process-manager"
         "ci-cd-automation"
-        "health-monitor"
-        "performance-monitor"
+        "continuous-improvement"
+        "daily-build-test"
         "quality-checks"
         "security-audit"
-        "intelligent-monitor"
-        "smart-auto-scaler"
-        "error-recovery-system"
-        "smart-resource-manager"
-        "dashboard-system"
+        "performance-monitor"
+        "link-checker"
+        "dependency-updates"
+        "health-monitor"
     )
     
     local all_healthy=true
@@ -91,17 +89,11 @@ test_log_files() {
     log "Testing log file creation..."
     
     local log_files=(
-        "logs/pm2/ai-process-manager.log"
-        "logs/pm2/ci-cd-automation.log"
-        "logs/pm2/health-monitor.log"
-        "logs/pm2/performance-monitor.log"
-        "logs/pm2/quality-checks.log"
-        "logs/pm2/security-audit.log"
-        "logs/pm2/intelligent-monitor.log"
-        "logs/pm2/smart-auto-scaler.log"
-        "logs/pm2/error-recovery-system.log"
-        "logs/pm2/smart-resource-manager.log"
-        "logs/pm2/dashboard-system.log"
+        "logs/ai-code-analyzer.log"
+        "logs/smart-performance-optimizer.log"
+        "logs/intelligent-dependency-manager.log"
+        "logs/project-health-monitor.log"
+        "logs/enhanced-security-automation.log"
     )
     
     local all_logs_exist=true
@@ -142,7 +134,7 @@ test_process_monitoring() {
     log "Testing process monitoring capabilities..."
     
     # Test if we can get process info
-    if pm2 show ai-process-manager > /dev/null 2>&1; then
+    if pm2 show ai-code-analyzer > /dev/null 2>&1; then
         success "Process monitoring is working"
         return 0
     else
@@ -156,7 +148,7 @@ test_restart_functionality() {
     log "Testing restart functionality..."
     
     # Get current restart count
-    local restart_count=$(pm2 list | grep "ai-process-manager" | awk '{print $4}' | head -1)
+    local restart_count=$(pm2 list | grep "ai-code-analyzer" | awk '{print $4}' | head -1)
     
     if [[ "$restart_count" =~ ^[0-9]+$ ]] && [ "$restart_count" -ge 0 ]; then
         success "Restart functionality is working (restart count: $restart_count)"
@@ -204,7 +196,7 @@ display_comprehensive_status() {
 # Main test execution
 main() {
     echo -e "${PURPLE}🧪 Testing PM2 Automation System${NC}"
-    echo "====================================="
+    echo "=="
     echo
     
     local test_results=()
@@ -251,7 +243,7 @@ main() {
     # Display test results
     echo
     log "Test Results Summary:"
-    echo "===================="
+    echo "======"
     for result in "${test_results[@]}"; do
         echo "  $result"
     done
