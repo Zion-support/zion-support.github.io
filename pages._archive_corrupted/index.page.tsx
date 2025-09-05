@@ -1,0 +1,5 @@
+import React from 'react'
+import Link from 'next/link'
+import Head from 'next/head'
+export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,IT Solutions</title> <meta name="description" content="AI solutions,Micro SaaS products,and enterprise IT services. Contact +1 302 464 0950 • kleber@ziontechgroup.com" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <meta property="og:title" content="Zion Tech Group — AI,Micro SaaS,IT Solutions" /> <meta property="og:description" content="AI services,micro SaaS platforms,and enterprise-grade IT solutions." /> <meta property="og:type" content="website" /> <meta property="og:url" content="https: <meta name="twitter:card" content="summary_large_image" /> <link rel="canonical" href="https: </Head> <p> Mobile: <a className="text-blue-700" href="tel:+13024640950"
+cursor/fix-lint-push-and-merge-to-main-f3c1

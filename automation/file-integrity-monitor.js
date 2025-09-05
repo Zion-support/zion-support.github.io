@@ -1,96 +1,24 @@
-
-  async scanProject() {
-    this.log('Starting file integrity scan...');
-    const checksums = {};
-    const issues = [];
-
-    try {
-      const files = this.getProjectFiles();
-      this.log(`Scanning ${files.length} files...`);
-
-      for (const file of files) {
-        const checksum = this.calculateFileChecksum(file);
-        if (checksum) {
-          checksums[file] = checksum;
-        }
-      }
-
-      // Check against previous checksums
-      if (fs.existsSync(this.checksumsFile)) {
-        const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, 'utf8'));
-        
-        for (const [file, currentChecksum] of Object.entries(checksums)) {
-          if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) {
-            issues.push({
-              file,
-              "type": 'modified',
-              "message": 'File has been modified since last scan'
-            });
-          }
-        }
-
-        // Check for deleted files
-        for (const file of Object.keys(previousChecksums)) {
-          if (!checksums[file] && fs.existsSync(file)) {
-            issues.push({
-              file,
-              "type": 'deleted',
-              "message": 'File was deleted'
-            });
-          }
-        }
-      }
-
-
-      this.integrityChecks++;
-      this.issuesFound += issues.length;
-
-      if (issues.length > 0) {
-        this.log("Found ${issues.length} integrity "issues": ", 'WARN');
-        issues.forEach(issue => {
-          this.log("  - ${issue.file}: ${issue.message}", 'WARN');
-        });
-      } else {
-        this.log('No integrity issues found');
-      }
-
-      return {
-        "filesScanned": files.length,
-        "issuesFound": issues.length,
-        "issues": issues
-      };
-
-    } catch (error) {
-      this.log("Error during integrity "scan": ${error.message}", 'ERROR');
-      return null;
-    }
-  }
-
-  getProjectFiles() {
-    const files = [];
-    const extensions = ['.js', '.ts', '.tsx', '.json', '.md'];
-    const ignoreDirs = ['node_modules', '.git', '.next', 'dist', 'build'];
-
-const monitor = new FileIntegrityMonitor();
-const command = process.argv[2];
-const interval = parseInt(process.argv[3]) || 5;
-
-switch (command) {
-  case 'scan':
-    monitor.scanProject();
-    break;
-  case 'monitor':
-    monitor.startMonitoring(interval);
-    break;
-  case 'report':
-    monitor.generateReport();
-    break;
-  "default": console.log('Usage:');
-    console.log('  node file-integrity-monitor.js scan');
-    console.log('  node file-integrity-monitor.js monitor [interval-minutes]');
-    console.log('  node file-integrity-monitor.js report');
-    break;
-}
-
-module.exports = FileIntegrityMonitor;
-=======
+#!/usr/bin/env node
+const fs = require('fs'
+const path = require('path'
+const { execSync, spawn } = require('child_process'
+const cron = require('node-cron'
+const crypto = require('crypto'
+console.log('� File Integrity Monitor Starting...\n'
+    this.logFile = path.join(this.projectRoot, 'logs', 'file-integrity.log'
+    this.checksumsFile = path.join(this.projectRoot, 'logs', 'file-checksums.json'
+  log(message, level = 'INFO'
+      const hashSum = crypto.createHash('sha256'
+      return hashSum.digest('hex'
+      this.log(`Error calculating checksum for ${filePath}: ${error.message}`, 'ERROR'
+    this.log('Starting file integrity scan...'
+        const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, 'utf8'
+              "type"
+              "message"
+              "type"
+              "message"
+        this.log("Found ${issues.length} integrity "issues": "
+          this.log("  - ${issue.file}: ${issue.message}"
+      this.log("Error during integrity "scan": ${error.message}"
+  "default"
+cursor/fix-lint-push-and-merge-to-main-f3c1

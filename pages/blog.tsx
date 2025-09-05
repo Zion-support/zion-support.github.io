@@ -68,17 +68,18 @@ const blogPosts = [
 ];
 
 const categories = [
-  { name: "AI & Machine Learning", count: 12 },
-  { name: "Cloud Computing", count: 8 },
-  { name: "Cybersecurity", count: 6 },
-  { name: "SaaS Development", count: 10 },
-  { name: "Digital Transformation", count: 7 },
-  { name: "IT Infrastructure", count: 5 }
+  "All Posts",
+  "AI & Technology",
+  "Cloud Computing",
+  "Cybersecurity",
+  "SaaS",
+  "Digital Transformation"
 ];
 
 export default function BlogPage() {
   return (
-    <>
+
+    <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Insights, trends, and best practices in AI, cloud computing, cybersecurity, and technology solutions." />
@@ -204,8 +205,25 @@ export default function BlogPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+    </div>
         </section>
       </div>
     </>
+import Layout from '../components/Layout';
+
+export default function BlogPage() {
+  return (
+    <Layout>
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Blog</h1>
+          <p className="text-lg text-gray-600">
+            Stay updated with the latest insights, trends, and best practices in technology.
+          </p>
+        </div>
+      </div>
+    </Layout>
   );
 }

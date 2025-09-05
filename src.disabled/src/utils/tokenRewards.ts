@@ -1,0 +1,10 @@
+export async function rewardOnboarding(..."args"
+  "action"
+  "amount"
+    "method"
+    "method"
+      "action"
+    "method"
+      "action"
+    "method"
+cursor/fix-lint-push-and-merge-to-main-f3c1

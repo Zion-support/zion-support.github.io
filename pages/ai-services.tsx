@@ -111,8 +111,149 @@ const aiServices = [
     features: ['Real-time Detection', 'Behavioral Analysis', 'Risk Scoring', 'API Integration'],
     pricing: '$5,000 - $25,000 setup',
     category: 'Security',
+<<<<<<< HEAD
     popular: true,
     link: 'https://aifraud.ziontechgroup.com'
+=======
+    popular: true
+  },
+  {
+    title: 'AI Drug Discovery Platform',
+    description: 'Accelerated drug discovery using AI for molecular design and optimization.',
+    icon: Heart,
+    features: ['Molecular Modeling', 'Drug-Target Interaction', 'Toxicity Prediction', 'Clinical Trial Optimization'],
+    pricing: '$50,000 - $200,000 project',
+    category: 'Healthcare'
+  },
+  {
+    title: 'AI Financial Modeling',
+    description: 'Advanced financial modeling and risk assessment using machine learning.',
+    icon: TrendingUp,
+    features: ['Portfolio Optimization', 'Risk Assessment', 'Market Prediction', 'Algorithmic Trading'],
+    pricing: '$10,000 - $50,000 project',
+    category: 'Finance'
+  },
+  {
+    title: 'AI Supply Chain Optimization',
+    description: 'Intelligent supply chain management with predictive analytics and automation.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Risk Analysis'],
+    pricing: '$15,000 - $75,000 project',
+    category: 'Logistics'
+  },
+  {
+    title: 'AI-Powered Recommendation Engine',
+    description: 'Personalized recommendation system for e-commerce and content platforms.',
+    icon: Target,
+    features: ['Collaborative Filtering', 'Content-Based Filtering', 'Real-time Updates', 'A/B Testing'],
+    pricing: '$3,000 - $15,000 setup',
+    category: 'E-commerce'
+  },
+  {
+    title: 'AI Social Media Manager',
+    description: 'Automated social media management with content creation and scheduling.',
+    icon: Globe,
+    features: ['Content Generation', 'Optimal Posting Times', 'Engagement Analysis', 'Brand Voice Consistency'],
+    pricing: '$500 - $2,500/month',
+    category: 'Marketing'
+  },
+  {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review with security analysis, performance optimization, and best practices enforcement.',
+    icon: Code,
+    features: ['Security Vulnerability Detection', 'Performance Analysis', 'Code Quality Metrics', 'Automated Fixes'],
+    pricing: '$1,200 - $5,000/month',
+    category: 'Development',
+    popular: true
+  },
+  {
+    title: 'AI Customer Sentiment Analytics',
+    description: 'Real-time customer sentiment analysis across all communication channels.',
+    icon: Heart,
+    features: ['Multi-channel Analysis', 'Real-time Alerts', 'Trend Analysis', 'Actionable Insights'],
+    pricing: '$800 - $3,500/month',
+    category: 'Analytics'
+  },
+  {
+    title: 'AI-Powered Document Processing',
+    description: 'Intelligent document extraction, classification, and data processing using OCR and NLP.',
+    icon: FileText,
+    features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Workflow Automation'],
+    pricing: '$1,500 - $7,000/month',
+    category: 'Document Management'
+  },
+  {
+    title: 'AI Predictive Maintenance',
+    description: 'Predictive maintenance for industrial equipment using IoT sensors and machine learning.',
+    icon: Settings,
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Industrial IoT'
+  },
+  {
+    title: 'AI-Powered Legal Document Analysis',
+    description: 'Automated legal document review, contract analysis, and compliance checking.',
+    icon: Shield,
+    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Legal Tech'
+  },
+  {
+    title: 'AI Real Estate Valuation',
+    description: 'Automated property valuation using market data, location analysis, and predictive modeling.',
+    icon: Home,
+    features: ['Market Analysis', 'Property Valuation', 'Investment Insights', 'Risk Assessment'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Real Estate'
+  },
+  {
+    title: 'AI-Powered HR Recruitment',
+    description: 'Intelligent candidate screening, resume analysis, and interview scheduling.',
+    icon: Users,
+    features: ['Resume Screening', 'Skill Matching', 'Interview Scheduling', 'Bias Detection'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'HR Tech'
+  },
+  {
+    title: 'AI Energy Optimization',
+    description: 'Smart energy management for buildings and facilities using AI optimization.',
+    icon: Zap,
+    features: ['Energy Consumption Analysis', 'Optimization Algorithms', 'Cost Reduction', 'Sustainability Metrics'],
+    pricing: '$2,500 - $12,000/setup',
+    category: 'Energy Management'
+  },
+  {
+    title: 'AI-Powered Quality Control',
+    description: 'Automated quality inspection using computer vision and machine learning.',
+    icon: Eye,
+    features: ['Defect Detection', 'Quality Metrics', 'Real-time Monitoring', 'Process Optimization'],
+    pricing: '$4,000 - $20,000/setup',
+    category: 'Manufacturing'
+  },
+  {
+    title: 'AI Customer Churn Prediction',
+    description: 'Predict customer churn and implement retention strategies using machine learning.',
+    icon: TrendingUp,
+    features: ['Churn Prediction', 'Risk Scoring', 'Retention Strategies', 'Customer Segmentation'],
+    pricing: '$1,500 - $8,000/month',
+    category: 'Customer Analytics'
+  },
+  {
+    title: 'AI-Powered Translation Services',
+    description: 'Real-time translation with context awareness and industry-specific terminology.',
+    icon: Globe,
+    features: ['Multi-language Support', 'Context Awareness', 'Industry Terminology', 'Real-time Processing'],
+    pricing: '$500 - $2,500/month',
+    category: 'Language Services'
+  },
+  {
+    title: 'AI Code Review Assistant',
+    description: 'Automated code review and quality assurance using AI analysis.',
+    icon: Code,
+    features: ['Code Quality Analysis', 'Security Vulnerability Detection', 'Performance Optimization', 'Best Practices'],
+    pricing: '$2,000 - $10,000 setup',
+    category: 'Development'
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-372a
   },
   {
     title: 'AI Document Processing',
@@ -469,6 +610,7 @@ const aiServices = [
     link: 'https://ailegal.ziontechgroup.com'
   },
   {
+<<<<<<< HEAD
     title: 'AI Energy Grid Optimization',
     description: 'Smart grid optimization using AI for energy distribution, load balancing, and renewable integration.',
     icon: Zap,
@@ -480,6 +622,19 @@ const aiServices = [
   {
     title: 'AI-Powered Agriculture',
     description: 'Precision agriculture using AI for crop monitoring, yield prediction, and resource optimization.',
+=======
+    title: 'AI-Powered Autonomous Drones',
+    description: 'Intelligent drone systems with autonomous navigation and mission execution capabilities.',
+    icon: Rocket,
+    features: ['Autonomous Navigation', 'Mission Planning', 'Object Detection', 'Swarm Coordination'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Autonomous Systems',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Climate Engineering',
+    description: 'AI systems for climate engineering and geoengineering solutions.',
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-372a
     icon: Sprout,
     features: ['Crop Monitoring', 'Yield Prediction', 'Resource Optimization', 'Pest Detection'],
     pricing: '$15,000 - $100,000/project',
@@ -654,6 +809,7 @@ const aiServices = [
     icon: Brain,
     features: ['Neural Processing', 'Brain Communication', 'Thought Control', 'Medical Applications'],
     pricing: '$100,000 - $1,000,000/project',
+<<<<<<< HEAD
     category: 'BCI AI',
     link: 'https://aibci.ziontechgroup.com'
   },
@@ -836,6 +992,91 @@ const aiServices = [
     pricing: '$2,500 - $15,000/month',
     category: 'Performance AI',
     link: 'https://aiperformance.ziontechgroup.com'
+=======
+    category: 'Theoretical Physics AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Metaverse Development',
+    description: 'Complete metaverse solutions with AI-driven virtual environments and avatars.',
+    icon: Globe,
+    features: ['Virtual World Creation', 'AI Avatars', 'Real-time Interactions', 'Blockchain Integration'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Edge Computing',
+    description: 'Intelligent edge computing solutions for real-time AI processing at the edge.',
+    icon: Cpu,
+    features: ['Edge AI Models', 'Real-time Processing', 'Low Latency', 'Offline Capability'],
+    pricing: '$15,000 - $100,000/setup',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Blockchain Analytics',
+    description: 'Advanced blockchain analysis and cryptocurrency intelligence using AI.',
+    icon: Shield,
+    features: ['Transaction Analysis', 'Fraud Detection', 'Market Prediction', 'Compliance Monitoring'],
+    pricing: '$10,000 - $75,000/setup',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'AI-Powered IoT Intelligence',
+    description: 'Smart IoT solutions with AI for device management and data analytics.',
+    icon: Network,
+    features: ['Device Management', 'Predictive Maintenance', 'Data Analytics', 'Automated Control'],
+    pricing: '$8,000 - $50,000/project',
+    category: 'IoT',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Augmented Reality',
+    description: 'Advanced AR solutions with AI for enhanced user experiences and interactions.',
+    icon: Eye,
+    features: ['Object Recognition', 'Real-time Tracking', 'Spatial Mapping', 'Gesture Control'],
+    pricing: '$20,000 - $150,000/project',
+    category: 'Augmented Reality',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Virtual Reality',
+    description: 'Immersive VR experiences powered by AI for training, entertainment, and education.',
+    icon: Monitor,
+    features: ['Immersive Environments', 'AI NPCs', 'Adaptive Learning', 'Haptic Feedback'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Virtual Reality',
+    popular: true
+  },
+  {
+    title: 'AI-Powered 5G Network Optimization',
+    description: 'Intelligent 5G network management and optimization using AI algorithms.',
+    icon: Network,
+    features: ['Network Slicing', 'Resource Allocation', 'Quality of Service', 'Predictive Maintenance'],
+    pricing: '$30,000 - $250,000/project',
+    category: '5G Technology',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Digital Transformation',
+    description: 'Complete digital transformation solutions using AI for business process automation.',
+    icon: Settings,
+    features: ['Process Automation', 'Workflow Optimization', 'Data Integration', 'Change Management'],
+    pricing: '$40,000 - $300,000/project',
+    category: 'Digital Transformation',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Customer Experience',
+    description: 'Comprehensive customer experience optimization using AI across all touchpoints.',
+    icon: Users,
+    features: ['Journey Mapping', 'Personalization', 'Sentiment Analysis', 'Predictive Support'],
+    pricing: '$15,000 - $100,000/setup',
+    category: 'Customer Experience',
+    popular: true
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-372a
   }
 ];
 
