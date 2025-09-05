@@ -1,6 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import Layout from '../components/Layout';
+=======
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Brain, Cloud, Shield, Users } from 'lucide-react';
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 
 const teamMembers = [
   {
@@ -31,36 +37,6 @@ const teamMembers = [
     icon: Users,
     description: 'Leading our development teams with agile methodologies and client-focused delivery.'
   }
-];
-
-const values = [
-  {
-    title: 'Innovation',
-    description: 'We constantly push the boundaries of what\'s possible in technology.',
-    icon: Lightbulb
-  },
-  {
-    title: 'Excellence',
-    description: 'We strive for the highest quality in everything we do.',
-    icon: Award
-  },
-  {
-    title: 'Collaboration',
-    description: 'We believe in the power of teamwork and shared success.',
-    icon: Users
-  },
-  {
-    title: 'Impact',
-    description: 'We focus on creating solutions that make a real difference.',
-    icon: Target
-  }
-];
-
-const stats = [
-  { number: '50+', label: 'Team Members' },
-  { number: '15+', label: 'Years Experience' },
-  { number: '100+', label: 'Projects Completed' },
-  { number: '99%', label: 'Client Satisfaction' }
 ];
 
 export default function TeamPage() {
@@ -116,6 +92,6 @@ export default function TeamPage() {
           </div>
         </section>
       </div>
-    </Layout>
+    </>
   );
 }

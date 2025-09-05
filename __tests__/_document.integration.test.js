@@ -1,0 +1,9 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const React from "react" import { render,screen } from "@testing-library/react" import "@testing-library/jest-dom import _document from "./pages/_document" describe("_document Integration Tests",() => {" test("page renders correctly",() => {" render(<_document / />) expect(screen.getByRole("main")).toBeInTheDocument();" }) test("navigation works",() => {" render(<_document / />) }) test("page content is accessible",() => {" render(<_document / />) }) test("page loads with correct data",() => {" render(<_document / />) }) })'"'"
+import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import _document from '../pages/_document" describe('_document Integration Tests',() => {' test('page renders correctly',() => {' render(<_document / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<_document / />) }) test('page content is accessible',() => {' render(<_document / />) }) test('page loads with correct data',() => {' render(<_document / />) }) })
+=======
+import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import _document from '../pages/_document" describe('_document Integration Tests',() => {' test('page renders correctly',() => {' render(<_document / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<_document / />) }) test('page content is accessible',() => {' render(<_document / />) }) test('page loads with correct data',() => {' render(<_document / />) }) })
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229

@@ -68,4 +68,12 @@ describe('AccessibilityEnhancer', () => {
     const element = screen.getByRole('button');
     expect(element).toHaveAttribute('tabindex', '-1');
   });
+<<<<<<< HEAD
 });
+=======
+<<<<<<< HEAD
+});
+=======
+});
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229

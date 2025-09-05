@@ -1,0 +1,61 @@
+<<<<<<< HEAD
+import React from 'react';';';
+import ReactDOM from 'react-dom/client';';';
+import App from './App.tsx';';';
+import './index.css';';
+';';
+=======
+>>>>>>> origin/main
+import React from 'react'';';
+import ReactDOM from 'react-dom/client'';';
+import { BrowserRouter as Router  } from 'react-router-dom';';';
+import { HelmetProvider  } from 'react-helmet-async';';';
+import App from './src/App.tsx'';';
+import './index.css'';';
+import { registerServiceWorker  } from './src/utils/serviceWorker.ts';';';
+import { ErrorBoundary  } from './src/components/ErrorBoundary.tsx';
+';';
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+';
+</React>;';;';
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/main
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import App from './App.tsx';
+import './index.css';
+<<<<<<< HEAD
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <HelmetProvider>
+      <Router>
+        <App />
+      </Router>
+    </HelmetProvider>
+  </React.StrictMode>,
+);
+=======
+>>>>>>> origin/main
+;
+ReactDOM.createRoot(document.getElementById('root')!).render(;
+  <React.StrictMode>;
+    <HelmetProvider>;
+      <Router>;
+        <App />;
+      </Router>;
+    </HelmetProvider>;
+  </React.StrictMode>,;
+<<<<<<< HEAD
+);
+=======
+);
+>>>>>>> origin/main

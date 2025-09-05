@@ -2,7 +2,10 @@ module.exports = {
   apps: [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
       name: 'auto-fix',
       script: 'scripts/pm2/auto-fix.js',
       instances: 1,
@@ -33,7 +36,12 @@ module.exports = {
     {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.js',
+<<<<<<< HEAD
 >>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
       name: 'bolt-zion-app',
       script: 'npm',
       args: 'run start',
@@ -44,7 +52,10 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
@@ -57,7 +68,12 @@ module.exports = {
     {
       name: 'auto-commit-fixes',
       script: 'scripts/pm2/auto-commit-fixes.js',
+<<<<<<< HEAD
 >>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
         NODE_ENV: 'production',
       },
       log_file: 'logs/pm2/preview.log',
@@ -99,8 +115,11 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         NODE_ENV: 'production',
 =======
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'auto-commit-fixes',
         COMMIT_FREQUENCY: 'hourly',
@@ -113,7 +132,13 @@ module.exports = {
     {
       name: 'dependency-monitor',
       script: 'scripts/pm2/dependency-monitor.js',
+<<<<<<< HEAD
 >>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
+=======
+=======
+        NODE_ENV: 'production',
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
@@ -123,9 +148,12 @@ module.exports = {
       error_file: 'logs/pm2/code-quality-monitor-error.log',
       out_file: 'logs/pm2/code-quality-monitor-out.log',
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
   ]
 =======
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
     },
     {
       name: 'auto-commit-fixes',
@@ -543,5 +571,12 @@ module.exports = {}
       "error_file": 'logs/pm2/type-checker-error.log',
       "out_file": 'logs/pm2/type-checker-out.log'};
   ];
+<<<<<<< HEAD
 >>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
+=======
+=======
+    }
+  ]
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 };

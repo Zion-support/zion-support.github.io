@@ -1,0 +1,1 @@
+const speakers = [ { "name": 'Alex: Zion,',"title": &apos;Founder: & CEO,&apos;,"avatar": 'https:'''";",;

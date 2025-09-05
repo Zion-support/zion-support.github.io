@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* eslint-env node */
 /* global module */
 module.exports = {
@@ -10,6 +11,10 @@ module.exports = {
 export default {
   extends: ['next/core-web-vitals', 'next/typescript'],
 >>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
+=======
+export default {
+  extends: ['next/core-web-vitals', 'next/typescript'],
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -26,6 +31,7 @@ export default {
     '@typescript-eslint/no-unused-vars': 'warn',
     'no-console': 'off',
     'no-undef': 'off',
+<<<<<<< HEAD
 <<<<<<< HEAD
     'react/no-unescaped-entities': 'off',
     '@typescript-eslint/no-explicit-any': 'warn'
@@ -60,6 +66,8 @@ export default {
     'build/**'
   ]
 =======
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
   "extends": [
     "next/core-web-vitals",
     "next/typescript"
@@ -150,5 +158,8 @@ module.exports = {
     'no-unused-vars': 'warn',
     '@next/next/no-img-element': 'warn'
   }
+<<<<<<< HEAD
 >>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 };

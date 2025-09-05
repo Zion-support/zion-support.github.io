@@ -1,12 +1,20 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+=======
+import React from 'react';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
+<<<<<<< HEAD
 }
 
 const navigation = [
@@ -35,12 +43,33 @@ export default function Layout({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
 
+=======
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+}
+
+const Layout: React.FC<LayoutProps> = ({
+  children,
+  title = "Zion Tech Group",
+  description = "Leading technology solutions provider",
+  keywords = "technology, AI, IT, micro SaaS, solutions",
+  canonical = "https://ziontechgroup.com",
+  ogTitle,
+  ogDescription,
+  ogImage,
+  noIndex = false,
+}) => {
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
+<<<<<<< HEAD
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -220,3 +249,23 @@ export default function Layout({
     </>
   );
 }
+=======
+        {canonical && <link rel="canonical" href={canonical} />}
+        {ogTitle && <meta property="og:title" content={ogTitle} />}
+        {ogDescription && <meta property="og:description" content={ogDescription} />}
+        {ogImage && <meta property="og:image" content={ogImage} />}
+        <meta property="og:url" content={canonical} />
+        <meta property="og:type" content="website" />
+        {noIndex && <meta name="robots" content="noindex, nofollow" />}
+      </Head>
+      <Header />
+      <main className="flex-grow">
+        {children}
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default Layout;
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229

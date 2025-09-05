@@ -1,62 +1,66 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 import Head from 'next/head';
 import Link from 'next/link';
-import Layout from '../components/Layout';
+import { motion } from 'framer-motion';
 import { 
+  Users, 
   MapPin, 
   Clock, 
-  Users, 
+  DollarSign, 
   Heart, 
-  Zap, 
-  Award, 
-  BookOpen, 
-  Coffee, 
   Laptop, 
-  Globe, 
-  ArrowRight, 
-  CheckCircle 
+  GraduationCap, 
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Building,
+  Zap
 } from 'lucide-react';
 
-const jobOpenings = [
+const positions = [
   {
-    title: 'Senior AI Engineer',
-    location: 'Remote / Delaware',
+    title: 'Senior Full Stack Developer',
+    location: 'Remote',
     type: 'Full-time',
-    department: 'Engineering',
-    description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
+    salary: '$80,000 - $120,000',
     requirements: [
-      '5+ years of experience in AI/ML',
-      'Strong Python and TensorFlow skills',
-      'Experience with cloud platforms',
-      'PhD in Computer Science preferred'
+      '5+ years of full-stack development experience',
+      'Proficiency in React, Node.js, and TypeScript',
+      'Experience with cloud platforms (AWS, Azure, GCP)',
+      'Strong problem-solving and communication skills'
     ],
-    benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget']
+    benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget', 'Certification support']
   },
   {
-    title: 'Full Stack Developer',
-    location: 'Remote / Delaware',
+    title: 'AI/ML Engineer',
+    location: 'San Francisco, CA',
     type: 'Full-time',
-    department: 'Engineering',
-    description: 'Build scalable web applications and APIs using modern technologies.',
+    salary: '$100,000 - $150,000',
     requirements: [
-      '3+ years of full-stack development',
-      'React, Node.js, and database experience',
-      'API design and development',
-      'Strong problem-solving skills'
+      '3+ years of machine learning experience',
+      'Proficiency in Python, TensorFlow, PyTorch',
+      'Experience with MLOps and model deployment',
+      'Strong mathematical and statistical background'
     ],
-    benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget']
+    benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget', 'Certification support']
   },
   {
     title: 'DevOps Engineer',
-    location: 'Remote / Delaware',
+    location: 'New York, NY',
     type: 'Full-time',
-    department: 'Engineering',
-    description: 'Manage cloud infrastructure and deployment pipelines for our AI services.',
+    salary: '$90,000 - $130,000',
     requirements: [
       '4+ years of DevOps experience',
-      'AWS/Azure/GCP expertise',
-      'Docker and Kubernetes knowledge',
-      'CI/CD pipeline experience'
+      'Proficiency in Kubernetes, Docker, CI/CD',
+      'Experience with infrastructure as code',
+      'Strong automation and scripting skills'
     ],
+<<<<<<< HEAD
+    benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget', 'Certification support']
+=======
     benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget']
   },
   {
@@ -71,13 +75,24 @@ const jobOpenings = [
       'Strong analytical skills',
       'Excellent communication skills'
     ],
+<<<<<<< HEAD
     benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget', 'Certification support']
+=======
+    benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget']
+    benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
   }
 ];
 
 const benefits = [
   {
     icon: Heart,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
     title: "Health & Wellness",
     description: "Comprehensive health insurance, mental health support, and wellness programs"
   },
@@ -145,27 +160,114 @@ export default function CareersPage() {
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
+=======
+    icon: Heart,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+    title: 'Health & Wellness',
+    description: 'Comprehensive health insurance and wellness programs'
+  },
+  {
+    icon: Laptop,
+    title: 'Remote Work',
+    description: 'Flexible remote work options and home office stipend'
+  },
+  {
+    icon: GraduationCap,
+    title: 'Learning & Development',
+    description: 'Professional development budget and conference attendance'
+  },
+  {
+    icon: Zap,
+    title: 'Innovation Time',
+    description: '20% time for personal projects and innovation'
+  }
+];
+
+export default function Careers() {
+  return (
+    <>
+      <Head>
+        <title>Careers - Zion Tech Group</title>
+        <meta name="description" content="Join our team of innovative developers, engineers, and designers building the future of technology." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
+              className="text-center text-white"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
+<<<<<<< HEAD
                 Join Our Team
+=======
+<<<<<<< HEAD
+=======
+                Join Our <span className="text-blue-600">Team</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Be part of a team that's shaping the future of technology. 
-                We're looking for passionate individuals who want to make a difference.
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Help us build the future of AI and technology. We're looking for passionate, 
+                innovative individuals to join our growing team.
               </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Apply Now
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
+                >
+                  Learn About Us
+                </Link>
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+                Join Our{' '}
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Amazing Team
+                </span>
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
+                We're looking for passionate individuals who want to build the future of technology. 
+                Join us in creating innovative solutions that make a difference.
+              </p>
+<<<<<<< HEAD
+=======
+              <div className="flex flex-wrap justify-center gap-4">
+                <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  View Open Positions
+                </button>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  Learn About Us
+                </Link>
+              </div>
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
             </motion.div>
           </div>
         </section>
 
         {/* Benefits Section */}
+<<<<<<< HEAD
+=======
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -173,10 +275,135 @@ export default function CareersPage() {
                 Why Work With Us?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We offer competitive benefits and a great work environment to help you thrive.
+                We offer competitive benefits and a great work environment that fosters growth and innovation.
               </p>
             </motion.div>
 
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center p-6"
+                >
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="h-8 w-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {benefit.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Open Positions Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Open Positions
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Explore our current job openings and find the perfect role for you.
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto space-y-8">
+              {positions.map((position, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+                >
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                    <div>
+                      <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+                        {position.title}
+                      </h3>
+                      <div className="flex flex-wrap items-center gap-4 text-gray-600">
+                        <div className="flex items-center">
+                          <MapPin className="h-4 w-4 mr-1" />
+                          {position.location}
+                        </div>
+                        <div className="flex items-center">
+                          <Clock className="h-4 w-4 mr-1" />
+                          {position.type}
+                        </div>
+                        <div className="flex items-center">
+                          <DollarSign className="h-4 w-4 mr-1" />
+                          {position.salary}
+                        </div>
+                      </div>
+                    </div>
+                    <button className="mt-4 md:mt-0 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                      Apply Now
+                    </button>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Requirements:</h4>
+                    <ul className="space-y-2">
+                      {position.requirements.map((req, reqIndex) => (
+                        <li key={reqIndex} className="flex items-start text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                          {req}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Benefits:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {position.benefits.map((benefit, benefitIndex) => (
+                        <span
+                          key={benefitIndex}
+                          className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
+                        >
+                          {benefit}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Culture Section */}
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Culture
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We believe in creating an inclusive, collaborative environment where everyone can thrive.
+              </p>
+            </motion.div>
+
+<<<<<<< HEAD
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -213,77 +440,103 @@ export default function CareersPage() {
                 Explore our current job openings and find the perfect role for you.
               </p>
             </motion.div>
+=======
+            <div className="grid md:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center p-6"
+              >
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="h-8 w-8 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  Collaborative
+                </h3>
+                <p className="text-gray-600">
+                  We work together as a team, sharing knowledge and supporting each other's growth.
+                </p>
+              </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              {positions.map((position, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-all duration-300"
-                >
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{position.title}</h3>
-                  <p className="text-gray-600 mb-4">{position.description}</p>
-                  
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Requirements:</h4>
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      {position.requirements.map((req, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                          {req}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {position.benefits.map((benefit, idx) => (
-                        <span key={idx} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
-                          {benefit}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors">
-                    Apply Now
-                  </button>
-                </motion.div>
-              ))}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-center p-6"
+              >
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Star className="h-8 w-8 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  Innovative
+                </h3>
+                <p className="text-gray-600">
+                  We encourage creative thinking and experimentation to solve complex problems.
+                </p>
+              </motion.div>
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center p-6"
+              >
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Building className="h-8 w-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  Inclusive
+                </h3>
+                <p className="text-gray-600">
+                  We value diversity and create an environment where everyone feels welcome and valued.
+                </p>
+              </motion.div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Don't See Your Dream Job?
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Don't See the Right Role?
               </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                We're always looking for talented individuals. Send us your resume and let us know how you can contribute to our team.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+              <div className="flex flex-wrap justify-center gap-4">
+                <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                   Send Resume
+                  <ArrowRight className="ml-2 h-5 w-5 inline" />
                 </button>
-                <button className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                  Contact HR
-                </button>
+                <Link
+                  href="/contact"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  Contact Us
+                </Link>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </Layout>
+=======
+    </>
+<<<<<<< HEAD
+=======
+        </section>
+      </div>
+    </MainLayout>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
   );
 }

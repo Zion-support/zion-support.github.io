@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const { execSync } = require("child_process"); const fs = require("fs"); class $1 { constructor() { this.buildSteps = [ "npm run lint -- --fix || true","npm run type-check || true","npm run build || true"],} ; async optimizedBuild() {  for (const step of this.buildSteps) { try {  execSync(step,{ stdio: "inherit" })} catch (error) { } } ; } } ; new BuildOptimizer().optimizedBuild()
+=======
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 const { execSync } = require("child_process");
 const fs = require("fs");
 class $1 {
@@ -19,4 +26,12 @@ class $1 {
 }
 ;
 new BuildOptimizer().optimizedBuild()
+<<<<<<< HEAD
 const { execSync } = require("child_process"); const fs = require("fs"); class $1 { constructor() { this.buildSteps = [ "npm run lint -- --fix || true","npm run type-check || true","npm run build || true"],} ; async optimizedBuild() { console.log("Starting optimized build process..."); for (const step of this.buildSteps) { try { console.log(``Executing: ${step}``); execSync(step,{ stdio: "inherit" })} catch (error) { console.warn(`Step failed but continuing: ${step}`)} } ; console.log("Build process completed")} } ; new BuildOptimizer().optimizedBuild()
+=======
+<<<<<<< HEAD
+const { execSync } = require("child_process"); const fs = require("fs"); class $1 { constructor() { this.buildSteps = [ "npm run lint -- --fix || true","npm run type-check || true","npm run build || true"],} ; async optimizedBuild() { console.log("Starting optimized build process..."); for (const step of this.buildSteps) { try { console.log(``Executing: ${step}``); execSync(step,{ stdio: "inherit" })} catch (error) { console.warn(`Step failed but continuing: ${step}`)} } ; console.log("Build process completed")} } ; new BuildOptimizer().optimizedBuild()
+=======
+const { execSync } = require("child_process"); const fs = require("fs"); class $1 { constructor() { this.buildSteps = [ "npm run lint -- --fix || true","npm run type-check || true","npm run build || true"],} ; async optimizedBuild() { console.log("Starting optimized build process..."); for (const step of this.buildSteps) { try { console.log(``Executing: ${step}``); execSync(step,{ stdio: "inherit" })} catch (error) { console.warn(`Step failed but continuing: ${step}`)} } ; console.log("Build process completed")} } ; new BuildOptimizer().optimizedBuild()
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229

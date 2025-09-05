@@ -1,50 +1,4 @@
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const { execSync } = require("child_process");"console.log(" Starting Security Scan.");const report = { timestamp: new Date().toISOString()," checks: []," vulnerabilities: [],"" overallStatus: "healthy"};/ npm audit (non-fatal)try {" const auditJson = execSync("npm audit --json", {"" encoding: "utf8","" stdio: ["ignore", "pipe", "pipe"]}); const audit = JSON.parse(auditJson); const vulnCount audit.metadata && audit.metadata.vulnerabilities ? Object.values(audit.metadata.vulnerabilities).reduce((a, b) => a + b, 0) : 0; report.checks.push({"" name: "npm audit","" status: vulnCount ? "warning" : "pass"," summary: vulnCount}); if (vulnCount) {" report.overallStatus = "warning"; }} catch (e) {"" report.checks.push({ name: "npm audit", status: "error", error: e.message });}/ sensitive files"const sensitiveFiles = [".env"," ".env.local"," ".env.production"," "private-key.pem",];const found = sensitiveFiles.filter(f => fs.existsSync(f));report.checks.push({"" name: "sensitive files","" status: found.length ? "warning" : "pass", found});"if (found.length) report.overallStatus = "warning";const out = `security-scan-report-${Date.now()}.json`;fs.writeFileSync(out, JSON.stringify(report, null, 2));"`console.log(` Security scan completed. Report: ${out}`);""`"`
-#!/usr/bin/env node;
-const fs = require('fs');
-const { execSync } = require('child_process');
-const path = require('path');
-const report = {
-  timestamp: new Date().toISOString(),
-  checks: [],
-  vulnerabilities: [],
-  overallStatus: 'healthy',
-};
-// npm audit (non-fatal)
-try {
-  const auditJson = execSync('npm audit --json', {
-    encoding: 'utf8',
-    stdio: ['ignore', 'pipe', 'pipe'],
-  });
-  const audit = JSON.parse(auditJson);
-  const vulnCount =
-    audit.metadata && audit.metadata.vulnerabilities
-      ? Object.values(audit.metadata.vulnerabilities).reduce((a, b) => a + b, 0)
-      : 0;
-  report.checks.push({
-    name: 'npm audit',
-    status: vulnCount ? 'warning' : 'pass',
-    summary: vulnCount,
-  });
-  if (vulnCount) {
-    report.overallStatus = 'warning';
-  }
-} catch (e) {
-  report.checks.push({ name: 'npm audit', status: 'error', error: e.message });
-}
-// sensitive files
-const sensitiveFiles = [
-  '.env',
-  '.env.local',
-  '.env.production',
-  'private-key.pem',
-];
-const found = sensitiveFiles.filter(f => fs.existsSync(f));
-report.checks.push({
-  name: 'sensitive files',
-  status: found.length ? 'warning' : 'pass',
-  found,
-});
-if (found.length) report.overallStatus = 'warning';
+
 class SecurityScanner {}
   constructor() {}
     this.securityReport = {}
@@ -59,8 +13,10 @@ class SecurityScanner {}
       await this.checkDependencies();
       await this.checkSensitiveFiles();
       await this.checkEnvironmentVariables();
+      
       this.determineOverallStatus();
       this.saveReport();
+      
       return this.securityReport.overallStatus === 'secure';
     } catch (error) {}
       console.error('Security scan failed:', error);
@@ -74,9 +30,11 @@ class SecurityScanner {}
         stdio: 'pipe'
       }
 });
+      
       const audit = JSON.parse(auditResult);
       const vulnerabilities = audit.vulnerabilities || {};
       const vulnCount = Object.keys(vulnerabilities).length;
+      
       this.securityReport.checks.npmAudit = {}
         status: vulnCount === 0 ? 'secure' : 'vulnerable',
         vulnerabilities: vulnCount,
@@ -93,6 +51,7 @@ class SecurityScanner {}
     try {}
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
+      
       // Check for known vulnerable packages;
       const vulnerablePackages = [];
       for (const [name, version] of Object.entries(dependencies)) {}
@@ -121,6 +80,7 @@ class SecurityScanner {}
       'config.json',
       'secrets.json'
     ];
+    
     const foundFiles = [];
     for (const file of sensitiveFiles) {}
       if (fs.existsSync(file)) {}
@@ -136,6 +96,7 @@ class SecurityScanner {}
   async checkEnvironmentVariables() {}
     const envVars = process.env;
     const sensitiveVars = ['API_KEY', 'SECRET', 'PASSWORD', 'TOKEN', 'PRIVATE'];
+    
     const foundSensitiveVars = [];
     for (const [key, value] of Object.entries(envVars)) {}
       if (sensitiveVars.some(sensitive => key.toUpperCase().includes(sensitive))) {}
@@ -153,6 +114,7 @@ class SecurityScanner {}
     const hasErrors = checks.some(check => check.status === 'error');
     const hasVulnerabilities = checks.some(check => check.status === 'vulnerable');
     const hasWarnings = checks.some(check => check.status === 'warning');
+    
     if (hasErrors) {}
       this.securityReport.overallStatus = 'error';
     } else if (hasVulnerabilities) {}
@@ -184,15 +146,19 @@ if (require.main === module) {}
 };
 module.exports = SecurityScanner;
 #!/usr/bin/env node
+
 /**
  * Security Scanner for Zion Tech Group
  * Performs comprehensive security checks and vulnerability scanning
  */
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+
 console.log('🔒 Zion Tech Group - Security Scanner');
-console.log('==');
+console.log('=====================================');
+
 const securityReport = {
     timestamp: new Date().toISOString(),
     status: 'secure',
@@ -206,9 +172,11 @@ const securityReport = {
         vulnerabilities: 0
     }
 };
+
 function runSecurityCheck(name, checkFunction) {
     securityReport.summary.total++;
     console.log(`\n🔍 Security Check: ${name}`);
+    
     try {
         const result = checkFunction();
         if (result.status === 'pass') {
@@ -241,6 +209,7 @@ function runSecurityCheck(name, checkFunction) {
         console.log(`❌ ${name}: Error - ${error.message}`);
     }
 }
+
 // Check for sensitive data in files
 runSecurityCheck('Sensitive Data Scan', () => {
     const sensitivePatterns = [
@@ -250,6 +219,7 @@ runSecurityCheck('Sensitive Data Scan', () => {
         { pattern: /token\s*[:=]\s*['"][^'"]+['"]/gi, name: 'Token' },
         { pattern: /private[_-]?key\s*[:=]\s*['"][^'"]+['"]/gi, name: 'Private Key' }
     ];
+    
     const filesToCheck = [
         'package.json',
         'next.config.js',
@@ -257,7 +227,9 @@ runSecurityCheck('Sensitive Data Scan', () => {
         '.env.local',
         '.env.production'
     ];
+    
     const foundIssues = [];
+    
     filesToCheck.forEach(file => {
         if (fs.existsSync(file)) {
             const content = fs.readFileSync(file, 'utf8');
@@ -268,6 +240,7 @@ runSecurityCheck('Sensitive Data Scan', () => {
             });
         }
     });
+    
     if (foundIssues.length === 0) {
         return {
             status: 'pass',
@@ -282,9 +255,8 @@ runSecurityCheck('Sensitive Data Scan', () => {
         };
     }
 });
-const out = `security-scan-report-${Date.now()}.json`;
-fs.writeFileSync(out, JSON.stringify(report, null, 2));
-console.log(`✅ Security scan completed. Report: ${out}`);
+
+
 // Check for outdated dependencies
 runSecurityCheck('Dependency Security', () => {
     try {
@@ -294,17 +266,21 @@ runSecurityCheck('Dependency Security', () => {
                 message: 'package.json not found'
             };
         }
+        
         const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
         const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
+        
         // Check for known vulnerable packages
         const vulnerablePackages = [
             'lodash', // Known for prototype pollution
             'moment', // Deprecated, use date-fns or dayjs
             'request' // Deprecated
         ];
+        
         const foundVulnerable = Object.keys(dependencies).filter(dep => 
             vulnerablePackages.includes(dep)
         );
+        
         if (foundVulnerable.length === 0) {
             return {
                 status: 'pass',
@@ -325,6 +301,7 @@ runSecurityCheck('Dependency Security', () => {
         };
     }
 });
+
 // Check for security headers in Next.js config
 runSecurityCheck('Security Headers', () => {
     try {
@@ -334,7 +311,9 @@ runSecurityCheck('Security Headers', () => {
                 message: 'next.config.js not found - security headers not configured'
             };
         }
+        
         const configContent = fs.readFileSync('next.config.js', 'utf8');
+        
         const securityHeaders = [
             'X-Frame-Options',
             'X-Content-Type-Options',
@@ -342,9 +321,11 @@ runSecurityCheck('Security Headers', () => {
             'Strict-Transport-Security',
             'Content-Security-Policy'
         ];
+        
         const foundHeaders = securityHeaders.filter(header => 
             configContent.includes(header)
         );
+        
         if (foundHeaders.length === securityHeaders.length) {
             return {
                 status: 'pass',
@@ -365,13 +346,16 @@ runSecurityCheck('Security Headers', () => {
         };
     }
 });
+
 // Check for environment file security
 runSecurityCheck('Environment Security', () => {
     const envFiles = ['.env', '.env.local', '.env.production'];
     const issues = [];
+    
     envFiles.forEach(file => {
         if (fs.existsSync(file)) {
             const content = fs.readFileSync(file, 'utf8');
+            
             // Check if .env files are in .gitignore
             if (fs.existsSync('.gitignore')) {
                 const gitignore = fs.readFileSync('.gitignore', 'utf8');
@@ -379,6 +363,7 @@ runSecurityCheck('Environment Security', () => {
                     issues.push(`${file} not in .gitignore`);
                 }
             }
+            
             // Check for weak passwords
             const weakPasswordPattern = /password\s*=\s*(123|password|admin|test)/gi;
             if (weakPasswordPattern.test(content)) {
@@ -386,6 +371,7 @@ runSecurityCheck('Environment Security', () => {
             }
         }
     });
+    
     if (issues.length === 0) {
         return {
             status: 'pass',
@@ -400,11 +386,13 @@ runSecurityCheck('Environment Security', () => {
         };
     }
 });
+
 // Check for HTTPS configuration
 runSecurityCheck('HTTPS Configuration', () => {
     try {
         if (fs.existsSync('next.config.js')) {
             const configContent = fs.readFileSync('next.config.js', 'utf8');
+            
             if (configContent.includes('https') || configContent.includes('SSL')) {
                 return {
                     status: 'pass',
@@ -412,6 +400,7 @@ runSecurityCheck('HTTPS Configuration', () => {
                 };
             }
         }
+        
         return {
             status: 'warning',
             message: 'HTTPS configuration not explicitly found',
@@ -424,21 +413,25 @@ runSecurityCheck('HTTPS Configuration', () => {
         };
     }
 });
+
 // Check for file permissions
 runSecurityCheck('File Permissions', () => {
     try {
         const sensitiveFiles = ['.env', '.env.local', 'package.json'];
         const issues = [];
+        
         sensitiveFiles.forEach(file => {
             if (fs.existsSync(file)) {
                 const stats = fs.statSync(file);
                 const mode = stats.mode & parseInt('777', 8);
+                
                 // Check if file is world-readable (should not be)
                 if (mode & 4) {
                     issues.push(`${file} is world-readable`);
                 }
             }
         });
+        
         if (issues.length === 0) {
             return {
                 status: 'pass',
@@ -458,23 +451,27 @@ runSecurityCheck('File Permissions', () => {
         };
     }
 });
+
 // Determine overall security status
 if (securityReport.summary.failed > 0) {
     securityReport.status = 'vulnerable';
 } else if (securityReport.summary.warnings > 0) {
     securityReport.status = 'needs_attention';
 }
+
 // Save security report
 const reportPath = 'security-scan-report.json';
 fs.writeFileSync(reportPath, JSON.stringify(securityReport, null, 2));
+
 console.log('\n📊 Security Scan Summary');
-console.log('===');
+console.log('========================');
 console.log(`Total Checks: ${securityReport.summary.total}`);
 console.log(`✅ Passed: ${securityReport.summary.passed}`);
 console.log(`⚠️  Warnings: ${securityReport.summary.warnings}`);
 console.log(`❌ Failed: ${securityReport.summary.failed}`);
 console.log(`🚨 Vulnerabilities: ${securityReport.summary.vulnerabilities}`);
 console.log(`\nOverall Status: ${securityReport.status.toUpperCase()}`);
+
 if (securityReport.vulnerabilities.length > 0) {
     console.log('\n🚨 Security Issues Found:');
     securityReport.vulnerabilities.forEach((vuln, index) => {
@@ -484,7 +481,9 @@ if (securityReport.vulnerabilities.length > 0) {
         }
     });
 }
+
 console.log(`\n📄 Report saved to: ${reportPath}`);
+
 // Exit with appropriate code
 if (securityReport.status === 'vulnerable') {
     process.exit(1);
