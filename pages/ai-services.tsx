@@ -1,5 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 const services = [
   {
@@ -251,5 +253,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   </motion.div>
                   </div>
                   </section>
-                  </div>
+    </div>
+  )
 }

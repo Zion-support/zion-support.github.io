@@ -290,7 +290,7 @@ export default function AccessibilityPage() {
                     <div className="space-y-2">
                       <span className={`px-3 py-1 text-xs rounded-full ${
                         standard.status === 'Compliant' ? "bg-green-100 text-green-800" : 'bg-yellow-100 text-yellow-800'
-                      }}>
+                      }`}>
                         {standard.status}
                       </span>
                       <div className="text-sm text-gray-500">
@@ -322,7 +322,7 @@ export default function AccessibilityPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {accessibilityTools.map((tool, index) => (}
+              {accessibilityTools.map((tool, index) => (
                 <motion.div
                   key={index}
                   className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
@@ -373,7 +373,7 @@ export default function AccessibilityPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {accessibilityGuidelines.map((category, index) => (}
+              {accessibilityGuidelines.map((category, index) => (
                 <motion.div
                   key={index}
                   className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300"
@@ -386,7 +386,7 @@ export default function AccessibilityPage() {
                     {category.category}
                   </h3>
                   <ul className="space-y-2">
-                    {category.guidelines.map((guideline, idx) => (}
+                    {category.guidelines.map((guideline, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {guideline}
@@ -422,9 +422,6 @@ export default function AccessibilityPage() {
                   <p className="text-gray-600 mb-6">
                     If you encounter any accessibility barriers or have suggestions for improvement, we want to hear from you. Your feedback helps us create better experiences for everyone.
                   </p>
-                  <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                    {standard.level}
-                  </span>
                 </motion.div>
               </motion.div>
             </div>
