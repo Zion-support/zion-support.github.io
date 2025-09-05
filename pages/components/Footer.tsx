@@ -1,6 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Facebook, Twitter, Linkedin, Instagram, Github, Mail, Phone, MapPin } from 'lucide-react';
 
+const Footer = () => {
   const socialLinks = [
     { name: 'Facebook', href: '#', icon: Facebook },
     { name: 'Twitter', href: '#', icon: Twitter },
@@ -18,153 +21,100 @@ import Link from 'next/link';
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center space-x-2 mb-6">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">Z</span>
-                </div>
-                <span className="text-xl font-bold">Zion Tech Group</span>
-              </div>
-              <p className="text-gray-400 mb-6">
-                Leading provider of cutting-edge technology solutions, helping businesses transform and grow through innovation.
+              <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
+              <p className="text-gray-300 mb-6">
+                Leading provider of AI, IT, and micro SaaS solutions. 
+                Transforming businesses through innovative technology.
               </p>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <Phone className="w-4 h-4 text-blue-400" />
-                  <span className="text-sm">+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="w-4 h-4 text-blue-400" />
-                  <span className="text-sm">hello@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <MapPin className="w-4 h-4 text-blue-400" />
-                  <span className="text-sm">San Francisco, CA</span>
-                </div>
+              <div className="flex space-x-4">
+                {socialLinks.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.href}
+                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"
+                    aria-label={link.name}
+                  >
+                    <link.icon className="w-5 h-5" />
+                  </a>
+                ))}
               </div>
             </motion.div>
           </div>
 
           {/* Services */}
           <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-            >
-              <h3 className="text-lg font-semibold mb-6">Services</h3>
-              <ul className="space-y-3">
-                {footerLinks.services.map((link, index) => (
-                  <li key={index}>
-                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <ul className="space-y-2">
+              <li><Link href="/ai-services" className="text-gray-300 hover:text-white transition-colors">AI Services</Link></li>
+              <li><Link href="/it-services" className="text-gray-300 hover:text-white transition-colors">IT Services</Link></li>
+              <li><Link href="/cloud-solutions" className="text-gray-300 hover:text-white transition-colors">Cloud Solutions</Link></li>
+              <li><Link href="/cybersecurity" className="text-gray-300 hover:text-white transition-colors">Cybersecurity</Link></li>
+              <li><Link href="/micro-saas" className="text-gray-300 hover:text-white transition-colors">Micro SaaS</Link></li>
+            </ul>
           </div>
 
           {/* Solutions */}
           <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <h3 className="text-lg font-semibold mb-6">Solutions</h3>
-              <ul className="space-y-3">
-                {footerLinks.solutions.map((link, index) => (
-                  <li key={index}>
-                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+            <h4 className="text-lg font-semibold mb-4">Solutions</h4>
+            <ul className="space-y-2">
+              <li><Link href="/solutions/enterprise" className="text-gray-300 hover:text-white transition-colors">Enterprise</Link></li>
+              <li><Link href="/solutions/startup" className="text-gray-300 hover:text-white transition-colors">Startup</Link></li>
+              <li><Link href="/solutions/industry" className="text-gray-300 hover:text-white transition-colors">Industry</Link></li>
+              <li><Link href="/solutions/custom" className="text-gray-300 hover:text-white transition-colors">Custom</Link></li>
+            </ul>
           </div>
 
           {/* Company */}
           <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              <h3 className="text-lg font-semibold mb-6">Company</h3>
-              <ul className="space-y-3">
-                {footerLinks.company.map((link, index) => (
-                  <li key={index}>
-                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+            <h4 className="text-lg font-semibold mb-4">Company</h4>
+            <ul className="space-y-2">
+              <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/team" className="text-gray-300 hover:text-white transition-colors">Team</Link></li>
+              <li><Link href="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li>
+              <li><Link href="/news" className="text-gray-300 hover:text-white transition-colors">News</Link></li>
+              <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
+            </ul>
           </div>
 
-          {/* Resources & Legal */}
+          {/* Contact Info */}
           <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <h3 className="text-lg font-semibold mb-6">Resources</h3>
-              <ul className="space-y-3 mb-8">
-                {footerLinks.resources.map((link, index) => (
-                  <li key={index}>
-                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-              
-              <h3 className="text-lg font-semibold mb-6">Legal</h3>
-              <ul className="space-y-3">
-                {footerLinks.legal.map((link, index) => (
-                  <li key={index}>
-                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <div className="space-y-3">
+              <div className="flex items-center">
+                <Phone className="w-5 h-5 mr-3 text-blue-400" />
+                <span className="text-gray-300">+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center">
+                <Mail className="w-5 h-5 mr-3 text-blue-400" />
+                <span className="text-gray-300">kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center">
+                <MapPin className="w-5 h-5 mr-3 text-blue-400" />
+                <span className="text-gray-300">Delaware, USA</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Bottom Section */}
+        {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-gray-400 text-sm mb-4 md:mb-0"
-            >
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </motion.div>            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="flex space-x-4"
-            >
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"
-                  aria-label={social.name}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
+            <p className="text-gray-400 text-sm">
+              © 2024 Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Terms of Service
+              </Link>
+              <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Cookie Policy
+              </Link>
+            </div>
           </div>
         </div>
       </div>

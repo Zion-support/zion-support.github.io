@@ -22,7 +22,6 @@
     "pm2:logs": "pm2 logs --lines 200"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
     "@hookform/resolvers": "^5.2.1",
@@ -130,9 +129,6 @@
     "@testing-library/react": "^16.3.0",
     "@types/jest": "^29.5.8",
     "@types/next": "^8.0.7",
-=======
-    "@hookform/resolvers": "^3.3.2",
->>>>>>> f8f2078ff895fb72d1ec95621673db912996cc82
     "@types/node": "^20.0.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",

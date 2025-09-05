@@ -3,11 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  CalendarIcon as CalendarIconIcon, 
-=======
-  Calendar as CalendarIcon, 
->>>>>>> f8f2078ff895fb72d1ec95621673db912996cc82
+  Calendar as CalendarIcon,
   Clock, 
   Users, 
   CheckCircle, 

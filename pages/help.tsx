@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import Layout from './components/layout/MainLayout';
+import MainLayout from './components/layout/MainLayout';
 import { Search, HelpCircle, BookOpen, MessageCircle, Phone, Mail, FileText, Video, Download, ExternalLink, ChevronDown, ChevronRight } from 'lucide-react';
 
 const faqCategories = [
   {
-<<<<<<< HEAD
     id: 'overview',
     title: 'Understanding Our Services',
     description: 'Overview of all available services and solutions',
@@ -45,7 +44,7 @@ const faqCategories = [
     id: 'cloud-services',
     title: 'Cloud Services',
     description: 'Cloud infrastructure and deployment solutions.',
-    icon: Cloud,
+    icon: BookOpen,
     color: 'blue',
     articles: [
       {
@@ -70,10 +69,6 @@ const helpCategories = [
     description: 'New to our platform? Start here.',
     icon: BookOpen,
     color: 'blue',
-    articles: helpArticles
-=======
-    title: 'Getting Started',
-    icon: BookOpen,
     faqs: [
       {
         question: 'How do I get started with Zion Tech Group services?',
@@ -124,7 +119,6 @@ const helpCategories = [
         answer: 'Our support includes bug fixes, security updates, performance optimization, and minor feature enhancements. Major new features may require additional project work.'
       }
     ]
->>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34
   }
 ];
 
@@ -133,60 +127,7 @@ const HelpPage = () => {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-<<<<<<< HEAD
-  const toggleCategory = (index: number) => {
-    setExpandedCategory(expandedCategory === index ? null : index);
-  };
-
-  const filteredCategories = helpCategories.map(category => ({
-    ...category,
-    articles: category.articles.filter(article =>
-      article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      article.description.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-  })).filter(category => category.articles.length > 0);
-
-  return (
-    <>
-      <Head>
-        <title>Help Center - Zion Tech Group</title>
-        <meta name="description" content="Get help with Zion Tech Group services. Find documentation, tutorials, and support resources." />
-        <meta name="keywords" content="help, support, documentation, FAQ, tutorials, guides" />
-      </Head>
-
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Help <span className="text-blue-600">Center</span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Find answers, get support, and learn how to make the most of our services.
-              </p>
-              <div className="relative max-w-md mx-auto">
-                <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Search help articles..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-=======
-  const filteredFaqs = faqCategories
+  const filteredFaqs = helpCategories
     .filter(category => !selectedCategory || category.title === selectedCategory)
     .flatMap(category => category.faqs)
     .filter(faq => 
@@ -255,7 +196,7 @@ const HelpPage = () => {
               </motion.div>
 
               <div className="grid md:grid-cols-3 gap-8">
-                {faqCategories.map((category, index) => (
+                {helpCategories.map((category, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
@@ -424,7 +365,6 @@ const HelpPage = () => {
         </section>
       </div>
     </MainLayout>
->>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34
   );
 };
 
