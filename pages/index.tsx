@@ -2,15 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, ArrowRight } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
-  { number: '120+', label: 'Services Available' },
-  { number: '1000+', label: 'Projects Completed' },
-  { number: '75+', label: 'Expert Team Members' },
-  { number: '50+', label: 'Countries Served' }
+  { number: '500+', label: 'Projects Completed' },
+  { number: '50+', label: 'Expert Team Members' }
 ];
 
 const services = [
@@ -36,8 +34,8 @@ const services = [
 
 export default function HomePage() {
   return (
-    <MainLayout>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <Layout>
+      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
@@ -62,9 +60,7 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, edge computing, quantum computing, and digital transformation services. 
-              <br className="hidden md:block" />
-              <span className="text-blue-300 font-semibold">120+ Services Available | Contact us: +1 302 464 0950 | kleber@ziontechgroup.com</span>
+              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
@@ -135,7 +131,7 @@ export default function HomePage() {
       {/* Stats Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -168,21 +164,8 @@ export default function HomePage() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let our expert team help you leverage cutting-edge technology to drive growth and innovation. 
-              <br className="hidden md:block" />
-              <span className="text-blue-200 font-semibold">Get your free consultation today!</span>
+              Let our expert team help you leverage cutting-edge technology to drive growth and innovation.
             </p>
-            <div className="mb-8">
-              <p className="text-lg text-blue-100 mb-2">
-                📞 <strong>Call us:</strong> +1 302 464 0950
-              </p>
-              <p className="text-lg text-blue-100 mb-2">
-                📧 <strong>Email us:</strong> kleber@ziontechgroup.com
-              </p>
-              <p className="text-lg text-blue-100">
-                📍 <strong>Visit us:</strong> 364 E Main St STE 1008, Middletown DE 19709
-              </p>
-            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Get Free Consultation
@@ -194,7 +177,7 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-      </div>
-    </MainLayout>
+    </div>
+    </Layout>
   );
 }
