@@ -177,7 +177,7 @@ verify_automation() {
 
 # Function to display monitoring information
 display_monitoring_info() {
-    log "==================== PM2 ERROR FIXING AUTOMATION STARTED ===================="
+    log "====== PM2 ERROR FIXING AUTOMATION STARTED ======"
     echo
     success "The following automations are now running:"
     echo
@@ -192,7 +192,7 @@ display_monitoring_info() {
     echo "  🔗 link-integrity-checker      - Runs every 4 hours"
     echo "  💡 code-improvement-monitor    - Runs every 6 hours"
     echo
-    log "==================== USEFUL COMMANDS ===================="
+    log "====== USEFUL COMMANDS ======"
     echo
     echo "  View all processes:          pm2 status"
     echo "  View logs:                   pm2 logs"
@@ -202,14 +202,14 @@ display_monitoring_info() {
     echo "  Reload configuration:        pm2 reload ecosystem-enhanced-error-fixing.config.cjs"
     echo "  Monitor real-time:           pm2 monit"
     echo
-    log "==================== LOG LOCATIONS ===================="
+    log "====== LOG LOCATIONS ======"
     echo
     echo "  Main logs:                   ./automation/logs/"
     echo "  Error logs:                  ./automation/logs/*-error.log"
     echo "  Output logs:                 ./automation/logs/*-out.log"
     echo "  Reports:                     ./automation/reports/"
     echo
-    log "======================= COMPLETED ======================="
+    log "== COMPLETED =="
 }
 
 # Main execution
