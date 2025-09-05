@@ -44,7 +44,9 @@ import {
   BookOpen,
   Home,
   Gamepad2,
-  Package
+  Package,
+  Phone,
+  MapPin
 } from 'lucide-react';
 
 const aiServices = [
@@ -1664,7 +1666,7 @@ const benefits = [
     description: 'AI-powered threat detection',
     stat: '99.9%'
   },
-  {}
+  {
     icon: Users,
     title: 'Improved Experience',
     description: 'Personalized user interactions',
@@ -1720,7 +1722,7 @@ export default function AIServicesPage() {
               Our AI Solutions
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Comprehensive AI services designed to drive innovation and efficiency)
+              Comprehensive AI services designed to drive innovation and efficiency
             </p>
           </motion.div>
 
@@ -1752,12 +1754,12 @@ export default function AIServicesPage() {
                     href="/contact"
                     className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-200"
                   >
-                    Learn More)
+                    Learn More
                     <ArrowRight className="w-4 h-4 ml-1" />
                   </Link>
                 </motion.div>
-              ))
-            });
+              );
+            })}
           </div>
         </div>
       </section>
@@ -1821,5 +1823,5 @@ export default function AIServicesPage() {
         </div>
       </section>
     </div>
-  ))
-});
+  );
+}
