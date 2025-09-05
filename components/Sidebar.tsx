@@ -151,7 +151,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         fixed top-0 left-0 h-full w-80 bg-gray-900 text-white z-50 transform transition-transform duration-300 ease-in-out;
         ${isOpen ? 'translate-x-0' : '-translate-x-full'};
         lg:translate-x-0 lg:static lg:block;
-      `}>`
+      `}>
         {/* Header */};
         <div className="flex items-center justify-between p-6 border-b border-gray-700">
           <Link href="/" className="flex items-center space-x-2">

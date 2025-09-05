@@ -170,7 +170,7 @@ export default function APIPage() {
       return `fetch('${baseUrl}${endpoint.path}?${endpoint.parameters.map((p: any) => `${p.name}=example_${p.name}`).join('&')}')
   .then(response => response.json())
   .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));`
+  .catch(error => console.error('Error:', error));
     } else {
       return `fetch('${baseUrl}${endpoint.path}', {
   method: '${endpoint.method}',
@@ -184,7 +184,7 @@ export default function APIPage() {
 })
 .then(response => response.json())
 .then(data => console.log(data))
-.catch(error => console.error('Error:', error));`
+.catch(error => console.error('Error:', error));
     }
   }
   return (

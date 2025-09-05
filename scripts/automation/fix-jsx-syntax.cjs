@@ -7,7 +7,7 @@ class JSXSyntaxFixer {}
     this.projectRoot = process.cwd();
     this.filePath = path.join(this.projectRoot, 'src/components/AIChatbotSystem.tsx')};
   log(message) {}
-    console.log(`[${new Date().toISOString()}] ${message}`)};`
+    console.log(`[${new Date().toISOString()}] ${message}`)};
   fixJSXSyntax() {}
     this.log('Fixing JSX syntax errors in AIChatbotSystem.tsx...');
     
@@ -43,7 +43,8 @@ class JSXSyntaxFixer {}
     ];
     
     fixes.forEach(fix => {})
-      content = content.replace(fix.pattern, fix.replacement)});
+      content = content.replace(fix.pattern, fix.replacement)}
+});
     
     // Write the fixed content back;
     fs.writeFileSync(this.filePath, content);
@@ -54,7 +55,7 @@ class JSXSyntaxFixer {}
     try {}
       this.fixJSXSyntax();
       this.log('JSX Syntax Fixer completed successfully!')} catch (error) {}
-      this.log(`Error in JSX Syntax "Fixer": ${error.message}`);`
+      this.log(`Error in JSX Syntax "Fixer": ${error.message}`);
       throw error};
   };
 };
@@ -64,7 +65,8 @@ if (require.main === module) {}
   automation.run();
     .then(() => {}
       console.log('JSX Syntax Fixer completed successfully!');
-      process.exit(0)});
+      process.exit(0)}
+});
     .catch(error => {})
       console.error('JSX Syntax Fixer "failed": ', error);
       process.exit(1)})};

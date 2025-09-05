@@ -21,7 +21,7 @@ const endpoints = [
       { name: "offset", type: "integer", required: false, description: "Number of users to skip" }
     ],
     example: `curl -X GET "https://api.ziontechgroup.com/v1/users?limit=10" \\
-  -H "Authorization: Bearer YOUR_API_KEY"`
+  -H "Authorization: Bearer YOUR_API_KEY"
   },
   {
     method: "POST",
@@ -35,7 +35,7 @@ const endpoints = [
     example: `curl -X POST "https://api.ziontechgroup.com/v1/users" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
-  -d '{"name": "John Doe", "email": "john@example.com"}'`
+  -d '{"name": "John Doe", "email": "john@example.com"}'
   },
   {
     method: "PUT",
@@ -49,7 +49,7 @@ const endpoints = [
     example: `curl -X PUT "https://api.ziontechgroup.com/v1/users/123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
-  -d '{"name": "John Smith"}'`
+  -d '{"name": "John Smith"}'
   },
   {
     method: "DELETE",
@@ -59,7 +59,7 @@ const endpoints = [
       { name: "id", type: "string", required: true, description: "User ID" }
     ],
     example: `curl -X DELETE "https://api.ziontechgroup.com/v1/users/123" \\
-  -H "Authorization: Bearer YOUR_API_KEY"`
+  -H "Authorization: Bearer YOUR_API_KEY"
   }
 ];
 
@@ -152,7 +152,8 @@ export default function ApiDocsPage() {
                 <div className="ml-4 mb-4">
                   apiKey: <span className="text-green-400">'your-api-key'</span>
                 </div>
-                <div className="mb-4">{'}'});</div>
+                <div className="mb-4">{'}'}
+});</div>
                 <div className="mb-4">
                   <span className="text-gray-400"># Make your first request</span>
                 </div>

@@ -450,11 +450,11 @@ export default function AccessibilityPage() {
                 </a>
                 <a href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
                   General Contact
-                </a>`
-              </div>`
-            </motion.div>`
-          </div>`
-        </section>`
-      </div>`
-    </MainLayout>`
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </MainLayout>
 }

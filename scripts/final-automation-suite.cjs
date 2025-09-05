@@ -45,8 +45,8 @@ const path = require("path")
     this.log(`� "Build": ${this.results.buildSuccess ? "SUCCESS" : "FAILED"}`, this.results.buildSuccess ? "SUCCESS" : "ERROR"`)
     this.log(`🧪 "Tests": ${this.results.testsPassed ? "PASSED" : "FAILED"}`, this.results.testsPassed ? "SUCCESS" : "ERROR"`)
     this.log(`� "Security": ${this.results.securityIssues === 0 ? "CLEAN" : "ISSUES FOUND"}`, this.results.securityIssues === 0 ? "SUCCESS" : "WARN"`)
-    this.log(`⚡ "Performance": ${this.results.performanceScore.toFixed(1)}/100`, "INFO"`
-    this.log(`� "Status": ${this.getOverallStatus()}`, "INFO"`
+    this.log(`⚡ "Performance": ${this.results.performanceScore.toFixed(1)}/100`, "INFO"
+    this.log(`� "Status": ${this.getOverallStatus()}`, "INFO"
     this.log(" Starting Final Automation Suite", "INFO")
     this.log("=".repeat(60), "INFO"
       this.log("� Final Automation Suite completed!", "SUCCESS")

@@ -94,7 +94,7 @@ console.log('� CI/"CD""")
       "let"""
     console.log('\n CI/"CD""")
         "stdio"""
-    console.log('\n CI/CD Pipeline "Summary""")
+// console.log('\n CI/CD Pipeline "Summary""")
       console.log('\n Failed "Stages""")
       console.log('\n Successful "Stages""")
       console.error('Error saving pipeline "log""")

@@ -10,7 +10,7 @@ export interface Revolutionary2026ItService {}
   link: string;
   category: string;,
   realImplementation: boolean;
-  contactInfo: {,}
+  contactInfo: {}
   mobile: string;
     email: string;,"
   address: string};export const "revolutionary2026ITServices": Revolutionary2026ItService[] = [{""}]

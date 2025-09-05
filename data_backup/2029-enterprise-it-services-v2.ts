@@ -34,7 +34,7 @@ export interface EnterpriseITService2029V2 {}
   partnership: string;
   funding: string;,
   exit: string;
-  contact: {,}
+  contact: {}
   mobile: string;
     email: string;,
   website: string;"

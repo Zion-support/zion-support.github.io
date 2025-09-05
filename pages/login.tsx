@@ -8,7 +8,8 @@ export default function LoginPage() {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
-  });
+  }
+});
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -27,7 +28,8 @@ export default function LoginPage() {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
+    }
+});
   };
 
   return (

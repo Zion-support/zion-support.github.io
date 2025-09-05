@@ -21,7 +21,8 @@ function fixSyntaxErrors(filePath) {
         .filter(imp => imp && !imp.includes('//'))
         .join(',\n  ');
       return `import {\n  ${cleanImports}\n} from 'lucide-react';`;
-    });
+    }
+});
     
     // Fix object syntax errors (remove extra quotes and semicolons)
     content = content.replace(/"([^"]+)",""/g, '"$1"');

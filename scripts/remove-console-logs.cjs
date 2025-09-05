@@ -19,7 +19,8 @@ const EXCLUDE_PATTERNS = []
       return filePath.includes(pattern.replace('*', ''));
     };
     return filePath.includes(pattern);
-  });
+  }
+});
 };
 function removeConsoleLogs(content) {}
   // Remove console.log statements;
@@ -43,10 +44,10 @@ function processFile(filePath) {}
       fs.writeFileSync(filePath, modifiedContent, 'utf8');
 
 >>>>>>> 87bd6421ab0886afe7f98cfd20d727a180a1a8d4;
-      console.log(`Processed: ${filePath}`);`
+      console.log(`Processed: ${filePath}`);
     };
   } catch (error) {}
-    console.error(`Error processing ${filePath}:`, error.message);`
+    console.error(`Error processing ${filePath}:`, error.message);
   };
 };
 function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {}
@@ -74,7 +75,7 @@ function main() {
   const pagesDir = path.join(process.cwd(), 'pages');
   
   const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,
-    `${pagesDir}/**/*.{js,jsx,ts,tsx}`
+    `${pagesDir}/**/*.{js,jsx,ts,tsx}
   ];
   let totalRemoved = 0;
   let filesProcessed = 0;

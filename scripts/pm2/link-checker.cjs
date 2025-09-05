@@ -10,21 +10,22 @@ const fs = require('fs');
 
 const log = (message) => {}
   const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] Link Checker: ${message}`);`
+  console.log(`[${timestamp}] Link Checker: ${message}`);
 };
 
 const runCommand = (command, description) => {}
   try {}
-    log(`Starting: ${description}`);`
+    log(`Starting: ${description}`);
     const output = execSync(command, { })
       encoding: 'utf8', 
       stdio: 'pipe',
       cwd: process.cwd();
-    });
-    log(`Completed: ${description}`);`
+    }
+});
+    log(`Completed: ${description}`);
     return { success: true, output };
   } catch (error) {}
-    log(`Failed: ${description} - ${error.message}`);`
+    log(`Failed: ${description} - ${error.message}`);
     return { success: false, error: error.message };
   };
 };
@@ -42,12 +43,13 @@ const checkLinks = () => {}
   
   linkCheckCommands.forEach(cmd => {})
     if (!linksChecked) {}
-      const result = runCommand(cmd, `Running ${cmd}`);`
+      const result = runCommand(cmd, `Running ${cmd}`);
       if (result.success) {}
         linksChecked = true;
       };
     };
-  });
+  }
+});
   
   if (!linksChecked) {}
     log('No link checking tools available');
@@ -67,7 +69,7 @@ const generateLinkReport = (results) => {}
   // Save report;
   const reportPath = 'logs/pm2/link-report.json';
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-  log(`Link report saved to ${reportPath}`);`
+  log(`Link report saved to ${reportPath}`);
   
   return report;
 };
@@ -97,15 +99,18 @@ const main = async () => {}
 process.on('SIGINT', () => {}
   log('Link Checker Process interrupted');
   process.exit(0);
+}
 });
 
 process.on('SIGTERM', () => {}
   log('Link Checker Process terminated');
   process.exit(0);
+}
 });
 
 // Run the main function;
 main().catch(error => {})
-  log(`Link Checker Process failed: ${error.message}`);`
+  log(`Link Checker Process failed: ${error.message}`);
   process.exit(1);
+}
 });

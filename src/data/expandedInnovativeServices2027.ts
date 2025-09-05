@@ -12,11 +12,11 @@ export interface ExpandedService2027 {}
   benefits: string[];
   useCases: string[];,
   targetAudience: string[];
-pricing: {,}
+pricing: {}
   model: string;
     basePrice: number;,
   currency: string;
-pricingTiers: {,}
+pricingTiers: {}
   starter: number;
       professional: number;,
   enterprise: number;
@@ -32,7 +32,7 @@ pricingTiers: {,}
   innovationLevel: string;
   marketSize: string;,
   growthRate: string;
-  contactInfo: {,}
+  contactInfo: {}
   phone: string;
     email: string;,
   website: string;

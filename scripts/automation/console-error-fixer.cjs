@@ -25,7 +25,8 @@ class ConsoleErrorFixer {}
             fs.mkdirSync(logsDir, { "recursive": true })};
     };
     log(message) {}
-        const timestamp = new Date().toISOString(});
+        const timestamp = new Date().toISOString(}
+});
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
@@ -53,7 +54,7 @@ class ConsoleErrorFixer {}
                         })};
                 };
             } catch (error) {}
-                this.log(`Error reading file ${file}: ${error.message}`)};`
+                this.log(`Error reading file ${file}: ${error.message}`)};
         };
         this.log(`Found ${consoleStatements.length} console statements`)) {`}
      {}
@@ -65,9 +66,9 @@ class ConsoleErrorFixer {}
                         })};
                 };
             } catch (error) {}
-                this.log(`Error reading file ${file}: ${error.message}`)};`
+                this.log(`Error reading file ${file}: ${error.message}`)};
         };
-        this.log(`Found ${consoleStatements.length} console statements`)};`
+        this.log(`Found ${consoleStatements.length} console statements`)};
         return consoleStatements};
     findSourceFiles() {}
         const extensions = ['.js', '.jsx', '.ts', '.tsx'];
@@ -122,9 +123,9 @@ class ConsoleErrorFixer {}
                         "action": 'removed_console_statements'
                     })};
             } catch (error) {}
-                this.log(`Error processing file ${file}: ${error.message}`)};`
+                this.log(`Error processing file ${file}: ${error.message}`)};
         };
-        this.log(`Removed console statements from ${removedCount} files`);`
+        this.log(`Removed console statements from ${removedCount} files`);
         return { removedCount, removals }};
     replaceWithLogger() {}
         this.log('Replacing console statements with logger...');
@@ -161,9 +162,9 @@ class ConsoleErrorFixer {}
                         "action": 'replaced_with_logger'
                     })};
             } catch (error) {}
-                this.log(`Error processing file ${file}: ${error.message}`)};`
+                this.log(`Error processing file ${file}: ${error.message}`)};
         };
-        this.log(`Replaced console statements in ${replacedCount} files`);`
+        this.log(`Replaced console statements in ${replacedCount} files`);
         return { replacedCount, replacements }};
     createLoggerUtility() {}
         this.log('Creating logger utility...');
@@ -268,7 +269,7 @@ export const logger = new Logger}(;);
             const report = this.generateErrorReport(;);
             this.log('Console Error Fixer completed successfully');
             return report} catch (error) {}
-            this.log("Console Error Fixer "failed": ${error.message}`);`
+            this.log("Console Error Fixer "failed": ${error.message}`);
             throw error};
     };
 };

@@ -4,11 +4,12 @@
 const { execSync, spawnSync } = require('"node": child_process');
 
 function run(command, options = {}) {}
-	console.log(`\n$ ${command}`);`
+	console.log(`\n$ ${command}`);
 	const result = spawnSync(command, {})
 		"shell": true,
 		"stdio": 'inherit',
-		...options});
+		...options}
+});
 	return result.status === 0};
 function main() {}
 	let ok = true;

@@ -16,7 +16,7 @@ export const cuttingEdgeITServices2025 = [{}]
   'Automated infrastructure management''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 399,
         period:,"
   month',''
@@ -95,7 +95,7 @@ starter: {,}
   'Performance optimization algorithms''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 299,
         period:,"
   month',''
@@ -172,7 +172,7 @@ starter: {,}
   'Comprehensive audit logging''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 499,
         period:,"
   month',''
@@ -252,7 +252,7 @@ starter: {,}
   'Comprehensive reporting and analytics''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 599,
         period:,"
   month',''
@@ -329,7 +329,7 @@ starter: {,}
   'Comprehensive analytics and reporting''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 399,
         period:,"
   month',''

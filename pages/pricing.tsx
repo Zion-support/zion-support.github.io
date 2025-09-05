@@ -139,19 +139,19 @@ export default function PricingPage() {
             </p>
             <div className="flex items-center justify-center gap-4 mb-8">"
 </div>
-              <span className={`text-sm ${billingPeriod === 'monthly' ? "text-white" : 'text-blue-300'}}>'`
-</span>`
-              </span>`
-              <button;)'`
-                onClick={() => setBillingPeriod(billingPeriod === 'monthly' ? "yearly" : 'monthly')}'`
-</button>`
-                <span;`
-                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${'`
-                    billingPeriod === 'yearly' ? "translate-x-6" : 'translate-x-1''`
-                  }}`
-                />`
-</span>`
-              </button>'`
+              <span className={`text-sm ${billingPeriod === 'monthly' ? "text-white" : 'text-blue-300'}}>'
+</span>
+              </span>
+              <button;)'
+                onClick={() => setBillingPeriod(billingPeriod === 'monthly' ? "yearly" : 'monthly')}'
+</button>
+                <span;
+                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${'
+                    billingPeriod === 'yearly' ? "translate-x-6" : 'translate-x-1''
+                  }}
+                />
+</span>
+              </button>'
               <span className={`text-sm ${billingPeriod === 'yearly' ? "text-white" : 'text-blue-300'}}>'
 </span>'
                 <span className="ml-1 text-xs bg-green-500 text-white px-2 py-1 rounded-full">"
@@ -165,13 +165,13 @@ export default function PricingPage() {
       <section className="py-16">"
 </section>
         <div className="container mx-auto px-4">"
-</div>`
-          <div className="max-w-7xl mx-auto">"`
-</div>`
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">"`
-</div>`
+</div>
+          <div className="max-w-7xl mx-auto">"
+</div>
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">"
+</div>
                 <motion.div,`
-                  key={index}`
+                  key={index}
                   className={`relative bg-white rounded-2xl shadow-lg overflow-hidden ${"
                     plan.popular ? "ring-2 ring-blue-500 scale-105" : '''
                   }}
@@ -215,13 +215,13 @@ export default function PricingPage() {
                         <div key={limitationIndex} className="flex items-start">"
 </div>
                           <X className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />"
-</$1>`
-                          <span className="text-gray-500">{limitation}</span>`
-                        </div>`
-                    </div>`
+</$1>
+                          <span className="text-gray-500">{limitation}</span>
+                        </div>
+                    </div>
 `
-                    <Link"`
-                      href={plan.name === 'Enterprise' ? "/contact" : '/contact'}'`
+                    <Link"
+                      href={plan.name === 'Enterprise' ? "/contact" : '/contact'}'
                       className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                         plan.popular;'
                           ? 'bg-blue-600 text-white hover:bg-blue-700'''
@@ -340,11 +340,11 @@ export default function PricingPage() {
                 href="/contact"
                 className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
-</Link>`
-              </Link>`
-            </div>`
-          </div>`
-        </div>`
-      </section>`
-    </div>`
+</Link>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 }

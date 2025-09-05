@@ -3,7 +3,8 @@ import { withErrorLogging } from '../withErrorLogging.cjs';
 
 export default withErrorLogging(async (req, res) => {
   if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({ error: 'Method not allowed' }
+});
   }
 
   try {
@@ -14,7 +15,8 @@ export default withErrorLogging(async (req, res) => {
 
 export default withErrorLogging(async (req, res) => {}
   if (req.method !== 'GET') {}
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({ error: 'Method not allowed' }
+});
   };
   try {}
     // Sample quotes data - in production, this would come from a database;
@@ -42,13 +44,15 @@ export default withErrorLogging(async (req, res) => {}
       }
     ];
 
-    res.status(200).json({ quotes });
+    res.status(200).json({ quotes }
+});
   } catch (error) {
     console.error('Quotes fetch failed:', error);
     res.status(500).json({
       error: 'Failed to fetch quotes',
       message: error.message,
-    });
+    }
+});
   }
 =======
       {}
@@ -58,13 +62,16 @@ export default withErrorLogging(async (req, res) => {}
       };
     ];
 
-    res.status(200).json({ quotes });
+    res.status(200).json({ quotes }
+});
   } catch (error) {}
     console.error('Quotes fetch failed:', error);
     res.status(500).json({})
       error: 'Failed to fetch quotes',
       message: error.message,
-    });
+    }
+});
   };
 >>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
+}
 });

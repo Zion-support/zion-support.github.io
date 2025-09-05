@@ -201,7 +201,8 @@ export default function CaseStudiesPage() {
                          caseStudy.industry.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          caseStudy.technologies.some(tech => tech.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
-  });
+  }
+});
 
   return (
     <MainLayout
@@ -339,13 +340,13 @@ export default function CaseStudiesPage() {
                     </div>
                     
                     <div className="flex items-center justify-between">
-                      <div className="text-sm text-gray-500">`
-                        <div className="flex items-center">`
-                          <Clock className="w-4 h-4 mr-1" />`
-                          {caseStudy.duration}`
-                        </div>`
-                      </div>`
-                      <Link`
+                      <div className="text-sm text-gray-500">
+                        <div className="flex items-center">
+                          <Clock className="w-4 h-4 mr-1" />
+                          {caseStudy.duration}
+                        </div>
+                      </div>
+                      <Link
                         href={`/case-studies/${caseStudy.id}}
                         className="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-semibold"
                       >
@@ -423,13 +424,13 @@ export default function CaseStudiesPage() {
                     </div>
                     
                     <div className="flex items-center justify-between">
-                      <div className="text-sm text-gray-500">`
-                        <div className="flex items-center">`
-                          <Users className="w-4 h-4 mr-1" />`
-                          {caseStudy.teamSize}`
-                        </div>`
-                      </div>`
-                      <Link`
+                      <div className="text-sm text-gray-500">
+                        <div className="flex items-center">
+                          <Users className="w-4 h-4 mr-1" />
+                          {caseStudy.teamSize}
+                        </div>
+                      </div>
+                      <Link
                         href={`/case-studies/${caseStudy.id}}
                         className="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-semibold group-hover:text-emerald-700"
                       >
@@ -534,11 +535,11 @@ export default function CaseStudiesPage() {
                 </Link>
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold">
                   Learn More About Us
-                </Link>`
-              </div>`
-            </motion.div>`
-          </div>`
-        </section>`
-      </div>`
-    </MainLayout>`
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </MainLayout>
 }

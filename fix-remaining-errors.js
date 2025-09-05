@@ -9,5 +9,6 @@ import path from "path"""
       fs.writeFileSync(filePath, content, "utf8""")
       console.log("Fixed parsing errors "in": ${filePath}""")
     console.error("Error fixing ${filePath}:"")"
-    "api/create-checkout-session.js": "export default function handler(req,res) {\n res.status(200).json({ message: "Checkout session created" });\n}\n`,".eslintrc.disabled.js""`
+    "api/create-checkout-session.js": "export default function handler(req,res) {\n res.status(200).json({ message: "Checkout session created" }
+});\n}\n`,".eslintrc.disabled.js""
 cursor/fix-lint-push-and-merge-to-main-f3c1;"

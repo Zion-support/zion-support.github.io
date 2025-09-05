@@ -681,13 +681,13 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   <ul className="space-y-3 mb-8">
                   {level.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center text-gray-600">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />`
-                      {feature}`
-                    </li>`
-                  ))}`
-                </ul>`
-                  <Link`
-                  href="/contact"`
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                  <Link
+                  href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     index === 1
 ? "bg-green-600 hover:bg-green-700 text-white" : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
@@ -720,11 +720,11 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 Get IT Assessment
               </Link>
                   <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
-                View All Services`
-              </Link>`
-                  </div>`
-                  </motion.div>`
-                  </div>`
-                  </section>`
-                  </div>`
+                View All Services
+              </Link>
+                  </div>
+                  </motion.div>
+                  </div>
+                  </section>
+                  </div>
 }
