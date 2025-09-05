@@ -4,50 +4,13 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
-<<<<<<< HEAD
-=======
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
-<<<<<<< HEAD
-}
-
-class ErrorBoundary extends Component<Props, State> {
-  public state: State = {
-    hasError: false
-  };
-
-  public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-  }
-
-  public render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-100">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Something went wrong
-            </h1>
-            <p className="text-gray-600 mb-4">
-              We're sorry, but something unexpected happened.
-            </p>
-            <button
-              onClick={() => this.setState({ hasError: false })}
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-            >
-              Try again
-            </button>
-=======
   errorInfo?: ErrorInfo;
 }
 
@@ -171,7 +134,6 @@ class ErrorBoundary extends Component<Props, State> {
                 </div>
               </details>
             )}
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
           </div>
         </div>
       );

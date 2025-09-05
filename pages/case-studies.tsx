@@ -1,196 +1,138 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
-import {
-  Users,
-  Clock,
-  CheckCircle,
-  BarChart3,
-  Building,
-  Cloud,
-  Shield
-=======
 import { motion } from 'framer-motion';
+import Layout from '../components/Layout';
 import { 
   TrendingUp, 
   Users, 
-  Clock, 
-  CheckCircle, 
   Building, 
-  Brain, 
-  Shield, 
-  Zap,
+  Cloud, 
+  Shield,
   ArrowRight,
-  Star
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+  CheckCircle,
+  Star,
+  Clock,
+  DollarSign
 } from 'lucide-react';
-import Layout from '../components/Layout';
 
 const caseStudies = [
   {
-<<<<<<< HEAD
-    title: 'AI-Powered Customer Service Transformation',
-    client: 'TechCorp Inc.',
-    industry: 'Technology',
-    challenge: 'High customer service costs and response times',
-    solution: 'Implemented AI chatbots and automated ticket routing',
-    results: '60% reduction in response time, 40% cost savings',
+    title: 'E-commerce Platform Optimization',
+    client: 'RetailTech Solutions',
+    industry: 'E-commerce',
+    challenge: 'Slow loading times and poor user experience affecting sales',
+    solution: 'Implemented performance optimizations, CDN, and database improvements',
+    results: [
+      '50% faster page load times',
+      '30% increase in conversion rates',
+      '25% reduction in bounce rate',
+      '40% improvement in mobile performance'
+    ],
+    technologies: ['React', 'Node.js', 'AWS', 'Redis', 'MongoDB'],
     duration: '3 months',
-    team: '5 AI engineers'
+    team: '5 developers'
   },
   {
-    title: 'Cloud Infrastructure Migration',
-    client: 'FinanceFlow Ltd.',
+    title: 'AI-Powered Customer Service',
+    client: 'FinanceCorp',
     industry: 'Financial Services',
-    challenge: 'Legacy system limitations and scalability issues',
-    solution: 'Migrated to AWS with microservices architecture',
-    results: '99.9% uptime, 50% performance improvement',
+    challenge: 'High customer service costs and long response times',
+    solution: 'Developed intelligent chatbot and automated response system',
+    results: [
+      '60% reduction in support tickets',
+      '80% faster response times',
+      '90% customer satisfaction rate',
+      '45% cost savings on support'
+    ],
+    technologies: ['Python', 'TensorFlow', 'NLP', 'AWS', 'Docker'],
+    duration: '4 months',
+    team: '6 developers'
+  },
+  {
+    title: 'Cloud Migration & DevOps',
+    client: 'ManufacturingCo',
+    industry: 'Manufacturing',
+    challenge: 'Legacy systems and manual deployment processes',
+    solution: 'Complete cloud migration with automated CI/CD pipelines',
+    results: [
+      '99.9% uptime achieved',
+      '70% faster deployment times',
+      '50% reduction in infrastructure costs',
+      'Zero-downtime deployments'
+    ],
+    technologies: ['AWS', 'Kubernetes', 'Docker', 'Jenkins', 'Terraform'],
     duration: '6 months',
-    team: '8 cloud architects'
+    team: '8 developers'
   }
 ];
 
-export default function CaseStudiesPage() {
-  return (
-    <Layout title="Case Studies - Zion Tech Group">
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Success Stories
-              </h1>
-              <p className="text-xl text-blue-100">
-                Real results from our technology solutions
-              </p>
-            </div>
-=======
-    id: 1,
-    title: "AI-Powered Healthcare Platform",
-    client: "Regional Medical Center",
-    industry: "Healthcare",
-    challenge: "Manual patient data processing and diagnosis delays",
-    solution: "AI-powered diagnostic platform with real-time analysis",
-    results: [
-      "60% reduction in diagnosis time",
-      "40% improvement in accuracy",
-      "80% reduction in manual data entry",
-      "95% patient satisfaction rate"
-    ],
-    technologies: ["AI/ML", "Computer Vision", "Data Analytics", "Cloud Computing"],
-    duration: "6 months",
-    team: "12 experts",
-    image: "/images/case-studies/healthcare-ai.jpg"
-  },
-  {
-    id: 2,
-    title: "Cloud Migration for Financial Services",
-    client: "Regional Bank",
-    industry: "Financial Services",
-    challenge: "Legacy systems causing performance issues and high maintenance costs",
-    solution: "Complete cloud migration with microservices architecture",
-    results: [
-      "50% reduction in infrastructure costs",
-      "99.9% uptime achieved",
-      "3x faster application performance",
-      "Zero security incidents"
-    ],
-    technologies: ["AWS", "Kubernetes", "Microservices", "DevOps"],
-    duration: "8 months",
-    team: "15 experts",
-    image: "/images/case-studies/cloud-migration.jpg"
-  },
-  {
-    id: 3,
-    title: "Cybersecurity Enhancement",
-    client: "Manufacturing Company",
-    industry: "Manufacturing",
-    challenge: "Increasing cyber threats and compliance requirements",
-    solution: "Comprehensive security framework with 24/7 monitoring",
-    results: [
-      "100% compliance with industry standards",
-      "90% reduction in security incidents",
-      "24/7 threat monitoring",
-      "50% faster incident response"
-    ],
-    technologies: ["Cybersecurity", "SIEM", "Compliance", "Monitoring"],
-    duration: "4 months",
-    team: "8 experts",
-    image: "/images/case-studies/cybersecurity.jpg"
-  }
-];
-
-const industries = [
-  "Healthcare",
-  "Financial Services",
-  "Manufacturing",
-  "Retail",
-  "Education",
-  "PropTech",
-  "SaaS Development",
-  "Data Analytics"
+const stats = [
+  { number: "100+", label: "Projects Completed" },
+  { number: "50+", label: "Happy Clients" },
+  { number: "99%", label: "Success Rate" },
+  { number: "24/7", label: "Support Available" }
 ];
 
 export default function CaseStudies() {
   return (
-    <>
-      <Head>
-        <title>Case Studies - Zion Tech Group</title>
-        <meta name="description" content="Explore our success stories and see how we've helped clients transform their businesses with innovative technology solutions." />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
+    <Layout
+      title="Case Studies - Zion Tech Group"
+      description="Explore our successful projects and see how we've helped businesses transform their operations with cutting-edge technology solutions."
+      keywords="case studies, success stories, project portfolio, technology solutions, client results"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-          <div className="container mx-auto px-4">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center text-white"
+              className="text-center"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Success{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Stories
-                </span>
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                Success
+                <span className="text-blue-600 block">Stories</span>
               </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-                Discover how we've helped businesses across industries transform their operations 
-                with innovative technology solutions.
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Discover how we've helped businesses transform their operations 
+                and achieve remarkable results with our technology solutions.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  View All Projects
-                </button>
-                <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                  Start Your Project
-                </button>
-              </div>
             </motion.div>
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-600 font-medium">
+                    {stat.label}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Case Studies Grid */}
-<<<<<<< HEAD
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {caseStudies.map((study, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-8">
-                  <h3 className="text-2xl font-bold mb-4">{study.title}</h3>
-                  <div className="mb-4">
-                    <p className="text-gray-600"><strong>Client:</strong> {study.client}</p>
-                    <p className="text-gray-600"><strong>Industry:</strong> {study.industry}</p>
-=======
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -198,228 +140,118 @@ export default function CaseStudies() {
                 Featured Case Studies
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Real projects, real results. See how we've helped our clients achieve their goals.
+                Real projects, real results. See how we've delivered value 
+                to businesses across various industries.
               </p>
             </motion.div>
 
-            <div className="space-y-16">
+            <div className="space-y-12">
               {caseStudies.map((study, index) => (
                 <motion.div
-                  key={study.id}
+                  key={index}
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white rounded-lg shadow-lg overflow-hidden"
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  className="bg-white rounded-xl shadow-lg overflow-hidden"
                 >
-                  <div className="md:flex">
-                    <div className="md:w-1/2">
-                      <img
-                        src={study.image}
-                        alt={study.title}
-                        className="w-full h-64 md:h-full object-cover"
-                      />
-                    </div>
-                    <div className="md:w-1/2 p-8">
-                      <div className="flex items-center mb-4">
-                        <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">
-                          {study.industry}
-                        </span>
-                        <span className="ml-4 text-gray-500 text-sm">
+                  <div className="p-8">
+                    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                          {study.title}
+                        </h3>
+                        <div className="flex items-center text-gray-600 mb-4">
+                          <Building className="h-5 w-5 mr-2" />
+                          <span className="font-semibold">{study.client}</span>
+                          <span className="mx-2">•</span>
+                          <span>{study.industry}</span>
+                        </div>
+                        <p className="text-gray-600 mb-4">
+                          <strong>Challenge:</strong> {study.challenge}
+                        </p>
+                        <p className="text-gray-600 mb-6">
+                          <strong>Solution:</strong> {study.solution}
+                        </p>
+                      </div>
+                      <div className="flex flex-col sm:flex-row lg:flex-col gap-4 mt-4 lg:mt-0 lg:ml-8">
+                        <div className="flex items-center text-sm text-gray-600">
+                          <Clock className="h-4 w-4 mr-2" />
                           {study.duration}
-                        </span>
+                        </div>
+                        <div className="flex items-center text-sm text-gray-600">
+                          <Users className="h-4 w-4 mr-2" />
+                          {study.team}
+                        </div>
                       </div>
-                      
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                        {study.title}
-                      </h3>
-                      <p className="text-gray-600 mb-4">
-                        <strong>Client:</strong> {study.client}
-                      </p>
-                      
-                      <div className="mb-6">
-                        <h4 className="text-lg font-semibold text-gray-900 mb-2">Challenge:</h4>
-                        <p className="text-gray-600 mb-4">{study.challenge}</p>
-                        
-                        <h4 className="text-lg font-semibold text-gray-900 mb-2">Solution:</h4>
-                        <p className="text-gray-600 mb-4">{study.solution}</p>
-                      </div>
+                    </div>
 
-                      <div className="mb-6">
-                        <h4 className="text-lg font-semibold text-gray-900 mb-3">Results:</h4>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Results:</h4>
                         <ul className="space-y-2">
                           {study.results.map((result, resultIndex) => (
                             <li key={resultIndex} className="flex items-center text-gray-600">
-                              <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                              <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
                               {result}
                             </li>
                           ))}
                         </ul>
                       </div>
-
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {study.technologies.map((tech, techIndex) => (
-                          <span
-                            key={techIndex}
-                            className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
-                          >
-                            {tech}
-                          </span>
-                        ))}
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-900 mb-4">Technologies Used:</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {study.technologies.map((tech, techIndex) => (
+                            <span
+                              key={techIndex}
+                              className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
                       </div>
-
-                      <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                        Read Full Case Study
-                        <ArrowRight className="ml-2 h-4 w-4 inline" />
-                      </button>
                     </div>
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                   </div>
-                  <div className="mb-4">
-                    <h4 className="font-semibold mb-2">Challenge:</h4>
-                    <p className="text-gray-700">{study.challenge}</p>
-                  </div>
-                  <div className="mb-4">
-                    <h4 className="font-semibold mb-2">Solution:</h4>
-                    <p className="text-gray-700">{study.solution}</p>
-                  </div>
-                  <div className="mb-4">
-                    <h4 className="font-semibold mb-2">Results:</h4>
-                    <p className="text-gray-700">{study.results}</p>
-                  </div>
-                  <div className="flex justify-between text-sm text-gray-500">
-                    <span>Duration: {study.duration}</span>
-                    <span>Team: {study.team}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-<<<<<<< HEAD
-=======
-
-        {/* Industries Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Industries We Serve
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We have experience across multiple industries, helping businesses of all sizes achieve their goals.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {industries.map((industry, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center"
-                >
-                  <h3 className="font-semibold text-gray-900">{industry}</h3>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Impact
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Numbers that speak to our success and commitment to excellence.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="text-center"
-              >
-                <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">500+</div>
-                <div className="text-gray-600 font-medium">Projects Completed</div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-center"
-              >
-                <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">50+</div>
-                <div className="text-gray-600 font-medium">Happy Clients</div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-center"
-              >
-                <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">99%</div>
-                <div className="text-gray-600 font-medium">Client Satisfaction</div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-center"
-              >
-                <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">24/7</div>
-                <div className="text-gray-600 font-medium">Support Available</div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="container mx-auto px-4 text-center">
+        <section className="py-20 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Start Your Success Story?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Let's work together to create innovative solutions that drive your business forward.
+                Let us help you achieve similar results. Contact us today to discuss 
+                how we can transform your business with our technology solutions.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+                >
                   Start Your Project
-                  <ArrowRight className="ml-2 h-5 w-5 inline" />
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                  Schedule Consultation
-                </button>
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center px-8 py-4 border border-blue-300 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Learn More About Us
+                </Link>
               </div>
             </motion.div>
           </div>
         </section>
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
       </div>
-    </>
+    </Layout>
   );
 }
