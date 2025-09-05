@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-09-05T15:58:44.701Z",
   "totalDuration": "130s",
   "results": {
@@ -31,63 +30,11 @@
     "buildTest": {
       "success": true,
       "duration": 20538,
-      "errors": []
-=======
-  "timestamp": "2025-09-05T15:05:30.907Z",
-  "totalDuration": "86s",
-  "results": {
-    "dependencyFix": {
-      "success": true,
-      "duration": 79551,
-      "errors": []
-    },
-    "typescriptFix": {
-      "success": false,
-      "duration": 25,
-      "errors": [
-        "Command failed: node automation/typescript-fixer.cjs"
-      ]
-    },
-    "healthCheck": {
-      "success": false,
-      "duration": 26,
-      "errors": [
-        "Command failed: node automation/health-check.cjs"
-      ]
-    },
-    "securityScan": {
-      "success": false,
-      "duration": 24,
-      "errors": [
-        "Command failed: node automation/security-scanner.cjs"
-      ]
-    },
-    "performanceOptimize": {
-      "success": false,
-      "duration": 23,
-      "errors": [
-        "Command failed: node automation/performance-optimizer.cjs"
-      ]
-    },
-    "buildTest": {
-      "success": false,
-      "duration": 6106,
-      "errors": [
-        "Command failed: npm run build"
-      ]
->>>>>>> pr-11913
-    }
+      "errors": []    }
   },
   "summary": {
     "totalPhases": 6,
-<<<<<<< HEAD
     "successfulPhases": 6,
     "failedPhases": 0,
-    "overallSuccess": true
-=======
-    "successfulPhases": 1,
-    "failedPhases": 5,
-    "overallSuccess": false
->>>>>>> pr-11913
-  }
+    "overallSuccess": true  }
 }
