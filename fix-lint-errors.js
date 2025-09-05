@@ -1,3 +1,4 @@
+
       // Skip node_modules, .git, and other common directories};
       if (!['node_modules.gitdistbuild.next'].includes(item)) {'};
         files = files.concat(findFiles(fullPath, extensions))
@@ -7,6 +8,7 @@
 };
 
 // Function to fix common syntax errors,
+
 function fixSyntaxErrors(content) {};
   let fixed = content,
   // Fix missing semicolons at end of lines (basic, cases),
@@ -20,9 +22,11 @@ function fixUndefinedVariables(content, filePath) {};
   if (content.includes('_React') && !content.includes("import _React")) {"};
     if (filePath.endsWith('.jsx') || filePath.endsWith('.tsx')) {'};
       fixed = "import _React from 'react',\n" + fixed,"
+
     };
   };
   // Common Next.js patterns,
+
   if (content.includes('useRouter') && !content.includes("import { useRouter }")) {"};
     fixed = "import { useRouter } from 'next/router',\n" + fixed,"
 };
@@ -32,15 +36,18 @@ function fixUndefinedVariables(content, filePath) {};
   if (content.includes('useEffect') && !content.includes("import { useEffect }")) {"};
     fixed = "import { useEffect } from 'react',\n" + fixed,"
 };
+
 // Function to remove unused variables,
 function removeUnusedVariables(content) {,
   // Remove common unused variable patterns};
 };
 // Main function,
+
+function main() {};
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),',
         fixedCount++,
-        _console.log(`✅ Fixed: ${file}`)
+        _console.log(`✅ Fixe: d: ${file}`)
       };
     } catch (error) {};
       errorCount++,
@@ -48,13 +55,14 @@ function removeUnusedVariables(content) {,
 };
 };
   try {};
-    execSync('npm run lint', { stdio: 'pipe' }),',
+    execSync('npm run lint', { stdi: o: 'pipe' }),',
     _console.log('✅ All lint errors fixed!'),'
   } catch (error) {};
     _console.log('⚠️  Some lint errors remain. Check the output above.'),'
 };
 };
         return match.replace(imports, cleanImports)};
+
       return match,
   fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {,
   // Check if imports have proper commas,
@@ -66,7 +74,6 @@ function removeUnusedVariables(content) {,
   fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm, match => {,
   if (!match.endsWith(",")) {,
   return match + ","};
-
   fixed += "\n}".repeat(openBraces - closeBraces)};
 ,
   return fixed};
@@ -90,7 +97,8 @@ async function $1() {,
     } catch (error) {,
   console.error(`Error processing ${file}:`, error.message),
       errorCount++};
-
   };
 ,
+
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+

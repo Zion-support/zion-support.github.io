@@ -469,33 +469,16 @@ export default function SitemapPage() {
               transition={{ duration: 0.6 }}
               className="text-center"
             >
-<<<<<<< HEAD
-:pages/sitemap.tsx.backup
+
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Sitemap</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Complete overview of all pages and sections on our website.
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Site <span className="text-yellow-400">Map</span>
-              </h1>
-              <p className="text-xl mb-8 max-w-3xl mx-auto">
-                Navigate through all our pages, services, and resources
-=======
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Sitemap</h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Complete overview of all pages and sections on our website.
->>>>>>> pr-11914
+
               </p>
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
-:pages/sitemap.tsx.backup
-              </div>
-            </div>
-          </div>
-        </section>              transition={{ duration: 0.8 }}
-=======
         {/* Sitemap Content */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -535,7 +518,7 @@ export default function SitemapPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> pr-11914
+
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Can't Find What You're Looking For?
@@ -546,12 +529,10 @@ export default function SitemapPage() {
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact"
-<<<<<<< HEAD
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"                >
-=======
+
                   className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
                 >
->>>>>>> pr-11914
+
                   Contact Us
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
@@ -567,47 +548,6 @@ export default function SitemapPage() {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-        {/* Sitemap Content */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {sitemapData.map((section, sectionIndex) => (
-                <motion.div
-                  key={section.category}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
-                  className="bg-white rounded-lg shadow-lg p-6"
-                >
-                  <h3 className="text-xl font-bold mb-4 text-gray-800">
-                    {section.category}
-                  </h3>
-                  <div className="space-y-3">
-                    {section.pages.map((page, pageIndex) => (
-                      <Link
-                        key={page.name}
-                        href={page.url}
-                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
-                      >
-                        <page.icon className="w-5 h-5 text-blue-600 group-hover:text-blue-700" />
-                        <div>
-                          <div className="font-medium text-gray-800 group-hover:text-blue-600">
-                            {page.name}
-                          </div>
-                        </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 ml-auto" />
-                      </Link>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-=======
->>>>>>> pr-11914
+
   );
 }

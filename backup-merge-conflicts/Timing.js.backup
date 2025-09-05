@@ -152,11 +152,11 @@ export function combineTraceWindowsMicro(windows) {
  * "has any overlap":
  *         |------------------------|
  *      ==                                     no overlap (entirely before)
- *       =========                             overlap
- *            =========                        overlap
- *                             =========       overlap
+ *       ==                             overlap
+ *            ==                        overlap
+ *                             ==       overlap
  *                                     ====    no overlap (entirely after)
- *        ==============================       overlap (time range is larger than bounds)
+ *        ==       overlap (time range is larger than bounds)
  *         |------------------------|
  */
 export function boundsIncludeTimeRange(data) {

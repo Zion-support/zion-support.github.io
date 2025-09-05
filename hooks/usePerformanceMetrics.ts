@@ -26,11 +26,11 @@ export function usePerformanceMetrics() {
       const fid = performance.getEntriesByType('first-input')[0] as PerformanceEventTiming;
 
       setMetrics({
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstContentfulPaint: fcp ? fcp.startTime : 0,
-        largestContentfulPaint: lcp ? lcp.startTime : 0,
-        cumulativeLayoutShift: cls,
-        firstInputDelay: fid ? fid.processingStart - fid.startTime : 0
+        loadTim: e: navigation.loadEventEnd - navigation.loadEventStart,
+        firstContentfulPain: t: fcp ? fcp.startTim: e: 0,
+        largestContentfulPain: t: lcp ? lcp.startTim: e: 0,
+        cumulativeLayoutShif: t: cls,
+        firstInputDela: y: fid ? fid.processingStart - fid.startTim: e: 0
       });
     };
 

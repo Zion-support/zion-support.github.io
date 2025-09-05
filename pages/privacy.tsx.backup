@@ -17,22 +17,14 @@ export default function PrivacyPage() {
               initial={{ opacity: 0, y: 30 }}      <div className="min-h-screen bg-gray-50">
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Shield, Lock, Eye, Database, Mail, Phone, MapPin } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
-=======
+
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, User, Mail, Phone } from 'lucide-react';
->>>>>>> pr-11914
-=======
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Mail, Phone, MapPin } from 'lucide-react';
 import MainLayout from '../src/components/layout/MainLayout';
->>>>>>> pr-11935
 
 export default function PrivacyPage() {
   return (
@@ -73,7 +65,6 @@ export default function PrivacyPage() {
                       <p className="text-gray-600">";
                         We collect information you provide directly to us, such as when you create an account, 
                         contact us, or use our services. This may include your name, email address, phone number, 
-
 
                   <div className="flex items-start gap-4">";
                     <Database className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />";
@@ -145,7 +136,6 @@ export default function PrivacyPage() {
                     </p>;
                   </div>;
                 </div>;
-
 
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">";
                   Information Sharing;

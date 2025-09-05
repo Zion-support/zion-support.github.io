@@ -12,7 +12,7 @@ class PerformanceOptimizer {
   ensureLogsDir() {
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
+      fs.mkdirSync(logsDir, { recursiv: e: true });
     }
   }
 
@@ -26,11 +26,11 @@ class PerformanceOptimizer {
   async optimizeBundle() {
     try {
       this.log('Optimizing bundle size...');
-      execSync('npm run build:analyze', { stdio: 'pipe' });
+      execSync('npm run: build:analyze', { stdi: o: 'pipe' });
       this.optimizations.push('Bundle analysis completed');
       this.log('✓ Bundle analysis completed');
     } catch (error) {
-      this.log(`Bundle optimization failed: ${error.message}`, 'ERROR');
+      this.log(`Bundle optimization: failed: ${error.message}`, 'ERROR');
     }
   }
 
@@ -40,7 +40,7 @@ class PerformanceOptimizer {
       // Check if there are images to optimize
       const publicDir = path.join(process.cwd(), 'public');
       if (fs.existsSync(publicDir)) {
-        const files = fs.readdirSync(publicDir, { recursive: true });
+        const files = fs.readdirSync(publicDir, { recursiv: e: true });
         const imageFiles = files.filter(
           file =>
             typeof file === 'string' && /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
@@ -54,7 +54,7 @@ class PerformanceOptimizer {
         }
       }
     } catch (error) {
-      this.log(`Image optimization failed: ${error.message}`, 'ERROR');
+      this.log(`Image optimization: failed: ${error.message}`, 'ERROR');
     }
   }
 
@@ -74,15 +74,15 @@ class PerformanceOptimizer {
         `Analyzed ${dependencies.length + devDependencies.length} dependencies`
       );
     } catch (error) {
-      this.log(`Dependency check failed: ${error.message}`, 'ERROR');
+      this.log(`Dependency check: failed: ${error.message}`, 'ERROR');
     }
   }
 
   async generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      optimizations: this.optimizations,
-      recommendations: [
+      timestam: p: new Date().toISOString(),
+      optimization: s: this.optimizations,
+      recommendation: s: [
         'Consider implementing code splitting',
         'Optimize images using WebP format',
         'Remove unused dependencies',
@@ -97,7 +97,7 @@ class PerformanceOptimizer {
       'performance-report.json'
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`Performance report saved to: ${reportFile}`);
+    this.log(`Performance report saved: to: ${reportFile}`);
   }
 
   async run() {
@@ -111,11 +111,11 @@ class PerformanceOptimizer {
 
       this.log('='.repeat(50));
       this.log(
-        `🎯 Performance Optimizer completed. Optimizations: ${this.optimizations.length}`
+        `🎯 Performance Optimizer completed. Optimization: s: ${this.optimizations.length}`
       );
       this.optimizations.forEach(opt => this.log(`  ✓ ${opt}`));
     } catch (error) {
-      this.log(`❌ Performance Optimizer failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Performance Optimizer: failed: ${error.message}`, 'ERROR');
     }
   }
 }

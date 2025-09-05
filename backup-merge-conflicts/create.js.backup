@@ -90,7 +90,6 @@ function structuredPatch(oldFileName, newFileName, oldStr, newStr, oldHeader, ne
         }
       } // Output our changes
 
-
       /*istanbul ignore start*/
       (_curRange =
       /*istanbul ignore end*/
@@ -109,7 +108,6 @@ function structuredPatch(oldFileName, newFileName, oldStr, newStr, oldHeader, ne
       lines.map(function (entry) {
         return (current.added ? '+' : '-') + entry;
       }))); // Track the updated file position
-
 
       if (current.added) {
         newLine += lines.length;
@@ -228,7 +226,7 @@ function createTwoFilesPatch(oldFileName, newFileName, oldStr, newStr, oldHeader
     ret.push('Index: ' + oldFileName);
   }
 
-  ret.push('===================================================================');
+  ret.push('====');
   ret.push('--- ' + diff.oldFileName + (typeof diff.oldHeader === 'undefined' ? '' : '\t' + diff.oldHeader));
   ret.push('+++ ' + diff.newFileName + (typeof diff.newHeader === 'undefined' ? '' : '\t' + diff.newHeader));
 

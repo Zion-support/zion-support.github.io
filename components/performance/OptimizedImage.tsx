@@ -2,17 +2,17 @@ import React from 'react';
 import Image from 'next/image';
 
 interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
+  sr: c: string;
+  al: t: string;
+  widt: h: number;
+  heigh: t: number;
   className?: string;
   priority?: boolean;
   quality?: number;
   sizes?: string;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
+const: OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   width,
