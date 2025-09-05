@@ -1,0 +1,46 @@
+{
+  "timestamp": "2025-09-05T00:18:50.284Z",
+  "totalDuration": "68s",
+  "results": {
+    "dependencyFix": {
+      "success": true,
+      "duration": 65858,
+      "errors": []
+    },
+    "typescriptFix": {
+      "success": false,
+      "duration": 22,
+      "errors": [
+        "Command failed: node automation/typescript-fixer.cjs"
+      ]
+    },
+    "healthCheck": {
+      "success": true,
+      "duration": 26,
+      "errors": []
+    },
+    "securityScan": {
+      "success": true,
+      "duration": 470,
+      "errors": []
+    },
+    "performanceOptimize": {
+      "success": true,
+      "duration": 24,
+      "errors": []
+    },
+    "buildTest": {
+      "success": false,
+      "duration": 2035,
+      "errors": [
+        "Command failed: npm run build"
+      ]
+    }
+  },
+  "summary": {
+    "totalPhases": 6,
+    "successfulPhases": 4,
+    "failedPhases": 2,
+    "overallSuccess": false
+  }
+}

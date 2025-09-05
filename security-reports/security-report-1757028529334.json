@@ -1,0 +1,373 @@
+{
+  "timestamp": "2025-09-04T23:28:48.878Z",
+  "analysis": {
+    "npmAudit": {
+      "error": "Command failed: npm audit --audit-level=moderate --json\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code ENOLOCK\nnpm error audit This command requires an existing lockfile.\nnpm error audit Try creating one first with: npm i --package-lock-only\nnpm error audit Original error: loadVirtual requires existing shrinkwrap file\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-04T23_28_48_917Z-debug-0.log\n"
+    },
+    "environmentVariables": {
+      "envFiles": [],
+      "sensitiveVars": [],
+      "status": "secure"
+    },
+    "dependencies": {
+      "totalDependencies": 131,
+      "vulnerablePackages": [],
+      "status": "secure"
+    },
+    "codeSecurity": {
+      "issues": [
+        {
+          "file": "components/Layout.tsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "components.disabled/AnalyticsTracker.tsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 2
+        },
+        {
+          "file": "components.disabled/EnhancedLayout.tsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "components.disabled/EnhancedSEO.tsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 2
+        },
+        {
+          "file": "components.disabled_full/Analytics.tsx",
+          "issue": "innerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "components.disabled_full/AnalyticsTracker.tsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 2
+        },
+        {
+          "file": "components.disabled_full/EnhancedLayout.tsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 3
+        },
+        {
+          "file": "components.disabled_full/EnhancedSEO.tsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "components.disabled_full/PerformanceOptimizer.tsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "components.disabled_full/SEOEnhancer.tsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "components.disabled_full/SEOHead.tsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "components.disabled_full/SEOOptimizer.tsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "components.disabled_full/StructuredData.tsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "components.disabled_full/seo/SEOHead.tsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "data/2034-cutting-edge-ai-services.ts",
+          "issue": "eval() usage",
+          "severity": "high",
+          "count": 1
+        },
+        {
+          "file": "pages-disabled/examples.tsx",
+          "issue": "console.log with sensitive data",
+          "severity": "high",
+          "count": 1
+        },
+        {
+          "file": "pages-disabled/services-advertising.tsx",
+          "issue": "eval() usage",
+          "severity": "high",
+          "count": 1
+        },
+        {
+          "file": "pages._archive_corrupted/_document.js",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "pages._archive_corrupted/services/enterprise-rag-knowledgebase.page.tsx",
+          "issue": "eval() usage",
+          "severity": "high",
+          "count": 1
+        },
+        {
+          "file": "pages.bak/docs/integration-examples.tsx",
+          "issue": "console.log with sensitive data",
+          "severity": "high",
+          "count": 1
+        },
+        {
+          "file": "pages.bak/examples.tsx",
+          "issue": "console.log with sensitive data",
+          "severity": "high",
+          "count": 2
+        },
+        {
+          "file": "pages.bak/signup.tsx",
+          "issue": "console.log with sensitive data",
+          "severity": "high",
+          "count": 1
+        },
+        {
+          "file": "pages.broken/examples.tsx",
+          "issue": "console.log with sensitive data",
+          "severity": "high",
+          "count": 1
+        },
+        {
+          "file": "pages.corrupted.1756905863/examples.tsx",
+          "issue": "console.log with sensitive data",
+          "severity": "high",
+          "count": 2
+        },
+        {
+          "file": "pages.disabled/examples.tsx",
+          "issue": "console.log with sensitive data",
+          "severity": "high",
+          "count": 2
+        },
+        {
+          "file": "pages.disabled/pages/examples.tsx",
+          "issue": "console.log with sensitive data",
+          "severity": "high",
+          "count": 2
+        },
+        {
+          "file": "pages.disabled_auto/examples.tsx",
+          "issue": "console.log with sensitive data",
+          "severity": "high",
+          "count": 2
+        },
+        {
+          "file": "pages.disabled_full/blog/[id].tsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "pages.disabled_full/examples.tsx",
+          "issue": "console.log with sensitive data",
+          "severity": "high",
+          "count": 1
+        },
+        {
+          "file": "pages_backup_before_cleanup/examples.tsx",
+          "issue": "console.log with sensitive data",
+          "severity": "high",
+          "count": 2
+        },
+        {
+          "file": "public/security-headers.js",
+          "issue": "eval() usage",
+          "severity": "high",
+          "count": 1
+        },
+        {
+          "file": "scripts/app-health-monitor.js",
+          "issue": "console.log with sensitive data",
+          "severity": "high",
+          "count": 1
+        },
+        {
+          "file": "scripts/comprehensive-app-improver.js",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "scripts/final-automation-suite.js",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "scripts/git-automation.js",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "src/components/EnhancedLayout.tsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "src/components/ErrorBoundary.tsx",
+          "issue": "innerHTML usage",
+          "severity": "medium",
+          "count": 2
+        },
+        {
+          "file": "src/components/SEO.tsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "src/components/SecurityEnhancer.tsx",
+          "issue": "innerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "src/components/seo/SEOEnhancer.tsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 5
+        },
+        {
+          "file": "src/components/ui/accessibility.js.jsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "src/components/unused/BrokenLinkFixer.jsx",
+          "issue": "innerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "src/components/unused/ContentQualityEnhancer.jsx",
+          "issue": "innerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "src/main.jsx",
+          "issue": "innerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "src.corrupted/main.jsx",
+          "issue": "innerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "src.disabled/src/components/SEO.tsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "src.disabled/src/components/SEOEnhancer.tsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "src.disabled/src/components/seo/SEOEnhancer.tsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 3
+        },
+        {
+          "file": "src.disabled/src/components/seo/SEOHead.tsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "src.disabled/src/components/ui/accessibility-panel.js.jsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "src.disabled/src/main.jsx",
+          "issue": "innerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "src.disabled/src/pages.disabled/BlogPost.jsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "src.disabled/src/pages.disabled/ContentGenerator.js.jsx",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "src.disabled/src/test/security-tests.ts",
+          "issue": "dangerouslySetInnerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "temp-backup/sdk.tsx",
+          "issue": "console.log with sensitive data",
+          "severity": "high",
+          "count": 1
+        },
+        {
+          "file": "zion_academy/static/js/script.js",
+          "issue": "innerHTML usage",
+          "severity": "medium",
+          "count": 1
+        },
+        {
+          "file": "zion_academy/static/js/script.jsx",
+          "issue": "innerHTML usage",
+          "severity": "medium",
+          "count": 1
+        }
+      ],
+      "status": "needs_review"
+    }
+  },
+  "recommendations": [
+    {
+      "type": "code_security",
+      "priority": "medium",
+      "message": "Found potential security issues in code. Review and fix them.",
+      "impact": "Improves code security"
+    }
+  ]
+}

@@ -1,28 +1,14 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import PerformanceMonitordynamic from '../components/PerformanceMonitor.dynamic';
-
-describe('PerformanceMonitordynamic', () => {
-  test('renders without crashing', () => {
+import React from 'react'; import { render,screen,fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import PerformanceMonitordynamic from '../components/PerformanceMonitor.dynamic'; describe('PerformanceMonitordynamic',() => { test('renders without crashing',() => { render(<PerformanceMonitordynamic />); expect( screen.getByTestId('performancemonitor.dynamic') ).toBeInTheDocument()}
+}); test('displays correct content',() => { render(<PerformanceMonitordynamic />)}
+}); test('handles user interactions',() => { render(<PerformanceMonitordynamic />)}
+}); test('applies correct styling',() => { render(<PerformanceMonitordynamic />)})}
+});'
+</PerformanceMonitordynamic>
     render(<PerformanceMonitordynamic />);
-    expect(
-      screen.getByTestId('performancemonitor.dynamic')
-    ).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
+</PerformanceMonitordynamic>
     render(<PerformanceMonitordynamic />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
+</PerformanceMonitordynamic>
     render(<PerformanceMonitordynamic />);
-    // Add interaction tests based on component functionality
-  });
-
-  test('applies correct styling', () => {
+</PerformanceMonitordynamic>
     render(<PerformanceMonitordynamic />);
-    // Add styling tests if needed
-  });
-});
+</PerformanceMonitordynamic>'
