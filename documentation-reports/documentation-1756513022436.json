@@ -6176,7 +6176,7 @@
             "name": "UnknownComponent",
             "hasDocs": false}
         ],
-        "priority": "high";
+        "priority": "high"
 },
       {
         "type": "utility",
@@ -6502,7 +6502,7 @@
             "name": "seoOptimizer",
             "hasDocs": false}
         ],
-        "priority": "medium";
+        "priority": "medium"
 },
       {
         "type": "hook",
@@ -6516,7 +6516,7 @@
             "name": "UnknownHook",
             "hasDocs": false}
         ],
-        "priority": "medium";
+        "priority": "medium"
 },
       {
         "type": "service",
@@ -6538,7 +6538,7 @@
             "name": "UnknownService",
             "hasDocs": false}
         ],
-        "priority": "high";
+        "priority": "high"
 }
     ],
     "documentationSuggestions": [],
@@ -12713,7 +12713,7 @@
           "name": "UnknownComponent",
           "hasDocs": false}
       ],
-      "priority": "high";
+      "priority": "high"
 },
     {
       "type": "utility",
@@ -13039,7 +13039,7 @@
           "name": "seoOptimizer",
           "hasDocs": false}
       ],
-      "priority": "medium";
+      "priority": "medium"
 },
     {
       "type": "hook",
@@ -13053,7 +13053,7 @@
           "name": "UnknownHook",
           "hasDocs": false}
       ],
-      "priority": "medium";
+      "priority": "medium"
 },
     {
       "type": "service",
@@ -13075,7 +13075,7 @@
           "name": "UnknownService",
           "hasDocs": false}
       ],
-      "priority": "high";
+      "priority": "high"
 }
   ]
 }

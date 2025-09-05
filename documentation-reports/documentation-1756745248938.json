@@ -9845,7 +9845,7 @@
             "name": "defaultSitemapConfig",
             "hasDocs": false}
         ],
-        "priority": "high";
+        "priority": "high"
 },
       {
         "type": "utility",
@@ -10831,7 +10831,7 @@
             "name": "withErrorLogging",
             "hasDocs": false}
         ],
-        "priority": "medium";
+        "priority": "medium"
 },
       {
         "type": "hook",
@@ -10869,7 +10869,7 @@
             "name": "UnknownHook",
             "hasDocs": false}
         ],
-        "priority": "medium";
+        "priority": "medium"
 },
       {
         "type": "service",
@@ -11003,7 +11003,7 @@
             "name": "UnknownService",
             "hasDocs": false}
         ],
-        "priority": "high";
+        "priority": "high"
 }
     ],
     "documentationSuggestions": [],
@@ -20847,7 +20847,7 @@
           "name": "defaultSitemapConfig",
           "hasDocs": false}
       ],
-      "priority": "high";
+      "priority": "high"
 },
     {
       "type": "utility",
@@ -21833,7 +21833,7 @@
           "name": "withErrorLogging",
           "hasDocs": false}
       ],
-      "priority": "medium";
+      "priority": "medium"
 },
     {
       "type": "hook",
@@ -21871,7 +21871,7 @@
           "name": "UnknownHook",
           "hasDocs": false}
       ],
-      "priority": "medium";
+      "priority": "medium"
 },
     {
       "type": "service",
@@ -22005,7 +22005,7 @@
           "name": "UnknownService",
           "hasDocs": false}
       ],
-      "priority": "high";
+      "priority": "high"
 }
   ]
 }
