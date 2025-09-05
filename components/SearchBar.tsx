@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react',
-import Link from 'next/link',
+import Link from 'next/link';
 ,
 interface SearchResult {,
   title: string,
   description: string,
   url: string,
-  type: 'service' | 'page' | 'category',
+  type: 'service' | 'page' | 'category'
 };
 ,
 const SearchBar: React.FC = () => {,
@@ -22,37 +22,37 @@ const SearchBar: React.FC = () => {,
       title: 'Micro SaaS Products',
       description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
       url: '/micro-saas',
-      type: 'category',
+      type: 'category'
     },
     {,
       title: 'AI Services',
       description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
       url: '/ai-services',
-      type: 'category',
+      type: 'category'
     },
     {,
       title: 'IT Services',
       description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
       url: '/it-services',
-      type: 'category',
+      type: 'category'
     },
     {,
       title: 'Cloud Cost Guard',
       description: 'FinOps Assistant for anomaly detection and cost optimization',
       url: '/services',
-      type: 'service',
+      type: 'service'
     },
     {,
       title: 'Contact Us',
       description: 'Get in touch with our experts for consultation and quotes',
       url: '/contact',
-      type: 'page',
+      type: 'page'
     },
     {,
       title: 'Pricing',
       description: 'View our transparent pricing for all services',
       url: '/pricing',
-      type: 'page',
+      type: 'page'
     };
   ],
 ,
@@ -60,7 +60,7 @@ const SearchBar: React.FC = () => {,
     if (!searchQuery.trim()) {,
       setResults([]),
       setIsOpen(false),
-      return,
+      return
     };
 ,
     setIsLoading(true),
@@ -75,31 +75,31 @@ const SearchBar: React.FC = () => {,
 ,
     setResults(filteredResults),
     setIsOpen(true),
-    setIsLoading(false),
+    setIsLoading(false)
   };
 ,
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {,
     const value = e.target.value,
     setQuery(value),
-    handleSearch(value),
+    handleSearch(value)
   };
 ,
   const handleResultClick = () => {,
     setIsOpen(false),
-    setQuery(''),
+    setQuery('')
   };
 ,
   const handleKeyDown = (e: React.KeyboardEvent) => {,
     if (e.key === 'Escape') {,
       setIsOpen(false),
-      inputRef.current?.blur(),
+      inputRef.current?.blur()
     };
   };
 ,
   useEffect(() => {,
     const handleClickOutside = (event: MouseEvent) => {,
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {,
-        setIsOpen(false),
+        setIsOpen(false)
       };
     };
 };

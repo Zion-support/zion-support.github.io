@@ -3,17 +3,17 @@
 ,
     // Measure performance after page load,
     if (document.readyState === 'complete') {,
-      measurePerformance(),
+      measurePerformance()
     } else {,
-      window.addEventListener('load', measurePerformance),
+      window.addEventListener('load', measurePerformance)
     };
 ,
     return () => {,
-      window.removeEventListener('load', measurePerformance),
+      window.removeEventListener('load', measurePerformance)
     };
   }, [onPerformanceData]),
 ,
-  return null,
+  return null
 };
 ,
 export default PerformanceMonitor,

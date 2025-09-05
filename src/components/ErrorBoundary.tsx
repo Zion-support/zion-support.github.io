@@ -5,8 +5,8 @@
     console.error('ErrorBoundary caught an error:', error, errorInfo),
     this.setState({,
       error,
-      errorInfo,
-    }),
+      errorInfo
+    })
   };
 ,
   render() {,
@@ -52,10 +52,10 @@
             )};
           </div>,
         </div>,
-      ),
+      )
     };
 ,
-    return this.props.children,
+    return this.props.children
   };
 };
 ,
