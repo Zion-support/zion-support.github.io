@@ -4,12 +4,12 @@ const path = require("path")
 const { execSync } = require("child_process")
 const glob = require("glob")
     this.reportsDir = path.join(this.projectRoot, "error-reports")
-  console.log("" Starting Error Fixer Automation...")
+// console.log("" Starting Error Fixer Automation...")
       console.log("" Error Fixer Automation completed successfully!")
       console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues"")
   console.error(" Error Fixer Automation "failed": ")
       this.logError("Error Fixer Automation failed")
-      console.log("" Error Fixer Automation completed successfully!")
+// console.log("" Error Fixer Automation completed successfully!")
       console.log(")
       console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues```)
   console.error(" Error Fixer Automation "failed": ")
@@ -27,10 +27,11 @@ const glob = require("glob")
               /\n([\s\S]*?)\n              "$1"
   "type": "merge_conflict"
             "description": "Removed merge conflict markers"
-  "type": `merge_conflict``
+  "type": `merge_conflict
             "description": "
       } catch (error) {  this.logError(Error fixing merge conflicts in ${file  }`, error``)
-            "description": "Removed merge conflict markers"});")}`)} catch (error) {this.logError(Error fixing merge conflicts in ${file}`, error``)
+            "description": "Removed merge conflict markers"}
+});")}`)} catch (error) {this.logError(Error fixing merge conflicts in ${file}`, error``)
   console.log("" Fixing syntax errors...")
   "pattern"
         "replacement": "$1 = {\n  $2,\n  $3\n}"
@@ -174,7 +175,7 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}")
       "summary"
         "totalErrors"
         "successRate"
-  "timestamp": new Date().toISOString(),"duration": `${duration}ms``
+  "timestamp": new Date().toISOString(),"duration": `${duration}ms
       "fixesApplied"
       "errorsFound"
       "summary"

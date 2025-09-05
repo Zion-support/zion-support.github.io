@@ -35,7 +35,7 @@ const fixes = []
   // Fix unterminated template literals;
   {}
     pattern: /`([^`]*?)$/gm,`
-    replacement: '`$1```
+    replacement: '`$1
   },
   // Fix missing closing braces;
   {}
@@ -66,7 +66,8 @@ function fixFile(filePath) {}
       } else {}
         content = content.replace(fix.pattern, fix.replacement);
       };
-    });
+    }
+});
     
     // Additional specific fixes;
     // Fix common React/JSX issues;
@@ -84,12 +85,12 @@ function fixFile(filePath) {}
     
     if (content !== originalContent) {}
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Fixed: ${filePath}`);`
+      console.log(`✅ Fixed: ${filePath}`);
       return true;
     };
     return false;
   } catch (error) {}
-    console.log(`❌ Error fixing ${filePath}: ${error.message}`);`
+    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
     return false;
   };
 };
@@ -125,12 +126,13 @@ function walkDirectory(dir, extensions = ['.js', '.jsx', '.ts', '.tsx', '.cjs', 
 try {}
   console.log('🔍 Scanning for syntax errors...');
   const fixedCount = walkDirectory('/workspace');
-  console.log(`🎉 Fixed ${fixedCount} files`);`
+  console.log(`🎉 Fixed ${fixedCount} files`);
   
   // Try to run lint fix after syntax fixes;
   console.log('🔧 Running ESLint fix...');
   try {}
-    execSync('npm run lint:fix', { stdio: 'inherit' });
+    execSync('npm run lint:fix', { stdio: 'inherit' }
+});
   } catch (error) {}
     console.log('⚠️ ESLint fix had some issues, but continuing...');
   };

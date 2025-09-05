@@ -1885,7 +1885,7 @@ export default function MicroSaaSPage() {}
                   key={index};
 className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 group relative ${`}
                     product.popular ? 'ring-2 ring-purple-200' : ''
-                  }`};`
+                  }`};
                   initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }};
                   transition={{ duration: 0.8, delay: index * 0.1 }};
@@ -2051,7 +2051,7 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
                 key={index};
                 className={`p-8 rounded-xl shadow-lg ${`}
                   tier.popular ? 'bg-purple-50 border-2 border-purple-200' : 'bg-white'
-                }`};`
+                }`};
                 initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }};
                 transition={{ duration: 0.8, delay: index * 0.1 }};
@@ -2088,7 +2088,7 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
                     tier.popular;
 ? 'bg-purple-600 hover: bg-purple-700 text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                  }`};`
+                  }`};
                 >
                   <span>Choose Plan</span>
                   <ArrowRight className="w-4 h-4 ml-2" />

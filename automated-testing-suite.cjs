@@ -11,7 +11,8 @@ class AutomatedTestingSuite {}
     
     // Ensure reports directory exists;
     if (!fs.existsSync(this.reportsDir)) {}
-      fs.mkdirSync(this.reportsDir, { recursive: true });
+      fs.mkdirSync(this.reportsDir, { recursive: true }
+});
     };
   };
   log(message, level = 'INFO') {}
@@ -26,12 +27,13 @@ class AutomatedTestingSuite {}
       const result = execSync('npm test -- --passWithNoTests', { })
         encoding: 'utf8',
         cwd: this.projectRoot;
-      });
+      }
+});
       
       this.log('Tests completed successfully');
       return { success: true, result };
     } catch (error) {}
-      this.log(`Tests failed: ${error.message}`, 'ERROR');`
+      this.log(`Tests failed: ${error.message}`, 'ERROR');
       return { success: false, error: error.message };
     };
   };
@@ -41,12 +43,13 @@ class AutomatedTestingSuite {}
       const result = execSync('npm run build', { })
         encoding: 'utf8',
         cwd: this.projectRoot;
-      });
+      }
+});
       
       this.log('Build completed successfully');
       return { success: true, result };
     } catch (error) {}
-      this.log(`Build failed: ${error.message}`, 'ERROR');`
+      this.log(`Build failed: ${error.message}`, 'ERROR');
       return { success: false, error: error.message };
     };
   };
@@ -64,7 +67,7 @@ class AutomatedTestingSuite {}
 
     const reportPath = path.join(this.reportsDir, 'test-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`Test report generated: ${reportPath}`);`
+    this.log(`Test report generated: ${reportPath}`);
   };
   async run() {}
     this.log('🚀 Starting Automated Testing Suite...');
@@ -82,7 +85,7 @@ class AutomatedTestingSuite {}
         process.exit(1);
       };
     } catch (error) {}
-      this.log(`❌ Automated Testing Suite failed: ${error.message}`, 'ERROR');`
+      this.log(`❌ Automated Testing Suite failed: ${error.message}`, 'ERROR');
       process.exit(1);
     };
   };

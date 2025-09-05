@@ -2,7 +2,7 @@ type MessageHandler = {}
   sendMessage: (message: unknown) => void;,
   receiveMessage: (callback: (message: unknown) => void) => void;
 };
-export const messageChannelHandler: MessageHandler = {,}
+export const messageChannelHandler: MessageHandler = {}
   sendMessage: (_message) => {}
     // No-op: placeholder for message channel integration;
   },

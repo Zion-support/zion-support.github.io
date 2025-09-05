@@ -11,7 +11,7 @@ export interface AiAutonomousService2026 {}
   link: string;
   category: string;,
   realImplementation: boolean;
-  contactInfo: {,}
+  contactInfo: {}
   mobile: string;
     email: string;,"
   address: string};export const "aiAutonomousServices2026": AiAutonomousService2026[] = [{""}]

@@ -19,7 +19,7 @@ class CICDAutomation {}
     }};
   log(message, type = 'info') {}
     const timestamp = new Date().toISOString(;);
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};`;`
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
     console.log(logMessage);
     
     this.report.steps.push({})
@@ -29,20 +29,21 @@ class CICDAutomation {}
     })};
   async runCommand(command, description) {}
     try {}
-      this.log(`"Starting": ${description}`);`
+      this.log(`"Starting": ${description}`);
       const output = execSync(command, { })
         "encoding": 'utf8', 
         "cwd": '/workspace',
         "stdio": 'pipe'
       };);
-      this.log(`"Completed": ${description}`, 'success');`
+      this.log(`"Completed": ${description}`, 'success');
       return output} catch (error) {}
-      this.log(`"Failed": ${description} - ${error.message}`, 'error');`
+      this.log(`"Failed": ${description} - ${error.message}`, 'error');
       this.report.errors.push({})
         "step": description,
         "error": error.message,
         "timestamp": new Date().toISOString();
-      });
+      }
+});
       throw error};
   };
   async installDependencies() {}
@@ -79,7 +80,7 @@ class CICDAutomation {}
     const reportPath = path.join('/workspace', 'ci-cd-automation-report.json';);
     fs.writeFileSync(reportPath, JSON.stringify(this.report, null, 2));
     
-    this.log(`Report saved "to": ${reportPath}`)};`
+    this.log(`Report saved "to": ${reportPath}`)};
   async run() {}
     try {}
       this.log('Starting CI/CD Pipeline Automation');

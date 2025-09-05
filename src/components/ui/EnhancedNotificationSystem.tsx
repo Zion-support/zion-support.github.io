@@ -81,7 +81,7 @@ const "NotificationItem": Reac t.FC<NotificationItemProps> = ({ notification, on
 </Info>
     <motion.div;
       layout;
-      className = {`p-4 rounded-lg border backdrop-blur-sm ${getBorderColor(notification.type)} ${getBackgroundColor(notification.type)} bg-white/5`}``
+      className = {`p-4 rounded-lg border backdrop-blur-sm ${getBorderColor(notification.type)} ${getBackgroundColor(notification.type)} bg-white/5`}
     >";"
 </motion>"
       <div className="flex items-start space-x-3">";"

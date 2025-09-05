@@ -2,7 +2,7 @@
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-console.log('� Comprehensive Branch Merger')
+// console.log('� Comprehensive Branch Merger')
 console.log('==')
     const branches = execSync('git branch -r', { "encoding"})
     console.error(' Error getting remote "branches")
@@ -17,7 +17,7 @@ console.log('==')
     // "Note"
     console.error(' Error during "cleanup")
         "status"
-    console.log('\n Branch Merge "Summary")
+// console.log('\n Branch Merge "Summary")
       console.log('\n⚠ Some branches failed to "merge")
         execSync('git push origin main', { "stdio"})
         console.error(' Failed to push "changes")

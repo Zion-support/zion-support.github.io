@@ -56,7 +56,8 @@ function generateSitemap() {}
       "lastmod": currentDate,
       "changefreq": page === '' ? 'daily' : 'weekly',
       "priority": page === '' ? '1.0' : '0.8'
-    })});
+    })}
+});
 
   // Add dynamic pages;
   DYNAMIC_PATTERNS.forEach(pattern => {})
@@ -75,10 +76,11 @@ function generateSitemap() {}
         "lastmod": currentDate,
         "changefreq": 'monthly',
         "priority": '0.6'
-      })})});
+      })})}
+});
 
   // Generate XML;
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>`
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(url => `  <url>`})
     <loc>${url.loc}</loc>
@@ -91,8 +93,8 @@ ${urls.map(url => `  <url>`})
   // Write sitemap;
   fs.writeFileSync(SITEMAP_PATH, sitemap, 'utf8');
   
-  console.log(`✓ Sitemap generated with ${urls.length} URLs`);`
-  console.log(`  "Location": ${SITEMAP_PATH}`)};`
+  console.log(`✓ Sitemap generated with ${urls.length} URLs`);
+  console.log(`  "Location": ${SITEMAP_PATH}`)};
 if (require.main === module) {}
   generateSitemap()};
 module.exports = { generateSitemap };

@@ -23,7 +23,7 @@ console.log( Dependencies installed in ${duration}ms"")
   this.ciResults.dependencies.status = "failure"
   "error"
         "output": error.stdout || error.stderr || "Unknown error"
-      console.log("" Dependency installation "failed": ")
+// console.log("" Dependency installation "failed": ")
   console.log("" Running linting checks...")
 }")}"
 "
@@ -127,7 +127,7 @@ console.log( Build completed in ${duration}ms```)
       let testCommand = "
   testCommand = "npm test"} else if (scripts[""test": unit")]
   testCommand = "npm run test:unit"
-  console.log(""⚠ No test scripts found, skipping tests")
+// console.log(""⚠ No test scripts found, skipping tests")
   console.log("⚠ No test scripts found, skipping tests")
         this.ciResults.testing.status = "skipped"
   "reason": "No test scripts configured"
@@ -181,12 +181,12 @@ console.log( Tests completed in ${duration}ms"")
         "total"
         "details"
 console.log(` Quality checks completed. "Score"`)
-  this.ciResults.quality.status = `failure``
+  this.ciResults.quality.status = `failure
   "error"
         "score"
         "passed"
         "total"
-      console.log(" Quality checks "failed": ")
+// console.log(" Quality checks "failed": ")
   console.log("� Generating ""CI/CD"" report..."")
         passedChecks === totalChecks ? "success" : "failure"
   "score"
@@ -199,15 +199,15 @@ console.log(` Quality checks completed. "Score"`)
         "score"
         "passed"
         "total"
-      console.log(" Quality checks "failed": ")
-  console.log("� Generating "CI/CD" report..."`)}")}"`
+// console.log(" Quality checks "failed": ")
+  console.log("� Generating "CI/CD" report..."`)}")}"
 "
   async generateCIReport() {"}
     console.log("� Generating ""CI/CD"" report...")
   "timestamp": new Date().toISOString(),"duration"
       "summary"
         "passed"
-          r => r.status === `success``
+          r => r.status === `success
         "failed"
           r => r.status === "failure"
         "skipped"
@@ -224,13 +224,13 @@ console.log(` Quality checks completed. "Score"`)
 ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResults.dependencies.result?.error || "Unknown error"} : ""
 - **Status**: ${this.ciResults.linting.status === "success" ? " Success" : " Failed"}
 - **Duration**: ${this.ciResults.linting.result?.duration || """N/A"""}
-  this.ciResults.linting.result?.issues? `- **Issues**: ${this.ciResults.linting.result.issues.total} (${this.ciResults.linting.result.issues.errors} errors, ${this.ciResults.linting.result.issues.warnings} warnings`")"`
+  this.ciResults.linting.result?.issues? `- **Issues**: ${this.ciResults.linting.result.issues.total} (${this.ciResults.linting.result.issues.errors} errors, ${this.ciResults.linting.result.issues.warnings} warnings`")"
     : ""
 - **Status**: ${this.ciResults.typeCheck.status === "success" ? " Success" : " Failed"}
 - **Duration**: ${this.ciResults.typeCheck.result?.duration || """N/A"""}
     : ""
 - **Status**: ${this.ciResults.build.status === "success" ? " Success" : " Failed"}
-- **Duration**: ${this.ciResults.build.result?.duration || """N/A"""}${this.ciResults.build.result?.buildSize ? `- **Build Size**: ${this.ciResults.build.result.buildSize}` : ""`
+- **Duration**: ${this.ciResults.build.result?.duration || """N/A"""}${this.ciResults.build.result?.buildSize ? `- **Build Size**: ${this.ciResults.build.result.buildSize}` : ""
 - **Status**: ${this.ciResults.testing.status === "success" ? " Success" : this.ciResults.testing.status === "skipped" ? "⏭ Skipped" : " Failed"}
 - **Duration**: ${this.ciResults.testing.result?.duration || """N/A"""}
     : ""
@@ -243,13 +243,13 @@ ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResul
 ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResults.dependencies.result?.error || "Unknown error"} : "
 - **Status**: ${this.ciResults.linting.status === "success" ? " Success" : " Failed"}
 - **Duration**: ${this.ciResults.linting.result?.duration || ""N/A""}
-  this.ciResults.linting.result?.issues? `- **Issues**: ${this.ciResults.linting.result.issues.total} (${this.ciResults.linting.result.issues.errors} errors, ${this.ciResults.linting.result.issues.warnings} warnings`")"`
+  this.ciResults.linting.result?.issues? `- **Issues**: ${this.ciResults.linting.result.issues.total} (${this.ciResults.linting.result.issues.errors} errors, ${this.ciResults.linting.result.issues.warnings} warnings`")"
     : "
 - **Duration**: ${this.ciResults.dependencies.result?.duration || """N/A"""}
 ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResults.dependencies.result?.error || "Unknown error"} : ""
 - **Status**: ${this.ciResults.linting.status === "success" ? " Success" : " Failed"}
 - **Duration**: ${this.ciResults.linting.result?.duration || """N/A"""}
-  this.ciResults.linting.result?.issues? `- **Issues**: ${this.ciResults.linting.result.issues.total} (${this.ciResults.linting.result.issues.errors} errors, ${this.ciResults.linting.result.issues.warnings} warnings`")"`
+  this.ciResults.linting.result?.issues? `- **Issues**: ${this.ciResults.linting.result.issues.total} (${this.ciResults.linting.result.issues.errors} errors, ${this.ciResults.linting.result.issues.warnings} warnings`")"
     : ""
 - **Status**: ${this.ciResults.typeCheck.status === "success" ? " Success" : " Failed"}
 - **Duration**: ${this.ciResults.typeCheck.result?.duration || ""N/A""}
@@ -267,15 +267,18 @@ ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResul
 3. **Monitor Trends**: Track quality metrics over time"
     : "
 3. **Monitor Trends**: Track quality metrics over time"
-      console.log(""\n Pipeline "Summary": ");console.log(Duration: ${report.duration});console.log(Total "Checks": ${report.summary.total}"");console.log(`"Passed": ${report.summary.passed} `);console.log(`"Failed": ${report.summary.failed} `);console.log(`Quality "Score"`)
+// console.log(""\n Pipeline "Summary": ");console.log(Duration: ${report.duration}
+});console.log(Total "Checks": ${report.summary.total}"");console.log(`"Passed": ${report.summary.passed} `);console.log(`"Failed": ${report.summary.failed} `);console.log(`Quality "Score"`)
   console.log("\n Pipeline failed. Review failed checks above.")
-  console.log("\n Pipeline passed successfully! Ready for deployment.")
-      console.log(`"\n Pipeline "Summary": ");console.log(Duration: ${report.duration});console.log(Total "Checks": ${report.summary.total}`");console.log(""Passed": ${report.summary.passed} ");console.log(""Failed": ${report.summary.failed} ");console.log("Quality "Score": ${report.quality.score}%"`)
+// console.log("\n Pipeline passed successfully! Ready for deployment.")
+      console.log(`"\n Pipeline "Summary": ");console.log(Duration: ${report.duration}
+});console.log(Total "Checks": ${report.summary.total}`");console.log(""Passed": ${report.summary.passed} ");console.log(""Failed": ${report.summary.failed} ");console.log("Quality "Score": ${report.quality.score}%"`)
   await this.runQualityChecks();"
 "
       const report = await this.generateCIReport();"
 "
-      console.log("\n Pipeline "Summary": `);console.log(Duration: ${report.duration});console.log(Total "Checks": ${report.summary.total}`");console.log(""Passed": ${report.summary.passed} ");console.log(""Failed": ${report.summary.failed} ");console.log("Quality "Score"`)
+// console.log("\n Pipeline "Summary": `);console.log(Duration: ${report.duration}
+});console.log(Total "Checks": ${report.summary.total}`");console.log(""Passed": ${report.summary.passed} ");console.log(""Failed": ${report.summary.failed} ");console.log("Quality "Score"`)
   console.log("\n Pipeline failed. Review failed checks above.")
   console.log("\n Pipeline passed successfully! Ready for deployment.")
   console.error(" Pipeline "failed": ")

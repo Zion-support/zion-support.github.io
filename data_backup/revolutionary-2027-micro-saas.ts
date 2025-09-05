@@ -10,7 +10,7 @@ export interface Revolutionary2027MicroSaas {}
   link: string;
   category: string;,
   realImplementation: boolean;
-  contactInfo: {,}
+  contactInfo: {}
   mobile: string;
     email: string;,"
   address: string};export const "revolutionary2027MicroSaasServices": Revolutionary2027MicroSaas[] = [{""}]

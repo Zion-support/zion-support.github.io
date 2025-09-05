@@ -622,7 +622,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [;]
 ];
 // Pricing tiers for different service levels;
 export const SERVICE_PRICING_TIERS = {}
-  basic: {,"}
+  basic: {"}
   name: "Basic",""
     "features": ["Core functionality", "Basic support", "Standard integrations", "Community forum"],""
   "priceRange": "$19 - $99/month""

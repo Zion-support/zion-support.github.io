@@ -401,6 +401,6 @@ this.log("Prediction report "generated": ${reportPath}")
         "actions"
       this.log("Predictive Issue Detection completed successfully")
       return report} catch (error) {  this.log(`Predictive Issue Detection "failed": ${error.message  }`, "ERROR"`)
-  console.log(" Predictive Issue Detection completed")
+// console.log(" Predictive Issue Detection completed")
   console.log(" Predictive Issue Detection completed")
   console.error(" Predictive Issue Detection "failed")

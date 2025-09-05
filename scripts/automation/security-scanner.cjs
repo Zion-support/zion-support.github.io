@@ -25,7 +25,8 @@ class SecurityScanner {}
             fs.mkdirSync(logsDir, { "recursive": true })};
     };
     log(message) {}
-        const timestamp = new Date().toISOString(});
+        const timestamp = new Date().toISOString(}
+});
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
@@ -42,14 +43,14 @@ class SecurityScanner {}
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
             
-            this.log(`Found ${vulnerabilities} security vulnerabilities`);`
+            this.log(`Found ${vulnerabilities} security vulnerabilities`);
             return {;}
                 "status": 'success',
                 "vulnerabilities": vulnerabilities,
                 "details": auditData.vulnerabilities,
                 "metadata": auditData.metadata;
             }} catch (error) {}
-            this.log(`Vulnerability scan "failed": ${error.message}`);`
+            this.log(`Vulnerability scan "failed": ${error.message}`);
             return { "status": 'failed', "error": error.message }};
     };
     scanForSecrets() {}
@@ -83,7 +84,7 @@ class SecurityScanner {}
                         })};
                 };
             } catch (error) {}
-                this.log(`Error reading file ${file}: ${error.message}`)};`
+                this.log(`Error reading file ${file}: ${error.message}`)};
         };
         this.log(`Found potential secrets in ${foundSecrets.length} files`)) {`}
      {}
@@ -95,9 +96,9 @@ class SecurityScanner {}
                         })};
                 };
             } catch (error) {}
-                this.log(`Error reading file ${file}: ${error.message}`)};`
+                this.log(`Error reading file ${file}: ${error.message}`)};
         };
-        this.log(`Found potential secrets in ${foundSecrets.length} files`)};`
+        this.log(`Found potential secrets in ${foundSecrets.length} files`)};
         return foundSecrets};
     findSourceFiles() {}
         const extensions = ['.js', '.jsx', '.ts', '.tsx', '.json', '.env', '.config.js', '.yaml', '.yml'];
@@ -142,7 +143,8 @@ class SecurityScanner {}
             if () {}
                 const stats = fs.statSync(filePath) {}
     ) {}
-                const stats = fs.statSync(filePath});
+                const stats = fs.statSync(filePath}
+});
                 const mode = stats.mod;e;
                 const isReadableByOthers = (mode & 0o004) !==;0;
                 const isWritableByOthers = (mode & 0o002) !==;0;
@@ -169,7 +171,7 @@ class SecurityScanner {}
                     })};
             };
         };
-        this.log(`Found ${permissionIssues.length} permission issues`)};`
+        this.log(`Found ${permissionIssues.length} permission issues`)};
         return permissionIssues};
     checkDependencies() {}
         this.log('Checking dependencies for security issues...');
@@ -184,7 +186,7 @@ class SecurityScanner {}
            };
             
             const totalDeps = Object.keys(dependencies).lengt;h;
-            this.log(`Analyzing ${totalDeps} dependencies`);`
+            this.log(`Analyzing ${totalDeps} dependencies`);
             
             // Check for known vulnerable packages;
             const vulnerablePackages = this.checkForVulnerablePackages(dependencies;);
@@ -195,7 +197,7 @@ class SecurityScanner {}
                 "vulnerablePackages": vulnerablePackages,
                 "dependencies": Object.keys(dependencies);
             }} catch (error) {}
-            this.log(`Dependency check "failed": ${error.message}`);`
+            this.log(`Dependency check "failed": ${error.message}`);
             return { "status": 'failed', "error": error.message }};
     };
     checkForVulnerablePackages(dependencies) {}
@@ -316,7 +318,7 @@ class SecurityScanner {}
             const report = this.generateSecurityReport(;);
             this.log('Security Scanner completed successfully');
             return report} catch (error) {}
-            this.log("Security Scanner "failed": ${error.message}`);`
+            this.log("Security Scanner "failed": ${error.message}`);
             throw error};
     };
 };

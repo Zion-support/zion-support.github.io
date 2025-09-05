@@ -153,7 +153,7 @@ import { fileURLToPath  } from "url"""
   "src/pages/services/AI-Supply-Chain-Optimization.tsx"""
   const componentName = fileName.replace(/[^a-zA-Z0-9]/g, """)"
   const displayName = fileName.replace(/\.tsx|\.jsx/g, "").replace(/([A-Z])/g, " $1"""
-  return `import React from "react"""`
+  return `import React from "react"""
 import Head from "next/head"""
 import Link from "next/link"""
         <meta name="description" content="Professional ${displayName} services"""

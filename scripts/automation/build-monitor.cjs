@@ -30,7 +30,7 @@ class BuildMonitor {}
     const result = await this.runCommand("npm run build");
     if (result.success) {}
   this.log("Build completed successfully", "success");
-      return true} else {this.log(`Build "failed": ${result.output}`, "error");this.errorsFound.push(`Build "failed": ${result.output}`);`
+      return true} else {this.log(`Build "failed": ${result.output}`, "error");this.errorsFound.push(`Build "failed": ${result.output}`);
       return false};
   };
 ;
@@ -59,7 +59,8 @@ setupSignalHandlers() {}
         "cwd": this.projectRoot,
         "stdio": 'pipe',
         ...options;
-      });
+      }
+});
       return { "success": true, "output": result }} catch (error) {}
       return { "success": false, "output": error.message, "code": error.status }};
   };
@@ -110,7 +111,8 @@ setupSignalHandlers() {}
     return new Promise((resolve) => {}
       exec('df -h .', { "cwd": this.projectRoot }, (error, stdout) => {}
         if (error) {}
-          resolve({ "available": 'unknown', "percentage": 0 });
+          resolve({ "available": 'unknown', "percentage": 0 }
+});
           return};
         const lines = stdout.trim().split('\n');
         if (lines.length > 1) {}
@@ -123,7 +125,8 @@ setupSignalHandlers() {}
     return new Promise((resolve) => {}
       exec('free -m', { "cwd": this.projectRoot }, (error, stdout) => {}
         if (error) {}
-          resolve({ "used": 0, "total": 0, "percentage": 0 });
+          resolve({ "used": 0, "total": 0, "percentage": 0 }
+});
           return};
         const lines = stdout.trim().split('\n');
         if (lines.length > 1) {}
@@ -142,8 +145,8 @@ setupSignalHandlers() {}
     if (result.success) {}
       this.log('info', 'Build completed successfully');
       return true} else {}
-      this.log('error', `Build "failed": ${result.errorMessage}`);`
-      this.errorsFound.push(`Build "failed": ${result.errorMessage}`);`
+      this.log('error', `Build "failed": ${result.errorMessage}`);
+      this.errorsFound.push(`Build "failed": ${result.errorMessage}`);
       return false};
   };
   async fixBuildIssues() {}
@@ -190,7 +193,7 @@ setupSignalHandlers() {}
     if (result.success) {}
       this.log('info', 'No TypeScript type errors detected')} else {}
       this.log('warn', 'TypeScript type errors detected');
-      this.errorsFound.push(`TypeScript "errors": ${result.output}`)};`
+      this.errorsFound.push(`TypeScript "errors": ${result.output}`)};
   };
   async generateReport() {}
     this.log('info', 'Generating build monitor report...');
@@ -210,7 +213,7 @@ setupSignalHandlers() {}
     const reportFile = path.join(this.logDir, 'build-monitor-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    this.log('info', `Build monitor report "generated": ${reportFile}`)};`
+    this.log('info', `Build monitor report "generated": ${reportFile}`)};
   async start() {}
     this.log('info', 'Build Monitor starting...');
     this.isRunning = true;
@@ -232,8 +235,8 @@ setupSignalHandlers() {}
         
         // Wait for next cycle;
         await new Promise(resolve => setTimeout(resolve, this.checkInterval))} catch (error) {}
-        this.log('error', `Error during build "monitoring": ${error.message}`);`
-        this.errorsFound.push(`Process "error": ${error.message}`);`
+        this.log('error', `Error during build "monitoring": ${error.message}`);
+        this.errorsFound.push(`Process "error": ${error.message}`);
         await this.generateReport();
         
         // Wait before retrying;
@@ -251,4 +254,5 @@ setupSignalHandlers() {}
 const monitor = new BuildMonitor();
 monitor.start().catch(error => {})
   console.error('Failed to start Build "Monitor": ', error);
-  process.exit(1)});
+  process.exit(1)}
+});

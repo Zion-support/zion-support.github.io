@@ -1,60 +1,112 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to recursively find all .tsx and .ts files;
-function findFiles(dir, fileList = []) {}
-  const files = fs.readdirSync(dir);
-  
-  files.forEach(file => {})
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+// Function to fix syntax errors in a file
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
     
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}
-      findFiles(filePath, fileList);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {}
-      fileList.push(filePath);
-    };
-  });
+    // Fix unterminated string constants (remove extra quotes)
+    content = content.replace(/from 'react';''/g, "from 'react';");
+    content = content.replace(/from 'next\/link';''/g, "from 'next/link';");
+    content = content.replace(/from 'next\/head';''/g, "from 'next/head';");
+    content = content.replace(/from 'framer-motion';'/g, "from 'framer-motion';");
+    content = content.replace(/from 'lucide-react';'/g, "from 'lucide-react';");
+    
+    // Fix malformed import blocks
+    content = content.replace(/import \{\s*\/\/ TODO: Implement\s*\}\s*([^}]+)\s*\} from 'lucide-react';'/g, (match, imports) => {
+      const cleanImports = imports
+        .split(',')
+        .map(imp => imp.trim())
+        .filter(imp => imp && !imp.includes('//'))
+        .join(',\n  ');
+      return `import {\n  ${cleanImports}\n} from 'lucide-react';`;
+    }
+});
+    
+    // Fix object syntax errors (remove extra quotes and semicolons)
+    content = content.replace(/"([^"]+)",""/g, '"$1"');
+    content = content.replace(/([a-zA-Z_][a-zA-Z0-9_]*):\s*"([^"]+)",\s*"/g, '$1: "$2",');
+    content = content.replace(/([a-zA-Z_][a-zA-Z0-9_]*):\s*([^,}]+);/g, '$1: $2,');
+    content = content.replace(/([a-zA-Z_][a-zA-Z0-9_]*):\s*([^,}]+),\]/g, '$1: $2]');
+    
+    // Fix array syntax errors
+    content = content.replace(/\[\s*"([^"]+)",""/g, '["$1"');
+    content = content.replace(/"([^"]+)",""/g, '"$1"');
+    content = content.replace(/([a-zA-Z_][a-zA-Z0-9_]*),\]/g, '$1]');
+    
+    // Fix JSX syntax errors
+    content = content.replace(/<([A-Z][a-zA-Z0-9]*);/g, '<$1');
+    content = content.replace(/<\/[A-Z][a-zA-Z0-9]*>"/g, '</$1>');
+    content = content.replace(/className="([^"]+)""/g, 'className="$1"');
+    content = content.replace(/href="([^"]+)""/g, 'href="$1"');
+    content = content.replace(/title="([^"]+)""/g, 'title="$1"');
+    content = content.replace(/description="([^"]+)""/g, 'description="$1"');
+    
+    // Fix closing tags
+    content = content.replace(/<\/MainLayout>"/g, '</MainLayout>');
+    content = content.replace(/<\/motion\.div>"/g, '</motion.div>');
+    content = content.replace(/<\/div>"/g, '</div>');
+    content = content.replace(/<\/section>"/g, '</section>');
+    content = content.replace(/<\/h1>"/g, '</h1>');
+    content = content.replace(/<\/h2>"/g, '</h2>');
+    content = content.replace(/<\/h3>"/g, '</h3>');
+    content = content.replace(/<\/p>"/g, '</p>');
+    content = content.replace(/<\/span>"/g, '</span>');
+    content = content.replace(/<\/a>"/g, '</a>');
+    content = content.replace(/<\/Link>"/g, '</Link>');
+    
+    // Fix function syntax
+    content = content.replace(/export default function ([A-Z][a-zA-Z0-9]*)\(\) \{"/g, 'export default function $1() {');
+    content = content.replace(/return \("/g, 'return (');
+    
+    // Fix template literals
+    content = content.replace(/\$\{([^}]+)\}\`/g, '${$1}');
+    
+    // Fix conditional expressions
+    content = content.replace(/\?\s*'([^']+)'\s*:/g, '? "$1" :');
+    content = content.replace(/\?\s*"([^"]+)"\s*:/g, '? "$1" :');
+    
+    // Write the fixed content back
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log(`Fixed: ${filePath}`);
+    return true;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Get all TypeScript/JavaScript files in pages directory
+function getAllPageFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
   
-  return fileList;
-};
-// Function to fix corrupted text;
-function fixCorruptedText(content) {}
-  // Remove the corrupted text pattern;
-  content = content.replace(/ursor\/add-new-services-and-deploy-updates-1b90/g, '');
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...getAllPageFiles(fullPath));
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      files.push(fullPath);
+    }
+  }
   
-  // Fix common syntax issues;
-  content = content.replace(/hover: text-/g, 'hover:text-');
-  content = content.replace(/hover: bg-/g, 'hover:bg-');
-  content = content.replace(/hover: shadow-/g, 'hover:shadow-');
-  content = content.replace(/className="bg-white p-8 rounded-xl shadow-lg hover: shadow-xl/g, 'className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl');
-  content = content.replace(/className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl/g, 'className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl');`}
-  
-  return content;
-};
-// Main function;
-function main() {}
-  const files = findFiles('./pages');
-  const componentFiles = findFiles('./components');
-  const allFiles = [...files, ...componentFiles];
-  
-  let fixedCount = 0;
-  
-  allFiles.forEach(filePath => {})
-    try {}
-      const content = fs.readFileSync(filePath, 'utf8');
-      const fixedContent = fixCorruptedText(content);
-      
-      if (content !== fixedContent) {}
-        fs.writeFileSync(filePath, fixedContent, 'utf8');
-        console.log(`Fixed: ${filePath}`);`
-        fixedCount++;
-      };
-    } catch (error) {}
-      console.error(`Error processing ${filePath}:`, error.message);`
-    };
-  });
-  
-  console.log(`\nFixed ${fixedCount} files`);`
-};
-main();
+  return files;
+}
+
+// Main execution
+const pagesDir = '/workspace/pages';
+const pageFiles = getAllPageFiles(pagesDir);
+
+console.log(`Found ${pageFiles.length} page files to check...`);
+
+let fixedCount = 0;
+for (const file of pageFiles) {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} files out of ${pageFiles.length} total files.`);

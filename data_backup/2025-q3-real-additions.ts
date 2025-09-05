@@ -24,7 +24,7 @@ export interface RealAdditionService2025Q3 {}
 	launchDate?: string;
 	customers?: number;
 	rating?: number;
-reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] = [{,}]
+reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] = [{}]
   id:,"
   ai-email-copilot',''
 		"name": 'AI Email Responder Copilot,'

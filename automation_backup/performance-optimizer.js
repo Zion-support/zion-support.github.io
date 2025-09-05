@@ -21,7 +21,7 @@ const { execSync } = require()'
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(message);
-    fs.appendFileSync(this.logFile, logMessage)}``
+    fs.appendFileSync(this.logFile, logMessage)}
   "async": optimizePerformance() {"}
     try {}
   // TODO: Implement;

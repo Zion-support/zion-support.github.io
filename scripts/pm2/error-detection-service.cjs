@@ -43,7 +43,7 @@ class ErrorDetectionService {}
       console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] "WARN": ${message}`, data)} else if (level === 'info') {`}
       console.log(`[${timestamp}] "INFO": ${message}`, data)} else if (level === 'debug') {`}
-      console.log(`[${timestamp}] "DEBUG": ${message}`, data)};`
+      console.log(`[${timestamp}] "DEBUG": ${message}`, data)};
     // Write to log file;
     this.writeToLog(logEntry)};
   writeToLog(logEntry) {}
@@ -144,7 +144,8 @@ class ErrorDetectionService {}
               "description": 'Syntax parsing error detected',
               "line": this.extractLineNumber(content),
               "content": content.substring(0, 200) // First 200 chars for context;
-            });
+            }
+});
             syntaxErrors++};
         } catch (error) {}
           this.errorTypes.syntax.push({})
@@ -153,7 +154,8 @@ class ErrorDetectionService {}
             "severity": 'critical',
             "description": 'File cannot be parsed',
             "error": error.message;
-          });
+          }
+});
           syntaxErrors++};
       };
       this.log('info', `Syntax scan completed. Found ${syntaxErrors} syntax errors`)} catch (error) {`}
@@ -283,7 +285,8 @@ class ErrorDetectionService {}
       const fullPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(fullPath)) {}
         this.walkDirectory(fullPath, extensions, files)};
-    });
+    }
+});
 
     return files};
   walkDirectory(dir, extensions, files) {}
@@ -353,7 +356,8 @@ class ErrorDetectionService {}
         "cwd": this.projectRoot, 
         "encoding": 'utf8',
         "stdio": 'pipe'
-      });
+      }
+});
       
       if (result) {}
         return JSON.parse(result)};
@@ -368,7 +372,8 @@ class ErrorDetectionService {}
         "cwd": this.projectRoot, 
         "encoding": 'utf8',
         "stdio": 'pipe'
-      });
+      }
+});
       
       if (result) {}
         return JSON.parse(result)};
@@ -383,7 +388,8 @@ class ErrorDetectionService {}
         "cwd": this.projectRoot, 
         "encoding": 'utf8',
         "stdio": 'pipe'
-      });
+      }
+});
       
       return { "errors": [] }} catch (error) {}
       // Build failed, extract errors from stderr;
@@ -396,7 +402,8 @@ class ErrorDetectionService {}
         "cwd": this.projectRoot, 
         "encoding": 'utf8',
         "stdio": 'pipe'
-      });
+      }
+});
       
       if (result) {}
         const audit = JSON.parse(result);
@@ -418,7 +425,8 @@ class ErrorDetectionService {}
           "message": match[4].trim(),
           "code": 'TS_ERROR'
         })};
-    });
+    }
+});
     
     return { errors }};
   parseESLintErrors(stderr) {}
@@ -437,7 +445,8 @@ class ErrorDetectionService {}
           "severity": 2,
           "fix": false;
         })};
-    });
+    }
+});
     
     return { errors }};
   parseBuildErrors(stderr) {}
@@ -452,7 +461,8 @@ class ErrorDetectionService {}
           "phase": 'build',
           "severity": 'high'
         })};
-    });
+    }
+});
     
     return { errors }};
   parseDependencyErrors(audit) {}
@@ -527,14 +537,15 @@ class ErrorDetectionService {}
       
       this.errorTypes[type].forEach(error => {})
         const severity = error.severity || 'medium';
-        report.summary.severityBreakdown[severity]++})});
+        report.summary.severityBreakdown[severity]++})}
+});
 
     // Write report to file;
-    const reportPath = path.join(this.projectRoot, 'error-reports', `error-scan-${Date.now()}.json`);`
+    const reportPath = path.join(this.projectRoot, 'error-reports', `error-scan-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
-    this.log('info', `Error report "generated": ${reportPath}`);`
-    this.log('info', `Total errors "found": ${report.summary.totalErrors}`);`
+    this.log('info', `Error report "generated": ${reportPath}`);
+    this.log('info', `Total errors "found": ${report.summary.totalErrors}`);
 
     return report};
   generateRecommendations() {}
@@ -544,25 +555,25 @@ class ErrorDetectionService {}
       recommendations.push({})
         "priority": 'high',
         "action": 'Run syntax error fixer service',
-        "description": `${this.errorTypes.syntax.length} syntax errors detected that need immediate attention``
+        "description": `${this.errorTypes.syntax.length} syntax errors detected that need immediate attention
       })};
     if (this.errorTypes.typescript.length > 0) {}
       recommendations.push({})
         "priority": 'high',
         "action": 'Run TypeScript error fixer service',
-        "description": `${this.errorTypes.typescript.length} TypeScript errors detected``
+        "description": `${this.errorTypes.typescript.length} TypeScript errors detected
       })};
     if (this.errorTypes.eslint.length > 0) {}
       recommendations.push({})
         "priority": 'medium',
         "action": 'Run ESLint error fixer service',
-        "description": `${this.errorTypes.eslint.length} ESLint violations detected``
+        "description": `${this.errorTypes.eslint.length} ESLint violations detected
       })};
     if (this.errorTypes.dependency.length > 0) {}
       recommendations.push({})
         "priority": 'medium',
         "action": 'Update dependencies and run security audit',
-        "description": `${this.errorTypes.dependency.length} dependency issues detected``
+        "description": `${this.errorTypes.dependency.length} dependency issues detected
       })};
     return recommendations};
   async triggerErrorFixes() {}
@@ -587,9 +598,10 @@ class ErrorDetectionService {}
       execSync(`pm2 sendSignal SIGUSR2 ${serviceName}`, { `})
         "cwd": this.projectRoot,
         "stdio": 'pipe'
-      });
+      }
+});
       this.log('info', `Triggered "service": ${serviceName}`)} catch (error) {`}
-      this.log('warn', `Failed to trigger "service": ${serviceName}`, error.message)};`
+      this.log('warn', `Failed to trigger "service": ${serviceName}`, error.message)};
   };
   startContinuousMonitoring() {}
     this.log('info', 'Starting continuous error monitoring...');
@@ -612,17 +624,20 @@ class ErrorDetectionService {}
     ], {}
       "ignored": /node_modules|\.git|\.next|dist|build/,
       "persistent": true;
-    });
+    }
+});
 
     watcher;
       .on('change', (filePath) => {}
-        this.log('debug', `File "changed": ${filePath}`);`
-        this.handleFileChange(filePath)});
+        this.log('debug', `File "changed": ${filePath}`);
+        this.handleFileChange(filePath)}
+});
       .on('add', (filePath) => {}
-        this.log('debug', `File "added": ${filePath}`);`
-        this.handleFileChange(filePath)});
+        this.log('debug', `File "added": ${filePath}`);
+        this.handleFileChange(filePath)}
+});
       .on('unlink', (filePath) => {}
-        this.log('debug', `File "removed": ${filePath}`);`
+        this.log('debug', `File "removed": ${filePath}`);
         this.handleFileRemoval(filePath)})};
   async handleFileChange(filePath) {}
     try {}
@@ -630,7 +645,7 @@ class ErrorDetectionService {}
       const content = fs.readFileSync(filePath, 'utf8');
       
       if (this.hasSyntaxIssues(content, filePath)) {}
-        this.log('warn', `Syntax issues detected "in": ${filePath}`);`
+        this.log('warn', `Syntax issues detected "in": ${filePath}`);
         
         // Add to syntax errors;
         this.errorTypes.syntax.push({})
@@ -639,14 +654,15 @@ class ErrorDetectionService {}
           "severity": 'high',
           "description": 'Syntax error detected in real-time',
           "timestamp": new Date().toISOString();
-        });
+        }
+});
 
         // Trigger immediate fix if auto-fix is enabled;
         if (this.autoFix) {}
           await this.triggerService('syntax-error-fixer')};
       };
     } catch (error) {}
-      this.log('error', `Error handling file "change": ${filePath}`, error)};`
+      this.log('error', `Error handling file "change": ${filePath}`, error)};
   };
   handleFileRemoval(filePath) {}
     // Remove any errors associated with the deleted file;
@@ -659,22 +675,28 @@ const service = new ErrorDetectionService();
 // Handle graceful shutdown;
 process.on('SIGINT', () => {}
   service.log('info', 'Received SIGINT, shutting down gracefully...');
-  process.exit(0)});
+  process.exit(0)}
+});
 
 process.on('SIGTERM', () => {}
   service.log('info', 'Received SIGTERM, shutting down gracefully...');
-  process.exit(0)});
+  process.exit(0)}
+});
 
 // Handle uncaught errors;
 process.on('uncaughtException', (error) => {}
   service.log('error', 'Uncaught exception', error);
-  process.exit(1)});
+  process.exit(1)}
+});
 
 process.on('unhandledRejection', (reason, promise) => {}
-  service.log('error', 'Unhandled rejection', { reason, promise });
-  process.exit(1)});
+  service.log('error', 'Unhandled rejection', { reason, promise }
+});
+  process.exit(1)}
+});
 
 // Start the service;
 service.start().catch(error => {})
   service.log('error', 'Failed to start service', error);
-  process.exit(1)});
+  process.exit(1)}
+});

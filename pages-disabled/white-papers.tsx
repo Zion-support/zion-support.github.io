@@ -220,17 +220,17 @@ export default function WhitePapersPage() {}
                 <button;
                   key={index};
                   className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${`}
-                    index === 0;``
+                    index === 0;
                       ? 'bg-blue-600 text-white'''
                       : 'bg-gray-100 text-gray-700 hover:bg-blue-50''
-                  }`};`
+                  }`};
                 >
 </button>
                 </button>
             </div>
           </div>
         </div>
-      </section>``
+      </section>
       <section className="py-16">"
 </section>"
         <div className="container mx-auto px-4">"

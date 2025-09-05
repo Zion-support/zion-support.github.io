@@ -224,7 +224,7 @@ const crypto = require("crypto")
             "
   this.log(Failed to apply optimization ${optimization.type}: ${error.message}")
             "WARN"
-            `WARN``
+            `WARN
 this.log("Applied ${appliedOptimizations.length} optimizations")
   case "IMMEDIATE_OPTIMIZATION"
         if (optimization.action.includes("npm audit fix")
