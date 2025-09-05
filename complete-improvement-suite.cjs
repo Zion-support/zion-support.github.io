@@ -179,13 +179,7 @@ class CompleteImprovementSuite {
   hasMergeConflicts(filePath) {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
-      return (
-<<<<<<< HEAD
-        content.includes('>>>>>>> ')
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-      );
+      return content.includes('>>>>>>> ');
     } catch (error) {
       return false;
     }
