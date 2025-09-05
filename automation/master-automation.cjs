@@ -167,7 +167,7 @@ class MasterAutomation {
     try {
       const buildResult = await this.runCommand('npm run build', 'Build check');
       status.buildStatus = buildResult.success ? 'healthy' : 'failed';
-    } catch (error) {
+    } catch (_error) {
       status.buildStatus = 'error';
     }
 
@@ -178,7 +178,7 @@ class MasterAutomation {
         'Git status check'
       );
       status.gitStatus = gitResult.success ? 'clean' : 'dirty';
-    } catch (error) {
+    } catch (_error) {
       status.gitStatus = 'error';
     }
 
@@ -189,7 +189,7 @@ class MasterAutomation {
         'Dependencies check'
       );
       status.dependenciesStatus = depsResult.success ? 'installed' : 'missing';
-    } catch (error) {
+    } catch (_error) {
       status.dependenciesStatus = 'error';
     }
 

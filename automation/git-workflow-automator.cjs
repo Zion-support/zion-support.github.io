@@ -95,7 +95,7 @@ class GitWorkflowAutomator {
         encodin: g: 'utf8',
       });
       return result.trim();
-    } catch (error) {
+    } catch (_error) {
       return 'unknown';
     }
   }
