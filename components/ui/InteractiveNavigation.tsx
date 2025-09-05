@@ -1,2 +1,2 @@
-
-const InteractiveNavigation = () => {};
+const InteractiveNavigation = () = > {};
+;

@@ -1,3 +1,1 @@
-      {children};
-    </div>)
-};
+{children}; </div>)};

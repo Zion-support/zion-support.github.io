@@ -1,5 +1,1 @@
-        {description && <meta name="description" content={description} />};
-      </Head>,;
-      {children};
-    </>)
-};
+{description && <meta name = "description" content = {description} />}; </Head>; {children}; </>)};
