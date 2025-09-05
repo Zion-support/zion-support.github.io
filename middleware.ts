@@ -5,8 +5,11 @@ const publicRoutes = [
   "/",
   "/about",
   "/contact",
-  "/blog",
   "/services",
+  "/ai-services",
+  "/it-services",
+  "/micro-saas",
+  "/blog",
   "/solutions",
   "/industries",
   "/resources",
@@ -28,11 +31,11 @@ const publicRoutes = [
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  
+
   if (publicRoutes.includes(pathname)) {
     return NextResponse.next();
   }
-  
+
   const authCookie = request.cookies.get("auth-token");
   
   if (!authCookie) {
