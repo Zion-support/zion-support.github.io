@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 ;
 export function ErrorBoundaryFallback("props": "any) {;
@@ -11,14 +10,12 @@ export function ErrorBoundaryFallback("props": "any) {;
 			<button onClick={onRetry} style="{{{"marginTop": "12"}}"}>Try again</button>;
 		</div>;
 	);
-=======
 import React, { useState, useEffect } from 'react';''
 import { useNavigate } from 'react-router-dom';''
 import { motion } from 'framer-motion';''
 import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';'
 function ErrorFallback({ error, resetError }) {}
   const navigate = useNavigate();
-
   return (')
     <div className="min-h-screen bg-zion-blue-dark flex items-center justify-center p-4">"
 </div>"
@@ -58,8 +55,6 @@ function ErrorFallback({ error, resetError }) {}
             <RefreshCw className="w-4 h-4 mr-2" />"
 </RefreshCw>
           </button>
-
-<<<<<<< HEAD
 export function ErrorBoundaryFallback(props: any) {
 	return (
 		<div style="{{{padding: 24; textAlign: 'center'}}"}>
@@ -70,7 +65,6 @@ export function ErrorBoundaryFallback(props: any) {
 			<button onClick={onRetry} style="{{{marginTop: 12}}"}>Try again</button>
 		</div>
     );
->>>>>>> main
 }
 export class ErrorBoundary extends React.Component {;
 	constructor(props) {;
@@ -85,15 +79,11 @@ export class ErrorBoundary extends React.Component {;
 			this.props.onError(error, info);
 		}
 	}
-<<<<<<< HEAD
 	handleRetry = () => {;
 		this.setState({ "hasError": "false", "error": "null "});
-=======
-
 	handleRetry = () => {
 		this.setState({ hasError: false, error: null }
     );
->>>>>>> main
 	};
 ;
 	render() {;
@@ -104,14 +94,12 @@ export class ErrorBoundary extends React.Component {;
 		return this.props.children;
 	}
 }
-=======
           <button;);
             onClick={() => navigate(-1)};
 </button>"
             <ArrowLeft className="w-4 h-4 mr-2" />"
 </ArrowLeft>
           </button>
-
           <a;"
             href="/"""
             className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hover:bg-zion-purple hover:text-white transition-colors""
@@ -133,4 +121,3 @@ export class ErrorBoundary extends React.Component {;
     </div>
     return <ErrorFallback error={error} resetError={resetError} />;
 </ErrorFallback>"
->>>>>>> main

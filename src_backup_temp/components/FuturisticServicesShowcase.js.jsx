@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, {useState, useEffect} from 'react';'''';';
-=======
 import React, {useState, useEffect} from 'react';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 import React, {useState, useEffect} from 'react';'''
->>>>>>> main
 import {motion, AnimatePresence} from 'framer-motion';
 import {ADVANCED_MICRO_SERVICES} from "../data/advancedMicroServices.jsx";
 const ServiceCard = ("props": "any) => {    const [isHovered", setIsHovered] = useState(false);
     return (<motion.div initial = {}
-<<<<<<< HEAD
   {"opacity": "0", "y": "50",;
   "scale": "0.9;"}} animate = {}
   isVisible ? {"opacity": "1", "y": "0",;
@@ -33,7 +26,6 @@ const ServiceCard = ("props": "any) => {    const [isHovered", setIsHovered] = u
             : "bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-purple-500/30"}"}" >""""";
         <div className="relative bg-black/90 backdrop-blur-xl rounded-2xl p-6 h-full">""""";
           {/* comment */}"""";
-=======
   {opacity: 0, y: 50,
   scale: 0.9;}} animate = {}
   isVisible ? {opacity: 1, y: 0,
@@ -55,11 +47,8 @@ const ServiceCard = ("props": "any) => {    const [isHovered", setIsHovered] = u
             : "bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-purple-500/30"}"}" >"""""
         <div className="relative bg-black/90 backdrop-blur-xl rounded-2xl p-6 h-full">"""""
           {/* comment */}""""
->>>>>>> main
           <div className="absolute inset-0 overflow-hidden pointer-events-none">""""            {[...Array(8)].map((_, i) => (<motion .div key="{i}" className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" animate = {}
-
   {}
-<<<<<<< HEAD
 ;
                 x[0, Math.random() * 100 - 50], y[0, Math.random() * 100 - 50], opacity[0.6, 0.2, 0.6];
   }} transition = {}";
@@ -85,8 +74,6 @@ const ServiceCard = ("props": "any) => {    const [isHovered", setIsHovered] = u
                     {service.category}""""";
                   </span>"""";
                   <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">;
-=======
-
                 x[0, Math.random() * 100 - 50], y[0, Math.random() * 100 - 50], opacity[0.6, 0.2, 0.6]
   }} transition = {}"
   {}"""
@@ -111,9 +98,7 @@ const ServiceCard = ("props": "any) => {    const [isHovered", setIsHovered] = u
                     {service.category}"""""
                   </span>""""
                   <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">
->>>>>>> main
                     {service.subcategory}
-
                   </span>
                 </div>"
               </div>""
@@ -149,7 +134,6 @@ const ServiceCard = ("props": "any) => {    const [isHovered", setIsHovered] = u
                     <div className="w-1 h-1 bg-green-400 rounded-full"></div>
                     <span>{benefit}</span>
                   </div>) ) }
-<<<<<<< HEAD
 ;
               </div>";
             </div>"";
@@ -173,8 +157,6 @@ const ServiceCard = ("props": "any) => {    const [isHovered", setIsHovered] = u
             {service.technologyStack && (<div className="mt-4 pt-4 border-t border-gray-700/50">"""";
                 <h4 className="text-sm font-semibold text-purple-400 mb-2">Tech Stack</h4>"""";
                 <div className="flex flex-wrap gap-1">"""";
-=======
-
               </div>"
             </div>""
 """""
@@ -197,11 +179,8 @@ const ServiceCard = ("props": "any) => {    const [isHovered", setIsHovered] = u
             {service.technologyStack && (<div className="mt-4 pt-4 border-t border-gray-700/50">""""
                 <h4 className="text-sm font-semibold text-purple-400 mb-2">Tech Stack</h4>""""
                 <div className="flex flex-wrap gap-1">""""
->>>>>>> main
                   {service.technologyStack.slice(0, 4).map((tech, idx) => (<span key="{idx}" className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded border border-purple-500/30">                      {tech}
-
                     </span>) ) }
-<<<<<<< HEAD
 ;
                 </div>";
               </div>) }"";
@@ -241,8 +220,6 @@ export const FuturisticServicesShowcase = ("props": "any) => {"}"";
     const [searchTerm, setSearchTerm] = useState("")";
     const [visibleServices, setVisibleServices] = useState(new Set())";
     const categories = [];
-=======
-
                 </div>"
               </div>) }""
 """""
@@ -261,7 +238,6 @@ export const FuturisticServicesShowcase = ("props": "any) => {"}"";
                   <span className="text-purple-400">🌐</span>""""
                   <a href="{service.contactInfo.website}" className="hover: text-purple-300 transition-colors">,
                     {service.contactInfo.website}
-
                   </a>
                 </div>
             </div>"
@@ -281,13 +257,10 @@ export const FuturisticServicesShowcase = (props: any) => {}""
     const [searchTerm, setSearchTerm] = useState("")"
     const [visibleServices, setVisibleServices] = useState(new Set())"
     const categories = []
->>>>>>> main
     const filteredServices = ADVANCED_MICRO_SERVICES.filter(service => {}
-
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
 service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-<<<<<<< HEAD
         return matchesCategory && matchesSearch});
     // Set all services as visible initially for better UX;
     useEffect(() => {;
@@ -297,8 +270,6 @@ service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
   "};
 }, []);, []);
         const allIndices = new Set(filteredServices.map((_, index) => index));
-<<<<<<< HEAD
-<<<<<<< HEAD
         setVisibleServices(allIndices)}, [filteredServices]);"
     return (
     <div className="min-h-screen bg-white">
@@ -310,9 +281,6 @@ service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
                 left: `${Math.random() * 100}}"%`,`
                 top: `${Math.random() * 100}%`,`
                 animationDelay: `${Math.random() * 5}s`,`
-=======
-=======
->>>>>>> main
         setVisibleServices(allIndices)}, [filteredServices]);";
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">;
       {/* Animated Background */}";
@@ -320,18 +288,14 @@ service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5"></div>";
         {[...Array(20)].map((_, i) => (<div key={i} className="absolute w-2 h-2 bg-cyan-400/20 rounded-full animate-float" style="{{{;
 `;
-<<<<<<< HEAD
                 left: `${Math.random() * 100}}"%`,`;
                 top: `${Math.random() * 100}%`,`;
                 animationDelay: `${Math.random() * 5}s`,`;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                 animationDuration: `${3 + Math.random() * 4}s`}} />))}
-=======
                 "left": "`${Math.random() * 100"}}"%`,`;
                 "top": "`${Math.random() * 100"}%`,`;
                 "animationDelay": "`${Math.random() * 5"}s`,`;
                 "animationDuration": "`${3 + Math.random() * 4"}s`}} />))}
->>>>>>> main
       </div>;
 ";
 "";
@@ -386,13 +350,11 @@ service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
             {filteredServices.map((service, index) => (<ServiceCard key="{service.id}" service="{service}" index="{index}" isVisible="{visibleServices.has(index)"}/" >) ) }";
           </AnimatePresence>;
         </div>;
-=======
         return matchesCategory && matchesSearch}
     );
     // Set all services as visible initially for better UX
     useEffect(() => {
   // TODO: Add dependencies if needed
-
   return () => {
     // Cleanup function
   };
@@ -421,7 +383,6 @@ service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 """"
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         {/* comment */}
-
         <motion.div initial = {}"
   {opacity: 0, y: -50}} animate = {}""
   {opacity: 1, y: 0 """"">
@@ -451,9 +412,7 @@ service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
                 ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/30"""""""",
                 : "bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20"}"}>"""
                   {category === "all" ? "All Services" : category}
-
                 </button>) ) }
-
             </div>
           </div>"
         </motion.div>""
@@ -464,13 +423,8 @@ service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
             {filteredServices.map((service, index) => (<ServiceCard key="{service.id}" service="{service}" index="{index}" isVisible="{visibleServices.has(index)"}/" >) ) }"
           </AnimatePresence>
         </div>
->>>>>>> main
         {/* comment */}
-
         <motion.div initial = {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ;
   {"opacity": "0", "y": "50"}} animate = {}";
   {"opacity": "1", "y": "0"}} transition = {}"";
@@ -506,9 +460,6 @@ export default Component;
 </div>;
 </div>;
 </motion>;
-=======
->>>>>>> main
-
   {opacity: 0, y: 50}} animate = {}"
   {opacity: 1, y: 0}} transition = {}""
   {duration: 0.8, delay: 0.5 """"">
@@ -533,18 +484,14 @@ export default Component;
     </div>)}"""""""
 """"""`""
 "
-
 export default Component
-
 </motion>
 </ServiceCard>
 </motion>
 </div>
 </motion>
-<<<<<<< HEAD
 </div>';
 </motion>;';;';
-=======
 ;
   {opacity: 0, y: 50}} animate = {}";
   {opacity: 1, y: 0}} transition = {}"";
@@ -580,11 +527,7 @@ export default Component;
 </div>;
 </div>;
 </motion>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 </motion>
 </div>
 </div>
 </motion>
->>>>>>> main
->>>>>>> main

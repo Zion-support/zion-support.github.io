@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 """;,"});,"})";
 """;,"});,"})","});,"})","});,"})","});,"})","});,"})";
@@ -34,7 +33,6 @@ export {EmptyState};,"});,"})";
 export {EmptyState};,"});,"})";
 ;,"});,"})";
 export {EmptyState};,"});,"});
-=======
 import React from "react"
 """;,"}
     );,"})"
@@ -107,7 +105,6 @@ export {EmptyState};,"}
     );,"})"
 export {EmptyState};,"}
     );,"})
->>>>>>> main
 }
 const EmptyState = ("props": "any) => {"}";
   return()";

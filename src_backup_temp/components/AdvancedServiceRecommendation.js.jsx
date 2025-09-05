@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, {useState} from "react";""";,"});,"})","});,"})","});,"})""""";,"});,"})""""";,"});,"})","});,"})";
 const AdvancedServiceRecommendation = ("props": "any) => {"}"});,"})";
     const [clientProfile, setClientProfile] = useState({}"});,"})";
@@ -518,7 +517,6 @@ const AdvancedServiceRecommendation = ("props": "any) => {"}";
         "technologyMaturity": "", primaryGoals[], challenges[]})"";
     const [recommendations, setRecommendations] = useState([])";
     const [isAnalyzing, setIsAnalyzing] = useState();
-=======
 import React, {useState} from "react";""";,"}
     );,"})","}
     );,"})","}
@@ -1553,7 +1551,6 @@ const AdvancedServiceRecommendation = (props: any) => {}"
         technologyMaturity: "", primaryGoals[], challenges[]})""
     const [recommendations, setRecommendations] = useState([])"
     const [isAnalyzing, setIsAnalyzing] = useState()
->>>>>>> main
 }
     const [showResults, setShowResults] = useState(false)";
     const industries = []";
@@ -2010,7 +2007,6 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
 ;
           </div>;
           {/* comment */}
-<<<<<<< HEAD
 ;
           <motion.div initial = {}";
   {"opacity": "0", "y": "20"}} animate = {}"";
@@ -2042,8 +2038,6 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
               </div>;
 </div>;
           </motion.div>;
-=======
-
           <motion.div initial = {}"
   {opacity: 0, y: 20}} animate = {}""
   {opacity: 1, y: 0 """"">
@@ -2074,7 +2068,6 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
               </div>
 </div>
           </motion.div>
->>>>>>> main
         </motion.div>)}
     </div>)};
 export default AdvancedServiceRecommendation;

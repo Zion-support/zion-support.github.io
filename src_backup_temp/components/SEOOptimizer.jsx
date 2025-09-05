@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;,"});,"});";
 }) }"});,"})";
         catch (error) {}"});,"})";
@@ -272,7 +271,6 @@ export {SEOOptimizer};,"});,"})";
  const SEOOptimizer = ("props": "any) => { const [isOpen", setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {";import React { useState, useEffect, useCallback } from "react";
  const SEOOptimizer = ("props": "any) => {const [isOpen", setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback } from "react"";""const;const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {&apos;import React { useState, useEffect, useCallback } from &apos;react&apos,lucide-react";&apos;&apos,;
  const SEOOptimizer = ("props": "any) => { const [isOpen", setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback } from "react"";""";
-=======
 ;,"}
     );,"}
     );"
@@ -808,7 +806,6 @@ export {SEOOptimizer};,"}
  const SEOOptimizer = (props: any) => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {";import React { useState, useEffect, useCallback } from "react"
  const SEOOptimizer = (props: any) => {const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback } from "react"";""const;const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {&apos;import React { useState, useEffect, useCallback } from &apos;react&apos,lucide-react";&apos;&apos,
  const SEOOptimizer = (props: any) => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback } from "react"";"""
->>>>>>> main
 ""}}}
 ;
 const SEOOptimizer = ("props": "any) => {"}
@@ -900,7 +897,6 @@ const SEOOptimizer = ("props": "any) => {"}
                     images["/images / ai - solutions.jpg"], ",;
                     links["/services", /about",/contact"], ",;
                     keywords["artificial intelligence", machine learning",predictive analytics", AI automation"];
-
             ]&apos;&apos;
             const pageAnalyses = samplePages.map(page => {}
 ;
@@ -970,7 +966,6 @@ issues,;
 ;
         catch (error) {}";
             // comment;
-
             // comment;
         finally {}
 ;
@@ -978,7 +973,6 @@ issues,;
 }, []);
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -986,8 +980,6 @@ issues,;
         // Auto-analyze SEO when component mounts;
         analyzeSEO()}, [analyzeSEO]);
     const calculateSEOScore = ("props": "any) => {;
-
-<<<<<<< HEAD
 </button>;
 </div>;
 </div>;
@@ -1011,7 +1003,6 @@ issues,;
 </div>;
 </div>;
 </div>"
-=======
 </button>
 </div>
 </div>
@@ -1020,7 +1011,6 @@ issues,;
 </div>
 </div>
 </button>
-
 </div>
 </div>
 </div>
@@ -1035,4 +1025,3 @@ issues,;
 </div>
 </div>
 </div>
->>>>>>> main

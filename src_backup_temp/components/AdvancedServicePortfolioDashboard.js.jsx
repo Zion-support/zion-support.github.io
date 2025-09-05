@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, {useState, useMemo} from 'react';'''';';
-=======
 import React, {useState, useMemo} from 'react';'''
->>>>>>> main
 import {motion} from 'framer-motion';
 import {}
   BarChart3,
@@ -16,7 +12,6 @@ import {}
   Brain,
   Zap,
   Star,
-<<<<<<< HEAD
   Filter,';
   Download,';';
   Eye,'';';
@@ -139,7 +134,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}';';
       growth: 42.1,'';';
       complexity: 'Enterprise','';';
       marketDemand: 'Exploding','';';
-=======
 import React, {useState, useMemo} from 'react';
 import {motion} from 'framer-motion';
 import {}
@@ -162,7 +156,6 @@ import {}
 import {Card, CardContent, CardHeader, CardTitle} from './ui/card';
 import {Button} from './ui/button';
 import {Badge} from './ui/badge';
-=======
   Filter,
   Download,
   Eye,'
@@ -172,9 +165,7 @@ import {Badge} from './ui/badge';
 import {Card, CardContent, CardHeader, CardTitle} from './ui/card';'''
 import {Button} from './ui/button';'''
 import {Badge} from './ui/badge';'''
->>>>>>> main
 import {Input} from './ui/input';
-<<<<<<< HEAD
 const AdvancedServicePortfolioDashboard = ("props": "any) => {"}
 ';
 '';
@@ -183,7 +174,6 @@ const AdvancedServicePortfolioDashboard = ("props": "any) => {"}
   const [selectedStatus, setSelectedStatus] = useState('all');''';
   const [selectedComplexity, setSelectedComplexity] = useState('all');''';
   const [searchTerm, setSearchTerm] = useState('');''';
-=======
 const AdvancedServicePortfolioDashboard = (props: any) => {}
 '
 ''
@@ -192,12 +182,10 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
   const [selectedStatus, setSelectedStatus] = useState('all');'''
   const [selectedComplexity, setSelectedComplexity] = useState('all');'''
   const [searchTerm, setSearchTerm] = useState('');'''
->>>>>>> main
   const [viewMode, setViewMode] = useState('overview');
   // Mock data - in real app this would come from API;
   const portfolioData = []
     {}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -299,7 +287,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       "complexity": 'Enterprise',';
       "marketDemand": 'Exploding',';
       "technologyMaturity": 'Leading'}
-=======
 '
 ''
 '''
@@ -317,7 +304,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       marketDemand: 'Exploding','''
       technologyMaturity: 'Leading'},
     {}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -333,8 +319,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       growth: 42.1,';
       complexity: 'Enterprise',';
       marketDemand: 'Exploding',';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 '
 ''
 '''
@@ -418,9 +402,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       growth: 42.1,'
       complexity: 'Enterprise','
       marketDemand: 'Exploding','
->>>>>>> main
       technologyMaturity: 'Leading'}
->>>>>>> main
   ];
   const filteredPortfolio = useMemo(() => {}
     return portfolioData.filter(service => {}
@@ -430,22 +412,17 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       return ()
         matchesCategory && matchesStatus && matchesComplexity && matchesSearch;
       );
-<<<<<<< HEAD
     });
-<<<<<<< HEAD
   }, [selectedCategory, selectedStatus, selectedComplexity, searchTerm]);';
   const portfolioMetrics = useMemo(() => {}';';
 '';';
 ''';';
 '''';';
-=======
   }, [selectedCategory, selectedStatus, selectedComplexity, searchTerm]);
   const portfolioMetrics = useMemo(() => {}
 ';
 '';
 ''';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
     }
     );
   }, [selectedCategory, selectedStatus, selectedComplexity, searchTerm]);
@@ -453,7 +430,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
 '
 ''
 '''
->>>>>>> main
     const activeServices = portfolioData.filter(s => s.status === 'Active');
     const totalClients = portfolioData.reduce()
       (sum, s) => sum + s.clientCount,
@@ -463,7 +439,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       activeServices.length > 0;
         ? activeServices.reduce((sum, s) => sum + s.performance, 0) /
           activeServices.length;
-<<<<<<< HEAD
         : "0;
     const portfolioGrowth =;
       portfolioData.length > 0;
@@ -477,7 +452,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       "averagePerformance": "Math.round(avgPerformance)",;
       "portfolioGrowth": "Math.round(portfolioGrowth)",;
       "marketCoverage": "Math.round((portfolioData.length / 50) * 100)", // Assuming 50 total possible services;
-=======
         : 0;
     const portfolioGrowth =
       portfolioData.length > 0;
@@ -491,11 +465,8 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       averagePerformance: Math.round(avgPerformance),
       portfolioGrowth: Math.round(portfolioGrowth),
       marketCoverage: Math.round((portfolioData.length / 50) * 100), // Assuming 50 total possible services;
->>>>>>> main
     };
   }, [portfolioData]);
-<<<<<<< HEAD
-<<<<<<< HEAD
   const getStatusColor = status => {}';
     switch (status) {}';';
 '';';
@@ -598,12 +569,8 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
 '';';
       id: 'green-tech','';';
       name: 'Green Technology','';';
-=======
-=======
->>>>>>> main
   const getStatusColor = status => {}
     switch (status) {}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -616,7 +583,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       case 'Discontinued':'''';
         return 'bg-red-100 text-red-800';''';
       "default":'''';
-=======
 '
 ''
 '''
@@ -629,13 +595,11 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       case 'Discontinued':''''
         return 'bg-red-100 text-red-800';'''
       default:''''
->>>>>>> main
         return 'bg-gray-100 text-gray-800';
     }
   };
   const getComplexityColor = complexity => {}
     switch (complexity) {}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -648,7 +612,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       case 'Enterprise':'''';
         return 'bg-purple-100 text-purple-800';''';
       "default":'''';
-=======
 '
 ''
 '''
@@ -661,13 +624,11 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       case 'Enterprise':''''
         return 'bg-purple-100 text-purple-800';'''
       default:''''
->>>>>>> main
         return 'bg-gray-100 text-gray-800';
     }
   };
   const getMarketDemandColor = demand => {}
     switch (demand) {}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -680,7 +641,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       case 'Exploding':'''';
         return 'bg-red-100 text-red-800';''';
       "default":'''';
-=======
 '
 ''
 '''
@@ -693,13 +653,11 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       case 'Exploding':''''
         return 'bg-red-100 text-red-800';'''
       default:''''
->>>>>>> main
         return 'bg-gray-100 text-gray-800';
     }
   };
   const getTechnologyMaturityColor = maturity => {}
     switch (maturity) {}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -747,15 +705,11 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       "count": "portfolioData.filter(s => s.category === 'biotech-ai').length"},;
     {}
 ';
-<<<<<<< HEAD
       id: 'green-tech',';
       name: 'Green Technology',';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
       "id": 'green-tech',';
       "name": 'Green Technology',';
       "count": "portfolioData.filter(s => s.category === 'green-tech').length"}
-=======
 '
 ''
 '''
@@ -805,15 +759,12 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
 '
       id: 'green-tech','
       name: 'Green Technology','
->>>>>>> main
       count: portfolioData.filter(s => s.category === 'green-tech').length}
->>>>>>> main
   ];
   return ()
     <div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div;
-<<<<<<< HEAD
         initial={{ "opacity": "0", "y": "20 "}}""";
         animate={{ "opacity": "1", "y": "0 "}}"""";
         className="mb-8"""";
@@ -825,7 +776,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
             </h1>"""";
             <p className="text-zion-slate-light">;
               Comprehensive insights into our cutting-edge service portfolio",;
-=======
         initial={{ opacity: 0, y: 20 }}"""
         animate={{ opacity: 1, y: 0 }}""""
         className="mb-8""""
@@ -837,10 +787,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
             </h1>""""
             <p className="text-zion-slate-light">
               Comprehensive insights into our cutting-edge service portfolio,
->>>>>>> main
               performance metrics, and strategic analysis;
-<<<<<<< HEAD
-<<<<<<< HEAD
             </p>
           </div>"""';
 """"';';
@@ -854,7 +801,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
               >'"'"""';';
                 {mode === 'overview' && <Eye className="w-4 h-4 mr-2"  />}'"'"""';';
                 {mode === 'detailed' && <BarChart3 className="w-4 h-4 mr-2"  />}'"'"""';';
-=======
             </p>;
           </div>""";
 """";
@@ -868,8 +814,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
               >'"'""";
                 {mode === 'overview' && <Eye className="w-4 h-4 mr-2"  />}'"'""";
                 {mode === 'detailed' && <BarChart3 className="w-4 h-4 mr-2"  />}'"'""";
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
             </p>
           </div>"""
 """"
@@ -883,7 +827,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
               >'"'"""
                 {mode === 'overview' && <Eye className="w-4 h-4 mr-2"  />}'"'"""
                 {mode === 'detailed' && <BarChart3 className="w-4 h-4 mr-2"  />}'"'"""
->>>>>>> main
                 {mode === 'analytics' && <PieChart className="w-4 h-4 mr-2"  />}
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
               </Button>
@@ -891,10 +834,8 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           </div>
         </div>
       </motion.div>
-
       {/* Portfolio Metrics */}
       <motion.div;
-<<<<<<< HEAD
         initial={{ "opacity": "0", "y": "20 "}}
         animate={{ "opacity": "1", "y": "0 "}}""";
         transition={{ "delay": "0.1 "}}"""";
@@ -998,7 +939,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
         <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-5 gap-4">""";
           <div>"""";
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">;
-=======
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}"""
         transition={{ delay: 0.1 }}""""
@@ -1092,7 +1032,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           </CardContent>
         </Card>
       </motion.div>
-
       {/* Filters and Controls */}
       <motion.div;
         initial={{ opacity: 0, y: 20 }}
@@ -1103,11 +1042,9 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">"""
           <div>""""
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">
->>>>>>> main
               Category;
             </label>
             <select;
-<<<<<<< HEAD
               value={selectedCategory"}""";
               onChange={e => setSelectedCategory(e.target.value)}"""";
               className="w-full p-2 border border-zion-slate-light rounded-md""";
@@ -1116,7 +1053,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                 <option key={category.id} value={category.id}>;
                   {category.name} ({category.count});
                 </option>;
-=======
               value={selectedCategory}"""
               onChange={e => setSelectedCategory(e.target.value)}""""
               className="w-full p-2 border border-zion-slate-light rounded-md"""
@@ -1125,7 +1061,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                 <option key={category.id} value={category.id}>
                   {category.name} ({category.count})
                 </option>
->>>>>>> main
               ))}
             </select>
           </div>
@@ -1167,10 +1102,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           <div>""""
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">
               Search;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
             </label>"""
             <Input""""
               placeholder="Search services..."""
@@ -1183,14 +1114,12 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           <div className="flex items-end">"""
             <Button""""
               variant="outline""""
-<<<<<<< HEAD
               className="w-full"""';
               onClick={() => {}';';
 '';';
                 setSelectedCategory('all');'';';
                 setSelectedStatus('all');'';';
                 setSelectedComplexity('all');'';';
-=======
             </label>""";
             <Input"""";
               placeholder="Search services...""";
@@ -1209,15 +1138,12 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                 setSelectedCategory('all');';
                 setSelectedStatus('all');';
                 setSelectedComplexity('all');';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
               className="w-full"""
               onClick={() => {}
 '
                 setSelectedCategory('all');'
                 setSelectedStatus('all');'
                 setSelectedComplexity('all');'
->>>>>>> main
                 setSearchTerm('');
               }}"""
             >""""
@@ -1227,10 +1153,8 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           </div>
         </div>
       </motion.div>
-
       {/* Portfolio Table */}
       <motion.div;
-<<<<<<< HEAD
         initial={{ "opacity": "0", "y": "20 "}}
         animate={{ "opacity": "1", "y": "0 "}}""";
         transition={{ "delay": "0.3 "}}"""";
@@ -1245,7 +1169,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
               </CardTitle>"""";
               <Button variant="outline" size="sm">"""";
                 <Download className="w-4 h-4 mr-2"  />;
-=======
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}"""
         transition={{ delay: 0.3 }}""""
@@ -1260,7 +1183,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
               </CardTitle>""""
               <Button variant="outline" size="sm">""""
                 <Download className="w-4 h-4 mr-2"  />
->>>>>>> main
                 Export Data;
               </Button>
             </div>
@@ -1300,7 +1222,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                   {filteredPortfolio.map((service, index) => (
                     <motion.tr;
                       key={service.id}
-<<<<<<< HEAD
                       initial={{ "opacity": "0", "x": "-20 "}}
                       animate={{ "opacity": "1", "x": "0 "}}""";
                       transition={{ "delay": "0.1 * index "}}"""";
@@ -1311,7 +1232,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                           {service.title"}""";
                         </div>"""";
                         <div className="text-sm text-zion-slate-light">;
-=======
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}"""
                       transition={{ delay: 0.1 * index }}""""
@@ -1322,14 +1242,12 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                           {service.title}"""
                         </div>""""
                         <div className="text-sm text-zion-slate-light">
->>>>>>> main
                           {service.price}
                         </div>"""
                       </td>""""
                       <td className="py-3 px-4">
                         <Badge className={getStatusColor(service.status)}>
                           {service.status}
-<<<<<<< HEAD
                         </Badge>""";
                       </td>"""";
                       <td className="py-3 px-4">"""";
@@ -1347,7 +1265,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                       </td>"""";
                       <td className="py-3 px-4">"""";
                         <span className="font-medium">;
-=======
                         </Badge>"""
                       </td>""""
                       <td className="py-3 px-4">""""
@@ -1365,15 +1282,12 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                       </td>""""
                       <td className="py-3 px-4">""""
                         <span className="font-medium">
->>>>>>> main
                           {service.clientCount}
-<<<<<<< HEAD
                         </span>""";
                       </td>"""";
                       <td className="py-3 px-4">"""";
                         <span className="font-medium">;
                           ${(service.revenue / 1000000).toFixed(1)}M;
-<<<<<<< HEAD
                         </span>"""
                       </td>""""
                       <td className="py-3 px-4">""""
@@ -1386,15 +1300,11 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                           <span'`'`';';
                             className={`text-sm font-medium ${service.growth > 0 ? 'text-green-600' : 'text-red-600'}`}';';
                           >'';';
-=======
-=======
                         </span>"""
                       </td>""""
                       <td className="py-3 px-4">""""
                         <span className="font-medium">
                           ${(service.revenue / 1000000).toFixed(1)}M;
-<<<<<<< HEAD
->>>>>>> main
                         </span>""";
                       </td>"""";
                       <td className="py-3 px-4">"""";
@@ -1405,7 +1315,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                             <ArrowDownRight className="w-4 h-4 text-red-500"  />;
                           )"}'`;
                           <span'`'`;
-=======
                         </span>"""
                       </td>""""
                       <td className="py-3 px-4">""""
@@ -1416,14 +1325,9 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                             <ArrowDownRight className="w-4 h-4 text-red-500"  />
                           )}'`
                           <span'`'`
->>>>>>> main
                             className={`text-sm font-medium ${service.growth > 0 ? 'text-green-600' : 'text-red-600'}`}
-<<<<<<< HEAD
                           >';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
                           >'
->>>>>>> main
                             {service.growth > 0 ? '+' : ''}
                             {service.growth}%
                           </span>
@@ -1451,10 +1355,8 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           </CardContent>
         </Card>
       </motion.div>
-
       {/* Portfolio Insights */}
       <motion.div;
-<<<<<<< HEAD
         initial={{ "opacity": "0", "y": "20 "}}
         animate={{ "opacity": "1", "y": "0 "}}""";
         transition={{ "delay": "0.4 "}}"""";
@@ -1465,7 +1367,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           <CardHeader>"""";
             <CardTitle className="flex items-center gap-2">"""";
               <PieChart className="w-5 h-5 text-zion-purple"  />;
-=======
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}"""
         transition={{ delay: 0.4 }}""""
@@ -1476,12 +1377,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           <CardHeader>""""
             <CardTitle className="flex items-center gap-2">""""
               <PieChart className="w-5 h-5 text-zion-purple"  />
->>>>>>> main
               Service Category Distribution;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
             </CardTitle>
           </CardHeader>"""
           <CardContent>""""
@@ -1491,7 +1387,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                 .map((category, index) => (
                   <motion.div;
                     key={category.id}
-<<<<<<< HEAD
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}"""
                     transition={{ delay: 0.1 * index }}""""
@@ -1536,7 +1431,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                                     : index === 4'''`'`';';
                                       ? 'bg-red-500'''`'`'`';';
                                       : 'bg-gray-500'````
-=======
             </CardTitle>;
           </CardHeader>""";
           <CardContent>"""";
@@ -1549,12 +1443,9 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}""";
                     transition={{ delay: 0.1 * index }}"""";
-=======
-<<<<<<< HEAD
                     initial={{ "opacity": "0", "x": "-20 "}}
                     animate={{ "opacity": "1", "x": "0 "}}""";
                     transition={{ "delay": "0.1 * index "}}"""";
->>>>>>> main
                     className="flex items-center justify-between"""";
                   >"""";
                     <div className="flex items-center gap-3">`;
@@ -1575,7 +1466,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                         "}`}""";
                       ></div>"""";
                       <span className="font-medium text-zion-slate-dark">;
-=======
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}"""
                     transition={{ delay: 0.1 * index }}""""
@@ -1599,7 +1489,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                         }`}"""
                       ></div>""""
                       <span className="font-medium text-zion-slate-dark">
->>>>>>> main
                         {category.name}
                       </span>"""
                     </div>""""
@@ -1607,7 +1496,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                       <div className="w-20 bg-zion-slate-light/20 rounded-full h-2">`
                         <div``
                           className={`h-2 rounded-full ${}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -1622,12 +1510,8 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                                     : index === 4'''`'`;
                                       ? 'bg-red-500'''`'`'`;
                                       : 'bg-gray-500'````;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                           }`}
-=======
                           "}`}
->>>>>>> main
                           style={{}
 `;
 ``;
@@ -1635,7 +1519,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                         ></div>""";
                       </div>"""";
                       <span className="text-sm font-medium text-zion-slate-light">;
-=======
 '
 ''
 '''
@@ -1658,7 +1541,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                         ></div>"""
                       </div>""""
                       <span className="text-sm font-medium text-zion-slate-light">
->>>>>>> main
                         {category.count}
                       </span>
                     </div>
@@ -1667,7 +1549,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
             </div>
           </CardContent>
         </Card>
-
         {/* Portfolio Insights */}
         <Card>"""
           <CardHeader>""""
@@ -1687,10 +1568,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                   <p className="text-sm text-zion-slate-light">
                     {portfolioData.filter(s => s.growth > 30).length} services;
                     showing &gt;30% growth;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
                   </p>
                 </div>
               </div>"""
@@ -1714,7 +1591,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                   <h4 className="font-semibold text-zion-slate-dark">
                     Market Leaders"""
                   </h4>""""
-<<<<<<< HEAD
                   <p className="text-sm text-zion-slate-light">';
                     {}';';
 '';';
@@ -1723,7 +1599,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                       portfolioData.filter(''''';';
                         s => s.technologyMaturity === 'Leading''''';';
                       ).length''''';';
-=======
                   </p>;
                 </div>;
               </div>""";
@@ -1755,8 +1630,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                       portfolioData.filter('''';
                         s => s.technologyMaturity === 'Leading'''';
                       ).length'''';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
                   <p className="text-sm text-zion-slate-light">
                     {}
 '
@@ -1765,7 +1638,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                       portfolioData.filter(''''
                         s => s.technologyMaturity === 'Leading''''
                       ).length''''
->>>>>>> main
                     }{' '}
                     services in leading position;
                   </p>
@@ -1775,10 +1647,8 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           </CardContent>
         </Card>
       </motion.div>
-
       {/* CTA Section */}
       <motion.div;
-<<<<<<< HEAD
         initial={{ "opacity": "0", "y": "20 "}}
         animate={{ "opacity": "1", "y": "0 "}}""";
         transition={{ "delay": "0.5 "}}"""";
@@ -1791,8 +1661,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           <p className="text-xl mb-6 max-w-2xl mx-auto">;
             Our comprehensive service portfolio offers cutting-edge solutions;
             across all major technology sectors. Contact us to discuss how we;
-<<<<<<< HEAD
-<<<<<<< HEAD
             can help you achieve your business goals."""
           </p>""""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
@@ -1812,9 +1680,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
               onClick={() => window.open('tel:+13024640950',_blank')}"""
             >""""
               <Zap className="w-5 h-5 mr-2"  />
-=======
-=======
->>>>>>> main
             can help you achieve your business goals.""";
           </p>"""";
           <div className="flex flex-col "sm": "flex-row gap-4 justify-center">""";
@@ -1834,10 +1699,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
               onClick={() => window.open('"tel":+13024640950'",_blank')}""";
             >"""";
               <Zap className="w-5 h-5 mr-2"  />;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-=======
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}"""
         transition={{ delay: 0.5 }}""""
@@ -1869,8 +1730,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
               onClick={() => window.open('tel:+13024640950',_blank')}"""
             >""""
               <Zap className="w-5 h-5 mr-2"  />
->>>>>>> main
->>>>>>> main
               Call Now;
             </Button>
           </div>
@@ -1878,24 +1737,15 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       </motion.div>
     </div>)};
 export default AdvancedServicePortfolioDashboard;
-
 export {AdvancedServicePortfolioDashboard};
-
 export {AdvancedServicePortfolioDashboard};
-
 export {AdvancedServicePortfolioDashboard};
-
 export {AdvancedServicePortfolioDashboard};
-
 export {AdvancedServicePortfolioDashboard};
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 </motion>
 </motion>
 </motion>';
 </motion>;';;';
-=======
 ;
 </motion>;
 </motion>;
@@ -1905,9 +1755,6 @@ export {AdvancedServicePortfolioDashboard};
 </motion>;
 </motion>;
 </motion>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-
 </motion>
 </motion>
 </motion>
@@ -1916,4 +1763,3 @@ export {AdvancedServicePortfolioDashboard};
 </motion>
 </motion>
 </motion>
->>>>>>> main

@@ -1,11 +1,9 @@
-=======
 ;
  params - Function parameters;
  * @returns {*} Function return value;
  */;
 function EnhancedHeader("props": "any) {export function EnhancedHeader("props": any) {;
   const [mobileMenuOpen", setMobileMenuOpen] = useState<any>(false);
-=======
 
  params - Function parameters
  * @returns {*} Function return value
@@ -25,7 +23,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
   };
 }, []);, []);
 ;
-=======
     
     };
 
@@ -58,7 +55,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled';
             ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl'';
             : 'bg-transparent'`;
-=======
       <div  className="matrix -rain"></div>
       {/* Enhanced Header */}
       <motion.header`
@@ -120,7 +116,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                   className={`nav-link font-medium transition-all duration-300 ${item.current';
                       ? 'text-cyan-400 border-b-2 border-cyan-400'';
                       : 'text-gray-300 hover: tex t-cyan-400'`;
-=======
                   key={item.name}
                   to={item.href}`
                   className={`nav-link font-medium transition-all duration-300 ${item.current'
@@ -163,7 +158,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                             .map(service => (
                               <Link
                                 key={service.name}
-=======
                                 <p className="text-sm text-gray-400 group-"hover": "tex t-gray-300 transition-colors mb-3">;
                                   {service.description"}
                                 </p>;
@@ -178,7 +172,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                                             : 'bg-cyan-500/20 text-cyan-400'`;
                                     "}`}
                                   >;
-=======
                                 to={service.href}"
                                 className="group p-6 rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 hover: borde r-cyan-500/50 transition-all duration-300 hover: b g-gray-800/70"
                               >"
@@ -200,7 +193,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                                           : service.badge === 'Featured''
                                             ? 'bg-purple-500/20 text-purple-400''
                                             : 'bg-cyan-500/20 text-cyan-400'`
-=======
                                     }`}
                                   >
                                     {service.badge}
@@ -231,7 +223,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                                   key={service.name}
                                       "}`}
                                     >;
-=======
                                   to={service.href}"
                                   className="flex items-center space-x-3 p-3 rounded-lg hover: b g-gray-800/50 transition-colors group"
                                 >"
@@ -290,7 +281,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
               {/* Additional Navigation Items */}
               {navigation.slice(6, 10).map(item => (;
                 <Link;
-=======
               {navigation.slice(6, 10).map(item => (
                 <Link
                   key={item.name}
@@ -329,7 +319,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                   href={link.href} ;
                   className="text-gray-700 "hover": "tex t-blue-600 transition-colors flex items-center gap-1";
                   onMouseEnter={() => link.submenu && setServicesOpen(true)"}
-=======
                   to={item.href}`
                   className={`nav-link font-medium transition-all duration-300 ${item.current'
                       ? 'text-cyan-400 border-b-2 border-cyan-400''
@@ -396,7 +385,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                   </div>;
                 )}
               </div>;
-=======
                   </div>
                 )}
               </div>
@@ -532,8 +520,6 @@ export function EnhancedHeader(props: any) {}"""""""
                   </div>;
                 )}
               </div>;
-=======
-=======
   const handleSearch = async (e: React.FormEvent) =>  {,
     e.preventDefault(),
     if: (searchQuery.trim()) {",,
@@ -1000,12 +986,10 @@ export default Component;
 </any>;
 </any>;
 </any>;
-=======
 </any>
 </any>
 </any>
 </any>
-=======
 import { useEffect } from 'react';,
 import { useState } from 'react';,
 import { useRouter } from 'next/router';,

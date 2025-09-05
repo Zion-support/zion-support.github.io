@@ -5,19 +5,15 @@ import {cn} from "@/lib/utils";
 ;
 export const Sidebar = React.forwardRef((props, ref) => {;
     const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
-<<<<<<< HEAD
     if (props.collapsible === "none") {;
         return (<div className = {;
   cn("flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",;
   props.className);
-=======
     if (props.collapsible === "none") {
         return (
         <div className = {
   cn("flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",
   props.className)
->>>>>>> main
-
 } ref={ref} {...props}>        {props.children}
       </div>;
     );
@@ -70,7 +66,6 @@ export const Sidebar = React.forwardRef((props, ref) => {;
           props.className;
         )}
         {...props}
-<<<<<<< HEAD
       >""";
         <div"""";
           data-sidebar="sidebar"""";
@@ -82,7 +77,6 @@ export const Sidebar = React.forwardRef((props, ref) => {;
     </div>';
   );'';
 });''';
-=======
       >"""
         <div""""
           data-sidebar="sidebar""""
@@ -95,7 +89,6 @@ export const Sidebar = React.forwardRef((props, ref) => {;
   );''
 }
     );'''
->>>>>>> main
 Sidebar.displayName = 'Sidebar';
 export const SidebarRail = React.forwardRef((props, ref) => {}
   const {toggleSidebar} = useSidebar();
@@ -112,16 +105,13 @@ export const SidebarRail = React.forwardRef((props, ref) => {}
         props.className;
       )}
       {...props}
-<<<<<<< HEAD
      />';
   );'';
 });''';
-=======
      />'
   );''
 }
     );'''
->>>>>>> main
 SidebarRail.displayName = 'SidebarRail';
 export const SidebarInset = React.forwardRef((props, ref) => {}
   return();
@@ -134,17 +124,13 @@ export const SidebarInset = React.forwardRef((props, ref) => {}
       {...props}
      />;
   );
-<<<<<<< HEAD
 });';
 SidebarInset.displayName = 'SidebarInset';'""";
 '"'""";
-=======
 }
     );'
 SidebarInset.displayName = 'SidebarInset';'"""
 '"'"""
->>>>>>> main
-
 </main>;
 </button>;
 </div>

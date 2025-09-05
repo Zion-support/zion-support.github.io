@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, {useState} from "react";""";,"});,"})","});,"})","});,"})","});,"})";
 const EnhancedServicesShowcase = ("props": "any) => {"}"});,"})";
 ";,"});,"})";
@@ -355,7 +354,6 @@ const EnhancedServicesShowcase = ("props": "any) => {"}"";
   const [selectedCategory, setSelectedCategory] = useState("all")""";
   const [searchTerm, setSearchTerm] = useState("")""";
   const categories = [];
-=======
 import React, {useState} from "react";""";,"}
     );,"})","}
     );,"})","}
@@ -1070,7 +1068,6 @@ const EnhancedServicesShowcase = (props: any) => {}""
   const [selectedCategory, setSelectedCategory] = useState("all")"""
   const [searchTerm, setSearchTerm] = useState("")"""
   const categories = []
->>>>>>> main
   const filteredServices = enhancedServices2025.filter(service => {}
 ;
     const matchesSearch =;
@@ -1168,7 +1165,6 @@ technology solutions designed to transform your business.</motion.p>"";
 ;
                 </button>;
               ))}
-<<<<<<< HEAD
 ;
             </div>;
           </motion.div>;
@@ -1200,8 +1196,6 @@ technology solutions designed to transform your business.</motion.p>"";
                     {service.name}""""";
                   </h3>""""";
                   <p className="text-sm text-blue-400 font-medium">""";
-=======
-
             </div>
           </motion.div>
         </div>"
@@ -1232,7 +1226,6 @@ technology solutions designed to transform your business.</motion.p>"";
                     {service.name}"""""
                   """""
                   <p className="text-sm text-blue-400 font-medium">"""
->>>>>>> main
                     {service.category.replace("-").toUpperCase()}
 ;
                   </p>";
@@ -1366,7 +1359,6 @@ technology solutions designed to transform your business.</motion.p>"";
               </button>;
             </motion.div>,;
           )}
-<<<<<<< HEAD
 ;
         </div>";
       </section>"";
@@ -1456,8 +1448,6 @@ technology solutions designed to transform your business.</motion.p>"";
         </div>;
 </section>;
     </div>)"};
-=======
-
         </div>"
       </section>""
 """""
@@ -1546,7 +1536,6 @@ https: // comment
         </div>
 </section>
     </div>)};
->>>>>>> main
 export default EnhancedServicesShowcase;
 ;
 export {EnhancedServicesShowcase};

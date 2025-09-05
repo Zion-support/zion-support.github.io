@@ -1,6 +1,4 @@
-=======
 import React from 'react';
-=======
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 ;
   const getFilteredServices = ("props": "any) => {;
@@ -13,7 +11,6 @@ import React from 'react';
         services = comprehensiveITServices2030;
         break;
       case 'ai':;
-=======
 const "ComprehensiveServicesShowcase2030": Reac t.FC = () => {;
   const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
   const [searchTerm, setSearchTerm] = useState<any>(");
@@ -38,13 +35,11 @@ const "ComprehensiveServicesShowcase2030": Reac t.FC = () => {;
       )}
 ;
     if(selectedCategory !== 'all') {;
-=======
         service.tags.some("tag": string tag.toLowerCase().includes(searchTerm.toLowerCase()));
       )}
     if(selectedCategory !== 'all') {
       services = services.filter(service => service.category === selectedCategory)};
     return services};
-=======
   const getCategories = ("props": "any) => {;
     let "services": an y[] = [];
     switch(activeTab) {;
@@ -55,7 +50,6 @@ const "ComprehensiveServicesShowcase2030": Reac t.FC = () => {;
         services = comprehensiveITServices2030;
         break;
       case 'ai':;
-=======
   const getCategories = (props) => {;
     let "services": an y[] = [];
     switch(activeTab) {
@@ -70,7 +64,6 @@ const "ComprehensiveServicesShowcase2030": Reac t.FC = () => {;
         break"}
 ;
     return categories};
-=======
 ;
   const renderServiceCard = ("props": "any) => {;
     if(activeTab === 'microsaas') {;
@@ -81,7 +74,6 @@ const "ComprehensiveServicesShowcase2030": Reac t.FC = () => {;
               <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name"}";
               <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full">;
                 {service.pricing}
-=======
   const renderServiceCard = (props) => {
     if(activeTab === 'microsaas') {
       return ("
@@ -198,7 +190,6 @@ const "ComprehensiveServicesShowcase2030": Reac t.FC = () => {;
           <div className="p-6">";
             <div className="flex items-start justify-between mb-4">";
               <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}"              <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-green-600 to-blue-600 rounded-full">;
-=======
               <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}"              <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-green-600 to-blue-600 rounded-full">
                 {service.category}
               </span>;
@@ -406,7 +397,6 @@ const "ComprehensiveServicesShowcase2030": Reac t.FC = () => {;
         </div>;
       )"}
   };
-=======
 ;
   return ();
     <>;
@@ -482,7 +472,6 @@ const "ComprehensiveServicesShowcase2030": Reac t.FC = () => {;
                   value={searchTerm"}
                   onChange={(e) => setSearchTerm(e.target.value)}";
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": "rin g-2 "focus": rin g-blue-500 "focus": borde r-transparent";
-=======
   return ()
     <>
       <SEO"
@@ -576,11 +565,9 @@ const "ComprehensiveServicesShowcase2030": Reac t.FC = () => {;
             </div>;
           </div>;
           {/* Service Tabs */}";
-=======
           <div className="mb-8">";
                     : 'bg-white text-gray-700 "hover": "b g-gray-50 border border-gray-200'`;
                 "}`}
-=======
             <divclassName="flex flex-wrap gap-2 justify-center">';
               <button'
                 onClick={() => setActiveTab('microsaas')}"
@@ -641,7 +628,6 @@ const "ComprehensiveServicesShowcase2030": Reac t.FC = () => {;
                 className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold "hover": b g-white "hover": tex t-blue-600 transition-colors";
                 Email Us;
               </a>;
-=======
               <button;';
                 onClick={() => {;';';
                   setSearchTerm(");';';
@@ -694,12 +680,10 @@ const "ComprehensiveServicesShowcase2030": Reac t.FC = () => {;
                 className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover: b g-white hover: tex t-blue-600 transition-colors";
                 Email Us;
               </a>;
-=======
             </div>;
           </div>;
         </div>;
       </div>;
-=======
     </>;
   )"};
 ;
@@ -707,7 +691,6 @@ export default ComprehensiveServicesShowcase2030}}}}}'"`;
 </SEO>;
 </any>;
 </any>;
-=======
     </>
   )};';
 export default ComprehensiveServicesShowcase2030}}}}}""
