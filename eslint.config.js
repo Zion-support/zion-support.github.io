@@ -9,7 +9,7 @@ import next from '@next/eslint-plugin-next'; export default [ js.configs.recomme
 import next from '@next/eslint-plugin-next';
 
 export default [
-  js.configs.recommended;
+  js.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
@@ -76,7 +76,14 @@ export default [
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       ...next.configs.recommended.rules,
-      'no-unused-vars': 'warnno-console': 'warnprefer-const': 'errorno-var': 'errorreact/prop-types': 'offreact/react-in-jsx-scope': 'off@typescript-eslint/no-unused-vars': 'warn@typescript-eslint/no-explicit-any': 'warn'
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'error',
+      'no-var': 'error',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn'
     },
     settings: {
       react: {
@@ -85,7 +92,7 @@ export default [
     }
   },
   {
-    files: ['**/*.cjs'],
+    files: ['**/*.cjs', 'automation/**/*.js'],
     languageOptions: {
       sourceType: 'commonjs',
       globals: {
@@ -106,14 +113,22 @@ export default [
         setImmediate: 'readonly',
         clearImmediate: 'readonly'
       }
+    },
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
+      'no-undef': 'off',
+      'no-console': 'off'
     }
   },
   {
     ignores: [
       // Node/build outputs
-      'node_modules/**.next/**',
-      'dist/**build/**',
-      'out/**coverage/**',
+      'node_modules/**',
+      '.next/**',
+      'dist/**',
+      'build/**',
+      'out/**',
+      'coverage/**',
 
       // Large/legacy sources and disabled dirs
       'src/**/src.corrupted/**src/**/src.disabled/**',
