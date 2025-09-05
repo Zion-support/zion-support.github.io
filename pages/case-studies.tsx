@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import MainLayout from '../components/layout/MainLayout'
 import Link from 'next/link'
-import { motion } from 'framer-motion
+import { motion } from 'framer-motion'
 import {
-  // TODO: Implement
-}
   BarChart3, 
   Search, 
   Filter,
@@ -20,15 +18,16 @@ import {
   Shield,
   Zap,
   Award,
-  ChevronRight;'
-} from 'lucide-react
-const caseStudyCategories = ['
+  ChevronRight
+} from 'lucide-react'
+
+const caseStudyCategories = [
   { name: "All", count: 25, active: true },
   { name: "AI Solutions", count: 8, active: false },
   { name: "IT Services", count: 6, active: false },
   { name: "Micro SaaS", count: 5, active: false },
   { name: "Enterprise", count: 4, active: false },
-  { name: "Startup", count: 2, active: false }]
+  { name: "Startup", count: 2, active: false }
 ];
 
 const caseStudies = [
@@ -42,17 +41,17 @@ const caseStudies = [
     results: "60% reduction in support costs, 40% faster response times",
     category: "AI Solutions",
     duration: "3 months",
-    teamSize: "8 developers",]
-    technologies: [AI/ML", "NLP", "Python", "AWS"],
+    teamSize: "8 developers",
+    technologies: ["AI/ML", "NLP", "Python", "AWS"],
     featured: true,
-    metrics: {,
-  costReduction: "60%",
+    metrics: {
+      costReduction: "60%",
       responseTime: "40%",
       customerSatisfaction: "85%",
       roi: "300%"
     },
-    testimonial: {,
-  quote: "The AI solution transformed our customer service operations. We've seen incredible improvements in efficiency and customer satisfaction.",
+    testimonial: {
+      quote: "The AI solution transformed our customer service operations. We've seen incredible improvements in efficiency and customer satisfaction.",
       author: "Sarah Johnson",
       role: "VP of Customer Experience"
     }
@@ -68,16 +67,16 @@ const caseStudies = [
     category: "IT Services",
     duration: "6 months",
     teamSize: "12 developers",
-    technologies: [AWS", "Docker", "Kubernetes", "Terraform"],
+    technologies: ["AWS", "Docker", "Kubernetes", "Terraform"],
     featured: true,
-    metrics: {,
-  costReduction: "50%",
+    metrics: {
+      costReduction: "50%",
       uptime: "99.9%",
       performance: "300%",
       roi: "250%"
     },
-    testimonial: {,
-  quote: "The migration was seamless and the results exceeded our expectations. Our infrastructure is now more reliable and cost-effective.",
+    testimonial: {
+      quote: "The migration was seamless and the results exceeded our expectations. Our infrastructure is now more reliable and cost-effective.",
       author: "Michael Chen",
       role: "CTO"
     }
@@ -93,16 +92,16 @@ const caseStudies = [
     category: "Micro SaaS",
     duration: "4 months",
     teamSize: "6 developers",
-    technologies: [React", "Node.js", "PostgreSQL", "Redis"],
+    technologies: ["React", "Node.js", "PostgreSQL", "Redis"],
     featured: false,
-    metrics: {,
-  users: "10,000+",
+    metrics: {
+      users: "10,000+",
       mrr: "$50K",
       satisfaction: "95%",
       growth: "400%"
     },
-    testimonial: {,
-  quote: "The platform has been instrumental in our growth. The team delivered exactly what we needed and more.",
+    testimonial: {
+      quote: "The platform has been instrumental in our growth. The team delivered exactly what we needed and more.",
       author: "Emily Rodriguez",
       role: "Founder & CEO"
     }
@@ -118,16 +117,16 @@ const caseStudies = [
     category: "IT Services",
     duration: "5 months",
     teamSize: "10 developers",
-    technologies: [Security", "Compliance", "Monitoring", "Encryption"],
+    technologies: ["Security", "Compliance", "Monitoring", "Encryption"],
     featured: false,
-    metrics: {,
-  compliance: "100%",
+    metrics: {
+      compliance: "100%",
       incidents: "0",
       auditScore: "A+",
       roi: "200%"
     },
-    testimonial: {,
-  quote: "The security implementation was thorough and professional. We now have complete confidence in our data protection.",
+    testimonial: {
+      quote: "The security implementation was thorough and professional. We now have complete confidence in our data protection.",
       author: "Dr. James Wilson",
       role: "Chief Information Officer"
     }
@@ -143,16 +142,16 @@ const caseStudies = [
     category: "AI Solutions",
     duration: "4 months",
     teamSize: "7 developers",
-    technologies: [Machine Learning", "Python", "TensorFlow", "APIs"],
+    technologies: ["Machine Learning", "Python", "TensorFlow", "APIs"],
     featured: false,
-    metrics: {,
-  costReduction: "30%",
+    metrics: {
+      costReduction: "30%",
       accuracy: "95%",
       efficiency: "45%",
       roi: "180%"
     },
-    testimonial: {,
-  quote: "The AI solution has revolutionized our inventory management. We've eliminated stockouts and reduced costs significantly.",
+    testimonial: {
+      quote: "The AI solution has revolutionized our inventory management. We've eliminated stockouts and reduced costs significantly.",
       author: "Lisa Thompson",
       role: "Operations Director"
     }
