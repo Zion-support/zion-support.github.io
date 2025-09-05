@@ -8,7 +8,7 @@ const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
   { number: '1000+', label: 'Projects Completed' },
-  { number: '110+', label: 'Services Offered' },
+  { number: '150+', label: 'Services Offered' },
   { number: '75+', label: 'Expert Team Members' }
 ];
 
@@ -156,7 +156,6 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Why Choose Us */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -171,7 +170,7 @@ export default function HomePage() {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to transform your business? Contact our expert team for a free consultation.
+              We deliver cutting-edge technology solutions with unmatched expertise and competitive pricing.
             </p>
           </motion.div>
 
@@ -185,10 +184,11 @@ export default function HomePage() {
             >
               <h3 className="text-xl font-bold text-gray-900 mb-4">💰 Competitive Pricing</h3>
               <ul className="text-gray-600 space-y-2">
-                <li>• Micro SaaS: $29 - $4,999/month</li>
+                <li>• Micro SaaS: $19 - $4,999/month</li>
                 <li>• IT Services: $120 - $500/hour</li>
-                <li>• AI Solutions: $1,000 - $1M/project</li>
+                <li>• AI Solutions: $1,000 - $2M/project</li>
                 <li>• Transparent, no hidden fees</li>
+                <li>• Free consultations & quotes</li>
               </ul>
             </motion.div>
 
@@ -201,7 +201,7 @@ export default function HomePage() {
             >
               <h3 className="text-xl font-bold text-gray-900 mb-4">🚀 Innovation Focus</h3>
               <ul className="text-gray-600 space-y-2">
-                <li>• 110+ cutting-edge services</li>
+                <li>• 150+ cutting-edge services</li>
                 <li>• AI, Blockchain, IoT, 5G expertise</li>
                 <li>• Quantum computing solutions</li>
                 <li>• Future-ready technology stack</li>
@@ -222,6 +222,7 @@ export default function HomePage() {
                 <li>• Dedicated project managers</li>
                 <li>• Free consultation & quotes</li>
                 <li>• Rapid response times</li>
+                <li>• 99.9% uptime guarantee</li>
               </ul>
             </motion.div>
           </div>
@@ -248,11 +249,13 @@ export default function HomePage() {
               </Link>
             </div>
           </motion.div>
-=======
+        </div>
+      </section>
+
       {/* Stats Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -269,7 +272,6 @@ export default function HomePage() {
               </motion.div>
             ))}
           </div>
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
         </div>
       </section>
 
@@ -299,13 +301,8 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 
-      </div>
-    </MainLayout>
-=======
     </div>
     </Layout>
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
   );
 }

@@ -563,6 +563,133 @@ const aiServices = [
     pricing: '$2,500 - $15,000/month',
     category: 'Performance AI',
     link: 'https://aiperformance.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Drug Discovery Platform',
+    description: 'Advanced AI platform for pharmaceutical drug discovery and molecular design.',
+    icon: Heart,
+    features: ['Molecular Design', 'Drug Interaction Analysis', 'Clinical Trial Optimization', 'Side Effect Prediction'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Pharmaceutical AI',
+    popular: true,
+    link: 'https://drugdiscovery.ziontechgroup.com'
+  },
+  {
+    title: 'Autonomous Vehicle AI System',
+    description: 'Complete AI system for autonomous vehicles with perception, planning, and control.',
+    icon: Car,
+    features: ['Computer Vision', 'Path Planning', 'Obstacle Detection', 'Real-time Decision Making'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Autonomous Systems',
+    link: 'https://autonomousai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Climate Modeling',
+    description: 'Advanced climate prediction and environmental impact analysis using machine learning.',
+    icon: Globe,
+    features: ['Climate Prediction', 'Environmental Impact', 'Weather Forecasting', 'Carbon Footprint Analysis'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Environmental AI',
+    link: 'https://climateai.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum Machine Learning Platform',
+    description: 'Quantum-enhanced machine learning for complex optimization and pattern recognition.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Optimization Problems', 'Pattern Recognition', 'Quantum Simulation'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Quantum AI',
+    link: 'https://quantumai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Space Exploration',
+    description: 'AI systems for space mission planning, satellite operations, and planetary exploration.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Satellite Operations', 'Planetary Analysis', 'Space Weather Prediction'],
+    pricing: '$100,000 - $2,000,000/project',
+    category: 'Space AI',
+    link: 'https://spaceai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Cybersecurity Intelligence',
+    description: 'Advanced AI system for threat detection, incident response, and security automation.',
+    icon: Shield,
+    features: ['Threat Detection', 'Incident Response', 'Security Automation', 'Behavioral Analysis'],
+    pricing: '$15,000 - $100,000/month',
+    category: 'Cybersecurity AI',
+    link: 'https://cybersecai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Financial Trading System',
+    description: 'High-frequency trading AI with market analysis and automated decision making.',
+    icon: DollarSign,
+    features: ['Market Analysis', 'High-frequency Trading', 'Risk Management', 'Portfolio Optimization'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'FinTech AI',
+    link: 'https://tradingai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Agricultural Intelligence',
+    description: 'Smart farming AI with crop monitoring, yield prediction, and resource optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Resource Optimization', 'Pest Detection'],
+    pricing: '$20,000 - $150,000/project',
+    category: 'AgTech AI',
+    link: 'https://agriai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Energy Grid Management',
+    description: 'Smart grid AI for energy distribution, demand forecasting, and renewable integration.',
+    icon: Zap,
+    features: ['Demand Forecasting', 'Grid Optimization', 'Renewable Integration', 'Energy Storage'],
+    pricing: '$30,000 - $250,000/project',
+    category: 'Energy AI',
+    link: 'https://energyai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Smart City Platform',
+    description: 'Comprehensive AI platform for smart city management and urban optimization.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Resource Management', 'Public Safety', 'Environmental Monitoring'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Smart City AI',
+    link: 'https://smartcityai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Robotics Control',
+    description: 'Advanced AI control systems for industrial and service robotics applications.',
+    icon: Bot,
+    features: ['Motion Planning', 'Object Recognition', 'Human-Robot Interaction', 'Adaptive Learning'],
+    pricing: '$40,000 - $300,000/project',
+    category: 'Robotics AI',
+    link: 'https://roboticsai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Language Translation',
+    description: 'Real-time multilingual translation with cultural context and industry-specific terminology.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Cultural Context', 'Industry Terminology', 'Voice Translation'],
+    pricing: '$0.01 - $0.10 per word',
+    category: 'Language AI',
+    link: 'https://translationai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Content Creation Studio',
+    description: 'Complete AI content creation platform for videos, articles, and multimedia content.',
+    icon: Video,
+    features: ['Video Generation', 'Article Writing', 'Image Creation', 'Audio Production'],
+    pricing: '$5,000 - $50,000/month',
+    category: 'Content AI',
+    link: 'https://contentai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Personal Assistant',
+    description: 'Advanced personal AI assistant with natural language understanding and task automation.',
+    icon: Bot,
+    features: ['Natural Language Processing', 'Task Automation', 'Calendar Management', 'Learning Adaptation'],
+    pricing: '$99 - $999/month',
+    category: 'Personal AI',
+    link: 'https://personalai.ziontechgroup.com'
   }
 ];
 

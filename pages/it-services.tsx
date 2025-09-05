@@ -34,7 +34,8 @@ import {
   DollarSign,
   Code,
   Rocket,
-  Brain
+  Brain,
+  FileText
 } from 'lucide-react';
 
 const itServices = [
@@ -508,6 +509,133 @@ const itServices = [
     pricing: '$12,000 - $80,000/project',
     category: 'Monitoring Solutions',
     link: 'https://enterprisemonitoring.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered IT Service Management',
+    description: 'Intelligent IT service management with automated ticket routing and predictive maintenance.',
+    icon: Brain,
+    features: ['AI Ticket Routing', 'Predictive Maintenance', 'Automated Resolution', 'Service Analytics'],
+    pricing: '$8,000 - $45,000/project',
+    category: 'ITSM',
+    popular: true,
+    link: 'https://aitsm.ziontechgroup.com'
+  },
+  {
+    title: 'Hybrid Cloud Architecture',
+    description: 'Seamless hybrid cloud solutions connecting on-premises and cloud environments.',
+    icon: Cloud,
+    features: ['Multi-cloud Integration', 'Data Synchronization', 'Workload Migration', 'Cost Optimization'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Cloud Architecture',
+    link: 'https://hybridcloud.ziontechgroup.com'
+  },
+  {
+    title: 'Advanced Threat Detection',
+    description: 'Next-generation threat detection using AI and behavioral analytics.',
+    icon: Shield,
+    features: ['Behavioral Analytics', 'Threat Hunting', 'Incident Response', 'Forensic Analysis'],
+    pricing: '$10,000 - $60,000/project',
+    category: 'Cybersecurity',
+    link: 'https://threatdetection.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Infrastructure Management',
+    description: 'Comprehensive IoT device management and data processing infrastructure.',
+    icon: Wifi,
+    features: ['Device Management', 'Data Processing', 'Edge Computing', 'Security Integration'],
+    pricing: '$12,000 - $70,000/project',
+    category: 'IoT',
+    link: 'https://iotinfrastructure.ziontechgroup.com'
+  },
+  {
+    title: 'Data Lake & Analytics Platform',
+    description: 'Enterprise data lake implementation with advanced analytics and machine learning capabilities.',
+    icon: Database,
+    features: ['Data Ingestion', 'ETL Pipelines', 'Analytics Engine', 'ML Integration'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'Data Analytics',
+    link: 'https://datalake.ziontechgroup.com'
+  },
+  {
+    title: 'API Gateway & Management',
+    description: 'Enterprise API gateway with security, monitoring, and developer portal capabilities.',
+    icon: Network,
+    features: ['API Security', 'Rate Limiting', 'Developer Portal', 'Analytics Dashboard'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'API Management',
+    link: 'https://apigateway.ziontechgroup.com'
+  },
+  {
+    title: 'Disaster Recovery & Business Continuity',
+    description: 'Comprehensive disaster recovery planning and implementation services.',
+    icon: HardDrive,
+    features: ['DR Planning', 'Backup Solutions', 'Failover Testing', 'Recovery Procedures'],
+    pricing: '$15,000 - $90,000/project',
+    category: 'Disaster Recovery',
+    link: 'https://disasterrecovery.ziontechgroup.com'
+  },
+  {
+    title: 'Microservices Architecture',
+    description: 'Modern microservices architecture design and implementation for scalable applications.',
+    icon: Server,
+    features: ['Service Design', 'Container Orchestration', 'Service Mesh', 'Monitoring'],
+    pricing: '$18,000 - $100,000/project',
+    category: 'Architecture',
+    link: 'https://microservices.ziontechgroup.com'
+  },
+  {
+    title: 'Identity & Access Management (IAM)',
+    description: 'Enterprise identity management with single sign-on and multi-factor authentication.',
+    icon: Lock,
+    features: ['SSO Integration', 'MFA Implementation', 'Role-based Access', 'Audit Logging'],
+    pricing: '$10,000 - $55,000/project',
+    category: 'Identity Management',
+    link: 'https://iam.ziontechgroup.com'
+  },
+  {
+    title: 'Network Security Operations Center (SOC)',
+    description: '24/7 security monitoring and incident response services.',
+    icon: Shield,
+    features: ['24/7 Monitoring', 'Incident Response', 'Threat Intelligence', 'Compliance Reporting'],
+    pricing: '$25,000 - $150,000/year',
+    category: 'Security Operations',
+    link: 'https://soc.ziontechgroup.com'
+  },
+  {
+    title: 'Cloud Migration Services',
+    description: 'Comprehensive cloud migration planning and execution for enterprise applications.',
+    icon: Cloud,
+    features: ['Migration Planning', 'Application Assessment', 'Data Migration', 'Performance Optimization'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'Cloud Migration',
+    link: 'https://cloudmigration.ziontechgroup.com'
+  },
+  {
+    title: 'IT Compliance & Governance',
+    description: 'IT governance framework implementation with compliance monitoring and reporting.',
+    icon: FileText,
+    features: ['Compliance Framework', 'Risk Assessment', 'Policy Management', 'Audit Support'],
+    pricing: '$12,000 - $70,000/project',
+    category: 'Compliance',
+    link: 'https://itcompliance.ziontechgroup.com'
+  },
+  {
+    title: 'Advanced Network Automation',
+    description: 'Network automation using AI and machine learning for optimization and management.',
+    icon: Network,
+    features: ['Network Automation', 'AI Optimization', 'Configuration Management', 'Performance Tuning'],
+    pricing: '$15,000 - $80,000/project',
+    category: 'Network Automation',
+    link: 'https://networkautomation.ziontechgroup.com'
+  },
+  {
+    title: 'Enterprise Data Integration',
+    description: 'Comprehensive data integration solutions connecting disparate systems and databases.',
+    icon: Database,
+    features: ['Data Integration', 'ETL/ELT Pipelines', 'Real-time Sync', 'Data Quality'],
+    pricing: '$18,000 - $100,000/project',
+    category: 'Data Integration',
+    link: 'https://dataintegration.ziontechgroup.com'
   }
 ];
 
