@@ -7,16 +7,7 @@ import {
   Server,
   Database,
   Shield,
-  Zap,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  Globe,
-  Lock,
-  BarChart3,
-  Settings
+  CheckCircle
 } from 'lucide-react';
 
 export default function CloudSolutionsPage() {

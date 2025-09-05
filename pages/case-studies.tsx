@@ -5,10 +5,7 @@ import {
   ArrowRight,
   CheckCircle,
   Users,
-  Building,
-  BarChart3,
-  Cloud,
-  Shield
+  Building
 } from 'lucide-react';
 
 const caseStudies = [
