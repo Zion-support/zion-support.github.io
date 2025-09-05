@@ -1,19 +1,47 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
 
-console.log('🔧 Final Syntax Fix');
-console.log('==================');
+console.log('🔧 JSX Fix');
+console.log('==========');
 
-// Function to fix specific syntax errors
-function fixSpecificErrors(content) {
+// Function to fix JSX syntax errors
+function fixJSX(content) {
   return content
-    // Fix JSX closing tags
-    .replace(/<\$1>/g, '>')
-    .replace(/<\/\$1>/g, '>')
-    .replace(/<\$1/g, '<')
-    .replace(/<\/\$1/g, '</')
+    // Fix malformed closing tags
+    .replace(/>\s*$/gm, '>')
+    .replace(/\s*>\s*$/gm, '>')
+    .replace(/\s*>\s*$/gm, '>')
+    
+    // Fix specific patterns
+    .replace(/<title>([^<]+)>\s*$/gm, '<title>$1</title>')
+    .replace(/<meta[^>]+>\s*$/gm, (match) => match.replace(/>\s*$/, ' />'))
+    .replace(/<Head>\s*$/gm, '<Head>')
+    .replace(/<\/Head>\s*$/gm, '</Head>')
+    
+    // Fix span closing tags
+    .replace(/<span[^>]*>([^<]+)>\s*$/gm, '<span$1></span>')
+    
+    // Fix div closing tags
+    .replace(/<div[^>]*>([^<]+)>\s*$/gm, '<div$1></div>')
+    
+    // Fix motion.div closing tags
+    .replace(/<motion\.div[^>]*>([^<]+)>\s*$/gm, '<motion.div$1></motion.div>')
+    
+    // Fix section closing tags
+    .replace(/<section[^>]*>([^<]+)>\s*$/gm, '<section$1></section>')
+    
+    // Fix p closing tags
+    .replace(/<p[^>]*>([^<]+)>\s*$/gm, '<p$1></p>')
+    
+    // Fix h1 closing tags
+    .replace(/<h1[^>]*>([^<]+)>\s*$/gm, '<h1$1></h1>')
+    
+    // Fix h2 closing tags
+    .replace(/<h2[^>]*>([^<]+)>\s*$/gm, '<h2$1></h2>')
+    
+    // Fix h3 closing tags
+    .replace(/<h3[^>]*>([^<]+)>\s*$/gm, '<h3$1></h3>')
     
     // Fix object literal syntax
     .replace(/\{\s*$/gm, '{')
@@ -76,7 +104,7 @@ for (const file of filesToFix) {
     let content = fs.readFileSync(file, 'utf8');
     const originalContent = content;
     
-    content = fixSpecificErrors(content);
+    content = fixJSX(content);
     
     if (content !== originalContent) {
       fs.writeFileSync(file, content);
@@ -89,4 +117,4 @@ for (const file of filesToFix) {
 }
 
 console.log(`\n✅ Fixed ${totalFixed} files`);
-console.log('🎉 Final syntax fix completed!');
+console.log('🎉 JSX fix completed!');

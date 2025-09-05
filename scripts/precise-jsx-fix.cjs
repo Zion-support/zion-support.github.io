@@ -1,19 +1,52 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
 
-console.log('🔧 Final Syntax Fix');
+console.log('🔧 Precise JSX Fix');
 console.log('==================');
 
-// Function to fix specific syntax errors
-function fixSpecificErrors(content) {
+// Function to fix JSX syntax errors precisely
+function fixJSXPrecise(content) {
   return content
-    // Fix JSX closing tags
-    .replace(/<\$1>/g, '>')
-    .replace(/<\/\$1>/g, '>')
-    .replace(/<\$1/g, '<')
-    .replace(/<\/\$1/g, '</')
+    // Fix malformed closing tags - remove extra > characters
+    .replace(/>\s*>\s*$/gm, '>')
+    .replace(/>\s*>\s*>/gm, '>')
+    .replace(/>\s*>\s*>\s*>/gm, '>')
+    
+    // Fix specific malformed patterns
+    .replace(/<title>([^<]+)><\/title>/gm, '<title>$1</title>')
+    .replace(/<meta[^>]+>\s*>/gm, (match) => match.replace(/>\s*$/, ' />'))
+    .replace(/<Head>\s*$/gm, '<Head>')
+    .replace(/<\/Head>\s*$/gm, '</Head>')
+    
+    // Fix span tags
+    .replace(/<span[^>]*>([^<]+)><\/span>/gm, '<span$1></span>')
+    .replace(/<span[^>]*>([^<]+)><\/span>/gm, '<span$1></span>')
+    
+    // Fix div tags
+    .replace(/<div[^>]*>([^<]+)><\/div>/gm, '<div$1></div>')
+    
+    // Fix motion.div tags
+    .replace(/<motion\.div[^>]*>([^<]+)><\/motion\.div>/gm, '<motion.div$1></motion.div>')
+    
+    // Fix section tags
+    .replace(/<section[^>]*>([^<]+)><\/section>/gm, '<section$1></section>')
+    
+    // Fix p tags
+    .replace(/<p[^>]*>([^<]+)><\/p>/gm, '<p$1></p>')
+    
+    // Fix h1 tags
+    .replace(/<h1[^>]*>([^<]+)><\/h1>/gm, '<h1$1></h1>')
+    
+    // Fix h2 tags
+    .replace(/<h2[^>]*>([^<]+)><\/h2>/gm, '<h2$1></h2>')
+    
+    // Fix h3 tags
+    .replace(/<h3[^>]*>([^<]+)><\/h3>/gm, '<h3$1></h3>')
+    
+    // Fix specific malformed patterns
+    .replace(/<title>([^<]+)><\/title>/gm, '<title>$1</title>')
+    .replace(/<meta[^>]+>\s*>/gm, (match) => match.replace(/>\s*$/, ' />'))
     
     // Fix object literal syntax
     .replace(/\{\s*$/gm, '{')
@@ -76,7 +109,7 @@ for (const file of filesToFix) {
     let content = fs.readFileSync(file, 'utf8');
     const originalContent = content;
     
-    content = fixSpecificErrors(content);
+    content = fixJSXPrecise(content);
     
     if (content !== originalContent) {
       fs.writeFileSync(file, content);
@@ -89,4 +122,4 @@ for (const file of filesToFix) {
 }
 
 console.log(`\n✅ Fixed ${totalFixed} files`);
-console.log('🎉 Final syntax fix completed!');
+console.log('🎉 Precise JSX fix completed!');
