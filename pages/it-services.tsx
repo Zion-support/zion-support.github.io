@@ -33,7 +33,9 @@ import {
   Kanban,
   DollarSign,
   Code,
-  Rocket
+  Rocket,
+  Brain,
+  Sprout
 } from 'lucide-react';
 
 const itServices = [
@@ -247,6 +249,70 @@ const itServices = [
     link: 'https://digitaltransformation.ziontechgroup.com'
   },
   {
+    title: 'Quantum Computing Solutions',
+    description: 'Cutting-edge quantum computing services for optimization, cryptography, and scientific research.',
+    icon: Cpu,
+    features: ['Quantum Optimization', 'Cryptography Solutions', 'Scientific Computing', 'Quantum Algorithms'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Quantum Computing',
+    popular: true,
+    link: 'https://quantum.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Distributed edge computing solutions for low-latency applications and IoT deployments.',
+    icon: Network,
+    features: ['Edge Deployment', 'IoT Integration', 'Low-latency Processing', 'Distributed Management'],
+    pricing: '$10,000 - $75,000/project',
+    category: 'Edge Computing',
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Implementation of zero trust security model with continuous verification and micro-segmentation.',
+    icon: Shield,
+    features: ['Zero Trust Implementation', 'Micro-segmentation', 'Continuous Verification', 'Identity Management'],
+    pricing: '$15,000 - $80,000/project',
+    category: 'Security',
+    link: 'https://zerotrust.ziontechgroup.com'
+  },
+  {
+    title: 'AI Infrastructure & ML Ops',
+    description: 'Complete AI infrastructure setup with MLOps pipelines and model deployment services.',
+    icon: Brain,
+    features: ['MLOps Pipelines', 'Model Deployment', 'AI Infrastructure', 'Model Monitoring'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'AI Infrastructure',
+    link: 'https://aiinfrastructure.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain & Web3 Solutions',
+    description: 'Blockchain development, smart contracts, and Web3 infrastructure implementation.',
+    icon: Globe,
+    features: ['Smart Contracts', 'DeFi Solutions', 'NFT Platforms', 'Web3 Infrastructure'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Blockchain',
+    link: 'https://blockchain.ziontechgroup.com'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, deployment, and optimization for enterprise and industrial applications.',
+    icon: Wifi,
+    features: ['5G Network Design', 'Private 5G Networks', 'Network Optimization', 'IoT Integration'],
+    pricing: '$50,000 - $500,000/project',
+    category: '5G Networks',
+    link: 'https://5gnetworks.ziontechgroup.com'
+  },
+  {
+    title: 'Green IT & Sustainability',
+    description: 'Sustainable IT solutions with carbon footprint reduction and energy efficiency optimization.',
+    icon: Sprout,
+    features: ['Carbon Footprint Analysis', 'Energy Optimization', 'Sustainable Hardware', 'Green Data Centers'],
+    pricing: '$8,000 - $50,000/project',
+    category: 'Sustainability',
+    link: 'https://greenit.ziontechgroup.com'
+  },
+  {
     title: 'IT Service Management (ITSM)',
     description: 'ITIL-based service management implementation and optimization.',
     icon: Settings,
@@ -326,6 +392,34 @@ const itServices = [
     pricing: '$10,000 - $60,000/project',
     category: 'Enterprise Mobility',
     link: 'https://enterprisemobility.ziontechgroup.com'
+  },
+  {
+    title: 'Hyperconverged Infrastructure (HCI)',
+    description: 'Modern hyperconverged infrastructure solutions combining compute, storage, and networking.',
+    icon: Server,
+    features: ['HCI Implementation', 'Software-defined Storage', 'Virtualization', 'Simplified Management'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Hyperconverged',
+    popular: true,
+    link: 'https://hci.ziontechgroup.com'
+  },
+  {
+    title: 'Container & Kubernetes Solutions',
+    description: 'Container orchestration and Kubernetes platform implementation and management.',
+    icon: Package,
+    features: ['Kubernetes Deployment', 'Container Management', 'Microservices Architecture', 'Auto-scaling'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Containers',
+    link: 'https://containers.ziontechgroup.com'
+  },
+  {
+    title: 'IoT & Industrial Automation',
+    description: 'Internet of Things solutions and industrial automation system implementation.',
+    icon: Settings,
+    features: ['IoT Platform Setup', 'Sensor Integration', 'Industrial Automation', 'Data Analytics'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'IoT',
+    link: 'https://iot.ziontechgroup.com'
   },
   {
     title: 'IT Performance Optimization',

@@ -48,7 +48,8 @@ import {
   HardDrive,
   Bell,
   Home,
-  BookOpen
+  BookOpen,
+  Database
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -197,6 +198,178 @@ const microSaaSProducts = [
     pricing: '$19 - $99/month',
     category: 'Scheduling',
     link: 'https://meetingscheduler.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Video Editor Pro',
+    description: 'Automated video editing with AI-driven content analysis and social media optimization.',
+    icon: Video,
+    features: ['Auto Video Editing', 'Social Media Optimization', 'Content Analysis', 'Multi-format Export'],
+    pricing: '$79 - $399/month',
+    category: 'Video Production',
+    popular: true,
+    link: 'https://videoeditor.ziontechgroup.com'
+  },
+  {
+    title: 'E-commerce Return Management',
+    description: 'Automated return processing with intelligent routing and customer satisfaction tracking.',
+    icon: Package,
+    features: ['Auto Return Processing', 'Smart Routing', 'Customer Satisfaction', 'Analytics Dashboard'],
+    pricing: '$99 - $499/month',
+    category: 'E-commerce',
+    link: 'https://returnmanager.ziontechgroup.com'
+  },
+  {
+    title: 'AI Content Headline Generator',
+    description: 'AI-powered headline and subject line optimization for maximum engagement and CTR.',
+    icon: FileText,
+    features: ['Headline Optimization', 'A/B Testing', 'Engagement Analytics', 'Multi-platform Support'],
+    pricing: '$29 - $149/month',
+    category: 'Content Marketing',
+    link: 'https://headlinegen.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Survey Builder',
+    description: 'Conversational survey platform with AI-powered question generation and response analysis.',
+    icon: MessageSquare,
+    features: ['AI Question Generation', 'Conversational Interface', 'Response Analysis', 'Real-time Insights'],
+    pricing: '$49 - $249/month',
+    category: 'Research',
+    link: 'https://smartsurvey.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Hiring Assistant',
+    description: 'Automated resume screening and video interview analysis with bias detection.',
+    icon: Users,
+    features: ['Resume Screening', 'Video Interview Analysis', 'Bias Detection', 'Candidate Scoring'],
+    pricing: '$199 - $999/month',
+    category: 'HR Tech',
+    link: 'https://hiringai.ziontechgroup.com'
+  },
+  {
+    title: 'Social Media Engagement Bot',
+    description: 'AI-powered social media automation with intelligent content curation and engagement.',
+    icon: Share2,
+    features: ['Content Curation', 'Auto Engagement', 'Sentiment Analysis', 'Performance Tracking'],
+    pricing: '$79 - $399/month',
+    category: 'Social Media',
+    link: 'https://socialbot.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Journaling App',
+    description: 'Intelligent journaling with mood tracking, insights, and personalized recommendations.',
+    icon: BookOpen,
+    features: ['Mood Tracking', 'AI Insights', 'Personalized Recommendations', 'Privacy Protection'],
+    pricing: '$9 - $49/month',
+    category: 'Wellness',
+    link: 'https://journalai.ziontechgroup.com'
+  },
+  {
+    title: 'HTML to PDF Converter Pro',
+    description: 'High-performance HTML to PDF conversion with batch processing and API integration.',
+    icon: FileText,
+    features: ['Batch Processing', 'API Integration', 'Custom Templates', 'Cloud Storage'],
+    pricing: '$19 - $99/month',
+    category: 'Document Processing',
+    link: 'https://htmltopdf.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Appointment Scheduler',
+    description: 'Intelligent appointment booking with automated reminders and calendar optimization.',
+    icon: Calendar,
+    features: ['Smart Booking', 'Auto Reminders', 'Calendar Optimization', 'Multi-timezone Support'],
+    pricing: '$39 - $199/month',
+    category: 'Scheduling',
+    link: 'https://appointmentai.ziontechgroup.com'
+  },
+  {
+    title: 'Product Review Management',
+    description: 'Automated review collection, moderation, and display with sentiment analysis.',
+    icon: Star,
+    features: ['Auto Review Collection', 'Sentiment Analysis', 'Review Moderation', 'Display Widgets'],
+    pricing: '$29 - $149/month',
+    category: 'E-commerce',
+    link: 'https://reviewmanager.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Form Builder',
+    description: 'Intelligent form creation with conditional logic and advanced analytics.',
+    icon: FileText,
+    features: ['Conditional Logic', 'Advanced Analytics', 'Multi-step Forms', 'API Integration'],
+    pricing: '$19 - $99/month',
+    category: 'Form Builder',
+    link: 'https://formbuilder.ziontechgroup.com'
+  },
+  {
+    title: 'Healthcare Appointment System',
+    description: 'Specialized appointment scheduling for healthcare providers with patient management.',
+    icon: Heart,
+    features: ['Patient Management', 'Medical History', 'Insurance Verification', 'Telemedicine Support'],
+    pricing: '$99 - $499/month',
+    category: 'Healthcare',
+    link: 'https://healthappointments.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Fitness Tracker',
+    description: 'Personalized fitness tracking with AI-driven workout recommendations and progress analysis.',
+    icon: Heart,
+    features: ['AI Workout Plans', 'Progress Analysis', 'Nutrition Tracking', 'Goal Setting'],
+    pricing: '$9 - $49/month',
+    category: 'Fitness',
+    link: 'https://fitnessai.ziontechgroup.com'
+  },
+  {
+    title: 'Automated Invoicing System',
+    description: 'Smart invoicing with automated generation, payment tracking, and tax calculations.',
+    icon: Receipt,
+    features: ['Auto Generation', 'Payment Tracking', 'Tax Calculations', 'Multi-currency Support'],
+    pricing: '$19 - $99/month',
+    category: 'Finance',
+    link: 'https://autoinvoice.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered CRM Assistant',
+    description: 'Intelligent CRM with automated lead scoring, follow-up suggestions, and sales forecasting.',
+    icon: Users,
+    features: ['Lead Scoring', 'Follow-up Automation', 'Sales Forecasting', 'Pipeline Management'],
+    pricing: '$49 - $249/month',
+    category: 'CRM',
+    link: 'https://crmai.ziontechgroup.com'
+  },
+  {
+    title: 'Social Media Performance Tracker',
+    description: 'Comprehensive social media analytics with competitor analysis and ROI tracking.',
+    icon: BarChart3,
+    features: ['Multi-platform Analytics', 'Competitor Analysis', 'ROI Tracking', 'Custom Reports'],
+    pricing: '$39 - $199/month',
+    category: 'Analytics',
+    link: 'https://socialanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Email Integration',
+    description: 'Self-hosted email service with advanced filtering, automation, and security features.',
+    icon: Mail,
+    features: ['Advanced Filtering', 'Email Automation', 'Security Features', 'API Integration'],
+    pricing: '$29 - $149/month',
+    category: 'Email Service',
+    link: 'https://emailintegration.ziontechgroup.com'
+  },
+  {
+    title: 'Professional Editing Service',
+    description: 'On-demand professional editing with AI assistance and human quality control.',
+    icon: FileText,
+    features: ['AI Assistance', 'Human Quality Control', 'Fast Turnaround', 'Multiple Formats'],
+    pricing: '$0.05 - $0.25/word',
+    category: 'Content Services',
+    link: 'https://proediting.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Data Collection',
+    description: 'Intelligent data collection from multiple sources with automated processing and insights.',
+    icon: Database,
+    features: ['Multi-source Collection', 'Automated Processing', 'Data Insights', 'Real-time Updates'],
+    pricing: '$99 - $499/month',
+    category: 'Data Analytics',
+    link: 'https://datacollector.ziontechgroup.com'
   },
   {
     title: 'Code Review Assistant',
