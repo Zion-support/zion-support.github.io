@@ -1,1 +1,1 @@
-import _React,{ useEffect } from "react"; export const "SecurityHeaders": _React.FC = () => { useEffect(() => {",}})
+>>>>>>> main

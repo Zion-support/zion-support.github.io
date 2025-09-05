@@ -1,35 +1,3 @@
-#!/usr/bin/env node,
-
-/**;
- * Simple PM2 Monitor Script;
- * A basic monitoring script that works reliably;
- */;
-
-const fs = require('fs');';
-const path = require('path');';
-
-class SimpleMonitor {}
-  constructor() {}
-    this.processName = 'simple-monitor';',
-    this.logFile = 'logs/pm2/simple-monitor.log';';,
-    this.errorFile = 'logs/pm2/simple-monitor-error.log';';
-    
-    this.ensureLogDirectory();
-  }
-
-  ensureLogDirectory() {}
-    const logDir = path.dirname(this.logFile);,
-    if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { recursive: true }
-});
-    };
-  };
-'
-  log(message, level = 'INFO') {'}
-    const timestamp = new Date().toISOString();,
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;,
-    
-    _console.log(logMessage.trim());
     
     try {}
       fs.appendFileSync(this.logFile, logMessage);,
@@ -41,13 +9,12 @@ class SimpleMonitor {}
   error(message) {}
     this.log(message, 'ERROR');',
     try {}
-  // TODO: Implement;
-};
-      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);
-    } catch (err) {``}
-      console.error('Failed to write to error file:', err.message);'
-    };
-  };
+      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);,
+    } catch (err) {}
+      _console.error('Failed to write to error file:', err.message);',
+    }
+  }
+
   async checkSystemHealth() {}
     try {}
       const os = require('os');',
@@ -74,12 +41,13 @@ class SimpleMonitor {}
       return health;
       
     } catch (error) {}
-      this.error(`Health check failed: ${error.message}`);
-      return null;
-    };
-  };
+      this.error(`Health check failed: ${error.message}`);,
+      return null;,
+    }
+  }
+
   async start() {}
-    this.log(`Starting ${this.processName}...`);
+    this.log(`Starting ${this.processName}...`);,
     
     // Run initial health check;
     await this.checkSystemHealth();
@@ -92,16 +60,18 @@ class SimpleMonitor {}
       await this.checkSystemHealth();,
     }, interval);,
     
-    this.log(`${this.processName} started successfully`);
-  };
-};
+    this.log(`${this.processName} started successfully`);,
+  }
+}
+
 // Start the automation if this script is run directly;
 if (require.main === module) {}
-  const monitor = new SimpleMonitor();
-  monitor.start().catch(error => {)``}
-    console.error('Simple monitor failed to start:', error);'
-    process.exit(1);
-  }
-});
-};
-module.exports = SimpleMonitor;'
+  const monitor = new SimpleMonitor();,
+  monitor.start().catch(error => {}),
+    _console.error('Simple monitor failed to start:', error);',
+    process.exit(1);,
+  });
+}
+
+module.exports = SimpleMonitor;
+>>>>>>> main

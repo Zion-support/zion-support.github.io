@@ -8,15 +8,13 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   site: 'https://ziontechgroup.com'
 }
-
 type Offering = {
-  title: string
-  description: string
-  features: string[]
-  pricing: string
-  link: string
+  title: string,
+    description: string,
+    features: string[]
+  pricing: string,
+    link: string
 }
-
 const microSaaS: Offering[] = [
   {
     title: 'Cloud Cost Guard (FinOps Assistant)',
@@ -33,7 +31,6 @@ const microSaaS: Offering[] = [
     link: '/contact'
   }
 ]
-
 const aiServices: Offering[] = [
   {
     title: 'LLM Evaluation & Safety Suite',
@@ -50,7 +47,6 @@ const aiServices: Offering[] = [
     link: '/contact'
   }
 ]
-
 const itServices: Offering[] = [
   {
     title: 'Cloud Infrastructure Management',
@@ -67,7 +63,6 @@ const itServices: Offering[] = [
     link: '/contact'
   }
 ]
-
 export default function ServicesExtendedPage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -146,4 +141,3 @@ export default function ServicesExtendedPage() {
     </div>
   )
 }
-

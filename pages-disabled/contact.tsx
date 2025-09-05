@@ -33,73 +33,11 @@ export default function ContactPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>
-              <p className="text-gray-600">+1 302 464 0950</p>
-            </motion.div>
-=======
-      <div className="container mx-auto px-4 py-20">";
-        <div className="max-w-6xl mx-auto">";
-          
-          {/* Contact Information Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">",
-            <motion.div;,
-              className="bg-white rounded-lg shadow-lg p-6 text-center"";
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once:true }}
-            >,
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">";,
-                <Phone className="w-8 h-8 text-blue-600" />";
-              </div>;
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>";
-              <p className="text-gray-600">+1 302 464 0950</p>";
-            </motion.div>;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2966
-
-            <motion.div;
-              className="bg-white rounded-lg shadow-lg p-6 text-center"";
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-<<<<<<< HEAD
-              viewport={{ once: true }}
-            >
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
-              <p className="text-gray-600">kleber@ziontechgroup.com</p>
-            </motion.div>
-=======
-              viewport={{ once:true }}
-            >,
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">";,
-                <Mail className="w-8 h-8 text-green-600" />";
-              </div>;
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>";
-              <p className="text-gray-600">kleber@ziontechgroup.com</p>";
-            </motion.div>;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2966
-
-            <motion.div;
-              className="bg-white rounded-lg shadow-lg p-6 text-center"";
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
-              viewport={{ once: true }}
-            >
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Address</h3>
-              <p className="text-gray-600">
-                364 E Main St STE 1008<br />
-                Middletown, DE 19709
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Get in Touch
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Ready to transform your business? Let's discuss your project and explore how we can help you achieve your goals.
               </p>
             </motion.div>
           </div>
@@ -128,7 +66,7 @@ export default function ContactPage() {
                         type="text"
                         id="firstName"
                         name="firstName"
-                        required;
+                        required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
                         placeholder="John"
                       />
@@ -137,11 +75,11 @@ export default function ContactPage() {
                       <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
                         Last Name *
                       </label>
-                      <input;
+                      <input
                         type="text"
                         id="lastName"
                         name="lastName"
-                        required;
+                        required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
                         placeholder="Doe"
                       />
@@ -153,11 +91,11 @@ export default function ContactPage() {
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                         Email Address *
                       </label>
-                      <input;
+                      <input
                         type="email"
                         id="email"
                         name="email"
-                        required;
+                        required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
                         placeholder="john@company.com"
                       />
@@ -166,7 +104,7 @@ export default function ContactPage() {
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                         Phone Number;
                       </label>
-                      <input;
+                      <input
                         type="tel"
                         id="phone"
                         name="phone"
@@ -178,9 +116,9 @@ export default function ContactPage() {
 
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                      Company Name;
+                      Company Name
                     </label>
-                    <input;
+                    <input
                       type="text"
                       id="company"
                       name="company"
@@ -191,9 +129,9 @@ export default function ContactPage() {
 
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                      Service Interest;
+                      Service Interest
                     </label>
-                    <select;
+                    <select
                       id="service"
                       name="service"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
@@ -211,18 +149,18 @@ export default function ContactPage() {
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                       Project Details *
                     </label>
-                    <textarea;
+                    <textarea
                       id="message"
                       name="message"
-                      rows={6};
-                      required;
+                      rows={6}
+                      required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
                       placeholder="Tell us about your project, goals, timeline, and any specific requirements..."
                     ></textarea>
                   </div>
 
                   <div className="flex items-center">
-                    <input;
+                    <input
                       type="checkbox"
                       id="newsletter"
                       name="newsletter"
@@ -233,7 +171,7 @@ export default function ContactPage() {
                     </label>
                   </div>
 
-                  <button;
+                  <button
                     type="submit"
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
                   >

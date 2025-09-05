@@ -1,1 +1,1 @@
-import _React from 'react'; const "HomePage": _React.FC = () => {}}; export default HomePage;
+>>>>>>> main

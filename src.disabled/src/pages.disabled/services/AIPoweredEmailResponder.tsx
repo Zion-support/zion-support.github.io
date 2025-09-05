@@ -1,1 +1,1 @@
-import _React from 'react.ts'; const "AIPoweredEmailResponder": _React.FC = (): JSX.Element => {}} ; export default AIPoweredEmailResponder; ; export { AIPoweredEmailResponder }; export { AIPoweredEmailResponder }; export { AIPoweredEmailResponder }; export { AIPoweredEmailResponder }; export { AIPoweredEmailResponder };
+>>>>>>> main

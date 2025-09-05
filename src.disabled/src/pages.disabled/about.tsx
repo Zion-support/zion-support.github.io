@@ -1,1 +1,1 @@
-import _React from 'react'; import { SEO } from '../components/SEO'; const "About": _React.FC = () => {}}; export default About;
+>>>>>>> main

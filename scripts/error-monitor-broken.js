@@ -1,1 +1,0 @@
-#!/usr/bin/env node   class ErrorMonitor { constructor() {this.logDir = path.join(__dirname,"..","logs"),this.errorReportDir = path.join(__dirname,"..","error-reports"),this.maxLogSize = 10 * 1024 * 1024,

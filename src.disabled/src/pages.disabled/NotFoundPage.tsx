@@ -1,1 +1,1 @@
-import _React from 'react'; const "NotFoundPage": _React.FC = () => {}}; export default NotFoundPage;
+>>>>>>> main

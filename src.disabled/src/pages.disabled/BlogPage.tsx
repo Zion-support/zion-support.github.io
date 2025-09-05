@@ -1,1 +1,1 @@
-import _React from 'react'; const "BlogPage": _React.FC = () => {}}; export default BlogPage;
+>>>>>>> main

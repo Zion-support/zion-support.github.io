@@ -1,3 +1,35 @@
+<<<<<<< HEAD
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "ui/card.tsx";
+import {Badge} from "ui/badge.tsx";
+import {Button} from "ui/button.tsx";
+import {Star, Zap, Shield, TrendingUp, Users} from 'lucide-react';
+export function ServiceShowcase(props: any) {
+    const getCategoryIcon = (props: any) => {
+        switch (category) {
+            case 'AI Services': return <Zap className="h-5 w-5" />;
+            case 'Security': return <Shield className="h-5 w-5" />;
+            case 'Analytics': return <TrendingUp className="h-5 w-5" />;
+            case 'Development': return <Users className="h-5 w-5" />;
+            default: return <Star className="h-5 w-5" />}
+    };
+    const getCategoryColor = (props: any) => {
+        switch (category) {
+            case 'AI Services': return 'from-purple-500 to-pink-500';
+            case 'Security': return 'from-red-500 to-orange-500';
+            case 'Analytics': return 'from-blue-500 to-cyan-500';
+            case 'Development': return 'from-green-500 to-emerald-500';
+            default: return 'from-gray-500 to-slate-500'}
+    };
+    return (
+        <div className="py-12 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
+            Featured Services
+          </h2>
+          <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
+            Discover our cutting-edge solutions designed to transform your business with AI, security, and innovation
+=======
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "ui/card.tsx";""
 import {Badge} from "ui/badge.tsx";""
 import {Button} from "ui/button.tsx";""
@@ -26,6 +58,7 @@ export function ServiceShowcase($1) {}
           </h2>"
           <p className="text-xl text-zinc-300 max-w-3xl mx-auto">"
 </p>
+>>>>>>> main
           </p>
         </div>"
         <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8">"

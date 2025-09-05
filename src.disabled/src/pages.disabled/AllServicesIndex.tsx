@@ -1,1 +1,1 @@
-import _React from 'react'; export default AllServicesIndex; const "AllServicesIndex": _React.FC = () : JSX.Element => {}}
+>>>>>>> main

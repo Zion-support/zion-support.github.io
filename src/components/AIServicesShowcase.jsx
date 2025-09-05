@@ -181,9 +181,14 @@ export function AIServicesShowcase($1) {'}
 </service>
                       </div>
                       <div>
+<<<<<<< HEAD
+                        <h3 className="text-xl font-bold text-white">{service.name}
+                        <div className="text-zion-slate-light text-sm">{service.category}</div>
+=======
 </div>"
                         <h3 className="text-xl font-bold text-white">{service.name}</h3>""
                         <div className="text-zion-slate-light text-sm">{service.category}</div>"
+>>>>>>> main
                       </div>
                     </div>
                   </div>"

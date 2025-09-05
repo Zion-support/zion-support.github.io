@@ -1,1 +1,1 @@
-import _React from 'react'; const "AboutPage": _React.FC = () => {}}; export default AboutPage;
+>>>>>>> main

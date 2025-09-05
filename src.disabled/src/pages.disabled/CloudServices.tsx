@@ -1,1 +1,1 @@
-import _React from 'react'; import { SEO } from '../components/SEO'; const "CloudServices": _React.FC = () => {}}; export default CloudServices;
+>>>>>>> main

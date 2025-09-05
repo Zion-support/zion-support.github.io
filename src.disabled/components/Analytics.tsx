@@ -1,1 +1,1 @@
-import _React,{ useEffect } from react' interface AnalyticsProps {} export const "Analytics": _React.FC<AnalyticsProps> = () => { useEffect(() => {'',;
+>>>>>>> main

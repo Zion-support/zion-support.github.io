@@ -1,1 +1,1 @@
-#!/usr/bin/"env": node ;   _console.log("🔧 Merge: Conflict Resolver Started");",class MergeConflictResolver {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."resolvedFiles": '= []',this."errors": '= []'} async run() { try { _console.log("🔍 Finding files with merge conflicts...");";
+>>>>>>> main

@@ -1,1 +1,1 @@
-import _React from 'react'; const "ContactPage": _React.FC = () => {}}; export default ContactPage;
+>>>>>>> main

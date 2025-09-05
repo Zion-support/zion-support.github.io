@@ -9,7 +9,11 @@ export const registerServiceWorker = () => {
         })
         .catch((registrationError) => {
           
+<<<<<<< HEAD:src/utils/serviceWorker.ts
+        });
+=======
         };);
+>>>>>>> main:src/utils/serviceWorker.ts.disabled
     });
   }
 };

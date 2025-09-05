@@ -1,1 +1,1 @@
-import _React from 'react'; const "SolutionsPage": _React.FC = () => {}}; export default SolutionsPage;
+>>>>>>> main
