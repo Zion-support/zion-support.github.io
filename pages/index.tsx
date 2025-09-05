@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Phone, Mail, MapPin, Star, TrendingUp, Clock, DollarSign } from 'lucide-react';
-import Layout from '../../components/Layout';
+import Layout from '../components/Layout';
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
@@ -237,33 +237,32 @@ export default function HomePage() {
                 );
               })}
             </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredServices.map((service, index) => (
+                <motion.div 
+                  key={index}
+                  className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                >
+                  <div className="text-3xl mb-4">{service.icon}</div>
+                  <h3 className="text-xl font-semibold mb-4 text-gray-900">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <ul className="text-sm text-gray-500 space-y-2 mb-4">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx}>• {feature}</li>
+                    ))}
+                  </ul>
+                  <div className="mt-4">
+                    <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredServices.map((service, index) => (
-              <motion.div 
-                key={index}
-                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className="text-3xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <ul className="text-sm text-gray-500 space-y-2 mb-4">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx}>• {feature}</li>
-                  ))}
-                </ul>
-                <div className="mt-4">
-                  <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
 
       {/* Stats Section */}
       <section className="py-20 bg-white">
@@ -304,21 +303,8 @@ export default function HomePage() {
                 Our comprehensive service portfolio covers everything from micro SaaS development to enterprise AI solutions.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                <div className="text-gray-600">{stat.label}</div>
-              </motion.div>
-            ))}
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Why Choose Us */}
       <section className="py-20 bg-gray-50">
@@ -337,22 +323,17 @@ export default function HomePage() {
                 className="text-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-4">💰 Competitive Pricing</h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Micro SaaS: $19 - $4,999/month</li>
-                  <li>• IT Services: $120 - $500/hour</li>
-                  <li>• AI Solutions: $1,000 - $1M/project</li>
-                  <li>• Blockchain: $50K - $500K/project</li>
-                  <li>• Quantum Computing: $100K - $1M/project</li>
-                  <li>• Transparent, no hidden fees</li>
-                </ul>
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
               </motion.div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Contact CTA Section */}
       <section className="py-20 bg-blue-600 text-white">
@@ -385,6 +366,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </div>
     </Layout>
   );
 }
