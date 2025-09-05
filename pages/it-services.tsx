@@ -503,8 +503,8 @@ export default function ITServicesPage() {
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {itServices.map((service, index) => {}
-              const IconComponent = service.icon;}
+            {itServices.map((service, index) => {
+              const IconComponent = service.icon;
               return (
                 <motion.div
                   key={index}
@@ -531,7 +531,7 @@ whileHover={{ y: -5 }} ">
                   <div className="mb-4">
 <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
                   <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (}
+                      {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">
                   <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
@@ -550,11 +550,11 @@ whileHover={{ y: -5 }} ">
                   <ArrowRight className="w-3 h-3 ml-1" />
                   </Link>
                   </motion.div>
-              ),
+              )
             })}
-          </div>
                   </div>
-                  </section>
+                </div>
+              </section>
 
       {/* Technologies Section */}
       <section className="py-20 bg-white">
@@ -572,8 +572,8 @@ whileHover={{ y: -5 }} ">
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => {}
-              const IconComponent = tech.icon;}
+            {technologies.map((tech, index) => {
+              const IconComponent = tech.icon;
               return (
                 <motion.div
                   key={index}
@@ -612,8 +612,8 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => {}
-              const IconComponent = benefit.icon;}
+            {benefits.map((benefit, index) => {
+              const IconComponent = benefit.icon;
               return (
                 <motion.div
                   key={index}
@@ -658,7 +658,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {supportLevels.map((level, index) => (}
+            {supportLevels.map((level, index) => (
               <motion.div
                 key={index}
                 className={`p-8 rounded-xl shadow-lg ${
@@ -690,8 +690,9 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     index === 1
-? "bg-green-600 hover:bg-green-700 text-white" : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                  }}
+                      ? "bg-green-600 hover:bg-green-700 text-white" 
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                  }`}
                 >
                   <span>Choose Plan</span>
                   <ArrowRight className="w-4 h-4 ml-2" />

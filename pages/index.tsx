@@ -213,7 +213,7 @@ export default function HomePage() {
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (}
+              {stats.map((stat, index) => (
                 <motion.div
                   key={index}
                   className="text-center"
@@ -247,7 +247,7 @@ export default function HomePage() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {services.map((service, index) => (}
+              {services.map((service, index) => (
                 <motion.div
                   key={service.title}
                   initial={{ opacity: 0, y: 30 }}
@@ -269,7 +269,7 @@ export default function HomePage() {
                   </p>
 
                   <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (}
+                    {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                         {feature}
@@ -303,7 +303,7 @@ export default function HomePage() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (}
+              {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
                   initial={{ opacity: 0, y: 30 }}
@@ -339,7 +339,7 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {industries.map((industry, index) => (}
+              {industries.map((industry, index) => (
                 <motion.div
                   key={industry.name}
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -377,7 +377,7 @@ export default function HomePage() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (}
+              {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={testimonial.name}
                   initial={{ opacity: 0, y: 30 }}
@@ -386,7 +386,7 @@ export default function HomePage() {
                   className="bg-white rounded-xl shadow-lg p-8"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (}
+                    {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -444,4 +444,5 @@ export default function HomePage() {
         </section>
       </div>
     </Layout>
+  );
 }

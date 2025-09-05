@@ -167,11 +167,11 @@ const microSaaSProducts = [{
   },
   {
     title: 'Website Analytics & Heatmaps',
-    description: 'Advanced website analytics with heatmaps and user behavior tracking.'
-    icon: BarChart3}
-    features: ['User Behavior Tracking', 'Heatmaps', 'Conversion Funnels', 'A/B Testing'],}
-    pricing: '$29 - $199/month'
-    category: 'Analytics'}
+    description: 'Advanced website analytics with heatmaps and user behavior tracking.',
+    icon: BarChart3,
+    features: ['User Behavior Tracking', 'Heatmaps', 'Conversion Funnels', 'A/B Testing'],
+    pricing: '$29 - $199/month',
+    category: 'Analytics'
   },
   {
     title: 'Document Management System',
@@ -590,8 +590,8 @@ export default function MicroSaaSPage() {
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaaSProducts.map((product, index) => {}
-              const IconComponent = product.icon;}
+            {microSaaSProducts.map((product, index) => {
+              const IconComponent = product.icon;
               return (
                 <motion.div
                   key={index}
@@ -755,12 +755,12 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
           >
 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose the plan that fits your business needs. No hidden fees, no surprises.`
+              Choose the plan that fits your business needs. No hidden fees, no surprises.
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {pricingTiers.map((tier, index) => (`}
-              <motion.div`}
+                    {pricingTiers.map((tier, index) => (
+              <motion.div
                 key={index}
                 className={`p-8 rounded-xl shadow-lg ${
                   tier.popular ? "bg-purple-50 border-2 border-purple-200" : 'bg-white'

@@ -81,7 +81,7 @@ export default function APIPage() {
       { code: 201, description: 'Quote created', example: '{ "quote_id": "456", "estimated_cost": "$10,000 - $15,000" }' },
       { code: 400, description: 'Bad Request', example: '{ "error": "Invalid project type" }' }]
   }]
-  const apiFeatures = [{
+  const additionalApiFeatures = [{
     title: 'RESTful API Design',
     description: 'Clean, intuitive REST API endpoints following industry best practices',
     icon: Code,
@@ -185,7 +185,7 @@ export default function APIPage() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {apiFeatures.map((feature, index) => {
+              {[...apiFeatures, ...additionalApiFeatures].map((feature, index) => {
                 const IconComponent = feature.icon;
                 return (
                   <motion.div

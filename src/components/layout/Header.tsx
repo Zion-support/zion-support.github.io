@@ -1,56 +1,68 @@
-import React, { useState, useEffect } from 'react';';,'''
-import { Link, useLocation   } from "react-router-dom"""
-      "icon": Brai n,'"""
-      "title": 'AI & Machine Learning','"""
-      "description": 'Intelligent solutions for business automation','"""
-      "href": '/services/ai-solutions','"""
-      "color"""
-    {"""}
-      "icon": Shiel d,'"""
-      "title": 'Cybersecurity','"""
-      "description": 'Advanced security and threat protection','"""
-      "href": '/services/cybersecurity','"""
-      "color"""
-    {"""}
-      "icon": Clou d,'"""
-      "title": 'Cloud Infrastructure','"""
-      "description": 'Scalable cloud solutions and migration','"""
-      "href": '/services/cloud-infrastructure','"""
-      "color"""
-    {"""}
-      "icon": Cod e,'"""
-      "title": 'Blockchain & Web3','"""
-      "description": 'Decentralized applications and smart contracts','"""
-      "href": '/services/blockchain-web3','"""
-      "color"""
-    {"""}
-      "icon": Buildin g,'"""
-      "title": 'Smart City Solutions','"""
-      "description": 'AI-powered urban management systems','"""
-      "href": '/services/smart-city','"""
-      "color"""
-    {"""}
-      "icon": Za p,'"""
-      "title": 'Quantum Computing','"""
-      "description": 'Next-generation computational power','"""
-      "href": '/services/quantum-computing','"""
-      "color"""
-'"""
-  const navigation = [{ "name": 'Home', "href": '/' },'"""]
-    { "name": 'About', "href": '/about' },'"""
-    { "name": 'Services', "href": '/services', "hasDropdown": tru e },'"""
-    { "name": 'Contact', "href"""}
-                            ? 'text-cyan-400 bg-cyan-400/10''"""
-                            : 'text-gray-300 "hover"""
-                          ? 'text-cyan-400 bg-cyan-400/10''"""
-                          : 'text-gray-300 "hover"""
-            <motion.div';"""
-              initial={{ "opacity": 0, "height": 0 }}'"""
-              animate={{ "opacity": 1, "height"""}
-                            <ChevronDown className={`w-4 h-4 transition-transform ${'"""`}
-                              <motion.div';"""
-                                initial={{ "opacity": 0, "height": 0 }}'"""
-                                animate={{ "opacity": 1, "height"""}
-                              ? 'text-cyan-400 bg-cyan-400/10''"""
-                              : 'text-gray-300 "hover""
-cursor/fix-lint-push-and-merge-to-main-f3c1;]"
+import React, { useState } from 'react';
+import Link from 'next/link';
+
+const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+  ];
+
+  return (
+    <header className="bg-white shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-6">
+          <div className="flex items-center">
+            <Link href="/" className="text-2xl font-bold text-gray-900">
+              Zion Tech Group
+            </Link>
+          </div>
+          
+          <nav className="hidden md:flex space-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-gray-500 hover:text-gray-900 px-3 py-2 text-sm font-medium"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-500 hover:text-gray-900"
+            >
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-500 hover:text-gray-900 block px-3 py-2 text-base font-medium"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+};
+
+export default Header;
