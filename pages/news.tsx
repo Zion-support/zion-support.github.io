@@ -34,7 +34,7 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
-import Layout from './components/Layout';
+import Layout from '../components/Layout';
 
 const newsCategories = [
   { name: 'Company News', count: 12, color: 'bg-blue-100 text-blue-800' },

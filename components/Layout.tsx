@@ -43,11 +43,11 @@ export default function Layout({ title, description, children, keywords }: Layou
 
   const solutions = [
     { name: 'Enterprise Solutions', href: '/enterprise', description: 'Large-scale business solutions' },
-    { name: 'Startup Solutions', href: '/startup', description: 'Scalable startup platforms' },
+    { name: 'Startup Solutions', href: '/solutions/startup', description: 'Scalable startup platforms' },
     { name: 'E-commerce', href: '/ecommerce', description: 'Online store solutions' },
-    { name: 'Healthcare', href: '/healthcare', description: 'Medical technology solutions' },
-    { name: 'Finance', href: '/finance', description: 'Fintech and banking solutions' },
-    { name: 'Education', href: '/education', description: 'EdTech platforms' }
+    { name: 'Healthcare', href: '/industries/healthcare', description: 'Medical technology solutions' },
+    { name: 'Finance', href: '/industries/finance', description: 'Fintech and banking solutions' },
+    { name: 'Education', href: '/industries/education', description: 'EdTech platforms' }
   ];
 
   const quickLinks = [
@@ -467,7 +467,10 @@ export default function Layout({ title, description, children, keywords }: Layou
                 <div className="text-gray-400 text-sm mb-4 md:mb-0">
                   © 2025 Zion Tech Group. All rights reserved.
                 </div>
-                <div className="flex space-x-6 text-sm">
+                <div className="flex flex-wrap justify-center gap-6 text-sm">
+                  <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors">
+                    Sitemap
+                  </Link>
                   <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
                     Privacy Policy
                   </Link>

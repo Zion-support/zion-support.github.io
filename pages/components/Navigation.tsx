@@ -83,52 +83,22 @@ const navigationItems = [
         title: 'AI Services',
         href: '/ai-services',
         icon: Brain,
-        description: '100+ cutting-edge AI solutions',
+        description: '30+ cutting-edge AI solutions',
         popular: true
       },
       {
         title: 'IT Services',
         href: '/it-services',
         icon: Network,
-        description: '85+ comprehensive IT services',
+        description: '25+ comprehensive IT services',
         popular: true
       },
       {
         title: 'Micro SaaS',
         href: '/micro-saas',
         icon: Cloud,
-        description: '120+ innovative micro SaaS solutions',
+        description: '40+ innovative micro SaaS solutions',
         popular: true
-      },
-      {
-        title: 'Cloud Solutions',
-        href: '/cloud-solutions',
-        icon: Cloud,
-        description: 'Enterprise cloud infrastructure'
-      },
-      {
-        title: 'Cybersecurity',
-        href: '/cybersecurity',
-        icon: Shield,
-        description: 'Zero-trust security solutions'
-      },
-      {
-        title: 'Data Analytics',
-        href: '/data-analytics',
-        icon: BarChart3,
-        description: 'AI-powered analytics platform'
-      },
-      {
-        title: 'Automation',
-        href: '/automation',
-        icon: Zap,
-        description: 'Intelligent process automation'
-      },
-      {
-        title: 'Quantum Computing',
-        href: '/quantum-computing',
-        icon: Cpu,
-        description: 'Next-gen quantum solutions'
       }
     ]
   },
@@ -138,46 +108,28 @@ const navigationItems = [
     icon: Target,
     submenu: [
       {
-        title: 'Digital Transformation',
-        href: '/digital-transformation',
-        icon: Settings,
-        description: 'Complete digital transformation'
+        title: 'Cloud Solutions',
+        href: '/cloud-solutions',
+        icon: Cloud,
+        description: 'Scalable cloud infrastructure'
       },
       {
-        title: 'AI Development',
-        href: '/ai-development',
-        icon: Brain,
-        description: 'Custom AI model development'
+        title: 'Cybersecurity',
+        href: '/cybersecurity',
+        icon: Shield,
+        description: 'Enterprise security solutions'
       },
       {
-        title: 'Blockchain Solutions',
-        href: '/blockchain',
-        icon: Lock,
-        description: 'Enterprise blockchain platform'
+        title: 'Data Analytics',
+        href: '/data-analytics',
+        icon: BarChart3,
+        description: 'Advanced analytics platform'
       },
       {
-        title: 'IoT Solutions',
-        href: '/iot-solutions',
-        icon: Globe,
-        description: 'Internet of Things platform'
-      },
-      {
-        title: 'Edge Computing',
-        href: '/edge-computing',
-        icon: Server,
-        description: 'Distributed edge solutions'
-      },
-      {
-        title: 'MLOps & AIOps',
-        href: '/mlops',
-        icon: Code,
-        description: 'AI operations & deployment'
-      },
-      {
-        title: 'Green IT',
-        href: '/green-it',
-        icon: Sprout,
-        description: 'Sustainable technology solutions'
+        title: 'Automation',
+        href: '/automation',
+        icon: Zap,
+        description: 'Intelligent process automation'
       }
     ]
   },
@@ -202,7 +154,7 @@ const navigationItems = [
         title: 'Manufacturing',
         href: '/industries/manufacturing',
         icon: Settings,
-        description: 'Industrial automation & Industry 4.0'
+        description: 'Industrial automation'
       },
       {
         title: 'Retail',
@@ -214,37 +166,13 @@ const navigationItems = [
         title: 'Education',
         href: '/industries/education',
         icon: BookOpen,
-        description: 'EdTech and learning solutions'
+        description: 'EdTech solutions'
       },
       {
         title: 'Real Estate',
         href: '/industries/real-estate',
         icon: Home,
-        description: 'PropTech and smart buildings'
-      },
-      {
-        title: 'Government',
-        href: '/industries/government',
-        icon: Building,
-        description: 'Public sector digital solutions'
-      },
-      {
-        title: 'Energy',
-        href: '/industries/energy',
-        icon: Zap,
-        description: 'Smart energy and utilities'
-      },
-      {
-        title: 'Agriculture',
-        href: '/industries/agriculture',
-        icon: Sprout,
-        description: 'AgTech and precision farming'
-      },
-      {
-        title: 'Transportation',
-        href: '/industries/transportation',
-        icon: Truck,
-        description: 'Smart mobility and logistics'
+        description: 'PropTech innovations'
       }
     ]
   },
@@ -268,7 +196,7 @@ const navigationItems = [
       {
         title: 'White Papers',
         href: '/white-papers',
-        icon: FileText,
+        icon: Document,
         description: 'In-depth research reports'
       },
       {
@@ -276,24 +204,6 @@ const navigationItems = [
         href: '/tutorials',
         icon: BookOpen,
         description: 'Step-by-step guides'
-      },
-      {
-        title: 'Webinars',
-        href: '/webinars',
-        icon: Video,
-        description: 'Live and recorded sessions'
-      },
-      {
-        title: 'Events',
-        href: '/events',
-        icon: Calendar,
-        description: 'Conferences and workshops'
-      },
-      {
-        title: 'API Documentation',
-        href: '/api-docs',
-        icon: Code,
-        description: 'Developer resources'
       },
       {
         title: 'Documentation',
@@ -339,10 +249,10 @@ const navigationItems = [
         description: 'Company updates'
       },
       {
-        title: 'Contact',
-        href: '/contact',
-        icon: Phone,
-        description: 'Get in touch'
+        title: 'Press',
+        href: '/press',
+        icon: FileText,
+        description: 'Press releases and media'
       }
     ]
   }
@@ -352,7 +262,9 @@ const quickLinks = [
   { title: 'Pricing', href: '/pricing', icon: DollarSign },
   { title: 'Contact', href: '/contact', icon: Phone },
   { title: 'Support', href: '/support', icon: MessageSquare },
-  { title: 'Status', href: '/status', icon: BarChart3 }
+  { title: 'Status', href: '/status', icon: BarChart3 },
+  { title: 'Quote', href: '/quote', icon: FileText },
+  { title: 'API Docs', href: '/api-docs', icon: Code }
 ];
 
 export default function Navigation() {
