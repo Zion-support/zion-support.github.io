@@ -38,6 +38,7 @@ const services = [
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "title": "Micro SaaS",
     "description": "Innovative software as a service solutions including AI-powered tools, blockchain applications, smart energy management, and specialized business automation platforms.",
     "icon": Cloud,
@@ -46,28 +47,62 @@ const services = [
     "pricing": "Starting at $29/month",
     "count": "45+ Products",
     "popular": true
+=======
+    title: "Micro SaaS",
+    description: "Scalable software as a service solutions designed for specific business needs, rapid deployment, and innovative functionality.",
+    icon: Cloud,
+    href: "/micro-saas",
+    features: ["Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management", "AI-Powered Tools", "Smart Contracts", "Content Moderation", "Energy Management"],
+    pricing: "Starting at $29/month",
+    count: "45+ Products",
+    popular: true
+>>>>>>> e26c98559061d7c7825ec15309661c1e278a39e3
   }
 ];
 
-const benefits = [{
-    "icon": CheckCircle,
-    "title": "Expert Team",
-    "description": "50+ certified professionals with years of experience"
+const benefits = [
+  {
+    icon: CheckCircle,
+    title: "Expert Team",
+    description: "50+ certified professionals with years of experience"
   },
   {
-    "icon": Star,
-    "title": "Proven Results",
-    "description": "500+ successful projects delivered"
+    icon: Star,
+    title: "Proven Results",
+    description: "500+ successful projects delivered"
   },
   {
-    "icon": Zap,
-    "title": "Fast Delivery",
-    "description": "Agile development with rapid deployment"
+    icon: Zap,
+    title: "Fast Delivery",
+    description: "Agile development with rapid deployment"
   },
   {
-    "icon": Shield,
-    "title": "24/7 Support",
-    "description": "Round-the-clock technical support"
+    icon: Shield,
+    title: "24/7 Support",
+    description: "Round-the-clock technical support"
+  }
+];
+
+const benefits = [
+  {
+    icon: CheckCircle,
+    title: "Expert Team",
+    description: "50+ certified professionals with years of experience"
+  },
+  {
+    icon: Star,
+    title: "Proven Results",
+    description: "500+ successful projects delivered"
+  },
+  {
+    icon: Zap,
+    title: "Fast Delivery",
+    description: "Agile development with rapid deployment"
+  },
+  {
+    icon: Shield,
+    title: "24/7 Support",
+    description: "Round-the-clock technical support"
   }
 =======
     title: "Micro SaaS",
@@ -174,11 +209,11 @@ export default function ServicesPage() {
                 <motion.div
                   key={index}
                   className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative"
-                  initial={{ opacity: 0, "y": 30 }}
-                  whileInView={{ "opacity": 1, "y": 0 }}
-                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
-                  viewport={{ "once": true }}
-                  whileHover={{ "y": -5 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
                 >
                   {service.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -285,10 +320,10 @@ export default function ServicesPage() {
                 <motion.div
                   key={index}
                   className="text-center"
-                  initial={{ "opacity": 0, "y": 30 }}
-                  whileInView={{ "opacity": 1, "y": 0 }}
-                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
-                  viewport={{ "once": true }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-blue-600" />

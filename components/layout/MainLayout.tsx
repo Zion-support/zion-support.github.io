@@ -8,9 +8,9 @@ interface MainLayoutProps {
   keywords?: string;
 }
 
-export default function MainLayout({
-  children, 
-  title = "Zion Tech Group", 
+const MainLayout: React.FC<MainLayoutProps> = ({
+  children,
+  title = "Zion Tech Group",
   description = "Leading technology solutions provider",
   keywords = "technology, AI, cloud, micro SaaS"
 }: MainLayoutProps) {
