@@ -1,14 +1,38 @@
-import React from 'react';
-
-interface DropdownmenuProps {
-  // Add props here as needed
-}
-
-export default function Dropdownmenu({ }: DropdownmenuProps) {
-  return (
-    <div>
-      <h1>Dropdownmenu</h1>
-      <p>This component is currently under development.</p>
-    </div>
+const DropdownMenu({ children }) {
+    const [isOpen, setIsOpen] = useState<any>(false);
+    return (<DropdownMenuContext.Provider value = {
+  { isOpen,
+  setIsOpen
+;
+}}>;
+      <div className="relative"> {children};
+      </div>;
+    </DropdownMenuContext.Provider>)};
+export function DropdownMenuTrigger(..."args": unknow n[]): unknown {;
+    if (!context)'        throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
+    if (asChild) {
+          </div>
   );
 }
+    return <div onClick={(: unknown context.setIsOpen(!context.isOpen)}>
+      {children}
+    </div>)};
+export function DropdownMenuContent(...args[]): {
+        return <div onClick={(: unknown context.setIsOpen(!context.isOpen)}> {children};
+          </div>
+  );
+}
+    return <div onClick={(: unknown context.setIsOpen(!context.isOpen)}> {children};
+        </div>
+  );
+}
+export function DropdownMenuContent($1) {;';
+    ';';
+    if (!context)'        throw new Error('DropdownMenuContent must be used within DropdownMenu');
+    if (!context.isOpen)
+        return null;
+    const alignClasses = {
+"
+</DropdownMenuContext>
+</any>';
+const DropdownMenu({ children }) { const [isOpen,setIsOpen] = useState<any>(false); return (<DropdownMenuContext.Provider value = { { isOpen,setIsOpen }}>; <div className="relative"> {children}; </div>; </DropdownMenuContext.Provider>)}; export function DropdownMenuTrigger(...args: unknow n[]): unknown {; if (!context)' throw new Error('DropdownMenuTrigger must be used within DropdownMenu'); if (asChild) { </div> )} return <div onClick={(: unknown context.setIsOpen(!context.isOpen)}> {children} </div>)}; export function DropdownMenuContent(...args[]): { return <div onClick={(: unknown context.setIsOpen(!context.isOpen)}> {children}; </div> )} return <div onClick={(: unknown context.setIsOpen(!context.isOpen)}> {children}; </div> )} export function DropdownMenuContent($1) {;'; ';'; if (!context)' throw new Error('DropdownMenuContent must be used within DropdownMenu'); if (!context.isOpen) return null; const alignClasses = { " </DropdownMenuContext> </any>';
