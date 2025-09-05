@@ -1,3 +1,35 @@
+import React from 'react';
+import Layout from '../components/Layout';
+import { motion } from 'framer-motion';
+import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
+
+export default function APIPage() {
+  const apiFeatures = [
+    {
+      title: "RESTful APIs",
+      description: "Clean, intuitive REST API endpoints for easy integration",
+      icon: Code,
+      features: ["JSON Responses", "HTTP Status Codes", "Rate Limiting"]
+    },
+    {
+      title: "Comprehensive Documentation",
+      description: "Detailed API documentation with examples and guides",
+      icon: Book,
+      features: ["Interactive Docs", "Code Examples", "SDK Libraries"]
+    },
+    {
+      title: "High Performance",
+      description: "Fast, reliable APIs built for scale and speed",
+      icon: Zap,
+      features: ["Low Latency", "High Throughput", "Global CDN"]
+    },
+    {
+      title: "Enterprise Security",
+      description: "Bank-level security with authentication and encryption",
+      icon: Shield,
+      features: ["OAuth 2.0", "API Keys", "SSL/TLS Encryption"]
+    }
+  ];
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
@@ -156,25 +188,80 @@ export default function APIPage() {
     }
   }
   return (
-    <Layout>
+    <Layout
+      title="API Reference - Zion Tech Group"
+      description="Comprehensive API documentation and reference for integrating with Zion Tech Group services."
+    >
       <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
+        <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              className="text-center"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                API{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Documentation
-                </span>
+                API Reference
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Comprehensive API documentation for integrating with Zion Tech Group services
+                Comprehensive API documentation and reference for integrating with Zion Tech Group services
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {apiFeatures.map((feature, index) => {
+                const IconComponent = feature.icon;
+                return (}
+                  <motion.div}
+                    key={index}
+                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="text-indigo-600 mb-4">
+                      <IconComponent className="w-10 h-10" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      {feature.description}
+                    </p>
+                    <ul className="space-y-2">
+                      {feature.features.map((item, itemIndex) => (}
+                        <li key={itemIndex} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Available Endpoints
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Explore our comprehensive API endpoints across all service categories
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
@@ -185,261 +272,84 @@ export default function APIPage() {
                 </button>
               </div>
             </motion.div>
-          </div>
-        </section>
-        {/* API Features Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                API Features
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Powerful API capabilities designed for developers and businesses
-              </p>
-            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {apiFeatures.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
-                >
-                  <div className="text-blue-600 mb-4">
-                    <feature.icon className="w-8 h-8" />
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">AI Services API</h3>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-600">POST /api/ai/analyze</span>
+                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">AI</span>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    {feature.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {feature.features.map((item, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-700">
-                        <Check className="w-4 h-4 text-green-500 mr-2" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* API Endpoints Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                API Endpoints
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Explore our comprehensive API endpoints with interactive documentation
-              </p>
-            </div>
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                {/* Endpoint List */}
-                <div className="lg:col-span-1">
-                  <div className="bg-white rounded-lg shadow-sm p-6 sticky top-8">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Endpoints</h3>
-                    <div className="space-y-2">
-                      {apiEndpoints.map((endpoint, index) => (
-                        <button
-                          key={index}
-                          onClick={() => setSelectedEndpoint(index)}
-                          className={`w-full text-left px-4 py-3 rounded-lg transition-colors ${
-                            selectedEndpoint === index
-                              ? 'bg-blue-100 text-blue-700 font-medium'
-                              : 'text-gray-600 hover:bg-gray-100'
-                          }`}
-                        >
-                          <div className="flex items-center justify-between">
-                            <span className="font-mono text-sm">{endpoint.method}</span>
-                            <span className="text-xs text-gray-500">{endpoint.path}</span>
-                          </div>
-                          <p className="text-sm mt-1">{endpoint.description}</p>
-                        </button>
-                      ))}
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-600">POST /api/ai/predict</span>
+                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">AI</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-600">POST /api/ai/process</span>
+                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">AI</span>
                   </div>
                 </div>
-                {/* Endpoint Details */}
-                <div className="lg:col-span-2">
-                  <div className="bg-white rounded-lg shadow-sm p-6">
-                    <div className="flex items-center justify-between mb-6">
-                      <div>
-                        <div className="flex items-center gap-3 mb-2">
-                          <span className={`px-3 py-1 rounded text-sm font-medium ${
-                            apiEndpoints[selectedEndpoint].method === 'GET' ? 'bg-green-100 text-green-800' :
-                            apiEndpoints[selectedEndpoint].method === 'POST' ? 'bg-blue-100 text-blue-800' :
-                            'bg-gray-100 text-gray-800'
-                          }`}>
-                            {apiEndpoints[selectedEndpoint].method}
-                          </span>
-                          <code className="text-lg font-mono text-gray-900">
-                            {apiEndpoints[selectedEndpoint].path}
-                          </code>
-                        </div>
-                        <p className="text-gray-600">
-                          {apiEndpoints[selectedEndpoint].description}
-                        </p>
-                      </div>
-                    </div>
-                    {/* Parameters */}
-                    {apiEndpoints[selectedEndpoint].parameters.length > 0 && (
-                      <div className="mb-8">
-                        <h4 className="text-lg font-semibold text-gray-900 mb-4">Parameters</h4>
-                        <div className="overflow-x-auto">
-                          <table className="min-w-full divide-y divide-gray-200">
-                            <thead className="bg-gray-50">
-                              <tr>
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Required</th>
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
-                              </tr>
-                            </thead>
-                            <tbody className="bg-white divide-y divide-gray-200">
-                              {apiEndpoints[selectedEndpoint].parameters.map((param, idx) => (
-                                <tr key={idx}>
-                                  <td className="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-900">
-                                    {param.name}
-                                  </td>
-                                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                    {param.type}
-                                  </td>
-                                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                    {param.required ? (
-                                      <span className="px-2 py-1 bg-red-100 text-red-800 rounded text-xs">Required</span>
-                                    ) : (
-                                      <span className="px-2 py-1 bg-gray-100 text-gray-800 rounded text-xs">Optional</span>
-                                    )}
-                                  </td>
-                                  <td className="px-6 py-4 text-sm text-gray-500">
-                                    {param.description}
-                                  </td>
-                                </tr>
-                              ))}
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    )}
-                    {/* Responses */}
-                    <div className="mb-8">
-                      <h4 className="text-lg font-semibold text-gray-900 mb-4">Responses</h4>
-                      <div className="space-y-4">
-                        {apiEndpoints[selectedEndpoint].responses.map((response, idx) => (
-                          <div key={idx} className="border border-gray-200 rounded-lg p-4">
-                            <div className="flex items-center gap-3 mb-2">
-                              <span className={`px-2 py-1 rounded text-sm font-medium ${
-                                response.code >= 200 && response.code < 300 ? 'bg-green-100 text-green-800' :
-                                response.code >= 400 ? 'bg-red-100 text-red-800' :
-                                'bg-gray-100 text-gray-800'
-                              }`}>
-                                {response.code}
-                              </span>
-                              <span className="text-sm font-medium text-gray-900">{response.description}</span>
-                            </div>
-                            <pre className="text-xs text-gray-600 bg-gray-50 p-3 rounded overflow-x-auto">
-                              {response.example}
-                            </pre>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                    {/* Code Example */}
-                    <div>
-                      <div className="flex items-center justify-between mb-4">
-                        <h4 className="text-lg font-semibold text-gray-900">Code Example</h4>
-                        <button
-                          onClick={() => copyToClipboard(generateCodeExample(apiEndpoints[selectedEndpoint]), selectedEndpoint)}
-                          className="flex items-center gap-2 px-3 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors"
-                        >
-                          {copiedCode === selectedEndpoint ? (
-                            <>
-                              <Check className="w-4 h-4" />
-                              Copied!
-                            </>
-                          ) : (
-                            <>
-                              <Copy className="w-4 h-4" />
-                              Copy
-                            </>
-                          )}
-                        </button>
-                      </div>
-                      <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
-                        <code>{generateCodeExample(apiEndpoints[selectedEndpoint])}</code>
-                      </pre>
-                    </div>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">IT Services API</h3>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-600">GET /api/infrastructure/status</span>
+                    <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">IT</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-600">POST /api/security/scan</span>
+                    <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">IT</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-600">GET /api/cloud/resources</span>
+                    <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">IT</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Micro SaaS API</h3>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-600">POST /api/saas/subscribe</span>
+                    <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">SaaS</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-600">GET /api/saas/usage</span>
+                    <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">SaaS</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-600">POST /api/saas/configure</span>
+                    <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">SaaS</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        {/* SDK Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                SDKs & Libraries
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Official SDKs and libraries for popular programming languages
-              </p>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {sdkLanguages.map((sdk, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gray-50 rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300"
-                >
-                  <div className={`w-12 h-12 ${sdk.color} rounded-lg flex items-center justify-center text-white font-bold text-lg mx-auto mb-4`}>
-                    {sdk.icon}
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900">
-                    {sdk.name}
-                  </h3>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
+
+        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Contact us to get API access and start building with our powerful services
+            </p>
+            <motion.a
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
+              whileHover={{ scale: 1.05 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Get your API key and start building amazing applications with our powerful APIs.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Get API Key
-                </button>
-                <button className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                  View Documentation
-                </button>
-              </div>
-            </motion.div>
+              Get API Access
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </motion.a>
           </div>
         </section>
       </div>
     </Layout>
-  )
+  );
 }

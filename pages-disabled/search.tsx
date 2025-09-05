@@ -77,18 +77,18 @@ export default function SearchPage() {}
       const filteredResults = searchResults.filter(item =>)
         item.title.toLowerCase().includes(query.toLowerCase()) ||
         item.description.toLowerCase().includes(query.toLowerCase()) ||
-        item.type.toLowerCase().includes(query.toLowerCase());
-      );
-      setResults(filteredResults);
-      setIsLoading(false);
+        item.type.toLowerCase().includes(query.toLowerCase())
+      ),
+      setResults(filteredResults),
+      setIsLoading(false),
     }, 300);
   };
 
-  const handleSearch = (e: React.FormEvent) => {}
-    e.preventDefault();
-    if (searchQuery.trim()) {}
-      router.push(`/search?q=${encodeURIComponent(searchQuery)}`);`
-    };
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault(),
+    if (searchQuery.trim()) {
+      router.push(`/search?q=${encodeURIComponent(searchQuery)});
+    }
   };
 
   return ()
@@ -142,18 +142,18 @@ export default function SearchPage() {}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              {router.query.q && (})
-                <motion.div;
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.5 }};
-                  className="mb-8"
-                >
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                    Search results for "{router.query.q};
-                  </h2>
-                  <p className="text-gray-600">
-                    {isLoading ? 'Searching...' : `${results.length} result${results.length !== 1 ? 's' : ''} found`};`
+              {router.query.q && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}`
+                  className="mb-8"`
+                >`
+                  <h2 className="text-2xl font-bold text-gray-900 mb-2">`
+                    Search results for "{router.query.q}"`
+                  </h2>`
+                  <p className="text-gray-600">`
+                    {isLoading ? "Searching..." : `${results.length} result${results.length !== 1 ? "s" : ''} found`}
                   </p>
                 </motion.div>
               )};
@@ -165,10 +165,10 @@ export default function SearchPage() {}
               ) : results.length > 0 ? ()
                 <div className="space-y-6">
                   {results.map((result, index) => {}
-                    const IconComponent = result.icon;
-                    return ()
-                      <motion.div;
-                        key={result.id};
+                    const IconComponent = result.icon;}
+                    return (
+                      <motion.div
+                        key={result.id}
                         className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
                         initial={{ opacity: 0, y: 20 }};
                         animate={{ opacity: 1, y: 0 }};
@@ -190,9 +190,9 @@ export default function SearchPage() {}
                             <p className="text-gray-600 mb-4">
                               {result.description};
                             </p>
-                            <a;
-                              href={result.href};
-                              className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+                            <a
+                              href={result.href}
+                              className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold"
                             >
                               Learn More;
                               <ArrowRight className="w-4 h-4 ml-1" />
@@ -200,8 +200,8 @@ export default function SearchPage() {}
                           </div>
                         </div>
                       </motion.div>
-                    );
-                  })};
+                    ),
+                  })}
                 </div>
               ) : router.query.q ? ()
                 <motion.div;
