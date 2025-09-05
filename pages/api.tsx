@@ -1,29 +1,15 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Code, Book, Zap, Shield, Globe, ArrowRight, CheckCircle } from 'lucide-react';
-=======
 import { Code, Book, Zap, Shield, Globe, Database, Server, Lock, CheckCircle, ArrowRight } from 'lucide-react';
->>>>>>> main
 
 const apiServices = [
   {
     title: 'RESTful API',
-<<<<<<< HEAD
     description: 'Clean, intuitive REST API design with comprehensive documentation.',
-=======
-    description: 'Clean, intuitive REST API design',
->>>>>>> main
     icon: Globe,
     features: ['RESTful Design', 'JSON Responses', 'HTTP Status Codes', 'Error Handling']
   },
   {
-<<<<<<< HEAD
     title: 'GraphQL Support',
     description: 'Flexible GraphQL API for efficient data fetching and real-time updates.',
     icon: Code,

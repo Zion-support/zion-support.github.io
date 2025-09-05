@@ -1,20 +1,7 @@
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { 
-import {
-=======
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { 
-<<<<<<< HEAD
-  Code, ArrowRight, Book, Zap, Shield, CheckCircle, Globe, 
-  Users, Star, Clock, Award, TrendingUp 
-=======
-import Link from 'next/link';
-import Layout from '../components/Layout';
-import { 
->>>>>>> main
   Code, 
   ArrowRight,
   CheckCircle,

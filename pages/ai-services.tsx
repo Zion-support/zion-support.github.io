@@ -1,41 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-  Star,
-  Globe,
-  Lock,
-  Cpu,
-  Bot,
-  FileText,
-  Image,
-  Video,
-  Mic,
-  Code,
-  Settings,
-  Monitor,
-  Smartphone,
-  Cloud,
-  Server,
-  Network,
-  Car,
-  Rocket,
-  Heart,
-  Building,
-  Sprout,
-  Mail,
-  ShoppingCart,
-  BookOpen,
-  Database,
-  Truck,
-  PenTool,
-  Scale,
-  Home,
-  Gamepad2
-} from 'lucide-react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { 
   Brain, Zap, Shield, Database, BarChart3, Users, User, MessageSquare, Search, Eye, Target, 
   TrendingUp, CheckCircle, ArrowRight, Clock, Award, Star, Globe, Lock, Cpu, Bot, 
