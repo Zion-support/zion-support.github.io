@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -105,6 +109,15 @@ const path = require('path')
       await this.runSecurityAudit();
       await this.applyImprovements();
       
+<<<<<<< HEAD
+=======
+=======
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
       return size}}
 
     totalSize = getDirectorySize(buildDir);

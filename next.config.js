@@ -40,4 +40,8 @@ const nextConfig = {
   }
 }
 
+<<<<<<< HEAD
 module.exports = nextConfig
+=======
+export default nextConfig;
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

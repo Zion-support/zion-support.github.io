@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedSidebar2025 from '../components/EnhancedSidebar2025" describe('EnhancedSidebar2025',() => {' test('renders without crashing',() => {' render(<EnhancedSidebar2025 / / />) expect(screen.getByTestId("enhancedsidebar2025")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedSidebar2025 / / />) }) test('handles user interactions',() => {' render(<EnhancedSidebar2025 / / />) }) test('applies correct styling',() => {' render(<EnhancedSidebar2025 / / />) }) })
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+import _React from 'react"  import '@testing-library/jest-dom import EnhancedSidebar2025 from '../components/EnhancedSidebar2025" describe('EnhancedSidebar2025',() => {' test('renders without crashing',() => {' render(<EnhancedSidebar2025 / / />) expect(screen.getByTestId("enhancedsidebar2025")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedSidebar2025 / / />) }) test('handles user interactions',() => {' render(<EnhancedSidebar2025 / / />) }) test('applies correct styling',() => {' render(<EnhancedSidebar2025 / / />) }) })
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

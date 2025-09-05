@@ -2,8 +2,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 \'AI-driven optimal posting time detection,Content performance prediction,Multi-platform scheduling and management,Hashtag optimization and trending analysis,Audience engagement analytics,Automated content repurposing\'
 import React from 'react';
 import Head from 'next/head';
@@ -64,6 +67,7 @@ export default function MicroSaaS() {
         'Multi-language support and compliance',
         'Analytics and performance tracking'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 =======
@@ -74,6 +78,10 @@ export default function MicroSaaS() {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
       ],
       \"pricing\": \'$199 - $799/month\',
       \"delivery\": \'1-3 weeks\',
@@ -110,8 +118,11 @@ export default function MicroSaaS() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
       \"pricing\": \'$299 - $1,200/month\',
       \"delivery\": \'3-5 weeks\',
       \"category\": \'Development SaaS\';
@@ -353,6 +364,7 @@ export default function MicroSaaS() {
       "delivery": '3-5 weeks',
       "category": 'Development SaaS';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 =======
@@ -363,6 +375,10 @@ export default function MicroSaaS() {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 },
     {
       \"title\": \'Affiliate Marketing Tracking Platform\',
@@ -384,14 +400,18 @@ export default function MicroSaaS() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
       \"pricing\": \'$99 - $499/month\',
       \"delivery\": \'2-3 weeks\',
       \"category\": \'Analytics SaaS\'
       "pricing": '$99 - $499/month',
       "delivery": '2-3 weeks',
       "category": 'Analytics SaaS'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
@@ -403,6 +423,10 @@ export default function MicroSaaS() {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     },
     {
       \"title\": \'AI-Powered Password Manager\',
@@ -714,8 +738,11 @@ export default function MicroSaaS() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
       \"pricing\": \'$399 - $1,800/month\',
       \"delivery\": \'3-5 weeks\',
       category: \'LegalTech SaaS\'
@@ -723,6 +750,7 @@ export default function MicroSaaS() {
       "delivery": '3-5 weeks',
       "category": 'Translation SaaS'
       category: 'LegalTech SaaS'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
@@ -734,6 +762,10 @@ export default function MicroSaaS() {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     },
     {
       \"title\": \'Intelligent Inventory Forecasting System\',
@@ -825,8 +857,11 @@ export default function MicroSaaS() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
       \"pricing\": \'$2,000 - $8,000/month\',
       \"delivery\": \'3-5 weeks\',
       \"category\": \'FleetTech SaaS\'
@@ -840,6 +875,7 @@ export default function MicroSaaS() {
   ];
       "category": 'Education SaaS';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 =======
@@ -850,6 +886,10 @@ export default function MicroSaaS() {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 },
     {
       \"title\": \'Smart Fitness & Wellness Coach\',
@@ -886,8 +926,11 @@ export default function MicroSaaS() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   const technologies = [{ \"name\": \'Frontend\', \"icon\": Monito r, \"description\": \'React, Next.js, Vue.js, Angular\' },
     { \"name\": \'Backend\', \"icon\": Serve r, \"description\": \'Node.js, Python, Go, Java\' },
     { \"name\": \'Database\', \"icon\": Databas e, \"description\": \'PostgreSQL, MongoDB, Redis\' },
@@ -901,6 +944,7 @@ export default function MicroSaaS() {
     { "name": 'Security', "icon": Shiel d, "description": 'OAuth, JWT, SSL, Encryption' },
     { "name": 'Mobile', "icon": Smartphon e, "description": 'React Native, Flutter, PWA' }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 =======
@@ -911,6 +955,10 @@ export default function MicroSaaS() {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   ];
   const benefits = [{
       \"title\": \'Faster Development\',
@@ -1175,6 +1223,7 @@ export default function MicroSaaS() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
@@ -1185,3 +1234,5 @@ import React from 'react'; import Head from 'next/head'; import Link from 'next/
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

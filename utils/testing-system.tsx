@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,6 +35,8 @@ import &quot;@testing-library/jest-dom&quot;; interface HTMLElement { click(): v
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 >>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 import "@testing-library/jest-dom";
 // Type definition for HTMLElement
 interface HTMLElement {
@@ -60,6 +63,7 @@ export class TestingSystem {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 import "@testing-library/jest-dom"; interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: 'click' | 'type' | 'hover' ) { switch (action) { case 'click': element.click(); break; case 'type': break; case 'hover': break; default: break} } }
 =======
 <<<<<<< HEAD
@@ -74,3 +78,6 @@ import "@testing-library/jest-dom"; interface HTMLElement { click(): void} expor
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 >>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+=======
+import "@testing-library/jest-dom"; interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: 'click' | 'type' | 'hover' ) { switch (action) { case 'click': element.click(); break; case 'type': break; case 'hover': break; default: break} } }
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

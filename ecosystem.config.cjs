@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = {
   apps: [
     {
@@ -49,6 +50,8 @@ module.exports = {
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
       name: 'bolt-zion-app',
       script: 'npm',
       args: 'run start',
@@ -58,6 +61,7 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -88,6 +92,8 @@ module.exports = {
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
         NODE_ENV: 'production',
       },
       log_file: 'logs/pm2/preview.log',
@@ -132,6 +138,7 @@ module.exports = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         NODE_ENV: 'production',
 =======
 =======
@@ -160,6 +167,9 @@ module.exports = {
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+        NODE_ENV: 'development',
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
@@ -168,6 +178,7 @@ module.exports = {
       log_file: 'logs/pm2/code-quality-monitor.log',
       error_file: 'logs/pm2/code-quality-monitor-error.log',
       out_file: 'logs/pm2/code-quality-monitor-out.log',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -181,6 +192,8 @@ module.exports = {
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     },
     {
       name: 'auto-commit-fixes',
@@ -572,6 +585,7 @@ module.exports = {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 };
 =======
@@ -583,3 +597,6 @@ module.exports = {}
 =======
 };
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+};
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

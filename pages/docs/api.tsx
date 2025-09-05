@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -17,6 +18,12 @@ import {
   Cloud,
   XCircle
 } from 'lucide-react';
+=======
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../../components/Layout';
+import { Code, BookOpen, Shield, Zap, ChevronRight, ExternalLink, Copy, Check } from 'lucide-react';
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 
 const endpoints = [
   {
@@ -133,6 +140,7 @@ curl -X POST "https://api.ziontechgroup.com/api/ai/code-review" \\
 ];
 
 export default function APIDocumentationPage() {
+<<<<<<< HEAD
   const [copiedCode, setCopiedCode] = useState(null);
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -227,6 +235,118 @@ export default function APIDocumentationPage() {
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20">
+=======
+  return (
+    <Layout
+      title="API Documentation - Zion Tech Group"
+      description="Complete API documentation for Zion Tech Group services. Learn how to integrate with our APIs, view endpoints, and access code examples."
+      keywords="API documentation, REST API, integration, developer docs, endpoints, Zion Tech Group API"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                API <span className="text-blue-600">Documentation</span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Integrate our AI services into your applications with our comprehensive REST API. 
+                Get started with our easy-to-use endpoints and code examples.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Get API Key
+                  <ExternalLink className="ml-2 w-4 h-4" />
+                </Link>
+                <Link
+                  href="/micro-saas"
+                  className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
+                >
+                  View Micro SaaS
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* API Endpoints */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">API Endpoints</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Explore our comprehensive API endpoints for AI services.
+              </p>
+            </motion.div>
+            <div className="space-y-8">
+              {endpoints.map((endpoint, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg p-6"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-semibold">{endpoint.name}</h3>
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                      endpoint.method === 'POST' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
+                    }`}>
+                      {endpoint.method}
+                    </span>
+                  </div>
+                  <p className="text-gray-600 mb-4">{endpoint.description}</p>
+                  <div className="bg-gray-100 rounded-lg p-4 mb-4">
+                    <code className="text-sm font-mono">{endpoint.path}</code>
+                  </div>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold mb-3">Parameters</h4>
+                      <div className="space-y-2">
+                        {endpoint.parameters.map((param, paramIndex) => (
+                          <div key={paramIndex} className="flex items-center justify-between text-sm">
+                            <span className="font-mono">{param.name}</span>
+                            <span className={`px-2 py-1 rounded text-xs ${
+                              param.required ? 'bg-red-100 text-red-800' : 'bg-gray-100 text-gray-800'
+                            }`}>
+                              {param.type}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-3">Response</h4>
+                      <div className="bg-gray-100 rounded-lg p-3">
+                        <pre className="text-sm font-mono">
+                          {JSON.stringify(endpoint.response, null, 2)}
+                        </pre>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Code Examples */}
+        <section className="py-16 bg-white">
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -416,6 +536,7 @@ export default function APIDocumentationPage() {
         {/* CTA Section */}
         <section className="bg-gray-900 text-white py-16">
           <div className="max-w-7xl mx-auto px-4 text-center">
+<<<<<<< HEAD
             <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Start building with our APIs today. Get your API key and begin integrating our services.
@@ -436,6 +557,35 @@ export default function APIDocumentationPage() {
                 View Full Documentation
               </Link>
             </div>
+=======
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Get your API key and start integrating our AI services into your applications.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                >
+                  Get API Key
+                  <ExternalLink className="ml-2 w-4 h-4" />
+                </Link>
+                <Link
+                  href="/ai-services"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                >
+                  View AI Services
+                </Link>
+              </div>
+            </motion.div>
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
           </div>
         </section>
       </div>

@@ -1,6 +1,49 @@
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
+<<<<<<< HEAD
 import { Code, Book, Zap, Shield, Globe, Database, Server, Lock, CheckCircle, ArrowRight } from 'lucide-react';
+=======
+import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
+
+const apiFeatures = [
+  {
+    title: 'RESTful API Design',
+    description: 'Clean, intuitive RESTful APIs that follow industry best practices',
+    icon: Code,
+    features: ['RESTful Design', 'JSON Responses', 'HTTP Status Codes', 'Error Handling']
+  },
+  {
+    title: 'GraphQL API',
+    description: 'Flexible query language for APIs',
+    icon: Code,
+    features: ['Single Endpoint', 'Type Safety', 'Real-time Subscriptions', 'Introspection']
+  },
+  {
+    title: 'High Performance',
+    description: 'Optimized for speed and scalability with sub-100ms response times',
+    icon: Zap,
+    features: ['Fast Response Times', 'Auto-scaling', 'Caching', 'Load Balancing']
+  },
+  {
+    title: 'Enterprise Security',
+    description: 'Bank-grade security with authentication, authorization, and encryption',
+    icon: Shield,
+    features: ['OAuth 2.0', 'JWT Tokens', 'Multi-factor Auth', 'Session Management']
+  },
+  {
+    title: 'Data API',
+    description: 'Access and manage your data',
+    icon: Database,
+    features: ['CRUD Operations', 'Data Validation', 'Query Optimization', 'Caching']
+  },
+  {
+    title: 'Analytics API',
+    description: 'Track and analyze usage patterns',
+    icon: Server,
+    features: ['Usage Metrics', 'Performance Data', 'Custom Events', 'Real-time Dashboards']
+  }
+];
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 
 export default function APIPage() {
   const apiFeatures = [
@@ -34,15 +77,23 @@ export default function APIPage() {
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
+=======
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center text-white"
+              initial={{ opacity: 0, y: 30 }}
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
+<<<<<<< HEAD
                 API <span className="text-blue-600">Services</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
@@ -136,6 +187,16 @@ export default function APIPage() {
             </div>
           </div>
         </section>
+=======
+                API Services
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto">
+                Powerful APIs designed for modern applications and seamless integration.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
       </div>
     </Layout>
   );

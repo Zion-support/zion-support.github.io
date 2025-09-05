@@ -10,6 +10,7 @@ export: default { apps: [{ name,: main-app","; script: "np,m,"; args: run: previ
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
@@ -17,3 +18,5 @@ export: default { apps: [{ name,: main-app","; script: "np,m,"; args: run: previ
 >>>>>>> main
 =======
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

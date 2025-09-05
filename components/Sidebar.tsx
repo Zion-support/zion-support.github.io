@@ -7,31 +7,104 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   X, 
   ChevronDown, 
-  ChevronRight,
   Home,
   Briefcase,
   Users,
-  Settings,
+  FileText,
   HelpCircle,
   Phone,
   Mail,
   MapPin,
   Building2,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   User,
   LogOut,
   Search
 } from 'lucide-react';
 
+<<<<<<< HEAD
+=======
+const navigation = {
+  'Services': [
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: 'Cloud Solutions', href: '/cloud-solutions' },
+    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'Quantum Computing', href: '/quantum-computing' },
+    { name: 'Blockchain', href: '/blockchain' },
+    { name: 'IoT Solutions', href: '/iot-solutions' },
+    { name: 'Data Analytics', href: '/data-analytics' },
+    { name: 'Custom Development', href: '/custom-development' }
+  ],
+  'Solutions': [
+    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+    { name: 'Startup Solutions', href: '/solutions/startup' },
+    { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+    { name: 'Custom Development', href: '/solutions/custom' },
+    { name: 'AI Implementation', href: '/solutions/ai-implementation' },
+    { name: 'Cloud Migration', href: '/solutions/cloud-migration' },
+    { name: 'Legacy Modernization', href: '/solutions/legacy-modernization' },
+    { name: 'API Development', href: '/solutions/api-development' }
+  ],
+  'Industries': [
+    { name: 'Healthcare', href: '/industries/healthcare' },
+    { name: 'Finance', href: '/industries/finance' },
+    { name: 'Education', href: '/industries/education' },
+    { name: 'Government', href: '/industries/government' },
+    { name: 'Manufacturing', href: '/industries/manufacturing' },
+    { name: 'Retail', href: '/industries/retail' },
+    { name: 'Agriculture', href: '/industries/agriculture' },
+    { name: 'Energy', href: '/industries/energy' },
+    { name: 'Transportation', href: '/industries/transportation' },
+    { name: 'Real Estate', href: '/industries/real-estate' }
+  ],
+  'Resources': [
+    { name: 'Blog', href: '/blog' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Documentation', href: '/docs/api' },
+    { name: 'Tutorials', href: '/tutorials' },
+    { name: 'White Papers', href: '/white-papers' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Training', href: '/training' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Best Practices', href: '/best-practices' }
+  ],
+  'Company': [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'News', href: '/news' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Security', href: '/security' }
+  ]
+};
+
+const quickLinks = [
+  { name: 'Free Consultation', href: '/consultation' },
+  { name: 'Get Quote', href: '/quote' },
+  { name: 'Support', href: '/support' }
+];
+
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+<<<<<<< HEAD
 const navigationItems = [
   {
     label: 'Home',
@@ -80,6 +153,10 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+export function Sidebar({ isOpen, onClose }: SidebarProps) {
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 
   useEffect(() => {
     if (isOpen) {
@@ -94,11 +171,18 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   }, [isOpen]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+  const handleDropdownToggle = (item: string) => {
+    setActiveDropdown(activeDropdown === item ? null : item);
+  };
+
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   return (
     <AnimatePresence>
       {isOpen && (
@@ -116,7 +200,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
             onClick={onClose}
           />
-          
+
           {/* Sidebar */}
           <motion.div
             initial={{ x: '-100%' }}
@@ -124,14 +208,24 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             exit={{ x: '-100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
+=======
+            className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
           >
-            <div className="flex flex-col h-full">
+            <div className="p-6">
               {/* Header */}
-              <div className="flex items-center justify-between p-6 border-b">
-                <h2 className="text-xl font-semibold text-gray-900">Menu</h2>
+              <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center space-x-2">
+                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
+                    <Building2 className="w-8 h-8 text-white" />
+                  </div>
+                  <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+                </div>
                 <button
                   onClick={onClose}
+<<<<<<< HEAD
                   className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
 =======
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
@@ -163,8 +257,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+                  className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                 >
-                  <X className="h-6 w-6" />
+                  <X className="w-6 h-6" />
                 </button>
               </div>
 <<<<<<< HEAD
@@ -174,6 +271,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
               {/* Navigation */}
+<<<<<<< HEAD
               <nav className="flex-1 overflow-y-auto py-4">
                 <div className="px-4 space-y-2">
                   {navigationItems.map((item) => (
@@ -224,6 +322,42 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   ))}
                 </div>
 <<<<<<< HEAD
+=======
+              <nav className="space-y-4">
+                {Object.entries(navigation).map(([title, links]) => (
+                  <div key={title}>
+                    <button
+                      onClick={() => handleDropdownToggle(title)}
+                      className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors"
+                    >
+                      <span>{title}</span>
+                      <ChevronDown className={`w-5 h-5 transition-transform ${
+                        activeDropdown === title ? 'rotate-180' : ''
+                      }`} />
+                    </button>
+                    
+                    {activeDropdown === title && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="ml-4 space-y-2 mt-2"
+                      >
+                        {links.map((link) => (
+                          <Link
+                            key={link.name}
+                            href={link.href}
+                            className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
+                            onClick={onClose}
+                          >
+                            {link.name}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </div>
+                ))}
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
               </nav>
               
               {/* Contact Info */}
@@ -243,6 +377,26 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 =======
               </div>
 
+<<<<<<< HEAD
+=======
+              {/* Quick Links */}
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
+                <div className="space-y-2">
+                  {quickLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
+                      onClick={onClose}
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Info</h3>
@@ -255,10 +409,16 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     <Mail className="w-4 h-4 mr-3" />
                     <span>kleber@ziontechgroup.com</span>
                   </div>
+<<<<<<< HEAD
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
                     <span>364 E Main St STE 1008, Middletown DE 19709</span>
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+                  <div className="flex items-start text-gray-600">
+                    <MapPin className="w-4 h-4 mr-3 mt-1" />
+                    <span>364 E Main St STE 1008, Middletown DE 19709</span>
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                   </div>
                 </div>
               </div>

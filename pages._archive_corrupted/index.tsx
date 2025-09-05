@@ -2,8 +2,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <h3 className=\"text-2xl font-bold text-gray-900 mb-4 text-center\">
 import React, { useState, useCallback, memo } from 'react';
 import Link from 'next/link';
@@ -229,6 +232,7 @@ const Home = memo(() => {
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 =======
@@ -239,6 +243,10 @@ const Home = memo(() => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                     {service.title}
                   </h3>
                   <p className=\"text-gray-600 mb-6 text-center\">
@@ -248,12 +256,16 @@ const Home = memo(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                   <Link href={service.href} className=\"block\">
                     <div className=\"w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold \"hover\": b g-blue-700 transition-colors text-center flex items-center justify-center\">
                   <Link href={service.href} className="block">
                     <div className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold "hover": b g-blue-700 transition-colors text-center flex items-center justify-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
@@ -265,6 +277,10 @@ const Home = memo(() => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                       Learn More
                       <ArrowRight className=\"w-4 h-4 ml-2\"  />
                     </div>
@@ -298,6 +314,7 @@ const Home = memo(() => {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
@@ -307,6 +324,8 @@ const Home = memo(() => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
               {features.map((feature, index) => (
                 <div key={index} className=\"text-center\">
                   <div className=\"bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center\">
@@ -332,8 +351,11 @@ const Home = memo(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
             <div className=\"grid grid-cols-1 md: gri d-cols-3 gap-8\">
               <div className=\"text-center\">
                 <div className=\"w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4\">
@@ -342,6 +364,7 @@ const Home = memo(() => {
               <div className="text-center">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Phone className="w-6 h-6 text-blue-600"  />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
@@ -353,6 +376,10 @@ const Home = memo(() => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                 </div>
                 <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Phone</h3>
                 <a href=\"tel:+13024640950\" className=\"text-blue-600 hover: tex t-blue-700\">
@@ -363,14 +390,18 @@ const Home = memo(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
               <div className=\"text-center\">
                 <div className=\"w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4\">
                   <Mail className=\"w-6 h-6 text-blue-600\"  />
               <div className="text-center">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-6 h-6 text-blue-600"  />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
@@ -382,6 +413,10 @@ const Home = memo(() => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                 </div>
                 <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Email</h3>
                 <a href=\"mailto: klebe r@ziontechgroup.com\" className=\"text-blue-600 hover: tex t-blue-700\">
@@ -392,14 +427,18 @@ const Home = memo(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
               <div className=\"text-center\">
                 <div className=\"w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4\">
                   <MapPin className=\"w-6 h-6 text-blue-600\"  />
               <div className="text-center">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <MapPin className="w-6 h-6 text-blue-600"  />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
@@ -411,6 +450,10 @@ const Home = memo(() => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                 </div>
                 <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Address</h3>
                 <p className=\"text-gray-600\">
@@ -429,6 +472,7 @@ const Home = memo(() => {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
@@ -438,6 +482,8 @@ const Home = memo(() => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className=\"flex items-center gap-x-2\">
                       <CheckCircle className=\"h-4 w-4 text-blue-600\"  />
@@ -449,14 +495,18 @@ const Home = memo(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                 <div className=\"flex items-center justify-between mb-4\">
                   <div className=\"flex items-center space-x-2 text-sm text-gray-500\">
                     <Clock className=\"h-4 w-4\"  />
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-2 text-sm text-gray-500">
                     <Clock className="h-4 w-4"  />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
@@ -468,6 +518,10 @@ const Home = memo(() => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                     <span>{service.delivery}</span>
                   </div>
                   <div className=\"flex items-center space-x-2 text-sm text-gray-500\">
@@ -499,14 +553,18 @@ const Home = memo(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
             <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
               <div className=\"bg-white rounded-lg p-8 shadow-sm\">
                 <div className=\"flex items-center mb-4\">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg p-8 shadow-sm">
                 <div className="flex items-center mb-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
@@ -518,6 +576,10 @@ const Home = memo(() => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className=\"w-5 h-5 text-yellow-400 fill-current\" />
                   ))}
@@ -539,12 +601,16 @@ const Home = memo(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
               <div className=\"bg-white rounded-lg p-8 shadow-sm\">
                 <div className=\"flex items-center mb-4\">
               <div className="bg-white rounded-lg p-8 shadow-sm">
                 <div className="flex items-center mb-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
@@ -556,6 +622,10 @@ const Home = memo(() => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className=\"w-5 h-5 text-yellow-400 fill-current\" />
                   ))}
@@ -577,12 +647,16 @@ const Home = memo(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
               <div className=\"bg-white rounded-lg p-8 shadow-sm\">
                 <div className=\"flex items-center mb-4\">
               <div className="bg-white rounded-lg p-8 shadow-sm">
                 <div className="flex items-center mb-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
@@ -594,6 +668,10 @@ const Home = memo(() => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className=\"w-5 h-5 text-yellow-400 fill-current\" />
                   ))}
@@ -627,8 +705,11 @@ const Home = memo(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
             <div className=\"grid grid-cols-1 md:grid-cols-3 gap-8\">
               <div className=\"bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center\">
                 <div className=\"p-3 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-4 w-fit\">
@@ -637,6 +718,7 @@ const Home = memo(() => {
               <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center">
                 <div className="p-3 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-4 w-fit">
                   <Phone className="w-6 h-6 text-white" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
@@ -648,6 +730,10 @@ const Home = memo(() => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                 </div>
                 <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">Phone</h3>
                 <p className=\"text-gray-600 mb-4\">Call us for immediate assistance</p>
@@ -659,14 +745,18 @@ const Home = memo(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
               <div className=\"bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center\">
                 <div className=\"p-3 rounded-lg bg-gradient-to-r from-green-500 to-green-600 mx-auto mb-4 w-fit\">
                   <Mail className=\"w-6 h-6 text-white\" />
               <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center">
                 <div className="p-3 rounded-lg bg-gradient-to-r from-green-500 to-green-600 mx-auto mb-4 w-fit">
                   <Mail className="w-6 h-6 text-white" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
@@ -678,6 +768,10 @@ const Home = memo(() => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                 </div>
                 <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">Email</h3>
                 <p className=\"text-gray-600 mb-4\">Send us a message anytime</p>
@@ -689,14 +783,18 @@ const Home = memo(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
               <div className=\"bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center\">
                 <div className=\"p-3 rounded-lg bg-gradient-to-r from-purple-500 to-purple-600 mx-auto mb-4 w-fit\">
                   <MapPin className=\"w-6 h-6 text-white\" />
               <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center">
                 <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500 to-purple-600 mx-auto mb-4 w-fit">
                   <MapPin className="w-6 h-6 text-white" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
@@ -708,6 +806,10 @@ const Home = memo(() => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                 </div>
                 <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">Address</h3>
                 <p className=\"text-gray-600 mb-4\">Visit our headquarters</p>
@@ -757,6 +859,7 @@ export default Home;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
@@ -767,3 +870,5 @@ import React,{ useState,useCallback,memo } from 'react'; import Link from 'next/
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

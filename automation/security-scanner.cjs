@@ -277,6 +277,13 @@ runSecurityCheck('Sensitive Data Scan', () => {
 });
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 // Check for outdated dependencies
 runSecurityCheck('Dependency Security', () => {
 =======
@@ -727,6 +734,7 @@ if (securityReport.status === 'vulnerable') {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
@@ -743,3 +751,8 @@ scanner.run().catch(console.error);
 =======
 >>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

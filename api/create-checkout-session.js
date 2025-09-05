@@ -1,12 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
 >>>>>>> main
 >>>>>>> main
+=======
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
   res.status(200).json({ message: 'Checkout session created' });
 }
@@ -15,6 +19,7 @@ export default function handler(req, res) {
 }
 <<<<<<< HEAD
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -82,3 +87,6 @@ export default function handler(req,res) { res.status(200).json({ message: 'Chec
 =======
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

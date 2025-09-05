@@ -2,8 +2,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 #!/usr/bin/env node; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function fixFile(filePath) { try { const content = fs.readFileSync(filePath,"utf8"); let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,(match) => { if (!match.endsWith(";")) { return match + ";",} return match}); fixed = fixed.replace(/<([^>]+)\s*>/g,(match) => { return match.replace(/\s+/g," ").trim()}); fixed = fixed.replace(/\[\s*([^\]]+)\s*\]/g,"[$1]"); fixed = fixed.replace(/\{\s*([^}]+)\s*\}/g,"{$1}"); fixed = fixed.replace(/\]\s*\[/g,"],["); fixed = fixed.replace(/\}\s*\{/g,"},{"); if (content !== fixed) { fs.writeFileSync(filePath,fixed,"utf8");  return true} return false} catch (error) { console.error(`Error: ${filePath}`,error.message); return false} } ; function processDirectory(dirPath) { const files = fs.readdirSync(dirPath); let fixedCount = 0; for (const file of files) { const fullPath = path.join(dirPath,file); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) { if (fixFile(fullPath)) { fixedCount++,} } } ; return fixedCount} ; const srcDir = path.join(__dirname,"src");  const totalFixed = processDirectory(srcDir); 
 #!/usr/bin/env node;
 const __filename = fileURLToPath(import.meta.url);
@@ -55,9 +58,14 @@ console.log("Final fix...");
 const totalFixed = processDirectory(srcDir);
 console.log(""Fixed ${totalFixed} files"")
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function fixFile(filePath) { try { const content = fs.readFileSync(filePath,"utf8"); let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,(match) => { if (!match.endsWith(";")) { return match + ";",} return match}); fixed = fixed.replace(/<([^>]+)\s*>/g,(match) => { return match.replace(/\s+/g," ").trim()}); fixed = fixed.replace(/\[\s*([^\]]+)\s*\]/g,"[$1]"); fixed = fixed.replace(/\{\s*([^}]+)\s*\}/g,"{$1}"); fixed = fixed.replace(/\]\s*\[/g,"],["); fixed = fixed.replace(/\}\s*\{/g,"},{"); if (content !== fixed) { fs.writeFileSync(filePath,fixed,"utf8"); console.log(``Fixed: ${filePath}``); return true} return false} catch (error) { console.error(`Error: ${filePath}`,error.message); return false} } ; function processDirectory(dirPath) { const files = fs.readdirSync(dirPath); let fixedCount = 0; for (const file of files) { const fullPath = path.join(dirPath,file); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) { if (fixFile(fullPath)) { fixedCount++,} } } ; return fixedCount} ; const srcDir = path.join(__dirname,"src"); console.log("Final fix..."); const totalFixed = processDirectory(srcDir); console.log(``Fixed ${totalFixed} files``)
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
 <<<<<<< HEAD
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
@@ -66,3 +74,5 @@ console.log(""Fixed ${totalFixed} files"")
 >>>>>>> main
 =======
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

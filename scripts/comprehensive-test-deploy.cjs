@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);
+    this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`);
+    this.log(`Errors: ${this.results.errors.length}`);
+    
+    const recommendations = this.generateRecommendations();
+    this.log('\n💡 Recommendations:');
+    recommendations.forEach((rec, index) => {
+      this.log(`  ${index + 1}. ${rec}`);
+    });
+
+    this.log('\\n🎉 Comprehensive test & deploy suite completed!');
+  }
+}
+
+// Run the comprehensive suite
+const suite = new ComprehensiveTestDeploy();
+suite.runComprehensiveSuite().catch(console.error);
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

@@ -1,7 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
+=======
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 
 const filesToFix = [
   'pages/about.tsx',
@@ -43,6 +49,7 @@ function resolveConflicts(filePath) {
   }
 }
 
+<<<<<<< HEAD
 filesToFix.forEach(resolveConflicts);
 console.log('All conflicts resolved!');
 =======
@@ -56,3 +63,9 @@ console.log('All conflicts resolved!');
 =======
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); function resolveMergeConflicts(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let resolvedContent = content fs.writeFileSync(filePath,resolvedContent); return true} catch (error) { _console.error(`Error resolving conflicts in ${filePath}:`,error.message); return false} } function findFilesWithConflicts() { try {
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+resolveMergeConflicts();
+=======
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); function resolveMergeConflicts(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let resolvedContent = content fs.writeFileSync(filePath,resolvedContent); return true} catch (error) { _console.error(`Error resolving conflicts in ${filePath}:`,error.message); return false} } function findFilesWithConflicts() { try {
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

@@ -2,8 +2,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -304,6 +307,7 @@ export default function ITServices() {
       "category": 'Cloud Services'
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 =======
@@ -314,6 +318,10 @@ export default function ITServices() {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     {
       \"title\": \'AI-Powered IT Operations\',
       \"description\": \'Intelligent IT operations with AI-driven automation and optimization\',
@@ -429,8 +437,11 @@ export default function ITServices() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
       \"title\": \'FinTech & Payment Solutions\',
       \"description\": \'Financial technology solutions and payment system integration\',
       \"icon\": Databas e,
@@ -2274,6 +2285,7 @@ export default function ITServices() {
     { "name": 'Databases', "icon": Databas e, "description": 'PostgreSQL, MongoDB, Redis' },
     { "name": 'Networking', "icon": Networ k, "description": 'Cisco, Fortinet, SD-WAN' }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 =======
@@ -2284,6 +2296,10 @@ export default function ITServices() {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   ];
   const benefits = [{
       \"title\": \'Reduced Downtime\',
@@ -2532,6 +2548,7 @@ export default function ITServices() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
@@ -2542,3 +2559,5 @@ import React from 'react'; import Head from 'next/head'; import Link from 'next/
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

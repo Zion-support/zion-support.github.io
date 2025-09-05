@@ -1,5 +1,35 @@
 import React from 'react';
+<<<<<<< HEAD
 import MainLayout from '../src/components/layout/MainLayout';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import {
+  ArrowRight,
+  Users,
+  Calendar,
+  FileText,
+  Video,
+  Globe,
+  Shield,
+  Zap
+} from 'lucide-react';
+import Layout from '../components/Layout';
+
+const benefits = [
+  {
+    title: 'Exclusive Content',
+    description: 'Get access to exclusive white papers, case studies, and industry insights.',
+    icon: FileText
+  },
+  {
+    title: 'Webinar Invitations',
+    description: 'Receive invitations to our expert-led webinars and virtual events',
+    icon: Video
+  }
+];
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 
 export default function NewsletterPage() {
   return (

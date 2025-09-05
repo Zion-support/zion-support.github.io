@@ -35,6 +35,10 @@ const { execSync } = require("child_process")
       const distPath = path.join(this.projectRoot, "dist")
       const nodeModulesPath = path.join(this.projectRoot, "node_modules")
       const srcPath = path.join(this.projectRoot, "src")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   getDirectorySize(dirPath) {
     let totalSize = 0
     if (!fs.existsSync(dirPath)) return 0
@@ -117,6 +121,11 @@ const { execSync } = require("child_process")
       "} catch (error) {console.error("Error saving report":", error.message),"}"}
   getRecommendations() {
     const recommendations = []
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
       this.metrics.application.fileCounts = {"source": this.countFiles(srcPath, [".ts", ".tsx", ".js", ".jsx"]),"components": this.countFiles(path.join(srcPath, "components"), [".tsx", ".jsx"]),"pages": this.countFiles(path.join(srcPath, "pages"), [".tsx", ".jsx"}]
       console.log(" Application metrics collected")
       console.warn("⚠  Could not collect application "metrics": ")

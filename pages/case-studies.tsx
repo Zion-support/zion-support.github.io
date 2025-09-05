@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -20,11 +21,38 @@ import {
   User,
   Tag,
   ExternalLink
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  TrendingUp, 
+  Users, 
+  Clock, 
+  CheckCircle, 
+  Building, 
+  Brain, 
+  Shield, 
+  Zap,
+  ArrowRight,
+  Star,
+  Award,
+  Calendar, 
+  User, 
+  Tag, 
+  ExternalLink,
+  Clock,
+  Target,
+  Cloud,
+  Search
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 } from 'lucide-react';
 
 const caseStudies = [
   {
     id: 1,
+<<<<<<< HEAD
     title: "AI-Powered Customer Service Transformation",
     client: "Global E-commerce Retailer",
     industry: "E-commerce",
@@ -40,6 +68,23 @@ const caseStudies = [
     team: "8 experts",
     technologies: ["AI/ML", "NLP", "Cloud", "Analytics"],
     image: "/images/case-studies/ecommerce-ai.jpg"
+=======
+    title: "AI-Powered Healthcare Platform",
+    client: "Regional Medical Center",
+    industry: "Healthcare",
+    challenge: "Manual patient data processing and diagnosis delays",
+    solution: "AI-powered diagnostic platform with real-time analysis",
+    results: [
+      "60% reduction in diagnosis time",
+      "40% improvement in accuracy",
+      "80% reduction in manual data entry",
+      "95% patient satisfaction rate"
+    ],
+    technologies: ["AI/ML", "Computer Vision", "Data Analytics", "Cloud Computing"],
+    duration: "6 months",
+    team: "12 experts",
+    image: "/images/case-studies/healthcare-ai.jpg"
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   },
   {
     id: 2,
@@ -74,8 +119,89 @@ const caseStudies = [
     ],
     technologies: ["Cybersecurity", "SIEM", "Compliance", "Monitoring"],
     duration: "4 months",
+<<<<<<< HEAD
     team: "6 experts",
     image: "/images/case-studies/healthcare-security.jpg"
+=======
+    team: "8 experts",
+    image: "/images/case-studies/cybersecurity.jpg"
+  },
+  {
+    id: 4,
+    title: "AI-Powered Medical Diagnosis",
+    client: "MedTech Solutions",
+    industry: "Healthcare",
+    challenge: "Need for automated medical diagnosis and patient management",
+    solution: "Developed AI-powered diagnostic system with 95% accuracy",
+    results: [
+      "95% diagnostic accuracy improvement",
+      "60% reduction in diagnosis time",
+      "40% cost savings",
+      "500+ patients served daily"
+    ],
+    duration: "6 months",
+    team: "12 developers",
+    technologies: ["AI/ML", "React", "Node.js", "PostgreSQL"],
+    image: "/api/placeholder/600/400",
+    featured: true
+  },
+  {
+    id: 2,
+    title: "E-commerce Platform Migration",
+    client: "RetailMax",
+    industry: "Retail",
+    challenge: "Legacy system causing performance issues and scalability problems",
+    solution: "Migrated to modern cloud-based architecture with microservices",
+    results: [
+      "300% performance improvement",
+      "99.9% uptime achieved",
+      "50% reduction in server costs",
+      "2M+ monthly active users"
+    ],
+    duration: "4 months",
+    team: "8 developers",
+    technologies: ["Next.js", "AWS", "Docker", "Kubernetes"],
+    image: "/api/placeholder/600/400",
+    featured: true
+  },
+  {
+    id: 3,
+    title: "Cybersecurity Implementation",
+    client: "FinanceCorp",
+    industry: "Financial Services",
+    challenge: "Need for comprehensive security framework and compliance",
+    solution: "Implemented zero-trust security architecture with advanced monitoring",
+    results: [
+      "100% compliance with SOC 2 Type II",
+      "Zero security breaches",
+      "99.9% threat detection rate",
+      "50% reduction in security incidents"
+    ],
+    duration: "8 months",
+    team: "15 security experts",
+    technologies: ["Zero Trust", "SIEM", "WAF", "IAM"],
+    image: "/api/placeholder/600/400",
+    featured: false
+  },
+  {
+    id: 4,
+    title: "Data Analytics Platform",
+    client: "ManufacturingCo",
+    industry: "Manufacturing",
+    challenge: "Need for real-time production monitoring and predictive analytics",
+    solution: "Built comprehensive IoT and analytics platform",
+    results: [
+      "25% increase in production efficiency",
+      "30% reduction in downtime",
+      "40% improvement in quality control",
+      "Real-time monitoring of 1000+ sensors"
+    ],
+    duration: "5 months",
+    team: "10 developers",
+    technologies: ["IoT", "Python", "TensorFlow", "InfluxDB"],
+    image: "/api/placeholder/600/400",
+    featured: false
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   },
   {
     id: 5,
@@ -108,14 +234,23 @@ const caseStudies = [
       "Scalable infrastructure",
       "Rapid feature deployment"
     ],
+<<<<<<< HEAD
     technologies: ["SaaS Development", "Multi-tenancy", "Cloud Computing"],
     duration: "12 months",
     team: "25 experts",
     image: "/api/placeholder/600/400"
+=======
+    duration: "4 months",
+    team: "8 developers",
+    technologies: ["React Native", "Firebase", "WebRTC", "Push Notifications"],
+    image: "/api/placeholder/600/400",
+    featured: false
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   }
 ];
 
 const industries = [
+<<<<<<< HEAD
   "All Industries",
   "Healthcare",
   "E-commerce",
@@ -132,11 +267,19 @@ const technologies = [
   "Cloud Computing",
   "Cybersecurity",
   "IoT",
+=======
+  "Healthcare",
+  "Financial Services",
+  "Manufacturing",
+  "Retail",
+  "Education",
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   "PropTech",
   "SaaS Development",
   "Data Analytics"
 ];
 
+<<<<<<< HEAD
 const stats = [
   { number: "500+", label: "Projects Completed" },
   { number: "50+", label: "Happy Clients" },
@@ -160,10 +303,23 @@ export default function CaseStudiesPage() {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
+=======
+export default function CaseStudies() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedIndustry, setSelectedIndustry] = useState('All');
+
+  return (
+    <Layout title="Case Studies - Zion Tech Group">
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+          <div className="container mx-auto px-4">
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -175,11 +331,21 @@ export default function CaseStudiesPage() {
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Discover how we've helped businesses transform and achieve their goals 
                 through innovative technology solutions.
+=======
+              className="text-center text-white"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Case Studies
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto">
+                Discover how we've helped businesses transform and succeed with innovative technology solutions.
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
               </p>
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -188,20 +354,93 @@ export default function CaseStudiesPage() {
                 <motion.div
                   key={index}
                   className="text-center"
+=======
+        {/* Filter Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex flex-col md:flex-row gap-4 mb-8">
+                <div className="flex-1">
+                  <input
+                    type="text"
+                    placeholder="Search case studies..."
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                  />
+                </div>
+                <div className="flex-1">
+                  <select
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    value={selectedIndustry}
+                    onChange={(e) => setSelectedIndustry(e.target.value)}
+                  >
+                    <option value="All">All Industries</option>
+                    {industries.map((industry) => (
+                      <option key={industry} value={industry}>
+                        {industry}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Case Studies Grid */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {caseStudies.map((caseStudy, index) => (
+                <motion.div
+                  key={caseStudy.id}
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
                 >
                   <div className="text-3xl md:text-4xl font-bold text-green-600 mb-2">
                     {stat.number}
                   </div>
                   <div className="text-gray-600 font-medium">{stat.label}</div>
+=======
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                >
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      {caseStudy.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      {caseStudy.client} • {caseStudy.industry}
+                    </p>
+                    <p className="text-gray-700 mb-4">
+                      {caseStudy.challenge}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {caseStudy.technologies.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex justify-between items-center text-sm text-gray-500">
+                      <span>{caseStudy.duration}</span>
+                      <span>{caseStudy.team}</span>
+                    </div>
+                  </div>
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
         {/* Featured Case Studies */}
         <section className="py-20 bg-white">
@@ -347,5 +586,9 @@ export default function CaseStudiesPage() {
         </section>
       </div>
     </MainLayout>
+=======
+      </div>
+    </Layout>
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   );
 }

@@ -16,6 +16,7 @@ export default function Playwright.config({ }: Playwright.configProps) {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -24,3 +25,5 @@ export default function Playwright.config({ }: Playwright.configProps) {
 }
 >>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

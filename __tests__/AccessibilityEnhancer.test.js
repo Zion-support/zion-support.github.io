@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -15,3 +16,6 @@ describe('AccessibilityEnhancer', () => {
 });
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+=======
+import _React from 'react';  import '@testing-library/jest-dom'; import AccessibilityEnhancer from '../components/AccessibilityEnhancer'; describe('AccessibilityEnhancer',() => { test('renders without crashing',() => { render(<AccessibilityEnhancer />); expect(screen.getByTestId('accessibilityenhancer')).toBeInTheDocument()}); test('displays correct content',() => { render(<AccessibilityEnhancer />)}); test('handles user interactions',() => { render(<AccessibilityEnhancer />)}); test('applies correct styling',() => { render(<AccessibilityEnhancer />)})});
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

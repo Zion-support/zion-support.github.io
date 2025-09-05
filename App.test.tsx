@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './App';
@@ -7,10 +8,13 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 =======
 <<<<<<< HEAD
 >>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './src/App';
 import React from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -26,11 +30,15 @@ import App from './src/App';
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 >>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+=======
+
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
   it('displays correct content', () => {
     render(<App />);
@@ -48,6 +56,9 @@ describe('App', () => {
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 >>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+=======
+
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   it('displays correct content', () => {
     render(<App />);
     // Add specific content assertions here
@@ -57,6 +68,7 @@ describe('App', () => {
     // Add interaction tests here
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 =======
 <<<<<<< HEAD
@@ -67,3 +79,6 @@ describe('App', () => {
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 >>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+=======
+});
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

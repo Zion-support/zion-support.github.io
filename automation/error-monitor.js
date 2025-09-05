@@ -38,6 +38,7 @@ class ErrorMonitor {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> main
@@ -46,6 +47,9 @@ class ErrorMonitor {
 
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     // Initial health check
     await this.performHealthCheck();
     // Start continuous monitoring
@@ -80,6 +84,7 @@ class ErrorMonitor {
         message: error.message,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         timestamp: new Date().toISOString()
 >>>>>>> main
@@ -87,6 +92,8 @@ class ErrorMonitor {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
         timestamp: new Date().toISOString(),
       });
     }
@@ -189,6 +196,7 @@ class ErrorMonitor {
             message: match[4].trim(),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             timestamp: new Date().toISOString()
 >>>>>>> main
@@ -196,11 +204,14 @@ class ErrorMonitor {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
             timestamp: new Date().toISOString(),
           });
         }
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -211,6 +222,9 @@ class ErrorMonitor {
 
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     return errors;
   }
   parseESLintErrors(output) {
@@ -227,6 +241,7 @@ class ErrorMonitor {
           message: match[4].trim(),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           timestamp: new Date().toISOString()
         });
@@ -237,10 +252,13 @@ class ErrorMonitor {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
           timestamp: new Date().toISOString(),
         });
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -251,6 +269,9 @@ class ErrorMonitor {
 
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     return errors;
   }
   updateHealthStatus() {
@@ -273,6 +294,7 @@ class ErrorMonitor {
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
@@ -282,6 +304,8 @@ class ErrorMonitor {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -300,6 +324,7 @@ class ErrorMonitor {
       await automation.run();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       console.log('✅ Error fixer completed');
@@ -309,12 +334,16 @@ class ErrorMonitor {
 
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
       console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
       this.monitoringReport.errorsDetected.push({
         type: 'error_fixer_failure',
         message: error.message,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -324,6 +353,8 @@ class ErrorMonitor {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
         timestamp: new Date().toISOString(),
       });
     }
@@ -351,6 +382,7 @@ class ErrorMonitor {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> main
@@ -359,6 +391,9 @@ class ErrorMonitor {
 
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
     fs.writeFileSync(

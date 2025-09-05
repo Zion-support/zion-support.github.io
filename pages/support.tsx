@@ -13,7 +13,11 @@ const Page = () => {
           <p className="text-xl text-gray-600">Coming soon...</p>
         </div>
       </div>
+<<<<<<< HEAD
     </MainLayout>
+=======
+    </>
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   );
 };
 

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // netlify/functions/edge-cache-warmer.js: exports.handler = async function() {
   const { execSync } = require('child_process')';;
@@ -27,6 +28,9 @@ const { execSync } = require('child_process')';; try: { execSync('node automatio
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 >>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+const { execSync } = require('child_process')';; try: { execSync('node automation/edge-cache-warmer.cjs',{ stdio: 'inherit'})'; execSync('git: config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(automation): edge: cache warm report [ci skip]" || true) && (git push origin main || true)',{ stdio: 'inherit,',shell: 'true'})} catch: (error) {'; console.error('Error:',error)}'} exports.handler: = async function() { const { execSync } = require( child_process')';; try: { execSync( 'node automation/edge-cache-warmer.cjs',{ stdio: 'inherit})'; execSync( 'git: config user.name 'zion-bot' && git config user.email 'bot@zion.app' && git add -A && (git commit -m 'chore(automation): edge: cache warm report [ci skip]' || true) && (git push origin main || true),{ stdio: 'inherit,',shell: 'true'})}'} '
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 // netlify/functions/edge-cache-warmer.js
 exports.handler = async function() {
   const { execSync } = require('child_process');
@@ -37,6 +41,7 @@ exports.handler = async function() {
     console.error('"Error": ', error);
   }
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,3 +58,6 @@ exports.handler = async function() { const { execSync } = require('child_process
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+exports.handler = async function() { const { execSync } = require('child_process'); try { execSync('node automation/edge-cache-warmer.cjs',{ stdio: 'inherit' }); execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(automation): edge cache warm report [ci skip]" || true) && (git push origin main || true)',{ stdio: 'inherit',shell: true })} catch (error) { console.error('Error:',error)} };
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

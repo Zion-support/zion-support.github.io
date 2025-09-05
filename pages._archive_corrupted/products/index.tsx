@@ -2,8 +2,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 const \"Products\": NextPage = () => {
 import Head from 'next/head.ts';
 import Link from 'next/link';
@@ -81,6 +84,7 @@ import Link from 'next/link';
 import { ArrowRight, Star, Download, Eye, Code, Database, Shield, Zap, CheckCircle } from 'lucide-react';
 const "Products": NextPage = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 =======
@@ -91,6 +95,10 @@ const "Products": NextPage = () => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   const products = [{
       title: \'ZionAI Platform\',
       \"description\": \'Enterprise-grade AI platform for building, deploying, and managing machine learning models at scale.\',
@@ -205,8 +213,11 @@ const "Products": NextPage = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   const categories = [\'All Products\',
     \'AI & Machine Learning\',
     \'Cloud Solutions\',
@@ -222,6 +233,7 @@ const "Products": NextPage = () => {
     'IoT Platforms',
     'Blockchain'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 =======
@@ -232,6 +244,10 @@ const "Products": NextPage = () => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   ];
   const benefits = [{
       \"title\": \'Enterprise Ready\',
@@ -314,6 +330,7 @@ const "Products": NextPage = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
@@ -323,6 +340,8 @@ const "Products": NextPage = () => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
             {products.map((product) => (
               <div
                 key={product.title}
@@ -354,6 +373,7 @@ const "Products": NextPage = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
@@ -363,6 +383,8 @@ const "Products": NextPage = () => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                     {product.title}
                   </h3>
                   <p className=\"text-gray-600 mb-4\">
@@ -372,8 +394,11 @@ const "Products": NextPage = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                   <div className=\"mb-4\">
                     <p className=\"text-lg font-semibold text-blue-600\">{product.pricing}</p>
                   </div>
@@ -382,6 +407,7 @@ const "Products": NextPage = () => {
                     <p className="text-lg font-semibold text-blue-600">{product.pricing}</p>
                   </div>
                   <ul className="space-y-2 mb-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
@@ -393,6 +419,10 @@ const "Products": NextPage = () => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                     {product.features.slice(0, 3).map((feature) => (
                       <li key={feature} className=\"flex items-center text-sm text-gray-600\">
                         <div className=\"w-2 h-2 bg-blue-600 rounded-full mr-3\"></div>
@@ -412,6 +442,7 @@ const "Products": NextPage = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
@@ -421,6 +452,8 @@ const "Products": NextPage = () => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                     <Link
                       href={product.href}
                       className=\"flex-1 bg-blue-600 \"hover\": bg-blue-700 text-white py-2 px-4 rounded-lg font-medium text-center transition-colors flex items-center justify-center\"
@@ -461,6 +494,7 @@ const "Products": NextPage = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
@@ -470,6 +504,8 @@ const "Products": NextPage = () => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
             {benefits.map((benefit) => (
               <div key={benefit.title} className=\"text-center\">
                 <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
@@ -509,6 +545,7 @@ const "Products": NextPage = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
@@ -518,6 +555,8 @@ const "Products": NextPage = () => {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
             {[{
                 name: \'Starter\',
                 \"price\": \'$299\',
@@ -577,8 +616,11 @@ const "Products": NextPage = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                 <div className=\"text-center mb-8\">
                   <h3 className=\"text-2xl font-bold text-gray-900 mb-2\">{plan.name}</h3>
                   <div className=\"mb-4\">
@@ -595,15 +637,19 @@ const "Products": NextPage = () => {
                 <ul className=\"space-y-3 mb-8\">
                 <ul className="space-y-3 mb-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </div>
                   <p className=\"text-gray-600\">{plan.description}</p>
                 </div>
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
 <<<<<<< HEAD
                   </div>
                   <p className=\"text-gray-600\">{plan.description}</p>
                 </div>
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
                   </div>
                   <p className=\"text-gray-600\">{plan.description}</p>
@@ -619,6 +665,8 @@ const "Products": NextPage = () => {
                 </div>
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                   {plan.features.map((feature) => (
                     <li key={feature} className=\"flex items-center\">
                       <CheckCircle className=\"h-5 w-5 text-green-500 mr-3\" />
@@ -677,6 +725,7 @@ export default Products;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
@@ -687,3 +736,5 @@ export default Products;
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

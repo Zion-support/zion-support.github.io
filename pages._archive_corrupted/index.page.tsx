@@ -11,6 +11,7 @@ import Head from 'next/head';
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
@@ -20,6 +21,8 @@ import Head from 'next/head';
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 export default function HomePage() {
   return (
     <>
@@ -42,12 +45,16 @@ export default function HomePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
               Mobile: <a className=\"text-blue-700\" href=\"tel:+13024640950\">+1 302 464 0950</a> · Email:{\' \'}
               <a className=\"text-blue-700\" href=\""mailto\": kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Address: 364 E
               Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '}
               <a className="text-blue-700" href=""mailto": kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
@@ -59,6 +66,10 @@ export default function HomePage() {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
               Main St STE 1008 Middletown DE 19709
             </p>
           </div>
@@ -76,6 +87,7 @@ export default function HomePage() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
@@ -86,3 +98,5 @@ import React from 'react'; import Link from 'next/link'; import Head from 'next/
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

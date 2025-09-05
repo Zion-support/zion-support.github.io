@@ -2,8 +2,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 export default function PricingPage() {
   const plans = [
     {
@@ -57,6 +60,7 @@ export default function PricingPage() {
         "Basic analytics",
         "Monthly reports"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 =======
@@ -67,6 +71,10 @@ export default function PricingPage() {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
       ],
       \"popular\": false
     },
@@ -75,8 +83,11 @@ export default function PricingPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
       \"name\": \"Professional\",
       \"description\": \"Ideal for growing businesses\",
       \"price\": \"$7,999\",
@@ -110,6 +121,7 @@ export default function PricingPage() {
         'Analytics integration',
         'Content management system'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 =======
@@ -120,6 +132,10 @@ export default function PricingPage() {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
       ],
       \"popular\": true
     },
@@ -152,8 +168,11 @@ export default function PricingPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
       <div className=\"min-h-screen bg-gray-50 py-12\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -162,6 +181,7 @@ export default function PricingPage() {
         <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
@@ -173,6 +193,10 @@ export default function PricingPage() {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
               Simple, Transparent Pricing
             </h1>
             <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
@@ -191,6 +215,7 @@ export default function PricingPage() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
@@ -200,6 +225,8 @@ export default function PricingPage() {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
             {pricingPlans.map((plan, index) => (
               <div
                 key={plan.name}
@@ -218,8 +245,11 @@ export default function PricingPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                 <div className=\"text-center mb-8\">
                   <h3 className=\"text-2xl font-bold text-gray-900 mb-2\">{plan.name}</h3>
                   <p className=\"text-gray-600 mb-4\">{plan.description}</p>
@@ -239,6 +269,7 @@ export default function PricingPage() {
                 </div>
                 <ul className="space-y-4 mb-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 =======
@@ -249,6 +280,10 @@ export default function PricingPage() {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className=\"flex items-center\">
                       <CheckCircle className=\"w-5 h-5 text-green-500 mr-3 flex-shrink-0\" />
@@ -274,12 +309,16 @@ export default function PricingPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
           <div className=\"text-center\">
             <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
@@ -291,6 +330,10 @@ export default function PricingPage() {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
               Ready to Get Started?
             </h2>
             <p className=\"text-xl text-gray-600 mb-8\">
@@ -319,16 +362,24 @@ export default function PricingPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 }
 };
 export default PricingPage;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
 <<<<<<< HEAD
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
@@ -339,3 +390,5 @@ import React from 'react';  import Head from 'next/head'; import Link from 'next
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
