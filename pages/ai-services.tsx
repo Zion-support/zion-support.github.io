@@ -587,21 +587,21 @@ const industries = [
 const benefits = [
   {
     icon: Zap,
-    title: 'Increased Efficiency,',
-    description: 'Automate repetitive tasks and processes,',
-    stat: '40%'';,
+    title: 'Increased Efficiency',
+    description: 'Automate repetitive tasks and processes',
+    stat: '40%',
   },
   {
     icon: TrendingUp,
-    title: 'Better Insights,',
-    description: 'Data-driven decision making,',
-    stat: '60%'';,
+    title: 'Better Insights',
+    description: 'Data-driven decision making',
+    stat: '60%',
   },
   {
     icon: Shield,
-    title: 'Enhanced Security,',
-    description: 'AI-powered threat detection,',
-    stat: '99.9%'';,
+    title: 'Enhanced Security',
+    description: 'AI-powered threat detection',
+    stat: '99.9%',
   },
   {
     icon: Users,

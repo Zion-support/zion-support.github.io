@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -8,36 +7,26 @@ import Layout from '../components/layout/Layout';
 
 const blogPosts = [
   {
-=======
-import _React from 'react';,
-import Head from 'next/head';';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';,
-import { Calendar, User, ArrowRight, Tag } from 'lucide-react';,
-<<<<<<< HEAD;
-const blogPosts = [;
-  {}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2966
     id: 1,
-    title: "The Future of AI in Business: 2025 Trends",",
-    excerpt: "Explore the latest AI trends that are transforming businesses across industries.",",
-    author: "Dr. Sarah Chen",",
-    date: "2024-01-15",",
-    category: "AI & Technology",",
-    readTime: "5 min read",",
-    image: "/api/placeholder/600/300"";,
+    title: "The Future of AI in Business: 2025 Trends",
+    excerpt: "Explore the latest AI trends that are transforming businesses across industries.",
+    author: "Dr. Sarah Chen",
+    date: "2024-01-15",
+    category: "AI & Technology",
+    readTime: "5 min read",
+    image: "/api/placeholder/600/300",
   },
-  {}
+  {
     id: 2,
-    title: "Cloud Migration Best Practices",",
-    excerpt: "Learn how to successfully migrate your infrastructure to the cloud with minimal downtime.",",
-    author: "Michael Rodriguez",",
-    date: "2024-01-10",",
-    category: "Cloud Computing",",
-    readTime: "7 min read",",
-    image: "/api/placeholder/600/300"";,
+    title: "Cloud Migration Best Practices",
+    excerpt: "Learn how to successfully migrate your infrastructure to the cloud with minimal downtime.",
+    author: "Michael Rodriguez",
+    date: "2024-01-10",
+    category: "Cloud Computing",
+    readTime: "7 min read",
+    image: "/api/placeholder/600/300",
   },
-  {}
+  {
     id: 3,
     title: "Cybersecurity in the Age of AI",",
     excerpt: "Understanding the evolving threat landscape and how AI can help protect your business.",",

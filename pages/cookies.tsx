@@ -1,33 +1,7 @@
-import _React from 'react';,
-import Head from 'next/head';';
-import { motion } from 'framer-motion';,
-import { Cookie, Settings, Shield, Eye, Database, Mail, Phone } from 'lucide-react';,
-
-export default function CookiesPage() {}
-  return (;,
-    <div className="min-h-screen bg-gray-50">";
-      <Head>;
-        <title>Cookie Policy - Zion Tech Group</title>;
-        <meta name="description" content="Learn about how Zion Tech Group uses cookies and similar technologies." />";
-      </Head>;
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">",
-        <div className="container mx-auto px-4">";,
-          <div className="max-w-4xl mx-auto text-center">";
-            <Cookie className="w-16 h-16 mx-auto mb-6" />";
-            <h1 className="text-5xl font-bold mb-6">");
-              Cookie Policy;
-            </h1>;
-            <p className="text-xl text-blue-100">";
-              Learn about how we use cookies and similar technologies to enhance your experience.;
-            </p>;
-            <p className="text-sm text-blue-200 mt-4">";
-              Last updated: January 15, 2024,
-            </p>;,
-          </div>;
-        </div>;
-      </section>;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Cookie, Settings, Shield, Eye, Database, Mail, Phone } from 'lucide-react';
 
 export default function CookiesPage() {
   const [cookiePreferences, setCookiePreferences] = useState({
@@ -38,9 +12,38 @@ export default function CookiesPage() {
   });
   const [showPreferences, setShowPreferences] = useState(false);
 
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">";
-                  Types of Cookies We Use;
-                </h2>;
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Head>
+        <title>Cookie Policy - Zion Tech Group</title>
+        <meta name="description" content="Learn about how Zion Tech Group uses cookies and similar technologies." />
+      </Head>
+
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <Cookie className="w-16 h-16 mx-auto mb-6" />
+            <h1 className="text-5xl font-bold mb-6">
+              Cookie Policy
+            </h1>
+            <p className="text-xl text-blue-100">
+              Learn about how we use cookies and similar technologies to enhance your experience.
+            </p>
+            <p className="text-sm text-blue-200 mt-4">
+              Last updated: January 15, 2024
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                  Types of Cookies We Use
+                </h2>
                 
                 <div className="space-y-6 mb-8">";
                   <div className="flex items-start gap-4">";
@@ -69,13 +72,23 @@ export default function CookiesPage() {
                         These cookies help us understand how visitors interact with our website by collecting;
                         and reporting information anonymously.;
                       </p>;
-                      <p className="text-sm text-gray-500">";
-                        <strong>Examples:</strong> Google Analytics, page view tracking, user behavior analysis,
-                      </p>;,
-                    </div>;
-                  </div>;
+                      <p className="text-sm text-gray-500">
+                        <strong>Examples:</strong> Google Analytics, page view tracking, user behavior analysis
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
 
-  const acceptAll = () => {
+// Helper functions
+const acceptAll = () => {
     setCookiePreferences({
       essential: true,
       analytics: true,

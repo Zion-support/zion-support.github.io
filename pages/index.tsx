@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -19,23 +18,22 @@ const services = [
     title: "AI Services",
     description: "60+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, and quantum AI",
     icon: Brain,
-    href: "/ai-services",",
+    href: "/ai-services",
   },
   {
     title: "IT Services", 
     description: "50+ comprehensive IT services from cloud infrastructure to cybersecurity and quantum computing",
     icon: Network,
-    href: "/it-services",",
+    href: "/it-services",
   },
   {
     title: "Micro SaaS",
     description: "65+ innovative micro SaaS solutions for modern businesses across all industries",
     icon: Cloud,
-    href: "/micro-saas",",
+    href: "/micro-saas",
   }
-;];,
+];
 
-<<<<<<< HEAD
 export default function HomePage() {
   return (
     <Layout>
@@ -50,8 +48,8 @@ export default function HomePage() {
           <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>";
         </div>;
 
-        <div className="container mx-auto px-4 relative z-10">";
-          <motion.div);
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}

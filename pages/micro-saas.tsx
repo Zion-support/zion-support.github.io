@@ -600,13 +600,13 @@ const features = [
   },
   {
     icon: Shield,
-    title: 'Enterprise Security,',
-    description: 'Bank-level security and compliance'';,
+    title: 'Enterprise Security',
+    description: 'Bank-level security and compliance',
   },
   {
     icon: Users,
-    title: 'Scalable Architecture,',
-    description: 'Grows with your business needs'';,
+    title: 'Scalable Architecture',
+    description: 'Grows with your business needs',
   },
   {
     icon: Globe,

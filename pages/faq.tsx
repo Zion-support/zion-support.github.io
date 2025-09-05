@@ -19,34 +19,34 @@ const faqCategories = [
   { id: 'api', name: 'API & Integration', count: 25 }
 ];
 
-const faqs = [;
-  {}
-    category: "General",",
-    questions: [;,
-      {}
-        question: "What services does Zion Tech Group offer?",",
-        answer: "We offer comprehensive AI solutions, IT services, cloud computing, cybersecurity, and micro SaaS solutions. Our services include machine learning, natural language processing, cloud infrastructure, and custom software development."",
+const faqs = [
+  {
+    category: "General",
+    questions: [
+      {
+        question: "What services does Zion Tech Group offer?",
+        answer: "We offer comprehensive AI solutions, IT services, cloud computing, cybersecurity, and micro SaaS solutions. Our services include machine learning, natural language processing, cloud infrastructure, and custom software development.",
       },
-      {}
-        question: "How can I get started with your services?",",
-        answer: "Getting started is easy! Simply contact us through our contact form, schedule a consultation, or call us directly. We'll assess your needs and provide a customized solution plan."",
+      {
+        question: "How can I get started with your services?",
+        answer: "Getting started is easy! Simply contact us through our contact form, schedule a consultation, or call us directly. We'll assess your needs and provide a customized solution plan.",
       },
-      {}
-        question: "Do you offer 24/7 support?",",
-        answer: "Yes, we provide 24/7 support for all our clients. Our dedicated support team is always available to help with any technical issues or questions you may have."",
+      {
+        question: "Do you offer 24/7 support?",
+        answer: "Yes, we provide 24/7 support for all our clients. Our dedicated support team is always available to help with any technical issues or questions you may have.",
       }
-    ];,
+    ],
   },
-  {}
-    category: "AI Services",",
-    questions: [;,
-      {}
-        question: "What AI technologies do you specialize in?",",
-        answer: "We specialize in machine learning, natural language processing, computer vision, predictive analytics, and AI automation. Our team has extensive experience with various AI frameworks and platforms."",
+  {
+    category: "AI Services",
+    questions: [
+      {
+        question: "What AI technologies do you specialize in?",
+        answer: "We specialize in machine learning, natural language processing, computer vision, predictive analytics, and AI automation. Our team has extensive experience with various AI frameworks and platforms.",
       },
-      {}
-        question: "How long does it take to implement an AI solution?",",
-        answer: "Implementation time varies depending on the complexity of the project. Simple AI solutions can be deployed in 2-4 weeks, while more complex enterprise solutions may take 3-6 months."",
+      {
+        question: "How long does it take to implement an AI solution?",
+        answer: "Implementation time varies depending on the complexity of the project. Simple AI solutions can be deployed in 2-4 weeks, while more complex enterprise solutions may take 3-6 months.",
       },
       {}
         question: "Do you provide AI training for our team?",",

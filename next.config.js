@@ -1,5 +1,5 @@
-/** @type {import('next').NextConfig} */',
-const nextConfig = {}
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
   output: 'export',
   trailingSlash: true,
@@ -8,15 +8,15 @@ const nextConfig = {}
     domains: ['localhost'],
     unoptimized: true
   },
-  env: {,}
+  env: {
     CUSTOM_KEY: process.env.CUSTOM_KEY,
   },
-  eslint: {,}
+  eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true
   }
-};,
+};
 
 export default nextConfig;
