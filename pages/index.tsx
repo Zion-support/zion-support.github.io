@@ -359,16 +359,16 @@ export default function HomePage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
                 <p className="text-gray-600 mb-4">Send us your project details</p>
                 <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 font-semibold hover:text-green-700">
-                  kleber@ziontechgroup.com;
+                  kleber@ziontechgroup.com
                 </a>
               </motion.div>
 
-              <motion.div;
+              <motion.div
                 className="text-center p-6 bg-white rounded-lg shadow-lg"
-                initial={{ opacity: 0, y: 30 }};
-                whileInView={{ opacity: 1, y: 0 }};
-                transition={{ duration: 0.8, delay: 0.3 }};
-                viewport={{ once: true }};
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
               >
                 <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <MapPin className="w-8 h-8 text-purple-600" />

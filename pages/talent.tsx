@@ -30,6 +30,7 @@ const jobOpenings = [
     type: "Full-time",
     experience: "3+ years",
     description: "Build scalable web applications and microservices for our SaaS solutions.",
+    requirements: [
       "3+ years experience in full-stack development",
       "Proficiency in React, Node.js, TypeScript",
       "Experience with databases (PostgreSQL, MongoDB)",
@@ -45,6 +46,7 @@ const jobOpenings = [
     type: "Full-time",
     experience: "7+ years",
     description: "Design and implement cloud infrastructure solutions for enterprise clients.",
+    requirements: [
       "7+ years experience in cloud architecture",
       "AWS/Azure/GCP certifications preferred",
       "Experience with containerization (Docker, Kubernetes)",
@@ -60,6 +62,7 @@ const jobOpenings = [
     type: "Full-time",
     experience: "4+ years",
     description: "Protect our clients' digital assets and implement security best practices.",
+    requirements: [
       "4+ years experience in cybersecurity",
       "Certifications (CISSP, CISM, CEH) preferred",
       "Experience with security tools and frameworks",
@@ -75,6 +78,7 @@ const jobOpenings = [
     type: "Full-time",
     experience: "3+ years",
     description: "Streamline our development and deployment processes with modern DevOps practices.",
+    requirements: [
       "3+ years experience in DevOps",
       "Proficiency in CI/CD pipelines",
       "Experience with infrastructure as code (Terraform, CloudFormation)",
@@ -90,6 +94,7 @@ const jobOpenings = [
     type: "Full-time",
     experience: "2+ years",
     description: "Create intuitive and beautiful user experiences for our digital products.",
+    requirements: [
       "2+ years experience in UX/UI design",
       "Proficiency in Figma, Sketch, Adobe Creative Suite",
       "Experience with user research and testing",
@@ -99,6 +104,8 @@ const jobOpenings = [
   }
 ];
 
+const benefits = [
+  {
     title: "Competitive Compensation",
     description: "We offer competitive salaries and performance-based bonuses",
     icon: Star
