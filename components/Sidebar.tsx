@@ -18,7 +18,11 @@ import {
   DollarSign,
   ShoppingCart,
   GraduationCap,
-  Globe
+  Globe,
+  Cpu as CpuIcon,
+  Lock,
+  Network,
+  Monitor
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -32,7 +36,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
   const toggleSection = (section: string) => {
     setExpandedSections(prev => 
-      prev.includes(section) 
+      prev.includes(section)
         ? prev.filter(s => s !== section)
         : [...prev, section]
     );
@@ -57,6 +61,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
         { label: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
         { label: 'Data Analytics', href: '/services/data-analytics', icon: Brain },
+        { label: 'Quantum Computing', href: '/services/quantum-computing', icon: CpuIcon },
+        { label: 'Blockchain Solutions', href: '/services/blockchain', icon: Lock },
+        { label: 'IoT & Smart Cities', href: '/services/iot-smart-cities', icon: Globe },
+        { label: 'Edge Computing', href: '/services/edge-computing', icon: Network },
+        { label: 'Digital Twins', href: '/services/digital-twins', icon: Monitor }
       ]
     },
     {
@@ -71,7 +80,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Finance', href: '/solutions/finance', icon: DollarSign },
         { label: 'Retail', href: '/solutions/retail', icon: ShoppingCart },
         { label: 'Education', href: '/solutions/education', icon: GraduationCap },
-        { label: 'Government', href: '/solutions/government', icon: Globe },
+        { label: 'Government', href: '/solutions/government', icon: Globe }
       ]
     },
     {
@@ -86,7 +95,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Education', href: '/industries/education', icon: GraduationCap },
         { label: 'Government', href: '/industries/government', icon: Globe },
         { label: 'Manufacturing', href: '/industries/manufacturing', icon: Building2 },
-        { label: 'Retail', href: '/industries/retail', icon: ShoppingCart },
+        { label: 'Retail', href: '/industries/retail', icon: ShoppingCart }
       ]
     },
     {
@@ -100,7 +109,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'Webinars', href: '/webinars' },
         { label: 'Help Center', href: '/help' },
-        { label: 'FAQ', href: '/faq' },
+        { label: 'FAQ', href: '/faq' }
       ]
     },
     {
@@ -113,7 +122,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Our Team', href: '/team' },
         { label: 'Careers', href: '/careers' },
         { label: 'News', href: '/news' },
-        { label: 'Contact', href: '/contact' },
+        { label: 'Contact', href: '/contact' }
       ]
     }
   ];
@@ -122,7 +131,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     { label: 'Get Started', href: '/contact', icon: ChevronRight },
     { label: 'Pricing', href: '/pricing', icon: DollarSign },
     { label: 'Support', href: '/support', icon: HelpCircle },
-    { label: 'Documentation', href: '/docs', icon: FileText },
+    { label: 'Documentation', href: '/docs', icon: FileText }
   ];
 
   const isActive = (href: string) => {
@@ -133,12 +142,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     <>
       {/* Overlay */}
       {isOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
           onClick={onClose}
         />
       )}
-
+      
       {/* Sidebar */}
       <div className={`
         fixed top-0 left-0 h-full w-80 bg-gray-900 text-white z-50 transform transition-transform duration-300 ease-in-out
@@ -197,10 +206,10 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                       onClick={() => toggleSection(item.label)}
                       className="p-2 hover:bg-gray-800 rounded-lg"
                     >
-                      <ChevronRight 
+                      <ChevronRight
                         className={`w-4 h-4 transition-transform ${
                           expandedSections.includes(item.label) ? 'rotate-90' : ''
-                        }`} 
+                        }`}
                       />
                     </button>
                   )}
@@ -254,8 +263,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         <div className="p-6 border-t border-gray-700">
           <div className="text-sm text-gray-400">
             <p className="mb-2">Need help?</p>
-            <p className="text-blue-400">contact@ziontechgroup.com</p>
-            <p className="text-blue-400">+1 (555) 123-4567</p>
+            <p className="text-blue-400">kleber@ziontechgroup.com</p>
+            <p className="text-blue-400">+1 302 464 0950</p>
+            <p className="text-blue-400 text-xs mt-1">364 E Main St STE 1008<br />Middletown, DE 19709</p>
           </div>
         </div>
       </div>

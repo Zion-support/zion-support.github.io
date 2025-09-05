@@ -21,12 +21,6 @@ class MonitoringDashboard {
 
   generateReport() {
     const report = `# Monitoring Dashboard Report
-    }}
-
-  generateReport() {
-    const report = `
-# Monitoring Dashboard Report
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
 
 ## System Information
 - Platform: ${this.data.system.platform}
@@ -44,15 +38,11 @@ class MonitoringDashboard {
     fs.writeFileSync('monitoring-dashboard.md', report);
     console.log('📊 Monitoring dashboard generated');
   }
-    console.log('📊 Monitoring dashboard generated')}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
 }
 
 if (require.main === module) {
   const dashboard = new MonitoringDashboard();
   dashboard.generateReport();
 }
-  dashboard.generateReport()}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
 
 module.exports = MonitoringDashboard;

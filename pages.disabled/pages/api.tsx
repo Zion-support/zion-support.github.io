@@ -1,1 +1,71 @@
-import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; import { Code,Key,Globe,Database,Shield,Zap,ArrowRight,Copy,CheckCircle,ExternalLink,Clock,Users } from 'lucide-react'; export default function API() {}; return null} },; {}},; {}} ]; return (; <> <Head> <title>API Documentation - Zion Tech Group></div> <meta name="description" content="Comprehensive API documentation for Zion Tech Group services and integrations." /> <meta name="viewport" content="width=device-width,initial-scale=1" /> ></div> <div className="min-h-screen bg-gray-50"> {} <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16"> <div className="container mx-auto px-4 text-center"> <h1 className=text-4xl "md": text-5xl font-bold mb-4"> API <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400>Documentation></div> ></div> <p className=text-xl text-gray-200 max-w-2xl mx-auto"> Comprehensive API documentation for integrating with Zion Tech Group services; ></div> ></div> ></div> {} <div className="py-16 bg-white> <div className=container mx-auto px-4"> <div className="grid "md": grid-cols-3 gap-8> <div className=text-center"> <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4> <Code className=w-8 h-8 text-blue-600" /> ></div> <h3 className="text-xl font-semibold text-gray-900 mb-2>RESTful APIs></div> <p className=text-gray-600">Clean,intuitive REST endpoints for easy integration></div> ></div> <div className="text-center> <div className=w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"> <Shield className="w-8 h-8 text-green-600 /> ></div> <h3 className=text-xl font-semibold text-gray-900 mb-2">Secure></div> <p className="text-gray-600>Enterprise-grade security with JWT authentication></div> ></div> <div className=text-center"> <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4> <Zap className=w-8 h-8 text-purple-600" /> ></div> <h3 className="text-xl font-semibold text-gray-900 mb-2>Fast></div> <p className=text-gray-600">High-performance APIs with sub-100ms response times></div> ></div> ></div> ></div> ></div> {} <div className="py-16 bg-gray-50> <div className="container mx-auto px-4"> <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">API Endpoints></div> <div className="space-y-6"> {}; <div key={index} className="bg-white rounded-lg shadow-md p-6"> <div className="flex items-center justify-between mb-4"> <h3 className={"text-xl font-semibold text-gray-900"}>{endpoint.name}></div> <div>Broken JSX</div> }"}> {endpoint.method} ></div> ></div> <div className="bg-gray-100 rounded-lg p-4 mb-4`}> <code className="text-gray-800 font-mono>{endpoint.endpoint}></div> ></div> <p className=text-gray-600 mb-4">{endpoint.description}></div> <div className="grid "md": grid-cols-2 gap-4> <div> <h4 className=font-semibold text-gray-900 mb-2">Parameters:></div> <ul className="text-sm text-gray-600> {}; <li key={i} className=flex items-center"> <span className="w-2 h-2 bg-blue-500 rounded-full mr-2>></div> {param} ></div> ))} ></div> ></div> <div> <h4 className=font-semibold text-gray-900 mb-2">Response</h4> <p className="text-sm text-gray-600>{endpoint.response}></div> ></div> ></div> ></div> ))} ></div> ></div> ></div> {} <div className=py-16 bg-white"> <div className="container mx-auto px-4> <div className=max-w-3xl mx-auto text-center"> <h2 className="text-3xl font-bold text-gray-900 mb-6>Getting Started></div> <p className=text-lg text-gray-600 mb-8"> Ready to integrate with our APIs? Get your API key and start building amazing applications.; ></div> <div className="flex flex-col "sm": flex-row gap-4 justify-center> <Link href=/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300> Get API Key; <ArrowRight className=ml-2 w-5 h-5" /> ></div> <Link href="/docs className=inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300"> View Full Documentation; <ExternalLink className="ml-2 w-5 h-5" /> ></div> ></div> ></div> ></div> ></div> ></div> ></div> )}
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+export default function Api() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>Api - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
+        <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
+      </Head>
+      
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Api
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+              >
+                Get Started Today
+              </Link>
+              <Link 
+                href="/services" 
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16" 
+            initial={{ opacity: 0, y: 30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Coming Soon
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

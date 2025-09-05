@@ -1,68 +1,70 @@
-import React from 'react';
+import React from "react";
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
+import Layout from '../components/Layout';
 
-const blogPosts = [{
+const blogPosts = [
+  {
     id: 1,
-    title: "The Future of AI in Business: Trends and Predictions for 2024",
-    excerpt: "Explore the latest AI trends that are reshaping how businesses operate and compete in the digital landscape.",
-    author: "Sarah Johnson",
+    title: "The Future of AI in Business: 2025 Trends",
+    excerpt: "Explore the latest AI trends that are transforming businesses across industries.",
+    author: "Dr. Sarah Chen",
     date: "2024-01-15",
-    "readTime": "5 min read",
-    tags: ["AI", "Business", "Technology"],
-    image: "/api/placeholder/400/250"
+    category: "AI & Technology",
+    readTime: "5 min read",
+    image: "/api/placeholder/600/300"
   },
   {
     id: 2,
-    title: "Micro SaaS: Building Scalable Solutions for Modern Businesses",
-    excerpt: "Learn how micro SaaS applications are revolutionizing software delivery and what it takes to build successful solutions.",
-    author: "Michael Chen",
-    date: "2024-01-10",
-    "readTime": "7 min read",
-    tags: ["SaaS", "Development", "Scalability"],
-    image: "/api/placeholder/400/250"
+    title: "Micro SaaS: Building Scalable Solutions",
+    excerpt: "Learn how to build and scale micro SaaS applications for modern businesses.",
+    author: "Michael Rodriguez",
+    date: "2024-01-12",
+    category: "Development",
+    readTime: "7 min read",
+    image: "/api/placeholder/600/300"
   },
   {
     id: 3,
-    title: "Cybersecurity Best Practices for Small and Medium Businesses",
-    excerpt: "Essential security measures every SMB should implement to protect their digital assets and customer data.",
-    author: "Emily Rodriguez",
-    date: "2024-01-05",
-    "readTime": "6 min read",
-    tags: ["Security", "SMB", "Best Practices"],
-    image: "/api/placeholder/400/250"
+    title: "Cloud Security Best Practices",
+    excerpt: "Essential security measures for protecting your cloud infrastructure and data.",
+    author: "Jennifer Liu",
+    date: "2024-01-10",
+    category: "Security",
+    readTime: "6 min read",
+    image: "/api/placeholder/600/300"
   },
   {
     id: 4,
-    title: "Cloud Migration Strategies: A Complete Guide",
-    excerpt: "Step-by-step guide to successfully migrating your infrastructure to the cloud while minimizing risks and downtime.",
-    author: "David Kim",
-    date: "2023-12-28",
-    "readTime": "8 min read",
-    tags: ["Cloud", "Migration", "Infrastructure"],
-    image: "/api/placeholder/400/250"
+    title: "Digital Transformation Strategies",
+    excerpt: "How to successfully navigate your organization's digital transformation journey.",
+    author: "David Park",
+    date: "2024-01-08",
+    category: "Strategy",
+    readTime: "8 min read",
+    image: "/api/placeholder/600/300"
   },
   {
     id: 5,
-    title: "The Role of Data Analytics in Digital Transformation",
-    excerpt: "How data analytics is driving digital transformation and helping businesses make data-driven decisions.",
-    author: "Sarah Johnson",
-    date: "2023-12-20",
-    "readTime": "6 min read",
-    tags: ["Analytics", "Digital Transformation", "Data"],
-    image: "/api/placeholder/400/250"
+    title: "Machine Learning in Production",
+    excerpt: "Best practices for deploying and maintaining ML models in production environments.",
+    author: "Dr. Sarah Chen",
+    date: "2024-01-05",
+    category: "AI & Technology",
+    readTime: "9 min read",
+    image: "/api/placeholder/600/300"
   },
   {
     id: 6,
-    title: "Building Resilient IT Infrastructure for Remote Work",
-    excerpt: "Key considerations for creating IT infrastructure that supports remote and hybrid work environments.",
-    author: "Michael Chen",
-    date: "2023-12-15",
-    "readTime": "5 min read",
-    tags: ["IT Infrastructure", "Remote Work", "Resilience"],
-    image: "/api/placeholder/400/250"
+    title: "API Design Principles",
+    excerpt: "Creating robust, scalable APIs that developers love to use and maintain.",
+    author: "Michael Rodriguez",
+    date: "2024-01-03",
+    category: "Development",
+    readTime: "6 min read",
+    image: "/api/placeholder/600/300"
   }
 ];
 
@@ -74,35 +76,40 @@ const categories = [{ name: "AI & Machine Learning", count: 12 },
   { name: "IT Infrastructure", count: 5 }
 ];
 
+
 export default function BlogPage() {
   return (
-<MainLayout 
+    <Layout
       title="Blog - Zion Tech Group"
-      description="Insights, trends, and best practices in AI, cloud computing, cybersecurity, and technology solutions."
-      keywords="technology blog, AI insights, cloud computing, cybersecurity, SaaS development, digital transformation"
+      description="Latest insights on AI, technology, and business innovation from Zion Tech Group experts."
+      keywords="blog, AI insights, technology news, business innovation, tech trends"
     >
+      <Head>
+        <title>Blog - Zion Tech Group</title>
+        <meta name="description" content="Latest insights on AI, technology, and business innovation from Zion Tech Group experts." />
+      </Head>
+      
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
+              className="text-center"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Technology Insights & Trends
+                Our Blog
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Stay updated with the latest insights, trends, and best practices in technology
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Insights, trends, and expert perspectives on AI, technology, and business innovation
               </p>
             </motion.div>
           </div>
-        </div>
-      </section>
+        </section>
 
-{/* Blog Posts Section */}
+        {/* Blog Posts Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
@@ -121,19 +128,14 @@ export default function BlogPage() {
                       <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600"></div>
                       <div className="p-6">
                         <div className="flex flex-wrap gap-2 mb-3">
-                          {post.tags.map((tag, tagIndex) => (
-                            <span
-                              key={tagIndex}
-                              className="px-2 py-1 bg-blue-100 text-blue-600 text-xs rounded-full"
-                            >
-                              {tag}
-                            </span>
-                          ))}
+                          <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                            {post.category}
+                          </span>
                         </div>
-                        <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                        <h2 className="text-xl font-semibold text-gray-900 mb-2">
                           {post.title}
                         </h2>
-                        <p className="text-gray-600 mb-4 line-clamp-3">
+                        <p className="text-gray-600 mb-4">
                           {post.excerpt}
                         </p>
                         <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
@@ -147,7 +149,7 @@ export default function BlogPage() {
                           </div>
                         </div>
                         <div className="flex items-center justify-between">
-                          <span className="text-sm text-gray-500">{post.readTime}</span>
+                          <span>{post.readTime}</span>
                           <Link
                             href={`/blog/${post.id}`}
                             className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center"
@@ -155,6 +157,7 @@ export default function BlogPage() {
                             Read More
                             <ArrowRight className="w-4 h-4 ml-1" />
                           </Link>
+<<<<<<< HEAD
                         </div>                      </div>
                       <div className="flex items-center gap-2">
                         <Calendar className="w-4 h-4" />
@@ -196,8 +199,16 @@ export default function BlogPage() {
                       Next
                     </button>
                   </nav>
+=======
+                        </div>
+                      </div>
+                    </motion.article>
+                  ))}
+>>>>>>> e4f8ef4ed9fd2ff89efca29003f713a7ba5afd67
                 </div>
               </div>
+
+---
 
               {/* Sidebar */}
               <div className="lg:col-span-1">
@@ -239,10 +250,16 @@ export default function BlogPage() {
                     </button>
                   </form>
                 </div>
+<<<<<<< HEAD
               </div>            </div>
+=======
+              </div>
+
+            </div>
+>>>>>>> e4f8ef4ed9fd2ff89efca29003f713a7ba5afd67
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </Layout>
   );
 }

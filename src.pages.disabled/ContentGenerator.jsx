@@ -1,1 +1,14 @@
-<<<<<<< "HEAD": src.pages.disabled/ContentGenerator.jsx import React from 'react'; export default function ContentGenerator () { const { user,isLoading } = useAuth () ; const router = useNavigate () ; const [contentType,setContentType] = useState ("blog") ; const [customPrompt,setCustomPrompt] = useState (") ; const [topic,setTopic] = useState (") ; const [autoPublish,setAutoPublish] = useState (false) ; const [includeImage,setIncludeImage] = useState (true) ; const [isGenerating,setIsGenerating] = useState (false) ; const [previewContent,setPreviewContent] = useState (null) ; const [testEmail,setTestEmail] = useState (") ; import React from 'react'; export default function ContentGenerator () { const { user,isLoading } = useAuth () ; const router = useNavigate () ; const [contentType,setContentType] = useState ("blog") ; const [customPrompt,setCustomPrompt] = useState (") ; const [topic,setTopic] = useState (") ; const [autoPublish,setAutoPublish] = useState (false) ; const [includeImage,setIncludeImage] = useState (true) ; const [isGenerating,setIsGenerating] = useState (false) ; const [previewContent,setPreviewContent] = useState (null) ; const [testEmail,setTestEmail] = useState (") ;"";
+import React from 'react';
+
+interface ContentGeneratorProps {
+  // Add props here as needed
+}
+
+export default function ContentGenerator({ }: ContentGeneratorProps) {
+  return (
+    <div>
+      <h1>ContentGenerator</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,1 +1,14 @@
-import path from path''; import http from 'http'; import { Verifier } from '@pact-foundation/pact'; import handler from '@/pages/api/items'; "let": server; beforeAll((done) => { server: = http.createServer((req,res) => handler(req as any,res as any)); server.listen(4000,done)}) afterAll((done) => { server.close(done)}) test( '"ItemsService": meets contract',async () => {'; const opts = { "provider": 'ItemsServic,e,'; "providerBaseUrl": 'http: pactUrls: [path.resolve(__dirname'../pact/QuoteWizard-ItemsService.json')]}'; "await": new Verifier(opts).verifyProvider()}) beforeAll((done) => { server = http.createServer((req,res) => handler(req as any,res as any)) server.listen(4000,done)}) afterAll((done) => { server.close(done)}) test(','ItemsService meets contract',async () => { const opts = {' "provider": 'ItemsService providerBaseUrl: http: t: 4000,"pactUrls": [path.resolve(__dirname'../pact/QuoteWizard-ItemsService.json')]} await new Verifier(opts).verifyProvider()})
+import React from 'react';
+
+interface ItemsService.provider.testProps {
+  // Add props here as needed
+}
+
+export default function ItemsService.provider.test({ }: ItemsService.provider.testProps) {
+  return (
+    <div>
+      <h1>ItemsService.provider.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

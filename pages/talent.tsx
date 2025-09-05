@@ -4,7 +4,13 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
 
+<<<<<<< HEAD
 const jobOpenings = [{    id: 1,
+=======
+const jobOpenings = [
+  {
+    id: 1,
+>>>>>>> e4f8ef4ed9fd2ff89efca29003f713a7ba5afd67
     title: "Senior AI/ML Engineer",
     department: "AI Services",
     location: "Remote",
@@ -28,7 +34,11 @@ const jobOpenings = [{    id: 1,
     type: "Full-time",
     experience: "3+ years",
     description: "Build scalable web applications and microservices for our SaaS solutions.",
+<<<<<<< HEAD
 requirements: ["Bachelor's degree in Computer Science or related field",      "3+ years experience in full-stack development",
+=======
+      "3+ years experience in full-stack development",
+>>>>>>> e4f8ef4ed9fd2ff89efca29003f713a7ba5afd67
       "Proficiency in React, Node.js, TypeScript",
       "Experience with databases (PostgreSQL, MongoDB)",
       "Knowledge of cloud deployment and DevOps"
@@ -43,7 +53,11 @@ requirements: ["Bachelor's degree in Computer Science or related field",      "3
     type: "Full-time",
     experience: "7+ years",
     description: "Design and implement cloud infrastructure solutions for enterprise clients.",
+<<<<<<< HEAD
 requirements: ["Bachelor's degree in Computer Science or related field",      "7+ years experience in cloud architecture",
+=======
+      "7+ years experience in cloud architecture",
+>>>>>>> e4f8ef4ed9fd2ff89efca29003f713a7ba5afd67
       "AWS/Azure/GCP certifications preferred",
       "Experience with containerization (Docker, Kubernetes)",
       "Strong understanding of security best practices"
@@ -58,7 +72,11 @@ requirements: ["Bachelor's degree in Computer Science or related field",      "7
     type: "Full-time",
     experience: "4+ years",
     description: "Protect our clients' digital assets and implement security best practices.",
+<<<<<<< HEAD
 requirements: ["Bachelor's degree in Cybersecurity or related field",      "4+ years experience in cybersecurity",
+=======
+      "4+ years experience in cybersecurity",
+>>>>>>> e4f8ef4ed9fd2ff89efca29003f713a7ba5afd67
       "Certifications (CISSP, CISM, CEH) preferred",
       "Experience with security tools and frameworks",
       "Knowledge of compliance standards (SOC 2, ISO 27001)"
@@ -73,7 +91,11 @@ requirements: ["Bachelor's degree in Cybersecurity or related field",      "4+ y
     type: "Full-time",
     experience: "3+ years",
     description: "Streamline our development and deployment processes with modern DevOps practices.",
+<<<<<<< HEAD
 requirements: ["Bachelor's degree in Computer Science or related field",      "3+ years experience in DevOps",
+=======
+      "3+ years experience in DevOps",
+>>>>>>> e4f8ef4ed9fd2ff89efca29003f713a7ba5afd67
       "Proficiency in CI/CD pipelines",
       "Experience with infrastructure as code (Terraform, CloudFormation)",
       "Knowledge of monitoring and logging tools"
@@ -88,7 +110,11 @@ requirements: ["Bachelor's degree in Computer Science or related field",      "3
     type: "Full-time",
     experience: "2+ years",
     description: "Create intuitive and beautiful user experiences for our digital products.",
+<<<<<<< HEAD
 requirements: ["Bachelor's degree in Design or related field",      "2+ years experience in UX/UI design",
+=======
+      "2+ years experience in UX/UI design",
+>>>>>>> e4f8ef4ed9fd2ff89efca29003f713a7ba5afd67
       "Proficiency in Figma, Sketch, Adobe Creative Suite",
       "Experience with user research and testing",
       "Strong portfolio demonstrating design skills"
@@ -97,7 +123,11 @@ requirements: ["Bachelor's degree in Design or related field",      "2+ years ex
   }
 ];
 
+<<<<<<< HEAD
 const benefits = [{    title: "Competitive Compensation",
+=======
+    title: "Competitive Compensation",
+>>>>>>> e4f8ef4ed9fd2ff89efca29003f713a7ba5afd67
     description: "We offer competitive salaries and performance-based bonuses",
     icon: Star
   },
@@ -129,6 +159,7 @@ const values = [
 
 export default function TalentPage() {
   return (
+<<<<<<< HEAD
 <MainLayout 
       title="Careers - Zion Tech Group"
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
@@ -223,10 +254,14 @@ export default function TalentPage() {
                 <motion.div
                   key={index}
                   className="bg-white p-6 rounded-lg shadow-lg"                  initial={{ opacity: 0, y: 30 }}
+=======
+                  initial={{ opacity: 0, y: 30 }}
+>>>>>>> e4f8ef4ed9fd2ff89efca29003f713a7ba5afd67
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
+<<<<<<< HEAD
 <div className="flex items-center">
                   <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />
                   <span className="text-gray-900 font-medium">{value}</span>
@@ -346,4 +381,7 @@ export default function TalentPage() {
                   </section>
                   </div>
                   </MainLayout>  );
+=======
+  );
+>>>>>>> e4f8ef4ed9fd2ff89efca29003f713a7ba5afd67
 }

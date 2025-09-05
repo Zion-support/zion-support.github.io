@@ -34,6 +34,7 @@ export default function TermsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-lg shadow-lg p-8">
+<<<<<<< HEAD
 <p className="text-gray-600 mb-6">
                 <strong>Last updated: </strong> January 15, 2024
               </p>
@@ -99,6 +100,9 @@ export default function TermsPage() {
                     <strong>Email:</strong> legal@ziontechgroup.com<br />
                     <strong>Phone:</strong> +1 (302) 464-0950<br />
                     <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709                  </p>
+=======
+                  </p>
+>>>>>>> e4f8ef4ed9fd2ff89efca29003f713a7ba5afd67
                 </div>
 
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
