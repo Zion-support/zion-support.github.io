@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-03T16:54:11.661Z",
   "fixes": [
     "components/ErrorBoundary.tsx: Remove semicolon after closing brace (2 fixes)",
@@ -10,5 +11,11 @@
   ],
   "issues": [],
   "totalFixes": 8,
+=======
+  "timestamp": "2025-09-03T16:53:09.087Z",
+  "fixes": [],
+  "issues": [],
+  "totalFixes": 0,
+>>>>>>> 2a05819f8ad7f9ba18431a36ff65088a0d741ce0
   "totalIssues": 0
 }
