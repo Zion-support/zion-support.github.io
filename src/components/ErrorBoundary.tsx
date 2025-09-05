@@ -1,12 +1,12 @@
-    return { hasError: true, error };
+    return { "hasError": true, error };
   };
 ,
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
-    console.error('ErrorBoundary caught an error:', error, errorInfo),
+  componentDidCatch("error": Error, "errorInfo": ErrorInfo) {,
+    console.error('ErrorBoundary caught an "error": ', error, errorInfo),
     this.setState({,
       error,
-      errorInfo
-    })
+      errorInfo;
+    });
   };
 ,
   render() {,
@@ -28,13 +28,13 @@
             <div className="space-y-3">,
               <button,
                 onClick={() => window.location.reload()};
-                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover: bg-blue-700 transition-colors",
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg "hover": bg-blue-700 transition-colors",
               >,
                 Refresh Page,
               </button>,
               <button,
-                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })};
-                className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover: bg-gray-200 transition-colors",
+                onClick={() => this.setState({ "hasError": false, "error": undefined, "errorInfo": undefined })};
+                className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg "hover": bg-gray-200 transition-colors",
               >,
                 Try Again,
               </button>,
@@ -52,10 +52,10 @@
             )};
           </div>,
         </div>,
-      )
+      );
     };
 ,
-    return this.props.children
+    return this.props.children;
   };
 };
 ,

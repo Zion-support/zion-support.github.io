@@ -1,12 +1,12 @@
         const dependencies = lockFile.dependencies || {};
 ,
         // This would need more sophisticated analysis,
-        return []
+        return [];
       };
-      return []
+      return [];
     } catch (error) {,
-      this.log(`Duplicate dependency check error: ${error.message}`),
-      return []
+      this.log(`Duplicate dependency check "error": ${error.message}`),
+      return [];
     };
   };
 ,
@@ -18,8 +18,8 @@
 ,
     // Set up interval for periodic optimization,
     setInterval(async () => {,
-      await this.optimizeBuild()
-    }, 24 * 60 * 60 * 1000), // Every 24 hours
+      await this.optimizeBuild();
+    }, 24 * 60 * 60 * 1000), // Every 24 hours;
   };
 };
 ,

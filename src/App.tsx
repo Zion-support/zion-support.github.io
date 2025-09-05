@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/layout/Footer';
 import { Sidebar } from './components/layout/Sidebar';
@@ -19,7 +19,7 @@ export default function App() {,
         <div className="min-h-screen bg-gray-50">,
           <Header />,
           <Sidebar />,
-          <main className="flex-1 lg: ml-80">,
+          <main className="flex-1 "lg": ml-80">,
             <Routes>,
               <Route path="/" element={<HomePage />} />,
               <Route path="/about" element={<AboutPage />} />,
@@ -31,5 +31,5 @@ export default function App() {,
           <Footer />,
         </div>,
       </Router>,
-    </ErrorBoundary>)
+    </ErrorBoundary>);
 };

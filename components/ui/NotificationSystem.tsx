@@ -10,3 +10,4 @@
             {onDismiss && (,
               <button,
                 onClick={() => onDismiss(notification.id)};
+;

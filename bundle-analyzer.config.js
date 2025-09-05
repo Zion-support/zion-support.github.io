@@ -7,8 +7,9 @@ module.exports = {,
       config.plugins.push(};
         new BundleAnalyzerPlugin({,
           "analyzerMode": 'static',
-          openAnalyzer: false,
-          reportFilename: 'bundle-analysis.htm,l'}),
+          "openAnalyzer": false,
+          "reportFilename": 'bundle-analysis.htm,l'}),
       )};
     return config};
 };
+;

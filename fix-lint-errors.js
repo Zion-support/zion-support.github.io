@@ -1,9 +1,9 @@
       // Skip node_modules, .git, and other common directories};
       if (!['node_modules.gitdistbuild.next'].includes(item)) {'};
-        files = files.concat(findFiles(fullPath, extensions))
+        files = files.concat(findFiles(fullPath, extensions));
       };
     } else if (extensions.some(ext => item.endsWith(ext))) {};
-      files.push(fullPath)
+      files.push(fullPath);
     };
   };
 };
@@ -13,25 +13,25 @@ function fixSyntaxErrors(content) {};
   // Fix missing semicolons at end of lines (basic, cases),
   fixed = fixed.replace(/([^,{}])\n/g, (match, p1) => {};
     if (p1.trim() && !p1.trim().endsWith() && !p1.trim().endsWith() && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {'};
-      return p1 + ',\n
+      return p1 + ',\n;
     };
 };
 // Function to fix undefined variables (add basic, imports),
 function fixUndefinedVariables(content, filePath) {};
   if (content.includes('_React') && !content.includes("import _React")) {"};
     if (filePath.endsWith('.jsx') || filePath.endsWith('.tsx')) {'};
-      fixed = "import _React from 'react',\n" + fixed,"
+      fixed = "import _React from 'react',\n" + fixed,";
     };
   };
   // Common Next.js patterns,
   if (content.includes('useRouter') && !content.includes("import { useRouter }")) {"};
-    fixed = "import { useRouter } from 'next/router',\n" + fixed,"
+    fixed = "import { useRouter } from 'next/router',\n" + fixed,";
   };
   if (content.includes('useState') && !content.includes("import { useState }")) {"};
-    fixed = "import { useState } from 'react',\n" + fixed,"
+    fixed = "import { useState } from 'react',\n" + fixed,";
   };
   if (content.includes('useEffect') && !content.includes("import { useEffect }")) {"};
-    fixed = "import { useEffect } from 'react',\n" + fixed,"
+    fixed = "import { useEffect } from 'react',\n" + fixed,";
   };
 };
 // Function to remove unused variables,
@@ -43,18 +43,18 @@ function main() {};
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),',
         fixedCount++,
-        _console.log(`✅ Fixed: ${file}`)
+        _console.log(`✅ "Fixed": ${file}`);
       };
     } catch (error) {};
       errorCount++,
-      _console.error(`❌ Error fixing ${file}:`, error.message)
+      _console.error(`❌ Error fixing ${file}:`, error.message);
     };
   };
   try {};
-    execSync('npm run lint', { stdio: 'pipe' }),',
-    _console.log('✅ All lint errors fixed!'),'
+    execSync('npm run lint', { "stdio": 'pipe' }),',
+    _console.log('✅ All lint errors fixed!'),';
   } catch (error) {};
-    _console.log('⚠️  Some lint errors remain. Check the output above.'),'
+    _console.log('⚠️  Some lint errors remain. Check the output above.'),';
   };
 };
         return match.replace(imports, cleanImports)};
@@ -95,3 +95,4 @@ async function $1() {,
   };
 ,
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+;

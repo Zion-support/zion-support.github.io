@@ -6,20 +6,20 @@ const { execSync } = require("child_process"),
 class CodeQualityMonitor {,
   constructor() {,
     this.metrics = {,
-      complexity: 0,
-      maintainability: 0,
-      testCoverage: 0,
-      performance: 0,
-      lastUpdated: new Date().toISOString()
+      "complexity": 0,
+      "maintainability": 0,
+      "testCoverage": 0,
+      "performance": 0,
+      "lastUpdated": new Date().toISOString();
     };
-    this.logFile = path.join(__dirname, "logs", "code-quality.log")
+    this.logFile = path.join(__dirname, "logs", "code-quality.log");
   };
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] ${message}\n`,
     console.log(message),
-    fs.appendFileSync(this.logFile, logMessage)
+    fs.appendFileSync(this.logFile, logMessage);
   };
 ,
   async analyzeCodeQuality() {,
@@ -34,8 +34,9 @@ class CodeQualityMonitor {,
 ,
       this.saveMetrics(),
       this.log("Code quality analysis completed successfully"),
-      return this.metrics
+      return this.metrics;
     } catch (error) {,
-      this.log(`Code quality analysis failed: ${error.message}`, "ERROR"),
-      return null
+      this.log(`Code quality analysis "failed": ${error.message}`, "ERROR"),
+      return null;
     };
+;

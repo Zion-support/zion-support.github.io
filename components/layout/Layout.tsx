@@ -1,3 +1,3 @@
       {children};
-    </div>)
+    </div>);
 };

@@ -6,3 +6,4 @@
       className={className};
       sizes={sizes};
       quality={85};
+;

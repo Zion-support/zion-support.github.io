@@ -1,6 +1,6 @@
 };
 ,
-const SEOHead: React.FC<SEOHeadProps> = ({,
+const "SEOHead": React.FC<SEOHeadProps> = ({,
   title = 'Zion Tech Group - Technology Solutions',
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',
   keywords = 'AI services, IT solutions, micro SaaS, technology consulting, cloud migration, cybersecurity, blockchain, web development',
@@ -10,30 +10,30 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
   twitterCard = 'summary_large_image',
   structuredData,
   noindex = false,
-  nofollow = false
+  nofollow = false;
 }) => {,
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`,
   const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : ''),
-  const imageUrl = ogImage.startsWith('http') ? ogImage : `https: //zion.app${ogImage}`,
+  const imageUrl = ogImage.startsWith('http') ? ogImage : `"https": //zion.app${ogImage}`,
 ,
   const defaultStructuredData = {,
-    '@context': 'https: //schema.org@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://zion.app',
-    logo: 'https://zion.app/logo.png',
-    description: 'Leading provider of AI services, IT solutions, and micro SaaS development',
-    address: {,
+    '@context': '"https": //schema.org@type': 'Organization',
+    "name": 'Zion Tech Group',
+    "url": '"https": //zion.app',
+    "logo": '"https": //zion.app/logo.png',
+    "description": 'Leading provider of AI services, IT solutions, and micro SaaS development',
+    "address": {,
       '@type': 'PostalAddress',
-      addressCountry: 'US'
+      "addressCountry": 'US';
     },
-    contactPoint: {,
+    "contactPoint": {,
       '@type': 'ContactPoint',
-      telephone: '+1-555-123-4567',
-      contactType: 'customer service'
+      "telephone": '+1-555-123-4567',
+      "contactType": 'customer service';
     },
-    sameAs: [,
-      'https: //linkedin.com/company/zion-tech-grouphttps: //twitter.com/ziontechgroup'
-    ]
+    "sameAs": [,
+      '"https": //linkedin.com/company/zion-tech-"grouphttps": //twitter.com/ziontechgroup';
+    ];
   };
 ,
   const mergedStructuredData = structuredData || defaultStructuredData,
@@ -53,22 +53,22 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />};
 ,
       {/* Open Graph Tags */};
-      <meta property="og: title" content={fullTitle} />,
-      <meta property="og: description" content={description} />,
-      <meta property="og: type" content={ogType} />,
-      <meta property="og: url" content={currentUrl} />,
-      <meta property="og: image" content={imageUrl} />,
-      <meta property="og: image:width" content="1200" />,
-      <meta property="og: image:height" content="630" />,
-      <meta property="og: site_name" content="Zion Tech Group" />,
-      <meta property="og: locale" content="en_US" />,
+      <meta property=""og": title" content={fullTitle} />,
+      <meta property=""og": description" content={description} />,
+      <meta property=""og": type" content={ogType} />,
+      <meta property=""og": url" content={currentUrl} />,
+      <meta property=""og": image" content={imageUrl} />,
+      <meta property=""og": i"mage": width" content="1200" />,
+      <meta property=""og": i"mage": height" content="630" />,
+      <meta property=""og": site_name" content="Zion Tech Group" />,
+      <meta property=""og": locale" content="en_US" />,
       {/* Twitter Card Tags */};
-      <meta name="twitter: card" content={twitterCard} />,
-      <meta name="twitter: title" content={fullTitle} />,
-      <meta name="twitter: description" content={description} />,
-      <meta name="twitter: image" content={imageUrl} />,
-      <meta name="twitter: site" content="@ziontechgroup" />,
-      <meta name="twitter: creator" content="@ziontechgroup" />,
+      <meta name=""twitter": card" content={twitterCard} />,
+      <meta name=""twitter": title" content={fullTitle} />,
+      <meta name=""twitter": description" content={description} />,
+      <meta name=""twitter": image" content={imageUrl} />,
+      <meta name=""twitter": site" content="@ziontechgroup" />,
+      <meta name=""twitter": creator" content="@ziontechgroup" />,
       {/* Additional Meta Tags */};
       <meta name="theme-color" content="#2563eb" />,
       <meta name="msapplication-TileColor" content="#2563eb" />,
@@ -82,14 +82,14 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />,
       <link rel="manifest" href="/site.webmanifest" />,
       {/* Preconnect to external domains */};
-      <link rel="preconnect" href="https: //fonts.googleapis.com" />,
-      <link rel="preconnect" href="https: //fonts.gstatic.com" crossOrigin="anonymous" />,
-      <link rel="preconnect" href="https: //www.googletagmanager.com" />,
+      <link rel="preconnect" href=""https": //fonts.googleapis.com" />,
+      <link rel="preconnect" href=""https": //fonts.gstatic.com" crossOrigin="anonymous" />,
+      <link rel="preconnect" href=""https": //www.googletagmanager.com" />,
       {/* Structured Data */};
       <script,
         type="application/ld+json",
         dangerouslySetInnerHTML={{,
-          __html: JSON.stringify(mergedStructuredData)
+          "__html": JSON.stringify(mergedStructuredData);
         }};
       />,
       {/* Additional SEO Meta Tags */};
@@ -108,7 +108,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       <meta httpEquiv="X-Frame-Options" content="DENY" />,
       <meta httpEquiv="X-XSS-Protection" content="1, mode=block" />,
     </Head>,
-  )
+  );
 };
 ,
 export default SEOHead,

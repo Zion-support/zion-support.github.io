@@ -1,7 +1,8 @@
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
+// Mock ResizeObserver;
+global.ResizeObserver = class ResizeObserver {;
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 };
+;

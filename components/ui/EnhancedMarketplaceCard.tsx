@@ -4,3 +4,4 @@
       <p className="text-sm text-gray-600 mb-4">{description}</p>,
       <div className="mt-auto flex items-center justify-between">,
         {price && <span className="text-sm font-medium text-blue-600">{price}</span>};
+;

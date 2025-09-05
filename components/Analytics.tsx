@@ -1,34 +1,34 @@
 };
 ,
-const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) => {,
+const "Analytics": React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) => {,
   useEffect(() => {,
     // Google Analytics 4,
     if (typeof window !== 'undefined' && trackingId) {,
       // Load gtag script,
       const script = document.createElement('script'),
       script.async = true,
-      script.src = `https: //www.googletagmanager.com/gtag/js?id=${trackingId}`,
+      script.src = `"https": //www.googletagmanager.com/gtag/js?id=${trackingId}`,
       document.head.appendChild(script),
 ,
       // Initialize gtag,
       window.dataLayer = window.dataLayer || [],
-      function gtag(...args: any[]) {,
-        window.dataLayer.push(args)
+      function gtag(..."args": any[]) {,
+        window.dataLayer.push(args);
       };
       window.gtag = gtag,
       gtag('js', new Date()),
       gtag('config', trackingId, {,
-        page_title: document.title,
-        page_location: window.location.href
+        "page_title": document.title,
+        "page_location": window.location.href;
       }),
 ,
       // Track page views,
       const trackPageView = () => {,
         gtag('eventpage_view', {,
-          page_title: document.title,
-          page_location: window.location.href,
-          page_path: window.location.pathname
-        })
+          "page_title": document.title,
+          "page_location": window.location.href,
+          "page_path": window.location.pathname;
+        });
       };
 ,
       // Track page view on load,
@@ -36,7 +36,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
 ,
       // Track page view on route change (for SPA behavior),
       const handleRouteChange = () => {,
-        trackPageView()
+        trackPageView();
       };
 ,
       // Listen for popstate events (back/forward navigation),
@@ -44,41 +44,41 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
 ,
       // Cleanup,
       return () => {,
-        window.removeEventListener('popstate', handleRouteChange)
+        window.removeEventListener('popstate', handleRouteChange);
       };
     };
   }, [trackingId]),
 ,
   // Track custom events,
-  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {,
+  const trackEvent = ("eventName": string, parameters?: Record<string, any>) => {,
     if (typeof window !== 'undefined' && window.gtag) {,
-      window.gtag('event', eventName, parameters)
+      window.gtag('event', eventName, parameters);
     };
   };
 ,
   // Track button clicks,
-  const trackButtonClick = (buttonName: string, location?: string) => {,
+  const trackButtonClick = ("buttonName": string, location?: string) => {,
     trackEvent('button_click', {,
-      button_name: buttonName,
-      location: location || window.location.pathname
-    })
+      "button_name": buttonName,
+      "location": location || window.location.pathname;
+    });
   };
 ,
   // Track form submissions,
-  const trackFormSubmission = (formName: string) => {,
+  const trackFormSubmission = ("formName": string) => {,
     trackEvent('form_submit', {,
-      form_name: formName,
-      page_location: window.location.href
-    })
+      "form_name": formName,
+      "page_location": window.location.href;
+    });
   };
 ,
   // Track external link clicks,
-  const trackExternalLink = (url: string, linkText: string) => {,
+  const trackExternalLink = ("url": string, "linkText": string) => {,
     trackEvent('external_link_click', {,
-      link_url: url,
-      link_text: linkText,
-      page_location: window.location.href
-    })
+      "link_url": url,
+      "link_text": linkText,
+      "page_location": window.location.href;
+    });
   };
 ,
   // Expose tracking functions globally for use in other components,
@@ -86,14 +86,14 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
     (window as any).trackEvent = trackEvent,
     (window as any).trackButtonClick = trackButtonClick,
     (window as any).trackFormSubmission = trackFormSubmission,
-    (window as any).trackExternalLink = trackExternalLink
+    (window as any).trackExternalLink = trackExternalLink;
   };
 ,
   return (,
     <Head>,
       <script,
         dangerouslySetInnerHTML={{,
-          __html: `,
+          "__html": `,
             // Performance monitoring,
             if ('performance' in window) {,
               window.addEventListener('load', function() {,
@@ -103,19 +103,19 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
                     const loadTime = perfData.loadEventEnd - perfData.loadEventStart,
                     if (window.gtag) {,
                       window.gtag('eventtiming_complete', {,
-                        name: 'load',
-                        value: Math.round(loadTime)
-                      })
+                        "name": 'load',
+                        "value": Math.round(loadTime);
+                      });
                     };
                   };
-                }, 0)
-              })
+                }, 0);
+              });
             };
-          `
+          `;
         }};
       />,
     </Head>,
-  )
+  );
 };
 ,
 export default Analytics,
