@@ -46,11 +46,11 @@ class CompleteImprovementSuite {
 
     try {
       const files = this.getAllFiles(this.projectRoot, ['.tsx',
-        '.ts',
-        '.jsx',
-        '.js',
-        '.json',
-        '.md',
+
+
+
+
+
       ]);
       let resolvedCount = 0;
 
@@ -76,9 +76,9 @@ class CompleteImprovementSuite {
 
     try {
       const files = this.getAllFiles(path.join(this.projectRoot, 'src'), ['.tsx',
-        '.ts',
-        '.jsx',
-        '.js',
+
+
+
       ]);
       let fixedCount = 0;
 
@@ -185,7 +185,8 @@ class CompleteImprovementSuite {
       return (
         content.includes('<<<<<<< HEAD') ||
         content.includes('=======') ||
-        content.includes('      );
+        content.includes('>>>>>>>')
+      );
     } catch (error) {
       return false;
     }

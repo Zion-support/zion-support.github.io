@@ -206,8 +206,8 @@ class IntelligentErrorDetector {
 
     const reportFile = path.join(
       __dirname,
-      'reports',
-      'error-detection-report.json'
+
+
     );
     fs.mkdirSync(path.dirname(reportFile), { recursive: true });
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -220,7 +220,7 @@ class IntelligentErrorDetector {
 
     if (errors.syntax.length > 0) {
       suggestions.push(
-        'Run ESLint with --fix to automatically fix syntax errors'
+
       );
     }
 

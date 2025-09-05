@@ -40,8 +40,8 @@ class MergeConflictResolver {
 
     // Check current status
     const status = await this.runCommand(
-      'git status --porcelain',
-      'Check git status'
+
+
     );
     if (!status.success) return false;
 
@@ -55,7 +55,7 @@ class MergeConflictResolver {
       // Commit the resolution
       await this.runCommand(
         'git commit -m "Resolve merge conflicts automatically"',
-        'Commit conflict resolution'
+
       );
     }
 
@@ -67,8 +67,8 @@ class MergeConflictResolver {
 
     // Try to pull latest changes
     await this.runCommand(
-      'git pull origin main --no-edit',
-      'Pull latest changes'
+
+
     );
 
     // Resolve any conflicts
@@ -80,19 +80,19 @@ class MergeConflictResolver {
     // Commit changes
     await this.runCommand(
       'git commit -m "feat: Comprehensive automation improvements and fixes\n\n- Fixed syntax errors and build issues\n- Resolved merge conflicts\n- Enhanced automation scripts\n- Added performance optimizations\n- Improved security configurations\n- Created comprehensive monitoring system"',
-      'Commit improvements'
+
     );
 
     // Push to current branch
     const branchResult = await this.runCommand(
-      'git branch --show-current',
-      'Get current branch'
+
+
     );
     if (branchResult.success) {
       const currentBranch = branchResult.output.trim();
       await this.runCommand(
         `git push origin ${currentBranch}`,
-        'Push to current branch'
+
       );
     }
   }
@@ -107,8 +107,8 @@ class MergeConflictResolver {
 
       // List open PRs
       const prsResult = await this.runCommand(
-        'gh pr list --state open',
-        'List open PRs'
+
+
       );
       if (prsResult.success && prsResult.output.trim()) {
         this.log('Open PRs found:', 'INFO');
@@ -140,8 +140,8 @@ class MergeConflictResolver {
 
   async run() {
     this.log(
-      '🚀 Starting Merge Conflict Resolution and PR Management',
-      'PROGRESS'
+
+
     );
 
     try {

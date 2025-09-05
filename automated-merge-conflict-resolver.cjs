@@ -177,7 +177,7 @@ function main() {
       console.log('   3. Verify the merge on GitHub');
     } else {
       console.log(
-        '\n⚠️  Conflicts were resolved but merge could not be committed.'
+
       );
       console.log('📋 Manual steps required:');
       console.log('   1. Review the resolved files');

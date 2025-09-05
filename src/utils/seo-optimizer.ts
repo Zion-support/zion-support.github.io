@@ -5,10 +5,10 @@ export const generateMetaTags = pageData => {
       pageData.title || 'Zion Tech Group - Innovative Technology Solutions',
     description:
       pageData.description ||
-      'Leading provider of AI, blockchain, and emerging technology services',
+
     keywords:
       pageData.keywords ||
-      'AI, blockchain, technology, innovation, software development',
+
     ogTitle: pageData.ogTitle || pageData.title,
     ogDescription: pageData.ogDescription || pageData.description,
     ogImage: pageData.ogImage || '/images/og-image.jpg',

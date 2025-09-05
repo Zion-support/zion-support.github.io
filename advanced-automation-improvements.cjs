@@ -287,8 +287,8 @@ module.exports = IntelligentErrorDetector;`;
 
     const scriptPath = path.join(
       this.projectRoot,
-      'automation',
-      'intelligent-error-detector.cjs'
+
+
     );
     fs.writeFileSync(scriptPath, script);
     this.improvements.push('Created intelligent error detector');
@@ -450,8 +450,8 @@ module.exports = PerformanceMonitor;`;
 
     const scriptPath = path.join(
       this.projectRoot,
-      'automation',
-      'performance-monitor.cjs'
+
+
     );
     fs.writeFileSync(scriptPath, script);
     this.improvements.push('Created performance monitor');
@@ -652,8 +652,8 @@ module.exports = SecurityScanner;`;
 
     const scriptPath = path.join(
       this.projectRoot,
-      'automation',
-      'security-scanner.cjs'
+
+
     );
     fs.writeFileSync(scriptPath, script);
     this.improvements.push('Created security scanner');
@@ -805,8 +805,8 @@ module.exports = GitWorkflowAutomator;`;
 
     const scriptPath = path.join(
       this.projectRoot,
-      'automation',
-      'git-workflow-automator.cjs'
+
+
     );
     fs.writeFileSync(scriptPath, script);
     this.improvements.push('Created Git workflow automator');
@@ -826,16 +826,16 @@ module.exports = GitWorkflowAutomator;`;
 
       // Run the new scripts
       await this.runCommand(
-        'node automation/intelligent-error-detector.cjs',
-        'Run error detector'
+
+
       );
       await this.runCommand(
-        'node automation/performance-monitor.cjs',
-        'Run performance monitor'
+
+
       );
       await this.runCommand(
-        'node automation/security-scanner.cjs',
-        'Run security scanner'
+
+
       );
 
       this.log('\\n📊 ADVANCED AUTOMATION IMPROVEMENTS COMPLETED');
@@ -847,7 +847,7 @@ module.exports = GitWorkflowAutomator;`;
     } catch (error) {
       this.log(
         `Advanced automation improvements failed: ${error.message}`,
-        'ERROR'
+
       );
     }
   }

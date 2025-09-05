@@ -221,7 +221,7 @@ class ComprehensiveAppImprover {
 
     const reportPath = path.join(
       this.reportsDir,
-      'comprehensive-app-improvement-report.json'
+
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 

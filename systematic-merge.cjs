@@ -64,11 +64,11 @@ class SystematicMerger {
         if (status.includes('UU') || status.includes('AA')) {
           // Accept incoming changes for conflicts
           await this.runCommand(
-            'git checkout --theirs .',
+
             `Accept incoming changes for ${branchName}`
           );
           await this.runCommand(
-            'git add .',
+
             `Stage resolved changes for ${branchName}`
           );
           await this.runCommand(
@@ -85,14 +85,14 @@ class SystematicMerger {
       } catch (resolveError) {
         this.log(
           `❌ Could not resolve conflicts for ${branchName}: ${resolveError.message}`,
-          'ERROR'
+
         );
         this.failedBranches.push(branchName);
 
         // Reset to clean state
         try {
           await this.runCommand(
-            'git merge --abort',
+
             `Abort merge for ${branchName}`
           );
         } catch (abortError) {
@@ -109,12 +109,12 @@ class SystematicMerger {
 
     // Priority branches to merge
     const priorityBranches = [
-      'cursor/automate-test-improve-and-merge-code-4061',
-      'cursor/automate-continuous-project-improvement-and-integration-3bb7',
-      'cursor/automate-deployment-redundancy-and-clean-up-0b6a',
-      'cursor/enhance-app-services-and-website-with-futuristic-design-0184',
-      'cursor/build-and-fix-errors-008f',
-      'cursor/automate-project-enhancement-and-merge-cac0',
+
+
+
+
+
+
     ];
 
     // Ensure we're on main branch
@@ -129,20 +129,20 @@ class SystematicMerger {
         if (this.mergedBranches.includes(branch)) {
           try {
             await this.runCommand(
-              'git push origin main',
+
               `Push merged changes for ${branch}`
             );
           } catch (pushError) {
             this.log(
               `Warning: Could not push changes for ${branch}: ${pushError.message}`,
-              'WARN'
+
             );
           }
         }
       } catch (error) {
         this.log(
           `Error processing branch ${branch}: ${error.message}`,
-          'ERROR'
+
         );
       }
     }
@@ -164,7 +164,7 @@ class SystematicMerger {
     };
 
     fs.writeFileSync(
-      'systematic-merge-report.json',
+
       JSON.stringify(report, null, 2)
     );
 

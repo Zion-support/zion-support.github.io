@@ -85,7 +85,7 @@ function processDirectory(dirPath) {
 }
 
 console.log(
-  'Starting ultimate final ultimate final ultimate semicolon fixes...'
+
 );
 const fixedCount = processDirectory('./pages');
 console.log(`Fixed ${fixedCount} files`);

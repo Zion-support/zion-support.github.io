@@ -121,12 +121,12 @@ class AutoFixer {
       this.log('Cleaning up temporary files...');
 
       const tempFiles = [
-        '.next/cache',
-        'node_modules/.cache',
-        '*.log',
-        '*.tmp',
-        '.DS_Store',
-        'Thumbs.db',
+
+
+
+
+
+
       ];
 
       for (const pattern of tempFiles) {

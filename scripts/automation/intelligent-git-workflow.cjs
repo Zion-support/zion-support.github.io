@@ -21,8 +21,8 @@ class IntelligentGitWorkflow {
   loadWorkflowData() {
     const dataFile = path.join(
       this.projectRoot,
-      'logs',
-      'git-workflow-data.json'
+
+
     );
     try {
       if (fs.existsSync(dataFile)) {
@@ -43,8 +43,8 @@ class IntelligentGitWorkflow {
   saveWorkflowData() {
     const dataFile = path.join(
       this.projectRoot,
-      'logs',
-      'git-workflow-data.json'
+
+
     );
     fs.writeFileSync(dataFile, JSON.stringify(this.workflowData, null, 2));
   }
@@ -467,8 +467,8 @@ class IntelligentGitWorkflow {
 
     const errorFile = path.join(
       this.projectRoot,
-      'logs',
-      'git-workflow-errors.json'
+
+
     );
     let errors = [];
 

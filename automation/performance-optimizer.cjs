@@ -83,18 +83,18 @@ class PerformanceOptimizer {
       timestamp: new Date().toISOString(),
       optimizations: this.optimizations,
       recommendations: [
-        'Consider implementing code splitting',
-        'Optimize images using WebP format',
-        'Remove unused dependencies',
-        'Enable gzip compression',
-        'Use React.memo for expensive components',
+
+
+
+
+
       ],
     };
 
     const reportFile = path.join(
       __dirname,
-      'reports',
-      'performance-report.json'
+
+
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`Performance report saved to: ${reportFile}`);

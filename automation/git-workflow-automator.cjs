@@ -58,8 +58,8 @@ class GitWorkflowAutomator {
 
       // Check if there are changes to commit
       const statusResult = await this.runCommand(
-        'git status --porcelain',
-        'Check git status'
+
+
       );
       if (!statusResult.success || !statusResult.output.trim()) {
         this.log('No changes to commit');
@@ -70,7 +70,7 @@ class GitWorkflowAutomator {
       const commitMessage = `feat: Automated improvements and fixes - ${new Date().toISOString()}`;
       await this.runCommand(
         `git commit -m "${commitMessage}"`,
-        'Commit changes'
+
       );
 
       // Push changes

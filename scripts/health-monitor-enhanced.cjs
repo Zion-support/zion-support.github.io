@@ -10,9 +10,9 @@ class EnhancedHealthMonitor {
   constructor() {
     this.logFile = path.join(
       __dirname,
-      '..',
-      'automation-reports',
-      'health-monitor.log'
+
+
+
     );
     this.ensureLogDir();
   }
@@ -177,9 +177,9 @@ class EnhancedHealthMonitor {
 
     const reportPath = path.join(
       __dirname,
-      '..',
-      'automation-reports',
-      'health-monitor-report.json'
+
+
+
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved to: ${reportPath}`);

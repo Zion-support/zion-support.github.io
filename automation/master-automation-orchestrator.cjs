@@ -100,15 +100,15 @@ function generateReport(results) {
       failed: results.failureCount,
       successRate:
         ((results.successCount / results.results.length) * 100).toFixed(2) +
-        '%',
+
     },
     tasks: results.results,
     recommendations: [
-      'Continue monitoring build and test status',
-      'Address any critical failures immediately',
-      'Review and fix linting issues',
-      'Optimize performance based on analysis results',
-      'Implement security recommendations',
+
+
+
+
+
     ],
   };
 
@@ -119,7 +119,7 @@ function generateReport(results) {
   }
 
   fs.writeFileSync(
-    '/workspace/automation/reports/master-automation-report.json',
+
     JSON.stringify(report, null, 2)
   );
 
@@ -150,7 +150,7 @@ async function main() {
 
     console.log('\n✅ Master automation orchestration completed');
     console.log(
-      '📄 Detailed report saved to: /workspace/automation/reports/master-automation-report.json'
+
     );
 
     // Return success/failure based on critical tasks

@@ -5,9 +5,9 @@ const cleanTsconfig = `{
   "compilerOptions": {
     "target": "es5",
     "lib": [
-      "dom",
-      "dom.iterable",
-      "es6"
+
+
+
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -32,13 +32,13 @@ const cleanTsconfig = `{
     }
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
+
+
+
+
   ],
   "exclude": [
-    "node_modules"
+
   ]
 }`;
 

@@ -21,8 +21,8 @@ class SmartDeploymentMerge {
   loadDeploymentData() {
     const dataFile = path.join(
       this.projectRoot,
-      'logs',
-      'deployment-data.json'
+
+
     );
     try {
       if (fs.existsSync(dataFile)) {
@@ -43,8 +43,8 @@ class SmartDeploymentMerge {
   saveDeploymentData() {
     const dataFile = path.join(
       this.projectRoot,
-      'logs',
-      'deployment-data.json'
+
+
     );
     fs.writeFileSync(dataFile, JSON.stringify(this.deploymentData, null, 2));
   }
@@ -556,8 +556,8 @@ class SmartDeploymentMerge {
 
     const errorFile = path.join(
       this.projectRoot,
-      'logs',
-      'deployment-errors.json'
+
+
     );
     let errors = [];
 

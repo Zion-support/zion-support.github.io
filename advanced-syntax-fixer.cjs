@@ -38,15 +38,15 @@ function fixAdvancedSyntaxIssues(filePath) {
     // Fix export statements
     content = content.replace(
       /export default function (\w+)\(\): JSX\.Element \{/g,
-      'export default function $1(): JSX.Element {'
+
     );
     content = content.replace(
       /export interface (\w+) \{;/g,
-      'export interface $1 {'
+
     );
     content = content.replace(
       /export const (\w+): (\w+)\[\] = \[;/g,
-      'export const $1: $2[] = [];'
+
     );
 
     // Fix JSX syntax
@@ -75,7 +75,7 @@ function fixAdvancedSyntaxIssues(filePath) {
     // Fix React component syntax
     content = content.replace(
       /const (\w+) = \(\) => \{/g,
-      'const $1 = () => {'
+
     );
     content = content.replace(/export default (\w+),/g, 'export default $1;');
 
@@ -109,7 +109,7 @@ function fixAdvancedSyntaxIssues(filePath) {
     );
     content = content.replace(
       /export default function App\(\): JSX\.Element \{/g,
-      'export default function App(): JSX.Element {'
+
     );
 
     // Fix vite config issues

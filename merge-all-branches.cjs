@@ -36,8 +36,8 @@ class BranchMerger {
   async getRemoteBranches() {
     try {
       const result = await this.runCommand(
-        'git branch -r',
-        'Get remote branches'
+
+
       );
       const branches = result
         .split('\n')
@@ -95,11 +95,11 @@ class BranchMerger {
 
         // Accept incoming changes for most conflicts
         await this.runCommand(
-          'git checkout --theirs .',
+
           `Accept incoming changes for ${branchName}`
         );
         await this.runCommand(
-          'git add .',
+
           `Stage resolved changes for ${branchName}`
         );
         await this.runCommand(
@@ -115,14 +115,14 @@ class BranchMerger {
       } catch (resolveError) {
         this.log(
           `❌ Could not resolve conflicts for ${branchName}: ${resolveError.message}`,
-          'ERROR'
+
         );
         this.failedBranches.push(branchName);
 
         // Reset to clean state
         try {
           await this.runCommand(
-            'git merge --abort',
+
             `Abort merge for ${branchName}`
           );
         } catch (abortError) {
@@ -158,13 +158,13 @@ class BranchMerger {
         if (this.mergedBranches.includes(branch)) {
           try {
             await this.runCommand(
-              'git push origin main',
+
               `Push merged changes for ${branch}`
             );
           } catch (pushError) {
             this.log(
               `Warning: Could not push changes for ${branch}: ${pushError.message}`,
-              'WARN'
+
             );
           }
         }

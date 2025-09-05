@@ -81,13 +81,13 @@ class EnhancedAutomationSuite {
       // Remove unused imports
       const unusedImportsResult = await this.runCommand(
         'npx eslint . --fix --rule "no-unused-vars: error" --rule "no-unused-imports: error"',
-        'Remove unused imports'
+
       );
 
       // Fix common code issues
       const codeFixesResult = await this.runCommand(
         'npx eslint . --fix --rule "prefer-const: error" --rule "no-var: error"',
-        'Apply code quality fixes'
+
       );
 
       this.results.codeQuality = {
@@ -116,20 +116,20 @@ class EnhancedAutomationSuite {
     try {
       // Run npm audit
       const auditResult = await this.runCommand(
-        'npm audit --audit-level moderate',
-        'Security Audit'
+
+
       );
 
       // Check for security vulnerabilities in dependencies
       const vulnerabilityCheck = await this.runCommand(
-        'npm audit --json',
-        'Vulnerability Check'
+
+
       );
 
       // Scan for common security issues
       const securityScan = await this.runCommand(
         'npx eslint . --rule "no-eval: error" --rule "no-implied-eval: error"',
-        'Security Code Scan'
+
       );
 
       this.results.securityAudit = {
@@ -158,20 +158,20 @@ class EnhancedAutomationSuite {
     try {
       // Analyze bundle size
       const bundleAnalysis = await this.runCommand(
-        'npm run build:analyze',
-        'Bundle Analysis'
+
+
       );
 
       // Optimize images
       const imageOptimization = await this.runCommand(
-        'npx next-optimized-images',
-        'Image Optimization'
+
+
       );
 
       // Check for performance issues
       const performanceCheck = await this.runCommand(
-        'npx lighthouse http://localhost:3000 --output=json',
-        'Performance Check'
+
+
       );
 
       this.results.performanceOptimization = {
@@ -197,20 +197,20 @@ class EnhancedAutomationSuite {
     try {
       // Generate sitemap
       const sitemapResult = await this.runCommand(
-        'npm run sitemap:generate',
-        'Generate Sitemap'
+
+
       );
 
       // Generate search index
       const searchIndexResult = await this.runCommand(
-        'npm run search:index',
-        'Generate Search Index'
+
+
       );
 
       // Check for SEO issues
       const seoCheck = await this.runCommand(
         'npx eslint . --rule "jsx-a11y/alt-text: error" --rule "jsx-a11y/heading-has-content: error"',
-        'SEO Code Check'
+
       );
 
       this.results.seoOptimization = {
@@ -240,13 +240,13 @@ class EnhancedAutomationSuite {
       // Run accessibility checks
       const accessibilityCheck = await this.runCommand(
         'npx eslint . --rule "jsx-a11y/alt-text: error" --rule "jsx-a11y/aria-role: error"',
-        'Accessibility Check'
+
       );
 
       // Check for keyboard navigation
       const keyboardCheck = await this.runCommand(
         'npx eslint . --rule "jsx-a11y/tabindex-no-positive: error"',
-        'Keyboard Navigation Check'
+
       );
 
       this.results.accessibilityImprovements = {
@@ -277,14 +277,14 @@ class EnhancedAutomationSuite {
 
       // Production build
       const productionBuild = await this.runCommand(
-        'npm run build:production',
-        'Production Build'
+
+
       );
 
       // Build analysis
       const buildAnalysis = await this.runCommand(
-        'npm run build:analyze',
-        'Build Analysis'
+
+
       );
 
       this.results.buildOptimization = {
@@ -374,7 +374,7 @@ class EnhancedAutomationSuite {
     };
 
     fs.writeFileSync(
-      'enhanced-automation-report.json',
+
       JSON.stringify(report, null, 2)
     );
     this.log('\n📄 Detailed report saved to enhanced-automation-report.json');

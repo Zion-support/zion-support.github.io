@@ -117,9 +117,9 @@ class ImportFixer {
 
     // Find all React component files
     const filesToCheck = [
-      'pages/components/Footer.tsx',
-      'pages/components/Navigation.tsx',
-      'pages/components/Layout.tsx',
+
+
+
     ];
 
     for (const file of filesToCheck) {

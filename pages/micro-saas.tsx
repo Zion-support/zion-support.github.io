@@ -126,8 +126,7 @@ import {
   MessageSquare,
   Kanban,
   Receipt,
-  Network,
-  Brain,
+  Network, Brain,
   BookOpen,
   TreePine,
   Gamepad2,
@@ -1877,12 +1876,12 @@ const additionalServices = [
     description: "Streamline business processes with intelligent automation tools",
     icon: Zap,
     features: [
-      "Process Automation",
-      "Task Scheduling",
-      "Data Integration",
-      "Custom Workflows",
-      "API Integrations",
-      "Real-time Notifications"
+
+
+
+
+
+
     ],
     price: "Starting at $1,500/month",
     marketPrice: "$2,500-5,000/month",
@@ -1894,12 +1893,12 @@ const additionalServices = [
     description: "Powerful data analysis and processing solutions",
     icon: BarChart3,
     features: [
-      "Data Visualization",
-      "ETL Processes",
-      "Real-time Analytics",
-      "Custom Dashboards",
-      "Report Generation",
-      "Data Export/Import"
+
+
+
+
+
+
     ],
     price: "Starting at $2,000/month",
     marketPrice: "$3,500-7,000/month",
@@ -1911,12 +1910,12 @@ const additionalServices = [
     description: "Connect your systems with seamless API solutions",
     icon: Code,
     features: [
-      "REST API Development",
-      "Third-party Integrations",
-      "Webhook Management",
-      "API Documentation",
-      "Rate Limiting",
-      "Authentication & Security"
+
+
+
+
+
+
     ],
     price: "Starting at $1,800/month",
     marketPrice: "$3,000-6,000/month",
@@ -1928,12 +1927,12 @@ const additionalServices = [
     description: "Tailored dashboards for your business needs",
     icon: Settings,
     features: [
-      "Real-time Monitoring",
-      "Custom Widgets",
-      "User Management",
-      "Role-based Access",
-      "Mobile Responsive",
-      "Export Capabilities"
+
+
+
+
+
+
     ],
     price: "Starting at $1,200/month",
     marketPrice: "$2,000-4,500/month",
@@ -1945,12 +1944,12 @@ const additionalServices = [
     description: "Complete SaaS solutions from concept to deployment",
     icon: Cloud,
     features: [
-      "Multi-tenant Architecture",
-      "Subscription Management",
-      "Payment Integration",
-      "User Onboarding",
-      "Analytics & Reporting",
-      "Scalable Infrastructure"
+
+
+
+
+
+
     ],
     price: "Starting at $3,500/month",
     marketPrice: "$5,000-15,000/month",
@@ -1962,12 +1961,12 @@ const additionalServices = [
     description: "Advanced BI solutions for data-driven decisions",
     icon: BarChart3,
     features: [
-      "Interactive Dashboards",
-      "Predictive Analytics",
-      "Data Mining",
-      "Custom Reports",
-      "Machine Learning Integration",
-      "Real-time Insights"
+
+
+
+
+
+
     ],
     price: "Starting at $2,500/month",
     marketPrice: "$4,000-8,000/month",
@@ -1979,12 +1978,12 @@ const additionalServices = [
     description: "Comprehensive CRM solution for managing customer relationships",
     icon: Users,
     features: [
-      "Contact Management",
-      "Lead Tracking",
-      "Sales Pipeline",
-      "Email Marketing",
-      "Customer Support",
-      "Analytics & Reporting"
+
+
+
+
+
+
     ],
     price: "Starting at $1,800/month",
     marketPrice: "$2,500-6,000/month",
@@ -1996,12 +1995,12 @@ const additionalServices = [
     description: "Complete project management solution for teams",
     icon: CheckCircle,
     features: [
-      "Task Management",
-      "Team Collaboration",
-      "Time Tracking",
-      "Resource Planning",
-      "Progress Monitoring",
-      "Document Sharing"
+
+
+
+
+
+
     ],
     price: "Starting at $1,500/month",
     marketPrice: "$2,000-5,000/month",
@@ -2013,12 +2012,12 @@ const additionalServices = [
     description: "Smart inventory tracking and management solution",
     icon: Package,
     features: [
-      "Real-time Inventory Tracking",
-      "Automated Reordering",
-      "Barcode Scanning",
-      "Multi-location Support",
-      "Analytics & Forecasting",
-      "Integration with POS/ERP"
+
+
+
+
+
+
     ],
     price: "Starting at $1,200/month",
     marketPrice: "$2,000-4,500/month",
@@ -2030,12 +2029,12 @@ const additionalServices = [
     description: "Advanced email marketing and automation platform",
     icon: Mail,
     features: [
-      "Email Campaign Builder",
-      "Automation Workflows",
-      "A/B Testing",
-      "List Segmentation",
-      "Analytics & Reporting",
-      "Integration with CRM"
+
+
+
+
+
+
     ],
     price: "Starting at $1,000/month",
     marketPrice: "$1,500-4,000/month",
@@ -2047,12 +2046,12 @@ const additionalServices = [
     description: "Comprehensive social media scheduling and analytics platform",
     icon: Globe,
     features: [
-      "Multi-platform Posting",
-      "Content Calendar",
-      "Analytics & Insights",
-      "Team Collaboration",
-      "Hashtag Research",
-      "Competitor Analysis"
+
+
+
+
+
+
     ],
     price: "Starting at $1,500/month",
     marketPrice: "$2,500-5,000/month",
@@ -2064,12 +2063,12 @@ const additionalServices = [
     description: "Complete human resources management solution",
     icon: Users,
     features: [
-      "Employee Database",
-      "Time & Attendance",
-      "Payroll Integration",
-      "Performance Reviews",
-      "Recruitment Tools",
-      "Benefits Management"
+
+
+
+
+
+
     ],
     price: "Starting at $2,000/month",
     marketPrice: "$3,000-7,000/month",
@@ -2081,12 +2080,12 @@ const additionalServices = [
     description: "Comprehensive financial tracking and management solution",
     icon: DollarSign,
     features: [
-      "Expense Tracking",
-      "Invoice Management",
-      "Budget Planning",
-      "Financial Reporting",
-      "Tax Preparation",
-      "Bank Integration"
+
+
+
+
+
+
     ],
     price: "Starting at $1,800/month",
     marketPrice: "$2,500-6,000/month",
@@ -2098,12 +2097,12 @@ const additionalServices = [
     description: "Complete e-learning platform for training and education",
     icon: GraduationCap,
     features: [
-      "Course Creation",
-      "Student Management",
-      "Progress Tracking",
-      "Certification System",
-      "Video Streaming",
-      "Assessment Tools"
+
+
+
+
+
+
     ],
     price: "Starting at $2,200/month",
     marketPrice: "$3,500-8,000/month",
@@ -2115,12 +2114,12 @@ const additionalServices = [
     description: "Complete solution for managing events and conferences",
     icon: Calendar,
     features: [
-      "Event Registration",
-      "Ticketing System",
-      "Attendee Management",
-      "Payment Processing",
-      "Event Analytics",
-      "Mobile App"
+
+
+
+
+
+
     ],
     price: "Starting at $1,500/month",
     marketPrice: "$2,500-5,500/month",
@@ -2132,12 +2131,12 @@ const additionalServices = [
     description: "Advanced CMS for managing digital content",
     icon: FileText,
     features: [
-      "Content Editor",
-      "Media Library",
-      "SEO Optimization",
-      "Multi-language Support",
-      "Version Control",
-      "Publishing Workflow"
+
+
+
+
+
+
     ],
     price: "Starting at $1,200/month",
     marketPrice: "$2,000-4,500/month",
@@ -2149,12 +2148,12 @@ const additionalServices = [
     description: "Advanced analytics and business intelligence solution",
     icon: BarChart3,
     features: [
-      "Custom Dashboards",
-      "Data Visualization",
-      "Real-time Analytics",
-      "Automated Reports",
-      "Data Export",
-      "API Integration"
+
+
+
+
+
+
     ],
     price: "Starting at $2,000/month",
     marketPrice: "$3,500-7,000/month",
@@ -2166,12 +2165,12 @@ const additionalServices = [
     description: "Comprehensive customer support and helpdesk solution",
     icon: Shield,
     features: [
-      "Ticket Management",
-      "Live Chat",
-      "Knowledge Base",
-      "Automation Rules",
-      "Performance Analytics",
-      "Multi-channel Support"
+
+
+
+
+
+
     ],
     price: "Starting at $1,500/month",
     marketPrice: "$2,500-5,000/month",
@@ -2183,12 +2182,12 @@ const additionalServices = [
     description: "Complete online store solution with advanced features",
     icon: ShoppingCart,
     features: [
-      "Product Catalog",
-      "Shopping Cart",
-      "Payment Processing",
-      "Order Management",
-      "Inventory Tracking",
-      "Marketing Tools"
+
+
+
+
+
+
     ],
     price: "Starting at $2,500/month",
     marketPrice: "$4,000-10,000/month",
@@ -2200,12 +2199,12 @@ const additionalServices = [
     description: "Secure document storage and collaboration platform",
     icon: FileText,
     features: [
-      "Document Storage",
-      "Version Control",
-      "Collaboration Tools",
-      "Access Control",
-      "Search & Indexing",
-      "Compliance Management"
+
+
+
+
+
+
     ],
     price: "Starting at $1,000/month",
     marketPrice: "$1,800-4,000/month",
@@ -2217,12 +2216,12 @@ const additionalServices = [
     description: "Comprehensive API management and gateway solution",
     icon: Network,
     features: [
-      "API Gateway",
-      "Rate Limiting",
-      "Authentication",
-      "Monitoring & Analytics",
-      "Developer Portal",
-      "API Documentation"
+
+
+
+
+
+
     ],
     price: "Starting at $2,000/month",
     marketPrice: "$3,500-8,000/month",
@@ -2234,12 +2233,12 @@ const additionalServices = [
     description: "Complete IoT device monitoring and management platform",
     icon: Wifi,
     features: [
-      "Device Registration",
-      "Real-time Monitoring",
-      "Remote Control",
-      "Data Collection",
-      "Alert System",
-      "Analytics Dashboard"
+
+
+
+
+
+
     ],
     price: "Starting at $2,500/month",
     marketPrice: "$4,000-10,000/month",
@@ -2251,12 +2250,12 @@ const additionalServices = [
     description: "Blockchain integration and smart contract management",
     icon: Shield,
     features: [
-      "Smart Contract Deployment",
-      "Blockchain Integration",
-      "Wallet Management",
-      "Transaction Monitoring",
-      "Security Auditing",
-      "API Development"
+
+
+
+
+
+
     ],
     price: "Starting at $3,500/month",
     marketPrice: "$5,000-15,000/month",
@@ -2268,12 +2267,12 @@ const additionalServices = [
     description: "End-to-end ML platform for model development and deployment",
     icon: Brain,
     features: [
-      "Model Training",
-      "Data Preprocessing",
-      "Model Deployment",
-      "A/B Testing",
-      "Monitoring & Alerts",
-      "AutoML Capabilities"
+
+
+
+
+
+
     ],
     price: "Starting at $4,000/month",
     marketPrice: "$6,000-20,000/month",
@@ -2285,12 +2284,12 @@ const additionalServices = [
     description: "Custom video conferencing and collaboration solution",
     icon: Video,
     features: [
-      "HD Video Calls",
-      "Screen Sharing",
-      "Recording & Playback",
-      "Chat & Messaging",
-      "Meeting Scheduling",
-      "Integration APIs"
+
+
+
+
+
+
     ],
     price: "Starting at $2,000/month",
     marketPrice: "$3,500-8,000/month",
@@ -2302,12 +2301,12 @@ const additionalServices = [
     description: "Complete backend infrastructure for mobile applications",
     icon: Smartphone,
     features: [
-      "User Authentication",
-      "Database Management",
-      "Push Notifications",
-      "File Storage",
-      "API Development",
-      "Analytics Integration"
+
+
+
+
+
+
     ],
     price: "Starting at $2,500/month",
     marketPrice: "$4,000-10,000/month",
@@ -2319,12 +2318,12 @@ const additionalServices = [
     description: "Intelligent social media management with AI content optimization",
     icon: Globe,
     features: [
-      "AI Content Generation",
-      "Optimal Post Timing",
-      "Hashtag Optimization",
-      "Engagement Analytics",
-      "Multi-platform Publishing",
-      "Brand Voice Training"
+
+
+
+
+
+
     ],
     price: "Starting at $1,800/month",
     marketPrice: "$3,000-6,000/month",
@@ -2336,12 +2335,12 @@ const additionalServices = [
     description: "Automated subscription management and cancellation platform",
     icon: DollarSign,
     features: [
-      "Subscription Discovery",
-      "One-click Cancellation",
-      "Spending Analytics",
-      "Renewal Alerts",
-      "Cost Optimization",
-      "Multi-provider Support"
+
+
+
+
+
+
     ],
     price: "Starting at $1,200/month",
     marketPrice: "$2,000-4,500/month",
@@ -2353,12 +2352,12 @@ const additionalServices = [
     description: "Real-time meeting cost analysis and optimization tool",
     icon: Calculator,
     features: [
-      "Real-time Cost Tracking",
-      "ROI Analysis",
-      "Meeting Optimization",
-      "Productivity Metrics",
-      "Cost Alerts",
-      "Team Analytics"
+
+
+
+
+
+
     ],
     price: "Starting at $800/month",
     marketPrice: "$1,500-3,500/month",
@@ -2370,12 +2369,12 @@ const additionalServices = [
     description: "Smart expense tracking with receipt scanning and categorization",
     icon: Receipt,
     features: [
-      "Receipt OCR Scanning",
-      "AI Categorization",
-      "Tax Preparation",
-      "Spending Insights",
-      "Multi-currency Support",
-      "Integration with Accounting"
+
+
+
+
+
+
     ],
     price: "Starting at $1,500/month",
     marketPrice: "$2,500-5,000/month",
@@ -2387,12 +2386,12 @@ const additionalServices = [
     description: "AI-powered mental wellness and support platform",
     icon: Heart,
     features: [
-      "AI Chat Support",
-      "Mood Tracking",
-      "Meditation Guides",
-      "Crisis Intervention",
-      "Progress Analytics",
-      "Professional Referrals"
+
+
+
+
+
+
     ],
     price: "Starting at $2,200/month",
     marketPrice: "$3,500-8,000/month",
@@ -2404,12 +2403,12 @@ const additionalServices = [
     description: "Transform content across multiple formats using AI",
     icon: FileText,
     features: [
-      "Blog to Video Conversion",
-      "Podcast Transcription",
-      "Social Media Adaptation",
-      "Multi-language Translation",
-      "SEO Optimization",
-      "Brand Consistency"
+
+
+
+
+
+
     ],
     price: "Starting at $1,600/month",
     marketPrice: "$2,800-6,000/month",
@@ -2421,12 +2420,12 @@ const additionalServices = [
     description: "Intelligent lead qualification and prioritization system",
     icon: Target,
     features: [
-      "Behavioral Analysis",
-      "Predictive Scoring",
-      "Lead Nurturing",
-      "CRM Integration",
-      "Performance Analytics",
-      "Custom Scoring Models"
+
+
+
+
+
+
     ],
     price: "Starting at $2,000/month",
     marketPrice: "$3,500-7,000/month",
@@ -2438,12 +2437,12 @@ const additionalServices = [
     description: "AI-driven cloud infrastructure cost analysis and optimization",
     icon: Cloud,
     features: [
-      "Cost Analysis",
-      "Resource Optimization",
-      "Waste Detection",
-      "Right-sizing Recommendations",
-      "Budget Alerts",
-      "Multi-cloud Support"
+
+
+
+
+
+
     ],
     price: "Starting at $1,800/month",
     marketPrice: "$3,000-6,500/month",
@@ -2455,12 +2454,12 @@ const additionalServices = [
     description: "Intelligent email automation and follow-up system",
     icon: Mail,
     features: [
-      "Smart Follow-up Timing",
-      "Personalized Templates",
-      "A/B Testing",
-      "Response Prediction",
-      "CRM Integration",
-      "Performance Analytics"
+
+
+
+
+
+
     ],
     price: "Starting at $1,400/month",
     marketPrice: "$2,500-5,500/month",
@@ -2472,12 +2471,12 @@ const additionalServices = [
     description: "Automatic meeting transcription and intelligent summarization",
     icon: Video,
     features: [
-      "Real-time Transcription",
-      "AI Summarization",
-      "Action Item Extraction",
-      "Multi-language Support",
-      "Integration with Calendars",
-      "Searchable Archive"
+
+
+
+
+
+
     ],
     price: "Starting at $1,200/month",
     marketPrice: "$2,000-4,500/month",
@@ -2489,12 +2488,12 @@ const additionalServices = [
     description: "Advanced password security with AI-powered breach detection",
     icon: Lock,
     features: [
-      "Secure Password Generation",
-      "Breach Monitoring",
-      "Dark Web Scanning",
-      "Family Sharing",
-      "2FA Integration",
-      "Security Analytics"
+
+
+
+
+
+
     ],
     price: "Starting at $1,000/month",
     marketPrice: "$1,800-3,500/month",
@@ -2506,12 +2505,12 @@ const additionalServices = [
     description: "Automated local search optimization and reputation management",
     icon: MapPin,
     features: [
-      "Google My Business Optimization",
-      "Review Management",
-      "Local Keyword Tracking",
-      "Competitor Analysis",
-      "Citation Building",
-      "Performance Reporting"
+
+
+
+
+
+
     ],
     price: "Starting at $1,500/month",
     marketPrice: "$2,500-5,000/month",
@@ -2523,12 +2522,12 @@ const additionalServices = [
     description: "Intelligent invoice automation and payment processing",
     icon: FileText,
     features: [
-      "OCR Invoice Reading",
-      "Automated Data Extraction",
-      "Approval Workflows",
-      "Payment Processing",
-      "Compliance Checking",
-      "Analytics Dashboard"
+
+
+
+
+
+
     ],
     price: "Starting at $2,200/month",
     marketPrice: "$3,500-7,500/month",
@@ -2540,12 +2539,12 @@ const additionalServices = [
     description: "Real-time customer feedback analysis and sentiment tracking",
     icon: MessageSquare,
     features: [
-      "Multi-channel Monitoring",
-      "Sentiment Analysis",
-      "Trend Detection",
-      "Alert System",
-      "Custom Dashboards",
-      "Integration APIs"
+
+
+
+
+
+
     ],
     price: "Starting at $1,800/month",
     marketPrice: "$3,000-6,000/month",
@@ -2557,14 +2556,14 @@ const additionalServices = [
     description: "Automated code quality analysis, security scanning, and performance optimization recommendations",
     icon: Code,
     features: [
-      "Automated Code Review",
-      "Security Vulnerability Detection",
-      "Performance Analysis",
-      "Code Quality Metrics",
-      "Best Practice Suggestions",
-      "Integration with Git",
-      "Team Collaboration Tools",
-      "Custom Rule Configuration"
+
+
+
+
+
+
+
+
     ],
     price: "Starting at $2,500/month",
     marketPrice: "$4,000-8,000/month",
@@ -2576,14 +2575,14 @@ const additionalServices = [
     description: "Blockchain-based contract creation, execution, and monitoring for businesses",
     icon: FileText,
     features: [
-      "Contract Templates",
-      "Digital Signatures",
-      "Automated Execution",
-      "Compliance Monitoring",
-      "Payment Integration",
-      "Dispute Resolution",
-      "Audit Trails",
-      "Multi-party Collaboration"
+
+
+
+
+
+
+
+
     ],
     price: "Starting at $3,000/month",
     marketPrice: "$5,000-12,000/month",
@@ -2595,14 +2594,14 @@ const additionalServices = [
     description: "Advanced meeting analytics, transcription, and action item tracking",
     icon: Video,
     features: [
-      "Real-time Transcription",
-      "Action Item Extraction",
-      "Meeting Analytics",
-      "Follow-up Automation",
-      "Integration with Calendars",
-      "Voice Recognition",
-      "Multi-language Support",
-      "Custom Reporting"
+
+
+
+
+
+
+
+
     ],
     price: "Starting at $1,200/month",
     marketPrice: "$2,000-4,500/month",
@@ -2614,14 +2613,14 @@ const additionalServices = [
     description: "Next-generation cybersecurity solutions preparing for quantum computing threats",
     icon: Shield,
     features: [
-      "Quantum Key Distribution",
-      "Post-Quantum Cryptography",
-      "Threat Assessment",
-      "Migration Planning",
-      "Compliance Monitoring",
-      "Risk Analysis",
-      "Security Audits",
-      "Future-Proofing"
+
+
+
+
+
+
+
+
     ],
     price: "Starting at $4,500/month",
     marketPrice: "$8,000-20,000/month",
@@ -2633,14 +2632,14 @@ const additionalServices = [
     description: "Intelligent personal finance tracking, budgeting, and investment recommendations",
     icon: DollarSign,
     features: [
-      "Expense Categorization",
-      "Budget Planning",
-      "Investment Analysis",
-      "Bill Reminders",
-      "Financial Goals",
-      "Tax Optimization",
-      "Credit Score Monitoring",
-      "Retirement Planning"
+
+
+
+
+
+
+
+
     ],
     price: "Starting at $800/month",
     marketPrice: "$1,500-3,500/month",
@@ -2652,14 +2651,14 @@ const additionalServices = [
     description: "Comprehensive IoT platform for smart home management and automation",
     icon: Home,
     features: [
-      "Device Integration",
-      "Automation Rules",
-      "Energy Monitoring",
-      "Security Systems",
-      "Voice Control",
-      "Mobile App",
-      "Scheduling",
-      "Remote Access"
+
+
+
+
+
+
+
+
     ],
     price: "Starting at $1,500/month",
     marketPrice: "$2,500-6,000/month",
@@ -2671,14 +2670,14 @@ const additionalServices = [
     description: "Intelligent legal document review, contract analysis, and compliance checking",
     icon: FileText,
     features: [
-      "Contract Analysis",
-      "Risk Assessment",
-      "Compliance Checking",
-      "Clause Extraction",
-      "Legal Research",
-      "Document Comparison",
-      "Deadline Tracking",
-      "Case Law Integration"
+
+
+
+
+
+
+
+
     ],
     price: "Starting at $2,800/month",
     marketPrice: "$4,500-10,000/month",
@@ -2690,14 +2689,14 @@ const additionalServices = [
     description: "Environmental impact tracking and sustainability reporting for businesses",
     icon: Leaf,
     features: [
-      "Carbon Footprint Tracking",
-      "Sustainability Metrics",
-      "ESG Reporting",
-      "Waste Management",
-      "Energy Optimization",
-      "Supply Chain Analysis",
-      "Compliance Monitoring",
-      "Goal Setting"
+
+
+
+
+
+
+
+
     ],
     price: "Starting at $2,000/month",
     marketPrice: "$3,500-8,000/month",
@@ -2709,14 +2708,14 @@ const additionalServices = [
     description: "Intelligent recruitment platform matching candidates with job opportunities",
     icon: Users,
     features: [
-      "Skill Assessment",
-      "Cultural Fit Analysis",
-      "Job Matching",
-      "Interview Scheduling",
-      "Background Checks",
-      "Onboarding Automation",
-      "Performance Tracking",
-      "Retention Analytics"
+
+
+
+
+
+
+
+
     ],
     price: "Starting at $2,200/month",
     marketPrice: "$3,500-7,500/month",
@@ -2728,14 +2727,14 @@ const additionalServices = [
     description: "AI-driven inventory management with demand forecasting and automated reordering",
     icon: Package,
     features: [
-      "Demand Forecasting",
-      "Automated Reordering",
-      "Stock Level Optimization",
-      "Supplier Management",
-      "Quality Control",
-      "Cost Analysis",
-      "Multi-location Support",
-      "Integration APIs"
+
+
+
+
+
+
+
+
     ],
     price: "Starting at $1,800/month",
     marketPrice: "$3,000-6,500/month",
@@ -2747,14 +2746,14 @@ const additionalServices = [
     description: "Comprehensive content creation platform with AI writing, design, and video tools",
     icon: FileText,
     features: [
-      "AI Writing Assistant",
-      "Image Generation",
-      "Video Creation",
-      "SEO Optimization",
-      "Brand Consistency",
-      "Multi-language Support",
-      "Content Calendar",
-      "Performance Analytics"
+
+
+
+
+
+
+
+
     ],
     price: "Starting at $1,500/month",
     marketPrice: "$2,500-5,500/month",
@@ -2766,14 +2765,14 @@ const additionalServices = [
     description: "Transparent supply chain monitoring using blockchain technology",
     icon: Network,
     features: [
-      "Product Tracking",
-      "Authenticity Verification",
-      "Quality Assurance",
-      "Supplier Verification",
-      "Compliance Monitoring",
-      "Transparency Reports",
-      "Smart Contracts",
-      "Integration APIs"
+
+
+
+
+
+
+
+
     ],
     price: "Starting at $3,500/month",
     marketPrice: "$6,000-15,000/month",
@@ -2785,14 +2784,14 @@ const additionalServices = [
     description: "Personal health tracking and wellness recommendations using AI",
     icon: Heart,
     features: [
-      "Health Metrics Tracking",
-      "Symptom Analysis",
-      "Medication Reminders",
-      "Wellness Recommendations",
-      "Doctor Integration",
-      "Emergency Alerts",
-      "Health Reports",
-      "Privacy Protection"
+
+
+
+
+
+
+
+
     ],
     price: "Starting at $1,200/month",
     marketPrice: "$2,000-4,000/month",
@@ -2804,14 +2803,14 @@ const additionalServices = [
     description: "AI-powered energy optimization for homes and businesses",
     icon: Zap,
     features: [
-      "Energy Monitoring",
-      "Usage Optimization",
-      "Renewable Integration",
-      "Cost Analysis",
-      "Predictive Maintenance",
-      "Automated Controls",
-      "Reporting Dashboard",
-      "Mobile Access"
+
+
+
+
+
+
+
+
     ],
     price: "Starting at $1,800/month",
     marketPrice: "$3,000-7,000/month",
@@ -2823,14 +2822,14 @@ const additionalServices = [
     description: "Automated customer onboarding with personalized experiences",
     icon: Users,
     features: [
-      "Personalized Onboarding",
-      "Progress Tracking",
-      "Automated Communications",
-      "Document Collection",
-      "Verification Processes",
-      "Integration APIs",
-      "Analytics Dashboard",
-      "Custom Workflows"
+
+
+
+
+
+
+
+
     ],
     price: "Starting at $1,500/month",
     marketPrice: "$2,500-5,500/month",
@@ -2842,14 +2841,14 @@ const additionalServices = [
     description: "Comprehensive fleet tracking, optimization, and maintenance management",
     icon: Truck,
     features: [
-      "Real-time Tracking",
-      "Route Optimization",
-      "Fuel Management",
-      "Maintenance Scheduling",
-      "Driver Management",
-      "Performance Analytics",
-      "Compliance Monitoring",
-      "Mobile App"
+
+
+
+
+
+
+
+
     ],
     price: "Starting at $2,500/month",
     marketPrice: "$4,000-10,000/month",
@@ -2861,14 +2860,14 @@ const additionalServices = [
     description: "Intelligent market analysis and competitive intelligence gathering",
     icon: BarChart3,
     features: [
-      "Market Analysis",
-      "Competitor Tracking",
-      "Trend Identification",
-      "Consumer Insights",
-      "Data Visualization",
-      "Report Generation",
-      "Alert System",
-      "Custom Dashboards"
+
+
+
+
+
+
+
+
     ],
     price: "Starting at $2,200/month",
     marketPrice: "$3,500-8,000/month",
@@ -2880,14 +2879,14 @@ const additionalServices = [
     description: "Comprehensive event planning and management with AI-powered insights",
     icon: Calendar,
     features: [
-      "Event Planning",
-      "Attendee Management",
-      "Venue Selection",
-      "Budget Tracking",
-      "Marketing Automation",
-      "Analytics Dashboard",
-      "Mobile App",
-      "Integration APIs"
+
+
+
+
+
+
+
+
     ],
     price: "Starting at $1,800/month",
     marketPrice: "$3,000-6,500/month",
@@ -2899,14 +2898,14 @@ const additionalServices = [
     description: "Real-time translation and localization services for global businesses",
     icon: Globe,
     features: [
-      "Real-time Translation",
-      "Document Translation",
-      "Website Localization",
-      "Voice Translation",
-      "Quality Assurance",
-      "Cultural Adaptation",
-      "API Integration",
-      "Custom Dictionaries"
+
+
+
+
+
+
+
+
     ],
     price: "Starting at $1,200/month",
     marketPrice: "$2,000-5,000/month",
@@ -2918,14 +2917,14 @@ const additionalServices = [
     description: "Automated compliance monitoring and reporting for various industries",
     icon: Shield,
     features: [
-      "Regulatory Monitoring",
-      "Compliance Tracking",
-      "Automated Reporting",
-      "Risk Assessment",
-      "Document Management",
-      "Audit Preparation",
-      "Alert System",
-      "Integration APIs"
+
+
+
+
+
+
+
+
     ],
     price: "Starting at $2,800/month",
     marketPrice: "$4,500-12,000/month",
@@ -3262,34 +3261,34 @@ export default function MicroSaas() {
         <meta name="description" content="Discover our innovative micro SaaS solutions designed to solve specific business problems. From content generation to project management, we have the tools you need." />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className=" min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto">
+        <section className=" relative py-20 px-4">
+          <div className=" max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
+              className=" text-center"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Micro <span className="text-blue-600">SaaS</span> Solutions
+              <h1 className=" text-4xl md:text-6xl font-bold mb-6">
+                Micro <span className=" text-blue-600">SaaS</span> Solutions
               </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              <p className=" text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                 Powerful, focused tools that solve specific business problems. 
                 Our micro SaaS solutions are designed to be simple, effective, and affordable.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className=" flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  className=" inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   Get Started
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
                 <Link
                   href="/it-services"
-                  className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
+                  className=" inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
                 >
                   View IT Services
                 </Link>
@@ -3299,33 +3298,33 @@ export default function MicroSaas() {
         </section>
 
         {/* Categories Section */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4">
+        <section className="py-16 bg- white">
+          <div className=" max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-12"
+              className=" text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Service Categories</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              <h2 className=" text-3xl md:text-4xl font-bold mb-4">Service Categories</h2>
+              <p className=" text-lg text-gray-600 max-w-2xl mx-auto">
                 Explore our micro SaaS solutions organized by category.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {categories.map((category, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors"
+                  className="bg- gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors"
                 >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <category.icon className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg- blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <category.icon className="w-6 h-6  text-blue-600" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{category.name}</h3>
-                  <p className="text-gray-600">{category.count} services available</p>
+                  <h3 className=" text-xl font-semibold mb-2">{category.name}</h3>
+                  <p className=" text-gray-600">{category.count} services available</p>
                 </motion.div>
               ))}
             </div>
@@ -3334,33 +3333,33 @@ export default function MicroSaas() {
 
         {/* Services Grid */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className=" max-w-7xl mx-auto">
+            <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaasServices.map((service, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
+                  className="bg- white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <service.icon className="w-6 h-6 text-blue-600" />
+                  <div className=" flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg- blue-100 rounded-lg flex items-center justify-center">
+                      <service.icon className="w-6 h-6  text-blue-600" />
                     </div>
                     {service.popular && (
-                      <span className="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">
+                      <span className="bg- green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">
                         Popular
                       </span>
                     )}
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{service.name}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                  <h3 className=" text-xl font-semibold mb-2">{service.name}</h3>
+                  <p className=" text-gray-600 mb-4">{service.description}</p>
+                  <div className=" flex items-center justify-between">
+                    <span className=" text-2xl font-bold text-blue-600">{service.price}</span>
                     <Link
                       href="/contact"
-                      className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                      className=" inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                     >
                       Learn More
                       <ArrowRight className="ml-2 w-4 h-4" />
@@ -3373,17 +3372,17 @@ export default function MicroSaas() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <section className="py-16 bg- blue-600">
+          <div className=" max-w-7xl mx-auto px-4 text-center">
+            <h2 className=" text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className=" text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Let's discuss how our micro SaaS solutions can help your business grow.
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg"
+              className=" inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg"
             >
               Contact Us Today
               <ArrowRight className="ml-2 w-5 h-5" />

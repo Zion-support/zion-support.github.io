@@ -53,7 +53,7 @@ function mergePR(prNumber, branchName) {
 
   // Merge with main
   const mergeResult = runGitCommand(
-    'git merge main',
+
     `Merging main into ${branchName}`
   );
 
@@ -63,8 +63,8 @@ function mergePR(prNumber, branchName) {
 
     // Get list of conflicted files
     const conflictedFiles = runGitCommand(
-      'git diff --name-only --diff-filter=U',
-      'Getting conflicted files'
+
+
     );
 
     if (conflictedFiles) {

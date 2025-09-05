@@ -47,8 +47,8 @@ const fixes = [
   },
   {
     path: 'components/ui/EnhancedMarketplaceCard.tsx',
-    oldContent: `        <img src={image} alt={title} className="w-full h-48 object-cover" />`,
-    newContent: `        <img src={image} alt={title} className="w-full h-48 object-cover" />`
+    oldContent: `        <img src={image} alt={title} className="w- full h-48 object-cover" />`,
+    newContent: `        <img src={image} alt={title} className="w- full h-48 object-cover" />`
   },
   {
     path: 'hooks/useLocalStorage.ts',

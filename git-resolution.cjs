@@ -35,14 +35,14 @@ class GitResolver {
 
     // Configure git for merge strategy
     await this.runCommand(
-      'git config pull.rebase false',
-      'Configure merge strategy'
+
+
     );
 
     // Try to pull with merge strategy
     const pullResult = await this.runCommand(
-      'git pull origin main --no-edit',
-      'Pull and merge from main'
+
+
     );
 
     if (!pullResult.success) {
@@ -50,8 +50,8 @@ class GitResolver {
 
       // Check for conflicted files
       const statusResult = await this.runCommand(
-        'git status --porcelain',
-        'Check git status'
+
+
       );
 
       if (statusResult.success) {
@@ -90,7 +90,7 @@ class GitResolver {
         if (this.resolvedConflicts.length > 0) {
           await this.runCommand(
             'git commit -m "resolve: Merge conflicts resolved automatically"',
-            'Commit resolved conflicts'
+
           );
         }
       }
@@ -109,8 +109,8 @@ class GitResolver {
       if (ghCheck.success) {
         // Get open PRs
         const prResult = await this.runCommand(
-          'gh pr list --state open --json number,title,headRefName,baseRefName',
-          'Get open PRs'
+
+
         );
 
         if (prResult.success) {
@@ -136,7 +136,7 @@ class GitResolver {
 
             // Push changes
             await this.runCommand(
-              'git push origin main',
+
               `Push merged PR #${pr.number}`
             );
           }
@@ -190,7 +190,7 @@ Enhancements: Performance, Security, SEO, Accessibility, Monitoring`;
 
     await this.runCommand(
       `git commit -m "${commitMessage}"`,
-      'Commit all improvements'
+
     );
 
     // Push to main

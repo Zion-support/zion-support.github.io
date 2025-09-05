@@ -23,8 +23,8 @@ class AIIntelligentCodeAnalyzer {
   loadLearningData() {
     const learningFile = path.join(
       this.projectRoot,
-      'logs',
-      'ai-learning-data.json'
+
+
     );
     try {
       if (fs.existsSync(learningFile)) {
@@ -44,8 +44,8 @@ class AIIntelligentCodeAnalyzer {
   saveLearningData() {
     const learningFile = path.join(
       this.projectRoot,
-      'logs',
-      'ai-learning-data.json'
+
+
     );
     fs.writeFileSync(learningFile, JSON.stringify(this.learningData, null, 2));
   }
@@ -349,7 +349,7 @@ class AIIntelligentCodeAnalyzer {
         type: 'maintainability',
         priority: 'high',
         description:
-          'Improve code maintainability by reducing function complexity',
+
         action: 'Refactor large functions into smaller, focused functions',
       });
     }
@@ -452,7 +452,7 @@ class AIIntelligentCodeAnalyzer {
   saveResults() {
     const reportFile = path.join(
       this.projectRoot,
-      'logs',
+
       `ai-code-analysis-${Date.now()}.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(this.analysisResults, null, 2));

@@ -4,11 +4,11 @@
 console.log('🚀 Starting Comprehensive Automation Execution...');
 
 const scripts = [
-  'git-resolution.cjs',
-  'run-all-automations.cjs',
-  'comprehensive-improvements.cjs',
-  'final-automation-orchestrator.cjs',
-  'final-automation-suite.cjs',
+
+
+
+
+
 ];
 
 async function runScript(scriptPath) {

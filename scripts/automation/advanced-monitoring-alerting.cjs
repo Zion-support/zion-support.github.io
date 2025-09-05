@@ -186,7 +186,7 @@ class AdvancedMonitoringAlerting {
       );
     } catch (error) {
       console.log(
-        '⚠️  Application performance monitoring failed:',
+
         error.message
       );
     }
@@ -341,7 +341,7 @@ class AdvancedMonitoringAlerting {
       if (currentData.performanceMetrics.buildTime > avgBuildTime * 1.2) {
         trends.performanceTrend = 'degrading';
         trends.recommendations.push(
-          'Build time is increasing - consider optimization'
+
         );
       } else if (
         currentData.performanceMetrics.buildTime <
@@ -359,7 +359,7 @@ class AdvancedMonitoringAlerting {
       if (currentData.systemHealth.memory > avgMemory * 1.1) {
         trends.systemHealthTrend = 'degrading';
         trends.recommendations.push(
-          'Memory usage is increasing - monitor for leaks'
+
         );
       }
     }
@@ -375,8 +375,8 @@ class AdvancedMonitoringAlerting {
   loadHistoricalData() {
     const dataFile = path.join(
       this.projectRoot,
-      'logs',
-      'monitoring-history.json'
+
+
     );
     try {
       if (fs.existsSync(dataFile)) {
@@ -391,8 +391,8 @@ class AdvancedMonitoringAlerting {
   saveHistoricalData() {
     const dataFile = path.join(
       this.projectRoot,
-      'logs',
-      'monitoring-history.json'
+
+
     );
     let historicalData = this.loadHistoricalData();
 
@@ -497,7 +497,7 @@ class AdvancedMonitoringAlerting {
     // Save current monitoring data
     const reportFile = path.join(
       this.projectRoot,
-      'logs',
+
       `monitoring-${Date.now()}.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(this.monitoringData, null, 2));

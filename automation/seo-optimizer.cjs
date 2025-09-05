@@ -129,7 +129,7 @@ class SEOOptimizer {
         type: 'meta_tags',
         priority: 'high',
         description:
-          'Add proper meta tags including title, description, and keywords',
+
       },
       {
         type: 'heading_structure',

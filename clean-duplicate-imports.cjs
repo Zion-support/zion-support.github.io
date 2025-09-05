@@ -76,9 +76,9 @@ class ImportCleaner {
     this.log('🚀 Starting import cleaning...');
 
     const filesToClean = [
-      'pages/components/Navigation.tsx',
-      'pages/it-services.tsx',
-      'pages/components/Footer.tsx',
+
+
+
     ];
 
     for (const file of filesToClean) {

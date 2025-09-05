@@ -129,20 +129,20 @@ const PerformanceMonitor: React.FC = () => {
     setMetrics(prev => ({ ...prev, renderTime: Math.round(endTime - startTime) }))}, []);
 
   return (
-    <div className="bg-gray-100 p-4 rounded-lg">
-      <h3 className="text-lg font-semibold mb-4">Performance Metrics</h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="bg-white p-3 rounded">
-          <div className="text-sm text-gray-600">Load Time</div>
-          <div className="text-2xl font-bold text-blue-600">{metrics.loadTime}ms</div>
+    <div className="bg- gray-100 p-4 rounded-lg">
+      <h3 className=" text-lg font-semibold mb-4">Performance Metrics</h3>
+      <div className=" grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="bg- white p-3 rounded">
+          <div className=" text-sm text-gray-600">Load Time</div>
+          <div className=" text-2xl font-bold text-blue-600">{metrics.loadTime}ms</div>
         </div>
-        <div className="bg-white p-3 rounded">
-          <div className="text-sm text-gray-600">Memory Usage</div>
-          <div className="text-2xl font-bold text-green-600">{metrics.memoryUsage}MB</div>
+        <div className="bg- white p-3 rounded">
+          <div className=" text-sm text-gray-600">Memory Usage</div>
+          <div className=" text-2xl font-bold text-green-600">{metrics.memoryUsage}MB</div>
         </div>
-        <div className="bg-white p-3 rounded">
-          <div className="text-sm text-gray-600">Render Time</div>
-          <div className="text-2xl font-bold text-purple-600">{metrics.renderTime}ms</div>
+        <div className="bg- white p-3 rounded">
+          <div className=" text-sm text-gray-600">Render Time</div>
+          <div className=" text-2xl font-bold text-purple-600">{metrics.renderTime}ms</div>
         </div>
       </div>
     </div>
@@ -251,20 +251,20 @@ const BundleAnalyzer: React.FC = () => {
           optimizedCount++;
         }
       });
-        <div className="space-y-2">
-          <div className="flex justify-between items-center p-2 bg-blue-50 rounded">
+        <div className=" space-y-2">
+          <div className=" flex justify-between items-center p-2 bg-blue-50 rounded">
             <span>JavaScript</span>
-            <span className="font-medium">{formatBytes(bundleInfo.jsSize)}</span>
+            <span className=" font-medium">{formatBytes(bundleInfo.jsSize)}</span>
           </div>
           
-          <div className="flex justify-between items-center p-2 bg-green-50 rounded">
+          <div className=" flex justify-between items-center p-2 bg-green-50 rounded">
             <span>CSS</span>
-            <span className="font-medium">{formatBytes(bundleInfo.cssSize)}</span>
+            <span className=" font-medium">{formatBytes(bundleInfo.cssSize)}</span>
           </div>
           
-          <div className="flex justify-between items-center p-2 bg-purple-50 rounded">
+          <div className=" flex justify-between items-center p-2 bg-purple-50 rounded">
             <span>Images</span>
-            <span className="font-medium">{formatBytes(bundleInfo.imageSize)}</span>
+            <span className=" font-medium">{formatBytes(bundleInfo.imageSize)}</span>
           </div>
         </div>
       </div>
@@ -363,16 +363,16 @@ const BundleAnalyzer: React.FC = () => {
 
   generateRecommendations() {
     return [
-      'Implement code splitting for better performance',
-      'Use React.memo for expensive components',
-      'Implement lazy loading for routes and components',
-      'Optimize images and use modern formats (WebP, AVIF)',
-      'Enable gzip compression on your server',
-      'Use a CDN for static assets',
-      'Implement service workers for caching',
-      'Minimize and compress CSS and JavaScript',
-      'Use tree shaking to eliminate dead code',
-      'Implement proper error boundaries'
+
+
+
+
+
+
+
+
+
+
     ];
   }
 

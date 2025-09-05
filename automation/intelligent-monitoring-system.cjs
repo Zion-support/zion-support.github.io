@@ -186,7 +186,7 @@ class IntelligentMonitoringSystem {
 
     if (this.metrics.successes.length === 0) {
       recommendations.push(
-        'No successful operations detected - check system configuration'
+
       );
     }
 
@@ -213,7 +213,7 @@ class IntelligentMonitoringSystem {
     } catch (error) {
       this.log(
         `❌ Intelligent Monitoring System failed: ${error.message}`,
-        'error'
+
       );
       throw error;
     }

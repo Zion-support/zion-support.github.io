@@ -80,8 +80,8 @@ export const optimizeImages = () => {
 
 export const preloadCriticalResources = () => {
   const criticalResources = [
-    '/fonts/main.woff2',
-    '/css/critical.css'
+
+
   ];
   
   criticalResources.forEach(resource => {
@@ -283,7 +283,7 @@ try {
   };
 
   fs.writeFileSync(
-    '/workspace/automation/reports/app-improvements.json',
+
     JSON.stringify(report, null, 2)
   );
 
@@ -292,7 +292,7 @@ try {
     `📊 Generated ${recommendations.length} improvement recommendations`
   );
   console.log(
-    '📄 Report saved to: /workspace/automation/reports/app-improvements.json'
+
   );
 } catch (error) {
   console.error('Error:', error.message);

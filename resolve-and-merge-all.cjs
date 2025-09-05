@@ -36,14 +36,14 @@ class GitConflictResolver {
 
     // Configure git for merge strategy
     await this.runCommand(
-      'git config pull.rebase false',
-      'Configure merge strategy'
+
+
     );
 
     // Try to pull with merge strategy
     const pullResult = await this.runCommand(
-      'git pull origin main --no-edit',
-      'Pull and merge from main'
+
+
     );
 
     if (!pullResult.success) {
@@ -52,8 +52,8 @@ class GitConflictResolver {
 
       // Check for conflicted files
       const statusResult = await this.runCommand(
-        'git status --porcelain',
-        'Check git status'
+
+
       );
 
       if (statusResult.success) {
@@ -90,7 +90,7 @@ class GitConflictResolver {
         // Commit the resolved conflicts
         await this.runCommand(
           'git commit -m "resolve: Merge conflicts resolved automatically"',
-          'Commit resolved conflicts'
+
         );
       }
     }
@@ -124,8 +124,8 @@ class GitConflictResolver {
       try {
         // Try GitHub CLI first
         const ghResult = await this.runCommand(
-          'gh pr list --state open --json number,title,headRefName,baseRefName',
-          'Get open PRs via GitHub CLI'
+
+
         );
         if (ghResult.success) {
           prs = JSON.parse(ghResult.output);
@@ -166,8 +166,8 @@ https.get(options, (res) => {
 
         fs.writeFileSync('fetch-prs.js', fetchPRsScript);
         const apiResult = await this.runCommand(
-          'node fetch-prs.js',
-          'Fetch PRs via API'
+
+
         );
         if (apiResult.success) {
           prs = JSON.parse(apiResult.output);
@@ -206,7 +206,7 @@ https.get(options, (res) => {
 
       // Push changes
       await this.runCommand(
-        'git push origin main',
+
         `Push merged PR #${pr.number}`
       );
 
@@ -224,15 +224,15 @@ https.get(options, (res) => {
     this.log('🤖 Running comprehensive automation scripts');
 
     const scripts = [
-      'node final-automation-suite.cjs',
-      'node automation/master-orchestrator.cjs',
-      'node automation/performance-optimizer.cjs',
-      'node automation/security-audit.cjs',
-      'node automation/seo-optimizer.cjs',
-      'node automation/accessibility-checker.cjs',
-      'node scripts/syntax-fixer.cjs',
-      'node scripts/performance-optimizer.cjs',
-      'node scripts/security-auditor.cjs',
+
+
+
+
+
+
+
+
+
     ];
 
     const results = [];
@@ -412,7 +412,7 @@ new ComprehensiveAppImprover().runImprovements().catch(console.error);
     await this.runCommand('git add .', 'Stage all changes');
     await this.runCommand(
       'git commit -m "feat: Comprehensive automation improvements and conflict resolution\n\n- Resolved all merge conflicts\n- Merged open PRs\n- Ran comprehensive automation suite\n- Created additional improvement scripts\n- Enhanced performance, security, and SEO\n\nThis commit includes:\n- Automated conflict resolution\n- PR merging automation\n- Performance optimizations\n- Security enhancements\n- SEO improvements\n- Additional automation scripts"',
-      'Commit all improvements'
+
     );
     await this.runCommand('git push origin main', 'Push all changes to main');
 

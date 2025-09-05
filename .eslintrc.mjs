@@ -10,14 +10,14 @@ export default {
     'no-undef': 'off',
   },
   ignorePatterns: [
-    'node_modules/',
-    '.next/',
-    'out/',
-    'dist/',
-    'build/',
-    'coverage/',
-    '*.config.js',
-    '*.config.cjs',
-    '*.config.mjs',
+
+
+
+
+
+
+
+
+
   ],
 };

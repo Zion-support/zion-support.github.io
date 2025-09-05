@@ -280,9 +280,9 @@ class SecurityScanner {,
 ,
       const configIssues = [],
       const configFiles = [,
-        'package.jsonnext.config.js',
-        'tsconfig.json.env',
-        '.env.local.env.production',
+
+
+
       ],
 ,
       configFiles.forEach(configFile => {,

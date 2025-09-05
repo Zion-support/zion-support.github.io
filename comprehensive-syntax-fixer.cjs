@@ -25,7 +25,7 @@ function fixSyntaxIssues(filePath) {
     if (content.includes('export interface')) {
       content = content.replace(
         /export interface (\w+) \{/g,
-        'export interface $1 {'
+
       );
       fixed = true;
     }
@@ -50,7 +50,7 @@ function fixSyntaxIssues(filePath) {
     // Fix React component syntax
     content = content.replace(
       /const (\w+) = \(\) => \{/g,
-      'const $1 = () => {'
+
     );
     content = content.replace(/export default (\w+),/g, 'export default $1;');
 

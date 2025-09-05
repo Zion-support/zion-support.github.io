@@ -108,8 +108,8 @@ class PerformanceMonitor {
   async saveMetrics() {
     const metricsFile = path.join(
       __dirname,
-      'reports',
-      'performance-metrics.json'
+
+
     );
     fs.mkdirSync(path.dirname(metricsFile), { recursive: true });
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
@@ -123,8 +123,8 @@ class PerformanceMonitor {
 
     const reportFile = path.join(
       __dirname,
-      'reports',
-      'performance-report.json'
+
+
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
@@ -137,7 +137,7 @@ class PerformanceMonitor {
     if (this.metrics.buildTime > 60000) {
       // 1 minute
       recommendations.push(
-        'Consider optimizing build process - build time is high'
+
       );
     }
 
@@ -149,7 +149,7 @@ class PerformanceMonitor {
     if (this.metrics.memoryUsage > 100) {
       // 100MB
       recommendations.push(
-        'Consider memory optimization - high memory usage detected'
+
       );
     }
 

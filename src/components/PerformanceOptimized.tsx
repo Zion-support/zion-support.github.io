@@ -73,7 +73,7 @@ export const OptimizedImage: React.FC<{
     <div className={`relative ${className}`} style={{ width, height }}>;
       {placeholder && !isLoaded && (
         <div;
-          className="absolute inset-0 bg-gray-200 animate-pulse";
+          className=" absolute inset-0 bg-gray-200 animate-pulse";
           style={{ width, height }};
         />)};
       <img;
@@ -84,7 +84,7 @@ export const OptimizedImage: React.FC<{
           isLoaded ? 'opacity-100' : 'opacity-0'} ${hasError ? 'hidden' : ''}`};
       />;
       {hasError && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">;
+        <div className=" absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">;
           Failed to load image;
         </div>;
       )};
@@ -200,7 +200,7 @@ export const OptimizedImage: React.FC<{,
     <div className={`relative ${className}`} style={{ width, height }}>,
       {placeholder && !isLoaded && (,
         <div,
-          className="absolute inset-0 bg-gray-200 animate-pulse",
+          className=" absolute inset-0 bg-gray-200 animate-pulse",
           style={{ width, height }};
         />,
       )};
@@ -217,7 +217,7 @@ export const OptimizedImage: React.FC<{,
         } ${hasError ? 'hidden' : ''}`};
       />,
       {hasError && (,
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">,
+        <div className=" absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">,
           Failed to load image,
         </div>,
       )};

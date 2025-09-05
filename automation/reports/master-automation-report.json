@@ -1,10 +1,10 @@
 {
-  "timestamp": "2025-09-05T22:15:18.254Z",
+  "timestamp": "2025-09-05T22:33:39.397Z",
   "summary": {
     "totalTasks": 7,
-    "successful": 4,
-    "failed": 3,
-    "successRate": "57.14%"
+    "successful": 2,
+    "failed": 5,
+    "successRate": "28.57%"
   },
   "tasks": [
     {
@@ -12,7 +12,7 @@
       "status": "failed",
       "duration": 0,
       "critical": false,
-      "error": "Command failed: npm run lint:check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:4855) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token ';'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+      "error": "Command failed: npm run lint:check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:5263) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token 'import'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
     },
     {
       "task": "Type Check",
@@ -23,20 +23,22 @@
     },
     {
       "task": "Build Test",
-      "status": "success",
-      "duration": 4719,
-      "critical": true
+      "status": "failed",
+      "duration": 0,
+      "critical": true,
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\n./pages/micro-saas.tsx\nError: \n  \u001b[31mx\u001b[0m Unexpected token `,`. Expected identifier or string\n     ,-[\u001b[36;1;4m/workspace/pages/micro-saas.tsx\u001b[0m:127:1]\n \u001b[2m127\u001b[0m |   Kanban,\n \u001b[2m128\u001b[0m |   Receipt,\n \u001b[2m129\u001b[0m |   Network,\n \u001b[2m130\u001b[0m |   /* Brain */,\n     : \u001b[31;1m             ^\u001b[0m\n \u001b[2m131\u001b[0m |   BookOpen,\n \u001b[2m132\u001b[0m |   TreePine,\n \u001b[2m133\u001b[0m |   Gamepad2,\n     `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/micro-saas.tsx\n\n\n> Build failed because of webpack errors\n"
     },
     {
       "task": "Test Suite",
-      "status": "success",
-      "duration": 1091,
-      "critical": true
+      "status": "failed",
+      "duration": 0,
+      "critical": true,
+      "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFAIL ./App.smoke.test.tsx\n  ● Test suite failed to run\n\n\n      \u001b[31mx\u001b[0m Expression expected\n        ,-[\u001b[36;1;4m/workspace/jest.setup.js\u001b[0m:10:1]\n     \u001b[2m10\u001b[0m | beforeEach(() => {\n     \u001b[2m11\u001b[0m |   // Reset all mocks before each test\n     \u001b[2m12\u001b[0m |   jest.clearAllMocks();\n     \u001b[2m13\u001b[0m | });  jest.clearAllMocks()});\n        : \u001b[31;1m                         ^\u001b[0m\n        `----\n\n\n    Caused by:\n        Syntax Error\n\n      at Object.transformSync (node_modules/next/src/build/swc/index.ts:1433:25)\n      at transformSync (node_modules/next/src/build/swc/index.ts:1550:19)\n      at Object.process (node_modules/next/src/build/swc/jest-transformer.ts:104:25)\n      at ScriptTransformer.transformSource (node_modules/@jest/transform/build/index.js:422:31)\n      at ScriptTransformer._transformAndBuildScript (node_modules/@jest/transform/build/index.js:519:40)\n      at ScriptTransformer.transform (node_modules/@jest/transform/build/index.js:558:19)\n\nTest Suites: 1 failed, 1 total\nTests:       0 total\nSnapshots:   0 total\nTime:        0.381 s\nRan all test suites.\n"
     },
     {
       "task": "Security Audit",
       "status": "success",
-      "duration": 761,
+      "duration": 814,
       "critical": false
     },
     {
@@ -44,12 +46,12 @@
       "status": "failed",
       "duration": 0,
       "critical": false,
-      "error": "Command failed: node automation/performance-optimizer.js\nfile:///workspace/automation/performance-optimizer.js:1\nconst fs = require('fs');\n           ^\n\nReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/automation/performance-optimizer.js:1:12\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)\n\nNode.js v22.16.0\n"
+      "error": "Command failed: node automation/performance-optimizer.js\nfile:///workspace/automation/performance-optimizer.js:1\n}};\n^\n\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
     },
     {
       "task": "Security Scan",
       "status": "success",
-      "duration": 216,
+      "duration": 244,
       "critical": false
     }
   ],

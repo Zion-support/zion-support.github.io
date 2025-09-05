@@ -10,10 +10,10 @@ class AICodeQualityAnalyzer {
   constructor() {
     this.logFile = path.join(
       __dirname,
-      '..',
-      '..',
-      'automation-reports',
-      'ai-code-quality.log'
+
+
+
+
     );
     this.ensureLogDir();
   }
@@ -57,12 +57,12 @@ class AICodeQualityAnalyzer {
     return {
       score: 85,
       issues: [
-        'High cyclomatic complexity in Header component',
-        'Nested loops detected in data processing functions',
+
+
       ],
       suggestions: [
-        'Refactor complex functions into smaller ones',
-        'Use early returns to reduce nesting',
+
+
       ],
     };
   }
@@ -73,14 +73,14 @@ class AICodeQualityAnalyzer {
     return {
       score: 78,
       issues: [
-        'Large component files (>500 lines)',
-        'Missing JSDoc comments',
-        'Inconsistent naming conventions',
+
+
+
       ],
       suggestions: [
-        'Split large components into smaller ones',
-        'Add comprehensive documentation',
-        'Standardize naming conventions',
+
+
+
       ],
     };
   }
@@ -97,9 +97,9 @@ class AICodeQualityAnalyzer {
         lines: 68,
       },
       suggestions: [
-        'Add unit tests for utility functions',
-        'Increase integration test coverage',
-        'Add E2E tests for critical user flows',
+
+
+
       ],
     };
   }
@@ -111,9 +111,9 @@ class AICodeQualityAnalyzer {
       score: 82,
       duplicatedLines: 45,
       suggestions: [
-        'Extract common utility functions',
-        'Create shared components for repeated UI patterns',
-        'Use higher-order components for common logic',
+
+
+
       ],
     };
   }
@@ -124,13 +124,13 @@ class AICodeQualityAnalyzer {
     return {
       score: 90,
       issues: [
-        'Potential XSS vulnerability in user input handling',
-        'Missing CSRF protection',
+
+
       ],
       suggestions: [
-        'Implement input sanitization',
-        'Add CSRF tokens to forms',
-        'Use Content Security Policy headers',
+
+
+
       ],
     };
   }
@@ -139,13 +139,13 @@ class AICodeQualityAnalyzer {
     this.log('💡 Generating recommendations...');
 
     return [
-      'Implement automated code quality checks in CI/CD',
-      'Set up pre-commit hooks for linting and formatting',
-      'Add code review guidelines and templates',
-      'Create performance monitoring dashboard',
-      'Implement automated security scanning',
-      'Set up code coverage reporting',
-      'Add dependency vulnerability scanning',
+
+
+
+
+
+
+
     ];
   }
 
@@ -163,10 +163,10 @@ class AICodeQualityAnalyzer {
 
     const reportPath = path.join(
       __dirname,
-      '..',
-      '..',
-      'automation-reports',
-      'ai-code-quality-report.json'
+
+
+
+
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved to: ${reportPath}`);

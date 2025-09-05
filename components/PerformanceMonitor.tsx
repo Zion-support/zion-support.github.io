@@ -1,3 +1,4 @@
+import PerformanceMonitor from '../components/PerformanceMonitor';
 import React, { useEffect } from 'react';
 
 const PerformanceMonitor: React.FC = () => {

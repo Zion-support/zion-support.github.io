@@ -1,6 +1,5 @@
 import React from 'react';
-import { render, RenderOptions } from '@testing-library/react';
-import { ThemeProvider } from 'next-themes';
+import { render, RenderOptions , ThemeProvider  } from '@testing-library/react';
 
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
   return (

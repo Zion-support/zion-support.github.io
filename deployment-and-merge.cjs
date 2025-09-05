@@ -45,8 +45,8 @@ class DeploymentAndMerge {
   async checkCurrentBranch() {
     this.log('\n🔍 CHECKING CURRENT BRANCH');
     const result = await this.runCommand(
-      'git branch --show-current',
-      'Get Current Branch'
+
+
     );
     if (result.success) {
       this.log(`Current branch: ${result.output.trim()}`);
@@ -58,8 +58,8 @@ class DeploymentAndMerge {
   async checkGitStatus() {
     this.log('\n📊 CHECKING GIT STATUS');
     const statusResult = await this.runCommand(
-      'git status --porcelain',
-      'Check Git Status'
+
+
     );
     if (statusResult.success) {
       const changes = statusResult.output.trim();
@@ -80,8 +80,8 @@ class DeploymentAndMerge {
 
     // Run smoke tests
     const smokeTests = await this.runCommand(
-      'npm run test:smoke',
-      'Smoke Tests'
+
+
     );
 
     // Run build test
@@ -108,8 +108,8 @@ class DeploymentAndMerge {
 
       // Merge the feature branch
       const mergeResult = await this.runCommand(
-        'git merge cursor/automate-test-improve-and-merge-code-1436',
-        'Merge Feature Branch'
+
+
       );
 
       if (mergeResult.success) {
@@ -139,26 +139,26 @@ class DeploymentAndMerge {
         codeQualityImproved: true,
       },
       filesModified: [
-        'pages/index.tsx',
-        'components/PerformanceMonitor.tsx',
-        'eslint.config.js',
-        'jest.config.smoke.cjs',
-        'jest.setup.js',
-        'comprehensive-automation-runner.cjs',
-        'enhanced-automation-suite.cjs',
-        'deployment-and-merge.cjs',
+
+
+
+
+
+
+
+
       ],
       status: 'Ready for Production',
       nextSteps: [
-        'Monitor application performance',
-        'Address remaining linting warnings',
-        'Implement continuous integration',
-        'Add more comprehensive testing',
+
+
+
+
       ],
     };
 
     fs.writeFileSync(
-      'deployment-summary.json',
+
       JSON.stringify(summary, null, 2)
     );
     this.log('Deployment summary created: deployment-summary.json');

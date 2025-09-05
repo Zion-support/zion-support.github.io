@@ -85,21 +85,21 @@ function fixFile(filePath) {
 
 // List of files to fix
 const filesToFix = [
-  'components/Header.tsx',
-  'components/OptimizedImage.tsx',
-  'components/Sidebar.tsx',
-  'components/SimpleLayout.tsx',
-  'components/SkeletonLoader.tsx',
-  'components/layout/EnhancedFooter.tsx',
-  'components/layout/Footer.tsx',
-  'components/layout/Header.tsx',
-  'components/layout/Layout.tsx',
-  'components/layout/MainLayout.tsx',
-  'components/performance/LazyComponent.tsx',
-  'components/performance/OptimizedImage.tsx',
-  'components/ui/EnhancedMarketplaceCard.tsx',
-  'components/ui/InteractiveNavigation.tsx',
-  'components/ui/NotificationSystem.tsx',
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 console.log('🔧 Starting comprehensive syntax fixes...');

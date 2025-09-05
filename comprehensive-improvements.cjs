@@ -10,8 +10,8 @@ class ComprehensiveImprovements {
   constructor() {
     this.logFile = path.join(
       __dirname,
-      'automation-reports',
-      'comprehensive-improvements.log'
+
+
     );
     this.ensureLogDir();
   }
@@ -144,17 +144,17 @@ class ComprehensiveImprovements {
       },
       summary: 'Comprehensive improvements completed successfully',
       nextSteps: [
-        'Review generated reports',
-        'Implement additional optimizations',
-        'Monitor performance metrics',
-        'Schedule regular improvements',
+
+
+
+
       ],
     };
 
     const reportPath = path.join(
       __dirname,
-      'automation-reports',
-      'comprehensive-improvements-report.json'
+
+
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved to: ${reportPath}`);
