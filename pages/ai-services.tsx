@@ -41,7 +41,10 @@ import {
   Sprout,
   Mail,
   ShoppingCart,
-  BookOpen
+  BookOpen,
+  Scale,
+  Phone,
+  MapPin
 } from 'lucide-react';
 
 const aiServices = [
@@ -640,6 +643,249 @@ const aiServices = [
     pricing: '$5,000 - $40,000/month',
     category: 'Blockchain AI',
     popular: true
+  },
+  {
+    title: 'AI-Powered Climate Change Mitigation',
+    description: 'Advanced AI systems for climate modeling, carbon capture optimization, and environmental restoration.',
+    icon: Sprout,
+    features: ['Climate Modeling', 'Carbon Capture Optimization', 'Environmental Restoration', 'Policy Simulation'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Climate AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Space Colonization',
+    description: 'AI systems for space habitat design, resource management, and autonomous space operations.',
+    icon: Rocket,
+    features: ['Habitat Design', 'Resource Management', 'Autonomous Operations', 'Life Support Systems'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Space AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Human Longevity',
+    description: 'AI-driven research and development for extending human lifespan and healthspan.',
+    icon: Heart,
+    features: ['Longevity Research', 'Health Optimization', 'Aging Reversal', 'Personalized Medicine'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Longevity AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Consciousness Transfer',
+    description: 'Advanced AI systems for digital consciousness preservation and transfer.',
+    icon: Brain,
+    features: ['Consciousness Preservation', 'Digital Transfer', 'Identity Continuity', 'Ethical Framework'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Consciousness Transfer',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Universal Problem Solver',
+    description: 'General-purpose AI system capable of solving complex problems across all domains.',
+    icon: Cpu,
+    features: ['Universal Problem Solving', 'Cross-Domain Learning', 'Creative Solutions', 'Scalable Intelligence'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'General AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Reality Simulation',
+    description: 'Ultra-realistic reality simulation for training, entertainment, and research applications.',
+    icon: Eye,
+    features: ['Ultra-Realistic Simulation', 'Physics Modeling', 'Behavioral Simulation', 'Immersive Training'],
+    pricing: '$150,000 - $1,500,000/project',
+    category: 'Simulation AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Time Prediction',
+    description: 'Advanced temporal AI for predicting future events and outcomes with high accuracy.',
+    icon: Clock,
+    features: ['Future Prediction', 'Event Forecasting', 'Outcome Analysis', 'Temporal Modeling'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Temporal AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Universal Translator',
+    description: 'Real-time translation across all languages including extinct and alien languages.',
+    icon: Globe,
+    features: ['Universal Translation', 'Language Reconstruction', 'Cultural Context', 'Real-time Processing'],
+    pricing: '$25,000 - $250,000/setup',
+    category: 'Translation AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Dream Analysis',
+    description: 'Advanced AI for dream interpretation and subconscious pattern analysis.',
+    icon: Brain,
+    features: ['Dream Interpretation', 'Subconscious Analysis', 'Pattern Recognition', 'Therapeutic Insights'],
+    pricing: '$15,000 - $150,000/project',
+    category: 'Dream AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Emotion Synthesis',
+    description: 'AI systems that can generate and understand complex human emotions and empathy.',
+    icon: Heart,
+    features: ['Emotion Generation', 'Empathy Simulation', 'Emotional Intelligence', 'Therapeutic Applications'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'Emotional AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Memory Enhancement',
+    description: 'AI systems for memory augmentation and cognitive enhancement.',
+    icon: Brain,
+    features: ['Memory Augmentation', 'Cognitive Enhancement', 'Learning Acceleration', 'Memory Retrieval'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'Memory AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Creativity Engine',
+    description: 'Advanced AI for creative problem-solving and artistic expression.',
+    icon: FileText,
+    features: ['Creative Problem Solving', 'Artistic Generation', 'Innovation Catalyst', 'Design Thinking'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'Creative AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Telepathy Simulation',
+    description: 'AI systems that simulate telepathic communication and mind-reading capabilities.',
+    icon: Brain,
+    features: ['Thought Reading', 'Mental Communication', 'Neural Interface', 'Privacy Protection'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Telepathic AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Universal Education',
+    description: 'Personalized AI tutoring system that adapts to any learning style and pace.',
+    icon: BookOpen,
+    features: ['Personalized Learning', 'Adaptive Curriculum', 'Multi-Modal Teaching', 'Progress Optimization'],
+    pricing: '$10,000 - $100,000/setup',
+    category: 'Education AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Universal Healthcare',
+    description: 'Comprehensive AI healthcare system for diagnosis, treatment, and prevention.',
+    icon: Heart,
+    features: ['Universal Diagnosis', 'Treatment Optimization', 'Prevention Strategies', 'Personalized Medicine'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Healthcare AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Universal Energy',
+    description: 'AI systems for optimizing energy production, distribution, and consumption globally.',
+    icon: Zap,
+    features: ['Energy Optimization', 'Grid Management', 'Renewable Integration', 'Efficiency Maximization'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Energy AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Universal Transportation',
+    description: 'Autonomous transportation systems for all modes of travel and logistics.',
+    icon: Car,
+    features: ['Autonomous Vehicles', 'Route Optimization', 'Logistics Management', 'Safety Systems'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Transportation AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Universal Communication',
+    description: 'AI system for universal communication across all languages and communication barriers.',
+    icon: MessageSquare,
+    features: ['Universal Communication', 'Language Translation', 'Cultural Adaptation', 'Real-time Processing'],
+    pricing: '$25,000 - $250,000/setup',
+    category: 'Communication AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Universal Security',
+    description: 'Comprehensive AI security system for protecting all digital and physical assets.',
+    icon: Shield,
+    features: ['Universal Protection', 'Threat Detection', 'Automated Response', 'Predictive Security'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Security AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Universal Manufacturing',
+    description: 'AI-driven manufacturing systems for any product with maximum efficiency and quality.',
+    icon: Settings,
+    features: ['Universal Manufacturing', 'Quality Optimization', 'Efficiency Maximization', 'Custom Production'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Manufacturing AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Universal Agriculture',
+    description: 'AI systems for optimizing agriculture and food production globally.',
+    icon: Sprout,
+    features: ['Crop Optimization', 'Yield Maximization', 'Resource Management', 'Climate Adaptation'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Agriculture AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Universal Entertainment',
+    description: 'AI-generated entertainment content personalized for every individual.',
+    icon: Video,
+    features: ['Personalized Content', 'Creative Generation', 'Interactive Experiences', 'Emotional Engagement'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'Entertainment AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Universal Research',
+    description: 'AI system for accelerating scientific research and discovery across all fields.',
+    icon: Search,
+    features: ['Research Acceleration', 'Hypothesis Generation', 'Data Analysis', 'Discovery Optimization'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Research AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Universal Governance',
+    description: 'AI systems for optimizing governance and policy-making at all levels.',
+    icon: Building,
+    features: ['Policy Optimization', 'Decision Support', 'Stakeholder Analysis', 'Outcome Prediction'],
+    pricing: '$150,000 - $1,500,000/project',
+    category: 'Governance AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Universal Justice',
+    description: 'AI system for fair and efficient justice administration and legal analysis.',
+    icon: Scale,
+    features: ['Legal Analysis', 'Fair Decision Making', 'Case Prediction', 'Justice Optimization'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Justice AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Universal Economics',
+    description: 'AI systems for optimizing economic systems and resource allocation globally.',
+    icon: TrendingUp,
+    features: ['Economic Optimization', 'Resource Allocation', 'Market Analysis', 'Policy Simulation'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Economics AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Universal Philosophy',
+    description: 'AI system for exploring philosophical questions and ethical decision-making.',
+    icon: Brain,
+    features: ['Philosophical Analysis', 'Ethical Reasoning', 'Moral Decision Making', 'Wisdom Generation'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Philosophy AI',
+    popular: true
   }
 ];
 
@@ -979,6 +1225,72 @@ export default function AIServicesPage() {
                 Start Your AI Journey
               </Link>
               <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
+                View All Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+              Ready to Harness the Power of AI?
+            </h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Transform your business with cutting-edge AI solutions. Our experts are ready to help you 
+              implement AI technologies that drive real results and competitive advantage.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Call Us</h3>
+                <p className="text-lg">+1 302 464 0950</p>
+                <p className="text-sm opacity-90">Available 24/7</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Mail className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Email Us</h3>
+                <p className="text-lg">kleber@ziontechgroup.com</p>
+                <p className="text-sm opacity-90">Quick response guaranteed</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
+                <p className="text-lg">364 E Main St STE 1008</p>
+                <p className="text-sm opacity-90">Middletown, DE 19709</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105"
+              >
+                Get Free AI Consultation
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                href="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-200"
+              >
                 View All Services
               </Link>
             </div>
