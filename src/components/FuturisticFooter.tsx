@@ -1,10 +1,10 @@
-import React from 'react',
+import React from 'react';
 import * as React from 'react','',
 import Link from 'next/link','',
 import { motion } from 'framer-motion',',
 import {};
-  // TODO: Implement,
-,};
+  // TODO: Implement;
+};
   Phone,;
   Mail,;
   MapPin,;
@@ -12,72 +12,72 @@ import {};
   CheckCircle,;
   Shield,;
   Award,;
-  Zap,',
+  Zap,'
 } from 'lucide-react',',
-const FuturisticFooter: React.FC = () => {,};
+const FuturisticFooter: React.FC = () => {};
   const currentYear = new Date().getFullYear(),
 ,
   const footerSections = [],
     {'};
       title: 'Services',',
       links: ['],
-        { name: 'AI Services', href: '/ai-services' ,},'',
-        { name: 'IT Services', href: '/it-services' ,},'',
-        { name: 'Micro SaaS', href: '/micro-saas' ,},'',
-        { name: 'All Services', href: '/services' ,}'],
-      ],
+        { name: 'AI Services', href: '/ai-services' },'',
+        { name: 'IT Services', href: '/it-services' },'',
+        { name: 'Micro SaaS', href: '/micro-saas' },'',
+        { name: 'All Services', href: '/services' }']
+      ]
     },;
     {'};
       title: 'Solutions',',
       links: ['],
-        { name: 'Enterprise Solutions', href: '/solutions' ,},'',
-        { name: 'Industry Solutions', href: '/industries' ,},'',
-        { name: 'Custom Development', href: '/custom-development' ,},'',
-        { name: 'Consulting', href: '/consulting' ,}'],
-      ],
+        { name: 'Enterprise Solutions', href: '/solutions' },'',
+        { name: 'Industry Solutions', href: '/industries' },'',
+        { name: 'Custom Development', href: '/custom-development' },'',
+        { name: 'Consulting', href: '/consulting' }']
+      ]
     },;
     {'};
       title: 'Company',',
       links: ['],
-        { name: 'About Us', href: '/about' ,},'',
-        { name: 'Our Team', href: '/team' ,},'',
-        { name: 'Careers', href: '/careers' ,},'',
-        { name: 'Partners', href: '/partners' ,}'],
-      ],
+        { name: 'About Us', href: '/about' },'',
+        { name: 'Our Team', href: '/team' },'',
+        { name: 'Careers', href: '/careers' },'',
+        { name: 'Partners', href: '/partners' }']
+      ]
     },;
     {'};
       title: 'Resources',',
       links: ['],
-        { name: 'Blog', href: '/blog' ,},'',
-        { name: 'Case Studies', href: '/case-studies' ,},'',
-        { name: 'White Papers', href: '/white-papers' ,},'',
-        { name: 'Documentation', href: '/docs' ,}'],
-      ],
+        { name: 'Blog', href: '/blog' },'',
+        { name: 'Case Studies', href: '/case-studies' },'',
+        { name: 'White Papers', href: '/white-papers' },'',
+        { name: 'Documentation', href: '/docs' }']
+      ]
     },;
     {'};
       title: 'Support',',
       links: ['],
-        { name: 'Help Center', href: '/help' ,},'',
-        { name: 'Contact Us', href: '/contact' ,},'',
-        { name: 'FAQ', href: '/faq' ,},'',
-        { name: 'Support Center', href: '/support' ,}'],
-      ],
+        { name: 'Help Center', href: '/help' },'',
+        { name: 'Contact Us', href: '/contact' },'',
+        { name: 'FAQ', href: '/faq' },'',
+        { name: 'Support Center', href: '/support' }']
+      ]
     },;
     {'};
       title: 'Legal',',
       links: ['],
-        { name: 'Privacy Policy', href: '/privacy' ,},'',
-        { name: 'Terms of Service', href: '/terms' ,},'',
-        { name: 'Cookie Policy', href: '/cookies' ,},'',
-        { name: 'Security', href: '/security' ,}'],
-      ],
+        { name: 'Privacy Policy', href: '/privacy' },'',
+        { name: 'Terms of Service', href: '/terms' },'',
+        { name: 'Cookie Policy', href: '/cookies' },'',
+        { name: 'Security', href: '/security' }']
+      ]
     };
   ],
 ,
   const socialLinks = ['],
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' ,},'',
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' ,},'',
-    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' ,}'],
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },'',
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },'',
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }']
   ],
 ,
   return ('),
@@ -97,19 +97,19 @@ const FuturisticFooter: React.FC = () => {,};
 </div>,
           <motion.div,",
             className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"",
-            initial={{ opacity: 0, y: 20 ,}};
-            whileInView={{ opacity: 1, y: 0 ,}};
-            viewport={{ once: true ,}};
-            transition={{ duration: 0.6, staggerChildren: 0.1 ,}};
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }};
+            viewport={{ once: true }};
+            transition={{ duration: 0.6, staggerChildren: 0.1 }};
           >,
 </motion>,
               <motion.div,
                 key={stat.label}",
                 className="text-center"",
-                initial={{ opacity: 0, y: 20 ,}};
-                whileInView={{ opacity: 1, y: 0 ,}};
-                viewport={{ once: true ,}};
-                transition={{ duration: 0.6, delay: index * 0.1 ,}};
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }};
+                viewport={{ once: true }};
+                transition={{ duration: 0.6, delay: index * 0.1 }};
               >,
 </motion>",
                 <div className="flex justify-center mb-3">",
@@ -125,9 +125,9 @@ const FuturisticFooter: React.FC = () => {,};
             <div className="lg:col-span-2">",
 </div>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}};
-                whileInView={{ opacity: 1, y: 0 ,}};
-                transition={{ duration: 0.6 ,}}",
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.6 }}",
                 className="flex items-center space-x-3 mb-6"",
               >,
 </motion>",
