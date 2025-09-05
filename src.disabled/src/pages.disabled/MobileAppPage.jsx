@@ -1,2 +1,14 @@
-import React from "react"; import { SEO, MobileAppHero } from 'lucide-react'; import { AppFeatures, AppScreenshots } from 'lucide-react'; import { AppTestimonials, AppStoreBanner } from 'lucide-react'; import { DownloadSection } from "@/components/mobile-app/DownloadSection"; const MobileAppPage = () => {}}; return (<SEO title="Zion AI Marketplace App" description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now." keywords="AI freelancer app,hire tech,find IT jobs,tech marketplace app,mobile AI jobs"/> ,; <MobileAppHero /> ,; <AppFeatures /> ,; <AppScreenshots /> ,; <AppTestimonials /> ,; <DownloadSection /> ,; <AppStoreBanner />)}; export default MobileAppPage; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage };"
-</SEO>"
+import React from 'react';
+
+interface MobileAppPageProps {
+  // Add props here as needed
+}
+
+export default function MobileAppPage({ }: MobileAppPageProps) {
+  return (
+    <div>
+      <h1>MobileAppPage</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

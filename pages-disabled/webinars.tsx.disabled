@@ -1,349 +1,71 @@
 import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 
-export default function WebinarsPage() {
-<<<<<<< HEAD:pages/webinars.tsx
-	return (
-		<MainLayout title="Webinars - Zion Tech Group" description="Upcoming webinars and recordings.">
-			<div className="min-h-screen bg-gray-50 py-20">
-				<div className="container mx-auto px-4 text-center">
-					<h1 className="text-4xl font-bold mb-4">Webinars</h1>
-					<p className="text-gray-600">New webinar content will be published soon.</p>
-				</div>
-			</div>
-		</MainLayout>
-	);
-}
-
-=======
-  const [selectedCategory, setSelectedCategory] = useState("All Webinars");""
-  const [selectedStatus, setSelectedStatus] = useState("All Status");"
-  const filteredWebinars = webinars.filter(webinar => {"
-    const categoryMatch = selectedCategory === "All Webinars" || webinar.category === selectedCategory;""
-    const statusMatch = selectedStatus === "All Status" ||")"
-      (selectedStatus === "Upcoming" && webinar.status === "upcoming") ||""
-      (selectedStatus === "Recorded" && webinar.status === "recorded");"
-    return categoryMatch && statusMatch;
-  }
-});
-
+export default function Webinars() {
   return (
-    <div className="min-h-screen bg-gray-50">"
-</div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Head>
-</Head>
-        <title>Webinars - Zion Tech Group</title>"
-        <meta name="description" content="Join our expert-led webinars on AI, cloud computing, cybersecurity, and technology trends. Learn from industry leaders." />"
-</meta>
-      </$1>
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">"
-</section>
-        <div className="container mx-auto px-4">"
-</div>
-          <div className="max-w-4xl mx-auto text-center">"
-</div>
-            <h1 className="text-5xl font-bold mb-6">"
-</h1>
+        <title>Webinars - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
+        <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
+      </Head>
+      
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Webinars
             </h1>
-            <p className="text-xl text-blue-100">"
-</p>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
             </p>
-          </div>
-        </div>
-      </section>
-      <section className="py-16">"
-</section>
-        <div className="container mx-auto px-4">"
-</div>
-          <div className="max-w-6xl mx-auto">"
-</div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Webinar</h2>
-              <motion.article;
-                key={webinar.id}"
-                className="bg-white rounded-lg shadow-lg overflow-hidden mb-8"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
               >
-</motion>"
-                <div className="md:flex">"
-</div>
-                  <div className="md:w-1/3">"
-</div>
-                    <div className="h-64 md:h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">"
-</div>
-                      <Play className="w-24 h-24 text-white" />"
-</Play>
-                    </div>
-                  </div>
-                  <div className="md:w-2/3 p-8">"
-</div>
-                    <div className="flex items-center gap-2 mb-4">"
-</div>
-                      <Tag className="w-4 h-4 text-blue-600" />"
-</$1>
-                      <span className="text-sm text-blue-600 font-medium">"
-</span>
-                      </span>
-                      <span className={`text-xs px-2 py-1 rounded-full ${"
-                        webinar.status === 'upcoming'''
-                          ? 'bg-green-100 text-green-800'''
-                          : 'bg-gray-100 text-gray-800''
-                      }}>
-</span>
-                      </span>
-                    </div>
-                    '
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">"
-</h2>
-                    </h2>
-                    "
-                    <p className="text-gray-600 mb-6 text-lg">"
-</p>
-                    </p>
-                    "
-                    <div className="grid grid-cols-2 gap-4 mb-6">"
-</div>
-                      <div>
-</div>
-                        <h3 className="font-semibold text-gray-900 mb-1">Presenter:</h3>
-                        <p className="text-gray-600">{webinar.presenter}</p>
-                        <p className="text-sm text-gray-500">{webinar.presenterTitle}</p>
-                      </div>
-                      <div>
-</div>
-                        <h3 className="font-semibold text-gray-900 mb-1">Date & Time:</h3>
-                        <p className="text-gray-600">{webinar.date} at {webinar.time}</p>
-                        <p className="text-sm text-gray-500">{webinar.duration}</p>
-                      </div>
-                    </div>
-                    "
-                    <div className="flex items-center justify-between text-sm text-gray-500 mb-6">"
-</div>
-                      <div className="flex items-center gap-4">"
-</div>
-                        <div className="flex items-center gap-2">"
-</div>
-                          <Users className="w-4 h-4" />"
-</Users>
-                          <span>{webinar.attendees} registered</span>
-                        </div>
-                        <div className="flex items-center gap-2">"
-</div>
-                          <Clock className="w-4 h-4" />"
-</Clock>
-                          <span>{webinar.duration}</span>
-                        </div>
-                      </div>
-                    </div>
-                      <Link
-                        href={webinar.registrationUrl}"
-                        className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors"
-                      >
-</$1>
-                        <ArrowRight className="w-4 h-4" />"
-</ArrowRight>
-                      </$1>
-                      <div className="flex gap-4">"
-</div>
-                        <Link,
-                          href={webinar.recordingUrl}"
-                          className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-                        >
-</$1>
-                          <Play className="w-4 h-4" />"
-</Play>
-                        </$1>
-                        <button className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors">"
-</button>"
-                          <Download className="w-4 h-4" />"
-</Download>
-                        </button>
-                      </div>
-                  </div>
-                </div>
-              </motion.article>)
-            ))}
-          </div>
+                Get Started Today
+              </Link>
+              <Link 
+                href="/services" 
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
-      <section className="py-8 bg-white">"
-</section>
-        <div className="container mx-auto px-4">"
-</div>
-          <div className="max-w-6xl mx-auto">"
-</div>
-            <div className="flex flex-wrap gap-4 justify-center mb-4">"
-</div>
-              <div>
-</div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Category: </label>"
-                <select,
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-</select>
-                    <option key={category} value={category}>{category}</option>
-                </select>
-              </div>
-              <div>
-</div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Status: </label>"
-                <select,
-                  value={selectedStatus}
-                  onChange={(e) => setSelectedStatus(e.target.value)}
-</select>
-                    <option key={status} value={status}>{status}</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="py-16">"
-</section>
-        <div className="container mx-auto px-4">"
-</div>
-          <div className="max-w-6xl mx-auto">"
-</div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">All Webinars</h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">"
-</div>
-                <motion.article,
-                  key={webinar.id}"
-                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  whileHover={{ y: -5 }}
-                >
-</motion>"
-                  <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">"
-</div>
-                    <Play className="w-16 h-16 text-white" />"
-</Play>
-                  </div>
-                  <div className="p-6">"
-</div>
-                    <div className="flex items-center gap-2 mb-3">"
-</div>
-                      <Tag className="w-4 h-4 text-blue-600" />"
-</$1>
-                      <span className="text-sm text-blue-600 font-medium">"
-</span>
-                      </span>
-                      <span className={`text-xs px-2 py-1 rounded-full ${"
-                        webinar.status === 'upcoming'''
-                          ? 'bg-green-100 text-green-800'''
-                          : 'bg-gray-100 text-gray-800''
-                      }}>
-</span>
-                      </span>
-                    </div>
-                    '
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">"
-</h3>
-                    </h3>
-                    "
-                    <p className="text-gray-600 mb-4 line-clamp-3">"
-</p>
-                    </p>
-                    "
-                    <div className="space-y-2 mb-4">"
-</div>
-                      <div className="flex items-center gap-2 text-sm text-gray-600">"
-</div>
-                        <User className="w-4 h-4" />"
-</User>
-                        <span>{webinar.presenter}</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm text-gray-600">"
-</div>
-                        <Calendar className="w-4 h-4" />"
-</Calendar>
-                        <span>{webinar.date} at {webinar.time}</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm text-gray-600">"
-</div>
-                        <Clock className="w-4 h-4" />"
-</Clock>
-                        <span>{webinar.duration}</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm text-gray-600">"
-</div>
-                        <Users className="w-4 h-4" />"
-</Users>
-                        <span>{webinar.attendees} registered</span>
-                      </div>
-                    </div>
-                    "
-                    <div className="flex gap-2">"
-</div>
-                        <Link
-                          href={webinar.registrationUrl}"
-                          className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors text-sm"
-                        >
-</$1>
-                          <ArrowRight className="w-4 h-4" />"
-</ArrowRight>
-                        </Link>
-                        <>
-                          <Link,
-                            href={webinar.recordingUrl}"
-                            className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
-                          >
-</$1>
-                            <Play className="w-4 h-4" />"
-</Play>
-                          </$1>
-                          <button className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors text-sm">"
-</button>"
-                            <Download className="w-4 h-4" />"
-</Download>
-                          </button>
-                        </>
-                      )}
-                    </div>
-                  </div>
-                </motion.article>
-              ))}
-            </div>
-            <div className="text-center mt-12">"
-</div>
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover: bg-blue-700 transition-colors">"
-</button>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="py-16 bg-blue-600">"
-</section>
-        <div className="container mx-auto px-4">"
-</div>
-          <div className="max-w-4xl mx-auto text-center">"
-</div>
-            <h2 className="text-3xl font-bold text-white mb-4">"
-</h2>
+      
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16" 
+            initial={{ opacity: 0, y: 30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Coming Soon
             </h2>
-            <p className="text-xl text-blue-100 mb-8">"
-</p>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
             </p>
-            "
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">"
-</div>
-              <input,"
-                type="email"""
-                placeholder="Enter your email"""
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
-              />
-</input>"
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">"
-</button>
-              </button>
-            </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
+  );
 }
->>>>>>> main:pages-disabled/webinars.tsx.disabled
