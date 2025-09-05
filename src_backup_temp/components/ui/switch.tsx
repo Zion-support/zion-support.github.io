@@ -1,10 +1,3 @@
-import React from 'react';
-import { cn } from "../../utils/cn";
-;
-interface SwitchProps {;
-import { cn } from "@/lib/utils"
-  checked?: boolean;
-  onCheckedChange?: (checked: boolean) => void;
   checked?: "boolean;
   onCheckedChange?: ("checked": boolean) => void;
   disabled?: boolean;
@@ -34,8 +27,11 @@ import { cn } from "@/lib/utils"
         disabled && 'opacity-50 cursor-not-allowed',;
   className;
       );
+
 ;
+
 ;
+
 ;
 }
       id={id}
@@ -51,6 +47,7 @@ import { cn } from "@/lib/utils"
 ;
 ;
 ;
+
 ;
 };
       />;
@@ -60,8 +57,9 @@ import { cn } from "@/lib/utils"
 ;
 export default switch;
 </span>
-export default switch;';
-</span>;';;';
+=======
+=======
+=======
 const Switch = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
@@ -82,5 +80,4 @@ const Switch = React.forwardRef<
   </SwitchPrimitives.Root>
 ))
 Switch.displayName = SwitchPrimitives.Root.displayName
-export { Switch }
 export { Switch };

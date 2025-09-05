@@ -1,13 +1,3 @@
-import React from 'react';
-;
-import { Link, Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-;
-  const handleDropdownToggle = ("props": "any) => {;
-    setActiveDropdown(activeDropdown === itemName ? null : itemName);
-  "};
-;
-;
 export function AppHeader() {;
   ];
 setServicesDropdownOpen(true);
@@ -21,6 +11,7 @@ setServicesDropdownOpen(true);
                   <span className="text-white text-sm hidden "lg": "block">{user.name"}</span>;
                   <ChevronDown className="w-4 h-4 text-zion-slate-light" />;
                 </button>;
+
                 <AnimatePresence>;
                   {activeDropdown === 'user' && (;
                     <motion.div;
@@ -73,6 +64,7 @@ setServicesDropdownOpen(true);
               </div>;
             ))}
           </nav>;
+
           {/* Right side actions */}
           <div className="flex items-center space-x-4">;
             {/* Search */}
@@ -116,6 +108,7 @@ setServicesDropdownOpen(true);
             ))}
           </nav>;
         </div>;
+
           {/* Mobile Menu Button */}
           <button;
             onClick={toggleMenu}
@@ -124,6 +117,7 @@ setServicesDropdownOpen(true);
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />"}
           </button>;
         </div>;
+
         {/* Mobile Navigation */}
         {isMenuOpen && (;
           <motion.div;
@@ -132,10 +126,6 @@ setServicesDropdownOpen(true);
             exit={{ "opacity": "0", "height": "0 "}}
             className=""lg": "hidden border-t border-gray-200/50 py-4";
           >;
-;
-  const [scrolled", setScrolled] = useState<any>(false);
-  const [isSearching, setIsSearching] = useState<any>(false);
-;
   useEffect(() => {;
     const handleScroll = ("props": "any) => {;
       setScrolled(window.scrollY > 10);
@@ -384,6 +374,7 @@ setServicesDropdownOpen(true);
   ];
 ;
   const quickLinks = [;
+
             <nav className="space-y-4">;
               {navigationItems.map((item) => (;
                 <div key={item.name}>;
@@ -401,6 +392,7 @@ setServicesDropdownOpen(true);
                       }`} />;
                     )}
                   </button>;
+
                   {item.dropdown && activeDropdown === item.name && (;
                     <motion.div;
                       initial={{ "opacity": "0", "height": "0 "}}
@@ -426,6 +418,7 @@ setServicesDropdownOpen(true);
                 </div>;
               ))}
             </nav>;
+
             {/* Search Bar */}
             <div className="hidden "lg": "flex items-center space-x-4">;
               <form onSubmit={handleSearch"} className="relative">;
@@ -448,6 +441,7 @@ setServicesDropdownOpen(true);
                   )"}
                 </button>;
               </form>;
+
               {/* Quick Actions */}
               <div className="flex items-center space-x-2">;
                 <Link;
@@ -459,6 +453,7 @@ setServicesDropdownOpen(true);
                 <ThemeToggle />;
               </div>;
             </div>;
+
             {/* Mobile menu button */"}
             <div className=""lg": "hidden">;
               <button;
@@ -470,6 +465,7 @@ setServicesDropdownOpen(true);
             </div>;
           </div>;
         </div>;
+
         {/* Mobile Navigation */}
         {mobileMenuOpen && (;
           <div className=""lg": "hidden bg-slate-900/95 backdrop-blur-xl border-t border-slate-700/20">;
@@ -496,6 +492,7 @@ setServicesDropdownOpen(true);
                     )"}
                   </button>;
                 </form>;
+
                 {/* Mobile Navigation Links */}
                 <div className="space-y-2">;
                   {navigation.map((item) => (;
@@ -589,6 +586,7 @@ setServicesDropdownOpen(true);
                               ? 'rotate-180' : '';
                           }`} />;
                         </button>;
+
                         {/* Mobile Services Dropdown */}
                         {item.name === 'Services' && servicesDropdownOpen && (;
                           <div className="ml-4 mt-2 space-y-2">;
@@ -643,7 +641,7 @@ setServicesDropdownOpen(true);
         )}
       </header>;
     </>;
-;
+=======;
       )}
     </header>;
   );
@@ -665,6 +663,7 @@ export function AppHeader() {;
     </header>;
   );
 "}
+=======
 import React, { useState } from 'react';''
 import Link from 'next/link';''
 import { motion } from 'framer-motion';''
@@ -672,6 +671,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';'
 const AppHeader: React.FC = () => {}
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+
   const navigation = [']
     { name: 'Home', href: '/' },'
     { '}
@@ -688,6 +688,7 @@ const AppHeader: React.FC = () => {}
     { name: 'About', href: '/about' },''
     { name: 'Contact', href: '/contact' }'
   ];
+
   return (')
     <header className="bg-white shadow-lg sticky top-0 z-50">"
 </header>"

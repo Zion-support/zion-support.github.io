@@ -35,6 +35,7 @@ import { motion  } from 'framer-motion';
   const itemVariants = {;
   "hidden": "{ "opacity": 0", "y": "3 0",;
   "scale": "0.95;
+
 "},;
     "visible": "{;
       "opacity": 1",;
@@ -50,6 +51,7 @@ import { motion  } from 'framer-motion';
   const achievementVariants = {;
   "hidden": "{ "opacity": 0",;
   "scale": "0.8;
+
 "},;
     "visible": "{;
       "opacity": 1",;
@@ -61,6 +63,7 @@ import { motion  } from 'framer-motion';
   const techVariants = {;
   "hidden": "{ "opacity": 0",;
   "x": "-20;
+
 "},;
     "visible": "{;
       "opacity": 1",;
@@ -74,12 +77,16 @@ export function FeatureHighlights("props": "any) {;
       <div className="max-w-7xl mx-auto px-6">;
         <motion.div          className="text-center mb-16";
           initial = {;
+
   { "opacity": 0",;
   "y": "2 0;
+
 "}}
           whileInView = {;
+
   { "opacity": "1",;
   "y": "0;
+
 "}}
           viewport={{ "once": "tru e "}}
           transition={{ "duration": "0.6 "}}
@@ -103,29 +110,7 @@ export function FeatureHighlights("props": "any) {;
               key={index}
               variants={itemVariants}
               whileHover={{;
-                "y": "-5",;
-                "scale": "1.02",;
-                "transition": "{ "duration": 0.3 "}
-              }}";
-              className="group";
-";
-              <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 "hover": "borde r-white/20 transition-all duration-300">;
-                <div className={`w-12 h-12 bg-gradient-to-r ${feature.color"} rounded-lg flex items-center justify-center mb-4 group-"hover": "scal e-110 transition-transform duration-300`"}>`;
-                  <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />;
-                </div>;
-";
-                <h3 className="text-xl font-semibold text-white mb-2 group-"hover": "tex t-blue-400 transition-colors duration-300">;
-                  {feature.title"}
-                </h3>;
-";
-                <p className="text-gray-400 group-"hover": "tex t-gray-300 transition-colors duration-300">;
-                  {feature.description"}
-                </p>;
-              </div>;
-              <h3 className="text-xl font-bold text-white mb-3 group-"hover": "tex t-blue-400 transition-colors duration-200">;
-                {feature.title"}
-              </h3>;
-              <p className="text-gray-400 text-sm leading-relaxed">;
+
                 y: -5,
                 scale: 1.02,
                 transition: { duration: 0.3 }
@@ -139,26 +124,32 @@ export function FeatureHighlights("props": "any) {;
 "
                 <h3 className="text-xl font-semibold text-white mb-2 group-hover: tex t-blue-400 transition-colors duration-300">
                   {feature.title}
+                
 "
                 <p className="text-gray-400 group-hover: tex t-gray-300 transition-colors duration-300">
                   {feature.description}
                 </p>
               </div>
+
               <h3 className="text-xl font-bold text-white mb-3 group-hover: tex t-blue-400 transition-colors duration-200">
                 {feature.title}
+              
               <p className="text-gray-400 text-sm leading-relaxed">
                 {feature.description}
               </p>;
             </motion.div>;
           ))}
         </div>;
+
         <motion.div          className="mt-16 text-center";
           initial={{ "opacity": "0", "y": "2 0 "}}
           whileInView={{ "opacity": "1", "y": "0 "}}
           viewport={{ "once": "tru e "}}
           transition = {;
+
   { "duration": "0.6",;
   "delay": "0.4;
+
 "}}
         >";
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">;
@@ -170,7 +161,9 @@ export function FeatureHighlights("props": "any) {;
     </section>;
   )}
 ;
+
 '"`;
+
 </motion>;
 </motion>;
 </motion>

@@ -1,18 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
-const mainNavLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
-  { href: '/products', label: 'Products' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
-];
-const EnhancedNavigation: React.FC = () => {
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Menu, X, ChevronDown } from 'lucide-react';
 const mainNavLinks = [{ "href": '/', "label": 'Home' },
   { "href": '/services', "label": 'Services' },
   { "href": '/products', "label": 'Products' },
@@ -46,11 +34,6 @@ const "EnhancedNavigation": React.FC = () => {
             </div>{' '}
           </Link>{' '}
           {}{' '}
-          <div className="hidden lg:flex items-center space-x-8">
-            {' '}
-            <Link
-              href="/"
-              className="text-gray-600 hover:text-blue-600 transition-colors"
           <div className="hidden "lg": flex items-center space-x-8">
             {' '}
             <Link
@@ -63,7 +46,6 @@ const "EnhancedNavigation": React.FC = () => {
             <div className="relative group">
               {' '}
               <button
-                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
                 className="flex items-center text-gray-600 "hover": text-blue-600 transition-colors"
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
@@ -79,49 +61,42 @@ const "EnhancedNavigation": React.FC = () => {
                 {' '}
                 <Link
                   href="/services/ai-development"
-                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   AI Development
                 </Link>{' '}
                 <Link
                   href="/services/cloud-services"
-                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Cloud Services
                 </Link>{' '}
                 <Link
                   href="/services/web-development"
-                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Web Development
                 </Link>{' '}
                 <Link
                   href="/services/mobile-development"
-                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Mobile Development
                 </Link>{' '}
                 <Link
                   href="/services/blockchain-solutions"
-                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Blockchain Solutions
                 </Link>{' '}
                 <Link
                   href="/services/iot-platforms"
-                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   IoT Platforms
                 </Link>{' '}
                 <Link
                   href="/services/cybersecurity"
-                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Cybersecurity
@@ -132,7 +107,6 @@ const "EnhancedNavigation": React.FC = () => {
             <div className="relative group">
               {' '}
               <button
-                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
                 className="flex items-center text-gray-600 "hover": text-blue-600 transition-colors"
                 onMouseEnter={() => setSolutionsOpen(true)}
                 onMouseLeave={() => setSolutionsOpen(false)}
@@ -148,35 +122,30 @@ const "EnhancedNavigation": React.FC = () => {
                 {' '}
                 <Link
                   href="/solutions/enterprise"
-                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Enterprise Solutions
                 </Link>{' '}
                 <Link
                   href="/solutions/small-business"
-                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Small Business
                 </Link>{' '}
                 <Link
                   href="/solutions/startups"
-                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Startups
                 </Link>{' '}
                 <Link
                   href="/solutions/healthcare"
-                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Healthcare
                 </Link>{' '}
                 <Link
                   href="/solutions/finance"
-                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Finance
@@ -185,53 +154,42 @@ const "EnhancedNavigation": React.FC = () => {
             </div>{' '}
             <Link
               href="/products"
-              className="text-gray-600 hover:text-blue-600 transition-colors"
               className="text-gray-600 "hover": text-blue-600 transition-colors"
             >
               Products
             </Link>{' '}
             <Link
               href="/solutions"
-              className="text-gray-600 hover:text-blue-600 transition-colors"
               className="text-gray-600 "hover": text-blue-600 transition-colors"
             >
               Solutions
             </Link>{' '}
             <Link
               href="/about"
-              className="text-gray-600 hover:text-blue-600 transition-colors"
               className="text-gray-600 "hover": text-blue-600 transition-colors"
             >
               About
             </Link>{' '}
             <Link
               href="/blog"
-              className="text-gray-600 hover:text-blue-600 transition-colors"
               className="text-gray-600 "hover": text-blue-600 transition-colors"
             >
               Blog
             </Link>{' '}
             <Link
               href="/careers"
-              className="text-gray-600 hover:text-blue-600 transition-colors"
               className="text-gray-600 "hover": text-blue-600 transition-colors"
             >
               Careers
             </Link>{' '}
             <Link
               href="/contact"
-              className="text-gray-600 hover:text-blue-600 transition-colors"
               className="text-gray-600 "hover": text-blue-600 transition-colors"
             >
               Contact
             </Link>{' '}
           </div>{' '}
           {}{' '}
-          <div className="hidden lg:block">
-            {' '}
-            <Link
-              href="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block"
           <div className="hidden "lg": block">
             {' '}
             <Link
@@ -243,7 +201,6 @@ const "EnhancedNavigation": React.FC = () => {
           </div>{' '}
           {}{' '}
           <button
-            className="lg:hidden text-gray-600 hover:text-gray-900"
             className=""lg": hidden text-gray-600 hover:text-gray-900"
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -257,14 +214,12 @@ const "EnhancedNavigation": React.FC = () => {
         </div>{' '}
         {}{' '}
         {isOpen && (
-          <div className="lg:hidden border-t border-gray-200 py-4">
           <div className=""lg": hidden border-t border-gray-200 py-4">
             {' '}
             <div className="space-y-2">
               {' '}
               <Link
                 href="/"
-                className="block py-2 text-gray-600 hover:text-blue-600"
                 className="block py-2 text-gray-600 "hover": text-blue-600"
               >
                 Home
@@ -278,49 +233,42 @@ const "EnhancedNavigation": React.FC = () => {
                   {' '}
                   <Link
                     href="/services/ai-development"
-                    className="block py-1 text-gray-500 hover:text-blue-600"
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     AI Development
                   </Link>{' '}
                   <Link
                     href="/services/cloud-services"
-                    className="block py-1 text-gray-500 hover:text-blue-600"
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Cloud Services
                   </Link>{' '}
                   <Link
                     href="/services/web-development"
-                    className="block py-1 text-gray-500 hover:text-blue-600"
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Web Development
                   </Link>{' '}
                   <Link
                     href="/services/mobile-development"
-                    className="block py-1 text-gray-500 hover:text-blue-600"
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Mobile Development
                   </Link>{' '}
                   <Link
                     href="/services/blockchain-solutions"
-                    className="block py-1 text-gray-500 hover:text-blue-600"
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Blockchain Solutions
                   </Link>{' '}
                   <Link
                     href="/services/iot-platforms"
-                    className="block py-1 text-gray-500 hover:text-blue-600"
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     IoT Platforms
                   </Link>{' '}
                   <Link
                     href="/services/cybersecurity"
-                    className="block py-1 text-gray-500 hover:text-blue-600"
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Cybersecurity
@@ -336,35 +284,30 @@ const "EnhancedNavigation": React.FC = () => {
                   {' '}
                   <Link
                     href="/solutions/enterprise"
-                    className="block py-1 text-gray-500 hover:text-blue-600"
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Enterprise Solutions
                   </Link>{' '}
                   <Link
                     href="/solutions/small-business"
-                    className="block py-1 text-gray-500 hover:text-blue-600"
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Small Business
                   </Link>{' '}
                   <Link
                     href="/solutions/startups"
-                    className="block py-1 text-gray-500 hover:text-blue-600"
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Startups
                   </Link>{' '}
                   <Link
                     href="/solutions/healthcare"
-                    className="block py-1 text-gray-500 hover:text-blue-600"
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Healthcare
                   </Link>{' '}
                   <Link
                     href="/solutions/finance"
-                    className="block py-1 text-gray-500 hover:text-blue-600"
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Finance
@@ -373,35 +316,30 @@ const "EnhancedNavigation": React.FC = () => {
               </div>{' '}
               <Link
                 href="/products"
-                className="block py-2 text-gray-600 hover:text-blue-600"
                 className="block py-2 text-gray-600 "hover": text-blue-600"
               >
                 Products
               </Link>{' '}
               <Link
                 href="/about"
-                className="block py-2 text-gray-600 hover:text-blue-600"
                 className="block py-2 text-gray-600 "hover": text-blue-600"
               >
                 About
               </Link>{' '}
               <Link
                 href="/blog"
-                className="block py-2 text-gray-600 hover:text-blue-600"
                 className="block py-2 text-gray-600 "hover": text-blue-600"
               >
                 Blog
               </Link>{' '}
               <Link
                 href="/careers"
-                className="block py-2 text-gray-600 hover:text-blue-600"
                 className="block py-2 text-gray-600 "hover": text-blue-600"
               >
                 Careers
               </Link>{' '}
               <Link
                 href="/contact"
-                className="block py-2 text-gray-600 hover:text-blue-600"
                 className="block py-2 text-gray-600 "hover": text-blue-600"
               >
                 Contact
@@ -410,7 +348,6 @@ const "EnhancedNavigation": React.FC = () => {
                 {' '}
                 <Link
                   href="/contact"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block w-full text-center"
                   className="bg-blue-600 "hover": bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block w-full text-center"
                 >
                   Get Started

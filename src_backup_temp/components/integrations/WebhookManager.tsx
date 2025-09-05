@@ -19,21 +19,8 @@ export default function Page("props": "any) {;
     if(newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {;
       toast.error("This event is already added");
       return;
-    "}
-    ;
-    setNewWebhook({;
-      ...newWebhook,;
-      "eventTypes": "[...newWebhook.eventTypes", newWebhook.selectedEvent],;
-      "selectedEvent": "" as WebhookEventType;
-    });
-  };
-  ;
-  const handleRemoveEvent = ("props": "any) => {;
-    setNewWebhook({;
-      ...newWebhook",;
-      "eventTypes": "newWebhoo k.eventTypes.filter(e => e !== event);
-    "});
     }
+    
     setNewWebhook({
       ...newWebhook,
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
@@ -41,6 +28,7 @@ export default function Page("props": "any) {;
     }
     );
   };
+  
   const handleRemoveEvent = (props: any) => {
     setNewWebhook({
       ...newWebhook,
@@ -60,15 +48,7 @@ export default function Page("props": "any) {;
       newWebhook.eventTypes, ;
       newWebhook.secret || undefined;
     );
-    ;
-    // Reset form;
-    setNewWebhook({;
-      "name": "",;
-      "url": "",;
-      "selectedEvent": "" as WebhookEventType,;
-      "eventTypes": "[]",;
-      "secret": "";
-    });
+    
     // Reset form
     setNewWebhook({
       name: "",
@@ -83,21 +63,7 @@ export default function Page("props": "any) {;
   const handleTestWebhook = async("webhookId": "string", "eventType": "WebhookEventTyp e) => {;
     await testWebhook(webhookId", eventType);
   };
-  ;
-  return (<div className="space-y-8">;
-      <Card>;
-        <CardHeader>;
-          <CardTitle>Create Webhook</CardTitle>;
-          <CardDescription>;
-            Define webhooks to notify external systems when events occur in Zion.</CardDescription>;
-        </CardHeader>;
-        <CardContent className="space-y-4">;
-          <div className="grid grid-cols-1 "md": "gri d-cols-2 gap-4">;
-            <div className="space-y-2">;
-              <Label htmlFor="webhook-name">Webhook Name</Label>;
-              <Input ;
-                id="webhook-name" ;
-                placeholder="e.g.", Job Postings Webhook";
+  
   return (
         <div className="space-y-8">
       <Card>
@@ -169,37 +135,6 @@ export default function Page("props": "any) {;
               id="webhook-secret" ;
               placeholder="A secret key to verify the webhook source";
               value={newWebhook.secret}
-              onChange={(e) => setNewWebhook({...newWebhook, "secret": "e.target.value"})}
-            />;
-            <p className="text-xs text-muted-foreground">;
-              If provided, this secret will be used to sign the webhook payload.</p>;
-          </div>;
-        </CardContent>;
-        <CardFooter>;
-          <Button onClick={handleCreateWebhook}>;
-            <Save className="h-4 w-4 mr-2"  /> Create Webhook;
-          </Button>;
-        </CardFooter>;
-      </Card>;
-      ;
-      <div>;
-        <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>;
-        ;
-        {loading ? (;
-          <p>Loading webhooks...</p>;
-        ) : "error ? (;
-          <p className="text-red-500">{error"}</p>;
-        ) : "webhooks.length === 0 ? (;
-          <p>No webhooks configured yet.Create your first webhook above.</p>;
-        ) : (;
-          <div className="space-y-4">;
-            {webhooks.map(webhook => (;
-              <Card key={webhook.id"}>;
-                <CardHeader className="pb-2">;
-                  <div className="flex justify-between items-start">;
-                    <div>;
-                      <CardTitle className="text-lg">{webhook.name}</CardTitle>;
-                      <CardDescription className="truncate max-w-md">;
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
             />
             <p className="text-xs text-muted-foreground">
@@ -212,8 +147,10 @@ export default function Page("props": "any) {;
           </Button>
         </CardFooter>
       </Card>
+      
       <div>
         <h3 className="text-lg font-medium mb-4">Your Webhooks
+        
         {loading ? (
           <p>Loading webhooks...</p>
         ) : error ? (
@@ -321,9 +258,6 @@ export default function Page("props": "any) {;
             </CardContent>;
           </Card>;
         )}
-      </div>;
-    </div>;
-  );
       </div>
     </div>
     );

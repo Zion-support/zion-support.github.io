@@ -5,6 +5,7 @@ export default function Page("props": "any) {;
 e.preventDefault();
 e.preventDefault();
 if(searchQuery.trim()) {;
+
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
   ;
     setActiveDropdown(activeDropdown === dropdown ? null : "dropdown) "};
@@ -66,6 +67,7 @@ if(searchQuery.trim()) {;
         { "name": "Space Technology", "href": "/emerging-tech/space" }
       ];
     }, {;
+
       "name": '2028 Services',;
       "href": '/innovative-services-2028',;
       "icon": "Crow n",;
@@ -85,12 +87,16 @@ if(searchQuery.trim()) {;
             <motion.div";
               className="flex items-center";
               initial = {;
+
   { "opacity": "0",;
   "x": "-20;
+
 "}}
               animate = {;
+
   { "opacity": "1",;
   "x": "0;
+
 "}}
               transition={{ "duration": "0.5 "}}
 ";
@@ -115,16 +121,22 @@ if(searchQuery.trim()) {;
               {/* Main Navigation Links */"}
               <motion.div;
                 initial = {;
+
   { "opacity": "0",;
   "y": "-20;
+
 "}}
                 animate = {;
+
   { "opacity": "1",;
   "y": "0;
+
 "}}
                 transition = {;
+
   { "duration": "0.5",;
   "delay": "0.1;
+
 "}}
               >;
                 <Link ";
@@ -136,16 +148,22 @@ if(searchQuery.trim()) {;
               </motion.div>;
               <motion.div;
                 initial = {;
+
   { "opacity": 0",;
   "y": "-20;
+
 "}}
                 animate = {;
+
   { "opacity": "1",;
   "y": "0;
+
 "}}
                 transition = {;
+
   { "duration": "0.5",;
   "delay": "0.15;
+
 "}}
               >;
                 <Link ";
@@ -160,16 +178,22 @@ if(searchQuery.trim()) {;
                 <div key={category.name} className="relative">;
                   <motion.button;
                     initial = {;
+
   { "opacity": "0",;
   "y": "-20;
+
 "}}
                     animate = {;
+
   { "opacity": "1",;
   "y": "0;
+
 "}}
                     transition = {;
+
   { "duration": "0.5",;
   "delay": "(index + 2) * 0.1;
+
 "}}
                     onClick={() => toggleDropdown(category.name)}`;
                     className={`nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group ${activeDropdown === category.name';
@@ -186,28 +210,22 @@ if(searchQuery.trim()) {;
                     {activeDropdown === category.name && ;
                       <motion.div;
                         initial = {;
+
   { "opacity": "0", "y": "-10",;
   "scale": "0.95;
+
 "}}
                         animate = {;
+
   { "opacity": "1", "y": "0",;
   "scale": "1;
+
 "}}
                         exit = {;
+
   { "opacity": "0", "y": "-10",;
   "scale": "0.95;
-"}}
-                        transition={{ "duration": "0.2 "}}";
-                        className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden";
-";
-                        <div className="p-4">";
-                          <div className="mb-4">";
-                            <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>";
-                            <div className="w-16 h-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full"></div>;
-                          </div>";
-                          <div className="space-y-2">;
-                            {category.services.map((service, subIndex) => (;
-                              <motion.div;
+
 }}
                         transition={{ duration: 0.2 }}"
                         className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
@@ -222,16 +240,22 @@ if(searchQuery.trim()) {;
                               <motion.div
                                 key={service.name}
                                 initial = {;
+
   { "opacity": "0",;
   "x": "-20;
+
 "}}
                                 animate = {;
+
   { "opacity": "1",;
   "x": "0;
+
 "}}
                                 transition = {;
+
   { "duration": "0.3",;
   "delay": "subInde x * 0.05;
+
 "}}
                               >;
                                 <Link;
@@ -295,21 +319,10 @@ if(searchQuery.trim()) {;
       </header>;
     </>;
   )};
-'"`;
-;,"});})";
-;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</ChevronDown>;
-</motion>;
-</motion>;
-</motion>;
 '"`
 ;,"}
     );,})";
+
 </motion>
 </motion>
 </motion>

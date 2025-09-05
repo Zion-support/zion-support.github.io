@@ -77,13 +77,6 @@ export function SiteFooter("props": "any) {';
             </div>;
           </div>;
           {/* Navigation Sections */}
-          { navSections.map((section) => (;
-            <div key={section.title}>;
-              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>;
-              <ul className="space-y-3">;
-                {section.links.map((link) => (;
-                  <li key={link.label}>;
-                    <Link;
           { navSections.map((section) => (
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}
@@ -99,8 +92,6 @@ export function SiteFooter("props": "any) {';
                   </li>;
                 ));
       )}
-    </div>;
-  );
     </div>
     );
 }
@@ -108,8 +99,6 @@ export function SiteFooter("props": "any) {';
             </div>;
           ));
       )}
-    </div>;
-  );
     </div>
     );
 }
@@ -133,8 +122,6 @@ export function SiteFooter("props": "any) {';
                 </a>;
               ));
       )}
-    </div>;
-  );
     </div>
     );
 }

@@ -1,10 +1,10 @@
 import React from 'react';
-import Layout from '../components/Layout';
+import MainLayout from '../src/components/layout/MainLayout';
 
 export default function HomePage() {
   return (
-    <Layout title="Test" description="Test">
+    <MainLayout title="Test" description="Test">
       <div>Test</div>
-    </Layout>
+    </MainLayout>
   );
 }
