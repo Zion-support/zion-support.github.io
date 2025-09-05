@@ -147,54 +147,6 @@ export default function BlogPage() {
                             Read More
                             <ArrowRight className="w-4 h-4 ml-1" />
                           </Link>
-<<<<<<< HEAD
-                        </div>                      </div>
-                      <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4" />
-                        <span>{post.date}</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-500">{post.readTime}</span>
-                      <Link
-                        href={`/blog/${post.id}`}
-                        className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
-                      >
-                        Read More
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </motion.article>
-              ))}
-            </div>
-
-{/* Pagination */}
-                <div className="mt-12 flex justify-center">
-                  <nav className="flex space-x-2">
-                    <button className="px-3 py-2 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
-                      Previous
-                    </button>
-                    <button className="px-3 py-2 bg-blue-600 text-white rounded-md">
-                      1
-                    </button>
-                    <button className="px-3 py-2 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
-                      2
-                    </button>
-                    <button className="px-3 py-2 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
-                      3
-                    </button>
-                    <button className="px-3 py-2 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
-                      Next
-                    </button>
-                  </nav>
-=======
-                        </div>
-                      </div>
-                    </motion.article>
-                  ))}
->>>>>>> e4f8ef4ed9fd2ff89efca29003f713a7ba5afd67
                 </div>
               </div>
               {/* Sidebar */}
@@ -210,12 +162,6 @@ export default function BlogPage() {
                     ))}
                   </div>
                 </div>
-<<<<<<< HEAD
-              </div>            </div>
-=======
-              </div>
-            </div>
->>>>>>> e4f8ef4ed9fd2ff89efca29003f713a7ba5afd67
           </div>
         </section>
       </div>

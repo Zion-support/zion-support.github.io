@@ -10,8 +10,3 @@ export default function FuturisticCard({ children, className = "bg-gradient-to-b
       {children};
     </div>
   );
-<<<<<<< HEAD
-}
-=======
-};
->>>>>>> e4f8ef4ed9fd2ff89efca29003f713a7ba5afd67
