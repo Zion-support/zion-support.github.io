@@ -304,6 +304,159 @@ const aiServices = [
     category: 'Virtual Reality'
   },
   {
+    title: 'AI-Powered Medical Imaging Analysis',
+    description: 'Advanced medical image analysis for radiology, pathology, and diagnostic imaging.',
+    icon: Eye,
+    features: ['Radiology Analysis', 'Pathology Detection', 'Diagnostic Support', '3D Reconstruction'],
+    pricing: '$15,000 - $75,000 setup',
+    category: 'Medical AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Threat Hunter',
+    description: 'Advanced AI system for proactive threat hunting and security incident response.',
+    icon: Shield,
+    features: ['Threat Hunting', 'Incident Response', 'Behavioral Analysis', 'Zero-day Detection'],
+    pricing: '$20,000 - $100,000 setup',
+    category: 'Cybersecurity'
+  },
+  {
+    title: 'AI-Powered Content Creation Studio',
+    description: 'Complete AI content creation platform for videos, articles, and multimedia.',
+    icon: Video,
+    features: ['Video Generation', 'Article Writing', 'Image Creation', 'Voice Synthesis'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Content Creation'
+  },
+  {
+    title: 'AI-Powered Predictive Maintenance',
+    description: 'Industrial equipment predictive maintenance using IoT sensors and AI analysis.',
+    icon: Settings,
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$10,000 - $50,000 setup',
+    category: 'Industrial AI'
+  },
+  {
+    title: 'AI-Powered Personal Assistant',
+    description: 'Advanced personal AI assistant with natural language processing and task automation.',
+    icon: Bot,
+    features: ['Natural Language Processing', 'Task Automation', 'Calendar Management', 'Smart Reminders'],
+    pricing: '$99 - $499/month',
+    category: 'Personal AI'
+  },
+  {
+    title: 'AI-Powered Real Estate Valuation',
+    description: 'Automated property valuation using AI analysis of market data and property features.',
+    icon: Building,
+    features: ['Property Analysis', 'Market Comparison', 'Price Prediction', 'Investment Analysis'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Real Estate AI'
+  },
+  {
+    title: 'AI-Powered Language Learning',
+    description: 'Personalized language learning platform with AI-powered tutoring and assessment.',
+    icon: BookOpen,
+    features: ['Personalized Learning', 'Speech Recognition', 'Progress Tracking', 'Cultural Context'],
+    pricing: '$19.99 - $99.99/month',
+    category: 'Education AI'
+  },
+  {
+    title: 'AI-Powered Mental Health Support',
+    description: 'AI-powered mental health monitoring and support system with crisis intervention.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Crisis Detection', 'Therapeutic Chat', 'Professional Referrals'],
+    pricing: '$29.99 - $149.99/month',
+    category: 'Healthcare AI'
+  },
+  {
+    title: 'AI-Powered Sports Analytics',
+    description: 'Advanced sports performance analysis and prediction using computer vision and data science.',
+    icon: Target,
+    features: ['Performance Analysis', 'Injury Prediction', 'Tactical Insights', 'Player Scouting'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Sports AI'
+  },
+  {
+    title: 'AI-Powered Weather Prediction',
+    description: 'Hyper-local weather prediction using AI and satellite data analysis.',
+    icon: Globe,
+    features: ['Hyper-local Forecasting', 'Severe Weather Alerts', 'Climate Analysis', 'Agricultural Insights'],
+    pricing: '$500 - $2,500/month',
+    category: 'Meteorology AI'
+  },
+  {
+    title: 'AI-Powered Music Composition',
+    description: 'AI-powered music composition and production with genre-specific algorithms.',
+    icon: Mic,
+    features: ['Music Generation', 'Genre Adaptation', 'Lyric Writing', 'Production Assistance'],
+    pricing: '$99 - $499/month',
+    category: 'Creative AI'
+  },
+  {
+    title: 'AI-Powered Fashion Design',
+    description: 'AI-powered fashion design and trend prediction for clothing and accessories.',
+    icon: ShoppingCart,
+    features: ['Design Generation', 'Trend Prediction', 'Size Optimization', 'Style Matching'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Fashion AI'
+  },
+  {
+    title: 'AI-Powered Food Safety Monitoring',
+    description: 'Automated food safety inspection and quality control using computer vision.',
+    icon: Shield,
+    features: ['Quality Inspection', 'Contamination Detection', 'Temperature Monitoring', 'Compliance Tracking'],
+    pricing: '$5,000 - $25,000 setup',
+    category: 'Food Safety AI'
+  },
+  {
+    title: 'AI-Powered Traffic Optimization',
+    description: 'Smart traffic management system with real-time optimization and congestion reduction.',
+    icon: Car,
+    features: ['Traffic Flow Optimization', 'Congestion Prediction', 'Route Planning', 'Signal Control'],
+    pricing: '$50,000 - $250,000 setup',
+    category: 'Smart Transportation'
+  },
+  {
+    title: 'AI-Powered Energy Trading',
+    description: 'Automated energy trading and grid optimization using AI and machine learning.',
+    icon: Zap,
+    features: ['Energy Trading', 'Grid Optimization', 'Demand Forecasting', 'Price Prediction'],
+    pricing: '$25,000 - $125,000 setup',
+    category: 'Energy AI'
+  },
+  {
+    title: 'AI-Powered Insurance Risk Assessment',
+    description: 'Automated insurance risk assessment and pricing using AI and big data analysis.',
+    icon: Shield,
+    features: ['Risk Modeling', 'Claims Prediction', 'Fraud Detection', 'Pricing Optimization'],
+    pricing: '$10,000 - $50,000 setup',
+    category: 'Insurance AI'
+  },
+  {
+    title: 'AI-Powered Retail Personalization',
+    description: 'Advanced retail personalization engine with real-time customer behavior analysis.',
+    icon: ShoppingCart,
+    features: ['Personalized Recommendations', 'Dynamic Pricing', 'Inventory Optimization', 'Customer Journey Mapping'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Retail AI'
+  },
+  {
+    title: 'AI-Powered Legal Research',
+    description: 'Automated legal research and case law analysis using natural language processing.',
+    icon: BookOpen,
+    features: ['Case Law Analysis', 'Legal Research', 'Precedent Finding', 'Document Summarization'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Legal AI'
+  },
+  {
+    title: 'AI-Powered Environmental Monitoring',
+    description: 'Comprehensive environmental monitoring using AI and IoT sensors for pollution detection.',
+    icon: Globe,
+    features: ['Pollution Detection', 'Air Quality Monitoring', 'Water Quality Analysis', 'Environmental Alerts'],
+    pricing: '$3,000 - $15,000 setup',
+    category: 'Environmental AI'
+  },
+  {
     title: 'AI Language Translation',
     description: 'Real-time multi-language translation with cultural context understanding.',
     icon: Globe,
@@ -649,6 +802,195 @@ const aiServices = [
     features: ['Mental Health Screening', 'Risk Assessment', 'Treatment Recommendations', 'Progress Monitoring'],
     pricing: '$10,000 - $100,000/setup',
     category: 'Mental Health AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Drug Discovery Platform',
+    description: 'Accelerated drug discovery using AI for molecular design, target identification, and clinical trial optimization.',
+    icon: Heart,
+    features: ['Molecular Design', 'Target Identification', 'Clinical Trial Optimization', 'Toxicity Prediction'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Pharmaceutical AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Climate Change Modeling',
+    description: 'Advanced climate prediction and environmental impact analysis using machine learning and satellite data.',
+    icon: Globe,
+    features: ['Climate Prediction', 'Environmental Impact Analysis', 'Carbon Footprint Tracking', 'Sustainability Metrics'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Environmental AI'
+  },
+  {
+    title: 'AI-Powered Space Mission Planning',
+    description: 'Autonomous space mission planning and satellite constellation management using advanced AI algorithms.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Satellite Management', 'Orbital Mechanics', 'Resource Optimization'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Space AI'
+  },
+  {
+    title: 'AI-Powered Neural Interface System',
+    description: 'Brain-computer interface with AI-powered neural signal processing and motor control.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'Motor Control', 'Cognitive Enhancement', 'Medical Applications'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Neurotechnology'
+  },
+  {
+    title: 'AI-Powered Smart City Management',
+    description: 'Comprehensive smart city management with AI optimization for traffic, energy, and public safety.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Energy Management', 'Public Safety', 'Resource Allocation'],
+    pricing: '$1,000,000 - $10,000,000/project',
+    category: 'Smart Cities'
+  },
+  {
+    title: 'AI-Powered Agricultural Intelligence',
+    description: 'Precision agriculture with AI-powered crop monitoring, yield prediction, and pest detection.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
+    pricing: '$25,000 - $250,000/project',
+    category: 'AgTech AI'
+  },
+  {
+    title: 'AI-Powered Cybersecurity Defense',
+    description: 'Self-evolving AI cybersecurity system that adapts to new threats and provides zero-day protection.',
+    icon: Shield,
+    features: ['Threat Detection', 'Adaptive Defense', 'Zero-day Protection', 'Automated Response'],
+    pricing: '$100,000 - $1,000,000/setup',
+    category: 'Cybersecurity AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered High-Frequency Trading',
+    description: 'Advanced algorithmic trading with AI-powered market prediction and risk management.',
+    icon: TrendingUp,
+    features: ['Market Prediction', 'Risk Management', 'Algorithmic Trading', 'Portfolio Optimization'],
+    pricing: '$200,000 - $2,000,000/setup',
+    category: 'FinTech AI'
+  },
+  {
+    title: 'AI-Powered Virtual Reality Content',
+    description: 'Immersive VR experiences with AI-generated content, interactions, and personalized environments.',
+    icon: Gamepad2,
+    features: ['Content Generation', 'Interactive Environments', 'Personalization', 'Real-time Adaptation'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'VR AI'
+  },
+  {
+    title: 'AI-Powered Quantum Computing Optimization',
+    description: 'AI-powered quantum computing algorithm optimization and error correction for quantum systems.',
+    icon: Cpu,
+    features: ['Quantum Algorithm Optimization', 'Error Correction', 'Quantum State Analysis', 'Performance Tuning'],
+    pricing: '$300,000 - $3,000,000/project',
+    category: 'Quantum AI'
+  },
+  {
+    title: 'AI-Powered Autonomous Vehicle Systems',
+    description: 'Advanced autonomous vehicle systems with computer vision, path planning, and real-time decision making.',
+    icon: Car,
+    features: ['Computer Vision', 'Path Planning', 'Obstacle Detection', 'Real-time Decision Making'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Autonomous Vehicles'
+  },
+  {
+    title: 'AI-Powered Personalized Medicine',
+    description: 'Personalized treatment recommendations based on genetic data, medical history, and AI analysis.',
+    icon: Heart,
+    features: ['Genetic Analysis', 'Treatment Personalization', 'Drug Interaction Analysis', 'Outcome Prediction'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Personalized Medicine'
+  },
+  {
+    title: 'AI-Powered Content Creation Suite',
+    description: 'Comprehensive AI content creation platform for text, images, videos, and audio with brand consistency.',
+    icon: FileText,
+    features: ['Multi-modal Content', 'Brand Consistency', 'Content Optimization', 'Automated Publishing'],
+    pricing: '$199 - $1,999/month',
+    category: 'Content AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Language Translation API',
+    description: 'Advanced real-time translation service with context awareness and industry-specific terminology.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Awareness', 'Industry Terms', 'Multi-modal Support'],
+    pricing: '$0.01 - $0.10 per 1000 characters',
+    category: 'Language AI'
+  },
+  {
+    title: 'AI-Powered Video Analytics Platform',
+    description: 'Advanced video analysis for security, marketing, and business intelligence with real-time processing.',
+    icon: Video,
+    features: ['Object Tracking', 'Behavior Analysis', 'Crowd Counting', 'Anomaly Detection'],
+    pricing: '$0.05 - $0.50 per minute',
+    category: 'Video AI'
+  },
+  {
+    title: 'AI-Powered Personal Assistant',
+    description: 'Advanced personal AI assistant with natural language understanding and task automation.',
+    icon: Bot,
+    features: ['Natural Language Understanding', 'Task Automation', 'Calendar Management', 'Email Processing'],
+    pricing: '$9.99 - $99.99/month',
+    category: 'Personal AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Code Generation Platform',
+    description: 'AI-powered code generation and development assistance with multiple programming languages.',
+    icon: Code,
+    features: ['Code Generation', 'Bug Fixing', 'Code Review', 'Documentation Generation'],
+    pricing: '$49 - $499/month',
+    category: 'Development AI'
+  },
+  {
+    title: 'AI-Powered Music Composition',
+    description: 'AI-powered music composition and production with style adaptation and emotional analysis.',
+    icon: Mic,
+    features: ['Music Composition', 'Style Adaptation', 'Emotional Analysis', 'Production Assistance'],
+    pricing: '$29 - $299/month',
+    category: 'Creative AI'
+  },
+  {
+    title: 'AI-Powered Legal Research Assistant',
+    description: 'AI-powered legal research and case analysis with precedent identification and brief generation.',
+    icon: BookOpen,
+    features: ['Legal Research', 'Precedent Identification', 'Brief Generation', 'Case Analysis'],
+    pricing: '$199 - $1,999/month',
+    category: 'Legal AI'
+  },
+  {
+    title: 'AI-Powered Real Estate Valuation',
+    description: 'AI-powered property valuation and market analysis with predictive pricing and investment insights.',
+    icon: Building,
+    features: ['Property Valuation', 'Market Analysis', 'Predictive Pricing', 'Investment Insights'],
+    pricing: '$99 - $999/property',
+    category: 'Real Estate AI'
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimization',
+    description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and risk analysis.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Risk Analysis', 'Route Planning'],
+    pricing: '$299 - $2,999/month',
+    category: 'Supply Chain AI'
+  },
+  {
+    title: 'AI-Powered Energy Grid Management',
+    description: 'Smart energy grid management with load balancing, renewable integration, and outage prediction.',
+    icon: Zap,
+    features: ['Load Balancing', 'Renewable Integration', 'Outage Prediction', 'Energy Trading'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Energy AI'
+  },
+  {
+    title: 'AI-Powered Customer Experience Platform',
+    description: 'Comprehensive customer experience management with sentiment analysis, personalization, and automation.',
+    icon: Users,
+    features: ['Sentiment Analysis', 'Personalization', 'Automation', 'Experience Optimization'],
+    pricing: '$199 - $1,999/month',
+    category: 'Customer Experience AI',
     popular: true
   }
 ];
@@ -1001,6 +1343,10 @@ export default function AIServicesPage() {
               <Link href="https://ziontechgroup.com" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
                 Visit Our Website
               </Link>
+            </div>
+            <div className="mt-8 text-sm opacity-90">
+              <p>📞 Call: +1 302 464 0950 | ✉️ Email: kleber@ziontechgroup.com</p>
+              <p>📍 364 E Main St STE 1008, Middletown, DE 19709</p>
             </div>
           </motion.div>
         </div>

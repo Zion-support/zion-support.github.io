@@ -300,6 +300,169 @@ const microSaaSProducts = [
   },
   {
     title: 'AI-Powered Legal Document Analyzer',
+    description: 'Automated legal document review, contract analysis, and compliance checking using advanced NLP.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
+    pricing: '$299 - $1,999/month',
+    category: 'Legal Tech',
+    popular: true
+  },
+  {
+    title: 'Real-Time Supply Chain Optimizer',
+    description: 'AI-driven supply chain optimization with demand forecasting and inventory management.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Supplier Risk Analysis', 'Cost Reduction'],
+    pricing: '$499 - $2,999/month',
+    category: 'Supply Chain'
+  },
+  {
+    title: 'AI-Powered Medical Diagnosis Assistant',
+    description: 'Healthcare AI platform for symptom analysis, diagnosis support, and treatment recommendations.',
+    icon: Heart,
+    features: ['Symptom Analysis', 'Diagnosis Support', 'Treatment Recommendations', 'Medical Records Integration'],
+    pricing: '$999 - $4,999/month',
+    category: 'Healthcare',
+    popular: true
+  },
+  {
+    title: 'Smart Building IoT Platform',
+    description: 'Comprehensive IoT solution for smart buildings with sensors, automation, and analytics.',
+    icon: Building,
+    features: ['Sensor Integration', 'Automation Control', 'Energy Management', 'Predictive Maintenance'],
+    pricing: '$199 - $1,499/month',
+    category: 'IoT'
+  },
+  {
+    title: 'AI-Powered Fraud Detection System',
+    description: 'Real-time fraud detection and prevention for financial transactions and user behavior.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Machine Learning Models', 'Risk Scoring', 'Alert Management'],
+    pricing: '$399 - $2,499/month',
+    category: 'FinTech',
+    popular: true
+  },
+  {
+    title: 'Automated Social Media Content Creator',
+    description: 'AI-powered social media content generation, scheduling, and performance optimization.',
+    icon: Globe,
+    features: ['Content Generation', 'Multi-platform Posting', 'Performance Analytics', 'Trend Analysis'],
+    pricing: '$79 - $499/month',
+    category: 'Social Media'
+  },
+  {
+    title: 'Smart Agriculture Monitoring System',
+    description: 'IoT-based agricultural monitoring with crop health analysis and yield prediction.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Weather Integration', 'Yield Prediction', 'Pest Detection'],
+    pricing: '$149 - $799/month',
+    category: 'AgTech'
+  },
+  {
+    title: 'AI-Powered Recruitment Platform',
+    description: 'Intelligent candidate screening, matching, and interview scheduling automation.',
+    icon: Users,
+    features: ['Resume Screening', 'Candidate Matching', 'Interview Scheduling', 'Bias Detection'],
+    pricing: '$199 - $999/month',
+    category: 'HR Tech'
+  },
+  {
+    title: 'Real-Time Language Translation API',
+    description: 'Advanced real-time translation service with context awareness and industry-specific terminology.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Awareness', 'Industry Terms', 'Multi-modal Support'],
+    pricing: '$0.01 - $0.10 per 1000 characters',
+    category: 'Language Services'
+  },
+  {
+    title: 'AI-Powered Video Content Moderator',
+    description: 'Automated video content moderation with real-time detection of inappropriate content.',
+    icon: Video,
+    features: ['Real-time Detection', 'Multi-language Support', 'Custom Rules', 'API Integration'],
+    pricing: '$0.05 - $0.50 per minute',
+    category: 'Content Moderation'
+  },
+  {
+    title: 'Smart Parking Management System',
+    description: 'IoT-based parking management with real-time availability and payment processing.',
+    icon: Car,
+    features: ['Real-time Availability', 'Mobile Payments', 'Reservation System', 'Analytics Dashboard'],
+    pricing: '$99 - $599/month',
+    category: 'Smart Cities'
+  },
+  {
+    title: 'AI-Powered Personal Finance Advisor',
+    description: 'Personalized financial planning and investment advice using machine learning.',
+    icon: DollarSign,
+    features: ['Financial Planning', 'Investment Advice', 'Budget Optimization', 'Goal Tracking'],
+    pricing: '$9.99 - $49.99/month',
+    category: 'FinTech'
+  },
+  {
+    title: 'Automated Code Documentation Generator',
+    description: 'AI-powered code documentation generation with API documentation and code comments.',
+    icon: Code,
+    features: ['Auto Documentation', 'API Generation', 'Code Comments', 'Version Control Integration'],
+    pricing: '$49 - $299/month',
+    category: 'Development Tools'
+  },
+  {
+    title: 'Smart Home Automation Platform',
+    description: 'Comprehensive smart home control with voice commands and predictive automation.',
+    icon: Home,
+    features: ['Voice Control', 'Predictive Automation', 'Energy Management', 'Security Integration'],
+    pricing: '$19.99 - $99.99/month',
+    category: 'Smart Home'
+  },
+  {
+    title: 'AI-Powered Email Security Scanner',
+    description: 'Advanced email security with phishing detection, malware scanning, and threat analysis.',
+    icon: Mail,
+    features: ['Phishing Detection', 'Malware Scanning', 'Threat Analysis', 'Real-time Protection'],
+    pricing: '$2.99 - $14.99/user/month',
+    category: 'Cybersecurity'
+  },
+  {
+    title: 'Real-Time Collaboration Whiteboard',
+    description: 'AI-enhanced collaborative whiteboard with smart drawing recognition and auto-organization.',
+    icon: Monitor,
+    features: ['Real-time Collaboration', 'Smart Recognition', 'Auto-organization', 'Voice Notes'],
+    pricing: '$9.99 - $49.99/month',
+    category: 'Collaboration'
+  },
+  {
+    title: 'AI-Powered Inventory Forecasting',
+    description: 'Predictive inventory management with demand forecasting and automated reordering.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Auto Reordering', 'Seasonal Analysis', 'Cost Optimization'],
+    pricing: '$149 - $799/month',
+    category: 'Inventory Management'
+  },
+  {
+    title: 'Smart Waste Management System',
+    description: 'IoT-based waste management with route optimization and collection scheduling.',
+    icon: Trash2,
+    features: ['Route Optimization', 'Collection Scheduling', 'Fill Level Monitoring', 'Cost Tracking'],
+    pricing: '$199 - $999/month',
+    category: 'Environmental'
+  },
+  {
+    title: 'AI-Powered Meeting Transcription',
+    description: 'Real-time meeting transcription with speaker identification and action item extraction.',
+    icon: Mic,
+    features: ['Real-time Transcription', 'Speaker ID', 'Action Items', 'Meeting Summaries'],
+    pricing: '$0.10 - $0.50 per minute',
+    category: 'Productivity'
+  },
+  {
+    title: 'Smart Retail Analytics Platform',
+    description: 'AI-powered retail analytics with customer behavior analysis and sales optimization.',
+    icon: ShoppingCart,
+    features: ['Customer Analytics', 'Sales Optimization', 'Inventory Insights', 'Predictive Analytics'],
+    pricing: '$299 - $1,999/month',
+    category: 'Retail Tech'
+  },
+  {
+    title: 'AI-Powered Legal Document Analyzer',
     description: 'Automated legal document analysis and contract review using AI.',
     icon: FileText,
     features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
@@ -734,6 +897,160 @@ const microSaaSProducts = [
     pricing: '$199 - $1,299/month',
     category: 'Email Marketing',
     popular: true
+  },
+  {
+    title: 'AI-Powered Logo Generator Pro',
+    description: 'Transform sketches into professional logos with AI-powered design and multiple variations.',
+    icon: Image,
+    features: ['Sketch to Logo', 'Multiple Variations', 'Brand Guidelines', 'High-res Downloads'],
+    pricing: '$29 - $199/logo',
+    category: 'Design Tools',
+    popular: true
+  },
+  {
+    title: 'Smart Password Manager Enterprise',
+    description: 'Advanced password management with team sharing, security auditing, and breach monitoring.',
+    icon: Lock,
+    features: ['Team Sharing', 'Security Auditing', 'Breach Monitoring', 'SSO Integration'],
+    pricing: '$5 - $15/user/month',
+    category: 'Security',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Presentation Maker',
+    description: 'Generate professional presentations with minimal input using advanced AI and editable templates.',
+    icon: FileText,
+    features: ['AI Generation', 'Editable Templates', 'Brand Consistency', 'Export Options'],
+    pricing: '$19 - $99/month',
+    category: 'Productivity'
+  },
+  {
+    title: 'Mobile-First Survey Platform',
+    description: 'Create engaging, adaptive surveys that provide richer data through mobile-optimized experiences.',
+    icon: MessageSquare,
+    features: ['Mobile Optimization', 'Adaptive Questions', 'Real-time Analytics', 'Multi-language Support'],
+    pricing: '$39 - $199/month',
+    category: 'Data Collection'
+  },
+  {
+    title: 'AI-Powered Debt Settlement Assistant',
+    description: 'Automated debt lawsuit response generation and settlement negotiation using AI.',
+    icon: DollarSign,
+    features: ['Response Generation', 'Settlement Negotiation', 'Attorney Review', 'Filing Services'],
+    pricing: '$199 - $999/case',
+    category: 'Legal Tech'
+  },
+  {
+    title: 'Smart Compliance Monitor',
+    description: 'Automated regulatory compliance monitoring with real-time updates and violation alerts.',
+    icon: Shield,
+    features: ['Real-time Monitoring', 'Automated Alerts', 'Compliance Reports', 'Risk Assessment'],
+    pricing: '$299 - $1,999/month',
+    category: 'Compliance'
+  },
+  {
+    title: 'AI-Powered Website Analytics Dashboard',
+    description: 'Business intelligence dashboard for non-technical users with actionable insights.',
+    icon: BarChart3,
+    features: ['Non-technical Interface', 'Actionable Insights', 'Custom Dashboards', 'Automated Reports'],
+    pricing: '$49 - $299/month',
+    category: 'Analytics'
+  },
+  {
+    title: 'Virtual Event Management Suite',
+    description: 'Comprehensive platform for hosting virtual events, webinars, and conferences globally.',
+    icon: Video,
+    features: ['Global Reach', 'Interactive Features', 'Analytics Dashboard', 'Recording & Playback'],
+    pricing: '$99 - $999/event',
+    category: 'Events'
+  },
+  {
+    title: 'AI-Powered Budget ERP System',
+    description: 'Affordable enterprise resource planning with AI-driven insights and automation.',
+    icon: Building,
+    features: ['AI Insights', 'Process Automation', 'Inventory Management', 'Financial Tracking'],
+    pricing: '$199 - $999/month',
+    category: 'ERP'
+  },
+  {
+    title: 'Smart Freelancer Collaboration Hub',
+    description: 'Platform connecting freelancers and clients with project management and payment processing.',
+    icon: Users,
+    features: ['Project Management', 'Payment Processing', 'Skill Matching', 'Quality Assurance'],
+    pricing: '5% - 10% per transaction',
+    category: 'Freelance'
+  },
+  {
+    title: 'AI-Powered Customer Feedback Aggregator',
+    description: 'Multi-channel feedback collection and analysis with actionable business insights.',
+    icon: MessageSquare,
+    features: ['Multi-channel Collection', 'Sentiment Analysis', 'Actionable Insights', 'Trend Analysis'],
+    pricing: '$79 - $499/month',
+    category: 'Customer Success'
+  },
+  {
+    title: 'Sustainable Business Footprint Tracker',
+    description: 'Measure, track, and reduce environmental footprint with carbon footprint calculators.',
+    icon: Sprout,
+    features: ['Carbon Tracking', 'Sustainability Reporting', 'Goal Setting', 'Certification Support'],
+    pricing: '$99 - $599/month',
+    category: 'Sustainability'
+  },
+  {
+    title: 'AI-Powered Employee Wellness Platform',
+    description: 'Comprehensive employee wellness tracking with productivity insights and team building.',
+    icon: Heart,
+    features: ['Wellness Tracking', 'Productivity Insights', 'Team Building', 'Mental Health Support'],
+    pricing: '$5 - $25/employee/month',
+    category: 'HR Tech'
+  },
+  {
+    title: 'Smart Supply Chain Optimizer',
+    description: 'Blockchain and IoT-powered supply chain transparency with predictive analytics.',
+    icon: Network,
+    features: ['Blockchain Tracking', 'IoT Integration', 'Predictive Analytics', 'Real-time Monitoring'],
+    pricing: '$399 - $2,999/month',
+    category: 'Supply Chain'
+  },
+  {
+    title: 'AI-Powered Local SEO Optimizer',
+    description: 'Specialized local search optimization with competitor analysis and listing management.',
+    icon: Search,
+    features: ['Local Listings', 'Competitor Analysis', 'Review Management', 'Citation Building'],
+    pricing: '$79 - $399/month',
+    category: 'Local SEO'
+  },
+  {
+    title: 'Smart Remote Work Management',
+    description: 'Comprehensive remote work platform with collaboration, time tracking, and productivity tools.',
+    icon: Monitor,
+    features: ['Time Tracking', 'Collaboration Tools', 'Productivity Analytics', 'Team Communication'],
+    pricing: '$9 - $49/user/month',
+    category: 'Remote Work'
+  },
+  {
+    title: 'AI-Powered Content Moderation API',
+    description: 'Real-time content moderation for text, images, and videos with custom rule configuration.',
+    icon: Eye,
+    features: ['Real-time Processing', 'Multi-modal Detection', 'Custom Rules', 'API Integration'],
+    pricing: '$0.01 - $0.10 per request',
+    category: 'Content Safety'
+  },
+  {
+    title: 'Smart Energy Consumption Optimizer',
+    description: 'AI-powered energy optimization for residential and commercial buildings.',
+    icon: Zap,
+    features: ['Energy Monitoring', 'Cost Optimization', 'Predictive Analytics', 'Renewable Integration'],
+    pricing: '$29 - $199/month',
+    category: 'Energy Management'
+  },
+  {
+    title: 'AI-Powered Personal Learning Assistant',
+    description: 'Personalized learning platform with adaptive content and skill assessment.',
+    icon: BookOpen,
+    features: ['Adaptive Learning', 'Skill Assessment', 'Progress Tracking', 'Certification'],
+    pricing: '$19 - $99/month',
+    category: 'EdTech'
   }
 ];
 

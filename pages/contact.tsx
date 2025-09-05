@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight } from 'lucide-react';
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-469e
 import MainLayout from '../components/layout/MainLayout';
 
 export default function ContactPage() {

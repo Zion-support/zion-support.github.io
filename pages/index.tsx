@@ -34,13 +34,8 @@ const services = [
 
 export default function HomePage() {
   return (
-<<<<<<< HEAD
     <Layout>
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-=======
-    <MainLayout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
->>>>>>> cursor/add-new-services-and-deploy-updates-469e
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
@@ -65,7 +60,8 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
+              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services. 
+              Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-blue-300 hover:text-blue-200">kleber@ziontechgroup.com</a> or call <a href="tel:+13024640950" className="text-blue-300 hover:text-blue-200">+1 302 464 0950</a> for a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
@@ -155,8 +151,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
       {/* Contact Information Section */}
       <section className="py-20 bg-white">
@@ -226,7 +220,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
->>>>>>> cursor/add-new-services-and-deploy-updates-469e
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
@@ -254,12 +247,7 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>
-    </Layout>
-=======
       </div>
-    </MainLayout>
->>>>>>> cursor/add-new-services-and-deploy-updates-469e
+    </Layout>
   );
 }
