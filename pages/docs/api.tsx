@@ -77,7 +77,7 @@ const codeExamples = [{
 }
 })
 const data = await response.json()
-``
+`
   },
   {
     language: 'Python',
@@ -95,57 +95,57 @@ data = {
     'company': 'Tech Corp'
 }
 response = requests.post(url, json=data, headers=headers)
-print(response.json())``
+print(response.json())`
   },
   {
     language: 'cURL',
     title: 'Get System Status',
-    code: `curl -X GET "https://ziontechgroup.com/api/v1/status" \\`
+    code: `curl -X GET "https://ziontechgroup.com/api/v1/status" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
   }]
-const sdkLibraries = []
-  {}
+const sdkLibraries = [
+  {
     name: 'JavaScript SDK',
     description: 'Official JavaScript SDK for easy integration',
     version: '1.2.0',
     install: 'npm install @ziontechgroup/sdk',
     documentation: '/docs/sdk/javascript'
   },
-  {}
+  {
     name: 'Python SDK',
     description: 'Python SDK with full API support',
     version: '1.1.5',
     install: 'pip install ziontechgroup-sdk',
     documentation: '/docs/sdk/python'
   },
-  {}
+  {
     name: 'PHP SDK',
     description: 'PHP SDK for server-side integration',
     version: '1.0.8',
     install: 'composer require ziontechgroup/sdk',
     documentation: '/docs/sdk/php'
   }]
-export default function APIDocumentationPage() {}
+export default function APIDocumentationPage() {
   const [copiedCode, setCopiedCode] = useState<string | null>(null)
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedMethod, setSelectedMethod] = useState('all')
-  const copyToClipboard = async (code: string, id: string) => {}
-    try {}
+  const copyToClipboard = async (code: string, id: string) => {
+    try {
       await navigator.clipboard.writeText(code)
       setCopiedCode(id)
       setTimeout(() => setCopiedCode(null), 2000)
-    } catch (err) {}
+    } catch (err) {
       console.error('Failed to copy: ', err)
     }
   }
-  const filteredEndpoints = apiEndpoints.filter(endpoint => {})
+  const filteredEndpoints = apiEndpoints.filter(endpoint => {
     const matchesSearch = endpoint.path.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          endpoint.description.toLowerCase().includes(searchQuery.toLowerCase())
     const matchesMethod = selectedMethod === 'all' || endpoint.method.toLowerCase() === selectedMethod.toLowerCase()
     return matchesSearch && matchesMethod
   })
-  return ()
+  return (
     <Layout
       title="API Documentation - Zion Tech Group"
       description="Complete API documentation for Zion Tech Group services. Learn how to integrate with our APIs, view endpoints, and access code examples."
@@ -248,7 +248,7 @@ export default function APIDocumentationPage() {}
             </div>
             {/* API Endpoints */}
             <div className="space-y-6">
-              {filteredEndpoints.map((endpoint, index) => (})
+              {filteredEndpoints.map((endpoint, index) => (
                 <motion.div
                   key={index}
                   className="bg-white/10 backdrop-blur-md rounded-lg p-6 hover:bg-white/15 transition-colors"
@@ -258,12 +258,12 @@ export default function APIDocumentationPage() {}
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-4">
-                      <span className={`px-3 py-1 rounded text-sm font-medium ${`}
+                      <span className={`px-3 py-1 rounded text-sm font-medium ${
                         endpoint.method === 'GET' ? 'bg-green-100 text-green-800' :
                         endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :
                         endpoint.method === 'PUT' ? 'bg-yellow-100 text-yellow-800' :
                         'bg-red-100 text-red-800'
-                      }`}>`
+                      }`}>
                         {endpoint.method}
                       </span>
                       <code className="text-white font-mono text-lg">
@@ -275,7 +275,7 @@ export default function APIDocumentationPage() {}
                     {endpoint.description}
                   </p>
                   {/* Parameters */}
-                  {endpoint.parameters.length > 0 && (})
+                  {endpoint.parameters.length > 0 && (
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-white mb-3">Parameters</h4>
                       <div className="overflow-x-auto">
@@ -289,14 +289,14 @@ export default function APIDocumentationPage() {}
                             </tr>
                           </thead>
                           <tbody>
-                            {endpoint.parameters.map((param, paramIndex) => (})
+                            {endpoint.parameters.map((param, paramIndex) => (
                               <tr key={paramIndex} className="border-b border-white/10">
                                 <td className="py-2 text-white font-mono">{param.name}</td>
                                 <td className="py-2 text-gray-300">{param.type}</td>
                                 <td className="py-2 text-gray-300">
-                                  {param.required ? (})
+                                  {param.required ? (
                                     <span className="text-red-400">Yes</span>
-                                  ) : ()
+                                  ) : (
                                     <span className="text-green-400">No</span>
                                   )}
                                 </td>
@@ -312,14 +312,14 @@ export default function APIDocumentationPage() {}
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3">Responses</h4>
                     <div className="space-y-3">
-                      {endpoint.responses.map((response, responseIndex) => (})
+                      {endpoint.responses.map((response, responseIndex) => (
                         <div key={responseIndex} className="bg-white/5 rounded p-4">
                           <div className="flex items-center justify-between mb-2">
-                            <span className={`px-2 py-1 rounded text-sm font-medium ${`}
+                            <span className={`px-2 py-1 rounded text-sm font-medium ${
                               response.code >= 200 && response.code < 300 ? 'bg-green-100 text-green-800' :
                               response.code >= 400 ? 'bg-red-100 text-red-800' :
                               'bg-yellow-100 text-yellow-800'
-                            }`}>`
+                            }`}>
                               {response.code}
                             </span>
                             <span className="text-gray-300 text-sm">{response.description}</span>
@@ -354,7 +354,7 @@ export default function APIDocumentationPage() {}
               </p>
             </motion.div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {codeExamples.map((example, index) => (})
+              {codeExamples.map((example, index) => (
                 <motion.div
                   key={index}
                   className="bg-white rounded-lg shadow-lg overflow-hidden"
@@ -369,12 +369,12 @@ export default function APIDocumentationPage() {}
                       <span className="text-white font-medium">{example.language}</span>
                     </div>
                     <button
-                      onClick={() => copyToClipboard(example.code, `${example.language}-${index}`)};`
+                      onClick={() => copyToClipboard(example.code, `${example.language}-${index}`)}
                       className="p-2 text-gray-400 hover:text-white transition-colors"
                     >
-                      {copiedCode === `${example.language}-${index}` ? (`)
+                      {copiedCode === `${example.language}-${index}` ? (
                         <Check className="w-4 h-4 text-green-400" />
-                      ) : ()
+                      ) : (
                         <Copy className="w-4 h-4" />
                       )}
                     </button>
@@ -410,7 +410,7 @@ export default function APIDocumentationPage() {}
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {sdkLibraries.map((sdk, index) => (})
+              {sdkLibraries.map((sdk, index) => (
                 <motion.div
                   key={index}
                   className="bg-gray-50 p-8 rounded-lg hover:shadow-lg transition-all duration-300"
@@ -450,7 +450,7 @@ export default function APIDocumentationPage() {}
                       Documentation
                     </Link>
                     <button
-                      onClick={() => copyToClipboard(sdk.install, `install-${index}`)};`
+                      onClick={() => copyToClipboard(sdk.install, `install-${index}`)}
                       className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition-colors"
                     >
                       <Copy className="w-4 h-4" />

@@ -12,7 +12,8 @@ const blogPosts = [{
     date: "2024-01-15",
     category: "AI & Technology",
     readTime: "5 min read",
-    image: "/api/placeholder/600/300"
+    image: "/api/placeholder/600/300",
+    tags: ["AI", "Business", "Technology"]
   },
   {
     id: 2,
@@ -22,7 +23,8 @@ const blogPosts = [{
     date: "2024-01-12",
     category: "Development",
     readTime: "7 min read",
-    image: "/api/placeholder/600/300"
+    image: "/api/placeholder/600/300",
+    tags: ["SaaS", "Development", "Scalability"]
   },
   {
     id: 3,
@@ -32,7 +34,8 @@ const blogPosts = [{
     date: "2024-01-10",
     category: "Security",
     readTime: "6 min read",
-    image: "/api/placeholder/600/300"
+    image: "/api/placeholder/600/300",
+    tags: ["Security", "Cloud", "Best Practices"]
   },
   {
     id: 4,
@@ -42,7 +45,8 @@ const blogPosts = [{
     date: "2024-01-08",
     category: "Strategy",
     readTime: "8 min read",
-    image: "/api/placeholder/600/300"
+    image: "/api/placeholder/600/300",
+    tags: ["Strategy", "Digital Transformation", "Business"]
   },
   {
     id: 5,
@@ -52,7 +56,8 @@ const blogPosts = [{
     date: "2024-01-05",
     category: "AI & Technology",
     readTime: "9 min read",
-    image: "/api/placeholder/600/300"
+    image: "/api/placeholder/600/300",
+    tags: ["Machine Learning", "Production", "MLOps"]
   },
   {
     id: 6,
@@ -62,7 +67,8 @@ const blogPosts = [{
     date: "2024-01-03",
     category: "Development",
     readTime: "6 min read",
-    image: "/api/placeholder/600/300"
+    image: "/api/placeholder/600/300",
+    tags: ["API", "Development", "Design"]
   }]
 export default function BlogPage() {
   return (
@@ -73,6 +79,7 @@ export default function BlogPage() {
       <Head>
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Latest insights on AI, technology, and business innovation from Zion Tech Group experts." />
+      </Head>
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
@@ -105,6 +112,7 @@ export default function BlogPage() {
                       transition={{ duration: 0.8, delay: index * 0.1 }}
                       viewport={{ once: true }}>
                       <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600">
+                      </div>
                       <div className="p-6">
                         <div className="flex flex-wrap gap-2 mb-3">
                           {post.tags.map((tag, tagIndex) => (
@@ -139,7 +147,7 @@ export default function BlogPage() {
                           </Link>
                         </div>
                       </div>
-                    </motion.div>
+                    </motion.article>
                   ))}
                 </div>
               </div>

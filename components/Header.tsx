@@ -180,149 +180,149 @@ const navigation = [{
         icon: GraduationCap,
         description: 'Educational institutions and training'
       },
-      {}
+      {
         name: 'Government',
         href: '/industries/government',
         icon: Shield,
         description: 'Government and public sector'
       },
-      {}
+      {
         name: 'Manufacturing',
         href: '/industries/manufacturing',
         icon: CpuIcon,
         description: 'Manufacturing and industrial'
       },
-      {}
+      {
         name: 'Retail',
         href: '/industries/retail',
         icon: ShoppingCart,
         description: 'Retail and e-commerce'
       }]
   },
-  {}
+  {
     name: 'Resources',
     href: '/resources',
     icon: FileText,
-    children: []
-      {}
+    children: [
+      {
         name: 'Blog',
         href: '/blog',
         icon: BookOpen,
         description: 'Latest insights and industry news'
       },
-      {}
+      {
         name: 'White Papers',
         href: '/white-papers',
         icon: FileText,
         description: 'In-depth research and analysis'
       },
-      {}
+      {
         name: 'Case Studies',
         href: '/case-studies',
         icon: Award,
         description: 'Success stories and client results'
       },
-      {}
+      {
         name: 'Webinars',
         href: '/webinars',
         icon: Calendar,
         description: 'Educational webinars and training'
       },
-      {}
+      {
         name: 'Help Center',
         href: '/help',
         icon: HelpCircle,
         description: 'Support and documentation'
       },
-      {}
+      {
         name: 'Documentation',
         href: '/docs',
         icon: BookOpen,
         description: 'Technical documentation and guides'
       },
-      {}
+      {
         name: 'API Reference',
         href: '/api-docs',
         icon: Network,
         description: 'API documentation and integration guides'
       },
-      {}
+      {
         name: 'Tutorials',
         href: '/tutorials',
         icon: GraduationCap,
         description: 'Step-by-step tutorials and guides'
       }]
   },
-  {}
+  {
     name: 'Company',
     href: '/company',
     icon: Users,
-    children: []
-      {}
+    children: [
+      {
         name: 'About Us',
         href: '/about',
         icon: Users,
         description: 'Learn about our mission and values'
       },
-      {}
+      {
         name: 'Our Team',
         href: '/team',
         icon: Users,
         description: 'Meet our expert team'
       },
-      {}
+      {
         name: 'Careers',
         href: '/careers',
         icon: Award,
         description: 'Join our growing team'
       },
-      {}
+      {
         name: 'News',
         href: '/news',
         icon: MessageSquare,
         description: 'Company news and announcements'
       },
-      {}
+      {
         name: 'Contact',
         href: '/contact',
         icon: Mail,
         description: 'Get in touch with us'
       },
-      {}
+      {
         name: 'Partners',
         href: '/partners',
         icon: Users,
         description: 'Our partner network'
       }]
   }]
-const contactInfo = {}
+const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709'
 }
-export default function Header() {}
+export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState(null)
   const [isScrolled, setIsScrolled] = useState(false)
   const router = useRouter()
-  useEffect(() => {}
-    const handleScroll = () => {}
+  useEffect(() => {
+    const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-  const handleDropdownToggle = (index) => {}
+  const handleDropdownToggle = (index) => {
     setActiveDropdown(activeDropdown === index ? null : index)
   }
-  const handleLinkClick = () => {}
+  const handleLinkClick = () => {
     setIsOpen(false)
     setActiveDropdown(null)
   }
-  return ()
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${`}
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    }`}>`
+    }`}>
       {/* Top Contact Bar */}
       <div className="bg-blue-600 text-white py-2">
         <div className="container mx-auto px-4">
@@ -356,7 +356,7 @@ export default function Header() {}
             </Link>
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
-              {navigation.map((item, index) => (})
+              {navigation.map((item, index) => (
                 <div key={item.name} className="relative">
                   <button
                     onClick={() => handleDropdownToggle(index)}
@@ -367,7 +367,7 @@ export default function Header() {}
                     <ChevronDown className="w-4 h-4" />
                   </button>
                   <AnimatePresence>
-                    {activeDropdown === index && (})
+                    {activeDropdown === index && (
                       <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -375,7 +375,7 @@ export default function Header() {}
                         className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50"
                       >
                         <div className="grid grid-cols-2 gap-4">
-                          {item.children?.map((child) => (})
+                          {item.children?.map((child) => (
                             <div key={child.name} className="p-3 hover:bg-gray-50 rounded-lg">
                               <Link
                                 href={child.href}
@@ -427,7 +427,7 @@ export default function Header() {}
         </div>
         {/* Mobile Navigation */}
         <AnimatePresence>
-          {isOpen && (})
+          {isOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
@@ -435,7 +435,7 @@ export default function Header() {}
               className="lg:hidden bg-white border-t border-gray-200"
             >
               <div className="container mx-auto px-4 py-4">
-                {navigation.map((item) => (})
+                {navigation.map((item) => (
                   <div key={item.name} className="mb-4">
                     <Link
                       href={item.href}
@@ -445,9 +445,9 @@ export default function Header() {}
                       <item.icon className="w-4 h-4" />
                       <span>{item.name}</span>
                     </Link>
-                    {item.children && (})
+                    {item.children && (
                       <div className="ml-6 mt-2 space-y-2">
-                        {item.children.map((child) => (})
+                        {item.children.map((child) => (
                           <Link
                             key={child.name}
                             href={child.href}
