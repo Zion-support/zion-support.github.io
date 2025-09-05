@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import Head from "next/head";
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -15,7 +16,7 @@ import {
   Factory,
   Globe
 } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+
 
 const industries = [
   {
@@ -154,11 +155,11 @@ const caseStudies = [
 
 export default function IndustrySolutionsPage() {
   return (
-    <MainLayout 
-      title="Industry Solutions - Zion Tech Group"
-      description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors."
-      keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, edtech, government solutions"
-    >
+    <>
+      <Head>
+        <title>Solutions - ZION TECH GROUP</title>
+        <meta name="description" content="Comprehensive technology solutions for your business needs." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden">
@@ -390,6 +391,6 @@ export default function IndustrySolutionsPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </>
   );
 }

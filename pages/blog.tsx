@@ -1,7 +1,8 @@
 import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import { Calendar, User, ArrowRight, Tag, Search, Filter } from 'lucide-react';
 
 const blogPosts = [
   {
@@ -50,11 +51,12 @@ const categories = ['All', 'AI & Technology', 'Business', 'Security', 'Infrastru
 
 export default function BlogPage() {
   return (
-    <MainLayout
-      title="Blog - Zion Tech Group"
-      description="Stay updated with the latest insights, trends, and best practices in technology, AI, and business solutions."
-      keywords="blog, technology, AI, business, cybersecurity, cloud, micro SaaS"
-    >
+    <>
+      <Head>
+        <title>Blog - ZION TECH GROUP</title>
+        <meta name="description" content="Stay updated with the latest insights, trends, and best practices in technology, AI, and business solutions." />
+        <meta name="keywords" content="blog, technology, AI, business, cybersecurity, cloud, micro SaaS" />
+      </Head>
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -170,6 +172,6 @@ export default function BlogPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </>
   );
 }

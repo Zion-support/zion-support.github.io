@@ -1,7 +1,8 @@
 import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Shield, Eye, Lock, Database, User, Mail, Phone, MapPin } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import { Shield, Eye, Lock, Database, User, Mail, Phone, MapPin, ArrowRight, CheckCircle } from 'lucide-react';
 
 const privacyFeatures = [
   {
@@ -53,11 +54,12 @@ const contactInfo = [
 
 export default function PrivacyPage() {
   return (
-    <MainLayout
-      title="Privacy Policy - Zion Tech Group"
-      description="Learn about how Zion Tech Group protects your privacy and handles your personal information in compliance with GDPR and other privacy regulations."
-      keywords="privacy policy, data protection, GDPR, personal information, privacy rights"
-    >
+    <>
+      <Head>
+        <title>Privacy Policy - ZION TECH GROUP</title>
+        <meta name="description" content="Learn about how ZION TECH GROUP protects your privacy and handles your personal information in compliance with GDPR and other privacy regulations." />
+        <meta name="keywords" content="privacy policy, data protection, GDPR, personal information, privacy rights" />
+      </Head>
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -278,6 +280,6 @@ export default function PrivacyPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </>
   );
 }

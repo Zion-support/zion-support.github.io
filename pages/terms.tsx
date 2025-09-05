@@ -1,7 +1,7 @@
+import Head from "next/head";
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, Users, Mail, Phone, MapPin } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
 
 const termsFeatures = [
   {
@@ -53,11 +53,12 @@ const contactInfo = [
 
 export default function TermsPage() {
   return (
-    <MainLayout
-      title="Terms of Service - Zion Tech Group"
-      description="Read our terms of service to understand your rights and responsibilities when using Zion Tech Group's services and solutions."
-      keywords="terms of service, legal terms, user agreement, service terms, legal rights"
-    >
+    <>
+      <Head>
+        <title>Terms of Service - ZION TECH GROUP</title>
+        <meta name="description" content="Read our terms of service to understand your rights and responsibilities when using ZION TECH GROUP's services and solutions." />
+        <meta name="keywords" content="terms of service, legal terms, user agreement, service terms, legal rights" />
+      </Head>
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -310,6 +311,6 @@ export default function TermsPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </>
   );
 }

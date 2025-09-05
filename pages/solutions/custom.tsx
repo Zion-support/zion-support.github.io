@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import Head from "next/head";
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -15,7 +16,7 @@ import {
   Target,
   Rocket
 } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+
 
 const process = [
   {
@@ -138,11 +139,11 @@ const technologies = [
 
 export default function CustomDevelopmentPage() {
   return (
-    <MainLayout 
-      title="Custom Development - Zion Tech Group"
-      description="Bespoke software development solutions tailored to your unique requirements. Full-stack development, AI/ML, mobile apps, and cloud solutions."
-      keywords="custom development, bespoke software, full-stack development, custom applications, software development"
-    >
+    <>
+      <Head>
+        <title>Solutions - ZION TECH GROUP</title>
+        <meta name="description" content="Comprehensive technology solutions for your business needs." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-orange-900 via-red-900 to-purple-900 text-white py-20 overflow-hidden">
@@ -411,6 +412,6 @@ export default function CustomDevelopmentPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </>
   );
 }
