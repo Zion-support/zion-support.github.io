@@ -31,7 +31,11 @@ import {
   Package,
   BookOpen,
   Kanban,
-  DollarSign
+  DollarSign,
+  Brain,
+  Eye,
+  Sprout,
+  Rocket
 } from 'lucide-react';
 
 const itServices = [
@@ -215,6 +219,178 @@ const itServices = [
     pricing: '$5,000 - $25,000/project',
     category: 'Cost Optimization',
     link: 'https://itcosts.ziontechgroup.com'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Implementation of zero trust security model with identity verification and micro-segmentation.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Least Privilege Access'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Advanced Security',
+    popular: true,
+    link: 'https://zerotrust.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Edge computing solutions for low-latency applications and IoT deployments.',
+    icon: Cpu,
+    features: ['Edge Nodes', 'Low-latency Processing', 'IoT Integration', 'Distributed Computing'],
+    pricing: '$10,000 - $60,000/project',
+    category: 'Edge Computing',
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum-Safe Cryptography',
+    description: 'Implementation of post-quantum cryptography solutions for future-proof security.',
+    icon: Lock,
+    features: ['Post-quantum Algorithms', 'Migration Planning', 'Security Assessment', 'Compliance Support'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Quantum Security',
+    link: 'https://quantumsafe.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered IT Operations',
+    description: 'AI-driven IT operations with predictive analytics and automated incident response.',
+    icon: Brain,
+    features: ['Predictive Analytics', 'Automated Response', 'Anomaly Detection', 'Self-healing Systems'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'AIOps',
+    link: 'https://aiops.ziontechgroup.com'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, implementation, and optimization for enterprise applications.',
+    icon: Wifi,
+    features: ['5G Core Network', 'Edge Computing', 'Network Slicing', 'Performance Optimization'],
+    pricing: '$25,000 - $150,000/project',
+    category: '5G Technology',
+    link: 'https://5gnetworks.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Blockchain network setup, smart contract development, and decentralized application hosting.',
+    icon: Network,
+    features: ['Blockchain Networks', 'Smart Contracts', 'DApp Hosting', 'Consensus Mechanisms'],
+    pricing: '$15,000 - $80,000/project',
+    category: 'Blockchain',
+    link: 'https://blockchaininfra.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Platform Management',
+    description: 'Comprehensive IoT platform setup with device management and data analytics.',
+    icon: Settings,
+    features: ['Device Management', 'Data Analytics', 'Protocol Support', 'Security Integration'],
+    pricing: '$12,000 - $70,000/project',
+    category: 'IoT',
+    link: 'https://iotplatform.ziontechgroup.com'
+  },
+  {
+    title: 'Hybrid Cloud Architecture',
+    description: 'Seamless hybrid cloud solutions connecting on-premises and cloud environments.',
+    icon: Cloud,
+    features: ['Multi-cloud Integration', 'Data Synchronization', 'Workload Migration', 'Unified Management'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Hybrid Cloud',
+    link: 'https://hybridcloud.ziontechgroup.com'
+  },
+  {
+    title: 'Green IT Solutions',
+    description: 'Sustainable IT infrastructure with energy-efficient hardware and carbon footprint reduction.',
+    icon: Sprout,
+    features: ['Energy Efficiency', 'Carbon Tracking', 'Sustainable Hardware', 'Green Data Centers'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Sustainability',
+    link: 'https://greenit.ziontechgroup.com'
+  },
+  {
+    title: 'Digital Twin Technology',
+    description: 'Digital twin implementation for physical assets and processes with real-time monitoring.',
+    icon: Monitor,
+    features: ['Asset Modeling', 'Real-time Monitoring', 'Predictive Analytics', 'Simulation Capabilities'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Digital Twins',
+    link: 'https://digitaltwins.ziontechgroup.com'
+  },
+  {
+    title: 'AR/VR Infrastructure',
+    description: 'Augmented and virtual reality infrastructure for enterprise applications and training.',
+    icon: Eye,
+    features: ['VR/AR Hardware', 'Content Management', 'User Tracking', 'Performance Optimization'],
+    pricing: '$15,000 - $80,000/project',
+    category: 'AR/VR',
+    link: 'https://arvrinfra.ziontechgroup.com'
+  },
+  {
+    title: 'Microservices Architecture',
+    description: 'Modern microservices architecture design and implementation for scalable applications.',
+    icon: Server,
+    features: ['Service Design', 'API Gateway', 'Service Mesh', 'Container Orchestration'],
+    pricing: '$12,000 - $60,000/project',
+    category: 'Microservices',
+    link: 'https://microservices.ziontechgroup.com'
+  },
+  {
+    title: 'Data Mesh Implementation',
+    description: 'Data mesh architecture for decentralized data management and analytics.',
+    icon: Database,
+    features: ['Decentralized Data', 'Domain Ownership', 'Self-service Analytics', 'Data Governance'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Data Architecture',
+    link: 'https://datamesh.ziontechgroup.com'
+  },
+  {
+    title: 'Serverless Architecture',
+    description: 'Serverless computing solutions with auto-scaling and pay-per-use pricing.',
+    icon: Zap,
+    features: ['Function as a Service', 'Auto-scaling', 'Event-driven Architecture', 'Cost Optimization'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Serverless',
+    link: 'https://serverless.ziontechgroup.com'
+  },
+  {
+    title: 'Multi-cloud Security',
+    description: 'Comprehensive security solutions across multiple cloud providers and environments.',
+    icon: Shield,
+    features: ['Cross-cloud Security', 'Unified Policies', 'Threat Intelligence', 'Compliance Management'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Cloud Security',
+    link: 'https://multicloudsecurity.ziontechgroup.com'
+  },
+  {
+    title: 'IT Disaster Recovery as a Service',
+    description: 'Comprehensive disaster recovery solutions with automated failover and testing.',
+    icon: HardDrive,
+    features: ['Automated Failover', 'Regular Testing', 'RTO/RPO Optimization', 'Cloud-based Recovery'],
+    pricing: '$5,000 - $30,000/month',
+    category: 'DRaaS',
+    link: 'https://draas.ziontechgroup.com'
+  },
+  {
+    title: 'IT Compliance Automation',
+    description: 'Automated compliance monitoring and reporting for various regulatory frameworks.',
+    icon: CheckCircle,
+    features: ['Automated Monitoring', 'Compliance Reporting', 'Policy Enforcement', 'Audit Support'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Compliance Automation',
+    link: 'https://complianceauto.ziontechgroup.com'
+  },
+  {
+    title: 'IT Performance Engineering',
+    description: 'Performance optimization and load testing for high-traffic applications and systems.',
+    icon: BarChart3,
+    features: ['Load Testing', 'Performance Tuning', 'Capacity Planning', 'Bottleneck Analysis'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Performance',
+    link: 'https://performanceeng.ziontechgroup.com'
+  },
+  {
+    title: 'IT Innovation Lab',
+    description: 'Dedicated innovation lab for exploring emerging technologies and proof-of-concept development.',
+    icon: Rocket,
+    features: ['Technology Exploration', 'Proof of Concepts', 'Innovation Workshops', 'R&D Support'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Innovation',
+    link: 'https://innovationlab.ziontechgroup.com'
   }
 ];
 

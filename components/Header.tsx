@@ -18,7 +18,14 @@ import {
   Globe,
   FileText,
   MessageSquare,
-  Rocket
+  Rocket,
+  Building,
+  Heart,
+  DollarSign,
+  ShoppingCart,
+  BookOpen,
+  Zap,
+  Video
 } from 'lucide-react';
 
 const navigation = [{
@@ -26,36 +33,62 @@ const navigation = [{
     "href": '/services',
     "icon": Settings,
     "children": [
-      { name: 'AI Solutions', "href": '/ai-services', "icon": Brain, "count": '20+' },
-      { "name": 'IT Services', "href": '/it-services', "icon": Network, "count": '20+' },
-      { "name": 'Micro SaaS', "href": '/micro-saas', "icon": Cloud, "count": '25+' },
-      { "name": 'All Services', "href": '/services', "icon": Globe, "count": '65+' }
+      { name: 'AI Solutions', "href": '/ai-services', "icon": Brain, "count": '40+' },
+      { "name": 'IT Services', "href": '/it-services', "icon": Network, "count": '40+' },
+      { "name": 'Micro SaaS', "href": '/micro-saas', "icon": Cloud, "count": '45+' },
+      { "name": 'All Services', "href": '/services', "icon": Globe, "count": '125+' }
     ]
   },
   {
     "name": 'Solutions',
     "href": '/solutions',
     "icon": Shield,
-    "children": [{ name: 'Enterprise Solutions', "href": '/solutions/enterprise', "icon": Shield },
+    "children": [
+      { name: 'Enterprise Solutions', "href": '/solutions/enterprise', "icon": Shield },
       { "name": 'Startup Solutions', "href": '/solutions/startup', "icon": Rocket },
       { "name": 'Industry Solutions', "href": '/solutions/industry', "icon": BarChart3 },
-      { "name": 'Custom Development', "href": '/solutions/custom', "icon": Settings }
+      { "name": 'Custom Development', "href": '/solutions/custom', "icon": Settings },
+      { "name": 'Digital Transformation', "href": '/solutions/digital-transformation', "icon": Zap },
+      { "name": 'Cloud Migration', "href": '/solutions/cloud-migration', "icon": Cloud }
+    ]
+  },
+  {
+    "name": 'Industries',
+    "href": '/industries',
+    "icon": Building,
+    "children": [
+      { name: 'Healthcare', "href": '/industries/healthcare', "icon": Heart },
+      { "name": 'Finance', "href": '/industries/finance', "icon": DollarSign },
+      { "name": 'Manufacturing', "href": '/industries/manufacturing', "icon": Settings },
+      { "name": 'Retail', "href": '/industries/retail', "icon": ShoppingCart },
+      { "name": 'Education', "href": '/industries/education', "icon": BookOpen },
+      { "name": 'Government', "href": '/industries/government', "icon": Building }
     ]
   },
   {
     "name": 'Resources',
     "href": '/resources',
     "icon": FileText,
-    "children": [{ name: 'Documentation', "href": '/docs', "icon": FileText },
+    "children": [
+      { name: 'Documentation', "href": '/docs', "icon": FileText },
       { "name": 'Case Studies', "href": '/case-studies', "icon": BarChart3 },
       { "name": 'Blog', "href": '/blog', "icon": MessageSquare },
-      { "name": 'API Reference', "href": '/api-docs', "icon": Settings }
+      { "name": 'API Reference', "href": '/api-docs', "icon": Settings },
+      { "name": 'White Papers', "href": '/white-papers', "icon": FileText },
+      { "name": 'Webinars', "href": '/webinars', "icon": Video }
     ]
   },
   {
-    "name": 'About',
+    "name": 'Company',
     "href": '/about',
-    "icon": Users
+    "icon": Users,
+    "children": [
+      { name: 'About Us', "href": '/about', "icon": Users },
+      { "name": 'Our Team', "href": '/about#team', "icon": Users },
+      { "name": 'Careers', "href": '/careers', "icon": Rocket },
+      { "name": 'Partners', "href": '/partners', "icon": Network },
+      { "name": 'News', "href": '/news', "icon": MessageSquare }
+    ]
   },
   {
     "name": 'Contact',
