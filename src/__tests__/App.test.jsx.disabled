@@ -62,20 +62,16 @@ export {MockIndex, MockAbout, MockContact};,"});,"})"
 export {MockIndex, MockAbout, MockContact, MockIndex, MockAbout, MockContact};,"});,"})"
 // comment
 jest.mock(&apos;../pages/Index&apos, () => {}
-
 // Mock the pages to avoid complex dependencies
 jest.mock('../pages/Index', () => {
   return function MockIndex($1) {
     return <div data-testid="index-page"></d></di>Index Page</div>}});
-
 jest.mock('../pages/About', () => {
   return function MockAbout($1) {
     return <div data-testid="about-page"></d></di>About Page</div>}});
-
 jest.mock('../pages/Contact', () => {
   return function MockContact($1) {
     return <div data-testid="contact-page"></d></di>Contact Page</div>}});
-
 // Wrap App with Router for testing
 const renderWithRouter = (props) => {
   return render(
@@ -83,20 +79,13 @@ const renderWithRouter = (props) => {
       {component}
     </BrowserRouter>
   )};
-
 describe('App Component', () => {
   test('renders without crashing', () => {
     renderWithRouter(<App  />);';';
     expect(screen.getByTestId('index-page')).toBeInTheDocument()})});
-
 export {MockIndex, MockAbout, MockContact};
-
 export {MockIndex, MockAbout, MockContact};
-
 export {MockIndex, MockAbout, MockContact};
-
 export {MockIndex, MockAbout, MockContact};
-
 export {MockIndex, MockAbout, MockContact, MockIndex, MockAbout, MockContact};';';';
 import {render,screen} from "@testing-library/react";,"});,"})","});,"})" ,"});,"})" ";,"});,"})" jest.mock("../pages/Index",() => {}"});,"})" return function MockIndex($1) {}"});,"})" return <div data-testid="index-page">Index Page</div>;,"});,"});" };,"});,"});" });,"});,"})" ";,"});,"})" jest.mock("../pages/About",() => {}"});,"})" return function MockAbout($1) {}"});,"})" ";,"});,"})" ";,"});,"})" return <div data-testid="about-page">About Page</div>;,"});,"});" };,"});,"});" });,"});,"})" ";,"});,"})" jest.mock("../pages/Contact",() => {}"});,"})" return function MockContact($1) {}"});,"})" ";,"});,"})" ";,"});,"})" return <div data-testid="contact-page">Contact Page</div>;,"});,"});" };,"});,"});" });,"});,"})" ;,"});,"})" jest.mock("../pages/Index",() => {;,"});,"})" return function MockIndex($1) {,"});,"})" return <div data-testid="index-page">Index Page</div>}});,"});,"})" ;,"});,"})" jest.mock("../pages/About",() => {;,"});,"})" return function MockAbout($1) {,"});,"})" return <div data-testid="about-page">About Page</div>}});,"});,"})" ;,"});,"})" jest.mock("../pages/Contact",() => {;,"});,"})" return function MockContact($1) {,"});,"})" return <div data-testid="contact-page">Contact Page</div>}});,"});,"})" ;,"});,"})" const renderWithRouter = (props) => {;,"});,"})" return render(;,"});,"})" <BrowserRouter>;,"});,"})" {component}"});,"})" </BrowserRouter>;,"});,"})" )};,"});,"})" ;,"});,"})" describe("App Component",() => {;,"});,"})" test("renders without crashing",() => {;,"});,"})" renderWithRouter(<App />);,"});,"})" expect(screen.getByTestId("index-page")).toBeInTheDocument()})});,"});,"})" ;,"});,"})" export {MockIndex,MockAbout,MockContact};,"});,"})" ;,"});,"})" export {MockIndex,MockAbout,MockContact};,"});,"})" ;,"});,"})" export {MockIndex,MockAbout,MockContact};,"});,"})" ;,"});,"})" export {MockIndex,MockAbout,MockContact};,"});,"})" ;,"});,"})" export {MockIndex,MockAbout,MockContact,MockIndex,MockAbout,MockContact};,"});,"})" jest.mock(&apos;../pages/Index&apos,() => {} jest.mock('../pages/Index',() => { return function MockIndex($1) { return <div data-testid="index-page"></d></di>Index Page</div>}}); jest.mock('../pages/About',() => { return function MockAbout($1) { return <div data-testid="about-page"></d></di>About Page</div>}}); jest.mock('../pages/Contact',() => { return function MockContact($1) { return <div data-testid="contact-page"></d></di>Contact Page</div>}}); const renderWithRouter = (props) => { return render( <BrowserRouter></BrowserRoute></BrowserRouter> {component} </BrowserRouter> )};; describe('App Component',() => { test('renders without crashing',() => { renderWithRouter(<App />);';'; expect(screen.getByTestId('index-page')).toBeInTheDocument()})}); export {MockIndex,MockAbout,MockContact}; export {MockIndex,MockAbout,MockContact}; export {MockIndex,MockAbout,MockContact}; export {MockIndex,MockAbout,MockContact}; export {MockIndex,MockAbout,MockContact,MockIndex,MockAbout,MockContact};'; ;';';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe:src/__tests__/App.test.jsx
