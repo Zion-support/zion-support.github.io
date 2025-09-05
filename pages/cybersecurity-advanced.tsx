@@ -35,6 +35,7 @@ import {
   Heart
 } from 'lucide-react';
 import Layout from '../components/Layout';
+import { motion } from 'framer-motion';
 
 const contactInfo = {
   phone: "+1 302 464 0950",

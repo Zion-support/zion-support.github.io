@@ -1,5 +1,4 @@
     
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
     try {}
       fs.appendFileSync(this.logFile, logMessage);,
     } catch (error) {}

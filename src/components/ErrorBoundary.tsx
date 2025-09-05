@@ -1,10 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
-=======
-import { AlertTriangle, RefreshCw } from 'lucide-react';
->>>>>>> cursor/fix-website-loading-errors-and-merge-159e
 
 interface Props {
   children: ReactNode;
@@ -28,7 +24,6 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-<<<<<<< HEAD
     console.error('Error caught by boundary:', error, errorInfo);
     this.setState({
       error,
@@ -41,27 +36,12 @@ class ErrorBoundary extends Component<Props, State> {
         description: error.message,
         fatal: true
       });
-=======
-    this.setState({
-      error,
-      errorInfo,
-    });
-
-    // Log error to monitoring service
-    if (process.env.NODE_ENV === 'production') {
-      // In production, send to error monitoring service
-      console.error('Error caught by boundary:', error, errorInfo);
->>>>>>> cursor/fix-website-loading-errors-and-merge-159e
     }
   }
 
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-<<<<<<< HEAD
   };
-=======
-  }
->>>>>>> cursor/fix-website-loading-errors-and-merge-159e
 
   render() {
     if (this.state.hasError) {
@@ -70,7 +50,6 @@ class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
-<<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="text-center">
@@ -133,51 +112,6 @@ class ErrorBoundary extends Component<Props, State> {
                 </a>
               </div>
             </div>
-=======
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
-              <AlertTriangle className="w-6 h-6 text-red-600" />
-            </div>
-            
-            <div className="text-center">
-              <h1 className="text-xl font-semibold text-gray-900 mb-2">
-                Something went wrong
-              </h1>
-              <p className="text-gray-600 mb-6">
-                We're sorry, but something unexpected happened. Please try refreshing the page.
-              </p>
-              
-              <div className="space-y-3">
-                <button
-                  onClick={this.handleRetry}
-                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                >
-                  <RefreshCw className="w-4 h-4 mr-2" />
-                  Try Again
-                </button>
-                
-                <button
-                  onClick={() => window.location.reload()}
-                  className="w-full flex items-center justify-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                >
-                  Refresh Page
-                </button>
-              </div>
-            </div>
-            
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-6 p-4 bg-gray-100 rounded-md">
-                <summary className="cursor-pointer text-sm font-medium text-gray-700">
-                  Error Details (Development Only)
-                </summary>
-                <pre className="mt-2 text-xs text-gray-600 overflow-auto">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
-              </details>
-            )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-159e
           </div>
         </div>
       );

@@ -1,17 +1,12 @@
 const nextConfig = {
   reactStrictMode: true,
-<<<<<<< HEAD
-=======
   compress: true,
   poweredByHeader: false,
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   trailingSlash: true,
   
-<<<<<<< HEAD
-<<<<<<< HEAD
   // Performance optimizations
   experimental: {
     scrollRestoration: true,
@@ -19,8 +14,6 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
   },
   
-=======
->>>>>>> 380d5be269a380502c5b88f5cbeaaaacd40bbf12
   // Image optimization
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
@@ -30,8 +23,7 @@ const nextConfig = {
     minimumCacheTTL: 31536000,
   },
   
-<<<<<<< HEAD
-  // Webpack configuration to exclude problematic directories
+  // Webpack configuration
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       // Exclude problematic directories from file watching
@@ -72,51 +64,12 @@ const nextConfig = {
         ],
         poll: 1000,
         aggregateTimeout: 300,
-=======
-  // Webpack optimizations
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Optimize bundle size
-    if (!dev && !isServer) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-        },
-<<<<<<< HEAD
-=======
-  // Minimal webpack config
-  webpack: (config, { dev, isServer }) => {
-    if (dev) {
-      config.watchOptions = {
-        ignored: [
-          '**/node_modules/**',
-          '**/backup*/**',
-          '**/disabled*/**',
-          '**/temp*/**',
-          '**/*.backup*',
-          '**/*.disabled*',
-          '**/pages_backup*/**',
-          '**/src_backup*/**',
-          '**/components.disabled*/**',
-          '**/pages.disabled*/**',
-          '**/src.disabled*/**'
-        ]
->>>>>>> main
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
->>>>>>> 380d5be269a380502c5b88f5cbeaaaacd40bbf12
       };
     }
     
     return config;
-<<<<<<< HEAD
   },
   
-<<<<<<< HEAD
   // Headers for security and performance
   async headers() {
     return [
@@ -172,15 +125,6 @@ const nextConfig = {
   // Output configuration
   output: 'standalone',
   
-  // Trailing slash
-  trailingSlash: false,
-  
-  // Base path
-  basePath: '',
-  
-  // Asset prefix
-  assetPrefix: '',
-  
   // Generate ETags
   generateEtags: true,
   
@@ -191,12 +135,6 @@ const nextConfig = {
   generateBuildId: async () => {
     return 'build-' + Date.now();
   },
-=======
-  }
->>>>>>> main
-=======
-  // Note: Headers, redirects, and rewrites are not supported with static export
->>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
 };
 
 export default nextConfig;

@@ -23,6 +23,7 @@ import {
   Brain,
   Workflow,
   MessageCircle,
+  Server,
   ArrowUp,
   Sparkles,
   Truck,

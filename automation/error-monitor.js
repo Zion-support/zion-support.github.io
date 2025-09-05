@@ -36,16 +36,8 @@ class ErrorMonitor {
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     // Initial health check
     await this.performHealthCheck();
     // Start continuous monitoring
@@ -78,15 +70,6 @@ class ErrorMonitor {
       this.monitoringReport.errorsDetected.push({
         type: 'health_check_failure',
         message: error.message,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        timestamp: new Date().toISOString()
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
         timestamp: new Date().toISOString(),
       });
     }
@@ -187,30 +170,13 @@ class ErrorMonitor {
             line: parseInt(match[2]),
             column: parseInt(match[3]),
             message: match[4].trim(),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            timestamp: new Date().toISOString()
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
             timestamp: new Date().toISOString(),
           });
         }
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     return errors;
   }
   parseESLintErrors(output) {
@@ -225,32 +191,12 @@ class ErrorMonitor {
           line: parseInt(match[2]),
           column: parseInt(match[3]),
           message: match[4].trim(),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          timestamp: new Date().toISOString()
-        });
-      }
-    }
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
           timestamp: new Date().toISOString(),
         });
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     return errors;
   }
   updateHealthStatus() {
@@ -271,17 +217,6 @@ class ErrorMonitor {
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
-    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
-    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -298,32 +233,14 @@ class ErrorMonitor {
       const ErrorFixerAutomation = require('./error-fixer-automation.js');
       const automation = new ErrorFixerAutomation();
       await automation.run();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-      console.log('✅ Error fixer completed');
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
       console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
       this.monitoringReport.errorsDetected.push({
         type: 'error_fixer_failure',
         message: error.message,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        timestamp: new Date().toISOString()
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
         timestamp: new Date().toISOString(),
       });
     }
@@ -349,16 +266,8 @@ class ErrorMonitor {
     if (!fs.existsSync(reportDir)) {
       fs.mkdirSync(reportDir, { recursive: true });
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
     fs.writeFileSync(

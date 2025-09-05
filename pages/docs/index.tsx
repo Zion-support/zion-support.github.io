@@ -15,6 +15,7 @@ import {
   BarChart3
 } from 'lucide-react';
 import Layout from '../../components/Layout';
+import { motion } from 'framer-motion';
 
 const categories = [
   {

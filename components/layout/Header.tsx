@@ -23,6 +23,7 @@ import {
   Rocket,
   Code,
   Network,
+  Server,
   Atom,
   Workflow,
   MessageCircle,

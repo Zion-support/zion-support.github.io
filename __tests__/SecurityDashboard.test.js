@@ -1,3 +1,1 @@
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 import _React from 'react"  import '@testing-library/jest-dom import SecurityDashboard from '../components/SecurityDashboard" describe('SecurityDashboard',() => {' test('renders without crashing',() => {' render(<SecurityDashboard / />) expect(screen.getByTestId("securitydashboard")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SecurityDashboard / />) }) test('handles user interactions',() => {' render(<SecurityDashboard / />) }) test('applies correct styling',() => {' render(<SecurityDashboard / />) }) })
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

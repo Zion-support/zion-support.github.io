@@ -1,107 +1,26 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 const publicRoutes = [
   "/",
   "/about",
   "/contact",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
   "/services",
   "/ai-services",
   "/it-services",
   "/micro-saas",
-  "/api",
-  "/api-docs",
+  "/solutions",
+  "/industries",
+  "/blog",
+  "/news",
   "/careers",
-<<<<<<< HEAD
+  "/help",
   "/guides",
   "/case-studies",
   "/cookies",
-  "/industries"
-=======
-  "/blog",
-  "/services",
-  "/solutions",
-  "/industries",
-  "/resources",
-  "/talent",
-  "/team",
-  "/partners",
-  "/news",
-  "/careers",
   "/privacy",
   "/terms",
-  "/cookies",
   "/sitemap",
-  "/auth/login",
-  "/auth/register",
-  "/auth/forgot-password",
-  "/auth/reset-password",
-  "/auth/verify",
-=======
-const publicPaths = [
-  '/',
-  '/about',
-  '/services',
-  '/contact',
-  '/ai-services',
-  '/it-services',
-  '/micro-saas',
-  '/api-docs',
-  '/api',
-  '/careers',
-  '/case-studies',
-  '/blog',
-  '/docs',
-  '/privacy',
-  '/terms',
-  '/login',
-  '/register',
-  '/auth/login',
-  '/auth/register',
-  '/auth/forgot-password',
-  '/auth/reset-password',
-  '/auth/verify'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
->>>>>>> main
-=======
-const protectedRoutes = [
-  "/",
-  "/about",
-  "/contact",
-  "/blog",
-  "/services",
-  "/solutions",
-  "/ai-services",
-  "/it-services",
-  "/micro-saas",
-  "/cloud-solutions",
-  "/cybersecurity",
-  "/database-solutions",
-  "/enterprise-solutions",
-  "/startup-solutions",
-  "/industries",
-  "/custom-development",
-  "/digital-transformation",
-  "/consulting",
-  "/team",
-  "/careers",
-  "/case-studies",
-  "/news",
-  "/partners",
-  "/pricing",
-  "/privacy",
-  "/terms",
-  "/cookies",
-  "/accessibility",
+  "/newsletter",
   "/compliance",
   "/security",
   "/api",
@@ -110,10 +29,7 @@ const protectedRoutes = [
   "/industries/education",
   "/industries/finance",
   "/industries/healthcare",
-  "/industries/government"
-];
-
-const publicRoutes = [
+  "/industries/government",
   "/login",
   "/register",
   "/forgot-password",
@@ -125,169 +41,41 @@ const publicRoutes = [
   "/_next",
   "/favicon.ico",
   "/robots.txt",
-  "/sitemap.xml",
-  "/manifest.json"
+  "/sitemap.xml"
 ];
 
-const adminRoutes = [
+const protectedRoutes = [
   "/admin",
   "/admin/dashboard",
   "/admin/users",
   "/admin/settings",
   "/admin/analytics",
   "/admin/content",
-  "/admin/security"
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
+  "/admin/security",
   "/case-studies"
->>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
 ];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
-  // Allow public routes
+  // Check if the route is public
   if (publicRoutes.includes(pathname)) {
     return NextResponse.next();
   }
   
-<<<<<<< HEAD
-  // For all other routes, continue normally
-  return NextResponse.next();
-=======
-<<<<<<< HEAD
-  if (publicRoutes.includes(pathname)) {
-    return NextResponse.next();
-  }
-  
-  const authCookie = request.cookies.get("auth-token");
-  if (!authCookie) {
-    return NextResponse.redirect(new URL("/auth/login", request.url));
-  }
-  
-  return NextResponse.next();
-=======
-  // Allow public paths
-  if (publicPaths.includes(pathname)) {
-    return NextResponse.next();
-  }
-  
-=======
-  // Skip middleware for static files and API routes
-  if (
-    pathname.startsWith('/_next/') ||
-    pathname.startsWith('/api/') ||
-    pathname.startsWith('/static/') ||
-    pathname.includes('.') ||
-    publicRoutes.includes(pathname)
-  ) {
-    return NextResponse.next();
-  }
-
   // Check if the route is protected
-  const isProtectedRoute = protectedRoutes.some(route => 
-    pathname === route || pathname.startsWith(route + '/')
-  );
-
-  const isAdminRoute = adminRoutes.some(route => 
-    pathname === route || pathname.startsWith(route + '/')
-  );
-
-  // Get authentication token from cookies
-  const token = request.cookies.get('auth-token')?.value;
-  const userRole = request.cookies.get('user-role')?.value;
-
-  // Redirect to login if accessing protected route without token
-  if (isProtectedRoute && !token) {
-    const loginUrl = new URL('/login', request.url);
-    loginUrl.searchParams.set('redirect', pathname);
-    return NextResponse.redirect(loginUrl);
+  if (protectedRoutes.some(route => pathname.startsWith(route))) {
+    // Add authentication logic here
+    // For now, just allow access
+    return NextResponse.next();
   }
-
-  // Redirect to unauthorized if accessing admin route without admin role
-  if (isAdminRoute && (!token || userRole !== 'admin')) {
-    return NextResponse.redirect(new URL('/unauthorized', request.url));
-  }
-
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-  // Add security headers
-  const response = NextResponse.next();
-  response.headers.set('X-Frame-Options', 'DENY');
-  response.headers.set('X-Content-Type-Options', 'nosniff');
-<<<<<<< HEAD
-  response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
   
-  return response;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
->>>>>>> main
-=======
-  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-  response.headers.set('X-XSS-Protection', '1; mode=block');
-  
-  // Content Security Policy
-  const csp = [
-    "default-src 'self'",
-    "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://vercel.live",
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-    "font-src 'self' https://fonts.gstatic.com",
-    "img-src 'self' data: https: blob:",
-    "connect-src 'self' https://api.ziontechgroup.com",
-    "frame-ancestors 'none'",
-    "base-uri 'self'",
-    "form-action 'self'"
-  ].join('; ');
-  
-  response.headers.set('Content-Security-Policy', csp);
-  
-  // CORS headers for API routes
-  if (pathname.startsWith('/api/')) {
-    response.headers.set('Access-Control-Allow-Origin', '*');
-    response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  }
-
-  return response;
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
-  // Add security headers
-  const response = NextResponse.next();
-  
-  response.headers.set('X-Frame-Options', 'DENY');
-  response.headers.set('X-Content-Type-Options', 'nosniff');
-  response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
-  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
-  
-  return response;
->>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
+  // Default: allow access
+  return NextResponse.next();
 }
 
 export const config = {
   matcher: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     */
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
-=======
-    '/((?!_next/static|_next/image|favicon.ico).*)',
->>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
   ],
 };

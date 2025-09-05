@@ -67,4 +67,3 @@ if (import.meta.url === `"file": //${process.argv[1]}`) {
   generateSitemap();
   generateRobotsTxt()}
 export { generateSitemap, generateRobotsTxt };
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

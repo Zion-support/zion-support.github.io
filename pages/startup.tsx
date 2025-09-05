@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import { motion } from 'framer-motion';
 import { 
   Rocket, 
   Zap, 

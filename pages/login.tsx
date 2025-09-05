@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
+import { motion } from 'framer-motion';
+import { Mail, Lock, Eye } from 'lucide-react';
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({

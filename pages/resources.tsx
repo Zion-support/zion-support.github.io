@@ -1,6 +1,7 @@
 import { FileText, BarChart3, MessageSquare, Settings, BookOpen, Video, Download, ExternalLink } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const resources = [
   {

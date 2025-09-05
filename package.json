@@ -10,7 +10,6 @@
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
-<<<<<<< HEAD
     "clean": "rm -rf .next out dist",
     "check": "npm run lint && npm run type-check && npm run test:smoke",
     "precommit": "npm run check",
@@ -287,19 +286,9 @@
     "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
     "@supabase/ssr": "^0.6.1",
-<<<<<<< HEAD
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.10",
-=======
-<<<<<<< HEAD
-    "@supabase/supabase-js": "^2.39.0",
-=======
-    "@supabase/supabase-js": "^2.57.0",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/forms": "^0.5.10",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
->>>>>>> 380d5be269a380502c5b88f5cbeaaaacd40bbf12
     "@tailwindcss/postcss": "^4.1.12",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/react-query": "^5.85.5",
@@ -357,8 +346,6 @@
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1"
   },
   "devDependencies": {
-<<<<<<< HEAD
-=======
     "@babel/eslint-parser": "^7.28.0",
     "@babel/plugin-transform-class-properties": "^7.27.1",
     "@babel/preset-env": "^7.28.3",
@@ -378,21 +365,9 @@
     "@testing-library/react": "^16.3.0",
     "@types/jest": "^29.5.8",
     "@types/next": "^8.0.7",
-=======
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
-  },
-  "dependencies": {
-    "next": "^14.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "typescript": "^5.0.0",
->>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
     "@types/node": "^20.0.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-<<<<<<< HEAD
     "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
@@ -410,7 +385,6 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
     "husky": "^9.1.7",
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     "identity-obj-proxy": "^3.0.0",
     "jest": "^30.1.3",
     "jest-environment-jsdom": "^30.1.2",
@@ -426,24 +400,6 @@
     "typescript": "^5.9.2",
     "vite": "^7.1.4",
     "web-vitals": "^5.1.0"
-=======
-    "tailwindcss": "^3.0.0",
-    "autoprefixer": "^10.0.0",
-    "postcss": "^8.0.0",
-    "eslint": "^8.0.0",
-    "eslint-config-next": "^14.0.0",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "prettier": "^3.0.0",
-    "jest": "^29.0.0",
-    "@testing-library/react": "^13.0.0",
-    "@testing-library/jest-dom": "^6.0.0",
-    "cypress": "^13.0.0"
-  },
-  "devDependencies": {
-    "@types/jest": "^29.0.0",
-    "ts-jest": "^29.0.0"
->>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
   },
   "engines": {
     "node": ">=18.0.0",

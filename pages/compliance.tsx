@@ -16,6 +16,7 @@ import {
   Building
 } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
+import { motion } from 'framer-motion';
 
 const complianceFrameworks = [
   {

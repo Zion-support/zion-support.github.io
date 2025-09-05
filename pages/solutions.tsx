@@ -63,15 +63,6 @@ import {
   ClipboardList,
   Bot,
   GraduationCap,
-  Calculator,
-  Camera,
-  CreditCard,
-  Gamepad2,
-  PieChart,
-  Truck,
-  ClipboardList,
-  Bot,
-  GraduationCap,
   Calculator
 } from 'lucide-react';
 

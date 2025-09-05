@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 import { Html, Head, Main, NextScript } from 'next/document';
 export default function Document() {
   return (
@@ -57,20 +51,6 @@ export default function Document() {
       </body>
     </Html>
   )}
-<<<<<<< HEAD
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head> {} <link rel="preconnect" href="https: <link rel="preconnect" href="https: crossOrigin="" /> {} <link rel="dns-prefetch" href="https: {} <link href="https: rel="stylesheet" /> {} <link rel="icon" href="/favicon.ico" /> <link rel="apple-touch-icon" href="/icon-192.png" /> <link rel="manifest" href="/manifest.json" /> {} <meta name="theme-color" content="#0b1220" /> <meta name="msapplication-TileColor" content="#0b1220" /> {} <meta httpEquiv="X-Content-Type-Options" content="nosniff" /> <meta httpEquiv="X-Frame-Options" content="DENY" /> <meta httpEquiv="X-XSS-Protection" content="1 mode=block" /> {} <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" /> {} <script dangerouslySetInnerHTML={{ __html: ` if ('serviceWorker' in navigator) { window.addEventListener('load',function() { navigator.serviceWorker.register('/sw.js') }) } `,}} /> </Head> <body> <Main /> <NextScript /> </body> </Html> )}
-=======
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head> {} <link rel="preconnect" href="https: <link rel="preconnect" href="https: crossOrigin="" /> {} <link rel="dns-prefetch" href="https: {} <link href="https: rel="stylesheet" /> {} <link rel="icon" href="/favicon.ico" /> <link rel="apple-touch-icon" href="/icon-192.png" /> <link rel="manifest" href="/manifest.json" /> {} <meta name="theme-color" content="#0b1220" /> <meta name="msapplication-TileColor" content="#0b1220" /> {} <meta httpEquiv="X-Content-Type-Options" content="nosniff" /> <meta httpEquiv="X-Frame-Options" content="DENY" /> <meta httpEquiv="X-XSS-Protection" content="1 mode=block" /> {} <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" /> {} <script dangerouslySetInnerHTML={{ __html: ` if ('serviceWorker' in navigator) { window.addEventListener('load',function() { navigator.serviceWorker.register('/sw.js') }) } `,}} /> </Head> <body> <Main /> <NextScript /> </body> </Html> )}
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head> {} <link rel="preconnect" href="https: <link rel="preconnect" href="https: crossOrigin="" /> {} <link rel="dns-prefetch" href="https: {} <link href="https: rel="stylesheet" /> {} <link rel="icon" href="/favicon.ico" /> <link rel="apple-touch-icon" href="/icon-192.png" /> <link rel="manifest" href="/manifest.json" /> {} <meta name="theme-color" content="#0b1220" /> <meta name="msapplication-TileColor" content="#0b1220" /> {} <meta httpEquiv="X-Content-Type-Options" content="nosniff" /> <meta httpEquiv="X-Frame-Options" content="DENY" /> <meta httpEquiv="X-XSS-Protection" content="1 mode=block" /> {} <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" /> {} <script dangerouslySetInnerHTML={{ __html: ` if ('serviceWorker' in navigator) { window.addEventListener('load',function() { navigator.serviceWorker.register('/sw.js') }) } `,}} /> </Head> <body> <Main /> <NextScript /> </body> </Html> )}
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
-=======
->>>>>>> main
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head> {} <link rel="preconnect" href="https: <link rel="preconnect" href="https: crossOrigin="" /> {} <link rel="dns-prefetch" href="https: {} <link href="https: rel="stylesheet" /> {} <link rel="icon" href="/favicon.ico" /> <link rel="apple-touch-icon" href="/icon-192.png" /> <link rel="manifest" href="/manifest.json" /> {} <meta name="theme-color" content="#0b1220" /> <meta name="msapplication-TileColor" content="#0b1220" /> {} <meta httpEquiv="X-Content-Type-Options" content="nosniff" /> <meta httpEquiv="X-Frame-Options" content="DENY" /> <meta httpEquiv="X-XSS-Protection" content="1 mode=block" /> {} <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" /> {} <script dangerouslySetInnerHTML={{ __html: ` if ('serviceWorker' in navigator) { window.addEventListener('load',function() { navigator.serviceWorker.register('/sw.js') }) } `,}} /> </Head> <body> <Main /> <NextScript /> </body> </Html> )}
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

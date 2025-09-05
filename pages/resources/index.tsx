@@ -15,6 +15,7 @@ import {
   Star
 } from 'lucide-react';
 import Layout from '../../components/Layout';
+import { motion } from 'framer-motion';
 
 const resources = [
   {
