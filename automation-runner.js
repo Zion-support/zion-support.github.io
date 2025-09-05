@@ -148,7 +148,7 @@ class AutomationRunner {
     this.log('Creating improvements...', 'PROGRESS');
 
     // Create a performance monitoring script
-    const performanceScript = "#!/usr/bin/env node
+    const performanceScript = `#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 

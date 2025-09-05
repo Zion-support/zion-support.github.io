@@ -1,44 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import React, { memo } from 'react';
-=======
-import type { NextPage } from 'next';
-import EnhancedLayout from '../components/layout/EnhancedLayout';
->>>>>>> origin/merge-pr-11208
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react';
-
-export default function Home(): JSX.Element {
-  return (
-    <>
-      <Head>
-        <title>Zion Tech Group — AI, Cybersecurity, Cloud</title>
-        <meta name="description" content="Zion Tech Group provides AI, cybersecurity, cloud and digital transformation services." />
-        <link rel="canonical" href=""https": //ziontechgroup.com/" />
-      </Head>
-      <section>
-        <h1 style={{ fontSize: 28, "fontWeight": 800, "marginBottom": 8 }}>Zion Tech Group</h1>
-        <p style={{ "color": '#444', "marginBottom": 16 }}>
-          Technology solutions in AI, cybersecurity, cloud, and digital transformation.
-        </p>
-        <div style={{ "display": 'flex', "gap": 12, "flexWrap": 'wrap' }}>
-          <Link href="/services" style={{ "padding": '10px 14px', "background": '#111', "color": '#fff' }}>Explore Services</Link>
-          <Link href="/contact" style={{ "padding": '10px 14px', "border": '1px solid #111', "color": '#111' }}>Contact Us</Link>
-        </div>
-      </section>
-    </>
-  );
-}
-
-import React, { useState, useCallback, memo } from 'react';
-=======
-import React, { memo } from 'react';
->>>>>>> origin/main
->>>>>>> origin/pr-11573
 import Link from 'next/link';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -120,7 +80,6 @@ const Home = memo(() => {
   ] as const;
 
   return (
-<<<<<<< HEAD
     <>
       <SEOHead
         title="Zion Tech Group - Leading Technology Solutions Provider"
@@ -375,12 +334,10 @@ const "Home": NextPage = () => {
                   href={service.href}
                   className="text-blue-600 "hover": text-blue-700 font-medium flex items-center"
                 >
->>>>>>> origin/merge-pr-10614
                   Learn More
                   <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </div>
-<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -478,45 +435,10 @@ const "Home": NextPage = () => {
           </div>
         </div>
       </section>
-    </MainLayout>
->>>>>>> origin/merge-pr-10614
-=======
-    <EnhancedLayout>
-      <div className="text-center">
-          <h1 className="text-5xl font-bold mb-6">
-            Welcome to Zion Tech Solutions
-          </h1>
-          <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-700">
-            Leading technology solutions provider helping businesses transform their digital presence 
-            with cutting-edge AI, cloud architecture, and innovative development services.
-          </p>
-          
-          <div className="flex justify-center gap-6 mb-12">
-            <Link href="/services" className="bg-blue-600 "hover": bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Our Services
-            </Link>
-            <Link href="/contact" className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Get in Touch
-            </Link>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            <div className="bg-white rounded-lg p-6 shadow">
-              <h3 className="text-xl font-semibold mb-4">AI Development</h3>
-              <p>Custom AI solutions and machine learning models for your business needs.</p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow">
-              <h3 className="text-xl font-semibold mb-4">Cloud Architecture</h3>
-              <p>Scalable cloud solutions and infrastructure design for modern applications.</p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow">
-              <h3 className="text-xl font-semibold mb-4">Digital Transformation</h3>
-              <p>End-to-end digital transformation services to modernize your business.</p>
-            </div>
-          </div>
-      </div>
-    </EnhancedLayout>
->>>>>>> origin/merge-pr-11208
+      </main>
+
+      <Footer />
+    </>
   );
 });
 

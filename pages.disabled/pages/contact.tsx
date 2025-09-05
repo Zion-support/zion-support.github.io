@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'
-import dynamic from 'next/dynamic'
-import Head from 'next/head'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   Phone, 
   Mail, 
@@ -13,13 +10,9 @@ import {
   ArrowRight, 
   Send,
   MessageCircle,
-  Globe
-} from 'lucide-react'
-=======
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
->>>>>>> origin/merge-pr-11195
+  Globe,
+  CheckCircle
+} from 'lucide-react';
 
 const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
@@ -420,7 +413,6 @@ const "Contact": NextPage = () => {
     </MainLayout>
   );
 };
->>>>>>> origin/merge-pr-10614
 
           {/* Contact Information */}
           <section className="py-20">

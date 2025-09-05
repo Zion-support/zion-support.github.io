@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 import Head from 'next/head';
 
 interface SEOProps {
@@ -453,6 +449,3 @@ export default SEO;"
 </script>
 </Helmet>
 </SEOProps>
-</script>
-</SEOProps>;';';
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
