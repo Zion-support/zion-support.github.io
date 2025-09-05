@@ -15,7 +15,17 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  HardDrive,
+  Package,
+  Smartphone,
+  Users,
+  Globe,
+  GraduationCap,
+  Laptop,
+  Monitor,
+  FileText,
+  DollarSign
 } from 'lucide-react';
 import Layout from './components/Layout';
 
@@ -103,6 +113,499 @@ const services = [
       "24/7 System Support"
     ],
     price: "Starting at $800/month"
+  },
+  {
+    title: "Cloud Migration Services",
+    description: "Seamless migration to cloud platforms with zero downtime and data integrity",
+    icon: Cloud,
+    features: [
+      "AWS, Azure, GCP Migration",
+      "Data Migration & Validation",
+      "Application Modernization",
+      "Cost Optimization",
+      "Security & Compliance",
+      "Performance Tuning",
+      "Training & Documentation",
+      "24/7 Support"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$3,500-8,000/month"
+  },
+  {
+    title: "IT Consulting & Strategy",
+    description: "Strategic IT planning and digital transformation consulting",
+    icon: Settings,
+    features: [
+      "IT Strategy Development",
+      "Technology Assessment",
+      "Digital Transformation Planning",
+      "Vendor Selection",
+      "Budget Planning",
+      "Risk Assessment",
+      "Implementation Roadmap",
+      "Change Management"
+    ],
+    price: "Starting at $200/hour",
+    marketPrice: "$250-500/hour"
+  },
+  {
+    title: "Managed IT Services",
+    description: "Complete IT infrastructure management and support services",
+    icon: Shield,
+    features: [
+      "24/7 Monitoring & Support",
+      "Proactive Maintenance",
+      "Help Desk Services",
+      "Security Management",
+      "Backup & Recovery",
+      "Software Updates",
+      "Performance Optimization",
+      "Compliance Management"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$1,500-4,000/month"
+  },
+  {
+    title: "Network Security",
+    description: "Advanced network security solutions and threat protection",
+    icon: Shield,
+    features: [
+      "Firewall Configuration",
+      "Intrusion Detection",
+      "VPN Setup & Management",
+      "Network Monitoring",
+      "Threat Intelligence",
+      "Security Auditing",
+      "Incident Response",
+      "Compliance Reporting"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,000-5,000/month"
+  },
+  {
+    title: "Data Backup & Recovery",
+    description: "Comprehensive data protection and disaster recovery solutions",
+    icon: HardDrive,
+    features: [
+      "Automated Backup Systems",
+      "Disaster Recovery Planning",
+      "Data Encryption",
+      "Offsite Storage",
+      "Recovery Testing",
+      "Compliance Backup",
+      "Cloud Backup Solutions",
+      "24/7 Monitoring"
+    ],
+    price: "Starting at $800/month",
+    marketPrice: "$1,000-3,000/month"
+  },
+  {
+    title: "Email & Communication Systems",
+    description: "Enterprise email and communication platform setup and management",
+    icon: Mail,
+    features: [
+      "Email Server Setup",
+      "Microsoft 365 Migration",
+      "Google Workspace Setup",
+      "Email Security",
+      "Spam Filtering",
+      "Archive & Compliance",
+      "Mobile Device Management",
+      "User Training"
+    ],
+    price: "Starting at $1,000/month",
+    marketPrice: "$1,200-3,500/month"
+  },
+  {
+    title: "Virtualization Services",
+    description: "Server and desktop virtualization solutions for improved efficiency",
+    icon: Server,
+    features: [
+      "VMware & Hyper-V Setup",
+      "Virtual Desktop Infrastructure",
+      "Server Consolidation",
+      "Resource Optimization",
+      "High Availability",
+      "Disaster Recovery",
+      "Performance Monitoring",
+      "Cost Optimization"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$2,500-6,000/month"
+  },
+  {
+    title: "IT Asset Management",
+    description: "Complete IT asset lifecycle management and tracking",
+    icon: Package,
+    features: [
+      "Asset Discovery & Inventory",
+      "License Management",
+      "Lifecycle Tracking",
+      "Cost Optimization",
+      "Compliance Reporting",
+      "Asset Disposal",
+      "Software Auditing",
+      "Contract Management"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$1,500-4,000/month"
+  },
+  {
+    title: "Mobile Device Management",
+    description: "Enterprise mobile device security and management solutions",
+    icon: Smartphone,
+    features: [
+      "Device Enrollment",
+      "Security Policies",
+      "App Management",
+      "Remote Wipe",
+      "Compliance Monitoring",
+      "Location Tracking",
+      "Data Encryption",
+      "User Training"
+    ],
+    price: "Starting at $1,000/month",
+    marketPrice: "$1,200-3,000/month"
+  },
+  {
+    title: "IT Support & Help Desk",
+    description: "Professional IT support and help desk services",
+    icon: Users,
+    features: [
+      "24/7 Technical Support",
+      "Remote Assistance",
+      "Ticket Management",
+      "Knowledge Base",
+      "User Training",
+      "Problem Resolution",
+      "SLA Management",
+      "Performance Reporting"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,000-5,000/month"
+  },
+  {
+    title: "Software Development Services",
+    description: "Custom software development and application modernization",
+    icon: Code,
+    features: [
+      "Custom Application Development",
+      "Legacy System Modernization",
+      "API Development",
+      "Database Design",
+      "Quality Assurance",
+      "Documentation",
+      "Training & Support",
+      "Maintenance & Updates"
+    ],
+    price: "Starting at $150/hour",
+    marketPrice: "$200-400/hour"
+  },
+  {
+    title: "Database Administration",
+    description: "Database design, optimization, and management services",
+    icon: Database,
+    features: [
+      "Database Design & Setup",
+      "Performance Tuning",
+      "Backup & Recovery",
+      "Security Management",
+      "Migration Services",
+      "Monitoring & Maintenance",
+      "Capacity Planning",
+      "Disaster Recovery"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$2,500-6,000/month"
+  },
+  {
+    title: "Web Development & Hosting",
+    description: "Website development, hosting, and maintenance services",
+    icon: Globe,
+    features: [
+      "Website Design & Development",
+      "E-commerce Solutions",
+      "Content Management Systems",
+      "Web Hosting",
+      "SSL Certificates",
+      "Performance Optimization",
+      "SEO Services",
+      "Maintenance & Updates"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$1,500-4,000/month"
+  },
+  {
+    title: "IT Training & Education",
+    description: "Comprehensive IT training programs for teams and individuals",
+    icon: GraduationCap,
+    features: [
+      "Technology Training",
+      "Certification Programs",
+      "Security Awareness",
+      "Software Training",
+      "Best Practices",
+      "Custom Training Programs",
+      "Online Learning Platform",
+      "Assessment & Testing"
+    ],
+    price: "Starting at $200/hour",
+    marketPrice: "$250-500/hour"
+  },
+  {
+    title: "IT Compliance & Auditing",
+    description: "Compliance management and IT auditing services",
+    icon: Shield,
+    features: [
+      "Compliance Assessment",
+      "Audit Preparation",
+      "Policy Development",
+      "Risk Assessment",
+      "Documentation",
+      "Remediation Planning",
+      "Training Programs",
+      "Ongoing Monitoring"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$2,500-6,000/month"
+  },
+  {
+    title: "Cloud Security Services",
+    description: "Comprehensive cloud security and compliance solutions",
+    icon: Shield,
+    features: [
+      "Cloud Security Assessment",
+      "Identity & Access Management",
+      "Data Encryption",
+      "Compliance Monitoring",
+      "Threat Detection",
+      "Security Automation",
+      "Incident Response",
+      "Security Training"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$3,500-8,000/month"
+  },
+  {
+    title: "IT Infrastructure Design",
+    description: "Custom IT infrastructure design and implementation",
+    icon: Network,
+    features: [
+      "Infrastructure Planning",
+      "Architecture Design",
+      "Technology Selection",
+      "Implementation Planning",
+      "Cost Analysis",
+      "Scalability Planning",
+      "Security Integration",
+      "Documentation"
+    ],
+    price: "Starting at $3,000/month",
+    marketPrice: "$4,000-10,000/month"
+  },
+  {
+    title: "Remote Work Solutions",
+    description: "Complete remote work infrastructure and support",
+    icon: Laptop,
+    features: [
+      "VPN Setup",
+      "Remote Desktop Solutions",
+      "Collaboration Tools",
+      "Security Policies",
+      "Device Management",
+      "Network Optimization",
+      "Support Services",
+      "Training Programs"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,000-5,000/month"
+  },
+  {
+    title: "IT Project Management",
+    description: "Professional IT project management and implementation",
+    icon: Settings,
+    features: [
+      "Project Planning",
+      "Resource Management",
+      "Timeline Management",
+      "Risk Assessment",
+      "Quality Control",
+      "Stakeholder Communication",
+      "Budget Management",
+      "Documentation"
+    ],
+    price: "Starting at $200/hour",
+    marketPrice: "$250-500/hour"
+  },
+  {
+    title: "IT Vendor Management",
+    description: "IT vendor selection, management, and optimization",
+    icon: Users,
+    features: [
+      "Vendor Assessment",
+      "Contract Negotiation",
+      "Performance Monitoring",
+      "Cost Optimization",
+      "Relationship Management",
+      "Service Level Management",
+      "Risk Assessment",
+      "Compliance Monitoring"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$1,500-4,000/month"
+  },
+  {
+    title: "IT Disaster Recovery",
+    description: "Comprehensive disaster recovery planning and implementation",
+    icon: HardDrive,
+    features: [
+      "Disaster Recovery Planning",
+      "Backup Strategy",
+      "Recovery Testing",
+      "Business Continuity",
+      "RTO/RPO Planning",
+      "Documentation",
+      "Training Programs",
+      "Ongoing Maintenance"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$2,500-6,000/month"
+  },
+  {
+    title: "IT Performance Optimization",
+    description: "System performance analysis and optimization services",
+    icon: Zap,
+    features: [
+      "Performance Analysis",
+      "Bottleneck Identification",
+      "Optimization Implementation",
+      "Capacity Planning",
+      "Monitoring Setup",
+      "Performance Testing",
+      "Documentation",
+      "Ongoing Monitoring"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$2,500-6,000/month"
+  },
+  {
+    title: "IT Integration Services",
+    description: "System integration and API development services",
+    icon: Network,
+    features: [
+      "System Integration",
+      "API Development",
+      "Data Synchronization",
+      "Workflow Automation",
+      "Testing & Validation",
+      "Documentation",
+      "Training & Support",
+      "Maintenance"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,000-7,000/month"
+  },
+  {
+    title: "IT Security Assessment",
+    description: "Comprehensive security assessment and penetration testing",
+    icon: Shield,
+    features: [
+      "Security Assessment",
+      "Penetration Testing",
+      "Vulnerability Scanning",
+      "Risk Analysis",
+      "Remediation Planning",
+      "Compliance Review",
+      "Security Training",
+      "Ongoing Monitoring"
+    ],
+    price: "Starting at $3,000/month",
+    marketPrice: "$4,000-10,000/month"
+  },
+  {
+    title: "IT Cost Optimization",
+    description: "IT cost analysis and optimization strategies",
+    icon: DollarSign,
+    features: [
+      "Cost Analysis",
+      "Budget Optimization",
+      "Resource Utilization",
+      "Vendor Negotiation",
+      "Technology Rationalization",
+      "ROI Analysis",
+      "Implementation Planning",
+      "Ongoing Monitoring"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,000-5,000/month"
+  },
+  {
+    title: "IT Documentation Services",
+    description: "Comprehensive IT documentation and knowledge management",
+    icon: FileText,
+    features: [
+      "System Documentation",
+      "Process Documentation",
+      "Knowledge Base Creation",
+      "User Manuals",
+      "Technical Specifications",
+      "Compliance Documentation",
+      "Version Control",
+      "Maintenance & Updates"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$1,500-4,000/month"
+  },
+  {
+    title: "IT Change Management",
+    description: "IT change management and implementation services",
+    icon: Settings,
+    features: [
+      "Change Planning",
+      "Impact Analysis",
+      "Risk Assessment",
+      "Implementation Management",
+      "Rollback Planning",
+      "Communication",
+      "Training Programs",
+      "Post-Implementation Review"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$2,500-6,000/month"
+  },
+  {
+    title: "IT Monitoring & Alerting",
+    description: "Comprehensive IT monitoring and alerting solutions",
+    icon: Monitor,
+    features: [
+      "System Monitoring",
+      "Performance Monitoring",
+      "Alert Management",
+      "Dashboard Creation",
+      "Reporting",
+      "Incident Response",
+      "Capacity Planning",
+      "24/7 Support"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$2,500-6,000/month"
+  },
+  {
+    title: "IT Governance",
+    description: "IT governance framework and implementation services",
+    icon: Shield,
+    features: [
+      "Governance Framework",
+      "Policy Development",
+      "Process Definition",
+      "Compliance Management",
+      "Risk Management",
+      "Performance Measurement",
+      "Training Programs",
+      "Ongoing Support"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$3,500-8,000/month"
   }
 ];
 
@@ -156,9 +659,9 @@ export default function ITServicesPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Transform your technology infrastructure with our expert IT services. 
-              From cloud migration to cybersecurity, we provide end-to-end solutions 
-              that drive business growth and operational efficiency.
+              Transform your technology infrastructure with our 31+ expert IT services. 
+              From cloud migration to cybersecurity, managed services, and digital transformation, 
+              we provide end-to-end solutions that drive business growth and operational efficiency.
             </motion.p>
             <motion.div 
               className="flex flex-col sm:flex-row justify-center gap-4"
@@ -169,9 +672,9 @@ export default function ITServicesPage() {
               <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
                 Get Free Consultation
               </Link>
-              <Link href="/quote" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                Request Quote
-              </Link>
+              <a href="tel:+13024640950" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                Call +1 302 464 0950
+              </a>
             </motion.div>
           </div>
         </div>

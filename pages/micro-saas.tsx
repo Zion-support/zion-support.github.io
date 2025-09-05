@@ -15,7 +15,26 @@ import {
   MapPin,
   Users,
   Shield,
-  Globe
+  Globe,
+  Package,
+  DollarSign,
+  GraduationCap,
+  ClipboardList,
+  Calendar,
+  FileText,
+  Target,
+  Clock,
+  CreditCard,
+  Video,
+  ShoppingCart,
+  Lock,
+  HardDrive,
+  Database,
+  Monitor,
+  MessageSquare,
+  Image,
+  Wifi,
+  Network
 } from 'lucide-react';
 import Layout from './components/Layout';
 
@@ -103,6 +122,635 @@ const microSaasSolutions = [
       "Real-time Insights"
     ],
     price: "Starting at $2,500/month"
+  },
+  {
+    title: "Social Media Management",
+    description: "Comprehensive social media scheduling, analytics, and engagement tools",
+    icon: Users,
+    features: [
+      "Multi-platform posting",
+      "Content calendar management",
+      "Analytics & reporting",
+      "Engagement tracking",
+      "Hashtag optimization",
+      "Competitor analysis",
+      "Auto-scheduling",
+      "Team collaboration"
+    ],
+    price: "Starting at $199/month",
+    marketPrice: "$300-800/month"
+  },
+  {
+    title: "Email Marketing Automation",
+    description: "Advanced email marketing with automation, segmentation, and analytics",
+    icon: Mail,
+    features: [
+      "Drag-and-drop email builder",
+      "Automated drip campaigns",
+      "Advanced segmentation",
+      "A/B testing tools",
+      "Analytics & reporting",
+      "Template library",
+      "Integration APIs",
+      "Deliverability optimization"
+    ],
+    price: "Starting at $149/month",
+    marketPrice: "$200-600/month"
+  },
+  {
+    title: "Project Management Suite",
+    description: "Complete project management with task tracking, team collaboration, and reporting",
+    icon: Settings,
+    features: [
+      "Task & milestone tracking",
+      "Team collaboration tools",
+      "Time tracking & reporting",
+      "Resource management",
+      "Gantt charts & timelines",
+      "File sharing & storage",
+      "Mobile applications",
+      "Integration ecosystem"
+    ],
+    price: "Starting at $299/month",
+    marketPrice: "$400-1,200/month"
+  },
+  {
+    title: "Customer Relationship Management",
+    description: "Comprehensive CRM with sales pipeline, customer tracking, and automation",
+    icon: Users,
+    features: [
+      "Contact & lead management",
+      "Sales pipeline tracking",
+      "Email integration",
+      "Task & activity management",
+      "Reporting & analytics",
+      "Mobile CRM access",
+      "Custom fields & workflows",
+      "Third-party integrations"
+    ],
+    price: "Starting at $199/month",
+    marketPrice: "$300-900/month"
+  },
+  {
+    title: "Inventory Management System",
+    description: "Real-time inventory tracking, order management, and supply chain optimization",
+    icon: Package,
+    features: [
+      "Real-time inventory tracking",
+      "Order management",
+      "Supplier management",
+      "Barcode scanning",
+      "Low stock alerts",
+      "Multi-location support",
+      "Reporting & analytics",
+      "Integration capabilities"
+    ],
+    price: "Starting at $249/month",
+    marketPrice: "$350-1,000/month"
+  },
+  {
+    title: "Accounting & Invoicing",
+    description: "Complete accounting solution with invoicing, expense tracking, and financial reporting",
+    icon: DollarSign,
+    features: [
+      "Invoice creation & management",
+      "Expense tracking",
+      "Financial reporting",
+      "Tax preparation tools",
+      "Bank reconciliation",
+      "Multi-currency support",
+      "Mobile app access",
+      "Integration with banks"
+    ],
+    price: "Starting at $179/month",
+    marketPrice: "$250-700/month"
+  },
+  {
+    title: "HR Management Platform",
+    description: "Human resources management with employee records, payroll, and performance tracking",
+    icon: Users,
+    features: [
+      "Employee database",
+      "Time & attendance tracking",
+      "Payroll management",
+      "Performance reviews",
+      "Leave management",
+      "Document storage",
+      "Compliance tracking",
+      "Reporting & analytics"
+    ],
+    price: "Starting at $299/month",
+    marketPrice: "$400-1,500/month"
+  },
+  {
+    title: "Learning Management System",
+    description: "Online learning platform with course creation, student tracking, and certification",
+    icon: GraduationCap,
+    features: [
+      "Course creation tools",
+      "Student enrollment",
+      "Progress tracking",
+      "Certification management",
+      "Video hosting",
+      "Quiz & assessment tools",
+      "Mobile learning",
+      "Analytics & reporting"
+    ],
+    price: "Starting at $199/month",
+    marketPrice: "$300-800/month"
+  },
+  {
+    title: "Help Desk & Support",
+    description: "Customer support ticketing system with knowledge base and live chat",
+    icon: Shield,
+    features: [
+      "Ticket management",
+      "Knowledge base",
+      "Live chat integration",
+      "SLA management",
+      "Customer portal",
+      "Automation rules",
+      "Reporting & analytics",
+      "Multi-channel support"
+    ],
+    price: "Starting at $149/month",
+    marketPrice: "$200-600/month"
+  },
+  {
+    title: "Survey & Feedback Platform",
+    description: "Advanced survey creation, data collection, and analytics platform",
+    icon: ClipboardList,
+    features: [
+      "Survey builder",
+      "Multiple question types",
+      "Response analytics",
+      "Data export",
+      "Custom branding",
+      "Conditional logic",
+      "Mobile optimization",
+      "Integration APIs"
+    ],
+    price: "Starting at $99/month",
+    marketPrice: "$150-500/month"
+  },
+  {
+    title: "Event Management System",
+    description: "Complete event planning and management with registration, ticketing, and analytics",
+    icon: Calendar,
+    features: [
+      "Event creation & management",
+      "Registration & ticketing",
+      "Payment processing",
+      "Attendee management",
+      "Event analytics",
+      "Mobile check-in",
+      "Email marketing integration",
+      "Custom branding"
+    ],
+    price: "Starting at $199/month",
+    marketPrice: "$300-800/month"
+  },
+  {
+    title: "Document Management",
+    description: "Secure document storage, sharing, and collaboration platform",
+    icon: FileText,
+    features: [
+      "Document storage & organization",
+      "Version control",
+      "Collaborative editing",
+      "Access permissions",
+      "Search functionality",
+      "Document templates",
+      "Mobile access",
+      "Integration capabilities"
+    ],
+    price: "Starting at $149/month",
+    marketPrice: "$200-600/month"
+  },
+  {
+    title: "Lead Generation Platform",
+    description: "Automated lead generation with forms, landing pages, and lead scoring",
+    icon: Target,
+    features: [
+      "Lead capture forms",
+      "Landing page builder",
+      "Lead scoring",
+      "Email automation",
+      "CRM integration",
+      "Analytics & reporting",
+      "A/B testing",
+      "Conversion optimization"
+    ],
+    price: "Starting at $199/month",
+    marketPrice: "$300-700/month"
+  },
+  {
+    title: "Appointment Scheduling",
+    description: "Online booking and scheduling system with calendar integration and notifications",
+    icon: Clock,
+    features: [
+      "Online booking",
+      "Calendar integration",
+      "Automated reminders",
+      "Payment processing",
+      "Multi-service support",
+      "Staff management",
+      "Mobile app",
+      "Customization options"
+    ],
+    price: "Starting at $99/month",
+    marketPrice: "$150-400/month"
+  },
+  {
+    title: "Content Management System",
+    description: "Website content management with SEO tools, analytics, and multi-user support",
+    icon: Globe,
+    features: [
+      "Content editor",
+      "SEO optimization",
+      "Multi-user access",
+      "Template system",
+      "Media library",
+      "Analytics integration",
+      "Mobile responsive",
+      "Plugin ecosystem"
+    ],
+    price: "Starting at $149/month",
+    marketPrice: "$200-600/month"
+  },
+  {
+    title: "Analytics Dashboard",
+    description: "Comprehensive analytics and reporting platform with custom dashboards",
+    icon: BarChart3,
+    features: [
+      "Custom dashboards",
+      "Real-time analytics",
+      "Data visualization",
+      "Report scheduling",
+      "Export capabilities",
+      "API integration",
+      "Mobile access",
+      "White-label options"
+    ],
+    price: "Starting at $199/month",
+    marketPrice: "$300-800/month"
+  },
+  {
+    title: "API Management Platform",
+    description: "API development, testing, and management platform with documentation and monitoring",
+    icon: Code,
+    features: [
+      "API development tools",
+      "Testing & debugging",
+      "Documentation generation",
+      "Rate limiting",
+      "Analytics & monitoring",
+      "Developer portal",
+      "Security features",
+      "Integration marketplace"
+    ],
+    price: "Starting at $299/month",
+    marketPrice: "$400-1,200/month"
+  },
+  {
+    title: "Workflow Automation",
+    description: "Visual workflow builder for business process automation and integration",
+    icon: Zap,
+    features: [
+      "Visual workflow builder",
+      "Trigger automation",
+      "Integration connectors",
+      "Conditional logic",
+      "Error handling",
+      "Monitoring & logging",
+      "Template library",
+      "Scalable architecture"
+    ],
+    price: "Starting at $249/month",
+    marketPrice: "$350-900/month"
+  },
+  {
+    title: "Subscription Management",
+    description: "Recurring billing and subscription management platform with payment processing",
+    icon: CreditCard,
+    features: [
+      "Recurring billing",
+      "Payment processing",
+      "Subscription lifecycle",
+      "Proration handling",
+      "Dunning management",
+      "Analytics & reporting",
+      "Webhook support",
+      "Multi-currency support"
+    ],
+    price: "Starting at $199/month",
+    marketPrice: "$300-700/month"
+  },
+  {
+    title: "Video Conferencing Platform",
+    description: "Enterprise-grade video conferencing with recording, screen sharing, and collaboration tools",
+    icon: Video,
+    features: [
+      "HD video conferencing",
+      "Screen sharing",
+      "Recording capabilities",
+      "Chat & messaging",
+      "Meeting scheduling",
+      "Mobile apps",
+      "Integration APIs",
+      "Security features"
+    ],
+    price: "Starting at $299/month",
+    marketPrice: "$400-1,000/month"
+  },
+  {
+    title: "E-commerce Platform",
+    description: "Complete online store solution with payment processing, inventory, and analytics",
+    icon: ShoppingCart,
+    features: [
+      "Product catalog",
+      "Shopping cart",
+      "Payment processing",
+      "Order management",
+      "Inventory tracking",
+      "Analytics & reporting",
+      "Mobile optimization",
+      "SEO tools"
+    ],
+    price: "Starting at $199/month",
+    marketPrice: "$300-800/month"
+  },
+  {
+    title: "Time Tracking Software",
+    description: "Employee time tracking with project management and reporting capabilities",
+    icon: Clock,
+    features: [
+      "Time tracking",
+      "Project management",
+      "Team monitoring",
+      "Reporting & analytics",
+      "Mobile apps",
+      "Integration capabilities",
+      "Billing & invoicing",
+      "Compliance features"
+    ],
+    price: "Starting at $99/month",
+    marketPrice: "$150-400/month"
+  },
+  {
+    title: "Password Manager",
+    description: "Secure password management with team sharing and enterprise features",
+    icon: Lock,
+    features: [
+      "Password storage",
+      "Team sharing",
+      "Security auditing",
+      "Two-factor authentication",
+      "Browser integration",
+      "Mobile apps",
+      "Enterprise features",
+      "Compliance tools"
+    ],
+    price: "Starting at $149/month",
+    marketPrice: "$200-600/month"
+  },
+  {
+    title: "File Sharing Platform",
+    description: "Secure file sharing and collaboration with advanced security and permissions",
+    icon: HardDrive,
+    features: [
+      "File sharing",
+      "Collaboration tools",
+      "Access permissions",
+      "Version control",
+      "Security features",
+      "Mobile access",
+      "Integration APIs",
+      "Analytics dashboard"
+    ],
+    price: "Starting at $199/month",
+    marketPrice: "$300-700/month"
+  },
+  {
+    title: "Code Repository Management",
+    description: "Git-based code repository with collaboration tools, CI/CD, and project management",
+    icon: Code,
+    features: [
+      "Git repository hosting",
+      "Code collaboration",
+      "CI/CD pipelines",
+      "Project management",
+      "Code review tools",
+      "Issue tracking",
+      "Integration ecosystem",
+      "Security scanning"
+    ],
+    price: "Starting at $299/month",
+    marketPrice: "$400-1,200/month"
+  },
+  {
+    title: "Database Management",
+    description: "Cloud database management with monitoring, backup, and optimization tools",
+    icon: Database,
+    features: [
+      "Database hosting",
+      "Performance monitoring",
+      "Automated backups",
+      "Query optimization",
+      "Security management",
+      "Scaling capabilities",
+      "Analytics dashboard",
+      "Integration APIs"
+    ],
+    price: "Starting at $249/month",
+    marketPrice: "$350-1,000/month"
+  },
+  {
+    title: "Monitoring & Alerting",
+    description: "Application and infrastructure monitoring with real-time alerts and analytics",
+    icon: Monitor,
+    features: [
+      "Real-time monitoring",
+      "Alert management",
+      "Performance analytics",
+      "Uptime tracking",
+      "Log analysis",
+      "Custom dashboards",
+      "Integration capabilities",
+      "Mobile notifications"
+    ],
+    price: "Starting at $199/month",
+    marketPrice: "$300-800/month"
+  },
+  {
+    title: "Backup & Recovery",
+    description: "Automated backup and disaster recovery solution for data protection",
+    icon: HardDrive,
+    features: [
+      "Automated backups",
+      "Disaster recovery",
+      "Data encryption",
+      "Version control",
+      "Cross-platform support",
+      "Cloud storage",
+      "Monitoring & alerts",
+      "Compliance features"
+    ],
+    price: "Starting at $149/month",
+    marketPrice: "$200-600/month"
+  },
+  {
+    title: "Security Scanning",
+    description: "Automated security vulnerability scanning and compliance monitoring",
+    icon: Shield,
+    features: [
+      "Vulnerability scanning",
+      "Compliance monitoring",
+      "Security reporting",
+      "Threat detection",
+      "Remediation guidance",
+      "Integration capabilities",
+      "Custom policies",
+      "Real-time alerts"
+    ],
+    price: "Starting at $299/month",
+    marketPrice: "$400-1,200/month"
+  },
+  {
+    title: "Performance Optimization",
+    description: "Website and application performance monitoring and optimization platform",
+    icon: Zap,
+    features: [
+      "Performance monitoring",
+      "Optimization recommendations",
+      "Speed testing",
+      "CDN management",
+      "Image optimization",
+      "Code analysis",
+      "Real-time alerts",
+      "Analytics dashboard"
+    ],
+    price: "Starting at $199/month",
+    marketPrice: "$300-700/month"
+  },
+  {
+    title: "A/B Testing Platform",
+    description: "Website and application A/B testing with statistical analysis and optimization",
+    icon: Target,
+    features: [
+      "A/B test creation",
+      "Statistical analysis",
+      "Conversion tracking",
+      "Segmentation",
+      "Multivariate testing",
+      "Real-time results",
+      "Integration APIs",
+      "Advanced analytics"
+    ],
+    price: "Starting at $249/month",
+    marketPrice: "$350-900/month"
+  },
+  {
+    title: "Customer Feedback Platform",
+    description: "Customer feedback collection, analysis, and action management system",
+    icon: MessageSquare,
+    features: [
+      "Feedback collection",
+      "Sentiment analysis",
+      "Action management",
+      "Customer journey mapping",
+      "Integration capabilities",
+      "Analytics dashboard",
+      "Automated workflows",
+      "Reporting tools"
+    ],
+    price: "Starting at $179/month",
+    marketPrice: "$250-600/month"
+  },
+  {
+    title: "Compliance Management",
+    description: "Regulatory compliance tracking and management with automated reporting",
+    icon: Shield,
+    features: [
+      "Compliance tracking",
+      "Automated reporting",
+      "Risk assessment",
+      "Document management",
+      "Audit trails",
+      "Integration capabilities",
+      "Custom frameworks",
+      "Alert system"
+    ],
+    price: "Starting at $399/month",
+    marketPrice: "$500-1,500/month"
+  },
+  {
+    title: "Digital Asset Management",
+    description: "Centralized digital asset storage, organization, and distribution platform",
+    icon: Image,
+    features: [
+      "Asset storage",
+      "Organization tools",
+      "Version control",
+      "Distribution management",
+      "Rights management",
+      "Search functionality",
+      "Integration APIs",
+      "Analytics dashboard"
+    ],
+    price: "Starting at $199/month",
+    marketPrice: "$300-800/month"
+  },
+  {
+    title: "Workforce Management",
+    description: "Employee scheduling, attendance, and workforce optimization platform",
+    icon: Users,
+    features: [
+      "Employee scheduling",
+      "Attendance tracking",
+      "Shift management",
+      "Labor optimization",
+      "Compliance tracking",
+      "Mobile access",
+      "Integration capabilities",
+      "Analytics reporting"
+    ],
+    price: "Starting at $249/month",
+    marketPrice: "$350-900/month"
+  },
+  {
+    title: "IoT Device Management",
+    description: "Internet of Things device monitoring, management, and data analytics platform",
+    icon: Wifi,
+    features: [
+      "Device monitoring",
+      "Data collection",
+      "Remote management",
+      "Analytics dashboard",
+      "Alert system",
+      "Integration APIs",
+      "Scalable architecture",
+      "Security features"
+    ],
+    price: "Starting at $299/month",
+    marketPrice: "$400-1,200/month"
+  },
+  {
+    title: "Blockchain Analytics",
+    description: "Cryptocurrency and blockchain transaction analysis and monitoring platform",
+    icon: Network,
+    features: [
+      "Transaction analysis",
+      "Address monitoring",
+      "Risk assessment",
+      "Compliance reporting",
+      "Real-time alerts",
+      "API integration",
+      "Custom dashboards",
+      "Historical data"
+    ],
+    price: "Starting at $399/month",
+    marketPrice: "$500-1,500/month"
   }
 ];
 
@@ -189,9 +837,9 @@ export default function MicroSaasPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Transform your business with our cutting-edge micro SaaS platforms. 
-              From workflow automation to data processing, we create powerful tools 
-              that drive efficiency and growth.
+              Transform your business with our 42+ cutting-edge micro SaaS platforms. 
+              From workflow automation to data processing, social media management, 
+              and enterprise solutions, we create powerful tools that drive efficiency and growth.
             </motion.p>
             <motion.div 
               className="flex flex-col sm:flex-row justify-center gap-4"
@@ -202,9 +850,9 @@ export default function MicroSaasPage() {
               <Link href="/contact" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
                 Get Free Consultation
               </Link>
-              <Link href="/quote" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                Request Quote
-              </Link>
+              <a href="tel:+13024640950" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                Call +1 302 464 0950
+              </a>
             </motion.div>
           </div>
         </div>
