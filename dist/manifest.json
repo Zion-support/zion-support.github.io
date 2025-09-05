@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "Zion Tech Group - AI Marketplace",
   "short_name": "Zion",
   "description": "The world's first free marketplace dedicated to high-tech and artificial intelligence",
@@ -56,6 +57,18 @@
       "type": "image/x-icon"
     },
     {
+=======
+  "short_name": "Zion Tech",
+  "name": "Zion Tech Group - AI & Technology Solutions",
+  "description": "Empowering businesses with cutting-edge AI solutions and innovative technology services",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+>>>>>>> origin/chore/build-fixes-and-slim-app
       "src": "logo192.png",
       "type": "image/png",
       "sizes": "192x192"
@@ -89,11 +102,15 @@
       "sizes": "750x1334",
       "type": "image/png",
       "form_factor": "narrow"
+<<<<<<< HEAD
 >>>>>>> origin/chore/cleanup-and-build
+=======
+>>>>>>> origin/chore/build-fixes-and-slim-app
     }
   ],
   "shortcuts": [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "name": "AI Talent Matching",
       "short_name": "AI Match",
@@ -116,6 +133,8 @@
           "src": "/images/services-icon.png",
           "sizes": "96x96"
 =======
+=======
+>>>>>>> origin/chore/build-fixes-and-slim-app
       "name": "Services",
       "short_name": "Services",
       "description": "View our technology services",
@@ -124,11 +143,15 @@
         {
           "src": "logo192.png",
           "sizes": "192x192"
+<<<<<<< HEAD
 >>>>>>> origin/chore/cleanup-and-build
+=======
+>>>>>>> origin/chore/build-fixes-and-slim-app
         }
       ]
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "name": "Talent Directory",
       "short_name": "Talent",
@@ -156,6 +179,8 @@
       "protocol": "web+zion",
       "url": "/%s"
 =======
+=======
+>>>>>>> origin/chore/build-fixes-and-slim-app
       "name": "AI Solutions",
       "short_name": "AI Solutions",
       "description": "Explore AI solutions",
@@ -178,7 +203,10 @@
           "sizes": "192x192"
         }
       ]
+<<<<<<< HEAD
 >>>>>>> origin/chore/cleanup-and-build
+=======
+>>>>>>> origin/chore/build-fixes-and-slim-app
     }
   ]
 }
