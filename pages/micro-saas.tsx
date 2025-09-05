@@ -44,17 +44,7 @@ import {
   BookOpen,
   ShoppingCart,
   Home,
-  Database,
-  Moon,
-  ChefHat,
-  Shirt,
-  CloudRain,
-  Plane,
-  Vote,
-  HardDrive,
-  Dumbbell,
-  Key,
-  Gift
+  Database
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -308,141 +298,6 @@ const microSaaSProducts = [
     popular: true
   },
   {
-    title: 'AI-Powered Legal Document Analyzer',
-    description: 'Automated legal document analysis, contract review, and compliance checking using advanced NLP.',
-    icon: FileText,
-    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
-    pricing: '$399 - $2,499/month',
-    category: 'Legal Tech',
-    popular: true
-  },
-  {
-    title: 'Smart Energy Management System',
-    description: 'IoT-based energy monitoring and optimization for buildings and industrial facilities.',
-    icon: Zap,
-    features: ['Real-time Monitoring', 'Energy Optimization', 'Cost Analysis', 'Predictive Maintenance'],
-    pricing: '$299 - $1,999/month',
-    category: 'Energy Management',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Medical Diagnosis Assistant',
-    description: 'Advanced medical imaging analysis and diagnostic support for healthcare professionals.',
-    icon: Heart,
-    features: ['Medical Imaging Analysis', 'Symptom Analysis', 'Diagnostic Support', 'Treatment Recommendations'],
-    pricing: '$999 - $4,999/month',
-    category: 'Healthcare AI',
-    popular: true
-  },
-  {
-    title: 'Intelligent Recruitment Platform',
-    description: 'AI-powered candidate screening, matching, and interview scheduling for HR teams.',
-    icon: Users,
-    features: ['Resume Screening', 'Skill Matching', 'Interview Scheduling', 'Candidate Scoring'],
-    pricing: '$199 - $1,299/month',
-    category: 'HR Tech',
-    popular: true
-  },
-  {
-    title: 'Blockchain Identity Verification',
-    description: 'Decentralized identity verification and KYC compliance for financial services.',
-    icon: Shield,
-    features: ['Identity Verification', 'KYC Compliance', 'Document Validation', 'Fraud Prevention'],
-    pricing: '$299 - $1,999/month',
-    category: 'Blockchain',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Investment Portfolio Manager',
-    description: 'Automated investment portfolio management with risk assessment and rebalancing.',
-    icon: TrendingUp,
-    features: ['Portfolio Optimization', 'Risk Assessment', 'Auto Rebalancing', 'Performance Analytics'],
-    pricing: '$199 - $1,499/month',
-    category: 'FinTech',
-    popular: true
-  },
-  {
-    title: 'Smart Home Automation Hub',
-    description: 'Centralized smart home control with AI-powered automation and energy optimization.',
-    icon: Home,
-    features: ['Device Control', 'Automation Rules', 'Energy Optimization', 'Voice Commands'],
-    pricing: '$49 - $299/month',
-    category: 'Smart Home',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Language Learning Platform',
-    description: 'Personalized language learning with speech recognition and adaptive curriculum.',
-    icon: BookOpen,
-    features: ['Adaptive Learning', 'Speech Recognition', 'Progress Tracking', 'Native Speaker Practice'],
-    pricing: '$19 - $99/month',
-    category: 'EdTech',
-    popular: true
-  },
-  {
-    title: 'Intelligent Waste Management System',
-    description: 'IoT-based waste monitoring and optimization for cities and businesses.',
-    icon: Package,
-    features: ['Waste Monitoring', 'Route Optimization', 'Collection Scheduling', 'Environmental Impact'],
-    pricing: '$199 - $1,299/month',
-    category: 'Environmental Tech',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Mental Health Assistant',
-    description: '24/7 mental health support with mood tracking and crisis intervention capabilities.',
-    icon: Heart,
-    features: ['Mood Tracking', 'Crisis Detection', 'Therapy Recommendations', 'Progress Monitoring'],
-    pricing: '$29 - $199/month',
-    category: 'HealthTech',
-    popular: true
-  },
-  {
-    title: 'Smart Agriculture Monitoring System',
-    description: 'IoT sensors and AI for crop monitoring, irrigation optimization, and yield prediction.',
-    icon: Sprout,
-    features: ['Crop Monitoring', 'Irrigation Control', 'Yield Prediction', 'Weather Integration'],
-    pricing: '$199 - $1,499/month',
-    category: 'AgriTech',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Cybersecurity Threat Hunter',
-    description: 'Advanced threat detection and response system with behavioral analysis and automated remediation.',
-    icon: Shield,
-    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Incident Investigation'],
-    pricing: '$599 - $3,999/month',
-    category: 'Cybersecurity',
-    popular: true
-  },
-  {
-    title: 'Intelligent Document Processing Platform',
-    description: 'Automated document extraction, classification, and data entry for business processes.',
-    icon: FileText,
-    features: ['Document Extraction', 'Data Classification', 'Automated Entry', 'Quality Validation'],
-    pricing: '$299 - $1,999/month',
-    category: 'Document Processing',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Personal Finance Coach',
-    description: 'Personalized financial planning and budgeting with spending analysis and goal tracking.',
-    icon: DollarSign,
-    features: ['Spending Analysis', 'Budget Planning', 'Goal Tracking', 'Investment Advice'],
-    pricing: '$9 - $49/month',
-    category: 'Personal Finance',
-    popular: true
-  },
-  {
-    title: 'Smart Manufacturing Quality Control',
-    description: 'AI-powered quality inspection and defect detection for manufacturing processes.',
-    icon: Settings,
-    features: ['Defect Detection', 'Quality Metrics', 'Process Optimization', 'Predictive Maintenance'],
-    pricing: '$499 - $2,999/month',
-    category: 'Manufacturing',
-    popular: true
-  },
-  {
     title: 'Real-Time Language Translation API',
     description: 'Advanced translation service with context awareness and industry-specific terminology.',
     icon: Globe,
@@ -569,408 +424,174 @@ const microSaaSProducts = [
     popular: true
   },
   {
-    title: 'Quantum-Safe Password Manager',
-    description: 'Next-generation password management with quantum-resistant encryption and biometric authentication.',
-    icon: Lock,
-    features: ['Quantum-Resistant Encryption', 'Biometric Auth', 'Zero-Knowledge Architecture', 'Cross-Platform Sync'],
-    pricing: '$9 - $49/month',
-    category: 'Security',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Carbon Footprint Tracker',
-    description: 'Personal and business carbon footprint tracking with AI-powered reduction recommendations.',
-    icon: Sprout,
-    features: ['Real-time Tracking', 'AI Recommendations', 'Offset Marketplace', 'Sustainability Reports'],
-    pricing: '$19 - $99/month',
-    category: 'Sustainability',
-    popular: true
-  },
-  {
-    title: 'Blockchain Document Notarization',
-    description: 'Immutable document verification and notarization using blockchain technology.',
-    icon: FileText,
-    features: ['Blockchain Verification', 'Immutable Records', 'Legal Compliance', 'API Integration'],
-    pricing: '$0.50 - $5.00 per document',
-    category: 'Blockchain',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Mental Health Tracker',
-    description: 'Personal mental health monitoring with AI insights and professional integration.',
-    icon: Heart,
-    features: ['Mood Tracking', 'AI Insights', 'Professional Integration', 'Crisis Detection'],
-    pricing: '$14 - $79/month',
-    category: 'Health & Wellness',
-    popular: true
-  },
-  {
-    title: 'Smart Contract Audit Platform',
-    description: 'Automated smart contract security auditing with comprehensive vulnerability detection.',
-    icon: Shield,
-    features: ['Automated Auditing', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Checking'],
-    pricing: '$299 - $2,999/month',
-    category: 'Blockchain Security',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Personal Finance Assistant',
-    description: 'Intelligent personal finance management with budgeting, investment advice, and goal tracking.',
-    icon: DollarSign,
-    features: ['Smart Budgeting', 'Investment Advice', 'Goal Tracking', 'Expense Categorization'],
-    pricing: '$9 - $49/month',
-    category: 'FinTech',
-    popular: true
-  },
-  {
-    title: 'Edge Computing Analytics Platform',
-    description: 'Real-time analytics processing at the edge for IoT and distributed systems.',
-    icon: Network,
-    features: ['Edge Processing', 'Real-time Analytics', 'IoT Integration', 'Low Latency'],
-    pricing: '$199 - $1,999/month',
-    category: 'Edge Computing',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Language Learning',
-    description: 'Personalized language learning with AI tutors and immersive conversation practice.',
-    icon: Globe,
-    features: ['AI Tutors', 'Conversation Practice', 'Progress Tracking', 'Cultural Context'],
-    pricing: '$19 - $99/month',
-    category: 'Education',
-    popular: true
-  },
-  {
-    title: 'Quantum Random Number Generator',
-    description: 'True quantum random number generation for cryptographic applications and gaming.',
-    icon: Cpu,
-    features: ['Quantum Entropy', 'Cryptographic Grade', 'API Access', 'Real-time Generation'],
-    pricing: '$99 - $999/month',
-    category: 'Quantum Computing',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Sleep Optimization',
-    description: 'Personalized sleep tracking and optimization using AI and wearable integration.',
-    icon: Moon,
-    features: ['Sleep Analysis', 'AI Recommendations', 'Wearable Integration', 'Environment Control'],
-    pricing: '$14 - $79/month',
-    category: 'Health & Wellness',
-    popular: true
-  },
-  {
-    title: 'Decentralized Identity Management',
-    description: 'Self-sovereign identity solution with privacy-preserving authentication and verification.',
-    icon: Users,
-    features: ['Self-Sovereign Identity', 'Privacy-Preserving', 'Cross-Platform', 'Zero-Knowledge Proofs'],
-    pricing: '$29 - $199/month',
-    category: 'Identity Management',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Code Documentation Generator',
-    description: 'Automated code documentation generation with AI-powered code analysis and explanation.',
-    icon: Code,
-    features: ['Auto Documentation', 'Code Analysis', 'API Documentation', 'Version Control Integration'],
-    pricing: '$49 - $299/month',
-    category: 'Developer Tools',
-    popular: true
-  },
-  {
-    title: 'Smart Home Energy Optimizer',
-    description: 'AI-powered home energy management with smart device integration and cost optimization.',
-    icon: Zap,
-    features: ['Energy Monitoring', 'Smart Device Control', 'Cost Optimization', 'Renewable Integration'],
-    pricing: '$19 - $99/month',
-    category: 'Smart Home',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Recipe Generator',
-    description: 'Personalized recipe creation based on available ingredients, dietary restrictions, and preferences.',
-    icon: ChefHat,
-    features: ['Ingredient-Based Recipes', 'Dietary Restrictions', 'Nutritional Analysis', 'Shopping Lists'],
-    pricing: '$9 - $49/month',
-    category: 'Food & Cooking',
-    popular: true
-  },
-  {
-    title: 'Blockchain Supply Chain Tracker',
-    description: 'End-to-end supply chain transparency using blockchain for product authenticity and sustainability.',
-    icon: Package,
-    features: ['Product Tracking', 'Authenticity Verification', 'Sustainability Metrics', 'Transparency Reports'],
-    pricing: '$199 - $1,999/month',
-    category: 'Supply Chain',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Personal Stylist',
-    description: 'Virtual personal styling assistant with outfit recommendations and wardrobe management.',
-    icon: Shirt,
-    features: ['Outfit Recommendations', 'Wardrobe Management', 'Style Analysis', 'Shopping Integration'],
-    pricing: '$14 - $79/month',
-    category: 'Fashion & Style',
-    popular: true
-  },
-  {
-    title: 'Quantum-Enhanced Weather Prediction',
-    description: 'Advanced weather forecasting using quantum computing for improved accuracy and longer predictions.',
-    icon: CloudRain,
-    features: ['Quantum Algorithms', 'Extended Forecasts', 'Hyperlocal Data', 'Climate Modeling'],
-    pricing: '$99 - $999/month',
-    category: 'Weather & Climate',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Plant Care Assistant',
-    description: 'Smart plant monitoring and care recommendations using computer vision and IoT sensors.',
-    icon: Sprout,
-    features: ['Plant Identification', 'Care Recommendations', 'Health Monitoring', 'Watering Schedules'],
-    pricing: '$9 - $49/month',
-    category: 'Gardening',
-    popular: true
-  },
-  {
-    title: 'Decentralized Social Media Platform',
-    description: 'Privacy-focused social media with decentralized content storage and user-controlled data.',
-    icon: MessageSquare,
-    features: ['Decentralized Storage', 'User-Controlled Data', 'Privacy-First', 'Content Monetization'],
-    pricing: '$19 - $99/month',
-    category: 'Social Media',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Habit Tracker',
-    description: 'Intelligent habit formation and tracking with personalized recommendations and motivation.',
-    icon: Target,
-    features: ['Habit Tracking', 'AI Recommendations', 'Progress Analytics', 'Community Support'],
-    pricing: '$9 - $49/month',
-    category: 'Productivity',
-    popular: true
-  },
-  {
-    title: 'Smart Contract Insurance Platform',
-    description: 'Automated insurance using smart contracts for transparent and instant claim processing.',
-    icon: Shield,
-    features: ['Smart Contracts', 'Automated Claims', 'Transparent Pricing', 'Instant Payouts'],
-    pricing: '$29 - $199/month',
-    category: 'Insurance',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Meditation Guide',
-    description: 'Personalized meditation and mindfulness app with AI-guided sessions and progress tracking.',
-    icon: Heart,
-    features: ['AI-Guided Sessions', 'Progress Tracking', 'Personalized Content', 'Biometric Integration'],
-    pricing: '$14 - $79/month',
-    category: 'Wellness',
-    popular: true
-  },
-  {
-    title: 'Quantum-Secure Communication Platform',
-    description: 'Ultra-secure messaging and communication using quantum key distribution and encryption.',
-    icon: Lock,
-    features: ['Quantum Encryption', 'Perfect Forward Secrecy', 'End-to-End Encryption', 'Quantum Keys'],
-    pricing: '$49 - $299/month',
-    category: 'Secure Communication',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Travel Planner',
-    description: 'Intelligent travel planning with personalized itineraries, real-time updates, and cost optimization.',
-    icon: Plane,
-    features: ['Personalized Itineraries', 'Real-time Updates', 'Cost Optimization', 'Local Insights'],
-    pricing: '$19 - $99/month',
-    category: 'Travel',
-    popular: true
-  },
-  {
-    title: 'Blockchain Voting System',
-    description: 'Secure and transparent voting platform using blockchain for elections and decision-making.',
-    icon: Vote,
-    features: ['Blockchain Security', 'Transparent Results', 'Voter Verification', 'Audit Trail'],
-    pricing: '$199 - $1,999/month',
-    category: 'Governance',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Pet Care Assistant',
-    description: 'Smart pet monitoring and care recommendations using AI and IoT sensors.',
-    icon: Heart,
-    features: ['Health Monitoring', 'Care Recommendations', 'Behavior Analysis', 'Vet Integration'],
-    pricing: '$14 - $79/month',
-    category: 'Pet Care',
-    popular: true
-  },
-  {
-    title: 'Quantum Machine Learning Platform',
-    description: 'Quantum-enhanced machine learning for solving complex optimization and pattern recognition problems.',
-    icon: Cpu,
-    features: ['Quantum Algorithms', 'Optimization Problems', 'Pattern Recognition', 'Hybrid Computing'],
-    pricing: '$999 - $9,999/month',
-    category: 'Quantum AI',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Home Security System',
-    description: 'Intelligent home security with facial recognition, anomaly detection, and automated responses.',
-    icon: Shield,
-    features: ['Facial Recognition', 'Anomaly Detection', 'Automated Alerts', 'Mobile Integration'],
-    pricing: '$29 - $199/month',
-    category: 'Home Security',
-    popular: true
-  },
-  {
-    title: 'Decentralized File Storage',
-    description: 'Secure, decentralized file storage with encryption and redundancy across multiple nodes.',
-    icon: HardDrive,
-    features: ['Decentralized Storage', 'End-to-End Encryption', 'Redundancy', 'P2P Network'],
-    pricing: '$9 - $99/month',
-    category: 'Cloud Storage',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Personal Trainer',
-    description: 'Virtual personal trainer with AI-powered workout plans, form analysis, and progress tracking.',
-    icon: Dumbbell,
-    features: ['Workout Plans', 'Form Analysis', 'Progress Tracking', 'Nutrition Guidance'],
-    pricing: '$19 - $99/month',
-    category: 'Fitness',
+    title: 'AI-Powered Email Marketing Optimizer',
+    description: 'Intelligent email campaign optimization with send time prediction and content personalization.',
+    icon: Mail,
+    features: ['Send Time Optimization', 'Content Personalization', 'A/B Testing', 'Deliverability Monitoring'],
+    pricing: '$149 - $899/month',
+    category: 'Email Marketing',
     popular: true
   },
   {
     title: 'Smart Contract Development Platform',
-    description: 'No-code smart contract creation and deployment platform with testing and auditing tools.',
+    description: 'No-code smart contract creation with testing, deployment, and monitoring capabilities.',
     icon: Code,
-    features: ['No-Code Interface', 'Testing Tools', 'Audit Integration', 'Multi-Blockchain Support'],
-    pricing: '$99 - $999/month',
+    features: ['Visual Builder', 'Auto Testing', 'Gas Optimization', 'Deployment Tools'],
+    pricing: '$299 - $1,999/month',
     category: 'Blockchain Development',
     popular: true
   },
   {
-    title: 'AI-Powered Personal Assistant',
-    description: 'Advanced personal assistant with natural language processing and task automation.',
-    icon: Bot,
-    features: ['Natural Language', 'Task Automation', 'Calendar Management', 'Email Processing'],
+    title: 'AI-Powered Code Quality Monitor',
+    description: 'Continuous code quality monitoring with technical debt tracking and improvement suggestions.',
+    icon: Monitor,
+    features: ['Quality Metrics', 'Technical Debt Tracking', 'Refactoring Suggestions', 'Team Analytics'],
+    pricing: '$199 - $1,499/month',
+    category: 'Developer Tools',
+    popular: true
+  },
+  {
+    title: 'Intelligent Meeting Scheduler',
+    description: 'AI-powered meeting scheduling with timezone optimization and conflict resolution.',
+    icon: Calendar,
+    features: ['Smart Scheduling', 'Timezone Handling', 'Conflict Resolution', 'Calendar Integration'],
     pricing: '$29 - $199/month',
     category: 'Productivity',
     popular: true
   },
   {
-    title: 'Quantum Cryptography Key Exchange',
-    description: 'Ultra-secure key exchange using quantum cryptography for unbreakable encryption.',
-    icon: Key,
-    features: ['Quantum Key Distribution', 'Unbreakable Security', 'Real-time Exchange', 'Tamper Detection'],
-    pricing: '$199 - $1,999/month',
-    category: 'Quantum Security',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Investment Advisor',
-    description: 'Personalized investment advice and portfolio management using AI and machine learning.',
+    title: 'AI-Powered Customer Churn Predictor',
+    description: 'Predictive analytics to identify at-risk customers and prevent churn with automated interventions.',
     icon: TrendingUp,
-    features: ['Portfolio Analysis', 'Risk Assessment', 'Market Predictions', 'Automated Rebalancing'],
-    pricing: '$49 - $299/month',
-    category: 'Investment',
+    features: ['Churn Prediction', 'Risk Scoring', 'Automated Alerts', 'Retention Campaigns'],
+    pricing: '$399 - $2,499/month',
+    category: 'Customer Analytics',
     popular: true
   },
   {
-    title: 'Blockchain-Based Loyalty Program',
-    description: 'Decentralized loyalty and rewards program with tokenization and cross-platform integration.',
-    icon: Gift,
-    features: ['Token Rewards', 'Cross-Platform', 'Smart Contracts', 'Transparent Rules'],
-    pricing: '$99 - $999/month',
-    category: 'Loyalty Programs',
+    title: 'Smart Inventory Forecasting',
+    description: 'AI-driven inventory forecasting with demand prediction and automated reordering.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Auto Reordering', 'Seasonal Analysis', 'Supplier Integration'],
+    pricing: '$199 - $1,299/month',
+    category: 'Inventory Management',
     popular: true
   },
   {
-    title: 'AI-Powered Language Tutor',
-    description: 'Personalized language learning with AI conversation partners and cultural immersion.',
-    icon: Globe,
-    features: ['AI Conversation Partners', 'Cultural Immersion', 'Pronunciation Analysis', 'Progress Tracking'],
-    pricing: '$19 - $99/month',
-    category: 'Language Learning',
+    title: 'AI-Powered Content Moderation API',
+    description: 'Real-time content moderation for text, images, and videos with custom rule configuration.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'API Integration'],
+    pricing: '$0.01 - $0.05 per request',
+    category: 'Content Safety',
     popular: true
   },
   {
-    title: 'Quantum Random Number Generator API',
-    description: 'True quantum random number generation service for applications requiring cryptographic-grade randomness.',
-    icon: Cpu,
-    features: ['Quantum Entropy', 'High Throughput', 'API Access', 'Real-time Generation'],
-    pricing: '$0.001 - $0.01 per number',
-    category: 'Quantum Services',
+    title: 'Blockchain Payment Gateway',
+    description: 'Cryptocurrency payment processing with multi-chain support and instant settlements.',
+    icon: DollarSign,
+    features: ['Multi-chain Support', 'Instant Settlements', 'Fiat Conversion', 'Compliance Tools'],
+    pricing: '2.5% + $0.30 per transaction',
+    category: 'Payment Processing',
     popular: true
   },
   {
-    title: 'AI-Powered Home Automation',
-    description: 'Intelligent home automation with learning capabilities and predictive control.',
-    icon: Home,
-    features: ['Learning Algorithms', 'Predictive Control', 'Voice Integration', 'Energy Optimization'],
-    pricing: '$29 - $199/month',
-    category: 'Smart Home',
+    title: 'AI-Powered Lead Qualification',
+    description: 'Automated lead scoring and qualification with behavioral analysis and intent detection.',
+    icon: Target,
+    features: ['Lead Scoring', 'Intent Detection', 'Behavioral Analysis', 'CRM Integration'],
+    pricing: '$199 - $1,499/month',
+    category: 'Sales Automation',
     popular: true
   },
   {
-    title: 'Decentralized Social Network',
-    description: 'Privacy-focused social network with user-controlled data and decentralized content storage.',
-    icon: Users,
-    features: ['User-Controlled Data', 'Decentralized Storage', 'Privacy-First', 'Content Monetization'],
-    pricing: '$9 - $49/month',
-    category: 'Social Networking',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Code Review Assistant',
-    description: 'Automated code review with security scanning, performance optimization, and best practices enforcement.',
-    icon: Code,
-    features: ['Automated Reviews', 'Security Scanning', 'Performance Analysis', 'Best Practices Check'],
-    pricing: '$299 - $1,999/month',
-    category: 'Developer Tools',
-    popular: true
-  },
-  {
-    title: 'Smart Contract Security Auditor',
-    description: 'Automated smart contract security analysis and vulnerability detection for blockchain projects.',
-    icon: Lock,
+    title: 'Smart Contract Audit Platform',
+    description: 'Automated smart contract security auditing with vulnerability detection and compliance checking.',
+    icon: Shield,
     features: ['Vulnerability Detection', 'Gas Optimization', 'Compliance Checking', 'Audit Reports'],
     pricing: '$499 - $2,999/month',
     category: 'Blockchain Security',
     popular: true
   },
   {
-    title: 'AI-Powered SEO Content Optimizer',
-    description: 'Intelligent content optimization for search engines with real-time ranking improvements.',
-    icon: Search,
-    features: ['Keyword Research', 'Content Analysis', 'Ranking Tracking', 'Competitor Analysis'],
-    pricing: '$199 - $1,299/month',
-    category: 'SEO & Marketing',
-    popular: true
-  },
-  {
-    title: 'Multi-Channel Customer Data Platform',
-    description: 'Unified customer data platform with real-time synchronization across all touchpoints.',
-    icon: Database,
-    features: ['Data Unification', 'Real-time Sync', 'Customer 360 View', 'Privacy Compliance'],
-    pricing: '$399 - $2,499/month',
-    category: 'Customer Data',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Video Content Generator',
-    description: 'Automated video creation from text, images, and audio with professional editing capabilities.',
+    title: 'AI-Powered Video Transcription',
+    description: 'Advanced video transcription with speaker identification and automatic punctuation.',
     icon: Video,
-    features: ['Text-to-Video', 'Auto Editing', 'Voice Synthesis', 'Template Library'],
-    pricing: '$199 - $1,499/month',
-    category: 'Content Creation',
+    features: ['Speaker Identification', 'Auto Punctuation', 'Multi-language Support', 'Timestamp Sync'],
+    pricing: '$0.10 - $0.50 per minute',
+    category: 'Video Processing',
     popular: true
   },
   {
-    title: 'Intelligent Supply Chain Optimizer',
-    description: 'AI-driven supply chain optimization with demand forecasting and inventory management.',
-    icon: Package,
-    features: ['Demand Forecasting', 'Inventory Optimization', 'Supplier Analytics', 'Risk Assessment'],
-    pricing: '$599 - $3,999/month',
-    category: 'Supply Chain',
+    title: 'Intelligent Document Workflow',
+    description: 'Automated document processing with approval workflows and digital signatures.',
+    icon: FileText,
+    features: ['Workflow Automation', 'Digital Signatures', 'Approval Chains', 'Version Control'],
+    pricing: '$99 - $699/month',
+    category: 'Document Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Price Optimization',
+    description: 'Dynamic pricing optimization based on market conditions, demand, and competitor analysis.',
+    icon: DollarSign,
+    features: ['Dynamic Pricing', 'Competitor Analysis', 'Demand Forecasting', 'A/B Testing'],
+    pricing: '$299 - $1,999/month',
+    category: 'Pricing Strategy',
+    popular: true
+  },
+  {
+    title: 'Smart Energy Trading Platform',
+    description: 'AI-powered energy trading platform for renewable energy producers and consumers.',
+    icon: Zap,
+    features: ['Energy Trading', 'Price Prediction', 'Grid Integration', 'Settlement Automation'],
+    pricing: '$0.5% per transaction',
+    category: 'Energy Trading',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Fraud Detection API',
+    description: 'Real-time fraud detection for financial transactions with machine learning models.',
+    icon: Shield,
+    features: ['Real-time Detection', 'ML Models', 'Risk Scoring', 'API Integration'],
+    pricing: '$0.01 - $0.10 per transaction',
+    category: 'Fraud Prevention',
+    popular: true
+  },
+  {
+    title: 'Intelligent Customer Support Bot',
+    description: 'Advanced AI chatbot with context awareness and seamless human handoff capabilities.',
+    icon: Bot,
+    features: ['Context Awareness', 'Human Handoff', 'Multi-language Support', 'Integration APIs'],
+    pricing: '$199 - $1,299/month',
+    category: 'Customer Support',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Market Research Platform',
+    description: 'Automated market research with competitor analysis and trend identification.',
+    icon: Search,
+    features: ['Competitor Analysis', 'Trend Identification', 'Market Sizing', 'Report Generation'],
+    pricing: '$399 - $2,499/month',
+    category: 'Market Research',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Insurance Platform',
+    description: 'Decentralized insurance platform for smart contract risks and DeFi protocols.',
+    icon: Shield,
+    features: ['Risk Assessment', 'Automated Claims', 'Smart Contract Integration', 'Payout Automation'],
+    pricing: '5-15% of coverage amount',
+    category: 'DeFi Insurance',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Social Media Analytics',
+    description: 'Comprehensive social media analytics with sentiment analysis and competitor tracking.',
+    icon: MessageSquare,
+    features: ['Sentiment Analysis', 'Competitor Tracking', 'Influencer Identification', 'Trend Analysis'],
+    pricing: '$199 - $1,299/month',
+    category: 'Social Media Analytics',
     popular: true
   }
 ];

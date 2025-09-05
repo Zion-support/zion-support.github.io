@@ -35,8 +35,8 @@ import {
   Sprout,
   Eye,
   Bot,
-  FileText,
-  Rocket
+  DollarSign,
+  FileText
 } from 'lucide-react';
 
 const itServices = [
@@ -383,138 +383,129 @@ const itServices = [
     popular: true
   },
   {
-    title: 'AI-Powered IT Operations Management',
-    description: 'Intelligent IT operations with AI-driven automation and predictive analytics.',
-    icon: Brain,
-    features: ['Predictive Analytics', 'Automated Remediation', 'Performance Optimization', 'Anomaly Detection'],
-    pricing: '$10,000 - $50,000/setup',
-    category: 'AIOps',
+    title: 'Edge AI Computing Infrastructure',
+    description: 'Edge computing solutions with AI processing capabilities for real-time applications.',
+    icon: Cpu,
+    features: ['Edge AI Processing', 'Low Latency', 'Real-time Inference', 'Distributed Learning'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Edge AI',
     popular: true
   },
   {
-    title: 'Zero Trust Security Architecture',
-    description: 'Complete zero trust security implementation with identity and access management.',
+    title: 'Blockchain-as-a-Service (BaaS)',
+    description: 'Managed blockchain infrastructure with smart contract deployment and monitoring.',
+    icon: Server,
+    features: ['Blockchain Networks', 'Smart Contract Deployment', 'Node Management', 'Monitoring'],
+    pricing: '$2,000 - $15,000/month',
+    category: 'Blockchain Services',
+    popular: true
+  },
+  {
+    title: 'IoT Device Management Platform',
+    description: 'Comprehensive IoT device lifecycle management with security and monitoring.',
+    icon: Smartphone,
+    features: ['Device Provisioning', 'Firmware Management', 'Security Monitoring', 'Analytics'],
+    pricing: '$5,000 - $30,000/setup',
+    category: 'IoT Management',
+    popular: true
+  },
+  {
+    title: 'Multi-Cloud Cost Optimization',
+    description: 'Intelligent cost optimization across multiple cloud providers with automated rightsizing.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Auto Rightsizing', 'Reserved Instances', 'Spot Instance Management'],
+    pricing: '$3,000 - $20,000/month',
+    category: 'Cloud Optimization',
+    popular: true
+  },
+  {
+    title: 'AI-Powered IT Service Desk',
+    description: 'Intelligent IT service desk with AI-powered ticket routing and resolution.',
+    icon: Bot,
+    features: ['AI Ticket Routing', 'Automated Resolution', 'Knowledge Base', 'Predictive Analytics'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'AI Service Desk',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Integration',
+    description: 'Integration services for quantum computing applications and hybrid quantum-classical systems.',
+    icon: Cpu,
+    features: ['Quantum Algorithm Development', 'Hybrid Systems', 'Quantum Simulation', 'Performance Optimization'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: '5G Private Network Solutions',
+    description: 'Private 5G network deployment for enterprise applications and IoT connectivity.',
+    icon: Wifi,
+    features: ['Private 5G Core', 'Network Slicing', 'Edge Integration', 'Security Management'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: '5G Private Networks',
+    popular: true
+  },
+  {
+    title: 'Hyperconverged Infrastructure (HCI)',
+    description: 'Software-defined infrastructure combining compute, storage, and networking.',
+    icon: Server,
+    features: ['Unified Management', 'Auto-scaling', 'Disaster Recovery', 'Cost Optimization'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'HCI',
+    popular: true
+  },
+  {
+    title: 'AI Model Governance Platform',
+    description: 'Comprehensive AI model lifecycle management with governance and compliance.',
+    icon: Brain,
+    features: ['Model Registry', 'Version Control', 'Compliance Monitoring', 'Performance Tracking'],
+    pricing: '$15,000 - $100,000/setup',
+    category: 'AI Governance',
+    popular: true
+  },
+  {
+    title: 'Zero-Trust Network Access (ZTNA)',
+    description: 'Secure remote access solution based on zero-trust principles.',
     icon: Lock,
-    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
-    pricing: '$25,000 - $100,000/project',
+    features: ['Identity Verification', 'Device Trust', 'Application Access', 'Continuous Monitoring'],
+    pricing: '$20,000 - $120,000/setup',
     category: 'Zero Trust',
     popular: true
   },
   {
-    title: 'Edge Computing Infrastructure',
-    description: 'Edge computing solutions for low-latency applications and IoT deployments.',
-    icon: Network,
-    features: ['Edge Nodes', 'Data Processing', 'IoT Integration', 'Latency Optimization'],
-    pricing: '$15,000 - $75,000/setup',
-    category: 'Edge Computing',
+    title: 'Data Fabric Architecture',
+    description: 'Unified data management platform with intelligent data integration and governance.',
+    icon: Database,
+    features: ['Data Integration', 'Metadata Management', 'Data Lineage', 'Self-service Analytics'],
+    pricing: '$40,000 - $300,000/project',
+    category: 'Data Fabric',
     popular: true
   },
   {
-    title: 'Quantum-Safe Cryptography Implementation',
-    description: 'Post-quantum cryptography solutions for future-proof security.',
+    title: 'Cloud-Native Security Platform',
+    description: 'Comprehensive security solution for cloud-native applications and containers.',
     icon: Shield,
-    features: ['Quantum Algorithms', 'Key Management', 'Migration Planning', 'Compliance'],
-    pricing: '$20,000 - $100,000/project',
-    category: 'Quantum Security',
+    features: ['Container Security', 'Runtime Protection', 'Vulnerability Scanning', 'Compliance Monitoring'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'Cloud Security',
     popular: true
   },
   {
-    title: '5G Network Infrastructure',
-    description: '5G network design, implementation, and optimization for enterprise environments.',
-    icon: Wifi,
-    features: ['5G Core Design', 'Network Slicing', 'Performance Optimization', 'Security Hardening'],
-    pricing: '$50,000 - $300,000/project',
-    category: '5G Networks',
-    popular: true
-  },
-  {
-    title: 'IoT Security & Management Platform',
-    description: 'Comprehensive IoT security and device management solution.',
-    icon: Settings,
-    features: ['Device Authentication', 'Secure Communication', 'Firmware Updates', 'Threat Detection'],
-    pricing: '$10,000 - $60,000/setup',
-    category: 'IoT Security',
-    popular: true
-  },
-  {
-    title: 'Blockchain Infrastructure Services',
-    description: 'Blockchain network setup, smart contract development, and DApp deployment.',
-    icon: Shield,
-    features: ['Blockchain Setup', 'Smart Contracts', 'DApp Development', 'Node Management'],
-    pricing: '$15,000 - $100,000/project',
-    category: 'Blockchain',
-    popular: true
-  },
-  {
-    title: 'Green IT & Sustainability Solutions',
-    description: 'Sustainable IT practices and energy-efficient infrastructure solutions.',
-    icon: Sprout,
-    features: ['Energy Optimization', 'Carbon Footprint Reduction', 'Sustainable Hardware', 'Green Data Centers'],
-    pricing: '$5,000 - $40,000/project',
-    category: 'Green IT',
-    popular: true
-  },
-  {
-    title: 'IT Compliance & Regulatory Services',
-    description: 'Compliance management for GDPR, HIPAA, SOX, and other regulatory requirements.',
+    title: 'Intelligent Document Processing Platform',
+    description: 'AI-powered document processing and workflow automation platform.',
     icon: FileText,
-    features: ['Compliance Assessment', 'Policy Development', 'Audit Support', 'Documentation'],
-    pricing: '$8,000 - $50,000/project',
-    category: 'Compliance',
-    popular: true
-  },
-  {
-    title: 'Hybrid Cloud Management Platform',
-    description: 'Unified management platform for hybrid and multi-cloud environments.',
-    icon: Cloud,
-    features: ['Multi-cloud Management', 'Cost Optimization', 'Security Orchestration', 'Workload Migration'],
-    pricing: '$20,000 - $100,000/setup',
-    category: 'Hybrid Cloud',
-    popular: true
-  },
-  {
-    title: 'IT Service Management (ITSM)',
-    description: 'Complete IT service management implementation with ITSM best practices.',
-    icon: Settings,
-    features: ['Service Catalog', 'Incident Management', 'Change Management', 'Service Level Management'],
+    features: ['OCR Processing', 'Data Extraction', 'Workflow Automation', 'Integration APIs'],
     pricing: '$10,000 - $60,000/setup',
-    category: 'ITSM',
+    category: 'Document Processing',
     popular: true
   },
   {
-    title: 'Digital Transformation Consulting',
-    description: 'Strategic digital transformation planning and implementation services.',
-    icon: Rocket,
-    features: ['Digital Strategy', 'Process Automation', 'Technology Modernization', 'Change Management'],
-    pricing: '$25,000 - $200,000/project',
-    category: 'Digital Transformation',
-    popular: true
-  },
-  {
-    title: 'IT Risk Management & Assessment',
-    description: 'Comprehensive IT risk assessment and management framework implementation.',
-    icon: Shield,
-    features: ['Risk Assessment', 'Vulnerability Management', 'Business Continuity', 'Disaster Recovery'],
-    pricing: '$15,000 - $80,000/project',
-    category: 'Risk Management',
-    popular: true
-  },
-  {
-    title: 'Advanced Analytics & Business Intelligence',
-    description: 'Enterprise analytics platform with AI-powered insights and reporting.',
-    icon: BarChart3,
-    features: ['Data Visualization', 'Predictive Analytics', 'Real-time Dashboards', 'Machine Learning'],
+    title: 'Real-Time Data Streaming Platform',
+    description: 'High-performance data streaming platform for real-time analytics and processing.',
+    icon: Network,
+    features: ['Stream Processing', 'Real-time Analytics', 'Event Sourcing', 'Scalable Architecture'],
     pricing: '$20,000 - $120,000/setup',
-    category: 'Analytics',
-    popular: true
-  },
-  {
-    title: 'IT Infrastructure Automation',
-    description: 'Complete infrastructure automation with Infrastructure as Code (IaC) implementation.',
-    icon: Settings,
-    features: ['Infrastructure as Code', 'Automated Provisioning', 'Configuration Management', 'Orchestration'],
-    pricing: '$15,000 - $80,000/setup',
-    category: 'Automation',
+    category: 'Data Streaming',
     popular: true
   }
 ];
