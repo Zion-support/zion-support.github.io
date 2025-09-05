@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import { useParams,Link,useNavigate } from \'react - router - dom\''\';\' import { Header } from \'@/components / header / Header\''\';\' import { Footer } from \'@/components / Footer\''\';\' import { GradientHeading } from \'@/components / GradientHeading\''\';\' import { ProductListingCard } from \'@/components / ProductListingCard\''\';\' import { useState,useEffect,useRef,Suspense,useCallback } from \'react\'';\";\";
@@ -6,3 +7,5 @@ import { useParams,Link,useNavigate } from 'react - router - dom''';' import { H
 =======
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

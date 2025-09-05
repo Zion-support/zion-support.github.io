@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 const { useState,useEffect,useCallback } from "react"; interface UseApiOptions<T = unknown> { immediate?: boolean; onSuccess?: (data: T) => void; onError?: (error: Error) => void} export const useApi = <T = unknown>( apiFunction: (.args: unknown[]) => Promise<T>,options: UseApiOptions<T> = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<Error | null>(null); const execute = useCallback(async (.args: unknown[]) => { try { setLoading(true); setError(null); const result = await apiFunction(.args); setData(result); options.onSuccess?.(result); return result} catch (err) { const error = err instanceof Error ? err : new Error(String(err)); setError(error); options.onError?.(error); throw error} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;''"
 import React from 'react';
+<<<<<<< HEAD
 
 interface UseApiProps {
   // Add props here as needed
@@ -14,6 +15,11 @@ interface UseApiProps {
   // Add props here as needed
 }
 >>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
+=======
+interface UseApiProps {
+  // Add props here as needed
+}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 interface UseApiOptions {
   immediate?: boolean;
   onSuccess?: (data: any) => void;
@@ -64,6 +70,7 @@ export default function UseApi({ }: UseApiProps) {
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
@@ -71,3 +78,6 @@ export default function UseApi({ }: UseApiProps) {
 =======
 }
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

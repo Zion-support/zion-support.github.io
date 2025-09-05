@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 import Stripe from 'stripe';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
@@ -48,6 +51,10 @@ async function handler(req, res) {
   }
 }
 
+<<<<<<< HEAD
 export default handler;
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+export default withErrorLogging(handler);
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedAnalytics from '../components/EnhancedAnalytics" describe('EnhancedAnalytics',() => {' test('renders without crashing',() => {' render(<EnhancedAnalytics / / />) expect(screen.getByTestId("enhancedanalytics")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedAnalytics / / />) }) test('handles user interactions',() => {' render(<EnhancedAnalytics / / />) }) test('applies correct styling',() => {' render(<EnhancedAnalytics / / />) }) })
 =======
 <<<<<<< HEAD
@@ -8,3 +9,16 @@ import _React from 'react"  import '@testing-library/jest-dom import EnhancedAna
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedAnalytics from '../components/EnhancedAnalytics" describe('EnhancedAnalytics',() => {' test('renders without crashing',() => {' render(<EnhancedAnalytics / / />) expect(screen.getByTestId("enhancedanalytics")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedAnalytics / / />) }) test('handles user interactions',() => {' render(<EnhancedAnalytics / / />) }) test('applies correct styling',() => {' render(<EnhancedAnalytics / / />) }) })
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import EnhancedAnalytics from '../components/EnhancedAnalytics';
+
+describe('EnhancedAnalytics', () => {
+  test('renders without crashing', () => {
+    render(<EnhancedAnalytics />);
+    expect(screen.getByTestId('enhancedanalytics')).toBeInTheDocument();
+  });
+});
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
 import { 
@@ -23,6 +24,9 @@ import {
   GraduationCap,
   DollarSign
 } from 'lucide-react';
+=======
+import { Server, Shield, Cloud, Database, Network, Monitor, Settings, CheckCircle, ArrowRight, Clock, Award, Star, Zap, TrendingUp, Users, Lock, Globe, Cpu, HardDrive, Wifi, Smartphone, Laptop, Building, BarChart3, Code, Search, ShoppingCart, BookOpen, Brain, DollarSign, Rocket, Phone, Mail } from 'lucide-react';
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 import Layout from '../components/Layout';
 
 const services = [
@@ -743,6 +747,174 @@ export default function ITServicesPage() {
     popular: false
   },
   {
+    title: 'AI-Powered Network Security Operations Center (SOC)',
+    description: 'Advanced 24/7 security monitoring with AI-driven threat detection and automated response.',
+    icon: Shield,
+    features: ['AI Threat Detection', 'Automated Response', '24/7 Monitoring', 'Incident Management'],
+    pricing: '$8,999 - $24,999/month',
+    category: 'Security Operations',
+    benefits: ['Proactive Threat Detection', 'Reduced Response Time', 'Enhanced Security Posture', 'Cost Optimization'],
+    marketPrice: '$12,000 - $35,000/month',
+    link: 'https://ziontechgroup.com/ai-soc',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Infrastructure Setup',
+    description: 'Complete quantum computing infrastructure deployment and optimization for advanced computing needs.',
+    icon: Cpu,
+    features: ['Quantum Hardware Setup', 'Quantum Software Stack', 'Hybrid Computing', 'Quantum Algorithms'],
+    pricing: '$19,999 - $99,999/month',
+    category: 'Quantum Computing',
+    benefits: ['Exponential Computing Power', 'Advanced Problem Solving', 'Competitive Advantage', 'Future-Ready Infrastructure'],
+    marketPrice: '$25,000 - $150,000/month',
+    link: 'https://ziontechgroup.com/quantum-infrastructure',
+    popular: true
+  },
+  {
+    title: 'Edge AI Computing Platform',
+    description: 'Distributed AI computing infrastructure for real-time processing and low-latency applications.',
+    icon: Brain,
+    features: ['Edge AI Deployment', 'Real-time Processing', 'Low Latency', 'Distributed Computing'],
+    pricing: '$4,999 - $19,999/month',
+    category: 'Edge AI',
+    benefits: ['Ultra-Low Latency', 'Real-time AI Processing', 'Reduced Bandwidth Costs', 'Enhanced Privacy'],
+    marketPrice: '$7,000 - $30,000/month',
+    link: 'https://ziontechgroup.com/edge-ai',
+    popular: true
+  },
+  {
+    title: 'Autonomous IT Operations (AIOps)',
+    description: 'Fully automated IT operations with self-healing systems and predictive maintenance.',
+    icon: Settings,
+    features: ['Self-Healing Systems', 'Predictive Maintenance', 'Automated Remediation', 'Intelligent Monitoring'],
+    pricing: '$6,999 - $22,999/month',
+    category: 'AIOps',
+    benefits: ['99.9% Uptime', 'Reduced Manual Intervention', 'Predictive Problem Solving', 'Cost Optimization'],
+    marketPrice: '$10,000 - $35,000/month',
+    link: 'https://ziontechgroup.com/aiops',
+    popular: true
+  },
+  {
+    title: 'Digital Twin Technology Platform',
+    description: 'Create digital replicas of physical systems for simulation, monitoring, and optimization.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Simulation', 'Predictive Analytics', 'IoT Integration'],
+    pricing: '$7,999 - $29,999/month',
+    category: 'Digital Twin',
+    benefits: ['Improved Decision Making', 'Predictive Maintenance', 'Cost Optimization', 'Risk Reduction'],
+    marketPrice: '$12,000 - $45,000/month',
+    link: 'https://ziontechgroup.com/digital-twin',
+    popular: false
+  },
+  {
+    title: 'Neuromorphic Computing Infrastructure',
+    description: 'Brain-inspired computing systems for ultra-efficient AI processing and pattern recognition.',
+    icon: Brain,
+    features: ['Neuromorphic Chips', 'Spiking Neural Networks', 'Ultra-Low Power', 'Pattern Recognition'],
+    pricing: '$12,999 - $49,999/month',
+    category: 'Neuromorphic Computing',
+    benefits: ['Ultra-Efficient Processing', 'Advanced Pattern Recognition', 'Low Power Consumption', 'Real-time Learning'],
+    marketPrice: '$18,000 - $75,000/month',
+    link: 'https://ziontechgroup.com/neuromorphic',
+    popular: false
+  },
+  {
+    title: '6G Network Infrastructure & Testing',
+    description: 'Next-generation 6G network deployment and optimization for ultra-high-speed connectivity.',
+    icon: Wifi,
+    features: ['6G Network Design', 'Ultra-High Speed', 'Low Latency', 'Massive IoT Support'],
+    pricing: '$24,999 - $99,999/month',
+    category: '6G Networks',
+    benefits: ['Ultra-Fast Connectivity', 'Revolutionary Speeds', 'Future-Ready Infrastructure', 'Advanced Applications'],
+    marketPrice: '$35,000 - $150,000/month',
+    link: 'https://ziontechgroup.com/6g-networks',
+    popular: true
+  },
+  {
+    title: 'Holographic Computing Platform',
+    description: 'Advanced holographic display and computing systems for immersive experiences.',
+    icon: Monitor,
+    features: ['Holographic Displays', '3D Computing', 'Immersive Interfaces', 'Spatial Computing'],
+    pricing: '$15,999 - $59,999/month',
+    category: 'Holographic Computing',
+    benefits: ['Immersive Experiences', 'Advanced Visualization', 'Spatial Computing', 'Next-Gen Interfaces'],
+    marketPrice: '$22,000 - $90,000/month',
+    link: 'https://ziontechgroup.com/holographic',
+    popular: false
+  },
+  {
+    title: 'Biometric Security & Authentication',
+    description: 'Advanced biometric authentication systems with multi-modal recognition capabilities.',
+    icon: Shield,
+    features: ['Multi-Modal Biometrics', 'Behavioral Analysis', 'Anti-Spoofing', 'Privacy Protection'],
+    pricing: '$3,999 - $14,999/month',
+    category: 'Biometric Security',
+    benefits: ['Enhanced Security', 'User Convenience', 'Fraud Prevention', 'Privacy Compliance'],
+    marketPrice: '$6,000 - $22,000/month',
+    link: 'https://ziontechgroup.com/biometric-security',
+    popular: true
+  },
+  {
+    title: 'Space-Based Computing Infrastructure',
+    description: 'Satellite-based computing and data processing for global coverage and edge computing.',
+    icon: Globe,
+    features: ['Satellite Computing', 'Global Coverage', 'Edge Processing', 'Low Earth Orbit'],
+    pricing: '$29,999 - $149,999/month',
+    category: 'Space Computing',
+    benefits: ['Global Coverage', 'Low Latency', 'Disaster Resilience', 'Edge Computing'],
+    marketPrice: '$45,000 - $200,000/month',
+    link: 'https://ziontechgroup.com/space-computing',
+    popular: false
+  },
+  {
+    title: 'Molecular Computing Platform',
+    description: 'Revolutionary molecular-level computing for ultra-dense data processing and storage.',
+    icon: Cpu,
+    features: ['Molecular Processors', 'DNA Storage', 'Ultra-Dense Computing', 'Quantum Integration'],
+    pricing: '$39,999 - $199,999/month',
+    category: 'Molecular Computing',
+    benefits: ['Ultra-Dense Processing', 'Revolutionary Storage', 'Energy Efficiency', 'Future Technology'],
+    marketPrice: '$60,000 - $300,000/month',
+    link: 'https://ziontechgroup.com/molecular-computing',
+    popular: false
+  },
+  {
+    title: 'Swarm Intelligence Systems',
+    description: 'Distributed AI systems using swarm intelligence for complex problem solving and optimization.',
+    icon: Network,
+    features: ['Swarm Algorithms', 'Distributed AI', 'Collective Intelligence', 'Self-Organization'],
+    pricing: '$5,999 - $22,999/month',
+    category: 'Swarm Intelligence',
+    benefits: ['Collective Problem Solving', 'Scalable Intelligence', 'Fault Tolerance', 'Emergent Behavior'],
+    marketPrice: '$9,000 - $35,000/month',
+    link: 'https://ziontechgroup.com/swarm-intelligence',
+    popular: false
+  },
+  {
+    title: 'Optical Computing Infrastructure',
+    description: 'Light-based computing systems for ultra-fast processing and data transmission.',
+    icon: Zap,
+    features: ['Optical Processors', 'Light-Based Computing', 'Ultra-Fast Processing', 'Low Heat Generation'],
+    pricing: '$8,999 - $34,999/month',
+    category: 'Optical Computing',
+    benefits: ['Ultra-Fast Processing', 'Low Power Consumption', 'High Bandwidth', 'Future Technology'],
+    marketPrice: '$13,000 - $50,000/month',
+    link: 'https://ziontechgroup.com/optical-computing',
+    popular: false
+  },
+  {
+    title: 'Federated Learning Platform',
+    description: 'Distributed machine learning platform that preserves data privacy while enabling collaborative AI.',
+    icon: Brain,
+    features: ['Privacy-Preserving ML', 'Distributed Training', 'Federated Analytics', 'Secure Aggregation'],
+    pricing: '$4,999 - $19,999/month',
+    category: 'Federated Learning',
+    benefits: ['Data Privacy', 'Collaborative AI', 'Regulatory Compliance', 'Distributed Intelligence'],
+    marketPrice: '$7,500 - $30,000/month',
+    link: 'https://ziontechgroup.com/federated-learning',
+    popular: true
+  },
+  {
     title: 'Advanced Network Security Implementation',
     description: 'Comprehensive network security solutions with advanced threat protection and monitoring.',
     icon: Network,
@@ -1125,6 +1297,7 @@ const additionalServices = [
     popular: true
   }
 ];
+<<<<<<< HEAD
       pricing: '$120 – $220/hour',
       projectPricing: '$6,000 – $30,000/project',
       timeline: '2–8 weeks',
@@ -2403,6 +2576,8 @@ const additionalServices = [
       category: 'High-Performance Computing'
     }
   ];
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 
 const categories = [
   'All',
@@ -2410,14 +2585,6 @@ const categories = [
   'Quantum Security',
   'Edge Computing',
   '5G Networks',
-  'Blockchain Infrastructure',
-  'IoT Platforms',
-  'AI Infrastructure',
-  'Green IT',
-  'Zero Trust Security',
-  'Cloud Management',
-  'Analytics Platform',
-  'Disaster Recovery',
   'Network Security',
   'IT Compliance',
   'Digital Transformation',
@@ -2444,11 +2611,12 @@ export default function ITServicesPage() {
   return (
     <Layout
       title="IT Services - Zion Tech Group"
-      description="Comprehensive IT services and solutions for modern businesses. From AI operations to cybersecurity, we provide cutting-edge technology solutions."
-      keywords="IT services, technology solutions, AI operations, cybersecurity, cloud computing, digital transformation"
+      description="Comprehensive IT services including AI operations, cybersecurity, cloud solutions, and infrastructure management."
+      keywords="IT services, AI operations, cybersecurity, cloud solutions, infrastructure management"
     >
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-16 md:py-20 overflow-hidden">
           <div className="absolute inset-0">
@@ -2465,10 +2633,14 @@ export default function ITServicesPage() {
           </div>
           
           <div className="container mx-auto px-4 relative z-10">
+=======
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
               className="text-center"
             >
 <<<<<<< HEAD
@@ -2489,11 +2661,13 @@ export default function ITServicesPage() {
               </div>
 =======
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                IT Services & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+                IT{' '}
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Services
+                </span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Comprehensive IT services and solutions designed to transform your business operations, 
-                enhance security, and drive innovation across all technology domains.
+              <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
+                Comprehensive IT services to modernize your infrastructure, enhance security, and drive digital transformation.
               </p>
 <<<<<<< HEAD
 =======
@@ -2502,6 +2676,7 @@ export default function ITServicesPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Contact Info Bar */}
         <section className="bg-blue-900 text-white py-3 md:py-4">
@@ -2965,86 +3140,42 @@ export default function ITServicesPage() {
                   Explore AI Services
                 </Link>
 =======
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
         {/* Services Grid */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service, index) => (
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {itServices.map((service, index) => (
                 <motion.div
                   key={index}
+                  className="bg-white p-8 rounded-xl shadow-lg border border-gray-200"
                   initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
-                  <div className="p-6">
-                    <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                        <service.icon className="w-6 h-6 text-blue-600" />
-                      </div>
-                      <div>
-                        <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                          {service.category}
-                        </span>
-                        {service.popular && (
-                          <span className="ml-2 px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">
-                            Popular
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                    
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                      {service.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-4 leading-relaxed">
-                      {service.description}
-                    </p>
-                    
-                    <div className="space-y-2 mb-4">
-                      <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>
-                      <ul className="space-y-1">
-                        {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-600">
-                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div className="space-y-2 mb-4">
-                      <h4 className="font-semibold text-gray-900 text-sm">Benefits:</h4>
-                      <ul className="space-y-1">
-                        {service.benefits.map((benefit, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-600">
-                            <Star className="w-3 h-3 text-yellow-500 mr-2 flex-shrink-0" />
-                            {benefit}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div className="space-y-2 mb-6">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-gray-900">Our Pricing:</span>
-                        <span className="text-sm font-bold text-blue-600">{service.pricing}</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-gray-900">Market Price:</span>
-                        <span className="text-sm text-gray-500 line-through">{service.marketPrice}</span>
-                      </div>
-                    </div>
-                    
-                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group">
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </button>
+                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <service.icon className="w-8 h-8 text-blue-600" />
                   </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 mb-6 text-center">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </motion.div>
               ))}
             </div>
+<<<<<<< HEAD
 
             {filteredServices.length === 0 && (
               <div className="text-center py-12">
@@ -3151,6 +3282,8 @@ export default function ITServicesPage() {
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
               </div>
             </motion.div>
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
           </div>
         </section>
 <<<<<<< HEAD
@@ -3161,33 +3294,38 @@ export default function ITServicesPage() {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
+          <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
               initial={{ opacity: 0, y: 30 }}
+=======
+              initial={{ opacity: 0, y: 20 }}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Transform Your IT Infrastructure?
               </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Let's discuss how our comprehensive IT services can help you achieve your technology goals and drive business growth.
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Get started with our IT services and modernize your infrastructure today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
+                <a
                   href="/contact"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center"
+                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
                 >
-                  <ArrowRight className="w-5 h-5 mr-2" />
-                  Get Started Today
-                </Link>
-                <Link
-                  href="/case-studies"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                  Get Started
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </a>
+                <a
+                  href="/ai-services"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 >
-                  View Case Studies
-                </Link>
+                  View AI Services
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </a>
               </div>
             </motion.div>
           </div>

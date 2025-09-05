@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
@@ -6,6 +7,8 @@ module.exports = default function NotFound(){return (<main style={{ padding: ""4
 =======
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 import React from 'react';
 
 interface 404.routeProps {
@@ -20,6 +23,7 @@ export default function 404.route({ }: 404.routeProps) {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
@@ -28,3 +32,6 @@ export default function 404.route({ }: 404.routeProps) {
 }
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

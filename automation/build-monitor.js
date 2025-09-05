@@ -10,6 +10,7 @@ const execAsync = promisify(exec);
 class BuildMonitor {
   constructor() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
@@ -152,6 +153,8 @@ class BuildMonitor {
 =======
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
     this.isRunning = false;
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
     this.logLevel = process.env.LOG_LEVEL || 'info';
@@ -172,6 +175,7 @@ class BuildMonitor {
       console.log(logMessage);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -232,6 +236,9 @@ class BuildMonitor {
 
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   async checkBuildStatus() {
     try {
       this.log('info', 'Checking build status...');
@@ -254,6 +261,7 @@ class BuildMonitor {
         await this.triggerBuild();
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
       
 =======
 <<<<<<< HEAD
@@ -267,6 +275,9 @@ class BuildMonitor {
       
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+      
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
       return true;
     } catch (error) {
       this.log('error', `Build check failed: ${error.message}`);
@@ -517,6 +528,7 @@ const monitor = new BuildMonitor();
 
 if (require.main === module) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   const monitor = new BuildMonitor();
@@ -524,6 +536,8 @@ if (require.main === module) {
 =======
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   const command = process.argv[2];
   
   switch (command) {

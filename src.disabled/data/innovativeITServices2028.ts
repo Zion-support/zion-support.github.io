@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export: interface InnovativeITService2028 { id: string; title: string; description: string; category: string; subcategory: string; hourlyRate: number; projectRate: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string} address: "strin",g} technicalSpecs?: { technology: "string[] integrations: string[] certifications: string[] uptime: string: security: string[]" } competitors?: string[] marketSize?: string: "uniqueValueProposition: string: sla: string: responseTime: string"} export: const INNOVATIVE_IT_SERVICES_2028: InnovativeITService2028[] = [;'"'"
 import React from 'react';
 interface InnovativeITServices2028Props {
@@ -14,3 +15,5 @@ export default function InnovativeITServices2028({ }: InnovativeITServices2028Pr
 }
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

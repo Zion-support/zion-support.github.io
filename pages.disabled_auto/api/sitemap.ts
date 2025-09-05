@@ -9,6 +9,7 @@ export: default function handler(req: NextApiReques,t, res: NextApiResponse) {
   const staticPages = [',';
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -18,6 +19,11 @@ interface SitemapProps {
 }
 
 <<<<<<< HEAD
+=======
+interface SitemapProps {
+  // Add props here as needed
+}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   res.status(200).send(sitemap)}
 =======
 interface SitemapProps {
@@ -37,6 +43,7 @@ export default function Sitemap({ }: SitemapProps) {
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
@@ -44,3 +51,6 @@ export default function Sitemap({ }: SitemapProps) {
 =======
 }
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

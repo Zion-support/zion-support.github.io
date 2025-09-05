@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -142,6 +143,24 @@ const features = [
   },
   {
 =======
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award } from 'lucide-react';
+import Layout from '../components/Layout';
+
+const stats = [
+  { number: '99.9%', label: 'Uptime Guarantee' },
+  { number: '24/7', label: 'Support Available' },
+  { number: '500+', label: 'Projects Completed' },
+  { number: '50+', label: 'Countries Served' }
+];
+
+const services = [
+  {
+    title: 'AI Services',
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
     description: '20+ cutting-edge AI solutions including machine learning, computer vision, NLP, and quantum AI',
     icon: Brain,
     link: '/ai-services',
@@ -203,7 +222,10 @@ const features = [
     icon: Zap
   },
   {
+<<<<<<< HEAD
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
     title: 'Secure & Reliable',
     description: 'Enterprise-grade security and 99.9% uptime guarantee',
     icon: Shield
@@ -223,6 +245,7 @@ const features = [
 
 export default function HomePage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <MainLayout
       title="Zion Tech Group - Leading Technology Solutions Provider"
@@ -253,6 +276,8 @@ export default function HomePage() {
                 Our Services
               </Link>
 =======
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
     <Layout
       title="Zion Tech Group - Leading Technology Solutions"
       description="Transform your business with our comprehensive AI services, IT solutions, and micro SAAS platforms. Expert technology solutions for modern businesses."
@@ -260,6 +285,7 @@ export default function HomePage() {
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-16 md:py-24 overflow-hidden">
           <div className="absolute inset-0">
@@ -273,6 +299,13 @@ export default function HomePage() {
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
           </div>
           
           <div className="container mx-auto px-4 relative z-10">
@@ -283,23 +316,28 @@ export default function HomePage() {
               className="text-center"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
+=======
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
                 Transform Your Business with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">AI & Technology</span>
               </h1>
-              <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 md:mb-8 max-w-4xl mx-auto px-4">
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Leading provider of innovative AI services, IT solutions, and micro SAAS platforms. 
-                Empowering businesses to thrive in the digital age with cutting-edge technology.
+                Empowering businesses to thrive in the digital age.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="px-6 md:px-8 py-3 md:py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center text-sm md:text-base"
+                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center"
                 >
                   Get Started
-                  <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2" />
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   href="/services"
+<<<<<<< HEAD
                   className="px-6 md:px-8 py-3 md:py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-sm md:text-base"
 =======
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -321,6 +359,9 @@ export default function HomePage() {
                   href="/services"
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
                 >
                   View Services
                 </Link>
@@ -331,6 +372,7 @@ export default function HomePage() {
 
         {/* Stats Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className="py-12 md:py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
@@ -339,6 +381,11 @@ export default function HomePage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
@@ -346,15 +393,19 @@ export default function HomePage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className="text-center p-4"
 =======
                   className="text-center"
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+                  className="text-center"
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
                 >
-                  <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600 mb-2">
+                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-sm md:text-base text-gray-600 font-medium">
+                  <div className="text-gray-600 font-medium">
                     {stat.label}
                   </div>
                 </motion.div>
@@ -365,21 +416,30 @@ export default function HomePage() {
 
         {/* Services Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className="py-16 md:py-20 bg-gray-50">
 =======
         <section className="py-20 bg-gray-50">
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+        <section className="py-20 bg-gray-50">
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="text-center mb-12 md:mb-16"
+=======
+              className="text-center mb-16"
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
             >
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Services
               </h2>
+<<<<<<< HEAD
               <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
 =======
               className="text-center mb-16"
@@ -389,23 +449,36 @@ export default function HomePage() {
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
                 Comprehensive technology solutions designed to accelerate your business growth and innovation.
               </p>
             </motion.div>
 
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+=======
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
               {services.map((service, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 md:p-8 group"
+=======
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 group"
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
                 >
-                  <div className={`w-14 h-14 md:w-16 md:h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <service.icon className="w-7 h-7 md:w-8 md:h-8 text-white" />
+                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <service.icon className="w-8 h-8 text-white" />
                   </div>
+<<<<<<< HEAD
                   <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 md:mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-4 md:mb-6 text-sm md:text-base">{service.description}</p>
                   <Link
@@ -418,6 +491,8 @@ export default function HomePage() {
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
                     <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
@@ -439,11 +514,15 @@ export default function HomePage() {
                   <Link
                     href={service.link}
                     className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold group-hover:translate-x-2 transition-transform duration-300"
+<<<<<<< HEAD
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
+<<<<<<< HEAD
                 </motion.div>
               ))}
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
@@ -658,6 +737,52 @@ export default function HomePage() {
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-3">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+<<<<<<< HEAD
+        {/* Contact Information Section */}
+        <section className="py-20 bg-gray-100">
+=======
+        {/* Features Section */}
+        <section className="py-20 bg-white">
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+<<<<<<< HEAD
+=======
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Why Choose Zion Tech Group?
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We deliver exceptional results through innovation, expertise, and unwavering commitment to your success.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -672,6 +797,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Get In Touch With Our Experts
@@ -762,6 +888,9 @@ export default function HomePage() {
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   );
 }

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import Head from \"next/head\"; import React,{ useEffect } from \"react\"; interface PerformanceOptimizerProps { preloadImages?: string[]; preloadFonts?: string[]; preloadScripts?: string[]} } const \"PerformanceOptimizer\": React.FC<PerformanceOptimizerProps> = ({ preloadImages = [],preloadFonts = [],preloadScripts = [] }) => { useEffect(() => { preloadImages.forEach(src => { const link = document.createElement(\"link\"); link.rel = \"preload\"; link.as = \"image\"; link.href = src; document.head.appendChild(link)}); preloadFonts.forEach(href => { const link = document.createElement(\"link\"); link.rel = \"preload\"; link.as = \"style\"; link.href = href; document.head.appendChild(link)}); preloadScripts.forEach(src => { const link = document.createElement(\"link\"); link.rel = \"preload\"; link.as = \"script\"; link.href = src; document.head.appendChild(link)})},[preloadImages,preloadFonts,preloadScripts]); return ( <Head> {} <link rel=\"dns-prefetch\" href=\" <link rel=\"dns-prefetch\" href=\" <link rel=\"preconnect\" href=\""https\": <link rel=\"preconnect\" href=\"https: </Head> )}; export default PerformanceOptimizer;
@@ -8,3 +9,5 @@ import Head from "next/head"; import _React,{ useEffect } from "react"; interfac
 >>>>>>> main
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

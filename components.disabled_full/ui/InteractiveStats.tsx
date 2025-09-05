@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from \"react\"; interface StatItem {; \"label\": \'string\',; \"value\": \'string: | number\'} description?: strin,g} ; interface InteractiveStatsProps {; \"stats\": \'StatItem[]\'} className?: strin,g} ; \"export\": default function InteractiveStats({\",; stats,className = \"grid grid-cols-1 \"md\": \'grid-cols-3: gap-6\',\"}: InteractiveStatsProps) {\"; return(; <\"div\": className = \"{className}\"> {stats.map((stat,index) => (; <div key=\"{index}\" className=\"text-center p-6 bg-white rounded-lg shadow-md\">\"; <\"div\": className=\"text-3xl font-bold text-blue-600 mb-2\">{stat.value}</div>\"; <\"div\": className = \"text-lg font-semibold text-gray-900 mb-1\">{stat.label}</div>\" {stat.\"description\": && (\",,; <div className=\"text-gray-600 text-sm\">{stat.description}</div>\";\"; valu,; \"e\": \'string | number\',description?: string} ; className?: string} ; export default function InteractiveStats() {; return (\"; <div className=\"{className}\">\"; <div key=\"{index}; className=\"text-center p-6 bg-white rounded-lg shadow-md\""; > <div className=\"text-3xl font-bold text-blue-600 mb-2\"> {stat.value}\"; </div> <div className=\"text-lg font-semibold text-gray-900 mb-1\"> {stat.label} ; </div>\"; {stat.description && (; <div className=\"text-gray-600 text-sm\">{stat.description}</div> )} ; ))} ; );} }\"'\"))
@@ -8,3 +9,5 @@ import _React from "react"; interface StatItem {; "label": 'string',; "value": '
 >>>>>>> main
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

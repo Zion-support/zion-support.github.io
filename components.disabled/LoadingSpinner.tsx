@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from \'react; import { Loader2 } from \'lucide-react; interface LoadingSpinnerProps {; size?: \'sm\' | \'md\' | \'lg; text?: string;\' className?: string;} } ; const \"LoadingSpinner\": React.FC<LoadingSpinnerProps> = ({; size = \'md\',text,\' className = ; }) => {\' const sizeClasses = {\' \"sm\": \'w-4 h-4\',; \"md\": \'w-8 h-8\',; \"md\": \' lg: \'w-12 h-12\'}; return (; <div className={`flex flex-col items-center justify-center ${className}}> <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600\"} />\" {text && (; <p className=\"mt-2 text-sm text-gray-600 animate-pulse>{text}</p> )}\" </div>);}; export default LoadingSpinner;
@@ -8,3 +9,5 @@ import _React from 'react; import { Loader2 } from 'lucide-react; interface Load
 >>>>>>> main
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

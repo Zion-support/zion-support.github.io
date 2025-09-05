@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 "export\": default React.memo(function AIMatcherPage (function AIMatcherPage (function AIMatcherPage () {) : any: {) : any: {} const [selectedCategory,setSelectedCategory] = useState < string> (\'all\') \'';\';\'' \"if\": (category.includes (\'talent\') || category === \'engineering\' || \''\'' category === \'data science\' || category === \'development\') {}\''\';\'' \"itemType\": = \'talent\'} else if (category.includes (\'equipment\') || category === \'hardware\') {}\''\';\'' \"itemType\": = \'equipment\'}\' toast ({}\''\';\'' \"title\": \'Match: Selected,\',\"description\": `You: & apos;ve: selected ${match.item.titl,e}`}) \'';\';\''`\''\';
@@ -6,3 +7,5 @@
 =======
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

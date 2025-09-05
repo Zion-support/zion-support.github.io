@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -10,27 +11,17 @@ import { useRouter } from 'next/router';
 =======
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 import { 
   Menu, 
   X, 
-  ChevronDown, 
-  Settings, 
-  Brain, 
-  Network, 
-  Cloud, 
-  Globe, 
-  Shield, 
-  Building, 
-  Heart, 
-  DollarSign, 
-  ShoppingCart, 
-  BookOpen, 
-  Zap, 
-  Video, 
-  Users, 
-  Rocket, 
-  MessageSquare, 
+  Search, 
   Phone, 
+<<<<<<< HEAD
   FileText,
   BarChart3,
   Cpu,
@@ -116,6 +107,14 @@ const navigation = [
     icon: Phone
   }
 =======
+=======
+  Mail, 
+  MapPin,
+  ChevronDown,
+  Building2
+} from 'lucide-react';
+
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 const navigation = {
   'Services': [
     { name: 'AI Services', href: '/ai-services' },
@@ -125,6 +124,7 @@ const navigation = {
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Quantum Computing', href: '/quantum-computing' },
 <<<<<<< HEAD
+<<<<<<< HEAD
     { name: 'Blockchain', href: '/blockchain' },
     { name: 'IoT Solutions', href: '/iot-solutions' },
     { name: 'Data Analytics', href: '/data-analytics' },
@@ -132,16 +132,22 @@ const navigation = {
     { name: 'Digital Transformation', href: '/digital-transformation' },
     { name: 'Enterprise Solutions', href: '/enterprise-solutions' }
 =======
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
     { name: 'Blockchain Solutions', href: '/blockchain' },
     { name: 'IoT Solutions', href: '/iot-solutions' },
     { name: 'Edge Computing', href: '/edge-computing' },
     { name: '5G Networks', href: '/5g-networks' }
+<<<<<<< HEAD
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   ],
   'Solutions': [
     { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
     { name: 'Startup Solutions', href: '/solutions/startup' },
     { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+<<<<<<< HEAD
 <<<<<<< HEAD
     { name: 'Custom Development', href: '/solutions/custom' },
     { name: 'AI Implementation', href: '/solutions/ai-implementation' },
@@ -151,6 +157,9 @@ const navigation = {
 =======
     { name: 'Custom Development', href: '/solutions/custom' }
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+    { name: 'Custom Development', href: '/solutions/custom' }
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   ],
   'Industries': [
     { name: 'Healthcare', href: '/industries/healthcare' },
@@ -161,6 +170,7 @@ const navigation = {
     { name: 'Retail', href: '/industries/retail' },
     { name: 'Agriculture', href: '/industries/agriculture' },
 <<<<<<< HEAD
+<<<<<<< HEAD
     { name: 'Energy', href: '/industries/energy' },
     { name: 'Transportation', href: '/industries/transportation' },
     { name: 'Real Estate', href: '/industries/real-estate' },
@@ -169,6 +179,9 @@ const navigation = {
 =======
     { name: 'Energy', href: '/industries/energy' }
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+    { name: 'Energy', href: '/industries/energy' }
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   ],
   'Resources': [
     { name: 'Blog', href: '/blog' },
@@ -179,6 +192,7 @@ const navigation = {
     { name: 'Webinars', href: '/webinars' },
     { name: 'Training', href: '/training' },
 <<<<<<< HEAD
+<<<<<<< HEAD
     { name: 'FAQ', href: '/faq' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Best Practices', href: '/best-practices' },
@@ -187,6 +201,9 @@ const navigation = {
 =======
     { name: 'FAQ', href: '/faq' }
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+    { name: 'FAQ', href: '/faq' }
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   ],
   'Company': [
     { name: 'About Us', href: '/about' },
@@ -197,6 +214,7 @@ const navigation = {
     { name: 'Partners', href: '/partners' },
     { name: 'Contact', href: '/contact' },
 <<<<<<< HEAD
+<<<<<<< HEAD
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
     { name: 'Security', href: '/security' },
@@ -205,6 +223,9 @@ const navigation = {
 =======
     { name: 'Privacy Policy', href: '/privacy' }
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+    { name: 'Privacy Policy', href: '/privacy' }
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   ]
 };
 
@@ -212,6 +233,7 @@ const quickLinks = [
   { name: 'Free Consultation', href: '/consultation' },
   { name: 'Get Quote', href: '/quote' },
   { name: 'Support', href: '/support' }
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 ];
 
@@ -236,13 +258,52 @@ export default function Header() {
           {/* Desktop Navigation */}
 <<<<<<< HEAD
           <nav className="hidden lg:flex items-center space-x-6">
+=======
+];
+
+export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleDropdownToggle = (item: string) => {
+    setActiveDropdown(activeDropdown === item ? null : item);
+  };
+
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
+              <Building2 className="w-8 h-8 text-white" />
+            </div>
+            <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-8">
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
             {Object.entries(navigation).map(([title, links]) => (
               <div key={title} className="relative group">
                 <button
-                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors py-2"
+                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
                   onMouseEnter={() => setActiveDropdown(title)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
+<<<<<<< HEAD
                   <span className="font-medium">{title}</span>
 =======
           <nav className="hidden lg:flex items-center space-x-8">
@@ -296,10 +357,14 @@ export default function Header() {
 =======
                   <span>{title}</span>
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+                  <span>{title}</span>
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
                   <ChevronDown className="w-4 h-4" />
                 </button>
                 
                 {activeDropdown === title && (
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 py-3 z-50 max-h-96 overflow-y-auto">
                     <div className="grid grid-cols-1 gap-1">
@@ -314,6 +379,8 @@ export default function Header() {
                       ))}
                     </div>
 =======
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
                   <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
                     {links.map((link) => (
                       <Link
@@ -324,7 +391,10 @@ export default function Header() {
                         {link.name}
                       </Link>
                     ))}
+<<<<<<< HEAD
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
                   </div>
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
                 )}
@@ -332,6 +402,7 @@ export default function Header() {
             ))}
           </nav>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
@@ -345,21 +416,30 @@ export default function Header() {
 =======
           <div className="hidden lg:flex items-center space-x-4">
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+          {/* Quick Links */}
+          <div className="hidden lg:flex items-center space-x-4">
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
             {quickLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className="text-gray-700 hover:text-blue-600 transition-colors text-sm font-medium"
 =======
                 className="text-gray-700 hover:text-blue-600 transition-colors"
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
               >
                 {link.name}
               </Link>
             ))}
             <Link
               href="/contact"
+<<<<<<< HEAD
 <<<<<<< HEAD
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
 =======
@@ -434,10 +514,27 @@ export default function Header() {
             </motion.div>
           )}
         </AnimatePresence>
+=======
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Contact Us
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={onMenuClick}
+            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
+          >
+            <Menu className="w-6 h-6" />
+          </button>
+        </div>
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
       </div>
     </header>
   );
 }
+<<<<<<< HEAD
 =======
           {/* Mobile Menu Button */}
           <button
@@ -452,3 +549,5 @@ export default function Header() {
   );
 }
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

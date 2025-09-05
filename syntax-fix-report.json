@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   "timestamp": "2025-09-04T15:37:53.118Z",
@@ -172,6 +173,8 @@
 =======
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   "timestamp": "2025-09-05T02:57:49.742Z",
   "processedFiles": 8556,
   "fixedFiles": 6729,
@@ -6906,6 +6909,7 @@
     "zion-os.disabled/zion-os/src/components/InstanceCard.tsx",
     "zion_academy/static/js/script.js",
     "zion_academy/static/js/script.jsx"
+>>>>>>> 17b17a8f81ff85e1faa2d953a804b4369cc38def
   ],
   "errorList": []
 }

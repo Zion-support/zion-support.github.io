@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 // Accessibility test utilities
 import { injectAxe, checkA11y } from '@axe-core/playwright';
 export const a11yTestUtils = {

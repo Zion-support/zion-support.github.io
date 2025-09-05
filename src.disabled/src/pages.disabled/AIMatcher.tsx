@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from \"react\"; export default function AIMatcherPage(function AIMatcherPage(function AIMatcherPage() {): unknown {) any {}; const [selectedCategory,setSelectedCategory] = useState<string>(\"all); \";\" if (category.includes(talent) || category === \"engineering\" || \";\" category === data science || category === \"development\") {}; itemType = \"talent\"} else if (category.includes(equipment) || category === \"hardware\") {}; itemType = \"equipment\"}; toast({};\" title \"Match Selected,\"description\": \"You&apos,ve selected ${match.item.title}\"}); \";`\'"; return null}
 const React from "react"; export default function AIMatcherPage(function AIMatcherPage(function AIMatcherPage() {): unknown {) any {}; const [selectedCategory,setSelectedCategory] = useState<string>("all); ";" if (category.includes(talent) | category === "engineering" | ";" category === data science | category === "development") {}; itemType = "talent"} else if (category.includes(equipment) | category === "hardware") {}; itemType = "equipment"}; toast({};" title "Match Selected,description: "You&apos,ve selected ${match.item.title}"}); ";`""; return null}""`"`
 import _React from "react"; export default function AIMatcherPage(function AIMatcherPage(function AIMatcherPage() {): unknown {) any {}; const [selectedCategory,setSelectedCategory] = useState<string>("all); ";" if (category.includes(talent) || category === "engineering" || ";" category === data science || category === "development") {}; itemType = "talent"} else if (category.includes(equipment) || category === "hardware") {}; itemType = "equipment"}; toast({};" title "Match Selected,"description": "You&apos,ve selected ${match.item.title}"}); ";`'"; return null}
 =======
 >>>>>>> main
 >>>>>>> origin/main
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

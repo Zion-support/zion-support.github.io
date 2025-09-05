@@ -62,12 +62,17 @@ export default function Layout({
   ogDescription?: string;
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
   ogImage?: string;
+<<<<<<< HEAD
   canonical?: string;
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+  noIndex?: boolean;
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 }
 
 const Layout: React.FC<LayoutProps> = ({
   children,
+<<<<<<< HEAD
 <<<<<<< HEAD
   title = "Zion Tech Group - Leading Technology Solutions Provider",
   description = "Transform your business with cutting-edge AI, IT services, and micro SaaS solutions. Expert technology consulting and implementation services.",
@@ -125,12 +130,24 @@ const Layout: React.FC<LayoutProps> = ({
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+  title = "Zion Tech Group",
+  description = "Leading technology solutions provider",
+  keywords = "technology, AI, IT, micro SaaS, solutions",
+  canonical = "https://ziontechgroup.com",
+  ogTitle,
+  ogDescription,
+  ogImage,
+  noIndex = false,
+}) => {
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   return (
     <>
       <Head>
-        <title>{fullTitle}</title>
+        <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
+<<<<<<< HEAD
 <<<<<<< HEAD
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
@@ -320,11 +337,14 @@ const Layout: React.FC<LayoutProps> = ({
   );
 }
 =======
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
         {canonical && <link rel="canonical" href={canonical} />}
         {ogTitle && <meta property="og:title" content={ogTitle} />}
         {ogDescription && <meta property="og:description" content={ogDescription} />}
         {ogImage && <meta property="og:image" content={ogImage} />}
         <meta property="og:url" content={canonical} />
+<<<<<<< HEAD
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
         <meta property="og:type" content="website" />
         <meta property="og:title" content={fullTitle} />
@@ -398,6 +418,17 @@ const Layout: React.FC<LayoutProps> = ({
         <Footer />
       </div>
     </>
+=======
+        <meta property="og:type" content="website" />
+        {noIndex && <meta name="robots" content="noindex, nofollow" />}
+      </Head>
+      <Header />
+      <main className="flex-grow">
+        {children}
+      </main>
+      <Footer />
+    </div>
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   );
 };
 

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import { useEffect,ReactNode } from \'react\'; interface PerformanceOptimizerProps { children: \'ReactNode;\' } } export default function PerformanceOptimizer({ children }: PerformanceOptimizerProps) { useEffect(() => { const preloadCriticalResources = () => { const criticalFonts = [ \'https: ]; criticalFonts.forEach(font => { const link = document.createElement(\'link\'); link.rel = \'preload\'; link.as = \'style\'; link.href = font; document.head.appendChild(link)})}; const optimizeImages = () => { const images = document.querySelectorAll(\'img\'); images.forEach(img => { if (!img.loading) { img.loading = \'lazy\'} if (!img.decoding) { img.decoding = \'async\'} })}; const monitorPerformance = () => { if (\'performance\' in window) { window.addEventListener(\'load\',() => { setTimeout(() => { const perfData = performance.getEntriesByType(\'navigation\')[0] as PerformanceNavigationTiming; if (perfData) { } },0)})} }; preloadCriticalResources(); optimizeImages(); monitorPerformance()},[]); return null}
@@ -8,3 +9,5 @@ import { useEffect,ReactNode } from 'react'; interface PerformanceOptimizerProps
 >>>>>>> main
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

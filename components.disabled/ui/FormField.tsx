@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from \'react\'; interface FormFieldProps { name: string; label: string; required?: boolean; error?: string; helperText?: string; multiline?: boolean; rows?: number; className?: string; type?: string; placeholder?: string; value?: string; onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void; disabled?: boolean} } export const FormField: React.FC<FormFieldProps> = ({ name,label,required = false,error,helperText,multiline = false,rows = 3,className = \'',type = \'text\',placeholder,value,onChange,disabled = false }) => { const inputClasses = `w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${ error ? \'border-red-500\' : \'border-gray-300\' } ${className}`; return ( <div className=\"mb-4\"> <label htmlFor={name} className=\"block text-sm font-medium text-gray-700 mb-1\"> {label} {required && <span className=\"text-red-500 ml-1\">*</span>} </label> {multiline ? ( <textarea id={name} name={name} rows={rows} className={inputClasses} placeholder={placeholder} value={value} onChange={onChange} disabled={disabled} /> ) : ( <input id={name} name={name} type={type} className={inputClasses} placeholder={placeholder} value={value} onChange={onChange} disabled={disabled} /> )} {error && ( <p className=\"mt-1 text-sm text-red-600\">{error}</p> )} {helperText && !error && ( <p className=\"mt-1 text-sm text-gray-500\">{helperText}</p> )} </div> )}; export default FormField;
@@ -8,3 +9,5 @@ import _React from 'react'; interface FormFieldProps { name: string; label: stri
 >>>>>>> main
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

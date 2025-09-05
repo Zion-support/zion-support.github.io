@@ -1,6 +1,7 @@
 const EnhancedFooter = dynamic(() => import("./EnhancedFooter"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedFooter' ,'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 </p>'
 =======
 </p>'
@@ -8,3 +9,6 @@ const EnhancedFooter = dynamic(() => import("./EnhancedFooter"),{'; "loading": (
 =======
 </p>'
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+</p>'
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

@@ -13,6 +13,7 @@ const protectedRoutes = [
   "/",
   "/about",
   "/contact",
+<<<<<<< HEAD
   "/blog",
   "/services",
 <<<<<<< HEAD
@@ -68,6 +69,9 @@ const protectedRoutes = [
 =======
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+  "/services",
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   "/ai-services",
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,6 +100,7 @@ const protectedRoutes = [
 =======
   "/case-studies"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
 =======
 =======
@@ -122,6 +127,8 @@ const protectedRoutes = [
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 ];
 
 export function middleware(request: NextRequest) {
@@ -155,6 +162,7 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
 <<<<<<< HEAD
+<<<<<<< HEAD
     /*
      * Match all request paths except for the ones starting with:
      * - api (API routes)
@@ -183,5 +191,8 @@ export const config = {
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+    '/((?!_next/static|_next/image|favicon.ico).*)',
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   ],
 };

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src/hooks/useAccessibility.tsx interface UseAccessibilityOptions { enableKeyboardNavigation?: boolean; enableFocusManagement?: boolean; enableScreenReaderSupport?: boolean; enableHighContrast?: boolean; enableReducedMotion?: boolean; enableLargeText?: boolean } interface AccessibilityFeatures { \"isHighContrast\": \'boolean; isReducedMotion: boolean; isLargeText: boolean; isScreenReader: boolean\' } :src/hooks/useAccessibility.tsx export export enableKeyboardNavigation = true,; enableFocusManagement = true,; enableScreenReaderSupport = true,; enableHighContrast = true,; enableReducedMotion = true,; enableLargeText = true} = options;
 :src/hooks/useAccessibility.tsx interface UseAccessibilityOptions { enableKeyboardNavigation?: boolean; enableFocusManagement?: boolean; enableScreenReaderSupport?: boolean; enableHighContrast?: boolean; enableReducedMotion?: boolean; enableLargeText?: boolean } interface AccessibilityFeatures { isHighContrast: "boolean; isReducedMotion: boolean; isLargeText: boolean; isScreenReader: boolean" } :src/hooks/useAccessibility.tsx export export enableKeyboardNavigation = true,; enableFocusManagement = true,; enableScreenReaderSupport = true,; enableHighContrast = true,; enableReducedMotion = true,; enableLargeText = true} = options;'"'"
 import React from 'react';
@@ -16,3 +17,5 @@ export default function UseAccessibility({ }: UseAccessibilityProps) {
 =======
 >>>>>>> main
 >>>>>>> origin/main
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

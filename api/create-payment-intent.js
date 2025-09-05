@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import Stripe from
@@ -13,6 +14,8 @@ const PROD_DOMAIN =';app.ziontechgroup.com'';
 }
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 import Stripe from 'stripe';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
@@ -31,17 +34,52 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
 // }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
     res.end('Method Not Allowed');
     return;
+<<<<<<< HEAD
+=======
   }
 
+  try {
+    const { amount, currency = 'usd' } = req.body || {};
+    
+    if (typeof amount !== 'number' || amount <= 0) {
+      res.statusCode = 400;
+      res.json({ error: 'Invalid amount' });
+      return;
+    }
+
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount: Math.round(amount * 100), // Convert to cents
+      currency,
+      automatic_payment_methods: {
+        enabled: true,
+      },
+    });
+
+    res.statusCode = 200;
+    res.json({ 
+      success: true, 
+      clientSecret: paymentIntent.client_secret 
+    });
+  } catch (err) {
+    // console.error('Payment intent API error:', err);
+    res.statusCode = 500;
+    res.json({ error: err.message || 'Payment intent creation failed' });
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+  }
+
+<<<<<<< HEAD
   try {
     const { amount, currency = 'usd' } = req.body || {};
     
@@ -88,3 +126,6 @@ export default handler;
 export default withErrorLogging(handler);
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+export default withErrorLogging(handler);
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

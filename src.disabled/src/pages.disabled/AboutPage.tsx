@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from \'react\'; const \"AboutPage\": React.FC = () => {}}; export default AboutPage;
 const React from "react"; const AboutPage: React.FC = () => {}}; export default AboutPage;'"'"
 import _React from 'react'; const "AboutPage": _React.FC = () => {}}; export default AboutPage;
 =======
 >>>>>>> main
 >>>>>>> origin/main
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

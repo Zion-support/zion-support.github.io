@@ -546,14 +546,24 @@ export default function APIPage() {
   ];
 
   return (
+<<<<<<< HEAD
     <Layout>
       <div className="min-h-screen bg-gray-50">
+=======
+    <Layout
+      title="API Documentation - Zion Tech Group"
+      description="Comprehensive API documentation for Zion Tech Group services. Access our AI, cloud, and enterprise APIs with detailed examples and guides."
+      keywords="API documentation, REST API, AI API, cloud API, developer resources"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className="text-center text-white"
             >
@@ -583,18 +593,41 @@ export default function APIPage() {
                 </button>
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
               </div>
+=======
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                API{' '}
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Documentation
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
+                Integrate with Zion Tech Group's powerful APIs to build amazing applications 
+                with AI, cloud services, and enterprise solutions.
+              </p>
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
             </motion.div>
           </div>
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
+=======
+        {/* API Services */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               className="text-center mb-12"
 =======
         {/* API Services Grid */}
@@ -611,10 +644,19 @@ export default function APIPage() {
                 Available APIs
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+=======
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Our API Services
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
                 Choose from our comprehensive suite of APIs designed for modern applications.
               </p>
             </motion.div>
 
+<<<<<<< HEAD
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {apiServices.map((service, index) => (
                 <motion.div
@@ -639,6 +681,77 @@ export default function APIPage() {
                   </div>
                   <p className="text-gray-600 mb-4">
                     {service.description}
+=======
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {apiServices.map((service, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white p-8 rounded-xl shadow-lg border border-gray-200"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <service.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 mb-6 text-center">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* API Features */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Why Choose Our APIs?
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Built with developers in mind, our APIs offer the perfect balance of power and simplicity.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {apiFeatures.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white p-6 rounded-xl shadow-lg text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {feature.description}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
                   </p>
                   <ul className="space-y-2">
 <<<<<<< HEAD
@@ -663,6 +776,7 @@ export default function APIPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Features Section */}
 =======
@@ -1018,21 +1132,23 @@ const apiEndpoints = [
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
         {/* CTA Section */}
-        <section className="py-20 bg-blue-600">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
                 Get your API key and start building amazing applications with our services.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
@@ -1045,6 +1161,7 @@ const apiEndpoints = [
                   className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 >
                   View AI Services
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
                 <motion.div
                   className="bg-white border border-gray-200 rounded-lg p-6"
@@ -1094,6 +1211,9 @@ const apiEndpoints = [
 =======
 <<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+                  <ArrowRight className="ml-2 w-4 h-4" />
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
                 </a>
 =======
                 </button>
@@ -1104,6 +1224,7 @@ const apiEndpoints = [
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </MainLayout>
 =======
 <<<<<<< HEAD
@@ -1113,5 +1234,8 @@ const apiEndpoints = [
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+    </Layout>
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   );
 }

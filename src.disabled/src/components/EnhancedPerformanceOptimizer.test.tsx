@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import EnhancedPerformanceOptimizer from &apos;./EnhancedPerformanceOptimizer; describe(&apos;EnhancedPerformanceOptimizer&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<EnhancedPerformanceOptimizer / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
 it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import EnhancedPerformanceOptimizer from &apos;./EnhancedPerformanceOptimizer; describe(&apos;EnhancedPerformanceOptimizer&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<EnhancedPerformanceOptimizer / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
 import React from 'react';
@@ -16,3 +17,5 @@ export default function EnhancedPerformanceOptimizer.test({ }: EnhancedPerforman
 =======
 >>>>>>> main
 >>>>>>> origin/main
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

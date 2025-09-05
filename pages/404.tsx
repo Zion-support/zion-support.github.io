@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import Link from 'next/link';
@@ -14,6 +15,22 @@ export default function Custom404() {
     >
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 flex items-center justify-center px-4">
         <div className="text-center max-w-2xl mx-auto">
+=======
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../components/Layout';
+import { Home, ArrowLeft } from 'lucide-react';
+
+export default function Custom404() {
+  return (
+    <Layout
+      title="404 - Page Not Found | Zion Tech Group"
+      description="The page you're looking for doesn't exist. Return to our homepage or explore our services."
+      keywords="404, page not found, error"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center">
+        <div className="max-w-2xl mx-auto text-center px-4">
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -35,6 +52,7 @@ export default function Custom404() {
               404
             </motion.div>
             
+<<<<<<< HEAD
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               Oops! Page Not Found
             </h1>
@@ -51,11 +69,29 @@ export default function Custom404() {
                 className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 <Home className="w-5 h-5" />
+=======
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Page Not Found
+            </h1>
+            
+            <p className="text-xl text-gray-600 mb-8">
+              Sorry, we couldn't find the page you're looking for. 
+              It might have been moved, deleted, or doesn't exist.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/"
+                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+              >
+                <Home className="w-5 h-5 mr-2" />
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
                 Go Home
               </Link>
               
               <button
                 onClick={() => window.history.back()}
+<<<<<<< HEAD
                 className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors"
               >
                 <ArrowLeft className="w-5 h-5" />
@@ -85,10 +121,18 @@ export default function Custom404() {
               >
                 Contact Support →
               </Link>
+=======
+                className="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-semibold"
+              >
+                <ArrowLeft className="w-5 h-5 mr-2" />
+                Go Back
+              </button>
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
             </div>
           </motion.div>
         </div>
       </div>
+<<<<<<< HEAD
     </MainLayout>
 =======
 <<<<<<< HEAD
@@ -319,5 +363,8 @@ export default function Custom404() {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+    </Layout>
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   );
 }

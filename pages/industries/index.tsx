@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import MainLayout from '../../src/components/layout/MainLayout';
@@ -6,10 +7,13 @@ import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRig
 =======
 <<<<<<< HEAD
 <<<<<<<< HEAD:pages/industries/index.tsx
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 import Layout from '../../components/Layout';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react';
+<<<<<<< HEAD
 ========
 <<<<<<< HEAD
 import Link from 'next/link';
@@ -28,6 +32,8 @@ import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRig
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 
 const industries = [
   {
@@ -69,6 +75,7 @@ const industries = [
     title: 'Retail',
     description: 'E-commerce platforms, inventory management, and customer analytics',
     icon: ShoppingCart,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:pages/industries/index.tsx
     features: ['E-commerce', 'Inventory Management', 'Customer Analytics', 'Personalization'],
@@ -133,11 +140,16 @@ const solutions = [
     href: '/industries/retail'
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+    features: ['E-commerce', 'Inventory Management', 'Customer Analytics', 'Personalization'],
+    href: '/industries/retail'
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   }
 ];
 
 const benefits = [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -145,6 +157,8 @@ const benefits = [
 =======
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
     title: 'Industry Expertise',
     description: 'Deep understanding of industry-specific challenges and requirements',
     icon: Brain
@@ -163,6 +177,7 @@ const benefits = [
     title: 'Scalable Technology',
     description: 'Solutions that grow with your business and adapt to changing needs',
     icon: Cloud
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -215,11 +230,14 @@ const caseStudies = [
 =======
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   }
 ];
 
 export default function IndustriesPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <MainLayout
       title="Industries - Zion Tech Group"
@@ -255,11 +273,17 @@ export default function IndustriesPage() {
       </Head>
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+    <Layout>
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -267,6 +291,7 @@ export default function IndustriesPage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:pages/industries/index.tsx
                 Industry <span className="text-blue-600">Solutions</span>
@@ -277,6 +302,9 @@ export default function IndustriesPage() {
 =======
                 Industry <span className="text-blue-600">Solutions</span>
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+                Industry <span className="text-blue-600">Solutions</span>
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                 Specialized technology solutions designed for specific industries. 
@@ -348,6 +376,7 @@ export default function IndustriesPage() {
                   </Link>
                 </motion.div>
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -421,11 +450,14 @@ export default function IndustriesPage() {
 =======
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -433,6 +465,8 @@ export default function IndustriesPage() {
 =======
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
@@ -444,6 +478,7 @@ export default function IndustriesPage() {
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Our Industry Solutions?</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our industry-specific approach ensures that our solutions are perfectly tailored to your needs.
+<<<<<<< HEAD
 <<<<<<< HEAD
 ========
         <section className="py-20 bg-gray-50">
@@ -526,6 +561,8 @@ export default function IndustriesPage() {
                     </div>
                   </div>
 =======
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -542,7 +579,10 @@ export default function IndustriesPage() {
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
+<<<<<<< HEAD
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
                 </motion.div>
               ))}
             </div>
@@ -553,8 +593,11 @@ export default function IndustriesPage() {
         <section className="py-20 bg-blue-600">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -583,6 +626,7 @@ export default function IndustriesPage() {
                 </Link>
               </div>
             </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -620,5 +664,11 @@ export default function IndustriesPage() {
     </>
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+          </div>
+        </section>
+      </div>
+    </Layout>
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   );
 }

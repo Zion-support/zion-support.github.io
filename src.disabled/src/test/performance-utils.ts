@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 // Performance test utilities
 export const performanceTestUtils = {
   // Measure page load time

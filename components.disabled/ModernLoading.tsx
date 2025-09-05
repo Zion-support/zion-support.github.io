@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from \'react\'; interface ModernLoadingProps { size?: \'sm\' | \'md\' | \'lg\'; text?: string; className?: string} } const \"ModernLoading\": React.FC<ModernLoadingProps> = ({ size = \'md\',text = \'Loading...\',className = \'' }) => { const sizeClasses = { \"sm\": \'w-6 h-6\',\"md\": \'w-8 h-8\',\"lg\": \'w-12 h-12\' }; return ( <div className={`flex flex-col items-center justify-center space-y-3 ${className}`}> <div className={`${sizeClasses[size]} relative`}> <div className=\"absolute inset-0 rounded-full border-4 border-slate-200/20\"></div> <div className=\"absolute inset-0 rounded-full border-4 border-blue-500 border-t-transparent animate-spin\"></div> </div> {text && ( <p className=\"text-sm text-slate-400 animate-pulse\">{text}</p> )} </div> )}; export default ModernLoading;
@@ -8,3 +9,5 @@ import _React from 'react'; interface ModernLoadingProps { size?: 'sm' | 'md' | 
 >>>>>>> main
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

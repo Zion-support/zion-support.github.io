@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export: interface AdvancedInnovativeService2026 { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string} address: "strin",g} technicalSpecs?: { technology: "string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]"} competitors?: string[] marketSize?: string: "industryTrends?: string[]"} export: const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] = [;'"'"
 import React from 'react';
 interface AdvancedInnovativeServices2026Props {
@@ -14,3 +15,5 @@ export default function AdvancedInnovativeServices2026({ }: AdvancedInnovativeSe
 }
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

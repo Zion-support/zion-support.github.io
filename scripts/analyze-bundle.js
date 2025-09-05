@@ -18,6 +18,7 @@ module.exports = (nextConfig = {}) => {
             "openAnalyzer": true})
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
       return config;
   }},
   })}
@@ -27,3 +28,7 @@ const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return 
       return config}}})}
 const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return Object.assign({},nextConfig,{ webpack(config,{ isServer }) { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: 'isServer ? 8888 : 8889',openAnalyzer: 'true',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: isServer ? 8888 : 8889,openAnalyzer: true,}) )} return config}},})}
 >>>>>>> origin/main
+=======
+      return config}}})}
+const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return Object.assign({},nextConfig,{ webpack(config,{ isServer }) { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: 'isServer ? 8888 : 8889',openAnalyzer: 'true',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: isServer ? 8888 : 8889,openAnalyzer: true,}) )} return config}},})}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

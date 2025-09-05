@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from \'react\'; import Image from \'next/image\'; interface OptimizedImageProps { \"src\": \'string; alt: string; width?: number; height?: number; priority?: boolean; className?: string; quality?: number;\' } } export const \"OptimizedImage\": React.FC<OptimizedImageProps> = ({ src,alt,width = 800,height = 600,priority = false,className = \'',quality = 75 }) => { return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} quality={quality} placeholder=\"blur\" blurDataURL=\""data\": \'image/jpeg;base64\',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=\" sizes=\"(max-\"width\": \'768px) 100vw\',(max-\"width\": \'1200px) 50vw\',33vw\" /> )} export default OptimizedImage;
@@ -8,3 +9,5 @@ import _React from 'react'; import Image from 'next/image'; interface OptimizedI
 >>>>>>> main
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

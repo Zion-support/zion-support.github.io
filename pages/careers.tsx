@@ -21,6 +21,7 @@ import {
   Code, 
   BarChart3, 
   ArrowRight, 
+<<<<<<< HEAD
   CheckCircle, 
   Star, 
   Award, 
@@ -30,6 +31,11 @@ import {
   Phone, 
   Mail, 
   ExternalLink
+=======
+  CheckCircle,
+  DollarSign,
+  GraduationCap
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 } from 'lucide-react';
 
 const jobOpenings = [
@@ -1222,6 +1228,7 @@ export default function Careers() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </MainLayout>
 =======
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
@@ -1266,5 +1273,8 @@ export default function Careers() {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+    </Layout>
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   );
 }

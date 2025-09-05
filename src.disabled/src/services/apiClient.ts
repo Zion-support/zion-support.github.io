@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 const apiClient = axios.create({}}) ;
 apiClient.interceptors.response.use((response) => response,  async(error) => {;
     if(error.response?.status = == 401) {;

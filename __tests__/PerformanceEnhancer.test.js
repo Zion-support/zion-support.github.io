@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react"  import '@testing-library/jest-dom import PerformanceEnhancer from '../components/PerformanceEnhancer" describe('PerformanceEnhancer',() => {' test('renders without crashing',() => {' render(<PerformanceEnhancer / />) expect(screen.getByTestId("performanceenhancer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<PerformanceEnhancer / />) }) test('handles user interactions',() => {' render(<PerformanceEnhancer / />) }) test('applies correct styling',() => {' render(<PerformanceEnhancer / />) }) })
 =======
 <<<<<<< HEAD
@@ -8,3 +9,6 @@ import _React from 'react"  import '@testing-library/jest-dom import Performance
 import _React from 'react"  import '@testing-library/jest-dom import PerformanceEnhancer from '../components/PerformanceEnhancer" describe('PerformanceEnhancer',() => {' test('renders without crashing',() => {' render(<PerformanceEnhancer / />) expect(screen.getByTestId("performanceenhancer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<PerformanceEnhancer / />) }) test('handles user interactions',() => {' render(<PerformanceEnhancer / />) }) test('applies correct styling',() => {' render(<PerformanceEnhancer / />) }) })
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+import _React from 'react"  import '@testing-library/jest-dom import PerformanceEnhancer from '../components/PerformanceEnhancer" describe('PerformanceEnhancer',() => {' test('renders without crashing',() => {' render(<PerformanceEnhancer / />) expect(screen.getByTestId("performanceenhancer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<PerformanceEnhancer / />) }) test('handles user interactions',() => {' render(<PerformanceEnhancer / />) }) test('applies correct styling',() => {' render(<PerformanceEnhancer / />) }) })
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const "@testing-library/jest-dom""; Object.defineProperty(windo,w,"matchMedia",{"; writable: "tru",e value: global.global.global.global.jest.fn().mockImplementation(query: => ({ matches: fals,e media: "quer",y onchange: "nul",l addListener: global.global.global.global.jest.fn(),removeListener: global.global.global.global.jest.fn(),addEventListener: global.global.global.global.jest.fn() removeEventListener: global.global.global.global.jest.fn() dispatchEvent: global.global.global.global.jest.fn()}))}) global.IntersectionObserver: = class IntersectionObserver { constructor() { return; } disconnect() { return; } observe() { return; } unobserve() { return; } }'"'"
 import React from 'react';
 interface SetupTestsProps {
@@ -14,3 +15,5 @@ export default function SetupTests({ }: SetupTestsProps) {
 }
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

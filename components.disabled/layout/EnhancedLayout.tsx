@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from \"react\"; import { ReactNode } from \"react; interface EnhancedLayoutProps {; ; children: \'ReactNode\',; export default function EnhancedLayout() {; return (\"; <div className = \"min-h-screen\" bg-gradient-to-br from-blue-50 to-indigo-100\"> <main className=\"container mx-auto px-4 py-8\"> } {children} ; ></div> ></div> );,} }\"'
@@ -8,3 +9,5 @@ import _React from "react"; import { ReactNode } from "react; interface Enhanced
 >>>>>>> main
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

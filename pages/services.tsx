@@ -367,6 +367,7 @@ const benefits = [
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -529,6 +530,8 @@ export default function ServicesPage() {
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 
 export default function Services() {
 >>>>>>> 2e9c29263b568858da4098d8218397d3dc948131
@@ -542,6 +545,7 @@ export default function Services() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -646,6 +650,9 @@ export default function Services() {
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+      <div className="min-h-screen bg-gray-50">
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
@@ -676,6 +683,7 @@ export default function Services() {
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Stats Section */}
         <section className="py-16 bg-white">
@@ -718,6 +726,10 @@ export default function Services() {
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+        {/* Services Grid */}
+        <section className="py-20 bg-white">
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -803,6 +815,7 @@ export default function Services() {
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -919,6 +932,9 @@ export default function Services() {
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+        {/* Benefits Section */}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div

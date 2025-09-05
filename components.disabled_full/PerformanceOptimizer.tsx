@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React,{ useEffect } from \'react\'; import Head from \'next/head\'; interface PerformanceOptimizerProps { preloadImages?: string[]; preloadFonts?: string[]; criticalCSS?: string} } const \"PerformanceOptimizer\": React.FC<PerformanceOptimizerProps> = ({ preloadImages = [] preloadFonts = [\'https: ] criticalCSS }) => { useEffect(() => { if (typeof window !== \'undefined\' && \'performance\' in window) { const observer = new PerformanceObserver(list => { for (const entry of list.getEntries()) { if (entry.entryType === \'largest-contentful-paint\') { } if (entry.entryType === \'first-input\') { .processingStart - entry.startTime )} if (entry.entryType === \'layout-shift\') { if (!(entry as any).hadRecentInput) { .value)} } } }); try { observer.observe({ \"entryTypes\": [\'largest-contentful-paint\',\'first-input\' \'layout-shift\' ] })} catch (e) { } const addResourceHint = (\"href\": \'string\',\"as\": \'string\',type?: string) => { const link = document.createElement(\'link\'); link.rel = \'preload\'; link.href = href; link.as = as; if (type) link.type = type; document.head.appendChild(link)}; preloadImages.forEach(image => { addResourceHint(image,\'image\')}); preloadFonts.forEach(font => { addResourceHint(font,\'style\')})} },[preloadImages,preloadFonts]); return ( <Head> {} {criticalCSS && ( <style dangerouslySetInnerHTML={{ \"__html\": \'criticalCSS\' }} /> )} {} {preloadImages.map((image,index) => ( <link key={index} rel=\"preload\" as=\"image\" href={image} /> ))} {preloadFonts.map((font,index) => ( <link key={index} rel=\"preload\" as=\"style\" href={font} /> ))} {} <link rel=\"dns-prefetch\" href=\" <link rel=\"dns-prefetch\" href=\" <link rel=\"dns-prefetch\" href=\" {} <link rel=\"preconnect\" href=\""https\": <link rel=\"preconnect\" href=\"https: </Head> )}; export default PerformanceOptimizer;
@@ -8,3 +9,5 @@ import _React,{ useEffect } from 'react'; import Head from 'next/head'; interfac
 >>>>>>> main
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

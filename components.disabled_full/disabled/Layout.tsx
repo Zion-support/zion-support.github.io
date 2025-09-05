@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from \"react\" interface LayoutProps { \"children\": \'React.ReactNode\'} : components/disabled/Layout.tsx const Layout React.FCimport Layout from \"../components/Layout\"; <LayoutProps> = ({ children,title = \"Zion Tech Group - Leading Technology Solutions Provider\",description = \"Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture,we help companies transform their digital presence.\":components/Layout.tsx return ( <div className=\"min-h-screen flex flex-col\"> <Navigation /> <main className=\"flex-1\"> {children} </main> <Footer /> </div> )}; : components/disabled/Layout.tsx export default Layout;components/Layout.tsx)
@@ -8,3 +9,5 @@ import _React from "react" interface LayoutProps { "children": '_React.ReactNode
 >>>>>>> main
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

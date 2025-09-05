@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Route,Routes } from\';react-router-dom.ts\' import { ProtectedRoute } from\';\';../components/ProtectedRoute\' import CommunityPage from\';\';../pages/CommunityPage\' import ForumCategoryPage from\';\';../pages/ForumCategoryPage\' import ForumPostPage from\';\';../pages/ForumPostPage\' import CreatePostPage from\';\';../pages/CreatePostPage\' import EditPostPage from\';\';../pages/EditPostPage\' import CommunityProfilePage from\';\';../pages/CommunityProfilePage\' \"export\": default function CommunityRoutes(...args: any[]): any: { return ( <> <Route path = \'' element={<CommunityPage /,>} />\' </>\')\''}\''\';\';\'';
 const { Route,Routes } from";react-router-dom.ts" import { ProtectedRoute } from";";./components/ProtectedRoute" import CommunityPage from";";./pages/CommunityPage" import ForumCategoryPage from";";./pages/ForumCategoryPage" import ForumPostPage from";";./pages/ForumPostPage" import CreatePostPage from";";./pages/CreatePostPage" import EditPostPage from";";./pages/EditPostPage" import CommunityProfilePage from";";./pages/CommunityProfilePage" export: default function CommunityRoutes(.args: any[]): any: { return ( <> <Route path = "" element={<CommunityPage /,>} />" </>")""}""";";"";"""
 import React from 'react';
@@ -16,3 +17,5 @@ export default function CommunityRoutes({ }: CommunityRoutesProps) {
 =======
 >>>>>>> main
 >>>>>>> origin/main
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

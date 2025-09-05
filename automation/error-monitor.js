@@ -42,6 +42,7 @@ class ErrorMonitor {
       fs.mkdirSync(logsDir, { recursive: true });
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -49,6 +50,9 @@ class ErrorMonitor {
 
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
     // Initial health check
     await this.performHealthCheck();
 
@@ -92,12 +96,15 @@ class ErrorMonitor {
         type: 'health_check_failure',
         message: error.message,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         timestamp: new Date().toISOString()
 =======
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
         timestamp: new Date().toISOString(),
       });
     }
@@ -209,17 +216,21 @@ class ErrorMonitor {
             column: parseInt(match[3]),
             message: match[4].trim(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
             timestamp: new Date().toISOString()
 =======
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
             timestamp: new Date().toISOString(),
           });
         }
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -228,6 +239,9 @@ class ErrorMonitor {
 
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
     return errors;
   }
 
@@ -245,6 +259,7 @@ class ErrorMonitor {
           column: parseInt(match[3]),
           message: match[4].trim(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
           timestamp: new Date().toISOString()
@@ -254,10 +269,13 @@ class ErrorMonitor {
 =======
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
           timestamp: new Date().toISOString(),
         });
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -266,6 +284,9 @@ class ErrorMonitor {
 
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
     return errors;
   }
 
@@ -291,6 +312,7 @@ class ErrorMonitor {
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
@@ -299,6 +321,8 @@ class ErrorMonitor {
 =======
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -318,6 +342,7 @@ class ErrorMonitor {
       const automation = new ErrorFixerAutomation();
       await automation.run();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -326,6 +351,9 @@ class ErrorMonitor {
 
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
       console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
@@ -333,12 +361,15 @@ class ErrorMonitor {
         type: 'error_fixer_failure',
         message: error.message,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         timestamp: new Date().toISOString()
 =======
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
         timestamp: new Date().toISOString(),
       });
     }
@@ -369,6 +400,7 @@ class ErrorMonitor {
       fs.mkdirSync(reportDir, { recursive: true });
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -376,6 +408,9 @@ class ErrorMonitor {
 
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
 

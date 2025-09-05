@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = type ServiceItem = { id: string; title: string; description: string; category: "Micro SaaS" | "IT Services" | "AI Solutions" | "Cybersecurity" | "Data & Analytics" | "Cloud & DevOps" | "Quantum Computing" | "Blockchain & Web3" | "IoT & Edge" | "Green Tech" | "Space Tech" | "BioTech & Health" | "FinTech & DeFi" | "Metaverse & AR/VR" | "Autonomous Systems" | "Sustainability" | "Digital Transformation" | "Enterprise Solutions"; price: string;'"'"
 import React from 'react';
 interface NewInnovativeServices2025Props {
@@ -14,3 +15,5 @@ export default function NewInnovativeServices2025({ }: NewInnovativeServices2025
 }
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

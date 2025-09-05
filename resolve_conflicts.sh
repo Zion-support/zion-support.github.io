@@ -12,4 +12,4 @@ git status --porcelain | grep "^UU" | cut -c4- | while read file; do
 done
 
 echo "All conflicts resolved. Committing merge..."
-git commit -m "Merge PR: Resolve conflicts by choosing main branch version"
+git commit -m "Merge PR #11887: Automate test improve and merge code - Resolved conflicts by choosing main branch version"

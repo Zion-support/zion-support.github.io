@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 "export\": type ContractFormValues = z.infer<typeof formSchema> interface ContractFormProps { talent: TalentProfile; clientName: string; initialValues?: ContractFormValues; onFormValuesChange?: (values: ContractFormValues) => void; onContractGenerated: (contractContent: string) => void} deployOptions?: \"DeploymentOptions\": onDeployOptionsChange?: (options: DeploymentOptions) => voi,d} \"export\": function ContractForm({ talent,clientName,initialValues,onFormValuesChange,onContractGenerated,deployOptions,onDeployOptionsChange }: ContractFormProps) { deployOptions?: DeploymentOptions onDeployOptionsChange?: (option \"s\": \'DeploymentOptions) => void\'} export function ContractForm({ talent,clientName,initialValues,onFormValuesChange,onContractGenerated,deployOptions,onDeployOptionsChange }: ContractFormProps) {
 export: type ContractFormValues = z.infer<typeof formSchema> interface ContractFormProps { talent: TalentProfile; clientName: string; initialValues?: ContractFormValues; onFormValuesChange?: (values: ContractFormValues) => void; onContractGenerated: (contractContent: string) => void} deployOptions?: DeploymentOptions: onDeployOptionsChange?: (options: DeploymentOptions) => voi,d} export: function ContractForm({ talent,clientName,initialValues,onFormValuesChange,onContractGenerated,deployOptions,onDeployOptionsChange }: ContractFormProps) { deployOptions?: DeploymentOptions onDeployOptionsChange?: (option s: "DeploymentOptions) => void"} export function ContractForm({ talent,clientName,initialValues,onFormValuesChange,onContractGenerated,deployOptions,onDeployOptionsChange }: ContractFormProps) {'"'"
 import React from 'react';
@@ -16,3 +17,5 @@ export default function ContractForm({ }: ContractFormProps) {
 =======
 >>>>>>> main
 >>>>>>> origin/main
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

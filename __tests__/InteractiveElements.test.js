@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react"  import '@testing-library/jest-dom import InteractiveElements from '../components/InteractiveElements" describe('InteractiveElements',() => {' test('renders without crashing',() => {' render(<InteractiveElements / / />) expect(screen.getByTestId("interactiveelements")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveElements / / />) }) test('handles user interactions',() => {' render(<InteractiveElements / / />) }) test('applies correct styling',() => {' render(<InteractiveElements / / />) }) })
 =======
 <<<<<<< HEAD
@@ -8,3 +9,6 @@ import _React from 'react"  import '@testing-library/jest-dom import Interactive
 import _React from 'react"  import '@testing-library/jest-dom import InteractiveElements from '../components/InteractiveElements" describe('InteractiveElements',() => {' test('renders without crashing',() => {' render(<InteractiveElements / / />) expect(screen.getByTestId("interactiveelements")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveElements / / />) }) test('handles user interactions',() => {' render(<InteractiveElements / / />) }) test('applies correct styling',() => {' render(<InteractiveElements / / />) }) })
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+import _React from 'react"  import '@testing-library/jest-dom import InteractiveElements from '../components/InteractiveElements" describe('InteractiveElements',() => {' test('renders without crashing',() => {' render(<InteractiveElements / / />) expect(screen.getByTestId("interactiveelements")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveElements / / />) }) test('handles user interactions',() => {' render(<InteractiveElements / / />) }) test('applies correct styling',() => {' render(<InteractiveElements / / />) }) })
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

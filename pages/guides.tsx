@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 =======
@@ -24,9 +27,12 @@ import {
   Server
 } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 
 const guides = [
   {
@@ -210,6 +216,7 @@ export default function GuidesPage() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -694,5 +701,7 @@ export default function GuidesPage() {
     </MainLayout>
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   );
 }

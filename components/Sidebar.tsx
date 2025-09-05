@@ -43,6 +43,7 @@ import {
   Search
 } from 'lucide-react';
 
+<<<<<<< HEAD
 const navigation = {
   'Services': [
     { name: 'AI Services', href: '/ai-services' },
@@ -110,6 +111,8 @@ const quickLinks = [
   { name: 'Support', href: '/support' }
 ];
 
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;

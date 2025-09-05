@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const RDPage = () => {; return (; <> <SEOHead title="Research & Development - Zion Tech Group" description="Explore our R&D initiatives and innovation programs." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Research & Development></div> <p className="text-gray-600">We invest in cutting-edge research across AI,cloud,and edge computing to build the future.></div> ></div> ></div> );}; export default RDPage;
 =======
 <<<<<<< HEAD
@@ -9,3 +10,6 @@ import _React from 'react'; import SEOHead from '../src/components/SEOHead'; con
 import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const RDPage = () => {; return (; <> <SEOHead title="Research & Development - Zion Tech Group" description="Explore our R&D initiatives and innovation programs." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Research & Development></div> <p className="text-gray-600">We invest in cutting-edge research across AI,cloud,and edge computing to build the future.></div> ></div> ></div> );}; export default RDPage;
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const RDPage = () => {; return (; <> <SEOHead title="Research & Development - Zion Tech Group" description="Explore our R&D initiatives and innovation programs." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Research & Development></div> <p className="text-gray-600">We invest in cutting-edge research across AI,cloud,and edge computing to build the future.></div> ></div> ></div> );}; export default RDPage;
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

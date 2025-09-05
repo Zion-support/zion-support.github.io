@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from \'react\'; interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> { variant?: \'primary\' | \'secondary\' | \'outline\' | \'ghost\'; size?: \'small\' | \'medium\' | \'large\'; loading?: boolean; icon?: React.ReactNode; iconPosition?: \'left\' | \'right\'} export const Button: React.FC<ButtonProps> = ({ variant = \'primary\',size = \'medium\',loading = false,icon,iconPosition = \'left\',children,disabled,className = \'',...props }) => { const getVariantClasses = () => { switch (variant) { case \'primary\': return \'bg-blue-600 hover:bg-blue-700 text-white border-transparent\'; case \'secondary\': return \'bg-gray-600 hover:bg-gray-700 text-white border-transparent\'; case \'outline\': return \'bg-transparent hover:bg-gray-50 text-gray-700 border-gray-300\'; case \'ghost\': return \'bg-transparent hover:bg-gray-100 text-gray-700 border-transparent\'; default: return \'bg-blue-600 hover:bg-blue-700 text-white border-transparent\'} }; const getSizeClasses = () => { switch (size) { case \'small\': return \'px-3 py-1.5 text-sm\'; case \'large\': return \'px-6 py-3 text-lg\'; default: return \'px-4 py-2 text-base\'} }; const baseClasses = \'inline-flex items-center justify-center font-medium rounded-md border transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed\'; return ( <button className={`${baseClasses} ${getVariantClasses()} ${getSizeClasses()} ${className}`} disabled={disabled || loading} {...props} > {icon && iconPosition === \'left\' && ( <span className=\"mr-2\">{icon}</span> )} {loading ? \'Loading...\' : children} {icon && iconPosition === \'right\' && ( <span className=\"ml-2\">{icon}</span> )} </button> )}; export default Button;
@@ -8,3 +9,5 @@ import _React from 'react'; interface ButtonProps extends _React.ButtonHTMLAttri
 >>>>>>> main
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
