@@ -9,68 +9,68 @@ const Header = () => {
 
   const navigation = [
     {
-      name: 'Home',
+      name: 'Home';
       href: '/'
-    },
+    };
     {
-      name: 'Services',
-      href: '/services',
+      name: 'Services';
+      href: '/services';
       dropdown: [
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Micro SaaS', href: '/micro-saas' },
-        { name: 'Cloud Solutions', href: '/solutions/cloud-migration' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'AI Services', href: '/ai-services' };
+        { name: 'IT Services', href: '/it-services' };
+        { name: 'Micro SaaS', href: '/micro-saas' };
+        { name: 'Cloud Solutions', href: '/solutions/cloud-migration' };
+        { name: 'Cybersecurity', href: '/services/cybersecurity' };
         { name: 'Data Analytics', href: '/services/data-analytics' }
       ]
-    },
+    };
     {
-      name: 'Solutions',
-      href: '/solutions',
+      name: 'Solutions';
+      href: '/solutions';
       dropdown: [
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-        { name: 'Healthcare', href: '/solutions/healthcare' },
-        { name: 'Finance', href: '/solutions/finance' },
-        { name: 'Government', href: '/solutions/government' },
-        { name: 'Retail', href: '/solutions/retail' },
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise' };
+        { name: 'Healthcare', href: '/solutions/healthcare' };
+        { name: 'Finance', href: '/solutions/finance' };
+        { name: 'Government', href: '/solutions/government' };
+        { name: 'Retail', href: '/solutions/retail' };
         { name: 'Education', href: '/solutions/education' }
       ]
-    },
+    };
     {
-      name: 'Industries',
-      href: '/industries',
+      name: 'Industries';
+      href: '/industries';
       dropdown: [
-        { name: 'Financial Services', href: '/industries/financial' },
-        { name: 'Healthcare', href: '/industries/healthcare' },
-        { name: 'Manufacturing', href: '/industries/manufacturing' },
-        { name: 'Retail', href: '/industries/retail' },
+        { name: 'Financial Services', href: '/industries/financial' };
+        { name: 'Healthcare', href: '/industries/healthcare' };
+        { name: 'Manufacturing', href: '/industries/manufacturing' };
+        { name: 'Retail', href: '/industries/retail' };
         { name: 'Government', href: '/industries/government' }
       ]
-    },
+    };
     {
-      name: 'Company',
-      href: '/about',
+      name: 'Company';
+      href: '/about';
       dropdown: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
+        { name: 'About Us', href: '/about' };
+        { name: 'Our Team', href: '/team' };
+        { name: 'Careers', href: '/careers' };
+        { name: 'Partners', href: '/partners' };
         { name: 'Case Studies', href: '/case-studies' }
       ]
-    },
+    };
     {
-      name: 'Resources',
-      href: '/resources',
+      name: 'Resources';
+      href: '/resources';
       dropdown: [
-        { name: 'Blog', href: '/blog' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'Tutorials', href: '/tutorials' },
+        { name: 'Blog', href: '/blog' };
+        { name: 'White Papers', href: '/white-papers' };
+        { name: 'Webinars', href: '/webinars' };
+        { name: 'Tutorials', href: '/tutorials' };
         { name: 'API Documentation', href: '/api-docs' }
       ]
-    },
+    };
     {
-      name: 'Contact',
+      name: 'Contact';
       href: '/contact'
     }
   ];

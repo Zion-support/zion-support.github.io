@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import LoadingSpinner from './LoadingSpinner';
+import React, { useState } from 'react',
+import LoadingSpinner from './LoadingSpinner',
 
 interface FormData {
-  name: string;
-  email: string;
-  company: string;
-  phone: string;
-  service: string;
-  message: string;
+  name: string,
+  email: string,
+  company: string,
+  phone: string,
+  service: string,
+  message: string,
 }
 
 const ContactForm: React.FC = () => {
@@ -18,28 +18,28 @@ const ContactForm: React.FC = () => {
     phone: '',
     service: '',
     message: ''
-  });
+  }),
   
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle'),
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target,
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    })),
+  },
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
+    e.preventDefault(),
+    setIsSubmitting(true),
+    setSubmitStatus('idle'),
 
     try {
       // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
+      await new Promise(resolve => setTimeout(resolve, 2000)),
+      setSubmitStatus('success'),
       setFormData({
         name: '',
         email: '',
@@ -47,13 +47,13 @@ const ContactForm: React.FC = () => {
         phone: '',
         service: '',
         message: ''
-      });
+      }),
     } catch {
-      setSubmitStatus('error');
+      setSubmitStatus('error'),
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
-  };
+  },
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
@@ -190,7 +190,7 @@ const ContactForm: React.FC = () => {
         )}
       </button>
     </form>
-  );
-};
+  ),
+},
 
-export default ContactForm;
+export default ContactForm,

@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { Shield, DollarSign, Users, Lock, Globe, BarChart3 } from 'lucide-react';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { Shield, DollarSign, Users, Lock, Globe, BarChart3 } from 'lucide-react',
 
 export default function Blockchain() {
   const services = [
@@ -41,7 +41,7 @@ export default function Blockchain() {
       description: 'Data analysis and insights for blockchain transactions.',
       features: ['Transaction Tracking', 'Pattern Analysis', 'Risk Assessment', 'Compliance Reporting']
     }
-  ];
+  ],
 
   return (
     <div>
@@ -88,7 +88,7 @@ export default function Blockchain() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => {
-                const IconComponent = service.icon;
+                const IconComponent = service.icon,
                 return (
                   <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
                     <div className="flex items-center mb-4">
@@ -107,7 +107,7 @@ export default function Blockchain() {
                       ))}
                     </ul>
                   </div>
-                );
+                ),
               })}
             </div>
           </div>
@@ -175,5 +175,5 @@ export default function Blockchain() {
         </div>
       </main>
     </div>
-  );
+  ),
 }

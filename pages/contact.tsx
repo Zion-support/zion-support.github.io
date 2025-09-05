@@ -1,8 +1,8 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import ContactForm from '../components/ContactForm';
+import Head from 'next/head',
+import Link from 'next/link',
+import ContactForm from '../components/ContactForm',
 
-export default function Contact(): any {
+export default function Contact(): JSX.Element {
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -177,5 +177,5 @@ export default function Contact(): any {
         </section>
       </main>
     </>
-  );
+  ),
 }

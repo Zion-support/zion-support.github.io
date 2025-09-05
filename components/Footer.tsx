@@ -1,9 +1,9 @@
-import React from 'react';
-import Link from 'next/link';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram } from 'lucide-react';
+import React from 'react',
+import Link from 'next/link',
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram } from 'lucide-react',
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear(),
 
   const services = {
     'AI Solutions': [
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
       { name: 'Analytics Dashboard', href: '/micro-saas#analytics-dashboard' },
       { name: 'Automation Tools', href: '/micro-saas#automation-tools' },
     ],
-  };
+  },
 
   const company = [
     { name: 'About Us', href: '/about' },
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
     { name: 'Press', href: '/press' },
-  ];
+  ],
 
   const resources = [
     { name: 'Documentation', href: '/docs' },
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
     { name: 'Support', href: '/support' },
     { name: 'FAQ', href: '/faq' },
     { name: 'Contact', href: '/contact' },
-  ];
+  ],
 
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-  ];
+  ],
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -191,7 +191,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  ),
+},
 
-export default Footer;
+export default Footer,
