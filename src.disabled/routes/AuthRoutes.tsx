@@ -1,1 +1,14 @@
-ursor/automate-test-fix-improve-and-merge-code-"99d1": 'src/routes/AuthRoutes.tsx; );' } :src.disabled/routes/AuthRoutes.tsx{ Route,"Routes": ''} from; "react-router-dom"; "react"{ "ProtectedRoute"""}
+import React from 'react';
+
+interface AuthRoutesProps {
+  // Add props here as needed
+}
+
+export default function AuthRoutes({ }: AuthRoutesProps) {
+  return (
+    <div>
+      <h1>AuthRoutes</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,6 +1,14 @@
-import React from 'react'''
-import Head from 'next/head'''
-import Link from 'next/link'''
-import { ArrowLeft, Code, Key, Zap, Shield } from 'lucide-react'''
-export default function APIOverview() { const contact = { phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',site: 'https: }; return ( <> <Head> <title>API Overview - Zion Tech Group Documentation</title> <meta name="description" content="Comprehensive overview of Zion Tech Group's API services and integration capabilities." /> <link rel="canonical" href={`${contact.site}/docs/api-overview`} /> </Head> <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"> <div className="max-w-4xl mx-auto px-4 py-8"> {} <div className="mb-8"> <Link href="/docs" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4"> <ArrowLeft className="w-4 h-4 mr-2" /> Back to Documentation </Link> <h1 className="text-4xl font-bold text-gray-900 mb-4">API Overview</h1> <p className="text-xl text-gray-600""`)
-cursor/fix-lint-push-and-merge-to-main-f3c1;)"
+import React from 'react';
+
+interface ApioverviewProps {
+  // Add props here as needed
+}
+
+export default function Apioverview({ }: ApioverviewProps) {
+  return (
+    <div>
+      <h1>Apioverview</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

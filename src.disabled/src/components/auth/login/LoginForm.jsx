@@ -1,3 +1,14 @@
-import { useState, useForm } from 'lucide-react'; import { useNavigate, zodResolver } from 'lucide-react'; import { z, LogIn, User, Eye, EyeOff } from 'lucide-react'; import { useAuth, Button } from 'lucide-react'; import { Input, Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from 'lucide-react'; import { Link, LoadingOverlay } from 'lucide-react'; const loginSchema = z.object({} "; "email": z.string().email("Please enter a valid email").min(1,"Email is required"),; "password": z.string().min(6,"Password must be at least 6 characters")}
-}); function LoginForm() {} return null} const { login,isLoading } = useAuth(); const navigate = useNavigate(); const [showPassword,setShowPassword] = useState(false); const [isSubmitting,setIsSubmitting] = useState(false); const form = useForm({} "resolver": zodResolver(loginSchema),; "defaultValues": {} "; "email": ",""; "password":  }}
-}); const onSubmit = async (data) => {} if (isSubmitting); return; try {} setIsSubmitting(true); const { error } = await login(data.email,data.password); if(error) {} "; ""; form.setError("root",{ "message"")"}
+import React from 'react';
+
+interface LoginFormProps {
+  // Add props here as needed
+}
+
+export default function LoginForm({ }: LoginFormProps) {
+  return (
+    <div>
+      <h1>LoginForm</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

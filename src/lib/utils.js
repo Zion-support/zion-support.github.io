@@ -1,6 +1,1 @@
-import { twMerge } from 'tailwind-merge';
-import clsx from 'clsx';
-
-export function cn(...inputs) {
-  return twMerge(clsx(inputs));
-}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe

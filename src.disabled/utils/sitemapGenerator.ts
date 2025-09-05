@@ -1,16 +1,14 @@
-"interface": SitemapUrl {"}
-  // TODO: Implement;
-};
-  url: string;
-   lastmod?: string;"
-   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'';''
-   priority?: numbe,r} "interface": SitemapConfig {"}
-  // TODO: Implement;
-};
-  baseUrl: string;,
-  urls: SitemapUrl[];"
-   outputPath?: strin,g} } "export": class SitemapGenerator { private config: SitemapConfig: constructor(config: SitemapConfig) { this.config: = config} generateXML(): "string": { const { baseUrl, urls } = this.config const xmlUrls = urls.map(url => { const lastmod = url.lastmod || new Date().toISOString().split(")"}
-  'T')[0] const changefreq = url.changefreq ||';';weekly' const priority = url.priority || 0.5 return ` <url> <loc>${baseUrl}${url.url}</loc> <lastmod>${lastmod}</lastmod> <changefreq>${changefreq}</changefreq> <priority>${priority}</priority> </url>` }).join(')'
-  '\n') return "<?xml version = '1.0' encoding='UTF-8'?> <urlset xmlns='"http": '''",""
-interface: SitemapUrl { url: string; lastmod?: string; changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'';; priority?: numbe,r} interface: SitemapConfig { baseUrl: string; urls: SitemapUrl[]; outputPath?: strin,g} } export: class SitemapGenerator { private config: SitemapConfig: constructor(config: SitemapConfig) { this.config: = config} generateXML(): string: { const { baseUrl,urls } = this.config const xmlUrls = urls.map(url => { const lastmod = url.lastmod || new Date().toISOString().split( 'T')[0] const changefreq = url.changefreq ||';';weekly' const priority = url.priority || 0.5 return ` <url> <loc>${baseUrl}${url.url}</loc> <lastmod>${lastmod}</lastmod> <changefreq>${changefreq}</changefreq> <priority>${priority}</priority> </url>` }).join( '\n') return `<?xml version = '1.0' encoding='UTF-8'?> <urlset xmlns='http: '''`,``
-</urlset>'
+import React from 'react';
+
+interface SitemapGeneratorProps {
+  // Add props here as needed
+}
+
+export default function SitemapGenerator({ }: SitemapGeneratorProps) {
+  return (
+    <div>
+      <h1>SitemapGenerator</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

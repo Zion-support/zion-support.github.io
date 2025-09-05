@@ -1,1 +1,14 @@
-import React from 'react'; import { Link, motion } from 'lucide-react'; import { ; Globe,; Brain,; Cloud,; Shield,; Zap,; Users,; Phone,; Mail,; MapPin,; Linkedin,; Twitter,; Github,; ArrowUp,; ExternalLink} from 'lucide-react'; ; const ModernFooter = (props) => {; const currentYear = new Date().getFullYear(); ; const footerSections = [ {; title: 'Services',links: [ { name: 'AI Solutions',href: '/ai-services',icon: Brai n },{ name: 'Cloud & DevOps',href: '/services/cloud-devops',icon: Clou d },{ name: 'Cybersecurity',href: '/services/ai-compliance-copilot',icon: Shiel d },{ name: 'Edge & IoT',href: '/services/edge-computing-platform',icon: Za p },{ name: 'Digital Transformation',href: '/it-services',icon: User s }; ]},{; title: 'Company',links: [ { name: 'About Us',href: '/about' },{ name: 'Our Team',href: '/about#team' },{ name: 'Careers',href: '/careers' },{ name: 'News & Updates',href: '/news' },{ name: 'Case Studies',href: '/case-studies' }; ]},{; title: 'Resources',links: [ { name: 'Documentation',href: '/docs' },{ name: 'API Reference',href: '/api' },{ name: 'Blog',href: '/blog' },{ name: 'Webinars',href: '/webinars' },{ name: 'Support Center',href: '/support' }; ]},{; title: 'Legal',links: [ { name: 'Privacy Policy',href: '/privacy' },{ name: 'Terms of Service',href: '/terms' },{ name: 'Cookie Policy',href: '/cookies' },{ name: 'GDPR Compliance',href: '/gdpr' },{ name: 'Security',href: '/security' }; ]}; ]; ; const socialLinks = [ { name: 'LinkedIn',href: 'https:'; ;';';']'}
+import React from 'react';
+
+interface ModernFooterProps {
+  // Add props here as needed
+}
+
+export default function ModernFooter({ }: ModernFooterProps) {
+  return (
+    <div>
+      <h1>ModernFooter</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

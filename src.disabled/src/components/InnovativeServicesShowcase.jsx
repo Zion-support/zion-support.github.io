@@ -1,1 +1,14 @@
-import React,{ useState } from 'react'; import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025"; const InnovativeServicesShowcase = () => {; const [activeTab,setActiveTab] = useState('microsaas'); const [selectedService,setSelectedService] = useState(null); const tabs = [; { "id": 'microsaas',"name": 'Micro SAAS Services',"count": 'INNOVATIVE_MICRO_SAAS_SERVICES_2025.length' },; { "id": 'it',"name": 'IT Services',"count": 'innovativeITServices2025.length' },; { "id": 'ai',"name": 'AI Services',"count""]"}
+import React from 'react';
+
+interface InnovativeServicesShowcaseProps {
+  // Add props here as needed
+}
+
+export default function InnovativeServicesShowcase({ }: InnovativeServicesShowcaseProps) {
+  return (
+    <div>
+      <h1>InnovativeServicesShowcase</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

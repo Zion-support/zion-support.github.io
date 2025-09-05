@@ -1,9 +1,14 @@
-#!/usr/bin/env node
-const fs = require('fs');
+import React from 'react';
 
-console.log('🧪 Running Basic Tests...');
+interface BasictestProps {
+  // Add props here as needed
+}
 
-const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-console.log('✅ Package.json is valid');
-console.log(`📦 Package name: ${packageJson.name}`);
-console.log('✅ Package.json loaded successfully');
+export default function Basictest({ }: BasictestProps) {
+  return (
+    <div>
+      <h1>Basictest</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

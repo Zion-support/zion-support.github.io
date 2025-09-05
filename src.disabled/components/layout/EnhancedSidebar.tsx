@@ -1,1 +1,14 @@
-:src.disabled/components/layout/EnhancedSidebar.tsx; "react"; "react-router-dom"; interface SidebarProps {; interface SidebarProps {; ursor/automate-test-fix-improve-and-merge-code-"99d1": src/components/layout/EnhancedSidebar.tsx; isOpen: boolean; onClose: () => void;} } export function EnhancedSidebar({ isOpen,onClose }: SidebarProps) {; const location = useLocation(); :src.disabled/components/layout/EnhancedSidebar.tsx; const items = [; { label:,; Home","href": "/ },; { label:,; Services","href": "/services },; { label:,; Enterprise","href": "/enterprise },; { label:,; Request Quote","href": "/request-quote },; { label:,; About","href": "/about },; { label:,; Contact","href": "/contact } ; const items = [; { "label": "Home","href": "/" },; { "label": "Services","href": "/services" },; { "label": "Enterprise","href": "/enterprise" },; { "label": "Request Quote","href": "/request-quote" },; { "label": "About","href": "/about" },; { "label": "Contact","href": "/contact" } ursor/automate-test-fix-improve-and-merge-code-"99d1": src/components/layout/EnhancedSidebar.tsx; ]; if (!isOpen) return null; ursor/automate-test-fix-improve-and-merge-code-99d1:src/components/layout/EnhancedSidebar.tsx; )} export default EnhancedSidebar"""
+import React from 'react';
+
+interface EnhancedSidebarProps {
+  // Add props here as needed
+}
+
+export default function EnhancedSidebar({ }: EnhancedSidebarProps) {
+  return (
+    <div>
+      <h1>EnhancedSidebar</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

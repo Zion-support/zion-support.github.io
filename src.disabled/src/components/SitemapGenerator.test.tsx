@@ -1,1 +1,14 @@
-import React from "react"; import { SEO } from "@/components/SEO"; export default function SitemapGenerator.test() {return (; <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"; <SEO title="SitemapGenerator.test - Zion Tech Group" description="Professional SitemapGenerator.test services by Zion Tech Group" />"; <div className="container mx-auto px-4 py-20">"; <h1 className="text-4xl font-bold text-white mb-8">SitemapGenerator.test</h1>"; <p className="text-gray-300 text-lg"> Professional SitemapGenerator.test services to help your business grow.; ></div> ></div> );"}";""
+import React from 'react';
+
+interface SitemapGenerator.testProps {
+  // Add props here as needed
+}
+
+export default function SitemapGenerator.test({ }: SitemapGenerator.testProps) {
+  return (
+    <div>
+      <h1>SitemapGenerator.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

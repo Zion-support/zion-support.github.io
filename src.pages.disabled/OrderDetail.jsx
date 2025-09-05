@@ -1,1 +1,14 @@
-"HEAD": src.pages.disabled/OrderDetail.jsx import React from 'react'; export default function OrderDetailPage () { const { orderId } = useParams () ; const { user } = useAuth () ; const { "data"""}
+import React from 'react';
+
+interface OrderDetailProps {
+  // Add props here as needed
+}
+
+export default function OrderDetail({ }: OrderDetailProps) {
+  return (
+    <div>
+      <h1>OrderDetail</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

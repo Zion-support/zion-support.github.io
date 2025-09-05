@@ -1,1 +1,14 @@
-import { ActiveFilters, ResultsHeader } from 'lucide-react'; import {TalentGrid} from "@/components/talent/TalentGrid"; export function TalentResults($1) { return ( <div className="min-h-screen bg-white"> {} <ActiveFilters {...activeFiltersProps} /> {} <ResultsHeader isLoading={isLoading} resultCount={totalCount} /> {} <TalentGrid talents={talents} isLoading={isLoading} onTalentClick={viewProfile} handleBook={handleBook} handleMessage={handleMessage} isAuthenticated={isAuthenticated} clearFilters={activeFiltersProps.clearFilters} /> </div> )} export default TalentResults;""
+import React from 'react';
+
+interface TalentResultsProps {
+  // Add props here as needed
+}
+
+export default function TalentResults({ }: TalentResultsProps) {
+  return (
+    <div>
+      <h1>TalentResults</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

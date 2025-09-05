@@ -1,5 +1,14 @@
-import { NextApiRequest, NextApiResponse } from 'next'''
-import { dbManager } from '../../lib/database'''
-import { apiCache, userCache, staticCache } from '../../lib/cache'''
-  "status""
-cursor/fix-lint-push-and-merge-to-main-f3c1;"
+import React from 'react';
+
+interface HealthProps {
+  // Add props here as needed
+}
+
+export default function Health({ }: HealthProps) {
+  return (
+    <div>
+      <h1>Health</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,1 +1,14 @@
-import React,{ useState,useEffect } from 'react'; import { motion } from 'framer-motion'; export default to; '''
+import React from 'react';
+
+interface SitemapGeneratorProps {
+  // Add props here as needed
+}
+
+export default function SitemapGenerator({ }: SitemapGeneratorProps) {
+  return (
+    <div>
+      <h1>SitemapGenerator</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

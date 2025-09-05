@@ -1,1 +1,14 @@
-ursor/automate-test-fix-improve-and-merge-code-"99d1": 'src/routes/DashboardRoutes.tsx; );' } :src.disabled/routes/DashboardRoutes.tsx{ Route,"Routes": ''} from; "react-router-dom"; "react"{ "ProtectedRoute"""}
+import React from 'react';
+
+interface DashboardRoutesProps {
+  // Add props here as needed
+}
+
+export default function DashboardRoutes({ }: DashboardRoutesProps) {
+  return (
+    <div>
+      <h1>DashboardRoutes</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
