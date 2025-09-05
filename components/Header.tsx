@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Zap, 
+  ChevronDown, 
+  Search, 
+  Menu, 
+  X, 
+  Sun, 
+  Moon, 
+  User,
+  DollarSign,
+  Brain,
+  Network,
+  Cloud
+} from 'lucide-react';
 
 const navigation = [{
     name: 'Services',
     href: '/services',
     children: [
-      { name: 'AI Services', href: '/ai-services', description: 'Cutting-edge AI solutions' },
-      { name: 'IT Services', href: '/it-services', description: 'Comprehensive IT solutions' },
-      { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable SaaS solutions' }
+      { name: 'AI Services', href: '/ai-services', description: 'Cutting-edge AI solutions', icon: Brain },
+      { name: 'IT Services', href: '/it-services', description: 'Comprehensive IT solutions', icon: Network },
+      { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable SaaS solutions', icon: Cloud }
     ]
   },
   { name: 'About', href: '/about' },
@@ -25,6 +41,32 @@ interface HeaderProps {
 }
 
 export default function Header({ }: HeaderProps) {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Implement search functionality
+    console.log('Searching for:', searchQuery);
+  };
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -45,30 +87,35 @@ export default function Header({ }: HeaderProps) {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-1">
-            {navigationItems.map((item) => (
-              <div key={item.label} className="relative group">
+            {navigation.map((item) => (
+              <div key={item.name} className="relative group">
                 <Link
                   href={item.href}
                   className="flex items-center space-x-1 px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
                 >
-                  <span>{item.label}</span>
-                  {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
+                  <span>{item.name}</span>
+                  {item.children && <ChevronDown className="w-4 h-4" />}
                 </Link>
                 
                 {/* Dropdown Menu */}
-                {item.hasDropdown && (
+                {item.children && (
                   <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
                     <div className="py-2">
-                      {item.dropdownItems?.map((dropdownItem) => (
+                      {item.children.map((child) => (
                         <Link
-                          key={dropdownItem.label}
-                          href={dropdownItem.href}
+                          key={child.name}
+                          href={child.href}
                           className="flex items-center space-x-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"
                         >
-                          <span>{dropdownItem.label}</span>
+                          <child.icon className="w-4 h-4" />
+                          <div>
+                            <div className="font-medium">{child.name}</div>
+                            <div className="text-xs text-gray-500">{child.description}</div>
+                          </div>
                         </Link>
                       ))}
                     </div>
+                  </div>
                 )}
               </div>
             ))}
@@ -134,60 +181,41 @@ export default function Header({ }: HeaderProps) {
         {isMobileMenuOpen && (
           <div className="lg:hidden border-t border-gray-200 bg-white">
             <div className="py-4 space-y-2">
-              {navigationItems.map((item) => (
-                <div key={item.label}>
+              {navigation.map((item) => (
+                <div key={item.name}>
                   <Link
                     href={item.href}
                     className="flex items-center justify-between px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <span>{item.label}</span>
-                    {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
+                    <span>{item.name}</span>
+                    {item.children && <ChevronDown className="w-4 h-4" />}
                   </Link>
                   
-                  {item.hasDropdown && (
+                  {item.children && (
                     <div className="ml-4 space-y-1">
-                      {item.dropdownItems?.map((dropdownItem) => (
+                      {item.children.map((child) => (
                         <Link
-                          key={dropdownItem.label}
-                          href={dropdownItem.href}
-                          className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-blue-600 rounded-lg"
+                          key={child.name}
+                          href={child.href}
+                          className="flex items-center space-x-3 px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-blue-600 rounded-lg"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
-                          {dropdownItem.label}
+                          <child.icon className="w-4 h-4" />
+                          <div>
+                            <div className="font-medium">{child.name}</div>
+                            <div className="text-xs text-gray-500">{child.description}</div>
+                          </div>
                         </Link>
                       ))}
                     </div>
                   )}
-                        onMouseEnter={() => setActiveDropdown(item.name)}
-                        onMouseLeave={() => setActiveDropdown(null)}
-                      >
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            href={child.href}
-                            className="flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                          >
-                            <div className="flex items-center space-x-3">
-                              <child.icon className="w-4 h-4" />
-                              <span>{child.name}</span>
-                            </div>
-                            {child.count && (
-                              <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full">
-                                {child.count}
-                              </span>
-                            )}
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
                 </div>
               ))}
             </div>
 
             {/* Search and CTA */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 px-4 py-4 border-t border-gray-200">
               {/* Search Button */}
               <button
                 onClick={() => setIsSearchOpen(!isSearchOpen)}
@@ -199,12 +227,13 @@ export default function Header({ }: HeaderProps) {
               {/* CTA Button */}
               <Link
                 href="/contact"
-                className="hidden sm:flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300"
+                className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300"
               >
                 <DollarSign className="w-4 h-4" />
                 <span>Get Quote</span>
               </Link>
             </div>
+          </div>
         )}
       </div>
 
