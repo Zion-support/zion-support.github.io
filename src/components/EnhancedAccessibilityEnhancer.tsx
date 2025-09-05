@@ -1,69 +1,25 @@
-import React, { useState, useEffect, useCallback } from 'react
-import { motion, AnimatePresence } from 'framer-motion
+import React, { useEffect } from 'react';
 
-interface AccessibilitySettings {
-  "largeText": boolean;
-  reducedMotion: boolean;
-  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia
-  highContrast: boolean;
-  focusVisible: boolean;
-}
+export default function EnhancedAccessibilityEnhancer() {
+  useEffect(() => {
+    // Accessibility enhancements
+    const enhanceAccessibility = () => {
+      // Add skip links
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      document.body.insertBefore(skipLink, document.body.firstChild);
 
-interface EnhancedAccessibilityEnhancerProps {
-  enabled?: boolean;
-  showSettings?: boolean;
-}
+      // Add main content landmark
+      const main = document.querySelector('main');
+      if (main && !main.id) {
+        main.id = 'main-content';
+      }
+    };
 
-export default function EnhancedAccessibilityEnhancer({
-  enabled = true,
-  showSettings = true}: EnhancedAccessibilityEnhancerProps) {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    "largeText": false,
-    "reducedMotion": false,
-    "colorBlindness": 'none',
-    "highContrast": false,
-    "focusVisible": true};);
-
-  const [isOpen, setIsOpen] = useState(false);
-
-  const applySettings = useCallback(("newSettings": AccessibilitySettings) => {
-    const root = document.documentElement;
-
-    // Apply large text
-    if (newSettings.largeText) {
-      root.classList.add('large-text');
-    } else {
-      root.classList.remove('large-text');
-    }
-
-    // Apply reduced motion
-    if (newSettings.reducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
-
-    // Color blindness simulation
-    if (newSettings.colorBlindness !== 'none') {
-      root.classList.add(`color-blind-${newSettings.colorBlindness}`);
-    } else {
-      root.classList.remove('color-blind-protanopia', 'color-blind-deuteranopia', 'color-blind-tritanopia');
-    }
-
-    // High contrast
-    if (newSettings.highContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
-
-    // Focus visible
-    if (newSettings.focusVisible) {
-      root.classList.add('focus-visible');
-    } else {
-      root.classList.remove('focus-visible');
-    }
-
-    // Store settings in localStorage
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
+    enhanceAccessibility();
   }, []);
+
+  return null;
+}

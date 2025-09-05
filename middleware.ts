@@ -22,7 +22,8 @@ export function middleware(request: NextRequest) {
 
   // Allow public routes
   if (publicRoutes.includes(pathname)) {
-    return NextResponse.next()}
+    return NextResponse.next();
+  }
 
   // Check for authentication cookie
   const authCookie = request.cookies.get("auth-token");
