@@ -40,7 +40,8 @@ import {
   MapPin, 
   ExternalLink,
   Heart,
-  Search
+  Search,
+  Mail
 } from 'lucide-react';
 
 const aiServices = [

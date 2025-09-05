@@ -30,7 +30,8 @@ import {
   Twitter,
   Linkedin,
   Github,
-  Youtube
+  Youtube,
+  Cookie
 } from 'lucide-react';
 
 const Footer = () => {
