@@ -4,8 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
 
-console.log('🧪 Enhanced Test Runner v2.0');
-console.log('============================');
+
+
 
 const testReport = {
   "timestamp": new Date().toISOString(),
@@ -24,7 +24,7 @@ const testReport = {
 
 function log(level, message) {
   const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)}
+  }] ${message}`)}
 
 async function runJestTests() {
   log('info', 'Running Jest tests');

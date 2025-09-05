@@ -17,7 +17,7 @@ class AppHealthMonitor {
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`)}
+    }
 
   async checkBuildHealth() {
     this.log('🔍 Checking build health...');
@@ -163,9 +163,9 @@ if (require.main === module) {
   const monitor = new AppHealthMonitor();
   monitor.run()
     .then((report) => {
-      console.log('\n🎉 App Health Monitor completed successfully!');
-      console.log(`📊 Overall Health "Score": ${report.overallScore}/100`);
-      console.log(`🏥 Health "Status": ${report.healthStatus}`);
+      
+      
+      
       process.exit(0)})
     .catch((error) => {
       console.error('\n💥 App Health Monitor "failed": ', error.message);

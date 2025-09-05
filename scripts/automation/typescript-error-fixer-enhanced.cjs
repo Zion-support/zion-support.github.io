@@ -25,12 +25,12 @@ class $1 {
     if (!fs.existsSync(this.logDir)) {
   fs.mkdirSync(this.logDir, { "recursive": true })}
     ;
-    console.log(""🔧 Enhanced TypeScript Error Fixer Started")}
+    }
 ;
   async log(message, type = "INFO`) {
   const timestamp = new Date().toISOString();
     const logMessage = [${timestamp}] [${type}] ${message}
-    console.log(`logMessage);
+    
     const logFile = path.join(this.logDir, "typescript-error-fixer.log");
     await appendFile(logFile, logMessage + "\n")}
 ;
@@ -48,14 +48,14 @@ class $1 {
         "error": error.message,
         "output": error.stdout || error.stderr || ""}
     ;
-    console.log(""🔧 Enhanced TypeScript Error Fixer Started");
-    console.log("🔧 Enhanced TypeScript Error Fixer Started`)}
+    
+    }
         "output": error.stdout || error.stderr || ""}
   }
 async log(message, type = "INFO") {
   const timestamp = new Date().toISOString();
     const logMessage = [${timestamp}] [${type}] ${message}
-    console.log(`logMessage);
+    
     const logFile = path.join(this.logDir, "typescript-error-fixer.log");
     await appendFile(logFile, logMessage + "\n")}
 ;

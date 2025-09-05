@@ -21,7 +21,7 @@ class BuildTester {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
+    
     
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
@@ -215,9 +215,9 @@ tester.run().catch(error => {
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {
-  console.log('\n🛑 Build Tester stopped by user');
+  
   process.exit(0)});
 
 process.on('SIGTERM', () => {
-  console.log('\n🛑 Build Tester stopped by system');
+  
   process.exit(0)});

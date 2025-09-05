@@ -22,7 +22,7 @@ class TypeChecker {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     fs.appendFileSync(this.logFile, logMessage);
-    console.log(message);
+    
   }
 
   error(message) {

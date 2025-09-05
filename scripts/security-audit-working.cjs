@@ -9,7 +9,7 @@ class SecurityAuditor {
       fs.mkdirSync(this.reportsDir, { "recursive": true })}
   }
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
   runNpmAudit() {
     this.log('🔍 Running npm audit...');
     try {
@@ -129,13 +129,13 @@ class SecurityAuditor {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📄 Report saved "to": ${reportFile}`);
     // Print summary
-    console.log('\n🛡️ SECURITY AUDIT SUMMARY');
-    console.log('=' * 50);
-    console.log(`NPM "Audit": ${npmAudit.success ? '✅ Completed' : '❌ Failed'}`);
-    console.log(`Security "Headers": ${securityHeaders.success ? `${securityHeaders.checks ? Object.values(securityHeaders.checks).filter(Boolean).length : 0}/5 configured" : '❌ Failed'}");
-    console.log(`Environment "Files": ${environmentVariables.success ? environmentVariables.foundEnvFiles.length : '❌ Failed'}`);
-    console.log(`Vulnerable "Packages": ${dependencies.success ? dependencies.foundVulnerablePackages.length : '❌ Failed'}`);
-    console.log(`"Report": ${reportFile}`);
+    
+    
+    
+    .filter(Boolean).length : 0}/5 configured" : '❌ Failed'}");
+    
+    
+    
     return report}
   async run() {
     try {this.log('🚀 Starting Security Audit'),const report = this.generateReport(),this.log('✅ Security audit completed');

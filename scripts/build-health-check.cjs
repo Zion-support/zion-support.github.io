@@ -15,7 +15,7 @@ class BuildHealthCheck {;
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     try {;
       await fs.appendFile(this.logFile, logEntry);
-      console.log(logEntry.trim()),} catch (error) {;
+      ),} catch (error) {;
       console.error("Failed to write to log "file": ", error),}
   }
 ;
@@ -65,7 +65,7 @@ class BuildHealthCheck {;
   async log(message, level = "INFO") {";    const timestamp = new Date().toISOString();    const logEntry = `[${timestamp}] [${level}] ${message}\n`;`;
     try {;
       await fs.appendFile(this.logFile, logEntry);
-      console.log(logEntry.trim())} catch (error) {;
+      )} catch (error) {;
       console.error("Failed to write to log ""file": ", error)}"}
 ;
   async checkDependencies() {;

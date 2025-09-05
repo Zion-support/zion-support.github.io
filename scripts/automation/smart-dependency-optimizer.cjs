@@ -66,7 +66,7 @@ class $1 {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)}
+    fs.appendFileSync(this.logFile, logEntry);}
 ;
   async runOptimization() {
   this.log("🧠 Starting Smart Dependency Optimization...");

@@ -1,7 +1,7 @@
-import React from 'react';
-import Layout from "../../components/Layout";
 import { motion } from 'framer-motion';
-import { BarChart3, TrendingUp, Database, Brain, CheckCircle, ArrowRight } from 'lucide-react';
+import Layout from '../../components/Layout';
+import { BarChart3, TrendingUp, Database, Brain } from 'lucide-react';
+
 
 export default function DataAnalyticsPage() {
   const analyticsServices = [

@@ -19,7 +19,7 @@ class QuickErrorChecker {
   async log(message) {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
-    console.log("logMessage);
+    
     await fs.appendFile(this.logFile, logMessage + "\n")}
 ;
   async runCommand(command, options = {}) {
@@ -156,7 +156,7 @@ if (require.main === module) {
   const checker = new QuickErrorChecker();
   checker.run();
     .then(result => {
-  console.log("Quick error check completed successfully");
+  
       process.exit(0)});
     .catch(error => {
   console.error("Quick error check "failed": ", error);      process.exit(1)})}

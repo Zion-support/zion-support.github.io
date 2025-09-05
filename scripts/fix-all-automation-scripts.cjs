@@ -19,7 +19,7 @@ class AutomationScriptFixer {
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     try {
       await fs.appendFile(this.logFile, logEntry);
-      console.log(`[${level}] ${message}`)} catch (error) {
+      } catch (error) {
       console.error(`Failed to write to log "file": ${error.message}`)}
   }
 

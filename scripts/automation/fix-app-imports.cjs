@@ -9,7 +9,7 @@ class AppImportsFixer {
     this.appPath = path.join(this.projectRoot, 'src/App.tsx')}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
 
   checkFileExports(filePath) {
     try {
@@ -104,7 +104,7 @@ if (require.main === module) {
   const automation = new AppImportsFixer();
   automation.run()
     .then(() => {
-      console.log('App Imports Fixer completed successfully!');
+      
       process.exit(0)})
     .catch(error => {
       console.error('App Imports Fixer "failed": ', error);

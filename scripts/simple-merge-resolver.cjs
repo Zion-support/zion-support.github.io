@@ -14,7 +14,7 @@ class SimpleMergeResolver {
 
   async log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`)}
+    }
 
   async findConflictedFiles() {
     try {
@@ -32,12 +32,8 @@ class SimpleMergeResolver {
       let resolvedContent = content;
       
       // Remove merge conflict markers and keep HEAD version
-      resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1');
       
       // Remove any remaining conflict markers
-      resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n/g, '');
-      resolvedContent = resolvedContent.replace(/=======\n/g, '');
-      resolvedContent = resolvedContent.replace(/>>>>>>> [^\n]+\n/g, '');
       
       if (resolvedContent !== content) {
         await fs.writeFile(filePath, resolvedContent, 'utf8');
@@ -65,7 +61,7 @@ class SimpleMergeResolver {
     if (this.errors.length > 0) {
       await this.log(`Encountered ${this.errors.length} "errors": `, 'WARN');
       this.errors.forEach(error => {
-        console.log(`  - ${error.file}: ${error.error}`)})}
+        })}
     
     return this.fixedFiles.length}
 }
@@ -76,9 +72,9 @@ async function main() {
   const fixedCount = await resolver.resolveAllConflicts();
   
   if (fixedCount > 0) {
-    console.log(`\n✅ Successfully resolved conflicts in ${fixedCount} files`);
-    console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts"')} else {
-    console.log('\n✅ No conflicts found or all conflicts already resolved')}
+    
+    } else {
+    }
 }
 
 if (require.main === module) {

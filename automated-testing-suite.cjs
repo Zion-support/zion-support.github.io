@@ -82,5 +82,5 @@ class AutomatedTestingSuite {
 // Run testing suite
 const testSuite = new AutomatedTestingSuite;(;);
 testSuite.generateTestReport().then(report => {
-  console.log('📊 Test report "generated": ', report)}).catch(error => {
+  }).catch(error => {
   console.error('❌ Testing "failed": ', error)});

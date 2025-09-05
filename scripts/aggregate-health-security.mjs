@@ -11,13 +11,13 @@ function run(cmd) {
 
 const results = {};
 
-console.log('[Aggregate] Running health check');
+
 results.health = run('npm run -s automation:health');
 
-console.log('[Aggregate] Running security scan');
+
 results.security = run('npm run -s automation:security');
 
-console.log('[Aggregate] Running performance optimizer (dry)');
+');
 results.performance = run('npm run -s automation:performance');
 
 const summary = {
@@ -30,7 +30,7 @@ const summary = {
 
 fs.mkdirSync('reports', { recursive: true });
 fs.writeFileSync('reports/aggregate-health-security.json', JSON.stringify(summary, null, 2));
-console.log('[Aggregate] Wrote reports/aggregate-health-security.json');
+
 
 process.exit(summary.ok ? 0 : 1);
 

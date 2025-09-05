@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Starting Critical Syntax Error Fix...');
+
 
 // Files with critical syntax errors that need immediate fixing
 const criticalFiles = ['automation/intelligent-orchestrator.js',
@@ -18,7 +18,7 @@ const criticalFiles = ['automation/intelligent-orchestrator.js',
 function fixSyntaxErrors(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
-      console.log(`⚠️  File not "found": ${filePath}`);
+      
       return false;
     }
 
@@ -50,10 +50,10 @@ function fixSyntaxErrors(filePath) {
 
     if (fixed) {
       fs.writeFileSync(filePath, content);
-      console.log(`✅ "Fixed": ${filePath}`);
+      
       return true;
     } else {
-      console.log(`ℹ️  No fixes "needed": ${filePath}`);
+      
       return false;
     }
   } catch (error) {
@@ -75,13 +75,13 @@ function cleanupCorruptedDirs() {
     'temp_backup'
   ];
 
-  console.log('🧹 Cleaning up corrupted directories...');
+  
   
   corruptedDirs.forEach(dir => {
     if (fs.existsSync(dir)) {
       try {
         fs.rmSync(dir, { "recursive": true, "force": true });
-        console.log(`🗑️  "Removed": ${dir}`);
+        
       } catch (error) {
         console.error(`❌ Error removing ${dir}:`, error.message);
       }
@@ -99,6 +99,5 @@ criticalFiles.forEach(file => {
 
 cleanupCorruptedDirs();
 
-console.log("\n🎉 Critical syntax fix completed!");
-console.log(`📊 Fixed ${fixedCount} files`);
-console.log("🧹 Cleaned up corrupted directories");
+
+

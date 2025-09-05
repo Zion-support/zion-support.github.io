@@ -27,7 +27,7 @@ const fs = require("fs")";const path = require("path")";const { execSync, spawn 
 ;
   log(message) {;
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;";    console.log(message);
+    const logMessage = `[${timestamp}] ${message}\n`;";    
     fs.appendFileSync(this.logFile, logMessage)}
 ;
   loadConfig() {;
@@ -162,8 +162,8 @@ const fs = require("fs")";const path = require("path")";const { execSync, spawn 
         this.log("ℹ️ No automation processes running");
         return,}
 ;
-      console.log("\n📋 Automation "Processes": ");
-      console.log("===");
+      
+      
       for (const proc of processes) {;
         const statusIcon =;
           proc.pm2_env.status === "online";
@@ -172,14 +172,14 @@ const fs = require("fs")";const path = require("path")";const { execSync, spawn 
               ? "🔴";
               : "🟡";
         const uptime = this.formatUptime(proc.pm2_env.pm_uptime);
-console.log(`\n${statusIcon} ${proc.name}`);console.log(`   "Status": ${proc.pm2_env.status}`);console.log(`   "Uptime": ${uptime}`);console.log(`   "Restarts": ${proc.pm2_env.restart_time}`);
-        console.log(   "Memory": ${Math.round(proc.monit.memory / 1024 / 1024)}MB");
-        console.log("   "CPU": ${proc.monit.cpu}%"),}
+
+        }MB");
+        ,}
 ;
       const onlineCount = processes.filter(;
         p => p.pm2_env.status === "online`).length;
       const totalCount = processes.length;
-      console.log(\n📊 "Summary": ${onlineCount}/${totalCount} processes online`),} catch (error) { this.log(`❌ Error getting "status": ${error.message }`),}
+      ,} catch (error) { this.log(`❌ Error getting "status": ${error.message }`),}
         if (exists) {this.log(`⚠️ Process ${process.name} already exists, restarting...`);execSync(`pm2 restart ${process.name}`, { stdio": "pipe" });"} else {";          // Start new process;
           const scriptPath = path.resolve(__dirname, "..", process.script);";          if (fs.existsSync(scriptPath)) {execSync("pm2 start ${scriptPath} --name ${process.name}", {";              "stdio": "pipe", ";              "env": { ...process.env, ...process.env },)});this.log(`✅ Started ${process.name}`);"} else {this.log("❌ Script not ""found": ${scriptPath}");"}        }
 ;
@@ -219,13 +219,13 @@ console.log(`\n${statusIcon} ${proc.name}`);console.log(`   "Status": ${proc.pm2
       if (processes.length === 0) {;
         this.log("ℹ️ No automation processes running");        return,"}
 ;
-      console.log("\n📋 Automation ""Processes": ");      console.log("===");";      for (const proc of processes) {;
+            ";      for (const proc of processes) {;
         const statusIcon =;
           proc.pm2_env.status === "online"";            ? "🟢"";            : proc.pm2_env.status === "errored"";              ? "🔴"";              : "🟡";        const uptime = this.formatUptime(proc.pm2_env.pm_uptime);
-console.log(`\n${statusIcon} ${proc.name}`);console.log(`   Status": ${proc.pm2_env.status}`);console.log(`   ""Uptime": ${uptime}`);console.log(`   Restarts": ${proc.pm2_env.restart_time}");        console.log(   ""Memory": ${Math.round(proc.monit.memory / 1024 / 1024)}MB"`));");";        console.log(`   CPU": ${proc.monit.cpu}%`);`}
+        }MB"`));");";        `}
 ;
       const onlineCount = processes.filter();        p => p.pm2_env.status === "online"").length;      const totalCount = processes.length;
-      console.log(\n📊 ""Summary": ${onlineCount}/${totalCount} processes online""),"} catch (error) {this.log(`❌ Error getting status": ${error.message}");"}
+      ,"} catch (error) {this.log(`❌ Error getting status": ${error.message}");"}
   }
 ;
   async showLogs(processName = null, lines = 20) {;
@@ -287,24 +287,24 @@ if (days > 0) return `${days}d ${hours % 24}h`;if (hours > 0) return `${hours}h 
     return new Promise(resolve => setTimeout(resolve, ms)),}
 ;
   showHelp() {;
-    console.log("\n🚀 PM2 Automation Launcher");
+    
   showHelp() {;
-    console.log("\n🚀 PM2 Automation Launcher");
-    console.log("=====\n");
-    console.log("Available "commands": ");
-    console.log("  start     - Start all automation processes");
-    console.log("  stop      - Stop all automation processes");
-    console.log("  restart   - Restart all automation processes");
-    console.log("  delete    - Delete all automation processes");
-    console.log("  status    - Show status of all processes");
-    console.log("  logs      - Show logs (all or specific process)");
-    console.log("  monit     - Open PM2 monitoring interface");
-    console.log("  report    - Generate automation report");
-    console.log("  help      - Show this help message");
-    console.log("\nExamples:");
-    console.log("  node pm2-automation-launcher.cjs start");
-    console.log(  node pm2-automation-launcher.cjs logs enhanced-link-checker");
-    console.log("  node pm2-automation-launcher.cjs status"),}
+    
+    
+    
+    
+    
+    
+    
+    
+    ");
+    
+    
+    
+    
+    
+    
+    ,}
 }
 ;
 // CLI handling;

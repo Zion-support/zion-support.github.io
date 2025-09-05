@@ -28,4 +28,3 @@ fixes.forEach(fix => {
 // Write the fixed content back
 fs.writeFileSync('/workspace/pages/_app.tsx', content, 'utf8');
 
-console.log('Fixed style objects in _app.tsx');

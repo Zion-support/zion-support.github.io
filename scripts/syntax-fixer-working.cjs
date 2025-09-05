@@ -5,7 +5,7 @@ const { execSync } = require('child_process');
 class SyntaxFixer {
   constructor() {this.projectRoot = process.cwd(),this.fixedFiles = [],this.errors = []}
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
   fixFile(filePath) {
     try {
       let content = fs.readFileSync(filePath, 'utf8');

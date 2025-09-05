@@ -5,8 +5,8 @@ const path = require('path');
 const { execSync, spawn } = require('child_process');
 const os = require('os');
 
-console.log('🚀 Enhanced Master Automation Orchestrator v2.0');
-console.log('================================================');
+
+
 
 // Enhanced configuration
 const config = {
@@ -65,11 +65,11 @@ function log(level, message, data = null) {
   
   if (level === 'error') {
     console.error(logMessage)} else if (level === 'warn') {
-    console.warn(logMessage)} else {
-    console.log(logMessage)}
+    } else {
+    }
   
   if (data && config.logLevel === 'debug') {
-    console.log(JSON.stringify(data, null, 2))}
+    )}
 }
 
 function createCacheDir() {

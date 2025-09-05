@@ -13,7 +13,7 @@ class $1 {;
   log(message, type = "INFO") {;
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type}] ${message}`;
-    console.log(logMessage);
+    
     // Append to log file
     fs.appendFileSync(this.logFile, logMessage + "\n")}
 
@@ -224,7 +224,7 @@ class HealthChecker {;
   this.issues.push("node_modules directory missing");
         this.fixes.push("Run npm install"),}
       ;
-      console.log("✅ Dependencies check completed"),} catch (error) {;
+      ,} catch (error) {;
   this.issues.push(\"Dependencies check "failed": \${error.message}\"),}
   }
 ;
@@ -237,12 +237,12 @@ class HealthChecker {;
         this.fixes.push(\"Create \${file}\"),}
     }
     ;
-    console.log("✅ Configuration check completed"),}
+    ,}
 ;
   async checkTypeScript() {;
   try {;
   execSync("npx tsc --noEmit", { "stdio": "pipe" });
-      console.log("✅ TypeScript check passed"),} catch (error) {;
+      ,} catch (error) {;
   this.issues.push("TypeScript compilation errors found");
       this.fixes.push("Fix TypeScript errors"),}
   }
@@ -250,30 +250,30 @@ class HealthChecker {;
   async checkLinting() {;
   try {;
   execSync("npx eslint . --ext .js,.jsx,.ts,.tsx", { "stdio": "pipe" });
-      console.log("✅ Linting check passed"),} catch (error) {;
+      ,} catch (error) {;
   this.issues.push("ESLint errors found");
       this.fixes.push("Run npx eslint . --ext .js,.jsx,.ts,.tsx --fix"),}
   }
 ;
   async runAllChecks() {;
-  console.log("🔍 Running comprehensive health check...\\n");
+  
     await this.checkDependencies();
     await this.checkConfiguration();
     await this.checkTypeScript();
     await this.checkLinting();
-    console.log("\\n📊 Health Check "Summary": ");
-    console.log(\"Issues found: \${this.issues.length}\");
-    console.log(\"Suggested "fixes": \${this.fixes.length}\");
+    
+    
+    
     if (this.issues.length > 0) {;
-  console.log("\\n❌ "Issues": ");
-      this.issues.forEach((issue, index) => console.log(\"\${index + 1}. \${issue}\")),}
+  
+      this.issues.forEach((issue, index) => ),}
     ;
     if (this.fixes.length > 0) {;
-  console.log("\\n🔧 Suggested "fixes": ");
-      this.fixes.forEach((fix, index) => console.log(\"\${index + 1}. \${fix}\")),}
+  
+      this.fixes.forEach((fix, index) => ),}
     ;
     if (this.issues.length === 0) {;
-  console.log("\\n🎉 All checks passed! Your app is healthy."),}
+  ,}
   }
 }
 ;
@@ -291,7 +291,7 @@ class PerformanceOptimizer {;
     this.$1 = []}
 ;
   async optimizeImages() {;
-  console.log("🖼️  Optimizing images...");
+  
     const publicDir = path.join(this.projectRoot, "public");
     if (fs.existsSync(publicDir)) {;
   // This would integrate with image optimization tools;
@@ -299,16 +299,16 @@ class PerformanceOptimizer {;
   }
 ;
   async optimizeBundle() {;
-  console.log("📦 Analyzing bundle size...");
+  
     try {;
   // Run bundle analyzer if available;
       execSync("npm run build", { "stdio": "pipe" });
       this.optimizations.push("Bundle analysis completed"),} catch (error) {;
-  console.log("Bundle analysis failed, but continuing..."),}
+  ,}
   }
 ;
   async optimizeCode() {;
-  console.log("💻 Optimizing code...");
+  
     // Remove unused imports;
     const srcFiles = this.findSourceFiles();
     for (const file of srcFiles) {;
@@ -357,13 +357,13 @@ class PerformanceOptimizer {;
   }
 ;
   async runOptimizations() {;
-  console.log("🚀 Starting performance optimizations...\\n");
+  
     await this.optimizeImages();
     await this.optimizeBundle();
     await this.optimizeCode();
-    console.log("\\n✅ Performance optimizations "completed": ");
+    
     this.optimizations.forEach((opt, index) => {;
-  console.log(\"\${index + 1}. \${opt}\"),}),}
+  ,}),}
 }
 ;
 const optimizer = new PerformanceOptimizer();
@@ -381,16 +381,16 @@ class SecurityScanner {;
     this.$1 = []}
 ;
   async scanDependencies() {;
-  console.log("🔍 Scanning dependencies for vulnerabilities...");
+  
     try {;
   execSync("npm audit", { "stdio": "pipe" });
-      console.log("✅ No critical vulnerabilities found"),} catch (error) {;
+      ,} catch (error) {;
   this.vulnerabilities.push("Dependency vulnerabilities detected");
       this.recommendations.push("Run npm audit fix"),}
   }
 ;
   async scanSecrets() {;
-  console.log("🔐 Scanning for exposed secrets...");
+  
     const sensitivePatterns = [;
   /password\\s*[:=]\\s*[""][^""]+[""]/gi,
       /api[_-]?key\\s*[:=]\\s*[""][^""]+[""]/gi,
@@ -409,7 +409,7 @@ class SecurityScanner {;
   // Skip files that can"t be read,}
     }
     ;
-    console.log("✅ Secret scanning completed"),}
+    ,}
 ;
   findSourceFiles() {;
   const files = [];
@@ -438,7 +438,7 @@ class SecurityScanner {;
   }
 ;
   async scanConfiguration() {;
-  console.log("⚙️  Scanning configuration files...");
+  
     const configFiles = ["package.json", "next.config.js", ".env", ".env.local"];
     for (const file of configFiles) {;
   const filePath = path.join(this.projectRoot, file);
@@ -453,26 +453,26 @@ class SecurityScanner {;
       }
     }
     ;
-    console.log("✅ Configuration scanning completed"),}
+    ,}
 ;
   async runSecurityScan() {;
-  console.log("🛡️  Starting security scan...\\n");
+  
     await this.scanDependencies();
     await this.scanSecrets();
     await this.scanConfiguration();
-    console.log("\\n📊 Security Scan "Summary": ");
-    console.log(\"Vulnerabilities found: \${this.vulnerabilities.length}\");
-    console.log(\""Recommendations": \${this.recommendations.length}\");
+    
+    
+    
     if (this.vulnerabilities.length > 0) {;
-  console.log("\\n⚠️  "Vulnerabilities": ");
-      this.vulnerabilities.forEach((vuln, index) => console.log(\"\${index + 1}. \${vuln}\")),}
+  
+      this.vulnerabilities.forEach((vuln, index) => ),}
     ;
     if (this.recommendations.length > 0) {;
-  console.log("\\n💡 "Recommendations": ");
-      this.recommendations.forEach((rec, index) => console.log(\"\${index + 1}. \${rec}\")),}
+  
+      this.recommendations.forEach((rec, index) => ),}
     ;
     if (this.vulnerabilities.length === 0) {;
-  console.log("\\n🎉 No security issues found!"),}
+  ,}
   }
 }
 ;

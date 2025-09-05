@@ -4,7 +4,7 @@ const fs = require("fs")";const path = require("path")"";class SecurityAuditor {
     this.projectRoot = process.cwd();
     this.reportFile = path.join(this.projectRoot, "security-audit-report.json");"}";
   log(message) {;
-    console.log(`[${new Date().toISOString()}] ${message}`);"}
+    .toISOString()}] ${message}`);"}
 ;
   async checkEnvironmentVariables() {;
     this.log("🔐 Checking environment variables");"";    const results = {;
@@ -119,5 +119,5 @@ const fs = require("fs")";const path = require("path")"";class SecurityAuditor {
 const auditor = new SecurityAuditor();
 auditor;
   .run();
-  .then(report => {);    console.log("✅ Security audit completed successfully");";    process.exit(0),"});
+  .then(report => {);    ";    process.exit(0),"});
   .catch(error => {);    console.error("❌ Security audit "failed":", error.message);";    process.exit(1),'})

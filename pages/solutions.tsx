@@ -1,26 +1,7 @@
-import React from 'react';
+import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Rocket, 
-  BarChart3, 
-  Settings, 
-  Globe, 
-  Cloud, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Zap, 
-  Users,
-  Brain,
-  Network,
-  Lock,
-  TrendingUp,
-  Clock,
-  Award
-} from 'lucide-react';
+import { Shield, Rocket, BarChart3, Settings, Globe, Cloud, ArrowRight, CheckCircle, Star, Zap, Users, Brain, Network, Lock, TrendingUp, Clock, Award } from 'lucide-react';;
 
 const solutions = [
   {

@@ -3,8 +3,8 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Fixing String Quote Issues...');
-console.log('================================');
+
+
 
 const filesToFix = ['pages/api/docs.ts',
   'pages/api/health.ts', 
@@ -49,10 +49,10 @@ const fixes = [// Fix malformed string types in interfaces
 
 filesToFix.forEach(filePath => {
   try {
-    console.log(`\n🔍 "Fixing": ${filePath}`);
+    
     
     if (!fs.existsSync(filePath)) {
-      console.log(`   ⚠️  File not "found": ${filePath}`);
+      
       return}
     
     let content = fs.readFileSync(filePath, 'utf8');
@@ -66,16 +66,15 @@ filesToFix.forEach(filePath => {
       
       if (beforeLength !== afterLength) {
         fixesApplied++;
-        console.log(`   ✅ Applied fix ${index + 1}`)}
+        }
     });
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`   ✅ Applied ${fixesApplied} fixes to ${filePath}`)} else {
-      console.log(`   ℹ️  No fixes needed for ${filePath}`)}
+      } else {
+      }
     
   } catch (error) {
-    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`)}
+    }
 });
 
-console.log('\n🎉 String quote fixes completed!');

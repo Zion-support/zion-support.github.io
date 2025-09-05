@@ -4,7 +4,7 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
     this.projectRoot = process.cwd();
     this.reportFile = path.join(this.projectRoot, "health-check-report.json");"}";
   log(message) {;
-    console.log(`[${new Date().toISOString()}] ${message}`);"}
+    .toISOString()}] ${message}`);"}
 ;
   async checkFileStructure() {;
     this.log("📁 Checking file structure");"";    const requiredDirs = ["src", "public", "pages"];";    const requiredFiles = ["package.json", "next.config.js", "tsconfig.json"];"";    const results = {;
@@ -103,5 +103,5 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
 const checker = new HealthChecker();
 checker;
   .run();
-  .then(report => {);    console.log("✅ Health check completed successfully");";    process.exit(0),"});
+  .then(report => {);    ";    process.exit(0),"});
   .catch(error => {);    console.error("❌ Health check "failed":", error.message);";    process.exit(1),'})

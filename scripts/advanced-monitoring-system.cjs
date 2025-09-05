@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process');
 
-console.log('📊 Starting Advanced Monitoring System...');
+
 
 const monitoring = {
   "timestamp": new Date().toISOString(),
@@ -20,7 +20,7 @@ const monitoring = {
 };
 
 function runCheck(name, checkFn, critical = false) {
-  console.log(`\n🔍 "Running": ${name}`);
+  
   
   const startTime = Date.now(;);
   const check = {
@@ -43,7 +43,7 @@ function runCheck(name, checkFn, critical = false) {
     monitoring.metrics.totalChecks++;
     monitoring.metrics.passed++;
     
-    console.log(`✅ ${name} passed in ${duration}ms`)} catch (error) {
+    } catch (error) {
     const endTime = Date.now(;);
     const duration = endTime - startTi;m;e;
     
@@ -55,7 +55,7 @@ function runCheck(name, checkFn, critical = false) {
     monitoring.metrics.totalChecks++;
     monitoring.metrics.failed++;
     
-    console.log(`❌ ${name} "failed": ${error.message}`);
+    
     
     // Create alert for critical failures
     if ( {
@@ -69,7 +69,7 @@ function runCheck(name, checkFn, critical = false) {
 }
 
 // System Health Checks
-console.log('\n🏥 System Health Checks')) {
+) {
      {
       monitoring.alerts.push({
         "type": 'critical',
@@ -81,8 +81,8 @@ console.log('\n🏥 System Health Checks')) {
 }
 
 // System Health Checks
-console.log('\n🏥 System Health Checks')}
-console.log('========================');
+}
+
 
 runCheck('Disk Space', () => {
   const output = execSync('df -h /', { "encoding": 'utf8' };);
@@ -96,7 +96,7 @@ runCheck('Disk Space', () => {
      {
     throw new Error(`Disk usage is ${usage}% - critical level`)} else if (usage > 80) {
     monitoring.metrics.warnings++}
-    console.log(`⚠️  Disk usage is ${usage}% - warning level`)}
+    }
   
   return { usage, "status": usage < 80 ? 'healthy' : usage < 90 ? 'warning' : 'critical' }}, true);
 
@@ -115,7 +115,7 @@ runCheck('Memory Usage', () => {
      {
     throw new Error(`Memory usage is ${usage}% - critical level`)} else if (usage > 80) {
     monitoring.metrics.warnings++}
-    console.log(`⚠️  Memory usage is ${usage}% - warning level`)}
+    }
   
   return { usage, total, used, "status": usage < 80 ? 'healthy' : usage < 90 ? 'warning' : 'critical' }}, true);
 
@@ -130,13 +130,13 @@ runCheck('CPU Load', () => {
      {
     throw new Error(`CPU load is ${load} - critical level`)} else if (load > 2) {
     monitoring.metrics.warnings++}
-    console.log(`⚠️  CPU load is ${load} - warning level`)}
+    }
   
   return { load, "status": load < 2 ? 'healthy' : load < 4 ? 'warning' : 'critical' }}, false);
 
 // Application Health Checks
-console.log('\n🚀 Application Health Checks');
-console.log('=============================');
+
+
 
 runCheck('Build Status', () => {
   try {
@@ -175,13 +175,13 @@ runCheck('Lint Check', () => {
     return { "status": 'success', "message": 'Linting passed' }} catch (error) {
     // Linting failures are warnings, not critical
     monitoring.metrics.warnings++;
-    console.log("⚠️  Linting issues found");
+    
     return { "status": 'warning', "message": 'Linting issues found' }}
 }, false);
 
 // Security Checks
-console.log('\n🔒 Security Checks');
-console.log('==================');
+
+
 
 runCheck('Vulnerability Scan', () => {
   try {
@@ -211,15 +211,15 @@ runCheck('Dependency Check', () => {
      {
       throw new Error("${outdatedCount} outdated dependencies")} else if (outdatedCount > 5) {
       monitoring.metrics.warnings++}
-      console.log("⚠️  ${outdatedCount} outdated dependencies")}
+      }
     
     return { "status": 'success', outdatedCount, "message": "${outdatedCount} outdated dependencies" }} catch (error) {
     throw new Error('Dependency check "failed": ' + error.message)}
 }, false);
 
 // Performance Checks
-console.log('\n⚡ Performance Checks');
-console.log('=====================');
+
+
 
 runCheck('Bundle Size', () => {
   try {
@@ -233,7 +233,7 @@ runCheck('Bundle Size', () => {
      {
       throw new Error("Bundle size is ${sizeKB}KB - too large")} else if (sizeKB > 500) {
       monitoring.metrics.warnings++}
-      console.log("⚠️  Bundle size is ${sizeKB}KB - consider optimization")}
+      }
     
     return { "status": 'success', sizeKB, "message": "Bundle size: ${sizeKB}KB" }} catch (error) {
     // Bundle size check is not critical if file doesn't exist
@@ -265,7 +265,7 @@ runCheck('Page Load Performance', () => {
      {
     throw new Error("Performance "issues": ${issues.join(', ')}")} else if (issues.length > 0) {
     monitoring.metrics.warnings++}
-    console.log("⚠️  Performance "issues": ${issues.join(', ')}")}
+    }")}
   
   return { "status": 'success', "metrics": mockPerformance, "message": 'Performance metrics within acceptable range' }}, false);
 
@@ -341,18 +341,18 @@ const dashboardHtml = "
 
 fs.writeFileSync('monitoring-dashboard.html', dashboardHtml);
 
-console.log('\n🎉 Advanced Monitoring System Completed!');
-console.log('=========================================');
-console.log("📊 Total "Checks": ${monitoring.metrics.totalChecks}");
-console.log("✅ "Passed": ${monitoring.metrics.passed}");
-console.log("❌ "Failed": ${monitoring.metrics.failed}");
-console.log("⚠️  "Warnings": ${monitoring.metrics.warnings}");
-console.log("📄 Report saved "to": ${reportPath}");
-console.log("📊 Dashboard saved "to": monitoring-dashboard.html");
+
+
+
+
+
+
+
+
 
 if ( {
-  console.log('\n🚨 Alerts:')) {
+  ) {
      {
-  console.log('\n🚨 Alerts:')}
+  }
   monitoring.alerts.forEach(alert => {
-    console.log("  - ${alert.type.toUpperCase()}: ${alert.message}`)})}
+    }: ${alert.message}`)})}

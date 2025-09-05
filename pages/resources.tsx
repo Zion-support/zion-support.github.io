@@ -1,18 +1,7 @@
-import React from 'react';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  FileText, 
-  BarChart3, 
-  MessageSquare, 
-  Settings, 
-  ArrowRight,
-  CheckCircle,
-  BookOpen,
-  Video,
-  Download
-} from 'lucide-react';
+import Link from 'next/link';
 import Layout from '../components/Layout';
+import { FileText, BarChart3, MessageSquare, Settings, ArrowRight, CheckCircle, BookOpen, Video, Download } from 'lucide-react';;
 
 const resources = [
   {

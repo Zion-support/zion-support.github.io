@@ -30,7 +30,7 @@ class $1 {
   log(level, ...args) {
   const timestamp = new Date().toISOString();
     const message = "[${timestamp}] [${level.toUpperCase()}] ${args.join(" ")}";
-    console.log(message);
+    
     const logFile = path.join(this.logDir, "syntax-fixer.log");
     fs.appendFileSync(logFile, message + "\\n")}
 ;

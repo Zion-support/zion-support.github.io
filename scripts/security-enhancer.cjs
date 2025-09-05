@@ -9,7 +9,7 @@ class SecurityEnhancer {
   }
 
   async enhanceSecurity() {
-    console.log('🔒 Enhancing security...');
+    
     
     const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx']);
     const securityIssues = [];
@@ -30,7 +30,7 @@ class SecurityEnhancer {
     }
 
     this.saveReport(securityIssues);
-    console.log(`✅ Security enhancement completed! Found ${securityIssues.length} files with issues.`);
+    
   }
 
   findSecurityIssues(content, filePath) {

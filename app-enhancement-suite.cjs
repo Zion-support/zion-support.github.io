@@ -10,7 +10,7 @@ class AppEnhancementSuite {
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
+    .toISOString()}] ${message}`);
   }
 
   createPerformanceOptimizations() {
@@ -79,7 +79,7 @@ class AppEnhancementSuite {
       '  }',
       '',
       '  log(message) {',
-      "    console.log('[' + new Date().toISOString() + '] ' + message);",
+      "    .toISOString() + '] ' + message);",
       '  }',
       '',
       '  async monitorAppHealth() {',

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Comprehensive syntax fix...');
+
 
 const filesToFix = [
   '/workspace/pages/about.tsx',
@@ -48,14 +48,13 @@ filesToFix.forEach(filePath => {
     
     if (content !== fs.readFileSync(filePath, 'utf8')) {
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${path.relative('/workspace', filePath)}`);
+      }`);
       totalFixes++;
       modified = true;
     }
   }
 });
 
-console.log(`\n📊 Summary:`);
-console.log(`   Files processed: ${filesToFix.length}`);
-console.log(`   Files fixed: ${totalFixes}`);
-console.log('✨ Comprehensive syntax fix completed!');
+
+
+

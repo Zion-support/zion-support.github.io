@@ -3,7 +3,7 @@
 const fs = require('fs')
 const path = require('path')
 
-console.log('📊 Starting Real-time Monitoring...');
+
 
 function startMonitoring() {
   const monitoringData = {
@@ -45,6 +45,6 @@ function startMonitoring() {
 
   // Save monitoring data
   fs.writeFileSync('monitoring-data.json', JSON.stringify(monitoringData, null, 2));
-  console.log('✅ Monitoring started and data saved to monitoring-data.json')}
+  }
 
 startMonitoring();

@@ -21,7 +21,7 @@ class CriticalErrorFixer {
       'PROGRESS': '🔄'
     };
     
-    console.log(`${icons[type]} ${message}`)}
+    }
 
   fixFile(filePath) {
     try {

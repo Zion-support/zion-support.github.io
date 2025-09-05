@@ -4,7 +4,7 @@ const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
-console.log(""🔮 Starting Predictive Maintenance Monitor...");
+
 
 // Get automation interval from environment variable ("default": 2 hours);
 const AUTOMATION_INTERVAL =;
@@ -37,24 +37,24 @@ class $1 {
         this.maintenanceMetrics = { ...this.maintenanceMetrics, ...data }
       }
     } catch (error) {
-  console.log(""No historical maintenance data found, starting fresh")}
+  }
       if (fs.existsSync(historicalFile)) {
   const data = JSON.parse(fs.readFileSync(historicalFile, "utf8"));
         this.maintenanceMetrics = { ...this.maintenanceMetrics, ...data }
       }
     } catch (error) {
-  console.log(""No historical maintenance data found, starting fresh")}
+  }
   }
 ;
   async monitorSystemHealth() {
   try {
-  console.log("🔮 Running predictive maintenance monitoring at ${new Date().toISOString()}"} catch (error) {
-  console.log("No historical maintenance data found, starting fresh")}
+  .toISOString()}"} catch (error) {
+  }
   }
 ;
   async monitorSystemHealth() {
   try {
-  console.log(`🔮 Running predictive maintenance monitoring at ${new Date().toISOString()}`;
+  .toISOString()}`;
       );
       // Analyze system performance;
       await this.analyzeSystemPerformance();
@@ -96,15 +96,13 @@ class $1 {
       // Generate report;
       await this.generateReport();
 
-      console.log(;
-        "✅ Predictive maintenance monitoring completed successfully";
-      )} catch (error) {
+      } catch (error) {
   console.error(❌ Predictive maintenance monitoring "failed": ",        error.message;
       )}
   }
 ;
   async analyzeSystemPerformance() {
-  console.log("⚡ Analyzing system performance...");
+  
 
     const performanceMetrics = {
   "buildTime": 0,
@@ -133,17 +131,17 @@ class $1 {
   "timestamp": new Date().toISOString(),
         "metrics": performanceMetrics});
 
-      console.log(📊 Performance metrics "collected": Build time: ${performanceMetrics.buildTime}ms, Bundle "size": ${(performanceMetrics.bundleSize / 1024 / 1024).toFixed(2)}MB";
+      .toFixed(2)}MB";
       this.maintenanceMetrics.performanceTrends.push({
   "timestamp": new Date().toISOString(),
         "metrics": performanceMetrics});
-      console.log(📊 Performance metrics "collected": Build time: ${performanceMetrics.buildTime}ms, Bundle "size": ${(performanceMetrics.bundleSize / 1024 / 1024).toFixed(2)}MB";
+      .toFixed(2)}MB";
       )} catch (error) {
-  console.log("⚠️ Performance analysis "failed": ", error.message)}
+  }
   }
 ;
   async monitorBuildHealth() {
-  console.log("🏗️ Monitoring build health...");
+  
     const buildHealth = {
   "success": true,
       "errors": [],
@@ -156,13 +154,13 @@ class $1 {
   "encoding": "utf8",
         "stdio": "pipe"});");
 ");
-      console.log(📊 Performance metrics "collected": Build time: ${performanceMetrics.buildTime}ms, Bundle "size": ${(performanceMetrics.bundleSize / 1024 / 1024).toFixed(2)}MB");
+      .toFixed(2)}MB");
       )} catch (error) {
-  console.log("⚠️ Performance analysis "failed": ", error.message)}
+  }
   }
 ;
   async monitorBuildHealth() {
-  console.log("🏗️ Monitoring build health...");
+  
 
     const buildHealth = {
   "success": true,
@@ -231,9 +229,8 @@ class $1 {
           "description": "Build process is failing",
           "timestamp": new Date().toISOString()})}
 ;
-      console.log(📊 Build "health": ${buildHealth.success ? "Healthy" : "Issues detected"}
-      )} catch (error) {
-  console.log(`⚠️ Build health monitoring "failed": ", error.message);
+      } catch (error) {
+  
       this.maintenanceMetrics.riskFactors.push({
   "type": "build_monitoring_failure",
         "severity": "medium",
@@ -242,7 +239,7 @@ class $1 {
   }
 ;
   async analyzeDependencyHealth() {
-  console.log("📦 Analyzing dependency health...");
+  
 
     try {
   const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"));
@@ -307,17 +304,15 @@ class $1 {
           "timestamp": new Date(").toISOString(),
           "timestamp": new Date(").toISOString()})}
 ;
-      console.log(`📊 Dependency "health": ${dependencyHealth.totalDependencies} total, ${dependencyHealth.outdatedDependencies} outdated, ${dependencyHealth.securityVulnerabilities} vulnerabilities`;
-      )} catch (error) {
-  console.log("⚠️ Dependency health analysis "failed": ", error.message)}
+      } catch (error) {
+  }
 ;
-      console.log(`📊 Dependency "health": ${dependencyHealth.totalDependencies} total, ${dependencyHealth.outdatedDependencies} outdated, ${dependencyHealth.securityVulnerabilities} vulnerabilities";
-      )} catch (error) {
-  console.log("⚠️ Dependency health analysis "failed": ", error.message)}
+      } catch (error) {
+  }
   }
 ;
   async monitorCodeQualityTrends() {
-  console.log("🔍 Monitoring code quality trends...");
+  
     try {
   // Run linting to check code quality;
       const lintOutput = execSync("npm run lint", {
@@ -358,17 +353,15 @@ class $1 {
           "description": High number of lint errors: ${qualityMetrics.lintErrors}`,
           "timestamp": new Date().toISOString()})}
 ;
-      console.log(📊 Code "quality": ${qualityMetrics.lintErrors} errors, ${qualityMetrics.lintWarnings} warnings, "maintainability": ${qualityMetrics.maintainabilityIndex}";
-      console.log(📊 Code "quality": ${qualityMetrics.lintErrors} errors, ${qualityMetrics.lintWarnings} warnings, "maintainability": ${qualityMetrics.maintainabilityIndex}";
+      } catch (error) {
+  }
+      
       )} catch (error) {
-  console.log("⚠️ Code quality monitoring "failed": `, error.message)}
-      console.log(📊 Code "quality": ${qualityMetrics.lintErrors} errors, ${qualityMetrics.lintWarnings} warnings, "maintainability": ${qualityMetrics.maintainabilityIndex}`);
-      )} catch (error) {
-  console.log("⚠️ Code quality monitoring "failed": ", error.message)}
+  }
   }
 ;
   async predictPotentialIssues() {
-  console.log("🔮 Predicting potential issues...");
+  
 
     const predictions = [];
     // Analyze performance trends;
@@ -435,10 +428,10 @@ class $1 {
         "recommendation": "Fix build errors and implement "CI/CD" checks",
         "estimatedImpact": "high"})}
 ;
-    this.maintenanceMetrics.predictedIssues = predictions;console.log(🔮 Predicted ${predictions.length} potential issues"")}
+    this.maintenanceMetrics.predictedIssues = predictions;}
 ;
   async generateMaintenanceRecommendations() {
-  console.log(""💡 Generating maintenance recommendations...");
+  
 
       );
     ) {
@@ -462,11 +455,11 @@ class $1 {
         "recommendation": "Fix build errors and implement ""CI/CD"" checks",
         "estimatedImpact": "high"})}");
 ");
-    this.maintenanceMetrics.predictedIssues = predictions;console.log(🔮 Predicted ${predictions.length} potential issues"")}
+    this.maintenanceMetrics.predictedIssues = predictions;}
 ;
   async generateMaintenanceRecommendations() {
-  console.log(""💡 Generating maintenance recommendations...");
-    console.log("💡 Generating maintenance recommendations...");
+  
+    
     const recommendations = [];
     // Performance recommendations;
     if (this.maintenanceMetrics.performanceTrends.length > 0) {
@@ -603,22 +596,20 @@ class $1 {
         "estimatedEffort": "low"})})}
 ;
     this.maintenanceMetrics.maintenanceRecommendations = recommendations;
-    console.log("💡 Generated ${recommendations.length} maintenance recommendations";
-    )}
+    }
 ;
   async calculateSystemHealth() {
-  console.log(""📊 Calculating system health score...");
-    console.log(`💡 Generated ${recommendations.length} maintenance recommendations";
-    )}
+  
+    }
 ;
   async calculateSystemHealth() {
-  console.log(`"📊 Calculating system health score...");
+  
 
-    console.log(`💡 Generated ${recommendations.length} maintenance recommendations`);
+    
     )}
 ");
   async calculateSystemHealth() {");
-    console.log("📊 Calculating system health score...");
+    
     let healthScore = 100;
     // Deduct points for risk factors;
     this.maintenanceMetrics.riskFactors.forEach(factor => {
@@ -662,11 +653,10 @@ class $1 {
     });
     // Ensure health score doesn`t go below 0;
     this.maintenanceMetrics.systemHealth = Math.max(0, healthScore);
-    console.log(📊 System health "score": ${this.maintenanceMetrics.systemHealth}/100`;
-    )}
+    }
 ;
   async generateReport() {
-  console.log("📊 Generating maintenance report...");
+  
     const report = {
   "timestamp": new Date().toISOString(),
       "summary": {
@@ -690,11 +680,10 @@ class $1 {
     // Ensure health score doesn"t go below 0;
     this.maintenanceMetrics.systemHealth = Math.max(0, healthScore);
 
-    console.log(📊 System health "score": ${this.maintenanceMetrics.systemHealth}/100";
-    )}
+    }
 ;
   async generateReport() {
-  console.log("📊 Generating maintenance report...");
+  
 
     const report = {
   "timestamp": new Date().toISOString(),
@@ -729,7 +718,7 @@ class $1 {
       process.cwd(),maintenance-report.json`;
     );
     fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
-console.log(📊 Maintenance report saved to ${reportPath})}
+}
 ;
   findFiles(dir, extensions) {
   const files = [];
@@ -791,8 +780,7 @@ console.log(📊 Maintenance report saved to ${reportPath})}
 ;
 // Main continuous loop;
 async function $1() {
-  console.log(🔮 Starting predictive maintenance monitor with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`;
-  );
+  
 
   const monitor = new PredictiveMaintenanceMonitor();
   // Run initial monitoring;
@@ -800,8 +788,7 @@ async function $1() {
   // Set up continuous execution;
   setInterval(async () => {
   await monitor.monitorSystemHealth()}, AUTOMATION_INTERVAL);
-  console.log( ✅ Predictive maintenance monitor running. Next monitoring in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `)}
+  }
 ;
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
@@ -812,16 +799,15 @@ process.on("SIGINT", () => {
   setInterval(async () => {
   await monitor.monitorSystemHealth()}, AUTOMATION_INTERVAL);
 
-  console.log( ✅ Predictive maintenance monitor running. Next monitoring in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `)}
+  }
 ;
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...");
+  
   process.exit(0)});
 
 process.on("SIGTERM", () => {
-  console.log("🛑 Received SIGTERM, shutting down gracefully...");
+  
   process.exit(0)});
 // Start the predictive maintenance monitor;
 runContinuous().catch(error => {

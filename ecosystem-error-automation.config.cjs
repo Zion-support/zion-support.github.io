@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> origin/merge-pr-10635
 module.exports = {
   "apps": [// 🚨 Comprehensive Error Fixer - Main error fixing automation
     {
@@ -217,9 +212,5 @@ module.exports = {
       'post-deploy': 'npm install && pm2 reload ecosystem-error-automation.config.cjs --env production'
     }
   }
-<<<<<<< HEAD
 };
->>>>>>> origin/merge-pr-10629
-=======
 };
->>>>>>> origin/merge-pr-10635

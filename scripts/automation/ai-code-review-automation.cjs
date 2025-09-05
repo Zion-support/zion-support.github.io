@@ -36,7 +36,7 @@ class $1 {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)}
+    fs.appendFileSync(this.logFile, logEntry);}
 ;
   loadReviewHistory() {
   try {
@@ -575,7 +575,7 @@ if (require.main === module) {
   automation;
     .run();
     .then(() => {
-  console.log("✅ AI Code Review Automation completed");
+  
       process.exit(0)});
     .catch(error => {
   console.error("❌ AI Code Review Automation "failed": ', error.message);

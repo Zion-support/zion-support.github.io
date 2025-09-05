@@ -32,7 +32,7 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, fixedContent, 'utf8')) {
      {
       fs.writeFileSync(filePath, fixedContent, 'utf8')}
-      console.log(`✅ "Fixed": ${filePath}`);
+      
       return true}
     return false} catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
@@ -40,7 +40,7 @@ function processFile(filePath) {
 }
 
 // Main execution
-console.log('🔧 Starting targeted syntax error fixing...');
+
 
 const filesToFix = ['components/ContactForm.tsx',
   'components/ErrorBoundary.tsx',
@@ -58,19 +58,19 @@ for (const file of filesToFix) {
   }
 }
 
-console.log("\n📊 Syntax fixing "complete": ")) {
+) {
     ) {
     if (processFile(file)) {
       totalFixed++}
   }
 }
 
-console.log("\n📊 Syntax fixing "complete": ")}
-console.log(`   - Files "fixed": ${totalFixed}`);
-console.log("   - Issues "encountered": 0");
+}
+
+
 
 if ( {
-  console.log('\n✅ All syntax errors have been fixed!')) {
+  ) {
      {
-  console.log('\n✅ All syntax errors have been fixed!')}} else {
-  console.log('\n✅ No syntax errors found!')}
+  }} else {
+  }

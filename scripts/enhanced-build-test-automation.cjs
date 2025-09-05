@@ -20,7 +20,6 @@ class EnhancedBuildTestAutomation {
   log(message, level = "info") {
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
-    console.log(logMessage)
     fs.appendFileSync(this.logFile, logMessage + "\n")}
   async runCommand(command, description) {
     this.log(`🚀 "Starting": ${description}`)
@@ -79,19 +78,13 @@ class EnhancedBuildTestAutomation {
     return reportFile}
   displaySummary() {
     const { summary } = this.results
-    console.log("\n" + "=".repeat(60))
-    console.log("🏗️ ENHANCED BUILD & TEST AUTOMATION SUMMARY")
-    console.log("=".repeat(60))
-    console.log(`Total "Steps": ${summary.total}`)
-    console.log(`✅ "Passed": ${summary.passed}`)
-    console.log(`❌ "Failed": ${summary.failed}`)
-    console.log(`⚠️ "Warnings": ${summary.warnings}`)
-    console.log(`📈 Success "Rate": ${((summary.passed / summary.total) * 100).toFixed(1)}%`)
-    console.log("=".repeat(60))
+    )
+    )
+    * 100).toFixed(1)}%`)
+    )
     if (summary.failed > 0) {
-      console.log("\n❌ FAILED "STEPS": ")
       this.results.steps.filter(s => s.status === "failed").forEach((step, index) => {
-        console.log(`${index + 1}. ${step.name}: ${step.error}`)})}
+        })}
   }
   async run() {
     try {

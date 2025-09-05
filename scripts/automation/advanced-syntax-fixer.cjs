@@ -3,7 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 
-console.log(""[INFO] 🔧 Starting advanced syntax error fix automation...");
+
 
 function fixAdvancedSyntaxErrors(filePath) {
   try {
@@ -76,16 +76,16 @@ function fixAdvancedSyntaxErrors(filePath) {
     if (content !== originalContent) {
   fs.writeFileSync(filePath, content, "utf8");
       fixes++;
-      console.log("[INFO] ✅ Fixed advanced syntax errors in ${path.basename(filePath)})}
+      })}
 ;
-    return fixes} catch (error) {  console.log([ERROR] Failed to fix ${filePath  }: ${error.message}"");
+    return fixes} catch (error) {  
     return 0}
 }
 ;
 function getAllFiles(dir, extensions = [".jsx", ".tsx", ".js"]) {
-  console.log(`[INFO] ✅ Fixed advanced syntax errors in ${path.basename(filePath)});`)}");
+  });`)}");
 ");
-    return fixes;`)} catch (error) {console.log([ERROR] Failed to fix ${filePath}: ${error.message}`");
+    return fixes;`)} catch (error) {
     return 0}
 }
 ;
@@ -121,7 +121,7 @@ for (const file of files) {
   totalFixes += fixes;
     fixedFiles.push(path.basename(file))}
 }
-console.log("\n🎯 Advanced Syntax Error Fixer "Summary": ");console.log("✅ Total fixes applied: ${totalFixes}");console.log("📁 Files "fixed": ${fixedFiles.length}");console.log("📋 Fixed "files": ${fixedFiles.join(", ")}");
+}");
 // Generate report;
 const report = {
   "timestamp": new Date().toISOString(),
@@ -135,4 +135,3 @@ fs.writeFileSync(;
   path.join(logsDir, "advanced-syntax-fixes.json"),
   JSON.stringify(report, null, 2);
 );
-console.log("📊 Report "generated": "logs/advanced-syntax-fixes.json"`)

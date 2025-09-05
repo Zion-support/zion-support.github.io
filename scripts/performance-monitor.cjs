@@ -24,7 +24,7 @@ class PerformanceMonitor {
       'WARNING': '⚠️',
       'PERFORMANCE': '⚡'
     }[type] || 'ℹ️';
-    console.log(`[${timestamp}] [${type}] ${emoji} ${message}`);
+    
   }
 
   async measureBuildTime() {
@@ -239,20 +239,20 @@ class PerformanceMonitor {
     this.log('\n📊 Performance Report', 'PERFORMANCE');
     this.log('=' .repeat(50));
     
-    console.log(`\n⚡ Performance Score: ${this.metrics.performanceScore}/100`);
-    console.log(`📦 Bundle Size: ${this.metrics.bundleSize}kB`);
-    console.log(`⏱️  Build Time: ${this.metrics.buildTime}ms`);
-    console.log(`📄 Pages: ${this.metrics.pageCount}`);
-    console.log(`📊 Total Size: ${this.metrics.totalSize}kB`);
+    
+    
+    
+    
+    
     
     if (this.recommendations.length > 0) {
-      console.log('\n🔧 Recommendations:');
+      
       this.recommendations.forEach((rec, index) => {
         const priority = rec.priority === 'high' ? '🔴' : rec.priority === 'medium' ? '🟡' : '🟢';
-        console.log(`   ${index + 1}. ${priority} ${rec.message}`);
+        
         
         if (rec.details && rec.details.length > 0) {
-          console.log(`      Details: ${rec.details.map(d => d.file || d).join(', ')}`);
+          .join(', ')}`);
         }
       });
     } else {
@@ -266,7 +266,7 @@ class PerformanceMonitor {
     if (this.metrics.performanceScore < 70) grade = 'D';
     if (this.metrics.performanceScore < 60) grade = 'F';
     
-    console.log(`\n🏆 Performance Grade: ${grade}`);
+    
   }
 
   async run() {

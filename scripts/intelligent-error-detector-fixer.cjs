@@ -18,7 +18,6 @@ class IntelligentErrorDetectorFixer {
   log(message, level = "info") {
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
-    console.log(logMessage)
     fs.appendFileSync(this.logFile, logMessage + "\n")}
   initializeErrorPatterns() {
     return {
@@ -129,21 +128,16 @@ class IntelligentErrorDetectorFixer {
     recommendations.push({"type": "improvement","message": "Consider adding pre-commit hooks to catch errors early."})
     return recommendations}
   displaySummary() {
-    console.log("\n" + "=".repeat(60))
-    console.log("🔍 INTELLIGENT ERROR DETECTOR & FIXER SUMMARY")
-    console.log("=".repeat(60))
-    console.log(`Errors "Found": ${this.errors.length}`)
-    console.log(`Fixes "Applied": ${this.fixes.length}`)
-    console.log(`Files "Scanned": ${this.findSourceFiles().length}`)
-    console.log("=".repeat(60))
+    )
+    )
+    .length}`)
+    )
     if (this.errors.length > 0) {
-      console.log("\n❌ ERRORS "FOUND": ")
       this.errors.forEach((error, index) => {
-        console.log(`${index + 1}. ${error.type}: ${error.message}`)})}
+        })}
     if (this.fixes.length > 0) {
-      console.log("\n✅ FIXES "APPLIED": ")
       this.fixes.forEach((fix, index) => {
-        console.log(`${index + 1}. ${fix.file}: ${fix.description}`)})}
+        })}
   }
   async run() {
     try {

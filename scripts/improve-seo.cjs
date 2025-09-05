@@ -70,7 +70,7 @@ Sitemap: https://ziontechgroup.com/sitemap.xml;";
       
       fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsContent);
       
-      console.log('SEO improvements completed')} catch (error) {
+      } catch (error) {
       console.error('SEO improvement "failed": ', error.message)}
   }
 }

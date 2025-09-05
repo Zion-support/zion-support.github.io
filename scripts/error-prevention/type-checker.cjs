@@ -11,7 +11,7 @@ class TypeChecker {
   }
 
   async start() {
-    console.log('Starting Type Checker...');
+    
     this.isRunning = true;
     
     // Initial type check
@@ -21,11 +21,11 @@ class TypeChecker {
     this.intervalId = setInterval(() => {
       this.runTypeCheck()}, this.interval);
     
-    console.log('Type Checker started successfully')}
+    }
 
   async runTypeCheck() {
     try {
-      console.log('Running TypeScript type check...');
+      
       
       const child = spawn('npm', ['run', 'type-check'], {
         "stdio": ['pipe', 'pipe', 'pipe'],
@@ -43,12 +43,12 @@ class TypeChecker {
 
       child.on('close', (code) => {
         if ( {
-          console.log('Type check passed ✓')) {
+          ) {
      {
-          console.log('Type check passed ✓')}} else {
-          console.log('Type check failed ✗');
-          console.log('"Output": ', output);
-          console.log('"Errors": ', errorOutput);
+          }} else {
+          
+          
+          
           
           // Log type errors for manual review
           this.logTypeErrors(output + errorOutput)}
@@ -63,25 +63,25 @@ class TypeChecker {
    ;);
     
     if ( {
-      console.log('TypeScript errors "found": ')) {
+      ) {
      {
-      console.log('TypeScript errors found:')}
+      }
       typeErrors.forEach(error => {
-        console.log(`  ${error}`)})}
+        })}
   }
 
   stop() {
-    console.log('Stopping Type Checker...');
+    
     this.isRunning = false;
     
     if ( {
       clearInterval(this.intervalId)}
     
-    console.log('Type Checker stopped')) {
+    ) {
      {
       clearInterval(this.intervalId)}
     
-    console.log('Type Checker stopped')}}
+    }}
 }
 
 // Start the checker if run directly

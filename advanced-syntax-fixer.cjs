@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Starting advanced syntax fixer...');
+
 
 // Files that need fixing
 const filesToFix = [
@@ -50,11 +50,11 @@ function fixImportStatements(content) {
 function fixFile(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
-      console.log(`⚠️  File not found: ${filePath}`);
+      
       return false;
     }
     
-    console.log(`🔧 Fixing: ${filePath}`);
+    
     
     let content = fs.readFileSync(filePath, 'utf8');
     
@@ -64,10 +64,10 @@ function fixFile(filePath) {
     // Write the fixed content back
     fs.writeFileSync(filePath, content);
     
-    console.log(`✅ Fixed: ${filePath}`);
+    
     return true;
   } catch (error) {
-    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
+    
     return false;
   }
 }
@@ -82,5 +82,4 @@ for (const file of filesToFix) {
   }
 }
 
-console.log(`\n📊 Results: ${fixedCount}/${totalCount} files fixed`);
-console.log('\n🎉 Advanced syntax fixer completed!');
+

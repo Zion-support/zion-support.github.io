@@ -10,7 +10,7 @@ class DependencyOptimizer {
   }
 
   async optimizeDependencies() {
-    console.log('📦 Optimizing dependencies...');
+    
     
     try {
       // Check for outdated packages
@@ -30,7 +30,7 @@ class DependencyOptimizer {
       };
       
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-      console.log('✅ Dependency optimization completed!');
+      
       
     } catch (error) {
       console.error('❌ Dependency optimization failed:', error.message);

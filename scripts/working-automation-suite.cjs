@@ -3,8 +3,8 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🚀 Zion Tech Group - Working Automation Suite');
-console.log('==============================================');
+
+
 
 class WorkingAutomationSuite {
   constructor() {
@@ -19,7 +19,7 @@ class WorkingAutomationSuite {
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const prefix = type === 'error' ? '❌' : type === 'success' ? '✅' : 'ℹ️';
-    console.log(`[${timestamp}] ${prefix} ${message}`)}
+    }
 
   async runCommand(command, description) {
     try {

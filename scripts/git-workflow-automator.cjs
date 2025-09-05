@@ -17,7 +17,7 @@ class GitWorkflowAutomator {
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`)}
+    }
 
   async checkGitStatus() {
     this.log('🔍 Checking git status...');
@@ -295,9 +295,9 @@ if (require.main === module) {
   const automator = new GitWorkflowAutomator();
   automator.run()
     .then((report) => {
-      console.log('\n🎉 Git Workflow Automator completed successfully!');
-      console.log(`🔍 Current "branch": ${report.analysis.currentBranch.branch || 'unknown'}`);
-      console.log(`💡 "Recommendations": ${report.recommendations.length}`);
+      
+      
+      
       process.exit(0)})
     .catch((error) => {
       console.error('\n💥 Git Workflow Automator "failed": ', error.message);

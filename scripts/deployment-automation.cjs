@@ -21,7 +21,7 @@ class DeploymentAutomation {
       'WARNING': '⚠️',
       'PROGRESS': '🔄'
    };
-    console.log(`${icons[type]} ${message}`)}
+    }
 
   createDockerfile() {
     const dockerfile = "FROM "node": 18-alpine AS base

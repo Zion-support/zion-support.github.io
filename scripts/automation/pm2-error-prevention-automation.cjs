@@ -35,7 +35,7 @@ class $1 {
     const logMessage = `[${timestamp}] ${message}\n`;
     if (isError) {
   fs.appendFileSync(this.errorLogFile, logMessage);console.error(`[ERROR] ${message}`)} else {
-  fs.appendFileSync(this.logFile, logMessage);console.log(`[INFO] ${message}`)}
+  fs.appendFileSync(this.logFile, logMessage);}
   }
 ;
   async runTypeCheck() {

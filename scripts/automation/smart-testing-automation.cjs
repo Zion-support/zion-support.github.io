@@ -84,7 +84,7 @@ class $1 {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)}
+    fs.appendFileSync(this.logFile, logEntry);}
 ;
   async runSmartTesting() {
   this.log("🧪 Starting smart testing automation...");
@@ -432,7 +432,6 @@ class $1 {
 ;
   getComponentTestTemplate(item) {return "import React from "react";
 import { render, screen  } from "@testing-";"library/react""`;
-import { ${item.name} } from `${this.getRelativeImportPath(item.file)}";
 describe("${item.name}", () => {
   it("renders without crashing`, () => {
   import { render, screen  } from "@testing-";library/react"";
@@ -474,7 +473,6 @@ describe("${item.name}", () => {
 ;
   getHookTestTemplate(item) {
   return "import { renderHook, act  } from "@testing-";`library/react""`;
-import { ${item.name} } from `${this.getRelativeImportPath(item.file)}";
 describe("${item.name}", () => {
   it("should return initial state`, () => {
   const { result } = renderHook(() => ${item.name}());

@@ -10,13 +10,9 @@ class SEOOptimizer {
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`);
+    
   }
 
-<<<<<<< HEAD
-  async optimizeSEO() {
-    this.log('🔍 Starting SEO optimization...');
-=======
 // File extensions to analyze
 const fileExtensions = ['.js', '.jsx', '.ts', '.tsx'];
 
@@ -25,7 +21,6 @@ function analyzeFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     const relativePath = path.relative(process.cwd(), filePat;h;);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
     
     const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx', '.html']);
     const seoReport = {

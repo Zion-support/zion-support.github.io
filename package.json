@@ -182,7 +182,7 @@
     "monitor:health": "node scripts/health-monitor-enhanced.cjs",
     "audit:security": "node scripts/security-audit-enhanced.cjs",
     "optimize:ux": "node scripts/ux-optimizer.cjs",
-    "improve:all": "bash scripts/comprehensive-app-improvements.sh",
+    "improve:all": "node automation/comprehensive-app-improvement.cjs",
     "automation:safe": "bash scripts/run-safe-automations.sh",
     "ci:smoke": "npm run build && npm run test:smoke",
     "ci:consolidated": "bash scripts/ci-consolidated.sh",
@@ -191,7 +191,13 @@
     "quick:test": "bash scripts/quick-test.sh",
     "deploy:app": "bash scripts/deploy.sh",
     "health:check": "bash scripts/health-check.sh",
-    "build:production": "NODE_ENV=production npm run build"
+    "build:production": "NODE_ENV=production npm run build",
+    "error:detect": "node automation/intelligent-error-detector.cjs",
+    "automation:enhanced": "node automation/enhanced-master-automation-orchestrator.cjs",
+    "optimize:images": "node scripts/optimize-images.js",
+    "analyze:bundle": "npm run build && npx @next/bundle-analyzer",
+    "test:accessibility": "npx jest --testPathPattern=accessibility",
+    "test:performance": "npx jest --testPathPattern=performance"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
@@ -200,7 +206,6 @@
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
     "@hookform/resolvers": "^5.2.1",
-    "@magneticwatermelon/mcp-toolkit": "^1.1.4",
     "@modelcontextprotocol/sdk": "^1.17.1",
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",

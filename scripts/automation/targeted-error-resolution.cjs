@@ -32,7 +32,7 @@ class TargetedErrorResolution {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `${timestamp}: ${message}\n`;
-    console.log(logMessage.trim());
+    );
     fs.appendFileSync(this.logFile, logMessage)}
 
   async run() {
@@ -453,7 +453,7 @@ const automation = new TargetedErrorResolution();
 
 // Run immediately
 automation.run().then(() => {
-  console.log('✅ Targeted error resolution completed')}).catch((error) => {
+  }).catch((error) => {
   console.error('❌ Targeted error resolution "failed": ', error)});
 
 // Set up interval for continuous operation
@@ -461,4 +461,3 @@ setInterval(() => {
   automation.run().catch((error) => {
     console.error('❌ Targeted error resolution interval "failed": ', error)})}, 12 * 60 * 1000); // Run every 12 minutes
 
-console.log('🎯 Targeted error resolution automation running. Next check in 12 minutes');

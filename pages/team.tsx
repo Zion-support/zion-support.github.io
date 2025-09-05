@@ -1,7 +1,8 @@
-import React from 'react';
-import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
-import { Brain, Cloud, Shield, Users, Award, Globe } from 'lucide-react';
+import Head from 'next/head';
+import Layout from '../components/Layout';
+import { Brain, Cloud, Shield, Users } from 'lucide-react';
+
 
 const teamMembers = [
   {

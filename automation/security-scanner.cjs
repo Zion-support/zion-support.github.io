@@ -3,7 +3,7 @@
 const fs = require('fs');
 const { execSync } = require('child_process');
 
-console.log('🔒 Starting Security Scan...');
+
 
 const report = {
   "timestamp": new Date().toISOString(),
@@ -47,4 +47,4 @@ if (found.length) report.overallStatus = 'warning';
 
 const out = `security-scan-report-${Date.now()}.json`;
 fs.writeFileSync(out, JSON.stringify(report, null, 2));
-console.log(`✅ Security scan completed. "Report": ${out}`);
+

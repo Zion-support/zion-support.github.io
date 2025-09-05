@@ -15,7 +15,6 @@ class ErrorMonitor {
   log(level, message) {
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
-    console.log(logMessage)
     // Write to log file
     const logFile = path.join(this.logDir, "error-monitor.log")
     fs.appendFileSync(logFile, logMessage + "\n")}
@@ -117,7 +116,7 @@ class ErrorMonitor {
     const logEntry = `[${timestamp}] [${level}] ${message}\n`
     try {
       await fs.appendFile(this.logFile, logEntry)
-      console.log(logEntry.trim())} catch (error) {
+      )} catch (error) {
       console.error("Failed to write to log "file": ", error)}
   }
   async checkBuildErrors() {
@@ -251,10 +250,6 @@ if (require.main === module) {
   const errorMonitor = new ErrorMonitor()
   errorMonitor.run()
     .then(report => {
-      console.log("\n=== Error Monitoring Results ===")
-      console.log(`Total "Issues": ${report.summary.totalIssues}`)
-      console.log(`Critical "Issues": ${report.summary.criticalIssues}`)
-      console.log(`"Warnings": ${report.summary.warnings}`)
       process.exit(report.summary.criticalIssues > 0 ? 1 : 0)})
     .catch(error => {
       console.error("Error monitoring "failed": ", error)

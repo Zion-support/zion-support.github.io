@@ -10,7 +10,7 @@ function fixTeamPage() {
   const filePath = './pages/team.tsx';
   
   if (!fs.existsSync(filePath)) {
-    console.log('❌ Team page not found');
+    
     return false}
 
   let content = fs.readFileSync(filePath, 'utf8');
@@ -292,7 +292,7 @@ export default function Team() {
   )}";
 
   fs.writeFileSync(filePath, fixedContent, 'utf8');
-  console.log('✅ Team page fixed successfully');
+  
   return true}
 
 if (require.main === module) {

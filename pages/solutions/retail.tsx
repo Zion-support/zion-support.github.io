@@ -1,6 +1,6 @@
-import React from 'react';
 import Layout from '../../components/Layout';
-import { ShoppingCart, Users, BarChart, Smartphone, Package, CheckCircle, ArrowRight } from 'lucide-react';
+import { ShoppingCart, Users, BarChart, Smartphone, Package } from 'lucide-react';
+
 
 const features = [
   {

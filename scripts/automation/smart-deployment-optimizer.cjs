@@ -4,7 +4,7 @@ const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
-console.log(""🚀 Starting Smart Deployment Optimizer...");
+
 
 // Get automation interval from environment variable ("default": 6 hours);
 const AUTOMATION_INTERVAL =;
@@ -36,24 +36,24 @@ class $1 {
         this.deploymentMetrics = { ...this.deploymentMetrics, ...data }
       }
     } catch (error) {
-  console.log(""No historical deployment data found, starting fresh")}
+  }
       if (fs.existsSync(historicalFile)) {
   const data = JSON.parse(fs.readFileSync(historicalFile, "utf8"));
         this.deploymentMetrics = { ...this.deploymentMetrics, ...data }
       }
     } catch (error) {
-  console.log(""No historical deployment data found, starting fresh")}
+  }
   }
 ;
   async optimizeDeployment() {
   try {
-  console.log("🚀 Running smart deployment optimization at ${new Date().toISOString()}"} catch (error) {
-  console.log("No historical deployment data found, starting fresh")}
+  .toISOString()}"} catch (error) {
+  }
   }
 ;
   async optimizeDeployment() {
   try {
-  console.log(`🚀 Running smart deployment optimization at ${new Date().toISOString()}`;
+  .toISOString()}`;
       );
       // Analyze current build configuration;
       await this.analyzeBuildConfiguration();
@@ -67,7 +67,7 @@ class $1 {
       await this.testOptimizedBuild();
       // Generate report;
       await this.generateReport();
-      console.log("✅ Smart deployment optimization completed successfully")} catch (error) {
+      } catch (error) {
   console.error("❌ Smart deployment optimization "failed": ", error.message)}
       );
 
@@ -89,12 +89,12 @@ class $1 {
       // Generate report;
       await this.generateReport();
 
-      console.log("✅ Smart deployment optimization completed successfully")} catch (error) {
+      } catch (error) {
   console.error("❌ Smart deployment optimization "failed": ", error.message)}
   }
 ;
   async analyzeBuildConfiguration() {
-  console.log("🔍 Analyzing build configuration...");
+  
 
     // Analyze Vite configuration;
     const viteConfigPath = path.join(process.cwd(), "vite.config.ts");
@@ -108,7 +108,7 @@ class $1 {
         "hasCodeSplitting": viteConfig.includes("rollupOptions"),
         "hasSourceMaps": viteConfig.includes("sourcemap")}
 ;
-      console.log("📊 Vite configuration "analysis": ", analysis);
+      
       // Suggest improvements;
       if (!analysis.hasOptimization) {
   this.deploymentMetrics.optimizationSuggestions.push({
@@ -152,10 +152,10 @@ class $1 {
   }
 ;
   async optimizeBundleSize() {
-  console.log("📦 Optimizing bundle size...");
+  
     try {
   async optimizeBundleSize() {
-  console.log("📦 Optimizing bundle size...");
+  
 
     try {
   // Run build to analyze current bundle size;
@@ -175,12 +175,12 @@ class $1 {
           "size": bundleSize,
           "files": this.countFiles(distPath)});
 
-        console.log(📊 Current bundle "size": ${(bundleSize / 1024 / 1024`).toFixed(2)} MB";
+        .toFixed(2)} MB";
         this.deploymentMetrics.bundleSizes.push({
   "timestamp": new Date().toISOString(),
           "size": bundleSize,
           "files": this.countFiles(distPath)});
-        console.log(📊 Current bundle "size": ${(bundleSize / 1024 / 1024").toFixed(2)} MB";
+        .toFixed(2)} MB";
         );
         // Check for optimization opportunities;
         if (bundleSize > 2 * 1024 * 1024) {
@@ -192,17 +192,17 @@ class $1 {
             "action": "Implement code splitting and lazy loading"})}
       }
     } catch (error) {
-  console.log(""⚠️ Build analysis "failed": ", error.message)}
+  }
   }
 ;
   async analyzeDeploymentPatterns() {
-  console.log("📈 Analyzing deployment patterns...");
+  
     // Calculate deployment frequency;
     const recentDeployments = this.deploymentMetrics.buildTimes.filter(;
       build =>;
         new Date(build.timestamp) >});");
 ");
-        console.log(📊 Current bundle "size": ${(bundleSize / 1024 / 1024").toFixed(2)} MB";
+        .toFixed(2)} MB";
         );
 
         // Check for optimization opportunities;
@@ -215,11 +215,11 @@ class $1 {
             "action": "Implement code splitting and lazy loading"})}
       }
     } catch (error) {
-  console.log(""⚠️ Build analysis "failed": ", error.message)}
+  }
   }
 ;
   async analyzeDeploymentPatterns() {
-  console.log("📈 Analyzing deployment patterns...");
+  
 
     // Calculate deployment frequency;
     const recentDeployments = this.deploymentMetrics.buildTimes.filter(;
@@ -238,15 +238,15 @@ class $1 {
     this.deploymentMetrics.successRate =;
       totalBuilds > 0 ? (successfulBuilds / totalBuilds) * 100 : 0;
 
-    console.log(📊 Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}";
+    : ${this.deploymentMetrics.deploymentFrequency}";
     this.deploymentMetrics.successRate =;
       totalBuilds > 0 ? (successfulBuilds / totalBuilds) * 100 : 0;
-    console.log(📊 Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}";
+    : ${this.deploymentMetrics.deploymentFrequency}";
       totalBuilds > 0 ? (successfulBuilds / totalBuilds) * 100 : 0;");
 `);
-    console.log(📊 Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}`);
+    : ${this.deploymentMetrics.deploymentFrequency}`);
     );
-    console.log( 📊 Success "rate": ${this.deploymentMetrics.successRate.toFixed(2)}%;
+    }%;
     );
     // Analyze build time trends;
     if (this.deploymentMetrics.buildTimes.length > 1) {
@@ -275,7 +275,7 @@ class $1 {
   }
 ;
   async generateOptimizationRecommendations() {
-  console.log("💡 Generating optimization recommendations...");
+  
     // Bundle size recommendations;
     const latestBundleSize =;
       this.deploymentMetrics.bundleSizes[// Bundle size recommendations;
@@ -324,19 +324,19 @@ if (latestBundleSize && latestBundleSize.size > 1024 * 1024) {
   }
 ;
   async testOptimizedBuild() {
-  console.log("🧪 Testing optimized build..."");
+  
     try {      // Run type checking;
       execSync("npm run type-check", { "stdio": "pipe" });
-      console.log(""✅ Type checking passed");
+      
 
       // Run linting;
-      console.log("✅ Type checking passed");
+      
       // Run linting;
       execSync("npm run lint", { "stdio": "pipe" });
-      console.log("✅ Linting passed");
+      
       // Run linting;
       execSync("npm run lint", { "stdio": "pipe" });
-      console.log("✅ Linting passed");
+      
 
       // Test build output;
       const distPath = path.join(process.cwd(), "dist");
@@ -365,11 +365,11 @@ if (latestBundleSize && latestBundleSize.size > 1024 * 1024) {
         }
       }
     } catch (error) {
-  console.log(`⚠️ Build testing "failed": ", error.message)}
+  }
   }
 ;
   async generateReport() {
-  console.log("📊 Generating deployment optimization report..."");
+  
     const report = {
   "timestamp": new Date().toISOString(),
       "summary": {
@@ -393,11 +393,11 @@ if (latestBundleSize && latestBundleSize.size > 1024 * 1024) {
     // Also save latest report;
     const latestReportPath = path.join(;
       process.cwd(),deployment-optimization-report.json"} catch (error) {
-  console.log("⚠️ Build testing "failed": ", error.message)}
+  }
   }
 ;
   async generateReport() {
-  console.log("📊 Generating deployment optimization report..."`);
+  
 
     const report = {
   "timestamp": new Date().toISOString(),
@@ -429,7 +429,7 @@ if (latestBundleSize && latestBundleSize.size > 1024 * 1024) {
       process.cwd(),deployment-optimization-report.json`;
     );
 fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
-console.log(`📊 Deployment optimization report saved to ${reportPath})}
+}
 ;
   calculateBundleSize(dir) {
   let totalSize = 0;
@@ -501,13 +501,10 @@ return latest ? latest.size : 0}
 ;
 // Main continuous loop;
 async function $1() {
-  console.log(🚀 Starting smart deployment optimizer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals";
-// Main continuous loop;
-async function runContinuous() {
-  console.log(🚀 Starting smart deployment optimizer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`;
-// Main continuous loop");
+  {
+  
 async function runContinuous() {");
-  console.log(🚀 Starting smart deployment optimizer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  
   );
 
   const optimizer = new SmartDeploymentOptimizer();
@@ -516,21 +513,20 @@ async function runContinuous() {");
   // Set up continuous execution;
   setInterval(async () => {
   await optimizer.optimizeDeployment()}, AUTOMATION_INTERVAL);
-  console.log( ✅ Smart deployment optimizer running. Next optimization in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `)}
+  }
 ;
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...");
+  
   ")}
 ;
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...");
+  
   process.exit(0)});
 
 process.on("SIGTERM", () => {
-  console.log("🛑 Received SIGTERM, shutting down gracefully...");
+  
   process.exit(0)});
 // Start the smart deployment optimizer;
 runContinuous().catch(error => {

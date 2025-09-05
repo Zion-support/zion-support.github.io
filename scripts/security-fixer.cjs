@@ -11,7 +11,7 @@ class SecurityFixer {
     this.fixes = []}
 
   log(message) {
-    console.log(`[Security Fixer] ${message}`)}
+    }
 
   async runSecurityFixes() {
     this.log('🔒 Starting Security Fixes');

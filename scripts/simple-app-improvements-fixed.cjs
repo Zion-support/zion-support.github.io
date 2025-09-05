@@ -4,8 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🚀 Simple App Improvements System');
-console.log('=================================');
+
+
 
 class SimpleAppImprovements {
   constructor() {
@@ -17,7 +17,7 @@ class SimpleAppImprovements {
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logEntry);
+    
   }
 
   async runCommand(command, description) {

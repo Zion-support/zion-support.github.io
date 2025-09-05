@@ -2,8 +2,6 @@
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-console.log('🔧 Comprehensive Syntax Fixer v2.0')
-console.log('=====================================')
 class ComprehensiveSyntaxFixer {
   constructor() {
     this.fixedFiles = []
@@ -157,13 +155,11 @@ class ComprehensiveSyntaxFixer {
       if (hasChanges) {
         fs.writeFileSync(filePath, fixedContent, 'utf8')
         this.fixedFiles.push(filePath)
-        console.log(`✅ "Fixed": ${filePath}`)
         return true
       }
       return false
     } catch (error) {
       this.errors.push({ "file": filePath, "error": error.message })
-      console.log(`❌ Error fixing ${filePath}: ${error.message}`)
       return false
     }
   }
@@ -210,26 +206,19 @@ class ComprehensiveSyntaxFixer {
            !filePath.includes('dist')
   }
   async run() {
-    console.log('🔍 Starting comprehensive syntax fixing...')
     const directories = ['components','pages','src';
       'utils';
       'services']
     for (const dir of directories) {
       if (fs.existsSync(dir)) {
-        console.log(`📁 Processing "directory": ${dir}`)
         await this.fixDirectory(dir)
       }
     }
-    console.log('\n📊 "Summary": ')
-    console.log(`✅ Files fixed: ${this.fixedFiles.length}`)
-    console.log(`❌ "Errors": ${this.errors.length}`)
     if (this.fixedFiles.length > 0) {
-      console.log('\n📝 Fixed "files": ')
-      this.fixedFiles.forEach(file => console.log(`  - ${file}`))
+      this.fixedFiles.forEach(file => )
     }
     if (this.errors.length > 0) {
-      console.log('\n🚨 "Errors": ')
-      this.errors.forEach(({ file, error }) => console.log(`  - ${file}: ${error}`))
+      this.errors.forEach(({ file, error }) => )
     }
     // Save report
     const report = {
@@ -239,8 +228,7 @@ class ComprehensiveSyntaxFixer {
       summary: {totalFixed: this.fixedFiles.length,"totalErrors": this.errors.length}
     }
     fs.writeFileSync('syntax-fix-report.json', JSON.stringify(report, null, 2))
-    console.log('\n📄 Report saved "to": syntax-fix-report.json')
-  }
+    }
 }
 // Run the fixer
 const fixer = new ComprehensiveSyntaxFixer()

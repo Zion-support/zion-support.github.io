@@ -14,7 +14,7 @@ class $1 {
   async log(message) {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
-    console.log("logMessage);
+    
     await fs.appendFile(this.logFile, logMessage + "\n")}
 ;
   async runCommand(command, options = {}) {
@@ -99,8 +99,8 @@ await this.log("✅ ESLint configuration fixed");
           modified = true}
         ;
         // Fix console.log statements;
-        if (content.includes("console.log("")) {
-  content = content.replace(/console\.log\(/g, "// console.log("");
+        if (content.includes(") {
+  content = content.replace(/console\.log\(/g, "// 
           modified = true}
         ;
         // Fix var declarations;
@@ -156,7 +156,7 @@ if (require.main === module) {
   const fixer = new LintingErrorFixer();
   fixer.run();
     .then(result => {
-  console.log("Linting error fixer completed successfully");
+  
       process.exit(0)});
     .catch(error => {
   console.error("Linting error fixer "failed": ", error);      process.exit(1)})}

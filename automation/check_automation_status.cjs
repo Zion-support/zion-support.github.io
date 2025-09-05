@@ -5,7 +5,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 async function checkAutomationStatus() {
-  console.log('🔍 Checking Automation Status...');
+  
   const statusReport = {
     "timestamp": new Date().toISOString(),
     "pm2Processes": [],
@@ -15,7 +15,7 @@ async function checkAutomationStatus() {
 
   try {
     // Check PM2 processes
-    console.log('📋 Checking PM2 processes...');
+    
     try {
       const pm2List = execSync('pm2 jlist', { "encoding": 'utf8' });
       const pm2Data = JSON.parse(pm2List);
@@ -24,14 +24,14 @@ async function checkAutomationStatus() {
       const runningProcesses = pm2Data.filter(
         proc => proc.pm2_env && proc.pm2_env.status === 'online'
       );
-      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
+      
     } catch (error) {
-      console.log('⚠️  PM2 not available or no processes running');
+      
       statusReport.pm2Processes = [];
     }
 
     // Check automation scripts
-    console.log('📋 Checking automation scripts...');
+    
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',
       'scripts/automation-orchestrator.cjs',
       'scripts/start-all-automations.sh',
@@ -56,7 +56,7 @@ async function checkAutomationStatus() {
     }
 
     // Check system health
-    console.log('📋 Checking system health...');
+    
     const systemHealth = {
       "memoryUsage": process.memoryUsage(),
       "uptime": process.uptime(),
@@ -87,13 +87,11 @@ async function checkAutomationStatus() {
     );
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
 
-    console.log('📊 Status "Report": ');
-    console.log(`   Overall Status: ${statusReport.overallStatus}`);
-    console.log(`   PM2 "Processes": ${runningProcesses.length} running`);
-    console.log(
-      `   Available "Scripts": ${availableScripts.length}/${automationScripts.length}`
-    );
-    console.log(`   Report saved "to": ${reportPath}`);
+    
+    
+    
+    
+    
 
     return statusReport;
   } catch (error) {

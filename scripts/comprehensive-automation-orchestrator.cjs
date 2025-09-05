@@ -32,7 +32,7 @@ class ComprehensiveAutomationOrchestrator {;
   log(message, type = "info") {;
     const timestamp = new Date().toISOString();
     const prefix = type === "error" ? "❌" : type === "success" ? "✅" : "ℹ️";
-    console.log(`[${timestamp}] ${prefix} ${message}`),}
+    ,}
 ;
   async orchestrateAutomation() {;
     this.log("🎭 Starting Comprehensive Automation Orchestration...");
@@ -215,7 +215,7 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n")}
 ;
   log(message) {;
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`),}
+    ,}
 ;
   async runScript(scriptPath, description) {;
     this.log(`🚀 "Running": ${description}`);

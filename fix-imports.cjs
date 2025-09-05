@@ -48,7 +48,7 @@ function fixImportsInFile(filePath) {
     );
 
     fs.writeFileSync(filePath, content);
-    console.log(`"Fixed": ${filePath}`)} catch (error) {
+    } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message)}
 }
 
@@ -67,4 +67,4 @@ function walkDirectory(dir) {
 
 // Fix components directory
 walkDirectory('./components');
-console.log('Import fixing completed!');
+

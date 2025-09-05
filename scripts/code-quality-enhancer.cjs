@@ -9,7 +9,7 @@ class CodeQualityEnhancer {
   }
 
   async enhanceCodeQuality() {
-    console.log('🔍 Enhancing code quality...');
+    
     
     const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx']);
     const improvements = [];
@@ -32,7 +32,7 @@ class CodeQualityEnhancer {
     }
 
     this.saveReport(improvements);
-    console.log(`✅ Code quality enhanced! Improved ${improvements.length} files.`);
+    
   }
 
   enhanceFile(content) {

@@ -12,7 +12,7 @@ const path = require('path');
 
 function log(message, type = 'INFO') {
   const icons = { "INFO": 'ℹ️', "SUCCESS": '✅', "ERROR": '❌', "WARNING": '⚠️' };
-  console.log(`${icons[type] || ''} ${message}`);
+  
 }
 
 function ensureDir(dir) {

@@ -3,7 +3,7 @@
 const fs = require('fs');
 const { execSync } = require('child_process');
 
-console.log('🔄 Starting Open PR Merger...');
+
 
 class OpenPRMerger {
   constructor() {
@@ -18,7 +18,7 @@ class OpenPRMerger {
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`)}
+    }
 
   run(cmd, opts = {}) {
     return execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8', ...opts })}
@@ -107,27 +107,27 @@ class OpenPRMerger {
     this.mergeReport.summary.failedMerges = this.failedPRs.length;
     fs.writeFileSync('open-pr-merge-report.json', JSON.stringify(this.mergeReport, null, 2));
 
-    console.log('\n📊 Open PR Merge "Summary": ');
-    console.log(`   - Total PRs processed: ${this.mergeReport.summary.totalPRs}`);
-    console.log(`   - Successful "merges": ${this.mergeReport.summary.successfulMerges}`);
-    console.log(`   - Failed "merges": ${this.mergeReport.summary.failedMerges}`);
+    
+    
+    
+    
 
     if (this.mergeReport.mergedPRs.length) {
-      console.log('\n✅ Successfully merged "PRs": ');
+      
       this.mergeReport.mergedPRs.forEach(pr => {
         const extra = pr.strategy ? ` [strategy=${pr.strategy}]` : '';
-        console.log(`   - PR #${pr.number}: ${pr.title}${extra}`)})}
+        })}
 
     if (this.mergeReport.failedPRs.length) {
-      console.log('\n❌ Failed to merge "PRs": ');
+      
       this.mergeReport.failedPRs.forEach(pr => {
-        console.log(`   - PR #${pr.number}: ${pr.title} - ${pr.error}`)})}
+        })}
   }
 }
 
 try {
   const merger = new OpenPRMerger();
   merger.mergeOpenPRs();
-  console.log('\n✅ Open PR merging completed!')} catch (error) {
+  } catch (error) {
   console.error('❌ Open PR merging "failed": ', error);
   process.exitCode = 1}

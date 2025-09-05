@@ -47,7 +47,7 @@ class $1 {
   }
 ;
   async initialize() {
-  console.log(""📊 Intelligent Performance Monitor Initialized");
+  
     this.ensureLogDirectory();
     this.loadPerformanceHistory();
         // Start continuous monitoring;
@@ -97,7 +97,7 @@ class $1 {
   }
 ;
   startContinuousMonitoring() {
-  console.log(""🔍 Starting continuous performance monitoring...");
+  
     // Initial performance measurement;
     this.measurePerformance();
     // Set up periodic monitoring;
@@ -109,10 +109,10 @@ class $1 {
     this.monitorRuntime()}
 ;
   async measurePerformance() {
-  console.log(""📈 Measuring application performance...");
+  
   async measurePerformance() {
-  console.log(""📈 Measuring application performance...");
-    console.log("📈 Measuring application performance...");
+  
+    
     const startTime = Date.now();
     const measurement = {
   "timestamp": new Date().toISOString(),
@@ -136,7 +136,7 @@ class $1 {
       this.updatePerformanceHistory(measurement);
       // Log results;
       this.logPerformanceResults(measurement);
-      console.log(✅ Performance measurement completed in ${Date.now() - startTime}ms)} catch (error) {
+      - startTime}ms)} catch (error) {
   console.error("❌ Error during performance "measurement": ", error)} catch (error) {
   console.error("❌ Error during performance "measurement": ", error);
 this.logError("Performance measurement failed", error)}
@@ -146,7 +146,7 @@ this.logError("Performance measurement failed", error)}
   }
 ;
   async measureBuildPerformance(measurement) {
-  console.log("🔨 Measuring build performance...");
+  
     try {
   const buildStart = Date.now();
       // Run a test build;
@@ -242,7 +242,7 @@ timeout: 120000});
   }
 ;
   async measureBundleSize(measurement) {
-  console.log(""📦 Measuring bundle size...");
+  
     try {
   // Check for build output directory;
       const buildDirs = ["dist", "build", ".next", "out"];
@@ -299,11 +299,11 @@ timeout: 120000});
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i]}
 ;
   async measureRuntimePerformance(measurement) {
-  console.log(""⚡ Measuring runtime performance...");
+  
     try {
   // Get system resource usage;
   async measureRuntimePerformance(measurement) {
-  console.log("⚡ Measuring runtime performance...");
+  
     try {
   // Get system resource usage;
       // Get system resource usage;
@@ -367,7 +367,7 @@ measurement.cpuUsage = -1}
   }
 ;
   async analyzePerformance(measurement) {
-  console.log("🧠 Analyzing performance data...");
+  
     // Analyze trends;
     this.analyzePerformanceTrends(measurement);
     // Identify bottlenecks;
@@ -593,7 +593,7 @@ measurement.cpuUsage = -1}
 }
 ;
   monitorBuilds() {
-  console.log("🔨 Setting up build monitoring...");
+  
     // Monitor for build commands;
     process.on("message", (message) => {
   if (message && message.type === "build") {
@@ -604,11 +604,11 @@ measurement.cpuUsage = -1}
     })}
 ;
   onBuildStart() {
-  console.log("🚀 Build started - monitoring performance...");
+  
     this.measurePerformance()}
 ;
   monitorRuntime() {
-  console.log("⚡ Setting up runtime monitoring...");
+  
     // Monitor process events;
     process.on("exit", () => {
   this.onProcessExit()});
@@ -620,7 +620,7 @@ measurement.cpuUsage = -1}
   this.onUnhandledRejection(reason, promise)})}
 ;
   onProcessExit() {
-  console.log("🔄 Process exiting - saving final performance data...");
+  
     this.measurePerformance()}
 ;
   onUncaughtException(error) {

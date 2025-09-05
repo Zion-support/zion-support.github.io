@@ -4,7 +4,7 @@ const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔍 Starting enhanced error detection and fixing automation...');
+
 
 // Configuration
 const CONFIG = {
@@ -101,7 +101,7 @@ class EnhancedErrorDetector {
     }}
 
   async detectErrors() {
-    console.log('🔍 Detecting errors...');
+    
     
     try {
       // 1. Run TypeScript check
@@ -123,7 +123,7 @@ class EnhancedErrorDetector {
 
   async runTypeScriptCheck() {
     try {
-      console.log('🔍 Running TypeScript check...');
+      
       const result = execSync('npx tsc --noEmit --pretty false', { 
         "encoding": 'utf8',
         "stdio": 'pipe'
@@ -134,7 +134,7 @@ class EnhancedErrorDetector {
 
   async runESLintCheck() {
     try {
-      console.log('🔍 Running ESLint check...');
+      
       const result = execSync('npx eslint . --ext .js,.jsx,.ts,.tsx --format=compact', { 
         "encoding": 'utf8',
         "stdio": 'pipe'
@@ -145,7 +145,7 @@ class EnhancedErrorDetector {
 
   async runBuildCheck() {
     try {
-      console.log('🔍 Running build check...');
+      
       const result = execSync('npm run build', { 
         "encoding": 'utf8',
         "stdio": 'pipe'
@@ -156,7 +156,7 @@ class EnhancedErrorDetector {
 
   async checkDependencies() {
     try {
-      console.log('🔍 Checking dependencies...');
+      
       const result = execSync('npm install --dry-run', { 
         "encoding": 'utf8',
         "stdio": 'pipe'
@@ -228,7 +228,7 @@ class EnhancedErrorDetector {
     })}
 
   async scanFilesForPatterns() {
-    console.log('🔍 Scanning files for common error patterns...');
+    
     
     for (const pattern of CONFIG.filePatterns) {
       const files = this.glob(pattern);
@@ -239,7 +239,7 @@ class EnhancedErrorDetector {
           const content = fs.readFileSync(file, 'utf8');
           this.scanFileForPatterns(file, content);
           this.stats.filesProcessed++} catch (error) {
-          console.warn(`⚠️  Could not read "file": ${file}`)}
+          }
       }
     }
   }
@@ -278,7 +278,7 @@ class EnhancedErrorDetector {
     })}
 
   async applyFixes() {
-    console.log('🔧 Applying fixes...');
+    
     
     for (const error of this.errors) {
       try {
@@ -332,8 +332,8 @@ class EnhancedErrorDetector {
     const reportPath = path.join(process.cwd(), 'enhanced-error-detection-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
-    console.log(`📊 Report saved "to": ${reportPath}`);
-    console.log(`📈 "Summary": ${report.summary.fixedErrors}/${report.summary.totalErrors} errors fixed (${report.summary.successRate} success rate)`);
+    
+    `);
     
     return report}
 }
@@ -465,7 +465,7 @@ async function main() {
     // Generate report
     const report = detector.generateReport();
     
-    console.log('✅ Enhanced error detection and fixing completed!');
+    
     
     // Exit with appropriate code
     process.exit(report.stats.failedFixes > 0 ? 1 : 0)} catch (error) {

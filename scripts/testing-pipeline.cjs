@@ -12,20 +12,20 @@ class TestingPipeline {;
   }
 ;
   async runPipeline() {;
-    console.log("🧪 Starting Testing Pipeline...");
+    
     try {;
       await this.runUnitTests();
       await this.runIntegrationTests();
       await this.runE2ETests();
       await this.generateCoverageReport();
       this.generateReport();
-      console.log("✅ Testing pipeline completed"),} catch (error) {;
+      ,} catch (error) {;
       console.error("❌ Testing pipeline "failed": ", error.message);
       process.exit(1),}
   }
 ;
   async runUnitTests() {;
-    console.log("🔬 Running unit tests...");
+    
     try {;
       const result = execSync("npm run "test": unit", { "encoding": "utf8" });
       this.results.tests.push({ "type": "unit", "status": "passed", "output": result });
@@ -35,7 +35,7 @@ class TestingPipeline {;
     this.results.summary.total++,}
 ;
   async runIntegrationTests() {;
-    console.log("🔗 Running integration tests...");
+    
     try {;
       const result = execSync("npm run "test": integration", { "encoding": "utf8" });
       this.results.tests.push({ "type": "integration", "status": "passed", "output": result });
@@ -45,7 +45,7 @@ class TestingPipeline {;
     this.results.summary.total++,}
 ;
   async runE2ETests() {;
-    console.log("🎭 Running E2E tests...");
+    
     try {;
       const result = execSync("npm run "test": e2e", { "encoding": "utf8" });
       this.results.tests.push({ "type": "e2e", "status": "passed", "output": result });
@@ -55,7 +55,7 @@ class TestingPipeline {;
     this.results.summary.total++,}
 ;
   async generateCoverageReport() {;
-    console.log("📊 Generating coverage report...");
+    
     try {;
       const result = execSync("npm run "test": coverage", { "encoding": "utf8" });
       this.results.coverage = { "status": "generated", "output": result }
@@ -67,13 +67,13 @@ class TestingPipeline {;
   generateReport() {;
     const reportPath = "testing-pipeline-report.json";
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-    console.log("\n📊 Testing Pipeline "Results": ");
-    console.log("=".repeat(50));
-    console.log(`Total Tests: ${this.results.summary.total}`);
-    console.log(`"Passed": ${this.results.summary.passed}`);
-    console.log(`"Failed": ${this.results.summary.failed}`);
-    console.log("=".repeat(50));
-    console.log(`📄 Report saved "to": ${reportPath}`),}
+    
+    );
+    
+    
+    
+    );
+    ,}
 }
 ;
 // Run the pipeline;

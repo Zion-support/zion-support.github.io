@@ -9,7 +9,7 @@ class ComprehensiveAutomationOrchestrator {
       fs.mkdirSync(this.reportsDir, { "recursive": true })}
   }
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
   async runScript(scriptPath, description) {
     this.log(`🚀 "Starting": ${description}`);
     try {
@@ -76,21 +76,21 @@ class ComprehensiveAutomationOrchestrator {
     this.log(`📄 Comprehensive report saved "to": ${reportFile}`);
     return report}
   printSummary(report) {
-    console.log('\n🎯 COMPREHENSIVE AUTOMATION ORCHESTRATOR SUMMARY');
-    console.log('=' * 60);
-    console.log(`Project Health "Score": ${(report.summary.projectHealthScore * 100).toFixed(1)}%`);
-    console.log(`Automation "Scripts": ${report.summary.successfulAutomationScripts}/${report.summary.totalAutomationScripts} successful`);
-    console.log(`NPM "Scripts": ${report.summary.successfulNpmScripts}/${report.summary.totalNpmScripts} successful`);
-    console.log(`Total Success "Rate": ${((report.summary.successfulAutomationScripts + report.summary.successfulNpmScripts) / (report.summary.totalAutomationScripts + report.summary.totalNpmScripts) * 100).toFixed(1)}%`);
+    
+    
+    .toFixed(1)}%`);
+    
+    
+    / (report.summary.totalAutomationScripts + report.summary.totalNpmScripts) * 100).toFixed(1)}%`);
     if (report.summary.failedAutomationScripts > 0 || report.summary.failedNpmScripts > 0) {
-      console.log('\n⚠️  Failed "Operations": ');
+      
       report.automationResults
         .filter(r => !r.success)
-        .forEach(r => console.log(`  - ${r.description}: ${r.error}`));
+        .forEach(r => );
       report.npmResults
         .filter(r => !r.success)
-        .forEach(r => console.log(`  - ${r.description}: ${r.error}`))}
-    console.log(`\n📊 "Report": ${this.reportsDir}`)}
+        .forEach(r => )}
+    }
   async run() {
     try {
       this.log('🚀 Starting Comprehensive Automation Orchestrator');

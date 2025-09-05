@@ -18,7 +18,7 @@ class MasterAutomation {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(logMessage.trim());
+    );
     fs.appendFileSync(this.logFile, logMessage);
   }
 
@@ -261,9 +261,7 @@ if (require.main === module) {
         process.exit(1);
       });
       break;
-    default: console.log(
-        'Usage: node master-automation.js [start|stop|restart|status|report]'
-      );
+    default: 
       process.exit(1);
   }
 }

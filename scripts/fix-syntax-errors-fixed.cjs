@@ -8,7 +8,7 @@ class SyntaxErrorFixer {;
     this.errors = [],}
 ;
   log(message) {;
-    console.log(`[${new Date().toISOString()}] ${message}`),}
+    .toISOString()}] ${message}`),}
 ;
   fixFile(filePath) {;
     try {;

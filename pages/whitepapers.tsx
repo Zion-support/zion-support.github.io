@@ -1,7 +1,7 @@
-import React from 'react';
-import Layout from "../components/Layout";
 import { motion } from 'framer-motion';
-import { FileText, Download, Calendar, User, CheckCircle, ArrowRight } from 'lucide-react';
+import Layout from '../components/Layout';
+import { User, FileText, Download, Calendar } from 'lucide-react';
+
 
 export default function WhitepapersPage() {
   const whitepapers = [

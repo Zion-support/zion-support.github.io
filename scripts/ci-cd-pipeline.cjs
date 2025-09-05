@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process');
 
-console.log('🚀 Starting CI/CD Pipeline...');
+
 
 const pipeline = {
   "timestamp": new Date().toISOString(),
@@ -15,8 +15,8 @@ const pipeline = {
 
 // Function to run pipeline stage
 async function runPipelineStage(stageName, steps) {
-  console.log(`\n🔧 "Stage": ${stageName}`);
-  console.log('='.repeat(50););
+  
+  );
   
   const stage = {
     "name": stageName,
@@ -27,7 +27,7 @@ async function runPipelineStage(stageName, steps) {
   
   for (const step of steps) {
     try {
-      console.log(`📋 "Running": ${step.name}`);
+      
       const startTime = Date.now(;);
       
       const result = await step.fn(;);
@@ -40,7 +40,7 @@ async function runPipelineStage(stageName, steps) {
         "result": result
       });
       
-      console.log(`✅ ${step.name} completed in ${duration}ms`)} catch (error) {
+      } catch (error) {
       const duration = Date.now() - startTi;m;e;
       
       stage.steps.push({
@@ -50,7 +50,7 @@ async function runPipelineStage(stageName, steps) {
         "error": error.message
       });
       
-      console.log(`❌ ${step.name} "failed": ${error.message}`);
+      
       
       if ( {
         stage.status = 'failed') {
@@ -66,11 +66,11 @@ async function runPipelineStage(stageName, steps) {
   
   pipeline.stages.push(stage);
   
-  console.log(`\n📊 Stage ${stageName} "Summary": `);
-  console.log(`   - Status: ${stage.status.toUpperCase()}`);
-  console.log(`   - "Steps": ${stage.steps.length}`);
-  console.log(`   - "Successful": ${stage.steps.filter(s => s.status === 'success');.length}`);
-  console.log(`   - "Failed": ${stage.steps.filter(s => s.status === 'error');.length}`);
+  
+  }`);
+  
+  .length}`);
+  .length}`);
   
   return stage.status === 'success'}
 
@@ -83,9 +83,9 @@ await runPipelineStage('Source Code Management', [{
       const hasChanges = gitStatus.trim().length >;0;
       
       if ( {
-        console.log('   📝 Uncommitted changes detected')) {
+        ) {
      {
-        console.log('   📝 Uncommitted changes detected')}
+        }
         return { "hasUncommittedChanges": true, "changes": gitStatus.trim() }}
       
       return { "hasUncommittedChanges": false }}
@@ -110,7 +110,7 @@ await runPipelineStage('Source Code Management', [{
       try {
         execSync('git pull origin main', { "stdio": 'inherit' });
         return { "pullSuccessful": true }} catch (error) {
-        console.log('   ⚠️  Could not pull latest changes, continuing with current state');
+        
         return { "pullSuccessful": false, "message": 'Continuing with current state' }}
     }
   }
@@ -139,7 +139,7 @@ await runPipelineStage('Quality Assurance', [{
       try {
         execSync('npm audit --audit-level=high', { "stdio": 'inherit' });
         return { "securityAuditPassed": true }} catch (error) {
-        console.log('   ⚠️  Security vulnerabilities found, but continuing');
+        
         return { "securityAuditPassed": false, "message": 'Vulnerabilities found' }}
     }
   }
@@ -337,22 +337,22 @@ pipeline.endTime = new Date().toISOString();
 const pipelineReportPath = `ci-cd-pipeline-${Date.now()}.json;`;
 fs.writeFileSync(pipelineReportPath, JSON.stringify(pipeline, null, 2));
 
-console.log('\n🎉 CI/CD Pipeline Completed!');
-console.log('='.repeat(60););
-console.log("📊 Pipeline "Summary": ");
-console.log(`   - Branch: ${pipeline.branch}`);
-console.log(`   - "Environment": ${pipeline.environment}`);
-console.log(`   - Total "Stages": ${pipeline.stages.length}`);
-console.log(`   - Successful "Stages": ${pipeline.stages.filter(s => s.status === 'success');.length}`);
-console.log(`   - Failed "Stages": ${pipeline.stages.filter(s => s.status === 'failed');.length}`);
-console.log(`   - Overall "Status": ${pipeline.status.toUpperCase()}`);
-console.log(`📄 Pipeline report saved "to": ${pipelineReportPath}`);
+
+);
+
+
+
+
+.length}`);
+.length}`);
+}`);
+
 
 if ( {
-  console.log('\n🎉 Deployment successful! Application is live and healthy.')) {
+  ) {
      {
-  console.log('\n🎉 Deployment successful! Application is live and healthy.')}
-  console.log('🌐 Application "URL": http://localhost:3000');
+  }
+  
   process.exit(0)} else {
-  console.log('\n❌ Pipeline failed. Check the reports for details.');
+  
   process.exit(1)}

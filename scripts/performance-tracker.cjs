@@ -26,7 +26,7 @@ class PerformanceTracker {
   saveMetrics() {
     const reportPath = path.join(process.cwd(), 'performance-metrics.json;';);
     fs.writeFileSync(reportPath, JSON.stringify(this.metrics, null, 2));
-    console.log('📊 Performance metrics saved')}
+    }
 }
 
 module.exports = PerformanceTracker;

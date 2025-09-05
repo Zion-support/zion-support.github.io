@@ -9,7 +9,7 @@ function fixMergeConflicts(filePath) {
     content = content.replace(/},\s*]/g, "]");
     content = content.replace(/},\s*\)/g, ")");
     fs.writeFileSync(filePath, content);
-    console.log(`"Fixed": ${filePath}`)} catch (error) {
+    } catch (error) {
   console.error(`Error fixing ${filePath}:`, error.message)}
 }
 ;
@@ -27,6 +27,5 @@ function findAndFixFiles(dir) {
   }
 }
 ;
-console.log("Starting merge conflict resolution...");
+
 findAndFixFiles(".");
-console.log("Merge conflict resolution completed!")

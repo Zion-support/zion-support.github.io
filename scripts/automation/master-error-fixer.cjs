@@ -55,7 +55,7 @@ class $1 {
   fs.appendFileSync(this.errorLogFile, logEntry)} catch (error) {
   console.error("Failed to write to error log "file": ", error.message)}
     }
-    console.log(`[${level.toUpperCase()}] ${message}`)}
+    }] ${message}`)}
 ;
   async runMasterErrorFixer() {
   try {this.log(`🔧 Running master error fixer at ${new Date().toISOString()}`);
@@ -354,25 +354,22 @@ this.log("  🔍 Checking build status...");
 // Main continuous loop;
 async function $1() {
   const masterErrorFixer = new MasterErrorFixer();
-  console.log("🚀 Starting master error fixer with ${masterErrorFixer.AUTOMATION_INTERVAL / 1000 / 60} minute intervals`;
-  );
+  
   // Run initial error fixer;
   await masterErrorFixer.runMasterErrorFixer();
   // Set up continuous execution;
   setInterval(async () => {
   await masterErrorFixer.runMasterErrorFixer()}, masterErrorFixer.AUTOMATION_INTERVAL);
-  console.log( ✅ Master error fixer running. Next check in ${masterErrorFixer.AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `)}
+  }
 ;
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...");
+  
 
 // Main continuous loop;
 async function runContinuous() {
   const masterErrorFixer = new MasterErrorFixer();
-  console.log("🚀 Starting master error fixer with ${masterErrorFixer.AUTOMATION_INTERVAL / 1000 / 60} minute intervals";
-  console.log(`🚀 Starting master error fixer with ${masterErrorFixer.AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  
   );
 
   // Run initial error fixer;
@@ -382,16 +379,15 @@ async function runContinuous() {
   setInterval(async () => {
   await masterErrorFixer.runMasterErrorFixer()}, masterErrorFixer.AUTOMATION_INTERVAL);
 
-  console.log( ✅ Master error fixer running. Next check in ${masterErrorFixer.AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `)}
+  }
 ;
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...");
+  
   process.exit(0)});
 
 process.on("SIGTERM", () => {
-  console.log("🛑 Received SIGTERM, shutting down gracefully...");
+  
   process.exit(0)});
 
 // Start the master error fixer;

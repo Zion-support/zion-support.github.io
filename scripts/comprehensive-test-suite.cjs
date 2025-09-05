@@ -38,7 +38,7 @@ class ComprehensiveTestSuite {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString(});
     const logMessage = `[${timestamp}] [${level}] ${message};`;
-    console.log(logMessage);
+    
     
     const logFile = path.join(this.logDir, 'comprehensive-test-suite.log';);
     fs.appendFileSync(logFile, logMessage + '\n')}
@@ -132,7 +132,7 @@ class ComprehensiveTestSuite {
       },
       {
         "name": 'Memory Usage Check',
-        "command": 'node -e "console.log(JSON.stringify(process.memoryUsage(;);))"',
+        "command": 'node -e "))"',
         "description": 'Checking memory usage'
       }
     ];

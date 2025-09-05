@@ -23,7 +23,7 @@ class CodeQualityAutoEnhancer {
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`)}
+    }
 
   async runCodeQualityChecks() {
     this.log('Running code quality checks...', 'INFO');

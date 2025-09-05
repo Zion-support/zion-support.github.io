@@ -24,7 +24,7 @@ class ErrorAnalyzer {
     }}
 
   async analyzeAllErrors() {
-    console.log('🔍 Starting comprehensive error analysis...');
+    
     
     try {
       await this.analyzeTypeScriptErrors();
@@ -35,14 +35,14 @@ class ErrorAnalyzer {
       await this.generateReport();
       await this.saveReport();
       
-      console.log('✅ Error analysis completed successfully');
+      
       return this.errorReport} catch (error) {
       console.error('❌ Error during "analysis": ', error.message);
       throw error}
   }
 
   async analyzeTypeScriptErrors() {
-    console.log('📝 Analyzing TypeScript errors...');
+    
     
     try {
       const result = execSync('npx tsc --noEmit --pretty false', { 
@@ -112,7 +112,7 @@ class ErrorAnalyzer {
   }
 
   async analyzeESLintErrors() {
-    console.log('🔍 Analyzing ESLint errors...');
+    
     
     try {
       const result = execSync('npx eslint . --format=compact', { 
@@ -161,7 +161,7 @@ class ErrorAnalyzer {
   }
 
   async analyzeBuildErrors() {
-    console.log('🏗️ Analyzing build errors...');
+    
     
     try {
       const result = execSync('npm run build', { 
@@ -187,7 +187,7 @@ class ErrorAnalyzer {
   }
 
   async analyzeDependencyIssues() {
-    console.log('📦 Analyzing dependency issues...');
+    
     
     try {
       const result = execSync('npm audit --json', { 
@@ -209,11 +209,11 @@ class ErrorAnalyzer {
           })})}
     } catch (error) {
       // Dependency issues are expected
-      console.log('⚠️ Dependency analysis completed with warnings')}
+      }
   }
 
   async analyzeSecurityIssues() {
-    console.log('🔒 Analyzing security issues...');
+    
     
     try {
       const result = execSync('npm audit --audit-level=moderate', { 
@@ -233,7 +233,7 @@ class ErrorAnalyzer {
       }
     } catch (error) {
       // Security issues are expected
-      console.log('⚠️ Security analysis completed with warnings')}
+      }
   }
 
   determineSeverity(message) {
@@ -263,7 +263,7 @@ class ErrorAnalyzer {
     return 'general'}
 
   async generateReport() {
-    console.log('📊 Generating error report...');
+    
     
     // Count total errors
     this.errorReport.totalErrors = Object.values(this.errors).reduce((sum, arr) => sum + arr.length, 0);
@@ -329,25 +329,25 @@ class ErrorAnalyzer {
   async saveReport() {
     const reportPath = path.join(process.cwd(), 'error-analysis-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(this.errorReport, null, 2));
-    console.log(`📄 Error report saved "to": ${reportPath}`)}
+    }
 
   printSummary() {
-    console.log('\n📋 ERROR ANALYSIS SUMMARY');
-    console.log('='.repeat(50));
-    console.log(`Total "Errors": ${this.errorReport.totalErrors}`);
-    console.log('\nError "Categories": ');
+    
+    );
+    
+    
     Object.entries(this.errorReport.errorCategories).forEach(([category, count]) => {
       if (count > 0) {
-        console.log(`  ${category}: ${count}`)}
+        }
     });
     
-    console.log('\nPriority "Errors": ');
-    this.errorReport.priorityErrors.slice(0, 5).forEach((error, index) => {
-      console.log(`  ${index + 1}. ${error.message || error.title || 'Unknown error'}`)});
     
-    console.log('\"nRecommendations": ');
+    this.errorReport.priorityErrors.slice(0, 5).forEach((error, index) => {
+      });
+    
+    
     this.errorReport.recommendations.forEach((rec, index) => {
-      console.log(`  ${index + 1}. [${rec.priority.toUpperCase()}] ${rec.action}`)})}
+      }] ${rec.action}`)})}
 }
 
 // Main execution

@@ -13,7 +13,7 @@ class CodeQualityEnhancer {
   }
   log(message) {
     const timestamp = new Date().toISOString()
-    console.log(`[${timestamp}] ${message}`)}
+    }
   analyzeCodeComplexity() {
     this.log("🔍 Analyzing code complexity...")
     const srcDir = path.join(this.projectRoot, "src")
@@ -148,19 +148,11 @@ class CodeQualityEnhancer {
     fs.writeFileSync(reportFile, JSON.stringify(results, null, 2))
     this.log(`📊 Code quality report "generated": ${reportFile}`)
     // Print summary
-    console.log("\n📋 Code Quality "Summary": ")
-    console.log(`📁 Total files analyzed: ${analysis.totalFiles}`)
-    console.log(`📏 Total lines of "code": ${analysis.totalLines}`)
-    console.log(`📊 Average lines per "file": ${analysis.averageLinesPerFile}`)
-    console.log(`⚠️  Large "files": ${analysis.largeFiles.length}`)
-    console.log(`🔀 Complex "files": ${analysis.complexFiles.length}`)
-    console.log(`💡 "Recommendations": ${recommendations.length}`)
     // Print high priority recommendations
     const highPriority = recommendations.filter(r => r.priority === "high")
     if (highPriority.length > 0) {
-      console.log("\n🚨 High Priority "Recommendations": ")
       highPriority.forEach(rec => {
-        console.log(`  • ${rec.message}`)})}
+        })}
     return results}
 }
 // Run the code quality enhancer

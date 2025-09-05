@@ -1,7 +1,7 @@
-import React from 'react';
-import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
-import { Handshake, Award, Globe, Users, Zap, Shield, Cloud } from 'lucide-react';
+import Layout from '../components/Layout';
+import { Globe, Cloud, Zap, Users, Shield, Award, Handshake } from 'lucide-react';
+
 
 const partners = [
   {

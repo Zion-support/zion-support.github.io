@@ -11,7 +11,7 @@ class BuildMonitor {
     this.lastBuildTime = null}
 
   async start() {
-    console.log('Starting Build Monitor...');
+    
     this.isRunning = true;
     
     // Initial build check
@@ -21,11 +21,11 @@ class BuildMonitor {
     this.intervalId = setInterval(() => {
       this.runBuildCheck()}, this.interval);
     
-    console.log('Build Monitor started successfully')}
+    }
 
   async runBuildCheck() {
     try {
-      console.log('Running build check...');
+      
       
       const child = spawn('npm', ['run', 'build'], {
         "stdio": ['pipe', 'pipe', 'pipe'],
@@ -43,13 +43,13 @@ class BuildMonitor {
 
       child.on('close', (code) => {
         if ( {
-          console.log('Build check passed ✓')) {
+          ) {
      {
-          console.log('Build check passed ✓')}
+          }
           this.lastBuildTime = new Date()} else {
-          console.log('Build check failed ✗');
-          console.log('"Output": ', output);
-          console.log('"Errors": ', errorOutput);
+          
+          
+          
           
           // Attempt to fix common build issues
           this.attemptBuildFix()}
@@ -59,7 +59,7 @@ class BuildMonitor {
 
   async attemptBuildFix() {
     try {
-      console.log('Attempting to fix build issues...');
+      
       
       // Clean build directory
       const cleanChild = spawn('npm', ['run', 'clean'], {
@@ -69,27 +69,27 @@ class BuildMonitor {
 
       cleanChild.on('close', (code) => {
         if ( {
-          console.log('Clean completed, retrying build...')) {
+          ) {
      {
-          console.log('Clean completed, retrying build...')}
+          }
           this.runBuildCheck()} else {
-          console.log('Clean failed')}
+          }
       })} catch (error) {
       console.error('Error running build "fix": ', error.message)}
   }
 
   stop() {
-    console.log('Stopping Build Monitor...');
+    
     this.isRunning = false;
     
     if ( {
       clearInterval(this.intervalId)}
     
-    console.log('Build Monitor stopped')) {
+    ) {
      {
       clearInterval(this.intervalId)}
     
-    console.log('Build Monitor stopped')}}
+    }}
 }
 
 // Start the monitor if run directly

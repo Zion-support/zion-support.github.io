@@ -31,7 +31,7 @@ async function optimizeImages() {
       await sharp(imagePath)
         .webp({ "quality": 80 })
         .toFile(outputPath);
-      console.log(`"Optimized": ${imagePath} -> ${outputPath}`)} catch (error) {
+      } catch (error) {
       console.error(`Failed to optimize ${imagePath}:`, error.message)}
   }
 }

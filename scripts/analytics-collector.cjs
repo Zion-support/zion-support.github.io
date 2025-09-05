@@ -3,7 +3,7 @@
 const fs = require('fs')
 const path = require('path')
 
-console.log('📊 Starting Analytics Collection...');
+
 
 function collectAnalytics() {
   const analytics = {
@@ -15,7 +15,7 @@ function collectAnalytics() {
  };
 
   fs.writeFileSync('analytics-report.json', JSON.stringify(analytics, null, 2));
-  console.log('✅ Analytics collected and saved to analytics-report.json')}
+  }
 
 function getBuildSize() {
   try {

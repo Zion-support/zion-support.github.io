@@ -4,7 +4,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Starting auto import/export fixer...');
+
 
 // Get automation interval from environment variable ("default": 15 minutes)
 const IMPORT_EXPORT_FIX_INTERVAL = parseInt(process.env.IMPORT_EXPORT_FIX_INTERVAL) || 900000;
@@ -16,7 +16,7 @@ class AutoImportExportFixer {
 
   async run() {
     try {
-      console.log(`🔧 Running auto import/export fixer at ${new Date().toISOString()}`);
+      .toISOString()}`);
       
       this.fixesApplied = 0;
       
@@ -44,12 +44,12 @@ class AutoImportExportFixer {
       // 8. Generate report
       await this.generateReport();
       
-      console.log(`✅ Auto import/export fixer completed. Applied ${this.fixesApplied} fixes.`)} catch (error) {
+      } catch (error) {
       console.error('❌ Auto import/export fixer "failed": ', error.message)}
   }
 
   async fixMissingImports() {
-    console.log('🔧 Fixing missing imports...');
+    
     
     const srcDir = path.join(process.cwd(), 'src');
     const files = this.getAllFiles(srcDir, ['.ts', '.tsx', '.js', '.jsx']);
@@ -94,15 +94,15 @@ class AutoImportExportFixer {
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-          console.log(`  ✅ Fixed missing imports in ${file.replace(process.cwd(), '')}`)}
+          , '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to fix missing imports in ${file}: ${error.message}`)}
+        }
     }
   }
 
   async fixUnusedImports() {
-    console.log('🔧 Fixing unused imports...');
+    
     
     const srcDir = path.join(process.cwd(), 'src');
     const files = this.getAllFiles(srcDir, ['.ts', '.tsx', '.js', '.jsx']);
@@ -144,15 +144,15 @@ class AutoImportExportFixer {
         if (newContent !== originalContent) {
           fs.writeFileSync(file, newContent);
           this.fixesApplied++;
-          console.log(`  ✅ Fixed unused imports in ${file.replace(process.cwd(), '')}`)}
+          , '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to fix unused imports in ${file}: ${error.message}`)}
+        }
     }
   }
 
   async fixImportPaths() {
-    console.log('🔧 Fixing import paths...');
+    
     
     const srcDir = path.join(process.cwd(), 'src');
     const files = this.getAllFiles(srcDir, ['.ts', '.tsx', '.js', '.jsx']);
@@ -180,15 +180,15 @@ class AutoImportExportFixer {
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-          console.log(`  ✅ Fixed import paths in ${file.replace(process.cwd(), '')}`)}
+          , '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to fix import paths in ${file}: ${error.message}`)}
+        }
     }
   }
 
   async fixExportIssues() {
-    console.log('🔧 Fixing export issues...');
+    
     
     const srcDir = path.join(process.cwd(), 'src');
     const files = this.getAllFiles(srcDir, ['.ts', '.tsx', '.js', '.jsx']);
@@ -214,15 +214,15 @@ class AutoImportExportFixer {
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-          console.log(`  ✅ Fixed export issues in ${file.replace(process.cwd(), '')}`)}
+          , '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to fix export issues in ${file}: ${error.message}`)}
+        }
     }
   }
 
   async fixCircularDependencies() {
-    console.log('🔧 Fixing circular dependencies...');
+    
     
     // This is a simplified implementation
     // In a real scenario, you'd need more sophisticated dependency analysis
@@ -241,15 +241,15 @@ class AutoImportExportFixer {
         
         // If a file imports itself (indirectly), it might be a circular dependency
         if (imports.some(imp => imp.toLowerCase().includes(fileName.toLowerCase()))) {
-          console.log(`  ⚠️  Potential circular dependency detected in ${file}`)}
+          }
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to check circular dependencies in ${file}: ${error.message}`)}
+        }
     }
   }
 
   async organizeImports() {
-    console.log('🔧 Organizing imports...');
+    
     
     const srcDir = path.join(process.cwd(), 'src');
     const files = this.getAllFiles(srcDir, ['.ts', '.tsx', '.js', '.jsx']);
@@ -289,21 +289,21 @@ class AutoImportExportFixer {
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-          console.log(`  ✅ Organized imports in ${file.replace(process.cwd(), '')}`)}
+          , '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to organize imports in ${file}: ${error.message}`)}
+        }
     }
   }
 
   async validateFixes() {
-    console.log('🔧 Validating import/export fixes...');
+    
     
     try {
       // Run TypeScript check to see if imports are resolved
       execSync('npm run type-check', { "stdio": 'pipe' });
-      console.log('✅ Import/export validation successful')} catch (error) {
-      console.log('⚠️  Import/export validation had issues, but fixes were applied')}
+      } catch (error) {
+      }
   }
 
   async generateReport() {
@@ -317,7 +317,7 @@ class AutoImportExportFixer {
     const reportPath = path.join(process.cwd(), 'auto-import-export-fixer-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
-    console.log(`📊 Auto import/export fixer report saved to ${reportPath}`);
+    
     
     // Add to fix history
     this.fixHistory.push({
@@ -435,15 +435,15 @@ async function main() {
   setInterval(async () => {
     await fixer.run()}, IMPORT_EXPORT_FIX_INTERVAL);
   
-  console.log(`🔧 Auto import/export fixer running with ${IMPORT_EXPORT_FIX_INTERVAL / 1000}s intervals`)}
+  }
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {
-  console.log('🔧 Auto import/export fixer shutting down...');
+  
   process.exit(0)});
 
 process.on('SIGTERM', () => {
-  console.log('🔧 Auto import/export fixer shutting down...');
+  
   process.exit(0)});
 
 // Start the fixer

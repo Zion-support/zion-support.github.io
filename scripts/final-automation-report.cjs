@@ -40,7 +40,7 @@ class FinalAutomationReport {
       'WARNING': '⚠️',
       'PROGRESS': '🔄'
     };
-    console.log(`${icons[type]} ${message}`)}
+    }
 
   async generateReport() {
     this.log('📊 Generating Final Automation Report...', 'PROGRESS');

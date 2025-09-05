@@ -12,7 +12,7 @@ const path = require('path');
 
 const log = (message) => {
   const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] Security Audit: ${message}`);
+  
 };
 
 const runCommand = (command, description) => {

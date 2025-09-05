@@ -3,7 +3,7 @@
 const fs = require('fs')
 const path = require('path')
 
-console.log('📊 Starting code quality monitoring...');
+
 
 const qualityMetrics = {
   "timestamp": new Date().toISOString(),
@@ -181,21 +181,21 @@ qualityMetrics.summary.totalLines = totalLines;
 qualityMetrics.summary.averageComplexity = totalFiles > 0 ? (totalComplexity / totalFiles).toFixed(2) : 0;
 
 // Display results
-console.log('\n📊 Code Quality "Report": ');
-console.log(`   - Total files analyzed: ${totalFiles}`);
-console.log(`   - Total lines of "code": ${totalLines.toLocaleString()}`);
-console.log(`   - Average "complexity": ${qualityMetrics.summary.averageComplexity}`);
-console.log(`   - Files with "issues": ${qualityMetrics.summary.issues.length}`);
+
+
+}`);
+
+
 
 if ( {
-  console.log('\n⚠️  Quality "Issues": ')) {
+  ) {
      {
-  console.log('\n⚠️  Quality Issues:')}
+  }
   qualityMetrics.summary.issues.forEach(fileIssue => {
-    console.log(`\n   📁 ${fileIssue.file}:`);
+    
     fileIssue.issues.forEach(issue => {
-      console.log(`      - ${issue.rule}: ${issue.message} (${issue.value});`)})})} else {
-  console.log('\n✅ No quality issues detected')}
+      `)})})} else {
+  }
 
 // Generate recommendations
 const recommendations = [];
@@ -210,7 +210,7 @@ if (totalLines > 10000) {
   recommendations.push('Large codebase - consider modularization')}
 
 if (recommendations.length > 0) {
-  console.log('\n💡 "Recommendations": ')) {
+  ) {
      {
   recommendations.push('Consider refactoring complex functions')}
 
@@ -221,11 +221,11 @@ if (totalLines > 10000) {
   recommendations.push('Large codebase - consider modularization')}
 
 if (recommendations.length > 0) {
-  console.log('\n💡 "Recommendations": ')}
-  recommendations.forEach(rec => console.log(`   - ${rec}`);)}
+  }
+  recommendations.forEach(rec => )}
 
 // Save report
 fs.writeFileSync('code-quality-report.json', JSON.stringify(qualityMetrics, null, 2));
-console.log('\n📄 Code quality report saved to code-quality-report.json');
+
 
 process.exit(0);

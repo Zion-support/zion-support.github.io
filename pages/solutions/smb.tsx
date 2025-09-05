@@ -1,7 +1,7 @@
-import React from 'react';
-import Layout from "../../components/Layout";
 import { motion } from 'framer-motion';
-import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+import Layout from '../../components/Layout';
+import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
+
 
 export default function SMBSolutionsPage() {
   const smbServices = [

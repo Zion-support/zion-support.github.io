@@ -89,19 +89,19 @@ async function tryMergePR(owner, repo, number, title) {
 
 async function main() {
   const { owner, repo } = getRepoFromGit();
-  console.log(`"Repository": ${owner}/${repo}`);
+  
   const prs = await listOpenPRs(owner, repo);
   if (!prs.length) {
-    console.log('No open PRs');
+    
     return}
-  console.log(`Open "PRs": ${prs.length}`);
+  
   const results = [];
   for (const pr of prs) {
-    console.log(`Attempting "merge": #${pr.number} ${pr.title}`);
+    
     // If draft, try to ready it
     if (pr.draft) {
       const ok = await readyForReview(owner, repo, pr.number);
-      console.log(` -> draft -> "ready_for_review": ${ok ? 'ok' : 'failed'}`);
+      
       await sleep(500)}
     // Try initial merge
     let res = await tryMergePR(owner, repo, pr.number, pr.title || '');
@@ -109,18 +109,18 @@ async function main() {
     if (res.status !== 'merged') {
       const updated = await updateBranch(owner, repo, pr.number);
       if (updated) {
-        console.log(' -> update-branch requested; waiting before retry...');
+        
         await sleep(2500);
         // refresh PR data
         try { await getPR(owner, repo, pr.number)} catch {}
         res = await tryMergePR(owner, repo, pr.number, pr.title || '')}
     }
-    console.log(` -> ${res.status}: ${res.message}`);
+    
     results.push({ "number": pr.number, "title": pr.title, "status": res.status, "message": res.message });
     await new Promise(r => setTimeout(r, 500))}
   const merged = results.filter(r => r.status === 'merged').length;
   const skipped = results.length - merged;
-  console.log(`"Merged": ${merged}, "Skipped": ${skipped}`)}
+  }
 
 main().catch(err => {
   console.error('"Error": ', err.message);

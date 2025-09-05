@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🔧 Starting comprehensive project error fixer...');
+
 
 // Function to recursively find all TypeScript and JavaScript files
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
@@ -147,16 +147,16 @@ function fixTypeScriptErrors(content, filePath) {
 // Main function to process all files
 async function fixAllErrors() {
   try {
-    console.log('🔍 Scanning for files to fix...');
+    
     const files = findFiles('./src');
-    console.log(`📁 Found ${files.length} files to process`);
+    
     
     let totalFixes = 0;
     let filesFixed = 0;
     
     for (const filePath of files) {
       try {
-        console.log(`🔧 "Processing": ${filePath}`);
+        
         let content = fs.readFileSync(filePath, 'utf8');
         let fileChanges = 0;
         
@@ -179,24 +179,24 @@ async function fixAllErrors() {
         
         if (fileChanges > 0) {
           fs.writeFileSync(filePath, content);
-          console.log(`  ✅ Fixed ${fileChanges} issues in ${filePath}`);
+          
           totalFixes += fileChanges;
           filesFixed++}
         
       } catch (error) {
-        console.log(`  ⚠️  Error processing ${filePath}: ${error.message}`)}
+        }
     }
     
-    console.log("\n✅ Error fixing completed!");
-    console.log(`📊 Total fixes "applied": ${totalFixes}`);
-    console.log(`📁 Files "modified": ${filesFixed}`);
+    
+    
+    
     
     // Run linting to check remaining issues
-    console.log('\n🔍 Running linting to check remaining issues...');
+    
     try {
       execSync('npm run lint', { "stdio": 'pipe' });
-      console.log('✅ Linting passed!')} catch (error) {
-      console.log('⚠️  Some linting issues remain. Consider "running": npm run lint -- --fix')}
+      } catch (error) {
+      }
     
   } catch (error) {
     console.error('❌ Error fixing "failed": ', error.message)}

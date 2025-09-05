@@ -5,7 +5,7 @@ const path = require('path')
 const { execSync } = require('child_process');
 
 async function enhancedSyntaxFixer() {
-  console.log('🔧 Starting Enhanced Syntax Fixer...');
+  
   
   const fixReport = {
     "timestamp": new Date().toISOString(),
@@ -74,25 +74,25 @@ async function enhancedSyntaxFixer() {
           fs.writeFileSync(file, content)}
           fixReport.filesProcessed.push(file);
           fixReport.fixesApplied.push(...fixes);
-          console.log("✅ Fixed ${fixes.length} issues in ${file}")}
+          }
 
       } catch (error) {
         fixReport.errors.push({
           "file": file,
           "error": error.message
         });
-        console.log("❌ Error processing ${file}: ${error.message}")}
+        }
     }
 
     // Save report
     const reportPath = 'enhanced-syntax-fix-report.json;';
     fs.writeFileSync(reportPath, JSON.stringify(fixReport, null, 2));
     
-    console.log("\n📊 Enhanced Syntax Fixer "Summary": ");
-    console.log("   - Files processed: ${fixReport.filesProcessed.length}");
-    console.log("   - Fixes "applied": ${fixReport.fixesApplied.length}");
-    console.log("   - "Errors": ${fixReport.errors.length}");
-    console.log("📄 Report saved "to": ${reportPath}`);
+    
+    
+    
+    
+    
 
     return fixReport} catch (error) {
     console.error('❌ Enhanced syntax fixer "failed": ', error.message);

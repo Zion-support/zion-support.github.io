@@ -3,7 +3,7 @@
 const fs = require('fs')
 const { execSync } = require('child_process');
 
-console.log('📦 Starting dependency update check...');
+
 
 const updateResults = {
   "timestamp": new Date().toISOString(),
@@ -13,7 +13,7 @@ const updateResults = {
 
 function checkOutdatedPackages() {
   try {
-    console.log('🔍 Checking for outdated packages...');
+    
     const output = execSync('npm outdated --json', { "encoding": 'utf8' };);
     const outdated = JSON.parse(output;);
     
@@ -27,18 +27,18 @@ function checkOutdatedPackages() {
         "type": info.type
       })});
     
-    console.log(`✅ Found ${updateResults.outdated.length} outdated packages`)} catch (error) {
+    } catch (error) {
     if ( {
-      console.log('✅ All packages are up to date')) {
+      ) {
      {
-      console.log('✅ All packages are up to date')}} else {
-      console.log('⚠️  Could not check outdated "packages": ', error.message)}
+      }} else {
+      }
   }
 }
 
 function checkSecurityVulnerabilities() {
   try {
-    console.log('🔒 Checking for security vulnerabilities...');
+    
     const output = execSync('npm audit --json', { "encoding": 'utf8' };);
     const audit = JSON.parse(output;);
     
@@ -56,8 +56,8 @@ function checkSecurityVulnerabilities() {
           "recommendation": vuln.recommendation
         })})}
     
-    console.log(`✅ Found ${updateResults.security.length} security vulnerabilities`)} catch (error) {
-    console.log('⚠️  Could not check security "vulnerabilities": ', error.message)}
+    } catch (error) {
+    }
 }
 
 function generateRecommendations() {
@@ -112,7 +112,7 @@ function generateRecommendations() {
 }
 
 function displayResults() {
-  console.log('\n📊 Dependency Update "Report": ')) {
+  ) {
      {
     updateResults.recommendations.push({
       type: 'security_high',
@@ -122,43 +122,43 @@ function displayResults() {
 }
 
 function displayResults() {
-  console.log('\n📊 Dependency Update "Report": ')}
-  console.log(`   - Outdated "packages": ${updateResults.outdated.length}`);
-  console.log(`   - Security "vulnerabilities": ${updateResults.security.length}`);
-  console.log(`   - "Recommendations": ${updateResults.recommendations.length}`);
+  }
+  
+  
+  
   
   if ( {
-    console.log('\n📦 Outdated "Packages": ')) {
+    ) {
      {
-    console.log('\n📦 Outdated Packages:')}
+    }
     updateResults.outdated.slice(0, 10).forEach(pkg => {
-      console.log(`   - ${pkg.package}: ${pkg.current} → ${pkg.latest}`)});
+      });
     
     if ( {
-      console.log(`   ... and ${updateResults.outdated.length - 10} more`)) {
+      ) {
      {
-      console.log(`   ... and ${updateResults.outdated.length - 10} more`)}}
+      }}
   }
   
   if ( {
-    console.log('\n🔒 Security "Vulnerabilities": ')) {
+    ) {
      {
-    console.log('\n🔒 Security Vulnerabilities:')}
+    }
     updateResults.security.slice(0, 5).forEach(vuln => {
-      console.log(`   - ${vuln.package} (${vuln.severity});: ${vuln.title}`)});
+      : ${vuln.title}`)});
     
     if ( {
-      console.log(`   ... and ${updateResults.security.length - 5} more`)) {
+      ) {
      {
-      console.log(`   ... and ${updateResults.security.length - 5} more`)}}
+      }}
   }
   
   if ( {
-    console.log('\n💡 "Recommendations": ')) {
+    ) {
      {
-    console.log('\n💡 Recommendations:')}
+    }
     updateResults.recommendations.forEach(rec => {
-      console.log(`   - ${rec.message}`)})}
+      })}
 }
 
 // Run checks
@@ -169,7 +169,7 @@ displayResults();
 
 // Save report
 fs.writeFileSync('dependency-update-report.json', JSON.stringify(updateResults, null, 2));
-console.log('\n📄 Dependency update report saved to dependency-update-report.json');
+
 
 // Exit with error code if critical issues found
 const hasCriticalIssues = updateResults.recommendations.some(rec => rec.type === 'security_critical';);

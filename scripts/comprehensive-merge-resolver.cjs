@@ -8,7 +8,7 @@ class ComprehensiveMergeResolver {
     this.resolvedFiles = []
     this.errors = []}
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
   resolveMergeConflicts() {
     this.log("🔧 Starting comprehensive merge conflict resolution...")
     try {

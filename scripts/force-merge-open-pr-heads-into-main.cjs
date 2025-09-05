@@ -54,7 +54,7 @@ function autoResolveConflicts() {
 
 async function main() {
   const { owner, repo } = getRepo();
-  console.log(`"Repository": ${owner}/${repo}`);
+  
   const startBranch = sh('git rev-parse --abbrev-ref HEAD');
   sh('git fetch origin');
   sh('git checkout main');
@@ -65,20 +65,20 @@ async function main() {
     attempted++;
     const head = pr.head && pr.head.ref;
     if (!head) continue;
-    console.log(`Merging head into "main": PR #${pr.number} (${head})`);
+    `);
     try {
       sh(`git fetch origin ${head}:${head} || true`);
       try {
         sh(`git merge --no-ff --no-edit origin/${head}`)} catch (e) {
-        console.log('Conflicts detected. Attempting auto-resolution...');
+        
         autoResolveConflicts()}
       mergedCount++} catch (e) {
-      console.log(`Skip PR #${pr.number} (${head}): ${e.message}`);
+      : ${e.message}`);
       // Abort merge if in progress
       try { sh('git merge --abort')} catch {}
     }
   }
-  console.log(`Pushing main with ${mergedCount}/${attempted} merged heads...`);
+  
   sh('git push origin main');
   // return to original branch
   try { sh(`git checkout ${startBranch}`)} catch {}

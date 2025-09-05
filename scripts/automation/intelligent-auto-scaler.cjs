@@ -38,14 +38,14 @@ class IntelligentAutoScaler {
       await fs.mkdir(path.join(this.projectRoot, 'logs'), { "recursive": true });
       await this.loadScalingConfig();
     } catch (error) {
-      console.log('Logs directory already exists');
+      
     }
   }
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
+    
     
     fs.appendFile(this.logFile, logMessage + '\n').catch(console.error);
   }

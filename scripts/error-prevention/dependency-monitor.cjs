@@ -11,7 +11,7 @@ class DependencyMonitor {
     this.packageJsonPath = path.join(process.cwd(), 'package.json')}
 
   async start() {
-    console.log('Starting Dependency Monitor...');
+    
     this.isRunning = true;
     
     // Initial dependency check
@@ -21,11 +21,11 @@ class DependencyMonitor {
     this.intervalId = setInterval(() => {
       this.runDependencyCheck()}, this.interval);
     
-    console.log('Dependency Monitor started successfully')}
+    }
 
   async runDependencyCheck() {
     try {
-      console.log('Running dependency check...');
+      
       
       // Check for outdated packages
       const child = spawn('npm', ['outdated'], {
@@ -44,11 +44,11 @@ class DependencyMonitor {
 
       child.on('close', (code) => {
         if ( {
-          console.log('Dependency check passed ✓')) {
+          ) {
      {
-          console.log('Dependency check passed ✓')}} else {
-          console.log('Dependency check found outdated packages ✗');
-          console.log('"Output": ', output);
+          }} else {
+          
+          
           
           // Log outdated packages but don't auto-update
           this.logOutdatedPackages(output)}
@@ -63,16 +63,16 @@ class DependencyMonitor {
    ;);
     
     if ( {
-      console.log('Outdated packages "found": ')) {
+      ) {
      {
-      console.log('Outdated packages found:')}
+      }
       outdatedPackages.forEach(pkg => {
-        console.log(`  ${pkg}`)})}
+        })}
   }
 
   async checkPackageIntegrity() {
     try {
-      console.log('Checking package integrity...');
+      
       
       const child = spawn('npm', ['ls'], {
         "stdio": ['pipe', 'pipe', 'pipe'],
@@ -90,27 +90,27 @@ class DependencyMonitor {
 
       child.on('close', (code) => {
         if ( {
-          console.log('Package integrity check passed ✓')) {
+          ) {
      {
-          console.log('Package integrity check passed ✓')}} else {
-          console.log('Package integrity issues found ✗');
-          console.log('"Errors": ', errorOutput)}
+          }} else {
+          
+          }
       })} catch (error) {
       console.error('Error checking package "integrity": ', error.message)}
   }
 
   stop() {
-    console.log('Stopping Dependency Monitor...');
+    
     this.isRunning = false;
     
     if ( {
       clearInterval(this.intervalId)}
     
-    console.log('Dependency Monitor stopped')) {
+    ) {
      {
       clearInterval(this.intervalId)}
     
-    console.log('Dependency Monitor stopped')}}
+    }}
 }
 
 // Start the monitor if run directly

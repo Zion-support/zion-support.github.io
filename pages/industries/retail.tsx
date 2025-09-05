@@ -1,20 +1,7 @@
-import React from 'react';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  ShoppingCart, 
-  Brain, 
-  BarChart3, 
-  CheckCircle,
-  ArrowRight,
-  Package,
-  Users,
-  CreditCard,
-  Smartphone,
-  Globe,
-  Database
-} from 'lucide-react';
+import Link from 'next/link';
 import Layout from '../../components/Layout';
+import { ShoppingCart, Brain, BarChart3, CheckCircle, ArrowRight, Package, Users, CreditCard, Smartphone, Globe, Database } from 'lucide-react';
 
 const services = [
   {

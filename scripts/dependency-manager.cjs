@@ -9,7 +9,7 @@ class DependencyManager {
       fs.mkdirSync(this.reportsDir, { "recursive": true })}
   }
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
   analyzeDependencies() {
     this.log('📦 Analyzing dependencies...');
     try {
@@ -21,16 +21,11 @@ class DependencyManager {
       // Check for outdated packages
       let outdatedPackages = [];
       try {
-<<<<<<< HEAD
-        const outdatedResult = execSync('npm outdated --json', {"stdio": 'pipe',"cwd": this.projectRoot;
-          encoding: 'utf8'});
-=======
         const outdatedResult = execSync('npm outdated --json', {
           stdio: 'pipe',
           cwd: this.projectRoot,
           encoding: 'utf8'
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
         outdatedPackages = JSON.parse(outdatedResult)} catch (error) {
         // npm outdated returns non-zero exit code when packages are outdated
         if (error.stdout) {
@@ -132,13 +127,13 @@ class DependencyManager {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📄 Report saved "to": ${reportFile}`);
     // Print summary
-    console.log('\n📦 DEPENDENCY MANAGER SUMMARY');
-    console.log('=' * 50);
-    console.log(`Total "Dependencies": ${report.summary.totalDependencies}`);
-    console.log(`Outdated "Packages": ${report.summary.outdatedPackages}`);
-    console.log(`Security "Vulnerabilities": ${report.summary.vulnerabilities}`);
-    console.log(`Security "Audit": ${report.summary.auditSuccessful ? '✅ Passed' : '❌ Issues Found'}`);
-    console.log(`"Report": ${reportFile}`);
+    
+    
+    
+    
+    
+    
+    
     return report}
   async run() {
     try {this.log('🚀 Starting Dependency Manager'),const report = this.generateReport(),this.log('✅ Dependency management completed');

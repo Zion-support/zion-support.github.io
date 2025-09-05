@@ -10,7 +10,7 @@ class PRMerger {
     this.failedPRs = []}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
 
   execCommand(command, description) {
     try {

@@ -100,7 +100,7 @@ function fixSyntaxErrors(filePath) {
     // Write the fixed content back
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors "in": ${filePath}`);
+      
       return true;
     }
     
@@ -133,6 +133,5 @@ function fixFilesInDirectory(dirPath) {
 }
 
 // Main execution
-console.log('Starting syntax error fixing...');
+
 const fixedCount = fixFilesInDirectory('./src');
-console.log(`Fixed ${fixedCount} files with syntax errors.`);

@@ -9,7 +9,7 @@ class ComponentReplacer {
     this.filePath = path.join(this.projectRoot, 'src/components/AIChatbotSystem.tsx')}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
 
   replaceComponent() {
     this.log('Replacing broken AIChatbotSystem component with working version...');
@@ -188,7 +188,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({
 
   // Rate response
   const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {
-    console.log(\"Rated message \${messageId} as \${rating}\")}, []);
+    }, []);
 
   return (
     <>
@@ -441,7 +441,7 @@ if (require.main === module) {
   const automation = new ComponentReplacer();
   automation.run()
     .then(() => {
-      console.log('Component Replacer completed successfully!');
+      
       process.exit(0)})
     .catch(error => {
       console.error('Component Replacer "failed": ', error);

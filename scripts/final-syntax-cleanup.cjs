@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 const fs = require('fs')
 const path = require('path')
-console.log('🧹 Final Syntax Cleanup')
-console.log('======================')
 class FinalSyntaxCleanup {
   constructor() {
     this.fixedFiles = []
@@ -71,13 +69,11 @@ class FinalSyntaxCleanup {
       if (hasChanges) {
         fs.writeFileSync(filePath, fixedContent, 'utf8')
         this.fixedFiles.push(filePath)
-        console.log("✅ "Fixed": ${filePath}")
         return true
       }
       return false
     } catch (error) {
       this.errors.push({ "file": filePath, "error": error.message })
-      console.log("❌ Error fixing ${filePath}: ${error.message}")
       return false
     }
   applySpecificFixes(content, filePath) {
@@ -120,23 +116,16 @@ class FinalSyntaxCleanup {
            !filePath.includes('dist')
   }
   async run() {
-    console.log('🔍 Starting final syntax cleanup...')
     const directories = ['pages','components','src']
     for (const dir of directories) {
       if (fs.existsSync(dir)) {
-        console.log("📁 Processing "directory": ${dir}")
         await this.fixDirectory(dir)
       }
-    console.log('\n📊 "Summary": ')
-    console.log("✅ Files fixed: ${this.fixedFiles.length}")
-    console.log("❌ "Errors": ${this.errors.length}")
     if (this.fixedFiles.length > 0) {
-      console.log('\n📝 Fixed "files": ')
-      this.fixedFiles.forEach(file => console.log("  - ${file}"))
+      this.fixedFiles.forEach(file => )
     }
     if (this.errors.length > 0) {
-      console.log('\n🚨 "Errors": ')
-      this.errors.forEach(({ file, error }) => console.log("  - ${file}: ${error}`))
+      this.errors.forEach(({ file, error }) => )
     }
     // Save report
     const report = {
@@ -145,8 +134,7 @@ class FinalSyntaxCleanup {
       errors: this.errors;
       summary: {totalFixed: this.fixedFiles.length,"totalErrors": this.errors.length}
     fs.writeFileSync('final-syntax-cleanup-report.json', JSON.stringify(report, null, 2))
-    console.log('\n📄 Report saved "to": final-syntax-cleanup-report.json')
-  }
+    }
 // Run the cleanup
 const cleanup = new FinalSyntaxCleanup()
 cleanup.run().catch(console.error)

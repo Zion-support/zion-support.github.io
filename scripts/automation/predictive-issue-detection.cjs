@@ -48,7 +48,7 @@ class $1 {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)}
+    fs.appendFileSync(this.logFile, logEntry);}
 ;
   loadIssuePatterns() {
   try {
@@ -1308,7 +1308,7 @@ if (require.main === module) {
   automation;
     .run();
     .then(() => {
-  console.log("✅ Predictive Issue Detection completed");
+  
 
 // Main execution;
 if (require.main === module) {
@@ -1316,7 +1316,7 @@ if (require.main === module) {
   automation;
     .run();
     .then(() => {
-  console.log("✅ Predictive Issue Detection completed");
+  
       process.exit(0)});
     .catch(error => {
   console.error("❌ Predictive Issue Detection "failed": ', error.message);

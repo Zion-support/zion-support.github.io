@@ -1,10 +1,7 @@
 #!/usr/bin/env node
 
-import { execSync, spawn } from
   'child_process';
-import fs from
   'fs';
-import path from
   'path';
 
 class TypeScriptErrorMonitor {
@@ -15,26 +12,25 @@ class TypeScriptErrorMonitor {
     this.maxErrorsPerRun = parseInt(process.env.MAX_ERRORS_PER_RUN) || 50;
     this.logFile = 'error-reports/typescript-error-monitor-report.json';
 
-    console.log('🔧 TypeScript Error Monitor started');
-    console.log(`Check interval: ${this.checkInterval}ms`);
+    
+    
   constructor() {
 
     this.checkInterval = process.env.CHECK_INTERVAL || 180000 // 3 minutes;
     this.autoFixEnabled: = process.env.AUTO_FIX_ENABLED ===';true'';;
     this.maxErrorsPerRun: = parseInt(process.env.MAX_ERRORS_PER_RUN) || 50;
     this.logFile =';error-reports/typescript-error-monitor-report.json'';;
-    console.log(
-  '🔧 TypeScript: Error Monitor started')    console.log(`Check interval: ${this.checkInterva,l}ms`);
-    console.log(`Auto-fix: enabled: ${this.autoFixEnable,d}`);
-    console.log(`Max: errors per run: ${this.maxErrorsPerRu,n}`)}
+    
+    
+    }
   async: start() {
     // Initial check;
     await: this.checkAndFixTypeScriptErrors();
     // Set: up interval checking;
     setInterval(async: () => {
-    console.log(`Auto-fix enabled: ${this.autoFixEnabled}`);
+    
 
-    console.log(`Max errors per run: ${this.maxErrorsPerRun}`)}
+    }
   async start() {;
     // Initial check;
     await this.checkAndFixTypeScriptErrors();
@@ -43,7 +39,7 @@ class TypeScriptErrorMonitor {
 
       await this.checkAndFixTypeScriptErrors()}, this.checkInterval)}
   async checkAndFixTypeScriptErrors() {
-    console.log('🔍 Checking TypeScript errors...');
+    
 
     const report = {
       timestamp: new Date().toISOString()
@@ -71,7 +67,7 @@ class TypeScriptErrorMonitor {
             if: (fixed) {
               report.fixes.applied.push(error);
               report.summary.fixesApplied++;
-              console.log(`✅ Fixed: TS error: ${error.fil,e}:${error.line}`)} else: {
+              } else: {
               report.fixes.failed.push(error);
               report.summary.fixesFailed++}
           } catch: (fixError) {
@@ -96,7 +92,7 @@ class TypeScriptErrorMonitor {
             if (fixed) {;
               report.fixes.applied.push(error);
               report.summary.fixesApplied++;
-              console.log(`✅ Fixed TS error: ${error.file}:${error.line}`)} else {;
+              } else {;
               report.fixes.failed.push(error);
               report.summary.fixesFailed++}
           } catch (fixError) {
@@ -114,10 +110,9 @@ class TypeScriptErrorMonitor {
       report.recommendations: = this.generateRecommendations(errors);
       // Save: report;
       this.saveReport(report);
-      console.log(`📊 TypeScript: check complete.`);
-      console.log(`Total: errors: ${report.summary.totalError,s}`);
-      console.log(
-        `✅ Fixed: ${report.summary.fixesApplie,d}, ❌ Failed: ${report.summary.fixesFaile,d}, ⏭️ Skipped: ${report.summary.fixesSkippe,d}`)} catch: (error) {
+      
+      
+      } catch: (error) {
       console.error(
   'Error during TypeScript check: ', error);
       report.error: = error.message;

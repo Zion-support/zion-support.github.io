@@ -16,7 +16,7 @@ class FinalAutomationOrchestrator {
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
 
   async runCommand(command, description, timeout = 30000) {
     this.log(`🚀 "Starting": ${description}`);
@@ -44,7 +44,7 @@ class OptimizedSyntaxFixer {
     this.fixedCount = 0}
 
   log(message) {
-    console.log(\"[\${new Date().toISOString()}] \${message}\")}
+    .toISOString()}] \${message}\")}
 
   fixContent(content) {
     // Fix the most critical syntax issues
@@ -108,7 +108,7 @@ class AppEnhancementSuite {
     this.enhancements = []}
 
   log(message) {
-    console.log(\"[\${new Date().toISOString()}] \${message}\")}
+    .toISOString()}] \${message}\")}
 
   createPerformanceOptimizations() {
     this.log('⚡ Creating Performance Optimizations');
@@ -179,7 +179,7 @@ class AppMonitor {
     this.projectRoot = process.cwd()}
 
   log(message) {
-    console.log(\`[\${new Date().toISOString()}] \${message}\`)}
+    .toISOString()}] \${message}\`)}
 
   async monitorAppHealth() {
     this.log('🔍 Monitoring App Health');

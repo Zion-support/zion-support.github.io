@@ -2,13 +2,13 @@
 
 const fs = require('fs');
 
-console.log('🔧 Applying ultimate final fixes...');
+
 
 // Fix SEO.tsx - remove everything after the return statement
 const seoContent = fs.readFileSync('src/components/SEO.tsx', 'utf8');
 const seoFixed = seoContent.split('  );')[0] + '  );';
 fs.writeFileSync('src/components/SEO.tsx', seoFixed, 'utf8');
-console.log('✅ Fixed SEO.tsx');
+
 
 // Fix TalentCard.jsx - fix malformed JSX
 const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'utf8');
@@ -32,13 +32,13 @@ const talentFixed = talentContent
   .replace(/className="bg-zion-cyan text-zion-blue-dark "hover": bg-zion-cyan-light">/g, 'className="bg-zion-cyan text-zion-blue-dark "hover": bg-zion-cyan-light">')
   .replace(/className="text-sm">/g, 'className="text-sm">');
 fs.writeFileSync('src/components/talent/TalentCard.jsx', talentFixed, 'utf8');
-console.log('✅ Fixed TalentCard.jsx');
+
 
 // Fix use-toast.ts - add missing closing brace
 const toastContent = fs.readFileSync('src/components/ui/use-toast.ts', 'utf8');
 const toastFixed = toastContent.replace('  return { showToast };\n}', '  return { showToast };\n}');
 fs.writeFileSync('src/components/ui/use-toast.ts', toastFixed, 'utf8');
-console.log('✅ Fixed use-toast.ts');
+
 
 // Fix enhancedServices.ts - fix malformed object properties
 const servicesContent = fs.readFileSync('src/data/enhancedServices.ts', 'utf8');
@@ -54,7 +54,7 @@ const servicesFixed = servicesContent
   .replace(/reviewCount: 15 6/g, '"reviewCount": 156')
   .replace(/featured: tru e/g, '"featured": true');
 fs.writeFileSync('src/data/enhancedServices.ts', servicesFixed, 'utf8');
-console.log('✅ Fixed enhancedServices.ts');
+
 
 // Fix useAuth.tsx - fix malformed function
 const authContent = fs.readFileSync('src/hooks/useAuth.tsx', 'utf8');
@@ -65,6 +65,5 @@ const authFixed = authContent
   .replace(/:src\/hooks\/useAuth\.tsx/g, '')
   .replace(/useEffect\(\(\) => \{\s*\/\/ Check if user is logged in \(e\.g\., check localStorage, cookies, etc\.\)\s*\/\/ Implementation here\s*\}, \[\]\);/g, 'useEffect(() => {\n    // Check if user is logged in (e.g., check localStorage, cookies, etc.)\n    // Implementation here\n  }, []);');
 fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
-console.log('✅ Fixed useAuth.tsx');
 
-console.log('✨ Ultimate final fixes completed!');
+

@@ -21,7 +21,7 @@ class $1 {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log("logMessage);
+    
     // Write to log file;
     fs.appendFileSync(this.logFile, logMessage + "\n")}
 ;
@@ -39,7 +39,7 @@ class $1 {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logMessage = "[${timestamp}] [${level}] ${message}";
-    console.log("logMessage);
+    
     // Write to log file;
     fs.appendFileSync(this.logFile, logMessage + "\n")}
 ;
@@ -354,7 +354,7 @@ if (require.main === module) {
   const resolver = new AutoMergeConflictResolver();
   resolver.run();
     .then(report => {
-  console.log("✅ Auto merge conflict resolution completed successfully`);
+  
       process.exit(0)});
     .catch(error => {
   console.error("❌ Auto merge conflict resolution "failed": ", error);

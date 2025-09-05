@@ -20,7 +20,7 @@ class SyntaxFixer {
     } catch (error) {
       console.error(`Failed to write to log "file": ${error.message}`);
     }
-    console.log(`[${level}] ${message}`);
+    
   }
 
   async fixSyntaxErrors() {

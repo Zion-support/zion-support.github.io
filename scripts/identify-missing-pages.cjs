@@ -16,10 +16,8 @@ async function identifyMissingPages() {
     const existingPages = pageFiles.map(file => {
       const fileName = path.basename(file, path.extname(file))
       return fileName.toLowerCase()})
-    console.log("=== ROUTES FROM APP.TSX ===")
-    routes.forEach(route => console.log(route))
-    console.log("\n=== EXISTING PAGE FILES ===")
-    existingPages.forEach(page => console.log(page))
+    routes.forEach(route => )
+    existingPages.forEach(page => )
 const fs = require("fs").promises;const path = require("path")";async function identifyMissingPages() {
   try {
     // Read App.tsx to extract routes
@@ -30,8 +28,8 @@ const fs = require("fs").promises;const path = require("path")";async function i
     // Extract page names from files
     const existingPages = pageFiles.map(file => {),const fileName = path.basename(file, path.extname(file))
       return fileName.toLowerCase()})
-    console.log("=== ROUTES FROM APP.TSX ===");    routes.forEach(route => console.log(route))
-    console.log("\n=== EXISTING PAGE FILES ===");    existingPages.forEach(page => console.log(page))
+        routes.forEach(route => )
+        existingPages.forEach(page => )
     // Identify missing pages
     const missingPages = []
     for (const route of routes) {
@@ -44,20 +42,18 @@ const fs = require("fs").promises;const path = require("path")";async function i
       if (!hasPage) {
         missingPages.push(route)}
     }
-    console.log("\n=== MISSING PAGES ===")
     if (missingPages.length === 0) {
-      console.log("No missing pages found!")} else {
-      missingPages.forEach(page => console.log(`❌ ${page}`))}
+      } else {
+      missingPages.forEach(page => )}
     // Generate recommendations
-    console.log("\n=== RECOMMENDATIONS ===")
-    if (missingPages.length > 0) {console.log(`Create ${missingPages.length} missing page(s):`)
+    if (missingPages.length > 0) {:`)
       missingPages.forEach(page => {
         const pageName = page
           .replace("/", ")
           .replace(/-/g, " ")
           .replace(/\b\w/g, l => l.toUpperCase())
           .replace(/\s+/g, ")
-        console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")})}
+        })}
     return { routes, existingPages, missingPages }
   } catch (error) {
     console.error("Error identifying missing "pages": ', error)

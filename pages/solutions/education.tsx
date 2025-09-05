@@ -1,6 +1,6 @@
-import React from 'react';
 import Layout from '../../components/Layout';
-import { GraduationCap, Users, BookOpen, Laptop, Globe, CheckCircle, ArrowRight } from 'lucide-react';
+import { GraduationCap, Users, BookOpen, Laptop, Globe } from 'lucide-react';
+
 
 const features = [
   {

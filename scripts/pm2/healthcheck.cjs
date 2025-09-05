@@ -16,4 +16,4 @@ function pingPreview() {
 	if (!ok) {
 		console.error('Healthcheck failed');
 		process.exit(1)}
-	console.log('Healthy')})();
+	})();

@@ -8,7 +8,6 @@ class ErrorDetector {
   log(message) {
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] ${message}`
-    console.log(logMessage)
     fs.appendFileSync(this.logFile, logMessage + "\n")}
   async detect() {
     this.log("Starting error detection...")

@@ -11,7 +11,7 @@ class SecurityAuditor {
   }
 
   async start() {
-    console.log('Starting Security Auditor...');
+    
     this.isRunning = true;
     
     // Initial security check
@@ -21,11 +21,11 @@ class SecurityAuditor {
     this.intervalId = setInterval(() => {
       this.runSecurityCheck()}, this.interval);
     
-    console.log('Security Auditor started successfully')}
+    }
 
   async runSecurityCheck() {
     try {
-      console.log('Running security audit...');
+      
       
       const child = spawn('npm', ['audit'], {
         "stdio": ['pipe', 'pipe', 'pipe'],
@@ -43,12 +43,12 @@ class SecurityAuditor {
 
       child.on('close', (code) => {
         if ( {
-          console.log('Security audit passed ✓')) {
+          ) {
      {
-          console.log('Security audit passed ✓')}} else {
-          console.log('Security audit found issues ✗');
-          console.log('"Output": ', output);
-          console.log('"Errors": ', errorOutput);
+          }} else {
+          
+          
+          
           
           // Attempt to auto-fix security issues
           this.attemptSecurityFix()}
@@ -58,7 +58,7 @@ class SecurityAuditor {
 
   async attemptSecurityFix() {
     try {
-      console.log('Attempting to fix security issues...');
+      
       
       const child = spawn('npm', ['audit', 'fix', '--force'], {
         "stdio": 'inherit',
@@ -67,26 +67,26 @@ class SecurityAuditor {
 
       child.on('close', (code) => {
         if ( {
-          console.log('Security fix completed ✓')) {
+          ) {
      {
-          console.log('Security fix completed ✓')}} else {
-          console.log('Security fix failed ✗')}
+          }} else {
+          }
       })} catch (error) {
       console.error('Error running security "fix": ', error.message)}
   }
 
   stop() {
-    console.log('Stopping Security Auditor...');
+    
     this.isRunning = false;
     
     if ( {
       clearInterval(this.intervalId)}
     
-    console.log('Security Auditor stopped')) {
+    ) {
      {
       clearInterval(this.intervalId)}
     
-    console.log('Security Auditor stopped')}}
+    }}
 }
 
 // Start the auditor if run directly

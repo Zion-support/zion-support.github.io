@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process');
 
-console.log('🏥 Running Health Check...');
+
 
 const healthReport = {
   "timestamp": new Date().toISOString(),
@@ -19,14 +19,14 @@ function runCheck(name, checkFn) {
       "status": 'pass',
       result
     });
-    console.log('✅ ' + name + ': OK');
+    
   } catch (error) {
     healthReport.checks.push({
       name,
       "status": 'fail',
       "error": error.message
     });
-    console.log('❌ ' + name + ': ' + error.message);
+    
     healthReport.status = 'unhealthy'}
 }
 
@@ -74,7 +74,7 @@ runCheck('TypeScript compilation', () => {
 
 // Save report
 fs.writeFileSync('health-check-report.json', JSON.stringify(healthReport, null, 2));
-console.log('📄 Health report saved to health-check-report.json');
-console.log('🏥 Overall "status": ' + healthReport.status);
+
+
 
 process.exit(healthReport.status === 'healthy' ? 0 : 1);

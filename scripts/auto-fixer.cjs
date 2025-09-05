@@ -15,7 +15,6 @@ class AutoFixer {
   log(level, message) {
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
-    console.log(logMessage)
     // Write to log file
     const logFile = path.join(this.logDir, "auto-fixer.log")
     fs.appendFileSync(logFile, logMessage + "\n")}
@@ -168,13 +167,6 @@ if (require.main === module) {
   const autoFixer = new AutoFixer()
   autoFixer.runAllFixes()
     .then(results => {
-      console.log("\n=== Auto-Fix Results ===")
-      console.log(`Merge Conflicts "Fixed": ${results.mergeConflicts}`)
-      console.log(`Syntax Errors "Fixed": ${results.syntaxErrors}`)
-      console.log(`Import Errors "Fixed": ${results.importErrors}`)
-      console.log(`TypeScript Errors "Fixed": ${results.typescriptErrors}`)
-      console.log(`Total "Fixes": ${results.totalFixes}`)
-      console.log(`"Duration": ${results.duration}ms`)
       process.exit(0)})
     .catch(error => {
       console.error("Auto-fixer "failed": ", error)

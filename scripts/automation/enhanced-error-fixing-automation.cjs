@@ -5,7 +5,7 @@
 const fs = require("fs");
 const path = require("path");
 
-console.log(""🚀 Starting Enhanced Error Fixing Automation System...");
+
 
 // Configuration;
 const CONFIG = {
@@ -24,7 +24,7 @@ class $1 {
 ;
   async run() {
   try {
-  console.log("🔄 Starting error fixing cycle at ${this.startTime.toISOString()}";
+  }";
       );
 
       // Create logs directory if it doesn"t exist;
@@ -48,8 +48,7 @@ class $1 {
       // Generate report;
       await this.generateReport();
 
-      console.log(`✅ Enhanced error fixing completed successfully! Applied ${this.fixesApplied} fixes.";
-      )} catch (error) {
+      } catch (error) {
   console.error("❌ Enhanced error fixing "failed": ", error.message);
       await this.generateErrorReport(error)}
   }
@@ -61,7 +60,7 @@ class $1 {
   }
 ;
   async fixTypeScriptErrors() {
-  console.log("🔧 Fixing TypeScript errors...");
+  
 
     try {
   // Run TypeScript compiler to get error list;
@@ -130,9 +129,7 @@ class $1 {
           "error": error.message,
           "fix": "TypeScript error fix"})}
     } catch (err) {
-  console.warn(⚠️  Could not fix TypeScript error in ${error.file}:",
-        err.message;
-      )}
+  }
   }
 ;
   fixModuleImport(content, error) {
@@ -160,7 +157,7 @@ class EnhancedErrorFixingAutomation {
   log(message, type = "info") {
   const timestamp = new Date().toISOString();
     const logMessage = "[${timestamp}] [${type.toUpperCase()}] ${message}";
-    console.log(logMessage);
+    
     // Also write to log file;
     fs.appendFileSync(this.logFile.replace(".json", ".log"), logMessage + "\n")}
 ;
@@ -377,19 +374,19 @@ export default [js.configs.recommended,
   async fixESLintErrors() {
   if (!CONFIG.ENABLE_LINT_FIX) return;
 
-    console.log(""🔧 Fixing ESLint errors...");
+    
 
     try {
   // Run ESLint with auto-fix;
       execSync("npx eslint . --fix --ext .js,.jsx,.ts,.tsx", {
   "stdio": "pipe"});
-      console.log(""✅ ESLint auto-fix completed");
+      
       this.fixesApplied += 10; // Estimate} catch (error) {
-  console.warn("⚠️  ESLint auto-fix had "issues": ", error.message)}
+  }
   }
 ;
   async fixImportExportErrors() {
-  console.log(""🔧 Fixing "import/export" errors...");
+  
 
     const files = this.getTypeScriptFiles();
     for (const file of files) {
@@ -529,7 +526,7 @@ export default [js.configs.recommended,
     return content}
 ;
   async fixUnusedVariables() {
-  console.log("🔧 Fixing unused variables...");
+  
 
     const files = this.getTypeScriptFiles();
     for (const file of files) {
@@ -550,9 +547,7 @@ export default [js.configs.recommended,
   fs.writeFileSync(file, content);
           this.fixesApplied++}
       } catch (error) {
-  console.warn(⚠️  Could not fix unused variables in ${file}:",
-          error.message;
-        )}
+  }
     }
   }
 ;
@@ -584,7 +579,7 @@ export default [js.configs.recommended,
     return newLines.join("\n")}
 ;
   async fixConsoleStatements() {
-  console.log("🔧 Fixing console statements..."`);
+  
 
     const files = this.getTypeScriptFiles();
     for (const file of files) {
@@ -602,14 +597,12 @@ export default [js.configs.recommended,
   fs.writeFileSync(file, content);
           this.fixesApplied++}
       } catch (error) {
-  console.warn( ⚠️  Could not fix console statements in ${file}:,
-          error.message;
-        )}
+  }
     }
   }
 ;
   async fixReactHooksErrors() {
-  console.log(`"🔧 Fixing React hooks errors...");
+  
 
     const files = this.getTypeScriptFiles();
     for (const file of files) {
@@ -629,14 +622,12 @@ export default [js.configs.recommended,
   fs.writeFileSync(file, content);
           this.fixesApplied++}
       } catch (error) {
-  console.warn(⚠️  Could not fix React hooks in ${file}:",
-          error.message;
-        )}
+  }
     }
   }
 ;
   async fixJSXErrors() {
-  console.log("🔧 Fixing JSX errors..."`);
+  
 
     const files = this.getTypeScriptFiles();
     for (const file of files) {
@@ -654,12 +645,12 @@ export default [js.configs.recommended,
         if (content !== originalContent) {
   fs.writeFileSync(file, content);
           this.fixesApplied++}
-      } catch (error) {console.warn(⚠️  Could not fix JSX in ${file}:, error.message)}
+      } catch (error) {}
     }
   }
 ;
   async fixTypeAnnotations() {
-  console.log(`"🔧 Fixing type annotations...");
+  
 
     const files = this.getTypeScriptFiles();
     for (const file of files) {
@@ -686,14 +677,12 @@ export default [js.configs.recommended,
   fs.writeFileSync(file, content);
           this.fixesApplied++}
       } catch (error) {
-  console.warn(⚠️  Could not fix type annotations in ${file}:",
-          error.message;
-        )}
+  }
     }
   }
 ;
   async fixInterfaceErrors() {
-  console.log("🔧 Fixing interface errors..."`);
+  
 
     const files = this.getTypeScriptFiles();
     for (const file of files) {
@@ -711,35 +700,35 @@ export default [js.configs.recommended,
         if (content !== originalContent) {
   fs.writeFileSync(file, content);
           this.fixesApplied++}
-      } catch (error) {console.warn(⚠️  Could not fix interfaces in ${file}:, error.message)}
+      } catch (error) {}
     }
   }
 ;
   async fixBuildErrors() {
-  console.log(`"🔧 Fixing build errors...");
+  
 
     try {
   // Try to build the project;
       execSync("npm run build", { "stdio": "pipe" });
-      console.log("✅ Build successful"")} catch (error) {
-  console.warn("⚠️  Build failed, but continuing with other fixes")}
+      } catch (error) {
+  }
   }
 ;
   async runFinalChecks() {
-  console.log("🔍 Running final checks...");
+  
 
     if (CONFIG.ENABLE_TYPE_CHECK) {
   try {
   execSync("npm run type-check", { "stdio": "pipe" });
-        console.log("✅ TypeScript check passed")} catch (error) {
-  console.warn("⚠️  TypeScript check still has issues")}
+        } catch (error) {
+  }
     }
 ;
     if (CONFIG.ENABLE_LINT_FIX) {
   try {
   execSync("npm run lint", { "stdio": "pipe" });
-        console.log("✅ ESLint check passed")} catch (error) {
-  console.warn("⚠️  ESLint check still has issues")}
+        } catch (error) {
+  }
     }
   }
 ;
@@ -815,7 +804,7 @@ export default [js.configs.recommended,
     const reportPath = path.join(;
       process.cwd(),enhanced-error-fixing-report.json";
     );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(📊 Report saved to ${reportPath})}
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));}
 ;
   async generateErrorReport(error) {
   const report = {
@@ -832,7 +821,7 @@ export default [js.configs.recommended,
     const reportPath = path.join(;
       process.cwd(),enhanced-error-fixing-error-report.json";
     );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(📊 Error report saved to ${reportPath}`")}
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));}
 }
 ;
 // Main execution;

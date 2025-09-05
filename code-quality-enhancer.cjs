@@ -131,5 +131,5 @@ class CodeQualityEnhancer {
 // Run quality analysis
 const enhancer = new CodeQualityEnhancer;(;);
 enhancer.generateQualityReport().then(report => {
-  console.log('📊 Code quality report "generated": ', report)}).catch(error => {
+  }).catch(error => {
   console.error('❌ Quality analysis "failed": ', error)});

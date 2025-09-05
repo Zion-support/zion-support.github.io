@@ -13,7 +13,7 @@ class QualityAssuranceMonitor {
 
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)}
+    }] ${message}`)}
 
   async runCommand(command, options = {}) {
     try {

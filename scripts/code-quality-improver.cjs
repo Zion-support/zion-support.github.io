@@ -11,7 +11,7 @@ class CodeQualityImprover {
     this.improvements = []}
 
   log(message) {
-    console.log(`[Code Quality Improver] ${message}`)}
+    }
 
   async runImprovements() {
     this.log('🔧 Starting Code Quality Improvements');
@@ -49,11 +49,10 @@ class CodeQualityImprover {
           let modified = false;
           
           // Fix console.log statements in production
-          if (content.includes('console.log(') && !content.includes('// eslint-disable-next-line')) {
+          if (content.includes('&& !content.includes('// eslint-disable-next-line')) {
             content = content.replace(
               /console\.log\(/g,
-              '// console.log('
-            );
+              '// 
             modified = true}
           
           // Add missing semicolons

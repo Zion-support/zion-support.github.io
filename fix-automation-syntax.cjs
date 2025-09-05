@@ -49,14 +49,14 @@ function fixSyntaxErrors(content) {
 
 function fixFile(filePath) {
   try {
-    console.log(`Fixing ${filePath}...`);
+    
     const content = fs.readFileSync(filePath, 'utf8');
     const fixed = fixSyntaxErrors(content);
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed);
-      console.log(`✅ Fixed ${filePath}`)} else {
-      console.log(`ℹ️  No changes needed for ${filePath}`)}
+      } else {
+      }
   } catch (error) {
     console.error(`❌ Error fixing ${filePath}:`, error.message)}
 }
@@ -64,4 +64,3 @@ function fixFile(filePath) {
 // Fix all automation files
 automationFiles.forEach(fixFile);
 
-console.log('\n🎉 All automation files have been processed!');

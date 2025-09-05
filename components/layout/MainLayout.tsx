@@ -1,5 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -8,11 +6,7 @@ interface MainLayoutProps {
   keywords?: string;
 }
 
-<<<<<<< HEAD
-const MainLayout: React.FC<MainLayoutProps> = ({ 
-=======
 export default function MainLayout({ 
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
   children, 
   title = "Zion Tech Group", 
   description = "Leading technology solutions provider",

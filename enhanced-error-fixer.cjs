@@ -9,7 +9,7 @@ class ComprehensiveErrorFixer {
     this.fixedCount = 0}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
 
   fixSyntaxErrors(content) {
     // Fix common syntax issues

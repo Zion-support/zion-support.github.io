@@ -9,7 +9,7 @@ class PerformanceOptimizer {
   }
 
   async optimizePerformance() {
-    console.log('⚡ Optimizing performance...');
+    
     
     const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx']);
     const optimizations = [];
@@ -32,7 +32,7 @@ class PerformanceOptimizer {
     }
 
     this.saveReport(optimizations);
-    console.log(`✅ Performance optimization completed! Optimized ${optimizations.length} files.`);
+    
   }
 
   optimizeFile(content) {

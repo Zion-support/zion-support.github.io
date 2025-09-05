@@ -22,7 +22,6 @@ class ComprehensiveBuildAutomation {
   log(message, level = "INFO") {
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] [${level}] ${message}`
-    console.log(logMessage)
     // Write to log file
     const logFile = path.join(this.logDir, "build-automation.log")
     fs.appendFileSync(logFile, logMessage + "\n")}
@@ -255,7 +254,6 @@ if (require.main === module) {
   const automation = new ComprehensiveBuildAutomation()
   automation.run()
     .then(results => {
-      console.log("\n✅ Build automation completed")
       process.exit(results.overallStatus === "success" ? 0 : 1)})
     .catch(error => {
       console.error("\n❌ Build automation "failed": ", error.message)

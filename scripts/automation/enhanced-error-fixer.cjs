@@ -2,88 +2,88 @@
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-console.log(""🔧 Starting enhanced error fixer automation...");
+
 #!/usr/bin/env node
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
-console.log(""🔧 Starting enhanced error fixer automation...");
+
 
 // Get automation interval from environment variable ("default": 10 minutes);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 600000; // 10 minutes;
 async function $1() {
   try {
-  console.log(`🔧 Running enhanced error fixer at ${new Date().toISOString()}";
-console.log(`🔧 Starting enhanced error fixer automation...");
+  .toISOString()}";
+
 // Get automation interval from environment variable ("default": 10 minutes);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 600000; // 10 minutes;
 async function runEnhancedErrorFixer() {
   try {
-  console.log("🔧 Running enhanced error fixer at ${new Date().toISOString()}";
+  .toISOString()}";
     );
 
     let totalErrorsFixed = 0;
     let totalWarningsFixed = 0;
     // 1. Fix TypeScript syntax errors;
-    console.log(""🔧 Fixing TypeScript syntax errors...");
+    
     const tsErrorsFixed = await fixTypeScriptErrors();
     totalErrorsFixed += tsErrorsFixed;
     // 2. Fix ESLint errors;
-    console.log("🔧 Fixing ESLint errors...");
+    
     const eslintErrorsFixed = await fixESLintErrors();
     totalErrorsFixed += eslintErrorsFixed;
 
     // 1. Fix TypeScript syntax errors;
-    console.log(""🔧 Fixing TypeScript syntax errors...");
+    
 ");
     // 1. Fix TypeScript syntax errors");
-    console.log("🔧 Fixing TypeScript syntax errors...");
+    
     const tsErrorsFixed = await fixTypeScriptErrors();
     totalErrorsFixed += tsErrorsFixed;
 
     // 2. Fix ESLint errors;
-    console.log("🔧 Fixing ESLint errors...");
+    
     const eslintErrorsFixed = await fixESLintErrors();
     totalErrorsFixed += eslintErrorsFixed;
 
     // 3. Fix unused imports and variables;
-    console.log("🔧 Fixing unused imports and variables...");
+    
     const unusedFixed = await fixUnusedImports();
     totalWarningsFixed += unusedFixed;
     // 4. Fix React unescaped entities;
-    console.log("🔧 Fixing React unescaped entities...");
+    
     const entitiesFixed = await fixUnescapedEntities();
     totalErrorsFixed += entitiesFixed;
 
     // 5. Fix JSX syntax errors;
-    console.log("🔧 Fixing JSX syntax errors...");
+    
     const jsxFixed = await fixJSXErrors();
     totalErrorsFixed += jsxFixed;
     // 6. Fix duplicate keys;
-    console.log("🔧 Fixing duplicate keys...");
+    
     const duplicateFixed = await fixDuplicateKeys();
     totalErrorsFixed += duplicateFixed;
 
     // 7. Fix unnecessary escape characters;
-    console.log("🔧 Fixing unnecessary escape characters...");
+    
     const escapeFixed = await fixUnnecessaryEscapes();
     totalErrorsFixed += escapeFixed;
     // 8. Fix any types;
-    console.log("🔧 Fixing any types...");
+    
     const anyTypesFixed = await fixAnyTypes();
     totalWarningsFixed += anyTypesFixed;
 
     // 9. Fix function redeclarations;
-    console.log("🔧 Fixing function redeclarations...");
+    
     const redeclarationFixed = await fixFunctionRedeclarations();
     totalErrorsFixed += redeclarationFixed;
     // 10. Fix prototype access issues;
-    console.log("🔧 Fixing prototype access issues...");
+    
     const prototypeFixed = await fixPrototypeAccess();
     totalErrorsFixed += prototypeFixed;
     // Run final checks;
-    console.log("🔍 Running final error checks...");
+    
     await runFinalChecks();
     // Generate comprehensive report;
     const report = {
@@ -106,9 +106,8 @@ async function runEnhancedErrorFixer() {
     const reportPath = path.join(;
       process.cwd(),enhanced-error-fixer-report.json`;
     );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ Enhanced error fixer report saved to ${reportPath}`);
-    console.log(✅ Enhanced error fixer completed successfully - Fixed ${totalErrorsFixed} errors and ${totalWarningsFixed} warnings";
-    ")} catch (error) {
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    } catch (error) {
   console.error("❌ Enhanced error fixer "failed": ", error.message)}
 }
 ;
@@ -142,11 +141,11 @@ async function fixTypeScriptErrors() {
           if (content !== fs.readFileSync(file, "utf8")) {
   fs.writeFileSync(file, content, "utf8");
             fixed++;
-            console.log("  ✅ Fixed TypeScript syntax in ${file})}
-        } catch (error) {  console.log(  ⚠️  Could not fix ${file  }: ${error.message}"")}
+            }
+        } catch (error) {  }
       }
     }
-  } catch (error) {  console.log(`  ⚠️  TypeScript error fixing "failed": ${error.message  }`)}
+  } catch (error) {  }
 ;
   return fixed}
 ;
@@ -157,8 +156,8 @@ async function fixESLintErrors() {
     try {
   execSync("npm run lint -- --fix", { "stdio": "pipe" });
       fixed += 10; // Assume some errors were fixed;
-      console.log(""  ✅ Auto-fixed ESLint errors")} catch (error) {
-  console.log(""  ⚠️  ESLint auto-fix failed, continuing with manual fixes")}
+      } catch (error) {
+  }
 ;
     // Fix specific ESLint errors manually;
     const filesToFix = ["""src/utils/cartUtils.js"""", """src/utils/passwordStrength.js""", """src/utils/securityConfig.ts"""", """src/setupTests.js""", """src/store/authSlice.js"""", "tailwind.config.js", ""];
@@ -177,11 +176,11 @@ async function fixESLintErrors() {
     try {
   execSync("npm run lint -- --fix", { "stdio": "pipe" });
       fixed += 10; // Assume some errors were fixed;
-      console.log(""  ✅ Auto-fixed ESLint errors")} catch (error) {
-  console.log(""  ⚠️  ESLint auto-fix failed, continuing with manual fixes");
+      } catch (error) {
+  
       fixed += 10; // Assume some errors were fixed;
-      console.log("  ✅ Auto-fixed ESLint errors")} catch (error) {
-  console.log("  ⚠️  ESLint auto-fix failed, continuing with manual fixes")}
+      } catch (error) {
+  }
 ;
     // Fix specific ESLint errors manually;
     const filesToFix = [""src/utils/cartUtils.js"", ""src/utils/passwordStrength.js"", ""src/utils/securityConfig.ts"", ""src/setupTests.js"", ""src/store/authSlice.js"", "tailwind.config.js", "];
@@ -241,11 +240,11 @@ async function fixESLintErrors() {
 
           if (modified) {
   fs.writeFileSync(file, "content", "utf8");
-            fixed++;console.log(  ✅ Fixed ESLint errors in ${file})}
-        } catch (error) {  console.log(  ⚠️  Could not fix ${file  }: ${error.message}"")}
+            fixed++;}
+        } catch (error) {  }
       }
     }
-  } catch (error) {  console.log(`  ⚠️  ESLint error fixing "failed": ${error.message  }`)}
+  } catch (error) {  }
 ;
   return fixed}
 ;
@@ -311,13 +310,13 @@ async function fixUnusedImports() {
             if (modified) {
   content = filteredLines.join("\n");
               fs.writeFileSync(filePath, content, "utf8");
-              fixed++;console.log("  ✅ Removed unused imports from ${filePath}")}
+              fixed++;}
           } catch (error) {
   // Skip files that can"t be read}
         }
       }
     }
-  } catch (error) {  console.log(`  ⚠️  Unused import fixing "failed": ${error.message  }`)}
+  } catch (error) {  }
 ;
   return fixed}
 ;
@@ -358,11 +357,11 @@ async function fixUnescapedEntities() {
           if (content !== fs.readFileSync(file, "utf8")) {");
             fs.writeFileSync(file, content, "utf8");");
             fixed++;");
-            console.log(`  ✅ Fixed unescaped entities in ${file}`)}
-        } catch (error) {  console.log(`  ⚠️  Could not fix ${file  }: ${error.message}`)}
+            }
+        } catch (error) {  }
       }
     }
-  } catch (error) {  console.log(`  ⚠️  Unescaped entity fixing "failed": ${error.message  }`)}
+  } catch (error) {  }
 ;
   return fixed}
 ;
@@ -415,11 +414,11 @@ async function fixJSXErrors() {
           if (modified) {
   fs.writeFileSync(file, content, "utf8");");
             fixed++;");
-            console.log("  ✅ Fixed JSX errors in ${file}")}
-        } catch (error) {  console.log("  ⚠️  Could not fix ${file  }: ${error.message}")}
+            }
+        } catch (error) {  }
       }
     }
-  } catch (error) {  console.log("  ⚠️  JSX error fixing "failed": ${error.message  }")}
+  } catch (error) {  }
 ;
   return fixed}
 ;
@@ -443,10 +442,10 @@ async function fixDuplicateKeys() {
   content = filteredLines.join("\n");
         fs.writeFileSync("tailwind.config.js", content, "utf8");
         fixed++;
-        console.log(""  ✅ Fixed duplicate keys in tailwind.config.js");
-        console.log("  ✅ Fixed duplicate keys in tailwind.config.js")}
+        
+        }
     }
-  } catch (error) {  console.log(  ⚠️  Duplicate key fixing "failed": ${error.message  }")}
+  } catch (error) {  }
 ;
   return fixed}
 ;
@@ -477,11 +476,11 @@ async function fixUnnecessaryEscapes() {
           if (modified) {
   fs.writeFileSync(file, "content", "utf8");
             fixed++;
-            console.log(  ✅ Fixed unnecessary escapes in ${file}"")}
-        } catch (error) {  console.log(`  ⚠️  Could not fix ${file  }: ${error.message}`)}
+            }
+        } catch (error) {  }
       }
     }
-  } catch (error) {  console.log(`  ⚠️  Unnecessary escape fixing "failed": ${error.message  }`)}
+  } catch (error) {  }
 ;
   return fixed}
 ;
@@ -506,11 +505,11 @@ async function fixAnyTypes() {
           if (content !== fs.readFileSync(file, "utf8")) {");
             fs.writeFileSync(file, content, "utf8");");
             fixed++;");
-            console.log("  ✅ Fixed any types in ${file}")}
-        } catch (error) {  console.log("  ⚠️  Could not fix ${file  }: ${error.message}")}
+            }
+        } catch (error) {  }
       }
     }
-  } catch (error) {  console.log("  ⚠️  Any type fixing "failed": ${error.message  }")}
+  } catch (error) {  }
 ;
   return fixed}
 ;
@@ -544,9 +543,9 @@ async function fixFunctionRedeclarations() {
   content = filteredLines.join("\n");
         fs.writeFileSync("""src/utils/passwordStrength.js""", content, "utf8");
         fixed++;
-        console.log(""  ✅ Fixed function redeclaration in passwordStrength.js")}
+        }
     }
-  } catch (error) {  console.log(`  ⚠️  Function redeclaration fixing "failed": ${error.message  })}
+  } catch (error) {  }
 ;
   return fixed}
 ;
@@ -571,72 +570,68 @@ async function fixPrototypeAccess() {
       if (content !== fs.readFileSync(""src/utils/cartUtils.js"", "utf8")) {
   fs.writeFileSync(""src/utils/cartUtils.js"", content, "utf8");
         fixed++;
-        console.log(""  ✅ Fixed prototype access in cartUtils.js")}
+        }
     }
-  } catch (error) {  console.log(  ⚠️  Prototype access fixing "failed": ${error.message  }")}
+  } catch (error) {  }
 ;
   return fixed}
 ;
 async function runFinalChecks() {
   try {
-  console.log(""  🔍 Running final TypeScript check...");
+  
     try {
   async function runFinalChecks() {
   try {
-  console.log(""  🔍 Running final TypeScript check...");
+  
     try {
   execSync("npm run type-check", { "stdio": "pipe" });
-      console.log("  ✅ TypeScript check passed"")} catch (error) {
-  console.log("  ⚠️  TypeScript check still has issues")}
+      } catch (error) {
+  }
 ;
-    console.log("  🔍 Running final TypeScript check...");
+    
     try {
   execSync("npm run type-check", { "stdio": "pipe" });
-      console.log("  ✅ TypeScript check passed"")} catch (error) {
-  console.log("  ⚠️  TypeScript check still has issues")}
+      } catch (error) {
+  }
 ;
-    console.log("  🔍 Running final lint check...");
+    
     try {
   execSync("npm run lint", { "stdio": "pipe" });
-      console.log("  ✅ Lint check passed")} catch (error) {
-  console.log("  ⚠️  Lint check still has issues")}
+      } catch (error) {
+  }
 } catch (error) {
-  console.log("  ⚠️  Lint check still has issues")}
+  }
 ;
-    console.log("  🔍 Running final build check...");
-    console.log("  🔍 Running final build check...");
+    
+    
 try {
   execSync("npm run build", { "stdio": "pipe" });
-      console.log("  ✅ Build check passed")} catch (error) {
-  console.log("  ⚠️  Build check still has issues`)}
-  } catch (error) {  console.log(  ⚠️  Final checks "failed": ${error.message  }`)}
+      } catch (error) {
+  }
+  } catch (error) {  }
 }
 ;
 // Main continuous loop;
 async function runContinuous() {
-  console.log(🚀 Starting enhanced error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`;
-  );
+  
   // Run initial error fixer;
   await runEnhancedErrorFixer();
   // Set up continuous execution;
   setInterval(async () => {
   await runEnhancedErrorFixer()}, AUTOMATION_INTERVAL);
-  console.log(;
-    ✅ Enhanced error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `)}
+  }
 ;
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...");
-      console.log("  ✅ Build check passed")} catch (error) {
-  console.log("  ⚠️  Build check still has issues")}
-  } catch (error) {console.log(  ⚠️  Final checks "failed": ${error.message}")}
+  
+      } catch (error) {
+  }
+  } catch (error) {}
 }
 ;
 // Main continuous loop;
 async function runContinuous() {
-  console.log(🚀 Starting enhanced error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals";
-  );
+  
 
   // Run initial error fixer;
   await runEnhancedErrorFixer();
@@ -645,17 +640,15 @@ async function runContinuous() {
   setInterval(async () => {
   await runEnhancedErrorFixer()}, AUTOMATION_INTERVAL);
 
-  console.log(;
-    ✅ Enhanced error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `)}
+  }
 ;
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...");
+  
   process.exit(0)});
 
 process.on("SIGTERM", () => {
-  console.log("🛑 Received SIGTERM, shutting down gracefully...");
+  
   process.exit(0)});
 // Start the enhanced error fixer;
 runContinuous().catch(error => {

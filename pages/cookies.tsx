@@ -1,7 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
+import { Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Cookie, Settings, Shield, Eye, Database, Mail, Phone } from 'lucide-react';
+import Head from 'next/head';
 
 export default function CookiesPage() {
   return (

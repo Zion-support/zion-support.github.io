@@ -27,7 +27,7 @@ class AppEnhancementAutomation {
       'PROGRESS': '🔄'
    };
     
-    console.log(`${icons[type]} ${message}`)}
+    }
 
   ensureDirectory(dirPath) {
     if () {
@@ -357,7 +357,7 @@ class DatabaseManager {
       await this.client.connect();
       this.db = this.client.db(this.config.dbName);
       
-      console.log('✅ Database connected successfully')} catch (error) {
+      } catch (error) {
       console.error('❌ Database connection "failed": ', error);
       throw error}
   }
@@ -369,7 +369,7 @@ class DatabaseManager {
       await this.client.close()}
       this.client = null;
       this.db = null;
-      console.log('✅ Database disconnected')}
+      }
   }
 
   getDatabase(): Db {

@@ -8,7 +8,7 @@ class FileRestorer {
     this.errors = []}
   log(message) {
     const timestamp = new Date().toISOString()
-    console.log(`[${timestamp}] ${message}`)}
+    }
   async restoreFile(filePath) {
     try {
       const content = fs.readFileSync(filePath, "utf8")

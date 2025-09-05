@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Starting comprehensive syntax error fixing...');
+
 
 // Files to fix with their specific issues
 const filesToFix = [{
@@ -89,7 +89,7 @@ filesToFix.forEach(({ file, fixes }) => {
     const filePath = path.join(process.cwd(), file);
     
     if (!fs.existsSync(filePath)) {
-      console.log("⚠️  File not "found": ${file}");
+      
       return}
     
     let content = fs.readFileSync(filePath, 'utf8');
@@ -99,7 +99,7 @@ filesToFix.forEach(({ file, fixes }) => {
       if (content.includes(search)) {
         content = content.replace(search, replace);
         modified = true;
-        console.log("✅ Fixed issue in ${file}")}
+        }
     });
     
     if (modified) {
@@ -111,7 +111,6 @@ filesToFix.forEach(({ file, fixes }) => {
     errorCount++}
 });
 
-console.log("\n🎉 Syntax error fixing complete!");
-console.log("✅ Files "fixed": ${fixedCount}");
-console.log("❌ "Errors": ${errorCount}");
-console.log("\n💡 Run 'npm run build' to test the fixes.`);
+
+
+

@@ -1,7 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight } from 'lucide-react';
+import Head from 'next/head';
 
 export default function ContactPage() {
   return (
@@ -40,12 +39,7 @@ export default function ContactPage() {
 
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-6xl mx-auto">
-<<<<<<< HEAD
-          
-          {/* Contact Information Cards */}
-=======
           {/* Contact Information */}
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <motion.div
               className="bg-white rounded-lg shadow-lg p-6 text-center"
@@ -152,7 +146,7 @@ export default function ContactPage() {
                     name="service"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
-                    <option value="">Select a service</option>
+                    <option value="\">Select a service</option>
                     <option value="ai-services">AI Services</option>
                     <option value="it-services">IT Services</option>
                     <option value="micro-saas">Micro SaaS</option>

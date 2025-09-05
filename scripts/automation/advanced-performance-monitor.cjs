@@ -60,7 +60,7 @@ class $1 {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)}
+    fs.appendFileSync(this.logFile, logEntry);}
 ;
   async startMonitoring() {
   this.log("Starting advanced performance monitoring...");
@@ -694,10 +694,10 @@ if (require.main === module) {
   monitor;
     .startMonitoring();
     .then(() => {
-  console.log("Advanced Performance Monitor started successfully");
+  
       // Keep the process running;
       process.on("SIGINT", () => {
-  console.log("Stopping performance monitor...");
+  
         monitor.stopMonitoring();
         process.exit(0)})});
     .catch(error => {

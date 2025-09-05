@@ -14,7 +14,7 @@ class FileExtensionFixer {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
+    
     
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
@@ -70,9 +70,9 @@ fixer.run().catch(error => {
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {
-  console.log('\n🛑 File Extension Fixer stopped by user');
+  
   process.exit(0)});
 
 process.on('SIGTERM', () => {
-  console.log('\n🛑 File Extension Fixer stopped by system');
+  
   process.exit(0)});

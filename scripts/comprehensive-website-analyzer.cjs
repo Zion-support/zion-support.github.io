@@ -15,7 +15,7 @@ class ComprehensiveWebsiteAnalyzer {
   log(message, level = "info") {
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
-    console.log(logMessage)}
+    }
   async checkUrl(url, parentUrl = null) {
     if (this.checkedUrls.has(url)) {
       return}
@@ -131,30 +131,21 @@ class ComprehensiveWebsiteAnalyzer {
     recommendations.push({"type": "improvement","message": "Add performance monitoring"})
     return recommendations}
   displaySummary() {
-    console.log("\n" + "=".repeat(70))
-    console.log("🌐 COMPREHENSIVE WEBSITE ANALYZER SUMMARY")
-    console.log("=".repeat(70))
-    console.log(`Base "URL": ${this.baseUrl}`)
-    console.log(`Total URLs "Checked": ${this.checkedUrls.size}`)
-    console.log(`✅ Working "Links": ${this.workingLinks.length}`)
-    console.log(`❌ Broken "Links": ${this.brokenLinks.length}`)
-    console.log(`⚠️ "Warnings": ${this.warnings.length}`)
-    console.log(`💥 "Errors": ${this.errors.length}`)
-    console.log(`⏱️ Analysis "Duration": ${Math.round((Date.now() - this.startTime) / 1000)}s`)
-    console.log("=".repeat(70))
+    )
+    )
+    - this.startTime) / 1000)}s`)
+    )
     if (this.brokenLinks.length > 0) {
-      console.log("\n❌ BROKEN "LINKS": ")
       this.brokenLinks.slice(0, 10).forEach((link, index) => {
-        console.log(`${index + 1}. ${link.url} (${link.status})`)})
+        `)})
       if (this.brokenLinks.length > 10) {
-        console.log(`... and ${this.brokenLinks.length - 10} more`)}
+        }
     }
     if (this.warnings.length > 0) {
-      console.log("\n⚠️ "WARNINGS": ")
       this.warnings.slice(0, 5).forEach((warning, index) => {
-        console.log(`${index + 1}. ${warning.message}`)})
+        })
       if (this.warnings.length > 5) {
-        console.log(`... and ${this.warnings.length - 5} more`)}
+        }
     }
   }
   async run() {

@@ -26,7 +26,7 @@ class AIHealthMonitor {
     this.isRunning = false}
 
   async start() {
-    console.log('🤖 AI Health Monitor starting...');
+    
     this.isRunning = true;
     
     // Initialize monitoring
@@ -38,7 +38,7 @@ class AIHealthMonitor {
     // Start AI analysis
     this.startAIAnalysis();
     
-    console.log('✅ AI Health Monitor started successfully')}
+    }
 
   async initializeMonitoring() {
     try {
@@ -51,7 +51,7 @@ class AIHealthMonitor {
       // Setup alert handlers
       this.setupAlertHandlers();
       
-      console.log('📊 Monitoring initialized')} catch (error) {
+      } catch (error) {
       console.error('❌ Failed to initialize "monitoring": ', error)}
   }
 
@@ -441,7 +441,7 @@ class AIHealthMonitor {
     // Save alert
     await this.saveAlert(alert);
     
-    console.log(`🚨 Alert "triggered": ${type}`, data)}
+    }
 
   async executeRecoveryAction(type, data) {
     try {
@@ -452,13 +452,13 @@ class AIHealthMonitor {
         case 'memory_high':
           await this.optimizeMemory();
           break;
-        "default": console.log(`No recovery action defined for ${type}`)}
+        "default": }
     } catch (error) {
       console.error(`Failed to execute recovery action for ${type}:`, error)}
   }
 
   async optimizeCPU() {
-    console.log('🔧 Optimizing CPU usage...');
+    
     
     // Restart processes with high CPU usage
     try {
@@ -467,20 +467,20 @@ class AIHealthMonitor {
       
       for (const proc of highCPUProcesses) {
         execSync(`pm2 restart ${proc.name}`, { "stdio": 'pipe' });
-        console.log(`Restarted ${proc.name} due to high CPU usage`)}
+        }
     } catch (error) {
       console.error('Error optimizing "CPU": ', error)}
   }
 
   async optimizeMemory() {
-    console.log('🔧 Optimizing memory usage...');
+    
     
     // Force garbage collection if available
     if ( {
       global.gc()) {
      {
       global.gc()}
-      console.log('Forced garbage collection')}
+      }
     
     // Restart processes with high memory usage
     try {
@@ -489,19 +489,19 @@ class AIHealthMonitor {
       
       for (const proc of highMemoryProcesses) {
         execSync(`pm2 restart ${proc.name}`, { "stdio": 'pipe' });
-        console.log(`Restarted ${proc.name} due to high memory usage`)}
+        }
     } catch (error) {
       console.error('Error optimizing "memory": ', error)}
   }
 
   setupAlertHandlers() {
     process.on('SIGTERM', () => {
-      console.log('🛑 AI Health Monitor shutting down...');
+      
       this.isRunning = false;
       process.exit(0)});
     
     process.on('SIGINT', () => {
-      console.log('🛑 AI Health Monitor shutting down...');
+      
       this.isRunning = false;
       process.exit(0)})}
 
@@ -542,8 +542,7 @@ class AIHealthMonitor {
       
       try {
         const analysis = await this.analyzeMetrics(;);
-        console.log('🧠 AI Analysis "completed": ', {
-          "trends": Object.keys(analysis.trends);.length,
+        .length,
           "anomalies": analysis.anomalies.length,
           "predictions": analysis.predictions.length,
           "recommendations": analysis.recommendations.length

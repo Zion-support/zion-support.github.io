@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🧪 Starting Comprehensive Test Suite...');
+
 
 class ComprehensiveTestSuite {
   constructor() {
@@ -21,7 +21,7 @@ class ComprehensiveTestSuite {
   }
 
   async runTest(name, testFunction) {
-    console.log(`🔍 "Running": ${name}`);
+    
     const startTime = Date.now();
     
     try {
@@ -38,7 +38,7 @@ class ComprehensiveTestSuite {
       this.testResults.summary.total++;
       this.testResults.summary.passed++;
       
-      console.log(`✅ ${name} - PASSED (${duration}ms)`);
+      `);
       return true;
     } catch (error) {
       const duration = Date.now() - startTime;
@@ -53,7 +53,7 @@ class ComprehensiveTestSuite {
       this.testResults.summary.total++;
       this.testResults.summary.failed++;
       
-      console.log(`❌ ${name} - FAILED (${duration}ms): ${error.message}`);
+      : ${error.message}`);
       return false;
     }
   }
@@ -171,7 +171,7 @@ class ComprehensiveTestSuite {
   }
 
   async runAllTests() {
-    console.log('🎯 Starting Comprehensive Test Suite...\n');
+    
     
     await this.runTest('File Structure', () => this.testFileStructure());
     await this.runTest('Dependencies', () => this.testDependencies());
@@ -185,8 +185,8 @@ class ComprehensiveTestSuite {
     
     this.generateReport();
     
-    console.log('\n🎉 Test Suite Completed!');
-    console.log(`📊 "Summary": ${this.testResults.summary.passed}/${this.testResults.summary.total} tests passed`);
+    
+    
     
     return this.testResults;
   }
@@ -194,7 +194,7 @@ class ComprehensiveTestSuite {
   generateReport() {
     const reportPath = `test-suite-report-${Date.now()}.json`;
     fs.writeFileSync(reportPath, JSON.stringify(this.testResults, null, 2));
-    console.log(`📄 Test report saved "to": ${reportPath}`);
+    
   }
 }
 

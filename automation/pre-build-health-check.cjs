@@ -14,11 +14,9 @@ const required = [;
 ];
 const missing = required.filter(p => !fileExists(p));
 if (missing.length > 0) {;
-  console.warn(;
-    "[pre-build-health-check] Missing "files": ",;
-    missing.map(p => path.relative(process.cwd(), p)).join(", ");
+  , p)).join(", ");
   );
   process.exit(0); // do not block build;}
 ;
-console.log("[pre-build-health-check] OK");
+
 process.exit(0)

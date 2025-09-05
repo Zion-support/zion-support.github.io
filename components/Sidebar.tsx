@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { 
   Home, 
   Briefcase, 
@@ -199,7 +196,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     >
                       <ChevronRight 
                         className={`w-4 h-4 transition-transform ${
-                          expandedSections.includes(item.label) ? 'rotate-90' : ''
+                          expandedSections.includes(item.label) ? 'rotate-90' : '\'
                         }`} 
                       />
                     </button>

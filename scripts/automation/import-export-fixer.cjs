@@ -12,7 +12,7 @@ this.reportFile = path.join(this.projectRoot, 'import-export-fixer-report.json')
 
   log(message, level = 'info') {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)}
+    }] ${message}`)}
 
   async run() {
     this.log('Starting Import/Export Fixer...', 'info');
@@ -32,7 +32,7 @@ this.reportFile = path.join(this.projectRoot, 'import-export-fixer-report.json')
 ;
   log(message, level = "info") {
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)}
+    }] ${message}`)}
 ;
   async run() {
   this.log("Starting Import/Export Fixer...", "info");
@@ -49,7 +49,7 @@ this.reportFile = path.join(this.projectRoot, 'import-export-fixer-report.json')
 ;
   log(message, level = "info") {
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)}
+    }] ${message}`)}
 ;
   async run() {
   this.log("Starting Import/Export Fixer...", "info");
@@ -64,7 +64,7 @@ this.reportFile = path.join(this.projectRoot, 'import-export-fixer-report.json')
     this.fixesApplied = 0}
 ;
   log(message) {
-  console.log(`[${new Date().toISOString()}] [ImportExportFixer] ${message}`)}
+  .toISOString()}] [ImportExportFixer] ${message}`)}
 ;
   async run() {
   this.log("Starting import/export fixing automation...");

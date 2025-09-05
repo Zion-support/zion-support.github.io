@@ -26,11 +26,11 @@ class $1 {
     this.fixHistory = []}
 ;
   async start() {
-  console.log(""⏰ Starting Auto-Fix Scheduler...");
+  
 
     // Create logs directory if it doesn"t exist;
   async start() {
-  console.log("⏰ Starting Auto-Fix Scheduler...");
+  
     // Create logs directory if it doesn"t exist;
     this.ensureLogsDirectory();
     // Load last run times;
@@ -57,7 +57,7 @@ class $1 {
   const history = JSON.parse(fs.readFileSync(historyFile, "utf8"));
         this.lastRun = history.lastRun || this.lastRun;
         this.fixHistory = history.fixHistory || []} catch (error) {
-  console.log(""⚠️  Could not load fix history, starting fresh")}
+  }
       }
     }
   }
@@ -70,7 +70,7 @@ class $1 {
     fs.writeFileSync(historyFile, JSON.stringify(history, null, 2))}
 ;
   startScheduling() {
-  console.log(""📅 Setting up fix schedules...");
+  
 
     // Check every minute for scheduled tasks;
     setInterval(() => {
@@ -123,7 +123,7 @@ class $1 {
     return now.getDate() === 1 && now.getHours() === 2}
 ;
   async runDailyFixes() {
-  console.log("🌅 Running daily fixes...");
+  
 
     try {
   const startTime = new Date();
@@ -141,7 +141,7 @@ class $1 {
       // Record fix history;
       this.recordFixRun("daily", startTime, "success");
 
-      console.log("✅ Daily fixes completed successfully")} catch (error) {
+      } catch (error) {
   console.error("❌ Daily fixes "failed": ", error);
       this.recordFixRun("daily", new Date(), "failed", error.message)}
 } catch (error) {
@@ -152,7 +152,7 @@ class $1 {
     this.saveFixHistory()}
 ;
   async runWeeklyFixes() {
-  console.log("📅 Running weekly fixes...");
+  
 
     try {
   const startTime = new Date();
@@ -170,7 +170,7 @@ class $1 {
       // Record fix history;
       this.recordFixRun("weekly", startTime, "success");
 
-      console.log("✅ Weekly fixes completed successfully")} catch (error) {
+      } catch (error) {
   console.error("❌ Weekly fixes "failed": ", error);
       this.recordFixRun("weekly", new Date(), "failed", error.message)}
 } catch (error) {
@@ -181,7 +181,7 @@ class $1 {
     this.saveFixHistory()}
 ;
   async runMonthlyFixes() {
-  console.log("📆 Running monthly fixes...");
+  
 
     try {
   const startTime = new Date();
@@ -199,7 +199,7 @@ class $1 {
       // Record fix history;
       this.recordFixRun("monthly", startTime, "success");
 
-      console.log("✅ Monthly fixes completed successfully")} catch (error) {
+      } catch (error) {
   console.error("❌ Monthly fixes "failed": ", error);
       this.recordFixRun("monthly", new Date(), "failed", error.message)}
 } catch (error) {
@@ -210,7 +210,7 @@ class $1 {
     this.saveFixHistory()}
 ;
   async runQuickFixes() {
-  console.log("🔧 Running quick fixes...");
+  
     // Fix import issues;
     await this.runImportFixes();
     // Fix basic syntax issues;
@@ -226,7 +226,7 @@ class $1 {
     await this.runQuickTypeCheck()}
 ;
   async runComprehensiveFixes() {
-  console.log("🔧 Running comprehensive fixes...");
+  
     // Run the comprehensive error fixer;
     await this.runComprehensiveErrorFixer();
     // Fix unused imports;
@@ -235,7 +235,7 @@ class $1 {
     await this.runFullTypeCheck()}
 ;
   async runDeepCleanup() {
-  console.log("🧹 Running deep cleanup...");
+  
     // Run all fixers;
     await this.runComprehensiveFixes();
     // Clean up duplicate files;
@@ -257,7 +257,7 @@ class $1 {
 ;
   async runImportFixes() {
   try {
-  console.log("📦 Fixing import issues...");
+  
       // Create and run import fixer;
       const importFixer = ;
         const fs = require("fs");
@@ -274,7 +274,7 @@ class $1 {
   const content = fs.readFileSync(filePath, "utf8");
             const fixedContent = fixImports(content);
             if (content !== fixedContent) {
-  fs.writeFileSync(filePath, fixedContent, "utf8`);console.log(\✅ Fixed imports in \${path.relative(process.cwd(), filePath)}\)}
+  fs.writeFileSync(filePath, fixedContent, "utf8`);, filePath)}\)}
           }
         }
         ;
@@ -290,14 +290,14 @@ class $1 {
           })}
         ;
         scanDir(srcDir);
-        console.log("✅ Import fixes completed"");
+        
       const tempFile = path.join(this.projectRoot, "temp-import-fixer.js");
       fs.writeFileSync(tempFile, importFixer);
 execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit" }");
       // Clean up temp file;
       fs.unlinkSync(tempFile)} catch (error) {
   console.error("❌ Import fixes "failed": ", error)}
-        console.log("✅ Import fixes completed"");
+        
 
       const tempFile = path.join(this.projectRoot, "temp-import-fixer.js");
       fs.writeFileSync(tempFile, importFixer);
@@ -310,7 +310,7 @@ execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit" }`);
 ;
   async runSyntaxFixes() {
   try {
-  console.log("🔧 Fixing syntax issues...");
+  
       // Run the comprehensive error fixer for syntax issues;
       execSync("node ""scripts/automation/comprehensive-error-fixer.cjs""", {
   "cwd": this.projectRoot,
@@ -320,21 +320,21 @@ execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit" }`);
 ;
   async runQuickTypeCheck() {
   try {
-  console.log("🔍 Running quick TypeScript check...");
+  
 
       execSync("npm run type-check", {
   "cwd": this.projectRoot,
         "stdio": "pipe"});
 
-      console.log("✅ Quick TypeScript check passed")} catch (error) {
+      } catch (error) {
   
 } catch (error) {
-  console.log("⚠️  Quick TypeScript check found issues")}
+  }
   }
 ;
   async runComprehensiveErrorFixer() {
   try {
-  console.log("🔧 Running comprehensive error fixer...");
+  
 
       execSync("node "scripts/automation/comprehensive-error-fixer.cjs"", {
   "cwd": this.projectRoot,
@@ -348,7 +348,7 @@ execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit" }`);
 ;
   async runUnusedImportFixes() {
   try {
-  console.log("🧹 Fixing unused imports...");
+  
 
       execSync("npm run lint -- --fix", {
   "cwd": this.projectRoot,
@@ -362,39 +362,39 @@ execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit" }`);
 ;
   async runFullTypeCheck() {
   try {
-  console.log("🔍 Running full TypeScript check...");
+  
 
       execSync("npm run type-check", {
   "cwd": this.projectRoot,
         "stdio": "inherit"});
 
-      console.log("✅ Full TypeScript check passed")} catch (error) {
+      } catch (error) {
   
 } catch (error) {
-  console.log("⚠️  Full TypeScript check found issues")}
+  }
   }
 ;
   async cleanupDuplicateFiles() {
   try {
-  console.log("🧹 Cleaning up duplicate files...");
+  
       // This would implement logic to find and remove duplicate files;
       // For now, just log that it"s being done;
-      console.log("✅ Duplicate file cleanup completed")} catch (error) {
+      } catch (error) {
   console.error("❌ Duplicate file cleanup "failed": ", error)}
   }
 ;
   async optimizeProjectImports() {
   try {
-  console.log("📦 Optimizing project imports...");
+  
       // This would implement logic to optimize imports across the project;
       // For now, just log that it"s being done;
-      console.log("✅ Project import optimization completed")} catch (error) {
+      } catch (error) {
   console.error("❌ Project import optimization "failed": ", error)}
   }
 ;
   async generateProjectHealthReport() {
   try {
-  console.log("📊 Generating project health report...");
+  
       const report = {
   "timestamp": new Date().toISOString(),
         "fixHistory": this.fixHistory.slice(-10), // Last 10 fixes;
@@ -413,7 +413,7 @@ execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit" }`);
       );
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
-      console.log("✅ Project health report generated")} catch (error) {
+      } catch (error) {
   
 } catch (error) {
   console.error("❌ Project health report generation "failed": ", error)}
@@ -502,12 +502,12 @@ execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit" }`);
 const scheduler = new AutoFixScheduler();
 // Handle process signals;
 process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...");
+  
   scheduler.saveFixHistory();
   process.exit(0)});
 
 process.on("SIGTERM", () => {
-  console.log("🛑 Received SIGTERM, shutting down gracefully...');
+  
   scheduler.saveFixHistory();
   process.exit(0)});
 

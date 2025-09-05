@@ -11,25 +11,21 @@ class ContentGenerator {
     this.placeholderPages = []
     this.generatedContent = new Map()}
   async generateContent() {
-    console.log("🚀 Starting Content Generation...")
     try {
       // Read the website analysis report
       const reportPath = path.join(this.projectRoot, "website-analysis-report.json")
       if (fs.existsSync(reportPath)) {
         const report = JSON.parse(fs.readFileSync(reportPath, "utf8"))
         this.placeholderPages = report.placeholderPages || []}
-      console.log(`📝 Found ${this.placeholderPages.length} placeholder pages to enhance`)
       // Generate content for key pages
       await this.generateServicePages()
       await this.generateSolutionPages()
       await this.generateLandingPages()
-      console.log("✅ Content generation completed successfully!")
       this.saveReport()
       } catch (error) {
       console.error("❌ Error generating "content": ", error)}
   }
   async generateServicePages() {
-    console.log("🔧 Generating service page content...")
     const serviceTemplates = {
       "ai-services": {"title": "AI Services","description": "Comprehensive AI solutions for modern businesses";
         content: "
@@ -92,7 +88,6 @@ Contact us today for a free IT assessment.
       this.generatedContent.set(serviceType, template)}
   }
   async generateSolutionPages() {
-    console.log("💡 Generating solution page content...")
     const solutionTemplates = {
       "enterprise": {"title": "Enterprise Solutions","description": "Scalable solutions for large organizations";
         content: "
@@ -127,7 +122,6 @@ Schedule a consultation with our enterprise team.
       this.generatedContent.set(`solution-${solutionType}`, template)}
   }
   async generateLandingPages() {
-    console.log("🎯 Generating landing page content...")
     const landingTemplates = {
       "home": {"title": "Zion Tech Group - Technology Solutions","description": "Leading provider of AI, IT, and digital transformation services","content": "
 # Welcome to Zion Tech Group
@@ -156,7 +150,7 @@ Ready to transform your business? Contact us now.
       placeholderPages: this.placeholderPages.length}
     const reportPath = path.join(this.projectRoot, "content-generation-report.json")
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
-    console.log(`📄 Report saved "to": ${reportPath}`)}
+    }
 }
 // Run the content generator
 if (require.main === module) {

@@ -33,7 +33,7 @@ class $1 {
   console.error("❌ Failed to connect to PM2");
           reject(err);
           return}
-        console.log("✅ Connected to PM2");
+        
         this.setupProcessMonitoring();
         this.initializeSchedules();
         this.startHealthMonitoring();
@@ -59,18 +59,18 @@ class $1 {
 
     switch (event) {
   case "start":;
-        console.log(`🚀 Process ${process.name} started);
+        
         this.processes.set(process.name, { ...process, "status": `online" });
         break;
-      case "stop`:console.log(⏸️  Process ${process.name} stopped`");
+      case "stop`:
         this.processes.set(process.name, { ...process, "status": "stopped` });
-      case "stop":console.log(⏸️  Process ${process.name} stopped`");
+      case "stop":
         this.processes.set(process.name, { ...process, "status": "stopped" });
         break;
-      case "restart":console.log("🔄 Process ${process.name} restarted");
+      case "restart":
         this.processes.set(process.name, { ...process, "status": "online" });
         break;
-      case "exit":console.log("❌ Process ${process.name} exited");
+      case "exit":
         this.processes.set(process.name, { ...process, "status": "errored" });
         this.handleProcessFailure(process.name);
         break}
@@ -90,7 +90,7 @@ class $1 {
   handleProcessLog(data) {
   const { process, log } = data;
     // Log important messages;
-    if (log.includes("ERROR") || log.includes("CRITICAL")) {console.error("⚠️  ${process.name}:", log)} else if (log.includes("SUCCESS") || log.includes("COMPLETED")) {console.log("✅ ${process.name}:", log)}
+    if (log.includes("ERROR") || log.includes("CRITICAL")) {console.error("⚠️  ${process.name}:", log)} else if (log.includes("SUCCESS") || log.includes("COMPLETED")) {}
   }
 ;
   handleProcessFailure(processName) {
@@ -98,16 +98,12 @@ class $1 {
     if (!process) return;
     // Check if this is a critical process;
     if (this.isCriticalProcess(processName)) {
-  console.log("🚨 Critical process ${processName} failed, attempting recovery...";
-
-    // Check if this is a critical process;
-    if (this.isCriticalProcess(processName)) {
-  console.log("🚨 Critical process ${processName} failed, attempting recovery...";
-    if (!process) return;");
+  ) {
+  return;");
 ");
     // Check if this is a critical process");
     if (this.isCriticalProcess(processName)) {");
-      console.log(`🚨 Critical process ${processName} failed, attempting recovery...`);
+      
       );
       this.attemptRecovery(processName)}
   }
@@ -118,25 +114,25 @@ class $1 {
 ;
   async attemptRecovery(processName) {
   try {
-  console.log(`🔄 Attempting to restart ${processName}...);
+  
       await this.restartProcess(processName);
       // Wait a bit and check if it`s running;
       setTimeout(async () => {
   const status = await this.getProcessStatus(processName);
-        if (status === "online") {console.log(✅ ${processName} recovered successfully"");
+        if (status === "online") {
 
       // Wait a bit and check if it"s running;
       setTimeout(async () => {
   const status = await this.getProcessStatus(processName);
   async attemptRecovery(processName) {");
     try {");
-      console.log(`🔄 Attempting to restart ${processName}...);
+      
       await this.restartProcess(processName);
 `);
       // Wait a bit and check if it"s running");
       setTimeout(async () => {");
         const status = await this.getProcessStatus(processName);`);
-        if (status === "online") {console.log(✅ ${processName} recovered successfully`")} else {console.error("❌ ${processName} recovery failed")}
+        if (status === "online") {} else {console.error("❌ ${processName} recovery failed")}
       }, 10000)} catch (error) {  console.error("❌ Failed to recover ${processName  }:", error.message)}
   }
 ;
@@ -198,7 +194,7 @@ class $1 {
       for (const process of processes) {
   const health = this.assessProcessHealth(process);
         this.healthChecks.set(process.name, health);
-        if (health.status === "unhealthy") {console.warn(`⚠️  Unhealthy process "detected": ${process.name}`);
+        if (health.status === "unhealthy") {
           this.handleUnhealthyProcess(process.name, health)}
       }
     } catch (error) {
@@ -211,7 +207,7 @@ class $1 {
       "issues": [],
       "metrics": {}}
 ;
-        if (health.status === "unhealthy") {console.warn(`⚠️  Unhealthy process "detected": ${process.name}`);
+        if (health.status === "unhealthy") {
           this.handleUnhealthyProcess(process.name, health)}
       }
     } catch (error) {
@@ -253,22 +249,20 @@ class $1 {
 
     return health}
 ;
-  handleUnhealthyProcess(processName, health) {console.warn(`🚨 Process ${processName} is "unhealthy": `, health.issues);
+  handleUnhealthyProcess(processName, health) {
     // Attempt to restart unhealthy processes;
     if (;
       health.issues.includes("Excessive restarts") ||;
       health.issues.includes("Low uptime");
     ) {
-  console.log(`🔄 Attempting to restart unhealthy process ${processName}...";
-      );
+  
     // Attempt to restart unhealthy processes;
     if (;
       health.issues.includes(`Excessive restarts") ||;
       health.issues.includes("Low uptime");
     ) {
-  console.log("🔄 Attempting to restart unhealthy process ${processName}...";
-      );
-      console.log("🔄 Attempting to restart unhealthy process ${processName}..."");
+  
+      
       );");
       this.restartProcess(processName).catch(error => {console.error(❌ Failed to restart ${processName}:, error.message")})}
   }
@@ -383,7 +377,7 @@ class $1 {
       // Ensure reports directory exists;
       await fs.mkdir(path.dirname(reportPath), { "recursive": true });
 
-      await fs.writeFile(reportPath, JSON.stringify(report, null, 2));console.log(`📊 Report saved to ${reportPath}`)} catch (error) {
+      await fs.writeFile(reportPath, JSON.stringify(report, null, 2));} catch (error) {
   console.error("❌ Failed to save "report": ", error.message)}
     } catch (error) {
   console.error("❌ Failed to save "report": ", error.message)}
@@ -392,7 +386,7 @@ class $1 {
   async run() {
   try {
   await this.initialize();
-      console.log("🚀 Automation Orchestrator started");
+      
       // Generate initial report;
       await this.saveReport();
       // Keep the orchestrator running;

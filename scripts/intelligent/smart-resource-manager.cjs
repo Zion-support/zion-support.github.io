@@ -43,7 +43,7 @@ class SmartResourceManager {
       await fs.mkdir(this.reportDir, { "recursive": true });
       await fs.mkdir(path.join(process.cwd(), 'logs'), { "recursive": true });
     } catch (error) {
-      console.log('Directories already exist or created');
+      
     }
   }
 
@@ -55,7 +55,7 @@ class SmartResourceManager {
           reject(err);
           return;
         }
-        console.log('✅ Connected to PM2 for smart resource management');
+        
         this.startResourceManagement();
         resolve();
       });
@@ -250,7 +250,7 @@ class SmartResourceManager {
 
     // Log alerts
     for (const alert of resourceData.alerts) {
-      console.log(`🚨 Resource Alert [${alert.severity.toUpperCase()}]: ${alert.message}`);
+      }]: ${alert.message}`);
     }
   }
 
@@ -291,7 +291,7 @@ class SmartResourceManager {
     const memoryAlerts = resources.alerts.filter(a => a.type.includes('memory'));
 
     if (memoryAlerts.length > 0 || memoryUsage > this.resourceThresholds.memory.warning) {
-      console.log(`💾 Optimizing memory usage (${memoryUsage.toFixed(2)}%)`);
+      }%)`);
 
       // Force garbage collection
       await this.forceGarbageCollection();
@@ -315,7 +315,7 @@ class SmartResourceManager {
     const cpuAlerts = resources.alerts.filter(a => a.type.includes('cpu'));
 
     if (cpuAlerts.length > 0 || cpuLoad > this.resourceThresholds.cpu.warning) {
-      console.log(`⚡ Optimizing CPU usage ("load": ${cpuLoad.toFixed(2)})`);
+      })`);
 
       // Scale up if CPU load is high
       if (cpuLoad > this.resourceThresholds.cpu.critical) {
@@ -336,7 +336,7 @@ class SmartResourceManager {
     const diskAlerts = resources.alerts.filter(a => a.type === 'disk');
 
     if (diskAlerts.length > 0 || diskUsage > this.resourceThresholds.disk.warning) {
-      console.log(`💽 Optimizing disk usage (${diskUsage}%)`);
+      `);
 
       // Clean log files
       await this.cleanLogFiles();
@@ -353,9 +353,9 @@ class SmartResourceManager {
     try {
       const { execSync } = require('child_process');
       execSync('node -e "if (global.gc) global.gc()"', { "stdio": 'pipe' });
-      console.log('🗑️ Forced garbage collection');
+      
     } catch (error) {
-      console.log('⚠️ Garbage collection not available');
+      
     }
   }
 
@@ -366,7 +366,7 @@ class SmartResourceManager {
           console.error(`❌ Failed to restart ${processName}:`, err);
           resolve(false);
         } else {
-          console.log(`✅ Restarted ${processName} (${reason})`);
+          `);
           this.optimizationActions.push({
             "timestamp": Date.now(),
             "action": 'restart_process',
@@ -394,7 +394,7 @@ class SmartResourceManager {
               console.error('❌ Failed to scale "down": ', err);
               resolve(false);
             } else {
-              console.log(`📉 Scaled down to ${newInstances} instances`);
+              
               this.optimizationActions.push({
                 "timestamp": Date.now(),
                 "action": 'scale_down',
@@ -426,7 +426,7 @@ class SmartResourceManager {
               console.error('❌ Failed to scale "up": ', err);
               resolve(false);
             } else {
-              console.log(`📈 Scaled up to ${newInstances} instances`);
+              
               this.optimizationActions.push({
                 "timestamp": Date.now(),
                 "action": 'scale_up',
@@ -469,7 +469,7 @@ class SmartResourceManager {
       // Compress recent log files
       execSync('find logs -name "*.log" -mtime +1 -exec gzip {} \\;', { "stdio": 'pipe' });
       
-      console.log('🧹 Cleaned log files');
+      
       
       this.optimizationActions.push({
         "timestamp": Date.now(),
@@ -489,7 +489,7 @@ class SmartResourceManager {
       execSync('find /tmp -name "*.tmp" -mtime +1 -delete', { "stdio": 'pipe' });
       execSync('find . -name "*.tmp" -mtime +1 -delete', { "stdio": 'pipe' });
       
-      console.log('🧹 Cleaned temporary files');
+      
       
       this.optimizationActions.push({
         "timestamp": Date.now(),
@@ -508,7 +508,7 @@ class SmartResourceManager {
       // Compress old reports
       execSync('find . -name "*.json" -mtime +30 -exec gzip {} \\;', { "stdio": 'pipe' });
       
-      console.log('🗜️ Compressed old files');
+      
       
       this.optimizationActions.push({
         "timestamp": Date.now(),
@@ -538,7 +538,7 @@ class SmartResourceManager {
     const reportPath = path.join(this.reportDir, `resource-report-${Date.now()}.json`);
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
     
-    console.log(`📊 Resource report saved "to": ${reportPath}`);
+    
     return report;
   }
 
@@ -566,30 +566,30 @@ class SmartResourceManager {
   }
 
   async stop() {
-    console.log('🛑 Stopping Smart Resource Manager...');
+    
     pm2.disconnect();
   }
 }
 
 // Main execution
 async function main() {
-  console.log('💾 Starting Smart Resource Manager...');
+  
   
   const resourceManager = new SmartResourceManager();
   
   try {
     await resourceManager.initialize();
-    console.log('✅ Smart Resource Manager initialized successfully');
+    
     
     // Keep the process running
     process.on('SIGINT', async () => {
-      console.log('\n🛑 Received SIGINT, shutting down gracefully...');
+      
       await resourceManager.stop();
       process.exit(0);
     });
 
     process.on('SIGTERM', async () => {
-      console.log('\n🛑 Received SIGTERM, shutting down gracefully...');
+      
       await resourceManager.stop();
       process.exit(0);
     });

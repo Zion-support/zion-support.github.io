@@ -1,7 +1,7 @@
-import React from 'react';
-import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
-import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
+import Layout from '../components/Layout';
+import { Code, Book, Zap, Shield } from 'lucide-react';
+
 
 export default function APIPage() {
   const apiFeatures = [

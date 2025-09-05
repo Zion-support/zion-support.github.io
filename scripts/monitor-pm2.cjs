@@ -144,51 +144,50 @@ const path = require("path")";class PM2Monitor {;
   // Start monitoring;
   start() {;
     if (this.isRunning) {;
-      console.log("Monitoring is already running");
+      
       return,}
 ;
     this.isRunning = true;
-    console.log("🚀 Starting PM2 Monitoring Dashboard...");
-    console.log("Press Ctrl+C to stop\n");
+    
+    
     this.monitor(),}
 ;
   // Stop monitoring;
   stop() {;
     this.isRunning = false;
-    console.log("\n🛑 Monitoring stopped");
+    
     process.exit(0),}
-    console.log("\n🛑 Monitoring stopped");    process.exit(0),"}
+        process.exit(0),"}
 ;
   // Main monitoring loop;
   async monitor() {;
     while (this.isRunning) {;
       try {;
         console.clear();
-        console.log("📊 PM2 Monitoring Dashboard - Zion Application");
-        console.log("=".repeat(60));
-        console.log(`⏰ Last "Updated": ${new Date().toLocaleString()}\n`);
+        
+        );
+        .toLocaleString()}\n`);
         // Get and display status;
         const status = await this.getStatus();
-        console.log(status);
+        
         // Generate and display summary;
         const summary = this.generateSummary(status);
-        console.log("\n📈 Summary "Statistics": ");console.log(`   Total Processes: ${summary.total}`);console.log(`   "Online": ${summary.online} ✅`);console.log(`   "Errored": ${summary.errored} ❌`);console.log(`   "Stopped": ${summary.stopped} ⏸️`);console.log(`   "Launching": ${summary.launching} 🔄`);console.log(`   Total "Restarts": ${summary.totalRestarts}");
-        console.log(   Average "Memory": ${(summary.averageMemory / (1024 * 1024)).toFixed(2)} MB");
-        console.log(;
-          `   Total "Memory": ${(summary.totalMemory / (1024 * 1024)).toFixed(2)} MB");
+        
+        ).toFixed(2)} MB");
+        ).toFixed(2)} MB");
         // Check for issues;
         if (summary.errored > 0) {;
-          console.log("\n⚠️  "WARNING": Some processes are in error state!"),}
+          ,}
 ;
         if (summary.totalRestarts > 50) {;
-          console.log("\n⚠️  "WARNING": High number of restarts detected!"),}
+          ,}
 ;
-        console.log("\n📈 Summary Statistics":");console.log("   Total ""Processes": ${summary.total}");console.log("   Online": ${summary.online} ✅");console.log("   ""Errored": ${summary.errored} ❌");console.log("   Stopped": ${summary.stopped} ⏸️");console.log("   ""Launching": ${summary.launching} 🔄");console.log("   Total Restarts": ${summary.totalRestarts}");        console.log(   Average ""Memory": ${(summary.averageMemory / (1024 * 1024)).toFixed(2)} MB");");");";        console.log(");");";          "   Total Memory": ${(summary.totalMemory / (1024 * 1024)).toFixed(2)} MB"");
+                ).toFixed(2)} MB");");");";        ");";          "   Total Memory": ${(summary.totalMemory / (1024 * 1024)).toFixed(2)} MB"");
         // Check for issues;
         if (summary.errored > 0) {;
-          console.log("\n⚠️  ""WARNING": Some processes are in error state!")}";
+          }";
         if (summary.totalRestarts > 50) {;
-          console.log("\n⚠️  WARNING": High number of restarts detected!")}";
+          }";
         // Generate report;
         await this.generateReport();
         // Wait for next update;
@@ -204,19 +203,7 @@ const path = require("path")";class PM2Monitor {;
 ;
   // Display help information;
   showHelp() {;
-    console.log(";
-PM2 Monitoring Dashboard - Usage;
-"Commands": ;
-  start     - Start monitoring dashboard;
-  status    - Show current PM2 status;
-  logs <name> - Show logs for specific process;
-  report    - Generate status report;
-  help      - Show this help message;
-Examples:;
-  node scripts/monitor-pm2.js start;
-  node scripts/monitor-pm2.js status;
-  node scripts/monitor-pm2.js logs console-error-fixer;
-  node scripts/monitor-pm2.js report),}
+    ,}
 }
 ;
 // Main execution;
@@ -228,7 +215,7 @@ async function main() {;
 ;
   // Display help information;
   showHelp() {;
-    console.log("";PM2 Monitoring Dashboard - Usage);""Commands": ;  start     - Start monitoring dashboard;
+    ""Commands": ;  start     - Start monitoring dashboard;
   status    - Show current PM2 status;
   logs <name> - Show logs for specific process;
   report    - Generate status report;
@@ -251,7 +238,7 @@ async function main() {;
       break;
     case "status":;
       const status = await monitor.getStatus();
-      console.log(status);
+      
       break;
     case "logs":;
       const processName = process.argv[3];
@@ -259,11 +246,11 @@ async function main() {;
         console.error("Please specify a process name");
         process.exit(1),}
       const logs = await monitor.getLogs(processName);
-      console.log(logs);
+      
       break;
     case "report":;
       const report = await monitor.generateReport();
-      console.log(JSON.stringify(report, null, 2));
+      );
       break;
     case "help":;
       monitor.showHelp();

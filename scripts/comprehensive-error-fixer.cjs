@@ -15,7 +15,6 @@ class ComprehensiveErrorFixer {
   log(message, type = "info") {
     const timestamp = new Date().toISOString()
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`
-    console.log(logEntry)
     this.logs.push(logEntry)}
   async fixCommonSyntaxErrors() {
     try {

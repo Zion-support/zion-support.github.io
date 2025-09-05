@@ -13,7 +13,7 @@ class SimpleScriptFixer {
     this.errorCount = 0}
 
   async log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
 
   async findScriptFiles() {
     const scriptDirs = [path.join(this.projectRoot, 'scripts'),

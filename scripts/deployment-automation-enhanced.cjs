@@ -8,7 +8,7 @@ class DeploymentAutomation {
     this.steps = []}
 
   async deploy() {
-    console.log('🚀 Starting deployment automation...');
+    
     
     const deploymentSteps = [{ "name": 'Install Dependencies', "cmd": 'npm install' },
       { "name": 'Run Tests', "cmd": 'npm test' },
@@ -18,23 +18,23 @@ class DeploymentAutomation {
 
     for (const step of deploymentSteps) {
       try {
-        console.log(`🔄 ${step.name}...`);
+        
         execSync(step.cmd, { "stdio": 'inherit' });
         this.steps.push({
           "name": step.name,
           "status": 'completed'
         });
-        console.log(`✅ ${step.name} completed`)} catch (error) {
+        } catch (error) {
         this.steps.push({
           "name": step.name,
           "status": 'failed',
           "error": error.message
         });
-        console.log(`❌ ${step.name} "failed": ${error.message}`);
+        
         throw error}
     }
 
-    console.log('🎉 Deployment automation completed successfully!')}
+    }
 }
 
 if (require.main === module) {

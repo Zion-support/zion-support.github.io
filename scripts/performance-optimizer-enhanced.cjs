@@ -11,7 +11,7 @@ class PerformanceOptimizer {
     this.optimizations = []}
 
   log(message) {
-    console.log(`[Performance Optimizer] ${message}`)}
+    }
 
   async runOptimizations() {
     this.log('⚡ Starting Performance Optimizations');
@@ -158,7 +158,7 @@ export class PerformanceMonitor {
     const result = fn();
     const end = performance.now();
     
-    console.log(\"\${name}: \${end - start}ms\");
+    
     
     // Send to analytics if available
     if (typeof window !== 'undefined' && window.gtag) {
@@ -174,7 +174,7 @@ export class PerformanceMonitor {
     const start = performance.now();
     return fn().then(result => {
       const end = performance.now();
-      console.log(\"\${name}: \${end - start}ms\");
+      
       
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'performance', {

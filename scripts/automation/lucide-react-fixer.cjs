@@ -32,7 +32,7 @@ class $1 {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)}
+    fs.appendFileSync(this.logFile, logEntry);}
 ;
   getValidIcons() {
   // Common valid Lucide React icons;
@@ -328,9 +328,9 @@ async function main() {
   const fixer = new LucideReactIconFixer();
   // Run the icon fix;
   const result = await fixer.runIconFix();
-  console.log("\n🎨 Lucide React Icon Fixer "Summary": ");console.log("✅ Total fixes applied: ${result.fixes.length}");console.log("❌ Total errors "encountered": ${result.errors.length}");
-  if (result.fixes.length > 0) {console.log("\n🔧 Icon fixes "applied": ");
-    result.fixes.forEach(fix => {console.log("  - ${fix.type}: ${path.basename(fix.file)}")})}
+  
+  if (result.fixes.length > 0) {
+    result.fixes.forEach(fix => {}")})}
   ;
   process.exit(0)}
 ;

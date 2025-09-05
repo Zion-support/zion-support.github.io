@@ -1,21 +1,7 @@
-import React from 'react';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  DollarSign, 
-  Brain, 
-  Shield, 
-  BarChart3, 
-  CheckCircle,
-  ArrowRight,
-  TrendingUp,
-  Lock,
-  CreditCard,
-  Database,
-  FileText,
-  Users
-} from 'lucide-react';
+import Link from 'next/link';
 import Layout from '../../components/Layout';
+import { DollarSign, Brain, Shield, BarChart3, CheckCircle, ArrowRight, TrendingUp, Lock, CreditCard, Database, FileText, Users } from 'lucide-react';;
 
 const services = [
   {

@@ -30,7 +30,7 @@ class ErrorFixer {
   log(message) {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage)}
+    }
 ;
   async runTypeCheck() {
   try {
@@ -230,9 +230,9 @@ class ErrorFixer {
   fixFileContent(content) {
   let fixed = content;
     // Fix common syntax errors;
-    fixed = fixed.replace(/console\.log\("([^"]*)\"\);/g, "console.log("$1");");
-    fixed = fixed.replace(/console\.log\("([^"]*)"\);/g, console.log("$1");");
-    fixed = fixed.replace(/console\.log\("([^]*)\);/g, "console.log("$1");");
+    fixed = fixed.replace(/console\.log\("([^"]*)\"\);/g, "");
+    fixed = fixed.replace(/console\.log\("([^"]*)"\);/g, ");
+    fixed = fixed.replace(/console\.log\("([^]*)\);/g, "");
     // Fix template literal issues;
     fixed = fixed.replace(/"([^"]*)\"\);/g, ""$1");");
     fixed = fixed.replace(/"([^"]*)"\);/g, "$1"));

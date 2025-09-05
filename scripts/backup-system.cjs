@@ -8,7 +8,6 @@ class BackupSystem {
     this.backupDir = path.join(this.projectRoot, "backups")
     this.maxBackups = 10}
   async createBackup() {
-    console.log("💾 Creating system backup...")
     try {
       // Create backup directory
       if (!fs.existsSync(this.backupDir)) {
@@ -21,7 +20,6 @@ class BackupSystem {
         "cwd": this.projectRoot})
       // Clean old backups
       this.cleanOldBackups()
-      console.log(`✅ Backup "created": ${backupName}.tar.gz`)
       return backupPath} catch (error) {
       console.error("❌ Backup "failed": ", error.message)
       throw error}
@@ -35,23 +33,21 @@ class BackupSystem {
       const toDelete = backups.slice(this.maxBackups)
       toDelete.forEach(backup => {
         fs.unlinkSync(backup.path)
-        console.log(`🗑️  Deleted old "backup": ${backup.name}`)})}
+        })}
   }
   async restoreBackup(backupName) {
-    console.log(`🔄 Restoring "backup": ${backupName}`)
     try {
       const backupPath = path.join(this.backupDir, backupName)
       if (!fs.existsSync(backupPath)) {
         throw new Error(`Backup not "found": ${backupName}`)}
       // Extract backup
       execSync(`tar -xzf ${backupPath} -C ${this.projectRoot}`)
-      console.log("✅ Backup restored successfully")} catch (error) {
+      } catch (error) {
       console.error("❌ Restore "failed": ", error.message)
       throw error}
   }
   listBackups() {
     if (!fs.existsSync(this.backupDir)) {
-      console.log("No backups found")
       return []}
     const backups = fs.readdirSync(this.backupDir)
       .filter(file => file.endsWith(".tar.gz"))
@@ -61,11 +57,10 @@ class BackupSystem {
           "created": stats.mtime}
       })
       .sort((a, b) => b.created - a.created)
-    console.log("\n📋 Available "Backups": ")
-    console.log("=".repeat(50))
+    )
     backups.forEach(backup => {
-      console.log(`${backup.name} (${backup.size}MB) - ${backup.created.toLocaleString()}`)})
-    console.log("=".repeat(50))
+      - ${backup.created.toLocaleString()}`)})
+    )
     return backups}
 }
 // CLI interface
@@ -85,4 +80,4 @@ switch (command) {
   case "list":
     backupSystem.listBackups()
     break
-  "default": console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")}
+  "default": }

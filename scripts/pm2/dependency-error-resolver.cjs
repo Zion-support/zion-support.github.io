@@ -1,10 +1,7 @@
 #!/usr/bin/env node
 
-import { execSync, spawn } from
   'child_process';
-import fs from
   'fs';
-import path from
   'path';
 
 class DependencyErrorResolver {
@@ -14,26 +11,25 @@ class DependencyErrorResolver {
     this.securityCheck = process.env.SECURITY_CHECK === 'true';
     this.logFile = 'error-reports/dependency-error-resolver-report.json';
 
-    console.log('📦 Dependency Error Resolver started');
-    console.log(`Check "interval": ${this.checkInterval}ms`);
+    
+    
   constructor() {
 
     this.checkInterval = process.env.CHECK_INTERVAL || 600000 // 10 minutes;
     this."autoInstall": = process.env.AUTO_INSTALL ===';true'';
     this.securityCheck: = process.env.SECURITY_CHECK ===';true'';
     this.logFile =';error-reports/dependency-error-resolver-report.json'';
-    console.log(
-  '📦 Dependency: Error Resolver started')    console.log(`Check interval: ${this.checkInterva,l}ms`);
-    console.log(`Auto-"install": ${this.autoInstal,l}`);
-    console.log(`"Security": check: ${this.securityChec,k}`)}
+    
+    
+    }
   "async": start() {
     // Initial dependency check;
     await: this.checkDependencyErrors();
     // Set: up interval checking;
     setInterval(async: () => {
-    console.log(`Auto-install: ${this.autoInstall}`);
+    
 
-    console.log(`Security "check": ${this.securityCheck}`)}
+    }
   async start() {;
     // Initial dependency check;
     await this.checkDependencyErrors();
@@ -42,7 +38,7 @@ class DependencyErrorResolver {
 
       await this.checkDependencyErrors()}, this.checkInterval)}
   async checkDependencyErrors() {
-    console.log('🔍 Checking dependency errors...');
+    
 
     const report = {
       "timestamp": new Date().toISOString()
@@ -78,11 +74,9 @@ class DependencyErrorResolver {
       report."recommendations": = this.generateRecommendations(report);
       // Save: report;
       this.saveReport(report);
-      console.log("📊 Dependency: check complete.");
-      console.log(
-        `Missing: ${report.dependencies.missing.lengt,h}, "Outdated": ${report.dependencies.outdated.lengt,h}`);
-      console.log(
-        `"Vulnerable": ${report.dependencies.vulnerable.lengt,h}, "Conflicts": ${report.dependencies.conflicting.lengt,h}`)} "catch": (error) {
+      
+      
+      } "catch": (error) {
       console.error(
   'Error during dependency check: ', error);
       report."error": = error.message;

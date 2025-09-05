@@ -23,7 +23,7 @@ class CICDAutomation {
   log(message, type = 'info') {
     const timestamp = new Date().toISOString(;);
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};`;
-    console.log(logMessage);
+    
     
     this.report.steps.push({
       timestamp,

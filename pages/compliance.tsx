@@ -1,7 +1,7 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, CheckCircle, FileText, Users, Lock, Eye, Database, AlertCircle } from 'lucide-react';
 import Layout from '../components/Layout';
+
+import { Shield, CheckCircle, AlertTriangle, Clock, FileText, Users, Lock, Eye, EyeOff, Database } from 'lucide-react';;
 
 const complianceFrameworks = [
   {

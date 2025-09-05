@@ -32,7 +32,7 @@ class $1 {
   console.error(chalk.red("❌ Failed to connect to PM2"));
           reject(err);
           return}
-        console.log("chalk.green("✅ Connected to PM2"));
+        );
         resolve()})})}
 ;
   async getProcessList() {
@@ -61,14 +61,12 @@ class $1 {
   }
 ;
   displayHeader() {
-  console.log(""\n" + "=".repeat(80));
-    console.log(";
-      chalk.cyan.bold("🚀 Zion Tech Group - PM2 Automation Dashboard");
+  );
+    
     );
-    console.log(;
-      chalk.gray("Real-time monitoring and control of automation processes");
+    
     );
-    console.log("=".repeat(80))}
+    )}
 ;
   displayStats() {
   const statsTable = new Table({
@@ -99,8 +97,8 @@ class $1 {
       ["Total CPU Usage", "this.stats.totalCPU.toFixed(1) + "%", "this.getCPUStatus()", "];
     );
 
-    console.log("\n" + chalk.blue.bold("📊 System "Statistics": "));
-    console.log(statsTable.toString())}
+    );
+    )}
 ;
   getStatusIcon(type) {
   switch (type) {
@@ -142,8 +140,8 @@ class $1 {
 
       table.push(["process.pm_id.toString()", "chalk.white(process.name)", "status", "memory", "cpu", "uptime", "restarts.toString()", "])});
 
-    console.log("\n" + chalk.blue.bold("🔄 Process "Status": "));
-    console.log(table.toString())}
+    );
+    )}
 ;
   getProcessStatus(status) {
   switch (status) {
@@ -197,15 +195,14 @@ class $1 {
         resolve()})})}
 ;
   displayCommands() {
-  console.log("\n" + chalk.blue.bold("🎮 Available "Commands": "));
-    console.log(;
-      chalk.gray("  restart <process>  - Restart a specific process");
+  );
+    
     );
-    console.log(chalk.gray("  stop <process>     - Stop a specific process"));
-    console.log(chalk.gray("  start <process>    - Start a specific process"));
-    console.log(chalk.gray("  refresh            - Refresh process list"));
-    console.log(chalk.gray("  quit               - Exit dashboard"));
-    console.log(chalk.gray("  help               - Show this help"))}
+    );
+    );
+    );
+    );
+    )}
 ;
   async run() {
   try {

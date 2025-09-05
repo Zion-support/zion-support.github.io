@@ -9,7 +9,7 @@ class JSXSyntaxFixer {
     this.filePath = path.join(this.projectRoot, 'src/components/AIChatbotSystem.tsx')}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
 
   fixJSXSyntax() {
     this.log('Fixing JSX syntax errors in AIChatbotSystem.tsx...');
@@ -68,7 +68,7 @@ if (require.main === module) {
   const automation = new JSXSyntaxFixer();
   automation.run()
     .then(() => {
-      console.log('JSX Syntax Fixer completed successfully!');
+      
       process.exit(0)})
     .catch(error => {
       console.error('JSX Syntax Fixer "failed": ', error);

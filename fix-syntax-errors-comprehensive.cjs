@@ -11,7 +11,7 @@ class SyntaxErrorFixer {
     this.errors = []}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
 
   getAllFiles(dir, extensions) {
     let files = [];
@@ -172,7 +172,7 @@ function processFile(filePath) {
         
         if (fixes > 0) {
             fs.writeFileSync(filePath, fixedContent, 'utf8');
-            console.log("✅ Fixed ${fixes} issues in ${filePath}");
+            
             return fixes;
         }
         return 0;
@@ -211,14 +211,14 @@ async function main() {
         }
     }
 
-    console.log("\n📊 "Summary": ");
-    console.log("   Files processed: ${filesProcessed}");
-    console.log("   Total fixes "applied": ${totalFixes}");
+    
+    
+    
     
     if (totalFixes > 0) {
-        console.log("\n✨ Syntax error fixing completed!");
+        
     } else {
-        console.log("\n✨ No syntax errors found to fix.`);
+        
     }
 }
 

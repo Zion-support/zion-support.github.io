@@ -12,7 +12,7 @@ class LinterWatcher {
   }
 
   async start() {
-    console.log('Starting Linter Watcher...');
+    
     this.isRunning = true;
     
     // Initial lint check
@@ -22,11 +22,11 @@ class LinterWatcher {
     this.intervalId = setInterval(() => {
       this.runLint()}, this.interval);
     
-    console.log('Linter Watcher started successfully')}
+    }
 
   async runLint() {
     try {
-      console.log('Running lint check...');
+      
       
       const child = spawn('npm', ['run', 'lint'], {
         "stdio": ['pipe', 'pipe', 'pipe'],
@@ -44,12 +44,12 @@ class LinterWatcher {
 
       child.on('close', (code) => {
         if ( {
-          console.log('Lint check passed ✓')) {
+          ) {
      {
-          console.log('Lint check passed ✓')}} else {
-          console.log('Lint check failed ✗');
-          console.log('"Output": ', output);
-          console.log('"Errors": ', errorOutput);
+          }} else {
+          
+          
+          
           
           // Attempt to auto-fix
           this.attemptAutoFix()}
@@ -59,7 +59,7 @@ class LinterWatcher {
 
   async attemptAutoFix() {
     try {
-      console.log('Attempting to auto-fix linting issues...');
+      
       
       const child = spawn('npm', ['run', '"lint": fix'], {
         "stdio": 'inherit',
@@ -68,26 +68,26 @@ class LinterWatcher {
 
       child.on('close', (code) => {
         if ( {
-          console.log('Auto-fix completed ✓')) {
+          ) {
      {
-          console.log('Auto-fix completed ✓')}} else {
-          console.log('Auto-fix failed ✗')}
+          }} else {
+          }
       })} catch (error) {
       console.error('Error running auto-"fix": ', error.message)}
   }
 
   stop() {
-    console.log('Stopping Linter Watcher...');
+    
     this.isRunning = false;
     
     if ( {
       clearInterval(this.intervalId)}
     
-    console.log('Linter Watcher stopped')) {
+    ) {
      {
       clearInterval(this.intervalId)}
     
-    console.log('Linter Watcher stopped')}}
+    }}
 }
 
 // Start the watcher if run directly

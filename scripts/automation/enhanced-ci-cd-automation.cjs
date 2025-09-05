@@ -4,7 +4,7 @@ const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
-console.log(""🚀 Starting Enhanced "CI/CD" Automation...");
+
 
 class $1 {
   constructor() {
@@ -25,7 +25,7 @@ class $1 {
   }
 ;
   async installDependencies() {
-  console.log(""📦 Installing dependencies...");
+  
     try {
   const startTime = Date.now();
       const output = execSync("npm install", {
@@ -37,22 +37,22 @@ class $1 {
       this.ciResults.dependencies.result = {
   "duration": ${duration}ms,
         "output": "Dependencies installed successfully"}
-console.log(✅ Dependencies installed in ${duration}ms"")} catch (error) {
+} catch (error) {
   this.ciResults.dependencies.status = "failure";
       this.ciResults.dependencies.result = {
   "error": error.message,
         "output": error.stdout || error.stderr || "Unknown error"}
-      console.log(""❌ Dependency installation "failed": ", error.message);      throw error}
+            throw error}
   }
 ;
   async runLinting() {
-  console.log(""🔍 Running linting checks...");
+  
     try {
   
 }")}");
 ");
   async runLinting() {");
-    console.log("🔍 Running linting checks...");
+    
     try {
   const startTime = Date.now();
       const output = execSync("npm run lint", {
@@ -64,13 +64,13 @@ console.log(✅ Dependencies installed in ${duration}ms"")} catch (error) {
       this.ciResults.linting.result = {"duration": ${duration}ms,
         "output": output,
         "issues": this.parseLintOutput(output)}
-console.log(✅ Linting completed in ${duration}ms"")} catch (error) {
+} catch (error) {
   this.ciResults.linting.status = "failure";
       this.ciResults.linting.result = {
   "error": error.message,
         "output": error.stdout || error.stderr || "Unknown error",
         "issues": this.parseLintOutput(error.stdout || error.stderr || "")}
-      console.log(`"❌ Linting "failed": ", error.message)}
+      }
   }
 ;
   parseLintOutput(output) {
@@ -85,13 +85,13 @@ console.log(✅ Linting completed in ${duration}ms"")} catch (error) {
       this.ciResults.linting.result = {"duration": ${duration}ms,
         "output": output,
         "issues": this.parseLintOutput(output)}
-console.log(✅ Linting completed in ${duration}ms`")} catch (error) {
+} catch (error) {
   this.ciResults.linting.status = "failure";
       this.ciResults.linting.result = {
   "error": error.message,
         "output": error.stdout || error.stderr || "Unknown error",
         "issues": this.parseLintOutput(error.stdout || error.stderr || ")}
-      console.log(""❌ Linting "failed": ", error.message)}
+      }
   }
 ;
   parseLintOutput(output) {
@@ -122,13 +122,13 @@ console.log(✅ Linting completed in ${duration}ms`")} catch (error) {
   }
 ;
   async runTypeCheck() {
-  console.log(""🔍 Running TypeScript type checking...");
+  
     try {
   
 }")}");
 ");
   async runTypeCheck() {");
-    console.log("🔍 Running TypeScript type checking...");
+    
     try {
   const startTime = Date.now();
       const output = execSync("npm run type-check", {
@@ -140,13 +140,13 @@ console.log(✅ Linting completed in ${duration}ms`")} catch (error) {
       this.ciResults.typeCheck.result = {"duration": ${duration}ms,
         "output": output,
         "issues": this.parseTypeCheckOutput(output)}
-console.log(✅ Type checking completed in ${duration}ms`")} catch (error) {
+} catch (error) {
   this.ciResults.typeCheck.status = "failure";
       this.ciResults.typeCheck.result = {
   "error": error.message,
         "output": error.stdout || error.stderr || "Unknown error",
         "issues": this.parseTypeCheckOutput(error.stdout || error.stderr || "")}
-      console.log(""❌ Type checking "failed": ", error.message)}
+      }
   }
 ;
   parseTypeCheckOutput(output) {
@@ -167,13 +167,13 @@ console.log(✅ Type checking completed in ${duration}ms`")} catch (error) {
   }
 ;
   async runBuild() {
-  console.log(""🏗️ Building project...");
+  
     try {
   
 }")}");
 ");
   async runBuild() {");
-    console.log("🏗️ Building project...");
+    
     try {
   const startTime = Date.now();
       const output = execSync("npm run build", {
@@ -185,12 +185,12 @@ console.log(✅ Type checking completed in ${duration}ms`")} catch (error) {
       this.ciResults.build.result = {"duration": ${duration}ms,
         "output": `Build completed successfully`,
         "buildSize": this.calculateBuildSize()}
-console.log(✅ Build completed in ${duration}ms`")} catch (error) {
+} catch (error) {
   this.ciResults.build.status = "failure";
       this.ciResults.build.result = {
   "error": error.message,
         "output": error.stdout || error.stderr || "Unknown error"}
-      console.log(""❌ Build "failed": ", error.message);      throw error}
+            throw error}
   }
 ;
   calculateBuildSize() {
@@ -228,7 +228,7 @@ return ${size.toFixed(2)} ${units[unitIndex]}
   }
 ;
   async runTests() {
-  console.log(""🧪 Running tests...");
+  
     try {
   try {
   const startTime = Date.now();
@@ -243,8 +243,8 @@ return ${size.toFixed(2)} ${units[unitIndex]}
       if (scripts.test) {
   testCommand = "npm test"} else if (scripts[""test": unit"]) {
   testCommand = "npm run test:unit"} else {
-  console.log(""⚠️ No test scripts found, skipping tests")} else {
-  console.log("⚠️ No test scripts found, skipping tests");
+  } else {
+  
         this.ciResults.testing.status = "skipped";
         this.ciResults.testing.result = {
   "reason": "No test scripts configured",
@@ -262,12 +262,12 @@ return ${size.toFixed(2)} ${units[unitIndex]}
       this.ciResults.testing.result = {"duration": ${duration}ms,
         "output": testOutput,
         "summary": this.parseTestOutput(testOutput)}
-console.log(✅ Tests completed in ${duration}ms`")} catch (error) {
+} catch (error) {
   this.ciResults.testing.status = "failure";
       this.ciResults.testing.result = {
   "error": error.message,
         "output": error.stdout || error.stderr || "Unknown error"}
-      console.log(""❌ Tests "failed": ", error.message)}
+      }
   }
 ;
   parseTestOutput(output) {
@@ -292,12 +292,12 @@ console.log(✅ Tests completed in ${duration}ms`")} catch (error) {
       this.ciResults.testing.result = {"duration": ${duration}ms,
         "output": testOutput,
         "summary": this.parseTestOutput(testOutput)}
-console.log(✅ Tests completed in ${duration}ms"")} catch (error) {
+} catch (error) {
   this.ciResults.testing.status = "failure";
       this.ciResults.testing.result = {
   "error": error.message,
         "output": error.stdout || error.stderr || "Unknown error"}
-      console.log(""❌ Tests "failed": ", error.message)}
+      }
   }
 ;
   parseTestOutput(output) {
@@ -331,7 +331,7 @@ console.log(✅ Tests completed in ${duration}ms"")} catch (error) {
   }
 ;
   async runQualityChecks() {
-  console.log(""📊 Running quality checks...");
+  
     try {
   const qualityResults = {
   "buildSuccess": this.ciResults.build.status === "success",
@@ -341,7 +341,7 @@ console.log(✅ Tests completed in ${duration}ms"")} catch (error) {
         "dependenciesInstalled": this.ciResults.dependencies.status === "success"}")}");
 ");
   async runQualityChecks() {");
-    console.log("📊 Running quality checks...");
+    
     try {
   const qualityResults = {
   "buildSuccess": this.ciResults.build.status === "success",
@@ -359,18 +359,18 @@ console.log(✅ Tests completed in ${duration}ms"")} catch (error) {
         "passed": passedChecks,
         "total": totalChecks,
         "details": qualityResults}
-console.log(`✅ Quality checks completed. "Score": ${qualityScore}%)} catch (error) {
+} catch (error) {
   this.ciResults.quality.status = `failure";
       this.ciResults.quality.result = {
   "error": error.message,
         "score": 0,
         "passed": 0,
         "total": 0}
-      console.log("❌ Quality checks "failed": ", error.message)}
+      }
   }
 ;
   async generateCIReport() {
-  console.log("📋 Generating ""CI/CD"" report..."");
+  
 
       this.ciResults.quality.status =;
         passedChecks === totalChecks ? "success" : "failure";
@@ -379,21 +379,21 @@ console.log(`✅ Quality checks completed. "Score": ${qualityScore}%)} catch (er
         "passed": passedChecks,
         "total": totalChecks,
         "details": qualityResults}
-console.log(`✅ Quality checks completed. "Score": ${qualityScore}%)} catch (error) {
+} catch (error) {
   this.ciResults.quality.status = "failure";
       this.ciResults.quality.result = {
   "error": error.message,
         "score": 0,
         "passed": 0,
         "total": 0}
-      console.log("❌ Quality checks "failed": ", error.message)}
+      }
   }
 ;
   async generateCIReport() {
-  console.log("📋 Generating "CI/CD" report..."`)}")}");
+  }")}");
 ");
   async generateCIReport() {");
-    console.log("📋 Generating ""CI/CD"" report..."`);
+    
     const totalDuration = Date.now() - this.startTime;
     const report = {
   "timestamp": new Date().toISOString(),"duration": ${totalDuration}ms,
@@ -422,7 +422,7 @@ console.log(`✅ Quality checks completed. "Score": ${qualityScore}%)} catch (er
       markdownReport;
     );
 
-    console.log(""📋 "CI/CD" report generated successfully");
+    
     return report}
 ;
   generateMarkdownReport(report) {return # ""CI/CD"" Pipeline Report - ${new Date().toLocaleDateString()}
@@ -567,24 +567,24 @@ ${
       await this.runQualityChecks();
 
       const report = await this.generateCIReport();
-      console.log(""\n🎯 Pipeline "Summary": ");console.log(Duration: ${report.duration});console.log(Total "Checks": ${report.summary.total}"");console.log(`"Passed": ${report.summary.passed} ✅`);console.log(`"Failed": ${report.summary.failed} ❌`);console.log(`Quality "Score": ${report.quality.score}%`);
+      
       if (report.summary.failed > 0) {
-  console.log("\n❌ Pipeline failed. Review failed checks above.");
+  
         process.exit(1)} else {
-  console.log("\n✅ Pipeline passed successfully! Ready for deployment.");
+  
 
-      console.log(`"\n🎯 Pipeline "Summary": ");console.log(Duration: ${report.duration});console.log(Total "Checks": ${report.summary.total}`");console.log(""Passed": ${report.summary.passed} ✅");console.log(""Failed": ${report.summary.failed} ❌");console.log("Quality "Score": ${report.quality.score}%");
+      
 
       if (report.summary.failed > 0) {
   await this.runQualityChecks();");
 ");
       const report = await this.generateCIReport();");
 ");
-      console.log("\n🎯 Pipeline "Summary": `);console.log(Duration: ${report.duration});console.log(Total "Checks": ${report.summary.total}`");console.log(""Passed": ${report.summary.passed} ✅");console.log(""Failed": ${report.summary.failed} ❌");console.log("Quality "Score": ${report.quality.score}%`);
+      
       if (report.summary.failed > 0) {
-  console.log("\n❌ Pipeline failed. Review failed checks above.");
+  
         process.exit(1)} else {
-  console.log("\n✅ Pipeline passed successfully! Ready for deployment.")}
+  }
 ;
       return report} catch (error) {
   

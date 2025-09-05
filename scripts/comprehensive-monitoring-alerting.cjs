@@ -5,8 +5,8 @@ const path = require('path');
 const { execSync } = require('child_process');
 const os = require('os');
 
-console.log('📊 Comprehensive Monitoring & Alerting v2.0');
-console.log('==========================================');
+
+
 
 const monitoringReport = {
   "timestamp": new Date().toISOString(),
@@ -43,10 +43,10 @@ const monitoringReport = {
 
 function log(level, message, data = null) {
   const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`);
+  }] ${message}`);
   
   if (data && process.env.DEBUG) {
-    console.log(JSON.stringify(data, null, 2))}
+    )}
 }
 
 function getSystemMetrics() {

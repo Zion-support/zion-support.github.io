@@ -22,7 +22,7 @@ class ContinuousLinter {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     fs.appendFileSync(this.logFile, logMessage);
-    console.log(message);
+    
   }
 
   error(message) {
@@ -270,7 +270,7 @@ if (require.main === module) {
       process.exit(success ? 0 : 1);
     });
   } else {
-    console.log('"Usage": node continuous-linter.cjs [watch|fix]');
+    
     process.exit(1);
   }
 }

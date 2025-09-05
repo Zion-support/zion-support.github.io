@@ -30,7 +30,7 @@ class ImprovedMasterAutomationOrchestrator {
       'WARNING': '⚠️',
       'PHASE': '🚀'
     }[type] || 'ℹ️';
-    console.log(`[${timestamp}] [${type}] ${emoji} ${message}`);
+    
   }
 
   async runScript(scriptName, scriptPath, options = {}) {
@@ -219,28 +219,28 @@ class ImprovedMasterAutomationOrchestrator {
     this.log('\n📊 AUTOMATION REPORT', 'PHASE');
     this.log('=' .repeat(50));
     
-    console.log(`\n⏱️  Total Duration: ${Math.round(totalDuration / 1000)}s`);
-    console.log(`🔧 Total Fixes Applied: ${this.totalFixes}`);
-    console.log(`❌ Total Errors Found: ${this.totalErrors}`);
+    }s`);
     
-    console.log('\n📋 Phase Results:');
+    
+    
+    
     Object.entries(this.results).forEach(([phase, result]) => {
       const status = result.success ? '✅' : '❌';
       const duration = Math.round(result.duration / 1000);
-      console.log(`   ${status} ${phase}: ${duration}s`);
+      
       
       if (result.errors.length > 0) {
-        console.log(`      Errors: ${result.errors.join(', ')}`);
+        }`);
       }
       if (result.fixes > 0) {
-        console.log(`      Fixes: ${result.fixes}`);
+        
       }
     });
     
     const successCount = Object.values(this.results).filter(r => r.success).length;
     const totalPhases = Object.keys(this.results).length;
     
-    console.log(`\n🎯 Overall Success Rate: ${successCount}/${totalPhases} (${Math.round(successCount/totalPhases*100)}%)`);
+    }%)`);
     
     if (this.results.buildTest.success) {
       this.log('🎉 All automation phases completed successfully!', 'SUCCESS');

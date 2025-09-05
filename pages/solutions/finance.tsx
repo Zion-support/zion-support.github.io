@@ -1,6 +1,6 @@
-import React from 'react';
 import Layout from '../../components/Layout';
-import { DollarSign, Shield, TrendingUp, Users, Database, CheckCircle, ArrowRight } from 'lucide-react';
+import { DollarSign, Shield, TrendingUp, Users, Database } from 'lucide-react';
+
 
 const features = [
   {

@@ -4,8 +4,8 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process');
 
-console.log('🔧 Smart Code Fixer');
-console.log('===================');
+
+
 
 // Function to fix unescaped entities only in JSX content
 function fixUnescapedEntities(content) {
@@ -64,7 +64,7 @@ function fixSpecificIssues(content, filePath) {
 
 // Function to fix files
 function fixFiles() {
-  console.log('📋 Fixing specific linting issues...');
+  
   
   const filesToFix = ['components/ContactForm.tsx',
     'components/ErrorBoundary.tsx', 
@@ -108,28 +108,28 @@ function fixFiles() {
     }
   });
 
-  console.log("✅ Fixed ${fixes.length} files");
+  
   return fixes}
 
 // Function to run ESLint with auto-fix
 function runESLintFix() {
-  console.log('🔧 Running ESLint auto-fix...');
+  
   try {
     execSync('npm run "lint": fix', { "stdio": 'inherit' });
-    console.log('✅ ESLint auto-fix completed');
+    
     return true} catch (error) {
-    console.log('⚠️ ESLint auto-fix had some issues, but continuing...');
+    
     return false}
 }
 
 // Function to run build test
 function runBuildTest() {
-  console.log('🏗️ Running build test...');
+  
   try {
     execSync('npm run build', { "stdio": 'inherit' });
-    console.log('✅ Build test passed');
+    
     return true} catch (error) {
-    console.log('❌ Build test failed');
+    
     return false}
 }
 
@@ -169,16 +169,16 @@ async function main() {
     const reportPath = 'smart-code-fixer-report.json;';
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
-    console.log('\n📊 Final "Report": ');
-    console.log(JSON.stringify(report, null, 2););
-    console.log("\n📄 Report saved "to": ${reportPath}`);
+    
+    );
+    
     
     if ( {
-      console.log('\n🎉 Smart Code Fixer completed successfully!')) {
+      ) {
      {
-      console.log('\n🎉 Smart Code Fixer completed successfully!')}
+      }
       process.exit(0)} else {
-      console.log('\n⚠️ Smart Code Fixer completed with issues');
+      
       process.exit(1)}
     
   } catch (error) {

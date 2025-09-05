@@ -3,7 +3,7 @@
 const fs = require('fs')
 const path = require('path')
 
-console.log('⚡ Starting Performance Optimization Automation...');
+
 
 // Performance metrics from the report
 const performanceMetrics = {
@@ -22,14 +22,14 @@ const performanceMetrics = {
 
 // Function to create image optimization script
 function createImageOptimizer() {
-  console.log('🖼️  Starting Image Optimization...');
+  
   
   const imagesDir = path.join(process.cwd(), 'public/images;';);
   
   if () {
-    console.log('📁 Creating images directory...')) {
     ) {
-    console.log('📁 Creating images directory...')}
+    ) {
+    }
     fs.mkdirSync(imagesDir, { "recursive": true })}
 
   // Create optimized image component
@@ -70,7 +70,7 @@ export default OptimizedImage;
 ";
 
   fs.writeFileSync('components/OptimizedImage.tsx', optimizedImageComponent);
-  console.log('✅ Created OptimizedImage component')}
+  }
 
 // Create performance monitoring component
 function createPerformanceMonitor() {
@@ -84,21 +84,21 @@ const "PerformanceMonitor": React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime) {
+            {
      {
       // Monitor Largest Contentful Paint (LCP)
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            console.log('"LCP": ', entry.startTime});
+            
             // Send to analytics
             if ( {
-              console.warn('LCP is "slow": ', entry.startTime)}
+              }
           }
         }
       })) {
      {
-              console.warn('LCP is "slow": ', entry.startTime)}
+              }
           }
         }
       })}
@@ -112,17 +112,17 @@ const "PerformanceMonitor": React.FC = () => {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if ( {
-            console.log('"FID": ', entry.processingStart - entry.startTime) {
+            {
      {
-            console.log('"FID": ', entry.processingStart - entry.startTime});
+            
             // Send to analytics
             if ( {
-              console.warn('FID is "slow": ', entry.processingStart - entry.startTime)}
+              }
           }
         }
       })) {
      {
-              console.warn('FID is "slow": ', entry.processingStart - entry.startTime)}
+              }
           }
         }
       })}
@@ -139,17 +139,17 @@ const "PerformanceMonitor": React.FC = () => {
           if (.hadRecentInput) {
             clsValue += (entry as any).value}
         }
-        console.log('"CLS": ', clsValue) {
+        {
     .hadRecentInput) {
             clsValue += (entry as any).value}
         }
-        console.log('"CLS": ', clsValue});
+        
         // Send to analytics
         if ( {
-          console.warn('CLS is "poor": ', clsValue)}
+          }
       })) {
      {
-          console.warn('CLS is "poor": ', clsValue)}
+          }
       })}
 
       try {
@@ -170,7 +170,7 @@ export default PerformanceMonitor;
 ";
 
   fs.writeFileSync('components/PerformanceMonitor.tsx', performanceMonitor);
-  console.log('✅ Created PerformanceMonitor component')}
+  }
 
 // Create bundle analyzer script
 function createBundleAnalyzer() {
@@ -180,12 +180,12 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process');
 
-console.log('📊 Starting Bundle Analysis...');
+
 
 function analyzeBundle() {
   try {
     // Run Next.js bundle analyzer
-    console.log('🔍 Analyzing bundle size...');
+    
     execSync('npx @next/bundle-analyzer', { "stdio": 'inherit' });
     
     // Generate bundle report
@@ -203,7 +203,7 @@ function analyzeBundle() {
    };
     
     fs.writeFileSync('bundle-analysis-report.json', JSON.stringify(report, null, 2));
-    console.log('📄 Bundle analysis report saved to bundle-analysis-report.json')} catch (error) {
+    } catch (error) {
     console.error('❌ Bundle analysis "failed": ', error.message)}
 }
 
@@ -211,7 +211,7 @@ analyzeBundle();
 ";
 
   fs.writeFileSync('scripts/bundle-analyzer.cjs', bundleAnalyzer);
-  console.log('✅ Created bundle analyzer script')}
+  }
 
 // Create performance optimization report
 function generatePerformanceReport() {
@@ -240,7 +240,7 @@ function generatePerformanceReport() {
  };
 
   fs.writeFileSync('performance-optimization-report.json', JSON.stringify(report, null, 2));
-  console.log('📄 Performance optimization report saved to performance-optimization-report.json')}
+  }
 
 // Main execution
 try {
@@ -249,11 +249,11 @@ try {
   createBundleAnalyzer();
   generatePerformanceReport();
   
-  console.log('🎉 Performance optimization automation completed successfully!');
-  console.log('📋 Performance improvements "created": ');
-  console.log('   ✅ OptimizedImage component');
-  console.log('   ✅ Enhanced PerformanceMonitor');
-  console.log('   ✅ Bundle analyzer script');
-  console.log('   ✅ Performance optimization report')} catch (error) {
+  
+  
+  
+  
+  
+  } catch (error) {
   console.error('❌ Performance optimization automation "failed": ', error.message);
   process.exit(1)}

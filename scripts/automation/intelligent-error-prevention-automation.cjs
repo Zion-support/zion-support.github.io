@@ -37,7 +37,7 @@ class $1 {
       "warning": "⚠️",
       "error": "❌",
       "fix": "🔧"}
-    console.log(`${levelEmoji[level]} [${timestamp}] ${message}`)}
+    }
 ;
   async startIntelligentMonitoring() {
   this.log("Starting Intelligent Error Prevention Automation...", "info");
@@ -94,7 +94,7 @@ class $1 {
       "warning": "⚠️",
       "error": "❌",
       "fix": "🔧"}
-    console.log(`${levelEmoji[level]} [${timestamp}] ${message}`)}
+    }
 ;
   async startIntelligentMonitoring() {
   this.log("Starting Intelligent Error Prevention Automation...", "info");

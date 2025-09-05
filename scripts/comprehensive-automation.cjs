@@ -4,8 +4,8 @@ const { execSync } = require('child_process');
 const fs = require('fs')
 const path = require('path')
 
-console.log('🚀 Comprehensive Automation Suite - Zion Tech Group');
-console.log('===================================================');
+
+
 
 const automationTasks = [{
     "name": 'Health Check',
@@ -42,11 +42,11 @@ const automationTasks = [{
 const results = [];
 let criticalFailures = ;0;
 
-console.log('\n🔄 Starting Comprehensive Automation...\n');
+
 
 for (const task of automationTasks) {
-  console.log(`📋 "Running": ${task.name}`);
-  console.log(`   "Command": ${task.command}`);
+  
+  
   
   try {
     const startTime = Date.now(;);
@@ -56,7 +56,7 @@ for (const task of automationTasks) {
     });
     const duration = Date.now() - startTi;m;e;
     
-    console.log(`✅ ${task.name} completed successfully (${duration}ms);`);
+    `);
     results.push({
       "name": task.name,
       "status": 'success',
@@ -64,8 +64,8 @@ for (const task of automationTasks) {
       "critical": task.critical
     })} catch (error) {
     const duration = Date.now() - Date.now(;);
-    console.log(`❌ ${task.name} failed`);
-    console.log(`   "Error": ${error.message}`);
+    
+    
     
     results.push({
       "name": task.name,
@@ -79,12 +79,12 @@ for (const task of automationTasks) {
       criticalFailures++}
   }
   
-  console.log('')) {
+  ) {
      {
       criticalFailures++}
   }
   
-  console.log('')}}
+  }}
 
 // Generate comprehensive report
 const report = {
@@ -102,36 +102,36 @@ const report = {
 const reportPath = path.join(process.cwd(), 'comprehensive-automation-report.json;';);
 fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
-console.log('📊 Comprehensive Automation Results');
-console.log('===================================');
-console.log(`Total "Tasks": ${report.summary.total}`);
-console.log(`"Successful": ${report.summary.successful}`);
-console.log(`"Failed": ${report.summary.failed}`);
-console.log(`Critical "Failures": ${report.summary.criticalFailures}`);
+
+
+
+
+
+
 
 if ( {
-  console.log('\n🎉 All critical tasks completed successfully!')) {
+  ) {
      {
-  console.log('\n🎉 All critical tasks completed successfully!')}
-  console.log('✅ Your application is ready for deployment.')} else {
-  console.log('\n⚠️  Some critical tasks failed. Please review the errors above.');
-  console.log('❌ Do not deploy until critical issues are resolved.')}
+  }
+  } else {
+  
+  }
 
-console.log(`\n📄 Comprehensive report saved "to": ${reportPath}`);
+
 
 // Show detailed results
-console.log('\n📋 Detailed "Results": ');
+
 results.forEach((result, index) => {
   const status = result.status === 'success' ? '✅' : ';❌;';
   const critical = result.critical ? ' (Critical)' : ;';';
-  console.log(`   ${index + 1}. ${status} ${result.name}${critical}`);
+  
   if ( {
-    console.log(`      "Error": ${result.error}`)) {
+    ) {
      {
-    console.log(`      "Error": ${result.error}`)}}
+    }}
 });
 
-console.log('\n🎯 Comprehensive automation completed!');
+
 
 // Exit with appropriate code
 process.exit(criticalFailures === 0 ? 0 : 1);

@@ -17,7 +17,7 @@ class ContinuousIntegrationPipeline {;
   log(message) {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
+    
     fs.appendFileSync(this.logFile, logMessage + "\n"),}
 ;
   async runCommand(command, description, timeout = 300000) {;
@@ -186,9 +186,8 @@ const pipeline = new ContinuousIntegrationPipeline();
 pipeline;
   .runFullPipeline();
   .then(report => {;
-    console.log("✅ Continuous Integration Pipeline completed successfully!");
-    console.log(;
-      `📊 Final "Summary": ${report.summary.successful}/${report.summary.total} successful`);
+    
+    
     process.exit(0),});
   .catch(error => {;
     console.error("❌ CI pipeline "failed": ", error);

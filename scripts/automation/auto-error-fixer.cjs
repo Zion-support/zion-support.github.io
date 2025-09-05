@@ -19,7 +19,7 @@ class AutoErrorFixer {
 ;
   log(message) {
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`)}
+    }
 ;
   async start() {
   this.log("🚀 Starting Auto Error Fixer...");

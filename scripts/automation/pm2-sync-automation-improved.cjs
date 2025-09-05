@@ -59,7 +59,7 @@ class ImprovedPM2SyncAutomation {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}`;
-    console.log(logEntry)}
+    }
 
   async initialize() {
     try {
@@ -443,13 +443,13 @@ class ImprovedPM2SyncAutomation {
 
 // Handle process signals
 process.on('SIGINT', async () => {
-  console.log('\nReceived SIGINT, shutting down gracefully...');
+  
   if (global.improvedPm2SyncAutomation) {
     await global.improvedPm2SyncAutomation.stop()}
   process.exit(0)});
 
 process.on('SIGTERM', async () => {
-  console.log('\nReceived SIGTERM, shutting down gracefully...');
+  
   if (global.improvedPm2SyncAutomation) {
     await global.improvedPm2SyncAutomation.stop()}
   process.exit(0)});

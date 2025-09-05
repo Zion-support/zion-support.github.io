@@ -7,7 +7,7 @@ class AccessibilityEnhancer {;
     this.accessibilityEnhancements = [],}
 ;
   log(message) {;
-    console.log(`[${new Date().toISOString()}] ${message}`),}
+    .toISOString()}] ${message}`),}
 ;
   async createAccessibilityConfig() {;
     this.log("♿ Creating accessibility configuration...");

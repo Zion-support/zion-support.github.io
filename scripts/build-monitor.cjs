@@ -17,7 +17,7 @@ class BuildMonitor {
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`)}
+    }
 
   async runBuild() {
     this.log('🔨 Running build...');
@@ -260,9 +260,9 @@ if (require.main === module) {
   const monitor = new BuildMonitor();
   monitor.run()
     .then((report) => {
-      console.log('\n🎉 Build Monitor completed successfully!');
-      console.log(`🔨 Build "status": ${report.analysis.build.success ? 'success' : 'failed'}`);
-      console.log(`💡 "Recommendations": ${report.recommendations.length}`);
+      
+      
+      
       process.exit(0)})
     .catch((error) => {
       console.error('\n💥 Build Monitor "failed": ', error.message);

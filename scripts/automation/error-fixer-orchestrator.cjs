@@ -79,7 +79,7 @@ class ErrorFixerOrchestrator {
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logMessage);
+    
     
     // Write to log file
     const logFile = path.join(this.logPath, 'error-fixer-orchestrator.log');

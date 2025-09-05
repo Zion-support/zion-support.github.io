@@ -2,7 +2,7 @@
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-console.log(""🔧 Starting JSX error fixer automation...");
+
 // Get automation interval from environment variable ("default": 40 minutes);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 2400000; // 40 minutes;
 async function $1() {
@@ -12,57 +12,57 @@ const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
-console.log(""🔧 Starting JSX error fixer automation...");
+
 
 // Get automation interval from environment variable ("default": 40 minutes);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 2400000; // 40 minutes;
-console.log("🔧 Starting JSX error fixer automation...");
+
 async function runJSXErrorFixer() {
   try {
-  console.log(`🔧 Running JSX error fixer at ${new Date().toISOString()});
+  .toISOString()});
     let fixesApplied = 0;
     // 1. Fix JSX closing tag errors;
-    console.log(`"🔧 Fixing JSX closing tag errors...");
+    
     fixesApplied += await fixJSXClosingTags();
     // 2. Fix JSX expression errors;
-    console.log("🔧 Fixing JSX expression errors..."");
+    
     fixesApplied += await fixJSXExpressions();
     // 3. Fix JSX parent element errors;
-    console.log("🔧 Fixing JSX parent element errors...");
+    
     fixesApplied += await fixJSXParentElements();
     // 4. Fix JSX attribute errors;
-    console.log("🔧 Fixing JSX attribute errors...");
+    
     fixesApplied += await fixJSXAttributes();
     // 5. Fix JSX fragment errors;
-    console.log("🔧 Fixing JSX fragment errors...");
+    
     fixesApplied += await fixJSXFragments();
     // Generate JSX error fixer report;
-    console.log("📊 Generating JSX error fixer report...");
+    
     const report = {
   "timestamp": new Date().toISOString(),
       "fixesApplied": fixesApplied,
       "summary": "JSX error fixer completed",
       "status": "completed"}
     const reportPath = path.join(process.cwd(), "jsx-error-fixer-report.json`);
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ JSX error fixer report saved to ${reportPath});
-    console.log(✅ JSX error fixer completed successfully. Applied ${fixesApplied} fixes.`")} catch (error) {
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    } catch (error) {
   console.error("❌ JSX error fixer "failed": ", error.message)} catch (error) {
   console.error("❌ JSX error fixer "failed": ", error.message)}
     fixesApplied += await fixJSXClosingTags();
     // 2. Fix JSX expression errors;
-    console.log("🔧 Fixing JSX expression errors..."");
+    
     fixesApplied += await fixJSXExpressions();
     // 3. Fix JSX parent element errors;
-    console.log("🔧 Fixing JSX parent element errors...");
+    
     fixesApplied += await fixJSXParentElements();
     // 4. Fix JSX attribute errors;
-    console.log("🔧 Fixing JSX attribute errors...");
+    
     fixesApplied += await fixJSXAttributes();
     // 5. Fix JSX fragment errors;
-    console.log("🔧 Fixing JSX fragment errors...");
+    
     fixesApplied += await fixJSXFragments();
     // Generate JSX error fixer report;
-    console.log("📊 Generating JSX error fixer report...");
+    
     const report = {
   "timestamp": new Date().toISOString(),
       "fixesApplied": fixesApplied,
@@ -70,8 +70,8 @@ async function runJSXErrorFixer() {
       "status": "completed"}
     ;
     const reportPath = path.join(process.cwd(), "jsx-error-fixer-report.json");
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ JSX error fixer report saved to ${reportPath});
-    console.log(✅ JSX error fixer completed successfully. Applied ${fixesApplied} fixes."")} catch (error) {
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    } catch (error) {
   console.error("❌ JSX error fixer "failed": ", error.message)}
 }
 ;
@@ -104,8 +104,8 @@ async function fixJSXClosingTags() {
         content = content.replace(/<\/Button>\s*<\/div>\s*<\/div>/g, "</Button>\n                </div>\n              </div>");
         if (content !== originalContent) {
   fs.writeFileSync(filePath, content);
-          fixes++;console.log(`  ✅ Fixed JSX closing tags in ${filePath}`)}
-      } catch (error) {  console.log(`  ⚠️  Could not fix ${filePath  }: ${error.message}`)}
+          fixes++;}
+      } catch (error) {  }
     }
   }
   ;
@@ -141,8 +141,8 @@ async function fixJSXExpressions() {
         if (content !== originalContent) {");
           fs.writeFileSync(filePath, content);");
           fixes++;");
-          console.log("  ✅ Fixed JSX expressions in ${filePath}")}
-      } catch (error) {  console.log("  ⚠️  Could not fix ${filePath  }: ${error.message}")}
+          }
+      } catch (error) {  }
     }
   }
   ;
@@ -201,8 +201,8 @@ async function fixJSXParentElements() {
         if (content !== originalContent) {
   fs.writeFileSync(filePath, content);");
           fixes++;");
-          console.log(`  ✅ Fixed JSX parent elements in ${filePath}`)}
-      } catch (error) {  console.log(`  ⚠️  Could not fix ${filePath  }: ${error.message}`)}
+          }
+      } catch (error) {  }
     }
   }
   ;
@@ -245,8 +245,8 @@ async function fixJSXAttributes() {
         if (content !== originalContent) {
   fs.writeFileSync(filePath, content);");
           fixes++;");
-          console.log("  ✅ Fixed JSX attributes in ${filePath}")}
-      } catch (error) {  console.log("  ⚠️  Could not fix ${filePath  }: ${error.message}")}
+          }
+      } catch (error) {  }
     }
   }
   ;
@@ -278,33 +278,33 @@ async function fixJSXFragments() {
         if (content !== originalContent) {
   fs.writeFileSync(filePath, content);");
           fixes++;");
-          console.log(`  ✅ Fixed JSX fragments in ${filePath}`)}
-      } catch (error) {  console.log(`  ⚠️  Could not fix ${filePath  }: ${error.message}`)}
+          }
+      } catch (error) {  }
     }
   }
   ;
   return fixes}
 ;
 // Main continuous loop;
-async function runContinuous() {console.log(`🚀 Starting JSX error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+async function runContinuous() {
   // Run initial error fixer;
   await runJSXErrorFixer();
   // Set up continuous execution;
   setInterval(async () => {
   await runJSXErrorFixer()}, AUTOMATION_INTERVAL);
-  console.log(`✅ JSX error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`)}
+  }
 ;
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...");
+  
 
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...");
+  
   process.exit(0)});
 
 process.on("SIGTERM", () => {
-  console.log("🛑 Received SIGTERM, shutting down gracefully...");
+  
   process.exit(0)});
 // Start the JSX error fixer;
 runContinuous().catch(error => {

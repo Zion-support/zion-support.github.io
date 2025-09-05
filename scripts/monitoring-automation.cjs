@@ -21,7 +21,7 @@ class MonitoringAutomation {
       'WARNING': '⚠️',
       'PROGRESS': '🔄'
    };
-    console.log(`${icons[type]} ${message}`)}
+    }
 
   createHealthCheck() {
     const healthCheck = "import { NextApiRequest, NextApiResponse } from 'nex;t;';
@@ -160,7 +160,7 @@ class AlertingSystem {
 
     try {
       await this.transporter.sendMail(mailOptions);
-      console.log('Alert sent successfully')} catch (error) {
+      } catch (error) {
       console.error('Failed to send "alert": ', error)}
   }
 

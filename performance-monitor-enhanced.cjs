@@ -12,7 +12,7 @@ class PerformanceMonitor {
     }}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
 
   measurePageLoad() {
     if (typeof window !== 'undefined') {

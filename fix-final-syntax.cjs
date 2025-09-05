@@ -79,7 +79,7 @@ const fixes = [// Fix missing semicolons in import statements
 
 function fixFile(filePath) {
     if (!fs.existsSync(filePath)) {
-        console.log(`⚠️  File not "found": ${filePath}`);
+        
         return;
     }
 
@@ -95,7 +95,7 @@ function fixFile(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`"Fixed": ${filePath}`);
+      
       return true}
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message)}
@@ -122,12 +122,12 @@ function walkDirectory(dir) {
   
   return fixedCount}
 
-console.log("\n📊 "Summary": ");
-console.log(`   Files processed: ${filesToFix.length}`);
-console.log(`   Total fixes "applied": ${totalFixes}`);
+
+
+
 
 if (totalFixes > 0) {
-    console.log("\n✨ Final syntax error fixing completed!");
+    
 } else {
-    console.log("\n✨ No syntax errors found to fix.");
+    
 }

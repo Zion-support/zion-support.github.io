@@ -51,7 +51,7 @@ class SmartAutoScaler {
       await fs.mkdir(this.reportDir, { "recursive": true });
       await fs.mkdir(path.join(process.cwd(), 'logs'), { "recursive": true });
     } catch (error) {
-      console.log('Directories already exist or created');
+      
     }
   }
 
@@ -63,7 +63,7 @@ class SmartAutoScaler {
           reject(err);
           return;
         }
-        console.log('✅ Connected to PM2 for smart auto-scaling');
+        
         this.startScaling();
         resolve();
       });
@@ -381,7 +381,7 @@ class SmartAutoScaler {
   async executeScalingDecision(decision) {
     const { type, reason, currentInstances, targetInstances, metric, threshold } = decision;
     
-    console.log(`🔄 Scaling ${type}: ${currentInstances} → ${targetInstances} instances (${reason}: ${metric.toFixed(2)} vs ${threshold})`);
+    } vs ${threshold})`);
 
     return new Promise((resolve, reject) => {
       pm2.scale('ziontech-main-app', targetInstances, (err) => {
@@ -391,7 +391,7 @@ class SmartAutoScaler {
           return;
         }
 
-        console.log(`✅ Successfully scaled to ${targetInstances} instances`);
+        
         
         // Record scaling action
         this.scalingHistory.push({
@@ -420,10 +420,7 @@ class SmartAutoScaler {
       "errorRate": this.calculateTrend(this.performanceMetrics.slice(-10).map(m => this.calculateErrorRate(m)))
     };
 
-    console.log(`📈 Performance "Trends": CPU: ${trends.cpu > 0 ? '↗️ Increasing' : '↘️ Decreasing'}
-      "Memory": ${trends.memory > 0 ? '↗️ Increasing' : '↘️ Decreasing'}
-      Response "Time": ${trends.responseTime > 0 ? '↗️ Increasing' : '↘️ Decreasing'}
-      Error "Rate": ${trends.errorRate > 0 ? '↗️ Increasing' : '↘️ Decreasing'}`);
+    
 
     // Adjust scaling rules based on trends
     await this.adjustScalingRules(trends);
@@ -463,8 +460,7 @@ class SmartAutoScaler {
       this.scalingRules.memory.scaleUp = Math.min(95, this.scalingRules.memory.scaleUp + adjustmentFactor * 10);
     }
 
-    console.log(`🔧 Adjusted scaling "rules": CPU scale-up: ${this.scalingRules.cpu.scaleUp}%
-      Memory scale-"up": ${this.scalingRules.memory.scaleUp}%`);
+    
   }
 
   async generateScalingReport() {
@@ -486,7 +482,7 @@ class SmartAutoScaler {
     const reportPath = path.join(this.reportDir, `scaling-report-${Date.now()}.json`);
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
     
-    console.log(`📊 Scaling report saved "to": ${reportPath}`);
+    
     return report;
   }
 
@@ -516,30 +512,30 @@ class SmartAutoScaler {
   }
 
   async stop() {
-    console.log('🛑 Stopping Smart Auto-Scaler...');
+    
     pm2.disconnect();
   }
 }
 
 // Main execution
 async function main() {
-  console.log('⚖️ Starting Smart Auto-Scaler...');
+  
   
   const scaler = new SmartAutoScaler();
   
   try {
     await scaler.initialize();
-    console.log('✅ Smart Auto-Scaler initialized successfully');
+    
     
     // Keep the process running
     process.on('SIGINT', async () => {
-      console.log('\n🛑 Received SIGINT, shutting down gracefully...');
+      
       await scaler.stop();
       process.exit(0);
     });
 
     process.on('SIGTERM', async () => {
-      console.log('\n🛑 Received SIGTERM, shutting down gracefully...');
+      
       await scaler.stop();
       process.exit(0);
     });

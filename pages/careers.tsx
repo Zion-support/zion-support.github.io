@@ -1,21 +1,7 @@
-import React from 'react';
+import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  MapPin, 
-  Clock, 
-  Users, 
-  Heart, 
-  Zap, 
-  Award, 
-  BookOpen, 
-  Coffee,
-  Laptop,
-  Globe,
-  ArrowRight,
-  CheckCircle
-} from 'lucide-react';
+import { MapPin, Clock, Users, Heart, Zap, Award, BookOpen, Coffee, Laptop, Globe, ArrowRight, CheckCircle } from 'lucide-react';;
 
 const benefits = [
   {

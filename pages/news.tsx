@@ -1,8 +1,7 @@
-import React from 'react';
+import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Calendar, User, ArrowRight, Tag, ExternalLink } from 'lucide-react';
 
 const newsArticles = [
   {

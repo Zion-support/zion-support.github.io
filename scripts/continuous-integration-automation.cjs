@@ -18,7 +18,7 @@ class ContinuousIntegrationAutomation {;
   log(message, level = 'info') {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
-    console.log(logMessage)}
+    }
 ;
   async runCIStep(stepName, command, description) {;
     this.log(`🚀 "Starting": ${stepName} - ${description}`);
@@ -221,19 +221,19 @@ jobs:;
     const totalDuration = this.ciSteps.reduce((sum, step) => sum + (step.duration || 0), 0);
     const successfulSteps = this.ciSteps.filter(s => s.status === 'success');
     const failedSteps = this.ciSteps.filter(s => s.status === 'failed');
-    console.log('\n' + '='.repeat(70));
-    console.log('🔄 CONTINUOUS INTEGRATION AUTOMATION SUMMARY');
-    console.log('='.repeat(70));
-    console.log(`Total "Steps": ${this.ciSteps.length}`);
-    console.log(`✅ "Successful": ${successfulSteps.length}`);
-    console.log(`❌ "Failed": ${failedSteps.length}`);
-    console.log(`📈 Success "Rate": ${((successfulSteps.length / this.ciSteps.length) * 100).toFixed(1)}%`);
-    console.log(`⏱️  Total "Duration": ${Math.round(totalDuration / 1000)}s`);
-    console.log('='.repeat(70));
+    );
+    
+    );
+    
+    
+    
+    * 100).toFixed(1)}%`);
+    }s`);
+    );
     if (failedSteps.length > 0) {;
-      console.log('\n❌ FAILED "STEPS": ');
+      
       failedSteps.forEach((step, index) => {;
-        console.log(`${index + 1}. ${step.name}: ${step.error}`)})}
+        })}
   }
 ;
   async run() {;

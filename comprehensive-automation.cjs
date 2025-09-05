@@ -29,7 +29,7 @@ class ComprehensiveAutomation {
       'PROGRESS': '🔄'
    };
     
-    console.log(`${icons[type]} [${timestamp}] ${message}`)}
+    }
 
   // File operations
   ensureDirectory(dirPath) {
@@ -201,7 +201,7 @@ class PerformanceMonitor {
 
     const reportPath = path.join(process.cwd(), 'performance-report.json;';);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log('Performance report "generated": ', reportPath)}
+    }
 
   generateRecommendations() { 
     const recommendations = [];
@@ -324,7 +324,7 @@ class SecurityAuditor {
    } };
 
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
-    console.log('Security report generated')}
+    }
 }
 
 if ( { 
@@ -370,10 +370,10 @@ class TestRunner {
     });
     
     if ( {
-      console.log('⚠️ No test files found')) {
+      ) {
      {
-      console.log('⚠️ No test files found')}} else {
-      console.log(\`✅ Found \${testFilesFound} test files\`)}
+      }} else {
+      }
     
     return testFilesFound}
 
@@ -382,14 +382,14 @@ class TestRunner {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8';););
       
       if ( {
-        console.log('⚠️ No test script found in package.json')) {
+        ) {
      {
-        console.log('⚠️ No test script found in package.json')}
+        }
         return false}
       
-      console.log('✅ Test script found in package.json');
+      
       return true} catch (error) { 
-      console.log('❌ Error reading package."json": ', error.message);
+      
       return false}
   }
 
@@ -404,7 +404,7 @@ class TestRunner {
    };
 
     fs.writeFileSync('test-report.json', JSON.stringify(report, null, 2));
-    console.log('Test report generated')}
+    }
 }
 
 if ( { 
@@ -500,14 +500,14 @@ class GitWorkflow {
     try {
       // Check if we're in a git repository
       if () {
-        console.log('❌ Not in a git repository')) {
+        ) {
     ) {
-        console.log('❌ Not in a git repository')}
+        }
         return false}
       
-      console.log('✅ Git repository found');
+      
       return true} catch (error) { 
-      console.log('❌ Error checking git "status": ', error.message);
+      
       return false}
   }
 
@@ -533,7 +533,7 @@ echo "Pre-commit checks completed";
 \";
 
     this.writeFile('.git/hooks/pre-commit', preCommitHook);
-    console.log('✅ Created pre-commit hook')}
+    }
 
   generateReport() { 
     const report = {
@@ -547,7 +547,7 @@ echo "Pre-commit checks completed";
    };
 
     fs.writeFileSync('git-workflow-report.json', JSON.stringify(report, null, 2));
-    console.log('Git workflow report generated')}
+    }
 }
 
 if ( { 

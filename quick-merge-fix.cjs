@@ -9,16 +9,12 @@ class QuickMergeFix {
     this.fixedCount = 0}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
 
   fixMergeConflicts(content) {
     // Remove merge conflict markers and keep HEAD version
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g, '$1');
     
     // Clean up any remaining markers
-    content = content.replace(/<<<<<<< HEAD\n/g, '');
-    content = content.replace(/=======\n/g, '');
-    content = content.replace(/>>>>>>> [^\n]+\n/g, '');
     
     return content}
 
@@ -40,27 +36,3 @@ class QuickMergeFix {
           let content = fs.readFileSync(filePath, 'utf8');
           const originalContent = content;
           
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>> ')) {
-            content = this.fixMergeConflicts(content);
-            
-            if (content !== originalContent) {
-              fs.writeFileSync(filePath, content, 'utf8');
-              this.fixedCount++;
-              this.log(`✅ Fixed merge conflicts "in": ${file}`)}
-          }
-        } catch (error) {
-          this.log(`❌ Error fixing ${file}: ${error.message}`)}
-      }
-    }
-    
-    this.log(`🎉 Fixed ${this.fixedCount} critical files`)}
-
-  async run() {
-    this.log('🚀 Starting Quick Merge Fix');
-    await this.fixCriticalFiles();
-    this.log('✅ Quick merge fix completed')}
-}
-
-// Run the fix
-const fixer = new QuickMergeFix();
-fixer.run().catch(console.error);

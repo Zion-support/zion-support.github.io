@@ -33,7 +33,7 @@ class SecurityScanner {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     
-    console.log(logMessage.trim());
+    );
     
     try {
       fs.appendFileSync(this.logFile, logMessage);

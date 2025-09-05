@@ -27,14 +27,14 @@ class $1 {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}`;
-    console.log("logEntry);
+    
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n");
 
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logEntry = "[${timestamp}] [${level}] ${message}";
-    console.log("logEntry);
+    
 
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n")}

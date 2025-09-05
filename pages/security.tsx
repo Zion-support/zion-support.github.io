@@ -1,7 +1,7 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Lock, Eye, Database, Users, AlertTriangle, CheckCircle, Clock } from 'lucide-react';
 import Layout from '../components/Layout';
+import { Lock, Users, Shield, Eye, CheckCircle, Clock } from 'lucide-react';
+
 
 const securityFeatures = [
   {

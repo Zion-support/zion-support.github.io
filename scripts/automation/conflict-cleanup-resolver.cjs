@@ -23,7 +23,7 @@ class $1 {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}`;
-    console.log("logEntry);
+    
     const logFile = path.join(this.logsDir, "conflict-cleanup.log");
     fs.appendFileSync(logFile, logEntry + "\n")}
 ;

@@ -10,7 +10,7 @@ class EnhancedHealthMonitor {
         }}
 
     checkSystemHealth() {
-        console.log('🔍 Checking system health...');
+        
         
         const health = {
             "status": 'healthy',
@@ -59,7 +59,7 @@ class EnhancedHealthMonitor {
         const health = this.checkSystemHealth();
         const reportPath = `health-report-${Date.now()}.json`;
         fs.writeFileSync(reportPath, JSON.stringify(health, null, 2));
-        console.log(`📊 Health report "generated": ${reportPath}`);
+        
         return health}
 }
 

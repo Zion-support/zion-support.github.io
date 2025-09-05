@@ -34,7 +34,7 @@ class IntelligentMonitor {
       await fs.mkdir(this.reportDir, { "recursive": true });
       await fs.mkdir(path.join(process.cwd(), 'logs'), { "recursive": true });
     } catch (error) {
-      console.log('Directories already exist or created');
+      
     }
   }
 
@@ -46,7 +46,7 @@ class IntelligentMonitor {
           reject(err);
           return;
         }
-        console.log('✅ Connected to PM2 for intelligent monitoring');
+        
         this.startMonitoring();
         resolve();
       });
@@ -195,7 +195,7 @@ class IntelligentMonitor {
       this.metrics.system.slice(-20).map(m => m.cpu.loadAverage[0])
     );
 
-    console.log(`📊 System "Analysis": Memory: ${currentSystem.memory.percentage.toFixed(2)}% ("Trend": ${memoryTrend > 0 ? '↗️' : '↘️'})
+    }% ("Trend": ${memoryTrend > 0 ? '↗️' : '↘️'})
       CPU "Load": ${currentSystem.cpu.loadAverage[0].toFixed(2)} ("Trend": ${cpuTrend > 0 ? '↗️' : '↘️'})
       "Disk": ${currentSystem.disk.percentage}%
       "Anomalies": Memory=${memoryAnomaly}, CPU=${cpuAnomaly}`);
@@ -250,8 +250,7 @@ class IntelligentMonitor {
       this.metrics.performance.shift();
     }
 
-    console.log(`⚡ Performance "Analysis": Avg Response Time: ${performanceMetrics.averageResponseTime}ms
-      Total "Memory": ${(performanceMetrics.totalMemoryUsage / 1024 / 1024).toFixed(2)}MB
+    .toFixed(2)}MB
       Avg "CPU": ${performanceMetrics.averageCpuUsage.toFixed(2)}%
       Error "Rate": ${performanceMetrics.errorRate.toFixed(2)}%
       "Throughput": ${performanceMetrics.throughput} req/min`);
@@ -387,7 +386,7 @@ class IntelligentMonitor {
       this.alerts.shift();
     }
 
-    console.log(`🚨 ALERT [${severity.toUpperCase()}] ${type}: ${message}`);
+    }] ${type}: ${message}`);
     
     // Send notification (in a real implementation, this would send to Slack, email, etc.)
     await this.sendNotification(alert);
@@ -401,7 +400,7 @@ class IntelligentMonitor {
     // - Discord
     // etc.
     
-    console.log(`📧 Notification sent for alert: ${alert.message}`);
+    
   }
 
   async generateInsights() {
@@ -416,7 +415,7 @@ class IntelligentMonitor {
     const insightsPath = path.join(this.reportDir, `insights-${Date.now()}.json`);
     await fs.writeFile(insightsPath, JSON.stringify(insights, null, 2));
     
-    console.log(`💡 Insights generated and saved "to": ${insightsPath}`);
+    
     return insights;
   }
 
@@ -544,35 +543,35 @@ class IntelligentMonitor {
     const reportPath = path.join(this.reportDir, `monitoring-report-${Date.now()}.json`);
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
     
-    console.log(`📊 Monitoring report saved "to": ${reportPath}`);
+    
     return report;
   }
 
   async stop() {
-    console.log('🛑 Stopping Intelligent Monitor...');
+    
     pm2.disconnect();
   }
 }
 
 // Main execution
 async function main() {
-  console.log('📊 Starting Intelligent Monitor...');
+  
   
   const monitor = new IntelligentMonitor();
   
   try {
     await monitor.initialize();
-    console.log('✅ Intelligent Monitor initialized successfully');
+    
     
     // Keep the process running
     process.on('SIGINT', async () => {
-      console.log('\n🛑 Received SIGINT, shutting down gracefully...');
+      
       await monitor.stop();
       process.exit(0);
     });
 
     process.on('SIGTERM', async () => {
-      console.log('\n🛑 Received SIGTERM, shutting down gracefully...');
+      
       await monitor.stop();
       process.exit(0);
     });

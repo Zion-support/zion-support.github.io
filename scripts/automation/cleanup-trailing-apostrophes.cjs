@@ -72,7 +72,7 @@ function $1() {
   // ignore file-level errors} catch (e) {
   // ignore file-level errors}
   }
-  console.log(`Cleaned ${changed} files.`)}
+  }
 ;
 if (require.main === module) {
   main()}

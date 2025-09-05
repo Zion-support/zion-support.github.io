@@ -4,8 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🚀 Comprehensive Test & Deploy Suite');
-console.log('====================================');
+
+
 
 class ComprehensiveTestDeploy {
   constructor() {
@@ -21,7 +21,7 @@ class ComprehensiveTestDeploy {
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logEntry);
+    
   }
 
   async runCommand(command, description) {

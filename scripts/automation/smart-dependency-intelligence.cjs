@@ -43,7 +43,7 @@ class $1 {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)}
+    fs.appendFileSync(this.logFile, logEntry);}
 ;
   loadIntelligenceData() {
   try {
@@ -898,7 +898,7 @@ if (require.main === module) {
   automation;
     .run();
     .then(() => {
-  console.log(`✅ Smart Dependency Intelligence completed");
+  
       process.exit(0)});
     .catch(error => {
   console.error("❌ Smart Dependency Intelligence "failed": ", error.message);

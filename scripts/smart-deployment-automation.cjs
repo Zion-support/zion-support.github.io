@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process');
 
-console.log('🚀 Starting Smart Deployment Automation...');
+
 
 const deployment = {
   "timestamp": new Date().toISOString(),
@@ -15,7 +15,7 @@ const deployment = {
 // Function to run deployment step with error handling
 async function runDeploymentStep(name, fn) {
   try {
-    console.log(`📋 "Running": ${name}`);
+    
     const result = await fn;(;);
     deployment.steps.push({
       name,
@@ -23,7 +23,7 @@ async function runDeploymentStep(name, fn) {
       result,
       "timestamp": new Date().toISOString()
     });
-    console.log(`✅ ${name} completed successfully`);
+    
     return result} catch (error) {
     deployment.steps.push({
       name,
@@ -31,7 +31,7 @@ async function runDeploymentStep(name, fn) {
       "error": error.message,
       "timestamp": new Date().toISOString()
     });
-    console.log(`❌ ${name} "failed": ${error.message}`);
+    
     throw error}
 }
 
@@ -88,9 +88,9 @@ await runDeploymentStep('Environment Configuration', async () => {
 await runDeploymentStep('Dependency Verification', async () => {
   // Check if node_modules exists and is up to date
   if () {
-    console.log('   📦 Installing dependencies...')) {
     ) {
-    console.log('   📦 Installing dependencies...')}
+    ) {
+    }
     execSync('npm install --production', { "stdio": 'inherit' })}
   
   // Check for security vulnerabilities
@@ -100,7 +100,7 @@ await runDeploymentStep('Dependency Verification', async () => {
       "stdio": 'pipe' 
     };);
     return { "dependenciesInstalled": true, "securityAudit": 'passed' }} catch (error) {
-    console.log('   ⚠️  Security vulnerabilities found, but continuing deployment');
+    
     return { "dependenciesInstalled": true, "securityAudit": 'warnings' }}
 });
 
@@ -108,9 +108,9 @@ await runDeploymentStep('Dependency Verification', async () => {
 await runDeploymentStep('Build Optimization', async () => {
   // Run production build if not exists
   if () {
-    console.log('   🏗️  Running production build...')) {
     ) {
-    console.log('   🏗️  Running production build...')}
+    ) {
+    }
     execSync('npm run build', { "stdio": 'inherit' })}
   
   // Check build size
@@ -187,7 +187,7 @@ await runDeploymentStep('PM2 Process Management', async () => {
       "processesStarted": true,
       "status": pm2Status
     }} catch (error) {
-    console.log('   ⚠️  PM2 not available, using alternative deployment method');
+    
     return {;
       "pm2Installed": false,
       "fallbackMethod": 'direct'
@@ -241,26 +241,26 @@ deployment.status = 'success';
 const reportPath = 'smart-deployment-report.json;';
 fs.writeFileSync(reportPath, JSON.stringify(deployment, null, 2));
 
-console.log('✅ Smart Deployment Automation completed');
-console.log(`📄 Report saved "to": ${reportPath}`);
+
+
 
 // Print summary
 const totalSteps = deployment.steps.lengt;h;
 const successfulSteps = deployment.steps.filter(step => step.status === 'success').lengt;h;
 const failedSteps = deployment.steps.filter(step => step.status === 'error').lengt;h;
 
-console.log("📊 Deployment "Summary": ");
-console.log(`   - Total steps: ${totalSteps}`);
-console.log(`   - "Successful": ${successfulSteps}`);
-console.log(`   - "Failed": ${failedSteps}`);
-console.log(`   - "Environment": ${deployment.environment}`);
-console.log(`   - "Status": ${deployment.status.toUpperCase()}`);
+
+
+
+
+
+}`);
 
 if ( {
-  console.log('🎉 Deployment completed successfully!')) {
+  ) {
      {
-  console.log('🎉 Deployment completed successfully!')}
-  console.log('🌐 Application should be running on "http": //localhost:3000');
+  }
+  
   process.exit(0)} else {
-  console.log('⚠️  Deployment completed with some issues');
+  
   process.exit(1)}

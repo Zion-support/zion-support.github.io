@@ -10,7 +10,7 @@ class PM2AutomationSetup {
     this.ecosystemPath = path.resolve(this.projectRoot, 'ecosystem.config.cjs')}
 
   async run() {
-    console.log('🚀 Setting up PM2 Error Fixing Automation System...');
+    
     
     try {
       // Step "1": Check if PM2 is installed
@@ -37,44 +37,44 @@ class PM2AutomationSetup {
       // Step 8: Display status
       await this.displayStatus();
       
-      console.log('✅ PM2 Error Fixing Automation System setup completed!');
-      console.log('📊 All error fixers are now running and will automatically fix issues')} catch (error) {
+      
+      } catch (error) {
       console.error('❌ Error setting up PM2 "automation": ', error);
       process.exit(1)}
   }
 
   async checkPM2Installation() {
-    console.log('🔍 Checking PM2 installation...');
+    
     
     try {
       execSync('pm2 --version', { "stdio": 'pipe' });
-      console.log('✅ PM2 is installed')} catch (error) {
-      console.log('❌ PM2 is not installed. Installing PM2...');
+      } catch (error) {
+      
       execSync('npm install -g pm2', { "stdio": 'inherit' });
-      console.log('✅ PM2 installed successfully')}
+      }
   }
 
   async createLogsDirectory() {
-    console.log('📁 Creating logs directory...');
+    
     
     const logsDir = path.resolve(this.projectRoot, 'logs');
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { "recursive": true });
-      console.log('✅ Logs directory created')} else {
-      console.log('✅ Logs directory already exists')}
+      } else {
+      }
   }
 
   async stopExistingProcesses() {
-    console.log('🛑 Stopping existing PM2 processes...');
+    
     
     try {
       execSync('pm2 kill', { "stdio": 'pipe' });
-      console.log('✅ Stopped existing PM2 processes')} catch (error) {
-      console.log('ℹ️  No existing PM2 processes to stop')}
+      } catch (error) {
+      }
   }
 
   async startErrorFixingAutomations() {
-    console.log('🔧 Starting error fixing automations...');
+    
     
     const errorFixers = ['console-error-fixer',
       'comprehensive-error-fixer',
@@ -87,30 +87,30 @@ class PM2AutomationSetup {
     
     for (const fixer of errorFixers) {
       try {
-        console.log(`🚀 Starting ${fixer}...`);
+        
         execSync(`pm2 start ecosystem.config.cjs --only ${fixer}`, { 
           "stdio": 'pipe',
           "cwd": this.projectRoot 
         });
-        console.log(`✅ ${fixer} started successfully`)} catch (error) {
-        console.log(`⚠️  Could not start ${fixer}: ${error.message}`)}
+        } catch (error) {
+        }
     }
   }
 
   async startMasterErrorFixer() {
-    console.log('🎯 Starting master error fixer...');
+    
     
     try {
       execSync('pm2 start ecosystem.config.cjs --only master-error-fixer', { 
         "stdio": 'pipe',
         "cwd": this.projectRoot 
       });
-      console.log('✅ Master error fixer started successfully')} catch (error) {
-      console.log(`⚠️  Could not start master error "fixer": ${error.message}`)}
+      } catch (error) {
+      }
   }
 
   async startOtherAutomations() {
-    console.log('🔄 Starting other automations...');
+    
     
     const otherAutomations = ['link-checker',
       'continuous-improvement',
@@ -126,75 +126,75 @@ class PM2AutomationSetup {
     
     for (const automation of otherAutomations) {
       try {
-        console.log(`🚀 Starting ${automation}...`);
+        
         execSync(`pm2 start ecosystem.config.cjs --only ${automation}`, { 
           "stdio": 'pipe',
           "cwd": this.projectRoot 
         });
-        console.log(`✅ ${automation} started successfully`)} catch (error) {
-        console.log(`⚠️  Could not start ${automation}: ${error.message}`)}
+        } catch (error) {
+        }
     }
   }
 
   async savePM2Configuration() {
-    console.log('💾 Saving PM2 configuration...');
+    
     
     try {
       execSync('pm2 save', { "stdio": 'pipe' });
-      console.log('✅ PM2 configuration saved')} catch (error) {
-      console.log(`⚠️  Could not save PM2 "configuration": ${error.message}`)}
+      } catch (error) {
+      }
   }
 
   async displayStatus() {
-    console.log('📊 Displaying PM2 status...');
+    
     
     try {
       execSync('pm2 status', { "stdio": 'inherit' })} catch (error) {
-      console.log(`⚠️  Could not display PM2 "status": ${error.message}`)}
+      }
   }
 
   async showAutomationSchedule() {
-    console.log('\n📅 Automation "Schedule": ');
-    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-    console.log('🔧 Error Fixing Automations:');
-    console.log('  • Console Error Fixer:     Every 15 minutes');
-    console.log('  • ESLint Error Cleaner:    Every 25 minutes');
-    console.log('  • Comprehensive Error Fixer: Every 30 minutes');
-    console.log('  • Build Error Detector:    Every 35 minutes');
-    console.log('  • JSX Error Fixer:         Every 40 minutes');
-    console.log('  • TypeScript Error Fixer:  Every 45 minutes');
-    console.log('  • Dependency Error Resolver: Every 50 minutes');
-    console.log('  • Master Error Fixer:      Every 1 hour');
-    console.log('');
-    console.log('🔄 Other Automations:');
-    console.log('  • Link Checker:            Every 30 minutes');
-    console.log('  • Continuous Improvement:  Every 2 hours');
-    console.log('  • Daily Build Test:        Every 1 hour');
-    console.log('  • Security Audit:          Every 4 hours');
-    console.log('  • Dependency Updates:      Every 6 hours');
-    console.log('  • Performance Monitor:     Every 2 hours');
-    console.log('  • Quality Checks:          Every 3 hours');
-    console.log('  • Link Integrity:          Every 2 hours');
-    console.log('  • Front Maximizer:         Every 4 hours');
-    console.log('  • Sitemap Runner:          Every 6 hours');
-    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    }
 
   async showCommands() {
-    console.log('\n🛠️  Useful PM2 "Commands": ');
-    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-    console.log('  pm2 status                    - Show all processes');
-    console.log('  pm2 logs                      - Show all logs');
-    console.log('  pm2 logs [process-name]       - Show specific process logs');
-    console.log('  pm2 restart [process-name]    - Restart specific process');
-    console.log('  pm2 stop [process-name]       - Stop specific process');
-    console.log('  pm2 delete [process-name]     - Delete specific process');
-    console.log('  pm2 restart all               - Restart all processes');
-    console.log('  pm2 stop all                  - Stop all processes');
-    console.log('  pm2 delete all                - Delete all processes');
-    console.log('  pm2 save                      - Save current configuration');
-    console.log('  pm2 startup                   - Setup PM2 to start on boot');
-    console.log('  pm2 monit                     - Monitor processes in real-time');
-    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    }
 }
 
 // Run the setup

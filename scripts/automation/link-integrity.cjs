@@ -5,7 +5,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-console.log(""🔗 Starting continuous link integrity automation...");
+
 #!/usr/bin/env node
 import { execSync  } from "child_process";
 import fs from "fs";
@@ -15,49 +15,49 @@ import { fileURLToPath  } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log(""🔗 Starting continuous link integrity automation...");
+
 
 // Get automation interval from environment variable ("default": 2 hours);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours;
 async function $1() {
   try {
-  console.log(`🔗 Running link integrity check at ${new Date().toISOString()});
+  .toISOString()});
     // Build the project first;
-    console.log(`"🏗️ Building project for link checking...");
+    
     execSync("npm run build", { "stdio": "inherit" });
-    console.log("✅ Build completed successfully"");
+    
     // Run linkinator for comprehensive link checking;
-    console.log(""🔍 Running comprehensive link check...");
+    
     try {
-  console.log("🔗 Starting continuous link integrity automation...");
+  
 // Get automation interval from environment variable ("default": 2 hours);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours;
 async function runLinkIntegrity() {
   try {
-  console.log(`🔗 Running link integrity check at ${new Date().toISOString()});
+  .toISOString()});
     // Build the project first;
-    console.log(`"🏗️ Building project for link checking...");
+    
     execSync("npm run build", { "stdio": "inherit" });
-    console.log("✅ Build completed successfully"");
+    
     // Run linkinator for comprehensive link checking;
-    console.log(""🔍 Running comprehensive link check...");
+    
     try {
   execSync("npx linkinator dist/ --reporter json --output link-report.json", { "stdio": "inherit" });
-      console.log("✅ Linkinator completed successfully");
+      
       // Parse and analyze link report;
       if (fs.existsSync("link-report.json")) {
   analyzeLinkReport(JSON.parse(fs.readFileSync("link-report.json", "utf8")))}
     } catch (error) {
-  console.log("⚠️  Linkinator failed but continuing...")}
+  }
     ;
       // Parse and analyze link report;
       if (fs.existsSync("link-report.json")) {
   analyzeLinkReport(JSON.parse(fs.readFileSync("link-report.json", "utf8")))}
     } catch (error) {
-  console.log("⚠️  Linkinator failed but continuing...")}
+  }
     ;
     // Check for broken internal links;
-    console.log("🔍 Checking for broken internal links...");
+    
     const distPath = path.join(process.cwd(), "dist");
     const internalLinks = findInternalLinks(distPath);
     const brokenInternalLinks = [];
@@ -67,38 +67,38 @@ async function runLinkIntegrity() {
     }
     ;
     if (brokenInternalLinks.length > 0) {
-  console.log("⚠️  Broken internal links "found": ");
-      brokenInternalLinks.forEach(link => {console.log(  - ${link})})} else {
-  console.log("✅ No broken internal links found")}
+  
+      brokenInternalLinks.forEach(link => {})} else {
+  }
     ;
     // Check for orphaned files;
-    console.log("🔍 Checking for orphaned files..."");
+    
     const orphanedFiles = findOrphanedFiles(distPath);
     if (orphanedFiles.length > 0) {
-  console.log(""⚠️  Orphaned files "found": ");
+  
     if (orphanedFiles.length > 0) {
-  console.log(""⚠️  Orphaned files found:`);
-      orphanedFiles.forEach(file => {console.log(  - ${file})})} else {
-  console.log(`✅ No orphaned files found")}
+  
+      orphanedFiles.forEach(file => {})} else {
+  }
     ;
     // Check for missing assets;
-    console.log("🔍 Checking for missing assets..."");
-      console.log("⚠️  Orphaned files "found": ");
-      orphanedFiles.forEach(file => {console.log(  - ${file})})} else {
-  console.log("✅ No orphaned files found")}
+    
+      
+      orphanedFiles.forEach(file => {})} else {
+  }
     ;
     // Check for missing assets;
-    console.log("🔍 Checking for missing assets..."");
+    
     const missingAssets = findMissingAssets(distPath);
     if (missingAssets.length > 0) {
-  console.log(""⚠️  Missing assets "found": ");
+  
     if (missingAssets.length > 0) {
-  console.log(""⚠️  Missing assets found:`);
-      missingAssets.forEach(asset => {console.log(  - ${asset})})} else {
-  console.log(`✅ No missing assets found")}
+  
+      missingAssets.forEach(asset => {})} else {
+  }
     ;
     // Generate link integrity report;
-    console.log("📊 Generating link integrity report..."");
+    
     const report = {
   "timestamp": new Date().toISOString(),
       "brokenInternalLinks": brokenInternalLinks.length,
@@ -106,17 +106,17 @@ async function runLinkIntegrity() {
       "missingAssets": missingAssets.length,
       "summary": "Link integrity check completed"}
     const reportPath = path.join(process.cwd(), "link-integrity-report.json");
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(`✅ Link integrity report saved to ${reportPath});
-    console.log(`✅ Continuous link integrity check completed successfully")} catch (error) {
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    } catch (error) {
   console.error("❌ Continuous link integrity check "failed": ", error.message);
     // Don"t exit, just log the error and continue}
-      console.log("⚠️  Missing assets "found": `);
-      missingAssets.forEach(asset => {console.log(  - ${asset});
-      missingAssets.forEach(asset => {console.log(  - ${asset})})} else {
-  console.log("✅ No missing assets found")}
+      
+      missingAssets.forEach(asset => {
+      missingAssets.forEach(asset => {})} else {
+  }
     ;
     // Generate link integrity report;
-    console.log("📊 Generating link integrity report..."`);
+    
     const report = {
   "timestamp": new Date().toISOString(),
       "brokenInternalLinks": brokenInternalLinks.length,
@@ -125,8 +125,8 @@ async function runLinkIntegrity() {
       "summary": "Link integrity check completed"}
     ;
     const reportPath = path.join(process.cwd(), "link-integrity-report.json");
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(`✅ Link integrity report saved to ${reportPath});
-    console.log("✅ Continuous link integrity check completed successfully")} catch (error) {
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    } catch (error) {
   console.error("❌ Continuous link integrity check "failed": ", error.message);
     // Don"t exit, just log the error and continue}
 }
@@ -248,14 +248,14 @@ function findMissingAssets(distPath) {
 function analyzeLinkReport(linkReport) {
   if (linkReport.results) {
   const brokenLinks = linkReport.results.filter(result => result.status !== 200);
-    if (brokenLinks.length > 0) {console.log(⚠️  Found ${brokenLinks.length} broken external "links": `);
-      brokenLinks.forEach(link => {console.log(`  - ${link.url} ("Status": ${link.status})`)})} else {
-  console.log(""✅ All external links are working")}
+    if (brokenLinks.length > 0) {
+      brokenLinks.forEach(link => {`)})} else {
+  }
   }
 }
 ;
 // Main continuous loop;
-async function runContinuous() {console.log("🚀 Starting continuous link integrity checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals);
+async function runContinuous() {
   // Run initial link integrity check;
   await runLinkIntegrity();
   // Set up continuous execution;
@@ -264,15 +264,15 @@ async function runContinuous() {console.log("🚀 Starting continuous link integ
   // Set up continuous execution");
   setInterval(async () => {");
     await runLinkIntegrity();")}, AUTOMATION_INTERVAL);");
-  console.log(✅ Continuous link integrity checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes"")}
+  }
 ;
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...");
+  
   process.exit(0)});
 
 process.on("SIGTERM", () => {
-  console.log("🛑 Received SIGTERM, shutting down gracefully...");
+  
   process.exit(0)});
 // Start the continuous link integrity checker;
 runContinuous().catch(error => {

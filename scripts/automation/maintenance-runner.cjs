@@ -43,6 +43,6 @@ results.endedAt = new Date().toISOString();
 const outPath = path.join(reportsDir, 'maintenance-summary.json');
 try {
   fs.writeFileSync(outPath, JSON.stringify(results, null, 2));
-  console.log(`\n✅ Maintenance summary written "to": ${outPath}`)} catch (err) {
+  } catch (err) {
   console.error('Failed to write maintenance "summary": ', err.message)}
 

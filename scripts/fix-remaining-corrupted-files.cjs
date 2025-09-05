@@ -3,8 +3,8 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Fixing Remaining Corrupted Files...');
-console.log('======================================');
+
+
 
 // List of remaining corrupted files to fix
 const corruptedFiles = ['pages/docs/integration-examples.tsx',
@@ -16,7 +16,7 @@ const corruptedFiles = ['pages/docs/integration-examples.tsx',
 
 // Function to fix a corrupted file by rewriting it with proper content
 function fixCorruptedFile(filePath) {
-  console.log(`\n🔍 "Fixing": ${filePath}`);
+  
   
   try {
     let content = '';
@@ -111,7 +111,7 @@ export default function IntegrationExamples() {
 // Usage
 const api = new ZionTechAPI('your-api-key');
 const services = await api.getServices();
-console.log(services);\"}
+\"}
                   </pre>
                 </div>
               </div>
@@ -317,7 +317,7 @@ const result = await api.contact.submit({
   "message": 'Looking for a custom solution'
 });
 
-console.log(result);\"}
+\"}
                   </pre>
                 </div>
               </div>
@@ -751,7 +751,7 @@ export default function Login() {
   const handleSubmit = ("e": React.FormEvent) => {
     e.preventDefault();
     // Handle login logic here
-    console.log('Login attempt:', formData);
+    
     alert('Login functionality will be implemented with authentication system.')};
 
   return (
@@ -871,14 +871,13 @@ export default function Login() {
 
     if (content) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`   ✅ Fixed ${filePath}`)} else {
-      console.log(`   ⚠️  No content defined for ${filePath}`)}
+      } else {
+      }
 
   } catch (error) {
-    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`)}
+    }
 }
 
 // Fix all corrupted files
 corruptedFiles.forEach(fixCorruptedFile);
 
-console.log('\n🎉 All remaining corrupted files fixed!');

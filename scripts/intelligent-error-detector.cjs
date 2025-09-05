@@ -11,7 +11,7 @@ class IntelligentErrorDetector {
     this.suggestions = []}
   log(message, level = "INFO") {
     const timestamp = new Date().toISOString()
-    console.log(`[${timestamp}] [${level}] ${message}`)}
+    }
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { "recursive": true })}

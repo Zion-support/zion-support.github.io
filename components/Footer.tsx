@@ -1,5 +1,3 @@
-import React from 'react';
-import Link from 'next/link';
 import { 
   Zap, 
   Phone, 
@@ -10,11 +8,11 @@ import {
   Linkedin, 
   Instagram,
   Github,
+  Youtube,
   ArrowRight,
   ExternalLink
 } from 'lucide-react';
 
-<<<<<<< HEAD
 const services = {
   'AI Solutions': [
     { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
@@ -98,8 +96,6 @@ const contactInfo = {
   hours: '24/7 Support Available'
 };
 
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -193,15 +189,9 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-=======
         <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
             <Link href="/" className="flex items-center space-x-2 mb-6">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <Zap className="w-5 h-5 text-white" />
@@ -229,120 +219,6 @@ export default function Footer() {
                 <span className="text-gray-300">123 Technology Drive, Innovation City, IC 12345</span>
               </div>
             </div>
-<<<<<<< HEAD
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <Settings className="w-5 h-5 mr-2 text-blue-400" />
-              Services
-            </h3>
-            <div className="space-y-4">
-              {Object.entries(services).map(([category, links]) => (
-                <div key={category}>
-                  <h4 className="text-sm font-medium text-gray-300 mb-2">{category}</h4>
-                  <ul className="space-y-2">
-                    {links.slice(0, 3).map((link) => (
-                      <li key={link.name}>
-                        <Link 
-                          href={link.href}
-                          className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
-                        >
-                          <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                          {link.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <Users className="w-5 h-5 mr-2 text-blue-400" />
-              Company
-            </h3>
-            <ul className="space-y-3">
-              {company.map((link) => (
-                <li key={link.name}>
-                  <Link 
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <Globe className="w-5 h-5 mr-2 text-blue-400" />
-              Resources
-            </h3>
-            <ul className="space-y-3">
-              {resources.map((link) => (
-                <li key={link.name}>
-                  <Link 
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Legal & Social */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <Shield className="w-5 h-5 mr-2 text-blue-400" />
-              Legal
-            </h3>
-            <ul className="space-y-3 mb-8">
-              {legal.map((link) => (
-                <li key={link.name}>
-                  <Link 
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            {/* Social Links */}
-            <div>
-              <h4 className="text-sm font-medium text-gray-300 mb-4">Follow Us</h4>
-              <div className="flex space-x-4">
-                {socialLinks.map((social) => {
-                  const IconComponent = social.icon;
-                  return (
-                    <a
-                      key={social.name}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors group"
-                      aria-label={social.name}
-                    >
-                      <IconComponent className="w-5 h-5 text-gray-400 group-hover:text-white" />
-                    </a>
-                  );
-                })}
-              </div>
-=======
 
             {/* Social Links */}
             <div className="flex space-x-4">
@@ -358,21 +234,9 @@ export default function Footer() {
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
             </div>
           </div>
 
-<<<<<<< HEAD
-      {/* Newsletter Signup */}
-      <div className="border-t border-gray-800">
-        <div className="container mx-auto px-4 py-8">
-                      <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="mb-4 md:mb-0">
-              <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
-              <p className="text-gray-400 text-sm">
-                Get the latest technology insights and company updates delivered to your inbox.
-              </p>
-=======
           {/* Footer Links */}
           {footerSections.map((section, index) => (
             <div key={index}>
@@ -392,7 +256,6 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
             </div>
           ))}
         </div>
@@ -426,16 +289,9 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
-<<<<<<< HEAD
-                      <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="text-sm text-gray-400 mb-4 md:mb-0">
-              © 2024 Zion Tech Group. All rights reserved. | 
-              <span className="ml-2">Delaware, United States</span>
-=======
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
             </div>
             
             <div className="flex flex-wrap items-center space-x-6">

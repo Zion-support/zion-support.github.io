@@ -12,26 +12,11 @@ function getAllFiles(dir) {
 
 function resolveConflictsKeepIncoming(filePath) {
   const text = fs.readFileSync(filePath, 'utf8');
-  if (!text.includes('<<<<<<< HEAD')) return false;
-
-  const lines = text.split('\n');
-  const out = [];
-  let i = 0;
-  let changed = false;
-  while (i < lines.length) {
-    if (lines[i].startsWith('<<<<<<< HEAD')) {
-      changed = true;
-      // skip until separator '======='
       i++;
-      while (i < lines.length && !lines[i].startsWith('=======')) i++;
       // skip the separator
-      if (i < lines.length && lines[i].startsWith('=======')) i++;
-      // copy incoming until '>>>>>>> '
-      while (i < lines.length && !lines[i].startsWith('>>>>>>> ')) {
         out.push(lines[i]);
         i++}
       // skip the end marker
-      if (i < lines.length && lines[i].startsWith('>>>>>>> ')) i++;
       continue}
     out.push(lines[i]);
     i++}
@@ -48,11 +33,11 @@ function main() {
     try {
       if (resolveConflictsKeepIncoming(f)) {
         count++;
-        console.log(`Resolved conflicts "in": ${f}`)}
+        }
     } catch (e) {
       console.error(`Failed to process ${f}: ${e.message}`)}
   }
-  console.log(`Done. Files "updated": ${count}`)}
+  }
 
 main();
 

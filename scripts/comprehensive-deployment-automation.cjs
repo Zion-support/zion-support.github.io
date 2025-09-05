@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process');
 
-console.log('🚀 Starting Comprehensive Deployment Automation...');
+
 
 const deployment = {
   "timestamp": new Date().toISOString(),
@@ -19,8 +19,8 @@ const deployment = {
 };
 
 function runDeploymentStep(name, command, critical = false) {
-  console.log(`\n📋 "Running": ${name}`);
-  console.log(`   "Command": ${command}`);
+  
+  
   
   const startTime = Date.now(;);
   const step = {
@@ -49,7 +49,7 @@ function runDeploymentStep(name, command, critical = false) {
     deployment.metrics.totalSteps++;
     deployment.metrics.successful++;
     
-    console.log(`✅ ${name} completed in ${duration}ms`)} catch (error) {
+    } catch (error) {
     const endTime = Date.now(;);
     const duration = endTime - startTi;m;e;
     
@@ -62,12 +62,12 @@ function runDeploymentStep(name, command, critical = false) {
     deployment.metrics.totalSteps++;
     deployment.metrics.failed++;
     
-    console.log(`❌ ${name} "failed": ${error.message}`);
+    
     
     if ( {
-      console.log('💥 Critical step failed. Stopping deployment.')) {
+      ) {
      {
-      console.log('💥 Critical step failed. Stopping deployment.')}
+      }
       deployment.status = 'failed';
       return false}
   }
@@ -75,8 +75,8 @@ function runDeploymentStep(name, command, critical = false) {
   return true}
 
 // Pre-deployment checks
-console.log('\n🔍 Phase "1": Pre-deployment Checks');
-console.log('=====================================');
+
+
 
 runDeploymentStep('Git Status Check', 'git status --porcelain', true);
 runDeploymentStep('Dependency Check', 'npm list --depth=0', true);
@@ -85,55 +85,55 @@ runDeploymentStep('Lint Check', 'npm run lint', false);
 runDeploymentStep('Test Suite', 'npm test', false);
 
 // Build and optimization
-console.log('\n🔨 Phase "2": Build and Optimization');
-console.log('=====================================');
+
+
 
 runDeploymentStep('Clean Build', 'npm run clean', false);
 runDeploymentStep('Production Build', 'npm run build', true);
 runDeploymentStep('Bundle Analysis', 'npm run "build": analyze', false);
 
 // Security and quality checks
-console.log('\n🛡️ Phase "3": Security and Quality');
-console.log('==================================');
+
+
 
 runDeploymentStep('Security Audit', 'npm audit --audit-level=moderate', false);
 runDeploymentStep('Dependency Check', 'npm outdated', false);
 runDeploymentStep('License Check', 'npx license-checker --summary', false);
 
 // Performance optimization
-console.log('\n⚡ Phase "4": Performance Optimization');
-console.log('======================================');
+
+
 
 runDeploymentStep('Image Optimization', 'node scripts/optimize-images.cjs', false);
 runDeploymentStep('Bundle Optimization', 'node scripts/optimize-file-sizes.cjs', false);
 runDeploymentStep('Performance Analysis', 'node scripts/performance-optimization-automation.cjs', false);
 
 // SEO and accessibility
-console.log('\n🔍 Phase "5": SEO and Accessibility');
-console.log('===================================');
+
+
 
 runDeploymentStep('SEO Optimization', 'node scripts/seo-optimizer.cjs', false);
 runDeploymentStep('Accessibility Check', 'node scripts/accessibility-checker.cjs', false);
 
 // Deployment preparation
-console.log('\n📦 Phase "6": Deployment Preparation');
-console.log('====================================');
+
+
 
 runDeploymentStep('Create Deployment Package', 'tar -czf deployment-$(date +%Y%m%d-%H%M%S).tar.gz .next out public package.json package-lock.json', false);
 runDeploymentStep('Generate Sitemap', 'node scripts/generate-sitemap.mjs', false);
 runDeploymentStep('Create Robots.txt', 'echo "User-"agent": *\nAllow: /\nSitemap: https://ziontechgroup.com/sitemap.xml" > public/robots.txt', false);
 
 // Git operations
-console.log('\n📝 Phase "7": Git Operations');
-console.log('===========================');
+
+
 
 runDeploymentStep('Add Changes', 'git add .', true);
 runDeploymentStep('Commit Changes', `git commit -m "Automated "deployment": ${new Date().toISOString()}"`, true);
 runDeploymentStep('Push to Repository', 'git push origin HEAD', true);
 
 // Post-deployment
-console.log('\n🎉 Phase "8": Post-deployment');
-console.log('============================');
+
+
 
 runDeploymentStep('Health Check', 'node scripts/health-check.cjs', false);
 runDeploymentStep('Performance Test', 'node scripts/performance-monitor.cjs', false);
@@ -147,19 +147,19 @@ deployment.endTime = new Date().toISOString();
 const reportPath = `deployment-report-${Date.now()}.json;`;
 fs.writeFileSync(reportPath, JSON.stringify(deployment, null, 2));
 
-console.log('\n🎉 Deployment Automation Completed!');
-console.log('=====================================');
-console.log(`📊 Total "Steps": ${deployment.metrics.totalSteps}`);
-console.log(`✅ "Successful": ${deployment.metrics.successful}`);
-console.log(`❌ "Failed": ${deployment.metrics.failed}`);
-console.log(`📈 Success "Rate": ${((deployment.metrics.successful / deployment.metrics.totalSteps); * 100).toFixed(1)}%`);
-console.log(`📄 Report saved "to": ${reportPath}`);
+
+
+
+
+
+ * 100).toFixed(1)}%`);
+
 
 if ( {
-  console.log('\n🎊 Deployment successful! All systems operational.')) {
+  ) {
      {
-  console.log('\n🎊 Deployment successful! All systems operational.')}} else {
-  console.log('\n⚠️  Deployment completed with issues. Please review the report.')}
+  }} else {
+  }
 
 // Create deployment summary
 const summary = {
@@ -173,4 +173,3 @@ const summary = {
   "duration": deployment.steps.reduce((total, step) => total + (step.duration || 0), 0)};
 
 fs.writeFileSync('deployment-summary.json', JSON.stringify(summary, null, 2));
-console.log('📋 Deployment summary saved "to": deployment-summary.json');

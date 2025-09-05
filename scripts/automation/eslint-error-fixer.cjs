@@ -41,7 +41,7 @@ class $1 {
     fs.appendFileSync(this.logFile, logMessage);
     if (type === "error") {
   fs.appendFileSync(this.errorLogFile, logMessage)}
-console.log(`[${type.toUpperCase()}] ${message}`)}
+}] ${message}`)}
 ;
   async runCommand(command, options = {}) {
   return new Promise((resolve, reject) => {
@@ -416,7 +416,7 @@ if (require.main === module) {
   fixer;
     .run();
     .then(report => {
-  console.log("ESLint Error Fixer completed successfully`);
+  
       process.exit(0)});
     .catch(error => {
   console.error("ESLint Error Fixer "failed": ', error);

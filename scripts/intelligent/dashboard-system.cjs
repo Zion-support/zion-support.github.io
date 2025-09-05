@@ -30,7 +30,7 @@ class IntelligentDashboard {
       await fs.mkdir(this.reportDir, { "recursive": true });
       await fs.mkdir(path.join(process.cwd(), 'logs'), { "recursive": true });
     } catch (error) {
-      console.log('Directories already exist or created');
+      
     }
   }
 
@@ -42,7 +42,7 @@ class IntelligentDashboard {
           reject(err);
           return;
         }
-        console.log('✅ Connected to PM2 for dashboard system');
+        
         this.startDashboard();
         resolve();
       });
@@ -265,8 +265,8 @@ class IntelligentDashboard {
     });
 
     server.listen(this.port, () => {
-      console.log(`🌐 Dashboard server running on "http": //localhost:${this.port}`);
-      console.log(`📊 Dashboard available "at": http://localhost:${this.port}`);
+      
+      
     });
   }
 
@@ -648,7 +648,7 @@ class IntelligentDashboard {
     const reportPath = path.join(this.reportDir, `dashboard-report-${Date.now()}.json`);
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
     
-    console.log(`📊 Dashboard report saved "to": ${reportPath}`);
+    
     return report;
   }
 
@@ -674,30 +674,30 @@ class IntelligentDashboard {
   }
 
   async stop() {
-    console.log('🛑 Stopping Dashboard System...');
+    
     pm2.disconnect();
   }
 }
 
 // Main execution
 async function main() {
-  console.log('🌐 Starting Intelligent Dashboard System...');
+  
   
   const dashboard = new IntelligentDashboard();
   
   try {
     await dashboard.initialize();
-    console.log('✅ Dashboard System initialized successfully');
+    
     
     // Keep the process running
     process.on('SIGINT', async () => {
-      console.log('\n🛑 Received SIGINT, shutting down gracefully...');
+      
       await dashboard.stop();
       process.exit(0);
     });
 
     process.on('SIGTERM', async () => {
-      console.log('\n🛑 Received SIGTERM, shutting down gracefully...');
+      
       await dashboard.stop();
       process.exit(0);
     });

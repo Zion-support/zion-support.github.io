@@ -15,7 +15,7 @@ class ComprehensiveErrorFixer {
 
   log(message, level = 'info') {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)}
+    }] ${message}`)}
 
   async run() {
     this.log('Starting Comprehensive Error Fixer...', 'info');
@@ -610,7 +610,7 @@ errorFixer.run().catch(console.error);
 ;
   log(message, level = "info") {
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)}
+    }] ${message}`)}
 ;
   async run() {
   this.log("Starting Comprehensive Error Fixer...", "info");

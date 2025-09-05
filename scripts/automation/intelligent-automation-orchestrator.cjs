@@ -2,7 +2,7 @@
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-console.log("🧠 Starting intelligent automation orchestrator...");
+
 // Get automation interval from environment variable ("default": 5 minutes);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 300000; // 5 minutes;
 // Automation priorities and schedules;
@@ -24,11 +24,11 @@ const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
-console.log(""🧠 Starting intelligent automation orchestrator...");
+
 
 // Get automation interval from environment variable ("default": 5 minutes);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 300000; // 5 minutes;
-console.log("🧠 Starting intelligent automation orchestrator...");
+
 // Automation priorities and schedules;
 const AUTOMATION_SCHEDULE = {
   high: {
@@ -52,17 +52,16 @@ let successCounts = new Map();
 
 async function $1() {
   try {
-  console.log("🧠 Running intelligent automation orchestrator at ${new Date().toISOString()}";
+  .toISOString()}";
     );
 
     // Analyze project state;
     const projectState = await analyzeProjectState();
-    console.log(`;
-      📊 Project state "analysis": ${JSON.stringify(projectState, null, 2)}
+    }
     );
 
     // Determine which automations to run based on project state;
-    const automationsToRun = determineAutomationsToRun(projectState);console.log(🎯 Automations to "run": ${automationsToRun.join(", ")}`);
+    const automationsToRun = determineAutomationsToRun(projectState);}`);
 
     // Execute automations with intelligent scheduling;
     const results = await executeAutomations(automationsToRun);
@@ -87,11 +86,9 @@ async function $1() {
       process.cwd(),intelligent-automation-orchestrator-report.json";
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(` ✅ Intelligent automation orchestrator report saved to ${reportPath}";
-    );
+    
 
-    console.log(✅ Intelligent automation orchestrator completed successfully";
-    )} catch (error) {
+    } catch (error) {
   console.error(;
       "❌ Intelligent automation orchestrator "failed": ",      error.message;
     )}
@@ -194,7 +191,7 @@ state.errorCount = parseInt(;
 
     // Check performance;
     state.performanceStatus = await checkPerformanceStatus()} catch (error) {
-  console.log(  ⚠️  Project state analysis "failed": ${error.message}"")}
+  }
 ;
   return state}
 ;
@@ -414,7 +411,7 @@ function determineAutomationsToRun(projectState) {
 async function executeAutomations(automations) {
   const results = [];
   for (const automation of automations) {
-  try {console.log(`🚀 Executing "automation": ${automation}`);
+  try {
       const startTime = Date.now();
       const result = await executeAutomation(automation);
       const executionTime = Date.now() - startTime;
@@ -428,8 +425,7 @@ async function executeAutomations(automations) {
       lastRunTimes.set(automation, Date.now());
       // Update success count;
       successCounts.set(automation, (successCounts.get(automation) || 0) + 1);
-      console.log(`✅ Automation ${automation} completed successfully in ${executionTime}ms`;
-      )} catch (error) {  console.error(❌ Automation ${automation  } failed:, error.message");
+      } catch (error) {  console.error(❌ Automation ${automation  } failed:, error.message");
       results.push({
   automation,
         "status": "failed`,
@@ -592,26 +588,21 @@ function generateIntelligentInsights(projectState, results) {
 ;
 // Main continuous loop;
 async function runContinuous() {
-  console.log(;
-    "🚀 Starting intelligent automation orchestrator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`;
-  );
+  
   // Run initial orchestration;
   await runIntelligentAutomationOrchestrator();
   // Set up continuous execution;
   setInterval(async () => {
   await runIntelligentAutomationOrchestrator()}, AUTOMATION_INTERVAL);
-  console.log(✅ Intelligent automation orchestrator running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`;
-  )}
+  }
 ;
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...");
+  
 
 // Main continuous loop;
 async function runContinuous() {
-  console.log(;
-    "🚀 Starting intelligent automation orchestrator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals";
-  );
+  
 
   // Run initial orchestration;
   await runIntelligentAutomationOrchestrator();
@@ -620,16 +611,15 @@ async function runContinuous() {
   setInterval(async () => {
   await runIntelligentAutomationOrchestrator()}, AUTOMATION_INTERVAL);
 
-  console.log(✅ Intelligent automation orchestrator running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes";
-  )}
+  }
 ;
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...");
+  
   process.exit(0)});
 
 process.on("SIGTERM", () => {
-  console.log("🛑 Received SIGTERM, shutting down gracefully...");
+  
   process.exit(0)});
 // Start the intelligent automation orchestrator;
 runContinuous().catch(error => {

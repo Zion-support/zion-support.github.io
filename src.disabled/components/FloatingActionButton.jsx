@@ -1,1 +1,1 @@
-'const FloatingActionButton = ({ className = ' }) => {' const [isOpen,setIsOpen] = useState (false) const toggleMenu = () => setIsOpen (!isOpen) const actionItems = [ { "icon": 'MessageCircl',e,"label": 'Live: Chat,',' "action": () => window.open: ('https:'''"",;
+'const FloatingActionButton = ({ className = \' }) => {\' const [isOpen,setIsOpen] = useState (false) const toggleMenu = () => setIsOpen (!isOpen) const actionItems = [ { \"icon\": \'MessageCircl\',e,\"label\": \'Live: Chat,\',\' \"action\": () => window.open: (\'https:\''\'"\",;

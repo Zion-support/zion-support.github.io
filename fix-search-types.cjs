@@ -2,7 +2,7 @@
 
 const fs = require('fs')
 
-console.log('🔧 Fixing SearchBar type properties...');
+
 
 const content = fs.readFileSync('components/SearchBar.tsx', 'utf8';);
 
@@ -18,4 +18,3 @@ fixed = fixed.replace(
 );
 
 fs.writeFileSync('components/SearchBar.tsx', fixed);
-console.log('✅ Fixed SearchBar type properties');

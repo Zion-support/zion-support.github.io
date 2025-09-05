@@ -17,7 +17,7 @@ class LogAnalyzer {
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`)}
+    }
 
   async analyzeBuildLogs() {
     this.log('🔍 Analyzing build logs...');
@@ -406,9 +406,9 @@ if (require.main === module) {
   const analyzer = new LogAnalyzer();
   analyzer.run()
     .then((report) => {
-      console.log('\n🎉 Log Analyzer completed successfully!');
-      console.log(`🔍 Build success "rate": ${report.analysis.build.successRate || 0}%`);
-      console.log(`💡 "Recommendations": ${report.recommendations.length}`);
+      
+      
+      
       process.exit(0)})
     .catch((error) => {
       console.error('\n💥 Log Analyzer "failed": ', error.message);

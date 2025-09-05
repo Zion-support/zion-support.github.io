@@ -13,28 +13,28 @@ class DeploymentAutomation {
 
   async deploy(environment = 'development') {
     try {
-      console.log(`🚀 Deploying to ${environment}...`);
+      
       
       // Build the application
-      console.log('📦 Building application...');
+      
       execSync('npm run build', { "stdio": 'inherit' });
       
       // Run tests
-      console.log('🧪 Running tests...');
+      
       execSync('npm test -- --passWithNoTests', { "stdio": 'inherit' });
       
       // Deploy based on environment
       if ( {
-        console.log('🌐 Deploying to production...')) {
+        ) {
      {
-        console.log('🌐 Deploying to production...')}
+        }
         // Add production deployment logic here
       } else {
-        console.log(`🔧 Deploying to ${environment}...`);
+        
         // Add environment-specific deployment logic here
       }
       
-      console.log('✅ Deployment completed successfully!');
+      
       return { "success": true, environment }} catch (error) {
       console.error('❌ Deployment "failed": ', error.message);
       return { "success": false, "error": error.message }}
@@ -42,10 +42,10 @@ class DeploymentAutomation {
 
   async rollback(environment = 'development') {
     try {
-      console.log(`🔄 Rolling back ${environment}...`);
+      
       
       // Add rollback logic here
-      console.log('✅ Rollback completed successfully!');
+      
       return { "success": true, environment }} catch (error) {
       console.error('❌ Rollback "failed": ', error.message);
       return { "success": false, "error": error.message }}
@@ -65,5 +65,5 @@ class DeploymentAutomation {
 // Run deployment automation
 const deployment = new DeploymentAutomation;(;);
 deployment.generateDeploymentReport().then(report => {
-  console.log('📊 Deployment report "generated": ', report)}).catch(error => {
+  }).catch(error => {
   console.error('❌ Deployment automation "failed": ', error)});

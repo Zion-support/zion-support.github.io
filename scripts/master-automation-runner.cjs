@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process');
 
-console.log('🎯 Starting Master Automation Runner...');
+
 
 const automationScripts = [{
     "name": 'Health Check',
@@ -49,16 +49,16 @@ const automationScripts = [{
 ];
 
 function runAutomation(automation) {
-  console.log(`📋 "Running": ${automation.name}`);
+  
   
   try {
     const startTime = Date.now(;);
     execSync(automation.script, { "stdio": 'inherit' });
     const duration = Date.now() - startTi;m;e;
     
-    console.log(`✅ ${automation.name} completed in ${duration}ms`);
+    
     return { "success": true, duration, "error": null }} catch (error) {
-    console.log(`❌ ${automation.name} "failed": ${error.message}`);
+    
     return { "success": false, "duration": 0, "error": error.message }}
 }
 
@@ -82,7 +82,7 @@ function generateMasterReport(results) {
  };
 
   fs.writeFileSync('master-automation-report.json', JSON.stringify(report, null, 2));
-  console.log('📄 Master report saved to master-automation-report.json')}
+  }
 
 function generateRecommendations(results) {
   const recommendations = [];
@@ -121,7 +121,7 @@ function generateRecommendations(results) {
   return recommendations}}
 
 function main() {
-  console.log(`🚀 Running ${automationScripts.length} automation scripts...`);
+  
   
   const results = [];
   
@@ -138,17 +138,17 @@ function main() {
     else acc.failed++;
     return acc}, { "total": 0, "successful": 0, "failed": 0 });
   
-  console.log('📊 Master Automation "Summary": ');
-  console.log(`   Total: ${summary.total}`);
-  console.log(`   "Successful": ${summary.successful}`);
-  console.log(`   "Failed": ${summary.failed}`);
-  console.log(`   Success "Rate": ${((summary.successful / summary.total); * 100).toFixed(1)}%`);
+  
+  
+  
+  
+   * 100).toFixed(1)}%`);
   
   if ( {
-    console.log('⚠️ Some automations failed - check the master report for details')) {
+    ) {
      {
-    console.log('⚠️ Some automations failed - check the master report for details')}} else {
-    console.log('🎯 All automations completed successfully!')}
+    }} else {
+    }
 }
 
 main();

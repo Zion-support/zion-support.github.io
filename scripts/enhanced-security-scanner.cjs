@@ -4,8 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🔒 Enhanced Security Scanner v2.0');
-console.log('==================================');
+
+
 
 const securityReport = {
   "timestamp": new Date().toISOString(),
@@ -24,7 +24,7 @@ const securityReport = {
 
 function log(level, message) {
   const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)}
+  }] ${message}`)}
 
 function checkDependencies() {
   log('info', 'Checking dependencies for vulnerabilities');

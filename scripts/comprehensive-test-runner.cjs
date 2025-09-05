@@ -3,7 +3,7 @@
 const fs = require('fs');
 const { execSync } = require('child_process');
 
-console.log('🧪 Starting Comprehensive Test Runner...');
+
 
 const testReport = {
   "timestamp": new Date().toISOString(),
@@ -23,7 +23,7 @@ function addTest(name, status, duration, details = null) {
 function runCommand(command, description, opts = {}) {
   const startTime = Date.now();
   try {
-    console.log(`📋 "Running": ${description}`);
+    
     const output = execSync(command, { "encoding": 'utf8', "stdio": ['ignore', 'pipe', 'pipe'], "timeout": opts.timeoutMs ?? 120000 });
     const duration = Date.now() - startTime;
     addTest(description, 'passed', duration, { "output": output.substring(0, 800) });
@@ -71,19 +71,19 @@ fs.mkdirSync('automation-reports', { "recursive": true });
 const reportPath = 'automation-reports/comprehensive-test-report.json';
 fs.writeFileSync(reportPath, JSON.stringify(testReport, null, 2));
 
-console.log('\n📊 Test Results "Summary": ');
-console.log(`   ✅ Passed: ${testReport.results.passed}`);
-console.log(`   ❌ "Failed": ${testReport.results.failed}`);
-console.log(`   ⏭️  "Skipped": ${testReport.results.skipped}`);
-console.log(`   📊 "Total": ${testReport.results.total}`);
+
+
+
+
+
 const successRate = testReport.results.total ? (testReport.results.passed / testReport.results.total) * 100 : 0;
-console.log(`   📈 Success "Rate": ${successRate.toFixed(1)}%`);
-console.log(`   ⏱️  Total "Duration": ${(testReport.performance.totalDuration / 1000).toFixed(2)}s`);
-console.log(`\n📄 Comprehensive test report saved "to": ${reportPath}`);
+}%`);
+.toFixed(2)}s`);
+
 
 const criticalFailed = testReport.tests.some(t => ['ESLint Linting', 'TypeScript Type Check', 'Production Build'].includes(t.name) && t.status === 'failed');
 if (criticalFailed) {
-  console.log('\n❌ Critical checks failed - please review the report');
+  
   process.exit(1)} else {
-  console.log('\n✅ All critical checks passed (or were skipped)');
+  ');
   process.exit(0)}

@@ -47,7 +47,7 @@ function fixIncompleteObjects(filePath) {
     }`});
   
   fs.writeFileSync(filePath, content);
-  console.log(`Fixed incomplete objects in ${filePath}`)}
+  }
 
 // Fix all three files
 const files = ['pages/ai-services.tsx', 'pages/it-services.tsx', 'pages/micro-saas.tsx'];
@@ -55,10 +55,9 @@ const files = ['pages/ai-services.tsx', 'pages/it-services.tsx', 'pages/micro-sa
 files.forEach(file => {
   if () {
     fixIncompleteObjects(file)} else {
-    console.log(`File ${file} not found`)) {
+    ) {
     ) {
     fixIncompleteObjects(file)} else {
-    console.log(`File ${file} not found`)}}
+    }}
 });
 
-console.log('All incomplete objects fixed!');

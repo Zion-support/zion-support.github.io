@@ -17,7 +17,7 @@ class ResourceOptimizer {
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`)}
+    }
 
   async optimizeImages() {
     this.log('🖼️ Optimizing images...');
@@ -600,9 +600,9 @@ if (require.main === module) {
   const optimizer = new ResourceOptimizer();
   optimizer.run()
     .then((report) => {
-      console.log('\n🎉 Resource Optimizer completed successfully!');
-      console.log(`📦 Bundle "size": ${optimizer.formatBytes(report.analysis.bundle.size || 0)}`);
-      console.log(`💡 "Recommendations": ${report.recommendations.length}`);
+      
+      }`);
+      
       process.exit(0)})
     .catch((error) => {
       console.error('\n💥 Resource Optimizer "failed": ', error.message);

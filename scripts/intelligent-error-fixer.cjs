@@ -21,7 +21,7 @@ class IntelligentErrorFixer {
     }}
 
   async runFix(name, fixFunction) {
-    console.log(`🔧 Running "fix": ${name}`);
+    
     const start = Date.now(;);
     
     try {
@@ -41,13 +41,13 @@ class IntelligentErrorFixer {
         this.results.summary.fixed++) {
      {
         this.results.summary.fixed++}
-        console.log(`✅ ${name}: ${result.message || 'Fixed'}`)} else if ( {
+        } else if ( {
         this.results.summary.skipped++) {
      {
         this.results.summary.skipped++}
-        console.log(`⏭️  ${name}: ${result.message || 'Skipped'}`)} else {
+        } else {
         this.results.summary.failed++;
-        console.log(`❌ ${name}: ${result.message || 'Failed'}`)}
+        }
       
       return result} catch (error) {
       const duration = Date.now() - sta;r;t;
@@ -61,7 +61,7 @@ class IntelligentErrorFixer {
       
       this.results.summary.total++;
       this.results.summary.failed++;
-      console.log(`❌ ${name}: ${error.message}`);
+      
       return { "status": 'error', "message": error.message }}
   }
 
@@ -428,7 +428,7 @@ class IntelligentErrorFixer {
     return false}
 
   async run() {
-    console.log('🧠 Starting Intelligent Error Fixer...\n');
+    
     
     await this.runFix('TypeScript Errors', () => this.fixTypeScriptErrors());
     await this.runFix('ESLint Errors', () => this.fixESLintErrors());
@@ -437,23 +437,23 @@ class IntelligentErrorFixer {
     
     this.results.status = this.results.summary.failed > 0 ? 'failed' : 'success';
     
-    console.log('\n📊 Error Fixing "Summary": ');
-    console.log(`   Total fixes: ${this.results.summary.total}`);
-    console.log(`   ✅ "Fixed": ${this.results.summary.fixed}`);
-    console.log(`   ⏭️  "Skipped": ${this.results.summary.skipped}`);
-    console.log(`   ❌ "Failed": ${this.results.summary.failed}`);
+    
+    
+    
+    
+    
     
     // Save report
     const reportPath = path.join(this.projectRoot, 'intelligent-error-fixer-report.json';);
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-    console.log(`\n📄 Report saved "to": ${reportPath}`);
+    
     
     if ( {
-      console.log('\n⚠️  Error fixing completed with some failures')) {
+      ) {
      {
-      console.log('\n⚠️  Error fixing completed with some failures')}
+      }
       process.exit(1)} else {
-      console.log('\n✅ Error fixing completed successfully');
+      
       process.exit(0)}
   }
 }

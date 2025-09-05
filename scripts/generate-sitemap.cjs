@@ -93,8 +93,8 @@ ${urls.map(url => `  <url>
   // Write sitemap
   fs.writeFileSync(SITEMAP_PATH, sitemap, 'utf8');
   
-  console.log(`✓ Sitemap generated with ${urls.length} URLs`);
-  console.log(`  "Location": ${SITEMAP_PATH}`)}
+  
+  }
 
 if (require.main === module) {
   generateSitemap()}

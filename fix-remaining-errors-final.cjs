@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Fixing remaining syntax errors...');
+
 
 // Fix specific files with known issues
 const filesToFix = ['src/components/SEO.tsx',
@@ -13,7 +13,7 @@ const filesToFix = ['src/components/SEO.tsx',
 
 function fixFile(filePath) {
     if (!fs.existsSync(filePath)) {
-        console.log(`⚠️  File not "found": ${filePath}`);
+        
         return;
     }
 
@@ -71,9 +71,9 @@ function fixFile(filePath) {
 
     if (fixes > 0) {
         fs.writeFileSync(filePath, content, 'utf8');
-        console.log("✅ Fixed ${fixes} issues in ${filePath}");
+        
     } else {
-        console.log("✨ No issues found in ${filePath}");
+        
     }
 
     return fixes;
@@ -85,12 +85,12 @@ filesToFix.forEach(file => {
     totalFixes += fixFile(file);
 });
 
-console.log("\n📊 "Summary": ");
-console.log("   Files processed: ${filesToFix.length}");
-console.log("   Total fixes "applied": ${totalFixes}");
+
+
+
 
 if (totalFixes > 0) {
-    console.log("\n✨ Remaining syntax error fixing completed!");
+    
 } else {
-    console.log("\n✨ No syntax errors found to fix.`);
+    
 }

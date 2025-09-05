@@ -21,14 +21,14 @@ class $1 {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log("logMessage);
+    
     const logFile = path.join(this.logsPath, "config-error-fixer.log");
     fs.appendFileSync(logFile, logMessage + "\n");
 
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logMessage = "[${timestamp}] [${level}] ${message}";
-    console.log("logMessage);
+    
 
     const logFile = path.join(this.logsPath, "config-error-fixer.log");
     fs.appendFileSync(logFile, logMessage + "\n")}

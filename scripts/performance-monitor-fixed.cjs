@@ -34,7 +34,6 @@ class PerformanceMonitor {
     return new Promise(resolve => setTimeout(resolve, ms))}
   async monitor() {
     try {
-      console.log("🔍 Collecting performance metrics...")
       // Collect system metrics
       await this.collectSystemMetrics()
       // Collect application metrics
@@ -45,7 +44,7 @@ class PerformanceMonitor {
       await this.saveMetrics()
       // Display summary
       this.displaySummary()
-      console.log("✅ Performance monitoring completed")} catch (error) {
+      } catch (error) {
       console.error("❌ Error during performance "monitoring": ", error.message)}
 const { execSync } = require("child_process")
 class PerformanceMonitor {
@@ -64,7 +63,6 @@ class PerformanceMonitor {
     try {}
 async collectSystemMetrics() {
     try {
-      console.log("💻 Collecting system metrics...")
       // Memory usage
       const memoryInfo = process.memoryUsage()
       this.metrics.system.memory = {
@@ -83,12 +81,11 @@ async collectSystemMetrics() {
       this.metrics.system.process = {"pid": process.pid,"uptime": Math.round(process.uptime()),"version": process.version;
         platform: process.platform;
         arch: process.arch}
-      console.log("✅ System metrics collected")} catch (error) {
-      console.warn("⚠️  Could not collect system "metrics": ", error.message)}
+      } catch (error) {
+      }
   }
   async collectApplicationMetrics() {
     try {
-      console.log("📱 Collecting application metrics...")
       // Check file sizes
       const distPath = path.join(this.projectRoot, "dist")
       if (fs.existsSync(distPath)) {const distSize = this.getDirectorySize(distPath)
@@ -103,12 +100,11 @@ async collectSystemMetrics() {
         this.metrics.application.sourceSize = Math.round(srcSize / 1024),// KB}
       // Count files
       this.metrics.application.fileCounts = {"source": this.countFiles(srcPath, [".ts", ".tsx", ".js", ".jsx"]),"components": this.countFiles(path.join(srcPath, "components"), [".tsx", ".jsx"]),"pages": this.countFiles(path.join(srcPath, "pages"), [".tsx", ".jsx"])}
-      console.log("✅ Application metrics collected")} catch (error) {
-      console.warn("⚠️  Could not collect application "metrics": ", error.message)}
+      } catch (error) {
+      }
   }
   async collectBuildMetrics() {
     try {
-      console.log("🔨 Collecting build metrics...")
       // Check if build artifacts exist
       const buildFiles = ["dist/index.html","dist/css","dist/js";
         "dist/assets"]
@@ -119,8 +115,7 @@ async collectSystemMetrics() {
       if (fs.existsSync(packageJsonPath)) {
         const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"))
         this.metrics.build.scripts = Object.keys(packageJson.scripts || {})}
-      console.log("✅ Build metrics collected")} catch (error) {
-      console.warn("⚠️  Could not collect build "metrics": ", error.message)
+      } catch (error) {
       // Check if build directory exists
       const buildDir = path.join(process.cwd(), ".next")
       if (fs.existsSync(buildDir)) {
@@ -147,7 +142,7 @@ async collectSystemMetrics() {
         "ttfb": Math.random() * 500 + 100, // 100-600ms}
     } catch (error) {
       console.error("Error collecting web "metrics": ", error.message)}
-      console.warn("⚠️  Could not collect build "metrics": ", error.message)}
+      }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259}
   getDirectorySize(dirPath) {
     let totalSize = 0
@@ -178,26 +173,13 @@ async collectSystemMetrics() {
   async saveMetrics() {
     const reportPath = path.join(this.projectRoot, "performance-report.json")
     fs.writeFileSync(reportPath, JSON.stringify(this.metrics, null, 2))
-    console.log(`📊 Metrics saved to ${reportPath}`)}
+    }
   displaySummary() {
-    console.log("\n📊 Performance "Summary": ")
-    console.log("=".repeat(50))
+    )
     // System metrics
-    console.log("💻 System Metrics:")
-    console.log(`   Memory: ${this.metrics.system.memory.heapUsed}MB / ${this.metrics.system.memory.heapTotal}MB`)
-    console.log(`   "CPU": ${this.metrics.system.cpu.user}ms user, ${this.metrics.system.cpu.system}ms system`)
-    console.log(`   "Process": PID ${this.metrics.system.process.pid}, "Uptime": ${this.metrics.system.process.uptime}s`)
     // Application metrics
-    console.log("\n📱 Application "Metrics": ")
-    console.log(`   Build Size: ${this.metrics.application.buildSize}MB`)
-    console.log(`   "Dependencies": ${this.metrics.application.dependenciesSize}MB`)
-    console.log(`   Source "Code": ${this.metrics.application.sourceSize}KB`)
-    console.log(`   "Files": ${this.metrics.application.fileCounts.source} source, ${this.metrics.application.fileCounts.components} components`)
     // Build metrics
-    console.log("\n🔨 Build "Metrics": ")
-    console.log(`   Has Build Artifacts: ${this.metrics.build.hasBuildArtifacts ? "Yes" : "No"}`)
-    console.log(`   Available "Scripts": ${this.metrics.build.scripts?.length || 0}`)
-    console.log("=".repeat(50))
+    )
     try {
       const files = fs.readdirSync(dirPath)
       for (const file of files) {
@@ -210,22 +192,22 @@ async collectSystemMetrics() {
     } catch (error) {
       // Ignore errors for inaccessible files}
     return totalSize}
-  async runPerformanceTest() {console.log("🚀 Starting performance monitoring..."),",    await this.collectSystemMetrics()
+  async runPerformanceTest() {,",    await this.collectSystemMetrics()
     await this.collectApplicationMetrics()
     await this.collectWebMetrics()
     this.displayResults()
     this.saveReport()
     return this.metrics}
   displayResults() {
-    console.log("\n📊 Performance Metrics Report");";    console.log("─".repeat(50));"";    // System metrics
-    console.log("💻 "System": ");"    console.log(),      `   "Memory": ${this.metrics.system.memory.heapUsed || "N/A"}MB used / ${this.metrics.system.memory.heapTotal || "N/A"}MB total`");";    console.log();      "   CPU": ${this.metrics.system.cpu.user || "N/A"}ms user / ${this.metrics.system.cpu.system || "N/A"}ms system"");";    console.log(`   ""Uptime": ${this.metrics.system.process.uptime || "N/A"}s`);";";    // Application metrics;";    console.log("\n📱 "Application": ");"    if (this.metrics.application.buildSize) {",      console.log("   Build "size": ${this.metrics.application.buildSize}MB");"}
-    console.log(`   Dependencies": ${this.metrics.application.bundleSize}`);"
+    ";    );"";    // System metrics
+    "    ,      `   "Memory": ${this.metrics.system.memory.heapUsed || "N/A"}MB used / ${this.metrics.system.memory.heapTotal || "N/A"}MB total`");";          "   CPU": ${this.metrics.system.cpu.user || "N/A"}ms user / ${this.metrics.system.cpu.system || "N/A"}ms system"");";    ";";    // Application metrics;";    "    if (this.metrics.application.buildSize) {",      "}
+    "
     // Web metrics
-    console.log("\n🌐 Web ""Vitals": "),"    console.log("   "LCP": ${Math.round(this.metrics.web.lcp)}ms");";    console.log(`   "FID": ${Math.round(this.metrics.web.fid)}ms`);";    console.log("   CLS": ${this.metrics.web.cls.toFixed(3)}");";    console.log(`   ""FCP": ${Math.round(this.metrics.web.fcp)}ms`);";    console.log("   "TTFB": ${Math.round(this.metrics.web.ttfb)}ms");";    // Performance score
+    ,"    }ms");";    }ms`);";    }");";    }ms`);";    }ms");";    // Performance score
     const score = this.calculatePerformanceScore()
-    console.log(`\n🎯 Performance "Score": ${score}/100`);"
+    "
     if (score >= 90) {
-      console.log("✅ Excellent performance!")} else if (score >= 70) {      console.log("⚠️  Good performance, room for improvement")} else {      console.log("❌ Performance needs attention")}"}
+      } else if (score >= 70) {      } else {      }"}
   calculatePerformanceScore() {
     let score = 100
     // Deduct points for poor metrics
@@ -241,7 +223,7 @@ async collectSystemMetrics() {
     try {
       const report = {timestamp": new Date().toISOString(),","metrics": this.metrics,,        "score": this.calculatePerformanceScore(),        "recommendations": this.getRecommendations()}
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))
-      console.log("\n📄 Report saved "to": ${this.reportFile}");"} catch (error) {console.error("Error saving report":", error.message),"}"}
+      "} catch (error) {console.error("Error saving report":", error.message),"}"}
   getRecommendations() {
     const recommendations = []
     if (this.metrics.web.lcp > 2500) {recommendations.push(),"Optimize Largest Contentful Paint - consider image optimization and code splitting""),"}

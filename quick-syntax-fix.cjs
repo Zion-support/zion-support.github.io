@@ -9,7 +9,7 @@ class QuickSyntaxFixer {
     this.fixedCount = 0}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
 
   fixFile(filePath) {
     try {

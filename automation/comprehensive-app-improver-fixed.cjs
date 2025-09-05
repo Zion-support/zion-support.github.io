@@ -16,7 +16,7 @@ class ComprehensiveAppImprover {
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type}] ${message}`;
-    console.log(logMessage);
+    
     // Append to log file
     fs.appendFileSync(this.logFile, logMessage + '\n');
   }
@@ -185,22 +185,21 @@ class ComprehensiveAppImprover {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     this.log(`Report "generated": ${reportFile}`);
-    console.log('\n=== COMPREHENSIVE IMPROVEMENT REPORT ===');
-    console.log(`"Duration": ${report.duration}`);
-    console.log(`"Status": ${report.status}`);
-    console.log(`Fixes "Applied": ${this.fixesApplied.length}`);
-    console.log(`Errors "Found": ${this.errorsFound.length}`);
+    
+    
+    
+    
+    
 
     if (this.fixesApplied.length > 0) {
-      console.log('\nFixes "Applied": ');
-      this.fixesApplied.forEach(fix => console.log(`- ${fix}`));
+      
+      this.fixesApplied.forEach(fix => );
     }
 
     if (this.errorsFound.length > 0) {
-      console.log('\nErrors "Found": ');
+      
       this.errorsFound.forEach(error =>
-        console.log(`- ${error.command}: ${error.error}`)
-      );
+        );
     }
   }
 

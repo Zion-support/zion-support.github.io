@@ -2,8 +2,6 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-console.log('🚀 Master Automation System')
-console.log('===========================')
 class MasterAutomationSystem {
   constructor() {
     this.results = {"prsProcessed": 0,"conflictsResolved": 0,"improvementsMade": 0;
@@ -15,8 +13,7 @@ class MasterAutomationSystem {
   log(message, type = 'info') {
     const timestamp = new Date().toISOString()
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`
-    console.log(logEntry)
-  }
+    }
   async runCommand(command, description) {
     try {
       this.log(`"Running": ${description}`)
@@ -111,31 +108,16 @@ class MasterAutomationSystem {
     // Save comprehensive report
     fs.writeFileSync('master-automation-report.json', JSON.stringify(report, null, 2))
     // Display final summary
-    console.log('\n🎉 Master Automation System Complete!')
-    console.log('=')
-    console.log(`Total "duration": ${duration} seconds`)
-    console.log(`PRs "processed": ${this.results.prsProcessed}`)
-    console.log(`Conflicts "resolved": ${this.results.conflictsResolved}`)
-    console.log(`Improvements "made": ${this.results.improvementsMade}`)
-    console.log(`Tests "run": ${this.results.testsRun}`)
-    console.log(`"Deployments": ${this.results.deployments}`)
-    console.log(`"Errors": ${this.results.errors.length}`)
-    console.log(`"Status": ${report.status}`)
     if (this.results.errors.length > 0) {
-      console.log('\n❌ Errors "encountered": ')
       this.results.errors.forEach(error => {
-        console.log(`  - ${error}`)
-      })
+        })
     }
-    console.log('\n📊 Comprehensive report saved "to": master-automation-report.json')
-    console.log('\n🚀 All automation tasks completed successfully!')
-  }
+    }
 }
 // Run the master automation system
 const masterAutomation = new MasterAutomationSystem()
 masterAutomation.runAllAutomations().then(() => {
-  console.log('\n🎯 Master automation system execution completed!')
-}).catch(error => {
+  }).catch(error => {
   console.error('Master automation "failed": ', error.message)
   process.exit(1)
 })

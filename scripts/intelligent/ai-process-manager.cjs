@@ -27,7 +27,7 @@ class AIProcessManager {
       await fs.mkdir(this.reportDir, { "recursive": true });
       await fs.mkdir(path.join(process.cwd(), 'logs'), { "recursive": true });
     } catch (error) {
-      console.log('Directories already exist or created');
+      
     }
   }
 
@@ -39,7 +39,7 @@ class AIProcessManager {
           reject(err);
           return;
         }
-        console.log('✅ Connected to PM2 for AI process management');
+        
         this.startIntelligentManagement();
         resolve();
       });
@@ -111,14 +111,14 @@ class AIProcessManager {
       const failureProbability = this.predictFailure(process);
       
       if (failureProbability > this.predictionModel.failureThreshold) {
-        console.log(`🚨 High failure probability for ${process.name}: ${(failureProbability * 100).toFixed(2)}%`);
+        .toFixed(2)}%`);
         await this.initiatePreventiveAction(process);
       }
 
       // Check for performance degradation
       const performanceScore = this.calculatePerformanceScore(process);
       if (performanceScore < this.predictionModel.performanceThreshold) {
-        console.log(`⚡ Performance degradation detected for ${process.name}: ${(performanceScore * 100).toFixed(2)}%`);
+        .toFixed(2)}%`);
         await this.initiatePerformanceOptimization(process);
       }
     }
@@ -213,7 +213,7 @@ class AIProcessManager {
   }
 
   async initiatePreventiveAction(process) {
-    console.log(`🔧 Initiating preventive action for ${process.name}`);
+    
     
     try {
       // Restart the process with optimized settings
@@ -221,7 +221,7 @@ class AIProcessManager {
         if (err) {
           console.error(`❌ Failed to restart ${process.name}:`, err);
         } else {
-          console.log(`✅ Successfully restarted ${process.name} for preventive maintenance`);
+          
         }
       });
     } catch (error) {
@@ -230,7 +230,7 @@ class AIProcessManager {
   }
 
   async initiatePerformanceOptimization(process) {
-    console.log(`⚡ Initiating performance optimization for ${process.name}`);
+    
     
     try {
       // Adjust memory limits
@@ -241,7 +241,7 @@ class AIProcessManager {
         if (err) {
           console.error(`❌ Failed to optimize ${process.name}:`, err);
         } else {
-          console.log(`✅ Successfully optimized ${process.name}`);
+          
         }
       });
     } catch (error) {
@@ -296,7 +296,7 @@ class AIProcessManager {
               console.error(`❌ Failed to scale ${processName}:`, err);
               reject(err);
             } else {
-              console.log(`📈 Scaled ${processName} to ${newInstances} instances`);
+              
               resolve();
             }
           });
@@ -308,7 +308,7 @@ class AIProcessManager {
   }
 
   async optimizeMemory(process) {
-    console.log(`💾 Optimizing memory for ${process.name}`);
+    
     
     // Force garbage collection if possible
     try {
@@ -322,13 +322,13 @@ class AIProcessManager {
       if (err) {
         console.error(`❌ Failed to optimize memory for ${process.name}:`, err);
       } else {
-        console.log(`✅ Memory optimization completed for ${process.name}`);
+        
       }
     });
   }
 
   async performDeepAnalysis() {
-    console.log('🧠 Performing deep analysis...');
+    
     
     const analysis = {
       "timestamp": new Date().toISOString(),
@@ -423,7 +423,7 @@ class AIProcessManager {
       this.predictionModel.failureThreshold = Math.min(0.9, this.predictionModel.failureThreshold + 0.05);
     }
 
-    console.log(`📊 Updated prediction model - Failure "threshold": ${this.predictionModel.failureThreshold}`);
+    
   }
 
   async generateAIReport() {
@@ -443,7 +443,7 @@ class AIProcessManager {
     const reportPath = path.join(this.reportDir, `ai-process-manager-report-${Date.now()}.json`);
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
     
-    console.log(`📊 AI Process Manager report saved "to": ${reportPath}`);
+    
     return report;
   }
 
@@ -453,30 +453,30 @@ class AIProcessManager {
   }
 
   async stop() {
-    console.log('🛑 Stopping AI Process Manager...');
+    
     pm2.disconnect();
   }
 }
 
 // Main execution
 async function main() {
-  console.log('🤖 Starting AI Process Manager...');
+  
   
   const aiManager = new AIProcessManager();
   
   try {
     await aiManager.initialize();
-    console.log('✅ AI Process Manager initialized successfully');
+    
     
     // Keep the process running
     process.on('SIGINT', async () => {
-      console.log('\n🛑 Received SIGINT, shutting down gracefully...');
+      
       await aiManager.stop();
       process.exit(0);
     });
 
     process.on('SIGTERM', async () => {
-      console.log('\n🛑 Received SIGTERM, shutting down gracefully...');
+      
       await aiManager.stop();
       process.exit(0);
     });

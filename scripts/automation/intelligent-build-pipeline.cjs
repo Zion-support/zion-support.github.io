@@ -42,13 +42,13 @@ class $1 {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logEntry);
 
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}")}
+    fs.appendFileSync(this.logFile, logEntry);}
 ;
   loadPipelineConfig() {
   try {
@@ -1447,7 +1447,7 @@ if (require.main === module) {
   automation;
     .run();
     .then(() => {
-  console.log("✅ Intelligent Build Pipeline completed`);
+  
       process.exit(0)});
     .catch(error => {
   console.error("❌ Intelligent Build Pipeline "failed": ", error.message);

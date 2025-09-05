@@ -25,7 +25,7 @@ class ErrorPreventionOrchestrator {
   log(message) {
     const timestamp = new Date().toISOString(});
     const logMessage = `[${timestamp}] ${message}\;n;`;
-    console.log(logMessage.trim(););
+    );
     fs.appendFileSync(this.logFile, logMessage)}
 
   async start() {
@@ -139,8 +139,8 @@ class ErrorPreventionOrchestrator {
   logs() {
     if (fs.existsSync(this.logFile)) {
       const logContent = fs.readFileSync(this.logFile, 'utf8'});
-      console.log(logContent)} else {
-      console.log('No logs found')}
+      } else {
+      }
   }
 }
 
@@ -167,5 +167,5 @@ switch (command) {
   case 'logs':
     orchestrator.logs();
     break;
-  "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
+  "default": 
     process.exit(1)}

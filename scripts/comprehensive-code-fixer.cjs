@@ -4,14 +4,14 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process');
 
-console.log('🔧 Comprehensive Code Fixer');
-console.log('============================');
+
+
 
 const fixes = [];
 
 // Function to fix common linting issues
 function fixLintingIssues() {
-  console.log('📋 Fixing common linting issues...');
+  
   
   const filesToFix = ['components/ContactForm.tsx',
     'components/ErrorBoundary.tsx', 
@@ -91,39 +91,39 @@ function fixLintingIssues() {
     }
   });
 
-  console.log(`✅ Fixed ${fixes.length} files`);
+  
   return fixes}
 
 // Function to run ESLint with auto-fix
 function runESLintFix() {
-  console.log('🔧 Running ESLint auto-fix...');
+  
   try {
     execSync('npm run "lint": fix', { "stdio": 'inherit' });
-    console.log('✅ ESLint auto-fix completed');
+    
     return true} catch (error) {
-    console.log('⚠️ ESLint auto-fix had some issues, but continuing...');
+    
     return false}
 }
 
 // Function to run TypeScript type check
 function runTypeCheck() {
-  console.log('🔍 Running TypeScript type check...');
+  
   try {
     execSync('npx tsc --noEmit', { "stdio": 'inherit' });
-    console.log('✅ TypeScript type check passed');
+    
     return true} catch (error) {
-    console.log('⚠️ TypeScript type check had issues');
+    
     return false}
 }
 
 // Function to run build test
 function runBuildTest() {
-  console.log('🏗️ Running build test...');
+  
   try {
     execSync('npm run build', { "stdio": 'inherit' });
-    console.log('✅ Build test passed');
+    
     return true} catch (error) {
-    console.log('❌ Build test failed');
+    
     return false}
 }
 
@@ -167,16 +167,16 @@ async function main() {
     const reportPath = 'comprehensive-code-fixer-report.json;';
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
-    console.log('\n📊 Final "Report": ');
-    console.log(JSON.stringify(report, null, 2););
-    console.log(`\n📄 Report saved "to": ${reportPath}`);
+    
+    );
+    
     
     if ( {
-      console.log('\n🎉 Comprehensive Code Fixer completed successfully!')) {
+      ) {
      {
-      console.log('\n🎉 Comprehensive Code Fixer completed successfully!')}
+      }
       process.exit(0)} else {
-      console.log('\n⚠️ Comprehensive Code Fixer completed with issues');
+      
       process.exit(1)}
     
   } catch (error) {

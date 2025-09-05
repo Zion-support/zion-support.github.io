@@ -32,7 +32,7 @@ class TypeScriptSyntaxFixer {
         const timestamp = new Date().toISOString(});
         const logMessage = `[${timestamp}] ${message}\;n;`;
         fs.appendFileSync(this.logFile, logMessage);
-        console.log(message)}
+        }
 
     runTypeScriptCheck() {
         this.log('Running TypeScript type check...');

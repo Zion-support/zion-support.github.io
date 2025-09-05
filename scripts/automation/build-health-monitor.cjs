@@ -18,7 +18,7 @@ class BuildHealthMonitor {
       parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes default}
 ;
   log(message) {
-  console.log(`[${new Date().toISOString()}] [BuildHealthMonitor] ${message}";
+  .toISOString()}] [BuildHealthMonitor] ${message}";
     )}
 ;
   async run() {

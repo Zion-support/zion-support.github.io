@@ -11,8 +11,7 @@ class ComprehensiveScriptFixer {
   log(message, level = 'info') {
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
-    console.log(logMessage)
-  }
+    }
   fixSyntaxErrors(content) {
     let fixed = content
     // Fix common syntax issues
@@ -84,12 +83,9 @@ class ComprehensiveScriptFixer {
     return { "fixedCount": this.fixedCount, "errors": this.errors }
   }
   displaySummary() {
-    console.log('\n' + '='.repeat(60))
-    console.log('🔧 COMPREHENSIVE SCRIPT FIXER SUMMARY')
-    console.log('='.repeat(60))
-    console.log(`Files "Fixed": ${this.fixedCount}`)
-    console.log(`"Errors": ${this.errors.length}`)
-    console.log('='.repeat(60))
+    )
+    )
+    )
   }
   async run() {
     try {

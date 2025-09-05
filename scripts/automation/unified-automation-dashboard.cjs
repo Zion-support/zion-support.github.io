@@ -25,7 +25,7 @@ class $1 {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
 
-    console.log("logMessage);
+    
     // Write to log file;
     fs.appendFileSync(this.logFile, logMessage + "\n");
     // Write errors to error file;

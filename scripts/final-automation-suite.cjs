@@ -17,7 +17,7 @@ class FinalAutomationSuite {
   log(message, level = "INFO") {
     const timestamp = new Date().toISOString()
     const emoji = level === "SUCCESS" ? "✅" : level === "ERROR" ? "❌" : level === "WARN" ? "⚠️" : "ℹ️"
-    console.log(`[${timestamp}] ${emoji} ${message}`)}
+    }
   async runCommand(command, description) {
     this.log(`🚀 ${description}`, "INFO")
     try {

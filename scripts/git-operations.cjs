@@ -9,7 +9,7 @@ class GitOperations {
     this.projectRoot = process.cwd()}
 
   log(message) {
-    console.log(`[Git Operations] ${message}`)}
+    }
 
   async executeGitOperations() {
     this.log('🚀 Starting Git Operations');

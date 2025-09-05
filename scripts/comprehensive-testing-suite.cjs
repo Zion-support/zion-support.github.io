@@ -20,7 +20,7 @@ class ComprehensiveTestingSuite {;
   log(message, type = "info") {;
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logEntry),}
+    ,}
 ;
   async runUnitTests() {;
     try {;

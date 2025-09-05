@@ -32,7 +32,7 @@ class AdvancedAppOptimizer {
         const timestamp = new Date().toISOString(});
         const logMessage = `[${timestamp}] ${message}\;n;`;
         fs.appendFileSync(this.logFile, logMessage);
-        console.log(message)}
+        }
 
     optimizeNextConfig() {
         this.log('Optimizing Next.js configuration...');
@@ -320,14 +320,14 @@ export class PerformanceMonitor {
       
       // Log slow operations
       if ( {
-        console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)}
+        }
     }
   }
 
   getMetrics() {
     return Object.fromEntries(this.metrics)) {
      {
-        console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)}
+        }
     }
   }
 
@@ -367,7 +367,7 @@ export function reportWebVitals(metric) {
   
   // Log to console in development
   if (process.env.NODE_ENV === 'development') {
-    console.log(metric)) {
+    ) {
      {
     window.gtag('event', metric.name, {
       "value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
@@ -376,7 +376,7 @@ export function reportWebVitals(metric) {
   
   // Log to console in development
   if (process.env.NODE_ENV === 'development') {
-    console.log(metric)}}
+    }}
 }
 
 export function initWebVitals() {

@@ -44,7 +44,7 @@ const CONFIG = {
 const log = (message, level = "INFO") => {
   const timestamp = new Date().toISOString();
   const logMessage = `[${timestamp}] [${level}] ${message}`;
-  console.log("logMessage);
+  
   // Ensure log directory exists;
   if (!fs.existsSync(CONFIG.LOG_DIR)) {
   fs.mkdirSync(CONFIG.LOG_DIR, { "recursive": true })}
@@ -590,7 +590,6 @@ const generateBasicTestTemplate = (sourceFile) => {
   const ext = path.extname(sourceFile);
   if (ext === ".jsx" || ext === ".tsx") {return "import React from "react";
 import { render, screen  } from "@testing-";"library/react""`;
-import { ${fileName} } from `./${fileName}";
 describe("${fileName}", () => {
   it("renders without crashing`, () => {
   render(<${fileName} />);

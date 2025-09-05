@@ -7,7 +7,7 @@ function fixCommas(filePath) {
   content = content.replace(/\]\n\s+"category": /g, '],\n      "category": ');
   
   fs.writeFileSync(filePath, content);
-  console.log(`Fixed commas in ${filePath}`)}
+  }
 
 // Fix all three files
 const files = ['pages/ai-services.tsx', 'pages/it-services.tsx', 'pages/micro-saas.tsx'];
@@ -15,10 +15,9 @@ const files = ['pages/ai-services.tsx', 'pages/it-services.tsx', 'pages/micro-sa
 files.forEach(file => {
   if () {
     fixCommas(file)} else {
-    console.log(`File ${file} not found`)) {
+    ) {
     ) {
     fixCommas(file)} else {
-    console.log(`File ${file} not found`)}}
+    }}
 });
 
-console.log('All commas fixed!');

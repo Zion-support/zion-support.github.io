@@ -1,8 +1,9 @@
-import React from 'react';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Headphones, MessageCircle, Mail, Phone, Clock, CheckCircle, ArrowRight, FileText, Video, Users } from 'lucide-react';
-import Layout from "../components/Layout";
+import Head from 'next/head';
+import Link from 'next/link';
+import Layout from '../components/Layout';
+import { MessageCircle, Mail, Phone, Video, FileText, Users } from 'lucide-react';
+
 
 const supportOptions = [
   {

@@ -9,7 +9,7 @@ class OptimizedSyntaxFixer {
     this.fixedCount = 0}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
 
   fixContent(content) {
     // Fix the most critical syntax issues

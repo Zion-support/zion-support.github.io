@@ -10,7 +10,7 @@ class EnhancedAutomationScriptCreator {
     this.createdCount = 0}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
 
   createPerformanceMonitor() {
     const content = "#!/usr/bin/env node
@@ -25,7 +25,7 @@ class PerformanceMonitor {
     this.reportFile = path.join(this.projectRoot, 'performance-monitor-report.json')}
 
   log(message) {
-    console.log(\"[\${new Date().toISOString()}] \${message}\")}
+    .toISOString()}] \${message}\")}
 
   async checkBuildPerformance() {
     this.log('🔍 Checking build performance');
@@ -158,7 +158,7 @@ class PerformanceMonitor {
 const monitor = new PerformanceMonitor();
 monitor.run()
   .then(report => {
-    console.log('✅ Performance monitoring completed successfully');
+    
     process.exit(0)})
   .catch(error => {
     console.error('❌ Performance monitoring "failed": ', error.message);
@@ -185,7 +185,7 @@ class HealthChecker {
     this.reportFile = path.join(this.projectRoot, 'health-check-report.json')}
 
   log(message) {
-    console.log(\"[\${new Date().toISOString()}] \${message}\")}
+    .toISOString()}] \${message}\")}
 
   async checkFileStructure() {
     this.log('📁 Checking file structure');
@@ -338,7 +338,7 @@ class HealthChecker {
 const checker = new HealthChecker();
 checker.run()
   .then(report => {
-    console.log('✅ Health check completed successfully');
+    
     process.exit(0)})
   .catch(error => {
     console.error('❌ Health check "failed": ', error.message);
@@ -364,7 +364,7 @@ class SEOOptimizer {
     this.reportFile = path.join(this.projectRoot, 'seo-optimization-report.json')}
 
   log(message) {
-    console.log(\"[\${new Date().toISOString()}] \${message}\")}
+    .toISOString()}] \${message}\")}
 
   async checkMetaTags() {
     this.log('🏷️ Checking meta tags');
@@ -525,7 +525,7 @@ class SEOOptimizer {
 const optimizer = new SEOOptimizer();
 optimizer.run()
   .then(report => {
-    console.log('✅ SEO optimization check completed successfully');
+    
     process.exit(0)})
   .catch(error => {
     console.error('❌ SEO optimization check "failed": ', error.message);
@@ -551,7 +551,7 @@ class SecurityAuditor {
     this.reportFile = path.join(this.projectRoot, 'security-audit-report.json')}
 
   log(message) {
-    console.log(\"[\${new Date().toISOString()}] \${message}\")}
+    .toISOString()}] \${message}\")}
 
   async checkEnvironmentVariables() {
     this.log('🔐 Checking environment variables');
@@ -724,7 +724,7 @@ class SecurityAuditor {
 const auditor = new SecurityAuditor();
 auditor.run()
   .then(report => {
-    console.log('✅ Security audit completed successfully');
+    
     process.exit(0)})
   .catch(error => {
     console.error('❌ Security audit "failed": ', error.message);
@@ -765,7 +765,7 @@ const creator = new EnhancedAutomationScriptCreator();
 creator
   .run()
   .then(result => {
-    console.log('✅ Enhanced automation scripts created successfully');
+    
     process.exit(0)})
   .catch(error => {
     console.error(

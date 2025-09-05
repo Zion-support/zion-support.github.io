@@ -1,18 +1,13 @@
-<<<<<<< HEAD
-import { toast } from 'react-hot-toast'
 
 interface ToastOptions {
   duration?: number;
-  position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left";
+  position?: &quot;top-right&quot; | &quot;top-center&quot; | &quot;top-left&quot; | &quot;bottom-right&quot; | &quot;bottom-center&quot; | &quot;bottom-left&quot;;
 }
 
 export function useToast() {
-  const showToast = ("message": string, options?: ToastOptions) => {
+  const showToast = (&quot;message&quot;: string, options?: ToastOptions) => {
     return toast(message, options);
   };
 
   return { showToast };
 };
-=======
-<<<<<<< HEAD import { toast } from 'react-hot-toast' interface ToastOptions { duration?: number; position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left"} export function useToast() { const showToast = (message: string,options?: ToastOptions) => { return toast(message,options)}; return { showToast }}; ======= import { toast } from 'react-hot-toast'; interface ToastOptions { duration?: number; position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left"} export function useToast(...args[]): { const showToast = (message: string,options?: ToastOptions) => { return toast(message,options) return { showToast }};; ;';'; >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe

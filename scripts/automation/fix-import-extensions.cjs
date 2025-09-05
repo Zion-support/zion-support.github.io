@@ -10,7 +10,7 @@ class ImportExtensionFixer {
     this.fixesApplied = 0}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
 
   async fixImportExtensions() {
     this.log('Fixing import extensions...');
@@ -66,7 +66,7 @@ if (require.main === module) {
   const automation = new ImportExtensionFixer();
   automation.run()
     .then(() => {
-      console.log('Import Extension Fixer completed successfully!');
+      
       process.exit(0)})
     .catch(error => {
       console.error('Import Extension Fixer "failed": ', error);

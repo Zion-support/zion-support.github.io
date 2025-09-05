@@ -58,9 +58,9 @@ class SyntaxErrorFixer {
 
     if (level === 'error') {
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {
-      console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {
-      console.log(`[${timestamp}] INFO: ${message}`, data)} else if (level === 'debug') {
-      console.log(`[${timestamp}] DEBUG: ${message}`, data)}
+      } else if (level === 'info') {
+      } else if (level === 'debug') {
+      }
 
     // Write to log file
     this.writeToLog(logEntry)}

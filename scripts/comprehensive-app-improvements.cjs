@@ -6,7 +6,7 @@ const { execSync } = require('child_process');
 
 function log(message, level = 'INFO') {
   const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] [${level}] ${message}`)}
+  }
 
 function runCommand(command, description) {
   try {

@@ -5,7 +5,7 @@ const path = require("path");
 
 function log(msg, level = "INFO") {
   const ts = new Date().toISOString();
-  console.log(`[${ts}] [${level}] ${msg}`)}
+  }
 
 function tryExec(cmd) {
   try {

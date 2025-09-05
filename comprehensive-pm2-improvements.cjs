@@ -32,7 +32,7 @@ class ComprehensivePM2Improvements {
         const timestamp = new Date().toISOString();
         const logMessage = `[${timestamp}] ${message}\n`;
         fs.appendFileSync(this.logFile, logMessage);
-        console.log(`[${timestamp}] ${message}`);
+        
     }
 
     async runCommand(command, options = {}) {
@@ -323,7 +323,7 @@ class IntelligentErrorRecovery {
         const timestamp = new Date().toISOString();
         const logMessage = \"[\${timestamp}] \${message}\\n\";
         fs.appendFileSync(this.logFile, logMessage);
-        console.log(\"[\${timestamp}] \${message}\");
+        
     }
 
     async detectErrors() {
@@ -642,7 +642,7 @@ class MonitoringDashboard {
 
     start() {
         this.app.listen(this.port, () => {
-            console.log(\"📊 Monitoring dashboard running on "http": //localhost:\${this.port}\");
+            
         });
     }
 }

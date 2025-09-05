@@ -28,7 +28,7 @@ class $1 {
     this.autoFixesApplied = 0}
 ;
   async initialize() {
-  console.log(""🤖 AI-Powered Code Review System Initialized");
+  
     this.ensureLogDirectory();
     this.loadReviewHistory();
         // Start continuous monitoring;
@@ -77,7 +77,7 @@ class $1 {
   }
 ;
   async startContinuousReview() {
-  console.log(""🔍 Starting continuous code review...");
+  
     // Initial review;
     await this.performFullCodeReview();
     // Set up file watching for real-time reviews;
@@ -87,7 +87,7 @@ class $1 {
   await this.performFullCodeReview()}, 30 * 60 * 1000); // Every 30 minutes}
 ;
   async performFullCodeReview() {
-  console.log("📋 Performing comprehensive code review...");
+  
     const startTime = Date.now();
     const reviewResults = {
   "timestamp": new Date().toISOString(),
@@ -133,14 +133,14 @@ class $1 {
       this.updateReviewHistory(reviewResults);
       // Log results;
       this.logReviewResults(reviewResults);
-      console.log(✅ Code review completed in ${reviewResults.duration}ms);console.log(📊 Found ${reviewResults.issues.length} issues, ${reviewResults.improvements.length} improvements"")} catch (error) {
+      } catch (error) {
   console.error("❌ Error during code "review": ", error)} catch (error) {
   console.error("❌ Error during code "review": ", error);
 this.logError("Code review failed", error)}
   }
 ;
   async reviewTypeScriptFiles(results) {
-  console.log(""🔍 Reviewing ""TypeScript/JavaScript"" files...");
+  
     const tsFiles = this.findFiles(["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]);
     for (const file of tsFiles) {
   try {
@@ -204,9 +204,9 @@ this.logError("Code review failed", error)}
     return results}
 ;
   async reviewReactComponents(results) {
-  console.log(""⚛️ Reviewing React components...");
+  
   async reviewReactComponents(results) {
-  console.log("⚛️ Reviewing React components...");
+  
     const reactFiles = this.findFiles(["**/*.tsx", "**/*.jsx"]);
     for (const file of reactFiles) {
   try {
@@ -266,7 +266,7 @@ this.logError("Code review failed", error)}
     return results}
 ;
   async reviewConfigFiles(results) {
-  console.log(""⚙️ Reviewing configuration files...");
+  
     const configFiles = ["package.json", "tsconfig.json", "next.config.js", "tailwind.config.js", "eslint.config.js"];
     for (const configFile of configFiles) {
   if (fs.existsSync(configFile)) {
@@ -325,7 +325,7 @@ this.logError("Code review failed", error)}
     return results}
 ;
   async reviewDependencies(results) {
-  console.log(""📦 Reviewing package dependencies...");
+  
     try {
   // Check for outdated packages;
       const outdatedCheck = execSync("npm outdated --json", {
@@ -333,7 +333,7 @@ this.logError("Code review failed", error)}
         "encoding": "utf8",
         "stdio": "pipe";
   async reviewDependencies(results) {
-  console.log("📦 Reviewing package dependencies...");
+  
     try {
   // Check for outdated packages;
       const outdatedCheck = execSync("npm outdated --json", {
@@ -375,18 +375,18 @@ this.logError("Code review failed", error)}
       }
       } catch (error) {
   // npm commands might fail if no issues found;
-      console.log(""No dependency issues found")}
+      }
   }
 ;
   async generateAISuggestions(results) {
-  console.log(""🧠 Generating AI-powered suggestions...");
+  
     // Analyze patterns and generate intelligent suggestions} catch (error) {
   // npm commands might fail if no issues found;
-      console.log(""No dependency issues found")}
+      }
   }
 ;
   async generateAISuggestions(results) {
-  console.log(""🧠 Generating AI-powered suggestions...");
+  
     // Analyze patterns and generate intelligent suggestions;
     const patterns = this.analyzeCodePatterns(results);
     for (const pattern of patterns) {
@@ -397,11 +397,11 @@ this.logError("Code review failed", error)}
         "message": pattern.message,
         "line": 0} catch (error) {
   // npm commands might fail if no issues found;
-      console.log("No dependency issues found")}
+      }
   }
 ;
   async generateAISuggestions(results) {
-  console.log("🧠 Generating AI-powered suggestions...");
+  
     // Analyze patterns and generate intelligent suggestions;
     const patterns = this.analyzeCodePatterns(results);
     const patterns = this.analyzeCodePatterns(results);
@@ -444,7 +444,7 @@ this.logError("Code review failed", error)}
     return patterns}
 ;
   async applyAutoFixes(results) {
-  console.log(""🔧 Applying automatic fixes...");
+  
     let fixesApplied = 0;
     for (const issue of results.issues) {
   if (issue.severity === "info" && issue.type === "typescript`) {
@@ -456,7 +456,7 @@ this.logError("Code review failed", error)}
           results.autoFixes.push(issue)}
       }
     }
-    console.log(✅ Applied ${fixesApplied} automatic fixes)}
+    }
 ;
   async autoFixIssue(issue) {
   try {
@@ -592,12 +592,12 @@ this.logError("Code review failed", error)}
 }
 ;
   watchForChanges() {
-  console.log(""👀 Setting up file change monitoring...");
+  
     // Simple file watching for demonstration;
     // In production, you"d use chokidar or similar;
     setInterval(() => {
   watchForChanges() {
-  console.log("👀 Setting up file change monitoring...");
+  
     // Simple file watching for demonstration;
     // In production, you"d use chokidar or similar;
     setInterval(() => {
@@ -609,7 +609,7 @@ this.logError("Code review failed", error)}
   "cwd": this.projectRoot,
         "encoding": "utf8"});
       if (gitStatus.trim()) {
-  console.log(""📝 Changes detected, performing quick review...");
+  
         await this.performQuickReview()}
     } catch (error) {
   // Git might not be available}
@@ -647,7 +647,7 @@ this.logError("Code review failed", error)}
   try {
   const content = fs.readFileSync(filePath, "utf8');
       const results = await this.analyzeTypeScriptFile(filePath, content);
-      if (results.issues.length > 0 || results.improvements.length > 0) {console.log(🔍 Quick review of ${filePath}:);console.log(   "Issues": ${results.issues.length}, "Improvements": ${results.improvements.length}"")}
+      if (results.issues.length > 0 || results.improvements.length > 0) {}
     } catch (error) {  console.error(`Error reviewing changed file ${filePath  }:`, error)}
   }
 }

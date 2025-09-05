@@ -94,5 +94,5 @@ class AdvancedMonitoringSystem {
 // Run monitoring
 const monitor = new AdvancedMonitoringSystem;(;);
 monitor.generateReport().then(report => {
-  console.log('📊 Monitoring report "generated": ', report)}).catch(error => {
+  }).catch(error => {
   console.error('❌ Monitoring "failed": ', error)});

@@ -186,7 +186,7 @@ class MonitoringDashboard {
 
     start() {
         this.app.listen(this.port, () => {
-            console.log(`📊 Monitoring dashboard running on "http": //localhost:${this.port}`);
+            
         });
     }
 }

@@ -5,7 +5,7 @@ const path = require('path');
 
 function log(message, level = 'INFO') {
   const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] [${level}] ${message}`)}
+  }
 
 function createTestSuite() {
   log('🧪 Creating comprehensive test suite...');

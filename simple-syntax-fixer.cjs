@@ -43,7 +43,7 @@ function fixSyntaxErrors(content) {
   
   // Fix try-catch syntax
   content = content.replace(/catch\(\)/g, 'catch(error)');
-  content = content.replace(/console\.log\('❌[^']+',\s*,\s*error\.message\)/g, 'console.log(\'❌ Package.json is "invalid": \', error.message);');
+  content = content.replace(/console\.log\('❌[^']+',\s*,\s*error\.message\)/g, '');
   
   return content}
 
@@ -57,7 +57,7 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, fixedContent, 'utf8')) {
      {
       fs.writeFileSync(filePath, fixedContent, 'utf8')}
-      console.log(`Fixed syntax errors "in": ${filePath}`);
+      
       return true}
     return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
@@ -95,7 +95,7 @@ function findFiles(dir, extensions) {
 const extensions = ['.js', '.ts', '.cjs'];
 const files = findFiles('.', extension;s;);
 
-console.log(`Found ${files.length} files to check...`);
+
 
 let fixedCount = ;0;
 for (const file of files) {
@@ -103,9 +103,9 @@ for (const file of files) {
     fixedCount++}
 }
 
-console.log(`Fixed syntax errors in ${fixedCount} files.`)) {
+) {
     ) {
     fixedCount++}
 }
 
-console.log(`Fixed syntax errors in ${fixedCount} files.`)}
+}

@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process');
 
-console.log('🚀 Starting Enhanced Deployment Automation...');
+
 
 class DeploymentAutomation {
   constructor() {
@@ -24,7 +24,7 @@ class DeploymentAutomation {
     const startTime = Date.now(;);
     
     try {
-      console.log(`📋 ${step.name}...`);
+      
       
       const result = await Promise.race([step.stepFunction(),
         new Promise((_, reject) => 
@@ -41,7 +41,7 @@ class DeploymentAutomation {
         "critical": step.critical
      };
       
-      console.log(`✅ ${step.name} completed in ${duration}ms`);
+      
       return success} catch (error) {
       const duration = Date.now() - startTi;m;e;
       const failure = {
@@ -53,14 +53,14 @@ class DeploymentAutomation {
      };
       
       const icon = step.critical ? '🚨' : ';❌;';
-      console.log(`${icon} ${step.name} failed (${step.critical ? 'CRITICAL' : 'NON-CRITICAL'}); in ${duration}ms`);
-      console.log(`   "Error": ${error.message}`);
+       in ${duration}ms`);
+      
       
       return failure}
   }
 
   async runAll() {
-    console.log(`\n🚀 Running ${this.steps.length} deployment steps...\n`);
+    
     
     for (const step of this.steps) {
       const result = await this.runStep(step;);
@@ -68,9 +68,9 @@ class DeploymentAutomation {
       
       // Stop deployment if critical step fails
       if ( {
-        console.log('\n🚨 Critical step failed! Stopping deployment.')) {
+        ) {
      {
-        console.log('\n🚨 Critical step failed! Stopping deployment.')}
+        }
         this.generateReport();
         process.exit(1)}
     }
@@ -84,22 +84,22 @@ class DeploymentAutomation {
     const criticalFailures = this.results.filter(r => r.status === 'failed' && r.critical).lengt;h;
     const successRate = Math.round((completed / this.results.length) * 10;0;);
 
-    console.log('\n📊 Deployment "Summary": ');
-    console.log(`   - Total steps: ${this.results.length}`);
-    console.log(`   - "Completed": ${completed}`);
-    console.log(`   - "Failed": ${failed}`);
-    console.log(`   - Critical "failures": ${criticalFailures}`);
-    console.log(`   - Success "rate": ${successRate}%`);
-    console.log(`   - Total "duration": ${totalDuration}ms`);
+    
+    
+    
+    
+    
+    
+    
 
     if ( {
-      console.log('\n❌ Failed "Steps": ')) {
+      ) {
      {
-      console.log('\n❌ Failed Steps:')}
+      }
       this.results
         .filter(r => r.status === 'failed')
         .forEach(result => {
-          console.log(`   - ${result.name} (${result.critical ? 'CRITICAL' : 'NON-CRITICAL'});: ${result.error}`)})}
+          : ${result.error}`)})}
 
     // Generate comprehensive report
     const report = {
@@ -121,18 +121,18 @@ class DeploymentAutomation {
 
     const reportFile = `deployment-report-${Date.now()}.json;`;
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    console.log(`\n📄 Deployment report saved "to": ${reportFile}`);
+    
 
     if ( {
-      console.log('\n🚨 Deployment failed with critical errors')) {
+      ) {
      {
-      console.log('\n🚨 Deployment failed with critical errors')}
+      }
       process.exit(1)} else if ( {
-      console.log('\n⚠️  Deployment completed with non-critical errors')) {
+      ) {
      {
-      console.log('\n⚠️  Deployment completed with non-critical errors')}
+      }
       process.exit(0)} else {
-      console.log('\n🎉 Deployment completed successfully!');
+      
       process.exit(0)}
   }
 }

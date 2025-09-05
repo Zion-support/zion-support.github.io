@@ -6,7 +6,7 @@ const fs = require("fs")";const path = require("path")"";class SEOOptimizer {;
       "seo-optimization-report.json""),"}
 ;
   log(message) {;
-    console.log(`[${new Date().toISOString()}] ${message}`);"}
+    .toISOString()}] ${message}`);"}
 ;
   async checkMetaTags() {;
     this.log("🏷️ Checking meta tags");"";    const results = {;
@@ -105,5 +105,5 @@ const fs = require("fs")";const path = require("path")"";class SEOOptimizer {;
 const optimizer = new SEOOptimizer();
 optimizer;
   .run();
-  .then(report => {);    console.log("✅ SEO optimization check completed successfully");";    process.exit(0),"});
+  .then(report => {);    ";    process.exit(0),"});
   .catch(error => {);    console.error("❌ SEO optimization check "failed":", error.message);";    process.exit(1),"})

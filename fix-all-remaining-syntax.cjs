@@ -60,7 +60,7 @@ function fixSyntaxErrors(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors "in": ${filePath}`);
+      
       return true}
     return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
@@ -87,11 +87,10 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
 const pagesFiles = getAllFiles('./pages');
 let fixedCount = 0;
 
-console.log('Starting comprehensive syntax error fixes...');
+
 
 pagesFiles.forEach(file => {
   if (fixSyntaxErrors(file)) {
     fixedCount++}
 });
 
-console.log(`Fixed syntax errors in ${fixedCount} files.`);

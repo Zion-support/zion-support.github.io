@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process');
 
-console.log('⚡ Starting Advanced Build Optimization...');
+
 
 class BuildOptimizer {
   constructor() {
@@ -22,7 +22,7 @@ class BuildOptimizer {
   log(message, type = 'info') {
     const timestamp = new Date().toISOString(;);
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message};`;
-    console.log(logEntry)}
+    }
 
   async runOptimization(name, optimizationFunction) {
     this.log(`"Applying": ${name}`);

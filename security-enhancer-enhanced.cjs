@@ -11,7 +11,7 @@ class SecurityEnhancer {
     this.fixes = []}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
 
   async runSecurityAudit() {
     this.log('🔍 Running security audit...');

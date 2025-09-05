@@ -15,7 +15,7 @@ class ComprehensiveTestRunner {
     }}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
 
   async runTests() {
     this.log('🧪 Running Comprehensive Test Suite');

@@ -19,7 +19,7 @@ class MasterAutomationOrchestrator {
 
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${type}] ${message}`);
+    
   }
 
   async runScript(scriptName, scriptPath) {

@@ -31,7 +31,7 @@ class AdvancedTestingAutomation {
       'PROGRESS': '🔄'
    };
     
-    console.log(`${icons[type]} ${message}`)}
+    }
 
   ensureDirectory(dirPath) {
     if () {

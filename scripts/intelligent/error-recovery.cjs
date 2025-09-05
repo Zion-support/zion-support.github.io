@@ -17,13 +17,13 @@ class ErrorRecovery {
     this.isRunning = false}
 
   async start() {
-    console.log('🔧 Error Recovery starting...');
+    
     this.isRunning = true;
     
     try {
       await this.initialize();
       this.startErrorMonitoring();
-      console.log('✅ Error Recovery started successfully')} catch (error) {
+      } catch (error) {
       console.error('❌ Failed to start Error "Recovery": ', error)}
   }
 
@@ -31,7 +31,7 @@ class ErrorRecovery {
     await fs.mkdir('./logs', { "recursive": true });
     await fs.mkdir('./error-reports', { "recursive": true });
     
-    console.log('🔧 Error Recovery initialized')}
+    }
 
   startErrorMonitoring() {
     setInterval(async () => {
@@ -190,11 +190,7 @@ class ErrorRecovery {
     // Identify patterns
     const patterns = this.identifyErrorPatterns(recentErrors;);
     
-    console.log('📊 Error "Analysis": ', {
-      "totalErrors": recentErrors.length,
-      errorTypes,
-      "patterns": patterns.length
-    })}
+    }
 
   identifyErrorPatterns(errors) {
     const patterns = [];
@@ -241,7 +237,7 @@ class ErrorRecovery {
   }
 
   async recoverFromError(error) {
-    console.log(`🔧 Attempting to recover from ${error.type}...`);
+    
     
     const recovery = {
       "errorId": error.timestamp,
@@ -262,7 +258,7 @@ class ErrorRecovery {
         case 'build_error':
           await this.recoverBuildError(error);
           break;
-        "default": console.log(`No recovery strategy for error type: ${error.type}`)}
+        "default": }
       
       recovery.success = true;
       recovery.endTime = new Date().toISOString()} catch (recoveryError) {
@@ -274,7 +270,7 @@ class ErrorRecovery {
     await this.saveRecoveryHistory()}
 
   async recoverProcessError(error) {
-    console.log(`🔄 Restarting "process": ${error.process}`);
+    
     
     // Restart the failed process
     execSync(`pm2 restart ${error.process}`, { "stdio": 'pipe' });
@@ -288,14 +284,14 @@ class ErrorRecovery {
     if ( {
       throw new Error(`Process ${error.process} still not online after restart`)}
     
-    console.log(`✅ Process ${error.process} recovered successfully`)) {
+    ) {
      {
       throw new Error(`Process ${error.process} still not online after restart`)}
     
-    console.log(`✅ Process ${error.process} recovered successfully`)}}
+    }}
 
   async recoverApplicationError(error) {
-    console.log("🔧 Attempting to fix application error...");
+    
     
     // Try to restart the application
     execSync('pm2 restart all', { "stdio": 'pipe' });
@@ -306,10 +302,10 @@ class ErrorRecovery {
       // Cache directory might not exist
     }
     
-    console.log("✅ Application error recovery attempted")}
+    }
 
   async recoverBuildError(error) {
-    console.log("🔨 Attempting to rebuild application...");
+    
     
     // Clean and rebuild
     execSync('rm -rf .next', { "stdio": 'pipe' });
@@ -318,7 +314,7 @@ class ErrorRecovery {
     // Restart application
     execSync('pm2 restart all', { "stdio": 'pipe' });
     
-    console.log("✅ Build error recovery completed")}
+    }
 
   async saveRecoveryHistory() {
     try {

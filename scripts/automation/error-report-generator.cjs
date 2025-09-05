@@ -18,7 +18,7 @@ class ErrorReportGenerator {
       parseInt(process.env.AUTOMATION_INTERVAL) || 3600000; // 1 hour default}
 ;
   log(message) {
-  console.log(`[${new Date().toISOString()}] [ErrorReportGenerator] ${message}";
+  .toISOString()}] [ErrorReportGenerator] ${message}";
     )}
 ;
   async run() {

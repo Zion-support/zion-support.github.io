@@ -2,8 +2,6 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-console.log('🚀 Improved PR Merge Automation System')
-console.log('======================================')
 class ImprovedPRMergeAutomation {
   constructor() {
     this.processedBranches = []
@@ -16,8 +14,7 @@ class ImprovedPRMergeAutomation {
   log(message, type = 'info') {
     const timestamp = new Date().toISOString()
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`
-    console.log(logEntry)
-  }
+    }
   async runCommand(command, description) {
     try {
       this.log(`"Running": ${description}`)
@@ -152,13 +149,9 @@ class ImprovedPRMergeAutomation {
       // "Strategy": Keep our changes (HEAD) for most conflicts
       // Remove conflict markers and keep the HEAD version
       resolvedContent = resolvedContent.replace(
-        /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g;
         '$1'
       )
       // Handle any remaining conflict markers
-      resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n/g, '')
-      resolvedContent = resolvedContent.replace(/=======\n/g, '')
-      resolvedContent = resolvedContent.replace(/>>>>>>> [^\n]+\n/g, '')
       // Write the resolved content
       fs.writeFileSync(filePath, resolvedContent)
       this.log(`✅ Resolved conflicts "in": ${filePath}`)
@@ -208,34 +201,20 @@ class ImprovedPRMergeAutomation {
     // Save report to file
     fs.writeFileSync('improved-pr-merge-report.json', JSON.stringify(report, null, 2))
     // Display summary
-    console.log('\n🎉 Improved PR Merge Automation Complete!')
-    console.log('======')
-    console.log(`Total branches "processed": ${this.processedBranches.length}`)
-    console.log(`Successfully "merged": ${this.mergedBranches.length}`)
-    console.log(`Failed "branches": ${this.failedBranches.length}`)
-    console.log(`Skipped "branches": ${this.skippedBranches.length}`)
-    console.log(`Conflicts "resolved": ${this.conflictsResolved}`)
-    console.log(`"Duration": ${duration} seconds`)
     if (this.failedBranches.length > 0) {
-      console.log('\n❌ Failed "branches": ')
       this.failedBranches.forEach(failure => {
-        console.log(`  - ${failure.branch}: ${failure.error}`)
-      })
+        })
     }
     if (this.skippedBranches.length > 0) {
-      console.log('\n⏭️ Skipped "branches": ')
       this.skippedBranches.forEach(branch => {
-        console.log(`  - ${branch}`)
-      })
+        })
     }
-    console.log('\n📊 Detailed report saved "to": improved-pr-merge-report.json')
-  }
+    }
 }
 // Run the automation
 const automation = new ImprovedPRMergeAutomation()
 automation.runAutomation().then(() => {
-  console.log('\n🚀 Improved PR merge automation completed!')
-}).catch(error => {
+  }).catch(error => {
   console.error('Automation "failed": ', error.message)
   process.exit(1)
 })

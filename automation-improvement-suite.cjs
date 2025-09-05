@@ -18,7 +18,7 @@ class AutomationImprovementSuite {
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
+    .toISOString()}] ${message}`);
   }
 
   async runCommand(command, description) {
@@ -52,7 +52,7 @@ class ComprehensiveErrorFixer {
     this.fixedCount = 0}
 
   log(message) {
-    console.log(\"[\${new Date().toISOString()}] \${message}\")}
+    .toISOString()}] \${message}\")}
 
   fixSyntaxErrors(content) {
     // Fix common syntax issues
@@ -134,7 +134,7 @@ class PerformanceMonitor {
     }}
 
   log(message) {
-    console.log(\"[\${new Date().toISOString()}] \${message}\")}
+    .toISOString()}] \${message}\")}
 
   async analyzePerformance() {
     this.log('🔍 Analyzing Performance Metrics');
@@ -209,7 +209,7 @@ class SecurityAuditor {
     this.recommendations = []}
 
   log(message) {
-    console.log(\"[\${new Date().toISOString()}] \${message}\")}
+    .toISOString()}] \${message}\")}
 
   async auditSecurity() {
     this.log('🔒 Running Security Audit');
@@ -321,7 +321,7 @@ class ComprehensiveTestRunner {
     }}
 
   log(message) {
-    console.log(\"[\${new Date().toISOString()}] \${message}\")}
+    .toISOString()}] \${message}\")}
 
   async runTests() {
     this.log('🧪 Running Comprehensive Test Suite');

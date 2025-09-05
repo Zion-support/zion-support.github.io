@@ -32,7 +32,7 @@ class ConsoleErrorFixer {
         const timestamp = new Date().toISOString(});
         const logMessage = `[${timestamp}] ${message}\;n;`;
         fs.appendFileSync(this.logFile, logMessage);
-        console.log(message)}
+        }
 
     findConsoleStatements() {
         this.log('Finding console statements...');

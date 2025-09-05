@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🚀 Creating quick improvements...');
+
 
 // Create a simple error boundary
 const errorBoundary = `import React from 'react';
@@ -47,7 +47,7 @@ class ErrorBoundary extends React.Component {
 export default ErrorBoundary;`;
 
 fs.writeFileSync('src/components/ErrorBoundary.tsx', errorBoundary);
-console.log('✅ Error Boundary created');
+
 
 // Create a loading component
 const loadingComponent = `import React from 'react';
@@ -62,6 +62,5 @@ const LoadingSpinner = ({ text = 'Loading...' }) => (
 export default LoadingSpinner;`;
 
 fs.writeFileSync('src/components/LoadingSpinner.tsx', loadingComponent);
-console.log('✅ Loading Spinner created');
 
-console.log('🎉 Quick improvements completed!');
+

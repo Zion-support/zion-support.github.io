@@ -66,6 +66,6 @@ function run() {
 				console.error(`Failed to repair ${rel}: ${e.message}`)}
 		}
 	}
-	console.log(`Repaired imports/exports in ${changed} of ${total} files.`)}
+	}
 
 run();

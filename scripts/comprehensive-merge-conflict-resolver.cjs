@@ -15,7 +15,7 @@ class ComprehensiveMergeConflictResolver {
 
   async log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`)}
+    }
 
   async findFilesWithConflicts() {
     const filesWithConflicts = [];

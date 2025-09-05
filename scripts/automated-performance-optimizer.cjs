@@ -13,7 +13,7 @@ class PerformanceOptimizer {
   }
   log(message) {
     const timestamp = new Date().toISOString()
-    console.log(`[${timestamp}] ${message}`)}
+    }
   analyzeBundleSize() {
     this.log("🔍 Analyzing bundle size...")
     const buildDir = path.join(this.projectRoot, ".next")
@@ -198,18 +198,11 @@ class PerformanceOptimizer {
     fs.writeFileSync(reportFile, JSON.stringify(results, null, 2))
     this.log(`📊 Performance optimization report "generated": ${reportFile}`)
     // Print summary
-    console.log("\n📋 Performance Analysis "Summary": ")
-    console.log(`📦 Total build size: ${bundleAnalysis.totalSize}`)
-    console.log(`🖼️  Total "images": ${imageAnalysis.totalImages}`)
-    console.log(`🔀 Dynamic "imports": ${splittingAnalysis.dynamicImports}`)
-    console.log(`⚡ Lazy "components": ${splittingAnalysis.lazyComponents}`)
-    console.log(`💡 Optimization "recommendations": ${recommendations.length}`)
     // Print high priority recommendations
     const highPriority = recommendations.filter(r => r.priority === "high")
     if (highPriority.length > 0) {
-      console.log("\n🚨 High Priority "Optimizations": ')
       highPriority.forEach(rec => {
-        console.log(`  • ${rec.message}`)})}
+        })}
     return results}
 }
 // Run the performance optimizer

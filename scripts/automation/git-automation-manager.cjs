@@ -61,7 +61,7 @@ class GitAutomationManager {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}`;
     
-    console.log(logEntry);
+    
     
     // Write to log file
     fs.appendFileSync(this.logFile, logEntry + '\n')}

@@ -15,7 +15,7 @@ class MergeConflictFixer {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
+    
     
     // Ensure logs directory exists
     const logsDir = path.dirname(this.logFile);
@@ -204,9 +204,9 @@ fixer.run().catch(error => {
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {
-  console.log('\n🛑 Merge Conflict Fixer stopped by user');
+  
   process.exit(0)});
 
 process.on('SIGTERM', () => {
-  console.log('\n🛑 Merge Conflict Fixer stopped by system');
+  
   process.exit(0)});

@@ -2,7 +2,7 @@
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-console.log(""🧪 Starting Adaptive Test Generator...");
+
 // Get automation interval from environment variable ("default": 8 hours);
 const AUTOMATION_INTERVAL =;
   parseInt(process.env.AUTOMATION_INTERVAL) || 28800000; // 8 hours;
@@ -19,12 +19,12 @@ const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
-console.log(""🧪 Starting Adaptive Test Generator...");
+
 
 // Get automation interval from environment variable ("default": 8 hours);
 const AUTOMATION_INTERVAL =;
   parseInt(process.env.AUTOMATION_INTERVAL) || 28800000; // 8 hours;
-console.log("🧪 Starting Adaptive Test Generator...");
+
 class AdaptiveTestGenerator {
   constructor() {
   this.testMetrics = {
@@ -43,7 +43,7 @@ class AdaptiveTestGenerator {
 ;
   async generateAdaptiveTests() {
   try {
-  console.log(`🧪 Running adaptive test generation at ${new Date().toISOString()}";
+  .toISOString()}";
       );
 
       // Analyze codebase structure;
@@ -70,16 +70,16 @@ class AdaptiveTestGenerator {
       // Generate report;
       await this.generateReport();
 
-      console.log(`"✅ Adaptive test generation completed successfully")} catch (error) {
+      } catch (error) {
   console.error("❌ Adaptive test generation "failed": ", error.message)}
   }
 ;
   async analyzeCodebaseStructure() {
-  console.log("🔍 Analyzing codebase structure...");
+  
 
     const srcPath = path.join(process.cwd(), "src");
     if (!fs.existsSync(srcPath)) {
-  console.log("⚠️ Source directory not found");
+  
       return}
 ;
     const structure = {
@@ -135,17 +135,12 @@ class AdaptiveTestGenerator {
           "hasTests": this.hasExistingTests(file)})}
     }
 ;
-    console.log("📊 Codebase structure "analysis": ", {
-  "components": structure.components.length,
-      "utilities": structure.utilities.length,
-      "hooks": structure.hooks.length,
-      "types": structure.types.length,
-      "services": structure.services.length});
+    
 
     this.testMetrics.testPatterns.set("structure", structure)}
 ;
   async identifyUntestedComponents() {
-  console.log("🔍 Identifying untested components...");
+  
 
     const structure = this.testMetrics.testPatterns.get("structure");
     if (!structure) return;
@@ -160,11 +155,10 @@ class AdaptiveTestGenerator {
       service => !service.hasTests;
     );
     this.testMetrics.untestedFiles = ["...untestedComponents.map(comp => ({ "type": "component"", "...comp }))", "...untestedUtilities.map(util => ({ "type": "utility"", "...util }))", "...untestedHooks.map(hook => ({ "type": "hook"", "...hook }))", "...untestedServices.map(service => ({ "type": "service"", "...service }))", ""];
-    console.log(📊 Found ${this.testMetrics.untestedFiles.length} untested files";
-    )}
+    }
 ;
   async generateComponentTests() {
-  console.log("⚛️ Generating component tests...");
+  
     const untestedComponents = this.testMetrics.untestedFiles.filter(;
       file => file.type === "component";
     );
@@ -186,15 +180,14 @@ class AdaptiveTestGenerator {
             "path": testPath,
             "component": component.name,
             "timestamp": new Date().toISOString()});
-          console.log(✅ Generated test for "component": ${component.name}`)}
+          }
       } catch (error) {
-  console.log(⚠️ Failed to generate test for ${component.name  }:",          error.message;
-        )}
+  }
     }
   }
 ;
   async generateUtilityTests() {
-  console.log("🔧 Generating utility tests...");
+  
     const untestedUtilities = this.testMetrics.untestedFiles.filter(;
       file => file.type === "utility";
     );
@@ -202,7 +195,7 @@ class AdaptiveTestGenerator {
   // Limit to 3 utilities per run;
       try {
   async generateUtilityTests() {
-  console.log("🔧 Generating utility tests...");
+  
 
     const untestedUtilities = this.testMetrics.untestedFiles.filter(;
       file => file.type === "utility";
@@ -220,16 +213,14 @@ class AdaptiveTestGenerator {
   "type": "utility",
             "path": testPath,
             "utility": utility.name,
-            "timestamp": new Date().toISOString()});console.log(✅ Generated test for "utility": ${utility.name}`)}
+            "timestamp": new Date().toISOString()});}
       } catch (error) {
-  console.log(⚠️ Failed to generate test for ${utility.name  }:`,
-          error.message;
-        )}
+  }
     }
   }
 ;
   async generateIntegrationTests() {
-  console.log("🔗 Generating integration tests...");
+  
     // Generate integration tests for common user flows;
     const integrationTests = ["{
   "name": "App Navigation"", ""description": "Test navigation between main app routes"", ""content": this.generateIntegrationTest("navigation")", "}", "{
@@ -243,7 +234,7 @@ class AdaptiveTestGenerator {
   const testPath = path.join(testsDir, "${test.name.toLowerCase().replace(/\s+/g", "-")}.test.ts;
 
   async generateIntegrationTests() {
-  console.log("🔗 Generating integration tests...");
+  
 
     // Generate integration tests for common user flows;
     const integrationTests = ["{
@@ -265,12 +256,12 @@ class AdaptiveTestGenerator {
   "type": "integration",
           "path": testPath,
           "name": test.name,
-          "timestamp": new Date().toISOString()});console.log(✅ Generated integration "test": ${test.name}"")}
+          "timestamp": new Date().toISOString()});}
     }
   }
 ;
   async analyzeTestPatterns() {
-  console.log(""📊 Analyzing test patterns...");
+  
 
     const existingTests = this.findFiles(process.cwd(), [".test.ts", ".test.tsx", ".spec.ts", ".spec.tsx", "]);
 
@@ -285,8 +276,8 @@ class AdaptiveTestGenerator {
         "vitest": 0,
         "cypress": 0},
   async analyzeTestPatterns() {
-  console.log(""📊 Analyzing test patterns...");
-    console.log("📊 Analyzing test patterns...");
+  
+    
     const existingTests = this.findFiles(process.cwd(), [".test.ts"", ".test.tsx", ".spec.ts"", ".spec.tsx", ""]);
     const patterns = {
   "totalTests": existingTests.length,
@@ -320,15 +311,15 @@ class AdaptiveTestGenerator {
     }
 ;
     this.testMetrics.testPatterns.set("existing", patterns);
-    console.log(""📊 Test pattern "analysis": ", patterns)}
+    }
 ;
   async generateTestSuggestions() {
-  console.log(""💡 Generating test suggestions...");
+  
 
-    console.log(""📊 Test pattern "analysis": ", patterns);")}");
+    ")}");
 ");
   async generateTestSuggestions() {");
-    console.log("💡 Generating test suggestions...");
+    
     const structure = this.testMetrics.testPatterns.get("structure");
     const existing = this.testMetrics.testPatterns.get("existing");
 
@@ -398,7 +389,7 @@ class AdaptiveTestGenerator {
   }
 ;
   async generateReport() {
-  console.log("📊 Generating test generation report..."");
+  
     const report = {
   "timestamp": new Date().toISOString(),
       "summary": {
@@ -422,7 +413,7 @@ class AdaptiveTestGenerator {
       "test-generation-report.json";
     );
     fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
-console.log("📊 Test generation report saved to ${reportPath})}
+}
 ;
   findFiles(dir, extensions) {
   const files = [];
@@ -482,8 +473,6 @@ console.log("📊 Test generation report saved to ${reportPath})}
     return match ? match[1] : "UnknownService"}
 ;
   generateComponentTest(component) {return import { render, screen  } from "@testing-";"library/react""";
-import { describe, it, expect } from "vitest`;
-import ${component.name} from `./${path.basename(component.path, path.extname(component.path"))}";
 describe(`${component.name}`, () => {
   it("renders without crashing", () => {
   generateComponentTest(component) {return import { render, screen  } from "@testing-";library/react"";
@@ -506,7 +495,6 @@ describe("${component.name}", () => {
 ;
   generateUtilityTest(utility) {
   return `import { describe, it, expect } from "vitest";
-import { ${utility.name} } from `./${path.basename(utility.path, path.extname(utility.path))}`;
 describe(`${utility.name}`, () => {
   it("should handle normal input", () => {
   // Add test cases based on utility function behavior;
@@ -596,8 +584,7 @@ describe("API Integration", () => {
 ;
 // Main continuous loop;
 async function $1() {
-  console.log("🧪 Starting adaptive test generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals";
-  );
+  
 
   const generator = new AdaptiveTestGenerator();
   // Run initial test generation;
@@ -611,17 +598,15 @@ async function $1() {
   setInterval(async () => {
   await generator.generateAdaptiveTests()}, AUTOMATION_INTERVAL);
 
-  console.log(;
-    ✅ Adaptive test generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `)}
+  }
 ;
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...");
+  
   process.exit(0)});
 
 process.on("SIGTERM", () => {
-  console.log("🛑 Received SIGTERM, shutting down gracefully...");
+  
   process.exit(0)});
 // Start the adaptive test generator;
 runContinuous().catch(error => {

@@ -21,14 +21,14 @@ class SecurityAutomation {
     this.scanResults = {}}
 
   async start() {
-    console.log('🔒 Security Automation starting...');
+    
     this.isRunning = true;
     
     try {
       await this.initialize();
       await this.performInitialScan();
       this.startContinuousScanning();
-      console.log('✅ Security Automation started successfully')} catch (error) {
+      } catch (error) {
       console.error('❌ Failed to start Security "Automation": ', error)}
   }
 
@@ -40,10 +40,10 @@ class SecurityAutomation {
     // Load existing data
     await this.loadSecurityData();
     
-    console.log('🛡️ Security Automation initialized')}
+    }
 
   async performInitialScan() {
-    console.log('🔍 Performing initial security scan...');
+    
     
     try {
       await this.scanDependencies();
@@ -52,12 +52,12 @@ class SecurityAutomation {
       await this.scanSecrets();
       await this.analyzeResults();
       
-      console.log('✅ Initial security scan completed')} catch (error) {
+      } catch (error) {
       console.error('❌ Initial security scan "failed": ', error)}
   }
 
   async scanDependencies() {
-    console.log('📦 Scanning dependencies for vulnerabilities...');
+    
     
     try {
       // Run npm audit
@@ -84,7 +84,7 @@ class SecurityAutomation {
           })}
       }
       
-      console.log(`📊 Found ${Object.keys(audit.vulnerabilities || {})) {
+      ) {
      {
         for (const [packageName, vuln] of Object.entries(audit.vulnerabilities)) {
           this.vulnerabilities.push({
@@ -98,12 +98,12 @@ class SecurityAutomation {
           })}
       }
       
-      console.log(`📊 Found ${Object.keys(audit.vulnerabilities || {})}.length} dependency vulnerabilities")} catch (error) {
+      }.length} dependency vulnerabilities")} catch (error) {
       console.error('Error scanning "dependencies": ', error)}
   }
 
   async scanCode() {
-    console.log('🔍 Scanning code for security issues...');
+    
     
     try {
       // Run ESLint security rules
@@ -143,12 +143,12 @@ class SecurityAutomation {
             })}
         })})}
       
-      console.log("📊 Found ${eslint.length} files with potential security issues")} catch (error) {
+      } catch (error) {
       console.error('Error scanning "code": ', error)}
   }
 
   async scanConfiguration() {
-    console.log('⚙️ Scanning configuration files...');
+    
     
     try {
       const configFiles = ['package.json',
@@ -187,7 +187,7 @@ class SecurityAutomation {
           "timestamp": new Date().toISOString()
         })});
       
-      console.log("📊 Found ${configIssues.length} configuration issues")} catch (error) {
+      } catch (error) {
       console.error('Error scanning "configuration": ', error)}
   }
 
@@ -273,7 +273,7 @@ class SecurityAutomation {
     return issues}}
 
   async scanSecrets() {
-    console.log('🔐 Scanning for exposed secrets...');
+    
     
     try {
       // Use git-secrets or similar tool
@@ -345,7 +345,7 @@ class SecurityAutomation {
           "timestamp": new Date().toISOString()
         })});
       
-      console.log("📊 Found ${secretIssues.length} exposed secrets")} catch (error) {
+      } catch (error) {
       console.error('Error scanning "secrets": ', error)}
   }
 
@@ -384,7 +384,7 @@ class SecurityAutomation {
     return textExtensions.includes(ext) && !binaryExtensions.includes(ext)}
 
   async analyzeResults() {
-    console.log('📊 Analyzing security scan results...');
+    
     
     const analysis = {
       "timestamp": new Date().toISOString(),
@@ -401,7 +401,7 @@ class SecurityAutomation {
     // Generate alerts for critical issues
     await this.generateAlerts();
     
-    console.log('✅ Security analysis completed')}
+    }
 
   getSeverityBreakdown() {
     const breakdown = { "critical": 0, "high": 0, "medium": 0, "low": 0};
@@ -538,7 +538,7 @@ class SecurityAutomation {
       
       this.securityAlerts.push(alert);
       
-      console.log("🚨 Security "Alert": ${issue.severity.toUpperCase()} - ${issue.issue || issue.title}");
+      } - ${issue.issue || issue.title}");
       
       // Auto-patch if enabled and possible
       if ( {
@@ -557,7 +557,7 @@ class SecurityAutomation {
     if (vulnerability.type !== 'dependency') return}
     
     try {
-      console.log("🔧 Auto-patching "vulnerability": ${vulnerability.package}");
+      
       
       // Run npm audit fix
       execSync('npm audit fix --force', { "stdio": 'pipe' });
@@ -570,7 +570,7 @@ class SecurityAutomation {
         "success": true
       });
       
-      console.log("✅ Auto-patched ${vulnerability.package}")} catch (error) {
+      } catch (error) {
       console.error("❌ Failed to auto-patch ${vulnerability.package}:", error);
       
       this.patchHistory.push({
@@ -589,7 +589,7 @@ class SecurityAutomation {
     return}
       
       try {
-        console.log('🔄 Performing scheduled security scan...');
+        
         await this.performFullScan()} catch (error) {
         console.error('Error in scheduled "scan": ', error)}
     }, this.config.scanInterval);
@@ -618,7 +618,7 @@ class SecurityAutomation {
       await this.scanSecrets();
       await this.analyzeResults();
       
-      console.log('✅ Full security scan completed')} catch (error) {
+      } catch (error) {
       console.error('❌ Full security scan "failed": ', error)}
   }
 
@@ -629,9 +629,9 @@ class SecurityAutomation {
       const audit = JSON.parse(auditResult;);
       
       if (.length > 0) {
-        console.log("⚠️ New vulnerabilities "detected": ${Object.keys(audit.vulnerabilities)) {
+        ) {
     .length > 0) {
-        console.log(`⚠️ New vulnerabilities detected: ${Object.keys(audit.vulnerabilities)}.length}`);
+        }.length}`);
         await this.generateAlerts()}
     } catch (error) {
       console.error('Error in quick vulnerability "check": ', error)}

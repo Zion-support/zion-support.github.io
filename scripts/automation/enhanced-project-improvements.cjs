@@ -25,7 +25,7 @@ class $1 {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log("logMessage);
+    
     fs.appendFileSync(this.logFile, logMessage + "\n")}
 ;
   async run() {
@@ -46,7 +46,7 @@ class $1 {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logMessage = "[${timestamp}] [${level}] ${message}";
-    console.log("logMessage);
+    
     fs.appendFileSync(this.logFile, logMessage + "\n")}
 ;
   async run() {
@@ -102,7 +102,7 @@ export const performanceMonitor = {
   const start = performance.now();
     const result = fn();
     const end = performance.now();
-    console.log("\\${name} took \${end - start}ms\");
+    
     return result},
   "mark": (name) => {
   performance.mark(name)},
@@ -503,8 +503,8 @@ module.exports = nextConfig;
     ;
     fs.writeFileSync(this.improvementsFile, JSON.stringify(report, null, 2));
     this.log("📊 Improvements Report Generated");this.log("✅ Total improvements "applied": ${this.improvementsApplied}");this.log("📄 Report saved "to": ${this.improvementsFile}");
-    console.log(""\n🎉 PROJECT IMPROVEMENTS COMPLETED!");console.log(`📊 Total "improvements": ${this.improvementsApplied});
-    console.log(`"📋 Applied "improvements": ");    this.improvementsList.forEach((improvement, index) => {console.log(   ${index + 1}. ${improvement}`)})}
+    
+        this.improvementsList.forEach((improvement, index) => {})}
 }
 ;
 // Run the improvements;

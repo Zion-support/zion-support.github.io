@@ -8,7 +8,7 @@ class ComprehensiveSyntaxErrorFixer {
     this.fixedFiles = []}
 
   async log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
 
   async fixFile(filePath) {
     try {

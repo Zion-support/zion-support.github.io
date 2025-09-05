@@ -26,7 +26,7 @@ class $1 {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}`;
-    console.log("logEntry);
+    
     // Write to log file;
     const logFile = path.join(this.logsDir, "merge-resolver.log");
     fs.appendFileSync(logFile, logEntry + "\n")}
@@ -46,7 +46,7 @@ class $1 {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logEntry = "[${timestamp}] [${level}] ${message}";
-    console.log("logEntry);
+    
 
     // Write to log file;
     const logFile = path.join(this.logsDir, "merge-resolver.log");

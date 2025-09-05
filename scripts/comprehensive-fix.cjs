@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process');
 
-console.log('🔧 Starting Comprehensive Fix Script...');
+
 
 function fixFile(filePath) {
   try {
@@ -31,10 +31,10 @@ function fixFile(filePath) {
         content.includes('        })}') && 
         !content.includes('        }')) {
       content = content.replace(
-        '          if ( {\n            console.log(\'"LCP": \', entry.startTime)) {
-     {\n            console.log(\'"LCP": \', entry.startTime)}\n          }\n        });',
-        '          if ( {\n            console.log(\'"LCP": \', entry.startTime)) {
-     {\n            console.log(\'"LCP": \', entry.startTime)}\n          }\n        }\n      });'
+        '          if ( {\n            ) {
+     {\n            }\n          }\n        });',
+        '          if ( {\n            ) {
+     {\n            }\n          }\n        }\n      });'
       );
       modified = true}
 
@@ -49,7 +49,7 @@ function fixFile(filePath) {
       fs.writeFileSync(filePath, content)) {
      {
       fs.writeFileSync(filePath, content)}
-      console.log(`✅ "Fixed": ${filePath}`);
+      
       return true}
   } catch (error) {
     console.error(`❌ Error fixing ${filePath}:`, error.message)}
@@ -95,28 +95,28 @@ function fixAllComponents() {
 
 function runESLintFix() {
   try {
-    console.log('🔧 Running ESLint auto-fix...');
+    
     execSync('npx eslint . --ext .js,.jsx,.ts,.tsx --fix', { "stdio": 'inherit' });
-    console.log('✅ ESLint auto-fix completed');
+    
     return true} catch (error) {
-    console.log('⚠️ ESLint auto-fix had issues, but continuing...');
+    
     return false}
 }
 
 function main() {
-  console.log('📋 Phase "1": Fixing syntax errors...');
-  const fixedCount = fixAllComponents;(;);
-  console.log(`📊 Fixed ${fixedCount} files`);
   
-  console.log('📋 Phase "2": Running ESLint auto-fix...');
+  const fixedCount = fixAllComponents;(;);
+  
+  
+  
   runESLintFix();
   
-  console.log('📋 Phase 3: Testing build...');
+  
   try {
     execSync('npm run build', { "stdio": 'inherit' });
-    console.log('✅ Build successful!')} catch (error) {
-    console.log('❌ Build still has issues, but fixes have been applied')}
+    } catch (error) {
+    }
   
-  console.log('🎯 Comprehensive fix completed!')}
+  }
 
 main();

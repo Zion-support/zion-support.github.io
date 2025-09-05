@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 
-console.log("🔧 Starting comprehensive lint error fixes...");
+
 
 // Function to remove unused imports from lucide-react
 function removeUnusedLucideImports(filePath) {
@@ -60,7 +60,7 @@ function removeUnusedLucideImports(filePath) {
     const newContent = newLines.join('\n');
     if (newContent !== content) {
       fs.writeFileSync(filePath, newContent);
-      console.log(`✅ Cleaned unused lucide imports "in": ${filePath}`);
+      
       return true}
     return false} catch (error) {
     console.error(`❌ Error cleaning imports in ${filePath}:`, error.message);
@@ -95,7 +95,7 @@ function fixSyntaxErrors(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed syntax errors "in": ${filePath}`);
+      
       return true}
     return false} catch (error) {
     console.error(`❌ Error fixing syntax in ${filePath}:`, error.message);
@@ -133,7 +133,7 @@ function findSourceFiles(dir) {
 // Main execution
 try {
   const sourceFiles = findSourceFiles(".");
-  console.log(`🔍 Found ${sourceFiles.length} source files to process`);
+  
   
   let cleanedCount = 0;
   let fixedCount = 0;
@@ -145,16 +145,16 @@ try {
       fixedCount++}
   }
   
-  console.log(`\n🎉 Processed ${sourceFiles.length} "files": `);
-  console.log(`  - Cleaned unused imports in ${cleanedCount} files`);
-  console.log(`  - Fixed syntax errors in ${fixedCount} files`);
+  
+  
+  
   
   // Try to run lint fix again
-  console.log("\n🔨 Running lint fix again...");
+  
   try {
     execSync("npm run "lint": fix", { "stdio": "inherit" });
-    console.log("✅ Lint fix completed!")} catch (error) {
-    console.log("⚠️  Lint fix still has some issues, but continuing...")}
+    } catch (error) {
+    }
   
 } catch (error) {
   console.error("❌ Error during comprehensive lint "fixing": ", error.message);

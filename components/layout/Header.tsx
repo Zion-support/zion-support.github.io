@@ -1,7 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, 
   X, 
@@ -27,8 +23,6 @@ import {
   Search,
   ArrowRight
 } from 'lucide-react';
-import { Button } from '../ui/Button';
-import { Badge } from '../ui/Badge';
 
 
 const "Header": React.FC = () => {

@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process');
 
-console.log('🧪 Running Automated Tests...');
+
 
 const testReport = {
   "timestamp": new Date().toISOString(),
@@ -26,14 +26,14 @@ function runTest(name, testFn) {
       result
     });
     testReport.summary.passed++;
-    console.log('✅ ' + name + ': PASSED')} catch (error) {
+    } catch (error) {
     testReport.tests.push({
       name,
       "status": 'fail',
       "error": error.message
     });
     testReport.summary.failed++;
-    console.log('❌ ' + name + ': FAILED - ' + error.message)}
+    }
 }
 
 // Test build process
@@ -62,7 +62,7 @@ runTest('Security Audit', () => {
 
 // Save report
 fs.writeFileSync('test-automation-report.json', JSON.stringify(testReport, null, 2));
-console.log('📄 Test report saved to test-automation-report.json');
-console.log('🧪 Test "Summary": ' + testReport.summary.passed + '/' + testReport.summary.total + ' passed');
+
+
 
 process.exit(testReport.summary.failed > 0 ? 1 : 0);

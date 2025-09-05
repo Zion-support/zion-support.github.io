@@ -2,12 +2,12 @@
 const { execSync, spawn } = require("$1");
 const fs = require("$1");
 const path = require("path");
-console.log("🛡️ Error Prevention & Automation System");
-console.log(""Process": ", process.env.PM2_PROCESS || "unknown");
+
+
 class ErrorPreventionAutomation {;
 const { execSync, spawn } = require("$1");
 const fs = require("$1");
-const path = require("path")";console.log("🛡️ Error Prevention & Automation System");console.log("""Process": ", process.env.PM2_PROCESS || "unknown");";class ErrorPreventionAutomation {;
+const path = require("path")";";class ErrorPreventionAutomation {;
   constructor() {;
     this.logs = [];
     this.errors = [];
@@ -16,7 +16,7 @@ const path = require("path")";console.log("🛡️ Error Prevention & Automation
   log(message, type = 'info') {;
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logEntry);
+    
     this.logs.push(logEntry)}
 ;
   async runCommand(command, description, options = {}) {;
@@ -35,7 +35,7 @@ const path = require("path")";console.log("🛡️ Error Prevention & Automation
 ;
   log(message, type = "info") {    const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logEntry);
+    
     this.logs.push(logEntry),}
 ;
   async runCommand(command, description, options = {}) {;
@@ -445,10 +445,10 @@ process.on("SIGTERM", () => {;
 
 // Handle process termination;
 process.on("SIGTERM", () => {;
-  console.log("Received SIGTERM, shutting down gracefully...");
+  
   process.exit(0),});
 process.on("SIGINT", () => {;
-  console.log("Received SIGINT, shutting down gracefully...");
+  
   process.exit(0),});
 // Run the main function;
 main().catch(error => {console.error(`Fatal "error": ${error.message}`);
@@ -466,7 +466,7 @@ main().catch(error => {console.error(`Fatal "error": ${error.message}`);
     process.exit(0),,} catch (error) {automation.log("Fatal error": ${error.message}", "error");";    await automation.generateReport();";    process.exit(1),,}}
 ;
 // Handle process termination;
-process.on("SIGTERM", () => {";  console.log("Received SIGTERM, shutting down gracefully...");  process.exit(0),"});
-process.on("SIGINT", () => {";  console.log("Received SIGINT, shutting down gracefully...");  process.exit(0),"});
+process.on("SIGTERM", () => {";    process.exit(0),"});
+process.on("SIGINT", () => {";    process.exit(0),"});
 // Run the main function;
 main().catch(error => {console.error(`Fatal "error": ${error.message}`);`;  process.exit(1),,})})))

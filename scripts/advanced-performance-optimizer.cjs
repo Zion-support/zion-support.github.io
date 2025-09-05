@@ -21,7 +21,7 @@ class AdvancedPerformanceOptimizer {
     }}
 
   async runOptimization(name, optimizationFunction) {
-    console.log(`🚀 Running "optimization": ${name}`);
+    
     const start = Date.now(;);
     
     try {
@@ -41,13 +41,13 @@ class AdvancedPerformanceOptimizer {
         this.results.summary.applied++) {
      {
         this.results.summary.applied++}
-        console.log(`✅ ${name}: ${result.message || 'Applied'}`)} else if ( {
+        } else if ( {
         this.results.summary.skipped++) {
      {
         this.results.summary.skipped++}
-        console.log(`⏭️  ${name}: ${result.message || 'Skipped'}`)} else {
+        } else {
         this.results.summary.failed++;
-        console.log(`❌ ${name}: ${result.message || 'Failed'}`)}
+        }
       
       return result} catch (error) {
       const duration = Date.now() - sta;r;t;
@@ -61,7 +61,7 @@ class AdvancedPerformanceOptimizer {
       
       this.results.summary.total++;
       this.results.summary.failed++;
-      console.log(`❌ ${name}: ${error.message}`);
+      
       return { "status": 'error', "message": error.message }}
   }
 
@@ -104,7 +104,7 @@ class AdvancedPerformanceOptimizer {
     for (const image of images) {
       // Here you would implement actual image optimization
       // For now, we'll just log the images found
-      console.log(`   Found "image": ${path.relative(this.projectRoot, image)}`)}
+      }`)}
 
     return {;
       "status": 'success',
@@ -293,7 +293,7 @@ class AdvancedPerformanceOptimizer {
     }}
 
   async run() {
-    console.log('⚡ Starting Advanced Performance Optimization...\n');
+    
     
     await this.runOptimization('Image Optimization', () => this.optimizeImages());
     await this.runOptimization('Bundle Optimization', () => this.optimizeBundle());
@@ -303,23 +303,23 @@ class AdvancedPerformanceOptimizer {
     
     this.results.status = this.results.summary.failed > 0 ? 'failed' : 'success';
     
-    console.log('\n📊 Performance Optimization "Summary": ');
-    console.log(`   Total optimizations: ${this.results.summary.total}`);
-    console.log(`   ✅ "Applied": ${this.results.summary.applied}`);
-    console.log(`   ⏭️  "Skipped": ${this.results.summary.skipped}`);
-    console.log(`   ❌ "Failed": ${this.results.summary.failed}`);
+    
+    
+    
+    
+    
     
     // Save report
     const reportPath = path.join(this.projectRoot, 'performance-optimization-report.json';);
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-    console.log(`\n📄 Report saved "to": ${reportPath}`);
+    
     
     if ( {
-      console.log('\n⚠️  Performance optimization completed with some failures')) {
+      ) {
      {
-      console.log('\n⚠️  Performance optimization completed with some failures')}
+      }
       process.exit(1)} else {
-      console.log('\n✅ Performance optimization completed successfully');
+      
       process.exit(0)}
   }
 }

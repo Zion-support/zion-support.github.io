@@ -1,8 +1,8 @@
-import React from 'react';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { BookOpen, Search, FileText, Code, ArrowRight, CheckCircle, Clock, Users, Download } from 'lucide-react';
+import Link from 'next/link';
 import Layout from '../components/Layout';
+
+import { BookOpen, Code, Settings, Shield, Users, Zap, ChevronRight, Search, Clock, ExternalLink, FileText, CheckCircle } from 'lucide-react';;
 
 const categories = [
   {

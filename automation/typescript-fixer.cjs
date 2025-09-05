@@ -11,7 +11,7 @@ class TypeScriptFixer {
 
   log(message, type = "INFO") {
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${type}] ${message}`)}
+    }
 
   async createTypeDeclarations() {
   this.log("📝 Creating comprehensive type declarations...");
@@ -198,7 +198,8 @@ export {};";
         this.fixes.push(`Fixed TypeScript file: ${path.relative(this.projectRoot, filePath)}`);
       }
     } catch (error) {
-  this.log(`⚠️  Could not fix file ${filePath}: ${error.message}`, "WARN")}
+      this.log(`⚠️  Could not fix file ${filePath}: ${error.message}`, "WARN");
+    }
   }
 
   async runTypeCheck() {

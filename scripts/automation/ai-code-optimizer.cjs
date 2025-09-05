@@ -31,14 +31,14 @@ class $1 {
 ;
   async initialize() {
   await this.ensureDirectories();
-    console.log("🤖 AI Code Optimizer initialized")}
+    }
 ;
   async ensureDirectories() {
   await fs.mkdir(this.reportDir, { "recursive": true });
     await fs.mkdir(this.backupDir, { "recursive": true })}
 ;
   async runOptimization() {
-  console.log(""🚀 Starting AI Code Optimization...");
+  
 
     try {
   await this.analyzeCodebase();
@@ -47,7 +47,7 @@ class $1 {
       await this.measureImprovements();
       await this.generateReport();
 
-      console.log("✅ AI Code Optimization completed successfully")} catch (error) {
+      } catch (error) {
   
 } catch (error) {
   console.error("❌ AI Code Optimization "failed": ", error.message)}
@@ -56,11 +56,11 @@ class $1 {
 }
 ;
   async analyzeCodebase() {
-  console.log("🔍 Analyzing codebase for optimization opportunities...");
+  
     const srcDir = path.join(process.cwd(), "src`);
 
   async analyzeCodebase() {
-  console.log("🔍 Analyzing codebase for optimization opportunities...");
+  
 
     const srcDir = path.join(process.cwd(), "src");
     const files = await this.getAllFiles(srcDir);
@@ -72,7 +72,7 @@ class $1 {
   await this.analyzeFile(file)}
     }
 ;
-    console.log(📊 Analyzed ${files.length} files for optimization)}
+    }
 ;
   async getAllFiles(dir) {
   const files = [];
@@ -87,7 +87,7 @@ class $1 {
   files.push(...(await this.getAllFiles(fullPath)))} else {
   files.push(fullPath)}
       }
-    } catch (error) {  console.log(⚠️  Could not read directory ${dir  }: ${error.message}`")}
+    } catch (error) {  }
 ;
     return files}
 ;
@@ -104,7 +104,7 @@ class $1 {
       this.optimizations.memory.push(...analysis.memory);
       this.optimizations.security.push(...analysis.security);
       this.optimizations.maintainability.push(...analysis.maintainability);
-      this.optimizations.accessibility.push(...analysis.accessibility)} catch (error) {  console.log("⚠️  Could not analyze file ${filePath  }: ${error.message}")}
+      this.optimizations.accessibility.push(...analysis.accessibility)} catch (error) {  }
   }
 ;
   performCodeAnalysis(content, filePath) {
@@ -132,7 +132,7 @@ class $1 {
         "suggestion": "Add dependency array to prevent unnecessary re-renders",
         "priority": "high"})}
 ;
-    if (content.includes("console.log("")) {
+    if (content.includes(") {
   analysis.performance.push({
   "type": "performance",
         "file": filePath,
@@ -186,10 +186,10 @@ class $1 {
 ;    return analysis}
 ;
   async identifyOptimizationOpportunities() {
-  console.log(""🎯 Identifying optimization opportunities...");
+  
 
   async identifyOptimizationOpportunities() {
-  console.log(""🎯 Identifying optimization opportunities...");
+  
 
     const totalOptimizations =;
       this.optimizations.performance.length +;
@@ -199,22 +199,17 @@ class $1 {
     return analysis;")}");
 ");
   async identifyOptimizationOpportunities() {");
-    console.log("🎯 Identifying optimization opportunities...");
+    
     const totalOptimizations =;
       this.optimizations.performance.length +;
       this.optimizations.memory.length +;
       this.optimizations.security.length +;
       this.optimizations.maintainability.length +;
       this.optimizations.accessibility.length;
-console.log(`📊 Found ${totalOptimizations} optimization "opportunities": ;
-      Performance: ${this.optimizations.performance.length}
-      "Memory": ${this.optimizations.memory.length}
-      "Security": ${this.optimizations.security.length}
-      "Maintainability": ${this.optimizations.maintainability.length}
-      "Accessibility": ${this.optimizations.accessibility.length})}
+}
 ;
   async applyOptimizations() {
-  console.log(`🔧 Applying optimizations...");
+  
     let appliedCount = 0;
     // Apply critical security fixes first;
     for (const optimization of this.optimizations.security) {
@@ -242,7 +237,7 @@ console.log(`📊 Found ${totalOptimizations} optimization "opportunities": ;
 ;
         appliedCount++;")}")}");
 `);
-    this.analysisResults.optimizationsApplied = appliedCount;console.log(✅ Applied ${appliedCount} optimizations`)}
+    this.analysisResults.optimizationsApplied = appliedCount;}
 ;
   async applyOptimization(optimization) {
   try {
@@ -289,18 +284,12 @@ console.log(`📊 Found ${totalOptimizations} optimization "opportunities": ;
 ;
       // Write optimized content;
       await fs.writeFile(filePath, optimizedContent);
-      console.log(`✅ Applied ${optimization.type} optimization to ${filePath}`;
-      )} catch (error) {
-  console.log( ⚠️  Failed to apply optimization to ${optimization.file  }: ${error.message}
-;
-      // Write optimized content;
-      await fs.writeFile(filePath, optimizedContent);
-      console.log(`✅ Applied ${optimization.type} optimization to ${filePath}";
-      )} catch (error) {
-  console.log( ⚠️  Failed to apply optimization to ${optimization.file}: ${error.message}
-      console.log(`✅ Applied ${optimization.type} optimization to ${filePath}");
+      } catch (error) {
+  
+      } catch (error) {
+  
       )} catch (error) {");
-      console.log( ⚠️  Failed to apply optimization to ${optimization.file}: ${error.message}");
+      
       ")}
   }
 ;
@@ -314,7 +303,7 @@ console.log(`📊 Found ${totalOptimizations} optimization "opportunities": ;
 ;
     if (optimization.issue.includes("Console statements")) {
   // Comment out console statements;
-      optimized = optimized.replace(/console\.log\(/g, "// console.log("")}
+      optimized = optimized.replace(/console\.log\(/g, "// }
 ;
     return optimized}
 ;
@@ -382,7 +371,7 @@ console.log(`📊 Found ${totalOptimizations} optimization "opportunities": ;
     return optimized}
 ;
   async measureImprovements() {
-  console.log(""📈 Measuring improvements...");
+  
 
     // Run performance tests;
     try {
@@ -399,7 +388,7 @@ console.log(`📊 Found ${totalOptimizations} optimization "opportunities": ;
       this.analysisResults.memorySavings = memoryUsage;
 
       // Count security fixes;
-      this.analysisResults.securityFixes = this.optimizations.security.length} catch (error) {  console.log("⚠️  Could not measure "improvements": ${error.message  })}
+      this.analysisResults.securityFixes = this.optimizations.security.length} catch (error) {  }
   }
 ;
   async measureBuildTime() {
@@ -445,8 +434,8 @@ console.log(`📊 Found ${totalOptimizations} optimization "opportunities": ;
       this.reportDir,ai-optimization-report-${Date.now()}.json`;
     );
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
-console.log(📊 AI optimization report saved to ${reportPath}``);
-console.log(📊 AI optimization report saved to ${reportPath}"`)}
+
+}
 ;
   generateRecommendations() {
   const recommendations = [];
@@ -484,7 +473,7 @@ const AUTOMATION_INTERVAL =;
 const AUTOMATION_INTERVAL =;
   parseInt(process.env.AUTOMATION_INTERVAL) || 3600000; // 1 hour;
 async function $1() {
-  console.log("🤖 Starting AI Code Optimizer...");
+  
 
   const optimizer = new AICodeOptimizer();
 

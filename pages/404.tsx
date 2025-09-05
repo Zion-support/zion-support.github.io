@@ -1,8 +1,7 @@
-import React from 'react';
+import { Home } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Home, ArrowLeft, Search, HelpCircle } from 'lucide-react';
 
 export default function Custom404() {
   return (

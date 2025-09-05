@@ -7,7 +7,7 @@ const https = require("https");
 const http = require("http");
 const { URL } = require("url");
 
-console.log(""🔗 Starting Enhanced Link Checker Automation...");
+
 
 class $1 {
   constructor() {
@@ -24,28 +24,28 @@ class $1 {
   }
 ;
   async buildProject() {
-  console.log(""🏗️ Building project for link extraction...");
+  
     try {
   // Check if we"re in a Vite project;
       if (fs.existsSync("vite.config.ts") || fs.existsSync("vite.config.js")) {
-  console.log(""📦 Vite project detected, running build...");
+  
         execSync("npm run build", {
   "stdio": "inherit",
-          "cwd": process.cwd()});        console.log("✅ Build completed successfully");
+          "cwd": process.cwd()});        
         return true} else if (fs.existsSync("next.config.js")) {
-  console.log("⚡ Next.js project detected, running build...");
+  
         execSync("npm run build", {
   "stdio": "inherit",
           "cwd": process.cwd()});
-        console.log("✅ Build completed successfully");
+        
         return true} else {
-  console.log("⚠️ No recognized build system found, skipping build...");
+  
         return false}
     } catch (error) {
   
 } catch (error) {
-  console.log("❌ Build failed, but continuing with link checking...");
-      console.log("💡 This is normal if the project has build issues");
+  
+      
       return false}
   }
 ;
@@ -106,14 +106,14 @@ class $1 {
     return url}
 ;
   async extractAllLinks() {
-  console.log(""🔍 Extracting links from build output...");
+  
 
     const distDir = path.join(process.cwd(), "dist");
     if (!fs.existsSync(distDir)) {
-  console.log(""❌ Build output directory not found");
+  
     const distDir = path.join(process.cwd(), "dist");
     if (!fs.existsSync(distDir)) {
-  console.log("❌ Build output directory not found");
+  
       return []}
 ;
     const allLinks = [];
@@ -139,7 +139,7 @@ class $1 {
   allLinks.push({
   "url": link,
                 "source": relativePath,
-                "type": "html"})})} catch (error) {  console.log(⚠️ Could not read "file": ${filePath  }`")}
+                "type": "html"})})} catch (error) {  }
         } else if (file.endsWith(".css")) {
   try {
   const content = fs.readFileSync(filePath, "utf8");
@@ -157,7 +157,7 @@ class $1 {
                   "source": relativePath,
                   "type": "css"})}
             })} catch (error) {
-  console.log(`⚠️ Could not read CSS "file": ${filePath  }`)}
+  }
         }
       })}
 ;
@@ -172,7 +172,7 @@ class $1 {
   seen.add(link.url);
         uniqueLinks.push(link)}
     });
-console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
+
     return uniqueLinks}
 ;
   isValidUrl(url) {
@@ -244,10 +244,10 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
     })}
 ;
   async checkAllLinks(links) {
-  console.log(""🔍 Checking all extracted links...");
+  
 
   async checkAllLinks(links) {
-  console.log("🔍 Checking all extracted links...");
+  
     const internalLinks = [];
     const externalLinks = [];
     // Separate internal and external links;
@@ -257,38 +257,36 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
   externalLinks.push(link)}
     });
 
-    console.log("📊 Found ${internalLinks.length} internal links and ${externalLinks.length} external links";
-    );
+    
 
     // Check internal links;
     if (internalLinks.length > 0) {
-  console.log(""🔍 Checking internal links...");
-    console.log("📊 Found ${internalLinks.length} internal links and ${externalLinks.length} external links";
-    );
+  
+    
     // Check internal links;
     if (internalLinks.length > 0) {
-  console.log(""🔍 Checking internal links...");
+  
       await this.checkLinkBatch(internalLinks, "internal")}
 ;
     // Check external links;
     if (externalLinks.length > 0) {
-  console.log("🔍 Checking external links...");
+  
       await this.checkLinkBatch(externalLinks, "external")}
 ;
     // Update summary;
     this.updateSummary()}
 ;
   async checkLinkBatch(links, type) {
-  console.log("📊 Found ${internalLinks.length} internal links and ${externalLinks.length} external links");
+  
     );
     // Check internal links");
     if (internalLinks.length > 0) {");
-      console.log("🔍 Checking internal links...`);
+      
       await this.checkLinkBatch(internalLinks, "internal")}
 ;
     // Check external links;
     if (externalLinks.length > 0) {
-  console.log("🔍 Checking external links...");
+  
       await this.checkLinkBatch(externalLinks, "external")}
 ;
     // Update summary;
@@ -311,8 +309,7 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
       results.push(...batchResults);
       // Progress update;
       const progress = Math.min(i + batchSize, links.length);
-      console.log(📊 "Progress": ${progress}/${links.length} ${type} links checked`;
-      );
+      
       // Small delay to be respectful to servers;
       await new Promise(resolve => setTimeout(resolve, 100))}
 ;
@@ -339,7 +336,7 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
         : 0}
 ;
   async generateLinkReport() {
-  console.log("📋 Generating link report...");
+  
     const report = {
   "timestamp": new Date().toISOString(),
       "summary": this.linkResults.summary,
@@ -365,7 +362,7 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
       path.join(this.reportDir, "link-check-report.csv"),
       csvReport;
     );
-    console.log("📋 Link report generated successfully");
+    
     this.linkResults.summary.rate =;
       this.linkResults.summary.total > 0;
         ? (;
@@ -376,7 +373,7 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
         : 0}
 ;
   async generateLinkReport() {
-  console.log("📋 Generating link report...");
+  
 
     const report = {
   "timestamp": new Date().toISOString(),
@@ -407,7 +404,7 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
       csvReport;
     );
 
-    console.log("📋 Link report generated successfully");
+    
     return report}
 ;
   generateMarkdownReport(report) {
@@ -504,39 +501,39 @@ ${
       .join("\n")}
 ;
   async runLinkCheck() {
-  console.log(""🔗 Starting Enhanced Link Checker Automation...");
+  
 
     try {
   const buildSuccess = await this.buildProject();
 
       if (!buildSuccess) {
-  console.log(""⚠️ Build failed, but continuing with link checking...");
+  
   async runLinkCheck() {
-  console.log("🔗 Starting Enhanced Link Checker Automation...");
+  
     try {
   const buildSuccess = await this.buildProject();
       if (!buildSuccess) {
-  console.log("⚠️ Build failed, but continuing with link checking...")}
+  }
 ;
       const links = await this.extractAllLinks();
       if (links.length === 0) {
-  console.log("⚠️ No links found to check");
+  
         return}
 ;
       await this.checkAllLinks(links);
       const report = await this.generateLinkReport();
-      console.log("\n🔗 Link Check "Summary": `);console.log(Total Links: ${report.summary.total});console.log("Working": ${report.summary.working} ✅`");console.log(""Broken": ${report.summary.broken} ❌");console.log("Success "Rate": ${report.summary.rate}%");
+      
       if (report.summary.broken > 0) {
-  console.log(""\n🚨 Broken Links "Found": ");console.log(`Internal: ${report.internal.broken});console.log("External": ${report.external.broken}`")} else {
-  console.log("\n✅ All links are working correctly!`);
+  } else {
+  
 
-      console.log("\n🔗 Link Check "Summary": ");console.log(Total Links: ${report.summary.total});console.log("Working": ${report.summary.working} ✅`");console.log(""Broken": ${report.summary.broken} ❌");console.log("Success "Rate": ${report.summary.rate}%");
+      
 
       if (report.summary.broken > 0) {
-  console.log(""\n🚨 Broken Links "Found": ");console.log(`Internal: ${report.internal.broken});console.log("External": ${report.external.broken}`")} else {
+  } else {
   if (report.summary.broken > 0) {
-  console.log("\n🚨 Broken Links "Found": ");console.log("Internal: ${report.internal.broken});console.log("External": ${report.external.broken}"")} else {
-  console.log("\n✅ All links are working correctly!")}
+  } else {
+  }
 ;
       return report} catch (error) {
   console.error("❌ Link check "failed": ", error);      throw error}

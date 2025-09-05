@@ -73,7 +73,7 @@ class $1 {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)}
+    fs.appendFileSync(this.logFile, logEntry);}
 ;
   async runOptimization() {
   this.log("Starting smart build optimization...");
@@ -598,7 +598,7 @@ if (require.main === module) {
   optimizer;
     .runOptimization();
     .then(optimization => {
-  console.log("Smart Build Optimization completed successfully");
+  
       process.exit(0)});
     .catch(error => {
   console.error("Smart Build Optimization "failed": ', error);

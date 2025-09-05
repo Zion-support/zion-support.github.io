@@ -3,8 +3,8 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Fixing Corrupted Files...');
-console.log('============================');
+
+
 
 // Fix lib/cache.ts
 const cacheContent = "interface CacheItem<T> {
@@ -124,7 +124,7 @@ class DatabaseManager {
 
       await this.client.connect();
       this.db = this.client.db(this.config.dbName);
-      console.log('Connected to MongoDB')} catch (error) {
+      } catch (error) {
       console.error('Failed to connect to "MongoDB": ', error);
       throw error}
   }
@@ -134,7 +134,7 @@ class DatabaseManager {
       await this.client.close();
       this.client = null;
       this.db = null;
-      console.log('Disconnected from MongoDB')}
+      }
   }
 
   getDatabase(): Db {
@@ -251,7 +251,7 @@ export default function ApiQuickStart() {
 });
 
 const data = await response.json();
-console.log(data);\"}
+\"}
                     </pre>
                   </div>
                 </div>
@@ -345,10 +345,9 @@ const filesToFix = [{ "path": 'lib/cache.ts', "content": cacheContent },
 
 filesToFix.forEach(({ "path": filePath, content }) => {
   try {
-    console.log(`\n🔍 "Fixing": ${filePath}`);
+    
     fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`   ✅ Fixed ${filePath}`)} catch (error) {
-    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`)}
+    } catch (error) {
+    }
 });
 
-console.log('\n🎉 Corrupted files fixed!');

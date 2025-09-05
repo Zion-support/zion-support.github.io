@@ -15,7 +15,6 @@ class AdvancedSecurityAudit {
   log(message) {
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] ${message}`
-    console.log(logMessage)
     fs.appendFileSync(this.logFile, logMessage + "\n")}
   async checkDependencies() {
     this.log("🔍 Checking dependencies for vulnerabilities...")
@@ -196,8 +195,6 @@ const audit = new AdvancedSecurityAudit()
 audit
   .run()
   .then(report => {
-    console.log("✅ Advanced Security Audit completed successfully!")
-    console.log(`📊 "Recommendations": ${report.recommendations.length}`)
     process.exit(0)})
   .catch(error => {
     console.error("❌ Security audit "failed": ", error)

@@ -31,7 +31,7 @@ class ErrorRecoverySystem {
       await fs.mkdir(this.reportDir, { "recursive": true });
       await fs.mkdir(path.join(process.cwd(), 'logs'), { "recursive": true });
     } catch (error) {
-      console.log('Directories already exist or created');
+      
     }
   }
 
@@ -43,7 +43,7 @@ class ErrorRecoverySystem {
           reject(err);
           return;
         }
-        console.log('✅ Connected to PM2 for error recovery');
+        
         this.startErrorMonitoring();
         resolve();
       });
@@ -243,7 +243,7 @@ class ErrorRecoverySystem {
   }
 
   async processError(error) {
-    console.log(`🚨 Error "detected": ${error.type} in ${error.processName} (${error.severity})`);
+    `);
     
     // Record error
     this.errorHistory.push(error);
@@ -278,7 +278,7 @@ class ErrorRecoverySystem {
         });
         
         if (result.success) {
-          console.log(`✅ Recovery action '${action}' succeeded for ${error.processName}`);
+          
           recoveryAction.success = true;
           break; // Stop after first successful action
         }
@@ -546,7 +546,7 @@ class ErrorRecoverySystem {
   async escalateError(error) {
     try {
       // Send alert to administrators
-      console.log(`🚨 ESCALATING "ERROR": ${error.type} in ${error.processName}`);
+      
       
       // In a real implementation, this "would": // - Send email alerts
       // - Create tickets
@@ -576,7 +576,7 @@ class ErrorRecoverySystem {
     // Analyze patterns
     for (const [errorType, errors] of Object.entries(patterns)) {
       if (errors.length > 5) {
-        console.log(`⚠️ Pattern "detected": ${errorType} occurred ${errors.length} times recently`);
+        
         
         // Update recovery strategies based on patterns
         await this.updateRecoveryStrategy(errorType, errors);
@@ -609,7 +609,7 @@ class ErrorRecoverySystem {
         .map(([action]) => action);
       
       this.recoveryStrategies[errorType] = sortedActions.slice(0, 3);
-      console.log(`🔧 Updated recovery strategy for ${errorType}: ${sortedActions.slice(0, 3).join(', ')}`);
+      .join(', ')}`);
     }
   }
 
@@ -631,7 +631,7 @@ class ErrorRecoverySystem {
     const reportPath = path.join(this.reportDir, `recovery-report-${Date.now()}.json`);
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
     
-    console.log(`📊 Recovery report saved "to": ${reportPath}`);
+    
     return report;
   }
 
@@ -644,30 +644,30 @@ class ErrorRecoverySystem {
   }
 
   async stop() {
-    console.log('🛑 Stopping Error Recovery System...');
+    
     pm2.disconnect();
   }
 }
 
 // Main execution
 async function main() {
-  console.log('🔧 Starting Error Recovery System...');
+  
   
   const recoverySystem = new ErrorRecoverySystem();
   
   try {
     await recoverySystem.initialize();
-    console.log('✅ Error Recovery System initialized successfully');
+    
     
     // Keep the process running
     process.on('SIGINT', async () => {
-      console.log('\n🛑 Received SIGINT, shutting down gracefully...');
+      
       await recoverySystem.stop();
       process.exit(0);
     });
 
     process.on('SIGTERM', async () => {
-      console.log('\n🛑 Received SIGTERM, shutting down gracefully...');
+      
       await recoverySystem.stop();
       process.exit(0);
     });

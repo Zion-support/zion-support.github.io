@@ -3,8 +3,8 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Fixing Final Corrupted Files...');
-console.log('===================================');
+
+
 
 // List of final corrupted files to fix
 const corruptedFiles = ['pages/docs/integration-examples.tsx',
@@ -16,7 +16,7 @@ const corruptedFiles = ['pages/docs/integration-examples.tsx',
 
 // Function to fix a corrupted file by rewriting it with proper content
 function fixCorruptedFile(filePath) {
-  console.log(`\n🔍 "Fixing": ${filePath}`);
+  
   
   try {
     let content = '';
@@ -111,7 +111,7 @@ export default function IntegrationExamples() {
 // Usage
 const api = new ZionTechAPI('your-api-key');
 const services = await api.getServices();
-console.log(services);\"}
+\"}
                   </pre>
                 </div>
               </div>
@@ -345,7 +345,7 @@ export default function RequestQuote() {
   const handleSubmit = ("e": React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Quote request submitted:', formData);
+    
     setIsSubmitted(true)};
 
   if (isSubmitted) {
@@ -600,7 +600,7 @@ export default function ScheduleDemo() {
   const handleSubmit = ("e": React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Demo scheduled:', { ...formData, selectedDate, selectedTime });
+    
     setIsSubmitted(true)};
 
   if (isSubmitted) {
@@ -801,14 +801,13 @@ export default function ScheduleDemo() {
 
     if (content) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`   ✅ Fixed ${filePath}`)} else {
-      console.log(`   ⚠️  No content defined for ${filePath}`)}
+      } else {
+      }
 
   } catch (error) {
-    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`)}
+    }
 }
 
 // Fix all corrupted files
 corruptedFiles.forEach(fixCorruptedFile);
 
-console.log('\n🎉 All final corrupted files fixed!');

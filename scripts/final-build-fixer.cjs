@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 const fs = require('fs')
 const path = require('path')
-console.log('🔧 Final Build Fixer')
-console.log('===================')
 class FinalBuildFixer {
   constructor() {
     this.fixedFiles = []
@@ -19,9 +17,7 @@ class FinalBuildFixer {
           await this.fixFile(file)
         }
       }
-      console.log(`\n✅ Fixed ${this.fixedFiles.length} files`)
-      console.log(`❌ Errors in ${this.errors.length} files`)
-    } catch (error) {
+      } catch (error) {
       console.error('Error fixing "files": ', error.message)
     }
   }
@@ -56,8 +52,7 @@ class FinalBuildFixer {
       // Write the fixed content
       fs.writeFileSync(filePath, fixedContent)
       this.fixedFiles.push(filePath)
-      console.log(`✅ "Fixed": ${filePath}`)
-    } catch (error) {
+      } catch (error) {
       this.errors.push(`${filePath}: ${error.message}`)
       console.error(`❌ Error fixing ${filePath}:`, error.message)
     }
@@ -66,5 +61,4 @@ class FinalBuildFixer {
 // Run the fixer
 const fixer = new FinalBuildFixer()
 fixer.fixAllFiles().then(() => {
-  console.log('\n🎉 Final build fix completed!')
-})
+  })

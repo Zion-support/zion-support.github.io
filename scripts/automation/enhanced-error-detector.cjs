@@ -4,7 +4,7 @@ const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
-console.log(""🔍 Starting enhanced error detector...");
+
 
 async function $1() {
   const errors = {
@@ -17,7 +17,7 @@ async function $1() {
 ;
   try {
   // 1. Detect TypeScript errors;
-    console.log(""🔍 Detecting TypeScript errors...");
+    
     try {
   const tsResult = execSync("npx tsc --noEmit", {
   "encoding": "utf8",
@@ -33,7 +33,7 @@ async function $1() {
       errors.typescript = parseTypeScriptErrors(tsOutput)}
 ;
     // 2. Detect linting errors;
-    console.log("🔍 Detecting linting errors...");
+    
     try {
   const lintResult = execSync("npm run lint", {
   "encoding": "utf8",
@@ -46,7 +46,7 @@ async function $1() {
 ;
     // 3. Detect build errors;
     // 3. Detect build errors;
-console.log("🔍 Detecting build errors...");
+
     try {
   const buildResult = execSync("npm run build", {
   "encoding": "utf8",
@@ -58,23 +58,23 @@ console.log("🔍 Detecting build errors...");
       errors.build = parseBuildErrors(buildOutput)}
 ;
     // 4. Detect dependency issues;
-    console.log("🔍 Detecting dependency issues...");
+    
     try {
   const auditResult = execSync("npm audit --json", {
   "encoding": "utf8",
         "stdio": "pipe"});
       const auditData = JSON.parse(auditResult);
       errors.dependencies = parseDependencyIssues(auditData)} catch (error) {
-  console.log("⚠️  Could not run npm audit")}
+  }
 ;
     // 5. Detect syntax errors in source files;
-    console.log("🔍 Detecting syntax errors...");
+    
     errors.syntax = await detectSyntaxErrors();
     // Save error report;
     const reportPath = path.join(process.cwd(), "error-detection-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(errors, null, 2));
 
-    console.log(✅ Error detection completed. "Found": );console.log(   - ${errors.typescript.length} TypeScript errors"");console.log(`   - ${errors.linting.length} linting errors`);console.log(`   - ${errors.build.length} build errors`);console.log(`   - ${errors.dependencies.length} dependency issues`);console.log(`   - ${errors.syntax.length} syntax errors`);console.log(`📊 Report saved "to": ${reportPath}`);
+    
 
     return errors} catch (error) {
   console.error("❌ Error detection "failed": ", error.message);    return errors}

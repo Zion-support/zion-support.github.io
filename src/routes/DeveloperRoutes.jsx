@@ -1,1 +1,1 @@
-import React from 'react'; export default function DeveloperRoutes($1) { return ({} )} ;';';
+import React from &apos;react&apos;; export default function DeveloperRoutes($1) { return ({} )} ;&apos;;&apos;;

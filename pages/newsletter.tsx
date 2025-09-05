@@ -1,20 +1,8 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  CheckCircle, 
-  ArrowRight,
-  Users,
-  Calendar,
-  FileText,
-  Video,
-  Globe,
-  Shield,
-  Zap,
-  BarChart3
-} from 'lucide-react';
+import { useState } from 'react';
+import Link from 'next/link';
 import Layout from '../components/Layout';
+import { Mail, CheckCircle, ArrowRight, Users, Calendar, FileText, Video, Globe, Shield, Zap, BarChart3 } from 'lucide-react';;
 
 const benefits = [
   {

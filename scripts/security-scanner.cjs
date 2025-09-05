@@ -26,7 +26,7 @@ class SecurityScanner {
       'SECURITY': '🔒',
       'CRITICAL': '🚨'
     }[type] || 'ℹ️';
-    console.log(`[${timestamp}] [${type}] ${emoji} ${message}`);
+    
   }
 
   async scanDependencies() {
@@ -293,14 +293,14 @@ class SecurityScanner {
     this.log('\n📊 Security Scan Report', 'SECURITY');
     this.log('=' .repeat(50));
     
-    console.log(`\n📁 Files Scanned: ${this.stats.filesScanned}`);
-    console.log(`🚨 Total Vulnerabilities: ${this.stats.vulnerabilitiesFound}`);
-    console.log(`🔴 High Risk: ${this.stats.highRisk}`);
-    console.log(`🟡 Medium Risk: ${this.stats.mediumRisk}`);
-    console.log(`🟢 Low Risk: ${this.stats.lowRisk}`);
+    
+    
+    
+    
+    
     
     if (this.vulnerabilities.length > 0) {
-      console.log('\n🚨 Vulnerabilities Found:');
+      
       
       // Group by risk level
       const highRisk = this.vulnerabilities.filter(v => v.riskLevel === 'high');
@@ -308,37 +308,37 @@ class SecurityScanner {
       const lowRisk = this.vulnerabilities.filter(v => v.riskLevel === 'low');
       
       if (highRisk.length > 0) {
-        console.log('\n🔴 High Risk Issues:');
+        
         highRisk.forEach((vuln, index) => {
-          console.log(`   ${index + 1}. ${vuln.description}`);
-          console.log(`      File: ${vuln.file}${vuln.line ? `:${vuln.line}` : ''}`);
-          console.log(`      Recommendation: ${vuln.recommendation}`);
+          
+          
+          
         });
       }
       
       if (mediumRisk.length > 0) {
-        console.log('\n🟡 Medium Risk Issues:');
+        
         mediumRisk.forEach((vuln, index) => {
-          console.log(`   ${index + 1}. ${vuln.description}`);
-          console.log(`      File: ${vuln.file}${vuln.line ? `:${vuln.line}` : ''}`);
+          
+          
         });
       }
       
       if (lowRisk.length > 0) {
-        console.log('\n🟢 Low Risk Issues:');
+        
         lowRisk.forEach((vuln, index) => {
-          console.log(`   ${index + 1}. ${vuln.description}`);
-          console.log(`      File: ${vuln.file}${vuln.line ? `:${vuln.line}` : ''}`);
+          
+          
         });
       }
     }
     
     if (this.recommendations.length > 0) {
-      console.log('\n🔧 Security Recommendations:');
+      
       this.recommendations.forEach((rec, index) => {
         const priority = rec.priority === 'high' ? '🔴' : rec.priority === 'medium' ? '🟡' : '🟢';
-        console.log(`   ${index + 1}. ${priority} ${rec.message}`);
-        console.log(`      ${rec.recommendation}`);
+        
+        
       });
     }
     
@@ -348,7 +348,7 @@ class SecurityScanner {
     else if (this.stats.mediumRisk > 5) grade = 'C';
     else if (this.stats.mediumRisk > 0) grade = 'B';
     
-    console.log(`\n🏆 Security Grade: ${grade}`);
+    
     
     if (this.stats.highRisk > 0) {
       this.log('🚨 CRITICAL: High-risk vulnerabilities found!', 'CRITICAL');

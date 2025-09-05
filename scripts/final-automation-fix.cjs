@@ -9,7 +9,7 @@ class FinalAutomationFix {;
     this.errors = [],}
 ;
   log(message) {;
-    console.log(`[${new Date().toISOString()}] ${message}`),}
+    .toISOString()}] ${message}`),}
 ;
   fixFileSyntax(filePath) {;
     try {;

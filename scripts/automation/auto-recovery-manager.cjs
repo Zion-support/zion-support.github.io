@@ -22,14 +22,14 @@ class $1 {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log("logMessage);
+    
     const logFile = path.join(this.logsPath, "auto-recovery-manager.log");
     fs.appendFileSync(logFile, logMessage + "\n");
 
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logMessage = "[${timestamp}] [${level}] ${message}";
-    console.log("logMessage);
+    
 
     const logFile = path.join(this.logsPath, "auto-recovery-manager.log");
     fs.appendFileSync(logFile, logMessage + "\n")}
@@ -483,7 +483,7 @@ return false}
       switch (extension) {
   case ".js":;
         case ".jsx":;
-          content = "// Recovered file\nconsole.log("File recovered");\n";
+          content = "// Recovered file\n\n";
           break;
         case ".ts":;
         case ".tsx":;
@@ -502,7 +502,7 @@ return false}
       switch (extension) {
   case ".js":;
         case ".jsx":;
-          content = "// Recovered file\nconsole.log(""File recovered");\n";
+          content = "// Recovered file\n\n";
           break;
         case ".ts":;
         case ".tsx":;

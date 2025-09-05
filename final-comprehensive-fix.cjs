@@ -50,7 +50,7 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, fixedContent, 'utf8')) {
      {
       fs.writeFileSync(filePath, fixedContent, 'utf8')}
-      console.log(`✅ "Fixed": ${filePath}`);
+      
       return true}
     return false} catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
@@ -79,7 +79,7 @@ const talentFixed = talentContent
   .replace(/className="bg-zion-cyan text-zion-blue-dark "hover": bg-zion-cyan-light">/g, 'className="bg-zion-cyan text-zion-blue-dark "hover": bg-zion-cyan-light">')
   .replace(/className="text-sm">/g, 'className="text-sm">');
 fs.writeFileSync('src/components/talent/TalentCard.jsx', talentFixed, 'utf8');
-console.log('✅ Fixed TalentCard.jsx');
+
 
 const filesToFix = ['components/ContactForm.tsx',
   'components/ErrorBoundary.tsx',
@@ -101,7 +101,7 @@ const servicesFixed = servicesContent
   .replace(/createdAt: "2024-01-15T10:00:00\.000Z"/g, '"createdAt": "2024-01-15T10:00:00.000Z"')
   .replace(/reviewCount: 156/g, '"reviewCount": 156');
 fs.writeFileSync('src/data/enhancedServices.ts', servicesFixed, 'utf8');
-console.log('✅ Fixed enhancedServices.ts');
+
 
 // Fix useAuth.tsx - fix malformed function
 const authContent = fs.readFileSync('src/hooks/useAuth.tsx', 'utf8');
@@ -111,21 +111,21 @@ const authFixed = authContent
   .replace(/:src\/hooks\/useAuth\.tsx/g, '')
   .replace(/useEffect\(\(\) => \{\s*\/\/ Check if user is logged in \(e\.g\., check localStorage, cookies, etc\.\)\s*\/\/ Implementation here\s*\}, \[\]\);/g, 'useEffect(() => {\n    // Check if user is logged in (e.g., check localStorage, cookies, etc.)\n    // Implementation here\n  }, []);');
 fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
-console.log('✅ Fixed useAuth.tsx');
 
-console.log("\n📊 Syntax fixing "complete": ")) {
+
+) {
     ) {
     if (processFile(file)) {
       totalFixed++}
   }
 }
 
-console.log("\n📊 Syntax fixing "complete": ")}
-console.log(`   - Files "fixed": ${totalFixed}`);
-console.log("   - Issues "encountered": 0");
+}
+
+
 
 if ( {
-  console.log('\n✅ All syntax errors have been fixed!')) {
+  ) {
      {
-  console.log('\n✅ All syntax errors have been fixed!')}} else {
-  console.log('\n✅ No syntax errors found!')}
+  }} else {
+  }

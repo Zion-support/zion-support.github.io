@@ -8,7 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🚀 Starting Advanced App Optimizer...');
+
 
 class AdvancedAppOptimizer {
   constructor() {
@@ -31,7 +31,7 @@ class AdvancedAppOptimizer {
       'WARNING': '⚠️',
       'PROGRESS': '🔄'
     };
-    console.log(`${icons[type]} ${message}`)}
+    }
 
   async optimizeBundle() {
     this.log('📦 Optimizing bundle size...', 'PROGRESS');
@@ -257,7 +257,7 @@ const generateSitemap = () => {
 </urlset>\";
 
   fs.writeFileSync('public/sitemap.xml', sitemap);
-  console.log('Sitemap generated successfully')};
+  };
 
 generateSitemap();
 ";
@@ -287,7 +287,7 @@ export const usePerformanceMonitor = () => {
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
-        console.log('"LCP": ', lastEntry.startTime)});
+        });
       
       try {
         lcpObserver.observe({ "entryTypes": ['largest-contentful-paint'] })} catch (e) {
@@ -300,7 +300,7 @@ export const usePerformanceMonitor = () => {
           if (entry.entryType === 'first-input') {
             const fidEntry = entry as PerformanceEventTiming;
             const fid = fidEntry.processingStart - fidEntry.startTime;
-            console.log('"FID": ', fid)}
+            }
         }
       });
 
@@ -316,7 +316,7 @@ export const usePerformanceMonitor = () => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value}
         }
-        console.log('"CLS": ', clsValue)});
+        });
 
       try {
         clsObserver.observe({ "entryTypes": ['layout-shift'] })} catch (e) {

@@ -1,23 +1,7 @@
-import React from 'react';
-import Link from 'next/link';
-import Layout from "../components/Layout";
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Network, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Target, 
-  Users, 
-  BarChart3,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Award,
-  Clock,
-  Globe
-} from 'lucide-react';
+import Link from 'next/link';
+import Layout from '../components/Layout';
+import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';;
 
 const serviceCategories = [
   {

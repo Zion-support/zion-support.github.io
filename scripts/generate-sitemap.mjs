@@ -45,7 +45,7 @@ ${pages.map(page => {;
 }
 ;
   fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
-  console.log('✅ Sitemap generated successfully at public/sitemap.xml'),
+  ,
 };
 ;
 generateSitemap();

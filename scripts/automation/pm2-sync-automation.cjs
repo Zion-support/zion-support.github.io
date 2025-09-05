@@ -32,7 +32,7 @@ class PM2SyncAutomation {
         const timestamp = new Date().toISOString(});
         const logMessage = `[${timestamp}] ${message}\;n;`;
         fs.appendFileSync(this.logFile, logMessage);
-        console.log(message)}
+        }
 
     checkPM2Status() {
         this.log('Checking PM2 status...');

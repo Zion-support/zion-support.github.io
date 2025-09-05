@@ -87,7 +87,7 @@ function fixFile(filePath) {
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
-      console.log(`"Fixed": ${filePath}`);
+      
       return true}
     
     return false} catch (error) {
@@ -118,7 +118,7 @@ function findTsxFiles(dir) {
 const srcDir = path.join(__dirname, 'src');
 const files = findTsxFiles(srcDir);
 
-console.log(`Found ${files.length} files to check...`);
+
 
 let fixedCount = 0;
 files.forEach(file => {
@@ -126,4 +126,3 @@ files.forEach(file => {
     fixedCount++}
 });
 
-console.log(`Fixed ${fixedCount} files.`);

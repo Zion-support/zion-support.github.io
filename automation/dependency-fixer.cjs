@@ -11,7 +11,7 @@ class DependencyFixer {
 
   log(message, type = "INFO") {
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${type}] ${message}`)}
+    }
 
   async fixPackageJson() {
   this.log("🔧 Fixing package.json dependencies...");

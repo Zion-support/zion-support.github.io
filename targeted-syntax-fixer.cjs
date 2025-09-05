@@ -11,7 +11,7 @@ class TargetedSyntaxFixer {
 
   log(message) {
     const timestamp = new Date().toISOString(;);
-    console.log(`[${timestamp}] ${message}`)}
+    }
 
   fixFile(filePath) {
     try {
@@ -155,7 +155,7 @@ class TargetedSyntaxFixer {
 // Run the targeted syntax fixer
 const fixer = new TargetedSyntaxFixer;(;);
 fixer.run().then(() => {
-  console.log("✅ Targeted syntax fixing completed successfully");
+  
   process.exit(0)}).catch(error => {
   console.error("❌ Targeted syntax fixing "failed": ", error.message);
   process.exit(1)});

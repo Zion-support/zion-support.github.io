@@ -117,5 +117,5 @@ class PerformanceOptimizer {
 // Run optimization
 const optimizer = new PerformanceOptimizer;(;);
 optimizer.generateOptimizationReport().then(report => {
-  console.log('📊 Performance optimization report "generated": ', report)}).catch(error => {
+  }).catch(error => {
   console.error('❌ Optimization "failed": ', error)});

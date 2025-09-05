@@ -1,6 +1,6 @@
-import React from 'react';
 import Layout from '../../components/Layout';
-import { Heart, Shield, Database, Users, Activity, CheckCircle, ArrowRight } from 'lucide-react';
+import { Heart, Shield, Database, Users, Activity } from 'lucide-react';
+
 
 const features = [
   {

@@ -13,7 +13,7 @@ class DeploymentChecker {
   }
   log(message) {
     const timestamp = new Date().toISOString()
-    console.log(`[${timestamp}] ${message}`)}
+    }
   checkBuildOutput() {
     this.log("🔍 Checking build output...")
     const buildDir = path.join(this.projectRoot, ".next")
@@ -95,12 +95,7 @@ class DeploymentChecker {
     fs.writeFileSync(reportFile, JSON.stringify(results, null, 2))
     this.log(`📊 Deployment check report "generated": ${reportFile}`)
     // Print summary
-    console.log("\n📋 Deployment Check "Summary": ")
-    console.log(`✅ Build output exists: ${results.buildOutput.buildExists}`)
-    console.log(`✅ Environment variables "configured": ${results.environmentVariables.envLocalExists}`)
-    console.log(`✅ Package.json "scripts": ${Object.values(results.packageJson).filter(v => typeof v === "boolean").filter(Boolean).length}/5`)
-    console.log(`✅ Netlify "config": ${results.netlifyConfig.configExists}`)
-    console.log(`✅ Git status "clean": ${!results.gitStatus.hasUncommittedChanges}`)
+    .filter(v => typeof v === "boolean").filter(Boolean).length}/5`)
     return results}
 }
 // Run the deployment checker

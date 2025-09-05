@@ -4,7 +4,7 @@ const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
-console.log(""📚 Starting Smart Documentation Generator...");
+
 
 // Get automation interval from environment variable ("default": 24 hours);
 const AUTOMATION_INTERVAL =;
@@ -30,10 +30,10 @@ class $1 {
 ;
   async generateDocumentation() {
   try {
-  console.log("📚 Running smart documentation generation at ${new Date().toISOString()}";
+  .toISOString()}";
   async generateDocumentation() {
   try {
-  console.log(`📚 Running smart documentation generation at ${new Date().toISOString()}`;
+  .toISOString()}`;
       );
       // Analyze codebase structure;
       await this.analyzeCodebaseStructure();
@@ -47,7 +47,7 @@ class $1 {
       await this.generateSetupGuides();
       // Generate README updates;
       await this.updateREADME();
-      console.log(`📚 Running smart documentation generation at ${new Date().toISOString()}`);
+      .toISOString()}`);
       );
 
       // Analyze codebase structure;
@@ -74,16 +74,16 @@ class $1 {
       // Generate report;
       await this.generateReport();
 
-      console.log(""✅ Smart documentation generation completed successfully")} catch (error) {
+      } catch (error) {
   console.error("❌ Smart documentation generation "failed": ", error.message)}
   }
 ;
   async analyzeCodebaseStructure() {
-  console.log("🔍 Analyzing codebase structure...");
+  
 
     const srcPath = path.join(process.cwd(), "src");
     if (!fs.existsSync(srcPath)) {
-  console.log("⚠️ Source directory not found");
+  
       return}
 ;
     const structure = {
@@ -157,10 +157,10 @@ class $1 {
     }
 ;
     this.documentationMetrics.docPatterns.set("structure", structure);
-    console.log("📊 Codebase structure analysis completed")}
+    }
 ;
   async identifyMissingDocumentation() {
-  console.log("🔍 Identifying missing documentation...");
+  
 
     const structure = this.documentationMetrics.docPatterns.get("structure");
     if (!structure) return;
@@ -218,11 +218,10 @@ class $1 {
         "priority": "high"})}
 ;
     this.documentationMetrics.missingDocs = missingDocs;
-    console.log(📊 Found ${missingDocs.length} categories of missing documentation`;
-    )}
+    }
 ;
   async generateAPIDocumentation() {
-  console.log("📖 Generating API documentation...");
+  
     const structure = this.documentationMetrics.docPatterns.get("structure");
     if (!structure) return;
 
@@ -263,19 +262,17 @@ class $1 {
           "path": docPath,
           "service": service.name,
           "timestamp": new Date().toISOString()});
-console.log(✅ Generated API documentation for ${service.name}`)} catch (error) {
-  console.log(⚠️ Failed to generate API docs for ${service.name  }:",
-          error.message;
-        ")}
+} catch (error) {
+  }
     }
   }
 ;
   async generateComponentDocumentation() {
-  console.log(""⚛️ Generating component documentation...");
+  
 
   async generateComponentDocumentation() {
-  console.log(""⚛️ Generating component documentation...");
-    console.log("⚛️ Generating component documentation...");
+  
+    
     const structure = this.documentationMetrics.docPatterns.get("structure");
     if (!structure) return;
     // Generate documentation for components;
@@ -307,22 +304,19 @@ console.log(✅ Generated API documentation for ${service.name}`)} catch (error)
           "component": component.name,
           "timestamp": new Date().toISOString()});
 
-        console.log(`✅ Generated component documentation for ${component.name}";
-        )} catch (error) {
-  console.log( ⚠️ Failed to generate component docs for ${component.name}:,
-          error.message;
-        `)}
+        } catch (error) {
+  }
     }
   }
 ;
   async generateSetupGuides() {
-  console.log(""📋 Generating setup guides...");
+  
 
     // Generate installation guide;
   async generateSetupGuides() {
-  console.log(""📋 Generating setup guides...");
+  
     // Generate installation guide;
-    console.log("📋 Generating setup guides...");
+    
     // Generate installation guide;
     const installationGuide = this.generateInstallationGuide();
     const installPath = path.join(this.docsDir, "installation.md");
@@ -355,10 +349,10 @@ console.log(✅ Generated API documentation for ${service.name}`)} catch (error)
         "timestamp": new Date().toISOString()}
     );
 
-    console.log("✅ Generated setup guides"")}
+    }
 ;
   async updateREADME() {
-  console.log(""📝 Updating README...");
+  
 
     try {
   const readmePath = path.join(process.cwd(), "README.md");
@@ -376,20 +370,20 @@ console.log(✅ Generated API documentation for ${service.name}`)} catch (error)
         "name": "README.md",
         "timestamp": new Date().toISOString()});
 
-      console.log("✅ Updated README")} catch (error) {
+      } catch (error) {
   
 } catch (error) {
-  console.log("⚠️ Failed to update "README": ", error.message)}
+  }
     } catch (error) {
-  console.log("⚠️ Failed to update "README": ", error.message)}
+  }
 }
 ;
   async calculateDocumentationCoverage() {
-  console.log("📊 Calculating documentation coverage...");
+  
     const structure = this.documentationMetrics.docPatterns.get("structure`);
 
   async calculateDocumentationCoverage() {
-  console.log("📊 Calculating documentation coverage...");
+  
 
     const structure = this.documentationMetrics.docPatterns.get("structure");
     if (!structure) return;
@@ -408,11 +402,11 @@ console.log(✅ Generated API documentation for ${service.name}`)} catch (error)
 
     this.documentationMetrics.documentationCoverage =;
       totalItems > 0 ? (documentedItems / totalItems) * 100 : 0;
-    console.log(📊 Documentation "coverage": ${this.documentationMetrics.documentationCoverage.toFixed(1)}%`;
+    }%`;
     )}
 ;
   async generateReport() {
-  console.log("📊 Generating documentation report...");
+  
     const report = {
   "timestamp": new Date().toISOString(),
       "summary": {
@@ -438,7 +432,7 @@ console.log(✅ Generated API documentation for ${service.name}`)} catch (error)
       "documentation-report.json";
     );
     fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
-console.log(📊 Documentation report saved to ${reportPath})}
+}
 ;
   findFiles(dir, extensions) {
   const files = [];
@@ -513,7 +507,6 @@ ${this.extractServiceFunctions(content)}
 ## Usage;
 ## Usage;
 \\`\`typescript;
-import { ${service.name} } from `./${service.path}`;
 // Example usage;
 const result = await ${service.name}.methodName(params`);\"\"\`;
 ## Parameters;
@@ -550,7 +543,6 @@ ${this.extractComponentProps(content)}
 ;
 ## Usage;
 \"\"\`tsx;
-import { ${component.name} } from `./${component.path}`;
 function $1() {
   return (;
     <${component.name} ;
@@ -860,11 +852,8 @@ const result = await ${serviceName}.createItem({
 ;
 // Main continuous loop;
 async function runContinuous() {
-  console.log("📚 Starting smart documentation generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals";
-// Main continuous loop;
-async function runContinuous() {
-  console.log(`📚 Starting smart documentation generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`;
-  console.log(`📚 Starting smart documentation generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  {
+  
   );
 
   const generator = new SmartDocumentationGenerator();
@@ -873,21 +862,20 @@ async function runContinuous() {
   // Set up continuous execution;
   setInterval(async () => {
   await generator.generateDocumentation()}, AUTOMATION_INTERVAL);
-  console.log( ✅ Smart documentation generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  ")}
+  }
 ;
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...");
+  
   `)}
 ;
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...");
+  
   process.exit(0)});
 
 process.on("SIGTERM", () => {
-  console.log("🛑 Received SIGTERM, shutting down gracefully...");
+  
   process.exit(0)});
 // Start the smart documentation generator;
 runContinuous().catch(error => {

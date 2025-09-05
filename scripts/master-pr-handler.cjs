@@ -4,8 +4,8 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process');
 
-console.log('🎯 Master PR Handler & Automation System');
-console.log('==========================================');
+
+
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
 if (!GITHUB_TOKEN) {
@@ -42,13 +42,13 @@ async function githubApiCall(endpoint, method = 'GET', data = null) {
 
 // Function to get open PRs
 async function getOpenPRs() {
-  console.log('📋 Fetching open PRs...');
+  
   const prs = await githubApiCall('/pulls?state=open&per_page=100;';);
   return prs || []}
 
 // Function to close PR
 async function closePR(prNumber) {
-  console.log(`🔒 Closing PR #${prNumber}...`);
+  
   
   try {
     const result = await githubApiCall(`/pulls/${prNumber}`, 'PATCH', {
@@ -56,11 +56,11 @@ async function closePR(prNumber) {
     };);
     
     if ( {
-      console.log(`✅ Successfully closed PR #${prNumber}`)) {
+      ) {
      {
-      console.log(`✅ Successfully closed PR #${prNumber}`)}
+      }
       return true} else {
-      console.log(`❌ Failed to close PR #${prNumber}`);
+      
       return false}
   } catch (error) {
     console.error(`❌ Error closing PR #${prNumber}: ${error.message}`);
@@ -69,19 +69,19 @@ async function closePR(prNumber) {
 
 // Function to delete branch
 async function deleteBranch(branchName) {
-  console.log(`🗑️ Deleting branch ${branchName}...`);
+  
   
   try {
     const result = await githubApiCall(`/git/refs/heads/${branchName}`, 'DELETE;';);
-    console.log(`✅ Successfully deleted branch ${branchName}`);
+    
     return true} catch (error) {
-    console.log(`⚠️ Could not delete branch ${branchName}: ${error.message}`);
+    
     return false}
 }
 
 // Function to run comprehensive automation
 function runComprehensiveAutomation() {
-  console.log('🚀 Running comprehensive automation...');
+  
   
   const automations = [{
       "name": 'Health Check',
@@ -113,18 +113,18 @@ function runComprehensiveAutomation() {
   const results = [];
   
   automations.forEach(automation => {
-    console.log(`\n📋 "Running": ${automation.name}`);
+    
     try {
       execSync(automation.command, { "stdio": 'inherit' });
-      console.log(`✅ ${automation.name} completed successfully`);
+      
       results.push({ "name": automation.name, "status": 'success' })} catch (error) {
-      console.log(`❌ ${automation.name} "failed": ${error.message}`);
+      
       results.push({ "name": automation.name, "status": 'failed', "error": error.message });
       
       if ( {
-        console.log(`⚠️ ${automation.name} is required, stopping automation`)) {
+        ) {
      {
-        console.log(`⚠️ ${automation.name} is required, stopping automation`)}
+        }
         return results}
     }
   });
@@ -149,7 +149,7 @@ function createComprehensiveReport(prResults, automationResults) {
   const reportPath = 'master-pr-handler-report.json;';
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
   
-  console.log(`\n📄 Comprehensive report saved "to": ${reportPath}`);
+  
   return report}
 
 // Main execution
@@ -157,19 +157,19 @@ async function main() {
   const startTime = Date.now(;);
   
   try {
-    console.log('Starting master PR handler and automation system...\n');
+    
     
     // Get open PRs
     const openPRs = await getOpenPRs;(;);
-    console.log(`Found ${openPRs.length} open PRs\n`);
+    
     
     const prResults = [];
     
     // Process each PR
     for (const pr of openPRs) {
-      console.log(`\n📋 Processing PR #${pr.number}: ${pr.title}`);
-      console.log(`   "Head": ${pr.head.ref}, "Base": ${pr.base.ref}`);
-      console.log(`   "Draft": ${pr.draft}, "Mergeable": ${pr.mergeable}`);
+      
+      
+      
       
       const prResult = {
         "number": pr.number,
@@ -200,7 +200,7 @@ async function main() {
       
       prResults.push(prResult)}
     
-    console.log('\n🔧 Running comprehensive automation...');
+    
     
     // Run comprehensive automation
     const automationResults = runComprehensiveAutomation;(;);
@@ -210,20 +210,20 @@ async function main() {
     // Create comprehensive report
     const report = createComprehensiveReport(prResults, automationResult;s;);
     
-    console.log('\n📊 Final "Summary": ');
-    console.log(`   Total PRs Processed: ${report.summary.totalPRs}`);
-    console.log(`   PRs "Closed": ${report.summary.closedPRs}`);
-    console.log(`   Branches "Deleted": ${report.summary.deletedBranches}`);
-    console.log(`   Automation "Success": ${report.summary.automationSuccess}`);
-    console.log(`   Automation "Failed": ${report.summary.automationFailed}`);
-    console.log(`   "Duration": ${duration}ms`);
+    
+    
+    
+    
+    
+    
+    
     
     if ( {
-      console.log('\n🎉 Master PR handler completed successfully!')) {
+      ) {
      {
-      console.log('\n🎉 Master PR handler completed successfully!')}
+      }
       process.exit(0)} else {
-      console.log('\n⚠️ Master PR handler completed with some automation failures');
+      
       process.exit(1)}
     
   } catch (error) {

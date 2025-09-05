@@ -61,7 +61,7 @@ constructor() {
         const logEntry = `[${timestamp}] [${level.toUpperCase()}] ${message}\n`;
         
         // Console output
-        console.log(logEntry.trim());
+        );
         
         // File logging
         try {
@@ -580,13 +580,13 @@ if (require.main === module) {
             break;
         case 'health':
             manager.monitorRepositoryHealth().then(report => {
-                console.log(JSON.stringify(report, null, 2));
+                );
                 process.exit(0)});
             break;
         case 'analyze':
             const branch = args[1] || 'current';
             manager.analyzeBranchHealth(branch).then(health => {
-                console.log(JSON.stringify(health, null, 2));
+                );
                 process.exit(0)});
             break;
         case 'pr':
@@ -594,36 +594,17 @@ if (require.main === module) {
             const title = args[2] || 'Automated PR';
             const description = args[3] || 'Created by Intelligent Repository Manager';
             manager.createIntelligentPR(branchName, title, description).then(result => {
-                console.log(JSON.stringify(result, null, 2));
+                );
                 process.exit(0)});
             break;
         case 'merge':
             const mergeBranch = args[1];
             const strategy = args[2] || 'auto';
             manager.intelligentMerge(mergeBranch, strategy).then(result => {
-                console.log(JSON.stringify(result, null, 2));
+                );
                 process.exit(0)});
             break;
-        "default": console.log("
-Intelligent Repository Manager
-
-Usage:
-  node intelligent-repository-manager.cjs <command> [options]
-
-Commands:
-  monitor     Start continuous monitoring
-  health      Generate health report
-  analyze     Analyze branch health
-  pr          Create intelligent PR
-  merge       Merge branch intelligently
-
-Examples:
-  node intelligent-repository-manager.cjs monitor
-  node intelligent-repository-manager.cjs health
-  node intelligent-repository-manager.cjs analyze feature/new-feature
-  node intelligent-repository-manager.cjs pr feature/new-feature "New Feature" "Description"
-  node intelligent-repository-manager.cjs merge feature/new-feature
-            ");
+        "default": 
             process.exit(1)}
 }
 

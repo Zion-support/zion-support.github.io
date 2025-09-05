@@ -4,12 +4,12 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process');
 
-console.log('📊 Starting Bundle Analysis...');
+
 
 function analyzeBundle() {
   try {
     // Run Next.js bundle analyzer
-    console.log('🔍 Analyzing bundle size...');
+    
     execSync('npx @next/bundle-analyzer', { "stdio": 'inherit' });
     
     // Generate bundle report
@@ -27,7 +27,7 @@ function analyzeBundle() {
    };
     
     fs.writeFileSync('bundle-analysis-report.json', JSON.stringify(report, null, 2));
-    console.log('📄 Bundle analysis report saved to bundle-analysis-report.json')} catch (error) {
+    } catch (error) {
     console.error('❌ Bundle analysis "failed": ', error.message)}
 }
 

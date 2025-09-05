@@ -7,23 +7,23 @@ class SecurityAuditor {
         this.recommendations = []}
 
     async auditDependencies() {
-        console.log('🔒 Auditing dependencies...');
+        
         
         // Check for known vulnerabilities
         const vulnerabilities = [// Add actual vulnerability checks here
         ];
 
         this.vulnerabilities = vulnerabilities;
-        console.log(`Found ${vulnerabilities.length} potential vulnerabilities`)}
+        }
 
     async auditCode() {
-        console.log('🔍 Auditing code security...');
+        
         
         const securityIssues = [// Add code security checks here
         ];
 
         this.recommendations = securityIssues;
-        console.log(`Found ${securityIssues.length} security recommendations`)}
+        }
 
     async generateReport() {
         const report = {
@@ -35,7 +35,7 @@ class SecurityAuditor {
 
         const reportPath = `security-audit-${Date.now()}.json`;
         fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-        console.log(`📊 Security audit report "generated": ${reportPath}`);
+        
         return report}
 }
 

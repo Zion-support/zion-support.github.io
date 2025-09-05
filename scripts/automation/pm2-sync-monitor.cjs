@@ -101,10 +101,10 @@ class $1 {
     this.log = (message, level = "INFO") => {
   const timestamp = new Date().toISOString();
       const logMessage = `[${timestamp}] [${level}] ${message}`;
-      console.log("logMessage);
+      
 
       try {
-  console.log(logMessage);
+  
       try {
   fs.appendFileSync(this.config.logFile, logMessage + "\n")} catch (error) {
   console.error("Failed to write to log "file": ", error.message)}
@@ -863,17 +863,17 @@ execSync("pm2 restart all", { "stdio": "pipe" })}
 ;
 // Handle process signals;
 process.on("SIGINT", async () => {
-  console.log("\nReceived SIGINT, shutting down gracefully...");
+  
 
 // Handle process signals;
 process.on("SIGINT", async () => {
-  console.log("\nReceived SIGINT, shutting down gracefully...");
+  
   if (global.pm2SyncMonitor) {
   await global.pm2SyncMonitor.stop()}
   process.exit(0)});
 
 process.on("SIGTERM", async () => {
-  console.log("\nReceived SIGTERM, shutting down gracefully...");
+  
   if (global.pm2SyncMonitor) {
   await global.pm2SyncMonitor.stop()}
   process.exit(0)});

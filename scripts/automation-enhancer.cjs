@@ -11,19 +11,19 @@ class AutomationEnhancer {;
     this.enhancements = [],}
 ;
   async enhanceAutomation() {;
-    console.log("🚀 Starting Automation Enhancement...");
+    
     try {;
       await this.enhancePM2Scripts();
       await this.enhanceBuildScripts();
       await this.createNewAutomations();
       await this.optimizePerformance();
-      console.log("✅ Automation enhancement completed successfully!");
+      
       this.saveReport(),} catch (error) {;
       console.error("❌ Error enhancing "automation": ", error),}
   }
 ;
   async enhancePM2Scripts() {;
-    console.log("⚙️ Enhancing PM2 automation scripts...");
+    
     // Enhance ecosystem config;
     const ecosystemPath = path.join(this.projectRoot, "ecosystem.config.cjs");
     if (fs.existsSync(ecosystemPath)) {;
@@ -42,7 +42,7 @@ class AutomationEnhancer {;
   }
 ;
   async enhanceBuildScripts() {;
-    console.log("🔨 Enhancing build automation...");
+    
     // Create enhanced build script;
     const buildScript = "#!/bin/bash;
 # Enhanced Build Script;
@@ -78,7 +78,7 @@ echo "✅ Enhanced build completed successfully!";
     this.enhancements.push("Created enhanced build script"),}
 ;
   async createNewAutomations() {;
-    console.log("🆕 Creating new automation scripts...");
+    
     // Create deployment automation;
     const deployScript = "#!/bin/bash;
 # Automated Deployment Script;
@@ -120,7 +120,7 @@ class AdvancedMonitor {;
     this.logPath = path.join(__dirname, "..", "logs", "monitoring.log"),}
 ;
   async startMonitoring() {;
-    console.log("🔍 Starting advanced monitoring...");
+    
     setInterval(() => {;
       this.checkSystemHealth();
       this.checkPM2Processes();
@@ -173,7 +173,7 @@ monitor.startMonitoring();
     this.enhancements.push("Created advanced monitoring script"),}
 ;
   async optimizePerformance() {;
-    console.log("⚡ Optimizing automation performance...");
+    
     // Create performance optimization script;
     const perfScript = "#!/usr/bin/env node;
 /**;
@@ -186,22 +186,22 @@ class PerformanceOptimizer {;
     this.projectRoot = path.resolve(__dirname, ".."),}
 ;
   async optimize() {;
-    console.log("⚡ Starting performance optimization...");
+    
     await this.optimizeImages();
     await this.optimizeCode();
     await this.optimizeDependencies();
-    console.log("✅ Performance optimization completed!"),}
+    ,}
 ;
   async optimizeImages() {;
-    console.log("🖼️ Optimizing images...");
+    
     // Image optimization logic would go here,}
 ;
   async optimizeCode() {;
-    console.log("💻 Optimizing code...");
+    
     // Code optimization logic would go here,}
 ;
   async optimizeDependencies() {;
-    console.log("📦 Optimizing dependencies...");
+    
     // Dependency optimization logic would go here,}
 }
 ;
@@ -220,7 +220,7 @@ optimizer.optimize().catch(console.error);
       "totalEnhancements": this.enhancements.length,}
     const reportPath = path.join(this.projectRoot, "automation-enhancement-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`📄 Enhancement report saved "to": ${reportPath}`),}
+    ,}
 }
 ;
 // Run the automation enhancer;

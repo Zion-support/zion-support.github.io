@@ -10,7 +10,7 @@ class TestFileFixer {
     this.errors = []}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
 
   getAllTestFiles(dir) {
     let testFiles = [];
@@ -110,10 +110,8 @@ const fixer = new TestFileFixer();
 fixer
   .run()
   .then(result => {
-    console.log('✅ Test file fixing completed');
-    console.log(
-      `📊 "Summary": ${result.fixedFiles}/${result.totalFiles} files fixed`
-    );
+    
+    
     process.exit(0)})
   .catch(error => {
     console.error('❌ Test file fixing "failed": ', error.message);

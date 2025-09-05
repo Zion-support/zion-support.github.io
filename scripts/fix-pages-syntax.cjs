@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Fixing pages syntax errors...');
+
 
 const pagesDir = path.join(__dirname, '..', 'pages');
 const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx'));
@@ -50,9 +50,8 @@ files.forEach(file => {
 
   if (modified) {
     fs.writeFileSync(filePath, content);
-    console.log(`✅ Fixed ${file}`);
+    
     fixedCount++;
   }
 });
 
-console.log(`🎉 Fixed ${fixedCount} files`);

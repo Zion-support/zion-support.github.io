@@ -11,7 +11,6 @@ class CodeQualityChecks {
     }
   }
   async runChecks() {
-    console.log("🔍 Running Code Quality Checks...")
     try {
       await this.checkCodeStyle()
       await this.checkComplexity()
@@ -19,11 +18,10 @@ class CodeQualityChecks {
       await this.checkSecurity()
       await this.checkPerformance()
       this.generateReport()
-      console.log("✅ Code quality checks completed")} catch (error) {
+      } catch (error) {
       console.error("❌ Code quality checks "failed": ", error.message)}
   }
   async checkCodeStyle() {
-    console.log("🎨 Checking code style...")
     try {
       const result = execSync("npm run lint", { "encoding": "utf8" })
       this.addCheck("Code Style", "passed", "No style issues found")} catch (error) {
@@ -31,7 +29,6 @@ class CodeQualityChecks {
       this.results.score -= 10}
   }
   async checkComplexity() {
-    console.log("🧮 Checking code complexity...")
     try {
       const result = execSync("npx complexity-report src/", { "encoding": "utf8" })
       this.addCheck("Complexity", "passed", "Code complexity is acceptable")} catch (error) {
@@ -39,7 +36,6 @@ class CodeQualityChecks {
       this.results.score -= 5}
   }
   async checkDuplication() {
-    console.log("🔄 Checking code duplication...")
     try {
       const result = execSync("npx jscpd src/", { "encoding": "utf8" })
       this.addCheck("Duplication", "passed", "No significant duplication found")} catch (error) {
@@ -47,7 +43,6 @@ class CodeQualityChecks {
       this.results.score -= 5}
   }
   async checkSecurity() {
-    console.log("🔒 Checking security...")
     try {
       const result = execSync("npm audit", { "encoding": "utf8" })
       this.addCheck("Security", "passed", "No security vulnerabilities found")} catch (error) {
@@ -55,7 +50,6 @@ class CodeQualityChecks {
       this.results.score -= 20}
   }
   async checkPerformance() {
-    console.log("⚡ Checking performance...")
     try {
       const result = execSync("npm run build", { "encoding": "utf8" })
       this.addCheck("Performance", "passed", "Build completed successfully")} catch (error) {
@@ -68,14 +62,9 @@ class CodeQualityChecks {
   generateReport() {
     const reportPath = "code-quality-report.json"
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2))
-    console.log("\n📊 Code Quality "Results": ")
-    console.log("=".repeat(50))
-    console.log(`Quality Score: ${this.results.score}/100`)
-    console.log(`"Passed": ${this.results.summary.passed}`)
-    console.log(`"Failed": ${this.results.summary.failed}`)
-    console.log(`"Warnings": ${this.results.summary.warnings}`)
-    console.log("=".repeat(50))
-    console.log(`📄 Report saved "to": ${reportPath}`)}
+    )
+    )
+    }
 }
 // Run the checks
 const qualityChecks = new CodeQualityChecks()

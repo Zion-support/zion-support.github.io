@@ -31,7 +31,7 @@ class ContinuousIntegration {
   log(message, level = 'info') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
-    console.log(logMessage)}
+    }
 
   async runStage(stageName, stageCommand, description) {
     this.log(`🔄 Running ${description}...`);

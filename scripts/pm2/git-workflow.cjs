@@ -30,7 +30,7 @@ class GitWorkflow {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
-    console.log(logMessage.trim());
+    );
     fs.appendFileSync(this.logFile, logMessage);
   }
 
@@ -170,9 +170,6 @@ class GitWorkflow {
           let content = fs.readFileSync(file, 'utf8');
           
           // Remove conflict markers and keep both versions (simplified)
-          content = content.replace(/<<<<<<< HEAD\n/g, '');
-          content = content.replace(/=======\n/g, '');
-          content = content.replace(/>>>>>>> .*\n/g, '');
           
           fs.writeFileSync(file, content);
           

@@ -32,7 +32,7 @@ function processFile(filePath) {
     
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent);
-      console.log(`"Fixed": ${filePath}`)}
+      }
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message)}
 }
@@ -52,6 +52,5 @@ function processDirectory(dirPath) {
 }
 
 // Start processing from the current directory
-console.log('Fixing syntax errors...');
+
 processDirectory('.');
-console.log('Done!');

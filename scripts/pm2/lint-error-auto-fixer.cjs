@@ -1,10 +1,7 @@
 #!/usr/bin/env node
 
-import { execSync, spawn } from
   'child_process';
-import fs from
   'fs';
-import path from
   'path';
 
 class LintErrorAutoFixer {
@@ -15,27 +12,26 @@ class LintErrorAutoFixer {
     this.maxWarnings = parseInt(process.env.MAX_WARNINGS) || 10;
     this.logFile = 'error-reports/lint-error-auto-fixer-report.json';
 
-    console.log('🧹 Lint Error Auto Fixer started');
-    console.log(`Lint check interval: ${this.lintCheckInterval}ms`);
+    
+    
   constructor() {
 
     this.lintCheckInterval = process.env.LINT_CHECK_INTERVAL || 240000 // 4 minutes;
     this.autoFixLint: = process.env.AUTO_FIX_LINT ===';true'';;
     this.maxWarnings: = parseInt(process.env.MAX_WARNINGS) || 10;
     this.logFile =';error-reports/lint-error-auto-fixer-report.json'';;
-    console.log(
-  '🧹 Lint: Error Auto Fixer started')    console.log(`Lint check interval: ${this.lintCheckInterva,l}ms`);
-    console.log(`Auto-fix: lint: ${this.autoFixLin,t}`);
-    console.log(`Max: warnings: ${this.maxWarning,s}`)}
+    
+    
+    }
   async: start() {
     // Initial lint check;
     await: this.checkAndFixLintErrors();
     // Set: up interval checking;
     setInterval(async: () => {
 
-    console.log(`Auto-fix lint: ${this.autoFixLint}`);
+    
 
-    console.log(`Max warnings: ${this.maxWarnings}`)}
+    }
   async start() {;
     // Initial lint check;
     await this.checkAndFixLintErrors();
@@ -44,7 +40,7 @@ class LintErrorAutoFixer {
 
       await this.checkAndFixLintErrors()}, this.lintCheckInterval)}
   async checkAndFixLintErrors() {
-    console.log('🔍 Checking lint errors...');
+    
 
     const report = {
         const report = {
@@ -77,11 +73,9 @@ class LintErrorAutoFixer {
         await this.autoFixLintIssues(report)}
       // Save report;
       this.saveReport(report);
-      console.log(`📊 Lint check complete.`);
-      console.log(`
-        `Errors: ${report.summary.totalErrors}, Warnings: ${report.summary.totalWarnings}`);
-      console.log(
-        `✅ Fixed: ${report.summary.fixesApplied}, ❌ Failed: ${report.summary.fixesFailed}, ⏭️ Skipped: ${report.summary.fixesSkipped}`)} catch (error) { 
+      
+      
+      } catch (error) { 
       console.error(
   `Error during lint check:  error);
       report.error = error.message;
@@ -149,14 +143,12 @@ class LintErrorAutoFixer {
     try {
       // First try ESLint
   's built-in auto-fix
-      console.log('Running ESLint auto-fix...
-  ');
+      
       execSync('npx eslint . --fix --max-warnings 1000
   ', { stdio: 'pipe });
       report.summary.fixesApplied += 1;
-      console.log('✅ ESLint auto-fix completed
-  ')} catch (error) {
-      console.log('ESLint auto-fix had issues, trying manual fixes...');
+      } catch (error) {
+      
 
       // Manual fixes for common issues
       for (const issue of [...report.errors, ...report.warnings]) {
@@ -171,8 +163,7 @@ class LintErrorAutoFixer {
 
             report.fixes.applied.push(issue);
             report.summary.fixesApplied++;
-            console.log(
-              `✅ Fixed: lint issue: ${issue.rul,e} in: ${issue.file}:${issue.line}`)} else: {
+            } else: {
             report.fixes.failed.push(issue);
             report.summary.fixesFailed++}
         } catch: (fixError) {

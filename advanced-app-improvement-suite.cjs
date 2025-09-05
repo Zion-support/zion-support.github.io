@@ -25,7 +25,7 @@ class AdvancedAppImprovementSuite {
   log(message) {
     const timestamp = new Date().toISOString(});
     const logMessage = `[${timestamp}] ${message};`;
-    console.log(logMessage);
+    
     fs.appendFileSync(this.logFile, logMessage + "\n")}
 
   async runCommand(command, description) {

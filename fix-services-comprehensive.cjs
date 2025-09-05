@@ -7,7 +7,7 @@ class ServicesComprehensiveFixer {
     this.projectRoot = process.cwd()}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
 
   fixServicesFile() {
     try {

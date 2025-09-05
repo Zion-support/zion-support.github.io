@@ -27,7 +27,7 @@ class MasterAutomation {
    };
     
     const timestamp = new Date().toISOString(;);
-    console.log(`${icons[type]} [${timestamp}] ${message}`)}
+    }
 
   async runModule(moduleName, modulePath) { 
     this.log(`Running ${moduleName}...`, 'PROGRESS');

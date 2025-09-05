@@ -22,7 +22,7 @@ class ContinuousErrorMonitor {
     this.errorCount = 0}
 ;
   log(message) {
-  console.log(`[${new Date().toISOString()}] [ContinuousErrorMonitor] ${message}";
+  .toISOString()}] [ContinuousErrorMonitor] ${message}";
     )}
 ;
   async start() {
@@ -173,11 +173,11 @@ class ContinuousErrorMonitor {
 ;
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
-  console.log(`🛑 Received SIGINT, shutting down gracefully...");
+  
   process.exit(0)});
 
 process.on("SIGTERM", () => {
-  console.log("🛑 Received SIGTERM, shutting down gracefully...');
+  
   process.exit(0)});
 
 // Start the continuous error monitor;

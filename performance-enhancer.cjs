@@ -26,7 +26,7 @@ class PerformanceEnhancer {
    };
     
     fs.writeFileSync('performance-enhancement-report.json', JSON.stringify(report, null, 2));
-    console.log('📊 Performance enhancement completed')}
+    }
 }
 
 const enhancer = new PerformanceEnhancer;(;);

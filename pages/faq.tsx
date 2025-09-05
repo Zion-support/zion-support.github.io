@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { Cloud } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Plus, Minus, HelpCircle, Search } from 'lucide-react';
 
 const faqs = [
   {

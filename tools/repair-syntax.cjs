@@ -85,7 +85,7 @@ function main() {
       if (processFile(f)) fixed++} catch (e) {
       console.error('Error fixing', f, e.message)}
   }
-  console.log(`Repaired ${fixed} files out of ${targets.length}.`)}
+  }
 
 main();
 

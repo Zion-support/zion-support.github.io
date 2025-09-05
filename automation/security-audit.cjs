@@ -4,40 +4,40 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🔒 Security Audit Starting...\n');
+
 
 // Security checks
 const securityChecks = [{
     "name": 'Dependency Vulnerability Scan',
     "action": () => {
-      console.log('🔍 Scanning for vulnerable dependencies...');
+      
       try {
         execSync('npm audit --audit-level=moderate', { "stdio": 'pipe' });
-        console.log('✅ No high-severity vulnerabilities found');
+        
       } catch (error) {
-        console.log('⚠️ Some vulnerabilities found - check npm audit output');
+        
       }
     }},
   {
     "name": 'Environment Variables Check',
     "action": () => {
-      console.log('🔐 Checking environment variables...');
+      
       const envFiles = ['.env', '.env.local', '.env.production'];
       let foundEnvFiles = 0;
 
       envFiles.forEach(envFile => {
         if (fs.existsSync(envFile)) {
           foundEnvFiles++;
-          console.log(`Found ${envFile}`);
+          
         }
       });
 
-      console.log(`Found ${foundEnvFiles} environment files`);
+      
     }},
   {
     "name": 'API Security Check',
     "action": () => {
-      console.log('🛡️ Checking API security...');
+      
       const apiDir = path.join(process.cwd(), 'pages', 'api');
       if (fs.existsSync(apiDir)) {
         const apiFiles = fs
@@ -55,15 +55,13 @@ const securityChecks = [{
           }
         });
 
-        console.log(
-          `Found ${apiFiles.length} API files, ${securityIssues} potential security issues`
-        );
+        
       }
     }},
   {
     "name": 'Content Security Policy Check',
     "action": () => {
-      console.log('📋 Checking Content Security Policy...');
+      
       const pagesDir = path.join(process.cwd(), 'pages');
       if (fs.existsSync(pagesDir)) {
         const pages = fs
@@ -81,23 +79,23 @@ const securityChecks = [{
           }
         });
 
-        console.log(`Found CSP in ${cspFound}/${pages.length} pages`);
+        
       }
     }},
   {
     "name": 'HTTPS Enforcement Check',
     "action": () => {
-      console.log('🔐 Checking HTTPS enforcement...');
+      
       const nextConfigPath = path.join(process.cwd(), 'next.config.js');
       if (fs.existsSync(nextConfigPath)) {
         const content = fs.readFileSync(nextConfigPath, 'utf8');
         if (content.includes('https') || content.includes('secure')) {
-          console.log('✅ HTTPS configuration found');
+          
         } else {
-          console.log('⚠️ No HTTPS enforcement found');
+          
         }
       } else {
-        console.log('⚠️ No Next.js config found');
+        
       }
     }},
 ];
@@ -108,17 +106,17 @@ let totalCount = securityChecks.length;
 
 for (const check of securityChecks) {
   try {
-    console.log(`\n🔄 ${check.name}...`);
+    
     check.action();
-    console.log(`✅ ${check.name} completed`);
+    
     successCount++;
   } catch (error) {
-    console.log(`❌ ${check.name} "failed": ${error.message}`);
+    
   }
 }
 
-console.log("\n🎉 Security Audit Complete!");
-console.log(`✅ Successfully "completed": ${successCount}/${totalCount} checks`);
+
+
 
 // Generate security report
 const report = {
@@ -138,4 +136,4 @@ if (!fs.existsSync(reportsDir)) {
 
 const reportFile = path.join(reportsDir, `security-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-console.log(`📄 Security report saved "to": ${reportFile}`);
+

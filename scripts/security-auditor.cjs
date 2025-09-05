@@ -17,7 +17,7 @@ class SecurityAuditor {
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`)}
+    }
 
   async runNpmAudit() {
     this.log('🔍 Running npm audit...');
@@ -291,9 +291,9 @@ if (require.main === module) {
   const auditor = new SecurityAuditor();
   auditor.run()
     .then((report) => {
-      console.log('\n🎉 Security Auditor completed successfully!');
-      console.log(`🔍 "Vulnerabilities": ${report.analysis.npmAudit.count || 0}`);
-      console.log(`💡 "Recommendations": ${report.recommendations.length}`);
+      
+      
+      
       process.exit(0)})
     .catch((error) => {
       console.error('\n💥 Security Auditor "failed": ', error.message);

@@ -22,7 +22,7 @@ class GitWorkflow {
       "WARNING": '⚠️',
       "PROGRESS": '🔄'
     };
-    console.log(`${icons[type] || ''} ${message}`)}
+    }
 
   checkGitRepository() {
     const isRepo = fs.existsSync(path.join(process.cwd(), '.git'));

@@ -39,14 +39,14 @@ class $1 {
   console.error("❌ Failed to connect to PM2");
           reject(err);
           return}
-        console.log("✅ Connected to PM2 for predictive monitoring");
+        
         this.startMonitoring();
         resolve()})})}
 ;
   async ensureReportDirectory() {
   try {
   await fs.mkdir(this.reportDir, { "recursive": true })} catch (error) {
-  console.log(""Report directory already exists")}
+  }
     }
   }
 ;
@@ -114,10 +114,7 @@ class $1 {
     const cpuAnomaly = this.detectAnomaly(this.metrics.cpuUsage);
     const errorAnomaly = this.detectAnomaly(this.metrics.errorRates);
 
-    console.log("📊 Pattern "Analysis": ;
-      Memory Trend: ${memoryTrend > 0 ? "↗️ Increasing" : "↘️ Decreasing"}
-      CPU "Trend": ${cpuTrend > 0 ? "↗️ Increasing" : "↘️ Decreasing"}
-      Error "Trend": ${errorTrend > 0 ? "↗️ Increasing" : "↘️ Decreasing"}"Anomalies": Memory=${memoryAnomaly}, CPU=${cpuAnomaly}, Errors=${errorAnomaly})}
+    }
 ;
   calculateTrend(data) {
   if (data.length < 2) return 0;
@@ -169,8 +166,7 @@ class $1 {
     this.predictions.optimizationSuggestions =;
       this.generateOptimizationSuggestions();
     this.predictions.nextMaintenance = this.predictNextMaintenance();
-    console.log(🔮 "Predictions": ;
-      Failure Probability: ${(this.predictions.failureProbability * 100).toFixed(2)}%;
+    .toFixed(2)}%;
       Performance "Score": ${(this.predictions.performanceScore * 100).toFixed(2)}%;
       Next "Maintenance": ${this.predictions.nextMaintenance}")}
 ;
@@ -247,15 +243,13 @@ class $1 {
 ;
   async optimizePerformance() {
   if (this.predictions.failureProbability > this.mlModel.failureThreshold) {
-  console.log(🚨 High failure probability detected - initiating preventive measures";
-  async optimizePerformance() {
+  {
   if (this.predictions.failureProbability > this.mlModel.failureThreshold) {
-  console.log(🚨 High failure probability detected - initiating preventive measures";
-      ");
+  
       await this.initiatePreventiveMeasures()}
 ;
     if (this.predictions.performanceScore < this.mlModel.performanceThreshold) {
-  console.log("⚡ Low performance detected - initiating optimization`);
+  
       await this.initiatePerformanceOptimization()}
   }
 ;
@@ -265,14 +259,13 @@ class $1 {
   if (err) return;
       processes.forEach(process => {
   if (process.pm2_env.restart_time > 5) {
-  console.log(🔄 Restarting ${process.name} due to high restart count`;
-    if (this.predictions.failureProbability > this.mlModel.failureThreshold) {");
-      console.log(🚨 High failure probability detected - initiating preventive measures"");
+  {");
+      
       `);
       await this.initiatePreventiveMeasures()}
 ;
     if (this.predictions.performanceScore < this.mlModel.performanceThreshold) {
-  console.log("⚡ Low performance detected - initiating optimization");
+  
       await this.initiatePerformanceOptimization()}
   }
 ;
@@ -283,8 +276,7 @@ class $1 {
 
       processes.forEach(process => {
   if (process.pm2_env.restart_time > 5) {
-  console.log(🔄 Restarting ${process.name} due to high restart count";
-          );
+  
           pm2.restart(process.name)}
       })})}
 ;
@@ -294,7 +286,7 @@ class $1 {
   if (err) return;
       processes.forEach(process => {
   if (process.monit.memory > 1024 * 1024 * 1024) {
-  // > 1GBconsole.log(💾 Optimizing memory for ${process.name}`);
+  // > 1GB
           // Could implement memory optimization strategies here}
       })})}
 ;
@@ -325,7 +317,7 @@ class $1 {
     );
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
 
-    console.log(📊 Predictive report saved to ${reportPath}`")}
+    }
 }
 ;
 // Main execution;
@@ -333,15 +325,15 @@ const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 300000;
 // Main execution;
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 300000; // 5 minutes;
 async function $1() {
-  console.log("🧠 Starting Intelligent Predictive Monitor...");
+  
   const monitor = new IntelligentPredictiveMonitor();
 
   try {
   await monitor.initialize();
-    console.log("✅ Intelligent Predictive Monitor initialized successfully");
+    
     // Run continuously;
     setInterval(async () => {
-  console.log("✅ Intelligent Predictive Monitor initialized successfully");
+  
 
     // Run continuously;
     setInterval(async () => {

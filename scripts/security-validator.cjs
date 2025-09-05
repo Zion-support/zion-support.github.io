@@ -3,7 +3,7 @@
 const fs = require('fs')
 const path = require('path')
 
-console.log('🔍 Starting Security Validation...');
+
 
 // Security patterns to check for
 const securityPatterns = [{
@@ -98,12 +98,12 @@ function scanAllFiles() {
 const issues = scanAllFiles;(;);
 
 if ( {
-  console.log('✅ No security issues found!')) {
+  ) {
      {
-  console.log('✅ No security issues found!')}} else {
-  console.log(`⚠️  Found ${issues.length} security "issues": `);
+  }} else {
+  
   issues.forEach(issue => {
-    console.log(`   ${issue.severity.toUpperCase()}: ${issue.file} - ${issue.issue} (${issue.count} occurrences)`)})}
+    }: ${issue.file} - ${issue.issue} (${issue.count} occurrences)`)})}
 
 // Generate report
 const report = {
@@ -119,4 +119,4 @@ const report = {
 };
 
 fs.writeFileSync('security-validation-report.json', JSON.stringify(report, null, 2));
-console.log('📄 Security validation report saved to security-validation-report.json');
+

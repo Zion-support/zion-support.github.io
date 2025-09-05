@@ -17,18 +17,14 @@ class AutomationSuiteRunner {
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-<<<<<<< HEAD
-      fs.mkdirSync(this.reportsDir, { "recursive": true });
-=======
       fs.mkdirSync(this.reportsDir, { recursive: true });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
     }
   }
 
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
+    
     fs.appendFileSync(this.logFile, logMessage + "\n");
   }
 

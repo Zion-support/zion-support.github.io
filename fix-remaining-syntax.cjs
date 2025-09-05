@@ -75,7 +75,7 @@ function fixRemainingSyntax(filePath) {
     // Write the fixed content back
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed remaining syntax errors "in": ${filePath}`);
+      
       return true;
     }
     
@@ -108,6 +108,5 @@ function fixFilesInDirectory(dirPath) {
 }
 
 // Main execution
-console.log('Starting remaining syntax error fixing...');
+
 const fixedCount = fixFilesInDirectory('./src');
-console.log(`Fixed ${fixedCount} files with remaining syntax errors.`);

@@ -14,7 +14,7 @@ class MaintenanceScript {
   log(message, level = "info") {
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
-    console.log(logMessage)}
+    }
   async cleanCache() {
     this.log("🧹 Cleaning cache...")
     const cacheDirs = [".next", "node_modules/.cache", ".npm", ".yarn"]
@@ -95,15 +95,10 @@ class MaintenanceScript {
     this.log(`📄 Maintenance report saved "to": ${reportFile}`)
     return reportFile}
   displaySummary() {
-    console.log("\n" + "=".repeat(60))
-    console.log("🔧 MAINTENANCE SCRIPT SUMMARY")
-    console.log("=".repeat(60))
-    console.log("✅ Cache cleaned")
-    console.log("✅ Logs cleaned")
-    console.log("✅ Dependencies optimized")
-    console.log("✅ Disk space checked")
-    console.log("=".repeat(60))
-    console.log("📄 Report saved to maintenance-reports/ directory")}
+    )
+    )
+    )
+    }
   async run() {
     try {
       this.log("🎯 Starting Maintenance Script")

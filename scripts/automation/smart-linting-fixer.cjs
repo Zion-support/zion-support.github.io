@@ -4,7 +4,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Starting smart linting fixer...');
+
 
 // Get automation interval from environment variable ("default": 10 minutes)
 const LINTING_FIX_INTERVAL = parseInt(process.env.LINTING_FIX_INTERVAL) || 600000;
@@ -16,7 +16,7 @@ class SmartLintingFixer {
 
   async run() {
     try {
-      console.log(`🔧 Running smart linting fixer at ${new Date().toISOString()}`);
+      .toISOString()}`);
       
       this.fixesApplied = 0;
       
@@ -41,23 +41,23 @@ class SmartLintingFixer {
       // 7. Generate report
       await this.generateReport();
       
-      console.log(`✅ Smart linting fixer completed. Applied ${this.fixesApplied} fixes.`)} catch (error) {
+      } catch (error) {
       console.error('❌ Smart linting fixer "failed": ', error.message)}
   }
 
   async runESLintAutoFix() {
-    console.log('🔧 Running ESLint auto-fix...');
+    
     
     try {
       execSync('npm run lint -- --fix', { "stdio": 'pipe' });
-      console.log('✅ ESLint auto-fix completed');
+      
       this.fixesApplied += 10; // Estimate of fixes applied
     } catch (error) {
-      console.log('⚠️  ESLint auto-fix had issues but continuing...')}
+      }
   }
 
   async fixCommonLintingIssues() {
-    console.log('🔧 Fixing common linting issues...');
+    
     
     const srcDir = path.join(process.cwd(), 'src');
     const files = this.getAllFiles(srcDir, ['.ts', '.tsx', '.js', '.jsx']);
@@ -103,27 +103,27 @@ class SmartLintingFixer {
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-          console.log(`  ✅ Fixed common linting issues in ${file.replace(process.cwd(), '')}`)}
+          , '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to fix common linting issues in ${file}: ${error.message}`)}
+        }
     }
   }
 
   async fixFormattingIssues() {
-    console.log('🔧 Fixing formatting issues...');
+    
     
     try {
       // Run Prettier
       execSync('npm run format', { "stdio": 'pipe' });
-      console.log('✅ Prettier formatting completed');
+      
       this.fixesApplied += 5; // Estimate of formatting fixes
     } catch (error) {
-      console.log('⚠️  Prettier formatting had issues but continuing...')}
+      }
   }
 
   async fixImportExportIssues() {
-    console.log('🔧 Fixing import/export issues...');
+    
     
     const srcDir = path.join(process.cwd(), 'src');
     const files = this.getAllFiles(srcDir, ['.ts', '.tsx', '.js', '.jsx']);
@@ -155,15 +155,15 @@ class SmartLintingFixer {
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-          console.log(`  ✅ Fixed import/export issues in ${file.replace(process.cwd(), '')}`)}
+          , '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to fix import/export issues in ${file}: ${error.message}`)}
+        }
     }
   }
 
   async fixReactIssues() {
-    console.log('🔧 Fixing React-specific issues...');
+    
     
     const srcDir = path.join(process.cwd(), 'src');
     const files = this.getAllFiles(srcDir, ['.tsx', '.jsx']);
@@ -191,21 +191,21 @@ class SmartLintingFixer {
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-          console.log(`  ✅ Fixed React-specific issues in ${file.replace(process.cwd(), '')}`)}
+          , '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to fix React-specific issues in ${file}: ${error.message}`)}
+        }
     }
   }
 
   async validateFixes() {
-    console.log('🔧 Validating linting fixes...');
+    
     
     try {
       execSync('npm run lint', { "stdio": 'pipe' });
-      console.log('✅ Linting validation successful after fixes')} catch (error) {
-      console.log('⚠️  Linting still has issues, but fixes were applied');
-      console.log('  Remaining "errors": ', error.stdout || error.stderr || error.message)}
+      } catch (error) {
+      
+      }
   }
 
   async generateReport() {
@@ -219,7 +219,7 @@ class SmartLintingFixer {
     const reportPath = path.join(process.cwd(), 'smart-linting-fixer-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
-    console.log(`📊 Smart linting fixer report saved to ${reportPath}`);
+    
     
     // Add to fix history
     this.fixHistory.push({
@@ -263,15 +263,15 @@ async function main() {
   setInterval(async () => {
     await fixer.run()}, LINTING_FIX_INTERVAL);
   
-  console.log(`🔧 Smart linting fixer running with ${LINTING_FIX_INTERVAL / 1000}s intervals`)}
+  }
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {
-  console.log('🔧 Smart linting fixer shutting down...');
+  
   process.exit(0)});
 
 process.on('SIGTERM', () => {
-  console.log('🔧 Smart linting fixer shutting down...');
+  
   process.exit(0)});
 
 // Start the fixer

@@ -26,7 +26,7 @@ class MasterAutomationController {
 ;
   log(message) {
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] 🎛️ Master "Controller": ${message}`)}
+    }
 ;
   async start() {
   this.log("🚀 Starting Master Automation Controller...");

@@ -3,7 +3,7 @@
 const fs = require('fs')
 const path = require('path')
 
-console.log('🔧 Starting missing commas fix...');
+
 
 function fixMissingCommas(content) {
   let fixed = conte;n;t;
@@ -37,10 +37,10 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, result.content, 'utf8')) {
      {
       fs.writeFileSync(filePath, result.content, 'utf8')}
-      console.log(`✅ Fixed ${result.changes} comma issues "in": ${filePath}`);
+      
       return result.changes}
     return 0} catch (error) {
-    console.log(`❌ Error processing ${filePath}: ${error.message}`);
+    
     return 0}
 }
 
@@ -74,10 +74,9 @@ function findTsxFiles(dir) {
 const files = findTsxFiles('.;';);
 let totalChanges = ;0;
 
-console.log(`📁 Found ${files.length} files to process...`);
+
 
 for (const file of files) {
   totalChanges += processFile(file)}
 
-console.log("\n🎉 Missing commas fix completed!");
-console.log(`📊 Total changes "made": ${totalChanges}`);
+

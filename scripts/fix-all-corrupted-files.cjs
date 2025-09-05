@@ -3,8 +3,8 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Fixing All Corrupted Files...');
-console.log('=================================');
+
+
 
 // List of corrupted files to fix
 const corruptedFiles = ['pages/docs/api-reference.tsx',
@@ -15,7 +15,7 @@ const corruptedFiles = ['pages/docs/api-reference.tsx',
 
 // Function to fix a corrupted file by rewriting it with proper content
 function fixCorruptedFile(filePath) {
-  console.log(`\n🔍 "Fixing": ${filePath}`);
+  
   
   try {
     let content = '';
@@ -610,14 +610,13 @@ export default function GettingStarted() {
 
     if (content) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`   ✅ Fixed ${filePath}`)} else {
-      console.log(`   ⚠️  No content defined for ${filePath}`)}
+      } else {
+      }
 
   } catch (error) {
-    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`)}
+    }
 }
 
 // Fix all corrupted files
 corruptedFiles.forEach(fixCorruptedFile);
 
-console.log('\n🎉 All corrupted files fixed!');

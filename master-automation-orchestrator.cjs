@@ -38,7 +38,7 @@ class MasterAutomationOrchestrator {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
+    
     fs.appendFileSync(this.logFile, logMessage + '\n');
   }
 
@@ -153,7 +153,7 @@ class MasterAutomationOrchestrator {
     const buildScript = `#!/usr/bin/env node
 const { execSync } = require('child_process');
 
-console.log('🔨 Running comprehensive build...');
+
 
 const buildSteps = [
   { name: 'Install Dependencies', cmd: 'npm install' },
@@ -164,16 +164,16 @@ const buildSteps = [
 
 for (const step of buildSteps) {
   try {
-    console.log(\`🔄 \${step.name}...\`);
+    
     execSync(step.cmd, { stdio: 'inherit' });
-    console.log(\`✅ \${step.name} completed\`);
+    
   } catch (error) {
-    console.log(\`❌ \${step.name} failed: \${error.message}\`);
+    
     process.exit(1);
   }
 }
 
-console.log('🎉 Build completed successfully!');
+
 `;
 
     fs.writeFileSync('scripts/comprehensive-build.cjs', buildScript);
@@ -218,7 +218,7 @@ class MonitoringDashboard {
 \`;
 
     fs.writeFileSync('monitoring-dashboard.md', report);
-    console.log('📊 Monitoring dashboard generated');
+    
   }
 }
 
@@ -271,10 +271,10 @@ module.exports = MonitoringDashboard;
       this.log(`📝 Detailed log saved to: ${this.logFile}`);
       
       // Print summary
-      console.log('\n📊 SUMMARY:');
-      console.log(`- Scripts Run: ${this.results.summary.scriptsRun}`);
-      console.log(`- Improvements Created: ${this.results.summary.improvementsCreated}`);
-      console.log(`- Git Operations Completed: ${this.results.summary.gitOperationsCompleted}`);
+      
+      
+      
+      
       
       return this.results;
     } catch (error) {

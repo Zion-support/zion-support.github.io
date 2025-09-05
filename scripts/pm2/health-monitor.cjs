@@ -11,7 +11,7 @@ const fs = require('fs');
 
 const log = (message) => {
   const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] Health Monitor: ${message}`);
+  
 };
 
 const runCommand = (command, description) => {

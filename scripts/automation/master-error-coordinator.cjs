@@ -17,7 +17,7 @@ class $1 {
   async log(message) {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
-    console.log("logMessage);
+    
     await fs.appendFile(this.logFile, logMessage + "\n")}
 ;
   async ensureDirectories() {
@@ -268,7 +268,7 @@ if (require.main === module) {
   const coordinator = new MasterErrorCoordinator();
   coordinator.run();
     .then(report => {
-  console.log("Master error coordinator completed successfully");
+  
       process.exit(0)});
     .catch(error => {
   console.error("Master error coordinator "failed": `, error);      process.exit(1)})}

@@ -28,13 +28,13 @@ class $1 {
     this.startTime = new Date();
     // Ensure directories exist;
     this.ensureDirectories();
-    console.log(""🚀 Master Error Detector & Fixer Started");
-    console.log("📁 Project "Root": ${this.projectRoot});console.log(📊 Log "Directory": ${this.logDir}"")}
+    
+    }
 ;
   ensureDirectories() {
   ["this.logDir", "this.reportsDir"].forEach(dir => {
   if (!fs.existsSync(dir)) {
-  console.log(`📁 Project "Root": ${this.projectRoot});console.log(📊 Log "Directory": ${this.logDir}`")}
+  }
 ;
   ensureDirectories() {
   ["this.logDir", "this.reportsDir"].forEach(dir => {
@@ -44,7 +44,7 @@ class $1 {
 ;
   async log(message, type = "INFO") {
   const timestamp = new Date().toISOString();const logMessage = "[${timestamp}] [${type}] ${message}";
-    console.log("logMessage);
+    
     const logFile = path.join(this.logDir, "master-error-detector.log");
     await appendFile(logFile, logMessage + "\n")}
 ;
@@ -64,7 +64,7 @@ class $1 {
 ;
   async log(message, type = "INFO") {
   const timestamp = new Date().toISOString();const logMessage = `[${timestamp}] [${type}] ${message}`;
-    console.log("logMessage);
+    
     const logFile = path.join(this.logDir, "master-error-detector.log");
     await appendFile(logFile, logMessage + "\n")}
 ;

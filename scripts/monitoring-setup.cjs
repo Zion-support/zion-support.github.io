@@ -6,7 +6,7 @@ class MonitoringSetup {;
     this.projectRoot = process.cwd(),}
 ;
   async setupErrorTracking() {;
-    console.log("🚨 Setting up error tracking...");
+    
     const errorTrackingConfig = ";
 // Error tracking configuration;
 export const errorTracking = {;
@@ -23,10 +23,10 @@ export const errorTracking = {;
 export default errorTracking;
 ";
     fs.writeFileSync(path.join(this.projectRoot, "config/error-tracking.js"), errorTrackingConfig);
-    console.log("✅ Error tracking configuration created"),}
+    ,}
 ;
   async setupAnalytics() {;
-    console.log("📈 Setting up analytics...");
+    
     const analyticsConfig = ";
 // Analytics configuration;
 export const analytics = {;
@@ -41,10 +41,10 @@ export const analytics = {;
 export default analytics;
 ";
     fs.writeFileSync(path.join(this.projectRoot, "config/analytics.js"), analyticsConfig);
-    console.log("✅ Analytics configuration created"),}
+    ,}
 ;
   async setupHealthChecks() {;
-    console.log("🏥 Setting up health checks...");
+    
     const healthCheckScript = ";
 const express = require("$1");
 const app = express();
@@ -63,13 +63,13 @@ app.get("/ready", (req, res) => {;
 module.exports = app;
 ";
     fs.writeFileSync(path.join(this.projectRoot, "scripts/health-check.js"), healthCheckScript);
-    console.log("✅ Health check script created"),}
+    ,}
 ;
   async run() {;
     await this.setupErrorTracking();
     await this.setupAnalytics();
     await this.setupHealthChecks();
-    console.log("✅ Monitoring setup completed!"),}
+    ,}
 }
 ;
 const setup = new MonitoringSetup();

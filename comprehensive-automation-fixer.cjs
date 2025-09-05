@@ -13,7 +13,7 @@ const automationFiles = ['automation/dependency-fixer.cjs',
 
 function fixAutomationFile(filePath) {
   try {
-    console.log(`Fixing ${filePath}...`);
+    
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Fix class names based on file
@@ -86,11 +86,10 @@ function fixAutomationFile(filePath) {
         return match});
     
     fs.writeFileSync(filePath, content);
-    console.log(`✅ Fixed ${filePath}`)} catch (error) {
+    } catch (error) {
     console.error(`❌ Error fixing ${filePath}:`, error.message)}
 }
 
 // Fix all automation files
 automationFiles.forEach(fixAutomationFile);
 
-console.log('\n🎉 All automation files have been fixed!');

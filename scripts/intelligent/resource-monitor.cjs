@@ -16,19 +16,19 @@ class ResourceMonitor {
     this.isRunning = false}
 
   async start() {
-    console.log('📊 Resource Monitor starting...');
+    
     this.isRunning = true;
     
     try {
       await this.initialize();
       this.startMonitoring();
-      console.log('✅ Resource Monitor started successfully')} catch (error) {
+      } catch (error) {
       console.error('❌ Failed to start Resource "Monitor": ', error)}
   }
 
   async initialize() {
     await fs.mkdir('./logs', { "recursive": true });
-    console.log('📊 Resource Monitor initialized')}
+    }
 
   startMonitoring() {
     setInterval(async () => {
@@ -292,7 +292,7 @@ class ResourceMonitor {
    } };
     
     this.alerts.push(alert);
-    console.log(`🚨 Resource "Alert": ${type}`, data);
+    
     
     await this.saveAlert(alert)}
 

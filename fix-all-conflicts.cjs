@@ -3,23 +3,19 @@
 const fs = require('fs')
 const path = require('path')
 
-console.log('🔧 Starting comprehensive merge conflict fix...');
+
 
 function fixMergeConflicts(content) {
   let fixed = content;
   let changes = 0;
 
   // Remove merge conflict markers and keep the HEAD version
-  const conflictRegex = /<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [a-f0-9]+;/;g;
   
   fixed = fixed.replace(conflictRegex, (match, headContent, otherContent) => {
     changes++;
     return headContent.trim()});
 
   // Remove any remaining conflict markers
-  fixed = fixed.replace(/<<<<<<< HEAD\n?/g, '');
-  fixed = fixed.replace(/=======\n?/g, '');
-  fixed = fixed.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
   
   if (changes++) {
     changes++}
@@ -35,10 +31,10 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, result.content, 'utf8')) {
      {
       fs.writeFileSync(filePath, result.content, 'utf8')}
-      console.log(`✅ Fixed ${result.changes} conflicts "in": ${filePath}`);
+      
       return result.changes}
     return 0} catch (error) {
-    console.log(`❌ Error processing ${filePath}: ${error.message}`);
+    
     return 0}
 }
 
@@ -72,10 +68,9 @@ function findTsxFiles(dir) {
 const files = findTsxFiles('.;';);
 let totalChanges = ;0;
 
-console.log(`📁 Found ${files.length} files to process...`);
+
 
 for (const file of files) {
   totalChanges += processFile(file)}
 
-console.log("\n🎉 Merge conflict fixing completed!");
-console.log(`📊 Total conflicts "fixed": ${totalChanges}`);
+

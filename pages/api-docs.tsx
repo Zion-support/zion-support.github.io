@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../components/Layout';
 import { 
   Code, 
   ArrowRight,
@@ -9,7 +9,6 @@ import {
   Play,
   Download
 } from 'lucide-react';
-import Layout from '../components/Layout';
 
 const endpoints = [
   {

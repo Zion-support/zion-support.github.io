@@ -4,7 +4,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔄 Starting error recovery manager...');
+
 
 class ErrorRecoveryManager {
   constructor() {
@@ -18,13 +18,13 @@ class ErrorRecoveryManager {
 
   async run() {
     try {
-      console.log('🔍 Checking for recovery issues...');
+      
       
       // Check for recovery issues
       const issues = await this.checkForRecoveryIssues();
       this.stats.totalIssues = issues.length;
       
-      console.log(`📊 Found ${issues.length} recovery issues`);
+      
       
       // Apply recoveries for each issue
       for (const issue of issues) {
@@ -33,9 +33,9 @@ class ErrorRecoveryManager {
           if (recoveryResult.success) {
             this.recoveries.push(recoveryResult);
             this.stats.recoveredIssues++;
-            console.log(`✅ "Recovered": ${issue.message}`)} else {
+            } else {
             this.stats.failedRecoveries++;
-            console.log(`⚠️ Could not "recover": ${issue.message}`)}
+            }
         } catch (error) {
           console.error(`❌ Error applying "recovery": ${error.message}`);
           this.stats.failedRecoveries++}
@@ -44,7 +44,7 @@ class ErrorRecoveryManager {
       // Generate report
       this.generateReport();
       
-      console.log(`✅ Error recovery manager completed. Recovered ${this.stats.recoveredIssues}/${this.stats.totalIssues} issues`)} catch (error) {
+      } catch (error) {
       console.error('❌ Error recovery manager "failed": ', error.message)}
   }
 
@@ -364,7 +364,7 @@ class ErrorRecoveryManager {
     const reportPath = path.join(process.cwd(), 'error-recovery-manager-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
-    console.log(`📊 Error recovery manager report saved "to": ${reportPath}`);
+    
     return report}
 }
 

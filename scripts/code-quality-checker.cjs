@@ -23,7 +23,7 @@ class CodeQualityChecker {
       'WARNING': '⚠️',
       'FIX': '🔧'
     }[type] || 'ℹ️';
-    console.log(`[${timestamp}] [${type}] ${emoji} ${message}`);
+    
   }
 
   async checkFile(filePath) {
@@ -190,10 +190,10 @@ class CodeQualityChecker {
     this.log('\n📊 Code Quality Report', 'INFO');
     this.log('=' .repeat(50));
     
-    console.log(`\n📁 Files Processed: ${this.stats.filesProcessed}`);
-    console.log(`📝 Total Lines: ${this.stats.totalLines}`);
-    console.log(`⚠️  Issues Found: ${this.stats.issuesFound}`);
-    console.log(`🔧 Fixes Applied: ${this.stats.fixesApplied}`);
+    
+    
+    
+    
     
     // Group issues by type
     const issuesByType = {};
@@ -204,9 +204,9 @@ class CodeQualityChecker {
       issuesByType[issue.type].push(issue);
     });
     
-    console.log('\n📋 Issues by Type:');
+    
     Object.entries(issuesByType).forEach(([type, issues]) => {
-      console.log(`   ${type}: ${issues.length} issues`);
+      
     });
     
     // Show top files with issues
@@ -223,9 +223,9 @@ class CodeQualityChecker {
       .slice(0, 5);
     
     if (topFiles.length > 0) {
-      console.log('\n🔍 Top Files with Issues:');
+      
       topFiles.forEach(([file, count]) => {
-        console.log(`   ${path.relative(this.projectRoot, file)}: ${count} issues`);
+        }: ${count} issues`);
       });
     }
     

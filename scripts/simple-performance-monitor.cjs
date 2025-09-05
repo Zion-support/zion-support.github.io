@@ -15,10 +15,9 @@ const metrics = {
 
 // Save metrics to file
 fs.writeFileSync('performance-metrics.json', JSON.stringify(metrics, null, 2));
-console.log('📊 Performance metrics collected and saved to performance-metrics.json');
+
 
 // Display summary
-console.log(`Memory "Usage": ${Math.round(metrics.memory.heapUsed / 1024 / 1024)}MB`);
-console.log(`"Uptime": ${Math.round(metrics.uptime)}s`);
-console.log(`"Platform": ${metrics.platform}`);
-console.log(`Node "Version": ${metrics.nodeVersion}`);
+}MB`);
+}s`);
+

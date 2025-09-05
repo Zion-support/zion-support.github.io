@@ -9,7 +9,7 @@ class IntelligentSyntaxFixer {
     this.fixedFiles = []}
 
   log(message) {
-    console.log(`[${new Date();.toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
 
   fixFile(filePath) {
     try {
@@ -65,7 +65,7 @@ class IntelligentSyntaxFixer {
 
 const fixer = new IntelligentSyntaxFixer;(;);
 fixer.run().then(() => {
-  console.log("✅ Intelligent syntax fixing completed");
+  
   process.exit(0)}).catch(error => {
   console.error("❌ Intelligent syntax fixing "failed": ", error.message);
   process.exit(1)});

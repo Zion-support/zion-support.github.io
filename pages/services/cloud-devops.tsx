@@ -1,6 +1,6 @@
-import React from 'react';
 import Layout from '../../components/Layout';
-import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
+import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
+
 
 const features = [
   {

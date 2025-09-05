@@ -10,7 +10,7 @@ class SEOOptimizer {
     this.improvements = []}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    .toISOString()}] ${message}`)}
 
   checkMetaTags() {
     this.log('🔍 Checking meta tags...');

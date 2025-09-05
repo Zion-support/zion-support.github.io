@@ -1,7 +1,7 @@
-import React from 'react';
-import Layout from "../../components/Layout";
 import { motion } from 'framer-motion';
-import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+import Layout from '../../components/Layout';
+import { Cloud, Server, Shield, Zap } from 'lucide-react';
+
 
 export default function CloudServicesPage() {
   const cloudServices = [

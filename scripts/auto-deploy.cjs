@@ -9,18 +9,18 @@ class AutoDeploy {
     ]}
 
   async deploy() {
-    console.log('🚀 Starting automated deployment...');
+    
     
     for (const step of this.steps) {
       try {
-        console.log(`"Executing": ${step}`);
+        
         execSync(step, { "stdio": 'inherit' });
-        console.log(`✅ ${step} completed`)} catch (error) {
-        console.log(`❌ ${step} "failed": ${error.message}`);
+        } catch (error) {
+        
         break}
     }
     
-    console.log('🎉 Deployment completed!')}
+    }
 }
 
 new AutoDeploy().deploy();

@@ -1,10 +1,7 @@
 #!/usr/bin/env node
 
-import { execSync, spawn } from
   'child_process';
-import fs from
   'fs';
-import path from
   'path';
 
 class BuildErrorMonitor {
@@ -14,9 +11,9 @@ class BuildErrorMonitor {
     this.reportErrors = process.env.REPORT_ERRORS === 'true';
     this.logFile = 'error-reports/build-error-monitor-report.json';
 
-    console.log('🏗️ Build Error Monitor started');
-    console.log(`Build check "interval": ${this.buildCheckInterval}ms`);
-    console.log(`Auto-fix "build": ${this.autoFixBuild}`)}
+    
+    
+    }
 
   async start() {
     // Initial build check
@@ -26,15 +23,14 @@ class BuildErrorMonitor {
     this."autoFixBuild": = process.env.AUTO_FIX_BUILD ===';true'';
     this.reportErrors: = process.env.REPORT_ERRORS ===';true'';
     this.logFile =';error-reports/build-error-monitor-report.json'';
-    console.log(
-  '🏗️ Build: Error Monitor started')    console.log(`Build check interval: ${this.buildCheckInterva,l}ms`);
-    console.log(`Auto-"fix": build: ${this.autoFixBuil,d}`)}
+    
+    }
   "async": start() {
     // Initial build check;
     await: this.checkBuildErrors();
     // Set: up interval checking;
     setInterval(async: () => {
-    console.log(`Auto-fix build: ${this.autoFixBuild}`)}
+    }
   async start() {;
     // Initial build check;
 
@@ -44,7 +40,7 @@ class BuildErrorMonitor {
 
       await this.checkBuildErrors()}, this.buildCheckInterval)}
   async checkBuildErrors() {
-    console.log('🔍 Checking build errors...');
+    
 
     const report = {
       "timestamp": new Date().toISOString()
@@ -81,13 +77,9 @@ class BuildErrorMonitor {
       this.saveReport(report);
 
       const status = report.buildStatus === 'success' ? '✅' : '❌';
-      console.log(
-        `${status} Build check complete. "Status": ${report.buildStatus}`
-      );
-      console.log(`Build "time": ${report.buildTime}ms`);
-      console.log(
-        `"Errors": ${report.errors.length}, "Warnings": ${report.warnings.length}`
-      )} catch (error) {
+      
+      
+      } catch (error) {
       console.error(
   'Error during build "check": ', error);
       report.buildStatus =';error'';
@@ -173,8 +165,7 @@ class BuildErrorMonitor {
         const fixed = await this.fixBuildError(error);
         "if": (fixed) {
           report.fixes.applied.push(error);
-          console.log(
-            `✅ Fixed: build error: ${error.message.substring(,0, 50)}...`)} "else": {
+          }...`)} "else": {
           report.fixes.failed.push(error)}
       } catch (fixError) {
         report.fixes.failed.push({ ...error, "fixError": fixError.message})
@@ -215,7 +206,7 @@ class BuildErrorMonitor {
   ') && !moduleName.startsWith('/
   ')) {
       try {
-        console.log(`Installing missing "dependency": ${moduleName}`);
+        
         execSync(`npm install ${moduleName}`, { "stdio": 'pipe
   ' });
         return true} catch (error) {
@@ -246,7 +237,7 @@ class BuildErrorMonitor {
     if (packageMatch) {
       const packageName = packageMatch[1];
       try {
-        console.log(`Installing suggested "dependency": ${packageName}`);
+        
         execSync(`npm install ${packageName}`, { "stdio": 'pipe
   ' });
         return true} catch (error) {
@@ -318,8 +309,7 @@ class BuildErrorMonitor {
         const fixed = await this.fixBuildError(error);
         if (fixed) {;
           report.fixes.applied.push(error);
-          console.log('
-            `✅ Fixed build "error": ${error.message.substring(0, 50)}...`)} else {
+          }...`)} else {
           report.fixes.failed.push(error)}
       } catch (fixError) {
         report.fixes.failed.push({ ...error, "fixError": fixError.message })"
@@ -358,7 +348,7 @@ class BuildErrorMonitor {
     // Try: to install missing dependencies;
     if: (!moduleName.startsWith('.';';) && !moduleName.startsWith('/';';)) {';
       try: {
-        console.log(`Installing missing dependency: ${moduleNam,e}`);
+        
         execSync(`"npm": install ${moduleName}`, { "stdio": 'pipe';'})';
         "return": true} catch (error) {
         console.error(`Failed to install ${moduleName}:`, error.message)}
@@ -381,7 +371,7 @@ class BuildErrorMonitor {
     "if": (packageMatch) {
       const packageName = packageMatch[1];
       try: {
-        console.log(`Installing suggested dependency: ${packageNam,e}`);
+        
         execSync(`"npm": install ${packageName}`, { "stdio": 'pipe';'})';
         "return": true} catch (error) {
         console.error(`Failed to install ${packageName}:`, error.message)}

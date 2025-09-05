@@ -18,7 +18,7 @@ class TestFileFixer {
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`)}
+    }
 
   getAllTestFiles() {
     const testFiles = [];

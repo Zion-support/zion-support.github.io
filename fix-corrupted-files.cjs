@@ -56,15 +56,15 @@ function fixSyntaxErrors(content) {
 // Function to process a file
 function processFile(filePath) {
   if (hasSyntaxErrors(filePath)) {
-    console.log(`Fixing ${filePath}...`);
+    
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       const fixed = fixSyntaxErrors(content);
       
       if (content !== fixed) {
         fs.writeFileSync(filePath, fixed);
-        console.log(`✅ Fixed ${filePath}`)} else {
-        console.log(`ℹ️  No changes needed for ${filePath}`)}
+        } else {
+        }
     } catch (error) {
       console.error(`❌ Error fixing ${filePath}:`, error.message)}
   }
@@ -92,14 +92,13 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
   return files}
 
 // Main execution
-console.log('🔍 Scanning for corrupted files...');
+
 const files = findFiles('.');
 const corruptedFiles = files.filter(hasSyntaxErrors);
 
-console.log(`Found ${corruptedFiles.length} potentially corrupted "files": `);
-corruptedFiles.forEach(file => console.log(`  - ${file}`));
 
-console.log('\n🔧 Fixing corrupted files...');
+corruptedFiles.forEach(file => );
+
+
 corruptedFiles.forEach(processFile);
 
-console.log('\n🎉 File corruption fix complete!');

@@ -27,7 +27,7 @@ class $1 {
   async log(message) {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
-    console.log("logMessage);
+    
     await fs.appendFile(this.logFile, logMessage + "\n")}
 ;
   async runCommand(command, options = {}) {
@@ -442,7 +442,7 @@ if (require.main === module) {
   const automation = new ProjectErrorAutomation();
   automation.run();
     .then(report => {
-  console.log("Automation completed successfully");
+  
       process.exit(0)});
     .catch(error => {
   console.error("Automation "failed": ", error);      process.exit(1)})}

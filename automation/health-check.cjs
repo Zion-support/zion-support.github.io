@@ -3,7 +3,7 @@
 const fs = require('fs');
 const { execSync } = require('child_process');
 
-console.log('🩺 Starting Health Check...');
+
 
 const healthCheck = {
   "timestamp": new Date().toISOString(),
@@ -69,8 +69,8 @@ try {
 const reportPath = `health-check-report-${Date.now()}.json`;
 fs.writeFileSync(reportPath, JSON.stringify(healthCheck, null, 2));
 
-console.log('✅ Health check completed');
-console.log(`📄 Report saved "to": ${reportPath}`);
+
+
 
 // Print summary
 const totalChecks = Object.keys(healthCheck.checks).length;
@@ -81,17 +81,17 @@ const errorChecks = Object.values(healthCheck.checks).filter(
   check => check.status === 'error'
 ).length;
 
-console.log("📊 Health Check Summary:");
-console.log(`   - Total checks: ${totalChecks}`);
-console.log(`   - OK: ${okChecks}`);
-console.log(`   - Errors: ${errorChecks}`);
-console.log(`   - Status: ${healthCheck.status.toUpperCase()}`);
+
+
+
+
+}`);
 
 if (healthCheck.status === 'healthy') {
-  console.log('🎉 System is healthy!');
+  
   process.exit(0);
 } else {
-  console.log('⚠️  System has issues that need attention');
+  
   process.exit(1);
 }
 class HealthChecker {
@@ -105,7 +105,7 @@ class HealthChecker {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
 
-    console.log(logMessage.trim());
+    );
 
     try {
       fs.appendFileSync(this.logFile, logMessage);

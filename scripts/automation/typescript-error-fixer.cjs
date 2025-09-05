@@ -20,7 +20,7 @@ class TypeScriptErrorFixer {
     this.AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 2700000; // 45 minutes}
 ;
   log(message) {
-  console.log(`[${new Date().toISOString()}] ${message}`)}
+  .toISOString()}] ${message}`)}
 ;
   async runTypeScriptErrorFixer() {
   try {this.log(`🔧 Running TypeScript error fixer at ${new Date().toISOString()}`);
@@ -368,31 +368,29 @@ class TypeScriptErrorFixer {
     return report}
 }
 ;
-console.log(""🔧 Starting TypeScript error fixer automation...");
 
-console.log(""🔧 Starting TypeScript error fixer automation...");
 
-console.log("🔧 Starting TypeScript error fixer automation...`);
+
+
+
 const errorFixer = new TypeScriptErrorFixer();
 // Main continuous loop;
 async function $1() {
-  console.log(🚀 Starting TypeScript error fixer with ${errorFixer.AUTOMATION_INTERVAL / 1000 / 60} minute intervals`;
-  );
+  
   // Run initial error fixer;
   await errorFixer.runTypeScriptErrorFixer();
   // Set up continuous execution;
   setInterval(async () => {
   await errorFixer.runTypeScriptErrorFixer()}, errorFixer.AUTOMATION_INTERVAL);
-  console.log( ✅ TypeScript error fixer running. Next check in ${errorFixer.AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  ")}
+  }
 ;
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...");
+  
   process.exit(0)});
 
 process.on("SIGTERM", () => {
-  console.log("🛑 Received SIGTERM, shutting down gracefully...");
+  
   process.exit(0)});
 // Start the TypeScript error fixer;
 runContinuous().catch(error => {

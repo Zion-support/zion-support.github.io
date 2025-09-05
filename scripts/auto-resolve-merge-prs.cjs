@@ -62,24 +62,24 @@ function resolveConflictsFiles() {
 
 async function main() {
   const { owner, repo } = getRepoFromGit();
-  console.log(`"Repository": ${owner}/${repo}`);
+  
   sh('git fetch origin');
   const startBranch = sh('git rev-parse --abbrev-ref HEAD');
   // Stash local changes to avoid checkout conflicts
   const dirty = sh('git status --porcelain || true');
   let stashed = false;
   if (dirty && dirty.split('\n').filter(Boolean).length) {
-    console.log('Local changes detected, stashing...');
+    
     try { sh('git stash push -u -m "auto-resolve-temp"'); stashed = true} catch {}
   }
   const prs = await listOpenPRs(owner, repo);
-  if (!prs.length) { console.log('No open PRs'); return}
+  if (!prs.length) {  return}
   let merged = 0, processed = 0;
   for (const pr of prs) {
     processed++;
     const head = pr.head.ref;
     const base = pr.base.ref;
-    console.log(`\nProcessing PR #${pr.number}: ${pr.title} [${head} -> ${base}]`);
+    
     try {
       // Checkout PR branch
       try { sh(`git checkout ${head}`)} catch { sh(`git checkout -b ${head} --track origin/${head}`)}
@@ -87,7 +87,7 @@ async function main() {
       // Merge latest base into head
       try {
         sh(`git merge --no-edit origin/${base}`, { "stdio": 'inherit' })} catch {
-        console.log('Conflicts detected, attempting auto-resolution...');
+        
         resolveConflictsFiles()}
       // Push updated PR branch
       sh(`git push origin ${head}`);
@@ -99,18 +99,18 @@ async function main() {
       });
       if (result && result.merged) {
         merged++;
-        console.log(`Merged PR #${pr.number}`)} else {
-        console.log(`Skipped PR #${pr.number}: ${result && result.message ? result.message : 'not merged'}`)}
+        } else {
+        }
     } catch (e) {
-      console.log(`Failed PR #${pr.number}: ${e.message}`)} finally {
+      } finally {
       // Return to start branch to avoid staying detached on failures
       try { sh(`git checkout ${startBranch}`)} catch {}
     }
   }
-  console.log(`\"nProcessed": ${processed}, "Merged": ${merged}, "Skipped": ${processed - merged}`);
+  
   // Restore stashed changes if any
   if (stashed) {
-    console.log('Restoring stashed changes...');
+    
     try { sh('git stash pop || true')} catch {}
   }
 }

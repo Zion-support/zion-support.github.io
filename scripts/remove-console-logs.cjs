@@ -51,7 +51,7 @@ function processFile(filePath) {
     
     if (removedCount > 0) {
       fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`✓ ${filePath}: Removed ${removedCount} console statements`);
+      
       return removedCount}
     
     return 0} catch (error) {
@@ -103,9 +103,6 @@ function main() {
     }
   }
 
-<<<<<<< HEAD
-  console.log("\n📊 Summary:");
-=======
   // Process pages directory if it exists
   if (fs.existsSync(pagesDir)) {
     const files = getAllFiles(pagesDir);
@@ -118,15 +115,14 @@ function main() {
     }
   }
 
-  console.log("\n📊 Summary: ");
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
-  console.log(`   Files processed: ${filesProcessed}`);
-  console.log(`   Console statements removed: ${totalRemoved}`);
+  
+  
+  
   
   if (totalRemoved > 0) {
-    console.log("\n✨ Production build optimized!");
+    
   } else {
-    console.log("\n✨ No console statements found to remove.");
+    
   }
 }
 

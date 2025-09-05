@@ -32,7 +32,7 @@ class IntelligentCodeRefactor {
       'WARNING': '⚠️',
       'PROGRESS': '🔄'
     };
-    console.log(`${icons[type]} ${message}`)}
+    }
 
   async refactorComponents() {
     this.log('🔧 Refactoring components...', 'PROGRESS');

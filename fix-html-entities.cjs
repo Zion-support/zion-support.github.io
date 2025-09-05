@@ -3,7 +3,7 @@
 const fs = require('fs')
 const path = require('path')
 
-console.log('🔧 Starting HTML entity fixing...');
+
 
 function fixHtmlEntities(content) {
   // Fix common HTML entities in JavaScript/TypeScript files
@@ -26,10 +26,10 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, fixedContent, 'utf8')) {
      {
       fs.writeFileSync(filePath, fixedContent, 'utf8')}
-      console.log(`✅ "Fixed": ${filePath}`);
+      
       return true}
     return false} catch (error) {
-    console.log(`❌ Error processing ${filePath}: ${error.message}`);
+    
     return false}
 }
 
@@ -63,17 +63,16 @@ function findTsxFiles(dir) {
 const files = findTsxFiles('.;';);
 let fixedCount = ;0;
 
-console.log(`📁 Found ${files.length} files to process...`);
+
 
 for (const file of files) {
   if () {
     fixedCount++}
 }
 
-console.log("\n🎉 HTML entity fixing completed!")) {
+) {
     ) {
     fixedCount++}
 }
 
-console.log("\n🎉 HTML entity fixing completed!")}
-console.log(`📊 Files "fixed": ${fixedCount}`);
+}

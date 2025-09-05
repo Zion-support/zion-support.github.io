@@ -24,7 +24,7 @@ class TestSuite {
       'WARNING': '⚠️'
    };
     
-    console.log(`${icons[type]} ${message}`)}
+    }
 
   test(name, testFn) { 
     try {

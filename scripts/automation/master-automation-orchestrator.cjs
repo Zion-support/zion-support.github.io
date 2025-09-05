@@ -35,7 +35,7 @@ class $1 {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
+    
     fs.appendFileSync(this.logFile, logMessage + "\n")}
 ;
   async run() {
@@ -69,7 +69,7 @@ class $1 {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log("logMessage);
+    
     fs.appendFileSync(this.logFile, logMessage + "\n")}
 ;
   async run() {
@@ -286,10 +286,10 @@ class $1 {
     return recommendations}
 ;
   displayDashboard(dashboard) {
-  console.log(""\n🎯 ZION TECH AUTOMATION DASHBOARD");
-    console.log(""==`);console.log(📊 "Status": ${dashboard.summary.activeAutomations}/${dashboard.summary.totalAutomations} automations active);console.log(🔧 Errors "Fixed": ${dashboard.summary.totalErrorsFixed}`");console.log("⚡ "Optimizations": ${dashboard.summary.totalOptimizations}");console.log("🔒 "Vulnerabilities": ${dashboard.summary.totalVulnerabilities}");console.log("📝 "Improvements": ${dashboard.summary.totalImprovements}");
-    console.log(""\n📋 "Recommendations": ");dashboard.recommendations.forEach(rec => console.log(`   ${rec}));
-    console.log(\n📄 Dashboard saved "to": ${this.dashboardFile}`")}
+  
+    
+    dashboard.recommendations.forEach(rec => );
+    }
 ;
   async stop() {
   this.log("🛑 Stopping Master Automation Orchestrator...");
@@ -305,17 +305,17 @@ if (require.main === module) {
   const orchestrator = new MasterAutomationOrchestrator();
   // Handle graceful shutdown;
   process.on("SIGINT", async () => {
-  console.log("\n🛑 Received SIGINT, shutting down gracefully...");
+  
 
   displayDashboard(dashboard) {
-  console.log(""\n🎯 ZION TECH AUTOMATION DASHBOARD");
-    console.log(""==");console.log(📊 "Status": ${dashboard.summary.activeAutomations}/${dashboard.summary.totalAutomations} automations active);console.log(🔧 Errors "Fixed": ${dashboard.summary.totalErrorsFixed}"");console.log(`⚡ "Optimizations": ${dashboard.summary.totalOptimizations}`);console.log(`🔒 "Vulnerabilities": ${dashboard.summary.totalVulnerabilities}`);console.log(`📝 "Improvements": ${dashboard.summary.totalImprovements}`);
-    console.log(""\n📋 "Recommendations": ");dashboard.recommendations.forEach(rec => console.log("   ${rec}));
+  
+    
+    dashboard.recommendations.forEach(rec => );
   displayDashboard(dashboard) {
-  console.log("\n🎯 ZION TECH AUTOMATION DASHBOARD");
-    console.log("==");console.log(📊 "Status": ${dashboard.summary.activeAutomations}/${dashboard.summary.totalAutomations} automations active);console.log(🔧 Errors "Fixed": ${dashboard.summary.totalErrorsFixed}"");console.log(`⚡ "Optimizations": ${dashboard.summary.totalOptimizations}`);console.log(`🔒 "Vulnerabilities": ${dashboard.summary.totalVulnerabilities}`);console.log(`📝 "Improvements": ${dashboard.summary.totalImprovements}`);
-    console.log("\n📋 "Recommendations": ");dashboard.recommendations.forEach(rec => console.log(`   ${rec}));`);
-    console.log(\n📄 Dashboard saved "to": ${this.dashboardFile}"")}
+  
+    
+    dashboard.recommendations.forEach(rec => );`);
+    }
 ;
   async stop() {
   this.log("🛑 Stopping Master Automation Orchestrator...");
@@ -331,11 +331,11 @@ if (require.main === module) {
   const orchestrator = new MasterAutomationOrchestrator();
   // Handle graceful shutdown;
   process.on("SIGINT", async () => {
-  console.log("\n🛑 Received SIGINT, shutting down gracefully...");
+  
     await orchestrator.stop();
     process.exit(0)});
   process.on("SIGTERM", async () => {
-  console.log("\n🛑 Received SIGTERM, shutting down gracefully...');
+  
     await orchestrator.stop();
     process.exit(0)});
   orchestrator.run().catch(console.error)}

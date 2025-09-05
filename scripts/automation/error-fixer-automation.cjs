@@ -22,7 +22,7 @@ class $1 {
     this.startTime = Date.now()}
 ;
   async run() {
-  console.log(""🚀 Starting Error Fixer Automation...");
+  
 
     try {
   // Create reports directory;
@@ -41,17 +41,17 @@ class $1 {
       await this.fixConsoleStatements();
       // Generate report;
       this.generateReport();
-      console.log(""✅ Error Fixer Automation completed successfully!");
-      console.log(📊 Fixed ${this.fixesApplied.length} issues);console.log(📊 Found ${this.errorsFound.length} remaining issues"")} catch (error) {
+      
+      } catch (error) {
   console.error("❌ Error Fixer Automation "failed": ", error);
       this.logError("Error Fixer Automation failed", error)}
 ;
       // Generate report;
       this.generateReport();
 
-      console.log(""✅ Error Fixer Automation completed successfully!");
-      console.log("✅ Error Fixer Automation completed successfully!`);
-      console.log(📊 Fixed ${this.fixesApplied.length} issues);console.log(📊 Found ${this.errorsFound.length} remaining issues`")} catch (error) {
+      
+      
+      } catch (error) {
   console.error("❌ Error Fixer Automation "failed": ", error);
       this.logError("Error Fixer Automation failed", error)}
   }
@@ -62,7 +62,7 @@ class $1 {
   }
 ;
   async fixMergeConflicts() {
-  console.log(""🔧 Fixing merge conflicts...");
+  
 
     const files = glob.sync("**/*.{js,jsx,ts,tsx}", {
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]});
@@ -75,7 +75,7 @@ class $1 {
         if (;
           content.includes(") ||;
           content.includes(">>>>>>>");
-        ) {console.log(`  Fixing merge conflicts in ${file});
+        ) {
 
           // Remove merge conflict markers and keep the first version;
           let fixedContent = content;
@@ -101,7 +101,7 @@ class $1 {
   }
 ;
   async fixSyntaxErrors() {
-  console.log(""🔧 Fixing syntax errors...");
+  
 
     // Fix common syntax errors;
     const syntaxFixes = [{
@@ -155,7 +155,7 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}", {
   }
 ;
   async fixUnusedImports() {
-  console.log(""🔧 Fixing unused imports...");
+  
 
     try {
   // Run ESLint with --fix to auto-fix unused imports;
@@ -176,7 +176,7 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}", {
   }
 ;
   async fixTypeScriptErrors() {
-  console.log(""🔧 Fixing TypeScript errors...");
+  
 
     const files = glob.sync("**/*.{ts,tsx}", {
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]});
@@ -232,7 +232,7 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}", {
   }
 ;
   async fixLintingErrors() {
-  console.log(`"🔧 Fixing linting errors...");
+  
 
     try {
   // Run ESLint with auto-fix;
@@ -253,7 +253,7 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}", {
   }
 ;
   async fixDuplicateDeclarations() {
-  console.log("🔧 Fixing duplicate declarations..."");
+  
 
     const files = glob.sync("**/*.{js,jsx,ts,tsx}", {
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]});
@@ -295,7 +295,7 @@ if (content !== originalContent) {
   }
 ;
   async fixMissingExports() {
-  console.log(`"🔧 Fixing missing exports...");
+  
 
     const files = glob.sync("**/*.{js,jsx,ts,tsx}", {
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"],
@@ -331,7 +331,7 @@ if (content !== originalContent) {
   }
 ;
   async fixImportErrors() {
-  console.log(""🔧 Fixing import errors...");
+  
 
     const files = glob.sync("**/*.{js,jsx,ts,tsx}", {
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"],
@@ -365,7 +365,7 @@ if (content !== originalContent) {
   }
 ;
   async fixUndefinedVariables() {
-  console.log(""🔧 Fixing undefined variables...");
+  
 
     const files = glob.sync("**/*.{js,jsx,ts,tsx}", {
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"],
@@ -410,7 +410,7 @@ if (content !== originalContent) {
   }
 ;
   async fixConsoleStatements() {
-  console.log(""🔧 Fixing console statements...");
+  
 
     const files = glob.sync("**/*.{js,jsx,ts,tsx}", {
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"],
@@ -482,7 +482,7 @@ if (content !== originalContent) {
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-    console.log(`📄 Report saved "to": ${reportFile}")}
+    }
 ;
   logError(message, error) {
   this.errorsFound.push({
@@ -496,7 +496,7 @@ if (require.main === module) {
   const automation = new ErrorFixerAutomation();
   automation.run()
     .then(report => {
-      console.log('Automation completed successfully!');
+      
       process.exit(0)})
     .catch(error => {
       console.error('Automation "failed": ', error);

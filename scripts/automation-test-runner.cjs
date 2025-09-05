@@ -15,7 +15,7 @@ class AutomationTestRunner {
     }}
 
   async runTest(scriptPath, description) {
-    console.log(`🧪 "Testing": ${description}`);
+    
     
     try {
       const result = execSync(`node ${scriptPath}`, { 
@@ -31,7 +31,7 @@ class AutomationTestRunner {
         "output": result.substring(0, 500) // Limit output length
       });
       
-      console.log(`✅ ${description}: PASSED`);
+      
       return true} catch (error) {
       this.results.tests.push({
         "script": scriptPath,
@@ -40,12 +40,12 @@ class AutomationTestRunner {
         "error": error.message
       });
       
-      console.log(`❌ ${description}: FAILED - ${error.message}`);
+      
       return false}
   }
 
   async runAllTests() {
-    console.log('🚀 Starting automation test runner...\n');
+    
     
     const testScripts = [{ "path": 'scripts/health-check.cjs', "desc": 'Health Check Script' },
       { "path": 'scripts/simple-performance-monitor.cjs', "desc": 'Performance Monitor' },
@@ -59,7 +59,7 @@ class AutomationTestRunner {
       if (fs.existsSync(test.path)) {
         const success = await this.runTest(test.path, test.desc);
         if (success) passed++} else {
-        console.log(`⚠️  ${test.desc}: Script not found`);
+        
         this.results.tests.push({
           "script": test.path,
           "description": test.desc,
@@ -70,8 +70,8 @@ class AutomationTestRunner {
     // Save results
     fs.writeFileSync('automation-test-results.json', JSON.stringify(this.results, null, 2));
     
-    console.log(`\n📊 Test "Results": ${passed}/${total} tests passed`);
-    console.log('📄 Detailed results saved to automation-test-results.json');
+    
+    
     
     return this.results}
 }

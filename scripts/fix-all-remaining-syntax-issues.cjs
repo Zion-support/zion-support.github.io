@@ -3,8 +3,8 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Fixing All Remaining Syntax Issues...');
-console.log('========================================');
+
+
 
 // List of all remaining problematic files
 const problematicFiles = ['pages/docs/integration-examples.tsx',
@@ -16,7 +16,7 @@ const problematicFiles = ['pages/docs/integration-examples.tsx',
 
 // Function to fix a file by rewriting it with proper content
 function fixFile(filePath) {
-  console.log(`\n🔍 "Fixing": ${filePath}`);
+  
   
   try {
     let content = '';
@@ -95,7 +95,7 @@ export default function IntegrationExamples() {
 // Usage
 const api = new ZionTechAPI('your-api-key');
 const services = await api.getServices();
-console.log(services);\"}
+\"}
                   </pre>
                 </div>
               </div>
@@ -732,14 +732,13 @@ export default function ServicesOverview() {
 
     if (content) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`   ✅ Fixed ${filePath}`)} else {
-      console.log(`   ⚠️  No content defined for ${filePath}`)}
+      } else {
+      }
 
   } catch (error) {
-    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`)}
+    }
 }
 
 // Fix all problematic files
 problematicFiles.forEach(fixFile);
 
-console.log('\n🎉 All remaining syntax issues fixed!');
