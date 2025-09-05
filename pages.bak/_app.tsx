@@ -1,9 +1,7 @@
-import * as React from 'react';
-
+import React from 'react';
 interface _appProps {
   // Add props here as needed
 }
-
 export default function _app({ }: _appProps) {
   return (
     <div>

@@ -1,21 +1,7 @@
 import { motion } from 'framer-motion';
 import Head from 'next/head';
-import { useState } from 'react';
-import { 
-  Mail, 
-  CheckCircle, 
-  ArrowRight, 
-  Users, 
-  Calendar, 
-  FileText, 
-  Video, 
-  Globe, 
-  Shield, 
-  Zap,
-  Star,
-  Target,
-  TrendingUp
-} from 'lucide-react';
+import Layout from '../components/Layout';
+import { Mail, ArrowRight, Users, Calendar, FileText, Video, Globe, Shield, Zap } from 'lucide-react';
 
 const benefits = [
   {
@@ -26,305 +12,233 @@ const benefits = [
   {
     title: 'Early Access',
     description: 'Be the first to know about new features, products, and services.',
-    icon: Star
+    icon: Zap
   },
   {
     title: 'Expert Insights',
-    description: 'Receive expert analysis and commentary on industry trends and developments.',
-    icon: Target
+    description: 'Learn from our team of experts through detailed technical articles.',
+    icon: Users
   },
   {
-    title: 'Community Access',
-    description: 'Join our exclusive community of developers and technology professionals.',
-    icon: Users
+    title: 'Industry Updates',
+    description: 'Stay informed about the latest trends and developments in technology.',
+    icon: Globe
   }
 ];
 
-const testimonials = [
+const newsletterIssues = [
   {
-    name: 'Sarah Johnson',
-    role: 'CTO at TechCorp',
-    content: 'The newsletter has been invaluable for staying up-to-date with the latest in AI and cloud computing.',
-    avatar: '/images/testimonials/sarah.jpg'
+    title: 'AI Revolution in Healthcare',
+    date: 'January 15, 2024',
+    description: 'How artificial intelligence is transforming patient care and medical research.',
+    readTime: '8 min read',
+    featured: true
   },
   {
-    name: 'Michael Chen',
-    role: 'Lead Developer',
-    content: 'Great insights and practical advice. I look forward to every issue.',
-    avatar: '/images/testimonials/michael.jpg'
+    title: 'Cloud Security Best Practices',
+    date: 'January 10, 2024',
+    description: 'Essential security measures for protecting your cloud infrastructure.',
+    readTime: '6 min read',
+    featured: false
   },
   {
-    name: 'Emily Rodriguez',
-    role: 'Product Manager',
-    content: 'The exclusive content and early access features make this newsletter a must-read.',
-    avatar: '/images/testimonials/emily.jpg'
+    title: 'The Future of Remote Work',
+    date: 'January 5, 2024',
+    description: 'Technology trends shaping the future of remote and hybrid work.',
+    readTime: '7 min read',
+    featured: false
   }
 ];
 
 export default function NewsletterPage() {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubscribe = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubscribed(true);
-    setIsLoading(false);
-  };
-
   return (
-    <>
-      <Head>
-        <title>Newsletter - Zion Tech Group</title>
-        <meta name="description" content="Subscribe to our newsletter for exclusive content, early access, and expert insights." />
-        <meta name="keywords" content="newsletter, subscribe, updates, technology, AI, cloud" />
-      </Head>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <Layout
+      title="Newsletter - Zion Tech Group"
+      description="Subscribe to our newsletter for exclusive content, industry insights, and the latest technology updates."
+      keywords="newsletter, subscribe, technology updates, industry insights, exclusive content"
+    >
+      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-90"></div>
-          <div className="absolute inset-0 bg-black opacity-20"></div>
-          
-          <div className="container mx-auto px-4 relative z-10">
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center text-white"
+              className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Stay{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Updated
-                </span>
+                Our Newsletter
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Subscribe to our newsletter and never miss out on the latest technology insights, 
-                exclusive content, and industry updates.
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Stay ahead of the curve with exclusive content, industry insights, and the latest technology updates
               </p>
             </motion.div>
           </div>
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Subscribe?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Get exclusive access to content that helps you stay ahead in the technology landscape.
+                Join thousands of professionals who rely on our newsletter for the latest insights and updates
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-            >
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                  className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow"
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center"
                 >
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-blue-600" />
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {benefit.description}
-                  </p>
+                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
                 </motion.div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </section>
 
-        {/* Subscription Form */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Subscribe to Our Newsletter
-              </h2>
-              <p className="text-xl text-gray-600">
-                Join thousands of professionals who trust us for their technology insights.
-              </p>
-            </motion.div>
-
-            {!isSubscribed ? (
+        {/* Newsletter Signup */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-2xl mx-auto text-center">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="bg-gray-50 p-8 rounded-lg shadow-lg"
+                transition={{ duration: 0.8 }}
               >
-                <form onSubmit={handleSubscribe} className="space-y-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Subscribe Today
+                </h2>
+                <p className="text-xl text-gray-600 mb-8">
+                  Get our weekly newsletter delivered straight to your inbox
+                </p>
+                
+                <form className="space-y-4">
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <div className="flex-1">
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                        Email Address
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Enter your email address"
-                      />
-                    </div>
-                    <div className="sm:pt-6">
-                      <button
-                        type="submit"
-                        disabled={isLoading}
-                        className="w-full sm:w-auto bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-                      >
-                        {isLoading ? (
-                          <>
-                            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                            Subscribing...
-                          </>
-                        ) : (
-                          <>
-                            Subscribe
-                            <ArrowRight className="w-4 h-4 ml-2" />
-                          </>
-                        )}
-                      </button>
-                    </div>
+                    <input
+                      type="email"
+                      placeholder="Enter your email address"
+                      className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      required
+                    />
+                    <button
+                      type="submit"
+                      className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold flex items-center justify-center"
+                    >
+                      Subscribe
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </button>
                   </div>
                   
-                  <div className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
-                    <p className="text-sm text-gray-600">
-                      We respect your privacy. Unsubscribe at any time. No spam, ever.
-                    </p>
-                  </div>
+                  <p className="text-sm text-gray-500">
+                    We respect your privacy. Unsubscribe at any time.
+                  </p>
                 </form>
               </motion.div>
-            ) : (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                className="bg-green-50 p-8 rounded-lg shadow-lg text-center"
-              >
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  Welcome to our newsletter!
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Thank you for subscribing. You'll receive your first newsletter within 24 hours.
-                </p>
-                <button
-                  onClick={() => setIsSubscribed(false)}
-                  className="text-blue-600 hover:text-blue-700 font-medium"
-                >
-                  Subscribe another email
-                </button>
-              </motion.div>
-            )}
+            </div>
           </div>
         </section>
 
-        {/* Testimonials */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                What Our Subscribers Say
+        {/* Recent Issues */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Recent Issues
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Join thousands of satisfied subscribers who rely on our newsletter for insights.
+                Take a look at some of our recent newsletter content
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            >
-              {testimonials.map((testimonial, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                  className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
-                      <Users className="w-6 h-6 text-gray-400" />
+            <div className="max-w-4xl mx-auto">
+              <div className="space-y-6">
+                {newsletterIssues.map((issue, index) => (
+                  <motion.article
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 ${
+                      issue.featured ? 'border-2 border-blue-500' : ''
+                    }`}
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
+                          <Calendar className="w-4 h-4" />
+                          <span>{issue.date}</span>
+                          <span className="mx-2">•</span>
+                          <span>{issue.readTime}</span>
+                          {issue.featured && (
+                            <>
+                              <span className="mx-2">•</span>
+                              <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
+                                Featured
+                              </span>
+                            </>
+                          )}
+                        </div>
+                        <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                          {issue.title}
+                        </h3>
+                        <p className="text-gray-600 mb-4">
+                          {issue.description}
+                        </p>
+                        <button className="text-blue-600 hover:text-blue-800 font-medium">
+                          Read Issue
+                        </button>
+                      </div>
+                      <div className="ml-4">
+                        <Mail className="w-8 h-8 text-gray-400" />
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
-                      <p className="text-sm text-gray-600">{testimonial.role}</p>
-                    </div>
-                  </div>
-                  <p className="text-gray-600 italic">"{testimonial.content}"</p>
-                </motion.div>
-              ))}
-            </motion.div>
+                  </motion.article>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
-          <div className="max-w-7xl mx-auto text-center">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Get Started?
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Stay Informed?
               </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Subscribe now and join our community of technology professionals.
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Join our community of technology professionals and never miss an update.
               </p>
-              <button
-                onClick={() => document.getElementById('email')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-              >
-                Subscribe Now
-              </button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  Subscribe Now
+                </button>
+                <button className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
+                  View Archive
+                </button>
+              </div>
             </motion.div>
           </div>
         </section>
       </div>
-    </>
+    </Layout>
   );
 }

@@ -1,8 +1,7 @@
-import * as React from 'react';
+import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import { describe, it, expect, vi } from 'vitest';
-
 describe('AccessibilityEnhancer', () => {
   it('renders children correctly', () => {
     render(
@@ -13,7 +12,6 @@ describe('AccessibilityEnhancer', () => {
     expect(screen.getByTestId('test-child')).toBeInTheDocument();
     expect(screen.getByText('Test Content')).toBeInTheDocument();
   });
-
   it('applies accessibility props correctly', () => {
     render(
       <AccessibilityEnhancer
@@ -28,7 +26,6 @@ describe('AccessibilityEnhancer', () => {
     expect(element).toHaveAttribute('aria-label', 'Test Button');
     expect(element).toHaveAttribute('tabindex', '0');
   });
-
   it('handles keyboard events correctly', () => {
     const handleClick = vi.fn();
     render(
@@ -42,7 +39,6 @@ describe('AccessibilityEnhancer', () => {
     fireEvent.keyDown(element, { "key": ' ' });
     expect(handleClick).toHaveBeenCalledTimes(2);
   });
-
   it('applies focus styles when focusable', () => {
     render(
       <AccessibilityEnhancer
@@ -60,7 +56,6 @@ describe('AccessibilityEnhancer', () => {
       'focus:ring-blue-500'
     );
   });
-
   it('disables focus when not focusable', () => {
     render(
       <AccessibilityEnhancer role="button" tabIndex={-1}>

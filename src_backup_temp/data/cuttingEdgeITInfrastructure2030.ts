@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/data/cuttingEdgeITInfrastructure2030.ts
 import React from "react"
 import { SEO } from "@/components/SEO"
 export default function cuttingEdgeITInfrastructure2030() {return (

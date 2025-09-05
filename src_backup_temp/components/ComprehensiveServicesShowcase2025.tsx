@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {  import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 export default function Page("props": "any) {;
 ", { "id": 'Metaverse', "name": 'Metaverse', "count": "allService s.filter(s => s.category === 'Metaverse').length", "icon": '🌍' }, { "id": 'Edge Computing', "name": 'Edge Computing', "count": "allService s.filter(s => s.category === 'Edge Computing').length", "icon": '🌐' }, { "id": 'Cybersecurity', "name": 'Cybersecurity', "count": "allService s.filter(s => s.category === 'Cybersecurity').length", "icon": '🛡️' };
@@ -7,10 +7,11 @@ export default function Page("props": "any) {;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
+    ;
+    return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}) ;
+;
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}
     );
-
     switch(sortBy) {;
       case 'price': ";
         return a.price - b.price;      case 'name':;
@@ -30,10 +31,18 @@ export default function Page("props": "any) {;
         return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
                (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);      case 'category': ";
         return a.category.localeCompare(b.category) ;
+      "default":;
+        return 0"}) ;
+;
+    "hidden": "{ "opacity": 0 "},;
+    "visible": "{;
+      "opacity": 1",;
+      "transition": "{;
+        "staggerChildren": 0.1;
+      "};
       default:;
         return 0}
     );
-
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -46,13 +55,11 @@ export default function Page("props": "any) {;
   const itemVariants = {;
   "hidden": "{ "y": 2 0",;
   "opacity": "0;
-
 "},                value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}";
                 className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl pl-12 pr-4 py-3 text-white placeholder-zion-slate-400 "focus": "outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan/50 "focus": borde r-zion-cyan";
               />;
             </div>;
-
             {/* Filters Row */"}";
             <div className="grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-4 gap-4">;
               {/* Category Filter */"}";
@@ -61,7 +68,6 @@ export default function Page("props": "any) {;
                   value={activeCategory}
                   onChange={(e) => setActiveCategory(e.target.value)}";
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white "focus": "outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan/50 "focus": borde r-zion-cyan appearance-none";
-
                   {categories.map((category) => (;
                     <option key={category.id"} value={category.id}>;
                       {category.icon} {category.name} ({category.count});
@@ -69,14 +75,12 @@ export default function Page("props": "any) {;
                   ))}
                 </select>";
                 <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none"   />              </div>;
-
               {/* Innovation Level Filter */}";
               <div className="relative">;
                 <select;
                   value={innovationLevel}
                   onChange={(e) => setInnovationLevel(e.target.value)}";
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white "focus": "outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan/50 "focus": borde r-zion-cyan appearance-none";
-
                   {innovationLevels.map((level) => (;
                     <option key={level.id"} value={level.id}>;
                       {level.icon} {level.name}
@@ -84,7 +88,6 @@ export default function Page("props": "any) {;
                   ))}
                 </select>";
                 <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none"   />              </div>;
-
               {/* Sort By */}";
               <div className="relative">;
                 <select;
@@ -98,7 +101,6 @@ export default function Page("props": "any) {;
                   <option value="category">Sort by Category</option>;
                 </select>";
                 <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none"   />              </div>;
-
               {/* View Mode Toggle */"}";
               <div className="flex bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl p-1">;
                 <button';
@@ -119,7 +121,6 @@ export default function Page("props": "any) {;
                   <List className="w-4 h-4 mx-auto"   />                </button>;
               </div>;
             </div>;
-
             {/* Price Range Slider */}";
             <div className="mt-6">;";
               <label className="block text-sm font-medium text-zion-slate-300 mb-2">;
@@ -132,10 +133,8 @@ export default function Page("props": "any) {;
                   max="10000";
                   value={priceRange[0]}
                   onChange={;
-
   (e) => setPriceRange([parseInt(e.target.value),;
   priceRange[1]]);
-
 }";
                   className="flex-1 h-2 bg-zion-slate-600 rounded-lg appearance-none cursor-pointer slider";
                 />;
@@ -145,10 +144,8 @@ export default function Page("props": "any) {;
                   max="10000";
                   value={priceRange[1]}
                   onChange={;
-
   (e) => setPriceRange([priceRange[0],;
   parseInt(e.target.value)]);
-
 }";
                   className="flex-1 h-2 bg-zion-slate-600 rounded-lg appearance-none cursor-pointer slider";
                 />;
@@ -157,7 +154,6 @@ export default function Page("props": "any) {;
           </motion.div>;
         </div>;
       </section>;
-
       {/* Services Grid */}";
       <section className="relative px-4 "sm": "p x-6 "lg": p x-8 pb-20">;";
         <div className="max-w-7xl mx-auto">;
@@ -167,7 +163,6 @@ export default function Page("props": "any) {;
               Showing {filteredServices.length} of {allServices.length} services;
             </p>;
           </div>;
-
           {/* Services Grid / List */}
           <motion.div;
             variants={containerVariants}";
@@ -176,7 +171,6 @@ export default function Page("props": "any) {;
             className={viewMode === 'grid'';
               ? 'grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-3 gap-6'';
               : 'space-y-4';
-
             {sortedServices.map((service) => (;
               <motion.div;
                 key={service.id"}
@@ -192,6 +186,13 @@ export default function Page("props": "any) {;
                     <div className="flex items-start justify-between mb-4">";
                       <div className="flex items-center gap-3">;
                         {getCategoryIcon(service.category)}
+                        <div>";
+                          <h3 className="text-lg font-semibold text-white group-"hover": "tex t-zion-cyan transition-colors">;
+                            {service.title"}
+                          </h3>";
+                          <p className="text-sm text-zion-slate-400">{service.category}</p>;
+                        </div>;
+                      </div>;
                         <div>"
                           <h3 className="text-lg font-semibold text-white group-hover: tex t-zion-cyan transition-colors">
                             {service.title}
@@ -201,23 +202,19 @@ export default function Page("props": "any) {;
                       </div>
                       {getInnovationIcon(service.innovationLevel) }
                     </div>;
-
                     {/* Description */}";
                     <p className="text-zion-slate-300 text-sm mb-4 line-clamp-3">;
                       {service.description}
                     </p>;
-
                     {/* Tags */}";
                     <div className="flex flex-wrap gap-2 mb-4">;
                       {service.tags.slice(0, 3).map((tag, index) => (;
                         <span;
                           key={index}";
                           className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-lg";
-
                           {tag}
                         </span>) ) }
                     </div>;
-
                     {/* Price and Features */}";
                     <div className="space-y-3">";
                       <div className="flex items-center justify-between">";
@@ -236,12 +233,24 @@ export default function Page("props": "any) {;
                         <Shield className="w-4 h-4"   />                        <span>{service.supportLevel}</span>;
                       </div>;
                     </div>;
-
                     {/* CTA Button */}";
                     <button className="w-full mt-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-2 px-4 rounded-xl font-medium "hover": "fro m-zion-cyan/90 "hover": t o-zion-purple/90 transition-all duration-300 flex items-center justify-center gap-2">;
                       Learn More";
                       <ArrowRight className="w-4 h-4"   />                    </button>;
                   </>) : (;
+                  // List View;
+                  <>";
+                    <div className="flex-1">";
+                      <div className="flex items-start justify-between mb-2">";
+                        <div className="flex items-center gap-3">;
+                          {getCategoryIcon(service.category)"}
+                          <div>";
+                            <h3 className="text-xl font-semibold text-white group-"hover": "tex t-zion-cyan transition-colors">;
+                              {service.title"}
+                            </h3>";
+                            <p className="text-zion-slate-400">{service.category}</p>;
+                          </div>;
+                        </div>;
                   // List View
                   <>"
                     <div className="flex-1">"
@@ -267,7 +276,6 @@ export default function Page("props": "any) {;
                           <span;
                             key={index}";
                             className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-lg";
-
                             {tag}
                           </span>) ) }
                       </div>;
@@ -285,8 +293,17 @@ export default function Page("props": "any) {;
                   </>) "}
               </motion.div>) ) }
           </motion.div>;
-
           {/* No Results */}
+          {filteredServices.length === 0 && (<motion.div;
+              initial={{ "opacity": "0 "}}
+              animate={{ "opacity": "1 "}}";
+              className="text-center py-20";
+";
+              <div className="text-6xl mb-4">🔍</div>";
+              <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>";
+              <p className="text-zion-slate-400 mb-6">;
+                Try adjusting your search criteria or filters;
+              </p>;
           {filteredServices.length === 0 && (<motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}"
@@ -314,7 +331,6 @@ export default function Page("props": "any) {;
             </motion.div>) "}
         </div>;
       </section>;
-
       {/* Service Detail Modal */}
       <AnimatePresence>;
         {selectedService && (<motion.div;
@@ -326,22 +342,16 @@ export default function Page("props": "any) {;
 ;
             <motion.div;
               initial = {;
-
   { "scale": "0.9",;
   "opacity": "0;
-
 "}}
               animate = {;
-
   { "scale": "1",;
   "opacity": "1;
-
 "}}
               exit = {;
-
   { "scale": "0.9",;
   "opacity": "0;
-
 "}}";
               className="bg-zion-slate-900 border border-zion-slate-700 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto";
               onClick={(e) => e.stopPropagation()}
@@ -366,7 +376,6 @@ export default function Page("props": "any) {;
 ";
                     <X className="w-6 h-6"   />                  </button>;
                 </div>;
-
                 {/* Price and Key Info */"}";
                 <div className="grid grid-cols-1 "md": "gri d-cols-3 gap-6 mb-8">";
                   <div className="bg-zion-slate-800/50 rounded-xl p-4">";
@@ -388,7 +397,28 @@ export default function Page("props": "any) {;
                     <div className="text-zion-slate-400">ROI</div>;
                   </div>;
                 </div>;
-
+                {/* Features and Benefits */}";
+                <div className="grid grid-cols-1 "md": "gri d-cols-2 gap-8 mb-8">;
+                  <div>";
+                    <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">";
+                      <CheckCircle className="w-5 h-5 text-zion-green"   />                      Key Features;
+                    </h3>";
+                    <ul className="space-y-2">;
+                      {selectedService.features.map((feature", index) => (";
+                        <li key={index} className="flex items-start gap-2 text-zion-slate-300">";
+                          <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0"  />;
+                          {feature}
+                        </li>) ) }
+                    </ul>;
+                  </div>;
+                  <div>";
+                    <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">";
+                      <TrendingUp className="w-5 h-5 text-zion-green"   />                      Benefits;
+                    </h3>";
+                    <ul className="space-y-2">;
+                      {selectedService.benefits.map((benefit, index) => (";
+                        <li key={index} className="flex items-start gap-2 text-zion-slate-300">";
+                          <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mt-2 flex-shrink-0"  />;
                 {/* Features and Benefits */}"
                 <div className="grid grid-cols-1 md: gri d-cols-2 gap-8 mb-8">
                   <div>"
@@ -416,7 +446,28 @@ export default function Page("props": "any) {;
                     </ul>;
                   </div>;
                 </div>;
-
+                {/* Use Cases and Target Audience */}";
+                <div className="grid grid-cols-1 "md": "gri d-cols-2 gap-8 mb-8">;
+                  <div>";
+                    <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">";
+                      <Target className="w-5 h-5 text-zion-cyan"   />                      Use Cases;
+                    </h3>";
+                    <ul className="space-y-2">;
+                      {selectedService.useCases.map((useCase", index) => (";
+                        <li key={index} className="flex items-start gap-2 text-zion-slate-300">";
+                          <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0"  />;
+                          {useCase}
+                        </li>) ) }
+                    </ul>;
+                  </div>;
+                  <div>";
+                    <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">";
+                      <Users className="w-5 h-5 text-zion-purple"   />                      Target Audience;
+                    </h3>";
+                    <ul className="space-y-2">;
+                      {selectedService.targetAudience.map((audience, index) => (";
+                        <li key={index} className="flex items-start gap-2 text-zion-slate-300">";
+                          <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mt-2 flex-shrink-0"  />;
                 {/* Use Cases and Target Audience */}"
                 <div className="grid grid-cols-1 md: gri d-cols-2 gap-8 mb-8">
                   <div>"
@@ -444,8 +495,18 @@ export default function Page("props": "any) {;
                     </ul>;
                   </div>;
                 </div>;
-
                 {/* Technical Specs */}
+                {selectedService.technicalSpecs && (";
+                  <div className="mb-8">";
+                    <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">";
+                      <Code className="w-5 h-5 text-zion-cyan"   />                      Technical Specifications;
+                    </h3>";
+                    <div className="grid grid-cols-1 "md": "gri d-cols-2 gap-6">;
+                      <div>";
+                        <h4 className="font-medium text-zion-slate-300 mb-2">Technology Stack</h4>";
+                        <div className="flex flex-wrap gap-2">;
+                          {selectedService.technicalSpecs.technology.map((tech", index) => (";
+                            <span key={index} className="px-3 py-1 bg-zion-slate-800 text-zion-cyan text-sm rounded-lg">;
                 {selectedService.technicalSpecs && ("
                   <div className="mb-8">"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
@@ -501,7 +562,6 @@ export default function Page("props": "any) {;
 </div></div></div></div></div></div></div>};
 ;
 export default ComprehensiveServicesShowcase2025}}}}}}}}}}'"`;
-
 </motion>;
 </motion>;
 </motion>;

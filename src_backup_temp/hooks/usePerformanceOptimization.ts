@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/hooks/usePerformanceOptimization.ts
 import { useEffect, useRef, useCallback, useMemo  } from 'react';
 ;
 interface PerformanceMetrics {;
@@ -100,7 +99,6 @@ const "metricsRef": "useRe f<PerformanceMetrics>({;
       if ('memory' in performance) {;
         const memory = (performance as any).memory;
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB;
-
         // Warn if memory usage is high;
         if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB;
           // // // // // // // , 'MB');
@@ -115,7 +113,6 @@ const "metricsRef": "useRe f<PerformanceMetrics>({;
   // Intersection Observer for lazy loading;
       return}
     if (observerRef.current) {;
-
 const metricsRef: useRe f<PerformanceMetrics>({;
     loadTime: 0,;
     renderTime: 0,;
@@ -123,7 +120,6 @@ const metricsRef: useRe f<PerformanceMetrics>({;
     fps: 0;
   }
     );
-
     enableLazyLoading = true,
     enableIntersectionObserver = true,
     enableMemoryManagement = true,
@@ -201,7 +197,6 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
           if (observerRef.current) {;
             observerRef.current.unobserve(entry.target)}
         }
-<<<<<<< HEAD:src/hooks/usePerformanceOptimization.ts
       })});
 ;
     if (observerRef.current) {;
@@ -232,7 +227,6 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
     return (..."args": "Parameter s<T>)  => {;
       })}
     );
-
       })});
     if (observerRef.current) {
       observerRef.current.observe(element)}

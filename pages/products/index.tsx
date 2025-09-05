@@ -1,211 +1,262 @@
-import type { NextPage } from 'next';
+import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import Layout from '../../components/Layout';
 import { 
-  Code, 
-  Cloud, 
   Brain, 
+  Cloud, 
   Shield, 
   Zap, 
-  Database, 
-  ArrowRight,
-  CheckCircle,
+  ArrowRight, 
+  CheckCircle, 
   Star,
-  Users
+  Users,
+  Globe,
+  Settings
 } from 'lucide-react';
 
 const products = [
   {
     id: 1,
-    title: 'AI Development Platform',
-    description: 'Build and deploy AI models with our comprehensive development platform.',
+    name: 'AI Email Responder',
+    description: 'Intelligent email automation powered by advanced AI',
+    category: 'AI Services',
     icon: Brain,
-    features: ['Model Training', 'Deployment', 'Monitoring', 'Scaling'],
-    price: 'Starting at $99/month',
-    category: 'AI/ML'
+    price: '$99/month',
+    features: [
+      'Natural language processing',
+      'Context-aware responses',
+      'Multi-language support',
+      'Custom training models'
+    ],
+    rating: 4.8,
+    users: 1200,
+    color: 'from-blue-500 to-cyan-500'
   },
   {
     id: 2,
-    title: 'Cloud Infrastructure',
-    description: 'Scalable cloud infrastructure solutions for modern applications.',
+    name: 'Cloud Infrastructure',
+    description: 'Scalable cloud solutions for modern businesses',
+    category: 'Cloud Services',
     icon: Cloud,
-    features: ['Auto-scaling', 'Load Balancing', 'CDN', 'Monitoring'],
-    price: 'Starting at $49/month',
-    category: 'Cloud'
+    price: '$199/month',
+    features: [
+      'Auto-scaling infrastructure',
+      'Global CDN',
+      '99.9% uptime guarantee',
+      '24/7 monitoring'
+    ],
+    rating: 4.7,
+    users: 850,
+    color: 'from-green-500 to-teal-500'
   },
   {
     id: 3,
-    title: 'Security Suite',
-    description: 'Comprehensive security solutions to protect your applications.',
+    name: 'Security Suite',
+    description: 'Comprehensive security solutions for enterprise',
+    category: 'Security',
     icon: Shield,
-    features: ['Threat Detection', 'Encryption', 'Access Control', 'Auditing'],
-    price: 'Starting at $79/month',
-    category: 'Security'
+    price: '$299/month',
+    features: [
+      'Advanced threat detection',
+      'Real-time monitoring',
+      'Compliance management',
+      'Incident response'
+    ],
+    rating: 4.9,
+    users: 650,
+    color: 'from-red-500 to-orange-500'
   },
   {
     id: 4,
-    title: 'API Gateway',
-    description: 'Manage and secure your APIs with our powerful gateway solution.',
-    icon: Code,
-    features: ['Rate Limiting', 'Authentication', 'Analytics', 'Documentation'],
-    price: 'Starting at $29/month',
-    category: 'API'
-  },
-  {
-    id: 5,
-    title: 'Data Analytics',
-    description: 'Transform your data into actionable insights with our analytics platform.',
-    icon: Database,
-    features: ['Real-time Processing', 'Visualization', 'Machine Learning', 'Reporting'],
-    price: 'Starting at $149/month',
-    category: 'Analytics'
-  },
-  {
-    id: 6,
-    title: 'Performance Monitoring',
-    description: 'Monitor and optimize your application performance in real-time.',
+    name: 'Micro SaaS Platform',
+    description: 'Complete SaaS solution for small businesses',
+    category: 'SaaS',
     icon: Zap,
-    features: ['Real-time Monitoring', 'Alerting', 'Performance Insights', 'Optimization'],
-    price: 'Starting at $39/month',
-    category: 'Monitoring'
+    price: '$149/month',
+    features: [
+      'Multi-tenant architecture',
+      'User management',
+      'Payment processing',
+      'Analytics dashboard'
+    ],
+    rating: 4.6,
+    users: 950,
+    color: 'from-purple-500 to-pink-500'
   }
 ];
 
-const ProductsIndex: NextPage = () => {
-  return (
-    <>
-      <Head>
-        <title>Products - Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive suite of technology products and solutions." />
-        <meta name="keywords" content="products, solutions, AI, cloud, security, API, analytics" />
-      </Head>
+const categories = [
+  'All',
+  'AI Services',
+  'Cloud Services',
+  'Security',
+  'SaaS'
+];
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+export default function ProductsIndex() {
+  const [selectedCategory, setSelectedCategory] = React.useState('All');
+
+  const filteredProducts = selectedCategory === 'All' 
+    ? products 
+    : products.filter(product => product.category === selectedCategory);
+
+  return (
+    <Layout
+      title="Products - Zion Tech Group"
+      description="Discover our comprehensive suite of technology products and services designed for modern businesses."
+      keywords="products, AI services, cloud computing, security, SaaS, technology solutions"
+    >
+      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-90"></div>
-          <div className="absolute inset-0 bg-black opacity-20"></div>
-          
-          <div className="container mx-auto px-4 relative z-10">
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center text-white"
+              className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Our{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Products
-                </span>
+                Our Products
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Discover our comprehensive suite of technology products designed to 
-                accelerate your digital transformation and drive business growth.
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Comprehensive technology solutions designed to accelerate your business growth
               </p>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Category Filter */}
+        <section className="py-8 bg-white border-b">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-wrap gap-2 justify-center">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                    selectedCategory === category
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Products Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Product Portfolio
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Choose from our range of products designed to meet your specific needs.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
-              {products.map((product, index) => (
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+              {filteredProducts.map((product, index) => (
                 <motion.div
                   key={product.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                  className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
                 >
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                      <product.icon className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium">
+                  <div className={`h-48 bg-gradient-to-r ${product.color} flex items-center justify-center`}>
+                    <product.icon className="w-16 h-16 text-white" />
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
                         {product.category}
                       </span>
+                      <div className="flex items-center gap-1">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        <span className="text-sm text-gray-600">{product.rating}</span>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {product.title}
-                  </h3>
-                  <p className="text-gray-600 mb-6">
-                    {product.description}
-                  </p>
-                  
-                  <div className="mb-6">
-                    <h4 className="font-medium text-gray-900 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
+                    
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      {product.name}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-4">
+                      {product.description}
+                    </p>
+                    
+                    <div className="space-y-2 mb-4">
                       {product.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <div key={featureIndex} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                           {feature}
-                        </li>
+                        </div>
                       ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-lg font-bold text-blue-600">
-                      {product.price}
-                    </span>
-                    <Link
-                      href={`/products/${product.id}`}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-                    >
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
+                    </div>
+                    
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-2xl font-bold text-gray-900">
+                        {product.price}
+                      </div>
+                      <div className="flex items-center text-sm text-gray-500">
+                        <Users className="w-4 h-4 mr-1" />
+                        {product.users} users
+                      </div>
+                    </div>
+                    
+                    <div className="flex gap-2">
+                      <Link
+                        href={`/products/${product.id}`}
+                        className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                      >
+                        Learn More
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </Link>
+                      <button className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+                        <Settings className="w-4 h-4" />
+                      </button>
+                    </div>
                   </div>
                 </motion.div>
               ))}
-            </motion.div>
+            </div>
+            
+            {filteredProducts.length === 0 && (
+              <div className="text-center py-12">
+                <div className="text-gray-400 mb-4">
+                  <Globe className="w-16 h-16 mx-auto" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">No products found</h3>
+                <p className="text-gray-600">Try selecting a different category.</p>
+              </div>
+            )}
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
-          <div className="max-w-7xl mx-auto text-center">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Get Started?
               </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Contact our team to discuss which products are right for your business.
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Choose the perfect product for your business needs and start your journey with us today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+                <Link
+                  href="/contact"
+                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
+                >
                   Contact Sales
                 </Link>
-                <Link href="/demo" className="border border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors">
+                <Link
+                  href="/demo"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
                   Request Demo
                 </Link>
               </div>
@@ -213,8 +264,6 @@ const ProductsIndex: NextPage = () => {
           </div>
         </section>
       </div>
-    </>
+    </Layout>
   );
-};
-
-export default ProductsIndex;
+}
