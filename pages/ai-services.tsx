@@ -41,7 +41,8 @@ import {
   Sprout,
   Mail,
   ShoppingCart,
-  BookOpen
+  BookOpen,
+  Home
 } from 'lucide-react';
 
 const aiServices = [
@@ -594,6 +595,132 @@ const aiServices = [
     features: ['Failure Prediction', 'Maintenance Scheduling', 'Performance Optimization', 'Cost Reduction'],
     pricing: '$15,000 - $100,000/setup',
     category: 'Industrial AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Mental Health Companion',
+    description: 'Advanced AI mental health support with mood tracking and crisis intervention.',
+    icon: Heart,
+    features: ['Mood Analysis', 'Crisis Detection', 'Therapy Recommendations', 'Progress Tracking'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Healthcare AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart City Management',
+    description: 'Comprehensive AI platform for smart city infrastructure and citizen services.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Resource Management', 'Citizen Services', 'Environmental Monitoring'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Smart Cities',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Agricultural Intelligence',
+    description: 'Precision agriculture with AI-driven crop monitoring and yield optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Irrigation Optimization'],
+    pricing: '$10,000 - $75,000/project',
+    category: 'AgriTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personal Assistant',
+    description: 'Advanced personal AI assistant with natural language understanding and task automation.',
+    icon: Bot,
+    features: ['Natural Language Processing', 'Task Automation', 'Calendar Management', 'Smart Reminders'],
+    pricing: '$500 - $3,000/month',
+    category: 'Personal AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Language Translation',
+    description: 'Real-time language translation with context awareness and cultural adaptation.',
+    icon: Globe,
+    features: ['100+ Languages', 'Context Awareness', 'Cultural Adaptation', 'Voice Translation'],
+    pricing: '$1,000 - $8,000/month',
+    category: 'Language AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Investment Advisor',
+    description: 'Personalized investment advice and portfolio management using advanced AI algorithms.',
+    icon: TrendingUp,
+    features: ['Portfolio Analysis', 'Risk Assessment', 'Market Prediction', 'Automated Trading'],
+    pricing: '$2,000 - $15,000/month',
+    category: 'FinTech AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Advanced content moderation for social media and online platforms using AI.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Hate Speech Detection', 'Spam Filtering', 'Real-time Processing'],
+    pricing: '$3,000 - $20,000/month',
+    category: 'Content Safety',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Voice Cloning',
+    description: 'High-quality voice synthesis and cloning for various applications.',
+    icon: Mic,
+    features: ['Voice Synthesis', 'Emotion Control', 'Language Adaptation', 'Real-time Generation'],
+    pricing: '$5,000 - $30,000/setup',
+    category: 'Voice AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Drug Interaction Checker',
+    description: 'Advanced AI system for detecting drug interactions and adverse effects.',
+    icon: Heart,
+    features: ['Drug Interaction Analysis', 'Side Effect Prediction', 'Dosage Optimization', 'Patient Safety'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Healthcare AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Weather Prediction',
+    description: 'Advanced weather forecasting using AI and machine learning models.',
+    icon: Cloud,
+    features: ['Hyperlocal Forecasting', 'Severe Weather Alerts', 'Climate Modeling', 'Agricultural Weather'],
+    pricing: '$5,000 - $40,000/setup',
+    category: 'Environmental AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Customer Service Automation',
+    description: 'Complete customer service automation with intelligent routing and response generation.',
+    icon: MessageSquare,
+    features: ['Intelligent Routing', 'Response Generation', 'Sentiment Analysis', 'Escalation Management'],
+    pricing: '$3,000 - $25,000/month',
+    category: 'Customer Service AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Blockchain Analytics',
+    description: 'Advanced blockchain transaction analysis and cryptocurrency intelligence.',
+    icon: Shield,
+    features: ['Transaction Analysis', 'Fraud Detection', 'Compliance Monitoring', 'Risk Assessment'],
+    pricing: '$5,000 - $35,000/month',
+    category: 'Blockchain AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personal Trainer',
+    description: 'AI-powered fitness coaching with personalized workout and nutrition plans.',
+    icon: Heart,
+    features: ['Personalized Workouts', 'Nutrition Planning', 'Progress Tracking', 'Form Analysis'],
+    pricing: '$29 - $199/month',
+    category: 'Fitness AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Home Controller',
+    description: 'Intelligent home automation with AI-powered device control and optimization.',
+    icon: Home,
+    features: ['Device Control', 'Energy Optimization', 'Security Monitoring', 'Predictive Automation'],
+    pricing: '$1,000 - $8,000/setup',
+    category: 'Smart Home AI',
     popular: true
   }
 ];

@@ -19,83 +19,88 @@ import {
   FileText,
   MessageSquare,
   Rocket,
-  Cpu,
-  Lock,
-  Video,
+  Building,
+  Heart,
+  DollarSign,
   BookOpen,
-  Clock,
-  Award,
-  DollarSign
+  ShoppingCart,
+  Video
 } from 'lucide-react';
 
-const navigation = [{
-    "name": 'Services',
-    "href": '/services',
-    "icon": Settings,
-    "children": [
-      { name: 'AI Solutions', "href": '/ai-services', "icon": Brain, "count": '35+' },
-      { "name": 'IT Services', "href": '/it-services', "icon": Network, "count": '25+' },
-      { "name": 'Micro SaaS', "href": '/micro-saas', "icon": Cloud, "count": '40+' },
-      { "name": 'All Services', "href": '/services', "icon": Globe, "count": '100+' }
+const navigation = [
+  {
+    name: 'Services',
+    href: '/services',
+    icon: Settings,
+    children: [
+      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '35+' },
+      { name: 'IT Services', href: '/it-services', icon: Network, count: '35+' },
+      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '40+' },
+      { name: 'All Services', href: '/services', icon: Globe, count: '110+' }
     ]
   },
   {
-    "name": 'Solutions',
-    "href": '/solutions',
-    "icon": Shield,
-    "children": [
-      { name: 'Enterprise Solutions', "href": '/solutions/enterprise', "icon": Shield },
-      { "name": 'Startup Solutions', "href": '/solutions/startup', "icon": Rocket },
-      { "name": 'Industry Solutions', "href": '/solutions/industry', "icon": BarChart3 },
-      { "name": 'Custom Development', "href": '/solutions/custom', "icon": Settings },
-      { "name": 'Quantum Computing', "href": '/solutions/quantum', "icon": Cpu },
-      { "name": 'Edge Computing', "href": '/solutions/edge', "icon": Network },
-      { "name": 'Blockchain Solutions', "href": '/solutions/blockchain', "icon": Lock }
+    name: 'Solutions',
+    href: '/solutions',
+    icon: Shield,
+    children: [
+      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Shield },
+      { name: 'Startup Solutions', href: '/solutions/startup', icon: Rocket },
+      { name: 'Industry Solutions', href: '/solutions/industry', icon: BarChart3 },
+      { name: 'Custom Development', href: '/solutions/custom', icon: Settings },
+      { name: 'Digital Transformation', href: '/solutions/digital-transformation', icon: Globe },
+      { name: 'Cloud Migration', href: '/solutions/cloud-migration', icon: Cloud }
     ]
   },
   {
-    "name": 'Resources',
-    "href": '/resources',
-    "icon": FileText,
-    "children": [
-      { name: 'Documentation', "href": '/docs', "icon": FileText },
-      { "name": 'Case Studies', "href": '/case-studies', "icon": BarChart3 },
-      { "name": 'Blog', "href": '/blog', "icon": MessageSquare },
-      { "name": 'API Reference', "href": '/api-docs', "icon": Settings },
-      { "name": 'White Papers', "href": '/whitepapers', "icon": FileText },
-      { "name": 'Webinars', "href": '/webinars', "icon": Video },
-      { "name": 'Tutorials', "href": '/tutorials', "icon": BookOpen }
+    name: 'Industries',
+    href: '/industries',
+    icon: Building,
+    children: [
+      { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
+      { name: 'Finance', href: '/industries/finance', icon: DollarSign },
+      { name: 'Manufacturing', href: '/industries/manufacturing', icon: Settings },
+      { name: 'Education', href: '/industries/education', icon: BookOpen },
+      { name: 'Retail', href: '/industries/retail', icon: ShoppingCart },
+      { name: 'Government', href: '/industries/government', icon: Building }
     ]
   },
   {
-    "name": 'About',
-    "href": '/about',
-    "icon": Users,
-    "children": [
-      { name: 'Our Team', "href": '/about#team', "icon": Users },
-      { "name": 'Company History', "href": '/about#history', "icon": Clock },
-      { "name": 'Careers', "href": '/careers', "icon": Rocket },
-      { "name": 'Partners', "href": '/partners', "icon": Network },
-      { "name": 'Awards', "href": '/awards', "icon": Award }
+    name: 'Resources',
+    href: '/resources',
+    icon: FileText,
+    children: [
+      { name: 'Documentation', href: '/docs', icon: FileText },
+      { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
+      { name: 'Blog', href: '/blog', icon: MessageSquare },
+      { name: 'API Reference', href: '/api-docs', icon: Settings },
+      { name: 'White Papers', href: '/white-papers', icon: FileText },
+      { name: 'Webinars', href: '/webinars', icon: Video }
     ]
   },
   {
-    "name": 'Contact',
-    "href": '/contact',
-    "icon": Phone,
-    "children": [
-      { name: 'Get Quote', "href": '/contact#quote', "icon": DollarSign },
-      { "name": 'Free Consultation', "href": '/contact#consultation', "icon": MessageSquare },
-      { "name": 'Support', "href": '/support', "icon": Settings },
-      { "name": 'Emergency Contact', "href": '/contact#emergency', "icon": Phone }
+    name: 'Company',
+    href: '/about',
+    icon: Users,
+    children: [
+      { name: 'About Us', href: '/about', icon: Users },
+      { name: 'Our Team', href: '/about#team', icon: Users },
+      { name: 'Careers', href: '/careers', icon: Rocket },
+      { name: 'Partners', href: '/partners', icon: Globe },
+      { name: 'News', href: '/news', icon: MessageSquare }
     ]
+  },
+  {
+    name: 'Contact',
+    href: '/contact',
+    icon: Phone
   }
 ];
 
 const contactInfo = {
-  "phone": '+1 302 464 0950',
-  "email": 'kleber@ziontechgroup.com',
-  "address": '364 E Main St STE 1008, Middletown, DE 19709'
+  phone: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008, Middletown, DE 19709'
 };
 
 export default function Header() {
@@ -163,9 +168,9 @@ export default function Header() {
                   <AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div
-                        initial={{ "opacity": 0, "y": 10 }}
-                        animate={{ "opacity": 1, "y": 0 }}
-                        exit={{ "opacity": 0, "y": 10 }}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
                         className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
                         onMouseEnter={() => setActiveDropdown(item.name)}
                         onMouseLeave={() => setActiveDropdown(null)}
@@ -224,9 +229,9 @@ export default function Header() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
-              initial={{ "opacity": 0, "height": 0 }}
-              animate={{ "opacity": 1, "height": 'auto' }}
-              exit={{ "opacity": 0, "height": 0 }}
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
               className="lg:hidden border-t border-gray-200 bg-white"
             >
               <div className="py-4 space-y-2">

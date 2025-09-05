@@ -7,8 +7,9 @@ import MainLayout from '../components/layout/MainLayout';
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
-  { number: '500+', label: 'Projects Completed' },
-  { number: '50+', label: 'Expert Team Members' }
+  { number: '1000+', label: 'Projects Completed' },
+  { number: '110+', label: 'Services Offered' },
+  { number: '75+', label: 'Expert Team Members' }
 ];
 
 const services = [
@@ -63,8 +64,6 @@ export default function HomePage() {
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services. 
               <br className="hidden md:block" />
               <span className="text-blue-300 font-semibold">Contact us: +1 302 464 0950 | kleber@ziontechgroup.com</span>
-              <br className="hidden md:block" />
-              <span className="text-green-300 font-semibold">📍 364 E Main St STE 1008, Middletown DE 19709</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
@@ -93,8 +92,6 @@ export default function HomePage() {
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               We provide comprehensive technology solutions to help your business thrive in the digital age. From innovative micro SaaS applications to cutting-edge AI services and enterprise IT solutions.
-              <br className="hidden md:block" />
-              <span className="text-blue-600 font-semibold">💰 Competitive Pricing: Micro SaaS from $9/month | AI Services from $1,000/project | IT Services from $120/hour</span>
             </p>
           </motion.div>
 
@@ -173,8 +170,6 @@ export default function HomePage() {
             <p className="text-lg text-gray-600 max-w-4xl mx-auto">
               We deliver cutting-edge technology solutions with competitive pricing and unmatched expertise. 
               Our comprehensive service portfolio covers everything from micro SaaS development to enterprise AI solutions.
-              <br className="hidden md:block" />
-              <span className="text-green-600 font-semibold">🚀 100+ Services Available | 50+ Expert Team Members | 500+ Projects Completed | 99.9% Uptime Guarantee</span>
             </p>
           </motion.div>
 
@@ -188,11 +183,9 @@ export default function HomePage() {
             >
               <h3 className="text-xl font-bold text-gray-900 mb-4">💰 Competitive Pricing</h3>
               <ul className="text-gray-600 space-y-2">
-                <li>• Micro SaaS: $9 - $9,999/month</li>
+                <li>• Micro SaaS: $29 - $4,999/month</li>
                 <li>• IT Services: $120 - $500/hour</li>
                 <li>• AI Solutions: $1,000 - $1M/project</li>
-                <li>• Quantum Computing: $50K - $500K/project</li>
-                <li>• Blockchain Services: $20K - $600K/project</li>
                 <li>• Transparent, no hidden fees</li>
               </ul>
             </motion.div>
@@ -206,11 +199,11 @@ export default function HomePage() {
             >
               <h3 className="text-xl font-bold text-gray-900 mb-4">🚀 Innovation Focus</h3>
               <ul className="text-gray-600 space-y-2">
-                <li>• 100+ cutting-edge services</li>
-                <li>• AI, Blockchain, IoT, Quantum expertise</li>
-                <li>• Edge computing & 5G solutions</li>
-                <li>• AR/VR & Metaverse development</li>
+                <li>• 110+ cutting-edge services</li>
+                <li>• AI, Blockchain, IoT, 5G expertise</li>
+                <li>• Quantum computing solutions</li>
                 <li>• Future-ready technology stack</li>
+                <li>• Industry-leading innovation</li>
               </ul>
             </motion.div>
 
