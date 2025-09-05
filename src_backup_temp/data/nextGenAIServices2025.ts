@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/nextGenAIServices2025.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -387,3 +389,4 @@ export interface NextGenAIService { id: string; title: string; description: stri
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/nextGenAIServices2025.ts

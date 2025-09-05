@@ -55,31 +55,37 @@ const footerSections = [
       { title: 'AI Services', href: '/ai-services', icon: Brain },
       { title: 'IT Services', href: '/it-services', icon: Network },
       { title: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
-      { title: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-      { title: 'Cloud DevOps', href: '/cloud-devops', icon: Cloud },
-      { title: 'Quantum Computing', href: '/quantum-computing', icon: Code }
+      { title: 'Quantum Computing', href: '/quantum-computing', icon: Code },
+      { title: 'Blockchain', href: '/blockchain', icon: Lock },
+      { title: 'IoT Solutions', href: '/iot', icon: Globe },
+      { title: 'AR/VR Solutions', href: '/ar-vr', icon: Eye },
+      { title: 'Space Technology', href: '/space-tech', icon: Settings }
     ]
   },
   {
     title: 'Solutions',
     links: [
-      { title: 'Cloud Migration', href: '/solutions/cloud-migration', icon: Cloud },
-      { title: 'Custom Solutions', href: '/solutions/custom', icon: Code },
-      { title: 'Industry Solutions', href: '/solutions/industry', icon: Building },
-      { title: 'Startup Solutions', href: '/solutions/startup', icon: Zap },
-      { title: 'Training', href: '/training', icon: BookOpen },
-      { title: 'Products', href: '/products', icon: ShoppingCart }
+      { title: 'Enterprise Solutions', href: '/enterprise', icon: Building },
+      { title: 'Startup Solutions', href: '/startup', icon: Settings },
+      { title: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
+      { title: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
+      { title: 'Data Analytics', href: '/data-analytics', icon: BarChart3 },
+      { title: 'Automation', href: '/automation', icon: Zap },
+      { title: 'Digital Transformation', href: '/digital-transformation', icon: TrendingUp },
+      { title: 'Custom Development', href: '/custom-development', icon: Code }
     ]
   },
   {
-    title: 'Company',
+    title: 'Industries',
     links: [
-      { title: 'About Us', href: '/about', icon: Building },
-      { title: 'Our Team', href: '/team', icon: Users },
-      { title: 'Careers', href: '/careers', icon: Users },
-      { title: 'Contact', href: '/contact', icon: Phone },
-      { title: 'Schedule Call', href: '/calendar', icon: Calendar },
-      { title: 'Status', href: '/status', icon: BarChart3 }
+      { title: 'Healthcare', href: '/industries/healthcare', icon: Heart },
+      { title: 'Finance', href: '/industries/finance', icon: DollarSign },
+      { title: 'Manufacturing', href: '/industries/manufacturing', icon: Settings },
+      { title: 'Retail', href: '/industries/retail', icon: ShoppingCart },
+      { title: 'Education', href: '/industries/education', icon: BookOpen },
+      { title: 'Real Estate', href: '/industries/real-estate', icon: Home },
+      { title: 'Agriculture', href: '/industries/agriculture', icon: Target },
+      { title: 'Energy', href: '/industries/energy', icon: Zap }
     ]
   },
   {
@@ -87,10 +93,49 @@ const footerSections = [
     links: [
       { title: 'Blog', href: '/blog', icon: FileText },
       { title: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-      { title: 'FAQ', href: '/faq', icon: MessageSquare },
+      { title: 'White Papers', href: '/white-papers', icon: FileText },
+      { title: 'Webinars', href: '/webinars', icon: Calendar },
+      { title: 'Tutorials', href: '/tutorials', icon: BookOpen },
+<<<<<<< HEAD
+      { title: 'API Documentation', href: '/api-docs', icon: Code },
+      { title: 'Training', href: '/training', icon: BookOpen },
+      { title: 'FAQ', href: '/faq', icon: MessageSquare }
+=======
+      { title: 'Documentation', href: '/docs', icon: FileText },
+      { title: 'API Reference', href: '/api-docs', icon: Code },
+      { title: 'Status Page', href: '/status', icon: Activity }
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+    ]
+  },
+  {
+    title: 'Company',
+    links: [
+      { title: 'About Us', href: '/about', icon: Building },
+      { title: 'Team', href: '/team', icon: Users },
+      { title: 'Careers', href: '/careers', icon: Users },
+      { title: 'Partners', href: '/partners', icon: Globe },
+      { title: 'News', href: '/news', icon: FileText },
+<<<<<<< HEAD
+      { title: 'Contact', href: '/contact', icon: MessageSquare },
       { title: 'Privacy Policy', href: '/privacy', icon: Lock },
-      { title: 'Terms of Service', href: '/terms', icon: FileText },
-      { title: 'Training', href: '/training', icon: BookOpen }
+      { title: 'Terms of Service', href: '/terms', icon: FileText }
+    ]
+  },
+  {
+    title: 'Support',
+    links: [
+      { title: 'Help Center', href: '/help', icon: MessageSquare },
+      { title: 'Documentation', href: '/docs', icon: FileText },
+      { title: 'API Reference', href: '/api', icon: Code },
+      { title: 'Status Page', href: '/status', icon: BarChart3 },
+      { title: 'Community', href: '/community', icon: Users },
+      { title: 'Training', href: '/training', icon: BookOpen },
+      { title: 'Free Consultation', href: '/consultation', icon: Calendar },
+      { title: 'Get Quote', href: '/quote', icon: FileText }
+=======
+      { title: 'Privacy Policy', href: '/privacy', icon: Lock },
+      { title: 'Terms of Service', href: '/terms', icon: FileText }
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
     ]
   }
 ];

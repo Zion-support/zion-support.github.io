@@ -42,6 +42,12 @@ import {
   TrendingUp,
   Clock,
   DollarSign,
+  Cpu,
+  Rocket,
+  Car,
+  Sprout,
+  Wifi,
+  GraduationCap,
   Award as Recognition,
   Star as Rating,
   Users as People,
@@ -75,11 +81,6 @@ import {
 
 const navigationItems = [
   {
-    title: 'Home',
-    href: '/',
-    icon: Home
-  },
-  {
     title: 'Services',
     href: '/services',
     icon: Settings,
@@ -88,40 +89,69 @@ const navigationItems = [
         title: 'AI Services',
         href: '/ai-services',
         icon: Brain,
-        description: '30+ cutting-edge AI solutions',
+<<<<<<< HEAD
+        description: '100+ cutting-edge AI solutions',
+=======
+        description: '80+ cutting-edge AI solutions',
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
         popular: true
       },
       {
         title: 'IT Services',
         href: '/it-services',
         icon: Network,
-        description: '25+ comprehensive IT services',
+<<<<<<< HEAD
+        description: '85+ comprehensive IT services',
+=======
+        description: '70+ comprehensive IT services',
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
         popular: true
       },
       {
         title: 'Micro SaaS',
         href: '/micro-saas',
         icon: Cloud,
-        description: '40+ innovative micro SaaS solutions',
+<<<<<<< HEAD
+        description: '120+ innovative micro SaaS solutions',
+=======
+        description: '85+ innovative micro SaaS solutions',
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
         popular: true
-      },
-      {
-        title: 'Cybersecurity',
-        href: '/cybersecurity',
-        icon: Shield,
-        description: 'Enterprise security solutions'
-      },
-      {
-        title: 'Cloud DevOps',
-        href: '/cloud-devops',
-        icon: Cloud,
-        description: 'Cloud infrastructure and DevOps'
       },
       {
         title: 'Quantum Computing',
         href: '/quantum-computing',
-        icon: Code,
-        description: 'Next-generation quantum solutions'
+        icon: Cpu,
+        description: 'Quantum solutions & infrastructure',
+        popular: false
+      },
+      {
+        title: 'Blockchain',
+        href: '/blockchain',
+        icon: Lock,
+        description: 'Blockchain & DeFi solutions',
+        popular: false
+      },
+      {
+        title: 'IoT Solutions',
+        href: '/iot',
+        icon: Wifi,
+        description: 'Internet of Things platforms',
+        popular: false
+      },
+      {
+        title: 'AR/VR Solutions',
+        href: '/ar-vr',
+        icon: Eye,
+        description: 'Augmented & Virtual Reality',
+        popular: false
+      },
+      {
+        title: 'Space Technology',
+        href: '/space-tech',
+        icon: Rocket,
+        description: 'Space & satellite solutions',
+        popular: false
       }
     ]
   },
@@ -131,28 +161,203 @@ const navigationItems = [
     icon: Target,
     submenu: [
       {
-        title: 'Cloud Migration',
-        href: '/solutions/cloud-migration',
-        icon: Cloud,
-        description: 'Seamless cloud migration services'
-      },
-      {
-        title: 'Custom Solutions',
-        href: '/solutions/custom',
-        icon: Code,
-        description: 'Tailored technology solutions'
-      },
-      {
-        title: 'Industry Solutions',
-        href: '/solutions/industry',
+        title: 'Enterprise Solutions',
+        href: '/enterprise',
         icon: Building,
-        description: 'Industry-specific solutions'
+        description: 'Large-scale business solutions',
+        popular: true
       },
       {
         title: 'Startup Solutions',
-        href: '/solutions/startup',
+        href: '/startup',
+        icon: Rocket,
+        description: 'Scalable startup platforms',
+        popular: true
+      },
+      {
+        title: 'Cloud Solutions',
+        href: '/cloud-solutions',
+        icon: Cloud,
+        description: 'Scalable cloud infrastructure',
+        popular: true
+      },
+      {
+        title: 'Cybersecurity',
+        href: '/cybersecurity',
+        icon: Shield,
+        description: 'Enterprise security solutions',
+        popular: true
+      },
+      {
+        title: 'Data Analytics',
+        href: '/data-analytics',
+        icon: BarChart3,
+        description: 'Advanced analytics platform',
+        popular: false
+      },
+      {
+        title: 'Automation',
+        href: '/automation',
         icon: Zap,
-        description: 'Technology solutions for startups'
+        description: 'Intelligent process automation',
+        popular: false
+      },
+      {
+        title: 'Digital Transformation',
+        href: '/digital-transformation',
+        icon: TrendingUp,
+        description: 'Complete digital overhaul',
+        popular: false
+      },
+      {
+        title: 'Custom Development',
+        href: '/custom-development',
+        icon: Code,
+        description: 'Tailored software solutions',
+        popular: false
+      }
+    ]
+  },
+  {
+    title: 'Industries',
+    href: '/industries',
+    icon: Building,
+    submenu: [
+      {
+        title: 'Healthcare',
+        href: '/industries/healthcare',
+        icon: Heart,
+        description: 'Medical AI and health tech',
+        popular: true
+      },
+      {
+        title: 'Finance',
+        href: '/industries/finance',
+        icon: DollarSign,
+        description: 'Fintech and financial services',
+        popular: true
+      },
+      {
+        title: 'Manufacturing',
+        href: '/industries/manufacturing',
+        icon: Settings,
+        description: 'Industrial automation',
+        popular: true
+      },
+      {
+        title: 'Retail',
+        href: '/industries/retail',
+        icon: ShoppingCart,
+        description: 'E-commerce and retail tech',
+        popular: true
+      },
+      {
+        title: 'Education',
+        href: '/industries/education',
+        icon: BookOpen,
+        description: 'EdTech solutions',
+        popular: false
+      },
+      {
+        title: 'Real Estate',
+        href: '/industries/real-estate',
+        icon: Home,
+        description: 'PropTech innovations',
+        popular: false
+      },
+      {
+        title: 'Agriculture',
+        href: '/industries/agriculture',
+        icon: Sprout,
+        description: 'AgTech and smart farming',
+        popular: false
+      },
+      {
+        title: 'Energy',
+        href: '/industries/energy',
+        icon: Zap,
+        description: 'Energy and utilities tech',
+        popular: false
+      },
+      {
+        title: 'Transportation',
+        href: '/industries/transportation',
+        icon: Car,
+        description: 'Logistics and mobility',
+        popular: false
+      },
+      {
+        title: 'Government',
+        href: '/industries/government',
+        icon: Building,
+        description: 'Public sector solutions',
+        popular: false
+      }
+    ]
+  },
+  {
+    title: 'Resources',
+    href: '/resources',
+    icon: FileText,
+    submenu: [
+      {
+        title: 'Blog',
+        href: '/blog',
+        icon: FileText,
+        description: 'Latest insights and trends',
+        popular: true
+      },
+      {
+        title: 'Case Studies',
+        href: '/case-studies',
+        icon: BarChart3,
+        description: 'Success stories and results',
+        popular: true
+      },
+      {
+        title: 'White Papers',
+        href: '/white-papers',
+        icon: Document,
+        description: 'In-depth research reports',
+        popular: false
+      },
+      {
+        title: 'Webinars',
+        href: '/webinars',
+        icon: Calendar,
+        description: 'Educational sessions',
+        popular: false
+      },
+      {
+        title: 'Tutorials',
+        href: '/tutorials',
+        icon: BookOpen,
+        description: 'Step-by-step guides',
+        popular: false
+<<<<<<< HEAD
+      },
+      {
+        title: 'API Documentation',
+        href: '/api-docs',
+        icon: Code,
+        description: 'Developer resources',
+        popular: false
+      },
+      {
+        title: 'Training',
+        href: '/training',
+        icon: GraduationCap,
+        description: 'Professional development',
+        popular: false
+      },
+      {
+        title: 'FAQ',
+        href: '/faq',
+        icon: MessageSquare,
+        description: 'Frequently asked questions',
+        popular: false
+=======
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
       }
     ]
   },
@@ -165,70 +370,66 @@ const navigationItems = [
         title: 'About Us',
         href: '/about',
         icon: Building,
-        description: 'Learn about our mission and values'
+        description: 'Our story and mission',
+        popular: true
       },
       {
-        title: 'Our Team',
+        title: 'Team',
         href: '/team',
         icon: Users,
-        description: 'Meet our expert team members'
+        description: 'Meet our experts',
+        popular: true
       },
       {
         title: 'Careers',
         href: '/careers',
         icon: Users,
-        description: 'Join our growing team'
+        description: 'Join our team',
+        popular: true
+      },
+      {
+<<<<<<< HEAD
+        title: 'Partners',
+        href: '/partners',
+        icon: Globe,
+        description: 'Our partnerships',
+        popular: false
+      },
+      {
+        title: 'News',
+        href: '/news',
+        icon: FileText,
+        description: 'Company updates',
+        popular: false
       },
       {
         title: 'Contact',
         href: '/contact',
         icon: Phone,
-        description: 'Get in touch with us'
-      }
-    ]
-  },
-  {
-    title: 'Resources',
-    href: '/blog',
-    icon: FileText,
-    submenu: [
+        description: 'Get in touch with us',
+        popular: true
+      },
       {
-        title: 'Blog',
-        href: '/blog',
+        title: 'Privacy Policy',
+        href: '/privacy',
+        icon: Lock,
+        description: 'Privacy and data protection',
+        popular: false
+      },
+      {
+        title: 'Terms of Service',
+        href: '/terms',
         icon: FileText,
-        description: 'Latest insights and updates'
-      },
-      {
-        title: 'Case Studies',
-        href: '/case-studies',
-        icon: BarChart3,
-        description: 'Success stories and case studies'
-      },
-      {
-        title: 'FAQ',
-        href: '/faq',
-        icon: MessageSquare,
-        description: 'Frequently asked questions'
-      },
-      {
-        title: 'Training',
-        href: '/training',
-        icon: BookOpen,
-        description: 'Professional training programs'
+        description: 'Terms and conditions',
+=======
+        title: 'Contact',
+        href: '/contact',
+        icon: Phone,
+        description: 'Get in touch',
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+        popular: false
       }
     ]
-  },
-  {
-    title: 'Schedule',
-    href: '/calendar',
-    icon: Calendar,
-    description: 'Book a consultation'
-  },
-  {
-    title: 'Products',
-    href: '/products',
-    icon: ShoppingCart,
-    description: 'Our product offerings'
   }
 ];
 
@@ -236,7 +437,9 @@ const quickLinks = [
   { title: 'Pricing', href: '/pricing', icon: DollarSign },
   { title: 'Contact', href: '/contact', icon: Phone },
   { title: 'Support', href: '/support', icon: MessageSquare },
-  { title: 'Status', href: '/status', icon: BarChart3 }
+  { title: 'Status', href: '/status', icon: BarChart3 },
+  { title: 'Free Consultation', href: '/consultation', icon: Calendar },
+  { title: 'Get Quote', href: '/quote', icon: FileText }
 ];
 
 export default function Navigation() {

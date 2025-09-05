@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/ui/select.tsx
+=======
 <<<<<<< HEAD
 =======
 import React from 'react';
@@ -20,6 +22,7 @@ interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
 interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {;
   "children": React.ReactNode;
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/select.tsx
   className?: string;
 }
 <<<<<<< HEAD
@@ -46,6 +49,8 @@ export function Select($1) {
     </select>;
   );
 }
+<<<<<<< HEAD:src/components/ui/select.tsx
+=======
 <<<<<<< HEAD
 
 interface SelectTriggerProps {
@@ -66,6 +71,7 @@ export function SelectTrigger("props": "any) {;
 =======
   "children": React.ReactNode;
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/select.tsx
   className?: string;
 }
 <<<<<<< HEAD
@@ -87,6 +93,8 @@ export function SelectTrigger($1) {
 >>>>>>> main
 >>>>>>> main
       {children}
+<<<<<<< HEAD:src/components/ui/select.tsx
+=======
 <<<<<<< HEAD
     </div>
     );
@@ -113,6 +121,7 @@ export function SelectContent("props": "any) {;
 =======
   "children": React.ReactNode;
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/select.tsx
   className?: string;
 }
 <<<<<<< HEAD
@@ -134,13 +143,6 @@ export function SelectContent($1) {
 >>>>>>> main
 >>>>>>> main
       {children}
-<<<<<<< HEAD
-    </div>
-    );
-=======
-    </div>;
-  );
->>>>>>> main
 }
 ;
 interface SelectValueProps {;
@@ -162,6 +164,8 @@ export function SelectValue($1) {;
     </span>;
   );
 }
+<<<<<<< HEAD:src/components/ui/select.tsx
+=======
 <<<<<<< HEAD
 
 interface SelectItemProps {
@@ -181,6 +185,7 @@ export function SelectItem("props": "any) {;
 =======
   "children": React.ReactNode;
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/select.tsx
   value: string;
   className?: string;
 }

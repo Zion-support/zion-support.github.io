@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/setupTests.js
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -37,6 +39,7 @@ Object.defineProperty(window, 'matchMedia', {
     "removeEventListener": global.global.global.jest.fn(),
     "dispatchEvent": global.global.global.jest.fn()}))});
 >>>>>>> main
+>>>>>>> main:src_backup_temp/setupTests.js
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() { /* empty */ }

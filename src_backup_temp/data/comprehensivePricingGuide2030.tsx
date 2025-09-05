@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/comprehensivePricingGuide2030.tsx
+=======
 <<<<<<< HEAD
 // Comprehensive Pricing Guide 2030 - Zion Tech Group;
 // Complete pricing information for all innovative services;
@@ -693,6 +695,7 @@ export const PRICING_ANALYSIS_2030 = {
   "max": Mat h.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
   ;
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/comprehensivePricingGuide2030.tsx
 },;
   "categoryPricing": COMPREHENSIVE_PRICING_GUIDE_203 0.reduce(acc: unknow n, "service": unknow n {;
 >>>>>>> main

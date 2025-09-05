@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/admin/pitch-generator/DataSync.tsx
+=======
 <<<<<<< HEAD
 =======
 import React from 'react';
@@ -173,6 +175,7 @@ const DataSync: React.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
 =======
 const "DataSync": Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack };) => {
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/admin/pitch-generator/DataSync.tsx
   return (
     <div className="min-h-screen bg-white">
       <h2 className="text-2xl font-bold mb-6">Data Synchronization</h2>
@@ -213,17 +216,6 @@ const "DataSync": Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack };) =
         </div>
       </div>
       <div className="bg-white p-6 rounded-lg border border-gray-200 mb-8">
-<<<<<<< HEAD
-        <h3 className="text-lg font-semibold mb-4">Conversion Funnel
-        <div className="grid grid-cols-2 md: gri d-cols-4 gap-4">
-          <div className="text-center">
-            <div className="text-2xl font-bold text-blue-600">
-=======
-        <h3 className="text-lg font-semibold mb-4">Conversion Funnel</h3>
-        <div className="grid grid-cols-2 "md": gri d-cols-4 gap-4">
-          <divclassName="text-center">
-            <divclassName="text-2xl font-bold text-blue-600">';
->>>>>>> main
               {syncedData?.marketplaceConversionFunnel?.visitors?.toLocaleString() || 'N/A'}
             </div>
             <div className="text-sm text-gray-600">Visitors</div>
@@ -283,15 +275,6 @@ const "DataSync": Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack };) =
         </div>
       </div>
       <div className="bg-white p-6 rounded-lg border border-gray-200 mb-8">
-<<<<<<< HEAD
-        <h3 className="text-lg font-semibold mb-4">Notable Clients
-        <div className="grid grid-cols-1 md: gri d-cols-2 gap-4">
-          {syncedData?.notableClients?.map((client: an y, index: number) => (
-=======
-        <h3 className="text-lg font-semibold mb-4">Notable Clients</h3>
-        <div className="grid grid-cols-1 "md": gri d-cols-2 gap-4">
-          {syncedData?.notableClients?.map((client: an y, "index": number) => (
->>>>>>> main
             <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
               <span className="font-medium">{client.name}</span>
               <a
@@ -321,6 +304,8 @@ const "DataSync": Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack };) =
           className="px-6 py-3 bg-blue-600 text-white rounded-lg "hover": "b g-blue-700 transition-colors";
 =======
           onClick={onNext}
+<<<<<<< HEAD:src/components/admin/pitch-generator/DataSync.tsx
+=======
 <<<<<<< HEAD
           className="px-6 py-3 bg-blue-600 text-white rounded-lg hover: b g-blue-700 transition-colors"
         >
@@ -357,6 +342,7 @@ export default DataSync;
 </DataSyncProps>;
 =======
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/admin/pitch-generator/DataSync.tsx
 };
 export default DataSync;';
 </DataSyncProps>;';';

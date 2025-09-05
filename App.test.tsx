@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './App';
@@ -40,6 +42,7 @@ describe('App', () => {
     // Add interaction tests here
   });
 });
+>>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

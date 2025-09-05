@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/ConnectWalletButton.tsx
+=======
 <<<<<<< HEAD
 =======
 import React, { useState } from 'react';
@@ -47,6 +49,7 @@ const ConnectWalletButton: React.FC<ConnectWalletButtonProps> = ({
 =======
 const "ConnectWalletButton": Reac t.FC<ConnectWalletButtonProps> = ({
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/ConnectWalletButton.tsx
   onConnect,
   onDisconnect,
   isConnected = false,

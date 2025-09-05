@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/iotEdgeComputingServices2025.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -394,3 +396,4 @@ export interface IoTEdgeService { id: string; title: string; description: string
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/iotEdgeComputingServices2025.ts

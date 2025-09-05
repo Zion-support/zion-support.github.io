@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/community/ForumCategories.tsx
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -131,6 +133,7 @@ export default function ForumCategories(...args[]):  {
 =======
               </h3>
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/community/ForumCategories.tsx
               <p className="text-zion-slate-light mb-4 leading-relaxed">
                 {category.description}
               </p>

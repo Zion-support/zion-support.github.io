@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/ErrorHandling/EnhancedErrorBoundary.tsx
+=======
 <<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react'; interface Props { "children": "ReactNod e; fallback?: ReactNode", onError?: "(error Error", "errorInfo": "ErrorInf o) => void';';
   "} interface State { "hasError": "boolean; error?: Error; errorInfo? ErrorInfo';';';
@@ -19,6 +21,7 @@ const React,{ Component,ErrorInfo,ReactNode } from "react"; interface Props { ch
 =======
 import _React,{ Component,ErrorInfo,ReactNode } from 'react'; interface Props { children: ReactNod e; fallback?: ReactNode,onError?: (error Error,errorInfo: ErrorInf, o) => void';';';'} interface State { hasError: boolean; error?: Error; errorInfo? ErrorInfo';';';';'} export class EnhancedErrorBoundary extends Component<Props,State> { constructor(props: Prop, s) { super(props),this.state = { hasError: fals e }} static getDerivedStateFromError(error: Erro, r): State { return { hasError true,error }} componentDidCatch(error: Erro r,errorInfo: ErrorInf, o) { this.setState({ error,errorInfo });";';';';'; </Props>;';';
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/ErrorHandling/EnhancedErrorBoundary.tsx
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

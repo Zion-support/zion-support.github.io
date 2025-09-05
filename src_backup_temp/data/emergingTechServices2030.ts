@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/emergingTechServices2030.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -437,3 +439,4 @@ export interface EmergingTechService2030 { id: string; title: string; descriptio
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/emergingTechServices2030.ts

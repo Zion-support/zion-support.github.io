@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/comprehensiveServicesCatalog2025.tsx
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -251,3 +253,4 @@ export default COMPREHENSIVE_SERVICES_CATALOG_2025}}}}}
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/comprehensiveServicesCatalog2025.tsx

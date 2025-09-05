@@ -83,6 +83,15 @@ export default function Layout({ title, description, children, keywords }: Layou
         <link rel="canonical" href="https://ziontechgroup.com" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+<<<<<<< HEAD
+      
+      <div className="min-h-screen flex flex-col">
+        <Navigation />
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer />
+=======
 
       <div className="min-h-screen bg-gray-50">
         {/* Top Bar */}
@@ -92,11 +101,15 @@ export default function Layout({ title, description, children, keywords }: Layou
               <div className="flex items-center space-x-6 mb-2 md:mb-0">
                 <div className="flex items-center">
                   <Phone className="w-4 h-4 mr-2" />
-                  <a href="tel:+13024640950" className="hover:text-blue-300">+1 302 464 0950</a>
+                  <a href="tel:+13024640950" className="hover:text-blue-300 font-semibold">+1 302 464 0950</a>
                 </div>
                 <div className="flex items-center">
                   <Mail className="w-4 h-4 mr-2" />
-                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-300">kleber@ziontechgroup.com</a>
+                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-300 font-semibold">kleber@ziontechgroup.com</a>
+                </div>
+                <div className="flex items-center">
+                  <MapPin className="w-4 h-4 mr-2" />
+                  <span className="text-blue-200">364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
@@ -493,6 +506,7 @@ export default function Layout({ title, description, children, keywords }: Layou
             </div>
           </div>
         </footer>
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
       </div>
     </>
   );

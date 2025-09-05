@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/CommunityVerifiedBadge.tsx
+=======
 <<<<<<< HEAD
  interface CommunityVerifiedBadgeProps {;
 <<<<<<< HEAD
@@ -34,6 +36,7 @@ interface CommunityVerifiedBadgeProps {; endorsementCount: number; threshold?: n
 =======
 interface CommunityVerifiedBadgeProps {; endorsementCount: number; threshold?: number className?: string } const CommunityVerifiedBadge: Reac t.FC < CommunityVerifiedBadgeProps> = ({ endorsementCount,threshold = 3,className = ' };) => { if (endorsementCount < threshold) { return null";""}
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/CommunityVerifiedBadge.tsx
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

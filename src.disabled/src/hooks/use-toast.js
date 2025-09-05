@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React,{ useState,useCallback } from "react"; export const toast = ({ title,description,variant = "default" }) => {}; ,} return Date.now()} ; export const useToast = () => {}}; const [toasts,setToasts] = useState([]),} ; const toast = useCallback(({ title,description,variant = "default' }) => {}} const newToast = {} ; setToasts(prev => [...prev,newToast]),} setTimeout(() => {}} },5000),} return id},[]),} const dismiss = useCallback((id) => {}} },[]),} return {}; toast,dismiss,toasts}};"`
@@ -32,5 +34,6 @@ import React,{ useState,useCallback } from "react"; export const toast = ({ titl
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 import React,{ useState,useCallback } from "react"; export const toast = ({ title,description,variant = "default" }) => {}; console.log(""Toast [${variant}]: ${title} -,${description}""),} return Date.now()} ; export const useToast = () => {}}; const [toasts,setToasts] = useState([]),} ; const toast = useCallback(({ title,description,variant = "default' }) => {}} const newToast = {} ; setToasts(prev => [...prev,newToast]),} setTimeout(() => {}} },5000),} return id},[]),} const dismiss = useCallback((id) => {}} },[]),} return {}; toast,dismiss,toasts}};"`
+>>>>>>> main
 >>>>>>> main
 >>>>>>> main

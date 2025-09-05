@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/ui/form.tsx
+=======
 <<<<<<< HEAD
 =======
 import React from 'react';
@@ -17,6 +19,7 @@ interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {
 interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {;
   "children": React.ReactNode;
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/form.tsx
 }
 ;
 export function Form($1) {;
@@ -27,6 +30,8 @@ export function Form($1) {;
     </form>;
   );
 }
+<<<<<<< HEAD:src/components/ui/form.tsx
+=======
 <<<<<<< HEAD
 
 interface FormItemProps {
@@ -47,6 +52,7 @@ export function FormItem("props": "any) {;
 =======
   "children": React.ReactNode;
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/form.tsx
   className?: string;
 }
 <<<<<<< HEAD
@@ -68,6 +74,8 @@ export function FormItem($1) {
 >>>>>>> main
 >>>>>>> main
       {children}
+<<<<<<< HEAD:src/components/ui/form.tsx
+=======
 <<<<<<< HEAD
     </div>
     );
@@ -93,6 +101,7 @@ export function FormLabel("props": "any) {;
 =======
   "children": React.ReactNode;
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/form.tsx
   className?: string;
   htmlFor?: string;
 }
@@ -108,6 +117,8 @@ export function FormLabel($1) {;
     </label>;
   );
 }
+<<<<<<< HEAD:src/components/ui/form.tsx
+=======
 <<<<<<< HEAD
 
 interface FormFieldProps {
@@ -128,6 +139,7 @@ export function FormField("props": "any) {;
 =======
   "children": React.ReactNode;
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/form.tsx
   className?: string;
 }
 <<<<<<< HEAD
@@ -149,13 +161,6 @@ export function FormField($1) {
 >>>>>>> main
 >>>>>>> main
       {children}
-<<<<<<< HEAD
-    </div>
-    );
-=======
-    </div>;
-  );
->>>>>>> main
 }
 ;
 interface FormMessageProps {;

@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/SkipLink.tsx
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react'; ; export const SkipLink: Reac t.FC = () => {; return (; <a; href="#main-content" className="skip-link"; data-skip-link; >;" Skip to main content;";" </a>;";" ) };"';
@@ -19,6 +21,7 @@ const React from "react"; ; export const SkipLink: Reac t.FC = () => {; return (
 =======
 import _React from 'react'; ; export const SkipLink: Reac t.FC = () => {; return (; <a; href="#main-content" className="skip-link"; data-skip-link; >;" Skip to main content;";" </a>;";" ) };"; ;';';
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/SkipLink.tsx
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/comprehensiveServicesIndex.tsx
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -139,3 +141,4 @@ export { EXPANDED_INNOVATIVE_SERVICES_2025 } from "./expandedInnovativeServices2
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/comprehensiveServicesIndex.tsx

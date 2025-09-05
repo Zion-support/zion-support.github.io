@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/innovativeCybersecurityServices2030.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -538,3 +540,4 @@ export default innovativeCybersecurityServices2030}}"
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/innovativeCybersecurityServices2030.ts

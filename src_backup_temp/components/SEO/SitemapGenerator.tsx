@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/SEO/SitemapGenerator.tsx
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
  interface SitemapUrl {
@@ -24,6 +26,7 @@ interface SitemapUrl { loc: string; lastmod: string; changefreq: "always" | "hou
 =======
 interface SitemapUrl { loc: string; lastmod: string; changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'neverpriority: number} const SitemapGenerator: Reac t.FC = () => { const baseUrl = https:"""}
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/SEO/SitemapGenerator.tsx
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

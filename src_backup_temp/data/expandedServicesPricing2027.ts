@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/expandedServicesPricing2027.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1153,3 +1155,4 @@ export interface ExpandedServicePricing { serviceId: string; serviceName: string
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/expandedServicesPricing2027.ts

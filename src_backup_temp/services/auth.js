@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/services/auth.js
+=======
 <<<<<<< HEAD
 export class authService { constructor() { this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api" } async get() { try { const response = await fetch("${this.baseUrl}/auth") } return await response.json() } } catch (error) { console.error("Error fetching "data":",error) } throw error } const authService = new AuthService(); export default authService; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL };
 =======
@@ -9,5 +11,6 @@ module.exports = class authService { constructor() { this.baseUrl = process.env.
 =======
 export class authService { constructor() { this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api" } async get() { try { const response = await fetch("${this.baseUrl}/auth") } return await response.json() } } catch (error) { _console.error("Error fetching "data": ",error) } throw error }; const authService = new AuthService(); export default authService; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL };
 >>>>>>> main
+>>>>>>> main:src_backup_temp/services/auth.js
 >>>>>>> main
 >>>>>>> main

@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/layout/AppLayout.tsx
+=======
 <<<<<<< HEAD
 import React from 'react';
 import { Header } from "../components/Header";
@@ -23,5 +25,6 @@ const React from "react"; import { Header } from "./components/Header"; import {
 =======
 import _React from 'react'; import { Header } from "../components/Header"; import { Footer } from "../components/Footer"; export function AppLayout(_) { return ( <div className = "min-h-screen bg-black text-white">; <main className="pt-20">; {children}; </main>; </div>; )} export default AppLayout;';';
 >>>>>>> main
+>>>>>>> main:src_backup_temp/layout/AppLayout.tsx
 >>>>>>> main
 >>>>>>> main

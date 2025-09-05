@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/utils/errorBoundary.tsx
+=======
 <<<<<<< HEAD
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
@@ -119,6 +121,7 @@ class ErrorBoundary extends Component<Props, State> {
 =======
     });
 >>>>>>> main
+>>>>>>> main:src_backup_temp/utils/errorBoundary.tsx
     // Log error to external service
     this.logError(error, errorInfo);
   }

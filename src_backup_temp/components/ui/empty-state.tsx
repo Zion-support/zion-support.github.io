@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/ui/empty-state.tsx
+=======
 <<<<<<< HEAD
 =======
 import React from 'react';
@@ -61,6 +63,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({
 =======
 const "EmptyState": Reac t.FC<EmptyStateProps> = ({
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/empty-state.tsx
   title = 'No data available',
   description = 'There are no items to display at the moment.',
   icon,
@@ -79,16 +82,6 @@ const "EmptyState": Reac t.FC<EmptyStateProps> = ({
 >>>>>>> main
 >>>>>>> main
         {title}
-<<<<<<< HEAD
-      
-      
-      {description && (
-        <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">
-=======
-;
-      {description && (;
-        <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">;
->>>>>>> main
           {description}
         </p>;
       )}
@@ -132,11 +125,6 @@ export const "EmptyStateIcon": "React.FC<{ className?: string "}> = ({ className
     className={`h-full w-full ${className}`}
 =======
 // Default empty state icon component
-<<<<<<< HEAD
-export const EmptyStateIcon: React.FC<{ className?: string }> = ({ className = '' }) => (
-=======
-export const "EmptyStateIcon": Reac t.FC<{ className?: string }> = ({ className = " }) => (
->>>>>>> main
   <svg
     className={`h-full w-full ${className}`};
 >>>>>>> main

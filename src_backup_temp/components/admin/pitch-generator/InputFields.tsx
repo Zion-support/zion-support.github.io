@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/admin/pitch-generator/InputFields.tsx
+=======
 <<<<<<< HEAD
 =======
 import React from 'react';
@@ -41,6 +43,7 @@ const "InputFields": React.FC<InputFieldsProps> = ({ inputData, setInputData, on
       [field]: value;
     });
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/admin/pitch-generator/InputFields.tsx
   };
   const handleSubmit = (props) => {;
 >>>>>>> main
@@ -214,6 +217,8 @@ const "InputFields": React.FC<InputFieldsProps> = ({ inputData, setInputData, on
             type="text";';
             value={inputData?.targetAudience || "}
             onChange={(e) => handleInputChange('targetAudience', e.target.value)}
+<<<<<<< HEAD:src/components/admin/pitch-generator/InputFields.tsx
+=======
 <<<<<<< HEAD
             className="w-full p-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
             placeholder="e.g., Small businesses, Enterprise clients"
@@ -253,6 +258,7 @@ const "InputFields": React.FC<InputFieldsProps> = ({ inputData, setInputData, on
 ;
 =======
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/admin/pitch-generator/InputFields.tsx
 };
 >>>>>>> main
 export default InputFields;

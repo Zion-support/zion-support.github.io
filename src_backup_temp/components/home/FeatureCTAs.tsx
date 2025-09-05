@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/home/FeatureCTAs.tsx
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -245,3 +247,4 @@ import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/home/FeatureCTAs.tsx

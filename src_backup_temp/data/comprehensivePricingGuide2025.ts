@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/comprehensivePricingGuide2025.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1067,3 +1069,4 @@ export interface PricingTier { id: string; name: string; price: number; currency
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/comprehensivePricingGuide2025.ts
