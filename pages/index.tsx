@@ -34,13 +34,8 @@ const services = [
 
 export default function HomePage() {
   return (
-<<<<<<< HEAD
     <Layout>
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-=======
-    <MainLayout>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
->>>>>>> cursor/add-new-services-and-deploy-updates-469e
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
@@ -155,8 +150,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
       {/* Contact Information Section */}
       <section className="py-20 bg-white">
@@ -226,7 +219,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
->>>>>>> cursor/add-new-services-and-deploy-updates-469e
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
@@ -254,12 +246,7 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>
     </Layout>
-=======
-      </div>
-    </MainLayout>
->>>>>>> cursor/add-new-services-and-deploy-updates-469e
   );
 }
