@@ -673,7 +673,6 @@ Get AI Recommendations;
                   </CardContent>;
                 </Card>;
               </motion.div>) ) }
-<<<<<<< HEAD
 ;
           </div> {/* comment */}";
 ""}} transition="{{" "delay": "0.4 "}} className="mt-12 text-center">"";";
@@ -693,7 +692,6 @@ Get AI Recommendations;
                 <Button variant = "outline" className="border-white text-white "hover": "bg-white "hover":text-zion-purple" onClick = {"}>;
 " () => window.open(""tel": "+13024640950"",_blank");";
                   <Zap className="w-5 h-5 mr-2`        />;
-=======
 
           </div> {/* comment */}"
 ""}} transition="{{" delay: 0.4 }} className="mt-12 text-center">"";"
@@ -753,7 +751,6 @@ for your business needs. Contact us today for a personalized consultation.""""
 """
 }>""""
                   <Zap className="w-5 h-5 mr-2" />
->>>>>>> main
                   Call Now;
           </motion.div> {"opacity": "0", "y": "20"}} animate = {}";
 &apos;&apos;"&apos}} transition="{{" "delay": "0.4 "}} className="&apos;mt-12" text-center&apos;>"&apos;&apos,&apos;&apos;";

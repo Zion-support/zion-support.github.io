@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 ;
 const Card = ({ className, children, ...props }) => {;
@@ -28,7 +27,6 @@ const CardTitle = ({ className, children, ...props }) => {;
     >;
       {children}
     </h3>;
-=======
 import React from 'react';'
 const Card = (props: any) => {}
   return()
@@ -36,14 +34,10 @@ const Card = (props: any) => {}
       className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}
     >
       {children}
-<<<<<<< HEAD
-<<<<<<< HEAD
     </div>';
   );';';
-=======
     </div>
     );
->>>>>>> main
 };'
 const CardHeader = (props: any) => {}
 `
@@ -67,7 +61,6 @@ const CardDescription = (props: any) => {}
 `
   return()``
     <p className={`text-sm text-muted-foreground ${className}`}>{children}</p>
->>>>>>> main
   );
 };'
 const CardContent = (props: any) => {}
@@ -81,15 +74,10 @@ const CardFooter = (props: any) => {}
 ```
   return()````
     <div className={`flex items-center p-6 pt-0 ${className}`}>{children}</div>
-<<<<<<< HEAD
-=======
     </div>
   );
-=======
     );
->>>>>>> main
 };
-<<<<<<< HEAD
 ;
 const CardDescription = ({ className, children, ...props }) => {;
   return (;
@@ -111,46 +99,31 @@ const CardFooter = ({ className, children, ...props }) => {;
   return (;
     <div className={`flex items-center p-6 pt-0 ${className || ''}`} {...props}>;
       {children}
-<<<<<<< HEAD
     </p>
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
     </div>;
->>>>>>> main
   );
 };
 ;
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
-=======
 const CardDescription = (props: any) => {
     return (<p className={`text-sm text-muted-foreground ${className}`}>
       {children}
     </p>);
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
 const CardContent = (props: any) => {
     return (
     <div className="min-h-screen bg-white">
-=======
 
 const CardFooter = ({ className, children, ...props }) => {
   return (
     <div className={`flex items-center p-6 pt-0 ${className || ''}`} {...props}>
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 const CardContent = (props: any) => {
     return (
         <div className={`p-6 pt-0 ${className}`}>
->>>>>>> main
       {children}
     </div>
     );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 const CardFooter = (props: any) => {
     return (
         <div className={`flex items-center p-6 pt-0 ${className}`}>
@@ -168,14 +141,8 @@ export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 
-<<<<<<< HEAD
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardDescription, CardContent, CardFooter};';
 ;';;';
-=======
 
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardDescription, CardContent, CardFooter};
->>>>>>> main
->>>>>>> main

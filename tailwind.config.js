@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
 import aspectRatio from '@tailwindcss/aspect-ratio';
 
 export default {
-=======
-/** @type {import('tailwindcss').Config} */
-module.exports = {
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -34,15 +29,11 @@ module.exports = {
           '100%': { transform: 'translateY(0)', opacity: '1' }
         },
         bounceGentle: {
-          '0%,100%': { transform: 'translateY(0)' },
+          '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-5px)' }
         }
       }
     }
   },
-<<<<<<< HEAD
-  plugins: [forms, typography, aspectRatio]
-=======
-  plugins: []
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+  plugins: [forms, typography, aspectRatio],
 };

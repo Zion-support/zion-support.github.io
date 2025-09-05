@@ -21,20 +21,12 @@ export function ReferralMiddleware("props": "any) {;
 "}, []);
     async function sendReferral("props": "any) {;
       const code = localStorage.getItem('referralCode');
-<<<<<<< HEAD
-      if(!code || !user?.id || !user?.email) return; // Guard against missing email as well;
-      try {;
-        await supabase.functions.invoke('track-referral'", {;
-          "body": "{ "refCode": cod e", "userId": "use r.id", "email": "use r.email "}
-        });
-=======
       if(!code || !user?.id || !user?.email) return; // Guard against missing email as well
       try {
         await supabase.functions.invoke('track-referral', {
           body: { refCode: cod e, userId: use r.id, email: use r.email },
         }
     );
->>>>>>> main
         localStorage.removeItem('referralCode');
       } catch(err) {;
         console.error('Error tracking referral', err);

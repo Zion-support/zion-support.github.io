@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+<<<<<<< HEAD:src/types/listings.ts
 export interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number}; location: string,"}),"})
-=======
 export interface Listing { "id": "string; "title": string; "description": string; "price": number; "currency": string; "category": string; subcategory?: string; "tags": string[]; "images": string[]; "seller": { "id": string; "name": string; "rating": number; "reviews": number"}; "location": 'string; ;',"});,"}) "title": "string; "description": string; "price": number; "currency": string; "category": string; subcategory?: string; "tags": string[]; "images": string[]; "seller": { "id": string; "name": string; "rating": number; "reviews": number "} "location": "string;"
-=======
-<<<<<<< HEAD
 export interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number}; location: string; ;,"}
     );,"})
->>>>>>> main
 
    title: string;
    description: string;
@@ -21,21 +16,11 @@ export interface Listing { id: string; title: string; description: string; price
    name: string;
    rating: number;
    reviews: number  } location: string;
-<<<<<<< HEAD
-=======
 export interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number}; location: 'string; ;',"});,"}) title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number } location: string;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 
-=======
-<<<<<<< HEAD
 export interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number}; location: string,&quot;}),&quot;}) title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number } location: string;
-=======
-<<<<<<< HEAD
 module.exports = interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number}; location: string,"}),"}) title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number } location: string;""
-=======
 import React from 'react';
->>>>>>> main
 
 interface ListingsProps {
   // Add props here as needed
@@ -49,7 +34,3 @@ export default function Listings({ }: ListingsProps) {
     </div>
   );
 }
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

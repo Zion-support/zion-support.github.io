@@ -201,14 +201,12 @@ export default function Page("props": "any) {;
                       <span className="text-3xl">{service.icon}</span>;
                     </div>;
 
-<<<<<<< HEAD
                     {/* Service Content */}";
                     <div className="text-center">";
                       <h3 className="text-xl font-bold text-white mb-3 group-"hover": "text-zion-cyan transition-colors duration-300">;
                         {service.title"}
                       </h3>";
                       <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">;
-=======
                     {/* Service Icon */}`
                     <div className={`w-20 h-20 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}>"
                       <span className="text-3xl">{service.icon}</span>
@@ -220,7 +218,6 @@ export default function Page("props": "any) {;
                         {service.title}
                       "
                       <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
->>>>>>> main
                         {service.description}
                       </p>;
 
@@ -271,7 +268,6 @@ export default function Page("props": "any) {;
   { "duration": "0.8",;
   "delay": "0.2;
 
-<<<<<<< HEAD
 "}}>";
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10 backdrop-blur-md p-12 rounded-3xl border border-zion-cyan/20">";
             <h3 className="text-3xl "md": "text-4xl font-bold text-white mb-6">;
@@ -295,7 +291,6 @@ export default function Page("props": "any) {;
         </motion.div>;
       </div>;
     </section>)"};
-=======
 }}>"
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10 backdrop-blur-md p-12 rounded-3xl border border-zion-cyan/20">"
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -319,7 +314,6 @@ export default function Page("props": "any) {;
         </motion.div>
       </div>
     </section>)};
->>>>>>> main
 export default InteractiveServiceShowcase;
 }}}}}}}
 ;

@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import Head from 'next/head';
+=======
+>>>>>>> origin/main
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import { 
@@ -16,6 +19,7 @@ import {
 
 const apiFeatures = [
   {
+<<<<<<< HEAD
     title: 'RESTful API',
     description: 'Clean, intuitive REST API design with comprehensive documentation.',
     icon: Code,
@@ -43,6 +47,9 @@ const apiFeatures = [
 
 const apiEndpoints = [
   {
+=======
+    name: 'AI Email Responder',
+>>>>>>> origin/main
     method: 'POST',
     path: '/api/ai/email-responder',
     description: 'Generate intelligent email responses using AI',
@@ -215,6 +222,7 @@ export default function ApiDocsPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-gray-50 rounded-lg p-6 text-center"
                 >
+<<<<<<< HEAD
                   <feature.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
@@ -226,12 +234,52 @@ export default function ApiDocsPage() {
                       </li>
                     ))}
                   </ul>
+=======
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-semibold">{endpoint.name}</h3>
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                      endpoint.method === 'POST' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
+                    }`}>
+                      {endpoint.method}
+                    </span>
+                  </div>
+                  <p className="text-gray-600 mb-4">{endpoint.description}</p>
+                  <div className="bg-gray-100 rounded-lg p-4 mb-4">
+                    <code className="text-sm font-mono">{endpoint.path}</code>
+                  </div>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold mb-3">Parameters</h4>
+                      <div className="space-y-2">
+                        {endpoint.parameters.map((param, paramIndex) => (
+                          <div key={paramIndex} className="flex items-center justify-between text-sm">
+                            <span className="font-mono">{param.name}</span>
+                            <span className={`px-2 py-1 rounded text-xs ${
+                              param.required ? 'bg-red-100 text-red-800' : 'bg-gray-100 text-gray-800'
+                            }`}>
+                              {param.type}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-3">Response</h4>
+                      <div className="bg-gray-100 rounded-lg p-3">
+                        <pre className="text-sm font-mono">
+                          {JSON.stringify(endpoint.response, null, 2)}
+                        </pre>
+                      </div>
+                    </div>
+                  </div>
+>>>>>>> origin/main
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* API Endpoints Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -241,6 +289,21 @@ export default function ApiDocsPage() {
                 Explore our comprehensive API endpoints
               </p>
             </div>
+=======
+  Code, 
+  ArrowRight,
+  Book,
+  Zap,
+  Shield,
+  Globe,
+  Database,
+  Server,
+  Lock,
+  CheckCircle,
+  Brain,
+  Cloud
+} from 'lucide-react';
+>>>>>>> origin/main
 
             <div className="space-y-8">
               {apiEndpoints.map((endpoint, index) => (
@@ -297,7 +360,32 @@ export default function ApiDocsPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* SDK Examples Section */}
+=======
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Help with Integration?</h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Our developer support team is here to help you integrate our APIs successfully.
+            </p>
+            <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+              Contact Developer Support
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+=======
+        {/* Code Examples */}
+>>>>>>> origin/main
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">

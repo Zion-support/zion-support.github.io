@@ -80,7 +80,6 @@ export default function Page("props": "any) {;
                 return a.title.localeCompare(b.title);
             case 'z-a':;
                 return b.title.localeCompare(a.title);
-<<<<<<< HEAD
             "default":;
                 return 0"}
     });
@@ -90,7 +89,6 @@ export default function Page("props": "any) {;
           <div className="text-center mb-12">;
             <GradientHeading>{title}</GradientHeading>";
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
-=======
             default:
                 return 0}
     }
@@ -101,7 +99,6 @@ export default function Page("props": "any) {;
           <div className="text-center mb-12">
             <GradientHeading>{title}</GradientHeading>"
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
->>>>>>> main
               {description}
             </p>;
           </div>;
@@ -156,7 +153,6 @@ export default function Page("props": "any) {;
             </p>;
           </div>;
 
-<<<<<<< HEAD
           {/* Listings Grid */}";
           {isLoading ? (<div className="flex justify-center py-20">";
               <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />";
@@ -175,7 +171,6 @@ export default function Page("props": "any) {;
         </div>;
       </div>;
       <Footer  />;
-=======
           {/* Listings Grid */}"
           {isLoading ? (<div className="flex justify-center py-20">"
               <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />"
@@ -194,6 +189,5 @@ export default function Page("props": "any) {;
         </div>
       </div>
       <Footer  />
->>>>>>> main
     </>)}
 '"`;

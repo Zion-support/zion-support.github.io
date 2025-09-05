@@ -5,15 +5,12 @@ import {
   Menu, 
   X, 
   ChevronDown, 
-  ChevronRight,
   Phone, 
   Mail, 
-  MapPin, 
   Facebook, 
   Twitter, 
   Linkedin, 
   Instagram,
-  Github,
   ArrowRight,
   Building,
   Users,
@@ -69,14 +66,6 @@ export default function Navigation() {
     { name: 'News', href: '/news', description: 'Industry news and updates' }
   ];
 
-  const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Support', href: '/support' },
-    { name: 'Status', href: '/status' }
-  ];
 
   return (
     <>

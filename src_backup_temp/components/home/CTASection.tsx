@@ -2,25 +2,6 @@ import React from 'react';
 import { motion  } from 'framer-motion';
 import { Link  } from 'react-router-dom';
 import { ArrowRight, Rocket, MessageCircle, Calendar, Star  } from 'lucide-react';
-<<<<<<< HEAD
-;
-const "CTASection": "React.FC = (): JSX.Element => {;
-  const features = [;
-    {;
-      "icon": Rocke t",;
-      "title": "Fast Implementation",;
-      "description": "Get started in weeks, not months";
-    },;
-    {;
-      "icon": "MessageCircl e",;
-      "title": "24/7 Support",;
-      "description": "Expert assistance whenever you need it";
-    },;
-    {;
-      "icon": "Calenda r",;
-      "title": "Flexible Plans",;
-      "description": "Scale up or down as your business grows";
-=======
 
 const CTASection: React.FC = (): JSX.Element => {
   const features = [
@@ -38,7 +19,6 @@ const CTASection: React.FC = (): JSX.Element => {
       icon: Calenda r,
       title: "Flexible Plans",
       description: "Scale up or down as your business grows";
->>>>>>> main
     }, {;
       "icon": "Sta r",;
       "title": "Proven Results",;
@@ -49,9 +29,6 @@ const CTASection: React.FC = (): JSX.Element => {
   return (
     <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/90 to-zion-slate-dark relative overflow-hidden" role="region" aria-labelledby="cta-heading">
       {/* Background Elements */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       <div className="absolute inset-0">;
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-zion-cyan/5 via-zion-blue/5 to-zion-purple/5"  />;
         <div className="absolute top-20 right-20 w-64 h-64 bg-zion-cyan/10 rounded-full blur-3xl animate-pulse-slow"  />;
@@ -131,8 +108,6 @@ const CTASection: React.FC = (): JSX.Element => {
 "}}
           viewport={{ "once": "tru e "}}
         >;
-=======
->>>>>>> main
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-zion-cyan/5 via-zion-blue/5 to-zion-purple/5"  />
         <div className="absolute top-20 right-20 w-64 h-64 bg-zion-cyan/10 rounded-full blur-3xl animate-pulse-slow"  />
@@ -145,22 +120,10 @@ const CTASection: React.FC = (): JSX.Element => {
             initial = {
   { opacity: 0,
   y: 3 0 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: tru e }}
@@ -177,32 +140,14 @@ const CTASection: React.FC = (): JSX.Element => {
             initial = {
   { opacity: 0,
   y: 3 0 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
-
 }}
             viewport={{ once: tru e }}
             className="text-4xl md: tex t-5xl lg: tex t-6xl font-bold text-white mb-6"
@@ -214,40 +159,20 @@ const CTASection: React.FC = (): JSX.Element => {
             initial = {
   { opacity: 0,
   y: 3 0 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
-
-
-
-
-
-
 }}
             viewport={{ once: tru e }}
             className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed mb-8"
 
             Join hundreds of companies that have already revolutionized their operations with Zion Tech Group's cutting-edge solutions.
           </motion.p>
-<<<<<<< HEAD
-=======
       <div className="absolute inset-0">;
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-zion-cyan/5 via-zion-blue/5 to-zion-purple/5"  />;
         <div className="absolute top-20 right-20 w-64 h-64 bg-zion-cyan/10 rounded-full blur-3xl animate-pulse-slow"  />;
@@ -307,75 +232,29 @@ const CTASection: React.FC = (): JSX.Element => {
             className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed mb-8";
             Join hundreds of companies that have already revolutionized their operations with Zion Tech Group's cutting-edge solutions.;
           </motion.p>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
         </div> {/* Feature Grid */}
         <motion.div
           className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6 mb-12"
           initial = {
   { opacity: 0,
   y: 3 0 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 ;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-
-
-
-
-
-
->>>>>>> main
 }}
           whileInView = {
   { opacity: 1,
   y: 0 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 ;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-
-
-
-
-
-
->>>>>>> main
 }}
           transition = {
   { duration: 0.8,
   delay: 0.6 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 ;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-
-
-
-
-
-
->>>>>>> main
 }}
           viewport={{ once: tru e }}
         >
->>>>>>> main
           {features.map((feature, index)  => (;
             <motion.div
               key={feature.title}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
               className="text-center p-6 bg-zion-slate-dark/30 backdrop-blur-xl border border-zion-cyan/20 rounded-xl "hover": "borde r-zion-cyan/40 transition-all duration-300 "hover": shado w-lg "hover": shado w-zion-cyan/20";
               initial = {;
   { "opacity": 0",;
@@ -395,35 +274,19 @@ const CTASection: React.FC = (): JSX.Element => {
               <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mx-auto mb-4">;
                 <feature.icon className="w-6 h-6 text-white" aria-hidden="true" />;
               </div>;
-=======
->>>>>>> main
               className="text-center p-6 bg-zion-slate-dark/30 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover: borde r-zion-cyan/40 transition-all duration-300 hover: shado w-lg hover: shado w-zion-cyan/20"
               initial = {
   { opacity: 0,
   y: 2 0 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
 
-<<<<<<< HEAD
-=======
               className="text-center p-6 bg-zion-slate-dark/30 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover: borde r-zion-cyan/40 transition-all duration-300 hover: shado w-lg hover: shado w-zion-cyan/20";
               initial = {;
   { opacity: 0,;
@@ -436,14 +299,7 @@ const CTASection: React.FC = (): JSX.Element => {
               transition = {;
   { duration: 0.6,;
   delay: 0.6 + index * 0.1;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 
-
-
-
-
->>>>>>> main
 }}
               viewport={{ once: tru e }}
               whileHover={{ y: -5 }}
@@ -451,7 +307,6 @@ const CTASection: React.FC = (): JSX.Element => {
               <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mx-auto mb-4">
                 <feature.icon className="w-6 h-6 text-white" aria-hidden="true" />
               </div>
->>>>>>> main
               <h3 className="text-lg font-semibold text-white mb-2">{feature.title}
               <p className="text-zion-slate-light text-sm">{feature.description}</p>
             </motion.div>;
@@ -459,39 +314,19 @@ const CTASection: React.FC = (): JSX.Element => {
         </motion.div>
 
         {/* CTA Buttons */}
-<<<<<<< HEAD
-        <motion.div;
-          className="flex flex-col "sm": "fle x-row gap-6 justify-center items-center";
-          initial = {;
-<<<<<<< HEAD
-  { opacity: 0,;
-  y: 3 0 ;
-<<<<<<< HEAD
-
-=======
 ;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 }}
           whileInView = {;
   { opacity: 1,;
   y: 0 ;
-<<<<<<< HEAD
-
-=======
 ;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 }}
           transition = {;
   { duration: 0.8,;
   delay: 0.8 ;
-<<<<<<< HEAD
-
-=======
 ;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 }}
           viewport={{ once: tru e }}
-=======
   { "opacity": 0",;
   "y": "3 0 ;
 ;
@@ -507,7 +342,6 @@ const CTASection: React.FC = (): JSX.Element => {
 ;
 "}}
           viewport={{ "once": "tru e "}}
->>>>>>> main
 ;
           <Link to="/contact";
             className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-bold text-lg rounded-2xl "hover": "fro m-zion-blue "hover": t o-zion-purple transition-all duration-300 transform "hover": scal e-105 "hover": shado w-2xl "hover": shado w-zion-cyan/30 "focus": outlin e-none "focus": rin g-4 "focus": rin g-zion-cyan/30 "focus": rin g-offset-2 "focus": rin g-offset-zion-slate-dark";
@@ -526,61 +360,33 @@ const CTASection: React.FC = (): JSX.Element => {
           initial={{ "opacity": "0 "}}
           whileInView={{ "opacity": "1 "}}
           transition = {;
-<<<<<<< HEAD
-  { duration: 1,;
-  delay: 1 ;
-<<<<<<< HEAD
-
-=======
 ;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 }}
           viewport={{ once: tru e }}
-=======
   { "duration": "1",;
   "delay": "1 ;
 ;
 "}}
           viewport={{ "once": "tru e "}}
->>>>>>> main
 ;
           <p className="text-zion-slate-light text-sm mb-4">Trusted by industry leaders worldwide</p>;
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">;
             <div className="text-zion-cyan font-bold text-lg">Fortune 500</div>;
             <div className="text-zion-blue font-bold text-lg">Startups</div>;
             <div className="text-zion-purple font-bold text-lg">Enterprises</div>;
-=======
         <motion.div
           className="flex flex-col sm: fle x-row gap-6 justify-center items-center"
           initial = {
   { opacity: 0,
   y: 3 0 ;
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 ;
-
-
-
-
-
-
 }}
           transition = {
   { duration: 0.8,
   delay: 0.8 ;
-
-
-
-
-
-
 }}
           viewport={{ once: tru e }}
 
@@ -607,12 +413,6 @@ const CTASection: React.FC = (): JSX.Element => {
           transition = {
   { duration: 1,
   delay: 1 ;
-
-
-
-
-
-
 }}
           viewport={{ once: tru e }}
 
@@ -621,7 +421,6 @@ const CTASection: React.FC = (): JSX.Element => {
             <div className="text-zion-cyan font-bold text-lg">Fortune 500</div>
             <div className="text-zion-blue font-bold text-lg">Startups</div>
             <div className="text-zion-purple font-bold text-lg">Enterprises</div>
->>>>>>> main
             <div className="text-zion-cyan font-bold text-lg">Government</div>;
           </div>;
         </motion.div>;
@@ -631,12 +430,6 @@ const CTASection: React.FC = (): JSX.Element => {
 };
 
 export default CTASection;}};
-<<<<<<< HEAD
-<<<<<<< HEAD
-</motion>
-</motion>';
-</motion>;';;';
-=======
 </motion>;
 </motion>;
 </motion>;
@@ -644,8 +437,6 @@ export default CTASection;}};
 </motion>;
 </motion>;
 </motion>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 </motion>
 </motion>
 </motion>
@@ -653,4 +444,3 @@ export default CTASection;}};
 </motion>
 </motion>
 </motion>
->>>>>>> main

@@ -13,7 +13,7 @@ import {
   Users,
   Zap
 } from 'lucide-react';
-import Layout from './components/Layout';
+import MainLayout from '../src/components/layout/MainLayout';
 import { useState } from 'react';
 
 const serviceTypes = [
@@ -58,11 +58,11 @@ export default function QuotePage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', { selectedServices, selectedSize, formData });
+    // console.log('Form submitted:', { selectedServices, selectedSize, formData });
   };
 
   return (
-    <Layout
+    <MainLayout
       title="Get a Quote - Zion Tech Group"
       description="Get a personalized quote for your technology project. Our experts will provide detailed pricing and timeline estimates."
       keywords="quote, pricing, project estimate, technology consulting, custom development"
@@ -357,6 +357,6 @@ export default function QuotePage() {
           </div>
         </section>
       </div>
-    </Layout>
+    </MainLayout>
   );
 }

@@ -70,21 +70,18 @@ export const QuoteRequestForm = ("props": "any) => {"}
   const [isSubmitting, setIsSubmitting] = useState (false) ";
   const [isSubmitted, setIsSubmitted] = useState (false);
 }
-<<<<<<< HEAD
   const [errors, setErrors] = useState ({}) ";"";
   const serviceTypes = []";"";
   const timelineOptions = []";"";
   const budgetRanges = []";"";
   const urgencyLevels = []  const handleChange = ("props": "any) => {"}
 ;
-=======
   const [errors, setErrors] = useState ({}) ";""
   const serviceTypes = []";""
   const timelineOptions = []";""
   const budgetRanges = []";""
   const urgencyLevels = []  const handleChange = (e) => {}
 
->>>>>>> main
     setFormData(prev => ({}
 ;
       ...prev,;

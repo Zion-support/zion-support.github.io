@@ -1,31 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';';';
-import { Link  } from 'react-router-dom';';
-export default function Page(props: any) {';';
-=======
 import React from 'react';
 import { Link  } from 'react-router-dom';
 export default function Page(props: any) {;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 import React from 'react';
 import { Link  } from 'react-router-dom';
-<<<<<<< HEAD
-export default function Page("props": "any) {;
->>>>>>> main
- from 'lucide-react';
-;
-const "FloatingCTA": React.FC = () : JSX.Element => {;
-  const [isOpen", setIsOpen] = useState<any>(false);
-  const [isVisible, setIsVisible] = useState<any>(false);
-;
-  useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-  "};
-=======
 export default function Page(props: any) {
  from 'lucide-react';
 
@@ -39,7 +16,6 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
   return () => {
     // Cleanup function
   };
->>>>>>> main
 }, []);, []);
     // Show CTA after 5 seconds
     
@@ -47,55 +23,15 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
 
     return () => clearTimeout(timer) }, []) };
   ];
-<<<<<<< HEAD
-;
-  const quickServices = [";
-    { "name": "AI Solutions", "icon": "Brai n", "link": "/ai-services" },";
-    { "name": "Cybersecurity", "icon": "Shiel d", "link": "/cybersecurity" },";
-    { "name": "Cloud Services", "icon": "Clou d", "link": "/cloud-solutions" },;";
-    { "name": "Digital Transformation", "icon": "Za p", "link": "/digital-transformation" };
-=======
 
   const quickServices = ["
     { name: "AI Solutions", icon: Brai n, link: "/ai-services" },"
     { name: "Cybersecurity", icon: Shiel d, link: "/cybersecurity" },"
     { name: "Cloud Services", icon: Clou d, link: "/cloud-solutions" },;"
     { name: "Digital Transformation", icon: Za p, link: "/digital-transformation" };
->>>>>>> main
   ];
 
   if(!isVisible) return null;
-<<<<<<< HEAD
-                    to="/services";
-                    className="flex items-center gap-3 p-3 rounded-lg "hover": "b g-slate-700 transition-colors duration-200 text-white";
-                    onClick={() => setIsExpanded(false)"}
-                  >";
-                    <span className="text-xl">🚀</span>;
-                    <div>";
-                      <div className="font-semibold">Our Services</div>";
-                      <div className="text-sm text-gray-400">Explore solutions</div>;
-                    </div>;
-                  </Link>;
-                  <Link                    to="/quote";
-                    className="flex items-center gap-3 p-3 rounded-lg "hover": "b g-slate-700 transition-colors duration-200 text-white";
-                    onClick={() => setIsExpanded(false)"}
-                  >";
-                    <span className="text-xl">💰</span>;
-                    <div>";
-                      <div className="font-semibold">Get Quote</div>";
-                      <div className="text-sm text-gray-400">Request pricing</div>;
-                    </div>;
-                  </Link>;
-                  <div  className="border-t border-slate - 600 pt -3">;
-                    <div  className="text-center text-sm text-gray - 400 mb-2">;
-                      Available 24 / 7;
-                    </div>;
-                    <div  className="flex items - center justify - center gap-2">;
-                      <div  className="w-2 h-2 bg-green - 400 rounded-full animate -pulse"></div>;
-                      <span className="text-green - 400 text-sm font -semibold">Online Now</span>                    </div>;
-                  </div>;
-                </div>;
-=======
                     to="/services"
                     className="flex items-center gap-3 p-3 rounded-lg hover: b g-slate-700 transition-colors duration-200 text-white"
                     onClick={() => setIsExpanded(false)}
@@ -127,22 +63,12 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
                       <span className="text-green - 400 text-sm font -semibold">Online Now</span>                    </div>
                   </div>
                 </div>
->>>>>>> main
               </motion.div>) }
           </AnimatePresence>
         </div>
       </motion.div>
 
       {/* Backdrop */}
-<<<<<<< HEAD
-      <AnimatePresence>;
-        {isExpanded && (;
-          <motion.div";
-            className="fixed inset-0 bg-black/20 z-40";
-            initial={{ "opacity": "0 "}}
-            animate={{ "opacity": "1 "}}
-            exit={{ "opacity": "0 "}}
-=======
       <AnimatePresence>
         {isExpanded && (
           <motion.div"
@@ -150,7 +76,6 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
->>>>>>> main
             onClick={ () => setIsExpanded(false) }
           />) }
       </AnimatePresence>;
@@ -160,24 +85,12 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
             onClick={ () => setIsExpanded(false) };
           />;) };
       </AnimatePresence>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </>';
-  )}';';
-'"
-
-</motion>
-</any>';
-</any>;';;';
-=======
     </>;
   )}
 '";
 </motion>;
 </any>;
 </any>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
     </>
   )}
 '"
@@ -185,4 +98,3 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
 </motion>
 </any>
 </any>
->>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -95,9 +96,17 @@ export default function ContactPage() {
       }, 3000);
     }, 2000);
   };
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight } from 'lucide-react';
+import Layout from './components/Layout';
+>>>>>>> origin/main
 
   return (
     <Layout
+<<<<<<< HEAD
       title="Contact Us - Zion Tech Group | Get in Touch"
       description="Contact Zion Tech Group for AI solutions, IT services, and technology consulting. Get in touch with our expert team today."
       keywords="contact us, get in touch, AI consulting, IT services, technology support, phone, email, address"
@@ -362,11 +371,145 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
+=======
+      title="Contact Us - Zion Tech Group"
+      description="Get in touch with Zion Tech Group. We're here to help with your technology needs. Contact us for consultations, support, or project inquiries."
+      keywords="contact, support, consultation, technology services, AI solutions, IT services"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+                Contact Us
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Ready to transform your business? Let's discuss your project and how we can help you achieve your goals.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Contact Information */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+              <p className="text-xl text-gray-600">We'd love to hear from you</p>
             </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center p-6 bg-gray-50 rounded-lg"
+              >
+                <Phone className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
+                <p className="text-gray-600">+1 302 464 0950</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-center p-6 bg-gray-50 rounded-lg"
+              >
+                <Mail className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
+                <p className="text-gray-600">kleber@ziontechgroup.com</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center p-6 bg-gray-50 rounded-lg"
+              >
+                <MapPin className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Address</h3>
+                <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </motion.div>
+>>>>>>> origin/main
+            </div>
+
+            {/* Contact Form */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="max-w-2xl mx-auto bg-gray-50 p-8 rounded-lg"
+            >
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h3>
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                    <input
+                      type="text"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Your first name"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                    <input
+                      type="text"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Your last name"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                  <input
+                    type="email"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="What's this about?"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                  <textarea
+                    rows={6}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Tell us about your project..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center"
+                >
+                  Send Message
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </button>
+              </form>
+            </motion.div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="bg-gradient-to-r from-blue-700 to-indigo-700 text-white py-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
@@ -381,6 +524,29 @@ export default function ContactPage() {
                 Send Email
               </a>
             </div>
+=======
+        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8">
+                Let's discuss your project and see how we can help you succeed
+              </p>
+              <a
+                href="/quote"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
+              >
+                Get Free Quote
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+            </motion.div>
+>>>>>>> origin/main
           </div>
         </section>
       </div>
