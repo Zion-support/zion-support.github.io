@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion;
-import {}
-  // TODO: Implement;
-};
+import { motion, AnimatePresence } from 'framer-motion';
+import {
   Search, 
   HelpCircle, 
   BookOpen, 
@@ -16,8 +14,8 @@ import {}
   Download,
   ExternalLink,
   ChevronDown,
-  ChevronRight;'
-} from 'lucide-react;
+  ChevronRight
+} from 'lucide-react';
 const helpCategories = []
   {'}
     title: "Getting Started",

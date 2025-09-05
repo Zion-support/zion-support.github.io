@@ -261,7 +261,7 @@ const aiServices = [
     pricing: '$4,000 - $20,000 project',
     category: 'Video Analytics'
   },
-  {}
+  {
     title: 'AI Talent Matching',
     description: 'Intelligent candidate matching and recruitment optimization.',
     icon: Users,
@@ -269,7 +269,7 @@ const aiServices = [
     pricing: '$2,500 - $12,000 setup',
     category: 'HR & Recruitment'
   },
-  {}
+  {
     title: 'AI Energy Optimization',
     description: 'Smart energy management and optimization for buildings and facilities.',
     icon: Zap,
@@ -277,7 +277,7 @@ const aiServices = [
     pricing: '$8,000 - $40,000 project',
     category: 'Energy Management'
   },
-  {}
+  {
     title: 'AI Quality Assurance',
     description: 'Automated quality control and defect detection in manufacturing.',
     icon: CheckCircle,
@@ -285,7 +285,7 @@ const aiServices = [
     pricing: '$10,000 - $50,000 project',
     category: 'Manufacturing'
   },
-  {}
+  {
     title: 'AI Legal Document Analysis',
     description: 'Intelligent legal document review and contract analysis.',
     icon: BookOpen,
@@ -293,7 +293,7 @@ const aiServices = [
     pricing: '$5,000 - $25,000 setup',
     category: 'Legal Tech'
   },
-  {}
+  {
     title: 'AI Customer Sentiment Analysis',
     description: 'Real-time customer sentiment analysis across multiple channels.',
     icon: MessageSquare,
@@ -301,16 +301,16 @@ const aiServices = [
     pricing: '$1,000 - $5,000/month',
     category: 'Customer Analytics'
   },
-  {}
+  {
     title: 'AI-Powered Autonomous Vehicles',
 description: 'Complete autonomous vehicle systems with advanced perception and decision-making capabilities.',
     icon: Car,
     features: ['Computer Vision', 'Sensor Fusion', 'Path Planning', 'Real-time Decision Making'],
     pricing: '$100,000 - $500,000/project',
     category: 'Autonomous Systems',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI Drug Discovery Platform',
     description: 'Accelerated drug discovery using AI for molecular design and optimization.',
     icon: Heart,
@@ -318,7 +318,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$50,000 - $200,000 project',
     category: 'Healthcare'
   },
-  {}
+  {
     title: 'AI-Powered Climate Modeling',
     description: 'Advanced climate prediction and environmental impact analysis using AI.',
     icon: Globe,
@@ -326,7 +326,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$25,000 - $100,000 project',
     category: 'Environmental'
   },
-  {}
+  {
     title: 'AI Quantum Computing Optimizer',
     description: 'AI-powered quantum computing algorithm optimization and error correction.',
     icon: Cpu,
@@ -334,7 +334,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$75,000 - $300,000 project',
     category: 'Quantum Computing'
   },
-  {}
+  {
     title: 'AI-Powered Space Exploration',
     description: 'Autonomous space mission planning and satellite constellation management.',
     icon: Rocket,
@@ -342,7 +342,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$100,000 - $500,000 project',
     category: 'Space Technology'
   },
-  {}
+  {
     title: 'AI Neural Interface System',
     description: 'Brain-computer interface with AI-powered neural signal processing.',
     icon: Brain,
@@ -350,7 +350,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$200,000 - $1,000,000 project',
     category: 'Neurotechnology'
   },
-  {}
+  {
     title: 'AI-Powered Smart Cities',
     description: 'Comprehensive smart city management with AI optimization.',
     icon: Building,
@@ -358,7 +358,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$500,000 - $2,000,000 project',
     category: 'Smart Cities'
   },
-  {}
+  {
     title: 'AI Agricultural Intelligence',
     description: 'Precision agriculture with AI-powered crop monitoring and optimization.',
     icon: Sprout,
@@ -366,7 +366,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$15,000 - $75,000 project',
     category: 'Agriculture'
   },
-  {}
+  {
     title: 'AI-Powered Cybersecurity AI',
     description: 'Self-evolving AI cybersecurity system that adapts to new threats.',
     icon: Shield,
@@ -374,7 +374,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$25,000 - $125,000 setup',
     category: 'Cybersecurity'
   },
-  {}
+  {
     title: 'AI Financial Trading System',
     description: 'High-frequency trading AI with market prediction and risk management.',
     icon: TrendingUp,
@@ -382,7 +382,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$50,000 - $250,000 setup',
     category: 'FinTech'
   },
-  {}
+  {
     title: 'AI-Powered Virtual Reality',
     description: 'Immersive VR experiences with AI-generated content and interactions.',
     icon: Monitor,
@@ -390,16 +390,16 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$30,000 - $150,000 project',
     category: 'Virtual Reality'
   },
-  {}
+  {
     title: 'AI-Powered Medical Imaging Analysis',
     description: 'Advanced medical image analysis for radiology, pathology, and diagnostic imaging.',
     icon: Eye,
     features: ['Radiology Analysis', 'Pathology Detection', 'Diagnostic Support', '3D Reconstruction'],
     pricing: '$15,000 - $75,000 setup',
     category: 'Medical AI',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI-Powered Cybersecurity Threat Hunter',
     description: 'Advanced AI system for proactive threat hunting and security incident response.',
     icon: Shield,
@@ -407,7 +407,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$20,000 - $100,000 setup',
     category: 'Cybersecurity'
   },
-  {}
+  {
     title: 'AI-Powered Content Creation Studio',
     description: 'Complete AI content creation platform for videos, articles, and multimedia.',
     icon: Video,
@@ -415,7 +415,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$2,000 - $10,000/month',
     category: 'Content Creation'
   },
-  {}
+  {
     title: 'AI-Powered Predictive Maintenance',
     description: 'Industrial equipment predictive maintenance using IoT sensors and AI analysis.',
     icon: Settings,
@@ -423,7 +423,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$10,000 - $50,000 setup',
     category: 'Industrial AI'
   },
-  {}
+  {
     title: 'AI-Powered Personal Assistant',
     description: 'Advanced personal AI assistant with natural language processing and task automation.',
     icon: Bot,
@@ -431,7 +431,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$99 - $499/month',
     category: 'Personal AI'
   },
-  {}
+  {
     title: 'AI-Powered Real Estate Valuation',
     description: 'Automated property valuation using AI analysis of market data and property features.',
     icon: Building,
@@ -439,7 +439,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$1,000 - $5,000/month',
     category: 'Real Estate AI'
   },
-  {}
+  {
     title: 'AI-Powered Language Learning',
     description: 'Personalized language learning platform with AI-powered tutoring and assessment.',
     icon: BookOpen,
@@ -447,7 +447,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$19.99 - $99.99/month',
     category: 'Education AI'
   },
-  {}
+  {
     title: 'AI-Powered Mental Health Support',
     description: 'AI-powered mental health monitoring and support system with crisis intervention.',
     icon: Heart,
@@ -455,7 +455,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$29.99 - $149.99/month',
     category: 'Healthcare AI'
   },
-  {}
+  {
     title: 'AI-Powered Sports Analytics',
     description: 'Advanced sports performance analysis and prediction using computer vision and data science.',
     icon: Target,
@@ -463,7 +463,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$5,000 - $25,000/month',
     category: 'Sports AI'
   },
-  {}
+  {
     title: 'AI-Powered Weather Prediction',
     description: 'Hyper-local weather prediction using AI and satellite data analysis.',
     icon: Globe,
@@ -471,7 +471,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$500 - $2,500/month',
     category: 'Meteorology AI'
   },
-  {}
+  {
     title: 'AI-Powered Music Composition',
     description: 'AI-powered music composition and production with genre-specific algorithms.',
     icon: Mic,
@@ -479,7 +479,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$99 - $499/month',
     category: 'Creative AI'
   },
-  {}
+  {
     title: 'AI-Powered Fashion Design',
     description: 'AI-powered fashion design and trend prediction for clothing and accessories.',
     icon: ShoppingCart,
@@ -487,7 +487,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$2,000 - $10,000/month',
     category: 'Fashion AI'
   },
-  {}
+  {
     title: 'AI-Powered Food Safety Monitoring',
     description: 'Automated food safety inspection and quality control using computer vision.',
     icon: Shield,

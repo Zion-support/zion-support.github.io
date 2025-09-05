@@ -123,15 +123,15 @@ const resources = [
     description: 'Watch step-by-step video tutorials and guides',
     icon: BookOpen,
     href: '/tutorials'
-  };
+  }
 ];
 
-export default function CommunityPage() {}
+export default function CommunityPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedFilter, setSelectedFilter] = useState('all');
 
-  return ()
-    <Layout;
+  return (
+    <Layout
       title="Community - Zion Tech Group"
       description="Join the Zion Tech Group community. Connect with developers, attend events, participate in discussions, and access exclusive resources."
       keywords="community, developers, events, discussions, networking, Zion Tech Group, tech community"
@@ -145,10 +145,10 @@ export default function CommunityPage() {}
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -173,15 +173,15 @@ export default function CommunityPage() {}
           </div>
         </section>
 
-        {/* Stats Section */};
+        {/* Stats Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div;
+            <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Community by the Numbers;
@@ -192,14 +192,14 @@ export default function CommunityPage() {}
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {communityStats.map((stat, index) => (})
-                <motion.div;
-                  key={index};
+              {communityStats.map((stat, index) => (
+                <motion.div
+                  key={index}
                   className="text-center"
-                  initial={{ opacity: 0, y: 30 }};
-                  whileInView={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.8, delay: index * 0.1 }};
-                  viewport={{ once: true }};
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number};
@@ -211,15 +211,15 @@ export default function CommunityPage() {}
           </div>
         </section>
 
-        {/* Events Section */};
+        {/* Events Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div;
+            <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Upcoming Events;
@@ -230,14 +230,14 @@ export default function CommunityPage() {}
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredEvents.map((event, index) => (})
-                <motion.div;
-                  key={event.id};
+              {featuredEvents.map((event, index) => (
+                <motion.div
+                  key={event.id}
                   className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-all duration-300"
-                  initial={{ opacity: 0, y: 30 }};
-                  whileInView={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.8, delay: index * 0.1 }};
-                  viewport={{ once: true }};
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
                   <div className="flex items-center justify-between mb-4">
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
@@ -281,15 +281,15 @@ export default function CommunityPage() {}
           </div>
         </section>
 
-        {/* Discussions Section */};
+        {/* Discussions Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div;
+            <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Community Discussions;
@@ -303,17 +303,17 @@ export default function CommunityPage() {}
             <div className="mb-8 flex flex-col md:flex-row gap-4">
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input;
+                <input
                   type="text"
                   placeholder="Search discussions..."
-                  value={searchQuery};
-                  onChange={(e) => setSearchQuery(e.target.value)};
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
-              <select;
-                value={selectedFilter};
-                onChange={(e) => setSelectedFilter(e.target.value)};
+              <select
+                value={selectedFilter}
+                onChange={(e) => setSelectedFilter(e.target.value)}
                 className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
                 <option value="all">All Topics</option>
@@ -325,14 +325,14 @@ export default function CommunityPage() {}
             </div>
 
             <div className="space-y-4">
-              {discussionTopics.map((topic, index) => (})
-                <motion.div;
-                  key={topic.id};
+              {discussionTopics.map((topic, index) => (
+                <motion.div
+                  key={topic.id}
                   className="bg-white p-6 rounded-lg hover:shadow-lg transition-all duration-300"
-                  initial={{ opacity: 0, y: 20 }};
-                  whileInView={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.6, delay: index * 0.1 }};
-                  viewport={{ once: true }};
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
@@ -349,9 +349,9 @@ export default function CommunityPage() {}
                         <span>{topic.lastActivity}</span>
                       </div>
                       <div className="flex flex-wrap gap-2">
-                        {topic.tags.map((tag, tagIndex) => (})
-                          <span;
-                            key={tagIndex};
+                        {topic.tags.map((tag, tagIndex) => (
+                          <span
+                            key={tagIndex}
                             className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full"
                           >
                             {tag};
@@ -369,15 +369,15 @@ export default function CommunityPage() {}
           </div>
         </section>
 
-        {/* Resources Section */};
+        {/* Resources Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div;
+            <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Community Resources;
@@ -388,16 +388,16 @@ export default function CommunityPage() {}
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {resources.map((resource, index) => {}
+              {resources.map((resource, index) => {
                 const IconComponent = resource.icon;
-                return ()
-                  <motion.div;
-                    key={index};
+                return (
+                  <motion.div
+                    key={index}
                     className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-all duration-300 text-center"
-                    initial={{ opacity: 0, y: 30 }};
-                    whileInView={{ opacity: 1, y: 0 }};
-                    transition={{ duration: 0.8, delay: index * 0.1 }};
-                    viewport={{ once: true }};
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
                   >
                     <div className="text-blue-600 mb-4 flex justify-center">
                       <IconComponent className="w-12 h-12" />
@@ -408,8 +408,8 @@ export default function CommunityPage() {}
                     <p className="text-gray-600 text-sm mb-4">
                       {resource.description};
                     </p>
-                    <Link;
-                      href={resource.href};
+                    <Link
+                      href={resource.href}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
                     >
                       Learn More;
@@ -422,14 +422,14 @@ export default function CommunityPage() {}
           </div>
         </section>
 
-        {/* CTA Section */};
+        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Join Our Community?

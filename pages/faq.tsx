@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import MainLayout from '../components/layout/MainLayout'
-import { motion, AnimatePresence } from 'framer-motion;
-import {}
-  // TODO: Implement;
-};
+import { motion, AnimatePresence } from 'framer-motion';
+import {
   ChevronDown, 
   ChevronUp, 
   HelpCircle,
@@ -11,38 +9,38 @@ import {}
   Filter,
   MessageCircle,
   Phone,
-  Mail;'
-} from 'lucide-react;
-const faqCategories = [']
-  { id: 'general', name: 'General Questions', count: 15 },''
-  { id: 'technical', name: 'Technical Support', count: 20 },''
-  { id: 'billing', name: 'Billing & Pricing', count: 10 },''
-  { id: 'api', name: 'API & Integration', count: 25 }'];
+  Mail
+} from 'lucide-react';
+const faqCategories = [
+  { id: 'general', name: 'General Questions', count: 15 },
+  { id: 'technical', name: 'Technical Support', count: 20 },
+  { id: 'billing', name: 'Billing & Pricing', count: 10 },
+  { id: 'api', name: 'API & Integration', count: 25 }
 ];
 
-const faqs = {}
-  general: []
-    {'}
+const faqs = {
+  general: [
+    {
       question: "What services does Zion Tech Group offer?",
       answer: "We offer comprehensive technology solutions including AI services, IT services, micro SaaS solutions, custom development, and consulting. Our services cover everything from artificial intelligence and machine learning to cloud infrastructure and cybersecurity."
     },
-    {}
+    {
       question: "How long has Zion Tech Group been in business?",
-      answer: "Zion Tech Group has been providing technology solutions for over 5 years. We've grown from a small startup to a trusted partner for businesses of all sizes, from startups to Fortune 500 companies.'
+      answer: "Zion Tech Group has been providing technology solutions for over 5 years. We've grown from a small startup to a trusted partner for businesses of all sizes, from startups to Fortune 500 companies."
     },
-    {}
+    {
       question: "Do you work with startups?",
       answer: "Yes! We have special packages and pricing designed specifically for startups. We understand the unique challenges startups face and offer flexible solutions that can grow with your business."
     },
-    {}
+    {
       question: "What industries do you serve?",
       answer: "We serve a wide range of industries including healthcare, financial services, e-commerce, manufacturing, education, and real estate. Our team has deep domain expertise across multiple sectors."
     },
-    {}
+    {
       question: "Do you offer remote services?",
       answer: "Yes, we work with clients globally and offer remote services. Our team is distributed and we have experience working with clients across different time zones and locations."
     },
-    {}
+    {
       question: "What is your typical project timeline?",
       answer: "Project timelines vary depending on complexity and scope. Simple projects can be completed in 2-4 weeks, while complex enterprise solutions may take 3-6 months. We provide detailed timelines during the planning phase."
     },

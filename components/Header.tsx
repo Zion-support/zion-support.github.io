@@ -98,38 +98,38 @@ const navigation = [
         icon: Cloud,
         description: 'Cloud infrastructure and DevOps automation'
       },
-      {}
+      {
         name: 'Cybersecurity',
         href: '/services/cybersecurity',
         icon: Shield,
         description: 'Advanced security solutions and compliance'
       },
-      {}
+      {
         name: 'Data Analytics',
         href: '/services/data-analytics',
         icon: BarChart3,
         description: 'Business intelligence and data insights'
       },
-      {}
+      {
         name: 'Quantum Computing',
         href: '/services/quantum-computing',
         icon: CpuIcon,
         description: 'Next-generation quantum computing solutions'
-      };
+      }
     ];
   },
-  {}
+  {
     name: 'Solutions',
     href: '/solutions',
     icon: Target,
-    children: []
-      {}
+    children: [
+      {
         name: 'Enterprise',
         href: '/solutions/enterprise',
         icon: Building2,
         description: 'Enterprise-grade solutions for large organizations'
       },
-      {}
+      {
         name: 'Healthcare',
         href: '/solutions/healthcare',
         icon: Heart,
