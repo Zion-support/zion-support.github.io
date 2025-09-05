@@ -1,123 +1,70 @@
 module.exports = {
-  app: s: [
+  apps: [
     {
-      nam: e: 'ci-cd-pipeline',
-      scrip: t: 'npm',
-      arg: s: 'run build',
-      cw: d: '/workspace',
-      instance: s: 1,
-      autorestar: t: true,
-      watc: h: false,
-      max_memory_restar: t: '1G',
-      en: v: {
-        NODE_EN: V: 'production',
+      name: 'ziontechgroup-web',
+      script: 'npm',
+      args: 'run dev',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PORT: 3000
       },
-      cron_restar: t: '0 0 * * *', // Daily restart: error_file: './logs/ci-cd-error.log',
-      out_fil: e: './logs/ci-cd-out.log',
-      log_fil: e: './logs/ci-cd-combined.log',
-      tim: e: true,
+      log_file: './logs/web.log',
+      out_file: './logs/web-out.log',
+      error_file: './logs/web-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
     },
     {
-      nam: e: 'continuous-automation',
-      scrip: t: 'node',
-      arg: s: 'scripts/automation/automation-orchestrator.cjs',
-      cw: d: '/workspace',
-      instance: s: 1,
-      autorestar: t: true,
-      watc: h: false,
-      max_memory_restar: t: '1G',
-      en: v: {
-        NODE_EN: V: 'production',
+      name: 'automation-health-check',
+      script: 'automation/health-check.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */1 * * *', // Restart every hour
+      env: {
+        NODE_ENV: 'production'
       },
-      cron_restar: t: '0 */6 * * *', // Every 6 hours: error_file: './logs/automation-error.log',
-      out_fil: e: './logs/automation-out.log',
-      log_fil: e: './logs/automation-combined.log',
-      tim: e: true,
+      log_file: './logs/health-check.log',
+      out_file: './logs/health-check-out.log',
+      error_file: './logs/health-check-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
     },
     {
-      nam: e: 'comprehensive-automation',
-      scrip: t: 'node',
-      arg: s: 'scripts/automation/comprehensive-continuous-automation.cjs',
-      cw: d: '/workspace',
-      instance: s: 1,
-      autorestar: t: true,
-      watc: h: false,
-      max_memory_restar: t: '1G',
-      en: v: {
-        NODE_EN: V: 'production',
+      name: 'automation-security-scanner',
+      script: 'automation/security-scanner.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */12 * * *', // Restart every 12 hours
+      env: {
+        NODE_ENV: 'production'
       },
-      cron_restar: t: '0 */6 * * *', // Every 6 hours: error_file: './logs/comprehensive-automation-error.log',
-      out_fil: e: './logs/comprehensive-automation-out.log',
-      log_fil: e: './logs/comprehensive-automation-combined.log',
-      tim: e: true,
+      log_file: './logs/security-scanner.log',
+      out_file: './logs/security-scanner-out.log',
+      error_file: './logs/security-scanner-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
     },
     {
-      nam: e: 'marketing-automation',
-      scrip: t: 'node',
-      arg: s: 'scripts/linkedin_automation.js',
-      cw: d: '/workspace',
-      instance: s: 1,
-      autorestar: t: true,
-      watc: h: false,
-      max_memory_restar: t: '1G',
-      en: v: {
-        NODE_EN: V: 'production',
+      name: 'automation-performance-monitor',
+      script: 'scripts/performance-monitor.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */4 * * *', // Restart every 4 hours
+      env: {
+        NODE_ENV: 'production'
       },
-      cron_restar: t: '0 */12 * * *', // Every 12 hours: error_file: './logs/marketing-automation-error.log',
-      out_fil: e: './logs/marketing-automation-out.log',
-      log_fil: e: './logs/marketing-automation-combined.log',
-      tim: e: true,
-    },
-    {
-      nam: e: 'security-audit',
-      scrip: t: 'npm',
-      arg: s: 'audit',
-      cw: d: '/workspace',
-      instance: s: 1,
-      autorestar: t: true,
-      watc: h: false,
-      max_memory_restar: t: '500M',
-      en: v: {
-        NODE_EN: V: 'production',
-      },
-      cron_restar: t: '0 2 * * *', // Daily at 2 AM: error_file: './logs/security-audit-error.log',
-      out_fil: e: './logs/security-audit-out.log',
-      log_fil: e: './logs/security-audit-combined.log',
-      tim: e: true,
-    },
-    {
-      nam: e: 'test-runner',
-      scrip: t: 'npm',
-      arg: s: 'test',
-      cw: d: '/workspace',
-      instance: s: 1,
-      autorestar: t: true,
-      watc: h: false,
-      max_memory_restar: t: '1G',
-      en: v: {
-        NODE_EN: V: 'production',
-      },
-      cron_restar: t: '0 */4 * * *', // Every 4 hours: error_file: './logs/test-runner-error.log',
-      out_fil: e: './logs/test-runner-out.log',
-      log_fil: e: './logs/test-runner-combined.log',
-      tim: e: true,
-    },
-    {
-      nam: e: 'lint-checker',
-      scrip: t: 'npm',
-      arg: s: 'run lint',
-      cw: d: '/workspace',
-      instance: s: 1,
-      autorestar: t: true,
-      watc: h: false,
-      max_memory_restar: t: '500M',
-      en: v: {
-        NODE_EN: V: 'production',
-      },
-      cron_restar: t: '0 */2 * * *', // Every 2 hours: error_file: './logs/lint-checker-error.log',
-      out_fil: e: './logs/lint-checker-out.log',
-      log_fil: e: './logs/lint-checker-combined.log',
-      tim: e: true,
-    },
-  ],
+      log_file: './logs/performance-monitor.log',
+      out_file: './logs/performance-monitor-out.log',
+      error_file: './logs/performance-monitor-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    }
+  ]
 };
