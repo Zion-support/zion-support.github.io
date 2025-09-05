@@ -5,37 +5,67 @@ const publicRoutes = [
   "/",
   "/about",
   "/contact",
+  "/blog",
   "/services",
+  "/solutions",
+  "/industries",
+  "/resources",
+  "/talent",
+  "/team",
+  "/partners",
+  "/news",
+  "/careers",
+  "/privacy",
+  "/terms",
+  "/cookies",
+  "/security",
+  "/help",
+  "/guides",
+  "/api-docs",
+  "/newsletter",
+  "/webinars",
+  "/white-papers",
+  "/sitemap",
   "/ai-services",
   "/it-services",
   "/micro-saas",
-  "/api-docs",
+  "/products",
+  "/case-studies",
   "/api",
-  "/careers",
-  "/case-studies"
+  "/docs",
+  "/404"
 ];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
-  // Allow public routes
-  if (publicRoutes.includes(pathname)) {
+  // Check if the route is public
+  const isPublicRoute = publicRoutes.some(route => {
+    if (route === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(route);
+  });
+
+  // If it's a public route, allow access
+  if (isPublicRoute) {
     return NextResponse.next();
   }
-  
-  // Add security headers
-  const response = NextResponse.next();
-  
-  response.headers.set('X-Frame-Options', 'DENY');
-  response.headers.set('X-Content-Type-Options', 'nosniff');
-  response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
-  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
-  
-  return response;
+
+  // For protected routes, you can add authentication logic here
+  // For now, we'll just allow all requests
+  return NextResponse.next();
 }
 
 export const config = {
   matcher: [
-    '/((?!_next/static|_next/image|favicon.ico).*)',
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     */
+    "/((?!api|_next/static|_next/image|favicon.ico).*)",
   ],
 };
