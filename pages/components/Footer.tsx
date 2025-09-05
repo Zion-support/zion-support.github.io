@@ -49,7 +49,10 @@ import {
   TreePine,
   Cpu,
   Server,
-  Wifi
+  Wifi,
+  Sprout,
+  Video,
+  HelpCircle
 } from 'lucide-react';
 
 const footerSections = [
