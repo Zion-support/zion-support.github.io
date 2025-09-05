@@ -15,94 +15,211 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  Users
 } from 'lucide-react';
 import Layout from './components/Layout';
 
 const services = [
   {
-    title: "Cloud Infrastructure",
-    description: "Scalable and secure cloud solutions for modern businesses",
+    title: "Cloud Infrastructure & Migration",
+    description: "Complete cloud transformation with AWS, Azure, and GCP expertise for scalable, secure, and cost-effective solutions",
     icon: Cloud,
     features: [
-      "AWS, Azure, GCP Migration",
-      "Container Orchestration",
-      "Serverless Architecture",
-      "Cloud Security & Compliance",
-      "Auto-scaling Solutions",
-      "Disaster Recovery"
+      "Multi-cloud strategy & architecture",
+      "AWS, Azure, GCP migration & optimization",
+      "Container orchestration (Kubernetes, Docker)",
+      "Serverless architecture implementation",
+      "Auto-scaling & load balancing",
+      "Disaster recovery & backup solutions",
+      "Cloud cost optimization",
+      "Security & compliance implementation"
     ],
-    price: "Starting at $1,800/month"
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-12,000/month",
+    benefits: ["50% cost reduction", "99.9% uptime guarantee", "Faster deployment", "Enhanced security"],
+    setupTime: "2-4 weeks",
+    targetUsers: "Enterprises, Startups, SMBs"
   },
   {
-    title: "Cybersecurity",
-    description: "Comprehensive security solutions to protect your digital assets",
+    title: "Cybersecurity & Compliance",
+    description: "Comprehensive security solutions including zero-trust architecture, threat detection, and compliance management",
     icon: Shield,
     features: [
-      "Security Audits & Assessments",
-      "Penetration Testing",
-      "Zero-Trust Architecture",
-      "Compliance & Risk Management",
-      "Incident Response",
-      "Security Training"
+      "Security audits & vulnerability assessments",
+      "Penetration testing & red team exercises",
+      "Zero-trust network architecture",
+      "SIEM implementation & monitoring",
+      "Endpoint detection & response (EDR)",
+      "Identity & access management (IAM)",
+      "Compliance management (SOC2, GDPR, HIPAA)",
+      "Security awareness training"
     ],
-    price: "Starting at $2,000/month"
+    price: "Starting at $3,000/month",
+    marketPrice: "$5,000-15,000/month",
+    benefits: ["100% compliance assurance", "24/7 threat monitoring", "Reduced security incidents", "Peace of mind"],
+    setupTime: "3-6 weeks",
+    targetUsers: "Healthcare, Finance, E-commerce, Government"
   },
   {
-    title: "DevOps & Automation",
-    description: "Streamline your development and deployment processes",
+    title: "DevOps & CI/CD Automation",
+    description: "Modern DevOps practices with automated pipelines, infrastructure as code, and continuous deployment",
     icon: Zap,
     features: [
-      "CI/CD Pipeline Setup",
-      "Infrastructure as Code",
-      "Monitoring & Logging",
-      "Performance Optimization",
-      "Automated Testing",
-      "Deployment Automation"
+      "CI/CD pipeline design & implementation",
+      "Infrastructure as Code (Terraform, CloudFormation)",
+      "Container orchestration & management",
+      "Monitoring & observability setup",
+      "Automated testing & quality gates",
+      "Blue-green & canary deployments",
+      "GitOps workflow implementation",
+      "Performance optimization"
     ],
-    price: "Starting at $1,500/month"
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-10,000/month",
+    benefits: ["10x faster deployments", "99% reduction in downtime", "Automated processes", "Better code quality"],
+    setupTime: "2-3 weeks",
+    targetUsers: "Software Companies, Agencies, Enterprises"
   },
   {
-    title: "Database Management",
-    description: "Optimize and secure your data infrastructure",
+    title: "Database & Data Management",
+    description: "Expert database administration, optimization, and data management solutions for all major database systems",
     icon: Database,
     features: [
-      "Database Design & Optimization",
-      "Data Migration Services",
-      "Backup & Recovery Solutions",
-      "Performance Tuning",
-      "Data Security & Encryption",
-      "Cloud Database Setup"
+      "Database design & architecture",
+      "Performance tuning & optimization",
+      "Data migration & transformation",
+      "Backup & disaster recovery",
+      "Database security & encryption",
+      "Cloud database management",
+      "Data warehousing solutions",
+      "Real-time data processing"
     ],
-    price: "Starting at $1,200/month"
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-8,000/month",
+    benefits: ["50% performance improvement", "Zero data loss", "24/7 monitoring", "Cost optimization"],
+    setupTime: "1-2 weeks",
+    targetUsers: "E-commerce, SaaS, Analytics, Enterprise"
   },
   {
-    title: "Network Solutions",
-    description: "Robust networking infrastructure for seamless connectivity",
+    title: "Network Infrastructure & Security",
+    description: "Complete network solutions including design, implementation, security, and management for modern businesses",
     icon: Network,
     features: [
-      "Network Design & Implementation",
-      "VPN & Remote Access",
-      "Load Balancing",
-      "Network Security",
-      "Monitoring & Management",
-      "Cloud Networking"
+      "Network design & architecture",
+      "SD-WAN implementation",
+      "VPN & remote access solutions",
+      "Load balancing & traffic management",
+      "Network security & firewalls",
+      "Wireless network optimization",
+      "Network monitoring & management",
+      "Cloud connectivity solutions"
     ],
-    price: "Starting at $1,000/month"
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-7,000/month",
+    benefits: ["Enhanced connectivity", "Improved security", "Better performance", "Reduced downtime"],
+    setupTime: "1-2 weeks",
+    targetUsers: "Offices, Remote Teams, Enterprises"
   },
   {
-    title: "System Administration",
-    description: "Comprehensive system management and maintenance",
+    title: "System Administration & Support",
+    description: "Comprehensive system management including server administration, monitoring, and 24/7 technical support",
     icon: Server,
     features: [
-      "Server Setup & Configuration",
-      "System Monitoring",
-      "User Management",
-      "Backup Solutions",
-      "Performance Optimization",
-      "24/7 System Support"
+      "Server setup & configuration",
+      "System monitoring & alerting",
+      "User account management",
+      "Backup & recovery solutions",
+      "Performance optimization",
+      "Patch management & updates",
+      "24/7 technical support",
+      "Documentation & training"
     ],
-    price: "Starting at $800/month"
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-5,000/month",
+    benefits: ["99.9% uptime", "Proactive monitoring", "Fast response times", "Expert support"],
+    setupTime: "1 week",
+    targetUsers: "SMBs, Startups, Non-profits"
+  },
+  {
+    title: "IT Consulting & Strategy",
+    description: "Strategic IT consulting to align technology with business goals and drive digital transformation",
+    icon: Settings,
+    features: [
+      "IT strategy & roadmap development",
+      "Technology assessment & recommendations",
+      "Digital transformation planning",
+      "Vendor evaluation & selection",
+      "IT budget planning & optimization",
+      "Change management & training",
+      "IT governance & best practices",
+      "Technology risk assessment"
+    ],
+    price: "Starting at $150/hour",
+    marketPrice: "$200-400/hour",
+    benefits: ["Strategic alignment", "Cost optimization", "Risk mitigation", "Future-proof solutions"],
+    setupTime: "1-2 days",
+    targetUsers: "C-Level Executives, IT Directors, Business Owners"
+  },
+  {
+    title: "Managed IT Services",
+    description: "Complete IT management including monitoring, maintenance, and support for all your technology needs",
+    icon: Users,
+    features: [
+      "24/7 network monitoring",
+      "Proactive maintenance & updates",
+      "Help desk & technical support",
+      "Security monitoring & management",
+      "Backup & disaster recovery",
+      "Software license management",
+      "Asset management & tracking",
+      "Regular reporting & analytics"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-12,000/month",
+    benefits: ["Predictable costs", "Proactive support", "Reduced downtime", "Expert team"],
+    setupTime: "1-2 weeks",
+    targetUsers: "SMBs, Mid-market, Enterprises"
+  },
+  {
+    title: "Cloud Security & Compliance",
+    description: "Specialized cloud security services ensuring your cloud infrastructure meets compliance requirements",
+    icon: Shield,
+    features: [
+      "Cloud security assessment",
+      "Identity & access management",
+      "Data encryption & key management",
+      "Compliance auditing (SOC2, GDPR, HIPAA)",
+      "Security monitoring & SIEM",
+      "Incident response planning",
+      "Security training & awareness",
+      "Regular security reviews"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,500-15,000/month",
+    benefits: ["Full compliance", "Enhanced security", "Risk mitigation", "Audit readiness"],
+    setupTime: "2-3 weeks",
+    targetUsers: "Healthcare, Finance, Government, SaaS"
+  },
+  {
+    title: "IT Project Management",
+    description: "Professional project management for IT implementations, migrations, and digital transformation projects",
+    icon: CheckCircle,
+    features: [
+      "Project planning & scoping",
+      "Timeline & resource management",
+      "Risk assessment & mitigation",
+      "Stakeholder communication",
+      "Quality assurance & testing",
+      "Change management",
+      "Documentation & training",
+      "Post-implementation support"
+    ],
+    price: "Starting at $200/hour",
+    marketPrice: "$300-500/hour",
+    benefits: ["On-time delivery", "Budget control", "Quality assurance", "Risk management"],
+    setupTime: "1-2 days",
+    targetUsers: "Project Managers, IT Directors, Business Leaders"
   }
 ];
 
@@ -191,7 +308,7 @@ export default function ITServicesPage() {
             {services.map((service, index) => (
               <motion.div 
                 key={index}
-                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -201,16 +318,51 @@ export default function ITServicesPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
-                <ul className="text-sm text-gray-500 space-y-2 mb-4">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-4">
-                  <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                
+                {/* Features */}
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Features:</h4>
+                  <ul className="text-sm text-gray-500 space-y-1">
+                    {service.features.slice(0, 4).map((feature, idx) => (
+                      <li key={idx} className="flex items-center">
+                        <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                    {service.features.length > 4 && (
+                      <li className="text-xs text-gray-400">+{service.features.length - 4} more features</li>
+                    )}
+                  </ul>
+                </div>
+
+                {/* Benefits */}
+                {service.benefits && (
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-gray-700 mb-2">Benefits:</h4>
+                    <div className="flex flex-wrap gap-1">
+                      {service.benefits.slice(0, 2).map((benefit, idx) => (
+                        <span key={idx} className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
+                          {benefit}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Pricing */}
+                <div className="border-t pt-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                    {service.marketPrice && (
+                      <span className="text-sm text-gray-500 line-through">{service.marketPrice}</span>
+                    )}
+                  </div>
+                  {service.setupTime && (
+                    <p className="text-xs text-gray-500">Setup: {service.setupTime}</p>
+                  )}
+                  {service.targetUsers && (
+                    <p className="text-xs text-gray-500 mt-1">Perfect for: {service.targetUsers}</p>
+                  )}
                 </div>
               </motion.div>
             ))}

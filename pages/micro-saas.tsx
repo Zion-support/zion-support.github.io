@@ -15,94 +15,211 @@ import {
   MapPin,
   Users,
   Shield,
-  Globe
+  Globe,
+  Target
 } from 'lucide-react';
 import Layout from './components/Layout';
 
 const microSaasSolutions = [
   {
-    title: "Workflow Automation",
-    description: "Streamline business processes with intelligent automation tools",
+    title: "AI-Powered Expense Tracking",
+    description: "Revolutionary expense management with AI that scans, categorizes, and processes receipts via email or text",
     icon: Zap,
     features: [
-      "Process Automation",
-      "Task Scheduling",
-      "Data Integration",
-      "Custom Workflows",
-      "API Integrations",
-      "Real-time Notifications"
+      "Email/Text Receipt Processing",
+      "AI Auto-Categorization",
+      "IRS Tax Category Mapping",
+      "Multi-User & Multi-Company Support",
+      "QuickBooks & Xero Integration",
+      "Forever Cloud Storage",
+      "Real-time Analytics Dashboard",
+      "Custom Category Management"
     ],
-    price: "Starting at $1,500/month"
+    price: "Starting at $9.99/month",
+    marketPrice: "$15-30/month",
+    benefits: ["90% time savings", "100% accuracy", "Audit-ready reports", "Zero manual entry"],
+    setupTime: "24 hours",
+    targetUsers: "Freelancers, Small Businesses, Contractors"
   },
   {
-    title: "Data Processing Tools",
-    description: "Powerful data analysis and processing solutions",
+    title: "Project & Finance Tracker",
+    description: "All-in-one solution for freelancers and indie hackers to manage projects, track finances, and organize subscriptions",
     icon: BarChart3,
     features: [
-      "Data Visualization",
-      "ETL Processes",
-      "Real-time Analytics",
-      "Custom Dashboards",
-      "Report Generation",
-      "Data Export/Import"
+      "Project-Specific Dashboards",
+      "Subscription Management",
+      "Domain Tracking & Renewal Alerts",
+      "Income & Expense Tracking",
+      "Resource Organization",
+      "Financial Summaries",
+      "Multi-Project Support",
+      "Lifetime Updates"
     ],
-    price: "Starting at $2,000/month"
+    price: "Starting at $14.99/month",
+    marketPrice: "$25-50/month",
+    benefits: ["80% reduction in forgotten services", "Centralized project management", "One-time payment option", "Unlimited projects"],
+    setupTime: "1 hour",
+    targetUsers: "Freelancers, Indie Hackers, Solopreneurs"
   },
   {
-    title: "API Integration Services",
-    description: "Connect your systems with seamless API solutions",
+    title: "Privacy-First Analytics",
+    description: "Simple, privacy-focused web analytics without cookies, tracking, or invasive data collection",
     icon: Code,
     features: [
-      "REST API Development",
-      "Third-party Integrations",
-      "Webhook Management",
-      "API Documentation",
-      "Rate Limiting",
-      "Authentication & Security"
+      "Cookie-Free Analytics",
+      "GDPR Compliant",
+      "Real-time Traffic Monitoring",
+      "Individual Page Analytics",
+      "Traffic Source Analysis",
+      "Device & Browser Breakdown",
+      "Bounce Rate Tracking",
+      "Raw Data Access"
     ],
-    price: "Starting at $1,800/month"
+    price: "Starting at $1/month",
+    marketPrice: "$5-15/month",
+    benefits: ["100% privacy compliant", "No cookie banners needed", "Lightning fast setup", "Beautiful visualizations"],
+    setupTime: "5 minutes",
+    targetUsers: "Website Owners, Bloggers, Small Businesses"
   },
   {
-    title: "Custom Dashboard Solutions",
-    description: "Tailored dashboards for your business needs",
+    title: "Workflow Automation Platform",
+    description: "Intelligent automation tools that streamline business processes and eliminate repetitive tasks",
     icon: Settings,
     features: [
+      "Visual Workflow Builder",
+      "API Integrations",
+      "Task Scheduling & Triggers",
+      "Data Transformation",
+      "Email & SMS Automation",
+      "Custom Logic Rules",
       "Real-time Monitoring",
-      "Custom Widgets",
-      "User Management",
-      "Role-based Access",
-      "Mobile Responsive",
-      "Export Capabilities"
+      "Error Handling & Alerts"
     ],
-    price: "Starting at $1,200/month"
+    price: "Starting at $29/month",
+    marketPrice: "$50-150/month",
+    benefits: ["75% process automation", "Zero coding required", "500+ integrations", "24/7 reliability"],
+    setupTime: "1-2 weeks",
+    targetUsers: "Small to Medium Businesses, Agencies"
   },
   {
-    title: "SaaS Platform Development",
-    description: "Complete SaaS solutions from concept to deployment",
+    title: "AI Content Generation Suite",
+    description: "Comprehensive AI-powered content creation platform for blogs, social media, and marketing materials",
     icon: Cloud,
     features: [
-      "Multi-tenant Architecture",
-      "Subscription Management",
-      "Payment Integration",
-      "User Onboarding",
-      "Analytics & Reporting",
-      "Scalable Infrastructure"
+      "AI Blog Post Generation",
+      "Social Media Content Creation",
+      "SEO-Optimized Writing",
+      "Multi-Language Support",
+      "Brand Voice Customization",
+      "Content Calendar Management",
+      "Plagiarism Detection",
+      "Performance Analytics"
     ],
-    price: "Starting at $3,500/month"
+    price: "Starting at $39/month",
+    marketPrice: "$80-200/month",
+    benefits: ["10x content production", "SEO-optimized output", "Consistent brand voice", "Multi-platform publishing"],
+    setupTime: "2-3 days",
+    targetUsers: "Content Creators, Marketers, Agencies"
   },
   {
-    title: "Business Intelligence Tools",
-    description: "Advanced BI solutions for data-driven decisions",
+    title: "Smart Inventory Management",
+    description: "AI-powered inventory tracking with predictive analytics and automated reordering",
     icon: BarChart3,
     features: [
-      "Interactive Dashboards",
-      "Predictive Analytics",
-      "Data Mining",
-      "Custom Reports",
-      "Machine Learning Integration",
-      "Real-time Insights"
+      "Real-time Inventory Tracking",
+      "Predictive Demand Forecasting",
+      "Automated Reorder Points",
+      "Multi-Location Support",
+      "Barcode Scanning",
+      "Supplier Management",
+      "Cost Analysis & Reporting",
+      "Mobile App Access"
     ],
-    price: "Starting at $2,500/month"
+    price: "Starting at $49/month",
+    marketPrice: "$100-300/month",
+    benefits: ["30% reduction in stockouts", "25% inventory cost savings", "Automated reordering", "Real-time visibility"],
+    setupTime: "1-2 weeks",
+    targetUsers: "E-commerce, Retail, Manufacturing"
+  },
+  {
+    title: "Customer Support Automation",
+    description: "Intelligent chatbot and ticketing system that provides 24/7 customer support with human-like responses",
+    icon: Users,
+    features: [
+      "AI-Powered Chatbots",
+      "Multi-Channel Support",
+      "Ticket Management System",
+      "Knowledge Base Integration",
+      "Sentiment Analysis",
+      "Escalation Management",
+      "Performance Analytics",
+      "Custom Workflows"
+    ],
+    price: "Starting at $79/month",
+    marketPrice: "$150-400/month",
+    benefits: ["80% query resolution", "24/7 availability", "Reduced support costs", "Improved customer satisfaction"],
+    setupTime: "1-2 weeks",
+    targetUsers: "E-commerce, SaaS, Service Businesses"
+  },
+  {
+    title: "Email Marketing Automation",
+    description: "Advanced email marketing platform with AI-driven personalization and behavioral targeting",
+    icon: Mail,
+    features: [
+      "AI-Powered Personalization",
+      "Behavioral Trigger Campaigns",
+      "A/B Testing Automation",
+      "Advanced Segmentation",
+      "Email Template Builder",
+      "Deliverability Optimization",
+      "Performance Analytics",
+      "CRM Integration"
+    ],
+    price: "Starting at $59/month",
+    marketPrice: "$120-350/month",
+    benefits: ["40% higher open rates", "60% better click-through rates", "Automated campaigns", "Advanced personalization"],
+    setupTime: "3-5 days",
+    targetUsers: "E-commerce, SaaS, Digital Agencies"
+  },
+  {
+    title: "Social Media Management",
+    description: "AI-powered social media scheduling, analytics, and content optimization across all platforms",
+    icon: Globe,
+    features: [
+      "Multi-Platform Scheduling",
+      "AI Content Suggestions",
+      "Optimal Posting Times",
+      "Hashtag Optimization",
+      "Engagement Analytics",
+      "Competitor Analysis",
+      "Content Calendar",
+      "Team Collaboration"
+    ],
+    price: "Starting at $39/month",
+    marketPrice: "$80-250/month",
+    benefits: ["3x engagement increase", "Optimal posting times", "Content optimization", "Multi-platform management"],
+    setupTime: "2-3 days",
+    targetUsers: "Brands, Influencers, Agencies"
+  },
+  {
+    title: "Lead Generation & CRM",
+    description: "Comprehensive lead management system with AI-powered lead scoring and automated follow-up sequences",
+    icon: Target,
+    features: [
+      "AI Lead Scoring",
+      "Automated Follow-ups",
+      "Lead Source Tracking",
+      "Pipeline Management",
+      "Email Sequences",
+      "Meeting Scheduler",
+      "Performance Analytics",
+      "Integration Hub"
+    ],
+    price: "Starting at $69/month",
+    marketPrice: "$150-500/month",
+    benefits: ["50% more qualified leads", "Automated nurturing", "Better conversion rates", "Complete pipeline visibility"],
+    setupTime: "1 week",
+    targetUsers: "Sales Teams, Agencies, B2B Companies"
   }
 ];
 
@@ -224,7 +341,7 @@ export default function MicroSaasPage() {
             {microSaasSolutions.map((solution, index) => (
               <motion.div 
                 key={index}
-                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -234,16 +351,51 @@ export default function MicroSaasPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">{solution.title}</h3>
                 <p className="text-gray-600 mb-4">{solution.description}</p>
-                <ul className="text-sm text-gray-500 space-y-2 mb-4">
-                  {solution.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-4">
-                  <span className="text-2xl font-bold text-purple-600">{solution.price}</span>
+                
+                {/* Features */}
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Features:</h4>
+                  <ul className="text-sm text-gray-500 space-y-1">
+                    {solution.features.slice(0, 4).map((feature, idx) => (
+                      <li key={idx} className="flex items-center">
+                        <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                    {solution.features.length > 4 && (
+                      <li className="text-xs text-gray-400">+{solution.features.length - 4} more features</li>
+                    )}
+                  </ul>
+                </div>
+
+                {/* Benefits */}
+                {solution.benefits && (
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-gray-700 mb-2">Benefits:</h4>
+                    <div className="flex flex-wrap gap-1">
+                      {solution.benefits.slice(0, 2).map((benefit, idx) => (
+                        <span key={idx} className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">
+                          {benefit}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Pricing */}
+                <div className="border-t pt-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-2xl font-bold text-purple-600">{solution.price}</span>
+                    {solution.marketPrice && (
+                      <span className="text-sm text-gray-500 line-through">{solution.marketPrice}</span>
+                    )}
+                  </div>
+                  {solution.setupTime && (
+                    <p className="text-xs text-gray-500">Setup: {solution.setupTime}</p>
+                  )}
+                  {solution.targetUsers && (
+                    <p className="text-xs text-gray-500 mt-1">Perfect for: {solution.targetUsers}</p>
+                  )}
                 </div>
               </motion.div>
             ))}

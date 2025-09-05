@@ -72,92 +72,288 @@ const contactInfo = {
 const aiServices = [
   {
     id: 1,
-    title: 'Machine Learning Models',
-    description: 'Custom ML models for predictive analytics, automation, and intelligent decision-making across various industries.',
-    icon: Brain,
-    category: 'Machine Learning',
-    price: 'Starting at $3,500/month',
+    title: 'AI-Powered Chatbots & Virtual Assistants',
+    description: 'Intelligent conversational AI that provides 24/7 customer support with human-like responses and context understanding.',
+    icon: Bot,
+    category: 'Conversational AI',
+    price: 'Starting at $1,500/month',
     features: [
-      'Custom model development & training',
-      'Data preprocessing & feature engineering',
-      'Model deployment & monitoring',
-      'A/B testing & performance optimization',
-      'Real-time prediction APIs',
-      'Model versioning & management',
-      'Automated retraining pipelines',
-      'Integration with existing systems'
+      'Natural language understanding',
+      'Multi-channel deployment (web, mobile, social)',
+      'Context-aware conversations',
+      'Integration with CRM systems',
+      'Sentiment analysis & emotion detection',
+      'Multi-language support',
+      'Voice & text capabilities',
+      'Learning from interactions'
     ],
     benefits: [
-      'Increase prediction accuracy by 40-60%',
-      'Automate decision-making processes',
-      'Reduce manual analysis time by 80%',
-      'Improve business outcomes by 25-35%'
+      '80% reduction in support tickets',
+      '24/7 customer availability',
+      '60% faster response times',
+      'Improved customer satisfaction scores'
     ],
-    marketPrice: '$5,000-12,000/month',
-    setupTime: '3-6 weeks',
-    targetUsers: 'E-commerce, Finance, Healthcare, Manufacturing'
+    marketPrice: '$3,000-8,000/month',
+    setupTime: '2-3 weeks',
+    targetUsers: 'E-commerce, SaaS, Healthcare, Finance'
   },
   {
     id: 2,
-    title: 'Computer Vision Solutions',
-    description: 'Advanced image and video analysis for object detection, recognition, and automated visual inspection.',
-    icon: Eye,
-    category: 'Computer Vision',
-    price: 'Starting at $2,800/month',
+    title: 'Predictive Analytics & Forecasting',
+    description: 'Advanced machine learning models that predict future trends, customer behavior, and business outcomes with high accuracy.',
+    icon: TrendingUp,
+    category: 'Machine Learning',
+    price: 'Starting at $2,500/month',
     features: [
-      'Object detection & recognition',
-      'Image classification & tagging',
-      'Facial recognition & analysis',
-      'Video analytics & monitoring',
-      'OCR & document processing',
-      'Quality control automation',
-      'Real-time processing capabilities',
-      'Custom model fine-tuning'
+      'Sales forecasting & demand prediction',
+      'Customer lifetime value analysis',
+      'Churn prediction & prevention',
+      'Inventory optimization',
+      'Risk assessment & fraud detection',
+      'Market trend analysis',
+      'Real-time predictions',
+      'Custom model development'
     ],
     benefits: [
-      'Improve accuracy by 95%+ in visual tasks',
-      'Reduce inspection time by 90%',
-      'Enable 24/7 automated monitoring',
-      'Lower operational costs by 50%'
+      '25-40% improvement in forecast accuracy',
+      '30% reduction in inventory costs',
+      '50% better customer retention',
+      'ROI increase of 35-60%'
     ],
-    marketPrice: '$4,000-8,000/month',
-    setupTime: '2-4 weeks',
-    targetUsers: 'Manufacturing, Retail, Security, Healthcare'
+    marketPrice: '$4,000-12,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'Retail, Finance, Manufacturing, E-commerce'
   },
   {
     id: 3,
-    title: 'Natural Language Processing',
-    description: 'Text analysis, sentiment analysis, language understanding, and automated content processing solutions.',
+    title: 'Computer Vision & Image Recognition',
+    description: 'Advanced visual AI that analyzes images and videos for object detection, quality control, and automated visual inspection.',
+    icon: Eye,
+    category: 'Computer Vision',
+    price: 'Starting at $2,200/month',
+    features: [
+      'Object detection & classification',
+      'Facial recognition & analysis',
+      'Quality control automation',
+      'OCR & document processing',
+      'Video analytics & monitoring',
+      'Medical image analysis',
+      'Real-time processing',
+      'Custom model training'
+    ],
+    benefits: [
+      '95%+ accuracy in visual tasks',
+      '90% reduction in inspection time',
+      '24/7 automated monitoring',
+      '50% cost savings in quality control'
+    ],
+    marketPrice: '$3,500-10,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'Manufacturing, Healthcare, Security, Retail'
+  },
+  {
+    id: 4,
+    title: 'Natural Language Processing (NLP)',
+    description: 'Intelligent text analysis, sentiment detection, and language understanding for automated content processing and insights.',
     icon: MessageSquare,
     category: 'NLP',
-    price: 'Starting at $2,200/month',
+    price: 'Starting at $1,800/month',
     features: [
       'Text analysis & sentiment detection',
       'Language translation & localization',
-      'Chatbot & virtual assistant development',
       'Document summarization & extraction',
       'Content moderation & filtering',
       'Voice-to-text & text-to-speech',
       'Intent recognition & classification',
+      'Entity extraction & NER',
       'Multi-language support'
     ],
     benefits: [
       'Process 10,000+ documents per hour',
-      'Improve customer satisfaction by 35%',
-      'Reduce content moderation costs by 70%',
+      '35% improvement in content quality',
+      '70% reduction in moderation costs',
       'Enable multilingual operations'
     ],
-    marketPrice: '$3,500-7,500/month',
+    marketPrice: '$2,500-6,000/month',
     setupTime: '2-3 weeks',
-    targetUsers: 'Customer Service, Content, Legal, Healthcare'
+    targetUsers: 'Content, Legal, Healthcare, Customer Service'
+  },
+  {
+    id: 5,
+    title: 'AI-Powered Content Generation',
+    description: 'Intelligent content creation platform that generates high-quality text, images, and multimedia content for marketing and communication.',
+    icon: FileText,
+    category: 'Generative AI',
+    price: 'Starting at $1,200/month',
+    features: [
+      'Blog post & article generation',
+      'Social media content creation',
+      'Email marketing automation',
+      'Product descriptions & copywriting',
+      'Image generation & editing',
+      'Video script creation',
+      'SEO-optimized content',
+      'Brand voice customization'
+    ],
+    benefits: [
+      '10x faster content production',
+      '40% higher engagement rates',
+      'Consistent brand voice',
+      'SEO-optimized output'
+    ],
+    marketPrice: '$2,000-5,000/month',
+    setupTime: '1-2 weeks',
+    targetUsers: 'Marketing, Content, E-commerce, Agencies'
+  },
+  {
+    id: 6,
+    title: 'AI-Driven Personalization Engine',
+    description: 'Advanced personalization system that delivers tailored experiences, recommendations, and content to individual users.',
+    icon: Target,
+    category: 'Personalization',
+    price: 'Starting at $2,000/month',
+    features: [
+      'Product recommendation engine',
+      'Dynamic content personalization',
+      'Behavioral analysis & segmentation',
+      'Real-time decision making',
+      'A/B testing automation',
+      'Cross-channel personalization',
+      'Customer journey optimization',
+      'Performance analytics'
+    ],
+    benefits: [
+      '25-40% increase in conversion rates',
+      '60% improvement in user engagement',
+      '35% higher average order value',
+      'Personalized customer experiences'
+    ],
+    marketPrice: '$3,500-8,000/month',
+    setupTime: '3-4 weeks',
+    targetUsers: 'E-commerce, SaaS, Media, Retail'
+  },
+  {
+    id: 7,
+    title: 'AI-Powered Data Analytics',
+    description: 'Intelligent data analysis platform that automatically discovers insights, patterns, and trends from complex datasets.',
+    icon: BarChart3,
+    category: 'Analytics',
+    price: 'Starting at $1,500/month',
+    features: [
+      'Automated insight discovery',
+      'Pattern recognition & anomaly detection',
+      'Predictive data modeling',
+      'Interactive dashboards',
+      'Natural language queries',
+      'Real-time data processing',
+      'Custom report generation',
+      'Data visualization'
+    ],
+    benefits: [
+      '80% faster insight discovery',
+      'Automated report generation',
+      'Real-time data monitoring',
+      'Data-driven decision making'
+    ],
+    marketPrice: '$2,500-6,000/month',
+    setupTime: '2-3 weeks',
+    targetUsers: 'Finance, Healthcare, Manufacturing, Marketing'
+  },
+  {
+    id: 8,
+    title: 'AI Voice & Speech Processing',
+    description: 'Advanced voice AI that enables speech recognition, voice synthesis, and intelligent voice interactions for applications.',
+    icon: Mic,
+    category: 'Voice AI',
+    price: 'Starting at $1,600/month',
+    features: [
+      'Speech-to-text conversion',
+      'Text-to-speech synthesis',
+      'Voice command recognition',
+      'Multi-language voice support',
+      'Voice biometrics & authentication',
+      'Real-time voice processing',
+      'Custom voice model training',
+      'Voice analytics & insights'
+    ],
+    benefits: [
+      '95%+ speech recognition accuracy',
+      'Natural voice interactions',
+      'Multi-language support',
+      'Enhanced accessibility'
+    ],
+    marketPrice: '$2,800-7,000/month',
+    setupTime: '2-3 weeks',
+    targetUsers: 'Healthcare, Customer Service, Accessibility, IoT'
+  },
+  {
+    id: 9,
+    title: 'AI-Powered Search & Discovery',
+    description: 'Intelligent search engine that understands context, intent, and provides relevant results with semantic understanding.',
+    icon: Search,
+    category: 'Search AI',
+    price: 'Starting at $1,400/month',
+    features: [
+      'Semantic search capabilities',
+      'Natural language queries',
+      'Context-aware results',
+      'Auto-complete & suggestions',
+      'Visual search & image recognition',
+      'Voice search support',
+      'Multi-modal search',
+      'Search analytics & optimization'
+    ],
+    benefits: [
+      '60% improvement in search relevance',
+      'Faster content discovery',
+      'Enhanced user experience',
+      'Reduced search abandonment'
+    ],
+    marketPrice: '$2,200-5,500/month',
+    setupTime: '2-3 weeks',
+    targetUsers: 'E-commerce, Content, Knowledge Management, E-learning'
+  },
+  {
+    id: 10,
+    title: 'AI Process Automation',
+    description: 'Intelligent automation platform that uses AI to automate complex business processes and workflows.',
+    icon: Zap,
+    category: 'Automation',
+    price: 'Starting at $1,800/month',
+    features: [
+      'Intelligent document processing',
+      'Workflow automation & orchestration',
+      'Decision-making automation',
+      'Exception handling & escalation',
+      'Process optimization & learning',
+      'Integration with existing systems',
+      'Real-time monitoring & alerts',
+      'Custom automation rules'
+    ],
+    benefits: [
+      '70% reduction in manual work',
+      'Faster process execution',
+      'Reduced human errors',
+      'Improved operational efficiency'
+    ],
+    marketPrice: '$3,000-8,000/month',
+    setupTime: '3-4 weeks',
+    targetUsers: 'Finance, Healthcare, Legal, Manufacturing'
   }
 ];
 
 const categories = [
   { name: "All", count: aiServices.length },
+  { name: "Conversational AI", count: aiServices.filter(s => s.category === "Conversational AI").length },
   { name: "Machine Learning", count: aiServices.filter(s => s.category === "Machine Learning").length },
   { name: "Computer Vision", count: aiServices.filter(s => s.category === "Computer Vision").length },
-  { name: "NLP", count: aiServices.filter(s => s.category === "NLP").length }
+  { name: "NLP", count: aiServices.filter(s => s.category === "NLP").length },
+  { name: "Generative AI", count: aiServices.filter(s => s.category === "Generative AI").length },
+  { name: "Personalization", count: aiServices.filter(s => s.category === "Personalization").length },
+  { name: "Analytics", count: aiServices.filter(s => s.category === "Analytics").length },
+  { name: "Voice AI", count: aiServices.filter(s => s.category === "Voice AI").length },
+  { name: "Search AI", count: aiServices.filter(s => s.category === "Search AI").length },
+  { name: "Automation", count: aiServices.filter(s => s.category === "Automation").length }
 ];
 
 export default function AIServicesPage() {
