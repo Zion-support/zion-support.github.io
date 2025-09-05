@@ -1,90 +1,20 @@
-<<<<<<< HEAD
 import React from 'react';
-import MainLayout from '../../src/components/layout/MainLayout';
-=======
-import Layout from '../../components/Layout';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react';
+import MainLayout from '../../components/layout/MainLayout';
 
-const industries = [
-  {
-    title: 'Healthcare',
-    description: 'AI-powered medical imaging, electronic health records, and telemedicine solutions',
-    icon: Heart,
-    features: ['Medical Imaging AI', 'EHR Systems', 'Telemedicine', 'Health Analytics'],
-    href: '/industries/healthcare'
-  },
-  {
-    title: 'Finance',
-    description: 'Fraud detection, predictive analytics, and digital banking solutions',
-    icon: DollarSign,
-    features: ['Fraud Detection', 'Risk Analytics', 'Digital Banking', 'Compliance'],
-    href: '/industries/finance'
-  },
-  {
-    title: 'Education',
-    description: 'Learning management systems, virtual classrooms, and student analytics',
-    icon: BookOpen,
-    features: ['LMS Platforms', 'Virtual Classrooms', 'Student Analytics', 'Content Management'],
-    href: '/industries/education'
-  },
-  {
-    title: 'Government',
-    description: 'Digital government platforms, cybersecurity, and citizen services',
-    icon: Building,
-    features: ['Digital Platforms', 'Cybersecurity', 'Citizen Services', 'Data Analytics'],
-    href: '/industries/government'
-  },
-  {
-    title: 'Manufacturing',
-    description: 'Smart manufacturing, quality control, and supply chain optimization',
-    icon: Settings,
-    features: ['Smart Manufacturing', 'Quality Control', 'Supply Chain', 'IoT Solutions'],
-    href: '/industries/manufacturing'
-  },
-  {
-    title: 'Retail',
-    description: 'E-commerce platforms, inventory management, and customer analytics',
-    icon: ShoppingCart,
-    features: ['E-commerce', 'Inventory Management', 'Customer Analytics', 'Personalization'],
-    href: '/industries/retail'
-  }
-];
-
-const benefits = [
-  {
-    title: 'Industry Expertise',
-    description: 'Deep understanding of industry-specific challenges and requirements',
-    icon: Brain
-  },
-  {
-    title: 'Custom Solutions',
-    description: 'Tailored solutions designed for your specific industry needs',
-    icon: Settings
-  },
-  {
-    title: 'Compliance Ready',
-    description: 'Solutions built with industry regulations and compliance in mind',
-    icon: Shield
-  },
-  {
-    title: 'Scalable Technology',
-    description: 'Solutions that grow with your business and adapt to changing needs',
-    icon: Cloud
-  }
-];
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-
-export default function IndustriesPage() {
+const Page = () => {
   return (
-    <MainLayout title="Industries - Zion Tech Group">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8">Industries We Serve</h1>
-        <p className="text-lg text-gray-700">
-          This is a placeholder for the industries page.
-        </p>
+    <MainLayout
+      title="Industries - Zion Tech Group"
+      description="Industry-specific solutions from Zion Tech Group"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Industries</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
       </div>
     </MainLayout>
   );
-}
+};
+
+export default Page;

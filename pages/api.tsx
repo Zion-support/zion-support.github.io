@@ -1,202 +1,115 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
-<<<<<<< HEAD
-import { Code, Book, Zap, Shield, Globe, Database, Server, Lock, CheckCircle, ArrowRight } from 'lucide-react';
-=======
 import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
 
 const apiFeatures = [
   {
-    title: 'RESTful API Design',
-    description: 'Clean, intuitive RESTful APIs that follow industry best practices',
     icon: Code,
-    features: ['RESTful Design', 'JSON Responses', 'HTTP Status Codes', 'Error Handling']
+    title: 'RESTful API',
+    description: 'Clean, intuitive REST API endpoints for easy integration',
+    features: ['RESTful design', 'JSON responses', 'HTTP status codes', 'Error handling']
   },
   {
-    title: 'GraphQL API',
-    description: 'Flexible query language for APIs',
-    icon: Code,
-    features: ['Single Endpoint', 'Type Safety', 'Real-time Subscriptions', 'Introspection']
-  },
-  {
-    title: 'High Performance',
-    description: 'Optimized for speed and scalability with sub-100ms response times',
-    icon: Zap,
-    features: ['Fast Response Times', 'Auto-scaling', 'Caching', 'Load Balancing']
-  },
-  {
-    title: 'Enterprise Security',
-    description: 'Bank-grade security with authentication, authorization, and encryption',
     icon: Shield,
-    features: ['OAuth 2.0', 'JWT Tokens', 'Multi-factor Auth', 'Session Management']
+    title: 'Security',
+    description: 'Enterprise-grade security with authentication and encryption',
+    features: ['JWT authentication', 'Rate limiting', 'HTTPS encryption', 'API key management']
   },
   {
-    title: 'Data API',
-    description: 'Access and manage your data',
-    icon: Database,
-    features: ['CRUD Operations', 'Data Validation', 'Query Optimization', 'Caching']
+    icon: Zap,
+    title: 'Performance',
+    description: 'High-performance API with caching and optimization',
+    features: ['Response caching', 'CDN integration', 'Load balancing', 'Real-time updates']
   },
   {
-    title: 'Analytics API',
-    description: 'Track and analyze usage patterns',
-    icon: Server,
-    features: ['Usage Metrics', 'Performance Data', 'Custom Events', 'Real-time Dashboards']
+    icon: Book,
+    title: 'Documentation',
+    description: 'Comprehensive documentation with examples and guides',
+    features: ['Interactive docs', 'Code examples', 'SDK libraries', 'Developer support']
   }
 ];
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 
 export default function APIPage() {
-  const apiFeatures = [
-    {
-      title: "RESTful APIs",
-      description: "Clean, intuitive REST API endpoints for easy integration",
-      icon: Code,
-      features: ["JSON Responses", "HTTP Status Codes", "Rate Limiting"]
-    },
-    {
-      title: "Comprehensive Documentation",
-      description: "Detailed API documentation with examples and guides",
-      icon: Book,
-      features: ["Interactive Docs", "Code Examples", "SDK Libraries"]
-    },
-    {
-      title: "High Performance",
-      description: "Fast, reliable APIs built for scale and speed",
-      icon: Zap,
-      features: ["Low Latency", "High Throughput", "Global CDN"]
-    },
-    {
-      title: "Enterprise Security",
-      description: "Bank-level security with authentication and encryption",
-      icon: Shield,
-      features: ["OAuth 2.0", "API Keys", "SSL/TLS Encryption"]
-    }
-  ];
-
   return (
-    <Layout>
+    <Layout
+      title="API - Zion Tech Group"
+      description="Powerful APIs for integrating with Zion Tech Group services. Build amazing applications with our developer-friendly APIs."
+      keywords="API, REST API, developer tools, integration, SDK"
+    >
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-        {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-=======
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center text-white"
-              initial={{ opacity: 0, y: 30 }}
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-<<<<<<< HEAD
-                API <span className="text-blue-600">Services</span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Integrate our AI and technology services into your applications with our powerful, 
-                easy-to-use APIs. Built for developers, by developers.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <a
-                  href="/api-docs"
-                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  View Documentation
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
-                <a
-                  href="/contact"
-                  className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
-                >
-                  Get API Key
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
+        <div className="container mx-auto px-4 py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              API Services
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Powerful APIs for integrating with Zion Tech Group services. 
+              Build amazing applications with our developer-friendly APIs.
+            </p>
+          </motion.div>
 
-        {/* Features Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Our APIs?</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Our APIs are designed with developers in mind, offering powerful features and excellent documentation.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {apiFeatures.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center"
-                >
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.features.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            {apiFeatures.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white rounded-xl p-8 shadow-lg"
+              >
+                <div className="flex items-center mb-4">
+                  <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
+                  <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>
+                </div>
+                
+                <p className="text-gray-600 mb-6">{feature.description}</p>
+                
+                <ul className="space-y-2">
+                  {feature.features.map((item, idx) => (
+                    <li key={idx} className="flex items-center text-gray-700">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
           </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="bg-blue-600 rounded-xl p-8 text-center"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Start building with our powerful APIs today. Get your API key and begin integrating our services.
+            <p className="text-xl text-blue-100 mb-8">
+              Contact us to learn more about our API services and get started with integration.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Get API Key
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-              <Link
-                href="/micro-saas"
-                className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                View Documentation
-              </Link>
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+              <div className="flex items-center text-white">
+                <Phone className="h-5 w-5 mr-2" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center text-white">
+                <Mail className="h-5 w-5 mr-2" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center text-white">
+                <MapPin className="h-5 w-5 mr-2" />
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+              </div>
             </div>
-          </div>
-        </section>
-=======
-                API Services
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto">
-                Powerful APIs designed for modern applications and seamless integration.
-              </p>
-            </motion.div>
-          </div>
-        </section>
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+          </motion.div>
+        </div>
       </div>
     </Layout>
   );
