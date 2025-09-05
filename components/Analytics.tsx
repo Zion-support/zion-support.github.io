@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import Head from 'next/head';
 
+import Head from 'next/head';
+import React, { useEffect } from 'react';
 interface AnalyticsProps {
   trackingId?: string}
 

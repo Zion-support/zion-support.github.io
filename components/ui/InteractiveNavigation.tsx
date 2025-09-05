@@ -1,3 +1,4 @@
+import Link from 'next/link';
 
 const InteractiveNavigation = () => {};
   return (,
@@ -24,7 +25,6 @@ const InteractiveNavigation = () => {};
     </nav>)
 };,
 export default InteractiveNavigation,
-import Link from 'next/link';
 const InteractiveNavigation = () => {;
   return (;
     <nav className="bg-white shadow-lg">;

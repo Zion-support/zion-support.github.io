@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useState } from 'react';
 
+import React, { createContext, useContext, useState } from 'react';
 interface AccessibilityContextType {
   highContrast: boolean;
   largeText: boolean;

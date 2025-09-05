@@ -1,8 +1,8 @@
-import React from 'react';
+
 import Head from 'next/head';
 import Link from 'next/link';
+import React from 'react';
 import { Shield, DollarSign, Users, Lock, Globe, BarChart3 } from 'lucide-react';
-
 export default function Blockchain() {
   const services = [
     {

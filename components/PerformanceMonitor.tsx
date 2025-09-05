@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
 
+import React, { useEffect } from 'react';
 // Extend the Window interface to include performance and gtag
 declare global {
   interface Window {

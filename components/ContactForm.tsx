@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import LoadingSpinner from './LoadingSpinner';
 
+import LoadingSpinner from './LoadingSpinner';
+import React, { useState } from 'react';
 interface FormData {
   name: string;
   email: string;

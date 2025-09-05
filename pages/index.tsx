@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import { ContactInfo, AnimationState } from '../types';
 
+import Head from 'next/head';
+import Link from 'next/link';
+import { ContactInfo, AnimationState } from '../types';
+import { useState, useEffect } from 'react';
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,

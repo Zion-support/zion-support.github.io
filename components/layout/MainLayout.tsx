@@ -1,8 +1,8 @@
-import React from 'react';
 import * as React from 'react';
+import Footer from '../Footer';
 import Head from 'next/head';
 import Header from '../Header';
-import Footer from '../Footer';
+import React from 'react';
 interface MainLayoutProps {;
   title: string;
   description: string;

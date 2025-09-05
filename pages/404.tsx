@@ -1,8 +1,8 @@
-import React from 'react';
+
 import Head from 'next/head';
 import Link from 'next/link';
+import React from 'react';
 import { Home, ArrowLeft, Search } from 'lucide-react';
-
 export default function Custom404() {
   return (
     <>

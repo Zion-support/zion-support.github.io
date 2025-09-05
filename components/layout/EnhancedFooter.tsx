@@ -1,4 +1,5 @@
 import React from 'react';
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react',
 ;
 const EnhancedFooter: React.FC = () => {;
   const currentYear = new Date().getFullYear();
@@ -16,7 +17,6 @@ const EnhancedFooter: React.FC = () => {;
     { name: 'CloudSecure Pro', href: '/products/cloudsecure-pro' },
     { name: 'DataFlow Engine', href: '/products/dataflow-engine' },
     { name: 'MobileFirst CMS', href: '/products/mobilefirst-cms' };
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react',
 ,
 const EnhancedFooter: React.FC = () => {,
   const currentYear = new Date().getFullYear(),

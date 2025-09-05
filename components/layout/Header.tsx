@@ -1,3 +1,8 @@
+import Link from 'next/link';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
+import { useRouter } from 'next/navigation';
+import {;
   Menu,
   X,
   Home,
@@ -5,11 +10,6 @@
   Briefcase,
   Phone,
   Mail,
-import React, { useState, useEffect } from 'react',
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion',
-import {;
   Menu;
   X;
   Home;

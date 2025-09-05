@@ -1,7 +1,7 @@
-import React from 'react';
 import Link from 'next/link';
-;
+import React from 'react';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react',
+;
 ,
 const Footer: React.FC = () => {,
   const currentYear = new Date().getFullYear(),

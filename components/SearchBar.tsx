@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
-import Link from 'next/link';
 
+import Link from 'next/link';
+import React, { useState, useRef, useEffect } from 'react';
 interface SearchResult {
   title: string;
   description: string;

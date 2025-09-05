@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react',
-import { useLocation } from 'react-router-dom';
 import { BarChart3, Zap, Clock, HardDrive, Wifi, WifiOff } from 'lucide-react',
+import { useLocation } from 'react-router-dom';
 ,
 interface PerformanceMetrics {,
   pageLoadTime: number,
