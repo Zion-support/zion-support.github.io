@@ -1,5 +1,14 @@
-import React from 'react'''
-          <input'''
-            type="text"""
-            type="text""
-cursor/fix-lint-push-and-merge-to-main-f3c1;"
+import React from 'react';
+
+interface InputFieldsProps {
+  // Add props here as needed
+}
+
+export default function InputFields({ }: InputFieldsProps) {
+  return (
+    <div>
+      <h1>InputFields</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

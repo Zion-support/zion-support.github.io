@@ -1,6 +1,14 @@
-import type { NextApiRequest, NextApiResponse } from 'next'''
-import { type { ClientBudgetRequest }, { generateClientBudgetSuggestion } } from '@/utils/api/aiPricing'''
-import { logPricingAnalytics } from '@/utils/data/pricingAnalytics'''
-export default function ClientPage() { return ( <ClientBudgetRequest>; if (!body || !body.title || !body.category) { return res.status(400).json({ error: 'Missing required fields: title,category' })} const input: ClientBudgetRequest = { title: String(body.title),category: String(body.category),timelineWeeks: typeof body.timelineWeeks === 'number' ? body.timelineWeeks : undefined,scope: body.scope ? String(body.scope) : undefined,experienceLevel: body.experienceLevel as ClientBudgetRequest['experienceLevel'],}; const suggestion = await generateClientBudgetSuggestion(input); await logPricingAnalytics({ kind: 'client_suggestion',payload: { input,suggestion } }
-}); return res.status(200).json({ suggestion,disclaimer: 'Based on market data & trends' })} catch (error) { return res.status(500).json({ error: 'Failed to generate budget suggestion''})
-</ClientBudgetRequest>)'
+import React from 'react';
+
+interface ClientProps {
+  // Add props here as needed
+}
+
+export default function Client({ }: ClientProps) {
+  return (
+    <div>
+      <h1>Client</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

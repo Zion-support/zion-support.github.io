@@ -1,8 +1,8 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
-const EXCLUDE_PATTERNS = []
+const EXCLUDE_PATTERNS = [
   'node_modules',
   '.next',
   'dist',
@@ -13,70 +13,77 @@ const EXCLUDE_PATTERNS = []
   '*.spec.*'
 ];
 
-
-  return EXCLUDE_PATTERNS.some(pattern => {})
-    if (pattern.includes('*')) {}
+function shouldProcessFile(filePath) {
+  return EXCLUDE_PATTERNS.some(pattern => {
+    if (pattern.includes('*')) {
       return filePath.includes(pattern.replace('*', ''));
-    };
+    }
     return filePath.includes(pattern);
-  }
-});
-};
-function removeConsoleLogs(content) {}
-  // Remove console.log statements;
+  });
+}
+
+function removeConsoleLogs(content) {
+  // Remove console.log statements
   let modifiedContent = content.replace(/console\.log\([^)]*\);?\s*/g, '');
   
-  // Remove console.warn statements;
+  // Remove console.warn statements
   modifiedContent = modifiedContent.replace(/console\.warn\([^)]*\);?\s*/g, '');
   
-  // Remove console.error statements;
+  // Remove console.error statements
   modifiedContent = modifiedContent.replace(/console\.error\([^)]*\);?\s*/g, '');
   
   return modifiedContent;
-};
-function processFile(filePath) {}
-  try {}
-    const content = fs.readFileSync(filePath, 'utf8');
+}
 
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
     const modifiedContent = removeConsoleLogs(content);
     
-    if (content !== modifiedContent) {}
+    if (content !== modifiedContent) {
       fs.writeFileSync(filePath, modifiedContent, 'utf8');
-
->>>>>>> 87bd6421ab0886afe7f98cfd20d727a180a1a8d4;
       console.log(`Processed: ${filePath}`);
-    };
-  } catch (error) {}
+      return 1;
+    }
+    return 0;
+  } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-  };
-};
-function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {}
+    return 0;
+  }
+}
+
+function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   const files = [];
   
-  if (!fs.existsSync(dir)) {}
+  if (!fs.existsSync(dir)) {
     return files;
-  };
+  }
+  
   const items = fs.readdirSync(dir);
   
-  for (const item of items) {}
+  for (const item of items) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
-    if (stat.isDirectory()) {}
-
+    if (stat.isDirectory()) {
+      if (!shouldProcessFile(fullPath)) {
         files.push(...getAllFiles(fullPath, extensions));
-      };
-    } else if (stat.isFile()) {}
+      }
+    } else if (stat.isFile()) {
       const ext = path.extname(item);
+      if (extensions.includes(ext) && !shouldProcessFile(fullPath)) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  return files;
+}
 
-<<<<<<< HEAD
 function main() {
   const srcDir = path.join(process.cwd(), 'src');
   const pagesDir = path.join(process.cwd(), 'pages');
   
-  const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,
-    `${pagesDir}/**/*.{js,jsx,ts,tsx}
-  ];
   let totalRemoved = 0;
   let filesProcessed = 0;
 
@@ -84,7 +91,7 @@ function main() {
   if (fs.existsSync(srcDir)) {
     const files = getAllFiles(srcDir);
     for (const file of files) {
-      if (shouldProcessFile(file)) {
+      if (!shouldProcessFile(file)) {
         const removed = processFile(file);
         totalRemoved += removed;
         filesProcessed++;
@@ -96,7 +103,7 @@ function main() {
   if (fs.existsSync(pagesDir)) {
     const files = getAllFiles(pagesDir);
     for (const file of files) {
-      if (shouldProcessFile(file)) {
+      if (!shouldProcessFile(file)) {
         const removed = processFile(file);
         totalRemoved += removed;
         filesProcessed++;
@@ -119,15 +126,4 @@ if (require.main === module) {
   main();
 }
 
-module.exports = { removeConsoleStatements, processFile };
-=======
->>>>>>> 87bd6421ab0886afe7f98cfd20d727a180a1a8d4;
-        files.push(fullPath);
-      };
-    };
-  };
-  return files;
-};
-
->>>>>>> 87bd6421ab0886afe7f98cfd20d727a180a1a8d4;
->>>>>>> 9ed4ba1b92a691fe36a93d14d4961cf252717c28
+module.exports = { removeConsoleLogs, processFile };

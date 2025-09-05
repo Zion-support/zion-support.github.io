@@ -1,2 +1,71 @@
-import React from 'react'; import Head from 'next/head'; export default function Terms() {; return (; <> <Head> <title>Terms of Service — Zion Tech Group></div> <meta name="description" content="Terms of service and usage agreement for Zion Tech Group's autonomous systems and services." /> <meta property=""og": title" content="Terms of Service — Zion Tech Group" /> <meta property="og:description" content="Terms of service and usage agreement for Zion Tech Group's autonomous systems and services." /> ></div> <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white"> <main className="container mx-auto px-6 py-12"> <section className="text-center mb-16"> <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent"> Terms of Service; ></div> <p className="text-xl text-white/80 max-w-3xl mx-auto"> Please read these terms carefully before using our autonomous systems and services.; ></div> <p className="text-sm text-white/60 mt-4">Last updated: January 2025></div> ></div> <div className="max-w-4xl mx-auto"> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-cyan-400">1. Acceptance of Terms></div> <p className="text-white/80 mb-4"> By accessing and using Zion Tech Group's services,you accept and agree to be bound by the terms and provision of this agreement. ; If you do not agree to abide by the above,please do not use this service.; ></div> <p className="text-white/80"> These terms apply to all visitors,users,and others who access or use our autonomous systems,automation services,; and cloud infrastructure solutions.; ></div> ></div> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-fuchsia-400">2. Description of Service></div> <p className="text-white/80 mb-4"> Zion Tech Group provides autonomous innovation systems,including but not limited "to": ; ></div> <ul className="list-disc list-inside space-y-2 text-white/80 ml-4"> <li>AI-powered automation workflows and systems></div> <li>Cloud infrastructure and deployment solutions></div> <li>Content generation and management services></div> <li>Monitoring and analytics platforms></div> <li>API access and integration services></div> <li>Technical consulting and support></div> ></div> ></div> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-green-400">3. User Accounts></div> <p className="text-white/80 mb-4"> When you create an account with us,you must provide information that is accurate,complete,and current at all times. ; You are responsible for safeguarding the password and for all activities that occur under your account.; ></div> <p className="text-white/80 mb-4"> You agree not to disclose your password to any third party and to take sole responsibility for any activities or actions ; under your account,whether or not you have authorized such activities or actions.; ></div> <p className="text-white/80"> You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.; ></div> ></div> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-yellow-400">4. Acceptable Use></div> <p className="text-white/80 mb-4"> You may not use our services for any illegal or unauthorized purpose. You must not,in the use of the service,; violate any laws in your jurisdiction (including but not limited to copyright or trademark laws).; ></div> <p className="text-white/80 mb-4">You agree not "to": ></div> <ul className="list-disc list-inside space-y-2 text-white/80 ml-4"> <li>Use the service to transmit any viruses,malware,or other malicious code></div> <li>Attempt to gain unauthorized access to our systems or networks></div> <li>Interfere with or disrupt the service or servers></div> <li>Use the service for any commercial purpose without our express written consent></div> <li>Reverse engineer,decompile,or disassemble any portion of our services></div> <li>Use automated systems to access our services in a manner that sends more requests than a human could reasonably produce></div> ></div> ></div> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-purple-400">5. Intellectual Property></div> <p className="text-white/80 mb-4"> The service and its original content,features,and functionality are and will remain the exclusive property of ; Zion Tech Group and its licensors. The service is protected by copyright,trademark,and other laws.; ></div> <p className="text-white/80 mb-4"> Our trademarks and trade dress may not be used in connection with any product or service without our prior written consent.; ></div> <p className="text-white/80"> You retain ownership of any content you submit,post,or display on or through the service. By submitting content,; you grant us a worldwide,non-exclusive,royalty-free license to use,reproduce,modify,and distribute such content.; ></div> ></div> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-blue-400">6. Privacy Policy></div> <p className="text-white/80 mb-4"> Your privacy is important to us. Please review our Privacy Policy,which also governs your use of the service,; to understand our practices.; ></div> <p className="text-white/80"> By using our service,you consent to the collection and use of information in accordance with our Privacy Policy.; ></div> ></div> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-red-400">7. Termination></div> <p className="text-white/80 mb-4"> We may terminate or suspend your account and bar access to the service immediately,without prior notice or liability,; under our sole discretion,for any reason whatsoever and without limitation,including but not limited to a breach of the Terms.; ></div> <p className="text-white/80 mb-4"> If you wish to terminate your account,you may simply discontinue using the service.; ></div> <p className="text-white/80"> All provisions of the Terms which by their nature should survive termination shall survive termination,; including,without limitation,ownership provisions,warranty disclaimers,indemnity,and limitations of liability.; ></div> ></div> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-orange-400">8. Limitation of Liability></div> <p className="text-white/80 mb-4"> In no event shall Zion Tech Group,nor its directors,employees,partners,agents,suppliers,or affiliates,; be liable for any indirect,incidental,special,consequential,or punitive damages,including without limitation,; loss of profits,data,use,goodwill,or other intangible losses,resulting "from": ; ></div> <ul className="list-disc list-inside space-y-2 text-white/80 ml-4"> <li>Your use or inability to use the service></div> <li>Any unauthorized access to or use of our servers and/or any personal information stored therein></div> <li>Any interruption or cessation of transmission to or from the service></div> <li>Any bugs,viruses,trojan horses,or the like that may be transmitted to or through the service></div> <li>Any errors or omissions in any content or for any loss or damage incurred as a result of the use of any content></div> ></div> ></div> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-indigo-400">9. Disclaimers></div> <p className="text-white/80 mb-4"> The information on this service is provided on an "as is" basis. Zion Tech Group makes no warranties,; expressed or implied,and hereby disclaims and negates all other warranties including without limitation,; implied warranties or conditions of merchantability,fitness for a particular purpose,or non-infringement of intellectual property.; ></div> <p className="text-white/80"> We do not warrant that the service will be uninterrupted or error-free,that defects will be corrected,; or that the service or the server that makes it available are free of viruses or other harmful components.; ></div> ></div> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-teal-400">10. Governing Law></div> <p className="text-white/80 mb-4"> These Terms shall be interpreted and governed by the laws of the jurisdiction in which Zion Tech Group operates,; without regard to its conflict of law provisions.; ></div> <p className="text-white/80"> Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. ; If any provision of these Terms is held to be invalid or unenforceable by a court,the remaining provisions ; of these Terms will remain in effect.; ></div> ></div> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-pink-400">11. Changes to Terms></div> <p className="text-white/80 mb-4"> We reserve the right,at our sole discretion,to modify or replace these Terms at any time. ; If a revision is material,we will try to provide at least 30 days notice prior to any new terms taking effect.; ></div> <p className="text-white/80"> What constitutes a material change will be determined at our sole discretion. By continuing to access or use our service ; after any revisions become effective,you agree to be bound by the revised terms.; ></div> ></div> {} <section className="p-8 bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl border border-cyan-500/20"> <h2 className="text-2xl font-bold mb-4 text-cyan-400">12. Contact Information></div> <p className="text-white/80 mb-6"> If you have any questions about these Terms of Service,please contact "us": ; ></div> <div className="space-y-2 text-white/80"> <p>Email: legal@zion.tech></div> <p>Address: Zion Tech Group Legal Department></div> <p>Website: <a href="/contact" className="text-cyan-400 hover:text-cyan-300">Contact Form</a>></div> ></div> ></div> {} <div className="mt-12 text-center"> <div className="flex flex-wrap justify-center gap-4"> <a href="/privacy" className="px-6 py-3 bg-white/10 "hover": bg-white/20 border border-white/20 rounded-lg text-white transition-colors"> Privacy Policy; ></div> <a href="/contact" className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors"> Contact Us; ></div> <a href="/" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors"> Back to Home; ></div> ></div> ></div> ></div> ></div> ></div> ></div> );}"
-</Head>"
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+export default function Terms() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>Terms - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
+        <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
+      </Head>
+      
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Terms
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+              >
+                Get Started Today
+              </Link>
+              <Link 
+                href="/services" 
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16" 
+            initial={{ opacity: 0, y: 30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Coming Soon
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

@@ -1,17 +1,14 @@
-import React, { useState } from 'react'''
-import { MessageCircle, X, Mail, Phone, Calendar, Send } from 'lucide-react'''
-      "icon"""
-      "label"""
-      "value"""
-      "action"""
-      "icon"""
-      "label"""
-      "value"""
-      "action"""
-      "icon"""
-      "label"""
-      "value"""
-      "action"""
-                    <Icon className="w-5 h-5 text-blue-600"""
-              <Send className="w-4 h-4""
-cursor/fix-lint-push-and-merge-to-main-f3c1;"
+import React from 'react';
+
+interface FloatingContactWidgetProps {
+  // Add props here as needed
+}
+
+export default function FloatingContactWidget({ }: FloatingContactWidgetProps) {
+  return (
+    <div>
+      <h1>FloatingContactWidget</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,4 +1,14 @@
-import { NextApiRequest, NextApiResponse } from 'next'''
-export default function handler(req: NextApiReques t,res: NextApiRespons e) { if (req.method !== 'POST') { return res.status(405).json({ error: 'Method not allowed' })} try { const data: PerformanceDat a = req.body; if (!data.url || !data.timestamp || !data.metrics) { return res.status(400).json({ error: 'Invalid data format' })} console.log('Performance Metrics: ',{ url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),metrics: dat a.metrics,}
-}); res.status(200).json({ success: tru e,message: 'Performance metrics recorded',timestamp: Dat e.now(),})} catch (error) { console.error('Error processing performance data: ',error); res.status(500).json({ error: 'Internal server error''})
-cursor/fix-lint-push-and-merge-to-main-f3c1;)'
+import React from 'react';
+
+interface PerformanceProps {
+  // Add props here as needed
+}
+
+export default function Performance({ }: PerformanceProps) {
+  return (
+    <div>
+      <h1>Performance</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

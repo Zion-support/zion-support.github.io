@@ -1,2 +1,14 @@
-import React,{ createContext,useContext,useEffect,ReactNode,JSX } from 'react'; import { supabase, useAuth } from 'lucide-react'; import { useNotificationOperations } from '@/hooks/useNotificationOperations'; interface NotificationContextType { "fetchNotifications": () => Promise<void> } } } const "defaultContext": NotificationContextType = { fetchNotifications: async () => {}}; const NotificationContext = createContext(defaultContext as NotificationContextType); export const useNotifications = (): NotificationContextType => { const context = useContext(NotificationContext) as NotificationContextType; if(!context) { throw new Error('useNotifications must be used within a NotificationProvider')} return context}; export const NotificationProvider = ({ children }: { "children": 'ReactNode' }): JSX.Element => { const { user } = useAuth(); const notificationOps = useNotificationOperations(user?.id); useEffect(() => { if(notificationOps) { notificationOps.fetchNotifications()} let "channel": ReturnType<typeof supabase.channel> | undefined; if(user && notificationOps) { channel = supabase .channel('notifications-changes') .on('postgres_changes',{ "event": '*',"schema": 'public',"table": 'notifications',"filter": `user_id=eq.${user.id}`},(payload) => { notificationOps.fetchNotifications()} ) .subscribe(); return () => { if(channel) { supabase.removeChannel(channel)} }} },[user,notificationOps]); return ( <NotificationContext.Provider value={notificationOps}> {children} </NotificationContext.Provider> )};
-</void>"
+import React from 'react';
+
+interface NotificationContextProps {
+  // Add props here as needed
+}
+
+export default function NotificationContext({ }: NotificationContextProps) {
+  return (
+    <div>
+      <h1>NotificationContext</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

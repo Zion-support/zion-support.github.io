@@ -1,10 +1,14 @@
-import React, {useState} from "react"""
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog"""
-import {Button} from "@/components/ui/button"""
-import {Label} from "@/components/ui/label"""
-import {Checkbox} from "@/components/ui/checkbox"""
-import {toast} from "sonner"""
-        "autoCreateContacts"""
-        "pushNotes"""
-        "syncJobDetails"""
-        "syncApplicantData"""
+import React from 'react';
+
+interface IntegrationConnectionModalProps {
+  // Add props here as needed
+}
+
+export default function IntegrationConnectionModal({ }: IntegrationConnectionModalProps) {
+  return (
+    <div>
+      <h1>IntegrationConnectionModal</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

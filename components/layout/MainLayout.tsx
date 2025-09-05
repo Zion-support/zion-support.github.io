@@ -1,17 +1,19 @@
-import React from "react"
-import Head from 'next/head'
-interface MainLayoutProps {
-  children: React.ReactNode
-  title?: string
-  description?: string
-  keywords?: string
+import React, { useState } from 'react';
+import Head from 'next/head';
+
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
 }
-const MainLayout: React.FC<MainLayoutProps> = ({
-  children,
-  title = "Zion Tech Group",
-  description = "Leading technology solutions provider",
-  keywords = "technology, AI, cloud, micro SaaS"
-}) => {
+
+export default function Layout({ 
+  children, 
+  title = "Zion Tech Group - Leading AI & Technology Solutions",
+  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",
+  keywords = "AI solutions, cloud services, technology consulting, digital transformation"
+}: LayoutProps) {
   return (
     <>
       <Head>
@@ -23,6 +25,5 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       </Head>
       {children}
     </>
-  )
+  );
 }
-export default MainLayout

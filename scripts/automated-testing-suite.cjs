@@ -1,44 +1,54 @@
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-// console.log('🧪 Starting Automated Testing Suite...')
-  console.log('� Creating unit test templates...')
-  const testDir = path.join(process.cwd(), '__tests__;'
-  "testEnvironment"
-  "setupFilesAfterEnv"
-  "collectCoverageFrom"
-  "testEnvironment"
-  "setupFilesAfterEnv"
-  "collectCoverageFrom"
-  const jestSetup = "
-      "route"
-      "pathname"
-      "asPath"
-  const componentTestTemplate = "
-  const pageTestTemplate = "
-  const apiTestTemplate = \"
-  const apiTestTemplate = \"
-      "method"
-      "method"
-  const e2eTestTemplate = \"
-    await page.click('a[href="/services")]
-    execSync('npm test -- --coverage --watchAll=false', { "stdio"})
-    execSync('npm run "test": integration', { "stdio"})
-    execSync('npx playwright test', { "stdio"})
-    console.error(' Tests "failed")
-      "integration"
-      "e2e"
-    "coverage"
-      '"test"
-      '"test"
-      '"test"
-      '"test"
-      '"test"
-      "integrationTests"
-      "testAutomation"
-      "coverage"
-    "testTypes"
-    "nextSteps"
-  console.log('� Testing infrastructure "created")
-  console.error(' Automated testing suite creation "failed")
+#!/usr/bin/env node
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+
+console.log('🧪 Automated Testing Suite');
+console.log('==========================');
+
+async function runTests() {
+  const tests = [
+    { name: 'Unit Tests', command: 'npm run test:unit' },
+    { name: 'Integration Tests', command: 'npm run test:integration' },
+    { name: 'E2E Tests', command: 'npm run test:e2e' },
+    { name: 'Smoke Tests', command: 'npm run test:smoke' },
+    { name: 'Lint Tests', command: 'npm run lint' },
+    { name: 'Type Check', command: 'npm run type-check' }
+  ];
+
+  const results = [];
+  
+  for (const test of tests) {
+    try {
+      console.log(`\n🔍 Running ${test.name}...`);
+      const output = execSync(test.command, { encoding: 'utf8', stdio: 'pipe' });
+      console.log(`✅ ${test.name} passed`);
+      results.push({ name: test.name, status: 'passed', output });
+    } catch (error) {
+      console.log(`❌ ${test.name} failed: ${error.message}`);
+      results.push({ name: test.name, status: 'failed', error: error.message });
+    }
+  }
+
+  // Generate report
+  const report = {
+    timestamp: new Date().toISOString(),
+    results,
+    summary: {
+      total: results.length,
+      passed: results.filter(r => r.status === 'passed').length,
+      failed: results.filter(r => r.status === 'failed').length
+    }
+  };
+
+  fs.writeFileSync('test-results.json', JSON.stringify(report, null, 2));
+  
+  console.log('\n📊 Test Summary:');
+  console.log(`Total: ${report.summary.total}`);
+  console.log(`Passed: ${report.summary.passed}`);
+  console.log(`Failed: ${report.summary.failed}`);
+  
+  return report;
+}
+
+runTests().catch(console.error);

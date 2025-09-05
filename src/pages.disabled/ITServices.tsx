@@ -1,4 +1,14 @@
-import React from 'react'''
-import { Server, Shield, Cloud, Database, Wrench, Users, CheckCircle, ArrowRight, Zap, Globe } from 'lucide-react'''
-import dynamic from 'next/dynamic''
-cursor/fix-lint-push-and-merge-to-main-f3c1;'
+import React from 'react';
+
+interface ITServicesProps {
+  // Add props here as needed
+}
+
+export default function ITServices({ }: ITServicesProps) {
+  return (
+    <div>
+      <h1>ITServices</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
