@@ -7,3 +7,50 @@ function cleanMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove all merge conflict markers
+    content = content.replace(/[\s\S]*?[\s\S]*?    content = content.replace(/    content = content.replace(/[\s\S]*?/g, '');
+    content = content.replace(/[\s\S]*?    
+    // Remove duplicate category lines
+    content = content.replace(/"category": '[^']*'},\s*"category": '[^']*'\s*}/g, (match) => {
+      const categoryMatch = match.match(/"category": '([^']*)'/);
+      if (categoryMatch) {
+        return `category: '${categoryMatch[1]}'\n    }`}
+      return match});
+    
+    // Clean up any remaining syntax issues
+    content = content.replace(/},\s*}/g, '}\n  }');
+    content = content.replace(/},\s*]/g, '}\n  ]');
+    content = content.replace(/"category": '[^']*'}\s*"category": '[^']*'\s*}/g, (match) => {
+      const categoryMatch = match.match(/"category": '([^']*)'/);
+      if (categoryMatch) {
+        return `category: '${categoryMatch[1]}'\n    }`}
+      return match});
+    
+    // Remove any remaining merge conflict markers
+    content = content.replace(/    content = content.replace(/[\s\S]*?/g, '');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Cleaned merge conflicts "in": ${filePath}`)} catch (error) {
+    console.error(`Error cleaning ${filePath}:`, error.message)}
+}
+
+// List of files with merge conflicts
+const filesToClean = ['pages/ai-services.tsx',
+  'pages/services/it-services.tsx',
+  'pages/services.tsx',
+  'pages/services/ai-services.tsx',
+  'pages/micro-saas.tsx',
+  'pages/blog/index.tsx',
+  'pages/careers.tsx',
+  'pages/brochure.tsx',
+  'pages/case-studies.tsx',
+  'index.html',
+  'public/offline.html'
+];
+
+// Clean all files
+filesToClean.forEach(file => {
+  if (fs.existsSync(file)) {
+    cleanMergeConflicts(file)}
+});
+
+console.log('Comprehensive merge conflict cleanup completed!');

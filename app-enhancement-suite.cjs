@@ -86,7 +86,7 @@ class AppEnhancementSuite {
       "    this.log('🔍 Monitoring App Health');",
       '    const healthChecks = {',
       '      "timestamp": new Date().toISOString(),',
-      "      "status": 'healthy',",
+      '      "status": "healthy",',
       '      "checks": {',
       '        "filesystem": this.checkFilesystem(),',
       '        "dependencies": this.checkDependencies(),',

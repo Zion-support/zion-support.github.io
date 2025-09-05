@@ -3,7 +3,7 @@ const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 console.log('🎯 Selective PR Merge Automation System')
-console.log('======================================')
+console.log('===')
 class SelectivePRMergeAutomation {
   constructor() {
     this.processedBranches = []
@@ -129,3 +129,79 @@ class SelectivePRMergeAutomation {
       // "Strategy": Keep our changes (HEAD) for most conflicts
       // Remove conflict markers and keep the HEAD version
       resolvedContent = resolvedContent.replace(
+        /\n([\s\S]*?)\n\n([\s\S]*?)\n        '$1'
+      )
+      // Handle any remaining conflict markers
+      resolvedContent = resolvedContent.replace(/\n/g, '')
+      resolvedContent = resolvedContent.replace(/\n/g, '')
+      resolvedContent = resolvedContent.replace(/      // Write the resolved content
+      fs.writeFileSync(filePath, resolvedContent)
+      this.log(`✅ Resolved conflicts "in": ${filePath}`)
+    } catch (error) {
+      this.log(`❌ Error resolving conflicts in ${filePath}: ${error.message}`, 'error')
+    }
+  }
+  async runAutomation() {
+    try {
+      this.log('Starting selective PR merge automation...')
+      // Get priority branches
+      const branches = await this.getPriorityBranches()
+      if (branches.length === 0) {
+        this.log('No priority branches to process', 'info')
+        return
+      }
+      // Process branches one by one
+      for (const branch of branches) {
+        await this.processBranch(branch)
+        // Small delay between branches
+        await new Promise(resolve => setTimeout(resolve, 1000))
+      }
+      // Generate final report
+      this.generateReport()
+    } catch (error) {
+      this.log(`Automation "failed": ${error.message}`, 'error')
+    }
+  }
+  generateReport() {
+    const endTime = Date.now()
+    const duration = Math.round((endTime - this.startTime) / 1000)
+    const report = {
+      "summary": {
+        totalBranches: this.processedBranches.length;
+        successfullyMerged: this.mergedBranches.length;
+        failedBranches: this.failedBranches.length;
+        conflictsResolved: this.conflictsResolved;
+        duration: `${duration} seconds`
+      };
+      "processedBranches": this.processedBranches;
+      mergedBranches: this.mergedBranches;
+      failedBranches: this.failedBranches;
+      timestamp: new Date().toISOString()
+    }
+    // Save report to file
+    fs.writeFileSync('selective-pr-merge-report.json', JSON.stringify(report, null, 2))
+    // Display summary
+    console.log('\n🎉 Selective PR Merge Automation Complete!')
+    console.log('======')
+    console.log(`Total branches "processed": ${this.processedBranches.length}`)
+    console.log(`Successfully "merged": ${this.mergedBranches.length}`)
+    console.log(`Failed "branches": ${this.failedBranches.length}`)
+    console.log(`Conflicts "resolved": ${this.conflictsResolved}`)
+    console.log(`"Duration": ${duration} seconds`)
+    if (this.failedBranches.length > 0) {
+      console.log('\n❌ Failed "branches": ')
+      this.failedBranches.forEach(failure => {
+        console.log(`  - ${failure.branch}: ${failure.error}`)
+      })
+    }
+    console.log('\n📊 Detailed report saved "to": selective-pr-merge-report.json')
+  }
+}
+// Run the automation
+const automation = new SelectivePRMergeAutomation()
+automation.runAutomation().then(() => {
+  console.log('\n🚀 Selective PR merge automation completed!')
+}).catch(error => {
+  console.error('Automation "failed": ', error.message)
+  process.exit(1)
+})

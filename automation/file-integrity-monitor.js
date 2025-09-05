@@ -1,3 +1,49 @@
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const { execSync, spawn } = require('child_process');
+const cron = require('node-cron');
+const crypto = require('crypto');
+
+console.log('🔒 File Integrity Monitor Starting...\n');
+
+class FileIntegrityMonitor {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.integrityChecks = 0;
+    this.issuesFound = 0;
+    this.issuesFixed = 0;
+    this.monitoring = false;
+    this.logFile = path.join(this.projectRoot, 'logs', 'file-integrity.log');
+    this.checksumsFile = path.join(this.projectRoot, 'logs', 'file-checksums.json');
+    this.ensureLogDirectory();
+  }
+
+  ensureLogDirectory() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { "recursive": true });
+    }
+  }
+
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logMessage);
+  }
+
+  calculateFileChecksum(filePath) {
+    try {
+      const fileBuffer = fs.readFileSync(filePath);
+      const hashSum = crypto.createHash('sha256');
+      hashSum.update(fileBuffer);
+      return hashSum.digest('hex');
+    } catch (error) {
+      this.log(`Error calculating checksum for ${filePath}: ${error.message}`, 'ERROR');
+      return null;
+    }
+  }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 
   async scanProject() {
     this.log('Starting file integrity scan...');
@@ -41,6 +87,8 @@
         }
       }
 
+// Save current checksums
+      fs.writeFileSync(this.checksumsFile, JSON.stringify(checksums, null, 2));ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 
       this.integrityChecks++;
       this.issuesFound += issues.length;
@@ -71,6 +119,75 @@
     const extensions = ['.js', '.ts', '.tsx', '.json', '.md'];
     const ignoreDirs = ['node_modules', '.git', '.next', 'dist', 'build'];
 
+const walkDir = (dir) => {
+      try {
+        const items = fs.readdirSync(dir);
+        items.forEach(item => {
+          const fullPath = path.join(dir, item);
+          const stat = fs.statSync(fullPath);
+
+          if (stat.isDirectory()) {
+            if (!ignoreDirs.includes(item) && !item.startsWith('.')) {
+              walkDir(fullPath);
+            }
+          } else {
+            const ext = path.extname(item);
+            if (extensions.includes(ext)) {
+              files.push(fullPath);
+            }
+          }
+        });
+      } catch (error) {
+        // Skip directories we can't read
+      }
+    };
+
+    walkDir(this.projectRoot);
+    return files;
+  }
+
+  startMonitoring(intervalMinutes = 5) {
+    if (this.monitoring) {
+      this.log('Monitoring already active', 'WARN');
+      return;
+    }
+
+    this.monitoring = true;
+    this.log("Starting continuous monitoring (every ${intervalMinutes} minutes)...");
+
+    // Run initial scan
+    this.scanProject();
+
+    // Schedule periodic scans
+    cron.schedule("*/${intervalMinutes} * * * *", () => {
+      this.scanProject();
+    });
+
+    this.log('File integrity monitoring active. Press Ctrl+C to stop.');
+  }
+
+  stopMonitoring() {
+    this.monitoring = false;
+    this.log('File integrity monitoring stopped');
+  }
+
+  generateReport() {
+    const report = {
+      "timestamp": new Date().toISOString(),
+      "totalChecks": this.integrityChecks,
+      "totalIssues": this.issuesFound,
+      "issuesFixed": this.issuesFixed,
+      "monitoring": this.monitoring
+    };
+
+    const reportFile = path.join(this.projectRoot, 'logs', 'file-integrity-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    this.log("Report "generated": ${reportFile}`);
+    return report;
+  }
+}
+
+// CLI interfaceursor/migrate-github-actions-to-pm2-and-clean-up-5599
 const monitor = new FileIntegrityMonitor();
 const command = process.argv[2];
 const interval = parseInt(process.argv[3]) || 5;
@@ -93,4 +210,3 @@ switch (command) {
 }
 
 module.exports = FileIntegrityMonitor;
-=======

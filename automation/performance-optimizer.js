@@ -1,3 +1,9 @@
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+class PerformanceOptimizer {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   constructor() {
     this.optimizations = [];
     this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log');
@@ -53,6 +59,14 @@
     try {
       // Placeholder for bundle analysis
       return {
+"totalSize": '2.1MB',
+        "gzippedSize": '650KB',
+        "recommendations": ['Consider code splitting', 'Remove unused dependencies']
+      };
+    } catch (error) {
+      return { "error": error.message };
+    }
+  }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   optimizeImages() {
     try {
       // Placeholder for image optimization
@@ -63,6 +77,10 @@
   }
 
   analyzeDependencies() {
+try {
+      const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8'));
+      const dependencies = Object.keys(packageJson.dependencies || {});
+      const devDependencies = Object.keys(packageJson.devDependencies || {});ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       return {
         "totalDependencies": dependencies.length + devDependencies.length,
         "productionDependencies": dependencies.length,
@@ -80,4 +98,3 @@
   }
 
   generateRecommendations() {
-=======

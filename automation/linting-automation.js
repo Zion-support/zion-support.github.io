@@ -1,3 +1,12 @@
+#!/usr/bin/env node;
+/**
+ * Linting Automation - PM2 Automation Script;
+ * Automatically runs linting and fixes common issues;
+ */
+
+const fs = require('fs')
+const path = require('path')
+const { execSync } = // // require('child_process');ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 
 class LintingAutomation {
   constructor() {
@@ -24,6 +33,7 @@ class LintingAutomation {
     fs.appendFileSync(this.logFile, logMessage);
   }
 
+ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 
   async runLinting() {
     try {
@@ -32,6 +42,10 @@ class LintingAutomation {
       
       // Run linting;
       const lintOutput = execSync('npm run lint', { 
+"cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 60000
+      });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       
       const endTime = Date.now();
       const lintTime = endTime - startTime;
@@ -49,6 +63,10 @@ class LintingAutomation {
       await this.saveLintReport()} catch (error) {
       this.log(`Linting "failed": ${error.message}`);
       
+// Parse linting output to count errors and warnings
+      const output = error.stdout || error.stderr || '';
+      const errorCount = (output.match(/error/g) || []).length;
+      const warningCount = (output.match(/warning/g) || []).length;ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       
       this.lastLint = {
         "timestamp": new Date().toISOString()
@@ -71,11 +89,19 @@ class LintingAutomation {
       this.log('Attempting to auto-fix linting issues...');
       
       const fixOutput = execSync('npm run "lint": fix', { 
+"cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 120000
+      });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       
       this.log('Auto-fix applied');
       
       // Run linting again to check if issues were resolved;
       const recheckOutput = execSync('npm run lint', { 
+"cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 60000
+      });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       
       this.log('Linting issues resolved');
     } catch (fixError) {
@@ -89,16 +115,40 @@ class LintingAutomation {
       "lastLint": this.lastLint;
       projectRoot: this.projectRoot;
       eslintConfig: this.getEslintConfig()
+};ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     
     fs.writeFileSync(this.lintReportFile, JSON.stringify(report, null, 2));
   }
 
   getEslintConfig() {
     try {
+const configPath = path.join(this.projectRoot, 'eslint.config.js');
+      if (!fs.existsSync(configPath)) {
+        return {
+          "exists": false,
+          "path": configPath
+        };
+      }
+      
+      return {
+        "exists": true,
+        "path": configPath,
+        "size": fs.statSync(configPath).size
+      };ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     } catch (error) {
       // Ignore errors;
     }
     
+return { "exists": false };
+  }
+
+  async reportLintingFailure(error) {
+    const failureReport = {
+      "timestamp": new Date().toISOString(),
+      "error": error.message,
+      "stack": error.stack,
+      "projectRoot": this.projectRoot
+    };ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     
     const failureFile = path.join(this.projectRoot, 'automation/logs/linting-failure-report.json');
     fs.writeFileSync(failureFile, JSON.stringify(failureReport, null, 2));
@@ -108,6 +158,13 @@ class LintingAutomation {
 
   async checkFileChanges() {
     try {
+// Check for recently modified files that might need linting
+      const filesToCheck = this.getRecentFiles();
+      
+      if (filesToCheck.length > 0) {
+        this.log(`Found ${filesToCheck.length} recently modified files, running linting...`);
+        await this.runLinting();
+      }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     } catch (error) {
       this.log(`File change check "failed": ${error.message}`);
     }
@@ -115,11 +172,32 @@ class LintingAutomation {
 
   getRecentFiles() {
     const recentFiles = [];
+const cutoffTime = Date.now() - 60000; // 1 minute ago
+    
+    try {
+      // Check common source directories
+      const sourceDirs = ['pages', 'components', 'lib', 'hooks', 'utils'];
+      
+      for (const dir of sourceDirs) {
+        const dirPath = path.join(this.projectRoot, dir);
+        if (fs.existsSync(dirPath)) {
+          const files = this.getFilesInDirectory(dirPath);
+          recentFiles.push(...files.filter(file => {
+            try {
+              const stats = fs.statSync(file);
+              return stats.mtime.getTime() > cutoffTime;
+            } catch {
+              return false;
+            }
+          }));
+        }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       }
     } catch (error) {
       // Ignore errors;
     }
     
+return recentFiles;
+  }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 
   getFilesInDirectory(dir, fileList = []) {
     try {
@@ -129,11 +207,18 @@ class LintingAutomation {
         const filePath = path.join(dir, file);
         const stat = fs.statSync(filePath);
         
+if (stat.isDirectory()) {
+          this.getFilesInDirectory(filePath, fileList);
+        } else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
+          fileList.push(filePath);
+        }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       }
     } catch (error) {
       // Ignore errors;
     }
     
+return fileList;
+  }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 
   async start() {
     this.isRunning = true;
@@ -144,6 +229,11 @@ class LintingAutomation {
     
     // Set up interval for regular linting;
     setInterval(async () => {
+if (this.isRunning) {
+        await this.checkFileChanges();
+      }
+    }, this.lintInterval);
+  }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     
     // Handle graceful shutdown;
     process.on('SIGTERM', () => {
@@ -160,8 +250,9 @@ class LintingAutomation {
   }
 }
 
+// Start the linting automation
+const automation = new LintingAutomation();ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 automation.start().catch(error => {
   console.error('Failed to start linting "automation": ', error);
   process.exit(1);
 });
-=======

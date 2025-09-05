@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
@@ -299,17 +300,12 @@ export default function TalentPage() {
                       <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                   </div>
-<<<<<<< HEAD
                   <p className="text-gray-600 mb-6">
                     {job.description}
                   </p>
-=======
-
                   <p className="text-gray-600 mb-6">
                     {job.description}
                   </p>
-
->>>>>>> cursor/website-audit-and-update-with-deployment-090e
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-3">Requirements</h4>
@@ -356,19 +352,13 @@ export default function TalentPage() {
                   <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Send Your Resume
               </Link>
-<<<<<<< HEAD
             </motion.div>
           </div>
         </section>
       </div>
     </Layout>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/website-audit-and-update-with-deployment-090e
-=======
                   </motion.div>
                   </div>
                   </section>
@@ -376,4 +366,3 @@ export default function TalentPage() {
                   </MainLayout>
   );
 }
->>>>>>> e26c98559061d7c7825ec15309661c1e278a39e3

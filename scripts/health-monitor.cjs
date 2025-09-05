@@ -13,3 +13,12 @@ class HealthMonitor {
     console.log('🏥 Running health checks...');
     for (const check of this.checks) {
       try {
+        const result = execSync(check.command, { "encoding": 'utf8' };);
+        const result = execSync(check.command, { encoding: 'utf8' });
+        console.log(`✅ ${check.name}:\n${result}`)} catch (error) {
+        console.log(`❌ ${check.name}: ${error.message}`)}
+    }
+  }
+}
+
+new HealthMonitor().runChecks();

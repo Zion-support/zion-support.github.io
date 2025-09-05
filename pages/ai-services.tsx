@@ -401,48 +401,12 @@ title: 'Generative AI Content Creation Suite',
     popular: true
   },
   {
-    title: 'AI-Powered Fusion Energy Optimization',
-    description: 'AI systems for optimizing nuclear fusion reactor designs and plasma control.',
-    icon: Zap,
-    features: ['Plasma Modeling', 'Reactor Optimization', 'Magnetic Field Control', 'Energy Efficiency'],
-    pricing: '$100,000 - $1,000,000/project',
-    category: 'Fusion Energy',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Consciousness Simulation',
-    description: 'Advanced AI systems for simulating consciousness and cognitive processes.',
-    icon: Brain,
-    features: ['Consciousness Modeling', 'Cognitive Simulation', 'Neural Networks', 'Self-Awareness'],
-    pricing: '$200,000 - $2,000,000/project',
-    category: 'Consciousness AI',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Time Series Forecasting',
-    description: 'Advanced time series analysis and forecasting for complex multi-variate data.',
-    icon: TrendingUp,
-    features: ['Multi-variate Analysis', 'Long-term Forecasting', 'Anomaly Detection', 'Uncertainty Quantification'],
-    pricing: '$25,000 - $200,000/setup',
-    category: 'Time Series AI',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Molecular Dynamics Simulation',
-    description: 'AI-accelerated molecular dynamics for drug discovery and materials science.',
-    icon: Heart,
-    features: ['Molecular Simulation', 'Drug-Target Interaction', 'Materials Design', 'Quantum Effects'],
-    pricing: '$40,000 - $400,000/project',
-    category: 'Molecular AI',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Gravitational Wave Detection',
-    description: 'AI systems for detecting and analyzing gravitational waves from cosmic events.',
+    title: 'AI-Powered Autonomous Drones',
+    description: 'Intelligent drone systems with autonomous navigation and mission execution capabilities.',
     icon: Rocket,
-    features: ['Signal Processing', 'Noise Filtering', 'Event Classification', 'Source Localization'],
-    pricing: '$60,000 - $600,000/project',
-    category: 'Astrophysics AI',
+    features: ['Autonomous Navigation', 'Mission Planning', 'Object Detection', 'Swarm Coordination'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Autonomous Systems',
     popular: true
   },
   {
