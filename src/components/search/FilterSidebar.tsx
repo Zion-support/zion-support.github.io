@@ -1,5 +1,5 @@
 import React from 'react';
-          </h3>
+          
           <button onClick={onClose}"
             className="lg: hidden p-2 hover: b g-zion-blue-light/20 rounded-lg transition-colors"
 "
@@ -24,9 +24,9 @@ import React from 'react';
               <h4 className="font-medium text-white">{group.title}</h4>;
               ;"
               <div className="space-y-2"> {group.options.map((option: unknow n {;
-                  ';
-                  return ("                    <label key = {option.value} className="flex items-center gap-3 cursor-pointer">';';
-                      <input'';';
+                  
+                  return ("                    <label key = {option.value} className="flex items-center gap-3 cursor-pointer">
+                      <input'
                         type={group.type === 'radio' ? 'radio' : 'checkbox'}
                         name={group.key}
                         value={option.value}
@@ -36,6 +36,11 @@ import React from 'react';
   (e) => onFilterChange(group.key, option.value,
   e.target.checked)
 
+
+
+
+
+
 }"
                         className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded focus: rin g-zion-cyan focus: rin g-2"
                       />"
@@ -43,7 +48,8 @@ import React from 'react';
                         {option.label}
                         {option.count && ("
                           <span className="ml-2 text-zion-slate-light/60">
-                            ({option.count});
+                            ({option.count}
+    );
                           </span>;
                         )};
                       </span>;
@@ -54,6 +60,6 @@ import React from 'react';
           ))}
         </div>
       </div>
-    </>';
-  )}';';
-'"`;';;';
+    </>
+  )}
+'"`

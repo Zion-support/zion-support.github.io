@@ -1,8 +1,9 @@
-import { Link  } from 'react-router-dom';';';
- from 'react';';';
-import React, { useState } from 'react';';
-export /**';';
-import { motion  } from 'framer-motion';';';
+import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom';
+ from 'react';
+import React, { useState } from 'react';
+export /**
+import { motion  } from 'framer-motion';
 import { motion, AnimatePresence  } from 'framer-motion';
 
  params - Function parameters
@@ -57,7 +58,7 @@ function FeaturedListingsSection(props: any) {          initial = {
 "
                 <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover: tex t-blue-600 transition-colors">
                   {service.title}
-                </h3>
+                
 "
                 <p className="text-gray-600 mb-4 leading-relaxed">
                   {service.description}
@@ -124,9 +125,9 @@ function FeaturedListingsSection(props: any) {          initial = {
             <span className="text-xl">→</span>;
           </Link>;
         </motion.div>;
-      </div>;';
-    </section>;) }';';
+      </div>;
+    </section>;) }
 '"
 
-</motion>';
-</motion>;';;';
+</motion>
+</motion>

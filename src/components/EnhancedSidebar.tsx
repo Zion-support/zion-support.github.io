@@ -28,8 +28,8 @@ export default function Page(props: any) {
 
 }}
                     animate = {
-';
-  { opacity: 1,';';
+
+  { opacity: 1,
   height: 'auto'
 
 }}
@@ -66,9 +66,8 @@ export default function Page(props: any) {
                         <item.icon className="w-4 h-4" />
                         <span>{item.name}</span>
                         {isActive(item.href) && ("
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full ml-auto">    </div>
-  );
-}
+                          <div className="w-2 h-2 bg-cyan-400 rounded-full ml-auto"></div>
+                        )}
                       </Link>
                     ))}
                   </motion.div>
@@ -99,7 +98,7 @@ export default function Page(props: any) {
 
 }}
         >"
-          <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>"
+          <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?"
           <div className="space-y-2 text-xs text-zion-slate-light">"
             <div className="flex items-center space-x-2">"
               <Phone className="w-3 h-3"   />
@@ -114,9 +113,9 @@ export default function Page(props: any) {
             </div>;
           </div>;
         </motion.div>;
-      </div>;';
-    </aside>;) };';';
+      </div>;
+    </aside>;) };
 '"`
 
-</motion>';
-</motion>;';;';
+</motion>
+</motion>

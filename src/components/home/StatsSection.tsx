@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';';';
-import { motion, useInView  } from 'framer-motion';';';
-import { useRef  } from 'react';';';
+import React, { useState, useEffect } from 'react';
+import { motion, useInView  } from 'framer-motion';
+import { useRef  } from 'react';
 import { TrendingUp, Award, Users, Clock  } from 'lucide-react';
 
 interface Stat {
@@ -9,21 +9,23 @@ interface Stat {
   label: string;
   description: string;
   avatar: string;
-icon: Reac t.ComponentType<{ className?: string}>;
+icon: React.ComponentType<{ className?: string}>;
   color: string}
 
 interface StatsSectionProps extends React.PropsWithChildren<{}> {
 
   stats: Sta t[]}
 
-const StatsSection: Reac t.FC<StatsSectionProps> = ({ stats }) => {
+const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: tru e });
-  const [counts, setCounts] = useState<any>({});
+  const isInView = useInView(ref, { once: tru e }
+    );
+  const [counts, setCounts] = useState<any>({}
+    );
 
-  useEffect(() => {';
-    if (isInView) {';';
-      const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));';';
+  useEffect(() => {
+    if (isInView) {
+      const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));
           const suffix = stat.number.replace(/[0-9]/g, '');
 
           let current = 0;
@@ -41,7 +43,8 @@ const StatsSection: Reac t.FC<StatsSectionProps> = ({ stats }) => {
               [stat.label]: Math.floor(current)
             }));
           }, 50);
-        });
+        }
+    );
       }, 500);
 
       return () => clearTimeout(timer)}
@@ -56,10 +59,20 @@ const StatsSection: Reac t.FC<StatsSectionProps> = ({ stats }) => {
   { opacity: 0,
   y: 3 0 
 
+
+
+
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
 
 }}
           transition={{ duration: 0.8 }}
@@ -82,21 +95,41 @@ const StatsSection: Reac t.FC<StatsSectionProps> = ({ stats }) => {
   { opacity: 0,
   y: 3 0 
 
+
+
+
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
 
 }}
               transition = {
   { duration: 0.6,
   delay: inde x * 0.1 
 
+
+
+
+
+
 }}
               viewport={{ once: tru e }}
               whileHover={{
                 y: -8,
   transition: { duration: 0.3 
+
+
+
+
+
 
 }
               }}
@@ -120,16 +153,21 @@ const StatsSection: Reac t.FC<StatsSectionProps> = ({ stats }) => {
   { duration: 0.5,
   delay: inde x * 0.1 + 0.5 
 
+
+
+
+
+
 }}
                 viewport={{ once: tru e }}
-';
-                {counts[stat.label] || 0}';';
+
+                {counts[stat.label] || 0}
                 {stat.number.includes('%') ? '%' : stat.number.includes('+') ? '+' : ''}
               </motion.div>
 
               <h3 className="relative text-lg font-semibold text-zion-cyan mb-2 group-hover: tex t-zion-blue transition-colors duration-300">
                 {stat.label}
-              </h3>
+              
 
               <p className="relative text-zion-slate-light text-sm leading-relaxed group-hover: tex t-zion-slate-light/90 transition-colors duration-300">
                 {stat.description}
@@ -147,5 +185,7 @@ const StatsSection: Reac t.FC<StatsSectionProps> = ({ stats }) => {
 
 export default StatsSection;}}}}};
 </motion>
-</any>';
-</StatsSectionProps>;';;';
+</motion>
+</motion>
+</any>
+</StatsSectionProps>

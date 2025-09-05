@@ -12,18 +12,18 @@ import {Code,
   Bookmark,
   Play,
   Settings,
-  Zap,';
-  Brain,';';
+  Zap,
+  Brain,
   Sparkles} from 'lucide-react';
 
-const mockCodeSnippets = [';
-  {';';
-    id: '1',';';
-    title: 'Custom React Hook for API Calls',';';
-    description: 'A reusable hook for making API calls with loading states and error handling',';';
-    language: 'typescript',';';
-    code: `import { useState, useEffect } from 'react';';
-';';
+const mockCodeSnippets = [
+  {
+    id: '1',
+    title: 'Custom React Hook for API Calls',
+    description: 'A reusable hook for making API calls with loading states and error handling',
+    language: 'typescript',
+    code: `import { useState, useEffect } from 'react';
+
 interface UseApiOptions {method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
   headers?: Record<string, string>;
   body?: any;}
@@ -37,40 +37,41 @@ export const useApi = (props: any) => {
     setLoading(true);
     setError(null);
     
-    try {';
-      const response = await fetch(url, {';';
+    try {
+      const response = await fetch(url, {
         method: options.method || 'GET',
         headers: options.headers,
         body: options.body ? JSON.stringify(options.body) : undefined,
-      });
+      }
+    );
       
       if (!response.ok) {
         throw new Error(\`HTTP error! status: \${response.status}\`);
       }
       
-      const result = await response.json();';
-      setData(result);';';
+      const result = await response.json();
+      setData(result);
     } catch (err) {setError(err instanceof Error ? err.message : 'An error occurred');} finally {setLoading(false);}
   };
-';
-  useEffect(() => {';';
+
+  useEffect(() => {
     if (options.method === 'GET') {
       execute();
     }
   }, [url]);
 
-  return {data, loading, error, execute};';
-};`,';';
-    tags: ['react', 'hooks', 'api', 'typescript'],';';
+  return {data, loading, error, execute};
+};`,
+    tags: ['react', 'hooks', 'api', 'typescript'],
     complexity: 'medium',
-    rating: 4.8,';
-    usageCount: 1250,';';
+    rating: 4.8,
+    usageCount: 1250,
     createdAt: '2024-01-15'
-  },';
-  {';';
-    id: '2',';';
-    title: 'Tailwind CSS Animation Utilities',';';
-    description: 'Custom Tailwind utilities for advanced animations and transitions',';';
+  },
+  {
+    id: '2',
+    title: 'Tailwind CSS Animation Utilities',
+    description: 'Custom Tailwind utilities for advanced animations and transitions',
     language: 'css',
     code: `@layer utilities {
   .animate-float {
@@ -101,18 +102,18 @@ export const useApi = (props: any) => {
 
 @keyframes shimmer {
   0% { background-position: -200% 0; }
-  100% {background-position: 200% 0;}';
-}`,';';
-    tags: ['css', 'tailwind', 'animations', 'utilities'],';';
+  100% {background-position: 200% 0;}
+}`,
+    tags: ['css', 'tailwind', 'animations', 'utilities'],
     complexity: 'low',
-    rating: 4.6,';
-    usageCount: 890,';';
+    rating: 4.6,
+    usageCount: 890,
     createdAt: '2024-01-10'
-  },';
-  {';';
-    id: '3',';';
-    title: 'Advanced Form Validation',';';
-    description: 'Comprehensive form validation with custom rules and error handling',';';
+  },
+  {
+    id: '3',
+    title: 'Advanced Form Validation',
+    description: 'Comprehensive form validation with custom rules and error handling',
     language: 'javascript',
     code: `class FormValidator {
   constructor(form, options = {}) {
@@ -160,38 +161,39 @@ export const useApi = (props: any) => {
       }
     }
     return isValid;
-  }';
-}`,';';
-    tags: ['javascript', 'forms', 'validation', 'class'],';';
+  }
+}`,
+    tags: ['javascript', 'forms', 'validation', 'class'],
     complexity: 'high',
-    rating: 4.9,';
-    usageCount: 2100,';';
+    rating: 4.9,
+    usageCount: 2100,
     createdAt: '2024-01-12'
   }
 ];
-';
-export const AdvancedAICodeGenerator = (props: any) => {';';
-  const [searchTerm, setSearchTerm] = useState('');';';
-  const [selectedLanguage, setSelectedLanguage] = useState('all');';';
+
+export const AdvancedAICodeGenerator = (props: any) => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedLanguage, setSelectedLanguage] = useState('all');
   const [selectedComplexity, setSelectedComplexity] = useState('all');
-  const [selectedSnippet, setSelectedSnippet] = useState(null);';
-';';
-  const languages = ['all', 'javascript', 'typescript', 'css', 'html', 'python', 'java'];';';
+  const [selectedSnippet, setSelectedSnippet] = useState(null);
+
+  const languages = ['all', 'javascript', 'typescript', 'css', 'html', 'python', 'java'];
   const complexities = ['all', 'low', 'medium', 'high'];
 
   const filteredSnippets = mockCodeSnippets.filter(snippet => {
     const matchesSearch = snippet.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         snippet.description.toLowerCase().includes(searchTerm.toLowerCase()) ||';
-                         snippet.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));';';
-    const matchesLanguage = selectedLanguage === 'all' || snippet.language === selectedLanguage;';';
+                         snippet.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         snippet.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesLanguage = selectedLanguage === 'all' || snippet.language === selectedLanguage;
     const matchesComplexity = selectedComplexity === 'all' || snippet.complexity === selectedComplexity;
     return matchesSearch && matchesLanguage && matchesComplexity;
-  });
+  }
+    );
 
   const copyToClipboard = (props: any) => {navigator.clipboard.writeText(code);};
 
   return (
-    <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
@@ -254,10 +256,10 @@ export const AdvancedAICodeGenerator = (props: any) => {';';
                     <Code className="w-6 h-6 text-purple-400"  />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white">{snippet.title}</h3>';
-                    <span className={`px-2 py-1 text-xs rounded-full ${';';
-                      snippet.complexity === 'low' ? 'bg-green-500/20 text-green-400' :';';
-                      snippet.complexity === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :';';
+                    <h3 className="text-xl font-semibold text-white">{snippet.title}
+                    <span className={`px-2 py-1 text-xs rounded-full ${
+                      snippet.complexity === 'low' ? 'bg-green-500/20 text-green-400' :
+                      snippet.complexity === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
                       'bg-red-500/20 text-red-400'
                     }`}>
                       {snippet.complexity}
@@ -317,7 +319,7 @@ export const AdvancedAICodeGenerator = (props: any) => {';';
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-4">
                 <Brain className="w-6 h-6 text-purple-400"  />
-                <h3 className="text-xl font-semibold text-white">Smart Code Generation</h3>
+                <h3 className="text-xl font-semibold text-white">Smart Code Generation
               </div>
               <p className="text-gray-300 mb-4">
                 Generate context-aware code snippets based on your requirements and coding patterns.
@@ -338,7 +340,7 @@ export const AdvancedAICodeGenerator = (props: any) => {';';
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-4">
                 <Sparkles className="w-6 h-6 text-yellow-400"  />
-                <h3 className="text-xl font-semibold text-white">Code Optimization</h3>
+                <h3 className="text-xl font-semibold text-white">Code Optimization
               </div>
               <p className="text-gray-300 mb-4">
                 Automatically optimize your code for performance, readability, and maintainability.
@@ -359,7 +361,7 @@ export const AdvancedAICodeGenerator = (props: any) => {';';
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-4">
                 <Zap className="w-6 h-6 text-blue-400"  />
-                <h3 className="text-xl font-semibold text-white">Instant Generation</h3>
+                <h3 className="text-xl font-semibold text-white">Instant Generation
               </div>
               <p className="text-gray-300 mb-4">
                 Get production-ready code snippets instantly with comprehensive documentation.
@@ -400,9 +402,9 @@ export const AdvancedAICodeGenerator = (props: any) => {';';
         </div>
       </div>
     </div>
-  );
+    );
 };
 
 export default AdvancedAICodeGenerator;
-';
-</string>;';;';
+
+</string>

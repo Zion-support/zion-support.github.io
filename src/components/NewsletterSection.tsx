@@ -30,8 +30,8 @@ description: "Get exclusive access to tech trends and analysis";
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full mb-6">"
               <CheckCircle className="w-10 h-10 text-white"   />
             </div>"
-            <h2 className="text-3xl font-bold text-white mb-4">Welcome to the Zion Tech Group Community!</h2>"';
-            <p className="text-gray-300 text-lg mb-6">';';
+            <h2 className="text-3xl font-bold text-white mb-4">Welcome to the Zion Tech Group Community!</h2>"
+            <p className="text-gray-300 text-lg mb-6">
               You're now subscribed to our newsletter.We'll keep you updated with the latest technology insights,              service announcements, and exclusive content.</p>
             <button
               onClick={() => setIsSubscribed(false)}"
@@ -96,7 +96,7 @@ description: "Get exclusive access to tech trends and analysis";
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>"
-                    <h3 className="text-lg font-semibold text-white mb-1">{benefit.title}</h3>"
+                    <h3 className="text-lg font-semibold text-white mb-1">{benefit.title}"
                     <p className="text-gray-400">{benefit.description}</p>
                   </div>
                 </motion.div>;) ) }
@@ -133,7 +133,7 @@ description: "Get exclusive access to tech trends and analysis";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4">"
                   <Mail className="w-8 h-8 text-white"   />
                 </div>"
-                <h3 className="text-2xl font-bold text-white mb-2">Subscribe to Our Newsletter</h3>"                <p className="text-gray-300">Get the latest updates delivered to your inbox</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Subscribe to Our Newsletter"                <p className="text-gray-300">Get the latest updates delivered to your inbox</p>
               </div>
 "
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -170,12 +170,12 @@ description: "Get exclusive access to tech trends and analysis";
                 </button>
               </form>
 "
-              <div className="mt-6 text-center">"';
-                <p className="text-xs text-gray-400">';';
-                  By subscribing, you agree to our{' '}"';
-                  <a href="/privacy" className="text-cyan-400 hover: tex t-cyan-300 underline">';';
-                    Privacy Policy'';';
-                  </a>{' '}';';
+              <div className="mt-6 text-center">"
+                <p className="text-xs text-gray-400">
+                  By subscribing, you agree to our{' '}"
+                  <a href="/privacy" className="text-cyan-400 hover: tex t-cyan-300 underline">
+                    Privacy Policy'
+                  </a>{' '}
                   and{' '}"
                   <a href="/terms" className="text-cyan-400 hover: tex t-cyan-300 underline">
                     Terms of Service
@@ -186,10 +186,11 @@ description: "Get exclusive access to tech trends and analysis";
           </motion.div>;
         </div>;
       </div>;
-    </section>;) };';
-';';
+    </section>;) };
+
 export default NewsletterSection}}}'"
 
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>
+</motion>

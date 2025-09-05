@@ -1,35 +1,41 @@
-import {useState, useCallback} from 'react';'';';
-import {motion, AnimatePresence} from 'framer-motion';'';';
+import {useState, useCallback} from 'react';'
+import {motion, AnimatePresence} from 'framer-motion';'
 import {Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2} from 'lucide-react';
 ;
-export const BlockchainWeb3Dashboard = (props: any) => {';
-    const { trackEvent } = useAnalytics({enableTracking: true,';';
-        enableUserBehaviorTracking: true;});'';';
+;
+export const BlockchainWeb3Dashboard = (props: any) => {
+    const { trackEvent } = useAnalytics({enableTracking: true,
+        enableUserBehaviorTracking: true;}
+    );'
     const [activeTab, setActiveTab] = useState('overview');
     const [showMintNFT, setShowMintNFT] = useState(false);
     const [showSendTransaction, setShowSendTransaction] = useState(false);
-    const {wallet, contracts, nfts, defiPositions, transactions, metrics, isConnecting, isProcessing, connectWallet, disconnectWallet, switchNetwork, addContract, mintNFT, sendTransaction, createDeFiPosition} = useBlockchainWeb3();';
-    const [nftForm, setNftForm] = useState({}';';
-''';';
-''''';';
-        name: '', ''''';';
-        description: '',''''';';
+    const {wallet, contracts, nfts, defiPositions, transactions, metrics, isConnecting, isProcessing, connectWallet, disconnectWallet, switchNetwork, addContract, mintNFT, sendTransaction, createDeFiPosition} = useBlockchainWeb3();
+    const [nftForm, setNftForm] = useState({}
+''
+''
+''''
+        name: '', ''''
+        description: '',''''
         image: ''
-    });';
-    const [transactionForm, setTransactionForm] = useState({}';';
-''';';
-''''';';
-        to: '', ''''';';
-        value: '',''''';';
+    }
+    );
+    const [transactionForm, setTransactionForm] = useState({}
+''
+''
+''''
+        to: '', ''''
+        value: '',''''
         data: ''
-    });
-    const handleConnectWallet = useCallback(async () => {}';
-        try {}';';
-            await connectWallet();'';';
-            trackEvent('blockchain',dashboard',wallet_connected')}';
-        catch (error) {}';';
-''';';
-'''';';
+    }
+    );
+    const handleConnectWallet = useCallback(async () => {}
+        try {}
+            await connectWallet();'
+            trackEvent('blockchain',dashboard',wallet_connected')}
+        catch (error) {}
+''
+'''
             // console.error('Failed to connect wallet:', error)}
     }, [connectWallet, trackEvent]);
     const handleMintNFT = useCallback(async () => {}
@@ -99,7 +105,7 @@ if(nftForm.name.trim() && wallet) {}
             <Wallet className = "w-16 h-16 text-gray-400 mx-auto mb-4"/" >"""""
                   <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">""
                     Connect Your Wallet"""""
-                  </h3>""""
+                  """"
                   <p className="text-gray-500 dark:text-gray-400 mb-6">""
                     Connect your Web3 wallet to start using blockchain features"""""
                   </p>""""",
@@ -108,7 +114,7 @@ if(nftForm.name.trim() && wallet) {}
                   </button>""""
                 </div>) : (<div className="space-y-6">""""
                   <div className="bg-gray-50 dark: bg-gray-800 p-6 rounded-lg">""""
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Wallet Information</h3>""""
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Wallet Information""""
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"""""
                       <div>""""
                         <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">""
@@ -150,7 +156,7 @@ if(nftForm.name.trim() && wallet) {}
                   </div>"""""
 """""
                   <div className="bg-gray-50 dark: bg-gray-800 p-6 rounded-lg">""""
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Quick Actions</h3>""""
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Quick Actions""""
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"""",
                       <button onClick="{()" =" > setShowSendTransaction(true)} className="flex items-center justify-center space-x-2 px-4 py-3 text-white bg-green-600 rounded-lg hover: bg-green-700">"""""
                         <Send className="w-5 h-5"/" >""
@@ -173,7 +179,7 @@ if(nftForm.name.trim() && wallet) {}
   {opacity: 0, y: -20 """"">
 """"}} className="space-y-4">""""
               <div className="flex items-center justify-between">""""
-                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Smart Contracts</h3>,
+                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Smart Contracts,
                 <button onClick = {}"
   () =" > addContract({}"
 """
@@ -243,7 +249,7 @@ if(nftForm.name.trim() && wallet) {}
   {opacity: 0, y: -20 """"">
 """"}} className="space-y-4">""""
               <div className="flex items-center justify-between">""""
-                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">NFT Collection</h3>"""",
+                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">NFT Collection"""",
                 <button onClick="{()" =" > setShowMintNFT(true)} className="px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700">"""""
                   <Plus className="w-4 h-4 inline mr-2"/" >"
                   Mint NFT"
@@ -280,9 +286,8 @@ if(nftForm.name.trim() && wallet) {}
                         {nft.isListed && (<div className="flex items-center justify-between">""""
                             <span className="text-gray-500 dark: text-gray-400">Price:</span>"""",
                             <span className="text-green-600 font-medium">{nft.price} ETH</span>
-                              </div>
-  );
-}
+                          </div>)}
+
                       </div>
                   </div>) ) }"
               </div>""
@@ -295,7 +300,7 @@ if(nftForm.name.trim() && wallet) {}
   {opacity: 0, y: -20 """"">
 """"}} className="space-y-4">""""
               <div className="flex items-center justify-between">""""
-                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">DeFi Positions</h3>,
+                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">DeFi Positions,
                 <button onClick = {}"
   () =" > createDeFiPosition({}"
 """
@@ -366,7 +371,7 @@ if(nftForm.name.trim() && wallet) {}
   {opacity: 0, y: -20 """"">
 """"}} className="space-y-4">""""
               <div className="flex items-center justify-between">""""
-                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Transaction History</h3>"""",
+                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Transaction History"""",
                 <button onClick="{()" =" > setShowSendTransaction(true)} className="px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover: bg-green-700">"""""
                   <Send className="w-4 h-4 inline mr-2"/" >"
                   Send Transaction"
@@ -452,7 +457,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
   {scale: 1, opacity: 1}} exit = {}""
   {scale: 0.9, opacity: 0 """"">
 """"}} className="bg-white dark: bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">""""
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Mint New NFT</h3>"""""
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Mint New NFT"""""
               """"
               <div className="space-y-4">"""""
                 <div>""""
@@ -504,7 +509,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
   {scale: 1, opacity: 1}} exit = {}""
   {scale: 0.9, opacity: 0 """"">
 """"}} className="bg-white dark: bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">""""
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Send Transaction</h3>"""""
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Send Transaction"""""
               """"
               <div className="space-y-4">"""""
                 <div>""""
@@ -546,8 +551,8 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
               </div>
             </motion.div>,
           </motion.div>) }"
-      </AnimatePresence>""""';
-    </div>)}"""""""';';
+      </AnimatePresence>""""
+    </div>)}"""""""
 """"'""`""
 "
 
@@ -556,7 +561,9 @@ export default Component
 
 </textarea>
 </motion>
+</motion>
 </textarea>
+</motion>
 </motion>
 </Coins>
 </Send>
@@ -569,10 +576,12 @@ export default Component
 </motion>
 </div>
 </Plus>
+</Plus>
 </motion>
 </Plus>
 </Send>
 </Download>
 </Wallet>
-</div>';
-</div>;';;';
+</div>
+</div>
+</div>

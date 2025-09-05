@@ -1,50 +1,10 @@
-import React from 'react';';
-export default ServiceCard;';';
-import {motion} from 'framer-motion';
+import React from 'react';
 
-export default function Page(props: any) {
-;
-    const iconVariants = {
-
-  hidden: { scale: 0.8,
-  opacity: 0
-
-},
-        visible: {
-
-            scale: 1,
-            opacity: 1,
-            transition: {
-
-                duration: 0.5,"
-                ease: "easeOut"
-
-        },
-        hover: {
-
-            scale: 1.2,
-            rotate[0, -10, 10, 0],;
-            transition: {
-
-                duration: 0.6,"
-                ease: "easeInOut"
-
-    };
-    const featureVariants = {
-
-  hover: {
-
-            x: 5,
-            transition: {
-
-                duration: 0.3,"
-  ease: "easeOut"
-
+interface ServiceCard.jsProps {
+  // Add props here as needed
 }
-        }
-    };
-    const badgeVariants = {
 
+<<<<<<< HEAD
   hidden: { scale: 0,
   opacity: 0
 
@@ -123,7 +83,7 @@ export default function Page(props: any) {
           {/* Enhanced Title */}"
           <h3 className="text-xl font-bold text-white mb-4 text-center group-hover:text-zion-cyan transition-all duration-300 group-hover:scale-105">
             {title}
-          </h3>
+          
 
           {/* Enhanced Description */}"
           <p className="text-zion-slate-light text-sm leading-relaxed mb-6 text-center group-hover:text-white transition-colors duration-300">
@@ -138,9 +98,8 @@ export default function Page(props: any) {
                     {feature}
                   </motion.li>) ) }
               </ul>
-                </div>
-  );
-}
+            </div>) }
+
           {/* Enhanced Price */}"
           <div className="text-center mb-6">"
             <motion.div className="text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent mb-2" whileHover={{ scale: 1.1 }}>
@@ -202,5 +161,19 @@ export {ServiceCard};
 
 </motion>
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+=======
+export default function ServiceCard.js({ }: ServiceCard.jsProps) {
+  return (
+    <div>
+      <h1>ServiceCard.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+>>>>>>> main

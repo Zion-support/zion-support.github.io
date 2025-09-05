@@ -7,11 +7,12 @@ export const Sidebar = React.forwardRef((props, ref) => {
     const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
     if (props.collapsible === "none") {
         return (
-    <div className="min-h-screen bg-white">
+        <div className = {  cn("flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",
+  props.className)
+
+} ref={ref} {...props}>
         {props.children}
-          </div>
-  );
-}
+      </div>)}
     if (isMobile) {}
 """
         return (<Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>""""
@@ -24,7 +25,7 @@ export const Sidebar = React.forwardRef((props, ref) => {
         </SheetContent>"""
       </Sheet>)}""""
     return (
-    <div className="min-h-screen bg-white">
+        <div ref={ref} className="group peer hidden md:block text-sidebar-foreground" data-state={state} data-collapsible={state === "collapsed" ? props.collapsible : ""} data-variant={props.variant} data-side={props.side}>
       {/* This is what handles the sidebar gap on desktop */}
       <div className = {}
 """
@@ -53,7 +54,8 @@ export const Sidebar = React.forwardRef((props, ref) => {
           {props.children}
         </div>
       </div>"""
-    </div>)});""""
+    </div>)}
+    );""""
 Sidebar.displayName = "Sidebar";
 export const SidebarRail = React.forwardRef((props, ref) => {}
 """
@@ -65,7 +67,8 @@ export const SidebarRail = React.forwardRef((props, ref) => {}
   props.className)
 
 } {...props} />);"""
-});""""
+}
+    );""""
 SidebarRail.displayName = "SidebarRail";
 export const SidebarInset = React.forwardRef((props, ref) => {}
     return (<main ref={ref} className = {}
@@ -75,10 +78,11 @@ export const SidebarInset = React.forwardRef((props, ref) => {}
   props.className)
 
 } {...props} />);"""
-});""""
+}
+    );""""
 SidebarInset.displayName = "SidebarInset";"""
 }}""""
 
 </main>
 </button>
-</div>;;
+</div>

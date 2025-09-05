@@ -33,10 +33,10 @@ export function CheckoutShippingOptions(props: any) {
     
       try {
 
-        if(res.ok) {';
-          setRates(data.rates || [])} else {';';
-          console.error('Rates error', data)}';
-      } catch(err) {';';
+        if(res.ok) {
+          setRates(data.rates || [])} else {
+          console.error('Rates error', data)}
+      } catch(err) {
         console.error('Rates error', err)} finally {
         setLoading(false)}
     };
@@ -47,7 +47,7 @@ export function CheckoutShippingOptions(props: any) {
   if(!toAddress) return null;
 
   return (
-    <div className="min-h-screen bg-white">
+        <div className="my-4">
       <h2 className="font-semibold mb-2">Shipping Options</h2>
       {loading && <p>Loading...</p>}
       {!loading && (
@@ -61,11 +61,11 @@ export function CheckoutShippingOptions(props: any) {
           ))}
         </RadioGroup>
       )}
-        </div>
-  );
-}
+    </div>
+  )}
+
 export type { ShippingRate };
 
 </string>
-</any>';
-</ShippingRate>';';
+</any>
+</ShippingRate>

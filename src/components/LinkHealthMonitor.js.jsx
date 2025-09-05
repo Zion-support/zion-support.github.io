@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';';';
+import React, {useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
 export default function Page(props: any) {
 ,
@@ -10,10 +10,10 @@ export default function Page(props: any) {
     generateReport(sampleLinks);
   }, []);
   const generateReport = links => {
-';
-    const totalLinks = links.length;';';
-    const healthyLinks = links.filter(l => l.status === 'healthy').length;';';
-    const brokenLinks = links.filter(l => l.status === 'broken').length;';';
+
+    const totalLinks = links.length;
+    const healthyLinks = links.filter(l => l.status === 'healthy').length;
+    const brokenLinks = links.filter(l => l.status === 'broken').length;
     const externalLinks = links.filter(l => l.status === 'external').length;
     const avgResponseTime =
       links.reduce((sum, l) => sum + (l.responseTime || 0), 0) / totalLinks;
@@ -24,7 +24,8 @@ export default function Page(props: any) {
       brokenLinks,
       externalLinks,
       averageResponseTime: avgResponseTime,
-      lastUpdated: new Date()});
+      lastUpdated: new Date()}
+    );
   };
   const startMonitoring = async () => {setIsMonitoring(true);
     // Simulate link checking
@@ -32,12 +33,12 @@ export default function Page(props: any) {
     setIsMonitoring(false);};
   const getStatusIcon = status => {
 
-    switch(status) {';
-';';
-      case 'healthy':';
-        return <CheckCircle className="w-4 h-4 text-green-400"  />;';';
-      case 'broken':"';
-        return <AlertTriangle className="w-4 h-4 text-red-400"  />;';';
+    switch(status) {
+
+      case 'healthy':
+        return <CheckCircle className="w-4 h-4 text-green-400"  />;
+      case 'broken':"
+        return <AlertTriangle className="w-4 h-4 text-red-400"  />;
       case 'external':"
         return <ExternalLink className="w-4 h-4 text-blue-400"  />;
       default:"
@@ -46,20 +47,21 @@ export default function Page(props: any) {
   };
   const getStatusColor = status => {
 
-    switch(status) {';
-';';
-      case 'healthy':'';';
-        return 'text-green-400';';';
-      case 'broken':'';';
-        return 'text-red-400';';';
-      case 'external':'';';
-        return 'text-blue-400';';';
-      default:'';';
+    switch(status) {
+
+      case 'healthy':'
+        return 'text-green-400';
+      case 'broken':'
+        return 'text-red-400';
+      case 'external':'
+        return 'text-blue-400';
+      default:'
         return 'text-yellow-400';
-    }';
-  };';';
+    }
+  };
   const filteredLinks = linkStatuses.filter(link => {if (selectedFilter === 'all') return true;
-    return link.status === selectedFilter;});
+    return link.status === selectedFilter;}
+    );
   return ()
     <>
       {/* Floating Action Button */}
@@ -136,43 +138,43 @@ export default function Page(props: any) {
                     </div>"
                     <div className="text-blue-400 text-sm">External</div>
                   </div>
-                    </div>
-  );
-}
+                </div>
+              )}
+
               {/* Actions */}"
-              <div className="flex items-center justify-between">"';
-                <div className="flex space-x-2">';';
-                  <button'';';
-                    onClick={() => setSelectedFilter('all')}';';
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'all''';';
-                        ? 'bg-cyan-500 text-white''';';
+              <div className="flex items-center justify-between">"
+                <div className="flex space-x-2">
+                  <button'
+                    onClick={() => setSelectedFilter('all')}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'all''
+                        ? 'bg-cyan-500 text-white''
                         : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`
                     }`}
                   >
-                    All Links';
-                  </button>';';
-                  <button'';';
-                    onClick={() => setSelectedFilter('broken')}`';';
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'broken''';';
-                        ? 'bg-red-500 text-white''';';
+                    All Links
+                  </button>
+                  <button'
+                    onClick={() => setSelectedFilter('broken')}`
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'broken''
+                        ? 'bg-red-500 text-white''
                         : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`
                     }`}
                   >
-                    Broken';
-                  </button>';';
-                  <button'';';
-                    onClick={() => setSelectedFilter('external')}`';';
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'external''';';
-                        ? 'bg-blue-500 text-white''';';
+                    Broken
+                  </button>
+                  <button'
+                    onClick={() => setSelectedFilter('external')}`
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'external''
+                        ? 'bg-blue-500 text-white''
                         : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`
                     }`}
                   >
-                    External';
-                  </button>';';
-                  <button'';';
-                    onClick={() => setSelectedFilter('healthy')}`';';
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'healthy''';';
-                        ? 'bg-green-500 text-white''';';
+                    External
+                  </button>
+                  <button'
+                    onClick={() => setSelectedFilter('healthy')}`
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'healthy''
+                        ? 'bg-green-500 text-white''
                         : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`
                     }`}
                   >
@@ -189,8 +191,8 @@ export default function Page(props: any) {
                     <RefreshCw className="w-4 h-4 animate-spin"  />
                   ) : ("
                     <Zap className="w-4 h-4"  />
-                  )}';
-                  <span>';';
+                  )}
+                  <span>
                     {isMonitoring ? 'Checking...' : 'Check All Links'}
                   </span>
                 </button>
@@ -250,17 +252,16 @@ export default function Page(props: any) {
                               {link.linkText && ("
                                 <div className="text-xs text-gray-400 mt-1">
                                   Text: {link.linkText}
-                                    </div>
-  );
-}
+                                </div>
+                              )}
                             </div>
-                          </td>"';
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">';';
+                          </td>"
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
                             {link.parentPage || 'Unknown'}
                           </td>"
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">';
-                            {link.responseTime`';';
-                              ? `${link.responseTime}ms`'';';
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+                            {link.responseTime`
+                              ? `${link.responseTime}ms`'
                               : 'N/A'}
                           </td>"
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
@@ -278,7 +279,7 @@ export default function Page(props: any) {
                 <h3 className="text-lg font-semibold text-yellow-400 mb-2 flex items-center">"
                   <AlertTriangle className="w-5 h-5 mr-2"  />
                   Recommendations
-                </h3>"
+                "
                 <ul className="text-yellow-200 text-sm space-y-1">
                   <li>• Fix broken LinkedIn and social media links</li>
                   <li>• Implement proper redirects for moved pages</li>
@@ -302,5 +303,6 @@ export {LinkHealthMonitor};
 
 export {LinkHealthMonitor};
 
-</motion>';
-</motion>;';;';
+</motion>
+</motion>
+</motion>

@@ -1,20 +1,21 @@
 import React, {useState} from 'react';
 import {INNOVATIVE_MICRO_SAAS_SERVICES_2025} from "../data/innovativeMicroSaasServices2025";
-;';
-const InnovativeServicesShowcase = (props: any) => {';';
+;
+;
+const InnovativeServicesShowcase = (props: any) => {
     const [activeTab, setActiveTab] = useState('microsaas');
-    const [selectedService, setSelectedService] = useState(null);';
-    const tabs = [';';
-        { id: 'microsaas', name: 'Micro SAAS Services', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },';';
-        {id: 'it', name: 'IT Services', count: innovativeITServices2025.length},';';
+    const [selectedService, setSelectedService] = useState(null);
+    const tabs = [
+        { id: 'microsaas', name: 'Micro SAAS Services', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },
+        {id: 'it', name: 'IT Services', count: innovativeITServices2025.length},
         {id: 'ai', name: 'AI Services', count: innovativeAIServices2025.length}
     ];
-    const getServicesByTab = (props: any) => {';
-        switch (activeTab) {';';
-            case 'microsaas':';
-                return INNOVATIVE_MICRO_SAAS_SERVICES_2025;';';
-            case 'it':';
-                return innovativeITServices2025;';';
+    const getServicesByTab = (props: any) => {
+        switch (activeTab) {
+            case 'microsaas':
+                return INNOVATIVE_MICRO_SAAS_SERVICES_2025;
+            case 'it':
+                return innovativeITServices2025;
             case 'ai':
                 return innovativeAIServices2025;
             default:
@@ -23,7 +24,7 @@ const InnovativeServicesShowcase = (props: any) => {';';
     const handleServiceClick = (props: any) => {setSelectedService(service)};
     const closeModal = (props: any) => {setSelectedService(null)};
     return (
-    <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Header Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -119,7 +120,7 @@ const InnovativeServicesShowcase = (props: any) => {';';
 """"
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover: text-blue-400 transition-colors">",
                   {service.name}""
-                </h3>"""""
+                """""
 """"
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">"
                   {service.description}""
@@ -195,14 +196,14 @@ const InnovativeServicesShowcase = (props: any) => {';';
                 <div>""""
                   <h3 className="text-xl font-semibold text-blue-400 mb-3">""
                     Description"""""
-                  </h3>""""
+                  """"
                   <p className="text-gray-300 mb-6">",
                     {selectedService.description}""
                   </p>"""""
 """"
                   <h3 className="text-xl font-semibold text-blue-400 mb-3">""
                     Features"""""
-                  </h3>"""""
+                  """""
                   <ul className="space-y-2 mb-6">"""""
                     {selectedService.features.map((feature, idx) => (""""
                       <li key="{idx}" className="text-gray-300 flex items-center">""""
@@ -215,7 +216,7 @@ const InnovativeServicesShowcase = (props: any) => {';';
 """"
                   <h3 className="text-xl font-semibold text-blue-400 mb-3">""
                     Benefits"""""
-                  </h3>"""""
+                  """""
                   <ul className="space-y-2 mb-6">"""""
                     {selectedService.benefits.map((benefit, idx) => (""""
                       <li key="{idx}" className="text-gray-300 flex items-center">""""
@@ -232,7 +233,7 @@ const InnovativeServicesShowcase = (props: any) => {';';
                   <div className="bg-white/10 rounded-lg p-6 mb-6">""""
                     <h3 className="text-xl font-semibold text-blue-400 mb-4">""
                       Pricing & Details"""""
-                    </h3>"""""
+                    """""
                     <div className="space-y-3">""""
                       <div className="flex justify-between">""""
                         <span className="text-gray-300">Price: </span>""""""
@@ -322,7 +323,7 @@ const InnovativeServicesShowcase = (props: any) => {';';
                   <div className="bg-white/10 rounded-lg p-6">""""
                     <h3 className="text-xl font-semibold text-blue-400 mb-4">""
                       Contact Information"""""
-                    </h3>"""""
+                    """""
                     <div className="space-y-3">""""
                       <div className="flex items-center">"""""
                         <svg """"
@@ -415,8 +416,8 @@ const InnovativeServicesShowcase = (props: any) => {';';
               href="mailto:kleber@ziontechgroup.com"""""
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 ">"
               Contact Us Today""
-            </a>"""""';
-            <a"""""';';
+            </a>"""""
+            <a"""""
               href="tel:+13024640950""""'
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300 ">
               Call Now: +1 302 464 0950,
@@ -438,8 +439,14 @@ export {InnovativeServicesShowcase};
 export {InnovativeServicesShowcase};
 
 </path>
+</path>
+</path>
 </div>
 </path>
 </div>
-</div>';
-</div>;';;';
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

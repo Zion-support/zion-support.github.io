@@ -1,11 +1,11 @@
-import {  import { motion  } from 'framer-motion';';';
+import {  import { motion  } from 'framer-motion';
  from 'lucide-react';
 
 export function ServicesOverview(...args[]):  {
-';
-      icon: Hear t,;';';
-      color: 'from-zion-pink to-zion-purple',';';
-      description: 'Healthcare artificial intelligence solutions',';';
+
+      icon: Hear t,;
+      color: 'from-zion-pink to-zion-purple',;
+      description: 'Healthcare artificial intelligence solutions',;
       services: INNOVATIVE_MICRO_SAAS_SERVICES_202 5.filter(s => s.category.includes('Healthcare'))};
   ];
 
@@ -80,7 +80,7 @@ export function ServicesOverview(...args[]):  {
                   {/* Category Info */}"
                   <h3 className="text-lg font-bold text-white mb-2 group-hover: tex t-zion-cyan transition-colors duration-300 text-center">
                     {category.name}
-                  </h3>
+                  
 "
                   <p className="text-zion-slate-light text-sm text-center mb-4 leading-relaxed">
                     {category.description}
@@ -154,7 +154,7 @@ export function ServicesOverview(...args[]):  {
                   <div className="flex-1">"
                     <h3 className="text-xl font-bold text-white mb-2 group-hover: tex t-zion-cyan transition-colors duration-300">
                       {service.title}
-                    </h3>"
+                    "
                     <p className="text-zion-slate-light leading-relaxed mb-3">
                       {service.description}
                     </p>
@@ -166,10 +166,10 @@ export function ServicesOverview(...args[]):  {
                 </div>
 "
                 <div className="space-y-3 mb-4">"
-                  <div className="flex items-center justify-between text-sm">"';
-                    <span className="text-zion-cyan font-medium">{service.category}</span>`';';
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${service.innovationLevel === 'Cutting-edge''';';
-                        ? 'bg-zion-cyan/20 text-zion-cyan''';';
+                  <div className="flex items-center justify-between text-sm">"
+                    <span className="text-zion-cyan font-medium">{service.category}</span>`
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${service.innovationLevel === 'Cutting-edge''
+                        ? 'bg-zion-cyan/20 text-zion-cyan''
                         : 'bg-zion-purple/20 text-zion-purple'`
                     }`}>
                       {service.innovationLevel}
@@ -268,10 +268,12 @@ export function ServicesOverview(...args[]):  {
             </div>;
           </div>;
         </motion.div>;
-      </div>;';
-    </div>;) }';';
+      </div>;
+    </div>;) }
 '"`
 
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>
+</motion>
+</motion>

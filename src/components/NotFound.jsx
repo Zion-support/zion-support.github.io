@@ -1,25 +1,27 @@
-import React from 'react';'''';';
-import {Link} from 'react-router-dom';'''';';
-import {motion} from 'framer-motion';';
-import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) => {}';';
-'';';
-''';';
-'''';';
-    const popularPages = [''''';';
-        {path: '/', label: 'Home', description: 'Main landing page'},'''';';
-        {path: '/services', label: 'Services', description: 'All our services'},'''';';
-        {path: '/about', label: 'About Us', description: 'Learn about Zion Tech Group'},'''';';
-        {path: '/contact', label: 'Contact', description: 'Get in touch with us'},'''';';
-        {path: '/blog', label: 'Blog', description: 'Latest insights and news'},'''';';
-        {path: '/careers', label: 'Careers', description: 'Join our team'}''';';
-    ];'''';';
-    const servicePages = [''''';';
-        {path: '/services/ai', label: 'AI Services', description: 'Artificial Intelligence solutions'},'''';';
-        {path: '/services/cloud', label: 'Cloud Services', description: 'Cloud infrastructure and DevOps'},'''';';
-        {path: '/services/cybersecurity', label: 'Cybersecurity', description: 'Security and protection'},'''';';
+<<<<<<< HEAD
+import React from 'react';'''
+import {Link} from 'react-router-dom';'''
+import {motion} from 'framer-motion';
+import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) => {}
+'
+''
+'''
+    const popularPages = [''''
+        {path: '/', label: 'Home', description: 'Main landing page'},'''
+        {path: '/services', label: 'Services', description: 'All our services'},'''
+        {path: '/about', label: 'About Us', description: 'Learn about Zion Tech Group'},'''
+        {path: '/contact', label: 'Contact', description: 'Get in touch with us'},'''
+        {path: '/blog', label: 'Blog', description: 'Latest insights and news'},'''
+        {path: '/careers', label: 'Careers', description: 'Join our team'}''
+    ];'''
+    const servicePages = [''''
+        {path: '/services/ai', label: 'AI Services', description: 'Artificial Intelligence solutions'},'''
+        {path: '/services/cloud', label: 'Cloud Services', description: 'Cloud infrastructure and DevOps'},'''
+        {path: '/services/cybersecurity', label: 'Cybersecurity', description: 'Security and protection'},'''
         {path: '/services/infrastructure', label: 'IT Infrastructure', description: 'Enterprise IT solutions'}
     ];
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">""""
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">""""
       <motion.div className="max-w-4xl mx-auto text-center" initial = {}
   {opacity: 0,
   y: 20;}} animate = {}
@@ -42,9 +44,9 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) =
           404"""
         </h1>""""
         <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
-          Page Not Found"""';
-        </h2>""""';';
-        <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">'';';
+          Page Not Found"""
+        </h2>""""
+        <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">'
           The page you're looking for doesn't exist or has been moved.
           Let us help you find what you need.
         </p>
@@ -59,7 +61,7 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) =
 """
         {/* Popular Pages */}""""
         <motion.div className="mb-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>""""
-          <h3 className="text-2xl font-semibold text-white mb-6">Popular Pages</h3>""""
+          <h3 className="text-2xl font-semibold text-white mb-6">Popular Pages""""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {popularPages.map((page, index) => (<motion.div key={page.path} initial = {}
   {opacity: 0,
@@ -84,7 +86,7 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) =
 """
         {/* Service Pages */}""""
         <motion.div className="mb-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}>""""
-          <h3 className="text-2xl font-semibold text-white mb-6">Our Services</h3>""""
+          <h3 className="text-2xl font-semibold text-white mb-6">Our Services""""
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {servicePages.map((service, index) => (<motion.div key={service.path} initial = {}
   {opacity: 0,
@@ -118,13 +120,13 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) =
             <ArrowRight className="w-5 h-5" />
           </Link>
         </motion.div>
-"""';
-        {/* Help Text */}""""';';
-        <motion.p className="text-gray-400 mt-8 text-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }}>'"""';';
-          Can't find what you're looking for?{' '}""""';';
-          <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 underline">'';';
-            Email us''';';
-          </a>{' '}'"""';';
+"""
+        {/* Help Text */}""""
+        <motion.p className="text-gray-400 mt-8 text-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }}>'"""
+          Can't find what you're looking for?{' '}""""
+          <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 underline">'
+            Email us''
+          </a>{' '}'"""
           or call us at{' '}""""
           <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300 underline">
             +1 302 464 0950;
@@ -133,19 +135,19 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) =
       </motion.div>
     </div>)};
 export default NotFound;
+=======
+import React from 'react';
+
+interface NotFound.jsProps {
+  // Add props here as needed
+>>>>>>> main
 }
 
-export {NotFound};
-
-export {NotFound};
-
-export {NotFound};
-
-export {NotFound};
-
-export {NotFound};
-
-</motion>
-</motion>
-</motion>';
-</motion>;';;';
+export default function NotFound.js({ }: NotFound.jsProps) {
+  return (
+    <div>
+      <h1>NotFound.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

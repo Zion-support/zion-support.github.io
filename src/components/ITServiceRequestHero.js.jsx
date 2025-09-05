@@ -1,6 +1,7 @@
-import React from 'react';';';
-import {Link} from 'react-router-dom';';';
+import React from 'react';
+import {Link} from 'react-router-dom';
 import {ArrowRight, Zap, Brain, Shield, Cloud} from 'lucide-react';
+;
 ;
 export function ITServiceRequestHero(props: any) {
     const features = [
@@ -63,14 +64,13 @@ export function ITServiceRequestHero(props: any) {
               </div>""""
               <h3 className="text-xl font-semibold text-white mb-2">
                 {feature.title}"""
-              </h3>""""
+              """"
               <p className="text-zion-slate-light">{feature.description}</p>
             </div>
           ))}
         </div>
       </div>
-    </section>';
-  );';';
-}'"""';';
-'"'"""';
-;';;';
+    </section>
+  );
+}'"""
+'"'"""

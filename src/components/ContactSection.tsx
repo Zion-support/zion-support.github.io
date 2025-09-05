@@ -71,7 +71,7 @@ const contactInfo = [{
 "
                 <contact.icon className="h-8 w-8 text-white"  />
               </a>;"
-              <h3 className="text-xl font-semibold text-white mb-2">{contact.title}</h3>"
+              <h3 className="text-xl font-semibold text-white mb-2">{contact.title}"
               <p className="text-zion-slate-light">{contact.value}</p>
             </motion.div>
           ))}
@@ -105,7 +105,13 @@ const contactInfo = [{
     </section>;) }
 export default ContactSection;
 export default ContactSection;
+export default ContactSection;
+export default ContactSection;
+export default ContactSection;
+export default ContactSection;
+export default ContactSection;
 '"
 
-</motion>';
-</motion>';';
+</motion>
+</motion>
+</motion>

@@ -1,8 +1,8 @@
-import { useEffect, useState, useCallback } from 'react'; // Added useCallback';';
-import { supabase } from '@/integrations/supabase/client';';';
-import { toast } from '@/hooks/use-toast';';';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';';';
-import { EmptyMatchesCard } from './EmptyMatchesCard';';';
+import { useEffect, useState, useCallback } from 'react'; // Added useCallback
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from '@/hooks/use-toast';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { EmptyMatchesCard } from './EmptyMatchesCard';
 import { JobMatchCard } from './JobMatchCard';
 
 export function SuggestedTalents(props: any) {
@@ -43,7 +43,8 @@ export function SuggestedTalents(props: any) {
         title: "Error",
         description: "Failed to load suggested talents.Please try again later.",
         variant: "destructive",
-      });
+      }
+    );
     } finally {
       setIsLoading(false);
     }
@@ -54,7 +55,8 @@ export function SuggestedTalents(props: any) {
     toast({
       title: "View Profile",
       description: `Navigating to talent profile: ${talentId}`,
-    });
+    }
+    );
   };
 
   const handleInvite = (props: any) => {
@@ -62,14 +64,16 @@ export function SuggestedTalents(props: any) {
     toast({
       title: "Invite Talent",
       description: `Inviting talent: ${talentId}`,
-    });
+    }
+    );
   };
 
   const handleRefresh = (props: any) => {
     setIsProcessing(true);
     fetchSuggestedTalents().finally(() => {
       setIsProcessing(false);
-    });
+    }
+    );
   };
 
   useEffect(() => {
@@ -85,22 +89,23 @@ export function SuggestedTalents(props: any) {
   }, [jobId, fetchSuggestedTalents]); // Added fetchSuggestedTalents
 
   // Transform data to match JobMatchCard component props
-  const transformedTalents = talents.map(talent => {';
-    return {';';
-      id: talen t.talent_profile?.id || '',';';
-      name: talen t.talent_profile?.full_name || 'Talent',';';
-      title: talen t.talent_profile?.professional_title || 'Talent',';';
-      company: talen t.talent_profile?.company_name || '',';';
-      avatar: talen t.talent_profile?.profile_picture_url || '',';';
-      location: talen t.talent_profile?.location || 'Remote',';';
+  const transformedTalents = talents.map(talent => {
+    return {
+      id: talen t.talent_profile?.id || '',
+      name: talen t.talent_profile?.full_name || 'Talent',
+      title: talen t.talent_profile?.professional_title || 'Talent',
+      company: talen t.talent_profile?.company_name || '',
+      avatar: talen t.talent_profile?.profile_picture_url || '',
+      location: talen t.talent_profile?.location || 'Remote',
       category: talen t.talent_profile?.category || 'Technology',
       matchPercent: talen t.match_score || 85,
       skills: talen t.talent_profile?.skills || [],
     };
-  });
+  }
+    );
 
-  return (<Card className="border-zion-blue-light bg-zion-blue">';
-      <CardHeader>';';
+  return (<Card className="border-zion-blue-light bg-zion-blue">
+      <CardHeader>
         <CardTitle>{jobTitle ? `Talents for ${jobTitle}` : 'Suggested Talents'}</CardTitle>
       </CardHeader>
       
@@ -129,14 +134,14 @@ export function SuggestedTalents(props: any) {
                 onInvite={() => handleInvite(talent.id)}
               />
             ))}
-              </div>
-  );
-}
+          </div>
+        )}
       </CardContent>
     </Card>
   );
 }
 
 </JobMatchCard>
-</any>';
-</any>;';;';
+</any>
+</any>
+</any>

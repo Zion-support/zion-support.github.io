@@ -1,6 +1,6 @@
-import React, {Suspense, lazy, memo, useMemo, useCallback} from 'react';';';
-import {LoadingSpinner} from './ui / loading -spinner';';
-';';
+import React, {Suspense, lazy, memo, useMemo, useCallback} from 'react';
+import {LoadingSpinner} from './ui / loading -spinner';
+
  from './ui/loading-spinner';
 ) => {
 
@@ -25,7 +25,7 @@ import {LoadingSpinner} from './ui / loading -spinner';';
         >"
           <h3 className="text-lg font-semibold text-zion-slate-light mb-2">
             {item.title}
-          </h3>"
+          "
           <p className="text-zion-slate text-sm mb-2">{item.description}</p>"
           <div className="text-zion-cyan text-sm">
             Processed: {item.processed}
@@ -33,8 +33,9 @@ import {LoadingSpinner} from './ui / loading -spinner';';
         </div>
       ))}
     </div>
-  );';
-});';';
+    );
+}
+    );
 MemoizedDataGrid.displayName = 'MemoizedDataGrid';
 // Virtual scrolling component for large lists;
 const VirtualList = (props: any) => {
@@ -44,28 +45,29 @@ const VirtualList = (props: any) => {
         const endIndex = Math.min(startIndex + Math.ceil (containerHeight / itemHeight) + 1, items.length) ;
         return items.slice(startIndex, endIndex) .map((item, index) => ({
             ...item,
-            index: startIndex + index,';
-            style: {';';
+            index: startIndex + index,
+            style: {
                 position: 'absolute',
-                top: (startIndex + index) * itemHeight,';
-                height: itemHeight,';';
+                top: (startIndex + index) * itemHeight,
+                height: itemHeight,
                 width: '100%'
             }
-        }) ) }, [items, scrollTop, itemHeight, containerHeight]) ;';
-    const handleScroll = useCallback((e) => {setScrollTop(e.currentTarget.scrollTop) ;}, []) ;';';
-    return (<div style="{{{ height: containerHeight; overflow: 'auto'}}"} onScroll={handleScroll} className="border border-zion - slate / 20 rounded-lg">';';
+        }) ) }, [items, scrollTop, itemHeight, containerHeight]) ;
+    const handleScroll = useCallback((e) => {setScrollTop(e.currentTarget.scrollTop) ;}, []) ;
+    return (
+        <div style="{{{ height: containerHeight; overflow: 'auto'}}"} onScroll={handleScroll} className="border border-zion - slate / 20 rounded-lg">
       <div style="{{{ height: items.length * itemHeight; position: 'relative'
-      ...item; index: startIndex + index; style: {';
-';';
+      ...item; index: startIndex + index; style: {
+
         position; top: (startIndex + index) * itemHeight; height: itemHeight; width: '100%'}}"}));
   }, [items, scrollTop, itemHeight, containerHeight]);
-  const handleScroll = useCallback(e => {setScrollTop(e.currentTarget.scrollTop);}, []);';
-  return ()';';
-    <div'';';
+  const handleScroll = useCallback(e => {setScrollTop(e.currentTarget.scrollTop);}, []);
+  return ()
+    <div'
       style="{{{ height: containerHeight; overflow: 'auto'}}"}
       onScroll={handleScroll}"
-      className="border border-zion-slate/20 rounded-lg"';
-    >';';
+      className="border border-zion-slate/20 rounded-lg"
+    >
       <div style="{{{ height: items.length * itemHeight; position: 'relative'}}"}>
         {visibleItems.map(item => (
           <div
@@ -81,16 +83,16 @@ const VirtualList = (props: any) => {
         ))}
       </div>
     </div>
-  );
+    );
 };
 // Main performance optimizations component
-export function PerformanceOptimizations(props: any) {';
-  const [showExpensive, setShowExpensive] = React.useState(false);';';
-  const [data, setData] = React.useState(['';';
-    { id: 1, title: 'Service 1', description: 'Description 1', value: 100 },';';
-    {id: 2, title: 'Service 2', description: 'Description 2', value: 200},';';
-    {id: 3, title: 'Service 3', description: 'Description 3', value: 300},';';
-    {id: 4, title: 'Service 4', description: 'Description 4', value: 400},';';
+export function PerformanceOptimizations(props: any) {
+  const [showExpensive, setShowExpensive] = React.useState(false);
+  const [data, setData] = React.useState(['
+    { id: 1, title: 'Service 1', description: 'Description 1', value: 100 },
+    {id: 2, title: 'Service 2', description: 'Description 2', value: 200},
+    {id: 3, title: 'Service 3', description: 'Description 3', value: 300},
+    {id: 4, title: 'Service 4', description: 'Description 4', value: 400},
     {id: 5, title: 'Service 5', description: 'Description 5', value: 500},
   ]);
   const handleItemClick = useCallback(item => {// // // // // // // // }, []);
@@ -114,10 +116,11 @@ export function PerformanceOptimizations(props: any) {';
         <p className="text-zion-slate-light text-lg">
           Advanced performance features for better user experience
 </p>
-          </div>
-  );
+      </div>
+  )
 }
 }""
 
-</div>';
-</div>;';;';
+</div>
+</div>
+</div>

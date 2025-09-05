@@ -27,8 +27,8 @@ export function ClientSuccessStoriesSection(props: any) {
         >"
           <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-4">
             Client Success Stories
-          </h2>"';
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">';';
+          </h2>"
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Real results from real clients.Discover how we've helped businesses
             across industries achieve remarkable transformations and measurable success.</p>
         </motion.div>
@@ -101,7 +101,7 @@ export function ClientSuccessStoriesSection(props: any) {
                 <div>"
                   <h3 className="text-xl font-bold text-gray-900">
                     {testimonial.name}
-                  </h3>"
+                  "
                   <p className="text-gray-600">{testimonial.role}</p>"
                   <p className="text-blue-600 font-medium">{testimonial.comp}</p>
                 </div>"
@@ -117,7 +117,7 @@ export function ClientSuccessStoriesSection(props: any) {
               <div className="p -6">
                 <h3 className="text-xl font - bold text-white mb-2">
                   {story.client}
-                </h3>
+                
 
                 <div className="mb-4">
                   <h4 className="text-sm font - semibold text-gray - 300 mb-2">Challenge:</h4>
@@ -143,8 +143,8 @@ export function ClientSuccessStoriesSection(props: any) {
                   <blockquote className="text-gray - 300 text-sm italic mb-3">                    "{story.testimonial}"
                   </blockquote>"
                   <div className="flex items-center gap-3">"
-                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">"';
-                      <span className="text-white font-semibold text-sm">';';
+                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">"
+                      <span className="text-white font-semibold text-sm">
                         {story.author.split(' ').map(n => n[0]).join('')}
                       </span>
                     </div>
@@ -183,7 +183,7 @@ export function ClientSuccessStoriesSection(props: any) {
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-white text-center mb-8">
               Success by the Numbers
-            </h3>
+            
 
             <div className="grid grid - cols - 2 md: gri d - cols - 4 gap-8">
               <div className="text-center">
@@ -229,7 +229,7 @@ export function ClientSuccessStoriesSection(props: any) {
           <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white">"
             <h3 className="text-2xl font-bold mb-4">
               Ready to Write Your Success Story?
-            </h3>"
+            "
             <p className="text-green-100 mb-6 max-w-2xl mx-auto">
               Join hundreds of satisfied clients who have transformed their
               businesses with our innovative technology solutions.</p>"
@@ -253,10 +253,11 @@ export default ClientSuccessStoriesSection;"
         </motion.div>;
       </div>;
     </section>;) }
-export default ClientSuccessStoriesSection;';
-export default ClientSuccessStoriesSection;';';
+export default ClientSuccessStoriesSection;
+export default ClientSuccessStoriesSection;
 '"
 
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>
+</motion>

@@ -1,8 +1,8 @@
-import React from 'react';""',';';';';
-    ';';';';';
-import React from 'react;';';';';';';
+import React from 'react';""',';';
+    ';';';
+import React from 'react;';';';';
 import { Shield, Award, Users, Clock, CheckCircle, Star } from 'lucide-react';
-const TrustIndicators: Reac t.FC = () => {
+const TrustIndicators: React.FC = () => {
   const indicators = [
     {
       icon: Shiel d, ""
@@ -81,7 +81,7 @@ const TrustIndicators: Reac t.FC = () => {
               </div>""
               <h3 className="text-sm font-semibold text-white mb-1">
                 {indicator.title}
-              </h3>""
+              ""
               <p className="text-xs text-slate-400">
                 {indicator.description}
               </p>
@@ -89,7 +89,7 @@ const TrustIndicators: Reac t.FC = () => {
           ))
       )}
     </div>
-  );
+    );
 }
         </div>
         {/* Additional Trust Elements */}""
@@ -111,12 +111,14 @@ const TrustIndicators: Reac t.FC = () => {
               <CheckCircle className="w-5 h-5 text-green-500" /" >"
               <span className="text-sm">HIPAA Compliant</span>
             </div>
-          </div>';
-        </div>';';
-      </div>';';';
-    </section>';';';';
-  );};';';';';';
+          </div>
+        </div>
+      </div>';
+    </section>';';
+  );};';';';
 export default TrustIndicators;"`""';';';';
 </CheckCircle>
-</CheckCircle>';
-</indicator>;';;';
+</CheckCircle>
+</CheckCircle>
+</CheckCircle>
+</indicator>

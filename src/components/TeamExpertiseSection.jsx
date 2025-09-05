@@ -1,4 +1,5 @@
-import React, {useState} from 'react';';';
+<<<<<<< HEAD
+import React, {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 
 export default function Page(props: any) {
@@ -194,7 +195,7 @@ const stats = ["
 }}>"
           <h3 className="text-3xl font-bold text-white text-center mb-12">"
             Areas of <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Expertise</span>
-          </h3>
+          
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-6">
             {expertiseAreas.map((area, index) => (<motion.div key={index} initial = {  { opacity: 0,
@@ -256,7 +257,7 @@ const stats = ["
 }}>"
           <h3 className="text-3xl font-bold text-white text-center mb-12">"
             Leadership <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Team</span>
-          </h3>
+          
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">
             {teamMembers.map((member, index) => (<motion.div key={member.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {
@@ -359,9 +360,9 @@ const stats = ["
                             </a>"
                             <a href={member.github} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">"
                               <Github className="w-4 h-4" />
-                            </a>';
-                            <a href = {';';
-'`';';
+                            </a>
+                            <a href = {
+'`
   `mailto:${member.name.toLowerCase().replace(' ',.')
 "`
 }@ziontechgroup.com`} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">"
@@ -397,8 +398,8 @@ const stats = ["
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">"
               <h3 className="text-2xl font-bold text-white mb-4">
                 Ready to Work with Our Experts?
-              </h3>"';
-              <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">';';
+              "
+              <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
                 Our team is ready to bring your vision to life.Let's discuss how we can help you achieve your technology goals.</p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
@@ -411,11 +412,32 @@ const stats = ["
             </div>
           </div>
         </motion.div>
-      </div>';
-    </section>)}';';
+      </div>
+    </section>)}
 '"`
 
 </motion>
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+=======
+import React from 'react';
+
+interface TeamExpertiseSection.jsProps {
+  // Add props here as needed
+}
+
+export default function TeamExpertiseSection.js({ }: TeamExpertiseSection.jsProps) {
+  return (
+    <div>
+      <h1>TeamExpertiseSection.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+>>>>>>> main

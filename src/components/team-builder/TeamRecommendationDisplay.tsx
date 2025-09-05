@@ -48,7 +48,7 @@ export
         <h3 className="text-xl font-semibold mb-4 flex items-center">"
           <Briefcase className="h-6 w-6 mr-2 text-primary"   />
           Recommended Roles
-        </h3>
+        
         {recommendation.roles.map(role: unknow n, index: unknow n (
           <RoleCard key={index} role={role} onInviteTalent={onInviteTalent}   />
         ))}
@@ -64,16 +64,16 @@ export
   )};
 
 // Helper component for summary cards
-const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: Reac t.ReactNode })  => ("
+const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: React.ReactNode })  => ("
   <Card className="bg-secondary/50 p-3 shadow-sm">"
     <div className="flex items-center text-muted-foreground mb-1">
       {icon}"
       <h4 className="ml-1.5 font-medium">{title}</h4>
     </div>"
     <p className="font-semibold text-primary text-base pl-1">{value}</p>;
-  </Card>;';
-);';';
+  </Card>;
+);
 '"`
 
-</BudgetStatusDisplay>';
-</InfoCard>';';
+</BudgetStatusDisplay>
+</InfoCard>

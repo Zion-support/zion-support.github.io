@@ -24,18 +24,21 @@ export default function Page(props: any) {
 
     if(res.status === 200) {
       // Successful API call
-      setTokens({ accessToken: dat a.accessToken, refreshToken: dat a.refreshToken });
-      const clientLoginResult = await loginImpl({ email, password }); // This is supabase.auth.signInWithPassword client-side
+      setTokens({ accessToken: dat a.accessToken, refreshToken: dat a.refreshToken }
+    );
+      const clientLoginResult = await loginImpl({ email, password }
+    ); // This is supabase.auth.signInWithPassword client-side
 
       if(clientLoginResult?.error) {
         // loginImpl(useEmailAuth.login) already shows a toast.console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
         return { error: (clientLoginResult.error as any)?.message || "Client-side login failed." };
       }
 
-      // Navigation logic(already present)';
-      const params = new URLSearchParams(location.search);';';
+      // Navigation logic(already present)
+      const params = new URLSearchParams(location.search);
       const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
-      navigate(next, { replace: tru e });
+      navigate(next, { replace: tru e }
+    );
 
       return { error: nul l }; // Successful login
     }
@@ -60,7 +63,8 @@ export default function Page(props: any) {
       title: "Login Failed",
       description: toastMessag e,
       variant: "destructive",
-    });
+    }
+    );
     return { error: toastMessag e };
   };
 
@@ -72,12 +76,13 @@ export default function Page(props: any) {
 
       if(!res.ok) {
         // Handle API errors(e.g., 400, 409, 500) from /api/auth/register
-        toast({';
-          title: "Signup Failed",';';
+        toast({
+          title: "Signup Failed",
           description: dat a?.message || 'An unexpected error occurred.',
           variant: "destructive"
-        });';
-        setIsLoading(false);';';
+        }
+    );
+        setIsLoading(false);
         return { error: dat a?.message || 'Signup failed', emailVerificationRequired: fals e };
       }
 
@@ -85,9 +90,11 @@ export default function Page(props: any) {
         toast({
           title: "Signup Successful",
           description: "Please check your email to verify your account."
-        });
-        // Optionally set minimal user info if available and desired, but no active session';
-        // For example: setUse r({ email: dat a.user?.email, id: dat a.user?.id, name: dat a.user?.display_name, email_verified_pending: tru e });';';
+        }
+    );
+        // Optionally set minimal user info if available and desired, but no active session
+        // For example: setUse r({ email: dat a.user?.email, id: dat a.user?.id, name: dat a.user?.display_name, email_verified_pending: tru e }
+    );
         // For now, we don't set any user state to prevent confusion with an active session.setIsLoading(false);
         return { error: nul l, emailVerificationRequired: tru e };
       } else if(data?.session && data?.user) {
@@ -98,7 +105,8 @@ export default function Page(props: any) {
         // which should then fetch the profile and update the user state.const { error: sessionErro r } = await supabase.auth.setSession({
           access_token: dat a.session.access_token,
           refresh_token: dat a.session.refresh_token,
-        });
+        }
+    );
 
         if(sessionError) {
           console.error("Error setting Supabase session:", sessionError);
@@ -106,21 +114,25 @@ export default function Page(props: any) {
             title: "Signup Error",
             description: "Failed to initialize session.Please try logging in.",
             variant: "destructive"
-          });
+          }
+    );
           setIsLoading(false);
           return { error: "Failed to initialize session.", emailVerificationRequired: fals e };
         }
 
-        // setTokens is handled by onAuthStateChange or if direct setting is preferred: setToken s({ accessToken: dat a.session.access_token, refreshToken: dat a.session.refresh_token });
+        // setTokens is handled by onAuthStateChange or if direct setting is preferred: setToken s({ accessToken: dat a.session.access_token, refreshToken: dat a.session.refresh_token }
+    );
 
-        // The user object from /api/auth/register might need mapping.// For now, we assume data.user is compatible or onAuthStateChange will handle it.// setUser(data.user); // This will be handled by onAuthStateChange after setSession';
-';';
+        // The user object from /api/auth/register might need mapping.// For now, we assume data.user is compatible or onAuthStateChange will handle it.// setUser(data.user); // This will be handled by onAuthStateChange after setSession
+
         const firstName = (data.user.user_metadata?.display_name || name).split(' ')[0];
-        toast({ title: `Welcome, ${firstName}!` });
-';
-        const params = new URLSearchParams(location.search);';';
+        toast({ title: `Welcome, ${firstName}!` }
+    );
+
+        const params = new URLSearchParams(location.search);
         const next = params.get('redirectTo') || params.get('next') || '/dashboard';
-        navigate(next, { replace: tru e });
+        navigate(next, { replace: tru e }
+    );
         setIsLoading(false);
         return { error: nul l, emailVerificationRequired: fals e };
       } else {
@@ -129,7 +141,8 @@ export default function Page(props: any) {
           title: "Signup Error",
           description: "Unexpected response from server.",
           variant: "destructive"
-        });
+        }
+    );
         setIsLoading(false);
         return { error: "Unexpected response from server.", emailVerificationRequired: fals e };
       }
@@ -139,7 +152,8 @@ export default function Page(props: any) {
         title: "Signup Failed",
         description: er r.message || "An unexpected error occurred during signup.",
         variant: "destructive",
-      });
+      }
+    );
       setIsLoading(false);
       return { error: er r.message || "Signup failed", emailVerificationRequired: fals e };
     }
@@ -153,9 +167,9 @@ export default function Page(props: any) {
     
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
         if(session?.user) {
-          try {';
-            const { data: profil e, error } = await getFromProfiles()';';
-              .select('*')';';
+          try {
+            const { data: profil e, error } = await getFromProfiles()
+              .select('*')
               .eq('id', session.user.id)
               .single();
 
@@ -163,27 +177,31 @@ export default function Page(props: any) {
               const mappedUser = mapProfileToUser(session.user, profile);
               setUser(mappedUser);
               setAvatarUrl(mappedUser.avatarUrl || null);
-              ';
-              // Show welcome toast when user logs in';';
+              
+              // Show welcome toast when user logs in
               if(event === 'SIGNED_IN') {
-                handleSignedIn(mappedUser);';
-                const params = new URLSearchParams(location.search);';';
-                const nextFromUrl = params.get('redirectTo') || params.get('next'); // Renamed to avoid conflict';
-';';
+                handleSignedIn(mappedUser);
+                const params = new URLSearchParams(location.search);
+                const nextFromUrl = params.get('redirectTo') || params.get('next'); // Renamed to avoid conflict
+
                 const nextPathFromStorage = safeStorage.getItem('nextPath');
-';
-                if(nextPathFromStorage) {';';
-                  safeStorage.removeItem('nextPath');';
-                  navigate(decodeURIComponent(nextPathFromStorage), { replace: tru e });';';
+
+                if(nextPathFromStorage) {
+                  safeStorage.removeItem('nextPath');
+                  navigate(decodeURIComponent(nextPathFromStorage), { replace: tru e }
+    );
                 } else if(location.state?.pendingAction === 'buyNow' && location.state?.pendingActionArgs) {
                   const { id, title, price } = location.state.pendingActionArgs;
                   dispatch(addItem({ id, title, price }));
                   // Clear pending action from state first
-                  navigate(location.pathname, { state: {}, replace: tru e });';
-                  // Navigate to checkout';';
-                  navigate('/checkout', { replace: tru e });
+                  navigate(location.pathname, { state: {}, replace: tru e }
+    );
+                  // Navigate to checkout
+                  navigate('/checkout', { replace: tru e }
+    );
                 } else if(nextFromUrl) {
-                  navigate(decodeURIComponent(nextFromUrl), { replace: tru e });
+                  navigate(decodeURIComponent(nextFromUrl), { replace: tru e }
+    );
                 }
               }
             } else if(error) {
@@ -198,8 +216,8 @@ export default function Page(props: any) {
         } else {
           setUser(false);
           setAvatarUrl(null);
-          ';
-          // Show logout toast when user logs out';';
+          
+          // Show logout toast when user logs out
           if(event === 'SIGNED_OUT') {
             handleSignedOut();
           }
@@ -251,5 +269,5 @@ export default function Page(props: any) {
     </AuthContext.Provider>
   );
 };
-';
-</AuthContext>;';;';
+
+</AuthContext>

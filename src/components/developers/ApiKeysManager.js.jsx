@@ -5,28 +5,28 @@ import {Checkbox} from "../ui/checkbox";
 import {Label} from "../ui/label.jsx";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "../ui/dialog.jsx";
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "../ui/dropdown-menu";
-import {Popover, PopoverContent, PopoverTrigger} from "../ui/popover.jsx";';
-import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle} from "../ui/alert-dialog.jsx";';';
+import {Popover, PopoverContent, PopoverTrigger} from "../ui/popover.jsx";
+import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle} from "../ui/alert-dialog.jsx";
 import CodeBlock from "./CodeBlock.jsx";import {Copy, MoreHorizontal, Eye, EyeOff, RotateCcw, Trash2, Settings} from 'lucide-react';
 export {function};
-export default function ApiKeysManager(props: any) {}';
-    const {apiKeys, loading, newApiKey, fetchApiKeys, createApiKey, deleteApiKey, toggleApiKey, updateApiKeyScopes, regenerateApiKey, revokeApiKey, clearNewApiKey} = useApiKeys();';';
-    const [showCreateDialog, setShowCreateDialog] = useState(false);'';';
-    const [newKeyName, setNewKeyName] = useState('');';';
-    const [selectedScopes, setSelectedScopes] = useState([]);'';';
-    const [showRegenerateConfirm, setShowRegenerateConfirm] = useState(null);''';';
-    const [showDeleteConfirm, setShowDeleteConfirm] = useState(null);'''';';
-    const scopeOptions = [''''';';
-        {value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings'},'''';';
-        {value: 'jobs:write', label: 'Write Jobs', description: 'Create and manage job listings'},'''';';
-        {value: 'talent:read', label: 'Read Talent', description: 'Access to view talent profiles'},'''';';
-        {value: 'quotes:write', label: 'Write Quotes', description: 'Create and manage quotes'},'''';';
+export default function ApiKeysManager(props: any) {}
+    const {apiKeys, loading, newApiKey, fetchApiKeys, createApiKey, deleteApiKey, toggleApiKey, updateApiKeyScopes, regenerateApiKey, revokeApiKey, clearNewApiKey} = useApiKeys();
+    const [showCreateDialog, setShowCreateDialog] = useState(false);'
+    const [newKeyName, setNewKeyName] = useState('');
+    const [selectedScopes, setSelectedScopes] = useState([]);'
+    const [showRegenerateConfirm, setShowRegenerateConfirm] = useState(null);''
+    const [showDeleteConfirm, setShowDeleteConfirm] = useState(null);'''
+    const scopeOptions = [''''
+        {value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings'},'''
+        {value: 'jobs:write', label: 'Write Jobs', description: 'Create and manage job listings'},'''
+        {value: 'talent:read', label: 'Read Talent', description: 'Access to view talent profiles'},'''
+        {value: 'quotes:write', label: 'Write Quotes', description: 'Create and manage quotes'},'''
         {value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints'}
     ];
     const handleCreateKey = async () => {}
-        if(!newKeyName.trim() || selectedScopes.length === 0)';
-            return;';';
-        await createApiKey(newKeyName.trim(), selectedScopes);'';';
+        if(!newKeyName.trim() || selectedScopes.length === 0)
+            return;
+        await createApiKey(newKeyName.trim(), selectedScopes);'
         setNewKeyName('');
         setSelectedScopes([]);
         setShowCreateDialog(false)};
@@ -43,10 +43,12 @@ export default function ApiKeysManager(props: any) {}';
     if(loading) {}
 """
 """"
-        return (<div className="flex items-center justify-center p-8">""""
+        return (
+        <div className="flex items-center justify-center p-8">""""
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-zion-cyan"></div>"""
       </div>)}""""
-    return (<div className="space-y-6">""""
+    return (
+        <div className="space-y-6">""""
       <div className="flex items-center justify-between">"""
         <div>""""
           <h2 className="text-2xl font-bold text-white">API Keys</h2>""""
@@ -95,33 +97,31 @@ export default function ApiKeysManager(props: any) {}';
       </Dialog>
 """
       {/* New API Key Display */}""""
-      {newApiKey && (<div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4">""""';
-          <h3 className="text-green-400 font-semibold mb-2">New API Key Created!</h3>""""';';
-          <p className="text-green-300 text-sm mb-3">'';';
+      {newApiKey && (<div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4">""""
+          <h3 className="text-green-400 font-semibold mb-2">New API Key Created!""""
+          <p className="text-green-300 text-sm mb-3">'
             Copy this key now. You won't be able to see it again."""
           </p>""""
           <CodeBlock code={newApiKey} className="mb-3" />""""
           <div className="space-y-2">""""
             <p className="text-green-300 text-sm font-medium">Example Usage:</p>""""
-            <CodeBlock code={getExampleCode(newApiKey)} language="bash" />"""';
-          </div>""""';';
-          <Button onClick={clearNewApiKey} className="mt-3 bg-green-600 hover:bg-green-700">'';';
+            <CodeBlock code={getExampleCode(newApiKey)} language="bash" />"""
+          </div>""""
+          <Button onClick={clearNewApiKey} className="mt-3 bg-green-600 hover:bg-green-700">'
             I've Copied the Key;
           </Button>
-            </div>
-  );
-}
+        </div>)}
 """
       {/* API Keys List */}""""
       <div className="space-y-4">""""
         {apiKeys.map((apiKey) => (<div key={apiKey.id} className="bg-zinc-900 border border-zinc-800 rounded-lg p-4">""""
             <div className="flex items-center justify-between">""""
-              <div className="flex-1">""""';
-                <div className="flex items-center gap-3 mb-2">""`';';
-                  <h3 className="text-white font-semibold">{apiKey.name}</h3>`'`';';
-                  <span className={`px-2 py-1 text-xs rounded-full ${apiKey.isActive''`';';
-                ? 'bg-green-900/30 text-green-400 border border-green-500/30''`'`';';
-                : 'bg-red-900/30 text-red-400 border border-red-500/30'}`}>'';';
+              <div className="flex-1">""""
+                <div className="flex items-center gap-3 mb-2">""`
+                  <h3 className="text-white font-semibold">{apiKey.name}`'`
+                  <span className={`px-2 py-1 text-xs rounded-full ${apiKey.isActive''`
+                ? 'bg-green-900/30 text-green-400 border border-green-500/30''`'`
+                : 'bg-red-900/30 text-red-400 border border-red-500/30'}`}>'
                     {apiKey.isActive ? 'Active' : 'Inactive'}
                   </span>
                 </div>"""
@@ -232,10 +232,7 @@ export default function ApiKeysManager(props: any) {}';
           </DialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-        </div>
-  );
-}
-export {ApiKeysManager};
+    </div>)}
 
 export {ApiKeysManager};
 
@@ -244,5 +241,7 @@ export {ApiKeysManager};
 export {ApiKeysManager};
 
 export {ApiKeysManager};
-';
-</Checkbox>;';;';
+
+export {ApiKeysManager};
+
+</Checkbox>

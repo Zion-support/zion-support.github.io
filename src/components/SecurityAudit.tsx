@@ -4,11 +4,12 @@ import { Shield, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
 interface SecurityCheck {
   name: string;
   status: 'pass' | 'warn' | 'fail';
-  message: string}
+  message: string;
+}
 
-const SecurityAudit: React.FC = () => {
+const SecurityAudit: React.FC = (props: any) => {
   const [checks, setChecks] = useState<SecurityCheck[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState<any>(true);
 
   useEffect(() => {
     const performSecurityChecks = async () => {
@@ -38,11 +39,13 @@ const SecurityAudit: React.FC = () => {
       ];
 
       setChecks(securityChecks);
-      setIsLoading(false)};
+      setIsLoading(false);
+    };
 
-    performSecurityChecks()}, []);
+    performSecurityChecks();
+  }, []);
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (props: any) => {
     switch (status) {
       case 'pass':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -51,10 +54,11 @@ const SecurityAudit: React.FC = () => {
       case 'fail':
         return <XCircle className="w-5 h-5 text-red-500" />;
       default:
-        return null}
+        return null;
+    }
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (props: any) => {
     switch (status) {
       case 'pass':
         return 'bg-green-50 border-green-200';
@@ -63,7 +67,8 @@ const SecurityAudit: React.FC = () => {
       case 'fail':
         return 'bg-red-50 border-red-200';
       default:
-        return 'bg-gray-50 border-gray-200'}
+        return 'bg-gray-50 border-gray-200';
+    }
   };
 
   if (isLoading) {
@@ -74,13 +79,14 @@ const SecurityAudit: React.FC = () => {
           <span>Running security audit...</span>
         </div>
       </div>
-    )}
+    );
+  }
 
   return (
     <div className="bg-gray-100 p-4 rounded-lg">
       <div className="flex items-center mb-4">
         <Shield className="w-5 h-5 mr-2 text-blue-500" />
-        <h3 className="text-lg font-semibold">Security Audit</h3>
+        <h3 className="text-lg font-semibold">Security Audit
       </div>
       
       <div className="space-y-3">
@@ -100,6 +106,10 @@ const SecurityAudit: React.FC = () => {
         ))}
       </div>
     </div>
-  )};
+    );
+};
 
 export default SecurityAudit;
+
+</any>
+</SecurityCheck>

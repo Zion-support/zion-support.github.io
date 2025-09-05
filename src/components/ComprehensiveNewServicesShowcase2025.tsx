@@ -1,5 +1,5 @@
-import React, { useState } from 'react';';
-export default ComprehensiveNewServicesShowcase2025;';';
+import React, { useState } from 'react';
+export default ComprehensiveNewServicesShowcase2025;
 import { comprehensiveNewServices2025 } from '../data/comprehensiveNewServices2025';
 export default function Page(props: any) {
 ;
@@ -39,10 +39,10 @@ export default function Page(props: any) {
             <div className="flex gap-2 overflow-x-auto pb-2">
               {categories.map((category) => (
                 <button
-                  key={category.id}';
-                  onClick={() => setSelectedCategory(category.id)}';';
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg whitespace-nowrap transition-all duration-200 ${selectedCategory === category.id'';';
-                      ? 'bg-cyan-600 text-white''';';
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg whitespace-nowrap transition-all duration-200 ${selectedCategory === category.id'
+                      ? 'bg-cyan-600 text-white''
                       : 'bg-gray-800 text-gray-300 hover: b g-gray-700'`
                   }`}
                 >"
@@ -83,16 +83,15 @@ export default function Page(props: any) {
                   <div>"
                     <h3 className="text-lg font-bold text-white group-hover: tex t-cyan-400 transition-colors">
                       {service.title}
-                    </h3>"
+                    "
                     <p className="text-sm text-gray-400">{service.tagline}</p>
                   </div>
                 </div>
                 {service.featured && ("
                   <div className="flex items-center space-x-1 text-yellow-400">"
                     <Star className="w-4 h-4 fill-current"   />"                    <span className="text-xs">Featured</span>
-                      </div>
-  );
-}
+                  </div>
+                )}
               </div>
 
               {/* Description */}"
@@ -129,9 +128,7 @@ export default function Page(props: any) {
                   {service.features.length > 3 && ("
                     <div className="text-xs text-gray-500">
                       +{service.features.length-3} more features
-                        </div>
-  );
-}
+                    </div>) }
                 </div>
               </div>
 
@@ -216,7 +213,7 @@ export default function Page(props: any) {
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">"
                 <Phone className="w-8 h-8 text-white"   />
               </div>"
-              <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>"
+              <h3 className="text-lg font-semibold text-white mb-2">Call Us"
               <p className="text-cyan-100">+1 302 464 0950</p>"
               <p className="text-cyan-200 text-sm">Available 24/7</p>
             </div>
@@ -225,7 +222,7 @@ export default function Page(props: any) {
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">"
                 <Mail className="w-8 h-8 text-white"   />
               </div>"
-              <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"
+              <h3 className="text-lg font-semibold text-white mb-2">Email Us"
               <p className="text-cyan-100">kleber@ziontechgroup.com</p>"
               <p className="text-cyan-200 text-sm">Response within 2 hours</p>
             </div>
@@ -234,7 +231,7 @@ export default function Page(props: any) {
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">"
                 <MapPin className="w-8 h-8 text-white"   />
               </div>"
-              <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"
+              <h3 className="text-lg font-semibold text-white mb-2">Visit Us"
               <p className="text-cyan-100">364 E Main St STE 1008</p>"              <p className="text-cyan-200 text-sm">Middletown DE 19709</p>
             </div>
           </div>
@@ -311,10 +308,14 @@ export default function Page(props: any) {
             </motion.div>
           </div>
         </div>
-      </div>';
-    </div>) }';';
+      </div>
+    </div>) }
 export default ComprehensiveNewServicesShowcase2025;'"`
 
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

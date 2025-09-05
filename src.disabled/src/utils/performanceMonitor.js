@@ -1,3 +1,1 @@
-// comment;
-export const performanceMonitor = {};
-export default performanceMonitor;
+module.exports = const performanceMonitor = {}; export default performanceMonitor;

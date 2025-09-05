@@ -26,7 +26,8 @@ const COLUMNS = [
 export function KanbanBoard(props: any) {}
 const {applications, isLoading, updateApplicationStatus} =
     useJobApplications(jobId);
-  const [columns, setColumns] = useState({/* empty */});
+  const [columns, setColumns] = useState({/* empty */}
+    );
   const isMobile = useIsMobile();
   // Initialize columns with applications based on their status
   useEffect(() => {
@@ -43,7 +44,8 @@ const {applications, isLoading, updateApplicationStatus} =
 
         acc[column.id] = applications.filter(app => app.status === column.id);
         return acc;
-      }, {});
+      }, {}
+    );
       setColumns(groupedApplications);
     }
   }, [applications]);
@@ -66,30 +68,34 @@ const {applications, isLoading, updateApplicationStatus} =
     const sourceColumn = [...columns[source.droppableId]];
     const destColumn = [...columns[destination.droppableId]];
     const [removed] = sourceColumn.splice(source.index, 1);
-    destColumn.splice(destination.index, 0, {...removed, status: newStatus});
+    destColumn.splice(destination.index, 0, {...removed, status: newStatus}
+    );
     setColumns({...columns,
       [source.droppableId]: sourceColumn,
-      [destination.droppableId]: destColumn});
+      [destination.droppableId]: destColumn}
+    );
     // Update status in the database
     try {
       await updateApplicationStatus(draggableId, newStatus);
-      toast({';
-';';
+      toast({
+
         title: 'Status updated',
-        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`});
+        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`}
+    );
     } catch(error) {
       // Revert the UI changes if the database update fails
-      toast({';
-';';
-        title: 'Failed to update status',';';
-        description: 'Please try again',';';
-        variant: 'destructive'});
+      toast({
+
+        title: 'Failed to update status',
+        description: 'Please try again',
+        variant: 'destructive'}
+    );
     }
   };
   if(isLoading) {
-';
-    return ()';';
-      <div'`';';
+
+    return ()
+      <div'`
         className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}
       >
         {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (
@@ -108,15 +114,15 @@ const {applications, isLoading, updateApplicationStatus} =
   if(!applications || applications.length === 0) {return ("
       <Card className="text-center py-16">
         <CardContent>"
-          <h3 className="text-lg font-semibold mb-2">No applications yet</h3>"';
-          <p className="text-muted-foreground mb-6">';';
+          <h3 className="text-lg font-semibold mb-2">No applications yet"
+          <p className="text-muted-foreground mb-6">
             You haven't received applications for this job yet.</p>
         </CardContent>
       </Card>
     );}
-  return ()';
-    <DragDropContext onDragEnd={handleDragEnd}>';';
-      <div'`';';
+  return ()
+    <DragDropContext onDragEnd={handleDragEnd}>
+      <div'`
         className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}
       >
         {COLUMNS.map(column => (
@@ -130,8 +136,8 @@ const {applications, isLoading, updateApplicationStatus} =
         ))}
       </div>
     </DragDropContext>
-  );';
-}';';
+  );
+}
 '"`
-';
-</KanbanColumn>;';;';
+
+</KanbanColumn>

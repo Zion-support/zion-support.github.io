@@ -1,8 +1,9 @@
-import React, {useState, useEffect, useCallback} from 'react';'';';
-import {motion, AnimatePresence} from 'framer-motion';'';';
-import {ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon} from '@heroicons/react/24/outline';'';
-const WebsiteImprovementDashboard = (props: any) => {}';';
-    const [isOpen, setIsOpen] = useState(showOnLoad);'';';
+<<<<<<< HEAD
+import React, {useState, useEffect, useCallback} from 'react';'
+import {motion, AnimatePresence} from 'framer-motion';'
+import {ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon} from '@heroicons/react/24/outline';'
+const WebsiteImprovementDashboard = (props: any) => {}
+    const [isOpen, setIsOpen] = useState(showOnLoad);'
     const [activeTab, setActiveTab] = useState('overview');
     const [metrics, setMetrics] = useState({}
         loadTime: 0,
@@ -11,7 +12,8 @@ const WebsiteImprovementDashboard = (props: any) => {}';';
         cumulativeLayoutShift: 0,
         firstInputDelay: 0,
         timeToInteractive: 0;
-    });
+    }
+    );
     const [seoAnalysis, setSeoAnalysis] = useState({}
         score: 0,
         issues[],;
@@ -23,20 +25,22 @@ const WebsiteImprovementDashboard = (props: any) => {}';';
             canonical: false,
             ogTags: false,
             twitterTags: false;
-    });
-    const [accessibilityReport, setAccessibilityReport] = useState({}';
-        score: 0,';';
-        issues[],;'';';
+    }
+    );
+    const [accessibilityReport, setAccessibilityReport] = useState({}
+        score: 0,
+        issues[],;'
         wcagCompliance: 'Non-Compliant',
         criticalIssues: 0,
         warnings: 0;
-    });
+    }
+    );
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     // Analyze website performance;
     const analyzePerformance = useCallback(async () => {}
-        setIsAnalyzing(true);';
-        // Simulate performance analysis;';';
-        await new Promise(resolve => setTimeout(resolve, 2000));'';';
+        setIsAnalyzing(true);
+        // Simulate performance analysis;
+        await new Promise(resolve => setTimeout(resolve, 2000));'
         // Mock performance data (in a real app, you'd use Web Vitals API)
         const mockMetrics = {}
   loadTime: Math.random() * 3000 + 1000, // 1-4 seconds;
@@ -64,5 +68,10 @@ export {WebsiteImprovementDashboard};
 
 export {WebsiteImprovementDashboard};
 
-export {WebsiteImprovementDashboard};';
-;';;';
+export {WebsiteImprovementDashboard};
+=======
+import React,{useState,useEffect,useCallback} from 'react'; import { motion, AnimatePresence, ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon } from 'lucide-react'; const WebsiteImprovementDashboard = (props) => {; const [isOpen,setIsOpen] = useState(showOnLoad); const [activeTab,setActiveTab] = useState('overview'); const [metrics,setMetrics] = useState({; loadTime: 0,; firstContentfulPaint: 0,; largestContentfulPaint: 0,; cumulativeLayoutShift: 0,; firstInputDelay: 0,; timeToInteractive: 0}
+}); const [seoAnalysis,setSeoAnalysis] = useState({; score: 0,; issues[],; suggestions[],; metaTags: {; title: false,; description: false,; keywords: false,; canonical: false,; ogTags: false,; twitterTags: false}}
+}); const [accessibilityReport,setAccessibilityReport] = useState({; score: 0,; issues[],; wcagCompliance: 'Non-Compliant',criticalIssues: 0,; warnings: 0}
+}); const [isAnalyzing,setIsAnalyzing] = useState(false); ;';';''
+>>>>>>> main

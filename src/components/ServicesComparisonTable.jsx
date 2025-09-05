@@ -1,15 +1,15 @@
-import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';'''';';
+import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';'''
 import React from 'react';
 ;
-import {Badge} from "./ui/badge";';
-import {Button} from "./ui/button";';';
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "./ui/card";import {Check, X, Star, Clock, Phone, Mail} from 'lucide-react';';
-import {}';';
-  COMPREHENSIVE_SERVICES,'';';
-  CONTACT_INFO} from '@/data/comprehensiveServices';';
-export function ServicesComparisonTable(props: any) {}';';
-''';';
-'''';';
+import {Badge} from "./ui/badge";
+import {Button} from "./ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "./ui/card";import {Check, X, Star, Clock, Phone, Mail} from 'lucide-react';
+import {}
+  COMPREHENSIVE_SERVICES,'
+  CONTACT_INFO} from '@/data/comprehensiveServices';
+export function ServicesComparisonTable(props: any) {}
+''
+'''
   const serviceCategories = ['AI Services',IT Services',Micro SAAS'];
   const getFeatureIcon = hasFeature => {}
     return hasFeature ? (
@@ -126,7 +126,7 @@ return()""
           <div className="text-center mb-8">""""
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">""
               Need Help Choosing?"""""
-            </h3>""""
+            """"
             <p className="text-slate-600 dark:text-slate-300">,
               Our expert team is here to help you select the perfect service for,
 your business needs"
@@ -203,15 +203,18 @@ export default Component
 </Button>
 </Badge>
 </div>
+</div>
 </CardContent>
 </CardDescription>
 </CardTitle>
 </Star>
 </div>
+</div>
 </CardHeader>
 </div>
-</h3>
+
 </div>
+</Phone>
 </Phone>
 </Button>
 </Clock>
@@ -219,9 +222,13 @@ export default Component
 </p>
 </Phone>
 </div>
+</div>
+</div>
+</div>
 </TableHead>
 </div>
 </X>
+</X>
 </Check>
-</div>';
-</div>;';;';
+</div>
+</div>

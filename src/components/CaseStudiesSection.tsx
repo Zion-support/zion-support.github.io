@@ -27,8 +27,8 @@ export function CaseStudiesSection(props: any) {
         >"
           <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-4">
             Success Stories
-          </h2>"';
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">';';
+          </h2>"
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover how we've helped businesses across industries achieve
             remarkable results through innovative technology solutions.</p>
         </motion.div>
@@ -65,7 +65,7 @@ export function CaseStudiesSection(props: any) {
                 <div>"
                   <h3 className="text-xl font-bold text-gray-900">
                     {study.comp}
-                  </h3>"
+                  "
                   <p className="text-gray-600 text-sm">{study.industry}</p>
                 </div>
               </div>
@@ -122,7 +122,7 @@ export function CaseStudiesSection(props: any) {
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">"
             <h3 className="text-2xl font-bold mb-4">
               Ready to Write Your Success Story?
-            </h3>"
+            "
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Join hundreds of satisfied clients who have transformed their
               businesses with our innovative technology solutions.</p>"
@@ -152,9 +152,10 @@ export default CaseStudiesSection;"
         </motion.div>;
       </div>;
     </section>;) }
-export default CaseStudiesSection;';
-export default CaseStudiesSection;';';
+export default CaseStudiesSection;
+export default CaseStudiesSection;
 '"`
 
-</motion>';
-</motion>;';;';
+</motion>
+</motion>
+</motion>

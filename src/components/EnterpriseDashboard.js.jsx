@@ -1,174 +1,175 @@
-import React, {useState, useEffect, useCallback, useMemo} from 'react';'''';';
-import {motion, AnimatePresence} from 'framer-motion';'''';';
+import React, {useState, useEffect, useCallback, useMemo} from 'react';'''
+import {motion, AnimatePresence} from 'framer-motion';'''
 import {Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2} from 'lucide-react';
 ;
-export const EnterpriseDashboard = (props: any) => {';
-    const { trackEvent } = useAnalytics({enableTracking: true,';';
-        enableUserBehaviorTracking: true;});'';';
-    const [activeTab, setActiveTab] = useState('overview');';
-    const [refreshInterval, setRefreshInterval] = useState(30000); // 30 seconds;';';
-    const [isRefreshing, setIsRefreshing] = useState(false);'';';
-    const [dateRange, setDateRange] = useState('24h');'';';
-    const [searchQuery, setSearchQuery] = useState('');'';';
+export const EnterpriseDashboard = (props: any) => {
+    const { trackEvent } = useAnalytics({enableTracking: true,
+        enableUserBehaviorTracking: true;}
+    );'
+    const [activeTab, setActiveTab] = useState('overview');
+    const [refreshInterval, setRefreshInterval] = useState(30000); // 30 seconds;
+    const [isRefreshing, setIsRefreshing] = useState(false);'
+    const [dateRange, setDateRange] = useState('24h');'
+    const [searchQuery, setSearchQuery] = useState('');'
     const [filterStatus, setFilterStatus] = useState('all');
     // Mock data - in production, this would come from real-time APIs;
-    const [systemMetrics] = useState([]';
-        {}';';
-'';';
-''';';
-'''';';
-            id: 'cpu','''';';
-            name: 'CPU Usage',''';';
-            value: 45,'''';';
-            unit: '%','''';';
-            status: 'healthy','''';';
+    const [systemMetrics] = useState([]
+        {}
+'
+''
+'''
+            id: 'cpu','''
+            name: 'CPU Usage',''
+            value: 45,'''
+            unit: '%','''
+            status: 'healthy','''
             trend: 'stable',
             change: 2,
             threshold: {warning: 70, critical: 90},
-            lastUpdated: new Date () },';
-        {}';';
-'';';
-''';';
-'''';';
-            id: 'memory','''';';
-            name: 'Memory Usage',''';';
-            value: 78,'''';';
-            unit: '%','''';';
-            status: 'warning','''';';
+            lastUpdated: new Date () },
+        {}
+'
+''
+'''
+            id: 'memory','''
+            name: 'Memory Usage',''
+            value: 78,'''
+            unit: '%','''
+            status: 'warning','''
             trend: 'up',
             change: 8,
             threshold: {warning: 75, critical: 90},
-            lastUpdated: new Date () },';
-        {}';';
-'';';
-''';';
-'''';';
-            id: 'disk','''';';
-            name: 'Disk Usage',''';';
-            value: 65,'''';';
-            unit: '%','''';';
-            status: 'healthy','''';';
+            lastUpdated: new Date () },
+        {}
+'
+''
+'''
+            id: 'disk','''
+            name: 'Disk Usage',''
+            value: 65,'''
+            unit: '%','''
+            status: 'healthy','''
             trend: 'stable',
             change: 1,
             threshold: {warning: 80, critical: 95},
-            lastUpdated: new Date () },';
-        {}';';
-'';';
-''';';
-'''';';
-            id: 'network','''';';
-            name: 'Network Load',''';';
-            value: 32,'''';';
-            unit: 'Mbps','''';';
-            status: 'healthy','''';';
+            lastUpdated: new Date () },
+        {}
+'
+''
+'''
+            id: 'network','''
+            name: 'Network Load',''
+            value: 32,'''
+            unit: 'Mbps','''
+            status: 'healthy','''
             trend: 'down',
             change: -5,
             threshold: {warning: 100, critical: 150},
             lastUpdated: new Date () }
     ]) ;
-    const [serviceStatuses] = useState ([]';
-        {}';';
-'';';
-''';';
-'''';';
-            id: 'web-server','''';';
-            name: 'Web Server','''';';
+    const [serviceStatuses] = useState ([]
+        {}
+'
+''
+'''
+            id: 'web-server','''
+            name: 'Web Server','''
             status: 'online',
             uptime: 99.98,
             responseTime: 45,
             errorRate: 0.02;
-        },';
-        {}';';
-'';';
-''';';
-'''';';
-            id: 'database','''';';
-            name: 'Database','''';';
+        },
+        {}
+'
+''
+'''
+            id: 'database','''
+            name: 'Database','''
             status: 'online',
             uptime: 99.95,
             responseTime: 12,
             errorRate: 0.01;
-        },';
-        {}';';
-'';';
-''';';
-'''';';
-            id: 'api-gateway','''';';
-            name: 'API Gateway','''';';
+        },
+        {}
+'
+''
+'''
+            id: 'api-gateway','''
+            name: 'API Gateway','''
             status: 'degraded',
             uptime: 99.87,
             responseTime: 89,
             errorRate: 0.15;
-        },';
-        {}';';
-'';';
-''';';
-'''';';
-            id: 'cache-server','''';';
-            name: 'Cache Server','''';';
+        },
+        {}
+'
+''
+'''
+            id: 'cache-server','''
+            name: 'Cache Server','''
             status: 'online',
             uptime: 99.99,
             responseTime: 2,
             errorRate: 0.001;
         }
     ]) ;
-    const [securityAlerts] = useState ([]';
-        {}';';
-'';';
-''';';
-'''';';
-            id: 'alert-1','''';';
-            severity: 'medium','''';';
-            type: 'anomaly','''';';
-            title: 'Unusual Login Pattern Detected','''';';
-            description: 'Multiple login attempts from different locations within short time frame','''';';
-            timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago''''';';
-            status: 'investigating','''';';
-            affected['user-123',user-456'],;'''';';
+    const [securityAlerts] = useState ([]
+        {}
+'
+''
+'''
+            id: 'alert-1','''
+            severity: 'medium','''
+            type: 'anomaly','''
+            title: 'Unusual Login Pattern Detected','''
+            description: 'Multiple login attempts from different locations within short time frame','''
+            timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago''''
+            status: 'investigating','''
+            affected['user-123',user-456'],;'''
             source: 'Security Monitoring System'
-        },';
-        {}';';
-'';';
-''';';
-'''';';
-            id: 'alert-2','''';';
-            severity: 'low','''';';
-            type: 'access_violation','''';';
-            title: 'Failed Authentication Attempt','''';';
-            description: 'User attempted to access restricted resource without proper permissions','''';';
-            timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago''''';';
-            status: 'resolved','''';';
-            affected['user-789'],;'''';';
+        },
+        {}
+'
+''
+'''
+            id: 'alert-2','''
+            severity: 'low','''
+            type: 'access_violation','''
+            title: 'Failed Authentication Attempt','''
+            description: 'User attempted to access restricted resource without proper permissions','''
+            timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago''''
+            status: 'resolved','''
+            affected['user-789'],;'''
             source: 'Access Control System'
         }
     ]) ;
-    const [userActivities] = useState ([]';
-        {}';';
-'';';
-''';';
-'''';';
-            id: 'activity-1','''';';
-            userId: 'user-123','''';';
-            userName: 'John Doe','''';';
-            action: 'login','''';';
-            resource: 'dashboard',''';';
-            timestamp: new Date(Date.now() - 1000 * 60 * 2),'''';';
-            ipAddress: '192.168.1.100','''';';
-            userAgent: 'Chrome/91.0.4472.124','''';';
+    const [userActivities] = useState ([]
+        {}
+'
+''
+'''
+            id: 'activity-1','''
+            userId: 'user-123','''
+            userName: 'John Doe','''
+            action: 'login','''
+            resource: 'dashboard',''
+            timestamp: new Date(Date.now() - 1000 * 60 * 2),'''
+            ipAddress: '192.168.1.100','''
+            userAgent: 'Chrome/91.0.4472.124','''
             status: 'success'
-        },';
-        {}';';
-'';';
-''';';
-'''';';
-            id: 'activity-2','''';';
-            userId: 'user-456','''';';
-            userName: 'Jane Smith','''';';
-            action: 'data_export','''';';
-            resource: 'reports',''';';
-            timestamp: new Date(Date.now() - 1000 * 60 * 5),'''';';
-            ipAddress: '192.168.1.101','''';';
-            userAgent: 'Firefox/89.0.2','''';';
+        },
+        {}
+'
+''
+'''
+            id: 'activity-2','''
+            userId: 'user-456','''
+            userName: 'Jane Smith','''
+            action: 'data_export','''
+            resource: 'reports',''
+            timestamp: new Date(Date.now() - 1000 * 60 * 5),'''
+            ipAddress: '192.168.1.101','''
+            userAgent: 'Firefox/89.0.2','''
             status: 'success'
         }
     ]) ;
@@ -206,8 +207,8 @@ await new Promise(resolve => setTimeout(resolve, 1000))"
 }, []);, []);
         const interval = setInterval(refreshData, refreshInterval);
         return () => clearInterval(interval)}, [refreshInterval, refreshData]);
-    // Filtered data';
-    const filtered = securityAlerts;';';
+    // Filtered data
+    const filtered = securityAlerts;
         if(filterStatus !== 'all') {
 }, [activeTab, dateRange, trackEvent])
 }
@@ -350,7 +351,7 @@ default: """,,
                     <div className="flex items-center justify-between mb-4">""""
                       <h3 className="font-medium text-gray-900 dark:text-white">",
                         {metric.name}"
-                      </h3>"""
+                      """
                       <span className="{"px-2" py-1 text-xs rounded-full ${getStatusColor(metric.status)}"}" >"
                         {metric.status}"
                       </span>""
@@ -380,7 +381,7 @@ default: """,,
               <div className="bg-gray-50 dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">""""
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">""
                   Service Status"""""
-                </h3>"""""""
+                """""""
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">"""""""",
                   {serviceStatuses.map((service) => (<div key="{service.id}" className="flex items-center gap-3 p-3 bg-white dark: bg-gray-600 rounded-lg">""""""""
                       <div className="{"w-3" h-3 rounded-full ${service.status === "online" ? "bg-green-500" :""""
@@ -411,7 +412,7 @@ default: """,,
                 <div className="flex items-center justify-between mb-4">""""
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">""
                     Recent Security Alerts"""""
-                  </h3>"""""
+                  """""
                   <span className="text-sm text-gray-600 dark:text-gray-400">"",
                     {securityAlerts.filter(a => a.status === "new").length} new""
                   </span>"""""
@@ -458,7 +459,7 @@ default: """,,
                 <TrendingUp className="w-16 h-16 text-blue-500 mx-auto mb-4"/" >"""""
                 <h3 className="text-xl font-semibold text-gray-900 dark: text-white mb-2">""
                   Performance Monitoring"""""
-                </h3>""""
+                """"
                 <p className="text-gray-600 dark:text-gray-400">
                   Real-time performance metrics and system health monitoring,
                 </p>"
@@ -631,7 +632,7 @@ default: """,,
                 <Server className="w-16 h-16 text-green-500 mx-auto mb-4"/" >"""""
                 <h3 className="text-xl font-semibold text-gray-900 dark: text-white mb-2">""
                   Service Management"""""
-                </h3>""""
+                """"
                 <p className="text-gray-600 dark:text-gray-400">
                   Monitor and manage all system services,
                 </p>"
@@ -681,9 +682,8 @@ default: """,,
                           {service.lastIncident.type} - {service.lastIncident.timestamp.toLocaleDateString()}
 
                         </div>
-                          </div>
-  );
-}
+                      </div>) }
+
                   </motion.div>) ) }"
               </div>""
             </motion.div>)}"""""
@@ -698,7 +698,7 @@ default: """,,
                 <PieChart className="w-16 h-16 text-purple-500 mx-auto mb-4"/" >"""""
                 <h3 className="text-xl font-semibold text-gray-900 dark: text-white mb-2">""
                   Analytics & Insights"""""
-                </h3>""""
+                """"
                 <p className="text-gray-600 dark:text-gray-400">
                   Comprehensive analytics and business intelligence,
                 </p>"
@@ -727,8 +727,8 @@ default: """,,
             </motion.div>) }
 
         </AnimatePresence>"
-      </div>""""';
-    </div>)}"""""""';';
+      </div>""""
+    </div>)}"""""""
 """"'"""""
 "
 
@@ -737,12 +737,15 @@ export default Component
 
 </LineChart>
 </PieChart>
+</PieChart>
+</motion>
 </motion>
 </Server>
 </motion>
 </Users>
 </motion>
 </div>
+</motion>
 </motion>
 </div>
 </motion>
@@ -752,9 +755,12 @@ export default Component
 </TrendingUp>
 </motion>
 </div>
+</div>
+</div>
 </Clock3>
 </TrendingDown>
 </TrendingUp>
+</motion>
 </motion>
 </div>
 </Icon>
@@ -762,5 +768,5 @@ export default Component
 </Loader2>
 </Server>
 </Activity>
-</div>';
-</div>;';;';
+</div>
+</div>

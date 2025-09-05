@@ -1,17 +1,18 @@
+<<<<<<< HEAD
 import React, {useState} from "react";"
-import {Button} from '@/components/ui/button';"';';
-import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';"';';
-import {Input} from '@/components/ui/input';"';';
-import {Textarea} from '@/components/ui/textarea';"';';
-import {Select, SelectTrigger, SelectValue, SelectContent, SelectItem} from '@/components/ui/select';"';';
-import {Calendar} from '@/components/ui/calendar';"';';
-import {Popover, PopoverTrigger, PopoverContent} from '@/components/ui/popover';"';';
-import {cn} from '@/lib/utils';"';';
-import {zodResolver} from '@hookform/resolvers/zod';"';';
-import {useForm} from 'react-hook-form';"';';
-import {z} from 'zod';"';';
-import {format, addDays} from 'date-fns';"';';
-import { CalendarIcon import { toast } from '@/components/ui/use-toast';"';';
+import {Button} from '@/components/ui/button';"
+import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';"
+import {Input} from '@/components/ui/input';"
+import {Textarea} from '@/components/ui/textarea';"
+import {Select, SelectTrigger, SelectValue, SelectContent, SelectItem} from '@/components/ui/select';"
+import {Calendar} from '@/components/ui/calendar';"
+import {Popover, PopoverTrigger, PopoverContent} from '@/components/ui/popover';"
+import {cn} from '@/lib/utils';"
+import {zodResolver} from '@hookform/resolvers/zod';"
+import {useForm} from 'react-hook-form';"
+import {z} from 'zod';"
+import {format, addDays} from 'date-fns';"
+import { CalendarIcon import { toast } from '@/components/ui/use-toast';"
 import {useInterviews} from '@/hooks/useInterviews';
 ).refine(date => date > new Date(), {"
         message: "Interview date must be in the future"}),"
@@ -20,13 +21,18 @@ import {useInterviews} from '@/hooks/useInterviews';
     platform: z.string().min(1, "Please select a meeting platform."),
     meetingLink: z.string().optional(),"
     title: z.string().min(3, "Please provide a brief title for the interview."),
-    notes: z.string().optional()});
+    notes: z.string().optional()}
+    );
 export function InterviewRequestForm(props: any) {
+=======
+import React from 'react';
+>>>>>>> main
 
-    const { requestInterview } = useInterviews();
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const form = useForm({
+interface InterviewRequestForm.jsProps {
+  // Add props here as needed
+}
 
+<<<<<<< HEAD
         resolver: zodResolver(formSchema),
         defaultValues: {
 
@@ -34,7 +40,8 @@ export function InterviewRequestForm(props: any) {
             duration: "30","
             platform: "zoom","
             notes: "","
-            meetingLink: ""}});
+            meetingLink: ""}}
+    );
     async function onSubmit(props: any) {
 
         if(!userDetails?.id) {
@@ -43,11 +50,12 @@ export function InterviewRequestForm(props: any) {
 "
                 title: "Authentication required","
                 description: "Please log in to schedule an interview","
-                variant: "destructive"});
+                variant: "destructive"}
+    );
             return}
         setIsSubmitting(true);
-        try {';
-            // Combine date and time`';';
+        try {
+            // Combine date and time`
             const dateTimeString = `${format(values.date,yyyy-MM-dd')}T${values.time}:00`;
             const scheduledDate = new Date(dateTimeString);
             // Calculate end time based on duration
@@ -60,11 +68,13 @@ export function InterviewRequestForm(props: any) {
                 meeting_platform: values.platform,
                 meeting_link: values.meetingLink,"
                 interview_type: "video",
-                title: values.title});
+                title: values.title}
+    );
             toast({
 "
                 title: "Interview requested",`
-                description: `Your interview request with ${talent.full_name} has been sent.`});
+                description: `Your interview request with ${talent.full_name} has been sent.`}
+    );
             onClose()}
         catch(error) {
 "
@@ -89,7 +99,7 @@ export function InterviewRequestForm(props: any) {
             <img loading="lazy" src={talent.profile_picture_url || "/placeholder.svg"} alt={talent.full_name} className="h-full w-full object-cover"  />
           </div>
           <div>"
-            <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>"
+            <h3 className="text-lg font-medium text-white">{talent.full_name}"
             <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>
           </div>
         </div>
@@ -178,20 +188,20 @@ export function InterviewRequestForm(props: any) {
                   </SelectContent>
                 </Select>
                 <FormMessage  />
-              </FormItem>)}/>';
-        </div>';';
-'"';';
-        {form.watch('platform') !== 'in-app' && (<FormField control={form.control} name="meetingLink" render={({ field }) => (<FormItem>';
-                <FormLabel>Meeting Link(Optional)</FormLabel>';';
-                <FormControl>'`';';
+              </FormItem>)}/>
+        </div>
+'"
+        {form.watch('platform') !== 'in-app' && (<FormField control={form.control} name="meetingLink" render={({ field }) => (<FormItem>
+                <FormLabel>Meeting Link(Optional)</FormLabel>
+                <FormControl>'`
                   <Input placeholder={`Add your ${form.watch('platform')} link here`} {...field}  />
                 </FormControl>
                 <FormMessage  />
               </FormItem>)}/>)}
 "
-        <FormField control={form.control} name="notes" render={({ field }) => (<FormItem>';
-              <FormLabel>Notes(Optional)</FormLabel>';';
-              <FormControl>'"';';
+        <FormField control={form.control} name="notes" render={({ field }) => (<FormItem>
+              <FormLabel>Notes(Optional)</FormLabel>
+              <FormControl>'"
                 <Textarea placeholder="Share what you'd like to discuss in this interview" className="h-20" {...field} />
               </FormControl>
               <FormMessage  />
@@ -205,12 +215,25 @@ export function InterviewRequestForm(props: any) {
             {isSubmitting ? "Scheduling..." : "Schedule Interview"}
           </Button>
         </div>
-      </form>';
-    </Form>)}';';
+      </form>
+    </Form>)}
 '"`
 
 </FormField>
 </FormField>
+</FormField>
+</FormField>
+</FormField>
 </Calendar>
-</FormField>';
-</FormField>;';;';
+</FormField>
+</FormField>
+=======
+export default function InterviewRequestForm.js({ }: InterviewRequestForm.jsProps) {
+  return (
+    <div>
+      <h1>InterviewRequestForm.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+>>>>>>> main

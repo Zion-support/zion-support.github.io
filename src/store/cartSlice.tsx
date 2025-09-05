@@ -17,10 +17,14 @@ const initialState: CartStat e = {
   itemCount: 0,;
   ;
   ;
+  ;
+  ;
+  ;
+  ;
 
 };
-const cartSlice: createSlic e({;  name: anycar t',;';
-const cartSlice: createSlic e({;';';
+const cartSlice: createSlic e({;  name: anycar t',;
+const cartSlice: createSlic e({;
   name: anycar t',;
   initialState,;
   reducers: {
@@ -64,14 +68,16 @@ const cartSlice: createSlic e({;';';
       state.items = [];
       state.total = 0;
 :src/store/cartSlice.tsx
-      state.itemCount = 0}}});
+      state.itemCount = 0}}}
+    );
       state.itemCount = 0},
   },
-});
+}
+    );
 
 export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
 export { cartSlice };
 export default cartSlice.reducer;
 
-</string>';
-</CartItem>';';
+</string>
+</CartItem>

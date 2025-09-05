@@ -78,7 +78,7 @@ return ()
                 </div>"
                 <h3 className="text-lg font-semibold text-white mb-1">
                   {testimonials[currentIndex].name}
-                </h3>"
+                "
                 <p className="text-zion-cyan font-medium mb-1">
                   {testimonials[currentIndex].role}
                 </p>"
@@ -110,8 +110,8 @@ return ()
         <div className="flex justify-center mt-8 space-x-2"> {testimonials.map(_: unknow n, index: unknow n ;
             <button key={index}
               onClick={(: unknown goToTestimonial(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex'';';
-                  ? 'bg-zion-cyan scale-125''';';
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex'
+                  ? 'bg-zion-cyan scale-125''
                   : 'bg-zion-slate-light hover: b g-zion-cyan/50'`
               }`}`
               aria-label={`Go to testimonial ${index + 1}`}
@@ -161,11 +161,11 @@ return ()
         </motion.div>;
       </div>;
     </section>;
-  )};';
-';';
+  )};
+
 export default Testimonials}}}'"`
 
 </motion>
 </button>
-</motion>';
-</motion>';';
+</motion>
+</motion>

@@ -3,7 +3,7 @@ export function RatingStars(props: any) {
     const filled = Math.floor(value);
     const half = value - filled >= 0.5;
     return (
-    <div className="min-h-screen bg-white">
+        <div className="flex items-center" data-testid="rating-stars">
       {[0, 1, 2, 3, 4].map((i) => {
             if (i < filled) {
                 return <Star key={i} data-testid="star-filled" className="h-4 w-4 text-yellow-400 fill-yellow-400" />;
@@ -13,6 +13,6 @@ export function RatingStars(props: any) {
             }
             return <Star key={i} data-testid="star-outline" className="h-4 w-4 text-gray-300" />;
         })}
-    </div>);
-}';
-;';;';
+    </div>
+    );
+}

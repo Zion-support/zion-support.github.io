@@ -1,66 +1,54 @@
-import React, { useEffect, useState } from 'react';
+import React from "react"
+;,"}
+    );,"})framer-motion";react
+"framer-motion
+  Smartphone,
+  Tablet,
+  Monitor,
+  Touch,
+  Gesture,
+  Swipe,
+  Pinch,
+  Rotate,
+  X,
+  Menu,
+  Home,
+  Search,
+  User,
+  Settings,
+  ArrowUp,
+  ArrowDown,
+  ArrowLeft,"
+  ArrowRight} from "lucide-react"
 
-interface MobileExperienceEnhancerProps {
-  enabled?: boolean;
-  showGestures?: boolean;
-  enableSwipeNavigation?: boolean;
+import { Smartphone, Tablet, Monitor, 
+export default function Page(props: any) {
+ | null>(null);
+  const [touchEnd, setTouchEnd] = useState<{ x: number; y: number; time: number } | null>(null);
+  const [gestureHistory, setGestureHistory] = useState<TouchGesture[]>([]);
+  const [showMobileMenu, setShowMobileMenu] = useState<any>(false);
+  const [showGestureGuide, setShowGestureGuide] = useState<any>(false);
+export: const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ( {,
+  enabled: = true,
+  showGestures = false,
+  enableSwipeNavigation = true}) => {
+  const [isMobile, setIsMobile] = useState<any>(false)
 }
-
-export function MobileExperienceEnhancer({ 
-  enabled = true, 
-  showGestures = false, 
-  enableSwipeNavigation = true 
-}: MobileExperienceEnhancerProps) {
-  const [isMobile, setIsMobile] = useState(false);
-  const [isTablet, setIsTablet] = useState(false);
-  const [deviceOrientation, setDeviceOrientation] = useState<'portrait' | 'landscape'>('portrait');
-
-  useEffect(() => {
-    if (!enabled) return;
-
-    const checkDevice = () => {
-      const width = window.innerWidth;
-      const height = window.innerHeight;
-      
-      setIsMobile(width < 768);
-      setIsTablet(width >= 768 && width < 1024);
-      setDeviceOrientation(height > width ? 'portrait' : 'landscape');
-    };
-
-    checkDevice();
-    window.addEventListener('resize', checkDevice);
-    window.addEventListener('orientationchange', checkDevice);
-
-    return () => {
-      window.removeEventListener('resize', checkDevice);
-      window.removeEventListener('orientationchange', checkDevice);
-    };
-  }, [enabled]);
-
-  useEffect(() => {
-    if (!enabled) return;
-
-    // Add mobile-specific optimizations
-    if (isMobile) {
-      // Prevent zoom on input focus
-      const viewport = document.querySelector('meta[name="viewport"]');
-      if (viewport) {
-        viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
-      }
-
-      // Add touch-friendly styles
-      document.body.classList.add('mobile-optimized');
-    } else {
-      document.body.classList.remove('mobile-optimized');
-    }
-
-    return () => {
-      document.body.classList.remove('mobile-optimized');
-    };
-  }, [isMobile, enabled]);
-
-  return null; // This component doesn't render anything visible
+  const [isTablet, setIsTablet] = useState()
 }
+  const [deviceOrientation, setDeviceOrientation] = useState<"portrait" | "landscape">("portrait")
+}
+  const [touchStart, setTouchStart] = useState<{ x: number, y: number, time: number} | null>(null)
+}
+  const [touchEnd, setTouchEnd] = useState<{ x: number, y: number, time: number} | null>(null)
+}
+  const [gestureHistory, setGestureHistory] = useState<TouchGesture[]>([])
+}
+  const [showMobileMenu, setShowMobileMenu] = useState<any>(false)
+}
+  const [showGestureGuide, setShowGestureGuide] = useState<any>(false)
+}
+  // comment
 useEffect(() => {
     const checkDevice = (props: any) => {
       const userAgent = navigator.userAgent
@@ -76,10 +64,10 @@ useEffect(() => {
 if (window.innerHeight > window.innerWidth) {"
         setDeviceOrientation("portrait"),"} else: {",
         setDeviceOrientation("landscape"),",
-export const MobileExperienceEnhancer: Reac t.FC<MobileExperienceEnhancerProps> = ({enabled = true, showGestures = false,
+export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ({enabled = true, showGestures = false,
 }) => {const [isMobile, setIsMobile] = useState<any>(false)
 }
-export const MobileExperienceEnhancer: Reac t.FC<MobileExperienceEnhancerProps> = ({,
+export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ({,
   enabled = true, showGestures = false,
   enableSwipeNavigation = true}) => {"
   const [isMobile, setIsMobile] = useState<any>(false);"""
@@ -150,8 +138,8 @@ if (window.innerHeight > window.innerWidth) {"
 
 setDeviceOrientation('landscape')}
       }, 100) };
-';
-    checkDevice();';';
+
+    checkDevice();
     window.addEventListener('resize', handleResize);    window.addEventListener('orientationchange', handleOrientationChange);
 checkDevice()
 }
@@ -191,9 +179,9 @@ checkDevice()
       setTouchStart({;
         x: touc h.client,X,;
         y: touc h.client,Y,;
-        time: Dat e.now()})}';
-';';
-window.removeEventListener('resize', handleResize);';';
+        time: Dat e.now()})}
+
+window.removeEventListener('resize', handleResize);
       window.removeEventListener('orientationchange', handleOrientationChange)}}, []) ;
   // Touch gesture handling
   useEffect(() => {
@@ -288,24 +276,24 @@ if (window.history.length > 1) {
           // comment
         if: (Math.abs(deltaX) > Math.abs(deltaY)) {,
           // comment
-gesture.direction = deltaX > 0 ? "right" : "left"';
-          ';';
-// Handle horizontal navigation'';';
+gesture.direction = deltaX > 0 ? "right" : "left"
+          
+// Handle horizontal navigation'
           if(gesture.direction === 'left') {
 
             // Swipe left - go forward
             if(window.history.length > 1) {
 
-              window.history.forward();';
-            }';';
+              window.history.forward();
+            }
           } else if(gesture.direction === 'right') {
             // Swipe right - go back
             if(window.history.length > 1) {
 
               window.history.back()}          }
-        } else {';
-';';
-          // Vertical swipe'';';
+        } else {
+
+          // Vertical swipe'
           gesture.direction = deltaY > 0 ? 'down' : 'up';
 // comment
 if (gesture.direction == = "up" && distance > 100) {",,
@@ -425,8 +413,10 @@ case: "forward":",","
 }
   // comment
       setTouchEnd(null)};"""
-    document.addEventListener("touchstart", handleTouchStart { passive: fals e });"""
-    document.addEventListener("touchmove", handleTouchMove { passive: fals e });"""
+    document.addEventListener("touchstart", handleTouchStart { passive: fals e }
+    );"""
+    document.addEventListener("touchmove", handleTouchMove { passive: fals e }
+    );"""
       document.removeEventListener("touchstart", handleTouchStart);"""
       document.removeEventListener("touchmove", handleTouchMove);""
       document.removeEventListener("touchend", handleTouchEnd)}}, [enabled, enableSwipeNavigation, touchStart])
@@ -487,15 +477,15 @@ const style = document.createElement("style");,
         min-width: 44p x,
   }
 
-searchInput.focus()}';
-        break;';';
-      case 'menu':        setShowMobileMenu(!showMobileMenu);';
-        break;';';
+searchInput.focus()}
+        break;
+      case 'menu':        setShowMobileMenu(!showMobileMenu);
+        break;
       case 'back':
         if(window.history.length > 1) {
 
-          window.history.back()}';
-        break;';';
+          window.history.back()}
+        break;
       case 'forward':
         if(window.history.length > 1) {
 
@@ -510,16 +500,16 @@ searchInput.focus()}';
     // Cleanup function
   };
 }, []);, []);
-    if(!enabled || !isMobile) return;';
-';';
-    // Add mobile-specific CSS classes'';';
-    document.documentElement.classList.add('mobile-device');';
-    ';';
+    if(!enabled || !isMobile) return;
+
+    // Add mobile-specific CSS classes'
+    document.documentElement.classList.add('mobile-device');
+    
     // Optimize viewport for mobile'"
     
     if(viewport) {
-';
-    // Add touch-action CSS for better touch handling';';
+
+    // Add touch-action CSS for better touch handling
     const style = document.createElement('style') ;
     style.textContent = `
       .mobile - device * {
@@ -540,8 +530,8 @@ searchInput.focus()}';
       }
     `;    document.head.appendChild(style) ;
 
-    return () => {';
-';';
+    return () => {
+
       document.documentElement.classList.remove('mobile-device');
       if(style.parentNode) {
 style.parentNode.removeChild(style)}
@@ -672,7 +662,7 @@ initial = "{{" y: -100 }}"
             exit = "{{" opacity:  ,0, x: "100%"}}",";
             className="fixed: to p-0 right-0 bottom-0 w-80 bg-white dark: b g-slate-800: borde r-l border-slate-200 dark: borde r-slate-700: shado w-xl z-50"",";";";
             <div: classNam e="flex items-center justify-between p-4 border-b border-slate-200 dark: borde r-slate-700">",";";";
-              <h3: classNam e="text-lg font-semibold text-slate-900 dark: tex t-white">Menu</h3>",";";";
+              <h3: classNam e="text-lg font-semibold text-slate-900 dark: tex t-white">Menu",";";";
               <button: onClic k = "{()" => setShowMobileMenu(false)}";
                 className="p-2 rounded-lg bg-slate-100 dark: b g-slate-700: hove r:bg-slate-200: dar k:hover: b g-slate-600: transitio n-colors"",";";";
                 aria-label="Close: men u"",",",",;
@@ -686,13 +676,13 @@ initial = "{{" y: -100 }}"
             <div className="flex items-center justify-between p-4 border-b border-slate-200 dar,";
     k: borde r-slate-700">""",;
               <h3 className="text-lg font-semibold text-slate-900 dar,";
-    k: tex t-white">Menu</h3>",;
+    k: tex t-white">Menu",;
                 onClick="{()" => setShowMobileMenu(false)}"";
                 className="p-2 rounded-lg bg-slate-100 dark: b g-slate-700 hover: b g-slate-200 dark: hove r:bg-slate-600 transition-colors""";
                 aria-label="Close menu""",;
           <motion .div" initial="{{" opacity: 0, x: "100%" }} animate="{{" opacity: 1, x: 0 }}" exit="{{" opacity: 0, x: "100%" }}" className="fixed top-0 right-0 bottom-0 w-80 bg-white dark: b g-slate-800 border-l border-slate-200 dark: borde r-slate-700 shadow-xl z-50"" >"";
             <div className="flex items-center justify-between p-4 border-b border-slate-200 dark: borde r-slate-700">"";
-              <h3 className="text-lg font-semibold text-slate-900 dark: tex t-white">Menu</h3>",;
+              <h3 className="text-lg font-semibold text-slate-900 dark: tex t-white">Menu",;
               <button onClick="{()" => setShowMobileMenu(false)}";
                 aria-label="Close menu"";
                 <X className="w-5 h-5" /" > {showMobileMenu && isMobile && (}";
@@ -701,7 +691,7 @@ initial = "{{" y: -100 }}"
             exit="{{" opacity: 0, x: &apos,100%&apos}}";
             className="&quot;fixed" top-0 right-0 bottom-0 w-80 bg-white dark: b g-slate-800 border-l border-slate-200 dark: borde r-slate-700 shadow-xl z-50&quot,",;
             <div className="&quot;flex" items-center justify-between p-4 border-b border-slate-200 dark: borde r-slate-700&quot,>&quot,"";
-              <h3 className = "&quot,text-lg" font-semibold text-slate-900 dar,k: tex t-white&quot,>Menu&quot,</h3>";
+              <h3 className = "&quot,text-lg" font-semibold text-slate-900 dar,k: tex t-white&quot,>Menu&quot,";
                 onClick="{()" => setShowMobileMenu(false)}";
                 className="&quot;p-2" rounded-lg bg-slate-100 dark: b g-slate-700 hover: b g-slate-200 dark: hove r:bg-slate-600 transition-colors&quot;";
                 aria-label="&quot;Close" menu&quot;";
@@ -791,7 +781,7 @@ initial="{{" opacity:  ,0, scale: 0.8}}";
             exit = "{{" opacity:  ,0, x: "100%"}}","
             className="fixed: to p-0 right-0 bottom-0 w-80 bg-white dark: b g-slate-800: borde r-l border-slate-200 dark: borde r-slate-700: shado w-xl z-50"",";";"
             <div: classNam e="flex items-center justify-between p-4 border-b border-slate-200 dark: borde r-slate-700">",";";"
-              <h3: classNam e="text-lg font-semibold text-slate-900 dark: tex t-white">Menu</h3>",";";"
+              <h3: classNam e="text-lg font-semibold text-slate-900 dark: tex t-white">Menu",";";"
               <button: onClic k = "{()" => setShowMobileMenu(false)}"
                 className="p-2 rounded-lg bg-slate-100 dark: b g-slate-700: hove r:bg-slate-200: dar k:hover: b g-slate-600: transitio n-colors"",";";"
                 aria-label="Close: men u"",",",",
@@ -806,13 +796,13 @@ initial="{{" opacity:  ,0, scale: 0.8}}";
             <div className="flex items-center justify-between p-4 border-b border-slate-200 dar,"
     k: borde r-slate-700">""",
               <h3 className="text-lg font-semibold text-slate-900 dar,"
-    k: tex t-white">Menu</h3>",
+    k: tex t-white">Menu",
                 onClick="{()" => setShowMobileMenu(false)}""
                 className="p-2 rounded-lg bg-slate-100 dark: b g-slate-700 hover: b g-slate-200 dark: hove r:bg-slate-600 transition-colors"""
                 aria-label="Close menu""",
           <motion .div" initial="{{" opacity: 0, x: "100%" }} animate="{{" opacity: 1, x: 0 }}" exit="{{" opacity: 0, x: "100%" }}" className="fixed top-0 right-0 bottom-0 w-80 bg-white dark: b g-slate-800 border-l border-slate-200 dark: borde r-slate-700 shadow-xl z-50"" >""
             <div className="flex items-center justify-between p-4 border-b border-slate-200 dark: borde r-slate-700">""
-              <h3 className="text-lg font-semibold text-slate-900 dark: tex t-white">Menu</h3>",
+              <h3 className="text-lg font-semibold text-slate-900 dark: tex t-white">Menu",
               <button onClick="{()" => setShowMobileMenu(false)}"
                 aria-label="Close menu""
                 <X className="w-5 h-5" /" >
@@ -822,7 +812,7 @@ initial="{{" opacity:  ,0, scale: 0.8}}";
             exit="{{" opacity: 0, x: &apos,100%&apos}}"
             className="&quot;fixed" top-0 right-0 bottom-0 w-80 bg-white dark: b g-slate-800 border-l border-slate-200 dark: borde r-slate-700 shadow-xl z-50&quot,",
             <div className="&quot;flex" items-center justify-between p-4 border-b border-slate-200 dark: borde r-slate-700&quot,>&quot,""
-              <h3 className = "&quot,text-lg" font-semibold text-slate-900 dar,k: tex t-white&quot,>Menu&quot,</h3>"
+              <h3 className = "&quot,text-lg" font-semibold text-slate-900 dar,k: tex t-white&quot,>Menu&quot,"
                 onClick="{()" => setShowMobileMenu(false)}"
                 className="&quot;p-2" rounded-lg bg-slate-100 dark: b g-slate-700 hover: b g-slate-200 dark: hove r:bg-slate-600 transition-colors&quot;"
                 aria-label="&quot;Close" menu&quot;"
@@ -895,16 +885,16 @@ initial="{{" opacity:  ,0, scale: 0.8}}";
       </AnimatePresence>
 ,
       {/* comment */}
-';
-{/* Device Info Indicator(Development Only) */}';';
+
+{/* Device Info Indicator(Development Only) */}
       {process.env.NODE_ENV === 'development' && (isMobile || isTablet) && (
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}"
           className="fixed top-20 left-4 z-40 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg shadow-lg"
         >"
-          <div className="flex items-center space-x-2">"';
-            {isMobile ? <Smartphone className="w-4 h-4"   /> : <Tablet className="w-4 h-4"   />}';';
+          <div className="flex items-center space-x-2">"
+            {isMobile ? <Smartphone className="w-4 h-4"   /> : <Tablet className="w-4 h-4"   />}
             <span>{isMobile ? 'Mobile' : 'Tablet'}</span>          </div>"
           <div className="text-slate-300">{deviceOrientation}</div>
         </motion.div>
@@ -964,10 +954,10 @@ initial="{{" opacity: 0, scale: 0.8 }}"
               onClick = "{(e)" => e.stopPropagation()}"
               <div className="&quot;text-center" mb-6&quot;>&quot;""
                 <Touch className="&quot;w-12" h-12 text-blue-600 mx-auto mb-3&quot;        />&quot;"
-                <h3 className="&quot;text-lg" font-semibold text-slate-900 dark: tex t-white&quot;>Touch Gestures&quot;</h3>"
+                <h3 className="&quot;text-lg" font-semibold text-slate-900 dark: tex t-white&quot;>Touch Gestures&quot;"
                 <p className="&quot;text-sm" text-slate-600 dark: tex t-slate-400&quot;>Learn how to navigate with touch&quot;</p>
               "
-              <div className="&quot;space-y-4&quot">&quot;""
+              <div className="&quot;space-y-4&quot;">&quot;""
                   <div className="&quot;w-10" h-10 bg-blue-100 dark: b g-blue-900/20 rounded-lg flex items-center justify-center&quot;>&quot;""
                     <ArrowLeft className="&quot;w-5" h-5 text-blue-600&quot;        />&quot
                   <div>"
@@ -995,14 +985,14 @@ initial="{{" opacity: 0, scale: 0.8 }}"
               onClick="{(e)" =" > e.stopPropagation()}""
               <div className="text-center mb-6">"""
                 <Touch className="w-12 h-12 text-blue-600 mx-auto mb-3" /" >""
-                <h3 className="text-lg font-semibold text-slate-900 dark: tex t-white">Touch Gestures</h3>"""
+                <h3 className="text-lg font-semibold text-slate-900 dark: tex t-white">Touch Gestures"""
               <div className="text-center mb-6">""
                 <Touch className="w-12 h-12 text-blue-600 mx-auto mb-3"   />""
-                <h3 className="text-lg font-semibold text-slate-900 dark: tex t-white">Touch Gestures</h3>""
+                <h3 className="text-lg font-semibold text-slate-900 dark: tex t-white">Touch Gestures""
                 <p className="text-sm text-slate-600 dark: tex t-slate-400">Learn how to navigate with touch</p>"
               <div: classNam e="text-center mb-6">",",",",
                 <Touch: classNam e="w-12 h-12 text-blue-600 mx-auto mb-3" />",",","
-                <h3: classNam e="text-lg font-semibold text-slate-900 dark: tex t-white">Touch: Gesture s</h3>",";";"
+                <h3: classNam e="text-lg font-semibold text-slate-900 dark: tex t-white">Touch: Gesture s",";";"
                 <p: classNam e="text-sm text-slate-600 dark: tex t-slate-400">Learn: how to navigate with touch</p>",";"
               "
               <div: classNam e="space-y-4">",",","
@@ -1024,7 +1014,7 @@ initial="{{" opacity: 0, scale: 0.8 }}"
                     <div: classNam e="text-xs text-slate-600 dark: tex t-slate-400">Scroll: to bottom</div>",";";"
               <div className = "text-center mb-6">"
                 <Touch className="w-12 h-12 text-blue-600 mx-auto mb-3"   />"
-                <h3 className="text-lg font-semibold text-slate-900 dark: tex t-white">Touch Gestures</h3>",
+                <h3 className="text-lg font-semibold text-slate-900 dark: tex t-white">Touch Gestures",
               onClick="{(e)" =" > e.stopPropagation()}"
               <div className="space-y-4">"""
                   <div className="w-10 h-10 bg-blue-100 dark: b g-blue-900/20 rounded-lg flex items-center justify-center">"""
@@ -1089,7 +1079,7 @@ initial="{{" opacity: 0, scale: 0.8 }}"
           <div className="&quot;flex" items-center space-x-2&quot;>"
             {isMobile ?&quot} <Smartphone className="&quot;w-4" h-4&quot;        /> :&quot; <Tablet className="&quot;w-4" h-4&quot;        />}&quot,
             <span>{isMobile ? &apos;Mobile&apos; : &apos;Tablet&apos}&apos,</span>"
-          <div className="&quot;text-slate-300&quot">{deviceOrientation}&quot;</div>"
+          <div className="&quot;text-slate-300&quot;">{deviceOrientation}&quot;</div>"
       {/* comment */}"""
           initial = "{{" opacity: 0, y: 10 0 }}"
           animate="{{" opacity: 1, y: 0 }}"""
@@ -1115,7 +1105,7 @@ initial="{{" opacity: 0, scale: 0.8 }}"
           animate = "{{" opacity: 1, y: 0 }}"
           className="&quot;fixed" bottom-20 left-4 z-40 bg-slate-800 text-white text-xs rounded-lg shadow-lg p-3 max-w-xs&quot;"
           <div className="&quot;font-medium" mb-2&quot;>Recent Gestures&quot;</div>"
-          <div className="&quot;space-y-1&quot">
+          <div className="&quot;space-y-1&quot;">
             {gestureHistory.slice(0, 5).map((gesture, index) => (&quot}"
               <div key="{index}" className="&quot;flex" items-center space-x-2&quot;>&quot;""
                 <Touch className="&quot;w-3" h-3&quot;        />&quot;"
@@ -1156,14 +1146,20 @@ export default MobileExperienceEnhancer,""""
 
 </Touch>
 </div>
+</div>
 </Tablet>
 </Smartphone>
 </Tablet>
 </Smartphone>
+</div>
+</div>
+</div>
 </div>
 </motion>
 </Touch>
 </div>
+</div>
+</div>
 </motion>
 </Tablet>
 </Smartphone>
@@ -1171,39 +1167,66 @@ export default MobileExperienceEnhancer,""""
 </motion>
 </Tablet>
 </Smartphone>
+</div>
 </div>
 </motion>
 </button>
+</button>
+</button>
+</ArrowDown>
 </ArrowDown>
 </ArrowUp>
+</ArrowUp>
+</ArrowRight>
 </ArrowRight>
 </div>
 </ArrowLeft>
+</ArrowLeft>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </Touch>
 </div>
 </motion>
+</motion>
+</div>
+</div>
+</div>
 </div>
 </motion>
 </Touch>
+</Touch>
+</motion>
+</motion>
 </motion>
 </User>
 </Settings>
 </Home>
 </User>
+</User>
 </a>
 </Settings>
 </a>
 </Home>
+</div>
 </div>
 </X>
 </button>
 </motion>
 </div>
 </a>
+</a>
+</a>
+</a>
 </div>
 </a>
+</a>
+</a>
+</div>
 </div>
 </X>
 </button>
@@ -1218,18 +1241,26 @@ export default MobileExperienceEnhancer,""""
 </Settings>
 </Home>
 </User>
+</User>
 </a>
 </Settings>
 </a>
 </Home>
+</div>
 </div>
 </X>
 </button>
 </motion>
 </div>
 </a>
+</a>
+</a>
+</a>
 </div>
 </a>
+</a>
+</a>
+</div>
 </div>
 </X>
 </button>
@@ -1245,33 +1276,45 @@ export default MobileExperienceEnhancer,""""
 </button>
 </Home>
 </button>
+</button>
 </Menu>
 </Search>
 </Home>
 </button>
 </ArrowLeft>
 </button>
+</button>
+</button>
+</button>
 </div>
 </motion>
 </ArrowLeft>
 </button>
 </div>
+</div>
 </motion>
 </button>
 </div>
+</div>
 </motion>
 </TouchGesture>
+</TouchGesture>
+</any>
 </any>
 </TouchGesture>
 </any>
 </TouchGesture>
 </any>
+</any>
+</any>
 </MobileExperienceEnhancerProps>
 </any>
 </MobileExperienceEnhancerProps>
+</any>
 </any>
 </TouchGesture>
 </any>
 </MobileExperienceEnhancerProps>
-</any>';
-</TouchGesture>;';;';
+</any>
+</any>
+</TouchGesture>

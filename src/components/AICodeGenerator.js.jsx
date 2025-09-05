@@ -1,38 +1,40 @@
-import React, {useState, useCallback} from 'react';'''';';
-import {motion, AnimatePresence} from 'framer-motion';'''';';
+import React, {useState, useCallback} from 'react';'''
+import {motion, AnimatePresence} from 'framer-motion';'''
 import {Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2} from 'lucide-react';
 import {useAICodeGeneration} from "../hooks/useAICodeGeneration.jsx";
 ;
-export const AICodeGenerator = (props: any) => {';
-    const { trackEvent } = useAnalytics({enableTracking: true,';';
-        enableUserBehaviorTracking: true;});'';';
-    const [activeTab, setActiveTab] = useState('generate');';';
-    const [showAdvanced, setShowAdvanced] = useState(false);'';';
+export const AICodeGenerator = (props: any) => {
+    const { trackEvent } = useAnalytics({enableTracking: true,
+        enableUserBehaviorTracking: true;}
+    );'
+    const [activeTab, setActiveTab] = useState('generate');
+    const [showAdvanced, setShowAdvanced] = useState(false);'
     const [customCode, setCustomCode] = useState('');
     const [copied, setCopied] = useState(false);
-    const {isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode} = useAICodeGeneration();';
-    const [form, setForm] = useState({}';';
-'';';
-''';';
-'''';';
-        prompt: '','''';';
-        language: 'typescript','''';';
-        framework: 'react','''';';
-        style: 'functional','''';';
-        target: 'web','''';';
+    const {isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode} = useAICodeGeneration();
+    const [form, setForm] = useState({}
+'
+''
+'''
+        prompt: '','''
+        language: 'typescript','''
+        framework: 'react','''
+        style: 'functional','''
+        target: 'web','''
         quality: 'development',
         includeTests: false,
         includeDocs: false,
         includeErrorHandling: false,
         includeLogging: false,
         includeMetrics: false;
-    });
+    }
+    );
     // Handle form submission;
     const handleSubmit = useCallback(async (e) => {}
         e.preventDefault();
-        if(!form.prompt.trim())';
-            return;';';
-        await generateCode(form.prompt, form);'';';
+        if(!form.prompt.trim())
+            return;
+        await generateCode(form.prompt, form);'
         trackEvent('ai_code_generator',form_submitted', form.language, null, {}
             framework: form.framework,
             style: form.style,
@@ -41,39 +43,39 @@ export const AICodeGenerator = (props: any) => {';
         })}, [form, generateCode, trackEvent]);
     // Handle custom code analysis;
     const handleAnalyzeCustomCode = useCallback(async () => {}
-        if(!customCode.trim())';
-            return;';';
-        await analyzeCode(customCode, form.language);'';';
+        if(!customCode.trim())
+            return;
+        await analyzeCode(customCode, form.language);'
         trackEvent('ai_code_generator',custom_code_analyzed', form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent]);
     // Handle code optimization;
     const handleOptimizeCode = useCallback(async (focus) => {}
         if(!generatedCode && !customCode)
             return;
         const codeToOptimize = generatedCode || customCode;
-        const optimizedCode = await optimizeCode(codeToOptimize, focus);';
-        if (generatedCode) {}';';
-'';';
-            // Update generated code''';';
-            // Note: In a real implementation, you'd want to update the state properly;';';
-        }'';';
+        const optimizedCode = await optimizeCode(codeToOptimize, focus);
+        if (generatedCode) {}
+'
+            // Update generated code''
+            // Note: In a real implementation, you'd want to update the state properly;
+        }'
         trackEvent('ai_code_generator',code_optimized', focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent]);
     // Handle test generation;
-    const handleGenerateTests = useCallback(async () => {}';
-        if(!generatedCode && !customCode)';';
-            return;'';';
-        const codeToTest = generatedCode || customCode;''';';
-        const testCode = await generateTests(codeToTest, form.language);'''';';
-        // In a real implementation, you'd want to display the test code''''';';
-        // '''';';
+    const handleGenerateTests = useCallback(async () => {}
+        if(!generatedCode && !customCode)
+            return;'
+        const codeToTest = generatedCode || customCode;''
+        const testCode = await generateTests(codeToTest, form.language);'''
+        // In a real implementation, you'd want to display the test code''''
+        // '''
         trackEvent('ai_code_generator',tests_generated', form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]);
     // Handle documentation generation;
-    const handleGenerateDocs = useCallback(async () => {}';
-        if(!generatedCode && !customCode)';';
-            return;'';';
-        const codeToDoc = generatedCode || customCode;''';';
-        const docs = await generateDocs(codeToDoc, form.language);'''';';
-        // In a real implementation, you'd want to display the documentation''''';';
-        // '''';';
+    const handleGenerateDocs = useCallback(async () => {}
+        if(!generatedCode && !customCode)
+            return;'
+        const codeToDoc = generatedCode || customCode;''
+        const docs = await generateDocs(codeToDoc, form.language);'''
+        // In a real implementation, you'd want to display the documentation''''
+        // '''
         trackEvent('ai_code_generator',docs_generated', form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
     // Copy code to clipboard;
     const copyToClipboard = useCallback(async (code) => {}
@@ -281,7 +283,7 @@ const handleClearHistory = useCallback(() => {}""
                   <div className="flex items-center justify-between">""""
                     <h3 className="text-lg font-semibold text-gray-900 dark: text-white">""
                       Generated Code"""""
-                    </h3>"""""
+                    """""
                     <div className="flex items-center gap-2">"""",
                       <button onClick="{()" =" > copyToClipboard(generatedCode)} className="px-3 py-1 bg-gray-100 hover: bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded text-sm transition-colors flex items-center gap-2">""""",
                         {copied ? <CheckCircle className="w-4 h-4"/" > : <Copy className="w-4 h-4"/" >}"""
@@ -350,9 +352,8 @@ const handleClearHistory = useCallback(() => {}""
                               {value}/10"""""
                             </div>""""
                             <div className="text-sm text-gray-600 dark:text-gray-400">{label}</div>
-                              </div>
-  );
-}
+                          </div>)}
+
                     return null})}"
                   </div>""
 """""
@@ -384,9 +385,8 @@ const handleClearHistory = useCallback(() => {}""
                               </div>""""
                               {issue.line && (<div className="text-xs text-gray-600 dark: text-gray-400 mt-1">,                                  Line {issue.line}
 
-                                    </div>
-  );
-}
+                                </div>) }
+
                             </div>
                           </div>) ) }
 
@@ -405,7 +405,7 @@ const handleClearHistory = useCallback(() => {}""
                 <Zap className="w-16 h-16 text-yellow-500 mx-auto mb-4"/" >"""""
                 <h3 className="text-xl font-semibold text-gray-900 dark: text-white mb-2">""
                   Code Optimization"""""
-                </h3>""""
+                """"
                 <p className="text-gray-600 dark:text-gray-400">
                   Select an optimization focus area to improve your code"
                 </p>""
@@ -436,7 +436,7 @@ const handleClearHistory = useCallback(() => {}""
                 <TestTube className="w-16 h-16 text-green-500 mx-auto mb-4"/" >"""""
                 <h3 className="text-xl font-semibold text-gray-900 dark: text-white mb-2">""
                   Generate Tests"""""
-                </h3>""""
+                """"
                 <p className="text-gray-600 dark:text-gray-400">
                   Automatically generate comprehensive test suites for your code"
                 </p>""
@@ -458,7 +458,7 @@ const handleClearHistory = useCallback(() => {}""
                 <FileText className="w-16 h-16 text-indigo-500 mx-auto mb-4"/" >"""""
                 <h3 className="text-xl font-semibold text-gray-900 dark: text-white mb-2">""
                   Generate Documentation"""""
-                </h3>""""
+                """"
                 <p className="text-gray-600 dark:text-gray-400">
                   Create comprehensive documentation for your code"
                 </p>""
@@ -479,7 +479,7 @@ const handleClearHistory = useCallback(() => {}""
 """"}} className="mt-8 border-t border-gray-200 dark: border-gray-700 pt-6">""""
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">"",
               AI Suggestions ({suggestions.length})"""""
-            </h3>""""
+            """"
             <div className="grid gap-4">"
               {suggestions.map((suggestion) => (<motion.div key="{suggestion.id}" initial = {}"
   {opacity: 0, x: 20}} animate = {}""
@@ -537,7 +537,7 @@ const handleClearHistory = useCallback(() => {}""
             <div className="flex items-center justify-between mb-4">""""
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">"",
                 Generation History ({history.length})"""""
-              </h3>"""""
+              """""
               <button onClick="{handleClearHistory}" className="px-3 py-1 bg-red-100 hover: bg-red-200 dark:bg-red-900/30 dark:hover:bg-red-900/50 text-red-700 dark:text-red-300 rounded text-sm transition-colors flex items-center gap-2">""""
                 <Trash2 className="w-4 h-4"/" >"
                 Clear History"
@@ -584,14 +584,19 @@ export default Component
 
 </Trash2>
 </motion>
+</motion>
+</motion>
+</FileText>
 </FileText>
 </motion>
+</TestTube>
 </TestTube>
 </motion>
 </Icon>
 </Zap>
 </motion>
 </Info>
+</AlertCircle>
 </AlertCircle>
 </Icon>
 </motion>
@@ -613,5 +618,5 @@ export default Component
 </Icon>
 </Download>
 </Sparkles>
-</Code>';
-</div>;';;';
+</Code>
+</div>

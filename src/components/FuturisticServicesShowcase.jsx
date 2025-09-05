@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';';';
+import React, {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {ADVANCED_MICRO_SERVICES} from "../data/advancedMicroServices.jsx";
 const ServiceCard = (props: any) => {
@@ -35,13 +35,13 @@ x[0, Math.random() * 100: - 50],
             <div: className = "flex items - start justify-between mb-4">""""",,",
               <div: className="flex-1">""""",","
                 <h3: className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">"," {service.title}"""",,
-                </h3>""""";";"
+                """"";";"
                 <div: className = "flex items - center space-x-2 mb-3">""""",","
                   <span: className="px-2 py-1 bg-cyan-500 / 20 text-cyan-400 text-xs rounded-full border border-cyan-500/30">"," {service.category}"""",,
                   </span>""""","
                   <span: className = "px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">",",""
 const ServiceCard = (props: any) => {const [isHovered, setIsHovered] = useState()}
-    return (<motion .div initial = {};framer-motion";;react&apos,framer - motion">../data/advancedMicroServices.jsx";&apos;&apos>
+    return (<motion .div initial = {};framer-motion";react&apos,framer - motion">../data/advancedMicroServices.jsx";&apos;&apos>
 const ServiceCard = (props: any) => {}    const [isHovered, setIsHovered] = useState(false)
 }
     return (<;<;<motion.div initial = {}>""
@@ -105,10 +105,10 @@ delay: index * 0.1 "",">
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
           <div className="&apos;relative" z-10&apos;>"&apos;&apos,&apos;&apos;"
             <div className="&apos;flex" items-start justify-between mb-4&apos;>"&apos;&apos,&apos;&apos;"
-              <div className="&apos;flex-1&apos">"&apos;&apos,&apos;&apos;"
+              <div className="&apos;flex-1&apos;">"&apos;&apos,&apos;&apos;"
                 <h3 className="&apos;text-xl" font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2&apos;>"
                   {service.title}&apos;&apos,&apos;&apos,
-                </h3>&apos;&apos,&apos;&apos,"
+                &apos;&apos,&apos;&apos,"
                 <div className="&apos;flex" items-center space-x-2 mb-3&apos;>"&apos;&apos,&apos;&apos;"
                   <span className="&apos;px-2" py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full border border-cyan-500/30&apos;>"
                     {service.category}&apos;&apos,&apos;&apos,
@@ -116,7 +116,7 @@ delay: index * 0.1 "",">
                   <span className="&apos;px-2" py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30&apos;>
                     {service.subcategory}&apos
                   </span>"
-              &apos;&apos,{/* comment */}&apos;&apos,&apos {service.aiScore && (&apos}&apos;<div className="&apos;relative&apos">"&apos;&apos,&apos;&apos;"
+              &apos;&apos,{/* comment */}&apos;&apos,&apos {service.aiScore && (&apos}&apos;<div className="&apos;relative&apos;">"&apos;&apos,&apos;&apos;"
                   <div className="&apos;w-12" h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm&apos;>"
                     {service.aiScore}&apos;&apos,&apos;&apos,
                   </div>&apos;&apos,&apos;&apos,"
@@ -130,12 +130,12 @@ delay: index * 0.1 "",">
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
             <div className="&apos;grid" grid-cols-2 gap-2 mb-4&apos;>"&apos;&apos,{service.features.slice(0, 6).map((feature, idx) => (&apos}&apos;<div key="{idx}" className="&apos;flex" items-center space-x-2 text-xs text-gray-400&apos;>"&apos;&apos,&apos;&apos;"
                   <div className="&apos;w-1.5" h-1.5 bg-cyan-400 rounded-full&apos;>&apos,</div>&apos;&apos,&apos;&apos,"
-                  <span className="&apos;truncate&apos">{feature}&apos;</span>
+                  <span className="&apos;truncate&apos;">{feature}&apos;</span>
                 </div>) ) }"
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
-            <div className="&apos;mb-4&apos">"&apos;&apos,&apos;&apos;"
+            <div className="&apos;mb-4&apos;">"&apos;&apos,&apos;&apos;"
               <h4 className="&apos;text-sm" font-semibold text-cyan-400 mb-2&apos;>Key Benefits&apos;</h4>&apos;&apos,&apos;&apos,"
-              <div className="&apos;space-y-1&apos">"&apos;&apos,{service.benefits.slice(0, 3).map((benefit, idx) => (&apos}&apos;<div key="{idx}" className="&apos;flex" items-center space-x-2 text-xs text-gray-300&apos;>"&apos;&apos,&apos;&apos;"
+              <div className="&apos;space-y-1&apos;">"&apos;&apos,{service.benefits.slice(0, 3).map((benefit, idx) => (&apos}&apos;<div key="{idx}" className="&apos;flex" items-center space-x-2 text-xs text-gray-300&apos;>"&apos;&apos,&apos;&apos;"
                     <div className="&apos;w-1" h-1 bg-green-400 rounded-full&apos;>&apos,</div>"
                 duration: 3 + Math.random() * 2, ""","
                 repeat: Infinity, """
@@ -148,7 +148,7 @@ delay: index * 0.1 "",">
             <div className="flex items-start justify-between mb-4">"";"
               <div className="flex-1">"";"
                 <h3 className="text - xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2"> {service.title}"",
-                </h3>"";"
+                "";"
                 <div className="flex items-center space-x-2 mb-3">"";"
                   <span className="px - 2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full border border-cyan-500/30"> {service.category}"",
                   </span>"";"
@@ -193,7 +193,7 @@ delay: index * 0.1 "",">
               <div className="flex-1">""""
                 <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">"
                   {service.title}"""""
-                </h3>""""
+                """"
                 <div className="flex items-center space-x-2 mb-3">""""
                   <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full border border-cyan-500/30">"
                     {service.category}"""""
@@ -282,11 +282,11 @@ delay: index * 0.1 "",">
             <div className="&apos;mt-4" pt-4 border-t border-gray-700/50&apos;>"&apos;&apos,&apos;&apos;"
               <div className="&apos;text-xs" text-gray-400 space-y-1&apos;>"&apos;&apos,&apos;&apos;"
                 <div className="&apos;flex" items-center space-x-2&apos;>"&apos;&apos,&apos;&apos;"
-                  <span className="&apos;text-cyan-400&apos">📞&apos;</span>"
+                  <span className="&apos;text-cyan-400&apos;">📞&apos;</span>"
                   <span>{service.contactInfo.phone}</span>&apos;&apos,&apos;&apos;"
-                  <span className="&apos;text-blue-400&apos">✉️&apos;</span>"
+                  <span className="&apos;text-blue-400&apos;">✉️&apos;</span>"
                   <span>{service.contactInfo.email}</span>&apos;&apos,&apos;&apos;"
-                  <span className="&apos;text-purple-400&apos">🌐&apos;</span>&apos;&apos,&apos;&apos,"
+                  <span className="&apos;text-purple-400&apos;">🌐&apos;</span>&apos;&apos,&apos;&apos,"
                   <a href="{service.contactInfo.website}" className="&apos;hover:" text-purple-300 transition-colors&apos,>
                     {service.contactInfo.website}&apos,
 """{/* comment */}"""""
@@ -365,7 +365,7 @@ const ServiceCard = (props: any) => {
 }
     // comment
     useEffect(() => {}"
-        const allIndices = new Set(filteredServices.map((_, index) => index))";;"
+        const allIndices = new Set(filteredServices.map((_, index) => index))";"
         setVisibleServices(allIndices)}, [filteredServices])";""";";"
     return: (<div className="min - h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">"""{/* comment */}""""","
       <div: className = "absolute inset-0 overflow-hidden">""""",","
@@ -447,9 +447,8 @@ export const FuturisticServicesShowcase = (props: any) => {}
                         {tech}
                       </span>) ) }
                   </div>
-                    </div>
-  );
-}
+                </div>) }
+
               {/* Contact Info */}
               <div className="mt-4 pt - 4 border-t border-gray -700 / 50">
                 <div className="text-xs text-gray - 400 space - y-1">
@@ -481,15 +480,15 @@ export const FuturisticServicesShowcase = (props: any) => {}
              />
           </div>
         </div>
-      </motion.div>) ;';
-  };';';
-  const [selectedCategory, setSelectedCategory] = useState('all');';';
-  const [searchTerm, setSearchTerm] = useState('');';
-  const [visibleServices, setVisibleServices] = useState(new Set () ) ;';';
-  const categories = [  const [selectedCategory, setSelectedCategory] = useState('all');';';
-  const [searchTerm, setSearchTerm] = useState('');';
-  const [visibleServices, setVisibleServices] = useState(new Set());';';
-  const categories = ['';';
+      </motion.div>) ;
+  };
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [visibleServices, setVisibleServices] = useState(new Set () ) ;
+  const categories = [  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [visibleServices, setVisibleServices] = useState(new Set());
+  const categories = ['
     'all',
     ...new Set(ADVANCED_MICRO_SERVICES.map(s => s.category)),
   ];
@@ -499,7 +498,8 @@ export const FuturisticServicesShowcase = (props: any) => {}
       service.tags.some(tag =>
         tag.toLowerCase().includes(searchTerm.toLowerCase())
       );
-    return matchesCategory && matchesSearch;});
+    return matchesCategory && matchesSearch;}
+    );
   // Set all services as visible initially for better UX
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -530,51 +530,109 @@ export const FuturisticServicesShowcase = (props: any) => {}
       </div>
 
 </div>
+</div>
 </motion>
 </button>
 </p>
 </motion>
 </div>
-</motion>
+</div>
 </div>
 </motion>
+</motion>
+</motion>
+</motion>
+</div>
+</div>
+</div>
+</motion>
+</div>
+</div>
 </div>
 </span>
 </div>
+</div>
 </button>
+</div>
+</div>
 </div>
 </a>
 </div>
+</div>
+</div>
 </span>
 </div>
+</div>
 </button>
+</div>
 </div>
 </a>
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </p>
 </div>
-</div>
-</p>
-</div>
-</span>
-</div>
 </span>
 </div>
 </div>
 </div>
 </div>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </motion>
 </div>
-</motion>
+</div>
 </div>
 </motion>
 </div>
+</div>
+</div>
+</motion>
+</div>
+</div>
+</div>
+</motion>
+</motion>
 </motion>
 </span>
 </div>
-</div>';
-</motion>;';;';
+</div>
+</div>
+</div>
+</motion>

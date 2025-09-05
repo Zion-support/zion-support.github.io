@@ -1,46 +1,65 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
 const fs = require('fs');
+const path = require('path');
 
-console.log('🚀 Quick Merge Fix Starting...');
+class QuickMergeFix {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.fixedCount = 0}
 
-try {
-  // Fix case sensitivity issues
-  console.log('🔧 Fixing case sensitivity issues...');
-  if (fs.existsSync('pages/Careers.tsx')) {
-    fs.unlinkSync('pages/Careers.tsx');
-    console.log('✅ Removed duplicate Careers.tsx');
-  }
+  log(message) {
+    .toISOString()}] ${message}`)}
 
-  // Clean build directory
-  console.log('🧹 Cleaning build directory...');
-  if (fs.existsSync('.next')) {
-    execSync('rm -rf .next', { stdio: 'inherit' });
-  }
+  fixMergeConflicts(content) {
+    // Remove merge conflict markers and keep HEAD version
+    
+    // Clean up any remaining markers
+    
+    return content}
 
-  // Add all changes
-  console.log('📝 Adding changes...');
-  execSync('git add .', { stdio: 'inherit' });
-
-  // Commit changes
-  console.log('💾 Committing changes...');
-  execSync('git commit -m "feat: Fix merge conflicts and build issues
-
-- Fixed case sensitivity issues with careers files
-- Removed conflicting pages directory files  
-- Fixed syntax errors in automation scripts
-- Resolved app/pages directory conflicts
-- Enhanced automation scripts
-- Added comprehensive monitoring system"', { stdio: 'inherit' });
-
-  // Push changes
-  console.log('🚀 Pushing changes...');
-  execSync('git push origin HEAD', { stdio: 'inherit' });
-
-  console.log('✅ Quick merge fix completed successfully!');
-
-} catch (error) {
-  console.error('❌ Error:', error.message);
-  process.exit(1);
-}
+  async fixCriticalFiles() {
+    this.log('🔧 Fixing Critical Files');
+    
+    const criticalFiles = ['package.json',
+      'next.config.js',
+      'tsconfig.json',
+      'src/pages/services/AI-Healthcare-Diagnostics-Platform.tsx',
+      'src/pages/services/AI-Healthcare-Diagnostics.tsx',
+      'src/pages/services/AI5GNetwork.tsx'
+    ];
+    
+    for (const file of criticalFiles) {
+      const filePath = path.join(this.projectRoot, file);
+      if (fs.existsSync(filePath)) {
+        try {
+          let content = fs.readFileSync(filePath, 'utf8');
+          const originalContent = content;
+          
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");class QuickMergeFix { constructor() { this.projectRoot = process.cwd(); this.fixedCount = 0} log(message) { console.log(`[${new Date().toISOString()}] ${message}`)} fixMergeConflicts(content) { / Remove merge conflict markers and keep HEAD version"`"`
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+    content = content.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n[^\n]+\n/g, '$1'
+    content = content.replace(/\n/g, '')
+    content = content.replace(/\n/g, '')
+    content = content.replace(/[^\n]+\n/g, '')
+    this.log(' Fixing Critical Files')
+    const criticalFiles = ['package.json']
+      'next.config.js'
+      'tsconfig.json'
+      'src/pages/services/AI-Healthcare-Diagnostics-Platform.tsx'
+      'src/pages/services/AI-Healthcare-Diagnostics.tsx'
+      'src/pages/services/AI5GNetwork.tsx'
+          let content = fs.readFileSync(filePath, 'utf8')
+          if (content.includes('') || content.includes('') || content.includes('')
+              fs.writeFileSync(filePath, content, 'utf8')
+    this.log(' Starting Quick Merge Fix')
+    this.log(' Quick merge fix completed')
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> main
+>>>>>>> main

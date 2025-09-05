@@ -1,4 +1,4 @@
-import React, { useState } from 'react';';';
+import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 export default function Page(props: any) {
 ,"
@@ -120,7 +120,7 @@ export default function Page(props: any) {
               <div className="mb-4">"
                 <h3 className="text-xl font-bold text-white mb-2 group-hover: tex t-zion-cyan transition-colors">
                   {link.title}
-                </h3>"
+                "
                 <p className="text-gray-300 text-sm leading-relaxed">
                   {link.description}
                 </p>
@@ -219,7 +219,7 @@ export default function Page(props: any) {
           transition={{ duration: 0.6, delay: 0.4 }}
         >"
           <div className="text-center mb-8">"
-            <h3 className="text-2xl font-bold text-white mb-2">Service Categories</h3>"
+            <h3 className="text-2xl font-bold text-white mb-2">Service Categories"
             <p className="text-gray-300">Explore our comprehensive range of technology solutions</p>
           </div>
 "
@@ -246,10 +246,10 @@ export default function Page(props: any) {
           initial={{ opacity: 0, y: 2 0 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}"
-          className="text-center mt-12"';
-"';';
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">;'"';';
-            <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>"
+          className="text-center mt-12"
+"
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">;'"
+            <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs
             </p>"
@@ -290,9 +290,9 @@ export default function Page(props: any) {
 }}
           viewport={{ once: tru e }}
           className="text-center"
-        >';
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">';';
-            <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+        >
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">
+            <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs
             </p>"
             <div className="flex flex-col sm: fle x-row gap-4 justify-center">
@@ -312,12 +312,20 @@ export default function Page(props: any) {
         </motion.div>;
       </div>;
     </section>;
-  )};';
-;export { QuickAccess };';';
+  )};
+;export { QuickAccess };
 '"`
 
 </motion>
 </motion>
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

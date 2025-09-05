@@ -1,5 +1,5 @@
-import React, { useState } from 'react';';
-export /**';';
+import React, { useState } from 'react';
+export /**
 import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page(props: any) {
@@ -80,8 +80,8 @@ const stats = [;"
     <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
       {/* Enhanced background pattern */}"
       <div className="absolute inset-0 opacity-5">"
-        <div className="absolute inset-0" style="{{{';
-';';
+        <div className="absolute inset-0" style="{{{
+
           backgroundImage: `radial-gradient(circle at 50% 50%; backgroundSize: '40px 40px'}}"}  />
       </div>
       {/* Floating decorative elements */}"
@@ -207,7 +207,7 @@ const stats = [;"
                   {/* Title and description */}"
                   <h3 className="text-xl font-bold text-white mb-3 group-hover: tex t-zion-cyan transition-colors">
                     {step.title}
-                  </h3>"
+                  "
                   <p className="text-zion-slate-light leading-relaxed text-sm mb-4">
                     {step.description}
                   </p>
@@ -345,14 +345,22 @@ const stats = [;"
         </motion.div>;
       </div>;
     </section>;) }
-';
-}';';
+
+}
 '"`
 
 </motion>
 </motion>
 </motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
 </div>
 </motion>
-</motion>';
-</div>;';;';
+</motion>
+</motion>
+</div>

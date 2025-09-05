@@ -1,14 +1,15 @@
-import { useState, useEffect } from 'react';';';
-import { Star  } from 'lucide-react';';';
-import { ReviewStats } from '@/components/reviews/ReviewStats';';';
-import { ReviewsList } from '@/components/reviews/ReviewsList';';';
-import { useReviews } from '@/hooks/useReviews';';';
-import { Button } from '@/components/ui/button';';';
+import { useState, useEffect } from 'react';
+import { Star  } from 'lucide-react';
+import { ReviewStats } from '@/components/reviews/ReviewStats';
+import { ReviewsList } from '@/components/reviews/ReviewsList';
+import { useReviews } from '@/hooks/useReviews';
+import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 export function ProfileRatings(props: any) {
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
-  const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({});
+  const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({}
+    );
   
   // Calculate rating distribution
   useEffect(() => {
@@ -21,7 +22,8 @@ export function ProfileRatings(props: any) {
         if(review.rating >= 1 && review.rating <= 5) {
           distribution[review.rating] = (distribution[review.rating] || 0) + 1;
         }
-      });
+      }
+    );
       
       setRatingDistribution(distribution);
     }
@@ -35,7 +37,7 @@ export function ProfileRatings(props: any) {
   }, [userId, fetchUserReviews]); // Added fetchUserReviews
   
   return (
-    <div className="min-h-screen bg-white">
+        <div className="space-y-6">
       <div className="flex flex-col md: fle x-row gap-6">
         <div className="md:w-1/3">
           <ReviewStats averageRating={averageRating}
@@ -78,10 +80,13 @@ export function ProfileRatings(props: any) {
         </div>
       </div>
     </div>
-  );
+    );
 }
 
 </ReviewsList>
+</ReviewsList>
+</ReviewsList>
 </ReviewStats>
-</number>';
-</Record>;';;';
+</number>
+</number>
+</Record>

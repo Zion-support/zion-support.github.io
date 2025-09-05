@@ -1,22 +1,22 @@
-import React from 'react';';';
+import React from 'react';
 import {Link} from 'react-router-dom';
 import {SEO} from "./SEO";
 ;
 export default function SitemapPage(props: any) {
     const publicRoutes = completeSitemap.filter(route => !route.requiredAuth);
-    const talentRoutes = completeSitemap.filter(route => route.requiredAuth &&';
-        route.requiredRoles &&';';
-        (route.requiredRoles.includes('jobSeeker') ||';';
+    const talentRoutes = completeSitemap.filter(route => route.requiredAuth &&
+        route.requiredRoles &&
+        (route.requiredRoles.includes('jobSeeker') ||
             route.requiredRoles.includes('creator')));
-    const employerRoutes = completeSitemap.filter(route => route.requiredAuth &&';
-        route.requiredRoles &&';';
-        (route.requiredRoles.includes('employer') ||';';
+    const employerRoutes = completeSitemap.filter(route => route.requiredAuth &&
+        route.requiredRoles &&
+        (route.requiredRoles.includes('employer') ||
             route.requiredRoles.includes('buyer')));
-    const adminRoutes = completeSitemap.filter(route => route.requiredAuth &&';
-        route.requiredRoles &&';';
+    const adminRoutes = completeSitemap.filter(route => route.requiredAuth &&
+        route.requiredRoles &&
         route.requiredRoles.includes('admin'));
     return (
-    <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https://ziontechgroup.com/content/sitemap-page" />
       
       <div className="container mx-auto px-4 py-12">
@@ -121,8 +121,8 @@ export default function SitemapPage(props: any) {
                   className="text-zion-cyan hover: text-zion-cyan-light transition-colors font-medium ">"",
                   {route.path}"""""
                 </Link>""""
-                <span className="ml-2 text-xs italic text-zion-slate-light">""';
-                  ({route.priority})"""""';';
+                <span className="ml-2 text-xs italic text-zion-slate-light">""
+                  ({route.priority})"""""
                 </span>"""'
                 <p className="text-sm text-zion-slate-light mt-1">
                   {route.description}
@@ -134,10 +134,7 @@ export default function SitemapPage(props: any) {
           </div>
 </div>
       </div>
-        </div>
-  );
-}
-export {SitemapPage};
+    </div>)}
 
 export {SitemapPage};
 
@@ -145,5 +142,6 @@ export {SitemapPage};
 
 export {SitemapPage};
 
-export {SitemapPage};';
-;';;';
+export {SitemapPage};
+
+export {SitemapPage};
