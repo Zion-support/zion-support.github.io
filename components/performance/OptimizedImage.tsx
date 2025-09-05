@@ -5,4 +5,4 @@
       priority={priority};
       className={className};
       sizes={sizes};
-      quality={85};
+      quality={85}

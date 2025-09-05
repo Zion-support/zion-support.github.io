@@ -1,19 +1,15 @@
-      };
+      }
     };
-,;
-    // Measure performance after page load,;
-    if (document.readyState === 'complete') {,;
-      measurePerformance(),;
-    } else {,;
-      window.addEventListener('load', measurePerformance),;
+    // Measure performance after page load;
+    if (document.readyState === 'complete') {
+      measurePerformance()
+    } else {;
+      window.addEventListener('load', measurePerformance)
     };
-,;
-    return () => {,;
-      window.removeEventListener('load', measurePerformance),;
-    };
-  }, [onPerformanceData]),;
-,;
-  return null,;
+    return () => {
+      window.removeEventListener('load', measurePerformance)
+    }
+  }, [onPerformanceData]);
+  return null
 };
-,;
-export default PerformanceMonitor,;
+export default PerformanceMonitor;
