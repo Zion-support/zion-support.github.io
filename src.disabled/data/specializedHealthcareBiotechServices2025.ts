@@ -1,1 +1,5 @@
-import { ProductListing } from';@/types/listings'';';;
+<<<<<<< HEAD
+const { ProductListing } from";@/types/listings"";";''"
+=======
+import { ProductListing } from';@/types/listings'';';''
+>>>>>>> main

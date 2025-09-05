@@ -1,20 +1,19 @@
-// Performance optimizations
 const nextConfig = {
   reactStrictMode: true,
+<<<<<<< HEAD
+  swcMinify: true,
   compress: true,
   poweredByHeader: false,
-  eslint: { 
-    ignoreDuringBuilds: false,
-    dirs: ['pages', 'src/components', 'src/lib', 'src/hooks']
+  eslint: { ignoreDuringBuilds: false },
+  typescript: { ignoreBuildErrors: false },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  
+  // Performance optimizations
+  experimental: {
+    scrollRestoration: true,
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
   },
-  typescript: { 
-    ignoreBuildErrors: true 
-  },
-  trailingSlash: true,
-  // output: 'export', // Disabled to avoid auth context issues
-  generateBuildId: async () => 'build-' + Date.now(),
-  // Include all page types
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'page.tsx'],
   
   // Image optimization
   images: {
@@ -22,6 +21,7 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+<<<<<<< HEAD
     minimumCacheTTL: 31536000, // 1 year
   },
   
@@ -40,7 +40,7 @@ const nextConfig = {
         chunks: 'all',
         cacheGroups: {
           vendor: {
-            test: /[\\/]node_modules[\\/]/,
+            test: /[\/]node_modules[\/]/,
             name: 'vendors',
             chunks: 'all',
           },
@@ -51,26 +51,33 @@ const nextConfig = {
             enforce: true,
           },
         },
-      }}
+      };
+    }
     
-    return config},
+    return config;
+=======
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
+>>>>>>> main
+  },
   
   // Security headers
   async headers() {
-    return [
-      {
+    return [{
         source: '/(.*)',
         headers: [
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'X-XSS-Protection', value: '1; mode=block' },
           { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
-          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
-          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' }
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' }
         ]
       }
-    ]},
+    ];
+  },
   
+<<<<<<< HEAD
   // Redirects for SEO
   async redirects() {
     return [
@@ -79,90 +86,87 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
-    ]},
-
-  // Generate sitemap
-  async rewrites() {
-    return []},
+    ];
+=======
+  // Bundle analyzer
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        net: false,
+        tls: false
+      };
+    }
+    return config;
+>>>>>>> main
+  }
 };
 
-
-  // Performance optimizations
-  experimental: {
-    ...config.experimental,
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
-  },
-  
-  // Image optimization
+export default nextConfig;
+=======
+<<<<<<< HEAD
   images: {
-    ...config.images,
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
-    dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+<<<<<<< HEAD
+    domains: ["localhost"]
+=======
+    domains: ['localhost'],
   },
-  
-  // Compression
-  compress: true,
-  
-  // Power optimizations
-  poweredByHeader: false,
-  
-  // Headers for performance
-  async headers() {
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  async rewrites() {
     return [
       {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-      {
-        source: '/static/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-      {
-        source: '/_next/static/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-    ]
-  },
-  
+        source: '/api/:path*',
+        destination: '/api/:path*',
+      }
+    ];
+  }
+};
 
 export default nextConfig;
+=======
+  output: 'export',
+  trailingSlash: true,
+  distDir: '.next',
+  images: {
+    domains: ['localhost'],
+    unoptimized: true
+>>>>>>> main
+  },
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY
+  },
+  eslint: {
+    ignoreDuringBuilds: true
+  },
+  typescript: {
+    ignoreBuildErrors: true
+<<<<<<< HEAD
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/api/:path*",
+        destination: "/api/:path*"
+      }
+    ];
+  }
+};
+
+export default nextConfig;
+=======
+  }
+};
+
+export default nextConfig;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

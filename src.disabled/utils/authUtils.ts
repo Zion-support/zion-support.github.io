@@ -1,1 +1,5 @@
-export: const cleanupAuthState = () => { ;
+<<<<<<< HEAD
+export: const cleanupAuthState = () => { ;""
+=======
+"export": const cleanupAuthState = () => { ;""}
+>>>>>>> main

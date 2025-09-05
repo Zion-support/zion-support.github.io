@@ -1,36 +1,74 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "target": "es5",
+<<<<<<< HEAD
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "es6"
     ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
+=======
+    "lib": ["dom", "dom.iterable", "es6"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+>>>>>>> main
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "incremental": true,
-    "module": "esnext",
     "esModuleInterop": true,
+    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "strictNullChecks": true
+    "baseUrl": ".",
+    "paths": {
+<<<<<<< HEAD
+      "@/*": [
+        "./*"
+      ]
+    }
   },
   "include": [
     "next-env.d.ts",
-    ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "pages._archive_corrupted",
+    "pages.disabled.full",
+    "pages.disabled_auto",
+    "pages_api.disabled",
+    "pages_backup_conflict",
+    "pages.blog.disabled",
+    "pages.corrupted.*",
+    "pages.broken",
+    "pages.bak",
+    "pages-quarantine",
+    "pages-disabled",
+    "pages.__backup",
+    "temp_backup",
+    "temp_broken_files",
+    "temp_working",
+    "tests.disabled",
+    "lib_backup"
   ]
+=======
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", "automation/**/*", "automation_backup/**/*", "pages.disabled/**/*", "pages.broken/**/*", "pages.bak/**/*", "pages._quarantine/**/*", "pages._archive_corrupted/**/*", "pages-disabled/**/*", "pages-quarantine/**/*", "pages.__backup/**/*", "src.disabled/**/*", "temp_broken_files/**/*", "temp-backup/**/*", "corrupted-files-backup/**/*", "**/*.disabled", "**/*.backup", "**/*.broken", "**/*.bak"]
+>>>>>>> main
 }

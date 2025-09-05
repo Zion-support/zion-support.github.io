@@ -1,43 +1,56 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect, useCallback } from 'react'; // Added useCallback';';
+=======
+import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() { ); setMatches([])} finally { setIsLoading(false)} },[jobId]); const triggerAIMatching = async () => { setIsProcessing(true); try { const response = await supabase.functions.invoke('job-talent-matcher',{ "body": "{ jobId "}}); if(response.error) throw new Error(response.error.message); toast({ "title": "AI Matching Complete","description": "`Found ${response.data.matches || 0"} potential talent matches for this job.`}); await fetchMatches()} catch(error) { console.error("Error triggering AI "matching":",error); toast({ "title": "Matching Failed","description": "Could not process talent matching.Please try again later.","variant": "destructive"})} finally { setIsProcessing(false)} }; useEffect(() => { },[]); if(jobId) { fetchMatches()} },[jobId,fetchMatches]); return { matches,isLoading,isProcessing,triggerAIMatching,"refetch": 'fetchMatche s }}
+=======
+import { useState, useEffect, useCallback } from 'react'; // Added useCallback
+>>>>>>> main
 import { supabase } from '@/integrations/supabase/client';
 export default function Page() {
-  return (
 );
       setMatches([]); // Clear matches on error
     } finally {
-      setIsLoading(false)}
+      setIsLoading(false);
+    }
   }, [jobId]); // jobId is a dependency of fetchMatches
 
   const triggerAIMatching = async () => {
-    setIsProcessing(true);';
-    try {';';
+    setIsProcessing(true);
+    try {
       const response = await supabase.functions.invoke('job-talent-matcher', {
         body: { jobId },
-      });
+      }
+    );
       
       if(response.error) throw new Error(response.error.message);
       
       toast({
         title: "AI Matching Complete",
         description: `Found ${response.data.matches || 0} potential talent matches for this job.`,
-      });
+      }
+    );
       
-      await fetchMatches()} catch(error) {
+      await fetchMatches();
+    } catch(error) {
       console.error("Error triggering AI matching:", error);
       toast({
         title: "Matching Failed",
         description: "Could not process talent matching.Please try again later.",
         variant: "destructive",
-      })} finally {
-      setIsProcessing(false)}
+      }
+    );
+    } finally {
+      setIsProcessing(false);
+    }
   };
 
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
     if(jobId) { // Ensure jobId is present before fetching
-      fetchMatches()}
+      fetchMatches();
+    }
   }, [jobId, fetchMatches]); // Added fetchMatches
 
   return {
@@ -46,8 +59,14 @@ export default function Page() {
     isProcessing,
     triggerAIMatching,
     refetch: fetchMatche s // Added refetch
+<<<<<<< HEAD
   }}';
 ;';;';
 =======
 import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() { ); setMatches([])} finally { setIsLoading(false)} },[jobId]); const triggerAIMatching = async () => { setIsProcessing(true); try { const response = await supabase.functions.invoke('job-talent-matcher',{ body: { jobId },}); if(response.error) throw new Error(response.error.message); toast({ title: "AI Matching Complete",description: `Found ${response.data.matches || 0} potential talent matches for this job.`,}); await fetchMatches()} catch(error) { console.error("Error triggering AI matching:",error); toast({ title: "Matching Failed",description: "Could not process talent matching.Please try again later.",variant: "destructive",})} finally { setIsProcessing(false)} }; useEffect(() => { },[]); if(jobId) { fetchMatches()} },[jobId,fetchMatches]); return { matches,isLoading,isProcessing,triggerAIMatching,refetch: 'fetchMatche s }}
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+  };
+}
+>>>>>>> main
+>>>>>>> main

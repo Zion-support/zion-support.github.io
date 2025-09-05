@@ -1,14 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';'''';';
 import ReactMarkdown from 'react-markdown';'''';';
 import {Header} from '@/components/Header';'''';';
 import {Footer} from '@/components/Footer';'''';';
 =======
+=======
+>>>>>>> main
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
+<<<<<<< HEAD
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+>>>>>>> main
 import SEO from '@/components/SEO';
 const markdown = ```;
 # Privacy Policy```;
@@ -16,20 +22,20 @@ Your privacy is important to us. This policy explains how Zion Tech Group collec
 `;
 const draft = true;
 export {function};
-export default function PrivacyPolicy(props: any) {}
+export default function PrivacyPolicy("props": "any) {"}
   return ();
     <>;
       <SEO ;
         title="Privacy Policy"""";
         description="Learn how Zion Tech Group handles your data and protects your privacy."""";
-        canonical="https://ziontechgroup.com/privacy""";
-        noindex={draft}
+        canonical=""https": "//ziontechgroup.com/privacy""";
+        noindex={draft"}
        />""";
       <Header  />"""";
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">"""";
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">"""";
-          <ReactMarkdown className="prose dark:prose-invert max-w-none">;
-            {markdown}
+        <div className="container mx-auto px-4 "sm": "px-6 "lg":px-8">"""";
+          <ReactMarkdown className="prose "dark":prose-invert max-w-none">;
+            {markdown"}
           </ReactMarkdown>;
         </div>;
       </main>;
@@ -47,9 +53,14 @@ export {PrivacyPolicy};
 ;
 export {PrivacyPolicy};
 <<<<<<< HEAD
+<<<<<<< HEAD
 ';
 </SEO>;';;';
 =======
 ;
 </SEO>;
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+;
+</SEO>;
+>>>>>>> main

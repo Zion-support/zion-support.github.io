@@ -1,5 +1,8 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
 Plus,
   MessageCircle,
   Phone,
@@ -10,6 +13,7 @@ Plus,
   HelpCircle,
   Star,
   Share2,
+<<<<<<< HEAD
   Bookmark,';
   Download,';';
   Printer'';';
@@ -28,9 +32,16 @@ Plus,;
   Download,;
   Printer';
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+  Bookmark,
+  Download,
+  Printer'
+>>>>>>> main
 } from 'lucide-react';
+<<<<<<< HEAD
 ;
 interface FloatingAction {;
+<<<<<<< HEAD
   id: string;
   icon: React.ComponentType<{ size?: number; className?: string;
 }>;
@@ -45,15 +56,44 @@ interface FloatingActionButtonProps {
   actions?: FloatingAction[];';';
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';';';
 =======
+=======
+  "id": "string;
+  "icon": React.ComponentType<{ size?: number; className?: string;
+"}>;
+  "label": "string;
+  "action": () => void;
+  "color": string;
+  "priority": 'high' | 'medium' | 'low'"}
+>>>>>>> main
 ;
 interface FloatingActionButtonProps {;
+  actions?: "FloatingAction[];
+=======
+
+interface FloatingAction {
+
+  id: string;
+  icon: React.ComponentType<{ size?: number; className?: string 
+}>;
+  label: string;
+  action: () => void;
+  color: string;
+  priority: 'high' | 'medium' | 'low'}
+
+interface FloatingActionButtonProps {
+
   actions?: FloatingAction[];
+>>>>>>> main
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
+<<<<<<< HEAD
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+>>>>>>> main
   theme?: 'light' | 'dark' | 'auto';
   showScrollToTop?: boolean;
   showContactActions?: boolean;
   showUtilityActions?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 const FloatingActionButton: Reac t.FC<FloatingActionButtonProps> = ({
@@ -80,14 +120,51 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
   const [isExpanded, setIsExpanded] = useState<any>(false);
   const [showScrollButton, setShowScrollButton] = useState<any>(false);
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+;
+const "FloatingActionButton": React.FC<FloatingActionButtonProps> = ({;
+  actions = []",: "any;
+  position = 'bottom-right'",: "any;
+  theme = 'auto'",: "any;
+  showScrollToTop = true",: "any;
+  showContactActions = true",: "any;
+  showUtilityActions = "true": any;
+"}) => {;
+  const [isExpanded, setIsExpanded] = useState<any>(false);
+  const [showScrollButton, setShowScrollButton] = useState<any>(false);
+>>>>>>> main
   const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');
 ;
   // Detect theme;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
+  "};
+=======
+
+const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
+
+  actions = [],: any;
+  position = 'bottom-right',: any;
+  theme = 'auto',: any;
+  showScrollToTop = true,: any;
+  showContactActions = true,: any;
+  showUtilityActions = true: any;
+}) => {
+
+  const [isExpanded, setIsExpanded] = useState<any>(false);
+  const [showScrollButton, setShowScrollButton] = useState<any>(false);
+  const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');
+
+  // Detect theme
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 }, []);, []);';
 ';';
@@ -107,80 +184,213 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange)} else {;
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+>>>>>>> main
+}, []);, []);
+
+    if(theme === 'auto') {
+
+      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light')};
+      '
+      mediaQuery.addEventListener('change', handleChange);
+      return () => mediaQuery.removeEventListener('change', handleChange)} else {
+
+>>>>>>> main
       setCurrentTheme(theme)}
   }, [theme]) ;
+<<<<<<< HEAD
 ;
   // Show scroll to top button when scrolled down;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
+  "};
+=======
+
+  // Show scroll to top button when scrolled down
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
   };
+>>>>>>> main
 }, []);, []);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
     
-    };';
-';';
-    window.addEventListener('scroll', handleScroll);';';
+    };
+
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
+<<<<<<< HEAD
+;
+  // Default actions;
+  const "defaultActions": "FloatingActio n[] = [// Contact actions;
+    ...(showContactActions ? [;
+      {;
+        "id": 'contact'",;
+        "icon": "MessageCircl e",;
+        "label": 'Contact Us',;
+        "action": "() => {;
+          if(contactSection) {;
+            contactSection.scrollIntoView({ "behavior": 'smooth' "})}
+        },;
+        "color": 'bg-blue-500 "hover": "b g-blue-600'",;
+        "priority": 'high' as const;
+      },;
+      {;
+        "id": 'phone',;
+        "icon": "Phon e",;
+        "label": 'Call Now',;
+        "action": "() => {;
+          window.location.href = '"tel":+1234567890'"},;
+        "color": 'bg-green-500 "hover": "b g-green-600'",;
+        "priority": 'high' as const;
+      },;
+      {;
+        "id": 'email',;
+        "icon": "Mai l",;
+        "label": 'Send Email',;
+        "action": "() => {;
+          window.location.href = '"mailto": inf o@ziontechgroup.com'"},;
+        "color": 'bg-purple-500 "hover": "b g-purple-600'",;
+        "priority": 'medium' as const;
+      },;
+      {;
+        "id": 'location',;
+        "icon": "MapPi n",;
+        "label": 'Get Directions',;
+        "action": "() => {;
+          window.open('"https"://maps.google.com/?q=Zion+Tech+Group'",_blank')},;
+        "color": 'bg-red-500 "hover": "b g-red-600'",;
+        "priority": 'medium' as const;
+      }
+    ] : "[])",;
+    // Utility actions;
+    ...(showUtilityActions ? [{;
+        "id": 'bookmark',;
+        "icon": "Bookmar k",;
+        "label": 'Bookmark Page',;
+        "action": "() => {;
+          if(navigator.share) {;
+            navigator.share({;
+              "title": documen t.title",;
+              "url": "windo w.location.href;
+            "})} else {;
+            // Fallback for browsers without share API;
+            navigator.clipboard.writeText(url).then(() => {;
+              // Show success message';
+              showNotification('Page URL copied to clipboard!')})}
+        },;
+        "color": 'bg-yellow-500 "hover": "b g-yellow-600'",;
+        "priority": 'low' as const;
+      },;
+      {;
+        "id": 'share',;
+        "icon": "Share 2",;
+        "label": 'Share Page',;
+        "action": "() => {;
+          if(navigator.share) {;
+            navigator.share({;
+              "title": documen t.title",;
+              "url": "windo w.location.href;
+            "})} else {;
+            // Fallback for browsers without share API;
+            navigator.clipboard.writeText(url).then(() => {;
+              showNotification('Page URL copied to clipboard!')})}
+        },;
+        "color": 'bg-indigo-500 "hover": "b g-indigo-600'",;
+        "priority": 'low' as const;
+      },;
+      {;
+        "id": 'download',;
+        "icon": "Downloa d",;
+        "label": 'Download Brochure',;
+        "action": "() => {;
+          // Create a temporary link to trigger download';
+          link.href = '/brochure.pdf'; // Adjust path as needed';
+          link.download = 'Zion-Tech-Group-Brochure.pdf';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link)"},;
+        "color": 'bg-teal-500 "hover": "b g-teal-600'",;
+        "priority": 'low' as const;
+      },;
+      {;
+        "id": 'print',;
+        "icon": "Printe r",;
+        "label": 'Print Page',;
+        "action": "() => {;
+          window.print()"},;
+        "color": 'bg-gray-500 "hover": "b g-gray-600'",;
+        "priority": 'low' as const;
+      }
+    ] : "[])",;
+    // Custom actions;
+    ...actions,;
+=======
 
   // Default actions
   const defaultActions: FloatingActio n[] = [// Contact actions
     ...(showContactActions ? [
-      {';
-';';
-        id: 'contact',';
-        icon: MessageCircl e,';';
+      {
+
+        id: 'contact',
+        icon: MessageCircl e,
         label: 'Contact Us',
         action: () => {
 
-          if(contactSection) {';
-';';
-            contactSection.scrollIntoView({ behavior: 'smooth' })}';
-        },';';
-        color: 'bg-blue-500 hover: b g-blue-600',';';
+          if(contactSection) {
+
+            contactSection.scrollIntoView({ behavior: 'smooth' })}
+        },
+        color: 'bg-blue-500 hover: b g-blue-600',
         priority: 'high' as const
       },
-      {';
-';';
-        id: 'phone',';
-        icon: Phon e,';';
+      {
+
+        id: 'phone',
+        icon: Phon e,
         label: 'Call Now',
-        action: () => {';
-';';
-          window.location.href = 'tel:+1234567890'},';';
-        color: 'bg-green-500 hover: b g-green-600',';';
+        action: () => {
+
+          window.location.href = 'tel:+1234567890'},
+        color: 'bg-green-500 hover: b g-green-600',
         priority: 'high' as const
       },
-      {';
-';';
-        id: 'email',';
-        icon: Mai l,';';
+      {
+
+        id: 'email',
+        icon: Mai l,
         label: 'Send Email',
-        action: () => {';
-';';
-          window.location.href = 'mailto: inf o@ziontechgroup.com'},';';
-        color: 'bg-purple-500 hover: b g-purple-600',';';
+        action: () => {
+
+          window.location.href = 'mailto: inf o@ziontechgroup.com'},
+        color: 'bg-purple-500 hover: b g-purple-600',
         priority: 'medium' as const
       },
-      {';
-';';
-        id: 'location',';
-        icon: MapPi n,';';
+      {
+
+        id: 'location',
+        icon: MapPi n,
         label: 'Get Directions',
-        action: () => {';
-';';
-          window.open('https://maps.google.com/?q=Zion+Tech+Group',_blank')},';';
-        color: 'bg-red-500 hover: b g-red-600',';';
+        action: () => {
+
+          window.open('https://maps.google.com/?q=Zion+Tech+Group',_blank')},
+        color: 'bg-red-500 hover: b g-red-600',
         priority: 'medium' as const
       }
     ] : []),
     
     // Utility actions
-    ...(showUtilityActions ? [{';
-';';
-        id: 'bookmark',';
-        icon: Bookmar k,';';
+    ...(showUtilityActions ? [{
+
+        id: 'bookmark',
+        icon: Bookmar k,
         label: 'Bookmark Page',
         action: () => {
           if(navigator.share) {
@@ -192,18 +402,18 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
             })} else {
 
             // Fallback for browsers without share API
-            ';
-            navigator.clipboard.writeText(url).then(() => {';';
-              // Show success message'';';
-              showNotification('Page URL copied to clipboard!')})}';
-        },';';
-        color: 'bg-yellow-500 hover: b g-yellow-600',';';
+            
+            navigator.clipboard.writeText(url).then(() => {
+              // Show success message'
+              showNotification('Page URL copied to clipboard!')})}
+        },
+        color: 'bg-yellow-500 hover: b g-yellow-600',
         priority: 'low' as const
       },
-      {';
-';';
-        id: 'share',';
-        icon: Share 2,';';
+      {
+
+        id: 'share',
+        icon: Share 2,
         label: 'Share Page',
         action: () => {
           if(navigator.share) {
@@ -216,13 +426,14 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
 
             // Fallback for browsers without share API
             
-            navigator.clipboard.writeText(url).then(() => {';
-';';
-              showNotification('Page URL copied to clipboard!')})}';
-        },';';
-        color: 'bg-indigo-500 hover: b g-indigo-600',';';
+            navigator.clipboard.writeText(url).then(() => {
+
+              showNotification('Page URL copied to clipboard!')})}
+        },
+        color: 'bg-indigo-500 hover: b g-indigo-600',
         priority: 'low' as const
       },
+<<<<<<< HEAD
       {';
 ';';
         id: 'download',';
@@ -356,37 +567,75 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
         color: 'bg-gray-500 hover: b g-gray-600',;
         priority: 'low' as const;
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+      {
+
+        id: 'download',
+        icon: Downloa d,
+        label: 'Download Brochure',
+        action: () => {
+          // Create a temporary link to trigger download'
+          
+          link.href = '/brochure.pdf'; // Adjust path as needed'
+          link.download = 'Zion-Tech-Group-Brochure.pdf';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link)},
+        color: 'bg-teal-500 hover: b g-teal-600',
+        priority: 'low' as const
+      },
+      {
+
+        id: 'print',
+        icon: Printe r,
+        label: 'Print Page',
+        action: () => {
+          window.print()},
+        color: 'bg-gray-500 hover: b g-gray-600',
+        priority: 'low' as const
+>>>>>>> main
       }
-    ] : []),;
-    // Custom actions;
-    ...actions,;
+    ] : []),
+    
+    // Custom actions
+    ...actions,
+>>>>>>> main
   ];
-;
-  // Sort actions by priority;
-    return priorityOrder[b.priority] - priorityOrder[a.priority]}) ;
-;
-  // Toggle expansion;
+
+  // Sort actions by priority
+  
+    return priorityOrder[b.priority] - priorityOrder[a.priority]}
+    );
+
+  // Toggle expansion
+  
   }, []) ;
-;
-  // Scroll to top;
+
+  // Scroll to top
+  
   }, []);
-;
-  // Show notification;
-    notification.className=";
-      fixed top-4 right-4 z-50 px-4 py-2 bg-green-500 text-white rounded-lg shadow-lg;
-      transform translate-x-full transition-transform duration-300 ease-in-out";
+
+  // Show notification
+  
+    notification.className="
+      fixed top-4 right-4 z-50 px-4 py-2 bg-green-500 text-white rounded-lg shadow-lg
+      transform translate-x-full transition-transform duration-300 ease-in-out"
     `;
     notification.textContent = message;
-;
+
     document.body.appendChild(notification) ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
 
     // Animate in
-    setTimeout(() => {';
-';';
+    setTimeout(() => {
+
       notification.classList.remove('translate-x-full')}, 100);
     
     // Remove after 3 seconds
+<<<<<<< HEAD
     setTimeout(() => {';
 ';';
 =======
@@ -414,9 +663,21 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
 ;
   // Get position classes;
       case 'top-right':';
+=======
+    setTimeout(() => {
+
+      notification.classList.add('translate-x-full');
+      setTimeout(() => {
+        document.body.removeChild(notification)}, 300)}, 3000)}, []);
+
+  // Get position classes
+  
+      case 'top-right':'
+>>>>>>> main
         return 'top-6 right-6';
-      case 'top-left':';
+      case 'top-left':'
         return 'top-6 left-6';
+<<<<<<< HEAD
       default:';
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
         return 'bottom-6 right-6'}
@@ -447,6 +708,20 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
                     animationDelay: `${index * 100}}"ms`,';';
                     animation: 'slideInUp 0.3s ease-out forwards'
 =======
+=======
+<<<<<<< HEAD
+      "default":';
+=======
+      default:'
+>>>>>>> main
+        return 'bottom-6 right-6'}
+  };
+
+  // Get theme classes
+  
+  };
+<<<<<<< HEAD
+>>>>>>> main
 ;
   return ();
     <>;
@@ -462,20 +737,49 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
                   className={`;
                     flex items-center space-x-3 p-3 rounded-lg shadow-lg transition-all duration-300;
                     ${action.color} text-white transform opacity-0 scale-75;
-                    hover: scal e-105 focus: outlin e-none focus: rin g-2 focus: rin g-white/50`;
-                  `}
+                    "hover": "scal e-105 "focus": outlin e-none "focus": rin g-2 "focus": rin g-white/50`;
+                  `"}
                   style="{{{;
 `;
+<<<<<<< HEAD
                     animationDelay: `${index * 100}}"ms`,;
                     animation: 'slideInUp 0.3s ease-out forwards';
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+                    "animationDelay": "`${index * 100"}}"ms`,;
+                    "animation": 'slideInUp 0.3s ease-out forwards';
+=======
+
+  return ()
+    <>
+      {/* Main Floating Action Button */}`
+      <div className={`fixed ${getPositionClasses()} z-50`}>
+        {/* Action Buttons */}'`
+        <div className={`relative ${isExpanded ? 'mb-4' : ''}`}>
+          {isExpanded && (
+            <div className="absolute bottom-full mb-4 space-y-3">
+              {sortedActions.map((action, index) => (
+                <div
+                  key={action.id}`
+                  className={`
+                    flex items-center space-x-3 p-3 rounded-lg shadow-lg transition-all duration-300
+                    ${action.color} text-white transform opacity-0 scale-75
+                    hover: scal e-105 focus: outlin e-none focus: rin g-2 focus: rin g-white/50`
+                  `}
+                  style="{{{
+`
+                    animationDelay: `${index * 100}}"ms`,
+                    animation: 'slideInUp 0.3s ease-out forwards'
+>>>>>>> main
+>>>>>>> main
                   }}
-                >;
-                  <action.icon size={20} />";
-                  <span className="whitespace-nowrap text-sm font-medium">;
+                >
+                  <action.icon size={20} />"
+                  <span className="whitespace-nowrap text-sm font-medium">
                     {action.label}
-                  </span>;
+                  </span>
                 </div>) ) }
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>
   );
@@ -490,35 +794,52 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
               ${isExpanded ? 'rotate-45' : ''}`';
             `}';';
 =======
+=======
+>>>>>>> main
             </div>) }
-;
+
           {/* Main Button */}
+<<<<<<< HEAD
           <button;
             onClick={toggleExpansion}`;
             className={`;
               p-4 rounded-full shadow-lg transition-all duration-300;
               ${getThemeClasses()} border-2;
-              hover: scal e-110 focus: outlin e-none focus: rin g-4 focus: rin g-zion-cyan/30';
-              ${isExpanded ? 'rotate-45' : ''}`;
+              "hover": "scal e-110 "focus": outlin e-none "focus": rin g-4 "focus": rin g-zion-cyan/30';
+              ${isExpanded ? 'rotate-45' : ''"}`;
+=======
+          <button
+            onClick={toggleExpansion}`
+            className={`
+              p-4 rounded-full shadow-lg transition-all duration-300
+              ${getThemeClasses()} border-2
+              hover: scal e-110 focus: outlin e-none focus: rin g-4 focus: rin g-zion-cyan/30'
+              ${isExpanded ? 'rotate-45' : ''}`
+>>>>>>> main
             `}
+<<<<<<< HEAD
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+>>>>>>> main
             aria-label={isExpanded ? 'Close actions' : 'Open actions'}
             aria-expanded={isExpanded}
-          >";
-            <Plus size={24} className="transition-transform duration-300"   />;
-          </button>;
-        </div>;
-      </div>;
+          >"
+            <Plus size={24} className="transition-transform duration-300"   />
+          </button>
+        </div>
+      </div>
+
       {/* Scroll to Top Button */}
+<<<<<<< HEAD
       {showScrollToTop && showScrollButton && (;
         <button;
           onClick={scrollToTop}`;
           className={`;
             fixed bottom-6 right-6 z-40 p-4 rounded-full shadow-lg transition-all duration-300;
             ${getThemeClasses()} border-2;
-            hover: scal e-110 focus: outlin e-none focus: rin g-4 focus: rin g-zion-cyan/30;
+            "hover": "scal e-110 "focus": outlin e-none "focus": rin g-4 "focus": rin g-zion-cyan/30;
             animate-bounce`;
-          `}";
+          `"}";
         >;
           <ArrowUp size={24}   />;
         </button>) }
@@ -527,46 +848,111 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
       <style jsx>{`;
         @keyframes slideInUp {;
           from {;
-            opacity: 0;
-            transform: translate Y(20px) scale(0.75) }
+            "opacity": "0;
+            "transform": translate Y(20px) scale(0.75) "}
           to {;
-            opacity: 1;
-            transform: translate Y(0) scale(1) }
+            "opacity": "1;
+            "transform": translate Y(0) scale(1) "}
         }
 ;
         @keyframes bounce {;
           0%, 20%, 53%, 80%, 100% {;
-            transform: translate3 d(0,0,0)}
+            "transform": "translate3 d(0",0,0)}
           40%, 43% {;
-            transform: translate3 d(0, -30px, 0)}
+            "transform": "translate3 d(0", -30px, 0)}
           70% {;
-            transform: translate3 d(0, -15px, 0)}
+            "transform": "translate3 d(0", -15px, 0)}
           90% {;
-            transform: translate3 d(0, -4px, 0)}
+            "transform": "translate3 d(0", -4px, 0)}
         }
 ;
         .animate-bounce {;
-          animation: bounce 2s infinite}`;
+          "animation": "bounce 2s infinite"}`;
       `}</style>;
     </>) ;
 type FloatingActionButtonProps = {;
+  enabled?: "boolean;
+"};
+;
+const "FloatingActionButton": "React.FC<FloatingActionButtonProps> = ({ enabled = true "}) => {;
+=======
+      {showScrollToTop && showScrollButton && (
+        <button
+          onClick={scrollToTop}`
+          className={`
+            fixed bottom-6 right-6 z-40 p-4 rounded-full shadow-lg transition-all duration-300
+            ${getThemeClasses()} border-2
+            hover: scal e-110 focus: outlin e-none focus: rin g-4 focus: rin g-zion-cyan/30
+            animate-bounce`
+          `}"
+          
+        >
+          <ArrowUp size={24}   />
+        </button>) }
+
+      {/* CSS Animations */}`
+      <style jsx>{`
+        @keyframes slideInUp {
+
+          from {
+
+            opacity: 0;
+            transform: translate Y(20px) scale(0.75) }
+          to {
+
+            opacity: 1;
+            transform: translate Y(0) scale(1) }
+        }
+
+        @keyframes bounce {
+
+          0%, 20%, 53%, 80%, 100% {
+
+            transform: translate3 d(0,0,0)}
+          40%, 43% {
+
+            transform: translate3 d(0, -30px, 0)}
+          70% {
+
+            transform: translate3 d(0, -15px, 0)}
+          90% {
+
+            transform: translate3 d(0, -4px, 0)}
+        }
+        
+        .animate-bounce {
+
+          animation: bounce 2s infinite}`
+      `}</style>
+    </>) ;
+type FloatingActionButtonProps = {
   enabled?: boolean;
 };
-;
-const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = true }) => {;
+
+const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = true }) => {
+>>>>>>> main
   const [open, setOpen] = useState<any>(false);
   if(!enabled) return null;
-  return (<button;
+  return (<button
       onClick={() => setOpen(!open)}
       aria-expanded={open}
+<<<<<<< HEAD
 ;
-      className="fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg bg-cyan-500 hover: b g-cyan-600 text-white";
+      className="fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg bg-cyan-500 "hover": "b g-cyan-600 text-white";
     >;
-      <Plus size={24}   />;
+      <Plus size={24"}   />;
     </button>;
+=======
+      
+      className="fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg bg-cyan-500 hover: b g-cyan-600 text-white"
+    >
+      <Plus size={24}   />
+    </button>
+>>>>>>> main
   )};
-;
+
 export default FloatingActionButton;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 </any>
@@ -581,3 +967,11 @@ export default FloatingActionButton;
 </any>;
 </FloatingActionButtonProps>;
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+
+</any>
+</FloatingActionButtonProps>
+</any>
+</any>
+</FloatingActionButtonProps>
+>>>>>>> main

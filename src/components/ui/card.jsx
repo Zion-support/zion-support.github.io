@@ -1,15 +1,49 @@
+<<<<<<< HEAD
 import React from 'react';
-
-const Card = ({ className, children, ...props }) => {
-  return (
-    <div
+;
+const Card = ({ className, children, ...props }) => {;
+  return (;
+    <div;
       className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className || ''}`}
       {...props}
+    >;
+      {children}
+    </div>;
+  );
+};
+;
+const CardHeader = ({ className, children, ...props }) => {;
+  return (;
+    <div className={`flex flex-col space-y-1.5 p-6 ${className || ''}`} {...props}>;
+      {children}
+    </div>;
+  );
+};
+;
+const CardTitle = ({ className, children, ...props }) => {;
+  return (;
+    <h3;
+      className={`text-2xl font-semibold leading-none tracking-tight ${className || ''}`}
+      {...props}
+    >;
+      {children}
+    </h3>;
+=======
+import React from 'react';'
+const Card = (props: any) => {}
+  return()
+    <div;
+      className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}
     >
       {children}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>';
   );';';
+=======
+    </div>
+    );
+>>>>>>> main
 };'
 const CardHeader = (props: any) => {}
 `
@@ -18,8 +52,8 @@ const CardHeader = (props: any) => {}
   return()````
     <div className={`flex flex-col space-y-1.5 p-6 ${className}`}>
       {children}
-    </div>';
-  );';';
+    </div>
+    );
 };'
 const CardTitle = (props: any) => {}
   return()`
@@ -27,19 +61,19 @@ const CardTitle = (props: any) => {}
       className={`text-2xl font-semibold leading-none tracking-tight ${className}`}
     >
       {children}
-    </h3>';
-  );';';
+    );
 };'
 const CardDescription = (props: any) => {}
 `
   return()``
-    <p className={`text-sm text-muted-foreground ${className}`}>{children}</p>';
-  );';';
+    <p className={`text-sm text-muted-foreground ${className}`}>{children}</p>
+>>>>>>> main
+  );
 };'
 const CardContent = (props: any) => {}
 `
-``';
-  return <div className={`p-6 pt-0 ${className}`}>{children}</div>;';';
+``
+  return <div className={`p-6 pt-0 ${className}`}>{children}</div>;
 };'
 const CardFooter = (props: any) => {}
 `
@@ -47,46 +81,53 @@ const CardFooter = (props: any) => {}
 ```
   return()````
     <div className={`flex items-center p-6 pt-0 ${className}`}>{children}</div>
+<<<<<<< HEAD
 =======
     </div>
   );
+=======
+    );
+>>>>>>> main
 };
-
-const CardHeader = ({ className, children, ...props }) => {
-  return (
-    <div className={`flex flex-col space-y-1.5 p-6 ${className || ''}`} {...props}>
+<<<<<<< HEAD
+;
+const CardDescription = ({ className, children, ...props }) => {;
+  return (;
+    <p className={`text-sm text-muted-foreground ${className || ''}`} {...props}>;
       {children}
-    </div>
+    </p>;
   );
 };
-
-const CardTitle = ({ className, children, ...props }) => {
-  return (
-    <h3
-      className={`text-2xl font-semibold leading-none tracking-tight ${className || ''}`}
-      {...props}
-    >
+;
+const CardContent = ({ className, children, ...props }) => {;
+  return (;
+    <div className={`p-6 pt-0 ${className || ''}`} {...props}>;
       {children}
-    </h3>
+    </div>;
   );
 };
-
-const CardDescription = ({ className, children, ...props }) => {
-  return (
-    <p className={`text-sm text-muted-foreground ${className || ''}`} {...props}>
+;
+const CardFooter = ({ className, children, ...props }) => {;
+  return (;
+    <div className={`flex items-center p-6 pt-0 ${className || ''}`} {...props}>;
       {children}
+<<<<<<< HEAD
     </p>
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+    </div>;
+>>>>>>> main
   );
 };
-
-const CardContent = ({ className, children, ...props }) => {
-  return (
-    <div className={`p-6 pt-0 ${className || ''}`} {...props}>
+;
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+=======
+const CardDescription = (props: any) => {
+    return (<p className={`text-sm text-muted-foreground ${className}`}>
       {children}
-    </div>
-  );
+    </p>);
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 const CardContent = (props: any) => {
     return (
@@ -97,16 +138,25 @@ const CardFooter = ({ className, children, ...props }) => {
   return (
     <div className={`flex items-center p-6 pt-0 ${className || ''}`} {...props}>
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+const CardContent = (props: any) => {
+    return (
+        <div className={`p-6 pt-0 ${className}`}>
+>>>>>>> main
       {children}
     </div>
-  );
+    );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
 const CardFooter = (props: any) => {
     return (
-    <div className="min-h-screen bg-white">
+        <div className={`flex items-center p-6 pt-0 ${className}`}>
       {children}
-    </div>);
+    </div>
+    );
 };
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 
@@ -118,9 +168,14 @@ export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 
+<<<<<<< HEAD
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardDescription, CardContent, CardFooter};';
 ;';;';
 =======
 
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardDescription, CardContent, CardFooter};
+>>>>>>> main
+>>>>>>> main
