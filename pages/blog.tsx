@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
+import MainLayout from '../components/layout/MainLayout';
 const blogPosts = [
   {
     id: 1,
@@ -68,7 +69,11 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <Layout>
+    <MainLayout
+      title="Blog - Zion Tech Group"
+      description="Latest insights on AI, technology, and business innovation from Zion Tech Group experts."
+      keywords="blog, AI insights, technology news, business innovation, tech trends"
+    >
       <Head>
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Latest insights on AI, technology, and business innovation from Zion Tech Group experts." />
@@ -161,6 +166,7 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </MainLayout>
   );
 }

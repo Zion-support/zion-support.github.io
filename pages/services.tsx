@@ -50,15 +50,6 @@ const services = [
     pricing: "Starting at $29/month",
     count: "45+ Products",
     popular: true
-=======
-    "title": "Micro SaaS",
-    "description": "Innovative software as a service solutions including AI-powered tools, blockchain applications, smart energy management, and specialized business automation platforms.",
-    "icon": Cloud,
-    "href": "/micro-saas",
-    "features": ["AI-Powered Tools", "Blockchain Analytics", "Smart Energy Management", "Voice AI Assistants", "Predictive Maintenance", "Smart Contracts", "Green Technology", "Advanced Automation"],
-    "pricing": "Starting at $29/month",
-    "count": "45+ Products",
-    "popular": true
   }
 ];
 
@@ -82,9 +73,6 @@ const benefits = [
     icon: Shield,
     title: "24/7 Support",
     description: "Round-the-clock technical support"
-=======
-    description: "Certified professionals with years of experience"
->>>>>>> 7091c91fa7db362cb314e95c94075d68d5c0ca23
   },
   {
     icon: Zap,
@@ -151,7 +139,6 @@ const processSteps = [
     step: "04",
     title: "Deployment",
     description: "Launch your solution with full support and training"
->>>>>>> 7091c91fa7db362cb314e95c94075d68d5c0ca23
   }
 ];
 

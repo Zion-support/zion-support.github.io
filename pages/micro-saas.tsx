@@ -898,9 +898,6 @@ description: 'Automated code review with security scanning, performance optimiza
     description: 'Automated smart contract vulnerability detection and security analysis for DeFi projects.',
     icon: Shield,
     features: ['Vulnerability Detection', 'Gas Optimization', 'Audit Reports', 'Real-time Monitoring'],
-=======
-    features: ['Automated Reviews', 'Security Scanning', 'Performance Analysis', 'Best Practices Check'],
->>>>>>> 7091c91fa7db362cb314e95c94075d68d5c0ca23
     pricing: '$299 - $1,999/month',
     category: 'Developer Tools',
     popular: true

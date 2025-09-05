@@ -250,44 +250,6 @@ export default function ContactPage() {
                 <p className="text-gray-600 text-sm">Sunday: Emergency support only</p>
               </div>
             </motion.div>
-=======
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Project Details *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={6}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
-                      placeholder="Tell us about your project, goals, timeline, and any specific requirements..."
-                    ></textarea>
-                  </div>
-
-                  <div className="flex items-center">
-                    <input
-                      type="checkbox"
-                      id="newsletter"
-                      name="newsletter"
-                      className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                    />
-                    <label htmlFor="newsletter" className="ml-2 text-sm text-gray-600">
-                      Subscribe to our newsletter for the latest technology insights and updates.
-                    </label>
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
-                  >
-                    <MessageSquare className="w-5 h-5 mr-2" />
-                    Send Message
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </button>
-                </form>
-              </motion.div>
-            </div>
->>>>>>> 7091c91fa7db362cb314e95c94075d68d5c0ca23
           </div>
         </section>
 
