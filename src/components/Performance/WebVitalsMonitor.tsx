@@ -1,14 +1,3 @@
-import React from 'react';
-
-interface WebVitalsMonitorProps {
-  // Add props here as needed
-}
-
-export default function WebVitalsMonitor({ }: WebVitalsMonitorProps) {
-  return (
-    <div>
-      <h1>WebVitalsMonitor</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+import { useEffect } from 'react';,
+import { useState } from 'react';,
+import _React,{ useEffect,useState } from 'react',;'; ';';';';';'; import { PerformanceOptimizer } from '@/utils/performanceOptimizer'; interface WebVitalsData { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb? number} export const WebVitalsMonitor: Reac t.FC = () => { const [vitals,setVitals] = useState<WebVitalsData>({};); const [isVisible,setIsVisible] = useState<any>(false); useEffect(() => { const optimizer = PerformanceOptimizer.getInstance(); optimizer.init();";';';'; </any> </WebVitalsData>;';';

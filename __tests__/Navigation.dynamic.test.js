@@ -1,14 +1,1 @@
-import React from 'react';
-
-interface Navigation.dynamic.testProps {
-  // Add props here as needed
-}
-
-export default function Navigation.dynamic.test({ }: Navigation.dynamic.testProps) {
-  return (
-    <div>
-      <h1>Navigation.dynamic.test</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+import _React from 'react';  import '@testing-library/jest-dom'; import Navigationdynamic from '../components/Navigation.dynamic'; describe('Navigationdynamic',() => { test('renders without crashing',() => { render(<Navigationdynamic />); expect(screen.getByTestId('navigation.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Navigationdynamic />)}); test('handles user interactions',() => { render(<Navigationdynamic />)}); test('applies correct styling',() => { render(<Navigationdynamic />)})});

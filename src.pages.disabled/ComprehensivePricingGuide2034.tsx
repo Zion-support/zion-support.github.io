@@ -1,14 +1,1 @@
-import React from 'react';
-
-interface ComprehensivePricingGuide2034Props {
-  // Add props here as needed
-}
-
-export default function ComprehensivePricingGuide2034({ }: ComprehensivePricingGuide2034Props) {
-  return (
-    <div>
-      <h1>ComprehensivePricingGuide2034</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< "HEAD": 'src.pages.disabled/ComprehensivePricingGuide2034.tsx import _React',{ useState } from 'react'; import { motion } from 'framer-motion'; import { Helmet } from 'react-helmet-async'; import { ; Check,; Star,; Zap,; Shield,; Users,; Globe,; CreditCard,; Clock,; Headphones,; Rocket,; Award,; Lock,; Brain,; Heart,; Scale,; Coins,; Network,; TrendingUp,; Workflow,; ShoppingCart,; Atom,; Satellite,; Factory,; Leaf,; Home,; ArrowRight,; Phone,; Mail,; MapPin,; DollarSign,; TrendingUp as TrendingUpIcon} from 'lucide-react'; import _React,{ useState } from 'react'; import { motion } from 'framer - motion'; import { Helmet } from 'react - helmet - async'; import { ; Check,; Star,; Zap,; Shield,; Users,; Globe,; CreditCard,; Clock,; Headphones,; Rocket,; Award,; Lock,; Brain,; Heart,; Scale,; Coins,; Network,; TrendingUp,; Workflow,; ShoppingCart,; Atom,; Satellite,; Factory,; Leaf,; Home,; ArrowRight,; Phone,; Mail,; MapPin,; DollarSign,; TrendingUp as TrendingUpIcon} from 'lucide - react'; ';';

@@ -1,14 +1,1 @@
-import React from 'react';
-
-interface EnhancedHomeProps {
-  // Add props here as needed
-}
-
-export default function EnhancedHome({ }: EnhancedHomeProps) {
-  return (
-    <div>
-      <h1>EnhancedHome</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< "HEAD": src.pages.disabled/EnhancedHome.jsx import _React from 'react'; export default EnhancedHome; const EnhancedHome = () => {}; return(); <div className="min-h-screen flex items-center justify-center text-white">; Enhanced Home is temporarily unavailable. Please use the Home page.; </div>; );" };";" export default EnhancedHome;";" "'";" import _React from 'react'; export default EnhancedHome; const EnhancedHome = () => {}; return () ; <div className="min - h-screen flex items - center justify - center text - white">; Enhanced Home is temporarily unavailable. Please use the Home page.; </div>;) ;" };";" export default EnhancedHome;";" "'";"'''";

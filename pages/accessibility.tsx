@@ -1,170 +1,122 @@
 import React from 'react';
-import Layout from '../components/Layout';
-import { Eye, Ear, Hand, Brain, Shield, FileText, Users, Globe, CheckCircle, Zap } from 'lucide-react';
-
-const accessibilityFeatures = [
-  {
-    title: "Visual Accessibility",
-    description: "Comprehensive support for users with visual impairments",
-    icon: Eye,
-    features: [
-      "High contrast mode support",
-      "Screen reader compatibility",
-      "Text scaling up to 200%",
-      "Color-blind friendly palettes",
-      "Keyboard navigation support"
-    ]
-  },
-  {
-    title: "Auditory Accessibility",
-    description: "Solutions for users with hearing impairments",
-    icon: Ear,
-    features: [
-      "Visual indicators for audio cues",
-      "Closed captioning support",
-      "Sign language video integration",
-      "Text-based alternatives",
-      "Vibration notifications"
-    ]
-  },
-  {
-    title: "Motor Accessibility",
-    description: "Support for users with motor disabilities",
-    icon: Hand,
-    features: [
-      "Voice control integration",
-      "Switch navigation support",
-      "Large click targets",
-      "Customizable input methods",
-      "Gesture recognition"
-    ]
-  },
-  {
-    title: "Cognitive Accessibility",
-    description: "Features for users with cognitive disabilities",
-    icon: Brain,
-    features: [
-      "Simplified navigation",
-      "Clear language and instructions",
-      "Consistent layout patterns",
-      "Error prevention and recovery",
-      "Progress indicators"
-    ]
-  }
-];
-
-const standards = [
-  "WCAG 2.1 AA Compliance",
-  "Section 508 Compliance",
-  "ADA Compliance",
-  "EN 301 549 Compliance",
-  "ISO/IEC 40500 Compliance"
-];
+import MainLayout from '../components/layout/MainLayout';
 
 export default function AccessibilityPage() {
   return (
-    <Layout
-      title="Accessibility Solutions - Zion Tech Group"
-      description="Comprehensive accessibility solutions ensuring your digital products are inclusive and accessible to all users. WCAG compliance, assistive technology support, and universal design."
-      keywords="accessibility, WCAG compliance, assistive technology, inclusive design, universal design, digital accessibility"
+    <MainLayout 
+      title="Accessibility - Zion Tech Group"
+      description="Learn about Zion Tech Group's commitment to web accessibility and our compliance with WCAG 2.1, Section 508, and ADA standards."
     >
       <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Accessibility
-                <span className="block text-purple-200">Solutions</span>
+        <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                  Accessibility Excellence
+                </span>
               </h1>
-              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-                Make your digital products accessible to everyone. Our comprehensive accessibility 
-                solutions ensure WCAG compliance and inclusive user experiences for all users.
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+                Building inclusive digital experiences for everyone
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
-                  Get Accessibility Audit
-                </button>
-                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-                  View Compliance Report
-                </button>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Accessibility Commitment
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                We are committed to making our digital experiences accessible to everyone, regardless of ability.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">WCAG 2.1 Compliance</h3>
+                <p className="text-gray-600 mb-4">
+                  Our websites and applications meet WCAG 2.1 AA standards, ensuring accessibility for users with disabilities.
+                </p>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Keyboard navigation support</li>
+                  <li>• Screen reader compatibility</li>
+                  <li>• High contrast mode support</li>
+                  <li>• Alternative text for images</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Section 508 Compliance</h3>
+                <p className="text-gray-600 mb-4">
+                  We ensure our digital products meet Section 508 requirements for federal accessibility standards.
+                </p>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Accessible form controls</li>
+                  <li>• Proper heading structure</li>
+                  <li>• Color contrast compliance</li>
+                  <li>• Focus management</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">ADA Compliance</h3>
+                <p className="text-gray-600 mb-4">
+                  Our digital solutions comply with the Americans with Disabilities Act requirements.
+                </p>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Assistive technology support</li>
+                  <li>• Clear navigation structure</li>
+                  <li>• Readable font sizes</li>
+                  <li>• Consistent user interface</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Continuous Testing</h3>
+                <p className="text-gray-600 mb-4">
+                  We regularly test our applications with various assistive technologies and user feedback.
+                </p>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Automated accessibility testing</li>
+                  <li>• Manual testing with users</li>
+                  <li>• Regular audits and updates</li>
+                  <li>• Training for our development team</li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Features Grid */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 bg-gray-100">
+          <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Accessibility Features
+                Contact Us for Accessibility Support
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive accessibility solutions covering all aspects of digital inclusion
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                If you encounter any accessibility barriers on our website or need assistance, please contact us.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {accessibilityFeatures.map((feature, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-4">
-                    <feature.icon className="h-8 w-8 text-purple-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.features.map((featureItem, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                        {featureItem}
-                      </li>
-                    ))}
-                  </ul>
+            <div className="max-w-2xl mx-auto">
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Accessibility Support</h3>
+                <p className="text-gray-600 mb-4">
+                  We are committed to providing accessible digital experiences. If you need assistance or have feedback about accessibility, please reach out to us.
+                </p>
+                <div className="space-y-2 text-gray-600">
+                  <p><strong>Email:</strong> accessibility@ziontechgroup.com</p>
+                  <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                  <p><strong>Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM EST</p>
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-        </section>
-
-        {/* Standards Section */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Compliance Standards
-              </h2>
-              <p className="text-xl text-gray-600">
-                We ensure compliance with international accessibility standards
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
-              {standards.map((standard, index) => (
-                <div key={index} className="flex items-center p-4 bg-gray-50 rounded-lg">
-                  <Shield className="h-6 w-6 text-purple-600 mr-3" />
-                  <span className="text-lg font-medium text-gray-900">{standard}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 bg-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Make Your Digital Products Accessible
-            </h2>
-            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-              Let our accessibility experts help you create inclusive digital experiences that work for everyone.
-            </p>
-            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Start Accessibility Audit
-            </button>
           </div>
         </section>
       </div>
-    </Layout>
+    </MainLayout>
   );
 }

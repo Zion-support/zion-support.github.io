@@ -1,14 +1,1 @@
-import React from 'react';
-
-interface ComprehensivePricing2025Props {
-  // Add props here as needed
-}
-
-export default function ComprehensivePricing2025({ }: ComprehensivePricing2025Props) {
-  return (
-    <div>
-      <h1>ComprehensivePricing2025</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< "HEAD": 'src.pages.disabled/ComprehensivePricing2025.tsx import _React',{ useState,useMemo } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; import { Link } from 'react-router-dom'; import { Check,X,Star,Zap,Shield,Brain,Globe,TrendingUp,Users,ArrowRight,Phone,Mail,MapPin,ExternalLink } from 'lucide-react'; import { innovativeServices } from '../data/innovative-services-2025'; const "ComprehensivePricing2025": _React.FC = () => { const [selectedCategory,setSelectedCategory] = useState<string>('all'); const [billingCycle,setBillingCycle] = useState<'monthly' | 'annual'>('monthly'); import _React,{ useState,useMemo } from 'react'; import { motion,AnimatePresence } from 'framer - motion'; import { Link } from 'react - router - dom'; import { Check,X,Star,Zap,Shield,Brain,Globe,TrendingUp,Users,ArrowRight,Phone,Mail,MapPin,ExternalLink } from 'lucide - react'; import { innovativeServices } from '../data / innovative - services - 2025'; const "ComprehensivePricing2025": _React.FC = () => { const [selectedCategory,setSelectedCategory] = useState < string> ('all') ; const [billingCycle,setBillingCycle] = useState<'monthly' | 'annual'> ('monthly') ';';

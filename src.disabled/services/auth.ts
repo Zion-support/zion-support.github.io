@@ -1,14 +1,1 @@
-import React from 'react';
-
-interface AuthProps {
-  // Add props here as needed
-}
-
-export default function Auth({ }: AuthProps) {
-  return (
-    <div>
-      <h1>Auth</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+"export": async function register() { try { const res = await fetch('/api/auth/register',{ "method": 'POST,',"headers": { 'Content-Type': 'application/json'} "catch": (error) { _console.error(,'; "Error": 'in register: error)' } },"body": JSON.stringify({ nam,e,email,"password": ''})}) const data = await res.json().catch(() => ({})) return { res,data } } export async function forgotPassword() { try {' const res = await fetch('/api/auth/forgot',{ "method": 'POST,',"headers": { 'Content-Type': 'application/json'} "catch": (error) { _console.error(,'; "Error": 'in forgotPassword: error)' } },"body": JSON.stringify({ email})}) const data = await res.json().catch(() => ({}))'';';
