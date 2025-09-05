@@ -57,7 +57,8 @@ import {
   Truck,
   GraduationCap,
   ClipboardList,
-  TreePine
+  TreePine,
+  Share
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -388,6 +389,73 @@ const microSaaSProducts = [
     benefits: ['Immersive Learning', 'Better Retention', 'Cost Savings', 'Scalable Training', 'Performance Tracking'],
     marketPrice: '$150 - $800/month',
     link: 'https://ziontechgroup.com/virtual-training-platform',
+    contact: '+1 302 464 0950'
+  },
+
+  // Additional Real Micro SaaS Services
+  {
+    title: 'AI-Powered CRM',
+    description: 'Intelligent customer relationship management with AI insights, automated follow-ups, and predictive analytics.',
+    icon: Users,
+    features: ['AI Lead Scoring', 'Automated Follow-ups', 'Predictive Analytics', 'Sales Forecasting', 'Customer Insights', 'Integration Hub'],
+    pricing: '$39 - $199/month',
+    category: 'CRM',
+    popular: true,
+    benefits: ['Higher Conversion Rates', 'Automated Workflows', 'Better Customer Insights', 'Sales Optimization', 'Time Savings'],
+    marketPrice: '$60 - $300/month',
+    link: 'https://ziontechgroup.com/ai-powered-crm',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Social Media Management Suite',
+    description: 'Comprehensive social media management with AI content creation, scheduling, and analytics across all platforms.',
+    icon: Share,
+    features: ['Multi-platform Posting', 'AI Content Creation', 'Scheduling & Automation', 'Analytics & Insights', 'Engagement Tracking', 'Team Collaboration'],
+    pricing: '$29 - $149/month',
+    category: 'Social Media',
+    popular: true,
+    benefits: ['Increased Engagement', 'Time Savings', 'Better Content', 'Analytics Insights', 'Multi-platform Management'],
+    marketPrice: '$50 - $250/month',
+    link: 'https://ziontechgroup.com/social-media-management-suite',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Expense Management System',
+    description: 'Automated expense tracking, receipt processing, and reimbursement management with AI-powered categorization.',
+    icon: CreditCard,
+    features: ['Receipt Scanning', 'AI Categorization', 'Policy Compliance', 'Approval Workflows', 'Reporting', 'Mobile App'],
+    pricing: '$19 - $99/month',
+    category: 'Finance',
+    popular: true,
+    benefits: ['Automated Processing', 'Policy Compliance', 'Time Savings', 'Better Reporting', 'Mobile Convenience'],
+    marketPrice: '$30 - $150/month',
+    link: 'https://ziontechgroup.com/expense-management-system',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Time Tracking & Productivity',
+    description: 'Advanced time tracking with AI insights, productivity analytics, and automated reporting for teams.',
+    icon: Clock,
+    features: ['Time Tracking', 'Productivity Analytics', 'Project Management', 'Team Insights', 'Automated Reports', 'Integration'],
+    pricing: '$15 - $79/month',
+    category: 'Productivity',
+    popular: true,
+    benefits: ['Better Time Management', 'Productivity Insights', 'Project Visibility', 'Automated Reporting', 'Team Optimization'],
+    marketPrice: '$25 - $120/month',
+    link: 'https://ziontechgroup.com/time-tracking-productivity',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Customer Feedback Platform',
+    description: 'Comprehensive customer feedback collection, analysis, and action management with AI-powered insights.',
+    icon: MessageSquare,
+    features: ['Feedback Collection', 'AI Analysis', 'Sentiment Tracking', 'Action Management', 'Reporting', 'Integration'],
+    pricing: '$39 - $199/month',
+    category: 'Customer Experience',
+    popular: true,
+    benefits: ['Better Customer Insights', 'Automated Analysis', 'Actionable Feedback', 'Customer Satisfaction', 'Data-Driven Decisions'],
+    marketPrice: '$60 - $300/month',
+    link: 'https://ziontechgroup.com/customer-feedback-platform',
     contact: '+1 302 464 0950'
   }
 ];
